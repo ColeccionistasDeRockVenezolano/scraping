@@ -13,6 +13,7 @@ import { assertSupportedNode } from "../config/runtime.js";
 import { listRuns, createArtistEnrichmentRun, finishRun } from "../ingest/runs.js";
 import { listReviews, showReview } from "../review/queue.js";
 import { approveEntity, dismissEntity, pendingEntities } from "../review/approval.js";
+import { planBatch, runBatch, BATCH_ORDER } from "../review/batch.js";
 import { getDb } from "../db/client.js";
 import { sources } from "../db/schema/ingest.js";
 import { eq } from "drizzle-orm";
@@ -161,6 +162,35 @@ async function main(): Promise<number> {
         if (pending.length === 0) console.log("(sin entidades candidatas)");
         return 0;
       }
+      // Un lote es UNA decisión humana sobre un conjunto, no una vía nueva al
+      // core: sin --confirm solo imprime el plan, y con él llama a la misma
+      // approveEntity de siempre.
+      if (args[0] === "approve-batch" || args[0] === "dismiss-batch") {
+        const action = args[0] === "approve-batch" ? "approve" : "dismiss";
+        const kind = args[1] && !args[1].startsWith("--") ? args[1] : undefined;
+        const opt = (name: string): string | undefined =>
+          args.find((arg) => arg.startsWith(`--${name}=`))?.slice(name.length + 3);
+        const limitArg = opt("limit");
+        const filter = {
+          ...(kind ? { entityKind: kind } : {}),
+          ...(opt("source") ? { sourceSlug: opt("source") as string } : {}),
+          ...(limitArg && /^\d+$/.test(limitArg) ? { limitPerKind: Number(limitArg) } : {}),
+        };
+        const plan = await planBatch(filter);
+        for (const item of plan.items) {
+          console.log(`${item.entityKind}\t${item.entities} entidades\t${item.claims} claims\t${item.samples.join(" · ")}`);
+        }
+        console.log(`TOTAL: ${plan.totalEntities} entidades, ${plan.totalClaims} claims (orden: ${BATCH_ORDER.join(" → ")})`);
+        if (plan.totalEntities === 0) return 0;
+        const note = opt("note");
+        if (!args.includes("--confirm") || !note) {
+          console.log(`\n(previsualización) para ejecutar: crv review ${args[0]}${kind ? " " + kind : ""} --note="<motivo>" --confirm`);
+          return 0;
+        }
+        const result = await runBatch(action, filter, note);
+        console.log(JSON.stringify(result, null, 2));
+        return result.failed === 0 ? 0 : 1;
+      }
       if (args[0] === "approve" || args[0] === "dismiss") {
         const [, kind, identity, ...noteParts] = args;
         const note = noteParts.join(" ");
@@ -174,7 +204,7 @@ async function main(): Promise<number> {
         console.log(JSON.stringify(result, null, 2));
         return 0;
       }
-      console.error('uso: crv review list | show <id> | entities [kind] [--limit=N] | approve <kind> "<identity>" <nota> | dismiss <kind> "<identity>" <nota>');
+      console.error('uso: crv review list | show <id> | entities [kind] [--limit=N] | approve <kind> "<identity>" <nota> | dismiss <kind> "<identity>" <nota> | approve-batch [kind] [--source=<slug>] [--limit=N] --note="<motivo>" --confirm | dismiss-batch [...]');
       return 1;
     }
 

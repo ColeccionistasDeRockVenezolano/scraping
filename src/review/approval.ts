@@ -98,15 +98,29 @@ const SELECT_CLAIM = `
          (SELECT e.url FROM ingest.claim_evidence e WHERE e.claim_id = c.id ORDER BY e.id LIMIT 1) AS evidence_url
     FROM ingest.claims c`;
 
-/** Candidatos agrupados por entidad: una decisión humana por identidad. */
-export async function pendingEntities(options: { entityKind?: string; limit?: number } = {}): Promise<PendingEntity[]> {
+/**
+ * Candidatos agrupados por entidad: una decisión humana por identidad.
+ *
+ * `sourceSlug` elige QUÉ entidades entran, no qué claims se promueven: una
+ * entidad vista por dos fuentes se selecciona por cualquiera de ellas y sus
+ * contadores siguen siendo globales, porque la identidad es una sola. Por eso
+ * el filtro va en HAVING y no en WHERE.
+ */
+export async function pendingEntities(
+  options: { entityKind?: string; sourceSlug?: string; limit?: number } = {},
+): Promise<PendingEntity[]> {
   const params: unknown[] = [];
   let filter = "status = 'candidate' AND identity_key IS NOT NULL";
   if (options.entityKind) {
     params.push(options.entityKind);
     filter += ` AND entity_kind = $${params.length}`;
   }
-  params.push(Math.min(Math.max(options.limit ?? 50, 1), 500));
+  let having = "";
+  if (options.sourceSlug) {
+    params.push(options.sourceSlug);
+    having = `HAVING bool_or(source_id = (SELECT id FROM ingest.sources WHERE slug = $${params.length}))`;
+  }
+  params.push(Math.min(Math.max(options.limit ?? 50, 1), 5_000));
   const { rows } = await getPool().query<{
     entity_kind: string; identity_key: string; identity_raw: string | null;
     claims: number; fields: string[]; sources: number;
@@ -117,7 +131,8 @@ export async function pendingEntities(options: { entityKind?: string; limit?: nu
       FROM ingest.claims
      WHERE ${filter}
      GROUP BY entity_kind, identity_key
-     ORDER BY count(DISTINCT source_id) DESC, count(*) DESC, min(identity_raw)
+     ${having}
+     ORDER BY count(DISTINCT source_id) DESC, count(*) DESC, min(identity_raw), identity_key
      LIMIT $${params.length}`, params);
 
   return rows.map((row) => ({
