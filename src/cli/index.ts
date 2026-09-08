@@ -21,6 +21,7 @@ import { adapterFor, adapterRegistrationFor } from "../adapters/registry.js";
 import { ingestStoredAdapterSource } from "../ingest/runner.js";
 import { registerManualEvidence } from "../ingest/manual-evidence.js";
 import { importYouTubeMasterSheet, syncYouTubeChannel, syncYouTubeVideo, unmatchedYouTubeRows } from "../youtube/pipeline.js";
+import { ingestSeedClaims } from "../youtube/seed-claims.js";
 import { YT_MASTER_XLSX_PATH } from "../ingest/sources.js";
 import { getPool } from "../db/client.js";
 
@@ -294,12 +295,22 @@ async function main(): Promise<number> {
         }
         return 0;
       }
+      // La hoja no es una lista de videos: es una discografía escrita a mano.
+      // `seed-claims` la mete por la puerta normal (claims candidatos), que se
+      // aprueban después con `review approve-batch --source=yt-master-seed`.
+      if (subcommand === "seed-claims") {
+        const result = await ingestSeedClaims(args.includes("--dry-run") ? { dryRun: true } : {});
+        console.log(`youtube seed-claims: ${result.rows} filas -> ${result.artists} artistas, ${result.albums} discos `
+          + `(${result.mediaOnly} audiovisuales sin disco, ${result.albumsSinTipo} sin tipo, ${result.skipped} sin identidad); `
+          + `${result.claimsInserted} claims nuevos, ${result.claimsReused} reusados`);
+        return 0;
+      }
       if (subcommand === "unmatched") {
         const rows = await unmatchedYouTubeRows();
         console.log(JSON.stringify(rows, null, 2));
         return 0;
       }
-      console.error("uso: crv youtube import-sheet <path> | sync-video <video-id> | sync-channel [channel-id] | unmatched");
+      console.error("uso: crv youtube import-sheet <path> | seed-claims [--dry-run] | sync-video <video-id> | sync-channel [channel-id] | unmatched");
       return 1;
     }
 
