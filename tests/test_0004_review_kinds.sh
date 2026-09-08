@@ -59,7 +59,9 @@ pg_start "$CTR" || exit 1
 echo "   PostgreSQL $(q 'SHOW server_version;')"
 
 echo
-echo "== 0. Core canónico + snapshot de public =="
+echo "== 0. Verificación de hash + Core canónico + snapshot de public =="
+verify_core_hash "$ROOT" || exit 1
+echo "   hash coincide con crv_simple_v1.sql.sha256 ✓"
 f "$ROOT/crv_simple_v1.sql"
 snapshot "$WORK/before.sql"
 pg_dump_filter "$WORK/before.sql" > "$WORK/before.filt"

@@ -303,6 +303,15 @@ desactivar la guarda del `down`, la suite falla en ambos casos.
   existe ninguna sentencia que cree, altere o elimine un objeto de `public`.
 - Entorno: la máquina tiene **Node v20.20.2**; ARCHITECTURE.md exige
   **Node 22 LTS**. Debe resolverse en F0 antes de escribir código.
+- **Cerrado (2026-09-07):** el hash del core solo vivía en la documentación;
+  ningún script lo comprobaba, así que una edición del propio
+  `crv_simple_v1.sql` no habría sido detectada (el diff de `pg_dump` solo
+  prueba que las migraciones no tocan `public`, no que el archivo de origen
+  sea el registrado). Resuelto con `crv_simple_v1.sql.sha256` (fuente única
+  del hash) y `verify_core_hash()` en `tests/lib_pg.sh`, ejecutado como
+  paso 0 de `tests/run_all.sh` y `tests/test_0004_review_kinds.sh`.
+  Validado por mutación: alterar el hash registrado produce `EXIT=1` con
+  mensaje explícito antes de tocar la base de datos.
 
 ---
 

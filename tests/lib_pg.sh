@@ -75,3 +75,19 @@ pg_start() {
 pg_dump_filter() {
   grep -vE '^\\(un)?restrict' "${1:?uso: pg_dump_filter <archivo>}"
 }
+
+# ---------------------------------------------------------------------------
+# Verifica que crv_simple_v1.sql no se haya modificado, contra el hash
+# registrado en crv_simple_v1.sql.sha256 (fuente única del hash del core,
+# citada también en docs/CRV_IMPLEMENTATION_CONTRACT.md §1).
+# ---------------------------------------------------------------------------
+verify_core_hash() {
+  local root="${1:?uso: verify_core_hash <root_del_repo>}"
+  if ! ( cd "$root" && sha256sum -c crv_simple_v1.sql.sha256 >/dev/null 2>&1 ); then
+    echo "ERROR: crv_simple_v1.sql NO coincide con crv_simple_v1.sql.sha256"
+    echo "       el core canónico pudo haber sido modificado."
+    ( cd "$root" && sha256sum crv_simple_v1.sql )
+    cat "$root/crv_simple_v1.sql.sha256"
+    return 1
+  fi
+}

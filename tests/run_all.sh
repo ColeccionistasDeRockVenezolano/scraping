@@ -2,6 +2,7 @@
 # ============================================================================
 # CRV · Prueba completa de las migraciones auxiliares contra PostgreSQL 15+
 # (desechable). Verifica:
+#   0. hash de crv_simple_v1.sql contra crv_simple_v1.sql.sha256 (integridad)
 #   1. core crv_simple_v1.sql aplicado primero
 #   2. todas las migraciones migrations/*.up.sql (harness) — 1ª pasada
 #   3. migraciones (harness) — 2ª pasada = no-op (mecanismo normal)
@@ -39,6 +40,11 @@ VERSION="$(docker exec "$CTR" psql -U postgres -d postgres -tA -c 'SHOW server_v
 echo "   PostgreSQL $VERSION"
 
 psql_file() { docker exec -i "$CTR" psql -U postgres -d postgres -v ON_ERROR_STOP=1 -q -f - < "$1"; }
+
+echo
+echo "== 0. Verificación de integridad de crv_simple_v1.sql (hash) =="
+verify_core_hash "$ROOT" || exit 1
+echo "   hash coincide con crv_simple_v1.sql.sha256 ✓"
 
 echo
 echo "== 1. CORE canónico (crv_simple_v1.sql) =="
