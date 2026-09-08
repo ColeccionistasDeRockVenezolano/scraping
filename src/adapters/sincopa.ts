@@ -1,7 +1,7 @@
 import { load, type CheerioAPI } from "cheerio";
 import type { AnyNode } from "domhandler";
 import type { PageRef, RawRecord, SourceAdapter, StoredPage } from "./contracts.js";
-import { ADAPTER_VERSION, absoluteUrl, clean, excerpt } from "./shared.js";
+import { ADAPTER_VERSION, absoluteUrl, clean, contentImages, excerpt } from "./shared.js";
 
 // Sincopa es HTML de FrontPage: tablas anidadas, sin clases ni encabezados
 // semánticos. Toda su semántica está codificada en el color de fuente:
@@ -192,6 +192,28 @@ function creditsInRow($: CheerioAPI, row: AnyNode): Credit[] {
   return credits;
 }
 
+/**
+ * Sincopa declara QUÉ es cada imagen en la ruta, no en el texto: `covers160/`,
+ * `coversbig/`, `cover_latin16/` son portadas y `photos5/`, `pictures/`,
+ * `artist_photos/` son fotos de artista. Es el canal más explícito de todo el
+ * archivo —no hay que inferir nada de la prosa— y clasifica sus 1.437
+ * imágenes sin una sola ambigüedad: 917 portadas y 520 fotos.
+ */
+const COVER_DIR = /\/covers?[a-z0-9_]*\//i;
+const PHOTO_DIR = /\/(?:photos?[a-z0-9_]*|pictures|artist_photos?)\//i;
+
+type SincopaImageKind = "cover" | "artist_photo";
+
+function sincopaImageKind(url: string): SincopaImageKind | undefined {
+  if (COVER_DIR.test(url)) return "cover";
+  if (PHOTO_DIR.test(url)) return "artist_photo";
+  return undefined;
+}
+
+function firstImageOfKind(page: CheerioAPI, url: string, kind: SincopaImageKind) {
+  return contentImages(page, url).find((image) => sincopaImageKind(image.url) === kind);
+}
+
 export class SincopaAdapter implements SourceAdapter {
   readonly slug = "sincopa";
   readonly requiresBrowser = false as const;
@@ -276,6 +298,9 @@ export class SincopaAdapter implements SourceAdapter {
     }
     const genre = pairs.get("genre");
     if (genre) artistFields.push({ field: "genre", value: genre, evidence: evidence("td", genre) });
+    // La foto vive en photos*/ o artist_photos*/: la ruta lo dice, no se infiere.
+    const photo = firstImageOfKind(page, url, "artist_photo");
+    if (photo) artistFields.push({ field: "picture_url", value: photo.url, evidence: evidence("img", photo.alt || photo.url) });
     records.push(this.record("artist", name, artistFields));
 
     // Miembros: rol + persona + años. Solo dentro de la sección "Members";
@@ -359,6 +384,10 @@ export class SincopaAdapter implements SourceAdapter {
       if (year) albumFields.push({ field: "release_year", value: year, evidence: evidence("td", release) });
       if (format) albumFields.push({ field: "format", value: clean(format), evidence: evidence("td", release) });
     }
+    // La portada vive en covers*/: el alt trae además "Artista - Título", que
+    // corrobora la identidad ya extraída de la ficha.
+    const cover = firstImageOfKind(page, url, "cover");
+    if (cover) albumFields.push({ field: "cover_url", value: cover.url, evidence: evidence("img", cover.alt || cover.url) });
     records.push(this.record("album", artist ? `${artist}::${title}` : title, albumFields));
 
     // La ficha de disco AFIRMA su artista ("Artist: Fusión IV"), no solo lo

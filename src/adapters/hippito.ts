@@ -1,7 +1,7 @@
 import { load } from "cheerio";
 import type { RawRecord } from "./contracts.js";
 import { BloggerAdapter } from "./blogger.js";
-import { ADAPTER_VERSION, clean, excerpt } from "./shared.js";
+import { ADAPTER_VERSION, clean, contentImages, excerpt } from "./shared.js";
 
 // "Hippito y sus Chatarritas" es un archivo discográfico de vinilo, no un
 // blog de reseñas: 973 de sus 1.063 entradas llevan la ficha completa en el
@@ -132,6 +132,10 @@ export class HippitoYSusChatarritasAdapter extends BloggerAdapter {
     if (facts.year) albumFields.push({ field: "release_year", value: facts.year, evidence: fromTitle });
     if (facts.catalog) albumFields.push({ field: "catalog_number", value: facts.catalog, evidence: fromTitle });
     if (facts.label) albumFields.push({ field: "label", value: facts.label, evidence: fromTitle });
+    // La portada es la primera imagen de contenido de la entrada: el post es
+    // la ficha de ese disco. 987 de las 990 fichas del blog traen una.
+    const cover = contentImages(page, url)[0];
+    if (cover) albumFields.push({ field: "cover_url", value: cover.url, evidence: evidence("img", cover.alt || cover.url, cover.position) });
     records.push(this.record("album", `${facts.artist}::${facts.album}`, albumFields));
 
     if (facts.label) {

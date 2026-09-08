@@ -288,6 +288,95 @@ export function parseOrigin(raw: string): OriginFacts {
   return facts;
 }
 
+/**
+ * Imágenes de CONTENIDO de una página. No decide qué representa cada una —eso
+ * depende de la fuente: Sincopa lo dice en la ruta, un blog en el orden— sólo
+ * separa la imagen de la decoración.
+ *
+ * El filtro es por descarte explícito, no por lista blanca: cualquier cosa que
+ * no sea un icono social, un adorno de plantilla o una miniatura de interfaz
+ * cuenta como contenido, porque perderse una portada es peor que arrastrar un
+ * banner que la revisión humana descartará.
+ */
+export interface ContentImage {
+  /** Absoluta contra la página que la contiene. */
+  url: string;
+  alt: string;
+  width: number | null;
+  position: number;
+}
+
+/** Servidores que sólo sirven adorno: iconos sociales y plantilla de Blogger. */
+const JUNK_HOST = /photobucket|myspace|facebook|twitter|instagram|pinterest|whatsapp|telegram|blogblog\.com|blogger\.com\/img/i;
+
+/**
+ * Palabras que delatan un adorno. Se comparan contra el NOMBRE DE ARCHIVO
+ * troceado y contra segmentos de directorio COMPLETOS — nunca troceando la
+ * ruta entera. La distinción no es cosmética: el id de contenido de Blogger
+ * es opaco (`/img/b/R29vZ2xl/AVvXsEigIrEURf3B8imIQtyilC3QBrCjuHSkBzJ…`) y
+ * partirlo por `-`/`_` produce trozos como "avatars", "logo2" o "s0" por pura
+ * coincidencia de letras, que descartaban portadas buenas.
+ */
+const JUNK_WORD = /^(?:icons?|buttons?|banners?|avatars?|profile|pixel|spacer|blank|1x1|logos?\d*|emoticons?|smiley|thumb|thumbnail)$/i;
+
+/** Por debajo de esto es un icono de plantilla, no una portada ni una foto. */
+const MIN_IMAGE_WIDTH = 100;
+
+/**
+ * Blogger sirve el ancho en un segmento propio: `/s72-c/`, `/s320/`. `s0` es
+ * su marca de TAMAÑO ORIGINAL, no de cero píxeles: filtrarla tiraba portadas
+ * a máxima resolución, que es justo lo contrario de lo que se busca.
+ */
+const BLOGGER_SIZE = /^s(\d{1,4})(?:-[a-z]+)?$/i;
+
+function isDecoration(absolute: string): boolean {
+  if (JUNK_HOST.test(absolute)) return true;
+  let pathname: string;
+  try { pathname = new URL(absolute).pathname; } catch { return false; }
+  const segments = pathname.split("/").filter(Boolean);
+  const filename = segments.pop() ?? "";
+  // Directorios: se comparan enteros, así `/icons/` cae y el id opaco no.
+  let servedWidth: number | null = null;
+  for (const segment of segments) {
+    if (JUNK_WORD.test(segment)) return true;
+    const size = BLOGGER_SIZE.exec(segment);
+    if (size) servedWidth = Number(size[1]);
+  }
+  // Cuando el servidor declara a qué tamaño sirve la imagen, eso decide: pesa
+  // más que adivinar por el nombre del archivo, que en un blog es el que
+  // tuviera quien la subió. "avatars-000188282602-…-t500x500.jpg" servido en
+  // /s400/ es una carátula de SoundCloud rebotada, no un avatar.
+  if (servedWidth !== null) return servedWidth > 0 && servedWidth < MIN_IMAGE_WIDTH;
+  // Sin esa declaración vale el nombre, y sólo si tiene extensión: el id de
+  // contenido de Blogger no tiene punto, y trocearlo era el error que
+  // inventaba "avatars" y "logo" dentro de una cadena opaca.
+  if (!filename.includes(".")) return false;
+  return filename.split(/[._-]/).some((token) => token !== "" && JUNK_WORD.test(token));
+}
+
+export function contentImages($: CheerioAPI, baseUrl: string): ContentImage[] {
+  const images: ContentImage[] = [];
+  const seen = new Set<string>();
+  $("img[src]").each((index, node) => {
+    const raw = ($(node).attr("src") ?? "").trim();
+    if (!raw || raw.startsWith("data:")) return;
+    const declared = Number.parseInt($(node).attr("width") ?? "", 10);
+    if (Number.isInteger(declared) && declared < MIN_IMAGE_WIDTH) return;
+    let absolute: string;
+    try { absolute = new URL(raw, baseUrl).toString(); } catch { return; }
+    if (isDecoration(absolute)) return;
+    if (seen.has(absolute)) return;
+    seen.add(absolute);
+    images.push({
+      url: absolute,
+      alt: clean($(node).attr("alt") ?? ""),
+      width: Number.isInteger(declared) ? declared : null,
+      position: index,
+    });
+  });
+  return images;
+}
+
 export interface ExplicitCatalogOptions { fallbackArtist?: string; fallbackAlbum?: string; }
 
 export function extractExplicitCatalog($: CheerioAPI, url: string, extractor: string, options: ExplicitCatalogOptions = {}): RawRecord[] {
@@ -330,6 +419,12 @@ export function extractExplicitCatalog($: CheerioAPI, url: string, extractor: st
     // sola y elegir un trozo sería descartar lo que la fuente afirma.
     const genre = found.get("genres")?.[0];
     if (genre) albumFields.push(["genre", genre]);
+    // La primera imagen de contenido de una ficha de disco es su portada: el
+    // post es sobre ese disco y la imagen encabeza la entrada. No se afirma
+    // nada sobre el resto (contraportadas, fotos de la banda, scans), que
+    // necesitan un canal que diga qué son.
+    const cover = contentImages($, url)[0];
+    if (cover) albumFields.push(["cover_url", { value: cover.url, selector: "img", text: cover.alt || cover.url, position: cover.position }]);
     albumFields.push(["source_url", { value: url, selector: "document", text: url, position: 0 }]);
     records.push({ entityKind: "album", identity: `${artist ?? "unknown artist"}::${album}`.slice(0, 250), extractor, extractorVersion: ADAPTER_VERSION, fields: fieldsFor(url, albumFields) });
   }
