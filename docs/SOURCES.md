@@ -126,16 +126,33 @@ Rock De Vzla, Hippito y Sus Chatarritas, RHV Blogspot)
 - *Estrategia:* **adapter `blogger` sobre el feed**, no sobre el HTML de
   portada. El feed da título, fecha, autor, etiquetas y contenido del post ya
   estructurado; el HTML crudo se conserva como evidencia.
-- *Limitaciones confirmadas:* son blogs de descargas; el dato musicológico
-  vive en prosa dentro del post (tracklist, año, formación), **no** en campos.
-  Requiere extracción narrativa cuidada y, en casos desordenados, asistencia
-  puntual de IA. Además **no todo el contenido es venezolano** (p. ej. la
+- *Estructura real, medida sobre las 4.922 entradas guardadas (2026-09-08).*
+  Los cinco blogs NO comparten convención, y por eso no comparten extractor:
+
+  | fuente | entradas | forma del dato | registros |
+  |---|---:|---|---:|
+  | Descargas Metal Venezolano | 1.355 | campos etiquetados en el cuerpo (`Banda:`, `Álbum:`, `Género:`) — 1.352 de 1.355 | 2.679 |
+  | Hippito y Sus Chatarritas | 1.063 | ficha completa en el **título** (`Artista - Título (Sello CAT / País Año)`) — 973 de 1.063; compositores en gris en el cuerpo | 14.868 |
+  | Rockzuela | 1.127 | prosa editorial; 7 entradas con etiquetas | 0 |
+  | Rock De Vzla | 1.113 | prosa editorial; 9 entradas con etiquetas | 0 |
+  | RHV Blogspot | 264 | prosa editorial; 23 entradas con etiquetas | 0 |
+
+  Los tres ceros **no son un fallo del adapter**: son blogs de reseñas donde
+  el año de formación o la ciudad solo se obtienen infiriendo desde prosa, y
+  `extractExplicitCatalog` se niega a hacerlo por diseño. Sacarlos de ahí
+  exige cambiar la política de "solo evidencia explícita", que es una
+  decisión de contrato, no de adapter.
+- *Fuera de alcance en Hippito:* las 350 entradas `VA - ...` (recopilatorios).
+  El core exige `albums.artist_id NOT NULL` y un recopilatorio no tiene un
+  artista único; inventar una entidad "Various Artists" es una decisión de
+  modelo, no de parsing, y el adapter no la toma por su cuenta.
+- *Limitaciones confirmadas:* son blogs de descargas. Además **no todo el contenido es venezolano** (p. ej. la
   entrada más reciente de Descargas Metal Venezolano en la sonda era de una
   banda no venezolana), por lo que hace falta un filtro de pertinencia antes
   de crear entidades.
 - *Confianza:* `low` — colaborativo, sin verificación editorial.
-- **[POR CONFIRMAR]** Estructura interna de cada post (formato del tracklist,
-  presencia de créditos) — se caracteriza en F4 sobre el crudo ya guardado.
+- **[CONFIRMADO 2026-09-08]** Estructura interna de cada post caracterizada
+  sobre el crudo ya guardado; ver la tabla de arriba.
 
 **6. Rock Hecho En Venezuela** (`rockhechovenezuela.com`)
 

@@ -342,6 +342,17 @@ async function createEntity(client: PoolClient, claim: ClaimToPersist, claimId: 
     const track = claim.trackNumber ?? (input.kind === "TRACK" ? input.trackNumber : undefined)
       ?? await siblingInteger(client, claim, "track_number");
     if (!albumId || !track) return undefined;
+    // El core impone UNIQUE(album_id, disc_number, track_number). Hay fuentes
+    // que repiten la numeración dentro de un mismo disco (las dos caras de un
+    // LP suelen empezar en 01). Chocar contra la restricción abortaría toda
+    // la aprobación, así que la posición ocupada por otra pista se deja como
+    // decisión humana en vez de reventar o de mover el número por cuenta
+    // propia.
+    const taken = await client.query<{ title: string }>(
+      "SELECT title FROM public.tracks WHERE album_id=$1 AND disc_number=$2 AND track_number=$3 LIMIT 1",
+      [albumId, disc, track],
+    );
+    if (taken.rows[0] !== undefined) return undefined;
     query = "INSERT INTO public.tracks(album_id,disc_number,track_number,title) VALUES($1,$2,$3,$4) RETURNING id"; params = [albumId, disc, track, name];
   }
   const saved = await client.query<{ id: string }>(query, params);

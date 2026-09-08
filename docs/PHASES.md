@@ -301,8 +301,14 @@ Criterios de salida: merge del seed + 2 fuentes Blogger con 0 duplicados
 (re-run idéntico); conflictos reales conservados con evidencia doble; una
 resolución de conflicto de muestra ejecutada y auditada. El motor y la
 resolución de muestra están cubiertos por
-`test/contract/entity-resolution-merge.test.ts`; falta ejecutar el criterio
-de corpus completo seed + 2 Blogger.
+`test/contract/entity-resolution-merge.test.ts`.
+
+Las **dos fuentes Blogger ya existen**: Descargas Metal Venezolano (2.679
+registros, campos etiquetados en el cuerpo) y Hippito y Sus Chatarritas
+(14.868 registros, ficha en el título). Las otras tres Blogspot son prosa
+editorial y quedan en 0 por diseño, no por avería — ver SOURCES.md §3.2.
+Falta ejecutar el barrido completo de ambas contra el core y verificar el
+re-run idéntico.
 
 ---
 

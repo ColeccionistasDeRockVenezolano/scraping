@@ -48,8 +48,13 @@ describe("adapters funcionales de las fuentes autorizadas", () => {
     expect(claims.some((claim) => claim.entityKind === "artist" && claim.field === "name")).toBe(true);
     expect(claims.some((claim) => claim.entityKind === "album" && claim.field === "release_year")).toBe(true);
     expect(claims.some((claim) => claim.entityKind === "track" && claim.field === "track_number")).toBe(true);
-    expect(claims.some((claim) => claim.entityKind === "album_credit" && claim.field === "credit_scope" && claim.rawValue === "album")).toBe(true);
-    expect(claims.some((claim) => claim.entityKind === "track_credit" && claim.field === "credit_scope" && claim.rawValue === "track")).toBe(true);
+    // El alcance del crédito siempre es explícito. Qué alcances existan
+    // depende de la fuente: Hippito solo acredita compositores por pista y no
+    // publica créditos de disco, y exigirle uno obligaría a inventarlo.
+    const scopes = claims.filter((claim) => claim.field === "credit_scope");
+    expect(scopes.length).toBeGreaterThan(0);
+    expect(scopes.every((claim) => (claim.entityKind === "album_credit" && claim.rawValue === "album")
+      || (claim.entityKind === "track_credit" && claim.rawValue === "track"))).toBe(true);
   });
 
   it("Sincopa convierte membresía explícita, rol y periodo; créditos no son membresía", async () => {
