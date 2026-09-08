@@ -5,13 +5,36 @@
 > (`crv_simple_v1.sql`): las migraciones posteriores solo tocan el esquema
 > `ingest`.
 >
-> Estado actual (2026-09-07): **F0 parcialmente adelantado**. Ya existen y
-> están verificadas contra PostgreSQL 16 las migraciones auxiliares
-> `0001–0004` (`migrations/`, documentadas en `docs/db/ER_INGEST_MEDIA.md`)
-> y el harness `tests/run_all.sh`, que demuestra con un diff vacío de
-> `pg_dump` que el core queda intacto. **Falta** todo el código de
-> aplicación (Node/TS) y actualizar el runtime (la máquina tiene Node
-> v20.20.2; se exige Node 22).
+> Estado actual (2026-09-07): **F0 en curso, base de aplicación lista**.
+> Node 22 LTS instalado (vía nvm; ver nota abajo) y verificado como
+> `>=22.0.0` en `package.json`. Repositorio git inicializado con
+> `.gitignore` cubriendo secretos, `node_modules`, `data/raw` y salidas
+> generadas. Proyecto Node/TS estricto creado (`package.json`, `tsconfig.json`
+> strict) con la estructura de módulos de ARCHITECTURE.md §4
+> (`src/config`, `src/logger`, `src/db/schema`, `src/fetcher`, `src/cache`,
+> `src/storage`, `src/adapters`, `src/normalization`, `src/er`, `src/claims`,
+> `src/merge`, `src/conflicts`, `src/review`, `src/ai`, `src/youtube`,
+> `src/cli`, `src/api`, `src/doctor`). Drizzle ORM modela por completo
+> `public`/`ingest`/`media` (`src/db/schema/`, solo lectura tipada del core;
+> el DDL real sigue siendo `migrations/*.sql`), con un runner propio
+> (`src/db/migrate.ts`) que conserva `ingest.schema_migrations`. `doctor`
+> (`src/doctor/`) verifica hash+catálogo del core, schemas auxiliares,
+> migraciones aplicadas y estado de fuentes — verificado en verde contra
+> PostgreSQL 16 real. `tests/run_all.sh`/`test_0004_review_kinds.sh` ahora
+> verifican también el hash del core como paso 0
+> (`crv_simple_v1.sql.sha256` + `verify_core_hash()`), cerrando el hallazgo
+> de CONTRACT §11.2. Puerto a Vitest iniciado:
+> `test/contract/core-and-schema.test.ts` reproduce el contrato completo
+> (core + 0001-0004 + rollback, diff de `pg_dump` vacío) **y** ejercita el
+> schema Drizzle real (inserts/joins a través de core+ingest+media),
+> contra un contenedor desechable levantado por `test/support/pg-container.ts`.
+> **Falta:** `sources` sembradas desde el XLSX, `fetcher`/`cache`/raw storage
+> (F1), y el resto de comandos de CLI (F1+).
+>
+> Nota de entorno: la máquina no tenía Node 22 en el PATH por defecto (solo
+> Node 20 vía `nodesource`), pero sí tenía un Node 22.23.1 ya instalado por
+> `nvm` sin activar; se corrigió el orden de `~/.bashrc` para que los shells
+> interactivos usen Node 22 automáticamente. No requirió `sudo`.
 
 ---
 
@@ -20,11 +43,15 @@
 **Objetivo:** dejar el repositorio, la base y el core canónico verificados.
 
 Entregables:
-- **Actualizar el runtime a Node 22 LTS** (hoy hay Node v20.20.2).
-- Repo de la app (Node 22 + TS strict + Vitest + Pino), estructura de
-  módulos según ARCHITECTURE.md §4.
-- Migración baseline = `crv_simple_v1.sql` aplicado **verbatim** (hash
-  `b7e7d35a…` registrado; los contract tests lo comparan en cada ejecución).
+- ✅ *Ya hecho:* **Node 22 LTS** activo (nvm, ver nota de entorno arriba).
+- ✅ *Ya hecho:* Repositorio git inicializado (`.gitignore` con secretos,
+  `node_modules`, `data/raw`, salidas generadas).
+- ✅ *Ya hecho:* Repo de la app (Node 22 + TS strict + Vitest + Pino),
+  estructura de módulos según ARCHITECTURE.md §4 (`src/*`).
+- ✅ *Ya hecho:* Migración baseline = `crv_simple_v1.sql` aplicado
+  **verbatim** (hash `b7e7d35a…` en `crv_simple_v1.sql.sha256`; verificado
+  por `verify_core_hash()` en el harness bash **y** por `doctor` y el
+  contract test de Vitest en cada ejecución).
 - ✅ *Ya hecho:* schemas `ingest` + `media` con `sources`, `raw_pages`,
   `scrape_runs`, `scrape_errors`, `seed_uploads`, `genres`, `claims`,
   `claim_evidence`, alias ×5, `conflicts`, `review_queue`, `merge_audit`,
@@ -35,13 +62,25 @@ Entregables:
   `media_type_no_album`, `genre_unknown`, `new_source`, `low_confidence`,
   `ai_biography`, `ai_entity_resolution` (CONTRACT §11.1). Sin ella, F2 no
   podía cumplir sus criterios.
-- Portar `tests/run_all.sh` a Vitest y adoptar Drizzle como runner de
-  migraciones, conservando el harness `schema_migrations` existente.
-- `doctor` CLI: verifica integridad del core (hash/catálogo), esquemas
-  auxiliares y estado de fuentes.
+- ✅ *Ya hecho:* Drizzle ORM como runner de migraciones
+  (`src/db/migrate.ts`), conservando `ingest.schema_migrations`; el DDL
+  real sigue en `migrations/*.sql` (justificación en el propio archivo).
+  Schema Drizzle completo (`src/db/schema/`) para `public` (solo lectura
+  tipada), `ingest` y `media`.
+- ✅ *Ya hecho:* `doctor` (`src/doctor/`, `npm run doctor`): verifica
+  integridad del core (hash/catálogo), schemas auxiliares, migraciones
+  aplicadas y estado de fuentes.
+- ✅ *Ya hecho (parcial):* Puerto a Vitest —
+  `test/contract/core-and-schema.test.ts` reproduce el contrato de
+  `tests/run_all.sh` (core + 0001-0004 + rollback, diff de `pg_dump` vacío)
+  contra un contenedor desechable propio (`test/support/pg-container.ts`),
+  y además ejercita el schema Drizzle real (inserts/joins). El harness bash
+  original se conserva tal cual (no depende de Node).
 
-Criterios de salida: `doctor` en verde; contract-tests del core en verde
-(diff de `public` vacío); base `crv_test` desechable y reproducible.
+Criterios de salida: `doctor` en verde (✅ verificado); contract-tests del
+core en verde, diff de `public` vacío (✅ verificado, bash y Vitest); base
+`crv_test` desechable y reproducible (✅ vía `test/support/pg-container.ts`
+y `tests/lib_pg.sh`).
 
 ---
 

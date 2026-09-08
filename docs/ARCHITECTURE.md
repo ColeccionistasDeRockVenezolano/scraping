@@ -262,7 +262,15 @@ El seed YT sigue el mismo flujo saltando 1-2 (el "raw" es la fila XLSX).
   `pg_dump --schema=public --schema-only` antes/después sea **vacío**
   (también tras el rollback completo). `tests/test_0004_review_kinds.sh`
   cubre además la migración de enums, y `tests/lib_pg.sh` comparte el arranque
-  del contenedor. Todo ello se porta a Vitest en F0.
+  del contenedor. **Portado a Vitest (F0):**
+  `test/contract/core-and-schema.test.ts` reproduce ese mismo contrato
+  (core + migraciones 0001-0004 vía `src/db/migrate.ts` + rollback + diff
+  vacío) contra un contenedor propio (`test/support/pg-container.ts`, mismo
+  arranque en dos fases que `tests/lib_pg.sh`), y añade el ejercicio real
+  del schema Drizzle: inserts y joins a través de `public`+`ingest`+`media`
+  con FKs y enums reales (artist→album→track, source→claim→evidence,
+  video↔album N:N con enlace primario, review_queue con un kind de 0004).
+  El harness bash original se conserva (no depende de Node).
 - **Idempotencia:** cada importación ejecutada 2 veces → conteos idénticos
   (fixtures golden de los dos XLSX reales, versionados en `test/fixtures/`).
 - Unit: normalización, tokenización de tipos, extracción de video IDs,
