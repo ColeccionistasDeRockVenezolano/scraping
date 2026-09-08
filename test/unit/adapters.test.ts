@@ -48,13 +48,44 @@ describe("adapters funcionales de las fuentes autorizadas", () => {
     expect(claims.some((claim) => claim.entityKind === "artist" && claim.field === "name")).toBe(true);
     expect(claims.some((claim) => claim.entityKind === "album" && claim.field === "release_year")).toBe(true);
     expect(claims.some((claim) => claim.entityKind === "track" && claim.field === "track_number")).toBe(true);
-    // El alcance del crédito siempre es explícito. Qué alcances existan
-    // depende de la fuente: Hippito solo acredita compositores por pista y no
-    // publica créditos de disco, y exigirle uno obligaría a inventarlo.
+    // Qué créditos existan depende de la fuente: Hippito solo acredita
+    // compositores por pista, y Descargas Metal no publica créditos en
+    // absoluto. Exigirlos a todas obligaría a inventarlos. Lo que sí vale
+    // para todas: si hay crédito, su alcance es explícito y concuerda con su
+    // tipo — un crédito de disco jamás se declara de pista y viceversa.
     const scopes = claims.filter((claim) => claim.field === "credit_scope");
-    expect(scopes.length).toBeGreaterThan(0);
     expect(scopes.every((claim) => (claim.entityKind === "album_credit" && claim.rawValue === "album")
       || (claim.entityKind === "track_credit" && claim.rawValue === "track"))).toBe(true);
+  });
+
+  it("Descargas Metal saca la ficha completa de sus dos formatos de marcado", async () => {
+    const claims = await parsed("descargas-metal-venezolano");
+    // El post pone una etiqueta por línea; en la mitad de las entradas las
+    // líneas solo están separadas por <br>. Leerlas como un bloque hacía que
+    // "Banda:" se tragara el post entero como nombre del artista.
+    const names = claims.filter((claim) => claim.entityKind === "artist" && claim.field === "name").map((claim) => claim.rawValue);
+    expect(names).toContain("Permanence");
+    expect(names.every((name) => String(name).length < 60)).toBe(true);
+
+    // "Lugar: Yaracuy - Actualmente Peru (Lima)": el origen es Yaracuy; dónde
+    // está ahora la banda no es su origen y no puede escribirse como tal.
+    expect(claims.some((c) => c.entityKind === "artist" && c.field === "origin_city" && c.rawValue === "Yaracuy")).toBe(true);
+    expect(claims.some((c) => c.entityKind === "artist" && c.field === "origin_country")).toBe(false);
+    expect(claims.some((c) => c.entityKind === "artist" && c.field === "location" && String(c.rawValue).includes("Peru"))).toBe(true);
+
+    // El género es columna de albums, no de artists.
+    expect(claims.some((c) => c.entityKind === "album" && c.field === "genre" && c.rawValue === "Technical Death Metal")).toBe(true);
+    expect(claims.some((c) => c.entityKind === "artist" && c.field === "genre")).toBe(false);
+
+    // Tracklist sin <ol>: "Tracklist:" y debajo una línea por pista.
+    const tracks = claims.filter((c) => c.entityKind === "track" && c.field === "title").map((c) => c.rawValue);
+    expect(tracks).toContain("Event Horizon (intro)");
+    expect(tracks).toContain("Cosmological Location");
+    expect(tracks.length).toBeGreaterThanOrEqual(12);
+
+    // "Web:" vale por su href, no por el texto visible del enlace.
+    const web = claims.find((c) => c.field === "web_url");
+    expect(String(web?.rawValue ?? "")).toMatch(/^https?:\/\//);
   });
 
   it("Sincopa convierte membresía explícita, rol y periodo; créditos no son membresía", async () => {

@@ -131,17 +131,18 @@ Rock De Vzla, Hippito y Sus Chatarritas, RHV Blogspot)
 
   | fuente | entradas | forma del dato | registros |
   |---|---:|---|---:|
-  | Descargas Metal Venezolano | 1.355 | campos etiquetados en el cuerpo (`Banda:`, `Álbum:`, `Género:`) — 1.352 de 1.355 | 2.679 |
+  | Descargas Metal Venezolano | 1.355 | campos etiquetados en el cuerpo (`Banda:`, `Álbum:`, `Lanzamiento:`, `Género:`, `Lugar:`, `Web:`) + tracklist numerada — 1.352 de 1.355 | 11.313 |
   | Hippito y Sus Chatarritas | 1.063 | ficha completa en el **título** (`Artista - Título (Sello CAT / País Año)`) — 973 de 1.063; compositores en gris en el cuerpo | 14.868 |
-  | Rockzuela | 1.127 | prosa editorial; 7 entradas con etiquetas | 0 |
-  | Rock De Vzla | 1.113 | prosa editorial; 9 entradas con etiquetas | 0 |
-  | RHV Blogspot | 264 | prosa editorial; 23 entradas con etiquetas | 0 |
+  | Rock De Vzla | 1.113 | sin título; formación (`La banda estuvo conformada por:`) y tracklist en el cuerpo — 1.012 entradas con datos, **1.028 membresías**, 16.171 pistas | 0 (sin adapter) |
+  | Rockzuela | 1.127 | título `Banda - Álbum (Año)` en 492; formación explícita en 27; tracklist en 273 — 290 entradas con datos | 0 (sin adapter) |
+  | RHV Blogspot | 264 | prosa editorial; solo 12 entradas con algo aprovechable | 0 |
 
-  Los tres ceros **no son un fallo del adapter**: son blogs de reseñas donde
-  el año de formación o la ciudad solo se obtienen infiriendo desde prosa, y
-  `extractExplicitCatalog` se niega a hacerlo por diseño. Sacarlos de ahí
-  exige cambiar la política de "solo evidencia explícita", que es una
-  decisión de contrato, no de adapter.
+  **Corrección (2026-09-08):** una medición anterior daba 0 a Rockzuela y Rock
+  De Vzla y las declaraba "prosa". Era un error de la sonda, no de las
+  fuentes: buscaba las etiquetas de Descargas Metal (`Banda:`) y recorría solo
+  bloques `<div>/<p>/<li>`, mientras que esos posts separan sus líneas solo
+  con `<br>`. Ambas tienen estructura explícita y datos abundantes. La única
+  Blogspot que sí es prosa es RHV Blogspot.
 - *Fuera de alcance en Hippito:* las 350 entradas `VA - ...` (recopilatorios).
   El core exige `albums.artist_id NOT NULL` y un recopilatorio no tiene un
   artista único; inventar una entidad "Various Artists" es una decisión de

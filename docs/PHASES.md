@@ -303,12 +303,13 @@ resolución de conflicto de muestra ejecutada y auditada. El motor y la
 resolución de muestra están cubiertos por
 `test/contract/entity-resolution-merge.test.ts`.
 
-Las **dos fuentes Blogger ya existen**: Descargas Metal Venezolano (2.679
-registros, campos etiquetados en el cuerpo) y Hippito y Sus Chatarritas
-(14.868 registros, ficha en el título). Las otras tres Blogspot son prosa
-editorial y quedan en 0 por diseño, no por avería — ver SOURCES.md §3.2.
-Falta ejecutar el barrido completo de ambas contra el core y verificar el
-re-run idéntico.
+Las **dos fuentes Blogger ya existen**: Descargas Metal Venezolano (11.313
+registros: 1.338 artistas con ciudad de origen, 1.345 álbumes con año y
+género, 8.630 pistas) y Hippito y Sus Chatarritas (14.868 registros, ficha en
+el título). Rock De Vzla y Rockzuela tienen estructura explícita medida y
+aún no tienen adapter; RHV Blogspot sí es prosa — ver SOURCES.md §3.2.
+Falta ejecutar el barrido completo contra el core y verificar el re-run
+idéntico.
 
 ---
 

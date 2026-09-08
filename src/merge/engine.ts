@@ -35,6 +35,10 @@ const CONTEXT_FIELDS = new Set([
   "artist_name", "album_title", "person_name", "organization_name", "credited_name",
   "credit_role", "credit_scope", "membership_status", "role", "from_year", "to_year",
   "label", "recording_studio", "production_company", "location", "source_url",
+  // Enlaces externos de la entidad (Bandcamp, Facebook). No hay columna en el
+  // core para ellos; se aceptan como contexto trazable hasta que se decida si
+  // se proyectan a media.media_links.
+  "web_url", "catalog_number", "format", "track_numbers", "track_title", "genre",
 ]);
 const INTEGER_FIELDS = new Set(["formed_year", "disbanded_year", "release_year", "disc_number", "track_number", "duration_seconds", "youtube_start_seconds", "label_id"]);
 const BOOLEAN_FIELDS = new Set(["is_venezuelan"]);

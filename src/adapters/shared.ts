@@ -18,6 +18,18 @@ export function excerpt(value: string): string {
   return clean(value).slice(0, 2_000);
 }
 
+/**
+ * Divide el HTML de un bloque por <br> y devuelve el texto de cada tramo.
+ * Sin esto, un post cuyas líneas están separadas solo por <br> se lee como
+ * una única cadena y la primera etiqueta se traga el resto del post entero.
+ */
+function linesOf($: CheerioAPI, html: string): string[] {
+  return html
+    .split(/<br\s*\/?>/i)
+    .map((chunk) => clean($(`<div>${chunk}</div>`).text()))
+    .filter(Boolean);
+}
+
 function evidence(url: string, selector: string, text: string, position?: number): Evidence {
   return { url, selector, excerpt: excerpt(text), ...(position === undefined ? {} : { position }) };
 }
@@ -28,7 +40,7 @@ const labels: Array<[RegExp, string]> = [
   [/^(?:artista|artist|banda|band|grupo)\s*:/i, "artist_name"],
   [/^(?:tipo de artista|artist type)\s*:/i, "artist_type"],
   [/^(?:biograf[ií]a|biography)\s*:/i, "biography"],
-  [/^(?:origen|origin)\s*:/i, "origin"],
+  [/^(?:origen|origin|lugar|procedencia)\s*:/i, "origin"],
   [/^(?:ciudad de origen|origin city)\s*:/i, "origin_city"],
   [/^(?:pa[ií]s de origen|origin country)\s*:/i, "origin_country"],
   [/^(?:formad[oa]|formed)\s*:/i, "formed_date"],
@@ -37,12 +49,13 @@ const labels: Array<[RegExp, string]> = [
   [/^(?:alias|nombre(?:s)? anterior(?:es)?)\s*:/i, "aliases"],
   [/^(?:[áa]lbum|album|disco|release)\s*:/i, "album_title"],
   [/^(?:tipo de [áa]lbum|album type|formato)\s*:/i, "album_type"],
-  [/^(?:a[nñ]o|fecha de lanzamiento|release (?:year|date))\s*:/i, "release_date"],
+  [/^(?:a[nñ]o|lanzamiento|publicaci[oó]n|fecha de lanzamiento|release (?:year|date))\s*:/i, "release_date"],
   [/^(?:sello|label)\s*:/i, "label"],
   [/^(?:cat[áa]logo|catalog(?:ue)?(?: no\.?)?)\s*:/i, "catalog_number"],
   [/^(?:estudio(?: de grabaci[oó]n)?|recording studio)\s*:/i, "recording_studio"],
   [/^(?:localizaci[oó]n|location)\s*:/i, "location"],
   [/^(?:compa[nñ][ií]a de producci[oó]n|production company)\s*:/i, "production_company"],
+  [/^(?:web|sitio(?: web)?|enlaces?|links?)\s*:/i, "web"],
 ];
 
 function labelledValues($: CheerioAPI): Map<string, Found[]> {
@@ -57,16 +70,37 @@ function labelledValues($: CheerioAPI): Map<string, Found[]> {
     position += 1;
   };
   $("p, li, td, div").each((_, node) => {
-    const text = clean($(node).text());
-    // Evita volver a procesar el texto concatenado de un contenedor padre.
-    if (!text || text.length > 1_500) return;
-    for (const [pattern, field] of labels) {
-      const match = pattern.exec(text);
-      if (!match) continue;
-      add(field, text.slice(match[0].length), node.tagName.toLowerCase(), text);
-      break;
+    // Solo el bloque hoja: un contenedor padre repite el texto de todos sus
+    // hijos, y su primera etiqueta se llevaría el post completo como valor.
+    if ($(node).find("p, li, td, div").length > 0) return;
+    for (const line of linesOf($, $(node).html() ?? "")) {
+      if (line.length > 1_500) continue;
+      for (const [pattern, field] of labels) {
+        const match = pattern.exec(line);
+        if (!match) continue;
+        // "web" se resuelve aparte, por href: el texto visible del enlace
+        // ("Facebook") es la etiqueta, no la dirección.
+        if (field !== "web") add(field, line.slice(match[0].length), node.tagName.toLowerCase(), line);
+        break;
+      }
     }
   });
+  // "Web:" apunta a Bandcamp/Facebook: lo que vale es el href, no el texto
+  // del enlace ("Facebook"), que es solo la etiqueta visible.
+  $("p, li, td, div").each((_, node) => {
+    const el = $(node);
+    if (el.find("p, li, td, div").length > 0) return;
+    // Se busca tramo a tramo: la línea "Web:" suele compartir bloque con
+    // "Banda:" y "Álbum:", separadas solo por <br>.
+    for (const chunk of (el.html() ?? "").split(/<br\s*\/?>/i)) {
+      const fragment = $(`<div>${chunk}</div>`);
+      const text = clean(fragment.text());
+      if (!/^(?:web|sitio(?: web)?|enlaces?|links?)\s*:/i.test(text)) continue;
+      const href = fragment.find("a[href]").first().attr("href");
+      if (href) add("web", href, node.tagName.toLowerCase(), text);
+    }
+  });
+
   // Sincopa y algunas páginas WordPress usan tablas de dos columnas. Una
   // celda de etiqueta y una celda de valor es evidencia estructurada, no una
   // inferencia desde el texto corrido.
@@ -86,6 +120,54 @@ function fieldsFor(url: string, entries: Array<[string, Found]>): RawRecord["fie
 
 function splitExplicitList(value: string): string[] {
   return value.split(/(?:\s*[;,]\s*|\s*\/\s*)/).map(clean).filter(Boolean);
+}
+
+/** Todas las líneas visuales del documento, en orden de lectura. */
+function documentLines($: CheerioAPI): Array<{ text: string; tag: string }> {
+  const out: Array<{ text: string; tag: string }> = [];
+  $("p, li, td, div, h1, h2, h3, h4").each((_, node) => {
+    const el = $(node);
+    if (el.find("p, li, td, div, h1, h2, h3, h4").length > 0) return;
+    for (const text of linesOf($, el.html() ?? "")) out.push({ text, tag: node.tagName.toLowerCase() });
+  });
+  return out;
+}
+
+const TRACKLIST_MARKER = /^(?:tracklist|lista de temas|temas|canciones|track ?list)\s*:?\s*$/i;
+const NUMBERED = /^(\d{1,3})\s*[.\-–)]\s*(.+)$/u;
+
+/**
+ * Muchos blogs no usan <ol>: escriben "Tracklist:" y debajo una línea por
+ * pista. Es una lista explícita igual que la otra, solo que sin marcado, y
+ * exigir <ol> dejaba fuera el tracklist entero.
+ */
+function extractNumberedTracks($: CheerioAPI, url: string, artist: string | undefined, album: string | undefined, extractor: string): RawRecord[] {
+  if (!album) return [];
+  const lines = documentLines($);
+  const start = lines.findIndex((line) => TRACKLIST_MARKER.test(line.text));
+  if (start < 0) return [];
+  const records: RawRecord[] = [];
+  for (let index = start + 1; index < lines.length; index += 1) {
+    const line = lines[index]!;
+    const match = NUMBERED.exec(line.text);
+    if (!match) { if (records.length > 0) break; continue; }
+    const title = clean(match[2] ?? "");
+    if (!title) continue;
+    const number = match[1]!;
+    const where = evidence(url, line.tag, line.text, records.length);
+    records.push({
+      entityKind: "track",
+      identity: `${artist ?? "unknown artist"}::${album}::${title}`.slice(0, 250),
+      extractor, extractorVersion: ADAPTER_VERSION,
+      fields: [
+        { field: "title", value: title, evidence: where },
+        { field: "track_number", value: number, evidence: where },
+        { field: "album_title", value: album, evidence: where },
+        ...(artist ? [{ field: "artist_name", value: artist, evidence: where }] : []),
+      ],
+    });
+  }
+  return records;
 }
 
 function extractTracks($: CheerioAPI, url: string, artist: string | undefined, album: string | undefined, extractor: string): RawRecord[] {
@@ -164,6 +246,48 @@ function extractCredits($: CheerioAPI, url: string, artist: string | undefined, 
   return records;
 }
 
+// Países que aparecen en estas fuentes. Sirve para decidir si "Lugar: Zulia"
+// es ciudad o país; lo que no está en la lista se trata como ciudad, que es
+// lo que el core asume por defecto (origin_country = 'Venezuela').
+const COUNTRY = /^(?:venezuela|colombia|chile|per[uú]|ecuador|argentina|brasil|m[eé]xico|espa[nñ]a|estados unidos|ee\.?uu\.?|usa|panam[aá]|costa rica|uruguay|bolivia|paraguay|rep[uú]blica dominicana|canad[aá]|italia|alemania|francia|portugal|inglaterra|reino unido)$/iu;
+// "Yaracuy - Actualmente Peru (Lima)", "Zulia/Ahora Colombia"
+const RELOCATED = /^(.*?)\s*[/\-–,]?\s*(?:ahora|actualmente(?:\s+en)?|radicad[oa]s?\s+en|now)\s+(.+)$/iu;
+
+export interface OriginFacts { city?: string; country?: string; current?: string; }
+
+/**
+ * "Lugar" es de dónde ES la banda. Cuando la fuente añade dónde está AHORA,
+ * eso no es su origen y no puede escribirse en `origin_country`: se conserva
+ * aparte como contexto. Sin marcador explícito no se interpreta el resto.
+ */
+export function parseOrigin(raw: string): OriginFacts {
+  const value = clean(raw);
+  if (!value) return {};
+  const facts: OriginFacts = {};
+  let origin = value;
+  const moved = RELOCATED.exec(value);
+  if (moved) { origin = clean(moved[1] ?? ""); facts.current = clean(moved[2] ?? ""); }
+  else if (value.includes("/")) {
+    const parts = value.split("/").map(clean).filter(Boolean);
+    // Sin marcador no se afirma que el segundo sea "actual": solo que el
+    // primero es el origen y lo demás queda como contexto sin interpretar.
+    origin = parts[0] ?? value;
+    if (parts.length > 1) facts.current = parts.slice(1).join(" / ");
+  }
+  // "Caracas, Venezuela" y "Caracas - Venezuela" son la misma forma. Solo se
+  // separa cuando la última pieza es un país: "Valencia - Carabobo" es
+  // ciudad y estado, y partirlo obligaría a decidir cuál es cuál.
+  const pieces = origin.split(/\s*[,]\s*|\s+[-–]\s+/u).map(clean).filter(Boolean);
+  const last = pieces[pieces.length - 1];
+  if (pieces.length >= 2 && last && COUNTRY.test(last)) {
+    facts.city = pieces.slice(0, -1).join(", ");
+    facts.country = last;
+  } else if (pieces.length >= 2) facts.city = origin;
+  else if (origin && COUNTRY.test(origin)) facts.country = origin;
+  else if (origin) facts.city = origin;
+  return facts;
+}
+
 export interface ExplicitCatalogOptions { fallbackArtist?: string; fallbackAlbum?: string; }
 
 export function extractExplicitCatalog($: CheerioAPI, url: string, extractor: string, options: ExplicitCatalogOptions = {}): RawRecord[] {
@@ -175,11 +299,20 @@ export function extractExplicitCatalog($: CheerioAPI, url: string, extractor: st
     const artistFields: Array<[string, Found]> = [];
     const artistEvidence = found.get("artist_name")?.[0] ?? { value: artist, selector: "h1", text: artist, position: 0 };
     artistFields.push(["name", artistEvidence]);
-    for (const key of ["artist_type", "biography", "origin", "origin_city", "origin_country", "formed_date", "disbanded_date"] as const) {
+    for (const key of ["artist_type", "biography", "origin_city", "origin_country", "formed_date", "disbanded_date"] as const) {
       const item = found.get(key)?.[0]; if (item) artistFields.push([key, item]);
     }
+    // "Lugar:" se descompone en columnas del core; el traslado posterior se
+    // conserva como contexto, nunca como origen.
+    const origin = found.get("origin")?.[0];
+    if (origin) {
+      const parsed = parseOrigin(origin.value);
+      if (parsed.city && !found.has("origin_city")) artistFields.push(["origin_city", { ...origin, value: parsed.city }]);
+      if (parsed.country && !found.has("origin_country")) artistFields.push(["origin_country", { ...origin, value: parsed.country }]);
+      if (parsed.current) artistFields.push(["location", { ...origin, value: parsed.current }]);
+    }
+    for (const link of found.get("web") ?? []) artistFields.push(["web_url", link]);
     for (const alias of found.get("aliases") ?? []) artistFields.push(["alias", alias]);
-    for (const genre of found.get("genres") ?? []) for (const value of splitExplicitList(genre.value)) artistFields.push(["genre", { ...genre, value }]);
     artistFields.push(["source_url", { value: url, selector: "document", text: url, position: 0 }]);
     records.push({ entityKind: "artist", identity: artist.slice(0, 250), extractor, extractorVersion: ADAPTER_VERSION, fields: fieldsFor(url, artistFields) });
   }
@@ -188,12 +321,21 @@ export function extractExplicitCatalog($: CheerioAPI, url: string, extractor: st
     const albumFields: Array<[string, Found]> = [["title", titleEvidence]];
     if (artist) albumFields.push(["artist_name", found.get("artist_name")?.[0] ?? { value: artist, selector: "h1", text: artist, position: 0 }]);
     for (const key of ["album_type", "release_date", "label", "catalog_number", "recording_studio", "location", "production_company"] as const) {
-      const item = found.get(key)?.[0]; if (item) albumFields.push([key === "release_date" && /^\d{4}$/.test(item.value) ? "release_year" : key, item]);
+      const item = found.get(key)?.[0];
+      if (item) albumFields.push([key === "release_date" && /^\d{4}$/.test(item.value) ? "release_year" : key, item]);
     }
+    // El género es columna de `albums`, no de `artists`: es el único lugar
+    // del core donde puede aterrizar. Se conserva tal como lo escribió la
+    // fuente ("Heavy/Power Metal Sinfónico"), sin partirlo: la columna es una
+    // sola y elegir un trozo sería descartar lo que la fuente afirma.
+    const genre = found.get("genres")?.[0];
+    if (genre) albumFields.push(["genre", genre]);
     albumFields.push(["source_url", { value: url, selector: "document", text: url, position: 0 }]);
     records.push({ entityKind: "album", identity: `${artist ?? "unknown artist"}::${album}`.slice(0, 250), extractor, extractorVersion: ADAPTER_VERSION, fields: fieldsFor(url, albumFields) });
   }
-  return [...records, ...extractTracks($, url, artist, album, extractor), ...extractCredits($, url, artist, album, extractor)];
+  const listed = extractTracks($, url, artist, album, extractor);
+  const tracks = listed.length > 0 ? listed : extractNumberedTracks($, url, artist, album, extractor);
+  return [...records, ...tracks, ...extractCredits($, url, artist, album, extractor)];
 }
 
 export function extractNarrativeHtml(html: string, url: string, extractor: string): RawRecord[] {
