@@ -1,0 +1,47 @@
+# ============================================================================
+# CRV — .gitignore
+# Nunca commitear: secretos (.env y variantes, claves, tokens), dependencias
+# reinstalables (node_modules), salidas generadas (dist, build, artifacts de
+# test) ni el HTML crudo descapeado (data/raw: se respalda por separado,
+# ver ARCHITECTURE.md §8, no vive en git).
+# ============================================================================
+
+# --- Secretos y config local: NUNCA versionar ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*secret*
+*credential*
+*.credentials.json
+config/local.*
+
+# --- Node / TypeScript ---
+node_modules/
+dist/
+build/
+*.tsbuildinfo
+.tsimp/
+
+# --- Datos crudos y volúmenes locales (se respaldan aparte, no en git) ---
+data/raw/
+data/*.sqlite
+*.sqlite3
+
+# --- Salidas de test generadas (se regeneran en cada corrida) ---
+tests/artifacts/
+coverage/
+.vitest/
+
+# --- Logs ---
+*.log
+npm-debug.log*
+
+# --- Editor / SO ---
+.DS_Store
+.vscode/
+.idea/
+*.swp

@@ -1,0 +1,747 @@
+Project Coleccionistas_Rock_Venezolano {
+  database_type: 'PostgreSQL'
+  Note: 'Modelo relacional v1 para catálogo musicológico, discografía, personas, créditos, archivo digital y publicaciones externas.'
+}
+
+Enum catalog_scope {
+  venezuelan
+  external_reference
+}
+
+Enum publication_availability {
+  public
+  unlisted
+  copyright_blocked
+  removed
+  unknown
+}
+
+Enum biography_origin {
+  original
+  adapted
+  external_excerpt
+}
+
+Enum archive_quality {
+  hq
+  lq
+  unknown
+}
+
+Enum archive_publication_state {
+  published
+  unpublished
+}
+
+Table artist_types {
+  id smallint [pk, increment]
+  code varchar(40) [not null, unique]
+  name varchar(80) [not null]
+  description text
+}
+
+Table genres {
+  id bigint [pk, increment]
+  name varchar(100) [not null, unique]
+  parent_genre_id bigint
+}
+
+Ref: genres.parent_genre_id > genres.id
+
+Table instruments {
+  id bigint [pk, increment]
+  name varchar(100) [not null, unique]
+  family varchar(80)
+}
+
+Table credit_roles {
+  id bigint [pk, increment]
+  code varchar(60) [not null, unique]
+  name varchar(120) [not null]
+  category varchar(60) [not null, note: 'performance, composition, production, engineering, visual, business, other']
+}
+
+Table organization_types {
+  id smallint [pk, increment]
+  code varchar(40) [not null, unique]
+  name varchar(100) [not null]
+}
+
+Table release_types {
+  id smallint [pk, increment]
+  code varchar(50) [not null, unique]
+  name varchar(100) [not null]
+}
+
+Table media_formats {
+  id smallint [pk, increment]
+  code varchar(30) [not null, unique]
+  name varchar(80) [not null, note: 'CD, Cassette, Vinyl, Digital, etc. No representa una edición física individual.']
+}
+
+Table platforms {
+  id smallint [pk, increment]
+  code varchar(30) [not null, unique]
+  name varchar(80) [not null]
+}
+
+Table publication_types {
+  id smallint [pk, increment]
+  code varchar(50) [not null, unique]
+  name varchar(100) [not null]
+}
+
+Table event_types {
+  id smallint [pk, increment]
+  code varchar(40) [not null, unique]
+  name varchar(100) [not null]
+}
+
+Table video_types {
+  id smallint [pk, increment]
+  code varchar(40) [not null, unique]
+  name varchar(100) [not null]
+}
+
+Table file_formats {
+  id smallint [pk, increment]
+  code varchar(30) [not null, unique]
+  media_kind varchar(30) [not null, note: 'audio, video, image, archive, other']
+}
+
+Table artists {
+  id bigint [pk, increment]
+  artist_type_id smallint [not null]
+  canonical_name varchar(200) [not null]
+  slug varchar(220) [not null, unique]
+  catalog_scope catalog_scope [not null, default: 'venezuelan']
+  country_code char(2) [not null, default: 'VE']
+  origin_city varchar(120)
+  origin_state varchar(120)
+  formed_year smallint
+  disbanded_year smallint
+  is_active boolean
+  summary text
+  created_at timestamptz [not null, default: `now()`]
+
+  Indexes {
+    canonical_name
+    (canonical_name, country_code)
+  }
+}
+
+Ref: artists.artist_type_id > artist_types.id
+
+Table artist_aliases {
+  id bigint [pk, increment]
+  artist_id bigint [not null]
+  alias varchar(200) [not null]
+  alias_type varchar(40) [not null, default: 'name_variant']
+
+  Indexes {
+    (artist_id, alias) [unique]
+  }
+}
+
+Ref: artist_aliases.artist_id > artists.id
+
+Table artist_genres {
+  artist_id bigint [not null]
+  genre_id bigint [not null]
+  is_primary boolean [not null, default: false]
+
+  Indexes {
+    (artist_id, genre_id) [pk]
+  }
+}
+
+Ref: artist_genres.artist_id > artists.id
+Ref: artist_genres.genre_id > genres.id
+
+Table persons {
+  id bigint [pk, increment]
+  full_name varchar(200) [not null]
+  stage_name varchar(200)
+  slug varchar(220) [unique]
+  nationality_country_code char(2)
+  is_venezuelan boolean [not null, default: false]
+  birth_date date
+  death_date date
+  summary text
+  created_at timestamptz [not null, default: `now()`]
+
+  Indexes {
+    full_name
+    stage_name
+  }
+}
+
+Table person_aliases {
+  id bigint [pk, increment]
+  person_id bigint [not null]
+  alias varchar(200) [not null]
+
+  Indexes {
+    (person_id, alias) [unique]
+  }
+}
+
+Ref: person_aliases.person_id > persons.id
+
+Table artist_memberships {
+  id bigint [pk, increment]
+  artist_id bigint [not null]
+  person_id bigint [not null]
+  position_label varchar(120) [note: 'Ej.: guitarrista, voz principal; texto editorial opcional']
+  start_year smallint
+  end_year smallint
+  is_current boolean
+  notes text
+
+  Indexes {
+    (artist_id, person_id, start_year)
+  }
+}
+
+Ref: artist_memberships.artist_id > artists.id
+Ref: artist_memberships.person_id > persons.id
+
+Table membership_roles {
+  membership_id bigint [not null]
+  credit_role_id bigint [not null]
+
+  Indexes {
+    (membership_id, credit_role_id) [pk]
+  }
+}
+
+Ref: membership_roles.membership_id > artist_memberships.id
+Ref: membership_roles.credit_role_id > credit_roles.id
+
+Table membership_instruments {
+  membership_id bigint [not null]
+  instrument_id bigint [not null]
+  is_primary boolean [not null, default: false]
+
+  Indexes {
+    (membership_id, instrument_id) [pk]
+  }
+}
+
+Ref: membership_instruments.membership_id > artist_memberships.id
+Ref: membership_instruments.instrument_id > instruments.id
+
+Table organizations {
+  id bigint [pk, increment]
+  name varchar(200) [not null]
+  slug varchar(220) [unique]
+  country_code char(2)
+  city varchar(120)
+  founded_year smallint
+  dissolved_year smallint
+  website_url text
+  summary text
+
+  Indexes {
+    name
+  }
+}
+
+Table organization_type_links {
+  organization_id bigint [not null]
+  organization_type_id smallint [not null]
+
+  Indexes {
+    (organization_id, organization_type_id) [pk]
+  }
+}
+
+Ref: organization_type_links.organization_id > organizations.id
+Ref: organization_type_links.organization_type_id > organization_types.id
+
+Table organization_people {
+  id bigint [pk, increment]
+  organization_id bigint [not null]
+  person_id bigint [not null]
+  credit_role_id bigint [not null, note: 'Ej.: founder, producer, engineer, owner']
+  start_year smallint
+  end_year smallint
+  is_current boolean
+  notes text
+}
+
+Ref: organization_people.organization_id > organizations.id
+Ref: organization_people.person_id > persons.id
+Ref: organization_people.credit_role_id > credit_roles.id
+
+Table sources {
+  id bigint [pk, increment]
+  source_type varchar(50) [not null, note: 'booklet, website, interview, press, database, physical_media, other']
+  title varchar(300)
+  author_name varchar(200)
+  publication_name varchar(200)
+  url text
+  published_on date
+  accessed_at timestamptz
+  notes text
+}
+
+Table biographies {
+  id bigint [pk, increment]
+  artist_id bigint
+  person_id bigint
+  title varchar(250)
+  body text [not null]
+  origin biography_origin [not null]
+  source_id bigint
+  author_name varchar(200)
+  is_primary boolean [not null, default: false]
+  created_at timestamptz [not null, default: `now()`]
+}
+
+Ref: biographies.artist_id > artists.id
+Ref: biographies.person_id > persons.id
+Ref: biographies.source_id > sources.id
+
+Table releases {
+  id bigint [pk, increment]
+  release_type_id smallint [not null]
+  title varchar(250) [not null]
+  slug varchar(280) [not null, unique]
+  release_year smallint
+  release_month smallint
+  release_day smallint
+  variant_label varchar(120) [note: 'Ej.: Remix, Unplugged. No mezclar con release_type.']
+  is_various_artists boolean [not null, default: false]
+  description text
+  cover_url text
+  created_at timestamptz [not null, default: `now()`]
+
+  Indexes {
+    (title, release_year)
+  }
+}
+
+Ref: releases.release_type_id > release_types.id
+
+Table release_artists {
+  release_id bigint [not null]
+  artist_id bigint [not null]
+  billing_role varchar(30) [not null, default: 'primary', note: 'primary, featured, collaborator']
+  billing_order smallint
+
+  Indexes {
+    (release_id, artist_id, billing_role) [pk]
+  }
+}
+
+Ref: release_artists.release_id > releases.id
+Ref: release_artists.artist_id > artists.id
+
+Table release_genres {
+  release_id bigint [not null]
+  genre_id bigint [not null]
+  is_primary boolean [not null, default: false]
+
+  Indexes {
+    (release_id, genre_id) [pk]
+  }
+}
+
+Ref: release_genres.release_id > releases.id
+Ref: release_genres.genre_id > genres.id
+
+Table release_formats {
+  id bigint [pk, increment]
+  release_id bigint [not null]
+  media_format_id smallint [not null]
+  notes text
+
+  Indexes {
+    (release_id, media_format_id) [unique]
+  }
+}
+
+Ref: release_formats.release_id > releases.id
+Ref: release_formats.media_format_id > media_formats.id
+
+Table works {
+  id bigint [pk, increment]
+  title varchar(250) [not null]
+  composition_year smallint
+  notes text
+}
+
+Table recordings {
+  id bigint [pk, increment]
+  work_id bigint [not null]
+  version_label varchar(160) [note: 'original, re-recording, acoustic, live, remix, etc.']
+  recording_year smallint
+  duration_seconds integer
+  event_id bigint
+  notes text
+}
+
+Ref: recordings.work_id > works.id
+
+Table recording_artists {
+  recording_id bigint [not null]
+  artist_id bigint [not null]
+  billing_role varchar(30) [not null, default: 'primary']
+  billing_order smallint
+
+  Indexes {
+    (recording_id, artist_id, billing_role) [pk]
+  }
+}
+
+Ref: recording_artists.recording_id > recordings.id
+Ref: recording_artists.artist_id > artists.id
+
+Table release_tracks {
+  id bigint [pk, increment]
+  release_id bigint [not null]
+  recording_id bigint [not null]
+  position smallint [not null, note: 'Orden absoluto dentro del lanzamiento']
+  disc_number smallint [not null, default: 1]
+  side_label varchar(10)
+  side_track_number smallint
+  display_title varchar(250)
+  duration_seconds integer
+
+  Indexes {
+    (release_id, position) [unique]
+  }
+}
+
+Ref: release_tracks.release_id > releases.id
+Ref: release_tracks.recording_id > recordings.id
+
+Table work_person_credits {
+  work_id bigint [not null]
+  person_id bigint [not null]
+  credit_role_id bigint [not null]
+  notes text
+
+  Indexes {
+    (work_id, person_id, credit_role_id) [pk]
+  }
+}
+
+Ref: work_person_credits.work_id > works.id
+Ref: work_person_credits.person_id > persons.id
+Ref: work_person_credits.credit_role_id > credit_roles.id
+
+Table release_person_credits {
+  id bigint [pk, increment]
+  release_id bigint [not null]
+  person_id bigint [not null]
+  credit_role_id bigint [not null]
+  instrument_id bigint
+  notes text
+}
+
+Ref: release_person_credits.release_id > releases.id
+Ref: release_person_credits.person_id > persons.id
+Ref: release_person_credits.credit_role_id > credit_roles.id
+Ref: release_person_credits.instrument_id > instruments.id
+
+Table recording_person_credits {
+  id bigint [pk, increment]
+  recording_id bigint [not null]
+  person_id bigint [not null]
+  credit_role_id bigint [not null]
+  instrument_id bigint
+  notes text
+}
+
+Ref: recording_person_credits.recording_id > recordings.id
+Ref: recording_person_credits.person_id > persons.id
+Ref: recording_person_credits.credit_role_id > credit_roles.id
+Ref: recording_person_credits.instrument_id > instruments.id
+
+Table release_organization_credits {
+  id bigint [pk, increment]
+  release_id bigint [not null]
+  organization_id bigint [not null]
+  credit_role_id bigint [not null, note: 'Ej.: label, recording_studio, production_company, distributor']
+  notes text
+}
+
+Ref: release_organization_credits.release_id > releases.id
+Ref: release_organization_credits.organization_id > organizations.id
+Ref: release_organization_credits.credit_role_id > credit_roles.id
+
+Table recording_organization_credits {
+  id bigint [pk, increment]
+  recording_id bigint [not null]
+  organization_id bigint [not null]
+  credit_role_id bigint [not null]
+  notes text
+}
+
+Ref: recording_organization_credits.recording_id > recordings.id
+Ref: recording_organization_credits.organization_id > organizations.id
+Ref: recording_organization_credits.credit_role_id > credit_roles.id
+
+Table events {
+  id bigint [pk, increment]
+  event_type_id smallint [not null]
+  name varchar(250) [not null]
+  start_date date
+  end_date date
+  venue_organization_id bigint
+  city varchar(120)
+  state_region varchar(120)
+  country_code char(2) [default: 'VE']
+  description text
+}
+
+Ref: events.event_type_id > event_types.id
+Ref: events.venue_organization_id > organizations.id
+Ref: recordings.event_id > events.id
+
+Table event_artists {
+  event_id bigint [not null]
+  artist_id bigint [not null]
+  participation_role varchar(40) [not null, default: 'performer']
+
+  Indexes {
+    (event_id, artist_id, participation_role) [pk]
+  }
+}
+
+Ref: event_artists.event_id > events.id
+Ref: event_artists.artist_id > artists.id
+
+Table videos {
+  id bigint [pk, increment]
+  video_type_id smallint [not null]
+  title varchar(250) [not null]
+  recording_id bigint
+  event_id bigint
+  production_year smallint
+  description text
+}
+
+Ref: videos.video_type_id > video_types.id
+Ref: videos.recording_id > recordings.id
+Ref: videos.event_id > events.id
+
+Table video_artists {
+  video_id bigint [not null]
+  artist_id bigint [not null]
+  billing_role varchar(30) [not null, default: 'primary']
+
+  Indexes {
+    (video_id, artist_id, billing_role) [pk]
+  }
+}
+
+Ref: video_artists.video_id > videos.id
+Ref: video_artists.artist_id > artists.id
+
+Table video_person_credits {
+  id bigint [pk, increment]
+  video_id bigint [not null]
+  person_id bigint [not null]
+  credit_role_id bigint [not null]
+  notes text
+}
+
+Ref: video_person_credits.video_id > videos.id
+Ref: video_person_credits.person_id > persons.id
+Ref: video_person_credits.credit_role_id > credit_roles.id
+
+Table video_organization_credits {
+  id bigint [pk, increment]
+  video_id bigint [not null]
+  organization_id bigint [not null]
+  credit_role_id bigint [not null]
+  notes text
+}
+
+Ref: video_organization_credits.video_id > videos.id
+Ref: video_organization_credits.organization_id > organizations.id
+Ref: video_organization_credits.credit_role_id > credit_roles.id
+
+Table publications {
+  id bigint [pk, increment]
+  platform_id smallint [not null]
+  publication_type_id smallint [not null]
+  external_id varchar(160)
+  url text
+  title varchar(300)
+  description text
+  published_at timestamptz
+  availability publication_availability [not null, default: 'unknown']
+  legacy_upload_order integer
+  notes text
+
+  Indexes {
+    (platform_id, external_id) [unique]
+    legacy_upload_order
+  }
+}
+
+Ref: publications.platform_id > platforms.id
+Ref: publications.publication_type_id > publication_types.id
+
+Table publication_artists {
+  publication_id bigint [not null]
+  artist_id bigint [not null]
+
+  Indexes {
+    (publication_id, artist_id) [pk]
+  }
+}
+
+Ref: publication_artists.publication_id > publications.id
+Ref: publication_artists.artist_id > artists.id
+
+Table publication_releases {
+  publication_id bigint [not null]
+  release_id bigint [not null]
+
+  Indexes {
+    (publication_id, release_id) [pk]
+  }
+}
+
+Ref: publication_releases.publication_id > publications.id
+Ref: publication_releases.release_id > releases.id
+
+Table publication_recordings {
+  publication_id bigint [not null]
+  recording_id bigint [not null]
+
+  Indexes {
+    (publication_id, recording_id) [pk]
+  }
+}
+
+Ref: publication_recordings.publication_id > publications.id
+Ref: publication_recordings.recording_id > recordings.id
+
+Table publication_events {
+  publication_id bigint [not null]
+  event_id bigint [not null]
+
+  Indexes {
+    (publication_id, event_id) [pk]
+  }
+}
+
+Ref: publication_events.publication_id > publications.id
+Ref: publication_events.event_id > events.id
+
+Table publication_videos {
+  publication_id bigint [not null]
+  video_id bigint [not null]
+
+  Indexes {
+    (publication_id, video_id) [pk]
+  }
+}
+
+Ref: publication_videos.publication_id > publications.id
+Ref: publication_videos.video_id > videos.id
+
+Table publication_release_formats {
+  publication_id bigint [not null]
+  release_format_id bigint [not null]
+
+  Indexes {
+    (publication_id, release_format_id) [pk]
+  }
+}
+
+Ref: publication_release_formats.publication_id > publications.id
+Ref: publication_release_formats.release_format_id > release_formats.id
+
+Table video_chapters {
+  id bigint [pk, increment]
+  publication_id bigint [not null, note: 'Principalmente YouTube']
+  release_track_id bigint
+  recording_id bigint
+  position smallint [not null]
+  start_seconds integer [not null]
+  label varchar(250)
+
+  Indexes {
+    (publication_id, position) [unique]
+    (publication_id, start_seconds) [unique]
+  }
+}
+
+Ref: video_chapters.publication_id > publications.id
+Ref: video_chapters.release_track_id > release_tracks.id
+Ref: video_chapters.recording_id > recordings.id
+
+Table archive_holdings {
+  id bigint [pk, increment]
+  release_id bigint [not null]
+  quality archive_quality [not null, default: 'unknown']
+  publication_state archive_publication_state [not null]
+  storage_root_uri text [note: 'Preparado para ruta local, NAS, S3/compatible, etc.']
+  notes text
+}
+
+Ref: archive_holdings.release_id > releases.id
+
+Table archive_holding_formats {
+  holding_id bigint [not null]
+  file_format_id smallint [not null]
+  is_primary boolean [not null, default: false]
+
+  Indexes {
+    (holding_id, file_format_id) [pk]
+  }
+}
+
+Ref: archive_holding_formats.holding_id > archive_holdings.id
+Ref: archive_holding_formats.file_format_id > file_formats.id
+
+Table archive_files {
+  id bigint [pk, increment]
+  holding_id bigint [not null]
+  file_format_id smallint [not null]
+  file_role varchar(50) [not null, note: 'audio_master, track_audio, cover_front, cover_back, booklet, photo, video, other']
+  storage_uri text [not null]
+  sha256 char(64)
+  size_bytes bigint
+  duration_seconds integer
+  notes text
+
+  Indexes {
+    sha256
+  }
+}
+
+Ref: archive_files.holding_id > archive_holdings.id
+Ref: archive_files.file_format_id > file_formats.id
+
+Table source_references {
+  id bigint [pk, increment]
+  source_id bigint [not null]
+  artist_id bigint
+  person_id bigint
+  organization_id bigint
+  release_id bigint
+  work_id bigint
+  recording_id bigint
+  event_id bigint
+  video_id bigint
+  field_name varchar(80) [note: 'Ej.: release_year, biography, credits; permite citar un dato concreto.']
+  notes text
+}
+
+Ref: source_references.source_id > sources.id
+Ref: source_references.artist_id > artists.id
+Ref: source_references.person_id > persons.id
+Ref: source_references.organization_id > organizations.id
+Ref: source_references.release_id > releases.id
+Ref: source_references.work_id > works.id
+Ref: source_references.recording_id > recordings.id
+Ref: source_references.event_id > events.id
+Ref: source_references.video_id > videos.id

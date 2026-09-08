@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="940" viewBox="0 0 1600 940">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#444"/>
+    </marker>
+    <style>
+      .box { fill:#f7f7f7; stroke:#333; stroke-width:2; rx:16; ry:16; }
+      .title { font:700 22px Arial, sans-serif; fill:#111; text-anchor:middle; }
+      .sub { font:16px Arial, sans-serif; fill:#333; text-anchor:middle; }
+      .edge { stroke:#444; stroke-width:2; fill:none; marker-end:url(#arrow); }
+      .dashed { stroke:#666; stroke-width:2; fill:none; stroke-dasharray:8 7; marker-end:url(#arrow); }
+      .label { font:14px Arial, sans-serif; fill:#333; text-anchor:middle; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="940" fill="white"/>
+  <text x="800" y="42" style="font:700 28px Arial,sans-serif;fill:#111;text-anchor:middle">Coleccionistas de Rock Venezolano — Modelo simple</text>
+
+  <!-- Top row -->
+  <rect class="box" x="80" y="90" width="360" height="120"/>
+  <text class="title" x="260" y="130">ARTISTS</text>
+  <text class="sub" x="260" y="160">Bandas / solistas venezolanos</text>
+  <text class="sub" x="260" y="186">bio · foto · origen · tipo</text>
+
+  <rect class="box" x="620" y="90" width="360" height="120"/>
+  <text class="title" x="800" y="130">PERSONS</text>
+  <text class="sub" x="800" y="160">Músicos / escritores / productores</text>
+  <text class="sub" x="800" y="186">bio · foto · nacionalidad</text>
+
+  <rect class="box" x="1160" y="90" width="360" height="120"/>
+  <text class="title" x="1340" y="130">ORGANIZATIONS</text>
+  <text class="sub" x="1340" y="160">Sellos · estudios · productoras</text>
+  <text class="sub" x="1340" y="186">bio · web · país</text>
+
+  <!-- Middle row -->
+  <rect class="box" x="80" y="330" width="360" height="160"/>
+  <text class="title" x="260" y="370">ALBUMS</text>
+  <text class="sub" x="260" y="401">año · tipo · género · sello</text>
+  <text class="sub" x="260" y="428">portada · descripción</text>
+  <text class="sub" x="260" y="455">YouTube · Instagram · WordPress</text>
+
+  <rect class="box" x="620" y="330" width="360" height="135"/>
+  <text class="title" x="800" y="370">ARTIST_MEMBERS</text>
+  <text class="sub" x="800" y="402">persona ↔ banda</text>
+  <text class="sub" x="800" y="429">rol / instrumento · desde · hasta</text>
+
+  <rect class="box" x="1160" y="330" width="360" height="135"/>
+  <text class="title" x="1340" y="370">PERSON_ORGANIZATIONS</text>
+  <text class="sub" x="1340" y="402">persona ↔ organización</text>
+  <text class="sub" x="1340" y="429">Founder · Producer · Engineer · etc.</text>
+
+  <!-- Lower row -->
+  <rect class="box" x="80" y="610" width="360" height="130"/>
+  <text class="title" x="260" y="650">TRACKS</text>
+  <text class="sub" x="260" y="682">tracklist · duración</text>
+  <text class="sub" x="260" y="709">timestamp de YouTube</text>
+
+  <rect class="box" x="515" y="610" width="430" height="130"/>
+  <text class="title" x="730" y="650">ALBUM_CREDITS</text>
+  <text class="sub" x="730" y="682">músicos · invitados · productor · mezcla · arte</text>
+  <text class="sub" x="730" y="709">destino: persona / banda / organización</text>
+
+  <rect class="box" x="1080" y="610" width="440" height="130"/>
+  <text class="title" x="1300" y="650">ALBUM_FORMATS</text>
+  <text class="sub" x="1300" y="682">CD · Vinyl · Cassette · WAV · FLAC · MP3</text>
+  <text class="sub" x="1300" y="709">HQ/LQ · publicado/no publicado · ruta futura</text>
+
+  <rect class="box" x="80" y="815" width="500" height="100"/>
+  <text class="title" x="330" y="852">TRACK_CREDITS</text>
+  <text class="sub" x="330" y="883">writer · composer · músicos / invitados por canción</text>
+
+  <!-- Main relations -->
+  <path class="edge" d="M260 210 L260 330"/>
+  <text class="label" x="290" y="275">1:N</text>
+
+  <path class="edge" d="M440 145 L800 145 L800 330"/>
+  <text class="label" x="610" y="132">banda</text>
+
+  <path class="edge" d="M800 210 L800 330"/>
+  <text class="label" x="830" y="275">persona</text>
+
+  <path class="edge" d="M980 145 L1340 145 L1340 330"/>
+  <text class="label" x="1157" y="132">persona</text>
+
+  <path class="edge" d="M1340 210 L1340 330"/>
+  <text class="label" x="1378" y="275">organización</text>
+
+  <path class="edge" d="M260 490 L260 610"/>
+  <text class="label" x="290" y="555">1:N</text>
+
+  <path class="edge" d="M440 410 L730 410 L730 610"/>
+  <text class="label" x="580" y="397">créditos</text>
+
+  <path class="edge" d="M440 455 L1015 455 L1015 675 L1080 675"/>
+  <text class="label" x="760" y="443">formatos / archivo</text>
+
+  <path class="edge" d="M260 740 L260 815"/>
+  <text class="label" x="292" y="785">1:N</text>
+
+  <!-- Label relation -->
+  <path class="dashed" d="M1160 195 L1050 195 L1050 270 L440 270 L440 350"/>
+  <text class="label" x="790" y="258">label_id (sello)</text>
+
+  <!-- Credit lookup hints -->
+  <path class="dashed" d="M800 465 L800 580 L730 580 L730 610"/>
+  <text class="label" x="842" y="545">persona</text>
+
+  <path class="dashed" d="M1340 465 L1340 555 L900 555 L900 610"/>
+  <text class="label" x="1120" y="543">organización</text>
+
+  <text x="800" y="932" style="font:14px Arial,sans-serif;fill:#555;text-anchor:middle">Idea central: ARTISTS → ALBUMS → TRACKS; PERSONS se conectan mediante membresías y créditos.</text>
+</svg>
