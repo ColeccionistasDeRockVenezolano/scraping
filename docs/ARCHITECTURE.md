@@ -127,12 +127,20 @@ las tres fuentes restantes el 2026-09-08 (SOURCES.md §3):
   solo en la etiqueta. Descartar cualquiera de los canales antes de parsear
   dejaba esas fuentes en cero. El parámetro es opcional, así que un adapter
   que no lo declara conserva su comportamiento.
-- **Semántica fuera del texto.** Tres fuentes codifican qué es cada cosa en un
-  canal que no es prosa, y cada adapter lee el suyo: Sincopa en el
+- **Semántica fuera del texto.** Cuatro fuentes codifican qué es cada cosa en
+  un canal que no es prosa, y cada adapter lee el suyo: Sincopa en el
   **directorio** de la imagen, Hippito en el **color gris** del crédito, Rock
   De Vzla en el **tamaño de fuente** (`x-large` = banda, `large` = ficha de
-  disco) y en una línea de guiones que separa la discografía de los videos —
-  bajo ella el mismo marcado rotula canciones, no publicaciones.
+  disco) y en una línea de guiones que separa la discografía de los videos, y
+  Rockzuela en la **etiqueta de sección** (`Musica` = publicación, `Videos` =
+  actuación). Los dos últimos resuelven el mismo problema: un título con forma
+  de ficha que no siempre describe un disco.
+- **Gramática compartida.** `parseReleaseHead()` (en `adapters/shared.ts`) lee
+  la forma `Título (Tipo Año)` que usan tres de los blogs por canales
+  distintos, con un vocabulario español común: `Demo`/`Ep`/`Single` son tipo de
+  publicación y aterrizan en `album_type`; `Lp`/`Cassette`/`Vinilo` nombran el
+  soporte y van a `format`, porque decir en qué se editó no es decir qué clase
+  de publicación es. Un paréntesis con solo el año no rellena el tipo.
 - **Artes.** `contentImages()` (en `adapters/shared.ts`) separa imagen de
   adorno por descarte explícito —iconos sociales, plantilla, `data:` URIs y
   anchos declarados < 100px— y no decide qué representa cada imagen: eso lo

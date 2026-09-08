@@ -310,9 +310,13 @@ el título). A ellas se suma **Rock De Vzla** (54.143 claims: 1.108 artistas,
 1.815 discos, 9.908 pistas, 1.775 portadas), que necesitó abrir un canal
 nuevo: las etiquetas del feed (`entry.category`) ahora llegan al parser,
 porque 1.110 de sus 1.113 entradas traen el título vacío y el nombre de la
-banda solo existe ahí. Siguen sin adapter Rockzuela y RHV Blogspot, cuyo
-título usa dos puntos (`BANDA: Álbum (Año)`) en vez de guion — ver
-SOURCES.md §3.2.
+banda solo existe ahí. Con **Rockzuela** (5.326 claims: 475 artistas, 549
+discos, 543 portadas) y **RHV Blogspot** (126 claims, 18 discos) quedan
+cubiertas las cinco Blogspot. Cada una lee un canal distinto y ninguna
+comparte extractor: Rockzuela decide por la etiqueta de SECCIÓN si el post es
+una publicación (`Musica` sí, `Videos` no), y RHV, que es un blog de prensa,
+solo por el título terminado en año — sus etiquetas son secciones
+editoriales y no nombran bandas. Ver SOURCES.md §3.2.
 **El barrido completo estaba bloqueado por la ergonomía de la revisión, no
 por los adapters.** 2.962 claims ingeridos habían producido 406 entidades
 candidatas y el core tenía 40 discos: la promoción era de una en una por CLI,

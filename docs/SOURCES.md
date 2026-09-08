@@ -134,8 +134,8 @@ Rock De Vzla, Hippito y Sus Chatarritas, RHV Blogspot)
   | Descargas Metal Venezolano | 1.355 | campos etiquetados en el cuerpo (`Banda:`, `Álbum:`, `Lanzamiento:`, `Género:`, `Lugar:`, `Web:`) + tracklist numerada — 1.352 de 1.355 | 11.313 |
   | Hippito y Sus Chatarritas | 1.063 | ficha completa en el **título** (`Artista - Título (Sello CAT / País Año)`) — 973 de 1.063; compositores en gris en el cuerpo | 14.868 |
   | Rock De Vzla | 1.113 | sin título; banda en la **etiqueta** y ficha rotulada por tamaño de fuente (`x-large` = banda, `large` = `Título (Tipo Año)`) — 1.110 entradas con banda, 1.815 discos, 9.908 pistas | 54.143 |
-  | Rockzuela | 1.127 | título `Banda - Álbum (Año)` en 492; formación explícita en 27; tracklist en 273 — 290 entradas con datos | 0 (sin adapter) |
-  | RHV Blogspot | 264 | título `BANDA: Álbum (Año)` — 44 con esa forma, 28 con año; 8 tracklists (121 pistas); 835 imágenes en 262 entradas | 0 (sin adapter) |
+  | Rockzuela | 1.127 | la **etiqueta de sección** dice si el post es publicación (`Musica` 586, `Videos` 431, `Eventos` 94) + título `Banda - Álbum (Año)` — 475 artistas, 549 discos | 5.326 |
+  | RHV Blogspot | 264 | prensa. Título `BANDA: Álbum (Año)` — **24** terminan en año, 18 dan banda y disco separables; etiquetas = secciones editoriales; **cero** tracklists | 126 |
 
   **Corrección (2026-09-08):** una medición anterior daba 0 a Rockzuela y Rock
   De Vzla y las declaraba "prosa". Era un error de la sonda, no de las
@@ -159,15 +159,26 @@ Rock De Vzla, Hippito y Sus Chatarritas, RHV Blogspot)
   además las líneas numeradas de la zona de videos y las de fuera de toda
   ficha. Lo que la fuente sí da en abundancia son discos y portadas.
 
+  **Cuarta corrección (2026-09-08), al escribir los dos últimos adapters:** de
+  Rockzuela se decía "tracklist en 273 — 290 entradas con datos"; el adapter
+  encuentra **549 discos** pero **ninguna pista**, porque el blog casi nunca
+  publica lista de temas. Y de RHV Blogspot se decían "44 con esa forma, 28 con
+  año; 8 tracklists (121 pistas)"; medido con el parser son **24** títulos
+  terminados en año, **18** con banda y disco separables y **cero** tracklists
+  — los temas se nombran dentro de la prosa de la reseña, que no se extrae. Es
+  el mismo error de las tres correcciones anteriores: una sonda laxa contando
+  líneas que parecen datos.
+
 - *Canal de las etiquetas Blogger (`entry.category`).* El feed trae las
   etiquetas del post y en dos fuentes son el dato que falta en el cuerpo:
 
   | fuente | etiquetas/post | qué son | uso |
   |---|---:|---|---|
   | Rock De Vzla | 1,0 | **el nombre de la banda** (1.110 de 1.113 con etiqueta única) | resuelve el artista, que el título no da: 1.111 entradas tienen título vacío |
-  | Rockzuela | 3,1 | banda + vocabulario de sección (`Rock Nacional`, `Videos`) | banda = la etiqueta fuera del vocabulario de sección |
+  | Rockzuela | 3,1 | banda + **sección** (`Rock Nacional`, `Musica`, `Videos`, `Eventos`) | banda = la etiqueta fuera del vocabulario de sección; y la sección decide si el post es una publicación — sin ella, "Zapato 3 - En La Otra Cara (Parte II)" y "Los Paranoias - Leslie Sessions EP (2008)" son indistinguibles |
+  | RHV Blogspot | 3,2 | **solo secciones** (`variedad`, `prensa`, `reseñas`, `noticias`) | ninguna nombra una banda: las 15 etiquetas del blog son editoriales, así que aquí el único canal es el título |
   | Descargas Metal | — | géneros (`Technical Death Metal`) | corrobora el campo `Género:` ya extraído |
-  | Hippito, RHV | — | secciones (`Sólo Hits`, `reseñas`) | sin valor |
+  | Hippito | — | secciones (`Sólo Hits`) | sin valor |
 - *Fuera de alcance en Hippito:* las 350 entradas `VA - ...` (recopilatorios).
   El core exige `albums.artist_id NOT NULL` y un recopilatorio no tiene un
   artista único; inventar una entidad "Various Artists" es una decisión de
@@ -330,8 +341,8 @@ fuente con artes" era falsa— y cada una las declara por un canal distinto:
 | Sincopa | 1.437 | 917 + 520 fotos de artista | **la ruta del archivo** |
 | Hippito | 1.575 | 987 | título de la entrada |
 | Rock De Vzla | 1.868 | **1.775** | la imagen que cae dentro del bloque de su ficha (97,8% de los discos) |
-| Rockzuela | 773 | 369 | título de la entrada |
-| RHV Blogspot | 835 | 28 | título `BANDA: Álbum (Año)` |
+| Rockzuela | 773 | **543** | primera imagen de la entrada, cuando la etiqueta `Musica` dice que es una ficha |
+| RHV Blogspot | 835 | 18 | título `BANDA: Álbum (Año)` |
 | CRV WordPress | 1.420 | 121 (+700 otras artes) | `alt` = `<banda> <álbum> <tipo>` |
 
 **Sincopa es el caso más explícito de todo el archivo**: el directorio declara
@@ -348,15 +359,17 @@ que la portada entra **sin migración**. `media.media_links` sólo hace falta
 para lo que no es portada: las 700 artes internas de CRV WordPress y las 520
 fotos de artista de Sincopa.
 
-*Lo que emiten hoy los cuatro adapters* (la columna de arriba mide el crudo;
-lo que sigue mide los `RawRecord` reales, que se apoyan en los campos
-etiquetados del cuerpo y no sólo en el título):
+*Lo que emiten hoy los seis adapters* (la columna de arriba mide el crudo; lo
+que sigue mide los `RawRecord` reales, que se apoyan en los campos etiquetados
+del cuerpo y no sólo en el título):
 
 | adapter | discos | `cover_url` | `picture_url` |
 |---|---:|---:|---:|
 | Descargas Metal | 1.345 | **1.345** | — |
 | Rock De Vzla | 1.815 | **1.775** | — |
 | Hippito | 673 | 671 | — |
+| Rockzuela | 549 | 543 | — |
+| RHV Blogspot | 18 | 18 | — |
 | Sincopa | 2.414 | 782 | 259 |
 
 Sincopa emite muchos más discos que portadas porque su discografía también se
