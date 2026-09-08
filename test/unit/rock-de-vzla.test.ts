@@ -3,7 +3,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { describe, expect, it } from "vitest";
 import { adapterFor } from "../../src/adapters/registry.js";
-import { parseReleaseHead } from "../../src/adapters/rock-de-vzla.js";
+import { parseReleaseHead } from "../../src/adapters/shared.js";
 import { normalizeRecord } from "../../src/normalization/claims.js";
 import type { RawRecord, StoredPage } from "../../src/adapters/contracts.js";
 

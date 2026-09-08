@@ -1,7 +1,7 @@
 import { load } from "cheerio";
 import type { RawRecord } from "./contracts.js";
 import { BloggerAdapter } from "./blogger.js";
-import { ADAPTER_VERSION, clean, contentImages, excerpt } from "./shared.js";
+import { ADAPTER_VERSION, clean, contentImages, DOWNLOAD_LINK, excerpt, isPresenceLink, parseReleaseHead, type ReleaseHead } from "./shared.js";
 
 // "Rock De Vzla" es un archivo discográfico de 1.113 entradas con una
 // convención de maquetado fija. Nada de eso está en el texto corrido: cada
@@ -29,64 +29,7 @@ import { ADAPTER_VERSION, clean, contentImages, excerpt } from "./shared.js";
 const XLARGE = /font-size:\s*x-large\b/i;
 const LARGE = /font-size:\s*large\b/i;
 const SEPARATOR = /^-{8,}$/u;
-const YEAR = /\b(?:19|20)\d{2}\b/u;
 const TRACK_LINE = /^(\d{1,3})\s*[.\-)]\s*(.+)$/u;
-/** "Título (…)": exige título delante, o "(En Vivo 1996)" sería un disco. */
-const HEAD_LINE = /^(.{1,120}?)\s*\(([^()]{1,60})\)\s*$/u;
-const DOWNLOAD = /descargar|mediafire|megaupload|rapidshare|4shared|badongo|depositfiles|sendspace|zippyshare|mega\.(?:nz|co)/i;
-
-/**
- * Vocabulario propio de este blog, en español y abreviado. No se reutiliza el
- * de la hoja de YouTube: allí escribe un curador en inglés ("Studio Album"),
- * aquí escribe el blog en su taquigrafía, y unificarlos daría por hecho que
- * ambos quieren decir lo mismo con la misma palabra.
- */
-const RELEASE_TYPES: ReadonlyArray<[RegExp, string]> = [
-  [/^demos?$/iu, "demo"],
-  [/^e\.?p\.?$/iu, "ep"],
-  [/^singles?$/iu, "single"],
-  [/^(?:compilation|recopilatorio|compilado)$/iu, "compilation"],
-  [/^(?:en vivo|live|directo)$/iu, "live_album"],
-];
-/**
- * Estas nombran el SOPORTE, no la clase de publicación. Un "Lp" dice en qué
- * se editó, no si es un álbum de estudio; mapearlo a `studio_album` afirmaría
- * algo que la fuente no dice, así que se conserva como `format`.
- */
-const FORMATS = /^(?:lp|cd|cassette|casete|k7|vinilo|vinyl|maxi(?:\s*single)?)$/iu;
-
-/** Presencia del artista. Los alojamientos de descarga quedan fuera a propósito. */
-const PRESENCE_HOST = /^(?:myspace\.com|facebook\.com|twitter\.com|x\.com|soundcloud\.com|bandcamp\.com|youtube\.com|instagram\.com|reverbnation\.com|last\.fm)$/i;
-
-export interface ReleaseHead {
-  title: string;
-  year: string;
-  /** Valor del enum `album_type` del core; ausente cuando el paréntesis solo trae año. */
-  albumType?: string;
-  /** Soporte declarado ("Lp", "Cassette"), que no es lo mismo que el tipo. */
-  format?: string;
-}
-
-/** "Hambre (Demo 2010)" -> {title:"Hambre", year:"2010", albumType:"demo"} */
-export function parseReleaseHead(rawLine: string): ReleaseHead | undefined {
-  const match = HEAD_LINE.exec(clean(rawLine));
-  if (!match) return undefined;
-  const title = clean(match[1] ?? "");
-  const inside = clean(match[2] ?? "");
-  const year = YEAR.exec(inside)?.[0];
-  if (!title || !year) return undefined;
-  const head: ReleaseHead = { title, year };
-  // Lo que queda al quitar el año es la palabra de tipo, si la hay. Un resto
-  // que no se reconoce ("Bootleg Maracay", "Pre-Gillman San Francisco") no se
-  // fuerza a ningún valor del enum: se deja sin tipo y sigue en la evidencia.
-  const rest = clean(inside.replace(YEAR, "").replace(/[-–,]/gu, " "));
-  if (rest) {
-    const kind = RELEASE_TYPES.find(([pattern]) => pattern.test(rest))?.[1];
-    if (kind) head.albumType = kind;
-    else if (FORMATS.test(rest)) head.format = rest;
-  }
-  return head;
-}
 
 export class RockDeVzlaAdapter extends BloggerAdapter {
   readonly slug = "rock-de-vzla";
@@ -174,7 +117,7 @@ export class RockDeVzlaAdapter extends BloggerAdapter {
       if (line.at <= heading) continue;
       if (line.at >= (heads[0]?.at ?? end)) break;
       if (parseReleaseHead(line.text) || TRACK_LINE.test(line.text)) break;
-      if (DOWNLOAD.test(line.href)) break;
+      if (DOWNLOAD_LINK.test(line.href)) break;
       if (!biographyParts.includes(line.text)) biographyParts.push(line.text);
     }
     const biography = clean(biographyParts.join(" ")).slice(0, 4_000);
@@ -193,11 +136,7 @@ export class RockDeVzlaAdapter extends BloggerAdapter {
     for (let index = 0; index < nodes.length && index < end; index += 1) {
       if (tagAt(index) !== "a") continue;
       const href = (at(index).attr("href") ?? "").trim();
-      if (!href) continue;
-      try {
-        const host = new URL(href, url).hostname.replace(/^(?:www|es-es|es-la|m)\./i, "");
-        if (PRESENCE_HOST.test(host)) presence.add(href);
-      } catch { /* href inservible: no es evidencia de nada */ }
+      if (href && isPresenceLink(href, url)) presence.add(href);
     }
     for (const href of presence) artistFields.push({ field: "web_url", value: href, evidence: evidence("a", href) });
     records.push(this.record("artist", band, artistFields));

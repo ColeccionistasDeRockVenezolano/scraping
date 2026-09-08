@@ -377,6 +377,84 @@ export function contentImages($: CheerioAPI, baseUrl: string): ContentImage[] {
   return images;
 }
 
+/**
+ * Los tres blogs discográficos mezclan en el mismo cuerpo dos clases de
+ * enlace: la presencia pública del artista y el alojamiento donde colgaron el
+ * disco. La primera es un dato del artista; la segunda no se extrae —sólo se
+ * reconoce para no confundirla con prosa cuando delimita un bloque.
+ */
+const PRESENCE_HOST = /^(?:myspace\.com|facebook\.com|twitter\.com|x\.com|soundcloud\.com|bandcamp\.com|youtube\.com|instagram\.com|reverbnation\.com|last\.fm)$/i;
+export const DOWNLOAD_LINK = /descargar|mediafire|megaupload|rapidshare|4shared|badongo|depositfiles|sendspace|zippyshare|divshare|mega\.(?:nz|co)/i;
+
+export function isPresenceLink(href: string, baseUrl: string): boolean {
+  try { return PRESENCE_HOST.test(new URL(href, baseUrl).hostname.replace(/^(?:www|es-es|es-la|m)\./i, "")); }
+  catch { return false; }
+}
+
+/**
+ * Gramática de ficha que comparten los blogs discográficos en español:
+ *
+ *   Título (Tipo Año)   ·   Título (Año)
+ *
+ * La usan tres fuentes por canales distintos —Rock De Vzla en una línea
+ * rotulada por tamaño de fuente, Rockzuela y RHV en el título de la entrada—
+ * y el vocabulario del paréntesis es el mismo en las tres, así que vive aquí
+ * y no duplicado en cada adapter.
+ */
+export interface ReleaseHead {
+  title: string;
+  year: string;
+  /** Valor del enum `album_type` del core; ausente cuando el paréntesis solo trae año. */
+  albumType?: string;
+  /** Soporte declarado ("Lp", "Cassette"), que no es lo mismo que el tipo. */
+  format?: string;
+}
+
+/** "Título (…)": exige título delante, o "(En Vivo 1996)" sería un disco. */
+const HEAD_LINE = /^(.{1,120}?)\s*\(([^()]{1,60})\)\s*$/u;
+const HEAD_YEAR = /\b(?:19|20)\d{2}\b/u;
+
+/**
+ * Vocabulario de estos blogs: español y abreviado. No se reutiliza el de la
+ * hoja de YouTube, donde escribe un curador en inglés ("Studio Album");
+ * unificarlos daría por hecho que ambos quieren decir lo mismo con la misma
+ * palabra.
+ */
+const RELEASE_TYPES: ReadonlyArray<[RegExp, string]> = [
+  [/^demos?$/iu, "demo"],
+  [/^e\.?p\.?$/iu, "ep"],
+  [/^singles?$/iu, "single"],
+  [/^(?:compilation|recopilatorio|compilado)$/iu, "compilation"],
+  [/^(?:en vivo|live|directo)$/iu, "live_album"],
+];
+/**
+ * Estas nombran el SOPORTE, no la clase de publicación. Un "Lp" dice en qué
+ * se editó, no si es un álbum de estudio; mapearlo a `studio_album` afirmaría
+ * algo que la fuente no dice, así que se conserva como `format`.
+ */
+const FORMATS = /^(?:lp|cd|cassette|casete|k7|vinilo|vinyl|maxi(?:\s*single)?)$/iu;
+
+/** "Hambre (Demo 2010)" -> {title:"Hambre", year:"2010", albumType:"demo"} */
+export function parseReleaseHead(rawLine: string): ReleaseHead | undefined {
+  const match = HEAD_LINE.exec(clean(rawLine));
+  if (!match) return undefined;
+  const title = clean(match[1] ?? "");
+  const inside = clean(match[2] ?? "");
+  const year = HEAD_YEAR.exec(inside)?.[0];
+  if (!title || !year) return undefined;
+  const head: ReleaseHead = { title, year };
+  // Lo que queda al quitar el año es la palabra de tipo, si la hay. Un resto
+  // que no se reconoce ("Bootleg Maracay", "Pre-Gillman San Francisco") no se
+  // fuerza a ningún valor del enum: se deja sin tipo y sigue en la evidencia.
+  const rest = clean(inside.replace(HEAD_YEAR, "").replace(/[-–,]/gu, " "));
+  if (rest) {
+    const kind = RELEASE_TYPES.find(([pattern]) => pattern.test(rest))?.[1];
+    if (kind) head.albumType = kind;
+    else if (FORMATS.test(rest)) head.format = rest;
+  }
+  return head;
+}
+
 export interface ExplicitCatalogOptions { fallbackArtist?: string; fallbackAlbum?: string; }
 
 export function extractExplicitCatalog($: CheerioAPI, url: string, extractor: string, options: ExplicitCatalogOptions = {}): RawRecord[] {

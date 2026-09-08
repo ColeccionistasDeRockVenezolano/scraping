@@ -49,7 +49,6 @@ export abstract class BloggerAdapter implements SourceAdapter {
 }
 
 export class DescargasMetalVenezolanoAdapter extends BloggerAdapter { readonly slug = "descargas-metal-venezolano"; }
-export class RockzuelaAdapter extends BloggerAdapter { readonly slug = "rockzuela"; }
 export class RhvBlogspotAdapter extends BloggerAdapter { readonly slug = "rhv-blogspot"; }
 
 export const bloggerAdapterVersion = ADAPTER_VERSION;
