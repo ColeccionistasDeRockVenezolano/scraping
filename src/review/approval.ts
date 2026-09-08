@@ -25,6 +25,8 @@ export interface ApprovalResult {
   identityKey: string;
   promoted: number;
   applied: number;
+  /** Ya coincidía con el core: la re-aprobación es idempotente, no un fallo. */
+  unchanged: number;
   stillCandidate: number;
   unsupported: number;
   reviewsClosed: number;
@@ -155,7 +157,7 @@ export async function approveEntity(entityKind: string, identityKey: string, not
 
   const result: ApprovalResult = {
     entityKind, identityKey, promoted: rows.length,
-    applied: 0, stillCandidate: 0, unsupported: 0, reviewsClosed: 0,
+    applied: 0, unchanged: 0, stillCandidate: 0, unsupported: 0, reviewsClosed: 0,
   };
 
   // Solo se cierra la revisión de lo que avanzó: si un claim sigue candidato,
@@ -170,6 +172,11 @@ export async function approveEntity(entityKind: string, identityKey: string, not
       const resolved = target.artistId ?? target.personId ?? target.organizationId ?? target.albumId ?? target.trackId;
       if (resolved !== undefined) result.targetId = resolved;
       if (outcome.relationIds?.length) result.relationIds = [...new Set([...(result.relationIds ?? []), ...outcome.relationIds])];
+    } else if (outcome.action === "unchanged") {
+      // El claim no cambió nada porque el core ya lo dice: su revisión se
+      // cierra igual, o quedaría abierta para siempre.
+      result.unchanged += 1;
+      progressed.push(Number(row.id));
     } else if (outcome.action === "unsupported") result.unsupported += 1;
     else result.stillCandidate += 1;
   }
@@ -191,5 +198,5 @@ export async function dismissEntity(entityKind: string, identityKey: string, not
   await getPool().query("UPDATE ingest.claims SET status='rejected',updated_at=now() WHERE id = ANY($1::bigint[])", [ids]);
   const reviewsClosed = await closeReviews(ids, "dismissed", note);
   log.info({ entityKind, identityKey, rejected: ids.length, reviewsClosed }, "entidad descartada");
-  return { entityKind, identityKey, promoted: 0, applied: 0, stillCandidate: 0, unsupported: 0, reviewsClosed };
+  return { entityKind, identityKey, promoted: 0, applied: 0, unchanged: 0, stillCandidate: 0, unsupported: 0, reviewsClosed };
 }

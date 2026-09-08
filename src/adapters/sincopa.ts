@@ -28,6 +28,26 @@ function splitByBr($: CheerioAPI, html: string): string[] {
 }
 
 /**
+ * Igual que splitByBr pero conserva el marcado de cada tramo: la lista de
+ * pistas vive entera en UNA celda, una línea por <br>, y el título de cada
+ * pista solo se distingue por su color dorado. Leer la celda como texto
+ * plano perdía todas las pistas menos la primera.
+ */
+function fragmentsByBr($: CheerioAPI, html: string): Array<ReturnType<CheerioAPI>> {
+  return html
+    .split(/<br\s*\/?>/i)
+    .map((chunk) => $(`<div>${chunk}</div>`))
+    .filter((fragment) => clean(fragment.text()).length > 0);
+}
+
+/** "3:22" -> 202 segundos. Formatos ajenos se descartan en vez de adivinarse. */
+function durationSeconds(text: string): number | undefined {
+  const match = /(?:^|\s)(\d{1,2}):([0-5]\d)(?:\s|$)/u.exec(text);
+  if (!match) return undefined;
+  return Number(match[1]) * 60 + Number(match[2]);
+}
+
+/**
  * Empareja la celda de etiquetas ("Formed:<br>Based:<br>Genre:") con la celda
  * de valores contigua, tramo a tramo. Devuelve las claves en minúscula y sin
  * los dos puntos finales.
@@ -341,6 +361,15 @@ export class SincopaAdapter implements SourceAdapter {
     }
     records.push(this.record("album", artist ? `${artist}::${title}` : title, albumFields));
 
+    // La ficha de disco AFIRMA su artista ("Artist: Fusión IV"), no solo lo
+    // menciona: sin reclamarlo como entidad el álbum no puede existir en el
+    // core, que no admite un disco sin artista.
+    if (artist && named(artist)) {
+      records.push(this.record("artist", artist, [
+        { field: "name", value: artist, evidence: evidence("td", artist) },
+      ]));
+    }
+
     const company = pairs.get("company");
     if (company && named(company)) {
       records.push(this.record("organization", company, [
@@ -351,11 +380,12 @@ export class SincopaAdapter implements SourceAdapter {
 
     // Pistas: "01- Título (Compositor)". El título va en dorado; el compositor
     // entre paréntesis es un crédito de la pista, nunca una membresía.
-    rowsUnderSection(page, /tracks?|pistas?|temas?/i).forEach((row, position) => {
+    rowsUnderSection(page, /tracks?|pistas?|temas?/i).forEach((row) => {
       const cell = page(row).find("td").first();
-      const text = clean(cell.text());
+      fragmentsByBr(page, cell.html() ?? "").forEach((fragment, position) => {
+      const text = clean(fragment.text());
       if (!text) return;
-      const trackTitle = clean(cell.find(`font[color="${GOLD}"]`).first().text());
+      const trackTitle = clean(fragment.find(`font[color="${GOLD}"]`).first().text());
       if (!trackTitle) return;
       const number = /^(\d{1,3})\s*[-.]/.exec(text)?.[1];
       const where = evidence("tr td", text, position);
@@ -365,9 +395,13 @@ export class SincopaAdapter implements SourceAdapter {
       ];
       if (artist) trackFields.push({ field: "artist_name", value: artist, evidence: where });
       if (number) trackFields.push({ field: "track_number", value: number, evidence: where });
+      const seconds = durationSeconds(text);
+      if (seconds !== undefined) trackFields.push({ field: "duration_seconds", value: String(seconds), evidence: where });
       records.push(this.record("track", artist ? `${artist}::${title}::${trackTitle}` : `${title}::${trackTitle}`, trackFields));
 
-      const composer = /\(([^)]+)\)\s*$/.exec(text)?.[1];
+      // El compositor va entre paréntesis; la duración lo sigue y no forma
+      // parte del crédito.
+      const composer = /\(([^)]+)\)(?:\s*\d{1,2}:[0-5]\d)?\s*$/.exec(text)?.[1];
       const credited = composer ? clean(composer) : "";
       if (credited && named(credited)) {
         records.push(this.record("person", credited, [{ field: "name", value: credited, evidence: where }]));
@@ -381,6 +415,7 @@ export class SincopaAdapter implements SourceAdapter {
         if (artist) composerCredit.push({ field: "artist_name", value: artist, evidence: where });
         records.push(this.record("track_credit", `${title}::${trackTitle}::${credited}`, composerCredit));
       }
+      });
     });
 
     // Créditos del disco. Un crédito acotado con "(tracks NN)" es de pista;

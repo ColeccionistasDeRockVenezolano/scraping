@@ -67,6 +67,26 @@ describe("adapters funcionales de las fuentes autorizadas", () => {
     expect(claims.some((claim) => claim.entityKind === "artist_membership" && claim.field === "person_name" && claim.rawValue === "Leo Blanco")).toBe(false);
   });
 
+  it("lee la lista de pistas completa, que vive entera en una celda", async () => {
+    const claims = await parsed("sincopa");
+    // Toda la discografía de la ficha de disco está en un solo <td>, una
+    // línea por <br>: leerla como texto plano dejaba solo la primera pista.
+    const titles = claims.filter((claim) => claim.entityKind === "track" && claim.field === "title").map((claim) => claim.rawValue);
+    expect(titles).toHaveLength(11);
+    expect(titles).toContain("Despertar");
+    expect(titles).toContain("A Un Paisano");
+
+    // "01- Despertar (Daniel Somaroo) 3:22": duración y compositor son cosas
+    // distintas y ninguna contamina a la otra.
+    expect(claims.some((claim) => claim.entityKind === "track" && claim.field === "duration_seconds" && claim.rawValue === "202")).toBe(true);
+    expect(claims.some((claim) => claim.entityKind === "track_credit" && claim.field === "credited_name" && claim.rawValue === "Daniel Somaroo")).toBe(true);
+    expect(claims.some((claim) => claim.entityKind === "track_credit" && claim.field === "credited_name" && String(claim.rawValue).includes(":"))).toBe(false);
+
+    // La ficha de disco afirma su artista: sin esa entidad el álbum no puede
+    // existir en el core.
+    expect(claims.some((claim) => claim.entityKind === "artist" && claim.field === "name" && claim.rawValue === "Fusión IV")).toBe(true);
+  });
+
   it("Rock Hecho En Venezuela usa solo la raíz y los dos endpoints WP finitos", async () => {
     const adapter = adapterFor({ slug: "rock-hecho-en-venezuela", siteType: "website" });
     expect(adapter).toBeDefined();

@@ -161,6 +161,14 @@ el índice `claims_dedupe_uk`) y `ingest.claim_evidence`
   cualquier contradicción→claims rivales + review; low/AI→nunca escribe core.
 - Escribe bajo `pg_advisory_xact_lock` con clave determinista por entidad
   (DATA_MODEL.md §6) → idempotencia incluso en ejecuciones concurrentes.
+- **Identidad heredada:** cuando un claim crea la entidad, sus hermanos (año,
+  género, duración) llegan con el mismo `identity_key` y sin FK. Volver a
+  resolverlos por ER los estrella contra los guardias de homónimos y de
+  contexto, porque un álbum o una pista recién creados aún no tienen el
+  contexto que el ER exige; el efecto era que solo el nombre entraba al
+  catálogo. El motor reusa la FK que otro claim de esa misma identidad y
+  fuente ya resolvió y auditó — no es una decisión de identidad nueva. Si esa
+  identidad apunta a más de una entidad, no se elige ninguna.
 - Regla dura: **un crédito de álbum jamás inserta `artist_members`**.
 - Cada write deja entrada en `ingest.merge_audit` (+ `merge_audit_claims`:
   qué claims respaldan la escritura).

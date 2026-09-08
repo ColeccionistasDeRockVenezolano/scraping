@@ -281,6 +281,41 @@ async function siblingInteger(client: PoolClient, claim: ClaimToPersist, field: 
   return Number.isInteger(value) && value > 0 ? value : undefined;
 }
 
+/**
+ * Identidad heredada. Cuando un claim crea la entidad, sus hermanos —el año,
+ * el género, la duración— llegan después con el mismo identity_key y sin FK,
+ * y volver a resolverlos por ER los estrella contra los guardias de
+ * homónimos y de contexto: un álbum o una pista recién creados no tienen
+ * todavía el contexto que el ER exige para reconocerlos. El resultado era
+ * que solo el nombre entraba al catálogo y todo lo demás quedaba candidato.
+ *
+ * No es una decisión de identidad nueva: es la que ya se tomó y se auditó
+ * para esa misma identidad en esa misma fuente. Si apunta a más de una
+ * entidad no se elige ninguna y sigue el camino normal del ER.
+ */
+async function inheritedTarget(client: PoolClient, claim: ClaimToPersist, spec: EntitySpec): Promise<number | undefined> {
+  const { rows } = await client.query<{ id: string }>(
+    `SELECT DISTINCT ${spec.targetColumn}::text AS id FROM ingest.claims
+      WHERE entity_kind=$1 AND identity_key=$2 AND source_id=$3 AND ${spec.targetColumn} IS NOT NULL`,
+    [spec.kind, claim.identity, claim.sourceId],
+  );
+  return rows.length === 1 ? numberFrom(rows[0]!.id) : undefined;
+}
+
+function inheritedDecision(input: ResolutionInput, id: number, canonical: string): ResolutionDecision {
+  const inherited: ScoreFeature = {
+    key: "target.inherited_identity", label: "identidad ya resuelta en esta fuente", value: 1, weight: 1,
+    contribution: 1, polarity: "for", evidence: `otro claim de la misma identidad y fuente resolvio a ${id} (${canonical})`,
+  };
+  return {
+    kind: input.kind, inputOriginal: input.name,
+    inputNormalized: normalizeEntityName(input.name).primaryKey,
+    action: "AUTO_MATCH", score: 1, candidateId: id, features: [inherited],
+    candidates: [{ candidateId: id, canonicalName: canonical, score: 1, action: "AUTO_MATCH", features: [inherited], hardConflicts: [], nameBasis: "canonical_exact", hasContextSupport: true, autoEligible: true }],
+    thresholds: resolutionThresholdsFromEnv(), explanation: "identidad heredada de un claim hermano ya resuelto y auditado", deterministic: true,
+  };
+}
+
 async function createEntity(client: PoolClient, claim: ClaimToPersist, claimId: number, spec: EntitySpec, input: ResolutionInput, decisionId: number): Promise<number | undefined> {
   if (claim.field !== spec.identityColumn) return undefined;
   const name = scalar(claim.normalizedValue, claim.field);
@@ -346,9 +381,19 @@ export async function mergeClaim(
       const attached = await client.query<Record<string, unknown>>(`SELECT ${spec.targetColumn} FROM ingest.claims WHERE id=$1`, [persisted.id]);
       targetId = numberFrom(attached.rows[0]?.[spec.targetColumn]);
     }
+    let inherited = false;
+    if (targetId === undefined) {
+      targetId = await inheritedTarget(client, claim, spec);
+      inherited = targetId !== undefined;
+    }
     let decision: ResolutionDecision;
-    if (targetId !== undefined) decision = explicitDecision(input, targetId, await canonicalName(client, spec, targetId));
-    else {
+    if (targetId !== undefined) {
+      const canonical = await canonicalName(client, spec, targetId);
+      // La herencia no marca `target.explicit_fk`: una variante de nombre
+      // sobre una identidad heredada se conserva como alias, no se trata
+      // como propuesta de rename.
+      decision = inherited ? inheritedDecision(input, targetId, canonical) : explicitDecision(input, targetId, canonical);
+    } else {
       const candidates = await loadResolutionCandidates(input, client);
       decision = await resolveEntity(input, candidates, {
         thresholds: resolutionThresholdsFromEnv(),
