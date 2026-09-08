@@ -1,7 +1,8 @@
 // Registro cerrado de adapters. Los parsers específicos permanecen mínimos
 // hasta caracterizar cada fuente sobre snapshots; no se inventa scraping web.
 import type { AdapterRegistration, SourceAdapter } from "./contracts.js";
-import { DescargasMetalVenezolanoAdapter, RhvBlogspotAdapter } from "./blogger.js";
+import { DescargasMetalVenezolanoAdapter } from "./blogger.js";
+import { RhvBlogspotAdapter } from "./rhv-blogspot.js";
 import { RockDeVzlaAdapter } from "./rock-de-vzla.js";
 import { RockzuelaAdapter } from "./rockzuela.js";
 import { HippitoYSusChatarritasAdapter } from "./hippito.js";

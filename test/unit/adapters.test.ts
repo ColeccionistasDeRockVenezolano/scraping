@@ -47,7 +47,14 @@ describe("adapters funcionales de las fuentes autorizadas", () => {
     expect(claims.every((claim) => claim.evidence.url.startsWith("https://fixture.invalid/"))).toBe(true);
     expect(claims.some((claim) => claim.entityKind === "artist" && claim.field === "name")).toBe(true);
     expect(claims.some((claim) => claim.entityKind === "album" && claim.field === "release_year")).toBe(true);
-    expect(claims.some((claim) => claim.entityKind === "track" && claim.field === "track_number")).toBe(true);
+    // Las pistas dependen de la fuente, igual que los créditos: Rockzuela y
+    // RHV Blogspot no publican tracklist en ninguna entrada —RHV en cero de
+    // sus 24 fichas—, así que exigirlas a todas obligaría a inventarlas. Lo
+    // que sí vale para todas: si hay pista, trae su número y su disco.
+    const tracks = claims.filter((claim) => claim.entityKind === "track");
+    for (const field of ["track_number", "album_title"] as const) {
+      expect(tracks.length === 0 || tracks.some((claim) => claim.field === field)).toBe(true);
+    }
     // Qué créditos existan depende de la fuente: Hippito solo acredita
     // compositores por pista, y Descargas Metal no publica créditos en
     // absoluto. Exigirlos a todas obligaría a inventarlos. Lo que sí vale
