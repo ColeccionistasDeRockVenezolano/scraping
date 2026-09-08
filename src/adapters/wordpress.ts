@@ -1,6 +1,8 @@
 import { load, type CheerioAPI } from "cheerio";
 import type { PageRef, RawRecord, SourceAdapter, StoredPage } from "./contracts.js";
 import { ADAPTER_VERSION, absoluteUrl, clean, extractNarrativeHtml } from "./shared.js";
+import { CrvWordpressArtsExtractor } from "./crv-wordpress.js";
+import { ElPunkBandcampExtractor } from "./el-punk.js";
 
 type WordPressItem = {
   link?: string;
@@ -82,17 +84,35 @@ export class ColeccionistasWordpressAdapter extends WordPressAdapter {
     return [...new Set(urls)].map((url) => ({ url, kind: "html" as const }));
   }
 
+  /**
+   * Las artes viven en el `alt` de cada imagen, no en el texto del post: ver
+   * crv-wordpress.ts. Es la única fuente del archivo con contraportadas,
+   * galletas de CD y libretos.
+   */
+  private readonly arts = new CrvWordpressArtsExtractor(this.slug);
+
   override extractSnapshot(page: StoredPage): RawRecord[] {
     if (isSitemapUrl(page.url)) return []; // el sitemap es índice, no contenido
-    return super.extractSnapshot(page);
+    if (page.kind !== "html") return super.extractSnapshot(page);
+    return this.arts.extract(page);
   }
 }
 
-/** Sitio-libro WP: usa pages; posts fue confirmado vacío. */
+/**
+ * Sitio-libro WP: usa pages; posts fue confirmado vacío. Sus escaneos de
+ * página son obra protegida y no se ingieren — ver el-punk.ts. Lo extraíble
+ * son los discos que el sello incrustó desde Bandcamp.
+ */
 export class ElPunkEnVenezuelaAdapter extends WordPressAdapter {
   readonly slug = "el-punk-en-venezuela";
+  private readonly bandcamp = new ElPunkBandcampExtractor(this.slug);
+
   protected targets(rootUrl: string): PageRef[] {
     return [{ url: new URL("/wp-json/wp/v2/pages?per_page=100&page=1", absoluteUrl(rootUrl)).toString(), kind: "json" }];
+  }
+
+  protected override extractItem(item: WordPressItem, pageUrl: string): RawRecord[] {
+    return item.content?.rendered ? this.bandcamp.extract(item.content.rendered, item.link ?? pageUrl) : [];
   }
 }
 

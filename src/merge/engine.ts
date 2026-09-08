@@ -13,6 +13,7 @@ import { resolutionThresholdsFromEnv } from "../er/resolver.js";
 import type { ResolutionDecision, ResolutionInput, ScoreFeature } from "../er/types.js";
 import { claimTargetId, resolvableSpec, type EntitySpec, type ResolvableClaimKind } from "./specs.js";
 import { isRelationKind, mergeRelationClaim, type RelationClaimKind } from "./relations.js";
+import { MEDIA_LINK_KIND, mergeMediaLinkClaim } from "./media-links.js";
 
 export interface MergeOutcome {
   action: "applied" | "unchanged" | "candidate" | "conflict" | "unsupported";
@@ -383,6 +384,8 @@ export async function mergeClaim(
     // el entity_kind. Regla dura preservada: album_credit/track_credit no
     // pueden aterrizar en artist_members ni por un rol ambiguo.
     if (isRelationKind(claim.entityKind)) return mergeRelationClaim(claim, persisted.id);
+    // Un arte tampoco es entidad resoluble: se cuelga de una que ya existe.
+    if (claim.entityKind === MEDIA_LINK_KIND) return mergeMediaLinkClaim(claim, persisted.id);
     await getPool().query("UPDATE ingest.claims SET status='candidate',updated_at=now() WHERE id=$1", [persisted.id]);
     return { action: "unsupported", detail: `merge de ${claim.entityKind} no escribe entidades resolubles; credito != membresia` };
   }

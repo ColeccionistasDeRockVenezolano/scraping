@@ -306,8 +306,12 @@ export interface ContentImage {
   position: number;
 }
 
-/** Servidores que sólo sirven adorno: iconos sociales y plantilla de Blogger. */
-const JUNK_HOST = /photobucket|myspace|facebook|twitter|instagram|pinterest|whatsapp|telegram|blogblog\.com|blogger\.com\/img/i;
+/**
+ * Servidores que sólo sirven adorno: iconos sociales, plantilla de Blogger y
+ * Gravatar, que por definición devuelve el avatar de quien comenta — 488 de
+ * las 1.730 imágenes de CRV WordPress son eso.
+ */
+const JUNK_HOST = /photobucket|myspace|facebook|twitter|instagram|pinterest|whatsapp|telegram|blogblog\.com|blogger\.com\/img|gravatar\.com/i;
 
 /**
  * Palabras que delatan un adorno. Se comparan contra el NOMBRE DE ARCHIVO

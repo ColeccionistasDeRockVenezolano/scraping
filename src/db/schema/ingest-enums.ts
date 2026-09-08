@@ -15,9 +15,12 @@ export const confidenceLevelEnum = ingestSchema.enum("confidence_level", ["high"
 export const claimStatusEnum = ingestSchema.enum("claim_status", [
   "candidate", "accepted", "rejected", "conflict", "superseded",
 ]);
+// 0008 añade `media_link`: el arte que no cabe en `albums.cover_url` ni en
+// `artists.picture_url`, que son una sola imagen cada una.
 export const claimEntityKindEnum = ingestSchema.enum("claim_entity_kind", [
   "artist", "person", "organization", "album", "track", "artist_membership",
   "person_organization", "album_credit", "track_credit", "album_format", "youtube_video",
+  "media_link",
 ]);
 export const actorKindEnum = ingestSchema.enum("actor_kind", ["system", "ai", "human"]);
 

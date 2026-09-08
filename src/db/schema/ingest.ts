@@ -17,7 +17,7 @@ import {
   varchar,
 } from "drizzle-orm/pg-core";
 import { albums, artistMembers, artists, albumCredits, albumFormats, organizations, persons, personOrganizations, trackCredits, tracks } from "./core.js";
-import { youtubeVideos } from "./media.js";
+import { mediaLinks, youtubeVideos } from "./media.js";
 import {
   ingestSchema as ingest,
   trustLevelEnum,
@@ -144,6 +144,7 @@ export const claims = ingest.table("claims", {
   trackCreditId: bigint("track_credit_id", { mode: "number" }).references(() => trackCredits.id, { onDelete: "cascade" }),
   albumFormatId: bigint("album_format_id", { mode: "number" }).references(() => albumFormats.id, { onDelete: "cascade" }),
   videoId: bigint("video_id", { mode: "number" }).references(() => youtubeVideos.id, { onDelete: "cascade" }),
+  mediaLinkId: bigint("media_link_id", { mode: "number" }).references(() => mediaLinks.id, { onDelete: "set null" }),
   field: varchar("field", { length: 80 }).notNull(),
   rawValue: jsonb("raw_value").notNull(),
   normalizedValue: jsonb("normalized_value"),

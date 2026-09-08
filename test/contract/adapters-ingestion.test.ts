@@ -17,18 +17,19 @@ import { artists } from "../../src/db/schema/core.js";
 import { adapterFor } from "../../src/adapters/registry.js";
 import { ingestRecords } from "../../src/ingest/runner.js";
 import type { StoredPage } from "../../src/adapters/contracts.js";
+import { ADAPTER_SLUGS, FIXTURE_DIR, fixturesFor, siteTypeFor, type AdapterSlug } from "../support/adapter-fixtures.js";
 
-const fixtureDir = path.join(path.dirname(fileURLToPath(import.meta.url)), "..", "fixtures", "adapters");
-const slugs = ["descargas-metal-venezolano", "rockzuela", "rock-de-vzla", "hippito-y-sus-chatarritas", "rhv-blogspot", "rock-hecho-en-venezuela", "sincopa", "coleccionistas-de-rock-venezolano", "el-punk-en-venezuela"] as const;
+const slugs = ADAPTER_SLUGS;
 
-async function recordsFor(slug: typeof slugs[number]) {
-  const adapter = adapterFor({ slug, siteType: slug === "sincopa" ? "database" : "website" });
+async function recordsFor(slug: AdapterSlug) {
+  const adapter = adapterFor({ slug, siteType: siteTypeFor(slug) });
   if (!adapter) throw new Error(`adapter faltante: ${slug}`);
-  const ext = slug === "sincopa" ? "html" : "json";
-  const body = await readFile(path.join(fixtureDir, `${slug}.${ext}`), "utf8");
-  const url = slug === "sincopa" ? "https://fixture.invalid/artist_rock/banda_fixture.htm" : `https://fixture.invalid/${slug}`;
-  const page: StoredPage = { url, kind: ext === "json" ? "json" : "html", rawPageId: 1, body };
-  return adapter.extractSnapshot?.(page) ?? [];
+  const perPage = await Promise.all(fixturesFor(slug).map(async (input) => {
+    const body = await readFile(path.join(FIXTURE_DIR, input.file), "utf8");
+    const page: StoredPage = { url: input.url, kind: input.kind, rawPageId: 1, body };
+    return adapter.extractSnapshot?.(page) ?? [];
+  }));
+  return perPage.flat();
 }
 
 describe("persistencia idempotente de fixtures de adapters", () => {

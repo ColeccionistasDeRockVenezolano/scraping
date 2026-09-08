@@ -20,6 +20,7 @@ export interface ClaimTargets {
   trackCreditId?: number;
   albumFormatId?: number;
   videoId?: number;
+  mediaLinkId?: number;
 }
 
 export interface ClaimToPersist extends NormalizedClaim, ClaimTargets {
@@ -46,7 +47,7 @@ export interface PersistedClaim {
 const TARGET_KEYS = [
   "artistId", "personId", "organizationId", "albumId", "trackId",
   "artistMembershipId", "personOrganizationId", "albumCreditId",
-  "trackCreditId", "albumFormatId", "videoId",
+  "trackCreditId", "albumFormatId", "videoId", "mediaLinkId",
 ] as const satisfies ReadonlyArray<keyof ClaimTargets>;
 
 function json(value: unknown): string { return JSON.stringify(value); }
@@ -55,6 +56,19 @@ export function targetId(input: ClaimTargets): number | undefined {
   const values = TARGET_KEYS.map((key) => input[key]).filter((item): item is number => item !== undefined);
   if (values.length > 1) throw new Error("un claim no puede apuntar a mas de una entidad");
   return values[0];
+}
+
+/**
+ * Destinos que entran en `claims_dedupe_uk`. `mediaLinkId` queda fuera a
+ * propósito: 0008 no añadió esa columna al COALESCE del índice, porque
+ * hacerlo cambiaría la clave de deduplicacion de TODOS los claims ya
+ * almacenados. Esta funcion refleja el indice real, que es la autoridad.
+ */
+function dedupeTargetId(input: ClaimTargets): number {
+  return TARGET_KEYS
+    .filter((key) => key !== "mediaLinkId")
+    .map((key) => input[key])
+    .find((item): item is number => item !== undefined) ?? 0;
 }
 
 export async function persistClaim(input: ClaimToPersist): Promise<PersistedClaim> {
@@ -85,13 +99,13 @@ export async function persistClaim(input: ClaimToPersist): Promise<PersistedClai
       source_id, raw_page_id, seed_upload_id, entity_kind,
       artist_id, person_id, organization_id, album_id, track_id,
       artist_membership_id, person_organization_id, album_credit_id,
-      track_credit_id, album_format_id, video_id,
+      track_credit_id, album_format_id, video_id, media_link_id,
       field, raw_value, normalized_value, raw_hash, extractor,
       extractor_version, confidence, created_by, run_id,
       identity_raw, identity_key, identity_secondary_key
     ) VALUES (
-      $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,
-      $16,$17::jsonb,$18::jsonb,$19,$20,$21,$22,$23,$24,$25,$26,$27
+      $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,
+      $17,$18::jsonb,$19::jsonb,$20,$21,$22,$23,$24,$25,$26,$27,$28
     ) ON CONFLICT DO NOTHING RETURNING id`, [
     input.sourceId, input.rawPageId ?? null, input.seedUploadId ?? null, input.entityKind,
     ...targets,
@@ -113,7 +127,7 @@ export async function persistClaim(input: ClaimToPersist): Promise<PersistedClai
                    track_credit_id, album_format_id, video_id, 0)=$5
       AND field=$6 AND raw_hash=$7
     LIMIT 1`, [input.sourceId, input.rawPageId ?? null, input.seedUploadId ?? null,
-    input.entityKind, targetId(input) ?? 0, input.field, input.rawHash]);
+    input.entityKind, dedupeTargetId(input), input.field, input.rawHash]);
   const existingId = existing.rows[0]?.id;
   if (!existingId) throw new Error("claims_dedupe_uk rechazo un claim pero no se encontro el duplicado");
   await persistEvidence(Number(existingId), input);

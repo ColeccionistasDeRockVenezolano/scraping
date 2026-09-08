@@ -6,6 +6,11 @@ import { z } from "zod";
 export const claimEntityKindSchema = z.enum([
   "artist", "person", "organization", "album", "track", "artist_membership",
   "person_organization", "album_credit", "track_credit", "album_format", "youtube_video",
+  // `media_link` (migración 0008): un arte o una foto ADICIONAL. El core
+  // guarda una sola imagen por entidad —`albums.cover_url`,
+  // `artists.picture_url`—, así que la contraportada, la galleta del CD y el
+  // libreto de un mismo disco no tenían dónde ir.
+  "media_link",
 ]);
 
 export const evidenceSchema = z.object({
