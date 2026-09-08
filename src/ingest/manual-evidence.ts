@@ -2,7 +2,7 @@
 // cache, Cheerio ni el motor de claims: conserva el hallazgo como trabajo
 // pendiente hasta que una persona lo interprete y apruebe.
 import { createHash } from "node:crypto";
-import { eq } from "drizzle-orm";
+import { and, eq, sql } from "drizzle-orm";
 import { getDb } from "../db/client.js";
 import { manualEvidenceInputSchema, type ManualEvidenceInput } from "../adapters/contracts.js";
 import { adapterRegistrationFor } from "../adapters/registry.js";
@@ -37,6 +37,20 @@ export async function registerManualEvidence(
     .update(JSON.stringify({ sourceSlug, evidenceUrl: input.evidenceUrl, excerpt: input.excerpt }))
     .digest("hex");
   const now = new Date();
+
+  // Idempotencia: el hash identifica (fuente, URL, extracto). Registrar dos
+  // veces la misma captura devuelve el ítem existente en vez de duplicar la
+  // cola de revisión con trabajo que ya está pendiente.
+  const [existing] = await db.select({ id: reviewQueue.id, runId: sql<number>`(${reviewQueue.payload}->>'runId')::bigint` })
+    .from(reviewQueue)
+    .where(and(
+      eq(reviewQueue.kind, "manual_review"),
+      sql`${reviewQueue.payload}->>'evidenceHash' = ${evidenceHash}`,
+    ))
+    .limit(1);
+  if (existing) {
+    return { sourceId: source.id, runId: Number(existing.runId), reviewId: existing.id, evidenceHash };
+  }
 
   return db.transaction(async (tx) => {
     const [run] = await tx.insert(scrapeRuns).values({

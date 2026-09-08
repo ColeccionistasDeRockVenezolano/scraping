@@ -199,7 +199,10 @@ async function sweepBlogger(
 function observationTargets(slug: string, siteType: string, baseUrl: string): string[] {
   const targets = [baseUrl];
   if (slug === "coleccionistas-de-rock-venezolano") {
-    targets.push("https://public-api.wordpress.com/wp/v2/sites/coleccionistasderockvenezolano.wordpress.com/posts?per_page=100&page=1");
+    // public-api.wordpress.com declara Disallow: / y el blog no expone
+    // /wp-json/ en su propio origen; el sitemap es el canal que su robots.txt
+    // publica para crawlers.
+    targets.push(new URL("/sitemap.xml", baseUrl).toString());
   } else if (slug === "el-punk-en-venezuela") {
     targets.push(new URL("/wp-json/wp/v2/pages?per_page=100&page=1", baseUrl).toString());
   } else if (slug === "rock-hecho-en-venezuela") {
@@ -242,7 +245,12 @@ async function sweepKnownHttpTargets(
   const result = emptyResult(prior !== null);
   const adapter = adapterFor({ slug: sourceSlug, siteType });
   const initial = await adapterInitialTargets(adapter, baseUrl, observationTargets(sourceSlug, siteType, baseUrl));
-  const targets = [...new Set([...(prior?.pendingUrls ?? []), ...initial])];
+  // Una pendiente que el adapter ya no considera en alcance quedó obsoleta al
+  // cambiar su frontera; reintentarla revive un error resuelto en cada run.
+  const carried = (prior?.pendingUrls ?? []).filter(
+    (url) => !adapter?.isAllowedUrl || adapter.isAllowedUrl(url, baseUrl) || initial.includes(url),
+  );
+  const targets = [...new Set([...carried, ...initial])];
   const pending = new Set<string>();
   const seen = new Set<string>();
   const limit = adapter?.crawlLimit ?? 100;

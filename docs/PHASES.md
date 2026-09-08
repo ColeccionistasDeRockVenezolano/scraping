@@ -125,8 +125,9 @@ en verde, diff de `public` vacío (✅ verificado, bash y Vitest, PostgreSQL 15
 y 16); base desechable y reproducible (✅ vía `test/support/pg-container.ts`,
 `tests/lib_pg.sh` y `docker-compose.yml`).
 
-Estado de la suite tras el cierre de F0/F1 (2026-09-08): `npm test` = **28 tests
-en 5 archivos**, `npm run test:matrix` en verde en 15 y 16,
+Estado de la suite (2026-09-08): `npm test` = **103 tests en 13 archivos**,
+más 1 smoke test DeepSeek correctamente omitido sin API key;
+`npm run test:matrix` en verde en PostgreSQL 15 y 16, y
 `npm run typecheck` limpio.
 
 Fuera de alcance de F0, documentado y diferido: el servidor HTTP

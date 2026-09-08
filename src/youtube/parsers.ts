@@ -4,6 +4,11 @@ export interface TimestampEntry { title: string; startSeconds: number; position:
 export interface ParsedDescription { sections: DescriptionSection[]; tracklist: TimestampEntry[]; }
 
 const TITLE_SEPARATORS = /\s+(?:-|–|—)\s+/;
+// Dos disposiciones reales conviven en las descripciones del canal: el
+// timestamp puede abrir la línea ("00:00 - Título") o cerrarla tras un número
+// de pista ("01 - Título 00:00"). Se prueban en ese orden.
+const LEADING_TIMESTAMP = /^\s*(?:[-*•]\s*)?((?:\d{1,2}:)?\d{1,2}:\d{2})\s*(?:[-–—.)]\s*)?(.+?)\s*$/;
+const TRAILING_TIMESTAMP = /^\s*(?:[-*•]\s*)?(?:\d{1,2}\s*[-–—.)]\s*)?(.+?)\s+((?:\d{1,2}:)?\d{1,2}:\d{2})\s*$/;
 const SECTION_NAMES: Array<[RegExp, string]> = [
   [/^track\s*list$/i, "tracklist"], [/^musicians?$/i, "musicians"], [/^other credits?$/i, "other_credits"],
   [/^produced by$/i, "produced_by"], [/^recorded by$/i, "recorded_by"], [/^mixed by$/i, "mixed_by"],
@@ -57,9 +62,11 @@ export function parseYouTubeDescription(description: string | null | undefined):
     if (current) {
       current.content.push(line.trim());
       if (current.kind === "tracklist") {
-        const timestamp = line.match(/^\s*(?:[-*•]\s*)?((?:\d{1,2}:)?\d{1,2}:\d{2})\s*(?:[-–—.)]\s*)?(.+?)\s*$/);
-        const seconds = timestamp ? timestampToSeconds(timestamp[1]!) : null;
-        const title = timestamp?.[2]?.trim();
+        const leading = line.match(LEADING_TIMESTAMP);
+        const trailing = leading ? null : line.match(TRAILING_TIMESTAMP);
+        const stamp = leading?.[1] ?? trailing?.[2];
+        const title = (leading?.[2] ?? trailing?.[1])?.trim();
+        const seconds = stamp ? timestampToSeconds(stamp) : null;
         if (seconds !== null && title) tracklist.push({ title, startSeconds: seconds, position: tracklist.length });
       }
     }

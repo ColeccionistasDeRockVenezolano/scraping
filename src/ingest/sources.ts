@@ -90,7 +90,7 @@ const ENRICHMENT: Record<string, Omit<SourceSeedRow, "name" | "url" | "slug">> =
   "rock-y-pop-venezuela-merch-store": {
     siteType: "website", requiresJs: false, trustLevel: "medium", enabled: false, publicDisplay: false,
     accessStrategy: "LIMITED / DISABLED: sin barrido. robots.txt publica User-agent: * y Disallow: /; no se prueban endpoints alternativos ni Shopify JSON.",
-    notes: "Verificado 2026-09-08 mediante política pública de acceso. Se conserva en el registro, enabled=false; requiere una futura superficie pública autorizada para reclasificar.",
+    notes: "Verificado 2026-09-08 mediante política pública de acceso. Se conserva en el registro, enabled=false; requiere una futura superficie pública autorizada para reclasificar. Re-verificado 2026-09-08 al cierre del barrido: el dominio resuelve y sirve robots.txt (200) con el mismo Disallow: /, pero la tienda responde HTTP 402 Payment Required — storefront de Shopify desactivado. Queda cerrada por dos motivos independientes: sin autorización y sin contenido.",
   },
   hemeroteka: {
     siteType: "instagram", requiresJs: true, trustLevel: "low", enabled: false, publicDisplay: false,

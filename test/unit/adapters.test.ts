@@ -13,14 +13,31 @@ const slugs = [
   "rock-hecho-en-venezuela", "sincopa", "coleccionistas-de-rock-venezolano", "el-punk-en-venezuela",
 ] as const;
 
+// Sincopa tiene DOS tipos de ficha con estructuras distintas: la de artista
+// trae formación y miembros; la de disco trae pistas y créditos. Una sola no
+// cubre el contrato, y el fixture sintético anterior no se parecía a ninguna.
+const SINCOPA_FIXTURES = [
+  { file: "sincopa.html", url: "https://fixture.invalid/rock_pop/artist_rock/los_kings.htm" },
+  { file: "sincopa-album.html", url: "https://fixture.invalid/rock_pop/cdinfo_rock/fusion4_tarde.htm" },
+];
+
 async function parsed(slug: typeof slugs[number]) {
   const adapter = adapterFor({ slug, siteType: slug === "sincopa" ? "database" : slug.includes("wordpress") ? "wordpress" : "blogspot" });
   if (!adapter) throw new Error(`adapter faltante: ${slug}`);
-  const ext = slug === "sincopa" ? "html" : "json";
-  const body = await readFile(path.join(fixtureDir, `${slug}.${ext}`), "utf8");
-  const url = slug === "sincopa" ? "https://fixture.invalid/artist_rock/banda_fixture.htm" : `https://fixture.invalid/${slug}`;
-  const page: StoredPage = { url, kind: ext === "json" ? "json" : "html", rawPageId: 1, body };
-  return (adapter.extractSnapshot?.(page) ?? []).flatMap(normalizeRecord);
+  const inputs = slug === "sincopa"
+    ? SINCOPA_FIXTURES
+    : [{ file: `${slug}.json`, url: `https://fixture.invalid/${slug}` }];
+  const perPage = await Promise.all(inputs.map(async (input) => {
+    const body = await readFile(path.join(fixtureDir, input.file), "utf8");
+    const page: StoredPage = {
+      url: input.url,
+      kind: input.file.endsWith(".json") ? "json" : "html",
+      rawPageId: 1,
+      body,
+    };
+    return adapter.extractSnapshot?.(page) ?? [];
+  }));
+  return perPage.flat().flatMap(normalizeRecord);
 }
 
 describe("adapters funcionales de las fuentes autorizadas", () => {
@@ -37,9 +54,17 @@ describe("adapters funcionales de las fuentes autorizadas", () => {
 
   it("Sincopa convierte membresía explícita, rol y periodo; créditos no son membresía", async () => {
     const claims = await parsed("sincopa");
-    expect(claims.some((claim) => claim.entityKind === "artist_membership" && claim.field === "role" && claim.rawValue === "Guitarra")).toBe(true);
-    expect(claims.some((claim) => claim.entityKind === "artist_membership" && claim.field === "from_year" && claim.rawValue === "1999")).toBe(true);
-    expect(claims.some((claim) => claim.entityKind === "artist_membership" && claim.field === "person_name" && claim.rawValue === "Persona Productora")).toBe(false);
+    // Ficha de artista: rol y período leídos de la sección "Group Members".
+    expect(claims.some((claim) => claim.entityKind === "artist_membership" && claim.field === "role" && claim.rawValue === "Guitar")).toBe(true);
+    expect(claims.some((claim) => claim.entityKind === "artist_membership" && claim.field === "from_year" && claim.rawValue === "1970")).toBe(true);
+    expect(claims.some((claim) => claim.entityKind === "artist_membership" && claim.field === "to_year" && claim.rawValue === "1976")).toBe(true);
+    // Acentos tras decodificar windows-1252, sobre la página real.
+    expect(claims.some((claim) => claim.entityKind === "person" && claim.rawValue === "Efraín Rodríguez")).toBe(true);
+
+    // Regla dura: un músico acreditado en un disco NO es miembro del grupo.
+    // Leo Blanco toca piano en pistas concretas de la ficha de disco.
+    expect(claims.some((claim) => claim.entityKind === "track_credit" && claim.field === "credited_name" && claim.rawValue === "Leo Blanco")).toBe(true);
+    expect(claims.some((claim) => claim.entityKind === "artist_membership" && claim.field === "person_name" && claim.rawValue === "Leo Blanco")).toBe(false);
   });
 
   it("Rock Hecho En Venezuela usa solo la raíz y los dos endpoints WP finitos", async () => {

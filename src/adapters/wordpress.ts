@@ -30,12 +30,61 @@ abstract class WordPressAdapter implements SourceAdapter {
   }
 }
 
-/** API WordPress.com: posts, no HTML de portada. */
+function isSitemapUrl(url: string): boolean {
+  try {
+    return /\/[^/]*sitemap[^/]*\.xml$/i.test(new URL(url).pathname);
+  } catch {
+    return false;
+  }
+}
+
+function decodeXmlText(value: string): string {
+  return value.trim()
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"')
+    .replace(/&apos;/g, "'")
+    .replace(/&amp;/g, "&"); // último: evita re-decodificar lo ya sustituido
+}
+
+/**
+ * WordPress.com enruta su REST por public-api.wordpress.com, cuyo robots.txt
+ * declara `Disallow: /`, y el blog no expone /wp-json/ en su propio origen
+ * (404). El canal autorizado es el sitemap que su propio robots.txt publica
+ * para crawlers, seguido del HTML de cada entrada.
+ */
 export class ColeccionistasWordpressAdapter extends WordPressAdapter {
   readonly slug = "coleccionistas-de-rock-venezolano";
+  // 1 sitemap + 94 URLs publicadas; margen finito si el blog crece.
+  override readonly crawlLimit = 150;
+
   protected targets(rootUrl: string): PageRef[] {
-    const host = new URL(absoluteUrl(rootUrl)).hostname;
-    return [{ url: `https://public-api.wordpress.com/wp/v2/sites/${host}/posts?per_page=100&page=1`, kind: "json" }];
+    return [{ url: new URL("/sitemap.xml", absoluteUrl(rootUrl)).toString(), kind: "xml" }];
+  }
+
+  isAllowedUrl(url: string, rootUrl: string): boolean {
+    try {
+      const candidate = new URL(url);
+      if (candidate.origin !== new URL(absoluteUrl(rootUrl)).origin) return false;
+      // Las rutas que el propio robots.txt del blog excluye.
+      return !/^\/(?:wp-admin|wp-login\.php|wp-signup\.php|press-this\.php|remote-login\.php|activate|cgi-bin|mshots|next|public\.api)\b/i
+        .test(candidate.pathname);
+    } catch {
+      return false;
+    }
+  }
+
+  discover(page: StoredPage): PageRef[] {
+    if (!isSitemapUrl(page.url)) return []; // solo el índice expande la frontera
+    const urls = [...page.body.matchAll(/<url>\s*<loc>([^<]+)<\/loc>/gi)]
+      .map((match) => decodeXmlText(match[1] ?? ""))
+      .filter((url) => url && this.isAllowedUrl(url, page.url));
+    return [...new Set(urls)].map((url) => ({ url, kind: "html" as const }));
+  }
+
+  override extractSnapshot(page: StoredPage): RawRecord[] {
+    if (isSitemapUrl(page.url)) return []; // el sitemap es índice, no contenido
+    return super.extractSnapshot(page);
   }
 }
 
