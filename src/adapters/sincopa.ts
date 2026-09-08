@@ -105,7 +105,7 @@ function membersInRow($: CheerioAPI, row: AnyNode): Member[] {
     const isGold = (element.attr("color") ?? "").toUpperCase() === GOLD;
     if (isGold && element.find(`font[color="${GOLD}"]`).length === 0) {
       const name = clean(element.text());
-      if (!name) continue;
+      if (!name || !named(name)) continue;
       flush();
       pending = { role, name };
       continue;
@@ -123,12 +123,22 @@ function membersInRow($: CheerioAPI, row: AnyNode): Member[] {
 
 interface Credit { role: string; name: string; tracks?: string; }
 
+/**
+ * Sincopa marca "sin dato" con guiones ("---", "----") y deja paréntesis
+ * sueltos en algunas fichas. Una identidad sin letras ni dígitos no nombra a
+ * nadie: normaliza a cadena vacía y el esquema de claims la rechaza, tumbando
+ * la ingesta completa por seis filas de basura.
+ */
+function named(value: string): boolean {
+  return /[\p{L}\p{N}]/u.test(value);
+}
+
 /** Solo coma y "&": partir por " y " rompería nombres propios en español. */
 function splitNames(value: string): string[] {
   return value
     .split(/\s*(?:,|&|\+)\s*/)
     .map((part) => clean(part))
-    .filter((part) => part.length > 1 && part.length <= 200);
+    .filter((part) => part.length > 1 && part.length <= 200 && named(part));
 }
 
 /**
@@ -204,9 +214,11 @@ export class SincopaAdapter implements SourceAdapter {
 
   extract(page: CheerioAPI, url: string): RawRecord[] {
     const pathname = new URL(url).pathname;
-    if (/\/artist_rock\//i.test(pathname)) return this.extractArtist(page, url);
-    if (/\/cdinfo_rock\//i.test(pathname)) return this.extractAlbum(page, url);
-    return [];
+    const records = /\/artist_rock\//i.test(pathname) ? this.extractArtist(page, url)
+      : /\/cdinfo_rock\//i.test(pathname) ? this.extractAlbum(page, url)
+      : [];
+    // Red de seguridad: ninguna identidad sin letras ni dígitos sale de aquí.
+    return records.filter((record) => named(record.identity));
   }
 
   private record(entityKind: RawRecord["entityKind"], identity: string, fields: RawRecord["fields"]): RawRecord {
@@ -287,7 +299,7 @@ export class SincopaAdapter implements SourceAdapter {
       const catalog = labelCell ? clean(labelCell.find('font[size="1"]').first().text()) : "";
       if (catalog) albumFields.push({ field: "catalog_number", value: catalog, evidence: where });
       records.push(this.record("album", title, albumFields));
-      if (label) {
+      if (label && named(label)) {
         records.push(this.record("organization", label, [
           { field: "name", value: label, evidence: where },
           { field: "organization_type", value: "label", evidence: where },
@@ -327,7 +339,7 @@ export class SincopaAdapter implements SourceAdapter {
     records.push(this.record("album", title, albumFields));
 
     const company = pairs.get("company");
-    if (company) {
+    if (company && named(company)) {
       records.push(this.record("organization", company, [
         { field: "name", value: company, evidence: evidence("td", company) },
         { field: "organization_type", value: "label", evidence: evidence("td", company) },
@@ -353,8 +365,8 @@ export class SincopaAdapter implements SourceAdapter {
       records.push(this.record("track", trackTitle, trackFields));
 
       const composer = /\(([^)]+)\)\s*$/.exec(text)?.[1];
-      if (composer) {
-        const credited = clean(composer);
+      const credited = composer ? clean(composer) : "";
+      if (credited && named(credited)) {
         records.push(this.record("person", credited, [{ field: "name", value: credited, evidence: where }]));
         records.push(this.record("track_credit", `${title}::${trackTitle}::${credited}`, [
           { field: "album_title", value: title, evidence: where },
