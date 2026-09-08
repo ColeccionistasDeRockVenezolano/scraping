@@ -152,6 +152,19 @@ las tres fuentes restantes el 2026-09-08 (SOURCES.md §3):
   Cuando el servidor declara el tamaño servido (`/s400/` de Blogger) eso
   decide sobre el nombre del archivo, que en un blog es el que tuviera quien
   la subió. Detalle por fuente y recuentos en SOURCES.md §3.3.
+- **Artes que no son portada** (migraciones 0008 y 0009). `albums.cover_url` y
+  `artists.picture_url` guardan UNA imagen cada una: la canónica. Un disco de
+  CRV WordPress trae además contraportada, galleta de CD y libreto, y
+  escribirlos en esa columna obligaría a elegir uno y tirar el resto. Van a
+  `media.media_links` a través del tipo de claim `media_link`, cuyo puente
+  (`src/merge/media-links.ts`) obedece las mismas cuatro reglas que el de
+  relaciones: **un arte nunca crea su entidad** —si el disco no está en el
+  core, va a revisión—, el destino lo fija el claim y no la URL, un claim
+  `low` no escribe, y los claims hermanos se leen juntos. La escritura es
+  idempotente por `UNIQUE(destino, url)`.
+  El core no participa: 0008 y 0009 solo tocan `ingest`, la huella de
+  `core-catalog.json` no cambia y el diff de `pg_dump` de `public` sigue vacío
+  tras el rollback completo.
 - **Playwright solo se incorpora como adapter opcional** si una fuente lo
   exige tras verificación en F4. Verificado hoy: **ninguna fuente activa lo
   requiere**; ninguna de las 9 fuentes accesibles necesita JS.

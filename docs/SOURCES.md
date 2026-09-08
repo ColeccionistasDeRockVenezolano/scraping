@@ -169,6 +169,16 @@ Rock De Vzla, Hippito y Sus Chatarritas, RHV Blogspot)
   el mismo error de las tres correcciones anteriores: una sonda laxa contando
   líneas que parecen datos.
 
+  **Quinta corrección (2026-09-08), al escribir el adapter de artes:** de CRV
+  WordPress se decía "821 artes sobre 176 discos" y que el `alt` seguía la
+  forma `<banda> <álbum> <tipo>`. Medido con el parser: **1.020** artes
+  internas sobre **170** discos, y la convención del `alt` es más irregular —
+  el tipo aparece también DELANTE y la banda DETRÁS ("Contraportada Parte
+  Interna Misión Fantasma La Puta Eléctrica"), el índice de página va por los
+  dos lados, y hay `alt` cortados a media palabra ("Contraportada Pa"). Además
+  488 de sus 1.730 imágenes son avatares de Gravatar de quien comenta, que no
+  son artes de nada.
+
 - *Canal de las etiquetas Blogger (`entry.category`).* El feed trae las
   etiquetas del post y en dos fuentes son el dato que falta en el cuerpo:
 
@@ -292,14 +302,21 @@ Rock De Vzla, Hippito y Sus Chatarritas, RHV Blogspot)
 - *Estrategia:* WP REST `/pages` + Cheerio para el cuerpo narrativo.
   Contenido monográfico sobre punk venezolano → extracción narrativa
   (candidato legítimo a asistencia de IA acotada).
-- *Estructura dura, medida 2026-09-08:* **14 discos** embebidos como
-  reproductores de Bandcamp (`humanoderechorecords.bandcamp.com/album/...`),
-  todos del mismo sello — o sea 14 álbumes + una organización
-  (`record_label`) + el id de álbum de Bandcamp como identificador externo.
-  El resto del cuerpo sí es narrativa.
-- *Fuera de alcance:* las **1.705 imágenes** de los 12 capítulos son escaneos
-  del libro (© Rafael Uzcátegui, © Provea). No se ingieren: los hechos son
-  extraíbles, las páginas escaneadas no. Tampoco traen `figcaption`, así que
+- *Estructura dura, medida 2026-09-08 y confirmada con el adapter:* 28
+  reproductores de Bandcamp incrustados en los capítulos, **14 discos
+  distintos**, todos de `humanoderechorecords.bandcamp.com`. Cada uno lleva
+  dentro un enlace de respaldo con la convención propia de Bandcamp,
+  `<Título> by <Artista>`. **De los 14 entran 8**: los otros seis dicen "by
+  Recopilatorio", "by Recopilación" o "by Humano Derecho Records" — un
+  recopilatorio no tiene artista único y `albums.artist_id` es NOT NULL, la
+  misma decisión de modelo pendiente que con los VA de Hippito. Se emite
+  además el sello como organización (`record_label`). El resto del cuerpo es
+  narrativa.
+- *Fuera de alcance, y verificado por un test:* las **1.705 imágenes** de los
+  12 capítulos son escaneos del libro (© Rafael Uzcátegui, © Provea). No se
+  ingieren: los hechos son extraíbles, las páginas escaneadas no. El adapter
+  de esta fuente no emite **ni un solo** campo de imagen, y hay una prueba
+  que lo comprueba. Tampoco traen `figcaption`, así que
   no aportan metadatos.
 - *Confianza:* `medium`.
 
@@ -343,7 +360,7 @@ fuente con artes" era falsa— y cada una las declara por un canal distinto:
 | Rock De Vzla | 1.868 | **1.775** | la imagen que cae dentro del bloque de su ficha (97,8% de los discos) |
 | Rockzuela | 773 | **543** | primera imagen de la entrada, cuando la etiqueta `Musica` dice que es una ficha |
 | RHV Blogspot | 835 | 18 | título `BANDA: Álbum (Año)` |
-| CRV WordPress | 1.420 | 121 (+700 otras artes) | `alt` = `<banda> <álbum> <tipo>` |
+| CRV WordPress | 1.730 (488 avatares) | **163 portadas + 1.020 artes internas** | `alt` = `<banda> <álbum> <tipo>`, con el tipo por cualquiera de los dos extremos |
 
 **Sincopa es el caso más explícito de todo el archivo**: el directorio declara
 el tipo de medio sin ambigüedad y el `alt` trae la identidad (1.417 de 1.437
@@ -355,22 +372,27 @@ lo tienen), incluido el crédito del fotógrafo cuando lo hay.
   artista · `alt="Daiquirí (Photo: Emigdio Simancas)"`
 
 *Consecuencia de diseño:* `albums.cover_url` ya existe en el merge spec, así
-que la portada entra **sin migración**. `media.media_links` sólo hace falta
-para lo que no es portada: las 700 artes internas de CRV WordPress y las 520
-fotos de artista de Sincopa.
+que la portada entra **sin migración**. Lo que no es portada necesitaba un
+destino, y `media.media_links` existía desde 0002 pero ningún claim podía
+nombrarla. Las migraciones **0008 y 0009** añaden el tipo de claim
+`media_link` —sin tocar el core— y con él entran las 1.020 artes internas de
+CRV WordPress (contraportadas, galletas de CD, libretos) y las fotos de
+artista de Sincopa. Ver ARCHITECTURE.md §4.4.
 
-*Lo que emiten hoy los seis adapters* (la columna de arriba mide el crudo; lo
+*Lo que emiten hoy los ocho adapters* (la columna de arriba mide el crudo; lo
 que sigue mide los `RawRecord` reales, que se apoyan en los campos etiquetados
 del cuerpo y no sólo en el título):
 
-| adapter | discos | `cover_url` | `picture_url` |
-|---|---:|---:|---:|
-| Descargas Metal | 1.345 | **1.345** | — |
-| Rock De Vzla | 1.815 | **1.775** | — |
-| Hippito | 673 | 671 | — |
-| Rockzuela | 549 | 543 | — |
-| RHV Blogspot | 18 | 18 | — |
-| Sincopa | 2.414 | 782 | 259 |
+| adapter | discos | `cover_url` | `picture_url` | `media_link` |
+|---|---:|---:|---:|---:|
+| Descargas Metal | 1.345 | **1.345** | — | — |
+| Rock De Vzla | 1.815 | **1.775** | — | — |
+| Hippito | 673 | 671 | — | — |
+| Rockzuela | 549 | 543 | — | — |
+| CRV WordPress | 170 | 163 | — | **1.020** |
+| RHV Blogspot | 18 | 18 | — | — |
+| El Punk En Venezuela | 8 | — | — | — |
+| Sincopa | 2.414 | 782 | 259 | — |
 
 Sincopa emite muchos más discos que portadas porque su discografía también se
 lee de la tabla de la ficha de artista, que no lleva imagen: la portada sólo

@@ -1,19 +1,23 @@
 // Muestra candidatos normalizados de fixtures locales; no usa red ni base de datos.
 import { readFile } from "node:fs/promises";
 import path from "node:path";
+import { load } from "cheerio";
 import { adapterFor } from "../src/adapters/registry.js";
 import { normalizeRecord } from "../src/normalization/claims.js";
 import type { StoredPage } from "../src/adapters/contracts.js";
+// Qué fixture representa a cada fuente vive en un solo sitio: duplicarlo aquí
+// ya rompió una vez, cuando CRV WordPress pasó de JSON a HTML.
+import { ADAPTER_SLUGS, FIXTURE_DIR, fixturesFor, siteTypeFor } from "../test/support/adapter-fixtures.js";
 
-const fixtureDir = path.join(process.cwd(), "test", "fixtures", "adapters");
-const slugs = ["descargas-metal-venezolano", "rockzuela", "rock-de-vzla", "hippito-y-sus-chatarritas", "rhv-blogspot", "rock-hecho-en-venezuela", "sincopa", "coleccionistas-de-rock-venezolano", "el-punk-en-venezuela"] as const;
-for (const slug of slugs) {
-  const adapter = adapterFor({ slug, siteType: slug === "sincopa" ? "database" : "website" });
+for (const slug of ADAPTER_SLUGS) {
+  const adapter = adapterFor({ slug, siteType: siteTypeFor(slug) });
   if (!adapter) throw new Error(`adapter faltante: ${slug}`);
-  const ext = slug === "sincopa" ? "html" : "json";
-  const body = await readFile(path.join(fixtureDir, `${slug}.${ext}`), "utf8");
-  const url = slug === "sincopa" ? "https://fixture.invalid/artist_rock/banda_fixture.htm" : `https://fixture.invalid/${slug}`;
-  const page: StoredPage = { url, kind: ext === "json" ? "json" : "html", rawPageId: 1, body };
-  const claims = (adapter.extractSnapshot?.(page) ?? adapter.extract((await import("cheerio")).load(body), page.url)).flatMap(normalizeRecord);
-  console.log(JSON.stringify({ source: slug, candidates: claims }, null, 2));
+  const candidates = [];
+  for (const fixture of fixturesFor(slug)) {
+    const body = await readFile(path.join(FIXTURE_DIR, fixture.file), "utf8");
+    const page: StoredPage = { url: fixture.url, kind: fixture.kind, rawPageId: 1, body };
+    const records = adapter.extractSnapshot?.(page) ?? adapter.extract(load(body), page.url);
+    candidates.push(...records.flatMap(normalizeRecord));
+  }
+  console.log(JSON.stringify({ source: slug, candidates }, null, 2));
 }
