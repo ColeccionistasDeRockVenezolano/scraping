@@ -28,8 +28,12 @@
 > (core + 0001-0004 + rollback, diff de `pg_dump` vacío) **y** ejercita el
 > schema Drizzle real (inserts/joins a través de core+ingest+media),
 > contra un contenedor desechable levantado por `test/support/pg-container.ts`.
-> **Falta:** `sources` sembradas desde el XLSX, `fetcher`/`cache`/raw storage
-> (F1), y el resto de comandos de CLI (F1+).
+> **F0 cerrado.** **F1 completo también:** `ingest.sources` sembrado (14
+> filas), `fetcher`+`cache`+storage crudo implementados y **verificados en
+> vivo** contra `rhv-blogspot` (264 entradas reales, TTL confirmado con 0
+> peticiones nuevas en la re-descarga) — ver detalle en la sección F1 más
+> abajo. **Falta:** el resto de comandos de CLI de F2+ (`seed:import-yt`,
+> `yt:*`, `merge:run`, `review:*`, `genre:*`, `export:json`).
 >
 > Nota de entorno: la máquina no tenía Node 22 en el PATH por defecto (solo
 > Node 20 vía `nodesource`), pero sí tenía un Node 22.23.1 ya instalado por
@@ -90,16 +94,40 @@ y `tests/lib_pg.sh`).
 fuente autorizada sin interpretarlo.
 
 Entregables:
-- Seed de `ingest.sources` desde `Links for Data Scrapping.xlsx` (11 filas,
-  `enabled=false` salvo aprobación) + `youtube_data_api` + seeds internos.
-- `fetcher` (robots, cortesía, backoff, TTL) y `cache`.
-- Storage crudo en `data/raw/` + `ingest.raw_pages`.
-- CLI `sources:list` / `sources:add` (crea `new_source` en review, nunca
-  habilita directo) / `scrape --observe` (solo descarga, sin extracción).
+- ✅ *Ya hecho:* Seed de `ingest.sources` (`src/ingest/sources.ts`,
+  `npm run cli -- sources:seed`) desde `Links for Data Scrapping.xlsx`
+  (lee URL/Name/Type reales del archivo; el enriquecimiento
+  access_strategy/trust_level/enabled inicial es exactamente el ya
+  auditado en SOURCES.md §3, no se re-deriva) + `youtube_data_api` + los
+  2 XLSX como seeds internos = **14 filas** (10 `enabled=true`: 9 del XLSX +
+  YouTube Data API; Deska y Hemeroteka `enabled=false` por lo ya
+  confirmado en SOURCES.md §3.2). Idempotente por `slug`: un re-seed nunca
+  pisa `enabled`/`trust_level` si la fila ya existía (protege un cambio
+  manual posterior, p. ej. Deska reactivada a mano).
+- ✅ *Ya hecho:* `fetcher` (`src/fetcher/http.ts`): robots.txt real
+  (`src/fetcher/robots.ts`, algoritmo Allow/Disallow por regla más
+  específica), cortesía (concurrencia=1 + demora mínima por dominio),
+  timeout, reintento con backoff exponencial (no reintenta 4xx salvo 429).
+- ✅ *Ya hecho:* `cache` (`src/cache/raw-pages.ts`) sobre `ingest.raw_pages`,
+  respetando la unicidad real de la tabla (`UNIQUE(source_id, sha256)`,
+  dedupe por CONTENIDO, no por URL — documentado en el propio módulo) y
+  TTL configurable (`CRAWL_CACHE_TTL_DAYS`).
+- ✅ *Ya hecho:* Storage crudo en `data/raw/<source-slug>/<sha256>.<ext>`
+  (+ `.headers.json` adyacente) vía `src/storage/raw.ts`.
+- ✅ *Ya hecho:* CLI `sources:list` / `sources:seed` / `sources:add`
+  (crea `new_source` en `review_queue` con `enabled=false`, nunca habilita
+  directo — verificado) / `scrape <slug> --observe` (solo descarga +
+  cachea, sin extracción; implementado para `site_type=blogspot` vía el
+  feed nativo paginado; el resto de `site_type` esperan sus adapters en F4).
 
-Criterios de salida: barrido de observación completo sobre 1 fuente Blogger
-de prueba; re-descarga dentro del TTL = 0 peticiones nuevas (cache
-verificada).
+Criterios de salida: ✅ **verificado en vivo** contra `rhv-blogspot`
+(RHV Blogspot, la fuente Blogger más pequeña) — barrido de observación
+completo: 11 páginas del feed, **264 entradas** (coincide exacto con
+SOURCES.md §3.1); re-descarga dentro del TTL: **0 peticiones nuevas**, las
+11 páginas servidas 100% desde caché. Automatizado además en
+`test/contract/fetcher-observe.test.ts` contra un servidor Blogger simulado
+(hermético, sin depender del sitio real en CI), incluyendo robots.txt real
+con Disallow y el caso de dedupe por contenido.
 
 ---
 

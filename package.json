@@ -2,7 +2,7 @@
   "name": "crv-backend",
   "version": "0.1.0",
   "private": true,
-  "description": "Coleccionistas de Rock Venezolano \u2014 backend (ingesta, merge, API, CLI)",
+  "description": "Coleccionistas de Rock Venezolano — backend (ingesta, merge, API, CLI)",
   "type": "module",
   "engines": {
     "node": ">=22.0.0"
@@ -24,6 +24,7 @@
     "cheerio": "^1.0.0",
     "dotenv": "^16.4.5",
     "drizzle-orm": "^0.45.2",
+    "exceljs": "^4.4.0",
     "fastify": "^5.1.0",
     "pg": "^8.13.1",
     "pino": "^9.5.0",

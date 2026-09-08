@@ -9,7 +9,7 @@
 //      leer a través de core+ingest+media con FKs y enums reales;
 //   5. el rollback completo (down) deja el diff de `public` vacío también.
 import { afterAll, beforeAll, describe, expect, it } from "vitest";
-import { execFile, spawn } from "node:child_process";
+import { execFile } from "node:child_process";
 import { promisify } from "node:util";
 import { readFile } from "node:fs/promises";
 import { createHash } from "node:crypto";
@@ -17,6 +17,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { eq } from "drizzle-orm";
 import { startPgContainer, type PgContainer } from "../support/pg-container.js";
+import { applyCore } from "../support/apply-core.js";
 import { resetEnvCache } from "../../src/config/env.js";
 import { closeDb, getDb, getPool } from "../../src/db/client.js";
 import { migrateUp, migrateDownAll } from "../../src/db/migrate.js";
@@ -29,26 +30,6 @@ const ROOT = path.resolve(__dirname, "..", "..");
 function useDatabaseUrl(url: string): void {
   process.env["DATABASE_URL"] = url;
   resetEnvCache();
-}
-
-async function applyCore(containerName: string): Promise<void> {
-  const sql = await readFile(path.join(ROOT, "crv_simple_v1.sql"), "utf8");
-  // execFile (async) no soporta `input` para stdin (a diferencia de
-  // execFileSync); se necesita spawn + escribir/cerrar stdin explícitamente.
-  await new Promise<void>((resolve, reject) => {
-    const child = spawn("docker", [
-      "exec", "-i", containerName, "psql", "-U", "postgres", "-d", "postgres",
-      "-v", "ON_ERROR_STOP=1", "-q", "-f", "-",
-    ]);
-    let stderr = "";
-    child.stderr.on("data", (chunk: Buffer) => { stderr += chunk.toString(); });
-    child.on("error", reject);
-    child.on("close", (code) => {
-      if (code === 0) resolve();
-      else reject(new Error(`psql -f - salió con código ${code}:\n${stderr}`));
-    });
-    child.stdin.end(sql);
-  });
 }
 
 async function pgDumpPublic(containerName: string): Promise<string> {
