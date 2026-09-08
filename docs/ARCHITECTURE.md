@@ -119,6 +119,17 @@ las tres fuentes restantes el 2026-09-08 (SOURCES.md §3):
   inventario. La raíz HTML solo se añade cuando forma parte expresa de la
   frontera (RHV); todo crudo se conserva como evidencia.
 - Todo adapter emite `RawRecord` (JSON crudo tipado con Zod) → normalización.
+- **Artes.** `contentImages()` (en `adapters/shared.ts`) separa imagen de
+  adorno por descarte explícito —iconos sociales, plantilla, `data:` URIs y
+  anchos declarados < 100px— y no decide qué representa cada imagen: eso lo
+  dice el canal de cada fuente. Sincopa lo declara en la **ruta**
+  (`covers*/` → portada, `photos*/|pictures/|artist_photo*/` → foto de
+  artista); los blogs, en el **orden** (la primera imagen de contenido de una
+  ficha de disco es su portada). Aterriza en `albums.cover_url` y
+  `artists.picture_url`, columnas que ya existían: **ninguna migración**.
+  Cuando el servidor declara el tamaño servido (`/s400/` de Blogger) eso
+  decide sobre el nombre del archivo, que en un blog es el que tuviera quien
+  la subió. Detalle por fuente y recuentos en SOURCES.md §3.3.
 - **Playwright solo se incorpora como adapter opcional** si una fuente lo
   exige tras verificación en F4. Verificado hoy: **ninguna fuente activa lo
   requiere**; ninguna de las 9 fuentes accesibles necesita JS.
@@ -219,6 +230,26 @@ entidades implicadas). 16 kinds realizados: de 0003 `possible_duplicate`,
 `new_source`, `low_confidence`, `ai_biography`, `ai_entity_resolution`.
 Consumida por CLI (`review:list|approve|dismiss`) y por la futura UI (F8).
 
+**Aprobación por lotes** (`src/review/batch.ts`). La cola guarda un ítem por
+claim y se decide por entidad, pero un barrido completo produce del orden de
+10.000 entidades candidatas: promoverlas de una en una no llena el catálogo,
+llena la cola. `runBatch` deja que la persona exprese **una** decisión sobre
+un conjunto (por tipo, por fuente, con techo) sin relajar ninguna guarda:
+sigue llamando a `approveEntity`, que re-ejecuta el merge con
+`createdBy="human"`. Tres invariantes propias del lote:
+
+1. **Orden de dependencia** (`BATCH_ORDER`): organización → artista → persona
+   → álbum → pista → membresía → crédito de disco → crédito de pista.
+   `albums.artist_id` es NOT NULL y los puentes necesitan sus dos extremos,
+   así que aprobar por orden de llegada dejaría discos sin artista.
+2. **Trazabilidad**: el lote es una fila real en `ingest.scrape_runs` (kind
+   `merge_run`) y su id encabeza la nota de resolución de cada revisión que
+   cierra, de modo que "qué aprobó este lote" es una consulta.
+3. **Aislamiento del fallo**: una entidad rota no aborta el resto; se acumula
+   en `errors` y el run termina `partial`.
+
+El CLI previsualiza por defecto y sólo escribe con `--confirm` y `--note`.
+
 ### 4.11 `deepseek gateway`
 Único punto de contacto con la IA. Contrato estricto (Zod in/out), registro
 en `ingest.ai_runs` con `prompt_hash` (caché: mismo prompt = mismo resultado
@@ -243,6 +274,20 @@ Sin API key el sistema y toda la suite funcionan con rutas deterministas/mock.
   claims de disponibilidad hacia `albums.youtube_status` solo cuando el video
   tiene enlace primario a un álbum. Hasta 50 IDs por llamada: los 520 IDs
   conocidos se cubren en ~11 llamadas.
+- `youtube seed-claims` (`src/youtube/seed-claims.ts`): la hoja maestra **no
+  es una lista de videos, es una discografía escrita a mano** (606 filas →
+  258 artistas, 570 discos con año y tipo). `importYouTubeMasterSheet` la
+  deja en `ingest.seed_uploads` y abre una revisión por cada release sin
+  álbum canónico, así que el dato mejor documentado del archivo vivía como
+  JSON en `review_queue` sin llegar nunca al core. Este comando lo mete por
+  la puerta normal: cada fila se convierte en `RawRecord` y pasa por
+  adapter → normalización → claim → ER → merge. Sale como **candidato**
+  (`confidence: "low"`, `createdBy: "system"`) aunque la fuente sea `high`:
+  quien escribió la hoja es una persona, pero quien la lee aquí es un
+  programa, y la decisión humana se expresa después aprobando el lote. Un
+  `media` (videoclip, concierto, documental) no produce álbum; un tipo
+  compuesto ("Solo Artist, Studio Album") sí produce álbum pero **sin**
+  `album_type`, porque lo ambiguo es el tipo, no la existencia del disco.
 - `yt:link`: vinculación video→álbum existente (match artista+título+año)
   escribiendo en `media.video_albums`; las propuestas van a revisión.
   **Nunca crea álbumes.**

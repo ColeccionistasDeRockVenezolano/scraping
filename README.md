@@ -72,7 +72,11 @@ sin sobrescrituras contradictorias silenciosas, y su puente
 (`src/merge/relations.ts`) materializa membresías y créditos con la tabla
 destino fijada por el tipo de claim, nunca por el rol; `src/conflicts/` y
 `src/review/` conservan el desacuerdo, y `src/review/approval.ts` es la
-promoción por entidad que una persona ejecuta desde `crv review approve`. DeepSeek está aislado en `src/ai/`: es
+promoción por entidad que una persona ejecuta desde `crv review approve`;
+`src/review/batch.ts` deja expresar esa misma decisión sobre un conjunto
+(`crv review approve-batch --source=<slug> --note="..." --confirm`) sin
+relajar ninguna guarda, respetando el orden de dependencia del core y
+dejando el lote registrado como un `merge_run`. DeepSeek está aislado en `src/ai/`: es
 opcional, devuelve propuestas JSON validadas con Zod y nunca ejecuta SQL ni
 merges. Las biografías generadas son artefactos editoriales separados y
 citan los claims aceptados que las sostienen.

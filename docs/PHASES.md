@@ -307,9 +307,26 @@ Las **dos fuentes Blogger ya existen**: Descargas Metal Venezolano (11.313
 registros: 1.338 artistas con ciudad de origen, 1.345 álbumes con año y
 género, 8.630 pistas) y Hippito y Sus Chatarritas (14.868 registros, ficha en
 el título). Rock De Vzla y Rockzuela tienen estructura explícita medida y
-aún no tienen adapter; RHV Blogspot sí es prosa — ver SOURCES.md §3.2.
-Falta ejecutar el barrido completo contra el core y verificar el re-run
+aún no tienen adapter, igual que RHV Blogspot, cuyo título usa dos puntos
+(`BANDA: Álbum (Año)`) en vez de guion — ver SOURCES.md §3.2.
+**El barrido completo estaba bloqueado por la ergonomía de la revisión, no
+por los adapters.** 2.962 claims ingeridos habían producido 406 entidades
+candidatas y el core tenía 40 discos: la promoción era de una en una por CLI,
+y extrapolando a los 73.789 registros que las tres fuentes ya saben extraer
+salen ~10.000 decisiones individuales. `crv review approve-batch` (ver
+ARCHITECTURE.md §4.10) convierte eso en una decisión por conjunto sin relajar
+ninguna guarda; con él, falta ejecutar el barrido y verificar el re-run
 idéntico.
+
+La **hoja maestra de YouTube** ya está emitida como claims (`crv youtube
+seed-claims`): 606 filas → 258 artistas y 570 discos con año y tipo, 2.942
+claims candidatos, y la re-corrida reusa los 2.942 sin insertar ninguno —el
+criterio de idempotencia de esta fase, verificado sobre la fuente de mayor
+confianza del archivo.
+
+Las **portadas** entran por `albums.cover_url` sin migración: **1.345 de
+1.345** discos de Descargas Metal, 671 de 673 de Hippito y 782 de Sincopa
+(+259 fotos de artista en `artists.picture_url`).
 
 ---
 

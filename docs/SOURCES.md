@@ -135,14 +135,29 @@ Rock De Vzla, Hippito y Sus Chatarritas, RHV Blogspot)
   | Hippito y Sus Chatarritas | 1.063 | ficha completa en el **título** (`Artista - Título (Sello CAT / País Año)`) — 973 de 1.063; compositores en gris en el cuerpo | 14.868 |
   | Rock De Vzla | 1.113 | sin título; formación (`La banda estuvo conformada por:`) y tracklist en el cuerpo — 1.012 entradas con datos, **1.028 membresías**, 16.171 pistas | 0 (sin adapter) |
   | Rockzuela | 1.127 | título `Banda - Álbum (Año)` en 492; formación explícita en 27; tracklist en 273 — 290 entradas con datos | 0 (sin adapter) |
-  | RHV Blogspot | 264 | prosa editorial; solo 12 entradas con algo aprovechable | 0 |
+  | RHV Blogspot | 264 | título `BANDA: Álbum (Año)` — 44 con esa forma, 28 con año; 8 tracklists (121 pistas); 835 imágenes en 262 entradas | 0 (sin adapter) |
 
   **Corrección (2026-09-08):** una medición anterior daba 0 a Rockzuela y Rock
   De Vzla y las declaraba "prosa". Era un error de la sonda, no de las
   fuentes: buscaba las etiquetas de Descargas Metal (`Banda:`) y recorría solo
   bloques `<div>/<p>/<li>`, mientras que esos posts separan sus líneas solo
-  con `<br>`. Ambas tienen estructura explícita y datos abundantes. La única
-  Blogspot que sí es prosa es RHV Blogspot.
+  con `<br>`. Ambas tienen estructura explícita y datos abundantes.
+
+  **Segunda corrección (2026-09-08):** la misma medición declaraba RHV
+  Blogspot "prosa editorial, solo 12 entradas aprovechables". También era la
+  sonda: RHV separa banda y disco con **dos puntos** (`PROARESIS: Propios Y
+  Extraños (2022)`), no con guion, y el patrón `Banda - Álbum` no lo veía.
+  Ninguna de las cinco Blogspot es prosa inextraíble.
+
+- *Canal de las etiquetas Blogger (`entry.category`).* El feed trae las
+  etiquetas del post y en dos fuentes son el dato que falta en el cuerpo:
+
+  | fuente | etiquetas/post | qué son | uso |
+  |---|---:|---|---|
+  | Rock De Vzla | 1,0 | **el nombre de la banda** (1.110 de 1.113 con etiqueta única) | resuelve el artista, que el título no da: 1.111 entradas tienen título vacío |
+  | Rockzuela | 3,1 | banda + vocabulario de sección (`Rock Nacional`, `Videos`) | banda = la etiqueta fuera del vocabulario de sección |
+  | Descargas Metal | — | géneros (`Technical Death Metal`) | corrobora el campo `Género:` ya extraído |
+  | Hippito, RHV | — | secciones (`Sólo Hits`, `reseñas`) | sin valor |
 - *Fuera de alcance en Hippito:* las 350 entradas `VA - ...` (recopilatorios).
   El core exige `albums.artist_id NOT NULL` y un recopilatorio no tiene un
   artista único; inventar una entidad "Various Artists" es una decisión de
@@ -221,6 +236,24 @@ Rock De Vzla, Hippito y Sus Chatarritas, RHV Blogspot)
   → **92 posts** (`X-WP-Total`).
 - *Estrategia:* adapter `wordpressCom` sobre la API pública (JSON con
   contenido, fecha, categorías); HTML crudo como evidencia.
+- *Estructura real (medido 2026-09-08 sobre los 94 HTML guardados).* No es un
+  blog de reseñas: es un **archivo de escaneos**. La banda es el título del
+  post y el `alt` de cada imagen sigue la convención `<banda> <álbum> <tipo>`
+  (`"Billy Se Fue Todo No Es Suficiente Contraportada"`), así que quitando el
+  prefijo de la banda quedan disco y tipo de arte sin inferir nada:
+
+  | tipo de arte | imágenes |
+  |---|---:|
+  | parte interna | 454 |
+  | portada | 121 |
+  | CD (galleta) | 121 |
+  | contraportada | 119 |
+  | cassette | 1 |
+
+  **821 artes clasificadas sobre 176 discos**, de 1.420 imágenes en 92 posts.
+  Es la única fuente con contraportadas, partes internas y galletas de CD, y
+  la única que exige `media.media_links`: 700 de esas 821 no son portada y no
+  caben en `albums.cover_url`.
 - *Confianza:* `medium`. Es el blog del propio proyecto, de ahí su relevancia
   para `albums.wordpress_url` / `wordpress_status` en el core.
 
@@ -238,6 +271,15 @@ Rock De Vzla, Hippito y Sus Chatarritas, RHV Blogspot)
 - *Estrategia:* WP REST `/pages` + Cheerio para el cuerpo narrativo.
   Contenido monográfico sobre punk venezolano → extracción narrativa
   (candidato legítimo a asistencia de IA acotada).
+- *Estructura dura, medida 2026-09-08:* **14 discos** embebidos como
+  reproductores de Bandcamp (`humanoderechorecords.bandcamp.com/album/...`),
+  todos del mismo sello — o sea 14 álbumes + una organización
+  (`record_label`) + el id de álbum de Bandcamp como identificador externo.
+  El resto del cuerpo sí es narrativa.
+- *Fuera de alcance:* las **1.705 imágenes** de los 12 capítulos son escaneos
+  del libro (© Rafael Uzcátegui, © Provea). No se ingieren: los hechos son
+  extraíbles, las páginas escaneadas no. Tampoco traen `figcaption`, así que
+  no aportan metadatos.
 - *Confianza:* `medium`.
 
 **10. Deska / Rock & Pop Venezuela Merch Store**
@@ -266,7 +308,51 @@ Rock De Vzla, Hippito y Sus Chatarritas, RHV Blogspot)
   `raw_pages`, claims ni entidades; su interpretación queda pendiente.
 - *Confianza:* `low`.
 
-### 3.3 Qué NO se asume
+### 3.3 Artes de disco: qué fuente tiene qué
+
+Medido el 2026-09-08 sobre todo el crudo guardado. **Casi todas las fuentes
+traen portadas** —una afirmación anterior de que CRV WordPress era "la única
+fuente con artes" era falsa— y cada una las declara por un canal distinto:
+
+| fuente | imágenes de contenido | portadas atribuibles a un disco | canal que lo dice |
+|---|---:|---:|---|
+| Descargas Metal | 1.354 | 1.275 | título `Banda - Álbum (Año)` de la entrada |
+| Sincopa | 1.437 | 917 + 520 fotos de artista | **la ruta del archivo** |
+| Hippito | 1.575 | 987 | título de la entrada |
+| Rock De Vzla | 1.868 | 661 | etiqueta Blogger = banda; emparejable sólo cuando nº imágenes == nº líneas `Título (Año)` |
+| Rockzuela | 773 | 369 | título de la entrada |
+| RHV Blogspot | 835 | 28 | título `BANDA: Álbum (Año)` |
+| CRV WordPress | 1.420 | 121 (+700 otras artes) | `alt` = `<banda> <álbum> <tipo>` |
+
+**Sincopa es el caso más explícito de todo el archivo**: el directorio declara
+el tipo de medio sin ambigüedad y el `alt` trae la identidad (1.417 de 1.437
+lo tienen), incluido el crédito del fotógrafo cuando lo hay.
+
+- `covers160/ coversbig/ covers_big/ cover_latin16/ covers160cl/ covers100cl/
+  covers10/` → portada · `alt="Culto Oculto - Puticlub"`
+- `photos/ photos1..5/ pictures/ artist_photo(s)/ photos_class/` → foto de
+  artista · `alt="Daiquirí (Photo: Emigdio Simancas)"`
+
+*Consecuencia de diseño:* `albums.cover_url` ya existe en el merge spec, así
+que la portada entra **sin migración**. `media.media_links` sólo hace falta
+para lo que no es portada: las 700 artes internas de CRV WordPress y las 520
+fotos de artista de Sincopa.
+
+*Lo que emiten hoy los tres adapters* (la columna de arriba mide el crudo; lo
+que sigue mide los `RawRecord` reales, que se apoyan en los campos etiquetados
+del cuerpo y no sólo en el título):
+
+| adapter | discos | `cover_url` | `picture_url` |
+|---|---:|---:|---:|
+| Descargas Metal | 1.345 | **1.345** | — |
+| Hippito | 673 | 671 | — |
+| Sincopa | 2.414 | 782 | 259 |
+
+Sincopa emite muchos más discos que portadas porque su discografía también se
+lee de la tabla de la ficha de artista, que no lleva imagen: la portada sólo
+existe en la ficha del disco.
+
+### 3.4 Qué NO se asume
 
 - No se asume la estructura interna de los posts de Blogger ni la calidad de
   sus tracklists: se caracteriza en F4 sobre el crudo ya almacenado.
@@ -279,7 +365,7 @@ Rock De Vzla, Hippito y Sus Chatarritas, RHV Blogspot)
   crudo, sin claims); la extracción se activa por fuente tras validar su
   estructura real.
 
-### 3.4 Adapters de extracción (fase actual)
+### 3.5 Adapters de extracción (fase actual)
 
 El registro cubre los once slugs del XLSX: nueve adapters automáticos
 funcionales (los cinco Blogspot, Rock Hecho En Venezuela, Sincopa,
@@ -326,7 +412,7 @@ Estos casos confirman que la política de conservación de ambas afirmaciones
 
 | Fuente interna | Confianza | Uso |
 |---|---|---|
-| `yt_master_seed` (`YT Master Spreadsheet.xlsx`) | high | Seed del catálogo audiovisual (606 filas). Mapeo en DATA_MODEL.md §5. |
+| `yt_master_seed` (`YT Master Spreadsheet.xlsx`) | high | **Discografía curada por el propietario**, no una lista de videos: 606 filas → 258 artistas, 598 discos, 587 con año y 20 tipos de álbum que mapean casi 1:1 al enum `album_type`. 86 filas ni siquiera tienen URL. Mapeo en DATA_MODEL.md §5. |
 | `links_seed` (`Links for Data Scrapping.xlsx`) | high | Seed de `ingest.sources` (11 filas; columnas reales URL, Name, Type). |
 
 Los XLSX se importan una vez por versión (hash del archivo registrado en
