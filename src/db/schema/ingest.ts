@@ -10,6 +10,7 @@ import {
   boolean,
   integer,
   jsonb,
+  real,
   smallint,
   text,
   timestamp,
@@ -71,6 +72,7 @@ export const rawPages = ingest.table("raw_pages", {
   storedPath: text("stored_path").notNull(),
   fetchedAt: timestamp("fetched_at", { withTimezone: true }).notNull().defaultNow(),
   headers: jsonb("headers"),
+  runId: bigint("run_id", { mode: "number" }).references(() => scrapeRuns.id, { onDelete: "set null" }),
   createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
 });
 
@@ -110,6 +112,9 @@ export const seedUploads = ingest.table("seed_uploads", {
   videoId: varchar("video_id", { length: 11 }),
   rowNumber: smallint("row_number"),
   rowHash: varchar("row_hash", { length: 64 }).notNull(),
+  contentKind: varchar("content_kind", { length: 12 }),
+  normalizedType: varchar("normalized_type", { length: 40 }),
+  classificationReason: text("classification_reason"),
   runId: bigint("run_id", { mode: "number" }).references(() => scrapeRuns.id, { onDelete: "set null" }),
   importedAt: timestamp("imported_at", { withTimezone: true }).notNull().defaultNow(),
 });
@@ -152,6 +157,9 @@ export const claims = ingest.table("claims", {
   notes: text("notes"),
   createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
   updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),
+  identityRaw: text("identity_raw"),
+  identityKey: text("identity_key"),
+  identitySecondaryKey: text("identity_secondary_key"),
 });
 
 export const claimEvidence = ingest.table("claim_evidence", {
@@ -308,6 +316,70 @@ export const mergeAudit = ingest.table("merge_audit", {
 
 export const mergeAuditClaims = ingest.table("merge_audit_claims", {
   mergeAuditId: bigint("merge_audit_id", { mode: "number" }).notNull().references(() => mergeAudit.id, { onDelete: "cascade" }),
+  claimId: bigint("claim_id", { mode: "number" }).notNull().references(() => claims.id, { onDelete: "restrict" }),
+});
+
+// --- Tablas (0007): decisiones ER explicables + gateway IA + narrativa ---
+export const aiRuns = ingest.table("ai_runs", {
+  id: bigint("id", { mode: "number" }).primaryKey().generatedAlwaysAsIdentity(),
+  promptHash: varchar("prompt_hash", { length: 64 }).notNull(),
+  taskKind: varchar("task_kind", { length: 40 }).notNull(),
+  model: text("model").notNull(),
+  schemaVersion: varchar("schema_version", { length: 30 }).notNull(),
+  status: varchar("status", { length: 12 }).notNull(),
+  inputSummary: jsonb("input_summary").notNull(),
+  outputSummary: jsonb("output_summary"),
+  requestPayload: jsonb("request_payload").notNull(),
+  responsePayload: jsonb("response_payload"),
+  rawResponse: text("raw_response"),
+  tokensIn: integer("tokens_in"),
+  tokensOut: integer("tokens_out"),
+  errorMessage: text("error_message"),
+  createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+});
+
+export const entityResolutionDecisions = ingest.table("entity_resolution_decisions", {
+  id: bigint("id", { mode: "number" }).primaryKey().generatedAlwaysAsIdentity(),
+  decisionHash: varchar("decision_hash", { length: 64 }).notNull(),
+  runId: bigint("run_id", { mode: "number" }).references(() => scrapeRuns.id, { onDelete: "set null" }),
+  claimId: bigint("claim_id", { mode: "number" }).references(() => claims.id, { onDelete: "set null" }),
+  aiRunId: bigint("ai_run_id", { mode: "number" }).references(() => aiRuns.id, { onDelete: "set null" }),
+  entityKind: varchar("entity_kind", { length: 20 }).notNull(),
+  artistId: bigint("artist_id", { mode: "number" }).references(() => artists.id, { onDelete: "set null" }),
+  personId: bigint("person_id", { mode: "number" }).references(() => persons.id, { onDelete: "set null" }),
+  albumId: bigint("album_id", { mode: "number" }).references(() => albums.id, { onDelete: "set null" }),
+  trackId: bigint("track_id", { mode: "number" }).references(() => tracks.id, { onDelete: "set null" }),
+  organizationId: bigint("organization_id", { mode: "number" }).references(() => organizations.id, { onDelete: "set null" }),
+  inputNameOriginal: text("input_name_original").notNull(),
+  inputNameNormalized: text("input_name_normalized").notNull(),
+  inputContext: jsonb("input_context").notNull(),
+  score: real("score").notNull(),
+  action: varchar("action", { length: 20 }).notNull(),
+  features: jsonb("features").notNull(),
+  candidates: jsonb("candidates").notNull(),
+  thresholds: jsonb("thresholds").notNull(),
+  explanation: text("explanation").notNull(),
+  decidedBy: varchar("decided_by", { length: 20 }).notNull(),
+  createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+});
+
+export const aiBiographies = ingest.table("ai_biographies", {
+  id: bigint("id", { mode: "number" }).primaryKey().generatedAlwaysAsIdentity(),
+  entityKind: varchar("entity_kind", { length: 12 }).notNull(),
+  artistId: bigint("artist_id", { mode: "number" }).references(() => artists.id, { onDelete: "cascade" }),
+  personId: bigint("person_id", { mode: "number" }).references(() => persons.id, { onDelete: "cascade" }),
+  aiRunId: bigint("ai_run_id", { mode: "number" }).notNull().references(() => aiRuns.id, { onDelete: "restrict" }),
+  body: text("body").notNull(),
+  factsSnapshot: jsonb("facts_snapshot").notNull(),
+  model: text("model").notNull(),
+  promptVersion: varchar("prompt_version", { length: 30 }).notNull(),
+  status: varchar("status", { length: 12 }).notNull().default("draft"),
+  reviewQueueId: bigint("review_queue_id", { mode: "number" }).references(() => reviewQueue.id, { onDelete: "set null" }),
+  createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+});
+
+export const aiBiographyClaims = ingest.table("ai_biography_claims", {
+  biographyId: bigint("biography_id", { mode: "number" }).notNull().references(() => aiBiographies.id, { onDelete: "cascade" }),
   claimId: bigint("claim_id", { mode: "number" }).notNull().references(() => claims.id, { onDelete: "restrict" }),
 });
 

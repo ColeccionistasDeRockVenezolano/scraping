@@ -1,7 +1,7 @@
 // CRV · Test de contrato: puerto a Vitest de tests/run_all.sh (ARCH §7,
 // PHASES F0). Contra un PostgreSQL 16 desechable, en un solo run:
 //   1. el core (crv_simple_v1.sql) se aplica verbatim y el hash coincide;
-//   2. las migraciones 0001-0004 se aplican vía el runner TS
+//   2. las migraciones 0001-0007 se aplican vía el runner TS
 //      (src/db/migrate.ts), 2 veces (idempotencia);
 //   3. el diff de `pg_dump --schema=public --schema-only` antes/después de
 //      migrar es VACÍO — el core no fue tocado;
@@ -76,10 +76,11 @@ describe("contrato del core + migraciones (Drizzle/TS)", () => {
     (globalThis as { __crvBeforeSnapshot?: string }).__crvBeforeSnapshot = snapshot;
   });
 
-  it("aplica 0001-0004 vía el runner TS (2 pasadas, la 2ª es no-op)", async () => {
+  it("aplica 0001-0007 vía el runner TS (2 pasadas, la 2ª es no-op)", async () => {
     const first = await migrateUp();
     expect(first.applied).toEqual([
       "0001_ingest_core", "0002_media", "0003_ingest_claims_identity", "0004_review_kinds",
+      "0005_raw_pages_run", "0006_youtube_pipeline", "0007_entity_resolution_ai",
     ]);
     const second = await migrateUp();
     expect(second.applied).toEqual([]);
@@ -196,7 +197,7 @@ describe("contrato del core + migraciones (Drizzle/TS)", () => {
 
     const result = await migrateDownAll();
     expect(result.reverted).toEqual([
-      "0004_review_kinds", "0003_ingest_claims_identity", "0002_media", "0001_ingest_core",
+      "0007_entity_resolution_ai", "0006_youtube_pipeline", "0005_raw_pages_run", "0004_review_kinds", "0003_ingest_claims_identity", "0002_media", "0001_ingest_core",
     ]);
 
     const { rows } = await pool.query<{ nspname: string }>(

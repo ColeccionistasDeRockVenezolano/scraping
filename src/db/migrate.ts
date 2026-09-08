@@ -4,7 +4,7 @@
 // este módulo NO genera SQL (no hay drizzle-kit push/generate aquí), solo
 // aplica esos archivos en orden y registra qué versión quedó aplicada.
 //
-// Por qué no drizzle-kit: 0001-0004 ya están íntegramente probadas contra
+// Por qué no drizzle-kit: 0001-0007 están íntegramente probadas contra
 // PostgreSQL 16 (tests/run_all.sh, tests/test_0004_review_kinds.sh, diff de
 // pg_dump vacío). Regenerarlas desde drizzle-kit introduciría una segunda
 // fuente de verdad sin ese mismo nivel de prueba. Ver ARCHITECTURE.md §1.
@@ -14,6 +14,7 @@ import { fileURLToPath } from "node:url";
 import type { Pool } from "pg";
 import { moduleLogger } from "../logger/index.js";
 import { getPool, closeDb } from "./client.js";
+import { assertSupportedNode } from "../config/runtime.js";
 
 const log = moduleLogger("db:migrate");
 
@@ -105,6 +106,7 @@ export async function migrateDownAll(migrationsDir = DEFAULT_MIGRATIONS_DIR): Pr
 // Permite `tsx src/db/migrate.ts` / `npm run db:migrate` como CLI directo.
 const isMain = process.argv[1] === fileURLToPath(import.meta.url);
 if (isMain) {
+  assertSupportedNode();
   const mode = process.argv[2] === "down" ? "down" : "up";
   (mode === "down" ? migrateDownAll() : migrateUp())
     .then((result) => {

@@ -18,7 +18,7 @@
 | Validación | Zod | contratos de todos los límites: HTTP in/out, payloads de scrapers, payloads de IA, config |
 | HTTP (API) | Fastify | plugins: cors (localhost), static (frontend futuro), swagger |
 | Extracción HTML | Cheerio | regla general |
-| Navegación | Playwright | **solo cuando la fuente lo exija**. Verificado 2026-09-07: **ninguna fuente activa lo requiere**; la única que necesita JS (Instagram) es de uso manual, no automatizado |
+| Navegación | Playwright | **no habilitado**. Revalidado 2026-09-08: ninguna fuente activa lo requiere; Instagram es manual y su automatización está deshabilitada |
 | Tests | Vitest | unit + integración contra PG de test (`crv_test`) |
 | Logs | Pino | structured logs + `ingest.merge_audit` para auditoría de datos |
 | Frontend (futuro) | React + Vite (SPA) | solo consume la API; fase F8 |
@@ -69,22 +69,25 @@ API en `127.0.0.1:8080` por defecto, configurable por env).
 ### 4.1 `fetcher`
 GET/HEAD con:
 - User-Agent identificable, timeout, reintento con backoff.
-- Respeto de `robots.txt` (cache en `ingest.raw_pages.meta`/disco).
+- Respeto de `robots.txt` (caché en memoria por proceso): `Allow`/`Disallow`
+  con comodines `*`, ancla `$`, `Crawl-delay` y descubrimiento de `Sitemap`.
+  Un 404 significa política no publicada; errores transitorios/red/5xx son
+  fail-closed y bloquean el fetch hasta que la caché de política venza.
 - Límite de concurrencia por dominio (1) y demora mínima entre peticiones (1 s).
 - Salida: HTML crudo + cabeceras + código → entrega a `raw storage`.
 
 ### 4.2 `cache`
-Doble nivel: (a) `ingest.raw_pages` con UNIQUE(source_id, url) — si la página
-ya se descargó y no venció (TTL por fuente, default 7 días para páginas
-estáticas), se reutiliza; (b) caché de `robots.txt` y de respuestas de la
-YouTube Data API (`media.youtube_videos.metadata`) con TTL propio. Ninguna descarga repetida
-del mismo URL dentro de un run.
+Doble nivel: (a) `ingest.raw_pages` con `UNIQUE(source_id, sha256)` — dedupe
+por contenido; para frescura se busca la última fila por URL solicitada o
+canónica y, si no venció (TTL default 7 días), se reutiliza; (b) caché de
+`robots.txt` y de respuestas de la YouTube Data API
+(`media.youtube_videos.metadata`) con TTL propio.
 
 ### 4.3 `raw source storage`
 - HTML crudo en disco: `data/raw/<source-slug>/<sha256>.html` (+ cabeceras en
   JSON adyacente). Hash = identidad de contenido.
-- Fila `ingest.raw_pages` con metadatos (url, final_url, http_status,
-  content_type, sha256, fetched_at).
+- Fila `ingest.raw_pages` con metadatos (`url`, `canonical_url`, `http_status`,
+  `content_type`, `sha256`, `fetched_at`, `headers`, `run_id`).
 - El crudo **nunca se modifica ni se re-procesa destructivamente**: si un
   parser cambia, se re-ejecuta sobre el crudo guardado (reproducibilidad).
 
@@ -97,19 +100,24 @@ interface SourceAdapter {
   extract(page: CheerioAPI, url: string): RawRecord[];     // parse
 }
 ```
-Adapters previstos, con el canal **verificado el 2026-09-07** (SOURCES.md §3):
+El registro usa una unión discriminada: `functional/automatic/enabled` contiene
+un `SourceAdapter`; `limited/manual/disabled` y `limited/disabled` no exponen
+`listPages` ni `extract`. Así `sources.enabled` no es la única barrera ante una
+activación accidental. Canales verificados el 2026-09-07 y revalidados para
+las tres fuentes restantes el 2026-09-08 (SOURCES.md §3):
 
 | Adapter | Fuentes | Canal de acceso confirmado |
 |---|---|---|
 | `blogger` | las 5 Blogspot | Feed nativo `/feeds/posts/default` (Atom o `?alt=json`), con `openSearch:totalResults` y paginación. **4.922 entradas** en total |
-| `wordpress` | rockhechovenezuela.com, punkenvenezuela.com | WP REST `/wp-json/wp/v2/`. **Debe recorrer `pages` además de `posts`**: punkenvenezuela tiene 0 posts y 17 páginas |
+| `wordpress` | rockhechovenezuela.com, punkenvenezuela.com | RHV: raíz HTML + colecciones REST `posts`/`pages`, frontera fija de 3 recursos. El Punk: REST `pages` (0 posts, 17 páginas) |
 | `wordpressCom` | coleccionistasderockvenezolano | API pública `public-api.wordpress.com` (92 posts) |
 | `legacyFrameset` | sincopa.com | Frameset estático desde `vertical.htm` → índices por género → fichas. **Decodificar windows-1252 antes de normalizar** |
-| `manualOnly` | Hemeroteka (Instagram) | Sin acceso anónimo (app JS). Entrada manual como claims `created_by='human'` |
-| `shopifyCatalog` | Deska | Inactivo: HTTP 402 |
+| `limitedManual` | Hemeroteka (Instagram) | `limited/manual/disabled`; entrada humana a `review_queue`, sin fetch ni claim ficticio |
+| `limitedDisabled` | Deska | `limited/disabled`; `robots.txt` declara `Disallow: /`, sin adapter HTTP ni endpoints alternativos |
 
-- Regla: si la fuente ofrece feed/API estructurada, el adapter la usa **antes**
-  que el HTML renderizado; el HTML crudo se conserva igual como evidencia.
+- Regla: si la fuente ofrece feed/API estructurada, el adapter la usa para el
+  inventario. La raíz HTML solo se añade cuando forma parte expresa de la
+  frontera (RHV); todo crudo se conserva como evidencia.
 - Todo adapter emite `RawRecord` (JSON crudo tipado con Zod) → normalización.
 - **Playwright solo se incorpora como adapter opcional** si una fuente lo
   exige tras verificación en F4. Verificado hoy: **ninguna fuente activa lo
@@ -133,11 +141,14 @@ Pipeline determinista sobre `RawRecord` → `NormalizedClaim`:
 ### 4.6 `entity resolution` (ER)
 Orden determinista: normalización → match exacto → tablas de alias
 (`ingest.artist_aliases` y hermanas)
-→ fuzzy (trigram / Jaro-Winkler sobre candidatos indexados) → si ambigüedad
-persiste: DeepSeek asistido (opcional, §7) o review_queue.
-Cada decisión de ER se guarda como claim (`entity_kind` + field `identity`)
-para que sea auditable y reversible. Resultado: `core_id` resuelto o entidad
-nueva propuesta.
+→ señales contextuales tipadas → Jaro-Winkler como señal secundaria. Una
+similitud fuzzy, una diferencia de artículo o una coincidencia solo sin tildes
+**nunca autorizan un merge por sí solas**. Si la ambigüedad persiste, el
+gateway DeepSeek puede adjuntar una propuesta (opcional, §4.11), pero no
+elevar la acción determinista; de lo contrario se abre `review_queue`.
+Cada decisión se persiste en `ingest.entity_resolution_decisions` con input
+original, score, thresholds, features, candidatos y explicación. Resultado:
+FK resuelta, revisión o propuesta de entidad nueva.
 
 ### 4.7 `claims / evidence`
 Capa de persistencia de afirmaciones: `ingest.claims` (dedupe por
@@ -146,8 +157,8 @@ el índice `claims_dedupe_uk`) y `ingest.claim_evidence`
 
 ### 4.8 `merge engine` — único escritor del core
 - Política híbrida por confianza (ver CONTRACT §merge):
-  high→aplica; medium→solo info nueva no conflictiva; conflicto→review;
-  low→nunca escribe core (el claim queda `candidate`).
+  high→crea/confirma/completa; medium→solo info nueva no conflictiva;
+  cualquier contradicción→claims rivales + review; low/AI→nunca escribe core.
 - Escribe bajo `pg_advisory_xact_lock` con clave determinista por entidad
   (DATA_MODEL.md §6) → idempotencia incluso en ejecuciones concurrentes.
 - Regla dura: **un crédito de álbum jamás inserta `artist_members`**.
@@ -157,9 +168,9 @@ el índice `claims_dedupe_uk`) y `ingest.claim_evidence`
 ### 4.9 `conflict engine`
 Detecta dos claims aceptables que afirman valores distintos para el mismo
 campo de la misma entidad: crea `ingest.conflicts` (ambos valores + ambas
-evidencias), suspende el campo en core y abre `review_queue(conflict)`.
-Resoluciones: a, b, both_kept (se registra el dato múltiple en notas/alias),
-dismissed.
+evidencias), suspende el campo en core y abre `review_queue(field_conflict)`.
+Resoluciones: a, b, both_kept o dismissed; solo a/b proyectan un valor y toda
+proyección queda auditada.
 
 ### 4.10 `review queue`
 Fuente única de trabajo humano (`ingest.review_queue`, con FKs reales a las
@@ -178,9 +189,13 @@ reutilizado, ahorro de coste e idempotencia). Usos permitidos **solo**:
 (biografías largas → `ingest.ai_biographies` draft), (3) triage de conflictos
 (sugerencia, nunca decisión), (4) normalización de créditos muy desordenados.
 **Nunca** como extractor universal ni como fuente primaria de datos
-estructurados. Config: key/model/temperatura por env; presupuesto de tokens
-por run configurable; sin IA activa = el sistema funciona igual (rutas
-deterministas).
+estructurados. No recibe tools, no ejecuta SQL y no llama al merge: retorna
+propuestas JSON; una respuesta vacía, truncada, no-JSON o que no satisfaga el
+schema Zod se rechaza. Flash atiende clasificación/extracción narrativa/
+normalización semántica; Pro, ER difícil/conflictos/historia; Vision queda
+aislado para entrada visual. Los tres IDs se configuran por
+`DEEPSEEK_MODEL_FAST|REASONING|VISION`, sin acoplar reglas a nombres de modelo.
+Sin API key el sistema y toda la suite funcionan con rutas deterministas/mock.
 
 ### 4.12 `youtube ingestion`
 - `yt:seed-import`: importa el XLSX a `ingest.seed_uploads` (verbatim) y
@@ -202,7 +217,7 @@ deterministas).
 
 ### 4.13 `cli`
 Comandos (mismos casos de uso que la API, sin UI):
-`sources:list|add`, `scrape <slug>`, `seed:import-yt`, `yt:sync`,
+`sources:list|add|evidence`, `scrape <slug>`, `seed:import-yt`, `yt:sync`,
 `yt:enrich <artist>`, `merge:run [--dry]`, `review:list|approve|dismiss`,
 `genre:add|disable`, `export:json <entidad>`, `doctor` (integridad:
 core intacto, hashes, orphans de claims).
@@ -243,12 +258,13 @@ El seed YT sigue el mismo flujo saltando 1-2 (el "raw" es la fila XLSX).
 ## 6. Configuración, logs y errores
 
 - Config por variables de entorno + archivo `config/` (Zod): `DATABASE_URL`,
-  `PORT`, `YOUTUBE_API_KEY`, `DEEPSEEK_API_KEY|MODEL`, `DATA_DIR`,
+  `PORT`, `YOUTUBE_API_KEY`, `DEEPSEEK_API_KEY`,
+  `DEEPSEEK_MODEL_FAST|REASONING|VISION`, `DATA_DIR`,
   `CRAWL_*` (timeouts, TTLs, delays), `REVIEW_*`.
 - Pino: logs JSON a stdout; `doctor`/CLI muestran resúmenes.
-- Errores de fetch/scrape jamás abortan el run: se registran en
-  `import_runs.error_log` y la fila queda `failed` para reintento; el resto
-  del lote continúa.
+- Errores de fetch/scrape se registran por recurso en `ingest.scrape_errors`;
+  `scrape_runs` queda `partial` y conserva checkpoint + URLs pendientes en
+  `params`. El resto de la cola continúa y el siguiente run reanuda los huecos.
 
 ---
 
@@ -264,7 +280,7 @@ El seed YT sigue el mismo flujo saltando 1-2 (el "raw" es la fila XLSX).
   cubre además la migración de enums, y `tests/lib_pg.sh` comparte el arranque
   del contenedor. **Portado a Vitest (F0):**
   `test/contract/core-and-schema.test.ts` reproduce ese mismo contrato
-  (core + migraciones 0001-0004 vía `src/db/migrate.ts` + rollback + diff
+  (core + migraciones 0001-0007 vía `src/db/migrate.ts` + rollback + diff
   vacío) contra un contenedor propio (`test/support/pg-container.ts`, mismo
   arranque en dos fases que `tests/lib_pg.sh`), y añade el ejercicio real
   del schema Drizzle: inserts y joins a través de `public`+`ingest`+`media`

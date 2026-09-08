@@ -35,6 +35,7 @@ export const youtubeVideos = media.table("youtube_videos", {
   publishedAt: timestamp("published_at", { withTimezone: true }),
   durationSeconds: integer("duration_seconds"),
   thumbnailUrl: text("thumbnail_url"),
+  tags: jsonb("tags"),
   publicationStatus: publicationStatusEnum("publication_status").notNull().default("unknown"),
   metadata: jsonb("metadata"),
   firstSeenAt: timestamp("first_seen_at", { withTimezone: true }).notNull().defaultNow(),
@@ -45,6 +46,47 @@ export const youtubeVideos = media.table("youtube_videos", {
   seedUploadId: bigint("seed_upload_id", { mode: "number" }),
   createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
   updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),
+});
+
+export const youtubeChannels = media.table("youtube_channels", {
+  id: bigint("id", { mode: "number" }).primaryKey().generatedAlwaysAsIdentity(),
+  channelId: varchar("channel_id", { length: 80 }).notNull(),
+  title: text("title"),
+  description: text("description"),
+  uploadsPlaylistId: varchar("uploads_playlist_id", { length: 80 }),
+  thumbnailUrl: text("thumbnail_url"),
+  publicationStatus: publicationStatusEnum("publication_status").notNull().default("unknown"),
+  metadata: jsonb("metadata"),
+  firstSeenAt: timestamp("first_seen_at", { withTimezone: true }).notNull().defaultNow(),
+  lastFetchedAt: timestamp("last_fetched_at", { withTimezone: true }),
+  createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+  updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),
+});
+
+export const youtubeChannelUploads = media.table("youtube_channel_uploads", {
+  channelId: bigint("channel_id", { mode: "number" }).notNull().references(() => youtubeChannels.id, { onDelete: "cascade" }),
+  videoId: varchar("video_id", { length: 11 }).notNull(),
+  playlistPosition: integer("playlist_position"),
+  publishedAt: timestamp("published_at", { withTimezone: true }),
+  title: text("title"),
+  payload: jsonb("payload").notNull(),
+  discoveredAt: timestamp("discovered_at", { withTimezone: true }).notNull().defaultNow(),
+  updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),
+});
+
+export const youtubeDescriptionSections = media.table("youtube_description_sections", {
+  videoId: bigint("video_id", { mode: "number" }).notNull().references(() => youtubeVideos.id, { onDelete: "cascade" }),
+  position: integer("position").notNull(),
+  sectionKind: varchar("section_kind", { length: 30 }).notNull(),
+  heading: text("heading").notNull(),
+  content: text("content").notNull(),
+});
+
+export const youtubeTracklistEntries = media.table("youtube_tracklist_entries", {
+  videoId: bigint("video_id", { mode: "number" }).notNull().references(() => youtubeVideos.id, { onDelete: "cascade" }),
+  position: integer("position").notNull(),
+  title: text("title").notNull(),
+  startSeconds: integer("start_seconds").notNull(),
 });
 
 export const videoArtists = media.table("video_artists", {

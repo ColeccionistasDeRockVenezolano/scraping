@@ -9,6 +9,18 @@ import { closeDb } from "../db/client.js";
 import { moduleLogger } from "../logger/index.js";
 import { seedSources, listSources, proposeSource, LINKS_XLSX_PATH } from "../ingest/sources.js";
 import { runObserve } from "../fetcher/observe.js";
+import { assertSupportedNode } from "../config/runtime.js";
+import { listRuns, createArtistEnrichmentRun, finishRun } from "../ingest/runs.js";
+import { listReviews, showReview } from "../review/queue.js";
+import { getDb } from "../db/client.js";
+import { sources } from "../db/schema/ingest.js";
+import { eq } from "drizzle-orm";
+import { adapterFor, adapterRegistrationFor } from "../adapters/registry.js";
+import { ingestStoredAdapterSource } from "../ingest/runner.js";
+import { registerManualEvidence } from "../ingest/manual-evidence.js";
+import { importYouTubeMasterSheet, syncYouTubeChannel, syncYouTubeVideo, unmatchedYouTubeRows } from "../youtube/pipeline.js";
+import { YT_MASTER_XLSX_PATH } from "../ingest/sources.js";
+import { getPool } from "../db/client.js";
 
 const log = moduleLogger("cli");
 
@@ -21,18 +33,25 @@ const KNOWN_FUTURE_COMMANDS = new Set([
 ]);
 
 async function main(): Promise<number> {
+  // Falla ruidoso si el runtime no cumple engines.node (PHASES F0).
+  assertSupportedNode();
   const [cmd, ...args] = process.argv.slice(2);
 
   switch (cmd) {
     case "doctor": {
       const report = await runDoctor();
+      const MARK = { ok: "\u2713", warn: "!", fail: "\u2717" } as const;
       for (const check of report.checks) {
-        const mark = check.ok ? "✓" : "✗";
         // eslint-disable-next-line no-console
-        console.log(`  ${mark} ${check.name}: ${check.detail}`);
+        console.log(`  ${MARK[check.status]} ${check.name}: ${check.detail}`);
       }
+      const summary = !report.ok
+        ? "doctor: HAY PROBLEMAS"
+        : report.warnings > 0
+          ? `doctor: VERDE CON ${report.warnings} AVISO(S)`
+          : "doctor: TODO VERDE";
       // eslint-disable-next-line no-console
-      console.log(report.ok ? "doctor: TODO VERDE" : "doctor: HAY PROBLEMAS");
+      console.log(summary);
       return report.ok ? 0 : 1;
     }
 
@@ -50,14 +69,37 @@ async function main(): Promise<number> {
       return 0;
     }
 
-    case "sources:list": {
+    case "sources:list":
+    case "sources": {
+      if (cmd === "sources" && args[0] !== "list") {
+        // eslint-disable-next-line no-console
+        console.error("uso: crv sources list");
+        return 1;
+      }
       const rows = await listSources();
       for (const r of rows) {
+        const registration = adapterRegistrationFor(r);
+        const capability = registration ? `${registration.status}/${registration.mode}/${registration.automation}` : "sin-adapter";
         // eslint-disable-next-line no-console
-        console.log(`  [${r.enabled ? "✓" : "✗"}] ${r.slug.padEnd(32)} ${r.siteType.padEnd(10)} trust=${r.trustLevel}`);
+        console.log(`  [${r.enabled ? "✓" : "✗"}] ${r.slug.padEnd(32)} ${r.siteType.padEnd(10)} trust=${r.trustLevel} adapter=${capability}`);
       }
       // eslint-disable-next-line no-console
       console.log(`${rows.length} fuentes registradas`);
+      return 0;
+    }
+
+    case "sources:evidence": {
+      const [slug, evidenceUrl, excerpt, ...notes] = args;
+      if (!slug || !evidenceUrl || !excerpt) {
+        console.error('uso: sources:evidence <slug> <url> "<extracto>" [notas...]');
+        return 1;
+      }
+      const result = await registerManualEvidence(slug, {
+        evidenceUrl,
+        excerpt,
+        ...(notes.length > 0 ? { notes: notes.join(" ") } : {}),
+      });
+      console.log(`evidencia manual registrada: source=${slug}, run=${result.runId}, review=${result.reviewId}, sha256=${result.evidenceHash}`);
       return 0;
     }
 
@@ -86,7 +128,73 @@ async function main(): Promise<number> {
       return 0;
     }
 
+    case "runs": {
+      if (args[0] !== "list") { console.error("uso: crv runs list"); return 1; }
+      for (const run of await listRuns()) console.log(`${run.id}\t${run.kind}\t${run.status}\t${run.startedAt.toISOString()}`);
+      return 0;
+    }
+
+    case "review": {
+      if (args[0] === "list") {
+        for (const review of await listReviews()) console.log(`${review.id}\t${review.kind}\tpriority=${review.priority}\t${review.status}`);
+        return 0;
+      }
+      if (args[0] === "show" && /^\d+$/.test(args[1] ?? "")) {
+        const review = await showReview(Number(args[1]));
+        if (!review) { console.error(`review inexistente: ${args[1]}`); return 1; }
+        console.log(JSON.stringify(review, null, 2));
+        return 0;
+      }
+      console.error("uso: crv review list | crv review show <id>");
+      return 1;
+    }
+
     case "scrape": {
+      // API pública mínima aprobada: `scrape source <source> --all` y
+      // `scrape artist "<name>" --all-sources`. Se conserva el alias F1.
+      if (args[0] === "source") {
+        const slug = args[1];
+        const dryRun = args.includes("--dry-run");
+        if (!slug || !args.includes("--all")) { console.error("uso: crv scrape source <source> --all [--dry-run]"); return 1; }
+        const [source] = await getDb().select().from(sources).where(eq(sources.slug, slug));
+        if (!source) { console.error(`fuente desconocida: ${slug}`); return 1; }
+        const adapter = adapterFor(source);
+        if (!adapter) {
+          const registration = adapterRegistrationFor(source);
+          console.error(registration?.status === "limited"
+            ? `la fuente ${slug} está ${registration.status}/${registration.mode}/${registration.automation}: ${registration.reason}`
+            : `la fuente ${slug} no tiene adapter HTTP automatizado autorizado`);
+          return 1;
+        }
+        if (dryRun) {
+          const parsed = await ingestStoredAdapterSource(slug, adapter, { confidence: "low", dryRun: true });
+          console.log(JSON.stringify({ dryRun: true, source: slug, adapter: adapter.slug, claims: parsed.plan, merges: [] }, null, 2));
+          return 0;
+        }
+        const observed = await runObserve(slug);
+        // Todos los adapters web entran primero como candidatos low: preservan
+        // evidencia y evitan cualquier alta/duplicado en el catálogo canónico.
+        const parsed = await ingestStoredAdapterSource(slug, adapter, { confidence: "low" });
+        console.log(`scrape source ${slug}: ${observed.fetched} descargadas, ${observed.cached} desde caché, ${observed.errors} errores${observed.limited ? "; límite de crawl alcanzado" : ""}; adapter=${adapter.slug}, claims=${parsed.claimsInserted} nuevas/${parsed.claimsReused} reutilizadas (candidatas, sin mutar core)`);
+        return observed.errors > 0 ? 1 : 0;
+      }
+      if (args[0] === "artist") {
+        const artist = args[1];
+        const dryRun = args.includes("--dry-run");
+        if (!artist || !args.includes("--all-sources")) { console.error('uso: crv scrape artist "<name>" --all-sources [--dry-run]'); return 1; }
+        const enabled = (await listSources()).filter((s) => s.enabled);
+        if (dryRun) { console.log(JSON.stringify({ dryRun: true, artist, sources: enabled.map((s) => s.slug), claims: [], merges: [] }, null, 2)); return 0; }
+        const run = await createArtistEnrichmentRun(artist);
+        let errors = 0;
+        for (const source of enabled) {
+          const adapter = adapterFor(source);
+          if (!adapter) continue; // spreadsheet/API tienen flujos propios, nunca se fingen como HTTP.
+          try { await runObserve(source.slug); } catch (error) { errors += 1; log.error({ source: source.slug, error }, "falló enriquecimiento dirigido"); }
+        }
+        await finishRun(run.id, errors > 0 ? "partial" : "ok", { artist, sources: enabled.length, errors });
+        console.log(`scrape artist ${artist}: run=${run.id}, errores=${errors}; sin claims semánticos hasta conectar adapters caracterizados`);
+        return errors > 0 ? 1 : 0;
+      }
       const slug = args[0];
       const observe = args.includes("--observe");
       if (!slug) {
@@ -103,6 +211,37 @@ async function main(): Promise<number> {
       // eslint-disable-next-line no-console
       console.log(`scrape --observe ${slug}: ${result.fetched} descargadas, ${result.cached} desde caché, ${result.errors} errores`);
       return result.errors > 0 ? 1 : 0;
+    }
+
+    case "youtube": {
+      const [subcommand, argument] = args;
+      if (subcommand === "import-sheet") {
+        const result = await importYouTubeMasterSheet(argument ?? YT_MASTER_XLSX_PATH);
+        console.log(`youtube import-sheet: ${result.inserted} nuevas, ${result.updated} actualizadas, ${result.unchanged} sin cambios; ${result.videos} videos, ${result.reviews} reviews`);
+        return 0;
+      }
+      if (subcommand === "sync-video") {
+        if (!argument) { console.error("uso: crv youtube sync-video <video-id>"); return 1; }
+        const result = await syncYouTubeVideo(argument);
+        console.log(`youtube sync-video ${result.videoId}: ${result.synced ? "sincronizado" : "no encontrado por la API"}`);
+        return result.synced ? 0 : 1;
+      }
+      if (subcommand === "sync-channel") {
+        const channelIds = argument ? [argument] : (await getPool().query<{ channel_id: string }>("SELECT DISTINCT channel_id FROM media.youtube_videos WHERE channel_id IS NOT NULL")).rows.map((row) => row.channel_id);
+        if (!channelIds.length) { console.error("uso: crv youtube sync-channel <channel-id> (o importe/sincronice primero un video con canal conocido)"); return 1; }
+        for (const channelId of channelIds) {
+          const result = await syncYouTubeChannel(channelId);
+          console.log(`youtube sync-channel ${result.channelId}: ${result.uploads} uploads descubiertos, ${result.syncedVideos} metadatos sincronizados`);
+        }
+        return 0;
+      }
+      if (subcommand === "unmatched") {
+        const rows = await unmatchedYouTubeRows();
+        console.log(JSON.stringify(rows, null, 2));
+        return 0;
+      }
+      console.error("uso: crv youtube import-sheet <path> | sync-video <video-id> | sync-channel [channel-id] | unmatched");
+      return 1;
     }
 
     case undefined:
@@ -137,6 +276,13 @@ CRV CLI
                       propone una fuente NUEVA: enabled=false + review(new_source);
                       nunca la habilita directo (requiere aprobación manual, SOURCES.md §6)
   scrape <slug> --observe   descarga + cachea crudo de una fuente habilitada (sin extracción)
+  scrape source <source> --all [--dry-run]
+  scrape artist "<name>" --all-sources [--dry-run]
+  sources list | runs list | review list | review show <id>
+  youtube import-sheet <path>  importa YT Master Spreadsheet de forma idempotente
+  youtube sync-video <video-id>  consulta YouTube Data API (requiere YOUTUBE_API_KEY)
+  youtube sync-channel [channel-id]  recorre uploads playlist oficial (requiere YOUTUBE_API_KEY)
+  youtube unmatched          filas seed pendientes de enlace o revisión
 
 Comandos especificados para fases futuras (F1+): ${[...KNOWN_FUTURE_COMMANDS].join(", ")}
 `);

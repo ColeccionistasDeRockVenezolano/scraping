@@ -13,13 +13,13 @@ import { createServer, type Server } from "node:http";
 import { mkdtemp, rm } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import path from "node:path";
-import { eq } from "drizzle-orm";
+import { desc, eq } from "drizzle-orm";
 import { startPgContainer, type PgContainer } from "../support/pg-container.js";
 import { applyCore } from "../support/apply-core.js";
 import { resetEnvCache } from "../../src/config/env.js";
 import { closeDb, getDb } from "../../src/db/client.js";
 import { migrateUp } from "../../src/db/migrate.js";
-import { sources, rawPages } from "../../src/db/schema/ingest.js";
+import { sources, rawPages, scrapeErrors, scrapeRuns } from "../../src/db/schema/ingest.js";
 import { fetchAndCache } from "../../src/cache/raw-pages.js";
 import { runObserve } from "../../src/fetcher/observe.js";
 import { RobotsDisallowedError, politeFetch } from "../../src/fetcher/http.js";
@@ -44,10 +44,12 @@ describe("fetcher + cache + observe (F1)", () => {
   let requestLog: string[];
   let dataDir: string;
   let sameContentEachTime: boolean;
+  let failStartIndex26: boolean;
 
   beforeAll(async () => {
     requestLog = [];
     sameContentEachTime = false;
+    failStartIndex26 = false;
     container = await startPgContainer();
 
     server = createServer((req, res) => {
@@ -65,6 +67,12 @@ describe("fetcher + cache + observe (F1)", () => {
       }
       const m = /start-index=(\d+)/.exec(url);
       const startIndex = m ? Number(m[1]) : 1;
+      if (failStartIndex26 && startIndex === 26) {
+        failStartIndex26 = false;
+        res.writeHead(503, { "content-type": "text/plain" });
+        res.end("fallo transitorio");
+        return;
+      }
       res.writeHead(200, { "content-type": "application/json" });
       // Para el test de dedupe por contenido: si sameContentEachTime está
       // activo, la página 1 siempre devuelve el mismo cuerpo exacto.
@@ -79,6 +87,7 @@ describe("fetcher + cache + observe (F1)", () => {
     process.env["DATABASE_URL"] = container.databaseUrl;
     process.env["DATA_DIR"] = dataDir;
     process.env["CRAWL_DELAY_MS"] = "0"; // sin demora artificial en el test
+    process.env["CRAWL_MAX_RETRIES"] = "0";
     resetEnvCache();
 
     await applyCore(container.name);
@@ -95,6 +104,7 @@ describe("fetcher + cache + observe (F1)", () => {
   afterEach(() => {
     requestLog = [];
     sameContentEachTime = false;
+    failStartIndex26 = false;
   });
 
   it("robots.txt real: bloquea la ruta con Disallow, permite el resto", async () => {
@@ -115,6 +125,22 @@ describe("fetcher + cache + observe (F1)", () => {
     });
     const [row] = await db.select().from(sources).where(eq(sources.slug, "mock-blogspot"));
     expect(row?.enabled).toBe(true);
+  });
+
+  it("una fuente limitada no toca la red aunque alguien la habilite en la BD", async () => {
+    const db = getDb();
+    const [source] = await db.insert(sources).values({
+      slug: "rock-y-pop-venezuela-merch-store",
+      name: "Deska (guardia de prueba)",
+      url: baseUrl,
+      siteType: "website",
+      trustLevel: "medium",
+      enabled: true,
+    }).returning();
+    requestLog = [];
+    await expect(runObserve(source!.slug)).rejects.toThrow("fuente limitada");
+    expect(requestLog).toEqual([]);
+    expect(await db.select().from(scrapeRuns).where(eq(scrapeRuns.sourceId, source!.id))).toHaveLength(0);
   });
 
   it("barrido de observación completo: pagina hasta agotar openSearch$totalResults", async () => {
@@ -155,5 +181,59 @@ describe("fetcher + cache + observe (F1)", () => {
 
     const after = await db.select().from(rawPages).where(eq(rawPages.sourceId, source.id));
     expect(after.length).toBe(countBefore); // sin fila nueva: mismo contenido -> mismo sha256
+  });
+
+  it("persiste un error, continúa el barrido y reanuda la página pendiente", async () => {
+    const db = getDb();
+    await db.insert(sources).values({
+      slug: "mock-blogspot-errors",
+      name: "Mock Blogger con error",
+      url: baseUrl,
+      siteType: "blogspot",
+      trustLevel: "low",
+      enabled: true,
+    });
+
+    failStartIndex26 = true;
+    const first = await runObserve("mock-blogspot-errors");
+    expect(first.errors).toBe(1);
+    expect(first.pagesSwept).toBe(2); // página 1 y página 51; la 26 falló
+
+    const [source] = await db.select().from(sources).where(eq(sources.slug, "mock-blogspot-errors"));
+    const [partialRun] = await db.select().from(scrapeRuns)
+      .where(eq(scrapeRuns.sourceId, source!.id)).orderBy(desc(scrapeRuns.startedAt)).limit(1);
+    expect(partialRun?.status).toBe("partial");
+    const errors = await db.select().from(scrapeErrors).where(eq(scrapeErrors.runId, partialRun!.id));
+    expect(errors).toHaveLength(1);
+    expect(errors[0]).toMatchObject({ errorKind: "http_error", retryCount: 0 });
+    expect(errors[0]?.url).toContain("start-index=26");
+
+    const resumed = await runObserve("mock-blogspot-errors");
+    expect(resumed.resumed).toBe(true);
+    expect(resumed.errors).toBe(0);
+    expect(resumed.fetched).toBe(1);
+
+    const cleanRun = await runObserve("mock-blogspot-errors");
+    expect(cleanRun.resumed).toBe(false); // no revive un partial antiguo tras sanar
+    expect(cleanRun.errors).toBe(0);
+  });
+
+  it("observe funciona fuera de Blogger y enlaza el snapshot al run", async () => {
+    const db = getDb();
+    const [source] = await db.insert(sources).values({
+      slug: "mock-website",
+      name: "Mock website",
+      url: `${baseUrl}/sitio`,
+      siteType: "website",
+      trustLevel: "medium",
+      enabled: true,
+    }).returning();
+
+    const result = await runObserve("mock-website");
+    expect(result).toMatchObject({ fetched: 1, cached: 0, errors: 0, pagesSwept: 1 });
+    const [run] = await db.select().from(scrapeRuns)
+      .where(eq(scrapeRuns.sourceId, source!.id)).orderBy(desc(scrapeRuns.startedAt)).limit(1);
+    const [page] = await db.select().from(rawPages).where(eq(rawPages.sourceId, source!.id));
+    expect(page?.runId).toBe(run?.id);
   });
 });

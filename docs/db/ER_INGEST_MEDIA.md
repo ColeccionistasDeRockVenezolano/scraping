@@ -1,7 +1,7 @@
 # CRV · Documentación ER — schemas `ingest` y `media`
 
 > Documentación autoritativa de la capa auxiliar de PostgreSQL (migraciones
-> `migrations/0001…0003`). El core canónico (`crv_simple_v1.sql`, schema
+> `migrations/0001…0007`). El core canónico (`crv_simple_v1.sql`, schema
 > `public`) no forma parte de esta capa y **no fue modificado**: las
 > migraciones solo crean objetos en `ingest` y `media`.
 > Verificación automática: `tests/run_all.sh` (diff de `public` antes/después
@@ -25,8 +25,10 @@
 - **Nombres:** snake_case, tablas en plural, FKs `<entidad>_id`, PK `id
   BIGINT GENERATED ALWAYS AS IDENTITY`.
 - **Orden de migración:** 0001 (ingest base) → 0002 (media) → 0003 (claims/
-  identidad). Reversibles: down en orden inverso. Cada up es transaccional e
-  idempotente a nivel DDL.
+  identidad) → 0004 (kinds de revisión del seed y de la IA, §5) → 0005
+  (`raw_pages.run_id`) → 0006 (pipeline YouTube) → 0007 (auditoría ER,
+  gateway IA y biografías trazables). Reversibles: down en orden inverso. Cada up es
+  transaccional e idempotente a nivel DDL.
 
 ## 2. Enums nuevos
 
@@ -98,7 +100,8 @@ lo aprobado) · `public_display=false` por defecto.
 `source_id` FK · `url` (solicitada) · `canonical_url` (tras redirects) ·
 `http_status` (CHECK 100–599) · `content_type` · `sha256` (CHECK hex64) ·
 `byte_size` · `stored_path` (snapshot crudo en disco) · `fetched_at` ·
-`headers` JSONB (payload original). `UNIQUE(source_id, sha256)` = el mismo
+`headers` JSONB (payload original) · `run_id` FK NULL (0005: último run que
+descargó el contenido; un cache hit no lo altera). `UNIQUE(source_id, sha256)` = el mismo
 contenido no se almacena dos veces por fuente; la re-descarga de una URL crea
 fila nueva (historia, evidencia preservada).
 
@@ -134,7 +137,9 @@ bloqueo.
   `normalized_value` JSONB · `raw_hash` hex64 · `extractor` +
   `extractor_version` (parser/adaptador y versión) · `confidence` ·
   `status` (candidate/accepted/rejected/conflict/superseded) · `created_by` ·
-  `run_id` · timestamps.
+  `run_id` · `identity_raw` (sin alterar) · `identity_key` (clave primaria
+  con tildes) · `identity_secondary_key` (sin diacríticos, solo señal) ·
+  timestamps.
 - Dedupe (idempotencia): índice único sobre (source_id, COALESCE(raw_page_id),
   COALESCE(seed_upload_id), entity_kind, COALESCE(destinos), field, raw_hash).
   Limitación documentada: dos propuestas del mismo source+página+campo con
@@ -178,6 +183,22 @@ CHECKs de par distinto (claims/artists/persons/organizations).
 Append-only.
 
 **merge_audit_claims** — fuentes de cada modificación (N claims por entrada).
+
+**entity_resolution_decisions** (0007) — auditoría explicable de ARTIST,
+PERSON, ALBUM, TRACK y ORGANIZATION. Conserva nombre original/normalizado,
+contexto, score, acción, lista de features con contribución, candidatos,
+thresholds y explicación; FKs reales opcionales al candidato, claim, run y
+`ai_run`. La IA solo puede quedar adjunta como propuesta.
+
+**ai_runs** (0007) — único registro de llamadas al gateway: hash de prompt,
+tarea, modelo configurable, versión del schema Zod, estado validated/rejected/
+failed, inputs/outputs/payload crudo, tokens y error. Solo `validated` entra en
+caché.
+
+**ai_biographies / ai_biography_claims** (0007) — borrador editorial para un
+ARTIST o PERSON y puente a cada claim aceptado usado. Siempre abre
+`review_queue(ai_biography)` y nunca actualiza la biografía ni otros hechos
+del core, incluso al aprobarse.
 
 **schema_migrations** — bookkeeping del harness de migraciones (versión +
 applied_at). Vive en `ingest`, nunca en `public`.
@@ -262,7 +283,8 @@ seed y de la IA):
 | `ingest.conflicts` | `ingest.conflicts` (idéntico + snapshots) |
 | `ingest.review_queue` | `ingest.review_queue` (kinds actualizados por la directiva) |
 | `ingest.genres` | `ingest.genres` (idéntico) |
-| `ingest.ai_biographies` / `ai_runs` | **Diferido a F6** (fuera del alcance de esta capa de scraping) |
+| `ingest.ai_biographies` / `ai_biography_claims` / `ai_runs` | Realizado en 0007, separado del core y con trazabilidad claim→borrador |
+| auditoría explicable de ER | `ingest.entity_resolution_decisions` (0007: score, features, thresholds, candidatos y propuesta IA opcional) |
 | `ingest.media_links` | `media.media_links` (FKs reales) |
 | `ingest.import_runs` | `ingest.scrape_runs` (tabla única por tipo de run) |
 | `ingest.audit_log` genérico | `ingest.merge_audit` + `merge_audit_claims` (auditoría del pipeline; el audit de CRUD humano queda para F7) |
@@ -276,7 +298,8 @@ seed y de la IA):
   `seed_uploads.upload_order`, `genres.name`, `claims` (índice compuesto),
   `claim_evidence(claim,hash)`, `conflicts(a,b,field)`, alias tables,
   `youtube_videos.video_id`, `video_tracks(video,track,start)`,
-  `media_links(entity,url)`.
-- Integridad referencial: 87 FKs reales (aux→aux, aux→core, aux→media),
-  listadas por `run_all.sh` paso 12.
+  `media_links(entity,url)`, `ai_runs.prompt_hash` y
+  `entity_resolution_decisions.decision_hash`.
+- Integridad referencial: FKs reales aux→aux, aux→core y aux→media,
+  verificadas por el harness y los tests contractuales.
 - Core intacto: diff `public` antes/después (y tras rollback) = vacío.

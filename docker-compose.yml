@@ -1,0 +1,31 @@
+# CRV · PostgreSQL de desarrollo (PHASES F0 — "base crv desechable y
+# reproducible"). No es la base de producción: se puede borrar entera con
+# `npm run db:down` y reconstruir con `npm run db:bootstrap`.
+#
+# Puerto 5433 a propósito: 5432 suele estar ocupado por otro PostgreSQL local
+# y una colisión silenciosa haría que las migraciones apunten a la base
+# equivocada. Escucha solo en loopback.
+services:
+  crv-postgres:
+    image: postgres:16-alpine
+    container_name: crv-postgres
+    environment:
+      POSTGRES_USER: crv
+      POSTGRES_PASSWORD: crv
+      POSTGRES_DB: crv
+      # Locale determinista: el core usa comparaciones de texto y no queremos
+      # que el orden dependa de la configuración de la máquina.
+      LANG: C
+    ports:
+      - "127.0.0.1:5433:5432"
+    volumes:
+      - crv-pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U crv -d crv -h 127.0.0.1"]
+      interval: 2s
+      timeout: 5s
+      retries: 30
+      start_period: 5s
+
+volumes:
+  crv-pgdata:

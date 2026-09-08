@@ -123,13 +123,14 @@ en la matriz (§10):
 
 | Confianza | Comportamiento |
 |---|---|
-| `high` | Aplica automáticamente. Campo vacío → se escribe; campo distinto → se sobrescribe con auditoría (el claim anterior queda `superseded`). |
+| `high` | Aplica automáticamente solo para crear entidad, confirmar el mismo valor o completar un campo vacío. Un valor distinto **no se sobrescribe**: se conserva como claim rival y abre conflicto/revisión. |
 | `medium` | Solo **información nueva no conflictiva**: campos vacíos se rellenan; campos con valor distinto → **conflicto** (no se toca el core). |
 | conflicto / posible duplicado | Se conservan ambas afirmaciones (`ingest.conflicts` + evidencias) y se abre `review_queue`. El core queda suspendido en ese campo hasta resolución. |
 | `low` | **Nunca** modifica datos canónicos. El claim queda `candidate` y va a revisión. |
 
-Reglas adicionales: `created_by=human` equivale a high (el operador es
-autoridad); `created_by=ai` nunca supera low sin aprobación humana.
+Reglas adicionales: `created_by=human` equivale a high, pero una contradicción
+todavía requiere una resolución humana explícita y auditada;
+`created_by=ai` nunca supera low sin aprobación humana.
 Dedupe previo por el índice real `claims_dedupe_uk` sobre
 `ingest.claims` (source + página/seed + `entity_kind` + destino + `field` +
 `raw_hash`).
@@ -156,9 +157,17 @@ Dedupe previo por el índice real `claims_dedupe_uk` sobre
   compleja, triage de conflictos (sugerencia), normalización de créditos
   muy desordenados. **Nunca** extracción universal de datos estructurados.
 - Productos de IA: claims `created_by='ai', confidence='low'` → revisión;
-  biografías → `ingest.ai_biographies` (nunca el campo biography del core
-  sin aprobación). Todo call registrado en `ingest.ai_runs` con prompt_hash
-  (caché/idempotencia). El sistema opera sin IA.
+  biografías → `ingest.ai_biographies` y `ai_biography_claims`, siempre como
+  salida editorial separada (ni siquiera aprobarla cambia un hecho o el campo
+  biography del core). Toda llamada queda en `ingest.ai_runs` con
+  `prompt_hash` (caché/idempotencia). El sistema opera sin IA.
+- Las respuestas son JSON estricto validado con Zod. Una salida inválida se
+  registra como `rejected` y no produce claims, SQL ni merges. DeepSeek solo
+  adjunta propuestas; las reglas deterministas y la política conservan la
+  autoridad.
+- Modelos configurables por rol: `DEEPSEEK_MODEL_FAST`,
+  `DEEPSEEK_MODEL_REASONING` y `DEEPSEEK_MODEL_VISION`; ningún ID está
+  codificado en la lógica del gateway.
 
 ---
 
@@ -205,26 +214,26 @@ Dedupe previo por el índice real `claims_dedupe_uk` sobre
 
 ## 10. Matriz requisito → solución
 
-Estado: **R** = realizado en `migrations/0001–0004` (verificado contra
+Estado: **R** = realizado en `migrations/0001–0007` (verificado contra
 PostgreSQL 16); **E** = especificado, pendiente de la fase indicada.
 
 | # | Requisito / decisión | Módulo(s) | Tabla(s) / mecanismo realizado | Est. | Documento |
 |---|---|---|---|---|---|
 | 1 | Core intacto | migración baseline + contract tests | `public` verbatim; diff de `pg_dump` vacío | **R** | DATA_MODEL §2, PHASES F0 |
 | 2 | Auxiliares permitidos | — | esquemas `ingest` + `media` (nada en `public`) | **R** | DATA_MODEL §4 |
-| 3 | Merge híbrido | merge engine | `ingest.claims.confidence` (`high/medium/low`) + advisory locks | E (F5) | CONTRACT §4, ARCH §4.8 |
-| 4 | Conflictos conservan ambas afirmaciones | conflict engine | `ingest.conflicts` (claim_a/claim_b) + `ingest.claim_evidence` | **R** (tablas) / E (motor, F5) | CONTRACT §5, ARCH §4.9 |
-| 5 | Bios IA separadas | deepseek gateway | `ingest.ai_biographies` ≠ `artists.biography` | E (F6) | DATA_MODEL §4.11 |
+| 3 | Merge híbrido | merge engine | política high/medium/low, advisory locks y `merge_audit` | **R** (motor F5) | CONTRACT §4, ARCH §4.8 |
+| 4 | Conflictos conservan ambas afirmaciones | conflict engine | `ingest.conflicts` (claim_a/claim_b) + evidencia + review | **R** | CONTRACT §5, ARCH §4.9 |
+| 5 | Bios IA separadas | deepseek gateway | `ingest.ai_biographies` + `ai_biography_claims` ≠ core | **R** (motor F6) | DATA_MODEL §4.11 |
 | 6 | Géneros configurables | normalization | `ingest.genres` (`active`) + revisión si no listado | **R** (tabla) / E (validación, F5) | DATA_MODEL §4.10 |
 | 7 | Extranjeros sin bio exhaustiva | ER/merge | `persons.nationality`, `is_venezuelan=false` por defecto; `biography` nullable | **R** (core) | DATA_MODEL §2 |
 | 8 | Imágenes: URL+fuente+metadatos | media handling | `media.media_links` (url+source_id+meta); prohibida descarga masiva | **R** | DATA_MODEL §4.12 |
 | 9 | Masivo por fuente + dirigido por artista | scraper adapters, CLI | `ingest.scrape_runs.kind` (`scrape_source` / `enrich_artist`) | **R** (tabla) / E (F4) | SOURCES §1, ARCH §4.4 |
 | 10 | Fuentes nuevas con aprobación | review queue | `ingest.sources.enabled=false` + ítem de revisión | **R** (tabla) / E (flujo, F1) | SOURCES §6 |
 | 11 | Fuentes internas, display opcional | API | `ingest.sources.public_display` (default `false`) | **R** | SOURCES §1 |
-| 12 | IA limitada | deepseek gateway | `ingest.ai_runs`; claims `created_by='ai'` nunca > `low` | E (F6) | CONTRACT §6, ARCH §4.11 |
+| 12 | IA limitada | deepseek gateway | `ingest.ai_runs`; Zod estricto; claims `created_by='ai'` siempre `low` | **R** (motor F6) | CONTRACT §6, ARCH §4.11 |
 | 13 | Créditos críticos | core + adapters | `album_credits`/`track_credits`/`organizations`/`album_formats` | **R** (core) | DATA_MODEL §2 |
-| 14 | Crédito ≠ membresía | merge engine (regla dura) | prohibido derivar `artist_members` de un crédito | E (F5, test obligatorio) | CONTRACT §4, ARCH §4.8 |
-| 15 | Idempotencia | merge engine + runs | `claims_dedupe_uk`, `seed_uploads.upload_order` UNIQUE + `row_hash`, advisory locks | **R** (constraints) / E (motor, F5) | DATA_MODEL §6, ARCH §4.8 |
+| 14 | Crédito ≠ membresía | merge engine (regla dura) | prohibido derivar `artist_members` de un crédito, con test contractual | **R** | CONTRACT §4, ARCH §4.8 |
+| 15 | Idempotencia | merge engine + runs | dedupe de claims, decisiones por hash y advisory locks | **R** (motor) | DATA_MODEL §6, ARCH §4.8 |
 | 16 | YouTube primera clase | youtube ingestion | `media.youtube_videos` (+`metadata` JSONB con el snapshot de la API) | **R** | SOURCES §2, ARCH §4.12 |
 | 17 | Seed YT inicial | seed import (F2) | `ingest.seed_uploads` verbatim + `upload_order` | **R** (tabla) / E (importador, F2) | DATA_MODEL §4.3/§5 |
 | 18 | Sin scraping visual YT | youtube ingestion | solo Data API; `search.list` acotado | E (F3) | SOURCES §2 |
@@ -284,7 +293,8 @@ Verificado el 2026-09-07 contra `postgres:16-alpine` por
 orden; los 8 nuevos insertables en `ingest.review_queue`; `up` re-ejecutable
 sin efecto; `down` bloqueado con filas presentes (y datos intactos) y correcto
 sin ellas; `down` idempotente; diff de `public` vacío. Además
-`tests/run_all.sh` en verde con el rollback completo `0004 → 0001`.
+`tests/run_all.sh` en verde con el rollback completo de todas las migraciones
+vigentes (hoy `0007 → 0001`).
 
 La prueba se validó por mutación: al quitar un `ADD VALUE` del `up` y al
 desactivar la guarda del `down`, la suite falla en ambos casos.
@@ -296,13 +306,23 @@ desactivar la guarda del `down`, la suite falla en ambos casos.
   auditoría inicial.
 - `tests/run_all.sh` re-ejecutado contra `postgres:16-alpine` desechable:
   salida **0**. `pg_dump --schema=public --schema-only` antes y después de
-  aplicar `0001–0004` produce un **diff vacío**; el diff tras el rollback
+  aplicar `0001–0007` produce un **diff vacío**; el diff tras el rollback
   completo también es **vacío**.
-- Análisis estático de `migrations/*.sql`: **todos** los `CREATE` apuntan a
-  `ingest.*` o `media.*`; los únicos `ALTER TABLE` son sobre `media.*`; no
-  existe ninguna sentencia que cree, altere o elimine un objeto de `public`.
-- Entorno: la máquina tiene **Node v20.20.2**; ARCHITECTURE.md exige
-  **Node 22 LTS**. Debe resolverse en F0 antes de escribir código.
+- Análisis estático de `migrations/*.sql`: **todos** los `CREATE` y `ALTER`
+  apuntan a `ingest.*` o `media.*`; no existe ninguna sentencia que cree,
+  altere o elimine un objeto de `public`.
+- **Cerrado (2026-09-08):** entorno Node. La máquina resolvía **Node
+  v20.20.2** en el PATH mientras ARCHITECTURE.md y `engines.node` exigen
+  **Node 22 LTS**. La corrección de `~/.bashrc` solo cubría shells
+  interactivos, y bash **no lee `~/.bashrc` en shells no interactivos**, así
+  que cron, CI, hooks y agentes seguían usando Node 20 en silencio. Resuelto
+  dentro del repo, no en el dotfile: `.nvmrc` (22.23.1), `.npmrc` con
+  `engine-strict=true` (npm rechaza instalar con un Node inferior),
+  `scripts/with-node22.sh` — por el que pasan **todos** los scripts npm — que
+  antepone un Node ≥22 de nvm o falla con instrucciones, y
+  `src/config/runtime.ts` (`assertSupportedNode`), invocado por el CLI y por
+  el runner de migraciones, más el chequeo `runtime.node` de `doctor`.
+  Cubierto por `test/unit/runtime.test.ts`.
 - **Cerrado (2026-09-07):** el hash del core solo vivía en la documentación;
   ningún script lo comprobaba, así que una edición del propio
   `crv_simple_v1.sql` no habría sido detectada (el diff de `pg_dump` solo
@@ -312,6 +332,26 @@ desactivar la guarda del `down`, la suite falla en ambos casos.
   paso 0 de `tests/run_all.sh` y `tests/test_0004_review_kinds.sh`.
   Validado por mutación: alterar el hash registrado produce `EXIT=1` con
   mensaje explícito antes de tocar la base de datos.
+- **Cerrado (2026-09-08):** deriva de documentación. `DATA_MODEL.md` §4.2/§4.3/
+  §4.5/§4.6/§4.7/§4.8/§4.12/§4.13/§4.15 describían el diseño previo a la
+  implementación y contradecían el DDL realizado (el caso material era
+  §4.2 `UNIQUE(source_id, url)` frente al real `UNIQUE(source_id, sha256)`, de
+  donde depende toda la semántica de caché). Reescritas contra
+  `migrations/*.up.sql`. `docs/db/ER_INGEST_MEDIA.md` decía "migraciones
+  0001…0003" con 0004 ya existente.
+- **Cerrado (2026-09-08):** verificación del core en base viva. El hash cubre
+  el archivo y el diff de `pg_dump` cubre las migraciones, pero nada detectaba
+  un `ALTER` hecho a mano sobre `public` en una base en uso: `doctor` solo
+  contaba objetos (7/10/3). Añadida la huella `src/doctor/core-catalog.json`
+  (178 entradas: enums con sus labels, columnas con tipo/NOT NULL/identidad/
+  default, vistas con su definición, constraints e índices), comparada entrada
+  por entrada. Verificada byte a byte idéntica en PostgreSQL 15 y 16, y
+  validada por mutación en `test/contract/core-catalog.test.ts` (columna
+  añadida y CHECK eliminado: ambos detectados).
+- **Cerrado (2026-09-08):** el contrato exige "PostgreSQL 15+" y las suites
+  usaban solo `postgres:16-alpine` por defecto. `npm run test:matrix`
+  (`scripts/test-pg-matrix.sh`) ejecuta el harness contra 15 y 16; ambas en
+  verde.
 
 ---
 

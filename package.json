@@ -4,21 +4,30 @@
   "private": true,
   "description": "Coleccionistas de Rock Venezolano — backend (ingesta, merge, API, CLI)",
   "type": "module",
+  "bin": {
+    "crv": "./dist/src/cli/index.js"
+  },
   "engines": {
     "node": ">=22.0.0"
   },
   "scripts": {
-    "build": "tsc -p tsconfig.json",
-    "typecheck": "tsc -p tsconfig.json --noEmit",
-    "dev": "tsx src/api/server.ts",
-    "cli": "tsx src/cli/index.ts",
-    "doctor": "tsx src/cli/index.ts doctor",
-    "db:migrate": "tsx src/db/migrate.ts",
-    "test": "vitest run",
-    "test:watch": "vitest",
-    "test:unit": "vitest run test/unit",
-    "test:contract": "vitest run test/contract --pool=forks --poolOptions.forks.singleFork",
-    "lint": "tsc -p tsconfig.json --noEmit"
+    "build": "./scripts/with-node22.sh tsc -p tsconfig.json",
+    "typecheck": "./scripts/with-node22.sh tsc -p tsconfig.json --noEmit",
+    "lint": "./scripts/with-node22.sh tsc -p tsconfig.json --noEmit",
+    "cli": "./scripts/with-node22.sh tsx src/cli/index.ts",
+    "doctor": "./scripts/with-node22.sh tsx src/cli/index.ts doctor",
+    "db:up": "docker compose up -d --wait crv-postgres",
+    "db:down": "docker compose down -v",
+    "db:migrate": "./scripts/with-node22.sh tsx src/db/migrate.ts",
+    "db:bootstrap": "./scripts/db-bootstrap.sh",
+    "core:catalog": "./scripts/with-node22.sh tsx scripts/gen-core-catalog.ts",
+    "test": "./scripts/with-node22.sh vitest run",
+    "test:watch": "./scripts/with-node22.sh vitest",
+    "test:unit": "./scripts/with-node22.sh vitest run test/unit",
+    "test:contract": "./scripts/with-node22.sh vitest run test/contract --pool=forks --poolOptions.forks.singleFork",
+    "test:deepseek:real": "RUN_DEEPSEEK_INTEGRATION=1 ./scripts/with-node22.sh vitest run test/integration/deepseek-real.optional.test.ts",
+    "adapters:fixtures": "./scripts/with-node22.sh tsx scripts/show-adapter-fixtures.ts",
+    "test:matrix": "./scripts/test-pg-matrix.sh"
   },
   "dependencies": {
     "cheerio": "^1.0.0",

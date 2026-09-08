@@ -69,8 +69,8 @@ const ENRICHMENT: Record<string, Omit<SourceSeedRow, "name" | "url" | "slug">> =
   },
   "rock-hecho-en-venezuela": {
     siteType: "website", requiresJs: false, trustLevel: "medium", enabled: true, publicDisplay: false,
-    accessStrategy: "WP REST /wp-json/wp/v2/ para inventario (4 posts + 6 páginas, X-WP-Total) + Cheerio sobre las páginas (contenido en Elementor 3.29.2). Rendimiento esperado bajo.",
-    notes: "robots.txt 200, UTF-8, nginx, sin JS para HTML inicial.",
+    accessStrategy: "HTTP/HTML normal sobre la raíz autorizada + WP REST público /wp-json/wp/v2/posts y /pages (4 posts + 6 páginas, X-WP-Total); frontera fija de 3 URLs.",
+    notes: "Verificado 2026-09-08: raíz y REST 200, robots.txt permite acceso, UTF-8, nginx, sin navegador.",
   },
   sincopa: {
     siteType: "database", requiresJs: false, trustLevel: "medium", enabled: true, publicDisplay: false,
@@ -89,13 +89,13 @@ const ENRICHMENT: Record<string, Omit<SourceSeedRow, "name" | "url" | "slug">> =
   },
   "rock-y-pop-venezuela-merch-store": {
     siteType: "website", requiresJs: false, trustLevel: "medium", enabled: false, publicDisplay: false,
-    accessStrategy: "Sin acceso: tienda Shopify deshabilitada.",
-    notes: "HTTP 402 'Store unavailable' confirmado dos auditorías (sigue caída a 2026-09-07). No se elimina del registro; se re-verifica antes de habilitar.",
+    accessStrategy: "LIMITED / DISABLED: sin barrido. robots.txt publica User-agent: * y Disallow: /; no se prueban endpoints alternativos ni Shopify JSON.",
+    notes: "Verificado 2026-09-08 mediante política pública de acceso. Se conserva en el registro, enabled=false; requiere una futura superficie pública autorizada para reclasificar.",
   },
   hemeroteka: {
     siteType: "instagram", requiresJs: true, trustLevel: "low", enabled: false, publicDisplay: false,
-    accessStrategy: "Sin acceso anónimo (aplicación JS, ~2,5 KB de texto visible de 726 KB de HTML). Uso manual asistido únicamente: el operador aporta hallazgos como claims created_by=human. Sin barrido automático. Playwright NO se habilita para esta fuente.",
-    notes: "robots.txt 200. Scraping masivo de Instagram no autorizado por esta especificación.",
+    accessStrategy: "LIMITED / MANUAL / DISABLED: sin barrido. El operador registra URL y extracto en review_queue(manual_review); no se crean snapshots ni claims automáticamente.",
+    notes: "Verificado 2026-09-08: robots.txt prohíbe recolección automatizada sin permiso expreso y declara Disallow: /. Sin login, Playwright, proxies ni evasión.",
   },
 };
 
@@ -173,7 +173,8 @@ function internalSeedSources(): SourceSeedRow[] {
  * `slug` (UNIQUE): en conflicto solo actualiza campos descriptivos
  * (name/url/site_type/access_strategy/requires_js) — NUNCA sobreescribe
  * `enabled`/`trust_level`/`public_display` si la fila ya existía, para no
- * pisar un cambio manual posterior (p. ej. Deska reactivada a mano).
+ * pisar un cambio operativo manual posterior. La capacidad del adapter sigue
+ * siendo una barrera separada: activar una fila limitada no habilita red.
  */
 export async function seedSources(filePath = LINKS_XLSX_PATH): Promise<{ inserted: number; updated: number }> {
   const db = getDb();

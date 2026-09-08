@@ -5,8 +5,9 @@
 > como seeds internos. **Ninguna fuente nueva se añade sin aprobación manual
 > del usuario** (proceso en §6).
 
-**Fecha de verificación: 2026-09-07.** Todos los datos de "sonda" de este
-documento fueron obtenidos ese día con peticiones GET de solo lectura
+**Fecha de verificación general: 2026-09-07; revalidación de Rock Hecho En
+Venezuela, Deska y Hemeroteka: 2026-09-08.** Todos los datos de "sonda" fueron
+obtenidos con peticiones GET de solo lectura
 (homepage + `robots.txt` + endpoints públicos de feed/API), con
 User-Agent identificable, 1 petición a la vez y pausa entre peticiones.
 Lo confirmado se marca **[CONFIRMADO]**; lo no verificado se marca
@@ -89,10 +90,10 @@ de la cabecera están vacías). 11 filas de datos.
 | 7 | Sincopa | `sincopa.com` | Database | medium | sí |
 | 8 | Coleccionistas De Rock Venezolano | `coleccionistasderockvenezolano.wordpress.com` | WordPress | medium | sí |
 | 9 | El Punk En Venezuela | `punkenvenezuela.com` | Website | medium | sí |
-| 10 | Rock & Pop Venezuela Merch Store | `deska.site/collections/rock-pop-venezuela` | Website | medium | **no** (HTTP 402) |
-| 11 | Hemeroteka | `instagram.com/hemeroteka/` | Instagram | low | **no** (manual) |
+| 10 | Rock & Pop Venezuela Merch Store | `deska.site/collections/rock-pop-venezuela` | Website | medium | **no** (`limited/disabled`) |
+| 11 | Hemeroteka | `instagram.com/hemeroteka/` | Instagram | low | **no** (`limited/manual`) |
 
-### 3.1 Resumen de acceso verificado (2026-09-07)
+### 3.1 Resumen de acceso verificado (2026-09-07; tres fuentes revalidadas 2026-09-08)
 
 | # | Fuente | HTTP | robots.txt | Encoding | ¿JS? | Canal estructurado | Volumen medido |
 |---|---|---|---|---|---|---|---|
@@ -105,8 +106,8 @@ de la cabecera están vacías). 11 filas de datos.
 | 7 | Sincopa | 200 | **404** | **windows-1252** | no | ninguno (HTML estático) | **337 artistas + 290 fichas** (rock/pop) |
 | 8 | CRV WordPress | 200 | 200 | UTF-8 | no | API pública WordPress.com | **92 posts** |
 | 9 | El Punk En Venezuela | 200 | 200 | UTF-8 | no | WP REST `/wp-json` | **0 posts / 17 páginas** |
-| 10 | Deska | **402** | 200 | UTF-8 | — | — | tienda deshabilitada |
-| 11 | Hemeroteka (Instagram) | 200 | 200 | UTF-8 | **sí** | ninguno anónimo | ~2,5 KB de texto visible |
+| 10 | Deska | no consumido | 200, `Disallow: /` | — | — | ninguno autorizado | `limited/disabled` |
+| 11 | Hemeroteka (Instagram) | no automatizado | 200, `Disallow: /` + restricción expresa | — | — | ingreso humano | `limited/manual/disabled` |
 
 Total accesible por feed Blogger: **4.922 entradas** en las 5 fuentes Blogspot.
 
@@ -146,8 +147,11 @@ Rock De Vzla, Hippito y Sus Chatarritas, RHV Blogspot)
   REST es mínimo; el grueso del texto vive dentro de estructuras de Elementor
   embebidas en las páginas. **Rendimiento esperado bajo** respecto a lo que
   sugiere el tamaño del sitio.
-- *Estrategia:* WP REST para el inventario + Cheerio sobre el HTML de las 6
-  páginas para el contenido de Elementor.
+- *Estrategia implementada:* adapter HTTP ordinario con frontera fija de tres
+  recursos derivados de la única raíz del XLSX: portada HTML, colección REST
+  `posts` y colección REST `pages`. Cheerio procesa HTML y `content.rendered`;
+  la lista estructurada de la página «Leyendas» puede emitir personas, pero un
+  título de post o la prosa libre por sí solos no.
 - *Confianza:* `medium` (editorial), pero volumen reducido.
 
 **7. Sincopa** (`sincopa.com`) — **la fuente más rica en datos estructurados**
@@ -220,24 +224,28 @@ Rock De Vzla, Hippito y Sus Chatarritas, RHV Blogspot)
 
 **10. Deska / Rock & Pop Venezuela Merch Store**
 
-- **[CONFIRMADO, dos auditorías]** **HTTP 402 "Store unavailable"** (tienda
-  Shopify deshabilitada). `robots.txt` responde 200. Sigue caída a
-  2026-09-07.
-- *Consecuencia:* no hay datos accesibles. Queda registrada con
-  `enabled=false`. No se elimina del registro (es fuente autorizada), pero no
-  se scrapea hasta que vuelva y se re-verifique.
-- **[POR CONFIRMAR]** Todo su contenido y utilidad real.
+- **[CONFIRMADO 2026-09-08]** `robots.txt` responde 200 y publica
+  `User-agent: *` / `Disallow: /`. Bajo la política del proyecto la URL de
+  colección no es consumible automáticamente y no se prueban endpoints
+  Shopify alternativos.
+- *Clasificación implementada:* `limited / disabled`, `enabled=false`, sin
+  `listPages`, parser ni entrada manual semántica. El fetcher vuelve a
+  rechazarla por capacidad aunque alguien cambie accidentalmente `enabled`.
+- *Condición para reconsiderar:* una superficie pública autorizada que no
+  requiera eludir la política de acceso.
 
 **11. Hemeroteka** (Instagram)
 
-- **[CONFIRMADO]** HTTP 200 y ~726 KB de HTML, pero solo ~2,5 KB de texto
-  visible: es una aplicación JavaScript. El contenido real requiere
-  JS/sesión. `robots.txt` 200.
-- *Consecuencia confirmada:* **el scraping anónimo simple NO funciona**, y el
-  scraping masivo de Instagram no está autorizado por esta especificación.
-- *Estrategia:* fuente de **uso manual asistido**: el operador aporta
-  hallazgos puntuales que entran como claims `created_by=human`. Sin barrido
-  automático. Playwright **no** se habilita para esta fuente.
+- **[CONFIRMADO 2026-09-08]** `robots.txt` declara `Disallow: /` y que la
+  recolección automatizada requiere permiso expreso. El proyecto no dispone
+  de una API pública autorizada ni de credenciales para este uso.
+- *Clasificación implementada:* `limited / manual / disabled`, con
+  `enabled=false`. No hay login automatizado, Playwright, proxies, API privada
+  ni descubrimiento de publicaciones.
+- *Entrada disponible:* `sources:evidence` acepta una URL de perfil o
+  permalink de Instagram y un extracto aportados por una persona, valida el
+  alcance y abre `review_queue(manual_review)`. No descarga la URL y no crea
+  `raw_pages`, claims ni entidades; su interpretación queda pendiente.
 - *Confianza:* `low`.
 
 ### 3.3 Qué NO se asume
@@ -252,6 +260,30 @@ Rock De Vzla, Hippito y Sus Chatarritas, RHV Blogspot)
 - El scraping arranca en modo **observación** (descarga + almacenamiento
   crudo, sin claims); la extracción se activa por fuente tras validar su
   estructura real.
+
+### 3.4 Adapters de extracción (fase actual)
+
+El registro cubre los once slugs del XLSX: nueve adapters automáticos
+funcionales (los cinco Blogspot, Rock Hecho En Venezuela, Sincopa,
+Coleccionistas WordPress.com y El Punk En Venezuela), Hemeroteka como adapter
+limitado/manual y Deska como adapter limitado/deshabilitado. Los funcionales
+emiten el mismo contrato de `RawRecord`/claims con URL, selector, extracto y posición de
+evidencia. Los feeds/API se prefieren a HTML; Blogspot mantiene clases por
+dominio aunque comparta infraestructura, y WordPress.com (`posts`) no se
+confunde con El Punk (`pages`).
+
+La extracción automática es conservadora: sólo consume etiquetas explícitas,
+tablas de formación, tracklists y líneas de crédito. La prosa, un título por
+sí solo, o un músico acreditado en un álbum no crean membresía. Todos los
+claims web se persisten inicialmente con confianza `low` y quedan como
+candidatos para revisión; no mutan el core ni crean entidades canónicas.
+
+El crawler conserva la cortesía de §1 y suma límites finitos: 100 páginas de
+feed Blogger y 700 documentos para la frontera estática confirmada de
+Sincopa. Los enlaces descubiertos de Sincopa se restringen al mismo origen y
+a rutas de índice/ficha confirmadas. No se intenta autenticación, CAPTCHA ni
+evasión anti-bot; si una fuente pasara a exigirlos se marca `limited` y se
+documenta, sin reintentos de evasión.
 
 ---
 

@@ -1,0 +1,14 @@
+{
+  "id": "Q-pRpO2sYSI",
+  "snippet": {
+    "title": "Prueba - Álbum completo",
+    "description": "Tracklist:\n00:00 Apertura\n04:07 Segunda canción\n1:02:14 Final\n\nProduced by: Productor de prueba\nRecorded at:\nEstudio Caracas",
+    "channelId": "UCfixture123",
+    "channelTitle": "Canal de prueba",
+    "publishedAt": "2020-01-02T03:04:05Z",
+    "tags": ["rock venezolano", "fixture"],
+    "thumbnails": { "high": { "url": "https://img.example.test/high.jpg" } }
+  },
+  "contentDetails": { "duration": "PT1H5M6S" },
+  "status": { "privacyStatus": "unlisted" }
+}

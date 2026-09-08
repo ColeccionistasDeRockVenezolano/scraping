@@ -52,7 +52,12 @@ async function findFreshRow(sourceId: number, url: string, ttlMs: number) {
  * estáticas). No hace ninguna extracción: solo garantiza que el crudo esté
  * en disco y registrado en ingest.raw_pages.
  */
-export async function fetchAndCache(sourceSlug: string, url: string, ttlDays?: number): Promise<CachedFetch> {
+export async function fetchAndCache(
+  sourceSlug: string,
+  url: string,
+  ttlDays?: number,
+  runId?: number,
+): Promise<CachedFetch> {
   const db = getDb();
   const [source] = await db.select().from(sources).where(eq(sources.slug, sourceSlug));
   if (!source) throw new Error(`fuente desconocida: ${sourceSlug}`);
@@ -66,7 +71,7 @@ export async function fetchAndCache(sourceSlug: string, url: string, ttlDays?: n
     return { cached: true, rawPageId: fresh.id, storedPath: fresh.storedPath, status: fresh.httpStatus ?? 0, sha256: fresh.sha256 };
   }
 
-  const result: FetchResult = await politeFetch(url);
+  const result: FetchResult = await politeFetch(url, sourceSlug);
   const sha256 = createHash("sha256").update(result.body).digest("hex");
   const stored = await storeRawPage(sourceSlug, sha256, result.body, result.headers, result.contentType);
 
@@ -76,7 +81,9 @@ export async function fetchAndCache(sourceSlug: string, url: string, ttlDays?: n
     .where(and(eq(rawPages.sourceId, source.id), eq(rawPages.sha256, sha256)));
 
   if (byContent) {
-    await db.update(rawPages).set({ fetchedAt: result.fetchedAt }).where(eq(rawPages.id, byContent.id));
+    await db.update(rawPages)
+      .set({ fetchedAt: result.fetchedAt, ...(runId === undefined ? {} : { runId }) })
+      .where(eq(rawPages.id, byContent.id));
     log.info({ sourceSlug, url, sha256 }, "contenido ya almacenado (dedupe por hash); fetched_at actualizado");
     return { cached: false, rawPageId: byContent.id, storedPath: byContent.storedPath, status: result.status, sha256 };
   }
@@ -92,6 +99,7 @@ export async function fetchAndCache(sourceSlug: string, url: string, ttlDays?: n
     storedPath: stored.storedPath,
     fetchedAt: result.fetchedAt,
     headers: result.headers,
+    runId,
   }).returning();
   if (!inserted) throw new Error("no se pudo registrar ingest.raw_pages");
 

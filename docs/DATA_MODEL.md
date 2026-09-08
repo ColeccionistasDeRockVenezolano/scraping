@@ -94,8 +94,8 @@ Los FKs hacia tablas core son válidos entre esquemas.
 Las tablas marcadas `(especificación)` son el diseño objetivo; el DDL se
 escribirá en la fase de implementación correspondiente (no en esta fase).
 
-> **REALIZACIÓN (migraciones 0001–0003, re-verificadas contra PostgreSQL 16
-> el 2026-09-07: `tests/run_all.sh` en verde, diff de `public` vacío).**
+> **REALIZACIÓN (migraciones 0001–0007, verificadas contra PostgreSQL 16
+> el 2026-09-08: `tests/run_all.sh` en verde, diff de `public` vacío).**
 > Los nombres reales **mandan** sobre los provisionales de esta sección; la
 > tabla de equivalencia normativa está en CONTRACT §11 y el detalle en
 > `docs/db/ER_INGEST_MEDIA.md`. En resumen: `youtube_videos` y `media_links`
@@ -104,8 +104,9 @@ escribirá en la fase de implementación correspondiente (no en esta fase).
 > `ingest.scrape_runs` (+ `scrape_errors`); `audit_log` →
 > `ingest.merge_audit` (+ `merge_audit_claims`); el enlace video↔álbum es la
 > tabla N:N `media.video_albums`, no una columna. Estados de claim:
-> `candidate/accepted/rejected/conflict/superseded`.
-> `ai_biographies`/`ai_runs` y el audit del CRUD humano se difieren a F6/F7.
+> `candidate/accepted/rejected/conflict/superseded`. La migración 0007 añade
+> auditoría de ER, runs de DeepSeek y biografías editoriales trazables; el
+> audit del CRUD humano sigue diferido a F7.
 >
 > La migración **`0004`** completa `ingest.review_kind` con los tipos de
 > revisión que exige F2 (`missing_url`, `seed_incomplete`,
@@ -132,11 +133,23 @@ Seed: las 11 filas de `Links for Data Scrapping.xlsx` + `youtube_data_api` +
 los dos XLSX como fuentes internas (`yt_master_seed`, `links_seed`).
 
 ### 4.2 `ingest.raw_pages` — almacenamiento crudo
+*(realizado en 0001 + procedencia `run_id` en 0005)*
 
-`id` PK · `source_id` FK · `url` · `final_url` · `http_status` ·
-`content_type` · `sha256` (UNIQUE junto a source_id) · `stored_path`
-(disco, `data/raw/<source>/<sha>.html`) · `fetched_at` · `meta` JSONB.
-UNIQUE(source_id, url) garantiza no duplicar descargas.
+`id` PK · `source_id` FK → `ingest.sources` · `url` (URL solicitada) ·
+`canonical_url` (tras redirects) · `http_status` (CHECK 100–599) ·
+`content_type` · `sha256` (CHECK `^[0-9a-f]{64}$`) · `byte_size` ·
+`stored_path` (disco, `data/raw/<source>/<sha>.html`) · `fetched_at` ·
+`headers` JSONB (payload HTTP original) · `run_id` FK NULL →
+`ingest.scrape_runs` (último run que descargó ese contenido; un cache hit no
+lo cambia) · `created_at`.
+
+**La clave de deduplicación es `UNIQUE(source_id, sha256)`, no la URL.** Es
+deduplicación *por contenido*: si una página vuelve idéntica byte a byte, no
+se crea una fila nueva, solo se actualiza `fetched_at`
+(`src/cache/raw-pages.ts`). Consecuencia aceptada y documentada: dos URLs
+distintas de la misma fuente que devuelvan bytes idénticos comparten una sola
+fila, y la segunda URL no queda registrada como tal. La frescura se decide por
+`fetched_at` contra `CRAWL_CACHE_TTL_DAYS` buscando por `url`/`canonical_url`.
 
 ### 4.3 `ingest.seed_uploads` — filas verbatim del YT Master Spreadsheet
 
@@ -154,7 +167,9 @@ Copia inmutable 1:1 de las 606 filas de datos:
 | status_raw | varchar — 'Unlisted' o vacío (87 filas 'Unlisted') |
 | video_id | varchar(11) NULL — extraído de `watch?v=` o `youtu.be/` (520 filas) |
 | row_number | smallint — fila física del XLSX (para trazabilidad) |
-| sha256 | hash de la fila completa |
+| row_hash | varchar(64) — sha256 de la fila completa (nombre real: `row_hash`, no `sha256`) |
+| run_id | FK NULL → `ingest.scrape_runs` — qué import trajo la fila |
+| imported_at | timestamptz |
 
 Reglas de importación del seed (ver §6): las filas `EMPTY` (órdenes 97 y 440)
 no generan entidades; van directas a `review_queue` (kind `seed_incomplete`).
@@ -193,48 +208,89 @@ El `upload_order` **no se duplica aquí**: se obtiene por
   enriquecimiento por artista). Prohibido el scraping visual de YouTube.
 
 ### 4.5 `ingest.claims` — reclamaciones (corazón del sistema)
-*(realizado: destinos como FKs reales por tipo de entidad, no un `core_id` genérico)*
+*(realizado en 0003: destinos como FKs reales por tipo de entidad, no un
+`core_id` genérico)*
 
-`id` PK · `source_id` FK · `entity_kind` varchar(20) (artist \| person \|
-organization \| album \| track \| artist_membership \| person_organization \|
-album_credit \| track_credit \| album_format \| media) ·
-`core_id` bigint NULL (FK lógico al registro canónico cuando exista) ·
-`field` varchar(60) (release_year, title, genre, biography...) ·
-`raw_value` JSONB · `normalized_value` JSONB ·
-`confidence` varchar(8) (**high \| medium \| low**) ·
-`created_by` varchar(12) (system \| ai \| human) ·
-`status` `ingest.claim_status` (**candidate** \| accepted \| rejected \| conflict \| superseded) ·
-`import_run_id` FK NULL · `raw_page_id` FK NULL · `seed_upload_id` FK NULL ·
-`notes` · `created_at` · `UNIQUE(source_id, entity_kind, field, raw_hash)`
-donde `raw_hash = sha256(canonical_json(raw_value))` → **dedupe de claims,
-piedra angular de la idempotencia**.
+`id` PK · `source_id` FK → `ingest.sources` · `raw_page_id` FK NULL ·
+`seed_upload_id` FK NULL · `entity_kind` `ingest.claim_entity_kind` (artist \|
+person \| organization \| album \| track \| artist_membership \|
+person_organization \| album_credit \| track_credit \| album_format \|
+**youtube_video**) · **11 columnas FK reales** (`artist_id`, `person_id`,
+`organization_id`, `album_id`, `track_id`, `artist_membership_id`,
+`person_organization_id`, `album_credit_id`, `track_credit_id`,
+`album_format_id`, `video_id`) · `field` varchar(80) (release_year, title,
+genre, biography...) · `raw_value` JSONB NOT NULL (valor estructurado
+original) · `normalized_value` JSONB · `raw_hash` varchar(64) ·
+`extractor` + `extractor_version` (parser/adaptador y versión) ·
+`confidence` `ingest.confidence_level` (**high \| medium \| low**) ·
+`status` `ingest.claim_status` (**candidate** \| accepted \| rejected \|
+conflict \| superseded) · `created_by` `ingest.actor_kind` (system \| ai \|
+human) · `run_id` FK NULL → `ingest.scrape_runs` · `notes` · `created_at` ·
+`updated_at`.
+
+La migración `0007_entity_resolution_ai` añade `identity_raw` (identidad
+recibida intacta), `identity_key` (normalización primaria con tildes) e
+`identity_secondary_key` (forma sin diacríticos, solo señal secundaria). Las
+claves derivadas nunca sustituyen `raw_value` ni la evidencia original.
+
+Constraints de destino (mismo patrón anti-polimorfismo que `album_credits` en
+el core):
+
+- `claims_one_target_chk`: exactamente **una** FK de destino, o **ninguna** —
+  el caso "cero destinos" es una propuesta de entidad todavía inexistente.
+- `claims_kind_matches_target_chk`: la FK llena tiene que corresponder al
+  `entity_kind` declarado.
+
+**Dedupe (idempotencia):** índice único `claims_dedupe_uk` sobre
+`(source_id, COALESCE(raw_page_id,0), COALESCE(seed_upload_id,0), entity_kind,
+COALESCE(<cada FK de destino>,0), field, raw_hash)`, con
+`raw_hash = sha256(canonical_json(raw_value))`. Incluye la página y el destino
+porque dos páginas distintas de la misma fuente **sí** pueden afirmar lo mismo
+y ambas evidencias importan.
 
 ### 4.6 `ingest.claim_evidence` — dónde exactamente se vio el claim
 
+*(realizado en 0003)*
+
 `id` PK · `claim_id` FK · `raw_page_id` FK NULL · `seed_upload_id` FK NULL ·
 `url` · `excerpt` text (fragmento textual) · `selector` varchar(300) ·
-`position` int · `captured_at` · `sha256` (de excerpt+url).
+`position` int · `evidence_hash` varchar(64) (de excerpt+url; nombre real, no
+`sha256`) · `captured_at` · `UNIQUE(claim_id, evidence_hash)`.
 
 Un claim puede tener N evidencias. En conflictos **ambas afirmaciones y sus
 evidencias se conservan** (§7).
 
 ### 4.7 Tablas de alias — variantes de nombre para resolución
-*(realizado como 5 tablas: `ingest.artist_aliases`, `person_aliases`,
-`organization_aliases`, `album_aliases`, `track_aliases`, cada una con FK
-real a su tabla core y un índice único de alias primario)*
+*(realizado en 0003 como 5 tablas: `ingest.artist_aliases`, `person_aliases`,
+`organization_aliases`, `album_aliases`, `track_aliases`. No hay
+`entity_kind`/`core_id`: cada tabla tiene la FK real a su tabla core)*
 
-`id` PK · `entity_kind` varchar(20) · `core_id` bigint · `alias` varchar(200) ·
-`kind` varchar(30) (name_variant \| acronym \| typographic \| misspelling) ·
-`is_primary` boolean · `source_id` FK NULL ·
-`UNIQUE(entity_kind, core_id, alias)`.
+Columnas de cada una (`<entidad>_id` es `artist_id`, `person_id`,
+`organization_id`, `album_id` o `track_id`):
+
+`id` PK · `<entidad>_id` FK NOT NULL → tabla core (ON DELETE CASCADE) ·
+`alias` varchar(200) · `alias_type` `ingest.alias_type` (**name_variant \|
+spelling_variant \| former_name \| stage_name \| acronym \| misspelling \|
+alternate_title \| other**) · `normalized_alias` varchar(200) NOT NULL (forma
+comparable, la que usa entity resolution) · `is_primary` boolean ·
+`confidence` `ingest.confidence_level` · `source_id` FK NULL ·
+`raw_page_id` FK NULL · `claim_id` FK NULL (evidencia de origen) · `notes` ·
+`created_at` · `UNIQUE(<entidad>_id, alias)` + índice parcial único de un solo
+alias primario por entidad.
 
 ### 4.8 `ingest.conflicts` — desacuerdos entre fuentes
 
-`id` PK · `claim_a_id` FK · `claim_b_id` FK · `entity_kind` · `core_id` ·
-`field` · `value_a` JSONB · `value_b` JSONB ·
-`status` varchar(16) (open \| resolved_a \| resolved_b \| both_kept \| dismissed) ·
-`resolution_note` text · `resolved_by` varchar(12) · `created_at` ·
-`resolved_at`.
+*(realizado en 0003)*
+
+`id` PK · `claim_a_id` FK · `claim_b_id` FK · `entity_kind`
+`ingest.claim_entity_kind` · `field` varchar(80) · `value_a` JSONB ·
+`value_b` JSONB · `status` `ingest.conflict_status` (open \| resolved_a \|
+resolved_b \| both_kept \| dismissed) · `resolution_note` text ·
+`resolved_by` `ingest.actor_kind` · `created_at` · `resolved_at` ·
+CHECK `claim_a_id <> claim_b_id` · `UNIQUE(claim_a_id, claim_b_id, field)`.
+
+No lleva `core_id`: la entidad afectada se obtiene de los propios claims, que
+ya tienen FK real al core.
 
 **Invariante:** mientras un conflicto está `open`, el campo canónico afectado
 no se modifica; ambas afirmaciones quedan citadas con evidencia.
@@ -266,21 +322,31 @@ normalización. Valor no listado → no bloquea la ingesta: se acepta el claim
 pero se abre `review_queue(genre_unknown)`.
 
 ### 4.11 `ingest.ai_biographies` — narrativa generada por IA (separada)
+*(realizado en 0007)*
 
-`id` PK · `entity_kind` varchar(12) · `core_id` bigint ·
-`body` text · `model` varchar(60) · `prompt_version` varchar(20) ·
-`status` (draft \| approved \| rejected) · `review_queue_id` FK NULL ·
-`created_at`.
-
-Nunca se copia a `artists.biography` / `persons.biography` sin aprobación
-humana explícita vía review.
+`id` PK · `entity_kind` (ARTIST \| PERSON) · FKs reales `artist_id` /
+`person_id` con CHECK de exactamente un destino · `ai_run_id` FK RESTRICT ·
+`body` · `facts_snapshot` JSONB · `model` · `prompt_version` · `status`
+(draft \| approved \| rejected) · `review_queue_id` FK · `created_at`.
+`ingest.ai_biography_claims` enlaza cada borrador con todos los claims
+aceptados que la respuesta citó. El generador excluye claims conflictivos y
+rechaza IDs no suministrados. Aprobar un borrador solo cambia este artefacto y
+su review: **nunca** copia texto a `artists.biography`/`persons.biography` ni
+modifica hechos estructurados.
 
 ### 4.12 `media.media_links` — imágenes y medios (sin descarga masiva)
 
-`id` PK · `entity_kind` · `core_id` · `url` text · `source_id` FK ·
-`media_type` varchar(20) (cover \| artist_photo \| scan \| logo \| other) ·
-`meta` JSONB (título, dimensiones si la fuente las da) · `created_at` ·
-`UNIQUE(entity_kind, core_id, url)`.
+*(realizado en 0002)*
+
+`id` PK · `entity_kind` varchar(20) (CHECK artist \| person \| organization \|
+album) · **4 FKs reales** (`artist_id`, `person_id`, `organization_id`,
+`album_id`) con `media_links_one_target_chk` (exactamente un destino) y
+`media_links_kind_matches_target_chk` (el destino corresponde al kind) ·
+`url` text · `media_type` varchar(20) (cover \| artist_photo \| scan \| logo \|
+other) · `source_id` FK NULL · `meta` JSONB (título, dimensiones si la fuente
+las da) · `created_at` · índice único sobre
+`COALESCE(<cada FK>,0) + url` (equivalente al viejo
+`UNIQUE(entity_kind, core_id, url)`, pero con integridad referencial real).
 
 Se almacena URL + fuente + metadatos. Prohibida la descarga masiva de
 imágenes; solo `artists.picture_url` / `albums.cover_url` se proyectan al
@@ -289,24 +355,54 @@ core cuando un claim de media es aceptado.
 ### 4.13 `ingest.scrape_runs` — ejecuciones de importación
 *(+ `ingest.scrape_errors`: un error de fila nunca aborta el run)*
 
-`id` PK · `kind` varchar(30) (seed_yt \| scrape_source \| yt_api_sync \|
-enrich_artist \| merge_run) · `started_at` · `finished_at` ·
-`status` (running \| ok \| partial \| failed) · `params` JSONB ·
+*(realizado en 0001)*
+
+`id` PK · `kind` `ingest.run_kind` (seed_yt \| scrape_source \| yt_api_sync \|
+enrich_artist \| merge_run \| manual) · `source_id` FK NULL ·
+`status` `ingest.run_status` (running \| ok \| partial \| failed) ·
+`started_at` · `finished_at` (CHECK `>= started_at`) · `params` JSONB ·
 `counters` JSONB (total, created, updated, skipped, failed, queued_review) ·
-`error_log` text.
+`error_log` text · `created_at`.
+
+`ingest.scrape_errors`: `id` PK · `run_id` FK NOT NULL (ON DELETE CASCADE) ·
+`raw_page_id` FK NULL · `url` · `error_kind` (CHECK http_error \| network \|
+parse \| validation \| extraction \| other) · `message` · `retry_count` ·
+`occurred_at`.
 
 ### 4.14 `ingest.ai_runs` — auditoría de llamadas a DeepSeek
+*(realizado en 0007)*
 
-`id` PK · `prompt_hash` varchar(64) UNIQUE (cache/idempotencia de costo) ·
-`task_kind` varchar(30) · `model` · `input_summary` JSONB ·
-`output_summary` JSONB · `tokens_in` · `tokens_out` · `created_at`.
+`id` PK · `prompt_hash` varchar(64) UNIQUE (caché/idempotencia de costo) ·
+`task_kind` · `model` · `schema_version` · `status` (validated \| rejected \|
+failed) · `input_summary`/`output_summary` · payloads request/response ·
+`raw_response` · tokens in/out · error · `created_at`. Solo una respuesta
+`validated` puede reutilizarse desde caché.
+
+La misma migración crea `ingest.entity_resolution_decisions`: tipo ARTIST /
+PERSON / ALBUM / TRACK / ORGANIZATION, FKs reales opcionales al candidato,
+nombre original y normalizado, contexto, score [0..1], acción
+AUTO_MATCH/POSSIBLE_MATCH/REVIEW/NO_MATCH, `features`, candidatos, thresholds,
+explicación y vínculo opcional al `ai_run`. Es el registro explicable de cada
+resolución; una propuesta DeepSeek no cambia por sí sola la acción ni el core.
 
 ### 4.15 `ingest.merge_audit` — auditoría append-only
 *(+ `ingest.merge_audit_claims`: qué claims respaldan cada escritura)*
 
-`id` PK · `at` timestamptz · `actor` varchar(16) (system \| ai \| human) ·
-`entity_kind` · `core_id` · `action` varchar(20) ·
-`before` JSONB · `after` JSONB · `claim_id` FK NULL.
+*(realizado en 0003)*
+
+`id` PK · `run_id` FK NULL → `ingest.scrape_runs` (qué run lo ejecutó) ·
+`entity_kind` `ingest.claim_entity_kind` (restringido a las 10 entidades core;
+`youtube_video` no aplica: el merge solo escribe en `public`) · **10 FKs
+reales** al core con `merge_audit_one_target_chk` (exactamente un destino) y
+`merge_audit_kind_matches_target_chk` · `field` varchar(80) ·
+`old_value` JSONB (NULL = inserción) · `new_value` JSONB (NULL = borrado) ·
+`reason` text NOT NULL · `confidence` `ingest.confidence_level` ·
+`performed_by` `ingest.actor_kind` (system \| ai \| human) · `at` timestamptz ·
+CHECK `old_value IS DISTINCT FROM new_value`.
+
+Las **fuentes** de cada escritura no son una columna: son la tabla puente
+`ingest.merge_audit_claims` (merge_audit ↔ claims), que permite N claims de N
+fuentes respaldando un mismo cambio.
 
 Todo write sobre tablas core pasa por el merge engine y deja su entrada aquí.
 
@@ -419,7 +515,7 @@ raw_pages (HTML crudo en disco, hash)
    │  scraper adapter por fuente → normalización (Zod)
    ▼
 claims (raw_value + normalized_value + confidence + created_by)
-   │  entity resolution (normalize → alias → fuzzy → DeepSeek asistido)
+   │  entity resolution (normalize → alias/contexto → fuzzy solo señal → DeepSeek propuesta)
    │  merge engine según confianza (ver CONTRACT §4)
    ▼
 tablas core (artists, persons, organizations, albums, tracks, credits…)

@@ -13,6 +13,9 @@ desde aquí: estas migraciones solo crean objetos en los schemas `ingest` y
 | `0002_media.up/down.sql` | Schema `media`: `youtube_videos`, `video_artists`, `video_albums`, `video_tracks`, `media_links` |
 | `0003_ingest_claims_identity.up/down.sql` | Claims/evidencia, aliases ×5, `conflicts`, `review_queue`, `merge_audit` (+ `claim_id` en tablas de media) |
 | `0004_review_kinds.up/down.sql` | Extiende `ingest.review_kind` con los 8 kinds de ingestión/IA que exige F2 (`missing_url`, `seed_incomplete`, `media_type_no_album`, `genre_unknown`, `new_source`, `low_confidence`, `ai_biography`, `ai_entity_resolution`) |
+| `0005_raw_pages_run.up/down.sql` | Añade `raw_pages.run_id` + FK/índice para saber qué run descargó cada snapshot |
+| `0006_youtube_pipeline.up/down.sql` | Estado y auditoría auxiliar del import/sync de YouTube |
+| `0007_entity_resolution_ai.up/down.sql` | Identidad original+claves derivadas, decisiones ER explicables, runs DeepSeek y biografías trazables |
 
 Documentación ER completa: `../docs/db/ER_INGEST_MEDIA.md`.
 
@@ -44,7 +47,7 @@ re-aplicar versiones ya registradas.
 
 ## Rollback
 
-Aplicar los `.down.sql` en orden inverso (0004 → 0003 → 0002 → 0001). Cada
+Aplicar los `.down.sql` en orden inverso (0007 → 0006 → 0005 → 0004 → 0003 → 0002 → 0001). Cada
 down elimina únicamente los objetos de su schema auxiliar; los FKs protegen
 contra borrados peligrosos (p. ej. no se puede dropear `ingest.sources`
 mientras `raw_pages`/`claims` la referencien sin `CASCADE` explícito en el

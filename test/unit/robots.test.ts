@@ -3,7 +3,7 @@
 // fail-open cuando robots.txt no existe (caso real: sincopa.com, 404).
 import { afterEach, beforeEach, describe, expect, it } from "vitest";
 import { createServer, type Server } from "node:http";
-import { isAllowedByRobots } from "../../src/fetcher/robots.js";
+import { getRobotsCrawlDelay, getRobotsSitemaps, isAllowedByRobots } from "../../src/fetcher/robots.js";
 
 let server: Server;
 let baseUrl: string;
@@ -31,6 +31,13 @@ describe("isAllowedByRobots", () => {
     await expect(isAllowedByRobots(`${baseUrl}/cualquier-cosa`)).resolves.toBe(true);
   });
 
+  it("bloquea por seguridad si robots.txt falla temporalmente", async () => {
+    responder = (path) => path === "/robots.txt"
+      ? { status: 503, body: "temporal" }
+      : { status: 200, body: "ok" };
+    await expect(isAllowedByRobots(`${baseUrl}/cualquier-cosa`)).resolves.toBe(false);
+  });
+
   it("bloquea un path bajo Disallow para *", async () => {
     responder = (path) =>
       path === "/robots.txt"
@@ -56,5 +63,25 @@ describe("isAllowedByRobots", () => {
         : { status: 200, body: "ok" };
     await expect(isAllowedByRobots(`${baseUrl}/x`)).resolves.toBe(false);
     await expect(isAllowedByRobots(`${baseUrl}/y`)).resolves.toBe(true);
+  });
+
+  it("interpreta comodines y el ancla $ sobre path + query", async () => {
+    responder = (path) =>
+      path === "/robots.txt"
+        ? { status: 200, body: "User-agent: *\nDisallow: /*?preview=true$\nDisallow: /tmp/*.pdf$\n" }
+        : { status: 200, body: "ok" };
+    await expect(isAllowedByRobots(`${baseUrl}/post?preview=true`)).resolves.toBe(false);
+    await expect(isAllowedByRobots(`${baseUrl}/post?preview=true&x=1`)).resolves.toBe(true);
+    await expect(isAllowedByRobots(`${baseUrl}/tmp/catalogo.pdf`)).resolves.toBe(false);
+    await expect(isAllowedByRobots(`${baseUrl}/tmp/catalogo.pdf?download=1`)).resolves.toBe(true);
+  });
+
+  it("expone Crawl-delay y Sitemap de la política seleccionada", async () => {
+    responder = (path) =>
+      path === "/robots.txt"
+        ? { status: 200, body: `Sitemap: ${baseUrl}/sitemap.xml\nUser-agent: *\nCrawl-delay: 1.5\n` }
+        : { status: 200, body: "ok" };
+    await expect(getRobotsCrawlDelay(`${baseUrl}/x`)).resolves.toBe(1500);
+    await expect(getRobotsSitemaps(`${baseUrl}/x`)).resolves.toEqual([`${baseUrl}/sitemap.xml`]);
   });
 });

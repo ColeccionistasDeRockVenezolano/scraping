@@ -5,7 +5,7 @@
 > (`crv_simple_v1.sql`): las migraciones posteriores solo tocan el esquema
 > `ingest`.
 >
-> Estado actual (2026-09-07): **F0 en curso, base de aplicación lista**.
+> Estado actual (2026-09-08): **F0 cerrado y endurecido, F1 completo**.
 > Node 22 LTS instalado (vía nvm; ver nota abajo) y verificado como
 > `>=22.0.0` en `package.json`. Repositorio git inicializado con
 > `.gitignore` cubriendo secretos, `node_modules`, `data/raw` y salidas
@@ -25,7 +25,7 @@
 > (`crv_simple_v1.sql.sha256` + `verify_core_hash()`), cerrando el hallazgo
 > de CONTRACT §11.2. Puerto a Vitest iniciado:
 > `test/contract/core-and-schema.test.ts` reproduce el contrato completo
-> (core + 0001-0004 + rollback, diff de `pg_dump` vacío) **y** ejercita el
+> (core + 0001-0007 + rollback, diff de `pg_dump` vacío) **y** ejercita el
 > schema Drizzle real (inserts/joins a través de core+ingest+media),
 > contra un contenedor desechable levantado por `test/support/pg-container.ts`.
 > **F0 cerrado.** **F1 completo también:** `ingest.sources` sembrado (14
@@ -33,12 +33,21 @@
 > vivo** contra `rhv-blogspot` (264 entradas reales, TTL confirmado con 0
 > peticiones nuevas en la re-descarga) — ver detalle en la sección F1 más
 > abajo. **Falta:** el resto de comandos de CLI de F2+ (`seed:import-yt`,
-> `yt:*`, `merge:run`, `review:*`, `genre:*`, `export:json`).
+> `yt:*`, `merge:run`, `review:*`, `genre:*`, `export:json`). El núcleo de
+> **F5/F6** sí está implementado: ER tipada para cinco entidades, merge y
+> conflictos auditados, review programática, gateway DeepSeek opcional y
+> biografías separadas. Los criterios globales de F5 que dependen del seed y
+> dos barridos Blogger siguen pendientes y no se declaran cerrados aquí.
 >
-> Nota de entorno: la máquina no tenía Node 22 en el PATH por defecto (solo
-> Node 20 vía `nodesource`), pero sí tenía un Node 22.23.1 ya instalado por
-> `nvm` sin activar; se corrigió el orden de `~/.bashrc` para que los shells
-> interactivos usen Node 22 automáticamente. No requirió `sudo`.
+> Nota de entorno (actualizada 2026-09-08): la máquina no tenía Node 22 en el
+> PATH por defecto (solo Node 20 vía `nodesource`), pero sí un Node 22.23.1
+> instalado por `nvm` sin activar. La corrección de `~/.bashrc` solo arreglaba
+> los shells **interactivos**: bash no lee `~/.bashrc` en shells no
+> interactivos, así que cron, CI, hooks de git y agentes seguían resolviendo
+> Node 20 en silencio contra `engines.node: >=22.0.0`. La solución vive ahora
+> en el repo y no en el dotfile: `.nvmrc`, `.npmrc` (`engine-strict=true`),
+> `scripts/with-node22.sh` (por el que pasan todos los scripts npm) y
+> `assertSupportedNode()` en `src/config/runtime.ts`. No requirió `sudo`.
 
 ---
 
@@ -74,17 +83,54 @@ Entregables:
 - ✅ *Ya hecho:* `doctor` (`src/doctor/`, `npm run doctor`): verifica
   integridad del core (hash/catálogo), schemas auxiliares, migraciones
   aplicadas y estado de fuentes.
+- ✅ *Ya hecho:* **Arranque reproducible** — `docker-compose.yml`
+  (PostgreSQL 16 local en el puerto 5433, para no chocar con otro PostgreSQL
+  de la máquina) y `npm run db:bootstrap` (`scripts/db-bootstrap.sh`), que de
+  cero deja `doctor` en verde: crea `.env` desde `.env.example`, verifica el
+  hash del core, levanta la base, aplica el core **verbatim** solo si falta,
+  migra, siembra `ingest.sources` y corre `doctor`. Idempotente.
+- ✅ *Ya hecho:* **Guardia de runtime** — `.nvmrc` + `.npmrc`
+  (`engine-strict=true`) + `scripts/with-node22.sh` + `assertSupportedNode()`
+  (`src/config/runtime.ts`), invocada por el CLI, por el runner de migraciones
+  y por el chequeo `runtime.node` de `doctor`. Cierra el hallazgo de
+  CONTRACT §11.2: las ejecuciones **no interactivas** ya no pueden correr con
+  Node 20 en silencio.
+- ✅ *Ya hecho:* **Huella del catálogo core** (`src/doctor/core-catalog.json`,
+  178 objetos: enums con labels, columnas con tipo/NOT NULL/identidad/default,
+  vistas con definición, constraints e índices). `doctor` la compara entrada
+  por entrada contra la base viva, de modo que un `ALTER` manual sobre
+  `public` se detecta aunque los conteos (7/10/3) sigan cuadrando.
+  Regenerable con `npm run core:catalog`; validada por mutación en
+  `test/contract/core-catalog.test.ts`.
+- ✅ *Ya hecho:* **Matriz de PostgreSQL** — `npm run test:matrix`
+  (`scripts/test-pg-matrix.sh`) ejecuta el harness contra `postgres:15-alpine`
+  y `postgres:16-alpine`; el contrato exige "PostgreSQL 15+" y hasta ahora
+  solo se probaba 16 por defecto. Ambas en verde.
+- ✅ *Ya hecho:* **Documentación reconciliada con el DDL** — `DATA_MODEL.md`
+  §4.2/§4.3/§4.5/§4.6/§4.7/§4.8/§4.12/§4.13/§4.15 reescritas contra
+  `migrations/*.up.sql` (el caso material: §4.2 decía
+  `UNIQUE(source_id, url)`; el real es `UNIQUE(source_id, sha256)`, dedupe por
+  contenido); §4.11/§4.14 actualizadas con la realización de F6 en 0007;
+  `docs/db/ER_INGEST_MEDIA.md` actualizado al conjunto vigente de migraciones.
 - ✅ *Ya hecho (parcial):* Puerto a Vitest —
   `test/contract/core-and-schema.test.ts` reproduce el contrato de
-  `tests/run_all.sh` (core + 0001-0004 + rollback, diff de `pg_dump` vacío)
+  `tests/run_all.sh` (core + 0001-0007 + rollback, diff de `pg_dump` vacío)
   contra un contenedor desechable propio (`test/support/pg-container.ts`),
   y además ejercita el schema Drizzle real (inserts/joins). El harness bash
   original se conserva tal cual (no depende de Node).
 
-Criterios de salida: `doctor` en verde (✅ verificado); contract-tests del
-core en verde, diff de `public` vacío (✅ verificado, bash y Vitest); base
-`crv_test` desechable y reproducible (✅ vía `test/support/pg-container.ts`
-y `tests/lib_pg.sh`).
+Criterios de salida: `doctor` en verde (✅ verificado — **desde cero con
+`npm run db:bootstrap`**, sin configuración manual); contract-tests del core
+en verde, diff de `public` vacío (✅ verificado, bash y Vitest, PostgreSQL 15
+y 16); base desechable y reproducible (✅ vía `test/support/pg-container.ts`,
+`tests/lib_pg.sh` y `docker-compose.yml`).
+
+Estado de la suite tras el cierre de F0/F1 (2026-09-08): `npm test` = **28 tests
+en 5 archivos**, `npm run test:matrix` en verde en 15 y 16,
+`npm run typecheck` limpio.
+
+Fuera de alcance de F0, documentado y diferido: el servidor HTTP
+(`src/api/`, F8) — por eso no existe script `dev`.
 
 ---
 
@@ -102,11 +148,14 @@ Entregables:
   2 XLSX como seeds internos = **14 filas** (10 `enabled=true`: 9 del XLSX +
   YouTube Data API; Deska y Hemeroteka `enabled=false` por lo ya
   confirmado en SOURCES.md §3.2). Idempotente por `slug`: un re-seed nunca
-  pisa `enabled`/`trust_level` si la fila ya existía (protege un cambio
-  manual posterior, p. ej. Deska reactivada a mano).
+  pisa `enabled`/`trust_level` si la fila ya existía (protege cambios
+  operativos manuales); el registro de adapter bloquea igualmente toda fuente
+  clasificada como limitada.
 - ✅ *Ya hecho:* `fetcher` (`src/fetcher/http.ts`): robots.txt real
   (`src/fetcher/robots.ts`, algoritmo Allow/Disallow por regla más
-  específica), cortesía (concurrencia=1 + demora mínima por dominio),
+  específica, comodines `*`, ancla `$`, `Crawl-delay` y `Sitemap`), cortesía
+  (concurrencia=1 + mayor demora entre la local y la declarada por dominio),
+  fail-closed ante red/5xx de robots (404 sigue significando sin reglas),
   timeout, reintento con backoff exponencial (no reintenta 4xx salvo 429).
 - ✅ *Ya hecho:* `cache` (`src/cache/raw-pages.ts`) sobre `ingest.raw_pages`,
   respetando la unicidad real de la tabla (`UNIQUE(source_id, sha256)`,
@@ -114,11 +163,20 @@ Entregables:
   TTL configurable (`CRAWL_CACHE_TTL_DAYS`).
 - ✅ *Ya hecho:* Storage crudo en `data/raw/<source-slug>/<sha256>.<ext>`
   (+ `.headers.json` adyacente) vía `src/storage/raw.ts`.
+- ✅ *Ya hecho:* migración `0005_raw_pages_run`: `raw_pages.run_id` enlaza
+  cada snapshot con el último run que realmente lo descargó (un cache hit no
+  falsea la procedencia).
 - ✅ *Ya hecho:* CLI `sources:list` / `sources:seed` / `sources:add`
   (crea `new_source` en `review_queue` con `enabled=false`, nunca habilita
   directo — verificado) / `scrape <slug> --observe` (solo descarga +
-  cachea, sin extracción; implementado para `site_type=blogspot` vía el
-  feed nativo paginado; el resto de `site_type` esperan sus adapters en F4).
+  cachea, sin extracción): pagina el feed de Blogspot y también observa las
+  URLs/entrypoints públicos conocidos de WordPress, sitios web y Sincopa.
+  Los tipos con flujo propio (`youtube_api`, `spreadsheet`, `instagram`) se
+  rechazan explícitamente en lugar de simular un scrape.
+- ✅ *Ya hecho:* errores por recurso persistidos en `ingest.scrape_errors`
+  (kind, mensaje, reintentos, URL y `raw_page_id` cuando existe). Un error
+  aislado no aborta la cola; el checkpoint y las URLs pendientes quedan en
+  `scrape_runs.params` y el siguiente run las reanuda.
 
 Criterios de salida: ✅ **verificado en vivo** contra `rhv-blogspot`
 (RHV Blogspot, la fuente Blogger más pequeña) — barrido de observación
@@ -127,7 +185,8 @@ SOURCES.md §3.1); re-descarga dentro del TTL: **0 peticiones nuevas**, las
 11 páginas servidas 100% desde caché. Automatizado además en
 `test/contract/fetcher-observe.test.ts` contra un servidor Blogger simulado
 (hermético, sin depender del sitio real en CI), incluyendo robots.txt real
-con Disallow y el caso de dedupe por contenido.
+con Disallow, dedupe por contenido, observación no-Blogger, procedencia por
+run y un 503 intermedio que se persiste, no aborta y se recupera al reanudar.
 
 ---
 
@@ -179,7 +238,8 @@ enlace primario en `media.video_albums`; ningún álbum creado por videos
 
 **Objetivo:** extracción masiva por fuente y dirigida por artista.
 
-Orden revisado por **valor confirmado** en la auditoría del 2026-09-07
+Orden revisado por **valor confirmado** en la auditoría del 2026-09-07 y la
+revalidación de las tres fuentes restantes del 2026-09-08
 (SOURCES.md §3), no solo por costo:
 
 1. Adapter `legacyFrameset` → **sincopa.com**. Promovido al primer puesto:
@@ -193,10 +253,12 @@ Orden revisado por **valor confirmado** en la auditoría del 2026-09-07
 3. Adapter `wordpressCom` → coleccionistasderockvenezolano (92 posts, API
    pública de WordPress.com).
 4. Adapter `wordpress` → punkenvenezuela.com (**recorrer `pages`: tiene 0
-   posts y 17 páginas**) y rockhechovenezuela.com (4 posts + 6 páginas;
-   rendimiento esperado bajo, contenido dentro de Elementor).
-5. `manualOnly` → Instagram Hemeroteka (entrada manual asistida; sin barrido).
-6. Deska: registrada pero `enabled=false` (HTTP 402 confirmado dos veces).
+   posts y 17 páginas**) y rockhechovenezuela.com (portada HTML + 4 posts + 6
+   páginas REST; frontera fija, sin navegador).
+5. `limitedManual` → Instagram Hemeroteka (`limited/manual/disabled`): entrada
+   humana a revisión, sin fetch, login, Playwright, proxy ni claim ficticio.
+6. `limitedDisabled` → Deska: `enabled=false`; `robots.txt` declara
+   `Disallow: /`, por lo que no se consume ni se prueban endpoints alternos.
 
 Entregables transversales: escribir en `ingest.sources.access_strategy` el
 canal confirmado de cada fuente; caracterizar la estructura interna de los
@@ -206,7 +268,8 @@ incorpora**, ninguna fuente activa lo requiere.
 Criterios de salida: Sincopa produciendo claims de miembros y sellos con
 evidencia (excerpt+selector+url) y acentos correctos tras la decodificación;
 al menos 2 fuentes Blogger produciendo claims con evidencia; ninguna fuente
-no autorizada scrapeada.
+no autorizada scrapeada; las once filas del XLSX con capacidad explícita (9
+automáticas, 1 manual limitada y 1 deshabilitada).
 
 ---
 
@@ -216,15 +279,21 @@ no autorizada scrapeada.
 confianza.
 
 Entregables:
-- ER determinista (normalize → alias → fuzzy → asistencia opcional).
-- `merge engine` con advisory locks e idempotencia por entidad.
-- `conflict engine` + `ingest.conflicts` (conservación de ambas afirmaciones).
-- `review_queue` operativa con CLI (`review:list|approve|dismiss`).
-- Regla dura verificada: crédito de álbum ≠ membresía.
+- ✅ ER determinista tipada (ARTIST/PERSON/ALBUM/TRACK/ORGANIZATION), con
+  scores/features y fuzzy incapaz de autorizar por sí solo.
+- ✅ `merge engine` con advisory locks, dedupe y auditoría de todo write core.
+- ✅ `conflict engine` + `ingest.conflicts` (ambas afirmaciones/evidencias) y
+  resolución exclusivamente humana.
+- ✅ `review_queue` operativa como módulo (`src/review/queue.ts`); comandos CLI
+  aún pertenecen al cierre operativo de F7.
+- ✅ Regla dura verificada: crédito de álbum ≠ membresía.
 
 Criterios de salida: merge del seed + 2 fuentes Blogger con 0 duplicados
 (re-run idéntico); conflictos reales conservados con evidencia doble; una
-resolución de conflicto de muestra ejecutada y auditada.
+resolución de conflicto de muestra ejecutada y auditada. El motor y la
+resolución de muestra están cubiertos por
+`test/contract/entity-resolution-merge.test.ts`; falta ejecutar el criterio
+de corpus completo seed + 2 Blogger.
 
 ---
 
@@ -233,14 +302,17 @@ resolución de conflicto de muestra ejecutada y auditada.
 **Objetivo:** IA puntual, auditable y opcional.
 
 Entregables:
-- Gateway Zod-contract + `ingest.ai_runs` (prompt_hash cache).
-- Casos: ER ambiguo (sugerencia), extracción narrativa de biografías largas
-  (`ingest.ai_biographies`, draft), triage de conflictos.
-- Presupuestos por run; el sistema funciona con IA desactivada.
+- ✅ Gateway aislado con JSON/Zod estricto + `ingest.ai_runs` (prompt_hash
+  cache); modelos por rol configurables, sin tools ni acceso a SQL/merge.
+- ✅ Casos: ER ambiguo y conflicto (propuestas), extracción/normalización con
+  Flash y biografías trazables (`ai_biographies` + bridge de claims).
+- ✅ Presupuesto/timeout por llamada; suite offline con mock y smoke test real
+  opt-in mediante `npm run test:deepseek:real`.
 
 Criterios de salida: 3 casos de uso cubiertos con salida validada por Zod;
 ninguna escritura al core atribuida a `ai` con confianza superior a `low`
 sin aprobación; caché de prompts verificado (mismo prompt → 1 llamada).
+✅ Cubierto por tests unitarios y contractuales; el test real se omite sin key.
 
 ---
 

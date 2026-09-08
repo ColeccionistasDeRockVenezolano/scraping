@@ -4,7 +4,7 @@
 // peticiones (por defecto 1 s, configurable por CRAWL_DELAY_MS).
 import { moduleLogger } from "../logger/index.js";
 import { getEnv } from "../config/env.js";
-import { isAllowedByRobots } from "./robots.js";
+import { getRobotsCrawlDelay, isAllowedByRobots } from "./robots.js";
 
 const log = moduleLogger("fetcher:http");
 
@@ -25,13 +25,29 @@ export class RobotsDisallowedError extends Error {
   }
 }
 
-// Cortesía por dominio: 1 petición concurrente + demora mínima entre
-// peticiones. Una promesa-cola por hostname serializa las peticiones.
+/** Error terminal después de agotar los reintentos configurados. */
+export class FetchFailedError extends Error {
+  readonly retryCount: number;
+  readonly url: string;
+
+  constructor(url: string, retryCount: number, cause: unknown) {
+    super(
+      `falló GET ${url} después de ${retryCount} reintento(s): ${cause instanceof Error ? cause.message : String(cause)}`,
+      { cause },
+    );
+    this.name = "FetchFailedError";
+    this.url = url;
+    this.retryCount = retryCount;
+  }
+}
+
+// Cortesía por fuente (y, por tanto, también por dominio cuando una fuente
+// tiene un solo host): 1 petición concurrente + demora mínima. La clave
+// explícita evita que una fuente monopolice otra si comparten CDN/dominio.
 const domainQueues = new Map<string, Promise<unknown>>();
 const lastRequestAt = new Map<string, number>();
 
-async function withDomainThrottle<T>(hostname: string, fn: () => Promise<T>): Promise<T> {
-  const delayMs = getEnv().CRAWL_DELAY_MS;
+async function withDomainThrottle<T>(hostname: string, delayMs: number, fn: () => Promise<T>): Promise<T> {
   const previous = domainQueues.get(hostname) ?? Promise.resolve();
 
   const run = previous.then(async () => {
@@ -57,15 +73,17 @@ function sleep(ms: number): Promise<void> {
  * exponencial (1s, 2s, 4s, ...) sobre errores de red, 5xx y 429; no
  * reintenta 4xx (salvo 429).
  */
-export async function politeFetch(url: string): Promise<FetchResult> {
+export async function politeFetch(url: string, sourceRateLimitKey?: string): Promise<FetchResult> {
   if (!(await isAllowedByRobots(url))) {
     throw new RobotsDisallowedError(url);
   }
 
   const env = getEnv();
   const hostname = new URL(url).hostname;
+  const delayMs = Math.max(env.CRAWL_DELAY_MS, await getRobotsCrawlDelay(url));
+  const rateKey = sourceRateLimitKey ? `${sourceRateLimitKey}:${hostname}` : hostname;
 
-  return withDomainThrottle(hostname, async () => {
+  return withDomainThrottle(rateKey, delayMs, async () => {
     let lastError: unknown;
     for (let attempt = 0; attempt <= env.CRAWL_MAX_RETRIES; attempt += 1) {
       if (attempt > 0) {
@@ -96,7 +114,7 @@ export async function politeFetch(url: string): Promise<FetchResult> {
         lastError = err;
       }
     }
-    throw lastError instanceof Error ? lastError : new Error(String(lastError));
+    throw new FetchFailedError(url, env.CRAWL_MAX_RETRIES, lastError);
   });
 }
 
