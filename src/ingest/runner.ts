@@ -13,6 +13,7 @@ import { load } from "cheerio";
 import { normalizeRecord, type NormalizedClaim } from "../normalization/claims.js";
 import { persistClaim, type Actor, type ClaimToPersist, type Confidence } from "../claims/persistence.js";
 import { mergeClaim, resolveArtistId, type MergeOutcome } from "../merge/engine.js";
+import { isRelationKind } from "../merge/relations.js";
 
 export interface IngestionOptions { dryRun?: boolean; confidence: Confidence; createdBy?: Actor; }
 export interface IngestionRecord { record: RawRecord; rawPageId?: number; }
@@ -30,6 +31,7 @@ async function sourceFor(slug: string) {
 function planClaim(claim: NormalizedClaim, confidence: Confidence): IngestionPlan {
   if (confidence === "low") return { field: claim.field, entityKind: claim.entityKind, action: "candidate", detail: "low: abriría revisión" };
   if (claim.entityKind === "artist") return { field: claim.field, entityKind: claim.entityKind, action: "merge", detail: "evaluaría merge determinista de artist" };
+  if (isRelationKind(claim.entityKind)) return { field: claim.field, entityKind: claim.entityKind, action: "merge", detail: "evaluaría el puente de relaciones contra sus extremos" };
   return { field: claim.field, entityKind: claim.entityKind, action: "candidate", detail: "tipo aún no conectado al merge base" };
 }
 
@@ -55,16 +57,26 @@ export async function ingestRecords(sourceSlug: string, records: Array<RawRecord
       const rawPageId = "record" in item ? item.rawPageId : undefined;
       const normalized = normalizeRecord(record);
       let artistId = record.entityKind === "artist" ? await resolveArtistId(normalized[0]?.identity ?? "") : undefined;
-      for (const claim of normalized) {
-        const input: ClaimToPersist = {
-          ...claim, sourceId: source.id, runId: run.id, confidence: options.confidence,
-          ...(rawPageId === undefined ? {} : { rawPageId }),
-          ...(artistId === undefined ? {} : { artistId }),
-          ...(options.createdBy === undefined ? {} : { createdBy: options.createdBy }),
-        };
+      // Dos fases por registro: primero se persiste el registro completo y
+      // solo después se mergea. Un hecho no vive en un campo suelto — el
+      // número de una pista o el rol de una membresía llegan en claims
+      // hermanos —, y mergear sobre la marcha dejaría al primero decidiendo
+      // sin ver el resto.
+      const inputs: ClaimToPersist[] = normalized.map((claim) => ({
+        ...claim, sourceId: source.id, runId: run.id, confidence: options.confidence,
+        ...(rawPageId === undefined ? {} : { rawPageId }),
+        ...(artistId === undefined ? {} : { artistId }),
+        ...(options.createdBy === undefined ? {} : { createdBy: options.createdBy }),
+      }));
+      const persistedClaims = [];
+      for (const input of inputs) {
         const persisted = await persistClaim(input);
         if (persisted.inserted) output.claimsInserted += 1; else output.claimsReused += 1;
-        const merge = await mergeClaim(input, persisted);
+        persistedClaims.push(persisted);
+      }
+      for (const [index, input] of inputs.entries()) {
+        const claim = { ...input, ...(artistId === undefined ? {} : { artistId }) };
+        const merge = await mergeClaim(claim, persistedClaims[index]!);
         output.merges.push(merge);
         output.plan.push({ field: claim.field, entityKind: claim.entityKind, action: merge.action, detail: merge.detail });
         if (claim.entityKind === "artist" && merge.artistId) artistId = merge.artistId;

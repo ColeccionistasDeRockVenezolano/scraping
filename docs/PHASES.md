@@ -288,6 +288,14 @@ Entregables:
 - ✅ `review_queue` operativa como módulo (`src/review/queue.ts`); comandos CLI
   aún pertenecen al cierre operativo de F7.
 - ✅ Regla dura verificada: crédito de álbum ≠ membresía.
+- ✅ Puente de relaciones (`src/merge/relations.ts`): `artist_membership` →
+  `artist_members`, `album_credit` → `album_credits`, `track_credit` →
+  `track_credits`, con la tabla destino fijada por el `entity_kind`, extremos
+  que nunca se crean desde la relación y la misma compuerta `low`. Cubierto
+  por `test/contract/relationship-bridge.test.ts`.
+- ✅ Promoción por entidad (`src/review/approval.ts` + `crv review
+  entities|approve|dismiss`): una decisión humana por identidad, que es lo
+  único capaz de llevar un claim `low` de fuente web al catálogo.
 
 Criterios de salida: merge del seed + 2 fuentes Blogger con 0 duplicados
 (re-run idéntico); conflictos reales conservados con evidencia doble; una

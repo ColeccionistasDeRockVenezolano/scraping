@@ -148,9 +148,14 @@ describe("ER + claims + conflictos + merge auditado", () => {
     const low = await applyClaim({ sourceId, kind: "artist", identity: "Artista dudoso", field: "name", value: "Artista dudoso", confidence: "low" });
     expect(low.outcome.action).toBe("candidate");
     expect(await getDb().select().from(artists).where(eq(artists.name, "Artista dudoso"))).toHaveLength(0);
+    // Un crédito incompleto y sin extremos en el core no escribe nada: el
+    // puente lo deja candidato. Lo que nunca ocurre, con o sin puente, es que
+    // un crédito de disco se convierta en una membresía de banda.
     const credit = await applyClaim({ sourceId, kind: "album_credit", identity: "x::credit", field: "credited_name", value: "Invitado" });
-    expect(credit.outcome.action).toBe("unsupported");
+    expect(credit.outcome.action).toBe("candidate");
+    expect(credit.outcome.relationKind).toBe("album_credit");
     expect(Number((await getPool().query("SELECT count(*) AS n FROM public.artist_members")).rows[0].n)).toBe(0);
+    expect(Number((await getPool().query("SELECT count(*) AS n FROM public.album_credits")).rows[0].n)).toBe(0);
   });
 
   it("genera biografia separada solo con claims aceptados y trazabilidad; nunca cambia el hecho core", async () => {

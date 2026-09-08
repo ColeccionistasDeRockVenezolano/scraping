@@ -490,7 +490,7 @@ en `SMALLINT` y en la validación 1900..2100).
 | organizations | ídem persons. |
 | albums | candidato: (artist_id, title normalizado). El core solo tiene índice no-único → la unicidad se garantiza en el merge engine con advisory lock `merge:album:<artist_id>:<title_norm>`. **No se añade índice único a la tabla core** (regla de inmutabilidad). |
 | tracks | UNIQUE(album_id, disc_number, track_number) (core) |
-| artist_members | (artist_id, person_id); mismo par + mismo período → skip; período distinto → review |
+| artist_members | (artist_id, person_id, rol normalizado); el rol es parte de lo que la fila afirma, así que la misma persona con dos funciones en la misma banda son dos membresías. Mismo trío + período compatible → skip; período contradictorio sobre la misma función → review, nunca overwrite |
 | album_credits / track_credits | dedupe por (album/track_id, destino, credit_type, role normalizado) |
 | album_formats | (album_id, format) |
 | claims | índice real `claims_dedupe_uk`: (source_id, COALESCE(raw_page_id,0), COALESCE(seed_upload_id,0), entity_kind, destino, field, raw_hash) |

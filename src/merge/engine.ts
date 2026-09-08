@@ -12,6 +12,7 @@ import { loadResolutionCandidates, persistResolutionDecision } from "../er/repos
 import { resolutionThresholdsFromEnv } from "../er/resolver.js";
 import type { ResolutionDecision, ResolutionInput, ScoreFeature } from "../er/types.js";
 import { claimTargetId, resolvableSpec, type EntitySpec, type ResolvableClaimKind } from "./specs.js";
+import { isRelationKind, mergeRelationClaim, type RelationClaimKind } from "./relations.js";
 
 export interface MergeOutcome {
   action: "applied" | "unchanged" | "candidate" | "conflict" | "unsupported";
@@ -23,6 +24,9 @@ export interface MergeOutcome {
   trackId?: number;
   organizationId?: number;
   resolutionDecisionId?: number;
+  /** Relaciones: tipo y filas puente materializadas (una por pista acotada). */
+  relationKind?: RelationClaimKind;
+  relationIds?: number[];
   detail: string;
 }
 
@@ -242,6 +246,41 @@ function explicitDecision(input: ResolutionInput, id: number, canonical: string)
   };
 }
 
+/**
+ * Un álbum o una pista nuevos necesitan su parental EXISTIENDO en el core:
+ * el modelo no admite un disco sin artista ni una pista sin disco. El nombre
+ * del parental viaja en la identidad (`artista::disco::pista`), pero un
+ * nombre no es un id, así que se resuelve contra el core y solo se acepta un
+ * AUTO_MATCH determinista. Si el parental todavía no fue aprobado, la
+ * creación no ocurre y el claim sigue candidato: primero el artista, después
+ * el disco, después la pista.
+ */
+async function resolveParentId(client: PoolClient, input: ResolutionInput): Promise<number | undefined> {
+  if (!input.name) return undefined;
+  const candidates = await loadResolutionCandidates(input, client);
+  const decision = resolveEntityDeterministically(input, candidates, resolutionThresholdsFromEnv());
+  return decision.action === "AUTO_MATCH" ? decision.candidateId : undefined;
+}
+
+/**
+ * El número de pista no viaja en el claim del título, sino en un claim
+ * hermano de la misma identidad. Sin él la pista no puede crearse: el core
+ * exige (album_id, disc_number, track_number).
+ */
+async function siblingInteger(client: PoolClient, claim: ClaimToPersist, field: string): Promise<number | undefined> {
+  const { rows } = await client.query<{ normalized_value: unknown; raw_value: unknown }>(
+    `SELECT normalized_value, raw_value FROM ingest.claims
+      WHERE entity_kind=$1 AND identity_key=$2 AND field=$3 AND status IN ('candidate','accepted')
+      ORDER BY id LIMIT 1`,
+    [claim.entityKind, claim.identity, field],
+  );
+  const row = rows[0];
+  if (!row) return undefined;
+  const value = Number(typeof row.normalized_value === "number" || typeof row.normalized_value === "string"
+    ? row.normalized_value : row.raw_value);
+  return Number.isInteger(value) && value > 0 ? value : undefined;
+}
+
 async function createEntity(client: PoolClient, claim: ClaimToPersist, claimId: number, spec: EntitySpec, input: ResolutionInput, decisionId: number): Promise<number | undefined> {
   if (claim.field !== spec.identityColumn) return undefined;
   const name = scalar(claim.normalizedValue, claim.field);
@@ -251,13 +290,22 @@ async function createEntity(client: PoolClient, claim: ClaimToPersist, claimId: 
   else if (spec.kind === "person") { query = "INSERT INTO public.persons(name) VALUES($1) RETURNING id"; params = [name]; }
   else if (spec.kind === "organization") { query = "INSERT INTO public.organizations(name) VALUES($1) RETURNING id"; params = [name]; }
   else if (spec.kind === "album") {
-    const artistId = claim.parentArtistId ?? (input.kind === "ALBUM" ? input.artist?.id : undefined);
+    const artistName = input.kind === "ALBUM" ? input.artist?.name : undefined;
+    const artistId = claim.parentArtistId ?? (input.kind === "ALBUM" ? input.artist?.id : undefined)
+      ?? (artistName === undefined ? undefined : await resolveParentId(client, { kind: "ARTIST", name: artistName }));
     if (!artistId) return undefined;
     query = "INSERT INTO public.albums(artist_id,title) VALUES($1,$2) RETURNING id"; params = [artistId, name];
   } else {
-    const albumId = claim.parentAlbumId ?? (input.kind === "TRACK" ? input.album?.id : undefined);
-    const disc = claim.discNumber ?? (input.kind === "TRACK" ? input.disc : undefined) ?? 1;
-    const track = claim.trackNumber ?? (input.kind === "TRACK" ? input.trackNumber : undefined);
+    const albumRef = input.kind === "TRACK" ? input.album : undefined;
+    const albumId = claim.parentAlbumId ?? albumRef?.id
+      ?? (albumRef?.name === undefined ? undefined : await resolveParentId(client, {
+        kind: "ALBUM", name: albumRef.name,
+        ...(albumRef.artistName === undefined ? {} : { artist: { name: albumRef.artistName } }),
+      }));
+    const disc = claim.discNumber ?? (input.kind === "TRACK" ? input.disc : undefined)
+      ?? await siblingInteger(client, claim, "disc_number") ?? 1;
+    const track = claim.trackNumber ?? (input.kind === "TRACK" ? input.trackNumber : undefined)
+      ?? await siblingInteger(client, claim, "track_number");
     if (!albumId || !track) return undefined;
     query = "INSERT INTO public.tracks(album_id,disc_number,track_number,title) VALUES($1,$2,$3,$4) RETURNING id"; params = [albumId, disc, track, name];
   }
@@ -281,7 +329,10 @@ export async function mergeClaim(
 ): Promise<MergeOutcome> {
   const spec = resolvableSpec(claim.entityKind);
   if (!spec) {
-    // Regla dura: album_credit/track_credit nunca se transforman en membership.
+    // Las relaciones tienen su propio puente, con la tabla destino fijada por
+    // el entity_kind. Regla dura preservada: album_credit/track_credit no
+    // pueden aterrizar en artist_members ni por un rol ambiguo.
+    if (isRelationKind(claim.entityKind)) return mergeRelationClaim(claim, persisted.id);
     await getPool().query("UPDATE ingest.claims SET status='candidate',updated_at=now() WHERE id=$1", [persisted.id]);
     return { action: "unsupported", detail: `merge de ${claim.entityKind} no escribe entidades resolubles; credito != membresia` };
   }
@@ -307,7 +358,12 @@ export async function mergeClaim(
     }
     const decisionId = await persistResolutionDecision(decision, input, { claimId: persisted.id, ...(claim.runId === undefined ? {} : { runId: claim.runId }), queryable: client });
 
-    if ((claim.createdBy ?? "system") === "ai" || claim.confidence === "low") {
+    // Un claim low automático nunca toca el core: va a revisión y se detiene
+    // aquí. La excepción es una decisión humana explícita (createdBy="human",
+    // vía review approve), que es la que la guarda de createEntity más abajo
+    // ya contemplaba — sin esta salvedad ese `createdBy === "human"` era
+    // inalcanzable y ninguna aprobación podía poblar el catálogo.
+    if ((claim.createdBy ?? "system") === "ai" || (claim.confidence === "low" && claim.createdBy !== "human")) {
       if (targetId !== undefined) await attachClaim(client, persisted.id, spec, targetId, "candidate");
       else await client.query("UPDATE ingest.claims SET status='candidate',updated_at=now() WHERE id=$1", [persisted.id]);
       await lowReview(client, persisted.id, claim.field, { resolutionDecisionId: decisionId, resolutionAction: decision.action, score: decision.score });

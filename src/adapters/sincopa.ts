@@ -298,7 +298,10 @@ export class SincopaAdapter implements SourceAdapter {
       const label = labelCell ? clean(labelCell.find('font[size="2"]').first().text()) : "";
       const catalog = labelCell ? clean(labelCell.find('font[size="1"]').first().text()) : "";
       if (catalog) albumFields.push({ field: "catalog_number", value: catalog, evidence: where });
-      records.push(this.record("album", title, albumFields));
+      // "artista::título": el disco no se identifica solo por su nombre —
+      // dos bandas pueden tener un "Vol. 1" — y el parental es lo que permite
+      // crearlo en el core, que no admite un álbum sin artista.
+      records.push(this.record("album", `${name}::${title}`, albumFields));
       if (label && named(label)) {
         records.push(this.record("organization", label, [
           { field: "name", value: label, evidence: where },
@@ -336,7 +339,7 @@ export class SincopaAdapter implements SourceAdapter {
       if (year) albumFields.push({ field: "release_year", value: year, evidence: evidence("td", release) });
       if (format) albumFields.push({ field: "format", value: clean(format), evidence: evidence("td", release) });
     }
-    records.push(this.record("album", title, albumFields));
+    records.push(this.record("album", artist ? `${artist}::${title}` : title, albumFields));
 
     const company = pairs.get("company");
     if (company && named(company)) {
@@ -362,19 +365,21 @@ export class SincopaAdapter implements SourceAdapter {
       ];
       if (artist) trackFields.push({ field: "artist_name", value: artist, evidence: where });
       if (number) trackFields.push({ field: "track_number", value: number, evidence: where });
-      records.push(this.record("track", trackTitle, trackFields));
+      records.push(this.record("track", artist ? `${artist}::${title}::${trackTitle}` : `${title}::${trackTitle}`, trackFields));
 
       const composer = /\(([^)]+)\)\s*$/.exec(text)?.[1];
       const credited = composer ? clean(composer) : "";
       if (credited && named(credited)) {
         records.push(this.record("person", credited, [{ field: "name", value: credited, evidence: where }]));
-        records.push(this.record("track_credit", `${title}::${trackTitle}::${credited}`, [
+        const composerCredit: RawRecord["fields"] = [
           { field: "album_title", value: title, evidence: where },
           { field: "track_title", value: trackTitle, evidence: where },
           { field: "credited_name", value: credited, evidence: where },
           { field: "credit_role", value: "composer", evidence: where },
           { field: "credit_scope", value: "track", evidence: where },
-        ]));
+        ];
+        if (artist) composerCredit.push({ field: "artist_name", value: artist, evidence: where });
+        records.push(this.record("track_credit", `${title}::${trackTitle}::${credited}`, composerCredit));
       }
     });
 
@@ -393,6 +398,7 @@ export class SincopaAdapter implements SourceAdapter {
           { field: "credit_role", value: credit.role, evidence: where },
           { field: "credit_scope", value: scope, evidence: where },
         ];
+        if (artist) fields.push({ field: "artist_name", value: artist, evidence: where });
         if (credit.tracks) fields.push({ field: "track_numbers", value: credit.tracks, evidence: where });
         records.push(this.record(
           scope === "track" ? "track_credit" : "album_credit",

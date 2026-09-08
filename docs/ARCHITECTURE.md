@@ -165,6 +165,36 @@ el índice `claims_dedupe_uk`) y `ingest.claim_evidence`
 - Cada write deja entrada en `ingest.merge_audit` (+ `merge_audit_claims`:
   qué claims respaldan la escritura).
 
+#### 4.8.1 `relationship bridge` (`src/merge/relations.ts`)
+Los tres `entity_kind` de relación (`artist_membership`, `album_credit`,
+`track_credit`) no describen una entidad sino un vínculo entre dos, así que
+tienen su propio puente, al que el merge engine delega. Sus reglas:
+
+- **La tabla destino está fijada por el `entity_kind`**, no por el rol. Ahí
+  vive la regla dura: un crédito no puede aterrizar en `artist_members` ni
+  por un rol ambiguo ni por un error de mapeo — es estructuralmente
+  imposible.
+- **Una relación nunca crea sus extremos.** Si el artista, la persona, el
+  álbum o la pista todavía no existen en el core, el claim queda `candidate`
+  y abre revisión. El orden es siempre entidad → relación.
+- **La unidad es el registro completo**, no el campo: los claims hermanos de
+  la misma `(entity_kind, identity_key)` se leen juntos. Si dos claims
+  contradicen un campo, no se elige ninguno: la relación va a revisión.
+- **Resolución de extremos heredada.** El extremo es la misma entidad que un
+  claim hermano de esa fuente ya resolvió y auditó; el puente reusa esa
+  decisión (`claim_graph`) antes de recurrir al ER. Esto no relaja el guardia
+  de homónimos: no introduce una decisión de identidad nueva, hereda la que
+  ya se tomó y se auditó aguas arriba. Solo si no hay herencia se consulta el
+  ER, y de él únicamente cuenta un `AUTO_MATCH`.
+- **La pista se resuelve dentro de su álbum**, por título exacto o por número
+  (`(tracks 03, 05)` produce una fila por pista), no por ER global: el título
+  de una pista solo identifica dentro de su disco.
+- `credit_type` es una clasificación determinista del rol
+  (`creditTypeForRole`); el rol crudo se conserva íntegro en `role`, y lo que
+  no se reconoce cae en `other` en vez de forzarse a `musician`.
+- Igual que las entidades, **una relación `low` automática no escribe**: solo
+  `high` o una decisión humana (`createdBy="human"`, vía `review approve`).
+
 ### 4.9 `conflict engine`
 Detecta dos claims aceptables que afirman valores distintos para el mismo
 campo de la misma entidad: crea `ingest.conflicts` (ambos valores + ambas

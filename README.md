@@ -68,8 +68,11 @@ El servidor HTTP (`src/api/`) llega en **F8**: por eso no hay script `dev`.
 
 El motor de resolución vive en `src/er/` y considera contexto propio de
 ARTIST, PERSON, ALBUM, TRACK y ORGANIZATION. `src/merge/` aplica la política
-sin sobrescrituras contradictorias silenciosas; `src/conflicts/` y
-`src/review/` conservan el desacuerdo. DeepSeek está aislado en `src/ai/`: es
+sin sobrescrituras contradictorias silenciosas, y su puente
+(`src/merge/relations.ts`) materializa membresías y créditos con la tabla
+destino fijada por el tipo de claim, nunca por el rol; `src/conflicts/` y
+`src/review/` conservan el desacuerdo, y `src/review/approval.ts` es la
+promoción por entidad que una persona ejecuta desde `crv review approve`. DeepSeek está aislado en `src/ai/`: es
 opcional, devuelve propuestas JSON validadas con Zod y nunca ejecuta SQL ni
 merges. Las biografías generadas son artefactos editoriales separados y
 citan los claims aceptados que las sostienen.

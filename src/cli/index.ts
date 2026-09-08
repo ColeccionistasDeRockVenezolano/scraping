@@ -12,6 +12,7 @@ import { runObserve } from "../fetcher/observe.js";
 import { assertSupportedNode } from "../config/runtime.js";
 import { listRuns, createArtistEnrichmentRun, finishRun } from "../ingest/runs.js";
 import { listReviews, showReview } from "../review/queue.js";
+import { approveEntity, dismissEntity, pendingEntities } from "../review/approval.js";
 import { getDb } from "../db/client.js";
 import { sources } from "../db/schema/ingest.js";
 import { eq } from "drizzle-orm";
@@ -145,7 +146,35 @@ async function main(): Promise<number> {
         console.log(JSON.stringify(review, null, 2));
         return 0;
       }
-      console.error("uso: crv review list | crv review show <id>");
+      // La cola guarda un ítem por claim, pero se decide por entidad: aprobar
+      // "Los Kings" cubre su nombre, año de formación, origen y género juntos.
+      if (args[0] === "entities") {
+        const kind = args[1] && !args[1].startsWith("--") ? args[1] : undefined;
+        const limitArg = args.find((arg) => arg.startsWith("--limit="))?.split("=")[1];
+        const pending = await pendingEntities({
+          ...(kind ? { entityKind: kind } : {}),
+          ...(limitArg && /^\d+$/.test(limitArg) ? { limit: Number(limitArg) } : {}),
+        });
+        for (const item of pending) {
+          console.log(`${item.entityKind}\t${item.claims} claims\t${item.sources} fuente(s)\t${item.identityRaw}\t[${item.fields.join(",")}]`);
+        }
+        if (pending.length === 0) console.log("(sin entidades candidatas)");
+        return 0;
+      }
+      if (args[0] === "approve" || args[0] === "dismiss") {
+        const [, kind, identity, ...noteParts] = args;
+        const note = noteParts.join(" ");
+        if (!kind || !identity || !note) {
+          console.error(`uso: crv review ${args[0]} <entity_kind> "<identity_key>" <nota...>`);
+          return 1;
+        }
+        const result = args[0] === "approve"
+          ? await approveEntity(kind, identity, note)
+          : await dismissEntity(kind, identity, note);
+        console.log(JSON.stringify(result, null, 2));
+        return 0;
+      }
+      console.error('uso: crv review list | show <id> | entities [kind] [--limit=N] | approve <kind> "<identity>" <nota> | dismiss <kind> "<identity>" <nota>');
       return 1;
     }
 
