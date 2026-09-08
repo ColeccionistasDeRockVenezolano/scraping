@@ -119,6 +119,20 @@ las tres fuentes restantes el 2026-09-08 (SOURCES.md §3):
   inventario. La raíz HTML solo se añade cuando forma parte expresa de la
   frontera (RHV); todo crudo se conserva como evidencia.
 - Todo adapter emite `RawRecord` (JSON crudo tipado con Zod) → normalización.
+- **Canales de una entrada Blogger.** `BloggerAdapter.extractEntry()` recibe
+  el cuerpo, el **título** y las **etiquetas** (`entry.category`) por separado,
+  porque los cinco blogs reparten sus metadatos entre los tres de forma
+  distinta: Hippito los pone enteros en el título, Descargas Metal en el
+  cuerpo, y Rock De Vzla —1.110 de sus 1.113 entradas con el título vacío—
+  solo en la etiqueta. Descartar cualquiera de los canales antes de parsear
+  dejaba esas fuentes en cero. El parámetro es opcional, así que un adapter
+  que no lo declara conserva su comportamiento.
+- **Semántica fuera del texto.** Tres fuentes codifican qué es cada cosa en un
+  canal que no es prosa, y cada adapter lee el suyo: Sincopa en el
+  **directorio** de la imagen, Hippito en el **color gris** del crédito, Rock
+  De Vzla en el **tamaño de fuente** (`x-large` = banda, `large` = ficha de
+  disco) y en una línea de guiones que separa la discografía de los videos —
+  bajo ella el mismo marcado rotula canciones, no publicaciones.
 - **Artes.** `contentImages()` (en `adapters/shared.ts`) separa imagen de
   adorno por descarte explícito —iconos sociales, plantilla, `data:` URIs y
   anchos declarados < 100px— y no decide qué representa cada imagen: eso lo

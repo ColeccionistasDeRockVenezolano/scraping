@@ -306,9 +306,13 @@ resolución de muestra están cubiertos por
 Las **dos fuentes Blogger ya existen**: Descargas Metal Venezolano (11.313
 registros: 1.338 artistas con ciudad de origen, 1.345 álbumes con año y
 género, 8.630 pistas) y Hippito y Sus Chatarritas (14.868 registros, ficha en
-el título). Rock De Vzla y Rockzuela tienen estructura explícita medida y
-aún no tienen adapter, igual que RHV Blogspot, cuyo título usa dos puntos
-(`BANDA: Álbum (Año)`) en vez de guion — ver SOURCES.md §3.2.
+el título). A ellas se suma **Rock De Vzla** (54.143 claims: 1.108 artistas,
+1.815 discos, 9.908 pistas, 1.775 portadas), que necesitó abrir un canal
+nuevo: las etiquetas del feed (`entry.category`) ahora llegan al parser,
+porque 1.110 de sus 1.113 entradas traen el título vacío y el nombre de la
+banda solo existe ahí. Siguen sin adapter Rockzuela y RHV Blogspot, cuyo
+título usa dos puntos (`BANDA: Álbum (Año)`) en vez de guion — ver
+SOURCES.md §3.2.
 **El barrido completo estaba bloqueado por la ergonomía de la revisión, no
 por los adapters.** 2.962 claims ingeridos habían producido 406 entidades
 candidatas y el core tenía 40 discos: la promoción era de una en una por CLI,

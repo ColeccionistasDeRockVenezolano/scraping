@@ -133,7 +133,7 @@ Rock De Vzla, Hippito y Sus Chatarritas, RHV Blogspot)
   |---|---:|---|---:|
   | Descargas Metal Venezolano | 1.355 | campos etiquetados en el cuerpo (`Banda:`, `Álbum:`, `Lanzamiento:`, `Género:`, `Lugar:`, `Web:`) + tracklist numerada — 1.352 de 1.355 | 11.313 |
   | Hippito y Sus Chatarritas | 1.063 | ficha completa en el **título** (`Artista - Título (Sello CAT / País Año)`) — 973 de 1.063; compositores en gris en el cuerpo | 14.868 |
-  | Rock De Vzla | 1.113 | sin título; formación (`La banda estuvo conformada por:`) y tracklist en el cuerpo — 1.012 entradas con datos, **1.028 membresías**, 16.171 pistas | 0 (sin adapter) |
+  | Rock De Vzla | 1.113 | sin título; banda en la **etiqueta** y ficha rotulada por tamaño de fuente (`x-large` = banda, `large` = `Título (Tipo Año)`) — 1.110 entradas con banda, 1.815 discos, 9.908 pistas | 54.143 |
   | Rockzuela | 1.127 | título `Banda - Álbum (Año)` en 492; formación explícita en 27; tracklist en 273 — 290 entradas con datos | 0 (sin adapter) |
   | RHV Blogspot | 264 | título `BANDA: Álbum (Año)` — 44 con esa forma, 28 con año; 8 tracklists (121 pistas); 835 imágenes en 262 entradas | 0 (sin adapter) |
 
@@ -148,6 +148,16 @@ Rock De Vzla, Hippito y Sus Chatarritas, RHV Blogspot)
   sonda: RHV separa banda y disco con **dos puntos** (`PROARESIS: Propios Y
   Extraños (2022)`), no con guion, y el patrón `Banda - Álbum` no lo veía.
   Ninguna de las cinco Blogspot es prosa inextraíble.
+
+  **Tercera corrección (2026-09-08), al escribir el adapter:** la fila de Rock
+  De Vzla decía "formación (`La banda estuvo conformada por:`) … 1.028
+  membresías, 16.171 pistas". Las tres cifras eran de una sonda laxa. Medido
+  contra el parser real: esa frase aparece en **18** entradas y `Integrantes:`
+  en **17**, casi siempre dentro de una oración en prosa, así que el adapter
+  **no extrae ninguna membresía** de esta fuente; y las pistas que caen dentro
+  del bloque de una ficha son **9.908**, no 16.171 — la cifra anterior contaba
+  además las líneas numeradas de la zona de videos y las de fuera de toda
+  ficha. Lo que la fuente sí da en abundancia son discos y portadas.
 
 - *Canal de las etiquetas Blogger (`entry.category`).* El feed trae las
   etiquetas del post y en dos fuentes son el dato que falta en el cuerpo:
@@ -319,7 +329,7 @@ fuente con artes" era falsa— y cada una las declara por un canal distinto:
 | Descargas Metal | 1.354 | 1.275 | título `Banda - Álbum (Año)` de la entrada |
 | Sincopa | 1.437 | 917 + 520 fotos de artista | **la ruta del archivo** |
 | Hippito | 1.575 | 987 | título de la entrada |
-| Rock De Vzla | 1.868 | 661 | etiqueta Blogger = banda; emparejable sólo cuando nº imágenes == nº líneas `Título (Año)` |
+| Rock De Vzla | 1.868 | **1.775** | la imagen que cae dentro del bloque de su ficha (97,8% de los discos) |
 | Rockzuela | 773 | 369 | título de la entrada |
 | RHV Blogspot | 835 | 28 | título `BANDA: Álbum (Año)` |
 | CRV WordPress | 1.420 | 121 (+700 otras artes) | `alt` = `<banda> <álbum> <tipo>` |
@@ -338,13 +348,14 @@ que la portada entra **sin migración**. `media.media_links` sólo hace falta
 para lo que no es portada: las 700 artes internas de CRV WordPress y las 520
 fotos de artista de Sincopa.
 
-*Lo que emiten hoy los tres adapters* (la columna de arriba mide el crudo; lo
-que sigue mide los `RawRecord` reales, que se apoyan en los campos etiquetados
-del cuerpo y no sólo en el título):
+*Lo que emiten hoy los cuatro adapters* (la columna de arriba mide el crudo;
+lo que sigue mide los `RawRecord` reales, que se apoyan en los campos
+etiquetados del cuerpo y no sólo en el título):
 
 | adapter | discos | `cover_url` | `picture_url` |
 |---|---:|---:|---:|
 | Descargas Metal | 1.345 | **1.345** | — |
+| Rock De Vzla | 1.815 | **1.775** | — |
 | Hippito | 673 | 671 | — |
 | Sincopa | 2.414 | 782 | 259 |
 
