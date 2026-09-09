@@ -156,10 +156,34 @@ créditos en línea. Las pistas de `Bonus Tracks` cuentan como pistas: comparten
 numeración y reloj con el tracklist principal, y la distinción se conserva en
 `media.youtube_description_sections`.
 
-Materializado por el paso 2: `media.youtube_tracklist_entries` tiene **6.769
-filas** sobre 636 videos y `media.youtube_description_sections` **2.394** —
-exactamente las cifras que la derivación local había anticipado sobre el
-corpus, lo que confirma que hidratar no cambió nada de lo ya medido.
+Materializado por el paso 2 y corregido por el paso 3:
+`media.youtube_tracklist_entries` tiene **6.792 filas** y
+`media.youtube_description_sections` **2.396**. La primera hidratación dio
+6.769 y 2.394 —exactamente lo que la derivación local había anticipado sobre
+el corpus— y la re-derivación sumó 23 pistas al cubrir `Trackslist`, una
+errata con ese de más que aparece en dos videos (§2.4).
+
+Cobertura de línea sobre el corpus: **99,7%** de las 23.371 líneas no vacías
+cae dentro de alguna sección reconocida.
+
+### 2.4 Re-derivar sin red (paso 3)
+
+`crv youtube rederive [--dry-run]` vuelve a parsear las descripciones **ya
+guardadas** en `media.youtube_videos.metadata` y reescribe secciones y
+pistas. No toca la red: el parser se puede iterar cuantas veces haga falta
+sin gastar una unidad de cuota, que era el motivo de separar *hidratar* de
+*derivar*. Cada video se re-deriva en su propio `SAVEPOINT`, así que uno que
+falle se anota en `ingest.scrape_errors` sin arrastrar al lote, y `--dry-run`
+calcula el delta y lo deshace.
+
+Hidratación y re-derivación comparten un único camino de código
+(`persistDerivedDescription`), de modo que no pueden divergir.
+
+Primera ejecución útil: la medición de líneas huérfanas destapó `Trackslist:`
+en `9eEUpRt1n-E` (Andreazulado) y `J65Ep1xwcn0` (Tomates Fritos), donde el
+encabezado no casaba y solo sobrevivía la pista del bloque `Bonus Track`. El
+dry-run anticipó `6.769 -> 6.792 (+23)` en esos dos videos y la ejecución
+real dio exactamente eso; una segunda pasada, 0 cambios.
 
 ### 2.3 El título también es un registro
 

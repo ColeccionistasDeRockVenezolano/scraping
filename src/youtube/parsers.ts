@@ -25,7 +25,9 @@ const TRAILING_TIMESTAMP = /^\s*(?:[-*•]\s*)?(?:\d{1,2}\s*[-–—.)]\s*)?(.+?
 // dentro de un bloque de músicos, no secciones. Ascenderlos partiría el
 // bloque en pedazos y perdería a quién pertenece cada instrumento.
 const SECTION_NAMES: Array<[RegExp, string]> = [
-  [/^track\s*list$/i, "tracklist"], [/^time\s*stamps?$/i, "tracklist"], [/^tracks$/i, "tracklist"],
+  // "Trackslist" (con ese de más) aparece en dos videos del canal; medido, no
+  // supuesto. La `s?` intermedia lo cubre sin abrir la puerta a nada más.
+  [/^tracks?\s*list$/i, "tracklist"], [/^time\s*stamps?$/i, "tracklist"], [/^tracks$/i, "tracklist"],
   [/^bonus\s*tracks?$/i, "bonus_tracks"],
   [/^guests?\s+musicians?$/i, "guest_musicians"], [/^musicians?$/i, "musicians"],
   [/^other credits?$/i, "other_credits"],

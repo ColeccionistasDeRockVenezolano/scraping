@@ -160,13 +160,24 @@ export async function persistVideoPayload(client: PoolClient, payload: YouTubeVi
     ON CONFLICT(video_id) DO UPDATE SET url=EXCLUDED.url,title=EXCLUDED.title,description=EXCLUDED.description,channel_id=EXCLUDED.channel_id,channel_title=EXCLUDED.channel_title,published_at=EXCLUDED.published_at,duration_seconds=EXCLUDED.duration_seconds,thumbnail_url=EXCLUDED.thumbnail_url,tags=EXCLUDED.tags,publication_status=EXCLUDED.publication_status,metadata=EXCLUDED.metadata,last_fetched_at=now(),updated_at=now()
     RETURNING id`, [videoId, canonicalVideoUrl(videoId),text(snippet?.["title"]),text(snippet?.["description"]),text(snippet?.["channelId"]),text(snippet?.["channelTitle"]),text(snippet?.["publishedAt"]),iso8601DurationToSeconds(text(details?.["duration"]) ?? undefined),thumbnail(snippet),JSON.stringify(Array.isArray(snippet?.["tags"]) ? snippet!["tags"] : []),youtubePublicationStatus(status),JSON.stringify(payload)]);
   const id = Number(persisted.rows[0]!.id);
-  const parsed = parseYouTubeDescription(text(snippet?.["description"]));
-  await client.query("DELETE FROM media.youtube_description_sections WHERE video_id=$1", [id]);
-  await client.query("DELETE FROM media.youtube_tracklist_entries WHERE video_id=$1", [id]);
-  for (const section of parsed.sections) await client.query("INSERT INTO media.youtube_description_sections(video_id,position,section_kind,heading,content) VALUES($1,$2,$3,$4,$5)", [id, section.position, section.kind, section.heading, section.content]);
-  for (const entry of parsed.tracklist) await client.query("INSERT INTO media.youtube_tracklist_entries(video_id,position,title,start_seconds) VALUES($1,$2,$3,$4)", [id, entry.position, entry.title, entry.startSeconds]);
+  await persistDerivedDescription(client, id, text(snippet?.["description"]));
   void sourceId; // relation rows use the source; raw API payload identifies the official source.
   return id;
+}
+
+/**
+ * Reescribe lo derivado de una descripción. Es un único camino de código,
+ * usado tanto al hidratar como al re-derivar, para que no puedan divergir:
+ * lo que el paso 2 escribe y lo que el paso 3 reescribe salen del mismo
+ * parser sobre el mismo texto.
+ */
+export async function persistDerivedDescription(client: PoolClient, videoDbId: number, description: string | null): Promise<{ sections: number; tracks: number }> {
+  const parsed = parseYouTubeDescription(description);
+  await client.query("DELETE FROM media.youtube_description_sections WHERE video_id=$1", [videoDbId]);
+  await client.query("DELETE FROM media.youtube_tracklist_entries WHERE video_id=$1", [videoDbId]);
+  for (const section of parsed.sections) await client.query("INSERT INTO media.youtube_description_sections(video_id,position,section_kind,heading,content) VALUES($1,$2,$3,$4,$5)", [videoDbId, section.position, section.kind, section.heading, section.content]);
+  for (const entry of parsed.tracklist) await client.query("INSERT INTO media.youtube_tracklist_entries(video_id,position,title,start_seconds) VALUES($1,$2,$3,$4)", [videoDbId, entry.position, entry.title, entry.startSeconds]);
+  return { sections: parsed.sections.length, tracks: parsed.tracklist.length };
 }
 
 export async function syncYouTubeVideo(videoId: string, api = new YouTubeDataApi()): Promise<{ synced: boolean; videoId: string }> {
@@ -407,6 +418,96 @@ export async function discoverChannelUploads(
  * justamente los que hay que interrogar por ID, porque `videos.list`
  * devuelve los no listados y omite los borrados.
  */
+export interface RederiveResult {
+  videos: number; changed: number; errors: number; dryRun: boolean; runId: number;
+  sectionsBefore: number; sectionsAfter: number; tracksBefore: number; tracksAfter: number;
+  samples: Array<{ videoId: string; title: string | null; sections: [number, number]; tracks: [number, number] }>;
+}
+
+/**
+ * Paso 3: derivación local. Vuelve a parsear las descripciones **ya
+ * guardadas** —`media.youtube_videos.metadata`, el payload crudo tal como
+ * lo devolvió la API— y reescribe secciones y pistas. No toca la red ni
+ * gasta una sola unidad de cuota, así que el parser se puede iterar cuantas
+ * veces haga falta.
+ *
+ * Cada video se re-deriva dentro de su propio SAVEPOINT: uno que viole una
+ * restricción (dos pistas homónimas en el mismo segundo, por ejemplo) se
+ * anota en `ingest.scrape_errors` y se salta, sin arrastrar al lote.
+ *
+ * `dryRun` calcula el delta y lo deshace: sirve para ver qué cambiaría un
+ * ajuste del parser antes de aceptarlo.
+ */
+export async function rederiveYouTubeDescriptions(options: { dryRun?: boolean; batchSize?: number } = {}): Promise<RederiveResult> {
+  const dryRun = options.dryRun ?? false;
+  const batchSize = options.batchSize ?? 100;
+  const pool = getPool();
+
+  const targets = await pool.query<{ id: string; video_id: string; title: string | null; description: string | null; sections: string; tracks: string }>(`
+    SELECT v.id, v.video_id, v.title,
+           coalesce(v.metadata->'snippet'->>'description', v.description) AS description,
+           (SELECT count(*) FROM media.youtube_description_sections d WHERE d.video_id = v.id)::text AS sections,
+           (SELECT count(*) FROM media.youtube_tracklist_entries t WHERE t.video_id = v.id)::text AS tracks
+      FROM media.youtube_videos v
+     WHERE v.metadata IS NOT NULL OR v.description IS NOT NULL
+     ORDER BY v.id`);
+
+  let runId = 0;
+  {
+    const setup = await pool.connect();
+    try {
+      await setup.query("BEGIN");
+      const source = await ensureSources(setup);
+      const run = await setup.query<{ id: string }>(`INSERT INTO ingest.scrape_runs(kind,source_id,status,params) VALUES('yt_api_sync',$1,'running',$2::jsonb) RETURNING id`,
+        [source.api, JSON.stringify({ action: "rederive_descriptions", dryRun, videos: targets.rowCount })]);
+      runId = Number(run.rows[0]!.id);
+      await setup.query("COMMIT");
+    } catch (error) { await setup.query("ROLLBACK"); throw error; } finally { setup.release(); }
+  }
+
+  let changed = 0, errors = 0, sectionsBefore = 0, sectionsAfter = 0, tracksBefore = 0, tracksAfter = 0;
+  const samples: RederiveResult["samples"] = [];
+
+  for (let offset = 0; offset < targets.rows.length; offset += batchSize) {
+    const batch = targets.rows.slice(offset, offset + batchSize);
+    const client = await pool.connect();
+    try {
+      await client.query("BEGIN");
+      for (const row of batch) {
+        const before = { sections: Number(row.sections), tracks: Number(row.tracks) };
+        await client.query("SAVEPOINT rederive");
+        try {
+          const after = await persistDerivedDescription(client, Number(row.id), row.description);
+          await client.query("RELEASE SAVEPOINT rederive");
+          sectionsBefore += before.sections; sectionsAfter += after.sections;
+          tracksBefore += before.tracks; tracksAfter += after.tracks;
+          if (before.sections !== after.sections || before.tracks !== after.tracks) {
+            changed += 1;
+            if (samples.length < 20) samples.push({ videoId: row.video_id, title: row.title, sections: [before.sections, after.sections], tracks: [before.tracks, after.tracks] });
+          }
+        } catch (error) {
+          await client.query("ROLLBACK TO SAVEPOINT rederive");
+          errors += 1;
+          await recordSweepError(client, runId, canonicalVideoUrl(row.video_id), "parse", `re-derivación fallida: ${String(error)}`);
+          sectionsBefore += before.sections; sectionsAfter += before.sections;
+          tracksBefore += before.tracks; tracksAfter += before.tracks;
+        }
+      }
+      // En dry-run el lote entero se deshace: se midió el delta sin aceptarlo.
+      await client.query(dryRun ? "ROLLBACK" : "COMMIT");
+    } catch (error) { await client.query("ROLLBACK"); throw error; } finally { client.release(); }
+  }
+
+  const counters = { videos: targets.rows.length, changed, errors, dryRun, sectionsBefore, sectionsAfter, tracksBefore, tracksAfter };
+  const closing = await pool.connect();
+  try {
+    await closing.query("UPDATE ingest.scrape_runs SET status=$2,finished_at=now(),counters=$3::jsonb,error_log=$4 WHERE id=$1",
+      [runId, errors > 0 ? "partial" : "ok", JSON.stringify(counters), errors > 0 ? `${errors} video(s) sin re-derivar; ver ingest.scrape_errors` : null]);
+  } finally { closing.release(); }
+
+  return { ...counters, runId, samples };
+}
+
 export async function knownYouTubeVideoIds(options: { pendingOnly?: boolean } = {}): Promise<string[]> {
   const result = await getPool().query<{ video_id: string }>(`
     WITH universo AS (

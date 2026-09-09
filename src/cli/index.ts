@@ -20,7 +20,7 @@ import { eq } from "drizzle-orm";
 import { adapterFor, adapterRegistrationFor } from "../adapters/registry.js";
 import { ingestStoredAdapterSource } from "../ingest/runner.js";
 import { registerManualEvidence } from "../ingest/manual-evidence.js";
-import { discoverChannelUploads, hydrateYouTubeVideos, importYouTubeMasterSheet, knownYouTubeVideoIds, syncYouTubeChannel, syncYouTubeVideo, unmatchedYouTubeRows } from "../youtube/pipeline.js";
+import { discoverChannelUploads, hydrateYouTubeVideos, importYouTubeMasterSheet, knownYouTubeVideoIds, rederiveYouTubeDescriptions, syncYouTubeChannel, syncYouTubeVideo, unmatchedYouTubeRows } from "../youtube/pipeline.js";
 import { ingestSeedClaims } from "../youtube/seed-claims.js";
 import { YT_MASTER_XLSX_PATH } from "../ingest/sources.js";
 import { getPool } from "../db/client.js";
@@ -286,6 +286,19 @@ async function main(): Promise<number> {
         console.log(`youtube sync-video ${result.videoId}: ${result.synced ? "sincronizado" : "no encontrado por la API"}`);
         return result.synced ? 0 : 1;
       }
+      // Paso 3: re-parsea lo ya guardado. Sin red, sin cuota, repetible.
+      if (subcommand === "rederive") {
+        const result = await rederiveYouTubeDescriptions({ dryRun: args.includes("--dry-run") });
+        const signo = (a: number, b: number) => `${a} -> ${b}${b === a ? "" : ` (${b > a ? "+" : ""}${b - a})`}`;
+        console.log(`youtube rederive${result.dryRun ? " --dry-run" : ""} (run ${result.runId}): ${result.videos} videos, `
+          + `${result.changed} con cambios, ${result.errors} fallidos`);
+        console.log(`  secciones: ${signo(result.sectionsBefore, result.sectionsAfter)}   pistas: ${signo(result.tracksBefore, result.tracksAfter)}`);
+        for (const sample of result.samples) {
+          console.log(`  ${sample.videoId}  secciones ${signo(...sample.sections)}  pistas ${signo(...sample.tracks)}  ${(sample.title ?? "").slice(0, 58)}`);
+        }
+        if (result.dryRun) console.log("  (dry-run: nada se escribió)");
+        return result.errors > 0 ? 1 : 0;
+      }
       // Paso 2: hidrata la unión de la hoja y el canal en lotes de 50.
       if (subcommand === "sync") {
         const ids = await knownYouTubeVideoIds({ pendingOnly: args.includes("--pending") });
@@ -334,7 +347,7 @@ async function main(): Promise<number> {
         console.log(JSON.stringify(rows, null, 2));
         return 0;
       }
-      console.error("uso: crv youtube import-sheet <path> | seed-claims [--dry-run] | discover-channel [channel-id] [--resume] | sync [--pending] | sync-video <video-id> | sync-channel [channel-id] | unmatched");
+      console.error("uso: crv youtube import-sheet <path> | seed-claims [--dry-run] | discover-channel [channel-id] [--resume] | sync [--pending] | rederive [--dry-run] | sync-video <video-id> | sync-channel [channel-id] | unmatched");
       return 1;
     }
 
@@ -376,6 +389,7 @@ CRV CLI
   youtube import-sheet <path>  importa YT Master Spreadsheet de forma idempotente
   youtube discover-channel [channel-id] [--resume]  recorre el playlist de uploads sin hidratar
   youtube sync [--pending]     hidrata la unión de hoja y canal en lotes de 50
+  youtube rederive [--dry-run]  re-parsea las descripciones guardadas, sin red ni cuota
   youtube sync-video <video-id>  consulta YouTube Data API (requiere YOUTUBE_API_KEY)
   youtube sync-channel [channel-id]  recorre uploads playlist oficial (requiere YOUTUBE_API_KEY)
   youtube unmatched          filas seed pendientes de enlace o revisión

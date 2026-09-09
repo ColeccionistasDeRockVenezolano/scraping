@@ -81,6 +81,22 @@ describe("deterministic description parser", () => {
     expect(parsed.credits.some((credit) => credit.preposition === "at")).toBe(true);
   });
 
+  // Variantes de encabezado que el corpus del canal impuso: sinónimos y una
+  // errata. Cada una vale pistas reales que antes se perdían.
+  it("accepts the heading variants measured in the channel", () => {
+    const pistas = (heading: string) => parseYouTubeDescription(`${heading}\n\n01 - Vuelo Para Dos 00:00\n02 - Obsesión 03:15`).tracklist;
+    for (const heading of ["Tracklist:", "Trackslist:", "Tracks", "Timestamps:", "Track List"]) {
+      expect(pistas(heading), heading).toEqual([
+        { title: "Vuelo Para Dos", startSeconds: 0, position: 0 },
+        { title: "Obsesión", startSeconds: 195, position: 1 },
+      ]);
+    }
+    // Bonus Tracks continúa la numeración: son pistas del mismo video.
+    const conBonus = parseYouTubeDescription("Tracklist:\n01 - A 00:00\n\nBonus Track:\n02 - B 01:00");
+    expect(conBonus.tracklist.map((t) => t.title)).toEqual(["A", "B"]);
+    expect(conBonus.sections.map((s) => s.kind)).toEqual(["tracklist", "bonus_tracks"]);
+  });
+
   it("reads artist, album, format and year out of the real title", () => {
     expect(parseYouTubeTitle("Caramelos De Cianuro - Las Paticas De La Abuela [EP] (1992) || Full Album ||"))
       .toEqual({ artist: "Caramelos De Cianuro", title: "Las Paticas De La Abuela", year: 1992, format: "EP", isFullAlbum: true });

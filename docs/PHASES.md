@@ -253,6 +253,15 @@ Entregables:
   `media.youtube_tracklist_entries` sobre 636 videos y **2.394 secciones** en
   `media.youtube_description_sections`. De esas pistas, **1.353 vienen de los
   128 videos que la hoja nunca registró**.
+- ✅ *Ya hecho:* **paso 3 — `crv youtube rederive [--dry-run]`**
+  (`rederiveYouTubeDescriptions`). Re-parsea el payload ya guardado sin
+  tocar la red; `SAVEPOINT` por video; `--dry-run` mide el delta y lo
+  deshace. Hidratar y re-derivar comparten `persistDerivedDescription`, un
+  solo camino de código. Ejecutado el 2026-09-08 (runs 89-92): dry-run
+  inicial con delta cero —la derivación es fiel—, luego +23 pistas al cubrir
+  la errata `Trackslist`, y una segunda pasada con 0 cambios. Total:
+  **6.792 pistas** y **2.396 secciones**; el core sigue en 40 álbumes y 278
+  pistas.
 - Emisión de claims desde lo derivado (pistas, créditos, año del título)
   con `source=youtube-data-api`, hacia merge y review. Es el hueco que
   queda: hoy `persistVideoPayload` escribe el espejo en `media.*` y no emite
