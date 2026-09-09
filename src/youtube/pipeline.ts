@@ -197,27 +197,88 @@ function playlistVideoId(item: YouTubePlaylistItemPayload): string | null {
   return extractYouTubeVideoId(id);
 }
 
-export async function syncYouTubeChannel(channelId: string, api = new YouTubeDataApi()): Promise<{ channelId: string; uploads: number; syncedVideos: number }> {
-  const channel = (await api.getChannel(channelId)).items?.[0];
-  if (!channel) throw new Error(`channels.list no encontró el canal ${channelId}`);
-  const client = await getPool().connect(); let uploads = 0; let syncedVideos = 0;
-  try {
-    await client.query("BEGIN"); const saved = await persistChannel(client, channel);
-    if (!saved.uploadsPlaylistId) { await client.query("COMMIT"); return { channelId, uploads, syncedVideos }; }
-    let pageToken: string | undefined;
-    do {
-      const page = await api.listPlaylistItems(saved.uploadsPlaylistId, pageToken); pageToken = page.nextPageToken;
-      const items = page.items ?? []; const ids: string[] = [];
-      for (const item of items) {
-        const videoId = playlistVideoId(item); if (!videoId) continue; ids.push(videoId); uploads += 1;
-        await client.query(`INSERT INTO media.youtube_channel_uploads(channel_id,video_id,playlist_position,published_at,title,payload,updated_at)
-          VALUES($1,$2,$3,$4,$5,$6::jsonb,now()) ON CONFLICT(channel_id,video_id) DO UPDATE SET playlist_position=EXCLUDED.playlist_position,published_at=EXCLUDED.published_at,title=EXCLUDED.title,payload=EXCLUDED.payload,updated_at=now()`, [saved.id,videoId,Number(item.snippet?.["position"] ?? 0),text(item.contentDetails?.["videoPublishedAt"]) ?? text(item.snippet?.["publishedAt"]),text(item.snippet?.["title"]),JSON.stringify(item)]);
-      }
-      const metadata = await api.listVideos([...new Set(ids)]);
-      for (const video of metadata.items ?? []) { await persistVideoPayload(client, video); syncedVideos += 1; }
-    } while (pageToken);
-    await client.query("COMMIT"); return { channelId, uploads, syncedVideos };
-  } catch (error) { await client.query("ROLLBACK"); throw error; } finally { client.release(); }
+export interface HydrationResult { requested: number; hydrated: number; missing: string[]; batches: number; errors: number; runId: number; }
+
+/**
+ * Paso 2: hidratación por lotes de 50. Igual que el descubrimiento, la red
+ * queda fuera de toda transacción y cada lote se confirma solo, así que un
+ * lote que falla no arrastra a los anteriores ni impide los siguientes.
+ *
+ * Un ID pedido que `videos.list` no devuelve **es un dato**: el video fue
+ * borrado o pasó a privado. Se anota en `ingest.scrape_errors` y vuelve en
+ * `missing` en vez de desaparecer en silencio.
+ */
+export async function hydrateYouTubeVideos(videoIds: string[], options: { api?: YouTubeDataApi; runId?: number } = {}): Promise<HydrationResult> {
+  const api = options.api ?? new YouTubeDataApi();
+  const pool = getPool();
+  const ids = [...new Set(videoIds)].filter((id) => extractYouTubeVideoId(id));
+  const pending = new Set(ids);
+  let runId = options.runId ?? 0; let ownRun = false;
+  if (!runId) {
+    const setup = await pool.connect();
+    try {
+      await setup.query("BEGIN");
+      const source = await ensureSources(setup);
+      const run = await setup.query<{ id: string }>(`INSERT INTO ingest.scrape_runs(kind,source_id,status,params) VALUES('yt_api_sync',$1,'running',$2::jsonb) RETURNING id`,
+        [source.api, JSON.stringify({ action: "hydrate_videos", requested: ids.length })]);
+      runId = Number(run.rows[0]!.id); ownRun = true;
+      await setup.query("COMMIT");
+    } catch (error) { await setup.query("ROLLBACK"); throw error; } finally { setup.release(); }
+  }
+
+  let hydrated = 0, batches = 0, errors = 0;
+  for (let offset = 0; offset < ids.length; offset += 50) {
+    const batch = ids.slice(offset, offset + 50);
+    let response;
+    try {
+      response = await api.listVideos(batch);
+    } catch (error) {
+      errors += 1;
+      const client = await pool.connect();
+      try { await recordSweepError(client, runId, "https://www.googleapis.com/youtube/v3/videos", "http_error", `lote ${batches + 1} (${batch.length} IDs): ${String(error)}`); } finally { client.release(); }
+      continue;
+    }
+    const client = await pool.connect();
+    try {
+      await client.query("BEGIN");
+      for (const video of response.items ?? []) { await persistVideoPayload(client, video); pending.delete(video.id); hydrated += 1; }
+      batches += 1;
+      await client.query("COMMIT");
+    } catch (error) { await client.query("ROLLBACK"); throw error; } finally { client.release(); }
+  }
+
+  const missing = [...pending];
+  if (missing.length) {
+    const client = await pool.connect();
+    try {
+      for (const id of missing) await recordSweepError(client, runId, canonicalVideoUrl(id), "validation", "videos.list no devolvió el video: borrado o privado");
+    } finally { client.release(); }
+  }
+  if (ownRun) {
+    const closing = await pool.connect();
+    try {
+      await closing.query("UPDATE ingest.scrape_runs SET status=$2,finished_at=now(),counters=$3::jsonb,error_log=$4 WHERE id=$1",
+        [runId, errors > 0 ? "partial" : "ok", JSON.stringify({ requested: ids.length, hydrated, missing: missing.length, batches, errors }),
+         errors > 0 ? `${errors} lote(s) con error; ver ingest.scrape_errors` : null]);
+    } finally { closing.release(); }
+  }
+  return { requested: ids.length, hydrated, missing, batches, errors, runId };
+}
+
+/**
+ * Descubrimiento + hidratación. Antes esto abría una transacción y hacía
+ * dentro todas las llamadas HTTP del canal: un fallo en la página doce
+ * borraba las once anteriores. Ahora se apoya en las dos piezas que sí
+ * confirman por tramos.
+ */
+export async function syncYouTubeChannel(channelId: string, api = new YouTubeDataApi()): Promise<{ channelId: string; uploads: number; syncedVideos: number; missing: string[] }> {
+  const discovery = await discoverChannelUploads(channelId, { api });
+  const rows = await getPool().query<{ video_id: string }>(`
+    SELECT u.video_id FROM media.youtube_channel_uploads u
+      JOIN media.youtube_channels c ON c.id = u.channel_id
+     WHERE c.channel_id = $1`, [channelId]);
+  const hydration = await hydrateYouTubeVideos(rows.rows.map((row) => row.video_id), { api });
+  return { channelId, uploads: discovery.items, syncedVideos: hydration.hydrated, missing: hydration.missing };
 }
 
 export interface ChannelDiscoveryResult {

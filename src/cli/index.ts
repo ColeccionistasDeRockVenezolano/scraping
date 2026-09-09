@@ -304,7 +304,8 @@ async function main(): Promise<number> {
         if (!channelIds.length) { console.error("uso: crv youtube sync-channel <channel-id> (o importe/sincronice primero un video con canal conocido)"); return 1; }
         for (const channelId of channelIds) {
           const result = await syncYouTubeChannel(channelId);
-          console.log(`youtube sync-channel ${result.channelId}: ${result.uploads} uploads descubiertos, ${result.syncedVideos} metadatos sincronizados`);
+          console.log(`youtube sync-channel ${result.channelId}: ${result.uploads} uploads descubiertos, ${result.syncedVideos} metadatos sincronizados`
+            + (result.missing.length ? `, ${result.missing.length} sin respuesta de la API (borrados o privados): ${result.missing.join(", ")}` : ""));
         }
         return 0;
       }

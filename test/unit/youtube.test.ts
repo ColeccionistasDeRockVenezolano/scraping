@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import fixture from "../fixtures/youtube-video-Q-pRpO2sYSI.json" with { type: "json" };
+import realFixture from "../fixtures/youtube-video-real-Q-pRpO2sYSI.json" with { type: "json" };
 import { YouTubeDataApi, iso8601DurationToSeconds, youtubePublicationStatus, type YouTubeVideoPayload } from "../../src/youtube/api.js";
 import { canonicalVideoUrl, classifyContentType, extractYouTubeVideoId } from "../../src/youtube/normalization.js";
 import { parseYouTubeDescription, parseYouTubeTitle, timestampToSeconds } from "../../src/youtube/parsers.js";
@@ -44,7 +45,7 @@ describe("YT Master Spreadsheet", () => {
 describe("deterministic description parser", () => {
   it("parses explicit sections and timestamps in seconds without AI", () => {
     const parsed = parseYouTubeDescription((fixture as YouTubeVideoPayload).snippet?.["description"] as string);
-    expect(parsed.sections.map((section) => section.kind)).toEqual(["tracklist", "produced_by", "recorded_at"]);
+    expect(parsed.sections.map((section) => section.kind)).toEqual(["tracklist", "recorded_at"]);
     expect(parsed.tracklist).toEqual([
       { title: "Apertura", startSeconds: 0, position: 0 },
       { title: "Segunda canción", startSeconds: 247, position: 1 },
@@ -53,6 +54,40 @@ describe("deterministic description parser", () => {
     expect(timestampToSeconds("04:07")).toBe(247);
     expect(timestampToSeconds("1:02:14")).toBe(3734);
     expect(parseYouTubeTitle("Prueba - Álbum completo")).toMatchObject({ artist: "Prueba", isFullAlbum: true });
+    // "Produced by:" no es un encabezado sino un crédito en línea: así
+    // aparece en las 636 descripciones reales del canal (SOURCES.md §2.2).
+    expect(parsed.credits).toEqual([
+      { verbs: ["produced"], preposition: "by", value: "Productor de prueba", sectionKind: "tracklist" },
+    ]);
+  });
+
+  // Este es el payload real de videos.list, no una maqueta: protege la forma
+  // que de verdad tiene el canal, medida sobre las 636 descripciones.
+  it("parses the real Caramelos De Cianuro description", () => {
+    const payload = realFixture as YouTubeVideoPayload;
+    const parsed = parseYouTubeDescription(payload.snippet?.["description"] as string);
+    expect(parsed.sections.map((section) => section.kind)).toEqual(["tracklist", "musicians", "other_credits"]);
+    expect(parsed.tracklist).toEqual([
+      { title: "Chan², Chaca², Chan²", startSeconds: 0, position: 0 },
+      { title: "Tu Mamá Te Va a Pegar", startSeconds: 247, position: 1 },
+      { title: "La Bruja", startSeconds: 475, position: 2 },
+      { title: "Nadando a Través De La Galaxia", startSeconds: 615, position: 3 },
+    ]);
+    // "Recorded & Mixed by Boris Milan": el verbo compuesto se conserva
+    // entero. Con el vocabulario anterior esta línea no casaba con nada.
+    expect(parsed.credits).toContainEqual(
+      { verbs: ["recorded", "mixed"], preposition: "by", value: "Boris Milan, August 1992", sectionKind: "other_credits" },
+    );
+    expect(parsed.credits.some((credit) => credit.preposition === "at")).toBe(true);
+  });
+
+  it("reads artist, album, format and year out of the real title", () => {
+    expect(parseYouTubeTitle("Caramelos De Cianuro - Las Paticas De La Abuela [EP] (1992) || Full Album ||"))
+      .toEqual({ artist: "Caramelos De Cianuro", title: "Las Paticas De La Abuela", year: 1992, format: "EP", isFullAlbum: true });
+    expect(parseYouTubeTitle("Spiteri - Spiteri (1981) || Full Album ||"))
+      .toEqual({ artist: "Spiteri", title: "Spiteri", year: 1981, format: null, isFullAlbum: true });
+    expect(parseYouTubeTitle("Various Artists - Rock: \"El Compilado\" Vol. 2 (2003) || Full Album ||"))
+      .toMatchObject({ artist: "Various Artists", year: 2003 });
   });
 
   it("maps the API fixture even without an API key", () => {

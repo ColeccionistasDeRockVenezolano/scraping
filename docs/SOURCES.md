@@ -109,6 +109,61 @@ Los 2 ausentes del canal son `QcnD-UIl0N8` (marcado `Unlisted` en la hoja) y
 Que el único `Unlisted` con video sea también ausente sugiere que el playlist
 de uploads solo expone los públicos; confirmarlo es trabajo de `videos.list`.
 
+### 2.2 La descripción es la fuente, no el metadato (medido el 2026-09-08)
+
+`playlistItems.list` devuelve la descripción **completa**, no un resumen:
+contrastada contra la que dio `videos.list` para `Q-pRpO2sYSI`, 599
+caracteres contra 599, byte a byte. El descubrimiento del paso 1, entonces,
+ya dejó en disco las **636 descripciones no vacías** de los 646 videos. El
+parser se calibró contra ese corpus, no contra suposiciones.
+
+El vocabulario real de encabezados es corto y estable:
+
+| Encabezado | Descripciones | Sección |
+|---|---|---|
+| Other Credits | 634 | `other_credits` |
+| Musicians | 622 | `musicians` |
+| Tracklist / Timestamps / Tracks | 634 | `tracklist` |
+| Guest Musicians | 374 | `guest_musicians` |
+| Bonus Track(s) | 94 | `bonus_tracks` |
+| Artwork · Illustration · Photography | 27 · 7 · 2 | idem |
+
+Dos correcciones que el corpus impuso sobre el parser anterior:
+
+1. **`Guest Musicians` no estaba** y aparece en 374 descripciones — más de la
+   mitad del canal. Es además donde vive la atribución por pista
+   ("Acoustic Guitar: Reynaldo Goitia (track 10)").
+2. **Los nombres de crédito no son encabezados.** `Produced by`,
+   `Recorded by`, `Mixed by`, `Mastered by`, `Written by` figuraban en
+   `SECTION_NAMES` con anclas `^…$` que no podían casar con nada: en el canal
+   son líneas sueltas dentro de Other Credits, y con el verbo a menudo
+   compuesto ("Recorded & Mixed by Boris Milan, August 1992"). Se reconocen
+   ahora por forma de línea, no por sección.
+
+Lo que **no** se ascendió a sección, deliberadamente: `Guitars`, `Bass`,
+`Backing Vocals` y demás roles. Aparecen a comienzo de línea con frecuencia
+(58, 31, 29…) pero son roles *dentro* de un bloque de músicos; tratarlos como
+secciones partiría el bloque y perdería a quién pertenece cada instrumento.
+
+Cobertura resultante sobre el corpus completo: **636/636** descripciones no
+vacías con tracklist reconocida — 6.769 pistas con marca de tiempo y 1.633
+créditos en línea. Las pistas de `Bonus Tracks` cuentan como pistas: comparten
+numeración y reloj con el tracklist principal, y la distinción se conserva en
+`media.youtube_description_sections`.
+
+Nota: esto vive hoy en `media.youtube_channel_uploads.payload`. Las tablas
+`youtube_description_sections` y `youtube_tracklist_entries` solo se llenan
+al hidratar (paso 2), porque cuelgan de `media.youtube_videos`.
+
+### 2.3 El título también es un registro
+
+De los 646 títulos del canal: **616 llevan el año** entre paréntesis, 631 el
+separador ` - `, 595 el marcador `|| Full Album ||` y 77 una etiqueta de
+formato — 44 `[EP]`, 32 `[Single]`, 1 `[u(n)clear]`. `parseYouTubeTitle`
+extrae los cuatro. El año que sale de ahí es una afirmación **independiente**
+del `Album Year` de la hoja: cuando discrepen, el conflicto se registra
+conservando ambas, como el caso `Metrozubdivision / CCS`.
+
 ---
 
 ## 3. Las 11 fuentes autorizadas (registro del XLSX)

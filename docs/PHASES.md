@@ -230,14 +230,27 @@ Entregables:
   646 entradas en 13 páginas, 14 unidades de cuota, idempotente (segunda
   pasada: 0 filas nuevas). El resultado —128 videos del canal que la hoja no
   registra— está en SOURCES.md §2.1.
-- `yt:sync` (videos.list por IDs en lotes de 50; la unión de los 520 IDs del
-  seed con los 646 descubiertos son 648 IDs → ~14 llamadas; snapshot crudo en
-  `media.youtube_videos.metadata`; claims de disponibilidad). **Un ID pedido
-  que no vuelve es un dato** (borrado o privado), no un fallo silencioso.
-- Derivación local sobre el jsonb ya guardado: secciones y tracklist
-  (`media.youtube_description_sections`, `media.youtube_tracklist_entries`).
-  Se calibra midiendo el corpus real de descripciones, no adivinando: hoy
-  `parsers.ts` está calibrado contra una sola descripción real.
+- ✅ *Ya hecho:* **`syncYouTubeChannel` reescrito** sobre
+  `discoverChannelUploads` + `hydrateYouTubeVideos`. Ya no existe la
+  transacción única que envolvía las llamadas HTTP del canal: descubrimiento
+  con commit por página, hidratación en lotes de 50 con commit por lote, y un
+  lote que falla no arrastra a los anteriores ni impide los siguientes.
+- ✅ *Ya hecho:* **parser calibrado contra el corpus real.** El paso 1 dejó en
+  disco las 636 descripciones completas (`playlistItems.list` no las trunca:
+  verificado byte a byte contra `videos.list`), así que la calibración no
+  costó cuota. Cobertura **636/636**: 6.769 pistas y 1.633 créditos. Detalle
+  y las dos correcciones que impuso el corpus, en SOURCES.md §2.2.
+- ✅ *Ya hecho:* **`parseYouTubeTitle` extrae artista, disco, formato y año**
+  (616 de 646 títulos llevan año; 77, etiqueta de formato) — SOURCES.md §2.3.
+- `yt:sync` (`hydrateYouTubeVideos` ya existe; falta el comando y los claims):
+  la unión de los 520 IDs del seed con los 646 descubiertos son 648 IDs → ~14
+  llamadas; snapshot crudo en `media.youtube_videos.metadata`. **Un ID pedido
+  que no vuelve es un dato** (borrado o privado): se anota en
+  `ingest.scrape_errors` y vuelve en `missing`, no se pierde en silencio.
+- Emisión de claims desde lo derivado (pistas, créditos, año del título)
+  con `source=youtube-data-api`, hacia merge y review. Es el hueco que
+  queda: hoy `persistVideoPayload` escribe el espejo en `media.*` y no emite
+  ningún claim.
 - `yt:link` (propuestas de vínculo video→álbum → review).
 - `yt:enrich-artist` (search.list acotado, modo dirigido, presupuesto de
   cuota por artista).
