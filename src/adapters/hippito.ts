@@ -1,7 +1,7 @@
 import { load } from "cheerio";
 import type { RawRecord } from "./contracts.js";
 import { BloggerAdapter } from "./blogger.js";
-import { ADAPTER_VERSION, clean, contentImages, excerpt } from "./shared.js";
+import { ADAPTER_VERSION, clean, contentImages, excerpt, VARIOUS_ARTISTS } from "./shared.js";
 
 // "Hippito y sus Chatarritas" es un archivo discográfico de vinilo, no un
 // blog de reseñas: 973 de sus 1.063 entradas llevan la ficha completa en el
@@ -15,10 +15,17 @@ import { ADAPTER_VERSION, clean, contentImages, excerpt } from "./shared.js";
 // aquí el título y el gris de los créditos—, y leer solo el cuerpo como
 // prosa daba cero registros.
 //
-// Fuera de alcance deliberado: las 350 entradas "VA - ..." (recopilatorios).
-// El core exige `albums.artist_id NOT NULL` y un recopilatorio no tiene un
-// artista; inventar una entidad "Various Artists" es una decisión de modelo,
-// no de parsing, y no se toma dentro de un adapter.
+// Los 350 recopilatorios ("VA - ...") SÍ entran, desde que la entidad
+// marcador "Various Artists" es una decisión de modelo tomada (C3). Su
+// tracklist tiene una línea más de información que la de un disco normal:
+//
+//   1. Tony Ronald - Te quiero nena (I Love You Baby)
+//      ───────────   ─────────────── ────────────────
+//      quien toca      la pista        el compositor
+//
+// 4.027 de sus 4.107 pistas nombran a su grupo así. Ese grupo NO va a
+// `albums.artist_id` —el disco es de varios— sino a `track_credits`, que
+// admite `artist_id` justamente para esto: una fila por pista, con evidencia.
 
 /** Toma el último grupo de paréntesis balanceado de una cadena. */
 function lastParenthetical(value: string): { before: string; inside: string } | undefined {
@@ -46,6 +53,8 @@ interface TitleFacts {
   year?: string;
   label?: string;
   catalog?: string;
+  /** Recopilatorio: `artist` es el marcador, no un grupo real. */
+  various?: boolean;
 }
 
 const VARIOUS = /^(?:v\.?\s*a\.?|various(?:\s+artists?)?)$/iu;
@@ -59,9 +68,11 @@ export function parseHippitoTitle(rawTitle: string): TitleFacts | undefined {
   if (!title) return undefined;
   const dash = /^(.+?)\s*-\s+(.+)$/u.exec(title);
   if (!dash) return undefined;
-  const artist = clean(dash[1] ?? "");
+  const declared = clean(dash[1] ?? "");
   const rest = clean(dash[2] ?? "");
-  if (!artist || !rest || VARIOUS.test(artist)) return undefined;
+  if (!declared || !rest) return undefined;
+  const various = VARIOUS.test(declared);
+  const artist = various ? VARIOUS_ARTISTS : declared;
 
   // La ficha entre paréntesis es lo que distingue una entrada discográfica de
   // un título cualquiera; sin ella no se asume que el post sea una ficha.
@@ -72,7 +83,7 @@ export function parseHippitoTitle(rawTitle: string): TitleFacts | undefined {
 
   const segments = normalizeThousands(block.inside).split("/").map(clean).filter(Boolean);
   if (segments.length === 0) return undefined;
-  const facts: TitleFacts = { artist, album };
+  const facts: TitleFacts = { artist, album, ...(various ? { various: true } : {}) };
 
   // Último segmento: país y año. Solo se conserva el año — el país aquí es el
   // de la EDICIÓN, no el origen del artista, y confundirlos sería inventar.
@@ -121,6 +132,11 @@ export class HippitoYSusChatarritasAdapter extends BloggerAdapter {
 
     records.push(this.record("artist", facts.artist, [
       { field: "name", value: facts.artist, evidence: fromTitle },
+      ...(facts.various ? [
+        // El marcador no es una banda y no debe parecerlo en el catálogo.
+        { field: "artist_type", value: "other", evidence: fromTitle },
+        { field: "notes", value: "Entidad marcador para recopilatorios: albums.artist_id es NOT NULL y un recopilatorio no tiene artista único. Quién toca cada pista se afirma en track_credits.", evidence: fromTitle },
+      ] : []),
       { field: "source_url", value: url, evidence: evidence("link", url) },
     ]));
 
@@ -129,6 +145,7 @@ export class HippitoYSusChatarritasAdapter extends BloggerAdapter {
       { field: "artist_name", value: facts.artist, evidence: fromTitle },
       { field: "source_url", value: url, evidence: evidence("link", url) },
     ];
+    if (facts.various) albumFields.push({ field: "album_type", value: "compilation", evidence: fromTitle });
     if (facts.year) albumFields.push({ field: "release_year", value: facts.year, evidence: fromTitle });
     if (facts.catalog) albumFields.push({ field: "catalog_number", value: facts.catalog, evidence: fromTitle });
     if (facts.label) albumFields.push({ field: "label", value: facts.label, evidence: fromTitle });
@@ -147,6 +164,7 @@ export class HippitoYSusChatarritasAdapter extends BloggerAdapter {
 
     // Cada pista es una línea del cuerpo que empieza por su número. Las
     // líneas indentadas sin número son movimientos de un popurrí, no pistas.
+    const performers = new Map<string, ReturnType<typeof evidence>>();
     let position = 0;
     page("div, p, li").each((_, node) => {
       const line = page(node);
@@ -163,19 +181,50 @@ export class HippitoYSusChatarritasAdapter extends BloggerAdapter {
       const titleText = clean((match[2] ?? "").replace(greyText, "")).replace(/[\s:;,-]+$/u, "");
       if (!titleText) return;
 
+      // En un recopilatorio la línea empieza por el grupo: "1. Tony Ronald -
+      // Te quiero nena". El guion va rodeado de espacios, así que un título
+      // con guion pegado ("Rock-Ola") no se parte.
+      const performer = facts.various ? /^(.+?)\s+-\s+(.+)$/u.exec(titleText) : null;
+      const trackTitle = performer ? clean(performer[2] ?? "") : titleText;
+      const band = performer ? clean(performer[1] ?? "") : "";
+      if (!trackTitle) return;
+
       const where = evidence("div", text, position);
-      records.push(this.record("track", `${facts.artist}::${facts.album}::${titleText}`, [
-        { field: "title", value: titleText, evidence: where },
+      records.push(this.record("track", `${facts.artist}::${facts.album}::${trackTitle}`, [
+        { field: "title", value: trackTitle, evidence: where },
         { field: "track_number", value: number, evidence: where },
         { field: "album_title", value: facts.album, evidence: where },
         { field: "artist_name", value: facts.artist, evidence: where },
       ]));
 
+      if (band) {
+        // El grupo existe porque el disco lo nombra; sin este claim el
+        // crédito no tendría a qué engancharse (una relación jamás crea sus
+        // extremos). Se anota una sola vez por entrada: una banda con tres
+        // pistas en el mismo recopilatorio es la misma banda, y repetir su
+        // registro produce claims de hash idéntico.
+        performers.set(band, where);
+        // El rol va en la identidad, como en shared.ts: en tres pistas de este
+        // mismo feed quien toca es también quien compone, y sin el rol los dos
+        // créditos colapsan en uno y el puente los ve como un rol contradicho.
+        records.push(this.record("track_credit", `${facts.album}::${trackTitle}::intérprete::${band}`, [
+          { field: "album_title", value: facts.album, evidence: where },
+          { field: "track_title", value: trackTitle, evidence: where },
+          { field: "artist_name", value: facts.artist, evidence: where },
+          { field: "credited_name", value: band, evidence: where },
+          // `credited_kind` evita que el puente pruebe primero `person` y
+          // enganche la pista a un homónimo: aquí quien toca es un grupo.
+          { field: "credited_kind", value: "artist", evidence: where },
+          { field: "credit_role", value: "intérprete", evidence: where },
+          { field: "credit_scope", value: "track", evidence: where },
+        ]));
+      }
+
       for (const credit of composers(greyText)) {
         records.push(this.record("person", credit.name, [{ field: "name", value: credit.name, evidence: where }]));
-        records.push(this.record("track_credit", `${facts.album}::${titleText}::${credit.name}`, [
+        records.push(this.record("track_credit", `${facts.album}::${trackTitle}::${credit.role}::${credit.name}`, [
           { field: "album_title", value: facts.album, evidence: where },
-          { field: "track_title", value: titleText, evidence: where },
+          { field: "track_title", value: trackTitle, evidence: where },
           { field: "artist_name", value: facts.artist, evidence: where },
           { field: "credited_name", value: credit.name, evidence: where },
           { field: "credit_role", value: credit.role, evidence: where },
@@ -184,6 +233,13 @@ export class HippitoYSusChatarritasAdapter extends BloggerAdapter {
       }
       position += 1;
     });
+
+    for (const [name, where] of performers) {
+      records.push(this.record("artist", name, [
+        { field: "name", value: name, evidence: where },
+        { field: "source_url", value: url, evidence: evidence("link", url) },
+      ]));
+    }
 
     return records;
   }

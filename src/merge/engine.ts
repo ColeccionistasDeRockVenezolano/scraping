@@ -120,6 +120,18 @@ function defaultResolutionInput(claim: ClaimToPersist, spec: EntitySpec): Resolu
   };
 }
 
+/**
+ * ¿Alguna fuente escribió alguna vez este campo de esta entidad? El rastro de
+ * merge_audit es la única prueba: si no hay fila, el valor que tiene la
+ * columna lo puso el DEFAULT del DDL y no contradice a nadie.
+ */
+async function wasAsserted(client: PoolClient, spec: EntitySpec, targetId: number, field: string): Promise<boolean> {
+  const { rowCount } = await client.query(
+    `SELECT 1 FROM ingest.merge_audit WHERE entity_kind=$1::ingest.claim_entity_kind AND ${spec.targetColumn}=$2 AND field=$3 LIMIT 1`,
+    [spec.kind, targetId, field]);
+  return (rowCount ?? 0) > 0;
+}
+
 async function attachClaim(client: PoolClient, claimId: number, spec: EntitySpec, targetId: number, status: "accepted" | "candidate" | "conflict" = "accepted"): Promise<void> {
   await client.query(`UPDATE ingest.claims SET ${spec.targetColumn}=$1,status=$2,updated_at=now() WHERE id=$3`, [targetId, status, claimId]);
 }
@@ -504,16 +516,30 @@ export async function mergeClaim(
       await client.query("COMMIT");
       return { action: "conflict", ...targetResult(spec, targetId, { resolutionDecisionId: decisionId }), detail: `campo suspendido por conflicto abierto; review=${conflict.reviewId}` };
     }
-    if (current !== null) {
+    // Una contradiccion exige DOS afirmaciones. Varias columnas del core son
+    // NOT NULL con DEFAULT —`artists.artist_type` es 'band',
+    // `albums.album_type` es 'other'—, asi que `current` nunca es NULL y todo
+    // claim de tipo se archivaba como contradiccion contra un valor que
+    // ninguna fuente afirmo: lo puso el DDL. `createEntity` solo escribe la
+    // columna de identidad, de modo que la ausencia de rastro en merge_audit
+    // prueba que ese valor nunca fue afirmado por nadie.
+    const asserted = current === null ? false : await wasAsserted(client, spec, targetId, claim.field);
+    if (current !== null && asserted) {
       const conflict = await createFieldConflict(client, { claimId: persisted.id, kind: spec.kind, targetId, field: claim.field, currentValue: current, proposedValue: proposed });
       await client.query("COMMIT");
       return { action: "conflict", ...targetResult(spec, targetId, { resolutionDecisionId: decisionId }), detail: `contradiccion conservada; review=${conflict.reviewId}` };
     }
     await client.query(`UPDATE ${spec.table} SET ${column}=$1 WHERE id=$2`, [proposed, targetId]);
     await attachClaim(client, persisted.id, spec, targetId, "accepted");
-    await audit(client, claim, persisted.id, spec, targetId, claim.field, null, proposed, claim.confidence, `non-conflicting fill; er_decision=${decisionId}`);
+    // El valor anterior va al rastro tal cual estaba, aunque fuera el del
+    // DDL: la auditoria dice lo que habia, no lo que se supone que habia.
+    await audit(client, claim, persisted.id, spec, targetId, claim.field, current, proposed, claim.confidence,
+      current === null ? `non-conflicting fill; er_decision=${decisionId}` : `default del DDL sustituido por la primera afirmacion; er_decision=${decisionId}`);
     await client.query("COMMIT");
-    return { action: "applied", ...targetResult(spec, targetId, { resolutionDecisionId: decisionId }), detail: "campo vacio completado y auditado" };
+    return {
+      action: "applied", ...targetResult(spec, targetId, { resolutionDecisionId: decisionId }),
+      detail: current === null ? "campo vacio completado y auditado" : "default del DDL completado con la primera afirmacion de una fuente",
+    };
   } catch (error) {
     await client.query("ROLLBACK");
     throw error;

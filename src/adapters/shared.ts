@@ -6,6 +6,18 @@ import type { RawRecord, Evidence } from "./contracts.js";
 
 export const ADAPTER_VERSION = "1.0.0";
 
+/**
+ * Entidad marcador para los recopilatorios, aprobada como decisión de modelo
+ * (C3, 2026-09-08). `albums.artist_id` es NOT NULL y un recopilatorio no
+ * tiene un artista único, así que necesita ALGO en esa columna.
+ *
+ * Qué NO significa: no afirma que las bandas del disco sean "Various
+ * Artists". Quién toca cada pista se afirma donde el modelo lo pide, en
+ * `track_credits.artist_id`, una fila por pista y con su evidencia. El
+ * marcador solo ocupa la columna que la tabla exige.
+ */
+export const VARIOUS_ARTISTS = "Various Artists";
+
 export function absoluteUrl(value: string): string {
   return /^https?:\/\//i.test(value) ? value : `https://${value.replace(/^\/+/, "")}`;
 }

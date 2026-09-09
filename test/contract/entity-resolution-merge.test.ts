@@ -176,6 +176,28 @@ describe("ER + claims + conflictos + merge auditado", () => {
     expect((await getDb().select().from(artists).where(eq(artists.id, artistId)))[0]?.biography).toBe(beforeBiography);
   });
 
+  it("el DEFAULT del DDL no es una afirmacion, asi que la primera fuente lo completa", async () => {
+    // `artists.artist_type` es NOT NULL DEFAULT 'band'. Ese valor no lo dijo
+    // ninguna fuente: lo puso el DDL, y `createEntity` solo escribe la
+    // columna de identidad. Tratarlo como contradiccion archivaba en
+    // conflicto TODO claim de tipo, de todas las fuentes.
+    const before = (await getDb().select().from(artists).where(eq(artists.id, artistId)))[0];
+    expect(before?.artistType).toBe("band");
+    const first = await applyClaim({ sourceId, kind: "artist", identity: "Caramelos de Cianuro", field: "artist_type", value: "solo_artist", targets: { artistId } });
+    expect(first.outcome.action).toBe("applied");
+    expect((await getDb().select().from(artists).where(eq(artists.id, artistId)))[0]?.artistType).toBe("solo_artist");
+    // El rastro dice lo que HABIA, no lo que se supone que habia.
+    const trail = await getPool().query<{ old_value: unknown; new_value: unknown }>(
+      "SELECT old_value, new_value FROM ingest.merge_audit WHERE artist_id=$1 AND field='artist_type' ORDER BY id DESC LIMIT 1", [artistId]);
+    expect(trail.rows[0]).toMatchObject({ old_value: "band", new_value: "solo_artist" });
+
+    // Y una vez afirmado, la siguiente discrepancia SI es contradiccion.
+    const second = await applyClaim({ sourceId, kind: "artist", identity: "Caramelos de Cianuro", field: "artist_type", value: "duo", targets: { artistId } });
+    expect(second.outcome.action).toBe("conflict");
+    expect((await getDb().select().from(artists).where(eq(artists.id, artistId)))[0]?.artistType).toBe("solo_artist");
+    expect(await getDb().select().from(conflicts).where(eq(conflicts.field, "artist_type"))).toHaveLength(1);
+  });
+
   it("todo write automatico al core tiene merge_audit y toda resolucion tiene features", async () => {
     const writes = await getDb().select().from(mergeAudit);
     expect(writes.length).toBeGreaterThan(0);

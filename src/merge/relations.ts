@@ -77,7 +77,7 @@ const CREDIT_TYPE_RULES: ReadonlyArray<readonly [RegExp, CreditType]> = [
 // cubre lo que aparece en las fichas (inglés y español); lo que no encaja se
 // clasifica `other` en vez de forzarse a músico.
 const MUSICIAN_ROLE =
-  /(guitar|guitarra|bass|bajo|drum|bater|percussion|percusi|vocal|voz|voces|voice|sing|cant|keyboard|teclad|piano|organ|[oó]rgano|synth|sintetiz|sax|trumpet|trompeta|tromb[oó]n|trombone|flute|flauta|clarinet|oboe|viol[ií]n|violin|viola|cello|chelo|contrabajo|harp|arpa|harmonica|arm[oó]nica|accordion|acorde[oó]n|banjo|mandolin|cuatro|maracas|conga|timbal|bong[oó]|charrasca|tambor|coro|chorus|backing|palmas)/iu;
+  /(guitar|guitarra|bass|bajo|drum|bater|percussion|percusi|vocal|voz|voces|voice|sing|cant|keyboard|teclad|piano|organ|[oó]rgano|synth|sintetiz|sax|trumpet|trompeta|tromb[oó]n|trombone|flute|flauta|clarinet|oboe|viol[ií]n|violin|viola|cello|chelo|contrabajo|harp|arpa|harmonica|arm[oó]nica|accordion|acorde[oó]n|banjo|mandolin|cuatro|maracas|conga|timbal|bong[oó]|charrasca|tambor|coro|chorus|backing|palmas|int[eé]rprete|interpret|performer|ejecuta)/iu;
 
 /** Clasificación determinista del rol en el enum credit_type del core. */
 export function creditTypeForRole(role: string): CreditType {
@@ -201,21 +201,37 @@ async function resolveEndpoint(
   };
 }
 
-/** Extremo acreditado: persona, organización o banda, en ese orden. */
+export type CreditedKind = "person" | "organization" | "artist";
+
+function isCreditedKind(value: string | undefined): value is CreditedKind {
+  return value === "person" || value === "organization" || value === "artist";
+}
+
+/**
+ * Extremo acreditado: persona, organización o banda, en ese orden — salvo que
+ * la fuente diga de qué tipo es, en cuyo caso se prueba SOLO ese.
+ *
+ * El orden por defecto es una conjetura razonable cuando no hay más dato,
+ * pero deja de serlo en un recopilatorio: ahí lo acreditado en cada pista es
+ * el GRUPO que la toca, y probar primero `person` puede engancharla a un
+ * homónimo. Cuando la fuente lo afirma —`credited_kind`— no se conjetura.
+ */
 async function resolveCredited(
   client: PoolClient,
   claim: ClaimToPersist,
   claimId: number,
   name: string,
   albumTitle: string | undefined,
+  declared?: string,
 ): Promise<{ column: "person_id" | "organization_id" | "artist_id"; endpoint: Endpoint } | { endpoint: Endpoint }> {
   const order = [
     { column: "person_id", claimKind: "person", input: { kind: "PERSON", name, ...(albumTitle === undefined ? {} : { albumCredits: [albumTitle] }) } },
     { column: "organization_id", claimKind: "organization", input: { kind: "ORGANIZATION", name, ...(albumTitle === undefined ? {} : { associatedAlbums: [albumTitle] }) } },
     { column: "artist_id", claimKind: "artist", input: { kind: "ARTIST", name } },
   ] as const;
+  const wanted = isCreditedKind(declared) ? order.filter((option) => option.claimKind === declared) : order;
   let last: Endpoint | undefined;
-  for (const option of order) {
+  for (const option of wanted) {
     const endpoint = await resolveEndpoint(client, claim, claimId, option.input, option.claimKind, [name]);
     if (endpoint.id !== undefined) return { column: option.column, endpoint };
     last = endpoint;
@@ -409,7 +425,7 @@ async function albumCredit(context: RelationContext): Promise<RelationResult> {
   if (!credited || !role) return { status: "pending", reason: "faltan campos obligatorios del crédito", payload: { credited, role } };
   const album = await albumEndpoint(context);
   if ("pending" in album) return album.pending;
-  const target = await resolveCredited(client, claim, claimId, credited, fields.get("album_title"));
+  const target = await resolveCredited(client, claim, claimId, credited, fields.get("album_title"), fields.get("credited_kind"));
   if (!("column" in target)) {
     return { status: "pending", reason: "acreditado inexistente en el core; apruebe primero la entidad",
       payload: { credited, action: target.endpoint.action, decisionId: target.endpoint.decisionId } };
@@ -464,7 +480,7 @@ async function trackCredit(context: RelationContext): Promise<RelationResult> {
     return { status: "pending", reason: "el crédito de pista no indica ni título ni números", payload: {} };
   }
 
-  const target = await resolveCredited(client, claim, claimId, credited, fields.get("album_title"));
+  const target = await resolveCredited(client, claim, claimId, credited, fields.get("album_title"), fields.get("credited_kind"));
   if (!("column" in target)) {
     return { status: "pending", reason: "acreditado inexistente en el core; apruebe primero la entidad",
       payload: { credited, action: target.endpoint.action, decisionId: target.endpoint.decisionId } };

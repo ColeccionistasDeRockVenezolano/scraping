@@ -1,11 +1,13 @@
 // Hippito codifica la ficha del disco en el TÍTULO de la entrada, no en el
 // cuerpo. Lo que se fija aquí es la convención exacta y, sobre todo, dónde el
-// adapter se niega a adivinar: recopilatorios sin artista y paréntesis que
-// traen una función en vez de un nombre.
+// adapter se niega a adivinar: paréntesis que traen una función en vez de un
+// nombre. Los recopilatorios ya no se descartan — desde C3 entran bajo el
+// marcador aprobado; su comportamiento propio vive en hippito-va.test.ts.
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
 import { HippitoYSusChatarritasAdapter, composers, parseHippitoTitle } from "../../src/adapters/hippito.js";
+import { VARIOUS_ARTISTS } from "../../src/adapters/shared.js";
 import type { StoredPage } from "../../src/adapters/contracts.js";
 
 const fixture = path.join(process.cwd(), "test/fixtures/adapters/hippito-y-sus-chatarritas.json");
@@ -44,10 +46,12 @@ describe("título discográfico de Hippito", () => {
     expect(parseHippitoTitle("OSV - El Camino de Santiago (Venezuela 2018)")).toEqual({ artist: "OSV", album: "El Camino de Santiago", year: "2018" });
   });
 
-  it("se niega a inventar el artista de un recopilatorio", () => {
-    // El core exige albums.artist_id NOT NULL y un "VA" no tiene artista.
+  it("un recopilatorio queda marcado como tal en vez de inventarle un artista", () => {
+    // `albums.artist_id` es NOT NULL y un "VA" no tiene artista único. Desde
+    // C3 el marcador aprobado ocupa esa columna y quien toca cada pista se
+    // afirma en track_credits — ver hippito-va.test.ts.
     for (const title of ["VA - Especiales 1090 (United Artists LP-7500 / Venezuela 1969)", "V.A. - Algo (Sello / 1970)", "Various Artists - Algo (Sello / 1970)"]) {
-      expect(parseHippitoTitle(title)).toBeUndefined();
+      expect(parseHippitoTitle(title)).toMatchObject({ artist: VARIOUS_ARTISTS, various: true });
     }
     // Sin ficha entre paréntesis no se asume que el post sea discográfico.
     expect(parseHippitoTitle("La Historia Sonora del Rock - Azúcar, Cacao y Leche")).toBeUndefined();
@@ -89,9 +93,10 @@ describe("extracción de entradas reales de Hippito", () => {
     expect(album.fields.find((f) => f.field === "catalog_number")?.value).toBe("LPS-99516");
   });
 
-  it("la entrada VA del mismo feed no aporta ningún registro", async () => {
+  it("la entrada VA del mismo feed entra bajo el marcador, nunca bajo «VA»", async () => {
     const all = await records();
+    // "VA" es la abreviatura del blog, no una entidad del catálogo.
     expect(all.some((r) => r.identity.startsWith("VA::") || r.identity === "VA")).toBe(false);
-    expect(all.every((r) => !r.identity.includes("Aquellos Años"))).toBe(true);
+    expect(all.some((r) => r.identity === `${VARIOUS_ARTISTS}::Aquellos Años 60 & 70 Vol. 2`)).toBe(true);
   });
 });
