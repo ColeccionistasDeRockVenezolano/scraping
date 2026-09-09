@@ -265,6 +265,20 @@ retiraba, y el corchete tampoco**. Los tres son la misma clase de error que
 ` at ` y `&`, y los cuatro se encontraron midiendo la salida contra el corpus
 guardado, no leyendo el código.
 
+**Los residuos de la primera pasada están descartados.** Se identificaron por
+diferencia —lo que el código corregido ya no emite y seguía en la base— y se
+cerraron con `dismissEntity`, que marca los claims `rejected` y cierra sus
+revisiones con una nota; no se borró nada. Fueron **755 identidades y 2.467
+claims**: 359 personas, 1.430 créditos de disco y 678 de pista. Pistas,
+discos, artistas y organizaciones no perdieron ni uno, porque el defecto solo
+afectaba a nombres de personas y a los créditos que los citaban.
+
+**[PENDIENTE]** El mismo defecto sobrevive en ~32 nombres de organización
+(`Estudios Tumbador & La Cosa Nostra Estudios`, `El Techo, VinilH Records`):
+`splitCreditValue` separa las personas pero no los locales. Arreglarlo cuesta
+otra emisión completa —unos cien minutos— por 32 entidades, así que de momento
+quedan señalados en el Visor de cola, donde se descartan a mano.
+
 ---
 
 ## 3. Las 11 fuentes autorizadas (registro del XLSX)
