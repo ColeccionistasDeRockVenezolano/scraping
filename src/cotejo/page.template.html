@@ -532,6 +532,17 @@ function renderStage(){
 
 /* ---- contradicciones ---- */
 var fieldWord={organization_type:"qué clase de organización es",track_number:"el número de pista"};
+/* Los valores llegaban crudos del catálogo: los botones decían "other" y
+   "label", que no significan nada para quien decide. `label` además no es un
+   valor válido del enum organization_type — la fuente lo emite sin normalizar
+   y son la misma cosa que record_label (SOURCES.md 2.7). */
+var valueWord={other:"Sin clasificar",record_label:"Sello discográfico",label:"Sello discográfico",
+  production_company:"Productora",recording_studio:"Estudio de grabación",
+  distributor:"Distribuidora",management:"Mánager"};
+function valueText(v){
+  if(v==null||v==="") return "Sin anotar";
+  return valueWord[String(v)] || String(v);
+}
 function renderConflicts(){
   var list=document.getElementById("conf-list"); list.textContent="";
   D.conflicts.forEach(function(c){
@@ -542,9 +553,11 @@ function renderConflicts(){
     row.appendChild(left);
     var opts=el("div","opts");
     var choices=[];
-    if(c.canonical!=null) choices.push(["canonical","Dejar lo que hay",c.canonical]);
-    if(c.proposed!=null) choices.push(["proposed","Cambiar a",c.proposed]);
-    if(!choices.length) choices.push(["unsure","","Sin valores anotados"]);
+    if(c.canonical!=null) choices.push(["canonical","Dejar lo que hay",valueText(c.canonical)]);
+    if(c.proposed!=null) choices.push(["proposed","Cambiar a",valueText(c.proposed)]);
+    // Ninguna de las dos fuentes anotó valor: no hay nada que elegir, y ofrecer
+    // botones sería fingir una decisión que no existe.
+    if(!choices.length) choices.push(["unsure","","Ninguna fuente anotó un valor: nada que decidir"]);
     else choices.push(["unsure","","No lo sé"]);
     choices.forEach(function(ch){
       var b=el("button","opt"); b.type="button";

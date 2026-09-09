@@ -693,3 +693,27 @@ incrementalmente (`upload_order` único + `row_hash` por fila).
    aprobación.
 5. Ninguna fase posterior puede añadir fuentes por su cuenta: la lista de
    §3 es cerrada hasta que el propietario la amplíe explícitamente.
+
+### 2.7 Un valor de `organization_type` que el enum no admite
+
+De las 26 contradicciones abiertas, 22 son sobre `organization_type` y todas
+parten del mismo sitio: el catálogo tiene `other` (el valor por defecto de la
+columna) y la fuente propone algo más preciso.
+
+| Cuántas | Catálogo | Propuesta | Estado |
+|---|---|---|---|
+| 15 | `other` | `record_label` | válido |
+| 7 | `other` | `label` | **no existe en el enum** |
+
+El enum admite `record_label, production_company, recording_studio,
+distributor, management, other`. `label` no está: es `record_label` sin
+normalizar, y aplicarlo tal cual fallaría al escribir.
+
+Las otras 4 contradicciones son de `track_number` con `null` en los dos lados:
+no hay nada que decidir y la Mesa de Cotejo ya lo dice en lugar de ofrecer
+botones que fingen una elección.
+
+**[PENDIENTE]** Normalizar `label` → `record_label` en el adaptador, o mapearlo
+en el paso que aplique las decisiones. Hasta entonces las 7 se pueden decidir
+en la mesa —la intención humana queda bien registrada— pero no se podrán
+aplicar sin la traducción.
