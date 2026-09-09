@@ -20,7 +20,7 @@ import { eq } from "drizzle-orm";
 import { adapterFor, adapterRegistrationFor } from "../adapters/registry.js";
 import { ingestStoredAdapterSource } from "../ingest/runner.js";
 import { registerManualEvidence } from "../ingest/manual-evidence.js";
-import { discoverChannelUploads, importYouTubeMasterSheet, syncYouTubeChannel, syncYouTubeVideo, unmatchedYouTubeRows } from "../youtube/pipeline.js";
+import { discoverChannelUploads, hydrateYouTubeVideos, importYouTubeMasterSheet, knownYouTubeVideoIds, syncYouTubeChannel, syncYouTubeVideo, unmatchedYouTubeRows } from "../youtube/pipeline.js";
 import { ingestSeedClaims } from "../youtube/seed-claims.js";
 import { YT_MASTER_XLSX_PATH } from "../ingest/sources.js";
 import { getPool } from "../db/client.js";
@@ -286,6 +286,16 @@ async function main(): Promise<number> {
         console.log(`youtube sync-video ${result.videoId}: ${result.synced ? "sincronizado" : "no encontrado por la API"}`);
         return result.synced ? 0 : 1;
       }
+      // Paso 2: hidrata la unión de la hoja y el canal en lotes de 50.
+      if (subcommand === "sync") {
+        const ids = await knownYouTubeVideoIds({ pendingOnly: args.includes("--pending") });
+        if (!ids.length) { console.log("youtube sync: nada que hidratar"); return 0; }
+        const result = await hydrateYouTubeVideos(ids);
+        console.log(`youtube sync (run ${result.runId}): ${result.requested} IDs pedidos en ${result.batches} lotes, `
+          + `${result.hydrated} hidratados, ${result.missing.length} sin respuesta, ${result.errors} lotes con error`);
+        if (result.missing.length) console.log(`  sin respuesta de la API (borrados o privados): ${result.missing.join(", ")}`);
+        return result.errors > 0 ? 1 : 0;
+      }
       // Descubrimiento sin hidratación: qué videos hay, no qué dice cada uno.
       if (subcommand === "discover-channel") {
         const channelId = argument && !argument.startsWith("--")
@@ -324,7 +334,7 @@ async function main(): Promise<number> {
         console.log(JSON.stringify(rows, null, 2));
         return 0;
       }
-      console.error("uso: crv youtube import-sheet <path> | seed-claims [--dry-run] | discover-channel [channel-id] [--resume] | sync-video <video-id> | sync-channel [channel-id] | unmatched");
+      console.error("uso: crv youtube import-sheet <path> | seed-claims [--dry-run] | discover-channel [channel-id] [--resume] | sync [--pending] | sync-video <video-id> | sync-channel [channel-id] | unmatched");
       return 1;
     }
 
@@ -365,6 +375,7 @@ CRV CLI
   sources list | runs list | review list | review show <id>
   youtube import-sheet <path>  importa YT Master Spreadsheet de forma idempotente
   youtube discover-channel [channel-id] [--resume]  recorre el playlist de uploads sin hidratar
+  youtube sync [--pending]     hidrata la unión de hoja y canal en lotes de 50
   youtube sync-video <video-id>  consulta YouTube Data API (requiere YOUTUBE_API_KEY)
   youtube sync-channel [channel-id]  recorre uploads playlist oficial (requiere YOUTUBE_API_KEY)
   youtube unmatched          filas seed pendientes de enlace o revisión

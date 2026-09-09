@@ -398,6 +398,29 @@ export async function discoverChannelUploads(
   return { channelId, runId, declaredVideoCount, pages, items, inserted, updated, errors, status };
 }
 
+/**
+ * El universo de videos a hidratar: la unión de lo que la hoja registra con
+ * lo que el canal expone. No son el mismo conjunto —518 coinciden, 128 solo
+ * están en el canal y 2 solo en la hoja (SOURCES.md §2.1)— y las dos
+ * diferencias importan. Los del canal ausentes de la hoja son discos que la
+ * discografía curada no anotó; los de la hoja ausentes del canal son
+ * justamente los que hay que interrogar por ID, porque `videos.list`
+ * devuelve los no listados y omite los borrados.
+ */
+export async function knownYouTubeVideoIds(options: { pendingOnly?: boolean } = {}): Promise<string[]> {
+  const result = await getPool().query<{ video_id: string }>(`
+    WITH universo AS (
+      SELECT video_id FROM ingest.seed_uploads WHERE video_id IS NOT NULL
+      UNION
+      SELECT video_id FROM media.youtube_channel_uploads
+    )
+    SELECT u.video_id FROM universo u
+      LEFT JOIN media.youtube_videos v ON v.video_id = u.video_id
+     WHERE $1::boolean IS NOT TRUE OR v.last_fetched_at IS NULL
+     ORDER BY u.video_id`, [options.pendingOnly ?? false]);
+  return result.rows.map((row) => row.video_id);
+}
+
 export async function unmatchedYouTubeRows(): Promise<Array<{ uploadOrder: number; artist: string | null; album: string | null; videoId: string | null; contentKind: string | null }>> {
   const result = await getPool().query(`
     SELECT s.upload_order,s.artist_name_raw,s.album_name_raw,s.video_id,s.content_kind

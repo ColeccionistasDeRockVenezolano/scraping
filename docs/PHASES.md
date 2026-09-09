@@ -242,11 +242,17 @@ Entregables:
   y las dos correcciones que impuso el corpus, en SOURCES.md §2.2.
 - ✅ *Ya hecho:* **`parseYouTubeTitle` extrae artista, disco, formato y año**
   (616 de 646 títulos llevan año; 77, etiqueta de formato) — SOURCES.md §2.3.
-- `yt:sync` (`hydrateYouTubeVideos` ya existe; falta el comando y los claims):
-  la unión de los 520 IDs del seed con los 646 descubiertos son 648 IDs → ~14
-  llamadas; snapshot crudo en `media.youtube_videos.metadata`. **Un ID pedido
-  que no vuelve es un dato** (borrado o privado): se anota en
-  `ingest.scrape_errors` y vuelve en `missing`, no se pierde en silencio.
+- ✅ *Ya hecho:* **paso 2 — `crv youtube sync [--pending]`**
+  (`knownYouTubeVideoIds` + `hydrateYouTubeVideos`). Hidrata la unión de la
+  hoja y el canal: 648 IDs en 13 lotes de 50. Ejecutado el 2026-09-08 (runs
+  87 y 88): **646 hidratados, 2 sin respuesta, 0 lotes con error**, y la
+  segunda pasada deja conteos idénticos. Los 2 ausentes —`QcnD-UIl0N8` y
+  `nUNxlo6cTbc`— van a `ingest.scrape_errors` y vuelven en `missing`: un ID
+  que no vuelve es un dato, no un fallo silencioso.
+  Derivado en el mismo paso: **6.769 pistas** en
+  `media.youtube_tracklist_entries` sobre 636 videos y **2.394 secciones** en
+  `media.youtube_description_sections`. De esas pistas, **1.353 vienen de los
+  128 videos que la hoja nunca registró**.
 - Emisión de claims desde lo derivado (pistas, créditos, año del título)
   con `source=youtube-data-api`, hacia merge y review. Es el hueco que
   queda: hoy `persistVideoPayload` escribe el espejo en `media.*` y no emite
@@ -257,10 +263,12 @@ Entregables:
 - Rate limiting de cuota + caché. Reintento con backoff para 5xx/429 ya vive
   en `YouTubeDataApi.request`; 403/400 son terminales y no se reintentan.
 
-Criterios de salida: sync completa sobre los 520 IDs (lotes, reintentos);
-disponibilidad proyectada en `albums.youtube_status` solo para videos con
-enlace primario en `media.video_albums`; ningún álbum creado por videos
-(test); conteo de `albums` idéntico antes y después del sync.
+Criterios de salida: ✅ sync completa sobre la unión —no sobre 520 IDs, que
+era el universo supuesto, sino sobre 648— en lotes con reintentos; ✅ ningún
+álbum creado por videos y conteo de `albums` idéntico antes y después del
+sync (40 antes, 40 después; `artists` 29 y `tracks` 278, sin mover);
+pendiente la disponibilidad proyectada en `albums.youtube_status`, que
+depende de los claims y del enlace primario en `media.video_albums`.
 
 ---
 

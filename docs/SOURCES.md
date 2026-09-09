@@ -79,11 +79,13 @@ para ese campo). Ningún nivel de confianza permite saltarse la evidencia.
   Venezolano*, abierto el 2015-11-20, playlist de uploads
   `UUtYlrz6GyvRahlhHjocWQYQ`. Declara 648 videos públicos; el barrido del
   playlist ve 646 (§2.1).
-- **[POR CONFIRMAR]** disponibilidad real de cada video (público / no listado
-  / eliminado): el barrido del playlist solo distingue *presente* de
-  *ausente*; separar "no listado" de "eliminado" exige `videos.list` por ID,
-  que devuelve los no listados y omite los borrados. Pendiente del paso 2 de
-  F3. El seed no es autoridad sobre el estado actual.
+- **Disponibilidad real (resuelto el 2026-09-08, paso 2).** De los 648 IDs de
+  la unión, `videos.list` devolvió 646, **todos `public`**. No hay un solo
+  video no listado en el canal, así que el `Status` de la hoja no describe
+  ningún estado real de YouTube. Los 2 que no volvieron —`QcnD-UIl0N8` y
+  `nUNxlo6cTbc`— están borrados o en privado: `videos.list` por ID sí
+  devuelve los no listados, de modo que su ausencia por las dos vías es
+  concluyente. Quedan anotados en `ingest.scrape_errors`.
 
 ### 2.1 Lo que el canal tiene y la hoja no (medido el 2026-09-08)
 
@@ -106,8 +108,11 @@ clasificar por título.
 
 Los 2 ausentes del canal son `QcnD-UIl0N8` (marcado `Unlisted` en la hoja) y
 `nUNxlo6cTbc` (*Various Artists — Tributo a CDC: Harakiri City*, sin marca).
-Que el único `Unlisted` con video sea también ausente sugiere que el playlist
-de uploads solo expone los públicos; confirmarlo es trabajo de `videos.list`.
+El paso 2 los interrogó por ID y `videos.list` tampoco los devolvió: no están
+"no listados", están borrados o en privado. Sobre la hipótesis de que el
+playlist de uploads oculte los no listados no hay evidencia ni en contra ni a
+favor, porque en el canal no quedó ningún video no listado con el cual
+probarla.
 
 ### 2.2 La descripción es la fuente, no el metadato (medido el 2026-09-08)
 
@@ -151,9 +156,10 @@ créditos en línea. Las pistas de `Bonus Tracks` cuentan como pistas: comparten
 numeración y reloj con el tracklist principal, y la distinción se conserva en
 `media.youtube_description_sections`.
 
-Nota: esto vive hoy en `media.youtube_channel_uploads.payload`. Las tablas
-`youtube_description_sections` y `youtube_tracklist_entries` solo se llenan
-al hidratar (paso 2), porque cuelgan de `media.youtube_videos`.
+Materializado por el paso 2: `media.youtube_tracklist_entries` tiene **6.769
+filas** sobre 636 videos y `media.youtube_description_sections` **2.394** —
+exactamente las cifras que la derivación local había anticipado sobre el
+corpus, lo que confirma que hidratar no cambió nada de lo ya medido.
 
 ### 2.3 El título también es un registro
 
