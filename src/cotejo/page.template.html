@@ -35,6 +35,13 @@ h1{font-size:31px;font-weight:700;letter-spacing:-.02em;line-height:1.08}
 .who input{background:var(--sunk);border:1px solid var(--line);border-radius:3px;color:var(--text);
   font:500 13px "IBM Plex Sans",sans-serif;padding:6px 9px;width:170px}
 .who input:focus-visible{outline:2px solid var(--signal);outline-offset:1px}
+/* Sin nombre no se puede decidir, y eso tenía que verse antes de pulsar: un
+   aviso de 3,6 segundos al pie no basta cuando el botón parece disponible. */
+body.sin-nombre .who input{border-color:var(--against);box-shadow:0 0 0 3px var(--against-soft)}
+.who .pide-nombre{font-size:12.5px;color:var(--against);display:none}
+body.sin-nombre .who .pide-nombre{display:inline}
+body.sin-nombre .decide button.act{opacity:.5}
+body.sin-nombre .decide button.act:hover{border-color:var(--against)}
 .core{display:flex;flex-wrap:wrap;border:1px solid var(--line);border-radius:3px;overflow:hidden;background:var(--sunk)}
 .core div{padding:7px 13px;border-right:1px solid var(--line-soft);min-width:86px}
 .core div:last-child{border-right:0}
@@ -165,6 +172,7 @@ input[type=range]{width:100%;accent-color:var(--signal)}
       <div class="who">
         <label for="viewer">Estás decidiendo como</label>
         <input id="viewer" type="text" placeholder="tu nombre" autocomplete="off">
+        <span class="pide-nombre">← ponlo aquí o no se guardará nada</span>
       </div>
     </div>
     <div>
@@ -263,9 +271,12 @@ function api(path,opts){return fetch(ROOT+path,opts).then(function(r){if(!r.ok)t
 var viewerInput = document.getElementById("viewer");
 try{ viewer = localStorage.getItem("crv-viewer") || ""; }catch(e){ viewer = ""; }
 viewerInput.value = viewer;
+function marcaNombre(){ document.body.classList.toggle("sin-nombre", !viewer); }
+marcaNombre();
 viewerInput.addEventListener("input", function(){
   viewer = viewerInput.value.trim();
   try{ localStorage.setItem("crv-viewer", viewer); }catch(e){}
+  marcaNombre();
   renderStage(); renderConflicts();
 });
 

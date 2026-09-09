@@ -36,10 +36,17 @@ const PAGE = path.resolve(process.cwd(), "public/cotejo.html");
 // Una misma pregunta llega repetida en varias filas de la cola (cuatro fichas
 // distintas para el mismo "Melissa"). La página agrupa por lo que se decide,
 // así que el cuerpo acepta la lista entera y las resuelve en una transacción.
-interface DecisionBody { reviewIds?: number[]; reviewId?: number; verdict: string; decidedBy: string; note?: string; context?: unknown; }
-function idsOf(body: { reviewIds?: number[]; reviewId?: number }): number[] {
+// Los id de la cola son bigint, y node-postgres los entrega como cadena para no
+// perder precisión: el JSON que la página lleva incrustado los conserva así.
+// Filtrar por Number.isInteger descartaba "3331" entero y dejaba la lista vacía,
+// con lo que cada clic acababa en un 400 y nada se guardaba. Se aceptan las dos
+// formas y se normalizan aquí, que es el borde por donde entra el dato.
+type ReviewId = number | string;
+interface DecisionBody { reviewIds?: ReviewId[]; reviewId?: ReviewId; verdict: string; decidedBy: string; note?: string; context?: unknown; }
+function idsOf(body: { reviewIds?: ReviewId[]; reviewId?: ReviewId }): number[] {
   const list = body.reviewIds ?? (body.reviewId === undefined ? [] : [body.reviewId]);
-  return [...new Set(list.filter((id) => Number.isInteger(id)))];
+  const ids = list.map((id) => Number(id)).filter((id) => Number.isSafeInteger(id) && id > 0);
+  return [...new Set(ids)];
 }
 
 const VERDICTS = new Set(["same", "different", "unsure", "canonical", "proposed", "approve", "reject"]);
@@ -160,7 +167,7 @@ export function buildServer() {
   });
 
   app.post("/api/decisions/undo", async (request, reply) => {
-    const body = request.body as { reviewIds?: number[]; reviewId?: number; decidedBy: string };
+    const body = request.body as { reviewIds?: ReviewId[]; reviewId?: ReviewId; decidedBy: string };
     const ids = body ? idsOf(body) : [];
     if (!ids.length || !body.decidedBy?.trim()) {
       return reply.code(400).send({ error: "faltan reviewIds o decidedBy" });
