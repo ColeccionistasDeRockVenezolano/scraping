@@ -220,13 +220,29 @@ afirmaciones.
 **Objetivo:** datos de YouTube de primera clase sin tocar la web de YouTube.
 
 Entregables:
-- `yt:sync` (videos.list por IDs en lotes de 50 → ~11 llamadas para los 520
-  IDs; snapshot crudo en `media.youtube_videos.metadata`; claims de
-  disponibilidad).
+- ✅ *Ya hecho:* **paso 0 (sonda) y paso 1 (descubrimiento)** —
+  `crv youtube discover-channel [channel-id] [--resume]`
+  (`discoverChannelUploads`, `src/youtube/pipeline.ts`). Recorre el playlist
+  de uploads **sin hidratar**: la red nunca ocurre dentro de una transacción
+  abierta, cada página se confirma sola, el progreso vive en
+  `ingest.scrape_runs.counters.nextPageToken` y un fallo deja el run
+  `partial` en vez de perder lo descargado. Ejecutado en vivo el 2026-09-08:
+  646 entradas en 13 páginas, 14 unidades de cuota, idempotente (segunda
+  pasada: 0 filas nuevas). El resultado —128 videos del canal que la hoja no
+  registra— está en SOURCES.md §2.1.
+- `yt:sync` (videos.list por IDs en lotes de 50; la unión de los 520 IDs del
+  seed con los 646 descubiertos son 648 IDs → ~14 llamadas; snapshot crudo en
+  `media.youtube_videos.metadata`; claims de disponibilidad). **Un ID pedido
+  que no vuelve es un dato** (borrado o privado), no un fallo silencioso.
+- Derivación local sobre el jsonb ya guardado: secciones y tracklist
+  (`media.youtube_description_sections`, `media.youtube_tracklist_entries`).
+  Se calibra midiendo el corpus real de descripciones, no adivinando: hoy
+  `parsers.ts` está calibrado contra una sola descripción real.
 - `yt:link` (propuestas de vínculo video→álbum → review).
 - `yt:enrich-artist` (search.list acotado, modo dirigido, presupuesto de
   cuota por artista).
-- Rate limiting de cuota + caché.
+- Rate limiting de cuota + caché. Reintento con backoff para 5xx/429 ya vive
+  en `YouTubeDataApi.request`; 403/400 son terminales y no se reintentan.
 
 Criterios de salida: sync completa sobre los 520 IDs (lotes, reintentos);
 disponibilidad proyectada en `albums.youtube_status` solo para videos con

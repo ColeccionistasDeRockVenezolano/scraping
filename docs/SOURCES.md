@@ -62,15 +62,52 @@ para ese campo). Ningún nivel de confianza permite saltarse la evidencia.
 - **Regla de gobierno:** videos de tipo Music Video, Live Concert o
   Documentary **no crean álbumes**. Se registran en `media.youtube_videos` y
   solo pueden *vincularse* a un álbum existente vía `media.video_albums`.
-- **Disponibilidad:** `Status` del seed ('Unlisted' en 87 filas) y el campo
-  `status` de la API alimentan claims que proyectan
-  `albums.youtube_status` (enum `publication_status` del core).
+- **Disponibilidad:** el campo `status` de la API alimenta claims que
+  proyectan `albums.youtube_status` (enum `publication_status` del core). El
+  `Status` del seed **no** sirve para eso: de sus 87 filas marcadas
+  `Unlisted`, 86 no tienen URL ni `video_id` (son exactamente las 86 de
+  `missing_url` de F2), así que no hay video del cual afirmar disponibilidad.
+  La única marcada `Unlisted` **con** video es `QcnD-UIl0N8` (Zapato 3,
+  *Detrás De La Puerta*) — medido el 2026-09-08.
 - **Cuotas:** la API tiene cuota diaria por clave; `videos.list` acepta hasta
   50 IDs por llamada, de modo que los 520 IDs conocidos se cubren en ~11
   llamadas. La respuesta cruda se cachea en `media.youtube_videos.metadata`.
+  El barrido de descubrimiento del canal (`channels.list` + 13 páginas de
+  `playlistItems.list`) costó **14 unidades** de las 10.000 diarias: la cuota
+  no es el factor limitante de esta fuente.
+- **Canal:** `UCtYlrz6GyvRahlhHjocWQYQ` — *Coleccionistas De Rock
+  Venezolano*, abierto el 2015-11-20, playlist de uploads
+  `UUtYlrz6GyvRahlhHjocWQYQ`. Declara 648 videos públicos; el barrido del
+  playlist ve 646 (§2.1).
 - **[POR CONFIRMAR]** disponibilidad real de cada video (público / no listado
-  / eliminado): solo se sabrá al ejecutar la API en F3. El seed no es
-  autoridad sobre el estado actual.
+  / eliminado): el barrido del playlist solo distingue *presente* de
+  *ausente*; separar "no listado" de "eliminado" exige `videos.list` por ID,
+  que devuelve los no listados y omite los borrados. Pendiente del paso 2 de
+  F3. El seed no es autoridad sobre el estado actual.
+
+### 2.1 Lo que el canal tiene y la hoja no (medido el 2026-09-08)
+
+El barrido de descubrimiento (`crv youtube discover-channel`, runs 85 y 86,
+idempotente: la segunda pasada insertó 0 filas) deja esta partición entre los
+646 videos del playlist de uploads y los 520 `video_id` distintos del seed:
+
+| Conjunto | Videos |
+|---|---|
+| En el canal y en la hoja | 518 |
+| **En el canal, ausentes de la hoja** | **128** |
+| En la hoja, ausentes del canal | 2 |
+
+La hoja **no es un superconjunto del canal**, que era el supuesto implícito
+al llamarla "discografía curada". De los 128 que faltan, 115 llevan el
+marcador `|| Full Album ||` en el título — discos, no material accesorio — y
+no son solo subidas recientes: 74 se publicaron entre 2016 y 2019. Los otros
+13 son 10 piezas editoriales (`#repost`, entrevistas, reseñas) y 3 sin
+clasificar por título.
+
+Los 2 ausentes del canal son `QcnD-UIl0N8` (marcado `Unlisted` en la hoja) y
+`nUNxlo6cTbc` (*Various Artists — Tributo a CDC: Harakiri City*, sin marca).
+Que el único `Unlisted` con video sea también ausente sugiere que el playlist
+de uploads solo expone los públicos; confirmarlo es trabajo de `videos.list`.
 
 ---
 

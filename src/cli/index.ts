@@ -20,7 +20,7 @@ import { eq } from "drizzle-orm";
 import { adapterFor, adapterRegistrationFor } from "../adapters/registry.js";
 import { ingestStoredAdapterSource } from "../ingest/runner.js";
 import { registerManualEvidence } from "../ingest/manual-evidence.js";
-import { importYouTubeMasterSheet, syncYouTubeChannel, syncYouTubeVideo, unmatchedYouTubeRows } from "../youtube/pipeline.js";
+import { discoverChannelUploads, importYouTubeMasterSheet, syncYouTubeChannel, syncYouTubeVideo, unmatchedYouTubeRows } from "../youtube/pipeline.js";
 import { ingestSeedClaims } from "../youtube/seed-claims.js";
 import { YT_MASTER_XLSX_PATH } from "../ingest/sources.js";
 import { getPool } from "../db/client.js";
@@ -286,6 +286,19 @@ async function main(): Promise<number> {
         console.log(`youtube sync-video ${result.videoId}: ${result.synced ? "sincronizado" : "no encontrado por la API"}`);
         return result.synced ? 0 : 1;
       }
+      // Descubrimiento sin hidratación: qué videos hay, no qué dice cada uno.
+      if (subcommand === "discover-channel") {
+        const channelId = argument && !argument.startsWith("--")
+          ? argument
+          : (await getPool().query<{ channel_id: string }>("SELECT channel_id FROM media.youtube_channels ORDER BY id LIMIT 1")).rows[0]?.channel_id
+            ?? (await getPool().query<{ channel_id: string }>("SELECT DISTINCT channel_id FROM media.youtube_videos WHERE channel_id IS NOT NULL LIMIT 1")).rows[0]?.channel_id;
+        if (!channelId) { console.error("uso: crv youtube discover-channel <channel-id> [--resume]"); return 1; }
+        const result = await discoverChannelUploads(channelId, { resume: args.includes("--resume") });
+        console.log(`youtube discover-channel ${result.channelId} (run ${result.runId}, ${result.status}): `
+          + `${result.pages} páginas, ${result.items} entradas, ${result.inserted} nuevas, ${result.updated} revisitadas, `
+          + `${result.errors} incidencias; el canal declara ${result.declaredVideoCount ?? "?"} videos públicos`);
+        return result.status === "ok" ? 0 : 1;
+      }
       if (subcommand === "sync-channel") {
         const channelIds = argument ? [argument] : (await getPool().query<{ channel_id: string }>("SELECT DISTINCT channel_id FROM media.youtube_videos WHERE channel_id IS NOT NULL")).rows.map((row) => row.channel_id);
         if (!channelIds.length) { console.error("uso: crv youtube sync-channel <channel-id> (o importe/sincronice primero un video con canal conocido)"); return 1; }
@@ -310,7 +323,7 @@ async function main(): Promise<number> {
         console.log(JSON.stringify(rows, null, 2));
         return 0;
       }
-      console.error("uso: crv youtube import-sheet <path> | seed-claims [--dry-run] | sync-video <video-id> | sync-channel [channel-id] | unmatched");
+      console.error("uso: crv youtube import-sheet <path> | seed-claims [--dry-run] | discover-channel [channel-id] [--resume] | sync-video <video-id> | sync-channel [channel-id] | unmatched");
       return 1;
     }
 
@@ -350,6 +363,7 @@ CRV CLI
   scrape artist "<name>" --all-sources [--dry-run]
   sources list | runs list | review list | review show <id>
   youtube import-sheet <path>  importa YT Master Spreadsheet de forma idempotente
+  youtube discover-channel [channel-id] [--resume]  recorre el playlist de uploads sin hidratar
   youtube sync-video <video-id>  consulta YouTube Data API (requiere YOUTUBE_API_KEY)
   youtube sync-channel [channel-id]  recorre uploads playlist oficial (requiere YOUTUBE_API_KEY)
   youtube unmatched          filas seed pendientes de enlace o revisión

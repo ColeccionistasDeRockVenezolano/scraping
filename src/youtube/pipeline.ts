@@ -220,6 +220,123 @@ export async function syncYouTubeChannel(channelId: string, api = new YouTubeDat
   } catch (error) { await client.query("ROLLBACK"); throw error; } finally { client.release(); }
 }
 
+export interface ChannelDiscoveryResult {
+  channelId: string; runId: number; declaredVideoCount: number | null;
+  pages: number; items: number; inserted: number; updated: number; errors: number;
+  status: "ok" | "partial";
+}
+
+async function recordSweepError(client: PoolClient, runId: number, url: string, kind: string, message: string): Promise<void> {
+  await client.query("INSERT INTO ingest.scrape_errors(run_id,url,error_kind,message) VALUES($1,$2,$3,$4)", [runId, url, kind, message.slice(0, 4000)]);
+}
+
+/**
+ * Paso 1 del barrido del canal: **descubrimiento puro**. Recorre el playlist
+ * de uploads y anota qué videos existen, sin pedir un solo metadato de video
+ * (eso es `videos.list`, y va en su propio paso). Tres diferencias
+ * deliberadas frente a `syncYouTubeChannel`:
+ *
+ *  1. La red nunca ocurre dentro de una transacción abierta. Cada página se
+ *     confirma sola, así que un fallo en la página doce conserva las once
+ *     anteriores en vez de borrarlas.
+ *  2. El progreso vive en `ingest.scrape_runs.counters.nextPageToken`, de
+ *     modo que `--resume` continúa donde quedó el último run parcial.
+ *  3. Un error no aborta: se persiste en `ingest.scrape_errors` y el run
+ *     queda `partial`.
+ */
+export async function discoverChannelUploads(
+  channelId: string,
+  options: { api?: YouTubeDataApi; resume?: boolean } = {},
+): Promise<ChannelDiscoveryResult> {
+  const api = options.api ?? new YouTubeDataApi();
+  const pool = getPool();
+  const channel = (await api.getChannel(channelId)).items?.[0];
+  if (!channel) throw new Error(`channels.list no encontró el canal ${channelId}`);
+  const declared = Number(channel.statistics?.["videoCount"]);
+  const declaredVideoCount = Number.isFinite(declared) ? declared : null;
+
+  const setup = await pool.connect();
+  let channelRowId: number; let uploadsPlaylistId: string | null; let runId: number; let resumeToken: string | undefined;
+  try {
+    await setup.query("BEGIN");
+    const source = await ensureSources(setup);
+    const saved = await persistChannel(setup, channel);
+    channelRowId = saved.id; uploadsPlaylistId = saved.uploadsPlaylistId;
+    if (options.resume) {
+      const prior = await setup.query<{ id: string; token: string | null }>(`
+        SELECT id, counters->>'nextPageToken' AS token FROM ingest.scrape_runs
+         WHERE kind='yt_api_sync' AND status='partial'
+           AND params->>'action'='discover_channel_uploads' AND params->>'channelId'=$1
+         ORDER BY started_at DESC LIMIT 1`, [channelId]);
+      resumeToken = prior.rows[0]?.token ?? undefined;
+    }
+    const run = await setup.query<{ id: string }>(`
+      INSERT INTO ingest.scrape_runs(kind,source_id,status,params)
+      VALUES('yt_api_sync',$1,'running',$2::jsonb) RETURNING id`,
+      [source.api, JSON.stringify({ action: "discover_channel_uploads", channelId, uploadsPlaylistId, declaredVideoCount, resumedFromToken: resumeToken ?? null })]);
+    runId = Number(run.rows[0]!.id);
+    await setup.query("COMMIT");
+  } catch (error) { await setup.query("ROLLBACK"); throw error; } finally { setup.release(); }
+
+  const playlistUrl = `https://www.googleapis.com/youtube/v3/playlistItems?playlistId=${uploadsPlaylistId ?? ""}`;
+  let pages = 0, items = 0, inserted = 0, updated = 0, errors = 0;
+  let pageToken = resumeToken;
+
+  if (uploadsPlaylistId) {
+    for (;;) {
+      let page;
+      try {
+        page = await api.listPlaylistItems(uploadsPlaylistId, pageToken);
+      } catch (error) {
+        errors += 1;
+        const client = await pool.connect();
+        try { await recordSweepError(client, runId, playlistUrl, "http_error", `página ${pages + 1} (token=${pageToken ?? "inicial"}): ${String(error)}`); } finally { client.release(); }
+        break;
+      }
+      const client = await pool.connect();
+      try {
+        await client.query("BEGIN");
+        for (const item of page.items ?? []) {
+          const videoId = playlistVideoId(item);
+          if (!videoId) {
+            errors += 1;
+            await recordSweepError(client, runId, playlistUrl, "extraction", `entrada del playlist sin videoId utilizable: ${JSON.stringify(item).slice(0, 500)}`);
+            continue;
+          }
+          items += 1;
+          const row = await client.query<{ inserted: boolean }>(`
+            INSERT INTO media.youtube_channel_uploads(channel_id,video_id,playlist_position,published_at,title,payload,updated_at)
+            VALUES($1,$2,$3,$4,$5,$6::jsonb,now())
+            ON CONFLICT(channel_id,video_id) DO UPDATE SET playlist_position=EXCLUDED.playlist_position,published_at=EXCLUDED.published_at,title=EXCLUDED.title,payload=EXCLUDED.payload,updated_at=now()
+            RETURNING (xmax = 0) AS inserted`,
+            [channelRowId, videoId, Number(item.snippet?.["position"] ?? 0), text(item.contentDetails?.["videoPublishedAt"]) ?? text(item.snippet?.["publishedAt"]), text(item.snippet?.["title"]), JSON.stringify(item)]);
+          if (row.rows[0]?.inserted) inserted += 1; else updated += 1;
+        }
+        pages += 1;
+        pageToken = page.nextPageToken;
+        await client.query("UPDATE ingest.scrape_runs SET counters=$2::jsonb WHERE id=$1",
+          [runId, JSON.stringify({ pages, items, inserted, updated, errors, nextPageToken: pageToken ?? null })]);
+        await client.query("COMMIT");
+      } catch (error) { await client.query("ROLLBACK"); throw error; } finally { client.release(); }
+      if (!pageToken) break;
+    }
+  } else {
+    errors += 1;
+    const client = await pool.connect();
+    try { await recordSweepError(client, runId, `https://www.youtube.com/channel/${channelId}`, "validation", "channels.list no expuso relatedPlaylists.uploads"); } finally { client.release(); }
+  }
+
+  const status: "ok" | "partial" = errors > 0 ? "partial" : "ok";
+  const closing = await pool.connect();
+  try {
+    await closing.query("UPDATE ingest.scrape_runs SET status=$2,finished_at=now(),counters=$3::jsonb,error_log=$4 WHERE id=$1",
+      [runId, status, JSON.stringify({ pages, items, inserted, updated, errors, declaredVideoCount, nextPageToken: pageToken ?? null }),
+       errors > 0 ? `${errors} incidencia(s); ver ingest.scrape_errors` : null]);
+  } finally { closing.release(); }
+
+  return { channelId, runId, declaredVideoCount, pages, items, inserted, updated, errors, status };
+}
+
 export async function unmatchedYouTubeRows(): Promise<Array<{ uploadOrder: number; artist: string | null; album: string | null; videoId: string | null; contentKind: string | null }>> {
   const result = await getPool().query(`
     SELECT s.upload_order,s.artist_name_raw,s.album_name_raw,s.video_id,s.content_kind
