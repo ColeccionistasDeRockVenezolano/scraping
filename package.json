@@ -27,7 +27,9 @@
     "test:contract": "./scripts/with-node22.sh vitest run test/contract --pool=forks --poolOptions.forks.singleFork",
     "test:deepseek:real": "RUN_DEEPSEEK_INTEGRATION=1 ./scripts/with-node22.sh vitest run test/integration/deepseek-real.optional.test.ts",
     "adapters:fixtures": "./scripts/with-node22.sh tsx scripts/show-adapter-fixtures.ts",
-    "test:matrix": "./scripts/test-pg-matrix.sh"
+    "test:matrix": "./scripts/test-pg-matrix.sh",
+    "cotejo:build": "./scripts/with-node22.sh tsx scripts/build-cotejo.ts",
+    "cotejo:serve": "./scripts/with-node22.sh tsx src/cotejo/server.ts"
   },
   "dependencies": {
     "cheerio": "^1.0.0",

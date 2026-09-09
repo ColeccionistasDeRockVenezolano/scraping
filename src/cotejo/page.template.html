@@ -1,0 +1,678 @@
+<title>Mesa de Cotejo</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+:root{
+  --ground:#E7EBE8;--panel:#FBFCFB;--sunk:#DDE3DF;--line:#C6CFC9;--line-soft:#D9E0DB;
+  --text:#141A17;--muted:#57655E;--faint:#7C8C84;
+  --signal:#9A6108;--signal-ink:#FFF;--signal-dim:#EADFC6;
+  --for:#256B57;--against:#9E3F29;--for-soft:#CFE5DC;--against-soft:#F2D5CC;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --ground:#101412;--panel:#171D1A;--sunk:#0C100E;--line:#2A322D;--line-soft:#222925;
+  --text:#E4EAE5;--muted:#98A69E;--faint:#718078;
+  --signal:#D89434;--signal-ink:#12100B;--signal-dim:#3A2F1B;
+  --for:#4FA88A;--against:#C4614A;--for-soft:#1D3830;--against-soft:#3A211A;
+}}
+:root[data-theme="dark"]{
+  --ground:#101412;--panel:#171D1A;--sunk:#0C100E;--line:#2A322D;--line-soft:#222925;
+  --text:#E4EAE5;--muted:#98A69E;--faint:#718078;
+  --signal:#D89434;--signal-ink:#12100B;--signal-dim:#3A2F1B;
+  --for:#4FA88A;--against:#C4614A;--for-soft:#1D3830;--against-soft:#3A211A;
+}
+*{box-sizing:border-box}
+body{background:var(--ground);color:var(--text);font:400 15px/1.55 "IBM Plex Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased;padding:0 0 72px}
+h1,h2,h3{font-family:"Bricolage Grotesque","IBM Plex Sans",system-ui,sans-serif;text-wrap:balance;margin:0}
+.mono{font-family:"IBM Plex Mono",ui-monospace,monospace;font-variant-numeric:tabular-nums}
+.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+.eyebrow{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);font-weight:500}
+
+.top{border-bottom:1px solid var(--line);background:var(--panel)}
+.top .wrap{display:flex;flex-wrap:wrap;gap:22px;align-items:flex-end;justify-content:space-between;padding:26px 24px 18px}
+h1{font-size:31px;font-weight:700;letter-spacing:-.02em;line-height:1.08}
+.sub{color:var(--muted);font-size:13.5px;margin-top:5px;max-width:58ch}
+.who{display:flex;gap:8px;align-items:center;margin-top:10px}
+.who label{font-size:12.5px;color:var(--muted)}
+.who input{background:var(--sunk);border:1px solid var(--line);border-radius:3px;color:var(--text);
+  font:500 13px "IBM Plex Sans",sans-serif;padding:6px 9px;width:170px}
+.who input:focus-visible{outline:2px solid var(--signal);outline-offset:1px}
+.core{display:flex;flex-wrap:wrap;border:1px solid var(--line);border-radius:3px;overflow:hidden;background:var(--sunk)}
+.core div{padding:7px 13px;border-right:1px solid var(--line-soft);min-width:86px}
+.core div:last-child{border-right:0}
+.core dt{font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--faint)}
+.core dd{margin:1px 0 0;font-size:17px;font-weight:600;font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums}
+.stamp{font-size:11px;color:var(--faint);letter-spacing:.05em;margin-bottom:6px}
+
+nav{border-bottom:1px solid var(--line);background:var(--panel);position:sticky;top:0;z-index:6}
+nav .wrap{display:flex;gap:2px;overflow-x:auto}
+.bench{appearance:none;background:none;border:0;border-bottom:2px solid transparent;color:var(--muted);
+  font:500 14px/1 "IBM Plex Sans",sans-serif;padding:14px 15px;cursor:pointer;display:flex;gap:8px;align-items:center;white-space:nowrap}
+.bench:hover{color:var(--text)}
+.bench[aria-selected="true"]{color:var(--text);border-bottom-color:var(--signal)}
+.bench .n{font-family:"IBM Plex Mono",monospace;font-size:11.5px;background:var(--sunk);border:1px solid var(--line-soft);border-radius:2px;padding:1px 5px;color:var(--muted)}
+.bench:focus-visible{outline:2px solid var(--signal);outline-offset:-2px}
+section[hidden]{display:none!important}
+main{padding-top:26px}
+h2{font-size:20px;font-weight:700;letter-spacing:-.012em}
+.lead{color:var(--muted);font-size:13.5px;margin:6px 0 20px;max-width:74ch}
+h3.cap{font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--faint);font-weight:500;font-family:"IBM Plex Sans",sans-serif;margin-bottom:9px}
+
+.tbl-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:3px;background:var(--panel)}
+table{border-collapse:collapse;width:100%;font-size:13.5px}
+th{text-align:left;font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--faint);font-weight:500;padding:9px 13px;border-bottom:1px solid var(--line);white-space:nowrap}
+td{padding:8px 13px;border-bottom:1px solid var(--line-soft)}
+tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right}
+td.num{font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums}
+.src{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;align-items:start}
+.note{border-left:2px solid var(--signal);background:var(--sunk);padding:11px 14px;border-radius:0 3px 3px 0;font-size:13px;color:var(--muted);margin-top:16px}
+.note strong{color:var(--text);font-weight:600}
+
+.split{display:grid;grid-template-columns:296px 1fr;gap:20px;align-items:start}
+@media(max-width:880px){.split{grid-template-columns:1fr}}
+.roll{border:1px solid var(--line);border-radius:3px;background:var(--panel);max-height:72vh;overflow-y:auto}
+.roll button{display:block;width:100%;text-align:left;background:none;border:0;border-bottom:1px solid var(--line-soft);padding:9px 12px;cursor:pointer;color:var(--text);font:400 13px/1.35 "IBM Plex Sans",sans-serif}
+.roll button:hover{background:var(--sunk)}
+.roll button[aria-current="true"]{background:var(--sunk);box-shadow:inset 3px 0 0 var(--signal)}
+.roll button:focus-visible{outline:2px solid var(--signal);outline-offset:-2px}
+.rn{display:flex;justify-content:space-between;gap:8px;align-items:baseline}
+.rs{font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--muted);white-space:nowrap}
+.rk{font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--faint);margin-top:2px}
+.mark{font-family:"IBM Plex Mono",monospace;font-size:11px;padding:0 4px;border-radius:2px;margin-right:4px}
+.mark.same{background:var(--for-soft);color:var(--for)}
+.mark.diff{background:var(--against-soft);color:var(--against)}
+.mark.skip{background:var(--sunk);color:var(--muted)}
+
+.stage{border:1px solid var(--line);border-radius:3px;background:var(--panel);padding:20px}
+.pair{display:grid;grid-template-columns:1fr auto 1fr;gap:16px;align-items:center}
+@media(max-width:700px){.pair{grid-template-columns:1fr}}
+.side{background:var(--sunk);border:1px solid var(--line-soft);border-radius:3px;padding:13px 14px;min-width:0}
+.side .role{font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--faint);margin-bottom:5px}
+.side .name{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:17px;line-height:1.25;overflow-wrap:anywhere}
+.side .meta{color:var(--muted);font-size:12.5px;margin-top:5px;overflow-wrap:anywhere}
+.vs{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--faint);letter-spacing:.1em;text-align:center}
+.meter{margin-top:20px;border-top:1px solid var(--line-soft);padding-top:16px}
+.sig{display:grid;grid-template-columns:158px 1fr;gap:10px;align-items:center;margin-top:11px}
+@media(max-width:620px){.sig{grid-template-columns:1fr}.sig .lbl{text-align:left}}
+.sig .lbl{font-size:12.5px;color:var(--muted);text-align:right}
+.track{position:relative;height:22px;background:var(--sunk);border:1px solid var(--line-soft);border-radius:2px}
+.track::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:1px;background:var(--line)}
+.bar{position:absolute;top:3px;bottom:3px;border-radius:1px}
+.bar.for{left:50%;background:var(--for)}
+.bar.against{right:50%;background:var(--against)}
+.ev{font-size:11.5px;color:var(--faint);margin-top:3px;font-family:"IBM Plex Mono",monospace;overflow-wrap:anywhere}
+.total{display:flex;gap:14px;align-items:baseline;margin-top:16px;flex-wrap:wrap}
+.total b{font-family:"IBM Plex Mono",monospace;font-size:23px;font-weight:600}
+.total span{color:var(--muted);font-size:12.5px}
+.decide{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;border-top:1px solid var(--line-soft);padding-top:16px;align-items:center}
+button.act{appearance:none;border:1px solid var(--line);background:var(--panel);color:var(--text);font:500 13.5px/1 "IBM Plex Sans",sans-serif;padding:10px 15px;border-radius:3px;cursor:pointer}
+button.act:hover{border-color:var(--signal)}
+button.act:focus-visible{outline:2px solid var(--signal);outline-offset:2px}
+button.act[aria-pressed="true"].same{background:var(--for);border-color:var(--for);color:#fff}
+button.act[aria-pressed="true"].diff{background:var(--against);border-color:var(--against);color:#fff}
+button.act[aria-pressed="true"].skip{background:var(--sunk);border-color:var(--line)}
+button.act.ghost{background:none;color:var(--muted)}
+button.act[disabled]{opacity:.45;cursor:not-allowed}
+.state{font-size:12.5px;color:var(--muted);margin-top:11px;min-height:1.4em}
+
+.conf{border:1px solid var(--line);border-radius:3px;background:var(--panel);padding:15px 16px;display:grid;grid-template-columns:1fr auto;gap:14px;align-items:center}
+@media(max-width:760px){.conf{grid-template-columns:1fr}}
+.conf-list{display:flex;flex-direction:column;gap:9px}
+.conf .what{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:15.5px;overflow-wrap:anywhere}
+.conf .field{font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--faint);margin-top:2px}
+.opts{display:flex;gap:7px;flex-wrap:wrap;align-items:center}
+.opt{appearance:none;border:1px solid var(--line);background:var(--sunk);border-radius:3px;padding:7px 12px;cursor:pointer;color:var(--text);font-family:"IBM Plex Mono",monospace;font-size:12.5px;text-align:left}
+.opt:hover{border-color:var(--signal)}
+.opt:focus-visible{outline:2px solid var(--signal);outline-offset:2px}
+.opt[aria-pressed="true"]{background:var(--signal);border-color:var(--signal);color:var(--signal-ink)}
+.opt small{display:block;font-family:"IBM Plex Sans",sans-serif;font-size:10px;letter-spacing:.06em;text-transform:uppercase;opacity:.75;margin-bottom:1px}
+
+/* visor de cola */
+.shapes{display:flex;flex-direction:column;gap:10px}
+.shape{border:1px solid var(--line);border-radius:3px;background:var(--panel);padding:14px 16px}
+.shape.warn{border-left:3px solid var(--against)}
+.shape.calm{border-left:3px solid var(--for)}
+.shape-head{display:flex;justify-content:space-between;gap:14px;align-items:baseline;flex-wrap:wrap}
+.shape-name{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:16px}
+.shape-why{color:var(--muted);font-size:12.5px;margin-top:3px;max-width:66ch}
+.shape-n{font-family:"IBM Plex Mono",monospace;font-size:19px;font-weight:600}
+.shape-bar{height:5px;background:var(--sunk);border-radius:3px;margin-top:10px;overflow:hidden}
+.shape-bar i{display:block;height:100%;background:var(--signal)}
+.chips{display:flex;flex-wrap:wrap;gap:5px;margin-top:11px}
+.chip{font-family:"IBM Plex Mono",monospace;font-size:11.5px;background:var(--sunk);border:1px solid var(--line-soft);border-radius:2px;padding:2px 7px;color:var(--muted);overflow-wrap:anywhere}
+.hist{display:flex;align-items:flex-end;gap:2px;height:120px;border-bottom:1px solid var(--line);padding-top:8px}
+.hist i{flex:1;background:var(--signal-dim);border-radius:1px 1px 0 0;min-height:2px;position:relative}
+.hist i.over{background:var(--for)}
+.hist-axis{display:flex;justify-content:space-between;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--faint);margin-top:5px}
+input[type=range]{width:100%;accent-color:var(--signal)}
+.sample-list{display:flex;flex-direction:column;gap:1px;margin-top:12px;border:1px solid var(--line);border-radius:3px;overflow:hidden}
+.sample-row{display:flex;justify-content:space-between;gap:12px;padding:7px 12px;background:var(--panel);font-size:13px}
+.sample-row:nth-child(even){background:var(--sunk)}
+.sample-row span{font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--faint);white-space:nowrap}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:22px;background:var(--text);color:var(--ground);
+  font-size:13.5px;padding:11px 16px;border-radius:4px;box-shadow:0 6px 20px rgba(0,0,0,.24);display:flex;gap:14px;align-items:center;z-index:50}
+.toast[hidden]{display:none!important}
+.toast button{appearance:none;background:none;border:1px solid currentColor;color:inherit;border-radius:3px;
+  font:500 12.5px "IBM Plex Sans",sans-serif;padding:5px 10px;cursor:pointer}
+@media(prefers-reduced-motion:no-preference){.bar,.shape-bar i{transition:width .18s ease}}
+</style>
+
+<header class="top">
+  <div class="wrap">
+    <div>
+      <h1>Mesa de Cotejo</h1>
+      <p class="sub">Las decisiones del catálogo que no se pueden aprobar en bloque. Nada de lo que marques aquí modifica el catálogo todavía: queda anotado, se puede deshacer, y se aplica después en un solo paso.</p>
+      <div class="who">
+        <label for="viewer">Estás decidiendo como</label>
+        <input id="viewer" type="text" placeholder="tu nombre" autocomplete="off">
+      </div>
+    </div>
+    <div>
+      <div class="stamp" id="stamp">Cargando datos en vivo…</div>
+      <dl class="core" id="core"></dl>
+    </div>
+  </div>
+</header>
+
+<nav><div class="wrap" role="tablist">
+  <button class="bench" role="tab" id="t-pre" aria-selected="true" aria-controls="p-pre">Antes de aprobar <span class="n" id="n-pre">—</span></button>
+  <button class="bench" role="tab" id="t-car" aria-selected="false" aria-controls="p-car">Careos <span class="n" id="n-car">—</span></button>
+  <button class="bench" role="tab" id="t-con" aria-selected="false" aria-controls="p-con">Contradicciones <span class="n" id="n-con">—</span></button>
+  <button class="bench" role="tab" id="t-col" aria-selected="false" aria-controls="p-col">Visor de cola <span class="n" id="n-col">—</span></button>
+</div></nav>
+
+<main class="wrap">
+  <section id="p-pre" role="tabpanel" aria-labelledby="t-pre">
+    <h2>Qué entraría al catálogo si aprobaras hoy</h2>
+    <p class="lead">La cifra de arriba es lo que el catálogo tiene ahora mismo. Lo de esta página son candidatos: existen, pero todavía no forman parte del catálogo.</p>
+    <div class="grid2">
+      <div>
+        <h3 class="cap">Candidatos por fuente</h3>
+        <div class="tbl-wrap"><table><thead><tr><th>De dónde viene</th><th>Qué es</th><th class="num">Cuántas cosas</th><th class="num">Datos sobre ellas</th></tr></thead><tbody id="tb-cand"><tr><td colspan="4" style="color:var(--faint)">Cargando…</td></tr></tbody></table></div>
+      </div>
+      <div>
+        <h3 class="cap">Colas abiertas</h3>
+        <div class="tbl-wrap"><table><thead><tr><th>Qué decisión pide</th><th class="num">Cuántas</th><th>Nombre interno</th></tr></thead><tbody id="tb-q"><tr><td colspan="3" style="color:var(--faint)">Cargando…</td></tr></tbody></table></div>
+        <div class="note"><strong>Las de <span class="mono">album_match</span> son dos preguntas distintas bajo un mismo nombre.</strong> Unas son careos de verdad, con puntuación y candidatos, y están en la pestaña Careos. El resto viene del importador de la hoja y solo dice que esa fila no tenía disco cuando se importó; hoy la vía normal ya las cubre.</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="p-car" role="tabpanel" aria-labelledby="t-car" hidden>
+    <h2>¿Estas dos fichas son la misma cosa?</h2>
+    <p class="lead">A la izquierda, lo que afirma la fuente nueva. A la derecha, lo que ya está en el catálogo. Debajo, qué señal empuja a fundirlas y cuál dice que no.</p>
+    <div class="split">
+      <div class="roll" id="roll"></div>
+      <div class="stage" id="stage"></div>
+    </div>
+  </section>
+
+  <section id="p-con" role="tabpanel" aria-labelledby="t-con" hidden>
+    <h2>Dos fuentes dicen cosas distintas</h2>
+    <p class="lead">El sistema guardó las dos versiones en vez de elegir una. Son pocas y cada una fija un dato del catálogo, así que conviene mirarlas de verdad.</p>
+    <div class="conf-list" id="conf-list"></div>
+  </section>
+
+  <section id="p-col" role="tabpanel" aria-labelledby="t-col" hidden>
+    <h2>Visor de cola</h2>
+    <p class="lead">La cola tiene casi cien mil elementos y nadie los mira de uno en uno. Esta pestaña no te los enseña: te dice en qué se parecen y cuáles tienen mala pinta, que es lo único que hace falta para decidir sobre el resto.</p>
+
+    <h3 class="cap">1 · Agrupados por la forma del nombre</h3>
+    <p class="lead" style="margin-top:-4px">Los defectos de extracción no se reparten al azar: se concentran en formas concretas. Los grupos marcados en rojo son los que suelen traer basura.</p>
+    <div class="shapes" id="shapes"><p style="color:var(--faint)">Cargando grupos…</p></div>
+
+    <h3 class="cap" style="margin-top:30px">2 · Dónde poner el corte</h3>
+    <p class="lead" style="margin-top:-4px">Cada barra es un careo, colocado según su puntuación de parecido. Mueve el corte y verás cuántos se fundirían solos y cuántos quedarían para mirar a mano.</p>
+    <div style="border:1px solid var(--line);border-radius:3px;background:var(--panel);padding:16px 18px">
+      <div class="hist" id="hist"></div>
+      <div class="hist-axis"><span>0,00 · nada que ver</span><span>0,50</span><span>1,00 · idénticos</span></div>
+      <div style="margin-top:14px"><input type="range" id="cut" min="0" max="100" value="70" step="1" aria-label="Puntuación mínima para fundir sin mirar"></div>
+      <p id="cut-read" class="lead" style="margin:8px 0 0"></p>
+    </div>
+
+    <h3 class="cap" style="margin-top:30px">3 · Sacar veinte al azar</h3>
+    <p class="lead" style="margin-top:-4px">Ni los mejores ni los peores: veinte candidatos tomados al azar. Si los veinte están bien, tienes motivo para aprobar el resto; si dos fallan, sabes que hay alrededor de un diez por ciento de basura.</p>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+      <button class="act" id="btn-sample" type="button">Sacar veinte al azar</button>
+      <span id="sample-note" class="lead" style="margin:0"></span>
+    </div>
+    <div id="sample" class="sample-list" hidden></div>
+  </section>
+</main>
+
+<div class="toast" id="toast" hidden><span id="toast-msg"></span><button type="button" id="toast-undo">Deshacer</button></div>
+
+<script id="crv-data" type="application/json">__DATA__</script>
+<script>
+(function(){
+"use strict";
+var D = JSON.parse(document.getElementById("crv-data").textContent);
+var decisions = Object.create(null);   /* reviewId -> {verdict, decidedBy} */
+var lastAction = null;
+var viewer = "";
+
+function el(t,c,x){var n=document.createElement(t);if(c)n.className=c;if(x!=null)n.textContent=x;return n;}
+function num(n){return Number(n).toLocaleString("es");}
+function api(path,opts){return fetch(path,opts).then(function(r){if(!r.ok)throw new Error(r.status);return r.json();});}
+
+/* ---- quién decide ---- */
+var viewerInput = document.getElementById("viewer");
+try{ viewer = localStorage.getItem("crv-viewer") || ""; }catch(e){ viewer = ""; }
+viewerInput.value = viewer;
+viewerInput.addEventListener("input", function(){
+  viewer = viewerInput.value.trim();
+  try{ localStorage.setItem("crv-viewer", viewer); }catch(e){}
+  renderStage(); renderConflicts();
+});
+
+/* ---- aviso con deshacer ---- */
+var toast=document.getElementById("toast"), toastMsg=document.getElementById("toast-msg"), toastUndo=document.getElementById("toast-undo"), toastTimer=null;
+function say(msg, undoFn){
+  toastMsg.textContent = msg;
+  toastUndo.hidden = !undoFn;
+  lastAction = undoFn || null;
+  toast.hidden = false;
+  if(toastTimer) clearTimeout(toastTimer);
+  toastTimer = setTimeout(function(){ toast.hidden = true; }, undoFn ? 9000 : 3600);
+}
+toastUndo.addEventListener("click", function(){ if(lastAction){ var f=lastAction; lastAction=null; toast.hidden=true; f(); } });
+
+/* ---- decisiones ---- */
+function decide(reviewIds, verdict, label, context){
+  var ids=[].concat(reviewIds), reviewId=ids[0];
+  if(!viewer){ say("Escribe tu nombre arriba antes de decidir."); viewerInput.focus(); return; }
+  var prev = decisions[reviewId] ? decisions[reviewId].verdict : null;
+  ids.forEach(function(i){ decisions[i]={verdict:verdict, decidedBy:viewer}; });
+  paintAll();
+  api("api/decisions",{method:"POST",headers:{"Content-Type":"application/json"},
+    body:JSON.stringify({reviewIds:ids, verdict:verdict, decidedBy:viewer, context:context||{}})})
+    .then(function(){
+      say(label, function(){ undo(reviewId, prev); });
+    })
+    .catch(function(){
+      ids.forEach(function(i){ if(prev) decisions[i]={verdict:prev,decidedBy:viewer}; else delete decisions[i]; });
+      paintAll();
+      say("No se pudo guardar. Comprueba la conexión con el servidor y vuelve a intentarlo.");
+    });
+}
+function undo(reviewIds, prev){
+  var ids=[].concat(reviewIds), reviewId=ids[0];
+  api("api/decisions/undo",{method:"POST",headers:{"Content-Type":"application/json"},
+    body:JSON.stringify({reviewIds:ids, decidedBy:viewer})})
+    .then(function(){
+      ids.forEach(function(i){ if(prev){ decisions[i]={verdict:prev,decidedBy:viewer}; } else { delete decisions[i]; } });
+      paintAll(); say("Deshecho.");
+    })
+    .catch(function(){ say("No se pudo deshacer."); });
+}
+
+/* ---- pre-vuelo ---- */
+var qWhat={low_confidence:"Candidato normal: se aprueba en bloque",manual_review:"El tipo de disco era ambiguo en el original",
+  album_match:"¿Es el mismo disco que uno ya guardado?",missing_url:"Fila de la hoja que no tiene video",
+  media_type_no_album:"Videoclip o concierto: no crea disco",person_match:"¿Es la misma persona?",
+  organization_match:"¿Es el mismo estudio o sello?",field_conflict:"Dos fuentes dan valores distintos",
+  ambiguous_alias:"Un alias que apunta a más de una ficha"};
+var coreLabels={artists:"Artistas",albums:"Discos",tracks:"Pistas",persons:"Personas",organizations:"Estudios",album_credits:"Créditos"};
+
+function paintState(s){
+  var coreEl=document.getElementById("core"); coreEl.textContent="";
+  Object.keys(coreLabels).forEach(function(k){
+    var d=el("div"); d.appendChild(el("dt",null,coreLabels[k])); d.appendChild(el("dd",null,num(s.core[k]))); coreEl.appendChild(d);
+  });
+  document.getElementById("stamp").textContent = "En el catálogo ahora · " + String(s.snapshot).slice(11,16);
+  var tbc=document.getElementById("tb-cand"); tbc.textContent="";
+  (s.candidates||[]).forEach(function(r){
+    var tr=el("tr");
+    tr.appendChild(el("td","src",r.source));
+    tr.appendChild(el("td",null,KIND_NAME[r.entity_kind]||r.entity_kind));
+    tr.appendChild(el("td","num",num(r.entities)));
+    tr.appendChild(el("td","num",num(r.claims)));
+    tbc.appendChild(tr);
+  });
+  var tbq=document.getElementById("tb-q"); tbq.textContent="";
+  var total=0;
+  (s.queues||[]).forEach(function(r){
+    total+=Number(r.open);
+    var tr=el("tr");
+    var name=el("td",null,QUEUE_NAME[r.kind]||r.kind);
+    tr.appendChild(name);
+    tr.appendChild(el("td","num",num(r.open)));
+    var tech=el("td","src",r.kind); tech.title=qWhat[r.kind]||"";
+    tr.appendChild(tech);
+    tbq.appendChild(tr);
+  });
+  document.getElementById("n-pre").textContent=num(total);
+  (s.decisions||[]).forEach(function(d){ decisions[d.reviewId]={verdict:d.verdict, decidedBy:d.decidedBy}; });
+  paintAll();
+}
+
+/* ---- lenguaje humano ----
+   Las etiquetas que vienen de la base están sin tildes y en jerga de
+   resolución de entidades ("ano", "Jaro-Winkler", "score"). Se traducen
+   aquí, en el borde, sin tocar el dato guardado. */
+var SIGNAL_NAME={
+  "name.fuzzy":"Los nombres se parecen",
+  "name.none":"Los nombres no coinciden",
+  "name.canonical_exact":"El nombre es idéntico",
+  "name.article_variant":"Solo cambia el artículo (El, La, Los)",
+  "name.accent_only":"Solo cambian las tildes",
+  "album.artist":"El artista del disco",
+  "album.year":"El año del disco",
+  "track.album":"El disco al que pertenece",
+  "identity.homonym_guard":"Aviso de tocayos"
+};
+function pct(x){return Math.round(Number(x)*100)+"%";}
+function humanEvidence(f){
+  var e=String(f.evidence||""), k=f.key||"";
+  var m;
+  if((m=e.match(/Jaro-Winkler=([\d.]+)/))) return "los nombres coinciden en un "+pct(m[1])+", que por sí solo no basta";
+  if((m=e.match(/sin coincidencia nominal suficiente \(([\d.]+)\)/))) return "los nombres solo coinciden en un "+pct(m[1]);
+  if(/nombre exacto sin contexto/.test(e)) return "el nombre es idéntico, pero no hay ningún otro dato que lo confirme";
+  if((m=e.match(/clave primaria exacta:\s*(.+)$/))) return "la clave del catálogo coincide: "+m[1];
+  if((m=e.match(/parent exacto:\s*(.+)$/))) return "es el mismo artista: "+m[1];
+  if(k==="album.year" && (m=e.match(/^\s*(\d{4})\s*\/\s*(\d{4})\s*$/))){
+    return m[1]===m[2] ? ("los dos dicen "+m[1]) : ("la fuente dice "+m[1]+" y el catálogo "+m[2]);
+  }
+  return e;
+}
+function humanExplanation(x){
+  var e=String(x||""), m;
+  if(/ningun candidato supera/.test(e)) return "Ninguna ficha del catálogo encaja lo suficiente";
+  if((m=e.match(/mejor candidato \d+:\s*canonical_exact/))) return "La ficha más parecida tiene el nombre idéntico";
+  if((m=e.match(/mejor candidato \d+:\s*fuzzy/))) return "La ficha más parecida se parece solo en el nombre";
+  if((m=e.match(/mejor candidato \d+:\s*article_variant/))) return "La ficha más parecida solo cambia en el artículo";
+  if((m=e.match(/mejor candidato \d+:\s*accent_only/))) return "La ficha más parecida solo cambia en las tildes";
+  if(/ambiguedad/.test(e)) return "Hay dos fichas casi igual de parecidas y el sistema no se atreve a elegir";
+  return e;
+}
+var KIND_NAME={artist:"Artistas",album:"Discos",track:"Pistas",person:"Personas",
+  organization:"Estudios y sellos",album_credit:"Créditos de disco",track_credit:"Créditos de pista",
+  artist_membership:"Miembros de banda",media_link:"Imágenes",youtube_video:"Videos"};
+var QUEUE_NAME={low_confidence:"Candidatos normales",manual_review:"Tipo de disco ambiguo",
+  album_match:"¿Es el mismo disco?",missing_url:"Fila sin video",media_type_no_album:"No crea disco",
+  person_match:"¿Es la misma persona?",organization_match:"¿Es el mismo estudio?",
+  field_conflict:"Dos fuentes se contradicen",ambiguous_alias:"Alias ambiguo"};
+
+/* ---- careos ---- */
+/* Una misma pregunta llegaba repetida: cuatro fichas distintas para el mismo
+   "Melissa". Se agrupan por lo que se decide, no por fila de la cola, y la
+   decisión se aplica a todas de una vez. */
+(function groupMatches(){
+  var by={}, out=[];
+  D.matches.forEach(function(m){
+    var key=[m.kind,m.name,(m.candidates[0]||{}).id||"none"].join("|");
+    if(by[key]){ by[key].ids.push(m.id); return; }
+    m.ids=[m.id]; by[key]=m; out.push(m);
+  });
+  D.matches=out;
+})();
+var current = D.matches.length ? D.matches[0].id : null;
+var kindWord={album_match:"disco",person_match:"persona",organization_match:"estudio"};
+var markSign={same:"=",different:"≠",unsure:"?"};
+var markCls={same:"same",different:"diff",unsure:"skip"};
+var verdictWord={same:"marcado como el mismo",different:"marcado como distintos",unsure:"marcado como sin decidir"};
+
+function renderRoll(){
+  var roll=document.getElementById("roll"); roll.textContent="";
+  D.matches.forEach(function(m){
+    var b=el("button"); b.type="button";
+    var top=el("div","rn"); top.appendChild(el("span",null,m.name));
+    var right=el("span","rs");
+    var dec=decisions[m.id];
+    if(dec) right.appendChild(el("span","mark "+(markCls[dec.verdict]||"skip"), markSign[dec.verdict]||"?"));
+    right.appendChild(document.createTextNode(m.score.toFixed(2)));
+    top.appendChild(right); b.appendChild(top);
+    b.appendChild(el("div","rk", kindWord[m.kind]+(m.ids.length>1?" · "+m.ids.length+" fichas iguales":" · ficha "+m.id)));
+    b.setAttribute("aria-current", m.id===current?"true":"false");
+    b.addEventListener("click",function(){current=m.id;renderRoll();renderStage();});
+    roll.appendChild(b);
+  });
+}
+function contextLine(c){
+  if(!c) return "";
+  var bits=[];
+  if(c.artist&&c.artist.name) bits.push(c.artist.name);
+  if(c.year) bits.push(String(c.year));
+  return bits.join(" · ");
+}
+function meterBlock(features){
+  var box=el("div","meter");
+  box.appendChild(el("h3","cap","Qué dice cada señal"));
+  var max=0.6;
+  (features||[]).forEach(function(f){max=Math.max(max,Math.abs(f.contribution||0),f.weight||0);});
+  (features||[]).forEach(function(f){
+    var row=el("div","sig");
+    row.appendChild(el("div","lbl",SIGNAL_NAME[f.key]||f.label||f.key));
+    var right=el("div"); var track=el("div","track");
+    var against=(f.polarity==="against");
+    var c=Number(f.contribution||0);
+    var mag=Math.min(1,Math.abs(against&&c===0?(f.weight||0):c)/max);
+    var bar=el("div","bar "+(against?"against":"for"));
+    bar.style.width=(mag*50).toFixed(1)+"%";
+    track.appendChild(bar); right.appendChild(track);
+    right.appendChild(el("div","ev",(against?"pesa en contra · ":"pesa a favor · ")+humanEvidence(f)));
+    row.appendChild(right); box.appendChild(row);
+  });
+  return box;
+}
+function renderStage(){
+  var stage=document.getElementById("stage"); stage.textContent="";
+  var m=D.matches.filter(function(x){return x.id===current;})[0];
+  if(!m){stage.appendChild(el("p","lead","Elige un careo de la lista."));return;}
+  var top=m.candidates[0]||null;
+  var pair=el("div","pair");
+  var a=el("div","side");
+  a.appendChild(el("div","role","Lo que afirma la fuente nueva"));
+  a.appendChild(el("div","name",m.name));
+  var cl=contextLine(m.context); if(cl)a.appendChild(el("div","meta",cl));
+  pair.appendChild(a);
+  pair.appendChild(el("div","vs","¿MISMO?"));
+  var b=el("div","side");
+  b.appendChild(el("div","role","Lo que ya está en el catálogo"));
+  if(top){
+    b.appendChild(el("div","name",top.name||("ficha "+top.id)));
+    b.appendChild(el("div","meta","parecido "+top.score.toFixed(3)));
+  }else{
+    b.appendChild(el("div","name","Nada parecido"));
+    b.appendChild(el("div","meta",humanExplanation(m.explanation)+"."));
+  }
+  pair.appendChild(b); stage.appendChild(pair);
+
+  var tot=el("div","total");
+  tot.appendChild(el("b",null,m.score.toFixed(3)));
+  tot.appendChild(el("span",null,"de parecido, en una escala de 0 a 1 · "+humanExplanation(m.explanation)));
+  stage.appendChild(tot);
+  stage.appendChild(meterBlock(top?top.features:m.features));
+
+  if(m.candidates.length>1){
+    var others=el("div","note");
+    others.appendChild(el("strong",null,"Otros parecidos: "));
+    others.appendChild(document.createTextNode(m.candidates.slice(1).map(function(c){
+      return (c.name||("ficha "+c.id))+" ("+c.score.toFixed(2)+")";}).join(" · ")));
+    stage.appendChild(others);
+  }
+
+  var dec=el("div","decide");
+  [["same","Son el mismo","same"],["different","Son distintos","diff"],["unsure","No lo sé","skip"]].forEach(function(o){
+    var btn=el("button","act "+o[2],o[1]); btn.type="button";
+    var cur=decisions[m.id];
+    btn.setAttribute("aria-pressed",cur&&cur.verdict===o[0]?"true":"false");
+    btn.addEventListener("click",function(){
+      decide(m.ids,o[0],"Guardado: "+verdictWord[o[0]]+".",{name:m.name,kind:m.kind});
+    });
+    dec.appendChild(btn);
+  });
+  var cur=decisions[m.id];
+  if(cur){
+    var un=el("button","act ghost","Quitar mi decisión"); un.type="button";
+    un.addEventListener("click",function(){ undo(m.ids,null); });
+    dec.appendChild(un);
+  }
+  stage.appendChild(dec);
+  var st=el("div","state");
+  st.textContent = cur ? ("Decisión guardada por "+cur.decidedBy+": "+verdictWord[cur.verdict]+".")
+                       : (viewer ? "" : "Escribe tu nombre arriba para poder decidir.");
+  stage.appendChild(st);
+}
+
+/* ---- contradicciones ---- */
+var fieldWord={organization_type:"qué clase de organización es",track_number:"el número de pista"};
+function renderConflicts(){
+  var list=document.getElementById("conf-list"); list.textContent="";
+  D.conflicts.forEach(function(c){
+    var row=el("div","conf");
+    var left=el("div");
+    left.appendChild(el("div","what", c.target_name || ("ficha "+c.target_id)));
+    left.appendChild(el("div","field", (fieldWord[c.field]||c.field||"—")));
+    row.appendChild(left);
+    var opts=el("div","opts");
+    var choices=[];
+    if(c.canonical!=null) choices.push(["canonical","Dejar lo que hay",c.canonical]);
+    if(c.proposed!=null) choices.push(["proposed","Cambiar a",c.proposed]);
+    if(!choices.length) choices.push(["unsure","","Sin valores anotados"]);
+    else choices.push(["unsure","","No lo sé"]);
+    choices.forEach(function(ch){
+      var b=el("button","opt"); b.type="button";
+      if(ch[1]) b.appendChild(el("small",null,ch[1]));
+      b.appendChild(document.createTextNode(ch[2]));
+      var cur=decisions[c.id];
+      b.setAttribute("aria-pressed",cur&&cur.verdict===ch[0]?"true":"false");
+      b.addEventListener("click",function(){
+        decide([c.id],ch[0],"Guardado para "+(c.target_name||"la ficha")+".",{field:c.field,value:ch[2]});
+      });
+      opts.appendChild(b);
+    });
+    var cur=decisions[c.id];
+    if(cur){
+      var un=el("button","act ghost","Quitar"); un.type="button";
+      un.addEventListener("click",function(){ undo([c.id],null); });
+      opts.appendChild(un);
+    }
+    row.appendChild(opts); list.appendChild(row);
+  });
+}
+
+/* ---- visor de cola ---- */
+var shapeWord={
+  nombre_llano:["Nombre normal","Dos o más palabras, sin nada raro pegado. Es la forma sana y la mayoría."],
+  con_apodo:["Con apodo entre comillas",'Como Miguel Gonzáles "El Enano". Es correcto: el apodo forma parte de cómo se le acredita.'],
+  una_palabra:["De una sola palabra","Puede ser real (Nano, Cayayo) o un trozo suelto de otro nombre. Vale la pena una ojeada."],
+  con_coma:["Con una coma","Casi siempre son dos personas metidas en una misma ficha. Revisar antes de aprobar."],
+  con_parentesis:["Con paréntesis o corchete","Suele llevar pegada la ciudad o la banda de origen, que no son parte del nombre."],
+  con_anio:["Con un año dentro","La fecha de la sesión se coló en el nombre. No es un nombre."],
+  con_salvedad:["Con una salvedad","Frases del tipo «salvo la pista 12». No nombran a nadie."],
+  sello_o_estudio:["Parece un sello o un estudio","Termina en Records, Studios o Mastering: es una empresa, no una persona."],
+  muy_largo:["Más de cinco palabras","Normalmente es una lista de personas que quedó sin separar."]
+};
+/* Una forma no es buena ni mala por sí sola: depende de qué se esté
+   nombrando. "Termina en Studios" es un defecto en una persona y es lo
+   normal en un estudio; una sola palabra es rara en una persona y corriente
+   en una banda. */
+function isBadShape(shape, kind){
+  if(shape==="sello_o_estudio") return kind!=="organization";
+  if(shape==="una_palabra") return kind==="person";
+  return shape==="con_coma"||shape==="con_parentesis"||shape==="con_anio"||shape==="con_salvedad"||shape==="muy_largo";
+}
+function shapeWhy(shape, kind){
+  if(shape==="sello_o_estudio" && kind==="organization") return "Termina en Records, Studios o Mastering, que es justo lo que se espera aquí.";
+  if(shape==="una_palabra" && kind!=="person") return "Un solo nombre. En bandas y sellos es de lo más corriente.";
+  return (shapeWord[shape]||["",""])[1];
+}
+
+function renderShapes(groups){
+  var box=document.getElementById("shapes"); box.textContent="";
+  if(!groups.length){ box.appendChild(el("p","lead","No hay candidatos con nombre en la cola ahora mismo.")); return; }
+  var max=groups.reduce(function(a,g){return Math.max(a,g.n);},1);
+  groups.forEach(function(g){
+    var known=shapeWord[g.shape]||[g.shape,""];
+    var card=el("div","shape "+(isBadShape(g.shape,g.entity_kind)?"warn":"calm"));
+    var head=el("div","shape-head");
+    var l=el("div");
+    l.appendChild(el("div","shape-name",known[0]));
+    l.appendChild(el("div","shape-why",shapeWhy(g.shape,g.entity_kind)+" · "+(KIND_NAME[g.entity_kind]||g.entity_kind)));
+    head.appendChild(l);
+    var r=el("div",null); r.appendChild(el("div","shape-n",num(g.n)));
+    head.appendChild(r);
+    card.appendChild(head);
+    var bar=el("div","shape-bar"); var i=el("i"); i.style.width=Math.max(2,(g.n/max)*100)+"%"; bar.appendChild(i); card.appendChild(bar);
+    var chips=el("div","chips");
+    (g.samples||[]).forEach(function(s){ chips.appendChild(el("span","chip",s)); });
+    card.appendChild(chips);
+    box.appendChild(card);
+  });
+}
+
+function renderHist(){
+  var buckets=new Array(20).fill(0);
+  D.matches.forEach(function(m){
+    var b=Math.min(19,Math.max(0,Math.floor((m.score||0)*20)));
+    buckets[b]+=1;
+  });
+  var host=document.getElementById("hist"); host.textContent="";
+  var max=Math.max.apply(null,buckets)||1;
+  buckets.forEach(function(n,idx){
+    var i=el("i"); i.style.height=Math.max(2,(n/max)*100)+"%";
+    i.title=n+" careos entre "+(idx/20).toFixed(2)+" y "+((idx+1)/20).toFixed(2);
+    host.appendChild(i);
+  });
+  updateCut();
+}
+function updateCut(){
+  var cut=Number(document.getElementById("cut").value)/100;
+  var over=D.matches.filter(function(m){return (m.score||0)>=cut;}).length;
+  var under=D.matches.length-over;
+  var bars=document.getElementById("hist").children;
+  for(var i=0;i<bars.length;i++){
+    if((i+1)/20 > cut) bars[i].className="over"; else bars[i].className="";
+  }
+  document.getElementById("cut-read").textContent =
+    "Con el corte en "+cut.toFixed(2)+": "+num(over)+" se fundirían sin que nadie los mire y "+num(under)+" quedarían para revisar a mano.";
+}
+
+var sampleBox=document.getElementById("sample");
+document.getElementById("btn-sample").addEventListener("click",function(){
+  document.getElementById("sample-note").textContent="Sacando…";
+  api("api/sample?n=20").then(function(r){
+    sampleBox.textContent=""; sampleBox.hidden=false;
+    (r.sample||[]).forEach(function(s){
+      var row=el("div","sample-row");
+      row.appendChild(el("div",null,s.name));
+      row.appendChild(el("span",null,s.entity_kind+" · "+s.source));
+      sampleBox.appendChild(row);
+    });
+    document.getElementById("sample-note").textContent = (r.sample||[]).length+" al azar. Si todos te parecen bien, el resto probablemente también.";
+  }).catch(function(){
+    document.getElementById("sample-note").textContent="No se pudo consultar al servidor.";
+  });
+});
+document.getElementById("cut").addEventListener("input",updateCut);
+
+/* ---- pestañas ---- */
+var tabs=[["t-pre","p-pre"],["t-car","p-car"],["t-con","p-con"],["t-col","p-col"]];
+tabs.forEach(function(pair){
+  document.getElementById(pair[0]).addEventListener("click",function(){
+    tabs.forEach(function(p){
+      var sel=p[0]===pair[0];
+      document.getElementById(p[0]).setAttribute("aria-selected",sel?"true":"false");
+      document.getElementById(p[1]).hidden=!sel;
+    });
+  });
+});
+document.getElementById("n-car").textContent=num(D.matches.length);
+document.getElementById("n-con").textContent=num(D.conflicts.length);
+
+function paintAll(){renderRoll();renderStage();renderConflicts();}
+paintAll(); renderHist();
+
+api("api/state").then(paintState).catch(function(){
+  document.getElementById("stamp").textContent="Sin conexión con el servidor · solo lectura";
+});
+api("api/groups").then(function(r){
+  renderShapes(r.groups||[]);
+  document.getElementById("n-col").textContent=num((r.groups||[]).reduce(function(a,g){return a+g.n;},0));
+}).catch(function(){
+  document.getElementById("shapes").textContent="";
+  document.getElementById("shapes").appendChild(el("p","lead","No se pudo consultar al servidor."));
+});
+})();
+</script>
