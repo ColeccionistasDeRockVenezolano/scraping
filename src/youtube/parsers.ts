@@ -1,7 +1,15 @@
 export interface ParsedTitle { artist: string | null; title: string; year: number | null; format: string | null; isFullAlbum: boolean; }
 export interface DescriptionSection { kind: string; heading: string; content: string; position: number; }
 export interface TimestampEntry { title: string; startSeconds: number; position: number; }
-export interface CreditLine { verbs: string[]; preposition: "by" | "at"; value: string; sectionKind: string; }
+export interface CreditLine {
+  verbs: string[]; preposition: "by" | "at"; value: string; sectionKind: string;
+  /** La persona acreditada, ya separada del lugar. `null` si no es un nombre. */
+  names: string[];
+  /** El estudio o local: lo que sigue a " at ". */
+  venue: string | null;
+  /** El paréntesis final del lugar: "(Caracas, Venezuela)". */
+  location: string | null;
+}
 export interface ParsedDescription { sections: DescriptionSection[]; tracklist: TimestampEntry[]; credits: CreditLine[]; }
 
 const TITLE_SEPARATORS = /\s+(?:-|–|—)\s+/;
@@ -120,11 +128,17 @@ export function parseYouTubeDescription(description: string | null | undefined):
       const isTrackLine = TRACK_SECTIONS.has(current.kind) && (LEADING_TIMESTAMP.test(line) || TRAILING_TIMESTAMP.test(line));
       const credit = isTrackLine ? null : line.match(CREDIT_LINE);
       if (credit) {
+        const preposition = credit[2]!.toLowerCase() as "by" | "at";
+        const value = credit[3]!.trim();
+        // Con "at" el valor entero es el lugar; con "by", hay que separarlo.
+        const parts = preposition === "at"
+          ? { names: [], ...(() => { const t = trimCreditTail(value); const m = t.match(TRAILING_LOCATION);
+              const bare = (m ? t.replace(TRAILING_LOCATION, "") : t).trim();
+              return { venue: plausibleName(bare) ? bare : null, location: m ? m[1]!.trim() : null }; })() }
+          : splitCreditValue(value);
         credits.push({
           verbs: credit[1]!.split(/\s*&\s*/).map((verb) => verb.trim().toLowerCase()),
-          preposition: credit[2]!.toLowerCase() as "by" | "at",
-          value: credit[3]!.trim(),
-          sectionKind: current.kind,
+          preposition, value, sectionKind: current.kind, ...parts,
         });
       }
       if (TRACK_SECTIONS.has(current.kind)) {
@@ -139,4 +153,115 @@ export function parseYouTubeDescription(description: string | null | undefined):
   }
   flush();
   return { sections, tracklist, credits };
+}
+
+// ---------------------------------------------------------------------------
+// Créditos con persona y rol. Es lo que el canal aporta y ninguna otra fuente
+// da con esta densidad: 622 descripciones traen bloque de músicos y 374
+// además el de invitados, con la atribución por pista entre paréntesis.
+//
+// Dos disposiciones conviven, y las dos son reales:
+//
+//   Lead Vocals: Walter Gangi                 ← rol y nombre en la misma línea
+//   Guitars:                                  ← rol suelto…
+//   -Jefrey Sánchez (tracks 01,02,04)         ← …y nombres debajo
+//
+// Lo que NO se emite: cualquier valor con dígitos sueltos, punto y coma o
+// "except". Son notas de matiz ("Produced by X, except; Track 12 by Y") y
+// convertirlas en nombre de persona inventaría a alguien que no existe.
+
+export interface PersonCredit { role: string; name: string; trackNumbers: number[]; sectionKind: string; }
+
+// El valor puede venir vacío ("Guitars:" y debajo los nombres con viñeta),
+// así que `(.*)` en vez de `(.+?)`: con `.+?` esa forma no casaba y el rol
+// se perdía junto con todos sus nombres.
+const ROLE_AND_NAMES = /^\s*-?\s*([^:]{2,60}?)\s*:\s*(.*)$/;
+const BULLET_NAME = /^\s*[-–—•]\s*(.+?)\s*$/;
+const TRACK_SCOPE = /\(\s*(?:tracks?|pistas?)\s*([\d\s,.&y-]+)\)/iu;
+const CREDIT_SECTIONS = new Set(["musicians", "guest_musicians", "artwork", "illustration", "photography"]);
+
+function splitNames(value: string): string[] {
+  return value.split(/\s*&\s*|\s+y\s+/u).map((name) => name.trim()).filter(Boolean);
+}
+
+// Un año o un mes dentro del valor no son parte del nombre: son la fecha de
+// la sesión ("Boris Milan, August 1992"). Y una salvedad ("…, except;") abre
+// una lista de excepciones que ya no habla del mismo acreditado.
+const NAME_TAIL = /\s*[,;]\s*(?:except|salvo|excepto|but)\b[\s\S]*$|\s*;[\s\S]*$/iu;
+const NAME_DATE_TAIL = /\s*,\s*(?:(?:january|february|march|april|may|june|july|august|september|october|november|december|enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)\b[^,]*)?\s*(?:1[89]\d{2}|20\d{2})\s*$/iu;
+
+/** Recorta lo que sigue al nombre: salvedades y fechas de sesión. */
+function trimCreditTail(value: string): string {
+  return value.replace(NAME_TAIL, "").replace(NAME_DATE_TAIL, "").trim().replace(/[,;.]+$/u, "").trim();
+}
+
+/**
+ * Un nombre creíble. Los dígitos NO lo descalifican —"Zapato 3" y "Candy66"
+ * son bandas reales del catálogo—; lo que descalifica es llevar un año, una
+ * salvedad o un largo que ya no es de nombre sino de frase.
+ */
+function plausibleName(value: string): boolean {
+  if (value.length < 2 || value.length > 80) return false;
+  if (/\b(?:1[89]\d{2}|20\d{2})\b/u.test(value)) return false;
+  if (/[;]|\bexcept\b|\bsalvo\b|\bexcepto\b/iu.test(value)) return false;
+  return /\p{L}/u.test(value);
+}
+
+// "Recorded by Jesús Jiménez at Optilaser (Caracas, Venezuela)" son dos
+// hechos en una línea: quién grabó y dónde. El " at " los separa.
+const VENUE_SPLIT = /\s+\bat\b\s+/iu;
+const TRAILING_LOCATION = /\s*\(([^()]{2,80})\)\s*$/u;
+
+function splitCreditValue(value: string): { names: string[]; venue: string | null; location: string | null } {
+  const [personPart, ...rest] = value.split(VENUE_SPLIT);
+  const venueRaw = rest.length ? rest.join(" at ") : null;
+  let venue: string | null = null; let location: string | null = null;
+  if (venueRaw) {
+    const trimmed = trimCreditTail(venueRaw);
+    const match = trimmed.match(TRAILING_LOCATION);
+    location = match ? match[1]!.trim() : null;
+    const bare = (match ? trimmed.replace(TRAILING_LOCATION, "") : trimmed).trim();
+    venue = plausibleName(bare) ? bare : null;
+  }
+  const names = splitNames(trimCreditTail(personPart ?? "")).filter(plausibleName);
+  return { names, venue, location };
+}
+
+function scopeOf(value: string): { clean: string; trackNumbers: number[] } {
+  const match = value.match(TRACK_SCOPE);
+  if (!match) return { clean: value.trim(), trackNumbers: [] };
+  const numbers = [...new Set((match[1]!.match(/\d{1,3}/gu) ?? []).map(Number))].filter((n) => n > 0 && n < 1000).sort((a, b) => a - b);
+  return { clean: value.replace(TRACK_SCOPE, "").trim(), trackNumbers: numbers };
+}
+
+/** Extrae (rol, persona) de los bloques de músicos y de arte. */
+export function parseCreditSections(sections: DescriptionSection[]): PersonCredit[] {
+  const out: PersonCredit[] = [];
+  for (const section of sections) {
+    if (!CREDIT_SECTIONS.has(section.kind)) continue;
+    // Un encabezado como "Artwork" ya nombra el rol de todo su bloque.
+    let currentRole = section.kind === "musicians" || section.kind === "guest_musicians" ? null : section.heading.trim();
+    for (const line of section.content.split("\n")) {
+      if (!line.trim() || line.trim().startsWith("*")) continue;
+      const paired = line.match(ROLE_AND_NAMES);
+      if (paired) {
+        const role = paired[1]!.trim();
+        const value = paired[2]!.trim();
+        if (!value) { currentRole = role; continue; }
+        const { clean, trackNumbers } = scopeOf(value);
+        for (const name of splitNames(clean)) {
+          if (plausibleName(name)) out.push({ role, name, trackNumbers, sectionKind: section.kind });
+        }
+        continue;
+      }
+      const bullet = line.match(BULLET_NAME);
+      if (bullet && currentRole) {
+        const { clean, trackNumbers } = scopeOf(bullet[1]!);
+        for (const name of splitNames(clean)) {
+          if (plausibleName(name)) out.push({ role: currentRole, name, trackNumbers, sectionKind: section.kind });
+        }
+      }
+    }
+  }
+  return out;
 }

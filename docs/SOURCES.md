@@ -194,6 +194,49 @@ extrae los cuatro. El año que sale de ahí es una afirmación **independiente**
 del `Album Year` de la hoja: cuando discrepen, el conflicto se registra
 conservando ambas, como el caso `Metrozubdivision / CCS`.
 
+### 2.5 El canal como fuente de claims (paso 4)
+
+`crv youtube api-claims [--dry-run]` mete lo derivado por la puerta normal
+—adapter → normalización → claims → ER → merge—, igual que `seed-claims`
+hace con la hoja. No abre ninguna vía nueva al core.
+
+**Qué cuenta como publicación.** Solo los videos con `|| Full Album ||` en el
+título producen álbum. La regla está contrastada contra la clasificación de
+la hoja y las dos nunca se contradicen: de los 596 marcados, la hoja llama
+`release` a 425 y `review` a 56, y **`media` a ninguno**; de los 50 sin
+marcar, 32 son `media` para la hoja. Videoclip, concierto y documental
+siguen sin crear disco.
+
+**Qué sale.** 646 videos → 596 discos, 35 audiovisuales sin disco y 15 sin
+identidad (documentales y entrevistas cuyo título usa `:` en vez de ` - `):
+
+| Registro | Cantidad |
+|---|---|
+| Pistas | 6.531 |
+| Créditos de disco | 7.762 |
+| Personas | 3.840 |
+| Créditos acotados a pista | 1.458 |
+| Discos | 596 |
+| Organizaciones (estudios) | 408 |
+| Artistas | 268 |
+
+**Todo sale como candidato** (`confidence: low`), igual que el seed. El canal
+es del propio proyecto y su `trust_level` es `api`, pero quien lo lee aquí es
+un programa: la decisión humana se expresa después, con
+`review approve-batch --source=youtube-data-api`.
+
+**Lo que se descarta a propósito.** Un valor con año, punto y coma o salvedad
+no se convierte en nombre: "Produced by X, except; Track 12 by Y" nombraría a
+alguien que no existe. Un dígito, en cambio, **no** descalifica —"Zapato 3" y
+"Candy66" son bandas del catálogo—. De los 1.633 créditos por verbo, 1.536
+dan nombre y 713 además un estudio; 40 se descartan por ambiguos.
+
+**Persona y lugar son dos hechos.** "Recorded by Jesús Jiménez at Optilaser
+(Caracas, Venezuela)" produce un crédito de persona y otro de organización
+con `organization_type='recording_studio'`. Y "Recorded & Mixed by X" produce
+dos créditos, uno por verbo, para que `credit_type` no pierda la mitad al
+clasificar.
+
 ---
 
 ## 3. Las 11 fuentes autorizadas (registro del XLSX)

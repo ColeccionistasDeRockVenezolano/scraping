@@ -3,7 +3,7 @@ import fixture from "../fixtures/youtube-video-Q-pRpO2sYSI.json" with { type: "j
 import realFixture from "../fixtures/youtube-video-real-Q-pRpO2sYSI.json" with { type: "json" };
 import { YouTubeDataApi, iso8601DurationToSeconds, youtubePublicationStatus, type YouTubeVideoPayload } from "../../src/youtube/api.js";
 import { canonicalVideoUrl, classifyContentType, extractYouTubeVideoId } from "../../src/youtube/normalization.js";
-import { parseYouTubeDescription, parseYouTubeTitle, timestampToSeconds } from "../../src/youtube/parsers.js";
+import { parseCreditSections, parseYouTubeDescription, parseYouTubeTitle, timestampToSeconds } from "../../src/youtube/parsers.js";
 import { readYouTubeMasterSheet } from "../../src/youtube/pipeline.js";
 
 describe("YouTube URL normalization", () => {
@@ -57,7 +57,8 @@ describe("deterministic description parser", () => {
     // "Produced by:" no es un encabezado sino un crédito en línea: así
     // aparece en las 636 descripciones reales del canal (SOURCES.md §2.2).
     expect(parsed.credits).toEqual([
-      { verbs: ["produced"], preposition: "by", value: "Productor de prueba", sectionKind: "tracklist" },
+      { verbs: ["produced"], preposition: "by", value: "Productor de prueba", sectionKind: "tracklist",
+        names: ["Productor de prueba"], venue: null, location: null },
     ]);
   });
 
@@ -75,8 +76,15 @@ describe("deterministic description parser", () => {
     ]);
     // "Recorded & Mixed by Boris Milan": el verbo compuesto se conserva
     // entero. Con el vocabulario anterior esta línea no casaba con nada.
+    // La fecha de sesión queda fuera del nombre, pero el valor crudo se
+    // conserva íntegro: lo derivado no borra lo que la fuente dijo.
     expect(parsed.credits).toContainEqual(
-      { verbs: ["recorded", "mixed"], preposition: "by", value: "Boris Milan, August 1992", sectionKind: "other_credits" },
+      { verbs: ["recorded", "mixed"], preposition: "by", value: "Boris Milan, August 1992",
+        sectionKind: "other_credits", names: ["Boris Milan"], venue: null, location: null },
+    );
+    expect(parsed.credits).toContainEqual(
+      { verbs: ["recorded", "mixed"], preposition: "at", value: "Mad Box's Studios (Caracas, Venezuela)",
+        sectionKind: "other_credits", names: [], venue: "Mad Box's Studios", location: "Caracas, Venezuela" },
     );
     expect(parsed.credits.some((credit) => credit.preposition === "at")).toBe(true);
   });
@@ -95,6 +103,43 @@ describe("deterministic description parser", () => {
     const conBonus = parseYouTubeDescription("Tracklist:\n01 - A 00:00\n\nBonus Track:\n02 - B 01:00");
     expect(conBonus.tracklist.map((t) => t.title)).toEqual(["A", "B"]);
     expect(conBonus.sections.map((s) => s.kind)).toEqual(["tracklist", "bonus_tracks"]);
+  });
+
+  it("separates the person from the studio in a credit line", () => {
+    const parsed = parseYouTubeDescription("Other Credits\n\nRecorded & Mixed by Jesús Jiménez at Optilaser (Caracas, Venezuela)");
+    expect(parsed.credits).toHaveLength(1);
+    expect(parsed.credits[0]).toMatchObject({
+      verbs: ["recorded", "mixed"], preposition: "by",
+      names: ["Jesús Jiménez"], venue: "Optilaser", location: "Caracas, Venezuela",
+    });
+  });
+
+  it("keeps band names with digits and drops session dates and caveats", () => {
+    // "Zapato 3" y "Candy66" son bandas reales: el dígito no descalifica.
+    const conDigito = parseYouTubeDescription("Other Credits\n\nProduced by Zapato 3");
+    expect(conDigito.credits[0]?.names).toEqual(["Zapato 3"]);
+    // La fecha de sesión no es parte del nombre.
+    const conFecha = parseYouTubeDescription("Other Credits\n\nRecorded by Boris Milan, August 1992");
+    expect(conFecha.credits[0]?.names).toEqual(["Boris Milan"]);
+    // Una salvedad abre una lista de excepciones: ya no habla del acreditado.
+    const conSalvedad = parseYouTubeDescription("Other Credits\n\nProduced by Felipe Grüber & Walter Gangi, except;");
+    expect(conSalvedad.credits[0]?.names).toEqual(["Felipe Grüber", "Walter Gangi"]);
+  });
+
+  it("extracts role, person and track scope from musician blocks", () => {
+    const description = [
+      "Musicians", "", "Lead Vocals & Bass: Asier Cazalis", "Drums: Pablo Martínez", "",
+      "Guest Musicians", "", "Additional Vocals: Marcos Rodríguez (track 13)", "",
+      "Guitars:", "-Jefrey Sánchez (tracks 01,02,04)", "-Walter Gangi (tracks 01,02)",
+    ].join("\n");
+    const creditos = parseCreditSections(parseYouTubeDescription(description).sections);
+    expect(creditos).toEqual([
+      { role: "Lead Vocals & Bass", name: "Asier Cazalis", trackNumbers: [], sectionKind: "musicians" },
+      { role: "Drums", name: "Pablo Martínez", trackNumbers: [], sectionKind: "musicians" },
+      { role: "Additional Vocals", name: "Marcos Rodríguez", trackNumbers: [13], sectionKind: "guest_musicians" },
+      { role: "Guitars", name: "Jefrey Sánchez", trackNumbers: [1, 2, 4], sectionKind: "guest_musicians" },
+      { role: "Guitars", name: "Walter Gangi", trackNumbers: [1, 2], sectionKind: "guest_musicians" },
+    ]);
   });
 
   it("reads artist, album, format and year out of the real title", () => {

@@ -262,10 +262,16 @@ Entregables:
   la errata `Trackslist`, y una segunda pasada con 0 cambios. Total:
   **6.792 pistas** y **2.396 secciones**; el core sigue en 40 álbumes y 278
   pistas.
-- Emisión de claims desde lo derivado (pistas, créditos, año del título)
-  con `source=youtube-data-api`, hacia merge y review. Es el hueco que
-  queda: hoy `persistVideoPayload` escribe el espejo en `media.*` y no emite
-  ningún claim.
+- ✅ *Ya hecho:* **paso 4 — `crv youtube api-claims [--dry-run]`**
+  (`src/youtube/api-claims.ts`). Cierra el hueco: hasta aquí
+  `persistVideoPayload` escribía el espejo en `media.*` sin emitir un solo
+  claim. Ahora lo derivado entra por adapter → normalización → claims → ER →
+  merge, como cualquier fuente, y **como candidato** (`confidence: low`), a
+  la espera de `review approve-batch --source=youtube-data-api`.
+  De 646 videos salen 596 discos, 6.531 pistas, 3.840 personas, 408
+  organizaciones, 7.762 créditos de disco y 1.458 acotados a pista
+  (SOURCES.md §2.5). El marcador `|| Full Album ||` decide qué es publicación
+  y nunca contradice la clasificación de la hoja.
 - `yt:link` (propuestas de vínculo video→álbum → review).
 - `yt:enrich-artist` (search.list acotado, modo dirigido, presupuesto de
   cuota por artista).
