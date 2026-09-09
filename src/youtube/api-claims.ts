@@ -28,7 +28,7 @@ import { ingestRecords, type IngestionResult } from "../ingest/runner.js";
 import { moduleLogger } from "../logger/index.js";
 import type { Evidence, RawRecord } from "../adapters/contracts.js";
 import { canonicalVideoUrl } from "./normalization.js";
-import { parseCreditSections, parseYouTubeDescription, parseYouTubeTitle, type DescriptionSection } from "./parsers.js";
+import { looksLikeOrganization, parseCreditSections, parseYouTubeDescription, parseYouTubeTitle, type DescriptionSection } from "./parsers.js";
 
 const log = moduleLogger("youtube:api-claims");
 
@@ -191,7 +191,11 @@ export function recordsForVideo(
   for (const credit of verbCredits) {
     for (const verb of credit.verbs) {
       for (const name of credit.names) {
-        emitCredit(name, verb, [], `section:${credit.sectionKind}`, `${verb} by ${name}`);
+        // "Mastered by Silversound Mastering Studios" acredita a un estudio
+        // aunque la preposición sea "by": no hay ` at ` que lo delate, pero
+        // el nombre sí. Emitirlo como persona inventaría a alguien.
+        const kind = looksLikeOrganization(name) ? "organization" : "person";
+        emitCredit(name, verb, [], `section:${credit.sectionKind}`, `${verb} by ${name}`, kind);
       }
       if (credit.venue) {
         emitCredit(credit.venue, `${verb} at`, [], `section:${credit.sectionKind}`, `${verb} at ${credit.venue}`, "organization", credit.location);

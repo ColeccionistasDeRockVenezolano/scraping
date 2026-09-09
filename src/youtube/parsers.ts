@@ -177,11 +177,38 @@ export interface PersonCredit { role: string; name: string; trackNumbers: number
 // se perdía junto con todos sus nombres.
 const ROLE_AND_NAMES = /^\s*-?\s*([^:]{2,60}?)\s*:\s*(.*)$/;
 const BULLET_NAME = /^\s*[-–—•]\s*(.+?)\s*$/;
-const TRACK_SCOPE = /\(\s*(?:tracks?|pistas?)\s*([\d\s,.&y-]+)\)/iu;
+// El alcance puede venir prefijado por disco ("CD2 track 05") o sin número
+// ("all tracks"). En los dos casos el paréntesis se retira del nombre; solo
+// el segundo se queda sin pistas que acotar.
+const TRACK_SCOPE = /\((?:\s*cd\s*\d+\s*[,:]?\s*)?\s*(?:all\s+)?(?:tracks?|pistas?)\s*([^)]*)\)/iu;
+// Ciudad, marca de fallecido, banda de procedencia: nada de eso es el
+// nombre. Se retira del nombre y el valor crudo lo conserva igual.
+const ANY_PARENTHETICAL = /\s*\([^()]*\)\s*/gu;
+// La banda de procedencia del invitado va entre corchetes —"[from Sentimiento
+// Muerto]"— y a veces sin cerrar. Es un dato real, pero no es el nombre y hoy
+// no tiene columna donde vivir; el valor crudo del claim lo conserva.
+const TRAILING_BRACKET = /\s*\[[^\]]*\]?\s*$/u;
 const CREDIT_SECTIONS = new Set(["musicians", "guest_musicians", "artwork", "illustration", "photography"]);
 
+// La coma separa personas tanto como el "&": "Ana Valencia, María José
+// Valencia" son dos. Lo que la coma NO separa es un sufijo de linaje, que
+// pertenece al nombre anterior.
+const NAME_SUFFIX = /^(?:jr|sr|ii|iii|iv|hijo|padre)\.?$/iu;
+
 function splitNames(value: string): string[] {
-  return value.split(/\s*&\s*|\s+y\s+/u).map((name) => name.trim()).filter(Boolean);
+  return value.split(/\s*&\s*|\s*,\s*|\s+y\s+/u)
+    .map((name) => name.trim())
+    .filter((name) => name.length > 0 && !NAME_SUFFIX.test(name));
+}
+
+/**
+ * Un acreditado que es un sello o un estudio, aunque venga con "by". La
+ * marca está al final del nombre —"Soul Jazz Records", "Silversound
+ * Mastering Studios"—; exigirla al final evita confundir a una persona cuyo
+ * rol mencione la palabra.
+ */
+export function looksLikeOrganization(name: string): boolean {
+  return /\b(?:records?|studios?|mastering|productions?|estudios?|discos)\s*$/iu.test(name.trim());
 }
 
 // Un año o un mes dentro del valor no son parte del nombre: son la fecha de
@@ -223,15 +250,20 @@ function splitCreditValue(value: string): { names: string[]; venue: string | nul
     const bare = (match ? trimmed.replace(TRAILING_LOCATION, "") : trimmed).trim();
     venue = plausibleName(bare) ? bare : null;
   }
-  const names = splitNames(trimCreditTail(personPart ?? "")).filter(plausibleName);
+  const scoped = scopeOf(trimCreditTail(personPart ?? ""));
+  const names = splitNames(scoped.clean).filter(plausibleName);
   return { names, venue, location };
 }
 
 function scopeOf(value: string): { clean: string; trackNumbers: number[] } {
   const match = value.match(TRACK_SCOPE);
-  if (!match) return { clean: value.trim(), trackNumbers: [] };
-  const numbers = [...new Set((match[1]!.match(/\d{1,3}/gu) ?? []).map(Number))].filter((n) => n > 0 && n < 1000).sort((a, b) => a - b);
-  return { clean: value.replace(TRACK_SCOPE, "").trim(), trackNumbers: numbers };
+  const numbers = match
+    ? [...new Set((match[1]!.match(/\d{1,3}/gu) ?? []).map(Number))].filter((n) => n > 0 && n < 1000).sort((a, b) => a - b)
+    : [];
+  // El alcance se extrae primero; después cae cualquier otro paréntesis.
+  const clean = (match ? value.replace(TRACK_SCOPE, " ") : value)
+    .replace(ANY_PARENTHETICAL, " ").replace(TRAILING_BRACKET, "").replace(/\s+/gu, " ").trim();
+  return { clean, trackNumbers: numbers };
 }
 
 /** Extrae (rol, persona) de los bloques de músicos y de arte. */

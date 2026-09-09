@@ -3,7 +3,7 @@ import fixture from "../fixtures/youtube-video-Q-pRpO2sYSI.json" with { type: "j
 import realFixture from "../fixtures/youtube-video-real-Q-pRpO2sYSI.json" with { type: "json" };
 import { YouTubeDataApi, iso8601DurationToSeconds, youtubePublicationStatus, type YouTubeVideoPayload } from "../../src/youtube/api.js";
 import { canonicalVideoUrl, classifyContentType, extractYouTubeVideoId } from "../../src/youtube/normalization.js";
-import { parseCreditSections, parseYouTubeDescription, parseYouTubeTitle, timestampToSeconds } from "../../src/youtube/parsers.js";
+import { looksLikeOrganization, parseCreditSections, parseYouTubeDescription, parseYouTubeTitle, timestampToSeconds } from "../../src/youtube/parsers.js";
 import { readYouTubeMasterSheet } from "../../src/youtube/pipeline.js";
 
 describe("YouTube URL normalization", () => {
@@ -140,6 +140,39 @@ describe("deterministic description parser", () => {
       { role: "Guitars", name: "Jefrey Sánchez", trackNumbers: [1, 2, 4], sectionKind: "guest_musicians" },
       { role: "Guitars", name: "Walter Gangi", trackNumbers: [1, 2], sectionKind: "guest_musicians" },
     ]);
+  });
+
+  // Cuatro defectos medidos sobre los 3.840 candidatos de la primera emisión,
+  // que sumaban un 7,7% de nombres inservibles (SOURCES.md §2.6).
+  it("splits comma-separated people and strips what is not the name", () => {
+    const credito = (linea: string) => parseCreditSections(parseYouTubeDescription(`Musicians\n\n${linea}`).sections);
+    // La coma separa personas igual que el "&".
+    expect(credito("Backing Vocals: Ana Valencia, María José Valencia").map((c) => c.name))
+      .toEqual(["Ana Valencia", "María José Valencia"]);
+    // La ciudad no es parte del nombre.
+    expect(credito('Mastered by: Alfredo "Chofa" Loero (Caracas, Venezuela)').map((c) => c.name))
+      .toEqual(['Alfredo "Chofa" Loero']);
+    // La banda de procedencia tampoco, ni con el corchete sin cerrar.
+    expect(credito("Guitar: José Echezuría [from Sentimiento Muerto").map((c) => c.name))
+      .toEqual(["José Echezuría"]);
+    // Un sufijo de linaje pertenece al nombre anterior, no es otra persona.
+    expect(credito("Bass: John Smith, Jr.").map((c) => c.name)).toEqual(["John Smith"]);
+  });
+
+  it("reads track scope prefixed by disc number", () => {
+    const [credito] = parseCreditSections(parseYouTubeDescription("Guest Musicians\n\nPiano: Ana Rojas (CD2 track 05)").sections);
+    expect(credito).toMatchObject({ name: "Ana Rojas", trackNumbers: [5] });
+    // "all tracks" no acota ninguna, pero tampoco ensucia el nombre.
+    const [todas] = parseCreditSections(parseYouTubeDescription("Guest Musicians\n\nPiano: Ana Rojas (all tracks)").sections);
+    expect(todas).toMatchObject({ name: "Ana Rojas", trackNumbers: [] });
+  });
+
+  it("recognises a label or studio credited with \"by\"", () => {
+    expect(looksLikeOrganization("Silversound Mastering Studios")).toBe(true);
+    expect(looksLikeOrganization("Soul Jazz Records")).toBe(true);
+    expect(looksLikeOrganization("Boris Milan")).toBe(false);
+    // La palabra debe cerrar el nombre: un apellido no convierte a nadie en sello.
+    expect(looksLikeOrganization("Studio Ghibli Pérez")).toBe(false);
   });
 
   it("reads artist, album, format and year out of the real title", () => {

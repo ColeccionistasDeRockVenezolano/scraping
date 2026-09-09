@@ -237,6 +237,34 @@ con `organization_type='recording_studio'`. Y "Recorded & Mixed by X" produce
 dos créditos, uno por verbo, para que `credit_type` no pierda la mitad al
 clasificar.
 
+### 2.6 Lo que la primera emisión enseñó sobre los nombres
+
+Muestreando los 3.840 candidatos a persona de la primera pasada, un **7,7%**
+no era utilizable. Cuatro defectos, todos de la misma familia: el parser
+tomaba por nombre cosas que acompañaban al nombre.
+
+| Defecto | Casos | Ejemplo |
+|---|---|---|
+| Dos personas fundidas por una coma | 194 | `Ana Valencia, María José Valencia` |
+| Ciudad o marca pegada al nombre | 113 | `Alfredo "Chofa" Loero (Caracas, Venezuela)` |
+| Banda de procedencia en corchetes | ~50 | `José Echezuría [from Sentimiento Muerto` |
+| Sello o estudio acreditado con "by" | 15 | `Silversound Mastering Studios` |
+
+Corregidos, el porcentaje baja a **0,1%** (4 de 3.743), y de esos cuatro,
+tres son nombres legítimos que el heurístico marca de más: un coro, una
+sección de cuerdas y un nombre artístico. Queda un solo defecto real —dos
+personas separadas por `/`— que **no** se corrige a propósito: admitir `/`
+como separador partiría nombres como AC/DC, y el beneficio es un caso.
+
+De paso, el alcance por pista aceptaba `(track 05)` pero no `(CD2 track 05)`
+ni `(all tracks)`, así que el paréntesis se quedaba dentro del nombre. Los
+créditos acotados a pista pasan de 1.458 a 1.510.
+
+La lección que conviene retener: **la coma no separaba, el paréntesis no se
+retiraba, y el corchete tampoco**. Los tres son la misma clase de error que
+` at ` y `&`, y los cuatro se encontraron midiendo la salida contra el corpus
+guardado, no leyendo el código.
+
 ---
 
 ## 3. Las 11 fuentes autorizadas (registro del XLSX)
