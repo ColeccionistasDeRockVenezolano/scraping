@@ -75,6 +75,13 @@ const GROUP_SQL = `
 export function buildServer() {
   const app = Fastify({ logger: false });
 
+  // Si la mesa sale por Funnel, sale a internet abierto y aquí hay nombres de
+  // personas sin revisar. Que se pueda abrir el enlace es una cosa; que Google
+  // archive esos nombres y los siga mostrando después de corregirlos es otra.
+  app.addHook("onSend", async (_request, reply) => {
+    reply.header("X-Robots-Tag", "noindex, nofollow, noarchive");
+  });
+
   app.get("/", async (_request, reply) => {
     const html = await readFile(PAGE, "utf8");
     return reply.type("text/html; charset=utf-8").send(html);

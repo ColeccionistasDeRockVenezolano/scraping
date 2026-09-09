@@ -253,7 +253,11 @@ var viewer = "";
 
 function el(t,c,x){var n=document.createElement(t);if(c)n.className=c;if(x!=null)n.textContent=x;return n;}
 function num(n){return Number(n).toLocaleString("es");}
-function api(path,opts){return fetch(path,opts).then(function(r){if(!r.ok)throw new Error(r.status);return r.json();});}
+/* La página puede quedar servida en la raíz de un puerto o colgada de un
+   subcamino (/cotejo/) cuando sale por Funnel. Las rutas del API se
+   resuelven contra donde esté el documento, con barra final o sin ella. */
+var ROOT=location.pathname.charAt(location.pathname.length-1)==="/"?location.pathname:location.pathname+"/";
+function api(path,opts){return fetch(ROOT+path,opts).then(function(r){if(!r.ok)throw new Error(r.status);return r.json();});}
 
 /* ---- quién decide ---- */
 var viewerInput = document.getElementById("viewer");
