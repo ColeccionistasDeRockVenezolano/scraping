@@ -169,6 +169,22 @@ las tres fuentes restantes el 2026-09-08 (SOURCES.md §3):
   exige tras verificación en F4. Verificado hoy: **ninguna fuente activa lo
   requiere**; ninguna de las 9 fuentes accesibles necesita JS.
 
+- **Recopilatorios y el marcador «Various Artists»** (C3). `albums.artist_id`
+  es NOT NULL y un recopilatorio no tiene artista único, así que necesita algo
+  en esa columna. El marcador la ocupa —`artist_type = other`, con nota— y
+  quien toca cada pista se afirma en `track_credits.artist_id`, que existe
+  precisamente para eso. Para que el puente no conjeture, el claim declara
+  `credited_kind`: sin él probaría `person → organization → artist` en ese
+  orden y podría enganchar la pista a un homónimo.
+- **Un DEFAULT del DDL no es una afirmación.** Varias columnas del core son
+  NOT NULL con default (`artists.artist_type` = 'band', `albums.album_type` =
+  'other'), y `createEntity` solo escribe la columna de identidad. Tratar ese
+  valor como parte contraria archivaba en conflicto todo claim de tipo de
+  todas las fuentes. Una contradicción exige DOS afirmaciones: el motor
+  consulta `merge_audit` —la ausencia de rastro prueba que nadie lo afirmó— y
+  deja que la primera fuente complete el default. La segunda discrepancia sí
+  es contradicción y se conserva, como siempre.
+
 ### 4.5 `normalization`
 Pipeline determinista sobre `RawRecord` → `NormalizedClaim`:
 - Unicode NFC, trim, colapso de espacios, nombres de persona/artista,

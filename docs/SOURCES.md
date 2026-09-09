@@ -189,10 +189,15 @@ Rock De Vzla, Hippito y Sus Chatarritas, RHV Blogspot)
   | RHV Blogspot | 3,2 | **solo secciones** (`variedad`, `prensa`, `reseñas`, `noticias`) | ninguna nombra una banda: las 15 etiquetas del blog son editoriales, así que aquí el único canal es el título |
   | Descargas Metal | — | géneros (`Technical Death Metal`) | corrobora el campo `Género:` ya extraído |
   | Hippito | — | secciones (`Sólo Hits`) | sin valor |
-- *Fuera de alcance en Hippito:* las 350 entradas `VA - ...` (recopilatorios).
-  El core exige `albums.artist_id NOT NULL` y un recopilatorio no tiene un
-  artista único; inventar una entidad "Various Artists" es una decisión de
-  modelo, no de parsing, y el adapter no la toma por su cuenta.
+- *Recopilatorios de Hippito (C3, decisión de modelo aprobada 2026-09-08).*
+  Las 350 entradas `VA - ...` entran bajo la entidad marcador **"Various
+  Artists"**, que ocupa `albums.artist_id` porque la columna es NOT NULL. El
+  marcador no afirma que esas bandas sean "Various Artists": la línea de cada
+  pista trae el grupo delante —`01. Los 007 - El Ultimo Beso`, en 4.027 de
+  4.107 pistas— y ese grupo va a `track_credits.artist_id` con rol
+  *intérprete*, una fila por pista y con su evidencia. Rinde **344
+  recopilatorios, 2.283 bandas** que no aparecen en ninguna otra fuente y
+  4.022 créditos de intérprete.
 - *Limitaciones confirmadas:* son blogs de descargas. Además **no todo el contenido es venezolano** (p. ej. la
   entrada más reciente de Descargas Metal Venezolano en la sonda era de una
   banda no venezolana), por lo que hace falta un filtro de pertinencia antes
@@ -387,7 +392,7 @@ del cuerpo y no sólo en el título):
 |---|---:|---:|---:|---:|
 | Descargas Metal | 1.345 | **1.345** | — | — |
 | Rock De Vzla | 1.815 | **1.775** | — | — |
-| Hippito | 673 | 671 | — | — |
+| Hippito | 997 | 671 | — | — |
 | Rockzuela | 549 | 543 | — | — |
 | CRV WordPress | 170 | 163 | — | **1.020** |
 | RHV Blogspot | 18 | 18 | — | — |
