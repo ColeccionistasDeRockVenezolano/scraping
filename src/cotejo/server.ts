@@ -12,6 +12,14 @@
 //    posible: no hay nada que revertir todavía.
 //  * DESHACER NO BORRA. Retirar una decisión la marca `withdrawn` y conserva
 //    quién la tomó y cuándo. Un equipo que cambia de opinión deja rastro.
+//  * SOLO EN EL TAILNET. Se publica con
+//    `tailscale serve --bg --https=9444 http://127.0.0.1:4310`, no bajo
+//    /public: esa ruta va por Funnel y sale a internet abierto, y aquí hay
+//    nombres de personas sin revisar. Ojo con el puerto: 8443 ya lo ocupa
+//    otro servicio de la máquina en todas las interfaces, así que Tailscale
+//    no llega a escuchar y el navegador acaba viendo el certificado del otro
+//    (ERR_CERT_AUTHORITY_INVALID). Elige un puerto libre y compruébalo con
+//    `openssl s_client` antes de repartir el enlace.
 //  * EL VISOR AGRUPA POR FORMA. La cola tiene ~100.000 ítems y nadie los mira
 //    de uno en uno. Lo útil no es paginarla sino decir en qué se parecen: el
 //    endpoint /api/groups clasifica los candidatos por la forma de su nombre,
