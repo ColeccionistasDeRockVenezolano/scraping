@@ -29,7 +29,8 @@
     "adapters:fixtures": "./scripts/with-node22.sh tsx scripts/show-adapter-fixtures.ts",
     "test:matrix": "./scripts/test-pg-matrix.sh",
     "cotejo:build": "./scripts/with-node22.sh tsx scripts/build-cotejo.ts",
-    "cotejo:serve": "./scripts/with-node22.sh tsx src/cotejo/server.ts"
+    "cotejo:serve": "./scripts/with-node22.sh tsx src/cotejo/server.ts",
+    "radio:export": "./scripts/with-node22.sh tsx scripts/export-radio-catalog.ts"
   },
   "dependencies": {
     "cheerio": "^1.0.0",
