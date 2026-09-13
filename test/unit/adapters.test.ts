@@ -69,6 +69,10 @@ describe("adapters funcionales de las fuentes autorizadas", () => {
     expect(tracks).toContain("Event Horizon (intro)");
     expect(tracks).toContain("Cosmological Location");
     expect(tracks.length).toBeGreaterThanOrEqual(12);
+    const repeated = claims.filter((c) => c.entityKind === "track" && c.field === "title"
+      && c.rawValue === "The Collapse of Singularity");
+    expect(repeated).toHaveLength(2);
+    expect(new Set(repeated.map((c) => c.identity)).size).toBe(2);
 
     // "Web:" vale por su href, no por el texto visible del enlace.
     const web = claims.find((c) => c.field === "web_url");

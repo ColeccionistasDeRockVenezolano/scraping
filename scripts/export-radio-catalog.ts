@@ -20,7 +20,9 @@ async function main(): Promise<void> {
   const result = await getPool().query<RadioTrackRow>(`
     SELECT v.video_id, v.title AS video_title,
            v.duration_seconds AS video_duration_seconds,
-           t.position, t.title AS track_title, t.start_seconds
+           t.position, t.title AS track_title, t.start_seconds,
+           (SELECT string_agg(su.type_raw, ', ') FROM ingest.seed_uploads su
+             WHERE su.video_id = v.video_id) AS sheet_types
       FROM media.youtube_videos v
       JOIN media.youtube_tracklist_entries t ON t.video_id = v.id
      WHERE v.channel_id = $1

@@ -132,7 +132,12 @@ function targetColumns(kind: ResolutionInput["kind"], id: number | undefined): [
 export async function persistResolutionDecision(
   decision: ResolutionDecision,
   input: ResolutionInput,
-  options: { claimId?: number; runId?: number; queryable?: Queryable } = {},
+  options: {
+    claimId?: number;
+    runId?: number;
+    queryable?: Queryable;
+    decidedBy?: "deterministic" | "deepseek" | "human";
+  } = {},
 ): Promise<number> {
   const queryable = options.queryable ?? getPool();
   const identity = { claimId: options.claimId ?? null, runId: options.runId ?? null, input, decision };
@@ -150,7 +155,7 @@ export async function persistResolutionDecision(
     decisionHash, options.runId ?? null, options.claimId ?? null, decision.aiRunId ?? null, decision.kind,
     ...targets, decision.inputOriginal, decision.inputNormalized, JSON.stringify(input), decision.score, decision.action,
     JSON.stringify(decision.features), JSON.stringify(decision.candidates), JSON.stringify(decision.thresholds),
-    decision.explanation, decision.aiProposal ? "deepseek" : "deterministic",
+    decision.explanation, options.decidedBy ?? (decision.aiProposal ? "deepseek" : "deterministic"),
   ]);
   const id = saved.rows[0]?.id;
   if (!id) throw new Error("no se pudo persistir entity_resolution_decision");

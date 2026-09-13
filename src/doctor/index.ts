@@ -3,7 +3,8 @@
 // (hash del archivo), (2) el esquema `public` de la base viva coincide
 // entrada por entrada con la huella del core (enums, columnas, vistas,
 // constraints, índices), (3) los schemas auxiliares existen, (4) las
-// migraciones aplicadas, (5) estado de fuentes. No modifica nada.
+// migraciones aplicadas, (5) cobertura de merge_audit y (6) estado de
+// fuentes. No modifica nada.
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -155,6 +156,62 @@ async function checkMigrations(pool: Pool): Promise<DoctorCheck> {
 }
 
 /**
+ * Cada fila materializada por el pipeline en el core (o en media_links) debe
+ * tener al menos una operación de auditoría, y toda operación debe enlazar el
+ * claim que la justificó. No intenta inferir historia desde el valor actual:
+ * comprueba las dos relaciones estructurales que hacen esa historia
+ * consultable y detecta escrituras directas que se saltaron el merge engine.
+ */
+async function checkMergeAudit(pool: Pool): Promise<DoctorCheck> {
+  try {
+    const { rows } = await pool.query<{ unaudited: string; orphan_audits: string }>(`
+      WITH unaudited AS (
+        SELECT a.id FROM public.artists a
+         WHERE NOT EXISTS (SELECT 1 FROM ingest.merge_audit ma WHERE ma.artist_id=a.id)
+        UNION ALL SELECT p.id FROM public.persons p
+         WHERE NOT EXISTS (SELECT 1 FROM ingest.merge_audit ma WHERE ma.person_id=p.id)
+        UNION ALL SELECT o.id FROM public.organizations o
+         WHERE NOT EXISTS (SELECT 1 FROM ingest.merge_audit ma WHERE ma.organization_id=o.id)
+        UNION ALL SELECT a.id FROM public.albums a
+         WHERE NOT EXISTS (SELECT 1 FROM ingest.merge_audit ma WHERE ma.album_id=a.id)
+        UNION ALL SELECT t.id FROM public.tracks t
+         WHERE NOT EXISTS (SELECT 1 FROM ingest.merge_audit ma WHERE ma.track_id=t.id)
+        UNION ALL SELECT am.id FROM public.artist_members am
+         WHERE NOT EXISTS (SELECT 1 FROM ingest.merge_audit ma WHERE ma.artist_membership_id=am.id)
+        UNION ALL SELECT po.id FROM public.person_organizations po
+         WHERE NOT EXISTS (SELECT 1 FROM ingest.merge_audit ma WHERE ma.person_organization_id=po.id)
+        UNION ALL SELECT ac.id FROM public.album_credits ac
+         WHERE NOT EXISTS (SELECT 1 FROM ingest.merge_audit ma WHERE ma.album_credit_id=ac.id)
+        UNION ALL SELECT tc.id FROM public.track_credits tc
+         WHERE NOT EXISTS (SELECT 1 FROM ingest.merge_audit ma WHERE ma.track_credit_id=tc.id)
+        UNION ALL SELECT af.id FROM public.album_formats af
+         WHERE NOT EXISTS (SELECT 1 FROM ingest.merge_audit ma WHERE ma.album_format_id=af.id)
+        UNION ALL SELECT ml.id FROM media.media_links ml
+         WHERE NOT EXISTS (SELECT 1 FROM ingest.merge_audit ma WHERE ma.media_link_id=ml.id)
+      )
+      SELECT
+        (SELECT count(*) FROM unaudited)::text AS unaudited,
+        (SELECT count(*) FROM ingest.merge_audit ma
+          WHERE NOT EXISTS (
+            SELECT 1 FROM ingest.merge_audit_claims mac WHERE mac.merge_audit_id=ma.id
+          ))::text AS orphan_audits
+    `);
+    const unaudited = Number(rows[0]?.unaudited ?? 0);
+    const orphanAudits = Number(rows[0]?.orphan_audits ?? 0);
+    const ok = unaudited === 0 && orphanAudits === 0;
+    return check(
+      "merge_audit.coverage",
+      ok ? "ok" : "fail",
+      ok
+        ? "todas las filas canónicas tienen auditoría y toda auditoría enlaza claims"
+        : `${unaudited} filas canónicas sin auditoría; ${orphanAudits} auditorías sin claim`,
+    );
+  } catch (err) {
+    return check("merge_audit.coverage", "fail", `no se pudo verificar: ${String(err)}`);
+  }
+}
+
+/**
  * Estado de fuentes. No es un `ok` fijo: una base migrada pero sin sembrar, o
  * con fuentes pero ninguna habilitada, no puede scrapear nada — es un aviso
  * accionable, no un fallo (ambos estados son válidos y reversibles).
@@ -198,6 +255,7 @@ export async function runDoctor(): Promise<DoctorReport> {
   checks.push(await checkCoreCatalog(pool));
   checks.push(await checkAuxSchemas(pool));
   checks.push(await checkMigrations(pool));
+  checks.push(await checkMergeAudit(pool));
   checks.push(await checkSources(pool));
 
   return finish();

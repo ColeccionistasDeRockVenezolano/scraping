@@ -14,6 +14,8 @@ import { listRuns, createArtistEnrichmentRun, finishRun } from "../ingest/runs.j
 import { listReviews, showReview } from "../review/queue.js";
 import { approveEntity, dismissEntity, pendingEntities } from "../review/approval.js";
 import { planBatch, runBatch, BATCH_ORDER } from "../review/batch.js";
+import { applyReviewDecisions, planReviewDecisions } from "../review/decisions.js";
+import { findDuplicateGroups, mergeAllDuplicates } from "../review/duplicates.js";
 import { getDb } from "../db/client.js";
 import { sources } from "../db/schema/ingest.js";
 import { eq } from "drizzle-orm";
@@ -22,9 +24,12 @@ import { ingestStoredAdapterSource } from "../ingest/runner.js";
 import { registerManualEvidence } from "../ingest/manual-evidence.js";
 import { discoverChannelUploads, hydrateYouTubeVideos, importYouTubeMasterSheet, knownYouTubeVideoIds, rederiveYouTubeDescriptions, syncYouTubeChannel, syncYouTubeVideo, unmatchedYouTubeRows } from "../youtube/pipeline.js";
 import { ingestSeedClaims } from "../youtube/seed-claims.js";
+import { syncAlbumClassifications } from "../youtube/classifications.js";
 import { ingestYouTubeApiClaims } from "../youtube/api-claims.js";
+import { confirmYouTubeAlbumLink, linkYouTubeAlbums } from "../youtube/linker.js";
 import { YT_MASTER_XLSX_PATH } from "../ingest/sources.js";
 import { getPool } from "../db/client.js";
+import { keepRepeatedTrackOccurrences } from "../merge/engine.js";
 
 const log = moduleLogger("cli");
 
@@ -149,6 +154,67 @@ async function main(): Promise<number> {
         console.log(JSON.stringify(review, null, 2));
         return 0;
       }
+      if (args[0] === "apply-decisions") {
+        const note = args.find((arg) => arg.startsWith("--note="))?.slice("--note=".length);
+        const plan = await planReviewDecisions();
+        console.log(JSON.stringify(plan, null, 2));
+        if (!args.includes("--confirm")) {
+          console.log('\n(previsualización) para ejecutar: crv review apply-decisions --note="<motivo>" --confirm');
+          return 0;
+        }
+        if (!note?.trim()) {
+          console.error("--note es obligatorio al confirmar");
+          return 1;
+        }
+        const result = await applyReviewDecisions(note);
+        console.log(JSON.stringify(result, null, 2));
+        return result.failed === 0 ? 0 : 1;
+      }
+      // Filas del core que son la misma entidad escrita con otra tilde o
+      // mayúscula. Sin --confirm solo lista; con él fusiona y audita.
+      if (args[0] === "duplicates") {
+        const note = args.find((arg) => arg.startsWith("--note="))?.slice("--note=".length);
+        const scan = await findDuplicateGroups();
+        for (const group of scan.groups) {
+          console.log(`${group.kind}\tconserva ${group.keepId}\tfusiona ${group.dropIds.join(",")}\t${group.artist ? `${group.artist} — ` : ""}${group.names.join(" | ")}`);
+        }
+        for (const item of scan.skipped) console.log(`(no se toca) ${item.kind} ${item.ids.join(",")}\t${item.names.join(" | ")}\t${item.reason}`);
+        console.log(`TOTAL: ${scan.groups.length} grupos, ${scan.skipped.length} descartados`);
+        if (!args.includes("--confirm") || !note?.trim()) {
+          console.log('\n(previsualización) para ejecutar: crv review duplicates --note="<motivo>" --confirm');
+          return 0;
+        }
+        const result = await mergeAllDuplicates(note);
+        console.log(JSON.stringify(result, null, 2));
+        return result.failed.length === 0 ? 0 : 1;
+      }
+      if (args[0] === "keep-repeated-tracks") {
+        const ids = (args[1] ?? "").split(",").filter(Boolean).map(Number);
+        const note = args.find((arg) => arg.startsWith("--note="))?.slice("--note=".length);
+        if (!ids.length || ids.some((id) => !Number.isSafeInteger(id) || id <= 0)) {
+          console.error('uso: crv review keep-repeated-tracks <conflict-id,...> --note="<evidencia>" --confirm');
+          return 1;
+        }
+        console.log(`Conflictos: ${ids.join(", ")} (se conservarán ambas posiciones de cada título)`);
+        if (!args.includes("--confirm") || !note?.trim()) {
+          console.log('(previsualización) añade --note="<evidencia>" --confirm para ejecutar');
+          return 0;
+        }
+        const opened = await getPool().query<{ id: string }>(`
+          INSERT INTO ingest.scrape_runs(kind,status,params)
+          VALUES('merge_run','running',$1::jsonb) RETURNING id::text`,
+        [JSON.stringify({ action: "keep_repeated_tracks", conflictIds: ids, note })]);
+        const runId = Number(opened.rows[0]!.id);
+        try {
+          const result = await keepRepeatedTrackOccurrences(ids, { actor: "human", note, runId });
+          await finishRun(runId, "ok", { conflicts: result.length, tracksCreated: result.length });
+          console.log(JSON.stringify({ runId, result }, null, 2));
+          return 0;
+        } catch (error) {
+          await finishRun(runId, "failed", { conflicts: 0 }, (error as Error).message);
+          throw error;
+        }
+      }
       // La cola guarda un ítem por claim, pero se decide por entidad: aprobar
       // "Los Kings" cubre su nombre, año de formación, origen y género juntos.
       if (args[0] === "entities") {
@@ -206,7 +272,7 @@ async function main(): Promise<number> {
         console.log(JSON.stringify(result, null, 2));
         return 0;
       }
-      console.error('uso: crv review list | show <id> | entities [kind] [--limit=N] | approve <kind> "<identity>" <nota> | dismiss <kind> "<identity>" <nota> | approve-batch [kind] [--source=<slug>] [--limit=N] --note="<motivo>" --confirm | dismiss-batch [...]');
+      console.error('uso: crv review list | show <id> | apply-decisions [--note="<motivo>" --confirm] | keep-repeated-tracks <conflict-id,...> --note="<evidencia>" --confirm | entities [kind] [--limit=N] | approve <kind> "<identity>" <nota> | dismiss <kind> "<identity>" <nota> | approve-batch [kind] [--source=<slug>] [--limit=N] --note="<motivo>" --confirm | dismiss-batch [...]');
       return 1;
     }
 
@@ -353,13 +419,45 @@ async function main(): Promise<number> {
           + `${result.claimsInserted} claims nuevos, ${result.claimsReused} reusados`);
         return 0;
       }
+      // Todas las clasificaciones de la hoja por disco (el core guarda una sola).
+      if (subcommand === "classifications") {
+        const result = await syncAlbumClassifications({ dryRun: args.includes("--dry-run") });
+        console.log(`youtube classifications${result.dryRun ? " --dry-run" : ""}: ${result.rows} filas -> ${result.matched} atadas a ${result.albums} discos `
+          + `(${result.classifications} clasificaciones, ${result.inferred} inferidas); ${result.unmatched} sin disco, ${result.ambiguous} ambiguas`);
+        return 0;
+      }
       if (subcommand === "unmatched") {
         const rows = await unmatchedYouTubeRows();
         console.log(JSON.stringify(rows, null, 2));
         return 0;
       }
-      console.error("uso: crv youtube import-sheet <path> | seed-claims [--dry-run] | discover-channel [channel-id] [--resume] | sync [--pending] | rederive [--dry-run] | api-claims [--dry-run] | sync-video <video-id> | sync-channel [channel-id] | unmatched");
+      console.error("uso: crv youtube import-sheet <path> | seed-claims [--dry-run] | discover-channel [channel-id] [--resume] | sync [--pending] | rederive [--dry-run] | api-claims [--dry-run] | sync-video <video-id> | sync-channel [channel-id] | classifications [--dry-run] | unmatched");
       return 1;
+    }
+
+    case "yt:link": {
+      const option = (name: string): string | undefined => args.find((arg) => arg.startsWith(`--${name}=`))?.slice(name.length + 3);
+      const albumArg = option("album");
+      const videoId = option("video");
+      if (albumArg || videoId) {
+        if (!albumArg || !videoId || !/^\d+$/.test(albumArg)) {
+          console.error('uso: crv yt:link --album=<id> --video=<youtube-id> --note="evidencia" --confirm');
+          return 1;
+        }
+        const note = option("note");
+        if (!args.includes("--confirm") || !note) {
+          console.log(`(previsualización) confirmaría video ${videoId} como enlace primario del álbum ${albumArg}; añade --note="evidencia" --confirm`);
+          return 0;
+        }
+        const link = await confirmYouTubeAlbumLink(Number(albumArg), videoId, note);
+        console.log(`yt:link: ${link.artist} — ${link.album} -> https://www.youtube.com/watch?v=${link.videoId}`);
+        return 0;
+      }
+      const result = await linkYouTubeAlbums({ dryRun: args.includes("--dry-run") });
+      console.log(`yt:link${result.dryRun ? " --dry-run" : ""}: ${result.linked.length} enlaces primarios inequívocos, ${result.ambiguous.length} ambiguos, ${result.unmatched.length} sin video confirmado; ${result.reviewsCreated} reviews creadas`);
+      for (const link of result.linked) console.log(`  ✓ ${link.artist} — ${link.album}: https://www.youtube.com/watch?v=${link.videoId}`);
+      if (result.dryRun) console.log("  (dry-run: nada se escribió)");
+      return 0;
     }
 
     case undefined:
@@ -397,6 +495,9 @@ CRV CLI
   scrape source <source> --all [--dry-run]
   scrape artist "<name>" --all-sources [--dry-run]
   sources list | runs list | review list | review show <id>
+  review apply-decisions [--note="<motivo>" --confirm]
+                      previsualiza/aplica las decisiones concluyentes de la Mesa;
+                      unsure permanece abierto y sin tocar el catálogo
   youtube import-sheet <path>  importa YT Master Spreadsheet de forma idempotente
   youtube discover-channel [channel-id] [--resume]  recorre el playlist de uploads sin hidratar
   youtube sync [--pending]     hidrata la unión de hoja y canal en lotes de 50
@@ -405,6 +506,9 @@ CRV CLI
   youtube sync-video <video-id>  consulta YouTube Data API (requiere YOUTUBE_API_KEY)
   youtube sync-channel [channel-id]  recorre uploads playlist oficial (requiere YOUTUBE_API_KEY)
   youtube unmatched          filas seed pendientes de enlace o revisión
+  yt:link [--dry-run]        enlaza sólo releases inequívocos de la hoja YT; el resto va a revisión
+  yt:link --album=<id> --video=<youtube-id> --note="evidencia" --confirm
+                             confirma una selección humana como enlace primario
 
 Comandos especificados para fases futuras (F1+): ${[...KNOWN_FUTURE_COMMANDS].join(", ")}
 `);

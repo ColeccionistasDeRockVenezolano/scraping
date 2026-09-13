@@ -83,7 +83,14 @@ export async function createFieldConflict(
   if (!conflictId) throw new Error("no se pudo conservar el conflicto");
   const reviewId = await createReview(client, claimAId, claimBId, conflictId, {
     entityKind: input.kind, targetId: input.targetId, field: input.field,
-    valueA, valueB, policy: "never_silent_overwrite",
+    valueA, valueB,
+    // claim_a/claim_b se ordenan por id para que el conflicto sea único; ese
+    // orden no expresa cuál valor ya estaba en el catálogo. Conservar ambos
+    // roles evita que la Mesa (o cualquier otro consumidor) confunda A con
+    // "actual" cuando el claim nuevo tiene el id menor.
+    canonicalValue: input.currentValue, proposedValue: input.proposedValue,
+    canonicalClaimId: otherId, proposedClaimId: input.claimId,
+    policy: "never_silent_overwrite",
   });
   return { conflictId, reviewId, hasRivalClaim: true };
 }
@@ -109,4 +116,3 @@ export async function triageConflictWithDeepSeek(conflictId: number, gateway: De
      WHERE conflict_id=$1 AND status IN ('open','in_progress')`, [conflictId, json({ deepseekProposal: result.proposal, aiRunId: result.runId ?? null })]);
   return { proposal: result.proposal, ...(result.runId === undefined ? {} : { aiRunId: result.runId }) };
 }
-

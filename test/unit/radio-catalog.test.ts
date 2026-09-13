@@ -38,6 +38,23 @@ describe("catalogo de radio por canciones", () => {
     expect(buildRadioTracks(rows, new Set(["BBBBBBBBBBB", "CCCCCCCCCCC"]))).toEqual([]);
   });
 
+  it("omite videoclips, conciertos y documentales según la hoja, aunque tengan otro tipo", () => {
+    const chapters = (video_id: string, sheet_types: string | null) => [
+      row({ video_id, sheet_types }),
+      row({ video_id, sheet_types, position: 1, track_title: "Segunda", start_seconds: 180 }),
+    ];
+    const rows = [
+      ...chapters("AAAAAAAAAAA", "Solo Artist, Studio Album"),
+      ...chapters("BBBBBBBBBBB", "Live Concert"),
+      ...chapters("CCCCCCCCCCC", "Live Concert, Single"),
+      ...chapters("DDDDDDDDDDD", "Music Video"),
+      ...chapters("EEEEEEEEEEE", "Documentary"),
+      ...chapters("FFFFFFFFFFF", null),
+    ];
+    const ids = new Set(rows.map(item => item.video_id));
+    expect([...new Set(buildRadioTracks(rows, ids).map(item => item.videoId))]).toEqual(["AAAAAAAAAAA", "FFFFFFFFFFF"]);
+  });
+
   it("considera indisponible un ID ausente, privado, no embebible, con edad o región restringida", async () => {
     const payload = (
       id: string, privacyStatus: string, embeddable: boolean, contentDetails: Record<string, unknown> = {},

@@ -90,6 +90,12 @@ function toClaimToPersist(row: ClaimRow): ClaimToPersist {
   } as ClaimToPersist;
 }
 
+/** Recupera un claim ya persistido sin concederle autoridad por sí mismo. */
+export async function loadClaimForApproval(claimId: number): Promise<ClaimToPersist | undefined> {
+  const { rows } = await getPool().query<ClaimRow>(`${SELECT_CLAIM} WHERE c.id=$1`, [claimId]);
+  return rows[0] === undefined ? undefined : toClaimToPersist(rows[0]);
+}
+
 const SELECT_CLAIM = `
   SELECT c.id::text, c.source_id::text, c.entity_kind, c.field, c.raw_value, c.normalized_value,
          c.raw_hash, c.extractor, c.extractor_version, c.confidence,
@@ -150,7 +156,10 @@ async function closeReviews(claimIds: number[], resolution: "approved" | "dismis
   const { rowCount } = await getPool().query(`
     UPDATE ingest.review_queue
        SET status=$2, resolved_by='human', resolution_note=$3, resolved_at=now(), updated_at=now()
-     WHERE claim_a_id = ANY($1::bigint[]) AND kind='low_confidence' AND status IN ('open','in_progress')`,
+     WHERE claim_a_id = ANY($1::bigint[]) AND status IN ('open','in_progress')
+       -- Aprobar la identidad no arbitra valores ni enlaces rivales. Esos
+       -- trabajos tienen aplicadores propios y deben seguir visibles.
+       AND kind NOT IN ('field_conflict','youtube_match','possible_duplicate')`,
   [claimIds, resolution, note]);
   return rowCount ?? 0;
 }

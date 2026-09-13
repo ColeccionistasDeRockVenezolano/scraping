@@ -8,11 +8,12 @@ import { applyCore } from "../support/apply-core.js";
 import { closeDb, getDb } from "../../src/db/client.js";
 import { resetEnvCache } from "../../src/config/env.js";
 import { migrateUp } from "../../src/db/migrate.js";
-import { claims, mergeAudit, rawPages, reviewQueue, scrapeRuns, sources } from "../../src/db/schema/ingest.js";
+import { claims, entityResolutionDecisions, mergeAudit, rawPages, reviewQueue, scrapeRuns, sources } from "../../src/db/schema/ingest.js";
 import { artists } from "../../src/db/schema/core.js";
 import { ingestAdapterSnapshots, ingestRecords } from "../../src/ingest/runner.js";
 import type { RawRecord, SourceAdapter } from "../../src/adapters/contracts.js";
 import { registerManualEvidence } from "../../src/ingest/manual-evidence.js";
+import { approveEntity } from "../../src/review/approval.js";
 
 const caramelosFixture: RawRecord = {
   entityKind: "artist",
@@ -92,14 +93,31 @@ describe("motor de ingestión con fixtures", () => {
   });
 
   it("claim low queda candidato y persiste revisión sin tocar el core", async () => {
-    const low = await ingestRecords("fixture-caramelos", [{
+    const lowRecord: RawRecord = {
       ...caramelosFixture,
       identity: "Artista Low Fixture",
       fields: [{ field: "name", value: "Artista Low Fixture", evidence: { url: "https://fixture.invalid/low" } }],
-    }], { confidence: "low" });
+    };
+    const low = await ingestRecords("fixture-caramelos", [lowRecord], { confidence: "low" });
     expect(low.merges[0]?.action).toBe("candidate");
     expect(await getDb().select().from(artists).where(eq(artists.name, "Artista Low Fixture"))).toHaveLength(0);
     expect((await getDb().select().from(reviewQueue)).some((item) => item.kind === "low_confidence")).toBe(true);
+
+    const [candidate] = await getDb().select().from(claims).where(eq(claims.rawValue, "Artista Low Fixture"));
+    await approveEntity("artist", candidate!.identityKey!, "fixture aprobada por una persona");
+    const before = {
+      audits: (await getDb().select().from(mergeAudit)).length,
+      decisions: (await getDb().select().from(entityResolutionDecisions)).length,
+      reviews: (await getDb().select().from(reviewQueue)).length,
+    };
+
+    const repeated = await ingestRecords("fixture-caramelos", [lowRecord], { confidence: "low" });
+    expect(repeated).toMatchObject({ claimsInserted: 0, claimsReused: 1 });
+    expect(repeated.merges[0]).toMatchObject({ action: "unchanged" });
+    expect((await getDb().select().from(claims).where(eq(claims.id, candidate!.id)))[0]?.status).toBe("accepted");
+    expect((await getDb().select().from(reviewQueue)).length).toBe(before.reviews);
+    expect((await getDb().select().from(entityResolutionDecisions)).length).toBe(before.decisions);
+    expect((await getDb().select().from(mergeAudit)).length).toBe(before.audits);
   });
 
   it("Hemeroteka registra evidencia humana sin red, raw page, claim ni entidad", async () => {

@@ -8,7 +8,7 @@ import { applyCore } from "../support/apply-core.js";
 import { closeDb, getDb } from "../../src/db/client.js";
 import { resetEnvCache } from "../../src/config/env.js";
 import { migrateUp } from "../../src/db/migrate.js";
-import { reviewQueue, scrapeRuns, sources } from "../../src/db/schema/ingest.js";
+import { claims, reviewQueue, scrapeRuns, sources } from "../../src/db/schema/ingest.js";
 import { albums, artists } from "../../src/db/schema/core.js";
 import { ingestRecords } from "../../src/ingest/runner.js";
 import { planBatch, runBatch, BATCH_ORDER } from "../../src/review/batch.js";
@@ -71,6 +71,22 @@ describe("aprobación por lotes", () => {
   });
 
   it("aprueba el conjunto respetando la dependencia y deja el disco colgado del artista", async () => {
+    // Reproduce el caso real de Careos: además del aviso low_confidence, el
+    // mismo claim puede conservar una revisión de identidad. Al aprobarse el
+    // claim deben cerrarse ambas; de otro modo la segunda queda abierta y la
+    // UI compara la fuente nueva contra la ficha que ella misma creó.
+    const [artistNameClaim] = await getDb().select({ id: claims.id }).from(claims)
+      .where(eq(claims.entityKind, "artist"));
+    expect(artistNameClaim).toBeDefined();
+    await getDb().insert(reviewQueue).values({
+      kind: "ambiguous_alias", claimAId: artistNameClaim!.id, priority: 7,
+      payload: { regression: "stale-match-review" },
+    });
+    const [fieldConflict] = await getDb().insert(reviewQueue).values({
+      kind: "field_conflict", claimAId: artistNameClaim!.id, priority: 9,
+      payload: { regression: "independent-field-choice" },
+    }).returning();
+
     const result = await runBatch("approve", { sourceSlug: "fixture-lote" }, "barrido inicial de la fuente");
     expect(result.failed).toBe(0);
     expect(result.entities).toBe(2);
@@ -83,6 +99,12 @@ describe("aprobación por lotes", () => {
     expect(disco?.releaseYear).toBe(1975);
     // la prueba de que el orden funcionó: el disco existe Y apunta al artista
     expect(disco?.artistId).toBe(artista?.id);
+
+    const stale = await getDb().select().from(reviewQueue)
+      .where(eq(reviewQueue.claimAId, artistNameClaim!.id));
+    expect(stale.filter((review) => review.id !== fieldConflict!.id)
+      .every((review) => review.status === "approved")).toBe(true);
+    expect(stale.find((review) => review.id === fieldConflict!.id)?.status).toBe("open");
   });
 
   it("deja rastro consultable: run merge_run y el id del lote en cada nota", async () => {

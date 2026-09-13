@@ -6,7 +6,7 @@ import { migrateUp } from "../../src/db/migrate.js";
 import { closeDb, getDb, getPool } from "../../src/db/client.js";
 import { resetEnvCache } from "../../src/config/env.js";
 import { normalizeRecord } from "../../src/normalization/claims.js";
-import { mergeClaim, resolveFieldConflict } from "../../src/merge/engine.js";
+import { keepRepeatedTrackOccurrences, mergeClaim, resolveFieldConflict } from "../../src/merge/engine.js";
 import { persistClaim, type ClaimToPersist, type Confidence } from "../../src/claims/persistence.js";
 import type { ResolutionInput } from "../../src/er/types.js";
 import { DeepSeekGateway, MockDeepSeekTransport, PostgresDeepSeekRunStore, type DeepSeekGatewayConfig } from "../../src/ai/gateway.js";
@@ -26,12 +26,17 @@ async function applyClaim(options: {
   targets?: Partial<ClaimToPersist>;
   resolutionInput?: ResolutionInput;
   evidenceUrl?: string;
+  evidencePosition?: number;
   gateway?: DeepSeekGateway;
 }) {
   evidenceCounter += 1;
   const normalized = normalizeRecord({
     entityKind: options.kind, identity: options.identity, extractor: "er-contract", extractorVersion: "1",
-    fields: [{ field: options.field, value: options.value, evidence: { url: options.evidenceUrl ?? `https://fixture.invalid/er/${evidenceCounter}`, excerpt: String(options.value) } }],
+    fields: [{ field: options.field, value: options.value, evidence: {
+      url: options.evidenceUrl ?? `https://fixture.invalid/er/${evidenceCounter}`,
+      excerpt: String(options.value),
+      ...(options.evidencePosition === undefined ? {} : { position: options.evidencePosition }),
+    } }],
   })[0]!;
   const input: ClaimToPersist = {
     ...normalized, sourceId: options.sourceId, confidence: options.confidence ?? "high",
@@ -114,6 +119,69 @@ describe("ER + claims + conflictos + merge auditado", () => {
     expect(organization.outcome.action).toBe("applied");
     expect(await getDb().select().from(organizations).where(eq(organizations.name, "Sonográfica"))).toHaveLength(1);
     expect((await getDb().select().from(albums).where(eq(albums.id, albumId)))[0]?.title).toBe("Las Paticas De La Abuela");
+  });
+
+  it("conserva dos ocurrencias reales con el mismo título y retira el unsure sustituido", async () => {
+    const existing = await getPool().query<{ id: string }>(
+      "SELECT id::text FROM tracks WHERE album_id=$1 AND disc_number=1 AND track_number=1",
+      [albumId],
+    );
+    const trackId = Number(existing.rows[0]!.id);
+    const repeatedUrl = "https://fixture.invalid/er/repeated-track";
+    const identity = "Caramelos de Cianuro::Las Paticas De La Abuela::El Martillo";
+    const originalNumber = await applyClaim({
+      sourceId, kind: "track", identity, field: "track_number", value: 1,
+      targets: { trackId }, evidenceUrl: "https://fixture.invalid/er/original-track", evidencePosition: 1,
+    });
+    await getPool().query(`
+      WITH inserted AS (
+        INSERT INTO ingest.merge_audit(entity_kind,track_id,field,old_value,new_value,reason,confidence,performed_by)
+        VALUES('track',$1,'track_number',NULL,'1'::jsonb,'afirmación inicial de la fuente','high','system')
+        RETURNING id
+      ) INSERT INTO ingest.merge_audit_claims(merge_audit_id,claim_id)
+        SELECT id,$2 FROM inserted`, [trackId, originalNumber.persisted.id]);
+    const title = await applyClaim({
+      sourceId, kind: "track", identity, field: "title", value: "El Martillo",
+      targets: { trackId }, evidenceUrl: repeatedUrl, evidencePosition: 6,
+    });
+    const number = await applyClaim({
+      sourceId, kind: "track", identity, field: "track_number", value: 6,
+      targets: { trackId }, evidenceUrl: repeatedUrl, evidencePosition: 6,
+    });
+    expect(number.outcome.action).toBe("conflict");
+    const conflict = await getPool().query<{ id: string }>(
+      "SELECT id::text FROM ingest.conflicts WHERE claim_b_id=$1 AND field='track_number'",
+      [number.persisted.id],
+    );
+    const conflictId = Number(conflict.rows[0]!.id);
+    const review = await getPool().query<{ id: string }>(
+      "SELECT id::text FROM ingest.review_queue WHERE conflict_id=$1",
+      [conflictId],
+    );
+    await getPool().query(
+      "INSERT INTO ingest.review_decisions(review_id,verdict,decided_by,context) VALUES($1,'unsure','Tester','{}')",
+      [Number(review.rows[0]!.id)],
+    );
+
+    const [resolved] = await keepRepeatedTrackOccurrences([conflictId], {
+      actor: "human", note: "el tracklist enumera el título también en la posición 6",
+    });
+    expect(resolved).toMatchObject({ conflictId, originalTrackId: trackId, repeatedPosition: 6, claimsMoved: 2 });
+    expect(await getPool().query(
+      "SELECT track_number,title FROM tracks WHERE album_id=$1 AND title='El Martillo' ORDER BY track_number",
+      [albumId],
+    ).then((result) => result.rows)).toEqual([
+      { track_number: 1, title: "El Martillo" },
+      { track_number: 6, title: "El Martillo" },
+    ]);
+    expect(await getPool().query(
+      "SELECT DISTINCT track_id::text FROM ingest.claims WHERE id=ANY($1::bigint[])",
+      [[title.persisted.id, number.persisted.id]],
+    ).then((result) => result.rows)).toEqual([{ track_id: String(resolved!.repeatedTrackId) }]);
+    expect(await getPool().query(
+      "SELECT c.status::text conflict_status,d.status::text decision_status FROM ingest.conflicts c JOIN ingest.review_queue q ON q.conflict_id=c.id JOIN ingest.review_decisions d ON d.review_id=q.id WHERE c.id=$1",
+      [conflictId],
+    ).then((result) => result.rows[0])).toMatchObject({ conflict_status: "both_kept", decision_status: "withdrawn" });
   });
 
   it("medium completa null, pero cualquier contradiccion conserva claims rivales y abre review", async () => {

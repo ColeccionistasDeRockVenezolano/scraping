@@ -29,7 +29,7 @@ import { pathToFileURL } from "node:url";
 import { getPool } from "../db/client.js";
 import { YT_MASTER_XLSX_PATH } from "../ingest/sources.js";
 import { ingestRecords, type IngestionResult } from "../ingest/runner.js";
-import { canonicalVideoUrl } from "./normalization.js";
+import { canonicalVideoUrl, collectReleaseYears, releaseIdentity } from "./normalization.js";
 import type { Evidence, RawRecord } from "../adapters/contracts.js";
 import { moduleLogger } from "../logger/index.js";
 
@@ -76,6 +76,9 @@ function evidenceFor(row: SeedRow, filePath: string): Evidence {
   const excerpt = [row.artist_name_raw, row.album_name_raw, row.album_year_raw, row.type_raw]
     .filter((value) => value !== null && value !== "")
     .join(" · ");
+  // Ojo: el hash del claim incluye esta evidencia. Si la hoja se reordena,
+  // cambia `row:N` y re-emitir duplica cada hecho (pasó el 2026-09-13 al
+  // importar desde Google; los duplicados quedaron `superseded`).
   const url = row.video_id
     ? canonicalVideoUrl(row.video_id)
     : `${pathToFileURL(filePath).toString()}#row=${row.row_number ?? row.upload_order}`;
@@ -98,6 +101,10 @@ export function seedRecords(rows: SeedRow[], filePath = YT_MASTER_XLSX_PATH): {
   const records: RawRecord[] = [];
   const artistasVistos = new Set<string>();
   let skipped = 0; let mediaOnly = 0; let albumsSinTipo = 0;
+  const yearsByRelease = collectReleaseYears(rows.flatMap((row) => {
+    const artist = row.artist_name_raw?.trim(); const album = row.album_name_raw?.trim();
+    return artist && album && row.content_kind !== "media" ? [{ artist, album, year: row.album_year_raw }] : [];
+  }));
 
   for (const row of rows) {
     const artist = row.artist_name_raw?.trim();
@@ -132,8 +139,9 @@ export function seedRecords(rows: SeedRow[], filePath = YT_MASTER_XLSX_PATH): {
     records.push({
       entityKind: "album",
       // "artista::título": el core no admite un disco sin artista y dos bandas
-      // pueden tener un "Vol. 1"; es la misma clave que usa Sincopa.
-      identity: `${artist}::${album}`.slice(0, 250),
+      // pueden tener un "Vol. 1"; es la misma clave que usa Sincopa. Un mismo
+      // título con otro año (Spiteri 1981) lleva el año en la identidad.
+      identity: releaseIdentity(artist, album, row.album_year_raw, yearsByRelease),
       extractor: EXTRACTOR, extractorVersion: EXTRACTOR_VERSION, fields,
     });
   }

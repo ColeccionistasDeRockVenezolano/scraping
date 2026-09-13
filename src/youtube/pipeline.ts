@@ -5,7 +5,7 @@ import type { PoolClient } from "pg";
 import { getPool } from "../db/client.js";
 import { YT_MASTER_XLSX_PATH } from "../ingest/sources.js";
 import { YouTubeDataApi, iso8601DurationToSeconds, youtubePublicationStatus, type YouTubeChannelPayload, type YouTubePlaylistItemPayload, type YouTubeVideoPayload } from "./api.js";
-import { canonicalVideoUrl, classifyContentType, extractYouTubeVideoId } from "./normalization.js";
+import { canonicalVideoUrl, classifySheetRow, extractYouTubeVideoId } from "./normalization.js";
 import { parseYouTubeDescription, parseYouTubeTitle } from "./parsers.js";
 
 type Json = Record<string, unknown>;
@@ -14,7 +14,15 @@ interface SeedRow { uploadOrder: number; artistName: string | null; albumName: s
 
 function asText(value: ExcelJS.CellValue): string | null {
   if (value === null || value === undefined) return null;
-  if (typeof value === "object" && "text" in value && typeof value.text === "string") return value.text.trim() || null;
+  // Una celda con formato mixto llega como { richText: [{ text }, ...] }, y un
+  // hipervínculo con formato anida eso dentro de `text`. Sin bajar por ambos,
+  // la fila 564 se importó con el título "[object Object]".
+  if (typeof value === "object" && "richText" in value && Array.isArray(value.richText)) {
+    return value.richText.map((part) => part.text).join("").trim() || null;
+  }
+  if (typeof value === "object" && "text" in value) {
+    return typeof value.text === "string" ? value.text.trim() || null : asText(value.text as ExcelJS.CellValue);
+  }
   const text = String(value).trim();
   return text || null;
 }
@@ -109,7 +117,7 @@ export async function importYouTubeMasterSheet(filePath = YT_MASTER_XLSX_PATH): 
     const runId = Number(run.rows[0]!.id);
     for (const row of rows) {
       const videoId = extractYouTubeVideoId(row.url);
-      const classification = classifyContentType(row.type);
+      const classification = classifySheetRow(row);
       const hash = seedHash(row, videoId);
       const old = await client.query<{ id: string; row_hash: string }>("SELECT id,row_hash FROM ingest.seed_uploads WHERE upload_order=$1 FOR UPDATE", [row.uploadOrder]);
       let seedUploadId: number;

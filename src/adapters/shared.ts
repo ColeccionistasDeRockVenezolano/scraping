@@ -169,7 +169,11 @@ function extractNumberedTracks($: CheerioAPI, url: string, artist: string | unde
     const where = evidence(url, line.tag, line.text, records.length);
     records.push({
       entityKind: "track",
-      identity: `${artist ?? "unknown artist"}::${album}::${title}`.slice(0, 250),
+      // La posición forma parte de la identidad de una pista dentro de un
+      // disco. Un álbum puede repetir legítimamente el mismo título (p. ej.
+      // pistas 02/06); usar solo el nombre fusionaba ambas y fabricaba una
+      // contradicción 2 vs 6.
+      identity: `${artist ?? "unknown artist"}::${album}::${number}`.slice(0, 250),
       extractor, extractorVersion: ADAPTER_VERSION,
       fields: [
         { field: "title", value: title, evidence: where },

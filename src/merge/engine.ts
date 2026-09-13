@@ -60,6 +60,10 @@ function scalar(value: unknown, field: string): string | number | boolean | null
     if (value === "false" || value === "0") return false;
     throw new Error(`${field} debe ser boolean`);
   }
+  // Algunos extractores históricos emitieron `label`, mientras que el enum
+  // canónico usa `record_label`. La mesa muestra ambos como "Sello
+  // discográfico"; aplicar esa elección debe escribir el valor válido.
+  if (field === "organization_type" && value === "label") return "record_label";
   if (typeof value === "string") return normalizeDisplayName(value);
   if (typeof value === "number" || typeof value === "boolean") return value;
   throw new Error(`${field}: un campo canonico directo debe ser escalar`);
@@ -263,6 +267,55 @@ function explicitDecision(input: ResolutionInput, id: number, canonical: string)
   };
 }
 
+export type HumanResolutionOverride =
+  | { verdict: "same"; targetId: number; reviewDecisionId: number; decidedBy: string }
+  | { verdict: "different"; reviewDecisionId: number; decidedBy: string };
+
+function humanSameDecision(
+  input: ResolutionInput,
+  targetId: number,
+  canonical: string,
+  override: HumanResolutionOverride & { verdict: "same" },
+): ResolutionDecision {
+  const feature: ScoreFeature = {
+    key: "target.human_same", label: "identidad confirmada por una persona", value: 1,
+    weight: 1, contribution: 1, polarity: "for",
+    evidence: `${override.decidedBy} confirmó la revisión ${override.reviewDecisionId} contra ${targetId} (${canonical})`,
+  };
+  return {
+    kind: input.kind, inputOriginal: input.name,
+    inputNormalized: normalizeEntityName(input.name).primaryKey,
+    action: "AUTO_MATCH", score: 1, candidateId: targetId, features: [feature],
+    candidates: [{ candidateId: targetId, canonicalName: canonical, score: 1, action: "AUTO_MATCH", features: [feature], hardConflicts: [], nameBasis: "canonical_exact", hasContextSupport: true, autoEligible: true }],
+    thresholds: resolutionThresholdsFromEnv(),
+    explanation: `match humano desde review_decision ${override.reviewDecisionId}`,
+    // El shape histórico exige `true`: significa que el registro conserva la
+    // salida determinista completa, no quién tuvo la autoridad final. Esa
+    // autoridad queda en entity_resolution_decisions.decided_by='human'.
+    deterministic: true,
+  };
+}
+
+function humanDifferentDecision(
+  input: ResolutionInput,
+  candidates: ResolutionDecision["candidates"],
+  override: HumanResolutionOverride & { verdict: "different" },
+): ResolutionDecision {
+  const feature: ScoreFeature = {
+    key: "target.human_different", label: "identidad separada por una persona", value: 1,
+    weight: 1, contribution: -1, polarity: "against",
+    evidence: `${override.decidedBy} confirmó en la revisión ${override.reviewDecisionId} que no es el candidato mostrado`,
+  };
+  return {
+    kind: input.kind, inputOriginal: input.name,
+    inputNormalized: normalizeEntityName(input.name).primaryKey,
+    action: "NO_MATCH", score: 0, features: [feature], candidates,
+    thresholds: resolutionThresholdsFromEnv(),
+    explanation: `separación humana desde review_decision ${override.reviewDecisionId}`,
+    deterministic: true,
+  };
+}
+
 /**
  * Un álbum o una pista nuevos necesitan su parental EXISTIENDO en el core:
  * el modelo no admite un disco sin artista ni una pista sin disco. El nombre
@@ -388,7 +441,7 @@ async function createEntity(client: PoolClient, claim: ClaimToPersist, claimId: 
 export async function mergeClaim(
   claim: ClaimToPersist,
   persisted: PersistedClaim,
-  options: { gateway?: DeepSeekGateway } = {},
+  options: { gateway?: DeepSeekGateway; humanResolution?: HumanResolutionOverride } = {},
 ): Promise<MergeOutcome> {
   const spec = resolvableSpec(claim.entityKind);
   if (!spec) {
@@ -407,6 +460,12 @@ export async function mergeClaim(
     const input = defaultResolutionInput(claim, spec);
     await client.query("SELECT pg_advisory_xact_lock(hashtext($1))", [`merge:${spec.kind}:${normalizeEntityName(input.name).primaryKey}`]);
     let targetId = claimTargetId(claim, spec);
+    if (options.humanResolution?.verdict === "same") {
+      if (targetId !== undefined && targetId !== options.humanResolution.targetId) {
+        throw new Error(`el claim ${persisted.id} ya apunta a ${targetId}, no a ${options.humanResolution.targetId}`);
+      }
+      targetId = options.humanResolution.targetId;
+    }
     if (targetId === undefined && !persisted.inserted) {
       const attached = await client.query<Record<string, unknown>>(`SELECT ${spec.targetColumn} FROM ingest.claims WHERE id=$1`, [persisted.id]);
       targetId = numberFrom(attached.rows[0]?.[spec.targetColumn]);
@@ -422,16 +481,29 @@ export async function mergeClaim(
       // La herencia no marca `target.explicit_fk`: una variante de nombre
       // sobre una identidad heredada se conserva como alias, no se trata
       // como propuesta de rename.
-      decision = inherited ? inheritedDecision(input, targetId, canonical) : explicitDecision(input, targetId, canonical);
+      decision = options.humanResolution?.verdict === "same"
+        ? humanSameDecision(input, targetId, canonical, options.humanResolution)
+        : inherited ? inheritedDecision(input, targetId, canonical) : explicitDecision(input, targetId, canonical);
     } else {
       const candidates = await loadResolutionCandidates(input, client);
-      decision = await resolveEntity(input, candidates, {
-        thresholds: resolutionThresholdsFromEnv(),
-        ...(options.gateway === undefined ? {} : { gateway: options.gateway }),
-      });
+      decision = options.humanResolution?.verdict === "different"
+        ? humanDifferentDecision(input, candidates.map((candidate) => ({
+          candidateId: candidate.id, canonicalName: candidate.canonicalName, score: 0,
+          action: "NO_MATCH", features: [], hardConflicts: [], nameBasis: "none",
+          hasContextSupport: false, autoEligible: false,
+        })), options.humanResolution)
+        : await resolveEntity(input, candidates, {
+          thresholds: resolutionThresholdsFromEnv(),
+          ...(options.gateway === undefined ? {} : { gateway: options.gateway }),
+        });
       if (decision.action === "AUTO_MATCH") targetId = decision.candidateId;
     }
-    const decisionId = await persistResolutionDecision(decision, input, { claimId: persisted.id, ...(claim.runId === undefined ? {} : { runId: claim.runId }), queryable: client });
+    const decisionId = await persistResolutionDecision(decision, input, {
+      claimId: persisted.id,
+      ...(claim.runId === undefined ? {} : { runId: claim.runId }),
+      queryable: client,
+      ...(options.humanResolution === undefined ? {} : { decidedBy: "human" as const }),
+    });
 
     // Un claim low automático nunca toca el core: va a revisión y se detiene
     // aquí. La excepción es una decisión humana explícita (createdBy="human",
@@ -557,6 +629,116 @@ export async function resolveArtistId(identity: string): Promise<number | undefi
 }
 
 export type ConflictResolution = "resolved_a" | "resolved_b" | "both_kept" | "dismissed";
+
+export interface RepeatedTrackResolution {
+  conflictId: number;
+  originalTrackId: number;
+  repeatedTrackId: number;
+  repeatedPosition: number;
+  claimsMoved: number;
+}
+
+/**
+ * Resuelve el caso en que dos ocurrencias reales del mismo título fueron
+ * fusionadas por una identidad antigua basada solo en el nombre. La posición
+ * y la evidencia capturada distinguen las ocurrencias; ambas se conservan.
+ */
+export async function keepRepeatedTrackOccurrences(
+  conflictIds: number[],
+  options: { actor: "human"; note: string; runId?: number },
+): Promise<RepeatedTrackResolution[]> {
+  if (options.actor !== "human") throw new Error("la resolución de pistas repetidas requiere actor human");
+  if (!options.note.trim()) throw new Error("resolution note obligatoria");
+  if (!conflictIds.length || conflictIds.some((id) => !Number.isSafeInteger(id) || id <= 0)) {
+    throw new Error("conflictIds inválidos");
+  }
+  const client = await getPool().connect();
+  try {
+    await client.query("BEGIN");
+    const results: RepeatedTrackResolution[] = [];
+    for (const conflictId of [...new Set(conflictIds)]) {
+      const loaded = await client.query<{
+        claim_a_id: string; claim_b_id: string; value_a: unknown; value_b: unknown;
+        status: string; track_id: string; album_id: string; disc_number: number;
+        track_number: number; title: string; source_id: string; raw_page_id: string | null;
+        seed_upload_id: string | null; identity_key: string; evidence_position: number | null;
+        evidence_url: string | null;
+      }>(`
+        SELECT cf.claim_a_id::text,cf.claim_b_id::text,cf.value_a,cf.value_b,cf.status::text,
+               b.track_id::text,t.album_id::text,t.disc_number,t.track_number,t.title,
+               b.source_id::text,b.raw_page_id::text,b.seed_upload_id::text,b.identity_key,
+               ev.position AS evidence_position,ev.url AS evidence_url
+          FROM ingest.conflicts cf
+          JOIN ingest.claims b ON b.id=cf.claim_b_id
+          JOIN public.tracks t ON t.id=b.track_id
+          LEFT JOIN LATERAL (
+            SELECT position,url FROM ingest.claim_evidence WHERE claim_id=b.id ORDER BY id LIMIT 1
+          ) ev ON true
+         WHERE cf.id=$1 AND cf.entity_kind='track' AND cf.field='track_number'
+         FOR UPDATE OF cf,t`, [conflictId]);
+      const row = loaded.rows[0];
+      if (!row) throw new Error(`conflicto de número de pista inexistente: ${conflictId}`);
+      if (row.status !== "open") throw new Error(`conflicto ${conflictId} ya no está abierto (${row.status})`);
+      const originalPosition = Number(row.value_a);
+      const repeatedPosition = Number(row.value_b);
+      if (!Number.isInteger(originalPosition) || !Number.isInteger(repeatedPosition)
+        || originalPosition !== row.track_number || repeatedPosition <= 0 || repeatedPosition === originalPosition) {
+        throw new Error(`conflicto ${conflictId} no representa dos posiciones válidas de la misma pista`);
+      }
+      if (row.evidence_position === null) throw new Error(`claim ${row.claim_b_id} no conserva posición de evidencia`);
+      await client.query("SELECT pg_advisory_xact_lock(hashtext($1))", [`merge:track:${row.album_id}:${row.disc_number}:${repeatedPosition}`]);
+      const occupied = await client.query<{ id: string; title: string }>(
+        "SELECT id::text,title FROM tracks WHERE album_id=$1 AND disc_number=$2 AND track_number=$3",
+        [Number(row.album_id), row.disc_number, repeatedPosition]);
+      if (occupied.rows[0]) throw new Error(`posición ${repeatedPosition} ya ocupada por ${occupied.rows[0].title} (track ${occupied.rows[0].id})`);
+      const inserted = await client.query<{ id: string }>(`
+        INSERT INTO public.tracks(album_id,disc_number,track_number,title)
+        VALUES($1,$2,$3,$4) RETURNING id::text`,
+      [Number(row.album_id), row.disc_number, repeatedPosition, row.title]);
+      const repeatedTrackId = Number(inserted.rows[0]!.id);
+
+      const siblings = await client.query<{ id: string }>(`
+        SELECT DISTINCT c.id::text
+          FROM ingest.claims c JOIN ingest.claim_evidence e ON e.claim_id=c.id
+         WHERE c.entity_kind='track' AND c.source_id=$1
+           AND c.raw_page_id IS NOT DISTINCT FROM $2::bigint
+           AND c.seed_upload_id IS NOT DISTINCT FROM $3::bigint
+           AND c.identity_key=$4 AND e.position=$5
+           AND e.url IS NOT DISTINCT FROM $6`, [
+        Number(row.source_id), row.raw_page_id, row.seed_upload_id, row.identity_key,
+        row.evidence_position, row.evidence_url,
+      ]);
+      const claimIds = siblings.rows.map((item) => Number(item.id));
+      if (!claimIds.includes(Number(row.claim_b_id))) throw new Error(`no se pudo reconstruir la ocurrencia del claim ${row.claim_b_id}`);
+      await client.query("UPDATE ingest.claims SET track_id=$1,status='accepted',updated_at=now() WHERE id=ANY($2::bigint[])", [repeatedTrackId, claimIds]);
+      await client.query("UPDATE ingest.claims SET status='accepted',updated_at=now() WHERE id=$1", [Number(row.claim_a_id)]);
+      const spec = resolvableSpec("track")!;
+      await audit(client, { runId: options.runId, createdBy: "human" } as ClaimToPersist,
+        Number(row.claim_b_id), spec, repeatedTrackId, "title", null, row.title, "high",
+        `human repeated-track resolution; positions ${originalPosition} and ${repeatedPosition}: ${options.note}`);
+      await client.query(`
+        UPDATE ingest.conflicts SET status='both_kept',resolved_by='human',resolution_note=$2,resolved_at=now()
+         WHERE id=$1`, [conflictId, options.note]);
+      await client.query(`
+        UPDATE ingest.review_queue SET status='approved',resolved_by='human',resolution_note=$2,resolved_at=now(),updated_at=now()
+         WHERE (conflict_id=$1 OR claim_a_id=ANY($3::bigint[])) AND status IN ('open','in_progress')`,
+      [conflictId, options.note, claimIds]);
+      await client.query(`
+        UPDATE ingest.review_decisions d SET status='withdrawn',withdrawn_at=now(),note=concat_ws(E'\n',d.note,$2::text)
+         WHERE d.status='active' AND d.review_id IN (
+           SELECT id FROM ingest.review_queue WHERE conflict_id=$1
+         )`, [conflictId, `Sustituida por resolución both_kept: ${options.note}`]);
+      results.push({ conflictId, originalTrackId: Number(row.track_id), repeatedTrackId, repeatedPosition, claimsMoved: claimIds.length });
+    }
+    await client.query("COMMIT");
+    return results;
+  } catch (error) {
+    await client.query("ROLLBACK");
+    throw error;
+  } finally {
+    client.release();
+  }
+}
 
 /** Solo una decision humana puede cerrar un conflicto y, si corresponde, escribir core. */
 export async function resolveFieldConflict(

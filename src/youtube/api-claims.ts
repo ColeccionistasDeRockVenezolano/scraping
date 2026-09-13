@@ -27,7 +27,7 @@ import { getPool } from "../db/client.js";
 import { ingestRecords, type IngestionResult } from "../ingest/runner.js";
 import { moduleLogger } from "../logger/index.js";
 import type { Evidence, RawRecord } from "../adapters/contracts.js";
-import { canonicalVideoUrl } from "./normalization.js";
+import { canonicalVideoUrl, collectReleaseYears, releaseIdentity } from "./normalization.js";
 import { looksLikeOrganization, parseCreditSections, parseYouTubeDescription, parseYouTubeTitle, type DescriptionSection } from "./parsers.js";
 
 const log = moduleLogger("youtube:api-claims");
@@ -100,6 +100,7 @@ export function recordsForVideo(
   artistsSeen: Set<string>,
   personsSeen: Set<string>,
   organizationsSeen: Set<string>,
+  yearsByRelease: Map<string, Set<number>> = new Map(),
 ): { records: RawRecord[]; isRelease: boolean; skipped: boolean } {
   const parsed = parseYouTubeTitle(video.title ?? "");
   const artist = parsed.artist;
@@ -121,7 +122,7 @@ export function recordsForVideo(
   // documental o pieza editorial. El artista sí queda afirmado.
   if (!parsed.isFullAlbum) return { records, isRelease: false, skipped: false };
 
-  const albumIdentity = `${artist}::${album}`.slice(0, 250);
+  const albumIdentity = releaseIdentity(artist, album, parsed.year, yearsByRelease);
   const albumFields: RawRecord["fields"] = [
     { field: "title", value: album, evidence: head },
     { field: "artist_name", value: artist, evidence: head },
@@ -145,7 +146,7 @@ export function recordsForVideo(
     const seconds = trackDuration(tracks, index, video.duration_seconds);
     if (seconds !== null) fields.push({ field: "duration_seconds", value: String(seconds), evidence: where });
     records.push({
-      entityKind: "track", identity: `${artist}::${album}::${track.title}`.slice(0, 250),
+      entityKind: "track", identity: `${albumIdentity}::${track.title}`.slice(0, 250),
       extractor: EXTRACTOR, extractorVersion: EXTRACTOR_VERSION, fields,
     });
   }
@@ -176,7 +177,7 @@ export function recordsForVideo(
     if (scoped) fields.push({ field: "track_numbers", value: trackNumbers.join(","), evidence: where });
     records.push({
       entityKind: scoped ? "track_credit" : "album_credit",
-      identity: `${artist}::${album}::${name}::${role}${scoped ? `::${trackNumbers.join(",")}` : ""}`.slice(0, 250),
+      identity: `${albumIdentity}::${name}::${role}${scoped ? `::${trackNumbers.join(",")}` : ""}`.slice(0, 250),
       extractor: EXTRACTOR, extractorVersion: EXTRACTOR_VERSION, fields,
     });
   };
@@ -214,10 +215,14 @@ export async function ingestYouTubeApiClaims(options: { dryRun?: boolean } = {})
   const artistsSeen = new Set<string>(); const personsSeen = new Set<string>(); const organizationsSeen = new Set<string>();
   const records: RawRecord[] = [];
   let releases = 0, mediaOnly = 0, skipped = 0;
+  const yearsByRelease = collectReleaseYears(videos.flatMap((video) => {
+    const parsed = parseYouTubeTitle(video.title ?? "");
+    return parsed.artist && parsed.title && parsed.isFullAlbum ? [{ artist: parsed.artist, album: parsed.title, year: parsed.year }] : [];
+  }));
 
   for (const video of videos) {
     const parsedDescription = parseYouTubeDescription(video.description);
-    const result = recordsForVideo(video, tracks.get(video.video_id) ?? [], parsedDescription.sections, parsedDescription.credits, artistsSeen, personsSeen, organizationsSeen);
+    const result = recordsForVideo(video, tracks.get(video.video_id) ?? [], parsedDescription.sections, parsedDescription.credits, artistsSeen, personsSeen, organizationsSeen, yearsByRelease);
     if (result.skipped) { skipped += 1; continue; }
     if (result.isRelease) releases += 1; else mediaOnly += 1;
     records.push(...result.records);

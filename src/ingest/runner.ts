@@ -76,7 +76,19 @@ export async function ingestRecords(sourceSlug: string, records: Array<RawRecord
       }
       for (const [index, input] of inputs.entries()) {
         const claim = { ...input, ...(artistId === undefined ? {} : { artistId }) };
-        const merge = await mergeClaim(claim, persistedClaims[index]!);
+        const persisted = persistedClaims[index]!;
+        // Un claim low reutilizado ya recorrió esta puerta. Volver a pasarlo
+        // por mergeClaim no aporta autoridad ni evidencia nueva y, peor aún,
+        // degradaba a `candidate` un claim que una persona ya había aprobado.
+        // La reingesta exacta debe ser un no-op también sobre el estado de la
+        // cola; una reevaluación intencional pertenece a review/merge, no al
+        // barrido automático.
+        const repeatedAutomaticLow = !persisted.inserted
+          && options.confidence === "low"
+          && options.createdBy !== "human";
+        const merge: MergeOutcome = repeatedAutomaticLow
+          ? { action: "unchanged", detail: "claim low exacto reutilizado; estado de revisión preservado" }
+          : await mergeClaim(claim, persisted);
         output.merges.push(merge);
         output.plan.push({ field: claim.field, entityKind: claim.entityKind, action: merge.action, detail: merge.detail });
         if (claim.entityKind === "artist" && merge.artistId) artistId = merge.artistId;

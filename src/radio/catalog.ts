@@ -1,3 +1,4 @@
+import { excludedFromRadio } from "../youtube/normalization.js";
 import { parseYouTubeTitle } from "../youtube/parsers.js";
 import { YouTubeDataApi, youtubePublicationStatus, type YouTubeVideoPayload } from "../youtube/api.js";
 
@@ -12,6 +13,8 @@ export interface RadioTrackRow {
   position: number;
   track_title: string;
   start_seconds: number;
+  /** Tipos de la hoja maestra para este video (todas sus filas, separados por coma). */
+  sheet_types?: string | null;
 }
 
 export interface RadioTrackItem {
@@ -92,6 +95,9 @@ export function buildRadioTracks(rows: RadioTrackRow[], playable: ReadonlySet<st
   const items: RadioTrackItem[] = [];
   for (const group of groups.values()) {
     const head = group[0]!;
+    // La hoja manda sobre el título: un concierto subido como "Full Album"
+    // sigue siendo un concierto.
+    if (excludedFromRadio(head.sheet_types)) continue;
     const parsed = parseYouTubeTitle(head.video_title);
     if (!parsed.isFullAlbum || head.video_duration_seconds < MIN_TRACK_SECONDS) continue;
 
