@@ -339,9 +339,11 @@ Sin API key el sistema y toda la suite funcionan con rutas deterministas/mock.
   `media` (videoclip, concierto, documental) no produce álbum; un tipo
   compuesto ("Solo Artist, Studio Album") sí produce álbum pero **sin**
   `album_type`, porque lo ambiguo es el tipo, no la existencia del disco.
-- `yt:link`: vinculación video→álbum existente (match artista+título+año)
-  escribiendo en `media.video_albums`; las propuestas van a revisión.
-  **Nunca crea álbumes.**
+- `yt:link`: vinculación video→álbum existente. El barrido automático exige
+  identidad exacta artista+título de un release de la hoja maestra y sólo
+  entonces escribe un `full_album` primario; ausencia o más de un candidato
+  abre `youtube_match`. `yt:link --album=<id> --video=<id> --note=... --confirm`
+  registra una selección humana auditada. **Nunca crea álbumes.**
 - `yt:enrich-artist`: `search.list` acotado (máx. N resultados, bajo cuota)
   solo en modo dirigido. Prohibido scrapear la web de YouTube.
 - Los tipos Music Video / Live Concert / Documentary nunca generan álbumes
@@ -352,6 +354,7 @@ Sin API key el sistema y toda la suite funcionan con rutas deterministas/mock.
 ### 4.13 `cli`
 Comandos (mismos casos de uso que la API, sin UI):
 `sources:list|add|evidence`, `scrape <slug>`, `seed:import-yt`, `yt:sync`,
+`yt:link`,
 `yt:enrich <artist>`, `merge:run [--dry]`, `review:list|approve|dismiss`,
 `genre:add|disable`, `export:json <entidad>`, `doctor` (integridad:
 core intacto, hashes, orphans de claims).

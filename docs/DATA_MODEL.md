@@ -174,6 +174,19 @@ Copia inmutable 1:1 de las 606 filas de datos:
 Reglas de importación del seed (ver §6): las filas `EMPTY` (órdenes 97 y 440)
 no generan entidades; van directas a `review_queue` (kind `seed_incomplete`).
 
+**Tipo vacío.** Por decisión del propietario (2026-09-13) una fila sin tipo
+recibe uno inferido del artista y del título (`Various Artists`→Compilation
+Album, título EP/Demos, "En Vivo"/"En Directo"→Live Album, resto→Studio Album)
+y `classification_reason` empieza por `tipo inferido`. Lo que la hoja escriba
+después manda.
+
+**Cuidado al reordenar la hoja.** El hash de cada claim de `seed-claims`
+incluye la evidencia, y la evidencia lleva `row:<row_number>`. La hoja de
+Google ordena distinto que el xlsx local: al importarla el 2026-09-13, re-emitir
+duplicó 2.942 claims ya fundidos (quedaron `superseded`, sus revisiones
+`dismissed`). Antes de volver a correr `youtube seed-claims` tras reordenar,
+medir con `--dry-run`.
+
 ### 4.4 `media.youtube_videos` — YouTube como fuente de primera clase
 
 Realizada en el schema `media`:
@@ -406,6 +419,14 @@ fuentes respaldando un mismo cambio.
 
 Todo write sobre tablas core pasa por el merge engine y deja su entrada aquí.
 
+**Única excepción al append-only: la fusión de duplicados** (`crv review
+duplicates`, `src/review/duplicates.ts`). Las FKs de `merge_audit` al core son
+`ON DELETE CASCADE`, así que borrar la fila duplicada sin reapuntar antes su
+auditoría la destruiría. La fusión mueve esas filas a la entidad que queda
+(solo cambia la FK; `field`, valores, motivo y fecha no se tocan) y añade una
+fila `field='merged_duplicate'` cuyo `old_value` es la fila borrada completa,
+incluido su id, enlazada a los claims que la respaldaban.
+
 ---
 
 ## 5. Mapeo del YT Master Spreadsheet
@@ -443,6 +464,15 @@ se obtienen **13 tokens distintos**:
 `Solo Artist, X` → se aplican ambas reglas: artist_type para el artista +
 acción del segundo token para el álbum.
 
+**Varias clasificaciones por disco (2026-09-13).** La hoja es la fuente de los
+tipos y un disco puede tener más de uno. `albums.album_type` guarda uno solo,
+así que todas las de la celda, en su orden, viven en
+`ingest.album_classifications` (migración 0011), regenerada con
+`crv youtube classifications`. Una fila con video se ata a su disco solo por
+el enlace del video; sin video, por artista (o alias) + título + año. La radio
+excluye un video si **cualquiera** de sus clasificaciones es Music Video, Live
+Concert o Documentary.
+
 ### Anomalías de identidad detectadas en el seed (material para entity resolution)
 
 **Pares (artist, album) repetidos: 8**, de los cuales **7 son lanzamientos
@@ -472,7 +502,7 @@ ingenua crearía entidades duplicadas:
 | Caso | Valores crudos | Tratamiento |
 |---|---|---|
 | Espacio final | `'Soleà'` / `'Soleà '` (orden 593) | Normalización determinista (trim) → 1 artista + alias |
-| Solo la tilde | `'Pacifica'` / `'Pacífica'` | **No se fusiona automáticamente**: candidato a `possible_duplicate` en revisión; una tilde puede distinguir dos bandas reales |
+| Solo la tilde | `'Pacifica'` / `'Pacífica'` | **No se fusiona automáticamente**: una tilde puede distinguir dos bandas reales. El 2026-09-13 el propietario confirmó que `Pacífica`=`Pacifica` y `Torre De Marfíl`=`Torre de Marfil`; se registran como alias por decisión humana, y las filas ya duplicadas en el core se unen con `crv review duplicates` (clave sin tildes ni mayúsculas; nunca sin artículo: `Los Pixel` = `Pixel`, `Radioclip` = `Radio Clip` y `Ricochet CCS` = `Ricochet` los confirmó el propietario uno a uno, pero la regla general no es fiable) |
 
 **Caveat de parsing:** las celdas numéricas del XLSX llegan como flotantes
 (`'350.0'` para Upload Order, `'2009.0'` para año). El importador convierte a

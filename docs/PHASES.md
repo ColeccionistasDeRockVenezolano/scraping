@@ -5,39 +5,19 @@
 > (`crv_simple_v1.sql`): las migraciones posteriores solo tocan el esquema
 > `ingest`.
 >
-> Estado actual (2026-09-08): **F0 cerrado y endurecido, F1 completo**.
-> Node 22 LTS instalado (vía nvm; ver nota abajo) y verificado como
-> `>=22.0.0` en `package.json`. Repositorio git inicializado con
-> `.gitignore` cubriendo secretos, `node_modules`, `data/raw` y salidas
-> generadas. Proyecto Node/TS estricto creado (`package.json`, `tsconfig.json`
-> strict) con la estructura de módulos de ARCHITECTURE.md §4
-> (`src/config`, `src/logger`, `src/db/schema`, `src/fetcher`, `src/cache`,
-> `src/storage`, `src/adapters`, `src/normalization`, `src/er`, `src/claims`,
-> `src/merge`, `src/conflicts`, `src/review`, `src/ai`, `src/youtube`,
-> `src/cli`, `src/api`, `src/doctor`). Drizzle ORM modela por completo
-> `public`/`ingest`/`media` (`src/db/schema/`, solo lectura tipada del core;
-> el DDL real sigue siendo `migrations/*.sql`), con un runner propio
-> (`src/db/migrate.ts`) que conserva `ingest.schema_migrations`. `doctor`
-> (`src/doctor/`) verifica hash+catálogo del core, schemas auxiliares,
-> migraciones aplicadas y estado de fuentes — verificado en verde contra
-> PostgreSQL 16 real. `tests/run_all.sh`/`test_0004_review_kinds.sh` ahora
-> verifican también el hash del core como paso 0
-> (`crv_simple_v1.sql.sha256` + `verify_core_hash()`), cerrando el hallazgo
-> de CONTRACT §11.2. Puerto a Vitest iniciado:
-> `test/contract/core-and-schema.test.ts` reproduce el contrato completo
-> (core + 0001-0007 + rollback, diff de `pg_dump` vacío) **y** ejercita el
-> schema Drizzle real (inserts/joins a través de core+ingest+media),
-> contra un contenedor desechable levantado por `test/support/pg-container.ts`.
-> **F0 cerrado.** **F1 completo también:** `ingest.sources` sembrado (14
-> filas), `fetcher`+`cache`+storage crudo implementados y **verificados en
-> vivo** contra `rhv-blogspot` (264 entradas reales, TTL confirmado con 0
-> peticiones nuevas en la re-descarga) — ver detalle en la sección F1 más
-> abajo. **Falta:** el resto de comandos de CLI de F2+ (`seed:import-yt`,
-> `yt:*`, `merge:run`, `review:*`, `genre:*`, `export:json`). El núcleo de
-> **F5/F6** sí está implementado: ER tipada para cinco entidades, merge y
-> conflictos auditados, review programática, gateway DeepSeek opcional y
-> biografías separadas. Los criterios globales de F5 que dependen del seed y
-> dos barridos Blogger siguen pendientes y no se declaran cerrados aquí.
+> Estado actual verificado (2026-09-11): **F0 y F1 cerradas**. F2–F4 ya tienen
+> importadores, sincronización de YouTube, adapters y datos procesados, pero
+> conservan criterios de aceptación pendientes. El núcleo técnico de **F5**
+> (ER, merge, conflictos, cola y aprobación programática) está implementado;
+> F5 **no está cerrada operativamente**. **F6 ya está implementada y probada**,
+> aunque formalmente debe usarse después de cerrar las guardas de F5.
+>
+> La lista antigua de “comandos F2+ faltantes” dejó de ser válida: hoy existen
+> `youtube import-sheet`, `youtube seed-claims`, `youtube discover-channel`,
+> `youtube sync`, `youtube rederive`, `youtube api-claims`, el enlazador
+> conservador `yt:link` y los comandos `review` individuales y por lote.
+> Sigue faltando el enriquecimiento dirigido `yt:enrich-artist`. La aplicación auditada de
+> las decisiones de la Mesa de Cotejo ya existe y fue ejecutada.
 >
 > Nota de entorno (actualizada 2026-09-08): la máquina no tenía Node 22 en el
 > PATH por defecto (solo Node 20 vía `nodesource`), pero sí un Node 22.23.1
@@ -48,6 +28,54 @@
 > en el repo y no en el dotfile: `.nvmrc`, `.npmrc` (`engine-strict=true`),
 > `scripts/with-node22.sh` (por el que pasan todos los scripts npm) y
 > `assertSupportedNode()` en `src/config/runtime.ts`. No requirió `sudo`.
+
+---
+
+## Corte operativo para cerrar F5 (base local, 2026-09-11)
+
+- YouTube está inventariado: **648 videos**, **646 hidratados** y 2 ausentes.
+  `media.video_albums` contiene 368 asociaciones sobre los 542 discos
+  canónicos actuales, pero solo una está confirmada como enlace primario; la
+  selección humana de los demás enlaces sigue pendiente.
+- La hoja maestra está importada: 606 filas, 520 con `video_id`. Sus 2.942
+  claims están en **2.580 accepted, 345 candidate y 17 conflict** después de
+  aplicar las decisiones humanas; repetir `youtube seed-claims` reutiliza los
+  2.942 sin degradar ese estado ni duplicar cola o decisiones de ER.
+- La Mesa conserva 195 decisiones humanas activas: **195 ya aplicadas y
+  auditadas**, sin `unsure`, decisiones pendientes ni inválidas. Los 77 careos
+  finales se resolvieron en seis discos de Los Kings; *El Super Grupo* quedó
+  como Palacio LPS-66357 (1975), separado de Fusión IV. La incoherencia de
+  `Lord Henry con Los Impala` ya fue corregida y aplicada. Cuatro `unsure` se retiraron
+  al confirmar que *The Collapse of Singularity* repite legítimamente cuatro
+  títulos en las posiciones 2/6, 3/7, 4/8 y 5/9; el catálogo conserva ahora las
+  nueve pistas y los cuatro conflictos quedaron como `both_kept`. El comando
+  `crv review apply-decisions` previsualiza y, con `--confirm`, aplica solo las
+  resoluciones concluyentes; es idempotente y nunca aplica `unsure`.
+- Seis fuentes han producido claims en esta base (YouTube API, seed YT,
+  Sincopa, Descargas Metal, Hippito y Rockzuela). Los snapshots crudos de las
+  demás fuentes no significan que sus claims se hayan emitido o aceptado.
+- La prueba operativa de idempotencia quedó ejecutada el 2026-09-11. El
+  segundo barrido completo de Descargas Metal fue `0 nuevas / 47.237
+  reutilizadas`; el de Rockzuela, `0 / 5.326`; y dos repeticiones del seed YT,
+  `0 / 2.942` cada una. En todos los casos quedaron invariantes el core y las
+  **3.410** filas de `ingest.merge_audit`.
+- Los cuatro conflictos reales de pistas repetidas están resueltos como
+  `both_kept` por una persona y respaldados por cuatro cambios `track.title`
+  en `merge_audit` (run 100), cada uno enlazado a su claim. Quedan **15
+  conflictos de álbum abiertos** (10 `youtube_url`, 3 `album_type`, 2
+  `release_year`): no tienen decisión activa de la Mesa y por tanto el
+  aplicador no inventa una resolución. `doctor` exige cobertura de auditoría
+  para toda fila canónica y al menos un claim por cada auditoría.
+
+Orden restante recomendado:
+
+1. completar la selección humana de los enlaces primarios que no tienen una
+   coincidencia exacta en la hoja YT;
+2. promover los lotes válidos y ejecutar los barridos completos restantes;
+3. ✅ repetir seed y barridos representativos para demostrar idempotencia,
+   resolver conflictos reales y verificar `merge_audit`;
+4. declarar F5 cerrada cuando los 15 conflictos pendientes reciban decisión
+   humana y continuar el uso operativo de F6.
 
 ---
 
