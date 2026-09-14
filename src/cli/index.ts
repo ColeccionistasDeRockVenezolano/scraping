@@ -28,6 +28,7 @@ import { syncAlbumClassifications } from "../youtube/classifications.js";
 import { ingestYouTubeApiClaims } from "../youtube/api-claims.js";
 import { confirmYouTubeAlbumLink, linkYouTubeAlbums } from "../youtube/linker.js";
 import { enrichArtistFromYouTube } from "../youtube/enrich.js";
+import { reconcileYouTubeChannel } from "../youtube/reconcile.js";
 import { YT_MASTER_XLSX_PATH } from "../ingest/sources.js";
 import { getPool } from "../db/client.js";
 import { keepRepeatedTrackOccurrences } from "../merge/engine.js";
@@ -451,8 +452,25 @@ async function main(): Promise<number> {
       return 0;
     }
 
+    // Relaciones video→artista y video→pista desde lo ya hidratado: sin red
+    // ni cuota. Solo escribe identidades exactas; el resto va a youtube_match.
+    case "yt:reconcile": {
+      const result = await reconcileYouTubeChannel({ dryRun: args.includes("--dry-run") });
+      const { summary } = result;
+      console.log(`yt:reconcile${result.dryRun ? " --dry-run" : ` (run ${result.runId})`}: ${summary.videos} videos, ${summary.albums} discos`);
+      for (const [category, count] of Object.entries(summary.byCategory)) console.log(`  ${category.padEnd(16)} ${count}`);
+      console.log(`  ${"UNMATCHED_ALBUM".padEnd(16)} ${summary.unmatchedAlbums} (${summary.unmatchedAlbumsOfChannelArtists} de artistas con videos en el canal)`);
+      console.log(`  tracklist: ${summary.tracklistEntries.matched}/${summary.tracklistEntries.total} entradas casadas`);
+      console.log(`  video_artists: ${summary.videoArtists.inserted} nuevas, ${summary.videoArtists.total} en total · `
+        + `video_tracks: ${summary.videoTracks.inserted} nuevas, ${summary.videoTracks.total} en total (${summary.videoTracks.withClaim} con claim) · `
+        + `${summary.reviewsCreated} revisiones youtube_match nuevas`);
+      if (result.dryRun) console.log("  (dry-run: nada se escribió)");
+      for (const file of result.reportFiles) console.log(`  reporte: ${file}`);
+      return 0;
+    }
+
     case "yt:link": {
-      const option = (name: string): string | undefined => args.find((arg) => arg.startsWith(`--${name}=`))?.slice(name.length + 3);
+      const option =(name: string): string | undefined => args.find((arg) => arg.startsWith(`--${name}=`))?.slice(name.length + 3);
       const albumArg = option("album");
       const videoId = option("video");
       if (albumArg || videoId) {
@@ -524,11 +542,14 @@ CRV CLI
   youtube unmatched          filas seed pendientes de enlace o revisión
   yt:link [--dry-run]        enlaza sólo releases inequívocos de la hoja YT; el resto va a revisión
   yt:link --album=<id> --video=<youtube-id> --note="evidencia" --confirm
+                             confirma una selección humana como enlace primario
   yt:enrich-artist "<artista>" [--max=N] [--dry-run]
                              busca en el canal los discos del artista que siguen sin video
                              (search.list, 100 unidades; respeta YOUTUBE_DAILY_QUOTA_UNITS);
                              abre youtube_match, nunca enlaza ni crea álbumes
-                             confirma una selección humana como enlace primario
+  yt:reconcile [--dry-run]   relaciona cada video con artista, disco y pistas (timestamps);
+                             solo identidades exactas, el resto a youtube_match; sin red ni cuota;
+                             escribe reports/youtube-reconciliation.{json,md}
 
 Comandos especificados para fases futuras (F1+): ${[...KNOWN_FUTURE_COMMANDS].join(", ")}
 `);

@@ -352,6 +352,21 @@ Sin API key el sistema y toda la suite funcionan con rutas deterministas/mock.
   de gastar compara lo consumido hoy con `YOUTUBE_DAILY_QUOTA_UNITS`. Nunca
   enlaza ni crea álbumes: la selección se confirma con `yt:link --confirm`.
   Prohibido scrapear la web de YouTube.
+- `yt:reconcile [--dry-run]` (`src/youtube/reconcile.ts`, PHASES E6): cruza
+  lo ya hidratado con el catálogo, sin red ni cuota. Escribe
+  `media.video_artists` (el artista del disco enlazado, o el de la fila de la
+  hoja / el título si es exacto, incluidos alias; `subject` para
+  documentales) y `media.video_tracks` (cada entrada del tracklist cuyo título
+  es idéntico a una pista del disco enlazado —la posición solo desempata
+  homónimas—, con fin = siguiente marca o final del video y el claim
+  `youtube_start_seconds` que la respalda; un videoclip con una sola canción
+  homónima en la discografía, de 0 al final). Un plan puro
+  (`planReconciliation`) clasifica cada video en MATCHED_HIGH /
+  MATCHED_MEDIUM / AMBIGUOUS / UNMATCHED_VIDEO / CONFLICT; las tres
+  intermedias abren `youtube_match` (una por video; una descartada no se
+  reabre). Nunca crea álbumes ni pistas, nunca corrige un inicio de pista
+  del core, y no borra relaciones que el plan ya no deriva: las cuenta.
+  Deja `reports/youtube-reconciliation.{json,md}`.
 - Los tipos Music Video / Live Concert / Documentary nunca generan álbumes
   (gating en el adaptador + test obligatorio). Se registran con
   `media.video_albums.album_kind` = `music_video` / `live_concert` /

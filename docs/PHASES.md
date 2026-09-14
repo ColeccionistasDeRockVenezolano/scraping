@@ -10,6 +10,11 @@
 > promoción auditada de todas las fuentes con adapter y la verificación final
 > descrita en «Cierre F2–F5». **F6 ya está implementada y probada.**
 >
+> El trabajo restante se reestructuró el 2026-09-14 en las etapas **E6–E11**
+> (ver «Plan restante»). **E6 ejecutada el 2026-09-14**: reconciliación del
+> canal idempotente y verificada; el caso Caramelos conserva cinco desviaciones
+> de créditos heredadas de la ingesta, documentadas y asignadas a E10.
+>
 > Existen `youtube import-sheet`, `youtube seed-claims`, `youtube
 > discover-channel`, `youtube sync`, `youtube rederive`, `youtube api-claims`,
 > el enlazador conservador `yt:link`, el enriquecimiento dirigido
@@ -491,43 +496,135 @@ sin aprobación; caché de prompts verificado (mismo prompt → 1 llamada).
 
 ---
 
-## F7 — API + CLI operativa
+## Plan restante (reestructurado el 2026-09-14)
 
-**Objetivo:** CRUD controlado y operación por terminal.
+Las antiguas F7 (API + CLI), F8 (frontend) y F9 (endurecimiento) se
+reordenaron contra el plan de implementación original (fases 6–11) y contra
+lo que la base mostraba el 2026-09-14. Del plan original ya estaban hechas la
+aceptación Caramelos y casi toda la reconciliación del canal (649 videos
+inventariados, 603 enlaces primarios, `yt:enrich-artist`). Faltaba:
+`media.video_artists` y `media.video_tracks` en 0, 44 videos sin disco sin
+explicación, ninguna API, interfaz, backup ni auditoría final. Para no
+confundirlas con las F históricas, las etapas nuevas se numeran **E6–E11**.
+
+| Etapa | Contenido | Modelo · effort recomendados |
+|---|---|---|
+| E6 | Relaciones video→artista/pista, reporte de reconciliación y aceptación Caramelos completa | Opus 5 · high |
+| E7A | API de lectura | Sonnet 5 · medium |
+| E7B | API de escritura y cola de revisión | Opus 5 · high |
+| E8 | Interfaz React | Sonnet 5 · high |
+| E9 | QA visual | Sonnet 5 · medium |
+| E10 | Resolución de ambigüedades | Opus 5 · xhigh |
+| E11 | Hardening y auditoría final | Opus 5 · xhigh |
+
+### E6 — Reconciliación del canal (plan: fases 6 y 10A)
+
+**Objetivo:** que todo lo identificable del canal quede relacionado con
+artistas, discos y pistas, y que lo inseguro quede pendiente a la vista.
 
 Entregables:
-- Fastify: CRUD canónico (escribe vía merge engine como claims
-  `created_by=human, confidence=high`), lectura de catálogo, review,
-  conflictos, fuentes, estado de runs.
-- Zod en rutas; auth local de operador; swagger.
-- CLI completa (`doctor` incluido).
+- `crv yt:reconcile [--dry-run]` (`src/youtube/reconcile.ts`): llena
+  `media.video_artists` y `media.video_tracks` solo con identidades exactas o
+  enlaces ya confirmados; clasifica cada video en MATCHED_HIGH,
+  MATCHED_MEDIUM, AMBIGUOUS, UNMATCHED_VIDEO o CONFLICT, y cada disco sin
+  video como UNMATCHED_ALBUM; lo medio, ambiguo o en conflicto va a
+  `youtube_match`. Sin red, sin cuota, sin IA y sin tocar el core.
+- `reports/youtube-reconciliation.{json,md}`.
+- `docs/acceptance/caramelos-las-paticas.md` con los inicios de pista, los
+  IDs reales y las consultas que prueban las relaciones.
+
+Criterios de salida: segunda corrida con 0 relaciones y 0 revisiones nuevas;
+muestra SQL de álbum↔video y pista↔video; conteo de `albums` y `tracks`
+idéntico antes y después.
+
+Estado al cierre (2026-09-14, base de desarrollo, runs 191 y 192):
+
+| Criterio | Resultado |
+|---|---|
+| Videos clasificados | 649: MATCHED_HIGH 623 · MATCHED_MEDIUM 14 · AMBIGUOUS 1 · UNMATCHED_VIDEO 11 · CONFLICT 0 |
+| Por tipo | full_album 603 · music_video 17 · live_concert 15 · documentary 3 · editorial 11 |
+| `media.video_artists` | 638 (635 `performer`, 3 `subject`) |
+| `media.video_tracks` | 6.580 en 609 videos, 6.562 con su claim; 6.569 de 6.602 entradas de tracklist casadas |
+| Revisiones `youtube_match` | 15 nuevas (ids 191119–191133) |
+| UNMATCHED_ALBUM | 4.158 discos sin video, 713 de artistas presentes en el canal (el resto no tiene videos) |
+| Segunda corrida (run 192) | 0 relaciones nuevas, 0 revisiones; artistas, discos, pistas, personas, sellos, créditos, `video_albums` y `merge_audit` idénticos |
+| `doctor` · typecheck · suite | todo verde · exit 0 · 256 pruebas pasan, 1 omitida |
+
+Lo que quedó pendiente, a la vista en el reporte y en la cola:
+- 11 piezas editoriales (reseñas, entrevistas, reposts) sin relación: varias
+  nombran a un artista en prosa y no se adivina.
+- 5 videoclips cuya canción está en varios discos: 4 con propuesta de la única
+  versión de estudio y *Burrera* (Candy66), en dos discos `other`, ambigua.
+- 5 conciertos con un disco homónimo del artista: se propone el vínculo
+  `live_concert`, no se asume.
+- 5 discos enlazados con pistas que no casan: 4 sin ninguna pista en el
+  catálogo (*EtéreoPlay Sessions*, *Smells Like Teen Spirit*, *Desenchufado*,
+  *Fabricado Acá*) y *Acústico En Bits Session* («Intro», «Cenizas»/«Ceniza»).
+- «Cangrejo & Kreils» resuelve por un alias existente de Cangrejo; Kreils no
+  queda relacionado con ese video.
+- **Caso Caramelos: relaciones de video y pistas cumplen; créditos no del
+  todo.** Cinco desviaciones heredadas de la ingesta, documentadas con IDs en
+  `docs/acceptance/caramelos-las-paticas.md` §4b: «Boris Milán» con tilde
+  frente al «Boris Milan» del video, Carlos Rondon partido por Sincopa en «Car»
+  y «los Rondon», Luis Barrios duplicado con Luis "Golding" Barrios, la banda
+  creada también como persona productora, y «Artwork & Illustration by» /
+  «Photography by» sin leer en la descripción. Son decisiones de identidad y
+  corrección de datos: van a E10, salvo el vocabulario del parser, que puede
+  corregirse antes.
+
+### E7A — API de lectura (plan: fase 7)
+
+Fastify con búsqueda global (artista, persona, disco, pista, productor,
+organización; los alias participan), fichas agregadas de artista, disco,
+persona y organización según el plan, lectura de fuentes, claims, videos y
+enlaces, paginación, Zod, errores consistentes y OpenAPI.
+
+Criterios de salida: tests contra PostgreSQL de prueba, incluido el endpoint
+de *Las Paticas De La Abuela* con pistas, créditos y videos.
+
+### E7B — API de escritura y cola de revisión (plan: fase 7)
+
+CRUD transaccional de las 10 tablas del core **a través del merge engine**
+(claims `created_by=human, confidence=high`; los controllers no duplican su
+lógica), endpoints de la cola (listar, detalle, aceptar, rechazar, resolver
+conflicto) con audit trail y autenticación local de operador.
 
 Criterios de salida: CRUD de artista/álbum con auditoría; una corrección
-manual de un dato conflictivo resuelve el conflicto y conserva historial.
+manual de un dato conflictivo resuelve el conflicto y conserva el historial.
 
----
+### E8 — Interfaz React (plan: fase 8)
 
-## F8 — Frontend (futuro)
+Buscador, fichas de artista, disco, persona y organización con todas las
+entidades clicables, formularios CRUD y cola de revisión con evidencia
+visible; estados de carga, vacío y error; responsive. Referencias visuales
+existentes: `public/cotejo.html` y la web de CRV WordPress.
 
-**Objetivo:** interfaz de consulta y revisión (React SPA servida por la
-misma app).
+Criterios de salida: build de producción y recorrido Caramelos De Cianuro →
+Las Paticas De La Abuela → 4 pistas → Asier Cazalis → volver → Mad Box's
+Studios. El navegador solo habla con la API.
 
-Entregables: catálogo (artista → álbum → tracks → créditos), detalle con
-evidencias, cola de revisión, gestión de géneros/fuentes.
+### E9 — QA visual (plan: fase 9)
 
-Criterios de salida: navegación completa del catálogo; aprobación de un
-item de review desde la UI. El navegador solo habla con la API (regla de
-oro §2 de ARCHITECTURE.md).
+Capturas reales en escritorio y móvil, fixtures extremos (30 músicos, 50
+créditos, 100 pistas, nombres y biografías largos) en base desechable,
+correcciones solo de problemas demostrables y `docs/UI_QA.md`.
 
----
+### E10 — Resolución de ambigüedades (plan: fase 10B)
 
-## F9 — Endurecimiento y documentación
+Sobre la cola, nunca sobre todo el catálogo: las revisiones de E6, los 85
+pares de discos dudosos y la pasada de identidades de personas (grafías
+distintas). Primero reglas deterministas, después DeepSeek Pro con JSON
+validado; decisiones MATCH_HIGH_CONFIDENCE / KEEP_SEPARATE / NEEDS_HUMAN /
+CONFLICT; al core solo llega lo que apruebe una persona.
+`reports/ambiguity-resolution.md`.
 
-**Objetivo:** garantías operativas.
+### E11 — Hardening y auditoría final (plan: fase 11)
 
-Entregables: backups (pg_dump + rsync de `data/raw`), guía de recuperación,
-verificación de cuotas/limites, docs actualizadas (DATA_MODEL, SOURCES con
-hallazgos de F4), suite de idempotencia completa sobre fixtures golden.
+Los 13 escenarios del plan, repetir el caso Caramelos, búsqueda de secretos en
+git, linter real (hoy `npm run lint` es `tsc`), backups con `pg_dump` + `data/raw`
+con prueba de restauración y `docs/FINAL_AUDIT.md`, `OPERATIONS.md`,
+`ADDING_A_SOURCE.md` y `DATABASE_BACKUP_RESTORE.md`, con matriz
+requisito/implementación/test/estado respaldada por evidencia.
 
 Criterios de salida: restauración desde backup probada; `doctor` y suite
 completa en verde en la máquina de producción.

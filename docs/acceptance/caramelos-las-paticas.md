@@ -203,6 +203,70 @@ Criterios adicionales cuando F5 incorpore Sincopa:
     "Group Members" de la ficha de artista, **no** de créditos de álbum. Un
     crédito de álbum nunca genera una fila en `artist_members`.
 
+## 4b. Extensión E6 — video, pistas y créditos con IDs reales (2026-09-14)
+
+Verificado en la base de desarrollo tras `crv yt:reconcile` (runs 191 y 192;
+la segunda no insertó ninguna fila ni revisión). IDs reales:
+
+| Entidad | ID | Valor |
+|---|---|---|
+| Artista | 58 | Caramelos De Cianuro (1 fila; 26 discos, 26 títulos+año distintos) |
+| Disco | 57 | Las Paticas De La Abuela · 1992 · `ep` · `youtube_url` = `https://www.youtube.com/watch?v=Q-pRpO2sYSI` |
+| Video | 54 | `Q-pRpO2sYSI` · `video_albums`: `full_album`, `is_primary_link=true` · `video_artists`: `performer`, `high` |
+| Pistas | 4373 · 4379 · 4385 · 4391 | inicios 0 · 247 · 475 · 615, fin 247 · 475 · 615 · 940 |
+| Claims de inicio | 43920 · 43926 · 43932 · 43938 | `youtube_start_seconds`, `accepted`, evidencia `tracklist:0..3` del video |
+| Estudio | 176 | Mad Box's Studios · `recording_studio` · créditos 3073 (`recorded at`) y 4253 (`mixed at`) |
+
+```sql
+-- álbum ↔ video
+SELECT ar.id, ar.name, a.id, a.title, a.release_year, a.album_type, v.video_id, va.album_kind, va.is_primary_link
+  FROM albums a JOIN artists ar ON ar.id=a.artist_id
+  JOIN media.video_albums va ON va.album_id=a.id JOIN media.youtube_videos v ON v.id=va.video_id
+ WHERE ar.name='Caramelos De Cianuro' AND a.title='Las Paticas De La Abuela';
+
+-- pista ↔ video, con el claim que respalda cada inicio
+SELECT t.id, t.track_number, t.title, vt.start_seconds, vt.end_seconds, vt.confidence, vt.claim_id
+  FROM media.video_tracks vt JOIN tracks t ON t.id=vt.track_id
+  JOIN media.youtube_videos v ON v.id=vt.video_id
+ WHERE v.video_id='Q-pRpO2sYSI' ORDER BY vt.start_seconds;
+
+-- créditos del disco con su persona, artista u organización
+SELECT ac.id, ac.credit_type, ac.role, p.name AS person, ar.name AS artist, o.name AS organization
+  FROM album_credits ac LEFT JOIN persons p ON p.id=ac.person_id
+  LEFT JOIN artists ar ON ar.id=ac.artist_id LEFT JOIN organizations o ON o.id=ac.organization_id
+ WHERE ac.album_id=57 ORDER BY ac.credit_type, ac.id;
+
+-- sin duplicados de ocurrencias
+SELECT count(*), count(DISTINCT (video_id, track_id, start_seconds)) FROM media.video_tracks;
+```
+
+Cumple: 1 artista, 1 disco 1992 EP, 4 pistas con los inicios esperados
+enlazadas al video, los cuatro músicos con su rol exacto (Asier Cazalis 6940,
+Miguel Gonzáles "El Enano" 4857, Luis "Golding" Barrios 3767, Pablo Martínez
+1792), Caramelos De Cianuro como productor (4975) y autor (4365) por su ficha
+de artista, Mad Box's Studios como organización, 0 membresías creadas desde
+créditos y "August 1992" fuera de `release_year`.
+
+**No cumple todavía** (desviaciones heredadas de la ingesta, no de E6; se
+dejan a la vista para decisión humana en E10):
+
+1. **Boris Milán** (persona 2966) lleva tilde, pero el video dice «Boris
+   Milan» (claims de 2157 y 2214). El plan prohíbe cambiar la ortografía por
+   otra fuente; el nombre canónico debería ser el del video con la variante
+   como alias.
+2. **Carlos Rondon no existe.** Sincopa aportó «Car» (persona 4189, crédito
+   8938) y «los Rondon» (4192, crédito 8942) como fotógrafos: el reparto de
+   créditos con varios nombres cortó un solo nombre en dos.
+3. **Luis Barrios** (546, crédito 8926 de Sincopa) y **Luis "Golding"
+   Barrios** (1672, crédito 3767 del video) son dos personas para el mismo
+   guitarrista.
+4. **«Caramelos de Cianuro» es también una persona** (4186, crédito 8936 de
+   Sincopa, `producer`), duplicando el crédito de la banda (4975).
+5. **Créditos del video sin leer:** «Artwork & Illustration by Pablo
+   Martínez» y «Photography by Carlos Rondon» no están en el vocabulario de
+   `CREDIT_LINE`; el arte de Pablo Martínez solo llega por Sincopa (8939,
+   «Graphic Design & Illustrations»).
+
 ## 5. Definición de fallo
 
 El escenario **falla** si: aparece más de un artista Caramelos; existe más de
