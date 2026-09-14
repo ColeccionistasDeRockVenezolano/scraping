@@ -1,7 +1,12 @@
 import { load, type CheerioAPI } from "cheerio";
 import type { AnyNode } from "domhandler";
 import type { PageRef, RawRecord, SourceAdapter, StoredPage } from "./contracts.js";
-import { ADAPTER_VERSION, absoluteUrl, clean, contentImages, excerpt } from "./shared.js";
+import { absoluteUrl, clean, contentImages, excerpt } from "./shared.js";
+
+// Este adaptador tiene su propia versión porque el HTML FrontPage de Sincopa
+// requiere reglas específicas. 1.1.0 corrige los encabezados multilínea y
+// evita confundir fichas detalladas de sencillos con la tabla de discografía.
+const SINCOPA_ADAPTER_VERSION = "1.1.0";
 
 // Sincopa es HTML de FrontPage: tablas anidadas, sin clases ni encabezados
 // semánticos. Toda su semántica está codificada en el color de fuente:
@@ -69,6 +74,59 @@ function labelledPairs($: CheerioAPI): Map<string, string> {
     }
   });
   return pairs;
+}
+
+/**
+ * Cabecera de una ficha de disco. El artista y el título pueden ocupar varias
+ * líneas y Sincopa intercala <br> vacíos de manera inconsistente. El artista
+ * es el bloque en negrita; Company, Genre y Release Year se anclan desde el
+ * final, y el texto intermedio es el título. Así «Cruel (Instinto de Morder)»
+ * no convierte el subtítulo en sello y «Días De Septiembre & Un Día» no se
+ * parte.
+ */
+function albumHeaderPairs($: CheerioAPI): Map<string, string> {
+  const result = new Map<string, string>();
+  $("tr").each((_, row) => {
+    if (result.size > 0) return;
+    const cells = $(row).children("td").toArray();
+    for (let index = 0; index < cells.length - 1; index += 1) {
+      const labels = splitByBr($, $(cells[index]!).html() ?? "")
+        .map((label) => label.replace(/:$/, "").trim().toLowerCase());
+      const artistAt = labels.indexOf("artist");
+      const titleAt = labels.indexOf("album title");
+      if (artistAt < 0 || titleAt <= artistAt) continue;
+
+      const valueCell = $(cells[index + 1]!);
+      const values = splitByBr($, valueCell.html() ?? "");
+      const trailingLabels = labels.slice(titleAt + 1)
+        .filter((label): label is "company" | "genre" | "release year" =>
+          label === "company" || label === "genre" || label === "release year");
+      const titleEnd = values.length - trailingLabels.length;
+      if (titleEnd <= 1) continue;
+      const join = (from: number, to: number) => clean(values.slice(from, to).filter(Boolean).join(" "));
+      const bold = valueCell.find("b").first();
+      const boldArtist = clean(splitByBr($, bold.html() ?? "").join(" "));
+      let artistEnd = 1;
+      if (boldArtist) {
+        for (let end = 1; end < titleEnd; end += 1) {
+          if (join(0, end).localeCompare(boldArtist, undefined, { sensitivity: "accent" }) === 0) {
+            artistEnd = end;
+            break;
+          }
+        }
+      }
+      const artist = boldArtist || join(0, artistEnd);
+      const title = join(artistEnd, titleEnd);
+      if (artist) result.set("artist", artist);
+      if (title) result.set("album title", title);
+      trailingLabels.forEach((label, offset) => {
+        const value = clean(values[titleEnd + offset] ?? "");
+        if (value) result.set(label, value);
+      });
+      return;
+    }
+  });
+  return result;
 }
 
 /** Filas que siguen a un encabezado de sección (td dorado) hasta el siguiente. */
@@ -264,7 +322,7 @@ export class SincopaAdapter implements SourceAdapter {
   }
 
   private record(entityKind: RawRecord["entityKind"], identity: string, fields: RawRecord["fields"]): RawRecord {
-    return { entityKind, identity: identity.slice(0, 250), extractor: this.slug, extractorVersion: ADAPTER_VERSION, fields };
+    return { entityKind, identity: identity.slice(0, 250), extractor: this.slug, extractorVersion: SINCOPA_ADAPTER_VERSION, fields };
   }
 
   private extractArtist(page: CheerioAPI, url: string): RawRecord[] {
@@ -326,6 +384,11 @@ export class SincopaAdapter implements SourceAdapter {
       const cells = page(row).children("td").toArray();
       if (cells.length < 2) return;
       const year = clean(page(cells[0]!).text());
+      // Hay páginas donde la misma sección contiene fichas detalladas de
+      // sencillos: índice | "Songs/Company/..." | valores. No son filas de
+      // esta tabla y tratarlas como año | título | sello contaminaba álbumes
+      // y organizaciones. La tabla simple declara siempre un año de 4 cifras.
+      if (!/^(?:19|20)\d{2}$/.test(year)) return;
       const titleCell = page(cells[1]!);
       const title = clean(titleCell.text());
       if (!title) return;
@@ -343,6 +406,7 @@ export class SincopaAdapter implements SourceAdapter {
       const label = labelCell ? clean(labelCell.find('font[size="2"]').first().text()) : "";
       const catalog = labelCell ? clean(labelCell.find('font[size="1"]').first().text()) : "";
       if (catalog) albumFields.push({ field: "catalog_number", value: catalog, evidence: where });
+      if (label && named(label)) albumFields.push({ field: "label", value: label, evidence: where });
       // "artista::título": el disco no se identifica solo por su nombre —
       // dos bandas pueden tener un "Vol. 1" — y el parental es lo que permite
       // crearlo en el core, que no admite un álbum sin artista.
@@ -359,7 +423,7 @@ export class SincopaAdapter implements SourceAdapter {
   }
 
   private extractAlbum(page: CheerioAPI, url: string): RawRecord[] {
-    const pairs = labelledPairs(page);
+    const pairs = albumHeaderPairs(page);
     const title = pairs.get("album title");
     const artist = pairs.get("artist");
     if (!title) return [];
@@ -384,6 +448,8 @@ export class SincopaAdapter implements SourceAdapter {
       if (year) albumFields.push({ field: "release_year", value: year, evidence: evidence("td", release) });
       if (format) albumFields.push({ field: "format", value: clean(format), evidence: evidence("td", release) });
     }
+    const company = pairs.get("company");
+    if (company && named(company)) albumFields.push({ field: "label", value: company, evidence: evidence("td", company) });
     // La portada vive en covers*/: el alt trae además "Artista - Título", que
     // corrobora la identidad ya extraída de la ficha.
     const cover = firstImageOfKind(page, url, "cover");
@@ -399,7 +465,6 @@ export class SincopaAdapter implements SourceAdapter {
       ]));
     }
 
-    const company = pairs.get("company");
     if (company && named(company)) {
       records.push(this.record("organization", company, [
         { field: "name", value: company, evidence: evidence("td", company) },

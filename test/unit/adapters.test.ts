@@ -114,6 +114,54 @@ describe("adapters funcionales de las fuentes autorizadas", () => {
     expect(claims.some((claim) => claim.entityKind === "artist" && claim.field === "name" && claim.rawValue === "Fusión IV")).toBe(true);
   });
 
+  it("Sincopa conserva artista y título multilínea sin convertirlos en sello", () => {
+    const adapter = adapterFor({ slug: "sincopa", siteType: "database" });
+    if (!adapter?.extractSnapshot) throw new Error("adapter Sincopa faltante");
+    const body = `
+      <table><tr>
+        <td>Artist:<br><br>Album Title:<br><br>Company:<br>Genre:<br>Release Year:</td>
+        <td><b>Días De Septiembre<br>&amp; Un Día</b><br>58/56<br>Independent<br>Rock/Post-Rock<br>2015 (Split-DA)</td>
+      </tr></table>`;
+    const records = adapter.extractSnapshot({
+      url: "https://fixture.invalid/rock_pop/cdinfo_rock/diasdseptiembre_3_5856.htm",
+      kind: "html", rawPageId: 1, body,
+    });
+    const claims = records.flatMap(normalizeRecord);
+
+    expect(claims.some((claim) => claim.entityKind === "artist" && claim.field === "name"
+      && claim.rawValue === "Días De Septiembre & Un Día")).toBe(true);
+    expect(claims.some((claim) => claim.entityKind === "album" && claim.field === "title"
+      && claim.rawValue === "58/56")).toBe(true);
+    expect(claims.some((claim) => claim.entityKind === "album" && claim.field === "label"
+      && claim.rawValue === "Independent")).toBe(true);
+    expect(claims.some((claim) => claim.entityKind === "organization" && claim.field === "name"
+      && claim.rawValue === "Independent")).toBe(true);
+    expect(claims.some((claim) => claim.entityKind === "organization" && claim.rawValue === "58/56")).toBe(false);
+  });
+
+  it("Sincopa no trata una ficha detallada de sencillo como año, álbum y sello", () => {
+    const adapter = adapterFor({ slug: "sincopa", siteType: "database" });
+    if (!adapter?.extractSnapshot) throw new Error("adapter Sincopa faltante");
+    const body = `
+      <table><tr><td bgcolor="#6A152F">Preludio</td></tr></table>
+      <table>
+        <tr><td bgcolor="#FFCC00" colspan="3">Discography</td></tr>
+        <tr>
+          <td>3</td>
+          <td>Songs:<br><br>Company:<br><br>Notes:<br>Producer:</td>
+          <td><font color="#FFCC00" size="2">1- Bye Bye, Mi Amor<br>2- El Horoscopo<br>Foca Records<br>45 rpm (1977)<br>Pablo Schneider</font></td>
+        </tr>
+      </table>`;
+    const records = adapter.extractSnapshot({
+      url: "https://fixture.invalid/rock_pop/artist_rock/preludio.htm",
+      kind: "html", rawPageId: 1, body,
+    });
+
+    expect(records.some((record) => record.entityKind === "artist" && record.identity === "Preludio")).toBe(true);
+    expect(records.some((record) => record.entityKind === "album")).toBe(false);
+    expect(records.some((record) => record.entityKind === "organization")).toBe(false);
+  });
+
   it("Rock Hecho En Venezuela usa solo la raíz y los dos endpoints WP finitos", async () => {
     const adapter = adapterFor({ slug: "rock-hecho-en-venezuela", siteType: "website" });
     expect(adapter).toBeDefined();
