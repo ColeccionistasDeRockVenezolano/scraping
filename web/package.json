@@ -1,0 +1,34 @@
+{
+  "name": "crv-web",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Coleccionistas de Rock Venezolano — interfaz (buscador, fichas y CRUD sobre la API)",
+  "type": "module",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -p tsconfig.json --noEmit && vite build",
+    "build:public": "tsc -p tsconfig.json --noEmit && vite build --base=/crv/",
+    "preview": "vite preview",
+    "serve:public": "node server.mjs",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "qa:capture": "node tests/visual/capture.mjs",
+    "qa:smoke": "node tests/visual/smoke.mjs"
+  },
+  "dependencies": {
+    "@phosphor-icons/react": "^2.1.10",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.28.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "typescript": "^5.7.2",
+    "vite": "^5.4.11"
+  }
+}

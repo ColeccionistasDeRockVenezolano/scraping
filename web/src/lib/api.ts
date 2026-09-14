@@ -1,0 +1,188 @@
+// CRV · Cliente de la API (src/api/*). El navegador solo habla con esta API,
+// nunca con PostgreSQL (CONTRACT #20) — cada función de aquí es una llamada
+// HTTP directa, sin lógica de negocio propia.
+import { loadOperatorCreds } from "./operator";
+import type {
+  Alias, AliasWriteResult, AlbumDetail, AlbumListItem, ArtistDetail, ArtistListItem, AuditRow, Claim, EntityWriteResult,
+  OrganizationDetail, OrganizationListItem, Page, PersonDetail, PersonListItem, RelationUpdateResult, RelationWriteResult,
+  RemovalResult, ReviewActionResult, ReviewDetail, ReviewListItem, SearchResults, Source, VideoDetail, VideoListItem,
+} from "./types";
+
+const BASE_URL = (import.meta.env["VITE_API_BASE_URL"] as string | undefined) ?? "http://127.0.0.1:8080";
+
+export class ApiError extends Error {
+  constructor(readonly status: number, readonly code: string, message: string, readonly details?: Record<string, unknown>) {
+    super(message);
+  }
+}
+
+type Query = Record<string, string | number | boolean | undefined>;
+
+function buildUrl(path: string, query?: Query): string {
+  // La API puede vivir en el origen (desarrollo) o bajo un prefijo detrás de
+  // un proxy, por ejemplo /crv/api en Tailscale Funnel. Un path que empieza
+  // por / haría que URL descartase ese prefijo, por lo que se normaliza aquí.
+  const base = BASE_URL.endsWith("/") ? BASE_URL : `${BASE_URL}/`;
+  const url = new URL(path.replace(/^\/+/, ""), base);
+  for (const [key, value] of Object.entries(query ?? {})) {
+    if (value !== undefined) url.searchParams.set(key, String(value));
+  }
+  return url.toString();
+}
+
+interface RequestOptions {
+  method?: "GET" | "POST" | "PATCH" | "DELETE";
+  query?: object;
+  body?: unknown;
+  /** Esta llamada escribe: exige el token del operador. */
+  authenticated?: boolean;
+}
+
+async function request<T>(path: string, options: RequestOptions = {}): Promise<T> {
+  const method = options.method ?? "GET";
+  const headers: Record<string, string> = {};
+  if (options.body !== undefined) headers["content-type"] = "application/json";
+  if (options.authenticated) {
+    const creds = loadOperatorCreds();
+    if (!creds.token) throw new ApiError(401, "missing_token", "Configura el token de operador para poder escribir.");
+    headers["authorization"] = `Bearer ${creds.token}`;
+    if (creds.name) headers["x-crv-operator"] = creds.name;
+  }
+  const init: RequestInit = {
+    method,
+    headers,
+    ...(options.body === undefined ? {} : { body: JSON.stringify(options.body) }),
+  };
+  const response = await fetch(buildUrl(path, options.query as Query | undefined), init);
+  const text = await response.text();
+  const json: unknown = text ? JSON.parse(text) : undefined;
+  if (!response.ok) {
+    const error = (json as { error?: { code?: string; message?: string; details?: Record<string, unknown> } } | undefined)?.error;
+    throw new ApiError(response.status, error?.code ?? "unknown", error?.message ?? response.statusText, error?.details);
+  }
+  return json as T;
+}
+
+export interface Paged { limit?: number; offset?: number; }
+
+// ---------- lectura ----------
+export const searchApi = {
+  search: (q: string, types?: string[], limit = 20) =>
+    request<SearchResults>("/search", { query: { q, limit, ...(types?.length ? { types: types.join(",") } : {}) } }),
+};
+
+export const artistsApi = {
+  list: (params: Paged & { q?: string } = {}) => request<Page<ArtistListItem>>("/artists", { query: params }),
+  get: (id: number) => request<ArtistDetail>(`/artists/${id}`),
+};
+
+export const albumsApi = {
+  list: (params: Paged & { q?: string; artistId?: number } = {}) => request<Page<AlbumListItem>>("/albums", { query: params }),
+  get: (id: number) => request<AlbumDetail>(`/albums/${id}`),
+};
+
+export const personsApi = {
+  list: (params: Paged & { q?: string } = {}) => request<Page<PersonListItem>>("/persons", { query: params }),
+  get: (id: number) => request<PersonDetail>(`/persons/${id}`),
+};
+
+export const organizationsApi = {
+  list: (params: Paged & { q?: string } = {}) => request<Page<OrganizationListItem>>("/organizations", { query: params }),
+  get: (id: number) => request<OrganizationDetail>(`/organizations/${id}`),
+};
+
+export const sourcesApi = {
+  list: () => request<Source[]>("/sources"),
+  get: (id: number) => request<Source & { lastRun: { id: number; kind: string; status: string; startedAt: string; finishedAt: string | null } | null }>(`/sources/${id}`),
+};
+
+export const claimsApi = {
+  forEntity: (entity: "artist" | "person" | "organization" | "album" | "track", id: number, params: Paged = {}) =>
+    request<Page<Claim>>("/claims", { query: { entity, id, ...params } }),
+};
+
+export const auditApi = {
+  forEntity: (entity: string, id: number, params: Paged = {}) => request<Page<AuditRow>>("/audit", { query: { entity, id, ...params } }),
+  run: (id: number) => request<{ id: number; kind: string; status: string; sourceId: number | null; startedAt: string; finishedAt: string | null; params: unknown; counters: unknown; errorLog: string | null }>(`/runs/${id}`),
+};
+
+export const youtubeApi = {
+  list: (params: Paged & { q?: string } = {}) => request<Page<VideoListItem>>("/youtube/videos", { query: params }),
+  get: (id: number) => request<VideoDetail>(`/youtube/videos/${id}`),
+};
+
+export const reviewApi = {
+  list: (params: Paged & { status?: string; kind?: string } = {}) => request<Page<ReviewListItem>>("/review-queue", { query: params }),
+  get: (id: number) => request<ReviewDetail>(`/review-queue/${id}`),
+  accept: (id: number, note: string, targetId?: number) =>
+    request<ReviewActionResult>(`/review-queue/${id}/accept`, { method: "POST", authenticated: true, body: { note, ...(targetId === undefined ? {} : { targetId }) } }),
+  reject: (id: number, note: string) =>
+    request<ReviewActionResult>(`/review-queue/${id}/reject`, { method: "POST", authenticated: true, body: { note } }),
+  resolveConflict: (id: number, note: string, choice?: string, value?: string | number | boolean | null) =>
+    request<ReviewActionResult>(`/review-queue/${id}/resolve-conflict`, {
+      method: "POST", authenticated: true,
+      body: { note, ...(choice === undefined ? {} : { choice }), ...(value === undefined ? {} : { value }) },
+    }),
+};
+
+// ---------- escritura de entidades del core ----------
+export type EntityPath = "artists" | "persons" | "organizations" | "albums" | "tracks";
+
+function entityWriteApi(path: EntityPath) {
+  return {
+    create: (values: Record<string, unknown>) =>
+      request<EntityWriteResult>(`/${path}`, { method: "POST", authenticated: true, body: values }),
+    update: (id: number, values: Record<string, unknown>) =>
+      request<EntityWriteResult>(`/${path}/${id}`, { method: "PATCH", authenticated: true, body: values }),
+    remove: (id: number, note?: string) =>
+      request<RemovalResult>(`/${path}/${id}`, { method: "DELETE", authenticated: true, query: note ? { note } : {} }),
+  };
+}
+
+export const artistWrites = entityWriteApi("artists");
+export const personWrites = entityWriteApi("persons");
+export const organizationWrites = entityWriteApi("organizations");
+export const albumWrites = entityWriteApi("albums");
+export const trackWrites = entityWriteApi("tracks");
+
+// ---------- escritura de relaciones puente ----------
+export type RelationPath = "artist-members" | "person-organizations" | "album-credits" | "track-credits" | "album-formats";
+
+function relationWriteApi(path: RelationPath) {
+  return {
+    create: (values: Record<string, unknown>) =>
+      request<RelationWriteResult>(`/${path}`, { method: "POST", authenticated: true, body: values }),
+    update: (id: number, values: Record<string, unknown>) =>
+      request<RelationUpdateResult>(`/${path}/${id}`, { method: "PATCH", authenticated: true, body: values }),
+    remove: (id: number, note?: string) =>
+      request<RemovalResult>(`/${path}/${id}`, { method: "DELETE", authenticated: true, query: note ? { note } : {} }),
+  };
+}
+
+export const artistMemberWrites = relationWriteApi("artist-members");
+export const personOrganizationWrites = relationWriteApi("person-organizations");
+export const albumCreditWrites = relationWriteApi("album-credits");
+export const trackCreditWrites = relationWriteApi("track-credits");
+export const albumFormatWrites = relationWriteApi("album-formats");
+
+// ---------- escritura de alias ----------
+function aliasWriteApi(path: EntityPath) {
+  return {
+    create: (entityId: number, input: { alias: string; aliasType: string; isPrimary: boolean; note?: string }) =>
+      request<AliasWriteResult>(`/${path}/${entityId}/aliases`, { method: "POST", authenticated: true, body: input }),
+    update: (entityId: number, aliasId: number, input: Partial<Pick<Alias, "alias" | "aliasType" | "isPrimary">> & { note?: string }) =>
+      request<AliasWriteResult>(`/${path}/${entityId}/aliases/${aliasId}`, { method: "PATCH", authenticated: true, body: input }),
+    remove: (entityId: number, aliasId: number, note?: string) =>
+      request<{ id: number; entityId: number; runId: number }>(`/${path}/${entityId}/aliases/${aliasId}`, {
+        method: "DELETE", authenticated: true, query: note ? { note } : {},
+      }),
+  };
+}
+
+export const aliasWrites: Record<EntityPath, ReturnType<typeof aliasWriteApi>> = {
+  artists: aliasWriteApi("artists"),
+  persons: aliasWriteApi("persons"),
+  organizations: aliasWriteApi("organizations"),
+  albums: aliasWriteApi("albums"),
+  tracks: aliasWriteApi("tracks"),
+};
