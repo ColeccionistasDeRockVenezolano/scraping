@@ -5,19 +5,25 @@
 > (`crv_simple_v1.sql`): las migraciones posteriores solo tocan el esquema
 > `ingest`.
 >
-> Estado actual verificado (2026-09-11): **F0 y F1 cerradas**. F2–F4 ya tienen
-> importadores, sincronización de YouTube, adapters y datos procesados, pero
-> conservan criterios de aceptación pendientes. El núcleo técnico de **F5**
-> (ER, merge, conflictos, cola y aprobación programática) está implementado;
-> F5 **no está cerrada operativamente**. **F6 ya está implementada y probada**,
-> aunque formalmente debe usarse después de cerrar las guardas de F5.
+> Estado actual (cierre del 2026-09-13): **F0 y F1 cerradas**; F2 y F3 cierran
+> sus criterios (ver «Estado al cierre» de cada una); F4 y F5 se cierran con la
+> promoción auditada de todas las fuentes con adapter y la verificación final
+> descrita en «Cierre F2–F5». **F6 ya está implementada y probada.**
 >
-> La lista antigua de “comandos F2+ faltantes” dejó de ser válida: hoy existen
-> `youtube import-sheet`, `youtube seed-claims`, `youtube discover-channel`,
-> `youtube sync`, `youtube rederive`, `youtube api-claims`, el enlazador
-> conservador `yt:link` y los comandos `review` individuales y por lote.
-> Sigue faltando el enriquecimiento dirigido `yt:enrich-artist`. La aplicación auditada de
-> las decisiones de la Mesa de Cotejo ya existe y fue ejecutada.
+> Existen `youtube import-sheet`, `youtube seed-claims`, `youtube
+> discover-channel`, `youtube sync`, `youtube rederive`, `youtube api-claims`,
+> el enlazador conservador `yt:link`, el enriquecimiento dirigido
+> `yt:enrich-artist` y los comandos `review` individuales y por lote. La
+> aplicación auditada de las decisiones de la Mesa de Cotejo ya existe y fue
+> ejecutada.
+>
+> Reglas del propietario que gobiernan el cierre (2026-09-13): un artista de
+> blog entra solo con señal venezolana (ya en el catálogo, ciudad/estado/sello
+> venezolano en la fuente, o fuente 100 % venezolana); en Hippito, que no da
+> origen de nadie, solo se completan artistas ya catalogados; personas y sellos
+> nuevos solo entran si algo conservado los nombra; géneros solo los que
+> afirma la fuente; créditos con varios nombres se parten en personas; el canal
+> de YouTube manda sobre la lista de pistas.
 >
 > Nota de entorno (actualizada 2026-09-08): la máquina no tenía Node 22 en el
 > PATH por defecto (solo Node 20 vía `nodesource`), pero sí un Node 22.23.1
@@ -31,51 +37,61 @@
 
 ---
 
-## Corte operativo para cerrar F5 (base local, 2026-09-11)
+## Cierre F2–F5 (base local, 2026-09-13)
 
-- YouTube está inventariado: **648 videos**, **646 hidratados** y 2 ausentes.
-  `media.video_albums` contiene 368 asociaciones sobre los 542 discos
-  canónicos actuales, pero solo una está confirmada como enlace primario; la
-  selección humana de los demás enlaces sigue pendiente.
-- La hoja maestra está importada: 606 filas, 520 con `video_id`. Sus 2.942
-  claims están en **2.580 accepted, 345 candidate y 17 conflict** después de
-  aplicar las decisiones humanas; repetir `youtube seed-claims` reutiliza los
-  2.942 sin degradar ese estado ni duplicar cola o decisiones de ER.
-- La Mesa conserva 195 decisiones humanas activas: **195 ya aplicadas y
-  auditadas**, sin `unsure`, decisiones pendientes ni inválidas. Los 77 careos
-  finales se resolvieron en seis discos de Los Kings; *El Super Grupo* quedó
-  como Palacio LPS-66357 (1975), separado de Fusión IV. La incoherencia de
-  `Lord Henry con Los Impala` ya fue corregida y aplicada. Cuatro `unsure` se retiraron
-  al confirmar que *The Collapse of Singularity* repite legítimamente cuatro
-  títulos en las posiciones 2/6, 3/7, 4/8 y 5/9; el catálogo conserva ahora las
-  nueve pistas y los cuatro conflictos quedaron como `both_kept`. El comando
-  `crv review apply-decisions` previsualiza y, con `--confirm`, aplica solo las
-  resoluciones concluyentes; es idempotente y nunca aplica `unsure`.
-- Seis fuentes han producido claims en esta base (YouTube API, seed YT,
-  Sincopa, Descargas Metal, Hippito y Rockzuela). Los snapshots crudos de las
-  demás fuentes no significan que sus claims se hayan emitido o aceptado.
-- La prueba operativa de idempotencia quedó ejecutada el 2026-09-11. El
-  segundo barrido completo de Descargas Metal fue `0 nuevas / 47.237
-  reutilizadas`; el de Rockzuela, `0 / 5.326`; y dos repeticiones del seed YT,
-  `0 / 2.942` cada una. En todos los casos quedaron invariantes el core y las
-  **3.410** filas de `ingest.merge_audit`.
-- Los cuatro conflictos reales de pistas repetidas están resueltos como
-  `both_kept` por una persona y respaldados por cuatro cambios `track.title`
-  en `merge_audit` (run 100), cada uno enlazado a su claim. Quedan **15
-  conflictos de álbum abiertos** (10 `youtube_url`, 3 `album_type`, 2
-  `release_year`): no tienen decisión activa de la Mesa y por tanto el
-  aplicador no inventa una resolución. `doctor` exige cobertura de auditoría
-  para toda fila canónica y al menos un claim por cada auditoría.
+Criterio de cierre: 0 claims nuevos al repetir, 0 entidades duplicadas, 0 filas
+sin auditoría, 0 conflictos sin decisión, y `doctor`, typecheck y suite en
+verde. Verificado el 2026-09-13 (22:08–22:45) con la base de desarrollo:
 
-Orden restante recomendado:
+| Criterio | Resultado |
+|---|---|
+| Re-ingesta de las 9 fuentes con adapter | **0 nuevas**: Sincopa 0/158.061, Hippito 0/129.679, Rock De Vzla 0/54.143, Descargas Metal 0/47.237, CRV WordPress 0/7.279, Rockzuela 0/5.326, RHV 0/126, El Punk 0/74, Rock Hecho 0/8 |
+| `youtube seed-claims` / `youtube api-claims` | 0 nuevos / 3.156 reusados · 0 nuevos / 96.771 reusados (la primera pasada emitió los 250 claims del video `hnAeUGloVP8`, publicado ese mismo día, y se aprobaron) |
+| Claims `candidate` o `conflict` | **0** en todas las fuentes (509.653 claims) |
+| Revisiones abiertas · conflictos abiertos | **0 · 0** |
+| Duplicados por nombre exacto (artistas, discos, personas, sellos, pistas, formatos) | **0**; `crv review duplicates`: 0 grupos (5 descartes legítimos: mismo título, años distintos) |
+| `doctor` | todo verde, incluida `merge_audit.coverage` (116.651 auditorías, todas con claim) |
+| typecheck · suite | exit 0 · 247 pruebas pasan, 1 omitida (DeepSeek real opcional) |
 
-1. completar la selección humana de los enlaces primarios que no tienen una
-   coincidencia exacta en la hoja YT;
-2. promover los lotes válidos y ejecutar los barridos completos restantes;
-3. ✅ repetir seed y barridos representativos para demostrar idempotencia,
-   resolver conflictos reales y verificar `merge_audit`;
-4. declarar F5 cerrada cuando los 15 conflictos pendientes reciban decisión
-   humana y continuar el uso operativo de F6.
+Catálogo resultante: 1.982 artistas, 4.761 discos, 27.439 pistas, 10.722
+personas, 763 organizaciones, 1.367 membresías, 17.284 créditos de disco,
+12.247 de pista, 744 formatos de edición, 1.020 `media_links` y **603 discos
+con enlace primario** a su video. `person_organizations` sigue en 0: ninguna
+fuente emite esa relación.
+
+Cómo se cerró (reglas del propietario en el encabezado):
+- **Promoción por fuente** con plan JSON + run auditado: RHV, El Punk, Rock
+  Hecho, CRV WordPress, Rock De Vzla, Sincopa y Hippito. Los créditos con varios
+  nombres se partieron en personas; lo que el motor dejó en revisión (pista
+  inexistente, acreditado inexistente, varias etapas de membresía) se resolvió
+  con la lista de pistas del canal como verdad: el crédito de una pista que el
+  canal no lista se reemplaza.
+- **Pertinencia**: en Hippito solo se completan artistas ya catalogados; de 334
+  recopilatorios de Various Artists se conservan los 60 que nombran a algún
+  artista del catálogo y se retiran 274 ediciones venezolanas de música
+  extranjera (discos borrados con su historia copiada en `merge_audit`, claims
+  rechazados, nunca borrados). Personas y sellos nuevos solo entran si algo
+  conservado los nombra.
+- **Duplicados**: además de `crv review duplicates`, se buscaron discos del
+  mismo artista con pistas iguales en la misma posición (títulos truncados y
+  erratas de las fuentes) y se fusionaron 20, alineando antes —auditado— los
+  títulos de pista que impedían la fusión; también Azúcar Cacao y Leche →
+  Azúcar, Cacao & Leche (nombre del canal) y los seudoartistas Escenario Juvenil
+  y Venerock → Various Artists.
+
+Queda para revisión humana (decisiones conscientemente abiertas, fuera del
+criterio de cierre):
+- **85 pares de discos** del mismo artista que comparten ≥3 pistas en la misma
+  posición pero no pasan la regla estricta de fusión: 51 comparten menos del
+  80 % de pistas, 18 tienen años distintos, 13 títulos sin relación
+  (recopilatorios, directos), 2 están ambos en el canal y 1 es reedición.
+  Algunos son probablemente el mismo disco con otra edición o una errata de año
+  (p. ej. Krueger *Decade of Perversion* 2002/2003, Luz Verde *Cinema 0* /
+  *Cinema Cero*). También *Desde Una Orilla* de Hydra: la pista 5 difiere.
+- **Personas con varias grafías**: la detección de duplicados compara nombre
+  exacto, así que variantes como José Manuel "Chema" Arria / José Manuel Arria
+  "Chema" / J. M. Arria o Augie Verde / Augie "Oggi" Verde siguen como fichas
+  separadas. Requiere una pasada de ER de personas con decisión humana.
 
 ---
 
@@ -152,6 +168,11 @@ Criterios de salida: `doctor` en verde (✅ verificado — **desde cero con
 en verde, diff de `public` vacío (✅ verificado, bash y Vitest, PostgreSQL 15
 y 16); base desechable y reproducible (✅ vía `test/support/pg-container.ts`,
 `tests/lib_pg.sh` y `docker-compose.yml`).
+
+Regresión corregida (2026-09-13): `test/contract/core-and-schema.test.ts`
+listaba las migraciones solo hasta `0010`, así que al llegar
+`0011_album_classifications` fallaban 2 tests (subida y rollback). Ya la
+incluye y vuelve a pasar completo.
 
 Estado de la suite (2026-09-08): `npm test` = **103 tests en 13 archivos**,
 más 1 smoke test DeepSeek correctamente omitido sin API key;
@@ -241,6 +262,24 @@ las 88 filas anómalas esperadas (86 `missing_url` + 2 `seed_incomplete`), los
 `Metrozubdivision / CCS` (2007 vs 2006) registrado conservando ambas
 afirmaciones.
 
+Estado al cierre (2026-09-13):
+- ✅ Las filas `EMPTY` (órdenes 97 y 440) iban a `missing_url` porque la
+  comprobación de URL corría antes que la de fila vacía. `importYouTubeMasterSheet`
+  las manda ahora a `seed_incomplete` (`isEmptySeedRow`), las dos revisiones
+  existentes se reclasificaron y `test/contract/youtube-pipeline.test.ts` lo
+  fija.
+- ✅ El título `[object Object]` de la fila 564 (celda con formato mixto) está
+  corregido en `asText` y no queda en claims, core ni cola.
+- ✅ `Metrozubdivision / CCS`: conflicto 20 resuelto por una persona (2007,
+  Live Album) conservando ambos claims.
+- ✅ B-Sides (9 filas): `album_type='other'` + clasificación «B-Sides» en
+  `ingest.album_classifications` (decisión del propietario, 2026-09-13).
+- ✅ Aceptación Caramelos De Cianuro: un solo artista, *Las Paticas De La
+  Abuela* 1992 EP con enlace primario, 0 membresías desde el seed, Live
+  Concert sin álbum. *En Vivo* (fila 370) tiene ahora su segundo video
+  (fila 553) como `live_concert` no primario. La hoja creció desde el
+  escenario original: 17 discos del canal en vez de 14.
+
 ---
 
 ## F3 — YouTube Data API (sincronización y enriquecimiento)
@@ -300,18 +339,33 @@ Entregables:
   organizaciones, 7.762 créditos de disco y 1.458 acotados a pista
   (SOURCES.md §2.5). El marcador `|| Full Album ||` decide qué es publicación
   y nunca contradice la clasificación de la hoja.
-- `yt:link` (propuestas de vínculo video→álbum → review).
-- `yt:enrich-artist` (search.list acotado, modo dirigido, presupuesto de
-  cuota por artista).
-- Rate limiting de cuota + caché. Reintento con backoff para 5xx/429 ya vive
-  en `YouTubeDataApi.request`; 403/400 son terminales y no se reintentan.
+- ✅ *Ya hecho:* `yt:link` (vínculo video→álbum exacto; el resto a revisión)
+  y `yt:link --album --video --note --confirm` para la selección humana. Al
+  cierre (2026-09-13) **602 de 602** discos con video tienen enlace primario
+  y ningún video queda con varios discos sin primario.
+- ✅ *Ya hecho (2026-09-13):* **`yt:enrich-artist "<artista>" [--max=N]
+  [--dry-run]`** (`src/youtube/enrich.ts`). `search.list` restringido al
+  `channelId` del proyecto (nunca todo YouTube), techo de 25 resultados, solo
+  para los discos del artista que siguen sin video; hidrata lo nuevo y abre
+  `youtube_match` ante una coincidencia exacta artista+título+año. Nunca
+  enlaza ni crea álbumes. Prueba real sobre Caramelos De Cianuro: 15 videos
+  del canal encontrados, todos ya hidratados y enlazados → sus 7 discos sin
+  video no están en el canal (el inventario del canal está completo).
+- ✅ *Ya hecho (2026-09-13):* **presupuesto de cuota**: `QUOTA_COST` en
+  `api.ts` y `YOUTUBE_DAILY_QUOTA_UNITS` (10.000 por defecto). Antes de gastar,
+  `youtubeQuotaUsedToday()` suma lo consumido desde la medianoche del Pacífico
+  por los runs `enrich_artist` y `yt_api_sync`; sin margen no se llama.
+  Reintento con backoff para 5xx/429 en `YouTubeDataApi.request`; 403/400 son
+  terminales.
 
 Criterios de salida: ✅ sync completa sobre la unión —no sobre 520 IDs, que
 era el universo supuesto, sino sobre 648— en lotes con reintentos; ✅ ningún
 álbum creado por videos y conteo de `albums` idéntico antes y después del
 sync (40 antes, 40 después; `artists` 29 y `tracks` 278, sin mover);
-pendiente la disponibilidad proyectada en `albums.youtube_status`, que
-depende de los claims y del enlace primario en `media.video_albums`.
+✅ disponibilidad proyectada en `albums.youtube_status` (2026-09-13): los 10
+discos que tenían URL del canal pero conservaban el `unknown` del DDL toman
+el estado del video hidratado, auditado. Queda `unknown` solo
+`nUNxlo6cTbc` (Tributo a CDC), que la API no devuelve: borrado o privado.
 
 ---
 

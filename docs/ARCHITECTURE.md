@@ -344,8 +344,14 @@ Sin API key el sistema y toda la suite funcionan con rutas deterministas/mock.
   entonces escribe un `full_album` primario; ausencia o más de un candidato
   abre `youtube_match`. `yt:link --album=<id> --video=<id> --note=... --confirm`
   registra una selección humana auditada. **Nunca crea álbumes.**
-- `yt:enrich-artist`: `search.list` acotado (máx. N resultados, bajo cuota)
-  solo en modo dirigido. Prohibido scrapear la web de YouTube.
+- `yt:enrich-artist "<artista>" [--max=N] [--dry-run]` (`src/youtube/enrich.ts`):
+  último recurso para los discos del artista que siguen sin video. Un
+  `search.list` restringido al `channelId` del proyecto (100 unidades, techo
+  de 25 resultados), hidratación de los videos nuevos y una revisión
+  `youtube_match` por disco con coincidencia exacta artista+título+año. Antes
+  de gastar compara lo consumido hoy con `YOUTUBE_DAILY_QUOTA_UNITS`. Nunca
+  enlaza ni crea álbumes: la selección se confirma con `yt:link --confirm`.
+  Prohibido scrapear la web de YouTube.
 - Los tipos Music Video / Live Concert / Documentary nunca generan álbumes
   (gating en el adaptador + test obligatorio). Se registran con
   `media.video_albums.album_kind` = `music_video` / `live_concert` /

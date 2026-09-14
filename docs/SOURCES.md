@@ -26,7 +26,9 @@ Lo confirmado se marca **[CONFIRMADO]**; lo no verificado se marca
    - **Scraping masivo por fuente** (`scrape <slug>`): barrido completo
      dentro del dominio autorizado.
    - **Enriquecimiento dirigido por artista** (`enrich <artist>`): búsqueda
-     puntual de un artista en las fuentes relevantes.
+     puntual de un artista en las fuentes relevantes. En YouTube es
+     `yt:enrich-artist`: búsqueda solo dentro del canal del proyecto, con
+     presupuesto de cuota diario y sin crear ni enlazar nada por sí sola.
 4. Cortesía: respetar `robots.txt`, 1 petición concurrente por dominio,
    mínimo 1 s entre peticiones, User-Agent identificable.
 5. YouTube es fuente de primera clase pero con reglas propias (§2): solo
