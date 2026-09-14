@@ -79,6 +79,27 @@ const CREDIT_TYPE_RULES: ReadonlyArray<readonly [RegExp, CreditType]> = [
 const MUSICIAN_ROLE =
   /(guitar|guitarra|bass|bajo|drum|bater|percussion|percusi|vocal|voz|voces|voice|sing|cant|keyboard|teclad|piano|organ|[oó]rgano|synth|sintetiz|sax|trumpet|trompeta|tromb[oó]n|trombone|flute|flauta|clarinet|oboe|viol[ií]n|violin|viola|cello|chelo|contrabajo|harp|arpa|harmonica|arm[oó]nica|accordion|acorde[oó]n|banjo|mandolin|cuatro|maracas|conga|timbal|bong[oó]|charrasca|tambor|coro|chorus|backing|palmas|int[eé]rprete|interpret|performer|ejecuta)/iu;
 
+// En la foto y el arte el texto del rol no añade nada: "Photos", "Photography
+// by" y "Fotografía" dicen lo mismo, y "Graphic Design & Illustrations" y
+// "Artwork & Illustration" también. Ahí, dos créditos de la misma persona en el
+// mismo disco son uno. En los demás tipos el rol sí distingue: "Guitar" y
+// "Bass" son dos créditos, "Produced by" y "Executive Production" también;
+// solo se ignora la preposición final, tildes, mayúsculas y signos.
+const ROLE_AGNOSTIC_TYPES: ReadonlySet<CreditType> = new Set(["photography", "artwork"]);
+
+/** Tipos cuyo texto de rol no distingue un crédito de otro (foto y arte). */
+export function isRoleAgnosticCreditType(type: CreditType): boolean {
+  return ROLE_AGNOSTIC_TYPES.has(type);
+}
+
+/** Clave con la que dos créditos del mismo acreditado y la misma obra son el mismo. */
+export function creditEquivalenceKey(creditType: CreditType, role: string): string {
+  if (ROLE_AGNOSTIC_TYPES.has(creditType)) return creditType;
+  const normalized = role.normalize("NFD").replace(/[̀-ͯ]/gu, "").toLowerCase()
+    .replace(/\s+(?:by|at|por|en)\s*:?\s*$/u, "").replace(/[^\p{L}\p{N}]+/gu, " ").trim();
+  return `${creditType}:${normalized}`;
+}
+
 /** Clasificación determinista del rol en el enum credit_type del core. */
 export function creditTypeForRole(role: string): CreditType {
   const value = role.trim();
@@ -400,12 +421,14 @@ async function insertCredit(
   creditType: CreditType, role: string, trace: string,
 ): Promise<{ id: number; created: boolean }> {
   const { client, claim, claimId, spec } = context;
-  const existing = await client.query<{ id: string }>(
-    `SELECT id::text FROM ${spec.table}
-      WHERE ${parentColumn}=$1 AND ${targetColumn}=$2 AND credit_type=$3::credit_type AND lower(role)=lower($4) LIMIT 1`,
-    [parentId, targetId, creditType, role],
+  const candidates = await client.query<{ id: string; role: string }>(
+    `SELECT id::text, role FROM ${spec.table}
+      WHERE ${parentColumn}=$1 AND ${targetColumn}=$2 AND credit_type=$3::credit_type ORDER BY id`,
+    [parentId, targetId, creditType],
   );
-  if (existing.rows[0]) return { id: Number(existing.rows[0].id), created: false };
+  const key = creditEquivalenceKey(creditType, role);
+  const existing = candidates.rows.find((row) => creditEquivalenceKey(creditType, row.role) === key);
+  if (existing) return { id: Number(existing.id), created: false };
   const inserted = await client.query<{ id: string }>(
     `INSERT INTO ${spec.table}(${parentColumn},${targetColumn},credit_type,role)
      VALUES($1,$2,$3::credit_type,$4) RETURNING id`,

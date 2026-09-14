@@ -16,6 +16,7 @@ import { approveEntity, dismissEntity, pendingEntities } from "../review/approva
 import { planBatch, runBatch, BATCH_ORDER } from "../review/batch.js";
 import { applyReviewDecisions, planReviewDecisions } from "../review/decisions.js";
 import { findDuplicateGroups, mergeAllDuplicates } from "../review/duplicates.js";
+import { applyPersonCorrections, loadPersonCorrectionPlan } from "../review/person-corrections.js";
 import { getDb } from "../db/client.js";
 import { sources } from "../db/schema/ingest.js";
 import { eq } from "drizzle-orm";
@@ -189,6 +190,21 @@ async function main(): Promise<number> {
         const result = await mergeAllDuplicates(note);
         console.log(JSON.stringify(result, null, 2));
         return result.failed.length === 0 ? 0 : 1;
+      }
+      // Correcciones de identidad de personas decididas por el propietario,
+      // escritas en un plan JSON versionado (docs/decisions/). Sin --confirm
+      // se ejecutan y se deshacen: muestra el efecto sin aplicarlo.
+      if (args[0] === "persons") {
+        const planPath = args.find((arg) => arg.startsWith("--plan="))?.slice("--plan=".length);
+        const note = args.find((arg) => arg.startsWith("--note="))?.slice("--note=".length);
+        if (!planPath) { console.error('uso: crv review persons --plan=<archivo.json> [--note="<motivo>" --confirm]'); return 1; }
+        const plan = await loadPersonCorrectionPlan(planPath);
+        const confirm = args.includes("--confirm") && Boolean(note?.trim());
+        const result = await applyPersonCorrections(plan, note?.trim() || plan.evidence, { dryRun: !confirm });
+        for (const outcome of result.outcomes) console.log(`${outcome.status === "applied" ? "✓" : "·"} ${outcome.op}\t${outcome.detail}`);
+        console.log(`${result.creditsMerged} créditos equivalentes unidos (run ${result.runId})`);
+        if (!confirm) console.log('\n(previsualización: nada se escribió) para aplicar: crv review persons --plan=<archivo> --note="<motivo>" --confirm');
+        return 0;
       }
       if (args[0] === "keep-repeated-tracks") {
         const ids = (args[1] ?? "").split(",").filter(Boolean).map(Number);

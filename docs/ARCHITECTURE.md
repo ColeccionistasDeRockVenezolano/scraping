@@ -262,6 +262,14 @@ tienen su propio puente, al que el merge engine delega. Sus reglas:
 - `credit_type` es una clasificación determinista del rol
   (`creditTypeForRole`); el rol crudo se conserva íntegro en `role`, y lo que
   no se reconoce cae en `other` en vez de forzarse a `musician`.
+- **Un crédito equivalente no se duplica** (`creditEquivalenceKey`, 2026-09-14):
+  antes de insertar se busca un crédito del mismo acreditado, en la misma obra
+  y con el mismo `credit_type` cuya clave coincida. En `photography` y
+  `artwork` el texto del rol no distingue ("Photos" = "Photography by";
+  "Graphic Design & Illustrations" = "Artwork & Illustration"); en los demás
+  tipos solo se ignoran la preposición final, tildes, mayúsculas y signos
+  ("Produced by" = "produced", pero "Guitar" ≠ "Bass" y "Executive
+  Production" ≠ "Produced by").
 - Igual que las entidades, **una relación `low` automática no escribe**: solo
   `high` o una decisión humana (`createdBy="human"`, vía `review approve`).
 
@@ -300,6 +308,21 @@ sigue llamando a `approveEntity`, que re-ejecuta el merge con
    en `errors` y el run termina `partial`.
 
 El CLI previsualiza por defecto y sólo escribe con `--confirm` y `--note`.
+
+**Correcciones de identidad de personas** (`src/review/person-corrections.ts`,
+`crv review persons --plan=<json> [--note --confirm]`). La detección de
+duplicados solo ve nombres exactos; que «Luis Barrios» sea Luis "Golding"
+Barrios, que «Car» y «los Rondon» sean un nombre cortado o que una «persona»
+sea la banda lo decide una persona, y se escribe como plan JSON versionado en
+`docs/decisions/`. Operaciones: `rename`, `merge` (reusa `mergeInto` de
+`duplicates.ts`: reapunta toda FK antes de borrar), `drop_aliases`,
+`to_artist` y `to_organization` (los créditos pasan al destino, los claims de
+nombre se rechazan —nunca se borran— y la historia de la ficha se copia a la
+auditoría del destino). Cada operación nombra el id y el nombre que espera; si
+la base no coincide se aborta el plan entero, y lo ya aplicado se reconoce y
+se salta. Tras cada operación se unen los créditos equivalentes del
+acreditado. Sin `--confirm` el plan se ejecuta en una transacción que se
+deshace.
 
 ### 4.11 `deepseek gateway`
 Único punto de contacto con la IA. Contrato estricto (Zod in/out), registro

@@ -16,21 +16,37 @@
 //    (Spiteri 1973 y 1981), ni dos discos cuyas pistas en la misma posición
 //    tienen títulos distintos.
 //  * EL NOMBRE PERDIDO QUEDA COMO ALIAS, y la fusión deja una fila en
-//    merge_audit enlazada a claims, como cualquier otro cambio del core.
+//    merge_audit enlazada a claims, como cualquier otro cambio del core. La
+//    excepción la decide una persona: un fragmento como «Car» no es una
+//    variante del nombre y no se guarda (`alias: false`).
+//
+// Personas y créditos no se agrupan solos: su fusión la pide una decisión
+// explícita (person-corrections.ts), que reutiliza `mergeInto`.
 import type { PoolClient } from "pg";
 import { getPool } from "../db/client.js";
 import { finishRun } from "../ingest/runs.js";
 import { normalizeEntityName } from "../normalization/entity-name.js";
 
 export type DuplicateKind = "artist" | "album";
-type MergeKind = DuplicateKind | "track";
+export type MergeKind = DuplicateKind | "track" | "person" | "album_credit" | "track_credit";
 
-const TABLE: Record<MergeKind, string> = { artist: "artists", album: "albums", track: "tracks" };
-const IDENTITY: Record<MergeKind, string> = { artist: "name", album: "title", track: "title" };
-const ALIAS_TABLE: Record<MergeKind, string> = { artist: "ingest.artist_aliases", album: "ingest.album_aliases", track: "ingest.track_aliases" };
-const ALIAS_TYPE: Record<MergeKind, string> = { artist: "name_variant", album: "alternate_title", track: "alternate_title" };
-/** Columnas que no se completan desde el duplicado: identidad, parental y posición. */
-const NOT_FILLED = new Set(["id", "name", "title", "artist_id", "album_id", "disc_number", "track_number", "created_at", "updated_at"]);
+const TABLE: Record<MergeKind, string> = {
+  artist: "artists", album: "albums", track: "tracks", person: "persons", album_credit: "album_credits", track_credit: "track_credits",
+};
+const IDENTITY: Partial<Record<MergeKind, string>> = { artist: "name", album: "title", track: "title", person: "name" };
+const ALIAS_TABLE: Partial<Record<MergeKind, string>> = {
+  artist: "ingest.artist_aliases", album: "ingest.album_aliases", track: "ingest.track_aliases", person: "ingest.person_aliases",
+};
+const ALIAS_TYPE: Partial<Record<MergeKind, string>> = { artist: "name_variant", album: "alternate_title", track: "alternate_title", person: "name_variant" };
+/**
+ * Columnas que no se completan desde el duplicado: identidad, parental,
+ * posición y, en los créditos, el acreditado y su rol (completar `artist_id`
+ * en un crédito de persona violaría el "un solo destino").
+ */
+const NOT_FILLED = new Set([
+  "id", "name", "title", "artist_id", "album_id", "disc_number", "track_number", "created_at", "updated_at",
+  "person_id", "organization_id", "track_id", "credit_type", "role",
+]);
 
 export interface DuplicateGroup {
   kind: DuplicateKind;
@@ -124,10 +140,16 @@ async function fillEmptyColumns(client: PoolClient, kind: MergeKind, keepId: num
   return filled;
 }
 
-async function mergeInto(client: PoolClient, kind: MergeKind, keepId: number, dropId: number, note: string, runId: number): Promise<{ moved: number; discarded: number; filled: string[]; tracksMerged: number }> {
+export interface MergeOutcome { moved: number; discarded: number; filled: string[]; tracksMerged: number; auditId: number; }
+
+export async function mergeInto(
+  client: PoolClient, kind: MergeKind, keepId: number, dropId: number, note: string, runId: number,
+  options: { alias?: boolean } = {},
+): Promise<MergeOutcome> {
   if (keepId === dropId) throw new Error(`${kind} ${keepId}: no se puede fusionar consigo mismo`);
   const table = TABLE[kind];
   const identity = IDENTITY[kind];
+  const aliasTable = ALIAS_TABLE[kind];
   const loaded = await client.query<Record<string, unknown>>(`SELECT * FROM public.${table} WHERE id=ANY($1::bigint[]) FOR UPDATE`, [[keepId, dropId]]);
   const keep = loaded.rows.find((row) => Number(row["id"]) === keepId);
   const drop = loaded.rows.find((row) => Number(row["id"]) === dropId);
@@ -151,7 +173,7 @@ async function mergeInto(client: PoolClient, kind: MergeKind, keepId: number, dr
        WHERE album_id=$1 AND is_primary_link
          AND EXISTS (SELECT 1 FROM media.video_albums WHERE album_id=$2 AND is_primary_link)`, [dropId, keepId]);
   }
-  await client.query(`UPDATE ${ALIAS_TABLE[kind]} SET is_primary=false WHERE ${kind}_id=$1`, [dropId]);
+  if (aliasTable) await client.query(`UPDATE ${aliasTable} SET is_primary=false WHERE ${kind}_id=$1`, [dropId]);
 
   const claimIds = (await client.query<{ id: string }>(`SELECT id::text FROM ingest.claims WHERE ${kind}_id=ANY($1::bigint[]) ORDER BY ${kind}_id=$2 DESC,id`, [[keepId, dropId], dropId])).rows.map((row) => Number(row.id));
 
@@ -176,12 +198,14 @@ async function mergeInto(client: PoolClient, kind: MergeKind, keepId: number, dr
   }
 
   const filled = await fillEmptyColumns(client, kind, keepId, dropId);
-  const dropName = String(drop[identity]);
-  if (dropName !== String(keep[identity])) {
-    await client.query(`
-      INSERT INTO ${ALIAS_TABLE[kind]}(${kind}_id,alias,alias_type,normalized_alias,is_primary,confidence,notes)
-      VALUES($1,$2,$3::ingest.alias_type,$4,false,'high','Nombre de un duplicado fusionado')
-      ON CONFLICT DO NOTHING`, [keepId, dropName, ALIAS_TYPE[kind], normalizeEntityName(dropName).primaryKey]);
+  if (identity && aliasTable && options.alias !== false) {
+    const dropName = String(drop[identity]);
+    if (dropName !== String(keep[identity])) {
+      await client.query(`
+        INSERT INTO ${aliasTable}(${kind}_id,alias,alias_type,normalized_alias,is_primary,confidence,notes)
+        VALUES($1,$2,$3::ingest.alias_type,$4,false,'high','Nombre de un duplicado fusionado')
+        ON CONFLICT DO NOTHING`, [keepId, dropName, ALIAS_TYPE[kind], normalizeEntityName(dropName).primaryKey]);
+    }
   }
   await client.query(`DELETE FROM public.${table} WHERE id=$1`, [dropId]);
 
@@ -192,7 +216,7 @@ async function mergeInto(client: PoolClient, kind: MergeKind, keepId: number, dr
   for (const claimId of claimIds.slice(0, 50)) {
     await client.query(`INSERT INTO ingest.merge_audit_claims(merge_audit_id,claim_id) VALUES($1,$2) ON CONFLICT DO NOTHING`, [Number(auditRow.rows[0]!.id), claimId]);
   }
-  return { moved, discarded, filled, tracksMerged };
+  return { moved, discarded, filled, tracksMerged, auditId: Number(auditRow.rows[0]!.id) };
 }
 
 export interface DuplicateMergeResult {
@@ -209,7 +233,7 @@ export async function mergeDuplicate(kind: DuplicateKind, keepId: number, dropId
   try {
     await client.query("BEGIN");
     await client.query("SELECT pg_advisory_xact_lock(hashtext('merge:duplicates'))");
-    const result = await mergeInto(client, kind, keepId, dropId, note, runId);
+    const { auditId: _auditId, ...result } = await mergeInto(client, kind, keepId, dropId, note, runId);
     await client.query("COMMIT");
     return result;
   } catch (error) {

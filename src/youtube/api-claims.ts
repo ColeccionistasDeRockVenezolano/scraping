@@ -27,6 +27,7 @@ import { getPool } from "../db/client.js";
 import { ingestRecords, type IngestionResult } from "../ingest/runner.js";
 import { moduleLogger } from "../logger/index.js";
 import type { Evidence, RawRecord } from "../adapters/contracts.js";
+import { creditTypeForRole, isRoleAgnosticCreditType } from "../merge/relations.js";
 import { canonicalVideoUrl, collectReleaseYears, releaseIdentity } from "./normalization.js";
 import { looksLikeOrganization, parseCreditSections, parseYouTubeDescription, parseYouTubeTitle, type DescriptionSection } from "./parsers.js";
 
@@ -161,7 +162,10 @@ export function recordsForVideo(
       seen.add(name.toLowerCase());
       const entityFields: RawRecord["fields"] = [{ field: "name", value: name, evidence: where }];
       if (kind === "organization") {
-        entityFields.push({ field: "organization_type", value: "recording_studio", evidence: where });
+        // Quien firma la foto o el arte es un estudio de diseño o de foto, no
+        // uno de grabación. El resto conserva el tipo que ya emitía.
+        const visual = ["artwork", "photography"].includes(creditTypeForRole(role));
+        entityFields.push({ field: "organization_type", value: visual ? "other" : "recording_studio", evidence: where });
         if (location) entityFields.push({ field: "country", value: location, evidence: where });
       }
       records.push({ entityKind: kind, identity: name, extractor: EXTRACTOR, extractorVersion: EXTRACTOR_VERSION, fields: entityFields });
@@ -190,16 +194,26 @@ export function recordsForVideo(
   // emite un crédito por verbo —para que `credit_type` no pierda la mitad al
   // clasificar— y el estudio va aparte, como organización acreditada.
   for (const credit of verbCredits) {
+    // En foto y arte, varios verbos son un solo crédito: "Artwork &
+    // Illustration by" es un arte, no dos. Todo lo demás sigue dando un
+    // crédito por verbo con el rol de siempre —"Recorded & Engineered by" son
+    // dos, aunque ambos sean `recording`—, para no cambiar claims ya emitidos.
+    const roles = new Map<string, string[]>();
     for (const verb of credit.verbs) {
+      const type = creditTypeForRole(verb);
+      const group = isRoleAgnosticCreditType(type) ? type : `verb:${verb}`;
+      roles.set(group, [...(roles.get(group) ?? []), verb]);
+    }
+    for (const role of [...roles.values()].map((verbs) => verbs.join(" & "))) {
       for (const name of credit.names) {
         // "Mastered by Silversound Mastering Studios" acredita a un estudio
         // aunque la preposición sea "by": no hay ` at ` que lo delate, pero
         // el nombre sí. Emitirlo como persona inventaría a alguien.
         const kind = looksLikeOrganization(name) ? "organization" : "person";
-        emitCredit(name, verb, [], `section:${credit.sectionKind}`, `${verb} by ${name}`, kind);
+        emitCredit(name, role, [], `section:${credit.sectionKind}`, `${role} by ${name}`, kind);
       }
       if (credit.venue) {
-        emitCredit(credit.venue, `${verb} at`, [], `section:${credit.sectionKind}`, `${verb} at ${credit.venue}`, "organization", credit.location);
+        emitCredit(credit.venue, `${role} at`, [], `section:${credit.sectionKind}`, `${role} at ${credit.venue}`, "organization", credit.location);
       }
     }
   }

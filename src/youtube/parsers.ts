@@ -48,8 +48,11 @@ const TRACK_SECTIONS = new Set(["tracklist", "bonus_tracks"]);
 
 // Créditos en línea, la forma real en que aparecen. El verbo puede venir
 // compuesto ("Recorded & Mixed by", "Produced & Written by"), así que se
-// captura entero y se parte después.
-const CREDIT_LINE = /^\s*((?:produced|recorded|mixed|mastered|written|composed|arranged|engineered|designed|photographed|illustrated)(?:\s*&\s*(?:produced|recorded|mixed|mastered|written|composed|arranged|engineered|mixed))*)\s+(by|at)\s*:?\s+(.+?)\s*$/i;
+// captura entero y se parte después. El arte y la foto se escriben con
+// sustantivo, no con participio: "Artwork & Illustration by", "Photography by",
+// "Photos by", "Graphic Design by" (medido en el canal, 2026-09-14).
+const CREDIT_VERB = "produced|recorded|mixed|mastered|written|composed|arranged|engineered|designed|photographed|illustrated|artwork|illustrations?|photography|photos|graphic\\s+design";
+const CREDIT_LINE = new RegExp(`^\\s*((?:${CREDIT_VERB})(?:\\s*&\\s*(?:${CREDIT_VERB}))*)\\s+(by|at)\\s*:?\\s+(.+?)\\s*$`, "i");
 
 // El título del canal es un registro, no un rótulo: 616 de 646 llevan el año
 // entre paréntesis, 631 el separador " - " y 77 una etiqueta de formato
@@ -196,7 +199,8 @@ const CREDIT_SECTIONS = new Set(["musicians", "guest_musicians", "artwork", "ill
 const NAME_SUFFIX = /^(?:jr|sr|ii|iii|iv|hijo|padre)\.?$/iu;
 
 function splitNames(value: string): string[] {
-  return value.split(/\s*&\s*|\s*,\s*|\s+y\s+/u)
+  // "Lamarca+Batoni" son dos personas (decisión del propietario, 2026-09-14).
+  return value.split(/\s*&\s*|\s*\+\s*|\s*,\s*|\s+y\s+/u)
     .map((name) => name.trim())
     .filter((name) => name.length > 0 && !NAME_SUFFIX.test(name));
 }
@@ -208,7 +212,13 @@ function splitNames(value: string): string[] {
  * rol mencione la palabra.
  */
 export function looksLikeOrganization(name: string): boolean {
-  return /\b(?:records?|studios?|mastering|productions?|estudios?|discos)\s*$/iu.test(name.trim());
+  const value = name.trim();
+  // Estudios de diseño, foto y video acreditados en el arte: "NHF Design",
+  // "Killdom Imaging", "Photochino's" o una web ("www.ozfilms.net").
+  // Medidos en el canal y confirmados por el propietario (2026-09-14).
+  return /\b(?:records?|studios?|mastering|productions?|estudios?|discos|design|imaging|films?)\s*$/iu.test(value)
+    || /^photo\p{L}*(?:'s)?$/iu.test(value)
+    || /^(?:https?:\/\/|www\.)|\.(?:com|net|org)(?:\.[a-z]{2})?$/iu.test(value);
 }
 
 // Un año o un mes dentro del valor no son parte del nombre: son la fecha de

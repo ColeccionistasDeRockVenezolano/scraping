@@ -1,0 +1,46 @@
+{
+  "decidedAt": "2026-09-14",
+  "evidence": "Decisiones del propietario sobre el caso Caramelos De Cianuro (docs/acceptance/caramelos-las-paticas.md §4b). El canal de YouTube manda sobre la grafía.",
+  "corrections": [
+    {
+      "op": "rename",
+      "person": { "id": 2966, "name": "Boris Milán" },
+      "to": "Boris Milan",
+      "keepOldNameAsAlias": true,
+      "why": "Es la misma persona; se escribe como en el video Q-pRpO2sYSI («Recorded & Mixed by Boris Milan»)."
+    },
+    {
+      "op": "rename",
+      "person": { "id": 4189, "name": "Car" },
+      "to": "Carlos Rondon",
+      "keepOldNameAsAlias": false,
+      "why": "Es Carlos Rondon («Photography by Carlos Rondon» en el video); Sincopa lo dejó partido en «Car» y «los Rondon»."
+    },
+    {
+      "op": "merge",
+      "keep": { "id": 4189, "name": "Carlos Rondon" },
+      "drop": { "id": 4192, "name": "los Rondon" },
+      "keepDropNameAsAlias": false,
+      "why": "Segunda mitad del mismo nombre cortado; un fragmento no es una variante del nombre."
+    },
+    {
+      "op": "drop_aliases",
+      "person": { "id": 4189, "name": "Carlos Rondon" },
+      "aliases": ["Car", "los Rondon"],
+      "why": "Los fragmentos del corte no deben servir para reconocer a nadie."
+    },
+    {
+      "op": "merge",
+      "keep": { "id": 1672, "name": "Luis \"Golding\" Barrios" },
+      "drop": { "id": 546, "name": "Luis Barrios" },
+      "keepDropNameAsAlias": true,
+      "why": "Son la misma persona; queda el nombre con que lo acredita el canal."
+    },
+    {
+      "op": "to_artist",
+      "person": { "id": 4186, "name": "Caramelos de Cianuro" },
+      "artist": { "id": 58, "name": "Caramelos De Cianuro" },
+      "why": "La banda también es productora: sus créditos de producción son del artista, no de una persona homónima."
+    }
+  ]
+}

@@ -12,8 +12,9 @@
 >
 > El trabajo restante se reestructuró el 2026-09-14 en las etapas **E6–E11**
 > (ver «Plan restante»). **E6 ejecutada el 2026-09-14**: reconciliación del
-> canal idempotente y verificada; el caso Caramelos conserva cinco desviaciones
-> de créditos heredadas de la ingesta, documentadas y asignadas a E10.
+> canal idempotente y verificada; las cinco desviaciones de créditos del caso
+> Caramelos, heredadas de la ingesta, se corrigieron ese mismo día por decisión
+> del propietario y el caso cumple entero.
 >
 > Existen `youtube import-sheet`, `youtube seed-claims`, `youtube
 > discover-channel`, `youtube sync`, `youtube rederive`, `youtube api-claims`,
@@ -562,15 +563,30 @@ Lo que quedó pendiente, a la vista en el reporte y en la cola:
   *Fabricado Acá*) y *Acústico En Bits Session* («Intro», «Cenizas»/«Ceniza»).
 - «Cangrejo & Kreils» resuelve por un alias existente de Cangrejo; Kreils no
   queda relacionado con ese video.
-- **Caso Caramelos: relaciones de video y pistas cumplen; créditos no del
-  todo.** Cinco desviaciones heredadas de la ingesta, documentadas con IDs en
-  `docs/acceptance/caramelos-las-paticas.md` §4b: «Boris Milán» con tilde
-  frente al «Boris Milan» del video, Carlos Rondon partido por Sincopa en «Car»
-  y «los Rondon», Luis Barrios duplicado con Luis "Golding" Barrios, la banda
-  creada también como persona productora, y «Artwork & Illustration by» /
-  «Photography by» sin leer en la descripción. Son decisiones de identidad y
-  corrección de datos: van a E10, salvo el vocabulario del parser, que puede
-  corregirse antes.
+- **Caso Caramelos: cumple entero desde el 2026-09-14.** Las cinco desviaciones
+  de créditos heredadas de la ingesta se corrigieron con decisión del
+  propietario (detalle e IDs en `docs/acceptance/caramelos-las-paticas.md` §4b):
+  - `crv review persons --plan=docs/decisions/2026-09-14-personas-caramelos.json`
+    (run 194): «Boris Milán» → «Boris Milan» (grafía del video, la anterior
+    como alias); «Car» + «los Rondon» → Carlos Rondon (sin alias de
+    fragmentos); Luis Barrios fusionado en Luis "Golding" Barrios; la
+    «persona» Caramelos de Cianuro pasa al artista (17 créditos, 17 claims de
+    nombre rechazados, nunca borrados); 9 créditos equivalentes unidos.
+  - Parser: «Artwork & Illustration by», «Photography by», «Photos by»,
+    «Graphic Design by» e «Illustrations by» se leen; foto y arte son un solo
+    crédito por acreditado y obra (`creditEquivalenceKey`), y estudios de
+    diseño/foto/web se reconocen como organización. `youtube api-claims`
+    emitió 25 claims nuevos más los de la primera pasada; 20 obsoletos se
+    rechazaron.
+  - Identidades de los acreditados nuevos, decididas por el propietario: 12
+    veredictos de ER (run 198; Bobby = Bobby Peru, Batoni = el de Zapato 3,
+    Carlos Rondon, Eugenio Miranda y Vicente Corostola existentes; 7 personas
+    nuevas), lote aprobado (runs 197 y 199) y
+    `docs/decisions/2026-09-14-acreditados-arte-canal.json` (run 200): Killdom
+    → organización Killdom Imaging, «Masserrati 2lts» → artista Masseratti
+    2lts. «Lamarca+Batoni» son dos personas.
+  - Resultado: 0 claims candidatos; 7 personas y 4 organizaciones nuevas; 18
+    créditos de disco más (17.302); `doctor` en verde.
 
 ### E7A — API de lectura (plan: fase 7)
 

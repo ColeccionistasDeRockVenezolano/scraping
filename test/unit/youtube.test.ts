@@ -87,6 +87,28 @@ describe("deterministic description parser", () => {
         sectionKind: "other_credits", names: [], venue: "Mad Box's Studios", location: "Caracas, Venezuela" },
     );
     expect(parsed.credits.some((credit) => credit.preposition === "at")).toBe(true);
+    // El arte y la foto se escriben con sustantivo, no con participio.
+    expect(parsed.credits).toContainEqual(
+      { verbs: ["artwork", "illustration"], preposition: "by", value: "Pablo Martínez",
+        sectionKind: "other_credits", names: ["Pablo Martínez"], venue: null, location: null },
+    );
+    expect(parsed.credits).toContainEqual(
+      { verbs: ["photography"], preposition: "by", value: "Carlos Rondon",
+        sectionKind: "other_credits", names: ["Carlos Rondon"], venue: null, location: null },
+    );
+  });
+
+  it("treats design, photo and web credits as organizations and splits names joined by +", () => {
+    for (const name of ["NHF Design", "Killdom Imaging", "Photochino's", "www.ozfilms.net", "OZ Films"]) expect(looksLikeOrganization(name), name).toBe(true);
+    for (const name of ["Carlos Rondon", "Photo Juan Pérez", "Bobby", "VEGER"]) expect(looksLikeOrganization(name), name).toBe(false);
+    expect(parseYouTubeDescription("Other Credits\n\nGraphic Design by Lamarca+Batoni").credits[0]?.names).toEqual(["Lamarca", "Batoni"]);
+  });
+
+  it("reads photo and design credits written as nouns", () => {
+    const parsed = parseYouTubeDescription("Other Credits\n\nPhotos by Ana Pérez\nGraphic Design by Luis Pérez");
+    expect(parsed.credits.map((credit) => [credit.verbs, credit.names])).toEqual([
+      [["photos"], ["Ana Pérez"]], [["graphic design"], ["Luis Pérez"]],
+    ]);
   });
 
   // Variantes de encabezado que el corpus del canal impuso: sinónimos y una

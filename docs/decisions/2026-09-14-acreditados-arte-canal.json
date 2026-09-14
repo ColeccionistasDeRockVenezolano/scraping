@@ -1,0 +1,20 @@
+{
+  "decidedAt": "2026-09-14",
+  "evidence": "Decisiones del propietario sobre los créditos de arte y foto que el canal emitió al ampliar el parser («Photos by», «Artwork by», «Graphic Design by»).",
+  "corrections": [
+    {
+      "op": "to_organization",
+      "person": { "id": 12231, "name": "Killdom" },
+      "organization": { "id": 1013, "name": "Killdom Imaging" },
+      "keepNameAsAlias": true,
+      "why": "«Photos by Killdom» y «Artwork by Killdom Imaging» (Metrozubdivision – Black) son el mismo estudio."
+    },
+    {
+      "op": "to_artist",
+      "person": { "id": 12232, "name": "Masserrati 2lts" },
+      "artist": { "id": 168, "name": "Masseratti 2lts" },
+      "keepNameAsAlias": true,
+      "why": "«Artwork by Masserrati 2lts» en Covers.1 es la propia banda Masseratti 2lts escrita con errata."
+    }
+  ]
+}

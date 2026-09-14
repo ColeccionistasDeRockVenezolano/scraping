@@ -247,25 +247,35 @@ Miguel Gonzáles "El Enano" 4857, Luis "Golding" Barrios 3767, Pablo Martínez
 de artista, Mad Box's Studios como organización, 0 membresías creadas desde
 créditos y "August 1992" fuera de `release_year`.
 
-**No cumple todavía** (desviaciones heredadas de la ingesta, no de E6; se
-dejan a la vista para decisión humana en E10):
+**Desviaciones encontradas y corregidas el 2026-09-14** (heredadas de la
+ingesta, no de E6; cada una por decisión del propietario, con plan versionado
+en `docs/decisions/` y auditoría en `merge_audit`):
 
-1. **Boris Milán** (persona 2966) lleva tilde, pero el video dice «Boris
-   Milan» (claims de 2157 y 2214). El plan prohíbe cambiar la ortografía por
-   otra fuente; el nombre canónico debería ser el del video con la variante
-   como alias.
-2. **Carlos Rondon no existe.** Sincopa aportó «Car» (persona 4189, crédito
-   8938) y «los Rondon» (4192, crédito 8942) como fotógrafos: el reparto de
-   créditos con varios nombres cortó un solo nombre en dos.
-3. **Luis Barrios** (546, crédito 8926 de Sincopa) y **Luis "Golding"
-   Barrios** (1672, crédito 3767 del video) son dos personas para el mismo
-   guitarrista.
-4. **«Caramelos de Cianuro» es también una persona** (4186, crédito 8936 de
-   Sincopa, `producer`), duplicando el crédito de la banda (4975).
-5. **Créditos del video sin leer:** «Artwork & Illustration by Pablo
-   Martínez» y «Photography by Carlos Rondon» no están en el vocabulario de
-   `CREDIT_LINE`; el arte de Pablo Martínez solo llega por Sincopa (8939,
-   «Graphic Design & Illustrations»).
+1. **Boris Milán** (persona 2966) llevaba tilde y el video dice «Boris Milan».
+   → Renombrada a **Boris Milan**, «Boris Milán» queda como alias (run 194).
+2. **Carlos Rondon no existía:** Sincopa aportó «Car» (4189, crédito 8938) y
+   «los Rondon» (4192, crédito 8942). → 4189 renombrada a **Carlos Rondon**,
+   4192 fusionada en ella, los alias «Car» y «los Rondon» retirados y los dos
+   créditos de foto unidos en 8938 (run 194).
+3. **Luis Barrios** (546, Sincopa) y **Luis "Golding" Barrios** (1672, video)
+   eran dos personas. → 546 fusionada en 1672 con «Luis Barrios» como alias;
+   su membresía y sus 11 créditos se movieron y los equivalentes se unieron
+   (run 194).
+4. **«Caramelos de Cianuro» era también una persona** (4186, `producer`). →
+   Sus 17 créditos pasaron al artista 58 (el de *Paticas* se unió a 4975), sus
+   17 claims de nombre quedaron rechazados y su historia copiada en la
+   auditoría del artista (run 194).
+5. **Créditos del video sin leer.** → `CREDIT_LINE` reconoce «Artwork &
+   Illustration by» y «Photography by»; los claims del video se aprobaron y,
+   por la equivalencia de foto y arte, respaldan los créditos 8939 (Pablo
+   Martínez) y 8938 (Carlos Rondon) en vez de duplicarlos (runs 197 y 199).
+
+Créditos de *Paticas* tras las correcciones (12, sin equivalentes duplicados):
+Asier Cazalis, Miguel Gonzáles "El Enano", Luis "Golding" Barrios y Pablo
+Martínez como músicos; Caramelos De Cianuro como autor (4365) y productor
+(4975); Boris Milan como grabación (2214) y mezcla (2157); Mad Box's Studios
+como estudio de grabación (3073) y mezcla (4253); Carlos Rondon en foto (8938)
+y Pablo Martínez en arte (8939).
 
 ## 5. Definición de fallo
 
