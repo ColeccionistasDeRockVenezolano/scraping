@@ -398,6 +398,26 @@ AUTO_MATCH/POSSIBLE_MATCH/REVIEW/NO_MATCH, `features`, candidatos, thresholds,
 explicación y vínculo opcional al `ai_run`. Es el registro explicable de cada
 resolución; una propuesta DeepSeek no cambia por sí sola la acción ni el core.
 
+### 4.14b `ingest.ambiguity_resolutions` — decisiones sobre casos ambiguos
+*(realizado en 0012; PHASES §E10)*
+
+Una fila por pregunta de una revisión de la cola (`review_id` FK CASCADE,
+`question_key`: `pair`, `video_track`, `concert_album:<id>`, `entry:<pos>`,
+`album_tracks:<id>`, `start:<track>`): `question` · `dossier_hash` (sha256 de
+hechos, opciones, regla y versión de reglas) · `decision` y
+`deterministic_decision` (MATCH_HIGH_CONFIDENCE \| KEEP_SEPARATE \|
+NEEDS_HUMAN \| CONFLICT) · `decided_by` (deterministic \| ai) · `rule` ·
+`reasoning` · `facts` JSONB (hechos con id, referencia verificable y texto) ·
+`evidence` JSONB (ids de hechos con su dirección) · `options` JSONB · `target`
+JSONB (lo que `ambiguity:apply` haría) · `arbiter`, `ai_proposal`,
+`ai_run_id` FK, `ai_failure` · `run_id` FK · `status` (proposed \| applied \|
+superseded) · `applied_at`, `applied_run_id`, `applied_note` · `created_at`.
+
+CHECKs: ninguna decisión distinta de NEEDS_HUMAN con `evidence` vacía; solo
+MATCH lleva `target`, y todo MATCH lo lleva; una decisión `ai` nombra su
+árbitro; solo se aplica MATCH o KEEP_SEPARATE. Índice único parcial: una
+decisión viva (`proposed`/`applied`) por pregunta.
+
 ### 4.15 `ingest.merge_audit` — auditoría append-only
 *(+ `ingest.merge_audit_claims`: qué claims respaldan cada escritura)*
 

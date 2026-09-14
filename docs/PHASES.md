@@ -15,6 +15,18 @@
 > canal idempotente y verificada; las cinco desviaciones de créditos del caso
 > Caramelos, heredadas de la ingesta, se corrigieron ese mismo día por decisión
 > del propietario y el caso cumple entero.
+> **E7A ejecutada el 2026-09-14**: API de lectura Fastify (búsqueda global,
+> fichas agregadas de artista/disco/persona/organización, fuentes, claims,
+> review-queue y videos de YouTube), probada con PostgreSQL desechable y a
+> mano contra la base real.
+> **E7B ejecutada el 2026-09-14**: API de escritura con token de operador —
+> CRUD de las 10 tablas del core a través del merge engine, acciones de la
+> cola (aceptar, rechazar, resolver conflicto) e historial de auditoría—,
+> probada con PostgreSQL desechable.
+> **E10 ejecutada el 2026-09-14**: barrido y resolución explicable de las
+> ambigüedades de discos, personas y YouTube sobre la cola. Las 663 preguntas
+> tienen dosier y evidencia; el core sigue intacto hasta que una persona use
+> la puerta explícita `ambiguity:apply --confirm`.
 >
 > Existen `youtube import-sheet`, `youtube seed-claims`, `youtube
 > discover-channel`, `youtube sync`, `youtube rederive`, `youtube api-claims`,
@@ -598,6 +610,31 @@ enlaces, paginación, Zod, errores consistentes y OpenAPI.
 Criterios de salida: tests contra PostgreSQL de prueba, incluido el endpoint
 de *Las Paticas De La Abuela* con pistas, créditos y videos.
 
+Estado al cierre (2026-09-14): implementada en `src/api/` (Fastify 5 +
+`fastify-type-provider-zod` + `@fastify/swagger`/`swagger-ui` + `@fastify/cors`).
+Endpoints: `GET /health`; `GET /search` (artist/person/album/track/organization,
+alias incluidos, filtro `types`); `GET|GET/:id` para `artists`, `albums`,
+`persons`, `organizations` con fichas agregadas (discografía, tracklist +
+créditos por pista, créditos de álbum agrupados por `credit_type`, formatos,
+alias, enlaces de YouTube); `GET /sources`, `GET /sources/:id`; `GET /claims`
+(exige `entity`+`id`, la tabla no se lista sin filtro); `GET /review-queue`,
+`GET /review-queue/:id` (solo lectura; aceptar/rechazar queda en E7B);
+`GET /youtube/videos`, `GET /youtube/videos/:id`. Paginación `limit/offset`
+uniforme, errores homogéneos `{error:{code,message}}`, OpenAPI en `/docs`.
+`npm run api` levanta el servidor en `HOST:PORT` (env, default
+`127.0.0.1:8080`).
+
+`test/contract/api-read.test.ts` (15 tests, PostgreSQL 15 desechable): siembra
+el caso Caramelos De Cianuro/Las Paticas De La Abuela directamente en las
+tablas core+media (sin pasar por el pipeline: esta suite prueba la API, no el
+merge engine) y ejercita cada ruta con `app.inject()`, incluida la validación
+de query/params, 404 y 400 consistentes, y OpenAPI servido. Probado además a
+mano contra la base de desarrollo real (`npm run api` + `curl`): búsqueda de
+"Caramelos"/"Paticas" y `GET /albums/57` (disco real) devuelven tracklist con
+los 4 `youtube_start_seconds`, créditos por `credit_type` (incluye Mad Box's
+Studios como organización) y el enlace primario a `Q-pRpO2sYSI`, igual que en
+`docs/acceptance/caramelos-las-paticas.md`.
+
 ### E7B — API de escritura y cola de revisión (plan: fase 7)
 
 CRUD transaccional de las 10 tablas del core **a través del merge engine**
@@ -607,6 +644,75 @@ conflicto) con audit trail y autenticación local de operador.
 
 Criterios de salida: CRUD de artista/álbum con auditoría; una corrección
 manual de un dato conflictivo resuelve el conflicto y conserva el historial.
+
+Estado al cierre (2026-09-14): implementada.
+
+- **Autenticación**: lectura abierta; todo POST/PATCH/DELETE exige
+  `Authorization: Bearer $CRV_OPERATOR_TOKEN` (mín. 24 caracteres, comparación
+  en tiempo constante, nunca se registra). Sin token configurado la API es de
+  solo lectura (403 `writes_disabled`). `X-CRV-Operator` firma con un nombre;
+  por defecto, `CRV_OPERATOR_NAME`.
+- **CRUD** (`src/api/routes/catalog-writes.ts`, `relation-writes.ts`):
+  `POST`, `PATCH /:id` y `DELETE /:id` para `artists`, `persons`,
+  `organizations`, `albums`, `tracks`, `artist-members`,
+  `person-organizations`, `album-credits`, `track-credits` y `album-formats`.
+  Los controllers solo validan (Zod) y llaman a `src/merge/operator.ts`.
+- **A través del merge engine**: cada petición es UNA transacción y UN run
+  `manual` (operador, nota, valores) de la fuente `crv-operador`; cada campo es
+  un claim `created_by=human, confidence=high` que pasa por `mergeClaim`. Para
+  eso `mergeClaim`, `resolveFieldConflict`, `mergeRelationClaim` y
+  `persistClaim` aceptan la transacción de quien llama (sin ella se comportan
+  como antes). Si el valor afirmado no queda en el core —había otro afirmado,
+  o el motor lo guardó como alias— se aplica `overrideFieldByHuman`: escribe el
+  valor, lo audita con el anterior, pasa los claims rivales a `superseded`,
+  cierra los conflictos abiertos del campo (`resolved_a`/`resolved_b` si
+  coincide con un lado, `dismissed` si no) y aprueba sus revisiones.
+- **Altas**: si el ER reconoce la entidad, 409 con su id; con candidatos
+  parecidos, 409 `needs_review`, y `allowSimilar: true` es la decisión humana
+  de crear la ficha como distinta. Una pista en una posición ocupada, 409.
+- **Relaciones**: el puente escribe ahora las cinco tablas puente; los
+  extremos se eligen por id (`endpoints`, verificados, trazados como
+  `explicit_fk`). `person_organization` y `album_format` solo se registran así
+  (ninguna fuente los emite). Registrar una relación ya existente devuelve la
+  fila (200, `created:false`). Las correcciones de filas puente
+  (`correctRelationField`) auditan valor anterior y nuevo.
+- **Retiros** (`src/merge/removals.ts`): no se borra en cascada — con
+  dependientes en `public`/`media` responde 409 `has_dependents` con la lista.
+  Los claims no se borran (quedan `rejected` sin destino); la fila, sus alias y
+  su `merge_audit` completo se copian a la ficha padre (`removed_<tipo>`) y al
+  run (`GET /runs/:id`).
+- **Cola** (`src/review/operator-review.ts`): `POST /review-queue/:id/accept`,
+  `/reject` y `/resolve-conflict`, con nota obligatoria. Careos de la Mesa →
+  `review_decisions` firmada + `applyReviewDecisions` acotado a esa revisión
+  (nueva opción `reviewIds`); `ambiguous_alias`/`ai_entity_resolution` → merge
+  con anulación humana; `low_confidence`/`manual_review` → `approveEntity` /
+  `dismissEntity`; `field_conflict` → elegir lado (`canonical`, `proposed`,
+  `a`, `b`, `both`, `dismiss`) o afirmar `value`. `youtube_match` y
+  `possible_duplicate` siguen en el CLI (422 con la indicación).
+- **Historial**: `GET /audit?entity=&id=` (merge_audit con claims enlazados) y
+  `GET /runs/:id`. Errores homogéneos: 404/409/422 para fallos esperados y
+  restricciones del DDL (único, FK, CHECK, NOT NULL) — ninguna escritura las
+  esquiva. OpenAPI con esquema de seguridad `operatorToken`.
+- **Ajustes del motor**: el texto humano de `biography`/`description`/`notes`
+  conserva párrafos (el de las fuentes sigue colapsado); `DATE` se lee como
+  texto ISO para que `birth_date` sea comparable con el valor afirmado.
+
+`test/contract/api-write.test.ts` (9 tests, PostgreSQL desechable): 401 sin
+token y 403 sin token configurado; alta de artista y álbum con claims
+human/high, run y auditoría; 409 por duplicado; corrección de un valor
+afirmado (conflicto `resolved_b`, claim anterior `superseded`, rastro
+1989→1990) y renombrado con alias; alta, corrección y retiro de pista,
+créditos, miembro, persona-organización y formato (409 con dependientes,
+historia copiada a la ficha padre); **criterio de salida**: dos fuentes
+contradicen el año de un disco, `resolve-conflict` con `value: 1997` deja el
+disco en 1997, el conflicto `dismissed` por una persona, los dos rivales
+`superseded` con su fuente y el historial 1995→1997; elegir `proposed` usa el
+lado del conflicto; aceptar/rechazar careos y claims candidatos; OpenAPI.
+
+Límites conocidos: no se escribió contra la base de desarrollo (sus datos son
+válidos y no se tocan para probar). Un claim `rejected` por el retiro de su
+entidad vuelve a pasar por el ER si la misma fuente se re-ingiere; no es
+distinto de lo que ocurre hoy con un claim rechazado y queda para E11.
 
 ### E8 — Interfaz React (plan: fase 8)
 
@@ -619,20 +725,64 @@ Criterios de salida: build de producción y recorrido Caramelos De Cianuro →
 Las Paticas De La Abuela → 4 pistas → Asier Cazalis → volver → Mad Box's
 Studios. El navegador solo habla con la API.
 
+**Completada (2026-09-14).** La SPA vive en `web/`; incluye las seis áreas de
+navegación, buscador global, fichas enlazadas, CRUD de entidades, pistas,
+miembros, créditos, formatos y alias, cola con evidencia y estados de carga,
+vacío y error. `web/tests/visual/smoke.mjs` automatiza el recorrido de salida.
+
 ### E9 — QA visual (plan: fase 9)
 
 Capturas reales en escritorio y móvil, fixtures extremos (30 músicos, 50
 créditos, 100 pistas, nombres y biografías largos) en base desechable,
 correcciones solo de problemas demostrables y `docs/UI_QA.md`.
 
+**Completada (2026-09-14).** Capturas antes/después y extremas en
+`docs/ui-qa/`; el fixture se crea y destruye con `npm run test:visual-extreme`.
+Resultados, defectos corregidos y comparación con ambos SVG en `docs/UI_QA.md`.
+
 ### E10 — Resolución de ambigüedades (plan: fase 10B)
 
-Sobre la cola, nunca sobre todo el catálogo: las revisiones de E6, los 85
-pares de discos dudosos y la pasada de identidades de personas (grafías
-distintas). Primero reglas deterministas, después DeepSeek Pro con JSON
-validado; decisiones MATCH_HIGH_CONFIDENCE / KEEP_SEPARATE / NEEDS_HUMAN /
-CONFLICT; al core solo llega lo que apruebe una persona.
+Sobre la cola, nunca sobre todo el catálogo: las revisiones de E6, los pares
+de discos dudosos y la pasada de identidades de personas (grafías distintas).
+Primero reglas deterministas, después el árbitro configurado con JSON validado
+(DeepSeek flash por decisión del propietario, o un archivo externo);
+decisiones MATCH_HIGH_CONFIDENCE / KEEP_SEPARATE / NEEDS_HUMAN / CONFLICT; al
+core solo llega lo que apruebe una persona.
 `reports/ambiguity-resolution.md`.
+
+**Completada y verificada (2026-09-14).** Se implementaron la migración
+`0012_ambiguity_resolutions`, `src/ambiguity/` y los tres comandos
+`ambiguity:scan`, `ambiguity:resolve` y `ambiguity:apply`. El resolutor solo
+produce decisiones para las revisiones `possible_duplicate` creadas por su
+barrido y las `youtube_match` que dejó E6; consulta el catálogo como evidencia
+pero no abre casos adicionales ni lo modifica. Cada decisión persiste los
+hechos, las citas, el hash del dosier, la regla, el árbitro y el destino exacto
+que tendría una aprobación (`ambiguity-rules.v2`).
+
+Estado de la base de desarrollo (runs 203, 217, 218, 220 y 222):
+
+| Criterio | Resultado |
+|---|---|
+| Barrido | 104 pares de discos y 543 de personas con banda en común; 1.415 pares nominalmente parecidos sin banda común quedaron fuera y documentados |
+| Dosieres resueltos | 662 revisiones, 663 preguntas: 363 MATCH_HIGH_CONFIDENCE · 31 KEEP_SEPARATE · 22 CONFLICT · 247 NEEDS_HUMAN (run 218). Tras el run 220, #193242 quedó sin objeto (sus dos personas ya se fusionaron en 1667 por #193149/#193150) y el run 222 la devolvió a NEEDS_HUMAN: 362 · 31 · 22 · 248 |
+| Reglas / árbitro | 460 decisiones deterministas; 203 dosieres semánticos revisados por `claude-opus-5`: 124 MATCH · 7 KEEP_SEPARATE · 5 CONFLICT · 67 NEEDS_HUMAN; 0 propuestas rechazadas por citas o política inválidas |
+| Evidencia e invariantes | 0 decisiones automáticas sin evidencia · 0 MATCH sin destino · 0 no-MATCH con destino · 0 decisiones de árbitro sin árbitro · 0 preguntas con dos decisiones vivas |
+| Idempotencia | run 218: 0 filas nuevas, 663 reutilizadas, 0 sustituidas; 0 dosieres siguen esperando árbitro |
+| Puerta humana | Preview: 263 decisiones deterministas aplicables en lote (239 MATCH + 24 KEEP); 131 decisiones de árbitro aplicables solo nombrando su revisión (124 MATCH + 7 KEEP); CONFLICT y NEEDS_HUMAN nunca entran. **Run 220 (Brian aprueba):** `ambiguity:apply --review=<258 revisiones> --confirm` con 259 decisiones deterministas: 258 aplicadas (234 MATCH + 24 KEEP), 257 revisiones cerradas, 0 fallidas, 1 saltada por obsoleta (#193242). Quedan fuera por decisión de Brian las 4 dudosas —#193433 conservaría «Pete Thomns» (errata), #192829 conservaría «EP» sobre «Claroscuro», #193436 «Tony King Studio» es un estudio, #193459 Gloria Marín/Martín— y las 131 del árbitro |
+| Core y reconciliación | Sin cambios en los runs del resolutor (210/211 y 217/218): 4.761 discos · 27.439 pistas · 10.729 personas · 605 `video_albums` · 6.580 `video_tracks`. `yt:reconcile --dry-run`: 0 relaciones y 0 revisiones nuevas. Fuera de E10, el run 219 (`review sincopa-organizations`) retiró 84 falsos sellos de Sincopa: organizaciones 767→683 y `merge_audit` 116.727→116.559, porque la historia retirada pasa al run. El run 220 dejó discos 4.761→4.736 · pistas 27.439→27.221 · personas 10.729→10.530 · créditos de disco 17.302→17.240 · créditos de pista 12.247→12.195 · `video_tracks` 6.580→6.635 · `video_albums` 605→609 · `merge_audit` 116.559→117.149; artistas y organizaciones sin cambios. Sus 37 auditorías (títulos alineados, enlaces de video y 3 fusiones de filas cuya evidencia solo estaba en auditorías previas) nacieron sin claim y `doctor` las marcó: `apply.ts` y `mergeInto` ahora enlazan esa evidencia, y las 37 se enlazaron a 326 claims |
+| Verificación | `doctor` todo verde; typecheck limpio; suite completa (tras el parser Sincopa 1.1.0 y la corrección de auditorías del run 220): 44 archivos, 335 pruebas pasan y 1 se omite, la integración opcional con DeepSeek real; el contrato de E10 exige que ninguna auditoría del apply quede sin claim; E10 31/31 y contrato PostgreSQL de E10 + subida/rollback de 0012 en verde |
+
+El desempate de la ficha que queda respeta, en orden, el canal, el tipo, la
+cobertura de pistas y el título menos truncado. Esto evita conservar, por el
+solo hecho de tener un id menor, «Demo» en lugar de «Adh Seidh» o
+«!!! Estás Triste» en lugar de «Déjala! ...Está Triste».
+
+Las variantes pueden formar cadenas (A↔B y B↔C). Aplicar una pareja puede
+volver obsoleto el destino de otra: `ambiguity:apply` bloquea y comprueba cada
+ficha en su propia transacción, salta la decisión obsoleta en vez de fusionar
+otro id y exige repetir `ambiguity:scan`/`ambiguity:resolve` sobre el catálogo
+resultante. Por eso la aprobación se hace por pasadas y nunca se reutiliza a
+ciegas un plan anterior.
 
 ### E11 — Hardening y auditoría final (plan: fase 11)
 

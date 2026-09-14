@@ -41,7 +41,25 @@ export const aiBiographyDraftSchema = z.object({
   uncertainties: z.array(z.string().min(1).max(1_000)).max(30),
 }).strict();
 
+/**
+ * Arbitraje de un caso ambiguo de la cola (E10). Cada evidencia cita un hecho
+ * del dosier por su id; el código rechaza la propuesta si cita uno que no
+ * existe, y nunca la aplica sin una persona.
+ */
+export const aiAmbiguityProposalSchema = z.object({
+  decision: z.enum(["MATCH_HIGH_CONFIDENCE", "KEEP_SEPARATE", "NEEDS_HUMAN", "CONFLICT"]),
+  option: z.string().min(1).max(60).nullable(),
+  evidence: z.array(z.object({
+    fact_id: z.string().regex(/^F\d{1,3}$/u),
+    supports: z.enum(["match", "separate", "conflict"]),
+    note: z.string().min(1).max(500),
+  }).strict()).max(20),
+  reasoning_summary: z.string().min(1).max(1_500),
+  uncertainties: z.array(z.string().min(1).max(500)).max(10),
+}).strict();
+
 export type AiResolutionProposal = z.infer<typeof aiResolutionProposalSchema>;
+export type AiAmbiguityProposal = z.infer<typeof aiAmbiguityProposalSchema>;
 export type AiConflictProposal = z.infer<typeof aiConflictProposalSchema>;
 export type AiBiographyDraft = z.infer<typeof aiBiographyDraftSchema>;
 

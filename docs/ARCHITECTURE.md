@@ -135,6 +135,15 @@ las tres fuentes restantes el 2026-09-08 (SOURCES.md §3):
   Rockzuela en la **etiqueta de sección** (`Musica` = publicación, `Videos` =
   actuación). Los dos últimos resuelven el mismo problema: un título con forma
   de ficha que no siempre describe un disco.
+- **Tablas heredadas de Sincopa.** Sus fichas de disco permiten artista y
+  título en varias líneas y sus fichas de artista mezclan una tabla anual con
+  bloques detallados de sencillos. El adapter ancla `Company`, `Genre` y
+  `Release Year` desde el final de la cabecera, conserva el bloque en negrita
+  como artista y solo acepta una fila anual cuando su primera celda es un año
+  de cuatro cifras. `review sincopa-organizations` reextrae todo el crudo con
+  esas reglas y puede retirar, con nota y confirmación, únicamente los falsos
+  sellos sin evidencia de otra fuente ni dependencias; el run conserva las
+  fichas, claims e historia retirados.
 - **Gramática compartida.** `parseReleaseHead()` (en `adapters/shared.ts`) lee
   la forma `Título (Tipo Año)` que usan tres de los blogs por canales
   distintos, con un vocabulario español común: `Demo`/`Ep`/`Single` son tipo de
@@ -324,6 +333,46 @@ se salta. Tras cada operación se unen los créditos equivalentes del
 acreditado. Sin `--confirm` el plan se ejecuta en una transacción que se
 deshace.
 
+**Resolución de ambigüedades** (`src/ambiguity/`, PHASES §E10; plan, fase
+10B). Trabaja solo sobre la cola, en tres pasos:
+
+1. `crv ambiguity:scan [--dry-run]` encola como `possible_duplicate` los pares
+   que el cierre de F2–F5 dejó descritos: discos del mismo artista con ≥3
+   pistas equivalentes en la misma posición y personas cuyos nombres guardan
+   una relación reconocible (apodo, segundo nombre, iniciales, errata) **y**
+   comparten una banda. Various Artists no cuenta como banda. El parecido de
+   nombre sin banda común no se encola; se lista en
+   `reports/ambiguity-scan.json`. Idempotente por `payload.pairKey`.
+2. `crv ambiguity:resolve [--dry-run] [--review=<ids>] [--ai | --arbiter-file=<json>] [--export=<json>]`
+   carga un dosier por caso abierto (`dossiers.ts`) —nombres, alias, años,
+   tipos y clasificaciones, pistas, créditos, bandas, fuentes, título y
+   descripción del video, fila de la hoja, decisiones previas de la Mesa— y
+   decide cada pregunta con reglas deterministas (`albums.ts`, `persons.ts`,
+   `youtube.ts`): MATCH_HIGH_CONFIDENCE, KEEP_SEPARATE, NEEDS_HUMAN o
+   CONFLICT. Cada decisión cita hechos del dosier por id (`assertGrounded`);
+   ninguna distinta de NEEDS_HUMAN puede carecer de evidencia, y el DDL lo
+   repite. Dos candidatos plausibles (una inicial que encaja con dos personas,
+   un disco en dos pares) son NEEDS_HUMAN. Solo lo que queda NEEDS_HUMAN con
+   ambigüedad semántica pasa a un árbitro (`arbiter.ts`): DeepSeek por el
+   gateway con el modelo flash, o un archivo de decisiones externas atado al
+   hash del dosier. `applyArbiterPolicy` descarta la propuesta que cite hechos
+   inexistentes, un MATCH con menos de dos hechos a favor, con hechos en contra
+   o con incertidumbres. Escribe `ingest.ambiguity_resolutions` y
+   `reports/ambiguity-resolution.{json,md}`; no toca el core. El hash del
+   dosier hace idempotente la corrida: la misma evidencia reutiliza la fila y
+   una evidencia nueva la sustituye (`superseded`).
+3. `crv ambiguity:apply [--review=<ids>] --note=... --confirm` es la única
+   puerta al core de la etapa. Aplica MATCH (fusión de discos o personas con
+   `mergeInto` y alias, enlaces `live_concert` y ocurrencias de video con
+   `merge_audit`) y KEEP_SEPARATE (solo cierra); nunca CONFLICT ni
+   NEEDS_HUMAN. En lote solo entran decisiones de reglas; una de árbitro se
+   aplica nombrando su revisión. Antes de escribir comprueba que las fichas
+   siguen como se vieron, y cierra la revisión cuando todas sus preguntas
+   están aplicadas. En una fusión conserva primero la ficha respaldada por el
+   canal, después la que tiene tipo y tracklist más completos y, en empate, el
+   título menos truncado; para personas pesan además el nombre completo, el
+   apodo, el uso y la grafía menos cortada.
+
 ### 4.11 `deepseek gateway`
 Único punto de contacto con la IA. Contrato estricto (Zod in/out), registro
 en `ingest.ai_runs` con `prompt_hash` (caché: mismo prompt = mismo resultado
@@ -338,6 +387,8 @@ schema Zod se rechaza. Flash atiende clasificación/extracción narrativa/
 normalización semántica; Pro, ER difícil/conflictos/historia; Vision queda
 aislado para entrada visual. Los tres IDs se configuran por
 `DEEPSEEK_MODEL_FAST|REASONING|VISION`, sin acoplar reglas a nombres de modelo.
+Una llamada puede fijar su `modelClass`: el arbitraje de ambigüedades (E10) usa
+flash por decisión del propietario (2026-09-14), aunque su tarea sea de ER.
 Sin API key el sistema y toda la suite funcionan con rutas deterministas/mock.
 
 ### 4.12 `youtube ingestion`
@@ -389,7 +440,12 @@ Sin API key el sistema y toda la suite funcionan con rutas deterministas/mock.
   intermedias abren `youtube_match` (una por video; una descartada no se
   reabre). Nunca crea álbumes ni pistas, nunca corrige un inicio de pista
   del core, y no borra relaciones que el plan ya no deriva: las cuenta.
-  Deja `reports/youtube-reconciliation.{json,md}`.
+  Deja `reports/youtube-reconciliation.{json,md}`. Una revisión que una
+  persona ya cerró (aprobada o descartada, p. ej. con `ambiguity:apply`)
+  asienta su veredicto mientras la evidencia no traiga nada que esa persona no
+  viera (`coversVerdict`: propuestas, entradas sin pista e inicios
+  discrepantes): el video pasa a MATCHED_HIGH citando la revisión y no se
+  vuelve a preguntar.
 - Los tipos Music Video / Live Concert / Documentary nunca generan álbumes
   (gating en el adaptador + test obligatorio). Se registran con
   `media.video_albums.album_kind` = `music_video` / `live_concert` /
@@ -400,6 +456,8 @@ Comandos (mismos casos de uso que la API, sin UI):
 `sources:list|add|evidence`, `scrape <slug>`, `seed:import-yt`, `yt:sync`,
 `yt:link`,
 `yt:enrich <artist>`, `merge:run [--dry]`, `review:list|approve|dismiss`,
+`review sincopa-organizations [--confirm]`,
+`ambiguity:scan|resolve|apply` (§4.10),
 `genre:add|disable`, `export:json <entidad>`, `doctor` (integridad:
 core intacto, hashes, orphans de claims).
 
@@ -408,9 +466,13 @@ Fastify (F7): CRUD de entidades canónicas (artistas, personas, álbumes,
 tracks, créditos, organizaciones) — **los writes del CRUD pasan por el merge
 engine como claims `created_by=human, confidence=high`**, manteniendo
 auditoría única. Endpoints de lectura para el catálogo, fuentes, review queue,
-conflictos y estado de importaciones. Zod en cada ruta. Auth local simple
-(fase F7 define token de operador; no hay usuarios públicos en el alcance
-inicial).
+conflictos y estado de importaciones. Zod en cada ruta. Auth local simple:
+lectura abierta y escritura con `Authorization: Bearer $CRV_OPERATOR_TOKEN`
+(sin token configurado, solo lectura; no hay usuarios públicos en el alcance
+inicial). Cada escritura es una transacción y un run `manual` de la fuente
+`crv-operador` (`src/merge/operator.ts`); la cola se decide con
+`POST /review-queue/:id/{accept,reject,resolve-conflict}` y el historial se
+consulta en `GET /audit` y `GET /runs/:id` (PHASES §E7B).
 
 ### 4.15 `frontend` (futuro, F8)
 React SPA servida por Fastify (static) en la misma app. Solo API. Vistas:

@@ -224,6 +224,12 @@ export interface DeepSeekProposalRequest<TSchema extends z.ZodTypeAny> {
   input: unknown;
   instructions: string;
   responseSchema: TSchema;
+  /**
+   * Clase de modelo explícita. Por defecto la del `taskKind`; el propietario
+   * pidió flash para el arbitraje de ambigüedades (2026-09-14) aunque su tarea
+   * sea de ER difícil. Entra en el hash del prompt.
+   */
+  modelClass?: DeepSeekModelClass;
 }
 
 export interface DeepSeekProposalResult<T> {
@@ -243,7 +249,7 @@ export class DeepSeekGateway {
   ) {}
 
   async propose<TSchema extends z.ZodTypeAny>(request: DeepSeekProposalRequest<TSchema>): Promise<DeepSeekProposalResult<z.output<TSchema>>> {
-    const modelClass = MODEL_CLASS[request.taskKind];
+    const modelClass = request.modelClass ?? MODEL_CLASS[request.taskKind];
     const model = this.config.models[modelClass];
     const system = [
       "Actuas como arbitro de datos. Devuelve exclusivamente un objeto JSON.",

@@ -1,0 +1,3786 @@
+# Resolución de ambigüedades
+
+> Generado por `crv ambiguity:resolve` (PHASES.md E10; plan, FASE 10B). Solo casos de la
+> cola: las revisiones `youtube_match` de `yt:reconcile` y los `possible_duplicate` que
+> encoló `crv ambiguity:scan`. Primero reglas deterministas; un árbitro de IA solo lee
+> los casos con ambigüedad semántica y su propuesta cuenta solo si cita hechos del dosier.
+> Nada de esto tocó el core: `crv ambiguity:apply --confirm` aplica lo que una persona confirme.
+
+## Resumen
+
+| Medida | Valor |
+|---|---|
+| Revisiones analizadas | 662 (663 preguntas) |
+| MATCH_HIGH_CONFIDENCE | 362 — coinciden con evidencia concreta; se aplican solo con `crv ambiguity:apply --confirm` |
+| CONFLICT | 22 — la evidencia dice que es la misma entidad, pero las fuentes se contradicen: una persona elige |
+| KEEP_SEPARATE | 31 — hay evidencia de que son distintas; aplicarlo solo cierra la revisión |
+| NEEDS_HUMAN | 248 — la evidencia no permite distinguir; queda para una persona (resultado válido, no un fallo) |
+| Decididas por reglas / por árbitro | 460 / 203 |
+| Propuestas de árbitro descartadas por la política | 0 |
+| Ya aplicadas / pendientes de aplicar | 258 / 135 |
+| Resoluciones automáticas sin evidencia | 0 |
+
+| Tipo | MATCH | CONFLICT | KEEP_SEPARATE | NEEDS_HUMAN |
+|---|---|---|---|---|
+| discos | 32 | 22 | 30 | 20 |
+| personas | 320 | 0 | 0 | 223 |
+| YouTube | 10 | 0 | 1 | 5 |
+
+Barrido: 104 pares de discos y 543 de personas con banda en común. 1415 pares de personas con nombres parecidos pero sin ninguna banda en común **no se encolaron** (el parecido del nombre no es evidencia); la lista completa está en `reports/ambiguity-scan.json`.
+
+## MATCH_HIGH_CONFIDENCE (362)
+
+coinciden con evidencia concreta; se aplican solo con `crv ambiguity:apply --confirm`
+
+### discos (32)
+
+- **#192822 · Los Crema Paraíso: «El Debut» / «Debut»** — regla `album.same_release` · **aplicada** 2026-09-14
+  - los títulos son el mismo (salvo tildes, signos, artículo, números escritos o el nombre del artista delante), 8 pistas iguales en la misma posición, ninguna distinta y el mismo año
+  - F3 [a favor] `album:77.title|album:2295.title` — los títulos son el mismo (salvo tildes, signos, artículo, números escritos o el nombre del artista delante): «El Debut» / «Debut»
+  - F4 [a favor] `tracks:album:77|album:2295` — 8 de 8 posiciones comunes tienen la misma pista (8 y 8 pistas)
+  - F5 [a favor] `album:77.release_year|album:2295.release_year` — años: 2009 / 2009
+  - aplicaría: fusionar el disco 2295 «Debut» en 77 «El Debut» (el título perdido queda como alias)
+- **#192823 · Éxodo: «Éxodo» / «Ep»** — regla `album.same_release` · **aplicada** 2026-09-14
+  - uno de los títulos es genérico (Demo, EP, En Vivo, el nombre del artista) y no identifica el disco (los dos títulos son genéricos), 4 pistas iguales en la misma posición, ninguna distinta y el mismo año
+  - F3 [a favor] `album:99.title|album:2682.title` — uno de los títulos es genérico (Demo, EP, En Vivo, el nombre del artista) y no identifica el disco: «Éxodo» / «Ep»
+  - F4 [a favor] `tracks:album:99|album:2682` — 4 de 4 posiciones comunes tienen la misma pista (4 y 4 pistas)
+  - F5 [a favor] `album:99.release_year|album:2682.release_year` — años: 2011 / 2011
+  - aplicaría: fusionar el disco 2682 «Ep» en 99 «Éxodo» (el título perdido queda como alias)
+- **#192829 · Claroscuro: «EP» / «Claroscuro»** — regla `album.same_release`
+  - uno de los títulos es genérico (Demo, EP, En Vivo, el nombre del artista) y no identifica el disco (los dos títulos son genéricos), 4 pistas iguales en la misma posición, ninguna distinta y el mismo año
+  - F3 [a favor] `album:153.title|album:3914.title` — uno de los títulos es genérico (Demo, EP, En Vivo, el nombre del artista) y no identifica el disco: «EP» / «Claroscuro»
+  - F4 [a favor] `tracks:album:153|album:3914` — 4 de 4 posiciones comunes tienen la misma pista (4 y 4 pistas)
+  - F5 [a favor] `album:153.release_year|album:3914.release_year` — años: 1993 / 1993
+  - aplicaría: fusionar el disco 3914 «Claroscuro» en 153 «EP» (el título perdido queda como alias)
+- **#192833 · Dioslepague: «Música Para Los Apóstoles Madres» / «Madres»** — regla `album.same_release` · **aplicada** 2026-09-14
+  - un título contiene al otro, 14 pistas iguales en la misma posición, ninguna distinta y el mismo año
+  - F3 [a favor] `album:176.title|album:3343.title` — un título contiene al otro: «Música Para Los Apóstoles Madres» / «Madres»
+  - F4 [a favor] `tracks:album:176|album:3343` — 14 de 14 posiciones comunes tienen la misma pista (15 y 14 pistas)
+  - F5 [a favor] `album:176.release_year|album:3343.release_year` — años: 1999 / 1999
+  - aplicaría: fusionar el disco 3343 «Madres» en 176 «Música Para Los Apóstoles Madres» (el título perdido queda como alias)
+- **#192834 · Famasloop: «3 Casas» / «Tres Casas»** — regla `album.same_release` · **aplicada** 2026-09-14
+  - los títulos son el mismo (salvo tildes, signos, artículo, números escritos o el nombre del artista delante), 12 pistas iguales en la misma posición, ninguna distinta y el mismo año
+  - F3 [a favor] `album:187.title|album:3246.title` — los títulos son el mismo (salvo tildes, signos, artículo, números escritos o el nombre del artista delante): «3 Casas» / «Tres Casas»
+  - F4 [a favor] `tracks:album:187|album:3246` — 12 de 12 posiciones comunes tienen la misma pista (13 y 12 pistas)
+  - F5 [a favor] `album:187.release_year|album:3246.release_year` — años: 2006 / 2006
+  - aplicaría: fusionar el disco 3246 «Tres Casas» en 187 «3 Casas» (el título perdido queda como alias)
+- **#192840 · Los Amigos Invisibles: «Arepa 3000: A Venezuelan Journey Into Space» / «Arepa 3000»** — regla `album.same_release` · **aplicada** 2026-09-14
+  - un título contiene al otro, 19 pistas iguales en la misma posición, ninguna distinta y el mismo año
+  - F3 [a favor] `album:247.title|album:2182.title` — un título contiene al otro: «Arepa 3000: A Venezuelan Journey Into Space» / «Arepa 3000»
+  - F4 [a favor] `tracks:album:247|album:2182` — 19 de 19 posiciones comunes tienen la misma pista (19 y 19 pistas)
+  - F5 [a favor] `album:247.release_year|album:2182.release_year` — años: 2000 / 2000
+  - aplicaría: fusionar el disco 2182 «Arepa 3000» en 247 «Arepa 3000: A Venezuelan Journey Into Space» (el título perdido queda como alias)
+- **#192844 · Patafunk: «Dubdelic» / «Dudelic»** — regla `album.same_release` · **aplicada** 2026-09-14
+  - los títulos difieren en una errata, 12 pistas iguales en la misma posición, ninguna distinta y el mismo año
+  - F3 [a favor] `album:300.title|album:2883.title` — los títulos difieren en una errata: «Dubdelic» / «Dudelic»
+  - F4 [a favor] `tracks:album:300|album:2883` — 12 de 12 posiciones comunes tienen la misma pista (14 y 12 pistas)
+  - F5 [a favor] `album:300.release_year|album:2883.release_year` — años: 2008 / 2008
+  - aplicaría: fusionar el disco 2883 «Dudelic» en 300 «Dubdelic» (el título perdido queda como alias)
+- **#192847 · Vox: «No Se Puede Ya Ocultar» / «No Se Puede Ocultar»** — regla `album.same_release` · **aplicada** 2026-09-14
+  - un título contiene al otro, 11 pistas iguales en la misma posición, ninguna distinta y el mismo año
+  - F3 [a favor] `album:405.title|album:2786.title` — un título contiene al otro: «No Se Puede Ya Ocultar» / «No Se Puede Ocultar»
+  - F4 [a favor] `tracks:album:405|album:2786` — 11 de 11 posiciones comunes tienen la misma pista (11 y 11 pistas)
+  - F5 [a favor] `album:405.release_year|album:2786.release_year` — años: 1993 / 1993
+  - aplicaría: fusionar el disco 2786 «No Se Puede Ocultar» en 405 «No Se Puede Ya Ocultar» (el título perdido queda como alias)
+- **#192848 · Chucknorris: «11 Cuentos» / «11 Cuento»** — regla `album.same_release` · **aplicada** 2026-09-14
+  - un título contiene al otro, 3 pistas iguales en la misma posición, ninguna distinta y el mismo año
+  - F3 [a favor] `album:429.title|album:2981.title` — un título contiene al otro: «11 Cuentos» / «11 Cuento»
+  - F4 [a favor] `tracks:album:429|album:2981` — 3 de 3 posiciones comunes tienen la misma pista (11 y 3 pistas)
+  - F5 [a favor] `album:429.release_year|album:2981.release_year` — años: 2005 / 2005
+  - aplicaría: fusionar el disco 2981 «11 Cuento» en 429 «11 Cuentos» (el título perdido queda como alias)
+- **#192850 · Edgar Jiménez: «Con El Sentimiento Muerto» / «Edgar Jiménez Con El Sentimineto Muerto»** — regla `album.same_release` · **aplicada** 2026-09-14
+  - los títulos difieren en una errata, 11 pistas iguales en la misma posición, ninguna distinta y el mismo año
+  - F3 [a favor] `album:440.title|album:3206.title` — los títulos difieren en una errata: «Con El Sentimiento Muerto» / «Edgar Jiménez Con El Sentimineto Muerto»
+  - F4 [a favor] `tracks:album:440|album:3206` — 11 de 11 posiciones comunes tienen la misma pista (11 y 11 pistas)
+  - F5 [a favor] `album:440.release_year|album:3206.release_year` — años: 2009 / 2009
+  - aplicaría: fusionar el disco 3206 «Edgar Jiménez Con El Sentimineto Muerto» en 440 «Con El Sentimiento Muerto» (el título perdido queda como alias)
+- **#192852 · Luz Verde: «Cinema 0» / «Cinema Cero»** — regla `album.same_release` · **aplicada** 2026-09-14
+  - los títulos son el mismo (salvo tildes, signos, artículo, números escritos o el nombre del artista delante), 13 pistas iguales en la misma posición, ninguna distinta y el mismo año
+  - F3 [a favor] `album:462.title|album:4664.title` — los títulos son el mismo (salvo tildes, signos, artículo, números escritos o el nombre del artista delante): «Cinema 0» / «Cinema Cero»
+  - F4 [a favor] `tracks:album:462|album:4664` — 13 de 13 posiciones comunes tienen la misma pista (13 y 13 pistas)
+  - F5 [a favor] `album:462.release_year|album:4664.release_year` — años: 2000 / 2000
+  - aplicaría: fusionar el disco 4664 «Cinema Cero» en 462 «Cinema 0» (el título perdido queda como alias)
+- **#192856 · Candy66: «Acústico En Bits Session» / «Bitsessions»** — árbitro claude-opus-5
+  - árbitro: Las 8 pistas son las mismas en el mismo orden (F4), del mismo año (F5), y «Bitsessions» es «Bits Session» sin espacio (F3): es la misma sesión acústica.
+  - F4 [a favor] `tracks:album:521|album:3541` — 8 de 8 posiciones comunes tienen la misma pista (8 y 8 pistas)
+  - F5 [a favor] `album:521.release_year|album:3541.release_year` — años: 2010 / 2010
+  - F3 [a favor] `album:521.title|album:3541.title` — los títulos no tienen relación textual: «Acústico En Bits Session» / «Bitsessions»
+  - aplicaría: fusionar el disco 3541 «Bitsessions» en 521 «Acústico En Bits Session» (el título perdido queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`album.no_same_release_evidence`)
+- **#192860 · Los Impala: «Impala's 66» / «Los Impala ´66»** — regla `album.same_release` · **aplicada** 2026-09-14
+  - los títulos difieren en una errata, 12 pistas iguales en la misma posición, ninguna distinta y el mismo año
+  - F3 [a favor] `album:559.title|album:2522.title` — los títulos difieren en una errata: «Impala's 66» / «Los Impala ´66»
+  - F4 [a favor] `tracks:album:559|album:2522` — 12 de 12 posiciones comunes tienen la misma pista (12 y 12 pistas)
+  - F5 [a favor] `album:559.release_year|album:2522.release_year` — años: 1966 / 1966
+  - aplicaría: fusionar el disco 2522 «Los Impala ´66» en 559 «Impala's 66» (el título perdido queda como alias)
+- **#192866 · LaMueka: «Demo» / «DEMO casero»** — regla `album.same_release` · **aplicada** 2026-09-14
+  - uno de los títulos es genérico (Demo, EP, En Vivo, el nombre del artista) y no identifica el disco (los dos títulos son genéricos), 6 pistas iguales en la misma posición, ninguna distinta y el mismo año
+  - F3 [a favor] `album:743.title|album:1809.title` — uno de los títulos es genérico (Demo, EP, En Vivo, el nombre del artista) y no identifica el disco: «Demo» / «DEMO casero»
+  - F4 [a favor] `tracks:album:743|album:1809` — 6 de 6 posiciones comunes tienen la misma pista (7 y 6 pistas)
+  - F5 [a favor] `album:743.release_year|album:1809.release_year` — años: 2013 / 2013
+  - aplicaría: fusionar el disco 1809 «DEMO casero» en 743 «Demo» (el título perdido queda como alias)
+- **#192867 · Sentencia: «En Vivo (FNB Ateneo de Caracas)» / «En vivo en el nuevas bandas»** — árbitro claude-opus-5
+  - árbitro: Las 7 pistas son las mismas en el mismo orden (F4), del mismo año (F5), y los dos títulos describen la misma presentación en vivo en el festival de nuevas bandas (F3).
+  - F4 [a favor] `tracks:album:751|album:3250` — 7 de 7 posiciones comunes tienen la misma pista (7 y 7 pistas)
+  - F5 [a favor] `album:751.release_year|album:3250.release_year` — años: 1994 / 1994
+  - F3 [a favor] `album:751.title|album:3250.title` — los títulos no tienen relación textual: «En Vivo (FNB Ateneo de Caracas)» / «En vivo en el nuevas bandas»
+  - aplicaría: fusionar el disco 3250 «En vivo en el nuevas bandas» en 751 «En Vivo (FNB Ateneo de Caracas)» (el título perdido queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`album.no_same_release_evidence`)
+- **#192868 · Sentencia: «Silencio Demo 92​-​93» / «Silence»** — árbitro claude-opus-5
+  - árbitro: Las 5 pistas coinciden en orden y cantidad (F4), del mismo año (F5), y ambas fichas son la demo «Silencio»/«Silence» (F3, F2).
+  - F4 [a favor] `tracks:album:753|album:1338` — 5 de 5 posiciones comunes tienen la misma pista (5 y 5 pistas)
+  - F5 [a favor] `album:753.release_year|album:1338.release_year` — años: 1993 / 1993
+  - F3 [a favor] `album:753.title|album:1338.title` — los títulos no tienen relación textual: «Silencio Demo 92​-​93» / «Silence»
+  - aplicaría: fusionar el disco 753 «Silencio Demo 92​-​93» en 1338 «Silence» (el título perdido queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`album.no_same_release_evidence`)
+- **#192874 · Adh Seidh: «Demo» / «Adh Seidh»** — regla `album.same_release` · **aplicada** 2026-09-14
+  - uno de los títulos es genérico (Demo, EP, En Vivo, el nombre del artista) y no identifica el disco (los dos títulos son genéricos), 5 pistas iguales en la misma posición, ninguna distinta y el mismo año
+  - F3 [a favor] `album:1044.title|album:3248.title` — uno de los títulos es genérico (Demo, EP, En Vivo, el nombre del artista) y no identifica el disco: «Demo» / «Adh Seidh»
+  - F4 [a favor] `tracks:album:1044|album:3248` — 5 de 5 posiciones comunes tienen la misma pista (5 y 5 pistas)
+  - F5 [a favor] `album:1044.release_year|album:3248.release_year` — años: 2004 / 2004
+  - aplicaría: fusionar el disco 1044 «Demo» en 3248 «Adh Seidh» (el título perdido queda como alias)
+- **#192875 · Tierra del Dragón: «Recuerdos del Olvido (Demos)» / «Recuerdos del Olvido»** — regla `album.same_release` · **aplicada** 2026-09-14
+  - un título contiene al otro, 3 pistas iguales en la misma posición, ninguna distinta y el mismo año
+  - F3 [a favor] `album:1215.title|album:2838.title` — un título contiene al otro: «Recuerdos del Olvido (Demos)» / «Recuerdos del Olvido»
+  - F4 [a favor] `tracks:album:1215|album:2838` — 3 de 3 posiciones comunes tienen la misma pista (3 y 3 pistas)
+  - F5 [a favor] `album:1215.release_year|album:2838.release_year` — años: 2004 / 2004
+  - aplicaría: fusionar el disco 2838 «Recuerdos del Olvido» en 1215 «Recuerdos del Olvido (Demos)» (el título perdido queda como alias)
+- **#192892 · Deus Irae: «Demo» / «Deus Irae»** — regla `album.same_release` · **aplicada** 2026-09-14
+  - uno de los títulos es genérico (Demo, EP, En Vivo, el nombre del artista) y no identifica el disco (los dos títulos son genéricos), 4 pistas iguales en la misma posición, ninguna distinta y el mismo año
+  - F3 [a favor] `album:1491.title|album:3259.title` — uno de los títulos es genérico (Demo, EP, En Vivo, el nombre del artista) y no identifica el disco: «Demo» / «Deus Irae»
+  - F4 [a favor] `tracks:album:1491|album:3259` — 4 de 4 posiciones comunes tienen la misma pista (5 y 4 pistas)
+  - F5 [a favor] `album:1491.release_year|album:3259.release_year` — años: 2004 / 2004
+  - aplicaría: fusionar el disco 1491 «Demo» en 3259 «Deus Irae» (el título perdido queda como alias)
+- **#192899 · Alice in Hell: «El Descenso, Furia, Miedo, Hostilidad» / «El Descenso»** — regla `album.same_release` · **aplicada** 2026-09-14
+  - un título contiene al otro, 12 pistas iguales en la misma posición, ninguna distinta y sin años contradictorios
+  - F3 [a favor] `album:1787.title|album:4633.title` — un título contiene al otro: «El Descenso, Furia, Miedo, Hostilidad» / «El Descenso»
+  - F4 [a favor] `tracks:album:1787|album:4633` — 12 de 12 posiciones comunes tienen la misma pista (12 y 12 pistas)
+  - F5 [contexto] `album:1787.release_year|album:4633.release_year` — años: 2016 / sin año
+  - aplicaría: fusionar el disco 4633 «El Descenso» en 1787 «El Descenso, Furia, Miedo, Hostilidad» (el título perdido queda como alias)
+- **#192900 · Cuarto Magno: «Angel EP» / «Angel»** — regla `album.same_release` · **aplicada** 2026-09-14
+  - un título contiene al otro, 3 pistas iguales en la misma posición, ninguna distinta y el mismo año
+  - F3 [a favor] `album:1807.title|album:4682.title` — un título contiene al otro: «Angel EP» / «Angel»
+  - F4 [a favor] `tracks:album:1807|album:4682` — 3 de 3 posiciones comunes tienen la misma pista (3 y 3 pistas)
+  - F5 [a favor] `album:1807.release_year|album:4682.release_year` — años: 2016 / 2016
+  - aplicaría: fusionar el disco 4682 «Angel» en 1807 «Angel EP» (el título perdido queda como alias)
+- **#192901 · Natastor: «Demos 1992-1996» / «1992-1996»** — árbitro claude-opus-5
+  - árbitro: Ambas son recopilatorios de 2004 (F1, F2, F5) con el mismo rango «1992-1996» en el título (F3) y las mismas 7 pistas en orden (F4); la marca de demo sale solo de la palabra «Demos» del título.
+  - F3 [a favor] `album:1835.title|album:3253.title` — uno de los títulos es genérico (Demo, EP, En Vivo, el nombre del artista) y no identifica el disco: «Demos 1992-1996» / «1992-1996»
+  - F4 [a favor] `tracks:album:1835|album:3253` — 7 de 7 posiciones comunes tienen la misma pista (8 y 7 pistas)
+  - F5 [a favor] `album:1835.release_year|album:3253.release_year` — años: 2004 / 2004
+  - F1 [a favor] `album:1835` — «Demos 1992-1996» (2004) de Natastor: tipo compilation, 8 pistas, fuentes descargas-metal-venezolano, sin video en el canal
+  - aplicaría: fusionar el disco 3253 «1992-1996» en 1835 «Demos 1992-1996» (el título perdido queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`album.demo_vs_release`)
+- **#192904 · Frank Quintero: «Frankamente Acústico, Unplugged» / «Frankamente Acústico»** — regla `album.same_release` · **aplicada** 2026-09-14
+  - un título contiene al otro, 14 pistas iguales en la misma posición, ninguna distinta y el mismo año
+  - F3 [a favor] `album:2361.title|album:4741.title` — un título contiene al otro: «Frankamente Acústico, Unplugged» / «Frankamente Acústico»
+  - F4 [a favor] `tracks:album:2361|album:4741` — 14 de 14 posiciones comunes tienen la misma pista (14 y 14 pistas)
+  - F5 [a favor] `album:2361.release_year|album:4741.release_year` — años: 1994 / 1994
+  - aplicaría: fusionar el disco 4741 «Frankamente Acústico» en 2361 «Frankamente Acústico, Unplugged» (el título perdido queda como alias)
+- **#192905 · Razanima: «Lágrimas Sónicas de Nick» / «Lágrimas Sónicas»** — regla `album.same_release` · **aplicada** 2026-09-14
+  - un título contiene al otro, 7 pistas iguales en la misma posición, ninguna distinta y sin años contradictorios
+  - F3 [a favor] `album:2536.title|album:4406.title` — un título contiene al otro: «Lágrimas Sónicas de Nick» / «Lágrimas Sónicas»
+  - F4 [a favor] `tracks:album:2536|album:4406` — 7 de 7 posiciones comunes tienen la misma pista (7 y 7 pistas)
+  - F5 [contexto] `album:2536.release_year|album:4406.release_year` — años: 1997 / sin año
+  - aplicaría: fusionar el disco 4406 «Lágrimas Sónicas» en 2536 «Lágrimas Sónicas de Nick» (el título perdido queda como alias)
+- **#192908 · Alto Voltaje: «Carcel, muert o rock n roll» / «Cárcel, Muerte»** — árbitro claude-opus-5
+  - árbitro: «Cárcel, Muerte» es el comienzo del título completo (F3) y las 4 pistas coinciden en orden y cantidad (F4); el año que falta en una ficha (F5) no contradice.
+  - F3 [a favor] `album:2995.title|album:4634.title` — los títulos no tienen relación textual: «Carcel, muert o rock n roll» / «Cárcel, Muerte»
+  - F4 [a favor] `tracks:album:2995|album:4634` — 4 de 4 posiciones comunes tienen la misma pista (4 y 4 pistas)
+  - aplicaría: fusionar el disco 4634 «Cárcel, Muerte» en 2995 «Carcel, muert o rock n roll» (el título perdido queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`album.no_same_release_evidence`)
+- **#192910 · Henry Stephen: «I Don´t Know Why» / «I Don't Know»** — regla `album.same_release` · **aplicada** 2026-09-14
+  - un título contiene al otro, 8 pistas iguales en la misma posición, ninguna distinta y el mismo año
+  - F3 [a favor] `album:3024.title|album:4214.title` — un título contiene al otro: «I Don´t Know Why» / «I Don't Know»
+  - F4 [a favor] `tracks:album:3024|album:4214` — 8 de 8 posiciones comunes tienen la misma pista (8 y 8 pistas)
+  - F5 [a favor] `album:3024.release_year|album:4214.release_year` — años: 1982 / 1982
+  - aplicaría: fusionar el disco 4214 «I Don't Know» en 3024 «I Don´t Know Why» (el título perdido queda como alias)
+- **#192911 · Retrovértigo: «!!! Estás Triste» / «Déjala! ...Está Triste»** — árbitro claude-opus-5
+  - árbitro: Las 11 pistas coinciden (F4), son del mismo año (F5) y «!!! Estás Triste» es el título largo recortado (F3).
+  - F3 [a favor] `album:3123.title|album:3581.title` — los títulos no tienen relación textual: «!!! Estás Triste» / «Déjala! ...Está Triste»
+  - F4 [a favor] `tracks:album:3123|album:3581` — 11 de 11 posiciones comunes tienen la misma pista (11 y 11 pistas)
+  - F5 [a favor] `album:3123.release_year|album:3581.release_year` — años: 2005 / 2005
+  - aplicaría: fusionar el disco 3123 «!!! Estás Triste» en 3581 «Déjala! ...Está Triste» (el título perdido queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`album.no_same_release_evidence`)
+- **#192913 · Los Darts: «Vol. II» / «Los Darts Vol. II»** — regla `album.same_release` · **aplicada** 2026-09-14
+  - los títulos son el mismo (salvo tildes, signos, artículo, números escritos o el nombre del artista delante), 6 pistas iguales en la misma posición, ninguna distinta y el mismo año
+  - F3 [a favor] `album:3394.title|album:4866.title` — los títulos son el mismo (salvo tildes, signos, artículo, números escritos o el nombre del artista delante): «Vol. II» / «Los Darts Vol. II»
+  - F4 [a favor] `tracks:album:3394|album:4866` — 6 de 6 posiciones comunes tienen la misma pista (6 y 12 pistas)
+  - F5 [a favor] `album:3394.release_year|album:4866.release_year` — años: 1967 / 1967
+  - aplicaría: fusionar el disco 3394 «Vol. II» en 4866 «Los Darts Vol. II» (el título perdido queda como alias)
+- **#192920 · Azúcar, Cacao & Leche: «Azúcar Cacao y Leche Vol. II» / «Volumen 2»** — regla `album.same_release` · **aplicada** 2026-09-14
+  - los títulos son el mismo (salvo tildes, signos, artículo, números escritos o el nombre del artista delante), 6 pistas iguales en la misma posición, ninguna distinta y sin años contradictorios
+  - F3 [a favor] `album:4643.title|album:4988.title` — los títulos son el mismo (salvo tildes, signos, artículo, números escritos o el nombre del artista delante): «Azúcar Cacao y Leche Vol. II» / «Volumen 2»
+  - F4 [a favor] `tracks:album:4643|album:4988` — 6 de 6 posiciones comunes tienen la misma pista (6 y 11 pistas)
+  - F5 [contexto] `album:4643.release_year|album:4988.release_year` — años: 1972 / sin año
+  - aplicaría: fusionar el disco 4643 «Azúcar Cacao y Leche Vol. II» en 4988 «Volumen 2» (el título perdido queda como alias)
+- **#192921 · Various Artists: «Grandes Éxitos De Los» / «Grandes Exitos de los Años 70»** — regla `album.same_release` · **aplicada** 2026-09-14
+  - un título contiene al otro, 7 pistas iguales en la misma posición, ninguna distinta y sin años contradictorios
+  - F3 [a favor] `album:4644.title|album:5045.title` — un título contiene al otro: «Grandes Éxitos De Los» / «Grandes Exitos de los Años 70»
+  - F4 [a favor] `tracks:album:4644|album:5045` — 7 de 7 posiciones comunes tienen la misma pista (7 y 14 pistas)
+  - F5 [contexto] `album:4644.release_year|album:5045.release_year` — años: sin año / 1985
+  - aplicaría: fusionar el disco 4644 «Grandes Éxitos De Los» en 5045 «Grandes Exitos de los Años 70» (el título perdido queda como alias)
+- **#192922 · Azúcar, Cacao & Leche: «Los Más Grandes Exitos de Edgar Alexander & Azúcar, Cacao y Leche» / «Grandes Exitos»** — regla `album.same_release` · **aplicada** 2026-09-14
+  - un título contiene al otro, 12 pistas iguales en la misma posición, ninguna distinta y el mismo año
+  - F3 [a favor] `album:4645.title|album:5034.title` — un título contiene al otro: «Los Más Grandes Exitos de Edgar Alexander & Azúcar, Cacao y Leche» / «Grandes Exitos»
+  - F4 [a favor] `tracks:album:4645|album:5034` — 12 de 12 posiciones comunes tienen la misma pista (12 y 12 pistas)
+  - F5 [a favor] `album:4645.release_year|album:5034.release_year` — años: 1975 / 1975
+  - aplicaría: fusionar el disco 5034 «Grandes Exitos» en 4645 «Los Más Grandes Exitos de Edgar Alexander & Azúcar, Cacao y Leche» (el título perdido queda como alias)
+- **#192923 · Various Artists: «Grandes Exitos de» / «Grandes Exitos de Los '70»** — regla `album.same_release` · **aplicada** 2026-09-14
+  - un título contiene al otro, 6 pistas iguales en la misma posición, ninguna distinta y sin años contradictorios
+  - F3 [a favor] `album:4684.title|album:5087.title` — un título contiene al otro: «Grandes Exitos de» / «Grandes Exitos de Los '70»
+  - F4 [a favor] `tracks:album:4684|album:5087` — 6 de 6 posiciones comunes tienen la misma pista (7 y 13 pistas)
+  - F5 [contexto] `album:4684.release_year|album:5087.release_year` — años: sin año / 1980
+  - aplicaría: fusionar el disco 4684 «Grandes Exitos de» en 5087 «Grandes Exitos de Los '70» (el título perdido queda como alias)
+
+### personas (320)
+
+- **#192927 · «Nucho Bellomo» / «Nucho Bellono»** — regla `person.surname_typo_same_credit` · **aplicada** 2026-09-14
+  - el mismo nombre con una errata en el apellido y el mismo crédito en el mismo disco: una persona escrita de dos formas por dos fuentes
+  - F3 [a favor] `person:26.name|person:1521.name` — el mismo nombre con una errata en el apellido: «Nucho Bellomo» / «Nucho Bellono»
+  - F5 [a favor] `album_credits:album:166` — las dos grafías tienen el mismo tipo de crédito en «Desorden Público» de Desorden Público
+  - F4 [contexto] `context:person:26|person:1521` — comparten 1 banda(s) (Desorden Público) y 1 disco(s) donde ambas figuran («Desorden Público» de Desorden Público)
+  - aplicaría: fusionar la persona 1521 «Nucho Bellono» en 26 «Nucho Bellomo» (la grafía perdida queda como alias)
+- **#192928 · «Rubén "Micho" Correa» / «Rubén Correa»** — árbitro claude-opus-5
+  - árbitro: El nombre completo coincide y solo cambian el apodo, su posición o las tildes (F3); ambas fichas figuran en la misma banda (F4) y nada en el dosier apunta a dos personas.
+  - F3 [a favor] `person:29.name|person:10125.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Rubén "Micho" Correa» / «Rubén Correa»
+  - F4 [a favor] `context:person:29|person:10125` — comparten 1 banda(s) (Grupo Pan) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 10125 «Rubén Correa» en 29 «Rubén "Micho" Correa» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.name_variant_weak_context`)
+- **#192930 · «Pablo Manavello» / «Pablo "Zenith" Manavello»** — árbitro claude-opus-5
+  - árbitro: El nombre completo coincide y solo cambian el apodo, su posición o las tildes (F3); ambas fichas figuran en la misma banda (F4) y nada en el dosier apunta a dos personas.
+  - F3 [a favor] `person:39.name|person:3098.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Pablo Manavello» / «Pablo "Zenith" Manavello»
+  - F4 [a favor] `context:person:39|person:3098` — comparten 1 banda(s) (Vytas Brenner) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 39 «Pablo Manavello» en 3098 «Pablo "Zenith" Manavello» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.name_variant_weak_context`)
+- **#192931 · «Sandro Liberatoscioli» / «S. Liberatoscioli»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «S. Liberatoscioli» solo encaja con «Sandro Liberatoscioli» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:40.name|person:7059.name` — un nombre escrito con iniciales del otro: «Sandro Liberatoscioli» / «S. Liberatoscioli»
+  - F4 [a favor] `context:person:40|person:7059` — comparten 2 banda(s) (Aditus, Pedro Castillo) y 11 disco(s) donde ambas figuran («Volver Al Futuro» de Pedro Castillo, «Diez» de Aditus, «Algo Eléctrico» de Aditus, «Juegos de Azar» de Aditus)
+  - F1 [contexto] `person:40` — «Sandro Liberatoscioli» (40): 53 créditos o membresías; bandas: Aditus, Pedro Castillo; acreditada en el canal
+  - F2 [contexto] `person:7059` — «S. Liberatoscioli» (7059): 91 créditos o membresías; bandas: Aditus, Pedro Castillo
+  - aplicaría: fusionar la persona 7059 «S. Liberatoscioli» en 40 «Sandro Liberatoscioli» (la grafía perdida queda como alias)
+- **#192937 · «Germán Landaeta» / «Germán Landaet»** — árbitro claude-opus-5
+  - árbitro: Es el mismo nombre con una errata ortográfica de una o dos letras (F3), dentro de la misma banda (F4); no hay otro indicio de dos personas.
+  - F3 [a favor] `person:68.name|person:2492.name` — el mismo nombre con una errata en el apellido: «Germán Landaeta» / «Germán Landaet»
+  - F4 [a favor] `context:person:68|person:2492` — comparten 1 banda(s) (Movida Acústica Urbana) y 1 disco(s) donde ambas figuran («Rock And Mau» de Movida Acústica Urbana)
+  - aplicaría: fusionar la persona 2492 «Germán Landaet» en 68 «Germán Landaeta» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.surname_typo_weak_context`)
+- **#192938 · «Juan Carlos Pérez Soto» / «J.C. Soto»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «J.C. Soto» solo encaja con «Juan Carlos Pérez Soto» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:83.name|person:9384.name` — un nombre escrito con iniciales del otro: «Juan Carlos Pérez Soto» / «J.C. Soto»
+  - F4 [a favor] `context:person:83|person:9384` — comparten 1 banda(s) (Aditus) y 0 disco(s) donde ambas figuran
+  - F1 [contexto] `person:83` — «Juan Carlos Pérez Soto» (83): 3 créditos o membresías; bandas: Aditus, Melissa
+  - F2 [contexto] `person:9384` — «J.C. Soto» (9384): 1 créditos o membresías; bandas: Aditus
+  - aplicaría: fusionar la persona 9384 «J.C. Soto» en 83 «Juan Carlos Pérez Soto» (la grafía perdida queda como alias)
+- **#192939 · «Francesco Imbriago» / «Francesco Imbríaco»** — árbitro claude-opus-5
+  - árbitro: Es el mismo nombre con una errata ortográfica de una o dos letras (F3), dentro de la misma banda (F4); no hay otro indicio de dos personas.
+  - F3 [a favor] `person:114.name|person:772.name` — el mismo nombre con una errata en el apellido: «Francesco Imbriago» / «Francesco Imbríaco»
+  - F4 [a favor] `context:person:114|person:772` — comparten 1 banda(s) (Movida Acústica Urbana) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 114 «Francesco Imbriago» en 772 «Francesco Imbríaco» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.surname_typo_weak_context`)
+- **#192940 · «David Hernández» / «David "Morocho" Hernández»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre; solo cambian el apodo, su posición o las tildes, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:116.name|person:2423.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «David Hernández» / «David "Morocho" Hernández»
+  - F4 [a favor] `context:person:116|person:2423` — comparten 2 banda(s) (La Cándida Virgen, Mochuelo) y 1 disco(s) donde ambas figuran («Power of Pain» de La Cándida Virgen)
+  - F1 [contexto] `person:116` — «David Hernández» (116): 29 créditos o membresías; bandas: Candy66, Carlos Baute, Colectivo Proyectil, DespuésDeVieja, Factor Mental, La Cándida Virgen, La Misma Gente, Los Mentas; acreditada en el canal
+  - F2 [contexto] `person:2423` — «David "Morocho" Hernández» (2423): 5 créditos o membresías; bandas: Aponwao, La Cándida Virgen, Mochuelo; acreditada en el canal
+  - aplicaría: fusionar la persona 116 «David Hernández» en 2423 «David "Morocho" Hernández» (la grafía perdida queda como alias)
+- **#192941 · «Alejandro "Chonto" Turola» / «Alejandro Turola»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre; solo cambian el apodo, su posición o las tildes, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:120.name|person:131.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Alejandro "Chonto" Turola» / «Alejandro Turola»
+  - F4 [a favor] `context:person:120|person:131` — comparten 1 banda(s) (Circo Vulkano) y 2 disco(s) donde ambas figuran («La Vida Es ...» de Circo Vulkano, «El Reto» de Circo Vulkano)
+  - F1 [contexto] `person:120` — «Alejandro "Chonto" Turola» (120): 4 créditos o membresías; bandas: Circo Vulkano; acreditada en el canal
+  - F2 [contexto] `person:131` — «Alejandro Turola» (131): 5 créditos o membresías; bandas: Circo Vulkano, Clio; acreditada en el canal
+  - aplicaría: fusionar la persona 131 «Alejandro Turola» en 120 «Alejandro "Chonto" Turola» (la grafía perdida queda como alias)
+- **#192942 · «Luis "Luisle" López» / «Luis López»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre; solo cambian el apodo, su posición o las tildes, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:122.name|person:2505.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Luis "Luisle" López» / «Luis López»
+  - F4 [a favor] `context:person:122|person:2505` — comparten 1 banda(s) (Circo Vulkano) y 1 disco(s) donde ambas figuran («El Reto» de Circo Vulkano)
+  - F1 [contexto] `person:122` — «Luis "Luisle" López» (122): 3 créditos o membresías; bandas: Circo Vulkano; acreditada en el canal
+  - F2 [contexto] `person:2505` — «Luis López» (2505): 8 créditos o membresías; bandas: Circo Vulkano, Le Merm, Semeruco; acreditada en el canal
+  - aplicaría: fusionar la persona 2505 «Luis López» en 122 «Luis "Luisle" López» (la grafía perdida queda como alias)
+- **#192943 · «Dimi Gutman» / «Didi Gutman»** — árbitro claude-opus-5
+  - árbitro: Es el mismo nombre con una errata ortográfica de una o dos letras (F3), dentro de la misma banda (F4); no hay otro indicio de dos personas.
+  - F3 [a favor] `person:134.name|person:1904.name` — nombres de pila distintos por pocas letras: «Dimi Gutman» / «Didi Gutman»
+  - F4 [a favor] `context:person:134|person:1904` — comparten 1 banda(s) (Caramelos De Cianuro) y 1 disco(s) donde ambas figuran («Caramelos De Cianuro» de Caramelos De Cianuro)
+  - aplicaría: fusionar la persona 134 «Dimi Gutman» en 1904 «Didi Gutman» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.given_typo`)
+- **#192944 · «Tulio Creminisi» / «Tulio Cremisini»** — árbitro claude-opus-5
+  - árbitro: Es el mismo nombre con una errata ortográfica de una o dos letras (F3), dentro de la misma banda (F4); no hay otro indicio de dos personas.
+  - F3 [a favor] `person:137.name|person:2396.name` — el mismo nombre con una errata en el apellido: «Tulio Creminisi» / «Tulio Cremisini»
+  - F4 [a favor] `context:person:137|person:2396` — comparten 1 banda(s) (Claudio Corsi) y 1 disco(s) donde ambas figuran («Aire y Mar» de Claudio Corsi)
+  - aplicaría: fusionar la persona 137 «Tulio Creminisi» en 2396 «Tulio Cremisini» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.surname_typo_weak_context`)
+- **#192945 · «Carlos Franco» / «Carlos "Kike" Franco»** — árbitro claude-opus-5
+  - árbitro: El nombre completo coincide y solo cambian el apodo, su posición o las tildes (F3); ambas fichas figuran en la misma banda (F4) y nada en el dosier apunta a dos personas.
+  - F3 [a favor] `person:140.name|person:192.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Carlos Franco» / «Carlos "Kike" Franco»
+  - F4 [a favor] `context:person:140|person:192` — comparten 1 banda(s) (Tomates Fritos) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 140 «Carlos Franco» en 192 «Carlos "Kike" Franco» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.name_variant_weak_context`)
+- **#192946 · «Alfonso González» / «Alfonso González "DJ Hernia"»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre; solo cambian el apodo, su posición o las tildes, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:154.name|person:504.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Alfonso González» / «Alfonso González "DJ Hernia"»
+  - F4 [a favor] `context:person:154|person:504` — comparten 1 banda(s) (Bacalao Men) y 1 disco(s) donde ambas figuran («Bacalao Men» de Bacalao Men)
+  - F1 [contexto] `person:154` — «Alfonso González» (154): 2 créditos o membresías; bandas: Bacalao Men; acreditada en el canal
+  - F2 [contexto] `person:504` — «Alfonso González "DJ Hernia"» (504): 5 créditos o membresías; bandas: Bacalao Men; acreditada en el canal
+  - aplicaría: fusionar la persona 154 «Alfonso González» en 504 «Alfonso González "DJ Hernia"» (la grafía perdida queda como alias)
+- **#192947 · «Eleasar Yánez» / «Eleazar Yánez»** — árbitro claude-opus-5
+  - árbitro: Es el mismo nombre con una errata ortográfica de una o dos letras (F3), dentro de la misma banda (F4); no hay otro indicio de dos personas.
+  - F3 [a favor] `person:160.name|person:3396.name` — nombres de pila distintos por pocas letras: «Eleasar Yánez» / «Eleazar Yánez»
+  - F4 [a favor] `context:person:160|person:3396` — comparten 1 banda(s) (Vytas Brenner) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 160 «Eleasar Yánez» en 3396 «Eleazar Yánez» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.given_typo`)
+- **#192948 · «Wincho Schäfer» / «Wincho Schäffer»** — árbitro claude-opus-5
+  - árbitro: Es el mismo nombre con una errata ortográfica de una o dos letras (F3), dentro de la misma banda (F4); no hay otro indicio de dos personas.
+  - F3 [a favor] `person:174.name|person:1277.name` — el mismo nombre con una errata en el apellido: «Wincho Schäfer» / «Wincho Schäffer»
+  - F4 [a favor] `context:person:174|person:1277` — comparten 1 banda(s) (Sentimiento Muerto) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 1277 «Wincho Schäffer» en 174 «Wincho Schäfer» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.surname_typo_weak_context`)
+- **#192949 · «Wincho Schäfer» / «Wincho Schaefer»** — árbitro claude-opus-5
+  - árbitro: Es el mismo nombre con una errata ortográfica de una o dos letras (F3), dentro de la misma banda (F4); no hay otro indicio de dos personas.
+  - F3 [a favor] `person:174.name|person:1433.name` — el mismo nombre con una errata en el apellido: «Wincho Schäfer» / «Wincho Schaefer»
+  - F4 [a favor] `context:person:174|person:1433` — comparten 1 banda(s) (Sentimiento Muerto) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 1433 «Wincho Schaefer» en 174 «Wincho Schäfer» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.surname_typo_weak_context`)
+- **#192950 · «Wincho Schäfer» / «Wincho Schaeffer»** — árbitro claude-opus-5
+  - árbitro: Es el mismo nombre con una errata ortográfica de una o dos letras (F3), dentro de la misma banda (F4); no hay otro indicio de dos personas.
+  - F3 [a favor] `person:174.name|person:2182.name` — el mismo nombre con una errata en el apellido: «Wincho Schäfer» / «Wincho Schaeffer»
+  - F4 [a favor] `context:person:174|person:2182` — comparten 1 banda(s) (Sentimiento Muerto) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 2182 «Wincho Schaeffer» en 174 «Wincho Schäfer» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.surname_typo_weak_context`)
+- **#192951 · «José Echezuría "Pingüino"» / «José "Pingüino" Echezuría»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre; solo cambian el apodo, su posición o las tildes, con el mismo apodo, y comparten bandas
+  - F3 [a favor] `person:175.name|person:511.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «José Echezuría "Pingüino"» / «José "Pingüino" Echezuría»
+  - F4 [a favor] `context:person:175|person:511` — comparten 1 banda(s) (Sentimiento Muerto) y 0 disco(s) donde ambas figuran
+  - F1 [contexto] `person:175` — «José Echezuría "Pingüino"» (175): 10 créditos o membresías; bandas: Pablo Dagnino, Sentimiento Muerto; acreditada en el canal
+  - F2 [contexto] `person:511` — «José "Pingüino" Echezuría» (511): 18 créditos o membresías; bandas: Carmina, Cero A La Izquierda, Claroscuro, Culto Oculto, La Calle, Pacifica, Radio Clip, Sentimiento Muerto; acreditada en el canal
+  - aplicaría: fusionar la persona 175 «José Echezuría "Pingüino"» en 511 «José "Pingüino" Echezuría» (la grafía perdida queda como alias)
+- **#192953 · «Carlos Imperatori» / «C. Imperatori»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «C. Imperatori» solo encaja con «Carlos Imperatori» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:183.name|person:9790.name` — un nombre escrito con iniciales del otro: «Carlos Imperatori» / «C. Imperatori»
+  - F4 [a favor] `context:person:183|person:9790` — comparten 1 banda(s) (Charliepapa) y 1 disco(s) donde ambas figuran («20000 Leguas Cuadriláteras» de Charliepapa)
+  - F1 [contexto] `person:183` — «Carlos Imperatori» (183): 51 créditos o membresías; bandas: Caramelos De Cianuro, Celsitud, Charliepapa, Dioslepague, Lebronch, Los Mesoneros, Los Paranoias, Los Últimos Indocumentados; acreditada en el canal
+  - F2 [contexto] `person:9790` — «C. Imperatori» (9790): 5 créditos o membresías; bandas: Charliepapa
+  - aplicaría: fusionar la persona 9790 «C. Imperatori» en 183 «Carlos Imperatori» (la grafía perdida queda como alias)
+- **#192954 · «Juan Pablo Gómez» / «Juan Pablo Gómez (RCA A.K.A. Nutria)»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre; solo cambian el apodo, su posición o las tildes, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:190.name|person:8516.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Juan Pablo Gómez» / «Juan Pablo Gómez (RCA A.K.A. Nutria)»
+  - F4 [a favor] `context:person:190|person:8516` — comparten 1 banda(s) (Circo Urbano) y 1 disco(s) donde ambas figuran («Música Moderna» de Circo Urbano)
+  - F1 [contexto] `person:190` — «Juan Pablo Gómez» (190): 3 créditos o membresías; bandas: Chulius, Chulius & The Filarmónicos, Circo Urbano; acreditada en el canal
+  - F2 [contexto] `person:8516` — «Juan Pablo Gómez (RCA A.K.A. Nutria)» (8516): 1 créditos o membresías; bandas: Circo Urbano
+  - aplicaría: fusionar la persona 8516 «Juan Pablo Gómez (RCA A.K.A. Nutria)» en 190 «Juan Pablo Gómez» (la grafía perdida queda como alias)
+- **#192957 · «Annabella Almera» / «Annabella Almenar»** — árbitro claude-opus-5
+  - árbitro: Es el mismo nombre con una errata ortográfica de una o dos letras (F3), dentro de la misma banda (F4); no hay otro indicio de dos personas.
+  - F3 [a favor] `person:219.name|person:223.name` — nombres parecidos sin una variación reconocible: «Annabella Almera» / «Annabella Almenar»
+  - F4 [a favor] `context:person:219|person:223` — comparten 1 banda(s) (Vagos y Maleantes) y 1 disco(s) donde ambas figuran («Papidandeando» de Vagos y Maleantes)
+  - aplicaría: fusionar la persona 219 «Annabella Almera» en 223 «Annabella Almenar» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.fuzzy`)
+- **#192959 · «Gerardo Ochoa "Yayo" (†)» / «Gerardo Ochoa»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre; solo cambian el apodo, su posición o las tildes, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:233.name|person:3153.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Gerardo Ochoa "Yayo" (†)» / «Gerardo Ochoa»
+  - F4 [a favor] `context:person:233|person:3153` — comparten 1 banda(s) (Soleà) y 1 disco(s) donde ambas figuran («Demos» de Soleà)
+  - F1 [contexto] `person:233` — «Gerardo Ochoa "Yayo" (†)» (233): 2 créditos o membresías; bandas: Soleà; acreditada en el canal
+  - F2 [contexto] `person:3153` — «Gerardo Ochoa» (3153): 2 créditos o membresías; bandas: Soleà; acreditada en el canal
+  - aplicaría: fusionar la persona 3153 «Gerardo Ochoa» en 233 «Gerardo Ochoa "Yayo" (†)» (la grafía perdida queda como alias)
+- **#192961 · «Héctor "Tito" Fierro» / «Héctor Fierro»** — árbitro claude-opus-5
+  - árbitro: El nombre completo coincide y solo cambian el apodo, su posición o las tildes (F3); ambas fichas figuran en la misma banda (F4) y nada en el dosier apunta a dos personas.
+  - F3 [a favor] `person:299.name|person:1422.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Héctor "Tito" Fierro» / «Héctor Fierro»
+  - F4 [a favor] `context:person:299|person:1422` — comparten 1 banda(s) (Pixel) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 1422 «Héctor Fierro» en 299 «Héctor "Tito" Fierro» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.name_variant_weak_context`)
+- **#192962 · «Damián Santilli» / «Damian Santili»** — árbitro claude-opus-5
+  - árbitro: Es el mismo nombre con una errata ortográfica de una o dos letras (F3), dentro de la misma banda (F4); no hay otro indicio de dos personas.
+  - F3 [a favor] `person:329.name|person:1387.name` — el mismo nombre con una errata en el apellido: «Damián Santilli» / «Damian Santili»
+  - F4 [a favor] `context:person:329|person:1387` — comparten 1 banda(s) (Fordelucs) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 1387 «Damian Santili» en 329 «Damián Santilli» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.surname_typo_weak_context`)
+- **#192964 · «Mauricio Arcas» / «M. Arcas»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «M. Arcas» solo encaja con «Mauricio Arcas» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:367.name|person:9490.name` — un nombre escrito con iniciales del otro: «Mauricio Arcas» / «M. Arcas»
+  - F4 [a favor] `context:person:367|person:9490` — comparten 1 banda(s) (Los Amigos Invisibles) y 3 disco(s) donde ambas figuran («En Una Noche Tan Linda Como Esta» de Los Amigos Invisibles, «Acústico» de Los Amigos Invisibles, «Commercial» de Los Amigos Invisibles)
+  - F1 [contexto] `person:367` — «Mauricio Arcas» (367): 50 créditos o membresías; bandas: Caramelos De Cianuro, Chulius, Chulius & The Filarmónicos, Dioslepague, Los Amigos Invisibles, Maurimix, Okills, Vagos y Maleantes; acreditada en el canal
+  - F2 [contexto] `person:9490` — «M. Arcas» (9490): 20 créditos o membresías; bandas: Los Amigos Invisibles
+  - aplicaría: fusionar la persona 9490 «M. Arcas» en 367 «Mauricio Arcas» (la grafía perdida queda como alias)
+- **#192965 · «Armando Figueredo» / «A. Figueredo»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «A. Figueredo» solo encaja con «Armando Figueredo» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:377.name|person:7517.name` — un nombre escrito con iniciales del otro: «Armando Figueredo» / «A. Figueredo»
+  - F4 [a favor] `context:person:377|person:7517` — comparten 1 banda(s) (Los Amigos Invisibles) y 3 disco(s) donde ambas figuran («A Typical & Autoctonal Venezuelan Dance Band» de Los Amigos Invisibles, «En Una Noche Tan Linda Como Esta» de Los Amigos Invisibles, «Grandes Exitos de Los Amigos Invisibles…» de Los Amigos Invisibles)
+  - F1 [contexto] `person:377` — «Armando Figueredo» (377): 32 créditos o membresías; bandas: Chulius, Chulius & The Filarmónicos, Dioslepague, Le Picó, Los Amigos Invisibles, Superglicerina; acreditada en el canal
+  - F2 [contexto] `person:7517` — «A. Figueredo» (7517): 4 créditos o membresías; bandas: Los Amigos Invisibles
+  - aplicaría: fusionar la persona 7517 «A. Figueredo» en 377 «Armando Figueredo» (la grafía perdida queda como alias)
+- **#192966 · «Eduardo López» / «Eduardo López (Electric Freak Designs)»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre; solo cambian el apodo, su posición o las tildes, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:382.name|person:7665.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Eduardo López» / «Eduardo López (Electric Freak Designs)»
+  - F4 [a favor] `context:person:382|person:7665` — comparten 1 banda(s) (Andreazulado) y 1 disco(s) donde ambas figuran («Apolo» de Andreazulado)
+  - F1 [contexto] `person:382` — «Eduardo López» (382): 6 créditos o membresías; bandas: Andreazulado, Buenaparte, Caramelos De Cianuro, Frank Morón; acreditada en el canal
+  - F2 [contexto] `person:7665` — «Eduardo López (Electric Freak Designs)» (7665): 1 créditos o membresías; bandas: Andreazulado
+  - aplicaría: fusionar la persona 7665 «Eduardo López (Electric Freak Designs)» en 382 «Eduardo López» (la grafía perdida queda como alias)
+- **#192971 · «José Morato» / «José A. Morato»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre con un segundo nombre de más, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:401.name|person:2655.name` — el mismo nombre con un segundo nombre de más: «José Morato» / «José A. Morato»
+  - F4 [a favor] `context:person:401|person:2655` — comparten 1 banda(s) (Témpano) y 1 disco(s) donde ambas figuran («Témpano» de Témpano)
+  - F1 [contexto] `person:401` — «José Morato» (401): 2 créditos o membresías; bandas: Témpano; acreditada en el canal
+  - F2 [contexto] `person:2655` — «José A. Morato» (2655): 2 créditos o membresías; bandas: Témpano; acreditada en el canal
+  - aplicaría: fusionar la persona 2655 «José A. Morato» en 401 «José Morato» (la grafía perdida queda como alias)
+- **#192973 · «Carlos Guerreiro» / «Carlos "Turbo" Guerreiro»** — árbitro claude-opus-5
+  - árbitro: El nombre completo coincide y solo cambian el apodo, su posición o las tildes (F3); ambas fichas figuran en la misma banda (F4) y nada en el dosier apunta a dos personas.
+  - F3 [a favor] `person:426.name|person:2855.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Carlos Guerreiro» / «Carlos "Turbo" Guerreiro»
+  - F4 [a favor] `context:person:426|person:2855` — comparten 1 banda(s) (José Antonio Bordell) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 426 «Carlos Guerreiro» en 2855 «Carlos "Turbo" Guerreiro» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.name_variant_weak_context`)
+- **#192974 · «Sander Janseen» / «Sander Janssen»** — árbitro claude-opus-5
+  - árbitro: Es el mismo nombre con una errata ortográfica de una o dos letras (F3), dentro de la misma banda (F4); no hay otro indicio de dos personas.
+  - F3 [a favor] `person:434.name|person:2670.name` — el mismo nombre con una errata en el apellido: «Sander Janseen» / «Sander Janssen»
+  - F4 [a favor] `context:person:434|person:2670` — comparten 1 banda(s) (Laberinto) y 1 disco(s) donde ambas figuran («Priority» de Laberinto)
+  - aplicaría: fusionar la persona 434 «Sander Janseen» en 2670 «Sander Janssen» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.surname_typo_weak_context`)
+- **#192975 · «John Van Der Veer» / «John Van Deer Veer»** — árbitro claude-opus-5
+  - árbitro: Es el mismo nombre con una errata ortográfica de una o dos letras (F3), dentro de la misma banda (F4); no hay otro indicio de dos personas.
+  - F3 [a favor] `person:435.name|person:3017.name` — nombres parecidos sin una variación reconocible: «John Van Der Veer» / «John Van Deer Veer»
+  - F4 [a favor] `context:person:435|person:3017` — comparten 1 banda(s) (Laberinto) y 1 disco(s) donde ambas figuran («Priority» de Laberinto)
+  - aplicaría: fusionar la persona 435 «John Van Der Veer» en 3017 «John Van Deer Veer» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.fuzzy`)
+- **#192977 · «Miguel Ángel Larralde» / «Miguel Larralde»** — árbitro claude-opus-5
+  - árbitro: Una ficha añade un segundo nombre o una inicial a un apellido poco frecuente (F3), y ambas están en la misma banda (F4).
+  - F3 [a favor] `person:446.name|person:8637.name` — el mismo nombre con un segundo nombre de más: «Miguel Ángel Larralde» / «Miguel Larralde»
+  - F4 [a favor] `context:person:446|person:8637` — comparten 1 banda(s) (Colina) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 8637 «Miguel Larralde» en 446 «Miguel Ángel Larralde» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.name_variant_weak_context`)
+- **#192980 · «Juan Rodríguez» / «Juan Manuel Rodríguez»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre con un segundo nombre de más, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:466.name|person:3416.name` — el mismo nombre con un segundo nombre de más: «Juan Rodríguez» / «Juan Manuel Rodríguez»
+  - F4 [a favor] `context:person:466|person:3416` — comparten 1 banda(s) (Petrula) y 1 disco(s) donde ambas figuran («Oración Políglota Para Salvar Al Mundo» de Petrula)
+  - F1 [contexto] `person:466` — «Juan Rodríguez» (466): 5 créditos o membresías; bandas: Frank Morón, Petrula; acreditada en el canal
+  - F2 [contexto] `person:3416` — «Juan Manuel Rodríguez» (3416): 1 créditos o membresías; bandas: Petrula; acreditada en el canal
+  - aplicaría: fusionar la persona 466 «Juan Rodríguez» en 3416 «Juan Manuel Rodríguez» (la grafía perdida queda como alias)
+- **#192981 · «Víctor H. Mendoza» / «Víctor Hugo Mendoza»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «Víctor H. Mendoza» solo encaja con «Víctor Hugo Mendoza» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:468.name|person:478.name` — un nombre escrito con iniciales del otro: «Víctor H. Mendoza» / «Víctor Hugo Mendoza»
+  - F4 [a favor] `context:person:468|person:478` — comparten 1 banda(s) (Spias) y 1 disco(s) donde ambas figuran («Tres Cruces» de Spias)
+  - F1 [contexto] `person:468` — «Víctor H. Mendoza» (468): 1 créditos o membresías; bandas: Spias; acreditada en el canal
+  - F2 [contexto] `person:478` — «Víctor Hugo Mendoza» (478): 13 créditos o membresías; bandas: Alto Pana, Alvaro Segura, La Cándida Virgen, La Puta Eléctrica, Pacifica, Spias; acreditada en el canal
+  - aplicaría: fusionar la persona 468 «Víctor H. Mendoza» en 478 «Víctor Hugo Mendoza» (la grafía perdida queda como alias)
+- **#192985 · «Víctor Hugo Mendoza» / «Víctor Mendoza»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre con un segundo nombre de más, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:478.name|person:1052.name` — el mismo nombre con un segundo nombre de más: «Víctor Hugo Mendoza» / «Víctor Mendoza»
+  - F4 [a favor] `context:person:478|person:1052` — comparten 1 banda(s) (Alvaro Segura) y 1 disco(s) donde ambas figuran («Así Lo Veo Yo» de Alvaro Segura)
+  - F1 [contexto] `person:478` — «Víctor Hugo Mendoza» (478): 13 créditos o membresías; bandas: Alto Pana, Alvaro Segura, La Cándida Virgen, La Puta Eléctrica, Pacifica, Spias; acreditada en el canal
+  - F2 [contexto] `person:1052` — «Víctor Mendoza» (1052): 22 créditos o membresías; bandas: Alvaro Segura, Ankla, Azúcar, Cacao & Leche, Delia, Dimension Latina, Edgar Alexander, El Medio Evo, Lorenzo Adam; acreditada en el canal
+  - aplicaría: fusionar la persona 1052 «Víctor Mendoza» en 478 «Víctor Hugo Mendoza» (la grafía perdida queda como alias)
+- **#192993 · «Oscar Alcaíno» / «Oscar Alcaíno "Oscarello El Magnifico"»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre; solo cambian el apodo, su posición o las tildes, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:487.name|person:1113.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Oscar Alcaíno» / «Oscar Alcaíno "Oscarello El Magnifico"»
+  - F4 [a favor] `context:person:487|person:1113` — comparten 1 banda(s) (Desorden Público) y 1 disco(s) donde ambas figuran («Plomo Revienta» de Desorden Público)
+  - F1 [contexto] `person:487` — «Oscar Alcaíno» (487): 23 créditos o membresías; bandas: Claroscuro, Desorden Público; acreditada en el canal
+  - F2 [contexto] `person:1113` — «Oscar Alcaíno "Oscarello El Magnifico"» (1113): 3 créditos o membresías; bandas: Desorden Público; acreditada en el canal
+  - aplicaría: fusionar la persona 487 «Oscar Alcaíno» en 1113 «Oscar Alcaíno "Oscarello El Magnifico"» (la grafía perdida queda como alias)
+- **#192994 · «Álvaro Segura» / «A. Segura»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «A. Segura» solo encaja con «Álvaro Segura» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:490.name|person:9461.name` — un nombre escrito con iniciales del otro: «Álvaro Segura» / «A. Segura»
+  - F4 [a favor] `context:person:490|person:9461` — comparten 1 banda(s) (Solares) y 1 disco(s) donde ambas figuran («Cruel» de Solares)
+  - F1 [contexto] `person:490` — «Álvaro Segura» (490): 58 créditos o membresías; bandas: Alvaro Segura, Solares, Yátu, Zapato 3; acreditada en el canal
+  - F2 [contexto] `person:9461` — «A. Segura» (9461): 2 créditos o membresías; bandas: Solares
+  - aplicaría: fusionar la persona 9461 «A. Segura» en 490 «Álvaro Segura» (la grafía perdida queda como alias)
+- **#192995 · «Jaime Verdaguer» / «J. Verdaguer»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «J. Verdaguer» solo encaja con «Jaime Verdaguer» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:491.name|person:9465.name` — un nombre escrito con iniciales del otro: «Jaime Verdaguer» / «J. Verdaguer»
+  - F4 [a favor] `context:person:491|person:9465` — comparten 1 banda(s) (Solares) y 1 disco(s) donde ambas figuran («Cruel» de Solares)
+  - F1 [contexto] `person:491` — «Jaime Verdaguer» (491): 28 créditos o membresías; bandas: Radio Clip, Solares, Yátu, Zapato 3; acreditada en el canal
+  - F2 [contexto] `person:9465` — «J. Verdaguer» (9465): 2 créditos o membresías; bandas: Solares
+  - aplicaría: fusionar la persona 9465 «J. Verdaguer» en 491 «Jaime Verdaguer» (la grafía perdida queda como alias)
+- **#192997 · «Carlos Eduardo Reyes» / «Carlos Reyes»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre con un segundo nombre de más, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:495.name|person:8546.name` — el mismo nombre con un segundo nombre de más: «Carlos Eduardo Reyes» / «Carlos Reyes»
+  - F4 [a favor] `context:person:495|person:8546` — comparten 1 banda(s) (Claroscuro) y 1 disco(s) donde ambas figuran («Supereterodino» de Claroscuro)
+  - F1 [contexto] `person:495` — «Carlos Eduardo Reyes» (495): 26 créditos o membresías; bandas: Claroscuro, Dioslepague, Joystick, Reyes; acreditada en el canal
+  - F2 [contexto] `person:8546` — «Carlos Reyes» (8546): 1 créditos o membresías; bandas: Claroscuro
+  - aplicaría: fusionar la persona 8546 «Carlos Reyes» en 495 «Carlos Eduardo Reyes» (la grafía perdida queda como alias)
+- **#192998 · «Andrés Astorga» / «A. Astorga»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «A. Astorga» solo encaja con «Andrés Astorga» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:498.name|person:8958.name` — un nombre escrito con iniciales del otro: «Andrés Astorga» / «A. Astorga»
+  - F4 [a favor] `context:person:498|person:8958` — comparten 1 banda(s) (Dioslepague) y 1 disco(s) donde ambas figuran («Bronceador» de Dioslepague)
+  - F1 [contexto] `person:498` — «Andrés Astorga» (498): 10 créditos o membresías; bandas: Dioslepague; acreditada en el canal
+  - F2 [contexto] `person:8958` — «A. Astorga» (8958): 9 créditos o membresías; bandas: Dioslepague
+  - aplicaría: fusionar la persona 8958 «A. Astorga» en 498 «Andrés Astorga» (la grafía perdida queda como alias)
+- **#192999 · «Jonathan Bellomo» / «J. Bellomo»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «J. Bellomo» solo encaja con «Jonathan Bellomo» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:500.name|person:8999.name` — un nombre escrito con iniciales del otro: «Jonathan Bellomo» / «J. Bellomo»
+  - F4 [a favor] `context:person:500|person:8999` — comparten 1 banda(s) (Dioslepague) y 1 disco(s) donde ambas figuran («Bronceador» de Dioslepague)
+  - F1 [contexto] `person:500` — «Jonathan Bellomo» (500): 11 créditos o membresías; bandas: Charliepapa, Dioslepague; acreditada en el canal
+  - F2 [contexto] `person:8999` — «J. Bellomo» (8999): 5 créditos o membresías; bandas: Dioslepague
+  - aplicaría: fusionar la persona 8999 «J. Bellomo» en 500 «Jonathan Bellomo» (la grafía perdida queda como alias)
+- **#193000 · «Andrés Sosa» / «A. Sosa»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «A. Sosa» solo encaja con «Andrés Sosa» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:501.name|person:9901.name` — un nombre escrito con iniciales del otro: «Andrés Sosa» / «A. Sosa»
+  - F4 [a favor] `context:person:501|person:9901` — comparten 1 banda(s) (Dioslepague) y 1 disco(s) donde ambas figuran («Bronceador» de Dioslepague)
+  - F1 [contexto] `person:501` — «Andrés Sosa» (501): 18 créditos o membresías; bandas: Dioslepague, Garnica, Submarino; acreditada en el canal
+  - F2 [contexto] `person:9901` — «A. Sosa» (9901): 1 créditos o membresías; bandas: Dioslepague
+  - aplicaría: fusionar la persona 9901 «A. Sosa» en 501 «Andrés Sosa» (la grafía perdida queda como alias)
+- **#193004 · «José "Pingüino" Echezuría» / «José Echezuría»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre; solo cambian el apodo, su posición o las tildes, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:511.name|person:6111.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «José "Pingüino" Echezuría» / «José Echezuría»
+  - F4 [a favor] `context:person:511|person:6111` — comparten 2 banda(s) (La Calle, Radio Clip) y 2 disco(s) donde ambas figuran («A.T.C.» de La Calle, «Fuego En La Corriente» de Radio Clip)
+  - F1 [contexto] `person:511` — «José "Pingüino" Echezuría» (511): 18 créditos o membresías; bandas: Carmina, Cero A La Izquierda, Claroscuro, Culto Oculto, La Calle, Pacifica, Radio Clip, Sentimiento Muerto; acreditada en el canal
+  - F2 [contexto] `person:6111` — «José Echezuría» (6111): 4 créditos o membresías; bandas: La Calle, Radio Clip
+  - aplicaría: fusionar la persona 6111 «José Echezuría» en 511 «José "Pingüino" Echezuría» (la grafía perdida queda como alias)
+- **#193005 · «Chu Quintero» / «Chu "Zen" Quintero»** — árbitro claude-opus-5
+  - árbitro: El nombre completo coincide y solo cambian el apodo, su posición o las tildes (F3); ambas fichas figuran en la misma banda (F4) y nada en el dosier apunta a dos personas.
+  - F3 [a favor] `person:514.name|person:3097.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Chu Quintero» / «Chu "Zen" Quintero»
+  - F4 [a favor] `context:person:514|person:3097` — comparten 1 banda(s) (Vytas Brenner) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 514 «Chu Quintero» en 3097 «Chu "Zen" Quintero» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.name_variant_weak_context`)
+- **#193009 · «Ramón Rodríguez "Monchi"» / «Ramón Rodríguez»** — árbitro claude-opus-5
+  - árbitro: El nombre completo coincide y solo cambian el apodo, su posición o las tildes (F3); ambas fichas figuran en la misma banda (F4) y nada en el dosier apunta a dos personas.
+  - F3 [a favor] `person:525.name|person:2093.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Ramón Rodríguez "Monchi"» / «Ramón Rodríguez»
+  - F4 [a favor] `context:person:525|person:2093` — comparten 1 banda(s) (Repe) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 2093 «Ramón Rodríguez» en 525 «Ramón Rodríguez "Monchi"» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.name_variant_weak_context`)
+- **#193010 · «Alexander Regnault» / «Alexandre Regnault»** — árbitro claude-opus-5
+  - árbitro: Es el mismo nombre con una errata ortográfica de una o dos letras (F3), dentro de la misma banda (F4); no hay otro indicio de dos personas.
+  - F3 [a favor] `person:529.name|person:6156.name` — nombres de pila distintos por pocas letras: «Alexander Regnault» / «Alexandre Regnault»
+  - F4 [a favor] `context:person:529|person:6156` — comparten 1 banda(s) (LaMueka) y 1 disco(s) donde ambas figuran («Conspirando En El Bar» de LaMueka)
+  - aplicaría: fusionar la persona 6156 «Alexandre Regnault» en 529 «Alexander Regnault» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.given_typo`)
+- **#193011 · «Ilan "Chester" Czentochowsky» / «Ilan Czentochowsky»** — árbitro claude-opus-5
+  - árbitro: El nombre completo coincide y solo cambian el apodo, su posición o las tildes (F3); ambas fichas figuran en la misma banda (F4) y nada en el dosier apunta a dos personas.
+  - F3 [a favor] `person:539.name|person:4843.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Ilan "Chester" Czentochowsky» / «Ilan Czentochowsky»
+  - F4 [a favor] `context:person:539|person:4843` — comparten 1 banda(s) (Azúcar, Cacao & Leche) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 4843 «Ilan Czentochowsky» en 539 «Ilan "Chester" Czentochowsky» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.name_variant_weak_context`)
+- **#193012 · «Ilan "Chester" Czentochowsky» / «Ilan Czentochowsky (Ilan Chester)»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre; solo cambian el apodo, su posición o las tildes, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:539.name|person:7991.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Ilan "Chester" Czentochowsky» / «Ilan Czentochowsky (Ilan Chester)»
+  - F4 [a favor] `context:person:539|person:7991` — comparten 1 banda(s) (Azúcar, Cacao & Leche) y 1 disco(s) donde ambas figuran («Azúcar, Cacao & Leche Vol. 1» de Azúcar, Cacao & Leche)
+  - F1 [contexto] `person:539` — «Ilan "Chester" Czentochowsky» (539): 1 créditos o membresías; bandas: Azúcar, Cacao & Leche; acreditada en el canal
+  - F2 [contexto] `person:7991` — «Ilan Czentochowsky (Ilan Chester)» (7991): 2 créditos o membresías; bandas: Azúcar, Cacao & Leche
+  - aplicaría: fusionar la persona 7991 «Ilan Czentochowsky (Ilan Chester)» en 539 «Ilan "Chester" Czentochowsky» (la grafía perdida queda como alias)
+- **#193016 · «Pedro "Pete" Matute» / «Pedro Matute»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre; solo cambian el apodo, su posición o las tildes, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:541.name|person:3832.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Pedro "Pete" Matute» / «Pedro Matute»
+  - F4 [a favor] `context:person:541|person:3832` — comparten 1 banda(s) (Azúcar, Cacao & Leche) y 1 disco(s) donde ambas figuran («Azúcar, Cacao & Leche Vol. 1» de Azúcar, Cacao & Leche)
+  - F1 [contexto] `person:541` — «Pedro "Pete" Matute» (541): 11 créditos o membresías; bandas: Azúcar, Cacao & Leche; acreditada en el canal
+  - F2 [contexto] `person:3832` — «Pedro Matute» (3832): 4 créditos o membresías; bandas: Azúcar, Cacao & Leche, Los X5
+  - aplicaría: fusionar la persona 3832 «Pedro Matute» en 541 «Pedro "Pete" Matute» (la grafía perdida queda como alias)
+- **#193018 · «Ilan Chester» / «I. Chester»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «I. Chester» solo encaja con «Ilan Chester» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:544.name|person:7985.name` — un nombre escrito con iniciales del otro: «Ilan Chester» / «I. Chester»
+  - F4 [a favor] `context:person:544|person:7985` — comparten 1 banda(s) (Azúcar, Cacao & Leche) y 1 disco(s) donde ambas figuran («Azúcar, Cacao & Leche Vol. 1» de Azúcar, Cacao & Leche)
+  - F1 [contexto] `person:544` — «Ilan Chester» (544): 75 créditos o membresías; bandas: Aditus, Ananta, Angela, Azabache, Azúcar, Cacao & Leche, Bulevar, Carlos Mata, Chasin; acreditada en el canal
+  - F2 [contexto] `person:7985` — «I. Chester» (7985): 1 créditos o membresías; bandas: Azúcar, Cacao & Leche
+  - aplicaría: fusionar la persona 7985 «I. Chester» en 544 «Ilan Chester» (la grafía perdida queda como alias)
+- **#193019 · «Enrique González Müller» / «Enrique Gonzáles Muller»** — árbitro claude-opus-5
+  - árbitro: Es el mismo nombre con una errata ortográfica de una o dos letras (F3), dentro de la misma banda (F4); no hay otro indicio de dos personas.
+  - F3 [a favor] `person:551.name|person:2907.name` — el mismo nombre con una errata en el apellido: «Enrique González Müller» / «Enrique Gonzáles Muller»
+  - F4 [a favor] `context:person:551|person:2907` — comparten 1 banda(s) (Los Amigos Invisibles) y 1 disco(s) donde ambas figuran («Superpop Venezuela» de Los Amigos Invisibles)
+  - aplicaría: fusionar la persona 2907 «Enrique Gonzáles Muller» en 551 «Enrique González Müller» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.surname_typo_weak_context`)
+- **#193020 · «Michel Chazet» / «Michael Chazét»** — árbitro claude-opus-5
+  - árbitro: El nombre de pila es la misma forma con otra grafía, forma corta o el apodo usado como nombre (F3), en la misma banda (F4).
+  - F3 [a favor] `person:556.name|person:3400.name` — nombres de pila distintos por pocas letras: «Michel Chazet» / «Michael Chazét»
+  - F4 [a favor] `context:person:556|person:3400` — comparten 1 banda(s) (Vytas Brenner) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 3400 «Michael Chazét» en 556 «Michel Chazet» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.given_typo`)
+- **#193021 · «Willbert Álvarez» / «Wilbert Alvarez»** — árbitro claude-opus-5
+  - árbitro: Es el mismo nombre con una errata ortográfica de una o dos letras (F3), dentro de la misma banda (F4); no hay otro indicio de dos personas.
+  - F3 [a favor] `person:600.name|person:8363.name` — nombres de pila distintos por pocas letras: «Willbert Álvarez» / «Wilbert Alvarez»
+  - F4 [a favor] `context:person:600|person:8363` — comparten 1 banda(s) (Luz Verde) y 1 disco(s) donde ambas figuran («Rocanrol» de Luz Verde)
+  - aplicaría: fusionar la persona 8363 «Wilbert Alvarez» en 600 «Willbert Álvarez» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.given_typo`)
+- **#193023 · «Charlie Spiteri» / «Charles Spiteri»** — árbitro claude-opus-5
+  - árbitro: El nombre de pila es la misma forma con otra grafía, forma corta o el apodo usado como nombre (F3), en la misma banda (F4).
+  - F3 [a favor] `person:604.name|person:11108.name` — nombres de pila distintos por pocas letras: «Charlie Spiteri» / «Charles Spiteri»
+  - F4 [a favor] `context:person:604|person:11108` — comparten 1 banda(s) (Los Memphis) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 11108 «Charles Spiteri» en 604 «Charlie Spiteri» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.given_typo`)
+- **#193024 · «Carlos Eduardo "Cayayo" Troconis» / «Carlos "Cayayo" Troconis»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre con un segundo nombre de más, con el mismo apodo, y comparten bandas
+  - F3 [a favor] `person:608.name|person:4584.name` — el mismo nombre con un segundo nombre de más: «Carlos Eduardo "Cayayo" Troconis» / «Carlos "Cayayo" Troconis»
+  - F4 [a favor] `context:person:608|person:4584` — comparten 1 banda(s) (Sentimiento Muerto) y 0 disco(s) donde ambas figuran
+  - F1 [contexto] `person:608` — «Carlos Eduardo "Cayayo" Troconis» (608): 4 créditos o membresías; bandas: Sentimiento Muerto, Sur Carabela; acreditada en el canal
+  - F2 [contexto] `person:4584` — «Carlos "Cayayo" Troconis» (4584): 1 créditos o membresías; bandas: Sentimiento Muerto
+  - aplicaría: fusionar la persona 4584 «Carlos "Cayayo" Troconis» en 608 «Carlos Eduardo "Cayayo" Troconis» (la grafía perdida queda como alias)
+- **#193025 · «Enrique Doffiny» / «Enrique Duffini»** — árbitro claude-opus-5
+  - árbitro: Es el mismo nombre con una errata ortográfica de una o dos letras (F3), dentro de la misma banda (F4); no hay otro indicio de dos personas.
+  - F3 [a favor] `person:612.name|person:7464.name` — el mismo nombre con una errata en el apellido: «Enrique Doffiny» / «Enrique Duffini»
+  - F4 [a favor] `context:person:612|person:7464` — comparten 1 banda(s) (A'mbar) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 7464 «Enrique Duffini» en 612 «Enrique Doffiny» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.surname_typo_weak_context`)
+- **#193026 · «Roberto Bernal "Chom"» / «Roberto Bernal "Chon"»** — árbitro claude-opus-5
+  - árbitro: Los apodos son variantes del mismo (errata de una letra o artículo/prefijo) (F3, F5) sobre el mismo nombre y apellido, en la misma banda (F4).
+  - F3 [a favor] `person:618.name|person:6166.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Roberto Bernal "Chom"» / «Roberto Bernal "Chon"»
+  - F4 [a favor] `context:person:618|person:6166` — comparten 1 banda(s) (La Puta Eléctrica) y 0 disco(s) donde ambas figuran
+  - F5 [a favor] `person:618.name|person:6166.name` — apodos distintos: chom / chon
+  - aplicaría: fusionar la persona 6166 «Roberto Bernal "Chon"» en 618 «Roberto Bernal "Chom"» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.nickname_conflict`)
+- **#193027 · «Jesús "Torito" Toro» / «Jesús Toro "Torito"»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre; solo cambian el apodo, su posición o las tildes, con el mismo apodo, y comparten discos
+  - F3 [a favor] `person:627.name|person:1728.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Jesús "Torito" Toro» / «Jesús Toro "Torito"»
+  - F4 [a favor] `context:person:627|person:1728` — comparten 1 banda(s) (The Love Depression) y 1 disco(s) donde ambas figuran («The Love Depression» de The Love Depression)
+  - F1 [contexto] `person:627` — «Jesús "Torito" Toro» (627): 3 créditos o membresías; bandas: The Love Depression; acreditada en el canal
+  - F2 [contexto] `person:1728` — «Jesús Toro "Torito"» (1728): 2 créditos o membresías; bandas: The Love Depression; acreditada en el canal
+  - aplicaría: fusionar la persona 1728 «Jesús Toro "Torito"» en 627 «Jesús "Torito" Toro» (la grafía perdida queda como alias)
+- **#193028 · «Álvaro Falcón» / «A. Falcón»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «A. Falcón» solo encaja con «Álvaro Falcón» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:628.name|person:7052.name` — un nombre escrito con iniciales del otro: «Álvaro Falcón» / «A. Falcón»
+  - F4 [a favor] `context:person:628|person:7052` — comparten 3 banda(s) (Aditus, Colina, La Banda de Casablanca) y 2 disco(s) donde ambas figuran («A Través De La Ventana» de Aditus, «El Sueño» de La Banda de Casablanca)
+  - F1 [contexto] `person:628` — «Álvaro Falcón» (628): 63 créditos o membresías; bandas: Aditus, Agni Mogollón, Ananta, Azabache, Carlos Mata, Colina, Daniel Grau, El Medio Evo; acreditada en el canal
+  - F2 [contexto] `person:7052` — «A. Falcón» (7052): 7 créditos o membresías; bandas: Aditus, Colina, La Banda de Casablanca
+  - aplicaría: fusionar la persona 7052 «A. Falcón» en 628 «Álvaro Falcón» (la grafía perdida queda como alias)
+- **#193029 · «Richard Aumaitre» / «R. Aumaitre»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «R. Aumaitre» solo encaja con «Richard Aumaitre» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:629.name|person:9691.name` — un nombre escrito con iniciales del otro: «Richard Aumaitre» / «R. Aumaitre»
+  - F4 [a favor] `context:person:629|person:9691` — comparten 1 banda(s) (Los Darts) y 1 disco(s) donde ambas figuran («Una Vez Más» de Los Darts)
+  - F1 [contexto] `person:629` — «Richard Aumaitre» (629): 10 créditos o membresías; bandas: Los Darts, The Love Depression; acreditada en el canal
+  - F2 [contexto] `person:9691` — «R. Aumaitre» (9691): 1 créditos o membresías; bandas: Los Darts
+  - aplicaría: fusionar la persona 9691 «R. Aumaitre» en 629 «Richard Aumaitre» (la grafía perdida queda como alias)
+- **#193030 · «Allan Douches» / «Allen Douches»** — árbitro claude-opus-5
+  - árbitro: Es el mismo nombre con una errata ortográfica de una o dos letras (F3), dentro de la misma banda (F4); no hay otro indicio de dos personas.
+  - F3 [a favor] `person:647.name|person:3412.name` — nombres de pila distintos por pocas letras: «Allan Douches» / «Allen Douches»
+  - F4 [a favor] `context:person:647|person:3412` — comparten 1 banda(s) (Sentimiento Muerto) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 3412 «Allen Douches» en 647 «Allan Douches» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.given_typo`)
+- **#193031 · «Arístides Barbella» / «Arístides "Ari" Barbella»** — árbitro claude-opus-5
+  - árbitro: El nombre completo coincide y solo cambian el apodo, su posición o las tildes (F3); ambas fichas figuran en la misma banda (F4) y nada en el dosier apunta a dos personas.
+  - F3 [a favor] `person:656.name|person:3950.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Arístides Barbella» / «Arístides "Ari" Barbella»
+  - F4 [a favor] `context:person:656|person:3950` — comparten 1 banda(s) (Malanga) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 3950 «Arístides "Ari" Barbella» en 656 «Arístides Barbella» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.name_variant_weak_context`)
+- **#193032 · «Rodolfo Pagliuca» / «Rodolfo "Rudy" Pagliuca»** — árbitro claude-opus-5
+  - árbitro: El nombre completo coincide y solo cambian el apodo, su posición o las tildes (F3); ambas fichas figuran en la misma banda (F4) y nada en el dosier apunta a dos personas.
+  - F3 [a favor] `person:658.name|person:987.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Rodolfo Pagliuca» / «Rodolfo "Rudy" Pagliuca»
+  - F4 [a favor] `context:person:658|person:987` — comparten 1 banda(s) (Malanga) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 658 «Rodolfo Pagliuca» en 987 «Rodolfo "Rudy" Pagliuca» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.name_variant_weak_context`)
+- **#193033 · «Emidio Falconi "DJ Baffa"» / «Emidio Falconi "Baffa"»** — árbitro claude-opus-5
+  - árbitro: Los apodos son variantes del mismo (errata de una letra o artículo/prefijo) (F3, F5) sobre el mismo nombre y apellido, en la misma banda (F4).
+  - F3 [a favor] `person:669.name|person:6781.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Emidio Falconi "DJ Baffa"» / «Emidio Falconi "Baffa"»
+  - F4 [a favor] `context:person:669|person:6781` — comparten 1 banda(s) (Tulio Chuecos) y 1 disco(s) donde ambas figuran («EP» de Tulio Chuecos)
+  - F5 [a favor] `person:669.name|person:6781.name` — apodos distintos: dj baffa / baffa
+  - aplicaría: fusionar la persona 6781 «Emidio Falconi "Baffa"» en 669 «Emidio Falconi "DJ Baffa"» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.nickname_conflict`)
+- **#193034 · «Rafael Lares» / «Rafael Lárez»** — árbitro claude-opus-5
+  - árbitro: Es el mismo nombre con una errata ortográfica de una o dos letras (F3), dentro de la misma banda (F4); no hay otro indicio de dos personas.
+  - F3 [a favor] `person:681.name|person:4773.name` — el mismo nombre con una errata en el apellido: «Rafael Lares» / «Rafael Lárez»
+  - F4 [a favor] `context:person:681|person:4773` — comparten 1 banda(s) (Dame pa Matala) y 1 disco(s) donde ambas figuran («Movimiento Latino» de Dame pa Matala)
+  - aplicaría: fusionar la persona 4773 «Rafael Lárez» en 681 «Rafael Lares» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.surname_typo_weak_context`)
+- **#193035 · «Marcelo "Chamín" Añez» / «Marcelo Añez»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre; solo cambian el apodo, su posición o las tildes, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:700.name|person:821.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Marcelo "Chamín" Añez» / «Marcelo Añez»
+  - F4 [a favor] `context:person:700|person:821` — comparten 1 banda(s) (Los Amigos Invisibles) y 1 disco(s) donde ambas figuran («En Una Noche Tan Linda Como Esta» de Los Amigos Invisibles)
+  - F1 [contexto] `person:700` — «Marcelo "Chamín" Añez» (700): 1 créditos o membresías; bandas: Los Amigos Invisibles; acreditada en el canal
+  - F2 [contexto] `person:821` — «Marcelo Añez» (821): 10 créditos o membresías; bandas: Franco De Vita, Los Amigos Invisibles; acreditada en el canal
+  - aplicaría: fusionar la persona 821 «Marcelo Añez» en 700 «Marcelo "Chamín" Añez» (la grafía perdida queda como alias)
+- **#193036 · «Oswaldo "Tarz" Suels» / «Oswaldo Suels»** — árbitro claude-opus-5
+  - árbitro: El nombre completo coincide y solo cambian el apodo, su posición o las tildes (F3); ambas fichas figuran en la misma banda (F4) y nada en el dosier apunta a dos personas.
+  - F3 [a favor] `person:702.name|person:2325.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Oswaldo "Tarz" Suels» / «Oswaldo Suels»
+  - F4 [a favor] `context:person:702|person:2325` — comparten 1 banda(s) (Lebronch) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 2325 «Oswaldo Suels» en 702 «Oswaldo "Tarz" Suels» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.name_variant_weak_context`)
+- **#193037 · «Eduardo "Chino" Sandoval» / «Eduardo Sandoval»** — árbitro claude-opus-5
+  - árbitro: El nombre completo coincide y solo cambian el apodo, su posición o las tildes (F3); ambas fichas figuran en la misma banda (F4) y nada en el dosier apunta a dos personas.
+  - F3 [a favor] `person:704.name|person:2326.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Eduardo "Chino" Sandoval» / «Eduardo Sandoval»
+  - F4 [a favor] `context:person:704|person:2326` — comparten 1 banda(s) (Lebronch) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 2326 «Eduardo Sandoval» en 704 «Eduardo "Chino" Sandoval» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.name_variant_weak_context`)
+- **#193039 · «Vladimir Peña» / «Wladimir Peña»** — árbitro claude-opus-5
+  - árbitro: Es el mismo nombre con una errata ortográfica de una o dos letras (F3), dentro de la misma banda (F4); no hay otro indicio de dos personas.
+  - F3 [a favor] `person:735.name|person:3330.name` — nombres de pila distintos por pocas letras: «Vladimir Peña» / «Wladimir Peña»
+  - F4 [a favor] `context:person:735|person:3330` — comparten 1 banda(s) (Los Mentas) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 3330 «Wladimir Peña» en 735 «Vladimir Peña» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.given_typo`)
+- **#193043 · «Luis "Toto" Fernández» / «Luis Fernández "Toto"»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre; solo cambian el apodo, su posición o las tildes, con el mismo apodo, y comparten bandas
+  - F3 [a favor] `person:744.name|person:2221.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Luis "Toto" Fernández» / «Luis Fernández "Toto"»
+  - F4 [a favor] `context:person:744|person:2221` — comparten 1 banda(s) (Mermelada Bunch) y 0 disco(s) donde ambas figuran
+  - F1 [contexto] `person:744` — «Luis "Toto" Fernández» (744): 3 créditos o membresías; bandas: Mermelada Bunch; acreditada en el canal
+  - F2 [contexto] `person:2221` — «Luis Fernández "Toto"» (2221): 7 créditos o membresías; bandas: Angela, Mermelada Bunch; acreditada en el canal
+  - aplicaría: fusionar la persona 744 «Luis "Toto" Fernández» en 2221 «Luis Fernández "Toto"» (la grafía perdida queda como alias)
+- **#193044 · «Edmundo "Kiky" Rincón» / «Edmundo Rincón "Kiky"»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre; solo cambian el apodo, su posición o las tildes, con el mismo apodo, y comparten bandas
+  - F3 [a favor] `person:745.name|person:2222.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Edmundo "Kiky" Rincón» / «Edmundo Rincón "Kiky"»
+  - F4 [a favor] `context:person:745|person:2222` — comparten 1 banda(s) (Mermelada Bunch) y 0 disco(s) donde ambas figuran
+  - F1 [contexto] `person:745` — «Edmundo "Kiky" Rincón» (745): 4 créditos o membresías; bandas: Angela, Mermelada Bunch; acreditada en el canal
+  - F2 [contexto] `person:2222` — «Edmundo Rincón "Kiky"» (2222): 1 créditos o membresías; bandas: Mermelada Bunch; acreditada en el canal
+  - aplicaría: fusionar la persona 2222 «Edmundo Rincón "Kiky"» en 745 «Edmundo "Kiky" Rincón» (la grafía perdida queda como alias)
+- **#193047 · «Steve Barkan» / «Steven Barkan»** — árbitro claude-opus-5
+  - árbitro: El nombre de pila es la misma forma con otra grafía, forma corta o el apodo usado como nombre (F3), en la misma banda (F4).
+  - F3 [a favor] `person:767.name|person:2540.name` — nombres de pila distintos por pocas letras: «Steve Barkan» / «Steven Barkan»
+  - F4 [a favor] `context:person:767|person:2540` — comparten 1 banda(s) (Los Amigos Invisibles) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 767 «Steve Barkan» en 2540 «Steven Barkan» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.given_typo`)
+- **#193048 · «Francesco Imbríaco» / «Francesco Ibriago»** — regla `person.surname_typo_same_credit` · **aplicada** 2026-09-14
+  - el mismo nombre con una errata en el apellido y el mismo crédito en el mismo disco: una persona escrita de dos formas por dos fuentes
+  - F3 [a favor] `person:772.name|person:2957.name` — el mismo nombre con una errata en el apellido: «Francesco Imbríaco» / «Francesco Ibriago»
+  - F5 [a favor] `album_credits:album:331` — las dos grafías tienen el mismo tipo de crédito en «Skin» de Skin
+  - F4 [contexto] `context:person:772|person:2957` — comparten 1 banda(s) (Skin) y 1 disco(s) donde ambas figuran («Skin» de Skin)
+  - aplicaría: fusionar la persona 2957 «Francesco Ibriago» en 772 «Francesco Imbríaco» (la grafía perdida queda como alias)
+- **#193049 · «Tony "Cash" Maestracci» / «Tony Maestracci»** — árbitro claude-opus-5
+  - árbitro: El nombre completo coincide y solo cambian el apodo, su posición o las tildes (F3); ambas fichas figuran en la misma banda (F4) y nada en el dosier apunta a dos personas.
+  - F3 [a favor] `person:773.name|person:1386.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Tony "Cash" Maestracci» / «Tony Maestracci»
+  - F4 [a favor] `context:person:773|person:1386` — comparten 1 banda(s) (Tomates Fritos) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 1386 «Tony Maestracci» en 773 «Tony "Cash" Maestracci» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.name_variant_weak_context`)
+- **#193050 · «Reynaldo Goitía "Boston Rex"» / «Reynaldo Goitía»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre; solo cambian el apodo, su posición o las tildes, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:774.name|person:1508.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Reynaldo Goitía "Boston Rex"» / «Reynaldo Goitía»
+  - F4 [a favor] `context:person:774|person:1508` — comparten 3 banda(s) (Andreazulado, Buenaparte, Tomates Fritos) y 2 disco(s) donde ambas figuran («La Caída De Lucy» de Buenaparte, «Apolo» de Andreazulado)
+  - F1 [contexto] `person:774` — «Reynaldo Goitía "Boston Rex"» (774): 7 créditos o membresías; bandas: Andreazulado, Buenaparte, Tomates Fritos; acreditada en el canal
+  - F2 [contexto] `person:1508` — «Reynaldo Goitía» (1508): 13 créditos o membresías; bandas: Andreazulado, Buenaparte, Frank Morón, Tomates Fritos; acreditada en el canal
+  - aplicaría: fusionar la persona 1508 «Reynaldo Goitía» en 774 «Reynaldo Goitía "Boston Rex"» (la grafía perdida queda como alias)
+- **#193051 · «Pablo "Chino" Agreda» / «Pablo Agreda»** — árbitro claude-opus-5
+  - árbitro: El nombre completo coincide y solo cambian el apodo, su posición o las tildes (F3); ambas fichas figuran en la misma banda (F4) y nada en el dosier apunta a dos personas.
+  - F3 [a favor] `person:775.name|person:2611.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Pablo "Chino" Agreda» / «Pablo Agreda»
+  - F4 [a favor] `context:person:775|person:2611` — comparten 1 banda(s) (Tomates Fritos) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 2611 «Pablo Agreda» en 775 «Pablo "Chino" Agreda» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.name_variant_weak_context`)
+- **#193055 · «Félix Duque» / «Félix "El Gato" Duque»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre; solo cambian el apodo, su posición o las tildes, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:843.name|person:2460.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Félix Duque» / «Félix "El Gato" Duque»
+  - F4 [a favor] `context:person:843|person:2460` — comparten 1 banda(s) (Radio Clip) y 1 disco(s) donde ambas figuran («Fuego En La Corriente» de Radio Clip)
+  - F1 [contexto] `person:843` — «Félix Duque» (843): 9 créditos o membresías; bandas: Alter Ego, Los Astrolabios, RC2, Radio Clip; acreditada en el canal
+  - F2 [contexto] `person:2460` — «Félix "El Gato" Duque» (2460): 2 créditos o membresías; bandas: Radio Clip; acreditada en el canal
+  - aplicaría: fusionar la persona 843 «Félix Duque» en 2460 «Félix "El Gato" Duque» (la grafía perdida queda como alias)
+- **#193059 · «Daniel Jelinek» / «Daniel Jelinek "Cheky"»** — árbitro claude-opus-5
+  - árbitro: El nombre completo coincide y solo cambian el apodo, su posición o las tildes (F3); ambas fichas figuran en la misma banda (F4) y nada en el dosier apunta a dos personas.
+  - F3 [a favor] `person:890.name|person:3325.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Daniel Jelinek» / «Daniel Jelinek "Cheky"»
+  - F4 [a favor] `context:person:890|person:3325` — comparten 1 banda(s) (The Asbestos) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 890 «Daniel Jelinek» en 3325 «Daniel Jelinek "Cheky"» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.name_variant_weak_context`)
+- **#193060 · «Aldo Lamanna» / «Aldo Lamanna "DJ Lamaña"»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre; solo cambian el apodo, su posición o las tildes, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:899.name|person:2151.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Aldo Lamanna» / «Aldo Lamanna "DJ Lamaña"»
+  - F4 [a favor] `context:person:899|person:2151` — comparten 1 banda(s) (KP9000) y 1 disco(s) donde ambas figuran («KP9000» de KP9000)
+  - F1 [contexto] `person:899` — «Aldo Lamanna» (899): 10 créditos o membresías; bandas: Canserbero, Circo Vulkano, Edgar Jiménez, KP9000, Sincrónica; acreditada en el canal
+  - F2 [contexto] `person:2151` — «Aldo Lamanna "DJ Lamaña"» (2151): 5 créditos o membresías; bandas: Babylon Motorhome, KP9000; acreditada en el canal
+  - aplicaría: fusionar la persona 899 «Aldo Lamanna» en 2151 «Aldo Lamanna "DJ Lamaña"» (la grafía perdida queda como alias)
+- **#193062 · «Carlos Alberto Curto» / «Carlos Curto»** — árbitro claude-opus-5
+  - árbitro: Una ficha añade un segundo nombre o una inicial a un apellido poco frecuente (F3), y ambas están en la misma banda (F4).
+  - F3 [a favor] `person:917.name|person:2406.name` — el mismo nombre con un segundo nombre de más: «Carlos Alberto Curto» / «Carlos Curto»
+  - F4 [a favor] `context:person:917|person:2406` — comparten 1 banda(s) (Levítico) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 2406 «Carlos Curto» en 917 «Carlos Alberto Curto» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.name_variant_weak_context`)
+- **#193067 · «Camilo Froideval» / «C. Froideval»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «C. Froideval» solo encaja con «Camilo Froideval» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:944.name|person:9792.name` — un nombre escrito con iniciales del otro: «Camilo Froideval» / «C. Froideval»
+  - F4 [a favor] `context:person:944|person:9792` — comparten 1 banda(s) (Charliepapa) y 1 disco(s) donde ambas figuran («20000 Leguas Cuadriláteras» de Charliepapa)
+  - F1 [contexto] `person:944` — «Camilo Froideval» (944): 19 créditos o membresías; bandas: Charliepapa; acreditada en el canal
+  - F2 [contexto] `person:9792` — «C. Froideval» (9792): 1 créditos o membresías; bandas: Charliepapa
+  - aplicaría: fusionar la persona 9792 «C. Froideval» en 944 «Camilo Froideval» (la grafía perdida queda como alias)
+- **#193068 · «Armando Añez» / «A. Añez»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «A. Añez» solo encaja con «Armando Añez» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:971.name|person:9468.name` — un nombre escrito con iniciales del otro: «Armando Añez» / «A. Añez»
+  - F4 [a favor] `context:person:971|person:9468` — comparten 1 banda(s) (Americania) y 1 disco(s) donde ambas figuran («Saludos De Americania» de Americania)
+  - F1 [contexto] `person:971` — «Armando Añez» (971): 30 créditos o membresías; bandas: Americania, Movida Acústica Urbana, Okills; acreditada en el canal
+  - F2 [contexto] `person:9468` — «A. Añez» (9468): 5 créditos o membresías; bandas: Americania
+  - aplicaría: fusionar la persona 9468 «A. Añez» en 971 «Armando Añez» (la grafía perdida queda como alias)
+- **#193071 · «Gabriel "Pepo" Lamberti» / «Gabriel Lamberti»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre; solo cambian el apodo, su posición o las tildes, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:992.name|person:1826.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Gabriel "Pepo" Lamberti» / «Gabriel Lamberti»
+  - F4 [a favor] `context:person:992|person:1826` — comparten 1 banda(s) (Andreazulado) y 4 disco(s) donde ambas figuran («Crónicas Del Sub» de Andreazulado, «Despegue Eterno» de Andreazulado, «Andreazulado» de Andreazulado, «Dolby» de Andreazulado)
+  - F1 [contexto] `person:992` — «Gabriel "Pepo" Lamberti» (992): 10 créditos o membresías; bandas: Andreazulado; acreditada en el canal
+  - F2 [contexto] `person:1826` — «Gabriel Lamberti» (1826): 7 créditos o membresías; bandas: Andreazulado; acreditada en el canal
+  - aplicaría: fusionar la persona 1826 «Gabriel Lamberti» en 992 «Gabriel "Pepo" Lamberti» (la grafía perdida queda como alias)
+- **#193072 · «Gabriel "Pepo" Lamberti» / «Gabriel Lamberti "Pepo"»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre; solo cambian el apodo, su posición o las tildes, con el mismo apodo, y comparten discos
+  - F3 [a favor] `person:992.name|person:2482.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Gabriel "Pepo" Lamberti» / «Gabriel Lamberti "Pepo"»
+  - F4 [a favor] `context:person:992|person:2482` — comparten 1 banda(s) (Andreazulado) y 1 disco(s) donde ambas figuran («Apolo» de Andreazulado)
+  - F1 [contexto] `person:992` — «Gabriel "Pepo" Lamberti» (992): 10 créditos o membresías; bandas: Andreazulado; acreditada en el canal
+  - F2 [contexto] `person:2482` — «Gabriel Lamberti "Pepo"» (2482): 1 créditos o membresías; bandas: Andreazulado; acreditada en el canal
+  - aplicaría: fusionar la persona 2482 «Gabriel Lamberti "Pepo"» en 992 «Gabriel "Pepo" Lamberti» (la grafía perdida queda como alias)
+- **#193073 · «José "Cucaracha" Gómez» / «José Gómez»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre; solo cambian el apodo, su posición o las tildes, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:995.name|person:2124.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «José "Cucaracha" Gómez» / «José Gómez»
+  - F4 [a favor] `context:person:995|person:2124` — comparten 1 banda(s) (Andreazulado) y 1 disco(s) donde ambas figuran («Despegue Eterno» de Andreazulado)
+  - F1 [contexto] `person:995` — «José "Cucaracha" Gómez» (995): 1 créditos o membresías; bandas: Andreazulado; acreditada en el canal
+  - F2 [contexto] `person:2124` — «José Gómez» (2124): 5 créditos o membresías; bandas: Andreazulado; acreditada en el canal
+  - aplicaría: fusionar la persona 2124 «José Gómez» en 995 «José "Cucaracha" Gómez» (la grafía perdida queda como alias)
+- **#193076 · «Juan Bautista López "Yátu"» / «Juan Bautista López»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre; solo cambian el apodo, su posición o las tildes, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:1003.name|person:2125.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Juan Bautista López "Yátu"» / «Juan Bautista López»
+  - F4 [a favor] `context:person:1003|person:2125` — comparten 1 banda(s) (Zapato 3) y 1 disco(s) donde ambas figuran («Ecos Punzantes Del Ayer» de Zapato 3)
+  - F1 [contexto] `person:1003` — «Juan Bautista López "Yátu"» (1003): 29 créditos o membresías; bandas: La Hermandad, Seguridad Nacional, Sofía Insomnia, Yátu, Zapato 3; acreditada en el canal
+  - F2 [contexto] `person:2125` — «Juan Bautista López» (2125): 2 créditos o membresías; bandas: Zapato 3; acreditada en el canal
+  - aplicaría: fusionar la persona 2125 «Juan Bautista López» en 1003 «Juan Bautista López "Yátu"» (la grafía perdida queda como alias)
+- **#193079 · «Gustavo Corma» / «Gustavo Corma "Gus"»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre; solo cambian el apodo, su posición o las tildes, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:1018.name|person:1123.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Gustavo Corma» / «Gustavo Corma "Gus"»
+  - F4 [a favor] `context:person:1018|person:1123` — comparten 1 banda(s) (Seguridad Nacional) y 1 disco(s) donde ambas figuran («Documento De Actitud» de Seguridad Nacional)
+  - F1 [contexto] `person:1018` — «Gustavo Corma» (1018): 5 créditos o membresías; bandas: PAN, Seguridad Nacional; acreditada en el canal
+  - F2 [contexto] `person:1123` — «Gustavo Corma "Gus"» (1123): 4 créditos o membresías; bandas: Seguridad Nacional; acreditada en el canal
+  - aplicaría: fusionar la persona 1018 «Gustavo Corma» en 1123 «Gustavo Corma "Gus"» (la grafía perdida queda como alias)
+- **#193081 · «Rodrigo Barboza» / «Rodrigo Barbosa»** — regla `person.surname_typo_same_credit` · **aplicada** 2026-09-14
+  - el mismo nombre con una errata en el apellido y el mismo crédito en el mismo disco: una persona escrita de dos formas por dos fuentes
+  - F3 [a favor] `person:1054.name|person:7093.name` — el mismo nombre con una errata en el apellido: «Rodrigo Barboza» / «Rodrigo Barbosa»
+  - F5 [a favor] `album_credits:album:3638` — las dos grafías tienen el mismo tipo de crédito en «Lo Mejor de Aditus» de Aditus
+  - F4 [contexto] `context:person:1054|person:7093` — comparten 1 banda(s) (Aditus) y 1 disco(s) donde ambas figuran («Lo Mejor de Aditus» de Aditus)
+  - aplicaría: fusionar la persona 7093 «Rodrigo Barbosa» en 1054 «Rodrigo Barboza» (la grafía perdida queda como alias)
+- **#193082 · «Héctor "Lucas" Paredes» / «Héctor "El Lucas" Paredes»** — árbitro claude-opus-5
+  - árbitro: Los apodos son variantes del mismo (errata de una letra o artículo/prefijo) (F3, F5) sobre el mismo nombre y apellido, en la misma banda (F4).
+  - F3 [a favor] `person:1057.name|person:3329.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Héctor "Lucas" Paredes» / «Héctor "El Lucas" Paredes»
+  - F4 [a favor] `context:person:1057|person:3329` — comparten 1 banda(s) (Los Mentas) y 0 disco(s) donde ambas figuran
+  - F5 [a favor] `person:1057.name|person:3329.name` — apodos distintos: lucas / el lucas
+  - aplicaría: fusionar la persona 3329 «Héctor "El Lucas" Paredes» en 1057 «Héctor "Lucas" Paredes» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.nickname_conflict`)
+- **#193087 · «Ernesto Schweinburger» / «E. Schweinburger»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «E. Schweinburger» solo encaja con «Ernesto Schweinburger» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:1108.name|person:5605.name` — un nombre escrito con iniciales del otro: «Ernesto Schweinburger» / «E. Schweinburger»
+  - F4 [a favor] `context:person:1108|person:5605` — comparten 1 banda(s) (ETC) y 1 disco(s) donde ambas figuran («Malas Compañias» de ETC)
+  - F1 [contexto] `person:1108` — «Ernesto Schweinburger» (1108): 6 créditos o membresías; bandas: ETC, El Clan Spiteri, Masseratti 2lts; acreditada en el canal
+  - F2 [contexto] `person:5605` — «E. Schweinburger» (5605): 1 créditos o membresías; bandas: ETC
+  - aplicaría: fusionar la persona 5605 «E. Schweinburger» en 1108 «Ernesto Schweinburger» (la grafía perdida queda como alias)
+- **#193091 · «Orlando Martínez» / «Orlando "Mangan" Martínez»** — árbitro claude-opus-5
+  - árbitro: El nombre completo coincide y solo cambian el apodo, su posición o las tildes (F3); ambas fichas figuran en la misma banda (F4) y nada en el dosier apunta a dos personas.
+  - F3 [a favor] `person:1122.name|person:3344.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Orlando Martínez» / «Orlando "Mangan" Martínez»
+  - F4 [a favor] `context:person:1122|person:3344` — comparten 1 banda(s) (Viniloversus) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 1122 «Orlando Martínez» en 3344 «Orlando "Mangan" Martínez» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.name_variant_weak_context`)
+- **#193092 · «Johnna Mena» / «Johann Mena»** — árbitro claude-opus-5
+  - árbitro: Es el mismo nombre con una errata ortográfica de una o dos letras (F3), dentro de la misma banda (F4); no hay otro indicio de dos personas.
+  - F3 [a favor] `person:1141.name|person:1145.name` — nombres de pila distintos por pocas letras: «Johnna Mena» / «Johann Mena»
+  - F4 [a favor] `context:person:1141|person:1145` — comparten 1 banda(s) (iX) y 1 disco(s) donde ambas figuran («Ora Pro Nobis» de iX)
+  - aplicaría: fusionar la persona 1145 «Johann Mena» en 1141 «Johnna Mena» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.given_typo`)
+- **#193093 · «Rafael Figliolo» / «Rafael Figuiolo»** — árbitro claude-opus-5
+  - árbitro: Es el mismo nombre con una errata ortográfica de una o dos letras (F3), dentro de la misma banda (F4); no hay otro indicio de dos personas.
+  - F3 [a favor] `person:1167.name|person:8618.name` — el mismo nombre con una errata en el apellido: «Rafael Figliolo» / «Rafael Figuiolo»
+  - F4 [a favor] `context:person:1167|person:8618` — comparten 1 banda(s) (Colina) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 8618 «Rafael Figuiolo» en 1167 «Rafael Figliolo» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.surname_typo_weak_context`)
+- **#193094 · «Luis Emilio Mauri» / «L. E. Mauri»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «L. E. Mauri» solo encaja con «Luis Emilio Mauri» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:1168.name|person:4878.name` — un nombre escrito con iniciales del otro: «Luis Emilio Mauri» / «L. E. Mauri»
+  - F4 [a favor] `context:person:1168|person:4878` — comparten 1 banda(s) (La Banda de Casablanca) y 1 disco(s) donde ambas figuran («El Sueño» de La Banda de Casablanca)
+  - F1 [contexto] `person:1168` — «Luis Emilio Mauri» (1168): 20 créditos o membresías; bandas: Aditus, Agni Mogollón, Carlos Mata, Franco De Vita, La Banda de Casablanca, Pablo Dagnino; acreditada en el canal
+  - F2 [contexto] `person:4878` — «L. E. Mauri» (4878): 1 créditos o membresías; bandas: La Banda de Casablanca
+  - aplicaría: fusionar la persona 4878 «L. E. Mauri» en 1168 «Luis Emilio Mauri» (la grafía perdida queda como alias)
+- **#193095 · «Daniel De Sousa» / «Daniel "Mono" De Sousa»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre; solo cambian el apodo, su posición o las tildes, sin apodos contradictorios, y comparten bandas
+  - F3 [a favor] `person:1216.name|person:1522.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Daniel De Sousa» / «Daniel "Mono" De Sousa»
+  - F4 [a favor] `context:person:1216|person:1522` — comparten 1 banda(s) (La Vida Bohème) y 0 disco(s) donde ambas figuran
+  - F1 [contexto] `person:1216` — «Daniel De Sousa» (1216): 5 créditos o membresías; bandas: La Vida Bohème; acreditada en el canal
+  - F2 [contexto] `person:1522` — «Daniel "Mono" De Sousa» (1522): 1 créditos o membresías; bandas: La Vida Bohème; acreditada en el canal
+  - aplicaría: fusionar la persona 1216 «Daniel De Sousa» en 1522 «Daniel "Mono" De Sousa» (la grafía perdida queda como alias)
+- **#193096 · «Sebastián Araujo» / «Sebastián Araujo "Sebas"»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre; solo cambian el apodo, su posición o las tildes, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:1241.name|person:3411.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Sebastián Araujo» / «Sebastián Araujo "Sebas"»
+  - F4 [a favor] `context:person:1241|person:3411` — comparten 1 banda(s) (Dermis Tatú) y 1 disco(s) donde ambas figuran («La Violó La Mató y La Picó» de Dermis Tatú)
+  - F1 [contexto] `person:1241` — «Sebastián Araujo» (1241): 42 créditos o membresías; bandas: Bacalao Men, Cangrejo, Claroscuro, Dermis Tatú, Dioslepague, PAN, Pablo Dagnino, Sentimiento Muerto; acreditada en el canal
+  - F2 [contexto] `person:3411` — «Sebastián Araujo "Sebas"» (3411): 2 créditos o membresías; bandas: Dermis Tatú; acreditada en el canal
+  - aplicaría: fusionar la persona 1241 «Sebastián Araujo» en 3411 «Sebastián Araujo "Sebas"» (la grafía perdida queda como alias)
+- **#193099 · «Jean Carlo De Oliveira» / «Jean De Oliveira»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre con un segundo nombre de más, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:1247.name|person:1254.name` — el mismo nombre con un segundo nombre de más: «Jean Carlo De Oliveira» / «Jean De Oliveira»
+  - F4 [a favor] `context:person:1247|person:1254` — comparten 1 banda(s) (Candy66) y 3 disco(s) donde ambas figuran («Evolutio» de Candy66, «5 Mundos» de Candy66, «P.O.P.» de Candy66)
+  - F1 [contexto] `person:1247` — «Jean Carlo De Oliveira» (1247): 24 créditos o membresías; bandas: Agonia, Candy66; acreditada en el canal
+  - F2 [contexto] `person:1254` — «Jean De Oliveira» (1254): 42 créditos o membresías; bandas: Alfombra Roja, Candy66, Curva Sur, Distrust, Iguanas De Trapo, Ohmio, Pzoom, Retrovisor; acreditada en el canal
+  - aplicaría: fusionar la persona 1254 «Jean De Oliveira» en 1247 «Jean Carlo De Oliveira» (la grafía perdida queda como alias)
+- **#193101 · «Marcelo Toutin» / «M. Toutin»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «M. Toutin» solo encaja con «Marcelo Toutin» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:1262.name|person:4207.name` — un nombre escrito con iniciales del otro: «Marcelo Toutin» / «M. Toutin»
+  - F4 [a favor] `context:person:1262|person:4207` — comparten 1 banda(s) (Agugutata) y 1 disco(s) donde ambas figuran («Centurias y Violación» de Agugutata)
+  - F1 [contexto] `person:1262` — «Marcelo Toutin» (1262): 4 créditos o membresías; bandas: Agugutata, Antena Mantis; acreditada en el canal
+  - F2 [contexto] `person:4207` — «M. Toutin» (4207): 9 créditos o membresías; bandas: Agugutata
+  - aplicaría: fusionar la persona 4207 «M. Toutin» en 1262 «Marcelo Toutin» (la grafía perdida queda como alias)
+- **#193102 · «Yuval Lion» / «Yoval Lion»** — árbitro claude-opus-5
+  - árbitro: Es el mismo nombre con una errata ortográfica de una o dos letras (F3), dentro de la misma banda (F4); no hay otro indicio de dos personas.
+  - F3 [a favor] `person:1266.name|person:7405.name` — nombres de pila distintos por pocas letras: «Yuval Lion» / «Yoval Lion»
+  - F4 [a favor] `context:person:1266|person:7405` — comparten 1 banda(s) (Americania) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 7405 «Yoval Lion» en 1266 «Yuval Lion» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.given_typo`)
+- **#193103 · «Carlos García» / «Carlos "Tato" García»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre; solo cambian el apodo, su posición o las tildes, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:1276.name|person:1621.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Carlos García» / «Carlos "Tato" García»
+  - F4 [a favor] `context:person:1276|person:1621` — comparten 1 banda(s) (Aerea) y 1 disco(s) donde ambas figuran («Viajando Lejos» de Aerea)
+  - F1 [contexto] `person:1276` — «Carlos García» (1276): 11 créditos o membresías; bandas: Abraham Gustin, Aerea, Ahankar, Fábrica De Sueños, Mata Rica, Okills; acreditada en el canal
+  - F2 [contexto] `person:1621` — «Carlos "Tato" García» (1621): 5 créditos o membresías; bandas: Aerea, Ninah Mars; acreditada en el canal
+  - aplicaría: fusionar la persona 1276 «Carlos García» en 1621 «Carlos "Tato" García» (la grafía perdida queda como alias)
+- **#193105 · «Wincho Schäffer» / «Wincho Schaefer»** — árbitro claude-opus-5
+  - árbitro: Es el mismo nombre con una errata ortográfica de una o dos letras (F3), dentro de la misma banda (F4); no hay otro indicio de dos personas.
+  - F3 [a favor] `person:1277.name|person:1433.name` — el mismo nombre con una errata en el apellido: «Wincho Schäffer» / «Wincho Schaefer»
+  - F4 [a favor] `context:person:1277|person:1433` — comparten 1 banda(s) (Sentimiento Muerto) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 1433 «Wincho Schaefer» en 1277 «Wincho Schäffer» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.surname_typo_weak_context`)
+- **#193106 · «Wincho Schäffer» / «Wincho Schaeffer»** — árbitro claude-opus-5
+  - árbitro: Es el mismo nombre con una errata ortográfica de una o dos letras (F3), dentro de la misma banda (F4); no hay otro indicio de dos personas.
+  - F3 [a favor] `person:1277.name|person:2182.name` — el mismo nombre con una errata en el apellido: «Wincho Schäffer» / «Wincho Schaeffer»
+  - F4 [a favor] `context:person:1277|person:2182` — comparten 1 banda(s) (Sentimiento Muerto) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 1277 «Wincho Schäffer» en 2182 «Wincho Schaeffer» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.surname_typo_weak_context`)
+- **#193107 · «Leonardo Jaramillo "Kmarón"» / «Leonardo "Kmaron" Jaramillo»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre; solo cambian el apodo, su posición o las tildes, con el mismo apodo, y comparten bandas
+  - F3 [a favor] `person:1278.name|person:3050.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Leonardo Jaramillo "Kmarón"» / «Leonardo "Kmaron" Jaramillo»
+  - F4 [a favor] `context:person:1278|person:3050` — comparten 1 banda(s) (Okills) y 0 disco(s) donde ambas figuran
+  - F1 [contexto] `person:1278` — «Leonardo Jaramillo "Kmarón"» (1278): 1 créditos o membresías; bandas: Okills; acreditada en el canal
+  - F2 [contexto] `person:3050` — «Leonardo "Kmaron" Jaramillo» (3050): 1 créditos o membresías; bandas: Okills; acreditada en el canal
+  - aplicaría: fusionar la persona 3050 «Leonardo "Kmaron" Jaramillo» en 1278 «Leonardo Jaramillo "Kmarón"» (la grafía perdida queda como alias)
+- **#193110 · «Willie Croes» / «Willy Croes»** — árbitro claude-opus-5
+  - árbitro: El nombre de pila es la misma forma con otra grafía, forma corta o el apodo usado como nombre (F3), en la misma banda (F4).
+  - F3 [a favor] `person:1291.name|person:7304.name` — nombres de pila distintos por pocas letras: «Willie Croes» / «Willy Croes»
+  - F4 [a favor] `context:person:1291|person:7304` — comparten 1 banda(s) (Frank Quintero) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 7304 «Willy Croes» en 1291 «Willie Croes» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.given_typo`)
+- **#193111 · «Carlos Guzmán» / «Carlos "Kako" Guzmán»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre; solo cambian el apodo, su posición o las tildes, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:1304.name|person:1305.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Carlos Guzmán» / «Carlos "Kako" Guzmán»
+  - F4 [a favor] `context:person:1304|person:1305` — comparten 1 banda(s) (Radio Clip) y 1 disco(s) donde ambas figuran («Brilla» de Radio Clip)
+  - F1 [contexto] `person:1304` — «Carlos Guzmán» (1304): 9 créditos o membresías; bandas: Clarox, Hydra, La Misma Gente, Los Cazadores, Radio Clip; acreditada en el canal
+  - F2 [contexto] `person:1305` — «Carlos "Kako" Guzmán» (1305): 6 créditos o membresías; bandas: Radio Clip; acreditada en el canal
+  - aplicaría: fusionar la persona 1304 «Carlos Guzmán» en 1305 «Carlos "Kako" Guzmán» (la grafía perdida queda como alias)
+- **#193113 · «Carlos "Kako" Guzmán» / «Carlos "Kako" Enrique Guzmán»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre con un segundo nombre de más, con el mismo apodo, y comparten bandas
+  - F3 [a favor] `person:1305.name|person:3199.name` — el mismo nombre con un segundo nombre de más: «Carlos "Kako" Guzmán» / «Carlos "Kako" Enrique Guzmán»
+  - F4 [a favor] `context:person:1305|person:3199` — comparten 1 banda(s) (Radio Clip) y 0 disco(s) donde ambas figuran
+  - F1 [contexto] `person:1305` — «Carlos "Kako" Guzmán» (1305): 6 créditos o membresías; bandas: Radio Clip; acreditada en el canal
+  - F2 [contexto] `person:3199` — «Carlos "Kako" Enrique Guzmán» (3199): 1 créditos o membresías; bandas: Radio Clip; acreditada en el canal
+  - aplicaría: fusionar la persona 1305 «Carlos "Kako" Guzmán» en 3199 «Carlos "Kako" Enrique Guzmán» (la grafía perdida queda como alias)
+- **#193115 · «Victor Contreras» / «Victor "Locolaca" Contreras»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre; solo cambian el apodo, su posición o las tildes, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:1340.name|person:1523.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Victor Contreras» / «Victor "Locolaca" Contreras»
+  - F4 [a favor] `context:person:1340|person:1523` — comparten 1 banda(s) (Desorden Público) y 1 disco(s) donde ambas figuran («Desorden Público» de Desorden Público)
+  - F1 [contexto] `person:1340` — «Victor Contreras» (1340): 7 créditos o membresías; bandas: Desorden Público; acreditada en el canal
+  - F2 [contexto] `person:1523` — «Victor "Locolaca" Contreras» (1523): 2 créditos o membresías; bandas: Desorden Público; acreditada en el canal
+  - aplicaría: fusionar la persona 1340 «Victor Contreras» en 1523 «Victor "Locolaca" Contreras» (la grafía perdida queda como alias)
+- **#193116 · «Noel Mijares» / «N. Mijares»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «N. Mijares» solo encaja con «Noel Mijares» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:1342.name|person:8921.name` — un nombre escrito con iniciales del otro: «Noel Mijares» / «N. Mijares»
+  - F4 [a favor] `context:person:1342|person:8921` — comparten 1 banda(s) (Desorden Público) y 1 disco(s) donde ambas figuran («Estrellas Del Caos» de Desorden Público)
+  - F1 [contexto] `person:1342` — «Noel Mijares» (1342): 29 créditos o membresías; bandas: C4 Trío, Circo Vulkano, Cunaguaro Soul, Desorden Público, La Fleur, Los Perfectos Desconocidos; acreditada en el canal
+  - F2 [contexto] `person:8921` — «N. Mijares» (8921): 1 créditos o membresías; bandas: Desorden Público
+  - aplicaría: fusionar la persona 8921 «N. Mijares» en 1342 «Noel Mijares» (la grafía perdida queda como alias)
+- **#193118 · «Augie Verde» / «Augie "Oggi" Verde»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre; solo cambian el apodo, su posición o las tildes, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:1361.name|person:1439.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Augie Verde» / «Augie "Oggi" Verde»
+  - F4 [a favor] `context:person:1361|person:1439` — comparten 1 banda(s) (El Clan Spiteri) y 1 disco(s) donde ambas figuran («Back To The 60's» de El Clan Spiteri)
+  - F1 [contexto] `person:1361` — «Augie Verde» (1361): 39 créditos o membresías; bandas: Aditus, Alexis Rossell, Ankla, Bronce, Delia, ETC, El Clan Spiteri, El Medio Evo; acreditada en el canal
+  - F2 [contexto] `person:1439` — «Augie "Oggi" Verde» (1439): 1 créditos o membresías; bandas: El Clan Spiteri; acreditada en el canal
+  - aplicaría: fusionar la persona 1361 «Augie Verde» en 1439 «Augie "Oggi" Verde» (la grafía perdida queda como alias)
+- **#193120 · «Marco Velazcos» / «Marco Velazco»** — árbitro claude-opus-5
+  - árbitro: Es el mismo nombre con una errata ortográfica de una o dos letras (F3), dentro de la misma banda (F4); no hay otro indicio de dos personas.
+  - F3 [a favor] `person:1385.name|person:3984.name` — el mismo nombre con una errata en el apellido: «Marco Velazcos» / «Marco Velazco»
+  - F4 [a favor] `context:person:1385|person:3984` — comparten 1 banda(s) (Mantra) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 3984 «Marco Velazco» en 1385 «Marco Velazcos» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.surname_typo_weak_context`)
+- **#193121 · «Giovanni Gulli» / «Giovanni Gulli "Pachuco"»** — árbitro claude-opus-5
+  - árbitro: El nombre completo coincide y solo cambian el apodo, su posición o las tildes (F3); ambas fichas figuran en la misma banda (F4) y nada en el dosier apunta a dos personas.
+  - F3 [a favor] `person:1388.name|person:2130.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Giovanni Gulli» / «Giovanni Gulli "Pachuco"»
+  - F4 [a favor] `context:person:1388|person:2130` — comparten 1 banda(s) (Fordelucs) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 1388 «Giovanni Gulli» en 2130 «Giovanni Gulli "Pachuco"» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.name_variant_weak_context`)
+- **#193122 · «Cecilio Perozzi» / «C. Perozzi»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «C. Perozzi» solo encaja con «Cecilio Perozzi» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:1401.name|person:4701.name` — un nombre escrito con iniciales del otro: «Cecilio Perozzi» / «C. Perozzi»
+  - F4 [a favor] `context:person:1401|person:4701` — comparten 1 banda(s) (Alta Frecuencia) y 1 disco(s) donde ambas figuran («Cruzando la Linea» de Alta Frecuencia)
+  - F1 [contexto] `person:1401` — «Cecilio Perozzi» (1401): 9 créditos o membresías; bandas: Alta Frecuencia, Poster; acreditada en el canal
+  - F2 [contexto] `person:4701` — «C. Perozzi» (4701): 1 créditos o membresías; bandas: Alta Frecuencia
+  - aplicaría: fusionar la persona 4701 «C. Perozzi» en 1401 «Cecilio Perozzi» (la grafía perdida queda como alias)
+- **#193123 · «Juan De Ferrari» / «Juan Manuel De Ferrari»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre con un segundo nombre de más, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:1405.name|person:2434.name` — el mismo nombre con un segundo nombre de más: «Juan De Ferrari» / «Juan Manuel De Ferrari»
+  - F4 [a favor] `context:person:1405|person:2434` — comparten 2 banda(s) (Agresión, Cultura Tres) y 2 disco(s) donde ambas figuran («Guerra Santa» de Agresión, «Rezando Al Miedo» de Cultura Tres)
+  - F1 [contexto] `person:1405` — «Juan De Ferrari» (1405): 2 créditos o membresías; bandas: Agresión, Cultura Tres; acreditada en el canal
+  - F2 [contexto] `person:2434` — «Juan Manuel De Ferrari» (2434): 18 créditos o membresías; bandas: Agresión, Cultura Tres; acreditada en el canal
+  - aplicaría: fusionar la persona 1405 «Juan De Ferrari» en 2434 «Juan Manuel De Ferrari» (la grafía perdida queda como alias)
+- **#193125 · «Carlos Guerrero» / «Carlos Guerreriro»** — regla `person.surname_typo_same_credit` · **aplicada** 2026-09-14
+  - el mismo nombre con una errata en el apellido y el mismo crédito en el mismo disco: una persona escrita de dos formas por dos fuentes
+  - F3 [a favor] `person:1408.name|person:2689.name` — el mismo nombre con una errata en el apellido: «Carlos Guerrero» / «Carlos Guerreriro»
+  - F5 [a favor] `album_credits:album:345` — las dos grafías tienen el mismo tipo de crédito en «Tarot» de Tarot
+  - F4 [contexto] `context:person:1408|person:2689` — comparten 1 banda(s) (Tarot) y 1 disco(s) donde ambas figuran («Tarot» de Tarot)
+  - aplicaría: fusionar la persona 2689 «Carlos Guerreriro» en 1408 «Carlos Guerrero» (la grafía perdida queda como alias)
+- **#193127 · «Robin Boogaard» / «Robin Boogard»** — regla `person.surname_typo_same_credit` · **aplicada** 2026-09-14
+  - el mismo nombre con una errata en el apellido y el mismo crédito en el mismo disco: una persona escrita de dos formas por dos fuentes
+  - F3 [a favor] `person:1410.name|person:4637.name` — el mismo nombre con una errata en el apellido: «Robin Boogaard» / «Robin Boogard»
+  - F5 [a favor] `album_credits:album:110` — las dos grafías tienen el mismo tipo de crédito en «Guerra Santa» de Agresión
+  - F4 [contexto] `context:person:1410|person:4637` — comparten 1 banda(s) (Agresión) y 1 disco(s) donde ambas figuran («Guerra Santa» de Agresión)
+  - aplicaría: fusionar la persona 4637 «Robin Boogard» en 1410 «Robin Boogaard» (la grafía perdida queda como alias)
+- **#193128 · «Wincho Schaefer» / «Wincho Schaeffer»** — árbitro claude-opus-5
+  - árbitro: Es el mismo nombre con una errata ortográfica de una o dos letras (F3), dentro de la misma banda (F4); no hay otro indicio de dos personas.
+  - F3 [a favor] `person:1433.name|person:2182.name` — el mismo nombre con una errata en el apellido: «Wincho Schaefer» / «Wincho Schaeffer»
+  - F4 [a favor] `context:person:1433|person:2182` — comparten 1 banda(s) (Sentimiento Muerto) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 1433 «Wincho Schaefer» en 2182 «Wincho Schaeffer» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.surname_typo_weak_context`)
+- **#193129 · «Marlene Yanez» / «Marlene Yanés»** — árbitro claude-opus-5
+  - árbitro: Es el mismo nombre con una errata ortográfica de una o dos letras (F3), dentro de la misma banda (F4); no hay otro indicio de dos personas.
+  - F3 [a favor] `person:1435.name|person:2673.name` — el mismo nombre con una errata en el apellido: «Marlene Yanez» / «Marlene Yanés»
+  - F4 [a favor] `context:person:1435|person:2673` — comparten 1 banda(s) (Colina) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 2673 «Marlene Yanés» en 1435 «Marlene Yanez» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.surname_typo_weak_context`)
+- **#193132 · «Hernán Ascóniga» / «H. Ascóniga»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «H. Ascóniga» solo encaja con «Hernán Ascóniga» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:1463.name|person:9896.name` — un nombre escrito con iniciales del otro: «Hernán Ascóniga» / «H. Ascóniga»
+  - F4 [a favor] `context:person:1463|person:9896` — comparten 1 banda(s) (Desorden Público) y 1 disco(s) donde ambas figuran («Estrellas Del Caos» de Desorden Público)
+  - F1 [contexto] `person:1463` — «Hernán Ascóniga» (1463): 20 créditos o membresías; bandas: Desorden Público, Jungla Boulevard, La Big Landin Orquesta, Palmeras Kanibales, Wahala; acreditada en el canal
+  - F2 [contexto] `person:9896` — «H. Ascóniga» (9896): 2 créditos o membresías; bandas: Desorden Público
+  - aplicaría: fusionar la persona 9896 «H. Ascóniga» en 1463 «Hernán Ascóniga» (la grafía perdida queda como alias)
+- **#193136 · «Karina "Kara" Febles» / «Karina Febles»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre; solo cambian el apodo, su posición o las tildes, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:1494.name|person:6579.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Karina "Kara" Febles» / «Karina Febles»
+  - F4 [a favor] `context:person:1494|person:6579` — comparten 1 banda(s) (Sofía Insomnia) y 1 disco(s) donde ambas figuran («Breve Casi Eterno» de Sofía Insomnia)
+  - F1 [contexto] `person:1494` — «Karina "Kara" Febles» (1494): 1 créditos o membresías; bandas: Sofía Insomnia; acreditada en el canal
+  - F2 [contexto] `person:6579` — «Karina Febles» (6579): 1 créditos o membresías; bandas: Sofía Insomnia
+  - aplicaría: fusionar la persona 6579 «Karina Febles» en 1494 «Karina "Kara" Febles» (la grafía perdida queda como alias)
+- **#193137 · «Gregorio "Gregory" Mercado» / «Gregory Mercado»** — árbitro claude-opus-5
+  - árbitro: El nombre de pila es la misma forma con otra grafía, forma corta o el apodo usado como nombre (F3), en la misma banda (F4).
+  - F3 [a favor] `person:1495.name|person:6575.name` — nombres de pila distintos por pocas letras: «Gregorio "Gregory" Mercado» / «Gregory Mercado»
+  - F4 [a favor] `context:person:1495|person:6575` — comparten 1 banda(s) (Sofía Insomnia) y 1 disco(s) donde ambas figuran («Breve Casi Eterno» de Sofía Insomnia)
+  - aplicaría: fusionar la persona 6575 «Gregory Mercado» en 1495 «Gregorio "Gregory" Mercado» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.given_typo`)
+- **#193138 · «Sofía Inmsonia» / «Sofía Insomnia»** — regla `person.surname_typo_same_credit` · **aplicada** 2026-09-14
+  - el mismo nombre con una errata en el apellido y el mismo crédito en el mismo disco: una persona escrita de dos formas por dos fuentes
+  - F3 [a favor] `person:1499.name|person:6577.name` — el mismo nombre con una errata en el apellido: «Sofía Inmsonia» / «Sofía Insomnia»
+  - F5 [a favor] `album_credits:album:333` — las dos grafías tienen el mismo tipo de crédito en «Breve Casi Eterno» de Sofía Insomnia
+  - F4 [contexto] `context:person:1499|person:6577` — comparten 1 banda(s) (Sofía Insomnia) y 1 disco(s) donde ambas figuran («Breve Casi Eterno» de Sofía Insomnia)
+  - aplicaría: fusionar la persona 6577 «Sofía Insomnia» en 1499 «Sofía Inmsonia» (la grafía perdida queda como alias)
+- **#193139 · «Andrés Eduardo Sucre» / «Andrés Sucre»** — árbitro claude-opus-5
+  - árbitro: Una ficha añade un segundo nombre o una inicial a un apellido poco frecuente (F3), y ambas están en la misma banda (F4).
+  - F3 [a favor] `person:1510.name|person:2983.name` — el mismo nombre con un segundo nombre de más: «Andrés Eduardo Sucre» / «Andrés Sucre»
+  - F4 [a favor] `context:person:1510|person:2983` — comparten 1 banda(s) (Los Mesoneros) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 2983 «Andrés Sucre» en 1510 «Andrés Eduardo Sucre» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.name_variant_weak_context`)
+- **#193140 · «Durban Laverde» / «Durvan Laverde»** — árbitro claude-opus-5
+  - árbitro: Es el mismo nombre con una errata ortográfica de una o dos letras (F3), dentro de la misma banda (F4); no hay otro indicio de dos personas.
+  - F3 [a favor] `person:1546.name|person:2893.name` — nombres de pila distintos por pocas letras: «Durban Laverde» / «Durvan Laverde»
+  - F4 [a favor] `context:person:1546|person:2893` — comparten 1 banda(s) (Zapato 3) y 1 disco(s) donde ambas figuran («Bésame y Suicídate» de Zapato 3)
+  - aplicaría: fusionar la persona 2893 «Durvan Laverde» en 1546 «Durban Laverde» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.given_typo`)
+- **#193141 · «Humnel Acevedo» / «Hummel Acevedo»** — árbitro claude-opus-5
+  - árbitro: Es el mismo nombre con una errata ortográfica de una o dos letras (F3), dentro de la misma banda (F4); no hay otro indicio de dos personas.
+  - F3 [a favor] `person:1583.name|person:6294.name` — nombres de pila distintos por pocas letras: «Humnel Acevedo» / «Hummel Acevedo»
+  - F4 [a favor] `context:person:1583|person:6294` — comparten 1 banda(s) (Ramas) y 1 disco(s) donde ambas figuran («Evolution» de Ramas)
+  - aplicaría: fusionar la persona 6294 «Hummel Acevedo» en 1583 «Humnel Acevedo» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.given_typo`)
+- **#193142 · «Hugo Valbuena» / «H. Valbuena»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «H. Valbuena» solo encaja con «Hugo Valbuena» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:1601.name|person:9464.name` — un nombre escrito con iniciales del otro: «Hugo Valbuena» / «H. Valbuena»
+  - F4 [a favor] `context:person:1601|person:9464` — comparten 1 banda(s) (Solares) y 1 disco(s) donde ambas figuran («Cruel» de Solares)
+  - F1 [contexto] `person:1601` — «Hugo Valbuena» (1601): 8 créditos o membresías; bandas: Solares; acreditada en el canal
+  - F2 [contexto] `person:9464` — «H. Valbuena» (9464): 1 créditos o membresías; bandas: Solares
+  - aplicaría: fusionar la persona 9464 «H. Valbuena» en 1601 «Hugo Valbuena» (la grafía perdida queda como alias)
+- **#193144 · «Carlos Criniga» / «Carlos Crinigan»** — árbitro claude-opus-5
+  - árbitro: Es el mismo nombre con una errata ortográfica de una o dos letras (F3), dentro de la misma banda (F4); no hay otro indicio de dos personas.
+  - F3 [a favor] `person:1619.name|person:2155.name` — el mismo nombre con una errata en el apellido: «Carlos Criniga» / «Carlos Crinigan»
+  - F4 [a favor] `context:person:1619|person:2155` — comparten 1 banda(s) (Babylon Motorhome) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 1619 «Carlos Criniga» en 2155 «Carlos Crinigan» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.surname_typo_weak_context`)
+- **#193145 · «Eduardo Cedeño» / «Eduardo (Tato) Cedeño»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre; solo cambian el apodo, su posición o las tildes, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:1632.name|person:8557.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Eduardo Cedeño» / «Eduardo (Tato) Cedeño»
+  - F4 [a favor] `context:person:1632|person:8557` — comparten 1 banda(s) (Colectivo Proyectil) y 2 disco(s) donde ambas figuran («Nada como el sol» de Colectivo Proyectil, «Palantespaya» de Colectivo Proyectil)
+  - F1 [contexto] `person:1632` — «Eduardo Cedeño» (1632): 8 créditos o membresías; bandas: Aponwao, Colectivo Proyectil, Yátu; acreditada en el canal
+  - F2 [contexto] `person:8557` — «Eduardo (Tato) Cedeño» (8557): 3 créditos o membresías; bandas: Colectivo Proyectil
+  - aplicaría: fusionar la persona 8557 «Eduardo (Tato) Cedeño» en 1632 «Eduardo Cedeño» (la grafía perdida queda como alias)
+- **#193146 · «Zdenek J. Matousek» / «Zdenek Matousek»** — árbitro claude-opus-5
+  - árbitro: Una ficha añade un segundo nombre o una inicial a un apellido poco frecuente (F3), y ambas están en la misma banda (F4).
+  - F3 [a favor] `person:1644.name|person:2545.name` — el mismo nombre con un segundo nombre de más: «Zdenek J. Matousek» / «Zdenek Matousek»
+  - F4 [a favor] `context:person:1644|person:2545` — comparten 1 banda(s) (Témpano) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 1644 «Zdenek J. Matousek» en 2545 «Zdenek Matousek» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.name_variant_weak_context`)
+- **#193147 · «Victor G. Fiol» / «Victor Fiol»** — árbitro claude-opus-5
+  - árbitro: Una ficha añade un segundo nombre o una inicial a un apellido poco frecuente (F3), y ambas están en la misma banda (F4).
+  - F3 [a favor] `person:1646.name|person:2547.name` — el mismo nombre con un segundo nombre de más: «Victor G. Fiol» / «Victor Fiol»
+  - F4 [a favor] `context:person:1646|person:2547` — comparten 1 banda(s) (Témpano) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 1646 «Victor G. Fiol» en 2547 «Victor Fiol» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.name_variant_weak_context`)
+- **#193148 · «Vanessa Gouveia» / «Vanesa Gouveia»** — árbitro claude-opus-5
+  - árbitro: Es el mismo nombre con una errata ortográfica de una o dos letras (F3), dentro de la misma banda (F4); no hay otro indicio de dos personas.
+  - F3 [a favor] `person:1666.name|person:2481.name` — nombres de pila distintos por pocas letras: «Vanessa Gouveia» / «Vanesa Gouveia»
+  - F4 [a favor] `context:person:1666|person:2481` — comparten 1 banda(s) (Famasloop) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 1666 «Vanessa Gouveia» en 2481 «Vanesa Gouveia» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.given_typo`)
+- **#193149 · «Pablo "Mulato" González» / «Pablo González "Mulato"»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre; solo cambian el apodo, su posición o las tildes, con el mismo apodo, y comparten bandas
+  - F3 [a favor] `person:1667.name|person:2750.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Pablo "Mulato" González» / «Pablo González "Mulato"»
+  - F4 [a favor] `context:person:1667|person:2750` — comparten 1 banda(s) (Mulato) y 0 disco(s) donde ambas figuran
+  - F1 [contexto] `person:1667` — «Pablo "Mulato" González» (1667): 1 créditos o membresías; bandas: Mulato; acreditada en el canal
+  - F2 [contexto] `person:2750` — «Pablo González "Mulato"» (2750): 1 créditos o membresías; bandas: Mulato; acreditada en el canal
+  - aplicaría: fusionar la persona 2750 «Pablo González "Mulato"» en 1667 «Pablo "Mulato" González» (la grafía perdida queda como alias)
+- **#193150 · «Pablo "Mulato" González» / «Pablo González»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre; solo cambian el apodo, su posición o las tildes, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:1667.name|person:2784.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Pablo "Mulato" González» / «Pablo González»
+  - F4 [a favor] `context:person:1667|person:2784` — comparten 1 banda(s) (Mulato) y 1 disco(s) donde ambas figuran («De Aquí Pa' La Playa» de Mulato)
+  - F1 [contexto] `person:1667` — «Pablo "Mulato" González» (1667): 1 créditos o membresías; bandas: Mulato; acreditada en el canal
+  - F2 [contexto] `person:2784` — «Pablo González» (2784): 7 créditos o membresías; bandas: Metempsicosis, Mulato; acreditada en el canal
+  - aplicaría: fusionar la persona 2784 «Pablo González» en 1667 «Pablo "Mulato" González» (la grafía perdida queda como alias)
+- **#193151 · «Manuel "Manny" Diquez» / «Manuel Diquez»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre; solo cambian el apodo, su posición o las tildes, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:1669.name|person:1681.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Manuel "Manny" Diquez» / «Manuel Diquez»
+  - F4 [a favor] `context:person:1669|person:1681` — comparten 1 banda(s) (Ultrachic*) y 1 disco(s) donde ambas figuran («Ultrachic» de Ultrachic*)
+  - F1 [contexto] `person:1669` — «Manuel "Manny" Diquez» (1669): 1 créditos o membresías; bandas: Ultrachic*; acreditada en el canal
+  - F2 [contexto] `person:1681` — «Manuel Diquez» (1681): 2 créditos o membresías; bandas: Caramelos De Cianuro, Ultrachic*; acreditada en el canal
+  - aplicaría: fusionar la persona 1681 «Manuel Diquez» en 1669 «Manuel "Manny" Diquez» (la grafía perdida queda como alias)
+- **#193152 · «Dyffre Montaño» / «Dyffre T. Montaño»** — árbitro claude-opus-5
+  - árbitro: Una ficha añade un segundo nombre o una inicial a un apellido poco frecuente (F3), y ambas están en la misma banda (F4).
+  - F3 [a favor] `person:1670.name|person:2763.name` — el mismo nombre con un segundo nombre de más: «Dyffre Montaño» / «Dyffre T. Montaño»
+  - F4 [a favor] `context:person:1670|person:2763` — comparten 1 banda(s) (Mulato) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 2763 «Dyffre T. Montaño» en 1670 «Dyffre Montaño» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.name_variant_weak_context`)
+- **#193153 · «Luis "Golding" Barrios» / «Luis Eduardo Barrios»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre con un segundo nombre de más, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:1672.name|person:2031.name` — el mismo nombre con un segundo nombre de más: «Luis "Golding" Barrios» / «Luis Eduardo Barrios»
+  - F4 [a favor] `context:person:1672|person:2031` — comparten 1 banda(s) (Caramelos De Cianuro) y 1 disco(s) donde ambas figuran («Cuentos Para Adultos» de Caramelos De Cianuro)
+  - F1 [contexto] `person:1672` — «Luis "Golding" Barrios» (1672): 20 créditos o membresías; bandas: Caramelos De Cianuro, Ultrachic*; acreditada en el canal
+  - F2 [contexto] `person:2031` — «Luis Eduardo Barrios» (2031): 1 créditos o membresías; bandas: Caramelos De Cianuro; acreditada en el canal
+  - aplicaría: fusionar la persona 2031 «Luis Eduardo Barrios» en 1672 «Luis "Golding" Barrios» (la grafía perdida queda como alias)
+- **#193155 · «Winston Mandelblúm» / «Winston Mandelblúm "Winsman"»** — árbitro claude-opus-5
+  - árbitro: El nombre completo coincide y solo cambian el apodo, su posición o las tildes (F3); ambas fichas figuran en la misma banda (F4) y nada en el dosier apunta a dos personas.
+  - F3 [a favor] `person:1721.name|person:2487.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Winston Mandelblúm» / «Winston Mandelblúm "Winsman"»
+  - F4 [a favor] `context:person:1721|person:2487` — comparten 1 banda(s) (The Six) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 1721 «Winston Mandelblúm» en 2487 «Winston Mandelblúm "Winsman"» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.name_variant_weak_context`)
+- **#193158 · «Marcel Capel» / «Marcel Capell»** — regla `person.surname_typo_same_credit` · **aplicada** 2026-09-14
+  - el mismo nombre con una errata en el apellido y el mismo crédito en el mismo disco: una persona escrita de dos formas por dos fuentes
+  - F3 [a favor] `person:1794.name|person:2443.name` — el mismo nombre con una errata en el apellido: «Marcel Capel» / «Marcel Capell»
+  - F5 [a favor] `album_credits:album:111` — las dos grafías tienen el mismo tipo de crédito en «Sur» de Agresión
+  - F4 [contexto] `context:person:1794|person:2443` — comparten 1 banda(s) (Agresión) y 1 disco(s) donde ambas figuran («Sur» de Agresión)
+  - aplicaría: fusionar la persona 1794 «Marcel Capel» en 2443 «Marcel Capell» (la grafía perdida queda como alias)
+- **#193159 · «Carlos Da Palma» / «Carlos Da Palma "Palmito"»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre; solo cambian el apodo, su posición o las tildes, sin apodos contradictorios, y comparten bandas
+  - F3 [a favor] `person:1808.name|person:2756.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Carlos Da Palma» / «Carlos Da Palma "Palmito"»
+  - F4 [a favor] `context:person:1808|person:2756` — comparten 1 banda(s) (Los Paranoias) y 0 disco(s) donde ambas figuran
+  - F1 [contexto] `person:1808` — «Carlos Da Palma» (1808): 13 créditos o membresías; bandas: Los Paranoias; acreditada en el canal
+  - F2 [contexto] `person:2756` — «Carlos Da Palma "Palmito"» (2756): 1 créditos o membresías; bandas: Los Paranoias; acreditada en el canal
+  - aplicaría: fusionar la persona 1808 «Carlos Da Palma» en 2756 «Carlos Da Palma "Palmito"» (la grafía perdida queda como alias)
+- **#193160 · «Gabriel Lamberti» / «Gabriel Lamberti "Pepo"»** — árbitro claude-opus-5
+  - árbitro: El nombre completo coincide y solo cambian el apodo, su posición o las tildes (F3); ambas fichas figuran en la misma banda (F4) y nada en el dosier apunta a dos personas.
+  - F3 [a favor] `person:1826.name|person:2482.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Gabriel Lamberti» / «Gabriel Lamberti "Pepo"»
+  - F4 [a favor] `context:person:1826|person:2482` — comparten 1 banda(s) (Andreazulado) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 1826 «Gabriel Lamberti» en 2482 «Gabriel Lamberti "Pepo"» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.name_variant_weak_context`)
+- **#193162 · «Giordano Di Marzo "Yordano"» / «Yordano Di Marzo»** — árbitro claude-opus-5
+  - árbitro: El nombre de pila es la misma forma con otra grafía, forma corta o el apodo usado como nombre (F3), en la misma banda (F4).
+  - F3 [a favor] `person:1856.name|person:3248.name` — nombres de pila distintos por pocas letras: «Giordano Di Marzo "Yordano"» / «Yordano Di Marzo»
+  - F4 [a favor] `context:person:1856|person:3248` — comparten 1 banda(s) (Yordano) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 3248 «Yordano Di Marzo» en 1856 «Giordano Di Marzo "Yordano"» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.given_typo`)
+- **#193163 · «Henry Augustus Stephen» / «Henry Stephen»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre con un segundo nombre de más, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:1868.name|person:2024.name` — el mismo nombre con un segundo nombre de más: «Henry Augustus Stephen» / «Henry Stephen»
+  - F4 [a favor] `context:person:1868|person:2024` — comparten 1 banda(s) (Los Impala) y 1 disco(s) donde ambas figuran («Conozca A Los Impala» de Los Impala)
+  - F1 [contexto] `person:1868` — «Henry Augustus Stephen» (1868): 1 créditos o membresías; bandas: Los Impala; acreditada en el canal
+  - F2 [contexto] `person:2024` — «Henry Stephen» (2024): 9 créditos o membresías; bandas: Henry Stephen, Los Impala; acreditada en el canal
+  - aplicaría: fusionar la persona 2024 «Henry Stephen» en 1868 «Henry Augustus Stephen» (la grafía perdida queda como alias)
+- **#193164 · «Luis Eduardo Blanco» / «Luis Eduardo Blanco "Negrito Man"»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre; solo cambian el apodo, su posición o las tildes, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:1880.name|person:3217.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Luis Eduardo Blanco» / «Luis Eduardo Blanco "Negrito Man"»
+  - F4 [a favor] `context:person:1880|person:3217` — comparten 1 banda(s) (King Changó) y 1 disco(s) donde ambas figuran («King Changó» de King Changó)
+  - F1 [contexto] `person:1880` — «Luis Eduardo Blanco» (1880): 3 créditos o membresías; bandas: Horacero, King Changó; acreditada en el canal
+  - F2 [contexto] `person:3217` — «Luis Eduardo Blanco "Negrito Man"» (3217): 7 créditos o membresías; bandas: King Changó, Mata Rica, Mermelada Bunch; acreditada en el canal
+  - aplicaría: fusionar la persona 1880 «Luis Eduardo Blanco» en 3217 «Luis Eduardo Blanco "Negrito Man"» (la grafía perdida queda como alias)
+- **#193165 · «José Andrés Blanco» / «José Andrés Blanco "Blanquito Man"»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre; solo cambian el apodo, su posición o las tildes, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:1884.name|person:3208.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «José Andrés Blanco» / «José Andrés Blanco "Blanquito Man"»
+  - F4 [a favor] `context:person:1884|person:3208` — comparten 1 banda(s) (King Changó) y 1 disco(s) donde ambas figuran («King Changó» de King Changó)
+  - F1 [contexto] `person:1884` — «José Andrés Blanco» (1884): 1 créditos o membresías; bandas: King Changó; acreditada en el canal
+  - F2 [contexto] `person:3208` — «José Andrés Blanco "Blanquito Man"» (3208): 6 créditos o membresías; bandas: King Changó, Mata Rica; acreditada en el canal
+  - aplicaría: fusionar la persona 1884 «José Andrés Blanco» en 3208 «José Andrés Blanco "Blanquito Man"» (la grafía perdida queda como alias)
+- **#193166 · «Glenn Pastcha» / «Glen Pastcha»** — árbitro claude-opus-5
+  - árbitro: Es el mismo nombre con una errata ortográfica de una o dos letras (F3), dentro de la misma banda (F4); no hay otro indicio de dos personas.
+  - F3 [a favor] `person:1906.name|person:2619.name` — nombres de pila distintos por pocas letras: «Glenn Pastcha» / «Glen Pastcha»
+  - F4 [a favor] `context:person:1906|person:2619` — comparten 1 banda(s) (Caramelos De Cianuro) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 1906 «Glenn Pastcha» en 2619 «Glen Pastcha» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.given_typo`)
+- **#193168 · «Luis Bolín» / «L. Bolin»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «L. Bolin» solo encaja con «Luis Bolín» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:1944.name|person:9442.name` — un nombre escrito con iniciales del otro: «Luis Bolín» / «L. Bolin»
+  - F4 [a favor] `context:person:1944|person:9442` — comparten 1 banda(s) (Témpano) y 1 disco(s) donde ambas figuran («Témpano» de Témpano)
+  - F1 [contexto] `person:1944` — «Luis Bolín» (1944): 3 créditos o membresías; bandas: Témpano; acreditada en el canal
+  - F2 [contexto] `person:9442` — «L. Bolin» (9442): 1 créditos o membresías; bandas: Témpano
+  - aplicaría: fusionar la persona 9442 «L. Bolin» en 1944 «Luis Bolín» (la grafía perdida queda como alias)
+- **#193170 · «Tommy Anthony» / «T. Anthony»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «T. Anthony» solo encaja con «Tommy Anthony» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:1961.name|person:8072.name` — un nombre escrito con iniciales del otro: «Tommy Anthony» / «T. Anthony»
+  - F4 [a favor] `context:person:1961|person:8072` — comparten 1 banda(s) (Carlos Baute) y 1 disco(s) donde ambas figuran («Dame De Eso» de Carlos Baute)
+  - F1 [contexto] `person:1961` — «Tommy Anthony» (1961): 6 créditos o membresías; bandas: Carlos Baute; acreditada en el canal
+  - F2 [contexto] `person:8072` — «T. Anthony» (8072): 2 créditos o membresías; bandas: Carlos Baute
+  - aplicaría: fusionar la persona 8072 «T. Anthony» en 1961 «Tommy Anthony» (la grafía perdida queda como alias)
+- **#193171 · «Rafael Alvarez» / «Rafael Alvarez "Chesi"»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre; solo cambian el apodo, su posición o las tildes, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:1990.name|person:3402.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Rafael Alvarez» / «Rafael Alvarez "Chesi"»
+  - F4 [a favor] `context:person:1990|person:3402` — comparten 1 banda(s) (La Leche) y 1 disco(s) donde ambas figuran («45» de La Leche)
+  - F1 [contexto] `person:1990` — «Rafael Alvarez» (1990): 5 créditos o membresías; bandas: La Leche; acreditada en el canal
+  - F2 [contexto] `person:3402` — «Rafael Alvarez "Chesi"» (3402): 1 créditos o membresías; bandas: La Leche; acreditada en el canal
+  - aplicaría: fusionar la persona 1990 «Rafael Alvarez» en 3402 «Rafael Alvarez "Chesi"» (la grafía perdida queda como alias)
+- **#193172 · «Miguel Carrasco» / «Miguel Carrasco "Chacal"»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre; solo cambian el apodo, su posición o las tildes, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:1995.name|person:3403.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Miguel Carrasco» / «Miguel Carrasco "Chacal"»
+  - F4 [a favor] `context:person:1995|person:3403` — comparten 1 banda(s) (La Leche) y 1 disco(s) donde ambas figuran («45» de La Leche)
+  - F1 [contexto] `person:1995` — «Miguel Carrasco» (1995): 5 créditos o membresías; bandas: La Leche; acreditada en el canal
+  - F2 [contexto] `person:3403` — «Miguel Carrasco "Chacal"» (3403): 1 créditos o membresías; bandas: La Leche; acreditada en el canal
+  - aplicaría: fusionar la persona 1995 «Miguel Carrasco» en 3403 «Miguel Carrasco "Chacal"» (la grafía perdida queda como alias)
+- **#193173 · «Fauadz Kassen» / «Fuaz Kassen»** — árbitro claude-opus-5
+  - árbitro: Es el mismo nombre con una errata ortográfica de una o dos letras (F3), dentro de la misma banda (F4); no hay otro indicio de dos personas.
+  - F3 [a favor] `person:2018.name|person:2023.name` — nombres de pila distintos por pocas letras: «Fauadz Kassen» / «Fuaz Kassen»
+  - F4 [a favor] `context:person:2018|person:2023` — comparten 1 banda(s) (La Abuela Disco) y 2 disco(s) donde ambas figuran («Generador» de La Abuela Disco, «Polvo Lunar» de La Abuela Disco)
+  - aplicaría: fusionar la persona 2018 «Fauadz Kassen» en 2023 «Fuaz Kassen» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.given_typo`)
+- **#193174 · «Ronny Freitez» / «Romny Freitez»** — árbitro claude-opus-5
+  - árbitro: Es el mismo nombre con una errata ortográfica de una o dos letras (F3), dentro de la misma banda (F4); no hay otro indicio de dos personas.
+  - F3 [a favor] `person:2020.name|person:4373.name` — nombres de pila distintos por pocas letras: «Ronny Freitez» / «Romny Freitez»
+  - F4 [a favor] `context:person:2020|person:4373` — comparten 1 banda(s) (La Abuela Disco) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 4373 «Romny Freitez» en 2020 «Ronny Freitez» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.given_typo`)
+- **#193175 · «Freddy Cabezas "Marshall"» / «Freddy "Marshall" Cabezas»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre; solo cambian el apodo, su posición o las tildes, con el mismo apodo, y comparten bandas
+  - F3 [a favor] `person:2021.name|person:7906.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Freddy Cabezas "Marshall"» / «Freddy "Marshall" Cabezas»
+  - F4 [a favor] `context:person:2021|person:7906` — comparten 1 banda(s) (Arkangel) y 0 disco(s) donde ambas figuran
+  - F1 [contexto] `person:2021` — «Freddy Cabezas "Marshall"» (2021): 1 créditos o membresías; bandas: Arkangel; acreditada en el canal
+  - F2 [contexto] `person:7906` — «Freddy "Marshall" Cabezas» (7906): 2 créditos o membresías; bandas: Arkangel
+  - aplicaría: fusionar la persona 7906 «Freddy "Marshall" Cabezas» en 2021 «Freddy Cabezas "Marshall"» (la grafía perdida queda como alias)
+- **#193181 · «Biella Da Costa» / «B. da Costa»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «B. da Costa» solo encaja con «Biella Da Costa» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:2036.name|person:9128.name` — un nombre escrito con iniciales del otro: «Biella Da Costa» / «B. da Costa»
+  - F4 [a favor] `context:person:2036|person:9128` — comparten 1 banda(s) (La Banda de Casablanca) y 1 disco(s) donde ambas figuran («El Sueño» de La Banda de Casablanca)
+  - F1 [contexto] `person:2036` — «Biella Da Costa» (2036): 14 créditos o membresías; bandas: Agni Mogollón, Colina, Franco De Vita, La Banda de Casablanca, Los Buitres, PP's, Rodolfo "Pocho" Serra; acreditada en el canal
+  - F2 [contexto] `person:9128` — «B. da Costa» (9128): 2 créditos o membresías; bandas: La Banda de Casablanca
+  - aplicaría: fusionar la persona 9128 «B. da Costa» en 2036 «Biella Da Costa» (la grafía perdida queda como alias)
+- **#193184 · «Ignacio Pérez» / «Ignacio Pérez "Nacho"»** — árbitro claude-opus-5
+  - árbitro: El nombre completo coincide y solo cambian el apodo, su posición o las tildes (F3); ambas fichas figuran en la misma banda (F4) y nada en el dosier apunta a dos personas.
+  - F3 [a favor] `person:2068.name|person:3343.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Ignacio Pérez» / «Ignacio Pérez "Nacho"»
+  - F4 [a favor] `context:person:2068|person:3343` — comparten 1 banda(s) (Ricochet) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 2068 «Ignacio Pérez» en 3343 «Ignacio Pérez "Nacho"» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.name_variant_weak_context`)
+- **#193185 · «Ignacio Pérez» / «Ignacio "Nacho" Pérez»** — árbitro claude-opus-5
+  - árbitro: El nombre completo coincide y solo cambian el apodo, su posición o las tildes (F3); ambas fichas figuran en la misma banda (F4) y nada en el dosier apunta a dos personas.
+  - F3 [a favor] `person:2068.name|person:6410.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Ignacio Pérez» / «Ignacio "Nacho" Pérez»
+  - F4 [a favor] `context:person:2068|person:6410` — comparten 1 banda(s) (Ricochet) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 6410 «Ignacio "Nacho" Pérez» en 2068 «Ignacio Pérez» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.name_variant_weak_context`)
+- **#193187 · «Jorge Aguilar» / «Jorge Aguilat»** — regla `person.surname_typo_same_credit` · **aplicada** 2026-09-14
+  - el mismo nombre con una errata en el apellido y el mismo crédito en el mismo disco: una persona escrita de dos formas por dos fuentes
+  - F3 [a favor] `person:2108.name|person:10103.name` — el mismo nombre con una errata en el apellido: «Jorge Aguilar» / «Jorge Aguilat»
+  - F5 [a favor] `album_credits:album:4037` — las dos grafías tienen el mismo tipo de crédito en «Vegas» de Esperanto
+  - F4 [contexto] `context:person:2108|person:10103` — comparten 1 banda(s) (Esperanto) y 1 disco(s) donde ambas figuran («Vegas» de Esperanto)
+  - aplicaría: fusionar la persona 10103 «Jorge Aguilat» en 2108 «Jorge Aguilar» (la grafía perdida queda como alias)
+- **#193188 · «Enrique Figueredo» / «E. Figueredo»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «E. Figueredo» solo encaja con «Enrique Figueredo» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:2111.name|person:9612.name` — un nombre escrito con iniciales del otro: «Enrique Figueredo» / «E. Figueredo»
+  - F4 [a favor] `context:person:2111|person:9612` — comparten 1 banda(s) (La Banda de) y 1 disco(s) donde ambas figuran («La Banana Voladora» de La Banda de)
+  - F1 [contexto] `person:2111` — «Enrique Figueredo» (2111): 17 créditos o membresías; bandas: La Banana Voladora, La Banda de, La Banda de la Banana Voladora, Pacifica, Zapato 3; acreditada en el canal
+  - F2 [contexto] `person:9612` — «E. Figueredo» (9612): 1 créditos o membresías; bandas: La Banda de
+  - aplicaría: fusionar la persona 9612 «E. Figueredo» en 2111 «Enrique Figueredo» (la grafía perdida queda como alias)
+- **#193189 · «José Luis Vásquez» / «José L. Vásquez»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «José L. Vásquez» solo encaja con «José Luis Vásquez» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:2116.name|person:5634.name` — un nombre escrito con iniciales del otro: «José Luis Vásquez» / «José L. Vásquez»
+  - F4 [a favor] `context:person:2116|person:5634` — comparten 1 banda(s) (Fábrica De Sueños) y 1 disco(s) donde ambas figuran («Fuera De Fase» de Fábrica De Sueños)
+  - F1 [contexto] `person:2116` — «José Luis Vásquez» (2116): 4 créditos o membresías; bandas: Fábrica De Sueños, PP's; acreditada en el canal
+  - F2 [contexto] `person:5634` — «José L. Vásquez» (5634): 3 créditos o membresías; bandas: Fábrica De Sueños
+  - aplicaría: fusionar la persona 5634 «José L. Vásquez» en 2116 «José Luis Vásquez» (la grafía perdida queda como alias)
+- **#193194 · «Omar Naim Sawaya» / «Omar Sawaya»** — árbitro claude-opus-5
+  - árbitro: Una ficha añade un segundo nombre o una inicial a un apellido poco frecuente (F3), y ambas están en la misma banda (F4).
+  - F3 [a favor] `person:2145.name|person:6587.name` — el mismo nombre con un segundo nombre de más: «Omar Naim Sawaya» / «Omar Sawaya»
+  - F4 [a favor] `context:person:2145|person:6587` — comparten 1 banda(s) (Spias) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 6587 «Omar Sawaya» en 2145 «Omar Naim Sawaya» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.name_variant_weak_context`)
+- **#193195 · «Sokrates Papadoulos» / «Sokrates Papadopoulos»** — árbitro claude-opus-5
+  - árbitro: Es el mismo nombre con una errata ortográfica de una o dos letras (F3), dentro de la misma banda (F4); no hay otro indicio de dos personas.
+  - F3 [a favor] `person:2146.name|person:6728.name` — el mismo nombre con una errata en el apellido: «Sokrates Papadoulos» / «Sokrates Papadopoulos»
+  - F4 [a favor] `context:person:2146|person:6728` — comparten 1 banda(s) (Torre de Marfil) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 6728 «Sokrates Papadopoulos» en 2146 «Sokrates Papadoulos» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.surname_typo_weak_context`)
+- **#193196 · «Andrés Lara "Nano" (†)» / «Andrés Lara»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre; solo cambian el apodo, su posición o las tildes, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:2188.name|person:2462.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Andrés Lara "Nano" (†)» / «Andrés Lara»
+  - F4 [a favor] `context:person:2188|person:2462` — comparten 1 banda(s) (La Leche) y 1 disco(s) donde ambas figuran («45» de La Leche)
+  - F1 [contexto] `person:2188` — «Andrés Lara "Nano" (†)» (2188): 5 créditos o membresías; bandas: KP9000, La Leche; acreditada en el canal
+  - F2 [contexto] `person:2462` — «Andrés Lara» (2462): 3 créditos o membresías; bandas: La Leche; acreditada en el canal
+  - aplicaría: fusionar la persona 2462 «Andrés Lara» en 2188 «Andrés Lara "Nano" (†)» (la grafía perdida queda como alias)
+- **#193197 · «Daniel Andrade "Daniel Sun"» / «Daniel Andrade»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre; solo cambian el apodo, su posición o las tildes, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:2209.name|person:2215.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Daniel Andrade "Daniel Sun"» / «Daniel Andrade»
+  - F4 [a favor] `context:person:2209|person:2215` — comparten 1 banda(s) (Cinema Sun) y 1 disco(s) donde ambas figuran («Cinema Sun» de Cinema Sun)
+  - F1 [contexto] `person:2209` — «Daniel Andrade "Daniel Sun"» (2209): 1 créditos o membresías; bandas: Cinema Sun; acreditada en el canal
+  - F2 [contexto] `person:2215` — «Daniel Andrade» (2215): 2 créditos o membresías; bandas: Cinema Sun; acreditada en el canal
+  - aplicaría: fusionar la persona 2215 «Daniel Andrade» en 2209 «Daniel Andrade "Daniel Sun"» (la grafía perdida queda como alias)
+- **#193204 · «Gustavo Arangure» / «Gustavo Aranguren»** — árbitro claude-opus-5
+  - árbitro: Es el mismo nombre con una errata ortográfica de una o dos letras (F3), dentro de la misma banda (F4); no hay otro indicio de dos personas.
+  - F3 [a favor] `person:2241.name|person:3216.name` — el mismo nombre con una errata en el apellido: «Gustavo Arangure» / «Gustavo Aranguren»
+  - F4 [a favor] `context:person:2241|person:3216` — comparten 1 banda(s) (Pablo Dagnino) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 2241 «Gustavo Arangure» en 3216 «Gustavo Aranguren» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.surname_typo_weak_context`)
+- **#193211 · «Antonio Rassi» / «A. Rassi»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «A. Rassi» solo encaja con «Antonio Rassi» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:2258.name|person:7137.name` — un nombre escrito con iniciales del otro: «Antonio Rassi» / «A. Rassi»
+  - F4 [a favor] `context:person:2258|person:7137` — comparten 1 banda(s) (Estructura) y 1 disco(s) donde ambas figuran («Más Allá De Tu Mente» de Estructura)
+  - F1 [contexto] `person:2258` — «Antonio Rassi» (2258): 8 créditos o membresías; bandas: Estructura, Fahrenheit; acreditada en el canal
+  - F2 [contexto] `person:7137` — «A. Rassi» (7137): 2 créditos o membresías; bandas: Estructura
+  - aplicaría: fusionar la persona 7137 «A. Rassi» en 2258 «Antonio Rassi» (la grafía perdida queda como alias)
+- **#193212 · «Baltasar Agustín» / «Baltazar Agustin»** — árbitro claude-opus-5
+  - árbitro: Es el mismo nombre con una errata ortográfica de una o dos letras (F3), dentro de la misma banda (F4); no hay otro indicio de dos personas.
+  - F3 [a favor] `person:2299.name|person:3196.name` — nombres de pila distintos por pocas letras: «Baltasar Agustín» / «Baltazar Agustin»
+  - F4 [a favor] `context:person:2299|person:3196` — comparten 1 banda(s) (Radio Clip) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 3196 «Baltazar Agustin» en 2299 «Baltasar Agustín» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.given_typo`)
+- **#193213 · «Jesús Esteban Campos "Coda"» / «Jesús Campos»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre con un segundo nombre de más, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:2311.name|person:2313.name` — el mismo nombre con un segundo nombre de más: «Jesús Esteban Campos "Coda"» / «Jesús Campos»
+  - F4 [a favor] `context:person:2311|person:2313` — comparten 1 banda(s) (Ohmio) y 1 disco(s) donde ambas figuran («6101» de Ohmio)
+  - F1 [contexto] `person:2311` — «Jesús Esteban Campos "Coda"» (2311): 1 créditos o membresías; bandas: Ohmio; acreditada en el canal
+  - F2 [contexto] `person:2313` — «Jesús Campos» (2313): 2 créditos o membresías; bandas: Ohmio; acreditada en el canal
+  - aplicaría: fusionar la persona 2313 «Jesús Campos» en 2311 «Jesús Esteban Campos "Coda"» (la grafía perdida queda como alias)
+- **#193214 · «Jesús Arreaza» / «Jesús Arreaza "Flero"»** — árbitro claude-opus-5
+  - árbitro: El nombre completo coincide y solo cambian el apodo, su posición o las tildes (F3); ambas fichas figuran en la misma banda (F4) y nada en el dosier apunta a dos personas.
+  - F3 [a favor] `person:2329.name|person:3342.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Jesús Arreaza» / «Jesús Arreaza "Flero"»
+  - F4 [a favor] `context:person:2329|person:3342` — comparten 1 banda(s) (Ricochet) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 2329 «Jesús Arreaza» en 3342 «Jesús Arreaza "Flero"» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.name_variant_weak_context`)
+- **#193215 · «Daniel Moreno» / «Daniel Moreno "Dan"»** — árbitro claude-opus-5
+  - árbitro: El nombre completo coincide y solo cambian el apodo, su posición o las tildes (F3); ambas fichas figuran en la misma banda (F4) y nada en el dosier apunta a dos personas.
+  - F3 [a favor] `person:2345.name|person:2978.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Daniel Moreno» / «Daniel Moreno "Dan"»
+  - F4 [a favor] `context:person:2345|person:2978` — comparten 1 banda(s) (Ohmio) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 2345 «Daniel Moreno» en 2978 «Daniel Moreno "Dan"» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.name_variant_weak_context`)
+- **#193217 · «Giovanni Tradardi» / «Gianni Tradardi»** — árbitro claude-opus-5
+  - árbitro: El nombre de pila es la misma forma con otra grafía, forma corta o el apodo usado como nombre (F3), en la misma banda (F4).
+  - F3 [a favor] `person:2352.name|person:6639.name` — nombres de pila distintos por pocas letras: «Giovanni Tradardi» / «Gianni Tradardi»
+  - F4 [a favor] `context:person:2352|person:6639` — comparten 1 banda(s) (Tarot) y 1 disco(s) donde ambas figuran («Tarot» de Tarot)
+  - aplicaría: fusionar la persona 6639 «Gianni Tradardi» en 2352 «Giovanni Tradardi» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.given_typo`)
+- **#193218 · «Victor Gámez» / «V. Gámez»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «V. Gámez» solo encaja con «Victor Gámez» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:2367.name|person:9849.name` — un nombre escrito con iniciales del otro: «Victor Gámez» / «V. Gámez»
+  - F4 [a favor] `context:person:2367|person:9849` — comparten 1 banda(s) (Los Darts) y 1 disco(s) donde ambas figuran («Una Linda Historia» de Los Darts)
+  - F1 [contexto] `person:2367` — «Victor Gámez» (2367): 8 créditos o membresías; bandas: Los Darts; acreditada en el canal
+  - F2 [contexto] `person:9849` — «V. Gámez» (9849): 1 créditos o membresías; bandas: Los Darts
+  - aplicaría: fusionar la persona 9849 «V. Gámez» en 2367 «Victor Gámez» (la grafía perdida queda como alias)
+- **#193219 · «Claudio Gámez» / «C. Gámez»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «C. Gámez» solo encaja con «Claudio Gámez» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:2372.name|person:9222.name` — un nombre escrito con iniciales del otro: «Claudio Gámez» / «C. Gámez»
+  - F4 [a favor] `context:person:2372|person:9222` — comparten 2 banda(s) (Carlos Morean, Los Darts) y 1 disco(s) donde ambas figuran («Una Vez Más» de Los Darts)
+  - F1 [contexto] `person:2372` — «Claudio Gámez» (2372): 12 créditos o membresías; bandas: Carlos Morean, Los Darts; acreditada en el canal
+  - F2 [contexto] `person:9222` — «C. Gámez» (9222): 2 créditos o membresías; bandas: Carlos Morean, Los Darts
+  - aplicaría: fusionar la persona 9222 «C. Gámez» en 2372 «Claudio Gámez» (la grafía perdida queda como alias)
+- **#193220 · «Claudio Corsi» / «C. Corsi»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «C. Corsi» solo encaja con «Claudio Corsi» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:2381.name|person:9373.name` — un nombre escrito con iniciales del otro: «Claudio Corsi» / «C. Corsi»
+  - F4 [a favor] `context:person:2381|person:9373` — comparten 1 banda(s) (Winda) y 1 disco(s) donde ambas figuran («Huellas» de Winda)
+  - F1 [contexto] `person:2381` — «Claudio Corsi» (2381): 9 créditos o membresías; bandas: Boris Bossio, Juan Carlos Torrealba, Winda; acreditada en el canal
+  - F2 [contexto] `person:9373` — «C. Corsi» (9373): 1 créditos o membresías; bandas: Winda
+  - aplicaría: fusionar la persona 9373 «C. Corsi» en 2381 «Claudio Corsi» (la grafía perdida queda como alias)
+- **#193221 · «Eduardo Quintana "Alegretto"» / «Eduardo Quintana»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre; solo cambian el apodo, su posición o las tildes, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:2399.name|person:3464.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Eduardo Quintana "Alegretto"» / «Eduardo Quintana»
+  - F4 [a favor] `context:person:2399|person:3464` — comparten 1 banda(s) (Claudio Corsi) y 1 disco(s) donde ambas figuran («Aire y Mar» de Claudio Corsi)
+  - F1 [contexto] `person:2399` — «Eduardo Quintana "Alegretto"» (2399): 1 créditos o membresías; bandas: Claudio Corsi; acreditada en el canal
+  - F2 [contexto] `person:3464` — «Eduardo Quintana» (3464): 1 créditos o membresías; bandas: Claudio Corsi; acreditada en el canal
+  - aplicaría: fusionar la persona 3464 «Eduardo Quintana» en 2399 «Eduardo Quintana "Alegretto"» (la grafía perdida queda como alias)
+- **#193222 · «Robert Valerio» / «Robert Valario»** — regla `person.surname_typo_same_credit` · **aplicada** 2026-09-14
+  - el mismo nombre con una errata en el apellido y el mismo crédito en el mismo disco: una persona escrita de dos formas por dos fuentes
+  - F3 [a favor] `person:2424.name|person:11423.name` — el mismo nombre con una errata en el apellido: «Robert Valerio» / «Robert Valario»
+  - F5 [a favor] `album_credits:album:4438` — las dos grafías tienen el mismo tipo de crédito en «Dulce Sentimiento» de Robert Valerio
+  - F4 [contexto] `context:person:2424|person:11423` — comparten 1 banda(s) (Robert Valerio) y 1 disco(s) donde ambas figuran («Dulce Sentimiento» de Robert Valerio)
+  - aplicaría: fusionar la persona 11423 «Robert Valario» en 2424 «Robert Valerio» (la grafía perdida queda como alias)
+- **#193223 · «Enrique Santana» / «E. Santana»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «E. Santana» solo encaja con «Enrique Santana» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:2426.name|person:9183.name` — un nombre escrito con iniciales del otro: «Enrique Santana» / «E. Santana»
+  - F4 [a favor] `context:person:2426|person:9183` — comparten 1 banda(s) (Fuga) y 1 disco(s) donde ambas figuran («Fuga» de Fuga)
+  - F1 [contexto] `person:2426` — «Enrique Santana» (2426): 10 créditos o membresías; bandas: ACME, Almendra, Clarox, Fuga, Proyecto Franklin Holland; acreditada en el canal
+  - F2 [contexto] `person:9183` — «E. Santana» (9183): 1 créditos o membresías; bandas: Fuga
+  - aplicaría: fusionar la persona 9183 «E. Santana» en 2426 «Enrique Santana» (la grafía perdida queda como alias)
+- **#193224 · «Charles Arapé» / «C. Arapé»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «C. Arapé» solo encaja con «Charles Arapé» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:2436.name|person:2480.name` — un nombre escrito con iniciales del otro: «Charles Arapé» / «C. Arapé»
+  - F4 [a favor] `context:person:2436|person:2480` — comparten 1 banda(s) (Tribop) y 1 disco(s) donde ambas figuran («Vol. 1» de Tribop)
+  - F1 [contexto] `person:2436` — «Charles Arapé» (2436): 5 créditos o membresías; bandas: Cabezón Key, Tribop; acreditada en el canal
+  - F2 [contexto] `person:2480` — «C. Arapé» (2480): 3 créditos o membresías; bandas: Tribop; acreditada en el canal
+  - aplicaría: fusionar la persona 2480 «C. Arapé» en 2436 «Charles Arapé» (la grafía perdida queda como alias)
+- **#193225 · «Ezequiel S. Valencia» / «Ezequiel Valencia»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre con un segundo nombre de más, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:2442.name|person:6775.name` — el mismo nombre con un segundo nombre de más: «Ezequiel S. Valencia» / «Ezequiel Valencia»
+  - F4 [a favor] `context:person:2442|person:6775` — comparten 1 banda(s) (Tribop) y 1 disco(s) donde ambas figuran («Vol. 1» de Tribop)
+  - F1 [contexto] `person:2442` — «Ezequiel S. Valencia» (2442): 2 créditos o membresías; bandas: Cabezón Key, Tribop; acreditada en el canal
+  - F2 [contexto] `person:6775` — «Ezequiel Valencia» (6775): 2 créditos o membresías; bandas: El Medio Evo, Tribop
+  - aplicaría: fusionar la persona 6775 «Ezequiel Valencia» en 2442 «Ezequiel S. Valencia» (la grafía perdida queda como alias)
+- **#193227 · «Gonzalo Suarez "Gonzo"» / «Gonzalo "Gonzo" Suárez»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre; solo cambian el apodo, su posición o las tildes, con el mismo apodo, y comparten bandas
+  - F3 [a favor] `person:2490.name|person:6645.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Gonzalo Suarez "Gonzo"» / «Gonzalo "Gonzo" Suárez»
+  - F4 [a favor] `context:person:2490|person:6645` — comparten 1 banda(s) (Telegrama) y 0 disco(s) donde ambas figuran
+  - F1 [contexto] `person:2490` — «Gonzalo Suarez "Gonzo"» (2490): 1 créditos o membresías; bandas: Telegrama; acreditada en el canal
+  - F2 [contexto] `person:6645` — «Gonzalo "Gonzo" Suárez» (6645): 1 créditos o membresías; bandas: Telegrama
+  - aplicaría: fusionar la persona 6645 «Gonzalo "Gonzo" Suárez» en 2490 «Gonzalo Suarez "Gonzo"» (la grafía perdida queda como alias)
+- **#193228 · «Liana Malva Castillo» / «Liana Castillo»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre con un segundo nombre de más, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:2496.name|person:9217.name` — el mismo nombre con un segundo nombre de más: «Liana Malva Castillo» / «Liana Castillo»
+  - F4 [a favor] `context:person:2496|person:9217` — comparten 1 banda(s) (Le Merm) y 1 disco(s) donde ambas figuran («Deep Chill Sessions» de Le Merm)
+  - F1 [contexto] `person:2496` — «Liana Malva Castillo» (2496): 4 créditos o membresías; bandas: Le Merm; acreditada en el canal
+  - F2 [contexto] `person:9217` — «Liana Castillo» (9217): 1 créditos o membresías; bandas: Le Merm
+  - aplicaría: fusionar la persona 9217 «Liana Castillo» en 2496 «Liana Malva Castillo» (la grafía perdida queda como alias)
+- **#193239 · «Ana María Bertorelli» / «Ana María Bertolli»** — árbitro claude-opus-5
+  - árbitro: Es el mismo nombre con una errata ortográfica de una o dos letras (F3), dentro de la misma banda (F4); no hay otro indicio de dos personas.
+  - F3 [a favor] `person:2677.name|person:8588.name` — el mismo nombre con una errata en el apellido: «Ana María Bertorelli» / «Ana María Bertolli»
+  - F4 [a favor] `context:person:2677|person:8588` — comparten 1 banda(s) (Colina) y 1 disco(s) donde ambas figuran («Amanecer» de Colina)
+  - aplicaría: fusionar la persona 8588 «Ana María Bertolli» en 2677 «Ana María Bertorelli» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.surname_typo_weak_context`)
+- **#193240 · «Fernando Rodríguez» / «Fernando "Fer" Rodríguez»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre; solo cambian el apodo, su posición o las tildes, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:2691.name|person:2997.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Fernando Rodríguez» / «Fernando "Fer" Rodríguez»
+  - F4 [a favor] `context:person:2691|person:2997` — comparten 1 banda(s) (Salpachino) y 1 disco(s) donde ambas figuran («Reina Contra La Máquina» de Salpachino)
+  - F1 [contexto] `person:2691` — «Fernando Rodríguez» (2691): 5 créditos o membresías; bandas: La Mar, Pzoom, Salpachino; acreditada en el canal
+  - F2 [contexto] `person:2997` — «Fernando "Fer" Rodríguez» (2997): 2 créditos o membresías; bandas: Salpachino; acreditada en el canal
+  - aplicaría: fusionar la persona 2691 «Fernando Rodríguez» en 2997 «Fernando "Fer" Rodríguez» (la grafía perdida queda como alias)
+- **#193241 · «Miguel Gonzáles "El Enano"» / «Miguel Gonzáles»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre; solo cambian el apodo, su posición o las tildes, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:2704.name|person:9644.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Miguel Gonzáles "El Enano"» / «Miguel Gonzáles»
+  - F4 [a favor] `context:person:2704|person:9644` — comparten 1 banda(s) (Caramelos De Cianuro) y 1 disco(s) donde ambas figuran («Solo Exitos» de Caramelos De Cianuro)
+  - F1 [contexto] `person:2704` — «Miguel Gonzáles "El Enano"» (2704): 35 créditos o membresías; bandas: Caramelos De Cianuro, La Hermandad; acreditada en el canal
+  - F2 [contexto] `person:9644` — «Miguel Gonzáles» (9644): 3 créditos o membresías; bandas: Caramelos De Cianuro
+  - aplicaría: fusionar la persona 9644 «Miguel Gonzáles» en 2704 «Miguel Gonzáles "El Enano"» (la grafía perdida queda como alias)
+- **#193243 · «Leonardo Borges» / «Leonardo "Leo" Borges»** — árbitro claude-opus-5
+  - árbitro: El nombre completo coincide y solo cambian el apodo, su posición o las tildes (F3); ambas fichas figuran en la misma banda (F4) y nada en el dosier apunta a dos personas.
+  - F3 [a favor] `person:2752.name|person:3157.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Leonardo Borges» / «Leonardo "Leo" Borges»
+  - F4 [a favor] `context:person:2752|person:3157` — comparten 1 banda(s) (Sónica) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 2752 «Leonardo Borges» en 3157 «Leonardo "Leo" Borges» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.name_variant_weak_context`)
+- **#193244 · «Alejandro Conde» / «Alejandro Conde "Al-Jay"»** — árbitro claude-opus-5
+  - árbitro: El nombre completo coincide y solo cambian el apodo, su posición o las tildes (F3); ambas fichas figuran en la misma banda (F4) y nada en el dosier apunta a dos personas.
+  - F3 [a favor] `person:2781.name|person:3174.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Alejandro Conde» / «Alejandro Conde "Al-Jay"»
+  - F4 [a favor] `context:person:2781|person:3174` — comparten 1 banda(s) (Mata Rica) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 2781 «Alejandro Conde» en 3174 «Alejandro Conde "Al-Jay"» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.name_variant_weak_context`)
+- **#193252 · «Marco Ciargo» / «M. Ciargo»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «M. Ciargo» solo encaja con «Marco Ciargo» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:2945.name|person:9448.name` — un nombre escrito con iniciales del otro: «Marco Ciargo» / «M. Ciargo»
+  - F4 [a favor] `context:person:2945|person:9448` — comparten 1 banda(s) (Resistencia) y 1 disco(s) donde ambas figuran («Intenso» de Resistencia)
+  - F1 [contexto] `person:2945` — «Marco Ciargo» (2945): 3 créditos o membresías; bandas: Resistencia; acreditada en el canal
+  - F2 [contexto] `person:9448` — «M. Ciargo» (9448): 2 créditos o membresías; bandas: Resistencia
+  - aplicaría: fusionar la persona 9448 «M. Ciargo» en 2945 «Marco Ciargo» (la grafía perdida queda como alias)
+- **#193253 · «Rodrigo Yoma» / «R. Yoma»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «R. Yoma» solo encaja con «Rodrigo Yoma» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:2947.name|person:9451.name` — un nombre escrito con iniciales del otro: «Rodrigo Yoma» / «R. Yoma»
+  - F4 [a favor] `context:person:2947|person:9451` — comparten 1 banda(s) (Resistencia) y 1 disco(s) donde ambas figuran («Intenso» de Resistencia)
+  - F1 [contexto] `person:2947` — «Rodrigo Yoma» (2947): 2 créditos o membresías; bandas: Resistencia; acreditada en el canal
+  - F2 [contexto] `person:9451` — «R. Yoma» (9451): 2 créditos o membresías; bandas: Resistencia
+  - aplicaría: fusionar la persona 9451 «R. Yoma» en 2947 «Rodrigo Yoma» (la grafía perdida queda como alias)
+- **#193256 · «Facundo Coral» / «F. Coral»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «F. Coral» solo encaja con «Facundo Coral» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:2953.name|person:9824.name` — un nombre escrito con iniciales del otro: «Facundo Coral» / «F. Coral»
+  - F4 [a favor] `context:person:2953|person:9824` — comparten 1 banda(s) (Cronos) y 0 disco(s) donde ambas figuran
+  - F1 [contexto] `person:2953` — «Facundo Coral» (2953): 7 créditos o membresías; bandas: Cronos, Gillman, Guerra Santa, Hermes, Stratuz; acreditada en el canal
+  - F2 [contexto] `person:9824` — «F. Coral» (9824): 1 créditos o membresías; bandas: Cronos
+  - aplicaría: fusionar la persona 9824 «F. Coral» en 2953 «Facundo Coral» (la grafía perdida queda como alias)
+- **#193257 · «Paul Gillman» / «Paul Silvestre Gillman»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre con un segundo nombre de más, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:2955.name|person:3467.name` — el mismo nombre con un segundo nombre de más: «Paul Gillman» / «Paul Silvestre Gillman»
+  - F4 [a favor] `context:person:2955|person:3467` — comparten 1 banda(s) (Arkangel) y 1 disco(s) donde ambas figuran («Represión Latinoamericana» de Arkangel)
+  - F1 [contexto] `person:2955` — «Paul Gillman» (2955): 10 créditos o membresías; bandas: Arkangel, Gillman, Material de Desecho, Resistencia; acreditada en el canal
+  - F2 [contexto] `person:3467` — «Paul Silvestre Gillman» (3467): 1 créditos o membresías; bandas: Arkangel; acreditada en el canal
+  - aplicaría: fusionar la persona 2955 «Paul Gillman» en 3467 «Paul Silvestre Gillman» (la grafía perdida queda como alias)
+- **#193258 · «Eduardo Sáez» / «E. Sáez»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «E. Sáez» solo encaja con «Eduardo Sáez» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:2959.name|person:9828.name` — un nombre escrito con iniciales del otro: «Eduardo Sáez» / «E. Sáez»
+  - F4 [a favor] `context:person:2959|person:9828` — comparten 1 banda(s) (Cronos) y 1 disco(s) donde ambas figuran («Rules» de Cronos)
+  - F1 [contexto] `person:2959` — «Eduardo Sáez» (2959): 27 créditos o membresías; bandas: Calle Santiago, Cronos, Electrocirkus, Gillman, LaMueka, Pablo Mendoza, Pixel, Ranamers; acreditada en el canal
+  - F2 [contexto] `person:9828` — «E. Sáez» (9828): 1 créditos o membresías; bandas: Cronos
+  - aplicaría: fusionar la persona 9828 «E. Sáez» en 2959 «Eduardo Sáez» (la grafía perdida queda como alias)
+- **#193259 · «Boris Milan» / «Boris Millan»** — árbitro claude-opus-5
+  - árbitro: Es el mismo nombre con una errata ortográfica de una o dos letras (F3), dentro de la misma banda (F4); no hay otro indicio de dos personas.
+  - F3 [a favor] `person:2966.name|person:4210.name` — el mismo nombre con una errata en el apellido: «Boris Milan» / «Boris Millan»
+  - F4 [a favor] `context:person:2966|person:4210` — comparten 1 banda(s) (Caramelos De Cianuro) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 4210 «Boris Millan» en 2966 «Boris Milan» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.surname_typo_weak_context`)
+- **#193260 · «Jesús Castillo» / «Jesús Castillo "Cuco"»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre; solo cambian el apodo, su posición o las tildes, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:2990.name|person:3092.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Jesús Castillo» / «Jesús Castillo "Cuco"»
+  - F4 [a favor] `context:person:2990|person:3092` — comparten 1 banda(s) (Lo Blanco Del Ojo) y 1 disco(s) donde ambas figuran («Lo Blanco Del Ojo» de Lo Blanco Del Ojo)
+  - F1 [contexto] `person:2990` — «Jesús Castillo» (2990): 4 créditos o membresías; bandas: Lo Blanco Del Ojo; acreditada en el canal
+  - F2 [contexto] `person:3092` — «Jesús Castillo "Cuco"» (3092): 1 créditos o membresías; bandas: Lo Blanco Del Ojo; acreditada en el canal
+  - aplicaría: fusionar la persona 2990 «Jesús Castillo» en 3092 «Jesús Castillo "Cuco"» (la grafía perdida queda como alias)
+- **#193261 · «Daniel "Mono" Briceño» / «Daniel Briceño»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre; solo cambian el apodo, su posición o las tildes, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:2996.name|person:4647.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Daniel "Mono" Briceño» / «Daniel Briceño»
+  - F4 [a favor] `context:person:2996|person:4647` — comparten 1 banda(s) (Salpachino) y 1 disco(s) donde ambas figuran («Reina Contra La Máquina» de Salpachino)
+  - F1 [contexto] `person:2996` — «Daniel "Mono" Briceño» (2996): 2 créditos o membresías; bandas: Salpachino; acreditada en el canal
+  - F2 [contexto] `person:4647` — «Daniel Briceño» (4647): 5 créditos o membresías; bandas: Ahankar, La Vida Bohème, Salpachino
+  - aplicaría: fusionar la persona 4647 «Daniel Briceño» en 2996 «Daniel "Mono" Briceño» (la grafía perdida queda como alias)
+- **#193263 · «Let Arteaga "DJ Let"» / «Let Arteaga»** — árbitro claude-opus-5
+  - árbitro: El nombre completo coincide y solo cambian el apodo, su posición o las tildes (F3); ambas fichas figuran en la misma banda (F4) y nada en el dosier apunta a dos personas.
+  - F3 [a favor] `person:3036.name|person:3296.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Let Arteaga "DJ Let"» / «Let Arteaga»
+  - F4 [a favor] `context:person:3036|person:3296` — comparten 1 banda(s) (Candy66) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 3296 «Let Arteaga» en 3036 «Let Arteaga "DJ Let"» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.name_variant_weak_context`)
+- **#193266 · «Julio "Mal Tripear Jamás" Alonso» / «Julio Alonso»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre; solo cambian el apodo, su posición o las tildes, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:3069.name|person:3077.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Julio "Mal Tripear Jamás" Alonso» / «Julio Alonso»
+  - F4 [a favor] `context:person:3069|person:3077` — comparten 1 banda(s) (La Calle) y 2 disco(s) donde ambas figuran («A.T.C.» de La Calle, «B-Sides: A.T.C.» de La Calle)
+  - F1 [contexto] `person:3069` — «Julio "Mal Tripear Jamás" Alonso» (3069): 4 créditos o membresías; bandas: La Calle; acreditada en el canal
+  - F2 [contexto] `person:3077` — «Julio Alonso» (3077): 14 créditos o membresías; bandas: Alter Ego, La Calle, La Nave, Septimo Oxigeno, Yátu; acreditada en el canal
+  - aplicaría: fusionar la persona 3077 «Julio Alonso» en 3069 «Julio "Mal Tripear Jamás" Alonso» (la grafía perdida queda como alias)
+- **#193267 · «Jonathan "Watis" Gómez» / «Jonathan Gómez»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre; solo cambian el apodo, su posición o las tildes, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:3084.name|person:3086.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Jonathan "Watis" Gómez» / «Jonathan Gómez»
+  - F4 [a favor] `context:person:3084|person:3086` — comparten 1 banda(s) (Slam Ballet) y 1 disco(s) donde ambas figuran («Filtra» de Slam Ballet)
+  - F1 [contexto] `person:3084` — «Jonathan "Watis" Gómez» (3084): 1 créditos o membresías; bandas: Slam Ballet; acreditada en el canal
+  - F2 [contexto] `person:3086` — «Jonathan Gómez» (3086): 2 créditos o membresías; bandas: Pablo Mendoza, Slam Ballet; acreditada en el canal
+  - aplicaría: fusionar la persona 3086 «Jonathan Gómez» en 3084 «Jonathan "Watis" Gómez» (la grafía perdida queda como alias)
+- **#193268 · «Jorge Peña "Korge"» / «Jorge Peña»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre; solo cambian el apodo, su posición o las tildes, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:3088.name|person:3094.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Jorge Peña "Korge"» / «Jorge Peña»
+  - F4 [a favor] `context:person:3088|person:3094` — comparten 1 banda(s) (Lo Blanco Del Ojo) y 1 disco(s) donde ambas figuran («Lo Blanco Del Ojo» de Lo Blanco Del Ojo)
+  - F1 [contexto] `person:3088` — «Jorge Peña "Korge"» (3088): 1 créditos o membresías; bandas: Lo Blanco Del Ojo; acreditada en el canal
+  - F2 [contexto] `person:3094` — «Jorge Peña» (3094): 3 créditos o membresías; bandas: Lo Blanco Del Ojo; acreditada en el canal
+  - aplicaría: fusionar la persona 3094 «Jorge Peña» en 3088 «Jorge Peña "Korge"» (la grafía perdida queda como alias)
+- **#193269 · «Miguel Angel García» / «Miguel A. García»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «Miguel A. García» solo encaja con «Miguel Angel García» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:3101.name|person:5643.name` — un nombre escrito con iniciales del otro: «Miguel Angel García» / «Miguel A. García»
+  - F4 [a favor] `context:person:3101|person:5643` — comparten 1 banda(s) (Fábrica De Sueños) y 1 disco(s) donde ambas figuran («Fuera De Fase» de Fábrica De Sueños)
+  - F1 [contexto] `person:3101` — «Miguel Angel García» (3101): 6 créditos o membresías; bandas: Desorden Público, Fábrica De Sueños; acreditada en el canal
+  - F2 [contexto] `person:5643` — «Miguel A. García» (5643): 1 créditos o membresías; bandas: Fábrica De Sueños
+  - aplicaría: fusionar la persona 5643 «Miguel A. García» en 3101 «Miguel Angel García» (la grafía perdida queda como alias)
+- **#193270 · «Jonás "Tabasco" Hidalgo» / «Jonás Hidalgo»** — árbitro claude-opus-5
+  - árbitro: El nombre completo coincide y solo cambian el apodo, su posición o las tildes (F3); ambas fichas figuran en la misma banda (F4) y nada en el dosier apunta a dos personas.
+  - F3 [a favor] `person:3111.name|person:8364.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Jonás "Tabasco" Hidalgo» / «Jonás Hidalgo»
+  - F4 [a favor] `context:person:3111|person:8364` — comparten 1 banda(s) (Luz Verde) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 8364 «Jonás Hidalgo» en 3111 «Jonás "Tabasco" Hidalgo» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.name_variant_weak_context`)
+- **#193271 · «Diego Hernríquez» / «Diego Henríquez»** — regla `person.surname_typo_same_credit` · **aplicada** 2026-09-14
+  - el mismo nombre con una errata en el apellido y el mismo crédito en el mismo disco: una persona escrita de dos formas por dos fuentes
+  - F3 [a favor] `person:3130.name|person:8675.name` — el mismo nombre con una errata en el apellido: «Diego Hernríquez» / «Diego Henríquez»
+  - F5 [a favor] `album_credits:album:434` — las dos grafías tienen el mismo tipo de crédito en «Blanco» de Culto Oculto
+  - F4 [contexto] `context:person:3130|person:8675` — comparten 1 banda(s) (Culto Oculto) y 1 disco(s) donde ambas figuran («Blanco» de Culto Oculto)
+  - aplicaría: fusionar la persona 8675 «Diego Henríquez» en 3130 «Diego Hernríquez» (la grafía perdida queda como alias)
+- **#193272 · «Paulo De Oliveira» / «Paulo M. De Oliveira»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre con un segundo nombre de más, sin apodos contradictorios, y comparten bandas
+  - F3 [a favor] `person:3131.name|person:8686.name` — el mismo nombre con un segundo nombre de más: «Paulo De Oliveira» / «Paulo M. De Oliveira»
+  - F4 [a favor] `context:person:3131|person:8686` — comparten 1 banda(s) (Culto Oculto) y 0 disco(s) donde ambas figuran
+  - F1 [contexto] `person:3131` — «Paulo De Oliveira» (3131): 1 créditos o membresías; bandas: Culto Oculto; acreditada en el canal
+  - F2 [contexto] `person:8686` — «Paulo M. De Oliveira» (8686): 1 créditos o membresías; bandas: Culto Oculto
+  - aplicaría: fusionar la persona 8686 «Paulo M. De Oliveira» en 3131 «Paulo De Oliveira» (la grafía perdida queda como alias)
+- **#193275 · «José Rafael "Cucaracha" Gómez» / «José R. Gómez»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «José R. Gómez» solo encaja con «José Rafael "Cucaracha" Gómez» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:3286.name|person:9499.name` — un nombre escrito con iniciales del otro: «José Rafael "Cucaracha" Gómez» / «José R. Gómez»
+  - F4 [a favor] `context:person:3286|person:9499` — comparten 1 banda(s) (Andreazulado) y 0 disco(s) donde ambas figuran
+  - F1 [contexto] `person:3286` — «José Rafael "Cucaracha" Gómez» (3286): 1 créditos o membresías; bandas: Andreazulado; acreditada en el canal
+  - F2 [contexto] `person:9499` — «José R. Gómez» (9499): 1 créditos o membresías; bandas: Andreazulado
+  - aplicaría: fusionar la persona 9499 «José R. Gómez» en 3286 «José Rafael "Cucaracha" Gómez» (la grafía perdida queda como alias)
+- **#193276 · «Luis "Luca" Ortega» / «Luca "Luca" Ortega»** — árbitro claude-opus-5
+  - árbitro: El nombre de pila es la misma forma con otra grafía, forma corta o el apodo usado como nombre (F3), en la misma banda (F4).
+  - F3 [a favor] `person:3332.name|person:3338.name` — nombres de pila distintos por pocas letras: «Luis "Luca" Ortega» / «Luca "Luca" Ortega»
+  - F4 [a favor] `context:person:3332|person:3338` — comparten 1 banda(s) (Los Mentas) y 1 disco(s) donde ambas figuran («U.E.L.M: Unidad Educativa» de Los Mentas)
+  - aplicaría: fusionar la persona 3338 «Luca "Luca" Ortega» en 3332 «Luis "Luca" Ortega» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.given_typo`)
+- **#193277 · «Guillermo Domingues» / «Guillermo Dominguez»** — regla `person.surname_typo_same_credit` · **aplicada** 2026-09-14
+  - el mismo nombre con una errata en el apellido y el mismo crédito en el mismo disco: una persona escrita de dos formas por dos fuentes
+  - F3 [a favor] `person:3335.name|person:3336.name` — el mismo nombre con una errata en el apellido: «Guillermo Domingues» / «Guillermo Dominguez»
+  - F5 [a favor] `album_credits:album:600` — las dos grafías tienen el mismo tipo de crédito en «U.E.L.M: Unidad Educativa» de Los Mentas
+  - F4 [contexto] `context:person:3335|person:3336` — comparten 1 banda(s) (Los Mentas) y 1 disco(s) donde ambas figuran («U.E.L.M: Unidad Educativa» de Los Mentas)
+  - aplicaría: fusionar la persona 3335 «Guillermo Domingues» en 3336 «Guillermo Dominguez» (la grafía perdida queda como alias)
+- **#193278 · «Humberto Pérez "Hum"» / «Humberto "Hum" Pérez»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre; solo cambian el apodo, su posición o las tildes, con el mismo apodo, y comparten bandas
+  - F3 [a favor] `person:3340.name|person:6408.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Humberto Pérez "Hum"» / «Humberto "Hum" Pérez»
+  - F4 [a favor] `context:person:3340|person:6408` — comparten 1 banda(s) (Ricochet) y 0 disco(s) donde ambas figuran
+  - F1 [contexto] `person:3340` — «Humberto Pérez "Hum"» (3340): 1 créditos o membresías; bandas: Ricochet; acreditada en el canal
+  - F2 [contexto] `person:6408` — «Humberto "Hum" Pérez» (6408): 1 créditos o membresías; bandas: Ricochet
+  - aplicaría: fusionar la persona 6408 «Humberto "Hum" Pérez» en 3340 «Humberto Pérez "Hum"» (la grafía perdida queda como alias)
+- **#193279 · «Ignacio Pérez "Nacho"» / «Ignacio "Nacho" Pérez»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre; solo cambian el apodo, su posición o las tildes, con el mismo apodo, y comparten bandas
+  - F3 [a favor] `person:3343.name|person:6410.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Ignacio Pérez "Nacho"» / «Ignacio "Nacho" Pérez»
+  - F4 [a favor] `context:person:3343|person:6410` — comparten 1 banda(s) (Ricochet) y 0 disco(s) donde ambas figuran
+  - F1 [contexto] `person:3343` — «Ignacio Pérez "Nacho"» (3343): 1 créditos o membresías; bandas: Ricochet; acreditada en el canal
+  - F2 [contexto] `person:6410` — «Ignacio "Nacho" Pérez» (6410): 1 créditos o membresías; bandas: Ricochet
+  - aplicaría: fusionar la persona 6410 «Ignacio "Nacho" Pérez» en 3343 «Ignacio Pérez "Nacho"» (la grafía perdida queda como alias)
+- **#193280 · «Carlos "Turbo" G» / «Carlos G.»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre; solo cambian el apodo, su posición o las tildes, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:3353.name|person:6883.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Carlos "Turbo" G» / «Carlos G.»
+  - F4 [a favor] `context:person:3353|person:6883` — comparten 1 banda(s) (Vox) y 1 disco(s) donde ambas figuran («No Se Puede Ya Ocultar» de Vox)
+  - F1 [contexto] `person:3353` — «Carlos "Turbo" G» (3353): 1 créditos o membresías; bandas: Vox; acreditada en el canal
+  - F2 [contexto] `person:6883` — «Carlos G.» (6883): 1 créditos o membresías; bandas: Vox
+  - aplicaría: fusionar la persona 6883 «Carlos G.» en 3353 «Carlos "Turbo" G» (la grafía perdida queda como alias)
+- **#193281 · «Leo Quintero» / «Leo Quitero»** — regla `person.surname_typo_same_credit` · **aplicada** 2026-09-14
+  - el mismo nombre con una errata en el apellido y el mismo crédito en el mismo disco: una persona escrita de dos formas por dos fuentes
+  - F3 [a favor] `person:3359.name|person:10327.name` — el mismo nombre con una errata en el apellido: «Leo Quintero» / «Leo Quitero»
+  - F5 [a favor] `album_credits:album:2362` — las dos grafías tienen el mismo tipo de crédito en «Después de la Tormenta» de Frank Quintero
+  - F4 [contexto] `context:person:3359|person:10327` — comparten 1 banda(s) (Frank Quintero) y 1 disco(s) donde ambas figuran («Después de la Tormenta» de Frank Quintero)
+  - aplicaría: fusionar la persona 10327 «Leo Quitero» en 3359 «Leo Quintero» (la grafía perdida queda como alias)
+- **#193283 · «César Herrera» / «César Z. Herrera»** — árbitro claude-opus-5
+  - árbitro: Una ficha añade un segundo nombre o una inicial a un apellido poco frecuente (F3), y ambas están en la misma banda (F4).
+  - F3 [a favor] `person:3407.name|person:3563.name` — el mismo nombre con un segundo nombre de más: «César Herrera» / «César Z. Herrera»
+  - F4 [a favor] `context:person:3407|person:3563` — comparten 1 banda(s) (Sincrónica) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 3563 «César Z. Herrera» en 3407 «César Herrera» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.name_variant_weak_context`)
+- **#193284 · «Rafael Gómez» / «Rafa Gómez»** — árbitro claude-opus-5
+  - árbitro: El nombre de pila es la misma forma con otra grafía, forma corta o el apodo usado como nombre (F3), en la misma banda (F4).
+  - F3 [a favor] `person:3408.name|person:6149.name` — nombres de pila distintos por pocas letras: «Rafael Gómez» / «Rafa Gómez»
+  - F4 [a favor] `context:person:3408|person:6149` — comparten 1 banda(s) (La Leche) y 1 disco(s) donde ambas figuran («45» de La Leche)
+  - aplicaría: fusionar la persona 6149 «Rafa Gómez» en 3408 «Rafael Gómez» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.given_typo`)
+- **#193285 · «Lusby Alberto Portillo» / «Lusby Portillo»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre con un segundo nombre de más, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:3419.name|person:4593.name` — el mismo nombre con un segundo nombre de más: «Lusby Alberto Portillo» / «Lusby Portillo»
+  - F4 [a favor] `context:person:3419|person:4593` — comparten 1 banda(s) (Petrula) y 1 disco(s) donde ambas figuran («Oración Políglota Para Salvar Al Mundo» de Petrula)
+  - F1 [contexto] `person:3419` — «Lusby Alberto Portillo» (3419): 1 créditos o membresías; bandas: Petrula; acreditada en el canal
+  - F2 [contexto] `person:4593` — «Lusby Portillo» (4593): 1 créditos o membresías; bandas: Petrula
+  - aplicaría: fusionar la persona 4593 «Lusby Portillo» en 3419 «Lusby Alberto Portillo» (la grafía perdida queda como alias)
+- **#193286 · «Roberto Ortega» / «Robert Ortega»** — árbitro claude-opus-5
+  - árbitro: El nombre de pila es la misma forma con otra grafía, forma corta o el apodo usado como nombre (F3), en la misma banda (F4).
+  - F3 [a favor] `person:3420.name|person:4595.name` — nombres de pila distintos por pocas letras: «Roberto Ortega» / «Robert Ortega»
+  - F4 [a favor] `context:person:3420|person:4595` — comparten 1 banda(s) (Petrula) y 1 disco(s) donde ambas figuran («Oración Políglota Para Salvar Al Mundo» de Petrula)
+  - aplicaría: fusionar la persona 4595 «Robert Ortega» en 3420 «Roberto Ortega» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.given_typo`)
+- **#193291 · «Eduardo Soto» / «E. Soto»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «E. Soto» solo encaja con «Eduardo Soto» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:3626.name|person:9165.name` — un nombre escrito con iniciales del otro: «Eduardo Soto» / «E. Soto»
+  - F4 [a favor] `context:person:3626|person:9165` — comparten 1 banda(s) (Eduardo Soto) y 1 disco(s) donde ambas figuran («Soto Blues Band» de Eduardo Soto)
+  - F1 [contexto] `person:3626` — «Eduardo Soto» (3626): 12 créditos o membresías; bandas: Eduardo Soto, La Misma Gente, Mochuelo, Resaca; acreditada en el canal
+  - F2 [contexto] `person:9165` — «E. Soto» (9165): 1 créditos o membresías; bandas: Eduardo Soto
+  - aplicaría: fusionar la persona 9165 «E. Soto» en 3626 «Eduardo Soto» (la grafía perdida queda como alias)
+- **#193294 · «Gustavo Montaño» / «G Montaño»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «G Montaño» solo encaja con «Gustavo Montaño» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:3679.name|person:9370.name` — un nombre escrito con iniciales del otro: «Gustavo Montaño» / «G Montaño»
+  - F4 [a favor] `context:person:3679|person:9370` — comparten 1 banda(s) (WAG) y 1 disco(s) donde ambas figuran («WAG» de WAG)
+  - F1 [contexto] `person:3679` — «Gustavo Montaño» (3679): 14 créditos o membresías; bandas: Alexis Rossell, Mussa, Seguridad Nacional, WAG
+  - F2 [contexto] `person:9370` — «G Montaño» (9370): 1 créditos o membresías; bandas: WAG
+  - aplicaría: fusionar la persona 9370 «G Montaño» en 3679 «Gustavo Montaño» (la grafía perdida queda como alias)
+- **#193295 · «R. Morán» / «Robin Morán»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «R. Morán» solo encaja con «Robin Morán» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:3712.name|person:3713.name` — un nombre escrito con iniciales del otro: «R. Morán» / «Robin Morán»
+  - F4 [a favor] `context:person:3712|person:3713` — comparten 1 banda(s) (Cien Grados) y 1 disco(s) donde ambas figuran («Viendo Ruidos» de Cien Grados)
+  - F1 [contexto] `person:3712` — «R. Morán» (3712): 7 créditos o membresías; bandas: Cien Grados
+  - F2 [contexto] `person:3713` — «Robin Morán» (3713): 3 créditos o membresías; bandas: Cien Grados
+  - aplicaría: fusionar la persona 3712 «R. Morán» en 3713 «Robin Morán» (la grafía perdida queda como alias)
+- **#193296 · «Jesús Llorente (Chinin)» / «Jesús Llorente»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre; solo cambian el apodo, su posición o las tildes, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:3737.name|person:6974.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Jesús Llorente (Chinin)» / «Jesús Llorente»
+  - F4 [a favor] `context:person:3737|person:6974` — comparten 1 banda(s) (A Lo Flamenko) y 1 disco(s) donde ambas figuran («In Da Jaus» de A Lo Flamenko)
+  - F1 [contexto] `person:3737` — «Jesús Llorente (Chinin)» (3737): 3 créditos o membresías; bandas: A Lo Flamenko
+  - F2 [contexto] `person:6974` — «Jesús Llorente» (6974): 6 créditos o membresías; bandas: A Lo Flamenko
+  - aplicaría: fusionar la persona 3737 «Jesús Llorente (Chinin)» en 6974 «Jesús Llorente» (la grafía perdida queda como alias)
+- **#193297 · «Eduardo Malavé» / «Eduardo Malavé "Edu"»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre; solo cambian el apodo, su posición o las tildes, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:3771.name|person:3774.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Eduardo Malavé» / «Eduardo Malavé "Edu"»
+  - F4 [a favor] `context:person:3771|person:3774` — comparten 1 banda(s) (Big Mandrake) y 1 disco(s) donde ambas figuran («La Fantástica Máquina» de Big Mandrake)
+  - F1 [contexto] `person:3771` — «Eduardo Malavé» (3771): 15 créditos o membresías; bandas: Big Mandrake
+  - F2 [contexto] `person:3774` — «Eduardo Malavé "Edu"» (3774): 2 créditos o membresías; bandas: Big Mandrake
+  - aplicaría: fusionar la persona 3771 «Eduardo Malavé» en 3774 «Eduardo Malavé "Edu"» (la grafía perdida queda como alias)
+- **#193298 · «Félix Madrigal» / «Felix Bablis Madrigal»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre con un segundo nombre de más, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:3867.name|person:11204.name` — el mismo nombre con un segundo nombre de más: «Félix Madrigal» / «Felix Bablis Madrigal»
+  - F4 [a favor] `context:person:3867|person:11204` — comparten 1 banda(s) (José Antonio Bordell) y 1 disco(s) donde ambas figuran («Entre Cenizas» de José Antonio Bordell)
+  - F1 [contexto] `person:3867` — «Félix Madrigal» (3867): 5 créditos o membresías; bandas: José Antonio Bordell
+  - F2 [contexto] `person:11204` — «Felix Bablis Madrigal» (11204): 1 créditos o membresías; bandas: José Antonio Bordell
+  - aplicaría: fusionar la persona 3867 «Félix Madrigal» en 11204 «Felix Bablis Madrigal» (la grafía perdida queda como alias)
+- **#193299 · «José Antonio Bordell» / «J. A. Bordell»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «J. A. Bordell» solo encaja con «José Antonio Bordell» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:3868.name|person:3880.name` — un nombre escrito con iniciales del otro: «José Antonio Bordell» / «J. A. Bordell»
+  - F4 [a favor] `context:person:3868|person:3880` — comparten 1 banda(s) (José Antonio Bordell) y 1 disco(s) donde ambas figuran («Por Mi Culpa» de José Antonio Bordell)
+  - F1 [contexto] `person:3868` — «José Antonio Bordell» (3868): 10 créditos o membresías; bandas: José Antonio Bordell, Unicornio
+  - F2 [contexto] `person:3880` — «J. A. Bordell» (3880): 4 créditos o membresías; bandas: José Antonio Bordell
+  - aplicaría: fusionar la persona 3880 «J. A. Bordell» en 3868 «José Antonio Bordell» (la grafía perdida queda como alias)
+- **#193300 · «Luis Gerardo Tovar» / «L.G.Tovar»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «L.G.Tovar» solo encaja con «Luis Gerardo Tovar» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:3926.name|person:9632.name` — un nombre escrito con iniciales del otro: «Luis Gerardo Tovar» / «L.G.Tovar»
+  - F4 [a favor] `context:person:3926|person:9632` — comparten 1 banda(s) (Unicornio) y 0 disco(s) donde ambas figuran
+  - F1 [contexto] `person:3926` — «Luis Gerardo Tovar» (3926): 2 créditos o membresías; bandas: Unicornio
+  - F2 [contexto] `person:9632` — «L.G.Tovar» (9632): 2 créditos o membresías; bandas: Unicornio
+  - aplicaría: fusionar la persona 9632 «L.G.Tovar» en 3926 «Luis Gerardo Tovar» (la grafía perdida queda como alias)
+- **#193301 · «Keyen López» / «Keyen Lopez»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre; solo cambian el apodo, su posición o las tildes, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:3937.name|person:9267.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Keyen López» / «Keyen Lopez»
+  - F4 [a favor] `context:person:3937|person:9267` — comparten 1 banda(s) (Maiah) y 1 disco(s) donde ambas figuran («A Través De Mis Ojos» de Maiah)
+  - F1 [contexto] `person:3937` — «Keyen López» (3937): 1 créditos o membresías; bandas: Maiah
+  - F2 [contexto] `person:9267` — «Keyen Lopez» (9267): 1 créditos o membresías; bandas: Maiah
+  - aplicaría: fusionar la persona 9267 «Keyen Lopez» en 3937 «Keyen López» (la grafía perdida queda como alias)
+- **#193302 · «A. Mattey» / «Alexis Mattey»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «A. Mattey» solo encaja con «Alexis Mattey» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:3991.name|person:4000.name` — un nombre escrito con iniciales del otro: «A. Mattey» / «Alexis Mattey»
+  - F4 [a favor] `context:person:3991|person:4000` — comparten 1 banda(s) (Maquina Animal) y 1 disco(s) donde ambas figuran («Venezuela» de Maquina Animal)
+  - F1 [contexto] `person:3991` — «A. Mattey» (3991): 7 créditos o membresías; bandas: Maquina Animal
+  - F2 [contexto] `person:4000` — «Alexis Mattey» (4000): 1 créditos o membresías; bandas: Maquina Animal
+  - aplicaría: fusionar la persona 3991 «A. Mattey» en 4000 «Alexis Mattey» (la grafía perdida queda como alias)
+- **#193305 · «Karen Vanessa Pita» / «Karen Pita»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre con un segundo nombre de más, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:4073.name|person:4078.name` — el mismo nombre con un segundo nombre de más: «Karen Vanessa Pita» / «Karen Pita»
+  - F4 [a favor] `context:person:4073|person:4078` — comparten 1 banda(s) (Calle Santiago) y 1 disco(s) donde ambas figuran («Nuevos Hombres» de Calle Santiago)
+  - F1 [contexto] `person:4073` — «Karen Vanessa Pita» (4073): 2 créditos o membresías; bandas: Calle Santiago
+  - F2 [contexto] `person:4078` — «Karen Pita» (4078): 1 créditos o membresías; bandas: Calle Santiago
+  - aplicaría: fusionar la persona 4078 «Karen Pita» en 4073 «Karen Vanessa Pita» (la grafía perdida queda como alias)
+- **#193306 · «Luis Méndez» / «Luis Ricardo Méndez»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre con un segundo nombre de más, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:4077.name|person:6932.name` — el mismo nombre con un segundo nombre de más: «Luis Méndez» / «Luis Ricardo Méndez»
+  - F4 [a favor] `context:person:4077|person:6932` — comparten 1 banda(s) (Yaguar) y 1 disco(s) donde ambas figuran («Yaguar» de Yaguar)
+  - F1 [contexto] `person:4077` — «Luis Méndez» (4077): 4 créditos o membresías; bandas: Calle Santiago, Pentágono, Yaguar
+  - F2 [contexto] `person:6932` — «Luis Ricardo Méndez» (6932): 1 créditos o membresías; bandas: Yaguar
+  - aplicaría: fusionar la persona 4077 «Luis Méndez» en 6932 «Luis Ricardo Méndez» (la grafía perdida queda como alias)
+- **#193308 · «Johnny Bastidas» / «J. Bastidas»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «J. Bastidas» solo encaja con «Johnny Bastidas» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:4218.name|person:9903.name` — un nombre escrito con iniciales del otro: «Johnny Bastidas» / «J. Bastidas»
+  - F4 [a favor] `context:person:4218|person:9903` — comparten 1 banda(s) (Druidas) y 2 disco(s) donde ambas figuran («Vida» de Druidas, «Latinoamericanos» de Druidas)
+  - F1 [contexto] `person:4218` — «Johnny Bastidas» (4218): 4 créditos o membresías; bandas: Druidas
+  - F2 [contexto] `person:9903` — «J. Bastidas» (9903): 18 créditos o membresías; bandas: Druidas
+  - aplicaría: fusionar la persona 9903 «J. Bastidas» en 4218 «Johnny Bastidas» (la grafía perdida queda como alias)
+- **#193310 · «Luis Leal» / «Luis Miguel Leal»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre con un segundo nombre de más, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:4242.name|person:9281.name` — el mismo nombre con un segundo nombre de más: «Luis Leal» / «Luis Miguel Leal»
+  - F4 [a favor] `context:person:4242|person:9281` — comparten 1 banda(s) (Nauta) y 1 disco(s) donde ambas figuran («Al Natural» de Nauta)
+  - F1 [contexto] `person:4242` — «Luis Leal» (4242): 12 créditos o membresías; bandas: Nauta, Voz Veis
+  - F2 [contexto] `person:9281` — «Luis Miguel Leal» (9281): 1 créditos o membresías; bandas: Nauta
+  - aplicaría: fusionar la persona 4242 «Luis Leal» en 9281 «Luis Miguel Leal» (la grafía perdida queda como alias)
+- **#193311 · «Nicolás Barrera» / «Nicolás "Tato" Barrera»** — árbitro claude-opus-5
+  - árbitro: El nombre completo coincide y solo cambian el apodo, su posición o las tildes (F3); ambas fichas figuran en la misma banda (F4) y nada en el dosier apunta a dos personas.
+  - F3 [a favor] `person:4274.name|person:7923.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Nicolás Barrera» / «Nicolás "Tato" Barrera»
+  - F4 [a favor] `context:person:4274|person:7923` — comparten 1 banda(s) (Arkangel) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 4274 «Nicolás Barrera» en 7923 «Nicolás "Tato" Barrera» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.name_variant_weak_context`)
+- **#193313 · «Mark Burwick» / «M. Burwick»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «M. Burwick» solo encaja con «Mark Burwick» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:4352.name|person:9102.name` — un nombre escrito con iniciales del otro: «Mark Burwick» / «M. Burwick»
+  - F4 [a favor] `context:person:4352|person:9102` — comparten 1 banda(s) (40 Plus) y 1 disco(s) donde ambas figuran («Deja El Mensaje» de 40 Plus)
+  - F1 [contexto] `person:4352` — «Mark Burwick» (4352): 4 créditos o membresías; bandas: 40 Plus
+  - F2 [contexto] `person:9102` — «M. Burwick» (9102): 4 créditos o membresías; bandas: 40 Plus
+  - aplicaría: fusionar la persona 9102 «M. Burwick» en 4352 «Mark Burwick» (la grafía perdida queda como alias)
+- **#193315 · «Juan Andrés Rondón» / «J. A. Rondón»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «J. A. Rondón» solo encaja con «Juan Andrés Rondón» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:4355.name|person:9103.name` — un nombre escrito con iniciales del otro: «Juan Andrés Rondón» / «J. A. Rondón»
+  - F4 [a favor] `context:person:4355|person:9103` — comparten 1 banda(s) (40 Plus) y 1 disco(s) donde ambas figuran («Deja El Mensaje» de 40 Plus)
+  - F1 [contexto] `person:4355` — «Juan Andrés Rondón» (4355): 3 créditos o membresías; bandas: 40 Plus
+  - F2 [contexto] `person:9103` — «J. A. Rondón» (9103): 1 créditos o membresías; bandas: 40 Plus
+  - aplicaría: fusionar la persona 9103 «J. A. Rondón» en 4355 «Juan Andrés Rondón» (la grafía perdida queda como alias)
+- **#193316 · «Rafael Llorente (Rafa)» / «Rafael Llorente»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre; solo cambian el apodo, su posición o las tildes, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:4370.name|person:6970.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Rafael Llorente (Rafa)» / «Rafael Llorente»
+  - F4 [a favor] `context:person:4370|person:6970` — comparten 1 banda(s) (A Lo Flamenko) y 1 disco(s) donde ambas figuran («In Da Jaus» de A Lo Flamenko)
+  - F1 [contexto] `person:4370` — «Rafael Llorente (Rafa)» (4370): 3 créditos o membresías; bandas: A Lo Flamenko
+  - F2 [contexto] `person:6970` — «Rafael Llorente» (6970): 1 créditos o membresías; bandas: A Lo Flamenko
+  - aplicaría: fusionar la persona 6970 «Rafael Llorente» en 4370 «Rafael Llorente (Rafa)» (la grafía perdida queda como alias)
+- **#193318 · «Juan Vicente Torrealba» / «J.V. Torrealba»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «J.V. Torrealba» solo encaja con «Juan Vicente Torrealba» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:4456.name|person:9494.name` — un nombre escrito con iniciales del otro: «Juan Vicente Torrealba» / «J.V. Torrealba»
+  - F4 [a favor] `context:person:4456|person:9494` — comparten 1 banda(s) (Los Amigos Invisibles) y 0 disco(s) donde ambas figuran
+  - F1 [contexto] `person:4456` — «Juan Vicente Torrealba» (4456): 2 créditos o membresías; bandas: Carlos Baute, Los Amigos Invisibles
+  - F2 [contexto] `person:9494` — «J.V. Torrealba» (9494): 1 créditos o membresías; bandas: Los Amigos Invisibles
+  - aplicaría: fusionar la persona 9494 «J.V. Torrealba» en 4456 «Juan Vicente Torrealba» (la grafía perdida queda como alias)
+- **#193322 · «Juan Antonio Garrido» / «J. Garrido»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «J. Garrido» solo encaja con «Juan Antonio Garrido» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:4640.name|person:4643.name` — un nombre escrito con iniciales del otro: «Juan Antonio Garrido» / «J. Garrido»
+  - F4 [a favor] `context:person:4640|person:4643` — comparten 1 banda(s) (Agugutata) y 1 disco(s) donde ambas figuran («Centurias y Violación» de Agugutata)
+  - F1 [contexto] `person:4640` — «Juan Antonio Garrido» (4640): 1 créditos o membresías; bandas: Agugutata
+  - F2 [contexto] `person:4643` — «J. Garrido» (4643): 1 créditos o membresías; bandas: Agugutata
+  - aplicaría: fusionar la persona 4643 «J. Garrido» en 4640 «Juan Antonio Garrido» (la grafía perdida queda como alias)
+- **#193323 · «Arcángel Nicastro» / «A. Nicastro»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «A. Nicastro» solo encaja con «Arcángel Nicastro» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:4641.name|person:9106.name` — un nombre escrito con iniciales del otro: «Arcángel Nicastro» / «A. Nicastro»
+  - F4 [a favor] `context:person:4641|person:9106` — comparten 1 banda(s) (Agugutata) y 1 disco(s) donde ambas figuran («Centurias y Violación» de Agugutata)
+  - F1 [contexto] `person:4641` — «Arcángel Nicastro» (4641): 1 créditos o membresías; bandas: Agugutata
+  - F2 [contexto] `person:9106` — «A. Nicastro» (9106): 1 créditos o membresías; bandas: Agugutata
+  - aplicaría: fusionar la persona 9106 «A. Nicastro» en 4641 «Arcángel Nicastro» (la grafía perdida queda como alias)
+- **#193324 · «Jhonny Ramos» / «Johnny Ramos»** — árbitro claude-opus-5
+  - árbitro: Es el mismo nombre con una errata ortográfica de una o dos letras (F3), dentro de la misma banda (F4); no hay otro indicio de dos personas.
+  - F3 [a favor] `person:4664.name|person:7399.name` — nombres de pila distintos por pocas letras: «Jhonny Ramos» / «Johnny Ramos»
+  - F4 [a favor] `context:person:4664|person:7399` — comparten 1 banda(s) (Alice in Hell) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 4664 «Jhonny Ramos» en 7399 «Johnny Ramos» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.given_typo`)
+- **#193326 · «Nelson Zuleta» / «N. Zuleta»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «N. Zuleta» solo encaja con «Nelson Zuleta» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:4703.name|person:9112.name` — un nombre escrito con iniciales del otro: «Nelson Zuleta» / «N. Zuleta»
+  - F4 [a favor] `context:person:4703|person:9112` — comparten 1 banda(s) (Alta Frecuencia) y 1 disco(s) donde ambas figuran («Cruzando la Linea» de Alta Frecuencia)
+  - F1 [contexto] `person:4703` — «Nelson Zuleta» (4703): 5 créditos o membresías; bandas: Alta Frecuencia, Tinajas
+  - F2 [contexto] `person:9112` — «N. Zuleta» (9112): 3 créditos o membresías; bandas: Alta Frecuencia
+  - aplicaría: fusionar la persona 9112 «N. Zuleta» en 4703 «Nelson Zuleta» (la grafía perdida queda como alias)
+- **#193327 · «Gabriel Carabeo» / «G. Carabeo»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «G. Carabeo» solo encaja con «Gabriel Carabeo» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:4716.name|person:9113.name` — un nombre escrito con iniciales del otro: «Gabriel Carabeo» / «G. Carabeo»
+  - F4 [a favor] `context:person:4716|person:9113` — comparten 1 banda(s) (Alto Pana) y 1 disco(s) donde ambas figuran («Poder del Amor» de Alto Pana)
+  - F1 [contexto] `person:4716` — «Gabriel Carabeo» (4716): 5 créditos o membresías; bandas: Alto Pana
+  - F2 [contexto] `person:9113` — «G. Carabeo» (9113): 4 créditos o membresías; bandas: Alto Pana
+  - aplicaría: fusionar la persona 9113 «G. Carabeo» en 4716 «Gabriel Carabeo» (la grafía perdida queda como alias)
+- **#193328 · «José Raúl Blanco» / «José R. Blanco»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «José R. Blanco» solo encaja con «José Raúl Blanco» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:4718.name|person:9119.name` — un nombre escrito con iniciales del otro: «José Raúl Blanco» / «José R. Blanco»
+  - F4 [a favor] `context:person:4718|person:9119` — comparten 1 banda(s) (Alto Pana) y 1 disco(s) donde ambas figuran («Poder del Amor» de Alto Pana)
+  - F1 [contexto] `person:4718` — «José Raúl Blanco» (4718): 1 créditos o membresías; bandas: Alto Pana
+  - F2 [contexto] `person:9119` — «José R. Blanco» (9119): 1 créditos o membresías; bandas: Alto Pana
+  - aplicaría: fusionar la persona 9119 «José R. Blanco» en 4718 «José Raúl Blanco» (la grafía perdida queda como alias)
+- **#193329 · «Joad Manuel Jiménez» / «Joad Jiménez»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre con un segundo nombre de más, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:4794.name|person:7918.name` — el mismo nombre con un segundo nombre de más: «Joad Manuel Jiménez» / «Joad Jiménez»
+  - F4 [a favor] `context:person:4794|person:7918` — comparten 1 banda(s) (Arkangel) y 1 disco(s) donde ambas figuran («El Angel De La Muerte» de Arkangel)
+  - F1 [contexto] `person:4794` — «Joad Manuel Jiménez» (4794): 4 créditos o membresías; bandas: Arkangel
+  - F2 [contexto] `person:7918` — «Joad Jiménez» (7918): 1 créditos o membresías; bandas: Arkangel
+  - aplicaría: fusionar la persona 7918 «Joad Jiménez» en 4794 «Joad Manuel Jiménez» (la grafía perdida queda como alias)
+- **#193330 · «Ilan Czentochowsky» / «Ilan Czentochowsky (Ilan Chester)»** — árbitro claude-opus-5
+  - árbitro: El nombre completo coincide y solo cambian el apodo, su posición o las tildes (F3); ambas fichas figuran en la misma banda (F4) y nada en el dosier apunta a dos personas.
+  - F3 [a favor] `person:4843.name|person:7991.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Ilan Czentochowsky» / «Ilan Czentochowsky (Ilan Chester)»
+  - F4 [a favor] `context:person:4843|person:7991` — comparten 1 banda(s) (Azúcar, Cacao & Leche) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 7991 «Ilan Czentochowsky (Ilan Chester)» en 4843 «Ilan Czentochowsky» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.name_variant_weak_context`)
+- **#193331 · «R. Lamm» / «Robert Lamm»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «R. Lamm» solo encaja con «Robert Lamm» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:4866.name|person:10133.name` — un nombre escrito con iniciales del otro: «R. Lamm» / «Robert Lamm»
+  - F4 [a favor] `context:person:4866|person:10133` — comparten 1 banda(s) (La Banda de Casablanca) y 1 disco(s) donde ambas figuran («El Sueño» de La Banda de Casablanca)
+  - F1 [contexto] `person:4866` — «R. Lamm» (4866): 1 créditos o membresías; bandas: La Banda de Casablanca
+  - F2 [contexto] `person:10133` — «Robert Lamm» (10133): 1 créditos o membresías; bandas: La Banda de Casablanca
+  - aplicaría: fusionar la persona 4866 «R. Lamm» en 10133 «Robert Lamm» (la grafía perdida queda como alias)
+- **#193332 · «Markos Mejía» / «Marcos Mejía»** — árbitro claude-opus-5
+  - árbitro: Es el mismo nombre con una errata ortográfica de una o dos letras (F3), dentro de la misma banda (F4); no hay otro indicio de dos personas.
+  - F3 [a favor] `person:4949.name|person:4954.name` — nombres de pila distintos por pocas letras: «Markos Mejía» / «Marcos Mejía»
+  - F4 [a favor] `context:person:4949|person:4954` — comparten 1 banda(s) (Bloodwork) y 1 disco(s) donde ambas figuran («War for Blood» de Bloodwork)
+  - aplicaría: fusionar la persona 4949 «Markos Mejía» en 4954 «Marcos Mejía» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.given_typo`)
+- **#193333 · «R. Magrini» / «Rey Magrini»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «R. Magrini» solo encaja con «Rey Magrini» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:5002.name|person:5011.name` — un nombre escrito con iniciales del otro: «R. Magrini» / «Rey Magrini»
+  - F4 [a favor] `context:person:5002|person:5011` — comparten 1 banda(s) (Bronce) y 1 disco(s) donde ambas figuran («Bronce» de Bronce)
+  - F1 [contexto] `person:5002` — «R. Magrini» (5002): 1 créditos o membresías; bandas: Bronce
+  - F2 [contexto] `person:5011` — «Rey Magrini» (5011): 1 créditos o membresías; bandas: Bronce
+  - aplicaría: fusionar la persona 5002 «R. Magrini» en 5011 «Rey Magrini» (la grafía perdida queda como alias)
+- **#193339 · «Sheideguer Silva» / «Sheydeguer Silva»** — árbitro claude-opus-5
+  - árbitro: Es el mismo nombre con una errata ortográfica de una o dos letras (F3), dentro de la misma banda (F4); no hay otro indicio de dos personas.
+  - F3 [a favor] `person:5097.name|person:8414.name` — nombres de pila distintos por pocas letras: «Sheideguer Silva» / «Sheydeguer Silva»
+  - F4 [a favor] `context:person:5097|person:8414` — comparten 1 banda(s) (Caseroloops) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 8414 «Sheydeguer Silva» en 5097 «Sheideguer Silva» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.given_typo`)
+- **#193341 · «Miguel "Miki" Bermúdez» / «Miguel Bermúdez»** — árbitro claude-opus-5
+  - árbitro: El nombre completo coincide y solo cambian el apodo, su posición o las tildes (F3); ambas fichas figuran en la misma banda (F4) y nada en el dosier apunta a dos personas.
+  - F3 [a favor] `person:5107.name|person:8412.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Miguel "Miki" Bermúdez» / «Miguel Bermúdez»
+  - F4 [a favor] `context:person:5107|person:8412` — comparten 1 banda(s) (Caseroloops) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 8412 «Miguel Bermúdez» en 5107 «Miguel "Miki" Bermúdez» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.name_variant_weak_context`)
+- **#193342 · «Carlos Gil Camarinha» / «Carlos Camarinha»** — árbitro claude-opus-5
+  - árbitro: Una ficha añade un segundo nombre o una inicial a un apellido poco frecuente (F3), y ambas están en la misma banda (F4).
+  - F3 [a favor] `person:5133.name|person:8454.name` — el mismo nombre con un segundo nombre de más: «Carlos Gil Camarinha» / «Carlos Camarinha»
+  - F4 [a favor] `context:person:5133|person:8454` — comparten 1 banda(s) (Chaos Avatar) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 8454 «Carlos Camarinha» en 5133 «Carlos Gil Camarinha» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.name_variant_weak_context`)
+- **#193344 · «Rafael Juárez» / «R. Juárez»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «R. Juárez» solo encaja con «Rafael Juárez» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:5138.name|person:9788.name` — un nombre escrito con iniciales del otro: «Rafael Juárez» / «R. Juárez»
+  - F4 [a favor] `context:person:5138|person:9788` — comparten 1 banda(s) (Chaos Avatar) y 1 disco(s) donde ambas figuran («El Poder de la Palabra» de Chaos Avatar)
+  - F1 [contexto] `person:5138` — «Rafael Juárez» (5138): 35 créditos o membresías; bandas: Chaos Avatar
+  - F2 [contexto] `person:9788` — «R. Juárez» (9788): 1 créditos o membresías; bandas: Chaos Avatar
+  - aplicaría: fusionar la persona 9788 «R. Juárez» en 5138 «Rafael Juárez» (la grafía perdida queda como alias)
+- **#193348 · «Juan Manuel De Ferrari Montoya» / «Juan De Ferrari Montoya»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre con un segundo nombre de más, sin apodos contradictorios, y comparten bandas
+  - F3 [a favor] `person:5306.name|person:8702.name` — el mismo nombre con un segundo nombre de más: «Juan Manuel De Ferrari Montoya» / «Juan De Ferrari Montoya»
+  - F4 [a favor] `context:person:5306|person:8702` — comparten 1 banda(s) (Cultura Tres) y 0 disco(s) donde ambas figuran
+  - F1 [contexto] `person:5306` — «Juan Manuel De Ferrari Montoya» (5306): 1 créditos o membresías; bandas: Cultura Tres
+  - F2 [contexto] `person:8702` — «Juan De Ferrari Montoya» (8702): 1 créditos o membresías; bandas: Cultura Tres
+  - aplicaría: fusionar la persona 8702 «Juan De Ferrari Montoya» en 5306 «Juan Manuel De Ferrari Montoya» (la grafía perdida queda como alias)
+- **#193349 · «R. Mora» / «Rolando Mora»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «R. Mora» solo encaja con «Rolando Mora» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:5322.name|person:5324.name` — un nombre escrito con iniciales del otro: «R. Mora» / «Rolando Mora»
+  - F4 [a favor] `context:person:5322|person:5324` — comparten 1 banda(s) (D'Cero) y 1 disco(s) donde ambas figuran («Qué Tiene Tu Imaginación?» de D'Cero)
+  - F1 [contexto] `person:5322` — «R. Mora» (5322): 7 créditos o membresías; bandas: D'Cero
+  - F2 [contexto] `person:5324` — «Rolando Mora» (5324): 3 créditos o membresías; bandas: D'Cero
+  - aplicaría: fusionar la persona 5322 «R. Mora» en 5324 «Rolando Mora» (la grafía perdida queda como alias)
+- **#193356 · «G. Belardinelli» / «Giancarlo Belardinelli»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «G. Belardinelli» solo encaja con «Giancarlo Belardinelli» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:5601.name|person:5608.name` — un nombre escrito con iniciales del otro: «G. Belardinelli» / «Giancarlo Belardinelli»
+  - F4 [a favor] `context:person:5601|person:5608` — comparten 1 banda(s) (ETC) y 1 disco(s) donde ambas figuran («Malas Compañias» de ETC)
+  - F1 [contexto] `person:5601` — «G. Belardinelli» (5601): 1 créditos o membresías; bandas: ETC
+  - F2 [contexto] `person:5608` — «Giancarlo Belardinelli» (5608): 1 créditos o membresías; bandas: ETC
+  - aplicaría: fusionar la persona 5601 «G. Belardinelli» en 5608 «Giancarlo Belardinelli» (la grafía perdida queda como alias)
+- **#193357 · «Angel Luis Buendía» / «Angel L. Buendía»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «Angel L. Buendía» solo encaja con «Angel Luis Buendía» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:5638.name|person:5642.name` — un nombre escrito con iniciales del otro: «Angel Luis Buendía» / «Angel L. Buendía»
+  - F4 [a favor] `context:person:5638|person:5642` — comparten 1 banda(s) (Fábrica De Sueños) y 1 disco(s) donde ambas figuran («Fuera De Fase» de Fábrica De Sueños)
+  - F1 [contexto] `person:5638` — «Angel Luis Buendía» (5638): 2 créditos o membresías; bandas: Fábrica De Sueños
+  - F2 [contexto] `person:5642` — «Angel L. Buendía» (5642): 1 créditos o membresías; bandas: Fábrica De Sueños
+  - aplicaría: fusionar la persona 5642 «Angel L. Buendía» en 5638 «Angel Luis Buendía» (la grafía perdida queda como alias)
+- **#193358 · «Pedro Vladimir Dorante» / «Pedro V. Dorante»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «Pedro V. Dorante» solo encaja con «Pedro Vladimir Dorante» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:5640.name|person:5645.name` — un nombre escrito con iniciales del otro: «Pedro Vladimir Dorante» / «Pedro V. Dorante»
+  - F4 [a favor] `context:person:5640|person:5645` — comparten 1 banda(s) (PROARESIS) y 1 disco(s) donde ambas figuran («Propios Y Extraños» de PROARESIS)
+  - F1 [contexto] `person:5640` — «Pedro Vladimir Dorante» (5640): 1 créditos o membresías; bandas: PROARESIS
+  - F2 [contexto] `person:5645` — «Pedro V. Dorante» (5645): 3 créditos o membresías; bandas: PROARESIS
+  - aplicaría: fusionar la persona 5645 «Pedro V. Dorante» en 5640 «Pedro Vladimir Dorante» (la grafía perdida queda como alias)
+- **#193362 · «J. Correa» / «José A. Correa»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «J. Correa» solo encaja con «José A. Correa» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:5670.name|person:5674.name` — un nombre escrito con iniciales del otro: «J. Correa» / «José A. Correa»
+  - F4 [a favor] `context:person:5670|person:5674` — comparten 1 banda(s) (Factor Mental) y 1 disco(s) donde ambas figuran («Nucleo Caraqueño» de Factor Mental)
+  - F1 [contexto] `person:5670` — «J. Correa» (5670): 5 créditos o membresías; bandas: Factor Mental
+  - F2 [contexto] `person:5674` — «José A. Correa» (5674): 1 créditos o membresías; bandas: Factor Mental
+  - aplicaría: fusionar la persona 5670 «J. Correa» en 5674 «José A. Correa» (la grafía perdida queda como alias)
+- **#193364 · «Freddy Riera» / «F. Riera»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «F. Riera» solo encaja con «Freddy Riera» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:5722.name|person:5727.name` — un nombre escrito con iniciales del otro: «Freddy Riera» / «F. Riera»
+  - F4 [a favor] `context:person:5722|person:5727` — comparten 1 banda(s) (Fhes) y 1 disco(s) donde ambas figuran («Ojos Vidriosos» de Fhes)
+  - F1 [contexto] `person:5722` — «Freddy Riera» (5722): 1 créditos o membresías; bandas: Fhes
+  - F2 [contexto] `person:5727` — «F. Riera» (5727): 1 créditos o membresías; bandas: Fhes
+  - aplicaría: fusionar la persona 5727 «F. Riera» en 5722 «Freddy Riera» (la grafía perdida queda como alias)
+- **#193365 · «Héctor Rivero» / «H. Rivero»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «H. Rivero» solo encaja con «Héctor Rivero» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:5724.name|person:9177.name` — un nombre escrito con iniciales del otro: «Héctor Rivero» / «H. Rivero»
+  - F4 [a favor] `context:person:5724|person:9177` — comparten 1 banda(s) (Fhes) y 1 disco(s) donde ambas figuran («Ojos Vidriosos» de Fhes)
+  - F1 [contexto] `person:5724` — «Héctor Rivero» (5724): 1 créditos o membresías; bandas: Fhes
+  - F2 [contexto] `person:9177` — «H. Rivero» (9177): 1 créditos o membresías; bandas: Fhes
+  - aplicaría: fusionar la persona 9177 «H. Rivero» en 5724 «Héctor Rivero» (la grafía perdida queda como alias)
+- **#193366 · «Sergio Escalona» / «S. Escalona»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «S. Escalona» solo encaja con «Sergio Escalona» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:5726.name|person:9175.name` — un nombre escrito con iniciales del otro: «Sergio Escalona» / «S. Escalona»
+  - F4 [a favor] `context:person:5726|person:9175` — comparten 1 banda(s) (Fhes) y 1 disco(s) donde ambas figuran («Ojos Vidriosos» de Fhes)
+  - F1 [contexto] `person:5726` — «Sergio Escalona» (5726): 1 créditos o membresías; bandas: Fhes
+  - F2 [contexto] `person:9175` — «S. Escalona» (9175): 1 créditos o membresías; bandas: Fhes
+  - aplicaría: fusionar la persona 9175 «S. Escalona» en 5726 «Sergio Escalona» (la grafía perdida queda como alias)
+- **#193367 · «Douglas Rodríguez» / «Douglas A. Rodríguez»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre con un segundo nombre de más, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:5736.name|person:5739.name` — el mismo nombre con un segundo nombre de más: «Douglas Rodríguez» / «Douglas A. Rodríguez»
+  - F4 [a favor] `context:person:5736|person:5739` — comparten 1 banda(s) (Flor di Tormento) y 1 disco(s) donde ambas figuran («Santuario» de Flor di Tormento)
+  - F1 [contexto] `person:5736` — «Douglas Rodríguez» (5736): 2 créditos o membresías; bandas: Flor di Tormento
+  - F2 [contexto] `person:5739` — «Douglas A. Rodríguez» (5739): 1 créditos o membresías; bandas: Flor di Tormento
+  - aplicaría: fusionar la persona 5739 «Douglas A. Rodríguez» en 5736 «Douglas Rodríguez» (la grafía perdida queda como alias)
+- **#193370 · «Juan C. Sabater» / «Juan Carlos Sabater»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «Juan C. Sabater» solo encaja con «Juan Carlos Sabater» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:5785.name|person:5793.name` — un nombre escrito con iniciales del otro: «Juan C. Sabater» / «Juan Carlos Sabater»
+  - F4 [a favor] `context:person:5785|person:5793` — comparten 1 banda(s) (Fuga) y 1 disco(s) donde ambas figuran («Fuga» de Fuga)
+  - F1 [contexto] `person:5785` — «Juan C. Sabater» (5785): 2 créditos o membresías; bandas: Fuga
+  - F2 [contexto] `person:5793` — «Juan Carlos Sabater» (5793): 4 créditos o membresías; bandas: Fuga, Quince y Ultimo
+  - aplicaría: fusionar la persona 5785 «Juan C. Sabater» en 5793 «Juan Carlos Sabater» (la grafía perdida queda como alias)
+- **#193372 · «Carlos Luis Sánchez Ricovery» / «Carlos Sánchez Ricovery»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre con un segundo nombre de más, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:5794.name|person:5803.name` — el mismo nombre con un segundo nombre de más: «Carlos Luis Sánchez Ricovery» / «Carlos Sánchez Ricovery»
+  - F4 [a favor] `context:person:5794|person:5803` — comparten 1 banda(s) (Furia de Buzo Ciego) y 1 disco(s) donde ambas figuran («Furia De Buzo Ciego» de Furia de Buzo Ciego)
+  - F1 [contexto] `person:5794` — «Carlos Luis Sánchez Ricovery» (5794): 2 créditos o membresías; bandas: Furia de Buzo Ciego
+  - F2 [contexto] `person:5803` — «Carlos Sánchez Ricovery» (5803): 1 créditos o membresías; bandas: Furia de Buzo Ciego
+  - aplicaría: fusionar la persona 5803 «Carlos Sánchez Ricovery» en 5794 «Carlos Luis Sánchez Ricovery» (la grafía perdida queda como alias)
+- **#193374 · «Nicky Font» / «N. Font»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «N. Font» solo encaja con «Nicky Font» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:5904.name|person:9825.name` — un nombre escrito con iniciales del otro: «Nicky Font» / «N. Font»
+  - F4 [a favor] `context:person:5904|person:9825` — comparten 1 banda(s) (Cronos) y 1 disco(s) donde ambas figuran («Al fin una victoria» de Cronos)
+  - F1 [contexto] `person:5904` — «Nicky Font» (5904): 5 créditos o membresías; bandas: Cronos, Hermes
+  - F2 [contexto] `person:9825` — «N. Font» (9825): 1 créditos o membresías; bandas: Cronos
+  - aplicaría: fusionar la persona 9825 «N. Font» en 5904 «Nicky Font» (la grafía perdida queda como alias)
+- **#193375 · «Sofia "La Nena" Pulido» / «Sophia Pulido "La Nena"»** — árbitro claude-opus-5
+  - árbitro: Es el mismo nombre con una errata ortográfica de una o dos letras (F3), dentro de la misma banda (F4); no hay otro indicio de dos personas.
+  - F3 [a favor] `person:5990.name|person:8614.name` — nombres de pila distintos por pocas letras: «Sofia "La Nena" Pulido» / «Sophia Pulido "La Nena"»
+  - F4 [a favor] `context:person:5990|person:8614` — comparten 1 banda(s) (Colina) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 5990 «Sofia "La Nena" Pulido» en 8614 «Sophia Pulido "La Nena"» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.given_typo`)
+- **#193376 · «José Gregorio Mijares» / «José Gregorio "Goyo" Mijares»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre; solo cambian el apodo, su posición o las tildes, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:6001.name|person:6006.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «José Gregorio Mijares» / «José Gregorio "Goyo" Mijares»
+  - F4 [a favor] `context:person:6001|person:6006` — comparten 1 banda(s) (Jahbafana) y 1 disco(s) donde ambas figuran («Jahbafana» de Jahbafana)
+  - F1 [contexto] `person:6001` — «José Gregorio Mijares» (6001): 8 créditos o membresías; bandas: Jahbafana
+  - F2 [contexto] `person:6006` — «José Gregorio "Goyo" Mijares» (6006): 1 créditos o membresías; bandas: Jahbafana
+  - aplicaría: fusionar la persona 6001 «José Gregorio Mijares» en 6006 «José Gregorio "Goyo" Mijares» (la grafía perdida queda como alias)
+- **#193377 · «Jose "Goyo" Mijares» / «José Mijares»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre; solo cambian el apodo, su posición o las tildes, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:6117.name|person:9206.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Jose "Goyo" Mijares» / «José Mijares»
+  - F4 [a favor] `context:person:6117|person:9206` — comparten 1 banda(s) (La Big Landin Orquesta) y 1 disco(s) donde ambas figuran («SKAterriza» de La Big Landin Orquesta)
+  - F1 [contexto] `person:6117` — «Jose "Goyo" Mijares» (6117): 1 créditos o membresías; bandas: La Big Landin Orquesta
+  - F2 [contexto] `person:9206` — «José Mijares» (9206): 1 créditos o membresías; bandas: La Big Landin Orquesta
+  - aplicaría: fusionar la persona 9206 «José Mijares» en 6117 «Jose "Goyo" Mijares» (la grafía perdida queda como alias)
+- **#193378 · «Luis Trujillo» / «Luis "Pilucho" Trujillo»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre; solo cambian el apodo, su posición o las tildes, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:6134.name|person:6142.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Luis Trujillo» / «Luis "Pilucho" Trujillo»
+  - F4 [a favor] `context:person:6134|person:6142` — comparten 1 banda(s) (La Fleur) y 1 disco(s) donde ambas figuran («Interestelar» de La Fleur)
+  - F1 [contexto] `person:6134` — «Luis Trujillo» (6134): 1 créditos o membresías; bandas: La Fleur
+  - F2 [contexto] `person:6142` — «Luis "Pilucho" Trujillo» (6142): 1 créditos o membresías; bandas: La Fleur
+  - aplicaría: fusionar la persona 6134 «Luis Trujillo» en 6142 «Luis "Pilucho" Trujillo» (la grafía perdida queda como alias)
+- **#193379 · «onathan Leal» / «Jonathan Leal»** — árbitro claude-opus-5
+  - árbitro: Es el mismo nombre con una errata ortográfica de una o dos letras (F3), dentro de la misma banda (F4); no hay otro indicio de dos personas.
+  - F3 [a favor] `person:6201.name|person:6203.name` — nombres de pila distintos por pocas letras: «onathan Leal» / «Jonathan Leal»
+  - F4 [a favor] `context:person:6201|person:6203` — comparten 1 banda(s) (Languidez) y 1 disco(s) donde ambas figuran («Mil Estaciones» de Languidez)
+  - aplicaría: fusionar la persona 6201 «onathan Leal» en 6203 «Jonathan Leal» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.given_typo`)
+- **#193382 · «Irma M. Domínguez» / «Irma M. de Domínguez»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre con un segundo nombre de más, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:6520.name|person:6534.name` — el mismo nombre con un segundo nombre de más: «Irma M. Domínguez» / «Irma M. de Domínguez»
+  - F4 [a favor] `context:person:6520|person:6534` — comparten 1 banda(s) (Shesura) y 1 disco(s) donde ambas figuran («Diferente Amanecer» de Shesura)
+  - F1 [contexto] `person:6520` — «Irma M. Domínguez» (6520): 6 créditos o membresías; bandas: Shesura
+  - F2 [contexto] `person:6534` — «Irma M. de Domínguez» (6534): 1 créditos o membresías; bandas: Shesura
+  - aplicaría: fusionar la persona 6520 «Irma M. Domínguez» en 6534 «Irma M. de Domínguez» (la grafía perdida queda como alias)
+- **#193386 · «José Gerónimo» / «José Jerónimo»** — árbitro claude-opus-5
+  - árbitro: Es el mismo nombre con una errata ortográfica de una o dos letras (F3), dentro de la misma banda (F4); no hay otro indicio de dos personas.
+  - F3 [a favor] `person:6738.name|person:11509.name` — nombres parecidos sin una variación reconocible: «José Gerónimo» / «José Jerónimo»
+  - F4 [a favor] `context:person:6738|person:11509` — comparten 1 banda(s) (Trampas) y 1 disco(s) donde ambas figuran («Trampas» de Trampas)
+  - aplicaría: fusionar la persona 11509 «José Jerónimo» en 6738 «José Gerónimo» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.fuzzy`)
+- **#193387 · «O. Flores» / «Oswaldo Flores»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «O. Flores» solo encaja con «Oswaldo Flores» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:6743.name|person:6750.name` — un nombre escrito con iniciales del otro: «O. Flores» / «Oswaldo Flores»
+  - F4 [a favor] `context:person:6743|person:6750` — comparten 1 banda(s) (Tranzas) y 1 disco(s) donde ambas figuran («Desde el Camerino» de Tranzas)
+  - F1 [contexto] `person:6743` — «O. Flores» (6743): 8 créditos o membresías; bandas: Tranzas
+  - F2 [contexto] `person:6750` — «Oswaldo Flores» (6750): 2 créditos o membresías; bandas: Tranzas
+  - aplicaría: fusionar la persona 6743 «O. Flores» en 6750 «Oswaldo Flores» (la grafía perdida queda como alias)
+- **#193388 · «J. Marval» / «Javier Marval»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «J. Marval» solo encaja con «Javier Marval» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:6748.name|person:6752.name` — un nombre escrito con iniciales del otro: «J. Marval» / «Javier Marval»
+  - F4 [a favor] `context:person:6748|person:6752` — comparten 1 banda(s) (Tranzas) y 1 disco(s) donde ambas figuran («Desde el Camerino» de Tranzas)
+  - F1 [contexto] `person:6748` — «J. Marval» (6748): 3 créditos o membresías; bandas: Tranzas
+  - F2 [contexto] `person:6752` — «Javier Marval» (6752): 1 créditos o membresías; bandas: Tranzas
+  - aplicaría: fusionar la persona 6748 «J. Marval» en 6752 «Javier Marval» (la grafía perdida queda como alias)
+- **#193389 · «Jorge Román» / «J. Román»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «J. Román» solo encaja con «Jorge Román» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:6751.name|person:9355.name` — un nombre escrito con iniciales del otro: «Jorge Román» / «J. Román»
+  - F4 [a favor] `context:person:6751|person:9355` — comparten 1 banda(s) (Tranzas) y 1 disco(s) donde ambas figuran («Desde el Camerino» de Tranzas)
+  - F1 [contexto] `person:6751` — «Jorge Román» (6751): 1 créditos o membresías; bandas: Tranzas
+  - F2 [contexto] `person:9355` — «J. Román» (9355): 2 créditos o membresías; bandas: Tranzas
+  - aplicaría: fusionar la persona 9355 «J. Román» en 6751 «Jorge Román» (la grafía perdida queda como alias)
+- **#193393 · «Angemyr Lezama» / «A. Lezama»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «A. Lezama» solo encaja con «Angemyr Lezama» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:6845.name|person:9369.name` — un nombre escrito con iniciales del otro: «Angemyr Lezama» / «A. Lezama»
+  - F4 [a favor] `context:person:6845|person:9369` — comparten 1 banda(s) (Vamos Pa'lante) y 1 disco(s) donde ambas figuran («Vamos Pa'lante» de Vamos Pa'lante)
+  - F1 [contexto] `person:6845` — «Angemyr Lezama» (6845): 3 créditos o membresías; bandas: Ahankar, Vamos Pa'lante
+  - F2 [contexto] `person:9369` — «A. Lezama» (9369): 1 créditos o membresías; bandas: Vamos Pa'lante
+  - aplicaría: fusionar la persona 9369 «A. Lezama» en 6845 «Angemyr Lezama» (la grafía perdida queda como alias)
+- **#193394 · «Wilberg Márquez» / «Willberg Márquez»** — árbitro claude-opus-5
+  - árbitro: Es el mismo nombre con una errata ortográfica de una o dos letras (F3), dentro de la misma banda (F4); no hay otro indicio de dos personas.
+  - F3 [a favor] `person:6894.name|person:9366.name` — nombres de pila distintos por pocas letras: «Wilberg Márquez» / «Willberg Márquez»
+  - F4 [a favor] `context:person:6894|person:9366` — comparten 1 banda(s) (WAG) y 1 disco(s) donde ambas figuran («WAG» de WAG)
+  - aplicaría: fusionar la persona 6894 «Wilberg Márquez» en 9366 «Willberg Márquez» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.given_typo`)
+- **#193395 · «Winda Pierral» / «W. Pierral»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «W. Pierral» solo encaja con «Winda Pierral» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:6912.name|person:9372.name` — un nombre escrito con iniciales del otro: «Winda Pierral» / «W. Pierral»
+  - F4 [a favor] `context:person:6912|person:9372` — comparten 1 banda(s) (Winda) y 1 disco(s) donde ambas figuran («Huellas» de Winda)
+  - F1 [contexto] `person:6912` — «Winda Pierral» (6912): 8 créditos o membresías; bandas: Winda
+  - F2 [contexto] `person:9372` — «W. Pierral» (9372): 1 créditos o membresías; bandas: Winda
+  - aplicaría: fusionar la persona 9372 «W. Pierral» en 6912 «Winda Pierral» (la grafía perdida queda como alias)
+- **#193396 · «Jesús Paublini» / «Jesús G. Paublini»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre con un segundo nombre de más, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:6943.name|person:6949.name` — el mismo nombre con un segundo nombre de más: «Jesús Paublini» / «Jesús G. Paublini»
+  - F4 [a favor] `context:person:6943|person:6949` — comparten 1 banda(s) (Zetafónica) y 1 disco(s) donde ambas figuran («Lado A» de Zetafónica)
+  - F1 [contexto] `person:6943` — «Jesús Paublini» (6943): 1 créditos o membresías; bandas: Zetafónica
+  - F2 [contexto] `person:6949` — «Jesús G. Paublini» (6949): 1 créditos o membresías; bandas: Zetafónica
+  - aplicaría: fusionar la persona 6949 «Jesús G. Paublini» en 6943 «Jesús Paublini» (la grafía perdida queda como alias)
+- **#193399 · «Hirail Arias» / «H. Arias»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «H. Arias» solo encaja con «Hirail Arias» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:7082.name|person:7087.name` — un nombre escrito con iniciales del otro: «Hirail Arias» / «H. Arias»
+  - F4 [a favor] `context:person:7082|person:7087` — comparten 1 banda(s) (Aditus) y 0 disco(s) donde ambas figuran
+  - F1 [contexto] `person:7082` — «Hirail Arias» (7082): 1 créditos o membresías; bandas: Aditus
+  - F2 [contexto] `person:7087` — «H. Arias» (7087): 1 créditos o membresías; bandas: Aditus
+  - aplicaría: fusionar la persona 7087 «H. Arias» en 7082 «Hirail Arias» (la grafía perdida queda como alias)
+- **#193400 · «Irene Turitto» / «I. Turitto»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «I. Turitto» solo encaja con «Irene Turitto» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:7083.name|person:7092.name` — un nombre escrito con iniciales del otro: «Irene Turitto» / «I. Turitto»
+  - F4 [a favor] `context:person:7083|person:7092` — comparten 1 banda(s) (Aditus) y 0 disco(s) donde ambas figuran
+  - F1 [contexto] `person:7083` — «Irene Turitto» (7083): 1 créditos o membresías; bandas: Aditus
+  - F2 [contexto] `person:7092` — «I. Turitto» (7092): 1 créditos o membresías; bandas: Aditus
+  - aplicaría: fusionar la persona 7092 «I. Turitto» en 7083 «Irene Turitto» (la grafía perdida queda como alias)
+- **#193401 · «A. Lewis» / «Alberto Lewis "Al Zeppy"»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «A. Lewis» solo encaja con «Alberto Lewis "Al Zeppy"» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:7190.name|person:7194.name` — un nombre escrito con iniciales del otro: «A. Lewis» / «Alberto Lewis "Al Zeppy"»
+  - F4 [a favor] `context:person:7190|person:7194` — comparten 1 banda(s) (Alberto Lewis) y 1 disco(s) donde ambas figuran («"El Zeppy" Alberto Lewis» de Alberto Lewis)
+  - F1 [contexto] `person:7190` — «A. Lewis» (7190): 3 créditos o membresías; bandas: Alberto Lewis
+  - F2 [contexto] `person:7194` — «Alberto Lewis "Al Zeppy"» (7194): 1 créditos o membresías; bandas: Alberto Lewis
+  - aplicaría: fusionar la persona 7190 «A. Lewis» en 7194 «Alberto Lewis "Al Zeppy"» (la grafía perdida queda como alias)
+- **#193402 · «L. Panero» / «Luis Panero»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «L. Panero» solo encaja con «Luis Panero» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:7227.name|person:9950.name` — un nombre escrito con iniciales del otro: «L. Panero» / «Luis Panero»
+  - F4 [a favor] `context:person:7227|person:9950` — comparten 1 banda(s) (Resistencia) y 1 disco(s) donde ambas figuran («Intenso» de Resistencia)
+  - F1 [contexto] `person:7227` — «L. Panero» (7227): 4 créditos o membresías; bandas: Resistencia
+  - F2 [contexto] `person:9950` — «Luis Panero» (9950): 4 créditos o membresías; bandas: Resistencia
+  - aplicaría: fusionar la persona 7227 «L. Panero» en 9950 «Luis Panero» (la grafía perdida queda como alias)
+- **#193403 · «Charlier Bisharat» / «Charlie Bisharat»** — árbitro claude-opus-5
+  - árbitro: Es el mismo nombre con una errata ortográfica de una o dos letras (F3), dentro de la misma banda (F4); no hay otro indicio de dos personas.
+  - F3 [a favor] `person:7269.name|person:7737.name` — nombres de pila distintos por pocas letras: «Charlier Bisharat» / «Charlie Bisharat»
+  - F4 [a favor] `context:person:7269|person:7737` — comparten 1 banda(s) (Frank Quintero) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 7269 «Charlier Bisharat» en 7737 «Charlie Bisharat» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.given_typo`)
+- **#193404 · «Pavel Alfredo Archila» / «Pavel Archila»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre con un segundo nombre de más, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:7347.name|person:7356.name` — el mismo nombre con un segundo nombre de más: «Pavel Alfredo Archila» / «Pavel Archila»
+  - F4 [a favor] `context:person:7347|person:7356` — comparten 1 banda(s) (Alexis Rossell) y 1 disco(s) donde ambas figuran («Torbellino» de Alexis Rossell)
+  - F1 [contexto] `person:7347` — «Pavel Alfredo Archila» (7347): 6 créditos o membresías; bandas: Alexis Rossell
+  - F2 [contexto] `person:7356` — «Pavel Archila» (7356): 1 créditos o membresías; bandas: Alexis Rossell
+  - aplicaría: fusionar la persona 7356 «Pavel Archila» en 7347 «Pavel Alfredo Archila» (la grafía perdida queda como alias)
+- **#193409 · «Frank Monasterio» / «Frank Monasterios»** — regla `person.surname_typo_same_credit` · **aplicada** 2026-09-14
+  - el mismo nombre con una errata en el apellido y el mismo crédito en el mismo disco: una persona escrita de dos formas por dos fuentes
+  - F3 [a favor] `person:7592.name|person:7654.name` — el mismo nombre con una errata en el apellido: «Frank Monasterio» / «Frank Monasterios»
+  - F5 [a favor] `album_credits:album:3858` — las dos grafías tienen el mismo tipo de crédito en «Control» de Caramelos De Cianuro
+  - F4 [contexto] `context:person:7592|person:7654` — comparten 1 banda(s) (Caramelos De Cianuro) y 1 disco(s) donde ambas figuran («Control» de Caramelos De Cianuro)
+  - aplicaría: fusionar la persona 7592 «Frank Monasterio» en 7654 «Frank Monasterios» (la grafía perdida queda como alias)
+- **#193410 · «Juan Cristóbal Losada (aka Mr. Sonic)» / «Juan C. Losada»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «Juan C. Losada» solo encaja con «Juan Cristóbal Losada (aka Mr. Sonic)» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:7622.name|person:7633.name` — un nombre escrito con iniciales del otro: «Juan Cristóbal Losada (aka Mr. Sonic)» / «Juan C. Losada»
+  - F4 [a favor] `context:person:7622|person:7633` — comparten 1 banda(s) (Los Amigos Invisibles) y 1 disco(s) donde ambas figuran («El Paradise» de Los Amigos Invisibles)
+  - F1 [contexto] `person:7622` — «Juan Cristóbal Losada (aka Mr. Sonic)» (7622): 3 créditos o membresías; bandas: Los Amigos Invisibles
+  - F2 [contexto] `person:7633` — «Juan C. Losada» (7633): 1 créditos o membresías; bandas: Los Amigos Invisibles
+  - aplicaría: fusionar la persona 7633 «Juan C. Losada» en 7622 «Juan Cristóbal Losada (aka Mr. Sonic)» (la grafía perdida queda como alias)
+- **#193411 · «Gozon Studio» / «Gozon Studios»** — árbitro claude-opus-5
+  - árbitro: Es el mismo estudio escrito como Studio/Studios o Estudio/Studio (F3), acreditado en la misma banda (F4). Unir las dos fichas no arregla que el estudio esté guardado como persona; eso se revisa aparte.
+  - F3 [a favor] `person:7656.name|person:7663.name` — el mismo nombre con una errata en el apellido: «Gozon Studio» / «Gozon Studios»
+  - F4 [a favor] `context:person:7656|person:7663` — comparten 1 banda(s) (Andreazulado) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 7663 «Gozon Studios» en 7656 «Gozon Studio» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.surname_typo_weak_context`)
+- **#193412 · «Andreazulado Estudio» / «Andreazulado' Studio»** — árbitro claude-opus-5
+  - árbitro: Es el mismo estudio escrito como Studio/Studios o Estudio/Studio (F3), acreditado en la misma banda (F4). Unir las dos fichas no arregla que el estudio esté guardado como persona; eso se revisa aparte.
+  - F3 [a favor] `person:7660.name|person:7662.name` — nombres parecidos sin una variación reconocible: «Andreazulado Estudio» / «Andreazulado' Studio»
+  - F4 [a favor] `context:person:7660|person:7662` — comparten 1 banda(s) (Andreazulado) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 7662 «Andreazulado' Studio» en 7660 «Andreazulado Estudio» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.fuzzy`)
+- **#193413 · «Guaco Estudios» / «Guaco Estudio»** — árbitro claude-opus-5
+  - árbitro: Es el mismo estudio escrito como Studio/Studios o Estudio/Studio (F3), acreditado en la misma banda (F4). Unir las dos fichas no arregla que el estudio esté guardado como persona; eso se revisa aparte.
+  - F3 [a favor] `person:7695.name|person:7718.name` — el mismo nombre con una errata en el apellido: «Guaco Estudios» / «Guaco Estudio»
+  - F4 [a favor] `context:person:7695|person:7718` — comparten 1 banda(s) (Angela) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 7718 «Guaco Estudio» en 7695 «Guaco Estudios» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.surname_typo_weak_context`)
+- **#193415 · «A. Saavedra» / «Alejandro Saavedra»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «A. Saavedra» solo encaja con «Alejandro Saavedra» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:7804.name|person:9098.name` — un nombre escrito con iniciales del otro: «A. Saavedra» / «Alejandro Saavedra»
+  - F4 [a favor] `context:person:7804|person:9098` — comparten 1 banda(s) (Vocal Song) y 0 disco(s) donde ambas figuran
+  - F1 [contexto] `person:7804` — «A. Saavedra» (7804): 2 créditos o membresías; bandas: Vocal Song
+  - F2 [contexto] `person:9098` — «Alejandro Saavedra» (9098): 1 créditos o membresías; bandas: Vocal Song
+  - aplicaría: fusionar la persona 7804 «A. Saavedra» en 9098 «Alejandro Saavedra» (la grafía perdida queda como alias)
+- **#193418 · «Nicolas Tovar» / «N. Tovar»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «N. Tovar» solo encaja con «Nicolas Tovar» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:8060.name|person:8062.name` — un nombre escrito con iniciales del otro: «Nicolas Tovar» / «N. Tovar»
+  - F4 [a favor] `context:person:8060|person:8062` — comparten 1 banda(s) (Carlos Baute) y 1 disco(s) donde ambas figuran («Dame De Eso» de Carlos Baute)
+  - F1 [contexto] `person:8060` — «Nicolas Tovar» (8060): 7 créditos o membresías; bandas: Carlos Baute
+  - F2 [contexto] `person:8062` — «N. Tovar» (8062): 2 créditos o membresías; bandas: Carlos Baute
+  - aplicaría: fusionar la persona 8062 «N. Tovar» en 8060 «Nicolas Tovar» (la grafía perdida queda como alias)
+- **#193419 · «Emilio Estefan Jr.» / «E. Estefan Jr.»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «E. Estefan Jr.» solo encaja con «Emilio Estefan Jr.» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:8073.name|person:9658.name` — un nombre escrito con iniciales del otro: «Emilio Estefan Jr.» / «E. Estefan Jr.»
+  - F4 [a favor] `context:person:8073|person:9658` — comparten 1 banda(s) (Carlos Baute) y 1 disco(s) donde ambas figuran («Dame De Eso» de Carlos Baute)
+  - F1 [contexto] `person:8073` — «Emilio Estefan Jr.» (8073): 8 créditos o membresías; bandas: Carlos Baute
+  - F2 [contexto] `person:9658` — «E. Estefan Jr.» (9658): 1 créditos o membresías; bandas: Carlos Baute
+  - aplicaría: fusionar la persona 9658 «E. Estefan Jr.» en 8073 «Emilio Estefan Jr.» (la grafía perdida queda como alias)
+- **#193420 · «Miguel Alonso Alcántara» / «Miguel Alcántara»** — árbitro claude-opus-5
+  - árbitro: Una ficha añade un segundo nombre o una inicial a un apellido poco frecuente (F3), y ambas están en la misma banda (F4).
+  - F3 [a favor] `person:8125.name|person:8169.name` — el mismo nombre con un segundo nombre de más: «Miguel Alonso Alcántara» / «Miguel Alcántara»
+  - F4 [a favor] `context:person:8125|person:8169` — comparten 1 banda(s) (Carlos Baute) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 8169 «Miguel Alcántara» en 8125 «Miguel Alonso Alcántara» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.name_variant_weak_context`)
+- **#193421 · «Cosmos Studios» / «Cosmos Estudios»** — árbitro claude-opus-5
+  - árbitro: Es el mismo estudio escrito como Studio/Studios o Estudio/Studio (F3), acreditado en la misma banda (F4). Unir las dos fichas no arregla que el estudio esté guardado como persona; eso se revisa aparte.
+  - F3 [a favor] `person:8131.name|person:8188.name` — nombres parecidos sin una variación reconocible: «Cosmos Studios» / «Cosmos Estudios»
+  - F4 [a favor] `context:person:8131|person:8188` — comparten 1 banda(s) (Carlos Baute) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 8188 «Cosmos Estudios» en 8131 «Cosmos Studios» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.fuzzy`)
+- **#193422 · «Ricardo Morales» / «Ricardo "LeMoc" Morales»** — regla `person.name_variant_with_context` · **aplicada** 2026-09-14
+  - el mismo nombre; solo cambian el apodo, su posición o las tildes, sin apodos contradictorios, y comparten discos
+  - F3 [a favor] `person:8139.name|person:8142.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Ricardo Morales» / «Ricardo "LeMoc" Morales»
+  - F4 [a favor] `context:person:8139|person:8142` — comparten 1 banda(s) (Carlos Baute) y 1 disco(s) donde ambas figuran («De Mi Puño y Letra» de Carlos Baute)
+  - F1 [contexto] `person:8139` — «Ricardo Morales» (8139): 1 créditos o membresías; bandas: Carlos Baute
+  - F2 [contexto] `person:8142` — «Ricardo "LeMoc" Morales» (8142): 1 créditos o membresías; bandas: Carlos Baute
+  - aplicaría: fusionar la persona 8139 «Ricardo Morales» en 8142 «Ricardo "LeMoc" Morales» (la grafía perdida queda como alias)
+- **#193423 · «Ana Galvin» / «Ana C. Galvin»** — árbitro claude-opus-5
+  - árbitro: Una ficha añade un segundo nombre o una inicial a un apellido poco frecuente (F3), y ambas están en la misma banda (F4).
+  - F3 [a favor] `person:8143.name|person:8186.name` — el mismo nombre con un segundo nombre de más: «Ana Galvin» / «Ana C. Galvin»
+  - F4 [a favor] `context:person:8143|person:8186` — comparten 1 banda(s) (Carlos Baute) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 8186 «Ana C. Galvin» en 8143 «Ana Galvin» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.name_variant_weak_context`)
+- **#193424 · «Francisco "Chucky" Oroz» / «Francisco "Chuky" Oroz»** — árbitro claude-opus-5
+  - árbitro: Los apodos son variantes del mismo (errata de una letra o artículo/prefijo) (F3, F5) sobre el mismo nombre y apellido, en la misma banda (F4).
+  - F3 [a favor] `person:8148.name|person:8160.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Francisco "Chucky" Oroz» / «Francisco "Chuky" Oroz»
+  - F4 [a favor] `context:person:8148|person:8160` — comparten 1 banda(s) (Carlos Baute) y 1 disco(s) donde ambas figuran («Amarte Bien» de Carlos Baute)
+  - F5 [a favor] `person:8148.name|person:8160.name` — apodos distintos: chucky / chuky
+  - aplicaría: fusionar la persona 8160 «Francisco "Chuky" Oroz» en 8148 «Francisco "Chucky" Oroz» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.nickname_conflict`)
+- **#193425 · «Jules Ramllano» / «Jules Ramillano»** — árbitro claude-opus-5
+  - árbitro: Es el mismo nombre con una errata ortográfica de una o dos letras (F3), dentro de la misma banda (F4); no hay otro indicio de dos personas.
+  - F3 [a favor] `person:8164.name|person:8185.name` — el mismo nombre con una errata en el apellido: «Jules Ramllano» / «Jules Ramillano»
+  - F4 [a favor] `context:person:8164|person:8185` — comparten 1 banda(s) (Carlos Baute) y 1 disco(s) donde ambas figuran («Amarte Bien» de Carlos Baute)
+  - aplicaría: fusionar la persona 8164 «Jules Ramllano» en 8185 «Jules Ramillano» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.surname_typo_weak_context`)
+- **#193426 · «S. Moy» / «Sylvia Moy»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «S. Moy» solo encaja con «Sylvia Moy» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:8271.name|person:11110.name` — un nombre escrito con iniciales del otro: «S. Moy» / «Sylvia Moy»
+  - F4 [a favor] `context:person:8271|person:11110` — comparten 1 banda(s) (Carlos Morean) y 1 disco(s) donde ambas figuran («Carlos Moreán» de Carlos Morean)
+  - F1 [contexto] `person:8271` — «S. Moy» (8271): 1 créditos o membresías; bandas: Carlos Morean
+  - F2 [contexto] `person:11110` — «Sylvia Moy» (11110): 2 créditos o membresías; bandas: Carlos Morean, Henry Stephen
+  - aplicaría: fusionar la persona 8271 «S. Moy» en 11110 «Sylvia Moy» (la grafía perdida queda como alias)
+- **#193427 · «L. Demetrio» / «Luis Demetrio»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «L. Demetrio» solo encaja con «Luis Demetrio» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:8303.name|person:11458.name` — un nombre escrito con iniciales del otro: «L. Demetrio» / «Luis Demetrio»
+  - F4 [a favor] `context:person:8303|person:11458` — comparten 1 banda(s) (Cherry Navarro) y 0 disco(s) donde ambas figuran
+  - F1 [contexto] `person:8303` — «L. Demetrio» (8303): 1 créditos o membresías; bandas: Cherry Navarro
+  - F2 [contexto] `person:11458` — «Luis Demetrio» (11458): 2 créditos o membresías; bandas: Cherry Navarro
+  - aplicaría: fusionar la persona 8303 «L. Demetrio» en 11458 «Luis Demetrio» (la grafía perdida queda como alias)
+- **#193428 · «Dave Meagan» / «Dave Meegan»** — árbitro claude-opus-5
+  - árbitro: Es el mismo nombre con una errata ortográfica de una o dos letras (F3), dentro de la misma banda (F4); no hay otro indicio de dos personas.
+  - F3 [a favor] `person:8370.name|person:8599.name` — el mismo nombre con una errata en el apellido: «Dave Meagan» / «Dave Meegan»
+  - F4 [a favor] `context:person:8370|person:8599` — comparten 1 banda(s) (Colina) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 8599 «Dave Meegan» en 8370 «Dave Meagan» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.surname_typo_weak_context`)
+- **#193430 · «Carl Martin» / «Car Martin»** — árbitro claude-opus-5
+  - árbitro: Es el mismo nombre con una errata ortográfica de una o dos letras (F3), dentro de la misma banda (F4); no hay otro indicio de dos personas.
+  - F3 [a favor] `person:8533.name|person:8539.name` — nombres parecidos sin una variación reconocible: «Carl Martin» / «Car Martin»
+  - F4 [a favor] `context:person:8533|person:8539` — comparten 1 banda(s) (Los Claners) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 8539 «Car Martin» en 8533 «Carl Martin» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.fuzzy`)
+- **#193431 · «Roberto Blandín» / «R. Blandín»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «R. Blandín» solo encaja con «Roberto Blandín» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:8578.name|person:8631.name` — un nombre escrito con iniciales del otro: «Roberto Blandín» / «R. Blandín»
+  - F4 [a favor] `context:person:8578|person:8631` — comparten 1 banda(s) (Colina) y 1 disco(s) donde ambas figuran («A Través Del Tiempo» de Colina)
+  - F1 [contexto] `person:8578` — «Roberto Blandín» (8578): 9 créditos o membresías; bandas: Colina
+  - F2 [contexto] `person:8631` — «R. Blandín» (8631): 1 créditos o membresías; bandas: Colina
+  - aplicaría: fusionar la persona 8631 «R. Blandín» en 8578 «Roberto Blandín» (la grafía perdida queda como alias)
+- **#193432 · «Ralph Revenscroft» / «Ralph Ravenscroft»** — árbitro claude-opus-5
+  - árbitro: Es el mismo nombre con una errata ortográfica de una o dos letras (F3), dentro de la misma banda (F4); no hay otro indicio de dos personas.
+  - F3 [a favor] `person:8579.name|person:8583.name` — el mismo nombre con una errata en el apellido: «Ralph Revenscroft» / «Ralph Ravenscroft»
+  - F4 [a favor] `context:person:8579|person:8583` — comparten 1 banda(s) (Colina) y 1 disco(s) donde ambas figuran («Amanecer» de Colina)
+  - aplicaría: fusionar la persona 8583 «Ralph Ravenscroft» en 8579 «Ralph Revenscroft» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.surname_typo_weak_context`)
+- **#193433 · «Pete Thomns» / «Pete Thomas»** — regla `person.surname_typo_same_credit`
+  - el mismo nombre con una errata en el apellido y el mismo crédito en el mismo disco: una persona escrita de dos formas por dos fuentes
+  - F3 [a favor] `person:8580.name|person:8584.name` — el mismo nombre con una errata en el apellido: «Pete Thomns» / «Pete Thomas»
+  - F5 [a favor] `album_credits:album:4671` — las dos grafías tienen el mismo tipo de crédito en «Amanecer» de Colina
+  - F4 [contexto] `context:person:8580|person:8584` — comparten 1 banda(s) (Colina) y 1 disco(s) donde ambas figuran («Amanecer» de Colina)
+  - aplicaría: fusionar la persona 8584 «Pete Thomas» en 8580 «Pete Thomns» (la grafía perdida queda como alias)
+- **#193435 · «Joan Shenton» / «Joan Senton»** — árbitro claude-opus-5
+  - árbitro: Es el mismo nombre con una errata ortográfica de una o dos letras (F3), dentro de la misma banda (F4); no hay otro indicio de dos personas.
+  - F3 [a favor] `person:8591.name|person:8627.name` — el mismo nombre con una errata en el apellido: «Joan Shenton» / «Joan Senton»
+  - F4 [a favor] `context:person:8591|person:8627` — comparten 1 banda(s) (Colina) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 8627 «Joan Senton» en 8591 «Joan Shenton» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.surname_typo_weak_context`)
+- **#193436 · «Tony King Sound Studio» / «Tony King Studio»** — regla `person.name_variant_with_context`
+  - el mismo nombre con un segundo nombre de más, sin apodos contradictorios, y comparten bandas
+  - F3 [a favor] `person:8598.name|person:8633.name` — el mismo nombre con un segundo nombre de más: «Tony King Sound Studio» / «Tony King Studio»
+  - F4 [a favor] `context:person:8598|person:8633` — comparten 1 banda(s) (Colina) y 0 disco(s) donde ambas figuran
+  - F1 [contexto] `person:8598` — «Tony King Sound Studio» (8598): 1 créditos o membresías; bandas: Colina
+  - F2 [contexto] `person:8633` — «Tony King Studio» (8633): 1 créditos o membresías; bandas: Colina
+  - aplicaría: fusionar la persona 8633 «Tony King Studio» en 8598 «Tony King Sound Studio» (la grafía perdida queda como alias)
+- **#193437 · «Sarm West Studio» / «Sarm West Studios»** — árbitro claude-opus-5
+  - árbitro: Es el mismo estudio escrito como Studio/Studios o Estudio/Studio (F3), acreditado en la misma banda (F4). Unir las dos fichas no arregla que el estudio esté guardado como persona; eso se revisa aparte.
+  - F3 [a favor] `person:8601.name|person:8642.name` — el mismo nombre con una errata en el apellido: «Sarm West Studio» / «Sarm West Studios»
+  - F4 [a favor] `context:person:8601|person:8642` — comparten 1 banda(s) (Colina) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 8601 «Sarm West Studio» en 8642 «Sarm West Studios» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.surname_typo_weak_context`)
+- **#193438 · «A. Scano» / «Ascanio Scano»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «A. Scano» solo encaja con «Ascanio Scano» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:8603.name|person:8646.name` — un nombre escrito con iniciales del otro: «A. Scano» / «Ascanio Scano»
+  - F4 [a favor] `context:person:8603|person:8646` — comparten 1 banda(s) (Colina) y 0 disco(s) donde ambas figuran
+  - F1 [contexto] `person:8603` — «A. Scano» (8603): 1 créditos o membresías; bandas: Colina
+  - F2 [contexto] `person:8646` — «Ascanio Scano» (8646): 1 créditos o membresías; bandas: Colina
+  - aplicaría: fusionar la persona 8603 «A. Scano» en 8646 «Ascanio Scano» (la grafía perdida queda como alias)
+- **#193439 · «Hugo Carregal» / «Hugo Carrigal»** — árbitro claude-opus-5
+  - árbitro: Es el mismo nombre con una errata ortográfica de una o dos letras (F3), dentro de la misma banda (F4); no hay otro indicio de dos personas.
+  - F3 [a favor] `person:8616.name|person:11335.name` — el mismo nombre con una errata en el apellido: «Hugo Carregal» / «Hugo Carrigal»
+  - F4 [a favor] `context:person:8616|person:11335` — comparten 1 banda(s) (Rudy Márquez) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 11335 «Hugo Carrigal» en 8616 «Hugo Carregal» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.surname_typo_weak_context`)
+- **#193442 · «Gustavo Adolfo Rolo» / «G. Rolo»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «G. Rolo» solo encaja con «Gustavo Adolfo Rolo» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:8662.name|person:9827.name` — un nombre escrito con iniciales del otro: «Gustavo Adolfo Rolo» / «G. Rolo»
+  - F4 [a favor] `context:person:8662|person:9827` — comparten 1 banda(s) (Cronos) y 1 disco(s) donde ambas figuran («Rules» de Cronos)
+  - F1 [contexto] `person:8662` — «Gustavo Adolfo Rolo» (8662): 1 créditos o membresías; bandas: Cronos
+  - F2 [contexto] `person:9827` — «G. Rolo» (9827): 2 créditos o membresías; bandas: Cronos
+  - aplicaría: fusionar la persona 9827 «G. Rolo» en 8662 «Gustavo Adolfo Rolo» (la grafía perdida queda como alias)
+- **#193443 · «Juan Manuel Arijo» / «J.M. Arijo»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «J.M. Arijo» solo encaja con «Juan Manuel Arijo» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:8795.name|person:8798.name` — un nombre escrito con iniciales del otro: «Juan Manuel Arijo» / «J.M. Arijo»
+  - F4 [a favor] `context:person:8795|person:8798` — comparten 1 banda(s) (Delia) y 0 disco(s) donde ambas figuran
+  - F1 [contexto] `person:8795` — «Juan Manuel Arijo» (8795): 1 créditos o membresías; bandas: Delia
+  - F2 [contexto] `person:8798` — «J.M. Arijo» (8798): 1 créditos o membresías; bandas: Delia
+  - aplicaría: fusionar la persona 8798 «J.M. Arijo» en 8795 «Juan Manuel Arijo» (la grafía perdida queda como alias)
+- **#193445 · «Belkis Guevara» / «Belkys Guevara»** — árbitro claude-opus-5
+  - árbitro: Es el mismo nombre con una errata ortográfica de una o dos letras (F3), dentro de la misma banda (F4); no hay otro indicio de dos personas.
+  - F3 [a favor] `person:9056.name|person:9068.name` — nombres de pila distintos por pocas letras: «Belkis Guevara» / «Belkys Guevara»
+  - F4 [a favor] `context:person:9056|person:9068` — comparten 1 banda(s) (Edgar Alexander) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 9068 «Belkys Guevara» en 9056 «Belkis Guevara» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.given_typo`)
+- **#193447 · «J. Ragoboy» / «Jerry Ragoboy»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «J. Ragoboy» solo encaja con «Jerry Ragoboy» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:9135.name|person:10128.name` — un nombre escrito con iniciales del otro: «J. Ragoboy» / «Jerry Ragoboy»
+  - F4 [a favor] `context:person:9135|person:10128` — comparten 1 banda(s) (La Banda de Casablanca) y 1 disco(s) donde ambas figuran («El Sueño» de La Banda de Casablanca)
+  - F1 [contexto] `person:9135` — «J. Ragoboy» (9135): 1 créditos o membresías; bandas: La Banda de Casablanca
+  - F2 [contexto] `person:10128` — «Jerry Ragoboy» (10128): 1 créditos o membresías; bandas: La Banda de Casablanca
+  - aplicaría: fusionar la persona 9135 «J. Ragoboy» en 10128 «Jerry Ragoboy» (la grafía perdida queda como alias)
+- **#193448 · «C. Taylor» / «Chip Taylor»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «C. Taylor» solo encaja con «Chip Taylor» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:9136.name|person:10129.name` — un nombre escrito con iniciales del otro: «C. Taylor» / «Chip Taylor»
+  - F4 [a favor] `context:person:9136|person:10129` — comparten 1 banda(s) (La Banda de Casablanca) y 1 disco(s) donde ambas figuran («El Sueño» de La Banda de Casablanca)
+  - F1 [contexto] `person:9136` — «C. Taylor» (9136): 1 créditos o membresías; bandas: La Banda de Casablanca
+  - F2 [contexto] `person:10129` — «Chip Taylor» (10129): 1 créditos o membresías; bandas: La Banda de Casablanca
+  - aplicaría: fusionar la persona 9136 «C. Taylor» en 10129 «Chip Taylor» (la grafía perdida queda como alias)
+- **#193451 · «John Phillips» / «J. Phillips»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «J. Phillips» solo encaja con «John Phillips» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:9219.name|person:9685.name` — un nombre escrito con iniciales del otro: «John Phillips» / «J. Phillips»
+  - F4 [a favor] `context:person:9219|person:9685` — comparten 1 banda(s) (Carlos Morean) y 0 disco(s) donde ambas figuran
+  - F1 [contexto] `person:9219` — «John Phillips» (9219): 2 créditos o membresías; bandas: Carlos Morean, Los Darts
+  - F2 [contexto] `person:9685` — «J. Phillips» (9685): 1 créditos o membresías; bandas: Carlos Morean
+  - aplicaría: fusionar la persona 9685 «J. Phillips» en 9219 «John Phillips» (la grafía perdida queda como alias)
+- **#193453 · «R. M. Girón» / «Rosa María Girón»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «R. M. Girón» solo encaja con «Rosa María Girón» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:9438.name|person:9955.name` — un nombre escrito con iniciales del otro: «R. M. Girón» / «Rosa María Girón»
+  - F4 [a favor] `context:person:9438|person:9955` — comparten 1 banda(s) (Témpano) y 1 disco(s) donde ambas figuran («Témpano» de Témpano)
+  - F1 [contexto] `person:9438` — «R. M. Girón» (9438): 1 créditos o membresías; bandas: Témpano
+  - F2 [contexto] `person:9955` — «Rosa María Girón» (9955): 1 créditos o membresías; bandas: Témpano
+  - aplicaría: fusionar la persona 9438 «R. M. Girón» en 9955 «Rosa María Girón» (la grafía perdida queda como alias)
+- **#193454 · «I. Zabala» / «Iñigo Zabala»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «I. Zabala» solo encaja con «Iñigo Zabala» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:9439.name|person:9954.name` — un nombre escrito con iniciales del otro: «I. Zabala» / «Iñigo Zabala»
+  - F4 [a favor] `context:person:9439|person:9954` — comparten 1 banda(s) (Témpano) y 1 disco(s) donde ambas figuran («Témpano» de Témpano)
+  - F1 [contexto] `person:9439` — «I. Zabala» (9439): 1 créditos o membresías; bandas: Témpano
+  - F2 [contexto] `person:9954` — «Iñigo Zabala» (9954): 2 créditos o membresías; bandas: Témpano
+  - aplicaría: fusionar la persona 9439 «I. Zabala» en 9954 «Iñigo Zabala» (la grafía perdida queda como alias)
+- **#193455 · «Javier Losada» / «Javier Lozada»** — árbitro claude-opus-5
+  - árbitro: Es el mismo nombre con una errata ortográfica de una o dos letras (F3), dentro de la misma banda (F4); no hay otro indicio de dos personas.
+  - F3 [a favor] `person:9443.name|person:9952.name` — el mismo nombre con una errata en el apellido: «Javier Losada» / «Javier Lozada»
+  - F4 [a favor] `context:person:9443|person:9952` — comparten 1 banda(s) (Témpano) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 9952 «Javier Lozada» en 9443 «Javier Losada» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.surname_typo_weak_context`)
+- **#193457 · «Ernesto Luis Rodríguez» / «E.L. Rodríguez»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «E.L. Rodríguez» solo encaja con «Ernesto Luis Rodríguez» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:9481.name|person:9496.name` — un nombre escrito con iniciales del otro: «Ernesto Luis Rodríguez» / «E.L. Rodríguez»
+  - F4 [a favor] `context:person:9481|person:9496` — comparten 1 banda(s) (Los Amigos Invisibles) y 0 disco(s) donde ambas figuran
+  - F1 [contexto] `person:9481` — «Ernesto Luis Rodríguez» (9481): 1 créditos o membresías; bandas: Los Amigos Invisibles
+  - F2 [contexto] `person:9496` — «E.L. Rodríguez» (9496): 1 créditos o membresías; bandas: Los Amigos Invisibles
+  - aplicaría: fusionar la persona 9496 «E.L. Rodríguez» en 9481 «Ernesto Luis Rodríguez» (la grafía perdida queda como alias)
+- **#193459 · «Gloria Martín» / «Gloria Marín»** — regla `person.surname_typo_same_credit`
+  - el mismo nombre con una errata en el apellido y el mismo crédito en el mismo disco: una persona escrita de dos formas por dos fuentes
+  - F3 [a favor] `person:9671.name|person:9672.name` — el mismo nombre con una errata en el apellido: «Gloria Martín» / «Gloria Marín»
+  - F5 [a favor] `album_credits:album:3860` — las dos grafías tienen el mismo tipo de crédito en «Mírame A Los Ojos» de Carlos Mata
+  - F4 [contexto] `context:person:9671|person:9672` — comparten 1 banda(s) (Carlos Mata) y 1 disco(s) donde ambas figuran («Mírame A Los Ojos» de Carlos Mata)
+  - aplicaría: fusionar la persona 9672 «Gloria Marín» en 9671 «Gloria Martín» (la grafía perdida queda como alias)
+- **#193460 · «John Durril» / «John Durrill»** — árbitro claude-opus-5
+  - árbitro: Es el mismo nombre con una errata ortográfica de una o dos letras (F3), dentro de la misma banda (F4); no hay otro indicio de dos personas.
+  - F3 [a favor] `person:9768.name|person:11842.name` — el mismo nombre con una errata en el apellido: «John Durril» / «John Durrill»
+  - F4 [a favor] `context:person:9768|person:11842` — comparten 1 banda(s) (Los Cazadores) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 9768 «John Durril» en 11842 «John Durrill» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.surname_typo_weak_context`)
+- **#193462 · «Johnny Quiros» / «Johnny Quiróz»** — árbitro claude-opus-5
+  - árbitro: Es el mismo nombre con una errata ortográfica de una o dos letras (F3), dentro de la misma banda (F4); no hay otro indicio de dos personas.
+  - F3 [a favor] `person:10051.name|person:11365.name` — el mismo nombre con una errata en el apellido: «Johnny Quiros» / «Johnny Quiróz»
+  - F4 [a favor] `context:person:10051|person:11365` — comparten 1 banda(s) (Henry Stephen) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 11365 «Johnny Quiróz» en 10051 «Johnny Quiros» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.surname_typo_weak_context`)
+- **#193463 · «Charles Spiteri» / «Charles Spieri»** — regla `person.surname_typo_same_credit` · **aplicada** 2026-09-14
+  - el mismo nombre con una errata en el apellido y el mismo crédito en el mismo disco: una persona escrita de dos formas por dos fuentes
+  - F3 [a favor] `person:11108.name|person:11484.name` — el mismo nombre con una errata en el apellido: «Charles Spiteri» / «Charles Spieri»
+  - F5 [a favor] `album_credits:album:2878` — las dos grafías tienen el mismo tipo de crédito en «Memphis» de Los Memphis
+  - F4 [contexto] `context:person:11108|person:11484` — comparten 1 banda(s) (Los Memphis) y 1 disco(s) donde ambas figuran («Memphis» de Los Memphis)
+  - aplicaría: fusionar la persona 11484 «Charles Spieri» en 11108 «Charles Spiteri» (la grafía perdida queda como alias)
+- **#193465 · «Alec R. Costandinos» / «Alec R. Constandinos»** — árbitro claude-opus-5
+  - árbitro: Es el mismo nombre con una errata ortográfica de una o dos letras (F3), dentro de la misma banda (F4); no hay otro indicio de dos personas.
+  - F3 [a favor] `person:11297.name|person:11334.name` — el mismo nombre con una errata en el apellido: «Alec R. Costandinos» / «Alec R. Constandinos»
+  - F4 [a favor] `context:person:11297|person:11334` — comparten 1 banda(s) (Rudy Márquez) y 0 disco(s) donde ambas figuran
+  - aplicaría: fusionar la persona 11297 «Alec R. Costandinos» en 11334 «Alec R. Constandinos» (la grafía perdida queda como alias)
+  - las reglas deterministas decían NEEDS_HUMAN (`person.surname_typo_weak_context`)
+- **#193467 · «Orlando Briceño» / «O. Briceño»** — regla `person.initials_unique` · **aplicada** 2026-09-14
+  - «O. Briceño» solo encaja con «Orlando Briceño» en el catálogo y todas sus bandas son de esa persona
+  - F3 [a favor] `person:11459.name|person:11460.name` — un nombre escrito con iniciales del otro: «Orlando Briceño» / «O. Briceño»
+  - F4 [a favor] `context:person:11459|person:11460` — comparten 1 banda(s) (Cherry Navarro) y 0 disco(s) donde ambas figuran
+  - F1 [contexto] `person:11459` — «Orlando Briceño» (11459): 1 créditos o membresías; bandas: Cherry Navarro
+  - F2 [contexto] `person:11460` — «O. Briceño» (11460): 1 créditos o membresías; bandas: Cherry Navarro
+  - aplicaría: fusionar la persona 11460 «O. Briceño» en 11459 «Orlando Briceño» (la grafía perdida queda como alias)
+
+### YouTube (10)
+
+- **#191119 · Claroscuro - Miel (Official 4K Video) (1N6cHd9CvEA)** — regla `music_video.session_credits` · **aplicada** 2026-09-14
+  - la descripción nombra 9 créditos de grabación de «Supereterodino» (2001) [studio_album] (Pablo Estacio, Taylor Deupree, Sebastián Araujo, Pulpo Laboratorio de Sonido, Javier Casas, Cayayo Troconis, Estudio Eterodino, Guido Malandrino, Tomas Opitz); ningún otro disco aporta uno que ese no tenga
+  - F3 [a favor] `album_credits:1373,4598,5451,15900,15902,15906,2744,15908,6753,15904,7010,7958,15905,15907,7084,15901,7441,15899,7957,15903,15909,15910` — «Supereterodino» (2001) [studio_album] (Studio Album), pista «Miel» (245 s): créditos de grabación que la descripción del video también nombra: Pablo Estacio (producer/mixing/recording), Taylor Deupree (mastering), Sebastián Araujo (producer), Pulpo Laboratorio de Sonido (mixing/recording), Javier Casas (recording), Cayayo Troconis (producer), Estudio Eterodino (recording), Guido Malandrino (photography), Tomas Opitz (photography); músicos nombrados: Miguel Delgado, Carlos Eduardo Reyes, Javier Weyler de 4
+  - F2 [contexto] `album:154.credits` — «En Vivo CorpBanca» (2001) [live_album] (Live Album), pista «Miel» (261 s): créditos de grabación que la descripción del video también nombra: ninguno; músicos nombrados: Javier Weyler, Miguel Delgado, Carlos Eduardo Reyes de 3
+  - F1 [contexto] `video:1N6cHd9CvEA` — videoclip «Claroscuro - Miel (Official 4K Video)» (201 s)
+  - aplicaría: enlazar el video 1N6cHd9CvEA con la pista 4249 desde 0 s hasta 201 s
+- **#191120 · Americania - Animal (Official 4K Video) (4r7taVlP6Lc)** — regla `music_video.session_credits` · **aplicada** 2026-09-14
+  - la descripción nombra 4 créditos de grabación de «Sigo» (2011) [studio_album] (Ricardo Martínez, Gustavo Casas, Andrés Mayo Mastering & Audio Post, Andrés Mayo); ningún otro disco aporta uno que ese no tenga
+  - F2 [a favor] `album_credits:425,4378,5421,13680,3139,13682,3259,4346` — «Sigo» (2011) [studio_album] (Studio Album), pista «Animal» (373 s): créditos de grabación que la descripción del video también nombra: Ricardo Martínez (recording/mixing/producer), Gustavo Casas (producer), Andrés Mayo Mastering & Audio Post (mastering), Andrés Mayo (mastering); músicos nombrados: Italo Pizzolante, Armando Añez, Álvaro Casas de 6
+  - F3 [contexto] `album_credits:3112,13705` — «Concierto En La Sala» (2012) [live_album] (Live Album), pista «Animal» (402 s): créditos de grabación que la descripción del video también nombra: Gustavo Casas (producer); músicos nombrados: Armando Añez, Álvaro Casas, Italo Pizzolante de 10
+  - F1 [contexto] `video:4r7taVlP6Lc` — videoclip «Americania - Animal (Official 4K Video)» (344 s)
+  - aplicaría: enlazar el video 4r7taVlP6Lc con la pista 2336 desde 0 s hasta 344 s
+- **#191121 · Los Amigos Invisibles - En Una Noche Tan Linda Como Esta (2008) || Full Concert || 4K60 Remastered (8nfYcQanBSs)** — regla `live_concert.setlist_overlap` · **aplicada** 2026-09-14
+  - pregunta: ¿El concierto 8nfYcQanBSs es la grabación de «En Una Noche Tan Linda Como Esta» (2008) [live_album]?
+  - la hoja nombra el disco y 21 de 21 canciones del video son pistas suyas
+  - F2 [a favor] `seed_upload:video:8nfYcQanBSs` — la hoja maestra dice: Los Amigos Invisibles | En Una Noche Tan Linda Como Esta | 2008 | Live Concert
+  - F1 [a favor] `video:8nfYcQanBSs` — concierto «Los Amigos Invisibles - En Una Noche Tan Linda Como Esta (2008) || Full Concert || 4K60 Remastered» de 2008, 22 marcas de tiempo
+  - F4 [a favor] `tracklist:video:8nfYcQanBSs|album:248` — 21 de 21 canciones del video están en el disco
+  - F5 [contexto] `tracklist:video:8nfYcQanBSs` — marcas fuera de orden, no se enlazan: «Llegaste Tarde» @2680s
+  - aplicaría: enlazar el video 8nfYcQanBSs con el disco 248 como live_concert y 20 ocurrencias de pista
+- **#191122 · Desorden Público - En Vivo En El Teresa Carreño (2004) || Full Concert || 4K60 Remastered (Bz5t3g2EkAc)** — regla `live_concert.setlist_overlap` · **aplicada** 2026-09-14
+  - pregunta: ¿El concierto Bz5t3g2EkAc es la grabación de «En Vivo En El Teresa Carreño» (2004) [live_album]?
+  - la hoja nombra el disco y 22 de 23 canciones del video son pistas suyas
+  - F2 [a favor] `seed_upload:video:Bz5t3g2EkAc` — la hoja maestra dice: Desorden Público | En Vivo En El Teresa Carreño | 2004 | Live Concert
+  - F1 [a favor] `video:Bz5t3g2EkAc` — concierto «Desorden Público - En Vivo En El Teresa Carreño (2004) || Full Concert || 4K60 Remastered» de 2004, 25 marcas de tiempo
+  - F4 [a favor] `tracklist:video:Bz5t3g2EkAc|album:169` — 22 de 23 canciones del video están en el disco; faltan: «Canto Popular De La Vida y Muerte»
+  - aplicaría: enlazar el video Bz5t3g2EkAc con el disco 169 como live_concert y 22 ocurrencias de pista
+- **#191123 · Candy66 - Madre (Official 4K Video) (HN4R4EX6ej4)** — regla `music_video.session_credits` · **aplicada** 2026-09-14
+  - la descripción nombra 9 créditos de grabación de «P.O.P.» (2001) [studio_album] (Daniel Hernández, Jam Estudios, Jean De Oliveira, David Hernández, Samuel Quiros, D-Sound Estudios, JAM Estudios, Fuller Sound, Manuel Amengual); ningún otro disco aporta uno que ese no tenga
+  - F2 [a favor] `album_credits:737,4046,8737,8741,1142,1223,4067,8731,8740,5141,8738,8730,8743,8744,8746,8747` — «P.O.P.» (2001) [studio_album] (Studio Album), pista «Madre» (277 s): créditos de grabación que la descripción del video también nombra: Daniel Hernández (mixing/recording), Jam Estudios (mixing/recording), Jean De Oliveira (producer/mixing), David Hernández (recording), Samuel Quiros (producer), D-Sound Estudios (other), JAM Estudios (mixing), Fuller Sound (mastering), Manuel Amengual (mastering); músicos nombrados: Alejandro Martínez, Jean Carlo De Oliveira, José Morantes, Frank Pulgar, Jean De Oliveira de 8
+  - F4 [contexto] `album_credits:1039,1244,4171` — «5 Mundos» (2005) [live_album] (Live Album), pista «Madre» (273 s): créditos de grabación que la descripción del video también nombra: Jean De Oliveira (producer/mixing), Manuel Amengual (mastering); músicos nombrados: Frank Pulgar, Gustavo Morantes, Jean Carlo De Oliveira, Alejandro Martínez, José Morantes de 5
+  - F3 [contexto] `album:2437.credits` — «En Vivo» (2003) [other], pista «Madre» (? s): créditos de grabación que la descripción del video también nombra: ninguno; músicos nombrados: ninguno de 0
+  - F5 [contexto] `album:2993.credits` — «En Vivo Ni Tan Nuevas Bandas» (2011) [other], pista «Madre» (? s): créditos de grabación que la descripción del video también nombra: ninguno; músicos nombrados: ninguno de 0
+  - F1 [contexto] `video:HN4R4EX6ej4` — videoclip «Candy66 - Madre (Official 4K Video)» (262 s)
+  - aplicaría: enlazar el video HN4R4EX6ej4 con la pista 1839 desde 0 s hasta 262 s
+- **#191124 · Metrozubdivision Live From @MuseoDeBellasArtes (2006) || Full Concert || 4K60 Remastered (Jza1_KAtBZI)** — regla `live_concert.setlist_overlap` · **aplicada** 2026-09-14
+  - pregunta: ¿El concierto Jza1_KAtBZI es la grabación de «CCS» (2007) [live_album]?
+  - la hoja nombra el disco y 7 de 7 canciones del video son pistas suyas
+  - F2 [a favor] `seed_upload:video:Jza1_KAtBZI` — la hoja maestra dice: Metrozubdivision | CCS | 2006 | Live Concert
+  - F4 [a favor] `tracklist:video:Jza1_KAtBZI|album:284` — 7 de 7 canciones del video están en el disco
+  - F5 [contexto] `album:284.release_year` — el disco sale un año después del concierto (2006 → 2007): grabación y publicación
+  - aplicaría: enlazar el video Jza1_KAtBZI con el disco 284 como live_concert y 7 ocurrencias de pista
+- **#191128 · La Vida Bohème - Radio Capital (Official 4K Video) (Yvl5Pi5zzAE)** — regla `music_video.session_credits` · **aplicada** 2026-09-14
+  - la descripción nombra 6 créditos de grabación de «Nuestra» (2010) [studio_album] (Leonel Carmona, Rudy Pagliuca, La Cosa Nostra Estudios, Estudios Panda, Andrés Mayo, Rodolfo Pagliuca); ningún otro disco aporta uno que ese no tenga
+  - F3 [a favor] `album_credits:910,6493,1725,2167,6309,2229,2344,6880` — «Nuestra» (2010) [studio_album] (Studio Album), pista «Radio Capital» (266 s): créditos de grabación que la descripción del video también nombra: Leonel Carmona (mixing/recording), Rudy Pagliuca (recording), La Cosa Nostra Estudios (recording/mixing), Estudios Panda (mastering), Andrés Mayo (mastering), Rodolfo Pagliuca (producer); músicos nombrados: Daniel De Sousa, Sebastián Ayala, Henry D'Arthenay, Rafael Pérez Medina de 4
+  - F2 [contexto] `album:227.credits` — «Demos: Nuestra» (2008) [demo] (Demos), pista «Radio Capital» (219 s): créditos de grabación que la descripción del video también nombra: ninguno; músicos nombrados: Rafael Pérez Medina, Henry D'Arthenay, Daniel De Sousa de 4
+  - F4 [contexto] `album:636.credits` — «En Vivo Plaza Alfredo Sadel» (2010) [live_album] (Live Album), pista «Radio Capital» (404 s): créditos de grabación que la descripción del video también nombra: ninguno; músicos nombrados: Henry D'Arthenay, Rafael Pérez Medina, Sebastián Ayala, Daniel De Sousa de 4
+  - F1 [contexto] `video:Yvl5Pi5zzAE` — videoclip «La Vida Bohème - Radio Capital (Official 4K Video)» (271 s)
+  - aplicaría: enlazar el video Yvl5Pi5zzAE con la pista 1712 desde 0 s hasta 271 s
+- **#191131 · Candy66 - Solo (Official 4K Video) (ncvnMbYmC3g)** — regla `music_video.session_credits` · **aplicada** 2026-09-14
+  - la descripción nombra 9 créditos de grabación de «P.O.P.» (2001) [studio_album] (Daniel Hernández, Jam Estudios, Jean De Oliveira, David Hernández, Samuel Quiros, D-Sound Estudios, JAM Estudios, Fuller Sound, Manuel Amengual); ningún otro disco aporta uno que ese no tenga
+  - F2 [a favor] `album_credits:737,4046,8737,8741,1142,1223,4067,8731,8740,5141,8738,8730,8743,8744,8746,8747` — «P.O.P.» (2001) [studio_album] (Studio Album), pista «Solo» (191 s): créditos de grabación que la descripción del video también nombra: Daniel Hernández (mixing/recording), Jam Estudios (mixing/recording), Jean De Oliveira (producer/mixing), David Hernández (recording), Samuel Quiros (producer), D-Sound Estudios (other), JAM Estudios (mixing), Fuller Sound (mastering), Manuel Amengual (mastering); músicos nombrados: Alejandro Martínez, Jean Carlo De Oliveira, José Morantes, Frank Pulgar, Jean De Oliveira de 8
+  - F4 [contexto] `album_credits:1039,1244,4171` — «5 Mundos» (2005) [live_album] (Live Album), pista «Sólo» (197 s): créditos de grabación que la descripción del video también nombra: Jean De Oliveira (producer/mixing), Manuel Amengual (mastering); músicos nombrados: Frank Pulgar, Gustavo Morantes, Jean Carlo De Oliveira, Alejandro Martínez, José Morantes de 5
+  - F6 [contexto] `album_credits:8829` — «Lo Mejor de Candy 66» (2016) [other], pista «Solo» (? s): créditos de grabación que la descripción del video también nombra: Fuller Sound (mastering); músicos nombrados: Jean Carlo De Oliveira, Alejandro Martínez, Frank Pulgar, Gustavo Morantes, José Morantes de 5
+  - F3 [contexto] `album:2437.credits` — «En Vivo» (2003) [other], pista «Solo» (? s): créditos de grabación que la descripción del video también nombra: ninguno; músicos nombrados: ninguno de 0
+  - F5 [contexto] `album:2993.credits` — «En Vivo Ni Tan Nuevas Bandas» (2011) [other], pista «Solo» (? s): créditos de grabación que la descripción del video también nombra: ninguno; músicos nombrados: ninguno de 0
+  - F1 [contexto] `video:ncvnMbYmC3g` — videoclip «Candy66 - Solo (Official 4K Video)» (200 s)
+  - aplicaría: enlazar el video ncvnMbYmC3g con la pista 1773 desde 0 s hasta 200 s
+- **#191132 · Ilan Chester - Ilan En Vivo Desde @MataDeCoco (1988) || Full Concert || 4K60 Remastered (pIHZugWjvuQ)** — regla `live_concert.sheet_album_and_year` · **aplicada** 2026-09-14
+  - pregunta: ¿El concierto pIHZugWjvuQ es la grabación de «Ilan En Vivo» (1988) [other]?
+  - la hoja escrita por el propietario nombra ese disco para el concierto, con el mismo año; el disco no tiene pistas con que contrastar el setlist
+  - F2 [a favor] `seed_upload:video:pIHZugWjvuQ` — la hoja maestra dice: Ilan Chester | Ilan En Vivo | 1988 | Live Concert
+  - F1 [a favor] `video:pIHZugWjvuQ` — concierto «Ilan Chester - Ilan En Vivo Desde @MataDeCoco (1988) || Full Concert || 4K60 Remastered» de 1988, 16 marcas de tiempo
+  - F3 [a favor] `album:4246` — disco «Ilan En Vivo» (1988) [other] con 0 pistas
+  - aplicaría: enlazar el video pIHZugWjvuQ con el disco 4246 como live_concert
+- **#191133 · Candy66: Acústico en Bits Session (2010) || Full Documentary || 4K60 Remastered (sVUKZnbTLsE)** — regla `full_album.near_title_same_position` · **aplicada** 2026-09-14
+  - pregunta: ¿La entrada «Cenizas» del video sVUKZnbTLsE es una pista de «Acústico En Bits Session» (2010) [other]?
+  - «Cenizas» es una errata de «Ceniza» y ocupa su misma posición entre las canciones del video
+  - F2 [a favor] `tracklist:video:sVUKZnbTLsE@4` — entrada 5 del tracklist: «Cenizas» a los 1276 s
+  - F3 [a favor] `track:15077` — pista 4 del disco: «Ceniza»
+  - F4 [contexto] `tracklist:video:sVUKZnbTLsE@3` — la canción vecina «Somos Otros» es la pista 3
+  - F5 [contexto] `tracklist:video:sVUKZnbTLsE@5` — la canción vecina «Batalla» es la pista 5
+  - aplicaría: enlazar el video sVUKZnbTLsE con la pista 15077 desde 1276 s hasta 1609 s
+
+## CONFLICT (22)
+
+la evidencia dice que es la misma entidad, pero las fuentes se contradicen: una persona elige
+
+### discos (22)
+
+- **#192821 · Pablo Manavello: «Una Mirada Hacia Adentro» / «Una Mirada Hacia Dentro»** — regla `album.year_conflict`
+  - todo indica el mismo disco, pero las fuentes dan 1981 y 1982: fusionar exige elegir el año
+  - F5 [contradice] `album:13.release_year|album:3293.release_year` — años: 1981 / 1982
+  - F3 [a favor] `album:13.title|album:3293.title` — los títulos difieren en una errata: «Una Mirada Hacia Adentro» / «Una Mirada Hacia Dentro»
+  - F4 [a favor] `tracks:album:13|album:3293` — 8 de 8 posiciones comunes tienen la misma pista (8 y 8 pistas)
+- **#192824 · 1ra Edición: «Tiempo De Actuar» / «Es Tiempo De Actuar»** — regla `album.year_conflict`
+  - todo indica el mismo disco, pero las fuentes dan 2008 y 2007: fusionar exige elegir el año
+  - F5 [contradice] `album:102.release_year|album:3271.release_year` — años: 2008 / 2007
+  - F3 [a favor] `album:102.title|album:3271.title` — un título contiene al otro: «Tiempo De Actuar» / «Es Tiempo De Actuar»
+  - F4 [a favor] `tracks:album:102|album:3271` — 8 de 8 posiciones comunes tienen la misma pista (11 y 8 pistas)
+- **#192836 · Hydra: «Desde Una Orilla A La Otra» / «Desde Una Orilla»** — regla `album.tracklist_conflict`
+  - todo indica el mismo disco, pero 1 posición(es) tienen pistas distintas: fusionar exige elegir cuál es la correcta
+  - F5 [contradice] `tracks:album:199|album:4229@1.5` — posición 1.5: «Lo Que Has Hecho» / «El Anciano de Barba Gris»
+  - F3 [a favor] `album:199.title|album:4229.title` — un título contiene al otro: «Desde Una Orilla A La Otra» / «Desde Una Orilla»
+  - F4 [a favor] `tracks:album:199|album:4229` — 4 de 5 posiciones comunes tienen la misma pista (10 y 5 pistas)
+- **#192839 · Los Amigos Invisibles: «A Typical & Autoctonal Venezuelan Dance Band» / «Venezuelan Dance Band»** — regla `album.tracklist_conflict`
+  - todo indica el mismo disco, pero 1 posición(es) tienen pistas distintas: fusionar exige elegir cuál es la correcta
+  - F5 [contradice] `tracks:album:246|album:3358@1.20` — posición 1.20: «Última Pieza» / «Igual»
+  - F3 [a favor] `album:246.title|album:3358.title` — un título contiene al otro: «A Typical & Autoctonal Venezuelan Dance Band» / «Venezuelan Dance Band»
+  - F4 [a favor] `tracks:album:246|album:3358` — 10 de 11 posiciones comunes tienen la misma pista (20 y 11 pistas)
+- **#192845 · Solares: «Cruel {Instinto De Morder}» / «Cruel»** — regla `album.tracklist_conflict`
+  - todo indica el mismo disco, pero 1 posición(es) tienen pistas distintas: fusionar exige elegir cuál es la correcta
+  - F5 [contradice] `tracks:album:334|album:2030@1.10` — posición 1.10: «Atardecer» / «Atardecer (Remix)»
+  - F3 [a favor] `album:334.title|album:2030.title` — un título contiene al otro: «Cruel {Instinto De Morder}» / «Cruel»
+  - F4 [a favor] `tracks:album:334|album:2030` — 9 de 10 posiciones comunes tienen la misma pista (10 y 10 pistas)
+- **#192846 · Témpano: «Childhood's End / El Fin De La Infancia» / «Fin de la Infancia»** — regla `album.year_conflict`
+  - todo indica el mismo disco, pero las fuentes dan 1999 y 2000: fusionar exige elegir el año
+  - F5 [contradice] `album:362.release_year|album:2455.release_year` — años: 1999 / 2000
+  - F3 [a favor] `album:362.title|album:2455.title` — un título contiene al otro: «Childhood's End / El Fin De La Infancia» / «Fin de la Infancia»
+  - F4 [a favor] `tracks:album:362|album:2455` — 8 de 8 posiciones comunes tienen la misma pista (8 y 8 pistas)
+- **#192857 · Claroscuro: «Inéditas» / «Demos»** — regla `album.year_conflict`
+  - todo indica el mismo disco, pero las fuentes dan 2003 y 2002: fusionar exige elegir el año
+  - F7 [contradice] `album:545.release_year|album:2977.release_year` — años: 2003 / 2002
+  - F3 [a favor] `album:545.title|album:2977.title` — uno de los títulos es genérico (Demo, EP, En Vivo, el nombre del artista) y no identifica el disco: «Inéditas» / «Demos»
+  - F4 [a favor] `tracks:album:545|album:2977` — 15 de 17 posiciones comunes tienen la misma pista (17 y 17 pistas)
+- **#192861 · Torre de Marfil: «Ecos De La Tercera Realidad» / «Ecos de la Realidad»** — regla `album.tracklist_conflict`
+  - todo indica el mismo disco, pero 1 posición(es) tienen pistas distintas: fusionar exige elegir cuál es la correcta
+  - F5 [contradice] `tracks:album:616|album:3295@1.2` — posición 1.2: «Prisionero De La Oscuridad» / «Prisioneros De La Realidad»
+  - F3 [a favor] `album:616.title|album:3295.title` — un título contiene al otro: «Ecos De La Tercera Realidad» / «Ecos de la Realidad»
+  - F4 [a favor] `tracks:album:616|album:3295` — 7 de 8 posiciones comunes tienen la misma pista (8 y 8 pistas)
+- **#192862 · Mango Funk: «El Nuevo Beat Del Tambor» / «El Beat del Tambor»** — regla `album.year_conflict`
+  - todo indica el mismo disco, pero las fuentes dan 2009 y 2008: fusionar exige elegir el año
+  - F5 [contradice] `album:667.release_year|album:2505.release_year` — años: 2009 / 2008
+  - F3 [a favor] `album:667.title|album:2505.title` — un título contiene al otro: «El Nuevo Beat Del Tambor» / «El Beat del Tambor»
+  - F4 [a favor] `tracks:album:667|album:2505` — 15 de 15 posiciones comunes tienen la misma pista (15 y 15 pistas)
+- **#192865 · Sentencia: «Okta (Maracay 1996)» / «Okta»** — regla `album.year_conflict`
+  - todo indica el mismo disco, pero las fuentes dan 1996 y 1995: fusionar exige elegir el año
+  - F6 [contradice] `album:739.release_year|album:2374.release_year` — años: 1996 / 1995
+  - F3 [a favor] `album:739.title|album:2374.title` — un título contiene al otro: «Okta (Maracay 1996)» / «Okta»
+  - F4 [a favor] `tracks:album:739|album:2374` — 8 de 9 posiciones comunes tienen la misma pista (9 y 9 pistas)
+- **#192877 · Torre de Marfil: «En Vivo en Ciudad Ojeda» / «En vivo Ciudad Ojeda»** — árbitro claude-opus-5
+  - árbitro: Mismo título y las mismas 7 pistas (F3, F4): parece el mismo disco, pero las fuentes dan años contradictorios (F5).
+  - F3 [a favor] `album:1236.title|album:3294.title` — un título contiene al otro: «En Vivo en Ciudad Ojeda» / «En vivo Ciudad Ojeda»
+  - F4 [a favor] `tracks:album:1236|album:3294` — 7 de 7 posiciones comunes tienen la misma pista (7 y 7 pistas)
+  - F5 [contradice] `album:1236.release_year|album:3294.release_year` — años: 2004 / 2001
+  - las reglas deterministas decían NEEDS_HUMAN (`album.years_far_apart`)
+- **#192881 · Frente De Ira: «La Certeza de lo que se ve y la Convicción de lo que se ve.» / «y La Conviccion De LO Que No Se Ve»** — árbitro claude-opus-5
+  - árbitro: Las 7 pistas coinciden (F4) y un título parece el final del otro, pero dicen «lo que se ve» y «lo que No se ve» (F3) y los años difieren (F5).
+  - F4 [a favor] `tracks:album:1339|album:2679` — 7 de 7 posiciones comunes tienen la misma pista (7 y 7 pistas)
+  - F3 [contradice] `album:1339.title|album:2679.title` — los títulos no tienen relación textual: «La Certeza de lo que se ve y la Convicción de lo que se ve.» / «y La Conviccion De LO Que No Se Ve»
+  - F5 [contradice] `album:1339.release_year|album:2679.release_year` — años: 2011 / 2010
+  - las reglas deterministas decían NEEDS_HUMAN (`album.no_same_release_evidence`)
+- **#192884 · Psicosis: «Premonition» / «Premotion»** — árbitro claude-opus-5
+  - árbitro: Mismo título con errata y las mismas 11 pistas (F3, F4), pero años contradictorios (F5).
+  - F3 [a favor] `album:1351.title|album:2895.title` — los títulos difieren en una errata: «Premonition» / «Premotion»
+  - F4 [a favor] `tracks:album:1351|album:2895` — 11 de 11 posiciones comunes tienen la misma pista (11 y 11 pistas)
+  - F5 [contradice] `album:1351.release_year|album:2895.release_year` — años: 2005 / 2007
+  - las reglas deterministas decían NEEDS_HUMAN (`album.years_far_apart`)
+- **#192887 · Krueger: «Decade of Perversion» / «A Decade of Perversion»** — regla `album.year_conflict`
+  - todo indica el mismo disco, pero las fuentes dan 2003 y 2002: fusionar exige elegir el año
+  - F5 [contradice] `album:1387.release_year|album:3301.release_year` — años: 2003 / 2002
+  - F3 [a favor] `album:1387.title|album:3301.title` — los títulos son el mismo (salvo tildes, signos, artículo, números escritos o el nombre del artista delante): «Decade of Perversion» / «A Decade of Perversion»
+  - F4 [a favor] `tracks:album:1387|album:3301` — 17 de 17 posiciones comunes tienen la misma pista (17 y 17 pistas)
+- **#192889 · Cronos: «Rules» / «Rules: Antologia 1985-2004»** — regla `album.year_conflict`
+  - todo indica el mismo disco, pero las fuentes dan 2003 y 2004: fusionar exige elegir el año
+  - F5 [contradice] `album:1427.release_year|album:1598.release_year` — años: 2003 / 2004
+  - F3 [a favor] `album:1427.title|album:1598.title` — un título contiene al otro: «Rules» / «Rules: Antologia 1985-2004»
+  - F4 [a favor] `tracks:album:1427|album:1598` — 14 de 14 posiciones comunes tienen la misma pista (14 y 14 pistas)
+- **#192895 · Secta Canibal: «El Arte de la Necrofagia (2003 - 2010)» / «El Arte De La Necrofagia»** — árbitro claude-opus-5
+  - árbitro: Mismo título y las mismas 14 pistas (F3, F4); los años 2010 y 2003 (F5) son los extremos del rango del título, y el dosier no dice cuál es la fecha del lanzamiento.
+  - F3 [a favor] `album:1552.title|album:3118.title` — un título contiene al otro: «El Arte de la Necrofagia (2003 - 2010)» / «El Arte De La Necrofagia»
+  - F4 [a favor] `tracks:album:1552|album:3118` — 14 de 14 posiciones comunes tienen la misma pista (14 y 14 pistas)
+  - F5 [contradice] `album:1552.release_year|album:3118.release_year` — años: 2010 / 2003
+  - las reglas deterministas decían NEEDS_HUMAN (`album.years_far_apart`)
+- **#192898 · Morbus: «The Beginning of the Lascivious Addiction» / «The Beginning Of The Lascivious Adicction»** — regla `album.year_conflict`
+  - todo indica el mismo disco, pero las fuentes dan 2005 y 2004: fusionar exige elegir el año
+  - F5 [contradice] `album:1754.release_year|album:2930.release_year` — años: 2005 / 2004
+  - F3 [a favor] `album:1754.title|album:2930.title` — los títulos difieren en una errata: «The Beginning of the Lascivious Addiction» / «The Beginning Of The Lascivious Adicction»
+  - F4 [a favor] `tracks:album:1754|album:2930` — 11 de 11 posiciones comunes tienen la misma pista (11 y 11 pistas)
+- **#192903 · Aerea: «Indeleble» / «Viajando Lejos»** — árbitro claude-opus-5
+  - árbitro: Las 10 pistas y el año coinciden (F4, F5), pero las fuentes dan dos títulos sin relación (F3).
+  - F4 [a favor] `tracks:album:2130|album:3560` — 10 de 10 posiciones comunes tienen la misma pista (10 y 10 pistas)
+  - F5 [a favor] `album:2130.release_year|album:3560.release_year` — años: 2007 / 2007
+  - F3 [contradice] `album:2130.title|album:3560.title` — los títulos no tienen relación textual: «Indeleble» / «Viajando Lejos»
+  - las reglas deterministas decían NEEDS_HUMAN (`album.no_same_release_evidence`)
+- **#192906 · Carlos Morean: «El Gigante de la Cancion Juvenil» / «El Gigante De La»** — regla `album.tracklist_conflict`
+  - todo indica el mismo disco, pero 1 posición(es) tienen pistas distintas: fusionar exige elegir cuál es la correcta
+  - F5 [contradice] `tracks:album:2629|album:4655@1.1` — posición 1.1: «Haz lo que quieras de mi» / «Vuélveme A Hechizar»
+  - F3 [a favor] `album:2629.title|album:4655.title` — un título contiene al otro: «El Gigante de la Cancion Juvenil» / «El Gigante De La»
+  - F4 [a favor] `tracks:album:2629|album:4655` — 4 de 5 posiciones comunes tienen la misma pista (10 y 5 pistas)
+- **#192916 · Carlos Morean: «En Vivo» / «Carlos Moreán en Vivo»** — regla `album.tracklist_conflict`
+  - todo indica el mismo disco, pero 1 posición(es) tienen pistas distintas: fusionar exige elegir cuál es la correcta
+  - F5 [contradice] `tracks:album:3862|album:4841@1.7` — posición 1.7: «Mejor - Hoy Supe - Y Si Pregunta Por Mi» / «Mejor / Hoy lo supe / Y si alguno pregunta por mi»
+  - F3 [a favor] `album:3862.title|album:4841.title` — los títulos son el mismo (salvo tildes, signos, artículo, números escritos o el nombre del artista delante): «En Vivo» / «Carlos Moreán en Vivo»
+  - F4 [a favor] `tracks:album:3862|album:4841` — 16 de 17 posiciones comunes tienen la misma pista (17 y 17 pistas)
+- **#192919 · Los Darts: «De Etiqueta» / «Los Darts de Etiqueta»** — regla `album.tracklist_conflict`
+  - todo indica el mismo disco, pero 1 posición(es) tienen pistas distintas: fusionar exige elegir cuál es la correcta
+  - F5 [contradice] `tracks:album:3955|album:5106@1.3` — posición 1.3: «Olvídala» / «Necesito tu amor»
+  - F3 [a favor] `album:3955.title|album:5106.title` — los títulos son el mismo (salvo tildes, signos, artículo, números escritos o el nombre del artista delante): «De Etiqueta» / «Los Darts de Etiqueta»
+  - F4 [a favor] `tracks:album:3955|album:5106` — 5 de 6 posiciones comunes tienen la misma pista (6 y 12 pistas)
+- **#192924 · Desorden Público: «Guarachando En Navidad Volumen 1» / «Guarachando en Navidad Vol. 1»** — regla `album.tracklist_conflict`
+  - todo indica el mismo disco, pero 1 posición(es) tienen pistas distintas: fusionar exige elegir cuál es la correcta
+  - F5 [contradice] `tracks:album:4685|album:4692@1.8` — posición 1.8: «Niño Lindo» / «Niño Lindub»
+  - F3 [a favor] `album:4685.title|album:4692.title` — los títulos son el mismo (salvo tildes, signos, artículo, números escritos o el nombre del artista delante): «Guarachando En Navidad Volumen 1» / «Guarachando en Navidad Vol. 1»
+  - F4 [a favor] `tracks:album:4685|album:4692` — 7 de 8 posiciones comunes tienen la misma pista (8 y 8 pistas)
+
+## KEEP_SEPARATE (31)
+
+hay evidencia de que son distintas; aplicarlo solo cierra la revisión
+
+### discos (30)
+
+- **#192825 · Aditus: «En Concierto En Este País» / «Lo Mejor de Aditus»** — regla `album.compilation_vs_original` · **aplicada** 2026-09-14
+  - un recopilatorio repite pistas de discos anteriores; compartir posiciones no lo convierte en el mismo disco
+  - F12 [separa] `album:3638` — «Lo Mejor de Aditus» es un recopilatorio (por tipo, clasificación o título) y el otro no
+  - F3 [separa] `album:108.title|album:3638.title` — los títulos no tienen relación textual: «En Concierto En Este País» / «Lo Mejor de Aditus»
+- **#192828 · Caramelos De Cianuro: «Harakiri City» / «Solo Exitos»** — regla `album.compilation_vs_original` · **aplicada** 2026-09-14
+  - un recopilatorio repite pistas de discos anteriores; compartir posiciones no lo convierte en el mismo disco
+  - F6 [separa] `album:3580` — «Solo Exitos» es un recopilatorio (por tipo, clasificación o título) y el otro no
+  - F3 [separa] `album:142.title|album:3580.title` — los títulos no tienen relación textual: «Harakiri City» / «Solo Exitos»
+- **#192830 · Dermis Tatú: «En Vivo Komotion / San Francisco» / «La Violó La Mató y La Picó»** — regla `album.both_on_channel` · **aplicada** 2026-09-14
+  - el canal publica los dos como discos distintos, cada uno con su video; el canal es la verdad del proyecto
+  - F1 [separa] `album:161` — «En Vivo Komotion / San Francisco» (1997) de Dermis Tatú: tipo live_album (Live Album), 12 pistas, fuentes rockzuela, youtube-data-api, yt-master-seed, video primario YcqzMfPDnXY en el canal
+  - F2 [separa] `album:163` — «La Violó La Mató y La Picó» (1995) de Dermis Tatú: tipo studio_album (Studio Album), 11 pistas, fuentes coleccionistas-de-rock-venezolano, rockzuela, sincopa, youtube-data-api, yt-master-seed, video primario AwEF9RimQm4 en el canal
+  - F4 [contexto] `tracks:album:161|album:163` — 3 de 11 posiciones comunes tienen la misma pista (12 y 11 pistas)
+- **#192831 · Dermis Tatú: «La Violó La Mató y La Picó» / «IV Festival Nuevas Bandas»** — regla `album.both_on_channel` · **aplicada** 2026-09-14
+  - el canal publica los dos como discos distintos, cada uno con su video; el canal es la verdad del proyecto
+  - F1 [separa] `album:163` — «La Violó La Mató y La Picó» (1995) de Dermis Tatú: tipo studio_album (Studio Album), 11 pistas, fuentes coleccionistas-de-rock-venezolano, rockzuela, sincopa, youtube-data-api, yt-master-seed, video primario AwEF9RimQm4 en el canal
+  - F2 [separa] `album:549` — «IV Festival Nuevas Bandas» (1994) de Dermis Tatú: tipo live_album (Live Album), 11 pistas, fuentes youtube-data-api, yt-master-seed, video primario NG16eDpo5Uo en el canal
+  - F4 [contexto] `tracks:album:163|album:549` — 7 de 11 posiciones comunes tienen la misma pista (11 y 11 pistas)
+- **#192835 · Grand Bite: «Al Borde Del Precipicio / No Moriré» / «Al Borde del Precipicio»** — árbitro claude-opus-5
+  - árbitro: El lanzamiento de 2006 junta «Al Borde del Precipicio» con «No Moriré» (F3) en 20 pistas (F1); el de 1985 tiene 10 (F2) y es 21 años anterior (F6): son dos lanzamientos distintos que comparten material.
+  - F3 [separa] `album:193.title|album:3048.title` — un título contiene al otro: «Al Borde Del Precipicio / No Moriré» / «Al Borde del Precipicio»
+  - F1 [separa] `album:193` — «Al Borde Del Precipicio / No Moriré» (2006) de Grand Bite: tipo studio_album (Studio Album), 20 pistas, fuentes descargas-metal-venezolano, rock-de-vzla, sincopa, youtube-data-api, yt-master-seed, video primario e123nchPgag en el canal
+  - F6 [separa] `album:193.release_year|album:3048.release_year` — años: 2006 / 1985
+  - las reglas deterministas decían NEEDS_HUMAN (`album.years_far_apart`)
+- **#192837 · LaMueka: «Conspirando En El Bar» / «Directo En Tu Cara»** — regla `album.live_vs_studio` · **aplicada** 2026-09-14
+  - un directo repite canciones de un disco de estudio con otra grabación
+  - F8 [separa] `album:1808` — «Directo En Tu Cara» es un directo y el otro un disco de estudio
+  - F3 [separa] `album:229.title|album:1808.title` — los títulos no tienen relación textual: «Conspirando En El Bar» / «Directo En Tu Cara»
+- **#192838 · Lebronch: «Los Topinos Del Pan» / «Todos Los Topinos De Lebronch»** — regla `album.both_on_channel` · **aplicada** 2026-09-14
+  - el canal publica los dos como discos distintos, cada uno con su video; el canal es la verdad del proyecto
+  - F1 [separa] `album:240` — «Los Topinos Del Pan» (2011) de Lebronch: tipo studio_album (Studio Album), 13 pistas, fuentes youtube-data-api, yt-master-seed, video primario YOoBSB3svwI en el canal
+  - F2 [separa] `album:459` — «Todos Los Topinos De Lebronch» (2009) de Lebronch: tipo studio_album (Studio Album), 11 pistas, fuentes rock-de-vzla, youtube-data-api, yt-master-seed, video primario fU-COj9waiQ en el canal
+  - F4 [contexto] `tracks:album:240|album:459` — 11 de 11 posiciones comunes tienen la misma pista (13 y 11 pistas)
+- **#192843 · Los Impala: «¡Estos Son Los Impala!» / «Los Impala en Europa»** — regla `album.tracklists_diverge` · **aplicada** 2026-09-14
+  - títulos sin relación y 8 posiciones con pistas distintas frente a 4 iguales
+  - F3 [separa] `album:260.title|album:2516.title` — los títulos no tienen relación textual: «¡Estos Son Los Impala!» / «Los Impala en Europa»
+  - F4 [separa] `tracks:album:260|album:2516` — 4 de 12 posiciones comunes tienen la misma pista (12 y 12 pistas)
+  - F5 [separa] `tracks:album:260|album:2516@1.1` — posición 1.1: «Vida Normal» / «Todo gira»
+  - F6 [separa] `tracks:album:260|album:2516@1.2` — posición 1.2: «Todo Gira» / «No hago mas que Llorar»
+- **#192849 · Dogon: «Redunjusta» / «Notdunjusta»** — árbitro claude-opus-5
+  - árbitro: «Redunjusta» (1998, 22 pistas) y «Notdunjusta» (1996, 12 pistas) tienen títulos, años y tamaños distintos (F3, F8, F1, F2); que compartan pistas muestra material repetido, no el mismo lanzamiento.
+  - F3 [separa] `album:438.title|album:3191.title` — los títulos no tienen relación textual: «Redunjusta» / «Notdunjusta»
+  - F8 [separa] `album:438.release_year|album:3191.release_year` — años: 1998 / 1996
+  - F1 [separa] `album:438` — «Redunjusta» (1998) de Dogon: tipo studio_album (Studio Album), 22 pistas, fuentes rock-de-vzla, youtube-data-api, yt-master-seed, video primario HIFVeeQ96E0 en el canal
+  - las reglas deterministas decían NEEDS_HUMAN (`album.no_same_release_evidence`)
+- **#192851 · Gillman: «Escalofrío» / «Escalofrío XX Aniversario»** — regla `album.distinct_edition` · **aplicada** 2026-09-14
+  - uno de los títulos declara otra edición del disco; el catálogo guarda las ediciones como fichas propias
+  - F12 [separa] `album:1096.title` — «Escalofrío XX Aniversario» marca una edición distinta (reedición, remasterización, aniversario, 2.0)
+  - F3 [contexto] `album:450.title|album:1096.title` — un título contiene al otro: «Escalofrío» / «Escalofrío XX Aniversario»
+- **#192855 · Arkangel: «Arkangel» / «Recopilatorio»** — regla `album.compilation_vs_original` · **aplicada** 2026-09-14
+  - un recopilatorio repite pistas de discos anteriores; compartir posiciones no lo convierte en el mismo disco
+  - F12 [separa] `album:3303` — «Recopilatorio» es un recopilatorio (por tipo, clasificación o título) y el otro no
+  - F3 [separa] `album:502.title|album:3303.title` — uno de los títulos es genérico (Demo, EP, En Vivo, el nombre del artista) y no identifica el disco: «Arkangel» / «Recopilatorio»
+- **#192863 · Predator: «March Of Death» / «9 Years Underground»** — regla `album.tracklists_diverge` · **aplicada** 2026-09-14
+  - títulos sin relación y 11 posiciones con pistas distintas frente a 4 iguales
+  - F3 [separa] `album:672.title|album:1624.title` — los títulos no tienen relación textual: «March Of Death» / «9 Years Underground»
+  - F4 [separa] `tracks:album:672|album:1624` — 4 de 15 posiciones comunes tienen la misma pista (15 y 22 pistas)
+  - F5 [separa] `tracks:album:672|album:1624@1.5` — posición 1.5: «Agresor» / «Nuclear Party»
+  - F6 [separa] `tracks:album:672|album:1624@1.6` — posición 1.6: «Country Beer» / «In the name of war»
+- **#192864 · Human Error: «Bellum» / «Reborn in Pestilence»** — árbitro claude-opus-5
+  - árbitro: Una demo de 2010 con 3 pistas (F2) y un EP de 2011 con 5 (F1), con títulos distintos (F3, F5): son dos lanzamientos; compartir las 3 pistas de la demo no los hace el mismo.
+  - F3 [separa] `album:701.title|album:3135.title` — los títulos no tienen relación textual: «Bellum» / «Reborn in Pestilence»
+  - F5 [separa] `album:701.release_year|album:3135.release_year` — años: 2011 / 2010
+  - F1 [separa] `album:701` — «Bellum» (2011) de Human Error: tipo ep, 5 pistas, fuentes descargas-metal-venezolano, rock-de-vzla, sin video en el canal
+  - las reglas deterministas decían NEEDS_HUMAN (`album.no_same_release_evidence`)
+- **#192870 · Predator: «Thrash, Beer and Sex» / «9 Years Underground»** — regla `album.tracklists_diverge` · **aplicada** 2026-09-14
+  - títulos sin relación y 12 posiciones con pistas distintas frente a 3 iguales
+  - F3 [separa] `album:812.title|album:1624.title` — los títulos no tienen relación textual: «Thrash, Beer and Sex» / «9 Years Underground»
+  - F4 [separa] `tracks:album:812|album:1624` — 3 de 15 posiciones comunes tienen la misma pista (15 y 22 pistas)
+  - F5 [separa] `tracks:album:812|album:1624@1.1` — posición 1.1: «Intro» / «March of Death»
+  - F6 [separa] `tracks:album:812|album:1624@1.2` — posición 1.2: «Killing Dreams» / «Criminal»
+- **#192871 · Torre de Marfil: «El Poder Del Lado Oscuro 2.0» / «El poder del lado oscuro»** — regla `album.distinct_edition` · **aplicada** 2026-09-14
+  - uno de los títulos declara otra edición del disco; el catálogo guarda las ediciones como fichas propias
+  - F8 [separa] `album:875.title` — «El Poder Del Lado Oscuro 2.0» marca una edición distinta (reedición, remasterización, aniversario, 2.0)
+  - F3 [contexto] `album:875.title|album:1577.title` — un título contiene al otro: «El Poder Del Lado Oscuro 2.0» / «El poder del lado oscuro»
+- **#192872 · Optofobia: «Existencia en Decadencia EP» / «Colision Grindcore»** — árbitro claude-opus-5
+  - árbitro: Un EP de 5 pistas (F1) y un lanzamiento de 10 pistas con otro título (F2, F3): el de 10 contiene al EP pero es otro lanzamiento.
+  - F3 [separa] `album:1010.title|album:1733.title` — los títulos no tienen relación textual: «Existencia en Decadencia EP» / «Colision Grindcore»
+  - F1 [separa] `album:1010` — «Existencia en Decadencia EP» (2015) de Optofobia: tipo other, 5 pistas, fuentes descargas-metal-venezolano, sin video en el canal
+  - F2 [separa] `album:1733` — «Colision Grindcore» (2015) de Optofobia: tipo other, 10 pistas, fuentes descargas-metal-venezolano, sin video en el canal
+  - las reglas deterministas decían NEEDS_HUMAN (`album.no_same_release_evidence`)
+- **#192876 · Torre de Marfil: «En Vivo en Ciudad Ojeda» / «El poder del lado oscuro»** — regla `album.tracklists_diverge` · **aplicada** 2026-09-14
+  - títulos sin relación y 4 posiciones con pistas distintas frente a 3 iguales
+  - F3 [separa] `album:1236.title|album:1577.title` — los títulos no tienen relación textual: «En Vivo en Ciudad Ojeda» / «El poder del lado oscuro»
+  - F4 [separa] `tracks:album:1236|album:1577` — 3 de 7 posiciones comunes tienen la misma pista (7 y 9 pistas)
+  - F5 [separa] `tracks:album:1236|album:1577@1.1` — posición 1.1: «Cantos de Victoria» / «Despertar»
+  - F6 [separa] `tracks:album:1236|album:1577@1.4` — posición 1.4: «El Vuelo del Pegaso» / «Perdido en ninguna parte»
+- **#192879 · Arkangel: «No más Apariencias» / «Wasted Years»** — árbitro claude-opus-5
+  - árbitro: «No más Apariencias» (1987, 4 pistas) y «Wasted Years» (2003, 11 pistas) tienen títulos, años y tamaños distintos (F3, F5, F1, F2): el de 2003 incluye las 4 pistas pero es otro lanzamiento.
+  - F3 [separa] `album:1264.title|album:3592.title` — los títulos no tienen relación textual: «No más Apariencias» / «Wasted Years»
+  - F5 [separa] `album:1264.release_year|album:3592.release_year` — años: 1987 / 2003
+  - F2 [separa] `album:3592` — «Wasted Years» (2003) de Arkangel: tipo other, 11 pistas, fuentes sincopa, sin video en el canal
+  - las reglas deterministas decían NEEDS_HUMAN (`album.no_same_release_evidence`)
+- **#192880 · Arkangel: «No más Apariencias» / «EP's 1987-2000»** — regla `album.compilation_vs_original` · **aplicada** 2026-09-14
+  - un recopilatorio repite pistas de discos anteriores; compartir posiciones no lo convierte en el mismo disco
+  - F6 [separa] `album:3599` — «EP's 1987-2000» es un recopilatorio (por tipo, clasificación o título) y el otro no
+  - F3 [separa] `album:1264.title|album:3599.title` — uno de los títulos es genérico (Demo, EP, En Vivo, el nombre del artista) y no identifica el disco: «No más Apariencias» / «EP's 1987-2000»
+- **#192885 · Tinieblas: «Hijos Malditos (Re)» / «Hijos Malditos»** — regla `album.distinct_edition` · **aplicada** 2026-09-14
+  - uno de los títulos declara otra edición del disco; el catálogo guarda las ediciones como fichas propias
+  - F6 [separa] `album:1362.title` — «Hijos Malditos (Re)» marca una edición distinta (reedición, remasterización, aniversario, 2.0)
+  - F3 [contexto] `album:1362.title|album:1829.title` — un título contiene al otro: «Hijos Malditos (Re)» / «Hijos Malditos»
+- **#192888 · Tinieblas: «Consagración (Re)» / «Consagración»** — regla `album.distinct_edition` · **aplicada** 2026-09-14
+  - uno de los títulos declara otra edición del disco; el catálogo guarda las ediciones como fichas propias
+  - F6 [separa] `album:1395.title` — «Consagración (Re)» marca una edición distinta (reedición, remasterización, aniversario, 2.0)
+  - F3 [contexto] `album:1395.title|album:3252.title` — un título contiene al otro: «Consagración (Re)» / «Consagración»
+- **#192891 · Nemesis (Lara): «1988 – 1996» / «Anarkia en L.A.»** — regla `album.compilation_vs_original` · **aplicada** 2026-09-14
+  - un recopilatorio repite pistas de discos anteriores; compartir posiciones no lo convierte en el mismo disco
+  - F6 [separa] `album:1489` — «1988 – 1996» es un recopilatorio (por tipo, clasificación o título) y el otro no
+  - F3 [separa] `album:1489.title|album:1881.title` — uno de los títulos es genérico (Demo, EP, En Vivo, el nombre del artista) y no identifica el disco: «1988 – 1996» / «Anarkia en L.A.»
+- **#192894 · Noctis Imperium: «Imperium» / «Nihil»** — árbitro claude-opus-5
+  - árbitro: Un EP de 2009 con 5 pistas y otro lanzamiento de 2010 con 7, con títulos distintos (F3, F6) y la quinta pista distinta (F5): son dos lanzamientos.
+  - F3 [separa] `album:1518.title|album:1751.title` — los títulos no tienen relación textual: «Imperium» / «Nihil»
+  - F5 [separa] `tracks:album:1518|album:1751@1.5` — posición 1.5: «Maze Of Torment (Morbid Angel Cover)» / «Unus in Nihil»
+  - F6 [separa] `album:1518.release_year|album:1751.release_year` — años: 2009 / 2010
+  - las reglas deterministas decían NEEDS_HUMAN (`album.no_same_release_evidence`)
+- **#192896 · Torre de Marfil: «El poder del lado oscuro» / «En vivo Ciudad Ojeda»** — regla `album.tracklists_diverge` · **aplicada** 2026-09-14
+  - títulos sin relación y 4 posiciones con pistas distintas frente a 3 iguales
+  - F3 [separa] `album:1577.title|album:3294.title` — los títulos no tienen relación textual: «El poder del lado oscuro» / «En vivo Ciudad Ojeda»
+  - F4 [separa] `tracks:album:1577|album:3294` — 3 de 7 posiciones comunes tienen la misma pista (9 y 7 pistas)
+  - F5 [separa] `tracks:album:1577|album:3294@1.1` — posición 1.1: «Despertar» / «Cantos De Victoria»
+  - F6 [separa] `tracks:album:1577|album:3294@1.4` — posición 1.4: «Perdido en ninguna parte» / «El Vuelo Del Pegaso»
+- **#192902 · PapaShanty Saund System: «En Vivo Circus Bar» / «Rarezas en vivo»** — regla `album.compilation_vs_original` · **aplicada** 2026-09-14
+  - un recopilatorio repite pistas de discos anteriores; compartir posiciones no lo convierte en el mismo disco
+  - F9 [separa] `album:3300` — «Rarezas en vivo» es un recopilatorio (por tipo, clasificación o título) y el otro no
+  - F3 [separa] `album:2093.title|album:3300.title` — los títulos no tienen relación textual: «En Vivo Circus Bar» / «Rarezas en vivo»
+- **#192909 · Aditus: «Juegos de Azar» / «Serie Lo Máximo»** — regla `album.compilation_vs_original` · **aplicada** 2026-09-14
+  - un recopilatorio repite pistas de discos anteriores; compartir posiciones no lo convierte en el mismo disco
+  - F10 [separa] `album:4623` — «Serie Lo Máximo» es un recopilatorio (por tipo, clasificación o título) y el otro no
+  - F3 [separa] `album:3014.title|album:4623.title` — los títulos no tienen relación textual: «Juegos de Azar» / «Serie Lo Máximo»
+- **#192914 · Arkangel: «Wasted Years» / «EP's 1987-2000»** — regla `album.compilation_vs_original` · **aplicada** 2026-09-14
+  - un recopilatorio repite pistas de discos anteriores; compartir posiciones no lo convierte en el mismo disco
+  - F12 [separa] `album:3599` — «EP's 1987-2000» es un recopilatorio (por tipo, clasificación o título) y el otro no
+  - F3 [separa] `album:3592.title|album:3599.title` — uno de los títulos es genérico (Demo, EP, En Vivo, el nombre del artista) y no identifica el disco: «Wasted Years» / «EP's 1987-2000»
+- **#192915 · Aditus: «Lo Mejor y Lo Peor...» / «Sólo Exitos»** — árbitro claude-opus-5
+  - árbitro: «Lo Mejor y Lo Peor...» (1988) y «Sólo Exitos» (2001) son títulos y años distintos (F3, F5): el de 2001 repite 10 pistas pero es otro lanzamiento.
+  - F3 [separa] `album:3637.title|album:3640.title` — los títulos no tienen relación textual: «Lo Mejor y Lo Peor...» / «Sólo Exitos»
+  - F5 [separa] `album:3637.release_year|album:3640.release_year` — años: 1988 / 2001
+  - F1 [separa] `album:3637` — «Lo Mejor y Lo Peor...» (1988) de Aditus: tipo other, 11 pistas, fuentes hippito-y-sus-chatarritas, sincopa, sin video en el canal
+  - las reglas deterministas decían NEEDS_HUMAN (`album.no_same_release_evidence`)
+- **#192917 · Cherry Navarro: «Antología Musical Vol. III» / «Aleluya»** — regla `album.compilation_vs_original` · **aplicada** 2026-09-14
+  - un recopilatorio repite pistas de discos anteriores; compartir posiciones no lo convierte en el mismo disco
+  - F12 [separa] `album:3903` — «Antología Musical Vol. III» es un recopilatorio (por tipo, clasificación o título) y el otro no
+  - F3 [separa] `album:3903.title|album:3904.title` — los títulos no tienen relación textual: «Antología Musical Vol. III» / «Aleluya»
+- **#192918 · Cherry Navarro: «Antología Musical Vol. II» / «Exitos con Cherry Navarro»** — regla `album.tracklists_diverge` · **aplicada** 2026-09-14
+  - títulos sin relación y 6 posiciones con pistas distintas frente a 5 iguales
+  - F3 [separa] `album:3905.title|album:4831.title` — los títulos no tienen relación textual: «Antología Musical Vol. II» / «Exitos con Cherry Navarro»
+  - F4 [separa] `tracks:album:3905|album:4831` — 5 de 11 posiciones comunes tienen la misma pista (12 y 11 pistas)
+  - F5 [separa] `tracks:album:3905|album:4831@1.3` — posición 1.3: «Si Dios Me Quita La Vida» / «Te pido que me guíes»
+  - F6 [separa] `tracks:album:3905|album:4831@1.4` — posición 1.4: «Te Pido Que Me Guíes» / «No te muerdas los labios»
+
+### YouTube (1)
+
+- **#191133 · Candy66: Acústico en Bits Session (2010) || Full Documentary || 4K60 Remastered (sVUKZnbTLsE)** — regla `full_album.non_track_segment` · **aplicada** 2026-09-14
+  - pregunta: ¿La entrada «Intro» del video sVUKZnbTLsE es una pista de «Acústico En Bits Session» (2010) [other]?
+  - es un segmento del video (introducción o créditos) que el disco no contiene
+  - F2 [separa] `tracklist:video:sVUKZnbTLsE@0` — entrada 1 del tracklist: «Intro» a los 0 s
+  - F3 [separa] `album:521.tracks` — ninguna pista del disco se llama «Intro»
+  - F1 [contexto] `album:521` — disco «Acústico En Bits Session» (2010) [other] enlazado como Full Album, 8 pistas: 1. Bifásico · 2. Yankee · 3. Somos Otros · 4. Ceniza · 5. Batalla · 6. Vivimos Por Vivir · 7. Somos Los Mismos De Ayer · 8. Ser-Do
+
+## NEEDS_HUMAN (248)
+
+la evidencia no permite distinguir; queda para una persona (resultado válido, no un fallo)
+
+### discos (20)
+
+- **#192826 · Alban Arthuan: «Los Peligros De Jugar Con Una Caja De Fósforos» / «con una Caja de Fósforo»** — árbitro claude-opus-5
+  - árbitro: El título corto parece un recorte del largo (F3) y sus 9 pistas coinciden (F4), pero hay 13 frente a 9 pistas y dos años distintos (F5): puede ser una edición anterior con menos pistas.
+  - F3 [a favor] `album:112.title|album:3083.title` — un título contiene al otro: «Los Peligros De Jugar Con Una Caja De Fósforos» / «con una Caja de Fósforo»
+  - F4 [a favor] `tracks:album:112|album:3083` — 9 de 9 posiciones comunes tienen la misma pista (13 y 9 pistas)
+  - F5 [contradice] `album:112.release_year|album:3083.release_year` — años: 2007 / 2005
+  - F2 [separa] `album:3083` — «con una Caja de Fósforo» (2005) de Alban Arthuan: tipo other, 9 pistas, fuentes rock-de-vzla, sin video en el canal
+- **#192827 · Atkinson: «Colonia Para El Alma» / «La Banda»** — árbitro claude-opus-5
+  - árbitro: Mismo año y 11 de 12 pistas (F4, F6), pero los títulos no se relacionan (F3) y la pista 4 cambia (F5): puede ser otra edición o un título mal capturado.
+  - F4 [a favor] `tracks:album:122|album:740` — 11 de 12 posiciones comunes tienen la misma pista (12 y 12 pistas)
+  - F6 [a favor] `album:122.release_year|album:740.release_year` — años: 2009 / 2009
+  - F3 [separa] `album:122.title|album:740.title` — los títulos no tienen relación textual: «Colonia Para El Alma» / «La Banda»
+  - F5 [separa] `tracks:album:122|album:740@1.4` — posición 1.4: «Así Es Como Te Amo» / «Incógnita»
+- **#192832 · Desorden Público: «En Vivo En El Teresa Carreño» / «DP18 en Concierto»** — árbitro claude-opus-5
+  - árbitro: Mismo año y 15 de 17 pistas en común (F4, F7), pero 32 frente a 17 pistas y títulos distintos (F1, F3): puede ser el mismo concierto en otra edición o dos grabaciones distintas.
+  - F4 [a favor] `tracks:album:169|album:3972` — 15 de 17 posiciones comunes tienen la misma pista (32 y 17 pistas)
+  - F7 [a favor] `album:169.release_year|album:3972.release_year` — años: 2004 / 2004
+  - F3 [separa] `album:169.title|album:3972.title` — los títulos no tienen relación textual: «En Vivo En El Teresa Carreño» / «DP18 en Concierto»
+  - F1 [separa] `album:169` — «En Vivo En El Teresa Carreño» (2004) de Desorden Público: tipo live_album (Live Album), 32 pistas, fuentes youtube-data-api, yt-master-seed, video primario ofSoz89ybB4 en el canal
+- **#192841 · Los Amigos Invisibles: «En Una Noche Tan Linda Como Esta» / «Como Esta»** — árbitro claude-opus-5
+  - árbitro: El título corto está contenido en el largo y el año coincide (F3, F9), pero hay 29 frente a 13 pistas y 4 posiciones distintas (F1, F4-F8).
+  - F3 [a favor] `album:248.title|album:3350.title` — un título contiene al otro: «En Una Noche Tan Linda Como Esta» / «Como Esta»
+  - F9 [a favor] `album:248.release_year|album:3350.release_year` — años: 2008 / 2008
+  - F4 [separa] `tracks:album:248|album:3350` — 9 de 13 posiciones comunes tienen la misma pista (29 y 13 pistas)
+  - F1 [separa] `album:248` — «En Una Noche Tan Linda Como Esta» (2008) de Los Amigos Invisibles: tipo live_album (Live Album), 29 pistas, fuentes sincopa, youtube-data-api, yt-master-seed, video primario 5DvZJt4DcIo en el canal
+- **#192842 · Los Amigos Invisibles: «The New Sound of The Venezuelan Gozadera» / «Gozadera»** — árbitro claude-opus-5
+  - árbitro: Mismo año y título contenido (F3, F7), pero 21 frente a 6 pistas y dos posiciones distintas (F1, F4-F6): puede ser un sencillo o un EP, no el mismo disco.
+  - F3 [a favor] `album:250.title|album:3353.title` — un título contiene al otro: «The New Sound of The Venezuelan Gozadera» / «Gozadera»
+  - F7 [a favor] `album:250.release_year|album:3353.release_year` — años: 1998 / 1998
+  - F4 [separa] `tracks:album:250|album:3353` — 4 de 6 posiciones comunes tienen la misma pista (21 y 6 pistas)
+  - F1 [separa] `album:250` — «The New Sound of The Venezuelan Gozadera» (1998) de Los Amigos Invisibles: tipo studio_album (Studio Album), 21 pistas, fuentes rockzuela, sincopa, youtube-data-api, yt-master-seed, video primario X2yfh9xynzM en el canal
+- **#192853 · Vytas Brenner: «Jayeche» / «Ofrenda: Jayeche»** — árbitro claude-opus-5
+  - árbitro: Mismo año y título contenido (F3, F11), pero el orden de pistas está corrido y falta una (F4-F10), y el prefijo «Ofrenda:» no se explica con el dosier.
+  - F3 [a favor] `album:492.title|album:4836.title` — un título contiene al otro: «Jayeche» / «Ofrenda: Jayeche»
+  - F11 [a favor] `album:492.release_year|album:4836.release_year` — años: 1975 / 1975
+  - F4 [separa] `tracks:album:492|album:4836` — 3 de 9 posiciones comunes tienen la misma pista (10 y 9 pistas)
+- **#192854 · Vytas Brenner: «Lo Máximo De Vyas» / «Lo Máximo de Vytas Brenner»** — árbitro claude-opus-5
+  - árbitro: Mismo título con errata y mismo año (F3, F11), pero 9 frente a 16 pistas con órdenes distintos (F4-F10): pueden ser dos ediciones del recopilatorio.
+  - F3 [a favor] `album:494.title|album:2388.title` — los títulos difieren en una errata: «Lo Máximo De Vyas» / «Lo Máximo de Vytas Brenner»
+  - F11 [a favor] `album:494.release_year|album:2388.release_year` — años: 1994 / 1994
+  - F4 [separa] `tracks:album:494|album:2388` — 3 de 9 posiciones comunes tienen la misma pista (9 y 16 pistas)
+  - F2 [separa] `album:2388` — «Lo Máximo de Vytas Brenner» (1994) de Vytas Brenner: tipo other, 16 pistas, fuentes rock-de-vzla, sin video en el canal
+- **#192858 · Los Amigos Invisibles: «The Venezuelan Zinga Son Vol. 1» / «Vol. 1»** — árbitro claude-opus-5
+  - árbitro: «Vol. 1» es el final del título largo y sus 8 pistas coinciden (F3, F4), pero hay 15 frente a 8 pistas y los años difieren (F1, F5).
+  - F3 [a favor] `album:558.title|album:3351.title` — uno de los títulos es genérico (Demo, EP, En Vivo, el nombre del artista) y no identifica el disco: «The Venezuelan Zinga Son Vol. 1» / «Vol. 1»
+  - F4 [a favor] `tracks:album:558|album:3351` — 8 de 8 posiciones comunes tienen la misma pista (15 y 8 pistas)
+  - F5 [contradice] `album:558.release_year|album:3351.release_year` — años: 2002 / 2003
+  - F1 [separa] `album:558` — «The Venezuelan Zinga Son Vol. 1» (2002) de Los Amigos Invisibles: tipo studio_album (Studio Album), 15 pistas, fuentes rockzuela, youtube-data-api, yt-master-seed, video primario 6ECdniX6iBI en el canal
+- **#192859 · Los Amigos Invisibles: «The Venezuelan Zinga Son Vol. 1» / «The Venezuelan»** — árbitro claude-opus-5
+  - árbitro: El título está contenido (F3), pero la lista de 17 pistas trae una pista intercalada que corre el orden (F4-F10) y no tiene año (F11): puede ser otra edición.
+  - F3 [a favor] `album:558.title|album:4637.title` — un título contiene al otro: «The Venezuelan Zinga Son Vol. 1» / «The Venezuelan»
+  - F4 [separa] `tracks:album:558|album:4637` — 6 de 15 posiciones comunes tienen la misma pista (15 y 17 pistas)
+  - F2 [separa] `album:4637` — «The Venezuelan» (sin año) de Los Amigos Invisibles: tipo other, 17 pistas, fuentes sincopa, sin video en el canal
+- **#192869 · Epitafio: «III Operis Tertium» / «Dying Out»** — árbitro claude-opus-5
+  - árbitro: Las pistas coinciden (F4), pero títulos y años son distintos (F3, F5) y hay 12 frente a 13 pistas: puede ser un recopilatorio o un error de la fuente.
+  - F4 [a favor] `tracks:album:781|album:783` — 12 de 12 posiciones comunes tienen la misma pista (12 y 13 pistas)
+  - F3 [separa] `album:781.title|album:783.title` — los títulos no tienen relación textual: «III Operis Tertium» / «Dying Out»
+  - F5 [separa] `album:781.release_year|album:783.release_year` — años: 2011 / 2007
+- **#192873 · Puah: «Demo» / «Traición»** — árbitro claude-opus-5
+  - árbitro: El título «Demo» no identifica el disco (F3), los años difieren (F5) y hay 4 frente a 3 pistas: puede ser otra demo.
+  - F4 [a favor] `tracks:album:1014|album:3000` — 3 de 3 posiciones comunes tienen la misma pista (4 y 3 pistas)
+  - F3 [separa] `album:1014.title|album:3000.title` — uno de los títulos es genérico (Demo, EP, En Vivo, el nombre del artista) y no identifica el disco: «Demo» / «Traición»
+  - F5 [separa] `album:1014.release_year|album:3000.release_year` — años: 2009 / 2008
+- **#192878 · Equilibrio Vital: «Tributo a Marcos Chacón» / «Equilibrio Vital»** — árbitro claude-opus-5
+  - árbitro: Un título es el nombre del artista y no identifica el disco (F3), y hay 8 frente a 5 pistas (F1, F2).
+  - F4 [a favor] `tracks:album:1246|album:2542` — 5 de 5 posiciones comunes tienen la misma pista (8 y 5 pistas)
+  - F3 [separa] `album:1246.title|album:2542.title` — uno de los títulos es genérico (Demo, EP, En Vivo, el nombre del artista) y no identifica el disco: «Tributo a Marcos Chacón» / «Equilibrio Vital»
+- **#192882 · Krueger: «Live in Pto. Ordaz» / «En vivo Puerto Ordaz»** — árbitro claude-opus-5
+  - árbitro: Ambos títulos describen un en vivo en Puerto Ordaz (F3) con las mismas pistas (F4), pero hay 11 frente a 10 pistas y los años difieren (F5).
+  - F4 [a favor] `tracks:album:1347|album:3302` — 10 de 10 posiciones comunes tienen la misma pista (11 y 10 pistas)
+  - F3 [a favor] `album:1347.title|album:3302.title` — los títulos no tienen relación textual: «Live in Pto. Ordaz» / «En vivo Puerto Ordaz»
+  - F5 [separa] `album:1347.release_year|album:3302.release_year` — años: 2002 / 2003
+- **#192883 · Diphteria: «El Ángel Caído» / «Demo»** — árbitro claude-opus-5
+  - árbitro: Mismo año y 3 pistas en común (F4, F5), pero «Demo» no identifica cuál demo (F3) y hay 4 frente a 3 pistas.
+  - F4 [a favor] `tracks:album:1348|album:2813` — 3 de 3 posiciones comunes tienen la misma pista (4 y 3 pistas)
+  - F5 [a favor] `album:1348.release_year|album:2813.release_year` — años: 2002 / 2002
+  - F3 [separa] `album:1348.title|album:2813.title` — uno de los títulos es genérico (Demo, EP, En Vivo, el nombre del artista) y no identifica el disco: «El Ángel Caído» / «Demo»
+- **#192886 · Enkdenados: «La Sombra (Demo 1)» / «Demo»** — árbitro claude-opus-5
+  - árbitro: Ambas son demos con 12 pistas, pero el orden cambia (F4-F9) y «La Sombra (Demo 1)» sugiere que hubo más de una demo (F3).
+  - F3 [a favor] `album:1371.title|album:2390.title` — uno de los títulos es genérico (Demo, EP, En Vivo, el nombre del artista) y no identifica el disco: «La Sombra (Demo 1)» / «Demo»
+  - F4 [separa] `tracks:album:1371|album:2390` — 7 de 12 posiciones comunes tienen la misma pista (12 y 12 pistas)
+  - F10 [separa] `album:1371.release_year|album:2390.release_year` — años: sin año / 2009
+- **#192890 · Carnagoth: «Demo» / «Bootleg»** — árbitro claude-opus-5
+  - árbitro: «Demo» y «Bootleg» son títulos genéricos (F3) y describen tipos de grabación distintos (F6).
+  - F4 [a favor] `tracks:album:1441|album:3249` — 5 de 5 posiciones comunes tienen la misma pista (6 y 5 pistas)
+  - F3 [separa] `album:1441.title|album:3249.title` — uno de los títulos es genérico (Demo, EP, En Vivo, el nombre del artista) y no identifica el disco: «Demo» / «Bootleg»
+  - F6 [separa] `album:1441` — «Demo» es una demo (6 pistas) y el otro no (5 pistas)
+- **#192893 · Brutal Assault: «Brutal Assault» / «Demo»** — árbitro claude-opus-5
+  - árbitro: Títulos genéricos (F3) y un EP de 9 pistas frente a una demo de 3 (F1, F2): puede ser una demo anterior.
+  - F4 [a favor] `tracks:album:1504|album:3490` — 3 de 3 posiciones comunes tienen la misma pista (9 y 3 pistas)
+  - F3 [separa] `album:1504.title|album:3490.title` — uno de los títulos es genérico (Demo, EP, En Vivo, el nombre del artista) y no identifica el disco: «Brutal Assault» / «Demo»
+  - F1 [separa] `album:1504` — «Brutal Assault» (2010) de Brutal Assault: tipo ep, 9 pistas, fuentes descargas-metal-venezolano, rock-de-vzla, sincopa, sin video en el canal
+- **#192897 · Pastel de Gente: «Pastel de Gente (People Pie)» / «El Blues del Plan Union»** — árbitro claude-opus-5
+  - árbitro: Mismo año y 6 de 7 pistas (F4, F6), pero títulos distintos (F3) y la séptima pista cambia (F5).
+  - F4 [a favor] `tracks:album:1655|album:3284` — 6 de 7 posiciones comunes tienen la misma pista (8 y 7 pistas)
+  - F6 [a favor] `album:1655.release_year|album:3284.release_year` — años: 1985 / 1985
+  - F3 [separa] `album:1655.title|album:3284.title` — los títulos no tienen relación textual: «Pastel de Gente (People Pie)» / «El Blues del Plan Union»
+- **#192907 · Los Telecaster: «En Petit Comite» / «Viva Navidad»** — árbitro claude-opus-5
+  - árbitro: La misma fuente lista dos títulos distintos con las mismas 3 pistas (F3, F4): puede ser un error de la fuente o dos lanzamientos cortos.
+  - F4 [a favor] `tracks:album:2709|album:2710` — 3 de 3 posiciones comunes tienen la misma pista (3 y 3 pistas)
+  - F3 [separa] `album:2709.title|album:2710.title` — los títulos no tienen relación textual: «En Petit Comite» / «Viva Navidad»
+- **#192912 · Los Amigos Invisibles: «Vol. 1» / «The Venezuelan»** — árbitro claude-opus-5
+  - árbitro: Dos títulos recortados (F3) con listas que no coinciden en orden (F4-F9).
+  - F3 [separa] `album:3351.title|album:4637.title` — uno de los títulos es genérico (Demo, EP, En Vivo, el nombre del artista) y no identifica el disco: «Vol. 1» / «The Venezuelan»
+  - F4 [separa] `tracks:album:3351|album:4637` — 3 de 8 posiciones comunes tienen la misma pista (8 y 17 pistas)
+
+### personas (223)
+
+- **#192925 · «Carlos "Nene" Quintero» / «Carlos Quintero»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:3638` — «Carlos Quintero "Kinttero"» (3638) también podría ser «Carlos Quintero»
+  - F6 [contexto] `person:9154` — «C. Quintero» (9154) también podría ser «Carlos Quintero»
+- **#192926 · «Iván Velásquez» / «Iván "El Terrible" Velásquez»** — árbitro claude-opus-5
+  - árbitro: Apellido muy frecuente y al menos una ficha tiene bandas que la otra no tiene (F1, F2): una sola banda compartida (F4) no basta para unir dos trayectorias.
+  - F3 [a favor] `person:21.name|person:3099.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Iván Velásquez» / «Iván "El Terrible" Velásquez»
+  - F4 [a favor] `context:person:21|person:3099` — comparten 1 banda(s) (Vytas Brenner) y 0 disco(s) donde ambas figuran
+  - F1 [separa] `person:21` — «Iván Velásquez» (21): 38 créditos o membresías; bandas: Agni Mogollón, Delia, Edgar Alexander, Franco De Vita, Frank Quintero, Fusión IV, Gina y Agny, Jade; acreditada en el canal
+  - F2 [separa] `person:3099` — «Iván "El Terrible" Velásquez» (3099): 1 créditos o membresías; bandas: Vytas Brenner; acreditada en el canal
+- **#192929 · «Pedro Castillo» / «P. Castillo»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:7516` — «Pavlo Castillo» (7516) también podría ser «P. Castillo»
+- **#192932 · «D. en D.» / «D.D.»** — árbitro claude-opus-5
+  - árbitro: El nombre no es de una persona (un estudio o una abreviatura) (F3): fusionarlo como persona no corresponde; primero hay que reclasificarlo.
+  - F3 [contradice] `person:44.name|person:11031.name` — el mismo nombre con un segundo nombre de más: «D. en D.» / «D.D.»
+  - F4 [a favor] `context:person:44|person:11031` — comparten 1 banda(s) (Carlos Morean) y 0 disco(s) donde ambas figuran
+- **#192933 · «Guillermo Carrasco» / «G. Carrasco»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:6279` — «Guilermo Carrasco» (6279) también podría ser «G. Carrasco»
+  - F6 [contexto] `person:10008` — «Guiilermo Carrasco» (10008) también podría ser «G. Carrasco»
+- **#192934 · «Guillermo Carrasco» / «Guiilermo Carrasco»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:4695` — «G. Carrasco» (4695) también podría ser «Guillermo Carrasco»
+- **#192935 · «George Henríquez» / «G. Henríquez»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:10010` — «Geoge Henríquez» (10010) también podría ser «G. Henríquez»
+- **#192936 · «George Henríquez» / «Geoge Henríquez»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:7049` — «G. Henríquez» (7049) también podría ser «George Henríquez»
+  - F6 [contexto] `person:7049` — «G. Henríquez» (7049) también podría ser «Geoge Henríquez»
+- **#192952 · «Emidio Falconi» / «Emidio Falconi "DJ Baffa"»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:6781` — «Emidio Falconi "Baffa"» (6781) también podría ser «Emidio Falconi»
+- **#192955 · «Archie Peña» / «A. Peña»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:921` — «Alexis Peña» (921) también podría ser «A. Peña»
+- **#192956 · «Angie Machado» / «Angel Machado»** — árbitro claude-opus-5
+  - árbitro: Los nombres de pila son dos nombres reales distintos, no una errata segura (F3); en la misma banda (F4) pueden figurar dos personas.
+  - F3 [separa] `person:207.name|person:1703.name` — nombres de pila distintos por pocas letras: «Angie Machado» / «Angel Machado»
+  - F4 [a favor] `context:person:207|person:1703` — comparten 1 banda(s) (Franco De Vita) y 0 disco(s) donde ambas figuran
+- **#192958 · «Álvaro Casas» / «A. Casas»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:1460` — «Antonio Casas» (1460) también podría ser «A. Casas»
+- **#192960 · «Agustín Espina» / «A.Espina»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:7805` — «Amable Espina» (7805) también podría ser «A.Espina»
+- **#192963 · «Julio Briceño» / «J. Briceño»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:2184` — «José "Cebolla" Briceño» (2184) también podría ser «J. Briceño»
+  - F6 [contexto] `person:6347` — «José Andrés Briceño» (6347) también podría ser «J. Briceño»
+- **#192967 · «José Luis Pardo» / «José Luis Pardo "DJ Afro"»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:1243` — «José Luis "Cheo" Pardo» (1243) también podría ser «José Luis Pardo»
+  - F6 [contexto] `person:7544` — «J. L. Pardo» (7544) también podría ser «José Luis Pardo»
+  - F7 [contexto] `person:7511` — «J. Pardo» (7511) también podría ser «José Luis Pardo»
+  - F8 [contexto] `person:7544` — «J. L. Pardo» (7544) también podría ser «José Luis Pardo "DJ Afro"»
+  - F9 [contexto] `person:7511` — «J. Pardo» (7511) también podría ser «José Luis Pardo "DJ Afro"»
+- **#192968 · «José Luis Pardo» / «José Luis "Cheo" Pardo»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:1111` — «José Luis Pardo "DJ Afro"» (1111) también podría ser «José Luis Pardo»
+  - F6 [contexto] `person:7544` — «J. L. Pardo» (7544) también podría ser «José Luis Pardo»
+  - F7 [contexto] `person:7511` — «J. Pardo» (7511) también podría ser «José Luis Pardo»
+  - F8 [contexto] `person:7544` — «J. L. Pardo» (7544) también podría ser «José Luis "Cheo" Pardo»
+  - F9 [contexto] `person:7511` — «J. Pardo» (7511) también podría ser «José Luis "Cheo" Pardo»
+- **#192969 · «José Luis Pardo» / «J. Pardo»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:1243` — «José Luis "Cheo" Pardo» (1243) también podría ser «José Luis Pardo»
+  - F6 [contexto] `person:1111` — «José Luis Pardo "DJ Afro"» (1111) también podría ser «José Luis Pardo»
+  - F7 [contexto] `person:7552` — «Joe Pardo» (7552) también podría ser «J. Pardo»
+  - F8 [contexto] `person:7544` — «J. L. Pardo» (7544) también podría ser «J. Pardo»
+  - F9 [contexto] `person:9941` — «Juan Pardo» (9941) también podría ser «J. Pardo»
+- **#192970 · «José Luis Pardo» / «J. L. Pardo»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:1243` — «José Luis "Cheo" Pardo» (1243) también podría ser «José Luis Pardo»
+  - F6 [contexto] `person:1111` — «José Luis Pardo "DJ Afro"» (1111) también podría ser «José Luis Pardo»
+  - F7 [contexto] `person:7511` — «J. Pardo» (7511) también podría ser «J. L. Pardo»
+- **#192972 · «Williams Silva» / «William Silva»** — árbitro claude-opus-5
+  - árbitro: Apellido muy frecuente y al menos una ficha tiene bandas que la otra no tiene (F1, F2): una sola banda compartida (F4) no basta para unir dos trayectorias.
+  - F3 [a favor] `person:421.name|person:7439.name` — nombres de pila distintos por pocas letras: «Williams Silva» / «William Silva»
+  - F4 [a favor] `context:person:421|person:7439` — comparten 1 banda(s) (Colina) y 0 disco(s) donde ambas figuran
+  - F1 [separa] `person:421` — «Williams Silva» (421): 5 créditos o membresías; bandas: Colina, Los Buitres; acreditada en el canal
+  - F2 [separa] `person:7439` — «William Silva» (7439): 2 créditos o membresías; bandas: Colina, Zapato 3
+- **#192976 · «Alejandro "Chofa" Loero» / «Alfredo Loero "Chofa"»** — árbitro claude-opus-5
+  - árbitro: Los nombres de pila son dos nombres reales distintos, no una errata segura (F3); en la misma banda (F4) pueden figurar dos personas.
+  - F3 [separa] `person:437.name|person:2009.name` — mismo apodo y apellido con nombres de pila distintos: «Alejandro "Chofa" Loero» / «Alfredo Loero "Chofa"»
+  - F4 [a favor] `context:person:437|person:2009` — comparten 1 banda(s) (PAN) y 0 disco(s) donde ambas figuran
+- **#192978 · «Héctor Castillo» / «Hector Castillo "Perroconsed"»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:3410` — «Héctor Castillo "Jector"» (3410) también podría ser «Héctor Castillo»
+- **#192979 · «Héctor Castillo» / «Héctor Castillo "Jector"»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:1263` — «Hector Castillo "Perroconsed"» (1263) también podría ser «Héctor Castillo»
+- **#192982 · «Manuel Dizquez» / «Manuel Diquez»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:1669` — «Manuel "Manny" Diquez» (1669) también podría ser «Manuel Diquez»
+- **#192983 · «Luis M. Pérez» / «Luis Miguel Pérez»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:9766` — «L. Perez» (9766) también podría ser «Luis M. Pérez»
+- **#192984 · «Carlos Julio Molina» / «Carlos Julio Molina "DJ Trece"»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:222` — «Carlos Julio Molina "Trece"» (222) también podría ser «Carlos Julio Molina»
+- **#192986 · «Danel Sarmiento» / «Daniel Sarmiento»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:2790` — «Danel Sarmiento "Danpa"» (2790) también podría ser «Danel Sarmiento»
+  - F6 [contexto] `person:9891` — «D. Sarmiento» (9891) también podría ser «Danel Sarmiento»
+  - F7 [contexto] `person:9891` — «D. Sarmiento» (9891) también podría ser «Daniel Sarmiento»
+- **#192987 · «Danel Sarmiento» / «Danel Sarmiento "Danpa"»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:1013` — «Danel Sarmiento "Dr. Dub"» (1013) también podría ser «Danel Sarmiento»
+  - F6 [contexto] `person:9891` — «D. Sarmiento» (9891) también podría ser «Danel Sarmiento»
+  - F7 [contexto] `person:9891` — «D. Sarmiento» (9891) también podría ser «Danel Sarmiento "Danpa"»
+- **#192988 · «Danel Sarmiento» / «D. Sarmiento»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:2790` — «Danel Sarmiento "Danpa"» (2790) también podría ser «Danel Sarmiento»
+  - F6 [contexto] `person:798` — «Dan Lee Sarmiento» (798) también podría ser «D. Sarmiento»
+  - F7 [contexto] `person:2560` — «Dr. Dub Sarmiento» (2560) también podría ser «D. Sarmiento»
+  - F8 [contexto] `person:2131` — «Daniel Sarmiento» (2131) también podría ser «D. Sarmiento»
+- **#192989 · «Horacio Blanco» / «H. Blanco»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:761` — «Hugo Blanco» (761) también podría ser «H. Blanco»
+- **#192990 · «José Romero» / «José "Joseíto" Romero»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:1462` — «José "Cheo" Romero» (1462) también podría ser «José Romero»
+  - F6 [contexto] `person:8938` — «José "Cheíto" Romero» (8938) también podría ser «José Romero»
+- **#192991 · «José Romero» / «José "Cheo" Romero»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:603` — «José "Joseíto" Romero» (603) también podría ser «José Romero»
+  - F6 [contexto] `person:8938` — «José "Cheíto" Romero» (8938) también podría ser «José Romero»
+- **#192992 · «José Romero» / «José "Cheíto" Romero»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:603` — «José "Joseíto" Romero» (603) también podría ser «José Romero»
+  - F6 [contexto] `person:1462` — «José "Cheo" Romero» (1462) también podría ser «José Romero»
+- **#192996 · «Carlos Eduardo Reyes» / «Carlos E. Reyes»** — regla `person.initials_other_context`
+  - las iniciales aparecen en bandas donde el nombre completo no figura
+  - F3 [contexto] `person:495.name|person:888.name` — un nombre escrito con iniciales del otro: «Carlos Eduardo Reyes» / «Carlos E. Reyes»
+  - F4 [contexto] `context:person:495|person:888` — comparten 1 banda(s) (Joystick) y 1 disco(s) donde ambas figuran («Lonchera» de Joystick)
+- **#193001 · «Richard Blanco» / «Richard "El Chicha" Blanco»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:1484` — «Richard "Chicha" Blanco» (1484) también podría ser «Richard Blanco»
+- **#193002 · «Héctor Paredes» / «Héctor "Lucas" Paredes»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:3329` — «Héctor "El Lucas" Paredes» (3329) también podría ser «Héctor Paredes»
+- **#193003 · «Héctor Paredes» / «Héctor "El Lucas" Paredes»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:1057` — «Héctor "Lucas" Paredes» (1057) también podría ser «Héctor Paredes»
+- **#193006 · «Francisco "CoCo" Díaz» / «Francisco Díaz»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:9894` — «F. Díaz» (9894) también podría ser «Francisco "CoCo" Díaz»
+  - F6 [contexto] `person:3107` — «Francisco "Roco" Díaz» (3107) también podría ser «Francisco Díaz»
+  - F7 [contexto] `person:9894` — «F. Díaz» (9894) también podría ser «Francisco Díaz»
+- **#193007 · «Francisco "CoCo" Díaz» / «Francisco "Roco" Díaz»** — árbitro claude-opus-5
+  - árbitro: Los apodos son distintos y no variantes de uno solo (F5); comparten banda (F4) pero eso no aclara si son la misma persona.
+  - F3 [separa] `person:519.name|person:3107.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Francisco "CoCo" Díaz» / «Francisco "Roco" Díaz»
+  - F4 [a favor] `context:person:519|person:3107` — comparten 1 banda(s) (Luz Verde) y 0 disco(s) donde ambas figuran
+  - F5 [separa] `person:519.name|person:3107.name` — apodos distintos: coco / roco
+- **#193008 · «Francisco "CoCo" Díaz» / «F. Díaz»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:3107` — «Francisco "Roco" Díaz» (3107) también podría ser «Francisco "CoCo" Díaz»
+  - F6 [contexto] `person:3043` — «Francisco Díaz» (3043) también podría ser «Francisco "CoCo" Díaz»
+  - F7 [contexto] `person:755` — «Franlin Díaz» (755) también podría ser «F. Díaz»
+  - F8 [contexto] `person:3107` — «Francisco "Roco" Díaz» (3107) también podría ser «F. Díaz»
+  - F9 [contexto] `person:7677` — «Franklin Díaz» (7677) también podría ser «F. Díaz»
+- **#193013 · «Edgar Alexander Quintero» / «Edgar Quintero»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:9084` — «E. Quintero» (9084) también podría ser «Edgar Alexander Quintero»
+  - F6 [contexto] `person:9084` — «E. Quintero» (9084) también podría ser «Edgar Quintero»
+- **#193014 · «Edgar Alexander Quintero» / «Edgar Quintero (Edgar Alexander)»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:9084` — «E. Quintero» (9084) también podría ser «Edgar Alexander Quintero»
+  - F6 [contexto] `person:9084` — «E. Quintero» (9084) también podría ser «Edgar Quintero (Edgar Alexander)»
+- **#193015 · «Edgar Alexander Quintero» / «E. Quintero»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:2640` — «Edgar Quintero» (2640) también podría ser «Edgar Alexander Quintero»
+  - F6 [contexto] `person:7987` — «Edgar Quintero (Edgar Alexander)» (7987) también podría ser «Edgar Alexander Quintero»
+  - F7 [contexto] `person:6804` — «Emilio Quintero» (6804) también podría ser «E. Quintero»
+  - F8 [contexto] `person:11503` — «Edgardo Quintero» (11503) también podría ser «E. Quintero»
+- **#193017 · «Gabriel Quintero» / «G. Quintero»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:753` — «German Quintero» (753) también podría ser «G. Quintero»
+  - F6 [contexto] `person:7479` — «Gustavo Quintero» (7479) también podría ser «G. Quintero»
+- **#193022 · «José Manuel "Chema" Arria» / «José Manuel Arria "Chema"»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:8535` — «J. M. Arria» (8535) también podría ser «José Manuel Arria "Chema"»
+- **#193038 · «José Carlos Vásquez» / «José Vásquez»** — árbitro claude-opus-5
+  - árbitro: Sobra o falta un nombre de pila con un apellido muy frecuente (F3): dentro de la misma banda (F4) puede haber otra persona con ese apellido.
+  - F3 [separa] `person:719.name|person:2700.name` — el mismo nombre con un segundo nombre de más: «José Carlos Vásquez» / «José Vásquez»
+  - F4 [a favor] `context:person:719|person:2700` — comparten 1 banda(s) (Circo Urbano) y 0 disco(s) donde ambas figuran
+- **#193040 · «Leo Colina» / «L. Colina»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:1718` — «Luz Colina» (1718) también podría ser «L. Colina»
+  - F6 [contexto] `person:2216` — «Leonardo Colina "Leo"» (2216) también podría ser «L. Colina»
+- **#193041 · «Armando Hernández» / «Armando Hernández "Armandito"»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:9514` — «A.Hernandez» (9514) también podría ser «Armando Hernández»
+  - F6 [contexto] `person:9514` — «A.Hernandez» (9514) también podría ser «Armando Hernández "Armandito"»
+- **#193042 · «Armando Hernández» / «A.Hernandez»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:2220` — «Armando Hernández "Armandito"» (2220) también podría ser «Armando Hernández»
+  - F6 [contexto] `person:220` — «Adolfo Hernández» (220) también podría ser «A.Hernandez»
+  - F7 [contexto] `person:1516` — «Alfonso Hernández» (1516) también podría ser «A.Hernandez»
+  - F8 [contexto] `person:2468` — «Alberto Hernández» (2468) también podría ser «A.Hernandez»
+  - F9 [contexto] `person:2476` — «Argenis Hernández» (2476) también podría ser «A.Hernandez»
+  - F10 [contexto] `person:3183` — «Antonio Hernández "Toy"» (3183) también podría ser «A.Hernandez»
+- **#193045 · «David Schelsinger» / «David Schlesinger»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:9518` — «D. Schlesinger» (9518) también podría ser «David Schlesinger»
+  - F6 [contexto] `person:9912` — «D.Schlesinger» (9912) también podría ser «David Schlesinger»
+- **#193046 · «Luis Quintero» / «Luisito Quintero»** — árbitro claude-opus-5
+  - árbitro: Una ficha usa un diminutivo (F3), que a veces distingue a otra persona con el mismo nombre en el mismo entorno (F4).
+  - F3 [separa] `person:763.name|person:1701.name` — nombres parecidos sin una variación reconocible: «Luis Quintero» / «Luisito Quintero»
+  - F4 [a favor] `context:person:763|person:1701` — comparten 1 banda(s) (Franco De Vita) y 0 disco(s) donde ambas figuran
+- **#193052 · «Carlos "Carlitos" Fernandez» / «Carlos Fernández»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:5208` — «Carlos "Morocho" Fernández» (5208) también podría ser «Carlos Fernández»
+- **#193053 · «Derrick "Pupa Mickey" Bishop» / «Carlos Fernández Derrick "Pupa Mickey" Bishop»** — árbitro claude-opus-5
+  - árbitro: El nombre largo parece unir dos créditos distintos en uno (F2, F3): fusionarlo movería el crédito de la otra persona.
+  - F3 [contradice] `person:796.name|person:8440.name` — mismo apodo y apellido con nombres de pila distintos: «Derrick "Pupa Mickey" Bishop» / «Carlos Fernández Derrick "Pupa Mickey" Bishop»
+  - F4 [a favor] `context:person:796|person:8440` — comparten 1 banda(s) (Cebollas Ardientes) y 1 disco(s) donde ambas figuran («Cebollas Ardientes» de Cebollas Ardientes)
+  - F2 [contradice] `person:8440` — «Carlos Fernández Derrick "Pupa Mickey" Bishop» (8440): 2 créditos o membresías; bandas: Cebollas Ardientes
+- **#193054 · «José Luis Osuna» / «José L. Osuna»** — regla `person.initials_other_context`
+  - las iniciales aparecen en bandas donde el nombre completo no figura
+  - F3 [contexto] `person:833.name|person:3133.name` — un nombre escrito con iniciales del otro: «José Luis Osuna» / «José L. Osuna»
+  - F4 [contexto] `context:person:833|person:3133` — comparten 1 banda(s) (Los Mentas) y 0 disco(s) donde ambas figuran
+- **#193056 · «Félix Duque» / «Felipe Duque»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:2460` — «Félix "El Gato" Duque» (2460) también podría ser «Félix Duque»
+- **#193057 · «Ezequiel Serrano Valencia» / «Ezequiel S. Valencia»** — regla `person.initials_other_context`
+  - las iniciales aparecen en bandas donde el nombre completo no figura
+  - F3 [contexto] `person:883.name|person:2442.name` — un nombre escrito con iniciales del otro: «Ezequiel Serrano Valencia» / «Ezequiel S. Valencia»
+  - F4 [contexto] `context:person:883|person:2442` — comparten 1 banda(s) (Cabezón Key) y 1 disco(s) donde ambas figuran («Cabezón Key» de Cabezón Key)
+- **#193058 · «José Luis Gutiérrez» / «José Luis Gutiérrez "Pizza"»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:2521` — «José "Chemi" Gutierrez» (2521) también podría ser «José Luis Gutiérrez»
+- **#193061 · «Carlos Alberto Domínguez» / «Carlos Domínguez»** — árbitro claude-opus-5
+  - árbitro: Sobra o falta un nombre de pila con un apellido muy frecuente (F3): dentro de la misma banda (F4) puede haber otra persona con ese apellido.
+  - F3 [separa] `person:916.name|person:2403.name` — el mismo nombre con un segundo nombre de más: «Carlos Alberto Domínguez» / «Carlos Domínguez»
+  - F4 [a favor] `context:person:916|person:2403` — comparten 1 banda(s) (Levítico) y 0 disco(s) donde ambas figuran
+- **#193063 · «Alexis Peña» / «A. Peña»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:200` — «Archie Peña» (200) también podría ser «A. Peña»
+- **#193064 · «Jesús Jiménez» / «Jesús "Moti" Jiménez»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:3440` — «Jesús "El Moti" Jimenez» (3440) también podría ser «Jesús Jiménez»
+  - F6 [contexto] `person:9120` — «J. Jiménez» (9120) también podría ser «Jesús Jiménez»
+  - F7 [contexto] `person:9120` — «J. Jiménez» (9120) también podría ser «Jesús "Moti" Jiménez»
+- **#193065 · «Jesús Jiménez» / «J. Jiménez»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:4702` — «Jesús "Moti" Jiménez» (4702) también podría ser «Jesús Jiménez»
+  - F6 [contexto] `person:4794` — «Joad Manuel Jiménez» (4794) también podría ser «J. Jiménez»
+  - F7 [contexto] `person:6515` — «Juan Jiménez» (6515) también podría ser «J. Jiménez»
+  - F8 [contexto] `person:7918` — «Joad Jiménez» (7918) también podría ser «J. Jiménez»
+- **#193066 · «Alejandro Díaz» / «A. Díaz»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:256` — «Alberto Díaz» (256) también podría ser «A. Díaz»
+  - F6 [contexto] `person:4354` — «Antonio Díaz» (4354) también podría ser «A. Díaz»
+- **#193069 · «Oswaldo Quintero» / «Oswaldo Quintero "Wally"»** — árbitro claude-opus-5
+  - árbitro: Apellido muy frecuente y al menos una ficha tiene bandas que la otra no tiene (F1, F2): una sola banda compartida (F4) no basta para unir dos trayectorias.
+  - F3 [a favor] `person:985.name|person:2988.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Oswaldo Quintero» / «Oswaldo Quintero "Wally"»
+  - F4 [a favor] `context:person:985|person:2988` — comparten 1 banda(s) (Marilanne) y 0 disco(s) donde ambas figuran
+  - F1 [separa] `person:985` — «Oswaldo Quintero» (985): 2 créditos o membresías; bandas: Marilanne, The Last April; acreditada en el canal
+  - F2 [separa] `person:2988` — «Oswaldo Quintero "Wally"» (2988): 2 créditos o membresías; bandas: Marilanne; acreditada en el canal
+- **#193070 · «William García» / «William García "Cafeína"»** — árbitro claude-opus-5
+  - árbitro: Apellido muy frecuente y al menos una ficha tiene bandas que la otra no tiene (F1, F2): una sola banda compartida (F4) no basta para unir dos trayectorias.
+  - F3 [a favor] `person:988.name|person:2989.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «William García» / «William García "Cafeína"»
+  - F4 [a favor] `context:person:988|person:2989` — comparten 1 banda(s) (Marilanne) y 0 disco(s) donde ambas figuran
+  - F1 [separa] `person:988` — «William García» (988): 3 créditos o membresías; bandas: Carlos Baute, Marilanne; acreditada en el canal
+  - F2 [separa] `person:2989` — «William García "Cafeína"» (2989): 2 créditos o membresías; bandas: Marilanne; acreditada en el canal
+- **#193074 · «José "Cucaracha" Gómez» / «José Rafael "Cucaracha" Gómez»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:9499` — «José R. Gómez» (9499) también podría ser «José "Cucaracha" Gómez»
+- **#193075 · «José "Cucaracha" Gómez» / «José R. Gómez»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:3286` — «José Rafael "Cucaracha" Gómez» (3286) también podría ser «José "Cucaracha" Gómez»
+- **#193077 · «Carlos "Fresa" Mata» / «Carlos Mata»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:9674` — «C. Mata» (9674) también podría ser «Carlos Mata»
+- **#193078 · «Leonardo Molina "Leo"» / «Leonardo Molina»** — árbitro claude-opus-5
+  - árbitro: Apellido muy frecuente y al menos una ficha tiene bandas que la otra no tiene (F1, F2): una sola banda compartida (F4) no basta para unir dos trayectorias.
+  - F3 [a favor] `person:1009.name|person:1230.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Leonardo Molina "Leo"» / «Leonardo Molina»
+  - F4 [a favor] `context:person:1009|person:1230` — comparten 1 banda(s) (Subsonus) y 0 disco(s) donde ambas figuran
+  - F1 [separa] `person:1009` — «Leonardo Molina "Leo"» (1009): 2 créditos o membresías; bandas: Subsonus; acreditada en el canal
+  - F2 [separa] `person:1230` — «Leonardo Molina» (1230): 6 créditos o membresías; bandas: Q-80, Skatz, Subsonus; acreditada en el canal
+- **#193080 · «Abraham García "Cangrejo"» / «Abraham García»** — árbitro claude-opus-5
+  - árbitro: Apellido muy frecuente y al menos una ficha tiene bandas que la otra no tiene (F1, F2): una sola banda compartida (F4) no basta para unir dos trayectorias.
+  - F3 [a favor] `person:1019.name|person:2415.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Abraham García "Cangrejo"» / «Abraham García»
+  - F4 [a favor] `context:person:1019|person:2415` — comparten 1 banda(s) (Seguridad Nacional) y 0 disco(s) donde ambas figuran
+  - F1 [separa] `person:1019` — «Abraham García "Cangrejo"» (1019): 7 créditos o membresías; bandas: Seguridad Nacional, Yátu; acreditada en el canal
+  - F2 [separa] `person:2415` — «Abraham García» (2415): 3 créditos o membresías; bandas: Mochuelo, Seguridad Nacional; acreditada en el canal
+- **#193083 · «Pedro V. Lizardo "PTT"» / «Pedro Vicente Lizardo "PTT"»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:5920` — «Pedro Vicente Lizardo» (5920) también podría ser «Pedro Vicente Lizardo "PTT"»
+- **#193084 · «Pedro V. Lizardo "PTT"» / «Pedro Vicente Lizardo»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:3222` — «Pedro Vicente Lizardo "PTT"» (3222) también podría ser «Pedro Vicente Lizardo»
+- **#193085 · «Pablo Hernández» / «Pablo Fernández»** — árbitro claude-opus-5
+  - árbitro: Son dos apellidos reales distintos (F3), no una errata segura; comparten solo una banda (F4) y cada ficha tiene otras.
+  - F3 [separa] `person:1074.name|person:1840.name` — nombres parecidos sin una variación reconocible: «Pablo Hernández» / «Pablo Fernández»
+  - F4 [a favor] `context:person:1074|person:1840` — comparten 1 banda(s) (La Misma Gente) y 0 disco(s) donde ambas figuran
+- **#193086 · «Armando Gómez» / «Armando Gómez "007"»** — árbitro claude-opus-5
+  - árbitro: Apellido muy frecuente y al menos una ficha tiene bandas que la otra no tiene (F1, F2): una sola banda compartida (F4) no basta para unir dos trayectorias.
+  - F3 [a favor] `person:1096.name|person:3030.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Armando Gómez» / «Armando Gómez "007"»
+  - F4 [a favor] `context:person:1096|person:3030` — comparten 1 banda(s) (La Corte) y 0 disco(s) donde ambas figuran
+  - F1 [separa] `person:1096` — «Armando Gómez» (1096): 14 créditos o membresías; bandas: Bélica, Clavel Púrpura, Dioslepague, La Corte, Masseratti 2lts; acreditada en el canal
+  - F2 [separa] `person:3030` — «Armando Gómez "007"» (3030): 2 créditos o membresías; bandas: La Corte; acreditada en el canal
+- **#193088 · «José Luis Pardo "DJ Afro"» / «José Luis "Cheo" Pardo»** — árbitro claude-opus-5
+  - árbitro: Los apodos son distintos y no variantes de uno solo (F5); comparten banda (F4) pero eso no aclara si son la misma persona.
+  - F3 [separa] `person:1111.name|person:1243.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «José Luis Pardo "DJ Afro"» / «José Luis "Cheo" Pardo»
+  - F4 [a favor] `context:person:1111|person:1243` — comparten 1 banda(s) (Los Amigos Invisibles) y 0 disco(s) donde ambas figuran
+  - F5 [separa] `person:1111.name|person:1243.name` — apodos distintos: dj afro / cheo
+- **#193089 · «José Luis Pardo "DJ Afro"» / «J. Pardo»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:386` — «José Luis Pardo» (386) también podría ser «José Luis Pardo "DJ Afro"»
+  - F6 [contexto] `person:1243` — «José Luis "Cheo" Pardo» (1243) también podría ser «José Luis Pardo "DJ Afro"»
+  - F7 [contexto] `person:1243` — «José Luis "Cheo" Pardo» (1243) también podría ser «J. Pardo»
+  - F8 [contexto] `person:7552` — «Joe Pardo» (7552) también podría ser «J. Pardo»
+  - F9 [contexto] `person:7544` — «J. L. Pardo» (7544) también podría ser «J. Pardo»
+  - F10 [contexto] `person:9941` — «Juan Pardo» (9941) también podría ser «J. Pardo»
+- **#193090 · «José Luis Pardo "DJ Afro"» / «J. L. Pardo»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:386` — «José Luis Pardo» (386) también podría ser «José Luis Pardo "DJ Afro"»
+  - F6 [contexto] `person:1243` — «José Luis "Cheo" Pardo» (1243) también podría ser «José Luis Pardo "DJ Afro"»
+  - F7 [contexto] `person:1243` — «José Luis "Cheo" Pardo» (1243) también podría ser «J. L. Pardo»
+  - F8 [contexto] `person:7511` — «J. Pardo» (7511) también podría ser «J. L. Pardo»
+- **#193097 · «José Luis "Cheo" Pardo» / «J. Pardo»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:386` — «José Luis Pardo» (386) también podría ser «José Luis "Cheo" Pardo»
+  - F6 [contexto] `person:1111` — «José Luis Pardo "DJ Afro"» (1111) también podría ser «José Luis "Cheo" Pardo»
+  - F7 [contexto] `person:1111` — «José Luis Pardo "DJ Afro"» (1111) también podría ser «J. Pardo»
+  - F8 [contexto] `person:7552` — «Joe Pardo» (7552) también podría ser «J. Pardo»
+  - F9 [contexto] `person:7544` — «J. L. Pardo» (7544) también podría ser «J. Pardo»
+  - F10 [contexto] `person:9941` — «Juan Pardo» (9941) también podría ser «J. Pardo»
+- **#193098 · «José Luis "Cheo" Pardo» / «J. L. Pardo»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:386` — «José Luis Pardo» (386) también podría ser «José Luis "Cheo" Pardo»
+  - F6 [contexto] `person:1111` — «José Luis Pardo "DJ Afro"» (1111) también podría ser «José Luis "Cheo" Pardo»
+  - F7 [contexto] `person:1111` — «José Luis Pardo "DJ Afro"» (1111) también podría ser «J. L. Pardo»
+  - F8 [contexto] `person:7511` — «J. Pardo» (7511) también podría ser «J. L. Pardo»
+- **#193100 · «Italo Pizzolante» / «Italo A. Pizzolante»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:9467` — «I. A. Pizzolante» (9467) también podría ser «Italo A. Pizzolante»
+- **#193104 · «Carlos García» / «Carlos Jorge García»** — árbitro claude-opus-5
+  - árbitro: Sobra o falta un nombre de pila con un apellido muy frecuente (F3): dentro de la misma banda (F4) puede haber otra persona con ese apellido.
+  - F3 [separa] `person:1276.name|person:3052.name` — el mismo nombre con un segundo nombre de más: «Carlos García» / «Carlos Jorge García»
+  - F4 [a favor] `context:person:1276|person:3052` — comparten 1 banda(s) (Okills) y 0 disco(s) donde ambas figuran
+- **#193108 · «Carlos Moreán» / «Carlos "King George" Moreán»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:8204` — «C. Moreán» (8204) también podría ser «Carlos Moreán»
+- **#193109 · «Carlos Moreán» / «C. Moreán»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:3104` — «Carlos "King George" Moreán» (3104) también podría ser «Carlos Moreán»
+- **#193112 · «Carlos Guzmán» / «Carlos "Kako" Enrique Guzmán»** — árbitro claude-opus-5
+  - árbitro: Sobra o falta un nombre de pila con un apellido muy frecuente (F3): dentro de la misma banda (F4) puede haber otra persona con ese apellido.
+  - F3 [separa] `person:1304.name|person:3199.name` — el mismo nombre con un segundo nombre de más: «Carlos Guzmán» / «Carlos "Kako" Enrique Guzmán»
+  - F4 [a favor] `context:person:1304|person:3199` — comparten 1 banda(s) (Radio Clip) y 0 disco(s) donde ambas figuran
+- **#193114 · «Rafael Martínez» / «Rafael Güerajé Martínez»** — árbitro claude-opus-5
+  - árbitro: Sobra o falta un nombre de pila con un apellido muy frecuente (F3): dentro de la misma banda (F4) puede haber otra persona con ese apellido.
+  - F3 [separa] `person:1311.name|person:3134.name` — el mismo nombre con un segundo nombre de más: «Rafael Martínez» / «Rafael Güerajé Martínez»
+  - F4 [a favor] `context:person:1311|person:3134` — comparten 1 banda(s) (Culto Oculto) y 0 disco(s) donde ambas figuran
+- **#193117 · «María Eugenia Espinoza» / «María Espinoza»** — árbitro claude-opus-5
+  - árbitro: Sobra o falta un nombre de pila con un apellido muy frecuente (F3): dentro de la misma banda (F4) puede haber otra persona con ese apellido.
+  - F3 [separa] `person:1344.name|person:2142.name` — el mismo nombre con un segundo nombre de más: «María Eugenia Espinoza» / «María Espinoza»
+  - F4 [a favor] `context:person:1344|person:2142` — comparten 1 banda(s) (Desorden Público) y 0 disco(s) donde ambas figuran
+- **#193119 · «Carlos Fernández» / «Carlos "Morocho" Fernández»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:787` — «Carlos "Carlitos" Fernandez» (787) también podría ser «Carlos Fernández»
+- **#193124 · «Juan De Ferrari» / «Juanma de Ferrari»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:2434` — «Juan Manuel De Ferrari» (2434) también podría ser «Juan De Ferrari»
+- **#193126 · «Luis Yánez» / «Luis Yanes»** — árbitro claude-opus-5
+  - árbitro: Apellido muy frecuente y al menos una ficha tiene bandas que la otra no tiene (F1, F2): una sola banda compartida (F4) no basta para unir dos trayectorias.
+  - F3 [a favor] `person:1409.name|person:1457.name` — el mismo nombre con una errata en el apellido: «Luis Yánez» / «Luis Yanes»
+  - F4 [a favor] `context:person:1409|person:1457` — comparten 1 banda(s) (Desorden Público) y 0 disco(s) donde ambas figuran
+  - F1 [separa] `person:1409` — «Luis Yánez» (1409): 6 créditos o membresías; bandas: Delia, Desorden Público, Mulato, Poster; acreditada en el canal
+  - F2 [separa] `person:1457` — «Luis Yanes» (1457): 9 créditos o membresías; bandas: Claroscuro, Desorden Público, José Antonio Bordell, Radio Clip; acreditada en el canal
+- **#193130 · «Antonio Casas» / «A. Casas»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:228` — «Álvaro Casas» (228) también podría ser «A. Casas»
+- **#193131 · «José "Cheo" Romero» / «José "Cheíto" Romero»** — árbitro claude-opus-5
+  - árbitro: Una ficha usa un diminutivo (F3), que a veces distingue a otra persona con el mismo nombre en el mismo entorno (F4).
+  - F3 [separa] `person:1462.name|person:8938.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «José "Cheo" Romero» / «José "Cheíto" Romero»
+  - F4 [a favor] `context:person:1462|person:8938` — comparten 1 banda(s) (Desorden Público) y 0 disco(s) donde ambas figuran
+- **#193133 · «Carlos Puchi» / «Carlos Pucci»** — árbitro claude-opus-5
+  - árbitro: Apellido muy frecuente y al menos una ficha tiene bandas que la otra no tiene (F1, F2): una sola banda compartida (F4) no basta para unir dos trayectorias.
+  - F3 [a favor] `person:1479.name|person:3546.name` — el mismo nombre con una errata en el apellido: «Carlos Puchi» / «Carlos Pucci»
+  - F4 [a favor] `context:person:1479|person:3546` — comparten 1 banda(s) (Frank Quintero) y 0 disco(s) donde ambas figuran
+  - F1 [separa] `person:1479` — «Carlos Puchi» (1479): 10 créditos o membresías; bandas: Colina, Edgar Alexander, Franco De Vita, Frank Quintero, Ilan Chester, Jorge Cid, Santa Paula; acreditada en el canal
+  - F2 [separa] `person:3546` — «Carlos Pucci» (3546): 5 créditos o membresías; bandas: Carlos Baute, Carlos Mata, Frank Quintero, Yordano; acreditada en el canal
+- **#193134 · «Ricardo Sosa» / «Ricardo "Kike" Sosa»** — árbitro claude-opus-5
+  - árbitro: Apellido muy frecuente y al menos una ficha tiene bandas que la otra no tiene (F1, F2): una sola banda compartida (F4) no basta para unir dos trayectorias.
+  - F3 [a favor] `person:1489.name|person:3146.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Ricardo Sosa» / «Ricardo "Kike" Sosa»
+  - F4 [a favor] `context:person:1489|person:3146` — comparten 1 banda(s) (Sónica) y 0 disco(s) donde ambas figuran
+  - F1 [separa] `person:1489` — «Ricardo Sosa» (1489): 5 créditos o membresías; bandas: 1ra Edición, Sónica; acreditada en el canal
+  - F2 [separa] `person:3146` — «Ricardo "Kike" Sosa» (3146): 1 créditos o membresías; bandas: Sónica; acreditada en el canal
+- **#193135 · «Karina "Kara" Febles» / «Kara Febles»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:6579` — «Karina Febles» (6579) también podría ser «Karina "Kara" Febles»
+- **#193143 · «Gabriel Silva» / «G. Silva»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:5176` — «Gerardo Silva» (5176) también podría ser «G. Silva»
+  - F6 [contexto] `person:4237` — «Gustavo Silva» (4237) también podría ser «G. Silva»
+  - F7 [contexto] `person:6583` — «Gustavo J. Silva» (6583) también podría ser «G. Silva»
+  - F8 [contexto] `person:8684` — «Germán Silva» (8684) también podría ser «G. Silva»
+- **#193154 · «Nörton Pérez "Jack"» / «Nörton "Mars" Pérez»** — árbitro claude-opus-5
+  - árbitro: Los apodos son distintos y no variantes de uno solo (F5); comparten banda (F4) pero eso no aclara si son la misma persona.
+  - F3 [separa] `person:1688.name|person:2766.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Nörton Pérez "Jack"» / «Nörton "Mars" Pérez»
+  - F4 [a favor] `context:person:1688|person:2766` — comparten 1 banda(s) (Jacktürbo) y 0 disco(s) donde ambas figuran
+  - F5 [separa] `person:1688.name|person:2766.name` — apodos distintos: jack / mars
+- **#193156 · «William Guzmán» / «William "Magú" Guzmán»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:2186` — «William Guzman "Magoo"» (2186) también podría ser «William Guzmán»
+  - F6 [contexto] `person:9895` — «W. Guzmán» (9895) también podría ser «William Guzmán»
+  - F7 [contexto] `person:9895` — «W. Guzmán» (9895) también podría ser «William "Magú" Guzmán»
+- **#193157 · «William Guzmán» / «W. Guzmán»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:1848` — «William "Magú" Guzmán» (1848) también podría ser «William Guzmán»
+- **#193161 · «William "Magú" Guzmán» / «W. Guzmán»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:1745` — «William Guzmán» (1745) también podría ser «William "Magú" Guzmán»
+  - F6 [contexto] `person:2186` — «William Guzman "Magoo"» (2186) también podría ser «W. Guzmán»
+- **#193167 · «Ricardo Vizcarrondo» / «Ricardo "Rich" Vizcarrondo»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:3478` — «Ricardo Vizcarrondo "Rich Monji"» (3478) también podría ser «Ricardo Vizcarrondo»
+- **#193169 · «Mario Martínez» / «M. Martínez»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:1070` — «Morella Martínez» (1070) también podría ser «M. Martínez»
+  - F6 [contexto] `person:1271` — «Manuel Martínez» (1271) también podría ser «M. Martínez»
+  - F7 [contexto] `person:2617` — «Max Martínez» (2617) también podría ser «M. Martínez»
+  - F8 [contexto] `person:3275` — «Mickey Martínez» (3275) también podría ser «M. Martínez»
+- **#193176 · «Giancarlo Picozzi» / «G. Picozzi»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:2027` — «Giorgio Picozzi» (2027) también podría ser «G. Picozzi»
+- **#193177 · «Giorgio Picozzi» / «G. Picozzi»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:2026` — «Giancarlo Picozzi» (2026) también podría ser «G. Picozzi»
+- **#193178 · «Manolo Alvarez» / «M. Alvarez»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:3054` — «Maria Corina Álvarez» (3054) también podría ser «M. Alvarez»
+  - F6 [contexto] `person:3426` — «Max Alvarez» (3426) también podría ser «M. Alvarez»
+  - F7 [contexto] `person:5740` — «Máximo Alvarez» (5740) también podría ser «M. Alvarez»
+  - F8 [contexto] `person:7417` — «Máximo "Kari-Kari" Alvarez» (7417) también podría ser «M. Alvarez»
+  - F9 [contexto] `person:6593` — «Manuel Alvarez» (6593) también podría ser «M. Alvarez»
+- **#193179 · «Wolfgang Vivas» / «W. Vivas»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:10126` — «Wolfang Vivas» (10126) también podría ser «W. Vivas»
+- **#193180 · «Wolfgang Vivas» / «Wolfang Vivas»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:9137` — «W. Vivas» (9137) también podría ser «Wolfgang Vivas»
+  - F6 [contexto] `person:9137` — «W. Vivas» (9137) también podría ser «Wolfang Vivas»
+- **#193182 · «Humberto Pérez» / «Humberto Pérez "Hum"»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:2607` — «Humberto "Pocho" Pérez» (2607) también podría ser «Humberto Pérez»
+- **#193183 · «Humberto Pérez» / «Humberto "Hum" Pérez»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:2607` — «Humberto "Pocho" Pérez» (2607) también podría ser «Humberto Pérez»
+- **#193186 · «Fernando J. Rodríguez» / «Fernando Rodríguez»** — árbitro claude-opus-5
+  - árbitro: Sobra o falta un nombre de pila con un apellido muy frecuente (F3): dentro de la misma banda (F4) puede haber otra persona con ese apellido.
+  - F3 [separa] `person:2095.name|person:2691.name` — el mismo nombre con un segundo nombre de más: «Fernando J. Rodríguez» / «Fernando Rodríguez»
+  - F4 [a favor] `context:person:2095|person:2691` — comparten 1 banda(s) (La Mar) y 0 disco(s) donde ambas figuran
+- **#193190 · «José Gómez» / «José Rafael "Cucaracha" Gómez»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:9499` — «José R. Gómez» (9499) también podría ser «José Gómez»
+- **#193191 · «José Gómez» / «José R. Gómez»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:3286` — «José Rafael "Cucaracha" Gómez» (3286) también podría ser «José Gómez»
+- **#193192 · «Daniel Sarmiento» / «Danel Sarmiento "Danpa"»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:9891` — «D. Sarmiento» (9891) también podría ser «Daniel Sarmiento»
+  - F6 [contexto] `person:481` — «Danel Sarmiento» (481) también podría ser «Danel Sarmiento "Danpa"»
+  - F7 [contexto] `person:9891` — «D. Sarmiento» (9891) también podría ser «Danel Sarmiento "Danpa"»
+- **#193193 · «Daniel Sarmiento» / «D. Sarmiento»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:481` — «Danel Sarmiento» (481) también podría ser «D. Sarmiento»
+  - F6 [contexto] `person:798` — «Dan Lee Sarmiento» (798) también podría ser «D. Sarmiento»
+  - F7 [contexto] `person:1013` — «Danel Sarmiento "Dr. Dub"» (1013) también podría ser «D. Sarmiento»
+  - F8 [contexto] `person:2560` — «Dr. Dub Sarmiento» (2560) también podría ser «D. Sarmiento»
+  - F9 [contexto] `person:2790` — «Danel Sarmiento "Danpa"» (2790) también podría ser «D. Sarmiento»
+- **#193198 · «Leonardo Colina "Leo"» / «L. Colina»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:741` — «Leo Colina» (741) también podría ser «L. Colina»
+  - F6 [contexto] `person:1718` — «Luz Colina» (1718) también podría ser «L. Colina»
+- **#193199 · «Jorge Ramírez "Pipo"» / «J. Ramírez»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:321` — «Juan M. Ramírez» (321) también podría ser «J. Ramírez»
+  - F6 [contexto] `person:1982` — «Javier Chá Ramírez» (1982) también podría ser «J. Ramírez»
+- **#193200 · «Armando Hernández "Armandito"» / «A.Hernandez»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:742` — «Armando Hernández» (742) también podría ser «Armando Hernández "Armandito"»
+  - F6 [contexto] `person:220` — «Adolfo Hernández» (220) también podría ser «A.Hernandez»
+  - F7 [contexto] `person:1516` — «Alfonso Hernández» (1516) también podría ser «A.Hernandez»
+  - F8 [contexto] `person:2468` — «Alberto Hernández» (2468) también podría ser «A.Hernandez»
+  - F9 [contexto] `person:2476` — «Argenis Hernández» (2476) también podría ser «A.Hernandez»
+  - F10 [contexto] `person:3183` — «Antonio Hernández "Toy"» (3183) también podría ser «A.Hernandez»
+- **#193201 · «Luis Fernández "Toto"» / «Luis Fernández»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:1317` — «Luis Fernandez "Marcel"» (1317) también podría ser «Luis Fernández»
+- **#193202 · «David Schlesinger» / «D. Schlesinger»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:9912` — «D.Schlesinger» (9912) también podría ser «D. Schlesinger»
+- **#193203 · «David Schlesinger» / «D.Schlesinger»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:9518` — «D. Schlesinger» (9518) también podría ser «D.Schlesinger»
+- **#193205 · «David Mamán» / «D. Mamán»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:9395` — «D. Maman» (9395) también podría ser «D. Mamán»
+- **#193206 · «David Mamán» / «D. Maman»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:5533` — «D. Mamán» (5533) también podría ser «D. Maman»
+- **#193207 · «Agni Mogollón» / «Agny Mogollón»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:7122` — «A. Mogollón» (7122) también podría ser «Agni Mogollón»
+  - F6 [contexto] `person:7122` — «A. Mogollón» (7122) también podría ser «Agny Mogollón»
+- **#193208 · «Agni Mogollón» / «A. Mogollón»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:2564` — «Agny Mogollón» (2564) también podría ser «A. Mogollón»
+- **#193209 · «María E. Ciliberto» / «María Eugenia Ciliberto»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:9396` — «M. Ciliberto» (9396) también podría ser «María E. Ciliberto»
+  - F6 [contexto] `person:9396` — «M. Ciliberto» (9396) también podría ser «María Eugenia Ciliberto»
+- **#193210 · «María E. Ciliberto» / «M. Ciliberto»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:2562` — «María Eugenia Ciliberto» (2562) también podría ser «María E. Ciliberto»
+  - F6 [contexto] `person:2562` — «María Eugenia Ciliberto» (2562) también podría ser «M. Ciliberto»
+- **#193216 · «María Imhof Ramirez» / «Martín Imhof Ramirez»** — árbitro claude-opus-5
+  - árbitro: Los nombres de pila son dos nombres reales distintos, no una errata segura (F3); en la misma banda (F4) pueden figurar dos personas.
+  - F3 [separa] `person:2348.name|person:2354.name` — nombres de pila distintos por pocas letras: «María Imhof Ramirez» / «Martín Imhof Ramirez»
+  - F4 [a favor] `context:person:2348|person:2354` — comparten 1 banda(s) (Sónica) y 1 disco(s) donde ambas figuran («SP Demos» de Sónica)
+- **#193226 · «Javier García» / «Javier "Jay" García»** — árbitro claude-opus-5
+  - árbitro: Apellido muy frecuente y al menos una ficha tiene bandas que la otra no tiene (F1, F2): una sola banda compartida (F4) no basta para unir dos trayectorias.
+  - F3 [a favor] `person:2483.name|person:6644.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Javier García» / «Javier "Jay" García»
+  - F4 [a favor] `context:person:2483|person:6644` — comparten 1 banda(s) (Telegrama) y 0 disco(s) donde ambas figuran
+  - F1 [separa] `person:2483` — «Javier García» (2483): 3 créditos o membresías; bandas: Carlos Baute, Telegrama; acreditada en el canal
+  - F2 [separa] `person:6644` — «Javier "Jay" García» (6644): 1 créditos o membresías; bandas: Telegrama
+- **#193229 · «Argenis Brito» / «A Brito»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:3863` — «Alberto Brito» (3863) también podría ser «A Brito»
+- **#193230 · «María Eugenia Ciliberto» / «M. Ciliberto»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:2257` — «María E. Ciliberto» (2257) también podría ser «María Eugenia Ciliberto»
+  - F6 [contexto] `person:2257` — «María E. Ciliberto» (2257) también podría ser «M. Ciliberto»
+- **#193231 · «Agny Mogollón» / «A. Mogollón»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:2255` — «Agni Mogollón» (2255) también podría ser «A. Mogollón»
+- **#193232 · «Fernando Rodríguez "Fer"» / «Fernando Rodríguez»** — árbitro claude-opus-5
+  - árbitro: Apellido muy frecuente y al menos una ficha tiene bandas que la otra no tiene (F1, F2): una sola banda compartida (F4) no basta para unir dos trayectorias.
+  - F3 [a favor] `person:2621.name|person:2691.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Fernando Rodríguez "Fer"» / «Fernando Rodríguez»
+  - F4 [a favor] `context:person:2621|person:2691` — comparten 1 banda(s) (Pzoom) y 0 disco(s) donde ambas figuran
+  - F1 [separa] `person:2621` — «Fernando Rodríguez "Fer"» (2621): 1 créditos o membresías; bandas: Pzoom; acreditada en el canal
+  - F2 [separa] `person:2691` — «Fernando Rodríguez» (2691): 5 créditos o membresías; bandas: La Mar, Pzoom, Salpachino; acreditada en el canal
+- **#193233 · «Luis Gonzalez» / «Luis E. González»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:7343` — «Luis V. González» (7343) también podría ser «Luis Gonzalez»
+- **#193234 · «Luis Gonzalez» / «Luis V. González»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:4707` — «Luis E. González» (4707) también podría ser «Luis Gonzalez»
+- **#193235 · «Edgar Quintero» / «Edgar Quintero (Edgar Alexander)»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:9084` — «E. Quintero» (9084) también podría ser «Edgar Quintero»
+  - F6 [contexto] `person:9084` — «E. Quintero» (9084) también podría ser «Edgar Quintero (Edgar Alexander)»
+- **#193236 · «Edgar Quintero» / «E. Quintero»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:540` — «Edgar Alexander Quintero» (540) también podría ser «Edgar Quintero»
+  - F6 [contexto] `person:7987` — «Edgar Quintero (Edgar Alexander)» (7987) también podría ser «Edgar Quintero»
+  - F7 [contexto] `person:6804` — «Emilio Quintero» (6804) también podría ser «E. Quintero»
+  - F8 [contexto] `person:11503` — «Edgardo Quintero» (11503) también podría ser «E. Quintero»
+- **#193237 · «Edgar Quintero» / «Edgardo Quintero»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:540` — «Edgar Alexander Quintero» (540) también podría ser «Edgar Quintero»
+  - F6 [contexto] `person:7987` — «Edgar Quintero (Edgar Alexander)» (7987) también podría ser «Edgar Quintero»
+  - F7 [contexto] `person:9084` — «E. Quintero» (9084) también podría ser «Edgar Quintero»
+- **#193238 · «Rubén Dario Perez» / «Rubén Pérez»** — árbitro claude-opus-5
+  - árbitro: Sobra o falta un nombre de pila con un apellido muy frecuente (F3): dentro de la misma banda (F4) puede haber otra persona con ese apellido.
+  - F3 [separa] `person:2642.name|person:5862.name` — el mismo nombre con un segundo nombre de más: «Rubén Dario Perez» / «Rubén Pérez»
+  - F4 [a favor] `context:person:2642|person:5862` — comparten 1 banda(s) (Grand Bite) y 0 disco(s) donde ambas figuran
+- **#193242 · «Pablo González "Mulato"» / «Pablo González»** — regla `review.stale`
+  - pregunta: ¿Sigue vigente la revisión #193242?
+  - una de las dos personas ya no existe (fusionada o retirada); una persona decide si la revisión se cierra
+  - F1 [contexto] `review:193242` — una de las dos personas ya no existe (fusionada o retirada)
+- **#193245 · «Danel Sarmiento "Danpa"» / «D. Sarmiento»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:481` — «Danel Sarmiento» (481) también podría ser «Danel Sarmiento "Danpa"»
+  - F6 [contexto] `person:798` — «Dan Lee Sarmiento» (798) también podría ser «D. Sarmiento»
+  - F7 [contexto] `person:1013` — «Danel Sarmiento "Dr. Dub"» (1013) también podría ser «D. Sarmiento»
+  - F8 [contexto] `person:2560` — «Dr. Dub Sarmiento» (2560) también podría ser «D. Sarmiento»
+  - F9 [contexto] `person:2131` — «Daniel Sarmiento» (2131) también podría ser «D. Sarmiento»
+- **#193246 · «Luis Otamendi» / «Luis José Otamendi»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:8786` — «Luis Antonio Otamendi» (8786) también podría ser «Luis Otamendi»
+  - F6 [contexto] `person:9470` — «L. Otamendi» (9470) también podría ser «Luis Otamendi»
+- **#193247 · «Luis Otamendi» / «Luis Antonio Otamendi»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:2889` — «Luis José Otamendi» (2889) también podría ser «Luis Otamendi»
+  - F6 [contexto] `person:9470` — «L. Otamendi» (9470) también podría ser «Luis Otamendi»
+- **#193248 · «Luis Otamendi» / «L. Otamendi»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:2889` — «Luis José Otamendi» (2889) también podría ser «Luis Otamendi»
+  - F6 [contexto] `person:8786` — «Luis Antonio Otamendi» (8786) también podría ser «Luis Otamendi»
+- **#193249 · «José Leonardo "Pepeleo" Hernández» / «José "Pepe" Hernández»** — árbitro claude-opus-5
+  - árbitro: Los apodos son distintos y no variantes de uno solo (F5); comparten banda (F4) pero eso no aclara si son la misma persona.
+  - F3 [separa] `person:2902.name|person:7626.name` — el mismo nombre con un segundo nombre de más: «José Leonardo "Pepeleo" Hernández» / «José "Pepe" Hernández»
+  - F4 [a favor] `context:person:2902|person:7626` — comparten 1 banda(s) (Los Amigos Invisibles) y 0 disco(s) donde ambas figuran
+  - F5 [separa] `person:2902.name|person:7626.name` — apodos distintos: pepeleo / pepe
+- **#193250 · «César Alberto Somoza» / «C. Somoza»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:9949` — «César Somoza» (9949) también podría ser «César Alberto Somoza»
+- **#193251 · «César Alberto Somoza» / «César Somoza»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:9450` — «C. Somoza» (9450) también podría ser «César Alberto Somoza»
+  - F6 [contexto] `person:9450` — «C. Somoza» (9450) también podría ser «César Somoza»
+- **#193254 · «Ricardo Alberto Escobar» / «Ricardo Escobar»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:7239` — «R. Escobar» (7239) también podría ser «Ricardo Alberto Escobar»
+  - F6 [contexto] `person:7239` — «R. Escobar» (7239) también podría ser «Ricardo Escobar»
+- **#193255 · «Ricardo Alberto Escobar» / «R. Escobar»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:6372` — «Ricardo Escobar» (6372) también podría ser «Ricardo Alberto Escobar»
+- **#193262 · «Juan Carlos Figueroa» / «Juan C. Figueroa»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:2579` — «J.C. Figueroa» (2579) también podría ser «Juan C. Figueroa»
+- **#193264 · «Francisco Díaz» / «Francisco "Roco" Díaz»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:519` — «Francisco "CoCo" Díaz» (519) también podría ser «Francisco Díaz»
+  - F6 [contexto] `person:9894` — «F. Díaz» (9894) también podría ser «Francisco Díaz»
+- **#193265 · «Francisco Díaz» / «F. Díaz»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:519` — «Francisco "CoCo" Díaz» (519) también podría ser «Francisco Díaz»
+  - F6 [contexto] `person:3107` — «Francisco "Roco" Díaz» (3107) también podría ser «Francisco Díaz»
+  - F7 [contexto] `person:755` — «Franlin Díaz» (755) también podría ser «F. Díaz»
+  - F8 [contexto] `person:7677` — «Franklin Díaz» (7677) también podría ser «F. Díaz»
+- **#193273 · «Martín Imhof» / «María Imhof»** — árbitro claude-opus-5
+  - árbitro: Los nombres de pila son dos nombres reales distintos, no una errata segura (F3); en la misma banda (F4) pueden figurar dos personas.
+  - F3 [separa] `person:3149.name|person:3151.name` — nombres de pila distintos por pocas letras: «Martín Imhof» / «María Imhof»
+  - F4 [a favor] `context:person:3149|person:3151` — comparten 1 banda(s) (Sónica) y 4 disco(s) donde ambas figuran («Lo Que Escribo Sobre Ti» de Sónica, «Once» de Sónica, «Tarde O Temprano» de Sónica, «Huellas» de Sónica)
+- **#193274 · «Pedro Vicente Lizardo "PTT"» / «Pedro Vicente Lizardo»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:1068` — «Pedro V. Lizardo "PTT"» (1068) también podría ser «Pedro Vicente Lizardo "PTT"»
+  - F6 [contexto] `person:1068` — «Pedro V. Lizardo "PTT"» (1068) también podría ser «Pedro Vicente Lizardo»
+- **#193282 · «Nacho Zavarce» / «Nacho Javarce»** — árbitro claude-opus-5
+  - árbitro: Los apellidos cambian en la primera letra (F3), lo que no es una errata típica: pueden ser dos personas de la misma banda (F4).
+  - F3 [separa] `person:3406.name|person:3564.name` — nombres parecidos sin una variación reconocible: «Nacho Zavarce» / «Nacho Javarce»
+  - F4 [a favor] `context:person:3406|person:3564` — comparten 1 banda(s) (Sincrónica) y 0 disco(s) donde ambas figuran
+- **#193287 · «Nicky Scarola» / «N. Scarola»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:1075` — «Nicola Scarola» (1075) también podría ser «N. Scarola»
+- **#193288 · «Eleazar Arias» / «E. Arias»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:4176` — «Eduardo Arias» (4176) también podría ser «E. Arias»
+- **#193289 · «Carlos Quintero» / «Carlos Quintero "Kinttero"»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:14` — «Carlos "Nene" Quintero» (14) también podría ser «Carlos Quintero»
+  - F6 [contexto] `person:9154` — «C. Quintero» (9154) también podría ser «Carlos Quintero»
+- **#193290 · «Carlos Quintero» / «C. Quintero»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:14` — «Carlos "Nene" Quintero» (14) también podría ser «Carlos Quintero»
+  - F6 [contexto] `person:3638` — «Carlos Quintero "Kinttero"» (3638) también podría ser «Carlos Quintero»
+  - F7 [contexto] `person:514` — «Chu Quintero» (514) también podría ser «C. Quintero»
+  - F8 [contexto] `person:3097` — «Chu "Zen" Quintero» (3097) también podría ser «C. Quintero»
+- **#193292 · «Neomar Sánchez» / «N. Sánchez»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:5378` — «Nelson Sánchez» (5378) también podría ser «N. Sánchez»
+- **#193293 · «S. Marino» / «Stanislao Marino»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:8904` — «Steve Marino» (8904) también podría ser «S. Marino»
+- **#193303 · «Edgar Alexander» / «E. Alexander»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:11809` — «Edagr Alexander» (11809) también podría ser «E. Alexander»
+- **#193304 · «Edgar Alexander» / «Edagr Alexander»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:7995` — «E. Alexander» (7995) también podría ser «Edgar Alexander»
+- **#193307 · «Despecho Nº 2» / «Despecho 2»** — árbitro claude-opus-5
+  - árbitro: El nombre no es de una persona (un estudio o una abreviatura) (F3): fusionarlo como persona no corresponde; primero hay que reclasificarlo.
+  - F3 [contradice] `person:4204.name|person:7027.name` — el mismo nombre con un segundo nombre de más: «Despecho Nº 2» / «Despecho 2»
+  - F4 [a favor] `context:person:4204|person:7027` — comparten 1 banda(s) (Caramelos De Cianuro) y 0 disco(s) donde ambas figuran
+- **#193309 · «Gustavo Silva» / «Gustavo J. Silva»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:9463` — «G. Silva» (9463) también podría ser «Gustavo J. Silva»
+- **#193312 · «Gustavo Lugo» / «G. Lugo»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:3428` — «Gilbert Lugo» (3428) también podría ser «G. Lugo»
+- **#193314 · «Antonio Díaz» / «A. Díaz»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:256` — «Alberto Díaz» (256) también podría ser «A. Díaz»
+  - F6 [contexto] `person:941` — «Alejandro Díaz» (941) también podría ser «A. Díaz»
+- **#193317 · «Valentina Jaimes» / «Valeria Jaimes»** — árbitro claude-opus-5
+  - árbitro: Los nombres de pila son dos nombres reales distintos, no una errata segura (F3); en la misma banda (F4) pueden figurar dos personas.
+  - F3 [separa] `person:4444.name|person:4452.name` — nombres parecidos sin una variación reconocible: «Valentina Jaimes» / «Valeria Jaimes»
+  - F4 [a favor] `context:person:4444|person:4452` — comparten 1 banda(s) (Oeste Santo) y 1 disco(s) donde ambas figuran («Mira Como Suena» de Oeste Santo)
+- **#193319 · «Robert Santamaría» / «R. Santamaria»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:12195` — «Roberto Santamaría» (12195) también podría ser «R. Santamaria»
+- **#193320 · «Laureano Rangel» / «L. Rangel»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:6605` — «Leonardo Rangel» (6605) también podría ser «L. Rangel»
+- **#193321 · «Arturo Soto» / «A. Soto»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:3472` — «Aixa Soto» (3472) también podría ser «A. Soto»
+  - F6 [contexto] `person:4410` — «Azamir Soto» (4410) también podría ser «A. Soto»
+  - F7 [contexto] `person:7615` — «Alexis Soto» (7615) también podría ser «A. Soto»
+  - F8 [contexto] `person:6640` — «Alejandro Araujo & Eduardo Soto» (6640) también podría ser «A. Soto»
+- **#193325 · «Jesús "Moti" Jiménez» / «J. Jiménez»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:939` — «Jesús Jiménez» (939) también podría ser «Jesús "Moti" Jiménez»
+  - F6 [contexto] `person:3440` — «Jesús "El Moti" Jimenez» (3440) también podría ser «J. Jiménez»
+  - F7 [contexto] `person:4794` — «Joad Manuel Jiménez» (4794) también podría ser «J. Jiménez»
+  - F8 [contexto] `person:6515` — «Juan Jiménez» (6515) también podría ser «J. Jiménez»
+  - F9 [contexto] `person:7918` — «Joad Jiménez» (7918) también podría ser «J. Jiménez»
+- **#193334 · «José Hernández» / «José Fernández»** — árbitro claude-opus-5
+  - árbitro: Son dos apellidos reales distintos (F3), no una errata segura; comparten solo una banda (F4) y cada ficha tiene otras.
+  - F3 [separa] `person:5084.name|person:7691.name` — nombres parecidos sin una variación reconocible: «José Hernández» / «José Fernández»
+  - F4 [a favor] `context:person:5084|person:7691` — comparten 1 banda(s) (Angela) y 0 disco(s) donde ambas figuran
+- **#193335 · «Abraxas Leon» / «A. Leon»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:2045` — «Alejandro León» (2045) también podría ser «A. Leon»
+- **#193336 · «Kevin Lugo» / «Kelvin Lugo»** — árbitro claude-opus-5
+  - árbitro: Los nombres de pila son dos nombres reales distintos, no una errata segura (F3); en la misma banda (F4) pueden figurar dos personas.
+  - F3 [separa] `person:5091.name|person:8406.name` — nombres de pila distintos por pocas letras: «Kevin Lugo» / «Kelvin Lugo»
+  - F4 [a favor] `context:person:5091|person:8406` — comparten 1 banda(s) (Carmina) y 0 disco(s) donde ambas figuran
+- **#193337 · «Hernán Carabaño» / «H. Carabaño»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:8441` — «Hernán J. Carabaño» (8441) también podría ser «Hernán Carabaño»
+- **#193338 · «Hernán Carabaño» / «Hernán J. Carabaño»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:8421` — «H. Carabaño» (8421) también podría ser «Hernán Carabaño»
+  - F6 [contexto] `person:8421` — «H. Carabaño» (8421) también podría ser «Hernán J. Carabaño»
+- **#193340 · «Leandro Perez» / «L. Perez»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:471` — «Luis M. Pérez» (471) también podría ser «L. Perez»
+  - F6 [contexto] `person:1461` — «Luis José Pérez» (1461) también podría ser «L. Perez»
+  - F7 [contexto] `person:476` — «Luis Miguel Pérez» (476) también podría ser «L. Perez»
+  - F8 [contexto] `person:2243` — «Luis Enrique Pérez» (2243) también podría ser «L. Perez»
+  - F9 [contexto] `person:7363` — «Luis Pérez» (7363) también podría ser «L. Perez»
+  - F10 [contexto] `person:7015` — «Laura Pérez» (7015) también podría ser «L. Perez»
+- **#193343 · «Samuel Rodríguez» / «S. Rodríguez»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:37` — «Silvio Rodríguez» (37) también podría ser «S. Rodríguez»
+  - F6 [contexto] `person:4751` — «Sara Rodriguez» (4751) también podría ser «S. Rodríguez»
+  - F7 [contexto] `person:6517` — «Santiago Rodríguez (Srod)» (6517) también podría ser «S. Rodríguez»
+  - F8 [contexto] `person:6514` — «Sic Rodríguez» (6514) también podría ser «S. Rodríguez»
+- **#193345 · «Daniel Reyes» / «D. Reyes»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:9232` — «David de Los Reyes» (9232) también podría ser «D. Reyes»
+- **#193346 · «José Manuel Arria "Chema"» / «J. M. Arria»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:602` — «José Manuel "Chema" Arria» (602) también podría ser «José Manuel Arria "Chema"»
+  - F6 [contexto] `person:9874` — «Juan Manuel Arria» (9874) también podría ser «J. M. Arria»
+- **#193347 · «Carlos Montenegro "Carl Martin"» / «Carlos Montenegro»** — árbitro claude-opus-5
+  - árbitro: Apellido muy frecuente y al menos una ficha tiene bandas que la otra no tiene (F1, F2): una sola banda compartida (F4) no basta para unir dos trayectorias.
+  - F3 [a favor] `person:5202.name|person:8531.name` — el mismo nombre; solo cambian el apodo, su posición o las tildes: «Carlos Montenegro "Carl Martin"» / «Carlos Montenegro»
+  - F4 [a favor] `context:person:5202|person:8531` — comparten 1 banda(s) (Los Claners) y 0 disco(s) donde ambas figuran
+  - F1 [separa] `person:5202` — «Carlos Montenegro "Carl Martin"» (5202): 1 créditos o membresías; bandas: Los Claners
+  - F2 [separa] `person:8531` — «Carlos Montenegro» (8531): 5 créditos o membresías; bandas: Los Claners, Pablo Manavello
+- **#193350 · «L. Sánchez» / «Luis Sánchez»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:5424` — «Leonardo Rodríguez Sánchez» (5424) también podría ser «L. Sánchez»
+  - F6 [contexto] `person:5808` — «Lindarwin Sánchez» (5808) también podría ser «L. Sánchez»
+- **#193351 · «Alex Albujas» / «Alexis Albujas»** — árbitro claude-opus-5
+  - árbitro: Los nombres de pila son dos nombres reales distintos, no una errata segura (F3); en la misma banda (F4) pueden figurar dos personas.
+  - F3 [separa] `person:5426.name|person:9011.name` — nombres de pila distintos por pocas letras: «Alex Albujas» / «Alexis Albujas»
+  - F4 [a favor] `context:person:5426|person:9011` — comparten 1 banda(s) (Disaster Prophet) y 0 disco(s) donde ambas figuran
+- **#193352 · «Eligo Alvarez» / «E. Álvarez»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:1440` — «Emilio Álvarez» (1440) también podría ser «E. Álvarez»
+  - F6 [contexto] `person:4963` — «Enrique Alvarez» (4963) también podría ser «E. Álvarez»
+- **#193353 · «Marco Molina» / «M. Molina»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:2726` — «Miguel Molina» (2726) también podría ser «M. Molina»
+- **#193354 · «D. Mamán» / «D. Maman»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:2253` — «David Mamán» (2253) también podría ser «D. Mamán»
+  - F6 [contexto] `person:2253` — «David Mamán» (2253) también podría ser «D. Maman»
+- **#193355 · «Reinaldo Bello» / «Reynaldo Bello»** — árbitro claude-opus-5
+  - árbitro: Apellido muy frecuente y al menos una ficha tiene bandas que la otra no tiene (F1, F2): una sola banda compartida (F4) no basta para unir dos trayectorias.
+  - F3 [a favor] `person:5535.name|person:7062.name` — nombres de pila distintos por pocas letras: «Reinaldo Bello» / «Reynaldo Bello»
+  - F4 [a favor] `context:person:5535|person:7062` — comparten 1 banda(s) (Agni Mogollón) y 0 disco(s) donde ambas figuran
+  - F1 [separa] `person:5535` — «Reinaldo Bello» (5535): 2 créditos o membresías; bandas: Agni Mogollón, Los Electrodos
+  - F2 [separa] `person:7062` — «Reynaldo Bello» (7062): 3 créditos o membresías; bandas: Aditus, Agni Mogollón, Delia
+- **#193359 · «Felipe Nevado» / «F. Nevado»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:5678` — «Fernando Nevado» (5678) también podría ser «F. Nevado»
+- **#193360 · «J. Ramos» / «José A. Dos Ramos»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:5369` — «Jesús Ramos» (5369) también podría ser «J. Ramos»
+  - F6 [contexto] `person:4433` — «Javier Ramos» (4433) también podría ser «J. Ramos»
+  - F7 [contexto] `person:4785` — «Juan Carlos Ramos» (4785) también podría ser «J. Ramos»
+  - F8 [contexto] `person:4664` — «Jhonny Ramos» (4664) también podría ser «J. Ramos»
+  - F9 [contexto] `person:7399` — «Johnny Ramos» (7399) también podría ser «J. Ramos»
+- **#193361 · «F. Nevado» / «Fernando Nevado»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:5648` — «Felipe Nevado» (5648) también podría ser «F. Nevado»
+- **#193363 · «Pavel Alvarez» / «P. Alvarez»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:6087` — «Phill Alvarez» (6087) también podría ser «P. Alvarez»
+- **#193368 · «J. Viloria» / «Juan B. Viloria»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:2143` — «Jesús Viloria» (2143) también podría ser «J. Viloria»
+  - F6 [contexto] `person:3846` — «Juan Carlos Viloria» (3846) también podría ser «J. Viloria»
+  - F7 [contexto] `person:8409` — «Jesús "Chui" Viloria» (8409) también podría ser «J. Viloria»
+- **#193369 · «León González» / «Leonardo González»** — árbitro claude-opus-5
+  - árbitro: Los nombres de pila son dos nombres reales distintos, no una errata segura (F3); en la misma banda (F4) pueden figurar dos personas.
+  - F3 [separa] `person:5782.name|person:5786.name` — nombres parecidos sin una variación reconocible: «León González» / «Leonardo González»
+  - F4 [a favor] `context:person:5782|person:5786` — comparten 1 banda(s) (Frontera Sur) y 1 disco(s) donde ambas figuran («Frontera Sur» de Frontera Sur)
+- **#193371 · «Jesús E. Flores» / «J. Flores»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:1177` — «Julio Flores» (1177) también podría ser «J. Flores»
+  - F6 [contexto] `person:1423` — «José Flores» (1423) también podría ser «J. Flores»
+  - F7 [contexto] `person:2413` — «Josué Flores» (2413) también podría ser «J. Flores»
+  - F8 [contexto] `person:3905` — «Jorge Flores» (3905) también podría ser «J. Flores»
+  - F9 [contexto] `person:6270` — «Julio Jr. Flores» (6270) también podría ser «J. Flores»
+  - F10 [contexto] `person:8611` — «Johnny Flores» (8611) también podría ser «J. Flores»
+- **#193373 · «Cono Lagona» / «Pino Lagona»** — árbitro claude-opus-5
+  - árbitro: Los nombres de pila son dos nombres reales distintos, no una errata segura (F3); en la misma banda (F4) pueden figurar dos personas.
+  - F3 [separa] `person:5875.name|person:11795.name` — nombres de pila distintos por pocas letras: «Cono Lagona» / «Pino Lagona»
+  - F4 [a favor] `context:person:5875|person:11795` — comparten 1 banda(s) (Grupo C) y 1 disco(s) donde ambas figuran («Grupo C» de Grupo C)
+- **#193380 · «Mariam Mariño» / «Mariel Mariño»** — árbitro claude-opus-5
+  - árbitro: Los nombres de pila son dos nombres reales distintos, no una errata segura (F3); en la misma banda (F4) pueden figurar dos personas.
+  - F3 [separa] `person:6361.name|person:6362.name` — nombres de pila distintos por pocas letras: «Mariam Mariño» / «Mariel Mariño»
+  - F4 [a favor] `context:person:6361|person:6362` — comparten 1 banda(s) (Resaca) y 1 disco(s) donde ambas figuran («Señor De Azul» de Resaca)
+- **#193381 · «Ricardo Escobar» / «R. Escobar»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:2948` — «Ricardo Alberto Escobar» (2948) también podría ser «Ricardo Escobar»
+- **#193383 · «Kara Febles» / «Karina Febles»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:1494` — «Karina "Kara" Febles» (1494) también podría ser «Karina Febles»
+- **#193384 · «Leonardo Rangel» / «L. Rangel»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:4566` — «Laureano Rangel» (4566) también podría ser «L. Rangel»
+- **#193385 · «Carlos Mata» / «C. Mata»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:1008` — «Carlos "Fresa" Mata» (1008) también podría ser «Carlos Mata»
+- **#193390 · «Jesús Bello» / «J. Bello»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:9361` — «Juan Pablo Bello» (9361) también podría ser «J. Bello»
+- **#193391 · «Romi Blanco» / «R. Blanco»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:508` — «Richard Blanco» (508) también podría ser «R. Blanco»
+  - F6 [contexto] `person:1484` — «Richard "Chicha" Blanco» (1484) también podría ser «R. Blanco»
+  - F7 [contexto] `person:1058` — «Richard "El Chicha" Blanco» (1058) también podría ser «R. Blanco»
+  - F8 [contexto] `person:7759` — «Ricardo Blanco» (7759) también podría ser «R. Blanco»
+- **#193392 · «Nevio Riera» / «N. Riera»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:5734` — «Nestor Riera» (5734) también podría ser «N. Riera»
+- **#193397 · «G. Henríquez» / «Geoge Henríquez»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:67` — «George Henríquez» (67) también podría ser «G. Henríquez»
+- **#193398 · «S. Liberatoscioli» / «S. Liberatoscoli»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:40` — «Sandro Liberatoscioli» (40) también podría ser «S. Liberatoscioli»
+- **#193405 · «Rafael Sánchez» / «R. Sánchez»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:1595` — «Roberto Sánchez» (1595) también podría ser «R. Sánchez»
+  - F6 [contexto] `person:1596` — «Ricardo Sánchez» (1596) también podría ser «R. Sánchez»
+  - F7 [contexto] `person:9662` — «Rommel Luis Sánchez» (9662) también podría ser «R. Sánchez»
+- **#193406 · «Italo A. Pizzolante» / «I. A. Pizzolante»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:1260` — «Italo Pizzolante» (1260) también podría ser «Italo A. Pizzolante»
+- **#193407 · «J. Pardo» / «J. L. Pardo»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:386` — «José Luis Pardo» (386) también podría ser «J. Pardo»
+  - F6 [contexto] `person:1243` — «José Luis "Cheo" Pardo» (1243) también podría ser «J. Pardo»
+  - F7 [contexto] `person:1111` — «José Luis Pardo "DJ Afro"» (1111) también podría ser «J. Pardo»
+  - F8 [contexto] `person:7552` — «Joe Pardo» (7552) también podría ser «J. Pardo»
+  - F9 [contexto] `person:9941` — «Juan Pardo» (9941) también podría ser «J. Pardo»
+  - F10 [contexto] `person:386` — «José Luis Pardo» (386) también podría ser «J. L. Pardo»
+- **#193408 · «J. Pardo» / «Joe Pardo»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:386` — «José Luis Pardo» (386) también podría ser «J. Pardo»
+  - F6 [contexto] `person:1243` — «José Luis "Cheo" Pardo» (1243) también podría ser «J. Pardo»
+  - F7 [contexto] `person:1111` — «José Luis Pardo "DJ Afro"» (1111) también podría ser «J. Pardo»
+  - F8 [contexto] `person:7544` — «J. L. Pardo» (7544) también podría ser «J. Pardo»
+  - F9 [contexto] `person:9941` — «Juan Pardo» (9941) también podría ser «J. Pardo»
+- **#193414 · «Mayren Espina» / «Mayra Espina»** — árbitro claude-opus-5
+  - árbitro: Los nombres de pila son dos nombres reales distintos, no una errata segura (F3); en la misma banda (F4) pueden figurar dos personas.
+  - F3 [separa] `person:7753.name|person:7760.name` — nombres de pila distintos por pocas letras: «Mayren Espina» / «Mayra Espina»
+  - F4 [a favor] `context:person:7753|person:7760` — comparten 1 banda(s) (Mermelada Bunch) y 1 disco(s) donde ambas figuran («Dale a Play» de Mermelada Bunch)
+- **#193416 · «Edgar Quintero (Edgar Alexander)» / «E. Quintero»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:540` — «Edgar Alexander Quintero» (540) también podría ser «Edgar Quintero (Edgar Alexander)»
+  - F6 [contexto] `person:2640` — «Edgar Quintero» (2640) también podría ser «Edgar Quintero (Edgar Alexander)»
+  - F7 [contexto] `person:6804` — «Emilio Quintero» (6804) también podría ser «E. Quintero»
+  - F8 [contexto] `person:11503` — «Edgardo Quintero» (11503) también podría ser «E. Quintero»
+- **#193417 · «Edgar Quintero (Edgar Alexander)» / «Edgardo Quintero»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:540` — «Edgar Alexander Quintero» (540) también podría ser «Edgar Quintero (Edgar Alexander)»
+  - F6 [contexto] `person:2640` — «Edgar Quintero» (2640) también podría ser «Edgar Quintero (Edgar Alexander)»
+  - F7 [contexto] `person:9084` — «E. Quintero» (9084) también podría ser «Edgar Quintero (Edgar Alexander)»
+- **#193429 · «H. Carabaño» / «Hernán J. Carabaño»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:5094` — «Hernán Carabaño» (5094) también podría ser «Hernán J. Carabaño»
+- **#193434 · «Jean Senton» / «Joan Senton»** — árbitro claude-opus-5
+  - árbitro: Los nombres de pila son dos nombres reales distintos, no una errata segura (F3); en la misma banda (F4) pueden figurar dos personas.
+  - F3 [separa] `person:8586.name|person:8627.name` — nombres de pila distintos por pocas letras: «Jean Senton» / «Joan Senton»
+  - F4 [a favor] `context:person:8586|person:8627` — comparten 1 banda(s) (Colina) y 0 disco(s) donde ambas figuran
+- **#193440 · «Juan Facundo Coral» / «J.F. Coral»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:9916` — «J. F. Coral» (9916) también podría ser «J.F. Coral»
+- **#193441 · «Juan Facundo Coral» / «J. F. Coral»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:9829` — «J.F. Coral» (9829) también podría ser «J. F. Coral»
+- **#193444 · «José "Cheíto" Romero» / «William "Cheito" Romero»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:486` — «José Romero» (486) también podría ser «José "Cheíto" Romero»
+  - F6 [contexto] `person:1462` — «José "Cheo" Romero» (1462) también podría ser «José "Cheíto" Romero»
+- **#193446 · «A. Nicastro» / «A. Nicastr»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:4641` — «Arcángel Nicastro» (4641) también podría ser «A. Nicastro»
+- **#193449 · «W. Vivas» / «Wolfang Vivas»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:2035` — «Wolfgang Vivas» (2035) también podría ser «W. Vivas»
+- **#193450 · «J. Estrada» / «Jesús Estrada»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:5203` — «Juan Estrada» (5203) también podría ser «J. Estrada»
+  - F6 [contexto] `person:5820` — «José E. Estrada» (5820) también podría ser «J. Estrada»
+  - F7 [contexto] `person:7932` — «José Estrada» (7932) también podría ser «J. Estrada»
+- **#193452 · «Juan Pablo Bello» / «J. Bello»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:6825` — «Jesús Bello» (6825) también podría ser «J. Bello»
+- **#193456 · «C. Somoza» / «César Somoza»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:2943` — «César Alberto Somoza» (2943) también podría ser «César Somoza»
+- **#193458 · «D. Schlesinger» / «D.Schlesinger»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:2223` — «David Schlesinger» (2223) también podría ser «D. Schlesinger»
+  - F6 [contexto] `person:2223` — «David Schlesinger» (2223) también podría ser «D.Schlesinger»
+- **#193461 · «J.F. Coral» / «J. F. Coral»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:8655` — «Juan Facundo Coral» (8655) también podría ser «J.F. Coral»
+  - F6 [contexto] `person:8655` — «Juan Facundo Coral» (8655) también podría ser «J. F. Coral»
+- **#193464 · «S. Vlavianos» / «Stelios Vlavianos»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:10072` — «Stylianos Vlavianos» (10072) también podría ser «S. Vlavianos»
+- **#193466 · «Oscar Martínez» / «O. Martínez»** — regla `person.competing_candidates`
+  - hay más de un candidato plausible para la misma grafía
+  - F5 [contexto] `person:1122` — «Orlando Martínez» (1122) también podría ser «O. Martínez»
+  - F6 [contexto] `person:3344` — «Orlando "Mangan" Martínez» (3344) también podría ser «O. Martínez»
+  - F7 [contexto] `person:6510` — «Ossy Martínez» (6510) también podría ser «O. Martínez»
+
+### YouTube (5)
+
+- **#191125 · Los Mesoneros - EtéreoPlay Sessions (2016) || Full Unplugged || 4K60 Remastered (K2N0DB7GUXM)** — regla `full_album.album_without_tracks`
+  - pregunta: ¿Con qué pistas del catálogo casan las entradas del Full Album K2N0DB7GUXM?
+  - el disco no tiene pistas en el catálogo: no hay nada con que casar, y crearlas desde el tracklist del canal es una escritura al core que decide una persona
+  - F1 [contexto] `album:534` — disco «EtéreoPlay Sessions» (2016) [other] enlazado como Full Album, 0 pistas: ninguna
+  - F2 [contexto] `tracklist:video:K2N0DB7GUXM` — el video marca 4 entradas: «El Paraíso», «Caballo Nuevo», «Cicatriz», «Caiga La Noche»
+- **#191126 · Hana Kobayashi - Smells Like Teen Spirit @LaQuintaBar || Live Nirvana Jazz Cover || 4K60 Remastered (UY7qtbiz61U)** — regla `full_album.album_without_tracks`
+  - pregunta: ¿Con qué pistas del catálogo casan las entradas del Full Album UY7qtbiz61U?
+  - el disco no tiene pistas en el catálogo: no hay nada con que casar, y crearlas desde el tracklist del canal es una escritura al core que decide una persona
+  - F1 [contexto] `album:529` — disco «Smells Like Teen Spirit» (2011) [other] enlazado como Full Album, 0 pistas: ninguna
+  - F2 [contexto] `tracklist:video:UY7qtbiz61U` — el video marca 3 entradas: «Intro», «Smells Like Teen Spirit», «Credits»
+- **#191127 · Horacero - Desenchufado en @CentroCulturalChacao (2007) || Full Concert || 4K60 Remastered (XjI3n0U1-yY)** — regla `full_album.album_without_tracks`
+  - pregunta: ¿Con qué pistas del catálogo casan las entradas del Full Album XjI3n0U1-yY?
+  - el disco no tiene pistas en el catálogo: no hay nada con que casar, y crearlas desde el tracklist del canal es una escritura al core que decide una persona
+  - F1 [contexto] `album:530` — disco «Desenchufado» (2007) [other] enlazado como Full Album, 0 pistas: ninguna
+  - F2 [contexto] `tracklist:video:XjI3n0U1-yY` — el video marca 13 entradas: «Intro 00:00», «Espeso», «Rebotar», «Chiriguare Azul», «Mantarraya», «Caer», «Superllanero», «P.O.L.A.R. / No Sé», «Ayug Paye», «Terrenal», «Lluvia», «Allá Lejos del Sol»
+- **#191129 · Various Artists - Fabricado Acá: Las Actuales Tendencias del Pop Rock Venezolano (2001) (bZa8WC_oynk)** — regla `full_album.album_without_tracks`
+  - pregunta: ¿Con qué pistas del catálogo casan las entradas del Full Album bZa8WC_oynk?
+  - el disco no tiene pistas en el catálogo: no hay nada con que casar, y crearlas desde el tracklist del canal es una escritura al core que decide una persona
+  - F1 [contexto] `album:540` — disco «Fabricado Acá: Tendencias Del Pop Rock Venezolano» (2001) [compilation] enlazado como Full Album, 0 pistas: ninguna
+  - F2 [contexto] `tracklist:video:bZa8WC_oynk` — el video marca 11 entradas: «Claroscuro - Chicle», «Desorden Público - Combate», «Hijos De La Calle & Control Machete - Ladre El Desmadre», «Bacalao Men - Tema Bacalao», «Dioslepague - Tonight», «Pixel - Poco», «DespuésDeVieja - Sucupá», «La Leche - Milagro», «Pacífica - Turma», «Malanga - Te Vas», «Los Océanicos - El Golazo»
+- **#191130 · Candy66 - Burrera (Official 4K Video) (d3vThk5ET8A)** — árbitro claude-opus-5
+  - árbitro: La canción está en dos discos (F2, F3) y la descripción del video no nombra créditos de ninguno; la duración del video (F1, 201 s) no coincide con la de «B-Sides» y la de «Archivo Vol.1» no se conoce.
+  - F2 [a favor] `album:426.credits` — «B-Sides» (2003) [other] (B-Sides), pista «Burrera» (227 s): créditos de grabación que la descripción del video también nombra: ninguno; músicos nombrados: Gustavo Morantes, Jean Carlo De Oliveira, José Morantes, Alejandro Martínez, Frank Pulgar de 5
+  - F3 [a favor] `album:3543.credits` — «Archivo Vol.1» [other], pista «Burrera» (? s): créditos de grabación que la descripción del video también nombra: ninguno; músicos nombrados: José Morantes, Jean Carlo De Oliveira, Gustavo Morantes de 6

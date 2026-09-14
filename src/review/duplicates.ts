@@ -175,7 +175,15 @@ export async function mergeInto(
   }
   if (aliasTable) await client.query(`UPDATE ${aliasTable} SET is_primary=false WHERE ${kind}_id=$1`, [dropId]);
 
-  const claimIds = (await client.query<{ id: string }>(`SELECT id::text FROM ingest.claims WHERE ${kind}_id=ANY($1::bigint[]) ORDER BY ${kind}_id=$2 DESC,id`, [[keepId, dropId], dropId])).rows.map((row) => Number(row.id));
+  // Evidencia de ambas filas: sus claims y los enlazados a sus auditorías. Los
+  // créditos acotados por número ("tracks 01, 03") solo la tienen por auditoría.
+  const claimIds = (await client.query<{ id: string }>(`
+    SELECT id::text FROM (
+      SELECT c.id, c.${kind}_id=$2 AS dropped FROM ingest.claims c WHERE c.${kind}_id=ANY($1::bigint[])
+      UNION ALL
+      SELECT mac.claim_id, ma.${kind}_id=$2 FROM ingest.merge_audit ma JOIN ingest.merge_audit_claims mac ON mac.merge_audit_id=ma.id
+       WHERE ma.${kind}_id=ANY($1::bigint[])
+    ) evidence GROUP BY id ORDER BY bool_or(dropped) DESC,id`, [[keepId, dropId], dropId])).rows.map((row) => Number(row.id));
 
   let moved = 0; let discarded = 0;
   for (const ref of await referencingColumns(client, kind)) {

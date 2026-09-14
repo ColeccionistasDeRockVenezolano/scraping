@@ -49,6 +49,10 @@ npm-debug.log*
 # --- Scratch / análisis temporales ---
 tmp-analysis/
 
+# --- Cachés de herramientas locales (no son artefactos del proyecto) ---
+.impeccable/
+.playwright-mcp/
+
 # La página de la Mesa de Cotejo se genera desde la base con
 # `npm run cotejo:build`; la plantilla sí vive en src/cotejo/.
 public/cotejo.html

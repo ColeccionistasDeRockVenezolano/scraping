@@ -44,10 +44,20 @@ export interface SnapshotVideo {
 export interface SnapshotAlbumLink { videoDbId: number; albumId: number; albumKind: string; isPrimary: boolean; sourceId: number | null; }
 export interface SnapshotAlbum { id: number; artistId: number; title: string; year: number | null; type: string; }
 export interface SnapshotTrack { id: number; albumId: number; discNumber: number; trackNumber: number; title: string; youtubeStartSeconds: number | null; }
+/** Revisión `youtube_match` de esta reconciliación que una persona ya cerró, con lo que vio al decidir. */
+export interface SettledReview {
+  videoDbId: number; reviewId: number; status: string;
+  payload: {
+    category?: string;
+    proposals?: Array<{ kind: string; id: number }>;
+    tracklist?: { unmatched?: string[]; startMismatches?: Array<{ trackId: number; video: number }> } | null;
+  };
+}
 export interface ReconcileSnapshot {
   videos: SnapshotVideo[]; links: SnapshotAlbumLink[]; albums: SnapshotAlbum[];
   artists: Array<{ id: number; name: string }>; aliases: Array<{ artistId: number; alias: string }>;
   tracks: SnapshotTrack[];
+  settled?: SettledReview[];
 }
 
 export interface PlannedVideoArtist { videoDbId: number; artistId: number; relationKind: "performer" | "subject"; via: Via; linkSourceId: number | null; }
@@ -183,6 +193,18 @@ export function matchTracklist(
     }
   }
   return result;
+}
+
+/** La revisión cerrada vio todo lo que el veredicto actual plantea: propuestas, entradas sin pista e inicios discrepantes. */
+export function coversVerdict(review: SettledReview, verdict: VideoVerdict): boolean {
+  const seen = review.payload;
+  if (!seen.category || !QUEUED_CATEGORIES.has(seen.category as ReconcileCategory)) return false;
+  const proposals = new Set((seen.proposals ?? []).map((item) => `${item.kind}:${item.id}`));
+  const unmatched = new Set(seen.tracklist?.unmatched ?? []);
+  const mismatches = new Set((seen.tracklist?.startMismatches ?? []).map((item) => `${item.trackId}:${item.video}`));
+  return verdict.proposals.every((item) => proposals.has(`${item.kind}:${item.id}`))
+    && (verdict.tracklist?.unmatched ?? []).every((title) => unmatched.has(title))
+    && (verdict.tracklist?.startMismatches ?? []).every((item) => mismatches.has(`${item.trackId}:${item.video}`));
 }
 
 /** Plan puro: no lee ni escribe la base, así que se prueba sin PostgreSQL. */
@@ -336,6 +358,17 @@ export function planReconciliation(snapshot: ReconcileSnapshot): ReconcilePlan {
     plan.verdicts.push(verdict);
   }
 
+  // Una revisión que una persona ya cerró (E10: `ambiguity:apply`) decide su
+  // veredicto mientras la evidencia no traiga nada que esa persona no viera:
+  // no se vuelve a preguntar lo mismo en cada corrida.
+  for (const verdict of plan.verdicts) {
+    if (!QUEUED_CATEGORIES.has(verdict.category)) continue;
+    const settled = (snapshot.settled ?? []).find((review) => review.videoDbId === verdict.videoDbId && coversVerdict(review, verdict));
+    if (!settled) continue;
+    verdict.reasons.push(`decidido por una persona en la revisión #${settled.reviewId} (${settled.status}); la evidencia no cambió desde entonces`);
+    verdict.category = "MATCHED_HIGH";
+  }
+
   const linkedAlbums = new Set(snapshot.links.map((link) => link.albumId));
   const artistsOnChannel = new Set(plan.videoArtists.map((row) => row.artistId));
   for (const album of snapshot.albums) {
@@ -369,7 +402,12 @@ async function loadSnapshot(client: PoolClient): Promise<ReconcileSnapshot> {
   const aliases = await client.query<{ artist_id: string; alias: string }>("SELECT artist_id::text, alias FROM ingest.artist_aliases ORDER BY id");
   const tracks = await client.query<{ id: string; album_id: string; disc_number: number; track_number: number; title: string; youtube_start_seconds: number | null }>(
     "SELECT id::text, album_id::text, disc_number, track_number, title, youtube_start_seconds FROM public.tracks ORDER BY album_id, disc_number, track_number");
+  const settled = await client.query<{ id: string; video_id: string; status: string; payload: SettledReview["payload"] | null }>(`
+    SELECT id::text, video_id::text, status::text, payload FROM ingest.review_queue
+     WHERE kind='youtube_match' AND payload->>'via'='yt:reconcile' AND status IN ('approved','dismissed') AND video_id IS NOT NULL
+     ORDER BY id`);
   return {
+    settled: settled.rows.map((row) => ({ videoDbId: Number(row.video_id), reviewId: Number(row.id), status: row.status, payload: row.payload ?? {} })),
     videos: videos.rows.map((row) => ({
       dbId: Number(row.id), videoId: row.video_id, title: row.title, durationSeconds: row.duration_seconds,
       seed: row.upload_order === null ? null : { uploadOrder: row.upload_order, artist: row.artist_name_raw, album: row.album_name_raw, normalizedType: row.normalized_type },

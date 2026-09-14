@@ -16,6 +16,10 @@ desde aquí: estas migraciones solo crean objetos en los schemas `ingest` y
 | `0005_raw_pages_run.up/down.sql` | Añade `raw_pages.run_id` + FK/índice para saber qué run descargó cada snapshot |
 | `0006_youtube_pipeline.up/down.sql` | Estado y auditoría auxiliar del import/sync de YouTube |
 | `0007_entity_resolution_ai.up/down.sql` | Identidad original+claves derivadas, decisiones ER explicables, runs DeepSeek y biografías trazables |
+| `0008_media_link_claims.up/down.sql` · `0009_media_link_constraints.up/down.sql` | Claims `media_link` y restricciones de `media.media_links` |
+| `0010_review_decisions.up/down.sql` | Decisiones humanas provisionales de la Mesa de Cotejo (`review_decisions`) |
+| `0011_album_classifications.up/down.sql` | Todas las clasificaciones que la hoja maestra da a un disco |
+| `0012_ambiguity_resolutions.up/down.sql` | Decisiones explicables del resolutor de ambigüedades (E10), con evidencia obligatoria en el DDL |
 
 Documentación ER completa: `../docs/db/ER_INGEST_MEDIA.md`.
 

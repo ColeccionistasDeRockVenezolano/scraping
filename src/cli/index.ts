@@ -33,6 +33,20 @@ import { reconcileYouTubeChannel } from "../youtube/reconcile.js";
 import { YT_MASTER_XLSX_PATH } from "../ingest/sources.js";
 import { getPool } from "../db/client.js";
 import { keepRepeatedTrackOccurrences } from "../merge/engine.js";
+import { scanAmbiguities } from "../ambiguity/scan.js";
+import { resolveAmbiguities } from "../ambiguity/resolve.js";
+import { applyAmbiguityResolutions, describeApply } from "../ambiguity/apply.js";
+import { DeepSeekArbiter, FileArbiter, type Arbiter } from "../ambiguity/arbiter.js";
+import { createDeepSeekGateway } from "../ai/gateway.js";
+import { getEnv } from "../config/env.js";
+import { applySincopaOrganizationRepair, planSincopaOrganizationRepair } from "../review/sincopa-organizations.js";
+
+/** `--review=1,2,3` → ids; undefined si no vino; null si vino mal escrito. */
+function parseIdList(value: string | undefined): number[] | undefined | null {
+  if (value === undefined) return undefined;
+  const ids = value.split(",").filter(Boolean).map(Number);
+  return ids.length && ids.every((id) => Number.isSafeInteger(id) && id > 0) ? ids : null;
+}
 
 const log = moduleLogger("cli");
 
@@ -206,6 +220,25 @@ async function main(): Promise<number> {
         if (!confirm) console.log('\n(previsualización: nada se escribió) para aplicar: crv review persons --plan=<archivo> --note="<motivo>" --confirm');
         return 0;
       }
+      if (args[0] === "sincopa-organizations") {
+        const note = args.find((arg) => arg.startsWith("--note="))?.slice("--note=".length);
+        const plan = await planSincopaOrganizationRepair();
+        for (const item of plan.candidates) {
+          console.log(`retirar\t${item.id}\t${item.name}\tpáginas=${item.rawPageIds.join(",")}`);
+        }
+        for (const item of plan.skipped) {
+          console.log(`conservar\t${item.id}\t${item.name}\t${item.dependents.map((dep) => `${dep.rows} en ${dep.table}.${dep.column}`).join(", ")}`);
+        }
+        console.log(`TOTAL: ${plan.candidates.length} retirables, ${plan.skipped.length} conservadas por dependencias; ${plan.validNames} nombres válidos reextraídos`);
+        if (!args.includes("--confirm")) {
+          console.log('\n(previsualización) para ejecutar: crv review sincopa-organizations --note="<motivo>" --confirm');
+          return 0;
+        }
+        if (!note?.trim()) { console.error("--note es obligatorio al confirmar"); return 1; }
+        const result = await applySincopaOrganizationRepair(note);
+        console.log(`run ${result.runId}: ${result.removed.length} organizaciones retiradas; ${result.skipped.length} conservadas`);
+        return 0;
+      }
       if (args[0] === "keep-repeated-tracks") {
         const ids = (args[1] ?? "").split(",").filter(Boolean).map(Number);
         const note = args.find((arg) => arg.startsWith("--note="))?.slice("--note=".length);
@@ -290,7 +323,7 @@ async function main(): Promise<number> {
         console.log(JSON.stringify(result, null, 2));
         return 0;
       }
-      console.error('uso: crv review list | show <id> | apply-decisions [--note="<motivo>" --confirm] | keep-repeated-tracks <conflict-id,...> --note="<evidencia>" --confirm | entities [kind] [--limit=N] | approve <kind> "<identity>" <nota> | dismiss <kind> "<identity>" <nota> | approve-batch [kind] [--source=<slug>] [--limit=N] --note="<motivo>" --confirm | dismiss-batch [...]');
+      console.error('uso: crv review list | show <id> | apply-decisions [--note="<motivo>" --confirm] | sincopa-organizations [--note="<motivo>" --confirm] | keep-repeated-tracks <conflict-id,...> --note="<evidencia>" --confirm | entities [kind] [--limit=N] | approve <kind> "<identity>" <nota> | dismiss <kind> "<identity>" <nota> | approve-batch [kind] [--source=<slug>] [--limit=N] --note="<motivo>" --confirm | dismiss-batch [...]');
       return 1;
     }
 
@@ -510,6 +543,81 @@ async function main(): Promise<number> {
       return 0;
     }
 
+    // E10 · Lleva a la cola los pares dudosos de discos y personas.
+    case "ambiguity:scan": {
+      const result = await scanAmbiguities({ dryRun: args.includes("--dry-run") });
+      console.log(`ambiguity:scan${result.dryRun ? " --dry-run" : ` (run ${result.runId})`}: `
+        + `discos ${result.albums.candidates} pares (${result.albums.enqueued} encolados, ${result.albums.alreadyQueued} ya en la cola) · `
+        + `personas ${result.persons.candidates} pares con banda en común (${result.persons.enqueued} encolados, ${result.persons.alreadyQueued} ya en la cola); `
+        + `${result.persons.withoutContext} pares de nombres parecidos sin banda en común no se encolan`);
+      if (result.reportFile) console.log(`  reporte: ${result.reportFile}`);
+      if (result.dryRun) console.log("  (dry-run: nada se escribió)");
+      return 0;
+    }
+
+    // E10 · Decide los casos ambiguos de la cola: reglas primero, árbitro de IA
+    // después y solo con evidencia citada. No toca el core.
+    case "ambiguity:resolve": {
+      const option = (name: string): string | undefined => args.find((arg) => arg.startsWith(`--${name}=`))?.slice(name.length + 3);
+      const reviewIds = parseIdList(option("review"));
+      const arbiterFile = option("arbiter-file");
+      const exportPath = option("export");
+      if (reviewIds === null || (args.includes("--ai") && arbiterFile)) {
+        console.error('uso: crv ambiguity:resolve [--dry-run] [--review=<id,...>] [--ai | --arbiter-file=<json>] [--export=<json>]');
+        return 1;
+      }
+      let arbiter: Arbiter | undefined;
+      if (args.includes("--ai")) {
+        if (!getEnv().DEEPSEEK_API_KEY) {
+          console.error("--ai necesita DEEPSEEK_API_KEY (usa DEEPSEEK_MODEL_FAST); sin ella los casos semánticos quedan NEEDS_HUMAN");
+          return 1;
+        }
+        arbiter = new DeepSeekArbiter(createDeepSeekGateway());
+      } else if (arbiterFile) {
+        arbiter = await FileArbiter.load(arbiterFile);
+      }
+      const result = await resolveAmbiguities({
+        dryRun: args.includes("--dry-run"), ...(arbiter ? { arbiter } : {}), ...(reviewIds ? { reviewIds } : {}), ...(exportPath ? { exportPath } : {}),
+      });
+      const { summary } = result;
+      console.log(`ambiguity:resolve${result.dryRun ? " --dry-run" : ` (run ${result.runId})`}: ${summary.cases} revisiones, ${summary.questions} preguntas`);
+      for (const [decision, count] of Object.entries(summary.byDecision)) console.log(`  ${decision.padEnd(22)} ${count}`);
+      console.log(`  filas: ${summary.rows.created} nuevas, ${summary.rows.reused} sin cambios, ${summary.rows.superseded} sustituidas, ${summary.rows.alreadyApplied} ya aplicadas`);
+      if (summary.arbiter.name) {
+        console.log(`  árbitro ${summary.arbiter.name}: ${summary.arbiter.consulted} consultas, ${summary.arbiter.accepted} aceptadas, `
+          + `${summary.arbiter.rejected} descartadas por la política, ${summary.arbiter.withoutDecision} sin decisión, ${summary.arbiter.unavailable} fallidas`);
+      }
+      console.log(`  ${summary.aiEligiblePending} preguntas NEEDS_HUMAN con ambigüedad semántica esperan árbitro`);
+      if (summary.unsupported.length) console.log(`  fuera de este resolutor: ${summary.unsupported.map((item) => `${item.kind} ${item.count}`).join(" · ")}`);
+      for (const file of result.reportFiles) console.log(`  reporte: ${file}`);
+      if (result.exported) console.log(`  dosieres para árbitro externo: ${result.exported}`);
+      if (result.dryRun) console.log("  (dry-run: nada se escribió)");
+      return 0;
+    }
+
+    // E10 · Única puerta al core de esta etapa, y la abre una persona.
+    case "ambiguity:apply": {
+      const option = (name: string): string | undefined => args.find((arg) => arg.startsWith(`--${name}=`))?.slice(name.length + 3);
+      const reviewIds = parseIdList(option("review"));
+      if (reviewIds === null) { console.error('uso: crv ambiguity:apply [--review=<id,...>] --note="<motivo>" --confirm'); return 1; }
+      const note = option("note");
+      const result = await applyAmbiguityResolutions({ ...(reviewIds ? { reviewIds } : {}), ...(note ? { note } : {}), confirm: args.includes("--confirm") });
+      for (const item of result.planned) {
+        console.log(`  ${item.decision === "MATCH_HIGH_CONFIDENCE" ? "✓" : "·"} #${item.reviewId} ${item.questionKey} [${item.decidedBy === "ai" ? `árbitro ${item.arbiter}` : "reglas"}] ${describeApply(item)}`);
+      }
+      if (result.heldForExplicitReview.length) {
+        console.log(`  ${result.heldForExplicitReview.length} decisiones de árbitro no entran en lote; se aplican nombrando su revisión: --review=${[...new Set(result.heldForExplicitReview.map((item) => item.reviewId))].join(",")}`);
+      }
+      if (!result.confirmed) {
+        console.log(`\n(previsualización: ${result.planned.length} decisiones) para aplicar: crv ambiguity:apply --note="<motivo>" --confirm [--review=<id,...>]`);
+        return 0;
+      }
+      console.log(`ambiguity:apply (run ${result.runId}): ${result.applied.length} aplicadas, ${result.skipped.length} saltadas, ${result.failed.length} fallidas, ${result.reviewsClosed.length} revisiones cerradas`);
+      for (const item of result.skipped) console.log(`  · saltada #${item.reviewId} ${item.questionKey}: ${item.reason}`);
+      for (const item of result.failed) console.log(`  ✗ #${item.reviewId} ${item.questionKey}: ${item.error}`);
+      return result.failed.length ? 1 : 0;
+    }
+
     case undefined:
     case "help":
     case "--help":
@@ -548,6 +656,9 @@ CRV CLI
   review apply-decisions [--note="<motivo>" --confirm]
                       previsualiza/aplica las decisiones concluyentes de la Mesa;
                       unsure permanece abierto y sin tocar el catálogo
+  review sincopa-organizations [--note="<motivo>" --confirm]
+                      reextrae el crudo con el parser vigente y retira falsos sellos
+                      sin evidencia externa ni dependencias; conserva auditoría
   youtube import-sheet <path>  importa YT Master Spreadsheet de forma idempotente
   youtube discover-channel [channel-id] [--resume]  recorre el playlist de uploads sin hidratar
   youtube sync [--pending]     hidrata la unión de hoja y canal en lotes de 50
@@ -566,6 +677,14 @@ CRV CLI
   yt:reconcile [--dry-run]   relaciona cada video con artista, disco y pistas (timestamps);
                              solo identidades exactas, el resto a youtube_match; sin red ni cuota;
                              escribe reports/youtube-reconciliation.{json,md}
+  ambiguity:scan [--dry-run] encola como possible_duplicate los discos del mismo artista con >=3 pistas
+                             en la misma posición y las personas con grafías relacionadas y banda en común
+  ambiguity:resolve [--dry-run] [--review=<id,...>] [--ai | --arbiter-file=<json>] [--export=<json>]
+                             decide los casos de la cola: MATCH_HIGH_CONFIDENCE / KEEP_SEPARATE / NEEDS_HUMAN /
+                             CONFLICT con evidencia citada; --ai consulta DeepSeek (flash); no toca el core;
+                             escribe reports/ambiguity-resolution.{json,md}
+  ambiguity:apply [--review=<id,...>] --note="<motivo>" --confirm
+                             aplica MATCH y KEEP de reglas; las de árbitro solo nombrando su revisión
 
 Comandos especificados para fases futuras (F1+): ${[...KNOWN_FUTURE_COMMANDS].join(", ")}
 `);
