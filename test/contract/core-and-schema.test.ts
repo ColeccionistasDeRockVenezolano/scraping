@@ -76,12 +76,13 @@ describe("contrato del core + migraciones (Drizzle/TS)", () => {
     (globalThis as { __crvBeforeSnapshot?: string }).__crvBeforeSnapshot = snapshot;
   });
 
-  it("aplica 0001-0010 vía el runner TS (2 pasadas, la 2ª es no-op)", async () => {
+  it("aplica 0001-0011 vía el runner TS (2 pasadas, la 2ª es no-op)", async () => {
     const first = await migrateUp();
     expect(first.applied).toEqual([
       "0001_ingest_core", "0002_media", "0003_ingest_claims_identity", "0004_review_kinds",
       "0005_raw_pages_run", "0006_youtube_pipeline", "0007_entity_resolution_ai",
       "0008_media_link_claims", "0009_media_link_constraints", "0010_review_decisions",
+      "0011_album_classifications",
     ]);
     const second = await migrateUp();
     expect(second.applied).toEqual([]);
@@ -198,7 +199,7 @@ describe("contrato del core + migraciones (Drizzle/TS)", () => {
 
     const result = await migrateDownAll();
     expect(result.reverted).toEqual([
-      "0010_review_decisions", "0009_media_link_constraints", "0008_media_link_claims",
+      "0011_album_classifications", "0010_review_decisions", "0009_media_link_constraints", "0008_media_link_claims",
       "0007_entity_resolution_ai", "0006_youtube_pipeline", "0005_raw_pages_run", "0004_review_kinds", "0003_ingest_claims_identity", "0002_media", "0001_ingest_core",
     ]);
 

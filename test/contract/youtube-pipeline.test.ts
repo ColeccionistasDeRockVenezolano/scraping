@@ -32,6 +32,13 @@ describe("pipeline de seed y metadatos oficiales de YouTube", () => {
     expect(Number(seeds.rows[0]!.distinct_video_ids)).toBeGreaterThan(0);
     const mediaReviews = await pool.query("SELECT count(*)::int AS count FROM ingest.review_queue WHERE kind='media_type_no_album'");
     expect(mediaReviews.rows[0]!.count).toBeGreaterThan(0);
+    // Las filas EMPTY (órdenes 97 y 440) son huecos de la hoja, no discos sin video: van a
+    // seed_incomplete y nunca a missing_url (PHASES F2: 86 missing_url + 2 seed_incomplete).
+    const empty = await pool.query<{ kind: string; upload_order: number }>(`
+      SELECT q.kind::text, s.upload_order FROM ingest.review_queue q
+        JOIN ingest.seed_uploads s ON s.id=(q.payload->>'seedUploadId')::bigint
+       WHERE s.artist_name_raw='EMPTY' ORDER BY s.upload_order`);
+    expect(empty.rows).toEqual([{ kind: "seed_incomplete", upload_order: 97 }, { kind: "seed_incomplete", upload_order: 440 }]);
   });
 
   it("persists the Q-pRpO2sYSI fixture and its structured description without a key", async () => {

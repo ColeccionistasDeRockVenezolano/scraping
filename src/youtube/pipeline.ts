@@ -33,6 +33,10 @@ function sourceUrl(cell: ExcelJS.Cell): string | null {
 }
 function normalizedHeader(value: string): string { return value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]/g, ""); }
 function seedHash(row: SeedRow, videoId: string | null): string { return createHash("sha256").update(JSON.stringify({ ...row, videoId })).digest("hex"); }
+function isEmptySeedRow(row: SeedRow): boolean {
+  const blank = (value: string | null) => !value || value.trim().toUpperCase() === "EMPTY";
+  return blank(row.artistName) && blank(row.albumName);
+}
 function validYear(value: string | null): number | null { const year = Number(value); return Number.isInteger(year) && year >= 1000 && year <= 3000 ? year : null; }
 
 export async function readYouTubeMasterSheet(filePath = YT_MASTER_XLSX_PATH): Promise<SeedRow[]> {
@@ -130,6 +134,9 @@ export async function importYouTubeMasterSheet(filePath = YT_MASTER_XLSX_PATH): 
         ON CONFLICT(upload_order) DO UPDATE SET artist_name_raw=EXCLUDED.artist_name_raw,album_name_raw=EXCLUDED.album_name_raw,album_year_raw=EXCLUDED.album_year_raw,type_raw=EXCLUDED.type_raw,url_raw=EXCLUDED.url_raw,status_raw=EXCLUDED.status_raw,video_id=EXCLUDED.video_id,row_number=EXCLUDED.row_number,row_hash=EXCLUDED.row_hash,content_kind=EXCLUDED.content_kind,normalized_type=EXCLUDED.normalized_type,classification_reason=EXCLUDED.classification_reason,run_id=EXCLUDED.run_id,imported_at=now()
         RETURNING id`, [row.uploadOrder,row.artistName,row.albumName,row.albumYear,row.type,row.url, row.status, videoId,row.rowNumber,hash,classification.kind,classification.normalizedType,classification.reason,runId]);
       seedUploadId = Number(saved.rows[0]!.id);
+      // Una fila EMPTY no describe ningún disco: es un hueco de la hoja, no un
+      // disco sin video. Por eso va a seed_incomplete antes que a missing_url.
+      if (isEmptySeedRow(row)) { if (await addReview(client, "seed_incomplete", seedUploadId, { artist: row.artistName, album: row.albumName }, "Fila seed EMPTY: no crea entidades")) result.reviews += 1; continue; }
       if (!videoId) { if (await addReview(client, "missing_url", seedUploadId, { rawUrl: row.url }, "Fila seed sin URL de YouTube canónica")) result.reviews += 1; continue; }
       const savedVideo = await client.query<{ id: string }>(`
         INSERT INTO media.youtube_videos(video_id,url,seed_upload_id,publication_status)

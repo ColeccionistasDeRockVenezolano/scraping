@@ -27,6 +27,7 @@ import { ingestSeedClaims } from "../youtube/seed-claims.js";
 import { syncAlbumClassifications } from "../youtube/classifications.js";
 import { ingestYouTubeApiClaims } from "../youtube/api-claims.js";
 import { confirmYouTubeAlbumLink, linkYouTubeAlbums } from "../youtube/linker.js";
+import { enrichArtistFromYouTube } from "../youtube/enrich.js";
 import { YT_MASTER_XLSX_PATH } from "../ingest/sources.js";
 import { getPool } from "../db/client.js";
 import { keepRepeatedTrackOccurrences } from "../merge/engine.js";
@@ -37,7 +38,7 @@ const KNOWN_SITE_TYPES = ["blogspot", "wordpress", "website", "database", "insta
 
 const KNOWN_FUTURE_COMMANDS = new Set([
   "seed:import-yt", "yt:sync",
-  "yt:link", "yt:enrich", "merge:run", "review:list", "review:approve",
+  "yt:link", "merge:run", "review:list", "review:approve",
   "review:dismiss", "genre:add", "genre:disable", "export:json",
 ]);
 
@@ -435,6 +436,21 @@ async function main(): Promise<number> {
       return 1;
     }
 
+    // Último recurso para discos que siguen sin video: búsqueda dentro del
+    // canal, con presupuesto de cuota; propone, nunca enlaza ni crea.
+    case "yt:enrich-artist": {
+      const artist = args.find((arg) => !arg.startsWith("--"));
+      const maxArg = args.find((arg) => arg.startsWith("--max="))?.slice(6);
+      if (!artist || (maxArg !== undefined && !/^\d+$/.test(maxArg))) { console.error('uso: crv yt:enrich-artist "<artista>" [--max=N] [--dry-run]'); return 1; }
+      const result = await enrichArtistFromYouTube(artist, { dryRun: args.includes("--dry-run"), ...(maxArg ? { maxResults: Number(maxArg) } : {}) });
+      console.log(`yt:enrich-artist ${result.artist}${result.runId ? ` (run ${result.runId})` : ""}: ${result.albumsWithoutVideo} discos sin video; `
+        + `cuota hoy ${result.quotaUsedToday}/${result.quotaBudget}, gastadas ${result.quotaSpent}; ${result.found} videos encontrados, `
+        + `${result.hydrated} hidratados, ${result.matches.length} coincidencias, ${result.reviewsCreated} revisiones youtube_match`);
+      for (const match of result.matches) console.log(`  ? ${match.album} -> https://www.youtube.com/watch?v=${match.videoId} (${match.videoTitle})`);
+      if (result.skippedReason) console.log(`  (${result.skippedReason})`);
+      return 0;
+    }
+
     case "yt:link": {
       const option = (name: string): string | undefined => args.find((arg) => arg.startsWith(`--${name}=`))?.slice(name.length + 3);
       const albumArg = option("album");
@@ -508,6 +524,10 @@ CRV CLI
   youtube unmatched          filas seed pendientes de enlace o revisión
   yt:link [--dry-run]        enlaza sólo releases inequívocos de la hoja YT; el resto va a revisión
   yt:link --album=<id> --video=<youtube-id> --note="evidencia" --confirm
+  yt:enrich-artist "<artista>" [--max=N] [--dry-run]
+                             busca en el canal los discos del artista que siguen sin video
+                             (search.list, 100 unidades; respeta YOUTUBE_DAILY_QUOTA_UNITS);
+                             abre youtube_match, nunca enlaza ni crea álbumes
                              confirma una selección humana como enlace primario
 
 Comandos especificados para fases futuras (F1+): ${[...KNOWN_FUTURE_COMMANDS].join(", ")}

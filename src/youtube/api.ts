@@ -4,6 +4,13 @@ export interface YouTubeApiResponse<T> { items?: T[]; nextPageToken?: string; }
 export type FetchLike = (input: string | URL, init?: RequestInit) => Promise<Response>;
 
 const MAX_RETRIES = 3;
+
+/** Costo en unidades de cuota de cada método usado (tabla oficial de YouTube Data API v3). */
+export const QUOTA_COST = { videos: 1, channels: 1, playlistItems: 1, search: 100 } as const;
+/** Techo de resultados de una búsqueda dirigida: search.list admite 50, aquí nunca se pide más. */
+export const SEARCH_MAX_RESULTS = 25;
+
+export interface YouTubeSearchItem { id?: { kind?: string; videoId?: string }; snippet?: Record<string, unknown>; }
 const sleep = (ms: number) => new Promise<void>((resolve) => { setTimeout(resolve, ms); });
 
 export class YouTubeDataApi {
@@ -38,6 +45,16 @@ export class YouTubeDataApi {
   }
   listPlaylistItems(playlistId: string, pageToken?: string): Promise<YouTubeApiResponse<YouTubePlaylistItemPayload>> {
     return this.request("playlistItems", { part: "snippet,contentDetails,status", playlistId, maxResults: "50", ...(pageToken ? { pageToken } : {}) });
+  }
+  /**
+   * Búsqueda dirigida DENTRO de un canal (100 unidades por llamada). Nunca se
+   * busca en todo YouTube: el canal del proyecto es la verdad (regla 1) y un
+   * video ajeno no puede proponerse como enlace de un disco.
+   */
+  searchChannelVideos(channelId: string, query: string, maxResults = 10): Promise<YouTubeApiResponse<YouTubeSearchItem>> {
+    if (!channelId.trim() || !query.trim()) throw new Error("searchChannelVideos exige canal y consulta");
+    const limit = Math.min(Math.max(Math.trunc(maxResults), 1), SEARCH_MAX_RESULTS);
+    return this.request("search", { part: "snippet", channelId, q: query, type: "video", maxResults: String(limit) });
   }
 }
 

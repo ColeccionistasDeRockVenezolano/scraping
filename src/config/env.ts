@@ -24,6 +24,9 @@ const envSchema = z.object({
 
   // Opcionales: el sistema debe funcionar sin ellas (CONTRACT §6/§12, ARCH §4.11).
   YOUTUBE_API_KEY: z.string().optional(),
+  // Presupuesto diario de la clave (YouTube concede 10.000 unidades). El
+  // enriquecimiento dirigido no gasta si lo consumido hoy no deja margen.
+  YOUTUBE_DAILY_QUOTA_UNITS: z.coerce.number().int().positive().default(10_000),
   DEEPSEEK_API_KEY: z.string().optional(),
   DEEPSEEK_BASE_URL: z.string().url().default("https://api.deepseek.com"),
   DEEPSEEK_MODEL_FAST: z.string().min(1).default("deepseek-v4-flash-0731"),
