@@ -29,6 +29,7 @@
     "test:deepseek:real": "RUN_DEEPSEEK_INTEGRATION=1 ./scripts/with-node22.sh vitest run test/integration/deepseek-real.optional.test.ts",
     "adapters:fixtures": "./scripts/with-node22.sh tsx scripts/show-adapter-fixtures.ts",
     "test:matrix": "./scripts/test-pg-matrix.sh",
+    "test:visual-extreme": "./scripts/with-node22.sh tsx web/tests/visual/extreme-qa.ts",
     "cotejo:build": "./scripts/with-node22.sh tsx scripts/build-cotejo.ts",
     "cotejo:serve": "./scripts/with-node22.sh tsx src/cotejo/server.ts",
     "radio:export": "./scripts/with-node22.sh tsx scripts/export-radio-catalog.ts"
