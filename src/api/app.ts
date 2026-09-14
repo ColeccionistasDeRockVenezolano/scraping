@@ -16,6 +16,7 @@ import {
 import { moduleLogger } from "../logger/index.js";
 import { getEnv } from "../config/env.js";
 import { toApiError } from "./http-errors.js";
+import { registerOperatorAuth } from "./auth.js";
 import { registerHealthRoutes } from "./routes/health.js";
 import { registerSearchRoutes } from "./routes/search.js";
 import { registerArtistRoutes } from "./routes/artists.js";
@@ -23,7 +24,11 @@ import { registerAlbumRoutes } from "./routes/albums.js";
 import { registerPersonRoutes } from "./routes/persons.js";
 import { registerOrganizationRoutes } from "./routes/organizations.js";
 import { registerSourceRoutes } from "./routes/sources.js";
+import { registerReviewRoutes } from "./routes/review-queue.js";
 import { registerYouTubeRoutes } from "./routes/youtube.js";
+import { registerCatalogWriteRoutes } from "./routes/catalog-writes.js";
+import { registerRelationWriteRoutes } from "./routes/relation-writes.js";
+import { registerAliasRoutes } from "./routes/aliases.js";
 import { registerAuditRoutes } from "./routes/audit.js";
 
 const log = moduleLogger("api");
@@ -85,6 +90,7 @@ export async function buildApp(): Promise<FastifyInstance> {
     reply.status(404).send({ error: { code: "not_found", message: `ruta inexistente: ${request.method} ${request.url}` } });
   });
 
+  await registerOperatorAuth(app);
   await registerHealthRoutes(app);
   await registerSearchRoutes(app);
   await registerArtistRoutes(app);
@@ -92,7 +98,11 @@ export async function buildApp(): Promise<FastifyInstance> {
   await registerPersonRoutes(app);
   await registerOrganizationRoutes(app);
   await registerSourceRoutes(app);
+  await registerReviewRoutes(app);
   await registerYouTubeRoutes(app);
+  await registerCatalogWriteRoutes(app);
+  await registerRelationWriteRoutes(app);
+  await registerAliasRoutes(app);
   await registerAuditRoutes(app);
 
   return app;

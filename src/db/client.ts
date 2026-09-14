@@ -10,6 +10,11 @@ import * as schema from "./schema/index.js";
 
 const { Pool } = pg;
 
+// DATE sin zona: `pg` lo convierte a un Date en hora local, y la fecha
+// guardada (birth_date = 1970-05-02) deja de ser comparable con la afirmada
+// ("1970-05-02"). El merge compara valores; se entrega el texto ISO tal cual.
+pg.types.setTypeParser(pg.types.builtins.DATE, (value) => value);
+
 let pool: pg.Pool | undefined;
 
 export function getPool(): pg.Pool {

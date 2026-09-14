@@ -456,13 +456,24 @@ async function applyFieldChoice(item: ReviewWork, runId: number, note: string): 
  * Aplica solo decisiones concluyentes. Cada revisión queda aislada: un fallo
  * produce un run parcial, se informa y no esconde las demás decisiones.
  */
-export async function applyReviewDecisions(note: string): Promise<DecisionApplicationResult> {
+export async function applyReviewDecisions(
+  note: string,
+  options: { reviewIds?: readonly number[] } = {},
+): Promise<DecisionApplicationResult> {
   if (!note.trim()) throw new Error("nota de aplicación obligatoria");
-  const work = await loadWork();
+  // `reviewIds` acota QUÉ se aplica, no con qué se razona: la agrupación por
+  // identidad (un same fija el destino, los different excluyen candidatos) se
+  // calcula con todas las decisiones activas, igual que en la Mesa. La API
+  // decide una revisión cada vez y no debe arrastrar las pendientes de otros.
+  const scope = options.reviewIds === undefined ? undefined : new Set(options.reviewIds);
+  const work = (await loadWork()).filter((item) => scope === undefined || scope.has(item.reviewId));
   const plan = summarize(work);
   const opened = await getPool().query<{ id: string }>(`
     INSERT INTO ingest.scrape_runs(kind,status,params)
-    VALUES('merge_run','running',$1::jsonb) RETURNING id`, [JSON.stringify({ action: "apply_review_decisions", note: note.trim(), plan })]);
+    VALUES('merge_run','running',$1::jsonb) RETURNING id`, [JSON.stringify({
+    action: "apply_review_decisions", note: note.trim(), plan,
+    ...(scope === undefined ? {} : { reviewIds: [...scope] }),
+  })]);
   const runId = Number(opened.rows[0]?.id);
   if (!runId) throw new Error("no se pudo abrir el merge_run de decisiones");
   const result: DecisionApplicationResult = {

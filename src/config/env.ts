@@ -13,6 +13,13 @@ const envSchema = z.object({
 
   PORT: z.coerce.number().int().positive().default(8080),
   HOST: z.string().default("127.0.0.1"),
+  // Escritura de la API (PHASES §E7B). Sin token la API es de solo lectura:
+  // ningún POST/PATCH/DELETE se acepta. No hay usuarios públicos; el token es
+  // del operador del catálogo y nunca se registra en logs.
+  CRV_OPERATOR_TOKEN: z.string().min(24, "CRV_OPERATOR_TOKEN debe tener al menos 24 caracteres").optional(),
+  // Nombre por defecto con que se firman las decisiones cuando la petición no
+  // trae la cabecera X-CRV-Operator.
+  CRV_OPERATOR_NAME: z.string().trim().min(1).max(80).default("operador"),
 
   DATA_DIR: z.string().default("./data"),
 

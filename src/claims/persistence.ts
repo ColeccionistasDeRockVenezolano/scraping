@@ -1,6 +1,7 @@
 // Persistencia idempotente de claims y evidencias. El indice real
 // claims_dedupe_uk es la autoridad; ON CONFLICT nunca reescribe un claim.
 import { createHash } from "node:crypto";
+import type { Pool, PoolClient } from "pg";
 import { getPool } from "../db/client.js";
 import type { ResolutionInput } from "../er/types.js";
 import type { NormalizedClaim } from "../normalization/claims.js";
@@ -23,8 +24,23 @@ export interface ClaimTargets {
   mediaLinkId?: number;
 }
 
+/**
+ * Extremos de una relación ya identificados por id. Solo los aporta una
+ * persona (la API del operador): no se guardan en el claim —que tiene un único
+ * destino— sino que el puente de relaciones los verifica y los usa en vez de
+ * resolver nombres.
+ */
+export interface RelationEndpoints {
+  artistId?: number;
+  personId?: number;
+  organizationId?: number;
+  albumId?: number;
+  trackId?: number;
+}
+
 export interface ClaimToPersist extends NormalizedClaim, ClaimTargets {
   sourceId: number;
+  endpoints?: RelationEndpoints;
   rawPageId?: number;
   seedUploadId?: number;
   runId?: number;
@@ -71,8 +87,9 @@ function dedupeTargetId(input: ClaimTargets): number {
     .find((item): item is number => item !== undefined) ?? 0;
 }
 
-export async function persistClaim(input: ClaimToPersist): Promise<PersistedClaim> {
-  const pool = getPool();
+/** `queryable` permite persistir dentro de la transacción de quien llama. */
+export async function persistClaim(input: ClaimToPersist, queryable: Pick<Pool | PoolClient, "query"> = getPool()): Promise<PersistedClaim> {
+  const pool = queryable;
   const createdBy = input.createdBy ?? "system";
   // Una propuesta de IA nunca adquiere autoridad high/medium por accidente.
   const confidence: Confidence = createdBy === "ai" ? "low" : input.confidence;
@@ -91,7 +108,7 @@ export async function persistClaim(input: ClaimToPersist): Promise<PersistedClai
   ]);
   if (prior.rows[0]?.id) {
     const id = Number(prior.rows[0].id);
-    await persistEvidence(id, input);
+    await persistEvidence(id, input, pool);
     return { id, inserted: false };
   }
   const insert = await pool.query<{ id: string }>(`
@@ -115,7 +132,7 @@ export async function persistClaim(input: ClaimToPersist): Promise<PersistedClai
   ]);
   const id = insert.rows[0]?.id;
   if (id) {
-    await persistEvidence(Number(id), input);
+    await persistEvidence(Number(id), input, pool);
     return { id: Number(id), inserted: true };
   }
   const existing = await pool.query<{ id: string }>(`
@@ -130,13 +147,13 @@ export async function persistClaim(input: ClaimToPersist): Promise<PersistedClai
     input.entityKind, dedupeTargetId(input), input.field, input.rawHash]);
   const existingId = existing.rows[0]?.id;
   if (!existingId) throw new Error("claims_dedupe_uk rechazo un claim pero no se encontro el duplicado");
-  await persistEvidence(Number(existingId), input);
+  await persistEvidence(Number(existingId), input, pool);
   return { id: Number(existingId), inserted: false };
 }
 
-async function persistEvidence(claimId: number, input: ClaimToPersist): Promise<void> {
+async function persistEvidence(claimId: number, input: ClaimToPersist, queryable: Pick<Pool | PoolClient, "query">): Promise<void> {
   const evidenceHash = createHash("sha256").update(json(input.evidence)).digest("hex");
-  await getPool().query(`
+  await queryable.query(`
     INSERT INTO ingest.claim_evidence (claim_id, raw_page_id, seed_upload_id, url, excerpt, selector, position, evidence_hash)
     VALUES ($1,$2,$3,$4,$5,$6,$7,$8) ON CONFLICT (claim_id, evidence_hash) DO NOTHING`, [
     claimId, input.rawPageId ?? null, input.seedUploadId ?? null, input.evidence.url,

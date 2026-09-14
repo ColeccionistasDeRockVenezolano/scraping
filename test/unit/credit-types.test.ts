@@ -37,12 +37,13 @@ describe("clasificación de créditos", () => {
     expect(creditTypeForRole("")).toBe("other");
   });
 
-  it("solo reconoce como relación los tres tipos con tabla puente", () => {
-    expect(isRelationKind("artist_membership")).toBe(true);
-    expect(isRelationKind("album_credit")).toBe(true);
-    expect(isRelationKind("track_credit")).toBe(true);
-    for (const kind of ["artist", "person", "album", "track", "organization",
-      "person_organization", "album_format", "youtube_video"]) {
+  // E7B: el puente escribe también person_organizations y album_formats (solo
+  // con extremos explícitos, ver relations.ts).
+  it("solo reconoce como relación los cinco tipos con tabla puente", () => {
+    for (const kind of ["artist_membership", "person_organization", "album_credit", "track_credit", "album_format"]) {
+      expect(isRelationKind(kind)).toBe(true);
+    }
+    for (const kind of ["artist", "person", "album", "track", "organization", "youtube_video", "media_link"]) {
       expect(isRelationKind(kind)).toBe(false);
     }
   });
