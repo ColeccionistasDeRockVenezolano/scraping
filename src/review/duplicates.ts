@@ -528,5 +528,7 @@ export async function mergeAllDuplicates(note: string): Promise<DuplicateMergeRe
   await finishRun(runId, result.failed.length ? "partial" : "ok", {
     merged: result.merged.length, failed: result.failed.length, skipped: result.skipped.length,
   }, result.failed.length ? JSON.stringify(result.failed.slice(0, MAX_FAILURES_IN_LOG)) : undefined);
+  // Los nombres cambiaron: el índice de búsqueda (E11.9) ya no sirve.
+  invalidateSearchIndex();
   return result;
 }

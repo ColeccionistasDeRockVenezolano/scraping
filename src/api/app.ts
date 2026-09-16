@@ -4,6 +4,7 @@
 // escritura exige el token del operador y pasa por el merge engine como
 // claims human/high (src/merge/operator.ts), nunca por SQL en los controllers.
 import Fastify, { type FastifyInstance } from "fastify";
+import { warmSearchIndex } from "./search-index.js";
 import cors from "@fastify/cors";
 import swagger from "@fastify/swagger";
 import swaggerUi from "@fastify/swagger-ui";
@@ -133,6 +134,10 @@ export async function buildApp(): Promise<FastifyInstance> {
   await registerMergeRunRoutes(app);
   await registerAliasRoutes(app);
   await registerAuditRoutes(app);
+
+  // El índice de búsqueda (E11.9) se carga en segundo plano: la primera
+  // búsqueda real no debe pagar la lectura completa de nombres y alias.
+  void warmSearchIndex((error) => { app.log.error({ err: error }, "no se pudo calentar el índice de búsqueda"); });
 
   return app;
 }

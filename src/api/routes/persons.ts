@@ -12,6 +12,11 @@ const personListItemSchema = z.object({
   nationality: z.string().nullable(),
   isVenezuelan: z.boolean(),
   pictureUrl: z.string().nullable(),
+  creditCount: z.number().int().describe("Créditos de disco y de pista."),
+  bandCount: z.number().int().describe("Membresías de banda."),
+  nameClass: z.enum(["ok", "organization_like", "duration", "fragment", "multiple_people"])
+    .describe("Clasificación del nombre (E11.7): si no es `ok`, la web ofrece convertir o dividir."),
+  nameClassReason: z.string().describe("Por qué el nombre no parece de una persona; vacío si es `ok`."),
 });
 
 const personDetailSchema = personListItemSchema.extend({
@@ -38,7 +43,14 @@ const personDetailSchema = personListItemSchema.extend({
   aliases: z.array(aliasSchema),
 });
 
-const listQuerySchema = paginationQuerySchema.extend({ q: z.string().trim().min(1).optional() });
+const listQuerySchema = paginationQuerySchema.extend({
+  q: z.string().trim().min(1).optional().describe("Busca también sin tildes ni mayúsculas (índice en memoria, E11.9)."),
+  hasCredits: z.enum(["true", "false"]).transform((value) => value === "true").optional()
+    .describe("false: solo fichas sin crédito ni membresía."),
+  suspect: z.enum(["organization_like", "duration", "fragment", "multiple_people"]).optional()
+    .describe("Filtra nombres sospechosos (E11.7)."),
+  sort: z.enum(["name", "credits"]).default("name").describe("credits: créditos + membresías, descendente."),
+});
 
 export async function registerPersonRoutes(app: FastifyInstance): Promise<void> {
   const server = app.withTypeProvider<ZodTypeProvider>();

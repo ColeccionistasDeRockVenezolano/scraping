@@ -120,7 +120,16 @@ export interface PersonListItem {
   nationality: string | null;
   isVenezuelan: boolean;
   pictureUrl: string | null;
+  /** Créditos de disco y de pista (E11.9). */
+  creditCount: number;
+  /** Membresías de banda (E11.9). */
+  bandCount: number;
+  /** Clasificación del nombre (E11.7): si no es `ok`, la ficha avisa y ofrece convertir o dividir. */
+  nameClass: PersonNameClass;
+  nameClassReason: string;
 }
+
+export type PersonNameClass = "ok" | "organization_like" | "duration" | "fragment" | "multiple_people";
 
 export interface PersonBand {
   id: number; artistId: number; artistName: string; role: string;

@@ -429,6 +429,7 @@ export async function applyPersonCorrections(plan: PersonCorrectionPlan, note: s
     await client.query("UPDATE ingest.scrape_runs SET status='ok', finished_at=now(), counters=$2::jsonb WHERE id=$1",
       [runId, JSON.stringify({ applied: result.outcomes.filter((item) => item.status === "applied").length, skipped: result.outcomes.filter((item) => item.status === "skipped").length, creditsMerged: result.creditsMerged })]);
     await client.query(dryRun ? "ROLLBACK" : "COMMIT");
+    if (!dryRun) invalidateSearchIndex();
     return result;
   } catch (error) {
     await client.query("ROLLBACK");

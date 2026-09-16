@@ -10,33 +10,94 @@ export interface PersonListRow {
   nationality: string | null;
   isVenezuelan: boolean;
   pictureUrl: string | null;
+  /** Créditos de disco y de pista. */
+  creditCount: number;
+  /** Membresías de banda. */
+  bandCount: number;
+  /** Clasificación del nombre (E11.7): la web avisa cuando no es `ok`. */
+  nameClass: PersonNameClass;
+  nameClassReason: string;
 }
 
-export async function listPersons(
-  query: PaginationQuery & { q?: string | undefined },
-): Promise<{ rows: PersonListRow[]; total: number }> {
-  const pattern = query.q ? `%${query.q}%` : null;
-  const [rows, count] = await Promise.all([
-    getPool().query<{ id: string; name: string; nationality: string | null; is_venezuelan: boolean; picture_url: string | null }>(
-      `SELECT id, name, nationality, is_venezuelan, picture_url
-         FROM public.persons
-        WHERE $1::text IS NULL OR name ILIKE $1
-        ORDER BY name
-        LIMIT $2 OFFSET $3`,
-      [pattern, query.limit, query.offset],
-    ),
-    getPool().query<{ count: string }>(
-      `SELECT count(*)::text AS count FROM public.persons WHERE $1::text IS NULL OR name ILIKE $1`,
-      [pattern],
-    ),
-  ]);
+/** Clases de «sospechosa» (E11.7); `ok` no se ofrece como filtro. */
+export type PersonSuspectClass = Exclude<PersonNameClass, "ok">;
+
+export interface PersonListQuery extends PaginationQuery {
+  q?: string | undefined;
+  hasCredits?: boolean | undefined;
+  suspect?: PersonSuspectClass | undefined;
+  sort?: "name" | "credits" | undefined;
+}
+
+const PERSON_COLUMNS = `
+  p.id::text AS id, p.name, p.nationality, p.is_venezuelan, p.picture_url,
+  ((SELECT count(*) FROM public.album_credits WHERE person_id=p.id)
+   + (SELECT count(*) FROM public.track_credits WHERE person_id=p.id))::int AS credit_count,
+  (SELECT count(*) FROM public.artist_members WHERE person_id=p.id)::int AS band_count`;
+
+const HAS_ANY_RELATION = `(
+  EXISTS (SELECT 1 FROM public.album_credits WHERE person_id=p.id)
+  OR EXISTS (SELECT 1 FROM public.track_credits WHERE person_id=p.id)
+  OR EXISTS (SELECT 1 FROM public.artist_members WHERE person_id=p.id))`;
+
+interface PersonRowShape {
+  id: string; name: string; nationality: string | null; is_venezuelan: boolean; picture_url: string | null;
+  credit_count: number; band_count: number;
+}
+
+function toPersonRow(row: PersonRowShape): PersonListRow {
+  const classification = classifyPersonName(row.name);
   return {
-    rows: rows.rows.map((row) => ({
-      id: Number(row.id), name: row.name, nationality: row.nationality,
-      isVenezuelan: row.is_venezuelan, pictureUrl: row.picture_url,
-    })),
-    total: Number(count.rows[0]?.count ?? 0),
+    id: Number(row.id), name: row.name, nationality: row.nationality,
+    isVenezuelan: row.is_venezuelan, pictureUrl: row.picture_url,
+    creditCount: row.credit_count, bandCount: row.band_count,
+    nameClass: classification.kind, nameClassReason: classification.reason,
   };
+}
+
+/**
+ * Listado con filtros. `q` se resuelve con el índice en memoria (la base no
+ * pliega tildes), `suspect` se clasifica en Node (E11.7) y `sort=credits`
+ * ordena por créditos + membresías descendente.
+ */
+export async function listPersons(query: PersonListQuery): Promise<{ rows: PersonListRow[]; total: number }> {
+  const conditions: string[] = [];
+  const params: unknown[] = [];
+  if (query.q?.trim()) {
+    const ids = await searchIds("person", query.q.trim());
+    if (ids.length === 0) return { rows: [], total: 0 };
+    params.push(ids);
+    conditions.push(`p.id = ANY($1::bigint[])`);
+  }
+  if (query.hasCredits !== undefined) conditions.push(query.hasCredits ? HAS_ANY_RELATION : `NOT ${HAS_ANY_RELATION}`);
+  const where = conditions.length ? `WHERE ${conditions.join(" AND ")}` : "";
+  const base = `SELECT ${PERSON_COLUMNS} FROM public.persons p ${where}`;
+
+  if (query.suspect) {
+    // El filtro de basura es de texto (TypeScript, regla 0.1.11): se cargan
+    // los nombres que cumplen el resto de filtros y se clasifican aquí.
+    const all = await getPool().query<PersonRowShape>(`${base} ORDER BY p.name`, params);
+    const matched = all.rows.filter((row) => classifyPersonName(row.name).kind === query.suspect);
+    return {
+      rows: matched.slice(query.offset, query.offset + query.limit).map(toPersonRow),
+      total: matched.length,
+    };
+  }
+
+  // El orden va en una consulta externa: PostgreSQL no admite expresiones
+  // sobre los alias de salida (`ORDER BY credit_count + band_count` falla),
+  // y con `q` el orden lo manda el índice (primero los que empiezan).
+  const order = params.length
+    ? "ORDER BY array_position($1::bigint[], x.id::bigint)"
+    : query.sort === "credits" ? "ORDER BY (x.credit_count + x.band_count) DESC, x.name, x.id" : "ORDER BY x.name, x.id";
+
+  const [rows, count] = await Promise.all([
+    getPool().query<PersonRowShape>(
+      `SELECT * FROM (${base}) x ${order} LIMIT $${params.length + 1} OFFSET $${params.length + 2}`,
+      [...params, query.limit, query.offset]),
+    getPool().query<{ count: string }>(`SELECT count(*)::text AS count FROM public.persons p ${where}`, params),
+  ]);
+  return { rows: rows.rows.map(toPersonRow), total: Number(count.rows[0]?.count ?? 0) };
 }
 
 export interface PersonDetail {
