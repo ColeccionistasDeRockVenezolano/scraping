@@ -38,7 +38,9 @@
     "test:visual-merge": "./scripts/with-node22.sh tsx web/tests/visual/merge-qa.ts",
     "cotejo:build": "./scripts/with-node22.sh tsx scripts/build-cotejo.ts",
     "cotejo:serve": "./scripts/with-node22.sh tsx src/cotejo/server.ts",
-    "radio:export": "./scripts/with-node22.sh tsx scripts/export-radio-catalog.ts"
+    "radio:export": "./scripts/with-node22.sh tsx scripts/export-radio-catalog.ts",
+    "deploy": "./scripts/deploy.sh",
+    "deploy:api": "./scripts/deploy.sh --api"
   },
   "dependencies": {
     "@fastify/cors": "^11.3.0",

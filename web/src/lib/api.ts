@@ -7,9 +7,37 @@ import type {
   MergeableKind, OrganizationDetail, OrganizationListItem, Page, PersonDetail, PersonListItem, RelationUpdateResult, RelationWriteResult,
   PersonConversionResult, PersonDuplicateCandidate, PersonMergePreview, PersonMergeResult, RemovalResult, ReviewActionResult,
   ReviewDetail, ReviewListItem, SearchResults, Source, UnmergeResult, VideoDetail, VideoListItem,
+  CurationFinding, CurationFindingStatus, CurationFixBatchResult, CurationScan, CurationScanResult, CurationSeverity, CurationSummary,
 } from "./types";
 
-const BASE_URL = (import.meta.env["VITE_API_BASE_URL"] as string | undefined) ?? "http://127.0.0.1:8080";
+/**
+ * Dónde vive la API. `VITE_API_BASE_URL` manda si está definida. Si no, un
+ * build publicado bajo un prefijo (`build:public` → `/crv/`) habla con la API
+ * del mismo origen en `<prefijo>api` (web/server.mjs la reenvía): así no
+ * depende de recordar la variable. Sin prefijo (desarrollo) queda la API local.
+ *
+ * Pasado real (2026-09-15 y 2026-09-16): publicar sin la variable dejó el
+ * bundle apuntando a http://127.0.0.1:8080 —el equipo de quien visita, no el
+ * servidor— y nadie podía iniciar sesión desde el dominio público.
+ */
+const LOOPBACK_HOSTS = new Set(["127.0.0.1", "localhost", "[::1]"]);
+
+function apiBaseUrl(): string {
+  const configured = (import.meta.env["VITE_API_BASE_URL"] as string | undefined)?.trim();
+  const prefix = import.meta.env.BASE_URL;
+  const sameOrigin = prefix && prefix !== "/" ? `${prefix.replace(/\/$/u, "")}/api` : null;
+  // Una ruta relativa («/crv/api») se resuelve contra el origen de la página.
+  const resolved = new URL(configured || sameOrigin || "http://127.0.0.1:8080", window.location.origin);
+  // Una página abierta desde un dominio real nunca puede alcanzar una API en
+  // loopback (sería el equipo del visitante, y la CSP la bloquea): se usa la
+  // del mismo origen aunque el build traiga la dirección local.
+  if (sameOrigin && LOOPBACK_HOSTS.has(resolved.hostname) && !LOOPBACK_HOSTS.has(window.location.hostname)) {
+    return new URL(sameOrigin, window.location.origin).toString();
+  }
+  return resolved.toString();
+}
+
+const BASE_URL = apiBaseUrl();
 
 export class ApiError extends Error {
   constructor(readonly status: number, readonly code: string, message: string, readonly details?: Record<string, unknown>) {

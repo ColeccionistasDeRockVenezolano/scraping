@@ -10,7 +10,7 @@ import tseslint from "typescript-eslint";
 export default tseslint.config(
   {
     ignores: [
-      "**/node_modules/**", "**/dist/**", "build/**", "coverage/**",
+      "**/node_modules/**", "**/dist/**", "**/dist-public/**", "build/**", "coverage/**",
       "data/**", "backups/**", "public/**", "tmp-analysis/**",
       "web/tests/artifacts/**", "docs/**",
     ],

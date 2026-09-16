@@ -261,12 +261,16 @@ bajo `/crv/`). Tras publicar: `systemctl --user restart crv-web` (y `crv-api`
 si cambió el API).
 
 ```bash
-cd web && VITE_API_BASE_URL=https://NODO.TAILNET.ts.net/crv/api npm run build:public
+cd web && npm run build:public   # la API sale sola: /crv/api del mismo origen
 ```
 
-`build:public` ya pasa `--base=/crv/` a Vite. Sin `VITE_API_BASE_URL` el
-bundle apunta a `http://127.0.0.1:8080` (el loopback del *servidor*, no del
-navegador del visitante) y ningún fetch llega a la API. Además, Funnel recorta
+`build:public` ya pasa `--base=/crv/` a Vite, y con ese prefijo la web habla
+con `/crv/api` del mismo origen sin configurar nada (`web/src/lib/api.ts`).
+Antes dependía de `VITE_API_BASE_URL`: publicar sin ella dejaba el bundle
+apuntando a `http://127.0.0.1:8080` —el equipo del visitante— y nadie podía
+iniciar sesión (pasó el 2026-09-15 y el 2026-09-16). Aunque un `.env` traiga
+esa dirección de loopback, una página abierta desde un dominio real usa la API
+del mismo origen. Además, Funnel recorta
 el prefijo configurado antes de reenviar la petición al backend: `/crv` y
 `/crv/` le llegan al gateway igual de recortados (`/`), así que un redirect
 del lado del servidor no puede distinguirlos. El basename de `BrowserRouter`
