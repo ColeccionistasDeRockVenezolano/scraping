@@ -4,7 +4,7 @@ import { z } from "zod";
 import { paginationQuerySchema, toPage } from "../pagination.js";
 import { idParamSchema, aliasSchema, paginatedResponseSchema } from "../schemas.js";
 import { getOrganizationDetail, listOrganizations } from "../repositories/organizations.js";
-import { notFound } from "../http-errors.js";
+import { notFoundEntity } from "../repositories/redirects.js";
 
 const organizationListItemSchema = z.object({
   id: z.number().int(),
@@ -54,7 +54,7 @@ export async function registerOrganizationRoutes(app: FastifyInstance): Promise<
     },
   }, async (request) => {
     const detail = await getOrganizationDetail(request.params.id);
-    if (!detail) throw notFound("organization", request.params.id);
+    if (!detail) throw await notFoundEntity("organization", request.params.id);
     return detail;
   });
 }

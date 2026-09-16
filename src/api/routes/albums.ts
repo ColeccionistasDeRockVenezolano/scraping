@@ -4,7 +4,7 @@ import { z } from "zod";
 import { paginationQuerySchema, toPage } from "../pagination.js";
 import { idParamSchema, aliasSchema, paginatedResponseSchema } from "../schemas.js";
 import { getAlbumDetail, listAlbums } from "../repositories/albums.js";
-import { notFound } from "../http-errors.js";
+import { notFoundEntity } from "../repositories/redirects.js";
 
 const albumListItemSchema = z.object({
   id: z.number().int(),
@@ -93,7 +93,7 @@ export async function registerAlbumRoutes(app: FastifyInstance): Promise<void> {
     },
   }, async (request) => {
     const detail = await getAlbumDetail(request.params.id);
-    if (!detail) throw notFound("album", request.params.id);
+    if (!detail) throw await notFoundEntity("album", request.params.id);
     return detail;
   });
 }

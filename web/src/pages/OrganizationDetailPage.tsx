@@ -2,12 +2,14 @@ import { useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { organizationWrites, organizationsApi } from "../lib/api";
 import { useAsync } from "../lib/useAsync";
+import { useMovedToRedirect } from "../lib/useMovedTo";
 import { useOperator } from "../lib/OperatorContext";
 import { useToast } from "../lib/ToastContext";
 import { LoadingState, ErrorState } from "../components/StateViews";
 import { AliasEditor } from "../components/AliasEditor";
 import { EntityFormModal } from "../components/EntityFormModal";
 import { ConfirmDialog } from "../components/ConfirmDialog";
+import { MergeEntityModal } from "../components/MergeEntityModal";
 import { initialOf } from "../components/EntityCard";
 import { ORGANIZATION_FIELDS } from "../lib/entityFields";
 import { organizationTypeLabel } from "../lib/labels";
@@ -18,9 +20,11 @@ export function OrganizationDetailPage() {
   const navigate = useNavigate();
   const { isConfigured } = useOperator();
   const { notify } = useToast();
-  const { data: org, loading, error, reload } = useAsync(() => organizationsApi.get(orgId), [orgId]);
+  const { data: org, loading, error, errorValue, reload } = useAsync(() => organizationsApi.get(orgId), [orgId]);
+  useMovedToRedirect(errorValue);
   const [editing, setEditing] = useState(false);
   const [deleting, setDeleting] = useState(false);
+  const [merging, setMerging] = useState(false);
 
   if (loading) return <LoadingState />;
   if (error || !org) return <ErrorState message={error ?? "Organización no encontrada."} onRetry={reload} />;
@@ -47,6 +51,7 @@ export function OrganizationDetailPage() {
       {isConfigured ? (
         <div className="page-actions" style={{ marginTop: 14 }}>
           <button type="button" className="btn btn--sm" onClick={() => setEditing(true)}>Editar</button>
+          <button type="button" className="btn btn--sm" onClick={() => setMerging(true)}>Fusionar con…</button>
           <button type="button" className="btn btn--sm btn--danger" onClick={() => setDeleting(true)}>Retirar</button>
         </div>
       ) : null}
@@ -133,6 +138,16 @@ export function OrganizationDetailPage() {
             navigate("/organizaciones");
           }}
           onClose={() => setDeleting(false)}
+        />
+      ) : null}
+
+      {merging ? (
+        <MergeEntityModal
+          kind="organization"
+          entityId={org.id}
+          entityName={org.name}
+          onMerged={(keepId) => { setMerging(false); navigate(`/organizaciones/${keepId}`, { replace: true }); }}
+          onClose={() => setMerging(false)}
         />
       ) : null}
     </>

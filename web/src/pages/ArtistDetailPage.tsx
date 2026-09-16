@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { artistsApi, artistMemberWrites, artistWrites } from "../lib/api";
 import { useAsync } from "../lib/useAsync";
+import { useMovedToRedirect } from "../lib/useMovedTo";
 import { useOperator } from "../lib/OperatorContext";
 import { useToast } from "../lib/ToastContext";
 import { LoadingState, ErrorState } from "../components/StateViews";
@@ -9,6 +10,7 @@ import { EntityCard, initialOf } from "../components/EntityCard";
 import { AliasEditor } from "../components/AliasEditor";
 import { EntityFormModal } from "../components/EntityFormModal";
 import { ConfirmDialog } from "../components/ConfirmDialog";
+import { MergeEntityModal } from "../components/MergeEntityModal";
 import { EntityPicker } from "../components/EntityPicker";
 import { Modal } from "../components/Modal";
 import { ARTIST_FIELDS } from "../lib/entityFields";
@@ -21,10 +23,12 @@ export function ArtistDetailPage() {
   const navigate = useNavigate();
   const { isConfigured } = useOperator();
   const { notify } = useToast();
-  const { data: artist, loading, error, reload } = useAsync(() => artistsApi.get(artistId), [artistId]);
+  const { data: artist, loading, error, errorValue, reload } = useAsync(() => artistsApi.get(artistId), [artistId]);
+  useMovedToRedirect(errorValue);
   const [editing, setEditing] = useState(false);
   const [deleting, setDeleting] = useState(false);
   const [addingMember, setAddingMember] = useState(false);
+  const [merging, setMerging] = useState(false);
 
   if (loading) return <LoadingState />;
   if (error || !artist) return <ErrorState message={error ?? "Artista no encontrado."} onRetry={reload} />;
@@ -53,6 +57,7 @@ export function ArtistDetailPage() {
       {isConfigured ? (
         <div className="page-actions" style={{ marginTop: 14 }}>
           <button type="button" className="btn btn--sm" onClick={() => setEditing(true)}>Editar</button>
+          <button type="button" className="btn btn--sm" onClick={() => setMerging(true)}>Fusionar con…</button>
           <button type="button" className="btn btn--sm btn--danger" onClick={() => setDeleting(true)}>Retirar</button>
         </div>
       ) : null}
@@ -125,6 +130,16 @@ export function ArtistDetailPage() {
 
       {addingMember ? (
         <AddMemberModal artistId={artist.id} onClose={() => setAddingMember(false)} onDone={() => { setAddingMember(false); reload(); }} />
+      ) : null}
+
+      {merging ? (
+        <MergeEntityModal
+          kind="artist"
+          entityId={artist.id}
+          entityName={artist.name}
+          onMerged={(keepId) => { setMerging(false); navigate(`/artistas/${keepId}`, { replace: true }); }}
+          onClose={() => setMerging(false)}
+        />
       ) : null}
     </>
   );

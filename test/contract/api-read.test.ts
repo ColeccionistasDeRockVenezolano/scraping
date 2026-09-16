@@ -208,6 +208,36 @@ describe("API de lectura (E7A) — caso Caramelos De Cianuro", () => {
     expect(body.albumCredits.map((c: { creditType: string }) => c.creditType).sort()).toEqual(["mixing", "recording"]);
   });
 
+  it("GET /persons/:id de un id fusionado responde 404 con movedTo (E11.2)", async () => {
+    const mergedId = Number((await getPool().query("INSERT INTO public.persons(name) VALUES('Fusionada Fixture') RETURNING id")).rows[0].id);
+    const survivorId = Number((await getPool().query("INSERT INTO public.persons(name) VALUES('Superviviente Fixture') RETURNING id")).rows[0].id);
+    await getPool().query("DELETE FROM public.persons WHERE id=$1", [mergedId]);
+    await getPool().query(
+      "INSERT INTO ingest.entity_redirects(entity_kind,from_id,to_id) VALUES('person',$1,$2)", [mergedId, survivorId]);
+
+    const res = await app.inject({ method: "GET", url: `/persons/${mergedId}` });
+    expect(res.statusCode).toBe(404);
+    expect(res.json()).toEqual({
+      error: { code: "not_found", message: expect.any(String), details: { movedTo: { kind: "person", id: survivorId } } },
+    });
+  });
+
+  it("GET /persons/:id de una persona absorbida por una organización responde movedTo con la organización (E11.2)", async () => {
+    const absorbedId = Number((await getPool().query("INSERT INTO public.persons(name) VALUES('Absorbida Fixture') RETURNING id")).rows[0].id);
+    const orgId = Number((await getPool().query("INSERT INTO public.organizations(name) VALUES('Estudio Absorbente Fixture') RETURNING id")).rows[0].id);
+    await getPool().query("DELETE FROM public.persons WHERE id=$1", [absorbedId]);
+    // La conversión de persona a organización no crea redirección de persona a
+    // persona: el destino queda en la auditoría `absorbed_person`.
+    await getPool().query(`
+      INSERT INTO ingest.merge_audit(entity_kind,organization_id,field,old_value,reason,confidence,performed_by)
+      VALUES('organization',$1,'absorbed_person',$2::jsonb,'fixture de absorción','high','human')`,
+    [orgId, JSON.stringify({ person: { id: absorbedId, name: "Absorbida Fixture" } })]);
+
+    const res = await app.inject({ method: "GET", url: `/persons/${absorbedId}` });
+    expect(res.statusCode).toBe(404);
+    expect(res.json().error.details.movedTo).toEqual({ kind: "organization", id: orgId });
+  });
+
   it("GET /organizations/:id trae discos del sello y artistas acreditados", async () => {
     const list = await app.inject({ method: "GET", url: "/organizations?q=Mad Box" });
     const orgId = list.json().data[0].id;

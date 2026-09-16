@@ -16,8 +16,8 @@ export class ApiError extends Error {
   }
 }
 
-export function notFound(entity: string, id: number | string): ApiError {
-  return new ApiError(404, "not_found", `${entity} inexistente: ${id}`);
+export function notFound(entity: string, id: number | string, details?: Record<string, unknown>): ApiError {
+  return new ApiError(404, "not_found", `${entity} inexistente: ${id}`, details);
 }
 
 export function badRequest(message: string): ApiError {

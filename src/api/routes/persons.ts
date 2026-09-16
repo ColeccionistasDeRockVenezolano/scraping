@@ -4,7 +4,7 @@ import { z } from "zod";
 import { paginationQuerySchema, toPage } from "../pagination.js";
 import { idParamSchema, aliasSchema, paginatedResponseSchema } from "../schemas.js";
 import { getPersonDetail, listPersons } from "../repositories/persons.js";
-import { notFound } from "../http-errors.js";
+import { notFoundEntity } from "../repositories/redirects.js";
 
 const personListItemSchema = z.object({
   id: z.number().int(),
@@ -62,7 +62,7 @@ export async function registerPersonRoutes(app: FastifyInstance): Promise<void> 
     },
   }, async (request) => {
     const detail = await getPersonDetail(request.params.id);
-    if (!detail) throw notFound("person", request.params.id);
+    if (!detail) throw await notFoundEntity("person", request.params.id);
     return detail;
   });
 }

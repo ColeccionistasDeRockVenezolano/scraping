@@ -4,7 +4,7 @@ import { z } from "zod";
 import { paginationQuerySchema, toPage } from "../pagination.js";
 import { idParamSchema, aliasSchema, paginatedResponseSchema } from "../schemas.js";
 import { getArtistDetail, listArtists } from "../repositories/artists.js";
-import { notFound } from "../http-errors.js";
+import { notFoundEntity } from "../repositories/redirects.js";
 
 const artistListItemSchema = z.object({
   id: z.number().int(),
@@ -55,7 +55,7 @@ export async function registerArtistRoutes(app: FastifyInstance): Promise<void> 
     },
   }, async (request) => {
     const detail = await getArtistDetail(request.params.id);
-    if (!detail) throw notFound("artist", request.params.id);
+    if (!detail) throw await notFoundEntity("artist", request.params.id);
     return detail;
   });
 }

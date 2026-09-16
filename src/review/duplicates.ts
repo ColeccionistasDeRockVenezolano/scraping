@@ -82,6 +82,12 @@ const EMPTY_RULES: Readonly<Record<string, { empty: string; present: string }>> 
   "albums.album_type": { empty: "k.album_type='other'", present: "d.album_type<>'other'" },
   "persons.is_venezuelan": { empty: "k.is_venezuelan=false", present: "d.is_venezuelan=true" },
 };
+/**
+ * Tipos con página propia e identidad fusionable que dejan redirección: el id
+ * que desaparece debe llevar a la ficha que quedó (P5). Los créditos y las
+ * membresías no son entidades navegables y no redirigen.
+ */
+const REDIRECT_KINDS = new Set<MergeKind>(["artist", "person", "organization", "album", "track"]);
 
 export interface DuplicateGroup {
   kind: DuplicateKind;
@@ -428,6 +434,21 @@ export async function mergeInto(
   await client.query(
     "INSERT INTO ingest.merge_audit_claims(merge_audit_id,claim_id) SELECT $1, unnest($2::bigint[]) ON CONFLICT DO NOTHING",
     [auditId, claimIds]);
+  // El id que desaparece queda redirigido a la ficha viva (P5). Primero se
+  // comprime la cadena —quien apuntaba al duplicado pasa a apuntar a la que
+  // queda— y después se registra el propio `drop`, con la auditoría y el run
+  // como rastro para poder deshacerlo (E11.8).
+  if (REDIRECT_KINDS.has(kind)) {
+    await client.query(
+      "UPDATE ingest.entity_redirects SET to_id=$3 WHERE entity_kind=$1 AND to_id=$2",
+      [kind, dropId, keepId]);
+    await client.query(`
+      INSERT INTO ingest.entity_redirects(entity_kind,from_id,to_id,merge_audit_id,run_id)
+      VALUES($1,$2,$3,$4,$5)
+      ON CONFLICT (entity_kind,from_id) DO UPDATE
+        SET to_id=EXCLUDED.to_id, merge_audit_id=EXCLUDED.merge_audit_id, run_id=EXCLUDED.run_id`,
+    [kind, dropId, keepId, auditId, runId]);
+  }
   return { moved, discarded: discardedRows.length, filled, tracksMerged, auditId, movedRefs, discardedRows, detachedReviews };
 }
 

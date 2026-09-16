@@ -5,6 +5,8 @@ export interface AsyncState<T> {
   data: T | undefined;
   loading: boolean;
   error: string | undefined;
+  /** El error original (ApiError incluida) para quien necesite sus detalles, p. ej. `movedTo`. */
+  errorValue: unknown;
   reload: () => void;
 }
 
@@ -16,17 +18,20 @@ export function useAsync<T>(fetcher: () => Promise<T>, deps: unknown[]): AsyncSt
   const [data, setData] = useState<T>();
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string>();
+  const [errorValue, setErrorValue] = useState<unknown>();
   const generation = useRef(0);
 
   const load = useCallback(() => {
     const current = ++generation.current;
     setLoading(true);
     setError(undefined);
+    setErrorValue(undefined);
     fetcher().then(
       (result) => { if (current === generation.current) { setData(result); setLoading(false); } },
       (err: unknown) => {
         if (current !== generation.current) return;
         setError(err instanceof ApiError ? err.message : "No se pudo cargar la información.");
+        setErrorValue(err);
         setLoading(false);
       },
     );
@@ -35,5 +40,5 @@ export function useAsync<T>(fetcher: () => Promise<T>, deps: unknown[]): AsyncSt
 
   useEffect(() => { load(); }, [load]);
 
-  return { data, loading, error, reload: load };
+  return { data, loading, error, errorValue, reload: load };
 }

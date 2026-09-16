@@ -199,6 +199,25 @@ describe("mergeInto endurecido", () => {
     expect(row.is_venezuelan).toBe(true);
   });
 
+  it("deja redirección del id fusionado y comprime la cadena al fusionar en cadena (E11.2)", async () => {
+    const first = await newPerson("Redireccion A");
+    const second = await newPerson("Redireccion B");
+    const third = await newPerson("Redireccion C");
+    const chain = async () => (await getPool().query<{ from_id: string; to_id: string }>(
+      `SELECT from_id::text,to_id::text FROM ingest.entity_redirects
+        WHERE entity_kind='person' AND from_id=ANY($1::bigint[]) ORDER BY from_id`, [[first, second, third]]))
+      .rows.map((row) => ({ from: Number(row.from_id), to: Number(row.to_id) }));
+
+    await merge("person", first, second, "prueba de redirección 1");
+    expect(await chain()).toEqual([{ from: second, to: first }]);
+
+    // A←(B) y luego C←(A): quien apuntaba a B debe terminar en C, no en un id muerto.
+    await merge("person", third, first, "prueba de redirección 2");
+    expect(await chain()).toEqual([{ from: first, to: third }, { from: second, to: third }]);
+    // El rastro apunta a la auditoría que creó cada redirección.
+    expect(await count("SELECT count(*) n FROM ingest.entity_redirects WHERE entity_kind='person' AND from_id=ANY($1::bigint[]) AND merge_audit_id IS NULL", [[first, second, third]])).toBe(0);
+  });
+
   it("une membresías compatibles y abre revisión si los periodos se contradicen", async () => {
     const compatibleBand = await one("INSERT INTO public.artists(name) VALUES('Banda Membresias Compatibles') RETURNING id");
     const conflictingBand = await one("INSERT INTO public.artists(name) VALUES('Banda Membresias Contradictorias') RETURNING id");

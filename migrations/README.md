@@ -21,6 +21,7 @@ desde aquí: estas migraciones solo crean objetos en los schemas `ingest` y
 | `0011_album_classifications.up/down.sql` | Todas las clasificaciones que la hoja maestra da a un disco |
 | `0012_ambiguity_resolutions.up/down.sql` | Decisiones explicables del resolutor de ambigüedades (E10), con evidencia obligatoria en el DDL |
 | `0013_fk_indexes.up/down.sql` | Un índice (parcial si la columna admite nulos) por cada FK de `ingest`/`media` que no tenía uno, para que retirar o fusionar filas del core no recorra tablas enteras (E11) |
+| `0014_entity_redirects.up/down.sql` | Redirecciones de ids fusionados (`ingest.entity_redirects`): `/persons/<id>` de una ficha fusionada responde 404 con `movedTo` a la que quedó (E11.2) |
 
 Documentación ER completa: `../docs/db/ER_INGEST_MEDIA.md`.
 

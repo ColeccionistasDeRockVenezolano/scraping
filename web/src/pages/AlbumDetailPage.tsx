@@ -2,6 +2,7 @@ import { Fragment, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { albumWrites, albumsApi, trackWrites, albumFormatWrites, ApiError } from "../lib/api";
 import { useAsync } from "../lib/useAsync";
+import { useMovedToRedirect } from "../lib/useMovedTo";
 import { useOperator } from "../lib/OperatorContext";
 import { useToast } from "../lib/ToastContext";
 import { LoadingState, ErrorState } from "../components/StateViews";
@@ -31,7 +32,8 @@ export function AlbumDetailPage() {
   const navigate = useNavigate();
   const { isConfigured } = useOperator();
   const { notify } = useToast();
-  const { data: album, loading, error, reload } = useAsync(() => albumsApi.get(albumId), [albumId]);
+  const { data: album, loading, error, errorValue, reload } = useAsync(() => albumsApi.get(albumId), [albumId]);
+  useMovedToRedirect(errorValue);
   const [editing, setEditing] = useState(false);
   const [deleting, setDeleting] = useState(false);
   const [addingTrack, setAddingTrack] = useState(false);
