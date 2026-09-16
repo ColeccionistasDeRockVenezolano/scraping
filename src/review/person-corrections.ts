@@ -21,10 +21,16 @@
 import { readFile } from "node:fs/promises";
 import type { PoolClient } from "pg";
 import { z } from "zod";
+import { getEnv } from "../config/env.js";
 import { getPool } from "../db/client.js";
-import { mergeEquivalentCredits, mergeEquivalentMemberships } from "../merge/equivalent-relations.js";
+import { mergeEquivalentCredits } from "../merge/equivalent-relations.js";
+import { mergeEntityRows } from "../merge/entity-merge.js";
+import { createEntity, OperatorError, OPERATOR_SOURCE_SLUG, type OperatorContext } from "../merge/operator.js";
+import { resolveRedirect } from "../merge/redirects.js";
+import { creditEquivalenceKey, type CreditType } from "../merge/relations.js";
+import { removeEntity } from "../merge/removals.js";
 import { normalizeEntityName } from "../normalization/entity-name.js";
-import { mergeInto } from "./duplicates.js";
+import { invalidateSearchIndex } from "../api/search-index.js";
 
 // La unificación de relaciones equivalentes vive en merge/equivalent-relations.ts
 // (la comparten la API y la corrección por plan). Se re-exporta para no romper
@@ -123,12 +129,10 @@ async function applyOne(client: PoolClient, correction: PersonCorrection, note: 
       if (drop === null && keep === correction.keep.name) return { op: "merge", status: "skipped", detail: `persona ${correction.drop.id} ya fusionada en ${correction.keep.id}`, credits: 0 };
       expectName("persona", correction.keep, keep);
       expectName("persona", correction.drop, drop);
-      const outcome = await mergeInto(client, "person", correction.keep.id, correction.drop.id, reason, runId, { alias: correction.keepDropNameAsAlias });
-      const credits = await mergeEquivalentCredits(client, { column: "person_id", id: correction.keep.id }, reason, runId);
-      // Las membresías equivalentes que la fusión dejó sobre la misma banda se
-      // unen también; las que se contradicen en el período abren revisión (P7).
-      const memberships = await mergeEquivalentMemberships(client, correction.keep.id, reason, runId);
-      return { op: "merge", status: "applied", detail: `«${correction.drop.name}» (${correction.drop.id}) → «${correction.keep.name}» (${correction.keep.id}); ${outcome.moved} referencias movidas, ${memberships.merged} membresías unidas, ${memberships.reviewsOpened} revisiones de período`, credits };
+      // Las mismas piezas que el servicio de fusión de la API (E11.3):
+      // mergeInto + créditos y membresías equivalentes (P7).
+      const merged = await mergeEntityRows(client, "person", correction.keep.id, correction.drop.id, reason, runId, correction.keepDropNameAsAlias);
+      return { op: "merge", status: "applied", detail: `«${correction.drop.name}» (${correction.drop.id}) → «${correction.keep.name}» (${correction.keep.id}); ${merged.moved} referencias movidas, ${merged.membershipsMerged} membresías unidas, ${merged.membershipReviewsOpened} revisiones de período`, credits: merged.creditsMerged };
     }
     case "drop_aliases": {
       expectName("persona", correction.person, await personName(client, correction.person.id));

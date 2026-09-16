@@ -30,6 +30,9 @@ const OPERATOR_STATUS: Readonly<Record<OperatorError["code"], number>> = {
   needs_review: 409,
   has_dependents: 409,
   not_open: 409,
+  // La ficha cambió entre la previsualización y la fusión: la persona vuelve a
+  // mirar antes de decidir (E11.3).
+  stale_preview: 409,
   invalid: 422,
 };
 

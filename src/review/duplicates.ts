@@ -83,6 +83,16 @@ const EMPTY_RULES: Readonly<Record<string, { empty: string; present: string }>> 
   "persons.is_venezuelan": { empty: "k.is_venezuelan=false", present: "d.is_venezuelan=true" },
 };
 /**
+ * Los mismos «vacíos» en valores, para la previsualización de fusión
+ * (E11.3/E11.10): así la previsualización no promete completar un campo que el
+ * motor considera lleno. Si aquí se añade una regla, hay que añadirla arriba.
+ */
+export const MERGE_EMPTY_VALUES: Readonly<Record<string, unknown>> = {
+  "albums.album_type": "other",
+  "persons.is_venezuelan": false,
+};
+
+/**
  * Tipos con página propia e identidad fusionable que dejan redirección: el id
  * que desaparece debe llevar a la ficha que quedó (P5). Los créditos y las
  * membresías no son entidades navegables y no redirigen.

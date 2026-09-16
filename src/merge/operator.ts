@@ -28,10 +28,14 @@ import {
   type RelationClaimKind,
 } from "./relations.js";
 import { DependentsError, removeEntity, removeRelation, type RemovalResult } from "./removals.js";
+// E11.9: el índice de búsqueda en memoria (la base no pliega tildes) se
+// invalida aquí, después del COMMIT, para que un alta o un cambio de nombre se
+// vean de inmediato.
+import { invalidateSearchIndex } from "../api/search-index.js";
 
 export const OPERATOR_SOURCE_SLUG = "crv-operador";
 
-export type OperatorErrorCode = "not_found" | "already_exists" | "needs_review" | "has_dependents" | "not_open" | "invalid";
+export type OperatorErrorCode = "not_found" | "already_exists" | "needs_review" | "has_dependents" | "not_open" | "invalid" | "stale_preview";
 
 /** Fallo esperado de una edición: la API lo traduce a 404/409/422. */
 export class OperatorError extends Error {
@@ -82,6 +86,7 @@ export async function withOperatorRun<T>(
     const result = await work({ client, runId, sourceId, operator: action.operator, note });
     await client.query("UPDATE ingest.scrape_runs SET status='ok',finished_at=now() WHERE id=$1", [runId]);
     await client.query("COMMIT");
+    invalidateSearchIndex();
     return { runId, result };
   } catch (error) {
     await client.query("ROLLBACK");
