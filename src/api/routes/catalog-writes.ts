@@ -18,12 +18,17 @@ const url = z.string().trim().url().max(2000);
 const isoDate = z.string().regex(/^\d{4}-\d{2}-\d{2}$/u, "fecha AAAA-MM-DD");
 const publication = z.enum(["published", "unlisted", "unpublished", "copyright_blocked", "unknown"]);
 
+// Tipos de organización y artista: viven aquí para que la creación (esta ruta)
+// y la conversión persona → organización/artista (E11.7) usen el mismo enum.
+export const organizationTypeSchema = z.enum(["record_label", "production_company", "recording_studio", "distributor", "management", "other"]);
+export const artistTypeSchema = z.enum(["band", "solo_artist", "duo", "project", "group", "other"]);
+
 // Campos editables por entidad (camelCase de las columnas de ENTITY_SPECS).
 // `.nullable()` solo donde la columna admite NULL: vaciar un NOT NULL no se ofrece.
 const ENTITY_FIELDS = {
   artist: {
     name: text(200),
-    artistType: z.enum(["band", "solo_artist", "duo", "project", "group", "other"]),
+    artistType: artistTypeSchema,
     biography: longText.nullable(), pictureUrl: url.nullable(),
     originCity: text(120).nullable(), originCountry: text(120),
     formedYear: year.nullable(), disbandedYear: year.nullable(), notes: longText.nullable(),
@@ -34,7 +39,7 @@ const ENTITY_FIELDS = {
   },
   organization: {
     name: text(200),
-    organizationType: z.enum(["record_label", "production_company", "recording_studio", "distributor", "management", "other"]),
+    organizationType: organizationTypeSchema,
     biography: longText.nullable(), pictureUrl: url.nullable(), websiteUrl: url.nullable(), country: text(120).nullable(),
     notes: longText.nullable(),
   },
