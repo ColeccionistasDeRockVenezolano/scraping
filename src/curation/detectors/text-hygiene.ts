@@ -4,6 +4,8 @@
 // invisible), «B.E.T.O.E» con U+200B entre letras (espacios de ancho cero de Bandcamp),
 // «SaSaSa (un Cover ahÃ + U+00AD)» (UTF-8 leído como Latin-1), «Green &amp; blue»,
 // «Tema interpretado por "Poster» (texto truncado), «Sesión -».
+import { decodeHTMLStrict } from "entities";
+import { replaceCodePoint } from "entities/lib/decode.js";
 import { ENTITY_NOUN, codePoint, firstSpan, nameFinding, quote, type Detector } from "./shared.js";
 
 const CATEGORY = "nombres_sucios";
@@ -113,16 +115,46 @@ export const brokenEncoding: Detector = {
   },
 };
 
-const HTML_ENTITY = /&(?:#\d{2,7}|#x[0-9a-f]{2,6}|[a-z][a-z0-9]{1,9});/iu;
-const NAMED_ENTITIES: Readonly<Record<string, string>> = { amp: "&", quot: "\"", apos: "'", lt: "<", gt: ">", nbsp: " " };
+/** Los nombres de la tabla HTML5 llegan a 31 caracteres («&CounterClockwiseContourIntegral;»). */
+const HTML_ENTITY = /&(?:#\d{2,7}|#x[0-9a-f]{2,6}|[a-z][a-z0-9]{1,31});/iu;
 
-function decodeEntities(value: string): string {
-  return value.replace(new RegExp(HTML_ENTITY.source, "giu"), (entity) => {
-    const body = entity.slice(1, -1).toLowerCase();
-    if (body.startsWith("#x")) return String.fromCodePoint(Number.parseInt(body.slice(2), 16));
-    if (body.startsWith("#")) return String.fromCodePoint(Number.parseInt(body.slice(1), 10));
-    return NAMED_ENTITIES[body] ?? entity;
+/**
+ * Una referencia de carácter: `known` = es una entidad de verdad (numérica, o
+ * con nombre de la tabla HTML5; `&roll;` en «Rock&roll;» no lo es, y los
+ * nombres distinguen mayúsculas: `&Aacute;` ≠ `&aacute;`). `replacement` =
+ * con qué reemplazarla, o `null` si no se puede hacer con seguridad:
+ *  - números fuera de 1..0x10FFFF o surrogates: `String.fromCodePoint` lanzaba
+ *    `RangeError` y el detector entero fallaba (C2);
+ *  - un carácter invisible o de control: decodificarlo cambiaría un defecto
+ *    visible por uno que no se ve. El espacio duro de `&nbsp;` pasa a espacio.
+ * Del 128 al 159 las referencias numéricas son Windows-1252 según HTML5
+ * (`&#150;` es «–»), igual que las decodifica un navegador.
+ */
+function decodeReference(entity: string): { known: boolean; replacement: string | null } {
+  const body = entity.slice(1, -1);
+  if (body.startsWith("#")) {
+    const hex = body[1] === "x" || body[1] === "X";
+    const code = Number.parseInt(body.slice(hex ? 2 : 1), hex ? 16 : 10);
+    const valid = Number.isInteger(code) && code >= 1 && code <= 0x10ffff && !(code >= 0xd800 && code <= 0xdfff);
+    return { known: true, replacement: valid ? visibleOrNull(String.fromCodePoint(replaceCodePoint(code))) : null };
+  }
+  const decoded = decodeHTMLStrict(entity);
+  return decoded === entity ? { known: false, replacement: null } : { known: true, replacement: visibleOrNull(decoded) };
+}
+
+function visibleOrNull(decoded: string): string | null {
+  if (decoded === "\u00A0") return " ";
+  return INVISIBLE.test(decoded) ? null : decoded;
+}
+
+function decodeEntities(value: string): { decoded: string; span?: [number, number] } {
+  let span: [number, number] | undefined;
+  const decoded = value.replace(new RegExp(HTML_ENTITY.source, "giu"), (entity: string, offset: number) => {
+    const { known, replacement } = decodeReference(entity);
+    if (known && !span) span = [offset, offset + entity.length];
+    return replacement ?? entity;
   });
+  return { decoded, ...(span ? { span } : {}) };
 }
 
 export const htmlEntities: Detector = {
@@ -131,15 +163,19 @@ export const htmlEntities: Detector = {
   label: "Entidades HTML",
   description: "Restos del HTML de la fuente sin decodificar («&amp;», «&#39;»).",
   run({ names }) {
-    return names.filter((name) => HTML_ENTITY.test(name.value)).map((name) => {
-      const decoded = decodeEntities(name.value);
-      return nameFinding(this, name, {
+    return names.filter((name) => HTML_ENTITY.test(name.value)).flatMap((name) => {
+      const { decoded, span } = decodeEntities(name.value);
+      if (!span) return [];
+      // Solo se propone un valor si decodificar cambia algo: una «corrección»
+      // idéntica no cierra nunca el hallazgo y deja ruido en la auditoría.
+      const fixable = decoded !== name.value && decoded.trim() !== "";
+      return [nameFinding(this, name, {
         severity: "medium",
-        title: "Entidad HTML sin decodificar",
-        suggestion: `Dejarlo como ${quote(decoded)}`,
-        ...(decoded ? { suggestedValue: decoded } : {}),
-        span: firstSpan(name.value, HTML_ENTITY)!,
-      });
+        title: fixable ? "Entidad HTML sin decodificar" : "Entidad HTML que no se puede decodificar sola",
+        suggestion: fixable ? `Dejarlo como ${quote(decoded)}` : "Editar a mano: la referencia no corresponde a un carácter visible válido",
+        ...(fixable ? { suggestedValue: decoded } : {}),
+        span,
+      })];
     });
   },
 };

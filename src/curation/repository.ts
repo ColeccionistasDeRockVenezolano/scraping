@@ -3,6 +3,7 @@ import { getPool } from "../db/client.js";
 import { updateEntity, withOperatorRun } from "../merge/operator.js";
 import type { ResolvableClaimKind } from "../merge/specs.js";
 import { DETECTOR_DEFINITIONS } from "./analyze.js";
+import type { Resolution } from "./resolution.js";
 import { CATEGORIES, OTHER_CATEGORY } from "./taxonomy.js";
 import type { EntityRef, Severity } from "./types.js";
 
@@ -65,6 +66,11 @@ export interface FindingRow {
   ignoredAt: string | null;
   ignoredBy: string | null;
   ignoreNote: string | null;
+  /** Por qué se resolvió (null si sigue abierto, está ignorado o se resolvió antes de 0019). */
+  resolution: Resolution | null;
+  /** Run de escritura que cambió el valor detectado, y quién lo firmó. */
+  resolvedByRunId: number | null;
+  resolvedBy: string | null;
 }
 
 const DETECTOR_BY_KEY = new Map(DETECTOR_DEFINITIONS.map((detector) => [detector.key, detector]));
@@ -86,18 +92,22 @@ export async function listScans(limit = 20): Promise<ScanRow[]> {
   return rows.map(scanRow);
 }
 
+/** Un análisis parcial también guardó lo que miró: cuenta como análisis hecho. */
+const SAVED_SCAN = "status IN ('ok', 'partial')";
+
 async function lastOkScanId(): Promise<number | null> {
-  const { rows } = await getPool().query<{ id: string }>("SELECT id::text FROM ingest.curation_scans WHERE status = 'ok' ORDER BY id DESC LIMIT 1");
+  const { rows } = await getPool().query<{ id: string }>(`SELECT id::text FROM ingest.curation_scans WHERE ${SAVED_SCAN} ORDER BY id DESC LIMIT 1`);
   return rows[0] ? Number(rows[0].id) : null;
 }
 
 export async function getCurationSummary(running: boolean): Promise<CurationSummary> {
   const pool = getPool();
   const [last, correction, counts] = await Promise.all([
-    pool.query<RawScan>(`SELECT ${SCAN_COLUMNS} FROM ingest.curation_scans WHERE status <> 'running' ORDER BY id DESC LIMIT 1`),
-    pool.query<RawScan>(`SELECT ${SCAN_COLUMNS} FROM ingest.curation_scans WHERE trigger = 'correccion' AND status = 'ok' ORDER BY id DESC LIMIT 1`),
+    // Un análisis omitido (otro proceso analizaba) no es «el último análisis».
+    pool.query<RawScan>(`SELECT ${SCAN_COLUMNS} FROM ingest.curation_scans WHERE status NOT IN ('running', 'skipped') ORDER BY id DESC LIMIT 1`),
+    pool.query<RawScan>(`SELECT ${SCAN_COLUMNS} FROM ingest.curation_scans WHERE trigger = 'correccion' AND ${SAVED_SCAN} ORDER BY id DESC LIMIT 1`),
     pool.query<{ category: string; detector: string; signature: string; label: string | null; status: FindingStatus; severity: Severity; n: number; fresh: number; chained: number }>(`
-      WITH last_ok AS (SELECT max(id) AS id FROM ingest.curation_scans WHERE status = 'ok')
+      WITH last_ok AS (SELECT max(id) AS id FROM ingest.curation_scans WHERE ${SAVED_SCAN})
       SELECT category, detector, signature, max(evidence->>'signatureLabel') AS label, status, severity,
              count(*)::int AS n,
              count(*) FILTER (WHERE first_seen_scan_id = (SELECT id FROM last_ok))::int AS fresh,
@@ -177,8 +187,13 @@ type RawFinding = {
   entity_label: string | null; field: string | null; value: string | null; title: string; suggestion: string | null;
   suggested_value: string | null; related: EntityRef[];
   evidence: Record<string, unknown>; status: FindingStatus; first_seen_scan_id: string | null; first_seen_at: Date; last_seen_at: Date;
-  resolved_at: Date | null; ignored_at: Date | null; ignored_by: string | null; ignore_note: string | null; total: string;
+  resolved_at: Date | null; ignored_at: Date | null; ignored_by: string | null; ignore_note: string | null;
+  resolution: Resolution | null; resolved_by_run_id: string | null; resolved_by: string | null; total: string;
 };
+
+/** Quién firmó el run que resolvió el hallazgo sale del propio run (`params.operator`). */
+const RESOLUTION_COLUMNS = `resolution, resolved_by_run_id::text,
+             (SELECT r.params->>'operator' FROM ingest.scrape_runs r WHERE r.id = resolved_by_run_id) AS resolved_by`;
 
 function findingRow(row: RawFinding, lastScan: number | null): FindingRow {
   const definition = DETECTOR_BY_KEY.get(row.detector);
@@ -194,6 +209,7 @@ function findingRow(row: RawFinding, lastScan: number | null): FindingRow {
     triggeredBy: Array.isArray(evidence["triggeredBy"]) ? evidence["triggeredBy"] as FindingRow["triggeredBy"] : [],
     firstSeenAt: iso(row.first_seen_at)!, lastSeenAt: iso(row.last_seen_at)!, resolvedAt: iso(row.resolved_at),
     ignoredAt: iso(row.ignored_at), ignoredBy: row.ignored_by, ignoreNote: row.ignore_note,
+    resolution: row.resolution, resolvedByRunId: row.resolved_by_run_id === null ? null : Number(row.resolved_by_run_id), resolvedBy: row.resolved_by,
   };
 }
 
@@ -222,6 +238,7 @@ export async function listFindings(query: FindingQuery): Promise<{ rows: Finding
     getPool().query<RawFinding>(`
       SELECT id::text, category, detector, signature, severity, entity_kind, entity_id::text, entity_label, field, value, title, suggestion,
              suggested_value, related, evidence, status, first_seen_scan_id::text, first_seen_at, last_seen_at, resolved_at, ignored_at, ignored_by, ignore_note,
+             ${RESOLUTION_COLUMNS},
              count(*) OVER ()::text AS total
         FROM ingest.curation_findings
        ${where.length ? `WHERE ${where.join(" AND ")}` : ""}
@@ -376,7 +393,8 @@ export async function getFinding(id: number): Promise<FindingRow | undefined> {
     lastOkScanId(),
     getPool().query<RawFinding>(`
       SELECT id::text, category, detector, signature, severity, entity_kind, entity_id::text, entity_label, field, value, title, suggestion,
-             suggested_value, related, evidence, status, first_seen_scan_id::text, first_seen_at, last_seen_at, resolved_at, ignored_at, ignored_by, ignore_note, '1' AS total
+             suggested_value, related, evidence, status, first_seen_scan_id::text, first_seen_at, last_seen_at, resolved_at, ignored_at, ignored_by, ignore_note,
+             ${RESOLUTION_COLUMNS}, '1' AS total
         FROM ingest.curation_findings WHERE id = $1`, [id]),
   ]);
   return result.rows[0] ? findingRow(result.rows[0], lastScan) : undefined;

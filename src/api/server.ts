@@ -8,6 +8,13 @@ import { startCurationWatcher } from "../curation/watcher.js";
 
 const log = moduleLogger("api-server");
 
+// Una promesa rechazada sin manejador no puede tumbar la API: Node 22 termina
+// el proceso por defecto, y trabajo de fondo como la verificación de Curaduría
+// corre sin que ninguna petición lo espere. Se registra y el servicio sigue.
+process.on("unhandledRejection", (reason: unknown) => {
+  log.error({ err: reason }, "promesa rechazada sin manejar");
+});
+
 async function main(): Promise<void> {
   assertSupportedNode();
   const env = getEnv();

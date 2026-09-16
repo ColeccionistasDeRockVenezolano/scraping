@@ -1,12 +1,20 @@
 // CRV · Foto del catálogo para el detector de conflictos.
 //
-// Consultas planas y en paralelo, nada de N+1: la base es SQL_ASCII y no sabe
-// comparar sin tildes (regla 0.1.11), así que toda comparación de texto se
-// hace en TypeScript sobre esta foto. ~50k filas caben de sobra en memoria.
-import type { Pool, PoolClient } from "pg";
+// Consultas planas, nada de N+1: la base es SQL_ASCII y no sabe comparar sin
+// tildes (regla 0.1.11), así que toda comparación de texto se hace en
+// TypeScript sobre esta foto. ~50k filas caben de sobra en memoria.
+//
+// UNA SOLA FOTO. Las 13 consultas van en una transacción REPEATABLE READ de
+// solo lectura sobre un mismo cliente: todas ven el mismo instante. Repartidas
+// por el pool, cada una veía uno distinto y, durante una ingesta, pistas y
+// discos podían no corresponderse: hallazgos fantasma que aparecían y se
+// resolvían solos, y encadenamientos falsos. En un cliente las consultas van
+// una tras otra de todos modos: secuenciales no cuesta tiempo.
+import type { PoolClient } from "pg";
 import type { CatalogSnapshot, SnapshotReview } from "./types.js";
 
-type Queryable = Pick<Pool | PoolClient, "query">;
+/** Un cliente, no el pool: la transacción solo existe dentro de una conexión. */
+type SnapshotClient = Pick<PoolClient, "query" | "release">;
 
 const num = (value: string | number | null): number | null => (value === null ? null : Number(value));
 
@@ -18,70 +26,86 @@ function countMap(rows: Array<{ id: string; n: string }>): Map<number, number> {
   return new Map(rows.map((row) => [Number(row.id), Number(row.n)]));
 }
 
-export async function loadCatalogSnapshot(db: Queryable): Promise<CatalogSnapshot> {
-  const [
-    artists, persons, organizations, albums, tracks, roles,
-    personArtists, personLinks, organizationLinks, artistLinks,
-    reviews, conflicts, handled,
-  ] = await Promise.all([
-    db.query<{ id: string; name: string; origin_city: string | null; formed_year: number | null; disbanded_year: number | null }>(
-      "SELECT id::text, name, origin_city, formed_year, disbanded_year FROM public.artists ORDER BY id"),
-    db.query<{ id: string; name: string }>("SELECT id::text, name FROM public.persons ORDER BY id"),
-    db.query<{ id: string; name: string; organization_type: string }>(
-      "SELECT id::text, name, organization_type::text FROM public.organizations ORDER BY id"),
-    db.query<{ id: string; artist_id: string; title: string; release_year: number | null; album_type: string }>(
-      "SELECT id::text, artist_id::text, title, release_year, album_type::text FROM public.albums ORDER BY id"),
-    db.query<{ id: string; album_id: string; disc_number: number; track_number: number; title: string; duration_seconds: number | null }>(
-      "SELECT id::text, album_id::text, disc_number, track_number, title, duration_seconds FROM public.tracks ORDER BY album_id, disc_number, track_number"),
-    db.query<{ role: string; credit_type: string; uses: string }>(`
-      SELECT role, credit_type::text, count(*)::text AS uses FROM (
-        SELECT role, credit_type FROM public.album_credits UNION ALL SELECT role, credit_type FROM public.track_credits
-      ) credits GROUP BY 1, 2`),
-    db.query<{ person_id: string; artist_id: string }>(`
-      SELECT person_id::text, artist_id::text FROM public.artist_members
-      UNION SELECT c.person_id::text, a.artist_id::text FROM public.album_credits c JOIN public.albums a ON a.id=c.album_id WHERE c.person_id IS NOT NULL
-      UNION SELECT c.person_id::text, a.artist_id::text FROM public.track_credits c JOIN public.tracks t ON t.id=c.track_id JOIN public.albums a ON a.id=t.album_id WHERE c.person_id IS NOT NULL`),
-    db.query<{ id: string; n: string }>(`
-      SELECT id::text, count(*)::text AS n FROM (
-        SELECT person_id AS id FROM public.artist_members
-        UNION ALL SELECT person_id FROM public.album_credits WHERE person_id IS NOT NULL
-        UNION ALL SELECT person_id FROM public.track_credits WHERE person_id IS NOT NULL
-        UNION ALL SELECT person_id FROM public.person_organizations
-      ) links GROUP BY id`),
-    db.query<{ id: string; n: string }>(`
-      SELECT id::text, count(*)::text AS n FROM (
-        SELECT label_id AS id FROM public.albums WHERE label_id IS NOT NULL
-        UNION ALL SELECT organization_id FROM public.album_credits WHERE organization_id IS NOT NULL
-        UNION ALL SELECT organization_id FROM public.track_credits WHERE organization_id IS NOT NULL
-        UNION ALL SELECT organization_id FROM public.person_organizations
-      ) links GROUP BY id`),
-    db.query<{ id: string; n: string }>(`
-      SELECT id::text, count(*)::text AS n FROM (
-        SELECT artist_id AS id FROM public.albums
-        UNION ALL SELECT artist_id FROM public.album_credits WHERE artist_id IS NOT NULL
-        UNION ALL SELECT artist_id FROM public.track_credits WHERE artist_id IS NOT NULL
-        UNION ALL SELECT artist_id FROM public.artist_members
-      ) links GROUP BY id`),
-    db.query<{
-      id: string; kind: string; status: string; priority: number; notes: string | null; payload: unknown; created_at: Date;
-      artist_a_id: string | null; artist_b_id: string | null; person_a_id: string | null; person_b_id: string | null;
-      organization_a_id: string | null; organization_b_id: string | null; album_id: string | null; track_id: string | null; conflict_id: string | null;
-    }>(`
-      SELECT id::text, kind::text, status::text, priority, notes, payload, created_at,
-             artist_a_id::text, artist_b_id::text, person_a_id::text, person_b_id::text,
-             organization_a_id::text, organization_b_id::text, album_id::text, track_id::text, conflict_id::text
-        FROM ingest.review_queue WHERE status IN ('open','in_progress') ORDER BY id`),
-    db.query<{ id: string; entity_kind: string; field: string; value_a: unknown; value_b: unknown; target_id: string | null; live_review: boolean }>(`
-      SELECT c.id::text, c.entity_kind::text, c.field, c.value_a, c.value_b,
-             COALESCE(a.artist_id, a.person_id, a.organization_id, a.album_id, a.track_id)::text AS target_id,
-             EXISTS (SELECT 1 FROM ingest.review_queue r WHERE r.conflict_id=c.id AND r.status IN ('open','in_progress')) AS live_review
-        FROM ingest.conflicts c JOIN ingest.claims a ON a.id=c.claim_a_id
-       WHERE c.status='open' ORDER BY c.id`),
-    db.query<{ kind: string; person_a_id: string | null; person_b_id: string | null; pair_key: string | null }>(`
-      SELECT kind::text, person_a_id::text, person_b_id::text, payload->>'pairKey' AS pair_key
-        FROM ingest.review_queue WHERE kind IN ('person_duplicate','possible_duplicate')`),
-  ]);
+export async function loadCatalogSnapshot(db: SnapshotClient): Promise<CatalogSnapshot> {
+  await db.query("BEGIN ISOLATION LEVEL REPEATABLE READ READ ONLY");
+  let results;
+  try {
+    results = await readCatalog(db);
+    await db.query("COMMIT");
+  } catch (error) {
+    await db.query("ROLLBACK").catch(() => undefined);
+    throw error;
+  }
+  return buildSnapshot(results);
+}
 
+/** Una consulta detrás de otra: `pg` ya no admite encolarlas en un cliente ocupado (obsoleto en pg 8, fuera en pg 9). */
+async function readCatalog(db: SnapshotClient) {
+  const artists = await db.query<{ id: string; name: string; origin_city: string | null; formed_year: number | null; disbanded_year: number | null }>(
+    "SELECT id::text, name, origin_city, formed_year, disbanded_year FROM public.artists ORDER BY id");
+  const persons = await db.query<{ id: string; name: string }>("SELECT id::text, name FROM public.persons ORDER BY id");
+  const organizations = await db.query<{ id: string; name: string; organization_type: string }>(
+    "SELECT id::text, name, organization_type::text FROM public.organizations ORDER BY id");
+  const albums = await db.query<{ id: string; artist_id: string; title: string; release_year: number | null; album_type: string }>(
+    "SELECT id::text, artist_id::text, title, release_year, album_type::text FROM public.albums ORDER BY id");
+  const tracks = await db.query<{ id: string; album_id: string; disc_number: number; track_number: number; title: string; duration_seconds: number | null }>(
+    "SELECT id::text, album_id::text, disc_number, track_number, title, duration_seconds FROM public.tracks ORDER BY album_id, disc_number, track_number");
+  const roles = await db.query<{ role: string; credit_type: string; uses: string }>(`
+    SELECT role, credit_type::text, count(*)::text AS uses FROM (
+      SELECT role, credit_type FROM public.album_credits UNION ALL SELECT role, credit_type FROM public.track_credits
+    ) credits GROUP BY 1, 2`);
+  const personArtists = await db.query<{ person_id: string; artist_id: string }>(`
+    SELECT person_id::text, artist_id::text FROM public.artist_members
+    UNION SELECT c.person_id::text, a.artist_id::text FROM public.album_credits c JOIN public.albums a ON a.id=c.album_id WHERE c.person_id IS NOT NULL
+    UNION SELECT c.person_id::text, a.artist_id::text FROM public.track_credits c JOIN public.tracks t ON t.id=c.track_id JOIN public.albums a ON a.id=t.album_id WHERE c.person_id IS NOT NULL`);
+  const personLinks = await db.query<{ id: string; n: string }>(`
+    SELECT id::text, count(*)::text AS n FROM (
+      SELECT person_id AS id FROM public.artist_members
+      UNION ALL SELECT person_id FROM public.album_credits WHERE person_id IS NOT NULL
+      UNION ALL SELECT person_id FROM public.track_credits WHERE person_id IS NOT NULL
+      UNION ALL SELECT person_id FROM public.person_organizations
+    ) links GROUP BY id`);
+  const organizationLinks = await db.query<{ id: string; n: string }>(`
+    SELECT id::text, count(*)::text AS n FROM (
+      SELECT label_id AS id FROM public.albums WHERE label_id IS NOT NULL
+      UNION ALL SELECT organization_id FROM public.album_credits WHERE organization_id IS NOT NULL
+      UNION ALL SELECT organization_id FROM public.track_credits WHERE organization_id IS NOT NULL
+      UNION ALL SELECT organization_id FROM public.person_organizations
+    ) links GROUP BY id`);
+  const artistLinks = await db.query<{ id: string; n: string }>(`
+    SELECT id::text, count(*)::text AS n FROM (
+      SELECT artist_id AS id FROM public.albums
+      UNION ALL SELECT artist_id FROM public.album_credits WHERE artist_id IS NOT NULL
+      UNION ALL SELECT artist_id FROM public.track_credits WHERE artist_id IS NOT NULL
+      UNION ALL SELECT artist_id FROM public.artist_members
+    ) links GROUP BY id`);
+  const reviews = await db.query<{
+    id: string; kind: string; status: string; priority: number; notes: string | null; payload: unknown; created_at: Date;
+    artist_a_id: string | null; artist_b_id: string | null; person_a_id: string | null; person_b_id: string | null;
+    organization_a_id: string | null; organization_b_id: string | null; album_id: string | null; track_id: string | null; conflict_id: string | null;
+  }>(`
+    SELECT id::text, kind::text, status::text, priority, notes, payload, created_at,
+           artist_a_id::text, artist_b_id::text, person_a_id::text, person_b_id::text,
+           organization_a_id::text, organization_b_id::text, album_id::text, track_id::text, conflict_id::text
+      FROM ingest.review_queue WHERE status IN ('open','in_progress') ORDER BY id`);
+  const conflicts = await db.query<{ id: string; entity_kind: string; field: string; value_a: unknown; value_b: unknown; target_id: string | null; live_review: boolean }>(`
+    SELECT c.id::text, c.entity_kind::text, c.field, c.value_a, c.value_b,
+           COALESCE(a.artist_id, a.person_id, a.organization_id, a.album_id, a.track_id)::text AS target_id,
+           EXISTS (SELECT 1 FROM ingest.review_queue r WHERE r.conflict_id=c.id AND r.status IN ('open','in_progress')) AS live_review
+      FROM ingest.conflicts c JOIN ingest.claims a ON a.id=c.claim_a_id
+     WHERE c.status='open' ORDER BY c.id`);
+  const handled = await db.query<{ kind: string; person_a_id: string | null; person_b_id: string | null; pair_key: string | null }>(`
+    SELECT kind::text, person_a_id::text, person_b_id::text, payload->>'pairKey' AS pair_key
+      FROM ingest.review_queue WHERE kind IN ('person_duplicate','possible_duplicate')`);
+  return { artists, persons, organizations, albums, tracks, roles,
+    personArtists, personLinks, organizationLinks, artistLinks, reviews, conflicts, handled };
+}
+
+function buildSnapshot({
+  artists, persons, organizations, albums, tracks, roles,
+  personArtists, personLinks, organizationLinks, artistLinks,
+  reviews, conflicts, handled,
+}: Awaited<ReturnType<typeof readCatalog>>): CatalogSnapshot {
   const personArtistMap = new Map<number, Set<number>>();
   for (const row of personArtists.rows) {
     const id = Number(row.person_id);

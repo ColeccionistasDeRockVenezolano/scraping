@@ -44,6 +44,7 @@ import { getEnv } from "../config/env.js";
 import { applySincopaOrganizationRepair, planSincopaOrganizationRepair } from "../review/sincopa-organizations.js";
 import { runCurationScan } from "../curation/scan.js";
 import { getCurationSummary } from "../curation/repository.js";
+import { pruneCuration } from "../curation/retention.js";
 
 /** `--review=1,2,3` → ids; undefined si no vino; null si vino mal escrito. */
 function parseIdList(value: string | undefined): number[] | undefined | null {
@@ -683,11 +684,28 @@ async function main(): Promise<number> {
           console.error(`curation scan falló: ${summary.error ?? "error desconocido"}`);
           return 1;
         }
+        if (summary.status === "skipped") {
+          console.error(`curation scan omitido (análisis ${summary.scanId}): otro proceso está analizando el catálogo; reintenta en unos segundos`);
+          return 1;
+        }
         console.log(`curation scan${summary.dryRun ? " --dry-run" : ` (análisis ${summary.scanId})`}: ${summary.total} hallazgos en ${summary.durationMs} ms · `
           + `${summary.inserted} nuevos · ${summary.reopened} reabiertos · ${summary.resolved} resueltos · ${summary.chained} aparecidos tras una corrección`);
         for (const [category, count] of Object.entries(summary.byCategory).sort((a, b) => b[1] - a[1])) console.log(`  ${String(count).padStart(6)}  ${category}`);
         for (const failure of summary.failures) console.error(`  ! detector ${failure.detector}: ${failure.error}`);
+        // Parcial: lo que miraron los detectores sanos quedó guardado; lo del roto, intacto.
+        if (summary.status === "partial") console.error("  análisis parcial: los hallazgos de los detectores que fallaron no se tocaron");
         if (summary.dryRun) console.log("  (dry-run: nada se escribió)");
+        return summary.status === "partial" ? 1 : 0;
+      }
+      if (subcommand === "prune") {
+        const result = await pruneCuration({ dryRun: args.includes("--dry-run") });
+        if (result.status === "skipped") {
+          console.error("curation prune: otro proceso está analizando el catálogo; no se borró nada, reintenta en unos segundos");
+          return 1;
+        }
+        console.log(`curation prune${result.dryRun ? " --dry-run" : ""}: ${result.scans} análisis anteriores a los últimos ${result.keepScans} · `
+          + `${result.resolvedFindings} hallazgos resueltos hace más de ${result.resolvedDays} días`
+          + (result.dryRun ? " (dry-run: nada se borró)" : " · borrados"));
         return 0;
       }
       if (subcommand === "summary") {
@@ -700,7 +718,7 @@ async function main(): Promise<number> {
         }
         return 0;
       }
-      console.error("uso: crv curation scan [--dry-run] | crv curation summary");
+      console.error("uso: crv curation scan [--dry-run] | crv curation summary | crv curation prune [--dry-run]");
       return 1;
     }
 
@@ -790,6 +808,8 @@ CRV CLI
   curation scan [--dry-run]  analiza el catálogo con el detector de conflictos de Curaduría: nombres sucios,
                              mal segmentados, fichas de otro tipo, repetidas, incoherentes, en disputa, «Otros»
   curation summary           conteos abiertos por categoría y detector, y el último análisis
+  curation prune [--dry-run] retención: borra los análisis anteriores a los últimos 500 y los hallazgos resueltos
+                             hace más de 180 días (nunca abiertos ni ignorados)
   ambiguity:apply [--review=<id,...>] --note="<motivo>" --confirm
                              aplica MATCH y KEEP de reglas; las de árbitro solo nombrando su revisión
 

@@ -39,6 +39,11 @@ export interface DetectorFailure { detector: string; error: string; }
 export interface AnalysisResult {
   findings: Array<Finding & { fingerprint: string }>;
   failures: DetectorFailure[];
+  /**
+   * Detectores que miraron el catálogo entero. Solo sus hallazgos pueden darse
+   * por resueltos cuando no reaparecen: lo que no se pudo mirar no se resuelve.
+   */
+  completed: string[];
   lexicon: { places: number; roleTokens: number; organizationMarkers: string[]; albumTypeWords: number; vocabulary: number };
 }
 
@@ -76,6 +81,10 @@ function storable(value: unknown): unknown {
   return value;
 }
 
+function errorMessage(error: unknown): string {
+  return error instanceof Error ? error.message : String(error);
+}
+
 function refKey(ref: EntityRef): string {
   return `${ref.kind}:${ref.id ?? ""}`;
 }
@@ -94,17 +103,32 @@ export function fingerprintOf(finding: Finding): string {
 export function analyzeCatalog(snapshot: CatalogSnapshot, detectors: readonly Detector[] = DETECTORS): AnalysisResult {
   const context = buildContext(snapshot);
   const failures: DetectorFailure[] = [];
+  const completed: string[] = [];
   const raw: Finding[] = [];
   for (const detector of detectors) {
     try {
       raw.push(...detector.run(context));
+      completed.push(detector.key);
     } catch (error) {
       // Un detector roto no apaga a los demás: el fallo queda en el análisis.
-      failures.push({ detector: detector.key, error: error instanceof Error ? error.message : String(error) });
+      failures.push({ detector: detector.key, error: errorMessage(error) });
     }
   }
-  const explained = new Set(raw.filter((finding) => TEXT_FORM_CATEGORIES.has(finding.category)).map((finding) => refKey(finding.entity)));
-  raw.push(...detectAnomalies(catalogAnomalies, context, explained));
+  // «Otros» solo muestra lo que ningún detector de forma explica. Si uno de
+  // ellos falló, «Otros» se llenaría con lo que ese detector habría explicado:
+  // tampoco cuenta como mirado, y sus hallazgos guardados quedan como estaban.
+  const brokenForm = detectors.filter((detector) => TEXT_FORM_CATEGORIES.has(detector.category) && !completed.includes(detector.key));
+  if (brokenForm.length) {
+    failures.push({ detector: catalogAnomalies.key, error: `omitido: falló ${brokenForm.map((detector) => detector.key).join(", ")}` });
+  } else {
+    try {
+      const explained = new Set(raw.filter((finding) => TEXT_FORM_CATEGORIES.has(finding.category)).map((finding) => refKey(finding.entity)));
+      raw.push(...detectAnomalies(catalogAnomalies, context, explained));
+      completed.push(catalogAnomalies.key);
+    } catch (error) {
+      failures.push({ detector: catalogAnomalies.key, error: errorMessage(error) });
+    }
+  }
 
   const byFingerprint = new Map<string, Finding & { fingerprint: string }>();
   for (const finding of raw) {
@@ -122,6 +146,7 @@ export function analyzeCatalog(snapshot: CatalogSnapshot, detectors: readonly De
   return {
     findings: [...byFingerprint.values()],
     failures,
+    completed,
     lexicon: {
       places: context.lexicon.places.size,
       roleTokens: context.lexicon.roleTokens.size,

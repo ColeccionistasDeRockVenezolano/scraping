@@ -8,7 +8,8 @@
 // `onResponse` que, ante cualquier escritura correcta del catálogo, pide un
 // análisis (src/curation/watcher.ts). El análisis marca los hallazgos que
 // nacen donde otro acaba de resolverse, así la web muestra si una corrección
-// desencadenó errores nuevos.
+// desencadenó errores nuevos. Qué es «escritura del catálogo» lo dice una
+// lista explícita (`CATALOG_WRITES`), no una lista de exclusión.
 import type { FastifyInstance } from "fastify";
 import type { ZodTypeProvider } from "fastify-type-provider-zod";
 import { z } from "zod";
@@ -59,10 +60,12 @@ const findingSchema = z.object({
   triggeredBy: z.array(z.object({ id: z.number(), title: z.string(), entityKind: z.string(), entityId: z.number().nullable() })),
   firstSeenAt: z.string(), lastSeenAt: z.string(), resolvedAt: z.string().nullable(),
   ignoredAt: z.string().nullable(), ignoredBy: z.string().nullable(), ignoreNote: z.string().nullable(),
+  resolution: z.enum(["fixed_by_curation", "changed_elsewhere", "entity_removed", "rules_changed"]).nullable(),
+  resolvedByRunId: z.number().int().nullable(), resolvedBy: z.string().nullable(),
 });
 
 const scanResultSchema = z.object({
-  scanId: z.number().int().nullable(), status: z.enum(["ok", "failed"]), trigger: z.string(), dryRun: z.boolean(),
+  scanId: z.number().int().nullable(), status: z.enum(["ok", "partial", "skipped", "failed"]), trigger: z.string(), dryRun: z.boolean(),
   durationMs: z.number(), catalogSignature: z.string(), total: z.number(), inserted: z.number(), reopened: z.number(),
   resolved: z.number(), chained: z.number(), byCategory: z.record(z.number()),
   failures: z.array(z.object({ detector: z.string(), error: z.string() })), error: z.string().optional(),
@@ -82,8 +85,27 @@ const listQuerySchema = paginationQuerySchema.extend({
 
 const noteSchema = z.string().trim().max(2000);
 
-/** Escrituras que no cambian el catálogo: no piden re-analizar. */
-const NOT_CATALOG_WRITES = [/^\/curation(\/|$)/u, /^\/auth(\/|$)/u];
+/**
+ * Escrituras que cambian lo que el detector lee: fichas del core (con sus
+ * alias, fusiones y conversiones), relaciones, y decisiones de la cola que
+ * tocan el catálogo o los conflictos. Lista explícita: una ruta nueva no
+ * dispara un análisis completo hasta que alguien decide que es del catálogo.
+ * Fuera quedan `/auth`, las decisiones de Curaduría (sus correcciones avisan
+ * por su cuenta) y la prioridad de una revisión, que no cambia el catálogo; la
+ * gravedad que deriva de ella la refresca el vigilante en su siguiente vuelta.
+ */
+const CATALOG_WRITES: readonly RegExp[] = [
+  /^\/(?:artists|persons|organizations|albums|tracks)(?:\/|$)/u,
+  /^\/(?:artist-members|person-organizations|album-credits|track-credits|album-formats)(?:\/|$)/u,
+  /^\/review-queue\/[^/]+\/(?:accept|reject|resolve-conflict)$/u,
+  /^\/merge-runs\/[^/]+\/undo$/u,
+];
+
+const WRITE_METHODS = new Set(["POST", "PUT", "PATCH", "DELETE"]);
+
+export function isCatalogWrite(method: string, path: string): boolean {
+  return WRITE_METHODS.has(method.toUpperCase()) && CATALOG_WRITES.some((pattern) => pattern.test(path));
+}
 
 function curationError(error: unknown): never {
   if (error instanceof CurationError) {
@@ -99,10 +121,8 @@ export async function registerCurationRoutes(app: FastifyInstance): Promise<void
 
   if (getEnv().CRV_CURATION_AUTOSCAN) {
     app.addHook("onResponse", async (request, reply) => {
-      if (["GET", "HEAD", "OPTIONS"].includes(request.method) || reply.statusCode >= 400) return;
-      const path = request.url.split("?")[0] ?? "";
-      if (NOT_CATALOG_WRITES.some((pattern) => pattern.test(path))) return;
-      notifyCatalogWrite(request.operator || null, `${request.method} ${request.routeOptions.url ?? path}`);
+      if (reply.statusCode >= 400 || !isCatalogWrite(request.method, request.url.split("?")[0] ?? "")) return;
+      notifyCatalogWrite(request.operator || null, `${request.method} ${request.routeOptions.url ?? request.url.split("?")[0]}`);
     });
     app.addHook("onClose", async () => { await flushCurationWork(); });
   }

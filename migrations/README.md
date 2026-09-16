@@ -25,6 +25,8 @@ desde aquí: estas migraciones solo crean objetos en los schemas `ingest` y
 | `0015_review_kind_person_duplicate.up/down.sql` | `person_duplicate` en `ingest.review_kind`: el kind con el que el detector de candidatos propone un par (E11.5). El down es irreversible (no se pueden quitar valores de un enum) y lo documenta |
 | `0016_person_duplicate_pair_uk.up/down.sql` | Índice único parcial: un solo careo vivo por par de personas (`person_duplicate` en open/in_progress), para que repetir el detector no duplique propuestas (E11.5) |
 | `0017_curation_findings.up/down.sql` | Detector de conflictos de Curaduría: `ingest.curation_scans` (cada análisis del catálogo) y `ingest.curation_findings` (hallazgos por categoría con huella estable; abiertos, resueltos solos al corregirse o ignorados por una persona) |
+| `0018_curation_finding_fixes.up/down.sql` | `suggested_value` en `ingest.curation_findings`: el reemplazo determinista que algunos detectores calculan, para ofrecer «Corregir» sin extraerlo del texto de la sugerencia |
+| `0019_curation_scan_resolution.up/down.sql` | Motor de análisis robusto (PLAN_CURADURIA E1): estados `partial` (falló un detector y sus hallazgos no se tocaron) y `skipped` (otro proceso analizaba) en `curation_scans`; `resolution` (`fixed_by_curation`, `changed_elsewhere`, `entity_removed`, `rules_changed`) y `resolved_by_run_id` en `curation_findings`. El down pasa `partial`→`ok` y `skipped`→`failed` antes de restaurar el CHECK |
 
 Documentación ER completa: `../docs/db/ER_INGEST_MEDIA.md`.
 

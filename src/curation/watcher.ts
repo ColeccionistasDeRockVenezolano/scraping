@@ -8,6 +8,11 @@
 //     catálogo (`catalogSignature`). Si cambiaron y se quedaron quietos durante
 //     una vuelta —una ingesta ya terminó—, analiza. Cubre la CLI y los scripts.
 // Al arrancar, analiza si el catálogo cambió desde el último análisis.
+//
+// Nada de aquí puede dejar una promesa rechazada sin manejar: se dispara desde
+// escrituras de la API y un rechazo suelto termina el proceso (C5). Si otro
+// proceso está analizando (`skipped`), la verificación de una escritura se
+// reintenta unas veces; el vigilante lo retoma solo en su siguiente vuelta.
 import { getPool } from "../db/client.js";
 import { moduleLogger } from "../logger/index.js";
 import { catalogSignature, runCurationScan, waitForCurationScans } from "./scan.js";
@@ -16,23 +21,36 @@ const log = moduleLogger("curation:watcher");
 
 /** Ventana para agrupar escrituras seguidas (una fusión son varias peticiones). */
 const WRITE_DEBOUNCE_MS = 1500;
+/** Si otro proceso tenía el candado: cada cuánto y cuántas veces reintentar la verificación. */
+const SKIPPED_RETRY_MS = 5000;
+const SKIPPED_RETRIES = 6;
 
-let pendingWrite: { timer?: NodeJS.Timeout; operators: Set<string>; routes: Set<string> } | null = null;
+let pendingWrite: { timer?: NodeJS.Timeout; operators: Set<string>; routes: Set<string>; attempt: number } | null = null;
 
 export function notifyCatalogWrite(operator: string | null, route: string): void {
-  const current = pendingWrite ?? { operators: new Set<string>(), routes: new Set<string>() };
+  queueWriteScan(operator ? [operator] : [], [route], WRITE_DEBOUNCE_MS, 0);
+}
+
+function queueWriteScan(operators: Iterable<string>, routes: Iterable<string>, delayMs: number, attempt: number): void {
+  const current = pendingWrite ?? { operators: new Set<string>(), routes: new Set<string>(), attempt };
   pendingWrite = current;
   if (current.timer) clearTimeout(current.timer);
-  if (operator) current.operators.add(operator);
-  current.routes.add(route);
+  for (const operator of operators) current.operators.add(operator);
+  for (const route of routes) current.routes.add(route);
+  // Una escritura nueva reinicia la cuenta: hay algo más que verificar.
+  current.attempt = Math.min(current.attempt, attempt);
   current.timer = setTimeout(() => {
     pendingWrite = null;
-    void runCurationScan({
+    runCurationScan({
       trigger: "correccion",
       requestedBy: [...current.operators].join(", ") || null,
       detail: [...current.routes].slice(0, 20).join(" · "),
-    });
-  }, WRITE_DEBOUNCE_MS);
+    }).then((summary) => {
+      if (summary.status === "skipped" && current.attempt < SKIPPED_RETRIES) {
+        queueWriteScan(current.operators, current.routes, SKIPPED_RETRY_MS, current.attempt + 1);
+      }
+    }).catch((error: unknown) => log.error({ err: error }, "no se pudo verificar la escritura con el detector de curaduría"));
+  }, delayMs);
   current.timer.unref();
 }
 
@@ -50,7 +68,7 @@ export function startCurationWatcher(intervalMs: number): () => void {
 
   const readLastScanned = async (): Promise<void> => {
     const { rows } = await getPool().query<{ catalog_signature: string | null }>(
-      "SELECT catalog_signature FROM ingest.curation_scans WHERE status = 'ok' ORDER BY id DESC LIMIT 1");
+      "SELECT catalog_signature FROM ingest.curation_scans WHERE status IN ('ok', 'partial') ORDER BY id DESC LIMIT 1");
     lastScanned = rows[0]?.catalog_signature ?? "";
   };
 
@@ -62,7 +80,9 @@ export function startCurationWatcher(intervalMs: number): () => void {
     if (signature === lastScanned) return;
     if (trigger === "cambio_en_catalogo" && !stable) return;
     const summary = await runCurationScan({ trigger });
-    if (summary.status === "ok") await readLastScanned();
+    // Un análisis parcial también cuenta: un detector roto no se arregla
+    // repitiendo el análisis cada vuelta. Uno omitido se retoma en la siguiente.
+    if (summary.status === "ok" || summary.status === "partial") await readLastScanned();
   };
 
   const guard = (trigger: "inicio" | "cambio_en_catalogo") => {

@@ -114,6 +114,59 @@ describe("detector de conflictos de Curaduría", () => {
     expect(result.findings.some((finding) => finding.detector === "caracteres_invisibles")).toBe(true);
   });
 
+  it("un detector que falla no cuenta como mirado: el análisis no lo da por completo (C1)", () => {
+    // «Fichas repetidas» no explica la forma de un nombre: «Otros» sí puede correr.
+    const broken: Detector = { key: "roto", category: "fichas_repetidas", label: "Roto", description: "", run: () => { throw new Error("boom"); } };
+    const result = analyzeCatalog(cleanSnapshot(), [broken, ...DETECTORS]);
+    expect(result.completed).not.toContain("roto");
+    expect(result.completed).toEqual(expect.arrayContaining([...DETECTORS.map((detector) => detector.key), "anomalia_del_catalogo"]));
+  });
+
+  it("si falla un detector de forma, «Otros» tampoco se da por mirado: mostraría lo que ese detector explica (C1)", () => {
+    const brokenHygiene: Detector = {
+      key: "caracteres_invisibles", category: "nombres_sucios", label: "Roto", description: "", run: () => { throw new Error("boom"); },
+    };
+    const snapshot = cleanSnapshot();
+    snapshot.artists[0]!.name = `Trueno${ZERO_WIDTH_SPACE} § Negro`;
+    const result = analyzeCatalog(snapshot, [brokenHygiene, ...DETECTORS.filter((detector) => detector.key !== "caracteres_invisibles")]);
+    expect(result.completed).not.toContain("caracteres_invisibles");
+    expect(result.completed).not.toContain("anomalia_del_catalogo");
+    expect(result.failures.map((failure) => failure.detector)).toEqual(["caracteres_invisibles", "anomalia_del_catalogo"]);
+    expect(result.findings.filter((finding) => finding.category === OTHER_CATEGORY)).toEqual([]);
+  });
+
+  it("una referencia numérica HTML fuera de rango no rompe el detector ni propone un valor (C2)", () => {
+    const snapshot = cleanSnapshot();
+    snapshot.artists[0]!.name = "Trueno &#xFFFFFF; Negro";
+    snapshot.artists[1]!.name = "Trueno &#9999999; Eléctrico";
+    snapshot.artists[2]!.name = "Trueno &#xD800; Salvaje";
+    snapshot.artists[3]!.name = "Trueno &#00; Nocturno";
+    const result = analyzeCatalog(snapshot);
+    expect(result.failures).toEqual([]);
+    const html = result.findings.filter((finding) => finding.detector === "entidades_html");
+    expect(html.map((finding) => finding.entity.id).sort()).toEqual([1, 2, 3, 4]);
+    for (const finding of html) expect(finding.suggestedValue).toBeUndefined();
+  });
+
+  it("decodifica con la tabla HTML5 y solo propone un valor que cambia algo (C2)", () => {
+    const snapshot = cleanSnapshot();
+    snapshot.artists[0]!.name = "Trueno &amp; Negro";
+    snapshot.albums[0]!.title = "Canci&oacute;n &hellip;";
+    snapshot.persons[0]!.name = "&Aacute;ngel P&#233;rez";
+    snapshot.tracks[0]!.title = "Noche &#150; Calle";
+    snapshot.organizations[0]!.name = "Rock&roll; Estudios";
+    const html = new Map(analyzeCatalog(snapshot).findings
+      .filter((finding) => finding.detector === "entidades_html")
+      .map((finding) => [`${finding.entity.kind}:${finding.entity.id}`, finding.suggestedValue]));
+    expect(html.get("artist:1")).toBe("Trueno & Negro");
+    expect(html.get("album:1")).toBe("Canción …");
+    expect(html.get("person:1")).toBe("Ángel Pérez");
+    // Las referencias 128–159 son Windows-1252 según HTML5: 150 es la raya corta.
+    expect(html.get("track:1")).toBe("Noche – Calle");
+    // «&roll;» no es una entidad: no hay nada que decodificar ni que reportar.
+    expect(html.has("organization:1")).toBe(false);
+  });
+
   it("la huella de un hallazgo es estable entre análisis y cambia si cambia el valor", () => {
     const snapshot = cleanSnapshot();
     snapshot.artists[0]!.name = `Trueno${ZERO_WIDTH_SPACE} Negro`;

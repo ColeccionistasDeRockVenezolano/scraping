@@ -1,7 +1,7 @@
 // CRV · Test de contrato: puerto a Vitest de tests/run_all.sh (ARCH §7,
 // PHASES F0). Contra un PostgreSQL 16 desechable, en un solo run:
 //   1. el core (crv_simple_v1.sql) se aplica verbatim y el hash coincide;
-//   2. las migraciones 0001-0017 se aplican vía el runner TS
+//   2. las migraciones 0001-0019 se aplican vía el runner TS
 //      (src/db/migrate.ts), 2 veces (idempotencia), y toda FK de
 //      ingest/media queda respaldada por un índice;
 //   3. el diff de `pg_dump --schema=public --schema-only` antes/después de
@@ -77,7 +77,7 @@ describe("contrato del core + migraciones (Drizzle/TS)", () => {
     (globalThis as { __crvBeforeSnapshot?: string }).__crvBeforeSnapshot = snapshot;
   });
 
-  it("aplica 0001-0018 vía el runner TS (2 pasadas, la 2ª es no-op)", async () => {
+  it("aplica 0001-0019 vía el runner TS (2 pasadas, la 2ª es no-op)", async () => {
     const first = await migrateUp();
     expect(first.applied).toEqual([
       "0001_ingest_core", "0002_media", "0003_ingest_claims_identity", "0004_review_kinds",
@@ -85,7 +85,7 @@ describe("contrato del core + migraciones (Drizzle/TS)", () => {
       "0008_media_link_claims", "0009_media_link_constraints", "0010_review_decisions",
       "0011_album_classifications", "0012_ambiguity_resolutions", "0013_fk_indexes",
       "0014_entity_redirects", "0015_review_kind_person_duplicate", "0016_person_duplicate_pair_uk",
-      "0017_curation_findings", "0018_curation_finding_fixes",
+      "0017_curation_findings", "0018_curation_finding_fixes", "0019_curation_scan_resolution",
     ]);
     const second = await migrateUp();
     expect(second.applied).toEqual([]);
@@ -218,7 +218,7 @@ describe("contrato del core + migraciones (Drizzle/TS)", () => {
 
     const result = await migrateDownAll();
     expect(result.reverted).toEqual([
-      "0018_curation_finding_fixes", "0017_curation_findings", "0016_person_duplicate_pair_uk", "0015_review_kind_person_duplicate",
+      "0019_curation_scan_resolution", "0018_curation_finding_fixes", "0017_curation_findings", "0016_person_duplicate_pair_uk", "0015_review_kind_person_duplicate",
       "0014_entity_redirects", "0013_fk_indexes", "0012_ambiguity_resolutions", "0011_album_classifications", "0010_review_decisions", "0009_media_link_constraints", "0008_media_link_claims",
       "0007_entity_resolution_ai", "0006_youtube_pipeline", "0005_raw_pages_run", "0004_review_kinds", "0003_ingest_claims_identity", "0002_media", "0001_ingest_core",
     ]);
