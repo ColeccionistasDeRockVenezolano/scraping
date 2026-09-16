@@ -322,6 +322,8 @@ export type EntityKind = "artist" | "person" | "organization" | "album" | "track
 // ---------- curaduría: detector de conflictos ----------
 export type CurationSeverity = "high" | "medium" | "low";
 export type CurationFindingStatus = "open" | "ignored" | "resolved";
+/** Por qué se resolvió un hallazgo (src/curation/resolution.ts). */
+export type CurationResolution = "fixed_by_curation" | "changed_elsewhere" | "entity_removed" | "rules_changed";
 
 export interface CurationEntityRef { kind: string; id: number | null; label: string; }
 
@@ -381,6 +383,9 @@ export interface CurationFinding {
   ignoredAt: string | null;
   ignoredBy: string | null;
   ignoreNote: string | null;
+  resolution: CurationResolution | null;
+  resolvedByRunId: number | null;
+  resolvedBy: string | null;
 }
 
 export interface CurationFixOutcome {
@@ -398,7 +403,8 @@ export interface CurationFixBatchResult {
 
 export interface CurationScanResult {
   scanId: number | null;
-  status: "ok" | "failed";
+  /** partial = algún detector falló (sus hallazgos no se tocaron); skipped = otro proceso estaba analizando. */
+  status: "ok" | "partial" | "skipped" | "failed";
   trigger: string;
   dryRun: boolean;
   durationMs: number;

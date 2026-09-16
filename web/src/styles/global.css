@@ -749,6 +749,7 @@ td.num { font-family: var(--font-mono); }
 .cscan__dot { width: 10px; height: 10px; margin-top: 6px; border-radius: 50%; background: var(--teal); box-shadow: 0 0 0 4px var(--teal-soft); flex: 0 0 auto; }
 .cscan__dot.is-running { background: var(--amber); box-shadow: 0 0 0 4px var(--amber-soft); animation: crv-pulse 1.2s ease-in-out infinite; }
 .cscan__dot.is-failed { background: var(--red); box-shadow: 0 0 0 4px var(--red-soft); }
+.cscan__dot.is-partial { background: var(--amber); box-shadow: 0 0 0 4px var(--amber-soft); }
 @keyframes crv-pulse { 50% { opacity: 0.35; } }
 .cscan__title { margin: 0; font-weight: 600; font-size: 14.5px; }
 .cscan__meta { margin: 2px 0 0; font-size: 12.5px; color: var(--text-faint); overflow-wrap: anywhere; }

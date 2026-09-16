@@ -7,7 +7,7 @@ import {
   Broom, Copy, IdentificationCard, LinkBreak, Question, Scales, Scissors, Shapes, Tray, Warning, type Icon,
 } from "@phosphor-icons/react";
 import { entityHref } from "./routes";
-import type { CurationEntityRef, CurationFinding, CurationScan, CurationSeverity } from "./types";
+import type { CurationEntityRef, CurationFinding, CurationResolution, CurationScan, CurationSeverity } from "./types";
 
 export const CATEGORY_ICON: Readonly<Record<string, Icon>> = {
   nombres_sucios: Broom,
@@ -39,6 +39,29 @@ const TRIGGER_LABEL: Readonly<Record<string, string>> = {
 
 export function triggerLabel(trigger: string): string {
   return TRIGGER_LABEL[trigger] ?? trigger;
+}
+
+const RESOLUTION_LABEL: Readonly<Record<CurationResolution, string>> = {
+  fixed_by_curation: "Corregido desde Curaduría",
+  changed_elsewhere: "Cambió en otra parte",
+  entity_removed: "La ficha se retiró",
+  rules_changed: "Cambiaron las reglas del detector",
+};
+
+/** «Corregido desde Curaduría por Ana (run #12)»; null si no se sabe por qué se resolvió. */
+export function resolutionText(finding: CurationFinding): string | null {
+  if (!finding.resolution) return null;
+  const who = finding.resolvedBy ? ` por ${finding.resolvedBy}` : "";
+  const run = finding.resolvedByRunId !== null ? ` (run #${finding.resolvedByRunId})` : "";
+  return `${RESOLUTION_LABEL[finding.resolution]}${who}${run}`;
+}
+
+/** Detectores que fallaron en un análisis parcial (se guardan en `counters.failures`). */
+export function failedDetectors(scan: CurationScan | null): string[] {
+  const failures = scan?.counters["failures"];
+  return Array.isArray(failures)
+    ? failures.flatMap((item) => (item && typeof item === "object" && typeof (item as { detector?: unknown }).detector === "string" ? [(item as { detector: string }).detector] : []))
+    : [];
 }
 
 export const ENTITY_KIND_LABEL: Readonly<Record<string, string>> = {

@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 import { ArrowsClockwise, ArrowBendDownRight, CheckCircle, Clock, Sparkle } from "@phosphor-icons/react";
 import { ApiError, curationApi } from "../lib/api";
 import { useToast } from "../lib/ToastContext";
-import { categoryIcon, counter, formatCount, relativeTime, triggerLabel } from "../lib/curation";
+import { categoryIcon, counter, failedDetectors, formatCount, relativeTime, triggerLabel } from "../lib/curation";
 import { ErrorState, LoadingState } from "../components/StateViews";
 import { useCurationSummary } from "./CurationLayout";
 import type { CurationCategorySummary, CurationScan } from "../lib/types";
@@ -26,6 +26,11 @@ export function CurationOverviewPage() {
       const result = await curationApi.scan();
       if (result.status === "failed") {
         notify("error", `El análisis falló: ${result.error ?? "error desconocido"}`);
+      } else if (result.status === "skipped") {
+        notify("info", "Otro proceso está analizando el catálogo en este momento. Vuelve a intentarlo en unos segundos.");
+      } else if (result.status === "partial") {
+        notify("info", `Análisis parcial: ${formatCount(result.inserted + result.reopened)} nuevos, ${formatCount(result.resolved)} resueltos. `
+          + `Fallaron ${result.failures.map((failure) => failure.detector).join(", ")}; sus hallazgos no se tocaron.`);
       } else {
         notify("success", `Análisis listo: ${formatCount(result.inserted + result.reopened)} nuevos, ${formatCount(result.resolved)} resueltos.`);
       }
@@ -57,7 +62,7 @@ export function CurationOverviewPage() {
 
       <section className="cscan" aria-live="polite">
         <div className="cscan__status">
-          <span className={`cscan__dot${running ? " is-running" : lastScan?.status === "failed" ? " is-failed" : ""}`} aria-hidden="true" />
+          <span className={`cscan__dot${running ? " is-running" : lastScan?.status === "failed" ? " is-failed" : lastScan?.status === "partial" ? " is-partial" : ""}`} aria-hidden="true" />
           <div>
             <p className="cscan__title">
               {running ? "Analizando el catálogo…" : lastScan ? `Último análisis ${relativeTime(lastScan.finishedAt ?? lastScan.startedAt)}` : "Aún no hay análisis"}
@@ -66,7 +71,8 @@ export function CurationOverviewPage() {
               <p className="cscan__meta">
                 {triggerLabel(lastScan.trigger)}
                 {lastScan.requestedBy ? ` · ${lastScan.requestedBy}` : ""}
-                {lastScan.status === "ok" ? ` · ${formatCount(counter(lastScan, "total"))} hallazgos · ${(counter(lastScan, "durationMs") / 1000).toFixed(1)} s` : ""}
+                {lastScan.status === "ok" || lastScan.status === "partial" ? ` · ${formatCount(counter(lastScan, "total"))} hallazgos · ${(counter(lastScan, "durationMs") / 1000).toFixed(1)} s` : ""}
+                {lastScan.status === "partial" ? ` · parcial: fallaron ${failedDetectors(lastScan).join(", ")}` : ""}
                 {lastScan.status === "failed" ? ` · falló: ${lastScan.error ?? "error desconocido"}` : ""}
               </p>
             ) : null}
@@ -152,7 +158,9 @@ function CorrectionCheck({ scan, chainedOpen }: { scan: CurationScan | null; cha
   const chained = counter(scan, "chained");
   const failed = scan.status === "failed";
   const pending = scan.status === "running";
-  const tone = failed ? "is-failed" : chained > 0 ? "is-warning" : "is-ok";
+  // Parcial: lo que miraron los detectores sanos se verificó; lo del detector roto quedó como estaba.
+  const partial = scan.status === "partial" ? failedDetectors(scan) : [];
+  const tone = failed ? "is-failed" : chained > 0 || partial.length ? "is-warning" : "is-ok";
 
   return (
     <section className={`ccheck ${tone}`}>
@@ -175,6 +183,9 @@ function CorrectionCheck({ scan, chainedOpen }: { scan: CurationScan | null; cha
                 ? "La corrección no desencadenó problemas en las fichas que tocó, aunque el análisis encontró otros en el resto del catálogo."
                 : "La corrección no desencadenó problemas nuevos."}
           </p>
+          {partial.length ? (
+            <p className="ccheck__empty">Verificación parcial: fallaron {partial.join(", ")}. Sus hallazgos no se tocaron.</p>
+          ) : null}
           <ul className="ccheck__stats">
             <li className="is-resolved"><strong className="mono">{formatCount(resolved)}</strong> {resolved === 1 ? "resuelto" : "resueltos"}</li>
             <li>

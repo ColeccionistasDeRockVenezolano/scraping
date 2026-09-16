@@ -19,7 +19,7 @@ import {
 import { useAsync } from "../lib/useAsync";
 import { useToast } from "../lib/ToastContext";
 import {
-  ENTITY_KIND_LABEL, SEVERITY_BADGE, SEVERITY_LABEL, categoryIcon, fieldLabel, formatCount, refHref, relativeTime,
+  ENTITY_KIND_LABEL, SEVERITY_BADGE, SEVERITY_LABEL, categoryIcon, fieldLabel, formatCount, refHref, relativeTime, resolutionText,
 } from "../lib/curation";
 import { ErrorState, EmptyState, LoadingState } from "../components/StateViews";
 import { Pagination } from "../components/Pagination";
@@ -576,6 +576,12 @@ function FindingCard({ finding, categoryLabel, busy, onIgnore, onReopen, selecte
           </span>
         ) : null}
       </div>
+
+      {finding.status === "resolved" && resolutionText(finding) ? (
+        <p className="cfind__note">
+          {resolutionText(finding)}{finding.resolvedAt ? ` ${relativeTime(finding.resolvedAt)}` : ""}
+        </p>
+      ) : null}
 
       {finding.status === "ignored" && (finding.ignoredBy || finding.ignoreNote) ? (
         <p className="cfind__note">
