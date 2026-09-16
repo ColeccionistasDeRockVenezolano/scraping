@@ -43,19 +43,25 @@ import type { PoolClient } from "pg";
 import { getPool } from "../db/client.js";
 import { finishRun } from "../ingest/runs.js";
 import { normalizeEntityName } from "../normalization/entity-name.js";
+import { invalidateSearchIndex } from "../api/search-index.js";
 
 export type DuplicateKind = "artist" | "album";
-export type MergeKind = DuplicateKind | "track" | "person" | "album_credit" | "track_credit" | "artist_membership";
+export type MergeKind = DuplicateKind | "track" | "person" | "organization" | "album_credit" | "track_credit" | "artist_membership";
 
 const TABLE: Record<MergeKind, string> = {
-  artist: "artists", album: "albums", track: "tracks", person: "persons",
+  artist: "artists", album: "albums", track: "tracks", person: "persons", organization: "organizations",
   album_credit: "album_credits", track_credit: "track_credits", artist_membership: "artist_members",
 };
-const IDENTITY: Partial<Record<MergeKind, string>> = { artist: "name", album: "title", track: "title", person: "name" };
+/** La misma tabla por kind, para quien necesita reconstruir el rastro (E11.8). */
+export const MERGE_TABLES: Readonly<Record<MergeKind, string>> = TABLE;
+const IDENTITY: Partial<Record<MergeKind, string>> = { artist: "name", album: "title", track: "title", person: "name", organization: "name" };
 const ALIAS_TABLE: Partial<Record<MergeKind, string>> = {
   artist: "ingest.artist_aliases", album: "ingest.album_aliases", track: "ingest.track_aliases", person: "ingest.person_aliases",
+  organization: "ingest.organization_aliases",
 };
-const ALIAS_TYPE: Partial<Record<MergeKind, string>> = { artist: "name_variant", album: "alternate_title", track: "alternate_title", person: "name_variant" };
+const ALIAS_TYPE: Partial<Record<MergeKind, string>> = {
+  artist: "name_variant", album: "alternate_title", track: "alternate_title", person: "name_variant", organization: "name_variant",
+};
 /**
  * Columnas que no se completan desde el duplicado: identidad, parental,
  * posición y, en los créditos, el acreditado y su rol (completar `artist_id`
