@@ -65,7 +65,7 @@ Etapas: E11.2 redirecciones · E11.3 servicio · E11.4 API · E11.5 detector + 0
 4. **`capture.mjs` estaba atado a la base de desarrollo** (rutas por id y `networkidle` sin tope). Se le añadieron `CRV_CAPTURE_ROUTES`, `CRV_CAPTURE_EDIT_ROUTE` y `CRV_CAPTURE_VIEWPORTS` (por defecto, comportamiento idéntico) y una navegación con tope y diagnóstico; así el mismo capturador sirve contra un contenedor de prueba a 1280 y 400 px, como pide E11.6.
 5. **`sincopa-organizations.ts` (paso previo de E11.7)** no se duplica: aquél *retira* organizaciones falsas por re-extracción del crudo; el nuevo trabajo *convierte* fichas-basura por decisión humana. Comparten `removeEntity`, el run `merge_run` y la transacción única.
 6. **`person-merge.ts` se generalizó a `entity-merge.ts`** (E11.10): el archivo y los nombres del plan se mantienen donde el plan los fija (rutas, `previewHash`, `fieldChoices`), pero el servicio y los campos comparables salen de `ENTITY_SPECS`, así que las tres entidades usan el mismo camino.
-7. **La base de desarrollo no tiene 0014–0016**: `mergeInto` escribe redirecciones, así que la sonda de fusión contra `127.0.0.1:5433` falla hasta que se apliquen las migraciones. No se aplicaron (regla 0.1.6); la medición de P8 se hizo en contenedor desechable. **Antes del próximo `crv review duplicates` sobre la base real hay que migrarla** (`npm run db:migrate`).
+7. **La base de desarrollo no tiene 0014–0016**: `mergeInto` escribe redirecciones, así que la sonda de fusión contra `127.0.0.1:5433` falla hasta que se apliquen las migraciones. No se aplicaron (regla 0.1.6); la medición de P8 se hizo en contenedor desechable. **Antes del próximo `crv review duplicates` sobre la base real hay que migrarla** (`npm run db:migrate`). _(Actualizado 2026-09-16: aplicadas — ver §7.)_
 
 ## 5. Defectos encontrados al verificar (y su arreglo)
 
@@ -98,9 +98,43 @@ Los encontró la propia verificación, no una lectura:
 
 ## 6. Estado y siguiente paso
 
+_(Histórico: escrito al cerrar la implementación, antes de la aprobación.)_
+
 Sin commits: todo está en el árbol de trabajo a la espera de tu revisión (`git status` lista las migraciones
 0014–0016, los módulos nuevos, los tests y los docs).
 
 Antes del próximo run de fusión sobre la base real: **aplicar las migraciones 0014–0016** (`npm run db:migrate`).
 Sin ellas `mergeInto` no puede escribir la redirección y el motor rechaza la fusión (a propósito: no hay
 camino alternativo silencioso).
+
+## 7. Cierre de puesta en marcha (2026-09-16)
+
+Aprobada la implementación, se cerró todo lo que quedaba:
+
+- **Commits**: el árbol quedó limpio en 18 commits locales (sin empujar) — la fase E11 de endurecimiento
+  (ESLint real, escenarios, respaldos, 0013, auth de colaboradores, publicación bajo `/crv`), la nota de
+  cierre del baseline (E11.0) y el plan por etapa: `(E11.2)` redirecciones → `(E11.3)` servicio →
+  `(E11.4)` API → `(E11.5)` detector → `(E11.6)` web → `(E11.7)` conversión/división → `(E11.8)` deshacer →
+  `(E11.9)` búsqueda y filtros → `(E11.10)` organizaciones, P13 y documentación. Nada quedó sin commitear.
+- **Migraciones aplicadas** en la base de desarrollo: `0014_entity_redirects`,
+  `0015_review_kind_person_duplicate` y `0016_person_duplicate_pair_uk` (`npm run db:migrate`, <2 s; el
+  índice único real es `review_queue_person_duplicate_live_uk`).
+- **Sonda de fusión** contra la base real: en frío 18,1 s (primer toque de la tabla de 19 GB de decisiones
+  de ER); en caliente **746 ms → OK** (límite P8 de 2 s). El par 14←3617 se fusiona y se revierte entero.
+- **Cola poblada**: `crv review person-candidates --confirm` → run 249: **173 revisiones `person_duplicate`
+  abiertas, 0 preexistentes**; visibles en `/personas/duplicados` para que decidas.
+- **Respaldo**: se guardó el respaldo dirigido `backups/crv-20260916-cierre.dump` (todo menos
+  `ingest.entity_resolution_decisions`, 19 GB — no la tocan estas migraciones; SHA-256 registrado junto al
+  archivo). El respaldo completo (`npm run db:backup`, ~6,8 GB) queda recomendado para la próxima ventana:
+  tarda horas y la base no había cambiado desde sus respaldos del 2026-09-15; la migración fue DDL aditivo
+  y reversible con sus `.down`.
+- Suites sobre el árbol final: typecheck ✓, lint ✓, unit 245 ✓, contratos E11 27/27 ✓, prueba visual de
+  fusión ✓.
+
+### Correcciones del scoring 1–20
+
+- E11.0: la corrida de `review-duplicates`/`person-corrections`/`api-write` quedó registrada en
+  `reports/e11-baseline.md` (2/2, 4/4, 9/9).
+- E11.7: `splitPerson` consolida los créditos equivalentes de **todos** los destinos (antes solo del
+  primero); cubierto por test.
+- E11.10: añadido el test de `albums.label_id` («dos sellos → los discos pasan al que queda»).
