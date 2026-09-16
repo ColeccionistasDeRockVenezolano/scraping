@@ -20,6 +20,29 @@ describe("yt:enrich-artist", () => {
     expect(QUOTA_COST.search).toBe(100);
   });
 
+  it("una cuota agotada (403) es terminal: una sola llamada y el error no expone la clave", async () => {
+    let calls = 0;
+    const api = new YouTubeDataApi("AIzaClaveQueNoDebeFiltrarse", async () => {
+      calls += 1;
+      return new Response(JSON.stringify({ error: { code: 403, errors: [{ reason: "quotaExceeded" }] } }), { status: 403 });
+    });
+    const error: unknown = await api.listVideos(["Q-pRpO2sYSI"]).catch((caught: unknown) => caught);
+    expect(error).toBeInstanceOf(Error);
+    expect((error as Error).message).toMatch(/HTTP 403 .*quotaExceeded/);
+    expect((error as Error).message).not.toContain("AIzaClaveQueNoDebeFiltrarse");
+    expect(calls).toBe(1);
+  });
+
+  it("un 500 aislado se reintenta en vez de perder el lote", async () => {
+    let calls = 0;
+    const api = new YouTubeDataApi("clave-de-prueba", async () => {
+      calls += 1;
+      return calls === 1 ? new Response("backend error", { status: 500 }) : new Response(JSON.stringify({ items: [] }), { status: 200 });
+    });
+    await expect(api.listVideos(["Q-pRpO2sYSI"])).resolves.toEqual({ items: [] });
+    expect(calls).toBe(2);
+  });
+
   it("rechaza una búsqueda sin canal: nunca se busca en todo YouTube", () => {
     const api = new YouTubeDataApi("clave-de-prueba", async () => new Response("{}"));
     expect(() => api.searchChannelVideos("", "Caramelos De Cianuro")).toThrow(/canal/);
