@@ -524,6 +524,30 @@ toda escritura pasa por `withOperatorRun` (claims humanos + auditoría) y las
 consultas de comparación de nombres se hacen en TypeScript porque la base es
 `SQL_ASCII` (regla 0.1.11 del plan).
 
+### 4.16ter Detector de conflictos de Curaduría (2026-09-16)
+
+Analiza el catálogo entero y agrupa por categoría lo que no encaja. Las reglas
+no llevan listas de nombres: aprenden del propio catálogo (lugares desde
+`origin_city`, palabras de rol desde los créditos, vocabulario de organización
+por su peso frente a los nombres de persona, palabras de tipo de disco, perfil
+de signos y largos de cada campo).
+
+| módulo | responsabilidad |
+| --- | --- |
+| `src/curation/snapshot.ts` | foto plana del catálogo (core, cola viva, conflictos abiertos, pares ya decididos) |
+| `src/curation/lexicon.ts` | léxico aprendido y perfiles por campo |
+| `src/curation/detectors/*.ts` | un detector por problema; cada uno declara categoría, etiqueta y subgrupos |
+| `src/curation/detectors/anomalies.ts` | «Otros»: valores que se salen del perfil de su campo y que ningún detector explica |
+| `src/curation/taxonomy.ts` | categorías; una categoría o tipo de revisión desconocido cae en «otros» |
+| `src/curation/analyze.ts` | corre los detectores (uno roto no apaga al resto), huella estable por hallazgo |
+| `src/curation/scan.ts` | persiste en `ingest.curation_findings` (abierto/ignorado/resuelto), marca lo encadenado, un análisis a la vez |
+| `src/curation/watcher.ts` | análisis tras cada escritura correcta de la API y cuando cambian los contadores del catálogo |
+| `src/api/routes/curation.ts` | `/curation/*` (solo admin) y el gancho `onResponse` que dispara la verificación |
+
+Encadenamiento: si un análisis resuelve un hallazgo y en la misma ficha (o en
+una relacionada) aparece otro —nuevo o reabierto—, el nuevo guarda
+`evidence.triggeredBy`. La web lo muestra como «apareció al corregir…».
+
 ## 5. Flujo de datos end-to-end
 
 ```
