@@ -39,7 +39,6 @@ let app: Awaited<ReturnType<typeof buildApp>> | undefined;
 
 try {
   process.env.DATABASE_URL = container.databaseUrl;
-  process.env.CRV_OPERATOR_TOKEN = operatorToken;
   process.env.LOG_LEVEL = "silent";
   resetEnvCache();
   await applyCore(container.name);

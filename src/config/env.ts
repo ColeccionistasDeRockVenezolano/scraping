@@ -13,13 +13,23 @@ const envSchema = z.object({
 
   PORT: z.coerce.number().int().positive().default(8080),
   HOST: z.string().default("127.0.0.1"),
-  // Escritura de la API (PHASES §E7B). Sin token la API es de solo lectura:
-  // ningún POST/PATCH/DELETE se acepta. No hay usuarios públicos; el token es
-  // del operador del catálogo y nunca se registra en logs.
-  CRV_OPERATOR_TOKEN: z.string().min(24, "CRV_OPERATOR_TOKEN debe tener al menos 24 caracteres").optional(),
+  // El bearer histórico queda disponible solo para scripts internos. La web
+  // usa cuentas scrypt y sesiones HttpOnly configuradas en el JSON siguiente.
+  CRV_OPERATOR_TOKEN: z.preprocess(
+    (value) => value === "" ? undefined : value,
+    z.string().min(24, "CRV_OPERATOR_TOKEN debe tener al menos 24 caracteres").optional(),
+  ),
   // Nombre por defecto con que se firman las decisiones cuando la petición no
   // trae la cabecera X-CRV-Operator.
   CRV_OPERATOR_NAME: z.string().trim().min(1).max(80).default("operador"),
+  CRV_COLLABORATORS_JSON: z.string().optional(),
+  // Base SQLite de herra (coleccionistasderockvenezolano.com). Si está, sus
+  // cuentas también inician sesión en el CRV; se abre en solo lectura.
+  CRV_HERRA_DB_PATH: z.preprocess((value) => value === "" ? undefined : value, z.string().optional()),
+  CRV_HERRA_PROJECT_SLUG: z.string().min(1).default("coleccionistas-rock-venezolano"),
+  CRV_SESSION_TTL_HOURS: z.coerce.number().int().min(1).max(168).default(12),
+  CRV_SESSION_COOKIE_PATH: z.string().regex(/^\/[A-Za-z0-9/_-]*$/u).default("/"),
+  CRV_ALLOWED_ORIGINS: z.string().default("http://127.0.0.1:5173,http://localhost:5173"),
 
   DATA_DIR: z.string().default("./data"),
 
