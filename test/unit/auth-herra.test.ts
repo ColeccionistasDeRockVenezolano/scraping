@@ -41,6 +41,9 @@ describe("sesiones con cuentas de herra", () => {
     db.prepare("INSERT INTO users (id, project_id, name, access_code_hash, status) VALUES (2, 1, 'Pendiente', ?, 'pending')").run(hash);
     db.prepare("INSERT INTO users (id, project_id, name, access_code_hash) VALUES (3, 2, 'Ajeno', ?)").run(hash);
     db.prepare("INSERT INTO admins (id, username, password_hash, role, project_id) VALUES (1, 'jefe', ?, 'superadmin', NULL)").run(hash);
+    // La misma persona como usuario (código de acceso) y como administradora (otra contraseña).
+    db.prepare("INSERT INTO users (id, project_id, name, first_name, last_name, access_code_hash) VALUES (4, 1, 'Brian', 'Brian', 'García', ?)").run(herraHash("codigo-de-usuario"));
+    db.prepare("INSERT INTO admins (id, username, password_hash, role, project_id) VALUES (2, 'Brian', ?, 'admin', 1)").run(hash);
 
     delete process.env["CRV_COLLABORATORS_JSON"];
     delete process.env["CRV_OPERATOR_TOKEN"];
@@ -70,15 +73,34 @@ describe("sesiones con cuentas de herra", () => {
   const login = (username: string, password = PASSWORD) =>
     app.inject({ method: "POST", url: "/auth/login", payload: { username, password } });
 
-  it("acepta usuarios aprobados y superadmins, y firma con su nombre", async () => {
+  it("acepta usuarios aprobados como lectores y a los administradores como admin", async () => {
     const user = await login("pedro");
     expect(user.statusCode).toBe(200);
-    expect(user.json()).toMatchObject({ user: { username: "pedro", name: "Pedro Pérez" } });
+    expect(user.json()).toMatchObject({ user: { username: "pedro", name: "Pedro Pérez", role: "reader" } });
     const cookie = (user.headers["set-cookie"] as string).split(";", 1)[0]!;
-    const written = await app.inject({ method: "POST", url: "/protected", headers: { cookie, "x-crv-csrf": user.json().csrf } });
-    expect(written.json()).toEqual({ operator: "Pedro Pérez" });
+    const denied = await app.inject({ method: "POST", url: "/protected", headers: { cookie, "x-crv-csrf": user.json().csrf } });
+    expect(denied.statusCode).toBe(403);
+    expect(denied.json()).toMatchObject({ error: { code: "admin_required" } });
 
-    expect((await login("JEFE")).statusCode).toBe(200);
+    const boss = await login("JEFE");
+    expect(boss.statusCode).toBe(200);
+    expect(boss.json()).toMatchObject({ user: { role: "admin" } });
+    const bossCookie = (boss.headers["set-cookie"] as string).split(";", 1)[0]!;
+    const written = await app.inject({ method: "POST", url: "/protected", headers: { cookie: bossCookie, "x-crv-csrf": boss.json().csrf } });
+    expect(written.json()).toEqual({ operator: "jefe" });
+  });
+
+  it("quien es usuario y administrador con el mismo nombre entra como admin con su contraseña de admin", async () => {
+    const asAdmin = await login("brian");
+    expect(asAdmin.statusCode).toBe(200);
+    expect(asAdmin.json()).toMatchObject({ user: { username: "brian", name: "Brian García", role: "admin" } });
+    const cookie = (asAdmin.headers["set-cookie"] as string).split(";", 1)[0]!;
+    const written = await app.inject({ method: "POST", url: "/protected", headers: { cookie, "x-crv-csrf": asAdmin.json().csrf } });
+    expect(written.statusCode).toBe(200);
+
+    const asUser = await login("brian", "codigo-de-usuario");
+    expect(asUser.statusCode).toBe(200);
+    expect(asUser.json()).toMatchObject({ user: { role: "reader" } });
   });
 
   it("rechaza contraseñas malas, cuentas pendientes y cuentas de otro proyecto", async () => {

@@ -13,9 +13,11 @@ const name = nameRaw?.trim() ?? "";
 const generatedFlag = flags.find((value) => value.startsWith("--generate="));
 const generatedPath = generatedFlag?.slice("--generate=".length);
 const disableLegacyToken = flags.includes("--disable-legacy-token");
+// admin (por defecto) edita, fusiona y revisa; reader solo inicia sesión y lee.
+const role = flags.find((value) => value.startsWith("--role="))?.slice("--role=".length) ?? "admin";
 
-if (!/^[a-z0-9][a-z0-9._-]{2,39}$/u.test(username) || !/^[\p{L}\p{N} ._'-]{1,80}$/u.test(name)) {
-  console.error('Uso: npm run auth:set-collaborator -- usuario "Nombre visible" [--generate=/ruta/credencial.txt] [--disable-legacy-token]');
+if (!/^[a-z0-9][a-z0-9._-]{2,39}$/u.test(username) || !/^[\p{L}\p{N} ._'-]{1,80}$/u.test(name) || !["admin", "reader"].includes(role)) {
+  console.error('Uso: npm run auth:set-collaborator -- usuario "Nombre visible" [--role=admin|reader] [--generate=/ruta/credencial.txt] [--disable-legacy-token]');
   process.exit(1);
 }
 
@@ -67,7 +69,7 @@ const configured = parseDotenv(source)["CRV_COLLABORATORS_JSON"];
 const accounts = configured ? JSON.parse(configured) : [];
 if (!Array.isArray(accounts)) throw new Error("CRV_COLLABORATORS_JSON debe ser un arreglo");
 const next = accounts.filter((account) => account?.username !== username);
-next.push({ username, name, passwordHash });
+next.push({ username, name, passwordHash, role });
 function setEnvLine(input, key, value) {
   const pattern = new RegExp(`^${key}=.*$`, "mu");
   const line = `${key}=${value}`;

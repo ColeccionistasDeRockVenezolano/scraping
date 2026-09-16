@@ -42,6 +42,8 @@ import { DeepSeekArbiter, FileArbiter, type Arbiter } from "../ambiguity/arbiter
 import { createDeepSeekGateway } from "../ai/gateway.js";
 import { getEnv } from "../config/env.js";
 import { applySincopaOrganizationRepair, planSincopaOrganizationRepair } from "../review/sincopa-organizations.js";
+import { runCurationScan } from "../curation/scan.js";
+import { getCurationSummary } from "../curation/repository.js";
 
 /** `--review=1,2,3` → ids; undefined si no vino; null si vino mal escrito. */
 function parseIdList(value: string | undefined): number[] | undefined | null {
@@ -671,6 +673,37 @@ async function main(): Promise<number> {
       return result.failed.length ? 1 : 0;
     }
 
+    // Curaduría · detector de conflictos: analiza el catálogo entero, agrupa por
+    // categoría y verifica qué resolvió y qué apareció desde el análisis anterior.
+    case "curation": {
+      const [subcommand] = args;
+      if (subcommand === "scan") {
+        const summary = await runCurationScan({ trigger: "cli", dryRun: args.includes("--dry-run") });
+        if (summary.status === "failed") {
+          console.error(`curation scan falló: ${summary.error ?? "error desconocido"}`);
+          return 1;
+        }
+        console.log(`curation scan${summary.dryRun ? " --dry-run" : ` (análisis ${summary.scanId})`}: ${summary.total} hallazgos en ${summary.durationMs} ms · `
+          + `${summary.inserted} nuevos · ${summary.reopened} reabiertos · ${summary.resolved} resueltos · ${summary.chained} aparecidos tras una corrección`);
+        for (const [category, count] of Object.entries(summary.byCategory).sort((a, b) => b[1] - a[1])) console.log(`  ${String(count).padStart(6)}  ${category}`);
+        for (const failure of summary.failures) console.error(`  ! detector ${failure.detector}: ${failure.error}`);
+        if (summary.dryRun) console.log("  (dry-run: nada se escribió)");
+        return 0;
+      }
+      if (subcommand === "summary") {
+        const summary = await getCurationSummary(false);
+        console.log(`último análisis: ${summary.lastScan ? `#${summary.lastScan.id} ${summary.lastScan.trigger} ${summary.lastScan.status} ${summary.lastScan.startedAt}` : "ninguno"}`);
+        console.log(`abiertos ${summary.totals.open} · ignorados ${summary.totals.ignored} · resueltos ${summary.totals.resolved} · nuevos en el último ${summary.totals.newInLastScan}`);
+        for (const category of summary.categories) {
+          console.log(`\n${String(category.open).padStart(6)}  ${category.label}`);
+          for (const detector of category.detectors.filter((item) => item.open > 0)) console.log(`${String(detector.open).padStart(12)}  ${detector.label}`);
+        }
+        return 0;
+      }
+      console.error("uso: crv curation scan [--dry-run] | crv curation summary");
+      return 1;
+    }
+
     case undefined:
     case "help":
     case "--help":
@@ -754,6 +787,9 @@ CRV CLI
                              decide los casos de la cola: MATCH_HIGH_CONFIDENCE / KEEP_SEPARATE / NEEDS_HUMAN /
                              CONFLICT con evidencia citada; --ai consulta DeepSeek (flash); no toca el core;
                              escribe reports/ambiguity-resolution.{json,md}
+  curation scan [--dry-run]  analiza el catálogo con el detector de conflictos de Curaduría: nombres sucios,
+                             mal segmentados, fichas de otro tipo, repetidas, incoherentes, en disputa, «Otros»
+  curation summary           conteos abiertos por categoría y detector, y el último análisis
   ambiguity:apply [--review=<id,...>] --note="<motivo>" --confirm
                              aplica MATCH y KEEP de reglas; las de árbitro solo nombrando su revisión
 

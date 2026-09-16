@@ -94,10 +94,18 @@ export class HerraAccounts {
     return row?.id;
   }
 
-  /** Busca la cuenta por nombre (sin distinguir mayúsculas). Solo cuentas habilitadas. */
-  find(username: string): HerraAccount | undefined {
+  /**
+   * Cuentas habilitadas con ese nombre (sin distinguir mayúsculas), la de
+   * administrador primero. En herra una misma persona puede estar en `admins`
+   * y en `users` con el mismo nombre («Brian», «Jose»): antes se devolvía solo
+   * la de `users` y el administrador entraba como lector. Quien inicia sesión
+   * prueba la contraseña contra cada una, en este orden.
+   */
+  findAll(username: string): HerraAccount[] {
     const db = this.open();
     const projectId = this.projectId();
+    const found: HerraAccount[] = [];
+    let userName: string | undefined;
     if (projectId !== undefined) {
       const user = db.prepare(
         `SELECT id, name, first_name, last_name, access_code_hash, session_version FROM users
@@ -105,29 +113,33 @@ export class HerraAccounts {
       ).get(projectId, username) as UserRow | undefined;
       if (user) {
         const full = [user.first_name, user.last_name].filter(Boolean).join(" ");
-        return {
+        userName = displayName(full || user.name);
+        found.push({
           kind: "user",
           id: user.id,
           username: user.name.toLowerCase(),
-          name: displayName(full || user.name),
+          name: userName,
           passwordHash: user.access_code_hash,
           sessionVersion: user.session_version,
-        };
+        });
       }
     }
     const admin = db.prepare(
       `SELECT id, username, password_hash, session_version FROM admins
         WHERE username = ? COLLATE NOCASE AND (role = 'superadmin' OR project_id = ?)`,
     ).get(username, projectId ?? -1) as AdminRow | undefined;
-    if (!admin) return undefined;
-    return {
-      kind: "admin",
-      id: admin.id,
-      username: admin.username.toLowerCase(),
-      name: displayName(admin.username),
-      passwordHash: admin.password_hash,
-      sessionVersion: admin.session_version,
-    };
+    if (admin) {
+      found.unshift({
+        kind: "admin",
+        id: admin.id,
+        username: admin.username.toLowerCase(),
+        // Si también es usuario del proyecto, firma con su nombre completo.
+        name: userName ?? displayName(admin.username),
+        passwordHash: admin.password_hash,
+        sessionVersion: admin.session_version,
+      });
+    }
+    return found;
   }
 
   /** ¿Sigue vigente en herra la cuenta con la que se abrió la sesión? */

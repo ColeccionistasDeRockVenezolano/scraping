@@ -5,6 +5,13 @@
 // HttpOnly. Cada sesión queda ligada a una cuenta y las escrituras usan ese
 // nombre para la auditoría. El bearer histórico se conserva exclusivamente
 // para automatizaciones existentes y puede desactivarse quitándolo del .env.
+//
+// ROLES. Leer el catálogo es público. Todo lo demás —crear, editar, borrar,
+// fusionar, comparar (previsualización de fusión), la cola de revisión y los
+// posibles duplicados— exige una cuenta `admin`. Una cuenta `reader` inicia
+// sesión pero ve lo mismo que un visitante anónimo. Son admin: los
+// administradores y el superadministrador de herra, las cuentas del .env (salvo
+// que declaren `"role":"reader"`) y el bearer de automatizaciones.
 import { createHash, randomBytes, scrypt as scryptCallback, timingSafeEqual } from "node:crypto";
 import type { FastifyInstance, FastifyReply, FastifyRequest } from "fastify";
 import type { ZodTypeProvider } from "fastify-type-provider-zod";
@@ -20,9 +27,21 @@ declare module "fastify" {
   }
 }
 
+export type AccountRole = "admin" | "reader";
+
 export const OPERATOR_SECURITY = [{ collaboratorSession: [] }, { operatorToken: [] }];
 
 const READ_METHODS = new Set(["GET", "HEAD", "OPTIONS"]);
+/**
+ * Lecturas que no son catálogo público sino trabajo de curaduría: la cola de
+ * revisión, los candidatos a duplicado y la comparación previa a fusionar.
+ */
+const ADMIN_READS = [
+  /^\/review-queue(\/|$)/u,
+  /^\/persons\/duplicate-candidates$/u,
+  /^\/curation(\/|$)/u,
+  /^\/[a-z]+\/\d+\/merge-preview$/u,
+];
 const OPERATOR_NAME = /^[\p{L}\p{N} ._'-]{1,80}$/u;
 const USERNAME = /^[a-z0-9][a-z0-9._-]{2,39}$/u;
 const SESSION_COOKIE = "crv_session";
@@ -47,11 +66,13 @@ interface Collaborator {
   username: string;
   name: string;
   passwordHash: string;
+  role: AccountRole;
 }
 
 interface Session {
   username: string;
   name: string;
+  role: AccountRole;
   csrf: string;
   expiresAt: number;
   /** Presente si la cuenta viene de herra: se revalida en cada uso. */
@@ -158,6 +179,8 @@ function collaborators(): Map<string, Collaborator> {
     username: z.string().regex(USERNAME),
     name: z.string().trim().regex(OPERATOR_NAME),
     passwordHash: z.string().min(1),
+    // Las cuentas del .env las crea quien opera el servidor: admin por defecto.
+    role: z.enum(["admin", "reader"]).default("admin"),
   }).strict()).min(1).max(100);
   const accounts = schema.parse(parsed);
   const result = new Map<string, Collaborator>();
@@ -276,14 +299,23 @@ export async function registerOperatorAuth(app: FastifyInstance): Promise<void> 
   };
 
   app.addHook("onRequest", async (request) => {
-    if (READ_METHODS.has(request.method) || request.url.split("?", 1)[0] === "/auth/login") return;
-    assertTrustedOrigin(request);
+    const path = request.url.split("?", 1)[0]!;
+    const isRead = READ_METHODS.has(request.method);
+    if (path === "/auth/login" || (isRead && !ADMIN_READS.some((pattern) => pattern.test(path)))) return;
+    if (!isRead) assertTrustedOrigin(request);
 
     const session = activeSession(request)?.value;
     if (session) {
-      const csrf = request.headers["x-crv-csrf"];
-      if (typeof csrf !== "string" || !safeEqual(csrf, session.csrf)) {
-        throw new ApiError(403, "invalid_csrf", "La sesión no pudo validarse. Recarga la página e inténtalo de nuevo.");
+      // Una lectura no lleva CSRF: la cookie SameSite=Strict ya la protege y
+      // un GET no cambia nada.
+      if (!isRead) {
+        const csrf = request.headers["x-crv-csrf"];
+        if (typeof csrf !== "string" || !safeEqual(csrf, session.csrf)) {
+          throw new ApiError(403, "invalid_csrf", "La sesión no pudo validarse. Recarga la página e inténtalo de nuevo.");
+        }
+      }
+      if (session.role !== "admin") {
+        throw new ApiError(403, "admin_required", "Tu cuenta es de solo lectura. Editar, fusionar y revisar requiere una cuenta administradora.");
       }
       request.operator = session.name;
       return;
@@ -303,10 +335,10 @@ export async function registerOperatorAuth(app: FastifyInstance): Promise<void> 
       return;
     }
 
-    if (!loginEnabled && !expected) {
+    if (!loginEnabled && !expected && !isRead) {
       throw new ApiError(403, "writes_disabled", "escritura deshabilitada: no hay cuentas de colaboradores configuradas");
     }
-    throw new ApiError(401, "unauthorized", "Inicia sesión con una cuenta de colaborador.");
+    throw new ApiError(401, "unauthorized", "Inicia sesión con una cuenta administradora.");
   });
 
   server.post("/auth/login", {
@@ -324,7 +356,7 @@ export async function registerOperatorAuth(app: FastifyInstance): Promise<void> 
     chargeLoginAttempt(accountKey);
 
     // Las cuentas del .env tienen prioridad; después se consulta herra.
-    let account: { username: string; name: string } | undefined;
+    let account: { username: string; name: string; role: AccountRole } | undefined;
     let herraRef: HerraSessionRef | undefined;
     let valid: boolean;
     const local = accounts.get(username);
@@ -332,24 +364,30 @@ export async function registerOperatorAuth(app: FastifyInstance): Promise<void> 
       account = local;
       valid = await passwordMatches(request.body.password, local.passwordHash);
     } else {
-      let shared;
+      let candidates: ReturnType<HerraAccounts["findAll"]>;
       try {
-        shared = herra?.find(username);
+        candidates = herra?.findAll(username) ?? [];
       } catch (error) {
         request.log.error({ err: error }, "no se pudo consultar la base de herra");
         throw new ApiError(503, "accounts_unavailable", "Las cuentas no están disponibles en este momento. Inténtalo en unos minutos.");
       }
-      if (shared) {
-        account = shared;
-        herraRef = { kind: shared.kind, id: shared.id, sessionVersion: shared.sessionVersion };
-        valid = await herraPasswordMatches(request.body.password, shared.passwordHash);
+      valid = false;
+      if (candidates.length) {
+        // En herra administra quien está en `admins`; un usuario aprobado solo
+        // lee. La cuenta admin va primero: con su contraseña se entra como admin.
+        for (const shared of candidates) {
+          if (!await herraPasswordMatches(request.body.password, shared.passwordHash)) continue;
+          account = { username: shared.username, name: shared.name, role: shared.kind === "admin" ? "admin" : "reader" };
+          herraRef = { kind: shared.kind, id: shared.id, sessionVersion: shared.sessionVersion };
+          valid = true;
+          break;
+        }
       } else {
         // Una cuenta inexistente hace el mismo trabajo scrypt que una existente:
         // el tiempo de respuesta no sirve para enumerar usuarios.
         await (herra
           ? herraPasswordMatches(request.body.password, HERRA_DUMMY_HASH)
           : passwordMatches(request.body.password, accounts.values().next().value!.passwordHash));
-        valid = false;
       }
     }
     if (!valid || !account) {
@@ -368,19 +406,20 @@ export async function registerOperatorAuth(app: FastifyInstance): Promise<void> 
     sessions.set(digest(token).toString("base64url"), {
       username: account.username,
       name: account.name,
+      role: account.role,
       csrf,
       expiresAt: Date.now() + maxAge * 1000,
       ...(herraRef ? { herra: herraRef } : {}),
     });
     setSessionCookie(reply, request, token, maxAge);
-    return { user: { username: account.username, name: account.name }, csrf };
+    return { user: { username: account.username, name: account.name, role: account.role }, csrf };
   });
 
   server.get("/auth/me", { schema: { tags: ["auth"] } }, async (request, reply) => {
     noStore(reply);
     const session = activeSession(request)?.value;
     if (!session) throw new ApiError(401, "unauthorized", "No hay una sesión activa.");
-    return { user: { username: session.username, name: session.name }, csrf: session.csrf };
+    return { user: { username: session.username, name: session.name, role: session.role }, csrf: session.csrf };
   });
 
   server.post("/auth/logout", { schema: { tags: ["auth"] } }, async (request, reply) => {

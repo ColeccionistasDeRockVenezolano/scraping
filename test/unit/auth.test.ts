@@ -16,6 +16,7 @@ describe("sesiones de colaboradores", () => {
   beforeEach(async () => {
     process.env["CRV_COLLABORATORS_JSON"] = JSON.stringify([
       { username: "ana.crv", name: "Ana Archivo", passwordHash: HASH },
+      { username: "lucia.lee", name: "Lucía Lectora", passwordHash: HASH, role: "reader" },
     ]);
     delete process.env["CRV_OPERATOR_TOKEN"];
     resetEnvCache();
@@ -29,6 +30,9 @@ describe("sesiones de colaboradores", () => {
     });
     await registerOperatorAuth(app);
     app.post("/protected", async (request) => ({ operator: request.operator }));
+    app.get("/review-queue", async (request) => ({ operator: request.operator }));
+    app.get("/persons/:id/merge-preview", async () => ({ ok: true }));
+    app.get("/artists", async () => ({ public: true }));
   });
 
   afterEach(async () => {
@@ -46,7 +50,7 @@ describe("sesiones de colaboradores", () => {
       headers: { origin: "https://crv.example", host: "crv.example", "x-forwarded-proto": "https" },
     });
     expect(login.statusCode).toBe(200);
-    expect(login.json()).toMatchObject({ user: { username: "ana.crv", name: "Ana Archivo" }, csrf: expect.any(String) });
+    expect(login.json()).toMatchObject({ user: { username: "ana.crv", name: "Ana Archivo", role: "admin" }, csrf: expect.any(String) });
     const setCookie = login.headers["set-cookie"] as string;
     expect(setCookie).toContain("HttpOnly");
     expect(setCookie).toContain("SameSite=Strict");
@@ -68,6 +72,33 @@ describe("sesiones de colaboradores", () => {
     const me = await app.inject({ method: "GET", url: "/auth/me", headers: { cookie } });
     expect(me.statusCode).toBe(200);
     expect(me.headers["cache-control"]).toBe("no-store");
+  });
+
+  it("solo una cuenta admin escribe, revisa y compara; el catálogo sigue público", async () => {
+    const loginAs = async (username: string) => {
+      const response = await app.inject({ method: "POST", url: "/auth/login", payload: { username, password: PASSWORD } });
+      return { cookie: (response.headers["set-cookie"] as string).split(";", 1)[0]!, csrf: response.json().csrf as string, body: response.json() };
+    };
+
+    expect((await app.inject({ method: "GET", url: "/artists" })).statusCode).toBe(200);
+    expect((await app.inject({ method: "GET", url: "/review-queue" })).statusCode).toBe(401);
+    expect((await app.inject({ method: "GET", url: "/persons/3/merge-preview?with=4" })).statusCode).toBe(401);
+
+    const reader = await loginAs("lucia.lee");
+    expect(reader.body).toMatchObject({ user: { role: "reader" } });
+    const readerWrite = await app.inject({ method: "POST", url: "/protected", headers: { cookie: reader.cookie, "x-crv-csrf": reader.csrf } });
+    expect(readerWrite.statusCode).toBe(403);
+    expect(readerWrite.json()).toMatchObject({ error: { code: "admin_required" } });
+    expect((await app.inject({ method: "GET", url: "/review-queue", headers: { cookie: reader.cookie } })).statusCode).toBe(403);
+    expect((await app.inject({ method: "GET", url: "/artists", headers: { cookie: reader.cookie } })).statusCode).toBe(200);
+    const readerMe = await app.inject({ method: "GET", url: "/auth/me", headers: { cookie: reader.cookie } });
+    expect(readerMe.json()).toMatchObject({ user: { role: "reader" } });
+
+    const admin = await loginAs("ana.crv");
+    const review = await app.inject({ method: "GET", url: "/review-queue", headers: { cookie: admin.cookie } });
+    expect(review.statusCode).toBe(200);
+    expect(review.json()).toEqual({ operator: "Ana Archivo" });
+    expect((await app.inject({ method: "GET", url: "/persons/3/merge-preview?with=4", headers: { cookie: admin.cookie } })).statusCode).toBe(200);
   });
 
   it("no enumera usuarios, rechaza orígenes externos y permite revocar la sesión", async () => {

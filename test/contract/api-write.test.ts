@@ -246,7 +246,7 @@ describe("API de escritura (E7B)", () => {
 
   it("una corrección manual de un dato conflictivo resuelve el conflicto y conserva el historial", async () => {
     const fixture = await conflictOnReleaseYear("Frito", 1995, 1996);
-    const listed = (await app.inject({ method: "GET", url: "/review-queue?kind=field_conflict&status=open" })).json();
+    const listed = (await app.inject({ method: "GET", url: "/review-queue?kind=field_conflict&status=open", headers: { authorization: `Bearer ${TOKEN}` } })).json();
     expect(listed.data.map((row: { id: number }) => row.id)).toContain(fixture.reviewId);
 
     const resolved = await write("POST", `/review-queue/${fixture.reviewId}/resolve-conflict`, {
@@ -273,7 +273,7 @@ describe("API de escritura (E7B)", () => {
       .map((row: { oldValue: unknown; newValue: unknown; performedBy: string }) => [row.oldValue, row.newValue, row.performedBy]);
     expect(history).toEqual([[1995, 1997, "human"], [null, 1995, "system"]]);
 
-    const reviewAfter = (await app.inject({ method: "GET", url: `/review-queue/${fixture.reviewId}` })).json();
+    const reviewAfter = (await app.inject({ method: "GET", url: `/review-queue/${fixture.reviewId}`, headers: { authorization: `Bearer ${TOKEN}` } })).json();
     expect(reviewAfter).toMatchObject({ status: "approved", resolvedBy: "human" });
     expect(reviewAfter.resolutionNote).toContain("la contraportada dice 1997");
 

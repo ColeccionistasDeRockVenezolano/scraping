@@ -42,7 +42,7 @@ describe("fusión de organizaciones y artistas (E11.10)", () => {
     await getPool().query("INSERT INTO public.album_credits(album_id,organization_id,credit_type,role) VALUES($1,$2,'producer','Producción')", [album, keep]);
     await getPool().query("INSERT INTO public.album_credits(album_id,organization_id,credit_type,role) VALUES($1,$2,'recording','Grabado en')", [album, drop]);
 
-    const preview = await app.inject({ method: "GET", url: `/organizations/${keep}/merge-preview?with=${drop}` });
+    const preview = await app.inject({ method: "GET", url: `/organizations/${keep}/merge-preview?with=${drop}`, headers });
     expect(preview.statusCode).toBe(200);
     const previewBody = preview.json();
     expect(previewBody.kind).toBe("organization");
@@ -77,7 +77,7 @@ describe("fusión de organizaciones y artistas (E11.10)", () => {
     const albumKeep = await one("INSERT INTO public.albums(artist_id,title,label_id) VALUES($1,'Disco Sello QA A',$2) RETURNING id", [band, keep]);
     const albumDrop = await one("INSERT INTO public.albums(artist_id,title,label_id) VALUES($1,'Disco Sello QA B',$2) RETURNING id", [band, drop]);
 
-    const preview = await app.inject({ method: "GET", url: `/organizations/${keep}/merge-preview?with=${drop}` });
+    const preview = await app.inject({ method: "GET", url: `/organizations/${keep}/merge-preview?with=${drop}`, headers });
     expect(preview.statusCode).toBe(200);
     const merged = await app.inject({
       method: "POST", url: `/organizations/${keep}/merge`, headers,
@@ -100,7 +100,7 @@ describe("fusión de organizaciones y artistas (E11.10)", () => {
     const keep = await one("INSERT INTO public.artists(name) VALUES('Artista Entidad QA') RETURNING id");
     const drop = await one("INSERT INTO public.artists(name,origin_city) VALUES('Artista Entidad QA (dup)','Caracas') RETURNING id");
 
-    const preview = await app.inject({ method: "GET", url: `/artists/${keep}/merge-preview?with=${drop}` });
+    const preview = await app.inject({ method: "GET", url: `/artists/${keep}/merge-preview?with=${drop}`, headers });
     expect(preview.statusCode).toBe(200);
     expect(preview.json().kind).toBe("artist");
     expect(preview.json().fieldsFilledFromDrop).toContain("origin_city");

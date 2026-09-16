@@ -290,6 +290,33 @@ export async function rejectReview(reviewId: number, input: ReviewActionInput): 
   return { reviewId, kind: review.kind, action: "rejected", runId, status: await reviewStatus(reviewId), detail: "revisión descartada sin cambios en el core" };
 }
 
+export interface ReviewPriorityResult {
+  reviewId: number;
+  priority: number;
+  runId: number;
+}
+
+/**
+ * Cambia el orden de una revisión en la cola (1-10, mayor = más urgente). No
+ * toca el core: solo re-ordena qué se atiende primero, así que el run queda
+ * como rastro de auditoría sin `merge_audit` asociado.
+ */
+export async function setReviewPriority(reviewId: number, priority: number, input: ReviewActionInput): Promise<ReviewPriorityResult> {
+  if (!Number.isInteger(priority) || priority < 1 || priority > 10) {
+    throw new OperatorError("invalid", `la prioridad debe ser un entero entre 1 y 10 (recibido: ${priority})`);
+  }
+  await loadOpenReview(reviewId);
+  const { runId, result } = await withOperatorRun({
+    name: "review:set-priority", operator: input.operator, note: input.note,
+    params: { reviewId, priority },
+  }, async (context) => {
+    const { rows } = await context.client.query<{ priority: number }>(
+      "UPDATE ingest.review_queue SET priority=$2, updated_at=now() WHERE id=$1 RETURNING priority::int", [reviewId, priority]);
+    return rows[0]!.priority;
+  });
+  return { reviewId, priority: result, runId };
+}
+
 export type ConflictChoice = "canonical" | "proposed" | "a" | "b" | "both" | "dismiss";
 
 /** Entidad, destino y campo del conflicto: del payload y, si falta, del claim. */

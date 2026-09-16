@@ -48,6 +48,7 @@ describe("API de fusión de personas (E11.4)", () => {
 
   const preview = (keepId: number, dropId: number) => app.inject({
     method: "GET", url: `/persons/${keepId}/merge-preview?with=${dropId}`,
+    headers: { authorization: `Bearer ${TOKEN}` },
   });
 
   const merge = (keepId: number, payload: Record<string, unknown>) => app.inject({
@@ -56,12 +57,15 @@ describe("API de fusión de personas (E11.4)", () => {
     payload,
   });
 
-  it("sin credenciales no se fusiona; la previsualización es lectura abierta", async () => {
+  it("sin credenciales no se fusiona ni se compara", async () => {
     const keep = await newPerson("Api Fusion A");
     const drop = await newPerson("Api Fusion B");
     const anonymous = await app.inject({ method: "POST", url: `/persons/${keep}/merge`, payload: { dropId: drop } });
     expect(anonymous.statusCode).toBe(401);
     expect(anonymous.json()).toMatchObject({ error: { code: "unauthorized" } });
+
+    const anonymousPreview = await app.inject({ method: "GET", url: `/persons/${keep}/merge-preview?with=${drop}` });
+    expect(anonymousPreview.statusCode).toBe(401);
 
     const read = await preview(keep, drop);
     expect(read.statusCode).toBe(200);

@@ -18,6 +18,9 @@ import {
 import { artistAliases, sources, claims, reviewQueue } from "../../src/db/schema/ingest.js";
 import { videoAlbums, videoArtists, videoTracks, youtubeVideos } from "../../src/db/schema/media.js";
 
+const ADMIN_TOKEN = "token-de-prueba-lectura-admin-0123456789";
+const admin = { authorization: `Bearer ${ADMIN_TOKEN}` };
+
 describe("API de lectura (E7A) — caso Caramelos De Cianuro", () => {
   let container: PgContainer;
   let app: FastifyInstance;
@@ -31,6 +34,7 @@ describe("API de lectura (E7A) — caso Caramelos De Cianuro", () => {
   beforeAll(async () => {
     container = await startPgContainer();
     process.env["DATABASE_URL"] = container.databaseUrl;
+    process.env["CRV_OPERATOR_TOKEN"] = ADMIN_TOKEN;
     resetEnvCache();
     await applyCore(container.name);
     await migrateUp();
@@ -118,7 +122,7 @@ describe("API de lectura (E7A) — caso Caramelos De Cianuro", () => {
     app = await buildApp();
   }, 120_000);
 
-  afterAll(async () => { await app?.close(); await closeDb(); await container.stop(); }, 60_000);
+  afterAll(async () => { await app?.close(); await closeDb(); delete process.env["CRV_OPERATOR_TOKEN"]; resetEnvCache(); await container.stop(); }, 60_000);
 
   it("GET /health reporta la base viva", async () => {
     const res = await app.inject({ method: "GET", url: "/health" });
@@ -277,11 +281,13 @@ describe("API de lectura (E7A) — caso Caramelos De Cianuro", () => {
     expect(res.json()).toMatchObject({ slug: "fixture-api", lastRun: null });
   });
 
-  it("GET /review-queue y /review-queue/:id son de solo lectura", async () => {
-    const list = await app.inject({ method: "GET", url: "/review-queue?status=open" });
+  it("GET /review-queue y /review-queue/:id exigen cuenta administradora", async () => {
+    expect((await app.inject({ method: "GET", url: "/review-queue?status=open" })).statusCode).toBe(401);
+    expect((await app.inject({ method: "GET", url: "/persons/duplicate-candidates" })).statusCode).toBe(401);
+    const list = await app.inject({ method: "GET", url: "/review-queue?status=open", headers: admin });
     expect(list.json().data).toHaveLength(1);
     const id = list.json().data[0].id;
-    const res = await app.inject({ method: "GET", url: `/review-queue/${id}` });
+    const res = await app.inject({ method: "GET", url: `/review-queue/${id}`, headers: admin });
     expect(res.json()).toMatchObject({
       kind: "possible_duplicate", status: "open", albumId,
       claims: [{ field: "origin_city", rawValue: "Caracas", confidence: "high", sourceName: "Fixture API" }],

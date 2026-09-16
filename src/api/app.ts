@@ -34,6 +34,7 @@ import { registerPersonCandidateRoutes } from "./routes/person-candidates.js";
 import { registerMergeRunRoutes } from "./routes/merge-runs.js";
 import { registerAliasRoutes } from "./routes/aliases.js";
 import { registerAuditRoutes } from "./routes/audit.js";
+import { registerCurationRoutes } from "./routes/curation.js";
 
 const log = moduleLogger("api");
 
@@ -134,6 +135,7 @@ export async function buildApp(): Promise<FastifyInstance> {
   await registerMergeRunRoutes(app);
   await registerAliasRoutes(app);
   await registerAuditRoutes(app);
+  await registerCurationRoutes(app);
 
   // El índice de búsqueda (E11.9) se carga en segundo plano: la primera
   // búsqueda real no debe pagar la lectura completa de nombres y alias.

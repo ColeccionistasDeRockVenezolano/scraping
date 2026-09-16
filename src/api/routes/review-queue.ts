@@ -6,7 +6,7 @@ import { idParamSchema, paginatedResponseSchema, writeErrorResponses } from "../
 import { getReviewQueueDetail, listReviewQueue } from "../repositories/review-queue.js";
 import { notFound } from "../http-errors.js";
 import { OPERATOR_SECURITY } from "../auth.js";
-import { acceptReview, rejectReview, resolveReviewConflict } from "../../review/operator-review.js";
+import { acceptReview, rejectReview, resolveReviewConflict, setReviewPriority } from "../../review/operator-review.js";
 
 const reviewListItemSchema = z.object({
   id: z.number().int(),
@@ -70,6 +70,17 @@ const reviewActionSchema = z.object({
   runId: z.number().int(),
   status: z.string(),
   detail: z.string(),
+});
+
+const priorityBodySchema = z.object({
+  priority: z.number().int().min(1).max(10).describe("1-10; mayor número, más urgente."),
+  note: reviewNote,
+}).strict();
+
+const priorityResultSchema = z.object({
+  reviewId: z.number().int(),
+  priority: z.number().int(),
+  runId: z.number().int(),
 });
 
 export async function registerReviewRoutes(app: FastifyInstance): Promise<void> {
@@ -141,4 +152,17 @@ export async function registerReviewRoutes(app: FastifyInstance): Promise<void> 
       ...(Object.hasOwn(body, "value") && body.value !== undefined ? { value: body.value } : {}),
     });
   });
+
+  server.patch("/review-queue/:id/priority", {
+    schema: {
+      tags: ["review-queue:write"],
+      summary: "Cambia el orden de una revisión en la cola (1-10, mayor = más urgente).",
+      security: OPERATOR_SECURITY,
+      params: idParamSchema,
+      body: priorityBodySchema,
+      response: { 200: priorityResultSchema, ...writeErrorResponses },
+    },
+  }, async (request) => setReviewPriority(request.params.id, request.body.priority, {
+    operator: request.operator, note: request.body.note,
+  }));
 }

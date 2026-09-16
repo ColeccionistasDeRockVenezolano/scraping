@@ -31,6 +31,13 @@ const envSchema = z.object({
   CRV_SESSION_COOKIE_PATH: z.string().regex(/^\/[A-Za-z0-9/_-]*$/u).default("/"),
   CRV_ALLOWED_ORIGINS: z.string().default("http://127.0.0.1:5173,http://localhost:5173"),
 
+  // Detector de conflictos de Curaduría (src/curation/). Cada escritura de
+  // la API dispara un análisis que verifica si la corrección abrió errores
+  // nuevos; el vigilante compara cada tanto los contadores del catálogo para
+  // cubrir cambios hechos fuera de la API. 0 apaga el vigilante.
+  CRV_CURATION_AUTOSCAN: z.enum(["true", "false"]).default("true").transform((value) => value === "true"),
+  CRV_CURATION_WATCH_MS: z.coerce.number().int().nonnegative().default(60_000),
+
   DATA_DIR: z.string().default("./data"),
 
   CRAWL_USER_AGENT: z.string().default("CRV-bot/0.1"),
