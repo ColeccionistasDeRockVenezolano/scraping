@@ -24,7 +24,7 @@ function waitForUrl(url: string, timeoutMs = 30_000): Promise<void> {
         if (response.ok) return resolve();
       } catch { /* El servidor aún está arrancando. */ }
       if (Date.now() >= deadline) return reject(new Error(`Timeout esperando ${url}`));
-      setTimeout(attempt, 200);
+      setTimeout(() => void attempt(), 200);
     };
     void attempt();
   });

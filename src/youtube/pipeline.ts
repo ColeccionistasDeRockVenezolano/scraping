@@ -124,7 +124,6 @@ export async function importYouTubeMasterSheet(filePath = YT_MASTER_XLSX_PATH): 
       const classification = classifySheetRow(row);
       const hash = seedHash(row, videoId);
       const old = await client.query<{ id: string; row_hash: string }>("SELECT id,row_hash FROM ingest.seed_uploads WHERE upload_order=$1 FOR UPDATE", [row.uploadOrder]);
-      let seedUploadId: number;
       if (!old.rows[0]) result.inserted += 1;
       else if (old.rows[0].row_hash === hash) result.unchanged += 1;
       else result.updated += 1;
@@ -133,7 +132,7 @@ export async function importYouTubeMasterSheet(filePath = YT_MASTER_XLSX_PATH): 
         VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14)
         ON CONFLICT(upload_order) DO UPDATE SET artist_name_raw=EXCLUDED.artist_name_raw,album_name_raw=EXCLUDED.album_name_raw,album_year_raw=EXCLUDED.album_year_raw,type_raw=EXCLUDED.type_raw,url_raw=EXCLUDED.url_raw,status_raw=EXCLUDED.status_raw,video_id=EXCLUDED.video_id,row_number=EXCLUDED.row_number,row_hash=EXCLUDED.row_hash,content_kind=EXCLUDED.content_kind,normalized_type=EXCLUDED.normalized_type,classification_reason=EXCLUDED.classification_reason,run_id=EXCLUDED.run_id,imported_at=now()
         RETURNING id`, [row.uploadOrder,row.artistName,row.albumName,row.albumYear,row.type,row.url, row.status, videoId,row.rowNumber,hash,classification.kind,classification.normalizedType,classification.reason,runId]);
-      seedUploadId = Number(saved.rows[0]!.id);
+      const seedUploadId = Number(saved.rows[0]!.id);
       // Una fila EMPTY no describe ningún disco: es un hueco de la hoja, no un
       // disco sin video. Por eso va a seed_incomplete antes que a missing_url.
       if (isEmptySeedRow(row)) { if (await addReview(client, "seed_incomplete", seedUploadId, { artist: row.artistName, album: row.albumName }, "Fila seed EMPTY: no crea entidades")) result.reviews += 1; continue; }
@@ -467,7 +466,7 @@ export async function rederiveYouTubeDescriptions(options: { dryRun?: boolean; b
      WHERE v.metadata IS NOT NULL OR v.description IS NOT NULL
      ORDER BY v.id`);
 
-  let runId = 0;
+  let runId: number;
   {
     const setup = await pool.connect();
     try {

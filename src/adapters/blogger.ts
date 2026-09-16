@@ -1,4 +1,4 @@
-import { load, type CheerioAPI } from "cheerio";
+import type { CheerioAPI } from "cheerio";
 import type { PageRef, RawRecord, SourceAdapter, StoredPage } from "./contracts.js";
 import { ADAPTER_VERSION, absoluteUrl, extractNarrativeHtml } from "./shared.js";
 

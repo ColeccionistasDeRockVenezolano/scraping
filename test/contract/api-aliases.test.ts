@@ -5,7 +5,7 @@ import { afterAll, beforeAll, describe, expect, it } from "vitest";
 import type { FastifyInstance } from "fastify";
 import { startPgContainer, type PgContainer } from "../support/pg-container.js";
 import { applyCore } from "../support/apply-core.js";
-import { closeDb, getPool } from "../../src/db/client.js";
+import { closeDb } from "../../src/db/client.js";
 import { resetEnvCache } from "../../src/config/env.js";
 import { migrateUp } from "../../src/db/migrate.js";
 import { buildApp } from "../../src/api/app.js";

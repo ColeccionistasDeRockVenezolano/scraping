@@ -278,10 +278,7 @@ function withTarget(claim: ClaimToPersist, kind: string, targetId: number): Clai
  * una decision humana `different` cree el album bajo su artista real; sin ese
  * parental el merge solo puede devolver NO_MATCH otra vez.
  */
-async function resolutionInputWithSiblingContext(
-  item: ReviewWork,
-  claim: ClaimToPersist,
-): Promise<ResolutionInput | undefined> {
+async function resolutionInputWithSiblingContext(item: ReviewWork): Promise<ResolutionInput | undefined> {
   const input = item.resolutionInput;
   if (item.entityKind !== "album" || input?.kind !== "ALBUM" || input.artist?.id !== undefined) return input;
   let artistName = input.artist?.name;
@@ -341,7 +338,7 @@ async function applyMatch(item: ReviewWork, runId: number): Promise<void> {
   if (item.matchMode === "exclude") return;
   const loaded = await loadClaimForApproval(item.claimId);
   if (!loaded) throw new Error(`claim inexistente: ${item.claimId}`);
-  const resolutionInput = await resolutionInputWithSiblingContext(item, loaded);
+  const resolutionInput = await resolutionInputWithSiblingContext(item);
   let claim: ClaimToPersist = {
     ...loaded, createdBy: "human", runId,
     ...(resolutionInput === undefined ? {} : { resolutionInput }),

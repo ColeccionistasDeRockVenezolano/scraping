@@ -143,7 +143,6 @@ export async function resolveAmbiguities(options: ResolveOptions = {}): Promise<
         const live = (await client.query<LiveRow>(`
           SELECT id::text, dossier_hash, status, ai_proposal IS NOT NULL AS has_ai FROM ingest.ambiguity_resolutions
            WHERE review_id=$1 AND question_key=$2 AND status IN ('proposed','applied')`, [item.reviewId, outcome.questionKey])).rows[0];
-        let final: FinalDecision;
         if (live?.status === "applied") {
           summary.rows.alreadyApplied += 1;
           const stored = (await client.query<{ decision: AmbiguityDecision }>("SELECT decision FROM ingest.ambiguity_resolutions WHERE id=$1", [live.id])).rows[0]!;
@@ -161,7 +160,7 @@ export async function resolveAmbiguities(options: ResolveOptions = {}): Promise<
           }
           continue;
         }
-        final = await consult(request);
+        const final: FinalDecision = await consult(request);
         if (live && live.dossier_hash === hash && final.aiProposal === null) {
           // El árbitro no aportó nada nuevo sobre la misma evidencia: la fila sigue valiendo.
           summary.rows.reused += 1;

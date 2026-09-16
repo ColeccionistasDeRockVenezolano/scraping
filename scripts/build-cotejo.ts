@@ -197,7 +197,6 @@ async function main(): Promise<void> {
   // cuyo contenido cambie, pero no expone datos de la base en el HTML.
   const buildId = createHash("sha256").update(template).update(blob).digest("hex").slice(0, 16);
   await writeFile(OUT, template.replace("__DATA__", blob).replaceAll("__COTEJO_BUILD__", buildId), "utf8");
-  // eslint-disable-next-line no-console
   console.log(`cotejo: ${slim.length} careos y ${conflicts.rowCount} contradicciones -> ${OUT}`);
   await pool.end();
 }

@@ -607,8 +607,8 @@ async function trackCredit(context: RelationContext): Promise<RelationResult> {
   const explicit = await explicitCredited(client, claim);
   if ((!credited && !explicit) || !role) return { status: "pending", reason: "faltan campos obligatorios del crédito", payload: { credited, role } };
 
-  let trackIds: number[] = [];
-  let trace: Array<readonly [string, Endpoint]> = [];
+  let trackIds: number[];
+  let trace: Array<readonly [string, Endpoint]>;
   if (claim.endpoints?.trackId !== undefined) {
     const track = await explicitEndpoint(client, "track", claim.endpoints.trackId);
     trackIds = [track.id!];

@@ -4,7 +4,6 @@
 // canónicas de artists durante la extracción automática.
 import { readFile } from "node:fs/promises";
 import path from "node:path";
-import { fileURLToPath } from "node:url";
 import { afterAll, beforeAll, describe, expect, it } from "vitest";
 import { eq } from "drizzle-orm";
 import { startPgContainer, type PgContainer } from "../support/pg-container.js";

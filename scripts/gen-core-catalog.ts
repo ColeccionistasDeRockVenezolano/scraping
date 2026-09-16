@@ -32,7 +32,6 @@ async function main(): Promise<void> {
       const out = { coreSha256, generatedAt: new Date().toISOString(), entries };
       const target = path.join(ROOT, "src", "doctor", "core-catalog.json");
       await writeFile(target, `${JSON.stringify(out, null, 2)}\n`, "utf8");
-      // eslint-disable-next-line no-console
       console.log(`core-catalog.json: ${entries.length} entradas (core ${coreSha256.slice(0, 12)}…)`);
     } finally {
       await pool.end();
@@ -43,7 +42,6 @@ async function main(): Promise<void> {
 }
 
 main().catch((err: unknown) => {
-  // eslint-disable-next-line no-console
   console.error(err);
   process.exitCode = 1;
 });

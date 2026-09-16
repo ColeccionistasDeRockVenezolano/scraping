@@ -61,7 +61,7 @@ const VARIOUS = /^(?:v\.?\s*a\.?|various(?:\s+artists?)?)$/iu;
 // Códigos de catálogo: con prefijo de letras ("LPS-99516", "SN 021") o solo
 // numéricos ("30.353", "45-642", "172"). Se exige que quede nombre de sello
 // delante, para no convertir un sello entero en número de catálogo.
-const CATALOG = /\s([A-Z][A-Z0-9]{0,7}[-\s]?\d{2,7}(?:[-.][A-Z0-9]+)?|\d{2,4}(?:[.\-][A-Z0-9]{1,6})*)$/u;
+const CATALOG = /\s([A-Z][A-Z0-9]{0,7}[-\s]?\d{2,7}(?:[-.][A-Z0-9]+)?|\d{2,4}(?:[.-][A-Z0-9]{1,6})*)$/u;
 
 export function parseHippitoTitle(rawTitle: string): TitleFacts | undefined {
   const title = clean(rawTitle);
