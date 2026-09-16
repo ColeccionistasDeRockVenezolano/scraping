@@ -2,15 +2,19 @@ import { useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { personWrites, personsApi } from "../lib/api";
 import { useAsync } from "../lib/useAsync";
+import { useMovedToRedirect } from "../lib/useMovedTo";
 import { useOperator } from "../lib/OperatorContext";
 import { useToast } from "../lib/ToastContext";
 import { LoadingState, ErrorState } from "../components/StateViews";
 import { AliasEditor } from "../components/AliasEditor";
 import { EntityFormModal } from "../components/EntityFormModal";
 import { ConfirmDialog } from "../components/ConfirmDialog";
+import { MergeEntityModal } from "../components/MergeEntityModal";
+import { ConvertPersonModal } from "../components/ConvertPersonModal";
+import { entityHref } from "../lib/routes";
 import { initialOf } from "../components/EntityCard";
 import { PERSON_FIELDS } from "../lib/entityFields";
-import { creditTypeLabel } from "../lib/labels";
+import { creditTypeLabel, nameClassLabel } from "../lib/labels";
 
 export function PersonDetailPage() {
   const { id } = useParams();
@@ -18,9 +22,12 @@ export function PersonDetailPage() {
   const navigate = useNavigate();
   const { isConfigured } = useOperator();
   const { notify } = useToast();
-  const { data: person, loading, error, reload } = useAsync(() => personsApi.get(personId), [personId]);
+  const { data: person, loading, error, errorValue, reload } = useAsync(() => personsApi.get(personId), [personId]);
+  useMovedToRedirect(errorValue);
   const [editing, setEditing] = useState(false);
   const [deleting, setDeleting] = useState(false);
+  const [merging, setMerging] = useState(false);
+  const [converting, setConverting] = useState<"organization" | "artist" | null>(null);
 
   if (loading) return <LoadingState />;
   if (error || !person) return <ErrorState message={error ?? "Persona no encontrada."} onRetry={reload} />;
@@ -45,7 +52,21 @@ export function PersonDetailPage() {
       {isConfigured ? (
         <div className="page-actions" style={{ marginTop: 14 }}>
           <button type="button" className="btn btn--sm" onClick={() => setEditing(true)}>Editar</button>
+          <button type="button" className="btn btn--sm" onClick={() => setMerging(true)}>Fusionar con…</button>
           <button type="button" className="btn btn--sm btn--danger" onClick={() => setDeleting(true)}>Retirar</button>
+        </div>
+      ) : null}
+
+      {person.nameClass !== "ok" ? (
+        <div className="alert-block" role="alert" style={{ marginTop: 14 }}>
+          <strong>Este nombre no parece de una persona: {nameClassLabel(person.nameClass).toLowerCase()}.</strong>
+          <p style={{ margin: "6px 0 0" }}>{person.nameClassReason}</p>
+          {isConfigured ? (
+            <div style={{ display: "flex", gap: 8, marginTop: 10, flexWrap: "wrap" }}>
+              <button type="button" className="btn btn--sm" onClick={() => setConverting("organization")}>Convertir en organización…</button>
+              <button type="button" className="btn btn--sm" onClick={() => setConverting("artist")}>Convertir en artista…</button>
+            </div>
+          ) : null}
         </div>
       ) : null}
 
@@ -163,6 +184,28 @@ export function PersonDetailPage() {
             navigate("/personas");
           }}
           onClose={() => setDeleting(false)}
+        />
+      ) : null}
+
+      {merging ? (
+        <MergeEntityModal
+          kind="person"
+          entityId={person.id}
+          entityName={person.name}
+          onMerged={(keepId) => { setMerging(false); navigate(`/personas/${keepId}`, { replace: true }); }}
+          onClose={() => setMerging(false)}
+        />
+      ) : null}
+
+      {converting ? (
+        <ConvertPersonModal
+          person={{ id: person.id, name: person.name, nameClassReason: person.nameClassReason }}
+          kind={converting}
+          onConverted={(result) => {
+            setConverting(null);
+            navigate(entityHref(result.targetKind, result.targetId), { replace: true });
+          }}
+          onClose={() => setConverting(null)}
         />
       ) : null}
     </>

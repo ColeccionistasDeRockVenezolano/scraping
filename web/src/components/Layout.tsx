@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import { NavLink } from "react-router-dom";
-import { Buildings, Disc, MagnifyingGlass, Queue, User, UsersThree, type Icon } from "@phosphor-icons/react";
+import { Buildings, Copy, Disc, MagnifyingGlass, Queue, User, UsersThree, type Icon } from "@phosphor-icons/react";
 import { OperatorPill } from "./OperatorSettings";
 
 const NAV_ITEMS: ReadonlyArray<{ to: string; label: string; mobileLabel?: string; end?: boolean; icon: Icon }> = [
@@ -8,6 +8,7 @@ const NAV_ITEMS: ReadonlyArray<{ to: string; label: string; mobileLabel?: string
   { to: "/artistas", label: "Artistas", icon: UsersThree },
   { to: "/discos", label: "Discos", icon: Disc },
   { to: "/personas", label: "Personas", icon: User },
+  { to: "/personas/duplicados", label: "Duplicados", mobileLabel: "Duplics.", icon: Copy },
   { to: "/organizaciones", label: "Organizaciones", mobileLabel: "Organiz.", icon: Buildings },
   { to: "/revision", label: "Revisión", icon: Queue },
 ];

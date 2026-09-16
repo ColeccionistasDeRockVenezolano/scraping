@@ -386,6 +386,12 @@ td.num { font-family: var(--font-mono); }
   color: #ff9da2; padding: 10px 14px; border-radius: var(--radius-sm); font-size: 13px; margin-bottom: 14px;
 }
 .form-note { color: var(--text-faint); font-size: 12px; margin-top: 10px; }
+/* Avisos de la fusión de personas (E11.6): no bloquean, pero deben leerse
+   antes de decidir (fechas distintas, apellidos que no coinciden...). */
+.alert-block {
+  background: var(--amber-soft); border: 1px solid color-mix(in srgb, var(--amber) 45%, var(--border));
+  color: var(--text); padding: 10px 14px; border-radius: var(--radius-sm); font-size: 13px;
+}
 
 /* ---------- modal ---------- */
 .modal-overlay {
@@ -487,6 +493,7 @@ td.num { font-family: var(--font-mono); }
     border-top: 1px solid var(--border);
     backdrop-filter: blur(16px);
   }
+  body.has-modal .main-nav { visibility: hidden; }
   .main-nav a {
     min-width: 0;
     padding: 6px 2px;

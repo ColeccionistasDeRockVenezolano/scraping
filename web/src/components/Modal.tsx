@@ -17,6 +17,7 @@ export function Modal({ title, onClose, children, wide }: ModalProps) {
     const previousOverflow = document.body.style.overflow;
     const previousFocus = document.activeElement instanceof HTMLElement ? document.activeElement : null;
     document.body.style.overflow = "hidden";
+    document.body.classList.add("has-modal");
     panelRef.current?.querySelector<HTMLElement>("input, select, textarea, button, a[href]")?.focus();
 
     const onKey = (event: KeyboardEvent) => {
@@ -33,6 +34,7 @@ export function Modal({ title, onClose, children, wide }: ModalProps) {
     return () => {
       document.removeEventListener("keydown", onKey);
       document.body.style.overflow = previousOverflow;
+      document.body.classList.remove("has-modal");
       previousFocus?.focus();
     };
   }, [onClose]);

@@ -6,7 +6,10 @@ const baseUrl = process.env.CRV_WEB_URL ?? "http://127.0.0.1:5173";
 const outputDir = path.resolve(process.env.CRV_CAPTURE_DIR ?? "../docs/ui-qa/current");
 const mode = process.env.CRV_CAPTURE_MODE ?? "current";
 
-const routes = [
+// Rutas por defecto: el juego de la base de desarrollo. Con CRV_CAPTURE_ROUTES
+// (JSON [[nombre, ruta], …]), CRV_CAPTURE_EDIT_ROUTE y CRV_CAPTURE_VIEWPORTS el
+// mismo capturador sirve para una base de prueba, sin tocar la de desarrollo.
+const defaultRoutes = [
   ["buscador", "/?q=Caramelos"],
   ["artistas", "/artistas?q=Caramelos"],
   ["artista-caramelos", "/artistas/58"],
@@ -17,14 +20,36 @@ const routes = [
   ["revision-detalle", "/revision/191119"],
 ];
 
+const routes = process.env.CRV_CAPTURE_ROUTES ? JSON.parse(process.env.CRV_CAPTURE_ROUTES) : defaultRoutes;
+const editRoute = process.env.CRV_CAPTURE_EDIT_ROUTE ?? "/discos/57";
+const viewports = process.env.CRV_CAPTURE_VIEWPORTS
+  ? JSON.parse(process.env.CRV_CAPTURE_VIEWPORTS)
+  : [{ name: "desktop", width: 1440, height: 1000 }, { name: "mobile", width: 390, height: 844 }];
+
 await mkdir(outputDir, { recursive: true });
 const browser = await chromium.launch({ headless: true });
 const allFailures = [];
 
-for (const viewport of [
-  { name: "desktop", width: 1440, height: 1000 },
-  { name: "mobile", width: 390, height: 844 },
-]) {
+/**
+ * Navega y espera a que la red se estabilice, con tope: `networkidle` a secas
+ * puede no llegar nunca si una página deja una conexión viva (y entonces el
+ * fallo no dice nada útil). Se da un margen corto para que React pinte lo que
+ * llegó tarde.
+ */
+async function openRoute(page, url) {
+  await page.goto(url, { waitUntil: "domcontentloaded", timeout: 30000 });
+  await page.waitForLoadState("networkidle", { timeout: 10000 }).catch(() => undefined);
+  // Sin esto se capturan pantallas a medio cargar (una ficha con «Cargando…» y
+  // el aviso de sesión en curso no demuestran nada). Con tope corto: esperar
+  // 15 s por ruta multiplicaba la duración del QA entero.
+  await page.waitForFunction(() => {
+    const content = document.querySelector("main") ?? document.body;
+    return !/Cargando|Comprobando acceso/u.test(content.innerText);
+  }, undefined, { timeout: 4000 }).catch(() => undefined);
+  await page.waitForTimeout(400);
+}
+
+for (const viewport of viewports) {
   const context = await browser.newContext({ viewport });
   const page = await context.newPage();
   const failures = [];
@@ -34,7 +59,14 @@ for (const viewport of [
   page.on("pageerror", (error) => failures.push(`page: ${error.message}`));
 
   for (const [name, route] of routes) {
-    await page.goto(`${baseUrl}${route}`, { waitUntil: "networkidle" });
+    try {
+      await openRoute(page, `${baseUrl}${route}`);
+    } catch (error) {
+      failures.push(`${route}: ${error.message.split("\n")[0]}`);
+      const shown = await page.locator("body").innerText().catch(() => "");
+      if (shown) failures.push(`${route}: la página muestra «${shown.slice(0, 160).replaceAll("\n", " ")}»`);
+      continue;
+    }
     await page.screenshot({ path: path.join(outputDir, `${mode}-${viewport.name}-${name}.png`), fullPage: true });
     const overflow = await page.evaluate(() => ({
       document: document.documentElement.scrollWidth - document.documentElement.clientWidth,
@@ -46,16 +78,25 @@ for (const viewport of [
     if (overflow.document > 1) failures.push(`${route}: overflow ${overflow.document}px (${overflow.offenders.join(", ")})`);
   }
 
-  await page.goto(`${baseUrl}/artistas`, { waitUntil: "networkidle" });
-  await page.evaluate(() => {
-    localStorage.setItem("crv.operatorToken", "crv-visual-qa-operator-token-2026");
-    localStorage.setItem("crv.operatorName", "QA visual");
+  const qaUsername = process.env.CRV_CAPTURE_USERNAME;
+  const qaPassword = process.env.CRV_CAPTURE_PASSWORD;
+  if (!qaUsername || !qaPassword) throw new Error("CRV_CAPTURE_USERNAME y CRV_CAPTURE_PASSWORD son obligatorios para capturar formularios");
+  await openRoute(page, `${baseUrl}/artistas`);
+  await page.getByRole("button", { name: "Iniciar sesión como colaborador" }).click();
+  await page.getByLabel("Usuario").fill(qaUsername);
+  await page.getByLabel("Contraseña").fill(qaPassword);
+  await page.getByRole("button", { name: "Iniciar sesión", exact: true }).click();
+  // El botón de crear aparece cuando la sesión está activa. Si no llega, el
+  // fallo dice qué muestra la interfaz en vez de quedarse esperando.
+  await page.getByRole("button", { name: "Nuevo artista" }).waitFor({ timeout: 15000 }).catch(async (error) => {
+    const shown = await page.locator("body").innerText().catch(() => "");
+    failures.push(`sesión de colaborador: no apareció «Nuevo artista» tras iniciar sesión (${error.message.split("\\n")[0]}). La página muestra «${shown.slice(0, 200).replaceAll("\\n", " ")}»`);
   });
-  await page.reload({ waitUntil: "networkidle" });
+  if (failures.length) { await context.close(); continue; }
   await page.getByRole("button", { name: "Nuevo artista" }).click();
   await page.waitForTimeout(250);
   await page.screenshot({ path: path.join(outputDir, `${mode}-${viewport.name}-form-crear.png`), fullPage: false });
-  await page.goto(`${baseUrl}/discos/57`, { waitUntil: "networkidle" });
+  await openRoute(page, `${baseUrl}${editRoute}`);
   await page.locator(".page-actions").getByRole("button", { name: "Editar", exact: true }).click();
   await page.waitForTimeout(250);
   await page.screenshot({ path: path.join(outputDir, `${mode}-${viewport.name}-form-editar.png`), fullPage: false });

@@ -7,6 +7,7 @@ import { AlbumsListPage } from "./pages/AlbumsListPage";
 import { AlbumDetailPage } from "./pages/AlbumDetailPage";
 import { PersonsListPage } from "./pages/PersonsListPage";
 import { PersonDetailPage } from "./pages/PersonDetailPage";
+import { PersonDuplicatesPage } from "./pages/PersonDuplicatesPage";
 import { OrganizationsListPage } from "./pages/OrganizationsListPage";
 import { OrganizationDetailPage } from "./pages/OrganizationDetailPage";
 import { ReviewQueueListPage } from "./pages/ReviewQueueListPage";
@@ -23,6 +24,7 @@ export function App() {
         <Route path="/discos" element={<AlbumsListPage />} />
         <Route path="/discos/:id" element={<AlbumDetailPage />} />
         <Route path="/personas" element={<PersonsListPage />} />
+        <Route path="/personas/duplicados" element={<PersonDuplicatesPage />} />
         <Route path="/personas/:id" element={<PersonDetailPage />} />
         <Route path="/organizaciones" element={<OrganizationsListPage />} />
         <Route path="/organizaciones/:id" element={<OrganizationDetailPage />} />
