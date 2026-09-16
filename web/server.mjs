@@ -24,8 +24,16 @@ const MIME_TYPES = {
   ".woff2": "font/woff2",
 };
 
+const SECURITY_HEADERS = {
+  "content-security-policy": "default-src 'self'; base-uri 'none'; frame-ancestors 'none'; form-action 'self'; object-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self'",
+  "permissions-policy": "camera=(), microphone=(), geolocation=()",
+  "referrer-policy": "no-referrer",
+  "x-content-type-options": "nosniff",
+  "x-frame-options": "DENY",
+};
+
 function reply(res, status, text) {
-  res.writeHead(status, { "content-type": "text/plain; charset=utf-8", "x-content-type-options": "nosniff" });
+  res.writeHead(status, { "content-type": "text/plain; charset=utf-8", ...SECURITY_HEADERS });
   res.end(text);
 }
 
@@ -36,9 +44,14 @@ function proxyApi(req, res, requestUrl) {
     port: apiPort,
     method: req.method,
     path: upstreamPath,
-    headers: { ...req.headers, host: `${apiHost}:${apiPort}`, "x-forwarded-proto": "https" },
+    headers: {
+      ...req.headers,
+      host: `${apiHost}:${apiPort}`,
+      "x-forwarded-host": req.headers.host,
+      "x-forwarded-proto": "https",
+    },
   }, (upstreamResponse) => {
-    res.writeHead(upstreamResponse.statusCode ?? 502, { ...upstreamResponse.headers, "x-content-type-options": "nosniff" });
+    res.writeHead(upstreamResponse.statusCode ?? 502, { ...upstreamResponse.headers, ...SECURITY_HEADERS });
     upstreamResponse.pipe(res);
   });
   upstream.on("error", () => reply(res, 502, "La API CRV no está disponible."));
@@ -65,7 +78,7 @@ async function serveFile(req, res, pathname) {
   const ext = path.extname(file).toLowerCase();
   const headers = {
     "content-type": MIME_TYPES[ext] ?? "application/octet-stream",
-    "x-content-type-options": "nosniff",
+    ...SECURITY_HEADERS,
     ...(file.includes(`${path.sep}assets${path.sep}`) ? { "cache-control": "public, max-age=31536000, immutable" } : { "cache-control": "no-cache" }),
   };
   res.writeHead(200, headers);
@@ -83,6 +96,13 @@ const server = http.createServer(async (req, res) => {
   const virtualUrl = new URL(requestUrl);
   virtualUrl.pathname = virtualPath;
   if (virtualUrl.pathname === apiPath || virtualUrl.pathname.startsWith(`${apiPath}/`)) return proxyApi(req, res, virtualUrl);
+  // El basename del router de React exige la barra final: sin redirect la
+  // app carga (el gateway sirve index.html igual) pero queda en blanco
+  // porque el pathname "/crv" no matchea el basename "/crv/".
+  if (virtualUrl.pathname === basePath && (req.method === "GET" || req.method === "HEAD")) {
+    res.writeHead(301, { location: `${basePath}/${requestUrl.search}` });
+    return res.end();
+  }
   return serveFile(req, res, virtualUrl.pathname);
 });
 
