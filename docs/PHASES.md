@@ -866,4 +866,3 @@ etapa E11.1. Resuelve P1 (crítica), P3, P4, P6, P7, P8 y P9 del diagnóstico:
 Evidencia: `reports/e11.1-merge-hardening.md`, `test/contract/merge-into-hardening.test.ts`
 (7/7: personas y artistas) y la sonda `scripts/probes/merge-probe.mts` (par 14 ← 3617 en
 134–262 ms, antes fallaba en 4,9 s). Sin migraciones y sin tocar `public`.
-

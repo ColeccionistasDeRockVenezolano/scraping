@@ -62,6 +62,20 @@ Notas de medición:
 | `npm run test:unit` | 27 archivos, **234 pruebas en verde** |
 | `test/contract/merge-into-hardening.test.ts` | no existía (ningún test cubría P1) |
 
+### Corrida de cierre (2026-09-16)
+
+El paso 3 de esta línea base pedía ejecutar también los suites
+`review-duplicates`, `person-corrections` y `api-write`; su resultado no quedó
+registrado aquí en su momento. Re-ejecutados sobre el árbol final del plan
+(E11 cerrado), en verde:
+
+| Comando | Resultado |
+|---|---|
+| `vitest run test/contract/review-duplicates.test.ts` | 2/2 |
+| `vitest run test/contract/person-corrections.test.ts` | 4/4 |
+| `vitest run test/contract/api-write.test.ts` | 9/9 |
+| lote de verificación del cierre (5 archivos) | 27/27 |
+
 ## 4. Datos que necesitan las etapas siguientes
 
 - `public.persons.id` es `BIGINT GENERATED ALWAYS AS IDENTITY` (`attidentity = 'a'`):
