@@ -326,6 +326,18 @@ aceptación): `missing_url`, `seed_incomplete`, `media_type_no_album`,
 `ai_entity_resolution`. Qué columnas llena cada kind:
 `docs/db/ER_INGEST_MEDIA.md` §5.
 
+Pares de duplicado (`person_duplicate`, `organization_match`):
+
+- El detector (E11.5/E11.10) deja el par en `person_a_id`/`person_b_id` u
+  `organization_a_id`/`organization_b_id`, siempre ordenado (menor, mayor), con
+  `priority` 3 (score ≥ 0,60) o 6 (≥ 0,45) y el `payload` con `score`, `features`
+  y `runId`. PROPONE: la fusión la decide una persona.
+- El índice único parcial de la migración `0016` garantiza **un careo vivo por
+  par**: repetir la detección no duplica revisiones, y un par descartado
+  (`dismissed`) no vuelve a proponerse.
+- La mesa de cotejo y las páginas de duplicados resuelven estos pares con el
+  modal de fusión (E11.6) o con «son distintas» (rechazar).
+
 ### 4.10 `ingest.genres` — géneros aceptados (configurables)
 
 `id` PK · `name` varchar(100) UNIQUE · `active` boolean default true · `notes`.
@@ -472,6 +484,55 @@ Dos reglas duras de la fusión, verificadas en `test/contract/merge-into-hardeni
   fila anterior queda en `detachedReviews`.
 
 ---
+
+### 4.16 `ingest.entity_redirects` — ids fusionados que siguen navegando
+
+Un id que desapareció en una fusión no debe morir en un 404: los enlaces
+guardados, las exportaciones y la mesa de cotejo siguen apuntando a él. Esta
+tabla guarda el rastro mínimo para redirigir (E11.2, problema P5).
+
+| columna | tipo | notas |
+| --- | --- | --- |
+| `id` | bigint identity | PK |
+| `entity_kind` | `ingest.claim_entity_kind` | solo fichas navegables: `artist`, `person`, `organization`, `album`, `track` |
+| `from_id` | bigint | el id que desapareció |
+| `to_id` | bigint | la ficha que quedó |
+| `run_id` | bigint → `ingest.scrape_runs` | run que hizo la fusión |
+| `created_at` | timestamptz | |
+
+Reglas:
+
+- Único por `(entity_kind, from_id)`: un id desaparece una sola vez.
+- **La cadena se comprime al escribir**: si `B→A` existía y luego `A` se
+  fusiona en `C`, la fila de `B` pasa a apuntar a `C`; nadie tiene que seguir
+  una cadena de redirecciones.
+- `resolveRedirect(kind, id)` (`src/merge/redirects.ts`) es la única lectura; las
+  fichas de detalle responden `404` con `details.movedTo = { kind, id }` y la web
+  navega con aviso, nunca en silencio.
+- Al **deshacer** una fusión (E11.8) la redirección se elimina: el id vuelve a
+  existir.
+- Los créditos y las membresías no son entidades navegables y no redirigen.
+
+Campos que escribe el flujo de duplicados (E11):
+
+- `merged_duplicate`: fusión de dos fichas. `old_value` es la fila que
+  desaparece (copia entera) y `new_value` (versión 2, E11.1) lleva `keptId`,
+  `filled`, `moved`, `discarded`, `movedRefs` (tabla, columna y claves
+  primarias de cada fila movida), `discardedRows` (filas que no cabían, con su
+  copia y la política aplicada) y `detachedReviews` (revisiones que se
+  soltaron). Es lo que permite deshacer (E11.8).
+- `unmerged_duplicate`: la reversión de una fusión. `old_value` guarda el
+  contenido de `new_value` de la fusión deshecha y los `merge_audit_claims` de
+  la fusión original se copian a esta fila: la prueba de la fusión sigue
+  enlazada a la prueba de su reversión.
+- `split_from` (E11.7): cada crédito, membresía o vínculo que la división de
+  una ficha copió hacia una persona del plan, y la historia de la ficha
+  combinada que se retiró.
+- `absorbed_person` (E11.7): la conversión de una persona en organización o
+  artista, con la referencia al destino en `organization_id`/`artist_id`.
+- Las correcciones de campo de una fusión (elecciones `fieldChoices`) escriben
+  su propia fila con `performed_by='human'`; al deshacer se **informan**, no se
+  revierten (nadie decidió quitarlas).
 
 ## 5. Mapeo del YT Master Spreadsheet
 

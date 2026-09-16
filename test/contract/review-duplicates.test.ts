@@ -58,12 +58,19 @@ describe("fusión de duplicados del core", () => {
 
     expect(await count("SELECT count(*) n FROM artists WHERE name IN ('Pacifica','Pacífica')")).toBe(1);
     expect(await count("SELECT count(*) n FROM artists WHERE name IN ('Los Pixel','Pixel')")).toBe(2);
+    // P13: de dos discos iguales queda el que más referencias tiene —dos pistas
+    // contra una—, no el de id menor; el año y el tipo del que queda se imponen.
+    const survivor = dropAlbum;
+    const discarded = keepAlbum;
     const album = (await getPool().query("SELECT id,release_year,album_type FROM albums WHERE title='.22'")).rows;
-    expect(album).toEqual([{ id: String(keepAlbum), release_year: 2007, album_type: "studio_album" }]);
-    expect((await getPool().query("SELECT track_number,title FROM tracks WHERE album_id=$1 ORDER BY track_number", [keepAlbum])).rows)
-      .toEqual([{ track_number: 1, title: "Uno" }, { track_number: 2, title: "Dos" }]);
-    expect((await getPool().query("SELECT album_id FROM ingest.claims WHERE id=$1", [claim.id])).rows[0].album_id).toBe(String(keepAlbum));
-    expect(await count("SELECT count(*) n FROM ingest.merge_audit WHERE album_id=$1 AND field='title'", [keepAlbum])).toBe(1);
+    expect(album).toEqual([{ id: String(survivor), release_year: 2007, album_type: "studio_album" }]);
+    // De las dos pistas de la misma posición queda la del disco que sobrevive
+    // («uno», que ya estaba en él): la otra se fusiona en esa.
+    expect((await getPool().query("SELECT track_number,title FROM tracks WHERE album_id=$1 ORDER BY track_number", [survivor])).rows)
+      .toEqual([{ track_number: 1, title: "uno" }, { track_number: 2, title: "Dos" }]);
+    expect(await count("SELECT count(*) n FROM tracks WHERE album_id=$1", [discarded])).toBe(0);
+    expect((await getPool().query("SELECT album_id FROM ingest.claims WHERE id=$1", [claim.id])).rows[0].album_id).toBe(String(survivor));
+    expect(await count("SELECT count(*) n FROM ingest.merge_audit WHERE album_id=$1 AND field='title'", [survivor])).toBe(1);
     expect(await count("SELECT count(*) n FROM ingest.artist_aliases WHERE artist_id=$1 AND alias='Pacífica'", [plain])).toBe(1);
     expect(await count(`SELECT count(*) n FROM ingest.merge_audit ma WHERE field='merged_duplicate'
       AND EXISTS (SELECT 1 FROM ingest.merge_audit_claims mac WHERE mac.merge_audit_id=ma.id)`)).toBeGreaterThanOrEqual(1);

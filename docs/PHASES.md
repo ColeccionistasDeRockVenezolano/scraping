@@ -866,3 +866,26 @@ etapa E11.1. Resuelve P1 (crítica), P3, P4, P6, P7, P8 y P9 del diagnóstico:
 Evidencia: `reports/e11.1-merge-hardening.md`, `test/contract/merge-into-hardening.test.ts`
 (7/7: personas y artistas) y la sonda `scripts/probes/merge-probe.mts` (par 14 ← 3617 en
 134–262 ms, antes fallaba en 4,9 s). Sin migraciones y sin tocar `public`.
+
+### Post-cierre: E11.2–E11.10 — CRUD y fusión de fichas (2026-09-16)
+
+Plan: `/home/brian/Desktop/PLAN_MEJORA_CRUD_Y_FUSION_DE_PERSONAS.md`. Se
+completaron las nueve etapas restantes sobre el motor ya endurecido en E11.1.
+
+| etapa | qué quedó |
+| --- | --- |
+| E11.1 | (previa) la fusión guarda las filas movidas, las descartadas y las revisiones que suelta en la auditoría |
+| E11.2 | `ingest.entity_redirects` (migración 0014): el id fusionado responde `404` con `details.movedTo` y la web navega con aviso. La cadena se comprime al escribir |
+| E11.3 | `src/merge/entity-merge.ts`: previsualización con `previewHash`, conflictos, campos que se completan, avisos y fusión transaccional con correcciones humanas (`stale_preview` → 409) |
+| E11.4 | `GET /persons/:id/merge-preview` y `POST /persons/:id/merge` (y los mismos verbos para organizaciones y artistas) |
+| E11.5 | `ingest.review_kind.person_duplicate` (0015) + índice único por par vivo (0016); detector `person-candidates` (bloqueo + pesos explicables) y CLI `crv review person-candidates`; `GET /persons/duplicate-candidates` |
+| E11.6 | Web: modal de fusión con previsualización, página `/personas/duplicados`, QA visual contra contenedor desechable (`npm run test:visual-merge`) |
+| E11.7 | `classifyPersonName` (organización, duración, fragmento, varias personas), conversión de persona a organización/artista y operación `split` en el plan de correcciones; filtro «Sospechosas» y aviso en la ficha |
+| E11.8 | `src/merge/unmerge.ts` + `POST /merge-runs/:runId/undo` + botón «Deshacer esta fusión»; test de ida y vuelta por instantáneas |
+| E11.9 | índice de búsqueda en memoria (sin tildes) con invalidación al escribir, filtros `hasCredits`/`suspect`/`sort` y contadores en el listado |
+| E11.10 | fusión de organizaciones y artistas con el mismo servicio y modal, P13 (queda la ficha con más referencias), detector de candidatos de organización con la clave sin palabras de estudio y esta documentación |
+
+Evidencia y mediciones: `reports/person-candidates-dryrun.md`,
+`reports/person-junk-dryrun.md`, `reports/persons-search-probe.md`. Las sondas
+son de solo lectura (la de fusión revierte su transacción) y están descritas en
+`docs/OPERATIONS.md` §9.

@@ -235,6 +235,32 @@ async function main(): Promise<number> {
         return 0;
       }
 
+      // Candidatos de duplicado de organización (E11.10): mismo bloqueo y
+      // puntuación explicable, con las palabras de estudio quitadas de la clave
+      // («Estudio Uno» y «Uno» son la misma). También propone, nunca fusiona.
+      if (args[0] === "organization-candidates") {
+        const orgNote = args.find((arg) => arg.startsWith("--note="))?.slice("--note=".length);
+        const orgMinScore = Number(args.find((arg) => arg.startsWith("--min-score="))?.slice("--min-score=".length) ?? 0.45);
+        const orgLimitArg = args.find((arg) => arg.startsWith("--limit="))?.slice("--limit=".length);
+        const orgLimit = orgLimitArg ? Number(orgLimitArg) : undefined;
+        if (!Number.isFinite(orgMinScore) || orgMinScore < 0 || orgMinScore > 1
+          || (orgLimit !== undefined && (!Number.isInteger(orgLimit) || orgLimit <= 0))) {
+          console.error("uso: crv review organization-candidates [--min-score=0.45] [--limit=200] [--note=\"<motivo>\" --confirm]");
+          return 1;
+        }
+        const scan = await findOrganizationCandidates({ minScore: orgMinScore, ...(orgLimit === undefined ? {} : { limit: orgLimit }) });
+        for (const candidate of scan.candidates) {
+          console.log(`${candidate.score.toFixed(3)}\tprioridad ${candidate.priority}\t${candidate.a.id} «${candidate.a.name}» / ${candidate.b.id} «${candidate.b.name}»\t${candidate.features.map((feature) => feature.key).join(",")}`);
+        }
+        console.log(`TOTAL: ${scan.candidates.length} pares propuestos de ${scan.organizations} organizaciones (${scan.comparedPairs} pares comparados)`);
+        if (!args.includes("--confirm") || !orgNote?.trim()) {
+          console.log('\n(previsualización) para abrir las revisiones: crv review organization-candidates --note="<motivo>" --confirm');
+          return 0;
+        }
+        const result = await openOrganizationCandidateReviews(scan.candidates, orgNote, getEnv().CRV_OPERATOR_NAME);
+        console.log(`run ${result.runId}: ${result.opened} ${result.opened === 1 ? "revisión abierta" : "revisiones abiertas"}, ${result.skipped} ya existían`);
+        return 0;
+      }
       // Correcciones de identidad de personas decididas por el propietario,
       // escritas en un plan JSON versionado (docs/decisions/). Sin --confirm
       // se ejecutan y se deshacen: muestra el efecto sin aplicarlo.

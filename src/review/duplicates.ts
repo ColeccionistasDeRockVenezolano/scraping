@@ -81,6 +81,7 @@ const NOT_FILLED = new Set([
 const PAIR_COLUMNS: Partial<Record<MergeKind, readonly [string, string]>> = {
   artist: ["artist_a_id", "artist_b_id"],
   person: ["person_a_id", "person_b_id"],
+  organization: ["organization_a_id", "organization_b_id"],
 };
 
 /** Columnas cuyo «vacío» no es NULL sino el DEFAULT del core: «nadie lo dijo». */
@@ -131,10 +132,39 @@ function duplicateKey(value: string): string {
   return normalizeEntityName(value).secondaryKey;
 }
 
+/**
+ * P13: la ficha que queda es la que más referencias tiene (discos para un
+ * artista; pistas y créditos para un disco) y, a igualdad, la de id menor.
+ * Antes quedaba siempre la de id menor, que muchas veces era la más pobre.
+ */
+function pickKeep<T extends { id: string }>(list: T[], references: Map<number, number>): T {
+  return [...list].sort((left, right) =>
+    (references.get(Number(right.id)) ?? 0) - (references.get(Number(left.id)) ?? 0)
+    || Number(left.id) - Number(right.id))[0]!;
+}
+
+/** Referencias de cada ficha: lo que se perdería si desapareciera. */
+async function referenceCounts(queryable: Pick<PoolClient, "query">): Promise<{ artists: Map<number, number>; albums: Map<number, number> }> {
+  const count = async (sql: string): Promise<Map<number, number>> => {
+    const { rows } = await queryable.query<{ id: string; n: number }>(sql);
+    return new Map(rows.map((row) => [Number(row.id), Number(row.n)]));
+  };
+  return {
+    artists: await count("SELECT artist_id::text AS id, count(*)::int AS n FROM public.albums GROUP BY 1"),
+    albums: await count(`
+      SELECT album_id::text AS id, count(*)::int AS n FROM (
+        SELECT album_id FROM public.tracks
+        UNION ALL
+        SELECT album_id FROM public.album_credits
+      ) refs GROUP BY 1`),
+  };
+}
+
 /** Previsualización pura: qué filas del core parecen la misma entidad. */
 export async function findDuplicateGroups(queryable: Pick<PoolClient, "query"> = getPool()): Promise<DuplicateScan> {
   const groups: DuplicateGroup[] = [];
   const skipped: SkippedGroup[] = [];
+  const references = await referenceCounts(queryable);
 
   const artists = (await queryable.query<{ id: string; name: string }>("SELECT id::text,name FROM public.artists ORDER BY id")).rows;
   const byArtist = new Map<string, typeof artists>();
@@ -145,7 +175,8 @@ export async function findDuplicateGroups(queryable: Pick<PoolClient, "query"> =
   }
   for (const list of byArtist.values()) {
     if (list.length < 2) continue;
-    groups.push({ kind: "artist", keepId: Number(list[0]!.id), dropIds: list.slice(1).map((row) => Number(row.id)), names: list.map((row) => row.name) });
+    const keep = pickKeep(list, references.artists);
+    groups.push({ kind: "artist", keepId: Number(keep.id), dropIds: list.filter((row) => row.id !== keep.id).map((row) => Number(row.id)), names: list.map((row) => row.name) });
   }
 
   const albums = (await queryable.query<{ id: string; artist_id: string; title: string; release_year: number | null; artist: string }>(`
@@ -164,7 +195,8 @@ export async function findDuplicateGroups(queryable: Pick<PoolClient, "query"> =
       skipped.push({ kind: "album", ids: list.map((row) => Number(row.id)), names, reason: `mismo título con años distintos: ${[...years].join(", ")}` });
       continue;
     }
-    groups.push({ kind: "album", keepId: Number(list[0]!.id), dropIds: list.slice(1).map((row) => Number(row.id)), names, artist: list[0]!.artist });
+    const keep = pickKeep(list, references.albums);
+    groups.push({ kind: "album", keepId: Number(keep.id), dropIds: list.filter((row) => row.id !== keep.id).map((row) => Number(row.id)), names, artist: keep.artist });
   }
   return { groups, skipped };
 }

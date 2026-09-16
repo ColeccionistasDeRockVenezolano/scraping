@@ -502,6 +502,27 @@ reenvía `/crv/api/*` a la API en loopback).
 
 ---
 
+### 4.16bis Fusiones, duplicados y búsqueda (E11)
+
+| módulo | responsabilidad |
+| --- | --- |
+| `src/review/duplicates.ts` | motor de fusión (`mergeInto`): mueve referencias por clave primaria, guarda la auditoría v2, escribe la redirección y comprime la cadena |
+| `src/merge/entity-merge.ts` | servicio de fusión con previsualización para persona, organización y artista; los campos comparables salen de `ENTITY_SPECS` |
+| `src/merge/unmerge.ts` | `undoMergeRun`: reversión completa de un run de fusión con las precondiciones de «nada cambió desde entonces» |
+| `src/merge/redirects.ts` | `resolveRedirect`: única lectura de `entity_redirects`; la capa HTTP la traduce a `404 movedTo` |
+| `src/review/person-names.ts` | apodos, apellido, palabras de organización y clave de organización: una sola definición para el detector, el aviso y el plan |
+| `src/review/person-candidates.ts` / `organization-candidates.ts` | detectores que PROPONEN pares con bloqueo y puntuación explicable (score + features) y abren revisiones idempotentes |
+| `src/review/person-junk.ts` | `classifyPersonName`: organización, duración, fragmento o varias personas |
+| `src/review/person-corrections.ts` | operaciones `merge`, `rename`, `absorb`, `to_artist`, `to_organization`, `split` sobre un plan JSON versionado, con el mismo servicio de fusión que la API |
+| `src/api/search-index.ts` | índice en memoria (nombre + alias, sin tildes) con TTL y `invalidateSearchIndex()` después de cada escritura; la API lo calienta al arrancar |
+| `src/api/routes/entity-merge.ts` | router de fusiones: las mismas rutas y esquemas para las tres entidades, más `POST /persons/:id/convert` |
+| `src/api/routes/person-candidates.ts`, `merge-runs.ts` | listado de candidatos vivos y `POST /merge-runs/:runId/undo` |
+
+Reglas que no cambian: la lectura es abierta y la escritura exige credenciales;
+toda escritura pasa por `withOperatorRun` (claims humanos + auditoría) y las
+consultas de comparación de nombres se hacen en TypeScript porque la base es
+`SQL_ASCII` (regla 0.1.11 del plan).
+
 ## 5. Flujo de datos end-to-end
 
 ```
