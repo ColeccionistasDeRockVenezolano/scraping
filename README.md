@@ -54,9 +54,9 @@ npm run db:up               # solo levantar la base local
 npm run db:down             # borrar la base local (incluye el volumen)
 npm run db:migrate          # aplica migrations/*.up.sql pendientes contra DATABASE_URL
 npm run db:migrate -- down  # rollback completo (desarrollo/test, no operación normal)
-npm run db:backup           # pg_dump + data/raw + manifest + SHA-256 → backups/crv-<UTC>/
-npm run db:restore-check -- backups/crv-<UTC>   # restaura en PG desechable y verifica filas, crudo y doctor
-npm run db:restore -- backups/crv-<UTC>         # restauración real; nunca sobrescribe
+npm run db:backup           # pg_dump + data/raw + manifest + SHA-256 → /mnt/datos/backups/crv/crv-<UTC>/
+npm run db:restore-check -- /mnt/datos/backups/crv/crv-<UTC>   # restaura en PG desechable y verifica filas, crudo y doctor
+npm run db:restore -- /mnt/datos/backups/crv/crv-<UTC>         # restauración real; nunca sobrescribe
 npm run api                 # API Fastify en 127.0.0.1:8080 (OpenAPI en /docs)
 npm run cotejo:build && npm run cotejo:serve    # Mesa de Cotejo en 127.0.0.1:4310
 npm run adapters:fixtures   # candidatos normalizados de los fixtures locales; sin red ni base

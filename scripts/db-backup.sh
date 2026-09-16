@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # CRV · db:backup — respaldo de PostgreSQL y del crudo (PHASES E11).
 #
-#   backups/crv-<AAAAMMDDTHHMMSSZ>/
+#   <destino>/crv-<AAAAMMDDTHHMMSSZ>/
 #     crv.dump      pg_dump --format=custom de la base completa (core + ingest + media)
 #     raw.tar.gz    data/raw tal cual: el HTML/JSON crudo que respalda cada claim
 #     counts.tsv    filas exactas por tabla (scripts/sql/table-counts.sql)
@@ -12,7 +12,7 @@
 # probar un backup sin tocar nada: scripts/db-restore-check.sh.
 # Guía completa: docs/DATABASE_BACKUP_RESTORE.md.
 #
-#   uso: scripts/db-backup.sh [directorio-destino]      (por defecto ./backups)
+#   uso: scripts/db-backup.sh [directorio-destino]      (por defecto $CRV_BACKUP_ROOT o /mnt/datos/backups/crv)
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
@@ -22,7 +22,7 @@ CONTAINER="${CRV_PG_CONTAINER:-crv-postgres}"
 PGUSER_="${CRV_PG_USER:-crv}"
 PGDB="${CRV_PG_DB:-crv}"
 DATA_DIR_="${CRV_DATA_DIR:-$ROOT/data}"
-OUT_ROOT="${1:-$ROOT/backups}"
+OUT_ROOT="${1:-${CRV_BACKUP_ROOT:-/mnt/datos/backups/crv}}"
 STAMP="$(date -u +%Y%m%dT%H%M%SZ)"
 FINAL_OUT="$OUT_ROOT/crv-$STAMP"
 OUT="$OUT_ROOT/.crv-$STAMP.partial"
@@ -42,9 +42,16 @@ trap cleanup EXIT
 say "1/5 comprobaciones previas"
 docker inspect -f '{{.State.Running}}' "$CONTAINER" 2>/dev/null | grep -qx true || fail "el contenedor $CONTAINER no está corriendo (npm run db:up)"
 [[ -d "$DATA_DIR_/raw" ]] || fail "no existe $DATA_DIR_/raw"
+# El respaldo va al disco de datos: si no está montado, mkdir -p crearía un
+# directorio «sombra» en el disco raíz y el respaldo quedaría en el lugar
+# equivocado sin avisar. Mejor abortar.
+case "$OUT_ROOT" in
+  /mnt/datos/*) mountpoint -q /mnt/datos || fail "el disco de datos no está montado (/mnt/datos): monta el disco o pasa otro destino a propósito" ;;
+esac
 [[ ! -e "$FINAL_OUT" && ! -e "$OUT" ]] || fail "el destino ya existe: $FINAL_OUT"
 mkdir -p "$OUT"
 echo "   destino final: $FINAL_OUT"
+echo "   sistema de archivos: $(df --output=target "$OUT_ROOT" | tail -1)"
 
 say "2/5 pg_dump (formato custom)"
 table_counts > "$OUT/counts.before.tsv"

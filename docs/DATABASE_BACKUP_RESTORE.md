@@ -8,7 +8,7 @@ pierde la evidencia que los respalda.
 
 | Comando | Script | Qué hace | Toca datos |
 |---|---|---|---|
-| `npm run db:backup` | `scripts/db-backup.sh [destino]` | Crea `<destino>/crv-<UTC>/` (por defecto `./backups`) | Solo lee |
+| `npm run db:backup` | `scripts/db-backup.sh [destino]` | Crea `<destino>/crv-<UTC>/` (por defecto `/mnt/datos/backups/crv`) | Solo lee |
 | `npm run db:restore-check -- <backup>` | `scripts/db-restore-check.sh` | Restaura en un PostgreSQL desechable y verifica | No toca la base ni `data/raw` |
 | `npm run db:restore -- <backup> [opciones]` | `scripts/db-restore.sh` | Restauración real | Crea una base y un `data/raw` **nuevos**; nunca sobrescribe |
 
@@ -19,13 +19,14 @@ Los tres usan `docker exec` contra el contenedor (no hace falta `psql` ni
 
 ```bash
 npm run db:up           # si crv-postgres no está corriendo
-npm run db:backup       # → backups/crv-20260914T234231Z/
-npm run db:backup -- /mnt/datos/backups/crv   # destino recomendado: disco de datos
+npm run db:backup       # → /mnt/datos/backups/crv/crv-<UTC>/  (disco de datos, por defecto)
+npm run db:backup -- /otro/destino/crv   # destino explícito (excepción)
 ```
 
 Variables opcionales: `CRV_PG_CONTAINER` (por defecto `crv-postgres`),
 `CRV_PG_USER` y `CRV_PG_DB` (por defecto `crv`), `CRV_DATA_DIR` (por defecto
-`./data`).
+`./data`), `CRV_BACKUP_ROOT` (destino por defecto del respaldo; si no se
+define, `/mnt/datos/backups/crv`; un argumento explícito manda sobre ella).
 
 **El catálogo debe estar quieto.** El script cuenta las filas exactas de cada
 tabla antes y después del `pg_dump`; si difieren (una ingestión, un
@@ -72,15 +73,12 @@ En esta máquina los respaldos grandes viven en el **disco de datos**:
 `/mnt/datos/backups/crv/` (ext4, 465 GB, montado por `fstab` con `nofail`).
 El 2026-09-16 se mudaron allí los 14,7 GB existentes (`crv-20260915T011708Z/`,
 `crv-20260915T063612Z/` y el dirigido `crv-20260916-cierre.dump`) para liberar
-el disco raíz. Respaldar directo allí:
-`npm run db:backup -- /mnt/datos/backups/crv`.
+el disco raíz. **Es el destino por defecto de `db:backup`** (un argumento
+explícito o `CRV_BACKUP_ROOT` manda sobre él). El script comprueba que el
+disco esté montado antes de escribir (`mountpoint -q /mnt/datos`): si no lo
+está, **aborta** en vez de crear un directorio «sombra» en el disco raíz.
 
-**Comprobar que el disco esté montado antes de escribir**
-(`mountpoint -q /mnt/datos`): sin él, `mkdir -p` crearía un directorio
-«sombra» en el disco raíz y el respaldo quedaría en el lugar equivocado sin
-avisar.
-
-Mientras corre se usa `backups/.crv-<UTC>.partial`. Solo después de crear y
+Mientras corre se usa `<destino>/.crv-<UTC>.partial`. Solo después de crear y
 comprobar el TOC, el crudo, el manifest y las sumas se renombra al directorio
 final visible. Si el proceso falla o recibe una interrupción, el trap elimina
 esa salida parcial.
