@@ -30,7 +30,7 @@ export function AlbumDetailPage() {
   const { id } = useParams();
   const albumId = Number(id);
   const navigate = useNavigate();
-  const { isConfigured } = useOperator();
+  const { isAdmin } = useOperator();
   const { notify } = useToast();
   const { data: album, loading, error, errorValue, reload } = useAsync(() => albumsApi.get(albumId), [albumId]);
   useMovedToRedirect(errorValue);
@@ -74,7 +74,7 @@ export function AlbumDetailPage() {
         </div>
       </div>
 
-      {isConfigured ? (
+      {isAdmin ? (
         <div className="page-actions" style={{ marginTop: 14 }}>
           <button type="button" className="btn btn--sm" onClick={() => {
             setLabelId(album.label?.id ?? null); setLabelLabel(album.label?.name ?? null); setEditing(true);
@@ -91,7 +91,7 @@ export function AlbumDetailPage() {
       <div className="section">
         <h2>
           Lista de pistas <span className="mono" style={{ color: "var(--text-faint)", fontWeight: 400 }}>({album.tracklist.length})</span>
-          {isConfigured ? <button type="button" className="btn btn--sm btn--ghost" onClick={() => setAddingTrack(true)}>+ Añadir pista</button> : null}
+          {isAdmin ? <button type="button" className="btn btn--sm btn--ghost" onClick={() => setAddingTrack(true)}>+ Añadir pista</button> : null}
         </h2>
         {album.tracklist.length === 0 ? <p style={{ color: "var(--text-faint)", fontSize: 13.5 }}>Sin pistas registradas.</p> : (
           <div className="table-wrap table-wrap--scroll">
@@ -114,7 +114,7 @@ export function AlbumDetailPage() {
                       <td className="num">{formatDuration(track.durationSeconds)}</td>
                       <td className="num">{track.youtubeStartSeconds !== null ? formatDuration(track.youtubeStartSeconds) : "—"}</td>
                       <td className="row-actions">
-                        {isConfigured ? (
+                        {isAdmin ? (
                           <>
                             <button type="button" className="btn btn--sm" onClick={() => setEditingTrack(track)}>Editar</button>
                             <button type="button" className="btn btn--sm btn--danger" onClick={() => setRemovingTrack(track)}>Quitar</button>
@@ -155,7 +155,7 @@ export function AlbumDetailPage() {
       <div className="section">
         <h2>
           Formatos
-          {isConfigured ? <button type="button" className="btn btn--sm btn--ghost" onClick={() => setAddingFormat(true)}>+ Añadir formato</button> : null}
+          {isAdmin ? <button type="button" className="btn btn--sm btn--ghost" onClick={() => setAddingFormat(true)}>+ Añadir formato</button> : null}
         </h2>
         {album.formats.length === 0 ? <p style={{ color: "var(--text-faint)", fontSize: 13.5 }}>Sin formatos registrados.</p> : (
           <ul style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
@@ -164,7 +164,7 @@ export function AlbumDetailPage() {
                 <span>{format.format}</span>
                 {format.quality ? <span style={{ color: "var(--text-faint)", fontSize: 11 }}>{format.quality}</span> : null}
                 <span className="badge" style={{ fontSize: 10 }}>{format.archiveStatus}</span>
-                {isConfigured ? (
+                {isAdmin ? (
                   <FormatRemoveButton id={format.id} onDone={reload} />
                 ) : null}
               </li>

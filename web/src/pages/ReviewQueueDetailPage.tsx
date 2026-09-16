@@ -48,7 +48,7 @@ export function ReviewQueueDetailPage() {
   const { id } = useParams();
   const reviewId = Number(id);
   const navigate = useNavigate();
-  const { isConfigured } = useOperator();
+  const { isAdmin } = useOperator();
   const { notify } = useToast();
   const { data: review, loading, error, reload } = useReviewDetail(reviewId);
   const [note, setNote] = useState("");
@@ -75,7 +75,7 @@ export function ReviewQueueDetailPage() {
     try {
       const result = await fn();
       notify("success", result.detail || "Listo.");
-      navigate("/revision");
+      navigate("/curaduria");
     } catch (err) {
       notify("error", err instanceof ApiError ? err.message : "No se pudo completar la acción.");
     } finally {
@@ -85,7 +85,7 @@ export function ReviewQueueDetailPage() {
 
   return (
     <>
-      <Link to="/revision" className="back-link">← Cola de revisión</Link>
+      <Link to="/curaduria" className="back-link">← Conflictos</Link>
 
       <div className="page-header">
         <div>
@@ -154,8 +154,8 @@ export function ReviewQueueDetailPage() {
         </div>
       ) : null}
 
-      {!isOpen ? null : !isConfigured ? (
-        <p className="form-note">Configura el token de operador para decidir esta revisión.</p>
+      {!isOpen ? null : !isAdmin ? (
+        <p className="form-note">Solo una cuenta administradora puede decidir esta revisión.</p>
       ) : cliHint ? (
         <p className="form-error-banner">{cliHint}</p>
       ) : (

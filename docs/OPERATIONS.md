@@ -278,6 +278,35 @@ en `web/src/main.tsx` se quita la barra final por esto — con la barra,
 `react-router` no reconoce `/crv` sin ella y no monta nada (hallazgo del
 2026-09-15, corregido).
 
+### Detector de conflictos (Curaduría)
+
+La web (`/curaduria`, solo admin) muestra una pestaña por categoría: nombres
+sucios, mal segmentados, ficha de otro tipo, fichas repetidas, datos
+incoherentes, valores en disputa, revisión de ingesta, fichas sin vínculos y
+**Otros** (lo que ningún detector específico explica). La antigua pestaña
+«Cola de revisión» se retiró: sus casos vivos entran en esas categorías y el
+detalle sigue en `/curaduria/revision/:id`.
+
+Cuándo analiza:
+
+- tras cada escritura correcta de la API (editar, fusionar, convertir, decidir
+  una revisión), agrupando escrituras seguidas en 1,5 s. El resultado aparece
+  en «Última corrección verificada»: resueltos, nuevos y **desencadenados por
+  la corrección**. Se apaga con `CRV_CURATION_AUTOSCAN=false`;
+- cada `CRV_CURATION_WATCH_MS` (60 s; 0 lo apaga) si cambiaron los contadores
+  del catálogo, lo que cubre ingestas y la CLI; y al arrancar la API;
+- a mano: botón «Analizar ahora» o
+
+```bash
+npm run cli -- curation scan            # analiza y guarda
+npm run cli -- curation scan --dry-run  # analiza sin guardar
+npm run cli -- curation summary
+```
+
+«No es un problema» ignora un hallazgo sin tocar el catálogo; no se vuelve a
+abrir mientras el valor no cambie. Un hallazgo resuelto que reaparece se
+reabre con el mismo id.
+
 ## 5. Logs y trazabilidad
 
 | Dónde | Qué |

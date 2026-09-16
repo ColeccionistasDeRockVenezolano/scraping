@@ -13,7 +13,7 @@ import { albumTypeLabel } from "../lib/labels";
 
 export function AlbumsListPage() {
   const { data, loading, error, reload, q, offset, limit, setQuery, setOffset } = useEntityList(albumsApi.list);
-  const { isConfigured } = useOperator();
+  const { isAdmin } = useOperator();
   const { notify } = useToast();
   const [creating, setCreating] = useState(false);
   const [artistId, setArtistId] = useState<number | null>(null);
@@ -26,7 +26,7 @@ export function AlbumsListPage() {
           <p className="page-kicker">Catálogo</p>
           <h1>Discos</h1>
         </div>
-        {isConfigured ? <button type="button" className="btn btn--primary" onClick={() => setCreating(true)}>+ Nuevo disco</button> : null}
+        {isAdmin ? <button type="button" className="btn btn--primary" onClick={() => setCreating(true)}>+ Nuevo disco</button> : null}
       </div>
 
       <div className="list-toolbar">

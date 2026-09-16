@@ -21,7 +21,7 @@ export function ArtistDetailPage() {
   const { id } = useParams();
   const artistId = Number(id);
   const navigate = useNavigate();
-  const { isConfigured } = useOperator();
+  const { isAdmin } = useOperator();
   const { notify } = useToast();
   const { data: artist, loading, error, errorValue, reload } = useAsync(() => artistsApi.get(artistId), [artistId]);
   useMovedToRedirect(errorValue);
@@ -54,7 +54,7 @@ export function ArtistDetailPage() {
         </div>
       </div>
 
-      {isConfigured ? (
+      {isAdmin ? (
         <div className="page-actions" style={{ marginTop: 14 }}>
           <button type="button" className="btn btn--sm" onClick={() => setEditing(true)}>Editar</button>
           <button type="button" className="btn btn--sm" onClick={() => setMerging(true)}>Fusionar con…</button>
@@ -70,7 +70,7 @@ export function ArtistDetailPage() {
       <div className="section">
         <h2>
           Miembros
-          {isConfigured ? <button type="button" className="btn btn--sm btn--ghost" onClick={() => setAddingMember(true)}>+ Añadir miembro</button> : null}
+          {isAdmin ? <button type="button" className="btn btn--sm btn--ghost" onClick={() => setAddingMember(true)}>+ Añadir miembro</button> : null}
         </h2>
         {artist.members.length === 0 ? <p style={{ color: "var(--text-faint)", fontSize: 13.5 }}>Sin miembros registrados.</p> : (
           <div className="table-wrap">
@@ -78,7 +78,7 @@ export function ArtistDetailPage() {
               <thead><tr><th>Persona</th><th>Rol</th><th>Periodo</th><th></th></tr></thead>
               <tbody>
                 {artist.members.map((member) => (
-                  <MemberRow key={member.id} member={member} canEdit={isConfigured} onChanged={reload} />
+                  <MemberRow key={member.id} member={member} canEdit={isAdmin} onChanged={reload} />
                 ))}
               </tbody>
             </table>

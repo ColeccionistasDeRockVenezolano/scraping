@@ -3,6 +3,8 @@
 export interface OperatorUser {
   username: string;
   name: string;
+  /** admin edita, fusiona y revisa; reader solo lee (src/api/auth.ts). */
+  role: "admin" | "reader";
 }
 
 let csrfToken = "";

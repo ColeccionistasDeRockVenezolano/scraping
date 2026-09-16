@@ -20,7 +20,7 @@ export function PersonDetailPage() {
   const { id } = useParams();
   const personId = Number(id);
   const navigate = useNavigate();
-  const { isConfigured } = useOperator();
+  const { isAdmin } = useOperator();
   const { notify } = useToast();
   const { data: person, loading, error, errorValue, reload } = useAsync(() => personsApi.get(personId), [personId]);
   useMovedToRedirect(errorValue);
@@ -49,7 +49,7 @@ export function PersonDetailPage() {
         </div>
       </div>
 
-      {isConfigured ? (
+      {isAdmin ? (
         <div className="page-actions" style={{ marginTop: 14 }}>
           <button type="button" className="btn btn--sm" onClick={() => setEditing(true)}>Editar</button>
           <button type="button" className="btn btn--sm" onClick={() => setMerging(true)}>Fusionar con…</button>
@@ -61,7 +61,7 @@ export function PersonDetailPage() {
         <div className="alert-block" role="alert" style={{ marginTop: 14 }}>
           <strong>Este nombre no parece de una persona: {nameClassLabel(person.nameClass).toLowerCase()}.</strong>
           <p style={{ margin: "6px 0 0" }}>{person.nameClassReason}</p>
-          {isConfigured ? (
+          {isAdmin ? (
             <div style={{ display: "flex", gap: 8, marginTop: 10, flexWrap: "wrap" }}>
               <button type="button" className="btn btn--sm" onClick={() => setConverting("organization")}>Convertir en organización…</button>
               <button type="button" className="btn btn--sm" onClick={() => setConverting("artist")}>Convertir en artista…</button>

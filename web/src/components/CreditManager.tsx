@@ -30,7 +30,7 @@ function creditedName(credit: Credit): string {
 }
 
 export function CreditManager({ target, credits, onChanged, compact }: CreditManagerProps) {
-  const { isConfigured } = useOperator();
+  const { isAdmin } = useOperator();
   const { notify } = useToast();
   const [adding, setAdding] = useState(false);
   const [removing, setRemoving] = useState<Credit | null>(null);
@@ -60,7 +60,7 @@ export function CreditManager({ target, credits, onChanged, compact }: CreditMan
                 </span>
                 <span className="role">
                   {credit.role}
-                  {isConfigured ? (
+                  {isAdmin ? (
                     <button type="button" className="btn btn--sm btn--ghost" style={{ marginLeft: 8, padding: "2px 6px" }} onClick={() => setRemoving(credit)}>×</button>
                   ) : null}
                 </span>
@@ -69,7 +69,7 @@ export function CreditManager({ target, credits, onChanged, compact }: CreditMan
           })}
         </ul>
       )}
-      {isConfigured ? (
+      {isAdmin ? (
         <button type="button" className="btn btn--sm btn--ghost" style={{ marginTop: 10 }} onClick={() => setAdding(true)}>+ Añadir crédito</button>
       ) : null}
       {adding ? <AddCreditModal target={target} onClose={() => setAdding(false)} onDone={() => { setAdding(false); onChanged(); }} /> : null}

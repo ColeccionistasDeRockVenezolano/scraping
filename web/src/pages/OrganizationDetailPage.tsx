@@ -18,7 +18,7 @@ export function OrganizationDetailPage() {
   const { id } = useParams();
   const orgId = Number(id);
   const navigate = useNavigate();
-  const { isConfigured } = useOperator();
+  const { isAdmin } = useOperator();
   const { notify } = useToast();
   const { data: org, loading, error, errorValue, reload } = useAsync(() => organizationsApi.get(orgId), [orgId]);
   useMovedToRedirect(errorValue);
@@ -48,7 +48,7 @@ export function OrganizationDetailPage() {
         </div>
       </div>
 
-      {isConfigured ? (
+      {isAdmin ? (
         <div className="page-actions" style={{ marginTop: 14 }}>
           <button type="button" className="btn btn--sm" onClick={() => setEditing(true)}>Editar</button>
           <button type="button" className="btn btn--sm" onClick={() => setMerging(true)}>Fusionar con…</button>

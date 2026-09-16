@@ -4,7 +4,8 @@ import { clearLegacyOperatorStorage, setSessionCsrf, type OperatorUser } from ".
 
 interface OperatorContextValue {
   user: OperatorUser | null;
-  isConfigured: boolean;
+  /** Solo una cuenta admin edita, fusiona y entra a Curaduría; la API lo exige igual. */
+  isAdmin: boolean;
   isChecking: boolean;
   login: (username: string, password: string) => Promise<void>;
   logout: () => Promise<void>;
@@ -48,7 +49,7 @@ export function OperatorProvider({ children }: { children: ReactNode }) {
   }, []);
 
   const value = useMemo<OperatorContextValue>(
-    () => ({ user, isConfigured: user !== null, isChecking, login, logout }),
+    () => ({ user, isAdmin: user?.role === "admin", isChecking, login, logout }),
     [user, isChecking, login, logout],
   );
 

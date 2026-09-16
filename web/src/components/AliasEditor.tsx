@@ -16,7 +16,7 @@ interface AliasEditorProps {
 }
 
 export function AliasEditor({ path, entityId, aliases, onChanged }: AliasEditorProps) {
-  const { isConfigured } = useOperator();
+  const { isAdmin } = useOperator();
   const { notify } = useToast();
   const [adding, setAdding] = useState(false);
   const [alias, setAlias] = useState("");
@@ -69,7 +69,7 @@ export function AliasEditor({ path, entityId, aliases, onChanged }: AliasEditorP
             {item.isPrimary ? <Star className="chip-icon chip-icon--primary" aria-label="Alias principal" weight="fill" /> : null}
             <span>{item.alias}</span>
             <span style={{ color: "var(--text-faint)", fontSize: 11 }}>{aliasTypeLabel(item.aliasType)}</span>
-            {isConfigured ? (
+            {isAdmin ? (
               <>
                 {!item.isPrimary ? (
                   <button type="button" title="Marcar como principal" aria-label={`Marcar ${item.alias} como principal`} onClick={() => handleMakePrimary(item.id)}><Star aria-hidden="true" /></button>
@@ -82,7 +82,7 @@ export function AliasEditor({ path, entityId, aliases, onChanged }: AliasEditorP
         ))}
         {aliases.length === 0 ? <span style={{ color: "var(--text-faint)", fontSize: 13 }}>Sin alias registrados.</span> : null}
       </ul>
-      {isConfigured ? (
+      {isAdmin ? (
         adding ? (
           <form onSubmit={handleAdd} style={{ display: "flex", gap: 8, marginTop: 10, flexWrap: "wrap", alignItems: "center" }}>
             <input value={alias} onChange={(event) => setAlias(event.target.value)} placeholder="Nuevo alias" autoFocus style={{ minWidth: 200 }} className="filter-input" />

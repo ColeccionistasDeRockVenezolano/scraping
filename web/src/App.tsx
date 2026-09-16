@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes, useParams } from "react-router-dom";
 import { Layout } from "./components/Layout";
 import { SearchPage } from "./pages/SearchPage";
 import { ArtistsListPage } from "./pages/ArtistsListPage";
@@ -10,9 +10,17 @@ import { PersonDetailPage } from "./pages/PersonDetailPage";
 import { PersonDuplicatesPage } from "./pages/PersonDuplicatesPage";
 import { OrganizationsListPage } from "./pages/OrganizationsListPage";
 import { OrganizationDetailPage } from "./pages/OrganizationDetailPage";
-import { ReviewQueueListPage } from "./pages/ReviewQueueListPage";
 import { ReviewQueueDetailPage } from "./pages/ReviewQueueDetailPage";
 import { NotFoundPage } from "./pages/NotFoundPage";
+import { CurationLayout } from "./pages/CurationLayout";
+import { CurationOverviewPage } from "./pages/CurationOverviewPage";
+import { CurationFindingsPage } from "./pages/CurationFindingsPage";
+
+/** Enlaces viejos (/revision/:id) siguen llevando a la revisión. */
+function LegacyReviewRedirect() {
+  const { id } = useParams();
+  return <Navigate to={`/curaduria/revision/${id ?? ""}`} replace />;
+}
 
 export function App() {
   return (
@@ -24,12 +32,21 @@ export function App() {
         <Route path="/discos" element={<AlbumsListPage />} />
         <Route path="/discos/:id" element={<AlbumDetailPage />} />
         <Route path="/personas" element={<PersonsListPage />} />
-        <Route path="/personas/duplicados" element={<PersonDuplicatesPage />} />
+        <Route path="/personas/duplicados" element={<Navigate to="/curaduria/duplicados" replace />} />
         <Route path="/personas/:id" element={<PersonDetailPage />} />
         <Route path="/organizaciones" element={<OrganizationsListPage />} />
         <Route path="/organizaciones/:id" element={<OrganizationDetailPage />} />
-        <Route path="/revision" element={<ReviewQueueListPage />} />
-        <Route path="/revision/:id" element={<ReviewQueueDetailPage />} />
+        <Route path="/curaduria" element={<CurationLayout />}>
+          <Route index element={<CurationOverviewPage />} />
+          <Route path="categoria/:key" element={<CurationFindingsPage />} />
+          <Route path="hallazgos" element={<CurationFindingsPage />} />
+          {/* La cola de revisión vive ahora dentro de las categorías del detector. */}
+          <Route path="revision" element={<Navigate to="/curaduria" replace />} />
+          <Route path="revision/:id" element={<ReviewQueueDetailPage />} />
+          <Route path="duplicados" element={<PersonDuplicatesPage />} />
+        </Route>
+        <Route path="/revision" element={<Navigate to="/curaduria" replace />} />
+        <Route path="/revision/:id" element={<LegacyReviewRedirect />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </Layout>

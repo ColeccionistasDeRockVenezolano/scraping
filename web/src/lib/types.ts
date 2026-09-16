@@ -318,3 +318,97 @@ export interface RemovalResult { kind: string; id: number; runId: number; claims
 export interface AliasWriteResult extends Alias { entityId: number; runId: number; }
 
 export type EntityKind = "artist" | "person" | "organization" | "album" | "track";
+
+// ---------- curaduría: detector de conflictos ----------
+export type CurationSeverity = "high" | "medium" | "low";
+export type CurationFindingStatus = "open" | "ignored" | "resolved";
+
+export interface CurationEntityRef { kind: string; id: number | null; label: string; }
+
+export interface CurationScan {
+  id: number;
+  status: string;
+  trigger: string;
+  requestedBy: string | null;
+  startedAt: string;
+  finishedAt: string | null;
+  error: string | null;
+  counters: Record<string, unknown>;
+}
+
+export interface CurationSignatureSummary { key: string; label: string; open: number; }
+export interface CurationDetectorSummary {
+  key: string; label: string; description: string;
+  open: number; ignored: number; resolved: number; newInLastScan: number;
+  signatures: CurationSignatureSummary[];
+}
+export interface CurationCategorySummary {
+  key: string; label: string; description: string;
+  open: number; ignored: number; resolved: number; newInLastScan: number; chainedOpen: number;
+  severity: Record<CurationSeverity, number>;
+  detectors: CurationDetectorSummary[];
+}
+export interface CurationSummary {
+  lastScan: CurationScan | null;
+  lastCorrection: CurationScan | null;
+  running: boolean;
+  totals: { open: number; ignored: number; resolved: number; newInLastScan: number; chainedOpen: number };
+  categories: CurationCategorySummary[];
+}
+
+export interface CurationFinding {
+  id: number;
+  category: string;
+  detector: string;
+  detectorLabel: string;
+  signature: string;
+  signatureLabel: string;
+  severity: CurationSeverity;
+  entity: CurationEntityRef;
+  field: string | null;
+  value: string | null;
+  title: string;
+  suggestion: string | null;
+  suggestedValue: string | null;
+  related: CurationEntityRef[];
+  evidence: Record<string, unknown>;
+  status: CurationFindingStatus;
+  isNew: boolean;
+  triggeredBy: Array<{ id: number; title: string; entityKind: string; entityId: number | null }>;
+  firstSeenAt: string;
+  lastSeenAt: string;
+  resolvedAt: string | null;
+  ignoredAt: string | null;
+  ignoredBy: string | null;
+  ignoreNote: string | null;
+}
+
+export interface CurationFixOutcome {
+  id: number;
+  ok: boolean;
+  error: string | null;
+}
+
+export interface CurationFixBatchResult {
+  outcomes: CurationFixOutcome[];
+  fixed: number;
+  failed: number;
+  more?: boolean;
+}
+
+export interface CurationScanResult {
+  scanId: number | null;
+  status: "ok" | "failed";
+  trigger: string;
+  dryRun: boolean;
+  durationMs: number;
+  catalogSignature: string;
+  total: number;
+  inserted: number;
+  reopened: number;
+  resolved: number;
+  chained: number;
+  byCategory: Record<string, number>;
+  failures: Array<{ detector: string; error: string }>;
+  error?: string;
+}

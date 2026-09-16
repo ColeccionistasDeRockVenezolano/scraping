@@ -23,7 +23,7 @@ export function PersonsListPage() {
   const sort = params.get("sort") === "credits" ? "credits" as const : "name" as const;
   const offset = Number(params.get("offset") ?? "0") || 0;
 
-  const { isConfigured } = useOperator();
+  const { isAdmin } = useOperator();
   const { notify } = useToast();
   const [creating, setCreating] = useState(false);
 
@@ -54,7 +54,7 @@ export function PersonsListPage() {
           <h1>Personas</h1>
           <p className="page-lead">Busca sin tildes, filtra por fichas sin créditos o por nombres sospechosos.</p>
         </div>
-        {isConfigured ? <button type="button" className="btn btn--primary" onClick={() => setCreating(true)}>+ Nueva persona</button> : null}
+        {isAdmin ? <button type="button" className="btn btn--primary" onClick={() => setCreating(true)}>+ Nueva persona</button> : null}
       </div>
 
       <div className="list-toolbar">

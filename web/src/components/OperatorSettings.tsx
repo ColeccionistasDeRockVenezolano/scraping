@@ -5,7 +5,8 @@ import { ApiError } from "../lib/api";
 import { useOperator } from "../lib/OperatorContext";
 
 export function OperatorPill() {
-  const { user, isConfigured, isChecking } = useOperator();
+  const { user, isChecking } = useOperator();
+  const isSignedIn = user !== null;
   const [open, setOpen] = useState(false);
   const initial = user?.name.trim().charAt(0).toUpperCase() || "?";
   const label = isChecking ? "Comprobando acceso" : user?.name ?? "Solo lectura";
@@ -14,12 +15,12 @@ export function OperatorPill() {
     <>
       <button
         type="button"
-        className={`operator-pill ${isConfigured ? "is-active" : ""}`}
+        className={`operator-pill ${isSignedIn ? "is-active" : ""}`}
         onClick={() => setOpen(true)}
-        aria-label={isConfigured ? `Sesión de ${label}` : "Iniciar sesión como colaborador"}
+        aria-label={isSignedIn ? `Sesión de ${label}` : "Iniciar sesión como colaborador"}
       >
         <span className="dot" aria-hidden="true" />
-        {isConfigured ? <span className="chip" aria-hidden="true">{initial}</span> : <SignIn className="operator-icon" aria-hidden="true" weight="bold" />}
+        {isSignedIn ? <span className="chip" aria-hidden="true">{initial}</span> : <SignIn className="operator-icon" aria-hidden="true" weight="bold" />}
         <span className="operator-label">{label}</span>
       </button>
       {open ? <OperatorDialog onClose={() => setOpen(false)} /> : null}
@@ -27,7 +28,7 @@ export function OperatorPill() {
   );
 }
 
-function OperatorDialog({ onClose }: { onClose: () => void }) {
+export function OperatorDialog({ onClose }: { onClose: () => void }) {
   const { user, login, logout } = useOperator();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -69,10 +70,14 @@ function OperatorDialog({ onClose }: { onClose: () => void }) {
           <span className="account-avatar" aria-hidden="true">{user.name.charAt(0).toUpperCase()}</span>
           <div>
             <strong>{user.name}</strong>
-            <span>@{user.username}</span>
+            <span>@{user.username} · {user.role === "admin" ? "Administrador" : "Solo lectura"}</span>
           </div>
         </div>
-        <p className="operator-help">Tus cambios quedan firmados con esta cuenta en el historial del catálogo.</p>
+        <p className="operator-help">
+          {user.role === "admin"
+            ? "Cuenta administradora: puedes editar, fusionar y usar Curaduría. Tus cambios quedan firmados con esta cuenta en el historial del catálogo."
+            : "Cuenta de solo lectura: puedes consultar el catálogo, pero editar, fusionar y usar Curaduría requiere una cuenta administradora."}
+        </p>
         {error ? <p className="form-error" role="alert">{error}</p> : null}
         <div className="form-actions">
           <button type="button" className="btn" onClick={onClose}>Volver</button>
@@ -88,7 +93,7 @@ function OperatorDialog({ onClose }: { onClose: () => void }) {
   return (
     <Modal title="Acceso de colaboradores" onClose={onClose}>
       <p className="operator-help">
-        Inicia sesión para editar el catálogo. Las consultas públicas siguen disponibles sin cuenta.
+        Inicia sesión con una cuenta administradora para editar, fusionar y usar Curaduría. Consultar el catálogo no requiere cuenta.
       </p>
       <form onSubmit={(event) => void handleLogin(event)}>
         <div className="form-grid">

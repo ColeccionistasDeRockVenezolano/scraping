@@ -33,6 +33,7 @@ const DICTS: Record<string, Record<string, string>> = {
     seed_incomplete: "Fila de semilla incompleta", media_type_no_album: "Contenido audiovisual sin álbum",
     genre_unknown: "Género desconocido", new_source: "Fuente nueva", low_confidence: "Confianza baja",
     ai_biography: "Biografía generada por IA", ai_entity_resolution: "Identidad propuesta por IA",
+    person_duplicate: "Posible persona duplicada",
   },
   reviewStatus: {
     open: "Abierta", in_progress: "En curso", accepted: "Aceptada", rejected: "Rechazada", resolved: "Resuelta",

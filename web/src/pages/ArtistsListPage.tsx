@@ -12,7 +12,7 @@ import { artistTypeLabel } from "../lib/labels";
 
 export function ArtistsListPage() {
   const { data, loading, error, reload, q, offset, limit, setQuery, setOffset } = useEntityList(artistsApi.list);
-  const { isConfigured } = useOperator();
+  const { isAdmin } = useOperator();
   const { notify } = useToast();
   const [creating, setCreating] = useState(false);
 
@@ -23,7 +23,7 @@ export function ArtistsListPage() {
           <p className="page-kicker">Catálogo</p>
           <h1>Artistas y bandas</h1>
         </div>
-        {isConfigured ? <button type="button" className="btn btn--primary" onClick={() => setCreating(true)}>+ Nuevo artista</button> : null}
+        {isAdmin ? <button type="button" className="btn btn--primary" onClick={() => setCreating(true)}>+ Nuevo artista</button> : null}
       </div>
 
       <div className="list-toolbar">

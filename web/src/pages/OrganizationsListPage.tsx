@@ -12,7 +12,7 @@ import { organizationTypeLabel } from "../lib/labels";
 
 export function OrganizationsListPage() {
   const { data, loading, error, reload, q, offset, limit, setQuery, setOffset } = useEntityList(organizationsApi.list);
-  const { isConfigured } = useOperator();
+  const { isAdmin } = useOperator();
   const { notify } = useToast();
   const [creating, setCreating] = useState(false);
 
@@ -23,7 +23,7 @@ export function OrganizationsListPage() {
           <p className="page-kicker">Catálogo</p>
           <h1>Organizaciones</h1>
         </div>
-        {isConfigured ? <button type="button" className="btn btn--primary" onClick={() => setCreating(true)}>+ Nueva organización</button> : null}
+        {isAdmin ? <button type="button" className="btn btn--primary" onClick={() => setCreating(true)}>+ Nueva organización</button> : null}
       </div>
 
       <div className="list-toolbar">
