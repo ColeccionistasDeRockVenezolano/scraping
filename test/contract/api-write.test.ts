@@ -360,8 +360,9 @@ describe("API de escritura (E7B)", () => {
 
   it("expone la escritura en OpenAPI con el esquema de seguridad del operador", async () => {
     const spec = (await app.inject({ method: "GET", url: "/docs/json" })).json();
+    expect(spec.components.securitySchemes.collaboratorSession).toMatchObject({ type: "apiKey", in: "cookie", name: "crv_session" });
     expect(spec.components.securitySchemes.operatorToken).toMatchObject({ type: "http", scheme: "bearer" });
-    expect(spec.paths["/artists"].post.security).toEqual([{ operatorToken: [] }]);
+    expect(spec.paths["/artists"].post.security).toEqual([{ collaboratorSession: [] }, { operatorToken: [] }]);
     for (const path of ["/albums/{id}", "/tracks/{id}", "/album-credits/{id}", "/track-credits/{id}", "/artist-members/{id}", "/person-organizations/{id}", "/album-formats/{id}"]) {
       expect(spec.paths[path].patch).toBeDefined();
       expect(spec.paths[path].delete).toBeDefined();
@@ -370,8 +371,15 @@ describe("API de escritura (E7B)", () => {
     expect(spec.paths["/audit"].get).toBeDefined();
   });
 
-  it("sin CRV_OPERATOR_TOKEN la API queda en solo lectura", async () => {
+  it("sin cuentas ni CRV_OPERATOR_TOKEN la API queda en solo lectura", async () => {
+    const configuredAccounts = process.env["CRV_COLLABORATORS_JSON"];
+    // También CRV_HERRA_DB_PATH: si la máquina donde corre el test tiene esa
+    // variable en su .env real (login compartido con herra), "sin cuentas"
+    // dejaría de ser cierto y el caso probaría otra cosa.
+    const configuredHerra = process.env["CRV_HERRA_DB_PATH"];
     delete process.env["CRV_OPERATOR_TOKEN"];
+    delete process.env["CRV_COLLABORATORS_JSON"];
+    delete process.env["CRV_HERRA_DB_PATH"];
     resetEnvCache();
     const readOnly = await buildApp();
     try {
@@ -381,6 +389,8 @@ describe("API de escritura (E7B)", () => {
     } finally {
       await readOnly.close();
       process.env["CRV_OPERATOR_TOKEN"] = TOKEN;
+      if (configuredAccounts !== undefined) process.env["CRV_COLLABORATORS_JSON"] = configuredAccounts;
+      if (configuredHerra !== undefined) process.env["CRV_HERRA_DB_PATH"] = configuredHerra;
       resetEnvCache();
     }
   });

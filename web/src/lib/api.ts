@@ -1,7 +1,7 @@
 // CRV · Cliente de la API (src/api/*). El navegador solo habla con esta API,
 // nunca con PostgreSQL (CONTRACT #20) — cada función de aquí es una llamada
 // HTTP directa, sin lógica de negocio propia.
-import { loadOperatorCreds } from "./operator";
+import { getSessionCsrf, setSessionCsrf, type OperatorUser } from "./operator";
 import type {
   Alias, AliasWriteResult, AlbumDetail, AlbumListItem, ArtistDetail, ArtistListItem, AuditRow, Claim, EntityWriteResult,
   OrganizationDetail, OrganizationListItem, Page, PersonDetail, PersonListItem, RelationUpdateResult, RelationWriteResult,
@@ -43,14 +43,14 @@ async function request<T>(path: string, options: RequestOptions = {}): Promise<T
   const headers: Record<string, string> = {};
   if (options.body !== undefined) headers["content-type"] = "application/json";
   if (options.authenticated) {
-    const creds = loadOperatorCreds();
-    if (!creds.token) throw new ApiError(401, "missing_token", "Configura el token de operador para poder escribir.");
-    headers["authorization"] = `Bearer ${creds.token}`;
-    if (creds.name) headers["x-crv-operator"] = creds.name;
+    const csrf = getSessionCsrf();
+    if (!csrf) throw new ApiError(401, "missing_session", "Inicia sesión para poder editar.");
+    headers["x-crv-csrf"] = csrf;
   }
   const init: RequestInit = {
     method,
     headers,
+    credentials: "include",
     ...(options.body === undefined ? {} : { body: JSON.stringify(options.body) }),
   };
   const response = await fetch(buildUrl(path, options.query as Query | undefined), init);
@@ -58,10 +58,36 @@ async function request<T>(path: string, options: RequestOptions = {}): Promise<T
   const json: unknown = text ? JSON.parse(text) : undefined;
   if (!response.ok) {
     const error = (json as { error?: { code?: string; message?: string; details?: Record<string, unknown> } } | undefined)?.error;
+    if (options.authenticated && response.status === 401) {
+      setSessionCsrf("");
+      window.dispatchEvent(new Event("crv-session-expired"));
+    }
     throw new ApiError(response.status, error?.code ?? "unknown", error?.message ?? response.statusText, error?.details);
   }
   return json as T;
 }
+
+export interface AuthSession {
+  user: OperatorUser;
+  csrf: string;
+}
+
+export const authApi = {
+  me: async () => {
+    const session = await request<AuthSession>("/auth/me");
+    setSessionCsrf(session.csrf);
+    return session;
+  },
+  login: async (username: string, password: string) => {
+    const session = await request<AuthSession>("/auth/login", { method: "POST", body: { username, password } });
+    setSessionCsrf(session.csrf);
+    return session;
+  },
+  logout: async () => {
+    await request<void>("/auth/logout", { method: "POST", authenticated: true });
+    setSessionCsrf("");
+  },
+};
 
 export interface Paged { limit?: number; offset?: number; }
 

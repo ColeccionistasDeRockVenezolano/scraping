@@ -1,31 +1,55 @@
-import { createContext, useCallback, useContext, useMemo, useState, type ReactNode } from "react";
-import { loadOperatorCreds, saveOperatorCreds, type OperatorCreds } from "./operator";
+import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
+import { ApiError, authApi } from "./api";
+import { clearLegacyOperatorStorage, setSessionCsrf, type OperatorUser } from "./operator";
 
 interface OperatorContextValue {
-  creds: OperatorCreds;
+  user: OperatorUser | null;
   isConfigured: boolean;
-  setCreds: (creds: OperatorCreds) => void;
-  clear: () => void;
+  isChecking: boolean;
+  login: (username: string, password: string) => Promise<void>;
+  logout: () => Promise<void>;
 }
 
 const OperatorContext = createContext<OperatorContextValue | undefined>(undefined);
 
 export function OperatorProvider({ children }: { children: ReactNode }) {
-  const [creds, setCredsState] = useState<OperatorCreds>(() => loadOperatorCreds());
+  const [user, setUser] = useState<OperatorUser | null>(null);
+  const [isChecking, setIsChecking] = useState(true);
 
-  const setCreds = useCallback((next: OperatorCreds) => {
-    saveOperatorCreds(next);
-    setCredsState(next);
+  useEffect(() => {
+    clearLegacyOperatorStorage();
+    let active = true;
+    void authApi.me()
+      .then((session) => { if (active) setUser(session.user); })
+      .catch(() => { /* Sin sesión o API temporalmente inaccesible: queda en solo lectura. */ })
+      .finally(() => { if (active) setIsChecking(false); });
+    const expire = () => setUser(null);
+    window.addEventListener("crv-session-expired", expire);
+    return () => {
+      active = false;
+      window.removeEventListener("crv-session-expired", expire);
+    };
   }, []);
 
-  const clear = useCallback(() => {
-    saveOperatorCreds({ token: "", name: "" });
-    setCredsState({ token: "", name: "" });
+  const login = useCallback(async (username: string, password: string) => {
+    const session = await authApi.login(username, password);
+    setUser(session.user);
+  }, []);
+
+  const logout = useCallback(async () => {
+    try {
+      await authApi.logout();
+    } catch (error: unknown) {
+      if (!(error instanceof ApiError) || error.status !== 401) throw error;
+    } finally {
+      setSessionCsrf("");
+      setUser(null);
+    }
   }, []);
 
   const value = useMemo<OperatorContextValue>(
-    () => ({ creds, isConfigured: creds.token.length > 0, setCreds, clear }),
-    [creds, setCreds, clear],
+    () => ({ user, isConfigured: user !== null, isChecking, login, logout }),
+    [user, isChecking, login, logout],
   );
 
   return <OperatorContext.Provider value={value}>{children}</OperatorContext.Provider>;

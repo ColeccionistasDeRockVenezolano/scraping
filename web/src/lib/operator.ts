@@ -1,26 +1,26 @@
-// CRV · Credenciales del operador (src/api/auth.ts). Se guardan solo en este
-// navegador (localStorage): nunca viajan a otro sitio que no sea la API.
-const TOKEN_KEY = "crv.operatorToken";
-const NAME_KEY = "crv.operatorName";
-
-export interface OperatorCreds {
-  token: string;
+// Estado efímero de la sesión. La identidad real vive en una cookie HttpOnly;
+// el navegador no puede leerla ni guardarla en localStorage.
+export interface OperatorUser {
+  username: string;
   name: string;
 }
 
-export function loadOperatorCreds(): OperatorCreds {
-  try {
-    return { token: localStorage.getItem(TOKEN_KEY) ?? "", name: localStorage.getItem(NAME_KEY) ?? "" };
-  } catch {
-    return { token: "", name: "" };
-  }
+let csrfToken = "";
+
+export function getSessionCsrf(): string {
+  return csrfToken;
 }
 
-export function saveOperatorCreds(creds: OperatorCreds): void {
+export function setSessionCsrf(value: string): void {
+  csrfToken = value;
+}
+
+/** Retira credenciales heredadas de versiones anteriores de la interfaz. */
+export function clearLegacyOperatorStorage(): void {
   try {
-    if (creds.token) localStorage.setItem(TOKEN_KEY, creds.token); else localStorage.removeItem(TOKEN_KEY);
-    if (creds.name) localStorage.setItem(NAME_KEY, creds.name); else localStorage.removeItem(NAME_KEY);
+    localStorage.removeItem("crv.operatorToken");
+    localStorage.removeItem("crv.operatorName");
   } catch {
-    // localStorage inaccesible (modo privado, etc.): la sesión sigue solo en memoria.
+    // El acceso puede estar deshabilitado; la aplicación no depende de él.
   }
 }

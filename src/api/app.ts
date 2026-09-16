@@ -51,7 +51,16 @@ export async function buildApp(): Promise<FastifyInstance> {
   app.setValidatorCompiler(validatorCompiler);
   app.setSerializerCompiler(serializerCompiler);
 
-  await app.register(cors, { origin: true });
+  // origin:true + credentials:true reflejaría cualquier origen con permiso
+  // de mandar cookies: cualquier sitio podría leer /auth/me (csrf incluido)
+  // desde el navegador de un colaborador. Solo se permiten los orígenes
+  // declarados (dev incluido); la comprobación fina por-mismo-host para
+  // producción vive en auth.ts (isTrustedOrigin) y no depende de esto.
+  await app.register(cors, {
+    origin: getEnv().CRV_ALLOWED_ORIGINS.split(",").map((item) => item.trim()).filter(Boolean),
+    credentials: true,
+    allowedHeaders: ["content-type", "authorization", "x-crv-operator", "x-crv-csrf"],
+  });
 
   await app.register(swagger, {
     openapi: {
@@ -63,10 +72,16 @@ export async function buildApp(): Promise<FastifyInstance> {
       },
       components: {
         securitySchemes: {
+          collaboratorSession: {
+            type: "apiKey",
+            in: "cookie",
+            name: "crv_session",
+            description: "Sesión HttpOnly creada por POST /auth/login; las escrituras exigen además X-CRV-CSRF.",
+          },
           operatorToken: {
             type: "http",
             scheme: "bearer",
-            description: "CRV_OPERATOR_TOKEN. Cabecera opcional X-CRV-Operator para firmar con un nombre.",
+            description: "Bearer legado para automatizaciones internas. La interfaz web usa collaboratorSession.",
           },
         },
       },

@@ -13,7 +13,6 @@ import { buildApp } from "../../../src/api/app.js";
 const here = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(here, "../../..");
 const outputDir = path.join(root, "docs/ui-qa/extreme");
-const operatorToken = "crv-visual-qa-disposable-token-2026";
 
 function waitForUrl(url: string, timeoutMs = 30_000): Promise<void> {
   const deadline = Date.now() + timeoutMs;

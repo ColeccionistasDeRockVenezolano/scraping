@@ -21,7 +21,17 @@ npm run dev
 
 La interfaz abre en `http://127.0.0.1:5173`. `VITE_API_BASE_URL` debe apuntar a la API, por defecto `http://127.0.0.1:8080`.
 
-Las lecturas funcionan sin credenciales. Para escribir, configura `CRV_OPERATOR_TOKEN` en la API y guarda el mismo token desde el control de operador de la interfaz.
+Las lecturas funcionan sin credenciales. Para escribir, crea una cuenta desde
+la raíz y reinicia la API:
+
+```bash
+npm run auth:set-collaborator -- usuario "Nombre visible"
+systemctl --user restart crv-api
+```
+
+El control “Solo lectura” abre el login. La API verifica el hash scrypt y crea
+una sesión en cookie `HttpOnly`; ni la contraseña, ni el hash, ni la sesión se
+guardan en `localStorage` o se incluyen en el bundle.
 
 ## Verificación
 
