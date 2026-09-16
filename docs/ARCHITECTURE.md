@@ -534,19 +534,50 @@ de signos y largos de cada campo).
 
 | módulo | responsabilidad |
 | --- | --- |
-| `src/curation/snapshot.ts` | foto plana del catálogo (core, cola viva, conflictos abiertos, pares ya decididos) |
+| `src/curation/snapshot.ts` | foto plana del catálogo (core, cola viva, conflictos abiertos, pares ya decididos) en una sola transacción `REPEATABLE READ READ ONLY` |
 | `src/curation/lexicon.ts` | léxico aprendido y perfiles por campo |
 | `src/curation/detectors/*.ts` | un detector por problema; cada uno declara categoría, etiqueta y subgrupos |
 | `src/curation/detectors/anomalies.ts` | «Otros»: valores que se salen del perfil de su campo y que ningún detector explica |
 | `src/curation/taxonomy.ts` | categorías; una categoría o tipo de revisión desconocido cae en «otros» |
-| `src/curation/analyze.ts` | corre los detectores (uno roto no apaga al resto), huella estable por hallazgo |
-| `src/curation/scan.ts` | persiste en `ingest.curation_findings` (abierto/ignorado/resuelto), marca lo encadenado, un análisis a la vez |
-| `src/curation/watcher.ts` | análisis tras cada escritura correcta de la API y cuando cambian los contadores del catálogo |
-| `src/api/routes/curation.ts` | `/curation/*` (solo admin) y el gancho `onResponse` que dispara la verificación |
+| `src/curation/analyze.ts` | corre los detectores (uno roto no apaga al resto), dice cuáles miraron el catálogo entero (`completed`), huella estable por hallazgo |
+| `src/curation/scan.ts` | persiste en `ingest.curation_findings` (abierto/ignorado/resuelto), marca lo encadenado; un análisis a la vez en el proceso y entre procesos (candado de sesión) |
+| `src/curation/resolution.ts` | por qué se resolvió cada hallazgo, con el run de `merge_audit` que cambió el valor |
+| `src/curation/retention.ts` | poda: últimos 500 análisis y resueltos de 180 días (`crv curation prune`) |
+| `src/curation/watcher.ts` | análisis tras cada escritura correcta de la API y cuando cambian los contadores del catálogo; nunca deja promesas rechazadas |
+| `src/api/routes/curation.ts` | `/curation/*` (solo admin) y el gancho `onResponse` que dispara la verificación solo ante escrituras de la lista `CATALOG_WRITES` |
 
 Encadenamiento: si un análisis resuelve un hallazgo y en la misma ficha (o en
 una relacionada) aparece otro —nuevo o reabierto—, el nuevo guarda
 `evidence.triggeredBy`. La web lo muestra como «apareció al corregir…».
+
+Detectar sin mentir (PLAN_CURADURIA E1, migración 0019):
+
+- **Solo se resuelve lo mirado.** La resolución filtra por los detectores que
+  terminaron (`detector = ANY(completed)`), más los que las reglas ya no
+  tienen. Si uno falla, sus hallazgos quedan intactos y el análisis queda
+  `partial`; si falla uno de forma, «Otros» tampoco corre (mostraría lo que
+  ese detector explica). Antes, un solo `&#xFFFFFF;` hacía lanzar a
+  `entidades_html` y resolvía de golpe todos sus hallazgos.
+- **Nada rechaza.** Todo lo que toca la base en `executeScan` va dentro del
+  `try` (una base caída termina en `failed`), `notifyCatalogWrite` encadena
+  `.catch` y `src/api/server.ts` registra `unhandledRejection`: en Node 22 una
+  promesa rechazada sin manejar termina el proceso.
+- **Una foto, un instante.** Las 13 consultas de la foto comparten cliente y
+  transacción: durante una ingesta, pistas y discos siempre se corresponden.
+- **Un proceso a la vez.** `pg_try_advisory_lock(hashtext('crv:curation:scan'))`
+  sobre la conexión del análisis (y de la poda). Si otro proceso lo tiene, el
+  análisis se registra `skipped`: la verificación de una escritura se reintenta
+  unas veces cada 5 s y el vigilante lo retoma en su siguiente vuelta. Un
+  `--dry-run` no escribe y no toma el candado.
+- **Motivo de resolución.** `fixed_by_curation` (el último `merge_audit` que
+  cambió el valor detectado es de un run `api:curation:*`), `changed_elsewhere`
+  (otra escritura auditada, o nada auditado), `entity_removed` (la ficha ya no
+  está en la foto) y `rules_changed` (detector retirado, o reglas de otra
+  versión sobre un valor que no cambió). `resolved_by_run_id` apunta al run
+  cuando se conoce. Un cambio de reglas no cuenta como causa de encadenamiento.
+- **Solo escrituras del catálogo disparan análisis**: fichas, alias, fusiones,
+  conversiones, relaciones, aceptar/rechazar/resolver en la cola y deshacer un
+  run. Cambiar la prioridad de una revisión ya no lanza un análisis completo.
 
 ## 5. Flujo de datos end-to-end
 

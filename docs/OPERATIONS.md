@@ -301,11 +301,35 @@ Cuándo analiza:
 npm run cli -- curation scan            # analiza y guarda
 npm run cli -- curation scan --dry-run  # analiza sin guardar
 npm run cli -- curation summary
+npm run cli -- curation prune --dry-run # cuánto borraría la retención
+npm run cli -- curation prune           # borra análisis viejos y resueltos antiguos
 ```
 
 «No es un problema» ignora un hallazgo sin tocar el catálogo; no se vuelve a
 abrir mientras el valor no cambie. Un hallazgo resuelto que reaparece se
 reabre con el mismo id.
+
+Estados de un análisis (`ingest.curation_scans.status`, migración 0019):
+
+| Estado | Qué pasó | Qué hacer |
+|---|---|---|
+| `ok` | todos los detectores miraron el catálogo | nada |
+| `partial` | uno o más detectores lanzaron un error (`counters.failures`); sus hallazgos **no** se tocaron y el resto se guardó | es un fallo de código: revisar el error del detector. `curation scan` sale con código 1 |
+| `skipped` | otro proceso (la API, la CLI) estaba analizando; no se guardó nada | se reintenta solo; desde la CLI, repetir en unos segundos |
+| `failed` | no se pudo analizar (p. ej. la base no respondió) | revisar `error` y la conexión; la API sigue en pie |
+
+Cada hallazgo resuelto dice por qué (`resolution`): corregido desde Curaduría,
+cambió en otra parte, la ficha se retiró o cambiaron las reglas, con el run de
+escritura (`resolved_by_run_id`) cuando `merge_audit` lo registra. Los
+resueltos antes de 0019 no tienen motivo.
+
+Retención: `curation prune` conserva los últimos 500 análisis y los hallazgos
+resueltos de los últimos 180 días; nunca borra abiertos ni ignorados. Toma el
+mismo candado que el análisis: si hay uno en curso, no borra nada y lo dice.
+
+> **Antes de reiniciar la API con este código, aplicar la migración 0019**
+> (`npm run db:migrate`): sin ella, guardar un análisis y leer hallazgos fallan
+> porque faltan las columnas `resolution`/`resolved_by_run_id`.
 
 ## 5. Logs y trazabilidad
 
