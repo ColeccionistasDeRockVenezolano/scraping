@@ -20,6 +20,7 @@ desde aquí: estas migraciones solo crean objetos en los schemas `ingest` y
 | `0010_review_decisions.up/down.sql` | Decisiones humanas provisionales de la Mesa de Cotejo (`review_decisions`) |
 | `0011_album_classifications.up/down.sql` | Todas las clasificaciones que la hoja maestra da a un disco |
 | `0012_ambiguity_resolutions.up/down.sql` | Decisiones explicables del resolutor de ambigüedades (E10), con evidencia obligatoria en el DDL |
+| `0013_fk_indexes.up/down.sql` | Un índice (parcial si la columna admite nulos) por cada FK de `ingest`/`media` que no tenía uno, para que retirar o fusionar filas del core no recorra tablas enteras (E11) |
 
 Documentación ER completa: `../docs/db/ER_INGEST_MEDIA.md`.
 
@@ -27,9 +28,12 @@ Documentación ER completa: `../docs/db/ER_INGEST_MEDIA.md`.
 
 1. Instalar el core en una base PostgreSQL 15+ (una sola vez):
    `psql "$DATABASE_URL" -v ON_ERROR_STOP=1 -f ../crv_simple_v1.sql`
-2. Aplicar migraciones con el harness de `../tests/migrate.sh`
-   (rastrea versiones en `schema_migrations`) o con el runner de migraciones
-   del backend (Drizzle) cuando exista.
+   (`npm run db:bootstrap` lo hace solo si la base aún no tiene el core).
+2. Aplicar migraciones con `npm run db:migrate` (runner TS,
+   `src/db/migrate.ts`) o con el harness de `../tests/migrate.sh`. Ambos
+   rastrean versiones en `ingest.schema_migrations`. Antes de migrar la base
+   real, sacar un respaldo: `npm run db:backup`
+   (`../docs/DATABASE_BACKUP_RESTORE.md`).
 
 ## Pruebas
 
@@ -51,7 +55,9 @@ re-aplicar versiones ya registradas.
 
 ## Rollback
 
-Aplicar los `.down.sql` en orden inverso (0007 → 0006 → 0005 → 0004 → 0003 → 0002 → 0001). Cada
+Aplicar los `.down.sql` en orden inverso (0013 → 0012 → … → 0002 → 0001;
+`npm run db:migrate -- down` los recorre todos y existe para desarrollo y
+pruebas, no para operar la base real, donde se restaura un respaldo). Cada
 down elimina únicamente los objetos de su schema auxiliar; los FKs protegen
 contra borrados peligrosos (p. ej. no se puede dropear `ingest.sources`
 mientras `raw_pages`/`claims` la referencien sin `CASCADE` explícito en el

@@ -1,0 +1,2463 @@
+{
+  "decidedAt": "2026-09-15",
+  "evidence": "Cola de revisión de duplicados de personas resuelta con evidencia de créditos, bandas y obras compartidas (docs/PHASES.md, cola de revisión 2026-09-15). El canal de YouTube manda sobre la grafía; las erratas no quedan como nombre.",
+  "corrections": [
+    {
+      "op": "merge",
+      "keep": {
+        "id": 21,
+        "name": "Iván Velásquez"
+      },
+      "drop": {
+        "id": 3099,
+        "name": "Iván \"El Terrible\" Velásquez"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Iván \"El Terrible\" Velásquez» abrevia o varía la grafía de «Iván Velásquez» en la misma banda u obra (revisión #192926)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 38,
+        "name": "Pedro Castillo"
+      },
+      "drop": {
+        "id": 7058,
+        "name": "P. Castillo"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «P. Castillo» abrevia o varía la grafía de «Pedro Castillo» en la misma banda u obra (revisión #192929)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 39,
+        "name": "Pablo Manavello"
+      },
+      "drop": {
+        "id": 3098,
+        "name": "Pablo \"Zenith\" Manavello"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "«Zenith» es un apodo de ocasión en los créditos de Jayeche; queda el nombre con que lo acredita el canal (revisión #192930)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 45,
+        "name": "Guillermo Carrasco"
+      },
+      "drop": {
+        "id": 4695,
+        "name": "G. Carrasco"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «G. Carrasco» abrevia o varía la grafía de «Guillermo Carrasco» en la misma banda u obra (revisión #192933)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 45,
+        "name": "Guillermo Carrasco"
+      },
+      "drop": {
+        "id": 10008,
+        "name": "Guiilermo Carrasco"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Guiilermo Carrasco» abrevia o varía la grafía de «Guillermo Carrasco» en la misma banda u obra (revisión #192934)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 45,
+        "name": "Guillermo Carrasco"
+      },
+      "drop": {
+        "id": 6279,
+        "name": "Guilermo Carrasco"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "«Guilermo» es errata de Guillermo Carrasco en la misma obra"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 67,
+        "name": "George Henríquez"
+      },
+      "drop": {
+        "id": 7049,
+        "name": "G. Henríquez"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «G. Henríquez» abrevia o varía la grafía de «George Henríquez» en la misma banda u obra (revisión #192935)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 67,
+        "name": "George Henríquez"
+      },
+      "drop": {
+        "id": 10010,
+        "name": "Geoge Henríquez"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Geoge Henríquez» abrevia o varía la grafía de «George Henríquez» en la misma banda u obra (revisión #192936)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 669,
+        "name": "Emidio Falconi \"DJ Baffa\""
+      },
+      "drop": {
+        "id": 182,
+        "name": "Emidio Falconi"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Emidio Falconi» abrevia o varía la grafía de «Emidio Falconi \"DJ Baffa\"» en la misma banda u obra (revisión #192952)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 921,
+        "name": "Alexis Peña"
+      },
+      "drop": {
+        "id": 9449,
+        "name": "A. Peña"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Tras pasar a Archie Peña el crédito de «Mil Ave Marías» (Dame De Eso), los de «A. Peña» en Intenso son de Alexis Peña (revisión #192955)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1703,
+        "name": "Angel Machado"
+      },
+      "drop": {
+        "id": 207,
+        "name": "Angie Machado"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Angel Machado, trompeta con Franco De Vita; «Angie» es errata (revisión #192956)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 228,
+        "name": "Álvaro Casas"
+      },
+      "drop": {
+        "id": 9469,
+        "name": "A. Casas"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «A. Casas» abrevia o varía la grafía de «Álvaro Casas» en la misma banda u obra (revisión #192958)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 247,
+        "name": "Agustín Espina"
+      },
+      "drop": {
+        "id": 9511,
+        "name": "A.Espina"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «A.Espina» abrevia o varía la grafía de «Agustín Espina» en la misma banda u obra (revisión #192960)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 366,
+        "name": "Julio Briceño"
+      },
+      "drop": {
+        "id": 9472,
+        "name": "J. Briceño"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «J. Briceño» abrevia o varía la grafía de «Julio Briceño» en la misma banda u obra (revisión #192963)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 386,
+        "name": "José Luis Pardo"
+      },
+      "drop": {
+        "id": 1111,
+        "name": "José Luis Pardo \"DJ Afro\""
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «José Luis Pardo \"DJ Afro\"» abrevia o varía la grafía de «José Luis Pardo» en la misma banda u obra (revisión #192967)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 386,
+        "name": "José Luis Pardo"
+      },
+      "drop": {
+        "id": 1243,
+        "name": "José Luis \"Cheo\" Pardo"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «José Luis \"Cheo\" Pardo» abrevia o varía la grafía de «José Luis Pardo» en la misma banda u obra (revisión #192968)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 386,
+        "name": "José Luis Pardo"
+      },
+      "drop": {
+        "id": 7511,
+        "name": "J. Pardo"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «J. Pardo» abrevia o varía la grafía de «José Luis Pardo» en la misma banda u obra (revisión #192969)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 386,
+        "name": "José Luis Pardo"
+      },
+      "drop": {
+        "id": 7544,
+        "name": "J. L. Pardo"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «J. L. Pardo» abrevia o varía la grafía de «José Luis Pardo» en la misma banda u obra (revisión #192970)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 421,
+        "name": "Williams Silva"
+      },
+      "drop": {
+        "id": 7439,
+        "name": "William Silva"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «William Silva» abrevia o varía la grafía de «Williams Silva» en la misma banda u obra (revisión #192972)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 435,
+        "name": "John Van Der Veer"
+      },
+      "drop": {
+        "id": 3017,
+        "name": "John Van Deer Veer"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "«Van Deer Veer» es errata; queda John Van Der Veer (revisión #192975)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 437,
+        "name": "Alejandro \"Chofa\" Loero"
+      },
+      "drop": {
+        "id": 2009,
+        "name": "Alfredo Loero \"Chofa\""
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Chofa Loero, de PAN; «Alfredo» es errata del nombre (revisión #192976)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 457,
+        "name": "Héctor Castillo"
+      },
+      "drop": {
+        "id": 1263,
+        "name": "Hector Castillo \"Perroconsed\""
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Hector Castillo \"Perroconsed\"» abrevia o varía la grafía de «Héctor Castillo» en la misma banda u obra (revisión #192978)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 457,
+        "name": "Héctor Castillo"
+      },
+      "drop": {
+        "id": 3410,
+        "name": "Héctor Castillo \"Jector\""
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Héctor Castillo \"Jector\"» abrevia o varía la grafía de «Héctor Castillo» en la misma banda u obra (revisión #192979)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1669,
+        "name": "Manuel \"Manny\" Diquez"
+      },
+      "drop": {
+        "id": 470,
+        "name": "Manuel Dizquez"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "El canal lo acredita «Manuel Diquez» y «Manuel \"Manny\" Diquez»; «Dizquez» es la variante de Sincopa en el mismo disco (revisión #192982)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 476,
+        "name": "Luis Miguel Pérez"
+      },
+      "drop": {
+        "id": 471,
+        "name": "Luis M. Pérez"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Luis M. Pérez» abrevia o varía la grafía de «Luis Miguel Pérez» en la misma banda u obra (revisión #192983)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 473,
+        "name": "Carlos Julio Molina"
+      },
+      "drop": {
+        "id": 677,
+        "name": "Carlos Julio Molina \"DJ Trece\""
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Carlos Julio Molina \"DJ Trece\"» abrevia o varía la grafía de «Carlos Julio Molina» en la misma banda u obra (revisión #192984)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 473,
+        "name": "Carlos Julio Molina"
+      },
+      "drop": {
+        "id": 222,
+        "name": "Carlos Julio Molina \"Trece\""
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Carlos Julio Molina \"Trece\"» abrevia o varía la grafía de «Carlos Julio Molina» en la misma banda u obra"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 481,
+        "name": "Danel Sarmiento"
+      },
+      "drop": {
+        "id": 2131,
+        "name": "Daniel Sarmiento"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Daniel Sarmiento» abrevia o varía la grafía de «Danel Sarmiento» en la misma banda u obra (revisión #192986)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 481,
+        "name": "Danel Sarmiento"
+      },
+      "drop": {
+        "id": 2790,
+        "name": "Danel Sarmiento \"Danpa\""
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Danel Sarmiento \"Danpa\"» abrevia o varía la grafía de «Danel Sarmiento» en la misma banda u obra (revisión #192987)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 481,
+        "name": "Danel Sarmiento"
+      },
+      "drop": {
+        "id": 9891,
+        "name": "D. Sarmiento"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «D. Sarmiento» abrevia o varía la grafía de «Danel Sarmiento» en la misma banda u obra (revisión #192988)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 481,
+        "name": "Danel Sarmiento"
+      },
+      "drop": {
+        "id": 1013,
+        "name": "Danel Sarmiento \"Dr. Dub\""
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Danel Sarmiento \"Dr. Dub\"» abrevia o varía la grafía de «Danel Sarmiento» en la misma banda u obra"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 481,
+        "name": "Danel Sarmiento"
+      },
+      "drop": {
+        "id": 2560,
+        "name": "Dr. Dub Sarmiento"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Dr. Dub Sarmiento» abrevia o varía la grafía de «Danel Sarmiento» en la misma banda u obra"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 482,
+        "name": "Horacio Blanco"
+      },
+      "drop": {
+        "id": 8920,
+        "name": "H. Blanco"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «H. Blanco» abrevia o varía la grafía de «Horacio Blanco» en la misma banda u obra (revisión #192989)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 486,
+        "name": "José Romero"
+      },
+      "drop": {
+        "id": 1462,
+        "name": "José \"Cheo\" Romero"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "El trombonista de Desorden Público, acreditado también «Cheo» y «Cheíto»; los créditos de Spiteri y El Pop Venezolano pasaron antes a José «Joseíto» Romero (revisión #192991)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 486,
+        "name": "José Romero"
+      },
+      "drop": {
+        "id": 8938,
+        "name": "José \"Cheíto\" Romero"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "El trombonista de Desorden Público, acreditado también «Cheo» y «Cheíto» (revisión #192992)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 495,
+        "name": "Carlos Eduardo Reyes"
+      },
+      "drop": {
+        "id": 888,
+        "name": "Carlos E. Reyes"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Carlos E. Reyes» abrevia o varía la grafía de «Carlos Eduardo Reyes» en la misma banda u obra (revisión #192996)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 508,
+        "name": "Richard Blanco"
+      },
+      "drop": {
+        "id": 1058,
+        "name": "Richard \"El Chicha\" Blanco"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Richard \"El Chicha\" Blanco» abrevia o varía la grafía de «Richard Blanco» en la misma banda u obra (revisión #193001)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 508,
+        "name": "Richard Blanco"
+      },
+      "drop": {
+        "id": 1484,
+        "name": "Richard \"Chicha\" Blanco"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Richard \"Chicha\" Blanco» abrevia o varía la grafía de «Richard Blanco» en la misma banda u obra"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 509,
+        "name": "Héctor Paredes"
+      },
+      "drop": {
+        "id": 1057,
+        "name": "Héctor \"Lucas\" Paredes"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Héctor \"Lucas\" Paredes» abrevia o varía la grafía de «Héctor Paredes» en la misma banda u obra (revisión #193002)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 509,
+        "name": "Héctor Paredes"
+      },
+      "drop": {
+        "id": 3329,
+        "name": "Héctor \"El Lucas\" Paredes"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Héctor \"El Lucas\" Paredes» abrevia o varía la grafía de «Héctor Paredes» en la misma banda u obra (revisión #193003)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 514,
+        "name": "Chu Quintero"
+      },
+      "drop": {
+        "id": 3097,
+        "name": "Chu \"Zen\" Quintero"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "«Zen» es un apodo de ocasión; queda «Chu Quintero» (revisión #193005)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 519,
+        "name": "Francisco \"CoCo\" Díaz"
+      },
+      "drop": {
+        "id": 3043,
+        "name": "Francisco Díaz"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Francisco Díaz» abrevia o varía la grafía de «Francisco \"CoCo\" Díaz» en la misma banda u obra (revisión #193006)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 519,
+        "name": "Francisco \"CoCo\" Díaz"
+      },
+      "drop": {
+        "id": 3107,
+        "name": "Francisco \"Roco\" Díaz"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "«Roco» es errata de «CoCo» Díaz (revisión #193007)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 519,
+        "name": "Francisco \"CoCo\" Díaz"
+      },
+      "drop": {
+        "id": 9894,
+        "name": "F. Díaz"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «F. Díaz» abrevia o varía la grafía de «Francisco \"CoCo\" Díaz» en la misma banda u obra (revisión #193008)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 4026,
+        "name": "Edgar Alexander"
+      },
+      "drop": {
+        "id": 540,
+        "name": "Edgar Alexander Quintero"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Edgar Alexander es el nombre artístico de Edgar Quintero; todas sus variantes quedan en una ficha (revisión #193013)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 4026,
+        "name": "Edgar Alexander"
+      },
+      "drop": {
+        "id": 2640,
+        "name": "Edgar Quintero"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Edgar Alexander es el nombre artístico de Edgar Quintero (revisión #193235)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 4026,
+        "name": "Edgar Alexander"
+      },
+      "drop": {
+        "id": 7987,
+        "name": "Edgar Quintero (Edgar Alexander)"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Edgar Alexander es el nombre artístico de Edgar Quintero (revisión #193014)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 4026,
+        "name": "Edgar Alexander"
+      },
+      "drop": {
+        "id": 11503,
+        "name": "Edgardo Quintero"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Edgar Alexander es el nombre artístico de Edgar Quintero; «Edgardo» es errata (revisión #193237)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 4026,
+        "name": "Edgar Alexander"
+      },
+      "drop": {
+        "id": 11809,
+        "name": "Edagr Alexander"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "«Edagr» es errata de Edgar Alexander (revisión #193304)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 4026,
+        "name": "Edgar Alexander"
+      },
+      "drop": {
+        "id": 7995,
+        "name": "E. Alexander"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «E. Alexander» abrevia o varía la grafía de «Edgar Alexander» en la misma banda u obra (revisión #193303)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 542,
+        "name": "Gabriel Quintero"
+      },
+      "drop": {
+        "id": 9567,
+        "name": "G. Quintero"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «G. Quintero» abrevia o varía la grafía de «Gabriel Quintero» en la misma banda u obra (revisión #193017)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 602,
+        "name": "José Manuel \"Chema\" Arria"
+      },
+      "drop": {
+        "id": 5200,
+        "name": "José Manuel Arria \"Chema\""
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «José Manuel Arria \"Chema\"» abrevia o varía la grafía de «José Manuel \"Chema\" Arria» en la misma banda u obra (revisión #193022)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 602,
+        "name": "José Manuel \"Chema\" Arria"
+      },
+      "drop": {
+        "id": 8535,
+        "name": "J. M. Arria"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «J. M. Arria» abrevia o varía la grafía de «José Manuel \"Chema\" Arria» en la misma banda u obra (revisión #193346)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 719,
+        "name": "José Carlos Vásquez"
+      },
+      "drop": {
+        "id": 2700,
+        "name": "José Vásquez"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «José Vásquez» abrevia o varía la grafía de «José Carlos Vásquez» en la misma banda u obra (revisión #193038)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 741,
+        "name": "Leo Colina"
+      },
+      "drop": {
+        "id": 9508,
+        "name": "L. Colina"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «L. Colina» abrevia o varía la grafía de «Leo Colina» en la misma banda u obra (revisión #193040)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 741,
+        "name": "Leo Colina"
+      },
+      "drop": {
+        "id": 2216,
+        "name": "Leonardo Colina \"Leo\""
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Leonardo Colina \"Leo\"» abrevia o varía la grafía de «Leo Colina» en la misma banda u obra (revisión #193198)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 742,
+        "name": "Armando Hernández"
+      },
+      "drop": {
+        "id": 2220,
+        "name": "Armando Hernández \"Armandito\""
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Armando Hernández \"Armandito\"» abrevia o varía la grafía de «Armando Hernández» en la misma banda u obra (revisión #193041)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 742,
+        "name": "Armando Hernández"
+      },
+      "drop": {
+        "id": 9514,
+        "name": "A.Hernandez"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «A.Hernandez» abrevia o varía la grafía de «Armando Hernández» en la misma banda u obra (revisión #193042)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2223,
+        "name": "David Schlesinger"
+      },
+      "drop": {
+        "id": 748,
+        "name": "David Schelsinger"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "«Schelsinger» es errata; queda David Schlesinger (revisión #193045)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2223,
+        "name": "David Schlesinger"
+      },
+      "drop": {
+        "id": 9518,
+        "name": "D. Schlesinger"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «D. Schlesinger» abrevia o varía la grafía de «David Schlesinger» en la misma banda u obra (revisión #193202)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2223,
+        "name": "David Schlesinger"
+      },
+      "drop": {
+        "id": 9912,
+        "name": "D.Schlesinger"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «D.Schlesinger» abrevia o varía la grafía de «David Schlesinger» en la misma banda u obra (revisión #193203)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1701,
+        "name": "Luisito Quintero"
+      },
+      "drop": {
+        "id": 763,
+        "name": "Luis Quintero"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Luis Quintero» abrevia o varía la grafía de «Luisito Quintero» en la misma banda u obra (revisión #193046)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1370,
+        "name": "Carlos Fernández"
+      },
+      "drop": {
+        "id": 787,
+        "name": "Carlos \"Carlitos\" Fernandez"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Carlos \"Carlitos\" Fernandez» abrevia o varía la grafía de «Carlos Fernández» en la misma banda u obra (revisión #193052)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 796,
+        "name": "Derrick \"Pupa Mickey\" Bishop"
+      },
+      "drop": {
+        "id": 8440,
+        "name": "Carlos Fernández Derrick \"Pupa Mickey\" Bishop"
+      },
+      "keepDropNameAsAlias": false,
+      "why": "El nombre junta a dos cantantes de Cebollas Ardientes: sus créditos quedan en Derrick Bishop y se copiaron a Carlos Fernández (revisión #193053)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 833,
+        "name": "José Luis Osuna"
+      },
+      "drop": {
+        "id": 3133,
+        "name": "José L. Osuna"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «José L. Osuna» abrevia o varía la grafía de «José Luis Osuna» en la misma banda u obra (revisión #193054)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2460,
+        "name": "Félix \"El Gato\" Duque"
+      },
+      "drop": {
+        "id": 3035,
+        "name": "Felipe Duque"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Voz principal de RC2: Felipe y Félix «El Gato» Duque son la misma persona (revisión #193056)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 883,
+        "name": "Ezequiel Serrano Valencia"
+      },
+      "drop": {
+        "id": 2442,
+        "name": "Ezequiel S. Valencia"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Ezequiel S. Valencia» abrevia o varía la grafía de «Ezequiel Serrano Valencia» en la misma banda u obra (revisión #193057)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 889,
+        "name": "José Luis Gutiérrez"
+      },
+      "drop": {
+        "id": 3324,
+        "name": "José Luis Gutiérrez \"Pizza\""
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «José Luis Gutiérrez \"Pizza\"» abrevia o varía la grafía de «José Luis Gutiérrez» en la misma banda u obra (revisión #193058)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 916,
+        "name": "Carlos Alberto Domínguez"
+      },
+      "drop": {
+        "id": 2403,
+        "name": "Carlos Domínguez"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Carlos Domínguez» abrevia o varía la grafía de «Carlos Alberto Domínguez» en la misma banda u obra (revisión #193061)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 4702,
+        "name": "Jesús \"Moti\" Jiménez"
+      },
+      "drop": {
+        "id": 3440,
+        "name": "Jesús \"El Moti\" Jimenez"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Jesús \"El Moti\" Jimenez» abrevia o varía la grafía de «Jesús \"Moti\" Jiménez» en la misma banda u obra"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 4702,
+        "name": "Jesús \"Moti\" Jiménez"
+      },
+      "drop": {
+        "id": 9120,
+        "name": "J. Jiménez"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «J. Jiménez» abrevia o varía la grafía de «Jesús \"Moti\" Jiménez» en la misma banda u obra (revisión #193325)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 985,
+        "name": "Oswaldo Quintero"
+      },
+      "drop": {
+        "id": 2988,
+        "name": "Oswaldo Quintero \"Wally\""
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Oswaldo Quintero \"Wally\"» abrevia o varía la grafía de «Oswaldo Quintero» en la misma banda u obra (revisión #193069)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 988,
+        "name": "William García"
+      },
+      "drop": {
+        "id": 2989,
+        "name": "William García \"Cafeína\""
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «William García \"Cafeína\"» abrevia o varía la grafía de «William García» en la misma banda u obra (revisión #193070)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 3286,
+        "name": "José Rafael \"Cucaracha\" Gómez"
+      },
+      "drop": {
+        "id": 995,
+        "name": "José \"Cucaracha\" Gómez"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Queda el nombre completo, José Rafael «Cucaracha» Gómez (revisión #193074)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 6612,
+        "name": "Carlos Mata"
+      },
+      "drop": {
+        "id": 9674,
+        "name": "C. Mata"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «C. Mata» abrevia o varía la grafía de «Carlos Mata» en la misma banda u obra (revisión #193385)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1230,
+        "name": "Leonardo Molina"
+      },
+      "drop": {
+        "id": 1009,
+        "name": "Leonardo Molina \"Leo\""
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Leonardo Molina \"Leo\"» abrevia o varía la grafía de «Leonardo Molina» en la misma banda u obra (revisión #193078)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2415,
+        "name": "Abraham García"
+      },
+      "drop": {
+        "id": 1019,
+        "name": "Abraham García \"Cangrejo\""
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Abraham García \"Cangrejo\"» abrevia o varía la grafía de «Abraham García» en la misma banda u obra (revisión #193080)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1068,
+        "name": "Pedro V. Lizardo \"PTT\""
+      },
+      "drop": {
+        "id": 3222,
+        "name": "Pedro Vicente Lizardo \"PTT\""
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Pedro Vicente Lizardo \"PTT\"» abrevia o varía la grafía de «Pedro V. Lizardo \"PTT\"» en la misma banda u obra (revisión #193083)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1068,
+        "name": "Pedro V. Lizardo \"PTT\""
+      },
+      "drop": {
+        "id": 5920,
+        "name": "Pedro Vicente Lizardo"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Pedro Vicente Lizardo» abrevia o varía la grafía de «Pedro V. Lizardo \"PTT\"» en la misma banda u obra (revisión #193084)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1096,
+        "name": "Armando Gómez"
+      },
+      "drop": {
+        "id": 3030,
+        "name": "Armando Gómez \"007\""
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Armando Gómez \"007\"» abrevia o varía la grafía de «Armando Gómez» en la misma banda u obra (revisión #193086)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 11336,
+        "name": "Oscar Martínez"
+      },
+      "drop": {
+        "id": 11796,
+        "name": "O. Martínez"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «O. Martínez» abrevia o varía la grafía de «Oscar Martínez» en la misma banda u obra (revisión #193466)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1260,
+        "name": "Italo Pizzolante"
+      },
+      "drop": {
+        "id": 7492,
+        "name": "Italo A. Pizzolante"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Italo A. Pizzolante» abrevia o varía la grafía de «Italo Pizzolante» en la misma banda u obra (revisión #193100)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1260,
+        "name": "Italo Pizzolante"
+      },
+      "drop": {
+        "id": 9467,
+        "name": "I. A. Pizzolante"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «I. A. Pizzolante» abrevia o varía la grafía de «Italo Pizzolante» en la misma banda u obra (revisión #193406)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1287,
+        "name": "Carlos Moreán"
+      },
+      "drop": {
+        "id": 3104,
+        "name": "Carlos \"King George\" Moreán"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Carlos \"King George\" Moreán» abrevia o varía la grafía de «Carlos Moreán» en la misma banda u obra (revisión #193108)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1287,
+        "name": "Carlos Moreán"
+      },
+      "drop": {
+        "id": 8204,
+        "name": "C. Moreán"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «C. Moreán» abrevia o varía la grafía de «Carlos Moreán» en la misma banda u obra (revisión #193109)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 3134,
+        "name": "Rafael Güerajé Martínez"
+      },
+      "drop": {
+        "id": 1311,
+        "name": "Rafael Martínez"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Rafael Martínez» abrevia o varía la grafía de «Rafael Güerajé Martínez» en la misma banda u obra (revisión #193114)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1344,
+        "name": "María Eugenia Espinoza"
+      },
+      "drop": {
+        "id": 2142,
+        "name": "María Espinoza"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «María Espinoza» abrevia o varía la grafía de «María Eugenia Espinoza» en la misma banda u obra (revisión #193117)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 3984,
+        "name": "Marco Velazco"
+      },
+      "drop": {
+        "id": 1385,
+        "name": "Marco Velazcos"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "«Velazcos» es errata; queda Marco Velazco (revisión #193120)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2434,
+        "name": "Juan Manuel De Ferrari"
+      },
+      "drop": {
+        "id": 8691,
+        "name": "Juanma de Ferrari"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Juanma de Ferrari» abrevia o varía la grafía de «Juan Manuel De Ferrari» en la misma banda u obra (revisión #193124)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1409,
+        "name": "Luis Yánez"
+      },
+      "drop": {
+        "id": 1457,
+        "name": "Luis Yanes"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Luis Yanes» abrevia o varía la grafía de «Luis Yánez» en la misma banda u obra (revisión #193126)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1479,
+        "name": "Carlos Puchi"
+      },
+      "drop": {
+        "id": 3546,
+        "name": "Carlos Pucci"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Carlos Pucci» abrevia o varía la grafía de «Carlos Puchi» en la misma banda u obra (revisión #193133)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1489,
+        "name": "Ricardo Sosa"
+      },
+      "drop": {
+        "id": 3146,
+        "name": "Ricardo \"Kike\" Sosa"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Ricardo \"Kike\" Sosa» abrevia o varía la grafía de «Ricardo Sosa» en la misma banda u obra (revisión #193134)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1494,
+        "name": "Karina \"Kara\" Febles"
+      },
+      "drop": {
+        "id": 6573,
+        "name": "Kara Febles"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Kara Febles» abrevia o varía la grafía de «Karina \"Kara\" Febles» en la misma banda u obra (revisión #193135)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 6294,
+        "name": "Hummel Acevedo"
+      },
+      "drop": {
+        "id": 1583,
+        "name": "Humnel Acevedo"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "«Humnel» es errata; queda Hummel Acevedo (revisión #193141)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1606,
+        "name": "Gabriel Silva"
+      },
+      "drop": {
+        "id": 9463,
+        "name": "G. Silva"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «G. Silva» abrevia o varía la grafía de «Gabriel Silva» en la misma banda u obra (revisión #193143)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 4237,
+        "name": "Gustavo Silva"
+      },
+      "drop": {
+        "id": 6583,
+        "name": "Gustavo J. Silva"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Gustavo J. Silva» abrevia o varía la grafía de «Gustavo Silva» en la misma banda u obra (revisión #193309)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2766,
+        "name": "Nörton \"Mars\" Pérez"
+      },
+      "drop": {
+        "id": 1688,
+        "name": "Nörton Pérez \"Jack\""
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Nörton Pérez \"Jack\"» abrevia o varía la grafía de «Nörton \"Mars\" Pérez» en la misma banda u obra (revisión #193154)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1848,
+        "name": "William \"Magú\" Guzmán"
+      },
+      "drop": {
+        "id": 1745,
+        "name": "William Guzmán"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «William Guzmán» abrevia o varía la grafía de «William \"Magú\" Guzmán» en la misma banda u obra (revisión #193156)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1848,
+        "name": "William \"Magú\" Guzmán"
+      },
+      "drop": {
+        "id": 9895,
+        "name": "W. Guzmán"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «W. Guzmán» abrevia o varía la grafía de «William \"Magú\" Guzmán» en la misma banda u obra (revisión #193157)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1848,
+        "name": "William \"Magú\" Guzmán"
+      },
+      "drop": {
+        "id": 2186,
+        "name": "William Guzman \"Magoo\""
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «William Guzman \"Magoo\"» abrevia o varía la grafía de «William \"Magú\" Guzmán» en la misma banda u obra"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1909,
+        "name": "Ricardo Vizcarrondo"
+      },
+      "drop": {
+        "id": 1910,
+        "name": "Ricardo \"Rich\" Vizcarrondo"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Ricardo \"Rich\" Vizcarrondo» abrevia o varía la grafía de «Ricardo Vizcarrondo» en la misma banda u obra (revisión #193167)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1909,
+        "name": "Ricardo Vizcarrondo"
+      },
+      "drop": {
+        "id": 3478,
+        "name": "Ricardo Vizcarrondo \"Rich Monji\""
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Ricardo Vizcarrondo \"Rich Monji\"» abrevia o varía la grafía de «Ricardo Vizcarrondo» en la misma banda u obra"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1945,
+        "name": "Mario Martínez"
+      },
+      "drop": {
+        "id": 9436,
+        "name": "M. Martínez"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «M. Martínez» abrevia o varía la grafía de «Mario Martínez» en la misma banda u obra (revisión #193169)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2026,
+        "name": "Giancarlo Picozzi"
+      },
+      "drop": {
+        "id": 9562,
+        "name": "G. Picozzi"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «G. Picozzi» abrevia o varía la grafía de «Giancarlo Picozzi» en la misma banda u obra (revisión #193176)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2032,
+        "name": "Manolo Alvarez"
+      },
+      "drop": {
+        "id": 9845,
+        "name": "M. Alvarez"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «M. Alvarez» abrevia o varía la grafía de «Manolo Alvarez» en la misma banda u obra (revisión #193178)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2035,
+        "name": "Wolfgang Vivas"
+      },
+      "drop": {
+        "id": 9137,
+        "name": "W. Vivas"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «W. Vivas» abrevia o varía la grafía de «Wolfgang Vivas» en la misma banda u obra (revisión #193179)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2035,
+        "name": "Wolfgang Vivas"
+      },
+      "drop": {
+        "id": 10126,
+        "name": "Wolfang Vivas"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Wolfang Vivas» abrevia o varía la grafía de «Wolfgang Vivas» en la misma banda u obra (revisión #193180)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 3340,
+        "name": "Humberto Pérez \"Hum\""
+      },
+      "drop": {
+        "id": 2067,
+        "name": "Humberto Pérez"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Queda el nombre con apodo, como Ignacio Pérez «Nacho» en la misma banda (revisión #193182)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2997,
+        "name": "Fernando \"Fer\" Rodríguez"
+      },
+      "drop": {
+        "id": 2621,
+        "name": "Fernando Rodríguez \"Fer\""
+      },
+      "keepDropNameAsAlias": true,
+      "why": "El mismo guitarrista de Pzoom, acreditado «Fer» en ambas fichas (revisión #193232)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2997,
+        "name": "Fernando \"Fer\" Rodríguez"
+      },
+      "drop": {
+        "id": 2095,
+        "name": "Fernando J. Rodríguez"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "El mismo baterista de La Mar: crédito en Tides y membresía de la banda (revisión #193186)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 6728,
+        "name": "Sokrates Papadopoulos"
+      },
+      "drop": {
+        "id": 2146,
+        "name": "Sokrates Papadoulos"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "«Papadoulos» es errata; queda Sokrates Papadopoulos (revisión #193195)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2221,
+        "name": "Luis Fernández \"Toto\""
+      },
+      "drop": {
+        "id": 7706,
+        "name": "Luis Fernández"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Luis Fernández» abrevia o varía la grafía de «Luis Fernández \"Toto\"» en la misma banda u obra (revisión #193201)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2253,
+        "name": "David Mamán"
+      },
+      "drop": {
+        "id": 5533,
+        "name": "D. Mamán"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «D. Mamán» abrevia o varía la grafía de «David Mamán» en la misma banda u obra (revisión #193205)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2253,
+        "name": "David Mamán"
+      },
+      "drop": {
+        "id": 9395,
+        "name": "D. Maman"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «D. Maman» abrevia o varía la grafía de «David Mamán» en la misma banda u obra (revisión #193206)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2255,
+        "name": "Agni Mogollón"
+      },
+      "drop": {
+        "id": 2564,
+        "name": "Agny Mogollón"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Agny Mogollón» abrevia o varía la grafía de «Agni Mogollón» en la misma banda u obra (revisión #193207)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2255,
+        "name": "Agni Mogollón"
+      },
+      "drop": {
+        "id": 7122,
+        "name": "A. Mogollón"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «A. Mogollón» abrevia o varía la grafía de «Agni Mogollón» en la misma banda u obra (revisión #193208)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2562,
+        "name": "María Eugenia Ciliberto"
+      },
+      "drop": {
+        "id": 2257,
+        "name": "María E. Ciliberto"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «María E. Ciliberto» abrevia o varía la grafía de «María Eugenia Ciliberto» en la misma banda u obra (revisión #193209)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2562,
+        "name": "María Eugenia Ciliberto"
+      },
+      "drop": {
+        "id": 9396,
+        "name": "M. Ciliberto"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «M. Ciliberto» abrevia o varía la grafía de «María Eugenia Ciliberto» en la misma banda u obra (revisión #193210)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 3151,
+        "name": "María Imhof"
+      },
+      "drop": {
+        "id": 2348,
+        "name": "María Imhof Ramirez"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «María Imhof Ramirez» abrevia o varía la grafía de «María Imhof» en la misma banda u obra"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 3149,
+        "name": "Martín Imhof"
+      },
+      "drop": {
+        "id": 2354,
+        "name": "Martín Imhof Ramirez"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Martín Imhof Ramirez» abrevia o varía la grafía de «Martín Imhof» en la misma banda u obra"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2483,
+        "name": "Javier García"
+      },
+      "drop": {
+        "id": 6644,
+        "name": "Javier \"Jay\" García"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Javier \"Jay\" García» abrevia o varía la grafía de «Javier García» en la misma banda u obra (revisión #193226)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2534,
+        "name": "Argenis Brito"
+      },
+      "drop": {
+        "id": 9368,
+        "name": "A Brito"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «A Brito» abrevia o varía la grafía de «Argenis Brito» en la misma banda u obra (revisión #193229)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2642,
+        "name": "Rubén Dario Perez"
+      },
+      "drop": {
+        "id": 5862,
+        "name": "Rubén Pérez"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Rubén Pérez» abrevia o varía la grafía de «Rubén Dario Perez» en la misma banda u obra (revisión #193238)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 8786,
+        "name": "Luis Antonio Otamendi"
+      },
+      "drop": {
+        "id": 2887,
+        "name": "Luis Otamendi"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Luis Otamendi» abrevia o varía la grafía de «Luis Antonio Otamendi» en la misma banda u obra (revisión #193247)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 8786,
+        "name": "Luis Antonio Otamendi"
+      },
+      "drop": {
+        "id": 9470,
+        "name": "L. Otamendi"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «L. Otamendi» abrevia o varía la grafía de «Luis Antonio Otamendi» en la misma banda u obra (revisión #193248)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2902,
+        "name": "José Leonardo \"Pepeleo\" Hernández"
+      },
+      "drop": {
+        "id": 7626,
+        "name": "José \"Pepe\" Hernández"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «José \"Pepe\" Hernández» abrevia o varía la grafía de «José Leonardo \"Pepeleo\" Hernández» en la misma banda u obra (revisión #193249)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2943,
+        "name": "César Alberto Somoza"
+      },
+      "drop": {
+        "id": 9450,
+        "name": "C. Somoza"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «C. Somoza» abrevia o varía la grafía de «César Alberto Somoza» en la misma banda u obra (revisión #193250)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2943,
+        "name": "César Alberto Somoza"
+      },
+      "drop": {
+        "id": 9949,
+        "name": "César Somoza"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «César Somoza» abrevia o varía la grafía de «César Alberto Somoza» en la misma banda u obra (revisión #193251)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 6372,
+        "name": "Ricardo Escobar"
+      },
+      "drop": {
+        "id": 2948,
+        "name": "Ricardo Alberto Escobar"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Ricardo Alberto Escobar» abrevia o varía la grafía de «Ricardo Escobar» en la misma banda u obra (revisión #193254)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 6372,
+        "name": "Ricardo Escobar"
+      },
+      "drop": {
+        "id": 7239,
+        "name": "R. Escobar"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «R. Escobar» abrevia o varía la grafía de «Ricardo Escobar» en la misma banda u obra (revisión #193255)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2998,
+        "name": "Juan Carlos Figueroa"
+      },
+      "drop": {
+        "id": 5431,
+        "name": "Juan C. Figueroa"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Juan C. Figueroa» abrevia o varía la grafía de «Juan Carlos Figueroa» en la misma banda u obra (revisión #193262)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 3406,
+        "name": "Nacho Zavarce"
+      },
+      "drop": {
+        "id": 3564,
+        "name": "Nacho Javarce"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Nacho Javarce» abrevia o varía la grafía de «Nacho Zavarce» en la misma banda u obra (revisión #193282)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 3434,
+        "name": "Nicky Scarola"
+      },
+      "drop": {
+        "id": 9447,
+        "name": "N. Scarola"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «N. Scarola» abrevia o varía la grafía de «Nicky Scarola» en la misma banda u obra (revisión #193287)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 3434,
+        "name": "Nicky Scarola"
+      },
+      "drop": {
+        "id": 1075,
+        "name": "Nicola Scarola"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Nicola Scarola» abrevia o varía la grafía de «Nicky Scarola» en la misma banda u obra"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 3591,
+        "name": "Eleazar Arias"
+      },
+      "drop": {
+        "id": 9374,
+        "name": "E. Arias"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «E. Arias» abrevia o varía la grafía de «Eleazar Arias» en la misma banda u obra (revisión #193288)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 3617,
+        "name": "Carlos Quintero"
+      },
+      "drop": {
+        "id": 3638,
+        "name": "Carlos Quintero \"Kinttero\""
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Carlos Quintero \"Kinttero\"» abrevia o varía la grafía de «Carlos Quintero» en la misma banda u obra (revisión #193289)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 3617,
+        "name": "Carlos Quintero"
+      },
+      "drop": {
+        "id": 9154,
+        "name": "C. Quintero"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «C. Quintero» abrevia o varía la grafía de «Carlos Quintero» en la misma banda u obra (revisión #193290)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 3654,
+        "name": "Neomar Sánchez"
+      },
+      "drop": {
+        "id": 9032,
+        "name": "N. Sánchez"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «N. Sánchez» abrevia o varía la grafía de «Neomar Sánchez» en la misma banda u obra (revisión #193292)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 5098,
+        "name": "Stanislao Marino"
+      },
+      "drop": {
+        "id": 3673,
+        "name": "S. Marino"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «S. Marino» abrevia o varía la grafía de «Stanislao Marino» en la misma banda u obra (revisión #193293)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 4350,
+        "name": "Gustavo Lugo"
+      },
+      "drop": {
+        "id": 9101,
+        "name": "G. Lugo"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «G. Lugo» abrevia o varía la grafía de «Gustavo Lugo» en la misma banda u obra (revisión #193312)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 4559,
+        "name": "Robert Santamaría"
+      },
+      "drop": {
+        "id": 9294,
+        "name": "R. Santamaria"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «R. Santamaria» abrevia o varía la grafía de «Robert Santamaría» en la misma banda u obra (revisión #193319)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 4566,
+        "name": "Laureano Rangel"
+      },
+      "drop": {
+        "id": 9292,
+        "name": "L. Rangel"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Tras pasar a Leonardo Rangel el crédito de «Oscuros recuerdos» (Rules), «L. Rangel» es Laureano Rangel (revisión #193320)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 4617,
+        "name": "Arturo Soto"
+      },
+      "drop": {
+        "id": 9303,
+        "name": "A. Soto"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «A. Soto» abrevia o varía la grafía de «Arturo Soto» en la misma banda u obra (revisión #193321)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 5090,
+        "name": "Abraxas Leon"
+      },
+      "drop": {
+        "id": 9765,
+        "name": "A. Leon"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «A. Leon» abrevia o varía la grafía de «Abraxas Leon» en la misma banda u obra (revisión #193335)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 8406,
+        "name": "Kelvin Lugo"
+      },
+      "drop": {
+        "id": 5091,
+        "name": "Kevin Lugo"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Kevin Lugo» abrevia o varía la grafía de «Kelvin Lugo» en la misma banda u obra (revisión #193336)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 5094,
+        "name": "Hernán Carabaño"
+      },
+      "drop": {
+        "id": 8421,
+        "name": "H. Carabaño"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «H. Carabaño» abrevia o varía la grafía de «Hernán Carabaño» en la misma banda u obra (revisión #193337)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 5094,
+        "name": "Hernán Carabaño"
+      },
+      "drop": {
+        "id": 8441,
+        "name": "Hernán J. Carabaño"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Hernán J. Carabaño» abrevia o varía la grafía de «Hernán Carabaño» en la misma banda u obra (revisión #193338)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 5100,
+        "name": "Leandro Perez"
+      },
+      "drop": {
+        "id": 9766,
+        "name": "L. Perez"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «L. Perez» abrevia o varía la grafía de «Leandro Perez» en la misma banda u obra (revisión #193340)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 5135,
+        "name": "Samuel Rodríguez"
+      },
+      "drop": {
+        "id": 9791,
+        "name": "S. Rodríguez"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «S. Rodríguez» abrevia o varía la grafía de «Samuel Rodríguez» en la misma banda u obra (revisión #193343)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 5184,
+        "name": "Daniel Reyes"
+      },
+      "drop": {
+        "id": 8503,
+        "name": "D. Reyes"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «D. Reyes» abrevia o varía la grafía de «Daniel Reyes» en la misma banda u obra (revisión #193345)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 5202,
+        "name": "Carlos Montenegro \"Carl Martin\""
+      },
+      "drop": {
+        "id": 8531,
+        "name": "Carlos Montenegro"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Carlos Montenegro» abrevia o varía la grafía de «Carlos Montenegro \"Carl Martin\"» en la misma banda u obra (revisión #193347)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 5202,
+        "name": "Carlos Montenegro \"Carl Martin\""
+      },
+      "drop": {
+        "id": 8533,
+        "name": "Carl Martin"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "«Carl Martin» es el apodo con que figura Carlos Montenegro"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 5325,
+        "name": "Luis Sánchez"
+      },
+      "drop": {
+        "id": 5323,
+        "name": "L. Sánchez"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «L. Sánchez» abrevia o varía la grafía de «Luis Sánchez» en la misma banda u obra (revisión #193350)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 9011,
+        "name": "Alexis Albujas"
+      },
+      "drop": {
+        "id": 5426,
+        "name": "Alex Albujas"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Alex Albujas» abrevia o varía la grafía de «Alexis Albujas» en la misma banda u obra (revisión #193351)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 5438,
+        "name": "Eligo Alvarez"
+      },
+      "drop": {
+        "id": 9905,
+        "name": "E. Álvarez"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «E. Álvarez» abrevia o varía la grafía de «Eligo Alvarez» en la misma banda u obra (revisión #193352)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 5439,
+        "name": "Marco Molina"
+      },
+      "drop": {
+        "id": 9034,
+        "name": "M. Molina"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «M. Molina» abrevia o varía la grafía de «Marco Molina» en la misma banda u obra (revisión #193353)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 5535,
+        "name": "Reinaldo Bello"
+      },
+      "drop": {
+        "id": 7062,
+        "name": "Reynaldo Bello"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Reynaldo Bello» abrevia o varía la grafía de «Reinaldo Bello» en la misma banda u obra (revisión #193355)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 5648,
+        "name": "Felipe Nevado"
+      },
+      "drop": {
+        "id": 5663,
+        "name": "F. Nevado"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «F. Nevado» abrevia o varía la grafía de «Felipe Nevado» en la misma banda u obra (revisión #193359)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 5683,
+        "name": "José A. Dos Ramos"
+      },
+      "drop": {
+        "id": 5655,
+        "name": "J. Ramos"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «J. Ramos» abrevia o varía la grafía de «José A. Dos Ramos» en la misma banda u obra (revisión #193360)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 5679,
+        "name": "Pavel Alvarez"
+      },
+      "drop": {
+        "id": 9174,
+        "name": "P. Alvarez"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «P. Alvarez» abrevia o varía la grafía de «Pavel Alvarez» en la misma banda u obra (revisión #193363)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 5791,
+        "name": "Juan B. Viloria"
+      },
+      "drop": {
+        "id": 5781,
+        "name": "J. Viloria"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «J. Viloria» abrevia o varía la grafía de «Juan B. Viloria» en la misma banda u obra (revisión #193368)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 5789,
+        "name": "Jesús E. Flores"
+      },
+      "drop": {
+        "id": 9181,
+        "name": "J. Flores"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «J. Flores» abrevia o varía la grafía de «Jesús E. Flores» en la misma banda u obra (revisión #193371)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 5990,
+        "name": "Sofia \"La Nena\" Pulido"
+      },
+      "drop": {
+        "id": 8614,
+        "name": "Sophia Pulido \"La Nena\""
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Queda Sofia «La Nena» Pulido; «Sophia» es variante (revisión #193375)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 6840,
+        "name": "Nevio Riera"
+      },
+      "drop": {
+        "id": 9365,
+        "name": "N. Riera"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «N. Riera» abrevia o varía la grafía de «Nevio Riera» en la misma banda u obra (revisión #193392)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 6837,
+        "name": "Romi Blanco"
+      },
+      "drop": {
+        "id": 9367,
+        "name": "R. Blanco"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «R. Blanco» abrevia o varía la grafía de «Romi Blanco» en la misma banda u obra (revisión #193391)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 6894,
+        "name": "Wilberg Márquez"
+      },
+      "drop": {
+        "id": 9366,
+        "name": "Willberg Márquez"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Willberg Márquez» abrevia o varía la grafía de «Wilberg Márquez» en la misma banda u obra (revisión #193394)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 40,
+        "name": "Sandro Liberatoscioli"
+      },
+      "drop": {
+        "id": 9383,
+        "name": "S. Liberatoscoli"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «S. Liberatoscoli» abrevia o varía la grafía de «Sandro Liberatoscioli» en la misma banda u obra (revisión #193398)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 7358,
+        "name": "Rafael Sánchez"
+      },
+      "drop": {
+        "id": 9435,
+        "name": "R. Sánchez"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «R. Sánchez» abrevia o varía la grafía de «Rafael Sánchez» en la misma banda u obra (revisión #193405)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 8599,
+        "name": "Dave Meegan"
+      },
+      "drop": {
+        "id": 8370,
+        "name": "Dave Meagan"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "«Meagan» es errata; queda Dave Meegan (revisión #193428)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 8583,
+        "name": "Ralph Ravenscroft"
+      },
+      "drop": {
+        "id": 8579,
+        "name": "Ralph Revenscroft"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "«Revenscroft» es errata; queda Ralph Ravenscroft (revisión #193432)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 8655,
+        "name": "Juan Facundo Coral"
+      },
+      "drop": {
+        "id": 9829,
+        "name": "J.F. Coral"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «J.F. Coral» abrevia o varía la grafía de «Juan Facundo Coral» en la misma banda u obra (revisión #193440)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 8655,
+        "name": "Juan Facundo Coral"
+      },
+      "drop": {
+        "id": 9916,
+        "name": "J. F. Coral"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «J. F. Coral» abrevia o varía la grafía de «Juan Facundo Coral» en la misma banda u obra (revisión #193441)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 4641,
+        "name": "Arcángel Nicastro"
+      },
+      "drop": {
+        "id": 9107,
+        "name": "A. Nicastr"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «A. Nicastr» abrevia o varía la grafía de «Arcángel Nicastro» en la misma banda u obra (revisión #193446)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 11998,
+        "name": "Jesús Estrada"
+      },
+      "drop": {
+        "id": 9182,
+        "name": "J. Estrada"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «J. Estrada» abrevia o varía la grafía de «Jesús Estrada» en la misma banda u obra (revisión #193450)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 10072,
+        "name": "Stylianos Vlavianos"
+      },
+      "drop": {
+        "id": 11274,
+        "name": "S. Vlavianos"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «S. Vlavianos» abrevia o varía la grafía de «Stylianos Vlavianos» en la misma banda u obra (revisión #193464)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 10072,
+        "name": "Stylianos Vlavianos"
+      },
+      "drop": {
+        "id": 11332,
+        "name": "Stelios Vlavianos"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Stelios es el diminutivo de Stylianos Vlavianos (revisión #193464)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 11297,
+        "name": "Alec R. Costandinos"
+      },
+      "drop": {
+        "id": 11334,
+        "name": "Alec R. Constandinos"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "«Constandinos» es errata; queda Alec R. Costandinos (revisión #193465)"
+    },
+    {
+      "op": "to_organization",
+      "person": {
+        "id": 7656,
+        "name": "Gozon Studio"
+      },
+      "organization": {
+        "id": 75,
+        "name": "Gozon Studio"
+      },
+      "keepNameAsAlias": false,
+      "why": "Es un estudio de grabación, no una persona: sus créditos pasan a la organización «Gozon Studio» (revisión #193411)"
+    },
+    {
+      "op": "to_organization",
+      "person": {
+        "id": 7663,
+        "name": "Gozon Studios"
+      },
+      "organization": {
+        "id": 75,
+        "name": "Gozon Studio"
+      },
+      "keepNameAsAlias": true,
+      "why": "Es un estudio de grabación, no una persona: sus créditos pasan a la organización «Gozon Studio» (revisión #193411)"
+    },
+    {
+      "op": "to_organization",
+      "person": {
+        "id": 7660,
+        "name": "Andreazulado Estudio"
+      },
+      "organization": {
+        "id": 177,
+        "name": "Andreazulado's Studio"
+      },
+      "keepNameAsAlias": true,
+      "why": "Es un estudio de grabación, no una persona: sus créditos pasan a la organización «Andreazulado's Studio» (revisión #193412)"
+    },
+    {
+      "op": "to_organization",
+      "person": {
+        "id": 7662,
+        "name": "Andreazulado' Studio"
+      },
+      "organization": {
+        "id": 177,
+        "name": "Andreazulado's Studio"
+      },
+      "keepNameAsAlias": true,
+      "why": "Es un estudio de grabación, no una persona: sus créditos pasan a la organización «Andreazulado's Studio» (revisión #193412)"
+    },
+    {
+      "op": "to_organization",
+      "person": {
+        "id": 7695,
+        "name": "Guaco Estudios"
+      },
+      "organization": {
+        "id": 1027,
+        "name": "Guaco Estudios"
+      },
+      "keepNameAsAlias": false,
+      "why": "Es un estudio de grabación, no una persona: sus créditos pasan a la organización «Guaco Estudios» (revisión #193413)"
+    },
+    {
+      "op": "to_organization",
+      "person": {
+        "id": 7718,
+        "name": "Guaco Estudio"
+      },
+      "organization": {
+        "id": 1027,
+        "name": "Guaco Estudios"
+      },
+      "keepNameAsAlias": true,
+      "why": "Es un estudio de grabación, no una persona: sus créditos pasan a la organización «Guaco Estudios» (revisión #193413)"
+    },
+    {
+      "op": "to_organization",
+      "person": {
+        "id": 8131,
+        "name": "Cosmos Studios"
+      },
+      "organization": {
+        "id": 1028,
+        "name": "Cosmos Studios"
+      },
+      "keepNameAsAlias": false,
+      "why": "Es un estudio de grabación, no una persona: sus créditos pasan a la organización «Cosmos Studios» (revisión #193421)"
+    },
+    {
+      "op": "to_organization",
+      "person": {
+        "id": 8188,
+        "name": "Cosmos Estudios"
+      },
+      "organization": {
+        "id": 1028,
+        "name": "Cosmos Studios"
+      },
+      "keepNameAsAlias": true,
+      "why": "Es un estudio de grabación, no una persona: sus créditos pasan a la organización «Cosmos Studios» (revisión #193421)"
+    },
+    {
+      "op": "to_organization",
+      "person": {
+        "id": 8598,
+        "name": "Tony King Sound Studio"
+      },
+      "organization": {
+        "id": 1025,
+        "name": "Tony King Studio"
+      },
+      "keepNameAsAlias": true,
+      "why": "Es un estudio de grabación, no una persona: sus créditos pasan a la organización «Tony King Studio» (revisión #193436)"
+    },
+    {
+      "op": "to_organization",
+      "person": {
+        "id": 8633,
+        "name": "Tony King Studio"
+      },
+      "organization": {
+        "id": 1025,
+        "name": "Tony King Studio"
+      },
+      "keepNameAsAlias": false,
+      "why": "Es un estudio de grabación, no una persona: sus créditos pasan a la organización «Tony King Studio» (revisión #193436)"
+    },
+    {
+      "op": "to_organization",
+      "person": {
+        "id": 8601,
+        "name": "Sarm West Studio"
+      },
+      "organization": {
+        "id": 1026,
+        "name": "Sarm West Studios"
+      },
+      "keepNameAsAlias": true,
+      "why": "Es un estudio de grabación, no una persona: sus créditos pasan a la organización «Sarm West Studios» (revisión #193437)"
+    },
+    {
+      "op": "to_organization",
+      "person": {
+        "id": 8642,
+        "name": "Sarm West Studios"
+      },
+      "organization": {
+        "id": 1026,
+        "name": "Sarm West Studios"
+      },
+      "keepNameAsAlias": false,
+      "why": "Es un estudio de grabación, no una persona: sus créditos pasan a la organización «Sarm West Studios» (revisión #193437)"
+    }
+  ]
+}

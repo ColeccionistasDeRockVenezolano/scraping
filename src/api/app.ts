@@ -38,7 +38,15 @@ export async function buildApp(): Promise<FastifyInstance> {
   // inyecta la instancia propia de src/logger para evitar el desajuste de
   // tipos entre FastifyBaseLogger y pino.Logger bajo exactOptionalPropertyTypes.
   // El serializador por defecto de `req` no incluye cabeceras: el token no llega a los logs.
-  const app = Fastify({ logger: { level: getEnv().LOG_LEVEL } }).withTypeProvider<ZodTypeProvider>();
+  const app = Fastify({
+    logger: {
+      level: getEnv().LOG_LEVEL,
+      redact: {
+        paths: ["req.headers.authorization", "req.headers.cookie", "res.headers['set-cookie']"],
+        censor: "[REDACTED]",
+      },
+    },
+  }).withTypeProvider<ZodTypeProvider>();
 
   app.setValidatorCompiler(validatorCompiler);
   app.setSerializerCompiler(serializerCompiler);

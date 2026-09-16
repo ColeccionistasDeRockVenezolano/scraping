@@ -269,7 +269,8 @@ Entregables:
 - Flujo completo según DATA_MODEL.md §5-6: creación de artistas/álbumes por
   tipo; gating de Music Video/Live Concert/Documentary (no crean álbum);
   filas EMPTY y sin URL → review (`seed_incomplete`, `missing_url`).
-- `merge:run` funcional para claims high del seed.
+- `youtube seed-claims` emite los claims del seed y ejecuta el merge por la
+  puerta normal; no existe un paso `merge:run` separado.
 
 Criterios de salida: importación ejecutada 2 veces → conteos idénticos;
 matriz de tipos cumplida (ver acceptance `caramelos-las-paticas.md`);
@@ -784,16 +785,68 @@ otro id y exige repetir `ambiguity:scan`/`ambiguity:resolve` sobre el catálogo
 resultante. Por eso la aprobación se hace por pasadas y nunca se reutiliza a
 ciegas un plan anterior.
 
+**Cola de revisión resuelta (2026-09-15, Brian delega).** Se cerraron con evidencia las 405 revisiones
+abiertas: 56 pares de discos, 344 de personas y 5 `youtube_match`. Antes se hizo el respaldo
+`backups/crv-20260915T063612Z`. Cada cierre deja en `resolution_note` el motivo o la ficha
+en que quedaron las dos.
+
+| Paso | Resultado |
+|---|---|
+| Run 225 (operador) | 294 filas de `review_queue` desemparejadas antes de fusionar: `review persons` no lo hace y `review_queue_distinct_persons_chk` abortaría el plan. 4 estudios creados como organizaciones `recording_studio`. 15 créditos y 1 membresía reasignados a la persona correcta y 2 créditos copiados (Cebollas Ardientes). 37 fusiones de discos con mapeo explícito de pistas: 3 pistas retiradas que no están en el disco del canal («Igual», «Isyormain», «Las Gorditas De Mario») y títulos y años corregidos con fuente (Manavello 1982, Puah «Traición» 2008, Torre de Marfil 2001, Enkdenados 2010, Claroscuro, Frente de Ira, «Cárcel, Muerte o Rock n Roll»). 28 pistas creadas desde los tracklists de 4 videos del canal. «Burrera» enlazada a B-Sides (2003) |
+| Run 226 | `ambiguity:apply` de las 105 propuestas verificadas tal cual (93 MATCH de personas, 5 MATCH de discos y 7 KEEP): 105 aplicadas y 0 saltadas |
+| Run 228 | `docs/decisions/2026-09-15-cola-revision-personas.json`: 177 fusiones, con la dirección corregida donde la propuesta conservaba la errata, y 12 personas-estudio pasadas a organización; 105 créditos equivalentes unidos |
+| Cierre | 313 revisiones cerradas: 253 aprobadas y 60 descartadas. Incluyen 13 `ambiguous_alias` que nacieron al crear pistas homónimas de otros discos. Se retiraron 2 alias basura de discos («!!! Estás Triste», «EP»). Cola abierta: 0 |
+| `yt:reconcile` (run 232) | 638 MATCHED_HIGH · 0 MATCHED_MEDIUM · 0 AMBIGUOUS; 28 `video_tracks` nuevas; 0 revisiones nuevas |
+| Deltas y verificación | Discos 4.736→4.694 · pistas 27.221→26.860 · personas 10.530→10.248 · organizaciones 683→687 · créditos de disco 17.240→17.184 · créditos de pista 12.195→12.126 · `video_tracks` 6.635→6.664 · `merge_audit` 117.149→118.111 · claims 509.849→509.954. `doctor` todo verde |
+
+Quedan pendientes, anotados en las notas de cierre:
+- «D. en D.»/«D.D.» y «Despecho Nº 2»/«Despecho 2» no son personas; hay que retirarlas.
+- «Pete Thomns» podría ser «Pete Thoms».
+- Gloria Martín/Marín sigue sin evidencia.
+- Años con una fuente cada uno: Frente de Ira 2010/2011, Krueger en vivo 2002/2003, Decade of Perversion 2002/2003, Psicosis 2005/2007 y Morbus 2004/2005.
+- Organizaciones duplicadas: «Estudio Andreazulado» (73) y «Andreazulado's Studio» (177).
+- Algunos créditos de compositor en Grupo Pan podrían ser de Carlos «Nené» Quintero.
+
 ### E11 — Hardening y auditoría final (plan: fase 11)
 
 Los 13 escenarios del plan, repetir el caso Caramelos, búsqueda de secretos en
-git, linter real (hoy `npm run lint` es `tsc`), backups con `pg_dump` + `data/raw`
+git, linter real (antes de E11 `npm run lint` era `tsc`), backups con `pg_dump` + `data/raw`
 con prueba de restauración y `docs/FINAL_AUDIT.md`, `OPERATIONS.md`,
 `ADDING_A_SOURCE.md` y `DATABASE_BACKUP_RESTORE.md`, con matriz
 requisito/implementación/test/estado respaldada por evidencia.
 
 Criterios de salida: restauración desde backup probada; `doctor` y suite
 completa en verde en la máquina de producción.
+
+**Cierre (2026-09-15).** Criterios de salida cumplidos en esta máquina, que
+es la de producción (sirve la API, la web y la Mesa):
+
+| Criterio | Evidencia |
+|---|---|
+| Restauración probada | `db:backup` → `backups/crv-20260915T011708Z` (45 min, 7,29 GB + crudo); `db:restore-check` → `RESTORE VERIFICADO` (1 h 42 min; 44 tablas / 2.105.173 filas, índices y constraints idénticos, 1.830 hashes del crudo, doctor verde en la copia) |
+| `doctor` verde | Sobre la base real después de aplicar `0013_fk_indexes` (41 s): TODO VERDE |
+| Suite completa | `npm test` 45 archivos / 358 pruebas (1 integración DeepSeek opt-in omitida); `test:contract` 132/132; `test:matrix` PG 15.19 y 16.14; `lint`, `typecheck` y build de `web/` en verde |
+| 13 escenarios y Caramelos | `test/contract/hardening-scenarios.test.ts` 13/13; consulta de solo lectura sobre la base real |
+| Secretos | Historial (51 commits) y los 42 archivos de E11 sin secretos reales |
+
+Cambios de E11:
+- ESLint real;
+- migración `0013_fk_indexes`: el chequeo de FK en la tabla ER pasó de 3.965 ms a 0,37 ms;
+- propuesta de fuente atómica y redacción de secretos en logs;
+- pruebas de reintentos, cortesía y cuota;
+- scripts `db:backup`, `db:restore` y `db:restore-check`;
+- `OPERATIONS.md`, `ADDING_A_SOURCE.md`, `DATABASE_BACKUP_RESTORE.md` y
+  `FINAL_AUDIT.md`.
+
+No se tocó el core ni se añadieron fuentes.
+
+**Post-cierre, mismo día.** El propietario resolvió KI-08 y KI-09 fuera del
+alcance de E11: retiró la Mesa de Funnel (queda solo en el tailnet, puerto
+9444) y activó `CRV_OPERATOR_TOKEN` para que `/crv` pueda escribir. Verificar
+`/crv` tras el cambio descubrió KI-10, un bug real de producto sin relación
+con E11: sin barra final la SPA cargaba en blanco por un basename mal armado
+en `web/src/main.tsx`. Se corrigió y se verificó con Claude in Chrome contra
+el dominio público. Detalle de los tres en `FINAL_AUDIT.md`.
 
 ### Post-cierre: E11.1 — endurecer la fusión de duplicados (2026-09-15)
 

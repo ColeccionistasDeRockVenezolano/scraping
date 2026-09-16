@@ -278,26 +278,28 @@ export async function proposeSource(input: {
 }): Promise<{ sourceId: number; reviewId: number }> {
   const db = getDb();
   const slug = slugify(input.name);
-
-  const [source] = await db.insert(sources).values({
-    slug,
-    name: input.name,
-    url: input.url,
-    siteType: input.siteType,
-    enabled: false,
-    trustLevel: "low",
-    notes: `Propuesta pendiente de aprobación manual: ${input.justification}`,
-  }).returning({ id: sources.id });
-  if (!source) throw new Error("no se pudo crear la fuente propuesta");
-
   const { reviewQueue } = await import("../db/schema/ingest.js");
-  const [review] = await db.insert(reviewQueue).values({
-    kind: "new_source",
-    payload: { sourceId: source.id, name: input.name, url: input.url, justification: input.justification },
-    notes: `Alta propuesta de fuente: ${input.name}`,
-  }).returning({ id: reviewQueue.id });
-  if (!review) throw new Error("no se pudo crear el ítem de revisión");
+  const result = await db.transaction(async (tx) => {
+    const [source] = await tx.insert(sources).values({
+      slug,
+      name: input.name,
+      url: input.url,
+      siteType: input.siteType,
+      enabled: false,
+      trustLevel: "low",
+      notes: `Propuesta pendiente de aprobación manual: ${input.justification}`,
+    }).returning({ id: sources.id });
+    if (!source) throw new Error("no se pudo crear la fuente propuesta");
 
-  log.info({ sourceId: source.id, reviewId: review.id }, "fuente propuesta (pendiente de aprobación)");
-  return { sourceId: source.id, reviewId: review.id };
+    const [review] = await tx.insert(reviewQueue).values({
+      kind: "new_source",
+      payload: { sourceId: source.id, name: input.name, url: input.url, justification: input.justification },
+      notes: `Alta propuesta de fuente: ${input.name}`,
+    }).returning({ id: reviewQueue.id });
+    if (!review) throw new Error("no se pudo crear el ítem de revisión");
+    return { sourceId: source.id, reviewId: review.id };
+  });
+
+  log.info(result, "fuente propuesta (pendiente de aprobación)");
+  return result;
 }

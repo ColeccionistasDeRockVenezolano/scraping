@@ -152,7 +152,7 @@ export function seedRecords(rows: SeedRow[], filePath = YT_MASTER_XLSX_PATH): {
 export async function ingestSeedClaims(options: { dryRun?: boolean } = {}): Promise<SeedClaimsResult> {
   const rows = await readSeedRows();
   if (rows.length === 0) {
-    throw new Error("ingest.seed_uploads está vacío: importa la hoja primero con `crv seed import-yt`");
+    throw new Error("ingest.seed_uploads está vacío: importa la hoja primero con `crv youtube import-sheet <path>`");
   }
   const { records, skipped, mediaOnly, albumsSinTipo } = seedRecords(rows);
   const ingestion: IngestionResult = await ingestRecords(SEED_SOURCE_SLUG, records, {

@@ -31,6 +31,10 @@ data/raw/
 data/*.sqlite
 *.sqlite3
 
+# --- Backups (pg_dump + crudo; scripts/db-backup.sh). Contienen el catálogo
+# entero: se guardan fuera del repositorio (docs/DATABASE_BACKUP_RESTORE.md) ---
+backups/
+
 # --- Salidas de test generadas (se regeneran en cada corrida) ---
 tests/artifacts/
 coverage/

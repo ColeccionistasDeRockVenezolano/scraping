@@ -21,6 +21,8 @@
     "db:down": "docker compose down -v",
     "db:migrate": "./scripts/with-node22.sh tsx src/db/migrate.ts",
     "db:bootstrap": "./scripts/db-bootstrap.sh",
+    "db:restore": "./scripts/db-restore.sh",
+    "db:restore-check": "./scripts/db-restore-check.sh",
     "core:catalog": "./scripts/with-node22.sh tsx scripts/gen-core-catalog.ts",
     "test": "./scripts/with-node22.sh vitest run",
     "test:watch": "./scripts/with-node22.sh vitest",

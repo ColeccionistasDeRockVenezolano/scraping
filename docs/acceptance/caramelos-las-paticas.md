@@ -125,10 +125,10 @@
 npm run cli -- doctor
 
 # Importación idempotente del seed
-npm run cli -- seed:import-yt --file "YT Master Spreadsheet.xlsx"
-npm run cli -- merge:run
-npm run cli -- seed:import-yt --file "YT Master Spreadsheet.xlsx"   # 2ª vez
-npm run cli -- merge:run                                            # skip todo
+npm run cli -- youtube import-sheet "YT Master Spreadsheet.xlsx"
+npm run cli -- youtube seed-claims
+npm run cli -- youtube import-sheet "YT Master Spreadsheet.xlsx"   # 2ª vez: unchanged
+npm run cli -- youtube seed-claims                                  # 2ª vez: claims reutilizados
 
 # Aserciones SQL (crv_test o producción tras F2)
 psql "$DATABASE_URL" -c "
@@ -162,9 +162,13 @@ SELECT count(*) AS n_review FROM ingest.review_queue WHERE status = 'open';
 "
 ```
 
-Valores esperados tras F2: `n_artists=1` · `n_albums=14` · `n_videos=16` ·
+Valores históricos esperados al cerrar F2: `n_artists=1` · `n_albums=14` · `n_videos=16` ·
 `n_en_vivo=1` · `n_links=2` con `n_primary=1` · **`n_members=0`** ·
-`n_review ≥ 1` (ítems de las filas 553/564 u otros pendientes).
+`n_review ≥ 1` (ítems de las filas 553/564 u otros pendientes). En la base
+actual, fases posteriores ya resolvieron esas revisiones y añadieron datos de
+otras fuentes; esos conteos globales no deben usarse como aserción de E11.
+La repetición del caso sobre la base actual (E11) está en
+`docs/FINAL_AUDIT.md`, sección «Caso de aceptación real: Caramelos».
 
 ---
 

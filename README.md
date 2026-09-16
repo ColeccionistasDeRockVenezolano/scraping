@@ -21,7 +21,10 @@ Las organizaciones representan sellos, estudios y productoras.
 ## Backend (F0+)
 
 Documentación normativa completa en `docs/` (empezar por
-`docs/CRV_IMPLEMENTATION_CONTRACT.md` y `docs/PHASES.md`).
+`docs/CRV_IMPLEMENTATION_CONTRACT.md` y `docs/PHASES.md`). Operación diaria:
+`docs/OPERATIONS.md`; respaldo y restauración: `docs/DATABASE_BACKUP_RESTORE.md`;
+proceso para una fuente futura: `docs/ADDING_A_SOURCE.md`; estado auditado y
+límites conocidos: `docs/FINAL_AUDIT.md`.
 
 Requisitos: Node.js ≥22 (`.nvmrc`) y Docker.
 
@@ -39,8 +42,11 @@ base aún no tiene el core, corre las migraciones pendientes, siembra
 `ingest.sources` y termina con `doctor`.
 
 ```bash
+npm run lint                # ESLint (reglas TypeScript con tipos, promesas, imports, hooks)
 npm run typecheck           # tsc --noEmit
 npm test                    # Vitest: unit + contrato (levanta PG en Docker)
+npm run test:unit           # solo unitarias
+npm run test:contract       # solo contratos con PostgreSQL desechable
 npm run test:matrix         # harness bash contra PostgreSQL 15 y 16
 npm run test:deepseek:real  # opt-in: requiere DEEPSEEK_API_KEY; usa modelos configurados
 npm run doctor              # integridad: runtime, core (hash+huella), schemas, migraciones, fuentes
@@ -48,6 +54,12 @@ npm run db:up               # solo levantar la base local
 npm run db:down             # borrar la base local (incluye el volumen)
 npm run db:migrate          # aplica migrations/*.up.sql pendientes contra DATABASE_URL
 npm run db:migrate -- down  # rollback completo (desarrollo/test, no operación normal)
+npm run db:backup           # pg_dump + data/raw + manifest + SHA-256 → backups/crv-<UTC>/
+npm run db:restore-check -- backups/crv-<UTC>   # restaura en PG desechable y verifica filas, crudo y doctor
+npm run db:restore -- backups/crv-<UTC>         # restauración real; nunca sobrescribe
+npm run api                 # API Fastify en 127.0.0.1:8080 (OpenAPI en /docs)
+npm run cotejo:build && npm run cotejo:serve    # Mesa de Cotejo en 127.0.0.1:4310
+npm run adapters:fixtures   # candidatos normalizados de los fixtures locales; sin red ni base
 npm run cli -- sources:list # resto de comandos del CLI
 npm run cli -- sources:evidence hemeroteka "https://www.instagram.com/p/CODIGO/" "<extracto>" # entrada humana; no hace fetch
 npm run core:catalog        # regenera la huella del core (solo si el core cambia)
@@ -64,7 +76,9 @@ El harness de pruebas bash original (`tests/run_all.sh`,
 `tests/test_0004_review_kinds.sh`) sigue vigente y en verde — no depende de
 Node, solo de `docker` y `psql` dentro del contenedor.
 
-El servidor HTTP (`src/api/`) llega en **F8**: por eso no hay script `dev`.
+El servidor HTTP ya está implementado en `src/api/`: `npm run api` expone la
+API Fastify (OpenAPI en `/docs`). La interfaz React vive en `web/`; usar
+`cd web && npm run dev` durante desarrollo o `npm run build` para producción.
 
 El motor de resolución vive en `src/er/` y considera contexto propio de
 ARTIST, PERSON, ALBUM, TRACK y ORGANIZATION. `src/merge/` aplica la política

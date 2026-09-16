@@ -715,7 +715,7 @@ Las otras 4 contradicciones son de `track_number` con `null` en los dos lados:
 no hay nada que decidir y la Mesa de Cotejo ya lo dice en lugar de ofrecer
 botones que fingen una elección.
 
-**[PENDIENTE]** Normalizar `label` → `record_label` en el adaptador, o mapearlo
-en el paso que aplique las decisiones. Hasta entonces las 7 se pueden decidir
-en la mesa —la intención humana queda bien registrada— pero no se podrán
-aplicar sin la traducción.
+**[RESUELTO]** `canonicalFieldValue()` y la aplicación de decisiones
+normalizan `label` → `record_label` antes de comparar o escribir. Las
+afirmaciones originales siguen intactas en sus claims, pero nunca se intenta
+insertar en el enum un valor inexistente.

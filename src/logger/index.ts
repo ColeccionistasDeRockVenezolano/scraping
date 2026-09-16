@@ -15,13 +15,24 @@ function buildLogger() {
     }
   })();
 
+  // Defensa en profundidad: hoy los call sites no registran secretos, pero un
+  // objeto de request/config añadido en el futuro tampoco debe exponerlos.
+  const redact = {
+    paths: [
+      "authorization", "Authorization", "headers.authorization", "req.headers.authorization",
+      "apiKey", "*.apiKey", "YOUTUBE_API_KEY", "DEEPSEEK_API_KEY", "CRV_OPERATOR_TOKEN",
+    ],
+    censor: "[REDACTED]",
+  };
+
   const isTTY = process.stdout.isTTY === true;
   return isTTY
     ? pino({
         level,
+        redact,
         transport: { target: "pino-pretty", options: { colorize: true, translateTime: "HH:MM:ss" } },
       })
-    : pino({ level });
+    : pino({ level, redact });
 }
 
 export const logger = buildLogger();

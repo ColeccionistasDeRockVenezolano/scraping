@@ -13,6 +13,7 @@ import { artists } from "../../src/db/schema/core.js";
 import { ingestAdapterSnapshots, ingestRecords } from "../../src/ingest/runner.js";
 import type { RawRecord, SourceAdapter } from "../../src/adapters/contracts.js";
 import { registerManualEvidence } from "../../src/ingest/manual-evidence.js";
+import { proposeSource } from "../../src/ingest/sources.js";
 import { approveEntity } from "../../src/review/approval.js";
 
 const caramelosFixture: RawRecord = {
@@ -153,5 +154,19 @@ describe("motor de ingestión con fixtures", () => {
       evidenceUrl: "https://example.com/p/AbC_123/",
       excerpt: "Fuera de alcance",
     })).rejects.toThrow("fuera del alcance autorizado");
+  });
+
+  it("una fuente nueva nace deshabilitada y con su revisión en la misma operación", async () => {
+    const result = await proposeSource({
+      name: "Fuente Futura Fixture",
+      url: "https://future.fixture.invalid/catalogo",
+      siteType: "website",
+      justification: "propuesta de contrato; no autoriza red",
+    });
+    const [source] = await getDb().select().from(sources).where(eq(sources.id, result.sourceId));
+    const [review] = await getDb().select().from(reviewQueue).where(eq(reviewQueue.id, result.reviewId));
+    expect(source).toMatchObject({ slug: "fuente-futura-fixture", enabled: false, trustLevel: "low" });
+    expect(review).toMatchObject({ kind: "new_source", status: "open" });
+    expect(review?.payload).toMatchObject({ sourceId: result.sourceId, url: "https://future.fixture.invalid/catalogo" });
   });
 });

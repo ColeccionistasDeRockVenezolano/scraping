@@ -296,7 +296,7 @@ entidades implicadas). 16 kinds realizados: de 0003 `possible_duplicate`,
 `organization_match`, `youtube_match`, `manual_review`; de 0004
 `missing_url`, `seed_incomplete`, `media_type_no_album`, `genre_unknown`,
 `new_source`, `low_confidence`, `ai_biography`, `ai_entity_resolution`.
-Consumida por CLI (`review:list|approve|dismiss`) y por la futura UI (F8).
+Consumida por CLI (`review list|approve|dismiss`) y por la UI React.
 
 **Aprobación por lotes** (`src/review/batch.ts`). La cola guarda un ítem por
 claim y se decide por entidad, pero un barrido completo produce del orden de
@@ -410,9 +410,9 @@ flash por decisión del propietario (2026-09-14), aunque su tarea sea de ER.
 Sin API key el sistema y toda la suite funcionan con rutas deterministas/mock.
 
 ### 4.12 `youtube ingestion`
-- `yt:seed-import`: importa el XLSX a `ingest.seed_uploads` (verbatim) y
+- `youtube import-sheet`: importa el XLSX a `ingest.seed_uploads` (verbatim) y
   extrae `video_id` (watch?v=, youtu.be/, ignorando `&t=`/`&pp=` para el ID).
-- `yt:sync`: YouTube Data API `videos.list` sobre IDs registrados →
+- `youtube sync`: YouTube Data API `videos.list` sobre IDs registrados →
   `media.youtube_videos` (título, canal, fecha, duración, disponibilidad) y
   claims de disponibilidad hacia `albums.youtube_status` solo cuando el video
   tiene enlace primario a un álbum. Hasta 50 IDs por llamada: los 520 IDs
@@ -471,13 +471,14 @@ Sin API key el sistema y toda la suite funcionan con rutas deterministas/mock.
 
 ### 4.13 `cli`
 Comandos (mismos casos de uso que la API, sin UI):
-`sources:list|add|evidence`, `scrape <slug>`, `seed:import-yt`, `yt:sync`,
-`yt:link`,
-`yt:enrich <artist>`, `merge:run [--dry]`, `review:list|approve|dismiss`,
+`sources:list|add|evidence`, `scrape <slug>`, `youtube import-sheet`,
+`youtube sync`, `yt:link`,
+`yt:enrich-artist <artist>`, `scrape source <slug> --all [--dry-run]`,
+`review list|approve|dismiss`,
 `review sincopa-organizations [--confirm]`,
 `ambiguity:scan|resolve|apply` (§4.10),
-`genre:add|disable`, `export:json <entidad>`, `doctor` (integridad:
-core intacto, hashes, orphans de claims).
+`doctor` (integridad: core intacto, hashes, orphans de claims). `genre:add`,
+`genre:disable` y `export:json` siguen especificados pero no implementados.
 
 ### 4.14 `api`
 Fastify (F7): CRUD de entidades canónicas (artistas, personas, álbumes,
@@ -492,10 +493,12 @@ inicial). Cada escritura es una transacción y un run `manual` de la fuente
 `POST /review-queue/:id/{accept,reject,resolve-conflict}` y el historial se
 consulta en `GET /audit` y `GET /runs/:id` (PHASES §E7B).
 
-### 4.15 `frontend` (futuro, F8)
-React SPA servida por Fastify (static) en la misma app. Solo API. Vistas:
-catálogo (artista/álbum/track), detalle con evidencias, cola de revisión,
-géneros y fuentes. Fuera del alcance de esta fase.
+### 4.15 `frontend` (E8/E9)
+React SPA en `web/` (Vite), separada de Fastify. Solo habla con la API
+(`VITE_API_BASE_URL`, por defecto `http://127.0.0.1:8080`); nunca con
+PostgreSQL. `npm --prefix web run dev|build`; para publicarla bajo un prefijo,
+`build:public` + `serve:public` (`web/server.mjs`: sirve `dist/` en `/crv/*` y
+reenvía `/crv/api/*` a la API en loopback).
 
 ---
 
@@ -541,7 +544,7 @@ El seed YT sigue el mismo flujo saltando 1-2 (el "raw" es la fila XLSX).
   cubre además la migración de enums, y `tests/lib_pg.sh` comparte el arranque
   del contenedor. **Portado a Vitest (F0):**
   `test/contract/core-and-schema.test.ts` reproduce ese mismo contrato
-  (core + migraciones 0001-0007 vía `src/db/migrate.ts` + rollback + diff
+  (core + todas las migraciones, hoy 0001–0013, vía `src/db/migrate.ts` + rollback + diff
   vacío) contra un contenedor propio (`test/support/pg-container.ts`, mismo
   arranque en dos fases que `tests/lib_pg.sh`), y añade el ejercicio real
   del schema Drizzle: inserts y joins a través de `public`+`ingest`+`media`
@@ -560,8 +563,11 @@ El seed YT sigue el mismo flujo saltando 1-2 (el "raw" es la fila XLSX).
 
 - Un proceso Node (`tsx`/compilado) sirve API; CLI se invoca ad-hoc o vía
   cron del SO para barridos programados.
-- PostgreSQL local; `data/` en volumen con respaldo simple (pg_dump + rsync
-  de `data/raw`). Sin Docker obligatorio; si se usa, solo PG en contenedor.
+- PostgreSQL local; `data/` en volumen. Respaldo con `npm run db:backup`
+  (`pg_dump` custom + `data/raw` + manifest + SHA-256), prueba con
+  `npm run db:restore-check` y restauración sin sobrescribir con
+  `npm run db:restore` (`docs/DATABASE_BACKUP_RESTORE.md`). Los tres scripts
+  usan `docker exec` contra el contenedor de PostgreSQL.
 - Arranque con systemd (o PM2 si el usuario lo prefiere); nada más.
 
 ---

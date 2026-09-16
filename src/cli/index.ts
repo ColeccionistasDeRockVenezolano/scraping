@@ -52,11 +52,19 @@ const log = moduleLogger("cli");
 
 const KNOWN_SITE_TYPES = ["blogspot", "wordpress", "website", "database", "instagram", "spreadsheet", "youtube_api"] as const;
 
-const KNOWN_FUTURE_COMMANDS = new Set([
-  "seed:import-yt", "yt:sync",
-  "yt:link", "merge:run", "review:list", "review:approve",
-  "review:dismiss", "genre:add", "genre:disable", "export:json",
+// Nombres de ARCHITECTURE.md §4.13 que el proyecto implementó con otra forma:
+// quien los escriba recibe el comando real en lugar de "no implementado".
+const RENAMED_COMMANDS = new Map([
+  ["seed:import-yt", "youtube import-sheet <path> && crv youtube seed-claims"],
+  ["yt:sync", "youtube sync [--pending]"],
+  ["merge:run", "scrape source <slug> --all (el merge corre dentro de cada ingesta)"],
+  ["review:list", "review list"],
+  ["review:approve", "review approve <id>"],
+  ["review:dismiss", "review dismiss <id>"],
 ]);
+
+// Especificados en ARCHITECTURE.md §4.13 y todavía sin implementar.
+const KNOWN_FUTURE_COMMANDS = new Set(["genre:add", "genre:disable", "export:json"]);
 
 async function main(): Promise<number> {
   // Falla ruidoso si el runtime no cumple engines.node (PHASES F0).
@@ -613,12 +621,14 @@ async function main(): Promise<number> {
       return 0;
 
     default:
-      if (KNOWN_FUTURE_COMMANDS.has(cmd)) {
-        // eslint-disable-next-line no-console
-        console.log(`"${cmd}" está especificado en ARCHITECTURE.md §4 pero aún no implementado (ver PHASES.md).`);
+      if (RENAMED_COMMANDS.has(cmd)) {
+        console.error(`"${cmd}" se implementó como: crv ${RENAMED_COMMANDS.get(cmd)!}`);
         return 1;
       }
-      // eslint-disable-next-line no-console
+      if (KNOWN_FUTURE_COMMANDS.has(cmd)) {
+        console.error(`"${cmd}" está especificado en ARCHITECTURE.md §4 pero aún no implementado (ver PHASES.md).`);
+        return 1;
+      }
       console.error(`comando desconocido: "${cmd}"`);
       printHelp();
       return 1;
@@ -639,7 +649,22 @@ CRV CLI
   scrape <slug> --observe   descarga + cachea crudo de una fuente habilitada (sin extracción)
   scrape source <source> --all [--dry-run]
   scrape artist "<name>" --all-sources [--dry-run]
-  sources list | runs list | review list | review show <id>
+  sources:evidence <slug> <url> "<extracto>" [notas]
+                      registra evidencia manual de una fuente limitada/manual: abre revisión, no crea claims
+  runs list           lista los runs (id, kind, estado, inicio)
+  review list | review show <id>
+  review entities [kind] [--limit=N]
+                      entidades candidatas pendientes, agrupadas por entidad y no por claim
+  review approve|dismiss <kind> "<identity>" <nota>
+                      aprueba o descarta los claims candidatos de una entidad
+  review approve-batch|dismiss-batch [kind] [--source=<slug>] [--limit=N] [--note="<motivo>" --confirm]
+                      lo mismo por lotes; sin --confirm solo imprime el plan
+  review duplicates [--note="<motivo>" --confirm]
+                      fusiona filas del core que son la misma entidad con otra tilde o mayúscula
+  review persons --plan=<archivo.json> [--note="<motivo>" --confirm]
+                      aplica correcciones de identidad de personas decididas (docs/decisions/)
+  review keep-repeated-tracks <conflict-id,...> --note="<evidencia>" --confirm
+                      conserva las dos posiciones de un título repetido en un disco
   review apply-decisions [--note="<motivo>" --confirm]
                       previsualiza/aplica las decisiones concluyentes de la Mesa;
                       unsure permanece abierto y sin tocar el catálogo
@@ -647,12 +672,14 @@ CRV CLI
                       reextrae el crudo con el parser vigente y retira falsos sellos
                       sin evidencia externa ni dependencias; conserva auditoría
   youtube import-sheet <path>  importa YT Master Spreadsheet de forma idempotente
+  youtube seed-claims [--dry-run]  emite los claims de la hoja importada (low: candidatos a revisión)
   youtube discover-channel [channel-id] [--resume]  recorre el playlist de uploads sin hidratar
   youtube sync [--pending]     hidrata la unión de hoja y canal en lotes de 50
   youtube rederive [--dry-run]  re-parsea las descripciones guardadas, sin red ni cuota
   youtube api-claims [--dry-run]  emite los claims del canal (candidatos, van a revisión)
   youtube sync-video <video-id>  consulta YouTube Data API (requiere YOUTUBE_API_KEY)
   youtube sync-channel [channel-id]  recorre uploads playlist oficial (requiere YOUTUBE_API_KEY)
+  youtube classifications [--dry-run]  guarda todas las clasificaciones que la hoja da a cada disco
   youtube unmatched          filas seed pendientes de enlace o revisión
   yt:link [--dry-run]        enlaza sólo releases inequívocos de la hoja YT; el resto va a revisión
   yt:link --album=<id> --video=<youtube-id> --note="evidencia" --confirm
@@ -673,7 +700,8 @@ CRV CLI
   ambiguity:apply [--review=<id,...>] --note="<motivo>" --confirm
                              aplica MATCH y KEEP de reglas; las de árbitro solo nombrando su revisión
 
-Comandos especificados para fases futuras (F1+): ${[...KNOWN_FUTURE_COMMANDS].join(", ")}
+Nombres de ARCHITECTURE.md §4.13 con otra forma: ${[...RENAMED_COMMANDS.keys()].join(", ")}
+Especificados y aún sin implementar: ${[...KNOWN_FUTURE_COMMANDS].join(", ")}
 `);
 }
 

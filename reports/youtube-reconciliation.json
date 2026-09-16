@@ -1,11 +1,11 @@
 {
   "summary": {
     "videos": 649,
-    "albums": 4761,
+    "albums": 4694,
     "byCategory": {
-      "MATCHED_HIGH": 623,
-      "MATCHED_MEDIUM": 14,
-      "AMBIGUOUS": 1,
+      "MATCHED_HIGH": 638,
+      "MATCHED_MEDIUM": 0,
+      "AMBIGUOUS": 0,
       "UNMATCHED_VIDEO": 11,
       "CONFLICT": 0
     },
@@ -16,12 +16,12 @@
       "documentary": 3,
       "editorial": 11
     },
-    "unmatchedAlbums": 4158,
-    "unmatchedAlbumsOfChannelArtists": 713,
+    "unmatchedAlbums": 4090,
+    "unmatchedAlbumsOfChannelArtists": 672,
     "tracklistEntries": {
       "total": 6602,
-      "matched": 6569,
-      "unmatched": 33
+      "matched": 6597,
+      "unmatched": 5
     },
     "videoArtists": {
       "planned": 638,
@@ -30,10 +30,10 @@
       "notReDerived": 0
     },
     "videoTracks": {
-      "planned": 6580,
-      "inserted": 0,
-      "total": 6580,
-      "notReDerived": 0,
+      "planned": 6608,
+      "inserted": 28,
+      "total": 6664,
+      "notReDerived": 56,
       "withClaim": 6562
     },
     "reviewsCreated": 0
@@ -485,13 +485,14 @@
       "videoDbId": 87,
       "title": "Claroscuro - Miel (Official 4K Video)",
       "kind": "music_video",
-      "category": "MATCHED_MEDIUM",
+      "category": "MATCHED_HIGH",
       "artists": [
         "Claroscuro"
       ],
       "albums": [],
       "reasons": [
-        "la canción está en 2 discos; solo uno es de estudio, sencillo o EP"
+        "la canción está en 2 discos; solo uno es de estudio, sencillo o EP",
+        "decidido por una persona en la revisión #191119 (approved); la evidencia no cambió desde entonces"
       ],
       "proposals": [
         {
@@ -1044,13 +1045,14 @@
       "videoDbId": 22,
       "title": "Americania - Animal (Official 4K Video)",
       "kind": "music_video",
-      "category": "MATCHED_MEDIUM",
+      "category": "MATCHED_HIGH",
       "artists": [
         "Americania"
       ],
       "albums": [],
       "reasons": [
-        "la canción está en 2 discos; solo uno es de estudio, sencillo o EP"
+        "la canción está en 2 discos; solo uno es de estudio, sencillo o EP",
+        "decidido por una persona en la revisión #191120 (approved); la evidencia no cambió desde entonces"
       ],
       "proposals": [
         {
@@ -1944,22 +1946,15 @@
       "videoDbId": 244,
       "title": "Los Amigos Invisibles - En Una Noche Tan Linda Como Esta (2008) || Full Concert || 4K60 Remastered",
       "kind": "live_concert",
-      "category": "MATCHED_MEDIUM",
+      "category": "MATCHED_HIGH",
       "artists": [
         "Los Amigos Invisibles"
       ],
-      "albums": [],
-      "reasons": [
-        "hay un disco del artista con el mismo nombre que el concierto"
+      "albums": [
+        "Los Amigos Invisibles — En Una Noche Tan Linda Como Esta (2008)"
       ],
-      "proposals": [
-        {
-          "kind": "album",
-          "id": 248,
-          "label": "Los Amigos Invisibles — En Una Noche Tan Linda Como Esta (2008)",
-          "rule": "concierto con el nombre de un disco del artista"
-        }
-      ],
+      "reasons": [],
+      "proposals": [],
       "tracklist": null
     },
     {
@@ -2576,22 +2571,15 @@
       "videoDbId": 114,
       "title": "Desorden Público - En Vivo En El Teresa Carreño (2004) || Full Concert || 4K60 Remastered",
       "kind": "live_concert",
-      "category": "MATCHED_MEDIUM",
+      "category": "MATCHED_HIGH",
       "artists": [
         "Desorden Público"
       ],
-      "albums": [],
-      "reasons": [
-        "hay un disco del artista con el mismo nombre que el concierto"
+      "albums": [
+        "Desorden Público — En Vivo En El Teresa Carreño (2004)"
       ],
-      "proposals": [
-        {
-          "kind": "album",
-          "id": 169,
-          "label": "Desorden Público — En Vivo En El Teresa Carreño (2004)",
-          "rule": "concierto con el nombre de un disco del artista"
-        }
-      ],
+      "reasons": [],
+      "proposals": [],
       "tracklist": null
     },
     {
@@ -3576,13 +3564,14 @@
       "videoDbId": 48,
       "title": "Candy66 - Madre (Official 4K Video)",
       "kind": "music_video",
-      "category": "MATCHED_MEDIUM",
+      "category": "MATCHED_HIGH",
       "artists": [
         "Candy66"
       ],
       "albums": [],
       "reasons": [
-        "la canción está en 4 discos; solo uno es de estudio, sencillo o EP"
+        "la canción está en 4 discos; solo uno es de estudio, sencillo o EP",
+        "decidido por una persona en la revisión #191123 (approved); la evidencia no cambió desde entonces"
       ],
       "proposals": [
         {
@@ -4000,22 +3989,15 @@
       "videoDbId": 303,
       "title": "Metrozubdivision Live From @MuseoDeBellasArtes (2006) || Full Concert || 4K60 Remastered",
       "kind": "live_concert",
-      "category": "MATCHED_MEDIUM",
+      "category": "MATCHED_HIGH",
       "artists": [
         "Metrozubdivision"
       ],
-      "albums": [],
-      "reasons": [
-        "hay un disco del artista con el mismo nombre que el concierto"
+      "albums": [
+        "Metrozubdivision — CCS (2007)"
       ],
-      "proposals": [
-        {
-          "kind": "album",
-          "id": 284,
-          "label": "Metrozubdivision — CCS (2007)",
-          "rule": "concierto con el nombre de un disco del artista"
-        }
-      ],
+      "reasons": [],
+      "proposals": [],
       "tracklist": null
     },
     {
@@ -4086,27 +4068,19 @@
       "videoDbId": 264,
       "title": "Los Mesoneros - EtéreoPlay Sessions (2016) || Full Unplugged || 4K60 Remastered",
       "kind": "full_album",
-      "category": "MATCHED_MEDIUM",
+      "category": "MATCHED_HIGH",
       "artists": [
         "Los Mesoneros"
       ],
       "albums": [
         "Los Mesoneros — EtéreoPlay Sessions (2016)"
       ],
-      "reasons": [
-        "«EtéreoPlay Sessions» no tiene pistas en el catálogo",
-        "4 de 4 entradas del tracklist no casan con una pista del disco"
-      ],
+      "reasons": [],
       "proposals": [],
       "tracklist": {
         "entries": 4,
-        "matched": 0,
-        "unmatched": [
-          "El Paraíso",
-          "Caballo Nuevo",
-          "Cicatriz",
-          "Caiga La Noche"
-        ],
+        "matched": 4,
+        "unmatched": [],
         "startMismatches": []
       }
     },
@@ -6776,7 +6750,7 @@
       "videoDbId": 163,
       "title": "Hana Kobayashi - Smells Like Teen Spirit @LaQuintaBar || Live Nirvana Jazz Cover || 4K60 Remastered",
       "kind": "full_album",
-      "category": "MATCHED_MEDIUM",
+      "category": "MATCHED_HIGH",
       "artists": [
         "Hana Kobayashi"
       ],
@@ -6784,16 +6758,15 @@
         "Hana Kobayashi — Smells Like Teen Spirit (2011)"
       ],
       "reasons": [
-        "«Smells Like Teen Spirit» no tiene pistas en el catálogo",
-        "3 de 3 entradas del tracklist no casan con una pista del disco"
+        "2 de 3 entradas del tracklist no casan con una pista del disco",
+        "decidido por una persona en la revisión #191126 (approved); la evidencia no cambió desde entonces"
       ],
       "proposals": [],
       "tracklist": {
         "entries": 3,
-        "matched": 0,
+        "matched": 1,
         "unmatched": [
           "Intro",
-          "Smells Like Teen Spirit",
           "Credits"
         ],
         "startMismatches": []
@@ -7292,7 +7265,7 @@
       "videoDbId": 170,
       "title": "Horacero - Desenchufado en @CentroCulturalChacao (2007) || Full Concert || 4K60 Remastered",
       "kind": "full_album",
-      "category": "MATCHED_MEDIUM",
+      "category": "MATCHED_HIGH",
       "artists": [
         "Horacero"
       ],
@@ -7300,27 +7273,15 @@
         "Horacero — Desenchufado (2007)"
       ],
       "reasons": [
-        "«Desenchufado» no tiene pistas en el catálogo",
-        "13 de 13 entradas del tracklist no casan con una pista del disco"
+        "1 de 13 entradas del tracklist no casan con una pista del disco",
+        "decidido por una persona en la revisión #191127 (approved); la evidencia no cambió desde entonces"
       ],
       "proposals": [],
       "tracklist": {
         "entries": 13,
-        "matched": 0,
+        "matched": 12,
         "unmatched": [
-          "Intro 00:00",
-          "Espeso",
-          "Rebotar",
-          "Chiriguare Azul",
-          "Mantarraya",
-          "Caer",
-          "Superllanero",
-          "P.O.L.A.R. / No Sé",
-          "Ayug Paye",
-          "Terrenal",
-          "Lluvia",
-          "Allá Lejos del Sol",
-          "Hay Cosquillas Que No Dan Risa"
+          "Intro 00:00"
         ],
         "startMismatches": []
       }
@@ -7618,13 +7579,14 @@
       "videoDbId": 214,
       "title": "La Vida Bohème - Radio Capital (Official 4K Video)",
       "kind": "music_video",
-      "category": "MATCHED_MEDIUM",
+      "category": "MATCHED_HIGH",
       "artists": [
         "La Vida Bohème"
       ],
       "albums": [],
       "reasons": [
-        "la canción está en 3 discos; solo uno es de estudio, sencillo o EP"
+        "la canción está en 3 discos; solo uno es de estudio, sencillo o EP",
+        "decidido por una persona en la revisión #191128 (approved); la evidencia no cambió desde entonces"
       ],
       "proposals": [
         {
@@ -8421,34 +8383,19 @@
       "videoDbId": 926,
       "title": "Various Artists - Fabricado Acá: Las Actuales Tendencias del Pop Rock Venezolano (2001)",
       "kind": "full_album",
-      "category": "MATCHED_MEDIUM",
+      "category": "MATCHED_HIGH",
       "artists": [
         "Various Artists"
       ],
       "albums": [
         "Various Artists — Fabricado Acá: Tendencias Del Pop Rock Venezolano (2001)"
       ],
-      "reasons": [
-        "«Fabricado Acá: Tendencias Del Pop Rock Venezolano» no tiene pistas en el catálogo",
-        "11 de 11 entradas del tracklist no casan con una pista del disco"
-      ],
+      "reasons": [],
       "proposals": [],
       "tracklist": {
         "entries": 11,
-        "matched": 0,
-        "unmatched": [
-          "Claroscuro - Chicle",
-          "Desorden Público - Combate",
-          "Hijos De La Calle & Control Machete - Ladre El Desmadre",
-          "Bacalao Men - Tema Bacalao",
-          "Dioslepague - Tonight",
-          "Pixel - Poco",
-          "DespuésDeVieja - Sucupá",
-          "La Leche - Milagro",
-          "Pacífica - Turma",
-          "Malanga - Te Vas",
-          "Los Océanicos - El Golazo"
-        ],
+        "matched": 11,
+        "unmatched": [],
         "startMismatches": []
       }
     },
@@ -8807,13 +8754,14 @@
       "videoDbId": 49,
       "title": "Candy66 - Burrera (Official 4K Video)",
       "kind": "music_video",
-      "category": "AMBIGUOUS",
+      "category": "MATCHED_HIGH",
       "artists": [
         "Candy66"
       ],
       "albums": [],
       "reasons": [
-        "la canción está en 2 discos y ninguna regla determinista elige uno"
+        "la canción está en 2 discos y ninguna regla determinista elige uno",
+        "decidido por una persona en la revisión #191130 (approved); la evidencia no cambió desde entonces"
       ],
       "proposals": [
         {
@@ -9765,7 +9713,7 @@
         "Claroscuro"
       ],
       "albums": [
-        "Claroscuro — EP (1993)"
+        "Claroscuro — Claroscuro (1993)"
       ],
       "reasons": [],
       "proposals": [],
@@ -10895,13 +10843,14 @@
       "videoDbId": 46,
       "title": "Candy66 - Solo (Official 4K Video)",
       "kind": "music_video",
-      "category": "MATCHED_MEDIUM",
+      "category": "MATCHED_HIGH",
       "artists": [
         "Candy66"
       ],
       "albums": [],
       "reasons": [
-        "la canción está en 5 discos; solo uno es de estudio, sencillo o EP"
+        "la canción está en 5 discos; solo uno es de estudio, sencillo o EP",
+        "decidido por una persona en la revisión #191131 (approved); la evidencia no cambió desde entonces"
       ],
       "proposals": [
         {
@@ -11296,22 +11245,15 @@
       "videoDbId": 175,
       "title": "Ilan Chester - Ilan En Vivo Desde @MataDeCoco (1988) || Full Concert || 4K60 Remastered",
       "kind": "live_concert",
-      "category": "MATCHED_MEDIUM",
+      "category": "MATCHED_HIGH",
       "artists": [
         "Ilan Chester"
       ],
-      "albums": [],
-      "reasons": [
-        "hay un disco del artista con el mismo nombre que el concierto"
+      "albums": [
+        "Ilan Chester — Ilan En Vivo (1988)"
       ],
-      "proposals": [
-        {
-          "kind": "album",
-          "id": 4246,
-          "label": "Ilan Chester — Ilan En Vivo (1988)",
-          "rule": "concierto con el nombre de un disco del artista"
-        }
-      ],
+      "reasons": [],
+      "proposals": [],
       "tracklist": null
     },
     {
@@ -11942,7 +11884,7 @@
       "videoDbId": 47,
       "title": "Candy66: Acústico en Bits Session (2010) || Full Documentary || 4K60 Remastered",
       "kind": "full_album",
-      "category": "MATCHED_MEDIUM",
+      "category": "MATCHED_HIGH",
       "artists": [
         "Candy66"
       ],
@@ -11950,7 +11892,8 @@
         "Candy66 — Acústico En Bits Session (2010)"
       ],
       "reasons": [
-        "2 de 9 entradas del tracklist no casan con una pista del disco"
+        "2 de 9 entradas del tracklist no casan con una pista del disco",
+        "decidido por una persona en la revisión #191133 (approved); la evidencia no cambió desde entonces"
       ],
       "proposals": [],
       "tracklist": {
@@ -13669,9 +13612,9 @@
     {
       "albumId": 1014,
       "artist": "Puah",
-      "title": "Demo",
-      "year": 2009,
-      "type": "other",
+      "title": "Traición",
+      "year": 2008,
+      "type": "demo",
       "artistOnChannel": false
     },
     {
@@ -13904,14 +13847,6 @@
       "title": "Demos",
       "year": 2005,
       "type": "live_album",
-      "artistOnChannel": false
-    },
-    {
-      "albumId": 1044,
-      "artist": "Adh Seidh",
-      "title": "Demo",
-      "year": 2004,
-      "type": "other",
       "artistOnChannel": false
     },
     {
@@ -15462,7 +15397,7 @@
       "albumId": 1236,
       "artist": "Torre de Marfil",
       "title": "En Vivo en Ciudad Ojeda",
-      "year": 2004,
+      "year": 2001,
       "type": "other",
       "artistOnChannel": true
     },
@@ -15966,7 +15901,7 @@
       "albumId": 13,
       "artist": "Pablo Manavello",
       "title": "Una Mirada Hacia Adentro",
-      "year": 1981,
+      "year": 1982,
       "type": "other",
       "artistOnChannel": false
     },
@@ -16285,7 +16220,7 @@
     {
       "albumId": 1339,
       "artist": "Frente De Ira",
-      "title": "La Certeza de lo que se ve y la Convicción de lo que se ve.",
+      "title": "La Certeza de lo que se Espera y la Convicción de lo que no se Ve",
       "year": 2011,
       "type": "other",
       "artistOnChannel": false
@@ -16542,7 +16477,7 @@
       "albumId": 1371,
       "artist": "Enkdenados",
       "title": "La Sombra (Demo 1)",
-      "year": null,
+      "year": 2010,
       "type": "other",
       "artistOnChannel": false
     },
@@ -17503,14 +17438,6 @@
       "artist": "Fening",
       "title": "Oportunidades",
       "year": 2008,
-      "type": "other",
-      "artistOnChannel": false
-    },
-    {
-      "albumId": 1491,
-      "artist": "Deus Irae",
-      "title": "Demo",
-      "year": 2004,
       "type": "other",
       "artistOnChannel": false
     },
@@ -20075,14 +20002,6 @@
       "artistOnChannel": true
     },
     {
-      "albumId": 1809,
-      "artist": "LaMueka",
-      "title": "DEMO casero",
-      "year": 2013,
-      "type": "other",
-      "artistOnChannel": true
-    },
-    {
       "albumId": 1810,
       "artist": "StormThrash",
       "title": "Systematic Annihilation",
@@ -21851,14 +21770,6 @@
       "artistOnChannel": false
     },
     {
-      "albumId": 2030,
-      "artist": "Solares",
-      "title": "Cruel",
-      "year": 2008,
-      "type": "other",
-      "artistOnChannel": true
-    },
-    {
       "albumId": 2031,
       "artist": "Masseratti 2lts",
       "title": "tin.Mar.in",
@@ -23035,14 +22946,6 @@
       "artistOnChannel": false
     },
     {
-      "albumId": 2182,
-      "artist": "Los Amigos Invisibles",
-      "title": "Arepa 3000",
-      "year": 2000,
-      "type": "other",
-      "artistOnChannel": true
-    },
-    {
       "albumId": 2183,
       "artist": "Raped Dolls",
       "title": "Ya no estas",
@@ -23601,14 +23504,6 @@
       "year": 2011,
       "type": "other",
       "artistOnChannel": false
-    },
-    {
-      "albumId": 2295,
-      "artist": "Los Crema Paraíso",
-      "title": "Debut",
-      "year": 2009,
-      "type": "other",
-      "artistOnChannel": true
     },
     {
       "albumId": 2296,
@@ -24243,14 +24138,6 @@
       "artistOnChannel": false
     },
     {
-      "albumId": 2374,
-      "artist": "Sentencia",
-      "title": "Okta",
-      "year": 1995,
-      "type": "other",
-      "artistOnChannel": true
-    },
-    {
       "albumId": 2375,
       "artist": "Trampas",
       "title": "Trampas",
@@ -24367,14 +24254,6 @@
       "artist": "Chonto Musik",
       "title": "Balkan Mixtape",
       "year": 2010,
-      "type": "other",
-      "artistOnChannel": false
-    },
-    {
-      "albumId": 2390,
-      "artist": "Enkdenados",
-      "title": "Demo",
-      "year": 2009,
       "type": "other",
       "artistOnChannel": false
     },
@@ -24883,14 +24762,6 @@
       "artistOnChannel": false
     },
     {
-      "albumId": 2455,
-      "artist": "Témpano",
-      "title": "Fin de la Infancia",
-      "year": 2000,
-      "type": "other",
-      "artistOnChannel": true
-    },
-    {
       "albumId": 2456,
       "artist": "Templo de Nadie",
       "title": "Sobrio",
@@ -25283,14 +25154,6 @@
       "artistOnChannel": false
     },
     {
-      "albumId": 2505,
-      "artist": "Mango Funk",
-      "title": "El Beat del Tambor",
-      "year": 2008,
-      "type": "other",
-      "artistOnChannel": true
-    },
-    {
       "albumId": 2506,
       "artist": "Los Impala",
       "title": "14 Grandes Éxitos",
@@ -25417,14 +25280,6 @@
       "year": 2006,
       "type": "other",
       "artistOnChannel": false
-    },
-    {
-      "albumId": 2522,
-      "artist": "Los Impala",
-      "title": "Los Impala ´66",
-      "year": 1966,
-      "type": "other",
-      "artistOnChannel": true
     },
     {
       "albumId": 2523,
@@ -26683,14 +26538,6 @@
       "artistOnChannel": false
     },
     {
-      "albumId": 2679,
-      "artist": "Frente De Ira",
-      "title": "y La Conviccion De LO Que No Se Ve",
-      "year": 2010,
-      "type": "other",
-      "artistOnChannel": false
-    },
-    {
       "albumId": 2680,
       "artist": "Morrigan Crowley",
       "title": "You Owe Me Horror",
@@ -26705,14 +26552,6 @@
       "year": 2011,
       "type": "other",
       "artistOnChannel": false
-    },
-    {
-      "albumId": 2682,
-      "artist": "Éxodo",
-      "title": "Ep",
-      "year": 2011,
-      "type": "other",
-      "artistOnChannel": true
     },
     {
       "albumId": 2683,
@@ -27531,14 +27370,6 @@
       "artistOnChannel": false
     },
     {
-      "albumId": 2786,
-      "artist": "Vox",
-      "title": "No Se Puede Ocultar",
-      "year": 1993,
-      "type": "other",
-      "artistOnChannel": true
-    },
-    {
       "albumId": 2787,
       "artist": "OK",
       "title": "Querido Loco",
@@ -27739,14 +27570,6 @@
       "artistOnChannel": false
     },
     {
-      "albumId": 2813,
-      "artist": "Diphteria",
-      "title": "Demo",
-      "year": 2002,
-      "type": "other",
-      "artistOnChannel": false
-    },
-    {
       "albumId": 2814,
       "artist": "Reckless",
       "title": "On My Own",
@@ -27935,14 +27758,6 @@
       "artist": "Zardonic",
       "title": "Those Who Know The Truth",
       "year": 2009,
-      "type": "other",
-      "artistOnChannel": false
-    },
-    {
-      "albumId": 2838,
-      "artist": "Tierra del Dragón",
-      "title": "Recuerdos del Olvido",
-      "year": 2004,
       "type": "other",
       "artistOnChannel": false
     },
@@ -28291,14 +28106,6 @@
       "artistOnChannel": false
     },
     {
-      "albumId": 2883,
-      "artist": "Patafunk",
-      "title": "Dudelic",
-      "year": 2008,
-      "type": "other",
-      "artistOnChannel": true
-    },
-    {
       "albumId": 2884,
       "artist": "Darvaset",
       "title": "Demo",
@@ -28375,14 +28182,6 @@
       "artist": "Angel Rada",
       "title": "The Golden Flame",
       "year": 2002,
-      "type": "other",
-      "artistOnChannel": false
-    },
-    {
-      "albumId": 2895,
-      "artist": "Psicosis",
-      "title": "Premotion",
-      "year": 2007,
       "type": "other",
       "artistOnChannel": false
     },
@@ -28655,14 +28454,6 @@
       "artist": "Ernie",
       "title": "AOM",
       "year": 2010,
-      "type": "other",
-      "artistOnChannel": false
-    },
-    {
-      "albumId": 2930,
-      "artist": "Morbus",
-      "title": "The Beginning Of The Lascivious Adicction",
-      "year": 2004,
       "type": "other",
       "artistOnChannel": false
     },
@@ -29035,14 +28826,6 @@
       "artistOnChannel": false
     },
     {
-      "albumId": 2977,
-      "artist": "Claroscuro",
-      "title": "Demos",
-      "year": 2002,
-      "type": "other",
-      "artistOnChannel": true
-    },
-    {
       "albumId": 2978,
       "artist": "Daniela Bascopé",
       "title": "Ven",
@@ -29065,14 +28848,6 @@
       "year": 2010,
       "type": "other",
       "artistOnChannel": false
-    },
-    {
-      "albumId": 2981,
-      "artist": "Chucknorris",
-      "title": "11 Cuento",
-      "year": 2005,
-      "type": "other",
-      "artistOnChannel": true
     },
     {
       "albumId": 2982,
@@ -29181,7 +28956,7 @@
     {
       "albumId": 2995,
       "artist": "Alto Voltaje",
-      "title": "Carcel, muert o rock n roll",
+      "title": "Cárcel, Muerte o Rock n Roll",
       "year": 2007,
       "type": "ep",
       "artistOnChannel": false
@@ -29232,14 +29007,6 @@
       "title": "Sana Modern Mortis",
       "year": 2023,
       "type": "other",
-      "artistOnChannel": false
-    },
-    {
-      "albumId": 3000,
-      "artist": "Puah",
-      "title": "Traición",
-      "year": 2008,
-      "type": "demo",
       "artistOnChannel": false
     },
     {
@@ -29899,14 +29666,6 @@
       "artistOnChannel": false
     },
     {
-      "albumId": 3083,
-      "artist": "Alban Arthuan",
-      "title": "con una Caja de Fósforo",
-      "year": 2005,
-      "type": "other",
-      "artistOnChannel": true
-    },
-    {
       "albumId": 3084,
       "artist": "Various Artists",
       "title": "20 Años Festival Nuevas Bandas",
@@ -30187,14 +29946,6 @@
       "artistOnChannel": false
     },
     {
-      "albumId": 3118,
-      "artist": "Secta Canibal",
-      "title": "El Arte De La Necrofagia",
-      "year": 2003,
-      "type": "other",
-      "artistOnChannel": false
-    },
-    {
       "albumId": 3120,
       "artist": "Papas Underground",
       "title": "Rollinga Social Club",
@@ -30216,14 +29967,6 @@
       "title": "Vienes / Vas",
       "year": 2011,
       "type": "ep",
-      "artistOnChannel": false
-    },
-    {
-      "albumId": 3123,
-      "artist": "Retrovértigo",
-      "title": "!!! Estás Triste",
-      "year": 2005,
-      "type": "other",
       "artistOnChannel": false
     },
     {
@@ -30891,14 +30634,6 @@
       "artistOnChannel": true
     },
     {
-      "albumId": 3206,
-      "artist": "Edgar Jiménez",
-      "title": "Edgar Jiménez Con El Sentimineto Muerto",
-      "year": 2009,
-      "type": "other",
-      "artistOnChannel": true
-    },
-    {
       "albumId": 3207,
       "artist": "FBRK",
       "title": "Visceral",
@@ -31211,14 +30946,6 @@
       "artistOnChannel": false
     },
     {
-      "albumId": 3246,
-      "artist": "Famasloop",
-      "title": "Tres Casas",
-      "year": 2006,
-      "type": "other",
-      "artistOnChannel": true
-    },
-    {
       "albumId": 3247,
       "artist": "Distorsión",
       "title": "Distorsión",
@@ -31235,22 +30962,6 @@
       "artistOnChannel": false
     },
     {
-      "albumId": 3249,
-      "artist": "Carnagoth",
-      "title": "Bootleg",
-      "year": 2008,
-      "type": "other",
-      "artistOnChannel": false
-    },
-    {
-      "albumId": 3250,
-      "artist": "Sentencia",
-      "title": "En vivo en el nuevas bandas",
-      "year": 1994,
-      "type": "other",
-      "artistOnChannel": true
-    },
-    {
       "albumId": 3251,
       "artist": "Sentencia",
       "title": "Sentenia",
@@ -31264,14 +30975,6 @@
       "title": "Consagración",
       "year": 2002,
       "type": "other",
-      "artistOnChannel": false
-    },
-    {
-      "albumId": 3253,
-      "artist": "Natastor",
-      "title": "1992-1996",
-      "year": 2004,
-      "type": "compilation",
       "artistOnChannel": false
     },
     {
@@ -31403,14 +31106,6 @@
       "artistOnChannel": false
     },
     {
-      "albumId": 3271,
-      "artist": "1ra Edición",
-      "title": "Es Tiempo De Actuar",
-      "year": 2007,
-      "type": "other",
-      "artistOnChannel": true
-    },
-    {
       "albumId": 3272,
       "artist": "La Liga",
       "title": "Latido Artístico Independiente",
@@ -31507,14 +31202,6 @@
       "artistOnChannel": false
     },
     {
-      "albumId": 3284,
-      "artist": "Pastel de Gente",
-      "title": "El Blues del Plan Union",
-      "year": 1985,
-      "type": "other",
-      "artistOnChannel": false
-    },
-    {
       "albumId": 3285,
       "artist": "Los Dolares",
       "title": "Es El Camino'",
@@ -31579,30 +31266,6 @@
       "artistOnChannel": false
     },
     {
-      "albumId": 3293,
-      "artist": "Pablo Manavello",
-      "title": "Una Mirada Hacia Dentro",
-      "year": 1982,
-      "type": "other",
-      "artistOnChannel": false
-    },
-    {
-      "albumId": 3294,
-      "artist": "Torre de Marfil",
-      "title": "En vivo Ciudad Ojeda",
-      "year": 2001,
-      "type": "other",
-      "artistOnChannel": true
-    },
-    {
-      "albumId": 3295,
-      "artist": "Torre de Marfil",
-      "title": "Ecos de la Realidad",
-      "year": 2004,
-      "type": "other",
-      "artistOnChannel": true
-    },
-    {
       "albumId": 3296,
       "artist": "Levítico",
       "title": "Los X + @levitico",
@@ -31649,22 +31312,6 @@
       "year": 2002,
       "type": "other",
       "artistOnChannel": true
-    },
-    {
-      "albumId": 3301,
-      "artist": "Krueger",
-      "title": "A Decade of Perversion",
-      "year": 2002,
-      "type": "other",
-      "artistOnChannel": false
-    },
-    {
-      "albumId": 3302,
-      "artist": "Krueger",
-      "title": "En vivo Puerto Ordaz",
-      "year": 2003,
-      "type": "other",
-      "artistOnChannel": false
     },
     {
       "albumId": 3303,
@@ -31971,14 +31618,6 @@
       "artistOnChannel": false
     },
     {
-      "albumId": 3343,
-      "artist": "Dioslepague",
-      "title": "Madres",
-      "year": 1999,
-      "type": "other",
-      "artistOnChannel": true
-    },
-    {
       "albumId": 3344,
       "artist": "10MC",
       "title": "Ep",
@@ -32027,30 +31666,6 @@
       "artistOnChannel": true
     },
     {
-      "albumId": 3350,
-      "artist": "Los Amigos Invisibles",
-      "title": "Como Esta",
-      "year": 2008,
-      "type": "other",
-      "artistOnChannel": true
-    },
-    {
-      "albumId": 3351,
-      "artist": "Los Amigos Invisibles",
-      "title": "Vol. 1",
-      "year": 2003,
-      "type": "other",
-      "artistOnChannel": true
-    },
-    {
-      "albumId": 3353,
-      "artist": "Los Amigos Invisibles",
-      "title": "Gozadera",
-      "year": 1998,
-      "type": "other",
-      "artistOnChannel": true
-    },
-    {
       "albumId": 3354,
       "artist": "Los Amigos Invisibles",
       "title": "En Vivo - Maracaibo",
@@ -32079,14 +31694,6 @@
       "artist": "Los Amigos Invisibles",
       "title": "Telefunky",
       "year": 2006,
-      "type": "other",
-      "artistOnChannel": true
-    },
-    {
-      "albumId": 3358,
-      "artist": "Los Amigos Invisibles",
-      "title": "Venezuelan Dance Band",
-      "year": 1995,
       "type": "other",
       "artistOnChannel": true
     },
@@ -32359,14 +31966,6 @@
       "artist": "Los Darts",
       "title": "Los Darts",
       "year": 1966,
-      "type": "other",
-      "artistOnChannel": false
-    },
-    {
-      "albumId": 3394,
-      "artist": "Los Darts",
-      "title": "Vol. II",
-      "year": 1967,
       "type": "other",
       "artistOnChannel": false
     },
@@ -33555,14 +33154,6 @@
       "artistOnChannel": false
     },
     {
-      "albumId": 3541,
-      "artist": "Candy66",
-      "title": "Bitsessions",
-      "year": 2010,
-      "type": "other",
-      "artistOnChannel": true
-    },
-    {
       "albumId": 3542,
       "artist": "Candy66",
       "title": "Lo Mejor de Candy 66",
@@ -33705,14 +33296,6 @@
       "year": 2013,
       "type": "other",
       "artistOnChannel": true
-    },
-    {
-      "albumId": 3560,
-      "artist": "Aerea",
-      "title": "Viajando Lejos",
-      "year": 2007,
-      "type": "other",
-      "artistOnChannel": false
     },
     {
       "albumId": 3561,
@@ -36107,14 +35690,6 @@
       "artistOnChannel": false
     },
     {
-      "albumId": 3862,
-      "artist": "Carlos Morean",
-      "title": "En Vivo",
-      "year": 1993,
-      "type": "other",
-      "artistOnChannel": false
-    },
-    {
       "albumId": 3863,
       "artist": "Carlos Morean",
       "title": "Aquí Estoy",
@@ -36531,14 +36106,6 @@
       "artistOnChannel": false
     },
     {
-      "albumId": 3914,
-      "artist": "Claroscuro",
-      "title": "Claroscuro",
-      "year": 1993,
-      "type": "ep",
-      "artistOnChannel": true
-    },
-    {
       "albumId": 3915,
       "artist": "Clio",
       "title": "Humble Songs",
@@ -36859,14 +36426,6 @@
       "artistOnChannel": false
     },
     {
-      "albumId": 3955,
-      "artist": "Los Darts",
-      "title": "De Etiqueta",
-      "year": 1968,
-      "type": "other",
-      "artistOnChannel": false
-    },
-    {
       "albumId": 3956,
       "artist": "De Pushkos",
       "title": "De Pushkos",
@@ -36993,14 +36552,6 @@
       "year": 1983,
       "type": "other",
       "artistOnChannel": false
-    },
-    {
-      "albumId": 3972,
-      "artist": "Desorden Público",
-      "title": "DP18 en Concierto",
-      "year": 2004,
-      "type": "other",
-      "artistOnChannel": true
     },
     {
       "albumId": 3973,
@@ -38955,14 +38506,6 @@
       "artistOnChannel": true
     },
     {
-      "albumId": 4214,
-      "artist": "Henry Stephen",
-      "title": "I Don't Know",
-      "year": 1982,
-      "type": "other",
-      "artistOnChannel": true
-    },
-    {
       "albumId": 4215,
       "artist": "Henry Stephen",
       "title": "Conozca A Los Impala",
@@ -39073,14 +38616,6 @@
       "year": 1964,
       "type": "other",
       "artistOnChannel": false
-    },
-    {
-      "albumId": 4229,
-      "artist": "Hydra",
-      "title": "Desde Una Orilla",
-      "year": null,
-      "type": "other",
-      "artistOnChannel": true
     },
     {
       "albumId": 4230,
@@ -39207,14 +38742,6 @@
       "artist": "Ilan Chester",
       "title": "Ilan Chester de Colección Vol. 2",
       "year": null,
-      "type": "other",
-      "artistOnChannel": true
-    },
-    {
-      "albumId": 4246,
-      "artist": "Ilan Chester",
-      "title": "Ilan En Vivo",
-      "year": 1988,
       "type": "other",
       "artistOnChannel": true
     },
@@ -40505,14 +40032,6 @@
       "year": 2023,
       "type": "other",
       "artistOnChannel": true
-    },
-    {
-      "albumId": 4406,
-      "artist": "Razanima",
-      "title": "Lágrimas Sónicas",
-      "year": null,
-      "type": "other",
-      "artistOnChannel": false
     },
     {
       "albumId": 4407,
@@ -42323,22 +41842,6 @@
       "artistOnChannel": false
     },
     {
-      "albumId": 4633,
-      "artist": "Alice in Hell",
-      "title": "El Descenso",
-      "year": null,
-      "type": "other",
-      "artistOnChannel": false
-    },
-    {
-      "albumId": 4634,
-      "artist": "Alto Voltaje",
-      "title": "Cárcel, Muerte",
-      "year": null,
-      "type": "other",
-      "artistOnChannel": false
-    },
-    {
       "albumId": 4635,
       "artist": "Los Amigos Invisibles",
       "title": "Grandes Exitos de Los Amigos Invisibles…",
@@ -42350,14 +41853,6 @@
       "albumId": 4636,
       "artist": "A'mbar",
       "title": "(María Conchita Alonso)",
-      "year": null,
-      "type": "other",
-      "artistOnChannel": true
-    },
-    {
-      "albumId": 4637,
-      "artist": "Los Amigos Invisibles",
-      "title": "The Venezuelan",
       "year": null,
       "type": "other",
       "artistOnChannel": true
@@ -42399,22 +41894,6 @@
       "artist": "Various Artists",
       "title": "La Magia Continua...",
       "year": 1997,
-      "type": "other",
-      "artistOnChannel": true
-    },
-    {
-      "albumId": 4643,
-      "artist": "Azúcar, Cacao & Leche",
-      "title": "Azúcar Cacao y Leche Vol. II",
-      "year": 1972,
-      "type": "other",
-      "artistOnChannel": true
-    },
-    {
-      "albumId": 4644,
-      "artist": "Various Artists",
-      "title": "Grandes Éxitos De Los",
-      "year": null,
       "type": "other",
       "artistOnChannel": true
     },
@@ -42499,14 +41978,6 @@
       "artistOnChannel": true
     },
     {
-      "albumId": 4655,
-      "artist": "Carlos Morean",
-      "title": "El Gigante De La",
-      "year": null,
-      "type": "other",
-      "artistOnChannel": false
-    },
-    {
       "albumId": 4656,
       "artist": "Various Artists",
       "title": "Serie Lo Máximo",
@@ -42558,14 +42029,6 @@
       "albumId": 4663,
       "artist": "Various Artists",
       "title": "Parece Que Fue Ayer (Serie 32)",
-      "year": 2000,
-      "type": "other",
-      "artistOnChannel": true
-    },
-    {
-      "albumId": 4664,
-      "artist": "Luz Verde",
-      "title": "Cinema Cero",
       "year": 2000,
       "type": "other",
       "artistOnChannel": true
@@ -42707,36 +42170,12 @@
       "artistOnChannel": false
     },
     {
-      "albumId": 4682,
-      "artist": "Cuarto Magno",
-      "title": "Angel",
-      "year": 2016,
-      "type": "other",
-      "artistOnChannel": false
-    },
-    {
       "albumId": 4683,
       "artist": "Daniel Grau",
       "title": "You Are In My Dreams",
       "year": 1994,
       "type": "other",
       "artistOnChannel": false
-    },
-    {
-      "albumId": 4684,
-      "artist": "Various Artists",
-      "title": "Grandes Exitos de",
-      "year": null,
-      "type": "other",
-      "artistOnChannel": true
-    },
-    {
-      "albumId": 4685,
-      "artist": "Desorden Público",
-      "title": "Guarachando En Navidad Volumen 1",
-      "year": 2014,
-      "type": "other",
-      "artistOnChannel": true
     },
     {
       "albumId": 4686,
@@ -42782,7 +42221,7 @@
       "albumId": 4692,
       "artist": "Desorden Público",
       "title": "Guarachando en Navidad Vol. 1",
-      "year": null,
+      "year": 2014,
       "type": "other",
       "artistOnChannel": true
     },
@@ -42857,14 +42296,6 @@
       "year": 2020,
       "type": "other",
       "artistOnChannel": true
-    },
-    {
-      "albumId": 4741,
-      "artist": "Frank Quintero",
-      "title": "Frankamente Acústico",
-      "year": 1994,
-      "type": "other",
-      "artistOnChannel": false
     },
     {
       "albumId": 4746,
@@ -43081,14 +42512,6 @@
       "year": 1964,
       "type": "other",
       "artistOnChannel": false
-    },
-    {
-      "albumId": 4836,
-      "artist": "Vytas Brenner",
-      "title": "Ofrenda: Jayeche",
-      "year": 1975,
-      "type": "other",
-      "artistOnChannel": true
     },
     {
       "albumId": 4837,
@@ -43630,7 +43053,7 @@
       "albumId": 4988,
       "artist": "Azúcar, Cacao & Leche",
       "title": "Volumen 2",
-      "year": null,
+      "year": 1972,
       "type": "other",
       "artistOnChannel": true
     },
@@ -43711,14 +43134,6 @@
       "artist": "Las Cuatro Monedas",
       "title": "Las 4 Monedas Vol. 3",
       "year": 1970,
-      "type": "other",
-      "artistOnChannel": true
-    },
-    {
-      "albumId": 5034,
-      "artist": "Azúcar, Cacao & Leche",
-      "title": "Grandes Exitos",
-      "year": 1975,
       "type": "other",
       "artistOnChannel": true
     },
@@ -44707,14 +44122,6 @@
       "artistOnChannel": true
     },
     {
-      "albumId": 740,
-      "artist": "Atkinson",
-      "title": "La Banda",
-      "year": 2009,
-      "type": "other",
-      "artistOnChannel": true
-    },
-    {
       "albumId": 741,
       "artist": "Demise",
       "title": "Promo Demo 2006",
@@ -44809,14 +44216,6 @@
       "year": 2016,
       "type": "other",
       "artistOnChannel": false
-    },
-    {
-      "albumId": 753,
-      "artist": "Sentencia",
-      "title": "Silencio Demo 92​-​93",
-      "year": 1993,
-      "type": "other",
-      "artistOnChannel": true
     },
     {
       "albumId": 754,
