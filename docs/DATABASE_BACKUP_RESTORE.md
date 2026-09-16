@@ -8,7 +8,7 @@ pierde la evidencia que los respalda.
 
 | Comando | Script | Qué hace | Toca datos |
 |---|---|---|---|
-| `npm run db:backup` | `scripts/db-backup.sh [destino]` | Crea `backups/crv-<UTC>/` | Solo lee |
+| `npm run db:backup` | `scripts/db-backup.sh [destino]` | Crea `<destino>/crv-<UTC>/` (por defecto `./backups`) | Solo lee |
 | `npm run db:restore-check -- <backup>` | `scripts/db-restore-check.sh` | Restaura en un PostgreSQL desechable y verifica | No toca la base ni `data/raw` |
 | `npm run db:restore -- <backup> [opciones]` | `scripts/db-restore.sh` | Restauración real | Crea una base y un `data/raw` **nuevos**; nunca sobrescribe |
 
@@ -20,7 +20,7 @@ Los tres usan `docker exec` contra el contenedor (no hace falta `psql` ni
 ```bash
 npm run db:up           # si crv-postgres no está corriendo
 npm run db:backup       # → backups/crv-20260914T234231Z/
-./scripts/db-backup.sh /media/disco-externo/crv   # otro destino
+npm run db:backup -- /mnt/datos/backups/crv   # destino recomendado: disco de datos
 ```
 
 Variables opcionales: `CRV_PG_CONTAINER` (por defecto `crv-postgres`),
@@ -65,6 +65,20 @@ base restaurada.
 
 `backups/` está en `.gitignore`: los respaldos contienen el catálogo entero y
 nunca van a Git.
+
+### Dónde viven los respaldos
+
+En esta máquina los respaldos grandes viven en el **disco de datos**:
+`/mnt/datos/backups/crv/` (ext4, 465 GB, montado por `fstab` con `nofail`).
+El 2026-09-16 se mudaron allí los 14,7 GB existentes (`crv-20260915T011708Z/`,
+`crv-20260915T063612Z/` y el dirigido `crv-20260916-cierre.dump`) para liberar
+el disco raíz. Respaldar directo allí:
+`npm run db:backup -- /mnt/datos/backups/crv`.
+
+**Comprobar que el disco esté montado antes de escribir**
+(`mountpoint -q /mnt/datos`): sin él, `mkdir -p` crearía un directorio
+«sombra» en el disco raíz y el respaldo quedaría en el lugar equivocado sin
+avisar.
 
 Mientras corre se usa `backups/.crv-<UTC>.partial`. Solo después de crear y
 comprobar el TOC, el crudo, el manifest y las sumas se renombra al directorio
@@ -161,7 +175,7 @@ crudo apartados se pueden eliminar a mano (`DROP DATABASE crv_antes_20260915`).
 
 | Dato | Valor |
 |---|---|
-| Directorio | `backups/crv-20260915T011708Z/` (6,8 GiB) |
+| Directorio | `/mnt/datos/backups/crv/crv-20260915T011708Z/` (6,8 GiB) |
 | Duración | `pg_dump` 01:17:08Z → 02:01:17Z (44 min); backup completo 02:02:07Z |
 | `crv.dump` | 7.287.751.406 bytes, sha256 `6c92bb78c2d1b8c91a655e6b6434a7d47ee0a21d4f609ee84d22bc209c5b259a` |
 | `raw.tar.gz` | 13.454.015 bytes; 3.661 archivos; 1.830 `raw_pages`; `raw_missing=0` |
@@ -178,7 +192,8 @@ disponible y el contenedor usaba unos 630 MiB.
 
 ### Prueba de restauración
 
-`npm run db:restore-check -- backups/crv-20260915T011708Z`, en un
+`npm run db:restore-check -- /mnt/datos/backups/crv/crv-20260915T011708Z`,
+en un
 PostgreSQL 16 desechable (`crv-restore-check-2969285`, 127.0.0.1:55498):
 
 | Verificación | Resultado |

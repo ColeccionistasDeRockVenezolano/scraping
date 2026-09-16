@@ -123,9 +123,10 @@ Aprobada la implementación, se cerró todo lo que quedaba:
   de ER); en caliente **746 ms → OK** (límite P8 de 2 s). El par 14←3617 se fusiona y se revierte entero.
 - **Cola poblada**: `crv review person-candidates --confirm` → run 249: **173 revisiones `person_duplicate`
   abiertas, 0 preexistentes**; visibles en `/personas/duplicados` para que decidas.
-- **Respaldo**: se guardó el respaldo dirigido `backups/crv-20260916-cierre.dump` (todo menos
+- **Respaldo**: se guardó el respaldo dirigido `crv-20260916-cierre.dump` (todo menos
   `ingest.entity_resolution_decisions`, 19 GB — no la tocan estas migraciones; SHA-256 registrado junto al
-  archivo). El respaldo completo (`npm run db:backup`, ~6,8 GB) queda recomendado para la próxima ventana:
+  archivo); los respaldos viven desde ese día en `/mnt/datos/backups/crv/` (mudanza de 14,7 GB con
+  verificación sha256 completa). El respaldo completo (`npm run db:backup`, ~6,8 GB) queda recomendado para la próxima ventana:
   tarda horas y la base no había cambiado desde sus respaldos del 2026-09-15; la migración fue DDL aditivo
   y reversible con sus `.down`.
 - Suites sobre el árbol final: typecheck ✓, lint ✓, unit 245 ✓, contratos E11 27/27 ✓, prueba visual de
