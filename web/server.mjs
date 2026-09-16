@@ -1,6 +1,8 @@
 // CRV · gateway de producción mínimo para publicar la SPA bajo un prefijo
 // Tailscale Funnel. Mantiene Fastify y PostgreSQL en loopback: solamente
-// reenvía /crv/api/* al API local y sirve el build de Vite en /crv/*.
+// reenvía /crv/api/* al API local y sirve el build público de Vite
+// (`dist-public/`, el de `npm run build:public`) en /crv/*. El build de
+// verificación (`npm run build`) escribe `dist/` y NO toca lo publicado.
 import http from "node:http";
 import { createReadStream } from "node:fs";
 import { stat } from "node:fs/promises";
@@ -8,7 +10,7 @@ import { fileURLToPath } from "node:url";
 import path from "node:path";
 
 const directory = path.dirname(fileURLToPath(import.meta.url));
-const dist = path.join(directory, "dist");
+const dist = path.join(directory, "dist-public");
 const host = process.env.CRV_WEB_HOST ?? "127.0.0.1";
 const port = Number(process.env.CRV_WEB_PORT ?? "3120");
 const apiHost = process.env.CRV_API_HOST ?? "127.0.0.1";

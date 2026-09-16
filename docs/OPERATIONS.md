@@ -250,9 +250,15 @@ minutos. Las sesiones duran 12 horas y se invalidan al reiniciar la API.
 pero debe permanecer vacío si no existe uno. La cuenta autenticada firma cada
 transacción y run `manual`, visibles en `GET /runs/:id` y `GET /audit`.
 
-**Publicar el frontend (`web/dist`) bajo un prefijo de Funnel exige dos
-variables en el momento del build**, o la página carga en negro sin ningún
-error en consola:
+**Publicar el frontend bajo un prefijo de Funnel exige dos variables en el
+momento del build**, o la página carga en negro sin ningún error en consola:
+el prefijo (`--base=/crv/`, ya lo pasa `build:public`) y `VITE_API_BASE_URL`.
+El build público escribe `web/dist-public/`, que es el directorio que sirve
+`server.mjs`; `npm run build` (verificación) escribe `web/dist/` y no toca lo
+publicado — mezclarlos dejó la página en blanco el 2026-09-16 (un build de
+verificación pisó el bundle del Funnel y los assets `/assets/…` no existen
+bajo `/crv/`). Tras publicar: `systemctl --user restart crv-web` (y `crv-api`
+si cambió el API).
 
 ```bash
 cd web && VITE_API_BASE_URL=https://NODO.TAILNET.ts.net/crv/api npm run build:public

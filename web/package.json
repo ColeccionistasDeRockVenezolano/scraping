@@ -10,7 +10,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -p tsconfig.json --noEmit && vite build",
-    "build:public": "tsc -p tsconfig.json --noEmit && vite build --base=/crv/",
+    "build:public": "tsc -p tsconfig.json --noEmit && vite build --base=/crv/ --outDir dist-public",
     "preview": "vite preview",
     "serve:public": "node server.mjs",
     "typecheck": "tsc -p tsconfig.json --noEmit",

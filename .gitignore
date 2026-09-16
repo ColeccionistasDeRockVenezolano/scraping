@@ -22,6 +22,7 @@ config/local.*
 # --- Node / TypeScript ---
 node_modules/
 dist/
+dist-public/
 build/
 *.tsbuildinfo
 .tsimp/

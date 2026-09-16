@@ -49,6 +49,11 @@ La prueba extrema aislada se ejecuta desde la raíz con `npm run test:visual-ext
 El gateway `server.mjs` sirve la SPA bajo `/crv` y reenvía únicamente
 `/crv/api/*` al API local. Base de datos y API permanecen en loopback.
 
+El build público se escribe en `dist-public/` y `server.mjs` sirve ESE
+directorio. `npm run build` (verificación o vista local) escribe `dist/` y no
+toca lo publicado: el bundle del Funnel no se pisa con un build de verificación
+(esa mezcla dejó la página en blanco el 2026-09-16).
+
 ```bash
 cd web
 VITE_API_BASE_URL=https://NODO.TAILNET.ts.net/crv/api npm run build:public

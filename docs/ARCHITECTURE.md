@@ -497,8 +497,9 @@ consulta en `GET /audit` y `GET /runs/:id` (PHASES §E7B).
 React SPA en `web/` (Vite), separada de Fastify. Solo habla con la API
 (`VITE_API_BASE_URL`, por defecto `http://127.0.0.1:8080`); nunca con
 PostgreSQL. `npm --prefix web run dev|build`; para publicarla bajo un prefijo,
-`build:public` + `serve:public` (`web/server.mjs`: sirve `dist/` en `/crv/*` y
-reenvía `/crv/api/*` a la API en loopback).
+`build:public` + `serve:public` (`web/server.mjs`: sirve `dist-public/` en
+`/crv/*` y reenvía `/crv/api/*` a la API en loopback; `npm run build` escribe
+`dist/` para verificación y no toca lo publicado).
 
 ---
 

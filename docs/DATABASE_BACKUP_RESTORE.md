@@ -136,7 +136,7 @@ crudo apartados se pueden eliminar a mano (`DROP DATABASE crv_antes_20260915`).
   `CRV_OPERATOR_TOKEN`) no se respalda: en una máquina nueva se recrea desde
   `.env.example`. `pg_dump` tampoco copia roles ni contraseñas; el rol dueño lo
   crea el contenedor (`POSTGRES_USER`) antes de restaurar.
-- **Artefactos regenerables:** `node_modules`, `dist`, `web/dist`.
+- **Artefactos regenerables:** `node_modules`, `dist`, `dist-public`, `web/dist`, `web/dist-public`.
 - **Las hojas XLSX de entrada**, que viven en el repositorio.
 
 ## 4. Límites conocidos
