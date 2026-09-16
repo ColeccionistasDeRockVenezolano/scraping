@@ -44,6 +44,11 @@ const DICTS: Record<string, Record<string, string>> = {
   entityKind: {
     artist: "Artista", person: "Persona", organization: "Organización", album: "Disco", track: "Pista",
   },
+  // Clasificación de nombres de persona (E11.7).
+  personNameClass: {
+    ok: "Nombre", organization_like: "Parece organización", duration: "Duración o número",
+    fragment: "Fragmento de texto", multiple_people: "Varias personas",
+  },
 };
 
 function label(dict: keyof typeof DICTS, value: string | null | undefined): string {
@@ -62,6 +67,7 @@ export const reviewStatusLabel = (value: string) => label("reviewStatus", value)
 export const confidenceLabel = (value: string) => label("confidence", value);
 export const searchTypeLabel = (value: string) => label("searchType", value);
 export const entityKindLabel = (value: string) => label("entityKind", value);
+export const nameClassLabel = (value: string) => label("personNameClass", value);
 
 export const ARTIST_TYPES = Object.keys(DICTS["artistType"]!);
 export const ALBUM_TYPES = Object.keys(DICTS["albumType"]!);

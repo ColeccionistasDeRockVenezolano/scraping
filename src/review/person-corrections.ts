@@ -45,6 +45,9 @@ const correctionSchema = z.discriminatedUnion("op", [
   z.object({ op: z.literal("drop_aliases"), person: entityRef, aliases: z.array(z.string().min(1)).min(1), why }),
   z.object({ op: z.literal("to_artist"), person: entityRef, artist: entityRef, keepNameAsAlias: z.boolean().default(false), why }),
   z.object({ op: z.literal("to_organization"), person: entityRef, organization: entityRef, keepNameAsAlias: z.boolean().default(false), why }),
+  // Una fila que en realidad son varias personas (E11.7): cada nombre del
+  // plan recibe copia de créditos y membresías, y la fila combinada se retira.
+  z.object({ op: z.literal("split"), person: entityRef, into: z.array(z.string().min(1)).min(2), why }),
 ]);
 export const personCorrectionPlanSchema = z.object({
   decidedAt: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
@@ -146,6 +149,8 @@ async function applyOne(client: PoolClient, correction: PersonCorrection, note: 
       return absorbPerson(client, correction.op, correction.person, correction.artist, ABSORBERS.artist, correction.keepNameAsAlias, reason, runId);
     case "to_organization":
       return absorbPerson(client, correction.op, correction.person, correction.organization, ABSORBERS.organization, correction.keepNameAsAlias, reason, runId);
+    case "split":
+      return splitPerson(client, correction, reason, runId);
   }
 }
 
@@ -199,6 +204,209 @@ async function absorbPerson(
   await client.query("DELETE FROM public.persons WHERE id=$1", [ref.id]);
   const credits = await mergeEquivalentCredits(client, { column: target.column, id: targetRef.id }, reason, runId, parents);
   return { op, status: "applied", detail: `«${ref.name}» (${ref.id}) → ${target.label} «${targetRef.name}»; ${converted} créditos pasados, ${nameClaims.length} claims de nombre rechazados`, credits };
+}
+
+/**
+ * Contexto del operador para las altas que un plan necesita (dividir crea
+ * personas). Reutiliza la misma fuente `crv-operador` que la API, para que las
+ * altas de un plan dejen los mismos claims human/high.
+ */
+async function planOperatorContext(client: PoolClient, runId: number, note: string): Promise<OperatorContext> {
+  await client.query(`
+    INSERT INTO ingest.sources(slug,name,site_type,trust_level,enabled,notes)
+    VALUES($1,'Operador del catálogo (plan de correcciones)','database','high',false,
+           'Altas humanas hechas por un plan de correcciones (E11.7). Nunca se raspa.')
+    ON CONFLICT (slug) DO NOTHING`, [OPERATOR_SOURCE_SLUG]);
+  const { rows } = await client.query<{ id: string }>("SELECT id::text FROM ingest.sources WHERE slug=$1", [OPERATOR_SOURCE_SLUG]);
+  return { client, runId, sourceId: Number(rows[0]!.id), operator: getEnv().CRV_OPERATOR_NAME, note };
+}
+
+/**
+ * Convierte una persona en artista u organización sin plan JSON (E11.7). Es el
+ * mismo `absorbPerson` que ejecuta la operación `to_artist`/`to_organization`
+ * del plan, con los nombres leídos de la base para construir los `entityRef`.
+ * La usa la API (POST /persons/:id/convert).
+ */
+export async function convertPerson(
+  client: PoolClient, personId: number,
+  to: { kind: "organization" | "artist"; id: number },
+  keepNameAsAlias: boolean, note: string, runId: number,
+): Promise<CorrectionOutcome & { credits: number }> {
+  const person = (await client.query<{ name: string }>(
+    "SELECT name FROM public.persons WHERE id=$1", [personId])).rows[0];
+  if (!person) {
+    const details: Record<string, unknown> = { entity: "person", id: personId };
+    const moved = await resolveRedirect("person", personId, client);
+    if (moved) details["movedTo"] = moved;
+    throw new OperatorError("not_found", `persona ${personId} inexistente`, details);
+  }
+  const absorber = ABSORBERS[to.kind];
+  const target = (await client.query<{ name: string }>(`SELECT name FROM public.${absorber.table} WHERE id=$1`, [to.id])).rows[0];
+  if (!target) throw new OperatorError("not_found", `${absorber.label} ${to.id} inexistente`, { entity: to.kind, id: to.id });
+  return absorbPerson(client, to.kind === "artist" ? "to_artist" : "to_organization",
+    { id: personId, name: person.name }, { id: to.id, name: target.name }, absorber, keepNameAsAlias, note, runId);
+}
+
+/** Personas que ya responden a ese nombre exacto (como nombre o como alias). */
+async function personsNamedExactly(client: PoolClient, name: string): Promise<number[]> {
+  return (await client.query<{ id: string }>(`
+    SELECT DISTINCT p.id::text
+      FROM public.persons p
+      LEFT JOIN ingest.person_aliases a ON a.person_id=p.id
+     WHERE p.name=$1 OR a.alias=$1
+     ORDER BY 1`, [name])).rows.map((row) => Number(row.id));
+}
+
+const sameRole = (left: string, right: string) => left.trim().toLowerCase() === right.trim().toLowerCase();
+
+/**
+ * «Dividir» una ficha que en realidad son varias personas (E11.7). Cada nombre
+ * de `into` recibe copia de la trayectoria (créditos, membresías y
+ * organizaciones) —con auditoría `split_from`— y la ficha combinada se retira:
+ * su historia queda en la auditoría de cada destino y sus claims, superseded.
+ * Nada se fusiona ni se borra por parecido: los destinos los nombra el plan.
+ */
+async function splitPerson(
+  client: PoolClient, correction: Extract<PersonCorrection, { op: "split" }>, reason: string, runId: number,
+): Promise<CorrectionOutcome & { credits: number }> {
+  const original = correction.person;
+  expectName("persona", original, await personName(client, original.id));
+
+  // 1. Destinos: la persona que ya responde a ese nombre exacto, o una nueva.
+  //    Se intenta crear sin «a sabiendas» (allowSimilar: false); si el ER ve
+  //    candidatos parecidos —lo normal, porque la ficha combinada que se está
+  //    dividiendo todavía existe— se reintenta con la decisión humana
+  //    explícita: los nombres de `into` son la afirmación de que son personas
+  //    distintas, y el reintento queda registrado como resolución del ER.
+  const context = await planOperatorContext(client, runId, reason);
+  const createTargetPerson = async (name: string): Promise<number> => {
+    try {
+      return (await createEntity(context, "person", { name }, { allowSimilar: false })).id;
+    } catch (error) {
+      if (!(error instanceof OperatorError)) throw error;
+      if (error.code === "already_exists" && typeof error.details?.["existingId"] === "number") {
+        return error.details["existingId"] as number;
+      }
+      if (error.code !== "needs_review") throw error;
+      return (await createEntity(context, "person", { name }, { allowSimilar: true })).id;
+    }
+  };
+  const targets: number[] = [];
+  for (const name of correction.into) {
+    const found = await personsNamedExactly(client, name);
+    if (found.includes(original.id)) throw new Error(`el destino «${name}» es la propia ficha ${original.id}: una división no se apunta a sí misma`);
+    if (found.length > 1) throw new Error(`«${name}» coincide con ${found.length} personas (${found.join(", ")}): fusione o renombre antes de dividir`);
+    targets.push(found.length === 1 ? found[0]! : await createTargetPerson(name));
+  }
+
+  // 2. Historia de la ficha combinada, para copiarla a cada destino antes de
+  //    retirarla (sus merge_audit cuelgan de ella con CASCADE).
+  const snapshot = (await client.query<{ person: Record<string, unknown> }>(
+    "SELECT to_jsonb(p) AS person FROM public.persons p WHERE p.id=$1", [original.id])).rows[0]?.person ?? {};
+  const aliases = (await client.query("SELECT * FROM ingest.person_aliases WHERE person_id=$1 ORDER BY id", [original.id])).rows;
+  const history = (await client.query("SELECT * FROM ingest.merge_audit WHERE person_id=$1 ORDER BY id", [original.id])).rows;
+  const claims = await claimIdsFor(client, "person_id", original.id);
+
+  // 3. Trayectoria: copia a cada destino y retiro de la fila original. Los
+  //    claims de cada fila retirada se sueltan antes (su FK es CASCADE: si no,
+  //    el DELETE se los llevaría, y los claims no se borran).
+  let duplicated = 0;
+  let retired = 0;
+  const detach = async (column: string, rowId: number) => {
+    await client.query(`
+      UPDATE ingest.claims SET ${column}=NULL, status='superseded', updated_at=now(), notes=concat_ws(' · ', notes, $2::text)
+       WHERE ${column}=$1`, [rowId, `fila dividida hacia ${targets.join(", ")} (run ${runId})`]);
+  };
+
+  for (const spec of CREDIT_TABLES) {
+    const rows = (await client.query<{ id: string; parent: string; credit_type: string; role: string; notes: string | null }>(
+      `SELECT id::text, ${spec.parent}::text AS parent, credit_type::text AS credit_type, role, notes
+         FROM public.${spec.table} WHERE person_id=$1 ORDER BY id`, [original.id])).rows;
+    for (const row of rows) {
+      const key = creditEquivalenceKey(row.credit_type as CreditType, row.role);
+      for (const target of targets) {
+        const existing = (await client.query<{ credit_type: string; role: string }>(
+          `SELECT credit_type::text AS credit_type, role FROM public.${spec.table} WHERE person_id=$1 AND ${spec.parent}=$2`,
+          [target, row.parent])).rows;
+        if (existing.some((item) => creditEquivalenceKey(item.credit_type as CreditType, item.role) === key)) continue;
+        const inserted = await client.query<{ id: string }>(`
+          INSERT INTO public.${spec.table}(${spec.parent},person_id,credit_type,role,notes)
+          VALUES($1,$2,$3::credit_type,$4,$5) RETURNING id::text`,
+        [row.parent, target, row.credit_type, row.role, row.notes]);
+        await audit(client, runId, spec.kind, `${spec.kind}_id`, Number(inserted.rows[0]!.id), "split_from",
+          { person_id: original.id, name: original.name, sourceRowId: Number(row.id) }, { person_id: target }, reason, []);
+        duplicated += 1;
+      }
+      await detach(`${spec.kind}_id`, Number(row.id));
+    }
+    retired += (await client.query(`DELETE FROM public.${spec.table} WHERE person_id=$1`, [original.id])).rowCount ?? 0;
+  }
+
+  const memberships = (await client.query<{ id: string; artist_id: string; role: string; from_year: number | null; to_year: number | null; is_current: boolean; notes: string | null }>(
+    `SELECT id::text, artist_id::text, role, from_year, to_year, is_current, notes
+       FROM public.artist_members WHERE person_id=$1 ORDER BY id`, [original.id])).rows;
+  for (const row of memberships) {
+    for (const target of targets) {
+      const existing = (await client.query<{ role: string }>(
+        "SELECT role FROM public.artist_members WHERE person_id=$1 AND artist_id=$2", [target, row.artist_id])).rows;
+      if (existing.some((item) => sameRole(item.role, row.role))) continue;
+      const inserted = await client.query<{ id: string }>(`
+        INSERT INTO public.artist_members(artist_id,person_id,role,from_year,to_year,is_current,notes)
+        VALUES($1,$2,$3,$4,$5,$6,$7) RETURNING id::text`,
+      [row.artist_id, target, row.role, row.from_year, row.to_year, row.is_current, row.notes]);
+      await audit(client, runId, "artist_membership", "artist_membership_id", Number(inserted.rows[0]!.id), "split_from",
+        { person_id: original.id, name: original.name, sourceRowId: Number(row.id) }, { person_id: target }, reason, []);
+      duplicated += 1;
+    }
+    await detach("artist_membership_id", Number(row.id));
+  }
+  retired += (await client.query("DELETE FROM public.artist_members WHERE person_id=$1", [original.id])).rowCount ?? 0;
+
+  const organizations = (await client.query<{ id: string; organization_id: string; role: string; from_year: number | null; to_year: number | null; notes: string | null }>(
+    `SELECT id::text, organization_id::text, role, from_year, to_year, notes
+       FROM public.person_organizations WHERE person_id=$1 ORDER BY id`, [original.id])).rows;
+  for (const row of organizations) {
+    for (const target of targets) {
+      const existing = (await client.query<{ role: string }>(
+        "SELECT role FROM public.person_organizations WHERE person_id=$1 AND organization_id=$2", [target, row.organization_id])).rows;
+      if (existing.some((item) => sameRole(item.role, row.role))) continue;
+      const inserted = await client.query<{ id: string }>(`
+        INSERT INTO public.person_organizations(person_id,organization_id,role,from_year,to_year,notes)
+        VALUES($1,$2,$3,$4,$5,$6) RETURNING id::text`,
+      [target, row.organization_id, row.role, row.from_year, row.to_year, row.notes]);
+      await audit(client, runId, "person_organization", "person_organization_id", Number(inserted.rows[0]!.id), "split_from",
+        { person_id: original.id, name: original.name, sourceRowId: Number(row.id) }, { person_id: target }, reason, []);
+      duplicated += 1;
+    }
+    await detach("person_organization_id", Number(row.id));
+  }
+  retired += (await client.query("DELETE FROM public.person_organizations WHERE person_id=$1", [original.id])).rowCount ?? 0;
+
+  for (const target of targets) {
+    await audit(client, runId, "person", "person_id", target, "split_from",
+      { person: snapshot, aliases, audits: history },
+      { person_id: target, duplicatedRelations: duplicated, retiredRelations: retired }, reason, claims);
+  }
+
+  // 4. La ficha combinada ya no tiene dependientes: se retira con el camino
+  //    normal (claims rechazados, historia conservada en la auditoría).
+  const removal = await removeEntity(client, "person", original.id, { note: reason, runId });
+  // La consolidación de créditos equivalentes se aplica a TODOS los destinos
+  // (antes solo al primero del plan): cada ficha que recibió la trayectoria
+  // queda con sus equivalentes unidos, no solo la del principio.
+  let credits = 0;
+  if (removal) {
+    for (const target of targets) {
+      credits += await mergeEquivalentCredits(client, { column: "person_id", id: target }, reason, runId);
+    }
+  }
+  return {
+    op: "split", status: removal ? "applied" : "skipped",
+    detail: removal
+      ? `«${original.name}» (${original.id}) → ${targets.join(", ")}; ${duplicated} relaciones duplicadas, ${retired} retiradas de la ficha combinada`
+      : `persona ${original.id} ya no existe`,
+    credits,
+  };
 }
 
 export async function applyPersonCorrections(plan: PersonCorrectionPlan, note: string, options: { dryRun?: boolean } = {}): Promise<PersonCorrectionResult> {

@@ -1,6 +1,8 @@
-// CRV · Consultas de lectura para personas (PHASES §E7A).
+// CRV · Consultas de lectura para personas (PHASES §E7A/E11.7/E11.9).
 import { getPool } from "../../db/client.js";
 import type { PaginationQuery } from "../pagination.js";
+import { searchIds } from "../search-index.js";
+import { classifyPersonName, type PersonNameClass } from "../../review/person-junk.js";
 
 export interface PersonListRow {
   id: number;
@@ -47,6 +49,13 @@ export interface PersonDetail {
   birthDate: string | null;
   deathDate: string | null;
   notes: string | null;
+  /** Créditos de disco y de pista. */
+  creditCount: number;
+  /** Membresías de banda. */
+  bandCount: number;
+  /** Clasificación del nombre (E11.7): la web avisa cuando no es `ok`. */
+  nameClass: PersonNameClass;
+  nameClassReason: string;
   bands: Array<{ id: number; artistId: number; artistName: string; role: string; fromYear: number | null; toYear: number | null; isCurrent: boolean }>;
   albumCredits: Array<{ id: number; albumId: number; albumTitle: string; artistId: number; artistName: string; creditType: string; role: string }>;
   trackCredits: Array<{ id: number; trackId: number; trackTitle: string; albumId: number; albumTitle: string; creditType: string; role: string }>;
@@ -170,6 +179,9 @@ export async function getPersonDetail(id: number): Promise<PersonDetail | null> 
   );
   const row = rows[0];
   if (!row) return null;
+  // El veredicto sobre el nombre se calcula aquí (no en la web): un solo
+  // clasificador alimenta el filtro, el aviso y el plan de correcciones.
+  const classification = classifyPersonName(String(row["name"]));
   return {
     id: Number(row["id"]),
     name: row["name"] as string,
@@ -180,6 +192,10 @@ export async function getPersonDetail(id: number): Promise<PersonDetail | null> 
     birthDate: row["birth_date"] as string | null,
     deathDate: row["death_date"] as string | null,
     notes: row["notes"] as string | null,
+    creditCount: Number(row["credit_count"] ?? 0),
+    bandCount: Number(row["band_count"] ?? 0),
+    nameClass: classification.kind,
+    nameClassReason: classification.reason,
     bands: row["bands"] as PersonDetail["bands"],
     albumCredits: row["album_credits"] as PersonDetail["albumCredits"],
     trackCredits: row["track_credits"] as PersonDetail["trackCredits"],
