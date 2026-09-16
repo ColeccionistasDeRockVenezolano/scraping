@@ -4,8 +4,9 @@
 import { getSessionCsrf, setSessionCsrf, type OperatorUser } from "./operator";
 import type {
   Alias, AliasWriteResult, AlbumDetail, AlbumListItem, ArtistDetail, ArtistListItem, AuditRow, Claim, EntityWriteResult,
-  OrganizationDetail, OrganizationListItem, Page, PersonDetail, PersonListItem, RelationUpdateResult, RelationWriteResult,
-  RemovalResult, ReviewActionResult, ReviewDetail, ReviewListItem, SearchResults, Source, VideoDetail, VideoListItem,
+  MergeableKind, OrganizationDetail, OrganizationListItem, Page, PersonDetail, PersonListItem, RelationUpdateResult, RelationWriteResult,
+  PersonConversionResult, PersonDuplicateCandidate, PersonMergePreview, PersonMergeResult, RemovalResult, ReviewActionResult,
+  ReviewDetail, ReviewListItem, SearchResults, Source, UnmergeResult, VideoDetail, VideoListItem,
 } from "./types";
 
 const BASE_URL = (import.meta.env["VITE_API_BASE_URL"] as string | undefined) ?? "http://127.0.0.1:8080";
@@ -108,8 +109,39 @@ export const albumsApi = {
 };
 
 export const personsApi = {
-  list: (params: Paged & { q?: string } = {}) => request<Page<PersonListItem>>("/persons", { query: params }),
+  list: (params: Paged & { q?: string; hasCredits?: boolean; suspect?: string; sort?: "name" | "credits" } = {}) =>
+    request<Page<PersonListItem>>("/persons", { query: params }),
   get: (id: number) => request<PersonDetail>(`/persons/${id}`),
+};
+
+// ---------- fusión de personas (E11.3/E11.4/E11.5) ----------
+export interface PersonMergeRequest {
+  dropId: number;
+  previewHash: string;
+  fieldChoices?: Partial<Record<string, "keep" | "drop">>;
+  keepDropNameAsAlias: boolean;
+  note: string;
+}
+
+const MERGE_PATHS: Record<MergeableKind, string> = { person: "persons", organization: "organizations", artist: "artists" };
+
+export const entityMergeApi = {
+  /** Previsualización de la fusión de dos fichas del mismo kind (E11.3/E11.10). */
+  preview: (kind: MergeableKind, keepId: number, dropId: number) =>
+    request<PersonMergePreview>(`/${MERGE_PATHS[kind]}/${keepId}/merge-preview`, { query: { with: dropId } }),
+  merge: (kind: MergeableKind, keepId: number, body: PersonMergeRequest) =>
+    request<PersonMergeResult>(`/${MERGE_PATHS[kind]}/${keepId}/merge`, { method: "POST", authenticated: true, body }),
+  duplicateCandidates: (params: Paged & { minScore?: number } = {}) =>
+    request<Page<PersonDuplicateCandidate>>("/persons/duplicate-candidates", { query: params }),
+  convert: (personId: number, body: {
+    to: "organization" | "artist";
+    targetId?: number;
+    create?: { name: string; organizationType?: string; artistType?: string };
+    keepNameAsAlias: boolean;
+    note: string;
+  }) => request<PersonConversionResult>(`/persons/${personId}/convert`, { method: "POST", authenticated: true, body }),
+  undo: (mergeRunId: number, note: string) =>
+    request<UnmergeResult>(`/merge-runs/${mergeRunId}/undo`, { method: "POST", authenticated: true, body: { note } }),
 };
 
 export const organizationsApi = {

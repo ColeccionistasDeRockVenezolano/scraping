@@ -28,6 +28,9 @@ import { registerReviewRoutes } from "./routes/review-queue.js";
 import { registerYouTubeRoutes } from "./routes/youtube.js";
 import { registerCatalogWriteRoutes } from "./routes/catalog-writes.js";
 import { registerRelationWriteRoutes } from "./routes/relation-writes.js";
+import { registerEntityMergeRoutes } from "./routes/entity-merge.js";
+import { registerPersonCandidateRoutes } from "./routes/person-candidates.js";
+import { registerMergeRunRoutes } from "./routes/merge-runs.js";
 import { registerAliasRoutes } from "./routes/aliases.js";
 import { registerAuditRoutes } from "./routes/audit.js";
 
@@ -125,6 +128,9 @@ export async function buildApp(): Promise<FastifyInstance> {
   await registerYouTubeRoutes(app);
   await registerCatalogWriteRoutes(app);
   await registerRelationWriteRoutes(app);
+  await registerEntityMergeRoutes(app);
+  await registerPersonCandidateRoutes(app);
+  await registerMergeRunRoutes(app);
   await registerAliasRoutes(app);
   await registerAuditRoutes(app);
 

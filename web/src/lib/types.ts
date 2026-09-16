@@ -142,6 +142,84 @@ export interface PersonDetail extends PersonListItem {
   aliases: Alias[];
 }
 
+// ---------- fusión de fichas (E11.3/E11.4/E11.5/E11.10) ----------
+/** Fichas navegables con fusión con previsualización: persona, organización y artista. */
+export type MergeableKind = "person" | "organization" | "artist";
+/** Campos fusionables: dependen del kind (los publica la API en cada previsualización). */
+export type PersonMergeField = string;
+
+export interface PersonMergeSide {
+  id: number;
+  name: string;
+  fields: Record<string, unknown>;
+  aliases: string[];
+  counts: { bands: number; albumCredits: number; trackCredits: number; organizations: number; claims: number };
+}
+
+export interface PersonMergeConflict {
+  field: PersonMergeField;
+  keepValue: unknown;
+  dropValue: unknown;
+}
+
+export interface PersonMergePreview {
+  kind: MergeableKind;
+  keep: PersonMergeSide;
+  drop: PersonMergeSide;
+  recommendedKeepId: number;
+  fieldConflicts: PersonMergeConflict[];
+  fieldsFilledFromDrop: string[];
+  sharedBands: Array<{ id: number; name: string }>;
+  sharedAlbums: Array<{ id: number; title: string }>;
+  aliasesToAdd: string[];
+  reviewsBetween: number[];
+  warnings: string[];
+  previewHash: string;
+}
+
+export interface PersonMergeResult {
+  kind: MergeableKind;
+  keepId: number;
+  dropId: number;
+  auditId: number;
+  moved: number;
+  discarded: number;
+  filled: string[];
+  fieldsCorrected: string[];
+  creditsMerged: number;
+  membershipsMerged: number;
+  runId: number;
+}
+
+export interface PersonDuplicateCandidate {
+  reviewId: number;
+  a: { id: number; name: string; creditCount: number };
+  b: { id: number; name: string; creditCount: number };
+  priority: number;
+  score: number | null;
+  features: Array<{ key: string; value: number; evidence: string }>;
+  notes: string | null;
+  createdAt: string;
+}
+
+export interface PersonConversionResult {
+  op: string;
+  status: "applied" | "skipped";
+  detail: string;
+  credits: number;
+  targetKind: "organization" | "artist";
+  targetId: number;
+  runId: number;
+}
+
+export interface UnmergeResult {
+  runId: number;
+  mergeRunId: number;
+  restored: Array<{ kind: string; id: number }>;
+  /** Correcciones de campo del run de fusión: se informan, no se revierten. */
+  fieldsNotReverted: string[];
+}
+
 // ---------- organizations ----------
 export interface OrganizationListItem {
   id: number;
