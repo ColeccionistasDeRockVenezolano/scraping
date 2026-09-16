@@ -104,9 +104,10 @@ async function retire(
       VALUES($1,$2::ingest.claim_entity_kind,$3,$4,$5::jsonb,NULL,$6,'high','human') RETURNING id::text`,
     [input.runId, input.parent.kind, Number(parentId), `removed_${input.kind}`, JSON.stringify({ row: snapshot, aliases, audits: history }), reason]);
     parentAuditId = Number(saved.rows[0]!.id);
-    for (const claimId of linked.slice(0, 50)) {
-      await client.query("INSERT INTO ingest.merge_audit_claims(merge_audit_id,claim_id) VALUES($1,$2) ON CONFLICT DO NOTHING", [parentAuditId, claimId]);
-    }
+    // Sin recorte: la auditoría enlazaba solo los primeros 50 claims (P4).
+    await client.query(
+      "INSERT INTO ingest.merge_audit_claims(merge_audit_id,claim_id) SELECT $1, unnest($2::bigint[]) ON CONFLICT DO NOTHING",
+      [parentAuditId, linked]);
   }
   await client.query(`DELETE FROM ${input.table} WHERE id=$1`, [input.id]);
   return {

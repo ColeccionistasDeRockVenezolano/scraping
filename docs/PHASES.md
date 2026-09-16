@@ -794,3 +794,23 @@ requisito/implementación/test/estado respaldada por evidencia.
 
 Criterios de salida: restauración desde backup probada; `doctor` y suite
 completa en verde en la máquina de producción.
+
+### Post-cierre: E11.1 — endurecer la fusión de duplicados (2026-09-15)
+
+Plan de mejora del CRUD y fusión de personas (`~/Desktop/PLAN_MEJORA_CRUD_Y_FUSION_DE_PERSONAS.md`),
+etapa E11.1. Resuelve P1 (crítica), P3, P4, P6, P7, P8 y P9 del diagnóstico:
+
+| Fallo | Antes | Ahora |
+|---|---|---|
+| P1 | Fusionar un par que el ER careó abortaba con 23514 (`review_queue_distinct_persons_chk`); afecta a 41 revisiones | La revisión se suelta (`detachedReviews`) y la fusión termina |
+| P3 | En colisión de `claims_dedupe_uk` se borraba el claim y su evidencia en cascada | El claim queda `superseded` sin destino; la evidencia sobrevive |
+| P4 | La auditoría enlazaba solo los 50 primeros claims | Todos (`unnest`), sin recorte |
+| P6 | La auditoría guardaba solo el número de referencias movidas | `movedRefs` (clave primaria de cada fila) + `discardedRows` + `detachedReviews`, `version: 2` |
+| P7 | Las membresías equivalentes quedaban duplicadas tras fusionar | `mergeEquivalentMemberships`; períodos contradictorios → revisión |
+| P8 | Un UPDATE por fila con SAVEPOINT y un INFORMATION_SCHEMA por columna | Un UPDATE masivo por columna; una sola sentencia para completar columnas |
+| P9 | `is_venezuelan=true` del duplicado se perdía | Se conserva (los DEFAULT del core cuentan como «vacío») |
+
+Evidencia: `reports/e11.1-merge-hardening.md`, `test/contract/merge-into-hardening.test.ts`
+(7/7: personas y artistas) y la sonda `scripts/probes/merge-probe.mts` (par 14 ← 3617 en
+134–262 ms, antes fallaba en 4,9 s). Sin migraciones y sin tocar `public`.
+

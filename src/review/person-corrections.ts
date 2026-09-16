@@ -22,9 +22,14 @@ import { readFile } from "node:fs/promises";
 import type { PoolClient } from "pg";
 import { z } from "zod";
 import { getPool } from "../db/client.js";
-import { creditEquivalenceKey, type CreditType } from "../merge/relations.js";
+import { mergeEquivalentCredits, mergeEquivalentMemberships } from "../merge/equivalent-relations.js";
 import { normalizeEntityName } from "../normalization/entity-name.js";
 import { mergeInto } from "./duplicates.js";
+
+// La unificación de relaciones equivalentes vive en merge/equivalent-relations.ts
+// (la comparten la API y la corrección por plan). Se re-exporta para no romper
+// los imports existentes.
+export { mergeEquivalentCredits };
 
 const entityRef = z.object({ id: z.number().int().positive(), name: z.string().min(1) });
 const why = z.string().min(1);
@@ -50,6 +55,7 @@ export async function loadPersonCorrectionPlan(path: string): Promise<PersonCorr
 export interface CorrectionOutcome { op: PersonCorrection["op"]; status: "applied" | "skipped"; detail: string; }
 export interface PersonCorrectionResult { dryRun: boolean; runId: number; outcomes: CorrectionOutcome[]; creditsMerged: number; }
 
+/** Tablas de crédito que una conversión (persona → artista/organización) reapunta. */
 const CREDIT_TABLES = [
   { table: "album_credits", kind: "album_credit", parent: "album_id" },
   { table: "track_credits", kind: "track_credit", parent: "track_id" },
@@ -72,9 +78,11 @@ async function audit(
     INSERT INTO ingest.merge_audit(run_id,entity_kind,${column},field,old_value,new_value,reason,confidence,performed_by)
     VALUES($1,$2::ingest.claim_entity_kind,$3,$4,$5::jsonb,$6::jsonb,$7,'high','human') RETURNING id::text`,
   [runId, entityKind, id, field, JSON.stringify(oldValue), JSON.stringify(newValue), reason]);
-  for (const claimId of claimIds.slice(0, 50)) {
-    await client.query("INSERT INTO ingest.merge_audit_claims(merge_audit_id,claim_id) VALUES($1,$2) ON CONFLICT DO NOTHING", [Number(row.rows[0]!.id), claimId]);
-  }
+  // Sin recorte: hay fichas con más de 150 claims y la auditoría llegaba al
+  // tope de 50, dejando fuera evidencia real (P4).
+  await client.query(
+    "INSERT INTO ingest.merge_audit_claims(merge_audit_id,claim_id) SELECT $1, unnest($2::bigint[]) ON CONFLICT DO NOTHING",
+    [Number(row.rows[0]!.id), claimIds]);
 }
 
 /**
@@ -89,35 +97,6 @@ async function claimIdsFor(client: PoolClient, column: string, id: number): Prom
     UNION
     SELECT mac.claim_id::text FROM ingest.merge_audit ma JOIN ingest.merge_audit_claims mac ON mac.merge_audit_id=ma.id WHERE ma.${column}=$1
     ORDER BY 1`, [id])).rows.map((row) => Number(row.id));
-}
-
-/**
- * Une los créditos equivalentes de un acreditado. `parents` acota las obras
- * (para un artista, solo aquellas en que la corrección movió algo).
- */
-export async function mergeEquivalentCredits(
-  client: PoolClient, target: { column: "person_id" | "artist_id" | "organization_id"; id: number }, note: string, runId: number,
-  parents?: { album_credits: Set<number>; track_credits: Set<number> },
-): Promise<number> {
-  let merged = 0;
-  for (const spec of CREDIT_TABLES) {
-    const { rows } = await client.query<{ id: string; parent: string; credit_type: CreditType; role: string }>(`
-      SELECT id::text, ${spec.parent}::text AS parent, credit_type::text AS credit_type, role
-        FROM public.${spec.table} WHERE ${target.column}=$1 ORDER BY id`, [target.id]);
-    const groups = new Map<string, number[]>();
-    for (const row of rows) {
-      if (parents && !parents[spec.table].has(Number(row.parent))) continue;
-      const key = `${row.parent}|${creditEquivalenceKey(row.credit_type, row.role)}`;
-      groups.set(key, [...(groups.get(key) ?? []), Number(row.id)]);
-    }
-    for (const ids of groups.values()) {
-      for (const dropId of ids.slice(1)) {
-        await mergeInto(client, spec.kind, ids[0]!, dropId, note, runId, { alias: false });
-        merged += 1;
-      }
-    }
-  }
-  return merged;
 }
 
 async function applyOne(client: PoolClient, correction: PersonCorrection, note: string, runId: number): Promise<CorrectionOutcome & { credits: number }> {
@@ -146,7 +125,10 @@ async function applyOne(client: PoolClient, correction: PersonCorrection, note: 
       expectName("persona", correction.drop, drop);
       const outcome = await mergeInto(client, "person", correction.keep.id, correction.drop.id, reason, runId, { alias: correction.keepDropNameAsAlias });
       const credits = await mergeEquivalentCredits(client, { column: "person_id", id: correction.keep.id }, reason, runId);
-      return { op: "merge", status: "applied", detail: `«${correction.drop.name}» (${correction.drop.id}) → «${correction.keep.name}» (${correction.keep.id}); ${outcome.moved} referencias movidas`, credits };
+      // Las membresías equivalentes que la fusión dejó sobre la misma banda se
+      // unen también; las que se contradicen en el período abren revisión (P7).
+      const memberships = await mergeEquivalentMemberships(client, correction.keep.id, reason, runId);
+      return { op: "merge", status: "applied", detail: `«${correction.drop.name}» (${correction.drop.id}) → «${correction.keep.name}» (${correction.keep.id}); ${outcome.moved} referencias movidas, ${memberships.merged} membresías unidas, ${memberships.reviewsOpened} revisiones de período`, credits };
     }
     case "drop_aliases": {
       expectName("persona", correction.person, await personName(client, correction.person.id));

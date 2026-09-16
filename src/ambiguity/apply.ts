@@ -38,6 +38,9 @@ export interface ApplyResult {
 
 class StaleTarget extends Error {}
 
+/** Tope de fallos que caben en el `error_log` del run. No trunca evidencia. */
+const MAX_FAILURES_IN_LOG = 50;
+
 export function describeApply(item: ApplyItem): string {
   return item.target ? describeTarget(item.target) : "mantener separados y cerrar la pregunta (sin cambios en el catálogo)";
 }
@@ -226,6 +229,6 @@ export async function applyAmbiguityResolutions(options: { reviewIds?: number[];
   }
   await finishRun(runId, result.failed.length ? "partial" : "ok", {
     planned: planned.length, applied: result.applied.length, skipped: result.skipped.length, failed: result.failed.length, reviewsClosed: result.reviewsClosed.length,
-  }, result.failed.length ? JSON.stringify(result.failed.slice(0, 50).map((item) => ({ resolutionId: item.resolutionId, error: item.error }))) : undefined);
+  }, result.failed.length ? JSON.stringify(result.failed.slice(0, MAX_FAILURES_IN_LOG).map((item) => ({ resolutionId: item.resolutionId, error: item.error }))) : undefined);
   return result;
 }

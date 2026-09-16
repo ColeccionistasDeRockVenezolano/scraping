@@ -445,7 +445,31 @@ duplicates`, `src/review/duplicates.ts`). Las FKs de `merge_audit` al core son
 auditoría la destruiría. La fusión mueve esas filas a la entidad que queda
 (solo cambia la FK; `field`, valores, motivo y fecha no se tocan) y añade una
 fila `field='merged_duplicate'` cuyo `old_value` es la fila borrada completa,
-incluido su id, enlazada a los claims que la respaldaban.
+incluido su id, enlazada a **todos** los claims que la respaldaban (antes se
+recortaban a 50).
+
+**`merged_duplicate` con `version: 2` (E11.1, 2026-09-15).** El `new_value` de
+una fusión guarda, además de los contadores, el rastro que permite deshacerla
+(E11.8):
+
+| Campo | Contenido |
+|---|---|
+| `movedRefs` | por tabla y columna, la clave primaria de cada fila reapuntada a `keep` (`[{table:"public.album_credits", column:"person_id", keys:[{id:17},…]}, …]`) |
+| `discardedRows` | filas que no cabían en `keep` (la misma relación ya existía): copia entera + `policy` (`superseded` en `ingest.claims`, `deleted` en el resto) |
+| `detachedReviews` | filas de `ingest.review_queue` que careaban las dos fichas, tal como estaban antes de soltar el lado que desaparecía |
+| `filled` / `moved` / `discarded` / `tracksMerged` | columnas completadas y contadores de filas |
+
+Dos reglas duras de la fusión, verificadas en `test/contract/merge-into-hardening.test.ts`:
+
+- **Un claim nunca se borra.** Si el duplicado afirma lo mismo que la ficha que
+  queda (misma fuente, página, campo y `raw_hash`) reapuntarlo violaría
+  `claims_dedupe_uk`; el gemelo pierde entonces su destino y queda
+  `status='superseded'` con una nota, conservando su evidencia. Aborta la fusión
+  si ni eso es posible.
+- **Una revisión careada se suelta, no se reapunta.** Reapuntar
+  `person_b_id`/`artist_b_id` a `keep` violaría `review_queue_distinct_*_chk`:
+  la revisión pierde el lado que desaparece, se cierra si seguía abierta y su
+  fila anterior queda en `detachedReviews`.
 
 ---
 

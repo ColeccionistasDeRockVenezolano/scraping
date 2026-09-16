@@ -333,6 +333,24 @@ se salta. Tras cada operación se unen los créditos equivalentes del
 acreditado. Sin `--confirm` el plan se ejecuta en una transacción que se
 deshace.
 
+**Motor de fusión** (`src/review/duplicates.ts`, endurecido en E11.1). Es el
+único camino que borra una fila del core, y lo hace al final: primero reapunta
+todas las FKs que la apuntan (descubiertas en el catálogo), moviendo por lotes
+y bajando a fila a fila solo ante una colisión de unicidad. Un claim nunca se
+borra: el gemelo queda `superseded` sin destino. Una revisión que careaba las
+dos fichas se suelta en vez de reapuntarse (violaría
+`review_queue_distinct_*_chk`). Todo lo movido, descartado y soltado queda en
+`merge_audit.new_value` (`version: 2`) para poder deshacer la fusión. Las
+columnas vacías se completan en una sola sentencia, contando los DEFAULT del
+core (`album_type='other'`, `is_venezuelan=false`) como «vacío».
+
+**Relaciones equivalentes** (`src/merge/equivalent-relations.ts`, E11.1). Dos
+créditos del mismo acreditado en la misma obra con la misma clave de
+equivalencia, y dos membresías de la misma persona en la misma banda con el
+mismo rol y períodos compatibles, son una sola fila. Los períodos que se
+contradicen no se tocan: abren revisión `manual_review` y decide una persona.
+Lo usan la corrección por plan y la fusión de personas (servicio y API).
+
 **Resolución de ambigüedades** (`src/ambiguity/`, PHASES §E10; plan, fase
 10B). Trabaja solo sobre la cola, en tres pasos:
 
