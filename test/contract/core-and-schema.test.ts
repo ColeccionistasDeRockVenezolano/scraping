@@ -1,8 +1,9 @@
 // CRV · Test de contrato: puerto a Vitest de tests/run_all.sh (ARCH §7,
 // PHASES F0). Contra un PostgreSQL 16 desechable, en un solo run:
 //   1. el core (crv_simple_v1.sql) se aplica verbatim y el hash coincide;
-//   2. las migraciones 0001-0012 se aplican vía el runner TS
-//      (src/db/migrate.ts), 2 veces (idempotencia);
+//   2. las migraciones 0001-0016 se aplican vía el runner TS
+//      (src/db/migrate.ts), 2 veces (idempotencia), y toda FK de
+//      ingest/media queda respaldada por un índice;
 //   3. el diff de `pg_dump --schema=public --schema-only` antes/después de
 //      migrar es VACÍO — el core no fue tocado;
 //   4. el schema Drizzle (src/db/schema) funciona de verdad: insertar y
@@ -76,13 +77,14 @@ describe("contrato del core + migraciones (Drizzle/TS)", () => {
     (globalThis as { __crvBeforeSnapshot?: string }).__crvBeforeSnapshot = snapshot;
   });
 
-  it("aplica 0001-0012 vía el runner TS (2 pasadas, la 2ª es no-op)", async () => {
+  it("aplica 0001-0016 vía el runner TS (2 pasadas, la 2ª es no-op)", async () => {
     const first = await migrateUp();
     expect(first.applied).toEqual([
       "0001_ingest_core", "0002_media", "0003_ingest_claims_identity", "0004_review_kinds",
       "0005_raw_pages_run", "0006_youtube_pipeline", "0007_entity_resolution_ai",
       "0008_media_link_claims", "0009_media_link_constraints", "0010_review_decisions",
-      "0011_album_classifications", "0012_ambiguity_resolutions",
+      "0011_album_classifications", "0012_ambiguity_resolutions", "0013_fk_indexes",
+      "0014_entity_redirects", "0015_review_kind_person_duplicate", "0016_person_duplicate_pair_uk",
     ]);
     const second = await migrateUp();
     expect(second.applied).toEqual([]);
@@ -92,6 +94,22 @@ describe("contrato del core + migraciones (Drizzle/TS)", () => {
     const before = (globalThis as { __crvBeforeSnapshot?: string }).__crvBeforeSnapshot;
     const after = await pgDumpPublic(container.name);
     expect(after).toBe(before);
+  });
+
+  it("toda FK de ingest y media tiene un índice que empieza por sus columnas (0013)", async () => {
+    // Sin él, cada DELETE del padre recorre la tabla hija entera (E11).
+    const { rows } = await getPool().query<{ fk: string }>(`
+      SELECT n.nspname || '.' || t.relname || '.' || c.conname AS fk
+        FROM pg_constraint c
+        JOIN pg_class t ON t.oid = c.conrelid
+        JOIN pg_namespace n ON n.oid = t.relnamespace
+       WHERE c.contype = 'f' AND n.nspname IN ('ingest', 'media')
+         AND NOT EXISTS (
+           SELECT 1 FROM pg_index i
+            WHERE i.indrelid = c.conrelid
+              AND (i.indkey::int2[])[0:array_length(c.conkey, 1) - 1] = c.conkey)
+       ORDER BY 1`);
+    expect(rows.map((row) => row.fk)).toEqual([]);
   });
 
   it("el schema Drizzle inserta y lee a través de core + ingest + media", async () => {
@@ -199,7 +217,8 @@ describe("contrato del core + migraciones (Drizzle/TS)", () => {
 
     const result = await migrateDownAll();
     expect(result.reverted).toEqual([
-      "0012_ambiguity_resolutions", "0011_album_classifications", "0010_review_decisions", "0009_media_link_constraints", "0008_media_link_claims",
+      "0016_person_duplicate_pair_uk", "0015_review_kind_person_duplicate",
+      "0014_entity_redirects", "0013_fk_indexes", "0012_ambiguity_resolutions", "0011_album_classifications", "0010_review_decisions", "0009_media_link_constraints", "0008_media_link_claims",
       "0007_entity_resolution_ai", "0006_youtube_pipeline", "0005_raw_pages_run", "0004_review_kinds", "0003_ingest_claims_identity", "0002_media", "0001_ingest_core",
     ]);
 

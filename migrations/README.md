@@ -22,6 +22,8 @@ desde aquí: estas migraciones solo crean objetos en los schemas `ingest` y
 | `0012_ambiguity_resolutions.up/down.sql` | Decisiones explicables del resolutor de ambigüedades (E10), con evidencia obligatoria en el DDL |
 | `0013_fk_indexes.up/down.sql` | Un índice (parcial si la columna admite nulos) por cada FK de `ingest`/`media` que no tenía uno, para que retirar o fusionar filas del core no recorra tablas enteras (E11) |
 | `0014_entity_redirects.up/down.sql` | Redirecciones de ids fusionados (`ingest.entity_redirects`): `/persons/<id>` de una ficha fusionada responde 404 con `movedTo` a la que quedó (E11.2) |
+| `0015_review_kind_person_duplicate.up/down.sql` | `person_duplicate` en `ingest.review_kind`: el kind con el que el detector de candidatos propone un par (E11.5). El down es irreversible (no se pueden quitar valores de un enum) y lo documenta |
+| `0016_person_duplicate_pair_uk.up/down.sql` | Índice único parcial: un solo careo vivo por par de personas (`person_duplicate` en open/in_progress), para que repetir el detector no duplique propuestas (E11.5) |
 
 Documentación ER completa: `../docs/db/ER_INGEST_MEDIA.md`.
 

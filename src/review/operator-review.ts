@@ -33,6 +33,8 @@ const CLI_ONLY: Readonly<Record<string, string>> = {
   youtube_match: "se decide con `crv ambiguity:resolve` y se aplica con `crv ambiguity:apply --confirm` (o `crv yt:link --confirm` para elegir video y disco a mano)",
   possible_duplicate: "se decide con `crv ambiguity:resolve` y se aplica con `crv ambiguity:apply --confirm` (o `crv review duplicates`)",
 };
+/** La propuesta del detector de personas (E11.5): fusionar o «son distintas». */
+const PERSON_DUPLICATE = "person_duplicate";
 
 export interface ReviewActionInput {
   operator: string;
@@ -206,6 +208,13 @@ function refuseUnsupported(review: LoadedReview): void {
 export async function acceptReview(reviewId: number, input: ReviewActionInput & { targetId?: number }): Promise<ReviewActionResult> {
   const review = await loadOpenReview(reviewId);
   refuseUnsupported(review);
+  // Un duplicado de persona no se «acepta» como un candidato cualquiera: se
+  // fusiona con la ficha que una persona elige (POST /persons/:id/merge), o se
+  // rechaza como «son distintas». Aceptar aquí dejaría el par sin destino.
+  if (review.kind === PERSON_DUPLICATE) {
+    throw new OperatorError("invalid",
+      "un duplicado de persona se resuelve fusionando (POST /persons/:id/merge) o rechazando la revisión como «son distintas»");
+  }
   if (MESA_KINDS.has(review.kind)) {
     if (input.targetId !== undefined && input.targetId !== review.topCandidateId) {
       throw new OperatorError("invalid", `el candidato de esta revisión es ${review.topCandidateId ?? "ninguno"}, no ${input.targetId}`);
@@ -248,6 +257,17 @@ export async function acceptReview(reviewId: number, input: ReviewActionInput & 
 export async function rejectReview(reviewId: number, input: ReviewActionInput): Promise<ReviewActionResult> {
   const review = await loadOpenReview(reviewId);
   refuseUnsupported(review);
+  // «Son distintas»: se cierra la revisión y el detector no volverá a
+  // proponer el par (lo lee de las revisiones descartadas). No toca claims
+  // ni el core: nadie afirmó que fueran la misma ficha.
+  if (review.kind === PERSON_DUPLICATE) {
+    await resolveReview(reviewId, "dismissed", signed(input)).catch((error: unknown) => { throw asOperatorError(error); });
+    const runId = await recordRun("review:reject", input, { reviewId, kind: review.kind });
+    return {
+      reviewId, kind: review.kind, action: "rejected", runId, status: await reviewStatus(reviewId),
+      detail: "par descartado: son dos personas distintas y el detector no volverá a proponerlo",
+    };
+  }
   if (MESA_KINDS.has(review.kind)) return mesaVerdict(review, "different", input);
   if (ER_KINDS.has(review.kind) && review.payload["resolutionDecisionId"] !== undefined) return erVerdict(review, "different", input);
 

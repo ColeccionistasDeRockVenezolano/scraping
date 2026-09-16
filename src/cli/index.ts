@@ -17,6 +17,8 @@ import { planBatch, runBatch, BATCH_ORDER } from "../review/batch.js";
 import { applyReviewDecisions, planReviewDecisions } from "../review/decisions.js";
 import { findDuplicateGroups, mergeAllDuplicates } from "../review/duplicates.js";
 import { applyPersonCorrections, loadPersonCorrectionPlan } from "../review/person-corrections.js";
+import { findPersonCandidates, openPersonCandidateReviews, PERSON_CANDIDATE_MIN_SCORE } from "../review/person-candidates.js";
+import { findOrganizationCandidates, openOrganizationCandidateReviews } from "../review/organization-candidates.js";
 import { getDb } from "../db/client.js";
 import { sources } from "../db/schema/ingest.js";
 import { eq } from "drizzle-orm";
@@ -204,6 +206,35 @@ async function main(): Promise<number> {
         console.log(JSON.stringify(result, null, 2));
         return result.failed.length === 0 ? 0 : 1;
       }
+      // Candidatos de duplicado de persona: propone pares explicables (apodo
+      // con y sin comillas, alias cruzados, nombre con contexto) y los deja en
+      // la cola. No fusiona nada: decide una persona.
+      if (args[0] === "person-candidates") {
+        const note = args.find((arg) => arg.startsWith("--note="))?.slice("--note=".length);
+        const minScoreRaw = args.find((arg) => arg.startsWith("--min-score="))?.slice("--min-score=".length);
+        const limitRaw = args.find((arg) => arg.startsWith("--limit="))?.slice("--limit=".length);
+        const minScore = minScoreRaw === undefined ? PERSON_CANDIDATE_MIN_SCORE : Number(minScoreRaw);
+        const limit = limitRaw === undefined ? undefined : Number(limitRaw);
+        if (!Number.isFinite(minScore) || minScore < 0 || minScore > 1
+          || (limit !== undefined && (!Number.isInteger(limit) || limit <= 0))) {
+          console.error('uso: crv review person-candidates [--min-score=0.45] [--limit=200] [--note="<motivo>" --confirm]');
+          return 1;
+        }
+        const scan = await findPersonCandidates({ minScore, ...(limit === undefined ? {} : { limit }) });
+        for (const candidate of scan.candidates) {
+          const features = candidate.features.map((feature) => `${feature.key}=${feature.value}`).join(", ");
+          console.log(`${candidate.score.toFixed(3)}\tprioridad ${candidate.priority}\t${candidate.a.id} «${candidate.a.name}» / ${candidate.b.id} «${candidate.b.name}»\t${features}`);
+        }
+        console.log(`TOTAL: ${scan.candidates.length} pares propuestos entre ${scan.persons} personas (${scan.comparedPairs} pares comparados)`);
+        if (!args.includes("--confirm") || !note?.trim()) {
+          console.log('\n(previsualización: nada se escribió) para abrir las revisiones: crv review person-candidates --note="<motivo>" --confirm');
+          return 0;
+        }
+        const result = await openPersonCandidateReviews(scan.candidates, note, getEnv().CRV_OPERATOR_NAME);
+        console.log(`run ${result.runId}: ${result.opened} ${result.opened === 1 ? "revisión abierta" : "revisiones abiertas"}, ${result.skipped} ya existían`);
+        return 0;
+      }
+
       // Correcciones de identidad de personas decididas por el propietario,
       // escritas en un plan JSON versionado (docs/decisions/). Sin --confirm
       // se ejecutan y se deshacen: muestra el efecto sin aplicarlo.

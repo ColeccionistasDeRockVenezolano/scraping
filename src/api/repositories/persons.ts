@@ -54,10 +54,76 @@ export interface PersonDetail {
   aliases: Array<{ id: number; alias: string; aliasType: string; isPrimary: boolean }>;
 }
 
+export interface PersonDuplicateCandidateRow {
+  reviewId: number;
+  a: { id: number; name: string; creditCount: number };
+  b: { id: number; name: string; creditCount: number };
+  priority: number;
+  score: number | null;
+  features: Array<{ key: string; value: number; evidence: string }>;
+  notes: string | null;
+  createdAt: string;
+}
+
+/** Créditos y membresías de una ficha: lo que se movería al fusionarla. */
+const CREDIT_COUNT = (column: string) => `(
+  (SELECT count(*) FROM public.album_credits WHERE person_id=c.${column})
+  + (SELECT count(*) FROM public.track_credits WHERE person_id=c.${column})
+  + (SELECT count(*) FROM public.artist_members WHERE person_id=c.${column}))::int`;
+
+/**
+ * Revisiones vivas del detector de candidatos de persona (E11.5), con nombre,
+ * créditos de cada lado, score y features. Solo lectura.
+ */
+export async function listPersonDuplicateCandidates(
+  query: PaginationQuery & { minScore?: number | undefined },
+): Promise<{ rows: PersonDuplicateCandidateRow[]; total: number }> {
+  const minScore = query.minScore ?? null;
+  const [rows, count] = await Promise.all([
+    getPool().query<Record<string, unknown>>(`
+      WITH candidate AS (
+        SELECT q.id, q.priority, q.payload, q.notes, q.created_at::text AS created_at, q.person_a_id, q.person_b_id
+          FROM ingest.review_queue q
+         WHERE q.kind::text='person_duplicate' AND q.status IN ('open','in_progress')
+           AND ($1::float8 IS NULL OR (q.payload->>'score')::float8 >= $1)
+         ORDER BY q.priority, q.id
+         LIMIT $2 OFFSET $3
+      )
+      SELECT c.id::text AS review_id, c.priority, (c.payload->>'score')::float8 AS score,
+             COALESCE(c.payload->'features', '[]'::jsonb) AS features, c.notes, c.created_at,
+             c.person_a_id::text AS a_id, pa.name AS a_name, ${CREDIT_COUNT("person_a_id")} AS a_credits,
+             c.person_b_id::text AS b_id, pb.name AS b_name, ${CREDIT_COUNT("person_b_id")} AS b_credits
+        FROM candidate c
+        JOIN public.persons pa ON pa.id=c.person_a_id
+        JOIN public.persons pb ON pb.id=c.person_b_id
+       ORDER BY c.priority, c.id`, [minScore, query.limit, query.offset]),
+    getPool().query<{ count: string }>(`
+      SELECT count(*)::text AS count FROM ingest.review_queue q
+       WHERE q.kind::text='person_duplicate' AND q.status IN ('open','in_progress')
+         AND ($1::float8 IS NULL OR (q.payload->>'score')::float8 >= $1)`, [minScore]),
+  ]);
+  return {
+    rows: rows.rows.map((row) => ({
+      reviewId: Number(row["review_id"]),
+      a: { id: Number(row["a_id"]), name: String(row["a_name"]), creditCount: Number(row["a_credits"]) },
+      b: { id: Number(row["b_id"]), name: String(row["b_name"]), creditCount: Number(row["b_credits"]) },
+      priority: Number(row["priority"]),
+      score: row["score"] === null ? null : Number(row["score"]),
+      features: (row["features"] ?? []) as PersonDuplicateCandidateRow["features"],
+      notes: (row["notes"] ?? null) as string | null,
+      createdAt: String(row["created_at"]),
+    })),
+    total: Number(count.rows[0]?.count ?? 0),
+  };
+}
+
 export async function getPersonDetail(id: number): Promise<PersonDetail | null> {
   const { rows } = await getPool().query<Record<string, unknown>>(
     `SELECT p.id, p.name, p.biography, p.picture_url, p.nationality, p.is_venezuelan,
             p.birth_date::text AS birth_date, p.death_date::text AS death_date, p.notes,
+            ((SELECT count(*) FROM public.album_credits WHERE person_id=p.id)
+             + (SELECT count(*) FROM public.track_credits WHERE person_id=p.id))::int AS credit_count,
+            (SELECT count(*) FROM public.artist_members WHERE person_id=p.id)::int AS band_count,
        COALESCE((
          SELECT jsonb_agg(jsonb_build_object(
            'id', am.id, 'artistId', ar.id, 'artistName', ar.name, 'role', am.role,
