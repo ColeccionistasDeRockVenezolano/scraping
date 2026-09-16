@@ -36,6 +36,7 @@
     "test:matrix": "./scripts/test-pg-matrix.sh",
     "test:visual-extreme": "./scripts/with-node22.sh tsx web/tests/visual/extreme-qa.ts",
     "test:visual-merge": "./scripts/with-node22.sh tsx web/tests/visual/merge-qa.ts",
+    "test:visual-curation": "./scripts/with-node22.sh tsx web/tests/visual/curation-qa.ts",
     "cotejo:build": "./scripts/with-node22.sh tsx scripts/build-cotejo.ts",
     "cotejo:serve": "./scripts/with-node22.sh tsx src/cotejo/server.ts",
     "radio:export": "./scripts/with-node22.sh tsx scripts/export-radio-catalog.ts",

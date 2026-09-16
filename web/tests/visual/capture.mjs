@@ -16,7 +16,9 @@ const defaultRoutes = [
   ["disco-las-paticas", "/discos/57"],
   ["persona-asier", "/personas/2698"],
   ["organizacion-mad-box", "/organizaciones/176"],
-  ["revision", "/revision"],
+  ["curaduria-conflictos", "/curaduria"],
+  ["curaduria-mal-segmentados", "/curaduria/categoria/mal_segmentados"],
+  ["curaduria-otros", "/curaduria/categoria/otros"],
   ["revision-detalle", "/revision/191119"],
 ];
 
