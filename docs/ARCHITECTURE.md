@@ -529,12 +529,13 @@ consultas de comparación de nombres se hacen en TypeScript porque la base es
 Analiza el catálogo entero y agrupa por categoría lo que no encaja. Las reglas
 no llevan listas de nombres: aprenden del propio catálogo (lugares desde
 `origin_city`, palabras de rol desde los créditos, vocabulario de organización
-por su peso frente a los nombres de persona, palabras de tipo de disco, perfil
-de signos y largos de cada campo).
+por su peso frente a los nombres de persona, palabras de tipo de disco, nombres
+de pila y apellidos, descriptores de género o serie, piezas breves, perfil de
+signos y largos de cada campo).
 
 | módulo | responsabilidad |
 | --- | --- |
-| `src/curation/snapshot.ts` | foto plana del catálogo (core, cola viva, conflictos abiertos, pares ya decididos) en una sola transacción `REPEATABLE READ READ ONLY` |
+| `src/curation/snapshot.ts` | foto plana del catálogo (core, cola viva, conflictos abiertos, pares ya decididos y pares declarados distintos) en una sola transacción `REPEATABLE READ READ ONLY` |
 | `src/curation/lexicon.ts` | léxico aprendido y perfiles por campo |
 | `src/curation/detectors/*.ts` | un detector por problema; cada uno declara categoría, etiqueta y subgrupos |
 | `src/curation/detectors/anomalies.ts` | «Otros»: valores que se salen del perfil de su campo y que ningún detector explica |
@@ -562,8 +563,9 @@ Detectar sin mentir (PLAN_CURADURIA E1, migración 0019):
   `try` (una base caída termina en `failed`), `notifyCatalogWrite` encadena
   `.catch` y `src/api/server.ts` registra `unhandledRejection`: en Node 22 una
   promesa rechazada sin manejar termina el proceso.
-- **Una foto, un instante.** Las 13 consultas de la foto comparten cliente y
-  transacción: durante una ingesta, pistas y discos siempre se corresponden.
+- **Una foto, un instante.** Las consultas de la foto (13, más 1 o 2 para los
+  pares declarados distintos) comparten cliente y transacción: durante una
+  ingesta, pistas y discos siempre se corresponden.
 - **Un proceso a la vez.** `pg_try_advisory_lock(hashtext('crv:curation:scan'))`
   sobre la conexión del análisis (y de la poda). Si otro proceso lo tiene, el
   análisis se registra `skipped`: la verificación de una escritura se reintenta
@@ -578,6 +580,39 @@ Detectar sin mentir (PLAN_CURADURIA E1, migración 0019):
 - **Solo escrituras del catálogo disparan análisis**: fichas, alias, fusiones,
   conversiones, relaciones, aceptar/rechazar/resolver en la cola y deshacer un
   run. Cambiar la prioridad de una revisión ya no lanza un análisis completo.
+
+Precisión y decisiones duraderas (PLAN_CURADURIA E2, reglas
+`curation-rules.v2`, migración 0020; informe en
+`docs/curation/E2_PRECISION_2026-09-16.md`):
+
+- **Léxico más fino.** Una palabra aprendida de tipo de disco no puede estar sin
+  clasificar en más de la mitad de sus discos ni ser de volumen («vol», «parte»)
+  o un descriptor de género o serie («rock», «punk»: en nombres de artista, en
+  títulos de disco y bastante más en títulos de disco que de pista). Solo la
+  semilla permite corregir sin criterio (`evidence.wordSource`). Nombres de pila
+  y apellidos aprendidos dan `isPersonShaped`: «Dan Warner» no es un sello y
+  «Angel Rada» es el solista detrás del proyecto, no la banda cargada como
+  persona.
+- **Subgrupos nuevos** en vez de falsos positivos: `empieza_en_2`,
+  `posible_estilizado`, `alias_en_nombre`, `solista_detras_del_proyecto` /
+  `banda_como_persona`; «Otros» agrupa por clase Unicode y campo. Las piezas
+  breves («Intro») no son duraciones atípicas; la numeración continua entre
+  discos no es un hueco.
+- **Huella por par.** Los duplicados se emiten por par; la huella es detector +
+  tipo + id menor + id mayor, así que un tercer miembro o un renombrado no
+  invalidan «no es un problema».
+- **Son distintas.** `ingest.curation_distinct_pairs` entra en `handledPairs`; el
+  hallazgo del par se resuelve con `declared_distinct` y no vuelve.
+- **Ignorar con motivo y caducidad.** `ignore_reason` obligatorio en la API. Un
+  ignorado cuyo problema desaparece pasa a `resolved` (con el motivo del
+  clasificador) y conserva quién y por qué; si vuelve, vuelve abierto.
+- **Historia.** `evidence.history` guarda los últimos 5 cambios de gravedad,
+  título o subgrupo de un hallazgo.
+- **Precisión medida.** `test/unit/curation-precision.test.ts` analiza una foto
+  congelada del catálogo de desarrollo
+  (`test/fixtures/curation/catalog-2026-09-16.json.gz`) contra el corpus
+  etiquetado (`corpus.json`): ningún verdadero positivo perdido, ningún falso
+  positivo corregido de vuelta y precisión por detector ≥ su umbral.
 
 ## 5. Flujo de datos end-to-end
 
@@ -621,7 +656,7 @@ El seed YT sigue el mismo flujo saltando 1-2 (el "raw" es la fila XLSX).
   cubre además la migración de enums, y `tests/lib_pg.sh` comparte el arranque
   del contenedor. **Portado a Vitest (F0):**
   `test/contract/core-and-schema.test.ts` reproduce ese mismo contrato
-  (core + todas las migraciones, hoy 0001–0013, vía `src/db/migrate.ts` + rollback + diff
+  (core + todas las migraciones, hoy 0001–0020, vía `src/db/migrate.ts` + rollback + diff
   vacío) contra un contenedor propio (`test/support/pg-container.ts`, mismo
   arranque en dos fases que `tests/lib_pg.sh`), y añade el ejercicio real
   del schema Drizzle: inserts y joins a través de `public`+`ingest`+`media`

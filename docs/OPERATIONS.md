@@ -305,9 +305,25 @@ npm run cli -- curation prune --dry-run # cuánto borraría la retención
 npm run cli -- curation prune           # borra análisis viejos y resueltos antiguos
 ```
 
-«No es un problema» ignora un hallazgo sin tocar el catálogo; no se vuelve a
-abrir mientras el valor no cambie. Un hallazgo resuelto que reaparece se
-reabre con el mismo id.
+«No es un problema» ignora un hallazgo sin tocar el catálogo y pide un motivo
+(`falso_positivo`, `correcto_a_proposito`, `fuera_de_alcance`; ignorar un grupo
+entero pide además una nota). No se vuelve a abrir mientras el problema siga
+igual; si el problema desaparece, el ignorado pasa a resuelto y conserva quién
+lo ignoró y por qué. Un hallazgo resuelto que reaparece se reabre con el mismo
+id, **abierto** aunque antes estuviera ignorado.
+
+Los duplicados se muestran por pares. «Son distintas» guarda el par en
+`ingest.curation_distinct_pairs` (con quién y una nota obligatoria): el detector
+no lo vuelve a proponer y su hallazgo queda resuelto como «declarado distinto».
+Desde la API:
+
+```bash
+AUTH=(-H "Authorization: Bearer $CRV_OPERATOR_TOKEN" -H "x-crv-operator: Nombre")
+curl "${AUTH[@]}" "$API/curation/distinct-pairs?kind=artist"
+curl "${AUTH[@]}" -H 'content-type: application/json' -X POST "$API/curation/distinct-pairs" \
+  -d '{"kind":"artist","aId":12,"bId":34,"note":"bandas distintas"}'
+curl "${AUTH[@]}" -X DELETE "$API/curation/distinct-pairs/5"   # el detector puede volver a proponerlo
+```
 
 Estados de un análisis (`ingest.curation_scans.status`, migración 0019):
 
@@ -327,9 +343,16 @@ Retención: `curation prune` conserva los últimos 500 análisis y los hallazgos
 resueltos de los últimos 180 días; nunca borra abiertos ni ignorados. Toma el
 mismo candado que el análisis: si hay uno en curso, no borra nada y lo dice.
 
-> **Antes de reiniciar la API con este código, aplicar la migración 0019**
-> (`npm run db:migrate`): sin ella, guardar un análisis y leer hallazgos fallan
-> porque faltan las columnas `resolution`/`resolved_by_run_id`.
+> **Antes de reiniciar la API con este código, aplicar las migraciones 0019 y
+> 0020** (`npm run db:migrate`): sin 0019 faltan `resolution`/`resolved_by_run_id`;
+> sin 0020 fallan ignorar (`ignore_reason`) y los pares declarados distintos. Un
+> `curation scan --dry-run` funciona sin 0020.
+>
+> **Primer análisis con las reglas v2** (`curation-rules.v2`): muchos hallazgos
+> cambian de huella (duplicados por par, subgrupos nuevos, «Otros» por clase).
+> Sobre el catálogo del 2026-09-16: 4.880 se conservan, 502 se resuelven como
+> «cambio de reglas» y 381 aparecen como nuevos. Es esperado, no un cambio del
+> catálogo (`docs/curation/E2_PRECISION_2026-09-16.md`).
 
 ## 5. Logs y trazabilidad
 
