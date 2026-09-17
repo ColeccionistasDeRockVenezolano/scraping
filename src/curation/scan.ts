@@ -32,13 +32,24 @@
 //  - Un refresco que cambia gravedad, título o subgrupo deja constancia en
 //    `evidence.history` (los últimos 5 cambios), en vez de cambiarlo en silencio.
 //
+// VERIFICACIÓN DIRIGIDA (PLAN_CURADURIA E4.6): tras aplicar un lote de
+// correcciones, un análisis con `focus` —las fichas que el lote tocó y sus
+// relacionadas— guarda y resuelve SOLO los hallazgos de esas fichas (`scope =
+// 'dirigido'`). Hoy corre todos los detectores sobre la foto entera (separar
+// locales y globales es E9); lo que cambie fuera del foco lo recoge el
+// siguiente análisis completo del vigilante. Un análisis dirigido no cuenta
+// como «último análisis» ni como firma vista por el vigilante. Un hallazgo con
+// un ítem de lote aplicado se resuelve como `fixed_by_curation` con el run de
+// ese ítem, aunque la corrección haya retirado su ficha (una fusión).
+//
 // Dentro del proceso, un solo análisis a la vez: las peticiones que llegan
-// mientras corre se agrupan en uno solo posterior.
+// mientras corre se agrupan en uno solo posterior. Las verificaciones
+// dirigidas no se agrupan (cada una tiene su foco): hacen cola detrás.
 import type { Pool, PoolClient } from "pg";
 import { getPool } from "../db/client.js";
 import { moduleLogger } from "../logger/index.js";
 import { DETECTOR_DEFINITIONS, RULES_VERSION, analyzeCatalog, storableText, type AnalysisResult } from "./analyze.js";
-import { catalogState, classifyResolution, type Resolution, type ValueChange } from "./resolution.js";
+import { catalogState, classifyResolution, type AppliedFix, type Resolution, type ValueChange } from "./resolution.js";
 import { loadCatalogSnapshot } from "./snapshot.js";
 import type { CatalogSnapshot, EntityRef, Finding } from "./types.js";
 
@@ -48,6 +59,12 @@ const CHUNK = 1000;
 
 /** Clave del candado entre procesos: la misma en la API, la CLI, los scripts y la poda. */
 export const CURATION_SCAN_LOCK = "crv:curation:scan";
+
+/** Una verificación dirigida la pidió alguien que acaba de corregir: espera su turno un rato antes de omitirse. */
+const DIRECTED_LOCK_ATTEMPTS = 20;
+const DIRECTED_LOCK_RETRY_MS = 500;
+
+const sleep = (ms: number) => new Promise<void>((resolve) => { setTimeout(resolve, ms); });
 
 const KNOWN_DETECTORS = DETECTOR_DEFINITIONS.map((detector) => detector.key);
 const KNOWN_DETECTOR_SET: ReadonlySet<string> = new Set(KNOWN_DETECTORS);
@@ -59,9 +76,24 @@ export interface ScanRequest {
   /** Qué escritura lo pidió (método y ruta), para leer el historial. */
   detail?: string | null;
   dryRun?: boolean;
+  /** Verificación dirigida: solo se guarda y resuelve lo que toca a estas fichas (la suya o una relacionada). */
+  focus?: Focus;
 }
 
+type Focus = ReadonlyArray<{ kind: string; id: number }>;
+
 export interface ResolvedRef { id: number; title: string; entityKind: string; entityId: number | null; }
+
+/** Qué cambió en una verificación dirigida, hallazgo por hallazgo (se adjunta al lote). */
+export interface ScanDetails {
+  resolved: Array<ResolvedRef & { resolution: Resolution }>;
+  /** Nuevos o reabiertos en las fichas del foco. */
+  appeared: ResolvedRef[];
+  /** De los aparecidos, los que nacieron donde otro se acababa de resolver. */
+  triggered: ResolvedRef[];
+}
+
+export type ScanScope = "completo" | "dirigido";
 
 /**
  * ok = todos los detectores miraron · partial = alguno falló (sus hallazgos no
@@ -72,6 +104,7 @@ export type ScanStatus = "ok" | "partial" | "skipped" | "failed";
 export interface ScanSummary {
   scanId: number | null;
   status: ScanStatus;
+  scope: ScanScope;
   trigger: string;
   dryRun: boolean;
   durationMs: number;
@@ -85,6 +118,8 @@ export interface ScanSummary {
   byCategory: Record<string, number>;
   failures: Array<{ detector: string; error: string }>;
   error?: string;
+  /** Solo en una verificación dirigida. */
+  details?: ScanDetails;
 }
 
 type Queryable = Pick<Pool | PoolClient, "query">;
@@ -151,11 +186,17 @@ const HISTORY_SQL = `CASE WHEN f.severity IS DISTINCT FROM EXCLUDED.severity OR 
 const RECORD_COLUMNS = `fingerprint text, category text, detector text, signature text, severity text, entity_kind text, entity_id bigint,
   entity_label text, field text, value text, title text, suggestion text, suggested_value text, related jsonb, evidence jsonb`;
 
-async function persist(client: PoolClient, scanId: number, analysis: AnalysisResult, snapshot: CatalogSnapshot) {
+/** ¿El hallazgo toca alguna ficha del foco (la suya o una relacionada)? */
+export function inFocus(finding: Pick<Finding, "entity" | "related">, focus: ReadonlySet<string>): boolean {
+  return [finding.entity, ...finding.related].some((ref) => ref.id !== null && focus.has(refKey(ref.kind, ref.id)));
+}
+
+async function persist(client: PoolClient, scanId: number, analysis: AnalysisResult, snapshot: CatalogSnapshot, focus: Focus | null) {
   const { findings } = analysis;
   let inserted = 0; let reopened = 0;
   // Lo que aparece en este análisis: nuevo o reabierto (se había resuelto y volvió).
   const appearedFingerprints = new Set<string>();
+  const idByFingerprint = new Map<string, number>();
   for (let offset = 0; offset < findings.length; offset += CHUNK) {
     const chunk = findings.slice(offset, offset + CHUNK);
     const payload = JSON.stringify(chunk.map(rowOf));
@@ -164,7 +205,7 @@ async function persist(client: PoolClient, scanId: number, analysis: AnalysisRes
        WHERE status = 'resolved' AND fingerprint = ANY($1::text[])`, [chunk.map((finding) => finding.fingerprint)]);
     reopened += wasResolved.rows.length;
     for (const row of wasResolved.rows) appearedFingerprints.add(row.fingerprint);
-    const saved = await client.query<{ fingerprint: string; inserted: boolean }>(`
+    const saved = await client.query<{ id: string; fingerprint: string; inserted: boolean }>(`
       INSERT INTO ingest.curation_findings AS f
         (fingerprint, category, detector, signature, severity, entity_kind, entity_id, entity_label, field, value, title, suggestion,
          suggested_value, related, evidence, first_seen_scan_id, last_seen_scan_id)
@@ -197,13 +238,14 @@ async function persist(client: PoolClient, scanId: number, analysis: AnalysisRes
         ignored_by = CASE WHEN f.status = 'resolved' THEN NULL ELSE f.ignored_by END,
         ignore_note = CASE WHEN f.status = 'resolved' THEN NULL ELSE f.ignore_note END,
         ignore_reason = CASE WHEN f.status = 'resolved' THEN NULL ELSE f.ignore_reason END
-      RETURNING fingerprint, (xmax = 0) AS inserted`, [payload, scanId]);
+      RETURNING id::text, fingerprint, (xmax = 0) AS inserted`, [payload, scanId]);
     for (const row of saved.rows) {
+      idByFingerprint.set(row.fingerprint, Number(row.id));
       if (row.inserted) { inserted += 1; appearedFingerprints.add(row.fingerprint); }
     }
   }
 
-  const resolvedRows = await resolveStale(client, scanId, analysis, snapshot);
+  const resolvedRows = await resolveStale(client, scanId, analysis, snapshot, focus);
   const resolutions: Partial<Record<Resolution, number>> = {};
   for (const row of resolvedRows) resolutions[row.resolution] = (resolutions[row.resolution] ?? 0) + 1;
 
@@ -235,7 +277,26 @@ async function persist(client: PoolClient, scanId: number, analysis: AnalysisRes
          WHERE f.fingerprint = x.fingerprint`, [JSON.stringify(chained.slice(offset, offset + CHUNK)), scanId]);
     }
   }
-  return { inserted, reopened, resolved: resolvedRows.length, chained: chained.length, resolutions };
+
+  let details: ScanDetails | undefined;
+  if (focus) {
+    const byFingerprint = new Map(findings.map((finding) => [finding.fingerprint, finding]));
+    const refsOf = (fingerprints: Iterable<string>): ResolvedRef[] => [...fingerprints].flatMap((fingerprint) => {
+      const finding = byFingerprint.get(fingerprint);
+      const id = idByFingerprint.get(fingerprint);
+      return finding && id !== undefined
+        ? [{ id, title: storableText(finding.title), entityKind: finding.entity.kind, entityId: finding.entity.id }]
+        : [];
+    });
+    details = {
+      resolved: resolvedRows.map((row) => ({
+        id: Number(row.id), title: row.title, entityKind: row.entity_kind, entityId: row.entity_id === null ? null : Number(row.entity_id), resolution: row.resolution,
+      })),
+      appeared: refsOf(appearedFingerprints),
+      triggered: refsOf(chained.map((item) => item.fingerprint)),
+    };
+  }
+  return { inserted, reopened, resolved: resolvedRows.length, chained: chained.length, resolutions, details };
 }
 
 type StaleRow = {
@@ -249,7 +310,11 @@ type ResolvedRow = { id: string; title: string; entity_kind: string; entity_id: 
  * SOLO de los detectores que miraron el catálogo entero (`analysis.completed`)
  * o de detectores que las reglas actuales ya no tienen. Cada uno con su motivo.
  */
-async function resolveStale(client: PoolClient, scanId: number, analysis: AnalysisResult, snapshot: CatalogSnapshot): Promise<ResolvedRow[]> {
+async function resolveStale(
+  client: PoolClient, scanId: number, analysis: AnalysisResult, snapshot: CatalogSnapshot, focus: Focus | null,
+): Promise<ResolvedRow[]> {
+  // Con foco, solo lo que toca a esas fichas: el resto no se volvió a guardar en
+  // este análisis y resolverlo sería afirmar algo que no se miró.
   const stale = await client.query<StaleRow>(`
     SELECT f.id::text, f.detector, f.entity_kind, f.entity_id::text, f.field, f.value,
            seen.counters->>'rulesVersion' AS rules_version, born.started_at AS seen_since, f.evidence->'pair' AS pair
@@ -257,18 +322,23 @@ async function resolveStale(client: PoolClient, scanId: number, analysis: Analys
       LEFT JOIN ingest.curation_scans seen ON seen.id = f.last_seen_scan_id
       LEFT JOIN ingest.curation_scans born ON born.id = f.first_seen_scan_id
      WHERE f.status IN ('open', 'ignored') AND f.last_seen_scan_id IS DISTINCT FROM $1
-       AND (f.detector = ANY($2::text[]) OR NOT (f.detector = ANY($3::text[])))`,
-  [scanId, analysis.completed, KNOWN_DETECTORS]);
+       AND (f.detector = ANY($2::text[]) OR NOT (f.detector = ANY($3::text[])))
+       AND ($4::jsonb IS NULL OR EXISTS (
+             SELECT 1 FROM jsonb_to_recordset($4::jsonb) AS focus(kind text, id bigint)
+              WHERE (focus.kind = f.entity_kind AND focus.id = f.entity_id)
+                 OR f.related @> jsonb_build_array(jsonb_build_object('kind', focus.kind, 'id', focus.id))))`,
+  [scanId, analysis.completed, KNOWN_DETECTORS, focus ? JSON.stringify(focus) : null]);
   if (!stale.rows.length) return [];
 
   const changes = await valueChanges(client, stale.rows);
+  const fixes = await appliedFixes(client, stale.rows);
   const state = catalogState(snapshot);
   const rules = { version: RULES_VERSION, detectors: KNOWN_DETECTOR_SET };
   const verdicts = stale.rows.map((row) => {
     const verdict = classifyResolution({
       detector: row.detector, entityKind: row.entity_kind, entityId: row.entity_id === null ? null : Number(row.entity_id),
       field: row.field, value: row.value, rulesVersion: row.rules_version, pair: pairOf(row.pair),
-    }, changes.get(row.id), state, rules);
+    }, changes.get(row.id), state, rules, fixes.get(row.id));
     return { id: row.id, resolution: verdict.resolution, run_id: verdict.runId };
   });
 
@@ -288,6 +358,29 @@ async function resolveStale(client: PoolClient, scanId: number, analysis: Analys
 
 function pairOf(value: unknown): [number, number] | null {
   return Array.isArray(value) && value.length === 2 && value.every((item) => Number.isSafeInteger(item)) ? [value[0] as number, value[1] as number] : null;
+}
+
+/**
+ * El ítem de lote aplicado más reciente sobre cada hallazgo desde que apareció
+ * (M1): su run es la corrección, también cuando fue una fusión que retiró la
+ * ficha o una limpieza cubierta por otra del mismo lote. Un ítem deshecho no
+ * cuenta, ni el de un lote de deshacer: deshacer no corrige nada.
+ */
+async function appliedFixes(client: PoolClient, rows: StaleRow[]): Promise<Map<string, AppliedFix>> {
+  const fixes = new Map<string, AppliedFix>();
+  const ids = rows.map((row) => row.id);
+  for (let offset = 0; offset < ids.length; offset += CHUNK) {
+    const found = await client.query<{ id: string; run_id: string }>(`
+      SELECT DISTINCT ON (i.finding_id) i.finding_id::text AS id, i.run_id::text
+        FROM ingest.curation_fix_items i
+        JOIN ingest.curation_fix_batches b ON b.id = i.batch_id AND b.mode <> 'undo'
+        JOIN ingest.curation_findings f ON f.id = i.finding_id
+       WHERE i.finding_id = ANY($1::bigint[]) AND i.status = 'applied' AND i.run_id IS NOT NULL
+         AND i.applied_at >= f.first_seen_at
+       ORDER BY i.finding_id, i.applied_at DESC, i.id DESC`, [ids.slice(offset, offset + CHUNK)]);
+    for (const row of found.rows) fixes.set(row.id, { runId: Number(row.run_id) });
+  }
+  return fixes;
 }
 
 /** Columna de `merge_audit` que apunta a cada tipo de ficha (nombres fijos, no vienen del usuario). */
@@ -328,8 +421,9 @@ function errorMessage(error: unknown): string {
 async function executeScan(request: ScanRequest): Promise<ScanSummary> {
   const started = Date.now();
   const dryRun = request.dryRun ?? false;
+  const focus = request.focus ?? null;
   const summary: ScanSummary = {
-    scanId: null, status: "failed", trigger: request.trigger, dryRun, durationMs: 0, catalogSignature: "",
+    scanId: null, status: "failed", scope: focus ? "dirigido" : "completo", trigger: request.trigger, dryRun, durationMs: 0, catalogSignature: "",
     total: 0, inserted: 0, reopened: 0, resolved: 0, chained: 0, byCategory: {}, failures: [],
   };
   let client: PoolClient | null = null;
@@ -341,20 +435,31 @@ async function executeScan(request: ScanRequest): Promise<ScanSummary> {
     client = await getPool().connect();
     // Un análisis que no guarda no necesita excluir a nadie.
     if (!dryRun) {
-      const lock = await client.query<{ locked: boolean }>("SELECT pg_try_advisory_lock(hashtext($1)) AS locked", [CURATION_SCAN_LOCK]);
-      locked = lock.rows[0]?.locked === true;
+      const attempts = focus ? DIRECTED_LOCK_ATTEMPTS : 1;
+      for (let attempt = 1; ; attempt += 1) {
+        const lock = await client.query<{ locked: boolean }>("SELECT pg_try_advisory_lock(hashtext($1)) AS locked", [CURATION_SCAN_LOCK]);
+        locked = lock.rows[0]?.locked === true;
+        if (locked || attempt >= attempts) break;
+        await sleep(DIRECTED_LOCK_RETRY_MS);
+      }
       if (!locked) return await recordSkipped(client, request, summary, started);
     }
     summary.catalogSignature = await catalogSignature(client);
     if (!dryRun) {
       const created = await client.query<{ id: string }>(`
-        INSERT INTO ingest.curation_scans(trigger, requested_by, catalog_signature, counters)
-        VALUES ($1, $2, $3, $4::jsonb) RETURNING id::text`,
-      [request.trigger.slice(0, 40), request.requestedBy ?? null, summary.catalogSignature, JSON.stringify({ rulesVersion: RULES_VERSION, detail: request.detail ?? null })]);
+        INSERT INTO ingest.curation_scans(trigger, requested_by, catalog_signature, counters, scope)
+        VALUES ($1, $2, $3, $4::jsonb, $5) RETURNING id::text`,
+      [request.trigger.slice(0, 40), request.requestedBy ?? null, summary.catalogSignature, JSON.stringify({
+        rulesVersion: RULES_VERSION, detail: request.detail ?? null, ...(focus ? { focus: focus.length } : {}),
+      }), summary.scope]);
       summary.scanId = Number(created.rows[0]!.id);
     }
     const snapshot = await loadCatalogSnapshot(client);
-    const analysis = analyzeCatalog(snapshot);
+    const complete = analyzeCatalog(snapshot);
+    const focusKeys = focus ? new Set(focus.map((ref) => refKey(ref.kind, ref.id))) : null;
+    const analysis: AnalysisResult = focusKeys
+      ? { ...complete, findings: complete.findings.filter((finding) => inFocus(finding, focusKeys)) }
+      : complete;
     for (const finding of analysis.findings) summary.byCategory[finding.category] = (summary.byCategory[finding.category] ?? 0) + 1;
     summary.total = analysis.findings.length;
     summary.failures = analysis.failures;
@@ -362,10 +467,11 @@ async function executeScan(request: ScanRequest): Promise<ScanSummary> {
     if (summary.scanId !== null) {
       await client.query("BEGIN");
       try {
-        const counts = await persist(client, summary.scanId, analysis, snapshot);
+        const counts = await persist(client, summary.scanId, analysis, snapshot, focus);
         await client.query("COMMIT");
         ({ resolutions } = counts);
         Object.assign(summary, { inserted: counts.inserted, reopened: counts.reopened, resolved: counts.resolved, chained: counts.chained });
+        if (counts.details) summary.details = counts.details;
       } catch (error) {
         await client.query("ROLLBACK").catch(() => undefined);
         throw error;
@@ -379,7 +485,7 @@ async function executeScan(request: ScanRequest): Promise<ScanSummary> {
         resolutions, byCategory: summary.byCategory, failures: analysis.failures, durationMs: summary.durationMs, lexicon: analysis.lexicon,
       }), summary.status]);
     }
-    const fields = { scanId: summary.scanId, trigger: request.trigger, total: summary.total, inserted: summary.inserted, resolved: summary.resolved, chained: summary.chained, ms: summary.durationMs };
+    const fields = { scanId: summary.scanId, scope: summary.scope, trigger: request.trigger, total: summary.total, inserted: summary.inserted, resolved: summary.resolved, chained: summary.chained, ms: summary.durationMs };
     if (summary.status === "partial") log.warn({ ...fields, failures: analysis.failures }, "análisis de curaduría parcial: hay detectores que fallaron");
     else log.info(fields, "análisis de curaduría");
     return summary;
@@ -402,11 +508,11 @@ async function executeScan(request: ScanRequest): Promise<ScanSummary> {
 /** Otro proceso tiene el candado: queda constancia y se reintenta en la siguiente vuelta. */
 async function recordSkipped(client: PoolClient, request: ScanRequest, summary: ScanSummary, started: number): Promise<ScanSummary> {
   const saved = await client.query<{ id: string }>(`
-    INSERT INTO ingest.curation_scans(status, trigger, requested_by, counters, finished_at)
-    VALUES ('skipped', $1, $2, $3::jsonb, now()) RETURNING id::text`,
+    INSERT INTO ingest.curation_scans(status, trigger, requested_by, counters, finished_at, scope)
+    VALUES ('skipped', $1, $2, $3::jsonb, now(), $4) RETURNING id::text`,
   [request.trigger.slice(0, 40), request.requestedBy ?? null, JSON.stringify({
     rulesVersion: RULES_VERSION, detail: request.detail ?? null, reason: "otro proceso estaba analizando el catálogo",
-  })]);
+  }), summary.scope]);
   const scanId = Number(saved.rows[0]!.id);
   log.info({ scanId, trigger: request.trigger }, "análisis de curaduría omitido: otro proceso está analizando");
   return { ...summary, scanId, status: "skipped", durationMs: Date.now() - started };
@@ -424,10 +530,16 @@ async function releaseScanClient(client: PoolClient, locked: boolean, healthy: b
 
 let running: Promise<ScanSummary> | null = null;
 let queued: { request: ScanRequest; promise: Promise<ScanSummary> } | null = null;
+/** Verificaciones dirigidas: una detrás de otra, y cada una detrás del análisis en curso y del agrupado. */
+let directedTail: Promise<unknown> = Promise.resolve();
+let directedPending = 0;
+/** Trabajo que termina en un análisis (la verificación de un lote): lo esperan el cierre ordenado y las pruebas. */
+const background = new Set<Promise<unknown>>();
 
 /** Corre un análisis; si ya hay uno en curso, agrupa esta petición en el siguiente. */
 export function runCurationScan(request: ScanRequest): Promise<ScanSummary> {
   if (request.dryRun) return executeScan(request);
+  if (request.focus) return runDirectedScan(request);
   if (!running) {
     running = executeScan(request).finally(() => { running = null; });
     return running;
@@ -446,10 +558,33 @@ export function runCurationScan(request: ScanRequest): Promise<ScanSummary> {
   return slot.promise;
 }
 
-/** Espera a que terminen el análisis en curso y el agrupado (cierre ordenado y tests). */
+function runDirectedScan(request: ScanRequest): Promise<ScanSummary> {
+  directedPending += 1;
+  const task = directedTail.then(async () => {
+    // Solo espera al análisis en curso y al agrupado: esperar al trabajo en
+    // segundo plano podría ser esperarse a sí misma (la verificación de un lote).
+    while (running || queued) await (queued?.promise ?? running)?.catch(() => undefined);
+    const current: Promise<ScanSummary> = executeScan(request).finally(() => { if (running === current) running = null; });
+    // Mientras corre, un análisis completo que llegue se agrupa detrás, no choca con el candado.
+    running = current;
+    return current;
+  }).finally(() => { directedPending -= 1; });
+  directedTail = task.catch(() => undefined);
+  return task;
+}
+
+/** Registra trabajo en segundo plano que termina en un análisis, para que el cierre ordenado y las pruebas lo esperen. */
+export function trackCurationWork<T>(work: Promise<T>): Promise<T> {
+  background.add(work);
+  const done = () => { background.delete(work); };
+  void work.then(done, done);
+  return work;
+}
+
+/** Espera a que terminen el análisis en curso, el agrupado, las verificaciones dirigidas y el trabajo en segundo plano (cierre ordenado y tests). */
 export async function waitForCurationScans(): Promise<void> {
-  while (running || queued) {
-    await (queued?.promise ?? running)?.catch(() => undefined);
+  while (running || queued || directedPending > 0 || background.size > 0) {
+    await Promise.allSettled([running, queued?.promise, directedTail, ...background].filter((item) => item !== null && item !== undefined));
   }
 }
 

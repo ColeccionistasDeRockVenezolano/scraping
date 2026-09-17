@@ -5,7 +5,10 @@
 // reglas. Ahora cada resolución lleva su motivo y, cuando `merge_audit` lo
 // registra, el run de escritura que cambió el valor detectado:
 //
-//  - fixed_by_curation: un run de Curaduría (`api:curation:*`) cambió el valor;
+//  - fixed_by_curation: un ítem de un lote de correcciones se aplicó sobre el
+//    hallazgo (su run manda, también si fue una fusión que retiró la ficha:
+//    PLAN_CURADURIA E4), o un run de Curaduría (`api:curation:*`) cambió el
+//    valor. Deshacer un lote (`api:curation:undo:*`) no es una corrección;
 //  - changed_elsewhere: lo cambió otra escritura (edición, fusión, ingesta,
 //    SQL sin auditoría) o cambió el contexto (fichas relacionadas, la cola);
 //  - entity_removed: la ficha ya no está en el catálogo (retirada o fusionada);
@@ -26,6 +29,8 @@ export type Resolution = "fixed_by_curation" | "changed_elsewhere" | "entity_rem
 
 /** Nombre de los runs que escribe Curaduría (`withOperatorRun({ name })`). */
 export const CURATION_RUN_PREFIX = "api:curation:";
+/** Runs con que Curaduría deshace un lote: devuelven el valor anterior, no corrigen. */
+export const CURATION_UNDO_RUN_PREFIX = "api:curation:undo:";
 
 export interface StaleFinding {
   detector: string;
@@ -44,6 +49,11 @@ export interface ValueChange {
   runId: number | null;
   /** `params.action` del run: dice si fue Curaduría. */
   action: string | null;
+}
+
+/** Ítem de lote aplicado sobre el hallazgo desde que apareció (`ingest.curation_fix_items`). */
+export interface AppliedFix {
+  runId: number;
 }
 
 export interface ResolutionVerdict {
@@ -80,7 +90,11 @@ export function classifyResolution(
   change: ValueChange | undefined,
   state: CatalogState,
   rules: { version: string; detectors: ReadonlySet<string> },
+  fix?: AppliedFix,
 ): ResolutionVerdict {
+  // Lo corrigió un lote de Curaduría: antes que «ficha retirada», porque una
+  // fusión retira la ficha precisamente para corregir el hallazgo.
+  if (fix) return { resolution: "fixed_by_curation", runId: fix.runId };
   if (finding.entityId !== null && state.exists(finding.entityKind, finding.entityId) === false) {
     return { resolution: "entity_removed", runId: null };
   }
@@ -88,7 +102,8 @@ export function classifyResolution(
     return { resolution: "declared_distinct", runId: null };
   }
   if (change) {
-    return { resolution: change.action?.startsWith(CURATION_RUN_PREFIX) ? "fixed_by_curation" : "changed_elsewhere", runId: change.runId };
+    const byCuration = change.action !== null && change.action.startsWith(CURATION_RUN_PREFIX) && !change.action.startsWith(CURATION_UNDO_RUN_PREFIX);
+    return { resolution: byCuration ? "fixed_by_curation" : "changed_elsewhere", runId: change.runId };
   }
   if (!rules.detectors.has(finding.detector)) return { resolution: "rules_changed", runId: null };
   if (finding.rulesVersion !== null && finding.rulesVersion !== rules.version) {

@@ -74,6 +74,7 @@ export const equivalentArtists: Detector = {
   category: CATEGORY,
   label: "Artistas escritos de otra forma",
   description: "Artistas que coinciden al quitar tildes, artículos («Los», «The»), espacios o una aclaración final entre paréntesis.",
+  actions: { "*": ["fusionar"] },
   run(context) {
     const artists = namesOf(context, "artist");
     const seen = new Set<string>();
@@ -108,6 +109,7 @@ export const equivalentOrganizations: Detector = {
   category: CATEGORY,
   label: "Organizaciones escritas de otra forma",
   description: "Organizaciones que coinciden al quitar tildes, artículos, espacios o las palabras genéricas de sello y estudio.",
+  actions: { "*": ["fusionar"] },
   run(context) {
     const orgs = namesOf(context, "organization");
     const seen = new Set<string>();
@@ -216,6 +218,7 @@ export const equivalentPersons: Detector = {
   category: CATEGORY,
   label: "Personas escritas de otra forma",
   description: "Personas cuyo nombre solo cambia en tildes, mayúsculas o signos y que el detector de Posibles duplicados no propuso ni cerró.",
+  actions: { "*": ["fusionar"] },
   run(context) {
     const out: Finding[] = [];
     for (const group of groupBy(namesOf(context, "person"), (name) => nameKey(name.value))) {

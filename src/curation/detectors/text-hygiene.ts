@@ -17,7 +17,7 @@ const CATEGORY = "nombres_sucios";
 const INVISIBLE = /(?:\u034F|\u115F|\u1160|\u17B4|\u17B5|[\u00A0\u00AD\u061C\u180E\u200B\u200C\u200E\u200F\u202A-\u202E\u2060-\u2064\u206A-\u206F\uFEFF\p{Cc}]|(?<!\p{Extended_Pictographic}(?:[\u{1F3FB}-\u{1F3FF}]|\uFE0F)?)\u200D|\u200D(?!\p{Extended_Pictographic}))/u;
 const INVISIBLE_ALL = new RegExp(INVISIBLE.source, "gu");
 
-/** Exportada para E3 (repository.ts): compone las limpiezas de varios hallazgos sobre la misma ficha en una sola escritura. */
+/** Exportada para la acción `limpiar_texto` (actions/text.ts): la misma limpieza que sugiere el detector. */
 export function cleanInvisible(value: string): string {
   return value
     .replace(/\u00A0/gu, " ")
@@ -31,6 +31,7 @@ export const invisibleCharacters: Detector = {
   category: CATEGORY,
   label: "Caracteres invisibles",
   description: "Espacios de ancho cero, marcas de dirección, guiones blandos o espacios duros que no se ven pero rompen búsquedas y comparaciones.",
+  actions: { "*": ["limpiar_texto"] },
   run({ names }) {
     return names.filter((name) => INVISIBLE.test(name.value)).map((name) => {
       const found = [...new Set([...name.value.matchAll(INVISIBLE_ALL)].map((match) => match[0]))];
@@ -52,6 +53,7 @@ export const irregularSpacing: Detector = {
   category: CATEGORY,
   label: "Espacios de más",
   description: "Espacios al principio, al final o repetidos entre palabras.",
+  actions: { "*": ["limpiar_texto"] },
   run({ names }) {
     return names
       .filter((name) => !INVISIBLE.test(name.value) && (name.value !== name.value.trim() || / {2,}/u.test(name.value)))
@@ -117,6 +119,8 @@ export const brokenEncoding: Detector = {
   category: CATEGORY,
   label: "Codificación rota",
   description: "Texto UTF-8 leído con otra codificación («ahÃ» más un guion blando, en lugar de «ahí») o letras perdidas como «?».",
+  // Mezcla de alfabetos y letra perdida esperan sus acciones propias (E5).
+  actions: { mojibake: ["limpiar_texto"] },
   run({ names }) {
     return names.flatMap((name) => {
       if (MOJIBAKE.test(name.value)) {
@@ -192,7 +196,7 @@ function decodeEntities(value: string): { decoded: string; span?: [number, numbe
   return { decoded, ...(span ? { span } : {}) };
 }
 
-/** Exportada para E3 (repository.ts): igual que el detector, pero solo el texto decodificado. */
+/** Exportada para la acción `limpiar_texto` (actions/text.ts): igual que el detector, pero solo el texto decodificado. */
 export function decodeHtmlEntitiesValue(value: string): string {
   return decodeEntities(value).decoded;
 }
@@ -202,6 +206,7 @@ export const htmlEntities: Detector = {
   category: CATEGORY,
   label: "Entidades HTML",
   description: "Restos del HTML de la fuente sin decodificar («&amp;», «&#39;»).",
+  actions: { "*": ["limpiar_texto"] },
   run({ names }) {
     return names.filter((name) => HTML_ENTITY.test(name.value)).flatMap((name) => {
       const { decoded, span } = decodeEntities(name.value);
@@ -258,12 +263,12 @@ const DANGLING = /^[\s–—,;:/|•·*-]+(?=\S)|(?<=\S)\s*[–—,;:/|•·-]+\
 /** «-en vivo-» envuelve un texto entre guiones: no es un signo suelto. */
 const WRAPPED = /(?:^|\s)[–—-][^\s–—-][^–—-]*[–—-]\s*$/u;
 
-/** Exportada para E3 (repository.ts): mismo recorte que el detector, sin la ficha del hallazgo. */
+/** Exportada para la acción `limpiar_texto` (actions/text.ts): mismo recorte que el detector, sin la ficha del hallazgo. */
 export function trimDanglingPunctuation(value: string): string {
   return value.replace(new RegExp(DANGLING.source, "gu"), "").trim();
 }
 
-/** Exportada para E3 (repository.ts): colapsa espacios repetidos y recorta los extremos. */
+/** Exportada para la acción `limpiar_texto` (actions/text.ts): colapsa espacios repetidos y recorta los extremos. */
 export function collapseSpaces(value: string): string {
   return value.replace(/\s+/gu, " ").trim();
 }
@@ -273,6 +278,7 @@ export const danglingPunctuation: Detector = {
   category: CATEGORY,
   label: "Signos colgantes",
   description: "Guiones, comas, barras o dos puntos al principio o al final: resto de un corte en el lugar equivocado («Sesión -»).",
+  actions: { "*": ["limpiar_texto"] },
   run({ names }) {
     return names.filter((name) => DANGLING.test(name.value) && !WRAPPED.test(name.value)).map((name) => {
       const cleaned = name.value.replace(new RegExp(DANGLING.source, "gu"), "").trim();

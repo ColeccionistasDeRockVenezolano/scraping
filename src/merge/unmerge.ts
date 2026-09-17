@@ -25,6 +25,8 @@ export interface MergeAuditData {
   movedRefs: MovedRef[];
   discardedRows: DiscardedRow[];
   detachedReviews: Array<Record<string, unknown>>;
+  /** Alias primarios del duplicado que la fusión dejó como secundarios (desde E4; ausente antes). */
+  primaryAliases?: number[];
   version: 2;
 }
 
@@ -60,6 +62,15 @@ async function reinsertRow(client: PoolClient, table: string, snapshot: Record<s
   await client.query(
     `INSERT INTO ${qualified} ${overriding}SELECT * FROM jsonb_populate_record(NULL::${qualified}, $1::jsonb)`, [snapshot]);
 }
+
+/** Tabla de alias e identidad de las fichas con nombre propio: las que dejan alias al fusionarse. */
+const ALIAS_OF: Partial<Record<MergeKind, { table: string; identity: string }>> = {
+  person: { table: "ingest.person_aliases", identity: "name" },
+  artist: { table: "ingest.artist_aliases", identity: "name" },
+  organization: { table: "ingest.organization_aliases", identity: "name" },
+  album: { table: "ingest.album_aliases", identity: "title" },
+  track: { table: "ingest.track_aliases", identity: "title" },
+};
 
 /** `movedRefs` ya trae `esquema.tabla`; `MERGE_TABLES` trae el nombre pelado. */
 const qualify = (table: string): string => (table.includes(".") ? table : `public.${table}`);
@@ -165,12 +176,18 @@ export async function undoMergeRun(context: OperatorContext, mergeRunId: number)
     }
     // 5. Las columnas que se completaron desde el duplicado vuelven a estar vacías.
     for (const column of data.filled) await emptyAgain(client, kind, column, keepId, drop);
-    // 6. El alias que dejó la fusión no debería sobrevivir a la fusión.
-    const aliasTable = kind === "person" ? "ingest.person_aliases" : undefined;
-    if (aliasTable) {
+    // 6. El alias que dejó la fusión no debería sobrevivir a la fusión, y los
+    //    alias primarios del duplicado vuelven a serlo. Toda ficha con nombre
+    //    propio lo deja (antes solo se retiraba el de personas).
+    const alias = ALIAS_OF[kind];
+    if (alias) {
       await client.query(
-        `DELETE FROM ${aliasTable} WHERE person_id=$1 AND alias=$2 AND notes='Nombre de un duplicado fusionado'`,
-        [keepId, String(drop["name"])]);
+        `DELETE FROM ${alias.table} WHERE ${kind}_id=$1 AND alias=$2 AND notes='Nombre de un duplicado fusionado'`,
+        [keepId, String(drop[alias.identity])]);
+      if (data.primaryAliases?.length) {
+        await client.query(
+          `UPDATE ${alias.table} SET is_primary=true WHERE id=ANY($1::bigint[]) AND ${kind}_id=$2`, [data.primaryAliases, dropId]);
+      }
     }
     // 7. La redirección del id desaparecido.
     await client.query(

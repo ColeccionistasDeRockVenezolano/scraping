@@ -37,6 +37,11 @@ const envSchema = z.object({
   // cubrir cambios hechos fuera de la API. 0 apaga el vigilante.
   CRV_CURATION_AUTOSCAN: z.enum(["true", "false"]).default("true").transform((value) => value === "true"),
   CRV_CURATION_WATCH_MS: z.coerce.number().int().nonnegative().default(60_000),
+  // Lotes de correcciones de Curaduría (PLAN_CURADURIA E4): cuántos ítems
+  // aplica o deshace una llamada (el resto sigue con otra llamada explícita) y
+  // cuántos hallazgos entran como máximo en la vista previa de un lote.
+  CRV_CURATION_FIX_BATCH_MAX: z.coerce.number().int().positive().max(5000).default(500),
+  CRV_CURATION_FIX_PREVIEW_MAX: z.coerce.number().int().positive().max(50_000).default(5000),
 
   DATA_DIR: z.string().default("./data"),
 

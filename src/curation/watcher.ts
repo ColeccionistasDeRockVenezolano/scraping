@@ -68,7 +68,8 @@ export function startCurationWatcher(intervalMs: number): () => void {
 
   const readLastScanned = async (): Promise<void> => {
     const { rows } = await getPool().query<{ catalog_signature: string | null }>(
-      "SELECT catalog_signature FROM ingest.curation_scans WHERE status IN ('ok', 'partial') ORDER BY id DESC LIMIT 1");
+      // Una verificación dirigida no miró todo el catálogo: su firma no cuenta como «ya analizado».
+      "SELECT catalog_signature FROM ingest.curation_scans WHERE status IN ('ok', 'partial') AND scope = 'completo' ORDER BY id DESC LIMIT 1");
     lastScanned = rows[0]?.catalog_signature ?? "";
   };
 

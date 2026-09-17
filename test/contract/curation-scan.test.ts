@@ -152,7 +152,8 @@ describe("detector de conflictos de Curaduría (persistencia y verificación de 
     expect(scan.counters["resolutions"]).toMatchObject({ fixed_by_curation: 1 });
 
     const resolution = await resolutionOf(invisible!.id);
-    expect(resolution).toMatchObject({ status: "resolved", resolution: "fixed_by_curation", action: "api:curation:fix", operator: OPERATOR });
+    // Desde E4 la corrección es un lote de la acción `limpiar_texto`: el run lleva su nombre.
+    expect(resolution).toMatchObject({ status: "resolved", resolution: "fixed_by_curation", action: "api:curation:fix:limpiar_texto", operator: OPERATOR });
     const read = await app.inject({ method: "GET", url: `/curation/findings/${invisible!.id}`, headers });
     expect(read.json()).toMatchObject({ status: "resolved", resolution: "fixed_by_curation", resolvedByRunId: Number(resolution!.run_id), resolvedBy: OPERATOR });
   }, 60_000);
@@ -456,7 +457,7 @@ describe("detector de conflictos de Curaduría (persistencia y verificación de 
     expect(current).toEqual({ name: "Nombre Cambiado A Mano QA" });
   }, 60_000);
 
-  it("varios hallazgos sobre la misma ficha se componen en una sola escritura, sin que uno pise al otro (C4)", async () => {
+  it("varios hallazgos sobre la misma ficha se encadenan en el mismo lote, sin que uno pise al otro (C4)", async () => {
     const org = await one("INSERT INTO public.organizations(name) VALUES($1) RETURNING id", [`Estudio Sombra QA${ZERO_WIDTH_SPACE} -`]);
     expect((await runCurationScan({ trigger: "manual" })).status).toBe("ok");
     const rows = (await getPool().query<{ id: string; detector: string }>(`

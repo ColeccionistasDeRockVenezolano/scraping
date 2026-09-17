@@ -108,4 +108,10 @@ export interface DetectorDefinition {
   category: string;
   label: string;
   description: string;
+  /**
+   * Acciones de corrección que propone, por subgrupo (PLAN_CURADURIA E4.1):
+   * clave = `signature`, o `*` para todos sus subgrupos. Claves del registro
+   * `src/curation/actions/registry.ts`. Sin acciones = nivel 3 (manual).
+   */
+  actions?: Readonly<Record<string, readonly string[]>>;
 }

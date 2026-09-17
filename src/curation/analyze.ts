@@ -29,7 +29,7 @@ export const DETECTORS: readonly Detector[] = [
 
 /** Definiciones públicas (sin `run`) de todos los detectores, «Otros» incluido. */
 export const DETECTOR_DEFINITIONS: readonly DetectorDefinition[] = [...DETECTORS, catalogAnomalies]
-  .map(({ key, category, label, description }) => ({ key, category, label, description }));
+  .map(({ key, category, label, description, actions }) => ({ key, category, label, description, ...(actions ? { actions } : {}) }));
 
 /**
  * Cambia cuando cambian las reglas: queda registrado en cada análisis, y lo que

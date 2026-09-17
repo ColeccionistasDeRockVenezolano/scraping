@@ -430,7 +430,12 @@ export async function mergeInto(
        WHERE album_id=$1 AND is_primary_link
          AND EXISTS (SELECT 1 FROM media.video_albums WHERE album_id=$2 AND is_primary_link)`, [dropId, keepId]);
   }
-  if (aliasTable) await client.query(`UPDATE ${aliasTable} SET is_primary=false WHERE ${kind}_id=$1`, [dropId]);
+  // Los alias primarios del duplicado dejan de serlo; sus ids quedan en la
+  // auditoría para que deshacer la fusión los devuelva tal cual (E4).
+  const primaryAliases = aliasTable
+    ? (await client.query<{ id: string }>(`UPDATE ${aliasTable} SET is_primary=false WHERE ${kind}_id=$1 AND is_primary RETURNING id::text`, [dropId]))
+      .rows.map((row) => Number(row.id))
+    : [];
 
   // Antes de reapuntar nada: la revisión que careaba las dos fichas no admite
   // el reapunte (chk de distintas) y hay que soltarle el lado que desaparece.
@@ -475,7 +480,7 @@ export async function mergeInto(
     VALUES($1,$2::ingest.claim_entity_kind,$3,'merged_duplicate',$4::jsonb,$5::jsonb,$6,'high','human') RETURNING id::text`,
   [runId, kind, keepId, JSON.stringify(drop),
     JSON.stringify({ keptId: keepId, filled, moved, discarded: discardedRows.length, tracksMerged,
-      movedRefs, discardedRows, detachedReviews, version: 2 }), note]);
+      movedRefs, discardedRows, detachedReviews, primaryAliases, version: 2 }), note]);
   const auditId = Number(auditRow.rows[0]!.id);
   // La evidencia completa, sin el recorte a 50 de antes (P4): hay fichas con
   // más de 150 claims y las fusiones ya llegaban al tope.

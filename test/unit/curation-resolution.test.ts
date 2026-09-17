@@ -21,6 +21,21 @@ describe("motivo de resolución de un hallazgo (M1)", () => {
   it("un run de Curaduría que cambió el valor detectado: corregido desde Curaduría, con su run", () => {
     expect(classifyResolution(stale(), { runId: 42, action: "api:curation:fix" }, state, rules))
       .toEqual({ resolution: "fixed_by_curation", runId: 42 });
+    // E4: cada ítem de un lote es un run con el nombre de su acción.
+    expect(classifyResolution(stale(), { runId: 44, action: "api:curation:fix:limpiar_texto" }, state, rules))
+      .toEqual({ resolution: "fixed_by_curation", runId: 44 });
+  });
+
+  it("deshacer un lote no es corregir: cambiado en otra parte, con el run del deshacer", () => {
+    expect(classifyResolution(stale(), { runId: 45, action: "api:curation:undo:limpiar_texto" }, state, rules))
+      .toEqual({ resolution: "changed_elsewhere", runId: 45 });
+  });
+
+  it("un ítem de lote aplicado sobre el hallazgo manda: su run, también si la fusión retiró la ficha (E4.6)", () => {
+    expect(classifyResolution(stale(), { runId: 46, action: "api:artist:update" }, state, rules, { runId: 47 }))
+      .toEqual({ resolution: "fixed_by_curation", runId: 47 });
+    expect(classifyResolution(stale({ entityId: 9_999 }), undefined, state, rules, { runId: 48 }))
+      .toEqual({ resolution: "fixed_by_curation", runId: 48 });
   });
 
   it("otra escritura auditada: cambiado en otra parte, con su run", () => {
@@ -78,6 +93,8 @@ describe("escrituras que piden un análisis completo (M11)", () => {
   it.each([
     ["PATCH", "/review-queue/5/priority"], ["POST", "/auth/login"], ["POST", "/auth/logout"],
     ["POST", "/curation/scan"], ["POST", "/curation/findings/1/ignore"], ["POST", "/curation/findings/ignore-group"],
+    // Los lotes verifican sus propias fichas con un análisis dirigido (E4.6).
+    ["POST", "/curation/fixes/preview"], ["POST", "/curation/fixes/3/apply"], ["POST", "/curation/fixes/3/undo"], ["POST", "/curation/findings/1/fix"],
     ["GET", "/artists/12"], ["POST", "/artistsx"],
   ])("%s %s no dispara un análisis", (method, path) => {
     expect(isCatalogWrite(method, path)).toBe(false);

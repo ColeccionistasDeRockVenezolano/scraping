@@ -1,10 +1,12 @@
 // CRV · Lecturas y decisiones sobre los hallazgos de Curaduría.
-import type { PoolClient } from "pg";
+//
+// Corregir ya no vive aquí: toda corrección es un lote de acciones tipadas con
+// vista previa, aplicación y deshacer (src/curation/actions/, PLAN_CURADURIA
+// E4). Este módulo lee hallazgos, análisis y decisiones que no tocan el core.
+import type { Pool, PoolClient } from "pg";
 import { getPool } from "../db/client.js";
-import { updateEntity, withOperatorRun } from "../merge/operator.js";
-import { ENTITY_SPECS, type ResolvableClaimKind } from "../merge/specs.js";
 import { DETECTOR_DEFINITIONS } from "./analyze.js";
-import { cleanInvisible, collapseSpaces, decodeHtmlEntitiesValue, trimDanglingPunctuation } from "./detectors/text-hygiene.js";
+import { summarizeActions, type ActionSummary } from "./actions/registry.js";
 import type { Resolution } from "./resolution.js";
 import { CATEGORIES, OTHER_CATEGORY } from "./taxonomy.js";
 import type { EntityRef, Severity } from "./types.js";
@@ -22,6 +24,8 @@ export type DistinctPairKind = (typeof DISTINCT_PAIR_KINDS)[number];
 export interface ScanRow {
   id: number;
   status: string;
+  /** completo | dirigido (verificación de un lote de correcciones). */
+  scope: string;
   trigger: string;
   requestedBy: string | null;
   startedAt: string;
@@ -35,6 +39,8 @@ export interface DetectorSummary {
   key: string; label: string; description: string;
   open: number; ignored: number; resolved: number; newInLastScan: number;
   signatures: SignatureSummary[];
+  /** Acciones de corrección que declara, por subgrupo (`*` = todos). */
+  actions?: Record<string, string[]>;
 }
 export interface CategorySummary {
   key: string; label: string; description: string;
@@ -83,21 +89,23 @@ export interface FindingRow {
   /** Run de escritura que cambió el valor detectado, y quién lo firmó. */
   resolvedByRunId: number | null;
   resolvedBy: string | null;
+  /** Acciones de corrección que se ofrecen (la primera es la recomendada); vacío = hay que editar la ficha. */
+  actions: ActionSummary[];
 }
 
 const DETECTOR_BY_KEY = new Map(DETECTOR_DEFINITIONS.map((detector) => [detector.key, detector]));
 const iso = (value: Date | string | null): string | null => (value === null ? null : new Date(value).toISOString());
 
-type RawScan = { id: string; status: string; trigger: string; requested_by: string | null; started_at: Date; finished_at: Date | null; error: string | null; counters: Record<string, unknown> };
+type RawScan = { id: string; status: string; scope: string; trigger: string; requested_by: string | null; started_at: Date; finished_at: Date | null; error: string | null; counters: Record<string, unknown> };
 
 function scanRow(row: RawScan): ScanRow {
   return {
-    id: Number(row.id), status: row.status, trigger: row.trigger, requestedBy: row.requested_by,
+    id: Number(row.id), status: row.status, scope: row.scope, trigger: row.trigger, requestedBy: row.requested_by,
     startedAt: iso(row.started_at)!, finishedAt: iso(row.finished_at), error: row.error, counters: row.counters,
   };
 }
 
-const SCAN_COLUMNS = "id::text, status, trigger, requested_by, started_at, finished_at, error, counters";
+const SCAN_COLUMNS = "id::text, status, scope, trigger, requested_by, started_at, finished_at, error, counters";
 
 export async function listScans(limit = 20): Promise<ScanRow[]> {
   const { rows } = await getPool().query<RawScan>(`SELECT ${SCAN_COLUMNS} FROM ingest.curation_scans ORDER BY id DESC LIMIT $1`, [limit]);
@@ -106,20 +114,29 @@ export async function listScans(limit = 20): Promise<ScanRow[]> {
 
 /** Un análisis parcial también guardó lo que miró: cuenta como análisis hecho. */
 const SAVED_SCAN = "status IN ('ok', 'partial')";
+/**
+ * Solo un análisis del catálogo entero es «el último análisis»: una
+ * verificación dirigida (E4.6) solo miró las fichas de un lote, y lo que
+ * encontró no es «nuevo en el último análisis».
+ */
+const COMPLETE_SCAN = `${SAVED_SCAN} AND scope = 'completo'`;
 
-async function lastOkScanId(): Promise<number | null> {
-  const { rows } = await getPool().query<{ id: string }>(`SELECT id::text FROM ingest.curation_scans WHERE ${SAVED_SCAN} ORDER BY id DESC LIMIT 1`);
+type CurationQueryable = Pick<Pool | PoolClient, "query">;
+
+async function lastOkScanId(queryable: CurationQueryable = getPool()): Promise<number | null> {
+  const { rows } = await queryable.query<{ id: string }>(`SELECT id::text FROM ingest.curation_scans WHERE ${COMPLETE_SCAN} ORDER BY id DESC LIMIT 1`);
   return rows[0] ? Number(rows[0].id) : null;
 }
 
 export async function getCurationSummary(running: boolean): Promise<CurationSummary> {
   const pool = getPool();
   const [last, correction, counts] = await Promise.all([
-    // Un análisis omitido (otro proceso analizaba) no es «el último análisis».
-    pool.query<RawScan>(`SELECT ${SCAN_COLUMNS} FROM ingest.curation_scans WHERE status NOT IN ('running', 'skipped') ORDER BY id DESC LIMIT 1`),
+    // Un análisis omitido (otro proceso analizaba) no es «el último análisis», ni una verificación dirigida.
+    pool.query<RawScan>(`SELECT ${SCAN_COLUMNS} FROM ingest.curation_scans WHERE status NOT IN ('running', 'skipped') AND scope = 'completo' ORDER BY id DESC LIMIT 1`),
+    // La última verificación tras una corrección sí puede ser dirigida: es lo que verificó el último lote.
     pool.query<RawScan>(`SELECT ${SCAN_COLUMNS} FROM ingest.curation_scans WHERE trigger = 'correccion' AND ${SAVED_SCAN} ORDER BY id DESC LIMIT 1`),
     pool.query<{ category: string; detector: string; signature: string; label: string | null; status: FindingStatus; severity: Severity; n: number; fresh: number; chained: number }>(`
-      WITH last_ok AS (SELECT max(id) AS id FROM ingest.curation_scans WHERE ${SAVED_SCAN})
+      WITH last_ok AS (SELECT max(id) AS id FROM ingest.curation_scans WHERE ${COMPLETE_SCAN})
       SELECT category, detector, signature, max(evidence->>'signatureLabel') AS label, status, severity,
              count(*)::int AS n,
              count(*) FILTER (WHERE first_seen_scan_id = (SELECT id FROM last_ok))::int AS fresh,
@@ -133,7 +150,10 @@ export async function getCurationSummary(running: boolean): Promise<CurationSumm
     ...category, open: 0, ignored: 0, resolved: 0, newInLastScan: 0, chainedOpen: 0,
     severity: { high: 0, medium: 0, low: 0 },
     detectors: DETECTOR_DEFINITIONS.filter((detector) => detector.category === category.key)
-      .map((detector) => ({ key: detector.key, label: detector.label, description: detector.description, open: 0, ignored: 0, resolved: 0, newInLastScan: 0, signatures: [] })),
+      .map((detector) => ({
+        key: detector.key, label: detector.label, description: detector.description, open: 0, ignored: 0, resolved: 0, newInLastScan: 0, signatures: [],
+        ...(detector.actions ? { actions: Object.fromEntries(Object.entries(detector.actions).map(([signature, keys]) => [signature, [...keys]])) } : {}),
+      })),
   }]));
 
   for (const row of counts.rows) {
@@ -200,7 +220,7 @@ export interface FindingQuery extends FindingFilter {
 
 /**
  * Construye el WHERE de `FindingFilter`. Lo comparten `listFindings` y las
- * acciones de grupo (`ignoreGroup`, `fixFindingsGroup`): antes, esas acciones
+ * acciones de grupo (`ignoreGroup`, los lotes de correcciones de grupo): antes, esas acciones
  * solo miraban `category/detector/signature` y afectaban más de lo que la
  * pantalla mostraba (C3, PLAN_CURADURIA E3.1) — un filtro de gravedad, tipo de
  * ficha, texto, análisis o encadenados quedaba fuera de la escritura.
@@ -243,7 +263,7 @@ const RESOLUTION_COLUMNS = `resolution, resolved_by_run_id::text,
 function findingRow(row: RawFinding, lastScan: number | null): FindingRow {
   const definition = DETECTOR_BY_KEY.get(row.detector);
   const evidence = row.evidence ?? {};
-  return {
+  const finding: Omit<FindingRow, "actions"> = {
     id: Number(row.id), category: row.category, detector: row.detector, detectorLabel: definition?.label ?? row.detector,
     signature: row.signature, signatureLabel: typeof evidence["signatureLabel"] === "string" ? evidence["signatureLabel"] : definition?.label ?? row.signature,
     severity: row.severity,
@@ -256,7 +276,12 @@ function findingRow(row: RawFinding, lastScan: number | null): FindingRow {
     ignoredAt: iso(row.ignored_at), ignoredBy: row.ignored_by, ignoreNote: row.ignore_note, ignoreReason: row.ignore_reason,
     resolution: row.resolution, resolvedByRunId: row.resolved_by_run_id === null ? null : Number(row.resolved_by_run_id), resolvedBy: row.resolved_by,
   };
+  return { ...finding, actions: summarizeActions(finding) };
 }
+
+const FINDING_COLUMNS = `id::text, category, detector, signature, severity, entity_kind, entity_id::text, entity_label, field, value, title, suggestion,
+             suggested_value, related, evidence, status, first_seen_scan_id::text, first_seen_at, last_seen_at, resolved_at, ignored_at, ignored_by, ignore_note, ignore_reason,
+             ${RESOLUTION_COLUMNS}`;
 
 export async function listFindings(query: FindingQuery): Promise<{ rows: FindingRow[]; total: number }> {
   const { where, params } = buildFindingsWhere(query);
@@ -264,9 +289,7 @@ export async function listFindings(query: FindingQuery): Promise<{ rows: Finding
   const [lastScan, result] = await Promise.all([
     lastOkScanId(),
     getPool().query<RawFinding>(`
-      SELECT id::text, category, detector, signature, severity, entity_kind, entity_id::text, entity_label, field, value, title, suggestion,
-             suggested_value, related, evidence, status, first_seen_scan_id::text, first_seen_at, last_seen_at, resolved_at, ignored_at, ignored_by, ignore_note, ignore_reason,
-             ${RESOLUTION_COLUMNS},
+      SELECT ${FINDING_COLUMNS},
              count(*) OVER ()::text AS total
         FROM ingest.curation_findings
        ${where.length ? `WHERE ${where.join(" AND ")}` : ""}
@@ -276,8 +299,15 @@ export async function listFindings(query: FindingQuery): Promise<{ rows: Finding
   return { rows: result.rows.map((row) => findingRow(row, lastScan)), total: Number(result.rows[0]?.total ?? 0) };
 }
 
+/**
+ * Fallo esperado de Curaduría. stale = la ficha cambió desde el análisis (C4);
+ * stale_preview = el hash no es el de la vista previa del lote; busy = otro
+ * proceso aplica o deshace ese lote; not_fixable = no hay nada que aplicar.
+ */
+export type CurationErrorCode = "not_found" | "not_open" | "not_fixable" | "invalid" | "stale" | "stale_preview" | "busy";
+
 export class CurationError extends Error {
-  constructor(readonly code: "not_found" | "not_open" | "not_fixable" | "invalid" | "stale", message: string) { super(message); }
+  constructor(readonly code: CurationErrorCode, message: string, readonly details?: Record<string, unknown>) { super(message); }
 }
 
 /**
@@ -396,205 +426,54 @@ export async function removeDistinctPair(id: number): Promise<DistinctPairRow> {
   return distinctPairRow(rows[0]);
 }
 
-// ---------------------------------------------------------------------------
-// Corregir: a diferencia de «ignorar», esto SÍ cambia el catálogo. Solo se
-// ofrece donde el detector ya calculó un reemplazo determinista del campo
-// (`suggested_value`, hoy solo «nombres sucios»): el mismo campo, el mismo
-// tipo de dato, sin ambigüedad. Cada corrección pasa por `merge/operator.ts`
-// (un `withOperatorRun` por ficha), así que cada una queda en `merge_audit`
-// con su propia nota, igual que si se hubiera editado la ficha a mano.
-// ---------------------------------------------------------------------------
-
-const FIXABLE_FIELDS = new Set(["name", "title"]);
-const REAL_ENTITY_KINDS = new Set<string>(["artist", "person", "organization", "album", "track"]);
-
-function isFixableKind(kind: string): kind is ResolvableClaimKind {
-  return REAL_ENTITY_KINDS.has(kind);
-}
-
-interface FixableRow {
-  id: string;
-  status: FindingStatus;
-  detector: string;
-  field: string | null;
-  entity_kind: string;
-  entity_id: string | null;
-  /** Valor que vio el análisis: la base de la comparación CAS (C4). */
-  value: string | null;
-  suggested_value: string | null;
-}
-
-const FIXABLE_COLUMNS = "id::text, status, detector, field, entity_kind, entity_id::text, value, suggested_value";
-
-interface FixShape { kind: ResolvableClaimKind; id: number; field: string; }
-
-/** Solo la forma (campo editable, tipo de ficha real, id presente): no exige `suggested_value`, la usan la ruta compuesta y la individual por igual. */
-function fixableShape(row: FixableRow): FixShape | null {
-  if (!row.field || !FIXABLE_FIELDS.has(row.field) || !isFixableKind(row.entity_kind) || row.entity_id === null) return null;
-  return { kind: row.entity_kind, id: Number(row.entity_id), field: row.field };
-}
-
-function assertFixable(row: FixableRow, valueOverride?: string): { kind: ResolvableClaimKind; id: number; field: string; value: string } {
-  if (row.entity_kind === "") throw new CurationError("not_found", `hallazgo inexistente: ${row.id}`);
-  if (row.status !== "open") throw new CurationError("not_open", `el hallazgo ${row.id} no está abierto`);
-  const shape = fixableShape(row);
-  if (!shape) throw new CurationError("not_fixable", `el hallazgo ${row.id} no tiene una corrección disponible: hay que editar la ficha`);
-  const value = (valueOverride ?? row.suggested_value ?? "").trim();
-  if (!value) throw new CurationError("not_fixable", `el hallazgo ${row.id} no tiene un valor sugerido`);
-  return { ...shape, value };
-}
-
-/** Lee el valor actual del campo dentro de la transacción del run: la base de la comparación CAS (C4). */
-async function readCurrentFieldValue(client: PoolClient, kind: ResolvableClaimKind, id: number, field: string): Promise<string | null> {
-  const spec = ENTITY_SPECS[kind];
-  const column = spec.fields[field];
-  const { rows } = await client.query<{ value: string | null }>(`SELECT ${column}::text AS value FROM ${spec.table} WHERE id = $1`, [id]);
-  return rows[0]?.value ?? null;
-}
-
-function staleError(ids: Iterable<string | number>): CurationError {
-  return new CurationError("stale", `la ficha ya cambió desde el análisis: hallazgo(s) ${[...ids].join(", ")} obsoleto(s)`);
-}
-
-/** Corrige la ficha de un hallazgo: aplica `value` (o su `suggested_value`) al campo detectado, con CAS (C4). */
-export async function fixFinding(id: number, operator: string, note: string, value?: string): Promise<FindingRow> {
-  const { rows } = await getPool().query<FixableRow>(`SELECT ${FIXABLE_COLUMNS} FROM ingest.curation_findings WHERE id = $1`, [id]);
-  const row = rows[0];
-  if (!row) throw new CurationError("not_found", `hallazgo inexistente: ${id}`);
-  const fix = assertFixable(row, value);
-  await withOperatorRun({
-    name: "api:curation:fix", operator, note,
-    params: { findingId: id, kind: fix.kind, id: fix.id, field: fix.field, value: fix.value },
-  }, async (context) => {
-    const current = await readCurrentFieldValue(context.client, fix.kind, fix.id, fix.field);
-    if (current !== (row.value ?? null)) throw staleError([id]);
-    return updateEntity(context, fix.kind, fix.id, { [fix.field]: fix.value });
-  });
-  return (await getFinding(id))!;
-}
-
-export interface FixOutcome { id: number; ok: boolean; error: string | null; }
-
-/** Una limpieza de texto reutilizable, en el orden en que se componen sobre la misma ficha (C4, ficha 3). */
-const TEXT_CLEANUPS: ReadonlyArray<{ detector: string; apply: (value: string) => string }> = [
-  { detector: "caracteres_invisibles", apply: cleanInvisible },
-  { detector: "entidades_html", apply: decodeHtmlEntitiesValue },
-  { detector: "espacios_irregulares", apply: collapseSpaces },
-  { detector: "signos_colgantes", apply: trimDanglingPunctuation },
-];
-const COMPOSABLE_DETECTORS = new Set(TEXT_CLEANUPS.map((cleanup) => cleanup.detector));
-
-async function applySingleFix(row: FixableRow, operator: string, note: string): Promise<FixOutcome> {
-  try {
-    const fix = assertFixable(row);
-    await withOperatorRun({
-      name: "api:curation:fix", operator, note,
-      params: { findingId: row.id, kind: fix.kind, id: fix.id, field: fix.field, value: fix.value },
-    }, async (context) => {
-      const current = await readCurrentFieldValue(context.client, fix.kind, fix.id, fix.field);
-      if (current !== (row.value ?? null)) throw staleError([row.id]);
-      return updateEntity(context, fix.kind, fix.id, { [fix.field]: fix.value });
-    });
-    return { id: Number(row.id), ok: true, error: null };
-  } catch (error) {
-    return { id: Number(row.id), ok: false, error: error instanceof Error ? error.message : String(error) };
-  }
+/** Hallazgos por id, en cualquier estado (los lotes de correcciones deciden qué hacer con cada uno). */
+export async function getFindingsByIds(ids: readonly number[], queryable: CurationQueryable = getPool()): Promise<FindingRow[]> {
+  if (ids.length === 0) return [];
+  const [lastScan, result] = await Promise.all([
+    lastOkScanId(queryable),
+    queryable.query<RawFinding>(`SELECT ${FINDING_COLUMNS}, '0' AS total FROM ingest.curation_findings WHERE id = ANY($1::bigint[])`, [ids]),
+  ]);
+  return result.rows.map((row) => findingRow(row, lastScan));
 }
 
 /**
- * Varios hallazgos abiertos y componibles (invisibles, entidades, espacios,
- * colgantes) sobre el mismo `(entity_kind, entity_id, field)`: una sola
- * escritura con las limpiezas encadenadas sobre el valor vivo, no una por
- * hallazgo escribiendo cada una desde el texto original (C4, ficha 3) — así la
- * segunda no pisa a la primera y reintroduce el defecto que ya se quitó.
+ * Los hallazgos ABIERTOS que cumplen exactamente el filtro de un grupo (C3),
+ * en orden estable, hasta `limit`; `total` = cuántos cumplen el filtro.
  */
-async function applyComposedGroup(rows: FixableRow[], operator: string, note: string): Promise<FixOutcome[]> {
-  const shape = fixableShape(rows[0]!)!;
-  try {
-    const { result } = await withOperatorRun({
-      name: "api:curation:fix-compose", operator, note,
-      params: { findingIds: rows.map((row) => Number(row.id)), kind: shape.kind, id: shape.id, field: shape.field, detectors: rows.map((row) => row.detector) },
-    }, async (context) => {
-      const current = await readCurrentFieldValue(context.client, shape.kind, shape.id, shape.field);
-      const fresh = rows.filter((row) => current === (row.value ?? null));
-      const stale = rows.filter((row) => current !== (row.value ?? null));
-      if (fresh.length === 0) throw staleError(rows.map((row) => row.id));
-      const detectors = new Set(fresh.map((row) => row.detector));
-      let value = current ?? "";
-      for (const cleanup of TEXT_CLEANUPS) if (detectors.has(cleanup.detector)) value = cleanup.apply(value);
-      value = value.trim();
-      if (!value) throw new CurationError("not_fixable", `la corrección conjunta de ${shape.kind} ${shape.id} dejaría el campo vacío`);
-      if (value !== current) await updateEntity(context, shape.kind, shape.id, { [shape.field]: value });
-      return { stale, fresh };
-    });
-    return [
-      ...result.stale.map((row): FixOutcome => ({ id: Number(row.id), ok: false, error: staleError([row.id]).message })),
-      ...result.fresh.map((row): FixOutcome => ({ id: Number(row.id), ok: true, error: null })),
-    ];
-  } catch (error) {
-    const message = error instanceof Error ? error.message : String(error);
-    return rows.map((row): FixOutcome => ({ id: Number(row.id), ok: false, error: message }));
-  }
-}
-
-async function applyFixRows(rows: FixableRow[], operator: string, note: string): Promise<FixOutcome[]> {
-  const groups = new Map<string, FixableRow[]>();
-  for (const row of rows) {
-    const shape = row.status === "open" ? fixableShape(row) : null;
-    const key = shape && COMPOSABLE_DETECTORS.has(row.detector) ? `${shape.kind}:${shape.id}:${shape.field}` : `single:${row.id}`;
-    const list = groups.get(key);
-    if (list) list.push(row); else groups.set(key, [row]);
-  }
-  const outcomes = new Map<number, FixOutcome>();
-  for (const group of groups.values()) {
-    const resolved = group.length > 1 ? await applyComposedGroup(group, operator, note) : [await applySingleFix(group[0]!, operator, note)];
-    for (const outcome of resolved) outcomes.set(outcome.id, outcome);
-  }
-  return rows.map((row) => outcomes.get(Number(row.id))!);
-}
-
-/** Corrige varios hallazgos elegidos a mano (selección en la lista), cada uno con su propio valor sugerido. */
-export async function fixFindingsSelected(ids: number[], operator: string, note: string): Promise<FixOutcome[]> {
-  if (ids.length === 0) return [];
-  const { rows } = await getPool().query<FixableRow>(`SELECT ${FIXABLE_COLUMNS} FROM ingest.curation_findings WHERE id = ANY($1::bigint[])`, [ids]);
-  const byId = new Map(rows.map((row) => [row.id, row]));
-  const found = ids.map((id): FixableRow => byId.get(String(id))
-    ?? { id: String(id), status: "resolved", detector: "", field: null, entity_kind: "", entity_id: null, value: null, suggested_value: null });
-  return applyFixRows(found, operator, note);
-}
-
-const FIX_GROUP_LIMIT = 500;
-
-/** Corrige de una vez todo hallazgo abierto y corregible que cumpla exactamente el filtro (igual que el listado, C3). */
-export async function fixFindingsGroup(
-  filter: FindingGroupFilter, operator: string, note: string,
-): Promise<{ outcomes: FixOutcome[]; more: boolean }> {
+export async function listGroupFindings(
+  filter: FindingGroupFilter, limit: number, queryable: CurationQueryable = getPool(),
+): Promise<{ rows: FindingRow[]; total: number }> {
   const { where, params } = buildFindingsWhere({ ...filter, status: "open" });
-  params.push([...FIXABLE_FIELDS]);
-  const fieldParamIndex = params.length;
-  params.push([...REAL_ENTITY_KINDS]);
-  const kindParamIndex = params.length;
-  params.push(FIX_GROUP_LIMIT + 1);
-  const { rows } = await getPool().query<FixableRow>(`
-    SELECT ${FIXABLE_COLUMNS} FROM ingest.curation_findings
-     WHERE ${where.join(" AND ")}
-       AND field = ANY($${fieldParamIndex}::text[]) AND entity_kind = ANY($${kindParamIndex}::text[])
-       AND entity_id IS NOT NULL AND suggested_value IS NOT NULL AND btrim(suggested_value) <> ''
-     ORDER BY id
-     LIMIT $${params.length}`, params);
-  const more = rows.length > FIX_GROUP_LIMIT;
-  const outcomes = await applyFixRows(rows.slice(0, FIX_GROUP_LIMIT), operator, note);
-  return { outcomes, more };
+  params.push(limit);
+  const [lastScan, result] = await Promise.all([
+    lastOkScanId(queryable),
+    queryable.query<RawFinding>(`
+      SELECT ${FINDING_COLUMNS}, count(*) OVER ()::text AS total
+        FROM ingest.curation_findings
+       WHERE ${where.join(" AND ")}
+       ORDER BY id
+       LIMIT $${params.length}`, params),
+  ]);
+  return { rows: result.rows.map((row) => findingRow(row, lastScan)), total: Number(result.rows[0]?.total ?? 0) };
 }
 
 export async function getFinding(id: number): Promise<FindingRow | undefined> {
   const [lastScan, result] = await Promise.all([
     lastOkScanId(),
-    getPool().query<RawFinding>(`
-      SELECT id::text, category, detector, signature, severity, entity_kind, entity_id::text, entity_label, field, value, title, suggestion,
-             suggested_value, related, evidence, status, first_seen_scan_id::text, first_seen_at, last_seen_at, resolved_at, ignored_at, ignored_by, ignore_note, ignore_reason,
-             ${RESOLUTION_COLUMNS}, '1' AS total
-        FROM ingest.curation_findings WHERE id = $1`, [id]),
+    getPool().query<RawFinding>(`SELECT ${FINDING_COLUMNS}, '1' AS total FROM ingest.curation_findings WHERE id = $1`, [id]),
   ]);
+  return result.rows[0] ? findingRow(result.rows[0], lastScan) : undefined;
+}
+
+/**
+ * Lee y bloquea un hallazgo dentro de la transacción de una corrección. La
+ * vista previa es solo una promesa: entre ella y su turno otro operador puede
+ * ignorar, resolver o borrar el hallazgo. El candado hace que la acción use el
+ * estado que sigue vigente al escribir, no una copia anterior del lote.
+ */
+export async function getFindingForUpdate(id: number, client: PoolClient): Promise<FindingRow | undefined> {
+  const lastScan = await lastOkScanId(client);
+  const result = await client.query<RawFinding>(
+    `SELECT ${FINDING_COLUMNS}, '1' AS total FROM ingest.curation_findings WHERE id = $1 FOR UPDATE`, [id]);
   return result.rows[0] ? findingRow(result.rows[0], lastScan) : undefined;
 }
