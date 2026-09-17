@@ -7,7 +7,7 @@ import {
   Broom, Copy, IdentificationCard, LinkBreak, Question, Scales, Scissors, Shapes, Tray, Warning, type Icon,
 } from "@phosphor-icons/react";
 import { entityHref } from "./routes";
-import type { CurationEntityRef, CurationFinding, CurationResolution, CurationScan, CurationSeverity } from "./types";
+import type { CurationEntityRef, CurationFinding, CurationIgnoreReason, CurationResolution, CurationScan, CurationSeverity } from "./types";
 
 export const CATEGORY_ICON: Readonly<Record<string, Icon>> = {
   nombres_sucios: Broom,
@@ -46,7 +46,38 @@ const RESOLUTION_LABEL: Readonly<Record<CurationResolution, string>> = {
   changed_elsewhere: "Cambió en otra parte",
   entity_removed: "La ficha se retiró",
   rules_changed: "Cambiaron las reglas del detector",
+  declared_distinct: "Declaradas fichas distintas",
 };
+
+export const IGNORE_REASONS: ReadonlyArray<{ value: CurationIgnoreReason; label: string; hint: string }> = [
+  { value: "falso_positivo", label: "Falso positivo", hint: "El detector se equivocó: aquí no hay ningún problema." },
+  { value: "correcto_a_proposito", label: "Correcto a propósito", hint: "Parece un error, pero el dato es así (grafía del artista, título real)." },
+  { value: "fuera_de_alcance", label: "Fuera de alcance", hint: "Puede ser un problema, pero no se va a corregir en el catálogo." },
+];
+
+export function ignoreReasonLabel(reason: CurationIgnoreReason | null): string | null {
+  return IGNORE_REASONS.find((item) => item.value === reason)?.label ?? null;
+}
+
+const SEVERITY_WORD: Readonly<Record<string, string>> = { high: "alta", medium: "media", low: "baja" };
+
+/** El último cambio de gravedad, título o subgrupo que registró un análisis (`evidence.history`); null si no hubo. */
+export function lastChangeText(finding: CurationFinding): string | null {
+  const history = finding.evidence["history"];
+  const last = Array.isArray(history) ? history[0] as { at?: string; from?: Record<string, string>; to?: Record<string, string> } | undefined : undefined;
+  if (!last?.from || !last.to) return null;
+  const parts: string[] = [];
+  if (last.from["severity"] !== last.to["severity"]) parts.push(`gravedad ${SEVERITY_WORD[last.from["severity"] ?? ""] ?? last.from["severity"]} → ${SEVERITY_WORD[last.to["severity"] ?? ""] ?? last.to["severity"]}`);
+  if (last.from["signature"] !== last.to["signature"]) parts.push("subgrupo");
+  if (last.from["title"] !== last.to["title"]) parts.push(`antes decía «${last.from["title"]}»`);
+  return parts.length ? `Cambió en un análisis${last.at ? ` ${relativeTime(last.at)}` : ""}: ${parts.join(" · ")}` : null;
+}
+
+/** Par de fichas de un hallazgo de duplicados (`evidence.pair`); null si no es de par. */
+export function findingPair(finding: CurationFinding): [number, number] | null {
+  const pair = finding.evidence["pair"];
+  return Array.isArray(pair) && pair.length === 2 && pair.every((id) => typeof id === "number") ? [pair[0] as number, pair[1] as number] : null;
+}
 
 /** «Corregido desde Curaduría por Ana (run #12)»; null si no se sabe por qué se resolvió. */
 export function resolutionText(finding: CurationFinding): string | null {

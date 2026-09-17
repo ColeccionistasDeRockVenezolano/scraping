@@ -323,7 +323,10 @@ export type EntityKind = "artist" | "person" | "organization" | "album" | "track
 export type CurationSeverity = "high" | "medium" | "low";
 export type CurationFindingStatus = "open" | "ignored" | "resolved";
 /** Por qué se resolvió un hallazgo (src/curation/resolution.ts). */
-export type CurationResolution = "fixed_by_curation" | "changed_elsewhere" | "entity_removed" | "rules_changed";
+export type CurationResolution = "fixed_by_curation" | "changed_elsewhere" | "entity_removed" | "rules_changed" | "declared_distinct";
+/** Por qué una persona dijo «no es un problema» (src/curation/repository.ts). */
+export type CurationIgnoreReason = "falso_positivo" | "correcto_a_proposito" | "fuera_de_alcance";
+export type CurationPairKind = "artist" | "person" | "organization" | "album" | "track";
 
 export interface CurationEntityRef { kind: string; id: number | null; label: string; }
 
@@ -383,6 +386,7 @@ export interface CurationFinding {
   ignoredAt: string | null;
   ignoredBy: string | null;
   ignoreNote: string | null;
+  ignoreReason: CurationIgnoreReason | null;
   resolution: CurationResolution | null;
   resolvedByRunId: number | null;
   resolvedBy: string | null;

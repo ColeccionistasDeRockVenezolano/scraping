@@ -6,12 +6,15 @@
 // (la usan los enlaces «nuevos en este análisis» y «surgidos tras corregir»).
 //
 // Ignorar no cambia el catálogo: solo le dice al detector que ese caso no es un
-// problema. Mientras el valor no cambie, no se vuelve a abrir.
+// problema, con un motivo (falso positivo, correcto a propósito, fuera de
+// alcance). Dura mientras el detector lo siga viendo; si el problema desaparece,
+// el hallazgo pasa a resuelto. «Son distintas» hace lo mismo para un par de
+// fichas repetidas, y sobrevive aunque cambie el grupo.
 import { useEffect, useId, useState } from "react";
 import { Link, useParams, useSearchParams } from "react-router-dom";
 import {
-  ArrowBendDownRight, ArrowCounterClockwise, ArrowSquareOut, CaretDown, CaretUp, EyeSlash, GitMerge, Lightbulb,
-  Sparkle, Trash, Wrench,
+  ArrowBendDownRight, ArrowCounterClockwise, ArrowSquareOut, CaretDown, CaretUp, ClockCounterClockwise, EyeSlash, GitMerge, Lightbulb,
+  NotEquals, Sparkle, Trash, Wrench,
 } from "@phosphor-icons/react";
 import {
   albumWrites, artistWrites, ApiError, curationApi, organizationWrites, personWrites, trackWrites, type CurationFindingQuery,
@@ -19,7 +22,8 @@ import {
 import { useAsync } from "../lib/useAsync";
 import { useToast } from "../lib/ToastContext";
 import {
-  ENTITY_KIND_LABEL, SEVERITY_BADGE, SEVERITY_LABEL, categoryIcon, fieldLabel, formatCount, refHref, relativeTime, resolutionText,
+  ENTITY_KIND_LABEL, IGNORE_REASONS, SEVERITY_BADGE, SEVERITY_LABEL, categoryIcon, fieldLabel, findingPair, formatCount, ignoreReasonLabel,
+  lastChangeText, refHref, relativeTime, resolutionText,
 } from "../lib/curation";
 import { ErrorState, EmptyState, LoadingState } from "../components/StateViews";
 import { Pagination } from "../components/Pagination";
@@ -29,13 +33,15 @@ import { Modal } from "../components/Modal";
 import { MergeEntityModal } from "../components/MergeEntityModal";
 import { useCurationSummary } from "./CurationLayout";
 import type {
-  CurationCategorySummary, CurationFinding, CurationFindingStatus, CurationSeverity, CurationSignatureSummary, MergeableKind,
+  CurationCategorySummary, CurationFinding, CurationFindingStatus, CurationIgnoreReason, CurationPairKind, CurationSeverity,
+  CurationSignatureSummary, MergeableKind,
 } from "../lib/types";
 
 const LIMIT = 25;
 /** Campos con valor determinista: los únicos que la herramienta de corrección puede aplicar de un clic (src/curation/repository.ts). */
 const FIXABLE_FIELDS = new Set(["name", "title"]);
 const MERGEABLE_KINDS = new Set<string>(["person", "organization", "artist"]);
+const PAIR_KINDS = new Set<string>(["artist", "person", "organization", "album", "track"]);
 const ENTITY_WRITE_API: Readonly<Record<string, { remove: (id: number, note?: string) => Promise<unknown> }>> = {
   artist: artistWrites, person: personWrites, organization: organizationWrites, album: albumWrites, track: trackWrites,
 };
@@ -47,7 +53,7 @@ const STATUSES: Array<{ value: CurationFindingStatus | "all"; label: string }> =
 ];
 const SEVERITIES: CurationSeverity[] = ["high", "medium", "low"];
 /** Evidencia que ya se muestra de otra forma. */
-const HIDDEN_EVIDENCE = new Set(["span", "signatureLabel", "triggeredBy", "triggeredInScan"]);
+const HIDDEN_EVIDENCE = new Set(["span", "signatureLabel", "triggeredBy", "triggeredInScan", "history", "pair"]);
 
 export function CurationFindingsPage() {
   const { key } = useParams();
@@ -57,6 +63,8 @@ export function CurationFindingsPage() {
   const [ignoringGroup, setIgnoringGroup] = useState(false);
   const [fixingGroup, setFixingGroup] = useState(false);
   const [busyId, setBusyId] = useState<number | null>(null);
+  const [ignoringFinding, setIgnoringFinding] = useState<CurationFinding | null>(null);
+  const [distinctFinding, setDistinctFinding] = useState<{ finding: CurationFinding; pair: [number, number] } | null>(null);
   const [fixingFinding, setFixingFinding] = useState<CurationFinding | null>(null);
   const [mergingFinding, setMergingFinding] = useState<{ finding: CurationFinding; kind: MergeableKind; otherId?: number; otherName?: string } | null>(null);
   const [deletingFinding, setDeletingFinding] = useState<CurationFinding | null>(null);
@@ -117,16 +125,11 @@ export function CurationFindingsPage() {
     setParams(next);
   }
 
-  async function act(finding: CurationFinding, action: "ignore" | "reopen") {
+  async function reopen(finding: CurationFinding) {
     setBusyId(finding.id);
     try {
-      if (action === "ignore") {
-        await curationApi.ignore(finding.id, "");
-        notify("success", "Hallazgo ignorado. No se volverá a abrir mientras el valor no cambie.");
-      } else {
-        await curationApi.reopen(finding.id);
-        notify("success", "Hallazgo reabierto.");
-      }
+      await curationApi.reopen(finding.id);
+      notify("success", "Hallazgo reabierto.");
       reload();
       void refreshSummary();
     } catch (err) {
@@ -244,7 +247,7 @@ export function CurationFindingsPage() {
               <li key={finding.id}>
                 <FindingCard finding={finding} busy={busyId === finding.id}
                   categoryLabel={key ? undefined : summary?.categories.find((item) => item.key === finding.category)?.label ?? "Otros"}
-                  onIgnore={() => void act(finding, "ignore")} onReopen={() => void act(finding, "reopen")}
+                  onIgnore={() => setIgnoringFinding(finding)} onReopen={() => void reopen(finding)}
                   selected={selected.has(finding.id)} onToggleSelected={() => toggleSelected(finding.id)}
                   onFix={FIXABLE_FIELDS.has(finding.field ?? "") && finding.entity.id !== null ? () => setFixingFinding(finding) : undefined}
                   onMerge={finding.category === "fichas_repetidas" && MERGEABLE_KINDS.has(finding.entity.kind) && finding.entity.id !== null
@@ -259,6 +262,10 @@ export function CurationFindingsPage() {
                   onDelete={finding.category === "fichas_sin_vinculos" && finding.entity.id !== null && ENTITY_WRITE_API[finding.entity.kind]
                     ? () => setDeletingFinding(finding)
                     : undefined}
+                  onDistinct={(() => {
+                    const pair = findingPair(finding);
+                    return pair && PAIR_KINDS.has(finding.entity.kind) ? () => setDistinctFinding({ finding, pair }) : undefined;
+                  })()}
                 />
               </li>
             ))}
@@ -281,13 +288,49 @@ export function CurationFindingsPage() {
         </div>
       ) : null}
 
-      {ignoringGroup && category ? (
+      {ignoringFinding ? (
+        <IgnoreDialog
+          title="¿No es un problema?"
+          description={`«${ignoringFinding.title}» dejará de aparecer entre los abiertos mientras el detector lo siga viendo igual. Si el problema desaparece, pasa a resuelto. El catálogo no cambia.`}
+          confirmLabel="No es un problema"
+          requireNote={false}
+          onConfirm={async (reason, note) => {
+            await curationApi.ignore(ignoringFinding.id, reason, note);
+            notify("success", "Hallazgo ignorado con su motivo.");
+            setIgnoringFinding(null);
+            reload();
+            void refreshSummary();
+          }}
+          onClose={() => setIgnoringFinding(null)}
+        />
+      ) : null}
+
+      {distinctFinding ? (
         <ConfirmDialog
+          title="¿Son fichas distintas?"
+          description={`El detector no volverá a proponer este par (#${distinctFinding.pair[0]} y #${distinctFinding.pair[1]}) como repetido, aunque cambien sus nombres o aparezcan otras fichas parecidas. El catálogo no cambia.`}
+          confirmLabel="Son distintas"
+          onConfirm={async (note) => {
+            await curationApi.declareDistinct({
+              kind: distinctFinding.finding.entity.kind as CurationPairKind, aId: distinctFinding.pair[0], bId: distinctFinding.pair[1], note,
+            });
+            notify("success", "Par declarado distinto. Desaparece de los abiertos en cuanto termine la verificación.");
+            setDistinctFinding(null);
+            reload();
+            void refreshSummary();
+          }}
+          onClose={() => setDistinctFinding(null)}
+        />
+      ) : null}
+
+      {ignoringGroup && category ? (
+        <IgnoreDialog
           title={`¿Ignorar ${signature ? "este subgrupo" : "este detector"}?`}
           description={`Los ${formatCount(data?.pagination.total ?? 0)} hallazgos abiertos de «${activeDetector?.label ?? detector}»${signature ? ` › «${signatures.find((item) => item.key === signature)?.label ?? signature}»` : ""} se marcarán como «no es un problema». El catálogo no cambia y cada caso se puede reabrir.`}
           confirmLabel="Ignorar el grupo"
-          onConfirm={async (note) => {
-            const result = await curationApi.ignoreGroup({ category: category.key, detector: activeDetector?.key ?? detector, ...(signature ? { signature } : {}), note });
+          requireNote
+          onConfirm={async (reason, note) => {
+            const result = await curationApi.ignoreGroup({ category: category.key, detector: activeDetector?.key ?? detector, ...(signature ? { signature } : {}), reason, note });
             notify("success", `${formatCount(result.ignored)} hallazgos ignorados.`);
             setIgnoringGroup(false);
             reload();
@@ -360,6 +403,59 @@ export function CurationFindingsPage() {
         />
       ) : null}
     </>
+  );
+}
+
+/** «No es un problema» con motivo obligatorio: sin él no se puede medir la precisión de cada detector. */
+function IgnoreDialog({ title, description, confirmLabel, requireNote, onConfirm, onClose }: {
+  title: string; description: string; confirmLabel: string; requireNote: boolean;
+  onConfirm: (reason: CurationIgnoreReason, note: string) => Promise<void>; onClose: () => void;
+}) {
+  const [reason, setReason] = useState<CurationIgnoreReason | null>(null);
+  const [note, setNote] = useState("");
+  const [busy, setBusy] = useState(false);
+  const [error, setError] = useState<string>();
+  const noteId = useId();
+
+  async function submit() {
+    if (!reason) { setError("Elige un motivo."); return; }
+    if (requireNote && !note.trim()) { setError("La nota es obligatoria."); return; }
+    setBusy(true);
+    setError(undefined);
+    try {
+      await onConfirm(reason, note.trim());
+    } catch (err) {
+      setError(err instanceof ApiError ? err.message : "No se pudo guardar la decisión.");
+      setBusy(false);
+    }
+  }
+
+  return (
+    <Modal title={title} onClose={onClose}>
+      <p className="dialog-lead">{description}</p>
+      <fieldset className="reason-choices">
+        <legend>Motivo *</legend>
+        {IGNORE_REASONS.map((item) => (
+          <label key={item.value} className="reason-choice">
+            <input type="radio" name="ignore-reason" value={item.value} checked={reason === item.value} onChange={() => { setReason(item.value); setError(undefined); }} />
+            <span>
+              <span className="reason-choice__label">{item.label}</span>
+              <span className="reason-choice__hint">{item.hint}</span>
+            </span>
+          </label>
+        ))}
+      </fieldset>
+      <div className="field">
+        <label htmlFor={noteId}>Nota{requireNote ? " *" : " (opcional)"}</label>
+        <textarea id={noteId} rows={2} value={note} onChange={(event) => setNote(event.target.value)}
+          placeholder="Qué lo justifica (ayuda a quien lo revise después)" />
+      </div>
+      {error ? <p className="form-error-banner" role="alert">{error}</p> : null}
+      <div className="form-actions">
+        <button type="button" className="btn" onClick={onClose} disabled={busy}>Cancelar</button>
+        <button type="button" className="btn btn--primary" onClick={submit} disabled={busy}>{busy ? "Guardando…" : confirmLabel}</button>
+      </div>
+    </Modal>
   );
 }
 
@@ -499,11 +595,12 @@ function FindingsHeader({ category, scanId, chained }: { category: CurationCateg
   );
 }
 
-function FindingCard({ finding, categoryLabel, busy, onIgnore, onReopen, selected, onToggleSelected, onFix, onMerge, onDelete }: {
+function FindingCard({ finding, categoryLabel, busy, onIgnore, onReopen, selected, onToggleSelected, onFix, onMerge, onDelete, onDistinct }: {
   finding: CurationFinding; categoryLabel: string | undefined; busy: boolean; onIgnore: () => void; onReopen: () => void;
   selected: boolean; onToggleSelected: () => void;
-  onFix: (() => void) | undefined; onMerge: (() => void) | undefined; onDelete: (() => void) | undefined;
+  onFix: (() => void) | undefined; onMerge: (() => void) | undefined; onDelete: (() => void) | undefined; onDistinct: (() => void) | undefined;
 }) {
+  const change = lastChangeText(finding);
   const entityLink = refHref(finding.entity, finding);
   const related = finding.related.filter((ref) => !(ref.kind === finding.entity.kind && ref.id === finding.entity.id));
   const evidence = Object.entries(finding.evidence).filter(([name]) => !HIDDEN_EVIDENCE.has(name));
@@ -577,15 +674,21 @@ function FindingCard({ finding, categoryLabel, busy, onIgnore, onReopen, selecte
         ) : null}
       </div>
 
+      {change ? (
+        <p className="cfind__note"><ClockCounterClockwise size={13} weight="bold" aria-hidden="true" /> {change}</p>
+      ) : null}
+
       {finding.status === "resolved" && resolutionText(finding) ? (
         <p className="cfind__note">
           {resolutionText(finding)}{finding.resolvedAt ? ` ${relativeTime(finding.resolvedAt)}` : ""}
+          {finding.ignoredAt ? ` · antes estaba ignorado${ignoreReasonLabel(finding.ignoreReason) ? ` (${ignoreReasonLabel(finding.ignoreReason)!.toLowerCase()})` : ""}` : ""}
         </p>
       ) : null}
 
-      {finding.status === "ignored" && (finding.ignoredBy || finding.ignoreNote) ? (
+      {finding.status === "ignored" && (finding.ignoredBy || finding.ignoreNote || finding.ignoreReason) ? (
         <p className="cfind__note">
           Ignorado{finding.ignoredBy ? ` por ${finding.ignoredBy}` : ""}{finding.ignoredAt ? ` ${relativeTime(finding.ignoredAt)}` : ""}
+          {ignoreReasonLabel(finding.ignoreReason) ? ` · ${ignoreReasonLabel(finding.ignoreReason)}` : ""}
           {finding.ignoreNote ? `: ${finding.ignoreNote}` : ""}
         </p>
       ) : null}
@@ -610,6 +713,12 @@ function FindingCard({ finding, categoryLabel, busy, onIgnore, onReopen, selecte
               <GitMerge size={14} weight="bold" aria-hidden="true" /> Fusionar
             </button>
           ) : null}
+          {finding.status === "open" && onDistinct ? (
+            <button type="button" className="btn btn--sm btn--outline" onClick={onDistinct} disabled={busy}
+              title="Son fichas distintas: el detector no vuelve a proponer este par">
+              <NotEquals size={14} weight="bold" aria-hidden="true" /> Son distintas
+            </button>
+          ) : null}
           {finding.status === "open" && onDelete ? (
             <button type="button" className="btn btn--sm btn--outline" onClick={onDelete} disabled={busy}
               title="Eliminar esta ficha sin vínculos">
@@ -618,7 +727,7 @@ function FindingCard({ finding, categoryLabel, busy, onIgnore, onReopen, selecte
           ) : null}
           {finding.status === "open" ? (
             <button type="button" className="btn btn--sm btn--outline" onClick={onIgnore} disabled={busy}
-              title="No es un problema: el detector no lo vuelve a abrir mientras el valor no cambie">
+              title="No es un problema: con motivo; dura mientras el detector lo siga viendo igual">
               <EyeSlash size={14} weight="bold" aria-hidden="true" /> No es un problema
             </button>
           ) : finding.status === "ignored" ? (

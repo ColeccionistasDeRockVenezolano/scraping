@@ -7,7 +7,8 @@ import type {
   MergeableKind, OrganizationDetail, OrganizationListItem, Page, PersonDetail, PersonListItem, RelationUpdateResult, RelationWriteResult,
   PersonConversionResult, PersonDuplicateCandidate, PersonMergePreview, PersonMergeResult, RemovalResult, ReviewActionResult,
   ReviewDetail, ReviewListItem, SearchResults, Source, UnmergeResult, VideoDetail, VideoListItem,
-  CurationFinding, CurationFindingStatus, CurationFixBatchResult, CurationScan, CurationScanResult, CurationSeverity, CurationSummary,
+  CurationFinding, CurationFindingStatus, CurationFixBatchResult, CurationIgnoreReason, CurationPairKind, CurationScan, CurationScanResult,
+  CurationSeverity, CurationSummary,
 } from "./types";
 
 /**
@@ -233,11 +234,13 @@ export const curationApi = {
   finding: (id: number) => request<CurationFinding>(`/curation/findings/${id}`),
   scans: (limit = 20) => request<{ data: CurationScan[] }>("/curation/scans", { query: { limit } }),
   scan: () => request<CurationScanResult>("/curation/scan", { method: "POST", authenticated: true }),
-  ignore: (id: number, note: string) =>
-    request<CurationFinding>(`/curation/findings/${id}/ignore`, { method: "POST", authenticated: true, body: note ? { note } : {} }),
+  ignore: (id: number, reason: CurationIgnoreReason, note: string) =>
+    request<CurationFinding>(`/curation/findings/${id}/ignore`, { method: "POST", authenticated: true, body: note ? { reason, note } : { reason } }),
   reopen: (id: number) => request<CurationFinding>(`/curation/findings/${id}/reopen`, { method: "POST", authenticated: true }),
-  ignoreGroup: (input: { category: string; detector: string; signature?: string; note: string }) =>
+  ignoreGroup: (input: { category: string; detector: string; signature?: string; reason: CurationIgnoreReason; note: string }) =>
     request<{ ignored: number }>("/curation/findings/ignore-group", { method: "POST", authenticated: true, body: input }),
+  declareDistinct: (input: { kind: CurationPairKind; aId: number; bId: number; note: string }) =>
+    request<{ created: boolean }>("/curation/distinct-pairs", { method: "POST", authenticated: true, body: input }),
   fix: (id: number, note: string, value?: string) =>
     request<CurationFinding>(`/curation/findings/${id}/fix`, {
       method: "POST", authenticated: true, body: { note, ...(value === undefined ? {} : { value }) },
