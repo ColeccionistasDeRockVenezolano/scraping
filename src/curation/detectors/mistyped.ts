@@ -6,8 +6,8 @@
 // bandas cargadas como persona («Laberinto», «Arkangel») y «Fundación Nuevas
 // Bandas» como artista.
 import { classifyPersonName, looksLikeOrganization } from "../../review/person-junk.js";
-import { keyTokens, nameKey } from "../lexicon.js";
-import { nameFinding, quote, type Detector } from "./shared.js";
+import { isPersonShaped, keyTokens, nameKey } from "../lexicon.js";
+import { isLowercaseNonName, nameFinding, quote, type Detector } from "./shared.js";
 
 const CATEGORY = "ficha_de_otro_tipo";
 
@@ -28,7 +28,12 @@ export const personIsOrganization: Detector = {
           related: orgIds.map((id) => ({ kind: "organization" as const, id, label: context.organizations.get(id)?.name ?? String(id) })),
         })];
       }
-      const markers = keyTokens(name.value).filter((token) => context.lexicon.organizationMarkers.has(token));
+      const tokens = keyTokens(name.value);
+      let markers = tokens.filter((token) => context.lexicon.organizationMarkers.has(token));
+      // Una marca aprendida que cierra un nombre con forma de persona es un
+      // apellido («Dan Warner», «John Philips»), no el sello. Las palabras
+      // inequívocas («Records», «Estudios») siguen marcando: «Arturo Records».
+      if (markers.length === 1 && markers[0] === tokens.at(-1) && tokens.length >= 2 && isPersonShaped(context.lexicon, name.value)) markers = [];
       if (!markers.length && !looksLikeOrganization(name.value)) return [];
       return [nameFinding(this, name, {
         signature: "vocabulario_de_organizacion", signatureLabel: "Vocabulario de sello o estudio",
@@ -49,7 +54,9 @@ export const personIsNotAName: Detector = {
   label: "Persona que no es un nombre",
   description: "Duraciones, números, fragmentos de texto, palabras de rol o de tipo de disco, o texto de un evento cargados como persona.",
   run(context) {
-    const generic = (token: string): boolean => context.lexicon.roleTokens.has(token) || context.lexicon.albumTypeWords.has(token);
+    // Rol, tipo de disco o descriptor de género/serie («Rock», «Vol»): ninguno es un nombre.
+    const generic = (token: string): boolean => context.lexicon.roleTokens.has(token) || context.lexicon.albumTypeWords.has(token)
+      || context.lexicon.descriptorTokens.has(token);
     return context.names.filter((name) => name.kind === "person").flatMap((name) => {
       const classification = classifyPersonName(name.value);
       const tokens = keyTokens(name.value);
@@ -68,7 +75,7 @@ export const personIsNotAName: Detector = {
       }
       const key = ` ${tokens.join(" ")} `;
       const mentionsPlace = [...context.lexicon.places].some((place) => key.includes(` ${place} `));
-      if ((YEAR.test(name.value) && tokens.length >= 3) || (mentionsPlace && tokens.some((token) => context.lexicon.albumTypeWords.has(token)))) {
+      if ((YEAR.test(name.value) && tokens.length >= 3) || (mentionsPlace && tokens.some((token) => context.lexicon.albumTypeWords.has(token) || context.lexicon.descriptorTokens.has(token)))) {
         return [nameFinding(this, name, {
           signature: "texto_de_evento", signatureLabel: "Texto de un evento o grabación", severity: "high",
           title: "Parece la descripción de una grabación o un evento, no una persona",
@@ -84,6 +91,14 @@ export const personIsNotAName: Detector = {
           evidence: { learnedTokens: tokens },
         })];
       }
+      if (isLowercaseNonName(context.lexicon, name)) {
+        return [nameFinding(this, name, {
+          signature: "fragmento", signatureLabel: "Fragmento de texto", severity: "high",
+          title: "Texto en minúsculas sin ninguna palabra de nombre de persona: es un fragmento, no un nombre",
+          suggestion: "Retirar la ficha o llevar el texto a la nota del disco o la pista",
+          evidence: { lowercase: true },
+        })];
+      }
       return [];
     });
   },
@@ -93,18 +108,29 @@ export const personNamedLikeArtist: Detector = {
   key: "persona_con_nombre_de_artista",
   category: CATEGORY,
   label: "Persona con el nombre de un artista",
-  description: "Una ficha de persona se llama exactamente como un artista del catálogo y no tiene ningún vínculo con él: suele ser la banda cargada como persona.",
+  description: "Una ficha de persona se llama exactamente como un artista del catálogo y no tiene ningún vínculo con él: la banda cargada como persona, o el solista detrás de un proyecto con su nombre.",
   run(context) {
     return context.names.filter((name) => name.kind === "person").flatMap((name) => {
       const artists = context.lexicon.artistsByKey.get(nameKey(name.value)) ?? [];
       const linked = context.snapshot.personArtists.get(name.id) ?? new Set<number>();
       const unlinked = artists.filter((artist) => !linked.has(artist.id));
       if (!artists.length || unlinked.length !== artists.length) return [];
+      // B5: con forma de nombre de persona («Angel Rada», «Claudio Corsi») casi
+      // siempre es el solista que publica con su nombre: se vincula como
+      // miembro. Sin ella («Kreils», «Los Supersónicos») es la banda como persona.
+      const soloist = isPersonShaped(context.lexicon, name.value);
       return [nameFinding(this, name, {
-        severity: "medium",
-        title: `Se llama igual que el artista ${quote(unlinked[0]!.name)} y no está vinculada a él`,
-        suggestion: "Si es la banda, reemplazar los créditos por el artista; si es la persona detrás del proyecto, vincularla como miembro",
+        signature: soloist ? "solista_detras_del_proyecto" : "banda_como_persona",
+        signatureLabel: soloist ? "Solista con proyecto a su nombre" : "La banda cargada como persona",
+        severity: soloist ? "low" : "medium",
+        title: soloist
+          ? `Se llama igual que el artista ${quote(unlinked[0]!.name)}: parece el solista detrás del proyecto y no está vinculado a él`
+          : `Se llama igual que el artista ${quote(unlinked[0]!.name)} y no está vinculada a él: parece la banda cargada como persona`,
+        suggestion: soloist
+          ? "Vincular la persona como miembro del artista; si en realidad es la banda, reemplazar sus créditos por el artista"
+          : "Reemplazar los créditos de la persona por el artista; si es la persona detrás del proyecto, vincularla como miembro",
         related: unlinked.map((artist) => ({ kind: "artist" as const, id: artist.id, label: artist.name })),
+        evidence: { personShaped: soloist },
       })];
     });
   },

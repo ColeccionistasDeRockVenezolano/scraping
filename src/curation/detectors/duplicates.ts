@@ -6,7 +6,13 @@
 //
 // Las personas ya tienen su detector y su pestaña (Posibles duplicados): aquí
 // solo entran los pares de persona que esa herramienta no propuso ni cerró.
-// Un par de discos que alguien ya declaró distinto tampoco vuelve.
+// Un par que alguien ya declaró distinto (`ingest.curation_distinct_pairs`)
+// tampoco vuelve, sea de artistas, organizaciones, discos, pistas o personas.
+//
+// TODO SE EMITE POR PARES (PLAN_CURADURIA E2.3). Un hallazgo por grupo tenía
+// en su huella a todos los miembros: bastaba que apareciera un tercero para
+// que «no es un problema» se perdiera. Un par tiene huella propia (tipo +
+// ids menor y mayor) y sobrevive a renombrados y a miembros nuevos.
 import { organizationKey } from "../../review/person-names.js";
 import { isGenericTitle, titleTokens } from "../../ambiguity/text.js";
 import { compactKey, nameKey, type NameValue } from "../lexicon.js";
@@ -33,20 +39,27 @@ function pairsOf<T extends { id: number }>(group: T[]): Array<[T, T]> {
   return out;
 }
 
-function groupFinding(
+/** Clave de un par sin orden: la misma que `ingest.curation_distinct_pairs` y la cola. */
+export function pairKey(kind: string, a: number, b: number): string {
+  return `${kind}:${Math.min(a, b)}-${Math.max(a, b)}`;
+}
+
+function pairFinding(
   detector: Detector,
-  members: NameValue[],
+  a: NameValue,
+  b: NameValue,
   input: { signature: string; signatureLabel: string; severity: Severity; title: string; suggestion: string; evidence?: Record<string, unknown>; extra?: EntityRef[] },
 ): Finding {
-  const [first, ...rest] = [...members].sort((a, b) => a.id - b.id);
+  const [first, second] = a.id < b.id ? [a, b] : [b, a];
   return {
     detector: detector.key, category: detector.category,
     signature: input.signature, signatureLabel: input.signatureLabel, severity: input.severity,
-    entity: { kind: first!.kind, id: first!.id, label: first!.label },
-    field: first!.field, value: first!.value,
+    entity: { kind: first.kind, id: first.id, label: first.label },
+    field: first.field, value: first.value,
     title: input.title, suggestion: input.suggestion,
-    related: [...first!.related, ...rest.map((member) => ({ kind: member.kind, id: member.id, label: member.label })), ...(input.extra ?? [])],
-    evidence: { values: members.map((member) => ({ id: member.id, value: member.value })), ...(input.evidence ?? {}) },
+    related: [...first.related, { kind: second.kind, id: second.id, label: second.label }, ...(input.extra ?? [])],
+    pair: [first.id, second.id],
+    evidence: { values: [first, second].map((member) => ({ id: member.id, value: member.value })), ...(input.evidence ?? {}) },
   };
 }
 
@@ -72,14 +85,18 @@ export const equivalentArtists: Detector = {
     ];
     for (const [signature, signatureLabel, key] of rules) {
       for (const group of groupBy(artists, key)) {
-        const id = group.map((member) => member.id).sort((a, b) => a - b).join("-");
-        if (seen.has(id)) continue;
-        seen.add(id);
-        out.push(groupFinding(this, group, {
-          signature, signatureLabel, severity: "medium",
-          title: `${group.length} artistas que parecen el mismo: ${group.map((member) => quote(member.value)).join(", ")}`,
-          suggestion: "Comparar las fichas y fusionarlas si son el mismo artista",
-        }));
+        // Un par se emite una vez, con la regla más estricta que lo junta.
+        for (const [a, b] of pairsOf(group)) {
+          const pair = pairKey("artist", a.id, b.id);
+          if (seen.has(pair) || context.snapshot.handledPairs.has(pair)) continue;
+          seen.add(pair);
+          out.push(pairFinding(this, a, b, {
+            signature, signatureLabel, severity: "medium",
+            title: `${quote(a.value)} y ${quote(b.value)} parecen el mismo artista${group.length > 2 ? ` (${group.length} con la misma forma)` : ""}`,
+            suggestion: "Comparar las fichas y fusionarlas si son el mismo artista",
+            evidence: { groupSize: group.length },
+          }));
+        }
       }
     }
     return out;
@@ -104,14 +121,17 @@ export const equivalentOrganizations: Detector = {
     ];
     for (const [signature, signatureLabel, severity, key] of rules) {
       for (const group of groupBy(orgs, key)) {
-        const id = group.map((member) => member.id).sort((a, b) => a - b).join("-");
-        if (seen.has(id)) continue;
-        seen.add(id);
-        out.push(groupFinding(this, group, {
-          signature, signatureLabel, severity,
-          title: `${group.length} organizaciones que parecen la misma: ${group.map((member) => quote(member.value)).join(", ")}`,
-          suggestion: "Comparar las fichas y fusionarlas si son la misma organización",
-        }));
+        for (const [a, b] of pairsOf(group)) {
+          const pair = pairKey("organization", a.id, b.id);
+          if (seen.has(pair) || context.snapshot.handledPairs.has(pair)) continue;
+          seen.add(pair);
+          out.push(pairFinding(this, a, b, {
+            signature, signatureLabel, severity,
+            title: `${quote(a.value)} y ${quote(b.value)} parecen la misma organización${group.length > 2 ? ` (${group.length} con la misma forma)` : ""}`,
+            suggestion: "Comparar las fichas y fusionarlas si son la misma organización",
+            evidence: { groupSize: group.length },
+          }));
+        }
       }
     }
     return out;
@@ -136,13 +156,13 @@ export const repeatedAlbums: Detector = {
       const artistName = context.artists.get(artistId)?.name ?? "";
       for (const group of groupBy(list, (name) => titleTokens(name.value).join(" "))) {
         for (const [a, b] of pairsOf(group)) {
-          if (context.snapshot.handledPairs.has(`album:${a.id}-${b.id}`)) continue;
+          if (context.snapshot.handledPairs.has(pairKey("album", a.id, b.id))) continue;
           const yearA = context.albums.get(a.id)!.releaseYear;
           const yearB = context.albums.get(b.id)!.releaseYear;
           const generic = isGenericTitle(a.value, artistName);
           const differentYears = yearA !== null && yearB !== null && yearA !== yearB;
           if (generic && differentYears) continue;
-          out.push(groupFinding(this, [a, b], {
+          out.push(pairFinding(this, a, b, {
             signature: generic ? "titulo_generico" : "mismo_titulo",
             signatureLabel: generic ? "Mismo título genérico («Demo», «EP»)" : "Mismo título",
             severity: generic || differentYears ? "low" : "medium",
@@ -165,7 +185,7 @@ export const repeatedTracks: Detector = {
   run(context) {
     const out: Finding[] = [];
     const tracks = new Map(namesOf(context, "track").map((name) => [name.id, name]));
-    for (const [albumId, list] of context.tracksByAlbum) {
+    for (const list of context.tracksByAlbum.values()) {
       const byDisc = new Map<number, NameValue[]>();
       for (const track of list) {
         const discTracks = byDisc.get(track.disc);
@@ -173,13 +193,17 @@ export const repeatedTracks: Detector = {
       }
       for (const discTracks of byDisc.values()) {
         for (const group of groupBy(discTracks, (name) => nameKey(name.value).replace(/\s+/gu, ""))) {
-          const positions = group.map((name) => context.tracksByAlbum.get(albumId)!.find((track) => track.id === name.id)!.number);
-          out.push(groupFinding(this, group, {
-            signature: this.key, signatureLabel: this.label, severity: "low",
-            title: `${quote(group[0]!.value)} aparece ${group.length} veces (pistas ${positions.join(", ")})`,
-            suggestion: "Retirar la pista duplicada o marcar la versión distinta en el título",
-            evidence: { positions },
-          }));
+          const position = new Map(group.map((name) => [name.id, context.tracks.get(name.id)!.number]));
+          for (const [a, b] of pairsOf(group)) {
+            if (context.snapshot.handledPairs.has(pairKey("track", a.id, b.id))) continue;
+            const positions = [position.get(a.id)!, position.get(b.id)!].sort((x, y) => x - y);
+            out.push(pairFinding(this, a, b, {
+              signature: this.key, signatureLabel: this.label, severity: "low",
+              title: `${quote(a.value)} está repetida: pistas ${positions.join(" y ")}${group.length > 2 ? ` (aparece ${group.length} veces)` : ""}`,
+              suggestion: "Retirar la pista duplicada o marcar la versión distinta en el título",
+              evidence: { positions, groupPositions: [...position.values()].sort((x, y) => x - y) },
+            }));
+          }
         }
       }
     }
@@ -196,8 +220,8 @@ export const equivalentPersons: Detector = {
     const out: Finding[] = [];
     for (const group of groupBy(namesOf(context, "person"), (name) => nameKey(name.value))) {
       for (const [a, b] of pairsOf(group)) {
-        if (context.snapshot.handledPairs.has(`person:${a.id}-${b.id}`)) continue;
-        out.push(groupFinding(this, [a, b], {
+        if (context.snapshot.handledPairs.has(pairKey("person", a.id, b.id))) continue;
+        out.push(pairFinding(this, a, b, {
           signature: this.key, signatureLabel: this.label, severity: "medium",
           title: `${quote(a.value)} y ${quote(b.value)} solo cambian en tildes, mayúsculas o signos`,
           suggestion: "Comparar las fichas y fusionarlas si son la misma persona",

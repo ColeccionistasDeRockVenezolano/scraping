@@ -24,6 +24,14 @@
 //    la resolución de uno cerraba lo que el otro acababa de insertar.
 //  - Cada hallazgo resuelto dice por qué y con qué run (resolution.ts).
 //
+// DECISIONES DURADERAS (PLAN_CURADURIA E2):
+//  - Lo ignorado se respeta mientras el detector lo siga viendo; si deja de
+//    verlo, pasa a `resolved` con su motivo (antes quedaba ignorado para
+//    siempre). Si el mismo hallazgo vuelve, la decisión ya caducó: vuelve
+//    abierto.
+//  - Un refresco que cambia gravedad, título o subgrupo deja constancia en
+//    `evidence.history` (los últimos 5 cambios), en vez de cambiarlo en silencio.
+//
 // Dentro del proceso, un solo análisis a la vez: las peticiones que llegan
 // mientras corre se agrupan en uno solo posterior.
 import type { Pool, PoolClient } from "pg";
@@ -99,6 +107,9 @@ function refKey(kind: string, id: number | null): string {
   return `${kind}:${id ?? ""}`;
 }
 
+/** Cambios de gravedad, título o subgrupo que se guardan por hallazgo. */
+const HISTORY_LIMIT = 5;
+
 function rowOf(finding: Finding & { fingerprint: string }) {
   return {
     fingerprint: finding.fingerprint,
@@ -115,9 +126,27 @@ function rowOf(finding: Finding & { fingerprint: string }) {
     suggestion: finding.suggestion ?? null,
     suggested_value: finding.suggestedValue ?? null,
     related: finding.related,
-    evidence: { ...finding.evidence, ...(finding.signatureLabel ? { signatureLabel: finding.signatureLabel } : {}) },
+    evidence: {
+      ...finding.evidence,
+      ...(finding.signatureLabel ? { signatureLabel: finding.signatureLabel } : {}),
+      // El par queda guardado: la resolución necesita saber si fue declarado distinto.
+      ...(finding.pair ? { pair: finding.pair } : {}),
+    },
   };
 }
+
+/**
+ * `evidence.history` tras el refresco: si cambió la gravedad, el título o el
+ * subgrupo, el cambio entra primero y se conservan los últimos HISTORY_LIMIT.
+ */
+const HISTORY_SQL = `CASE WHEN f.severity IS DISTINCT FROM EXCLUDED.severity OR f.title IS DISTINCT FROM EXCLUDED.title OR f.signature IS DISTINCT FROM EXCLUDED.signature
+  THEN (SELECT jsonb_agg(h.item ORDER BY h.n) FROM jsonb_array_elements(
+          jsonb_build_array(jsonb_build_object('scanId', $2::bigint, 'at', now(),
+            'from', jsonb_build_object('severity', f.severity, 'title', f.title, 'signature', f.signature),
+            'to', jsonb_build_object('severity', EXCLUDED.severity, 'title', EXCLUDED.title, 'signature', EXCLUDED.signature)))
+          || CASE WHEN jsonb_typeof(f.evidence->'history') = 'array' THEN f.evidence->'history' ELSE '[]'::jsonb END
+        ) WITH ORDINALITY AS h(item, n) WHERE h.n <= ${HISTORY_LIMIT})
+  ELSE f.evidence->'history' END`;
 
 const RECORD_COLUMNS = `fingerprint text, category text, detector text, signature text, severity text, entity_kind text, entity_id bigint,
   entity_label text, field text, value text, title text, suggestion text, suggested_value text, related jsonb, evidence jsonb`;
@@ -146,19 +175,28 @@ async function persist(client: PoolClient, scanId: number, analysis: AnalysisRes
         category = EXCLUDED.category, detector = EXCLUDED.detector, signature = EXCLUDED.signature, severity = EXCLUDED.severity,
         entity_label = EXCLUDED.entity_label, title = EXCLUDED.title, suggestion = EXCLUDED.suggestion,
         suggested_value = EXCLUDED.suggested_value,
+        -- La huella de un par no incluye el valor: si una de las fichas se renombró,
+        -- el hallazgo sigue siendo el mismo y muestra el nombre actual.
+        field = EXCLUDED.field, value = EXCLUDED.value,
         related = EXCLUDED.related,
         -- La marca «apareció al corregir» es historia del hallazgo: no se pierde al
         -- refrescar. Un hallazgo que vuelve tras resolverse es una aparición nueva:
         -- empieza sin marca y cuenta como visto por primera vez en este análisis.
-        evidence = CASE WHEN f.status = 'resolved' THEN EXCLUDED.evidence
-                        ELSE EXCLUDED.evidence || jsonb_strip_nulls(jsonb_build_object('triggeredBy', f.evidence->'triggeredBy', 'triggeredInScan', f.evidence->'triggeredInScan')) END,
+        -- El historial de cambios de gravedad/título/subgrupo se conserva siempre.
+        evidence = CASE WHEN f.status = 'resolved' THEN EXCLUDED.evidence || jsonb_strip_nulls(jsonb_build_object('history', ${HISTORY_SQL}))
+                        ELSE EXCLUDED.evidence || jsonb_strip_nulls(jsonb_build_object('triggeredBy', f.evidence->'triggeredBy', 'triggeredInScan', f.evidence->'triggeredInScan', 'history', ${HISTORY_SQL})) END,
         first_seen_scan_id = CASE WHEN f.status = 'resolved' THEN EXCLUDED.first_seen_scan_id ELSE f.first_seen_scan_id END,
         first_seen_at = CASE WHEN f.status = 'resolved' THEN now() ELSE f.first_seen_at END,
         last_seen_scan_id = EXCLUDED.last_seen_scan_id, last_seen_at = now(),
         status = CASE WHEN f.status = 'resolved' THEN 'open' ELSE f.status END,
         resolved_at = CASE WHEN f.status = 'resolved' THEN NULL ELSE f.resolved_at END,
         resolution = CASE WHEN f.status = 'resolved' THEN NULL ELSE f.resolution END,
-        resolved_by_run_id = CASE WHEN f.status = 'resolved' THEN NULL ELSE f.resolved_by_run_id END
+        resolved_by_run_id = CASE WHEN f.status = 'resolved' THEN NULL ELSE f.resolved_by_run_id END,
+        -- Un ignorado que caducó (se resolvió) y vuelve, vuelve abierto y sin la decisión vieja.
+        ignored_at = CASE WHEN f.status = 'resolved' THEN NULL ELSE f.ignored_at END,
+        ignored_by = CASE WHEN f.status = 'resolved' THEN NULL ELSE f.ignored_by END,
+        ignore_note = CASE WHEN f.status = 'resolved' THEN NULL ELSE f.ignore_note END,
+        ignore_reason = CASE WHEN f.status = 'resolved' THEN NULL ELSE f.ignore_reason END
       RETURNING fingerprint, (xmax = 0) AS inserted`, [payload, scanId]);
     for (const row of saved.rows) {
       if (row.inserted) { inserted += 1; appearedFingerprints.add(row.fingerprint); }
@@ -202,23 +240,23 @@ async function persist(client: PoolClient, scanId: number, analysis: AnalysisRes
 
 type StaleRow = {
   id: string; detector: string; entity_kind: string; entity_id: string | null; field: string | null; value: string | null;
-  rules_version: string | null; seen_since: Date | null;
+  rules_version: string | null; seen_since: Date | null; pair: unknown;
 };
 type ResolvedRow = { id: string; title: string; entity_kind: string; entity_id: string | null; related: EntityRef[]; resolution: Resolution };
 
 /**
- * Resuelve lo abierto que este análisis no volvió a ver, pero SOLO de los
- * detectores que miraron el catálogo entero (`analysis.completed`) o de
- * detectores que las reglas actuales ya no tienen. Cada uno con su motivo.
+ * Resuelve lo abierto —y lo ignorado— que este análisis no volvió a ver, pero
+ * SOLO de los detectores que miraron el catálogo entero (`analysis.completed`)
+ * o de detectores que las reglas actuales ya no tienen. Cada uno con su motivo.
  */
 async function resolveStale(client: PoolClient, scanId: number, analysis: AnalysisResult, snapshot: CatalogSnapshot): Promise<ResolvedRow[]> {
   const stale = await client.query<StaleRow>(`
     SELECT f.id::text, f.detector, f.entity_kind, f.entity_id::text, f.field, f.value,
-           seen.counters->>'rulesVersion' AS rules_version, born.started_at AS seen_since
+           seen.counters->>'rulesVersion' AS rules_version, born.started_at AS seen_since, f.evidence->'pair' AS pair
       FROM ingest.curation_findings f
       LEFT JOIN ingest.curation_scans seen ON seen.id = f.last_seen_scan_id
       LEFT JOIN ingest.curation_scans born ON born.id = f.first_seen_scan_id
-     WHERE f.status = 'open' AND f.last_seen_scan_id IS DISTINCT FROM $1
+     WHERE f.status IN ('open', 'ignored') AND f.last_seen_scan_id IS DISTINCT FROM $1
        AND (f.detector = ANY($2::text[]) OR NOT (f.detector = ANY($3::text[])))`,
   [scanId, analysis.completed, KNOWN_DETECTORS]);
   if (!stale.rows.length) return [];
@@ -229,7 +267,7 @@ async function resolveStale(client: PoolClient, scanId: number, analysis: Analys
   const verdicts = stale.rows.map((row) => {
     const verdict = classifyResolution({
       detector: row.detector, entityKind: row.entity_kind, entityId: row.entity_id === null ? null : Number(row.entity_id),
-      field: row.field, value: row.value, rulesVersion: row.rules_version,
+      field: row.field, value: row.value, rulesVersion: row.rules_version, pair: pairOf(row.pair),
     }, changes.get(row.id), state, rules);
     return { id: row.id, resolution: verdict.resolution, run_id: verdict.runId };
   });
@@ -240,12 +278,16 @@ async function resolveStale(client: PoolClient, scanId: number, analysis: Analys
       UPDATE ingest.curation_findings f
          SET status = 'resolved', resolved_at = now(), resolution = x.resolution, resolved_by_run_id = x.run_id
         FROM jsonb_to_recordset($1::jsonb) AS x(id bigint, resolution text, run_id bigint)
-       WHERE f.id = x.id AND f.status = 'open'
+       WHERE f.id = x.id AND f.status IN ('open', 'ignored')
       RETURNING f.id::text, f.title, f.entity_kind, f.entity_id::text, f.related, f.resolution`,
     [JSON.stringify(verdicts.slice(offset, offset + CHUNK))]);
     resolved.push(...saved.rows);
   }
   return resolved;
+}
+
+function pairOf(value: unknown): [number, number] | null {
+  return Array.isArray(value) && value.length === 2 && value.every((item) => Number.isSafeInteger(item)) ? [value[0] as number, value[1] as number] : null;
 }
 
 /** Columna de `merge_audit` que apunta a cada tipo de ficha (nombres fijos, no vienen del usuario). */

@@ -94,7 +94,9 @@ describe("detector de conflictos de Curaduría", () => {
     const found = findings(snapshot).filter((finding) => finding.category === OTHER_CATEGORY);
     expect(found).toHaveLength(1);
     expect(found[0]).toMatchObject({ detector: "anomalia_del_catalogo", entity: { kind: "album", id: 4 } });
-    expect(found[0]!.signature).toContain("U+00A7");
+    // B1: el subgrupo es la clase del signo y el campo; el carácter queda en el título.
+    expect(found[0]!.signature).toBe("signo:puntuacion:album.title");
+    expect(found[0]!.title).toContain("U+00A7");
   });
 
   it("«Otros» no repite lo que ya explica una categoría de forma", () => {

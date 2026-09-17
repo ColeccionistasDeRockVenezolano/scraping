@@ -44,5 +44,6 @@ export function cleanSnapshot(): CatalogSnapshot {
     reviews: [],
     conflicts: [],
     handledPairs: new Set(),
+    distinctPairs: new Set(),
   };
 }

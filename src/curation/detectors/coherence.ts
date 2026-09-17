@@ -5,7 +5,7 @@
 // Oro 1961» publicado en 1962, cinco discos de Sentimiento Muerto anteriores a
 // la formación de la banda, una pista de 43.601 s y 104 discos con huecos en
 // la numeración.
-import { nameKey } from "../lexicon.js";
+import { SEED_ALBUM_TYPE_WORD_SET, keyTokens, nameKey } from "../lexicon.js";
 import type { Finding, Severity } from "../types.js";
 import { nameFinding, quote, type Detector } from "./shared.js";
 
@@ -34,6 +34,9 @@ export const albumTypeVsTitle: Detector = {
       if (!declared.size || declared.has(album.albumType)) return [];
       const [type, word] = [...declared][0]!;
       const unclassified = album.albumType === "other";
+      // Solo una palabra semilla y un único tipo declarado permiten corregir sin
+      // criterio humano (nivel 0); lo aprendido del catálogo pide confirmación.
+      const seedOnly = [...declared.values()].every((item) => SEED_ALBUM_TYPE_WORD_SET.has(item));
       return [nameFinding(this, name, {
         signature: unclassified ? "sin_clasificar" : "contradice",
         signatureLabel: unclassified ? "Tipo sin clasificar y el título lo dice" : "El título contradice el tipo",
@@ -42,7 +45,7 @@ export const albumTypeVsTitle: Detector = {
           ? `El título dice ${quote(word)} y el disco está sin clasificar`
           : `El título dice ${quote(word)} pero el tipo guardado es ${typeLabel(album.albumType)}`,
         suggestion: `Tipo ${typeLabel(type)}`,
-        evidence: { storedType: album.albumType, declaredTypes: [...declared.keys()] },
+        evidence: { storedType: album.albumType, declaredTypes: [...declared.keys()], words: [...declared.values()], wordSource: seedOnly ? "semilla" : "aprendida" },
       })];
     });
   },
@@ -137,6 +140,8 @@ export const atypicalDuration: Detector = {
       const z = (Math.log(duration) - med) / (1.4826 * mad);
       if (Math.abs(z) < 5) return [];
       const long = z > 0;
+      // «Intro» de 9 s o «Entrevista a …» de medio minuto son cortas por naturaleza.
+      if (!long && keyTokens(name.value).some((token) => context.lexicon.briefPieceTokens.has(token))) return [];
       return [nameFinding(this, name, {
         signature: long ? "muy_larga" : "muy_corta", signatureLabel: long ? "Mucho más larga que lo habitual" : "Mucho más corta que lo habitual",
         severity: "low" as Severity,
@@ -148,11 +153,18 @@ export const atypicalDuration: Detector = {
   },
 };
 
+/** ¿`numbers` son justo los enteros de `from` a `to`? */
+function isRun(numbers: Set<number>, from: number, to: number): boolean {
+  if (numbers.size !== to - from + 1) return false;
+  for (let number = from; number <= to; number += 1) if (!numbers.has(number)) return false;
+  return true;
+}
+
 export const numberingGaps: Detector = {
   key: "numeracion_con_huecos",
   category: CATEGORY,
   label: "Huecos en la numeración de pistas",
-  description: "Faltan números de pista dentro de una cara: pistas que la extracción perdió o numeración mal leída.",
+  description: "Faltan números de pista dentro de una cara: pistas que la extracción perdió o numeración mal leída. Una numeración que sigue de una cara a la siguiente (1–5, 6–10) no es un hueco.",
   run(context) {
     const out: Finding[] = [];
     for (const [albumId, tracks] of context.tracksByAlbum) {
@@ -160,16 +172,38 @@ export const numberingGaps: Detector = {
       if (!album) continue;
       const discs = new Map<number, Set<number>>();
       for (const track of tracks) discs.set(track.disc, (discs.get(track.disc) ?? new Set<number>()).add(track.number));
-      for (const [disc, numbers] of discs) {
+      const order = [...discs.keys()].sort((a, b) => a - b);
+      // Numeración continua entre caras o discos: cada uno sigue donde terminó
+      // el anterior, sin huecos ni solapes. El disco entero está completo.
+      let next = 1;
+      const continuous = order.length > 1 && order.every((disc) => {
+        const numbers = discs.get(disc)!;
+        const to = Math.max(...numbers);
+        const ok = isRun(numbers, next, to);
+        next = to + 1;
+        return ok;
+      });
+      if (continuous) continue;
+      for (const disc of order) {
+        const numbers = discs.get(disc)!;
         const max = Math.max(...numbers);
         if (max > 99 || max === numbers.size) continue;
         const missing = Array.from({ length: max }, (_, index) => index + 1).filter((number) => !numbers.has(number));
         const artist = context.artists.get(album.artistId);
+        const startsAtTwo = missing.length === 1 && missing[0] === 1;
+        const where = discs.size > 1 ? ` del disco ${disc}` : "";
         out.push({
-          detector: this.key, category: this.category, signature: this.key, severity: "low",
+          detector: this.key, category: this.category,
+          signature: startsAtTwo ? "empieza_en_2" : this.key,
+          ...(startsAtTwo ? { signatureLabel: "La numeración empieza en 2" } : {}),
+          severity: "low",
           entity: { kind: "album", id: album.id, label: album.title }, field: "tracks", value: album.title,
-          title: `Faltan ${missing.length === 1 ? "la pista" : "las pistas"} ${missing.slice(0, 12).join(", ")}${missing.length > 12 ? "…" : ""}${discs.size > 1 ? ` del disco ${disc}` : ""}`,
-          suggestion: "Revisar la fuente y completar o renumerar las pistas",
+          title: startsAtTwo
+            ? `La numeración empieza en 2: falta la pista 1${where}`
+            : `${missing.length === 1 ? "Falta la pista" : "Faltan las pistas"} ${missing.slice(0, 12).join(", ")}${missing.length > 12 ? "…" : ""}${where}`,
+          suggestion: startsAtTwo
+            ? "Confirmar en la fuente si falta la primera pista o si la numeración empieza en 2; si no falta nada, renumerar desde 1"
+            : "Revisar la fuente y completar o renumerar las pistas",
           related: artist ? [{ kind: "artist", id: artist.id, label: artist.name }] : [],
           evidence: { disc, missing, present: numbers.size, highest: max },
         });

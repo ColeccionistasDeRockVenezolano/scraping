@@ -4,7 +4,7 @@
 // tildes (regla 0.1.11), así que toda comparación de texto se hace en
 // TypeScript sobre esta foto. ~50k filas caben de sobra en memoria.
 //
-// UNA SOLA FOTO. Las 13 consultas van en una transacción REPEATABLE READ de
+// UNA SOLA FOTO. Las consultas van en una transacción REPEATABLE READ de
 // solo lectura sobre un mismo cliente: todas ven el mismo instante. Repartidas
 // por el pool, cada una veía uno distinto y, durante una ingesta, pistas y
 // discos podían no corresponderse: hallazgos fantasma que aparecían y se
@@ -97,14 +97,21 @@ async function readCatalog(db: SnapshotClient) {
   const handled = await db.query<{ kind: string; person_a_id: string | null; person_b_id: string | null; pair_key: string | null }>(`
     SELECT kind::text, person_a_id::text, person_b_id::text, payload->>'pairKey' AS pair_key
       FROM ingest.review_queue WHERE kind IN ('person_duplicate','possible_duplicate')`);
+  // Pares declarados distintos (0020). Antes de migrar la tabla no existe y no
+  // hay ninguno declarado: un `--dry-run` sobre una base sin migrar sigue
+  // funcionando. Se pregunta primero porque una consulta fallida aborta la foto.
+  const distinctTable = await db.query<{ present: boolean }>("SELECT to_regclass('ingest.curation_distinct_pairs') IS NOT NULL AS present");
+  const distinct = distinctTable.rows[0]?.present
+    ? await db.query<{ kind: string; a_id: string; b_id: string }>("SELECT kind, a_id::text, b_id::text FROM ingest.curation_distinct_pairs")
+    : { rows: [] };
   return { artists, persons, organizations, albums, tracks, roles,
-    personArtists, personLinks, organizationLinks, artistLinks, reviews, conflicts, handled };
+    personArtists, personLinks, organizationLinks, artistLinks, reviews, conflicts, handled, distinct };
 }
 
 function buildSnapshot({
   artists, persons, organizations, albums, tracks, roles,
   personArtists, personLinks, organizationLinks, artistLinks,
-  reviews, conflicts, handled,
+  reviews, conflicts, handled, distinct,
 }: Awaited<ReturnType<typeof readCatalog>>): CatalogSnapshot {
   const personArtistMap = new Map<number, Set<number>>();
   for (const row of personArtists.rows) {
@@ -117,6 +124,8 @@ function buildSnapshot({
     if (row.pair_key) handledPairs.add(row.pair_key);
     if (row.person_a_id && row.person_b_id) handledPairs.add(pairKey("person", Number(row.person_a_id), Number(row.person_b_id)));
   }
+  const distinctPairs = new Set(distinct.rows.map((row) => pairKey(row.kind, Number(row.a_id), Number(row.b_id))));
+  for (const key of distinctPairs) handledPairs.add(key);
 
   const reviewRows: SnapshotReview[] = reviews.rows.map((row) => {
     const refs: SnapshotReview["refs"] = {};
@@ -149,5 +158,6 @@ function buildSnapshot({
       targetId: num(row.target_id), hasLiveReview: row.live_review,
     })),
     handledPairs,
+    distinctPairs,
   };
 }

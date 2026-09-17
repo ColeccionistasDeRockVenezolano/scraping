@@ -6,19 +6,21 @@
 // «Tema interpretado por "Poster» (texto truncado), «Sesión -».
 import { decodeHTMLStrict } from "entities";
 import { replaceCodePoint } from "entities/lib/decode.js";
-import { ENTITY_NOUN, codePoint, firstSpan, nameFinding, quote, type Detector } from "./shared.js";
+import { ENTITY_NOUN, URL_LIKE, codePoint, firstSpan, isAllLowercase, isLowercaseNonName, nameFinding, quote, type Detector } from "./shared.js";
 
 const CATEGORY = "nombres_sucios";
 
 /** Invisibles y de control: ancho cero, marcas de dirección, guion blando, NBSP. El unidor de grafemas
  * (U+034F), los rellenos de hangul y las vocales inherentes jemer se combinan con lo anterior: van fuera
- * de la clase para que no se peguen al carácter previo. */
-const INVISIBLE = /(?:\u034F|\u115F|\u1160|\u17B4|\u17B5|[\u00A0\u00AD\u061C\u180E\u200B-\u200F\u202A-\u202E\u2060-\u2064\u206A-\u206F\uFEFF\p{Cc}])/u;
+ * de la clase para que no se peguen al carácter previo. El unidor de ancho cero (U+200D) solo cuenta
+ * fuera de un emoji compuesto: entre dos pictogramas («👨‍🎤») es parte del emoji (B2). */
+const INVISIBLE = /(?:\u034F|\u115F|\u1160|\u17B4|\u17B5|[\u00A0\u00AD\u061C\u180E\u200B\u200C\u200E\u200F\u202A-\u202E\u2060-\u2064\u206A-\u206F\uFEFF\p{Cc}]|(?<!\p{Extended_Pictographic}(?:[\u{1F3FB}-\u{1F3FF}]|\uFE0F)?)\u200D|\u200D(?!\p{Extended_Pictographic}))/u;
+const INVISIBLE_ALL = new RegExp(INVISIBLE.source, "gu");
 
 function cleanInvisible(value: string): string {
   return value
     .replace(/\u00A0/gu, " ")
-    .replace(new RegExp(INVISIBLE.source, "gu"), "")
+    .replace(INVISIBLE_ALL, "")
     .replace(/\s+/gu, " ")
     .trim();
 }
@@ -30,7 +32,7 @@ export const invisibleCharacters: Detector = {
   description: "Espacios de ancho cero, marcas de dirección, guiones blandos o espacios duros que no se ven pero rompen búsquedas y comparaciones.",
   run({ names }) {
     return names.filter((name) => INVISIBLE.test(name.value)).map((name) => {
-      const found = [...new Set([...name.value].filter((char) => INVISIBLE.test(char)))];
+      const found = [...new Set([...name.value.matchAll(INVISIBLE_ALL)].map((match) => match[0]))];
       const cleaned = cleanInvisible(name.value);
       return nameFinding(this, name, {
         severity: "medium",
@@ -71,10 +73,42 @@ const MIXED_SCRIPT_WORD = /\p{Script=Latin}+\p{Script=Cyrillic}+|\p{Script=Cyril
 /** Una letra perdida en la conversión suele quedar como «?» entre letras: «Mar?a». */
 const LOST_LETTER = /\p{L}\?\p{L}/u;
 
-function repairMojibake(value: string): string | undefined {
-  if (!/[\u0080-\u00FF]/u.test(value) || [...value].some((char) => (char.codePointAt(0) ?? 0) > 0xff)) return undefined;
-  const repaired = Buffer.from(value, "latin1").toString("utf8");
-  return repaired.includes("\uFFFD") || repaired === value ? undefined : repaired;
+/**
+ * Windows-1252 pone letras y signos donde Latin-1 tiene controles (0x80–0x9F):
+ * «â€™» es el «’» UTF-8 leído como Windows-1252. Sin esta tabla, el mojibake con
+ * «€» se detectaba y nunca se reparaba (B3).
+ */
+const CP1252_BYTE: ReadonlyMap<number, number> = new Map([
+  [0x20ac, 0x80], [0x201a, 0x82], [0x0192, 0x83], [0x201e, 0x84], [0x2026, 0x85], [0x2020, 0x86], [0x2021, 0x87], [0x02c6, 0x88],
+  [0x2030, 0x89], [0x0160, 0x8a], [0x2039, 0x8b], [0x0152, 0x8c], [0x017d, 0x8e], [0x2018, 0x91], [0x2019, 0x92], [0x201c, 0x93],
+  [0x201d, 0x94], [0x2022, 0x95], [0x2013, 0x96], [0x2014, 0x97], [0x02dc, 0x98], [0x2122, 0x99], [0x0161, 0x9a], [0x203a, 0x9b],
+  [0x0153, 0x9c], [0x017e, 0x9e], [0x0178, 0x9f],
+]);
+
+const STRICT_UTF8 = new TextDecoder("utf-8", { fatal: true });
+
+/**
+ * Deshace «UTF-8 leído como Latin-1 o Windows-1252»: vuelve a los bytes y los
+ * lee como UTF-8. Si algún carácter no tiene byte en esas tablas o los bytes no
+ * son UTF-8 válido, no hay reparación segura: nada se propone.
+ */
+export function repairMojibake(value: string): string | undefined {
+  if (!/[\u0080-\u00FF]/u.test(value)) return undefined;
+  const bytes: number[] = [];
+  for (const char of value) {
+    const code = char.codePointAt(0) ?? 0;
+    const byte = code <= 0xff ? code : CP1252_BYTE.get(code);
+    if (byte === undefined) return undefined;
+    bytes.push(byte);
+  }
+  let repaired: string;
+  try {
+    repaired = STRICT_UTF8.decode(Uint8Array.from(bytes));
+  } catch {
+    return undefined;
+  }
+  // Un control C1 en el resultado es otra capa de daño, no una reparación.
+  return repaired === value || /[\u0080-\u009F]/u.test(repaired) ? undefined : repaired;
 }
 
 export const brokenEncoding: Detector = {
@@ -241,19 +275,17 @@ export const lowercaseName: Detector = {
   key: "minusculas",
   category: CATEGORY,
   label: "Nombre todo en minúsculas",
-  description: "Personas y organizaciones escritas enteramente en minúsculas («his home studio»): suelen venir de un campo mal extraído.",
-  run({ names }) {
+  description: "Personas y organizaciones con nombre escrito enteramente en minúsculas («juan pérez»): suelen venir de un campo mal extraído. Una persona en minúsculas sin ninguna palabra de nombre va a «Persona que no es un nombre».",
+  run({ names, lexicon }) {
     return names
       .filter((name) => (name.kind === "person" || name.kind === "organization")
-        && /\p{Ll}{3,}/u.test(name.value) && name.value === name.value.toLocaleLowerCase("es") && !URL_LIKE.test(name.value))
+        && isAllLowercase(name.value) && !URL_LIKE.test(name.value) && !isLowercaseNonName(lexicon, name))
       .map((name) => nameFinding(this, name, {
         severity: "low",
         title: `${ENTITY_NOUN[name.kind]!.replace(/^./u, (char) => char.toUpperCase())} escrita toda en minúsculas`,
       }));
   },
 };
-
-const URL_LIKE = /https?:\/\/|www\.|\b[\w-]{2,}\.(?:com|net|org|info|biz|ve|es|co|blogspot|wordpress|bandcamp)\b/iu;
 
 export const urlInName: Detector = {
   key: "url_en_nombre",

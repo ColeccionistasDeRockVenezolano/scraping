@@ -6,7 +6,12 @@
 // —sucio, mal segmentado, de otro tipo, incoherente— no se repite aquí; lo que
 // queda son conflictos que la taxonomía todavía no tiene, agrupados por su
 // firma para que un tipo nuevo se vea como un grupo y no como ruido suelto.
-import { letterRatio, signsOf, type FieldProfile, type NameValue } from "../lexicon.js";
+//
+// La firma de un signo raro es su CLASE Unicode (puntuación, moneda, símbolo,
+// invisible o marca) y el campo, no el carácter: con un subgrupo por carácter
+// 156 hallazgos quedaban repartidos en 52 subgrupos (B1). El carácter concreto
+// sigue en el título y en la evidencia.
+import { letterRatio, signClass, signsOf, type FieldProfile, type NameValue, type SignClass } from "../lexicon.js";
 import { OTHER_CATEGORY } from "../taxonomy.js";
 import type { Finding } from "../types.js";
 import { ENTITY_NOUN, codePoint, nameFinding, quote, type AnalysisContext, type Detector } from "./shared.js";
@@ -33,6 +38,13 @@ const SCRIPTS: ReadonlyArray<[string, RegExp]> = [
 ];
 
 const NON_LATIN_LETTER = /(?![\p{Script=Latin}])\p{L}/u;
+
+const SIGN_CLASS_LABEL: Readonly<Record<SignClass, { one: string; many: string }>> = {
+  puntuacion: { one: "Signo de puntuación infrecuente", many: "Signos de puntuación infrecuentes" },
+  moneda: { one: "Símbolo de moneda infrecuente", many: "Símbolos de moneda infrecuentes" },
+  simbolo: { one: "Símbolo infrecuente", many: "Símbolos infrecuentes" },
+  invisible_o_marca: { one: "Carácter invisible o marca infrecuente", many: "Caracteres invisibles o marcas infrecuentes" },
+};
 
 function scriptOf(value: string): string {
   return SCRIPTS.find(([, pattern]) => pattern.test(value))?.[0] ?? "otra escritura";
@@ -80,12 +92,13 @@ function anomaliesOf(detector: Detector, name: NameValue, profile: FieldProfile,
   if (rare.length) {
     const sign = rare[0]!;
     const index = name.value.indexOf(sign);
+    const kind = signClass(sign);
     return nameFinding(detector, name, {
-      signature: `signo:${codePoint(sign)}:${fieldKey(name)}`,
-      signatureLabel: `Signo infrecuente ${quote(sign)} en ${field}`,
+      signature: `signo:${kind}:${fieldKey(name)}`,
+      signatureLabel: `${SIGN_CLASS_LABEL[kind].many} en ${field}`,
       severity: "low",
-      title: `Signo infrecuente ${quote(sign)} (${codePoint(sign)}): aparece en ${profile.signDocs.get(sign) ?? 0} de ${profile.values} ${field}`,
-      evidence: { signs: rare.map((item) => ({ sign: item, codePoint: codePoint(item), values: profile.signDocs.get(item) ?? 0 })), fieldValues: profile.values },
+      title: `${SIGN_CLASS_LABEL[kind].one} ${quote(sign)} (${codePoint(sign)}): aparece en ${profile.signDocs.get(sign) ?? 0} de ${profile.values} ${field}`,
+      evidence: { signs: rare.map((item) => ({ sign: item, codePoint: codePoint(item), class: signClass(item), values: profile.signDocs.get(item) ?? 0 })), fieldValues: profile.values },
       span: [index, index + sign.length],
     });
   }

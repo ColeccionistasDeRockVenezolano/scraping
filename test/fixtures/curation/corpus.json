@@ -1,8 +1,46 @@
 {
   "exportedAt": "2026-09-16",
   "source": "crv-postgres dev (analisis #2)",
-  "note": "Muestra estratificada (hasta 20 por detector) para etiquetar verdict en E2: true_positive | false_positive | discutible.",
-  "count": 474,
+  "note": "Muestra estratificada de E0 (hasta 20 por detector) etiquetada en E2, más un suplemento (addedIn: E2) con los falsos positivos de A6 que la muestra no recogió. verdict: true_positive | false_positive | discutible. expectedDetector/expectedSignature: dónde debe quedar hoy un verdadero positivo que las reglas reclasificaron. fixedIn: versión de reglas que dejó de emitir un falso positivo.",
+  "labeledAt": "2026-09-16",
+  "labeledWith": "curation-rules.v2",
+  "catalogFixture": "catalog-2026-09-16.json.gz",
+  "precisionDefinition": "verdaderos positivos emitidos / (verdaderos + falsos positivos emitidos); los discutibles no cuentan.",
+  "precisionThresholds": {
+    "aclaracion_en_nombre_de_artista": 1.0,
+    "anio_en_titulo_de_pista": 1.0,
+    "anio_titulo_contra_publicacion": 0.4,
+    "anomalia_del_catalogo": 0.41,
+    "artista_en_titulo_de_disco": 1.0,
+    "artista_en_titulo_de_pista": 1.0,
+    "artista_es_organizacion": 0.33,
+    "artistas_equivalentes": 1.0,
+    "caracteres_invisibles": 1.0,
+    "codificacion_rota": 1.0,
+    "creditos_en_titulo": 1.0,
+    "disco_antes_de_formacion": 1.0,
+    "discos_repetidos": 1.0,
+    "duracion_atipica": 1.0,
+    "duracion_en_titulo": 1.0,
+    "entidades_html": 1.0,
+    "etiqueta_en_nombre": 1.0,
+    "fichas_sin_vinculos": 1.0,
+    "minusculas": 1.0,
+    "numeracion_con_huecos": 1.0,
+    "organizaciones_equivalentes": 0.5,
+    "palabras_pegadas": 0.33,
+    "persona_con_nombre_de_artista": 1.0,
+    "persona_es_organizacion": 1.0,
+    "persona_no_es_un_nombre": 1.0,
+    "personas_equivalentes": 1.0,
+    "pistas_repetidas": 0.94,
+    "signos_colgantes": 1.0,
+    "signos_sin_cerrar": 0.88,
+    "tipo_de_disco_contra_titulo": 1.0,
+    "url_en_nombre": 1.0,
+    "varias_personas_en_una": 0.71
+  },
+  "count": 487,
   "findings": [
     {
       "category": "mal_segmentados",
@@ -16,7 +54,7 @@
       "value": "Pan (1970)",
       "suggestion": "Nombre «Pan» y el año en su campo",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -30,7 +68,8 @@
       "value": "Us - It",
       "suggestion": "Un nombre principal y el otro como alias",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "discutible",
+      "note": "«Us - It» puede ser el nombre real de la banda y no dos nombres."
     },
     {
       "category": "mal_segmentados",
@@ -44,7 +83,7 @@
       "value": "María Conchita Alonso / Ambar",
       "suggestion": "Un nombre principal y el otro como alias",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -58,7 +97,7 @@
       "value": "Luiser (Luis Ernesto Serrano)",
       "suggestion": "Nombre «Luiser» y «Luis Ernesto Serrano» como alias o persona vinculada",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -72,7 +111,7 @@
       "value": "Mulato (Pablo González Romero)",
       "suggestion": "Nombre «Mulato» y «Pablo González Romero» como alias o persona vinculada",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -86,7 +125,7 @@
       "value": "Noctambulath (Caracas)",
       "suggestion": "Nombre «Noctambulath»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -100,7 +139,7 @@
       "value": "Nemesis (Lara)",
       "suggestion": "Nombre «Nemesis»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -114,7 +153,7 @@
       "value": "Agonia (Caracas)",
       "suggestion": "Nombre «Agonia»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -128,7 +167,7 @@
       "value": "Necrosis (Zulia)",
       "suggestion": "Nombre «Necrosis»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -142,7 +181,7 @@
       "value": "THE (Lara)",
       "suggestion": "Nombre «THE»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -156,7 +195,7 @@
       "value": "Jihad (Caracas)",
       "suggestion": "Nombre «Jihad»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -170,7 +209,7 @@
       "value": "Ora Pro Nobis (Caracas)",
       "suggestion": "Nombre «Ora Pro Nobis»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -184,7 +223,7 @@
       "value": "Myzis (Táchira)",
       "suggestion": "Nombre «Myzis»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -198,7 +237,7 @@
       "value": "Equilibrio Vital (Caracas)",
       "suggestion": "Nombre «Equilibrio Vital»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -212,7 +251,7 @@
       "value": "Torkhe (Lara)",
       "suggestion": "Nombre «Torkhe»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -226,7 +265,7 @@
       "value": "Gutiroth (Carabobo)",
       "suggestion": "Nombre «Gutiroth»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -240,7 +279,7 @@
       "value": "Basilisk (Aragua)",
       "suggestion": "Nombre «Basilisk»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -254,7 +293,7 @@
       "value": "Osteoporosis Aguda (Anzoátegui)",
       "suggestion": "Nombre «Osteoporosis Aguda»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -268,7 +307,7 @@
       "value": "Aborigen (Zulia)",
       "suggestion": "Nombre «Aborigen»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -282,7 +321,7 @@
       "value": "Gastonia (Carabobo)",
       "suggestion": "Nombre «Gastonia»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -296,7 +335,7 @@
       "value": "Cucaracha ('99)",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -310,7 +349,7 @@
       "value": "José ('99)",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -324,7 +363,7 @@
       "value": "Construcción ('99)",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -338,7 +377,7 @@
       "value": "I Wish My Fish ('99)",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -352,7 +391,7 @@
       "value": "El Barón De Munchausen ('97)",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -366,7 +405,7 @@
       "value": "El Manifiesto Del Tonto ('97)",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -380,7 +419,7 @@
       "value": "No name (Demo 2015)",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -394,7 +433,7 @@
       "value": "Astro Imperial (Demo 2010)",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -408,7 +447,7 @@
       "value": "En la Tierra como en el Cielo (Demo 2010)",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -422,7 +461,7 @@
       "value": "Raíz Astral (Demo 2010)",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -436,7 +475,7 @@
       "value": "Depredador (Demo 2011)",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -450,7 +489,7 @@
       "value": "Nunca Más Adiós (Demo 2011)",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -464,7 +503,7 @@
       "value": "Contra ti, Capitalismo (2000)",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -478,7 +517,7 @@
       "value": "Luchas (2000)",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -492,7 +531,7 @@
       "value": "En los Laboratorios (98-2000)",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -506,7 +545,7 @@
       "value": "Sordido Engendro - (Promo 2006)",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -520,7 +559,7 @@
       "value": "Quema de Humanos (Demo 2003)",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -534,7 +573,7 @@
       "value": "Engagement Of Putrefaction (Promo Feb. 2003)",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -548,7 +587,7 @@
       "value": "The Last Battle (2008)",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -562,7 +601,7 @@
       "value": "Deformed Murderer (Demo 2005)",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "datos_incoherentes",
@@ -576,7 +615,8 @@
       "value": "1986",
       "suggestion": "Confirmar si el título habla de la grabación y el año guardado es el de la edición",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "discutible",
+      "note": "Título-año de un disco publicado décadas después: suele ser material de archivo."
     },
     {
       "category": "datos_incoherentes",
@@ -590,7 +630,7 @@
       "value": "Lo Mejor De 2015!",
       "suggestion": "Confirmar si el título habla de la grabación y el año guardado es el de la edición",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "discutible"
     },
     {
       "category": "datos_incoherentes",
@@ -604,7 +644,7 @@
       "value": "1986",
       "suggestion": "Confirmar si el título habla de la grabación y el año guardado es el de la edición",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "discutible"
     },
     {
       "category": "datos_incoherentes",
@@ -618,7 +658,7 @@
       "value": "1983 Part2",
       "suggestion": "Confirmar si el título habla de la grabación y el año guardado es el de la edición",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "discutible"
     },
     {
       "category": "datos_incoherentes",
@@ -632,7 +672,8 @@
       "value": "2012",
       "suggestion": "Confirmar si el título habla de la grabación y el año guardado es el de la edición",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive",
+      "note": "El título nombra un año posterior a la publicación guardada."
     },
     {
       "category": "datos_incoherentes",
@@ -646,7 +687,7 @@
       "value": "1986",
       "suggestion": "Confirmar si el título habla de la grabación y el año guardado es el de la edición",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "discutible"
     },
     {
       "category": "datos_incoherentes",
@@ -660,7 +701,8 @@
       "value": "En Vivo NYC 1990",
       "suggestion": "Confirmar si el título habla de la grabación y el año guardado es el de la edición",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "false_positive",
+      "note": "Grabación en vivo de 1990 publicada en 2025: el año del título es el de la grabación, no un conflicto."
     },
     {
       "category": "datos_incoherentes",
@@ -674,7 +716,8 @@
       "value": "En Vivo NYC 1990",
       "suggestion": "Confirmar si el título habla de la grabación y el año guardado es el de la edición",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "false_positive",
+      "note": "Igual que la otra edición de «En Vivo NYC 1990»."
     },
     {
       "category": "datos_incoherentes",
@@ -688,7 +731,8 @@
       "value": "1967 - Caracas 400 Gente En Ambiente",
       "suggestion": "Confirmar si el título habla de la grabación y el año guardado es el de la edición",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "false_positive",
+      "note": "Material de archivo de 1967 editado en 2005."
     },
     {
       "category": "datos_incoherentes",
@@ -702,7 +746,8 @@
       "value": "Guaicaipuro de Oro 1961",
       "suggestion": "Confirmar si el título habla de la grabación y el año guardado es el de la edición",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive",
+      "note": "Caso real del estudio: premio de 1961 con publicación guardada en 1962."
     },
     {
       "category": "otros",
@@ -716,7 +761,8 @@
       "value": "Pornecrorgasminfectanaleprosis Vajipenencefalitis",
       "suggestion": "Confirmar que el campo no arrastra texto de la página (descripción, créditos, notas)",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "false_positive",
+      "note": "Nombre real (y largo) de la banda."
     },
     {
       "category": "otros",
@@ -730,7 +776,8 @@
       "value": "Porne crorgasm infect analeprosis Vajipenecefalitis",
       "suggestion": "Confirmar que el campo no arrastra texto de la página (descripción, créditos, notas)",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive",
+      "note": "Mismo nombre que el 829 con espacios partidos: una ficha dañada."
     },
     {
       "category": "otros",
@@ -744,7 +791,8 @@
       "value": "Grupo C.I.M. Compañia de Investigaciones Musicales",
       "suggestion": "Confirmar que el campo no arrastra texto de la página (descripción, créditos, notas)",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive",
+      "note": "Organización cargada como persona."
     },
     {
       "category": "otros",
@@ -758,7 +806,8 @@
       "value": "20/20",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "false_positive",
+      "note": "Nombre de banda con cifras."
     },
     {
       "category": "otros",
@@ -772,7 +821,8 @@
       "value": "KP9000",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "false_positive",
+      "note": "Nombre de banda con cifras."
     },
     {
       "category": "otros",
@@ -786,7 +836,8 @@
       "value": "11011",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "false_positive",
+      "note": "Nombre de banda con cifras."
     },
     {
       "category": "otros",
@@ -800,7 +851,9 @@
       "value": "Licio Lugarini Melloni \"Licho\"",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive",
+      "note": "Apodo entre comillas dentro del nombre.",
+      "expectedSignature": "signo:puntuacion:artist.name"
     },
     {
       "category": "otros",
@@ -814,7 +867,9 @@
       "value": "Rodolfo \"Pocho\" Serra",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive",
+      "note": "Apodo entre comillas dentro del nombre.",
+      "expectedSignature": "signo:puntuacion:artist.name"
     },
     {
       "category": "otros",
@@ -828,7 +883,7 @@
       "value": "Ultrachic*",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "discutible"
     },
     {
       "category": "otros",
@@ -842,7 +897,8 @@
       "value": "Azúcar, Cacao & Leche",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "false_positive",
+      "note": "La coma es parte del nombre de la banda."
     },
     {
       "category": "otros",
@@ -856,7 +912,8 @@
       "value": "Difuntos, Extraños y Volátiles",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "false_positive",
+      "note": "La coma es parte del nombre de la banda."
     },
     {
       "category": "otros",
@@ -870,7 +927,7 @@
       "value": "Subconsciente?",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "discutible"
     },
     {
       "category": "otros",
@@ -884,7 +941,8 @@
       "value": "@patia No",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "false_positive",
+      "note": "Grafía estilizada de «Apatía No»."
     },
     {
       "category": "otros",
@@ -898,7 +956,9 @@
       "value": "Edward Vera \"Turtled\" @Turtleddj",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive",
+      "note": "Usuario de red social dentro del nombre.",
+      "expectedSignature": "signo:puntuacion:person.name"
     },
     {
       "category": "otros",
@@ -912,7 +972,9 @@
       "value": "Gustavo Dal Farra @GustavoDB",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive",
+      "note": "Usuario de red social dentro del nombre.",
+      "expectedSignature": "signo:puntuacion:person.name"
     },
     {
       "category": "otros",
@@ -926,7 +988,7 @@
       "value": "Documento Sónico R_Paluza",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "discutible"
     },
     {
       "category": "otros",
@@ -940,7 +1002,9 @@
       "value": "Destruye Pony´s",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive",
+      "note": "Acento agudo usado como apóstrofo.",
+      "expectedSignature": "signo:simbolo:artist.name"
     },
     {
       "category": "otros",
@@ -954,7 +1018,8 @@
       "value": "Canuto’s Blues Band",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "false_positive",
+      "note": "Apóstrofo tipográfico correcto."
     },
     {
       "category": "otros",
@@ -968,7 +1033,8 @@
       "value": "Dead’s Day",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "false_positive",
+      "note": "Apóstrofo tipográfico correcto."
     },
     {
       "category": "otros",
@@ -982,7 +1048,8 @@
       "value": "Sodom’s Child",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "false_positive",
+      "note": "Apóstrofo tipográfico correcto."
     },
     {
       "category": "mal_segmentados",
@@ -996,7 +1063,7 @@
       "value": "Wismar - BlackHymn",
       "suggestion": "Dejar el título como «BlackHymn»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -1010,7 +1077,7 @@
       "value": "Henry Stephen: Sus Éxitos",
       "suggestion": "Dejar el título como «Sus Éxitos»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -1024,7 +1091,7 @@
       "value": "Jihad - NOM",
       "suggestion": "Título «NOM» con crédito de pista al artista «Jihad»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -1038,7 +1105,7 @@
       "value": "Eutanasia Brutal - Somos la Misma Mierda",
       "suggestion": "Título «Somos la Misma Mierda» con crédito de pista al artista «Eutanasia Brutal»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -1052,7 +1119,7 @@
       "value": "Bajo Zero - Hijos de Nadie",
       "suggestion": "Título «Hijos de Nadie» con crédito de pista al artista «Bajo Zero»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -1066,7 +1133,7 @@
       "value": "Apocalypse - Apocalypse",
       "suggestion": "Título «Apocalypse» con crédito de pista al artista «Apocalypse»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -1080,7 +1147,7 @@
       "value": "Laverno - Extraño Dolor",
       "suggestion": "Título «Extraño Dolor» con crédito de pista al artista «Laverno»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -1094,7 +1161,7 @@
       "value": "Boogieman's Curda - Blood will be Shed",
       "suggestion": "Título «Blood will be Shed» con crédito de pista al artista «Boogieman's Curda»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -1108,7 +1175,7 @@
       "value": "Human Annihilation - Enemy of the World",
       "suggestion": "Título «Enemy of the World» con crédito de pista al artista «Human Annihilation»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -1122,7 +1189,7 @@
       "value": "Kleyver - Conciencia Animal",
       "suggestion": "Título «Conciencia Animal» con crédito de pista al artista «Kleyver»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -1136,7 +1203,7 @@
       "value": "Brutal Nativo - Conspiración",
       "suggestion": "Título «Conspiración» con crédito de pista al artista «Brutal Nativo»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -1150,7 +1217,7 @@
       "value": "Astadmiah - Obscuro Poder",
       "suggestion": "Título «Obscuro Poder» con crédito de pista a «Astadmiah»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -1164,7 +1231,7 @@
       "value": "Morte Spiritual - Letanías",
       "suggestion": "Título «Letanías» con crédito de pista a «Morte Spiritual»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -1178,7 +1245,7 @@
       "value": "Sieth - Blind Lamb",
       "suggestion": "Título «Blind Lamb» con crédito de pista a «Sieth»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -1192,7 +1259,7 @@
       "value": "Los Record - Polioretano en Guerra",
       "suggestion": "Título «Polioretano en Guerra» con crédito de pista a «Los Record»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -1206,7 +1273,7 @@
       "value": "Rango Percentil - No le Llames Amor",
       "suggestion": "Título «No le Llames Amor» con crédito de pista a «Rango Percentil»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -1220,7 +1287,7 @@
       "value": "Mattey - La Calavera del Loco",
       "suggestion": "Título «La Calavera del Loco» con crédito de pista a «Mattey»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -1234,7 +1301,7 @@
       "value": "Filosofía Barata - No Estas",
       "suggestion": "Título «No Estas» con crédito de pista a «Filosofía Barata»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -1248,7 +1315,7 @@
       "value": "Prognosis - Tu Eres Santo",
       "suggestion": "Dejar el título como «Tu Eres Santo»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -1262,7 +1329,8 @@
       "value": "El Hueco - El Viaje de los Antiguos",
       "suggestion": "Dejar el título como «El Hueco»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "discutible",
+      "note": "El problema existe, pero el «artista del disco» es un recopilatorio cargado como artista: la sugestión deja el nombre de la banda como título."
     },
     {
       "category": "mal_segmentados",
@@ -1276,7 +1344,8 @@
       "value": "Lonesome mist - El Viaje de los Antiguos",
       "suggestion": "Dejar el título como «Lonesome mist»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "discutible",
+      "note": "El problema existe, pero el «artista del disco» es un recopilatorio cargado como artista: la sugestión deja el nombre de la banda como título."
     },
     {
       "category": "mal_segmentados",
@@ -1290,7 +1359,8 @@
       "value": "EVA - El Viaje de los Antiguos",
       "suggestion": "Dejar el título como «EVA»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "discutible",
+      "note": "El problema existe, pero el «artista del disco» es un recopilatorio cargado como artista: la sugestión deja el nombre de la banda como título."
     },
     {
       "category": "ficha_de_otro_tipo",
@@ -1304,7 +1374,7 @@
       "value": "Fundación Nuevas Bandas",
       "suggestion": "Confirmar si es un artista o la organización (sello, fundación, estudio)",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "ficha_de_otro_tipo",
@@ -1318,7 +1388,7 @@
       "value": "Visceral",
       "suggestion": "Confirmar si es un artista o la organización (sello, fundación, estudio)",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "discutible"
     },
     {
       "category": "ficha_de_otro_tipo",
@@ -1332,7 +1402,8 @@
       "value": "A Raíz de Nuevas Causas",
       "suggestion": "Confirmar si es un artista o la organización (sello, fundación, estudio)",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "false_positive",
+      "note": "«Nuevas» no es vocabulario de organización."
     },
     {
       "category": "ficha_de_otro_tipo",
@@ -1346,7 +1417,8 @@
       "value": "Korpus Inc.",
       "suggestion": "Confirmar si es un artista o la organización (sello, fundación, estudio)",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "false_positive",
+      "note": "Nombre de banda."
     },
     {
       "category": "ficha_de_otro_tipo",
@@ -1360,7 +1432,8 @@
       "value": "Master Gurú",
       "suggestion": "Confirmar si es un artista o la organización (sello, fundación, estudio)",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "false_positive",
+      "note": "Nombre de banda."
     },
     {
       "category": "ficha_de_otro_tipo",
@@ -1374,7 +1447,7 @@
       "value": "Radio Tigre International",
       "suggestion": "Confirmar si es un artista o la organización (sello, fundación, estudio)",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "discutible"
     },
     {
       "category": "ficha_de_otro_tipo",
@@ -1388,7 +1461,8 @@
       "value": "Compilado Pepsi Music",
       "suggestion": "Confirmar si es un artista o la organización (sello, fundación, estudio)",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive",
+      "note": "Es un recopilatorio cargado como artista; el hallazgo apunta a una ficha que no es un artista."
     },
     {
       "category": "ficha_de_otro_tipo",
@@ -1402,7 +1476,7 @@
       "value": "Tributó a La Polla Records",
       "suggestion": "Confirmar si es un artista o la organización (sello, fundación, estudio)",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "discutible"
     },
     {
       "category": "ficha_de_otro_tipo",
@@ -1416,7 +1490,8 @@
       "value": "Embas (Eclectic Music By A Sextet)",
       "suggestion": "Confirmar si es un artista o la organización (sello, fundación, estudio)",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "false_positive",
+      "note": "Nombre de banda con su aclaración."
     },
     {
       "category": "fichas_repetidas",
@@ -1430,7 +1505,7 @@
       "value": "Necrosis",
       "suggestion": "Comparar las fichas y fusionarlas si son el mismo artista",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "fichas_repetidas",
@@ -1444,7 +1519,7 @@
       "value": "Torkhe",
       "suggestion": "Comparar las fichas y fusionarlas si son el mismo artista",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "fichas_repetidas",
@@ -1458,7 +1533,7 @@
       "value": "Myzis",
       "suggestion": "Comparar las fichas y fusionarlas si son el mismo artista",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "fichas_repetidas",
@@ -1472,7 +1547,7 @@
       "value": "Jihad",
       "suggestion": "Comparar las fichas y fusionarlas si son el mismo artista",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "fichas_repetidas",
@@ -1486,7 +1561,7 @@
       "value": "Nemesis",
       "suggestion": "Comparar las fichas y fusionarlas si son el mismo artista",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "fichas_repetidas",
@@ -1500,7 +1575,7 @@
       "value": "Basilisk",
       "suggestion": "Comparar las fichas y fusionarlas si son el mismo artista",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "fichas_repetidas",
@@ -1514,7 +1589,7 @@
       "value": "Gutiroth",
       "suggestion": "Comparar las fichas y fusionarlas si son el mismo artista",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "fichas_repetidas",
@@ -1528,7 +1603,7 @@
       "value": "Equilibrio Vital",
       "suggestion": "Comparar las fichas y fusionarlas si son el mismo artista",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "fichas_repetidas",
@@ -1542,7 +1617,7 @@
       "value": "Ora Pro Nobis",
       "suggestion": "Comparar las fichas y fusionarlas si son el mismo artista",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "fichas_repetidas",
@@ -1556,7 +1631,7 @@
       "value": "Agonia",
       "suggestion": "Comparar las fichas y fusionarlas si son el mismo artista",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "fichas_repetidas",
@@ -1570,7 +1645,7 @@
       "value": "Noctambulath",
       "suggestion": "Comparar las fichas y fusionarlas si son el mismo artista",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "fichas_repetidas",
@@ -1584,7 +1659,7 @@
       "value": "THE",
       "suggestion": "Comparar las fichas y fusionarlas si son el mismo artista",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "fichas_repetidas",
@@ -1598,7 +1673,7 @@
       "value": "Embas",
       "suggestion": "Comparar las fichas y fusionarlas si son el mismo artista",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "fichas_repetidas",
@@ -1612,7 +1687,7 @@
       "value": "Grillos Mientras Tanto",
       "suggestion": "Comparar las fichas y fusionarlas si son el mismo artista",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "fichas_repetidas",
@@ -1626,7 +1701,7 @@
       "value": "The Love Depression",
       "suggestion": "Comparar las fichas y fusionarlas si son el mismo artista",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "fichas_repetidas",
@@ -1640,7 +1715,7 @@
       "value": "Zeta",
       "suggestion": "Comparar las fichas y fusionarlas si son el mismo artista",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "fichas_repetidas",
@@ -1654,7 +1729,7 @@
       "value": "Flanders",
       "suggestion": "Comparar las fichas y fusionarlas si son el mismo artista",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "fichas_repetidas",
@@ -1668,7 +1743,7 @@
       "value": "Big Landin Orquesta",
       "suggestion": "Comparar las fichas y fusionarlas si son el mismo artista",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "fichas_repetidas",
@@ -1682,7 +1757,7 @@
       "value": "La Radio Candela",
       "suggestion": "Comparar las fichas y fusionarlas si son el mismo artista",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "fichas_repetidas",
@@ -1696,7 +1771,7 @@
       "value": "The Holidays",
       "suggestion": "Comparar las fichas y fusionarlas si son el mismo artista",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "nombres_sucios",
@@ -1710,7 +1785,7 @@
       "value": "A Wonderful Place / Serenity​.​.​. AWP Instrumentals",
       "suggestion": "Dejarlo como «A Wonderful Place / Serenity... AWP Instrumentals»",
       "suggested_value": "A Wonderful Place / Serenity... AWP Instrumentals",
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "nombres_sucios",
@@ -1724,7 +1799,7 @@
       "value": "A Ruthless Hello​.​.​.",
       "suggestion": "Dejarlo como «A Ruthless Hello...»",
       "suggested_value": "A Ruthless Hello...",
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "nombres_sucios",
@@ -1738,7 +1813,7 @@
       "value": "One Window, One Story​.​.​.",
       "suggestion": "Dejarlo como «One Window, One Story...»",
       "suggested_value": "One Window, One Story...",
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "nombres_sucios",
@@ -1752,7 +1827,7 @@
       "value": "Verde, azul, violeta (En vivo c/ La Flor​-​Klor) - Single",
       "suggestion": "Dejarlo como «Verde, azul, violeta (En vivo c/ La Flor-Klor) - Single»",
       "suggested_value": "Verde, azul, violeta (En vivo c/ La Flor-Klor) - Single",
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "nombres_sucios",
@@ -1766,7 +1841,7 @@
       "value": "58​/​56 Split",
       "suggestion": "Dejarlo como «58/56 Split»",
       "suggested_value": "58/56 Split",
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "nombres_sucios",
@@ -1780,7 +1855,7 @@
       "value": "B​.​E​.​T​.​O​.​E - live in san cristobal. GO. 07​/​15​/​16, FULL CONCERT",
       "suggestion": "Dejarlo como «B.E.T.O.E - live in san cristobal. GO. 07/15/16, FULL CONCERT»",
       "suggested_value": "B.E.T.O.E - live in san cristobal. GO. 07/15/16, FULL CONCERT",
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "nombres_sucios",
@@ -1794,7 +1869,7 @@
       "value": "B​.​E​.​T​.​O​.​E​/​TIRRIAA​-​mierda. split tape",
       "suggestion": "Dejarlo como «B.E.T.O.E/TIRRIAA-mierda. split tape»",
       "suggested_value": "B.E.T.O.E/TIRRIAA-mierda. split tape",
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "nombres_sucios",
@@ -1808,7 +1883,7 @@
       "value": "Umbra Summi Nobis‏",
       "suggestion": "Dejarlo como «Umbra Summi Nobis»",
       "suggested_value": "Umbra Summi Nobis",
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "nombres_sucios",
@@ -1822,7 +1897,7 @@
       "value": "B​.​E​.​T​.​O​.​E​/​DHK - caminando sobre ruinas. split",
       "suggestion": "Dejarlo como «B.E.T.O.E/DHK - caminando sobre ruinas. split»",
       "suggested_value": "B.E.T.O.E/DHK - caminando sobre ruinas. split",
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "nombres_sucios",
@@ -1836,7 +1911,7 @@
       "value": "Abducciones y Mutaciones Vol​.​1",
       "suggestion": "Dejarlo como «Abducciones y Mutaciones Vol.1»",
       "suggested_value": "Abducciones y Mutaciones Vol.1",
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "nombres_sucios",
@@ -1850,7 +1925,7 @@
       "value": "cmyk ver_11​.​11​.​11",
       "suggestion": "Dejarlo como «cmyk ver_11.11.11»",
       "suggested_value": "cmyk ver_11.11.11",
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "nombres_sucios",
@@ -1864,7 +1939,7 @@
       "value": "cmyk ver_10​.​10​.​10",
       "suggestion": "Dejarlo como «cmyk ver_10.10.10»",
       "suggested_value": "cmyk ver_10.10.10",
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "nombres_sucios",
@@ -1878,7 +1953,7 @@
       "value": "A Coñazo! Compilado de Metal Venezolano Vol​.​1",
       "suggestion": "Dejarlo como «A Coñazo! Compilado de Metal Venezolano Vol.1»",
       "suggested_value": "A Coñazo! Compilado de Metal Venezolano Vol.1",
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "nombres_sucios",
@@ -1892,7 +1967,7 @@
       "value": "Crónicas De Una Muerte (Demo​/​Single)",
       "suggestion": "Dejarlo como «Crónicas De Una Muerte (Demo/Single)»",
       "suggested_value": "Crónicas De Una Muerte (Demo/Single)",
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "nombres_sucios",
@@ -1906,7 +1981,7 @@
       "value": "In Lies We Trust - 4​-​Way Split.",
       "suggestion": "Dejarlo como «In Lies We Trust - 4-Way Split.»",
       "suggested_value": "In Lies We Trust - 4-Way Split.",
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "nombres_sucios",
@@ -1920,7 +1995,7 @@
       "value": "Verde, azul, violeta (En vivo c/ La Flor​-​Klor)",
       "suggestion": "Dejarlo como «Verde, azul, violeta (En vivo c/ La Flor-Klor)»",
       "suggested_value": "Verde, azul, violeta (En vivo c/ La Flor-Klor)",
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "nombres_sucios",
@@ -1934,7 +2009,7 @@
       "value": "Las Semillas Вel Odio",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "nombres_sucios",
@@ -1948,7 +2023,7 @@
       "value": "De la manipulaciГіn a la ignorancia",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "nombres_sucios",
@@ -1962,7 +2037,7 @@
       "value": "HuГ©rfanos del petrГіleo",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "nombres_sucios",
@@ -1976,7 +2051,7 @@
       "value": "RГ©gimen de maldad",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -1990,7 +2065,7 @@
       "value": "Necronacia (ft. Juan Rodrguez)",
       "suggestion": "Crédito de invitado (guest) a «Juan Rodrguez»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -2004,7 +2079,7 @@
       "value": "Encore (ft. Jos Manuel Ruiz)",
       "suggestion": "Crédito de invitado (guest) a «Jos Manuel Ruiz»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -2018,7 +2093,7 @@
       "value": "Actitud (con Adonis de NODS)",
       "suggestion": "Crédito de invitado (guest) a «Adonis de NODS»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -2032,7 +2107,7 @@
       "value": "Mountains (Feat. Naye)",
       "suggestion": "Crédito de invitado (guest) a «Naye»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -2046,7 +2121,7 @@
       "value": "Mushotoku Spirit (Feat. Pedro Bolivar)",
       "suggestion": "Crédito de invitado (guest) a «Pedro Bolivar»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -2060,7 +2135,7 @@
       "value": "Elizabeth - Icaro (Feat Carlos Moreno)",
       "suggestion": "Crédito de invitado (guest) a «Carlos Moreno»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -2074,7 +2149,7 @@
       "value": "En el Olvido (feat. Yesica Castelo)",
       "suggestion": "Crédito de invitado (guest) a «Yesica Castelo»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -2088,7 +2163,7 @@
       "value": "Valery's - Despues de ti Nada (Feat Juan Carlos Frisancho)",
       "suggestion": "Crédito de invitado (guest) a «Juan Carlos Frisancho»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -2102,7 +2177,7 @@
       "value": "Noctambulath - Promesas (feat May Rose)",
       "suggestion": "Crédito de invitado (guest) a «May Rose»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -2116,7 +2191,7 @@
       "value": "Actitud (Feat. Adodis de N.O.D.S)",
       "suggestion": "Crédito de invitado (guest) a «Adodis de N.O.D.S»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -2130,7 +2205,7 @@
       "value": "Mi sangre (Feat. Frederick Rojas de Legado)",
       "suggestion": "Crédito de invitado (guest) a «Frederick Rojas de Legado»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -2144,7 +2219,7 @@
       "value": "Black and White (feat. American Grim)",
       "suggestion": "Crédito de invitado (guest) a «American Grim»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -2158,7 +2233,7 @@
       "value": "Takeover (feat. The Qemists)",
       "suggestion": "Crédito de invitado (guest) a «The Qemists»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -2172,7 +2247,7 @@
       "value": "Children of Tomorrow (feat. Coppa)",
       "suggestion": "Crédito de invitado (guest) a «Coppa»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -2186,7 +2261,7 @@
       "value": "Before the Dawn (feat. Celldweller)",
       "suggestion": "Crédito de invitado (guest) a «Celldweller»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -2200,7 +2275,7 @@
       "value": "Transhuman (feat. Jørgen Munkeby)",
       "suggestion": "Crédito de invitado (guest) a «Jørgen Munkeby»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -2214,7 +2289,7 @@
       "value": "Monster (feat. Malke & APE)",
       "suggestion": "Crédito de invitado (guest) a «Malke & APE»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -2228,7 +2303,7 @@
       "value": "Medianía (Autor y Ft. Dieter Negrín)",
       "suggestion": "Crédito de invitado (guest) a «Autor y Dieter Negrín»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -2242,7 +2317,7 @@
       "value": "Contracorrientes (Feat. Hale Villalobos - Frente de Ira)",
       "suggestion": "Crédito de invitado (guest) a «Hale Villalobos - Frente de Ira»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -2256,7 +2331,7 @@
       "value": "Force Fed Ruptured Bowel Fluid (Ft. Baptiste Malum & Askhad Ardanov)",
       "suggestion": "Crédito de invitado (guest) a «Baptiste Malum & Askhad Ardanov»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "datos_incoherentes",
@@ -2270,7 +2345,7 @@
       "value": "Demos: Sin Sombra No Hay Luz",
       "suggestion": "Corregir el año del disco o el año de formación del artista",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "datos_incoherentes",
@@ -2284,7 +2359,7 @@
       "value": "El Amor Ya No Existe",
       "suggestion": "Corregir el año del disco o el año de formación del artista",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "datos_incoherentes",
@@ -2298,7 +2373,7 @@
       "value": "Infecto De Afecto",
       "suggestion": "Corregir el año del disco o el año de formación del artista",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "datos_incoherentes",
@@ -2312,7 +2387,7 @@
       "value": "B-Side: El Amor Ya No Existe",
       "suggestion": "Corregir el año del disco o el año de formación del artista",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "datos_incoherentes",
@@ -2326,7 +2401,7 @@
       "value": "En Vivo Teatro Rafael Guinand",
       "suggestion": "Corregir el año del disco o el año de formación del artista",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "datos_incoherentes",
@@ -2340,7 +2415,7 @@
       "value": "Sin Sombra No Hay Luz",
       "suggestion": "Corregir el año del disco o el año de formación del artista",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "fichas_repetidas",
@@ -2354,7 +2429,7 @@
       "value": "Dance Venezuela Vol. 1",
       "suggestion": "Comparar las pistas y fusionar si es el mismo disco",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "fichas_repetidas",
@@ -2368,7 +2443,8 @@
       "value": "The Venezuelan Zinga Son Vol. 1",
       "suggestion": "Confirmar si es una reedición o el mismo disco con otro año",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "discutible",
+      "note": "Años distintos: puede ser una reedición."
     },
     {
       "category": "fichas_repetidas",
@@ -2382,7 +2458,8 @@
       "value": "Venezuela Bruthal",
       "suggestion": "Confirmar si es una reedición o el mismo disco con otro año",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "discutible",
+      "note": "Años distintos: puede ser otra edición del recopilatorio."
     },
     {
       "category": "fichas_repetidas",
@@ -2396,7 +2473,7 @@
       "value": "Regreso Del Abismo",
       "suggestion": "Confirmar si es una reedición o el mismo disco con otro año",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "fichas_repetidas",
@@ -2410,7 +2487,7 @@
       "value": "Rock n Roll Show Vol. I",
       "suggestion": "Comparar las pistas y fusionar si es el mismo disco",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "fichas_repetidas",
@@ -2424,7 +2501,7 @@
       "value": "Las Cuatro Monedas Vol. 3",
       "suggestion": "Comparar las pistas y fusionar si es el mismo disco",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "fichas_repetidas",
@@ -2438,7 +2515,7 @@
       "value": "Las Cuatro Monedas Vol. 2",
       "suggestion": "Comparar las pistas y fusionar si es el mismo disco",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "fichas_repetidas",
@@ -2452,7 +2529,7 @@
       "value": "10 Años En Acción",
       "suggestion": "Comparar las pistas y fusionar si es el mismo disco",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "fichas_repetidas",
@@ -2466,7 +2543,7 @@
       "value": "Volumen 13",
       "suggestion": "Comparar las pistas y fusionar si es el mismo disco",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "datos_incoherentes",
@@ -2480,7 +2557,9 @@
       "value": "Intro",
       "suggestion": "Confirmar la duración",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "false_positive",
+      "note": "Pieza breve por naturaleza.",
+      "fixedIn": "curation-rules.v2"
     },
     {
       "category": "datos_incoherentes",
@@ -2494,7 +2573,9 @@
       "value": "Intro Escalofrio",
       "suggestion": "Confirmar la duración",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "false_positive",
+      "note": "Pieza breve por naturaleza.",
+      "fixedIn": "curation-rules.v2"
     },
     {
       "category": "datos_incoherentes",
@@ -2508,7 +2589,8 @@
       "value": "Detonación",
       "suggestion": "Confirmar la duración",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "discutible",
+      "note": "Tema de 27 s: habitual en grindcore."
     },
     {
       "category": "datos_incoherentes",
@@ -2522,7 +2604,8 @@
       "value": "Songs From The Future",
       "suggestion": "Confirmar si es la duración del disco completo o un error de unidades",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "discutible",
+      "note": "Tema largo posible."
     },
     {
       "category": "datos_incoherentes",
@@ -2536,7 +2619,8 @@
       "value": "Es Mi Piel",
       "suggestion": "Confirmar si es la duración del disco completo o un error de unidades",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "discutible",
+      "note": "Tema largo posible."
     },
     {
       "category": "datos_incoherentes",
@@ -2550,7 +2634,8 @@
       "value": "Relato El Pez Nicolas",
       "suggestion": "Confirmar si es la duración del disco completo o un error de unidades",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive",
+      "note": "Las duraciones de este disco crecen pista a pista: son marcas de tiempo acumuladas, no duraciones."
     },
     {
       "category": "datos_incoherentes",
@@ -2564,7 +2649,7 @@
       "value": "El Pez Nicolas",
       "suggestion": "Confirmar si es la duración del disco completo o un error de unidades",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "datos_incoherentes",
@@ -2578,7 +2663,7 @@
       "value": "Relato Maria Lionza",
       "suggestion": "Confirmar si es la duración del disco completo o un error de unidades",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "datos_incoherentes",
@@ -2592,7 +2677,7 @@
       "value": "Maria Lionza",
       "suggestion": "Confirmar si es la duración del disco completo o un error de unidades",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "datos_incoherentes",
@@ -2606,7 +2691,7 @@
       "value": "Relato El Tirano Aguirre",
       "suggestion": "Confirmar si es la duración del disco completo o un error de unidades",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "datos_incoherentes",
@@ -2620,7 +2705,7 @@
       "value": "El Tirano Aguirre",
       "suggestion": "Confirmar si es la duración del disco completo o un error de unidades",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "datos_incoherentes",
@@ -2634,7 +2719,7 @@
       "value": "Relato El Carreton",
       "suggestion": "Confirmar si es la duración del disco completo o un error de unidades",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "datos_incoherentes",
@@ -2648,7 +2733,7 @@
       "value": "El Carreton",
       "suggestion": "Confirmar si es la duración del disco completo o un error de unidades",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "datos_incoherentes",
@@ -2662,7 +2747,7 @@
       "value": "Relato El Extrano Caso De Petare",
       "suggestion": "Confirmar si es la duración del disco completo o un error de unidades",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "datos_incoherentes",
@@ -2676,7 +2761,7 @@
       "value": "El Extrano Caso De Petare",
       "suggestion": "Confirmar si es la duración del disco completo o un error de unidades",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "datos_incoherentes",
@@ -2690,7 +2775,7 @@
       "value": "Relato El Hachador",
       "suggestion": "Confirmar si es la duración del disco completo o un error de unidades",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "datos_incoherentes",
@@ -2704,7 +2789,7 @@
       "value": "El hachador",
       "suggestion": "Confirmar si es la duración del disco completo o un error de unidades",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "datos_incoherentes",
@@ -2718,7 +2803,7 @@
       "value": "Outro Escalofrio",
       "suggestion": "Confirmar si es la duración del disco completo o un error de unidades",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "datos_incoherentes",
@@ -2732,7 +2817,7 @@
       "value": "La Isla Del Tesoro",
       "suggestion": "Confirmar si es la duración del disco completo o un error de unidades",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "datos_incoherentes",
@@ -2746,7 +2831,7 @@
       "value": "The Black Widow",
       "suggestion": "Confirmar si es la duración del disco completo o un error de unidades",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -2760,7 +2845,7 @@
       "value": "Los Memphis - 8:05",
       "suggestion": "Título «Los Memphis» y la duración en su campo",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -2774,7 +2859,7 @@
       "value": "Ángel 3:30",
       "suggestion": "Título «Ángel» y la duración en su campo",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -2788,7 +2873,7 @@
       "value": "Dog Of War (2:44);",
       "suggestion": "Título «Dog Of War ()» y la duración en su campo",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -2802,7 +2887,7 @@
       "value": "Resistencia 04:19.",
       "suggestion": "Título «Resistencia» y la duración en su campo",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -2816,7 +2901,7 @@
       "value": "Ecos de la conciencia. 00:39 13. TNK",
       "suggestion": "Título «Ecos de la conciencia. 13. TNK» y la duración en su campo",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -2830,7 +2915,7 @@
       "value": "The Hidden Centuries 01:06 instrumental",
       "suggestion": "Título «The Hidden Centuries instrumental» y la duración en su campo",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -2844,7 +2929,7 @@
       "value": "Petrified Black Forest 05:18 instrumental",
       "suggestion": "Título «Petrified Black Forest instrumental» y la duración en su campo",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -2858,7 +2943,7 @@
       "value": "Carlon - 03:30 2.",
       "suggestion": "Título «Carlon 2» y la duración en su campo",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -2872,7 +2957,7 @@
       "value": "L'état c'est moi (I’m the State) 04:52 3.",
       "suggestion": "Título «L'état c'est moi (I’m the State) 3» y la duración en su campo",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -2886,7 +2971,7 @@
       "value": "Drums of War 01:21 - instrumental",
       "suggestion": "Título «Drums of War instrumental» y la duración en su campo",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -2900,7 +2985,7 @@
       "value": "Synodic Period - 02:00 (instrumental)",
       "suggestion": "Título «Synodic Period (instrumental)» y la duración en su campo",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -2914,7 +2999,7 @@
       "value": "Intro 00:39 instrumental",
       "suggestion": "Título «Intro instrumental» y la duración en su campo",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -2928,7 +3013,7 @@
       "value": "Outro 01:40 instrumental",
       "suggestion": "Título «Outro instrumental» y la duración en su campo",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -2942,7 +3027,7 @@
       "value": "San Juu San 02:06 instrumental",
       "suggestion": "Título «San Juu San instrumental» y la duración en su campo",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "nombres_sucios",
@@ -2956,7 +3041,7 @@
       "value": "Split con Noxious - In Nomine... &amp; Grotesque Death",
       "suggestion": "Dejarlo como «Split con Noxious - In Nomine... & Grotesque Death»",
       "suggested_value": "Split con Noxious - In Nomine... & Grotesque Death",
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "nombres_sucios",
@@ -2970,7 +3055,7 @@
       "value": "Green &amp; blue",
       "suggestion": "Dejarlo como «Green & blue»",
       "suggested_value": "Green & blue",
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -2984,7 +3069,7 @@
       "value": "Banda: Misantropia",
       "suggestion": "Nombre «Misantropia»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -2998,7 +3083,7 @@
       "value": "R. Sandler - Lyrics: N. Zuleta",
       "suggestion": "Nombre «N. Zuleta»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -3012,7 +3097,7 @@
       "value": "B. Birtles - Lyrics: G. Visconti",
       "suggestion": "Nombre «G. Visconti»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -3026,7 +3111,7 @@
       "value": "E. Winter - Lyrics: N. Zuleta",
       "suggestion": "Nombre «N. Zuleta»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -3040,7 +3125,7 @@
       "value": "Spanish Version: José Gregorio Mijares",
       "suggestion": "Nombre «José Gregorio Mijares»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -3054,7 +3139,7 @@
       "value": "Vers. Esp.: Rudy Márquez",
       "suggestion": "Nombre «Rudy Márquez»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -3068,7 +3153,7 @@
       "value": "Maurimix, feat: Blanquito Man",
       "suggestion": "Nombre «Blanquito Man» y crédito de invitado",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -3082,7 +3167,7 @@
       "value": "Maurimix, feat: Trece",
       "suggestion": "Nombre «Trece» y crédito de invitado",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -3096,7 +3181,7 @@
       "value": "Maurimix, feat: Chulius Groove",
       "suggestion": "Nombre «Chulius Groove» y crédito de invitado",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -3110,7 +3195,7 @@
       "value": "Ft. Desorden Público",
       "suggestion": "Nombre «Desorden Público» y crédito de invitado",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -3124,7 +3209,7 @@
       "value": "Vers. Español: Peter Daniel",
       "suggestion": "Nombre «Peter Daniel» con el crédito «Vers. Español»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -3138,7 +3223,7 @@
       "value": "Vers. Español: Carlos Sposito",
       "suggestion": "Nombre «Carlos Sposito» con el crédito «Vers. Español»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -3152,7 +3237,7 @@
       "value": "Vers. Español: L. Miranda",
       "suggestion": "Nombre «L. Miranda» con el crédito «Vers. Español»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -3166,7 +3251,7 @@
       "value": "Vers. Español: Skywalker",
       "suggestion": "Nombre «Skywalker» con el crédito «Vers. Español»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -3180,7 +3265,7 @@
       "value": "Vers. Español: Carlos Moreán",
       "suggestion": "Nombre «Carlos Moreán» con el crédito «Vers. Español»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -3194,7 +3279,7 @@
       "value": "Vers. Español: Omero González",
       "suggestion": "Nombre «Omero González» con el crédito «Vers. Español»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -3208,7 +3293,7 @@
       "value": "Vers. Español: Néstor Ramírez",
       "suggestion": "Nombre «Néstor Ramírez» con el crédito «Vers. Español»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -3222,7 +3307,7 @@
       "value": "Vers. Español: Enrique Guzmán",
       "suggestion": "Nombre «Enrique Guzmán» con el crédito «Vers. Español»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -3236,7 +3321,7 @@
       "value": "Vers. Español: Los Teen Tops",
       "suggestion": "Nombre «Los Teen Tops» con el crédito «Vers. Español»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -3250,7 +3335,7 @@
       "value": "Vers. Español: Charlie Spiteri",
       "suggestion": "Nombre «Charlie Spiteri» con el crédito «Vers. Español»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "fichas_sin_vinculos",
@@ -3264,7 +3349,7 @@
       "value": "Ideoma",
       "suggestion": "Vincularla a lo que corresponda, fusionarla con su ficha real o retirarla",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "fichas_sin_vinculos",
@@ -3278,7 +3363,7 @@
       "value": "La Bimba Ensamble",
       "suggestion": "Vincularla a lo que corresponda, fusionarla con su ficha real o retirarla",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "fichas_sin_vinculos",
@@ -3292,7 +3377,7 @@
       "value": "Trifulka",
       "suggestion": "Vincularla a lo que corresponda, fusionarla con su ficha real o retirarla",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "fichas_sin_vinculos",
@@ -3306,7 +3391,7 @@
       "value": "Sur Mártires",
       "suggestion": "Vincularla a lo que corresponda, fusionarla con su ficha real o retirarla",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "fichas_sin_vinculos",
@@ -3320,7 +3405,7 @@
       "value": "Boom Boom Clan",
       "suggestion": "Vincularla a lo que corresponda, fusionarla con su ficha real o retirarla",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "fichas_sin_vinculos",
@@ -3334,7 +3419,7 @@
       "value": "Rockzuela en La Mega",
       "suggestion": "Vincularla a lo que corresponda, fusionarla con su ficha real o retirarla",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "fichas_sin_vinculos",
@@ -3348,7 +3433,7 @@
       "value": "Telecadencia",
       "suggestion": "Vincularla a lo que corresponda, fusionarla con su ficha real o retirarla",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "fichas_sin_vinculos",
@@ -3362,7 +3447,7 @@
       "value": "Zaar",
       "suggestion": "Vincularla a lo que corresponda, fusionarla con su ficha real o retirarla",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "fichas_sin_vinculos",
@@ -3376,7 +3461,7 @@
       "value": "La Banda Sonora",
       "suggestion": "Vincularla a lo que corresponda, fusionarla con su ficha real o retirarla",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "fichas_sin_vinculos",
@@ -3390,7 +3475,7 @@
       "value": "Los Dominguez",
       "suggestion": "Vincularla a lo que corresponda, fusionarla con su ficha real o retirarla",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "fichas_sin_vinculos",
@@ -3404,7 +3489,7 @@
       "value": "In a Cold Room",
       "suggestion": "Vincularla a lo que corresponda, fusionarla con su ficha real o retirarla",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "fichas_sin_vinculos",
@@ -3418,7 +3503,7 @@
       "value": "Similares Diferentes",
       "suggestion": "Vincularla a lo que corresponda, fusionarla con su ficha real o retirarla",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "fichas_sin_vinculos",
@@ -3432,7 +3517,7 @@
       "value": "Pepa",
       "suggestion": "Vincularla a lo que corresponda, fusionarla con su ficha real o retirarla",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "fichas_sin_vinculos",
@@ -3446,7 +3531,7 @@
       "value": "Pawnee 16",
       "suggestion": "Vincularla a lo que corresponda, fusionarla con su ficha real o retirarla",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "fichas_sin_vinculos",
@@ -3460,7 +3545,7 @@
       "value": "Venezuela Ska Vol. I",
       "suggestion": "Vincularla a lo que corresponda, fusionarla con su ficha real o retirarla",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "fichas_sin_vinculos",
@@ -3474,7 +3559,7 @@
       "value": "Ana 0",
       "suggestion": "Vincularla a lo que corresponda, fusionarla con su ficha real o retirarla",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "fichas_sin_vinculos",
@@ -3488,7 +3573,7 @@
       "value": "Zeta Once",
       "suggestion": "Vincularla a lo que corresponda, fusionarla con su ficha real o retirarla",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "fichas_sin_vinculos",
@@ -3502,7 +3587,7 @@
       "value": "Noxius",
       "suggestion": "Vincularla a lo que corresponda, fusionarla con su ficha real o retirarla",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "fichas_sin_vinculos",
@@ -3516,7 +3601,7 @@
       "value": "SQP",
       "suggestion": "Vincularla a lo que corresponda, fusionarla con su ficha real o retirarla",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "fichas_sin_vinculos",
@@ -3530,7 +3615,7 @@
       "value": "Rafa Koufax",
       "suggestion": "Vincularla a lo que corresponda, fusionarla con su ficha real o retirarla",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "nombres_sucios",
@@ -3544,7 +3629,9 @@
       "value": "his home studio",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive",
+      "expectedDetector": "persona_no_es_un_nombre",
+      "expectedSignature": "fragmento"
     },
     {
       "category": "nombres_sucios",
@@ -3558,7 +3645,9 @@
       "value": "version",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive",
+      "expectedDetector": "persona_no_es_un_nombre",
+      "expectedSignature": "fragmento"
     },
     {
       "category": "nombres_sucios",
@@ -3572,7 +3661,9 @@
       "value": "acuarela y estrellas",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive",
+      "expectedDetector": "persona_no_es_un_nombre",
+      "expectedSignature": "fragmento"
     },
     {
       "category": "nombres_sucios",
@@ -3586,7 +3677,9 @@
       "value": "solo nosotros somos gente",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive",
+      "expectedDetector": "persona_no_es_un_nombre",
+      "expectedSignature": "fragmento"
     },
     {
       "category": "nombres_sucios",
@@ -3600,7 +3693,8 @@
       "value": "en busca de libertad",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive",
+      "note": "Lo ideal sería «fragmento», pero «libertad» se aprende como nombre de pila en este catálogo."
     },
     {
       "category": "nombres_sucios",
@@ -3614,7 +3708,9 @@
       "value": "baile de las abejas",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive",
+      "expectedDetector": "persona_no_es_un_nombre",
+      "expectedSignature": "fragmento"
     },
     {
       "category": "nombres_sucios",
@@ -3628,7 +3724,9 @@
       "value": "etc.",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive",
+      "expectedDetector": "persona_no_es_un_nombre",
+      "expectedSignature": "fragmento"
     },
     {
       "category": "nombres_sucios",
@@ -3642,7 +3740,9 @@
       "value": "other studios",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive",
+      "expectedDetector": "persona_no_es_un_nombre",
+      "expectedSignature": "fragmento"
     },
     {
       "category": "nombres_sucios",
@@ -3656,7 +3756,8 @@
       "value": "spectiva",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "discutible",
+      "note": "Puede ser un seudónimo en minúsculas."
     },
     {
       "category": "nombres_sucios",
@@ -3670,7 +3771,9 @@
       "value": "dbstudiove",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive",
+      "expectedDetector": "persona_no_es_un_nombre",
+      "expectedSignature": "fragmento"
     },
     {
       "category": "nombres_sucios",
@@ -3684,7 +3787,9 @@
       "value": "intro",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive",
+      "expectedDetector": "persona_no_es_un_nombre",
+      "expectedSignature": "palabra_generica"
     },
     {
       "category": "nombres_sucios",
@@ -3698,7 +3803,8 @@
       "value": "ancudo",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "discutible",
+      "note": "Puede ser un seudónimo en minúsculas."
     },
     {
       "category": "nombres_sucios",
@@ -3712,7 +3818,9 @@
       "value": "de estar cerca",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive",
+      "expectedDetector": "persona_no_es_un_nombre",
+      "expectedSignature": "fragmento"
     },
     {
       "category": "datos_incoherentes",
@@ -3726,7 +3834,8 @@
       "value": "Hidden Leaves",
       "suggestion": "Revisar la fuente y completar o renumerar las pistas",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive",
+      "expectedSignature": "empieza_en_2"
     },
     {
       "category": "datos_incoherentes",
@@ -3740,7 +3849,8 @@
       "value": "Capítulo Aragua",
       "suggestion": "Revisar la fuente y completar o renumerar las pistas",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive",
+      "expectedSignature": "empieza_en_2"
     },
     {
       "category": "datos_incoherentes",
@@ -3754,7 +3864,7 @@
       "value": "Againts the world without toilet paper",
       "suggestion": "Revisar la fuente y completar o renumerar las pistas",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "datos_incoherentes",
@@ -3768,7 +3878,8 @@
       "value": "Southaven Vol4",
       "suggestion": "Revisar la fuente y completar o renumerar las pistas",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive",
+      "expectedSignature": "empieza_en_2"
     },
     {
       "category": "datos_incoherentes",
@@ -3782,7 +3893,7 @@
       "value": "Guarapa Core",
       "suggestion": "Revisar la fuente y completar o renumerar las pistas",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "datos_incoherentes",
@@ -3796,7 +3907,7 @@
       "value": "Estas Viejo Rock N' Roll",
       "suggestion": "Revisar la fuente y completar o renumerar las pistas",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "datos_incoherentes",
@@ -3810,7 +3921,7 @@
       "value": "Hijos De Nadie (Temas Promocionales)",
       "suggestion": "Revisar la fuente y completar o renumerar las pistas",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "datos_incoherentes",
@@ -3824,7 +3935,7 @@
       "value": "This is how we pray",
       "suggestion": "Revisar la fuente y completar o renumerar las pistas",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "datos_incoherentes",
@@ -3838,7 +3949,8 @@
       "value": "Demo",
       "suggestion": "Revisar la fuente y completar o renumerar las pistas",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive",
+      "expectedSignature": "empieza_en_2"
     },
     {
       "category": "datos_incoherentes",
@@ -3852,7 +3964,8 @@
       "value": "La Mosca Punk",
       "suggestion": "Revisar la fuente y completar o renumerar las pistas",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive",
+      "expectedSignature": "empieza_en_2"
     },
     {
       "category": "datos_incoherentes",
@@ -3866,7 +3979,8 @@
       "value": "Reciclaje",
       "suggestion": "Revisar la fuente y completar o renumerar las pistas",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive",
+      "expectedSignature": "empieza_en_2"
     },
     {
       "category": "datos_incoherentes",
@@ -3880,7 +3994,8 @@
       "value": "Pin Que Pan",
       "suggestion": "Revisar la fuente y completar o renumerar las pistas",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive",
+      "expectedSignature": "empieza_en_2"
     },
     {
       "category": "datos_incoherentes",
@@ -3894,7 +4009,7 @@
       "value": "trainSKAting",
       "suggestion": "Revisar la fuente y completar o renumerar las pistas",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "datos_incoherentes",
@@ -3908,7 +4023,7 @@
       "value": "Ya no estas",
       "suggestion": "Revisar la fuente y completar o renumerar las pistas",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "datos_incoherentes",
@@ -3922,7 +4037,8 @@
       "value": "En Vivo En Los Sanabrias",
       "suggestion": "Revisar la fuente y completar o renumerar las pistas",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive",
+      "expectedSignature": "empieza_en_2"
     },
     {
       "category": "datos_incoherentes",
@@ -3936,7 +4052,8 @@
       "value": "Mosca Con El Gueco!",
       "suggestion": "Revisar la fuente y completar o renumerar las pistas",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive",
+      "expectedSignature": "empieza_en_2"
     },
     {
       "category": "datos_incoherentes",
@@ -3950,7 +4067,8 @@
       "value": "Compartido con Pawnee16",
       "suggestion": "Revisar la fuente y completar o renumerar las pistas",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive",
+      "expectedSignature": "empieza_en_2"
     },
     {
       "category": "datos_incoherentes",
@@ -3964,7 +4082,7 @@
       "value": "Tobo Wanaplas Rojo",
       "suggestion": "Revisar la fuente y completar o renumerar las pistas",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "datos_incoherentes",
@@ -3978,7 +4096,7 @@
       "value": "Piraña Punk Destroyer",
       "suggestion": "Revisar la fuente y completar o renumerar las pistas",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "datos_incoherentes",
@@ -3992,7 +4110,8 @@
       "value": "En Vivo En Club Judibana",
       "suggestion": "Revisar la fuente y completar o renumerar las pistas",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive",
+      "expectedSignature": "empieza_en_2"
     },
     {
       "category": "fichas_repetidas",
@@ -4006,7 +4125,7 @@
       "value": "Gozadera Records",
       "suggestion": "Comparar las fichas y fusionarlas si son la misma organización",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "discutible"
     },
     {
       "category": "fichas_repetidas",
@@ -4020,7 +4139,8 @@
       "value": "Capitol Studios",
       "suggestion": "Comparar las fichas y fusionarlas si son la misma organización",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "false_positive",
+      "note": "Capitol Records y Capitol Studios son organizaciones distintas."
     },
     {
       "category": "fichas_repetidas",
@@ -4034,7 +4154,7 @@
       "value": "10d2",
       "suggestion": "Comparar las fichas y fusionarlas si son la misma organización",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "fichas_repetidas",
@@ -4048,7 +4168,7 @@
       "value": "Estudios De La Montaña",
       "suggestion": "Comparar las fichas y fusionarlas si son la misma organización",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "discutible"
     },
     {
       "category": "fichas_repetidas",
@@ -4062,7 +4182,7 @@
       "value": "Cosmos Records",
       "suggestion": "Comparar las fichas y fusionarlas si son la misma organización",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "discutible"
     },
     {
       "category": "mal_segmentados",
@@ -4076,7 +4196,7 @@
       "value": "EntreNos",
       "suggestion": "Separar «Entre» y «Nos»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "discutible"
     },
     {
       "category": "mal_segmentados",
@@ -4090,7 +4210,7 @@
       "value": "PapaShanty Saund System",
       "suggestion": "Separar «Papa» y «Shanty»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "discutible"
     },
     {
       "category": "mal_segmentados",
@@ -4104,7 +4224,7 @@
       "value": "GianPiero Gogante",
       "suggestion": "Separar «Gian» y «Piero»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "discutible"
     },
     {
       "category": "mal_segmentados",
@@ -4118,7 +4238,7 @@
       "value": "NeverDead",
       "suggestion": "Separar «Never» y «Dead»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "discutible"
     },
     {
       "category": "mal_segmentados",
@@ -4132,7 +4252,7 @@
       "value": "StormThrash",
       "suggestion": "Separar «Storm» y «Thrash»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "discutible"
     },
     {
       "category": "mal_segmentados",
@@ -4146,7 +4266,7 @@
       "value": "PapaShanty",
       "suggestion": "Separar «Papa» y «Shanty»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "discutible"
     },
     {
       "category": "mal_segmentados",
@@ -4160,7 +4280,7 @@
       "value": "BreakDown",
       "suggestion": "Separar «Break» y «Down»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "discutible"
     },
     {
       "category": "mal_segmentados",
@@ -4174,7 +4294,8 @@
       "value": "Paula SantaCruz",
       "suggestion": "Separar «Santa» y «Cruz»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive",
+      "note": "Apellido compuesto pegado («Santa Cruz»)."
     },
     {
       "category": "mal_segmentados",
@@ -4188,7 +4309,7 @@
       "value": "BlackOut",
       "suggestion": "Separar «Black» y «Out»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "discutible"
     },
     {
       "category": "mal_segmentados",
@@ -4202,7 +4323,7 @@
       "value": "RussoMan",
       "suggestion": "Separar «Russo» y «Man»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "discutible"
     },
     {
       "category": "mal_segmentados",
@@ -4216,7 +4337,8 @@
       "value": "Estudios SonoFolk",
       "suggestion": "Separar «Sono» y «Folk»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "false_positive",
+      "note": "Marca estilizada de un estudio."
     },
     {
       "category": "mal_segmentados",
@@ -4230,7 +4352,7 @@
       "value": "CasaRosa",
       "suggestion": "Separar «Casa» y «Rosa»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "discutible"
     },
     {
       "category": "mal_segmentados",
@@ -4244,7 +4366,7 @@
       "value": "StudioSonica",
       "suggestion": "Separar «Studio» y «Sonica»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "discutible"
     },
     {
       "category": "mal_segmentados",
@@ -4258,7 +4380,8 @@
       "value": "FutureSound Studio",
       "suggestion": "Separar «Future» y «Sound»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "false_positive",
+      "note": "Marca estilizada de un estudio."
     },
     {
       "category": "mal_segmentados",
@@ -4272,7 +4395,8 @@
       "value": "LightsOut Studios",
       "suggestion": "Separar «Lights» y «Out»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "false_positive",
+      "note": "Marca estilizada de un estudio."
     },
     {
       "category": "mal_segmentados",
@@ -4286,7 +4410,8 @@
       "value": "SonoMaster Internacional",
       "suggestion": "Separar «Sono» y «Master»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "false_positive",
+      "note": "Marca estilizada."
     },
     {
       "category": "mal_segmentados",
@@ -4300,7 +4425,8 @@
       "value": "SonoFolk Estudios",
       "suggestion": "Separar «Sono» y «Folk»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "false_positive",
+      "note": "Marca estilizada de un estudio."
     },
     {
       "category": "mal_segmentados",
@@ -4314,7 +4440,8 @@
       "value": "The SoundLab",
       "suggestion": "Separar «Sound» y «Lab»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "false_positive",
+      "note": "Marca estilizada."
     },
     {
       "category": "mal_segmentados",
@@ -4328,7 +4455,8 @@
       "value": "CarlosAcosta",
       "suggestion": "Separar «Carlos» y «Acosta»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive",
+      "note": "Nombre y apellido pegados."
     },
     {
       "category": "mal_segmentados",
@@ -4342,7 +4470,8 @@
       "value": "FrancisLai",
       "suggestion": "Separar «Francis» y «Lai»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive",
+      "note": "Nombre y apellido pegados; v2 lo deja en «posible estilizado» porque «Francis» no es nombre de pila aprendido."
     },
     {
       "category": "ficha_de_otro_tipo",
@@ -4356,7 +4485,8 @@
       "value": "Oswaldo Grillet",
       "suggestion": "Si es la banda, reemplazar los créditos por el artista; si es la persona detrás del proyecto, vincularla como miembro",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive",
+      "expectedSignature": "solista_detras_del_proyecto"
     },
     {
       "category": "ficha_de_otro_tipo",
@@ -4370,7 +4500,8 @@
       "value": "Kreils",
       "suggestion": "Si es la banda, reemplazar los créditos por el artista; si es la persona detrás del proyecto, vincularla como miembro",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive",
+      "expectedSignature": "banda_como_persona"
     },
     {
       "category": "ficha_de_otro_tipo",
@@ -4384,7 +4515,8 @@
       "value": "Marcelo Toutin",
       "suggestion": "Si es la banda, reemplazar los créditos por el artista; si es la persona detrás del proyecto, vincularla como miembro",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive",
+      "expectedSignature": "solista_detras_del_proyecto"
     },
     {
       "category": "ficha_de_otro_tipo",
@@ -4398,7 +4530,8 @@
       "value": "Willie Croes",
       "suggestion": "Si es la banda, reemplazar los créditos por el artista; si es la persona detrás del proyecto, vincularla como miembro",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive",
+      "expectedSignature": "solista_detras_del_proyecto"
     },
     {
       "category": "ficha_de_otro_tipo",
@@ -4412,7 +4545,8 @@
       "value": "Ulises Hadjis",
       "suggestion": "Si es la banda, reemplazar los créditos por el artista; si es la persona detrás del proyecto, vincularla como miembro",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive",
+      "expectedSignature": "solista_detras_del_proyecto"
     },
     {
       "category": "ficha_de_otro_tipo",
@@ -4426,7 +4560,8 @@
       "value": "Trece",
       "suggestion": "Si es la banda, reemplazar los créditos por el artista; si es la persona detrás del proyecto, vincularla como miembro",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive",
+      "expectedSignature": "banda_como_persona"
     },
     {
       "category": "ficha_de_otro_tipo",
@@ -4440,7 +4575,8 @@
       "value": "Alfred Gómez Jr.",
       "suggestion": "Si es la banda, reemplazar los créditos por el artista; si es la persona detrás del proyecto, vincularla como miembro",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive",
+      "expectedSignature": "solista_detras_del_proyecto"
     },
     {
       "category": "ficha_de_otro_tipo",
@@ -4454,7 +4590,8 @@
       "value": "Carlos Angola",
       "suggestion": "Si es la banda, reemplazar los créditos por el artista; si es la persona detrás del proyecto, vincularla como miembro",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive",
+      "expectedSignature": "solista_detras_del_proyecto"
     },
     {
       "category": "ficha_de_otro_tipo",
@@ -4468,7 +4605,8 @@
       "value": "Miguel Oldenburg",
       "suggestion": "Si es la banda, reemplazar los créditos por el artista; si es la persona detrás del proyecto, vincularla como miembro",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive",
+      "expectedSignature": "solista_detras_del_proyecto"
     },
     {
       "category": "ficha_de_otro_tipo",
@@ -4482,7 +4620,8 @@
       "value": "Hana Kobayashi",
       "suggestion": "Si es la banda, reemplazar los créditos por el artista; si es la persona detrás del proyecto, vincularla como miembro",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive",
+      "note": "Es una solista; v2 la clasifica como «banda como persona» porque «Hana» no es nombre de pila aprendido."
     },
     {
       "category": "ficha_de_otro_tipo",
@@ -4496,7 +4635,8 @@
       "value": "Oscar Fanega",
       "suggestion": "Si es la banda, reemplazar los créditos por el artista; si es la persona detrás del proyecto, vincularla como miembro",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive",
+      "expectedSignature": "solista_detras_del_proyecto"
     },
     {
       "category": "ficha_de_otro_tipo",
@@ -4510,7 +4650,8 @@
       "value": "Jorge Aguilar",
       "suggestion": "Si es la banda, reemplazar los créditos por el artista; si es la persona detrás del proyecto, vincularla como miembro",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive",
+      "expectedSignature": "solista_detras_del_proyecto"
     },
     {
       "category": "ficha_de_otro_tipo",
@@ -4524,7 +4665,8 @@
       "value": "Los Domingues",
       "suggestion": "Si es la banda, reemplazar los créditos por el artista; si es la persona detrás del proyecto, vincularla como miembro",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive",
+      "expectedSignature": "banda_como_persona"
     },
     {
       "category": "ficha_de_otro_tipo",
@@ -4538,7 +4680,8 @@
       "value": "Jimmy Flamante",
       "suggestion": "Si es la banda, reemplazar los créditos por el artista; si es la persona detrás del proyecto, vincularla como miembro",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive",
+      "expectedSignature": "solista_detras_del_proyecto"
     },
     {
       "category": "ficha_de_otro_tipo",
@@ -4552,7 +4695,8 @@
       "value": "Los Supersónicos",
       "suggestion": "Si es la banda, reemplazar los créditos por el artista; si es la persona detrás del proyecto, vincularla como miembro",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive",
+      "expectedSignature": "banda_como_persona"
     },
     {
       "category": "ficha_de_otro_tipo",
@@ -4566,7 +4710,8 @@
       "value": "Ladies W.C.",
       "suggestion": "Si es la banda, reemplazar los créditos por el artista; si es la persona detrás del proyecto, vincularla como miembro",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive",
+      "expectedSignature": "banda_como_persona"
     },
     {
       "category": "ficha_de_otro_tipo",
@@ -4580,7 +4725,8 @@
       "value": "Los Cazadores",
       "suggestion": "Si es la banda, reemplazar los créditos por el artista; si es la persona detrás del proyecto, vincularla como miembro",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive",
+      "expectedSignature": "banda_como_persona"
     },
     {
       "category": "ficha_de_otro_tipo",
@@ -4594,7 +4740,8 @@
       "value": "Antares",
       "suggestion": "Si es la banda, reemplazar los créditos por el artista; si es la persona detrás del proyecto, vincularla como miembro",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive",
+      "expectedSignature": "banda_como_persona"
     },
     {
       "category": "ficha_de_otro_tipo",
@@ -4608,7 +4755,8 @@
       "value": "Enigma",
       "suggestion": "Si es la banda, reemplazar los créditos por el artista; si es la persona detrás del proyecto, vincularla como miembro",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive",
+      "expectedSignature": "banda_como_persona"
     },
     {
       "category": "ficha_de_otro_tipo",
@@ -4622,7 +4770,8 @@
       "value": "Armadura",
       "suggestion": "Si es la banda, reemplazar los créditos por el artista; si es la persona detrás del proyecto, vincularla como miembro",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive",
+      "expectedSignature": "banda_como_persona"
     },
     {
       "category": "ficha_de_otro_tipo",
@@ -4636,7 +4785,7 @@
       "value": "S.O.L.O",
       "suggestion": "Fusionar con la organización o convertir la ficha en organización",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "discutible"
     },
     {
       "category": "ficha_de_otro_tipo",
@@ -4650,7 +4799,7 @@
       "value": "Souvenir",
       "suggestion": "Fusionar con la organización o convertir la ficha en organización",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "discutible"
     },
     {
       "category": "ficha_de_otro_tipo",
@@ -4664,7 +4813,7 @@
       "value": "Corporación Los Ruices",
       "suggestion": "Fusionar con la organización o convertir la ficha en organización",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "ficha_de_otro_tipo",
@@ -4678,7 +4827,7 @@
       "value": "Fonograma",
       "suggestion": "Fusionar con la organización o convertir la ficha en organización",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "ficha_de_otro_tipo",
@@ -4692,7 +4841,7 @@
       "value": "Estudios 1106",
       "suggestion": "Fusionar con la organización o convertir la ficha en organización",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "ficha_de_otro_tipo",
@@ -4706,7 +4855,7 @@
       "value": "Le Garage Studio",
       "suggestion": "Fusionar con la organización o convertir la ficha en organización",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "ficha_de_otro_tipo",
@@ -4720,7 +4869,7 @@
       "value": "Sonomatrix",
       "suggestion": "Fusionar con la organización o convertir la ficha en organización",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "ficha_de_otro_tipo",
@@ -4734,7 +4883,7 @@
       "value": "CD Box Producciones",
       "suggestion": "Fusionar con la organización o convertir la ficha en organización",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "ficha_de_otro_tipo",
@@ -4748,7 +4897,7 @@
       "value": "Estudios Remoto",
       "suggestion": "Fusionar con la organización o convertir la ficha en organización",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "ficha_de_otro_tipo",
@@ -4762,7 +4911,7 @@
       "value": "Sonic Solutions",
       "suggestion": "Fusionar con la organización o convertir la ficha en organización",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "ficha_de_otro_tipo",
@@ -4776,7 +4925,7 @@
       "value": "Estudios Sardá",
       "suggestion": "Fusionar con la organización o convertir la ficha en organización",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "ficha_de_otro_tipo",
@@ -4790,7 +4939,7 @@
       "value": "La Cocina Studios",
       "suggestion": "Fusionar con la organización o convertir la ficha en organización",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "ficha_de_otro_tipo",
@@ -4804,7 +4953,7 @@
       "value": "Discos Top Hits",
       "suggestion": "Convertir la ficha en organización",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "ficha_de_otro_tipo",
@@ -4818,7 +4967,7 @@
       "value": "Wahala for World Musical Madness",
       "suggestion": "Convertir la ficha en organización",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "ficha_de_otro_tipo",
@@ -4832,7 +4981,9 @@
       "value": "Dan Warner",
       "suggestion": "Convertir la ficha en organización",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "false_positive",
+      "note": "Persona real: «Warner» es su apellido.",
+      "fixedIn": "curation-rules.v2"
     },
     {
       "category": "ficha_de_otro_tipo",
@@ -4846,7 +4997,7 @@
       "value": "Pepsi Music",
       "suggestion": "Convertir la ficha en organización",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "ficha_de_otro_tipo",
@@ -4860,7 +5011,7 @@
       "value": "Palacio De La Música",
       "suggestion": "Convertir la ficha en organización",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "ficha_de_otro_tipo",
@@ -4874,7 +5025,7 @@
       "value": "Abuela Estudios",
       "suggestion": "Convertir la ficha en organización",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "ficha_de_otro_tipo",
@@ -4888,7 +5039,7 @@
       "value": "Backstage Studios",
       "suggestion": "Convertir la ficha en organización",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "ficha_de_otro_tipo",
@@ -4902,7 +5053,7 @@
       "value": "Black Bombay Records",
       "suggestion": "Convertir la ficha en organización",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "ficha_de_otro_tipo",
@@ -4916,7 +5067,7 @@
       "value": "6'12",
       "suggestion": "Retirar la ficha o pasar el valor a la duración de la pista",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "ficha_de_otro_tipo",
@@ -4930,7 +5081,7 @@
       "value": "9'24",
       "suggestion": "Retirar la ficha o pasar el valor a la duración de la pista",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "ficha_de_otro_tipo",
@@ -4944,7 +5095,7 @@
       "value": "7'52",
       "suggestion": "Retirar la ficha o pasar el valor a la duración de la pista",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "ficha_de_otro_tipo",
@@ -4958,7 +5109,7 @@
       "value": "7'49",
       "suggestion": "Retirar la ficha o pasar el valor a la duración de la pista",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "ficha_de_otro_tipo",
@@ -4972,7 +5123,7 @@
       "value": "9'11",
       "suggestion": "Retirar la ficha o pasar el valor a la duración de la pista",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "ficha_de_otro_tipo",
@@ -4986,7 +5137,7 @@
       "value": "4'03",
       "suggestion": "Retirar la ficha o pasar el valor a la duración de la pista",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "ficha_de_otro_tipo",
@@ -5000,7 +5151,7 @@
       "value": "4'06",
       "suggestion": "Retirar la ficha o pasar el valor a la duración de la pista",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "ficha_de_otro_tipo",
@@ -5014,7 +5165,7 @@
       "value": "9'44",
       "suggestion": "Retirar la ficha o pasar el valor a la duración de la pista",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "ficha_de_otro_tipo",
@@ -5028,7 +5179,7 @@
       "value": "8'45",
       "suggestion": "Retirar la ficha o pasar el valor a la duración de la pista",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "ficha_de_otro_tipo",
@@ -5042,7 +5193,8 @@
       "value": "PK",
       "suggestion": "Retirar la ficha o dividirla en el dato real",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "discutible",
+      "note": "Puede ser un apodo."
     },
     {
       "category": "ficha_de_otro_tipo",
@@ -5056,7 +5208,8 @@
       "value": "Pe",
       "suggestion": "Retirar la ficha o dividirla en el dato real",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "discutible",
+      "note": "Puede ser un apodo."
     },
     {
       "category": "ficha_de_otro_tipo",
@@ -5070,7 +5223,7 @@
       "value": "Un",
       "suggestion": "Retirar la ficha o dividirla en el dato real",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "ficha_de_otro_tipo",
@@ -5084,7 +5237,7 @@
       "value": "Mixing",
       "suggestion": "Retirar la ficha o convertirla en el dato que describe",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "ficha_de_otro_tipo",
@@ -5098,7 +5251,7 @@
       "value": "Demo",
       "suggestion": "Retirar la ficha o convertirla en el dato que describe",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "ficha_de_otro_tipo",
@@ -5112,7 +5265,7 @@
       "value": "Rock",
       "suggestion": "Retirar la ficha o convertirla en el dato que describe",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "ficha_de_otro_tipo",
@@ -5126,7 +5279,7 @@
       "value": "Design",
       "suggestion": "Retirar la ficha o convertirla en el dato que describe",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "ficha_de_otro_tipo",
@@ -5140,7 +5293,7 @@
       "value": "Remix",
       "suggestion": "Retirar la ficha o convertirla en el dato que describe",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "ficha_de_otro_tipo",
@@ -5154,7 +5307,7 @@
       "value": "(Group)",
       "suggestion": "Retirar la ficha o convertirla en el dato que describe",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "ficha_de_otro_tipo",
@@ -5168,7 +5321,7 @@
       "value": "Acoustic",
       "suggestion": "Retirar la ficha o convertirla en el dato que describe",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "ficha_de_otro_tipo",
@@ -5182,7 +5335,7 @@
       "value": "en vivo, Caracas June 2001",
       "suggestion": "Retirar la ficha y llevar el dato a la nota del disco o la pista",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "fichas_repetidas",
@@ -5196,7 +5349,7 @@
       "value": "Taj \"The Infinite\"",
       "suggestion": "Comparar las fichas y fusionarlas si son la misma persona",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "fichas_repetidas",
@@ -5210,7 +5363,7 @@
       "value": "Tema interpretado por \"Poster\"",
       "suggestion": "Comparar las fichas y fusionarlas si son la misma persona",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "fichas_repetidas",
@@ -5224,7 +5377,7 @@
       "value": "E. Martínez",
       "suggestion": "Comparar las fichas y fusionarlas si son la misma persona",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "fichas_repetidas",
@@ -5238,7 +5391,7 @@
       "value": "Chacin",
       "suggestion": "Comparar las fichas y fusionarlas si son la misma persona",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "fichas_repetidas",
@@ -5252,7 +5405,7 @@
       "value": "Victor Jiménez",
       "suggestion": "Comparar las fichas y fusionarlas si son la misma persona",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "fichas_repetidas",
@@ -5266,7 +5419,7 @@
       "value": "María de Lourdes Devonish",
       "suggestion": "Comparar las fichas y fusionarlas si son la misma persona",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "fichas_repetidas",
@@ -5280,7 +5433,8 @@
       "value": "Bonus Track",
       "suggestion": "Retirar la pista duplicada o marcar la versión distinta en el título",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "false_positive",
+      "note": "Dos «Bonus Track» distintos con título genérico."
     },
     {
       "category": "fichas_repetidas",
@@ -5294,7 +5448,8 @@
       "value": "Gorilón",
       "suggestion": "Retirar la pista duplicada o marcar la versión distinta en el título",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "discutible",
+      "note": "Posiciones 14 y 30: puede ser una versión adicional."
     },
     {
       "category": "fichas_repetidas",
@@ -5308,7 +5463,7 @@
       "value": "Blues",
       "suggestion": "Retirar la pista duplicada o marcar la versión distinta en el título",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "fichas_repetidas",
@@ -5322,7 +5477,7 @@
       "value": "Luz de Esperanza",
       "suggestion": "Retirar la pista duplicada o marcar la versión distinta en el título",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "fichas_repetidas",
@@ -5336,7 +5491,7 @@
       "value": "q.k.maluca.",
       "suggestion": "Retirar la pista duplicada o marcar la versión distinta en el título",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "fichas_repetidas",
@@ -5350,7 +5505,7 @@
       "value": "Growl And Fuck",
       "suggestion": "Retirar la pista duplicada o marcar la versión distinta en el título",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "fichas_repetidas",
@@ -5364,7 +5519,7 @@
       "value": "Luz y Mar",
       "suggestion": "Retirar la pista duplicada o marcar la versión distinta en el título",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "fichas_repetidas",
@@ -5378,7 +5533,7 @@
       "value": "Darkness & Betrayal",
       "suggestion": "Retirar la pista duplicada o marcar la versión distinta en el título",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "fichas_repetidas",
@@ -5392,7 +5547,7 @@
       "value": "Sentence",
       "suggestion": "Retirar la pista duplicada o marcar la versión distinta en el título",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "fichas_repetidas",
@@ -5406,7 +5561,7 @@
       "value": "Nada Como Tú",
       "suggestion": "Retirar la pista duplicada o marcar la versión distinta en el título",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "fichas_repetidas",
@@ -5420,7 +5575,7 @@
       "value": "VII",
       "suggestion": "Retirar la pista duplicada o marcar la versión distinta en el título",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "fichas_repetidas",
@@ -5434,7 +5589,7 @@
       "value": "Ruinas del alma",
       "suggestion": "Retirar la pista duplicada o marcar la versión distinta en el título",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "fichas_repetidas",
@@ -5448,7 +5603,7 @@
       "value": "In the Words",
       "suggestion": "Retirar la pista duplicada o marcar la versión distinta en el título",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "fichas_repetidas",
@@ -5462,7 +5617,7 @@
       "value": "Forms of Darkness",
       "suggestion": "Retirar la pista duplicada o marcar la versión distinta en el título",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "fichas_repetidas",
@@ -5476,7 +5631,7 @@
       "value": "Adicora",
       "suggestion": "Retirar la pista duplicada o marcar la versión distinta en el título",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "fichas_repetidas",
@@ -5490,7 +5645,7 @@
       "value": "Kiss your lover Good bye",
       "suggestion": "Retirar la pista duplicada o marcar la versión distinta en el título",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "fichas_repetidas",
@@ -5504,7 +5659,7 @@
       "value": "Satisfacciones.",
       "suggestion": "Retirar la pista duplicada o marcar la versión distinta en el título",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "fichas_repetidas",
@@ -5518,7 +5673,7 @@
       "value": "Mosaico eléctrico # 5",
       "suggestion": "Retirar la pista duplicada o marcar la versión distinta en el título",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "fichas_repetidas",
@@ -5532,7 +5687,7 @@
       "value": "Derecho a Soñar",
       "suggestion": "Retirar la pista duplicada o marcar la versión distinta en el título",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "fichas_repetidas",
@@ -5546,7 +5701,7 @@
       "value": "No me esperes esta noche",
       "suggestion": "Retirar la pista duplicada o marcar la versión distinta en el título",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "nombres_sucios",
@@ -5560,7 +5715,7 @@
       "value": "Epic -",
       "suggestion": "Dejarlo como «Epic»",
       "suggested_value": "Epic",
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "nombres_sucios",
@@ -5574,7 +5729,7 @@
       "value": "Sesión -",
       "suggestion": "Dejarlo como «Sesión»",
       "suggested_value": "Sesión",
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "nombres_sucios",
@@ -5588,7 +5743,7 @@
       "value": "Songs: Company: Notes: Producer:",
       "suggestion": "Dejarlo como «Songs: Company: Notes: Producer»",
       "suggested_value": "Songs: Company: Notes: Producer",
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "nombres_sucios",
@@ -5602,7 +5757,7 @@
       "value": "Songs: Company: Notes:",
       "suggestion": "Dejarlo como «Songs: Company: Notes»",
       "suggested_value": "Songs: Company: Notes",
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "nombres_sucios",
@@ -5616,7 +5771,7 @@
       "value": "Artist Title: Company: Notes:",
       "suggestion": "Dejarlo como «Artist Title: Company: Notes»",
       "suggested_value": "Artist Title: Company: Notes",
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "nombres_sucios",
@@ -5630,7 +5785,7 @@
       "value": "Songs: Company: Notes: Producer:",
       "suggestion": "Dejarlo como «Songs: Company: Notes: Producer»",
       "suggested_value": "Songs: Company: Notes: Producer",
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "nombres_sucios",
@@ -5644,7 +5799,7 @@
       "value": "Songs: Company: Notes:",
       "suggestion": "Dejarlo como «Songs: Company: Notes»",
       "suggested_value": "Songs: Company: Notes",
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "nombres_sucios",
@@ -5658,7 +5813,7 @@
       "value": "Dog Of War (2:44);",
       "suggestion": "Dejarlo como «Dog Of War (2:44)»",
       "suggested_value": "Dog Of War (2:44)",
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "nombres_sucios",
@@ -5672,7 +5827,7 @@
       "value": "Clitogusano Espermatide - El Pordiosero,",
       "suggestion": "Dejarlo como «Clitogusano Espermatide - El Pordiosero»",
       "suggested_value": "Clitogusano Espermatide - El Pordiosero",
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "nombres_sucios",
@@ -5686,7 +5841,7 @@
       "value": "La nueva luz,",
       "suggestion": "Dejarlo como «La nueva luz»",
       "suggested_value": "La nueva luz",
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "nombres_sucios",
@@ -5700,7 +5855,7 @@
       "value": "Hechizo,",
       "suggestion": "Dejarlo como «Hechizo»",
       "suggested_value": "Hechizo",
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "nombres_sucios",
@@ -5714,7 +5869,7 @@
       "value": "The Place Where Lost Minds Go - Presenting:",
       "suggestion": "Dejarlo como «The Place Where Lost Minds Go - Presenting»",
       "suggested_value": "The Place Where Lost Minds Go - Presenting",
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "nombres_sucios",
@@ -5728,7 +5883,7 @@
       "value": "The Place Where Lost Things Go - Presenting:",
       "suggestion": "Dejarlo como «The Place Where Lost Things Go - Presenting»",
       "suggested_value": "The Place Where Lost Things Go - Presenting",
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "nombres_sucios",
@@ -5742,7 +5897,8 @@
       "value": "7\"/Cd Splis @patia No/Sin Dios (España) EP",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "false_positive",
+      "note": "Las comillas son pulgadas («7\"»)."
     },
     {
       "category": "nombres_sucios",
@@ -5756,7 +5912,7 @@
       "value": "Oscar Alcaíno \"Oscarello",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "nombres_sucios",
@@ -5770,7 +5926,7 @@
       "value": "Payback (Single",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "nombres_sucios",
@@ -5784,7 +5940,7 @@
       "value": "Matatigre (Clara Bolívar",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "nombres_sucios",
@@ -5798,7 +5954,7 @@
       "value": "Alexium)",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "nombres_sucios",
@@ -5812,7 +5968,7 @@
       "value": "Ashwave (Petrus",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "nombres_sucios",
@@ -5826,7 +5982,7 @@
       "value": "Doped Up Dollies (Sirae Richardson",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "nombres_sucios",
@@ -5840,7 +5996,7 @@
       "value": "Brianne McWane)",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "nombres_sucios",
@@ -5854,7 +6010,7 @@
       "value": "Taj \"The Infinite",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "nombres_sucios",
@@ -5868,7 +6024,7 @@
       "value": "Tema interpretado por \"Poster",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "nombres_sucios",
@@ -5882,7 +6038,8 @@
       "value": "Ghetto Zapper (con 12\" NinJazz)",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "false_positive",
+      "note": "Las comillas son pulgadas («12\"»)."
     },
     {
       "category": "nombres_sucios",
@@ -5896,7 +6053,7 @@
       "value": "Electrocumbia (La Cumbia Cienaguera",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "nombres_sucios",
@@ -5910,7 +6067,7 @@
       "value": "Wachiman16) La BambaBonus Tracks",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "nombres_sucios",
@@ -5924,7 +6081,7 @@
       "value": "Digits07) My Secret",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "nombres_sucios",
@@ -5938,7 +6095,7 @@
       "value": "Chapter I: Alla Corte Degli Eroi (I.Shimada Kambei.",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "nombres_sucios",
@@ -5952,7 +6109,7 @@
       "value": "La ví parada allí (I Saw Her Standing There) )",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "nombres_sucios",
@@ -5966,7 +6123,7 @@
       "value": "Pienso siempre en ti (I Will Always Think About You) / Rice · Mummelo / Vers. S. Gámez)",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "datos_incoherentes",
@@ -5980,7 +6137,7 @@
       "value": "Demos",
       "suggestion": "Tipo demo",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "datos_incoherentes",
@@ -5994,7 +6151,7 @@
       "value": "Demo",
       "suggestion": "Tipo demo",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "datos_incoherentes",
@@ -6008,7 +6165,7 @@
       "value": "Demo",
       "suggestion": "Tipo demo",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "datos_incoherentes",
@@ -6022,7 +6179,7 @@
       "value": "Demo",
       "suggestion": "Tipo demo",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "datos_incoherentes",
@@ -6036,7 +6193,7 @@
       "value": "Optofobia EP",
       "suggestion": "Tipo EP",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "datos_incoherentes",
@@ -6050,7 +6207,7 @@
       "value": "Existencia en Decadencia EP",
       "suggestion": "Tipo EP",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "datos_incoherentes",
@@ -6064,7 +6221,7 @@
       "value": "Corporotocracia EP",
       "suggestion": "Tipo EP",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "datos_incoherentes",
@@ -6078,7 +6235,7 @@
       "value": "EP 2020",
       "suggestion": "Tipo EP",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "datos_incoherentes",
@@ -6092,7 +6249,7 @@
       "value": "Reminiscencias EP",
       "suggestion": "Tipo EP",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "datos_incoherentes",
@@ -6106,7 +6263,7 @@
       "value": "EP",
       "suggestion": "Tipo EP",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "datos_incoherentes",
@@ -6120,7 +6277,7 @@
       "value": "Split @patia No/Jabara (Japón) EP",
       "suggestion": "Tipo EP",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "datos_incoherentes",
@@ -6134,7 +6291,7 @@
       "value": "Demo",
       "suggestion": "Tipo demo",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "datos_incoherentes",
@@ -6148,7 +6305,7 @@
       "value": "Demo",
       "suggestion": "Tipo demo",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "datos_incoherentes",
@@ -6162,7 +6319,7 @@
       "value": "Demo",
       "suggestion": "Tipo demo",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "datos_incoherentes",
@@ -6176,7 +6333,7 @@
       "value": "Centro Hispano (Ciudad Ojeda - En Vivo)",
       "suggestion": "Tipo en vivo",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "datos_incoherentes",
@@ -6190,7 +6347,7 @@
       "value": "Demo",
       "suggestion": "Tipo demo",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "datos_incoherentes",
@@ -6204,7 +6361,7 @@
       "value": "Demo",
       "suggestion": "Tipo demo",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "datos_incoherentes",
@@ -6218,7 +6375,7 @@
       "value": "Remixes",
       "suggestion": "Tipo remix",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "datos_incoherentes",
@@ -6232,7 +6389,7 @@
       "value": "Presage EP",
       "suggestion": "Tipo EP",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "datos_incoherentes",
@@ -6246,7 +6403,7 @@
       "value": "Deshojando Paisajes - Live Big Mosh Attack",
       "suggestion": "Tipo en vivo",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "nombres_sucios",
@@ -6260,7 +6417,8 @@
       "value": "Carlos75.com",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "discutible",
+      "note": "El nombre de la banda es el dominio."
     },
     {
       "category": "nombres_sucios",
@@ -6274,7 +6432,7 @@
       "value": "www.ozfilms.net",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "nombres_sucios",
@@ -6288,7 +6446,7 @@
       "value": "Sebastián M. Keloide.net",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "nombres_sucios",
@@ -6302,7 +6460,7 @@
       "value": "neoplastika.net",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "nombres_sucios",
@@ -6316,7 +6474,7 @@
       "value": "Keloide.net",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "nombres_sucios",
@@ -6330,7 +6488,7 @@
       "value": "Carlos75.Com – Estafador De Almas",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "discutible"
     },
     {
       "category": "nombres_sucios",
@@ -6344,7 +6502,7 @@
       "value": "Carlos75.Com – Muerte Por Odio",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "discutible"
     },
     {
       "category": "nombres_sucios",
@@ -6358,7 +6516,7 @@
       "value": "Tuestasaqui.com",
       "suggestion": null,
       "suggested_value": null,
-      "verdict": null
+      "verdict": "discutible"
     },
     {
       "category": "mal_segmentados",
@@ -6372,7 +6530,9 @@
       "value": "Aura De Fuenmayor as \"Lohan Duff\"",
       "suggestion": "Dividir la ficha en las personas que la componen",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive",
+      "note": "Una persona con su alias: v2 la pasa a «alias en nombre».",
+      "expectedSignature": "alias_en_nombre"
     },
     {
       "category": "mal_segmentados",
@@ -6386,7 +6546,7 @@
       "value": "Roberto Menéndez & Frank Rojas",
       "suggestion": "Dividir en «Roberto Menéndez», «Frank Rojas»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -6400,7 +6560,7 @@
       "value": "F.C.A. Fotografía Creativa - Carlos Gawronsky",
       "suggestion": "Dividir la ficha en las personas que la componen",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -6414,7 +6574,7 @@
       "value": "Romiman A-K Center Feel \"Roming Calderon\"",
       "suggestion": "Dividir la ficha en las personas que la componen",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "discutible"
     },
     {
       "category": "mal_segmentados",
@@ -6428,7 +6588,7 @@
       "value": "Rony Borges & Renzo Calma",
       "suggestion": "Dividir en «Rony Borges», «Renzo Calma»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -6442,7 +6602,8 @@
       "value": "Do You Want To Know A Secret",
       "suggestion": "Dividir la ficha en las personas que la componen",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "false_positive",
+      "note": "Es un título de canción, no una lista de personas."
     },
     {
       "category": "mal_segmentados",
@@ -6456,7 +6617,7 @@
       "value": "Pipo Ramírez & Leo Colina",
       "suggestion": "Dividir en «Pipo Ramírez», «Leo Colina»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -6470,7 +6631,7 @@
       "value": "Robin & Maurice Gibb",
       "suggestion": "Dividir en «Robin», «Maurice Gibb»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -6484,7 +6645,8 @@
       "value": "Luis Felipe Ramón y Rivera",
       "suggestion": "Dividir en «Luis Felipe Ramón», «Rivera»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "false_positive",
+      "note": "Una sola persona con apellido compuesto «Ramón y Rivera»."
     },
     {
       "category": "mal_segmentados",
@@ -6498,7 +6660,7 @@
       "value": "Los Supersónicos y Johnny Tedesco",
       "suggestion": "Dividir en «Los Supersónicos», «Johnny Tedesco»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -6512,7 +6674,7 @@
       "value": "Delia y Eddie Castro",
       "suggestion": "Dividir en «Delia», «Eddie Castro»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -6526,7 +6688,7 @@
       "value": "Guillermo Carrasco y Melissa",
       "suggestion": "Dividir en «Guillermo Carrasco», «Melissa»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -6540,7 +6702,7 @@
       "value": "Guillermo Dávila y Karina",
       "suggestion": "Dividir en «Guillermo Dávila», «Karina»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "true_positive"
     },
     {
       "category": "mal_segmentados",
@@ -6554,7 +6716,8 @@
       "value": "Freddy Golden y su Orquesta",
       "suggestion": "Dividir en «Freddy Golden», «su Orquesta»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "discutible",
+      "note": "Una orquesta a nombre de su director: no son dos personas."
     },
     {
       "category": "mal_segmentados",
@@ -6568,7 +6731,8 @@
       "value": "Emilio y su Conjunto",
       "suggestion": "Dividir en «Emilio», «su Conjunto»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "discutible",
+      "note": "Un conjunto a nombre de su director."
     },
     {
       "category": "mal_segmentados",
@@ -6582,7 +6746,8 @@
       "value": "Banda 50 Años del Rock and Pop",
       "suggestion": "Dividir la ficha en las personas que la componen",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "false_positive",
+      "note": "Nombre de agrupación."
     },
     {
       "category": "mal_segmentados",
@@ -6596,7 +6761,8 @@
       "value": "Chucho Sanoja y Su Orquesta",
       "suggestion": "Dividir en «Chucho Sanoja», «Su Orquesta»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "discutible",
+      "note": "Una orquesta a nombre de su director."
     },
     {
       "category": "mal_segmentados",
@@ -6610,7 +6776,8 @@
       "value": "El Sham y Los Faraones",
       "suggestion": "Dividir en «El Sham», «Los Faraones»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "discutible",
+      "note": "Artista con su banda."
     },
     {
       "category": "mal_segmentados",
@@ -6624,7 +6791,8 @@
       "value": "Aldemaro Romero y Su Onda Nueva",
       "suggestion": "Dividir en «Aldemaro Romero», «Su Onda Nueva»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "discutible",
+      "note": "Una agrupación a nombre de su director."
     },
     {
       "category": "mal_segmentados",
@@ -6638,7 +6806,229 @@
       "value": "Un Dos Tres y Fuera",
       "suggestion": "Dividir en «Un Dos Tres», «Fuera»",
       "suggested_value": null,
-      "verdict": null
+      "verdict": "false_positive",
+      "note": "Nombre de agrupación o canción."
+    },
+    {
+      "category": "datos_incoherentes",
+      "detector": "tipo_de_disco_contra_titulo",
+      "signature": "sin_clasificar",
+      "severity": "low",
+      "entity_kind": "album",
+      "entity_id": 1118,
+      "entity_label": "Rock Hasta La Muerte",
+      "field": "title",
+      "value": "Rock Hasta La Muerte",
+      "suggestion": null,
+      "suggested_value": null,
+      "verdict": "false_positive",
+      "note": "«rock» o «vol» describen el género o la serie, no el tipo de disco.",
+      "addedIn": "E2",
+      "fixedIn": "curation-rules.v2"
+    },
+    {
+      "category": "datos_incoherentes",
+      "detector": "tipo_de_disco_contra_titulo",
+      "signature": "sin_clasificar",
+      "severity": "low",
+      "entity_kind": "album",
+      "entity_id": 1171,
+      "entity_label": "El Delicado Sonido del Rock - Volumen IV",
+      "field": "title",
+      "value": "El Delicado Sonido del Rock - Volumen IV",
+      "suggestion": null,
+      "suggested_value": null,
+      "verdict": "false_positive",
+      "note": "«rock» o «vol» describen el género o la serie, no el tipo de disco.",
+      "addedIn": "E2",
+      "fixedIn": "curation-rules.v2"
+    },
+    {
+      "category": "datos_incoherentes",
+      "detector": "tipo_de_disco_contra_titulo",
+      "signature": "sin_clasificar",
+      "severity": "low",
+      "entity_kind": "album",
+      "entity_id": 1238,
+      "entity_label": "De Colección Vol. 1",
+      "field": "title",
+      "value": "De Colección Vol. 1",
+      "suggestion": null,
+      "suggested_value": null,
+      "verdict": "false_positive",
+      "note": "«rock» o «vol» describen el género o la serie, no el tipo de disco.",
+      "addedIn": "E2",
+      "fixedIn": "curation-rules.v2"
+    },
+    {
+      "category": "datos_incoherentes",
+      "detector": "tipo_de_disco_contra_titulo",
+      "signature": "sin_clasificar",
+      "severity": "low",
+      "entity_kind": "album",
+      "entity_id": 1306,
+      "entity_label": "Resistencia a la Imposicion, 96-99 Vol. 1",
+      "field": "title",
+      "value": "Resistencia a la Imposicion, 96-99 Vol. 1",
+      "suggestion": null,
+      "suggested_value": null,
+      "verdict": "false_positive",
+      "note": "«rock» o «vol» describen el género o la serie, no el tipo de disco.",
+      "addedIn": "E2",
+      "fixedIn": "curation-rules.v2"
+    },
+    {
+      "category": "datos_incoherentes",
+      "detector": "tipo_de_disco_contra_titulo",
+      "signature": "sin_clasificar",
+      "severity": "low",
+      "entity_kind": "album",
+      "entity_id": 1480,
+      "entity_label": "Rock On",
+      "field": "title",
+      "value": "Rock On",
+      "suggestion": null,
+      "suggested_value": null,
+      "verdict": "false_positive",
+      "note": "«rock» o «vol» describen el género o la serie, no el tipo de disco.",
+      "addedIn": "E2",
+      "fixedIn": "curation-rules.v2"
+    },
+    {
+      "category": "datos_incoherentes",
+      "detector": "tipo_de_disco_contra_titulo",
+      "signature": "contradice",
+      "severity": "medium",
+      "entity_kind": "album",
+      "entity_id": 1584,
+      "entity_label": "Vol.2",
+      "field": "title",
+      "value": "Vol.2",
+      "suggestion": null,
+      "suggested_value": null,
+      "verdict": "false_positive",
+      "note": "«rock» o «vol» describen el género o la serie, no el tipo de disco.",
+      "addedIn": "E2",
+      "fixedIn": "curation-rules.v2"
+    },
+    {
+      "category": "datos_incoherentes",
+      "detector": "tipo_de_disco_contra_titulo",
+      "signature": "sin_clasificar",
+      "severity": "low",
+      "entity_kind": "album",
+      "entity_id": 1654,
+      "entity_label": "Estas Viejo Rock N' Roll",
+      "field": "title",
+      "value": "Estas Viejo Rock N' Roll",
+      "suggestion": null,
+      "suggested_value": null,
+      "verdict": "false_positive",
+      "note": "«rock» o «vol» describen el género o la serie, no el tipo de disco.",
+      "addedIn": "E2",
+      "fixedIn": "curation-rules.v2"
+    },
+    {
+      "category": "datos_incoherentes",
+      "detector": "tipo_de_disco_contra_titulo",
+      "signature": "sin_clasificar",
+      "severity": "low",
+      "entity_kind": "album",
+      "entity_id": 1763,
+      "entity_label": "El Final del Mundo Vol. 2: Nada es Imposible",
+      "field": "title",
+      "value": "El Final del Mundo Vol. 2: Nada es Imposible",
+      "suggestion": null,
+      "suggested_value": null,
+      "verdict": "false_positive",
+      "note": "«rock» o «vol» describen el género o la serie, no el tipo de disco.",
+      "addedIn": "E2",
+      "fixedIn": "curation-rules.v2"
+    },
+    {
+      "category": "ficha_de_otro_tipo",
+      "detector": "persona_es_organizacion",
+      "signature": "vocabulario_de_organizacion",
+      "severity": "medium",
+      "entity_kind": "person",
+      "entity_id": 8350,
+      "entity_label": "John Philips",
+      "field": "name",
+      "value": "John Philips",
+      "suggestion": null,
+      "suggested_value": null,
+      "verdict": "false_positive",
+      "note": "Persona real: «Philips» es su apellido.",
+      "addedIn": "E2",
+      "fixedIn": "curation-rules.v2"
+    },
+    {
+      "category": "datos_incoherentes",
+      "detector": "duracion_atipica",
+      "signature": "muy_corta",
+      "severity": "low",
+      "entity_kind": "track",
+      "entity_id": 12876,
+      "entity_label": "Shturmovik (Intro)",
+      "field": "title",
+      "value": "Shturmovik (Intro)",
+      "suggestion": null,
+      "suggested_value": null,
+      "verdict": "false_positive",
+      "note": "Pieza breve por naturaleza (intro, outro, presentación).",
+      "addedIn": "E2",
+      "fixedIn": "curation-rules.v2"
+    },
+    {
+      "category": "datos_incoherentes",
+      "detector": "duracion_atipica",
+      "signature": "muy_corta",
+      "severity": "low",
+      "entity_kind": "track",
+      "entity_id": 2863,
+      "entity_label": "El Caos En Clave/Presentación",
+      "field": "title",
+      "value": "El Caos En Clave/Presentación",
+      "suggestion": null,
+      "suggested_value": null,
+      "verdict": "false_positive",
+      "note": "Pieza breve por naturaleza (intro, outro, presentación).",
+      "addedIn": "E2",
+      "fixedIn": "curation-rules.v2"
+    },
+    {
+      "category": "datos_incoherentes",
+      "detector": "duracion_atipica",
+      "signature": "muy_corta",
+      "severity": "low",
+      "entity_kind": "track",
+      "entity_id": 13448,
+      "entity_label": "Krueger - El Legionario de Cristo (Intro)",
+      "field": "title",
+      "value": "Krueger - El Legionario de Cristo (Intro)",
+      "suggestion": null,
+      "suggested_value": null,
+      "verdict": "false_positive",
+      "note": "Pieza breve por naturaleza (intro, outro, presentación).",
+      "addedIn": "E2",
+      "fixedIn": "curation-rules.v2"
+    },
+    {
+      "category": "datos_incoherentes",
+      "detector": "duracion_atipica",
+      "signature": "muy_corta",
+      "severity": "low",
+      "entity_kind": "track",
+      "entity_id": 14392,
+      "entity_label": "Mortuorio (outro)",
+      "field": "title",
+      "value": "Mortuorio (outro)",
+      "suggestion": null,
+      "suggested_value": null,
+      "verdict": "false_positive",
+      "note": "Pieza breve por naturaleza (intro, outro, presentación).",
+      "addedIn": "E2",
+      "fixedIn": "curation-rules.v2"
     }
   ]
 }

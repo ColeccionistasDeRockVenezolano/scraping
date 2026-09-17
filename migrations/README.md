@@ -27,6 +27,7 @@ desde aquí: estas migraciones solo crean objetos en los schemas `ingest` y
 | `0017_curation_findings.up/down.sql` | Detector de conflictos de Curaduría: `ingest.curation_scans` (cada análisis del catálogo) y `ingest.curation_findings` (hallazgos por categoría con huella estable; abiertos, resueltos solos al corregirse o ignorados por una persona) |
 | `0018_curation_finding_fixes.up/down.sql` | `suggested_value` en `ingest.curation_findings`: el reemplazo determinista que algunos detectores calculan, para ofrecer «Corregir» sin extraerlo del texto de la sugerencia |
 | `0019_curation_scan_resolution.up/down.sql` | Motor de análisis robusto (PLAN_CURADURIA E1): estados `partial` (falló un detector y sus hallazgos no se tocaron) y `skipped` (otro proceso analizaba) en `curation_scans`; `resolution` (`fixed_by_curation`, `changed_elsewhere`, `entity_removed`, `rules_changed`) y `resolved_by_run_id` en `curation_findings`. El down pasa `partial`→`ok` y `skipped`→`failed` antes de restaurar el CHECK |
+| `0020_curation_durable_decisions.up/down.sql` | Decisiones duraderas de Curaduría (PLAN_CURADURIA E2): `ignore_reason` (`falso_positivo`, `correcto_a_proposito`, `fuera_de_alcance`) en `curation_findings`; `ingest.curation_distinct_pairs` (pares de fichas declarados distintos, que el detector de duplicados ya no propone) y el motivo de resolución `declared_distinct`. El down pasa `declared_distinct`→`changed_elsewhere` antes de restaurar el CHECK |
 
 Documentación ER completa: `../docs/db/ER_INGEST_MEDIA.md`.
 

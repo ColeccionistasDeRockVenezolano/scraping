@@ -10,14 +10,19 @@
 //    SQL sin auditoría) o cambió el contexto (fichas relacionadas, la cola);
 //  - entity_removed: la ficha ya no está en el catálogo (retirada o fusionada);
 //  - rules_changed: el detector ya no existe, o las reglas cambiaron de versión
-//    y el detector dejó de emitirlo sobre un valor que no cambió.
+//    y el detector dejó de emitirlo sobre un valor que no cambió;
+//  - declared_distinct: el hallazgo era sobre un par de fichas que una persona
+//    declaró distintas (`ingest.curation_distinct_pairs`, PLAN_CURADURIA E2).
+//
+// Lo ignorado también se resuelve cuando el detector deja de verlo (E2, A5):
+// «no es un problema» caduca con el problema, con el mismo motivo.
 //
 // Puro sobre la foto del catálogo: scan.ts lee los candidatos y el rastro de
 // `merge_audit`, y escribe el veredicto.
 import { storableText } from "./analyze.js";
 import type { CatalogSnapshot } from "./types.js";
 
-export type Resolution = "fixed_by_curation" | "changed_elsewhere" | "entity_removed" | "rules_changed";
+export type Resolution = "fixed_by_curation" | "changed_elsewhere" | "entity_removed" | "rules_changed" | "declared_distinct";
 
 /** Nombre de los runs que escribe Curaduría (`withOperatorRun({ name })`). */
 export const CURATION_RUN_PREFIX = "api:curation:";
@@ -30,6 +35,8 @@ export interface StaleFinding {
   value: string | null;
   /** Versión de reglas del último análisis que lo vio; null si ese análisis ya se podó. */
   rulesVersion: string | null;
+  /** Ids del par si es un hallazgo de par (duplicados). */
+  pair?: [number, number] | null;
 }
 
 /** La escritura auditada que cambió el valor detectado (merge_audit con `old_value` = valor). */
@@ -49,6 +56,8 @@ export interface CatalogState {
   exists(kind: string, id: number): boolean | undefined;
   /** Valor actual del campo; `undefined` si la foto no lo tiene. */
   currentValue(kind: string, id: number, field: string): string | undefined;
+  /** ¿Una persona declaró distinto este par? */
+  isDistinctPair(kind: string, a: number, b: number): boolean;
 }
 
 export function catalogState(snapshot: CatalogSnapshot): CatalogState {
@@ -62,6 +71,7 @@ export function catalogState(snapshot: CatalogSnapshot): CatalogState {
   return {
     exists: (kind, id) => names[kind]?.values.has(id),
     currentValue: (kind, id, field) => (names[kind]?.field === field ? names[kind].values.get(id) : undefined),
+    isDistinctPair: (kind, a, b) => snapshot.distinctPairs.has(`${kind}:${Math.min(a, b)}-${Math.max(a, b)}`),
   };
 }
 
@@ -73,6 +83,9 @@ export function classifyResolution(
 ): ResolutionVerdict {
   if (finding.entityId !== null && state.exists(finding.entityKind, finding.entityId) === false) {
     return { resolution: "entity_removed", runId: null };
+  }
+  if (finding.pair && state.isDistinctPair(finding.entityKind, finding.pair[0], finding.pair[1])) {
+    return { resolution: "declared_distinct", runId: null };
   }
   if (change) {
     return { resolution: change.action?.startsWith(CURATION_RUN_PREFIX) ? "fixed_by_curation" : "changed_elsewhere", runId: change.runId };

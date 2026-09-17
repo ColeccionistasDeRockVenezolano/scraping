@@ -9,6 +9,14 @@ import type { EntityRef, Severity } from "./types.js";
 
 export type FindingStatus = "open" | "ignored" | "resolved";
 
+/** Por qué una persona dijo «no es un problema» (PLAN_CURADURIA E2, M4): el dato de la precisión por detector. */
+export const IGNORE_REASONS = ["falso_positivo", "correcto_a_proposito", "fuera_de_alcance"] as const;
+export type IgnoreReason = (typeof IGNORE_REASONS)[number];
+
+/** Tipos de ficha que admiten «son distintas» (`ingest.curation_distinct_pairs`). */
+export const DISTINCT_PAIR_KINDS = ["artist", "person", "organization", "album", "track"] as const;
+export type DistinctPairKind = (typeof DISTINCT_PAIR_KINDS)[number];
+
 export interface ScanRow {
   id: number;
   status: string;
@@ -66,6 +74,8 @@ export interface FindingRow {
   ignoredAt: string | null;
   ignoredBy: string | null;
   ignoreNote: string | null;
+  /** Motivo del «no es un problema»; se conserva si luego se resolvió. null si se ignoró antes de 0020. */
+  ignoreReason: IgnoreReason | null;
   /** Por qué se resolvió (null si sigue abierto, está ignorado o se resolvió antes de 0019). */
   resolution: Resolution | null;
   /** Run de escritura que cambió el valor detectado, y quién lo firmó. */
@@ -187,7 +197,7 @@ type RawFinding = {
   entity_label: string | null; field: string | null; value: string | null; title: string; suggestion: string | null;
   suggested_value: string | null; related: EntityRef[];
   evidence: Record<string, unknown>; status: FindingStatus; first_seen_scan_id: string | null; first_seen_at: Date; last_seen_at: Date;
-  resolved_at: Date | null; ignored_at: Date | null; ignored_by: string | null; ignore_note: string | null;
+  resolved_at: Date | null; ignored_at: Date | null; ignored_by: string | null; ignore_note: string | null; ignore_reason: IgnoreReason | null;
   resolution: Resolution | null; resolved_by_run_id: string | null; resolved_by: string | null; total: string;
 };
 
@@ -208,7 +218,7 @@ function findingRow(row: RawFinding, lastScan: number | null): FindingRow {
     status: row.status, isNew: lastScan !== null && row.first_seen_scan_id !== null && Number(row.first_seen_scan_id) === lastScan,
     triggeredBy: Array.isArray(evidence["triggeredBy"]) ? evidence["triggeredBy"] as FindingRow["triggeredBy"] : [],
     firstSeenAt: iso(row.first_seen_at)!, lastSeenAt: iso(row.last_seen_at)!, resolvedAt: iso(row.resolved_at),
-    ignoredAt: iso(row.ignored_at), ignoredBy: row.ignored_by, ignoreNote: row.ignore_note,
+    ignoredAt: iso(row.ignored_at), ignoredBy: row.ignored_by, ignoreNote: row.ignore_note, ignoreReason: row.ignore_reason,
     resolution: row.resolution, resolvedByRunId: row.resolved_by_run_id === null ? null : Number(row.resolved_by_run_id), resolvedBy: row.resolved_by,
   };
 }
@@ -237,7 +247,7 @@ export async function listFindings(query: FindingQuery): Promise<{ rows: Finding
     lastOkScanId(),
     getPool().query<RawFinding>(`
       SELECT id::text, category, detector, signature, severity, entity_kind, entity_id::text, entity_label, field, value, title, suggestion,
-             suggested_value, related, evidence, status, first_seen_scan_id::text, first_seen_at, last_seen_at, resolved_at, ignored_at, ignored_by, ignore_note,
+             suggested_value, related, evidence, status, first_seen_scan_id::text, first_seen_at, last_seen_at, resolved_at, ignored_at, ignored_by, ignore_note, ignore_reason,
              ${RESOLUTION_COLUMNS},
              count(*) OVER ()::text AS total
         FROM ingest.curation_findings
@@ -249,16 +259,20 @@ export async function listFindings(query: FindingQuery): Promise<{ rows: Finding
 }
 
 export class CurationError extends Error {
-  constructor(readonly code: "not_found" | "not_open" | "not_fixable", message: string) { super(message); }
+  constructor(readonly code: "not_found" | "not_open" | "not_fixable" | "invalid", message: string) { super(message); }
 }
 
-export async function ignoreFinding(id: number, operator: string, note: string | null): Promise<FindingRow> {
+/**
+ * «No es un problema», con motivo. Dura mientras el detector siga viendo el
+ * mismo hallazgo; si el problema desaparece, el análisis lo resuelve (scan.ts).
+ */
+export async function ignoreFinding(id: number, operator: string, reason: IgnoreReason, note: string | null): Promise<FindingRow> {
   const { rows } = await getPool().query<{ status: string }>("SELECT status FROM ingest.curation_findings WHERE id = $1", [id]);
   if (!rows[0]) throw new CurationError("not_found", `hallazgo inexistente: ${id}`);
   if (rows[0].status !== "open") throw new CurationError("not_open", "Solo se puede ignorar un hallazgo abierto.");
   await getPool().query(`
-    UPDATE ingest.curation_findings SET status = 'ignored', ignored_at = now(), ignored_by = $2, ignore_note = $3 WHERE id = $1`,
-  [id, operator, note]);
+    UPDATE ingest.curation_findings SET status = 'ignored', ignored_at = now(), ignored_by = $2, ignore_reason = $3, ignore_note = $4 WHERE id = $1`,
+  [id, operator, reason, note]);
   return (await getFinding(id))!;
 }
 
@@ -267,19 +281,85 @@ export async function reopenFinding(id: number): Promise<FindingRow> {
   if (!rows[0]) throw new CurationError("not_found", `hallazgo inexistente: ${id}`);
   if (rows[0].status !== "ignored") throw new CurationError("not_open", "Solo se puede reabrir un hallazgo ignorado.");
   await getPool().query(`
-    UPDATE ingest.curation_findings SET status = 'open', ignored_at = NULL, ignored_by = NULL, ignore_note = NULL WHERE id = $1`, [id]);
+    UPDATE ingest.curation_findings SET status = 'open', ignored_at = NULL, ignored_by = NULL, ignore_note = NULL, ignore_reason = NULL WHERE id = $1`, [id]);
   return (await getFinding(id))!;
 }
 
 /** Ignora de una vez todo un grupo abierto (detector y, si se indica, subgrupo). */
-export async function ignoreGroup(input: { category: string; detector: string; signature?: string | undefined }, operator: string, note: string): Promise<number> {
-  const params: unknown[] = [operator, note, input.category, input.detector];
+export async function ignoreGroup(
+  input: { category: string; detector: string; signature?: string | undefined }, operator: string, reason: IgnoreReason, note: string,
+): Promise<number> {
+  const params: unknown[] = [operator, note, reason, input.category, input.detector];
   let signatureClause = "";
   if (input.signature) { params.push(input.signature); signatureClause = `AND signature = $${params.length}`; }
   const result = await getPool().query(`
-    UPDATE ingest.curation_findings SET status = 'ignored', ignored_at = now(), ignored_by = $1, ignore_note = $2
-     WHERE status = 'open' AND category = $3 AND detector = $4 ${signatureClause}`, params);
+    UPDATE ingest.curation_findings SET status = 'ignored', ignored_at = now(), ignored_by = $1, ignore_note = $2, ignore_reason = $3
+     WHERE status = 'open' AND category = $4 AND detector = $5 ${signatureClause}`, params);
   return result.rowCount ?? 0;
+}
+
+// ---------------------------------------------------------------------------
+// «Son distintas»: un par de fichas del mismo tipo que el detector de
+// duplicados no debe volver a proponer, aunque cambie el grupo o el nombre.
+// No toca el core: es una decisión sobre el detector, con quién y por qué.
+// ---------------------------------------------------------------------------
+
+export interface DistinctPairRow {
+  id: number;
+  kind: DistinctPairKind;
+  aId: number;
+  bId: number;
+  decidedBy: string;
+  note: string;
+  createdAt: string;
+}
+
+/** Tabla del core de cada tipo (nombres fijos, no vienen del usuario). */
+const CORE_TABLE: Readonly<Record<DistinctPairKind, string>> = {
+  artist: "public.artists", person: "public.persons", organization: "public.organizations", album: "public.albums", track: "public.tracks",
+};
+
+type RawDistinctPair = { id: string; kind: DistinctPairKind; a_id: string; b_id: string; decided_by: string; note: string; created_at: Date };
+
+function distinctPairRow(row: RawDistinctPair): DistinctPairRow {
+  return { id: Number(row.id), kind: row.kind, aId: Number(row.a_id), bId: Number(row.b_id), decidedBy: row.decided_by, note: row.note, createdAt: iso(row.created_at)! };
+}
+
+/** Declara distinto un par. Repetir la declaración devuelve la que ya existía, sin duplicarla. */
+export async function declareDistinctPair(
+  input: { kind: DistinctPairKind; aId: number; bId: number }, operator: string, note: string,
+): Promise<{ pair: DistinctPairRow; created: boolean }> {
+  if (input.aId === input.bId) throw new CurationError("invalid", "Un par necesita dos fichas distintas.");
+  const [a, b] = input.aId < input.bId ? [input.aId, input.bId] : [input.bId, input.aId];
+  const found = await getPool().query<{ id: string }>(`SELECT id::text FROM ${CORE_TABLE[input.kind]} WHERE id = ANY($1::bigint[])`, [[a, b]]);
+  if (found.rows.length !== 2) throw new CurationError("not_found", `alguna de las fichas ${a} y ${b} no existe`);
+  const inserted = await getPool().query<RawDistinctPair>(`
+    INSERT INTO ingest.curation_distinct_pairs (kind, a_id, b_id, decided_by, note) VALUES ($1, $2, $3, $4, $5)
+    ON CONFLICT (kind, a_id, b_id) DO NOTHING
+    RETURNING id::text, kind, a_id::text, b_id::text, decided_by, note, created_at`, [input.kind, a, b, operator, note]);
+  if (inserted.rows[0]) return { pair: distinctPairRow(inserted.rows[0]), created: true };
+  const existing = await getPool().query<RawDistinctPair>(`
+    SELECT id::text, kind, a_id::text, b_id::text, decided_by, note, created_at FROM ingest.curation_distinct_pairs
+     WHERE kind = $1 AND a_id = $2 AND b_id = $3`, [input.kind, a, b]);
+  return { pair: distinctPairRow(existing.rows[0]!), created: false };
+}
+
+export async function listDistinctPairs(query: { kind?: DistinctPairKind | undefined; limit: number; offset: number }): Promise<{ rows: DistinctPairRow[]; total: number }> {
+  const { rows } = await getPool().query<RawDistinctPair & { total: string }>(`
+    SELECT id::text, kind, a_id::text, b_id::text, decided_by, note, created_at, count(*) OVER ()::text AS total
+      FROM ingest.curation_distinct_pairs
+     WHERE ($1::text IS NULL OR kind = $1)
+     ORDER BY id DESC LIMIT $2 OFFSET $3`, [query.kind ?? null, query.limit, query.offset]);
+  return { rows: rows.map(distinctPairRow), total: Number(rows[0]?.total ?? 0) };
+}
+
+/** Retira la declaración: el detector puede volver a proponer el par. */
+export async function removeDistinctPair(id: number): Promise<DistinctPairRow> {
+  const { rows } = await getPool().query<RawDistinctPair>(`
+    DELETE FROM ingest.curation_distinct_pairs WHERE id = $1
+    RETURNING id::text, kind, a_id::text, b_id::text, decided_by, note, created_at`, [id]);
+  if (!rows[0]) throw new CurationError("not_found", `par declarado inexistente: ${id}`);
+  return distinctPairRow(rows[0]);
 }
 
 // ---------------------------------------------------------------------------
@@ -393,7 +473,7 @@ export async function getFinding(id: number): Promise<FindingRow | undefined> {
     lastOkScanId(),
     getPool().query<RawFinding>(`
       SELECT id::text, category, detector, signature, severity, entity_kind, entity_id::text, entity_label, field, value, title, suggestion,
-             suggested_value, related, evidence, status, first_seen_scan_id::text, first_seen_at, last_seen_at, resolved_at, ignored_at, ignored_by, ignore_note,
+             suggested_value, related, evidence, status, first_seen_scan_id::text, first_seen_at, last_seen_at, resolved_at, ignored_at, ignored_by, ignore_note, ignore_reason,
              ${RESOLUTION_COLUMNS}, '1' AS total
         FROM ingest.curation_findings WHERE id = $1`, [id]),
   ]);

@@ -5,6 +5,9 @@
 // Robustez del motor (PLAN_CURADURIA E1): un detector roto no resuelve lo que
 // no miró (C1, C2), una base caída no tumba el proceso (C5) y dos procesos no
 // guardan a la vez (A4).
+// Decisiones duraderas (E2): ignorar exige motivo, un par ignorado sobrevive a
+// un tercer miembro (A5), un ignorado caduca cuando el problema desaparece,
+// «son distintas» no vuelve (M3) y los cambios de título quedan en la historia.
 import { afterAll, beforeAll, describe, expect, it, vi } from "vitest";
 import type { FastifyInstance } from "fastify";
 import { startPgContainer, type PgContainer } from "../support/pg-container.js";
@@ -81,9 +84,9 @@ describe("detector de conflictos de Curaduría (persistencia y verificación de 
     const [mistyped] = await findingsOf("persona_es_organizacion");
     expect(mistyped).toMatchObject({ status: "open" });
 
-    const ignored = await app.inject({ method: "POST", url: `/curation/findings/${mistyped!.id}/ignore`, headers, payload: { note: "es un estudio y una persona a la vez" } });
+    const ignored = await app.inject({ method: "POST", url: `/curation/findings/${mistyped!.id}/ignore`, headers, payload: { reason: "correcto_a_proposito", note: "es un estudio y una persona a la vez" } });
     expect(ignored.statusCode).toBe(200);
-    expect(ignored.json()).toMatchObject({ status: "ignored", ignoredBy: OPERATOR });
+    expect(ignored.json()).toMatchObject({ status: "ignored", ignoredBy: OPERATOR, ignoreReason: "correcto_a_proposito" });
 
     const second = await runCurationScan({ trigger: "manual" });
     expect(second).toMatchObject({ status: "ok", inserted: 0, resolved: 0 });
@@ -300,5 +303,105 @@ describe("detector de conflictos de Curaduría (persistencia y verificación de 
     expect(await count("SELECT count(*)::text AS n FROM ingest.curation_findings WHERE status = 'resolved'")).toBe(resolvedTotal - 1);
     // Lo que queda sigue funcionando: un análisis nuevo sobre la base podada.
     expect((await runCurationScan({ trigger: "manual" })).status).toBe("ok");
+  }, 60_000);
+
+  // ---------------------------------------------------------------------------
+  // E2: decisiones duraderas
+  // ---------------------------------------------------------------------------
+
+  const findingOfPair = async (detector: string, a: number, b: number) => (await getPool().query<FindingRow & { title: string; ignore_reason: string | null }>(`
+    SELECT id::text, detector, status, evidence, first_seen_scan_id::text, title, ignore_reason FROM ingest.curation_findings
+     WHERE detector = $1 AND evidence->'pair' = $2::jsonb`, [detector, JSON.stringify([Math.min(a, b), Math.max(a, b)])])).rows[0];
+
+  it("ignorar exige un motivo válido (E2.5)", async () => {
+    const [finding] = (await getPool().query<{ id: string }>("SELECT id::text FROM ingest.curation_findings WHERE status = 'open' ORDER BY id LIMIT 1")).rows;
+    for (const payload of [{ note: "sin motivo" }, { reason: "me_da_igual", note: "motivo inventado" }]) {
+      const response = await app.inject({ method: "POST", url: `/curation/findings/${finding!.id}/ignore`, headers, payload });
+      expect(response.statusCode).toBe(400);
+    }
+    const group = await app.inject({ method: "POST", url: "/curation/findings/ignore-group", headers,
+      payload: { category: "fichas_repetidas", detector: "artistas_equivalentes", reason: "falso_positivo" } });
+    expect(group.statusCode).toBe(400);
+    expect((await resolutionOf(finding!.id))!.status).toBe("open");
+  }, 60_000);
+
+  it("un par ignorado en grupo sobrevive a la aparición de un tercer miembro (A5)", async () => {
+    const los = await one("INSERT INTO public.artists(name) VALUES('Los Flanders QA') RETURNING id");
+    const bare = await one("INSERT INTO public.artists(name) VALUES('Flanders QA') RETURNING id");
+    expect((await runCurationScan({ trigger: "manual" })).status).toBe("ok");
+    const pair = await findingOfPair("artistas_equivalentes", los, bare);
+    expect(pair).toMatchObject({ status: "open" });
+
+    const ignored = await app.inject({ method: "POST", url: "/curation/findings/ignore-group", headers, payload: {
+      category: "fichas_repetidas", detector: "artistas_equivalentes", signature: "sin_articulo_o_espacios",
+      reason: "falso_positivo", note: "dos bandas distintas con nombre parecido",
+    } });
+    expect(ignored.statusCode).toBe(200);
+    expect(ignored.json().ignored).toBeGreaterThanOrEqual(1);
+
+    const third = await one("INSERT INTO public.artists(name) VALUES('The Flanders QA') RETURNING id");
+    const scan = await runCurationScan({ trigger: "manual" });
+    expect(scan.status).toBe("ok");
+    // La decisión sigue en la misma fila: la huella del par no depende del grupo.
+    const after = await findingOfPair("artistas_equivalentes", los, bare);
+    expect(after).toMatchObject({ id: pair!.id, status: "ignored", ignore_reason: "falso_positivo" });
+    // El título cambió («3 con la misma forma») y queda en la historia.
+    expect(after!.title).toContain("3 con la misma forma");
+    expect((after!.evidence["history"] as Array<{ scanId: number; from: { title: string }; to: { title: string } }>)[0]).toMatchObject({
+      scanId: scan.scanId, from: { title: pair!.title }, to: { title: after!.title },
+    });
+    // Los pares nuevos con el tercero piden su propia decisión.
+    expect(await findingOfPair("artistas_equivalentes", los, third)).toMatchObject({ status: "open" });
+    expect(await findingOfPair("artistas_equivalentes", bare, third)).toMatchObject({ status: "open" });
+  }, 60_000);
+
+  it("un ignorado caduca cuando el problema desaparece y, si vuelve, vuelve abierto (E2.5)", async () => {
+    const [mistyped] = (await getPool().query<{ id: string; entity_id: string }>(`
+      SELECT id::text, entity_id::text FROM ingest.curation_findings WHERE detector = 'persona_es_organizacion' AND status = 'ignored' ORDER BY id LIMIT 1`)).rows;
+    expect(mistyped).toBeDefined();
+    await getPool().query("UPDATE public.persons SET name = 'Rosa Pérez QA' WHERE id = $1", [mistyped!.entity_id]);
+    expect((await runCurationScan({ trigger: "manual" })).status).toBe("ok");
+    const expired = await getPool().query<{ status: string; resolution: string; ignore_reason: string | null; ignored_by: string | null }>(
+      "SELECT status, resolution, ignore_reason, ignored_by FROM ingest.curation_findings WHERE id = $1", [mistyped!.id]);
+    // Cambio por SQL, sin rastro en merge_audit: «cambiado en otra parte». La decisión vieja queda a la vista.
+    expect(expired.rows[0]).toEqual({ status: "resolved", resolution: "changed_elsewhere", ignore_reason: "correcto_a_proposito", ignored_by: OPERATOR });
+
+    await getPool().query("UPDATE public.persons SET name = 'Estudios Sonoros QA' WHERE id = $1", [mistyped!.entity_id]);
+    expect((await runCurationScan({ trigger: "manual" })).reopened).toBeGreaterThanOrEqual(1);
+    const back = await getPool().query("SELECT status, resolution, ignore_reason, ignored_by, ignore_note FROM ingest.curation_findings WHERE id = $1", [mistyped!.id]);
+    expect(back.rows[0]).toEqual({ status: "open", resolution: null, ignore_reason: null, ignored_by: null, ignore_note: null });
+  }, 60_000);
+
+  it("un par declarado distinto se resuelve como tal y no vuelve; al retirarlo, se reabre (M3)", async () => {
+    const zeta = await one("INSERT INTO public.artists(name) VALUES('Zeta QA') RETURNING id");
+    const theZeta = await one("INSERT INTO public.artists(name) VALUES('The Zeta QA') RETURNING id");
+    expect((await runCurationScan({ trigger: "manual" })).status).toBe("ok");
+    const pair = await findingOfPair("artistas_equivalentes", zeta, theZeta);
+    expect(pair).toMatchObject({ status: "open" });
+
+    const invalid = await app.inject({ method: "POST", url: "/curation/distinct-pairs", headers, payload: { kind: "artist", aId: zeta, bId: zeta, note: "la misma ficha" } });
+    expect(invalid.statusCode).toBe(400);
+
+    const before = await one("SELECT coalesce(max(id), 0) AS id FROM ingest.curation_scans");
+    const declared = await app.inject({ method: "POST", url: "/curation/distinct-pairs", headers, payload: { kind: "artist", aId: theZeta, bId: zeta, note: "bandas distintas de ciudades distintas" } });
+    expect(declared.statusCode).toBe(200);
+    expect(declared.json()).toMatchObject({ created: true, pair: { kind: "artist", aId: Math.min(zeta, theZeta), bId: Math.max(zeta, theZeta), decidedBy: OPERATOR } });
+    const again = await app.inject({ method: "POST", url: "/curation/distinct-pairs", headers, payload: { kind: "artist", aId: zeta, bId: theZeta, note: "otra vez" } });
+    expect(again.json()).toMatchObject({ created: false, pair: { id: declared.json().pair.id } });
+
+    await waitForScan("correccion", before);
+    expect(await resolutionOf(pair!.id)).toMatchObject({ status: "resolved", resolution: "declared_distinct", run_id: null });
+    const quiet = await runCurationScan({ trigger: "manual" });
+    expect(quiet).toMatchObject({ status: "ok", reopened: 0 });
+    expect((await findingOfPair("artistas_equivalentes", zeta, theZeta))!.status).toBe("resolved");
+
+    const listed = await app.inject({ method: "GET", url: "/curation/distinct-pairs?kind=artist", headers });
+    expect(listed.json().data.map((row: { id: number }) => row.id)).toContain(declared.json().pair.id);
+
+    const afterDeclare = await one("SELECT coalesce(max(id), 0) AS id FROM ingest.curation_scans");
+    const removed = await app.inject({ method: "DELETE", url: `/curation/distinct-pairs/${declared.json().pair.id}`, headers });
+    expect(removed.statusCode).toBe(200);
+    await waitForScan("correccion", afterDeclare);
+    expect((await findingOfPair("artistas_equivalentes", zeta, theZeta))!).toMatchObject({ id: pair!.id, status: "open" });
   }, 60_000);
 });

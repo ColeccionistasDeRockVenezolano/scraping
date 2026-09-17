@@ -1,5 +1,5 @@
 // CRV · Piezas comunes de los detectores.
-import type { Lexicon, NameValue } from "../lexicon.js";
+import { keyTokens, type Lexicon, type NameValue } from "../lexicon.js";
 import type {
   CatalogSnapshot, DetectorDefinition, EntityRef, Finding, Severity,
   SnapshotAlbum, SnapshotArtist, SnapshotOrganization, SnapshotPerson, SnapshotTrack,
@@ -57,6 +57,23 @@ export function nameFinding(detector: DetectorDefinition, name: NameValue, input
     related: [...name.related, ...(input.related ?? [])],
     evidence: { ...(input.evidence ?? {}), ...(input.span ? { span: input.span } : {}) },
   };
+}
+
+export const URL_LIKE = /https?:\/\/|www\.|\b[\w-]{2,}\.(?:com|net|org|info|biz|ve|es|co|blogspot|wordpress|bandcamp)\b/iu;
+
+export function isAllLowercase(value: string): boolean {
+  return /\p{Ll}{3,}/u.test(value) && value === value.toLocaleLowerCase("es");
+}
+
+/**
+ * Persona escrita toda en minúsculas sin una sola palabra que el catálogo use
+ * en nombres de persona («baile de las abejas», «version»): es un fragmento de
+ * texto cargado como persona, no un nombre al que le faltan mayúsculas. Va a
+ * «Persona que no es un nombre», no a «Nombre todo en minúsculas».
+ */
+export function isLowercaseNonName(lexicon: Lexicon, name: NameValue): boolean {
+  return name.kind === "person" && isAllLowercase(name.value) && !URL_LIKE.test(name.value)
+    && !keyTokens(name.value).some((token) => lexicon.personNameTokens.has(token));
 }
 
 export function firstSpan(value: string, pattern: RegExp): [number, number] | undefined {

@@ -35,6 +35,12 @@ export interface Finding {
   /** Reemplazo determinista de `value` que una herramienta puede aplicar sin criterio humano adicional. */
   suggestedValue?: string;
   related: EntityRef[];
+  /**
+   * Hallazgo sobre un PAR de fichas del mismo tipo (duplicados): ids `[menor, mayor]`.
+   * La huella sale del par, no del valor ni del resto del grupo, para que una
+   * decisión sobre el par sobreviva a un renombrado o a un tercer miembro.
+   */
+  pair?: [number, number];
   /** Hechos verificables; `span` marca el tramo problemático de `value`. */
   evidence: Record<string, unknown>;
 }
@@ -85,8 +91,10 @@ export interface CatalogSnapshot {
   reviews: SnapshotReview[];
   /** Conflictos de campo abiertos. */
   conflicts: SnapshotConflict[];
-  /** Pares ya tratados por otra herramienta: `person:a-b`, `album:a-b` (a<b). */
+  /** Pares ya tratados por otra herramienta o declarados distintos: `person:a-b`, `album:a-b` (a<b). */
   handledPairs: Set<string>;
+  /** Solo los declarados distintos por una persona (`ingest.curation_distinct_pairs`), con la misma clave. */
+  distinctPairs: Set<string>;
 }
 
 export interface CategoryDefinition {

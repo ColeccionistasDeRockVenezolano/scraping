@@ -344,13 +344,31 @@ export const labelInName: Detector = {
   },
 };
 
+/** «Juan Cristóbal Losada (aka Mr. Sonic)», «alias El Chacal», «Aura De Fuenmayor as "Lohan Duff"». */
+const ALIAS_IN_NAME = /^(.+?)\s*(?:[([]\s*)?\b(?:aka|a\.k\.a\.?|alias)\s+(.+?)\s*[)\]]?\s*$|^(.+?)\s+as\s+["“«](.+?)["”»]\s*$/iu;
+
 export const severalPeopleInOne: Detector = {
   key: "varias_personas_en_una",
   category: CATEGORY,
   label: "Varias personas en una ficha",
-  description: "Una ficha de persona que en realidad es una lista («Eliezer Delgado, Gregory Carrero», «L. Rangel/ E. Sáez/ J.F. Coral»).",
+  description: "Una ficha de persona que en realidad es una lista («Eliezer Delgado, Gregory Carrero», «L. Rangel/ E. Sáez/ J.F. Coral») o un nombre con su alias escrito dentro («(aka Mr. Sonic)»).",
   run({ names }) {
     return names.filter((name) => name.kind === "person").flatMap((name) => {
+      // Un alias no es otra persona: se separa como alias, no se divide la ficha.
+      const alias = ALIAS_IN_NAME.exec(name.value);
+      if (alias) {
+        const base = (alias[1] ?? alias[3])!.trim();
+        const other = (alias[2] ?? alias[4])!.replace(/^["“«]|["”»]$/gu, "").trim();
+        if (base && other) {
+          return [nameFinding(this, name, {
+            signature: "alias_en_nombre", signatureLabel: "Alias escrito dentro del nombre", severity: "medium",
+            title: `El alias ${quote(other)} está escrito dentro del nombre: es una persona, no dos`,
+            suggestion: `Nombre ${quote(base)} y ${quote(other)} como alias`,
+            evidence: { name: base, alias: other },
+            span: [base.length, name.value.length],
+          })];
+        }
+      }
       const parts = name.value.split(/\s*(?:[,/&;]|\sy\s)\s*/u).map((part) => part.trim()).filter((part) => part.length > 1);
       if (/\b(?:feat|ft|featuring)\b/iu.test(name.value)) return [];
       const multiple = classifyPersonName(name.value).kind === "multiple_people"
@@ -386,15 +404,23 @@ export const gluedWordsDetector: Detector = {
   key: "palabras_pegadas",
   category: CATEGORY,
   label: "Palabras pegadas",
-  description: "Dos palabras que el catálogo conoce por separado quedaron unidas sin espacio («BambaBonus», «TarboxAdapt»): el extractor perdió un separador.",
+  description: "Dos palabras que el catálogo conoce por separado quedaron unidas sin espacio («BambaBonus», «TarboxAdapt»): el extractor perdió un separador. Un nombre de una sola palabra en camelCase («MoonDub») suele ser estilizado a propósito y va aparte.",
   run({ names, lexicon }) {
     return names.flatMap((name) => {
       const found = gluedWords(name, lexicon.vocabulary);
       if (!found.length) return [];
       const first = found[0]!;
+      // Una sola palabra camelCase («RussoMan», «StudioSonica») es casi siempre
+      // la grafía elegida por el artista. Excepción: una persona cuyo primer
+      // tramo es un nombre de pila («CarlosAcosta») sí perdió el espacio.
+      const singleWord = /^\p{L}+$/u.test(name.value.trim());
+      const stylized = singleWord && found.length === 1 && !(name.kind === "person" && lexicon.givenNames.has(nameKey(first.left)));
       return [nameFinding(this, name, {
+        ...(stylized ? { signature: "posible_estilizado", signatureLabel: "Una sola palabra en camelCase: posible grafía estilizada" } : {}),
         severity: "low",
-        title: `Palabras pegadas: ${found.map((item) => quote(item.left + item.right)).join(", ")}`,
+        title: stylized
+          ? `${quote(name.value)} une dos palabras en camelCase: puede ser una grafía estilizada a propósito`
+          : `Palabras pegadas: ${found.map((item) => quote(item.left + item.right)).join(", ")}`,
         suggestion: `Separar ${found.map((item) => `${quote(item.left)} y ${quote(item.right)}`).join("; ")}`,
         span: [first.index, first.index + first.length],
       })];

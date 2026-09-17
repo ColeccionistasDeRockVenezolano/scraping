@@ -31,8 +31,12 @@ export const DETECTORS: readonly Detector[] = [
 export const DETECTOR_DEFINITIONS: readonly DetectorDefinition[] = [...DETECTORS, catalogAnomalies]
   .map(({ key, category, label, description }) => ({ key, category, label, description }));
 
-/** Cambia cuando cambian las reglas: queda registrado en cada análisis. */
-export const RULES_VERSION = "curation-rules.v1";
+/**
+ * Cambia cuando cambian las reglas: queda registrado en cada análisis, y lo que
+ * deja de emitirse sobre un valor que no cambió se resuelve como `rules_changed`.
+ * v2 (PLAN_CURADURIA E2): precisión de A6, pares estables, «Otros» por clase.
+ */
+export const RULES_VERSION = "curation-rules.v2";
 
 export interface DetectorFailure { detector: string; error: string; }
 
@@ -93,10 +97,15 @@ function refKey(ref: EntityRef): string {
  * Huella estable: detector + subgrupo + ficha + campo + valor + fichas
  * relacionadas. Si el valor cambia, es otro hallazgo (el anterior se resuelve);
  * si nada cambia, el mismo hallazgo sobrevive entre análisis con su historia.
+ *
+ * Un hallazgo de PAR (duplicados) es el par y nada más: detector + tipo + ids
+ * menor y mayor. Ni el valor, ni el subgrupo, ni el resto del grupo: renombrar
+ * una de las fichas o que aparezca una tercera no borra lo decidido sobre él.
  */
 export function fingerprintOf(finding: Finding): string {
-  const related = finding.related.map(refKey).sort().join(",");
-  const material = [finding.detector, finding.signature, refKey(finding.entity), finding.field ?? "", finding.value ?? "", related].join("␟");
+  const material = finding.pair
+    ? [finding.detector, "par", finding.entity.kind, Math.min(...finding.pair), Math.max(...finding.pair)].join("␟")
+    : [finding.detector, finding.signature, refKey(finding.entity), finding.field ?? "", finding.value ?? "", finding.related.map(refKey).sort().join(",")].join("␟");
   return `${finding.detector}:${createHash("sha256").update(material).digest("hex").slice(0, 32)}`;
 }
 
