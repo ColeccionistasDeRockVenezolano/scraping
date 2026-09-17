@@ -8,8 +8,9 @@
 //
 // Comprueba lo que no se ve en una captura: menú lateral por categoría con
 // «Otros» (plegado en un botón a 400 px), subgrupos de «Otros» que se despliegan
-// por tandas, sin overflow horizontal, sin errores de consola, y que «No es un
-// problema» guarda la decisión.
+// por tandas, sin overflow horizontal, sin errores de consola, que «No es un
+// problema» pide un motivo y guarda la decisión, y que «Son distintas» guarda el
+// par (PLAN_CURADURIA E2).
 import { spawn, type ChildProcess } from "node:child_process";
 import { createServer } from "node:net";
 import { randomBytes, scrypt as scryptCallback } from "node:crypto";
@@ -106,13 +107,39 @@ async function seed(): Promise<{ dirtyArtist: number }> {
   await pool.query("INSERT INTO public.album_credits(album_id, person_id, credit_type, role) VALUES(2, $1, 'recording', 'Grabación')", [studioPerson]);
   await pool.query("INSERT INTO public.album_credits(album_id, organization_id, credit_type, role) VALUES(3, $1, 'recording', 'Grabación')", [org]);
   await one("INSERT INTO public.persons(name) VALUES('4:39') RETURNING id");
-  // Muchos signos raros distintos en títulos de disco: «Otros» recibe decenas
-  // de subgrupos, el caso que se despliega por tandas.
-  const rareSigns = ["¶", "†", "‡", "¤", "‰", "¥", "£", "∞", "≈", "★", "♪", "☼", "✓", "¢", "µ", "÷"];
-  for (const [offset, sign] of rareSigns.entries()) {
-    await pool.query("UPDATE public.albums SET title = $2 WHERE id = $1", [10 + offset, `Memoria ${sign} Ciudad ${offset + 1}`]);
+  // Signos raros de cada clase (puntuación, moneda, símbolo) en cuatro campos:
+  // «Otros» agrupa por clase y campo (B1), así que recibe 12 subgrupos, el caso
+  // que se despliega por tandas. El signo va en medio para que ningún detector
+  // de forma (signo colgante) lo explique antes.
+  const rareSigns: Array<[table: string, column: string, id: number, sign: string]> = [
+    ["albums", "title", 10, "¥"], ["albums", "title", 11, "★"],
+    ["tracks", "title", 20, "†"], ["tracks", "title", 21, "£"], ["tracks", "title", 22, "♪"],
+    ["artists", "name", 30, "‡"], ["artists", "name", 31, "¢"], ["artists", "name", 32, "∞"],
+    ["persons", "name", 40, "‰"], ["persons", "name", 41, "¤"], ["persons", "name", 42, "≈"],
+  ];
+  for (const [table, column, id, sign] of rareSigns) {
+    // Nombres de tabla y columna fijos de esta lista, no vienen de fuera.
+    await pool.query(`UPDATE public.${table} SET ${column} = regexp_replace(${column}, ' ', $2) WHERE id = $1`, [id, ` ${sign} `]);
   }
+  // Un par de artistas escritos de otra forma, para «Son distintas».
+  await one("INSERT INTO public.artists(name, origin_city) VALUES('Los Relámpago QA', 'Caracas') RETURNING id");
+  await one("INSERT INTO public.artists(name, origin_city) VALUES('Relámpago QA', 'Maracay') RETURNING id");
   return { dirtyArtist };
+}
+
+async function lastScanId(): Promise<number> {
+  return Number((await getPool().query<{ id: string }>("SELECT coalesce(max(id), 0)::text AS id FROM ingest.curation_scans")).rows[0]!.id);
+}
+
+/** Espera el análisis de verificación que dispara una escritura de la API (posterior a `afterId`). */
+async function waitForCorrectionScan(afterId: number): Promise<void> {
+  const deadline = Date.now() + 20_000;
+  while (Date.now() < deadline) {
+    const { rows } = await getPool().query("SELECT 1 FROM ingest.curation_scans WHERE trigger = 'correccion' AND status = 'ok' AND id > $1", [afterId]);
+    if (rows.length) break;
+    await new Promise((resolve) => setTimeout(resolve, 200));
+  }
+  await waitForCurationScans();
 }
 
 async function waitForApp(page: Page): Promise<void> {
@@ -233,32 +260,61 @@ try {
       await page.screenshot({ path: path.join(outputDir, `${viewport.name}-otros-mas.png`), fullPage: true });
       await assertNoOverflow(page, `${viewport.name} otros`);
 
-      // 4. «No es un problema» guarda la decisión.
+      // 4. «No es un problema» pide un motivo y guarda la decisión con él.
       await page.goto(`${webUrl}/curaduria/categoria/ficha_de_otro_tipo`, { waitUntil: "domcontentloaded" });
       const ignoreButton = page.getByRole("button", { name: "No es un problema" }).first();
       await ignoreButton.waitFor({ timeout: 20_000 });
       const before = await page.getByRole("button", { name: "No es un problema" }).count();
       await ignoreButton.click();
+      const ignoreDialog = page.getByRole("dialog");
+      // Sin motivo no se guarda.
+      await ignoreDialog.getByRole("button", { name: "No es un problema" }).click();
+      await ignoreDialog.getByText("Elige un motivo.").waitFor();
+      await ignoreDialog.getByLabel(/Falso positivo/u).check();
+      await ignoreDialog.getByLabel(/Nota/u).fill("QA: el detector se equivocó");
+      if (await ignoreDialog.getByText("Elige un motivo.").count()) throw new Error(`${viewport.name}: el aviso de motivo sigue tras elegir uno`);
+      await page.waitForTimeout(400);
+      await page.screenshot({ path: path.join(outputDir, `${viewport.name}-ignorar-motivo.png`), fullPage: true });
+      await assertNoOverflow(page, `${viewport.name} diálogo de motivo`);
+      await ignoreDialog.getByRole("button", { name: "No es un problema" }).click();
       await page.getByText("Hallazgo ignorado", { exact: false }).first().waitFor();
       await page.waitForFunction((count) => document.querySelectorAll(".cfind").length < count, before);
       await assertNoOverflow(page, `${viewport.name} ficha_de_otro_tipo`);
+      const reasons = await getPool().query<{ n: string }>(
+        "SELECT count(*)::text AS n FROM ingest.curation_findings WHERE status = 'ignored' AND ignore_reason = 'falso_positivo' AND ignore_note = 'QA: el detector se equivocó'");
+      if (Number(reasons.rows[0]!.n) !== index + 1) throw new Error(`${viewport.name}: el ignorado no guardó su motivo`);
+
+      // 4b. «Son distintas» guarda el par (solo la primera vez: después ya no está abierto).
+      if (index === 0) {
+        await page.goto(`${webUrl}/curaduria/categoria/fichas_repetidas`, { waitUntil: "domcontentloaded" });
+        const distinctButton = page.getByRole("button", { name: "Son distintas" }).first();
+        await distinctButton.waitFor({ timeout: 20_000 });
+        const beforeDistinct = await lastScanId();
+        await distinctButton.click();
+        const distinctDialog = page.getByRole("dialog");
+        await distinctDialog.getByLabel(/Motivo/u).fill("QA: bandas distintas de ciudades distintas");
+        await page.waitForTimeout(400);
+        await page.screenshot({ path: path.join(outputDir, `${viewport.name}-son-distintas.png`), fullPage: true });
+        await distinctDialog.getByRole("button", { name: "Son distintas" }).click();
+        await page.getByText("Par declarado distinto", { exact: false }).first().waitFor();
+        const pairs = await getPool().query<{ decided_by: string }>("SELECT decided_by FROM ingest.curation_distinct_pairs");
+        if (pairs.rows.length !== 1) throw new Error(`${viewport.name}: se esperaba un par declarado distinto, hay ${pairs.rows.length}`);
+        // Su verificación termina antes de la corrección del paso 5, para no confundirlas.
+        await waitForCorrectionScan(beforeDistinct);
+        await assertNoOverflow(page, `${viewport.name} fichas_repetidas`);
+      }
 
       // 5. Corrección por la API (solo la primera vez): quita el invisible pero
       //    mete la ciudad en el nombre. El detector debe verificarla solo.
       if (index === 0) {
+        const beforePatch = await lastScanId();
         const response = await fetch(`${apiAddress}/artists/${dirtyArtist}`, {
           method: "PATCH",
           headers: { authorization: `Bearer ${QA_TOKEN}`, "x-crv-operator": "QA Curaduria", "content-type": "application/json", origin: webUrl },
           body: JSON.stringify({ name: "Trueno Negro (Caracas)" }),
         });
         if (!response.ok) throw new Error(`la corrección falló: ${response.status} ${await response.text()}`);
-        const deadline = Date.now() + 20_000;
-        while (Date.now() < deadline) {
-          const { rows } = await getPool().query("SELECT 1 FROM ingest.curation_scans WHERE trigger = 'correccion' AND status = 'ok'");
-          if (rows.length) break;
-          await new Promise((resolve) => setTimeout(resolve, 200));
-        }
-        await waitForCurationScans();
+        await waitForCorrectionScan(beforePatch);
       }
       await page.goto(`${webUrl}/curaduria`, { waitUntil: "domcontentloaded" });
       await page.getByText(/desencadenados? por la corrección/u).first().waitFor({ timeout: 20_000 });
