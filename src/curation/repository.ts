@@ -1,8 +1,10 @@
 // CRV · Lecturas y decisiones sobre los hallazgos de Curaduría.
+import type { PoolClient } from "pg";
 import { getPool } from "../db/client.js";
 import { updateEntity, withOperatorRun } from "../merge/operator.js";
-import type { ResolvableClaimKind } from "../merge/specs.js";
+import { ENTITY_SPECS, type ResolvableClaimKind } from "../merge/specs.js";
 import { DETECTOR_DEFINITIONS } from "./analyze.js";
+import { cleanInvisible, collapseSpaces, decodeHtmlEntitiesValue, trimDanglingPunctuation } from "./detectors/text-hygiene.js";
 import type { Resolution } from "./resolution.js";
 import { CATEGORIES, OTHER_CATEGORY } from "./taxonomy.js";
 import type { EntityRef, Severity } from "./types.js";
@@ -176,7 +178,8 @@ export async function getCurationSummary(running: boolean): Promise<CurationSumm
   };
 }
 
-export interface FindingQuery {
+/** Filtros del listado, sin paginar: los mismos que aceptan las acciones de grupo (C3, PLAN_CURADURIA E3). */
+export interface FindingFilter {
   category?: string | undefined;
   detector?: string | undefined;
   signature?: string | undefined;
@@ -188,8 +191,40 @@ export interface FindingQuery {
   scanId?: number | undefined;
   /** Solo lo que apareció al corregir otro hallazgo. */
   chained?: boolean | undefined;
+}
+
+export interface FindingQuery extends FindingFilter {
   limit: number;
   offset: number;
+}
+
+/**
+ * Construye el WHERE de `FindingFilter`. Lo comparten `listFindings` y las
+ * acciones de grupo (`ignoreGroup`, `fixFindingsGroup`): antes, esas acciones
+ * solo miraban `category/detector/signature` y afectaban más de lo que la
+ * pantalla mostraba (C3, PLAN_CURADURIA E3.1) — un filtro de gravedad, tipo de
+ * ficha, texto, análisis o encadenados quedaba fuera de la escritura.
+ */
+function buildFindingsWhere(filter: FindingFilter): { where: string[]; params: unknown[] } {
+  const where: string[] = [];
+  const params: unknown[] = [];
+  const add = (sql: string, value: unknown) => { params.push(value); where.push(sql.replace("?", `$${params.length}`)); };
+  if (filter.category === OTHER_CATEGORY) {
+    params.push(CATEGORIES.map((category) => category.key).filter((key) => key !== OTHER_CATEGORY));
+    where.push(`(category = '${OTHER_CATEGORY}' OR NOT (category = ANY($${params.length}::text[])))`);
+  } else if (filter.category) add("category = ?", filter.category);
+  if (filter.detector) add("detector = ?", filter.detector);
+  if (filter.signature) add("signature = ?", filter.signature);
+  if (filter.severity) add("severity = ?", filter.severity);
+  if (filter.entityKind) add("entity_kind = ?", filter.entityKind);
+  if (filter.status && filter.status !== "all") add("status = ?", filter.status);
+  if (filter.scanId !== undefined) add("first_seen_scan_id = ?", filter.scanId);
+  if (filter.chained) where.push("evidence ? 'triggeredBy'");
+  if (filter.q?.trim()) {
+    params.push(`%${filter.q.trim().replace(/[\\%_]/gu, (char) => `\\${char}`)}%`);
+    where.push(`(value ILIKE $${params.length} OR entity_label ILIKE $${params.length} OR title ILIKE $${params.length})`);
+  }
+  return { where, params };
 }
 
 type RawFinding = {
@@ -224,24 +259,7 @@ function findingRow(row: RawFinding, lastScan: number | null): FindingRow {
 }
 
 export async function listFindings(query: FindingQuery): Promise<{ rows: FindingRow[]; total: number }> {
-  const where: string[] = [];
-  const params: unknown[] = [];
-  const add = (sql: string, value: unknown) => { params.push(value); where.push(sql.replace("?", `$${params.length}`)); };
-  if (query.category === OTHER_CATEGORY) {
-    params.push(CATEGORIES.map((category) => category.key).filter((key) => key !== OTHER_CATEGORY));
-    where.push(`(category = '${OTHER_CATEGORY}' OR NOT (category = ANY($${params.length}::text[])))`);
-  } else if (query.category) add("category = ?", query.category);
-  if (query.detector) add("detector = ?", query.detector);
-  if (query.signature) add("signature = ?", query.signature);
-  if (query.severity) add("severity = ?", query.severity);
-  if (query.entityKind) add("entity_kind = ?", query.entityKind);
-  if (query.status && query.status !== "all") add("status = ?", query.status);
-  if (query.scanId !== undefined) add("first_seen_scan_id = ?", query.scanId);
-  if (query.chained) where.push("evidence ? 'triggeredBy'");
-  if (query.q?.trim()) {
-    params.push(`%${query.q.trim().replace(/[\\%_]/gu, (char) => `\\${char}`)}%`);
-    where.push(`(value ILIKE $${params.length} OR entity_label ILIKE $${params.length} OR title ILIKE $${params.length})`);
-  }
+  const { where, params } = buildFindingsWhere(query);
   params.push(query.limit, query.offset);
   const [lastScan, result] = await Promise.all([
     lastOkScanId(),
@@ -259,7 +277,7 @@ export async function listFindings(query: FindingQuery): Promise<{ rows: Finding
 }
 
 export class CurationError extends Error {
-  constructor(readonly code: "not_found" | "not_open" | "not_fixable" | "invalid", message: string) { super(message); }
+  constructor(readonly code: "not_found" | "not_open" | "not_fixable" | "invalid" | "stale", message: string) { super(message); }
 }
 
 /**
@@ -285,16 +303,32 @@ export async function reopenFinding(id: number): Promise<FindingRow> {
   return (await getFinding(id))!;
 }
 
-/** Ignora de una vez todo un grupo abierto (detector y, si se indica, subgrupo). */
+/**
+ * Filtro de una acción de grupo: el mismo `FindingFilter` que el listado,
+ * siempre sobre `open` y siempre anclado a un detector (los botones de grupo
+ * de la web solo aparecen dentro de una categoría › detector concretos).
+ */
+export interface FindingGroupFilter {
+  category: string;
+  detector: string;
+  signature?: string | undefined;
+  severity?: Severity | undefined;
+  entityKind?: string | undefined;
+  q?: string | undefined;
+  scanId?: number | undefined;
+  chained?: boolean | undefined;
+}
+
+/** Ignora de una vez todo hallazgo abierto que cumpla exactamente el filtro (igual que el listado, C3). */
 export async function ignoreGroup(
-  input: { category: string; detector: string; signature?: string | undefined }, operator: string, reason: IgnoreReason, note: string,
+  filter: FindingGroupFilter, operator: string, reason: IgnoreReason, note: string,
 ): Promise<number> {
-  const params: unknown[] = [operator, note, reason, input.category, input.detector];
-  let signatureClause = "";
-  if (input.signature) { params.push(input.signature); signatureClause = `AND signature = $${params.length}`; }
+  const { where, params } = buildFindingsWhere({ ...filter, status: "open" });
+  params.push(operator, note, reason);
+  const [operatorIdx, noteIdx, reasonIdx] = [params.length - 2, params.length - 1, params.length];
   const result = await getPool().query(`
-    UPDATE ingest.curation_findings SET status = 'ignored', ignored_at = now(), ignored_by = $1, ignore_note = $2, ignore_reason = $3
-     WHERE status = 'open' AND category = $4 AND detector = $5 ${signatureClause}`, params);
+    UPDATE ingest.curation_findings SET status = 'ignored', ignored_at = now(), ignored_by = $${operatorIdx}, ignore_note = $${noteIdx}, ignore_reason = $${reasonIdx}
+     WHERE ${where.join(" AND ")}`, params);
   return result.rowCount ?? 0;
 }
 
@@ -381,26 +415,48 @@ function isFixableKind(kind: string): kind is ResolvableClaimKind {
 interface FixableRow {
   id: string;
   status: FindingStatus;
+  detector: string;
   field: string | null;
   entity_kind: string;
   entity_id: string | null;
+  /** Valor que vio el análisis: la base de la comparación CAS (C4). */
+  value: string | null;
   suggested_value: string | null;
 }
 
-const FIXABLE_COLUMNS = "id::text, status, field, entity_kind, entity_id::text, suggested_value";
+const FIXABLE_COLUMNS = "id::text, status, detector, field, entity_kind, entity_id::text, value, suggested_value";
+
+interface FixShape { kind: ResolvableClaimKind; id: number; field: string; }
+
+/** Solo la forma (campo editable, tipo de ficha real, id presente): no exige `suggested_value`, la usan la ruta compuesta y la individual por igual. */
+function fixableShape(row: FixableRow): FixShape | null {
+  if (!row.field || !FIXABLE_FIELDS.has(row.field) || !isFixableKind(row.entity_kind) || row.entity_id === null) return null;
+  return { kind: row.entity_kind, id: Number(row.entity_id), field: row.field };
+}
 
 function assertFixable(row: FixableRow, valueOverride?: string): { kind: ResolvableClaimKind; id: number; field: string; value: string } {
   if (row.entity_kind === "") throw new CurationError("not_found", `hallazgo inexistente: ${row.id}`);
   if (row.status !== "open") throw new CurationError("not_open", `el hallazgo ${row.id} no está abierto`);
-  if (!row.field || !FIXABLE_FIELDS.has(row.field) || !isFixableKind(row.entity_kind) || row.entity_id === null) {
-    throw new CurationError("not_fixable", `el hallazgo ${row.id} no tiene una corrección disponible: hay que editar la ficha`);
-  }
+  const shape = fixableShape(row);
+  if (!shape) throw new CurationError("not_fixable", `el hallazgo ${row.id} no tiene una corrección disponible: hay que editar la ficha`);
   const value = (valueOverride ?? row.suggested_value ?? "").trim();
   if (!value) throw new CurationError("not_fixable", `el hallazgo ${row.id} no tiene un valor sugerido`);
-  return { kind: row.entity_kind, id: Number(row.entity_id), field: row.field, value };
+  return { ...shape, value };
 }
 
-/** Corrige la ficha de un hallazgo: aplica `value` (o su `suggested_value`) al campo detectado. */
+/** Lee el valor actual del campo dentro de la transacción del run: la base de la comparación CAS (C4). */
+async function readCurrentFieldValue(client: PoolClient, kind: ResolvableClaimKind, id: number, field: string): Promise<string | null> {
+  const spec = ENTITY_SPECS[kind];
+  const column = spec.fields[field];
+  const { rows } = await client.query<{ value: string | null }>(`SELECT ${column}::text AS value FROM ${spec.table} WHERE id = $1`, [id]);
+  return rows[0]?.value ?? null;
+}
+
+function staleError(ids: Iterable<string | number>): CurationError {
+  return new CurationError("stale", `la ficha ya cambió desde el análisis: hallazgo(s) ${[...ids].join(", ")} obsoleto(s)`);
+}
+
+/** Corrige la ficha de un hallazgo: aplica `value` (o su `suggested_value`) al campo detectado, con CAS (C4). */
 export async function fixFinding(id: number, operator: string, note: string, value?: string): Promise<FindingRow> {
   const { rows } = await getPool().query<FixableRow>(`SELECT ${FIXABLE_COLUMNS} FROM ingest.curation_findings WHERE id = $1`, [id]);
   const row = rows[0];
@@ -409,27 +465,92 @@ export async function fixFinding(id: number, operator: string, note: string, val
   await withOperatorRun({
     name: "api:curation:fix", operator, note,
     params: { findingId: id, kind: fix.kind, id: fix.id, field: fix.field, value: fix.value },
-  }, (context) => updateEntity(context, fix.kind, fix.id, { [fix.field]: fix.value }));
+  }, async (context) => {
+    const current = await readCurrentFieldValue(context.client, fix.kind, fix.id, fix.field);
+    if (current !== (row.value ?? null)) throw staleError([id]);
+    return updateEntity(context, fix.kind, fix.id, { [fix.field]: fix.value });
+  });
   return (await getFinding(id))!;
 }
 
 export interface FixOutcome { id: number; ok: boolean; error: string | null; }
 
-async function applyFixRows(rows: FixableRow[], operator: string, note: string): Promise<FixOutcome[]> {
-  const outcomes: FixOutcome[] = [];
-  for (const row of rows) {
-    try {
-      const fix = assertFixable(row);
-      await withOperatorRun({
-        name: "api:curation:fix", operator, note,
-        params: { findingId: row.id, kind: fix.kind, id: fix.id, field: fix.field, value: fix.value },
-      }, (context) => updateEntity(context, fix.kind, fix.id, { [fix.field]: fix.value }));
-      outcomes.push({ id: Number(row.id), ok: true, error: null });
-    } catch (error) {
-      outcomes.push({ id: Number(row.id), ok: false, error: error instanceof Error ? error.message : String(error) });
-    }
+/** Una limpieza de texto reutilizable, en el orden en que se componen sobre la misma ficha (C4, ficha 3). */
+const TEXT_CLEANUPS: ReadonlyArray<{ detector: string; apply: (value: string) => string }> = [
+  { detector: "caracteres_invisibles", apply: cleanInvisible },
+  { detector: "entidades_html", apply: decodeHtmlEntitiesValue },
+  { detector: "espacios_irregulares", apply: collapseSpaces },
+  { detector: "signos_colgantes", apply: trimDanglingPunctuation },
+];
+const COMPOSABLE_DETECTORS = new Set(TEXT_CLEANUPS.map((cleanup) => cleanup.detector));
+
+async function applySingleFix(row: FixableRow, operator: string, note: string): Promise<FixOutcome> {
+  try {
+    const fix = assertFixable(row);
+    await withOperatorRun({
+      name: "api:curation:fix", operator, note,
+      params: { findingId: row.id, kind: fix.kind, id: fix.id, field: fix.field, value: fix.value },
+    }, async (context) => {
+      const current = await readCurrentFieldValue(context.client, fix.kind, fix.id, fix.field);
+      if (current !== (row.value ?? null)) throw staleError([row.id]);
+      return updateEntity(context, fix.kind, fix.id, { [fix.field]: fix.value });
+    });
+    return { id: Number(row.id), ok: true, error: null };
+  } catch (error) {
+    return { id: Number(row.id), ok: false, error: error instanceof Error ? error.message : String(error) };
   }
-  return outcomes;
+}
+
+/**
+ * Varios hallazgos abiertos y componibles (invisibles, entidades, espacios,
+ * colgantes) sobre el mismo `(entity_kind, entity_id, field)`: una sola
+ * escritura con las limpiezas encadenadas sobre el valor vivo, no una por
+ * hallazgo escribiendo cada una desde el texto original (C4, ficha 3) — así la
+ * segunda no pisa a la primera y reintroduce el defecto que ya se quitó.
+ */
+async function applyComposedGroup(rows: FixableRow[], operator: string, note: string): Promise<FixOutcome[]> {
+  const shape = fixableShape(rows[0]!)!;
+  try {
+    const { result } = await withOperatorRun({
+      name: "api:curation:fix-compose", operator, note,
+      params: { findingIds: rows.map((row) => Number(row.id)), kind: shape.kind, id: shape.id, field: shape.field, detectors: rows.map((row) => row.detector) },
+    }, async (context) => {
+      const current = await readCurrentFieldValue(context.client, shape.kind, shape.id, shape.field);
+      const fresh = rows.filter((row) => current === (row.value ?? null));
+      const stale = rows.filter((row) => current !== (row.value ?? null));
+      if (fresh.length === 0) throw staleError(rows.map((row) => row.id));
+      const detectors = new Set(fresh.map((row) => row.detector));
+      let value = current ?? "";
+      for (const cleanup of TEXT_CLEANUPS) if (detectors.has(cleanup.detector)) value = cleanup.apply(value);
+      value = value.trim();
+      if (!value) throw new CurationError("not_fixable", `la corrección conjunta de ${shape.kind} ${shape.id} dejaría el campo vacío`);
+      if (value !== current) await updateEntity(context, shape.kind, shape.id, { [shape.field]: value });
+      return { stale, fresh };
+    });
+    return [
+      ...result.stale.map((row): FixOutcome => ({ id: Number(row.id), ok: false, error: staleError([row.id]).message })),
+      ...result.fresh.map((row): FixOutcome => ({ id: Number(row.id), ok: true, error: null })),
+    ];
+  } catch (error) {
+    const message = error instanceof Error ? error.message : String(error);
+    return rows.map((row): FixOutcome => ({ id: Number(row.id), ok: false, error: message }));
+  }
+}
+
+async function applyFixRows(rows: FixableRow[], operator: string, note: string): Promise<FixOutcome[]> {
+  const groups = new Map<string, FixableRow[]>();
+  for (const row of rows) {
+    const shape = row.status === "open" ? fixableShape(row) : null;
+    const key = shape && COMPOSABLE_DETECTORS.has(row.detector) ? `${shape.kind}:${shape.id}:${shape.field}` : `single:${row.id}`;
+    const list = groups.get(key);
+    if (list) list.push(row); else groups.set(key, [row]);
+  }
+  const outcomes = new Map<number, FixOutcome>();
+  for (const group of groups.values()) {
+    const resolved = group.length > 1 ? await applyComposedGroup(group, operator, note) : [await applySingleFix(group[0]!, operator, note)];
+    for (const outcome of resolved) outcomes.set(outcome.id, outcome);
+  }
+  return rows.map((row) => outcomes.get(Number(row.id))!);
 }
 
 /** Corrige varios hallazgos elegidos a mano (selección en la lista), cada uno con su propio valor sugerido. */
@@ -438,19 +559,17 @@ export async function fixFindingsSelected(ids: number[], operator: string, note:
   const { rows } = await getPool().query<FixableRow>(`SELECT ${FIXABLE_COLUMNS} FROM ingest.curation_findings WHERE id = ANY($1::bigint[])`, [ids]);
   const byId = new Map(rows.map((row) => [row.id, row]));
   const found = ids.map((id): FixableRow => byId.get(String(id))
-    ?? { id: String(id), status: "resolved", field: null, entity_kind: "", entity_id: null, suggested_value: null });
+    ?? { id: String(id), status: "resolved", detector: "", field: null, entity_kind: "", entity_id: null, value: null, suggested_value: null });
   return applyFixRows(found, operator, note);
 }
 
 const FIX_GROUP_LIMIT = 500;
 
-/** Corrige de una vez todo un grupo abierto y corregible (detector y, si se indica, subgrupo). */
+/** Corrige de una vez todo hallazgo abierto y corregible que cumpla exactamente el filtro (igual que el listado, C3). */
 export async function fixFindingsGroup(
-  input: { category: string; detector: string; signature?: string | undefined }, operator: string, note: string,
+  filter: FindingGroupFilter, operator: string, note: string,
 ): Promise<{ outcomes: FixOutcome[]; more: boolean }> {
-  const params: unknown[] = [input.category, input.detector];
-  let signatureClause = "";
-  if (input.signature) { params.push(input.signature); signatureClause = `AND signature = $${params.length}`; }
+  const { where, params } = buildFindingsWhere({ ...filter, status: "open" });
   params.push([...FIXABLE_FIELDS]);
   const fieldParamIndex = params.length;
   params.push([...REAL_ENTITY_KINDS]);
@@ -458,7 +577,7 @@ export async function fixFindingsGroup(
   params.push(FIX_GROUP_LIMIT + 1);
   const { rows } = await getPool().query<FixableRow>(`
     SELECT ${FIXABLE_COLUMNS} FROM ingest.curation_findings
-     WHERE status = 'open' AND category = $1 AND detector = $2 ${signatureClause}
+     WHERE ${where.join(" AND ")}
        AND field = ANY($${fieldParamIndex}::text[]) AND entity_kind = ANY($${kindParamIndex}::text[])
        AND entity_id IS NOT NULL AND suggested_value IS NOT NULL AND btrim(suggested_value) <> ''
      ORDER BY id

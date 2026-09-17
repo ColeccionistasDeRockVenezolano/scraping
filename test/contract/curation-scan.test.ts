@@ -404,4 +404,76 @@ describe("detector de conflictos de Curaduría (persistencia y verificación de 
     await waitForScan("correccion", afterDeclare);
     expect((await findingOfPair("artistas_equivalentes", zeta, theZeta))!).toMatchObject({ id: pair!.id, status: "open" });
   }, 60_000);
+
+  // ---------------------------------------------------------------------------
+  // E3: seguridad inmediata de lo que ya escribe
+  // ---------------------------------------------------------------------------
+
+  it("una acción de grupo filtrada por tipo de ficha no toca lo que el filtro deja fuera (C3)", async () => {
+    const artist = await one("INSERT INTO public.artists(name) VALUES($1) RETURNING id", [`Bruma${ZERO_WIDTH_SPACE} QA`]);
+    const org = await one("INSERT INTO public.organizations(name) VALUES($1) RETURNING id", [`Sello${ZERO_WIDTH_SPACE} QA`]);
+    expect((await runCurationScan({ trigger: "manual" })).status).toBe("ok");
+    const rows = (await getPool().query<{ id: string; entity_kind: string; entity_id: string }>(`
+      SELECT id::text, entity_kind, entity_id::text FROM ingest.curation_findings
+       WHERE detector = 'caracteres_invisibles' AND status = 'open' AND entity_id = ANY($1::bigint[])`, [[artist, org]])).rows;
+    const artistFinding = rows.find((row) => row.entity_kind === "artist");
+    const orgFinding = rows.find((row) => row.entity_kind === "organization");
+    expect(artistFinding).toBeDefined();
+    expect(orgFinding).toBeDefined();
+
+    // Antes (C3): el diálogo anunciaba el total filtrado en pantalla, pero la
+    // acción solo miraba category/detector/signature — «entityKind: artist»
+    // hubiera ignorado también la organización.
+    const grouped = await app.inject({ method: "POST", url: "/curation/findings/ignore-group", headers, payload: {
+      category: "nombres_sucios", detector: "caracteres_invisibles", entityKind: "artist",
+      reason: "falso_positivo", note: "solo el artista, no la organización",
+    } });
+    expect(grouped.statusCode).toBe(200);
+    expect(grouped.json().ignored).toBeGreaterThanOrEqual(1);
+
+    const after = (await getPool().query<{ id: string; status: string }>(
+      "SELECT id::text, status FROM ingest.curation_findings WHERE id = ANY($1::bigint[])", [[artistFinding!.id, orgFinding!.id]])).rows;
+    expect(after.find((row) => row.id === artistFinding!.id)).toMatchObject({ status: "ignored" });
+    expect(after.find((row) => row.id === orgFinding!.id)).toMatchObject({ status: "open" });
+  }, 60_000);
+
+  it("una ficha editada entre el análisis y la corrección responde 409 y no se escribe (C4)", async () => {
+    const artist = await one("INSERT INTO public.artists(name) VALUES($1) RETURNING id", [`Rio${ZERO_WIDTH_SPACE} Turbio QA`]);
+    expect((await runCurationScan({ trigger: "manual" })).status).toBe("ok");
+    const [finding] = (await getPool().query<{ id: string }>(`
+      SELECT id::text FROM ingest.curation_findings
+       WHERE detector = 'caracteres_invisibles' AND entity_kind = 'artist' AND entity_id = $1 AND status = 'open'`, [artist])).rows;
+    expect(finding).toBeDefined();
+
+    // Alguien edita la ficha por fuera de Curaduría entre el análisis y la corrección.
+    await getPool().query("UPDATE public.artists SET name = $2 WHERE id = $1", [artist, "Nombre Cambiado A Mano QA"]);
+
+    const stale = await app.inject({ method: "POST", url: `/curation/findings/${finding!.id}/fix`, headers, payload: { note: "quitar el invisible" } });
+    expect(stale.statusCode).toBe(409);
+    expect(stale.json()).toMatchObject({ error: { code: "stale" } });
+
+    const current = (await getPool().query<{ name: string }>("SELECT name FROM public.artists WHERE id = $1", [artist])).rows[0];
+    expect(current).toEqual({ name: "Nombre Cambiado A Mano QA" });
+  }, 60_000);
+
+  it("varios hallazgos sobre la misma ficha se componen en una sola escritura, sin que uno pise al otro (C4)", async () => {
+    const org = await one("INSERT INTO public.organizations(name) VALUES($1) RETURNING id", [`Estudio Sombra QA${ZERO_WIDTH_SPACE} -`]);
+    expect((await runCurationScan({ trigger: "manual" })).status).toBe("ok");
+    const rows = (await getPool().query<{ id: string; detector: string }>(`
+      SELECT id::text, detector FROM ingest.curation_findings
+       WHERE entity_kind = 'organization' AND entity_id = $1 AND status = 'open' AND detector IN ('caracteres_invisibles', 'signos_colgantes')`, [org])).rows;
+    expect(rows.map((row) => row.detector).sort()).toEqual(["caracteres_invisibles", "signos_colgantes"]);
+
+    const fixed = await app.inject({
+      method: "POST", url: "/curation/findings/fix-selected", headers,
+      payload: { ids: rows.map((row) => Number(row.id)), note: "limpiar invisible y guion colgante de una vez" },
+    });
+    expect(fixed.statusCode).toBe(200);
+    expect(fixed.json()).toMatchObject({ fixed: 2, failed: 0 });
+
+    const after = (await getPool().query<{ name: string }>("SELECT name FROM public.organizations WHERE id = $1", [org])).rows[0];
+    // Ni el carácter invisible ni el guion colgante: una limpieza pisando a la
+    // otra hubiera dejado uno de los dos (C4).
+    expect(after).toEqual({ name: "Estudio Sombra QA" });
+  }, 60_000);
 });

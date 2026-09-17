@@ -17,7 +17,8 @@ const CATEGORY = "nombres_sucios";
 const INVISIBLE = /(?:\u034F|\u115F|\u1160|\u17B4|\u17B5|[\u00A0\u00AD\u061C\u180E\u200B\u200C\u200E\u200F\u202A-\u202E\u2060-\u2064\u206A-\u206F\uFEFF\p{Cc}]|(?<!\p{Extended_Pictographic}(?:[\u{1F3FB}-\u{1F3FF}]|\uFE0F)?)\u200D|\u200D(?!\p{Extended_Pictographic}))/u;
 const INVISIBLE_ALL = new RegExp(INVISIBLE.source, "gu");
 
-function cleanInvisible(value: string): string {
+/** Exportada para E3 (repository.ts): compone las limpiezas de varios hallazgos sobre la misma ficha en una sola escritura. */
+export function cleanInvisible(value: string): string {
   return value
     .replace(/\u00A0/gu, " ")
     .replace(INVISIBLE_ALL, "")
@@ -191,6 +192,11 @@ function decodeEntities(value: string): { decoded: string; span?: [number, numbe
   return { decoded, ...(span ? { span } : {}) };
 }
 
+/** Exportada para E3 (repository.ts): igual que el detector, pero solo el texto decodificado. */
+export function decodeHtmlEntitiesValue(value: string): string {
+  return decodeEntities(value).decoded;
+}
+
 export const htmlEntities: Detector = {
   key: "entidades_html",
   category: CATEGORY,
@@ -251,6 +257,16 @@ export const unbalancedMarks: Detector = {
 const DANGLING = /^[\s–—,;:/|•·*-]+(?=\S)|(?<=\S)\s*[–—,;:/|•·-]+\s*$/u;
 /** «-en vivo-» envuelve un texto entre guiones: no es un signo suelto. */
 const WRAPPED = /(?:^|\s)[–—-][^\s–—-][^–—-]*[–—-]\s*$/u;
+
+/** Exportada para E3 (repository.ts): mismo recorte que el detector, sin la ficha del hallazgo. */
+export function trimDanglingPunctuation(value: string): string {
+  return value.replace(new RegExp(DANGLING.source, "gu"), "").trim();
+}
+
+/** Exportada para E3 (repository.ts): colapsa espacios repetidos y recorta los extremos. */
+export function collapseSpaces(value: string): string {
+  return value.replace(/\s+/gu, " ").trim();
+}
 
 export const danglingPunctuation: Detector = {
   key: "signos_colgantes",

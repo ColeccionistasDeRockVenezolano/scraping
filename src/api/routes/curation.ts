@@ -87,6 +87,18 @@ const listQuerySchema = paginationQuerySchema.extend({
 const noteSchema = z.string().trim().max(2000);
 const ignoreReasonSchema = z.enum(IGNORE_REASONS);
 
+/**
+ * Filtro de una acción de grupo: los mismos filtros que el listado (C3,
+ * PLAN_CURADURIA E3.1) — antes solo viajaban `category/detector/signature` y
+ * la acción tocaba más de lo que la pantalla mostraba (gravedad, tipo de
+ * ficha, texto, análisis, encadenados quedaban fuera).
+ */
+const groupFilterSchema = {
+  category: z.string().min(1).max(60), detector: z.string().min(1).max(80), signature: z.string().max(300).optional(),
+  severity: severitySchema.optional(), entityKind: z.string().max(30).optional(), q: z.string().max(200).optional(),
+  scanId: z.number().int().positive().optional(), chained: z.boolean().optional(),
+};
+
 const distinctPairSchema = z.object({
   id: z.number().int(), kind: z.enum(DISTINCT_PAIR_KINDS), aId: z.number().int(), bId: z.number().int(),
   decidedBy: z.string(), note: z.string(), createdAt: z.string(),
@@ -119,6 +131,8 @@ function curationError(error: unknown): never {
     if (error.code === "not_found") throw new ApiError(404, "not_found", error.message);
     if (error.code === "not_fixable") throw new ApiError(422, "not_fixable", error.message);
     if (error.code === "invalid") throw new ApiError(400, "invalid", error.message);
+    // C4: la ficha ya no tiene el valor que vio el análisis (CAS).
+    if (error.code === "stale") throw new ApiError(409, "stale", error.message);
     throw new ApiError(409, "not_open", error.message);
   }
   throw error;
@@ -197,12 +211,9 @@ export async function registerCurationRoutes(app: FastifyInstance): Promise<void
   server.post("/curation/findings/ignore-group", {
     schema: {
       tags: ["curation"],
-      summary: "Ignora todos los hallazgos abiertos de un detector (y, si se indica, de un subgrupo). Motivo y nota obligatorios.",
+      summary: "Ignora exactamente los hallazgos abiertos que cumplen el filtro visible (categoría, detector, subgrupo, gravedad, tipo de ficha, texto, análisis, encadenados). Motivo y nota obligatorios.",
       security: OPERATOR_SECURITY,
-      body: z.object({
-        category: z.string().min(1).max(60), detector: z.string().min(1).max(80), signature: z.string().max(300).optional(),
-        reason: ignoreReasonSchema, note: noteSchema.min(1),
-      }).strict(),
+      body: z.object({ ...groupFilterSchema, reason: ignoreReasonSchema, note: noteSchema.min(1) }).strict(),
       response: { 200: z.object({ ignored: z.number().int() }), ...writeErrorResponses },
     },
   }, async (request) => ({ ignored: await ignoreGroup(request.body, request.operator, request.body.reason, request.body.note) }));
@@ -285,12 +296,9 @@ export async function registerCurationRoutes(app: FastifyInstance): Promise<void
   server.post("/curation/findings/fix-group", {
     schema: {
       tags: ["curation"],
-      summary: "Corrige de una vez todos los hallazgos abiertos y corregibles de un detector (y, si se indica, un subgrupo). Hasta 500 por llamada.",
+      summary: "Corrige exactamente los hallazgos abiertos y corregibles que cumplen el filtro visible. Hasta 500 por llamada.",
       security: OPERATOR_SECURITY,
-      body: z.object({
-        category: z.string().min(1).max(60), detector: z.string().min(1).max(80), signature: z.string().max(300).optional(),
-        note: noteSchema.min(1),
-      }).strict(),
+      body: z.object({ ...groupFilterSchema, note: noteSchema.min(1) }).strict(),
       response: { 200: fixBatchResultSchema, ...writeErrorResponses },
     },
   }, async (request) => {
