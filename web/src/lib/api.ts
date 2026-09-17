@@ -228,6 +228,18 @@ export interface CurationFindingQuery extends Paged {
   chained?: boolean;
 }
 
+/** Filtro de una acción de grupo: el mismo que el listado, sin paginar ni estado (siempre `open`). */
+export interface CurationFindingGroupFilter {
+  category: string;
+  detector: string;
+  signature?: string;
+  severity?: CurationSeverity;
+  entityKind?: string;
+  q?: string;
+  scanId?: number;
+  chained?: boolean;
+}
+
 export const curationApi = {
   summary: () => request<CurationSummary>("/curation/summary"),
   findings: (params: CurationFindingQuery = {}) => request<Page<CurationFinding>>("/curation/findings", { query: params }),
@@ -237,7 +249,7 @@ export const curationApi = {
   ignore: (id: number, reason: CurationIgnoreReason, note: string) =>
     request<CurationFinding>(`/curation/findings/${id}/ignore`, { method: "POST", authenticated: true, body: note ? { reason, note } : { reason } }),
   reopen: (id: number) => request<CurationFinding>(`/curation/findings/${id}/reopen`, { method: "POST", authenticated: true }),
-  ignoreGroup: (input: { category: string; detector: string; signature?: string; reason: CurationIgnoreReason; note: string }) =>
+  ignoreGroup: (input: CurationFindingGroupFilter & { reason: CurationIgnoreReason; note: string }) =>
     request<{ ignored: number }>("/curation/findings/ignore-group", { method: "POST", authenticated: true, body: input }),
   declareDistinct: (input: { kind: CurationPairKind; aId: number; bId: number; note: string }) =>
     request<{ created: boolean }>("/curation/distinct-pairs", { method: "POST", authenticated: true, body: input }),
@@ -247,7 +259,7 @@ export const curationApi = {
     }),
   fixSelected: (ids: number[], note: string) =>
     request<CurationFixBatchResult>("/curation/findings/fix-selected", { method: "POST", authenticated: true, body: { ids, note } }),
-  fixGroup: (input: { category: string; detector: string; signature?: string; note: string }) =>
+  fixGroup: (input: CurationFindingGroupFilter & { note: string }) =>
     request<CurationFixBatchResult>("/curation/findings/fix-group", { method: "POST", authenticated: true, body: input }),
 };
 

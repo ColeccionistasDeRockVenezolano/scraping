@@ -17,7 +17,8 @@ import {
   NotEquals, Sparkle, Trash, Wrench,
 } from "@phosphor-icons/react";
 import {
-  albumWrites, artistWrites, ApiError, curationApi, organizationWrites, personWrites, trackWrites, type CurationFindingQuery,
+  albumWrites, artistWrites, ApiError, curationApi, organizationWrites, personWrites, trackWrites,
+  type CurationFindingGroupFilter, type CurationFindingQuery,
 } from "../lib/api";
 import { useAsync } from "../lib/useAsync";
 import { useToast } from "../lib/ToastContext";
@@ -38,8 +39,6 @@ import type {
 } from "../lib/types";
 
 const LIMIT = 25;
-/** Campos con valor determinista: los únicos que la herramienta de corrección puede aplicar de un clic (src/curation/repository.ts). */
-const FIXABLE_FIELDS = new Set(["name", "title"]);
 const MERGEABLE_KINDS = new Set<string>(["person", "organization", "artist"]);
 const PAIR_KINDS = new Set<string>(["artist", "person", "organization", "album", "track"]);
 const ENTITY_WRITE_API: Readonly<Record<string, { remove: (id: number, note?: string) => Promise<unknown> }>> = {
@@ -162,6 +161,20 @@ export function CurationFindingsPage() {
   const activeDetector = category?.detectors.find((item) => item.key === detector)
     ?? (openDetectors.length === 1 ? openDetectors[0] : undefined);
   const signatures = activeDetector?.signatures ?? [];
+  // Lo mismo que `query`, sin paginar ni estado: exactamente lo que ven las
+  // acciones de grupo (ignorar/corregir este detector), para que afecten
+  // solo lo que la pantalla muestra (C3, PLAN_CURADURIA E3.1).
+  const groupFilter: CurationFindingGroupFilter | null = category && activeDetector
+    ? {
+      category: category.key, detector: activeDetector.key,
+      ...(signature ? { signature } : {}),
+      ...(severity ? { severity } : {}),
+      ...(entityKind ? { entityKind } : {}),
+      ...(q ? { q } : {}),
+      ...(scanId ? { scanId } : {}),
+      ...(chained ? { chained: true } : {}),
+    }
+    : null;
 
   return (
     <>
@@ -223,10 +236,14 @@ export function CurationFindingsPage() {
         ) : <span />}
         {category && activeDetector && status === "open" && data && data.pagination.total > 0 ? (
           <div className="cfind-count__actions">
-            <button type="button" className="btn btn--sm btn--outline" onClick={() => setFixingGroup(true)}>
-              <Wrench size={14} weight="bold" aria-hidden="true" />
-              Corregir {signature ? "este subgrupo" : "este detector"}
-            </button>
+            {/* Solo si hay algo que corregir de un clic en lo que se ve: «Corregir este detector» no debe
+                terminar en «0 corregidos» cuando el detector no calcula valor sugerido (A2). */}
+            {data.data.some((finding) => finding.suggestedValue !== null) ? (
+              <button type="button" className="btn btn--sm btn--outline" onClick={() => setFixingGroup(true)}>
+                <Wrench size={14} weight="bold" aria-hidden="true" />
+                Corregir {signature ? "este subgrupo" : "este detector"}
+              </button>
+            ) : null}
             <button type="button" className="btn btn--sm btn--outline" onClick={() => setIgnoringGroup(true)}>
               <EyeSlash size={14} weight="bold" aria-hidden="true" />
               Ignorar {signature ? "este subgrupo" : "este detector"}
@@ -249,7 +266,7 @@ export function CurationFindingsPage() {
                   categoryLabel={key ? undefined : summary?.categories.find((item) => item.key === finding.category)?.label ?? "Otros"}
                   onIgnore={() => setIgnoringFinding(finding)} onReopen={() => void reopen(finding)}
                   selected={selected.has(finding.id)} onToggleSelected={() => toggleSelected(finding.id)}
-                  onFix={FIXABLE_FIELDS.has(finding.field ?? "") && finding.entity.id !== null ? () => setFixingFinding(finding) : undefined}
+                  onFix={finding.suggestedValue !== null ? () => setFixingFinding(finding) : undefined}
                   onMerge={finding.category === "fichas_repetidas" && MERGEABLE_KINDS.has(finding.entity.kind) && finding.entity.id !== null
                     ? () => {
                       const other = finding.related.find((ref) => ref.kind === finding.entity.kind && ref.id !== null && ref.id !== finding.entity.id);
@@ -323,14 +340,14 @@ export function CurationFindingsPage() {
         />
       ) : null}
 
-      {ignoringGroup && category ? (
+      {ignoringGroup && groupFilter ? (
         <IgnoreDialog
           title={`¿Ignorar ${signature ? "este subgrupo" : "este detector"}?`}
-          description={`Los ${formatCount(data?.pagination.total ?? 0)} hallazgos abiertos de «${activeDetector?.label ?? detector}»${signature ? ` › «${signatures.find((item) => item.key === signature)?.label ?? signature}»` : ""} se marcarán como «no es un problema». El catálogo no cambia y cada caso se puede reabrir.`}
+          description={`Los ${formatCount(data?.pagination.total ?? 0)} hallazgos abiertos de «${activeDetector?.label ?? detector}»${signature ? ` › «${signatures.find((item) => item.key === signature)?.label ?? signature}»` : ""} (con los filtros activos) se marcarán como «no es un problema». El catálogo no cambia y cada caso se puede reabrir.`}
           confirmLabel="Ignorar el grupo"
           requireNote
           onConfirm={async (reason, note) => {
-            const result = await curationApi.ignoreGroup({ category: category.key, detector: activeDetector?.key ?? detector, ...(signature ? { signature } : {}), reason, note });
+            const result = await curationApi.ignoreGroup({ ...groupFilter, reason, note });
             notify("success", `${formatCount(result.ignored)} hallazgos ignorados.`);
             setIgnoringGroup(false);
             reload();
@@ -340,13 +357,13 @@ export function CurationFindingsPage() {
         />
       ) : null}
 
-      {fixingGroup && category ? (
+      {fixingGroup && groupFilter ? (
         <ConfirmDialog
           title={`¿Corregir ${signature ? "este subgrupo" : "este detector"}?`}
-          description={`Se aplicará a cada hallazgo abierto y corregible de «${activeDetector?.label ?? detector}»${signature ? ` › «${signatures.find((item) => item.key === signature)?.label ?? signature}»` : ""} su valor sugerido (hasta 500 de una vez). Los que no tengan una corrección determinista quedan sin tocar.`}
+          description={`Se aplicará a cada hallazgo abierto y corregible de «${activeDetector?.label ?? detector}»${signature ? ` › «${signatures.find((item) => item.key === signature)?.label ?? signature}»` : ""} (con los filtros activos) su valor sugerido (hasta 500 de una vez). Los que no tengan una corrección determinista quedan sin tocar.`}
           confirmLabel="Corregir el grupo"
           onConfirm={async (note) => {
-            const result = await curationApi.fixGroup({ category: category.key, detector: activeDetector?.key ?? detector, ...(signature ? { signature } : {}), note });
+            const result = await curationApi.fixGroup({ ...groupFilter, note });
             notify("success", `${formatCount(result.fixed)} hallazgos corregidos${result.failed ? `, ${formatCount(result.failed)} no se pudieron corregir` : ""}${result.more ? " (había más de 500; repite la acción para seguir)" : ""}.`);
             setFixingGroup(false);
             reload();
@@ -395,7 +412,7 @@ export function CurationFindingsPage() {
       {deletingFinding ? (
         <ConfirmDialog
           title="¿Eliminar esta ficha?"
-          description={`«${deletingFinding.entity.label}» no tiene vínculos con el catálogo. Se eliminará por completo; esta acción no se puede deshacer desde aquí.`}
+          description={`«${deletingFinding.entity.label}» no tiene vínculos con el catálogo. Se retira del catálogo con auditoría.`}
           confirmLabel="Eliminar ficha"
           danger
           onConfirm={(note) => deleteFinding(deletingFinding, note)}
@@ -469,12 +486,15 @@ function FixValueDialog({ finding, onFixed, onClose }: {
   const [error, setError] = useState<string>();
 
   async function submit() {
-    if (!value.trim()) { setError("El valor no puede quedar vacío."); return; }
+    const trimmed = value.trim();
+    if (!trimmed) { setError("El valor no puede quedar vacío."); return; }
+    // El diálogo rechaza una «corrección» que no cambia nada: mismo valor, ruido de auditoría sin motivo (A2).
+    if (trimmed === (finding.value ?? "").trim()) { setError("El valor debe ser distinto al actual."); return; }
     if (!note.trim()) { setError("La nota es obligatoria."); return; }
     setBusy(true);
     setError(undefined);
     try {
-      const updated = await curationApi.fix(finding.id, note.trim(), value.trim());
+      const updated = await curationApi.fix(finding.id, note.trim(), trimmed);
       onFixed(updated);
     } catch (err) {
       setError(err instanceof ApiError ? err.message : "No se pudo corregir el hallazgo.");
@@ -608,10 +628,12 @@ function FindingCard({ finding, categoryLabel, busy, onIgnore, onReopen, selecte
   return (
     <article className={`cfind cfind--${finding.severity}${finding.status !== "open" ? " is-closed" : ""}${selected ? " cfind--picked" : ""}`}>
       <div className="cfind__badges">
-        {finding.status === "open" ? (
+        {/* Solo si hay algo que corregir de un clic: seleccionar un hallazgo sin `suggestedValue`
+            solo serviría para que «Corregir seleccionados» lo reporte como no corregible (A2). */}
+        {finding.status === "open" && finding.suggestedValue !== null ? (
           <label className="visually-hidden" htmlFor={`cfind-pick-${finding.id}`}>Seleccionar este hallazgo</label>
         ) : null}
-        {finding.status === "open" ? (
+        {finding.status === "open" && finding.suggestedValue !== null ? (
           <input id={`cfind-pick-${finding.id}`} type="checkbox" checked={selected} onChange={onToggleSelected} />
         ) : null}
         <span className={`badge ${SEVERITY_BADGE[finding.severity]}`}>{SEVERITY_LABEL[finding.severity]}</span>
