@@ -293,6 +293,8 @@ Cuándo analiza:
   una revisión), agrupando escrituras seguidas en 1,5 s. El resultado aparece
   en «Última corrección verificada»: resueltos, nuevos y **desencadenados por
   la corrección**. Se apaga con `CRV_CURATION_AUTOSCAN=false`;
+- tras aplicar o deshacer un lote de correcciones de Curaduría: un análisis
+  **dirigido** solo a las fichas del lote (ver «Corregir desde Curaduría»);
 - cada `CRV_CURATION_WATCH_MS` (60 s; 0 lo apaga) si cambiaron los contadores
   del catálogo, lo que cubre ingestas y la CLI; y al arrancar la API;
 - a mano: botón «Analizar ahora» o
@@ -325,6 +327,61 @@ curl "${AUTH[@]}" -H 'content-type: application/json' -X POST "$API/curation/dis
 curl "${AUTH[@]}" -X DELETE "$API/curation/distinct-pairs/5"   # el detector puede volver a proponerlo
 ```
 
+#### Corregir desde Curaduría: lotes con vista previa y deshacer
+
+Toda corrección es un **lote** (migración 0021): se previsualiza sin escribir
+nada, se aplica con el hash de esa vista previa y una nota, se verifica sola y
+se puede deshacer. Lo mismo para un hallazgo (`individual`), una selección
+(`selected`, por ids) o un grupo (`group`, con el filtro exacto del listado).
+
+```bash
+AUTH=(-H "Authorization: Bearer $CRV_OPERATOR_TOKEN" -H "x-crv-operator: Nombre" -H 'content-type: application/json')
+curl "${AUTH[@]}" "$API/curation/findings/812/actions"             # acciones, nivel, parámetros y precondiciones
+curl "${AUTH[@]}" -X POST "$API/curation/fixes/preview" \
+  -d '{"mode":"group","filter":{"category":"nombres_sucios","detector":"caracteres_invisibles","entityKind":"artist"}}'
+#   → lote 41 `previewed`, `previewHash`, ítems con antes → después, bloqueos y colisiones
+curl "${AUTH[@]}" "$API/curation/fixes/41?status=blocked&limit=200" # revisar lo que no se aplicará
+curl "${AUTH[@]}" -X POST "$API/curation/fixes/41/apply" \
+  -d '{"previewHash":"<hash de la vista previa>","excludeItemIds":[907],"note":"quitar invisibles de artistas"}'
+curl "${AUTH[@]}" "$API/curation/fixes/41"                          # progreso, resultado por ítem y `verification`
+curl "${AUTH[@]}" -X POST "$API/curation/fixes/41/undo" -d '{"note":"deshacer: afectó a bandas que lo llevan a propósito"}'
+```
+
+- **Qué se aplica.** Cada hallazgo recibe su acción recomendada (o la pedida con
+  `actionKey`). Una selección llega a nivel 2 y un grupo a nivel 1: lo demás
+  queda `blocked` con el motivo (`level`, `collision`, `stale`, `noop`,
+  `not_applicable`…). Si el nombre limpio de un artista ya existe, el ítem queda
+  `collision` y trae `proposal` (`fusionar` con sus parámetros): se previsualiza
+  aparte con `"actionKey":"fusionar","overrides":{"params":…}`.
+- **409 al aplicar** (`stale_preview`): el hash no es el de la vista previa, o
+  algo cambió desde entonces (`details.changedItemIds`). No se escribió nada:
+  previsualizar otra vez, o excluir esos ítems y repetir con el mismo hash.
+- **Resultado por ítem.** `applied` (con su `runId`), `skipped_stale` (la
+  ficha cambió en medio del lote: no se tocó), `failed` (con `errorCode`),
+  `excluded`. Un ítem así no detiene el lote. Estado del lote: `done`,
+  `partial` (algo quedó sin aplicar), `failed` (nada se aplicó) o `running`.
+- **Lotes grandes.** Cada llamada aplica hasta `CRV_CURATION_FIX_BATCH_MAX`
+  (500) ítems; si el lote sigue `running`, repetir la misma llamada continúa.
+  Una vista previa admite hasta `CRV_CURATION_FIX_PREVIEW_MAX` (5000) hallazgos;
+  `counts.truncated` avisa si el filtro traía más.
+- **Verificación.** Tras aplicar, un análisis dirigido a las fichas tocadas
+  deja en el lote (`verification`) lo resuelto, lo nuevo y lo desencadenado.
+  Los hallazgos corregidos quedan «corregido desde Curaduría» con el run de su
+  ítem.
+- **Deshacer** crea otro lote (`mode: undo`) que revierte en orden inverso.
+  Solo restaura lo que sigue como lo dejó la corrección: si alguien cambió la
+  ficha después, esa corrección queda `not_undoable` con el motivo y el resto
+  se deshace. Los claims de la corrección no se borran (quedan sustituidos). Un
+  lote deshecho del todo queda `undone`; si quedaban pendientes, ya no se
+  aplicarán.
+
+Los endpoints anteriores `POST /curation/findings/:id/fix`, `fix-selected` y
+`fix-group` **siguen una versión** (la web los usa hasta la etapa E8): cada
+llamada previsualiza y aplica un lote de limpieza de texto de una vez, con la
+misma respuesta de antes; el lote queda consultable y deshacible en
+`/curation/fixes/:id`. Ya no disparan el análisis completo: verifican con el
+dirigido.
+
 Estados de un análisis (`ingest.curation_scans.status`, migración 0019):
 
 | Estado | Qué pasó | Qué hacer |
@@ -343,10 +400,11 @@ Retención: `curation prune` conserva los últimos 500 análisis y los hallazgos
 resueltos de los últimos 180 días; nunca borra abiertos ni ignorados. Toma el
 mismo candado que el análisis: si hay uno en curso, no borra nada y lo dice.
 
-> **Antes de reiniciar la API con este código, aplicar las migraciones 0019 y
-> 0020** (`npm run db:migrate`): sin 0019 faltan `resolution`/`resolved_by_run_id`;
-> sin 0020 fallan ignorar (`ignore_reason`) y los pares declarados distintos. Un
-> `curation scan --dry-run` funciona sin 0020.
+> **Antes de reiniciar la API con este código, aplicar las migraciones 0019,
+> 0020 y 0021** (`npm run db:migrate`): sin 0019 faltan `resolution`/`resolved_by_run_id`;
+> sin 0020 fallan ignorar (`ignore_reason`) y los pares declarados distintos;
+> sin 0021 fallan el listado de análisis (`scope`), las correcciones (lotes) y
+> guardar cualquier análisis. Un `curation scan --dry-run` funciona sin 0020 ni 0021.
 >
 > **Primer análisis con las reglas v2** (`curation-rules.v2`): muchos hallazgos
 > cambian de huella (duplicados por par, subgrupos nuevos, «Otros» por clase).

@@ -541,8 +541,14 @@ signos y largos de cada campo).
 | `src/curation/detectors/anomalies.ts` | «Otros»: valores que se salen del perfil de su campo y que ningún detector explica |
 | `src/curation/taxonomy.ts` | categorías; una categoría o tipo de revisión desconocido cae en «otros» |
 | `src/curation/analyze.ts` | corre los detectores (uno roto no apaga al resto), dice cuáles miraron el catálogo entero (`completed`), huella estable por hallazgo |
-| `src/curation/scan.ts` | persiste en `ingest.curation_findings` (abierto/ignorado/resuelto), marca lo encadenado; un análisis a la vez en el proceso y entre procesos (candado de sesión) |
-| `src/curation/resolution.ts` | por qué se resolvió cada hallazgo, con el run de `merge_audit` que cambió el valor |
+| `src/curation/scan.ts` | persiste en `ingest.curation_findings` (abierto/ignorado/resuelto), marca lo encadenado; análisis completo o dirigido a unas fichas; un análisis a la vez en el proceso y entre procesos (candado de sesión) |
+| `src/curation/resolution.ts` | por qué se resolvió cada hallazgo: el ítem de lote que lo corrigió, o el run de `merge_audit` que cambió el valor |
+| `src/curation/actions/types.ts`, `registry.ts` | acciones de corrección tipadas (nivel 0–3, parámetros con Zod, precondiciones, vista previa, aplicar, inversa); cada detector declara cuáles ofrece por subgrupo (`actions`) |
+| `src/curation/actions/text.ts`, `merge.ts` | `limpiar_texto` (los cinco detectores con valor sugerido) y `fusionar` (fichas repetidas, y la propuesta cuando un renombrado choca) |
+| `src/curation/actions/names.ts` | colisiones de nombre por `nameKey` antes de renombrar, con los renombrados del propio lote superpuestos |
+| `src/curation/actions/batches.ts` | lotes de correcciones: vista previa con hash, aplicar ítem a ítem, verificación dirigida y deshacer |
+| `src/merge/field-undo.ts` | diario de una corrección de campo (`withFieldJournal`) y su deshacer con CAS inverso (`undoFieldCorrections`) |
+| `src/api/routes/curation-actions.ts` | `GET /curation/findings/:id/actions` y `/curation/fixes/*` (vista previa, aplicar, progreso, deshacer) |
 | `src/curation/retention.ts` | poda: últimos 500 análisis y resueltos de 180 días (`crv curation prune`) |
 | `src/curation/watcher.ts` | análisis tras cada escritura correcta de la API y cuando cambian los contadores del catálogo; nunca deja promesas rechazadas |
 | `src/api/routes/curation.ts` | `/curation/*` (solo admin) y el gancho `onResponse` que dispara la verificación solo ante escrituras de la lista `CATALOG_WRITES` |
@@ -571,8 +577,10 @@ Detectar sin mentir (PLAN_CURADURIA E1, migración 0019):
   análisis se registra `skipped`: la verificación de una escritura se reintenta
   unas veces cada 5 s y el vigilante lo retoma en su siguiente vuelta. Un
   `--dry-run` no escribe y no toma el candado.
-- **Motivo de resolución.** `fixed_by_curation` (el último `merge_audit` que
-  cambió el valor detectado es de un run `api:curation:*`), `changed_elsewhere`
+- **Motivo de resolución.** `fixed_by_curation` (un ítem de lote aplicado
+  sobre el hallazgo desde que apareció —su run, también si una fusión retiró la
+  ficha—, o el último `merge_audit` que cambió el valor detectado es de un run
+  `api:curation:*` que no es un deshacer), `changed_elsewhere`
   (otra escritura auditada, o nada auditado), `entity_removed` (la ficha ya no
   está en la foto) y `rules_changed` (detector retirado, o reglas de otra
   versión sobre un valor que no cambió). `resolved_by_run_id` apunta al run
@@ -613,6 +621,75 @@ Precisión y decisiones duraderas (PLAN_CURADURIA E2, reglas
   (`test/fixtures/curation/catalog-2026-09-16.json.gz`) contra el corpus
   etiquetado (`corpus.json`): ningún verdadero positivo perdido, ningún falso
   positivo corregido de vuelta y precisión por detector ≥ su umbral.
+
+Correcciones como lotes (PLAN_CURADURIA E4, migración 0021). Toda corrección
+—de un hallazgo, de una selección o de un grupo filtrado— recorre el mismo
+ciclo: vista previa → aplicar → verificar → deshacer.
+
+- **Acciones tipadas.** Una acción declara clave, nivel (0 seguro, 1 sugerido,
+  2 asistido, 3 manual), esquema de parámetros, precondiciones, vista previa
+  (antes → después, fichas tocadas, colisiones, bloqueo o propuesta), cómo se
+  aplica por el motor y su inversa. Se ofrece si el detector la declara para el
+  subgrupo **y** la acción aplica (`limpiar_texto` necesita valor sugerido); a
+  mano solo se pide una no declarada si la acción lo acepta. Hoy hay dos:
+  `limpiar_texto` (invisibles, espacios y entidades son nivel 0; reparar la
+  codificación, un signo colgante que no sea « -», «,» o «/» suelto, o un valor
+  escrito a mano, 1) y `fusionar` (pares de artistas, personas y organizaciones:
+  1 si solo cambian tildes o mayúsculas, 2 si no).
+- **Lote.** `ingest.curation_fix_batches` y `ingest.curation_fix_items`. La
+  vista previa es una foto `REPEATABLE READ READ ONLY`; cada ítem guarda su
+  antes → después y el hash de lo que se vio, y el lote el hash de todos. Una
+  corrección individual o una selección llegan a nivel 2; un grupo, a 1; el 3
+  nunca (`auto` queda para la autocorrección de E10). Varios ítems sobre la
+  misma ficha y campo se encadenan: cada uno parte de lo que deja el anterior
+  (reparar la codificación antes que quitar invisibles), y uno que ya no
+  cambiaría nada queda cubierto por el anterior y comparte su run.
+- **Aplicar.** Exige el hash del lote y una nota. Antes de escribir se vuelve a
+  planificar lo pendiente sobre una foto nueva: si el hash de algún ítem
+  cambió, `409 stale_preview` con `changedItemIds` y nada escrito (se vuelve a
+  previsualizar o se excluyen). Después, un `withOperatorRun` por ítem
+  (`api:curation:fix:<acción>`, auditoría por ficha), con candados por ficha
+  (`crv:curation:fix:<tipo>:<id>`, siempre en el mismo orden), vuelve a
+  bloquear y leer el hallazgo, y recalcula el hash dentro de la transacción: si
+  la ficha cambió o el hallazgo ya no sigue abierto en medio del lote,
+  `skipped_stale`; si falla, `failed`; ninguno detiene el lote. Hasta
+  `CRV_CURATION_FIX_BATCH_MAX` ítems por llamada: el lote queda `running` y otra
+  llamada igual continúa (sin la comprobación previa: cada ítem se comprueba al
+  escribirse). Un candado de sesión por lote impide aplicarlo o deshacerlo desde
+  dos sitios a la vez.
+- **Colisiones (M6).** Antes de renombrar se buscan fichas del mismo tipo con la
+  misma `nameKey` (en TypeScript: la base es `SQL_ASCII`): artistas, personas y
+  organizaciones en todo el catálogo; discos del mismo artista; pistas del mismo
+  disco; también los nombres que deja el propio lote. Es un aviso, salvo el
+  nombre idéntico de otro artista (`artists.name` es `UNIQUE`): el ítem queda
+  bloqueado (`collision`) y propone `fusionar` con los parámetros listos.
+- **Verificación dirigida.** Tras aplicar o deshacer, un análisis con
+  `scope = 'dirigido'` y foco en las fichas tocadas, la del hallazgo y sus
+  relacionadas: analiza la foto entera pero solo guarda y resuelve lo que toca
+  al foco. Los dirigidos van en cola detrás del análisis en curso y no cuentan
+  como último análisis ni para el vigilante. El lote guarda en `verification`
+  lo resuelto, lo nuevo y lo desencadenado. Las rutas de lotes no están en
+  `CATALOG_WRITES`: no disparan el análisis completo, que el vigilante hace en
+  su vuelta.
+- **Deshacer (A8).** Otro lote (`mode = 'undo'`, `undo_of_batch_id`) que recorre
+  lo aplicado en orden inverso, un run por corrección
+  (`api:curation:undo:<acción>`). Un campo: `undoFieldCorrections` restaura el
+  `old_value` exacto de `merge_audit` si el valor actual sigue siendo el
+  `new_value` (CAS inverso, comparado en SQL), sin pasar por `updateEntity`
+  —que normalizaría justo el texto que se limpió—, y con el diario que
+  `withFieldJournal` guardó en el run retira el alias que añadió el renombrado,
+  devuelve el estado de los claims, conflictos y revisiones que la corrección
+  cerró, deja `superseded` sus claims (no se borran) y descarta lo que abrió.
+  Una fusión: `undoMergeRun`, que ahora retira el alias de fusión de toda ficha
+  con nombre (antes solo de personas) y devuelve los alias primarios del
+  duplicado (`primaryAliases` en la auditoría desde 0021). Si algo cambió
+  después, el ítem de deshacer queda `skipped_stale`, la corrección
+  `not_undoable` con el motivo, y el resto se deshace igual. Deshacer no es
+  corregir: no resuelve nada como `fixed_by_curation`.
+- **Alias obsoletos.** `POST /curation/findings/:id/fix`, `fix-selected` y
+  `fix-group` se mantienen una versión: previsualizan y aplican en la misma
+  llamada un lote de `limpiar_texto` y responden con la forma de E3. La web los
+  sigue usando hasta E8.
 
 ## 5. Flujo de datos end-to-end
 
@@ -656,7 +733,7 @@ El seed YT sigue el mismo flujo saltando 1-2 (el "raw" es la fila XLSX).
   cubre además la migración de enums, y `tests/lib_pg.sh` comparte el arranque
   del contenedor. **Portado a Vitest (F0):**
   `test/contract/core-and-schema.test.ts` reproduce ese mismo contrato
-  (core + todas las migraciones, hoy 0001–0020, vía `src/db/migrate.ts` + rollback + diff
+  (core + todas las migraciones, hoy 0001–0021, vía `src/db/migrate.ts` + rollback + diff
   vacío) contra un contenedor propio (`test/support/pg-container.ts`, mismo
   arranque en dos fases que `tests/lib_pg.sh`), y añade el ejercicio real
   del schema Drizzle: inserts y joins a través de `public`+`ingest`+`media`
