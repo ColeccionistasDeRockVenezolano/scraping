@@ -443,8 +443,14 @@ npm run cli -- er:prune --keep-full-days=7         # conservar más días de dos
   corre con el `/dev/shm` por defecto (64 MB) y el VACUUM paralelo muere con
   `could not resize shared memory segment … No space left on device`; sin
   paralelismo no hay segmento DSM y pasa (medido: falla y 1,5 min respectivamente).
-- El autovacuum limpia ese TOAST a paso de tortuga por su *cost-delay* (medido el
-  2026-09-18: 8 % en 1 h 50 sobre 19 GB), ...[truncated]
+- El autovacuum limpia ese TOAST a paso de tortuga (medido el 2026-09-18: 8 % en
+  1 h 50 sobre 19 GB), así que el cierre de un backfill se hace con el VACUUM
+  manual (sin throttling: minutos). Si el autovacuum tiene cogida la tabla,
+  `pg_terminate_backend(pid)` y, cuando el pid desaparezca, relanzar el manual.
+  Ojo: un `pkill -STOP` amplio de otra sesión puede dejarlo en estado `T`
+  (stopped) —el progreso se congela y las señales no se procesan hasta un
+  `kill -CONT`—; ante un vacuum que no avanza, mirar `/proc/<pid>/status` antes
+  de nada (nos pasó: 1 h 50 «corriendo» sin avanzar un bloque).
 
 ## 5. Logs y trazabilidad
 
