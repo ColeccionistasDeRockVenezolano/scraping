@@ -85,6 +85,23 @@ describe("API de escritura (E7B)", () => {
     expect(Number((await one<{ n: string }>("SELECT count(*) n FROM public.artists")).n)).toBe(0);
   });
 
+  it("el preflight CORS habilita los métodos de escritura de la interfaz (PATCH incluido)", async () => {
+    // Regresión 2026-09-18: sin `methods` explícito, @fastify/cors solo
+    // anunciaba GET/HEAD/POST y el navegador bloqueaba toda edición (PATCH y
+    // DELETE) desde la web de desarrollo u otro origen declarado.
+    const origin = (process.env["CRV_ALLOWED_ORIGINS"] ?? "http://127.0.0.1:5173").split(",")[0]!.trim();
+    for (const method of ["POST", "PATCH", "DELETE"]) {
+      const response = await app.inject({
+        method: "OPTIONS", url: "/albums/1",
+        headers: { origin, "access-control-request-method": method, "access-control-request-headers": "content-type,x-crv-csrf" },
+      });
+      expect([200, 204]).toContain(response.statusCode);
+      expect(response.headers["access-control-allow-origin"]).toBe(origin);
+      expect(String(response.headers["access-control-allow-methods"])).toContain(method);
+      expect(String(response.headers["access-control-allow-headers"]).toLowerCase()).toContain("x-crv-csrf");
+    }
+  });
+
   let artistId: number;
   let albumId: number;
 
@@ -237,6 +254,115 @@ describe("API de escritura (E7B)", () => {
     expect(trackGone.statusCode).toBe(200);
     expect((await one<{ field: string }>("SELECT field FROM ingest.merge_audit WHERE id=$1", [trackGone.json().parentAuditId])).field).toBe("removed_track");
     expect((await write("DELETE", `/tracks/${trackId}`)).statusCode).toBe(404);
+  });
+
+  it("reapunta el acreditado de un crédito, la persona de una membresía y el padre de disco y pista", async () => {
+    // Fixtures propios: el caso no depende del orden ni del estado de otros.
+    // Cada alta verifica su 201: un 409 del ER dejaría el id en undefined y
+    // el fallo aparecería lejos de su causa.
+    const create = async (url: string, payload: Record<string, unknown>): Promise<number> => {
+      const res = await write("POST", url, payload);
+      expect(res.statusCode).toBe(201);
+      return res.json().id as number;
+    };
+    const band = await create("/artists", { name: "Los Reapuntados", artistType: "band", originCountry: "Venezuela" });
+    const otherBand = await create("/artists", { name: "Otra Banda Reapuntada", artistType: "band", originCountry: "Venezuela" });
+    const album = await create("/albums", { artistId: band, title: "Órbita Reapuntada" });
+    const destination = await create("/albums", { artistId: band, title: "Playa Lejana" });
+    const alice = await create("/persons", { name: "Alice Reapuntada" });
+    const bob = await create("/persons", { name: "Bob Reapuntado" });
+
+    // --- Crédito: cambiar la persona acreditada -----------------------------
+    const creditAlice = await create("/album-credits", { albumId: album, personId: alice, role: "Guitarra" });
+    const creditBob = await create("/album-credits", { albumId: album, personId: bob, role: "Guitarra" });
+    // Reapuntar al segundo hacia Alice dejaría dos créditos equivalentes: se rechaza con el id del que ya existe.
+    const duplicate = await write("PATCH", `/album-credits/${creditBob}`, { personId: alice, note: "era de Alice" });
+    expect(duplicate.statusCode).toBe(422);
+    expect(duplicate.json().error.message).toContain(`id ${creditAlice}`);
+
+    const swapped = await write("PATCH", `/album-credits/${creditBob}`, { personId: alice, role: "Batería", note: "en realidad tocó la batería" });
+    expect(swapped.statusCode).toBe(200);
+    // Los campos se procesan antes que el extremo: el rol cambia primero.
+    expect(swapped.json().fields).toEqual([{ field: "role", action: "corrected" }, { field: "person_id", action: "corrected" }]);
+    expect(await one<{ person_id: string }>("SELECT person_id::text FROM public.album_credits WHERE id=$1", [creditBob]))
+      .toEqual({ person_id: String(alice) });
+
+    // Cambiar a un artista suelta la persona (exactamente un acreditado).
+    const toBand = await write("PATCH", `/album-credits/${creditBob}`, { artistId: band, note: "el crédito era de la banda" });
+    expect(toBand.statusCode).toBe(200);
+    expect(toBand.json().fields).toEqual([{ field: "artist_id", action: "corrected" }]);
+    expect(await one<{ person_id: string | null; artist_id: string }>(
+      "SELECT person_id,artist_id::text FROM public.album_credits WHERE id=$1", [creditBob]))
+      .toEqual({ person_id: null, artist_id: String(band) });
+
+    const creditAudit = (await app.inject({ method: "GET", url: `/audit?entity=album_credit&id=${creditBob}` })).json().data
+      .map((row: { field: string; oldValue: unknown; newValue: unknown }) => [row.field, row.oldValue, row.newValue]);
+    expect(creditAudit).toEqual(expect.arrayContaining([
+      ["artist_id", null, band], ["person_id", bob, alice], ["person_id", alice, null],
+    ]));
+
+    // Dos extremos a la vez en un PATCH: 400 (regla del alta, también aquí).
+    expect((await write("PATCH", `/album-credits/${creditBob}`, { personId: alice, artistId: band, note: "x" })).statusCode).toBe(400);
+    // Acreditado inexistente: 422 con el id en el mensaje.
+    const missing = await write("PATCH", `/album-credits/${creditBob}`, { personId: 999_999, note: "x" });
+    expect(missing.statusCode).toBe(422);
+    expect(missing.json().error.message).toContain("999999");
+
+    // --- Membresía: cambiar la persona --------------------------------------
+    const membership = await create("/artist-members", { artistId: band, personId: alice, role: "Voz" });
+    const memberSwap = await write("PATCH", `/artist-members/${membership}`, { personId: bob, note: "quien cantaba era Bob" });
+    expect(memberSwap.statusCode).toBe(200);
+    expect(memberSwap.json().fields).toEqual([{ field: "person_id", action: "corrected" }]);
+    expect(await one<{ person_id: string }>("SELECT person_id::text FROM public.artist_members WHERE id=$1", [membership]))
+      .toEqual({ person_id: String(bob) });
+
+    // --- Persona ↔ organización: crear, corregir extremos y retirar ---------
+    const org = await create("/organizations", { name: "Estudio Reapuntado", organizationType: "recording_studio" });
+    const orgTwo = await create("/organizations", { name: "Sello Alterno", organizationType: "record_label" });
+    const link = await create("/person-organizations", { personId: alice, organizationId: org, role: "Coros", fromYear: 2000 });
+    const linkFixed = await write("PATCH", `/person-organizations/${link}`, { organizationId: orgTwo, personId: bob, note: "el vínculo era de Bob en el otro estudio" });
+    expect(linkFixed.statusCode).toBe(200);
+    // El orden lo fija el esquema (personId antes que organizationId), no el cuerpo.
+    expect(linkFixed.json().fields).toEqual([{ field: "person_id", action: "corrected" }, { field: "organization_id", action: "corrected" }]);
+    expect(await one<{ person_id: string; organization_id: string }>(
+      "SELECT person_id::text,organization_id::text FROM public.person_organizations WHERE id=$1", [link]))
+      .toEqual({ person_id: String(bob), organization_id: String(orgTwo) });
+
+    // --- Disco: reatribuir el artista ---------------------------------------
+    const moved = await write("PATCH", `/albums/${album}`, { artistId: otherBand, note: "el disco es de la otra banda" });
+    expect(moved.statusCode).toBe(200);
+    expect(moved.json().fields).toEqual([{ field: "artist_id", action: "corrected", conflictsClosed: [] }]);
+    expect((await app.inject({ method: "GET", url: `/albums/${album}` })).json().artist).toMatchObject({ id: otherBand, name: "Otra Banda Reapuntada" });
+    const albumAudit = (await app.inject({ method: "GET", url: `/audit?entity=album&id=${album}` })).json().data
+      .filter((row: { field: string }) => row.field === "artist_id")
+      .map((row: { oldValue: unknown; newValue: unknown; performedBy: string; runId: number }) => [row.oldValue, row.newValue, row.performedBy, typeof row.runId]);
+    expect(albumAudit).toEqual([[band, otherBand, "human", "number"]]);
+    // Repetirlo con el mismo artista no cambia nada (idempotente).
+    expect((await write("PATCH", `/albums/${album}`, { artistId: otherBand, note: "sin cambio" })).json().fields)
+      .toEqual([{ field: "artist_id", action: "unchanged", conflictsClosed: [] }]);
+
+    // --- Pista: moverla de disco con colisión controlada --------------------
+    const track = (await write("POST", "/tracks", { albumId: destination, title: "Pista Móvil", trackNumber: 5 })).json().id as number;
+    await write("POST", "/tracks", { albumId: album, title: "Ya Está", trackNumber: 5 });
+    const collide = await write("PATCH", `/tracks/${track}`, { albumId: album, note: "mover sin mirar" });
+    expect(collide.statusCode).toBe(409);
+    expect(collide.json().error).toMatchObject({ code: "already_exists" });
+    expect(collide.json().error.message).toContain("«Ya Está»");
+
+    const relocated = await write("PATCH", `/tracks/${track}`, { albumId: album, trackNumber: 6, note: "al hueco 6" });
+    expect(relocated.statusCode).toBe(200);
+    // track_number nunca se afirmó como campo (el alta lo fija estructural): el merge lo aplica;
+    // album_id sí es una corrección de padre con auditoría propia.
+    expect(relocated.json().fields).toEqual([
+      { field: "track_number", action: "applied", conflictsClosed: [] },
+      { field: "album_id", action: "corrected", conflictsClosed: [] },
+    ]);
+    expect(await one<{ album_id: string; track_number: number }>(
+      "SELECT album_id::text,track_number FROM public.tracks WHERE id=$1", [track]))
+      .toEqual({ album_id: String(album), track_number: 6 });
+    const trackAudit = (await app.inject({ method: "GET", url: `/audit?entity=track&id=${track}` })).json().data
+      .map((row: { field: string }) => row.field);
+    expect(trackAudit).toContain("album_id");
   });
 
   async function conflictOnReleaseYear(title: string, first: number, second: number): Promise<{ albumId: number; reviewId: number; claimA: number; claimB: number }> {

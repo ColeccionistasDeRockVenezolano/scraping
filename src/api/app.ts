@@ -66,6 +66,11 @@ export async function buildApp(): Promise<FastifyInstance> {
   await app.register(cors, {
     origin: getEnv().CRV_ALLOWED_ORIGINS.split(",").map((item) => item.trim()).filter(Boolean),
     credentials: true,
+    // Sin esta lista, @fastify/cors solo anuncia GET/HEAD/POST y el navegador
+    // bloquea en el preflight TODA edición (PATCH/DELETE) desde un origen
+    // declarado distinto del de la API — pasó con el QA de administración
+    // (2026-09-18): la web de desarrollo no podía guardar nada.
+    methods: ["GET", "HEAD", "POST", "PUT", "PATCH", "DELETE"],
     allowedHeaders: ["content-type", "authorization", "x-crv-operator", "x-crv-csrf"],
   });
 

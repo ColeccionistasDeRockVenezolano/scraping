@@ -865,6 +865,117 @@ export interface RelationCorrection {
   note: string;
 }
 
+// ---------------------------------------------------------------------------
+// Corrección del EXTREMO de una fila puente: a quién acredita un crédito, con
+// qué persona se registró una membresía, qué organización acompaña a una
+// persona. Un extremo no es un campo más: cambiarlo es decir que la fila
+// estaba mal apuntada. Sobre un crédito se aplica, además, la regla dura del
+// core — acredita EXACTAMENTE a uno — y la equivalencia que usa el alta: el
+// cambio no puede dejar dos créditos equivalentes en la misma obra.
+// ---------------------------------------------------------------------------
+
+const ENDPOINT_COLUMN_KIND = { person_id: "person", artist_id: "artist", organization_id: "organization" } as const;
+
+type EndpointColumn = keyof typeof ENDPOINT_COLUMN_KIND;
+
+/** Extremos que la API permite corregir por tipo (el disco padre de un formato no se mueve). */
+const EDITABLE_ENDPOINTS: Readonly<Record<RelationClaimKind, readonly EndpointColumn[]>> = {
+  artist_membership: ["person_id"],
+  person_organization: ["person_id", "organization_id"],
+  album_credit: ["person_id", "artist_id", "organization_id"],
+  track_credit: ["person_id", "artist_id", "organization_id"],
+  album_format: [],
+};
+
+export function editableRelationEndpoints(kind: RelationClaimKind): readonly string[] {
+  return EDITABLE_ENDPOINTS[kind];
+}
+
+/** Columnas del acreditado por tipo de crédito (exactamente una no nula). */
+const CREDIT_TARGET_COLUMNS: Partial<Record<RelationClaimKind, readonly EndpointColumn[]>> = {
+  album_credit: ["person_id", "artist_id", "organization_id"],
+  track_credit: ["person_id", "artist_id", "organization_id"],
+};
+
+function coerceEndpoint(field: string, value: unknown): number {
+  const parsed = typeof value === "number" ? value : Number(String(value ?? "").trim());
+  if (!Number.isInteger(parsed) || parsed <= 0) throw new Error(`${field} debe ser un id entero positivo`);
+  return parsed;
+}
+
+export async function correctRelationEndpoint(
+  client: PoolClient, input: RelationCorrection,
+): Promise<{ changed: boolean; oldValue: unknown; newValue: unknown }> {
+  if (input.claim.createdBy !== "human") throw new Error("solo una persona corrige una fila puente registrada");
+  if (!input.note.trim()) throw new Error("nota obligatoria para corregir una relación");
+  const spec = RELATION_SPECS[input.kind];
+  const field = input.field as EndpointColumn;
+  if (!EDITABLE_ENDPOINTS[input.kind].includes(field)) throw new Error(`extremo ${input.kind}.${input.field} no editable`);
+  const value = coerceEndpoint(input.field, input.value);
+  await client.query("SELECT pg_advisory_xact_lock(hashtext($1))", [`relation-row:${input.kind}:${input.id}`]);
+
+  const targetColumns = CREDIT_TARGET_COLUMNS[input.kind] ?? [];
+  const watched = targetColumns.length ? [...targetColumns, "credit_type::text AS credit_type", "role"] : [field];
+  const loaded = await client.query<Record<string, unknown>>(
+    `SELECT ${watched.join(", ")} FROM ${spec.table} WHERE id=$1 FOR UPDATE`, [input.id]);
+  const row = loaded.rows[0];
+  if (!row) throw new RelationRowMissingError(input.kind, input.id);
+  // Las columnas FK llegan de PostgreSQL como texto (bigint); la auditoría
+  // guarda números, como el resto del historial.
+  const readId = (column: string): number | null => (row[column] === null || row[column] === undefined ? null : Number(row[column]));
+  const current = readId(field);
+  const changed = current !== value;
+
+  if (changed) {
+    // El nuevo extremo debe existir: se verifica igual que en el alta (mismo error si no está).
+    await explicitEndpoint(client, ENDPOINT_COLUMN_KIND[field], value);
+    let released: EndpointColumn[] = [];
+    if (targetColumns.length) {
+      // La fila guarda un solo acreditado: al fijar el nuevo, el anterior se suelta.
+      released = targetColumns.filter((column) => column !== field && row[column] !== null);
+      if (released.length > 1) throw new Error("el crédito tiene más de un acreditado; corrige la fila antes de reapuntarla");
+      const duplicate = await equivalentCreditId(client, input.kind, input.id, field, value, String(row["credit_type"]), String(row["role"]));
+      if (duplicate !== null) {
+        throw new Error(`ya existe un crédito de este acreditado con la misma función en esta obra (id ${duplicate}); retíralo o cambia antes el rol o el tipo`);
+      }
+    }
+    const sets = targetColumns.length
+      ? `${targetColumns.map((column) => `${column}=${column === field ? "$1" : "NULL"}`).join(", ")}`
+      : `${field}=$1`;
+    await client.query(`UPDATE ${spec.table} SET ${sets} WHERE id=$2`, [value, input.id]);
+    // Cada columna movida deja su propia fila de auditoría: fijar el nuevo
+    // acreditado y soltar el anterior son dos hechos distintos.
+    for (const column of released) {
+      await auditRelation(client, input.claim, input.claimId, spec, input.id, column, readId(column), null, "high",
+        `corrección humana: ${input.note}`);
+    }
+    await auditRelation(client, input.claim, input.claimId, spec, input.id, field, current, value, "high",
+      `corrección humana: ${input.note}`);
+  }
+  await client.query(`UPDATE ingest.claims SET ${spec.column}=$1,status='accepted',updated_at=now() WHERE id=$2`, [input.id, input.claimId]);
+  await client.query(
+    `UPDATE ingest.claims SET status='superseded',updated_at=now()
+      WHERE ${spec.column}=$1 AND field=$2 AND id<>$3 AND status='accepted'`,
+    [input.id, input.field, input.claimId],
+  );
+  return { changed, oldValue: current, newValue: changed ? value : current };
+}
+
+/** Id de otro crédito de la misma obra, mismo acreditado y misma clave de equivalencia; null si no hay. */
+async function equivalentCreditId(
+  client: PoolClient, kind: RelationClaimKind, id: number, field: EndpointColumn, targetId: number, creditType: string, role: string,
+): Promise<number | null> {
+  const parentColumn = kind === "album_credit" ? "album_id" : "track_id";
+  const { rows } = await client.query<{ id: string; credit_type: string; role: string }>(
+    `SELECT c.id::text, c.credit_type::text AS credit_type, c.role
+       FROM ${RELATION_SPECS[kind].table} c
+       JOIN ${RELATION_SPECS[kind].table} self ON self.id=$1 AND c.${parentColumn}=self.${parentColumn}
+      WHERE c.id<>$1 AND c.${field}=$2`, [id, targetId]);
+  const key = creditEquivalenceKey(creditType as CreditType, role);
+  const match = rows.find((candidate) => creditEquivalenceKey(candidate.credit_type as CreditType, candidate.role) === key);
+  return match ? Number(match.id) : null;
+}
+
 export async function correctRelationField(
   client: PoolClient, input: RelationCorrection,
 ): Promise<{ changed: boolean; oldValue: unknown; newValue: unknown }> {

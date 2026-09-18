@@ -24,7 +24,8 @@ import { normalizeIdentity } from "../normalization/claims.js";
 import { canonicalFieldValue, mergeClaim, overrideFieldByHuman } from "./engine.js";
 import { ENTITY_SPECS, type EntitySpec, type ResolvableClaimKind } from "./specs.js";
 import {
-  RELATION_SPECS, RelationEndpointMissingError, RelationRowMissingError, correctRelationField, editableRelationFields,
+  RELATION_SPECS, RelationEndpointMissingError, RelationRowMissingError, correctRelationEndpoint, correctRelationField,
+  editableRelationEndpoints, editableRelationFields,
   type RelationClaimKind,
 } from "./relations.js";
 import { DependentsError, removeEntity, removeRelation, type RemovalResult } from "./removals.js";
@@ -283,21 +284,78 @@ export async function createEntity(
   return { kind, id, fields };
 }
 
-/** Corrección de campos de una entidad existente. */
+export interface UpdateEntityOptions {
+  /** Álbum: artista al que se reatribuye. Pista: disco al que se mueve. */
+  parentId?: number;
+}
+
+/** Corrección de campos de una entidad existente (y, en álbum/pista, del padre que se fijó al crear). */
 export async function updateEntity(
   context: OperatorContext, kind: ResolvableClaimKind, id: number, values: Record<string, unknown>,
+  options: UpdateEntityOptions = {},
 ): Promise<EntityWriteResult> {
   const spec = ENTITY_SPECS[kind];
   const entries = Object.entries(values).filter(([, value]) => value !== undefined);
-  if (entries.length === 0) throw new OperatorError("invalid", "no hay campos que cambiar");
+  if (entries.length === 0 && options.parentId === undefined) throw new OperatorError("invalid", "no hay campos que cambiar");
   const label = await currentLabel(context, spec, id);
   const identityKey = `operador:${kind}:${id}`;
   // El nombre al final: sus claims hermanos no dependen de él, y así un
   // rename ambiguo no bloquea el resto de la corrección.
   entries.sort(([left], [right]) => Number(left === spec.identityColumn) - Number(right === spec.identityColumn));
+
+  // Una pista no puede quedar en una posición ocupada: se comprueba ANTES de
+  // escribir (dentro de una transacción un 23505 aborta el resto de la edición).
+  let trackBefore: { album_id: string; disc_number: number; track_number: number } | undefined;
+  if (kind === "track") {
+    trackBefore = (await context.client.query<{ album_id: string; disc_number: number; track_number: number }>(
+      "SELECT album_id::text, disc_number, track_number FROM public.tracks WHERE id=$1", [id])).rows[0];
+  }
+  if (trackBefore && (options.parentId !== undefined || values["disc_number"] !== undefined || values["track_number"] !== undefined)) {
+    const albumId = options.parentId ?? Number(trackBefore.album_id);
+    const discNumber = values["disc_number"] === undefined ? trackBefore.disc_number : Number(values["disc_number"]);
+    const trackNumber = values["track_number"] === undefined ? trackBefore.track_number : Number(values["track_number"]);
+    const taken = await context.client.query<{ id: string; title: string }>(
+      "SELECT id::text,title FROM public.tracks WHERE album_id=$1 AND disc_number=$2 AND track_number=$3 AND id<>$4 LIMIT 1",
+      [albumId, discNumber, trackNumber, id]);
+    if (taken.rows[0]) {
+      throw new OperatorError("already_exists",
+        `la posición ${discNumber}-${trackNumber} ya la ocupa «${taken.rows[0].title}» en ese disco`, {
+          existingId: Number(taken.rows[0].id),
+        });
+    }
+  }
+
   const fields: FieldWrite[] = [];
   for (const [field, value] of entries) fields.push(await writeField(context, spec, id, identityKey, label, field, value));
+  if (options.parentId !== undefined) fields.push(await changeParent(context, kind, id, options.parentId));
   return { kind, id, fields };
+}
+
+/**
+ * Reatribuye el padre de un disco (otro artista) o de una pista (otro disco).
+ * El padre se fija al crear; esta corrección lo cambia con auditoría —valor
+ * anterior, nuevo, motivo y run— igual que cualquier otro campo.
+ */
+async function changeParent(
+  context: OperatorContext, kind: ResolvableClaimKind, id: number, parentId: number,
+): Promise<FieldWrite> {
+  if (kind !== "album" && kind !== "track") throw new OperatorError("invalid", `reatribuir el padre no aplica a ${kind}`);
+  const spec = ENTITY_SPECS[kind];
+  const column = kind === "album" ? "artist_id" : "album_id";
+  await currentLabel(context, kind === "album" ? ENTITY_SPECS.artist : ENTITY_SPECS.album, parentId);
+  const { rows } = await context.client.query<{ parent: string | null }>(
+    `SELECT ${column}::text AS parent FROM ${spec.table} WHERE id=$1 FOR UPDATE`, [id]);
+  const current = rows[0];
+  if (!current) throw new OperatorError("not_found", `${kind} ${id} inexistente`, { entity: kind, id });
+  const currentId = current.parent === null ? null : Number(current.parent);
+  if (currentId === parentId) return { field: column, action: "unchanged", conflictsClosed: [] };
+  await context.client.query(`UPDATE ${spec.table} SET ${column}=$1 WHERE id=$2`, [parentId, id]);
+  await context.client.query(
+    `INSERT INTO ingest.merge_audit(run_id,entity_kind,${spec.targetColumn},field,old_value,new_value,reason,confidence,performed_by)
+     VALUES($1,$2::ingest.claim_entity_kind,$3,$4,$5::jsonb,$6::jsonb,$7,'high','human')`,
+    [context.runId, kind, id, column, currentId === null ? null : JSON.stringify(currentId), JSON.stringify(parentId),
+      `corrección humana: ${context.note}`]);
+  return { field: column, action: "corrected", conflictsClosed: [] };
 }
 
 async function recordRemoval(context: OperatorContext, removal: RemovalResult): Promise<void> {
@@ -389,16 +447,25 @@ export async function updateRelation(
   const entries = Object.entries(values).filter(([, value]) => value !== undefined);
   if (entries.length === 0) throw new OperatorError("invalid", "no hay campos que cambiar");
   const editable = new Set(editableRelationFields(kind));
+  const endpoints = new Set(editableRelationEndpoints(kind));
   const fields: RelationUpdateResult["fields"] = [];
+  // Los campos van primero y los extremos al final: al reapuntar un crédito,
+  // la equivalencia se evalúa contra el rol y el tipo YA corregidos.
+  entries.sort(([left], [right]) => Number(endpoints.has(left)) - Number(endpoints.has(right)));
   for (const [field, value] of entries) {
-    if (!editable.has(field)) throw new OperatorError("invalid", `campo ${kind}.${field} no editable`);
+    // Un campo con corrección directa (rol, tipo…) o un extremo de la fila
+    // (a quién acredita, qué persona la protagoniza): ambos con historia.
+    if (!editable.has(field) && !endpoints.has(field)) throw new OperatorError("invalid", `campo ${kind}.${field} no editable`);
+    const isEndpoint = !editable.has(field);
     const claim = humanClaim(context, {
       entityKind: kind, identityKey: `operador:${kind}:${id}`, label: `${spec.table} ${id}`, field, value,
       targets: { [RELATION_TARGET_KEY[kind]]: id },
     });
     try {
       const persisted = await persistClaim(claim, context.client);
-      const result = await correctRelationField(context.client, { kind, id, field, value, claim, claimId: persisted.id, note: context.note });
+      const result = isEndpoint
+        ? await correctRelationEndpoint(context.client, { kind, id, field, value, claim, claimId: persisted.id, note: context.note })
+        : await correctRelationField(context.client, { kind, id, field, value, claim, claimId: persisted.id, note: context.note });
       fields.push({ field, action: result.changed ? "corrected" : "unchanged" });
     } catch (error) {
       // La FK del claim hacia una fila inexistente la rechaza PostgreSQL (23503).

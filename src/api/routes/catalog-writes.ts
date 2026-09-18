@@ -63,7 +63,7 @@ interface EntityRoute {
   path: string;
   label: string;
   identity: "name" | "title";
-  /** Clave del cuerpo que fija el parental al crear (no editable después). */
+  /** Clave del cuerpo que fija el parental al crear (y que el PATCH puede reatribuir). */
   parent?: "artistId" | "albumId";
 }
 
@@ -131,7 +131,12 @@ export async function registerCatalogWriteRoutes(app: FastifyInstance): Promise<
       allowSimilar: z.boolean().optional()
         .describe("Decisión humana: crear aunque el ER vea candidatos parecidos (homónimos a sabiendas)."),
     }).strict();
-    const updateBody = z.object(fields).partial().extend({ note: noteSchema.optional() }).strict();
+    const updateBody = z.object(fields).partial().extend({
+      note: noteSchema.optional(),
+      // El padre (artista del disco, disco de la pista) se fija al crear y se
+      // reatribuye aquí: es una corrección con auditoría, no un campo más.
+      ...(route.parent === undefined ? {} : { [route.parent]: z.number().int().positive().optional() }),
+    }).strict();
 
     server.post(route.path, {
       schema: {
@@ -168,10 +173,16 @@ export async function registerCatalogWriteRoutes(app: FastifyInstance): Promise<
     }, async (request) => {
       const body = request.body as Record<string, unknown>;
       const values = catalogFields(body);
+      const parentKey = route.parent;
+      const parentId = parentKey !== undefined && typeof body[parentKey] === "number" ? (body[parentKey] as number) : undefined;
       const { runId, result } = await withOperatorRun({
         name: `api:update:${route.kind}`, operator: request.operator, note: noteFrom(body, `corrección de ${route.label} por la API`),
-        params: { kind: route.kind, id: request.params.id, values },
-      }, (context) => updateEntity(context, route.kind, request.params.id, values));
+        params: {
+          kind: route.kind, id: request.params.id, values,
+          ...(parentKey === undefined || parentId === undefined ? {} : { [parentKey]: parentId }),
+        },
+      }, (context) => updateEntity(context, route.kind, request.params.id, values,
+        parentId === undefined ? {} : { parentId }));
       return { ...result, runId };
     });
 

@@ -31,6 +31,8 @@ interface RelationRoute {
   values(body: Body): RelationValues;
   /** Validación que Zod no expresa sin romper el esquema OpenAPI. */
   check?(body: Body): void;
+  /** Igual que `check`, sobre el cuerpo parcial de un PATCH. */
+  checkUpdate?(body: Body): void;
 }
 
 const pick = (body: Body, key: string): number | undefined => (typeof body[key] === "number" ? body[key] : undefined);
@@ -43,13 +45,25 @@ function exactlyOneCredited(body: Body): void {
   if (given.length !== 1) throw badRequest("un crédito acredita exactamente a uno de personId, artistId u organizationId");
 }
 
+/** En un PATCH, reapuntar el acreditado: si se da alguno, exactamente uno. */
+function atMostOneCreditTarget(body: Body): void {
+  const given = ["personId", "artistId", "organizationId"].filter((key) => body[key] !== undefined);
+  if (given.length > 1) throw badRequest("un crédito acredita exactamente a uno de personId, artistId u organizationId");
+}
+
 const creditCreate = {
   personId: entityId.optional(), artistId: entityId.optional(), organizationId: entityId.optional(),
   role: text(200), creditType: creditType.optional()
     .describe("Si falta, se clasifica el rol con las reglas del puente (guitarra → musician, mezcla → mixing...)."),
   notes: notes.optional(),
 };
-const creditUpdate = { role: text(200), creditType, notes };
+/** Reapuntar el acreditado: como en el alta, exactamente uno de los tres extremos. */
+const creditTargetUpdate = {
+  personId: entityId.optional().describe("Nuevo acreditado (persona). Sustituye al anterior con auditoría."),
+  artistId: entityId.optional().describe("Nuevo acreditado (artista). Sustituye al anterior con auditoría."),
+  organizationId: entityId.optional().describe("Nuevo acreditado (organización). Sustituye al anterior con auditoría."),
+};
+const creditUpdate = { role: text(200), creditType, notes, ...creditTargetUpdate };
 const creditValues = (body: Body): RelationValues => ({
   credit_role: valueOf(body, "role"), credit_type: valueOf(body, "creditType"), notes: valueOf(body, "notes"),
 });
@@ -61,7 +75,10 @@ const RELATION_ROUTES: readonly RelationRoute[] = [
       artistId: entityId, personId: entityId, role: text(200),
       fromYear: year.nullable().optional(), toYear: year.nullable().optional(), isCurrent: z.boolean().optional(), notes: notes.optional(),
     },
-    update: { role: text(200), fromYear: year.nullable(), toYear: year.nullable(), isCurrent: z.boolean(), notes },
+    update: {
+      role: text(200), fromYear: year.nullable(), toYear: year.nullable(), isCurrent: z.boolean(), notes,
+      personId: entityId.optional().describe("Nueva persona de la membresía. Sustituye a la anterior con auditoría."),
+    },
     endpoints: (body) => endpointsOf(body, ["artistId", "personId"]),
     values: (body) => ({
       role: valueOf(body, "role"), from_year: valueOf(body, "fromYear"), to_year: valueOf(body, "toYear"),
@@ -74,7 +91,11 @@ const RELATION_ROUTES: readonly RelationRoute[] = [
       personId: entityId, organizationId: entityId, role: text(200),
       fromYear: year.nullable().optional(), toYear: year.nullable().optional(), notes: notes.optional(),
     },
-    update: { role: text(200), fromYear: year.nullable(), toYear: year.nullable(), notes },
+    update: {
+      role: text(200), fromYear: year.nullable(), toYear: year.nullable(), notes,
+      personId: entityId.optional().describe("Nueva persona del vínculo. Sustituye a la anterior con auditoría."),
+      organizationId: entityId.optional().describe("Nueva organización del vínculo. Sustituye a la anterior con auditoría."),
+    },
     endpoints: (body) => endpointsOf(body, ["personId", "organizationId"]),
     values: (body) => ({
       role: valueOf(body, "role"), from_year: valueOf(body, "fromYear"), to_year: valueOf(body, "toYear"), notes: valueOf(body, "notes"),
@@ -87,6 +108,7 @@ const RELATION_ROUTES: readonly RelationRoute[] = [
     endpoints: (body) => endpointsOf(body, ["albumId", "personId", "artistId", "organizationId"]),
     values: creditValues,
     check: exactlyOneCredited,
+    checkUpdate: atMostOneCreditTarget,
   },
   {
     kind: "track_credit", path: "/track-credits", label: "crédito de pista",
@@ -95,6 +117,7 @@ const RELATION_ROUTES: readonly RelationRoute[] = [
     endpoints: (body) => endpointsOf(body, ["trackId", "personId", "artistId", "organizationId"]),
     values: creditValues,
     check: exactlyOneCredited,
+    checkUpdate: atMostOneCreditTarget,
   },
   {
     kind: "album_format", path: "/album-formats", label: "formato de álbum",
@@ -158,6 +181,7 @@ export async function registerRelationWriteRoutes(app: FastifyInstance): Promise
       },
     }, async (request) => {
       const body = request.body as Body;
+      route.checkUpdate?.(body);
       const values = Object.fromEntries(Object.entries(body)
         .filter(([key, value]) => key !== "note" && value !== undefined)
         .map(([key, value]) => [toSnake(key), value]));

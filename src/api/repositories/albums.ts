@@ -93,7 +93,7 @@ export interface AlbumDetail {
   tracklist: AlbumTrackRow[];
   credits: AlbumCreditRow[];
   creditsByType: Record<string, AlbumCreditRow[]>;
-  formats: Array<{ id: number; format: string; quality: string | null; archiveStatus: string }>;
+  formats: Array<{ id: number; format: string; quality: string | null; archiveStatus: string; filePath: string | null; notes: string | null }>;
   aliases: Array<{ id: number; alias: string; aliasType: string; isPrimary: boolean }>;
   youtubeLinks: Array<{ videoId: string; title: string | null; kind: string; isPrimaryLink: boolean }>;
 }
@@ -145,7 +145,7 @@ export async function getAlbumDetail(id: number): Promise<AlbumDetail | null> {
          ) credit_rows
        ), '[]'::jsonb) AS credits,
        COALESCE((
-         SELECT jsonb_agg(jsonb_build_object('id', f.id, 'format', f.format, 'quality', f.quality, 'archiveStatus', f.archive_status))
+         SELECT jsonb_agg(jsonb_build_object('id', f.id, 'format', f.format, 'quality', f.quality, 'archiveStatus', f.archive_status, 'filePath', f.file_path, 'notes', f.notes))
          FROM public.album_formats f WHERE f.album_id = al.id
        ), '[]'::jsonb) AS formats,
        COALESCE((

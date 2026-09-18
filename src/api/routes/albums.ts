@@ -63,7 +63,10 @@ const albumDetailSchema = z.object({
   tracklist: z.array(trackSchema),
   credits: z.array(creditSchema),
   creditsByType: z.record(z.string(), z.array(creditSchema)),
-  formats: z.array(z.object({ id: z.number().int(), format: z.string(), quality: z.string().nullable(), archiveStatus: z.string() })),
+  formats: z.array(z.object({
+    id: z.number().int(), format: z.string(), quality: z.string().nullable(), archiveStatus: z.string(),
+    filePath: z.string().nullable(), notes: z.string().nullable(),
+  })),
   aliases: z.array(aliasSchema),
   youtubeLinks: z.array(z.object({
     videoId: z.string(), title: z.string().nullable(), kind: z.string(), isPrimaryLink: z.boolean(),
