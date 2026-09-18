@@ -18,6 +18,7 @@ export class ErrorBoundary extends Component<{ children: ReactNode }, ErrorBound
   }
 
   override componentDidCatch(error: Error, info: ErrorInfo): void {
+    // eslint-disable-next-line no-console -- la consola del navegador es el canal de diagnóstico de un error de render
     console.error("CRV: error de render", error, info.componentStack);
   }
 
