@@ -4,6 +4,7 @@
 // media (sin pasar por el pipeline de ingestión: esta suite prueba la API,
 // no el merge engine) y ejercita cada ruta con `app.inject()`.
 import { createHash } from "node:crypto";
+import { refreshSearchIndex } from "../../src/api/search-index.js";
 import { afterAll, beforeAll, describe, expect, it } from "vitest";
 import type { FastifyInstance } from "fastify";
 import { startPgContainer, type PgContainer } from "../support/pg-container.js";
@@ -123,6 +124,10 @@ describe("API de lectura (E7A) — caso Caramelos De Cianuro", () => {
     });
 
     app = await buildApp();
+    // El índice de búsqueda se calienta en segundo plano al construir la app
+    // (SWR, auditoría 2026-09-18): sin forzarlo aquí, en una máquina rápida el
+    // warm gana la carrera y la foto queda sin las fichas de este archivo.
+    await refreshSearchIndex();
   }, 120_000);
 
   afterAll(async () => { await app?.close(); await closeDb(); delete process.env["CRV_OPERATOR_TOKEN"]; resetEnvCache(); await container.stop(); }, 60_000);

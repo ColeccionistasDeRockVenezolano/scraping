@@ -10,6 +10,7 @@ import { closeDb, getPool } from "../../src/db/client.js";
 import { resetEnvCache } from "../../src/config/env.js";
 import { migrateUp } from "../../src/db/migrate.js";
 import { buildApp } from "../../src/api/app.js";
+import { refreshSearchIndex } from "../../src/api/search-index.js";
 import { createEntity, withOperatorRun } from "../../src/merge/operator.js";
 
 describe("búsqueda sin tildes y filtros de personas (E11.9)", () => {
@@ -50,6 +51,13 @@ describe("búsqueda sin tildes y filtros de personas (E11.9)", () => {
     // siguiente listado ya ve la ficha nueva.
     await withOperatorRun({ name: "test:create:person", operator: "prueba", note: "fixture de filtros" },
       (context) => createEntity(context, "person", { name: "Ángela de los Ríos" }));
+
+    // El índice en memoria se calienta en segundo plano al construir la app y
+    // refresca por TTL o invalidación (auditoría 2026-09-18, SWR). Las fichas
+    // de este archivo entran por SQL directo, así que el test fuerza el
+    // refresco: sin esto, gana la carrera el warm de arranque en las máquinas
+    // rápidas (visto en CI) y la búsqueda sirve la foto anterior.
+    await refreshSearchIndex();
   }, 120_000);
 
   afterAll(async () => { await app?.close(); await closeDb(); await container.stop(); }, 60_000);

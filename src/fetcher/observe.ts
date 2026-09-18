@@ -2,7 +2,7 @@
 // entidades. Los adapters semánticos siguen perteneciendo a F4.
 import path from "node:path";
 import { readFile } from "node:fs/promises";
-import { and, desc, eq } from "drizzle-orm";
+import { and, desc, eq, sql } from "drizzle-orm";
 import { getDb } from "../db/client.js";
 import { scrapeErrors, scrapeRuns, sources } from "../db/schema/ingest.js";
 import { fetchAndCache, type CachedFetch } from "../cache/raw-pages.js";
@@ -307,7 +307,10 @@ export async function runObserve(sourceSlug: string): Promise<ObserveResult> {
     await db.update(scrapeRuns)
       .set({
         status: result.errors > 0 ? "partial" : "ok",
-        finishedAt: new Date(),
+        // Reloj de la base, como el resto de los cierres de run: con fecha JS
+        // un barrido instantáneo podía violar `scrape_runs_time_chk` (mismo
+        // caso que finishRun, src/ingest/runs.ts).
+        finishedAt: sql`now()`,
         counters: { ...result },
         errorLog: result.errors > 0 ? `${result.errors} recurso(s) con error; ver ingest.scrape_errors` : null,
       })
