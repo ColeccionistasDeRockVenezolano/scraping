@@ -19,7 +19,14 @@ services:
     ports:
       - "127.0.0.1:5433:5432"
     volumes:
-      - crv-pgdata:/var/lib/postgresql/data
+      # El data dir vive en el SSD (`/`) desde el 2026-09-18, no en el HDD:
+      # con PostgreSQL en /mnt/datos, un respaldo o una ingesta dejaban las
+      # búsquedas en 24-30 s y los tests en minutos (auditoría 2026-09-17,
+      # hallazgo #14). Es bind mount —no volumen— para que la ruta sea normal
+      # y respaldable. Traslado verificado por hashes (1.985 archivos, bit a
+      # bit); el volumen viejo `crv-pgdata` del HDD sigue intacto como vuelta
+      # atrás: para volver, apunta aquí a `crv-pgdata` otra vez.
+      - /home/brian/crv-pgdata:/var/lib/postgresql/data
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U crv -d crv -h 127.0.0.1"]
       interval: 2s
@@ -28,4 +35,7 @@ services:
       start_period: 5s
 
 volumes:
+  # Sin uso desde el traslado al SSD (2026-09-18): se conserva a propósito como
+  # respaldo/vuelta atrás del data dir anterior. Borrar cuando el traslado esté
+  # confirmado: docker volume rm coleccionistasderockvenezolano_crv-pgdata
   crv-pgdata:

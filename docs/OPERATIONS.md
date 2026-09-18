@@ -41,9 +41,33 @@ mantenimiento sobre las tablas auxiliares mientras termina. Programar una
 ventana de mantenimiento y no cancelar el proceso a mitad.
 
 `npm run db:migrate -- down` revierte **todas** las migraciones: es para
-desarrollo y tests, no para operación. `npm run db:down` borra el contenedor
-y su volumen. El core nunca se migra: `doctor` compara su hash y la huella del
+desarrollo y tests, no para operación. `npm run db:down` borra el contenedor;
+con el data dir ya en bind mount (ver «Dónde vive el data dir» abajo) los datos
+sobreviven. El core nunca se migra: `doctor` compara su hash y la huella del
 catálogo (`src/doctor/core-catalog.json`) contra la base viva.
+
+### Dónde vive el data dir (SSD desde el 2026-09-18)
+
+El contenedor monta el data dir como **bind mount**: `/home/brian/crv-pgdata`
+(SSD, sistema de archivos raíz) → `/var/lib/postgresql/data`. Antes era el
+volumen `crv-pgdata`, dentro del Docker root de `/mnt/datos` (HDD): con
+PostgreSQL en el HDD, un respaldo o una ingesta en marcha dejaban las búsquedas
+en 24-30 s (auditoría 2026-09-17, hallazgo #14) y el cierre de la retención en
+horas. Medido tras el traslado: búsquedas en 0,03-0,08 s y un scan de 510k
+claims en 0,2 s.
+
+- Consecuencia útil: `npm run db:down` ya **no** borra los datos (el bind mount
+  sobrevive; `crv-pgdata` queda declarado pero sin uso).
+- Traslado verificado por hashes (1.985 archivos idénticos, bit a bit) y por
+  conteos de tablas iguales al respaldo previo.
+- Vuelta atrás: devolver la línea del compose a
+  `crv-pgdata:/var/lib/postgresql/data` (el volumen del HDD sigue intacto) o
+  restaurar `/mnt/datos/backups/crv/crv-20260918T162010Z` con `npm run db:restore`.
+- Borrar el volumen viejo cuando el traslado esté confirmado:
+  `docker volume rm coleccionistasderockvenezolano_crv-pgdata`.
+- El **Docker root sigue en el HDD** (imágenes y vols. de los contenedores
+  desechables): moverlo afecta a todos los contenedores de la máquina y queda
+  pendiente de decisión del dueño.
 
 `doctor` sale con código distinto de 0 si algo falla y comprueba: runtime,
 hash y catálogo del core, schemas `ingest`/`media`, migraciones aplicadas,

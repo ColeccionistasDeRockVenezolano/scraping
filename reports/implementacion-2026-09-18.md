@@ -31,7 +31,7 @@ informe cierra cada hallazgo con su commit y su prueba. Nada se empujó a
 | 12 | 12.908 auditorías sin `run_id` (13–14 sep) y nada que lo vigile | Causa raíz documentada (cierre F2–F5 por una ruta sin run); `merge_audit.coverage` avisa si aparecen nuevas en 3 días y tolera el histórico nombrándolo | `2e62d9c` (doctor 5/5) |
 | 9 | `public.albums.label_id` sin índice | **No se toca por diseño**: el core es inmutable y `doctor` verifica su huella objeto por objeto; queda como desviación conocida en ARCHITECTURE §4.17 para decisión del dueño | `17d7a79` |
 | 13 | `/youtube/videos` tardaba 0,87 s según el informe | Medición del 2026-09-18: **0,005 s en caliente** (0,39 s en frío). Era contención de IO del HDD, no la consulta: sin cambios de código, cerrado con evidencia | medición de este informe |
-| 14 | PostgreSQL en HDD: picos de latencia | Mitigado de raíz donde dolía (búsqueda SWR, retención por lotes con IO idle); mover el volumen a SSD sigue siendo decisión de infraestructura del dueño | este informe |
+| 14 | PostgreSQL en HDD: picos de latencia | **Resuelto**: el data dir pasó al SSD (`/home/brian/crv-pgdata`, bind mount) con copia verificada por hashes (1.985 archivos, bit a bit) y conteos idénticos. Medido después: búsquedas 0,03-0,08 s y scan de 510k claims en 0,2 s. Vuelta atrás documentada (el volumen del HDD sigue intacto) | `docker-compose.yml` + OPERATIONS |
 
 ## E5 y E6 (trabajo en curso de Curaduría, cerrado)
 
@@ -68,14 +68,20 @@ informe cierra cada hallazgo con su commit y su prueba. Nada se empujó a
   de datos vivos** donde antes había 19 GB, así que el respaldo completo ya no
   copia la basura. El `VACUUM (ANALYZE)` paralelo murió por el `/dev/shm` de
   64 MB del contenedor → relanzado con `PARALLEL 0` y documentado en
-  OPERATIONS §4. Opcional pendiente: `VACUUM FULL` para devolver los ~19 GB de
-  archivos muertos al disco (hoy el espacio ya se reutiliza; el disco tiene
-  125 GB libres, así que no corre prisa).
+  OPERATIONS §4. **`VACUUM FULL` hecho**: la tabla pasó de 20 GB a **817 MB**
+  (heap 711 MB) en 51 s, con las 469.445 filas intactas y **18 GB devueltos** al
+  disco. Antes se hizo un respaldo fresco verificado de punta a punta
+  (`db:restore-check`: 50 tablas, 2.121.713 filas idénticas, raw por sha256,
+  doctor verde); el dump pesa **110 MB** comprimido, así que los respaldos
+  dejaron de ser un problema.
 - **Push**: los commits se empujaron a origin el 2026-09-18 (`c73c3e5..59cfe3c`);
   el CI corre sobre master y su primera corrida (35356516029) falló en Contratos
   por dos fragilidades que este informe ya recogía como arregladas (reloj de
   `finish_run` y refresco del índice en los tests de búsqueda).
-- **SSD**: mover el volumen de PostgreSQL a SSD sigue pendiente de decisión.
+- **SSD**: hecho — el data dir pasó al SSD con verificación por hashes (fila 14);
+  el **Docker root** (imágenes y volúmenes de contenedores desechables) sigue en
+  el HDD: moverlo afecta a todos los contenedores de la máquina y queda como
+  decisión aparte (medida en OPERATIONS).
 - **`albums.label_id`**: índice fuera del core (requiere regenerar `core:catalog`
   con aprobación explícita).
 - **E8** (UX de corrección sobre el marco E4–E6) sigue siendo la siguiente etapa
