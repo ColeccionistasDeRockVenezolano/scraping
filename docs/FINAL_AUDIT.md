@@ -1,5 +1,11 @@
 # CRV · Auditoría final (E11)
 
+> **Instantánea histórica.** Esta auditoría es del commit `6610723`
+> (2026-09-14/15) y sus cifras valen para ese commit. Después: E5/E6 de
+> Curaduría, la auditoría del sistema del 2026-09-17 (`reports/auditoria-sistema-2026-09-17.md`,
+> cuyas mejoras se implementaron el 18: 0022, búsqueda SWR, CI con cobertura,
+> `GET /tracks`, correcciones de UI) y las migraciones hasta 0022.
+
 Fecha: 2026-09-14/15 · commit base auditado: `6610723` · PostgreSQL real:
 16, `SQL_ASCII`, locale `C/C`.
 

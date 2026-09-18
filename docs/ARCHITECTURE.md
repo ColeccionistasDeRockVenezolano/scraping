@@ -220,6 +220,12 @@ elevar la acción determinista; de lo contrario se abre `review_queue`.
 Cada decisión se persiste en `ingest.entity_resolution_decisions` con input
 original, score, thresholds, features, candidatos y explicación. Resultado:
 FK resuelta, revisión o propuesta de entidad nueva.
+La decisión **no se borra nunca**: `src/er/retention.ts` (migración 0022)
+compacta por edad el dossier de candidatos —conserva acción, score, features,
+explicación, `input_context` y las 20 mejores candidatas con el conteo en
+`candidates_count`—, porque con el catálogo crecido una sola fila llegaba a
+pesar cientos de kB (19 GB de tabla, auditoría 2026-09-17). Lo corre la API
+sola y `crv er:prune [--dry-run]` a mano.
 
 ### 4.7 `claims / evidence`
 Capa de persistencia de afirmaciones: `ingest.claims` (dedupe por
@@ -515,7 +521,8 @@ PostgreSQL. `npm --prefix web run dev|build`; para publicarla bajo un prefijo,
 | `src/review/person-candidates.ts` / `organization-candidates.ts` | detectores que PROPONEN pares con bloqueo y puntuación explicable (score + features) y abren revisiones idempotentes |
 | `src/review/person-junk.ts` | `classifyPersonName`: organización, duración, fragmento o varias personas |
 | `src/review/person-corrections.ts` | operaciones `merge`, `rename`, `absorb`, `to_artist`, `to_organization`, `split` sobre un plan JSON versionado, con el mismo servicio de fusión que la API |
-| `src/api/search-index.ts` | índice en memoria (nombre + alias, sin tildes) con TTL y `invalidateSearchIndex()` después de cada escritura; la API lo calienta al arrancar |
+| `src/api/search-index.ts` | índice en memoria (nombre + alias, sin tildes) con refresco **stale-while-revalidate** (auditoría 2026-09-17): una lectura con el índice vencido sirve lo que hay y dispara la recarga en segundo plano —una por tipo, con backoff—; solo bloquea el primer uso. `invalidateSearchIndex()` marca y refresca ya tras cada escritura (la base está caliente) |
+| `src/api/repositories/tracks.ts` + `routes/tracks.ts` | `GET /tracks` (paginado, filtro por disco o texto en título y alias) y `GET /tracks/{id}` (contexto de disco/artista, alias propios y créditos): el CRUD de pistas era asimétrico (auditoría, hallazgo #7) |
 | `src/api/routes/entity-merge.ts` | router de fusiones: las mismas rutas y esquemas para las tres entidades, más `POST /persons/:id/convert` |
 | `src/api/routes/person-candidates.ts`, `merge-runs.ts` | listado de candidatos vivos y `POST /merge-runs/:runId/undo` |
 
@@ -691,6 +698,31 @@ ciclo: vista previa → aplicar → verificar → deshacer.
   llamada un lote de `limpiar_texto` y responden con la forma de E3. La web los
   sigue usando hasta E8.
 
+### 4.16quater Acciones de texto y estructurales (E5–E6, 2026-09-17/18)
+
+Cierra A1 para lo que toca un campo y para lo que toca relaciones o entidades.
+Sobre el marco de E4 (tipos, lotes, hash, verificación dirigida y deshacer):
+
+| módulo | responsabilidad |
+| --- | --- |
+| `src/curation/actions/textual.ts` | 15 acciones de texto: `decodificar_html`, `reparar_codificacion`, `reparar_cp1251`, `sustituir_homoglifos`, `restaurar_letra`, `quitar_signo_huerfano`, `cerrar_signo`, `recortar_extremos`, `capitalizar`, `dominio_a_alias`, `quitar_prefijo_artista`, `quitar_rotulo`, `separar_palabras`, `mover_region` (con colisión) y `renombrar_con_alias` (conserva el dato como alias dentro del mismo run para que el deshacer lo retire) |
+| `src/curation/actions/structural.ts` | 20 acciones estructurales: extraer intérprete/invitado/autores, mover duración, convertir a organización/artista, vincular como miembro, dividir persona, retirar con créditos o huérfana, fusionar discos, retirar pista duplicada, fijar tipo, vaciar año/duración, corregir unidades y `renumerar_consecutivo` en dos fases (desplaza +1000 y fija el valor final en la misma transacción: el core exige `track_number > 0`) |
+| `src/merge/album-merge.ts` | fusión de discos con vista previa y hash determinista: empareja pistas por (disco, número) y por título normalizado, unifica créditos y formatos equivalentes, reubica las pistas sueltas y repunta enlaces de medios; la auditoría va con `version: 2`, compatible con `undoMergeRun` |
+| `src/merge/structural-undo.ts` | deshacer de retiros y relaciones creadas por las acciones |
+| `GET /albums/:id/merge-preview`, `POST /albums/:id/merge`, `POST /persons/:id/split` | las rutas de la fusión de discos y la división de personas (reparto de créditos con vista previa) |
+| `crv curation scan --dry-run` | informa la cobertura por niveles de acción (nivel 0/1/2/manual) por categoría antes de aplicar nada |
+
+Las acciones siguen la regla «IA propone, nunca ejecuta»: cada una declara sus
+precondiciones, su nivel y su inversa, y no escribe nada fuera de los servicios
+auditados (`withOperatorRun`, `mergeInto`, `removeEntity`).
+
+### 4.17 Desviaciones conocidas
+
+- `public.albums.label_id` es la única FK del catálogo sin índice (auditoría
+  2026-09-17). No se corrige desde aquí: el core canónico (`public`) es
+  inmutable por contrato y `doctor` verifica su huella objeto por objeto, así
+  que añadirlo exige regenerar `core:catalog` con aprobación del propietario.
+
 ## 5. Flujo de datos end-to-end
 
 ```
@@ -733,7 +765,7 @@ El seed YT sigue el mismo flujo saltando 1-2 (el "raw" es la fila XLSX).
   cubre además la migración de enums, y `tests/lib_pg.sh` comparte el arranque
   del contenedor. **Portado a Vitest (F0):**
   `test/contract/core-and-schema.test.ts` reproduce ese mismo contrato
-  (core + todas las migraciones, hoy 0001–0021, vía `src/db/migrate.ts` + rollback + diff
+  (core + todas las migraciones, hoy 0001–0022, vía `src/db/migrate.ts` + rollback + diff
   vacío) contra un contenedor propio (`test/support/pg-container.ts`, mismo
   arranque en dos fases que `tests/lib_pg.sh`), y añade el ejercicio real
   del schema Drizzle: inserts y joins a través de `public`+`ingest`+`media`
@@ -745,6 +777,12 @@ El seed YT sigue el mismo flujo saltando 1-2 (el "raw" es la fila XLSX).
 - Unit: normalización, tokenización de tipos, extracción de video IDs,
   merge por confianza, conflictos, gating de videos (no-album).
 - Integración: PG de test con contenedor o instancia local `crv_test`.
+- **CI (auditoría 2026-09-17, hallazgo #3):** `.github/workflows/ci.yml` corre
+  en cada push a `master` y cada PR tres puertas — calidad (typecheck + lint +
+  unitarias con cobertura v8 y umbral en `vitest.config.ts`, informe como
+  artefacto), contratos (PostgreSQL desechable por archivo) y build de la web.
+  `npm run test:coverage` reproduce la puerta de calidad en local.
+  `test:matrix` y `test:deepseek:real` siguen siendo verificación manual.
 
 ---
 

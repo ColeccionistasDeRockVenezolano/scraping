@@ -412,6 +412,33 @@ mismo candado que el análisis: si hay uno en curso, no borra nada y lo dice.
 > «cambio de reglas» y 381 aparecen como nuevos. Es esperado, no un cambio del
 > catálogo (`docs/curation/E2_PRECISION_2026-09-16.md`).
 
+### Retención de decisiones de resolución (ER, migración 0022)
+
+`ingest.entity_resolution_decisions` guarda el dossier completo de candidatas
+que evaluó el ER y con el catálogo crecido una fila llega a pesar cientos de kB
+(el 2026-09-18 la tabla sumaba 19 GB, 18 de TOAST: auditoría del sistema,
+hallazgo #1). La retención **compacta, no borra**:
+
+```bash
+npm run cli -- er:prune --dry-run                  # cuántas filas hay pendientes (ventana 3 días)
+npm run cli -- er:prune                            # compacta todo el atraso
+npm run cli -- er:prune --max-rows=50000           # por tandas
+npm run cli -- er:prune --keep-full-days=7         # conservar más días de dossier completo
+```
+
+- Conserva siempre: acción, score, features, explicación, `decided_by`,
+  `input_context` (aplicar una decisión vieja de la Mesa lo necesita) y las 20
+  mejores candidatas con el conteo original en `candidates_count`.
+- Es idempotente y reanudable: lotes con `FOR UPDATE SKIP LOCKED` y candado de
+  sesión — la API lo corre sola (a los 5 minutos del arranque y cada
+  `ER_RETENTION_INTERVAL_HOURS`, `ER_RETENTION_MAX_ROWS` por vuelta) y si la
+  CLI y la API coinciden, la segunda ve `skipped`.
+- Ventana por defecto: `ER_DECISION_FULL_DAYS=3` (subirla al depurar un lote
+  grande; los dossiers completos de esos días quedan a mano para inspección).
+- Tras un backfill grande, `VACUUM (ANALYZE) ingest.entity_resolution_decisions`
+  devuelve al reuso el TOAST liberado (el archivo no encoge sin `pg_repack`,
+  pero el espacio se reutiliza y los respaldos dejan de copiar la basura).
+
 ## 5. Logs y trazabilidad
 
 | Dónde | Qué |
