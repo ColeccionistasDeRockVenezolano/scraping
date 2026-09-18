@@ -71,7 +71,10 @@ informe cierra cada hallazgo con su commit y su prueba. Nada se empujó a
   OPERATIONS §4. Opcional pendiente: `VACUUM FULL` para devolver los ~19 GB de
   archivos muertos al disco (hoy el espacio ya se reutiliza; el disco tiene
   125 GB libres, así que no corre prisa).
-- **Push**: 67 commits locales sin empujar; no se empujó nada en esta sesión.
+- **Push**: los commits se empujaron a origin el 2026-09-18 (`c73c3e5..59cfe3c`);
+  el CI corre sobre master y su primera corrida (35356516029) falló en Contratos
+  por dos fragilidades que este informe ya recogía como arregladas (reloj de
+  `finish_run` y refresco del índice en los tests de búsqueda).
 - **SSD**: mover el volumen de PostgreSQL a SSD sigue pendiente de decisión.
 - **`albums.label_id`**: índice fuera del core (requiere regenerar `core:catalog`
   con aprobación explícita).
