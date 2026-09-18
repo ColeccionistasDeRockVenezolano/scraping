@@ -70,6 +70,14 @@ const envSchema = z.object({
   ER_NO_MATCH_THRESHOLD: z.coerce.number().min(0).max(1).default(0),
   ER_MINIMUM_MARGIN: z.coerce.number().min(0).max(1).default(0.08),
 
+  // Retención de decisiones de resolución (src/er/retention.ts): días de
+  // dossier completo de candidatas que se conservan antes de compactar, tope
+  // de filas por barrido de la API y cada cuánto barre. La decisión nunca se
+  // borra; `0` días compacta todo lo que ya no esté en la ventana.
+  ER_DECISION_FULL_DAYS: z.coerce.number().int().nonnegative().default(3),
+  ER_RETENTION_MAX_ROWS: z.coerce.number().int().nonnegative().default(20_000),
+  ER_RETENTION_INTERVAL_HOURS: z.coerce.number().positive().default(12),
+
   LOG_LEVEL: z
     .enum(["fatal", "error", "warn", "info", "debug", "trace", "silent"])
     .default("info"),

@@ -45,6 +45,7 @@ import { applySincopaOrganizationRepair, planSincopaOrganizationRepair } from ".
 import { runCurationScan } from "../curation/scan.js";
 import { getCurationSummary } from "../curation/repository.js";
 import { pruneCuration } from "../curation/retention.js";
+import { compactEntityResolutionDecisions } from "../er/retention.js";
 
 /** `--review=1,2,3` → ids; undefined si no vino; null si vino mal escrito. */
 function parseIdList(value: string | undefined): number[] | undefined | null {
@@ -730,6 +731,40 @@ async function main(): Promise<number> {
       return 1;
     }
 
+    case "er:prune": {
+      const numberFlag = (name: string): number | undefined => {
+        const raw = args.find((arg) => arg.startsWith(`--${name}=`))?.slice(name.length + 3);
+        if (raw === undefined) return undefined;
+        const value = Number(raw);
+        return Number.isInteger(value) && value >= 0 ? value : NaN;
+      };
+      const keepFullDays = numberFlag("keep-full-days");
+      const maxRows = numberFlag("max-rows");
+      if (Number.isNaN(keepFullDays) || Number.isNaN(maxRows)) {
+        console.error("uso: crv er:prune [--dry-run] [--keep-full-days=N] [--max-rows=N]");
+        return 1;
+      }
+      const dryRun = args.includes("--dry-run");
+      const started = Date.now();
+      const result = await compactEntityResolutionDecisions({
+        dryRun,
+        ...(keepFullDays === undefined ? {} : { keepFullDays }),
+        ...(maxRows === undefined ? {} : { maxRows }),
+      });
+      if (result.status === "skipped") {
+        console.error("er:prune: otro proceso está compactando; no se tocó nada, reintenta en unos segundos");
+        return 1;
+      }
+      console.log(dryRun
+        ? `er:prune --dry-run: ${result.pending} decisiones pendientes de compactar (ventana ${result.keepFullDays} días; nada se escribió)`
+        : `er:prune: ${result.compacted} decisiones compactadas de ${result.pending} pendientes (ventana ${result.keepFullDays} días) en ${Date.now() - started} ms`);
+      if (!dryRun && result.compacted > 0) {
+        console.log("  La decisión no se borra: conserva acción, score, features, explanation, decided_by, las 20 mejores candidatas y candidates_count.");
+        console.log("  VACUUM (ANALYZE) ingest.entity_resolution_decisions devuelve el TOAST liberado al reuso del disco.");
+      }
+      return 0;
+    }
+
     case undefined:
     case "help":
     case "--help":
@@ -818,6 +853,12 @@ CRV CLI
   curation summary           conteos abiertos por categoría y detector, y el último análisis
   curation prune [--dry-run] retención: borra los análisis anteriores a los últimos 500 y los hallazgos resueltos
                              hace más de 180 días (nunca abiertos ni ignorados)
+  er:prune [--dry-run] [--keep-full-days=N] [--max-rows=N]
+                             retención de decisiones de resolución: compacta (no borra) el dossier de candidatas
+                             de las decisiones más viejas que la ventana (ER_DECISION_FULL_DAYS, 3 días por defecto):
+                             conserva la decisión y las 20 mejores candidatas. La API lo corre sola cada
+                             ER_RETENTION_INTERVAL_HOURS; tras una corrida grande conviene
+                             VACUUM (ANALYZE) ingest.entity_resolution_decisions
   ambiguity:apply [--review=<id,...>] --note="<motivo>" --confirm
                              aplica MATCH y KEEP de reglas; las de árbitro solo nombrando su revisión
 

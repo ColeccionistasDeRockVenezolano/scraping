@@ -362,6 +362,10 @@ export const entityResolutionDecisions = ingest.table("entity_resolution_decisio
   explanation: text("explanation").notNull(),
   decidedBy: varchar("decided_by", { length: 20 }).notNull(),
   createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+  // Retención (0022): la compactación marca la fila y guarda el conteo
+  // original de candidatas, porque el dossier queda reducido a las mejores.
+  compactedAt: timestamp("compacted_at", { withTimezone: true }),
+  candidatesCount: integer("candidates_count"),
 });
 
 export const aiBiographies = ingest.table("ai_biographies", {
