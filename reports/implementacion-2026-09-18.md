@@ -82,6 +82,11 @@ informe cierra cada hallazgo con su commit y su prueba. Nada se empujó a
   el **Docker root** (imágenes y volúmenes de contenedores desechables) sigue en
   el HDD: moverlo afecta a todos los contenedores de la máquina y queda como
   decisión aparte (medida en OPERATIONS).
+- **Cola del CI** (`2143b72`): su corrida de Contratos 35359069309 falló por el
+  arranque del contenedor, no por el código — el hook de 120 s no cubría espera
+  + core + migraciones y el `afterAll` (`container.stop()`) enmascaraba el error
+  real. Ahora `startPgContainer` reintenta con otro puerto si choca, la espera
+  es 100 s, el `hookTimeout` 180 s y 34 contratos limpian con `container?.stop()`.
 - **`albums.label_id`**: índice fuera del core (requiere regenerar `core:catalog`
   con aprobación explícita).
 - **E8** (UX de corrección sobre el marco E4–E6) sigue siendo la siguiente etapa
