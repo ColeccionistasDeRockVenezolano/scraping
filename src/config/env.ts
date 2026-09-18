@@ -30,6 +30,12 @@ const envSchema = z.object({
   CRV_SESSION_TTL_HOURS: z.coerce.number().int().min(1).max(168).default(12),
   CRV_SESSION_COOKIE_PATH: z.string().regex(/^\/[A-Za-z0-9/_-]*$/u).default("/"),
   CRV_ALLOWED_ORIGINS: z.string().default("http://127.0.0.1:5173,http://localhost:5173"),
+  // Ráfaga de escrituras por cuenta (auditoría 2026-09-17, hallazgo #10):
+  // escrituras autenticadas por minuto antes de responder 429. Generoso para
+  // un operador (los lotes de Curaduría aplican hasta CRV_CURATION_FIX_BATCH_MAX
+  // ítems por llamada y el resto sigue con otra llamada) y estrecho para un
+  // bucle descontrolado. 0 desactiva el límite.
+  CRV_WRITE_RATE_LIMIT: z.coerce.number().int().nonnegative().default(240),
 
   // Detector de conflictos de Curaduría (src/curation/). Cada escritura de
   // la API dispara un análisis que verifica si la corrección abrió errores

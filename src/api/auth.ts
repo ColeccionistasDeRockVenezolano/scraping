@@ -19,6 +19,7 @@ import { z } from "zod";
 import { getEnv } from "../config/env.js";
 import { HERRA_DUMMY_HASH, HerraAccounts, herraPasswordMatches, type HerraSessionRef } from "./herra-accounts.js";
 import { ApiError } from "./http-errors.js";
+import { createWindowLimiter } from "./rate-limit.js";
 
 declare module "fastify" {
   interface FastifyRequest {
@@ -279,6 +280,12 @@ export async function registerOperatorAuth(app: FastifyInstance): Promise<void> 
   const herraPath = getEnv().CRV_HERRA_DB_PATH;
   const herra = herraPath ? new HerraAccounts(herraPath, getEnv().CRV_HERRA_PROJECT_SLUG) : undefined;
   const loginEnabled = accounts.size > 0 || herra !== undefined;
+  // Escrituras autenticadas por cuenta y minuto (hallazgo #10 de la auditoría).
+  const writesPerMinute = createWindowLimiter({ max: getEnv().CRV_WRITE_RATE_LIMIT, windowMs: 60_000, maxKeys: 1_000 });
+  const writeBudget = (identity: string): void => {
+    if (writesPerMinute.take(identity)) return;
+    throw new ApiError(429, "rate_limited", "Demasiadas escrituras seguidas (límite por minuto). Espera unos segundos y reintenta: los lotes de Curaduría continúan donde quedaron.");
+  };
   app.decorateRequest("operator", "");
   app.addHook("onClose", async () => herra?.close());
 
@@ -318,6 +325,7 @@ export async function registerOperatorAuth(app: FastifyInstance): Promise<void> 
         throw new ApiError(403, "admin_required", "Tu cuenta es de solo lectura. Editar, fusionar y revisar requiere una cuenta administradora.");
       }
       request.operator = session.name;
+      if (!isRead) writeBudget(`session:${session.name}`);
       return;
     }
 
@@ -332,6 +340,7 @@ export async function registerOperatorAuth(app: FastifyInstance): Promise<void> 
         throw new ApiError(400, "bad_request", "X-CRV-Operator admite letras, números, espacios y . _ ' - (máx. 80)");
       }
       request.operator = name || getEnv().CRV_OPERATOR_NAME;
+      if (!isRead) writeBudget(`token:${request.operator}`);
       return;
     }
 
