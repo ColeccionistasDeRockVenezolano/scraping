@@ -30,6 +30,7 @@ informe cierra cada hallazgo con su commit y su prueba. Nada se empujó a
 | 11 | Documentación desalineada (`FINAL_AUDIT`, ARCHITECTURE §7) | `FINAL_AUDIT` marcado como instantánea histórica; ARCHITECTURE con E5–E6, retención ER, SWR, `/tracks` y CI; OPERATIONS con la operación de la retención | `17d7a79` |
 | 12 | 12.908 auditorías sin `run_id` (13–14 sep) y nada que lo vigile | Causa raíz documentada (cierre F2–F5 por una ruta sin run); `merge_audit.coverage` avisa si aparecen nuevas en 3 días y tolera el histórico nombrándolo | `2e62d9c` (doctor 5/5) |
 | 9 | `public.albums.label_id` sin índice | **No se toca por diseño**: el core es inmutable y `doctor` verifica su huella objeto por objeto; queda como desviación conocida en ARCHITECTURE §4.17 para decisión del dueño | `17d7a79` |
+| 13 | `/youtube/videos` tardaba 0,87 s según el informe | Medición del 2026-09-18: **0,005 s en caliente** (0,39 s en frío). Era contención de IO del HDD, no la consulta: sin cambios de código, cerrado con evidencia | medición de este informe |
 | 14 | PostgreSQL en HDD: picos de latencia | Mitigado de raíz donde dolía (búsqueda SWR, retención por lotes con IO idle); mover el volumen a SSD sigue siendo decisión de infraestructura del dueño | este informe |
 
 ## E5 y E6 (trabajo en curso de Curaduría, cerrado)
@@ -61,10 +62,15 @@ informe cierra cada hallazgo con su commit y su prueba. Nada se empujó a
 
 ## En curso y decisiones del dueño
 
-- **Backfill de retención**: corriendo en segundo plano (`crv er:prune`), ~111k
-  de 469.445 a las 08:40; al terminar, una unidad transitoria
-  (`crv-vacuum-er.service`) ejecuta `VACUUM (ANALYZE)` y deja el resultado en
-  `/tmp/crv-vacuum-er.log`.
+- **Backfill de retención: cerrado** (2026-09-18, 11:27). `crv er:prune` compactó
+  464.393 decisiones en 2 h 57 min; la tabla quedó con 469.393 compactadas de
+  469.445 (las 52 restantes son de la ventana de 3 días, por diseño) y **650 MB
+  de datos vivos** donde antes había 19 GB, así que el respaldo completo ya no
+  copia la basura. El `VACUUM (ANALYZE)` paralelo murió por el `/dev/shm` de
+  64 MB del contenedor → relanzado con `PARALLEL 0` y documentado en
+  OPERATIONS §4. Opcional pendiente: `VACUUM FULL` para devolver los ~19 GB de
+  archivos muertos al disco (hoy el espacio ya se reutiliza; el disco tiene
+  125 GB libres, así que no corre prisa).
 - **Push**: 67 commits locales sin empujar; no se empujó nada en esta sesión.
 - **SSD**: mover el volumen de PostgreSQL a SSD sigue pendiente de decisión.
 - **`albums.label_id`**: índice fuera del core (requiere regenerar `core:catalog`
