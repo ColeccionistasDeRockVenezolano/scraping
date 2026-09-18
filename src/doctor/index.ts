@@ -164,7 +164,7 @@ async function checkMigrations(pool: Pool): Promise<DoctorCheck> {
  */
 async function checkMergeAudit(pool: Pool): Promise<DoctorCheck> {
   try {
-    const { rows } = await pool.query<{ unaudited: string; orphan_audits: string }>(`
+    const { rows } = await pool.query<{ unaudited: string; orphan_audits: string; runless: string; runless_recent: string }>(`
       WITH unaudited AS (
         SELECT a.id FROM public.artists a
          WHERE NOT EXISTS (SELECT 1 FROM ingest.merge_audit ma WHERE ma.artist_id=a.id)
@@ -194,18 +194,24 @@ async function checkMergeAudit(pool: Pool): Promise<DoctorCheck> {
         (SELECT count(*) FROM ingest.merge_audit ma
           WHERE NOT EXISTS (
             SELECT 1 FROM ingest.merge_audit_claims mac WHERE mac.merge_audit_id=ma.id
-          ))::text AS orphan_audits
+          ))::text AS orphan_audits,
+        -- Sin run: la corrección quedó auditada pero sin enlace a la ejecución
+        -- que la hizo (pasó masivamente el 2026-09-13/14, cierre F2–F5). El
+        -- histórico se tolera; una fila NUEVA sin run es una regresión.
+        (SELECT count(*) FROM ingest.merge_audit WHERE run_id IS NULL)::text AS runless,
+        (SELECT count(*) FROM ingest.merge_audit WHERE run_id IS NULL AND at >= now() - interval '3 days')::text AS runless_recent
     `);
     const unaudited = Number(rows[0]?.unaudited ?? 0);
     const orphanAudits = Number(rows[0]?.orphan_audits ?? 0);
+    const runless = Number(rows[0]?.runless ?? 0);
+    const runlessRecent = Number(rows[0]?.runless_recent ?? 0);
     const ok = unaudited === 0 && orphanAudits === 0;
-    return check(
-      "merge_audit.coverage",
-      ok ? "ok" : "fail",
-      ok
-        ? "todas las filas canónicas tienen auditoría y toda auditoría enlaza claims"
-        : `${unaudited} filas canónicas sin auditoría; ${orphanAudits} auditorías sin claim`,
-    );
+    if (!ok) return check("merge_audit.coverage", "fail", `${unaudited} filas canónicas sin auditoría; ${orphanAudits} auditorías sin claim`);
+    const base = "todas las filas canónicas tienen auditoría y toda auditoría enlaza claims";
+    if (runlessRecent > 0) {
+      return check("merge_audit.coverage", "warn", `${base}; ${runlessRecent} auditorías de los últimos 3 días sin run — ¿escritura fuera de withOperatorRun?`);
+    }
+    return check("merge_audit.coverage", "ok", runless > 0 ? `${base} (${runless} históricas sin run, anteriores al cierre F2–F5)` : base);
   } catch (err) {
     return check("merge_audit.coverage", "fail", `no se pudo verificar: ${String(err)}`);
   }

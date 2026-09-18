@@ -72,4 +72,39 @@ describe("doctor — integridad operativa (contrato)", () => {
     expect(report.warnings).toBe(0);
     expect(report.ok).toBe(true);
   });
+
+  it("una auditoría reciente sin run avisa (sin tumbar el doctor); el histórico se tolera", async () => {
+    const { rows } = await getPool().query<{ id: string }>(
+      "INSERT INTO public.persons(name) VALUES('Persona Con Auditoría Sin Run QA') RETURNING id");
+    const personId = Number(rows[0]!.id);
+    // Un claim (para que la auditoría no quede huérfana) y la auditoría sin run.
+    const claim = await getPool().query<{ id: string }>(`
+      INSERT INTO ingest.claims(source_id,entity_kind,person_id,field,raw_value,raw_hash,status,identity_key)
+      SELECT (SELECT id FROM ingest.sources ORDER BY id LIMIT 1),'person',$1,'name',to_jsonb(p.name),
+             encode(sha256(convert_to('qa-sin-run:'||p.id,'UTF8')),'hex'),'accepted','qa-sin-run:'||p.id
+        FROM public.persons p WHERE p.id=$1
+      RETURNING id`, [personId]);
+    const claimId = Number(claim.rows[0]!.id);
+    const audit = await getPool().query<{ id: string }>(
+      `INSERT INTO ingest.merge_audit(person_id,entity_kind,field,old_value,new_value,reason,confidence,performed_by,at)
+       VALUES($1,'person'::ingest.claim_entity_kind,'name','"A"'::jsonb,'"B"'::jsonb,'prueba sin run','high'::ingest.confidence_level,'human'::ingest.actor_kind,now())
+       RETURNING id`, [personId]);
+    const auditId = Number(audit.rows[0]!.id);
+    await getPool().query("INSERT INTO ingest.merge_audit_claims(merge_audit_id,claim_id) VALUES($1,$2)", [auditId, claimId]);
+
+    const report = await runDoctor();
+    expect(report.ok).toBe(true);
+    const coverage = check(report, "merge_audit.coverage");
+    expect(coverage.status).toBe("warn");
+    expect(coverage.detail).toContain("sin run");
+    expect(report.warnings).toBe(1);
+
+    // Retirada la fila nueva, el chequeo vuelve a ok; si quedaran históricas
+    // viejas (> 3 días) el detalle las nombra sin convertirlo en aviso.
+    await getPool().query("DELETE FROM ingest.merge_audit_claims WHERE merge_audit_id=$1", [auditId]);
+    await getPool().query("DELETE FROM ingest.merge_audit WHERE id=$1", [auditId]);
+    await getPool().query("DELETE FROM ingest.claims WHERE id=$1", [claimId]);
+    await getPool().query("DELETE FROM public.persons WHERE id=$1", [personId]);
+    expect(check(await runDoctor(), "merge_audit.coverage").status).toBe("ok");
+  });
 });
