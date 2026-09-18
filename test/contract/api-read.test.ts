@@ -15,7 +15,7 @@ import { buildApp } from "../../src/api/app.js";
 import {
   albumCredits, albums, artists, organizations, persons, trackCredits, tracks,
 } from "../../src/db/schema/core.js";
-import { artistAliases, sources, claims, reviewQueue } from "../../src/db/schema/ingest.js";
+import { artistAliases, trackAliases, sources, claims, reviewQueue } from "../../src/db/schema/ingest.js";
 import { videoAlbums, videoArtists, videoTracks, youtubeVideos } from "../../src/db/schema/media.js";
 
 const ADMIN_TOKEN = "token-de-prueba-lectura-admin-0123456789";
@@ -96,6 +96,9 @@ describe("API de lectura (E7A) — caso Caramelos De Cianuro", () => {
 
     await db.insert(trackCredits).values({
       trackId: trackIds[0]!, personId: personId("Asier Cazalis"), creditType: "musician", role: "Lead Vocals & Bass",
+    });
+    await db.insert(trackAliases).values({
+      trackId: trackIds[2]!, alias: "Hechicera", normalizedAlias: "hechicera", isPrimary: true,
     });
 
     const [video] = await db.insert(youtubeVideos).values({
@@ -205,6 +208,56 @@ describe("API de lectura (E7A) — caso Caramelos De Cianuro", () => {
     expect(res.json()).toMatchObject({ pagination: { total: 1 }, data: [{ id: albumId }] });
   });
 
+  it("GET /tracks lista por disco, filtra por título y alias, y pagina", async () => {
+    const byAlbum = await app.inject({ method: "GET", url: `/tracks?albumId=${albumId}` });
+    expect(byAlbum.statusCode).toBe(200);
+    const page = byAlbum.json();
+    expect(page.pagination).toMatchObject({ total: 4, limit: 50, offset: 0 });
+    expect(page.data.map((t: { trackNumber: number; albumTitle: string; artistName: string }) =>
+      [t.trackNumber, t.albumTitle, t.artistName])).toEqual([
+      [1, "Las Paticas De La Abuela", "Caramelos De Cianuro"],
+      [2, "Las Paticas De La Abuela", "Caramelos De Cianuro"],
+      [3, "Las Paticas De La Abuela", "Caramelos De Cianuro"],
+      [4, "Las Paticas De La Abuela", "Caramelos De Cianuro"],
+    ]);
+    expect(page.data[0]).toMatchObject({ title: "Chan², Chaca², Chan²", discNumber: 1, creditCount: 1 });
+
+    const byText = await app.inject({ method: "GET", url: "/tracks?q=bruja" });
+    expect(byText.json().data.map((t: { title: string }) => t.title)).toEqual(["La Bruja"]);
+
+    // El alias propio también encuentra la pista (CRUD simétrico con las fichas).
+    const byAlias = await app.inject({ method: "GET", url: "/tracks?q=hechicera" });
+    expect(byAlias.json().data.map((t: { title: string }) => t.title)).toEqual(["La Bruja"]);
+
+    const limited = await app.inject({ method: "GET", url: `/tracks?albumId=${albumId}&limit=2&offset=2` });
+    expect(limited.json().data.map((t: { trackNumber: number }) => t.trackNumber)).toEqual([3, 4]);
+    expect(limited.json().pagination.total).toBe(4);
+  });
+
+  it("GET /tracks/:id trae contexto, alias y créditos propios, y 404 si no existe", async () => {
+    const res = await app.inject({ method: "GET", url: `/tracks/${trackIds[0]}` });
+    expect(res.statusCode).toBe(200);
+    const track = res.json();
+    expect(track).toMatchObject({
+      title: "Chan², Chaca², Chan²", albumId, albumTitle: "Las Paticas De La Abuela",
+      artistId, artistName: "Caramelos De Cianuro", discNumber: 1, trackNumber: 1, creditCount: 1,
+      youtubeStartSeconds: null,
+    });
+    expect(track.aliases).toEqual([]);
+    expect(track.credits).toEqual([
+      expect.objectContaining({ creditType: "musician", role: "Lead Vocals & Bass", personName: "Asier Cazalis" }),
+    ]);
+
+    const withAlias = await app.inject({ method: "GET", url: `/tracks/${trackIds[2]}` });
+    expect(withAlias.json().aliases).toEqual([
+      { id: expect.any(Number), alias: "Hechicera", aliasType: "name_variant", isPrimary: true },
+    ]);
+    expect(withAlias.json().credits).toEqual([]);
+
+    const missing = await app.inject({ method: "GET", url: "/tracks/999999" });
+    expect(missing.statusCode).toBe(404);
+  });
+
   it("GET /persons/:id trae bandas y créditos de disco/pista", async () => {
     const res = await app.inject({ method: "GET", url: `/persons/${boriMilanId}` });
     const body = res.json();
@@ -299,6 +352,7 @@ describe("API de lectura (E7A) — caso Caramelos De Cianuro", () => {
     expect(res.statusCode).toBe(200);
     const spec = res.json();
     expect(spec.paths["/albums/{id}"]).toBeDefined();
+    expect(spec.paths["/tracks/{id}"]).toBeDefined();
     expect(spec.paths["/search"]).toBeDefined();
   });
 

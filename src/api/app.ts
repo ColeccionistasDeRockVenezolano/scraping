@@ -22,6 +22,7 @@ import { registerHealthRoutes } from "./routes/health.js";
 import { registerSearchRoutes } from "./routes/search.js";
 import { registerArtistRoutes } from "./routes/artists.js";
 import { registerAlbumRoutes } from "./routes/albums.js";
+import { registerTrackRoutes } from "./routes/tracks.js";
 import { registerPersonRoutes } from "./routes/persons.js";
 import { registerOrganizationRoutes } from "./routes/organizations.js";
 import { registerSourceRoutes } from "./routes/sources.js";
@@ -124,6 +125,7 @@ export async function buildApp(): Promise<FastifyInstance> {
   await registerSearchRoutes(app);
   await registerArtistRoutes(app);
   await registerAlbumRoutes(app);
+  await registerTrackRoutes(app);
   await registerPersonRoutes(app);
   await registerOrganizationRoutes(app);
   await registerSourceRoutes(app);
