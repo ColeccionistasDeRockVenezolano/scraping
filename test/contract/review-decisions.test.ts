@@ -47,7 +47,7 @@ describe("aplicación de decisiones de la Mesa de Cotejo", () => {
     sourceId = source!.id;
   }, 120_000);
 
-  afterAll(async () => { await closeDb(); await container.stop(); }, 60_000);
+  afterAll(async () => { await closeDb(); await container?.stop(); }, 60_000);
 
   it("aplica same y different, pero deja unsure abierto y sin applied_at", async () => {
     const canonicalSame = await claim(sourceId, "José Pérez", "high");

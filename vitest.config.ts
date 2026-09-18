@@ -9,7 +9,11 @@ export default defineConfig({
     // (ARCHITECTURE.md §9 — sin infraestructura de test distribuida).
     fileParallelism: false,
     testTimeout: 60_000,
-    hookTimeout: 120_000,
+    // Los contratos levantan un contenedor por archivo: el hook debe cubrir la
+    // espera de arranque (100 s, PG_WAIT_TIMEOUT_MS) + core + migraciones. Con
+    // 120 s se quedaba justo y un runner lento fallaba con «Hook timed out»
+    // (CI, 2026-09-18) en vez de con el error real.
+    hookTimeout: 180_000,
     coverage: {
       provider: "v8",
       reporter: ["text-summary", "html", "json-summary"],

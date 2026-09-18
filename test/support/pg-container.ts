@@ -8,7 +8,10 @@ import { promisify } from "node:util";
 const execFileAsync = promisify(execFile);
 
 const PG_IMAGE = process.env["PG_IMAGE"] ?? "postgres:16-alpine";
-const WAIT_TIMEOUT_MS = Number(process.env["PG_WAIT_TIMEOUT_MS"] ?? 120_000);
+// Por debajo del hookTimeout de vitest (180 s): si el arranque se pasa, queremos
+// el error claro de waitForPg («no aceptó conexiones en 100 s»), no un
+// «Hook timed out» que además deja `container` sin asignar.
+const WAIT_TIMEOUT_MS = Number(process.env["PG_WAIT_TIMEOUT_MS"] ?? 100_000);
 
 export interface PgContainer {
   name: string;
@@ -61,28 +64,45 @@ async function waitForPg(name: string): Promise<void> {
 
 let counter = 0;
 
-/** Levanta un PostgreSQL desechable con el puerto expuesto en el host. */
-export async function startPgContainer(): Promise<PgContainer> {
-  counter += 1;
-  const name = `crv-pg-vitest-${process.pid}-${counter}`;
-  const port = 55400 + (Math.floor(Math.random() * 400) + counter);
-
-  await sh("docker", ["rm", "-f", name]).catch(() => undefined);
+async function runContainer(name: string, port: number): Promise<void> {
   await sh("docker", [
     "run", "-d", "--name", name,
     "-e", "POSTGRES_HOST_AUTH_METHOD=trust",
     "-p", `${port}:5432`,
     PG_IMAGE,
   ]);
-  await waitForPg(name);
+}
 
-  const databaseUrl = `postgresql://postgres@127.0.0.1:${port}/postgres`;
-  return {
-    name,
-    port,
-    databaseUrl,
-    stop: async () => {
+/** Levanta un PostgreSQL desechable con el puerto expuesto en el host. */
+export async function startPgContainer(): Promise<PgContainer> {
+  counter += 1;
+  const name = `crv-pg-vitest-${process.pid}-${counter}`;
+
+  await sh("docker", ["rm", "-f", name]).catch(() => undefined);
+  // El puerto sale de un rango al azar: si otro proceso (otra suite corriendo a
+  // la vez, un contenedor huérfano) ya lo tiene, `docker run` muere con «port is
+  // already allocated» y el archivo entero fallaba por eso (visto en CI y en
+  // local el 2026-09-18). Reintentar con otro puerto, no fallar la prueba.
+  let lastError: unknown;
+  for (let attempt = 0; attempt < 5; attempt += 1) {
+    const port = 55400 + (Math.floor(Math.random() * 400) + counter + attempt);
+    try {
+      await runContainer(name, port);
+      await waitForPg(name);
+      return {
+        name,
+        port,
+        databaseUrl: `postgresql://postgres@127.0.0.1:${port}/postgres`,
+        stop: async () => {
+          await sh("docker", ["rm", "-f", name]).catch(() => undefined);
+        },
+      };
+    } catch (error: unknown) {
+      lastError = error;
+      const message = error instanceof Error ? error.message : String(error);
       await sh("docker", ["rm", "-f", name]).catch(() => undefined);
-    },
-  };
+      if (!/already allocated|address already in use/iu.test(message)) throw error;
+    }
+  }
+  throw lastError instanceof Error ? lastError : new Error(`no se pudo arrancar ${name}: ${String(lastError)}`);
 }

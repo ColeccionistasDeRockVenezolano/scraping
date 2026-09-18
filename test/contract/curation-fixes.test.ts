@@ -54,7 +54,7 @@ describe("marco de acciones de corrección de Curaduría (E4)", () => {
     app = await buildApp();
   }, 120_000);
 
-  afterAll(async () => { await waitForCurationScans(); await app?.close(); await closeDb(); await container.stop(); }, 60_000);
+  afterAll(async () => { await waitForCurationScans(); await app?.close(); await closeDb(); await container?.stop(); }, 60_000);
 
   const headers = { authorization: `Bearer ${TOKEN}`, "x-crv-operator": OPERATOR };
   const one = async (sql: string, params: unknown[] = []): Promise<number> =>

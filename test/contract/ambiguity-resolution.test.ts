@@ -90,7 +90,7 @@ describe("E10 · resolución de ambigüedades contra PostgreSQL", () => {
     const reconciled = await reconcileYouTubeChannel({ reportDir });
     expect(reconciled.summary.reviewsCreated).toBe(1);
   }, 180_000);
-  afterAll(async () => { await closeDb(); await container.stop(); }, 60_000);
+  afterAll(async () => { await closeDb(); await container?.stop(); }, 60_000);
 
   it("scan encola los pares con evidencia y deja fuera el parecido de nombre sin banda común; repetirlo no duplica", async () => {
     const dry = await scanAmbiguities({ dryRun: true, reportDir });

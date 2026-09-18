@@ -22,7 +22,7 @@ describe("retención de decisiones de resolución (contrato)", () => {
     await migrateUp();
   }, 120_000);
 
-  afterAll(async () => { await closeDb(); await container.stop(); }, 60_000);
+  afterAll(async () => { await closeDb(); await container?.stop(); }, 60_000);
 
   /** Candidata con la forma real del resolver (features incluidas). */
   function candidate(index: number) {

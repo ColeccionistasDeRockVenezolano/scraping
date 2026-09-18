@@ -70,7 +70,7 @@ describe("artes que no caben en la columna única del core", () => {
     });
   }, 120_000);
 
-  afterAll(async () => { await closeDb(); await container.stop(); }, 60_000);
+  afterAll(async () => { await closeDb(); await container?.stop(); }, 60_000);
 
   it("0008 añade el tipo sin tocar el core", async () => {
     const { rows } = await getPool().query<{ labels: string }>(

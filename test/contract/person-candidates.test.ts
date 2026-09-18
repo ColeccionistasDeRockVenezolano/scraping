@@ -18,7 +18,7 @@ describe("detector de candidatos de persona (contrato)", () => {
     await migrateUp();
   }, 120_000);
 
-  afterAll(async () => { await closeDb(); await container.stop(); }, 60_000);
+  afterAll(async () => { await closeDb(); await container?.stop(); }, 60_000);
 
   async function one(sql: string, params: unknown[] = []): Promise<number> {
     return Number((await getPool().query<{ id: string }>(sql, params)).rows[0]!.id);

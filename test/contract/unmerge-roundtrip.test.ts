@@ -26,7 +26,7 @@ describe("deshacer una fusión (E11.8)", () => {
     await migrateUp();
   }, 120_000);
 
-  afterAll(async () => { await closeDb(); await container.stop(); }, 60_000);
+  afterAll(async () => { await closeDb(); await container?.stop(); }, 60_000);
 
   const one = async (sql: string, params: unknown[] = []): Promise<number> =>
     Number((await getPool().query<{ id: string }>(sql, params)).rows[0]!.id);

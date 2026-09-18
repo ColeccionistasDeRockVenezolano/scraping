@@ -57,7 +57,7 @@ describe("yt:reconcile contra PostgreSQL", () => {
       INSERT INTO media.video_albums(video_id, album_id, album_kind, is_primary_link, confidence, source_id)
       VALUES ($1,$2,'full_album',true,'high',(SELECT id FROM ingest.sources WHERE slug='yt-master-seed'))`, [paticas, album]);
   }, 120_000);
-  afterAll(async () => { await closeDb(); await container.stop(); }, 60_000);
+  afterAll(async () => { await closeDb(); await container?.stop(); }, 60_000);
 
   it("--dry-run calcula el plan sin escribir nada", async () => {
     const result = await reconcileYouTubeChannel({ dryRun: true, reportDir });

@@ -72,7 +72,7 @@ describe("puente de relaciones: membresías y créditos", () => {
     await applyRecord({ sourceId, kind: "person", identity: "Leo Blanco", fields: [["name", "Leo Blanco"]] });
   }, 180_000);
 
-  afterAll(async () => { await closeDb(); await container.stop(); }, 60_000);
+  afterAll(async () => { await closeDb(); await container?.stop(); }, 60_000);
 
   it("crea álbum y pista resolviendo el parental por nombre desde la identidad", async () => {
     const album = await applyRecord({

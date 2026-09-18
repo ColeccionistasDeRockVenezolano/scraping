@@ -23,7 +23,7 @@ describe("índice de búsqueda con refresco en segundo plano (contrato)", () => 
     await warmSearchIndex();
   }, 120_000);
 
-  afterAll(async () => { await closeDb(); await container.stop(); }, 60_000);
+  afterAll(async () => { await closeDb(); await container?.stop(); }, 60_000);
 
   async function newPerson(name: string): Promise<number> {
     const { rows } = await getPool().query<{ id: string }>("INSERT INTO public.persons(name) VALUES($1) RETURNING id", [name]);

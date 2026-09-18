@@ -24,7 +24,7 @@ describe("CLI (contrato de humo)", () => {
     await migrateUp();
   }, 120_000);
 
-  afterAll(async () => { await closeDb(); await container.stop(); }, 60_000);
+  afterAll(async () => { await closeDb(); await container?.stop(); }, 60_000);
 
   function cli(...args: string[]): Promise<CliRun> {
     return new Promise((resolve, reject) => {

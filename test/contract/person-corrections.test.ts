@@ -68,7 +68,7 @@ describe("correcciones de personas contra PostgreSQL", () => {
       ],
     };
   }, 120_000);
-  afterAll(async () => { await closeDb(); await container.stop(); }, 60_000);
+  afterAll(async () => { await closeDb(); await container?.stop(); }, 60_000);
 
   it("--dry-run no deja rastro", async () => {
     const result = await applyPersonCorrections(plan, "prueba", { dryRun: true });

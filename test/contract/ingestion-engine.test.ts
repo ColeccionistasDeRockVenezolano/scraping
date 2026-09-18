@@ -46,7 +46,7 @@ describe("motor de ingestión con fixtures", () => {
     });
   }, 120_000);
 
-  afterAll(async () => { await closeDb(); await container.stop(); }, 60_000);
+  afterAll(async () => { await closeDb(); await container?.stop(); }, 60_000);
 
   it("doble ingestión crea runs pero no duplica claims, evidencia ni artista", async () => {
     const first = await ingestRecords("fixture-caramelos", [caramelosFixture], { confidence: "high" });

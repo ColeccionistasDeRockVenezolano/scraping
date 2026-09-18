@@ -62,7 +62,7 @@ describe("un recopilatorio relaciona a cada banda con su pista", () => {
     await ingestRecords(SOURCE, [credit], { confidence: "high", createdBy: "human" });
   }, 120_000);
 
-  afterAll(async () => { await closeDb(); await container.stop(); }, 60_000);
+  afterAll(async () => { await closeDb(); await container?.stop(); }, 60_000);
 
   it("el disco cuelga del marcador y se declara recopilatorio", async () => {
     const { rows } = await getPool().query<{ title: string; album_type: string; artist: string }>(

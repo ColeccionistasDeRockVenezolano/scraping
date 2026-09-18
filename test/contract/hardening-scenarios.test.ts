@@ -176,7 +176,7 @@ describe("E11 · escenarios de endurecimiento", () => {
   afterAll(async () => {
     await closeDb();
     await new Promise<void>((resolve) => server.close(() => resolve()));
-    await container.stop();
+    await container?.stop();
     await rm(dataDir, { recursive: true, force: true });
   }, 60_000);
 

@@ -19,7 +19,7 @@ describe("pipeline de seed y metadatos oficiales de YouTube", () => {
     await applyCore(container.name);
     await migrateUp();
   }, 120_000);
-  afterAll(async () => { await closeDb(); await container.stop(); }, 60_000);
+  afterAll(async () => { await closeDb(); await container?.stop(); }, 60_000);
 
   it("imports the actual XLSX twice without duplicate seed rows", async () => {
     const first = await importYouTubeMasterSheet();

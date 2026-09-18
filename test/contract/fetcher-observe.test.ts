@@ -96,7 +96,7 @@ describe("fetcher + cache + observe (F1)", () => {
 
   afterAll(async () => {
     await closeDb();
-    await container.stop();
+    await container?.stop();
     await new Promise<void>((resolve) => server.close(() => resolve()));
     await rm(dataDir, { recursive: true, force: true });
   }, 60_000);

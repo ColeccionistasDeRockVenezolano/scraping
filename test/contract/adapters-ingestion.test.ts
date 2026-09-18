@@ -38,7 +38,7 @@ describe("persistencia idempotente de fixtures de adapters", () => {
     await applyCore(container.name); await migrateUp();
     await getDb().insert(sources).values(slugs.map((slug) => ({ slug, name: `Fixture ${slug}`, url: `https://fixture.invalid/${slug}`, siteType: slug === "sincopa" ? "database" : "website", trustLevel: "low" as const, enabled: true })));
   }, 120_000);
-  afterAll(async () => { await closeDb(); await container.stop(); }, 60_000);
+  afterAll(async () => { await closeDb(); await container?.stop(); }, 60_000);
 
   it.each(slugs)("%s: segundo pase no duplica claims ni entidades canónicas", async (slug) => {
     const records = await recordsFor(slug);

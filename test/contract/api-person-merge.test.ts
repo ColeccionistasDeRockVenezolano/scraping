@@ -33,7 +33,7 @@ describe("API de fusión de personas (E11.4)", () => {
     await closeDb();
     delete process.env["CRV_OPERATOR_TOKEN"];
     resetEnvCache();
-    await container.stop();
+    await container?.stop();
   }, 60_000);
 
   const one = async (sql: string, params: unknown[] = []): Promise<number> =>

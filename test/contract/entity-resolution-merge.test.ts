@@ -69,7 +69,7 @@ describe("ER + claims + conflictos + merge auditado", () => {
     sourceId = source!.id;
   }, 120_000);
 
-  afterAll(async () => { await closeDb(); await container.stop(); }, 60_000);
+  afterAll(async () => { await closeDb(); await container?.stop(); }, 60_000);
 
   it("crea canonical+alias, reconoce variantes previsibles y no fusiona Pacifica/Pacífica", async () => {
     const created = await applyClaim({ sourceId, kind: "artist", identity: "  Caramelos de Cianuro  ", field: "name", value: "Caramelos de Cianuro" });

@@ -49,7 +49,7 @@ describe("acciones estructurales (PLAN_CURADURIA E6)", () => {
   afterAll(async () => {
     await app?.close();
     await closeDb();
-    await container.stop();
+    await container?.stop();
   }, 60_000);
 
   const one = async (sql: string, params: unknown[] = []): Promise<number> =>

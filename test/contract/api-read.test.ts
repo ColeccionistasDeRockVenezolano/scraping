@@ -130,7 +130,7 @@ describe("API de lectura (E7A) — caso Caramelos De Cianuro", () => {
     await refreshSearchIndex();
   }, 120_000);
 
-  afterAll(async () => { await app?.close(); await closeDb(); delete process.env["CRV_OPERATOR_TOKEN"]; resetEnvCache(); await container.stop(); }, 60_000);
+  afterAll(async () => { await app?.close(); await closeDb(); delete process.env["CRV_OPERATOR_TOKEN"]; resetEnvCache(); await container?.stop(); }, 60_000);
 
   it("GET /health reporta la base viva", async () => {
     const res = await app.inject({ method: "GET", url: "/health" });

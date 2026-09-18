@@ -53,7 +53,7 @@ describe("aprobación por lotes", () => {
     await ingestRecords("fixture-lote", registros, { confidence: "low" });
   }, 120_000);
 
-  afterAll(async () => { await closeDb(); await container.stop(); }, 60_000);
+  afterAll(async () => { await closeDb(); await container?.stop(); }, 60_000);
 
   it("previsualiza en orden de dependencia y no toca el core", async () => {
     const plan = await planBatch({ sourceSlug: "fixture-lote" });

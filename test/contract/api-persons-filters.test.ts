@@ -60,7 +60,7 @@ describe("búsqueda sin tildes y filtros de personas (E11.9)", () => {
     await refreshSearchIndex();
   }, 120_000);
 
-  afterAll(async () => { await app?.close(); await closeDb(); await container.stop(); }, 60_000);
+  afterAll(async () => { await app?.close(); await closeDb(); await container?.stop(); }, 60_000);
 
   it("q=jose encuentra «José» y ordena primero los que empiezan por la consulta", async () => {
     const res = await app.inject({ method: "GET", url: "/persons?q=jose&limit=10" });

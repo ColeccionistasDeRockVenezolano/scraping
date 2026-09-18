@@ -44,7 +44,7 @@ describe("detector de conflictos de Curaduría (persistencia y verificación de 
     app = await buildApp();
   }, 120_000);
 
-  afterAll(async () => { await app?.close(); await closeDb(); await container.stop(); }, 60_000);
+  afterAll(async () => { await app?.close(); await closeDb(); await container?.stop(); }, 60_000);
 
   const headers = { authorization: `Bearer ${TOKEN}`, "x-crv-operator": OPERATOR };
   const one = async (sql: string, params: unknown[] = []): Promise<number> =>

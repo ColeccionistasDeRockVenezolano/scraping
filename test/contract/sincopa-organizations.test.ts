@@ -43,7 +43,7 @@ describe("reparación de organizaciones de Sincopa (contrato)", () => {
 
   afterAll(async () => {
     await closeDb();
-    await container.stop();
+    await container?.stop();
     await rm(dataDir, { recursive: true, force: true });
   }, 60_000);
 

@@ -27,7 +27,7 @@ describe("fusión de duplicados del core", () => {
     sourceId = source!.id;
   }, 120_000);
 
-  afterAll(async () => { await closeDb(); await container.stop(); }, 60_000);
+  afterAll(async () => { await closeDb(); await container?.stop(); }, 60_000);
 
   async function albumClaim(albumId: number, title: string) {
     const [record] = normalizeRecord({

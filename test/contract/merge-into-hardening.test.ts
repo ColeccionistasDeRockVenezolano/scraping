@@ -31,7 +31,7 @@ describe("mergeInto endurecido", () => {
     runId = await one("INSERT INTO ingest.scrape_runs(kind,status,params) VALUES('merge_run','running','{}'::jsonb) RETURNING id");
   }, 120_000);
 
-  afterAll(async () => { await closeDb(); await container.stop(); }, 60_000);
+  afterAll(async () => { await closeDb(); await container?.stop(); }, 60_000);
 
   async function one(sql: string, params: unknown[] = []): Promise<number> {
     return Number((await getPool().query<{ id: string }>(sql, params)).rows[0]!.id);

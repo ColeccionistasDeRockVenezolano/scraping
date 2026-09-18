@@ -22,7 +22,7 @@ describe("doctor — integridad operativa (contrato)", () => {
     await migrateUp();
   }, 120_000);
 
-  afterAll(async () => { await closeDb(); await container.stop(); }, 60_000);
+  afterAll(async () => { await closeDb(); await container?.stop(); }, 60_000);
 
   const check = (report: Awaited<ReturnType<typeof runDoctor>>, name: string) => report.checks.find((item) => item.name === name)!;
 

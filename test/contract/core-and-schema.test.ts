@@ -57,7 +57,7 @@ describe("contrato del core + migraciones (Drizzle/TS)", () => {
 
   afterAll(async () => {
     await closeDb();
-    await container.stop();
+    await container?.stop();
   }, 60_000);
 
   it("crv_simple_v1.sql coincide con crv_simple_v1.sql.sha256", async () => {

@@ -47,7 +47,7 @@ describe("API de escritura de alias (E8)", () => {
     await closeDb();
     delete process.env["CRV_OPERATOR_TOKEN"];
     resetEnvCache();
-    await container.stop();
+    await container?.stop();
   }, 60_000);
 
   it("sin token no se escribe", async () => {
