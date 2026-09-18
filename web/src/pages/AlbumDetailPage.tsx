@@ -165,7 +165,7 @@ export function AlbumDetailPage() {
                 {format.quality ? <span style={{ color: "var(--text-faint)", fontSize: 11 }}>{format.quality}</span> : null}
                 <span className="badge" style={{ fontSize: 10 }}>{format.archiveStatus}</span>
                 {isAdmin ? (
-                  <FormatRemoveButton id={format.id} onDone={reload} />
+                  <FormatRemoveButton id={format.id} format={format.format} onDone={reload} />
                 ) : null}
               </li>
             ))}
@@ -255,9 +255,8 @@ export function AlbumDetailPage() {
           description="Se retira la pista y sus créditos propios; el historial queda en la ficha del disco."
           confirmLabel="Quitar"
           danger
-          requireNote={false}
           onConfirm={async (note) => {
-            await trackWrites.remove(removingTrack.id, note || "pista retirada desde la interfaz");
+            await trackWrites.remove(removingTrack.id, note);
             notify("success", "Pista retirada.");
             setRemovingTrack(null);
             reload();
@@ -273,18 +272,28 @@ export function AlbumDetailPage() {
   );
 }
 
-function FormatRemoveButton({ id, onDone }: { id: number; onDone: () => void }) {
+function FormatRemoveButton({ id, format, onDone }: { id: number; format: string; onDone: () => void }) {
   const { notify } = useToast();
+  const [confirming, setConfirming] = useState(false);
   return (
-    <button type="button" onClick={async () => {
-      try {
-        await albumFormatWrites.remove(id, "formato retirado desde la interfaz");
-        notify("success", "Formato retirado.");
-        onDone();
-      } catch (err) {
-        notify("error", err instanceof ApiError ? err.message : "No se pudo retirar el formato.");
-      }
-    }}>×</button>
+    <>
+      <button type="button" aria-label={`Retirar formato ${format}`} onClick={() => setConfirming(true)}>×</button>
+      {confirming ? (
+        <ConfirmDialog
+          title={`Retirar formato «${format}»`}
+          description="El formato deja de estar disponible; su historia queda en la ficha del disco."
+          confirmLabel="Retirar"
+          danger
+          onConfirm={async (note) => {
+            await albumFormatWrites.remove(id, note);
+            notify("success", "Formato retirado.");
+            setConfirming(false);
+            onDone();
+          }}
+          onClose={() => setConfirming(false)}
+        />
+      ) : null}
+    </>
   );
 }
 

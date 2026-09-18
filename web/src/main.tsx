@@ -2,6 +2,7 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import { App } from "./App";
+import { ErrorBoundary } from "./components/ErrorBoundary";
 import { OperatorProvider } from "./lib/OperatorContext";
 import { ToastProvider } from "./lib/ToastContext";
 import "./styles/global.css";
@@ -19,12 +20,14 @@ const basename = import.meta.env.BASE_URL.replace(/\/$/, "") || "/";
 
 createRoot(container).render(
   <StrictMode>
-  <BrowserRouter basename={basename}>
-      <OperatorProvider>
-        <ToastProvider>
-          <App />
-        </ToastProvider>
-      </OperatorProvider>
-    </BrowserRouter>
+    <ErrorBoundary>
+      <BrowserRouter basename={basename}>
+        <OperatorProvider>
+          <ToastProvider>
+            <App />
+          </ToastProvider>
+        </OperatorProvider>
+      </BrowserRouter>
+    </ErrorBoundary>
   </StrictMode>,
 );

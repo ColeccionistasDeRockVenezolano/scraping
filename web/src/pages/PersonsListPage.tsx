@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { personsApi, personWrites } from "../lib/api";
 import { useAsync } from "../lib/useAsync";
+import { useDebouncedQuery } from "../lib/useDebouncedQuery";
 import { useOperator } from "../lib/OperatorContext";
 import { useToast } from "../lib/ToastContext";
 import { LoadingState, ErrorState, EmptyState } from "../components/StateViews";
@@ -43,8 +44,13 @@ export function PersonsListPage() {
       if (value === undefined || value === "") merged.delete(key); else merged.set(key, value);
     }
     merged.delete("offset");
-    setParams(merged);
+    setParams(merged, { replace: true });
   }
+
+  // La consulta se aplica con retardo (patrón compartido con las otras
+  // listas): teclear no dispara una petición ni una entrada de historial por
+  // letra; el resto de filtros siguen siendo inmediatos.
+  const [query, setQuery] = useDebouncedQuery(q, (value) => update({ q: value }));
 
   return (
     <>
@@ -59,7 +65,7 @@ export function PersonsListPage() {
 
       <div className="list-toolbar">
         <input
-          className="filter-input" value={q} onChange={(event) => update({ q: event.target.value })}
+          className="filter-input" value={query} onChange={(event) => setQuery(event.target.value)}
           placeholder="Buscar por nombre o alias (jose encuentra «José»)…"
           aria-label="Buscar personas"
         />
@@ -82,11 +88,11 @@ export function PersonsListPage() {
         </select>
       </div>
 
-      {loading ? <LoadingState /> : error ? <ErrorState message={error} onRetry={reload} /> : !data || data.data.length === 0 ? (
+      {loading && !data ? <LoadingState /> : error ? <ErrorState message={error} onRetry={reload} /> : !data || data.data.length === 0 ? (
         <EmptyState title="No hay personas para mostrar" hint={q || suspect || hasCredits === false ? "Prueba con otro filtro." : undefined} />
       ) : (
         <>
-          <div className="grid-cards">
+          <div className={`grid-cards${loading ? " is-refreshing" : ""}`}>
             {data.data.map((person) => (
               <EntityCard
                 key={person.id}

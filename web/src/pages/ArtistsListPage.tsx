@@ -27,14 +27,14 @@ export function ArtistsListPage() {
       </div>
 
       <div className="list-toolbar">
-        <input className="filter-input" defaultValue={q} onChange={(event) => setQuery(event.target.value)} placeholder="Filtrar por nombre…" />
+        <input className="filter-input" value={q} onChange={(event) => setQuery(event.target.value)} placeholder="Filtrar por nombre…" />
       </div>
 
-      {loading ? <LoadingState /> : error ? <ErrorState message={error} onRetry={reload} /> : !data || data.data.length === 0 ? (
+      {loading && !data ? <LoadingState /> : error ? <ErrorState message={error} onRetry={reload} /> : !data || data.data.length === 0 ? (
         <EmptyState title="No hay artistas para mostrar" hint={q ? "Prueba con otro filtro." : undefined} />
       ) : (
         <>
-          <div className="grid-cards">
+          <div className={`grid-cards${loading ? " is-refreshing" : ""}`}>
             {data.data.map((artist) => (
               <EntityCard
                 key={artist.id}

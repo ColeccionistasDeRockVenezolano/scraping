@@ -21,17 +21,20 @@ export function AliasEditor({ path, entityId, aliases, onChanged }: AliasEditorP
   const [adding, setAdding] = useState(false);
   const [alias, setAlias] = useState("");
   const [aliasType, setAliasType] = useState("name_variant");
+  const [note, setNote] = useState("");
   const [busy, setBusy] = useState(false);
   const [editing, setEditing] = useState<Alias | null>(null);
   const [removing, setRemoving] = useState<Alias | null>(null);
+  const [promoting, setPromoting] = useState<Alias | null>(null);
 
   async function handleAdd(event: React.FormEvent) {
     event.preventDefault();
-    if (!alias.trim()) return;
+    if (!alias.trim() || !note.trim()) { notify("error", "Alias y motivo son obligatorios."); return; }
     setBusy(true);
     try {
-      await aliasWrites[path].create(entityId, { alias: alias.trim(), aliasType, isPrimary: false, note: "alias añadido desde la interfaz" });
+      await aliasWrites[path].create(entityId, { alias: alias.trim(), aliasType, isPrimary: false, note: note.trim() });
       setAlias("");
+      setNote("");
       setAdding(false);
       onChanged();
       notify("success", "Alias añadido.");
@@ -42,9 +45,9 @@ export function AliasEditor({ path, entityId, aliases, onChanged }: AliasEditorP
     }
   }
 
-  async function handleMakePrimary(aliasId: number) {
+  async function handleMakePrimary(aliasId: number, note: string) {
     try {
-      await aliasWrites[path].update(entityId, aliasId, { isPrimary: true, note: "marcado como alias principal" });
+      await aliasWrites[path].update(entityId, aliasId, { isPrimary: true, note });
       onChanged();
     } catch (err) {
       notify("error", err instanceof ApiError ? err.message : "No se pudo actualizar el alias.");
@@ -72,7 +75,7 @@ export function AliasEditor({ path, entityId, aliases, onChanged }: AliasEditorP
             {isAdmin ? (
               <>
                 {!item.isPrimary ? (
-                  <button type="button" title="Marcar como principal" aria-label={`Marcar ${item.alias} como principal`} onClick={() => handleMakePrimary(item.id)}><Star aria-hidden="true" /></button>
+                  <button type="button" title="Marcar como principal" aria-label={`Marcar ${item.alias} como principal`} onClick={() => setPromoting(item)}><Star aria-hidden="true" /></button>
                 ) : null}
                 <button type="button" title="Editar" aria-label={`Editar ${item.alias}`} onClick={() => setEditing(item)}><PencilSimple aria-hidden="true" /></button>
                 <button type="button" title="Retirar" aria-label={`Retirar ${item.alias}`} onClick={() => setRemoving(item)}><Trash aria-hidden="true" /></button>
@@ -89,6 +92,7 @@ export function AliasEditor({ path, entityId, aliases, onChanged }: AliasEditorP
             <select value={aliasType} onChange={(event) => setAliasType(event.target.value)} className="filter-input">
               {ALIAS_TYPES.map((type) => <option key={type} value={type}>{aliasTypeLabel(type)}</option>)}
             </select>
+            <input value={note} onChange={(event) => setNote(event.target.value)} placeholder="Motivo *" className="filter-input" style={{ minWidth: 220 }} />
             <button type="submit" className="btn btn--sm btn--primary" disabled={busy}>Añadir</button>
             <button type="button" className="btn btn--sm" onClick={() => setAdding(false)}>Cancelar</button>
           </form>
@@ -106,6 +110,18 @@ export function AliasEditor({ path, entityId, aliases, onChanged }: AliasEditorP
             await handleRemove(removing.id, note);
             setRemoving(null);
           }} />
+      ) : null}
+      {promoting ? (
+        <ConfirmDialog
+          title={`Marcar «${promoting.alias}» como alias principal`}
+          description="El alias principal es el que la búsqueda y la conciliación usan para reconocer el nombre canónico."
+          confirmLabel="Marcar"
+          onClose={() => setPromoting(null)}
+          onConfirm={async (note) => {
+            await handleMakePrimary(promoting.id, note);
+            setPromoting(null);
+          }}
+        />
       ) : null}
     </div>
   );

@@ -9,6 +9,35 @@
    tabular (años, duraciones, IDs) que el sitio de marketing no necesita.
    ============================================================ */
 
+/* Tipografías auto-hospedadas (subset latin, woff2). Antes venían de Google
+   Fonts por <link> y la CSP del gateway —font-src 'self'— las bloqueaba en
+   producción: la interfaz caía en silencio a Arial Black/system-ui. Servidas
+   desde el propio bundle no hay dependencia externa ni que relajar la CSP.
+   Inter y JetBrains Mono son variables: un archivo cubre todos los pesos. */
+@font-face {
+  font-family: "Anton";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../assets/fonts/anton-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("../assets/fonts/inter-var.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 100 800;
+  font-display: swap;
+  src: url("../assets/fonts/jetbrains-mono-var.woff2") format("woff2");
+}
+
 :root {
   --bg: #0a0a0a;
   --surface: #141414;
@@ -855,6 +884,10 @@ td.num { font-family: var(--font-mono); }
 
 .cfind-list { display: grid; gap: 10px; margin: 0 0 8px; padding: 0; list-style: none; transition: opacity 0.15s; }
 .cfind-list.is-refreshing { opacity: 0.6; }
+
+/* Recarga en curso de una lista: la anterior se atenúa en vez de desaparecer
+   detrás del spinner (mismo criterio que .cfind-list). */
+.grid-cards.is-refreshing { opacity: 0.6; }
 .cfind {
   display: grid; gap: 8px; padding: 14px 18px; background: var(--surface); border: 1px solid var(--border);
   border-left: 3px solid var(--text-faint); border-radius: var(--radius-md); min-width: 0;

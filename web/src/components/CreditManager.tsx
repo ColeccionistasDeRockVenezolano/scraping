@@ -38,7 +38,7 @@ export function CreditManager({ target, credits, onChanged, compact }: CreditMan
 
   async function handleRemove(note: string) {
     if (!removing) return;
-    await writes.remove(removing.id, note || "crédito retirado desde la interfaz");
+    await writes.remove(removing.id, note);
     notify("success", "Crédito retirado.");
     setRemoving(null);
     onChanged();
@@ -79,7 +79,6 @@ export function CreditManager({ target, credits, onChanged, compact }: CreditMan
           description={`«${removing.role}» — no borra a la persona, artista u organización.`}
           confirmLabel="Retirar"
           danger
-          requireNote={false}
           onConfirm={handleRemove}
           onClose={() => setRemoving(null)}
         />
