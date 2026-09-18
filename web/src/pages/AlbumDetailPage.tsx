@@ -8,6 +8,7 @@ import { useToast } from "../lib/ToastContext";
 import { LoadingState, ErrorState } from "../components/StateViews";
 import { AliasEditor } from "../components/AliasEditor";
 import { EntityFormModal } from "../components/EntityFormModal";
+import { TrackAliasesSection } from "../components/TrackAliasesSection";
 import { EntityPicker } from "../components/EntityPicker";
 import { ConfirmDialog } from "../components/ConfirmDialog";
 import { CreditManager } from "../components/CreditManager";
@@ -243,6 +244,7 @@ export function AlbumDetailPage() {
             title: editingTrack.title, discNumber: editingTrack.discNumber, trackNumber: editingTrack.trackNumber,
             durationSeconds: editingTrack.durationSeconds, youtubeStartSeconds: editingTrack.youtubeStartSeconds,
           }}
+          extraFields={<TrackAliasesSection trackId={editingTrack.id} onChanged={reload} />}
           onSubmit={(values, note) => trackWrites.update(editingTrack.id, { ...values, note })}
           onSuccess={() => { setEditingTrack(null); reload(); notify("success", "Pista actualizada."); }}
           onClose={() => setEditingTrack(null)}

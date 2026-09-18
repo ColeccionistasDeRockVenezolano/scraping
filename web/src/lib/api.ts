@@ -7,6 +7,7 @@ import type {
   MergeableKind, OrganizationDetail, OrganizationListItem, Page, PersonDetail, PersonListItem, RelationUpdateResult, RelationWriteResult,
   PersonConversionResult, PersonDuplicateCandidate, PersonMergePreview, PersonMergeResult, RemovalResult, ReviewActionResult,
   ReviewDetail, ReviewListItem, SearchResults, Source, UnmergeResult, VideoDetail, VideoListItem,
+  TrackDetail, TrackListItem,
   CurationFinding, CurationFindingStatus, CurationFixBatchResult, CurationIgnoreReason, CurationPairKind, CurationScan, CurationScanResult,
   CurationSeverity, CurationSummary,
 } from "./types";
@@ -176,6 +177,12 @@ export const entityMergeApi = {
 export const organizationsApi = {
   list: (params: Paged & { q?: string } = {}) => request<Page<OrganizationListItem>>("/organizations", { query: params }),
   get: (id: number) => request<OrganizationDetail>(`/organizations/${id}`),
+};
+
+/** Lectura de pistas (auditoría #7: el CRUD era asimétrico, sin GET). */
+export const tracksApi = {
+  list: (params: Paged & { q?: string; albumId?: number } = {}) => request<Page<TrackListItem>>("/tracks", { query: params }),
+  get: (id: number) => request<TrackDetail>(`/tracks/${id}`),
 };
 
 export const sourcesApi = {

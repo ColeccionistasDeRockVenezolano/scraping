@@ -84,6 +84,27 @@ export interface Track {
   credits: Credit[];
 }
 
+// ---------- tracks (lectura propia: auditoría #7) ----------
+export interface TrackListItem {
+  id: number;
+  title: string;
+  albumId: number;
+  albumTitle: string;
+  artistId: number;
+  artistName: string;
+  discNumber: number;
+  trackNumber: number;
+  durationSeconds: number | null;
+  creditCount: number;
+}
+
+export interface TrackDetail extends TrackListItem {
+  youtubeStartSeconds: number | null;
+  notes: string | null;
+  aliases: Alias[];
+  credits: Credit[];
+}
+
 export interface AlbumFormat { id: number; format: string; quality: string | null; archiveStatus: string; }
 
 export interface YoutubeLink { videoId: string; title: string | null; kind: string; isPrimaryLink: boolean; }
