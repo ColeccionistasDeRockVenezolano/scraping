@@ -46,7 +46,7 @@ interface MergeAuditRow {
 }
 
 /** `true` si el `id` de la tabla es `GENERATED ... AS IDENTITY` (necesita OVERRIDING SYSTEM VALUE). */
-async function hasIdentity(client: PoolClient, table: string): Promise<boolean> {
+export async function hasIdentity(client: PoolClient, table: string): Promise<boolean> {
   const { rows } = await client.query<{ identity: boolean }>(`
     SELECT EXISTS (
       SELECT 1 FROM pg_attribute a

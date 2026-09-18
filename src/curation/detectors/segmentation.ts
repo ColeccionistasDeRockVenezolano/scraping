@@ -38,7 +38,11 @@ export const artistInTrackTitle: Detector = {
   category: CATEGORY,
   label: "Artista dentro del título de la pista",
   description: "El título de la pista trae «Artista - Título»: el intérprete debería ser un crédito de la pista, no parte del título.",
-  actions: { repite_artista_del_disco: ["quitar_prefijo_artista"] },
+  actions: {
+    repite_artista_del_disco: ["quitar_prefijo_artista"],
+    artista_con_ficha: ["extraer_interprete"],
+    artista_sin_ficha: ["extraer_interprete_creando"],
+  },
   run(context) {
     const compilationLike = performerInTitlesAlbums(context);
     // Orientación de cada disco: si sus pistas nombran artistas conocidos más
@@ -138,6 +142,10 @@ export const creditsInTitle: Detector = {
   category: CATEGORY,
   label: "Créditos dentro del título",
   description: "Autores o invitados escritos en el título («(R. Zonteno / M. Landa)», «(feat. Unco)»): deberían ser créditos de la pista.",
+  actions: {
+    invitado: ["extraer_invitado"],
+    autores: ["extraer_autores"],
+  },
   run(context) {
     return context.names.filter((name) => name.kind === "track").flatMap((name) => {
       for (const match of name.value.matchAll(GROUP)) {
@@ -196,6 +204,7 @@ export const durationInTitle: Detector = {
   category: CATEGORY,
   label: "Duración dentro del título",
   description: "El extractor dejó la duración pegada al título («Ángel 3:30»): va en la duración de la pista.",
+  actions: { "*": ["mover_duracion"] },
   run({ names }) {
     return names.filter((name) => (name.kind === "track" || name.kind === "album")
       && DURATION.test(name.value) && /\p{L}{2,}/u.test(name.value.replace(DURATION, ""))).map((name) => {
@@ -362,7 +371,10 @@ export const severalPeopleInOne: Detector = {
   category: CATEGORY,
   label: "Varias personas en una ficha",
   description: "Una ficha de persona que en realidad es una lista («Eliezer Delgado, Gregory Carrero», «L. Rangel/ E. Sáez/ J.F. Coral») o un nombre con su alias escrito dentro («(aka Mr. Sonic)»).",
-  actions: { alias_en_nombre: ["renombrar_con_alias"] },
+  actions: {
+    alias_en_nombre: ["renombrar_con_alias"],
+    varias_personas_en_una: ["dividir_persona"],
+  },
   run({ names }) {
     return names.filter((name) => name.kind === "person").flatMap((name) => {
       // Un alias no es otra persona: se separa como alias, no se divide la ficha.

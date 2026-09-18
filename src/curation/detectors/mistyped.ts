@@ -16,6 +16,10 @@ export const personIsOrganization: Detector = {
   category: CATEGORY,
   label: "Persona que es una organización",
   description: "Estudios, sellos o productoras cargados como persona: coinciden con una organización del catálogo o usan su vocabulario (aprendido de los nombres de organización).",
+  actions: {
+    coincide_con_organizacion: ["convertir_en_organizacion_existente"],
+    vocabulario_de_organizacion: ["convertir_creando_organizacion"],
+  },
   run(context) {
     return context.names.filter((name) => name.kind === "person").flatMap((name) => {
       const orgIds = context.lexicon.organizationsByKey.get(nameKey(name.value)) ?? [];
@@ -53,6 +57,7 @@ export const personIsNotAName: Detector = {
   category: CATEGORY,
   label: "Persona que no es un nombre",
   description: "Duraciones, números, fragmentos de texto, palabras de rol o de tipo de disco, o texto de un evento cargados como persona.",
+  actions: { "*": ["retirar_con_creditos"] },
   run(context) {
     // Rol, tipo de disco o descriptor de género/serie («Rock», «Vol»): ninguno es un nombre.
     const generic = (token: string): boolean => context.lexicon.roleTokens.has(token) || context.lexicon.albumTypeWords.has(token)
@@ -109,6 +114,10 @@ export const personNamedLikeArtist: Detector = {
   category: CATEGORY,
   label: "Persona con el nombre de un artista",
   description: "Una ficha de persona se llama exactamente como un artista del catálogo y no tiene ningún vínculo con él: la banda cargada como persona, o el solista detrás de un proyecto con su nombre.",
+  actions: {
+    solista_detras_del_proyecto: ["vincular_como_miembro", "convertir_en_artista"],
+    banda_como_persona: ["convertir_en_artista", "vincular_como_miembro"],
+  },
   run(context) {
     return context.names.filter((name) => name.kind === "person").flatMap((name) => {
       const artists = context.lexicon.artistsByKey.get(nameKey(name.value)) ?? [];

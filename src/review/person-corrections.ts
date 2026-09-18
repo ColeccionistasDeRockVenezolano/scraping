@@ -150,7 +150,7 @@ async function applyOne(client: PoolClient, correction: PersonCorrection, note: 
     case "to_organization":
       return absorbPerson(client, correction.op, correction.person, correction.organization, ABSORBERS.organization, correction.keepNameAsAlias, reason, runId);
     case "split":
-      return splitPerson(client, correction, reason, runId);
+      return splitPerson(client, correction.person.id, correction.into, reason, runId, correction.person.name);
   }
 }
 
@@ -266,11 +266,74 @@ const sameRole = (left: string, right: string) => left.trim().toLowerCase() === 
  * su historia queda en la auditoría de cada destino y sus claims, superseded.
  * Nada se fusiona ni se borra por parecido: los destinos los nombra el plan.
  */
-async function splitPerson(
-  client: PoolClient, correction: Extract<PersonCorrection, { op: "split" }>, reason: string, runId: number,
-): Promise<CorrectionOutcome & { credits: number }> {
-  const original = correction.person;
-  expectName("persona", original, await personName(client, original.id));
+export interface PersonSplitPreview {
+  person: { id: number; name: string };
+  into: string[];
+  targets: Array<{ name: string; existingId: number | null }>;
+  counts: { albumCredits: number; trackCredits: number; memberships: number; organizations: number };
+  warnings: string[];
+}
+
+/** Previsualiza la división de una persona: destinos que se crearán o reutilizarán y créditos que se repartirán. */
+export async function previewPersonSplit(
+  client: PoolClient, personId: number, into: string[],
+): Promise<PersonSplitPreview> {
+  const name = await personName(client, personId);
+  if (!name) {
+    const moved = await resolveRedirect("person", personId, client);
+    throw new OperatorError("not_found", `persona ${personId} inexistente`, { entity: "person", id: personId, ...(moved ? { movedTo: moved } : {}) });
+  }
+  const targets: Array<{ name: string; existingId: number | null }> = [];
+  const warnings: string[] = [];
+  for (const targetName of into) {
+    const found = await personsNamedExactly(client, targetName);
+    if (found.includes(personId)) {
+      warnings.push(`El destino «${targetName}» es la propia ficha ${personId}.`);
+    } else if (found.length > 1) {
+      warnings.push(`«${targetName}» coincide con ${found.length} personas distintas.`);
+    }
+    targets.push({ name: targetName, existingId: found.length === 1 && found[0] !== personId ? found[0]! : null });
+  }
+
+  const { rows } = await client.query<{ album_credits: string; track_credits: string; memberships: string; organizations: string }>(`
+    SELECT (SELECT count(*) FROM public.album_credits WHERE person_id=$1)::text AS album_credits,
+           (SELECT count(*) FROM public.track_credits WHERE person_id=$1)::text AS track_credits,
+           (SELECT count(*) FROM public.artist_members WHERE person_id=$1)::text AS memberships,
+           (SELECT count(*) FROM public.person_organizations WHERE person_id=$1)::text AS organizations`, [personId]);
+  const counted = rows[0]!;
+  return {
+    person: { id: personId, name },
+    into,
+    targets,
+    counts: {
+      albumCredits: Number(counted.album_credits),
+      trackCredits: Number(counted.track_credits),
+      memberships: Number(counted.memberships),
+      organizations: Number(counted.organizations),
+    },
+    warnings,
+  };
+}
+
+/**
+ * «Dividir» una ficha que en realidad son varias personas (E11.7, PLAN_CURADURIA E6.3).
+ * Cada nombre de `into` recibe copia de la trayectoria (créditos, membresías y
+ * organizaciones) —con auditoría `split_from`— y la ficha combinada se retira:
+ * su historia queda en la auditoría de cada destino y sus claims, superseded.
+ * Nada se fusiona ni se borra por parecido: los destinos los nombra la petición.
+ */
+export async function splitPerson(
+  client: PoolClient, personId: number, into: string[], reason: string, runId: number, expectedName?: string,
+): Promise<Omit<CorrectionOutcome, "op"> & { op: "split"; credits: number; targetIds: number[] }> {
+  const actualName = await personName(client, personId);
+  if (!actualName) {
+    const moved = await resolveRedirect("person", personId, client);
+    throw new OperatorError("not_found", `persona ${personId} inexistente`, { entity: "person", id: personId, ...(moved ? { movedTo: moved } : {}) });
+  }
+  if (expectedName !== undefined) {
+    expectName("persona", { id: personId, name: expectedName }, actualName);
+  }
+  const original = { id: personId, name: actualName };
 
   // 1. Destinos: la persona que ya responde a ese nombre exacto, o una nueva.
   //    Se intenta crear sin «a sabiendas» (allowSimilar: false); si el ER ve
@@ -292,7 +355,7 @@ async function splitPerson(
     }
   };
   const targets: number[] = [];
-  for (const name of correction.into) {
+  for (const name of into) {
     const found = await personsNamedExactly(client, name);
     if (found.includes(original.id)) throw new Error(`el destino «${name}» es la propia ficha ${original.id}: una división no se apunta a sí misma`);
     if (found.length > 1) throw new Error(`«${name}» coincide con ${found.length} personas (${found.join(", ")}): fusione o renombre antes de dividir`);
@@ -406,6 +469,7 @@ async function splitPerson(
       ? `«${original.name}» (${original.id}) → ${targets.join(", ")}; ${duplicated} relaciones duplicadas, ${retired} retiradas de la ficha combinada`
       : `persona ${original.id} ya no existe`,
     credits,
+    targetIds: targets,
   };
 }
 

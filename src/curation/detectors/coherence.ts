@@ -25,6 +25,7 @@ export const albumTypeVsTitle: Detector = {
   category: CATEGORY,
   label: "Tipo de disco contra título",
   description: "El título declara un tipo («Demo», «EP», «En Vivo», y las palabras que el catálogo aprendió de los discos ya clasificados) distinto del tipo guardado.",
+  actions: { "*": ["fijar_tipo_de_disco"] },
   run(context) {
     return context.names.filter((name) => name.kind === "album").flatMap((name) => {
       const album = context.albums.get(name.id)!;
@@ -81,6 +82,7 @@ export const albumBeforeFormation: Detector = {
   category: CATEGORY,
   label: "Disco anterior a la formación",
   description: "El disco se publicó antes del año de formación del artista.",
+  actions: { "*": ["fijar_anio_formacion"] },
   run(context) {
     return context.names.filter((name) => name.kind === "album").flatMap((name) => {
       const album = context.albums.get(name.id)!;
@@ -101,6 +103,7 @@ export const impossibleYears: Detector = {
   category: CATEGORY,
   label: "Años imposibles",
   description: "Años de publicación, formación o separación en el futuro o anteriores a la grabación sonora comercial.",
+  actions: { "*": ["vaciar_anio"] },
   run(context) {
     const out: Finding[] = [];
     const bad = (year: number | null): boolean => year !== null && (year > context.currentYear + 1 || year < 1900);
@@ -125,6 +128,10 @@ export const atypicalDuration: Detector = {
   category: CATEGORY,
   label: "Duración atípica",
   description: "Pistas de duración cero o muy lejos de la distribución de duraciones del propio catálogo (escala logarítmica, desviación robusta).",
+  actions: {
+    cero: ["vaciar_duracion"],
+    muy_larga: ["corregir_unidades"],
+  },
   run(context) {
     const durations = context.snapshot.tracks.map((track) => track.durationSeconds).filter((value): value is number => value !== null && value > 0);
     if (durations.length < 30) return [];
@@ -165,6 +172,7 @@ export const numberingGaps: Detector = {
   category: CATEGORY,
   label: "Huecos en la numeración de pistas",
   description: "Faltan números de pista dentro de una cara: pistas que la extracción perdió o numeración mal leída. Una numeración que sigue de una cara a la siguiente (1–5, 6–10) no es un hueco.",
+  actions: { "*": ["renumerar_consecutivo"] },
   run(context) {
     const out: Finding[] = [];
     for (const [albumId, tracks] of context.tracksByAlbum) {

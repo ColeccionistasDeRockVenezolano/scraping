@@ -271,6 +271,9 @@ export async function createEntity(
     });
   }
   const id = outcome.entityId;
+  await context.client.query(
+    "UPDATE ingest.scrape_runs SET params=COALESCE(params,'{}'::jsonb) || jsonb_build_object('entityCreated', $2::jsonb) WHERE id=$1",
+    [context.runId, JSON.stringify({ kind, id })]);
   const fields: FieldWrite[] = [{ field: spec.identityColumn, action: "applied", conflictsClosed: [] }];
   for (const [field, value] of Object.entries(values)) {
     if (field === spec.identityColumn || value === undefined) continue;
@@ -365,6 +368,11 @@ export async function createRelation(
   }
   const id = outcome.relationIds?.[0];
   if (outcome.action === "candidate" || id === undefined) throw new OperatorError("needs_review", outcome.detail);
+  if (outcome.action === "applied") {
+    await context.client.query(
+      "UPDATE ingest.scrape_runs SET params=COALESCE(params,'{}'::jsonb) || jsonb_build_object('relationCreated', $2::jsonb) WHERE id=$1",
+      [context.runId, JSON.stringify({ kind, id })]);
+  }
   return { kind, id, created: outcome.action === "applied" };
 }
 

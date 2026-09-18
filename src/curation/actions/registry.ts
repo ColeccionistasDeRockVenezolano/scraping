@@ -9,6 +9,7 @@
 // que choca puede proponer `fusionar`.
 import { DETECTOR_DEFINITIONS } from "../analyze.js";
 import { mergeAction } from "./merge.js";
+import { STRUCTURAL_ACTIONS } from "./structural.js";
 import { cleanTextAction } from "./text.js";
 import { TEXTUAL_ACTIONS } from "./textual.js";
 import type { ActionFinding, ActionLevel, AnyFixAction, FixActionDefinition } from "./types.js";
@@ -19,6 +20,7 @@ const erase = <P extends Record<string, unknown>>(action: FixActionDefinition<P>
 export const FIX_ACTIONS: readonly AnyFixAction[] = [
   erase(cleanTextAction),
   ...TEXTUAL_ACTIONS.map(erase),
+  ...STRUCTURAL_ACTIONS.map(erase),
   erase(mergeAction),
 ];
 

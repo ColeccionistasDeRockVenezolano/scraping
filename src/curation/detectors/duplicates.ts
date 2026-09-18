@@ -145,6 +145,7 @@ export const repeatedAlbums: Detector = {
   category: CATEGORY,
   label: "Discos repetidos del mismo artista",
   description: "Dos discos del mismo artista con el mismo título normalizado (números, volúmenes y tildes incluidos). Un par ya declarado distinto no vuelve.",
+  actions: { "*": ["fusionar_discos"] },
   run(context) {
     const out: Finding[] = [];
     const albums = namesOf(context, "album");
@@ -184,6 +185,7 @@ export const repeatedTracks: Detector = {
   category: CATEGORY,
   label: "Pistas repetidas en un disco",
   description: "El mismo título dos o más veces en el mismo disco y la misma cara: pista duplicada por la extracción o versión sin marcar.",
+  actions: { "*": ["retirar_pista_duplicada"] },
   run(context) {
     const out: Finding[] = [];
     const tracks = new Map(namesOf(context, "track").map((name) => [name.id, name]));

@@ -17,6 +17,7 @@ export const unlinkedRecords: Detector = {
   category: "fichas_sin_vinculos",
   label: "Fichas que nada referencia",
   description: "Personas sin créditos ni membresías, organizaciones que no son sello ni crédito de nada, artistas sin discos ni créditos.",
+  actions: { "*": ["retirar_huerfana"] },
   run(context) {
     const links = {
       person: context.snapshot.personLinks,

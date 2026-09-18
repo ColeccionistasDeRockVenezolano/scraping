@@ -38,6 +38,7 @@ import { getPool } from "../../db/client.js";
 import { moduleLogger } from "../../logger/index.js";
 import { undoFieldCorrections } from "../../merge/field-undo.js";
 import { OperatorError, withOperatorRun, type OperatorContext } from "../../merge/operator.js";
+import { undoEntityRemoval, undoRelationCreation } from "../../merge/structural-undo.js";
 import { undoMergeRun } from "../../merge/unmerge.js";
 import {
   CurationError, getFindingForUpdate, getFindingsByIds, listGroupFindings, type FindingGroupFilter, type FindingRow,
@@ -1015,9 +1016,8 @@ type Inverse = (context: OperatorContext, runId: number) => Promise<unknown>;
 const INVERSES: Readonly<Record<ActionInverse, Inverse | null>> = {
   field_restore: (context, runId) => undoFieldCorrections(context, runId),
   merge_undo: (context, runId) => undoMergeRun(context, runId),
-  // Ninguna acción de E4 crea relaciones ni retira fichas: sus inversas llegan con esas acciones (E6).
-  relation_delete: null,
-  entity_restore: null,
+  relation_delete: (context, runId) => undoRelationCreation(context, runId),
+  entity_restore: (context, runId) => undoEntityRemoval(context, runId),
 };
 
 /** El CAS inverso o la precondición de la inversa no se cumplen: deshacer pisaría algo posterior. */

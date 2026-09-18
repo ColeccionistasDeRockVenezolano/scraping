@@ -50,6 +50,50 @@ export async function mergeEquivalentCredits(
   return merged;
 }
 
+/**
+ * Une los créditos equivalentes de una obra (álbum o pista) donde un mismo
+ * acreditado (persona, artista u organización) figura más de una vez con el
+ * mismo rol o clave de equivalencia.
+ */
+export async function mergeEquivalentCreditsOnParent(
+  client: PoolClient,
+  parent: { kind: "album" | "track"; id: number },
+  note: string,
+  runId: number,
+): Promise<number> {
+  const table = parent.kind === "album" ? "album_credits" : "track_credits";
+  const creditKind = parent.kind === "album" ? "album_credit" : "track_credit";
+  const parentCol = parent.kind === "album" ? "album_id" : "track_id";
+  const { rows } = await client.query<{
+    id: string;
+    person_id: string | null;
+    artist_id: string | null;
+    organization_id: string | null;
+    credit_type: CreditType;
+    role: string;
+  }>(`
+    SELECT id::text, person_id::text, artist_id::text, organization_id::text,
+           credit_type::text AS credit_type, role
+      FROM public.${table}
+     WHERE ${parentCol} = $1
+     ORDER BY id`, [parent.id]);
+
+  const groups = new Map<string, number[]>();
+  for (const row of rows) {
+    const targetKey = `${row.person_id ?? ""}:${row.artist_id ?? ""}:${row.organization_id ?? ""}`;
+    const key = `${targetKey}|${creditEquivalenceKey(row.credit_type, row.role)}`;
+    groups.set(key, [...(groups.get(key) ?? []), Number(row.id)]);
+  }
+  let merged = 0;
+  for (const ids of groups.values()) {
+    for (const dropId of ids.slice(1)) {
+      await mergeInto(client, creditKind, ids[0]!, dropId, note, runId, { alias: false });
+      merged += 1;
+    }
+  }
+  return merged;
+}
+
 interface MembershipRow { id: string; artist_id: string; role_key: string; from_year: number | null; to_year: number | null }
 
 /**
