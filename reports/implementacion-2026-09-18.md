@@ -87,7 +87,12 @@ informe cierra cada hallazgo con su commit y su prueba. Nada se empujó a
   + core + migraciones y el `afterAll` (`container.stop()`) enmascaraba el error
   real. Ahora `startPgContainer` reintenta con otro puerto si choca, la espera
   es 100 s, el `hookTimeout` 180 s y 34 contratos limpian con `container?.stop()`.
-- **`albums.label_id`**: índice fuera del core (requiere regenerar `core:catalog`
-  con aprobación explícita).
-- **E8** (UX de corrección sobre el marco E4–E6) sigue siendo la siguiente etapa
-  del plan de Curaduría; el historial por ficha en la interfaz queda ahí.
+- **`albums.label_id`**: decisión tomada (2026-09-18) — **no se toca**: el core es
+  inmutable y `doctor` verifica su huella objeto por objeto; con la base en el
+  SSD la consulta va sobrada y el invariante vale más que el índice.
+- **Bearer legacy**: verificado (2026-09-18) — `CRV_OPERATOR_TOKEN` ya estaba
+  vacío en `.env` y nadie lo usó en 6 h de registros: nada que retirar.
+- **Docker root**: se queda en el HDD; los datos de los contenedores de contrato
+  pasan a **tmpfs** (RAM): de ~30-60 s por archivo a ~7 s (14/14 verdes).
+- **E8**: queda para cuando cierre el WIP que otra sesión tiene en `web/` (no
+  pisarse); lo primero de esa etapa es el historial por ficha.

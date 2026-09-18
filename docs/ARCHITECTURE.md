@@ -777,6 +777,9 @@ El seed YT sigue el mismo flujo saltando 1-2 (el "raw" es la fila XLSX).
 - Unit: normalización, tokenización de tipos, extracción de video IDs,
   merge por confianza, conflictos, gating de videos (no-album).
 - Integración: PG de test con contenedor o instancia local `crv_test`.
+- Los contenedores de contrato (auditoría 2026-09-18) montan el data dir en
+  **tmpfs** (`--tmpfs …:size=512m`): son desechables y el Docker root vive en el
+  HDD, así que en RAM initdb + core + migraciones dejan de pagar el disco.
 - **CI (auditoría 2026-09-17, hallazgo #3):** `.github/workflows/ci.yml` corre
   en cada push a `master` y cada PR tres puertas — calidad (typecheck + lint +
   unitarias con cobertura v8 y umbral en `vitest.config.ts`, informe como

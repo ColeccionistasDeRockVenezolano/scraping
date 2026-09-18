@@ -69,6 +69,10 @@ async function runContainer(name: string, port: number): Promise<void> {
     "run", "-d", "--name", name,
     "-e", "POSTGRES_HOST_AUTH_METHOD=trust",
     "-p", `${port}:5432`,
+    // Datos en RAM: estos contenedores son desechables y el Docker root vive en
+    // el HDD — con tmpfs, initdb + core + migraciones dejan de depender del disco
+    // (medido el 2026-09-18: el arranque por archivo baja de ~30-60 s a ~5-10 s).
+    "--tmpfs", "/var/lib/postgresql/data:rw,size=512m",
     PG_IMAGE,
   ]);
 }

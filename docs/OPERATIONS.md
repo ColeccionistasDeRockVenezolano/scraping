@@ -66,8 +66,14 @@ claims en 0,2 s.
 - Borrar el volumen viejo cuando el traslado esté confirmado:
   `docker volume rm coleccionistasderockvenezolano_crv-pgdata`.
 - El **Docker root sigue en el HDD** (imágenes y vols. de los contenedores
-  desechables): moverlo afecta a todos los contenedores de la máquina y queda
-  pendiente de decisión del dueño.
+  desechables). Decisión tomada (2026-09-18): moverlo afecta a todos los
+  contenedores de la máquina (alumnar, ONG José) y ya no hace falta — los
+  contenedores de contrato montan sus datos en **tmpfs** (RAM) y el único que
+  sufría el HDD (PostgreSQL de desarrollo) está en el SSD.
+- Las advertencias «The 'xxxx' variable is not set» que imprime `docker compose`
+  al leer `.env` salen de los `$` del hash scrypt de `CRV_COLLABORATORS_JSON`
+  (compose los interpreta como variables al interpolar): inofensivas, no afectan
+  al arranque.
 
 `doctor` sale con código distinto de 0 si algo falla y comprueba: runtime,
 hash y catálogo del core, schemas `ingest`/`media`, migraciones aplicadas,
