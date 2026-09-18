@@ -1,0 +1,79 @@
+# CRV · CI (auditoría de pruebas #3 — la suite deja de depender de que alguien
+# se acuerde de correrla; nada impide hoy mergear con la suite en rojo).
+#
+# Tres puertas, cada una con lo que puede correr un runner de GitHub:
+#   1. calidad   — tipos, lint, unitarias y cobertura (rápido, bloqueante).
+#   2. contratos — PostgreSQL desechable por archivo (Docker del runner).
+#   3. web       — tipos y build de la SPA.
+#
+# `npm run test:matrix` (PG 15 y 16) y `test:deepseek:real` (red + clave) no
+# corren aquí a propósito: el primero es de verificación de esquema y se deja
+# manual; el segundo gasta cuota real de la API.
+name: CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  calidad:
+    name: Calidad (tipos, lint, unitarias, cobertura)
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - run: npm ci
+      - name: Tipos
+        run: npm run typecheck
+      - name: Lint
+        run: npm run lint
+      - name: Unitarias con cobertura
+        run: npm run test:coverage
+      - name: Subir informe de cobertura
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cobertura
+          path: coverage/
+          retention-days: 14
+
+  contratos:
+    name: Contratos (PostgreSQL desechable)
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - run: npm ci
+      # Cada archivo de test/contract levanta su propio postgres:16-alpine en
+      # un puerto del host y lo destruye al terminar; los runners traen Docker.
+      - run: npm run test:contract
+
+  web:
+    name: Web (tipos y build)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - run: npm ci
+        working-directory: web
+      - run: npm run build
+        working-directory: web

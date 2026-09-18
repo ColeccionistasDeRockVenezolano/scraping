@@ -46,6 +46,7 @@ npm run lint                # ESLint (reglas TypeScript con tipos, promesas, imp
 npm run typecheck           # tsc --noEmit
 npm test                    # Vitest: unit + contrato (levanta PG en Docker)
 npm run test:unit           # solo unitarias
+npm run test:coverage       # unitarias + informe de cobertura (umbral en vitest.config.ts)
 npm run test:contract       # solo contratos con PostgreSQL desechable
 npm run test:matrix         # harness bash contra PostgreSQL 15 y 16
 npm run test:deepseek:real  # opt-in: requiere DEEPSEEK_API_KEY; usa modelos configurados
