@@ -435,9 +435,13 @@ npm run cli -- er:prune --keep-full-days=7         # conservar más días de dos
   CLI y la API coinciden, la segunda ve `skipped`.
 - Ventana por defecto: `ER_DECISION_FULL_DAYS=3` (subirla al depurar un lote
   grande; los dossiers completos de esos días quedan a mano para inspección).
-- Tras un backfill grande, `VACUUM (ANALYZE) ingest.entity_resolution_decisions`
-  devuelve al reuso el TOAST liberado (el archivo no encoge sin `pg_repack`,
-  pero el espacio se reutiliza y los respaldos dejan de copiar la basura).
+- Tras un backfill grande, `VACUUM (ANALYZE, PARALLEL 0) ingest.entity_resolution_decisions`
+  devuelve al reuso el TOAST liberado (el archivo no encoge sin `pg_repack` o un
+  `VACUUM FULL`, pero el espacio se reutiliza y los respaldos dejan de copiar la
+  basura). **`PARALLEL 0` no es opcional aquí**: el contenedor `crv-postgres`
+  corre con el `/dev/shm` por defecto (64 MB) y el VACUUM paralelo muere con
+  `could not resize shared memory segment … No space left on device`; sin
+  paralelismo no hay segmento DSM y pasa (medido: falla y 1,5 min respectivamente).
 
 ## 5. Logs y trazabilidad
 
