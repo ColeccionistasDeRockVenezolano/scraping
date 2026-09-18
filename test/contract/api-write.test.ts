@@ -211,6 +211,14 @@ describe("API de escritura (E7B)", () => {
     const blocked = await write("DELETE", `/albums/${albumId}`);
     expect(blocked.statusCode).toBe(409);
     expect(blocked.json().error.code).toBe("has_dependents");
+    // El mensaje lo lee una persona en la interfaz: sin `public.tabla.columna`
+    // ni guiones_bajos; con conteo y nombre legible (singular/plural incluidos).
+    const message = blocked.json().error.message as string;
+    expect(message).toContain("no se retira:");
+    expect(message).toContain("créditos de álbum");
+    expect(message).toContain("de esta ficha");
+    expect(message).not.toContain("public.");
+    expect(message).not.toContain("_");
 
     const removed = await write("DELETE", `/album-credits/${creditId}?note=${encodeURIComponent("crédito duplicado en otra fuente")}`);
     expect(removed.statusCode).toBe(200);

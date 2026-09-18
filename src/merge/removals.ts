@@ -24,9 +24,44 @@ export interface Dependent {
   rows: number;
 }
 
+/**
+ * Nombre legible de una tabla de dependientes. El mensaje lo lee una persona
+ * en la interfaz (409 `has_dependents`): «2 créditos de álbum», no
+ * «2 en public.album_credits.person_id». Las tablas llegan como
+ * `regclass::text` (sin esquema) y con singular/plural según la fila.
+ */
+const DEPENDENT_LABELS: Readonly<Record<string, readonly [singular: string, plural: string]>> = {
+  album_credits: ["crédito de álbum", "créditos de álbum"],
+  track_credits: ["crédito de pista", "créditos de pista"],
+  person_album_credits: ["crédito de álbum de la persona", "créditos de álbum de la persona"],
+  person_track_credits: ["crédito de pista de la persona", "créditos de pista de la persona"],
+  artist_members: ["membresía de artista", "membresías de artista"],
+  person_organizations: ["pertenencia a organización", "pertenencias a organizaciones"],
+  person_band_history: ["entrada de historial de bandas", "entradas de historial de bandas"],
+  albums: ["disco", "discos"],
+  tracks: ["pista", "pistas"],
+  album_formats: ["formato de álbum", "formatos de álbum"],
+  media_links: ["enlace de medios", "enlaces de medios"],
+  video_albums: ["video de YouTube enlazado", "videos de YouTube enlazados"],
+  video_artists: ["video de YouTube del artista", "videos de YouTube del artista"],
+  video_tracks: ["video de YouTube de la pista", "videos de YouTube de la pista"],
+};
+
+function dependentLabel(dependent: Dependent): string {
+  const table = dependent.table.split(".").pop()!;
+  if (table === "albums" && dependent.column === "label_id") {
+    return dependent.rows === 1 ? "disco con este sello" : "discos con este sello";
+  }
+  const labels = DEPENDENT_LABELS[table];
+  if (labels) return dependent.rows === 1 ? labels[0] : labels[1];
+  return table.replace(/_/gu, " ");
+}
+
 export class DependentsError extends Error {
   constructor(readonly entityKind: string, readonly entityId: number, readonly dependents: Dependent[]) {
-    super(`${entityKind} ${entityId} no se retira: ${dependents.map((item) => `${item.rows} en ${item.table}.${item.column}`).join(", ")}`);
+    const total = dependents.reduce((sum, item) => sum + item.rows, 0);
+    const detail = dependents.map((item) => `${item.rows} ${dependentLabel(item)}`).join(", ");
+    super(`${entityKind} ${entityId} no se retira: ${detail} ${total === 1 ? "depende" : "dependen"} de esta ficha (retíralos primero)`);
   }
 }
 
