@@ -48,6 +48,8 @@
 import type { Pool, PoolClient } from "pg";
 import { getPool } from "../db/client.js";
 import { moduleLogger } from "../logger/index.js";
+import { summarizeActions } from "./actions/registry.js";
+import type { ActionFinding, ActionLevel } from "./actions/types.js";
 import { DETECTOR_DEFINITIONS, RULES_VERSION, analyzeCatalog, storableText, type AnalysisResult } from "./analyze.js";
 import { catalogState, classifyResolution, type AppliedFix, type Resolution, type ValueChange } from "./resolution.js";
 import { loadCatalogSnapshot } from "./snapshot.js";
@@ -116,10 +118,71 @@ export interface ScanSummary {
   /** Hallazgos nuevos que nacieron sobre fichas donde se acababa de resolver otro. */
   chained: number;
   byCategory: Record<string, number>;
+  /** Acciones recomendadas por nivel; también se calcula en `--dry-run` sin escribir nada. */
+  actionLevels: RecommendedActionLevels;
   failures: Array<{ detector: string; error: string }>;
   error?: string;
   /** Solo en una verificación dirigida. */
   details?: ScanDetails;
+}
+
+export interface ActionLevelCounts {
+  level0: number;
+  level1: number;
+  level2: number;
+  /** Sin acción disponible: requiere edición o una etapa posterior del plan. */
+  manual: number;
+}
+
+export interface RecommendedActionLevels extends ActionLevelCounts {
+  byCategory: Record<string, ActionLevelCounts>;
+}
+
+function emptyActionCounts(): ActionLevelCounts {
+  return { level0: 0, level1: 0, level2: 0, manual: 0 };
+}
+
+function actionFinding(finding: Finding): ActionFinding {
+  return {
+    // Antes de persistir no existe aún id ni estado. Las acciones solo usan
+    // esos dos datos al planificar contra la base; para contar la recomendada
+    // basta la misma forma que se guardará en `curation_findings`.
+    id: 0,
+    status: "open",
+    detector: finding.detector,
+    signature: finding.signature,
+    entity: finding.entity,
+    field: finding.field ?? null,
+    value: finding.value ?? null,
+    suggestedValue: finding.suggestedValue ?? null,
+    related: finding.related,
+    evidence: finding.evidence,
+    title: finding.title,
+  };
+}
+
+function bumpActionCount(counts: ActionLevelCounts, level: ActionLevel | undefined): void {
+  if (level === 0) counts.level0 += 1;
+  else if (level === 1) counts.level1 += 1;
+  else if (level === 2) counts.level2 += 1;
+  else counts.manual += 1;
+}
+
+/**
+ * Cuenta la primera acción que la UI recomendaría por cada hallazgo. Es pura:
+ * sirve para que el escaneo seco informe cobertura sin consultar ni mutar
+ * `ingest.curation_findings`.
+ */
+export function recommendedActionLevels(findings: readonly Finding[]): RecommendedActionLevels {
+  const total = emptyActionCounts();
+  const byCategory: Record<string, ActionLevelCounts> = {};
+  for (const finding of findings) {
+    const category = byCategory[finding.category] ?? (byCategory[finding.category] = emptyActionCounts());
+    const level = summarizeActions(actionFinding(finding))[0]?.level;
+    bumpActionCount(total, level);
+    bumpActionCount(category, level);
+  }
+  return { ...total, byCategory };
 }
 
 type Queryable = Pick<Pool | PoolClient, "query">;
@@ -424,7 +487,7 @@ async function executeScan(request: ScanRequest): Promise<ScanSummary> {
   const focus = request.focus ?? null;
   const summary: ScanSummary = {
     scanId: null, status: "failed", scope: focus ? "dirigido" : "completo", trigger: request.trigger, dryRun, durationMs: 0, catalogSignature: "",
-    total: 0, inserted: 0, reopened: 0, resolved: 0, chained: 0, byCategory: {}, failures: [],
+    total: 0, inserted: 0, reopened: 0, resolved: 0, chained: 0, byCategory: {}, actionLevels: { ...emptyActionCounts(), byCategory: {} }, failures: [],
   };
   let client: PoolClient | null = null;
   let locked = false;
@@ -462,6 +525,7 @@ async function executeScan(request: ScanRequest): Promise<ScanSummary> {
       : complete;
     for (const finding of analysis.findings) summary.byCategory[finding.category] = (summary.byCategory[finding.category] ?? 0) + 1;
     summary.total = analysis.findings.length;
+    summary.actionLevels = recommendedActionLevels(analysis.findings);
     summary.failures = analysis.failures;
     let resolutions: Partial<Record<Resolution, number>> = {};
     if (summary.scanId !== null) {
@@ -482,7 +546,7 @@ async function executeScan(request: ScanRequest): Promise<ScanSummary> {
     if (summary.scanId !== null) {
       await client.query(`UPDATE ingest.curation_scans SET status = $3, finished_at = now(), counters = counters || $2::jsonb WHERE id = $1`, [summary.scanId, JSON.stringify({
         total: summary.total, inserted: summary.inserted, reopened: summary.reopened, resolved: summary.resolved, chained: summary.chained,
-        resolutions, byCategory: summary.byCategory, failures: analysis.failures, durationMs: summary.durationMs, lexicon: analysis.lexicon,
+        resolutions, byCategory: summary.byCategory, actionLevels: summary.actionLevels, failures: analysis.failures, durationMs: summary.durationMs, lexicon: analysis.lexicon,
       }), summary.status]);
     }
     const fields = { scanId: summary.scanId, scope: summary.scope, trigger: request.trigger, total: summary.total, inserted: summary.inserted, resolved: summary.resolved, chained: summary.chained, ms: summary.durationMs };
@@ -498,7 +562,7 @@ async function executeScan(request: ScanRequest): Promise<ScanSummary> {
     log.error({ err: error, scanId: summary.scanId, trigger: request.trigger }, "falló el análisis de curaduría");
     return {
       ...summary, status: "failed", durationMs: Date.now() - started,
-      total: 0, inserted: 0, reopened: 0, resolved: 0, chained: 0, byCategory: {}, failures: [], error: message,
+      total: 0, inserted: 0, reopened: 0, resolved: 0, chained: 0, byCategory: {}, actionLevels: { ...emptyActionCounts(), byCategory: {} }, failures: [], error: message,
     };
   } finally {
     if (client) await releaseScanClient(client, locked, healthy);

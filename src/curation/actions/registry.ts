@@ -10,12 +10,17 @@
 import { DETECTOR_DEFINITIONS } from "../analyze.js";
 import { mergeAction } from "./merge.js";
 import { cleanTextAction } from "./text.js";
+import { TEXTUAL_ACTIONS } from "./textual.js";
 import type { ActionFinding, ActionLevel, AnyFixAction, FixActionDefinition } from "./types.js";
 
 /** Cada acción valida sus propios parámetros con su esquema: el registro es heterogéneo a propósito. */
 const erase = <P extends Record<string, unknown>>(action: FixActionDefinition<P>): AnyFixAction => action as unknown as AnyFixAction;
 
-export const FIX_ACTIONS: readonly AnyFixAction[] = [erase(cleanTextAction), erase(mergeAction)];
+export const FIX_ACTIONS: readonly AnyFixAction[] = [
+  erase(cleanTextAction),
+  ...TEXTUAL_ACTIONS.map(erase),
+  erase(mergeAction),
+];
 
 const BY_KEY = new Map(FIX_ACTIONS.map((action) => [action.key, action]));
 const DETECTORS = new Map(DETECTOR_DEFINITIONS.map((detector) => [detector.key, detector]));

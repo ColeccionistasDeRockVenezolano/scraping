@@ -9,7 +9,8 @@ import { cleanTextAction, TEXT_CLEANUPS, type CleanTextParams } from "../../src/
 import { mergeAction } from "../../src/curation/actions/merge.js";
 import { MAX_LEVEL, itemHash, stableJson, type ItemHashInput } from "../../src/curation/actions/batches.js";
 import type { ActionFinding } from "../../src/curation/actions/types.js";
-import { inFocus } from "../../src/curation/scan.js";
+import { inFocus, recommendedActionLevels } from "../../src/curation/scan.js";
+import type { Finding } from "../../src/curation/types.js";
 
 const ZERO_WIDTH_SPACE = String.fromCharCode(0x200b);
 
@@ -37,12 +38,17 @@ describe("registro de acciones (E4.1)", () => {
     expect(new Set(FIX_ACTIONS.map((action) => action.key)).size).toBe(FIX_ACTIONS.length);
   });
 
-  it("limpiar_texto cubre los cinco detectores con valor sugerido; codificación rota solo en su subgrupo mojibake (E4.8)", () => {
+  it("limpiar_texto conserva los alias E4 y E5 declara acciones semánticas por subgrupo", () => {
     for (const detector of ["caracteres_invisibles", "espacios_irregulares", "entidades_html", "signos_colgantes"]) {
       expect(declaredActions(detector, "cualquiera")).toContain("limpiar_texto");
     }
-    expect(declaredActions("codificacion_rota", "mojibake")).toEqual(["limpiar_texto"]);
-    expect(declaredActions("codificacion_rota", "letra_perdida")).toEqual([]);
+    expect(declaredActions("codificacion_rota", "mojibake")).toEqual(["reparar_codificacion", "limpiar_texto"]);
+    expect(declaredActions("codificacion_rota", "mezcla_de_alfabetos")).toEqual(["reparar_cp1251", "sustituir_homoglifos"]);
+    expect(declaredActions("codificacion_rota", "letra_perdida")).toEqual(["restaurar_letra"]);
+    expect(declaredActions("signos_sin_cerrar", "cualquiera")).toEqual(["quitar_signo_huerfano", "cerrar_signo"]);
+    expect(declaredActions("aclaracion_en_nombre_de_artista", "region")).toEqual(["mover_region"]);
+    expect(declaredActions("varias_personas_en_una", "alias_en_nombre")).toEqual(["renombrar_con_alias"]);
+    expect(declaredActions("palabras_pegadas", "palabras_pegadas")).toEqual(["separar_palabras"]);
     expect(declaredActions("artistas_equivalentes", "misma_clave")).toEqual(["fusionar"]);
     expect(declaredActions("detector_inexistente", "x")).toEqual([]);
   });
@@ -166,5 +172,36 @@ describe("verificación dirigida: el foco (E4.6)", () => {
     expect(inFocus({ entity: { kind: "track", id: 99, label: "" }, related: [{ kind: "album", id: 3, label: "" }] }, focus)).toBe(true);
     expect(inFocus({ entity: { kind: "artist", id: 11, label: "" }, related: [{ kind: "album", id: 4, label: "" }] }, focus)).toBe(false);
     expect(inFocus({ entity: { kind: "conflict", id: null, label: "" }, related: [] }, focus)).toBe(false);
+  });
+});
+
+describe("cobertura de acciones en un escaneo seco (E5)", () => {
+  it("cuenta la acción recomendada por nivel, también cuando no hay una segura", () => {
+    const rows: Finding[] = [
+      {
+        detector: "entidades_html", category: "nombres_sucios", signature: "entidades_html", severity: "medium",
+        entity: { kind: "artist", id: 1, label: "Green &amp; Blue" }, field: "name", value: "Green &amp; Blue",
+        suggestedValue: "Green & Blue", title: "Entidad HTML", related: [], evidence: {},
+      },
+      {
+        detector: "minusculas", category: "nombres_sucios", signature: "minusculas", severity: "low",
+        entity: { kind: "person", id: 2, label: "juan de la cruz" }, field: "name", value: "juan de la cruz",
+        suggestedValue: "Juan de la Cruz", title: "Nombre en minúsculas", related: [], evidence: {},
+      },
+      {
+        detector: "url_en_nombre", category: "nombres_sucios", signature: "url_en_nombre", severity: "medium",
+        entity: { kind: "organization", id: 3, label: "Keloide.net" }, field: "name", value: "Keloide.net",
+        suggestedValue: "Keloide", title: "Dominio", related: [], evidence: { domain: "Keloide.net" },
+      },
+      {
+        detector: "signos_sin_cerrar", category: "nombres_sucios", signature: "signos_sin_cerrar", severity: "medium",
+        entity: { kind: "person", id: 4, label: "Texto (" }, field: "name", value: "Texto (",
+        title: "Signo ambiguo", related: [], evidence: { mark: "(" },
+      },
+    ];
+    expect(recommendedActionLevels(rows)).toEqual({
+      level0: 1, level1: 1, level2: 1, manual: 1,
+      byCategory: { nombres_sucios: { level0: 1, level1: 1, level2: 1, manual: 1 } },
+    });
   });
 });

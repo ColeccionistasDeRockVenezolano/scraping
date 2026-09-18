@@ -507,4 +507,132 @@ describe("marco de acciones de corrección de Curaduría (E4)", () => {
     expect((await undo(plan.id, "otra vez")).statusCode).toBe(422);
     await waitForCurationScans();
   }, 60_000);
+
+  it("mover_region guarda la ciudad, se deshace y ante un nombre de artista ya existente propone fusión (E5)", async () => {
+    // El detector aprende lugares del catálogo, no de una lista exterior.
+    await one("INSERT INTO public.artists(name, origin_city) VALUES('Referencia Caracas E5 QA', 'Caracas') RETURNING id");
+    const moving = await one("INSERT INTO public.artists(name) VALUES('Noctambulath E5 QA (Caracas)') RETURNING id");
+    expect((await runCurationScan({ trigger: "manual" })).status).toBe("ok");
+    const findingId = await openFinding("aclaracion_en_nombre_de_artista", "artist", moving);
+
+    const tamperedRegion = await preview({
+      mode: "selected", findingIds: [findingId], actionKey: "mover_region",
+      overrides: { params: { region: "Maracay" } },
+    });
+    expect(tamperedRegion.items[0]).toMatchObject({
+      status: "blocked", actionKey: "mover_region", errorCode: "invalid",
+      error: expect.stringContaining("región distinta de la detectada"),
+    });
+
+    const plan = await preview({ mode: "individual", findingIds: [findingId] });
+    expect(plan.items[0]).toMatchObject({
+      status: "pending", actionKey: "mover_region", level: 1,
+      params: { field: "name", value: "Noctambulath E5 QA", region: "Caracas" },
+      before: { field: "name", value: "Noctambulath E5 QA (Caracas)", originCity: null },
+      after: { field: "name", value: "Noctambulath E5 QA", originCity: "Caracas", setOriginCity: true },
+    });
+    const applied = await apply(plan.id, { previewHash: plan.previewHash, note: "mover Caracas al origen del artista" });
+    expect(applied.statusCode, applied.body).toBe(200);
+    expect(applied.json()).toMatchObject({ status: "done", items: [expect.objectContaining({ status: "applied", actionKey: "mover_region" })] });
+    expect(await rows<{ name: string; origin_city: string | null }>("SELECT name,origin_city FROM public.artists WHERE id=$1", [moving]))
+      .toEqual([{ name: "Noctambulath E5 QA", origin_city: "Caracas" }]);
+
+    const reverted = await undo(plan.id, "la región debía permanecer en el nombre");
+    expect(reverted.statusCode, reverted.body).toBe(200);
+    expect(reverted.json()).toMatchObject({ mode: "undo", status: "done", counts: { applied: 1 } });
+    expect(await rows<{ name: string; origin_city: string | null }>("SELECT name,origin_city FROM public.artists WHERE id=$1", [moving]))
+      .toEqual([{ name: "Noctambulath E5 QA (Caracas)", origin_city: null }]);
+
+    const clean = await one("INSERT INTO public.artists(name) VALUES('Noctambulath E5 Colisión QA') RETURNING id");
+    const colliding = await one("INSERT INTO public.artists(name) VALUES('Noctambulath E5 Colisión QA (Caracas)') RETURNING id");
+    expect((await runCurationScan({ trigger: "manual" })).status).toBe("ok");
+    const collisionFinding = await openFinding("aclaracion_en_nombre_de_artista", "artist", colliding);
+    const collision = await preview({ mode: "individual", findingIds: [collisionFinding] });
+    expect(collision.items[0]).toMatchObject({
+      status: "blocked", actionKey: "mover_region", errorCode: "collision",
+      collisions: [{ kind: "artist", id: clean, label: "Noctambulath E5 Colisión QA", exact: true }],
+      proposal: { actionKey: "fusionar", params: { kind: "artist", keepId: clean, dropId: colliding } },
+    });
+    expect(await nameOf("artists", colliding)).toBe("Noctambulath E5 Colisión QA (Caracas)");
+  }, 90_000);
+
+  it("renombrar_con_alias y dominio_a_alias conservan el dato separado y lo revierten con el lote (E5)", async () => {
+    const person = await one("INSERT INTO public.persons(name) VALUES('Juan E5 QA (aka El Trueno)') RETURNING id");
+    const organization = await one("INSERT INTO public.organizations(name) VALUES('KeloideE5QA.net') RETURNING id");
+    expect((await runCurationScan({ trigger: "manual" })).status).toBe("ok");
+
+    const aliasFinding = await openFinding("varias_personas_en_una", "person", person);
+    const aliasPlan = await preview({ mode: "individual", findingIds: [aliasFinding] });
+    expect(aliasPlan.items[0]).toMatchObject({
+      status: "pending", actionKey: "renombrar_con_alias",
+      after: { value: "Juan E5 QA", aliases: [{ alias: "El Trueno", aliasType: "stage_name" }] },
+    });
+    const aliasApplied = await apply(aliasPlan.id, { previewHash: aliasPlan.previewHash, note: "separar el nombre artístico" });
+    expect(aliasApplied.statusCode, aliasApplied.body).toBe(200);
+    expect(await rows<{ name: string }>("SELECT name FROM public.persons WHERE id=$1", [person])).toEqual([{ name: "Juan E5 QA" }]);
+    expect(await rows<{ alias: string; alias_type: string }>(
+      "SELECT alias,alias_type::text FROM ingest.person_aliases WHERE person_id=$1 AND alias='El Trueno'", [person],
+    )).toEqual([{ alias: "El Trueno", alias_type: "stage_name" }]);
+    const aliasUndone = await undo(aliasPlan.id, "el alias debía quedarse escrito en la fuente");
+    expect(aliasUndone.statusCode, aliasUndone.body).toBe(200);
+    expect(await rows<{ name: string }>("SELECT name FROM public.persons WHERE id=$1", [person])).toEqual([{ name: "Juan E5 QA (aka El Trueno)" }]);
+    expect(await rows<{ alias: string }>("SELECT alias FROM ingest.person_aliases WHERE person_id=$1 AND alias='El Trueno'", [person])).toEqual([]);
+
+    const domainFinding = await openFinding("url_en_nombre", "organization", organization);
+    const tamperedAlias = await preview({
+      mode: "selected", findingIds: [domainFinding], actionKey: "dominio_a_alias",
+      overrides: { params: { alias: "alias no detectado", aliasType: "other" } },
+    });
+    expect(tamperedAlias.items[0]).toMatchObject({
+      status: "blocked", actionKey: "dominio_a_alias", errorCode: "invalid",
+      error: expect.stringContaining("alias distinto del detectado"),
+    });
+    const domainPlan = await preview({ mode: "individual", findingIds: [domainFinding] });
+    expect(domainPlan.items[0]).toMatchObject({
+      status: "pending", actionKey: "dominio_a_alias", level: 2,
+      after: { value: "KeloideE5QA", aliases: [{ alias: "KeloideE5QA.net", aliasType: "other" }] },
+    });
+    const domainApplied = await apply(domainPlan.id, { previewHash: domainPlan.previewHash, note: "dejar el dominio como alias" });
+    expect(domainApplied.statusCode, domainApplied.body).toBe(200);
+    expect(await nameOf("organizations", organization)).toBe("KeloideE5QA");
+    expect(await rows<{ alias: string; alias_type: string }>(
+      "SELECT alias,alias_type::text FROM ingest.organization_aliases WHERE organization_id=$1 AND alias='KeloideE5QA.net'", [organization],
+    )).toEqual([{ alias: "KeloideE5QA.net", alias_type: "other" }]);
+    const domainUndone = await undo(domainPlan.id, "restaurar el dominio como nombre");
+    expect(domainUndone.statusCode, domainUndone.body).toBe(200);
+    expect(await nameOf("organizations", organization)).toBe("KeloideE5QA.net");
+    expect(await rows<{ alias: string }>("SELECT alias FROM ingest.organization_aliases WHERE organization_id=$1 AND alias='KeloideE5QA.net'", [organization])).toEqual([]);
+  }, 90_000);
+
+  it("las acciones E5 encadenadas parten del valor intermedio y no reintroducen texto sucio", async () => {
+    const dirty = `Etiqueta QA: Sesión${ZERO_WIDTH_SPACE} -`;
+    const organization = await one("INSERT INTO public.organizations(name) VALUES($1) RETURNING id", [dirty]);
+    expect((await runCurationScan({ trigger: "manual" })).status).toBe("ok");
+    const findings = await Promise.all([
+      openFinding("caracteres_invisibles", "organization", organization),
+      openFinding("signos_colgantes", "organization", organization),
+      openFinding("etiqueta_en_nombre", "organization", organization),
+    ]);
+
+    const plan = await preview({ mode: "selected", findingIds: findings });
+    expect(plan.items.map((item) => item.actionKey)).toEqual(["limpiar_texto", "recortar_extremos", "quitar_rotulo"]);
+    expect(plan.items.map((item) => item.before?.["value"])).toEqual([
+      dirty,
+      "Etiqueta QA: Sesión -",
+      "Etiqueta QA: Sesión",
+    ]);
+    expect(plan.items.map((item) => item.after?.["value"])).toEqual([
+      "Etiqueta QA: Sesión -",
+      "Etiqueta QA: Sesión",
+      "Sesión",
+    ]);
+
+    const applied = await apply(plan.id, { previewHash: plan.previewHash, note: "limpiar y separar el rótulo en un solo lote" });
+    expect(applied.statusCode, applied.body).toBe(200);
+    expect(await nameOf("organizations", organization)).toBe("Sesión");
+
+    const undone = await undo(plan.id, "restaurar el texto de prueba");
+    expect(undone.statusCode, undone.body).toBe(200);
+    expect(await nameOf("organizations", organization)).toBe(dirty);
+  }, 90_000);
 });

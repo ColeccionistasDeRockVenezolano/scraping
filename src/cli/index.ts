@@ -691,6 +691,14 @@ async function main(): Promise<number> {
         console.log(`curation scan${summary.dryRun ? " --dry-run" : ` (análisis ${summary.scanId})`}: ${summary.total} hallazgos en ${summary.durationMs} ms · `
           + `${summary.inserted} nuevos · ${summary.reopened} reabiertos · ${summary.resolved} resueltos · ${summary.chained} aparecidos tras una corrección`);
         for (const [category, count] of Object.entries(summary.byCategory).sort((a, b) => b[1] - a[1])) console.log(`  ${String(count).padStart(6)}  ${category}`);
+        if (summary.dryRun) {
+          const actions = summary.actionLevels;
+          console.log(`  Hallazgos por nivel de acción: ${actions.level0} nivel 0 · ${actions.level1} nivel 1 · ${actions.level2} nivel 2 · ${actions.manual} manual`);
+          const dirtyNames = actions.byCategory["nombres_sucios"];
+          if (dirtyNames) {
+            console.log(`  nombres_sucios por nivel: ${dirtyNames.level0} nivel 0 · ${dirtyNames.level1} nivel 1 · ${dirtyNames.level2} nivel 2 · ${dirtyNames.manual} manual`);
+          }
+        }
         for (const failure of summary.failures) console.error(`  ! detector ${failure.detector}: ${failure.error}`);
         // Parcial: lo que miraron los detectores sanos quedó guardado; lo del roto, intacto.
         if (summary.status === "partial") console.error("  análisis parcial: los hallazgos de los detectores que fallaron no se tocaron");

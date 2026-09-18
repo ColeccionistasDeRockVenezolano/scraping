@@ -38,6 +38,7 @@ export const artistInTrackTitle: Detector = {
   category: CATEGORY,
   label: "Artista dentro del título de la pista",
   description: "El título de la pista trae «Artista - Título»: el intérprete debería ser un crédito de la pista, no parte del título.",
+  actions: { repite_artista_del_disco: ["quitar_prefijo_artista"] },
   run(context) {
     const compilationLike = performerInTitlesAlbums(context);
     // Orientación de cada disco: si sus pistas nombran artistas conocidos más
@@ -68,6 +69,7 @@ export const artistInTrackTitle: Detector = {
             severity: "medium",
             title: `El título repite el nombre del artista del disco (${quote(albumArtist!.name)})`,
             suggestion: `Dejar el título como ${quote(title)}`,
+            suggestedValue: title,
             span: performer === left ? [0, left.length] : [name.value.length - right.length, name.value.length],
           })];
         }
@@ -106,6 +108,7 @@ export const artistInAlbumTitle: Detector = {
   category: CATEGORY,
   label: "Artista dentro del título del disco",
   description: "El título del disco empieza por el nombre de su propio artista («Wismar - BlackHymn»).",
+  actions: { "*": ["quitar_prefijo_artista"] },
   run(context) {
     return context.names.filter((name) => name.kind === "album").flatMap((name) => {
       const match = /^(.+?)\s*(?:\s[-–—]|:)\s+(.+)$/u.exec(name.value);
@@ -116,6 +119,7 @@ export const artistInAlbumTitle: Detector = {
         severity: "medium",
         title: `El título repite el nombre del artista (${quote(artist.name)})`,
         suggestion: `Dejar el título como ${quote(match[2]!)}`,
+        suggestedValue: match[2]!.trim(),
         span: [0, match[1]!.length],
       })];
     });
@@ -232,6 +236,7 @@ export const qualifierInArtistName: Detector = {
   category: CATEGORY,
   label: "Región, alias o aclaración en el nombre del artista",
   description: "Un paréntesis final con la región («Noctambulath (Caracas)»), el nombre real («Yordano (Giordano Di Marzo)») o un segundo nombre («Paro Kardíaco - Paro K»).",
+  actions: { region: ["mover_region"] },
   run(context) {
     return context.names.filter((name) => name.kind === "artist").flatMap((name) => {
       const artist = context.artists.get(name.id)!;
@@ -246,7 +251,8 @@ export const qualifierInArtistName: Detector = {
             severity: "medium",
             title: `La región ${quote(inner)} está escrita en el nombre`,
             suggestion: `Nombre ${quote(base)}${artist.originCity ? "" : ` y origen ${quote(inner)}`}`,
-            evidence: { originCity: artist.originCity },
+            suggestedValue: base,
+            evidence: { originCity: artist.originCity, region: inner },
             span,
           })];
         }
@@ -304,6 +310,9 @@ export const labelInName: Detector = {
   category: CATEGORY,
   label: "Rol o etiqueta dentro del nombre",
   description: "El nombre arrastra el rótulo de la fuente («Lyrics: N. Zuleta», «Banda: Misantropia», «Featuring: Didi Gutman»).",
+  // Invitado y rol requieren mover o crear créditos (E6); una etiqueta simple
+  // sí se resuelve al cambiar un único nombre.
+  actions: { etiqueta: ["quitar_rotulo"] },
   run(context) {
     return context.names.filter((name) => name.kind === "person" || name.kind === "artist" || name.kind === "organization").flatMap((name) => {
       if (name.kind === "person" && GUEST_PREFIX.test(name.value)) {
@@ -337,6 +346,7 @@ export const labelInName: Detector = {
         severity: isRole ? "high" : "medium",
         title: isRole ? `El rol ${quote(label)} está escrito dentro del nombre` : `Rótulo ${quote(label + ":")} dentro del nombre`,
         suggestion: isRole ? `Nombre ${quote(rest)} con el crédito ${quote(label)}` : `Nombre ${quote(rest)}`,
+        ...(!isRole ? { suggestedValue: rest } : {}),
         evidence: { label, learnedRole: isRole },
         span: [start, start + label.length + 1],
       })];
@@ -352,6 +362,7 @@ export const severalPeopleInOne: Detector = {
   category: CATEGORY,
   label: "Varias personas en una ficha",
   description: "Una ficha de persona que en realidad es una lista («Eliezer Delgado, Gregory Carrero», «L. Rangel/ E. Sáez/ J.F. Coral») o un nombre con su alias escrito dentro («(aka Mr. Sonic)»).",
+  actions: { alias_en_nombre: ["renombrar_con_alias"] },
   run({ names }) {
     return names.filter((name) => name.kind === "person").flatMap((name) => {
       // Un alias no es otra persona: se separa como alias, no se divide la ficha.
@@ -364,6 +375,7 @@ export const severalPeopleInOne: Detector = {
             signature: "alias_en_nombre", signatureLabel: "Alias escrito dentro del nombre", severity: "medium",
             title: `El alias ${quote(other)} está escrito dentro del nombre: es una persona, no dos`,
             suggestion: `Nombre ${quote(base)} y ${quote(other)} como alias`,
+            suggestedValue: base,
             evidence: { name: base, alias: other },
             span: [base.length, name.value.length],
           })];
@@ -405,6 +417,7 @@ export const gluedWordsDetector: Detector = {
   category: CATEGORY,
   label: "Palabras pegadas",
   description: "Dos palabras que el catálogo conoce por separado quedaron unidas sin espacio («BambaBonus», «TarboxAdapt»): el extractor perdió un separador. Un nombre de una sola palabra en camelCase («MoonDub») suele ser estilizado a propósito y va aparte.",
+  actions: { palabras_pegadas: ["separar_palabras"] },
   run({ names, lexicon }) {
     return names.flatMap((name) => {
       const found = gluedWords(name, lexicon.vocabulary);
@@ -415,6 +428,12 @@ export const gluedWordsDetector: Detector = {
       // tramo es un nombre de pila («CarlosAcosta») sí perdió el espacio.
       const singleWord = /^\p{L}+$/u.test(name.value.trim());
       const stylized = singleWord && found.length === 1 && !(name.kind === "person" && lexicon.givenNames.has(nameKey(first.left)));
+      // De derecha a izquierda para no mover los índices de los siguientes
+      // segmentos cuando un título contiene más de un par pegado.
+      const separated = [...found].sort((left, right) => right.index - left.index).reduce(
+        (value, item) => `${value.slice(0, item.index)}${item.left} ${item.right}${value.slice(item.index + item.length)}`,
+        name.value,
+      );
       return [nameFinding(this, name, {
         ...(stylized ? { signature: "posible_estilizado", signatureLabel: "Una sola palabra en camelCase: posible grafía estilizada" } : {}),
         severity: "low",
@@ -422,6 +441,8 @@ export const gluedWordsDetector: Detector = {
           ? `${quote(name.value)} une dos palabras en camelCase: puede ser una grafía estilizada a propósito`
           : `Palabras pegadas: ${found.map((item) => quote(item.left + item.right)).join(", ")}`,
         suggestion: `Separar ${found.map((item) => `${quote(item.left)} y ${quote(item.right)}`).join("; ")}`,
+        ...(!stylized ? { suggestedValue: separated } : {}),
+        evidence: { words: found.map((item) => ({ left: item.left, right: item.right, index: item.index, length: item.length })) },
         span: [first.index, first.index + first.length],
       })];
     });

@@ -89,6 +89,14 @@ const CP1252_BYTE: ReadonlyMap<number, number> = new Map([
 ]);
 
 const STRICT_UTF8 = new TextDecoder("utf-8", { fatal: true });
+const CP1251 = new TextDecoder("windows-1251", { fatal: true });
+
+/** Tabla inversa de CP1251: el navegador sabe decodificarla, pero no codificarla. */
+const CP1251_BYTE: ReadonlyMap<string, number> = (() => {
+  const bytes = new Map<string, number>();
+  for (let byte = 0; byte <= 0xff; byte += 1) bytes.set(CP1251.decode(Uint8Array.of(byte)), byte);
+  return bytes;
+})();
 
 /**
  * Deshace «UTF-8 leído como Latin-1 o Windows-1252»: vuelve a los bytes y los
@@ -114,14 +122,97 @@ export function repairMojibake(value: string): string | undefined {
   return repaired === value || /[\u0080-\u009F]/u.test(repaired) ? undefined : repaired;
 }
 
+/**
+ * «manipulaciГіn» son los bytes UTF-8 de «manipulación» leídos como CP1251.
+ * Solo se acepta una salida UTF-8 válida que deje de mezclar alfabetos.
+ */
+export function repairCp1251(value: string): string | undefined {
+  const bytes: number[] = [];
+  for (const char of value) {
+    const code = char.codePointAt(0) ?? 0;
+    const byte = code <= 0x7f ? code : CP1251_BYTE.get(char);
+    if (byte === undefined) return undefined;
+    bytes.push(byte);
+  }
+  let repaired: string;
+  try {
+    repaired = STRICT_UTF8.decode(Uint8Array.from(bytes));
+  } catch {
+    return undefined;
+  }
+  return repaired === value || MIXED_SCRIPT_WORD.test(repaired) || /[\u0080-\u009F]/u.test(repaired) ? undefined : repaired;
+}
+
+/** Letras cirílicas que se usan como sustitutos visuales de letras latinas. */
+const CYRILLIC_HOMOGLYPHS: Readonly<Record<string, string>> = {
+  А: "A", а: "a", В: "B", в: "b", Е: "E", е: "e", К: "K", к: "k", М: "M", м: "m",
+  Н: "H", н: "h", О: "O", о: "o", Р: "P", р: "p", С: "C", с: "c", Т: "T", т: "t",
+  Х: "X", х: "x", У: "Y", у: "y", І: "I", і: "i", Ј: "J", ј: "j", Ѕ: "S", ѕ: "s",
+};
+
+/** «Вel» → «Bel». No intenta transliterar cirílico real: solo homoglifos exactos. */
+export function substituteCyrillicHomoglyphs(value: string): string | undefined {
+  let changed = false;
+  const repaired = [...value].map((char) => {
+    const replacement = CYRILLIC_HOMOGLYPHS[char];
+    if (replacement !== undefined) changed = true;
+    return replacement ?? char;
+  }).join("");
+  return changed && !MIXED_SCRIPT_WORD.test(repaired) ? repaired : undefined;
+}
+
+function repairScore(value: string, vocabulary: Set<string>): number {
+  const words = value.match(/\p{L}+/gu) ?? [];
+  const known = words.filter((word) => vocabulary.has(word.normalize("NFD").replace(/\p{M}/gu, "").toLocaleLowerCase("es"))).length;
+  // El vocabulario decide entre las dos hipótesis. Si el catálogo todavía no
+  // conoce esa palabra, una salida que elimina la mezcla sigue siendo mejor
+  // que dejar el daño visible: la persona la confirma antes de aplicarla.
+  return known * 100 + words.length - (MIXED_SCRIPT_WORD.test(value) ? 10_000 : 0);
+}
+
+function mixedScriptRepair(value: string, vocabulary: Set<string>): { kind: "cp1251" | "homoglifos"; value: string; vocabularyMatches: number } | null {
+  const options: Array<{ kind: "cp1251" | "homoglifos"; value: string }> = [];
+  const cp1251 = repairCp1251(value);
+  const homoglyphs = substituteCyrillicHomoglyphs(value);
+  if (cp1251) options.push({ kind: "cp1251", value: cp1251 });
+  if (homoglyphs) options.push({ kind: "homoglifos", value: homoglyphs });
+  if (!options.length) return null;
+  const scored = options.map((option) => {
+    const words = option.value.match(/\p{L}+/gu) ?? [];
+    const vocabularyMatches = words.filter((word) => vocabulary.has(word.normalize("NFD").replace(/\p{M}/gu, "").toLocaleLowerCase("es"))).length;
+    return { ...option, vocabularyMatches, score: repairScore(option.value, vocabulary) };
+  }).sort((left, right) => right.score - left.score || right.vocabularyMatches - left.vocabularyMatches || left.kind.localeCompare(right.kind));
+  const best = scored[0]!;
+  return { kind: best.kind, value: best.value, vocabularyMatches: best.vocabularyMatches };
+}
+
+function escapedPattern(value: string): string {
+  return [...value].map((char) => char === "?" ? "\\p{L}" : char.replace(/[\\^$.*+?()[\]{}|]/gu, "\\$&")).join("");
+}
+
+/** Salidas completas posibles al recuperar un «?» desde los nombres del catálogo. */
+function lostLetterCandidates(value: string, rawWords: Set<string>): string[] {
+  const token = (value.match(/\p{L}+\?\p{L}+/u) ?? [])[0];
+  if (!token) return [];
+  const pattern = new RegExp(`^${escapedPattern(token)}$`, "u");
+  const candidates = [...rawWords].filter((word) => pattern.test(word)).map((word) => value.replace(token, word));
+  return [...new Set(candidates)].sort((left, right) => left.localeCompare(right, "es"));
+}
+
 export const brokenEncoding: Detector = {
   key: "codificacion_rota",
   category: CATEGORY,
   label: "Codificación rota",
   description: "Texto UTF-8 leído con otra codificación («ahÃ» más un guion blando, en lugar de «ahí») o letras perdidas como «?».",
-  // Mezcla de alfabetos y letra perdida esperan sus acciones propias (E5).
-  actions: { mojibake: ["limpiar_texto"] },
-  run({ names }) {
+  actions: {
+    // `limpiar_texto` mantiene vivo el alias E4 de `POST …/fix` durante una
+    // versión; la acción nueva queda primera y es la recomendada.
+    mojibake: ["reparar_codificacion", "limpiar_texto"],
+    mezcla_de_alfabetos: ["reparar_cp1251", "sustituir_homoglifos"],
+    letra_perdida: ["restaurar_letra"],
+  },
+  run({ names, lexicon }) {
+    const rawWords = new Set(names.flatMap((name) => name.value.match(/\p{L}+/gu) ?? []));
     return names.flatMap((name) => {
       if (MOJIBAKE.test(name.value)) {
         const repaired = repairMojibake(name.value);
@@ -134,18 +225,31 @@ export const brokenEncoding: Detector = {
         })];
       }
       if (MIXED_SCRIPT_WORD.test(name.value)) {
+        const repair = mixedScriptRepair(name.value, lexicon.vocabulary);
         return [nameFinding(this, name, {
           signature: "mezcla_de_alfabetos", signatureLabel: "Letras cirílicas dentro de palabras latinas",
           severity: "high",
           title: "Una palabra mezcla letras latinas y cirílicas: codificación rota o letra suplantada",
+          ...(repair ? {
+            suggestion: `Probablemente es ${quote(repair.value)}`,
+            suggestedValue: repair.value,
+            evidence: { repair, vocabularyMatches: repair.vocabularyMatches },
+          } : {}),
           span: firstSpan(name.value, MIXED_SCRIPT_WORD)!,
         })];
       }
       if (LOST_LETTER.test(name.value)) {
+        const candidates = lostLetterCandidates(name.value, rawWords);
+        const unique = candidates.length === 1 ? candidates[0] : undefined;
         return [nameFinding(this, name, {
           signature: "letra_perdida", signatureLabel: "Letra perdida como «?»",
           severity: "medium",
           title: "Un «?» entre letras: probablemente una letra con tilde que se perdió",
+          ...(candidates.length ? {
+            suggestion: unique ? `La única coincidencia del catálogo es ${quote(unique)}` : `Elegir entre ${candidates.map(quote).join(", ")}`,
+            ...(unique ? { suggestedValue: unique } : {}),
+            evidence: { repair: { kind: "letra" }, candidates },
+          } : {}),
           span: firstSpan(name.value, LOST_LETTER)!,
         })];
       }
@@ -206,7 +310,7 @@ export const htmlEntities: Detector = {
   category: CATEGORY,
   label: "Entidades HTML",
   description: "Restos del HTML de la fuente sin decodificar («&amp;», «&#39;»).",
-  actions: { "*": ["limpiar_texto"] },
+  actions: { "*": ["decodificar_html", "limpiar_texto"] },
   run({ names }) {
     return names.filter((name) => HTML_ENTITY.test(name.value)).flatMap((name) => {
       const { decoded, span } = decodeEntities(name.value);
@@ -227,6 +331,29 @@ export const htmlEntities: Detector = {
 
 const PAIRS: ReadonlyArray<[string, string]> = [["(", ")"], ["[", "]"], ["{", "}"], ["«", "»"], ["“", "”"]];
 
+const CLOSE_FOR_OPEN = new Map(PAIRS);
+
+function unbalancedRepair(value: string, mark: string): { kind: "quitar_signo" | "cerrar_signo"; value: string } | null {
+  const first = value.search(/\S/u);
+  let lastChar = -1;
+  for (let index = value.length - 1; index >= 0; index -= 1) {
+    if (/\S/u.test(value[index]!)) { lastChar = index; break; }
+  }
+  const edge = (index: number): boolean => index >= 0 && (index === first || index === lastChar);
+  const firstMark = first >= 0 ? value[first] : "";
+  const finalMark = lastChar >= 0 ? value[lastChar] : "";
+  if (mark === "\"" && (edge(value.lastIndexOf(mark)) || edge(value.indexOf(mark)))) {
+    const index = edge(value.lastIndexOf(mark)) ? value.lastIndexOf(mark) : value.indexOf(mark);
+    return { kind: "quitar_signo", value: `${value.slice(0, index)}${value.slice(index + mark.length)}`.trim() };
+  }
+  if (!CLOSE_FOR_OPEN.has(mark) && (mark === finalMark || mark === firstMark) && edge(value.lastIndexOf(mark))) {
+    const index = value.lastIndexOf(mark);
+    return { kind: "quitar_signo", value: `${value.slice(0, index)}${value.slice(index + mark.length)}`.trim() };
+  }
+  const close = mark === "\"" ? "\"" : CLOSE_FOR_OPEN.get(mark);
+  return close ? { kind: "cerrar_signo", value: `${value.trimEnd()}${close}` } : null;
+}
+
 function unbalancedMark(value: string): string | undefined {
   for (const [open, close] of PAIRS) {
     let depth = 0;
@@ -244,15 +371,18 @@ export const unbalancedMarks: Detector = {
   category: CATEGORY,
   label: "Paréntesis o comillas sin cerrar",
   description: "Un paréntesis, corchete o comilla que abre y no cierra (o al revés): casi siempre texto truncado por el extractor.",
+  actions: { "*": ["quitar_signo_huerfano", "cerrar_signo"] },
   run({ names }) {
     return names.flatMap((name) => {
       const mark = unbalancedMark(name.value);
       if (!mark) return [];
       const index = name.value.lastIndexOf(mark);
+      const repair = unbalancedRepair(name.value, mark);
       return [nameFinding(this, name, {
         severity: "medium",
         title: `${quote(mark)} sin pareja: el texto parece truncado o cortado en el lugar equivocado`,
-        evidence: { mark },
+        ...(repair ? { suggestion: `Dejarlo como ${quote(repair.value)}`, suggestedValue: repair.value } : {}),
+        evidence: { mark, ...(repair ? { repair } : {}) },
         ...(index >= 0 ? { span: [index, index + mark.length] as [number, number] } : {}),
       })];
     });
@@ -278,7 +408,7 @@ export const danglingPunctuation: Detector = {
   category: CATEGORY,
   label: "Signos colgantes",
   description: "Guiones, comas, barras o dos puntos al principio o al final: resto de un corte en el lugar equivocado («Sesión -»).",
-  actions: { "*": ["limpiar_texto"] },
+  actions: { "*": ["recortar_extremos", "limpiar_texto"] },
   run({ names }) {
     return names.filter((name) => DANGLING.test(name.value) && !WRAPPED.test(name.value)).map((name) => {
       const cleaned = name.value.replace(new RegExp(DANGLING.source, "gu"), "").trim();
@@ -298,6 +428,7 @@ export const lowercaseName: Detector = {
   category: CATEGORY,
   label: "Nombre todo en minúsculas",
   description: "Personas y organizaciones con nombre escrito enteramente en minúsculas («juan pérez»): suelen venir de un campo mal extraído. Una persona en minúsculas sin ninguna palabra de nombre va a «Persona que no es un nombre».",
+  actions: { "*": ["capitalizar"] },
   run({ names, lexicon }) {
     return names
       .filter((name) => (name.kind === "person" || name.kind === "organization")
@@ -305,21 +436,56 @@ export const lowercaseName: Detector = {
       .map((name) => nameFinding(this, name, {
         severity: "low",
         title: `${ENTITY_NOUN[name.kind]!.replace(/^./u, (char) => char.toUpperCase())} escrita toda en minúsculas`,
+        suggestion: `Dejarlo como ${quote(capitalizeSpanish(name.value))}`,
+        suggestedValue: capitalizeSpanish(name.value),
       }));
   },
 };
+
+const SPANISH_PARTICLES = new Set(["a", "al", "con", "da", "das", "de", "del", "do", "dos", "e", "el", "en", "la", "las", "los", "o", "u", "van", "von", "y"]);
+
+/** Mayúsculas de título para nombres hispanos, sin convertir «de la» en un apellido artificial. */
+export function capitalizeSpanish(value: string): string {
+  let position = 0;
+  return value.toLocaleLowerCase("es").replace(/\p{L}+/gu, (word) => {
+    const lower = word.toLocaleLowerCase("es");
+    const output = position > 0 && SPANISH_PARTICLES.has(lower)
+      ? lower
+      : `${lower[0]!.toLocaleUpperCase("es")}${lower.slice(1)}`;
+    position += 1;
+    return output;
+  });
+}
+
+/** Solo un dominio que ocupa todo el nombre se puede separar sin inventar qué parte es el título. */
+export function domainAliasSuggestion(value: string): { name: string; domain: string } | null {
+  const domain = value.trim();
+  const match = /^(?:https?:\/\/)?(?:www\.)?([\p{L}\p{N}](?:[\p{L}\p{N}-]*[\p{L}\p{N}])?(?:\.[\p{L}\p{N}-]+)*)\.(?:com|net|org|info|biz|ve|es|co|blogspot|wordpress|bandcamp)\/?$/iu.exec(domain);
+  if (!match) return null;
+  const name = match[1]!.replace(/^www\./iu, "").trim();
+  return name ? { name, domain } : null;
+}
 
 export const urlInName: Detector = {
   key: "url_en_nombre",
   category: CATEGORY,
   label: "Dirección web en el nombre",
   description: "Un dominio o URL ocupa el nombre o el título.",
+  actions: { "*": ["dominio_a_alias"] },
   run({ names }) {
-    return names.filter((name) => URL_LIKE.test(name.value)).map((name) => nameFinding(this, name, {
-      severity: "medium",
-      title: "El nombre contiene una dirección web",
-      span: firstSpan(name.value, URL_LIKE)!,
-    }));
+    return names.filter((name) => URL_LIKE.test(name.value)).map((name) => {
+      const domain = domainAliasSuggestion(name.value);
+      return nameFinding(this, name, {
+        severity: "medium",
+        title: "El nombre contiene una dirección web",
+        ...(domain ? {
+          suggestion: `Nombre ${quote(domain.name)} y dominio ${quote(domain.domain)} como alias`,
+          suggestedValue: domain.name,
+          evidence: { domain: domain.domain },
+        } : {}),
+        span: firstSpan(name.value, URL_LIKE)!,
+      });
+    });
   },
 };
 
