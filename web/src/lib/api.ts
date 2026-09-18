@@ -8,8 +8,10 @@ import type {
   PersonConversionResult, PersonDuplicateCandidate, PersonMergePreview, PersonMergeResult, RemovalResult, ReviewActionResult,
   ReviewDetail, ReviewListItem, SearchResults, Source, UnmergeResult, VideoDetail, VideoListItem,
   TrackDetail, TrackListItem,
-  CurationFinding, CurationFindingStatus, CurationFixBatchResult, CurationIgnoreReason, CurationPairKind, CurationScan, CurationScanResult,
+  CurationFinding, CurationFindingStatus, CurationIgnoreReason, CurationPairKind, CurationScan, CurationScanResult,
   CurationSeverity, CurationSummary,
+  AlbumMergePreview, AlbumMergeResult, PersonSplitPreview, PersonSplitResult,
+  FindingActionsResult, FixBatch, DistinctPair,
 } from "./types";
 
 /**
@@ -174,6 +176,30 @@ export const entityMergeApi = {
     request<UnmergeResult>(`/merge-runs/${mergeRunId}/undo`, { method: "POST", authenticated: true, body: { note } }),
 };
 
+// ---------- fusión de discos (E6.5; la API ya la ofrecía, la web no) ----------
+export interface AlbumMergeRequest {
+  dropId: number;
+  previewHash: string;
+  fieldChoices?: Record<string, "keep" | "drop">;
+  keepDropNameAsAlias: boolean;
+  note: string;
+}
+
+export const albumMergeApi = {
+  preview: (keepId: number, dropId: number) =>
+    request<AlbumMergePreview>(`/albums/${keepId}/merge-preview`, { query: { with: dropId } }),
+  merge: (keepId: number, body: AlbumMergeRequest) =>
+    request<AlbumMergeResult>(`/albums/${keepId}/merge`, { method: "POST", authenticated: true, body }),
+};
+
+// ---------- división de personas (E6.3) ----------
+export const personSplitApi = {
+  preview: (personId: number, into: string[]) =>
+    request<PersonSplitPreview>(`/persons/${personId}/split-preview`, { query: { into: into.join(",") } }),
+  split: (personId: number, into: string[], note: string) =>
+    request<PersonSplitResult>(`/persons/${personId}/split`, { method: "POST", authenticated: true, body: { into, note } }),
+};
+
 export const organizationsApi = {
   list: (params: Paged & { q?: string } = {}) => request<Page<OrganizationListItem>>("/organizations", { query: params }),
   get: (id: number) => request<OrganizationDetail>(`/organizations/${id}`),
@@ -247,10 +273,24 @@ export interface CurationFindingGroupFilter {
   chained?: boolean;
 }
 
+/** Cuerpo de `POST /curation/fixes/preview` (E4): todo lote nace de una vista previa. */
+export interface CurationFixesPreviewRequest {
+  mode: "individual" | "selected" | "group";
+  findingIds?: number[];
+  filter?: CurationFindingGroupFilter;
+  actionKey?: string;
+  overrides?: {
+    params?: Record<string, unknown>;
+    byFinding?: Record<string, { actionKey?: string; params?: Record<string, unknown> }>;
+  };
+}
+
 export const curationApi = {
   summary: () => request<CurationSummary>("/curation/summary"),
   findings: (params: CurationFindingQuery = {}) => request<Page<CurationFinding>>("/curation/findings", { query: params }),
   finding: (id: number) => request<CurationFinding>(`/curation/findings/${id}`),
+  /** Acciones de corrección ofrecidas para un hallazgo, con la recomendada primero (E4). */
+  findingsActions: (id: number) => request<FindingActionsResult>(`/curation/findings/${id}/actions`),
   scans: (limit = 20) => request<{ data: CurationScan[] }>("/curation/scans", { query: { limit } }),
   scan: () => request<CurationScanResult>("/curation/scan", { method: "POST", authenticated: true }),
   ignore: (id: number, reason: CurationIgnoreReason, note: string) =>
@@ -260,14 +300,16 @@ export const curationApi = {
     request<{ ignored: number }>("/curation/findings/ignore-group", { method: "POST", authenticated: true, body: input }),
   declareDistinct: (input: { kind: CurationPairKind; aId: number; bId: number; note: string }) =>
     request<{ created: boolean }>("/curation/distinct-pairs", { method: "POST", authenticated: true, body: input }),
-  fix: (id: number, note: string, value?: string) =>
-    request<CurationFinding>(`/curation/findings/${id}/fix`, {
-      method: "POST", authenticated: true, body: { note, ...(value === undefined ? {} : { value }) },
-    }),
-  fixSelected: (ids: number[], note: string) =>
-    request<CurationFixBatchResult>("/curation/findings/fix-selected", { method: "POST", authenticated: true, body: { ids, note } }),
-  fixGroup: (input: CurationFindingGroupFilter & { note: string }) =>
-    request<CurationFixBatchResult>("/curation/findings/fix-group", { method: "POST", authenticated: true, body: input }),
+  distinctPairs: (params: Paged = {}) => request<Page<DistinctPair>>("/curation/distinct-pairs", { query: params }),
+  retractDistinct: (id: number) =>
+    request<{ pair: DistinctPair }>(`/curation/distinct-pairs/${id}`, { method: "DELETE", authenticated: true }),
+  // ---- Lotes de corrección (E4): vista previa → aplicar → deshacer ----
+  fixesPreview: (body: CurationFixesPreviewRequest) =>
+    request<FixBatch>("/curation/fixes/preview", { method: "POST", authenticated: true, body }),
+  fixApply: (batchId: number, input: { previewHash: string; excludeItemIds?: number[]; note: string }) =>
+    request<FixBatch>(`/curation/fixes/${batchId}/apply`, { method: "POST", authenticated: true, body: input }),
+  fixUndo: (batchId: number, note: string) =>
+    request<FixBatch>(`/curation/fixes/${batchId}/undo`, { method: "POST", authenticated: true, body: { note } }),
 };
 
 // ---------- escritura de entidades del core ----------

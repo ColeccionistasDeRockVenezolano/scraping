@@ -7,6 +7,7 @@
 // de una transacción del operador; aquí no hay reglas propias.
 import { useCallback, useEffect, useState } from "react";
 import { ApiError, entityMergeApi } from "../lib/api";
+import { formatMergeValue } from "../lib/format";
 import { useToast } from "../lib/ToastContext";
 import { Modal } from "./Modal";
 import { EntityPicker } from "./EntityPicker";
@@ -54,12 +55,6 @@ const NOUNS: Readonly<Record<MergeableKind, { plural: string; one: string }>> = 
   artist: { plural: "artistas", one: "artista" },
 };
 
-export function formatMergeValue(value: unknown): string {
-  if (value === null || value === undefined || value === "") return "—";
-  if (typeof value === "boolean") return value ? "Sí" : "No";
-  return String(value);
-}
-
 interface MergeEntityModalProps {
   /** Qué tipo de ficha se fusiona: persona, organización o artista. */
   kind: MergeableKind;
@@ -96,14 +91,17 @@ export function MergeEntityModal({ kind, entityId, entityName, otherId, otherNam
    * referencias; a igualdad, la de id menor). Si la recomendación es el otro
    * lado, la previsualización se pide al revés.
    */
-  const load = useCallback(async (firstId: number, secondId: number) => {
+  const load = useCallback(async (firstId: number, secondId: number, orient: "recommended" | "first" = "recommended") => {
     setLoading(true);
     setError(undefined);
     setStale(false);
     setPreview(null);
     try {
+      // «recommended» normaliza a la ficha recomendada por el motor; «first»
+      // respeta la orientación pedida — así el botón Intercambiar cambia de
+      // verdad quién queda (el servidor no normaliza, solo informa).
       let result = await entityMergeApi.preview(kind, firstId, secondId);
-      if (result.recommendedKeepId === secondId) result = await entityMergeApi.preview(kind, secondId, firstId);
+      if (orient === "recommended" && result.recommendedKeepId === secondId) result = await entityMergeApi.preview(kind, secondId, firstId);
       setKeepId(result.keep.id);
       setDropId(result.drop.id);
       setPreview(result);
@@ -125,7 +123,7 @@ export function MergeEntityModal({ kind, entityId, entityName, otherId, otherNam
   }
 
   function swap() {
-    if (preview) void load(preview.drop.id, preview.keep.id);
+    if (preview) void load(preview.drop.id, preview.keep.id, "first");
   }
 
   async function submit() {
@@ -149,7 +147,7 @@ export function MergeEntityModal({ kind, entityId, entityName, otherId, otherNam
       if (err instanceof ApiError && err.code === "stale_preview") {
         setStale(true);
         setChoices({});
-        void load(preview.keep.id, preview.drop.id);
+        void load(preview.keep.id, preview.drop.id, "first");
       } else {
         setError(err instanceof Error ? err.message : "No se pudo fusionar.");
       }

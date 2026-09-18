@@ -11,6 +11,9 @@ import { EntityFormModal } from "../components/EntityFormModal";
 import { ConfirmDialog } from "../components/ConfirmDialog";
 import { MergeEntityModal } from "../components/MergeEntityModal";
 import { ConvertPersonModal } from "../components/ConvertPersonModal";
+import { SplitPersonModal } from "../components/SplitPersonModal";
+import { PersonOrgManager } from "../components/PersonOrgManager";
+import { EntityHistory } from "../components/EntityHistory";
 import { entityHref } from "../lib/routes";
 import { initialOf } from "../components/EntityCard";
 import { PERSON_FIELDS } from "../lib/entityFields";
@@ -27,6 +30,7 @@ export function PersonDetailPage() {
   const [editing, setEditing] = useState(false);
   const [deleting, setDeleting] = useState(false);
   const [merging, setMerging] = useState(false);
+  const [splitting, setSplitting] = useState(false);
   const [converting, setConverting] = useState<"organization" | "artist" | null>(null);
 
   if (loading) return <LoadingState />;
@@ -53,6 +57,7 @@ export function PersonDetailPage() {
         <div className="page-actions" style={{ marginTop: 14 }}>
           <button type="button" className="btn btn--sm" onClick={() => setEditing(true)}>Editar</button>
           <button type="button" className="btn btn--sm" onClick={() => setMerging(true)}>Fusionar con…</button>
+          <button type="button" className="btn btn--sm" onClick={() => setSplitting(true)}>Dividir en varias…</button>
           <button type="button" className="btn btn--sm btn--danger" onClick={() => setDeleting(true)}>Retirar</button>
         </div>
       ) : null}
@@ -137,9 +142,22 @@ export function PersonDetailPage() {
         )}
       </div>
 
-      {person.organizations.length > 0 ? (
-        <div className="section">
-          <h2>Organizaciones</h2>
+      <div className="section">
+        <h2>Organizaciones <span className="mono" style={{ color: "var(--text-faint)", fontWeight: 400 }}>({person.organizations.length})</span></h2>
+        {isAdmin ? (
+          <PersonOrgManager
+            fixedKind="person"
+            fixedId={person.id}
+            rows={person.organizations.map((org) => ({
+              id: org.id, role: org.role, fromYear: org.fromYear, toYear: org.toYear,
+              otherId: org.organizationId, otherName: org.organizationName,
+            }))}
+            onChanged={reload}
+            emptyText="Sin organizaciones registradas."
+          />
+        ) : person.organizations.length === 0 ? (
+          <p style={{ color: "var(--text-faint)", fontSize: 13.5 }}>Sin vínculos con organizaciones.</p>
+        ) : (
           <div className="table-wrap">
             <table>
               <thead><tr><th>Organización</th><th>Rol</th><th>Periodo</th></tr></thead>
@@ -154,8 +172,10 @@ export function PersonDetailPage() {
               </tbody>
             </table>
           </div>
-        </div>
-      ) : null}
+        )}
+      </div>
+
+      <EntityHistory entity="person" id={person.id} />
 
       {editing ? (
         <EntityFormModal
@@ -194,6 +214,18 @@ export function PersonDetailPage() {
           entityName={person.name}
           onMerged={(keepId) => { setMerging(false); navigate(`/personas/${keepId}`, { replace: true }); }}
           onClose={() => setMerging(false)}
+        />
+      ) : null}
+
+      {splitting ? (
+        <SplitPersonModal
+          personId={person.id}
+          personName={person.name}
+          onSplit={(result) => {
+            setSplitting(false);
+            if (result.targetIds.length) navigate(`/personas/${result.targetIds[0]}`, { replace: true });
+          }}
+          onClose={() => setSplitting(false)}
         />
       ) : null}
 

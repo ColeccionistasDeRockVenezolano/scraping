@@ -10,6 +10,8 @@ import { AliasEditor } from "../components/AliasEditor";
 import { EntityFormModal } from "../components/EntityFormModal";
 import { ConfirmDialog } from "../components/ConfirmDialog";
 import { MergeEntityModal } from "../components/MergeEntityModal";
+import { PersonOrgManager } from "../components/PersonOrgManager";
+import { EntityHistory } from "../components/EntityHistory";
 import { initialOf } from "../components/EntityCard";
 import { ORGANIZATION_FIELDS } from "../lib/entityFields";
 import { organizationTypeLabel } from "../lib/labels";
@@ -94,7 +96,20 @@ export function OrganizationDetailPage() {
 
       <div className="section">
         <h2>Personas relacionadas <span className="mono" style={{ color: "var(--text-faint)", fontWeight: 400 }}>({org.associatedPersons.length})</span></h2>
-        {org.associatedPersons.length === 0 ? <p style={{ color: "var(--text-faint)", fontSize: 13.5 }}>Sin personas relacionadas.</p> : (
+        {isAdmin ? (
+          <PersonOrgManager
+            fixedKind="organization"
+            fixedId={org.id}
+            rows={org.associatedPersons.map((person) => ({
+              id: person.id, role: person.role, fromYear: person.fromYear, toYear: person.toYear,
+              otherId: person.personId, otherName: person.personName,
+            }))}
+            onChanged={reload}
+            emptyText="Sin personas relacionadas."
+          />
+        ) : org.associatedPersons.length === 0 ? (
+          <p style={{ color: "var(--text-faint)", fontSize: 13.5 }}>Sin personas relacionadas.</p>
+        ) : (
           <div className="table-wrap">
             <table>
               <thead><tr><th>Persona</th><th>Rol</th><th>Periodo</th></tr></thead>
@@ -111,6 +126,8 @@ export function OrganizationDetailPage() {
           </div>
         )}
       </div>
+
+      <EntityHistory entity="organization" id={org.id} />
 
       {editing ? (
         <EntityFormModal

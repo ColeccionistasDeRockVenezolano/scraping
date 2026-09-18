@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useId, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { artistsApi, artistMemberWrites, artistWrites } from "../lib/api";
 import { useAsync } from "../lib/useAsync";
@@ -11,6 +11,7 @@ import { AliasEditor } from "../components/AliasEditor";
 import { EntityFormModal } from "../components/EntityFormModal";
 import { ConfirmDialog } from "../components/ConfirmDialog";
 import { MergeEntityModal } from "../components/MergeEntityModal";
+import { EntityHistory } from "../components/EntityHistory";
 import { EntityPicker } from "../components/EntityPicker";
 import { Modal } from "../components/Modal";
 import { ARTIST_FIELDS } from "../lib/entityFields";
@@ -28,6 +29,7 @@ export function ArtistDetailPage() {
   const [editing, setEditing] = useState(false);
   const [deleting, setDeleting] = useState(false);
   const [addingMember, setAddingMember] = useState(false);
+  const [editingMember, setEditingMember] = useState<ArtistMember | null>(null);
   const [merging, setMerging] = useState(false);
 
   if (loading) return <LoadingState />;
@@ -78,7 +80,7 @@ export function ArtistDetailPage() {
               <thead><tr><th>Persona</th><th>Rol</th><th>Periodo</th><th></th></tr></thead>
               <tbody>
                 {artist.members.map((member) => (
-                  <MemberRow key={member.id} member={member} canEdit={isAdmin} onChanged={reload} />
+                  <MemberRow key={member.id} member={member} canEdit={isAdmin} onEdit={() => setEditingMember(member)} onChanged={reload} />
                 ))}
               </tbody>
             </table>
@@ -97,6 +99,8 @@ export function ArtistDetailPage() {
           </div>
         )}
       </div>
+
+      <EntityHistory entity="artist" id={artist.id} />
 
       {editing ? (
         <EntityFormModal
@@ -129,7 +133,12 @@ export function ArtistDetailPage() {
       ) : null}
 
       {addingMember ? (
-        <AddMemberModal artistId={artist.id} onClose={() => setAddingMember(false)} onDone={() => { setAddingMember(false); reload(); }} />
+        <MemberFormModal artistId={artist.id} onClose={() => setAddingMember(false)} onDone={() => { setAddingMember(false); reload(); }} />
+      ) : null}
+
+      {editingMember ? (
+        <MemberFormModal artistId={artist.id} member={editingMember} onClose={() => setEditingMember(null)}
+          onDone={() => { setEditingMember(null); reload(); }} />
       ) : null}
 
       {merging ? (
@@ -145,7 +154,7 @@ export function ArtistDetailPage() {
   );
 }
 
-function MemberRow({ member, canEdit, onChanged }: { canEdit: boolean; onChanged: () => void; member: ArtistMember }) {
+function MemberRow({ member, canEdit, onEdit, onChanged }: { canEdit: boolean; onEdit: () => void; onChanged: () => void; member: ArtistMember }) {
   const { notify } = useToast();
   const [removing, setRemoving] = useState(false);
 
@@ -155,7 +164,12 @@ function MemberRow({ member, canEdit, onChanged }: { canEdit: boolean; onChanged
       <td>{member.role}</td>
       <td className="mono">{member.fromYear ?? "—"}{member.isCurrent ? "–presente" : member.toYear ? `–${member.toYear}` : ""}</td>
       <td className="row-actions">
-        {canEdit ? <button type="button" className="btn btn--sm btn--danger" onClick={() => setRemoving(true)}>Quitar</button> : null}
+        {canEdit ? (
+          <>
+            <button type="button" className="btn btn--sm" onClick={onEdit} title="Corregir rol, periodo o persona">Editar</button>
+            <button type="button" className="btn btn--sm btn--danger" onClick={() => setRemoving(true)}>Quitar</button>
+          </>
+        ) : null}
       </td>
       {removing ? (
         <ConfirmDialog
@@ -176,49 +190,98 @@ function MemberRow({ member, canEdit, onChanged }: { canEdit: boolean; onChanged
   );
 }
 
-function AddMemberModal({ artistId, onClose, onDone }: { artistId: number; onClose: () => void; onDone: () => void }) {
-  const [personId, setPersonId] = useState<number | null>(null);
-  const [personLabel, setPersonLabel] = useState<string | null>(null);
-  const [role, setRole] = useState("");
-  const [fromYear, setFromYear] = useState("");
-  const [isCurrent, setIsCurrent] = useState(false);
+/**
+ * Alta y edición de una membresía. En edición solo viaja lo que cambió; la
+ * persona se corrige con su extremo (la API la sustituye con auditoría).
+ */
+function MemberFormModal({ artistId, member, onDone, onClose }: {
+  artistId: number; member?: ArtistMember; onDone: () => void; onClose: () => void;
+}) {
+  const editing = member !== undefined;
+  const [personId, setPersonId] = useState<number | null>(member?.personId ?? null);
+  const [personLabel, setPersonLabel] = useState<string | null>(member?.personName ?? null);
+  const [role, setRole] = useState(member?.role ?? "");
+  const [fromYear, setFromYear] = useState(member?.fromYear === null || member?.fromYear === undefined ? "" : String(member.fromYear));
+  const [toYear, setToYear] = useState(member?.toYear === null || member?.toYear === undefined ? "" : String(member.toYear));
+  const [isCurrent, setIsCurrent] = useState(member?.isCurrent ?? false);
   const [note, setNote] = useState("");
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string>();
+  const currentId = useId();
+  const roleId = useId();
+  const fromId = useId();
+  const toId = useId();
+  const noteId = useId();
   const { notify } = useToast();
+
+  function parseYear(value: string): number | null {
+    const text = value.trim();
+    if (!text) return null;
+    return Number(text);
+  }
 
   async function handleSubmit(event: React.FormEvent) {
     event.preventDefault();
-    if (personId === null || !role.trim() || !note.trim()) { setError("Persona, rol y motivo son obligatorios."); return; }
+    if (personId === null || !role.trim()) { setError("Persona y rol son obligatorios."); return; }
+    const nextFrom = parseYear(fromYear);
+    const nextTo = isCurrent ? null : parseYear(toYear);
+    if ((nextFrom !== null && (!Number.isInteger(nextFrom) || nextFrom < 1000 || nextFrom > 9999))
+      || (nextTo !== null && (!Number.isInteger(nextTo) || nextTo < 1000 || nextTo > 9999))) {
+      setError("Los años van de 1000 a 9999."); return;
+    }
+    if (nextFrom !== null && nextTo !== null && nextTo < nextFrom) { setError("El año final no puede ser anterior al inicial."); return; }
+    if (!note.trim()) { setError("El motivo es obligatorio."); return; }
     setBusy(true);
+    setError(undefined);
     try {
-      await artistMemberWrites.create({
-        artistId, personId, role: role.trim(), isCurrent,
-        ...(fromYear ? { fromYear: Number(fromYear) } : {}), note: note.trim(),
-      });
-      notify("success", "Miembro añadido.");
+      if (!member) {
+        await artistMemberWrites.create({
+          artistId, personId, role: role.trim(), isCurrent,
+          ...(nextFrom === null ? {} : { fromYear: nextFrom }),
+          ...(nextTo === null ? {} : { toYear: nextTo }),
+          note: note.trim(),
+        });
+        notify("success", "Miembro añadido.");
+      } else {
+        const changes: Record<string, unknown> = {};
+        if (personId !== member.personId) changes["personId"] = personId;
+        if (role.trim() !== member.role) changes["role"] = role.trim();
+        if (nextFrom !== member.fromYear) changes["fromYear"] = nextFrom;
+        if (nextTo !== member.toYear) changes["toYear"] = nextTo;
+        if (isCurrent !== member.isCurrent) changes["isCurrent"] = isCurrent;
+        if (Object.keys(changes).length === 0) { setError("No hay cambios que guardar."); setBusy(false); return; }
+        await artistMemberWrites.update(member.id, { ...changes, note: note.trim() });
+        notify("success", "Miembro actualizado.");
+      }
       onDone();
     } catch (err) {
-      setError(err instanceof Error ? err.message : "No se pudo añadir.");
+      setError(err instanceof Error ? err.message : "No se pudo guardar.");
       setBusy(false);
     }
   }
 
   return (
-    <Modal title="Añadir miembro" onClose={onClose}>
+    <Modal title={editing ? `Corregir membresía de ${member.personName}` : "Añadir miembro"} onClose={onClose}>
       <form onSubmit={handleSubmit}>
-        {error ? <p className="form-error-banner">{error}</p> : null}
+        {error ? <p className="form-error-banner" role="alert">{error}</p> : null}
         <EntityPicker kind="person" label="Persona *" value={personId} valueLabel={personLabel}
           onSelect={(id, label) => { setPersonId(id); setPersonLabel(label); }} />
         <div className="form-grid" style={{ marginTop: 12 }}>
-          <div className="field"><label>Rol *</label><input value={role} onChange={(event) => setRole(event.target.value)} placeholder="Guitarra, voz…" /></div>
-          <div className="field"><label>Desde (año)</label><input type="number" value={fromYear} onChange={(event) => setFromYear(event.target.value)} /></div>
-          <div className="checkbox-field field"><input id="member-current" type="checkbox" checked={isCurrent} onChange={(event) => setIsCurrent(event.target.checked)} /><label htmlFor="member-current">Miembro actual</label></div>
-          <div className="field span-2"><label>Motivo *</label><textarea rows={2} value={note} onChange={(event) => setNote(event.target.value)} /></div>
+          <div className="field"><label htmlFor={roleId}>Rol *</label><input id={roleId} value={role} onChange={(event) => setRole(event.target.value)} placeholder="Guitarra, voz…" /></div>
+          <div className="field"><label htmlFor={fromId}>Desde (año)</label><input id={fromId} type="number" value={fromYear} onChange={(event) => setFromYear(event.target.value)} /></div>
+          <div className="field"><label htmlFor={toId}>Hasta (año)</label><input id={toId} type="number" value={isCurrent ? "" : toYear} disabled={isCurrent} onChange={(event) => setToYear(event.target.value)} /></div>
+          <div className="checkbox-field field">
+            <input id={currentId} type="checkbox" checked={isCurrent} onChange={(event) => setIsCurrent(event.target.checked)} />
+            <label htmlFor={currentId}>Miembro actual</label>
+          </div>
+          <div className="field span-2">
+            <label htmlFor={noteId}>Motivo *</label>
+            <textarea id={noteId} rows={2} value={note} onChange={(event) => setNote(event.target.value)} />
+          </div>
         </div>
         <div className="form-actions">
           <button type="button" className="btn" onClick={onClose} disabled={busy}>Cancelar</button>
-          <button type="submit" className="btn btn--primary" disabled={busy}>{busy ? "Guardando…" : "Añadir"}</button>
+          <button type="submit" className="btn btn--primary" disabled={busy}>{busy ? "Guardando…" : editing ? "Guardar corrección" : "Añadir"}</button>
         </div>
       </form>
     </Modal>

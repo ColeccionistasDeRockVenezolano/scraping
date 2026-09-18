@@ -30,6 +30,7 @@ import { ErrorState, EmptyState, LoadingState } from "../components/StateViews";
 import { Pagination } from "../components/Pagination";
 import { ConfirmDialog } from "../components/ConfirmDialog";
 import { CurationValue } from "../components/CurationValue";
+import { FixBatchDialog } from "../components/FixBatchDialog";
 import { Modal } from "../components/Modal";
 import { MergeEntityModal } from "../components/MergeEntityModal";
 import { useCurationSummary } from "./CurationLayout";
@@ -358,42 +359,39 @@ export function CurationFindingsPage() {
       ) : null}
 
       {fixingGroup && groupFilter ? (
-        <ConfirmDialog
+        <FixBatchDialog
+          mode="group"
+          filter={groupFilter}
           title={`¿Corregir ${signature ? "este subgrupo" : "este detector"}?`}
-          description={`Se aplicará a cada hallazgo abierto y corregible de «${activeDetector?.label ?? detector}»${signature ? ` › «${signatures.find((item) => item.key === signature)?.label ?? signature}»` : ""} (con los filtros activos) su valor sugerido (hasta 500 de una vez). Los que no tengan una corrección determinista quedan sin tocar.`}
-          confirmLabel="Corregir el grupo"
-          onConfirm={async (note) => {
-            const result = await curationApi.fixGroup({ ...groupFilter, note });
-            notify("success", `${formatCount(result.fixed)} hallazgos corregidos${result.failed ? `, ${formatCount(result.failed)} no se pudieron corregir` : ""}${result.more ? " (había más de 500; repite la acción para seguir)" : ""}.`);
-            setFixingGroup(false);
-            reload();
-            void refreshSummary();
-          }}
+          description={`Cada hallazgo abierto y corregible de «${activeDetector?.label ?? detector}»${signature ? ` › «${signatures.find((item) => item.key === signature)?.label ?? signature}»` : ""} recibirá su corrección recomendada. Revisa la vista previa —podrás excluir ítems— antes de aplicar, y deshacer el lote después.`}
+          onDone={() => { reload(); void refreshSummary(); }}
           onClose={() => setFixingGroup(false)}
         />
       ) : null}
 
       {fixingSelected ? (
-        <ConfirmDialog
+        <FixBatchDialog
+          mode="selected"
+          findingIds={[...selected]}
           title="¿Corregir los hallazgos seleccionados?"
-          description={`Se aplicará a cada uno de los ${formatCount(selected.size)} hallazgos seleccionados su valor sugerido. Los que no tengan uno quedan reportados sin tocar.`}
-          confirmLabel="Corregir seleccionados"
-          onConfirm={async (note) => {
-            const result = await curationApi.fixSelected([...selected], note);
-            notify("success", `${formatCount(result.fixed)} hallazgos corregidos${result.failed ? `, ${formatCount(result.failed)} no se pudieron corregir` : ""}.`);
-            setFixingSelected(false);
-            setSelected(new Set());
-            reload();
-            void refreshSummary();
-          }}
+          description={`Cada uno de los ${formatCount(selected.size)} hallazgos seleccionados recibirá su corrección recomendada. Revisa la vista previa —podrás excluir ítems— antes de aplicar, y deshacer el lote después.`}
+          onDone={() => { setSelected(new Set()); reload(); void refreshSummary(); }}
           onClose={() => setFixingSelected(false)}
         />
       ) : null}
 
       {fixingFinding ? (
-        <FixValueDialog
-          finding={fixingFinding}
-          onFixed={() => { setFixingFinding(null); notify("success", "Hallazgo corregido."); reload(); void refreshSummary(); }}
+        <FixBatchDialog
+          mode="individual"
+          findingIds={[fixingFinding.id]}
+          title={`Corregir «${fixingFinding.title}»`}
+          description={`Se aplicará el valor al campo «${fieldLabel(fixingFinding.field ?? "")}» de «${fixingFinding.entity.label}».`}
+          valueEditor={{
+            initial: fixingFinding.suggestedValue ?? fixingFinding.value ?? "",
+            current: fixingFinding.value ?? "",
+            fieldLabel: fieldLabel(fixingFinding.field ?? ""),
+          }}
+          onDone={() => { reload(); void refreshSummary(); }}
           onClose={() => setFixingFinding(null)}
         />
       ) : null}
@@ -471,57 +469,6 @@ function IgnoreDialog({ title, description, confirmLabel, requireNote, onConfirm
       <div className="form-actions">
         <button type="button" className="btn" onClick={onClose} disabled={busy}>Cancelar</button>
         <button type="button" className="btn btn--primary" onClick={submit} disabled={busy}>{busy ? "Guardando…" : confirmLabel}</button>
-      </div>
-    </Modal>
-  );
-}
-
-/** Corrección de un hallazgo con un valor editable (por defecto, el sugerido por el detector). */
-function FixValueDialog({ finding, onFixed, onClose }: {
-  finding: CurationFinding; onFixed: (updated: CurationFinding) => void; onClose: () => void;
-}) {
-  const [value, setValue] = useState(finding.suggestedValue ?? finding.value ?? "");
-  const [note, setNote] = useState("");
-  const [busy, setBusy] = useState(false);
-  const [error, setError] = useState<string>();
-
-  async function submit() {
-    const trimmed = value.trim();
-    if (!trimmed) { setError("El valor no puede quedar vacío."); return; }
-    // El diálogo rechaza una «corrección» que no cambia nada: mismo valor, ruido de auditoría sin motivo (A2).
-    if (trimmed === (finding.value ?? "").trim()) { setError("El valor debe ser distinto al actual."); return; }
-    if (!note.trim()) { setError("La nota es obligatoria."); return; }
-    setBusy(true);
-    setError(undefined);
-    try {
-      const updated = await curationApi.fix(finding.id, note.trim(), trimmed);
-      onFixed(updated);
-    } catch (err) {
-      setError(err instanceof ApiError ? err.message : "No se pudo corregir el hallazgo.");
-      setBusy(false);
-    }
-  }
-
-  return (
-    <Modal title="Corregir hallazgo" onClose={onClose}>
-      <p style={{ color: "var(--text-muted)", fontSize: 13.5, margin: "0 0 14px" }}>
-        Se aplicará este valor al campo «{fieldLabel(finding.field ?? "")}» de «{finding.entity.label}».
-      </p>
-      <div className="field">
-        <label htmlFor="fix-value">Valor corregido *</label>
-        <input id="fix-value" type="text" value={value} onChange={(event) => setValue(event.target.value)} autoFocus />
-      </div>
-      <div className="field">
-        <label htmlFor="fix-note">Motivo *</label>
-        <textarea
-          id="fix-note" rows={3} value={note} onChange={(event) => setNote(event.target.value)}
-          placeholder="Por qué se corrige (queda en la auditoría)"
-        />
-      </div>
-      {error ? <p className="form-error-banner" style={{ marginTop: 12 }} role="alert">{error}</p> : null}
-      <div className="form-actions">
-        <button type="button" className="btn" onClick={onClose} disabled={busy}>Cancelar</button>
-        <button type="button" className="btn btn--primary" onClick={submit} disabled={busy}>{busy ? "Guardando…" : "Corregir"}</button>
       </div>
     </Modal>
   );

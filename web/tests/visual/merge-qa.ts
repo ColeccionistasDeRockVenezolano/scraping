@@ -107,6 +107,9 @@ let app: Awaited<ReturnType<typeof buildApp>> | undefined;
 try {
   process.env["DATABASE_URL"] = container.databaseUrl;
   process.env["LOG_LEVEL"] = "silent";
+  // El .env del repo fija Path=/crv (producción bajo /crv/api); aquí el API
+  // escucha en la raíz y las lecturas admin necesitan la cookie en todo path.
+  process.env["CRV_SESSION_COOKIE_PATH"] = "/";
   process.env[`CRV_COLLABORATORS_JSON`] = JSON.stringify([
     { username: QA_USER, name: "QA Visual", passwordHash: await passwordHash(QA_PASSWORD) },
   ]);
@@ -172,7 +175,17 @@ try {
       page.on("pageerror", (error) => pageErrors.push(error.message));
       page.on("console", (message) => { if (message.type() === "error" && !message.text().startsWith("Failed to load resource:")) pageErrors.push(message.text()); });
 
-      // 1. Página de posibles duplicados.
+      // 0. Sesión de colaborador: desde 49a3f76 la página de duplicados exige
+      //    una cuenta administradora (antes se abría sin sesión).
+      await page.goto(`${webUrl}/personas/${junkId}`, { waitUntil: "domcontentloaded" });
+      await waitForApp(page);
+      await page.getByRole("button", { name: "Iniciar sesión como colaborador" }).click();
+      await page.getByLabel("Usuario").fill(QA_USER);
+      await page.getByLabel("Contraseña").fill(QA_PASSWORD);
+      await page.getByRole("button", { name: "Iniciar sesión", exact: true }).click();
+      // Esperar a que la sesión tome efecto antes de navegar (si no, el goto
+      // cancela el login en vuelo y la página queda como visitante).
+      await page.getByRole("button", { name: "Convertir en organización…" }).waitFor({ timeout: 15000 });
       await page.goto(`${webUrl}/personas/duplicados`, { waitUntil: "domcontentloaded" });
       await waitForApp(page);
       const row = page.getByText("Rómulo García QA", { exact: false }).first();
@@ -223,12 +236,8 @@ try {
       await page.getByText("Este nombre no parece de una persona", { exact: false }).first().waitFor();
       await page.screenshot({ path: path.join(outputDir, `${viewport.name}-persona-sospechosa.png`), fullPage: true });
 
-      // 5. Con sesión de colaborador: «Fusionar con…» y los botones de conversión
+      // 5. Con la sesión ya abierta: «Fusionar con…» y los botones de conversión
       //    (la conversión es una escritura: sin sesión no se ofrecen).
-      await page.getByRole("button", { name: "Iniciar sesión como colaborador" }).click();
-      await page.getByLabel("Usuario").fill(QA_USER);
-      await page.getByLabel("Contraseña").fill(QA_PASSWORD);
-      await page.getByRole("button", { name: "Iniciar sesión", exact: true }).click();
       await page.getByRole("button", { name: "Convertir en organización…" }).waitFor();
       await page.getByRole("button", { name: "Convertir en artista…" }).waitFor();
       await page.screenshot({ path: path.join(outputDir, `${viewport.name}-convertir.png`), fullPage: true });

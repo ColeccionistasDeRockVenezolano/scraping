@@ -5,15 +5,16 @@
 // correcta de la API vuelve a analizar el catálogo (src/curation/watcher.ts)—
 // con lo que resolvió y lo que hizo aparecer. Al final, una tarjeta por
 // categoría con hallazgos abiertos y, aparte, las que están al día.
-import { useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowsClockwise, ArrowBendDownRight, CheckCircle, Clock, Sparkle } from "@phosphor-icons/react";
+import { ArrowsClockwise, ArrowBendDownRight, CheckCircle, Clock, Sparkle, NotEquals } from "@phosphor-icons/react";
 import { ApiError, curationApi } from "../lib/api";
 import { useToast } from "../lib/ToastContext";
-import { categoryIcon, counter, failedDetectors, formatCount, relativeTime, triggerLabel } from "../lib/curation";
+import { ENTITY_KIND_LABEL, categoryIcon, counter, failedDetectors, formatCount, relativeTime, triggerLabel } from "../lib/curation";
+import { entityHref } from "../lib/routes";
 import { ErrorState, LoadingState } from "../components/StateViews";
 import { useCurationSummary } from "./CurationLayout";
-import type { CurationCategorySummary, CurationScan } from "../lib/types";
+import type { CurationCategorySummary, CurationScan, DistinctPair } from "../lib/types";
 
 export function CurationOverviewPage() {
   const { summary, summaryError, refreshSummary } = useCurationSummary();
@@ -135,7 +136,85 @@ export function CurationOverviewPage() {
           </ul>
         </section>
       ) : null}
+
+      <DistinctPairsSection />
     </>
+  );
+}
+
+/**
+ * Pares que un curador declaró distintos: el detector de repetidas deja de
+ * proponerlos. Un clic retira la declaración y vuelve a permitirlo (E2).
+ */
+function DistinctPairsSection() {
+  const { notify } = useToast();
+  const [pairs, setPairs] = useState<DistinctPair[] | null>(null);
+  const [busyId, setBusyId] = useState<number | null>(null);
+  const [error, setError] = useState<string>();
+
+  const load = useCallback(async () => {
+    try {
+      const page = await curationApi.distinctPairs({ limit: 50 });
+      setPairs(page.data);
+    } catch (err) {
+      setError(err instanceof ApiError ? err.message : "No se pudieron cargar los pares declarados.");
+    }
+  }, []);
+
+  useEffect(() => { void load(); }, [load]);
+
+  async function retract(pair: DistinctPair) {
+    setBusyId(pair.id);
+    setError(undefined);
+    try {
+      await curationApi.retractDistinct(pair.id);
+      notify("success", "Declaración retirada: el detector puede volver a proponer el par.");
+      setPairs((current) => current?.filter((item) => item.id !== pair.id) ?? null);
+    } catch (err) {
+      setError(err instanceof ApiError ? err.message : "No se pudo retirar la declaración.");
+    } finally {
+      setBusyId(null);
+    }
+  }
+
+  // Sin declaraciones no hay nada que gestionar: no se muestra la sección.
+  if (error && !pairs) return null;
+  if (!pairs || pairs.length === 0) return null;
+
+  return (
+    <section className="section" aria-labelledby="distinct-pairs-title">
+      <h2 id="distinct-pairs-title">Pares declarados distintos <span className="mono" style={{ color: "var(--text-faint)", fontWeight: 400 }}>({pairs.length})</span></h2>
+      <p className="hint" style={{ marginTop: 0 }}>
+        El detector de repetidas no vuelve a proponerlos, aunque cambien sus nombres. Retirar la declaración lo permite otra vez.
+      </p>
+      {error ? <p className="form-error-banner" role="alert">{error}</p> : null}
+      <ul style={{ display: "grid", gap: 8, marginTop: 8 }}>
+        {pairs.map((pair) => {
+          const hrefA = pair.kind === "track" ? null : entityHref(pair.kind as "artist" | "person" | "organization" | "album", pair.aId);
+          const hrefB = pair.kind === "track" ? null : entityHref(pair.kind as "artist" | "person" | "organization" | "album", pair.bId);
+          return (
+            <li key={pair.id} className="credit-row">
+              <span>
+                <NotEquals size={14} weight="bold" aria-hidden="true" style={{ marginRight: 6 }} />
+                <span className="badge badge--outline" style={{ marginRight: 6 }}>{ENTITY_KIND_LABEL[pair.kind] ?? pair.kind}</span>
+                {hrefA ? <Link to={hrefA}>#{pair.aId}</Link> : <>#{pair.aId}</>}
+                {" ↔ "}
+                {hrefB ? <Link to={hrefB}>#{pair.bId}</Link> : <>#{pair.bId}</>}
+              </span>
+              <span className="role hint">
+                {pair.decidedBy} · {relativeTime(pair.createdAt)}{pair.note ? ` · ${pair.note}` : ""}
+                <button
+                  type="button" className="btn btn--sm btn--ghost" style={{ marginLeft: 10 }}
+                  onClick={() => void retract(pair)} disabled={busyId === pair.id}
+                >
+                  {busyId === pair.id ? "Retirando…" : "Volver a proponer"}
+                </button>
+              </span>
+            </li>
+          );
+        })}
+      </ul>
+    </section>
   );
 }
 

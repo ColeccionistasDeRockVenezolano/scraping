@@ -105,7 +105,7 @@ export interface TrackDetail extends TrackListItem {
   credits: Credit[];
 }
 
-export interface AlbumFormat { id: number; format: string; quality: string | null; archiveStatus: string; }
+export interface AlbumFormat { id: number; format: string; quality: string | null; archiveStatus: string; filePath: string | null; notes: string | null; }
 
 export interface YoutubeLink { videoId: string; title: string | null; kind: string; isPrimaryLink: boolean; }
 
@@ -413,19 +413,6 @@ export interface CurationFinding {
   resolvedBy: string | null;
 }
 
-export interface CurationFixOutcome {
-  id: number;
-  ok: boolean;
-  error: string | null;
-}
-
-export interface CurationFixBatchResult {
-  outcomes: CurationFixOutcome[];
-  fixed: number;
-  failed: number;
-  more?: boolean;
-}
-
 export interface CurationScanResult {
   scanId: number | null;
   /** partial = algún detector falló (sus hallazgos no se tocaron); skipped = otro proceso estaba analizando. */
@@ -442,4 +429,133 @@ export interface CurationScanResult {
   byCategory: Record<string, number>;
   failures: Array<{ detector: string; error: string }>;
   error?: string;
+}
+
+// ---------- fusión de discos (E6.5): previsualización y fusión ----------
+export interface AlbumMergeTrackSummary {
+  id: number; discNumber: number; trackNumber: number; title: string;
+  durationSeconds: number | null; creditCount: number;
+}
+
+export interface AlbumMergeSide {
+  id: number; title: string; artistId: number; artistName: string;
+  labelId: number | null; labelName: string | null;
+  fields: Record<string, unknown>;
+  aliases: string[];
+  tracks: AlbumMergeTrackSummary[];
+  counts: { tracks: number; albumCredits: number; formats: number; mediaLinks: number; claims: number };
+}
+
+export interface AlbumTrackMatch {
+  keepTrackId: number; dropTrackId: number; keepTitle: string; dropTitle: string;
+  discNumber: number; keepTrackNumber: number; dropTrackNumber: number;
+  matchType: "position_and_title" | "title" | "position";
+}
+
+export interface AlbumMergePreview {
+  keep: AlbumMergeSide;
+  drop: AlbumMergeSide;
+  recommendedKeepId: number;
+  matchedTracks: AlbumTrackMatch[];
+  unmatchedDropTracks: AlbumMergeTrackSummary[];
+  fieldConflicts: Array<{ field: string; keepValue: unknown; dropValue: unknown }>;
+  fieldsFilledFromDrop: string[];
+  sharedCredits: Array<{ id: number; role: string; creditType: string; targetName: string }>;
+  formatsToAdd: Array<{ id: number; format: string }>;
+  warnings: string[];
+  previewHash: string;
+}
+
+export interface AlbumMergeResult {
+  keepId: number; dropId: number; auditId: number;
+  tracksMerged: number; tracksMoved: number; creditsMerged: number; formatsMerged: number;
+  fieldsCorrected: string[];
+  runId: number;
+}
+
+// ---------- división de personas (E6.3) ----------
+export interface PersonSplitPreview {
+  person: { id: number; name: string };
+  into: string[];
+  targets: Array<{ name: string; existingId: number | null }>;
+  counts: { albumCredits: number; trackCredits: number; memberships: number; organizations: number };
+  warnings: string[];
+}
+
+export interface PersonSplitResult {
+  op: string;
+  status: "applied" | "skipped";
+  detail: string;
+  credits: number;
+  targetIds: number[];
+  runId: number;
+}
+
+// ---------- lotes de corrección (E4): vista previa → aplicar → deshacer ----------
+export type FixBatchMode = "individual" | "selected" | "group" | "auto" | "undo";
+export type FixBatchStatus = "previewed" | "running" | "done" | "partial" | "failed" | "undone";
+export type FixItemStatus = "pending" | "blocked" | "excluded" | "applied" | "skipped_stale" | "failed" | "undone" | "not_undoable";
+
+export interface FixItem {
+  id: number;
+  position: number;
+  findingId: number | null;
+  finding: {
+    id: number; detector: string; signature: string; title: string; entity: CurationEntityRef;
+    field: string | null; value: string | null; status: string;
+  } | null;
+  actionKey: string | null;
+  actionLabel: string | null;
+  level: number | null;
+  params: Record<string, unknown>;
+  status: FixItemStatus;
+  before: Record<string, unknown> | null;
+  after: Record<string, unknown> | null;
+  touched: Array<{ kind: string; id: number }>;
+  blocked: { code: string; message: string } | null;
+  noop: { coveredBy: number | null } | null;
+  collisions: Array<{ kind: string; id: number; label: string; exact: boolean }>;
+  warnings: string[];
+  proposal: { actionKey: string; params: Record<string, unknown>; reason: string } | null;
+  preconditions: Array<{ key: string; ok: boolean; code?: string; message?: string }>;
+  runId: number | null;
+  undoOfItemId: number | null;
+  errorCode: string | null;
+  error: string | null;
+  appliedAt: string | null;
+}
+
+export interface FixBatch {
+  id: number;
+  mode: FixBatchMode;
+  filter: Record<string, unknown>;
+  actionKey: string | null;
+  requestedBy: string;
+  appliedBy: string | null;
+  note: string | null;
+  previewHash: string;
+  status: FixBatchStatus;
+  counts: Record<string, unknown>;
+  verification: Record<string, unknown> | null;
+  createdAt: string;
+  startedAt: string | null;
+  finishedAt: string | null;
+  undoOfBatchId: number | null;
+  undoneByBatchId: number | null;
+  items: FixItem[];
+  pagination: { limit: number; offset: number; total: number };
+}
+
+export interface FindingAction {
+  key: string; label: string; description: string; level: number; inverse: string | null;
+  recommended: boolean; params: Record<string, unknown> | null;
+  preconditions: Array<{ key: string; ok: boolean; code?: string; message?: string }>;
+  available: boolean;
+}
+
+export interface FindingActionsResult { findingId: number; status: string; actions: FindingAction[]; }
+
+export interface DistinctPair {
+  id: number; kind: string; aId: number; bId: number;
+  decidedBy: string; note: string; createdAt: string;
 }
