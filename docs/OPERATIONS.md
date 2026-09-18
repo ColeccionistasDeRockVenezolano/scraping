@@ -248,7 +248,8 @@ CSRF efímero. Hay un máximo de cinco intentos fallidos por cuenta e IP cada 15
 minutos. Las sesiones duran 12 horas y se invalidan al reiniciar la API.
 `CRV_OPERATOR_TOKEN` queda como compatibilidad opcional para scripts internos,
 pero debe permanecer vacío si no existe uno. La cuenta autenticada firma cada
-transacción y run `manual`, visibles en `GET /runs/:id` y `GET /audit`.
+transacción y run `manual`, visibles en `GET /runs/:id` y `GET /audit`
+(desde el 2026-09-18, ambos exigen cuenta administradora).
 
 **Publicar el frontend bajo un prefijo de Funnel exige dos variables en el
 momento del build**, o la página carga en negro sin ningún error en consola:
@@ -442,6 +443,8 @@ npm run cli -- er:prune --keep-full-days=7         # conservar más días de dos
   corre con el `/dev/shm` por defecto (64 MB) y el VACUUM paralelo muere con
   `could not resize shared memory segment … No space left on device`; sin
   paralelismo no hay segmento DSM y pasa (medido: falla y 1,5 min respectivamente).
+- El autovacuum limpia ese TOAST a paso de tortuga por su *cost-delay* (medido el
+  2026-09-18: 8 % en 1 h 50 sobre 19 GB), ...[truncated]
 
 ## 5. Logs y trazabilidad
 
