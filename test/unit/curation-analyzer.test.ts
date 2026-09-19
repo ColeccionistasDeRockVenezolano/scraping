@@ -70,9 +70,12 @@ describe("detector de conflictos de Curaduría", () => {
     snapshot.reviews.push({ id: 7, kind: "tipo_inventado", status: "open", priority: 50, notes: null, payload: {}, createdAt: "2026-09-16T00:00:00Z", refs: {} });
     snapshot.reviews.push({ id: 8, kind: "person_duplicate", status: "open", priority: 50, notes: null, payload: {}, createdAt: "2026-09-16T00:00:00Z", refs: {} });
     const found = findings(snapshot).filter((finding) => finding.detector === "cola_de_revision");
-    // `person_duplicate` tiene su propia pestaña (Posibles duplicados).
-    expect(found).toHaveLength(1);
-    expect(found[0]).toMatchObject({ category: OTHER_CATEGORY, signature: "review:tipo_inventado", entity: { kind: "review", id: 7 } });
+    // E7: person_duplicate también aparece como tarjeta y enlaza su herramienta especializada.
+    expect(found).toHaveLength(2);
+    expect(found).toEqual(expect.arrayContaining([
+      expect.objectContaining({ category: OTHER_CATEGORY, signature: "review:tipo_inventado", entity: { kind: "review", id: 7 } }),
+      expect.objectContaining({ category: "fichas_repetidas", signature: "review:person_duplicate", entity: { kind: "review", id: 8 } }),
+    ]));
   });
 
   it("un detector que declara una categoría desconocida termina en «Otros» con su procedencia", () => {
