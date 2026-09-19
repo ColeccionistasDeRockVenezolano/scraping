@@ -108,7 +108,12 @@ describe("marco de acciones de corrección de Curaduría (E4)", () => {
     });
     // El listado también dice qué acciones tiene cada hallazgo.
     const read = await app.inject({ method: "GET", url: `/curation/findings/${findingId}`, headers });
-    expect(read.json().actions).toEqual([{ key: "limpiar_texto", label: expect.any(String), level: 0 }]);
+    expect(read.json().actions).toEqual([{
+      key: "limpiar_texto",
+      label: expect.any(String),
+      description: expect.any(String),
+      level: 0,
+    }]);
 
     expect((await app.inject({ method: "GET", url: "/curation/findings/999999999/actions", headers })).statusCode).toBe(404);
   }, 60_000);
