@@ -469,11 +469,13 @@ export function CurationFindingsPage() {
 
       {fixingSelected ? (
         <FixBatchDialog
-          mode="selected"
-          findingIds={[...selected]}
+          mode={selectAllFilter ? "group" : "selected"}
+          {...(selectAllFilter && groupFilter ? { filter: groupFilter } : { findingIds: [...selected] })}
           title="¿Corregir los hallazgos seleccionados?"
-          description={`Cada uno de los ${formatCount(selected.size)} hallazgos seleccionados recibirá su corrección recomendada. Revisa la vista previa —podrás excluir ítems— antes de aplicar, y deshacer el lote después.`}
-          onDone={() => { setSelected(new Set()); reload(); void refreshSummary(); }}
+          description={selectAllFilter
+            ? "La vista previa incluye todos los hallazgos que cumplen exactamente el filtro visible, no solo esta página."
+            : `Cada uno de los ${formatCount(selected.size)} hallazgos seleccionados recibirá su corrección recomendada.`}
+          onDone={() => { setSelected(new Set()); setSelectAllFilter(false); reload(); void refreshSummary(); }}
           onClose={() => setFixingSelected(false)}
         />
       ) : null}
@@ -481,17 +483,41 @@ export function CurationFindingsPage() {
       {fixingFinding ? (
         <FixBatchDialog
           mode="individual"
-          findingIds={[fixingFinding.id]}
-          title={`Corregir «${fixingFinding.title}»`}
-          description={`Se aplicará el valor al campo «${fieldLabel(fixingFinding.field ?? "")}» de «${fixingFinding.entity.label}».`}
-          valueEditor={{
-            initial: fixingFinding.suggestedValue ?? fixingFinding.value ?? "",
-            current: fixingFinding.value ?? "",
-            fieldLabel: fieldLabel(fixingFinding.field ?? ""),
-          }}
+          findingIds={[fixingFinding.finding.id]}
+          actionKey={fixingFinding.actionKey}
+          title={`Corregir «${fixingFinding.finding.title}»`}
+          description={`Acción: ${fixingFinding.finding.actions.find((action) => action.key === fixingFinding.actionKey)?.label ?? fixingFinding.actionKey}. Revisa el antes → después y sus precondiciones.`}
+          {...(fixingFinding.actionKey === "limpiar_texto" && fixingFinding.finding.suggestedValue !== null ? {
+            valueEditor: {
+              initial: fixingFinding.finding.suggestedValue,
+              current: fixingFinding.finding.value ?? "",
+              fieldLabel: fieldLabel(fixingFinding.finding.field ?? ""),
+            },
+          } : {})}
           onDone={() => { reload(); void refreshSummary(); }}
           onClose={() => setFixingFinding(null)}
         />
+      ) : null}
+
+      {trustingGroup && groupFilter ? (
+        <TrustedConflictDialog
+          filter={groupFilter}
+          onDone={() => { reload(); void refreshSummary(); }}
+          onClose={() => setTrustingGroup(false)}
+        />
+      ) : null}
+
+      {keyboardHelp ? (
+        <Modal title="Atajos de Curaduría" onClose={() => setKeyboardHelp(false)}>
+          <dl className="shortcut-list">
+            <div><dt>j / k</dt><dd>Siguiente / anterior</dd></div>
+            <div><dt>x</dt><dd>Seleccionar</dd></div>
+            <div><dt>c</dt><dd>Corregir con la acción recomendada</dd></div>
+            <div><dt>i</dt><dd>No es un problema</dd></div>
+            <div><dt>o</dt><dd>Abrir la ficha</dd></div>
+            <div><dt>?</dt><dd>Mostrar esta ayuda</dd></div>
+          </dl>
+        </Modal>
       ) : null}
 
       {mergingFinding ? (
