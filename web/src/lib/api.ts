@@ -11,7 +11,7 @@ import type {
   CurationFinding, CurationFindingStatus, CurationIgnoreReason, CurationPairKind, CurationScan, CurationScanResult,
   CurationSeverity, CurationSummary,
   AlbumMergePreview, AlbumMergeResult, PersonSplitPreview, PersonSplitResult,
-  FindingActionsResult, FixBatch, DistinctPair, ConflictDecisionDetail, TrustedConflictPreview,
+  FindingActionsResult, FixBatch, FixBatchStatus, FixBatchSummary, DistinctPair, ConflictDecisionDetail, TrustedConflictPreview,
 } from "./types";
 
 /**
@@ -296,6 +296,8 @@ export const curationApi = {
   ignore: (id: number, reason: CurationIgnoreReason, note: string) =>
     request<CurationFinding>(`/curation/findings/${id}/ignore`, { method: "POST", authenticated: true, body: note ? { reason, note } : { reason } }),
   reopen: (id: number) => request<CurationFinding>(`/curation/findings/${id}/reopen`, { method: "POST", authenticated: true }),
+  reviewTriggered: (id: number) =>
+    request<CurationFinding>(`/curation/findings/${id}/review-trigger`, { method: "POST", authenticated: true }),
   ignoreGroup: (input: CurationFindingGroupFilter & { reason: CurationIgnoreReason; note: string }) =>
     request<{ ignored: number }>("/curation/findings/ignore-group", { method: "POST", authenticated: true, body: input }),
   declareDistinct: (input: { kind: CurationPairKind; aId: number; bId: number; note: string }) =>
@@ -310,6 +312,10 @@ export const curationApi = {
     request<FixBatch>(`/curation/fixes/${batchId}/apply`, { method: "POST", authenticated: true, body: input }),
   fixUndo: (batchId: number, note: string) =>
     request<FixBatch>(`/curation/fixes/${batchId}/undo`, { method: "POST", authenticated: true, body: { note } }),
+  fixBatch: (batchId: number, params: Paged & { status?: string } = {}) =>
+    request<FixBatch>(`/curation/fixes/${batchId}`, { query: params }),
+  fixBatches: (params: Paged & { status?: FixBatchStatus } = {}) =>
+    request<Page<FixBatchSummary>>("/curation/fixes", { query: params }),
   conflict: (id: number) => request<ConflictDecisionDetail>(`/curation/conflicts/${id}`),
   resolveConflict: (id: number, input: ({ side: "a" | "b" } | { value: string | number | boolean | null }) & { note: string }) =>
     request<{ conflictId: number; runId: number; action: "a" | "b" | "custom" }>(`/curation/conflicts/${id}/resolve`, {
