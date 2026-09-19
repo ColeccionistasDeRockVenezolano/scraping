@@ -11,6 +11,16 @@ import { isLowercaseNonName, nameFinding, quote, type Detector } from "./shared.
 
 const CATEGORY = "ficha_de_otro_tipo";
 
+/** Marcadores inequívocos: los aprendidos débiles pueden ser nombres de banda. */
+const STRONG_ORGANIZATION_MARKERS = new Set([
+  "records", "record", "discos", "sello", "label",
+  "estudio", "estudios", "studio", "studios",
+  "produccion", "producciones", "production", "productions",
+  "fundacion", "foundation",
+]);
+/** Fichas agregadoras que tampoco son artistas. */
+const NON_ARTIST_PLACEHOLDERS = new Set(["compilado", "compilation", "varios", "various"]);
+
 export const personIsOrganization: Detector = {
   key: "persona_es_organizacion",
   category: CATEGORY,
@@ -44,7 +54,7 @@ export const personIsOrganization: Detector = {
         severity: "medium",
         title: markers.length ? `Usa palabras propias de organizaciones: ${markers.map(quote).join(", ")}` : "Contiene una palabra de estudio, sello o productora",
         suggestion: "Convertir la ficha en organización",
-        evidence: { learnedMarkers: markers },
+        evidence: { learnedMarkers, strongMarkers: markers, ...(placeholder ? { placeholder } : {}) },
       })];
     });
   },
@@ -153,15 +163,20 @@ export const artistIsOrganization: Detector = {
   run(context) {
     return context.names.filter((name) => name.kind === "artist").flatMap((name) => {
       const orgIds = context.lexicon.organizationsByKey.get(nameKey(name.value)) ?? [];
-      const markers = keyTokens(name.value).filter((token) => context.lexicon.organizationMarkers.has(token));
-      if (!orgIds.length && !markers.length) return [];
+      const tokens = keyTokens(name.value);
+      const learnedMarkers = tokens.filter((token) => context.lexicon.organizationMarkers.has(token));
+      const markers = learnedMarkers.filter((token) => STRONG_ORGANIZATION_MARKERS.has(token));
+      const placeholder = tokens.find((token) => NON_ARTIST_PLACEHOLDERS.has(token));
+      if (!orgIds.length && !markers.length && !placeholder) return [];
       return [nameFinding(this, name, {
         signature: orgIds.length ? "coincide_con_organizacion" : "vocabulario_de_organizacion",
         signatureLabel: orgIds.length ? "Mismo nombre que una organización" : "Vocabulario de sello o estudio",
         severity: orgIds.length ? "medium" : "low",
         title: orgIds.length
           ? `Se llama igual que la organización ${quote(context.organizations.get(orgIds[0]!)?.name ?? name.value)}`
-          : `Usa palabras propias de organizaciones: ${markers.map(quote).join(", ")}`,
+          : placeholder
+            ? `Parece una ficha agregadora, no un artista: ${quote(placeholder)}`
+            : `Usa palabras propias de organizaciones: ${markers.map(quote).join(", ")}`,
         suggestion: "Confirmar si es un artista o la organización (sello, fundación, estudio)",
         related: orgIds.map((id) => ({ kind: "organization" as const, id, label: context.organizations.get(id)?.name ?? String(id) })),
         evidence: { learnedMarkers: markers },
