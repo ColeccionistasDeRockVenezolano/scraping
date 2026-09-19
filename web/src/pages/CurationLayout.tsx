@@ -12,7 +12,7 @@
 // «No se pudo cargar».
 import { Suspense, useCallback, useEffect, useRef, useState } from "react";
 import { NavLink, Outlet, useLocation, useOutletContext } from "react-router-dom";
-import { CaretDown, Copy, LockSimple, Pulse, SignIn, type Icon } from "@phosphor-icons/react";
+import { CaretDown, ClockCounterClockwise, Copy, LockSimple, Pulse, SignIn, type Icon } from "@phosphor-icons/react";
 import { useOperator } from "../lib/OperatorContext";
 import { ApiError, curationApi } from "../lib/api";
 import { categoryIcon, formatCount } from "../lib/curation";
@@ -160,10 +160,13 @@ function CurationNav({ summary }: { summary: CurationSummary | undefined }) {
     fresh: category.newInLastScan > 0,
     title: category.description,
   })) ?? [];
-  const tools: NavEntry[] = [{
-    to: "/curaduria/duplicados", label: "Posibles duplicados", icon: Copy,
-    ...(summary ? { count: summary.duplicateCandidates } : {}),
-  }];
+  const tools: NavEntry[] = [
+    {
+      to: "/curaduria/duplicados", label: "Posibles duplicados", icon: Copy,
+      ...(summary ? { count: summary.duplicateCandidates } : {}),
+    },
+    { to: "/curaduria/correcciones", label: "Correcciones", icon: ClockCounterClockwise },
+  ];
   const current = currentEntry(pathname, [overview, ...categories, ...tools]);
   const CurrentIcon = current.icon;
 
