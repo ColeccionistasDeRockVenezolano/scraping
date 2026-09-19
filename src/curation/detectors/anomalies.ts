@@ -26,6 +26,17 @@ const RARE_SIGN_MIN_ALLOWED = 3;
 const NON_LATIN_SHARE = 0.01;
 const LENGTH_Z = 8;
 
+/** Puntuación rara pero legítima confirmada por el corpus real. */
+function legitimateRareSign(name: NameValue, sign: string): boolean {
+  if (sign === "," && name.kind === "artist") return true;
+  if (sign === "’") {
+    const index = name.value.indexOf(sign);
+    return index > 0 && /\p{L}/u.test(name.value[index - 1] ?? "") && /\p{L}/u.test(name.value[index + 1] ?? "");
+  }
+  if (sign === "@" && name.kind === "artist" && name.value.trimStart().startsWith("@")) return true;
+  return false;
+}
+
 const FIELD_LABEL: Readonly<Record<string, string>> = {
   "artist.name": "nombres de artista", "person.name": "nombres de persona", "organization.name": "nombres de organización",
   "album.title": "títulos de disco", "track.title": "títulos de pista",
@@ -86,6 +97,7 @@ export function detectAnomalies(detector: Detector, context: AnalysisContext, ex
 function anomaliesOf(detector: Detector, name: NameValue, profile: FieldProfile, nonLatinShare: number): Finding | undefined {
   const field = FIELD_LABEL[fieldKey(name)] ?? `${ENTITY_NOUN[name.kind] ?? name.kind}.${name.field}`;
   const rare = [...signsOf(name.value)].filter((sign) => {
+    if (legitimateRareSign(name, sign)) return false;
     const docs = profile.signDocs.get(sign) ?? 0;
     return docs <= Math.max(RARE_SIGN_MIN_ALLOWED, Math.floor(profile.values * RARE_SIGN_PER_VALUE));
   });
@@ -114,7 +126,11 @@ function anomaliesOf(detector: Detector, name: NameValue, profile: FieldProfile,
   }
   const length = [...name.value].length;
   const spread = 1.4826 * Math.max(profile.lengthMad, 1);
-  if ((length - profile.lengthMedian) / spread > LENGTH_Z && length > 2 * profile.lengthMedian) {
+  const words = name.value.match(/\p{L}+/gu) ?? [];
+  // Un artista de dos palabras puede tener un nombre genuinamente largo; el
+  // caso roto del corpus, en cambio, está fragmentado en muchas palabras.
+  const plausibleLongArtist = name.kind === "artist" && words.length <= 2;
+  if (!plausibleLongArtist && (length - profile.lengthMedian) / spread > LENGTH_Z && length > 2 * profile.lengthMedian) {
     return nameFinding(detector, name, {
       signature: `largo:${fieldKey(name)}`,
       signatureLabel: `Largo atípico en ${field}`,
@@ -125,7 +141,8 @@ function anomaliesOf(detector: Detector, name: NameValue, profile: FieldProfile,
     });
   }
   const letters = letterRatio(name.value);
-  if (profile.letterRatioMedian >= 0.8 && length >= 5 && letters < 0.35) {
+  // Nombres de banda numéricos («20/20», «KP9000», «11011») son válidos.
+  if (name.kind !== "artist" && profile.letterRatioMedian >= 0.8 && length >= 5 && letters < 0.35) {
     return nameFinding(detector, name, {
       signature: `pocas_letras:${fieldKey(name)}`,
       signatureLabel: `Casi sin letras en ${field}`,
