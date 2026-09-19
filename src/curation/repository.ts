@@ -478,7 +478,7 @@ export async function getFinding(id: number): Promise<FindingRow | undefined> {
  * triggeredHistory con quién y cuándo la revisó.
  */
 export async function reviewTriggeredFinding(id: number, operator: string): Promise<FindingRow> {
-  const result = await getPool().query(\`
+  const result = await getPool().query(`
     UPDATE ingest.curation_findings
        SET evidence = (evidence - 'triggeredBy') || jsonb_build_object(
          'triggeredHistory',
@@ -489,11 +489,11 @@ export async function reviewTriggeredFinding(id: number, operator: string): Prom
            'causes', evidence->'triggeredBy'
          ))
        )
-     WHERE id=$1 AND evidence ? 'triggeredBy'\`,
+     WHERE id=$1 AND evidence ? 'triggeredBy'`,
   [id, operator]);
   if (!result.rowCount) {
     const existing = await getFinding(id);
-    if (!existing) throw new CurationError("not_found", \`hallazgo inexistente: \${id}\`);
+    if (!existing) throw new CurationError("not_found", `hallazgo inexistente: ${id}`);
     throw new CurationError("invalid", "este hallazgo no tiene una cadena pendiente por revisar");
   }
   return (await getFinding(id))!;
