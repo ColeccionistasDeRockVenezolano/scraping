@@ -102,7 +102,12 @@ describe("API de fusión de personas (E11.4)", () => {
     expect(detail.aliases.map((alias: { alias: string }) => alias.alias)).toContain("Flujo Completo B");
 
     // El run quedó registrado con operador, nota y motivo.
-    const run = (await app.inject({ method: "GET", url: `/runs/${body.runId}` })).json();
+    const runResponse = await app.inject({
+      method: "GET", url: `/runs/${body.runId}`,
+      headers: { authorization: `Bearer ${TOKEN}` },
+    });
+    expect(runResponse.statusCode).toBe(200);
+    const run = runResponse.json();
     expect(run).toMatchObject({ kind: "manual", status: "ok", params: { action: "api:merge:person", operator: OPERATOR, note: "prueba del flujo completo" } });
 
     // El id que desapareció ya no existe, pero lleva a la ficha que quedó.
