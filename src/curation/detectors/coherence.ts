@@ -54,6 +54,10 @@ export const albumTypeVsTitle: Detector = {
 
 const SINGLE_YEAR = /\b(?:19|20)\d{2}\b/gu;
 const RANGE = /\b(?:19|20)\d{2}\s*[-–—/]\s*(?:(?:19|20)?\d{2})\b/u;
+/** Años que describen la grabación o el evento, no la edición. */
+const RECORDING_YEAR_CONTEXT = /\b(?:en\s+vivo|live|directo|concert|concierto|nyc)\b/iu;
+/** «1967 - Caracas …»: el año funciona como rótulo histórico del evento. */
+const LEADING_EVENT_YEAR = /^(?:19|20)\d{2}\s*[-–—]\s*\p{L}/u;
 
 export const yearTitleVsRelease: Detector = {
   key: "anio_titulo_contra_publicacion",
@@ -65,6 +69,7 @@ export const yearTitleVsRelease: Detector = {
       const album = context.albums.get(name.id)!;
       const years = name.value.match(SINGLE_YEAR) ?? [];
       if (years.length !== 1 || RANGE.test(name.value) || album.releaseYear === null || Number(years[0]) === album.releaseYear) return [];
+      if (RECORDING_YEAR_CONTEXT.test(name.value) || LEADING_EVENT_YEAR.test(name.value)) return [];
       const index = name.value.indexOf(years[0]!);
       return [nameFinding(this, name, {
         severity: "low",
