@@ -61,13 +61,15 @@ interface FixBatchDialogProps {
   filter?: CurationFindingGroupFilter;
   title: string;
   description: string;
-  /** Solo en individual: valor escrito a mano (si falta, la acción recomendada). */
+  /** Acción concreta elegida desde la tarjeta; sin ella, el backend usa la recomendada. */
+  actionKey?: string;
+  /** Solo en individual: valor escrito a mano cuando la acción lo admite. */
   valueEditor?: { initial: string; current: string; fieldLabel: string };
   onDone: () => void;
   onClose: () => void;
 }
 
-export function FixBatchDialog({ mode, findingIds, filter, title, description, valueEditor, onDone, onClose }: FixBatchDialogProps) {
+export function FixBatchDialog({ mode, findingIds, filter, title, description, actionKey, valueEditor, onDone, onClose }: FixBatchDialogProps) {
   const [batch, setBatch] = useState<FixBatch | null>(null);
   const [excluded, setExcluded] = useState<Set<number>>(new Set());
   const [value, setValue] = useState(valueEditor?.initial ?? "");
@@ -85,11 +87,9 @@ export function FixBatchDialog({ mode, findingIds, filter, title, description, v
     mode,
     ...(findingIds ? { findingIds } : {}),
     ...(filter ? { filter } : {}),
-    // En individual el valor escrito corrige el texto del campo: esa es la
-    // acción, igual que en el diálogo anterior. En lotes, el motor decide la
-    // acción recomendada por hallazgo.
-    ...(mode === "individual" ? { actionKey: "limpiar_texto", overrides: { params: { value: value.trim() } } } : {}),
-  }), [mode, findingIds, filter, value]);
+    ...(actionKey ? { actionKey } : {}),
+    ...(valueEditor ? { overrides: { params: { value: value.trim() } } } : {}),
+  }), [mode, findingIds, filter, actionKey, valueEditor, value]);
 
   const loadPreview = useCallback(async () => {
     setLoading(true);
@@ -132,12 +132,13 @@ export function FixBatchDialog({ mode, findingIds, filter, title, description, v
     curationApi.findingsActions(findingId)
       .then((result) => {
         if (!active) return;
-        const action = result.actions.find((item) => item.recommended) ?? result.actions[0];
+        const action = (actionKey ? result.actions.find((item) => item.key === actionKey) : undefined)
+          ?? result.actions.find((item) => item.recommended) ?? result.actions[0];
         setRecommended(action ? `${action.label} · nivel ${action.level}` : null);
       })
       .catch(() => { /* sin acciones: la vista previa lo dirá */ });
     return () => { active = false; };
-  }, [mode, findingIds]);
+  }, [mode, findingIds, actionKey]);
 
   if (valueEditor && mode === "individual" && !batch && !loading) {
     const unchanged = value.trim() === valueEditor.current.trim();
@@ -206,6 +207,10 @@ export function FixBatchDialog({ mode, findingIds, filter, title, description, v
   }
 
   const pendingCount = batch ? batch.items.filter((item) => item.status === "pending" && !excluded.has(item.id)).length : 0;
+  const finishedCount = batch
+    ? Number(batch.counts["applied"] ?? 0) + Number(batch.counts["skippedStale"] ?? 0) + Number(batch.counts["failed"] ?? 0)
+    : 0;
+  const totalWork = batch ? Math.max(finishedCount + Number(batch.counts["pending"] ?? 0), 1) : 1;
 
   return (
     <Modal title={batch?.status === "done" || batch?.status === "partial" ? "Lote aplicado" : title} onClose={onClose} wide>
@@ -222,6 +227,12 @@ export function FixBatchDialog({ mode, findingIds, filter, title, description, v
 
       {batch ? (
         <>
+          {applied ? (
+            <div className="batch-progress">
+              <progress max={totalWork} value={finishedCount} aria-label="Progreso del lote" />
+              <span>{finishedCount} / {totalWork}</span>
+            </div>
+          ) : null}
           <div className="cfind-count" style={{ marginBottom: 8 }}>
             <p aria-live="polite">
               {countEntries(batch.counts).map(([key, countOf]) => (
