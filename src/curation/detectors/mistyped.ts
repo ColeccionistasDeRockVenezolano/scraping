@@ -54,7 +54,7 @@ export const personIsOrganization: Detector = {
         severity: "medium",
         title: markers.length ? `Usa palabras propias de organizaciones: ${markers.map(quote).join(", ")}` : "Contiene una palabra de estudio, sello o productora",
         suggestion: "Convertir la ficha en organización",
-        evidence: { learnedMarkers, strongMarkers: markers, ...(placeholder ? { placeholder } : {}) },
+        evidence: { learnedMarkers: markers },
       })];
     });
   },
@@ -179,7 +179,7 @@ export const artistIsOrganization: Detector = {
             : `Usa palabras propias de organizaciones: ${markers.map(quote).join(", ")}`,
         suggestion: "Confirmar si es un artista o la organización (sello, fundación, estudio)",
         related: orgIds.map((id) => ({ kind: "organization" as const, id, label: context.organizations.get(id)?.name ?? String(id) })),
-        evidence: { learnedMarkers: markers },
+        evidence: { learnedMarkers, strongMarkers: markers, ...(placeholder ? { placeholder } : {}) },
       })];
     });
   },
