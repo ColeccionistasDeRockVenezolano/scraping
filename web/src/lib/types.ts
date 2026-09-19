@@ -431,7 +431,7 @@ export interface CurationFinding {
   resolution: CurationResolution | null;
   resolvedByRunId: number | null;
   resolvedBy: string | null;
-  actions: Array<{ key: string; label: string; level: number }>;
+  actions: Array<{ key: string; label: string; description: string; level: number }>;
 }
 
 export interface CurationScanResult {
