@@ -615,12 +615,12 @@ export async function getFixBatch(batchId: number, page: ItemPage): Promise<FixB
 export async function listFixBatches(query: {
   limit: number; offset: number; status?: BatchStatus | undefined;
 }): Promise<{ rows: FixBatchSummaryView[]; total: number }> {
-  const { rows } = await getPool().query<BatchRow & { total: string }>(\`
-    SELECT \${BATCH_COLUMNS}, count(*) OVER ()::text AS total
+  const { rows } = await getPool().query<BatchRow & { total: string }>(`
+    SELECT ${BATCH_COLUMNS}, count(*) OVER ()::text AS total
       FROM ingest.curation_fix_batches
      WHERE ($1::text IS NULL OR status::text = $1)
      ORDER BY id DESC
-     LIMIT $2 OFFSET $3\`,
+     LIMIT $2 OFFSET $3`,
   [query.status ?? null, query.limit, query.offset]);
   return {
     rows: rows.map((batch) => ({
