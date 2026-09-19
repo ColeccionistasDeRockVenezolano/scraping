@@ -160,7 +160,10 @@ function CurationNav({ summary }: { summary: CurationSummary | undefined }) {
     fresh: category.newInLastScan > 0,
     title: category.description,
   })) ?? [];
-  const tools: NavEntry[] = [{ to: "/curaduria/duplicados", label: "Posibles duplicados", icon: Copy }];
+  const tools: NavEntry[] = [{
+    to: "/curaduria/duplicados", label: "Posibles duplicados", icon: Copy,
+    ...(summary ? { count: summary.duplicateCandidates } : {}),
+  }];
   const current = currentEntry(pathname, [overview, ...categories, ...tools]);
   const CurrentIcon = current.icon;
 
