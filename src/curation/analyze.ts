@@ -34,9 +34,10 @@ export const DETECTOR_DEFINITIONS: readonly DetectorDefinition[] = [...DETECTORS
 /**
  * Cambia cuando cambian las reglas: queda registrado en cada análisis, y lo que
  * deja de emitirse sobre un valor que no cambió se resuelve como `rules_changed`.
- * v2 (PLAN_CURADURIA E2): precisión de A6, pares estables, «Otros» por clase.
+ * v3 (PLAN_CURADURIA E2 cierre 20/20): además de v2, elimina los falsos
+ * positivos etiquetados que todavía dejaban detectores por debajo de 90 %.
  */
-export const RULES_VERSION = "curation-rules.v2";
+export const RULES_VERSION = "curation-rules.v3";
 
 export interface DetectorFailure { detector: string; error: string; }
 
