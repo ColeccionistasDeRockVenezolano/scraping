@@ -993,3 +993,32 @@ td.num { font-family: var(--font-mono); }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
 }
+
+
+/* Curaduría E7/E8 — decisiones, historial, teclado y móvil. */
+.decision-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; margin: .75rem 0; }
+.decision-side { display: grid; gap: .35rem; padding: .75rem; border: 1px solid var(--border); border-radius: .65rem; background: var(--surface-raised); }
+.decision-side__label { font-size: .75rem; font-weight: 800; text-transform: uppercase; color: var(--text-faint); }
+.decision-side__value { overflow-wrap: anywhere; }
+.batch-progress { display: flex; align-items: center; gap: .65rem; margin: .5rem 0 1rem; }
+.batch-progress progress { flex: 1; min-width: 8rem; }
+.evidence-list { display: grid; gap: .4rem; margin: .65rem 0; }
+.evidence-list__row { display: grid; grid-template-columns: minmax(9rem, .35fr) 1fr; gap: .75rem; }
+.evidence-list__row dt { font-weight: 700; }
+.evidence-list__row dd { margin: 0; overflow-wrap: anywhere; }
+.cfind.is-keyboard-active { outline: 2px solid currentColor; outline-offset: 2px; }
+.shortcut-list > div { display: grid; grid-template-columns: 6rem 1fr; gap: .75rem; padding: .35rem 0; }
+.shortcut-list dt { font-family: ui-monospace, monospace; font-weight: 800; }
+.shortcut-list dd { margin: 0; }
+.cfind__more-actions { position: relative; }
+.cfind__more-actions > summary { list-style: none; cursor: pointer; }
+.cfind__more-actions > summary::-webkit-details-marker { display: none; }
+.cfind__more-menu { position: absolute; z-index: 20; right: 0; bottom: calc(100% + .35rem); min-width: 16rem; padding: .5rem; display: grid; gap: .35rem; background: var(--surface-raised); border: 1px solid var(--border); border-radius: .6rem; box-shadow: var(--shadow-lg); }
+.correction-summary { display: flex; flex-wrap: wrap; gap: .5rem .75rem; align-items: center; margin-bottom: 1rem; }
+.select-all-filter { margin: .75rem 0; }
+.cfind__decision { margin: .65rem 0; }
+@media (max-width: 640px) {
+  .decision-grid { grid-template-columns: 1fr; }
+  .evidence-list__row { grid-template-columns: 1fr; gap: .15rem; }
+  .cfind__more-menu { position: fixed; left: .75rem; right: .75rem; bottom: .75rem; max-height: 60vh; overflow: auto; }
+}
