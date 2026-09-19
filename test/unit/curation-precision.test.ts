@@ -61,6 +61,7 @@ describe("precisión de los detectores de Curaduría (corpus etiquetado)", () =>
     for (const detector of labeled) {
       expect(known.has(detector), detector).toBe(true);
       expect(corpus.precisionThresholds[detector], detector).toBeTypeOf("number");
+      expect(corpus.precisionThresholds[detector], `${detector}: el cierre 20/20 exige precisión mínima de 90 %`).toBeGreaterThanOrEqual(0.9);
     }
   });
 
