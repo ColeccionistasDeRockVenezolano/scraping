@@ -5,10 +5,13 @@
 // Los lotes grandes se continúan con otra llamada igual mientras queden
 // pendientes; un 409 `stale_preview` pide volver a previsualizar sin escribir.
 import { useCallback, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { ApiError, curationApi, type CurationFindingGroupFilter, type CurationFixesPreviewRequest } from "../lib/api";
 import { formatCount } from "../lib/curation";
+import { useToast } from "../lib/ToastContext";
+import { CurationValue } from "./CurationValue";
 import { Modal } from "./Modal";
-import type { FixBatch, FixItem, FixItemStatus } from "../lib/types";
+import type { FindingAction, FixBatch, FixItem, FixItemStatus } from "../lib/types";
 
 /** Etiquetas de los recuentos del lote (STATUS_COUNT_KEY del backend). */
 const COUNT_LABELS: Readonly<Record<string, string>> = {
@@ -42,17 +45,27 @@ function formatItemValue(value: unknown): string {
   return String(value);
 }
 
-/** Una línea «campo: antes → después» por cada clave del after. */
-function beforeAfter(item: FixItem): string | null {
-  if (!item.after) return null;
+/** Vista antes → después. El valor detectado conserva el tramo resaltado de CurationValue. */
+function BeforeAfter({ item }: { item: FixItem }) {
+  if (!item.after) return <span className="hint">—</span>;
   const before = item.before ?? {};
-  const parts: string[] = [];
-  for (const [key, value] of Object.entries(item.after)) {
-    const previous = before[key];
-    if (JSON.stringify(previous) === JSON.stringify(value)) continue;
-    parts.push(`${key}: ${formatItemValue(previous)} → ${formatItemValue(value)}`);
-  }
-  return parts.length ? parts.join("; ") : null;
+  const changes = Object.entries(item.after).filter(([key, value]) => JSON.stringify(before[key]) !== JSON.stringify(value));
+  if (!changes.length) return <span className="hint">—</span>;
+  return (
+    <div className="fix-diff">
+      {changes.map(([key, value]) => {
+        const previous = before[key];
+        const highlight = typeof previous === "string" && previous === item.finding?.value;
+        return (
+          <div key={key}>
+            <strong>{key}</strong>:{" "}
+            {highlight ? <CurationValue value={previous} evidence={item.finding?.evidence ?? {}} /> : formatItemValue(previous)}
+            {" → "}<span>{formatItemValue(value)}</span>
+          </div>
+        );
+      })}
+    </div>
+  );
 }
 
 interface FixBatchDialogProps {
@@ -70,6 +83,7 @@ interface FixBatchDialogProps {
 }
 
 export function FixBatchDialog({ mode, findingIds, filter, title, description, actionKey, valueEditor, onDone, onClose }: FixBatchDialogProps) {
+  const { notify } = useToast();
   const [batch, setBatch] = useState<FixBatch | null>(null);
   const [excluded, setExcluded] = useState<Set<number>>(new Set());
   const [value, setValue] = useState(valueEditor?.initial ?? "");
@@ -82,14 +96,22 @@ export function FixBatchDialog({ mode, findingIds, filter, title, description, a
   const [applied, setApplied] = useState(false);
   const [undoBatch, setUndoBatch] = useState<FixBatch | null>(null);
   const [recommended, setRecommended] = useState<string | null>(null);
+  const [actionOptions, setActionOptions] = useState<Record<number, FindingAction[]>>({});
+  const [byFinding, setByFinding] = useState<Record<string, { actionKey?: string; params?: Record<string, unknown> }>>({});
+  const [previewDirty, setPreviewDirty] = useState(false);
 
   const body = useCallback((): CurationFixesPreviewRequest => ({
     mode,
     ...(findingIds ? { findingIds } : {}),
     ...(filter ? { filter } : {}),
     ...(actionKey ? { actionKey } : {}),
-    ...(valueEditor ? { overrides: { params: { value: value.trim() } } } : {}),
-  }), [mode, findingIds, filter, actionKey, valueEditor, value]);
+    ...((valueEditor || Object.keys(byFinding).length) ? {
+      overrides: {
+        ...(valueEditor ? { params: { value: value.trim() } } : {}),
+        ...(Object.keys(byFinding).length ? { byFinding } : {}),
+      },
+    } : {}),
+  }), [mode, findingIds, filter, actionKey, valueEditor, value, byFinding]);
 
   const loadPreview = useCallback(async () => {
     setLoading(true);
@@ -98,7 +120,18 @@ export function FixBatchDialog({ mode, findingIds, filter, title, description, a
     setBatch(null);
     setExcluded(new Set());
     try {
-      setBatch(await curationApi.fixesPreview(body()));
+      const next = await curationApi.fixesPreview(body());
+      setBatch(next);
+      setPreviewDirty(false);
+      const ids = [...new Set(next.items.flatMap((item) => item.findingId === null ? [] : [item.findingId]))];
+      const resolved = await Promise.all(ids.map(async (id) => {
+        try {
+          return [id, (await curationApi.findingsActions(id)).actions] as const;
+        } catch {
+          return [id, []] as const;
+        }
+      }));
+      setActionOptions(Object.fromEntries(resolved));
     } catch (err) {
       setError(err instanceof ApiError ? err.message : "No se pudo calcular la vista previa.");
     } finally {
@@ -179,6 +212,22 @@ export function FixBatchDialog({ mode, findingIds, filter, title, description, a
       setBatch(result);
       setApplied(true);
       onDone();
+      if (mode === "individual" && Number(result.counts["applied"] ?? 0) > 0) {
+        notify("success", "Corrección aplicada. Puedes deshacerla durante 30 s.", {
+          durationMs: 30_000,
+          actionLabel: "Deshacer",
+          onAction: async () => {
+            try {
+              const reversed = await curationApi.fixUndo(result.id, `Deshacer inmediato desde Curaduría: ${note.trim()}`);
+              setUndoBatch(reversed);
+              notify("success", "Corrección deshecha.");
+              onDone();
+            } catch (undoError) {
+              notify("error", undoError instanceof ApiError ? undoError.message : "No se pudo deshacer la corrección.");
+            }
+          },
+        });
+      }
     } catch (err) {
       if (err instanceof ApiError && err.code === "stale_preview") {
         setStale(true);
@@ -260,7 +309,7 @@ export function FixBatchDialog({ mode, findingIds, filter, title, description, a
                 </thead>
                 <tbody>
                   {batch.items.map((item) => {
-                    const change = beforeAfter(item);
+                    const options = item.findingId === null ? [] : actionOptions[item.findingId] ?? [];
                     return (
                       <tr key={item.id} style={excluded.has(item.id) ? { opacity: 0.45 } : undefined}>
                         {!applied ? (
@@ -278,10 +327,34 @@ export function FixBatchDialog({ mode, findingIds, filter, title, description, a
                           {item.finding?.title ?? `#${item.findingId ?? item.id}`}
                           {item.blocked ? <div className="hint">{item.blocked.message}</div> : null}
                           {item.noop ? <div className="hint">Sin cambio: ya estaba corregido{item.noop.coveredBy ? ` (por el ítem #${item.noop.coveredBy})` : ""}.</div> : null}
+                          {item.touched.length ? (
+                            <div className="hint">Toca: {item.touched.map((ref) => `${ref.kind} #${ref.id}`).join(" · ")}</div>
+                          ) : null}
                           {item.collisions.length ? <div className="hint">Colisión con «{item.collisions[0]!.label}».</div> : null}
                         </td>
-                        <td>{item.actionLabel ?? item.actionKey ?? "—"}{item.level !== null ? <span className="hint"> · nivel {item.level}</span> : null}</td>
-                        <td style={{ maxWidth: 340, wordBreak: "break-word" }} className="mono">{change ?? <span className="hint">—</span>}</td>
+                        <td>
+                          {!applied && item.findingId !== null && options.length > 1 ? (
+                            <select
+                              className="filter-input"
+                              value={byFinding[String(item.findingId)]?.actionKey ?? item.actionKey ?? ""}
+                              onChange={(event) => {
+                                setByFinding((current) => ({
+                                  ...current,
+                                  [String(item.findingId!)]: { ...(current[String(item.findingId!)] ?? {}), actionKey: event.target.value },
+                                }));
+                                setPreviewDirty(true);
+                              }}
+                              aria-label={`Acción para «${item.finding?.title ?? item.findingId}»`}
+                            >
+                              {options.filter((option) => option.available && option.level <= 2).map((option) => (
+                                <option key={option.key} value={option.key}>{option.label} · nivel {option.level}</option>
+                              ))}
+                            </select>
+                          ) : (
+                            <>{item.actionLabel ?? item.actionKey ?? "—"}{item.level !== null ? <span className="hint"> · nivel {item.level}</span> : null}</>
+                          )}
+                        </td>
+                        <td style={{ maxWidth: 340, wordBreak: "break-word" }}><BeforeAfter item={item} /></td>
                         {applied ? (
                           <td><span className={ITEM_STATUS_BADGE[item.status]}>{ITEM_STATUS_LABEL[item.status]}</span>{item.error ? <div className="hint">{item.error}</div> : null}</td>
                         ) : null}
@@ -292,6 +365,10 @@ export function FixBatchDialog({ mode, findingIds, filter, title, description, a
               </table>
             </div>
           )}
+
+          {previewDirty && !applied ? (
+            <p className="form-error-banner" role="status">Cambiaste una acción. Pulsa «Actualizar vista previa» antes de aplicar.</p>
+          ) : null}
 
           {!applied && batch.pagination.total > batch.items.length ? (
             <p className="hint" style={{ marginTop: 6 }}>Se muestran {batch.items.length} de {formatCount(batch.pagination.total)} ítems; al aplicar se procesan todos.</p>
@@ -307,7 +384,7 @@ export function FixBatchDialog({ mode, findingIds, filter, title, description, a
               <div className="form-actions">
                 <button type="button" className="btn" onClick={onClose} disabled={applying}>Cancelar</button>
                 <button type="button" className="btn" onClick={() => void loadPreview()} disabled={applying || loading}>Actualizar vista previa</button>
-                <button type="button" className="btn btn--primary" onClick={apply} disabled={applying || pendingCount === 0 || !note.trim()}>
+                <button type="button" className="btn btn--primary" onClick={apply} disabled={applying || previewDirty || pendingCount === 0 || !note.trim()}>
                   {applying ? "Aplicando…" : `Aplicar ${formatCount(pendingCount)} correcciones`}
                 </button>
               </div>
@@ -335,6 +412,9 @@ export function FixBatchDialog({ mode, findingIds, filter, title, description, a
                       placeholder="Por qué se revierte lo aplicado (queda en la auditoría)" />
                   </div>
                   <div className="form-actions">
+                    <Link className="btn btn--outline" to={`/curaduria/correcciones?batch=${batch.id}`} onClick={onClose}>
+                      Ver lote
+                    </Link>
                     <button type="button" className="btn btn--danger" onClick={undo} disabled={undoing || !note.trim()}>
                       {undoing ? "Deshaciendo…" : "Deshacer este lote"}
                     </button>
