@@ -11,7 +11,7 @@ import type {
   CurationFinding, CurationFindingStatus, CurationIgnoreReason, CurationPairKind, CurationScan, CurationScanResult,
   CurationSeverity, CurationSummary,
   AlbumMergePreview, AlbumMergeResult, PersonSplitPreview, PersonSplitResult,
-  FindingActionsResult, FixBatch, DistinctPair,
+  FindingActionsResult, FixBatch, DistinctPair, ConflictDecisionDetail, TrustedConflictPreview,
 } from "./types";
 
 /**
@@ -310,6 +310,19 @@ export const curationApi = {
     request<FixBatch>(`/curation/fixes/${batchId}/apply`, { method: "POST", authenticated: true, body: input }),
   fixUndo: (batchId: number, note: string) =>
     request<FixBatch>(`/curation/fixes/${batchId}/undo`, { method: "POST", authenticated: true, body: { note } }),
+  conflict: (id: number) => request<ConflictDecisionDetail>(`/curation/conflicts/${id}`),
+  resolveConflict: (id: number, input: ({ side: "a" | "b" } | { value: string | number | boolean | null }) & { note: string }) =>
+    request<{ conflictId: number; runId: number; action: "a" | "b" | "custom" }>(`/curation/conflicts/${id}/resolve`, {
+      method: "POST", authenticated: true, body: input,
+    }),
+  trustedConflictsPreview: (filter: CurationFindingGroupFilter) =>
+    request<TrustedConflictPreview>("/curation/conflicts/trust-preview", {
+      method: "POST", authenticated: true, body: filter,
+    }),
+  trustedConflictsApply: (filter: CurationFindingGroupFilter, input: { previewHash: string; excludeConflictIds?: number[]; note: string }) =>
+    request<{ previewHash: string; applied: number; skippedStale: number; failed: number; remaining: number; outcomes: Array<{ findingId: number; conflictId: number | null; status: "applied" | "skipped_stale" | "failed"; error: string | null }> }>(
+      "/curation/conflicts/trust-apply", { method: "POST", authenticated: true, body: { filter, ...input } },
+    ),
 };
 
 // ---------- escritura de entidades del core ----------
