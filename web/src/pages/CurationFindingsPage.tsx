@@ -149,7 +149,7 @@ export function CurationFindingsPage() {
       const move = (next: number) => {
         const item = rows[Math.max(0, Math.min(rows.length - 1, next))]!;
         setActiveFindingId(item.id);
-        document.querySelector<HTMLElement>(\`[data-finding-id="\${item.id}"]\`)?.focus();
+        document.querySelector<HTMLElement>(`[data-finding-id="${item.id}"]`)?.focus();
       };
       if (event.key === "j") { event.preventDefault(); move(index + 1); return; }
       if (event.key === "k") { event.preventDefault(); move(index - 1); return; }
