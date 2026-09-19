@@ -34,7 +34,7 @@ export const fixItemSchema = z.object({
   findingId: z.number().int().nullable(),
   finding: z.object({
     id: z.number().int(), detector: z.string(), signature: z.string(), title: z.string(), entity: entityRefSchema,
-    field: z.string().nullable(), value: z.string().nullable(), status: z.string(),
+    field: z.string().nullable(), value: z.string().nullable(), evidence: z.record(z.unknown()), status: z.string(),
   }).nullable(),
   actionKey: z.string().nullable(),
   actionLabel: z.string().nullable(),
