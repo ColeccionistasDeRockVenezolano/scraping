@@ -29,7 +29,7 @@ import {
 } from "../../curation/conflict-decisions.js";
 import {
   CurationError, DISTINCT_PAIR_KINDS, IGNORE_REASONS, declareDistinctPair,
-  getCurationSummary, getFinding, ignoreFinding, ignoreGroup, listDistinctPairs, listFindings, listScans, removeDistinctPair, reopenFinding,
+  getCurationSummary, getFinding, ignoreFinding, ignoreGroup, listDistinctPairs, listFindings, listScans, removeDistinctPair, reopenFinding, reviewTriggeredFinding,
 } from "../../curation/repository.js";
 import { isCurationScanRunning, runCurationScan } from "../../curation/scan.js";
 import { flushCurationWork, notifyCatalogWrite } from "../../curation/watcher.js";
@@ -320,6 +320,16 @@ export async function registerCurationRoutes(app: FastifyInstance): Promise<void
       response: { 200: findingSchema, ...writeErrorResponses },
     },
   }, async (request) => reopenFinding(request.params.id).catch(curationError));
+
+  server.post("/curation/findings/:id/review-trigger", {
+    schema: {
+      tags: ["curation:write"],
+      summary: "Marca como revisado un hallazgo surgido tras corregir y archiva su causa en el historial.",
+      security: OPERATOR_SECURITY,
+      params: idParamSchema,
+      response: { 200: findingSchema, ...writeErrorResponses },
+    },
+  }, async (request) => reviewTriggeredFinding(request.params.id, request.operator).catch(curationError));
 
   server.post("/curation/findings/ignore-group", {
     schema: {
