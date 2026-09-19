@@ -67,10 +67,12 @@ export function effectiveCategory(key: string): string {
 /**
  * Tipos de la cola de revisión y la categoría donde se muestran. Un tipo que
  * se añada al enum `ingest.review_kind` y no esté aquí aparece en «otros».
- * `person_duplicate` no entra: tiene su propia pestaña (Posibles duplicados).
+ * `person_duplicate` también entra: su tarjeta enlaza la herramienta
+ * especializada de Posibles duplicados con el par concreto precargado.
  */
 export const REVIEW_KIND_CATEGORY: Readonly<Record<string, string>> = {
   field_conflict: "valores_en_disputa",
+  person_duplicate: "fichas_repetidas",
   possible_duplicate: "fichas_repetidas",
   ambiguous_alias: "fichas_repetidas",
   album_match: "fichas_repetidas",
@@ -88,5 +90,5 @@ export const REVIEW_KIND_CATEGORY: Readonly<Record<string, string>> = {
   ai_entity_resolution: "revision_de_ingesta",
 };
 
-/** Revisiones que viven en otra pestaña de Curaduría. */
-export const REVIEW_KINDS_WITH_OWN_TAB = new Set(["person_duplicate"]);
+/** Ninguna revisión desaparece de las tarjetas; algunas enlazan herramientas especializadas. */
+export const REVIEW_KINDS_WITH_OWN_TAB = new Set<string>();
