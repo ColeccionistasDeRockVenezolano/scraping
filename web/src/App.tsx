@@ -22,6 +22,7 @@ const ReviewQueueDetailPage = lazy(() => import("./pages/ReviewQueueDetailPage")
 const CurationLayout = lazy(() => import("./pages/CurationLayout").then((module) => ({ default: module.CurationLayout })));
 const CurationOverviewPage = lazy(() => import("./pages/CurationOverviewPage").then((module) => ({ default: module.CurationOverviewPage })));
 const CurationFindingsPage = lazy(() => import("./pages/CurationFindingsPage").then((module) => ({ default: module.CurationFindingsPage })));
+const CurationCorrectionsPage = lazy(() => import("./pages/CurationCorrectionsPage").then((module) => ({ default: module.CurationCorrectionsPage })));
 
 /** Enlaces viejos (/revision/:id) siguen llevando a la revisión. */
 function LegacyReviewRedirect() {
@@ -53,6 +54,7 @@ export function App() {
             <Route path="revision" element={<Navigate to="/curaduria" replace />} />
             <Route path="revision/:id" element={<ReviewQueueDetailPage />} />
             <Route path="duplicados" element={<PersonDuplicatesPage />} />
+            <Route path="correcciones" element={<CurationCorrectionsPage />} />
           </Route>
           <Route path="/revision" element={<Navigate to="/curaduria" replace />} />
           <Route path="/revision/:id" element={<LegacyReviewRedirect />} />
