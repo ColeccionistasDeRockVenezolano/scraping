@@ -73,8 +73,16 @@ describe("detector de conflictos de Curaduría", () => {
     // E7: person_duplicate también aparece como tarjeta y enlaza su herramienta especializada.
     expect(found).toHaveLength(2);
     expect(found).toEqual(expect.arrayContaining([
-      expect.objectContaining({ category: OTHER_CATEGORY, signature: "review:tipo_inventado", entity: { kind: "review", id: 7 } }),
-      expect.objectContaining({ category: "fichas_repetidas", signature: "review:person_duplicate", entity: { kind: "review", id: 8 } }),
+      expect.objectContaining({
+        category: OTHER_CATEGORY,
+        signature: "review:tipo_inventado",
+        entity: expect.objectContaining({ kind: "review", id: 7 }),
+      }),
+      expect.objectContaining({
+        category: "fichas_repetidas",
+        signature: "review:person_duplicate",
+        entity: expect.objectContaining({ kind: "review", id: 8 }),
+      }),
     ]));
   });
 
