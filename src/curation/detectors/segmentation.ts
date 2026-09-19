@@ -459,16 +459,20 @@ export const gluedWordsDetector: Detector = {
       const organizationLikePerson = name.kind === "person"
         && !lexicon.givenNames.has(nameKey(first.left))
         && (
-          classifyPersonName(separated).kind === "organization_like"
-          || keyTokens(name.value).some((token) => lexicon.organizationMarkers.has(token))
-          || /\b(?:internacional|international|master|lab)\b/iu.test(separated)
+          keyTokens(name.value).some((token) => lexicon.organizationMarkers.has(token))
+          || /\b(?:estudio|estudios|studio|studios|internacional|international|master|lab)\b/iu.test(separated)
         );
-      if (stylized || organizationLikePerson) return [];
+      if (organizationLikePerson) return [];
       return [nameFinding(this, name, {
+        ...(stylized ? { signature: "posible_estilizado", signatureLabel: "Una sola palabra en camelCase: posible grafía estilizada" } : {}),
         severity: "low",
-        title: `Palabras pegadas: ${found.map((item) => quote(item.left + item.right)).join(", ")}`,
-        suggestion: `Separar ${found.map((item) => `${quote(item.left)} y ${quote(item.right)}`).join("; ")}`,
-        suggestedValue: separated,
+        title: stylized
+          ? `${quote(name.value)} une dos palabras en camelCase: puede ser una grafía estilizada a propósito`
+          : `Palabras pegadas: ${found.map((item) => quote(item.left + item.right)).join(", ")}`,
+        suggestion: stylized
+          ? "Confirmar si la grafía camelCase es deliberada"
+          : `Separar ${found.map((item) => `${quote(item.left)} y ${quote(item.right)}`).join("; ")}`,
+        ...(!stylized ? { suggestedValue: separated } : {}),
         evidence: { words: found.map((item) => ({ left: item.left, right: item.right, index: item.index, length: item.length })) },
         span: [first.index, first.index + first.length],
       })];
