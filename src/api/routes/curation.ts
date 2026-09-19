@@ -74,7 +74,7 @@ const findingSchema = z.object({
   ignoreReason: z.enum(IGNORE_REASONS).nullable(),
   resolution: z.enum(["fixed_by_curation", "changed_elsewhere", "entity_removed", "rules_changed", "declared_distinct"]).nullable(),
   resolvedByRunId: z.number().int().nullable(), resolvedBy: z.string().nullable(),
-  actions: z.array(z.object({ key: z.string(), label: z.string(), level: z.number().int() })),
+  actions: z.array(z.object({ key: z.string(), label: z.string(), description: z.string(), level: z.number().int() })),
 });
 
 const scanResultSchema = z.object({
