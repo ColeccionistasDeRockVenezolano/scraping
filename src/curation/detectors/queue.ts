@@ -73,9 +73,13 @@ export const reviewQueueItems: Detector = {
         entity: { kind: "review", id: review.id, label: `${kindLabel} #${review.id}` },
         field: review.kind,
         title: review.notes?.trim() || kindLabel,
-        suggestion: "Abrir la revisión y decidir",
+        suggestion: review.kind === "person_duplicate" ? "Comparar este par en Posibles duplicados" : "Decidir desde esta tarjeta",
         related: refsOf(context, review),
-        evidence: { reviewId: review.id, kind: review.kind, status: review.status, priority: review.priority, createdAt: review.createdAt, payload: compactPayload(review.payload) },
+        evidence: {
+          reviewId: review.id, kind: review.kind, status: review.status, priority: review.priority, createdAt: review.createdAt,
+          ...(review.refs.conflict !== undefined ? { conflictId: review.refs.conflict } : {}),
+          payload: compactPayload(review.payload),
+        },
       };
     });
   },
