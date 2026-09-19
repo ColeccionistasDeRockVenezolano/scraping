@@ -363,7 +363,12 @@ function unbalancedMark(value: string): string | undefined {
     }
     if (depth !== 0) return open;
   }
-  return (value.match(/"/gu) ?? []).length % 2 === 1 ? "\"" : undefined;
+  // 7" y 12" son pulgadas, no comillas abiertas.
+  const quotes = [...value.matchAll(/"/gu)].filter((match) => {
+    const index = match.index ?? 0;
+    return index === 0 || !/\d/u.test(value[index - 1] ?? "");
+  });
+  return quotes.length % 2 === 1 ? "\"" : undefined;
 }
 
 export const unbalancedMarks: Detector = {
