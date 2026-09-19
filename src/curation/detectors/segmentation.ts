@@ -393,10 +393,18 @@ export const severalPeopleInOne: Detector = {
           })];
         }
       }
-      const parts = name.value.split(/\s*(?:[,/&;]|\sy\s)\s*/u).map((part) => part.trim()).filter((part) => part.length > 1);
+      const separator = /\s*(?:[,/&;]|\s[-–—]\s|\sy\s)\s*/u;
+      const hasSeparator = /[,/&;]|\s[-–—]\s|\sy\s/u.test(name.value);
+      const parts = name.value.split(separator).map((part) => part.trim()).filter((part) => part.length > 1);
       if (/\b(?:feat|ft|featuring)\b/iu.test(name.value)) return [];
-      const multiple = classifyPersonName(name.value).kind === "multiple_people"
-        || (parts.length >= 2 && parts.every((part) => NAME_SHAPED.test(part)) && /[,/&;]/u.test(name.value));
+      // Una «y» sola con un apellido a la derecha suele ser un apellido
+      // compuesto o un nombre de grupo, no dos personas.
+      const yMatch = /^(.+)\sy\s(\S+)$/u.exec(name.value);
+      if (yMatch && (yMatch[1]!.match(/\p{L}+/gu) ?? []).length >= 3) return [];
+      const multiple = hasSeparator && (
+        classifyPersonName(name.value).kind === "multiple_people"
+        || (parts.length >= 2 && parts.every((part) => NAME_SHAPED.test(part)))
+      );
       if (!multiple) return [];
       return [nameFinding(this, name, {
         severity: "high",
@@ -446,14 +454,21 @@ export const gluedWordsDetector: Detector = {
         (value, item) => `${value.slice(0, item.index)}${item.left} ${item.right}${value.slice(item.index + item.length)}`,
         name.value,
       );
+      // Estudios y marcas cargados como persona usan camelCase deliberado
+      // («SonoFolk Estudios», «The SoundLab»). No deben inflar este detector.
+      const organizationLikePerson = name.kind === "person"
+        && !lexicon.givenNames.has(nameKey(first.left))
+        && (
+          classifyPersonName(separated).kind === "organization_like"
+          || keyTokens(name.value).some((token) => lexicon.organizationMarkers.has(token))
+          || /\b(?:internacional|international|master|lab)\b/iu.test(separated)
+        );
+      if (stylized || organizationLikePerson) return [];
       return [nameFinding(this, name, {
-        ...(stylized ? { signature: "posible_estilizado", signatureLabel: "Una sola palabra en camelCase: posible grafía estilizada" } : {}),
         severity: "low",
-        title: stylized
-          ? `${quote(name.value)} une dos palabras en camelCase: puede ser una grafía estilizada a propósito`
-          : `Palabras pegadas: ${found.map((item) => quote(item.left + item.right)).join(", ")}`,
+        title: `Palabras pegadas: ${found.map((item) => quote(item.left + item.right)).join(", ")}`,
         suggestion: `Separar ${found.map((item) => `${quote(item.left)} y ${quote(item.right)}`).join("; ")}`,
-        ...(!stylized ? { suggestedValue: separated } : {}),
+        suggestedValue: separated,
         evidence: { words: found.map((item) => ({ left: item.left, right: item.right, index: item.index, length: item.length })) },
         span: [first.index, first.index + first.length],
       })];
