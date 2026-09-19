@@ -160,6 +160,24 @@ export interface FixBatchView {
   pagination: { limit: number; offset: number; total: number };
 }
 
+export interface FixBatchSummaryView {
+  id: number;
+  mode: BatchMode;
+  filter: Record<string, unknown>;
+  actionKey: string | null;
+  requestedBy: string;
+  appliedBy: string | null;
+  note: string | null;
+  status: BatchStatus;
+  counts: Record<string, unknown>;
+  verification: Record<string, unknown> | null;
+  createdAt: string;
+  startedAt: string | null;
+  finishedAt: string | null;
+  undoOfBatchId: number | null;
+  undoneByBatchId: number | null;
+}
+
 interface BatchRow {
   id: string; mode: BatchMode; filter: Record<string, unknown>; action_key: string | null; requested_by: string; applied_by: string | null;
   note: string | null; preview_hash: string; status: BatchStatus; counts: Record<string, unknown>; verification: Record<string, unknown> | null;
@@ -590,6 +608,30 @@ export async function getFixBatch(batchId: number, page: ItemPage): Promise<FixB
     undoneByBatchId: batch.undone_by_batch_id === null ? null : Number(batch.undone_by_batch_id),
     items: rows.map(itemView),
     pagination: { limit: page.limit, offset: page.offset, total: Number(rows[0]?.total ?? 0) },
+  };
+}
+
+
+export async function listFixBatches(query: {
+  limit: number; offset: number; status?: BatchStatus | undefined;
+}): Promise<{ rows: FixBatchSummaryView[]; total: number }> {
+  const { rows } = await getPool().query<BatchRow & { total: string }>(\`
+    SELECT \${BATCH_COLUMNS}, count(*) OVER ()::text AS total
+      FROM ingest.curation_fix_batches
+     WHERE ($1::text IS NULL OR status::text = $1)
+     ORDER BY id DESC
+     LIMIT $2 OFFSET $3\`,
+  [query.status ?? null, query.limit, query.offset]);
+  return {
+    rows: rows.map((batch) => ({
+      id: Number(batch.id), mode: batch.mode, filter: batch.filter, actionKey: batch.action_key,
+      requestedBy: batch.requested_by, appliedBy: batch.applied_by, note: batch.note, status: batch.status,
+      counts: batch.counts, verification: batch.verification,
+      createdAt: iso(batch.created_at)!, startedAt: iso(batch.started_at), finishedAt: iso(batch.finished_at),
+      undoOfBatchId: batch.undo_of_batch_id === null ? null : Number(batch.undo_of_batch_id),
+      undoneByBatchId: batch.undone_by_batch_id === null ? null : Number(batch.undone_by_batch_id),
+    })),
+    total: Number(rows[0]?.total ?? 0),
   };
 }
 
