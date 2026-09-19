@@ -61,7 +61,12 @@ describe("registro de acciones (E4.1)", () => {
     expect(applicableActions(finding({ field: "origin_city" }))).toEqual([]);
     expect(applicableActions(finding({ entity: { kind: "album", id: 3, label: "Disco" }, field: "title" })).map((action) => action.key)).toEqual(["limpiar_texto"]);
     expect(applicableActions(finding({ entity: { kind: "review", id: 3, label: "Revisión" } }))).toEqual([]);
-    expect(summarizeActions(finding())).toEqual([{ key: "limpiar_texto", label: cleanTextAction.label, level: 0 }]);
+    expect(summarizeActions(finding())).toEqual([{
+      key: "limpiar_texto",
+      label: cleanTextAction.label,
+      description: cleanTextAction.description,
+      level: 0,
+    }]);
   });
 });
 
