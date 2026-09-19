@@ -31,7 +31,10 @@ import { HeaderSkeleton, RowsSkeleton } from "../components/Skeletons";
 import { Pagination } from "../components/Pagination";
 import { ConfirmDialog } from "../components/ConfirmDialog";
 import { CurationValue } from "../components/CurationValue";
+import { CurationDecisionPanel } from "../components/CurationDecisionPanel";
+import { CurationEvidence } from "../components/CurationEvidence";
 import { FixBatchDialog } from "../components/FixBatchDialog";
+import { TrustedConflictDialog } from "../components/TrustedConflictDialog";
 import { Modal } from "../components/Modal";
 import { MergeEntityModal } from "../components/MergeEntityModal";
 import { useCurationSummary } from "./CurationLayout";
@@ -66,11 +69,15 @@ export function CurationFindingsPage() {
   const [busyId, setBusyId] = useState<number | null>(null);
   const [ignoringFinding, setIgnoringFinding] = useState<CurationFinding | null>(null);
   const [distinctFinding, setDistinctFinding] = useState<{ finding: CurationFinding; pair: [number, number] } | null>(null);
-  const [fixingFinding, setFixingFinding] = useState<CurationFinding | null>(null);
+  const [fixingFinding, setFixingFinding] = useState<{ finding: CurationFinding; actionKey: string } | null>(null);
   const [mergingFinding, setMergingFinding] = useState<{ finding: CurationFinding; kind: MergeableKind; otherId?: number; otherName?: string } | null>(null);
   const [deletingFinding, setDeletingFinding] = useState<CurationFinding | null>(null);
   const [selected, setSelected] = useState<Set<number>>(new Set());
   const [fixingSelected, setFixingSelected] = useState(false);
+  const [selectAllFilter, setSelectAllFilter] = useState(false);
+  const [trustingGroup, setTrustingGroup] = useState(false);
+  const [activeFindingId, setActiveFindingId] = useState<number | null>(null);
+  const [keyboardHelp, setKeyboardHelp] = useState(false);
 
   const detector = params.get("detector") ?? "";
   const signature = params.get("signature") ?? "";
@@ -105,9 +112,11 @@ export function CurationFindingsPage() {
     [key, detector, signature, severity, entityKind, status, q, scanId, chained, offset, lastScanId],
   );
 
-  // La selección se ancla a la página/filtro actual: si cambian, ya no
-  // corresponde a lo que se ve en pantalla.
-  useEffect(() => setSelected(new Set()), [key, detector, signature, severity, entityKind, status, q, scanId, chained, offset]);
+  // La selección sobrevive al paginado y se invalida al cambiar el filtro.
+  useEffect(() => {
+    setSelected(new Set());
+    setSelectAllFilter(false);
+  }, [key, detector, signature, severity, entityKind, status, q, scanId, chained]);
 
   function toggleSelected(id: number) {
     setSelected((current) => {
@@ -116,6 +125,62 @@ export function CurationFindingsPage() {
       return next;
     });
   }
+
+  useEffect(() => {
+    if (!data?.data.length) {
+      setActiveFindingId(null);
+      return;
+    }
+    if (!data.data.some((item) => item.id === activeFindingId)) setActiveFindingId(data.data[0]!.id);
+  }, [data, activeFindingId]);
+
+  useEffect(() => {
+    const onKey = (event: KeyboardEvent) => {
+      const target = event.target as HTMLElement | null;
+      if (target && (target.matches("input,textarea,select,button,[contenteditable='true']") || target.closest("[role='dialog']"))) return;
+      if (event.key === "?") {
+        event.preventDefault();
+        setKeyboardHelp(true);
+        return;
+      }
+      const rows = data?.data ?? [];
+      if (!rows.length) return;
+      const index = Math.max(0, rows.findIndex((item) => item.id === activeFindingId));
+      const move = (next: number) => {
+        const item = rows[Math.max(0, Math.min(rows.length - 1, next))]!;
+        setActiveFindingId(item.id);
+        document.querySelector<HTMLElement>(\`[data-finding-id="\${item.id}"]\`)?.focus();
+      };
+      if (event.key === "j") { event.preventDefault(); move(index + 1); return; }
+      if (event.key === "k") { event.preventDefault(); move(index - 1); return; }
+      const finding = rows[index];
+      if (!finding) return;
+      if (event.key === "x" && finding.status === "open" && finding.actions.some((action) => action.level <= 2)) {
+        event.preventDefault();
+        if (!selectAllFilter) toggleSelected(finding.id);
+        return;
+      }
+      if (event.key === "c" && finding.status === "open" && finding.actions[0] && finding.actions[0].level <= 2) {
+        event.preventDefault();
+        setFixingFinding({ finding, actionKey: finding.actions[0].key });
+        return;
+      }
+      if (event.key === "i" && finding.status === "open") {
+        event.preventDefault();
+        setIgnoringFinding(finding);
+        return;
+      }
+      if (event.key === "o") {
+        const href = refHref(finding.entity, finding);
+        if (href) {
+          event.preventDefault();
+          window.open(href, "_blank", "noopener");
+        }
+      }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [data, activeFindingId, selectAllFilter]);
 
   function update(changes: Record<string, string | null>) {
     const next = new URLSearchParams(params);
@@ -243,9 +308,14 @@ export function CurationFindingsPage() {
         ) : <span />}
         {category && activeDetector && status === "open" && data && data.pagination.total > 0 ? (
           <div className="cfind-count__actions">
-            {/* Solo si hay algo que corregir de un clic en lo que se ve: «Corregir este detector» no debe
-                terminar en «0 corregidos» cuando el detector no calcula valor sugerido (A2). */}
-            {data.data.some((finding) => finding.suggestedValue !== null) ? (
+            {category.key === "valores_en_disputa"
+              && (activeDetector.key === "conflictos_abiertos" || (activeDetector.key === "cola_de_revision" && signature === "review:field_conflict")) ? (
+              <button type="button" className="btn btn--sm btn--outline" onClick={() => setTrustingGroup(true)}>
+                Resolver por fuente más confiable
+              </button>
+            ) : null}
+            {/* Las acciones vienen del registro E4/E5/E6; suggestedValue ya no decide la UX. */}
+            {data.data.some((finding) => finding.actions.some((action) => action.level <= 1)) ? (
               <button type="button" className="btn btn--sm btn--outline" onClick={() => setFixingGroup(true)}>
                 <Wrench size={14} weight="bold" aria-hidden="true" />
                 Corregir {signature ? "este subgrupo" : "este detector"}
@@ -272,8 +342,17 @@ export function CurationFindingsPage() {
                 <FindingCard finding={finding} busy={busyId === finding.id}
                   categoryLabel={key ? undefined : summary?.categories.find((item) => item.key === finding.category)?.label ?? "Otros"}
                   onIgnore={() => setIgnoringFinding(finding)} onReopen={() => void reopen(finding)}
-                  selected={selected.has(finding.id)} onToggleSelected={() => toggleSelected(finding.id)}
-                  onFix={finding.suggestedValue !== null ? () => setFixingFinding(finding) : undefined}
+                  selected={selectAllFilter || selected.has(finding.id)}
+                  onToggleSelected={() => { if (!selectAllFilter) toggleSelected(finding.id); }}
+                  active={activeFindingId === finding.id}
+                  onActivate={() => setActiveFindingId(finding.id)}
+                  onFix={(actionKey) => setFixingFinding({ finding, actionKey })}
+                  onReviewTriggered={finding.triggeredBy.length ? async () => {
+                    await curationApi.reviewTriggered(finding.id);
+                    notify("success", "Cadena revisada; la causa quedó archivada.");
+                    reload();
+                    void refreshSummary();
+                  } : undefined}
                   onMerge={finding.category === "fichas_repetidas" && MERGEABLE_KINDS.has(finding.entity.kind) && finding.entity.id !== null
                     ? () => {
                       const other = finding.related.find((ref) => ref.kind === finding.entity.kind && ref.id !== null && ref.id !== finding.entity.id);
@@ -295,17 +374,30 @@ export function CurationFindingsPage() {
             ))}
           </ol>
           <Pagination limit={LIMIT} offset={offset} total={data.pagination.total} onOffsetChange={(next) => update({ offset: String(next) })} />
+          {groupFilter && status === "open" && data.pagination.total > data.data.length ? (
+            <button type="button" className="btn btn--sm btn--outline select-all-filter"
+              aria-pressed={selectAllFilter}
+              onClick={() => { setSelectAllFilter((value) => !value); setSelected(new Set()); }}>
+              {selectAllFilter
+                ? "Volver a selección por página"
+                : `Seleccionar los ${formatCount(data.pagination.total)} que cumplen el filtro`}
+            </button>
+          ) : null}
         </>
       )}
 
-      {selected.size > 0 ? (
+      {selectAllFilter || selected.size > 0 ? (
         <div className="csel-toolbar" role="toolbar" aria-label="Acciones sobre lo seleccionado">
-          <span className="csel-toolbar__count">{formatCount(selected.size)} seleccionado{selected.size === 1 ? "" : "s"}</span>
+          <span className="csel-toolbar__count">
+            {selectAllFilter
+              ? `${formatCount(data?.pagination.total ?? 0)} seleccionados por filtro`
+              : `${formatCount(selected.size)} seleccionado${selected.size === 1 ? "" : "s"}`}
+          </span>
           <div className="csel-toolbar__actions">
             <button type="button" className="btn btn--sm btn--primary" onClick={() => setFixingSelected(true)}>
               <Wrench size={14} weight="bold" aria-hidden="true" /> Corregir seleccionados
             </button>
-            <button type="button" className="btn btn--sm btn--outline" onClick={() => setSelected(new Set())}>
+            <button type="button" className="btn btn--sm btn--outline" onClick={() => { setSelected(new Set()); setSelectAllFilter(false); }}>
               Vaciar selección
             </button>
           </div>
