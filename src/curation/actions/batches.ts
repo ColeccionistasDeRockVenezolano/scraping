@@ -116,7 +116,7 @@ export interface FixItemView {
   findingId: number | null;
   finding: {
     id: number; detector: string; signature: string; title: string; entity: EntityRef;
-    field: string | null; value: string | null; status: string;
+    field: string | null; value: string | null; evidence: Record<string, unknown>; status: string;
   } | null;
   actionKey: string | null;
   actionLabel: string | null;
@@ -551,7 +551,7 @@ async function loadBatch(batchId: number): Promise<BatchRow> {
 
 type ItemWithFinding = ItemRow & {
   f_detector: string | null; f_signature: string | null; f_title: string | null; f_entity_kind: string | null; f_entity_id: string | null;
-  f_entity_label: string | null; f_field: string | null; f_value: string | null; f_status: string | null; total: string;
+  f_entity_label: string | null; f_field: string | null; f_value: string | null; f_evidence: Record<string, unknown> | null; f_status: string | null; total: string;
 };
 
 function itemView(row: ItemWithFinding): FixItemView {
@@ -563,7 +563,7 @@ function itemView(row: ItemWithFinding): FixItemView {
     finding: row.finding_id !== null && row.f_detector !== null ? {
       id: Number(row.finding_id), detector: row.f_detector, signature: row.f_signature ?? "", title: row.f_title ?? "",
       entity: { kind: (row.f_entity_kind ?? "") as EntityRef["kind"], id: row.f_entity_id === null ? null : Number(row.f_entity_id), label: row.f_entity_label ?? "" },
-      field: row.f_field, value: row.f_value, status: row.f_status ?? "",
+      field: row.f_field, value: row.f_value, evidence: row.f_evidence ?? {}, status: row.f_status ?? "",
     } : null,
     actionKey: row.action_key,
     actionLabel: row.action_key ? getFixAction(row.action_key)?.label ?? null : null,
@@ -592,7 +592,8 @@ export async function getFixBatch(batchId: number, page: ItemPage): Promise<FixB
   const { rows } = await getPool().query<ItemWithFinding>(`
     SELECT ${ITEM_COLUMNS},
            f.detector AS f_detector, f.signature AS f_signature, f.title AS f_title, f.entity_kind AS f_entity_kind,
-           f.entity_id::text AS f_entity_id, f.entity_label AS f_entity_label, f.field AS f_field, f.value AS f_value, f.status AS f_status,
+           f.entity_id::text AS f_entity_id, f.entity_label AS f_entity_label, f.field AS f_field, f.value AS f_value,
+           f.evidence AS f_evidence, f.status AS f_status,
            count(*) OVER ()::text AS total
       FROM ingest.curation_fix_items i
       LEFT JOIN ingest.curation_findings f ON f.id = i.finding_id
