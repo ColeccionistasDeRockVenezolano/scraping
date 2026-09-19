@@ -523,7 +523,7 @@ export interface FixItem {
   findingId: number | null;
   finding: {
     id: number; detector: string; signature: string; title: string; entity: CurationEntityRef;
-    field: string | null; value: string | null; status: string;
+    field: string | null; value: string | null; evidence: Record<string, unknown>; status: string;
   } | null;
   actionKey: string | null;
   actionLabel: string | null;
