@@ -7,10 +7,9 @@
 // corrección hecha por la API (con lo que la corrección desencadenó).
 //
 // Comprueba lo que no se ve en una captura: menú lateral por categoría con
-// «Otros» (plegado en un botón a 400 px), subgrupos de «Otros» que se despliegan
-// por tandas, sin overflow horizontal, sin errores de consola, que «No es un
-// problema» pide un motivo y guarda la decisión, y que «Son distintas» guarda el
-// par (PLAN_CURADURIA E2).
+// «Otros» (plegado en un botón a 400 px), subgrupos por tandas, sin overflow
+// horizontal ni errores de consola; E8 añade teclado, vista previa/aplicar/
+// deshacer e historial de correcciones, además de las decisiones E2/E7.
 import { spawn, type ChildProcess } from "node:child_process";
 import { createServer } from "node:net";
 import { randomBytes, scrypt as scryptCallback } from "node:crypto";
@@ -219,7 +218,7 @@ try {
         const shown = (await page.locator("body").innerText()).slice(0, 500).replaceAll("\n", " | ");
         throw new Error(`${viewport.name}: no apareció el menú. La página muestra: ${shown} (${(error as Error).message.split("\n")[0]})`);
       });
-      for (const label of ["Conflictos", "Nombres sucios", "Mal segmentados", "Ficha de otro tipo", "Posibles duplicados"]) {
+      for (const label of ["Conflictos", "Nombres sucios", "Mal segmentados", "Ficha de otro tipo", "Posibles duplicados", "Correcciones"]) {
         if (await tabs.getByRole("link", { name: new RegExp(label, "u") }).count() !== 1) throw new Error(`${viewport.name}: falta «${label}» en el menú`);
       }
       if (await tabs.getByText("Cola de revisión").count()) throw new Error(`${viewport.name}: sigue «Cola de revisión» en el menú`);
@@ -244,6 +243,45 @@ try {
       });
       await page.screenshot({ path: path.join(outputDir, `${viewport.name}-nombres-sucios.png`), fullPage: true });
       await assertNoOverflow(page, `${viewport.name} nombres_sucios`);
+
+      // E8: teclado, preview → apply → undo e historial, una vez en escritorio.
+      if (index === 0) {
+        await page.keyboard.press("?");
+        await page.getByRole("dialog").getByText("Atajos de Curaduría", { exact: true }).waitFor();
+        await page.screenshot({ path: path.join(outputDir, "desktop-atajos.png"), fullPage: true });
+        await page.keyboard.press("Escape");
+
+        await page.keyboard.press("j");
+        if (await page.locator(".cfind.is-keyboard-active").count() !== 1) {
+          throw new Error("desktop: j/k no deja una tarjeta de Curaduría activa");
+        }
+        await page.keyboard.press("x");
+        await page.getByRole("toolbar", { name: "Acciones sobre lo seleccionado" }).waitFor();
+        await page.keyboard.press("x");
+
+        const correctionButton = page.locator(".cfind .cfind__actions .btn--primary").first();
+        await correctionButton.click();
+        const fixDialog = page.getByRole("dialog");
+        const seePreview = fixDialog.getByRole("button", { name: "Ver corrección" });
+        if (await seePreview.count()) await seePreview.click();
+        await fixDialog.getByRole("table").waitFor();
+        await fixDialog.getByLabel("Motivo *").fill("QA visual: comprobar preview/apply/undo");
+        await page.screenshot({ path: path.join(outputDir, "desktop-preview-lote.png"), fullPage: true });
+        await fixDialog.getByRole("button", { name: /^Aplicar \d+ correcciones$/u }).click();
+        await fixDialog.getByText("Lote aplicado", { exact: true }).waitFor({ timeout: 20_000 });
+        await page.screenshot({ path: path.join(outputDir, "desktop-lote-aplicado.png"), fullPage: true });
+        await fixDialog.getByLabel("Motivo para deshacer *").fill("QA visual: restaurar el dato original");
+        await fixDialog.getByRole("button", { name: "Deshacer este lote" }).click();
+        await fixDialog.getByText("Lote deshecho.", { exact: false }).waitFor({ timeout: 20_000 });
+        await page.screenshot({ path: path.join(outputDir, "desktop-lote-desecho.png"), fullPage: true });
+        await fixDialog.getByRole("button", { name: "Cerrar" }).click();
+
+        await page.goto(`${webUrl}/curaduria/correcciones`, { waitUntil: "domcontentloaded" });
+        await page.getByRole("heading", { name: "Correcciones" }).waitFor();
+        await page.locator("tbody tr").first().waitFor();
+        await page.screenshot({ path: path.join(outputDir, "desktop-correcciones.png"), fullPage: true });
+        await assertNoOverflow(page, "desktop correcciones");
+      }
 
       // 3. «Otros»: la anomalía sembrada aparece sin regla escrita para ella, y
       //    sus subgrupos se ven por tandas en vez de todos de golpe.
