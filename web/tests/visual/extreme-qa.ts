@@ -1,4 +1,5 @@
 import { spawn, type ChildProcess } from "node:child_process";
+import { createServer } from "node:net";
 import { chromium } from "@playwright/test";
 import { mkdir } from "node:fs/promises";
 import path from "node:path";
@@ -31,6 +32,18 @@ function waitForUrl(url: string, timeoutMs = 30_000): Promise<void> {
 
 function stopChild(child: ChildProcess | undefined): void {
   if (child && !child.killed) child.kill("SIGTERM");
+}
+
+function freePort(): Promise<number> {
+  return new Promise((resolve, reject) => {
+    const probe = createServer();
+    probe.on("error", reject);
+    probe.listen(0, "127.0.0.1", () => {
+      const address = probe.address();
+      const port = typeof address === "object" && address ? address.port : 0;
+      probe.close(() => (port ? resolve(port) : reject(new Error("sin puerto libre"))));
+    });
+  });
 }
 
 const container = await startPgContainer();
@@ -94,14 +107,21 @@ try {
     [albumId],
   );
 
+  // El navegador llama al API desde el origen del dev server: hay que declararlo
+  // (como admin-edit-qa/merge-qa/curation-qa) o CORS bloquea toda lectura y la
+  // ficha queda en «No se pudo cargar».
+  const port = await freePort();
+  const webUrl = `http://127.0.0.1:${port}`;
+  process.env["CRV_ALLOWED_ORIGINS"] = webUrl;
+  resetEnvCache();
   app = await buildApp();
   const apiAddress = await app.listen({ host: "127.0.0.1", port: 0 });
-  web = spawn("npm", ["run", "dev", "--", "--host", "127.0.0.1", "--port", "5174"], {
+  web = spawn("npm", ["run", "dev", "--", "--host", "127.0.0.1", "--port", String(port)], {
     cwd: path.join(root, "web"),
     env: { ...process.env, VITE_API_BASE_URL: apiAddress },
     stdio: "ignore",
   });
-  await waitForUrl("http://127.0.0.1:5174");
+  await waitForUrl(webUrl);
   await mkdir(outputDir, { recursive: true });
 
   const browser = await chromium.launch({ headless: true });
@@ -113,7 +133,11 @@ try {
       const page = await browser.newPage({ viewport });
       const pageErrors: string[] = [];
       page.on("pageerror", (error) => pageErrors.push(error.message));
-      await page.goto(`http://127.0.0.1:5174/discos/${albumId}`, { waitUntil: "networkidle" });
+      await page.goto(`${webUrl}/discos/${albumId}`, { waitUntil: "domcontentloaded" });
+      // Las páginas viajan en chunks diferidos (React.lazy) y los datos llegan
+      // después del montaje: esperar la forma final antes de medir.
+      await page.waitForFunction(() => (document.querySelectorAll(".credit-group")[0]?.querySelectorAll(".credit-row").length ?? 0) >= 30, undefined, { timeout: 20_000 });
+      await page.waitForFunction(() => (document.querySelectorAll(".credit-group")[5]?.querySelectorAll(".credit-row").length ?? 0) >= 50, undefined, { timeout: 20_000 });
       if (await page.locator(".credit-group").nth(0).locator(".credit-row").count() !== 30) throw new Error(`${viewport.name}: no se renderizaron los 30 músicos`);
       if (await page.locator(".credit-group").nth(5).locator(".credit-row").count() !== 50) throw new Error(`${viewport.name}: no se renderizaron los 50 créditos adicionales`);
       await page.screenshot({ path: path.join(outputDir, `${viewport.name}-album-denso.png`), fullPage: true });
@@ -132,7 +156,8 @@ try {
       await lastTrack.scrollIntoViewIfNeeded();
       await page.screenshot({ path: path.join(outputDir, `${viewport.name}-pista-100.png`), fullPage: false });
 
-      await page.goto(`http://127.0.0.1:5174/artistas/${artistId}`, { waitUntil: "networkidle" });
+      await page.goto(`${webUrl}/artistas/${artistId}`, { waitUntil: "domcontentloaded" });
+      await page.waitForFunction(() => !!document.querySelector(".entity-hero__title"), undefined, { timeout: 20_000 });
       await page.screenshot({ path: path.join(outputDir, `${viewport.name}-nombre-biografia-largos.png`), fullPage: true });
       const artistOverflow = await page.evaluate(() => ({
         amount: document.documentElement.scrollWidth - document.documentElement.clientWidth,

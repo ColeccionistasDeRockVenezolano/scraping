@@ -1,5 +1,6 @@
 import { useId, useState } from "react";
 import { Link } from "react-router-dom";
+import { PencilSimple, Trash } from "@phosphor-icons/react";
 import { albumCreditWrites, trackCreditWrites, ApiError } from "../lib/api";
 import { CREDIT_TYPES, creditTypeLabel } from "../lib/labels";
 import { useOperator } from "../lib/OperatorContext";
@@ -78,15 +79,21 @@ export function CreditManager({ target, credits, onChanged, compact }: CreditMan
                   {isAdmin ? (
                     <>
                       <button
-                        type="button" className="btn btn--sm btn--ghost" style={{ marginLeft: 8, padding: "2px 8px" }}
+                        type="button" className="btn btn--sm btn--ghost" style={{ marginLeft: 8, padding: "2px 6px" }}
                         onClick={() => setEditing(credit)}
+                        aria-label={`Editar crédito de ${creditedName(credit)}`}
                         title="Corregir este crédito (rol, tipo o a quién acredita)"
-                      >Editar</button>
+                      >
+                        <PencilSimple size={14} weight="bold" aria-hidden="true" />
+                      </button>
                       <button
                         type="button" className="btn btn--sm btn--ghost" style={{ padding: "2px 6px" }}
                         aria-label={`Retirar crédito de ${creditedName(credit)}`}
+                        title={`Retirar crédito de ${creditedName(credit)}`}
                         onClick={() => setRemoving(credit)}
-                      >×</button>
+                      >
+                        <Trash size={14} weight="bold" aria-hidden="true" />
+                      </button>
                     </>
                   ) : null}
                 </span>

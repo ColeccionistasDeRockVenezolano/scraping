@@ -6,6 +6,7 @@
 // (la persona u organización equivocada), que la API sustituye con auditoría.
 import { useId, useState } from "react";
 import { Link } from "react-router-dom";
+import { PencilSimple, Trash } from "@phosphor-icons/react";
 import { personOrganizationWrites, ApiError } from "../lib/api";
 import { useToast } from "../lib/ToastContext";
 import { ConfirmDialog } from "./ConfirmDialog";
@@ -63,8 +64,12 @@ export function PersonOrgManager({ fixedKind, fixedId, rows, onChanged, emptyTex
                   <td>{row.role}</td>
                   <td className="mono">{row.fromYear ?? "—"}{row.toYear ? `–${row.toYear}` : ""}</td>
                   <td className="row-actions">
-                    <button type="button" className="btn btn--sm" onClick={() => setEditing(row)} title="Corregir rol, periodo o el vínculo">Editar</button>
-                    <button type="button" className="btn btn--sm btn--danger" onClick={() => setRemoving(row)}>Quitar</button>
+                    <button type="button" className="btn btn--sm" onClick={() => setEditing(row)} title="Corregir rol, periodo o el vínculo">
+                      <PencilSimple size={14} weight="bold" aria-hidden="true" />Editar
+                    </button>
+                    <button type="button" className="btn btn--sm btn--danger" onClick={() => setRemoving(row)}>
+                      <Trash size={14} weight="bold" aria-hidden="true" />Quitar
+                    </button>
                   </td>
                 </tr>
               ))}

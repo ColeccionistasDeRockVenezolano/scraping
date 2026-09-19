@@ -42,7 +42,7 @@ export async function registerAuditRoutes(app: FastifyInstance): Promise<void> {
   server.get("/audit", {
     schema: {
       tags: ["audit"],
-      summary: "Historial de cambios (merge_audit) de una entidad o fila puente, del más reciente al más antiguo.",
+      summary: "Historial de cambios (merge_audit) de una entidad o fila puente, del más reciente al más antiguo. Solo cuentas administradoras.",
       querystring: auditQuerySchema,
       response: { 200: paginatedResponseSchema(auditRowSchema) },
     },
@@ -54,7 +54,7 @@ export async function registerAuditRoutes(app: FastifyInstance): Promise<void> {
   server.get("/runs/:id", {
     schema: {
       tags: ["audit"],
-      summary: "Run de ingesta, merge o edición del operador (quién, qué, por qué; el retiro guarda la fila borrada).",
+      summary: "Run de ingesta, merge o edición del operador (quién, qué, por qué; el retiro guarda la fila borrada). Solo cuentas administradoras.",
       params: idParamSchema,
       response: { 200: runSchema },
     },

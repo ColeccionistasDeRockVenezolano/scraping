@@ -3,6 +3,7 @@ import { SignIn, SignOut } from "@phosphor-icons/react";
 import { Modal } from "./Modal";
 import { ApiError } from "../lib/api";
 import { useOperator } from "../lib/OperatorContext";
+import { useToast } from "../lib/ToastContext";
 
 export function OperatorPill() {
   const { user, isChecking } = useOperator();
@@ -17,7 +18,9 @@ export function OperatorPill() {
         type="button"
         className={`operator-pill ${isSignedIn ? "is-active" : ""}`}
         onClick={() => setOpen(true)}
+        aria-busy={isChecking}
         aria-label={isSignedIn ? `Sesión de ${label}` : "Iniciar sesión como colaborador"}
+        title={isSignedIn ? `Sesión de ${label}` : "Iniciar sesión como colaborador"}
       >
         <span className="dot" aria-hidden="true" />
         {isSignedIn ? <span className="chip" aria-hidden="true">{initial}</span> : <SignIn className="operator-icon" aria-hidden="true" weight="bold" />}
@@ -30,6 +33,7 @@ export function OperatorPill() {
 
 export function OperatorDialog({ onClose }: { onClose: () => void }) {
   const { user, login, logout } = useOperator();
+  const { notify } = useToast();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -42,6 +46,7 @@ export function OperatorDialog({ onClose }: { onClose: () => void }) {
     try {
       await login(username.trim(), password);
       setPassword("");
+      notify("success", `Sesión iniciada como ${username.trim()}.`);
       onClose();
     } catch (reason: unknown) {
       setError(reason instanceof ApiError ? reason.message : "No se pudo iniciar sesión. Inténtalo de nuevo.");
@@ -55,6 +60,7 @@ export function OperatorDialog({ onClose }: { onClose: () => void }) {
     setSubmitting(true);
     try {
       await logout();
+      notify("success", "Sesión cerrada. El catálogo queda en solo lectura.");
       onClose();
     } catch (reason: unknown) {
       setError(reason instanceof ApiError ? reason.message : "No se pudo cerrar la sesión.");
@@ -70,8 +76,11 @@ export function OperatorDialog({ onClose }: { onClose: () => void }) {
           <span className="account-avatar" aria-hidden="true">{user.name.charAt(0).toUpperCase()}</span>
           <div>
             <strong>{user.name}</strong>
-            <span>@{user.username} · {user.role === "admin" ? "Administrador" : "Solo lectura"}</span>
+            <span>@{user.username}</span>
           </div>
+          <span className={`badge account-role ${user.role === "admin" ? "badge--teal" : "badge--outline"}`}>
+            {user.role === "admin" ? "Administrador" : "Solo lectura"}
+          </span>
         </div>
         <p className="operator-help">
           {user.role === "admin"

@@ -4,6 +4,7 @@
 import { useState } from "react";
 import { auditApi } from "../lib/api";
 import { useAsync } from "../lib/useAsync";
+import { useOperator } from "../lib/OperatorContext";
 import { fieldLabel, relativeTime } from "../lib/curation";
 import { Pagination } from "./Pagination";
 
@@ -24,7 +25,19 @@ function formatValue(value: unknown): string {
   return String(value);
 }
 
+/**
+ * Solo administradores: el historial queda oculto para cuentas de solo lectura
+ * y para visitantes (la API también rechaza /audit sin cuenta admin). Se
+ * separa en dos componentes para no alterar el orden de los hooks cuando
+ * alguien inicia o cierra sesión con la ficha abierta.
+ */
 export function EntityHistory({ entity, id }: { entity: HistoryEntity; id: number }) {
+  const { isAdmin } = useOperator();
+  if (!isAdmin) return null;
+  return <EntityHistoryContent entity={entity} id={id} />;
+}
+
+function EntityHistoryContent({ entity, id }: { entity: HistoryEntity; id: number }) {
   const [offset, setOffset] = useState(0);
   const { data, loading, error } = useAsync(
     () => auditApi.forEntity(entity, id, { limit: LIMIT, offset }),

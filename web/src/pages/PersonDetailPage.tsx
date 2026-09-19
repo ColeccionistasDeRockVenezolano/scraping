@@ -1,11 +1,13 @@
 import { useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
+import { ArrowsSplit, GitMerge, PencilSimple, Trash } from "@phosphor-icons/react";
 import { personWrites, personsApi } from "../lib/api";
 import { useAsync } from "../lib/useAsync";
 import { useMovedToRedirect } from "../lib/useMovedTo";
 import { useOperator } from "../lib/OperatorContext";
 import { useToast } from "../lib/ToastContext";
-import { LoadingState, ErrorState } from "../components/StateViews";
+import { ErrorState } from "../components/StateViews";
+import { DetailSkeleton } from "../components/Skeletons";
 import { AliasEditor } from "../components/AliasEditor";
 import { EntityFormModal } from "../components/EntityFormModal";
 import { ConfirmDialog } from "../components/ConfirmDialog";
@@ -33,7 +35,7 @@ export function PersonDetailPage() {
   const [splitting, setSplitting] = useState(false);
   const [converting, setConverting] = useState<"organization" | "artist" | null>(null);
 
-  if (loading) return <LoadingState />;
+  if (loading) return <DetailSkeleton />;
   if (error || !person) return <ErrorState message={error ?? "Persona no encontrada."} onRetry={reload} />;
 
   const meta = [person.nationality, person.isVenezuelan ? "Venezolano/a" : null].filter(Boolean);
@@ -44,7 +46,7 @@ export function PersonDetailPage() {
 
       <div className="entity-hero">
         <span className="entity-hero__art">
-          {person.pictureUrl ? <img src={person.pictureUrl} alt="" /> : <span className="placeholder">{initialOf(person.name)}</span>}
+          {person.pictureUrl ? <img src={person.pictureUrl} alt="" loading="lazy" decoding="async" /> : <span className="placeholder">{initialOf(person.name)}</span>}
         </span>
         <div>
           <h1 className="entity-hero__title">{person.name}</h1>
@@ -55,10 +57,18 @@ export function PersonDetailPage() {
 
       {isAdmin ? (
         <div className="page-actions" style={{ marginTop: 14 }}>
-          <button type="button" className="btn btn--sm" onClick={() => setEditing(true)}>Editar</button>
-          <button type="button" className="btn btn--sm" onClick={() => setMerging(true)}>Fusionar con…</button>
-          <button type="button" className="btn btn--sm" onClick={() => setSplitting(true)}>Dividir en varias…</button>
-          <button type="button" className="btn btn--sm btn--danger" onClick={() => setDeleting(true)}>Retirar</button>
+          <button type="button" className="btn btn--sm" onClick={() => setEditing(true)}>
+            <PencilSimple size={14} weight="bold" aria-hidden="true" />Editar
+          </button>
+          <button type="button" className="btn btn--sm" onClick={() => setMerging(true)}>
+            <GitMerge size={14} weight="bold" aria-hidden="true" />Fusionar con…
+          </button>
+          <button type="button" className="btn btn--sm" onClick={() => setSplitting(true)}>
+            <ArrowsSplit size={14} weight="bold" aria-hidden="true" />Dividir en varias…
+          </button>
+          <button type="button" className="btn btn--sm btn--danger" onClick={() => setDeleting(true)}>
+            <Trash size={14} weight="bold" aria-hidden="true" />Retirar
+          </button>
         </div>
       ) : null}
 

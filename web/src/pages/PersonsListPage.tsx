@@ -5,7 +5,8 @@ import { useAsync } from "../lib/useAsync";
 import { useDebouncedQuery } from "../lib/useDebouncedQuery";
 import { useOperator } from "../lib/OperatorContext";
 import { useToast } from "../lib/ToastContext";
-import { LoadingState, ErrorState, EmptyState } from "../components/StateViews";
+import { ErrorState, EmptyState } from "../components/StateViews";
+import { CardGridSkeleton } from "../components/Skeletons";
 import { EntityCard, initialOf } from "../components/EntityCard";
 import { Pagination } from "../components/Pagination";
 import { EntityFormModal } from "../components/EntityFormModal";
@@ -88,7 +89,7 @@ export function PersonsListPage() {
         </select>
       </div>
 
-      {loading && !data ? <LoadingState /> : error ? <ErrorState message={error} onRetry={reload} /> : !data || data.data.length === 0 ? (
+      {loading && !data ? <CardGridSkeleton count={12} label="Cargando personas…" /> : error ? <ErrorState message={error} onRetry={reload} /> : !data || data.data.length === 0 ? (
         <EmptyState title="No hay personas para mostrar" hint={q || suspect || hasCredits === false ? "Prueba con otro filtro." : undefined} />
       ) : (
         <>

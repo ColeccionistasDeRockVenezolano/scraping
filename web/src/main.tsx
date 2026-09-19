@@ -22,11 +22,11 @@ createRoot(container).render(
   <StrictMode>
     <ErrorBoundary>
       <BrowserRouter basename={basename}>
-        <OperatorProvider>
-          <ToastProvider>
+        <ToastProvider>
+          <OperatorProvider>
             <App />
-          </ToastProvider>
-        </OperatorProvider>
+          </OperatorProvider>
+        </ToastProvider>
       </BrowserRouter>
     </ErrorBoundary>
   </StrictMode>,

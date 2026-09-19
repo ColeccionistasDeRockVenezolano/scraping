@@ -12,7 +12,8 @@ import { ApiError, curationApi } from "../lib/api";
 import { useToast } from "../lib/ToastContext";
 import { ENTITY_KIND_LABEL, categoryIcon, counter, failedDetectors, formatCount, relativeTime, triggerLabel } from "../lib/curation";
 import { entityHref } from "../lib/routes";
-import { ErrorState, LoadingState } from "../components/StateViews";
+import { ErrorState } from "../components/StateViews";
+import { HeaderSkeleton, RowsSkeleton } from "../components/Skeletons";
 import { useCurationSummary } from "./CurationLayout";
 import type { CurationCategorySummary, CurationScan, DistinctPair } from "../lib/types";
 
@@ -44,7 +45,12 @@ export function CurationOverviewPage() {
   }
 
   if (!summary) {
-    return summaryError ? <ErrorState message={summaryError} onRetry={() => void refreshSummary()} /> : <LoadingState label="Cargando el detector…" />;
+    return summaryError ? <ErrorState message={summaryError} onRetry={() => void refreshSummary()} /> : (
+      <div role="status" aria-label="Cargando el detector…">
+        <HeaderSkeleton />
+        <RowsSkeleton rows={4} height={88} />
+      </div>
+    );
   }
 
   const running = scanning || summary.running;

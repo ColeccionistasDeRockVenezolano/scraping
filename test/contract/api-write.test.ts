@@ -4,7 +4,8 @@
 //   * una corrección manual de un dato conflictivo resuelve el conflicto y
 //     conserva el historial (criterio de salida);
 //   * aceptar/rechazar candidatos de la cola deja su rastro;
-//   * sin token no se escribe.
+//   * sin token no se escribe, y el rastro del operador (/audit y /runs/:id)
+//     dejó de ser lectura abierta: solo lo ve una cuenta administradora.
 import { afterAll, beforeAll, describe, expect, it } from "vitest";
 import type { FastifyInstance } from "fastify";
 import { startPgContainer, type PgContainer } from "../support/pg-container.js";
@@ -36,6 +37,11 @@ describe("API de escritura (E7B)", () => {
       headers: { authorization: `Bearer ${TOKEN}`, "x-crv-operator": OPERATOR },
       ...(payload === undefined ? {} : { payload }),
     });
+  }
+
+  /** Lecturas del rastro del operador: /audit y /runs ya no son lectura abierta. */
+  async function authedGet(url: string) {
+    return app.inject({ method: "GET", url, headers: { authorization: `Bearer ${TOKEN}` } });
   }
 
   /** Claim de una fuente, como lo dejaría la ingesta, pasado por el merge. */
@@ -105,6 +111,13 @@ describe("API de escritura (E7B)", () => {
   let artistId: number;
   let albumId: number;
 
+  it("el historial del operador (GET /audit y GET /runs/:id) ya no es lectura abierta", async () => {
+    // 2026-09-18: merge_audit y sus runs solo los ve una cuenta administradora.
+    expect((await app.inject({ method: "GET", url: "/audit?entity=artist&id=1" })).statusCode).toBe(401);
+    expect((await app.inject({ method: "GET", url: "/runs/1" })).statusCode).toBe(401);
+    expect((await authedGet("/audit?entity=artist&id=1")).statusCode).toBe(200);
+  });
+
   it("crea artista y álbum a través del merge, con claims humanos, run y auditoría", async () => {
     const created = await write("POST", "/artists", {
       name: "Caramelos De Cianuro", originCity: "Caracas", formedYear: 1989,
@@ -129,9 +142,9 @@ describe("API de escritura (E7B)", () => {
     expect(claims.rows.every((row) => row.created_by === "human" && row.confidence === "high" && row.status === "accepted")).toBe(true);
     expect(new Set(claims.rows.map((row) => Number(row.run_id)))).toEqual(new Set([body.runId]));
 
-    const run = (await app.inject({ method: "GET", url: `/runs/${body.runId}` })).json();
+    const run = (await authedGet(`/runs/${body.runId}`)).json();
     expect(run).toMatchObject({ kind: "manual", status: "ok", params: { action: "api:create:artist", operator: OPERATOR, note: "alta de prueba" } });
-    const audit = (await app.inject({ method: "GET", url: `/audit?entity=artist&id=${artistId}` })).json();
+    const audit = (await authedGet(`/audit?entity=artist&id=${artistId}`)).json();
     expect(audit.pagination.total).toBe(4);
     expect(audit.data.every((row: { performedBy: string; runId: number; claimIds: number[] }) =>
       row.performedBy === "human" && row.runId === body.runId && row.claimIds.length === 1)).toBe(true);
@@ -216,7 +229,7 @@ describe("API de escritura (E7B)", () => {
 
     const fixed = await write("PATCH", `/album-credits/${creditId}`, { role: "Mixing & Mastering", creditType: "mastering", note: "dice la contraportada" });
     expect(fixed.json().fields).toEqual([{ field: "role", action: "corrected" }, { field: "credit_type", action: "corrected" }]);
-    const creditAudit = (await app.inject({ method: "GET", url: `/audit?entity=album_credit&id=${creditId}` })).json();
+    const creditAudit = (await authedGet(`/audit?entity=album_credit&id=${creditId}`)).json();
     expect(creditAudit.data.map((row: { field: string; oldValue: unknown; newValue: unknown }) => [row.field, row.oldValue, row.newValue])).toEqual([
       ["credit_type", "mixing", "mastering"], ["role", "Mixed by", "Mixing & Mastering"], ["album_credits", null, expect.objectContaining({ role: "Mixed by" })],
     ]);
@@ -295,7 +308,7 @@ describe("API de escritura (E7B)", () => {
       "SELECT person_id,artist_id::text FROM public.album_credits WHERE id=$1", [creditBob]))
       .toEqual({ person_id: null, artist_id: String(band) });
 
-    const creditAudit = (await app.inject({ method: "GET", url: `/audit?entity=album_credit&id=${creditBob}` })).json().data
+    const creditAudit = (await authedGet(`/audit?entity=album_credit&id=${creditBob}`)).json().data
       .map((row: { field: string; oldValue: unknown; newValue: unknown }) => [row.field, row.oldValue, row.newValue]);
     expect(creditAudit).toEqual(expect.arrayContaining([
       ["artist_id", null, band], ["person_id", bob, alice], ["person_id", alice, null],
@@ -333,7 +346,7 @@ describe("API de escritura (E7B)", () => {
     expect(moved.statusCode).toBe(200);
     expect(moved.json().fields).toEqual([{ field: "artist_id", action: "corrected", conflictsClosed: [] }]);
     expect((await app.inject({ method: "GET", url: `/albums/${album}` })).json().artist).toMatchObject({ id: otherBand, name: "Otra Banda Reapuntada" });
-    const albumAudit = (await app.inject({ method: "GET", url: `/audit?entity=album&id=${album}` })).json().data
+    const albumAudit = (await authedGet(`/audit?entity=album&id=${album}`)).json().data
       .filter((row: { field: string }) => row.field === "artist_id")
       .map((row: { oldValue: unknown; newValue: unknown; performedBy: string; runId: number }) => [row.oldValue, row.newValue, row.performedBy, typeof row.runId]);
     expect(albumAudit).toEqual([[band, otherBand, "human", "number"]]);
@@ -360,7 +373,7 @@ describe("API de escritura (E7B)", () => {
     expect(await one<{ album_id: string; track_number: number }>(
       "SELECT album_id::text,track_number FROM public.tracks WHERE id=$1", [track]))
       .toEqual({ album_id: String(album), track_number: 6 });
-    const trackAudit = (await app.inject({ method: "GET", url: `/audit?entity=track&id=${track}` })).json().data
+    const trackAudit = (await authedGet(`/audit?entity=track&id=${track}`)).json().data
       .map((row: { field: string }) => row.field);
     expect(trackAudit).toContain("album_id");
   });
@@ -402,7 +415,7 @@ describe("API de escritura (E7B)", () => {
     expect(claims).toEqual(expect.arrayContaining([
       ["Fuente A", 1995, "superseded"], ["Fuente B", 1996, "superseded"], ["Operador del catálogo (API)", 1997, "accepted"],
     ]));
-    const history = (await app.inject({ method: "GET", url: `/audit?entity=album&id=${fixture.albumId}` })).json().data
+    const history = (await authedGet(`/audit?entity=album&id=${fixture.albumId}`)).json().data
       .filter((row: { field: string }) => row.field === "release_year")
       .map((row: { oldValue: unknown; newValue: unknown; performedBy: string }) => [row.oldValue, row.newValue, row.performedBy]);
     expect(history).toEqual([[1995, 1997, "human"], [null, 1995, "system"]]);

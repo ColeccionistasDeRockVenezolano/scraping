@@ -10,13 +10,14 @@
 // Solo para cuentas admin. La API ya rechaza estas lecturas sin rol admin
 // (src/api/auth.ts, ADMIN_READS); aquí se explica por qué en vez de mostrar
 // «No se pudo cargar».
-import { useCallback, useEffect, useRef, useState } from "react";
+import { Suspense, useCallback, useEffect, useRef, useState } from "react";
 import { NavLink, Outlet, useLocation, useOutletContext } from "react-router-dom";
 import { CaretDown, Copy, LockSimple, Pulse, SignIn, type Icon } from "@phosphor-icons/react";
 import { useOperator } from "../lib/OperatorContext";
 import { ApiError, curationApi } from "../lib/api";
 import { categoryIcon, formatCount } from "../lib/curation";
 import { LoadingState } from "../components/StateViews";
+import { RowsSkeleton } from "../components/Skeletons";
 import { OperatorDialog } from "../components/OperatorSettings";
 import type { CurationSummary } from "../lib/types";
 
@@ -102,7 +103,9 @@ export function CurationLayout() {
         <div className="curation-shell">
           <CurationNav summary={summary} />
           <div className="curation-shell__main">
-            <Outlet context={context} />
+            <Suspense fallback={<RowsSkeleton rows={4} label="Cargando la sección…" />}>
+              <Outlet context={context} />
+            </Suspense>
           </div>
         </div>
       )}

@@ -35,13 +35,16 @@ export const OPERATOR_SECURITY = [{ collaboratorSession: [] }, { operatorToken: 
 const READ_METHODS = new Set(["GET", "HEAD", "OPTIONS"]);
 /**
  * Lecturas que no son catálogo público sino trabajo de curaduría: la cola de
- * revisión, los candidatos a duplicado y la comparación previa a fusionar.
+ * revisión, los candidatos a duplicado, la comparación previa a fusionar y el
+ * rastro del operador (merge_audit y sus runs), que solo ve la administración.
  */
 const ADMIN_READS = [
   /^\/review-queue(\/|$)/u,
   /^\/persons\/duplicate-candidates$/u,
   /^\/curation(\/|$)/u,
   /^\/[a-z]+\/\d+\/merge-preview$/u,
+  /^\/audit(\/|$)/u,
+  /^\/runs\/\d+$/u,
 ];
 const OPERATOR_NAME = /^[\p{L}\p{N} ._'-]{1,80}$/u;
 const USERNAME = /^[a-z0-9][a-z0-9._-]{2,39}$/u;

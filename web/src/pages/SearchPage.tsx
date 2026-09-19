@@ -4,7 +4,8 @@ import { searchApi } from "../lib/api";
 import { useAsync } from "../lib/useAsync";
 import { entityHref } from "../lib/routes";
 import { searchTypeLabel } from "../lib/labels";
-import { LoadingState, ErrorState, EmptyState } from "../components/StateViews";
+import { ErrorState, EmptyState } from "../components/StateViews";
+import { RowsSkeleton } from "../components/Skeletons";
 import type { SearchEntityType } from "../lib/types";
 
 const GROUP_ORDER: SearchEntityType[] = ["artist", "album", "person", "organization", "track"];
@@ -47,7 +48,7 @@ export function SearchPage() {
       </form>
 
       {!q.trim() ? null : loading ? (
-        <LoadingState label="Buscando…" />
+        <RowsSkeleton rows={6} label="Buscando…" />
       ) : error ? (
         <ErrorState message={error} onRetry={reload} />
       ) : !hasAnyResult ? (

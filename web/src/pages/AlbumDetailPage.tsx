@@ -1,11 +1,13 @@
 import { Fragment, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
+import { GitMerge, PencilSimple, Trash } from "@phosphor-icons/react";
 import { albumFormatWrites, albumWrites, albumsApi, trackWrites, ApiError } from "../lib/api";
 import { useAsync } from "../lib/useAsync";
 import { useMovedToRedirect } from "../lib/useMovedTo";
 import { useOperator } from "../lib/OperatorContext";
 import { useToast } from "../lib/ToastContext";
-import { LoadingState, ErrorState } from "../components/StateViews";
+import { ErrorState } from "../components/StateViews";
+import { DetailSkeleton } from "../components/Skeletons";
 import { AliasEditor } from "../components/AliasEditor";
 import { EntityFormModal } from "../components/EntityFormModal";
 import { TrackAliasesSection } from "../components/TrackAliasesSection";
@@ -53,7 +55,7 @@ export function AlbumDetailPage() {
   const [labelId, setLabelId] = useState<number | null>(null);
   const [labelLabel, setLabelLabel] = useState<string | null>(null);
 
-  if (loading) return <LoadingState />;
+  if (loading) return <DetailSkeleton />;
   if (error || !album) return <ErrorState message={error ?? "Disco no encontrado."} onRetry={reload} />;
 
   const meta = [
@@ -68,7 +70,7 @@ export function AlbumDetailPage() {
 
       <div className="entity-hero">
         <span className="entity-hero__art">
-          {album.coverUrl ? <img src={album.coverUrl} alt="" /> : <span className="placeholder">{initialOf(album.title)}</span>}
+          {album.coverUrl ? <img src={album.coverUrl} alt="" loading="lazy" decoding="async" /> : <span className="placeholder">{initialOf(album.title)}</span>}
         </span>
         <div>
           <h1 className="entity-hero__title">{album.title}</h1>
@@ -88,9 +90,15 @@ export function AlbumDetailPage() {
           <button type="button" className="btn btn--sm" onClick={() => {
             setArtistId(album.artist.id); setArtistLabel(album.artist.name);
             setLabelId(album.label?.id ?? null); setLabelLabel(album.label?.name ?? null); setEditing(true);
-          }}>Editar</button>
-          <button type="button" className="btn btn--sm" onClick={() => setMergingAlbum(true)}>Fusionar con…</button>
-          <button type="button" className="btn btn--sm btn--danger" onClick={() => setDeleting(true)}>Retirar</button>
+          }}>
+            <PencilSimple size={14} weight="bold" aria-hidden="true" />Editar
+          </button>
+          <button type="button" className="btn btn--sm" onClick={() => setMergingAlbum(true)}>
+            <GitMerge size={14} weight="bold" aria-hidden="true" />Fusionar con…
+          </button>
+          <button type="button" className="btn btn--sm btn--danger" onClick={() => setDeleting(true)}>
+            <Trash size={14} weight="bold" aria-hidden="true" />Retirar
+          </button>
         </div>
       ) : null}
 
@@ -129,8 +137,12 @@ export function AlbumDetailPage() {
                           <>
                             <button type="button" className="btn btn--sm" onClick={() => {
                               setEditingTrack(track); setTrackAlbumId(album.id); setTrackAlbumLabel(album.title);
-                            }}>Editar</button>
-                            <button type="button" className="btn btn--sm btn--danger" onClick={() => setRemovingTrack(track)}>Quitar</button>
+                            }}>
+                              <PencilSimple size={14} weight="bold" aria-hidden="true" />Editar
+                            </button>
+                            <button type="button" className="btn btn--sm btn--danger" onClick={() => setRemovingTrack(track)}>
+                              <Trash size={14} weight="bold" aria-hidden="true" />Quitar
+                            </button>
                           </>
                         ) : null}
                       </td>
@@ -179,7 +191,9 @@ export function AlbumDetailPage() {
                 <span className="badge" style={{ fontSize: 10 }}>{format.archiveStatus}</span>
                 {isAdmin ? (
                   <>
-                    <button type="button" className="btn btn--sm btn--ghost" style={{ padding: "2px 8px" }} onClick={() => setEditingFormat(format)}>Editar</button>
+                    <button type="button" title="Editar formato" aria-label={`Editar formato ${format.format}`} onClick={() => setEditingFormat(format)}>
+                      <PencilSimple aria-hidden="true" />
+                    </button>
                     <FormatRemoveButton id={format.id} format={format.format} onDone={reload} />
                   </>
                 ) : null}
@@ -331,7 +345,9 @@ function FormatRemoveButton({ id, format, onDone }: { id: number; format: string
   const [confirming, setConfirming] = useState(false);
   return (
     <>
-      <button type="button" aria-label={`Retirar formato ${format}`} onClick={() => setConfirming(true)}>×</button>
+      <button type="button" aria-label={`Retirar formato ${format}`} title={`Retirar formato ${format}`} onClick={() => setConfirming(true)}>
+        <Trash aria-hidden="true" />
+      </button>
       {confirming ? (
         <ConfirmDialog
           title={`Retirar formato «${format}»`}

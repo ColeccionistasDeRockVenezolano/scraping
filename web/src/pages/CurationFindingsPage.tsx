@@ -26,7 +26,8 @@ import {
   ENTITY_KIND_LABEL, IGNORE_REASONS, SEVERITY_BADGE, SEVERITY_LABEL, categoryIcon, fieldLabel, findingPair, formatCount, ignoreReasonLabel,
   lastChangeText, refHref, relativeTime, resolutionText,
 } from "../lib/curation";
-import { ErrorState, EmptyState, LoadingState } from "../components/StateViews";
+import { ErrorState, EmptyState } from "../components/StateViews";
+import { HeaderSkeleton, RowsSkeleton } from "../components/Skeletons";
 import { Pagination } from "../components/Pagination";
 import { ConfirmDialog } from "../components/ConfirmDialog";
 import { CurationValue } from "../components/CurationValue";
@@ -150,7 +151,12 @@ export function CurationFindingsPage() {
   }
 
   if (key && !summary) {
-    return summaryError ? <ErrorState message={summaryError} onRetry={() => void refreshSummary()} /> : <LoadingState />;
+    return summaryError ? <ErrorState message={summaryError} onRetry={() => void refreshSummary()} /> : (
+      <div role="status" aria-label="Cargando la categoría…">
+        <HeaderSkeleton />
+        <RowsSkeleton rows={4} />
+      </div>
+    );
   }
   if (key && summary && !category) {
     return <EmptyState title="Esa categoría no existe" hint="Elige una categoría del menú de Curaduría." />;
@@ -253,7 +259,7 @@ export function CurationFindingsPage() {
         ) : null}
       </div>
 
-      {loading && !data ? <LoadingState /> : error ? <ErrorState message={error} onRetry={reload} /> : !data || data.data.length === 0 ? (
+      {loading && !data ? <RowsSkeleton rows={6} height={64} label="Cargando hallazgos…" /> : error ? <ErrorState message={error} onRetry={reload} /> : !data || data.data.length === 0 ? (
         <EmptyState
           title={status === "open" ? "No hay hallazgos abiertos aquí" : "No hay hallazgos con estos filtros"}
           hint={status === "open" ? "El detector no encontró problemas de este tipo en el último análisis." : "Prueba con otros filtros."}

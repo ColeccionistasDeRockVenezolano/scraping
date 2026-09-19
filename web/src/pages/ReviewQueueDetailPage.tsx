@@ -4,7 +4,8 @@ import { ApiError, reviewApi } from "../lib/api";
 import { useAsync } from "../lib/useAsync";
 import { useOperator } from "../lib/OperatorContext";
 import { useToast } from "../lib/ToastContext";
-import { LoadingState, ErrorState } from "../components/StateViews";
+import { ErrorState } from "../components/StateViews";
+import { HeaderSkeleton, RowsSkeleton } from "../components/Skeletons";
 import { entityHref } from "../lib/routes";
 import { reviewKindLabel, reviewStatusLabel } from "../lib/labels";
 
@@ -56,7 +57,12 @@ export function ReviewQueueDetailPage() {
   const [value, setValue] = useState("");
   const [busy, setBusy] = useState(false);
 
-  if (loading) return <LoadingState />;
+  if (loading) return (
+    <div role="status" aria-label="Cargando la revisión…">
+      <HeaderSkeleton />
+      <RowsSkeleton rows={3} height={96} />
+    </div>
+  );
   if (error || !review) return <ErrorState message={error ?? "Revisión no encontrada."} onRetry={reload} />;
 
   const isOpen = review.status === "open" || review.status === "in_progress";

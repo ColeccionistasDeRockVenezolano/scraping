@@ -497,7 +497,8 @@ lectura abierta y escritura con `Authorization: Bearer $CRV_OPERATOR_TOKEN`
 inicial). Cada escritura es una transacción y un run `manual` de la fuente
 `crv-operador` (`src/merge/operator.ts`); la cola se decide con
 `POST /review-queue/:id/{accept,reject,resolve-conflict}` y el historial se
-consulta en `GET /audit` y `GET /runs/:id` (PHASES §E7B).
+consulta en `GET /audit` y `GET /runs/:id` (PHASES §E7B), ambos solo para
+cuentas administradoras.
 
 ### 4.15 `frontend` (E8/E9)
 React SPA en `web/` (Vite), separada de Fastify. Solo habla con la API

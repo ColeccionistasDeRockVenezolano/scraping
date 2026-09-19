@@ -14,7 +14,8 @@ import { ArrowSquareOut, CaretDown, CaretUp, GitMerge, Info, X } from "@phosphor
 import { ApiError, entityMergeApi, reviewApi } from "../lib/api";
 import { useAsync } from "../lib/useAsync";
 import { useToast } from "../lib/ToastContext";
-import { LoadingState, ErrorState, EmptyState } from "../components/StateViews";
+import { ErrorState, EmptyState } from "../components/StateViews";
+import { RowsSkeleton } from "../components/Skeletons";
 import { Pagination } from "../components/Pagination";
 import { ConfirmDialog } from "../components/ConfirmDialog";
 import { MergeEntityModal } from "../components/MergeEntityModal";
@@ -169,14 +170,14 @@ export function PersonDuplicatesPage() {
         ) : null}
       </div>
 
-      {loading ? <LoadingState /> : error ? <ErrorState message={error} onRetry={reload} /> : !data || data.data.length === 0 ? (
+      {loading && !data ? <RowsSkeleton rows={3} height={180} label="Cargando los pares pendientes…" /> : error ? <ErrorState message={error} onRetry={reload} /> : !data || data.data.length === 0 ? (
         <EmptyState
           title={onlyStrong ? "No hay pares con coincidencia alta" : "No hay posibles duplicados pendientes"}
           hint={onlyStrong ? "Prueba con «Todos» para ver los de coincidencia media." : "El detector no tiene pares nuevos por revisar."}
         />
       ) : (
         <>
-          <ol className="dup-list">
+          <ol className={`dup-list${loading ? " is-refreshing" : ""}`}>
             {data.data.map((candidate) => {
               const pair = { reviewId: candidate.reviewId, a: candidate.a, b: candidate.b };
               return (

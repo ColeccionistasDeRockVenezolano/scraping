@@ -12,7 +12,7 @@ export function EntityCard({ to, title, subtitle, imageUrl, placeholder }: Entit
   return (
     <Link to={to} className="card entity-card">
       <span className="entity-card__art">
-        {imageUrl ? <img src={imageUrl} alt="" loading="lazy" /> : <span className="placeholder">{placeholder}</span>}
+        {imageUrl ? <img src={imageUrl} alt="" loading="lazy" decoding="async" /> : <span className="placeholder">{placeholder}</span>}
       </span>
       <span className="entity-card__body">
         <span className="entity-card__title">{title}</span>

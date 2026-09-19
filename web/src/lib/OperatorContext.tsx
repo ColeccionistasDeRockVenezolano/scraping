@@ -1,6 +1,7 @@
-import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
+import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { ApiError, authApi } from "./api";
 import { clearLegacyOperatorStorage, setSessionCsrf, type OperatorUser } from "./operator";
+import { useToast } from "./ToastContext";
 
 interface OperatorContextValue {
   user: OperatorUser | null;
@@ -14,8 +15,12 @@ interface OperatorContextValue {
 const OperatorContext = createContext<OperatorContextValue | undefined>(undefined);
 
 export function OperatorProvider({ children }: { children: ReactNode }) {
+  const { notify } = useToast();
   const [user, setUser] = useState<OperatorUser | null>(null);
   const [isChecking, setIsChecking] = useState(true);
+  // La sesión puede expirar a mitad de una edición: se avisa una vez, no por
+  // cada petición rechazada que llegue después.
+  const sessionExpired = useRef(false);
 
   useEffect(() => {
     clearLegacyOperatorStorage();
@@ -24,16 +29,23 @@ export function OperatorProvider({ children }: { children: ReactNode }) {
       .then((session) => { if (active) setUser(session.user); })
       .catch(() => { /* Sin sesión o API temporalmente inaccesible: queda en solo lectura. */ })
       .finally(() => { if (active) setIsChecking(false); });
-    const expire = () => setUser(null);
+    const expire = () => {
+      setUser(null);
+      if (!sessionExpired.current) {
+        sessionExpired.current = true;
+        notify("info", "Tu sesión expiró. Inicia sesión de nuevo para poder editar.");
+      }
+    };
     window.addEventListener("crv-session-expired", expire);
     return () => {
       active = false;
       window.removeEventListener("crv-session-expired", expire);
     };
-  }, []);
+  }, [notify]);
 
   const login = useCallback(async (username: string, password: string) => {
     const session = await authApi.login(username, password);
+    sessionExpired.current = false;
     setUser(session.user);
   }, []);
 

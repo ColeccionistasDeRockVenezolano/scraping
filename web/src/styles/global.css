@@ -166,8 +166,10 @@ ul { margin: 0; padding: 0; list-style: none; }
   border: 1px solid var(--border); background: var(--surface);
   font-size: 12.5px; color: var(--text-muted); cursor: pointer;
   white-space: nowrap;
+  transition: border-color 0.15s ease-out, background 0.15s ease-out, transform 0.12s ease-out;
 }
 .operator-pill:hover { border-color: color-mix(in srgb, var(--red) 40%, var(--border)); }
+.operator-pill:active { transform: scale(0.98); }
 .operator-pill:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
 .operator-pill .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--text-faint); flex-shrink: 0; }
 .operator-pill.is-active .dot { background: var(--teal); box-shadow: 0 0 0 3px var(--teal-soft); }
@@ -190,7 +192,8 @@ ul { margin: 0; padding: 0; list-style: none; }
 }
 .account-summary div { display: grid; min-width: 0; }
 .account-summary strong { font-size: 14px; overflow-wrap: anywhere; }
-.account-summary span { color: var(--text-faint); font-size: 12px; overflow-wrap: anywhere; }
+.account-summary div span { color: var(--text-faint); font-size: 12px; overflow-wrap: anywhere; }
+.account-role { margin-left: auto; flex: 0 0 auto; }
 
 /* ---------- page structure ---------- */
 main { padding: 32px 0 96px; }
@@ -569,8 +572,34 @@ td.num { font-family: var(--font-mono); }
   animation: crv-spin 0.7s linear infinite; margin: 0 auto 12px;
 }
 @keyframes crv-spin { to { transform: rotate(360deg); } }
-.skeleton { background: linear-gradient(90deg, var(--surface) 25%, var(--surface-2) 37%, var(--surface) 63%); background-size: 400% 100%; animation: crv-shimmer 1.4s ease infinite; border-radius: var(--radius-sm); }
+.skeleton { background: linear-gradient(90deg, var(--surface-2) 25%, var(--border) 37%, var(--surface-2) 63%); background-size: 400% 100%; animation: crv-shimmer 1.4s ease infinite; border-radius: var(--radius-sm); }
 @keyframes crv-shimmer { 0% { background-position: 100% 50%; } 100% { background-position: 0 50%; } }
+
+/* ---------- skeletons de carga ---------- */
+/* Comparten el shimmer de `.skeleton` y las medidas de los layouts reales
+   (.entity-hero, .card, .section) para que no haya salto al llegar los datos. */
+.sk-header { display: grid; gap: 10px; margin-bottom: 22px; }
+.sk-hero {
+  display: grid; grid-template-columns: auto 1fr; gap: 24px; align-items: start;
+  padding: 24px; margin-bottom: 8px;
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg);
+}
+.sk-hero__art { width: 132px; height: 132px; border-radius: var(--radius-md); }
+.sk-hero__body { display: grid; gap: 12px; align-content: start; min-width: 0; }
+.sk-title { height: 30px; }
+.sk-badges { display: flex; flex-wrap: wrap; gap: 8px; }
+.sk-section { margin: 36px 0; display: grid; gap: 14px; }
+.sk-rows { display: grid; gap: 8px; }
+.sk-card { display: flex; gap: 12px; align-items: center; }
+.sk-card__body { display: grid; gap: 8px; flex: 1 1 auto; min-width: 0; }
+@media (max-width: 640px) {
+  .sk-hero { grid-template-columns: 1fr; }
+  .sk-hero__art { width: 88px; height: 88px; }
+}
+
+/* Lazy rendering nativo: el navegador pospone el pintado de las rejillas
+   grandes del catálogo mientras están fuera de pantalla. */
+.grid-cards { content-visibility: auto; contain-intrinsic-size: auto 420px; }
 
 /* ---------- pagination ---------- */
 .pagination { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 16px; flex-wrap: wrap; }
@@ -888,6 +917,7 @@ td.num { font-family: var(--font-mono); }
 /* Recarga en curso de una lista: la anterior se atenúa en vez de desaparecer
    detrás del spinner (mismo criterio que .cfind-list). */
 .grid-cards.is-refreshing { opacity: 0.6; }
+.dup-list.is-refreshing { opacity: 0.6; }
 .cfind {
   display: grid; gap: 8px; padding: 14px 18px; background: var(--surface); border: 1px solid var(--border);
   border-left: 3px solid var(--text-faint); border-radius: var(--radius-md); min-width: 0;

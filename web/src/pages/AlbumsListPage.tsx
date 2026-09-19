@@ -3,7 +3,8 @@ import { albumsApi, albumWrites } from "../lib/api";
 import { useEntityList } from "../lib/useEntityList";
 import { useOperator } from "../lib/OperatorContext";
 import { useToast } from "../lib/ToastContext";
-import { LoadingState, ErrorState, EmptyState } from "../components/StateViews";
+import { ErrorState, EmptyState } from "../components/StateViews";
+import { CardGridSkeleton } from "../components/Skeletons";
 import { EntityCard, initialOf } from "../components/EntityCard";
 import { Pagination } from "../components/Pagination";
 import { EntityFormModal } from "../components/EntityFormModal";
@@ -33,7 +34,7 @@ export function AlbumsListPage() {
         <input className="filter-input" value={q} onChange={(event) => setQuery(event.target.value)} placeholder="Filtrar por título…" />
       </div>
 
-      {loading && !data ? <LoadingState /> : error ? <ErrorState message={error} onRetry={reload} /> : !data || data.data.length === 0 ? (
+      {loading && !data ? <CardGridSkeleton count={12} label="Cargando discos…" /> : error ? <ErrorState message={error} onRetry={reload} /> : !data || data.data.length === 0 ? (
         <EmptyState title="No hay discos para mostrar" hint={q ? "Prueba con otro filtro." : undefined} />
       ) : (
         <>

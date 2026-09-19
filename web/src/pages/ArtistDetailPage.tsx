@@ -1,11 +1,13 @@
 import { useId, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
+import { GitMerge, PencilSimple, Trash } from "@phosphor-icons/react";
 import { artistsApi, artistMemberWrites, artistWrites } from "../lib/api";
 import { useAsync } from "../lib/useAsync";
 import { useMovedToRedirect } from "../lib/useMovedTo";
 import { useOperator } from "../lib/OperatorContext";
 import { useToast } from "../lib/ToastContext";
-import { LoadingState, ErrorState } from "../components/StateViews";
+import { ErrorState } from "../components/StateViews";
+import { DetailSkeleton } from "../components/Skeletons";
 import { EntityCard, initialOf } from "../components/EntityCard";
 import { AliasEditor } from "../components/AliasEditor";
 import { EntityFormModal } from "../components/EntityFormModal";
@@ -32,7 +34,7 @@ export function ArtistDetailPage() {
   const [editingMember, setEditingMember] = useState<ArtistMember | null>(null);
   const [merging, setMerging] = useState(false);
 
-  if (loading) return <LoadingState />;
+  if (loading) return <DetailSkeleton />;
   if (error || !artist) return <ErrorState message={error ?? "Artista no encontrado."} onRetry={reload} />;
 
   const meta = [artistTypeLabel(artist.artistType), artist.originCity ?? artist.originCountry,
@@ -45,7 +47,7 @@ export function ArtistDetailPage() {
 
       <div className="entity-hero">
         <span className="entity-hero__art">
-          {artist.pictureUrl ? <img src={artist.pictureUrl} alt="" /> : <span className="placeholder">{initialOf(artist.name)}</span>}
+          {artist.pictureUrl ? <img src={artist.pictureUrl} alt="" loading="lazy" decoding="async" /> : <span className="placeholder">{initialOf(artist.name)}</span>}
         </span>
         <div>
           <h1 className="entity-hero__title">{artist.name}</h1>
@@ -58,9 +60,15 @@ export function ArtistDetailPage() {
 
       {isAdmin ? (
         <div className="page-actions" style={{ marginTop: 14 }}>
-          <button type="button" className="btn btn--sm" onClick={() => setEditing(true)}>Editar</button>
-          <button type="button" className="btn btn--sm" onClick={() => setMerging(true)}>Fusionar con…</button>
-          <button type="button" className="btn btn--sm btn--danger" onClick={() => setDeleting(true)}>Retirar</button>
+          <button type="button" className="btn btn--sm" onClick={() => setEditing(true)}>
+            <PencilSimple size={14} weight="bold" aria-hidden="true" />Editar
+          </button>
+          <button type="button" className="btn btn--sm" onClick={() => setMerging(true)}>
+            <GitMerge size={14} weight="bold" aria-hidden="true" />Fusionar con…
+          </button>
+          <button type="button" className="btn btn--sm btn--danger" onClick={() => setDeleting(true)}>
+            <Trash size={14} weight="bold" aria-hidden="true" />Retirar
+          </button>
         </div>
       ) : null}
 
@@ -166,8 +174,12 @@ function MemberRow({ member, canEdit, onEdit, onChanged }: { canEdit: boolean; o
       <td className="row-actions">
         {canEdit ? (
           <>
-            <button type="button" className="btn btn--sm" onClick={onEdit} title="Corregir rol, periodo o persona">Editar</button>
-            <button type="button" className="btn btn--sm btn--danger" onClick={() => setRemoving(true)}>Quitar</button>
+            <button type="button" className="btn btn--sm" onClick={onEdit} title="Corregir rol, periodo o persona">
+              <PencilSimple size={14} weight="bold" aria-hidden="true" />Editar
+            </button>
+            <button type="button" className="btn btn--sm btn--danger" onClick={() => setRemoving(true)}>
+              <Trash size={14} weight="bold" aria-hidden="true" />Quitar
+            </button>
           </>
         ) : null}
       </td>
