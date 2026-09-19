@@ -293,12 +293,31 @@ export interface ReviewDetail extends ReviewListItem {
   resolvedAt: string | null; resolvedBy: string | null; resolutionNote: string | null;
   claims: Array<{
     id: number; field: string; rawValue: unknown; normalizedValue: unknown; confidence: string; status: string;
-    sourceName: string; sourceUrl: string | null; evidenceUrl: string | null;
+    sourceName: string; sourceTrustLevel: string; sourceUrl: string | null; evidenceUrl: string | null; claimCreatedAt: string;
   }>;
 }
 
 export interface ReviewActionResult {
   reviewId: number; kind: string; action: "accepted" | "rejected" | "resolved"; runId: number; status: string; detail: string;
+}
+
+export interface ConflictClaimEvidence {
+  id: number; side: "a" | "b"; value: unknown; confidence: string; status: string;
+  sourceName: string; sourceTrustLevel: "api" | "high" | "medium" | "low";
+  sourceUrl: string | null; evidenceUrl: string | null; claimCreatedAt: string;
+}
+export interface ConflictDecisionDetail {
+  id: number; status: string; entityKind: string; targetId: number | null; field: string;
+  valueA: unknown; valueB: unknown; claimA: ConflictClaimEvidence; claimB: ConflictClaimEvidence;
+}
+export interface TrustedConflictPreview {
+  previewHash: string; filter: Record<string, unknown>; total: number; truncated: boolean;
+  eligible: number; ties: number; unavailable: number;
+  items: Array<{
+    findingId: number; conflictId: number | null; title: string; eligible: boolean;
+    chosen: "a" | "b" | null; reason: string;
+    claimA: ConflictClaimEvidence | null; claimB: ConflictClaimEvidence | null;
+  }>;
 }
 
 // ---------- sources / claims / audit / youtube ----------
@@ -378,6 +397,7 @@ export interface CurationSummary {
   lastScan: CurationScan | null;
   lastCorrection: CurationScan | null;
   running: boolean;
+  duplicateCandidates: number;
   totals: { open: number; ignored: number; resolved: number; newInLastScan: number; chainedOpen: number };
   categories: CurationCategorySummary[];
 }
@@ -411,6 +431,7 @@ export interface CurationFinding {
   resolution: CurationResolution | null;
   resolvedByRunId: number | null;
   resolvedBy: string | null;
+  actions: Array<{ key: string; label: string; level: number }>;
 }
 
 export interface CurationScanResult {
