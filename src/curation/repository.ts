@@ -53,6 +53,7 @@ export interface CurationSummary {
   lastScan: ScanRow | null;
   lastCorrection: ScanRow | null;
   running: boolean;
+  duplicateCandidates: number;
   totals: { open: number; ignored: number; resolved: number; newInLastScan: number; chainedOpen: number };
   categories: CategorySummary[];
 }
@@ -130,7 +131,7 @@ async function lastOkScanId(queryable: CurationQueryable = getPool()): Promise<n
 
 export async function getCurationSummary(running: boolean): Promise<CurationSummary> {
   const pool = getPool();
-  const [last, correction, counts] = await Promise.all([
+  const [last, correction, counts, duplicates] = await Promise.all([
     // Un análisis omitido (otro proceso analizaba) no es «el último análisis», ni una verificación dirigida.
     pool.query<RawScan>(`SELECT ${SCAN_COLUMNS} FROM ingest.curation_scans WHERE status NOT IN ('running', 'skipped') AND scope = 'completo' ORDER BY id DESC LIMIT 1`),
     // La última verificación tras una corrección sí puede ser dirigida: es lo que verificó el último lote.
@@ -143,6 +144,10 @@ export async function getCurationSummary(running: boolean): Promise<CurationSumm
              count(*) FILTER (WHERE evidence ? 'triggeredBy')::int AS chained
         FROM ingest.curation_findings
        GROUP BY category, detector, signature, status, severity`),
+    pool.query<{ n: number }>(`
+      SELECT count(*)::int AS n
+        FROM ingest.review_queue
+       WHERE kind='person_duplicate' AND status IN ('open','in_progress')`),
   ]);
 
   const known = new Set(CATEGORIES.map((category) => category.key));
@@ -187,6 +192,7 @@ export async function getCurationSummary(running: boolean): Promise<CurationSumm
     lastScan: last.rows[0] ? scanRow(last.rows[0]) : null,
     lastCorrection: correction.rows[0] ? scanRow(correction.rows[0]) : null,
     running,
+    duplicateCandidates: duplicates.rows[0]?.n ?? 0,
     totals: {
       open: list.reduce((sum, item) => sum + item.open, 0),
       ignored: list.reduce((sum, item) => sum + item.ignored, 0),
