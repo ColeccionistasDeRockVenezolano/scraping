@@ -347,6 +347,7 @@ export function CurationFindingsPage() {
                   active={activeFindingId === finding.id}
                   onActivate={() => setActiveFindingId(finding.id)}
                   onFix={(actionKey) => setFixingFinding({ finding, actionKey })}
+                  onChanged={() => { reload(); void refreshSummary(); }}
                   onReviewTriggered={finding.triggeredBy.length ? async () => {
                     await curationApi.reviewTriggered(finding.id);
                     notify("success", "Cadena revisada; la causa quedó archivada.");
@@ -688,12 +689,12 @@ function FindingsHeader({ category, scanId, chained }: { category: CurationCateg
 
 function FindingCard({
   finding, categoryLabel, busy, onIgnore, onReopen, selected, onToggleSelected, active, onActivate,
-  onFix, onMerge, onDelete, onDistinct, onReviewTriggered,
+  onFix, onMerge, onDelete, onDistinct, onChanged, onReviewTriggered,
 }: {
   finding: CurationFinding; categoryLabel: string | undefined; busy: boolean; onIgnore: () => void; onReopen: () => void;
   selected: boolean; onToggleSelected: () => void; active: boolean; onActivate: () => void;
   onFix: (actionKey: string) => void; onMerge: (() => void) | undefined; onDelete: (() => void) | undefined; onDistinct: (() => void) | undefined;
-  onReviewTriggered: (() => Promise<void>) | undefined;
+  onChanged: () => void; onReviewTriggered: (() => Promise<void>) | undefined;
 }) {
   const change = lastChangeText(finding);
   const entityLink = refHref(finding.entity, finding);
@@ -740,7 +741,7 @@ function FindingCard({
       ) : null}
 
       {(finding.detector === "cola_de_revision" || finding.detector === "conflictos_abiertos") && finding.status === "open" ? (
-        <CurationDecisionPanel finding={finding} onDone={() => onActivate()} />
+        <CurationDecisionPanel finding={finding} onDone={onChanged} />
       ) : null}
 
       {finding.triggeredBy.length ? (
