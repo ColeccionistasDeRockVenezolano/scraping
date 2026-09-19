@@ -72,8 +72,10 @@ export interface ReviewEvidenceClaim {
   confidence: string;
   status: string;
   sourceName: string;
+  sourceTrustLevel: string;
   sourceUrl: string | null;
   evidenceUrl: string | null;
+  claimCreatedAt: string;
 }
 
 function num(value: string | null): number | null {
@@ -98,13 +100,18 @@ export async function getReviewQueueDetail(id: number): Promise<ReviewQueueDetai
     .filter((claimId): claimId is number => claimId !== null);
   const evidence = claimIds.length === 0 ? { rows: [] } : await pool.query<{
     id: string; field: string; raw_value: unknown; normalized_value: unknown; confidence: string; status: string;
-    source_name: string; source_url: string | null; evidence_url: string | null;
+    source_name: string; source_trust_level: string; source_url: string | null; evidence_url: string | null; claim_created_at: string;
   }>(
     `SELECT c.id::text, c.field, c.raw_value, c.normalized_value, c.confidence::text, c.status::text,
-            s.name AS source_name, s.url AS source_url, COALESCE(rp.canonical_url, rp.url) AS evidence_url
+            s.name AS source_name, s.trust_level::text AS source_trust_level, s.url AS source_url,
+            COALESCE(ev.url, rp.canonical_url, rp.url, s.url) AS evidence_url,
+            c.created_at::text AS claim_created_at
        FROM ingest.claims c
        JOIN ingest.sources s ON s.id = c.source_id
        LEFT JOIN ingest.raw_pages rp ON rp.id = c.raw_page_id
+       LEFT JOIN LATERAL (
+         SELECT e.url FROM ingest.claim_evidence e WHERE e.claim_id = c.id ORDER BY e.id LIMIT 1
+       ) ev ON true
       WHERE c.id = ANY($1::bigint[])
       ORDER BY array_position($1::bigint[], c.id)`,
     [claimIds],
@@ -125,7 +132,8 @@ export async function getReviewQueueDetail(id: number): Promise<ReviewQueueDetai
     claims: evidence.rows.map((claim) => ({
       id: Number(claim.id), field: claim.field, rawValue: claim.raw_value, normalizedValue: claim.normalized_value,
       confidence: claim.confidence, status: claim.status, sourceName: claim.source_name,
-      sourceUrl: claim.source_url, evidenceUrl: claim.evidence_url,
+      sourceTrustLevel: claim.source_trust_level, sourceUrl: claim.source_url, evidenceUrl: claim.evidence_url,
+      claimCreatedAt: claim.claim_created_at,
     })),
   };
 }
