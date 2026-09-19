@@ -471,6 +471,34 @@ export async function getFinding(id: number): Promise<FindingRow | undefined> {
   return result.rows[0] ? findingRow(result.rows[0], lastScan) : undefined;
 }
 
+
+/**
+ * Da por revisada la relación «apareció al corregir» sin borrar el historial:
+ * la causa deja de contar como pendiente (triggeredBy) y se archiva en
+ * triggeredHistory con quién y cuándo la revisó.
+ */
+export async function reviewTriggeredFinding(id: number, operator: string): Promise<FindingRow> {
+  const result = await getPool().query(\`
+    UPDATE ingest.curation_findings
+       SET evidence = (evidence - 'triggeredBy') || jsonb_build_object(
+         'triggeredHistory',
+         coalesce(evidence->'triggeredHistory', '[]'::jsonb) ||
+         jsonb_build_array(jsonb_build_object(
+           'reviewedAt', now()::text,
+           'reviewedBy', $2::text,
+           'causes', evidence->'triggeredBy'
+         ))
+       )
+     WHERE id=$1 AND evidence ? 'triggeredBy'\`,
+  [id, operator]);
+  if (!result.rowCount) {
+    const existing = await getFinding(id);
+    if (!existing) throw new CurationError("not_found", \`hallazgo inexistente: \${id}\`);
+    throw new CurationError("invalid", "este hallazgo no tiene una cadena pendiente por revisar");
+  }
+  return (await getFinding(id))!;
+}
+
 /**
  * Lee y bloquea un hallazgo dentro de la transacción de una corrección. La
  * vista previa es solo una promesa: entre ella y su turno otro operador puede
