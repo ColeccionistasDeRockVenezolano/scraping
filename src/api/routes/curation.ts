@@ -130,7 +130,7 @@ const conflictResolveBodySchema = z.union([
   z.object({ value: z.union([z.string().max(20_000), z.number(), z.boolean(), z.null()]), note: noteSchema.min(1) }).strict(),
 ]);
 const trustedPreviewSchema = z.object({
-  previewHash: z.string(), filter: z.record(z.unknown()), total: z.number().int(), truncated: z.boolean(),
+  previewHash: z.string(), filter: z.object(groupFilterSchema), total: z.number().int(), truncated: z.boolean(),
   eligible: z.number().int(), ties: z.number().int(), unavailable: z.number().int(),
   items: z.array(z.object({
     findingId: z.number().int(), conflictId: z.number().int().nullable(), title: z.string(),
