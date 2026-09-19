@@ -21,6 +21,21 @@ import { quote, type AnalysisContext, type Detector } from "./shared.js";
 
 const CATEGORY = "fichas_repetidas";
 
+type OrganizationClass = "label" | "studio" | "production";
+const ORGANIZATION_CLASS_WORDS: Readonly<Record<OrganizationClass, ReadonlySet<string>>> = {
+  label: new Set(["record", "records", "discos", "label", "sello"]),
+  studio: new Set(["studio", "studios", "estudio", "estudios"]),
+  production: new Set(["production", "productions", "produccion", "producciones", "productora"]),
+};
+
+function organizationClass(value: string): OrganizationClass | null {
+  const tokens = new Set(value.toLocaleLowerCase("es").normalize("NFD").replace(/\p{M}/gu, "").match(/[\p{L}\p{N}]+/gu) ?? []);
+  for (const [kind, words] of Object.entries(ORGANIZATION_CLASS_WORDS) as Array<[OrganizationClass, ReadonlySet<string>]>) {
+    if ([...words].some((word) => tokens.has(word))) return kind;
+  }
+  return null;
+}
+
 function groupBy<T>(items: T[], key: (item: T) => string): T[][] {
   const groups = new Map<string, T[]>();
   for (const item of items) {
@@ -126,6 +141,11 @@ export const equivalentOrganizations: Detector = {
         for (const [a, b] of pairsOf(group)) {
           const pair = pairKey("organization", a.id, b.id);
           if (seen.has(pair) || context.snapshot.handledPairs.has(pair)) continue;
+          const classA = organizationClass(a.value);
+          const classB = organizationClass(b.value);
+          // La raíz no basta: «Capitol Records» y «Capitol Studios» son
+          // organizaciones distintas aunque organizationKey las acerque.
+          if (signature === "sin_palabras_de_sello" && classA && classB && classA !== classB) continue;
           seen.add(pair);
           out.push(pairFinding(this, a, b, {
             signature, signatureLabel, severity,
