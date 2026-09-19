@@ -48,13 +48,16 @@ export function applicableActions(finding: ActionFinding): AnyFixAction[] {
 export interface ActionSummary {
   key: string;
   label: string;
+  description: string;
   /** Nivel para este hallazgo con los parámetros por defecto (sin leer la base). */
   level: ActionLevel;
 }
 
 /** Lo que el listado muestra por hallazgo: síncrono, sin consultas (los parámetros exactos los da `GET …/actions`). */
 export function summarizeActions(finding: ActionFinding): ActionSummary[] {
-  return applicableActions(finding).map((action) => ({ key: action.key, label: action.label, level: action.levelFor(finding, null) }));
+  return applicableActions(finding).map((action) => ({
+    key: action.key, label: action.label, description: action.description, level: action.levelFor(finding, null),
+  }));
 }
 
 /** La acción que se aplica si nadie elige otra: la primera que aplica. */
