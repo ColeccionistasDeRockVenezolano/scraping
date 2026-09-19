@@ -1,5 +1,6 @@
 // CRV · E8: historial de correcciones de Curaduría.
 import { useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import { ArrowCounterClockwise } from "@phosphor-icons/react";
 import { ApiError, curationApi } from "../lib/api";
 import { useAsync } from "../lib/useAsync";
@@ -23,9 +24,20 @@ function count(batch: Pick<FixBatchSummary, "counts">, key: string): number {
 }
 
 export function CurationCorrectionsPage() {
+  const [params, setParams] = useSearchParams();
+  const requestedBatch = Number(params.get("batch") ?? "") || null;
   const [offset, setOffset] = useState(0);
   const [status, setStatus] = useState<FixBatchStatus | "">("");
-  const [detailId, setDetailId] = useState<number | null>(null);
+  const [detailId, setDetailId] = useState<number | null>(requestedBatch);
+
+  function closeDetail() {
+    setDetailId(null);
+    if (params.has("batch")) {
+      const next = new URLSearchParams(params);
+      next.delete("batch");
+      setParams(next, { replace: true });
+    }
+  }
   const { data, loading, error, reload } = useAsync(
     () => curationApi.fixBatches({ limit: LIMIT, offset, ...(status ? { status } : {}) }),
     [offset, status],
@@ -94,7 +106,7 @@ export function CurationCorrectionsPage() {
       )}
 
       {detailId !== null ? (
-        <CorrectionDetail batchId={detailId} onChanged={reload} onClose={() => setDetailId(null)} />
+        <CorrectionDetail batchId={detailId} onChanged={reload} onClose={closeDetail} />
       ) : null}
     </>
   );
