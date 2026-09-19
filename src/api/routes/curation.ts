@@ -25,6 +25,9 @@ import { paginationQuerySchema, toPage } from "../pagination.js";
 import { idParamSchema, writeErrorResponses } from "../schemas.js";
 import { fixWithoutReview, type FixItemView } from "../../curation/actions/batches.js";
 import {
+  applyTrustedConflicts, getConflictDecision, previewTrustedConflicts, resolveConflictDecision,
+} from "../../curation/conflict-decisions.js";
+import {
   CurationError, DISTINCT_PAIR_KINDS, IGNORE_REASONS, declareDistinctPair,
   getCurationSummary, getFinding, ignoreFinding, ignoreGroup, listDistinctPairs, listFindings, listScans, removeDistinctPair, reopenFinding,
 } from "../../curation/repository.js";
@@ -43,6 +46,7 @@ const summarySchema = z.object({
   lastScan: scanSchema.nullable(),
   lastCorrection: scanSchema.nullable(),
   running: z.boolean(),
+  duplicateCandidates: z.number().int().nonnegative(),
   totals: z.object({ open: z.number(), ignored: z.number(), resolved: z.number(), newInLastScan: z.number(), chainedOpen: z.number() }),
   categories: z.array(z.object({
     key: z.string(), label: z.string(), description: z.string(),
@@ -110,6 +114,29 @@ export const groupFilterSchema = {
 const distinctPairSchema = z.object({
   id: z.number().int(), kind: z.enum(DISTINCT_PAIR_KINDS), aId: z.number().int(), bId: z.number().int(),
   decidedBy: z.string(), note: z.string(), createdAt: z.string(),
+});
+
+const conflictClaimSchema = z.object({
+  id: z.number().int(), side: z.enum(["a", "b"]), value: z.unknown(), confidence: z.string(), status: z.string(),
+  sourceName: z.string(), sourceTrustLevel: z.enum(["api", "high", "medium", "low"]),
+  sourceUrl: z.string().nullable(), evidenceUrl: z.string().nullable(), claimCreatedAt: z.string(),
+});
+const conflictDecisionSchema = z.object({
+  id: z.number().int(), status: z.string(), entityKind: z.string(), targetId: z.number().int().nullable(), field: z.string(),
+  valueA: z.unknown(), valueB: z.unknown(), claimA: conflictClaimSchema, claimB: conflictClaimSchema,
+});
+const conflictResolveBodySchema = z.union([
+  z.object({ side: z.enum(["a", "b"]), note: noteSchema.min(1) }).strict(),
+  z.object({ value: z.union([z.string().max(20_000), z.number(), z.boolean(), z.null()]), note: noteSchema.min(1) }).strict(),
+]);
+const trustedPreviewSchema = z.object({
+  previewHash: z.string(), filter: z.record(z.unknown()), total: z.number().int(), truncated: z.boolean(),
+  eligible: z.number().int(), ties: z.number().int(), unavailable: z.number().int(),
+  items: z.array(z.object({
+    findingId: z.number().int(), conflictId: z.number().int().nullable(), title: z.string(),
+    eligible: z.boolean(), chosen: z.enum(["a", "b"]).nullable(), reason: z.string(),
+    claimA: conflictClaimSchema.nullable(), claimB: conflictClaimSchema.nullable(),
+  })),
 });
 
 /**
@@ -205,6 +232,55 @@ export async function registerCurationRoutes(app: FastifyInstance): Promise<void
     const { rows, total } = await listFindings(request.query);
     return toPage(rows, total, request.query);
   });
+
+  server.get("/curation/conflicts/:id", {
+    schema: {
+      tags: ["curation"], summary: "Evidencia A/B de un conflicto, con fuente, confianza, fecha y URL.",
+      params: idParamSchema, response: { 200: conflictDecisionSchema, ...writeErrorResponses },
+    },
+  }, async (request) => getConflictDecision(request.params.id).catch(curationError));
+
+  server.post("/curation/conflicts/:id/resolve", {
+    schema: {
+      tags: ["curation:write"], summary: "Resuelve un conflicto eligiendo A, B u otro valor; conserva claims y auditoría.",
+      security: OPERATOR_SECURITY, params: idParamSchema, body: conflictResolveBodySchema,
+      response: { 200: z.object({ conflictId: z.number().int(), runId: z.number().int(), action: z.enum(["a", "b", "custom"]) }), ...writeErrorResponses },
+    },
+  }, async (request) => resolveConflictDecision(
+    request.params.id,
+    "side" in request.body ? { side: request.body.side } : { value: request.body.value },
+    request.operator,
+    request.body.note,
+  ).catch(curationError));
+
+  server.post("/curation/conflicts/trust-preview", {
+    schema: {
+      tags: ["curation"], summary: "Previsualiza decisiones solo donde una fuente tiene trust_level estrictamente mayor.",
+      security: OPERATOR_SECURITY, body: z.object(groupFilterSchema).strict(),
+      response: { 200: trustedPreviewSchema, ...writeErrorResponses },
+    },
+  }, async (request) => previewTrustedConflicts(request.body).catch(curationError));
+
+  server.post("/curation/conflicts/trust-apply", {
+    schema: {
+      tags: ["curation:write"], summary: "Aplica la vista previa por mayor trust_level; los empates permanecen abiertos.",
+      security: OPERATOR_SECURITY,
+      body: z.object({
+        filter: z.object(groupFilterSchema).strict(), previewHash: z.string().length(64),
+        excludeConflictIds: z.array(z.number().int().positive()).max(50_000).optional(),
+        note: noteSchema.min(1),
+      }).strict(),
+      response: { 200: z.object({
+        previewHash: z.string(), applied: z.number().int(), skippedStale: z.number().int(), failed: z.number().int(), remaining: z.number().int(),
+        outcomes: z.array(z.object({
+          findingId: z.number().int(), conflictId: z.number().int().nullable(),
+          status: z.enum(["applied", "skipped_stale", "failed"]), error: z.string().nullable(),
+        })),
+      }), ...writeErrorResponses },
+    },
+  }, async (request) => applyTrustedConflicts(
+    request.body.filter, request.body, request.operator,
+  ).catch(curationError));
 
   server.get("/curation/scans", {
     schema: {
