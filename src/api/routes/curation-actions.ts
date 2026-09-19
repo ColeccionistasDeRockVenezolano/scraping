@@ -13,10 +13,10 @@ import type { FastifyInstance } from "fastify";
 import type { ZodTypeProvider } from "fastify-type-provider-zod";
 import { z } from "zod";
 import { OPERATOR_SECURITY } from "../auth.js";
-import { paginationQuerySchema } from "../pagination.js";
+import { paginationQuerySchema, toPage } from "../pagination.js";
 import { idParamSchema, writeErrorResponses } from "../schemas.js";
 import {
-  BATCH_STATUSES, ITEM_STATUSES, applyFixBatch, describeFindingActions, getFixBatch, previewFixBatch, undoFixBatch,
+  BATCH_STATUSES, ITEM_STATUSES, applyFixBatch, describeFindingActions, getFixBatch, listFixBatches, previewFixBatch, undoFixBatch,
 } from "../../curation/actions/batches.js";
 import { waitForCurationScans } from "../../curation/scan.js";
 import { curationError, groupFilterSchema } from "./curation.js";
@@ -78,6 +78,24 @@ export const fixBatchSchema = z.object({
   pagination: z.object({ limit: z.number().int(), offset: z.number().int(), total: z.number().int() }),
 });
 
+const fixBatchSummarySchema = z.object({
+  id: z.number().int(),
+  mode: z.enum(["individual", "selected", "group", "auto", "undo"]),
+  filter: z.record(z.unknown()),
+  actionKey: z.string().nullable(),
+  requestedBy: z.string(),
+  appliedBy: z.string().nullable(),
+  note: z.string().nullable(),
+  status: z.enum(BATCH_STATUSES),
+  counts: z.record(z.unknown()),
+  verification: z.record(z.unknown()).nullable(),
+  createdAt: z.string(),
+  startedAt: z.string().nullable(),
+  finishedAt: z.string().nullable(),
+  undoOfBatchId: z.number().int().nullable(),
+  undoneByBatchId: z.number().int().nullable(),
+});
+
 const findingActionsSchema = z.object({
   findingId: z.number().int(),
   status: z.string(),
@@ -97,6 +115,23 @@ export async function registerCurationActionRoutes(app: FastifyInstance): Promis
   const server = app.withTypeProvider<ZodTypeProvider>();
   // Las verificaciones de lotes corren detrás de la respuesta, también con el autoanálisis apagado: el cierre las espera.
   app.addHook("onClose", async () => { await waitForCurationScans(); });
+
+  server.get("/curation/fixes", {
+    schema: {
+      tags: ["curation"],
+      summary: "Historial paginado de lotes de corrección, con filtro por estado.",
+      querystring: paginationQuerySchema.extend({ status: z.enum(BATCH_STATUSES).optional() }),
+      response: {
+        200: z.object({
+          data: z.array(fixBatchSummarySchema),
+          pagination: z.object({ limit: z.number().int(), offset: z.number().int(), total: z.number().int() }),
+        }),
+      },
+    },
+  }, async (request) => {
+    const { rows, total } = await listFixBatches(request.query);
+    return toPage(rows, total, request.query);
+  });
 
   server.get("/curation/findings/:id/actions", {
     schema: {
