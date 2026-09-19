@@ -546,6 +546,24 @@ export interface FixItem {
   appliedAt: string | null;
 }
 
+export interface FixBatchSummary {
+  id: number;
+  mode: FixBatchMode;
+  filter: Record<string, unknown>;
+  actionKey: string | null;
+  requestedBy: string;
+  appliedBy: string | null;
+  note: string | null;
+  status: FixBatchStatus;
+  counts: Record<string, unknown>;
+  verification: Record<string, unknown> | null;
+  createdAt: string;
+  startedAt: string | null;
+  finishedAt: string | null;
+  undoOfBatchId: number | null;
+  undoneByBatchId: number | null;
+}
+
 export interface FixBatch {
   id: number;
   mode: FixBatchMode;
