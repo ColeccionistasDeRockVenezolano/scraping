@@ -686,10 +686,14 @@ function FindingsHeader({ category, scanId, chained }: { category: CurationCateg
   );
 }
 
-function FindingCard({ finding, categoryLabel, busy, onIgnore, onReopen, selected, onToggleSelected, onFix, onMerge, onDelete, onDistinct }: {
+function FindingCard({
+  finding, categoryLabel, busy, onIgnore, onReopen, selected, onToggleSelected, active, onActivate,
+  onFix, onMerge, onDelete, onDistinct, onReviewTriggered,
+}: {
   finding: CurationFinding; categoryLabel: string | undefined; busy: boolean; onIgnore: () => void; onReopen: () => void;
-  selected: boolean; onToggleSelected: () => void;
-  onFix: (() => void) | undefined; onMerge: (() => void) | undefined; onDelete: (() => void) | undefined; onDistinct: (() => void) | undefined;
+  selected: boolean; onToggleSelected: () => void; active: boolean; onActivate: () => void;
+  onFix: (actionKey: string) => void; onMerge: (() => void) | undefined; onDelete: (() => void) | undefined; onDistinct: (() => void) | undefined;
+  onReviewTriggered: (() => Promise<void>) | undefined;
 }) {
   const change = lastChangeText(finding);
   const entityLink = refHref(finding.entity, finding);
@@ -697,14 +701,18 @@ function FindingCard({ finding, categoryLabel, busy, onIgnore, onReopen, selecte
   const evidence = Object.entries(finding.evidence).filter(([name]) => !HIDDEN_EVIDENCE.has(name));
 
   return (
-    <article className={`cfind cfind--${finding.severity}${finding.status !== "open" ? " is-closed" : ""}${selected ? " cfind--picked" : ""}`}>
+    <article
+      data-finding-id={finding.id}
+      tabIndex={0}
+      onFocus={onActivate}
+      className={`cfind cfind--${finding.severity}${finding.status !== "open" ? " is-closed" : ""}${selected ? " cfind--picked" : ""}${active ? " is-keyboard-active" : ""}`}
+    >
       <div className="cfind__badges">
-        {/* Solo si hay algo que corregir de un clic: seleccionar un hallazgo sin `suggestedValue`
-            solo serviría para que «Corregir seleccionados» lo reporte como no corregible (A2). */}
-        {finding.status === "open" && finding.suggestedValue !== null ? (
+        {/* La selección depende de acciones tipadas E4/E5/E6, no de suggestedValue. */}
+        {finding.status === "open" && finding.actions.some((action) => action.level <= 2) ? (
           <label className="visually-hidden" htmlFor={`cfind-pick-${finding.id}`}>Seleccionar este hallazgo</label>
         ) : null}
-        {finding.status === "open" && finding.suggestedValue !== null ? (
+        {finding.status === "open" && finding.actions.some((action) => action.level <= 2) ? (
           <input id={`cfind-pick-${finding.id}`} type="checkbox" checked={selected} onChange={onToggleSelected} />
         ) : null}
         <span className={`badge ${SEVERITY_BADGE[finding.severity]}`}>{SEVERITY_LABEL[finding.severity]}</span>
@@ -731,6 +739,10 @@ function FindingCard({ finding, categoryLabel, busy, onIgnore, onReopen, selecte
         <p className="cfind__suggestion"><Lightbulb size={15} weight="bold" aria-hidden="true" /> {finding.suggestion}</p>
       ) : null}
 
+      {(finding.detector === "cola_de_revision" || finding.detector === "conflictos_abiertos") && finding.status === "open" ? (
+        <CurationDecisionPanel finding={finding} onDone={() => onActivate()} />
+      ) : null}
+
       {finding.triggeredBy.length ? (
         <div className="cfind__chain">
           <ArrowBendDownRight size={15} weight="bold" aria-hidden="true" />
@@ -740,6 +752,11 @@ function FindingCard({ finding, categoryLabel, busy, onIgnore, onReopen, selecte
               <span key={cause.id}>{index ? " · " : ""}«{cause.title}»</span>
             ))}
           </span>
+          {onReviewTriggered ? (
+            <button type="button" className="btn btn--sm btn--outline" onClick={() => void onReviewTriggered()}>
+              Marcar como revisado
+            </button>
+          ) : null}
         </div>
       ) : null}
 
@@ -787,18 +804,28 @@ function FindingCard({ finding, categoryLabel, busy, onIgnore, onReopen, selecte
       ) : null}
 
       <div className="cfind__foot">
-        {evidence.length ? (
-          <details className="cfind__evidence">
-            <summary>Evidencia <CaretDown size={12} weight="bold" aria-hidden="true" /></summary>
-            <pre className="evidence-block">{JSON.stringify(Object.fromEntries(evidence), null, 2)}</pre>
-          </details>
-        ) : <span />}
+        {evidence.length ? <CurationEvidence evidence={Object.fromEntries(evidence)} /> : <span />}
         <div className="cfind__actions">
-          {finding.status === "open" && onFix ? (
-            <button type="button" className="btn btn--sm btn--primary" onClick={onFix} disabled={busy}
-              title="Aplicar la corrección a la ficha">
-              <Wrench size={14} weight="bold" aria-hidden="true" /> Corregir
+          {finding.status === "open" && finding.actions[0] && finding.actions[0].level <= 2 ? (
+            <button
+              type="button" className="btn btn--sm btn--primary"
+              onClick={() => onFix(finding.actions[0]!.key)} disabled={busy}
+              title={`Acción recomendada · nivel ${finding.actions[0].level}`}
+            >
+              <Wrench size={14} weight="bold" aria-hidden="true" /> {finding.actions[0].label} · N{finding.actions[0].level}
             </button>
+          ) : null}
+          {finding.status === "open" && finding.actions.slice(1).some((action) => action.level <= 2) ? (
+            <details className="cfind__more-actions">
+              <summary className="btn btn--sm btn--outline">Otras correcciones</summary>
+              <div className="cfind__more-menu">
+                {finding.actions.slice(1).filter((action) => action.level <= 2).map((action) => (
+                  <button key={action.key} type="button" className="btn btn--sm btn--outline" onClick={() => onFix(action.key)}>
+                    {action.label} · nivel {action.level}
+                  </button>
+                ))}
+              </div>
+            </details>
           ) : null}
           {finding.status === "open" && onMerge ? (
             <button type="button" className="btn btn--sm btn--outline" onClick={onMerge} disabled={busy}
