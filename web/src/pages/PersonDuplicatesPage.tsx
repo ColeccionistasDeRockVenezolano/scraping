@@ -8,8 +8,8 @@
 // señales encontradas, con tope en 1 (src/review/person-candidates.ts). Aquí se
 // muestra en puntos sobre 100 y con su desglose, para que el número se pueda
 // leer sin conocer el código.
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useSearchParams } from "react-router-dom";
 import { ArrowSquareOut, CaretDown, CaretUp, GitMerge, Info, X } from "@phosphor-icons/react";
 import { ApiError, entityMergeApi, reviewApi } from "../lib/api";
 import { useAsync } from "../lib/useAsync";
@@ -113,6 +113,8 @@ interface CandidatePair {
 
 export function PersonDuplicatesPage() {
   const { notify } = useToast();
+  const [params] = useSearchParams();
+  const requestedReviewId = Number(params.get("reviewId") ?? "") || null;
   const [offset, setOffset] = useState(0);
   const [onlyStrong, setOnlyStrong] = useState(false);
   const [merging, setMerging] = useState<CandidatePair | null>(null);
@@ -125,6 +127,12 @@ export function PersonDuplicatesPage() {
     }),
     [offset, onlyStrong],
   );
+
+  useEffect(() => {
+    if (!requestedReviewId || !data || merging) return;
+    const candidate = data.data.find((item) => item.reviewId === requestedReviewId);
+    if (candidate) setMerging({ reviewId: candidate.reviewId, a: candidate.a, b: candidate.b });
+  }, [requestedReviewId, data, merging]);
 
   const setFilter = (strong: boolean) => { setOnlyStrong(strong); setOffset(0); };
 
@@ -151,6 +159,9 @@ export function PersonDuplicatesPage() {
         Pares de fichas de persona que podrían ser la misma. Revisa por qué se proponen y decide si se
         fusionan o son personas distintas. Nada cambia sin tu decisión.
       </p>
+      {requestedReviewId ? (
+        <p className="alert-block">Revisión solicitada: <span className="mono">#{requestedReviewId}</span>. Si está en esta página, el comparador se abre automáticamente.</p>
+      ) : null}
 
       <ScoreGuide />
 
