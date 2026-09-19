@@ -139,6 +139,7 @@ export function ReviewQueueDetailPage() {
             {review.claims.map((claim) => (
               <article className="evidence-card" key={claim.id}>
                 <div className="evidence-card__header"><strong>{claim.sourceName}</strong><span className="badge">{claim.confidence}</span></div>
+                <p><span>Fuente</span>{claim.sourceTrustLevel} · claim {new Date(claim.claimCreatedAt).toLocaleDateString("es-VE")}</p>
                 <p><span>Campo</span>{claim.field}</p>
                 <pre>{displayValue(claim.rawValue)}</pre>
                 {(claim.evidenceUrl ?? claim.sourceUrl) ? <a href={claim.evidenceUrl ?? claim.sourceUrl ?? "#"} target="_blank" rel="noreferrer">Abrir fuente original</a> : null}
