@@ -39,10 +39,13 @@
     "tipo_de_disco_contra_titulo": 1,
     "url_en_nombre": 1,
     "varias_personas_en_una": 0.9,
-    "tipo_de_organizacion_contra_nombre": 0.9,
+    "organizacion_sin_clasificar": 0.9,
     "disco_sin_pistas": 0.9,
     "pistas_sin_duracion_en_disco_con_duraciones": 0.9,
-    "mayusculas_sostenidas": 0.9
+    "mayusculas_sostenidas": 0.9,
+    "creditos_duplicados": 1,
+    "rol_contra_tipo_de_credito": 0.9,
+    "alias_que_choca_con_otra_ficha": 0.9
   },
   "count": 487,
   "findings": [
@@ -7035,7 +7038,7 @@
       "fixedIn": "curation-rules.v2"
     },
     {
-      "detector": "tipo_de_organizacion_contra_nombre",
+      "detector": "organizacion_sin_clasificar",
       "signature": "sin_clasificar",
       "entity_kind": "organization",
       "entity_id": 315,
@@ -7044,7 +7047,7 @@
       "expectedSignature": "sin_clasificar"
     },
     {
-      "detector": "tipo_de_organizacion_contra_nombre",
+      "detector": "organizacion_sin_clasificar",
       "signature": "sin_clasificar",
       "entity_kind": "organization",
       "entity_id": 316,
@@ -7053,7 +7056,7 @@
       "expectedSignature": "sin_clasificar"
     },
     {
-      "detector": "tipo_de_organizacion_contra_nombre",
+      "detector": "organizacion_sin_clasificar",
       "signature": "sin_clasificar",
       "entity_kind": "organization",
       "entity_id": 318,
@@ -7062,7 +7065,7 @@
       "expectedSignature": "sin_clasificar"
     },
     {
-      "detector": "tipo_de_organizacion_contra_nombre",
+      "detector": "organizacion_sin_clasificar",
       "signature": "sin_clasificar",
       "entity_kind": "organization",
       "entity_id": 320,
@@ -7071,7 +7074,7 @@
       "expectedSignature": "sin_clasificar"
     },
     {
-      "detector": "tipo_de_organizacion_contra_nombre",
+      "detector": "organizacion_sin_clasificar",
       "signature": "sin_clasificar",
       "entity_kind": "organization",
       "entity_id": 321,
@@ -7080,7 +7083,7 @@
       "expectedSignature": "sin_clasificar"
     },
     {
-      "detector": "tipo_de_organizacion_contra_nombre",
+      "detector": "organizacion_sin_clasificar",
       "signature": "contradice",
       "entity_kind": "organization",
       "entity_id": 115,
@@ -7090,7 +7093,7 @@
       "fixedIn": "curation-rules.v5"
     },
     {
-      "detector": "tipo_de_organizacion_contra_nombre",
+      "detector": "organizacion_sin_clasificar",
       "signature": "contradice",
       "entity_kind": "organization",
       "entity_id": 29,
@@ -7271,6 +7274,1271 @@
       "verdict": "false_positive",
       "expectedSignature": "mayusculas_sostenidas",
       "fixedIn": "curation-rules.v5"
+    },
+    {
+      "detector": "organizacion_sin_clasificar",
+      "signature": "sin_clasificar",
+      "entity_kind": "organization",
+      "entity_id": 325,
+      "value": "other",
+      "verdict": "true_positive",
+      "expectedSignature": "sin_clasificar"
+    },
+    {
+      "detector": "organizacion_sin_clasificar",
+      "signature": "sin_clasificar",
+      "entity_kind": "organization",
+      "entity_id": 326,
+      "value": "other",
+      "verdict": "true_positive",
+      "expectedSignature": "sin_clasificar"
+    },
+    {
+      "detector": "organizacion_sin_clasificar",
+      "signature": "sin_clasificar",
+      "entity_kind": "organization",
+      "entity_id": 327,
+      "value": "other",
+      "verdict": "true_positive",
+      "expectedSignature": "sin_clasificar"
+    },
+    {
+      "detector": "organizacion_sin_clasificar",
+      "signature": "sin_clasificar",
+      "entity_kind": "organization",
+      "entity_id": 328,
+      "value": "other",
+      "verdict": "true_positive",
+      "expectedSignature": "sin_clasificar"
+    },
+    {
+      "detector": "organizacion_sin_clasificar",
+      "signature": "sin_clasificar",
+      "entity_kind": "organization",
+      "entity_id": 329,
+      "value": "other",
+      "verdict": "true_positive",
+      "expectedSignature": "sin_clasificar"
+    },
+    {
+      "detector": "organizacion_sin_clasificar",
+      "signature": "sin_clasificar",
+      "entity_kind": "organization",
+      "entity_id": 330,
+      "value": "other",
+      "verdict": "true_positive",
+      "expectedSignature": "sin_clasificar"
+    },
+    {
+      "detector": "organizacion_sin_clasificar",
+      "signature": "sin_clasificar",
+      "entity_kind": "organization",
+      "entity_id": 331,
+      "value": "other",
+      "verdict": "true_positive",
+      "expectedSignature": "sin_clasificar"
+    },
+    {
+      "detector": "organizacion_sin_clasificar",
+      "signature": "sin_clasificar",
+      "entity_kind": "organization",
+      "entity_id": 333,
+      "value": "other",
+      "verdict": "true_positive",
+      "expectedSignature": "sin_clasificar"
+    },
+    {
+      "detector": "organizacion_sin_clasificar",
+      "signature": "sin_clasificar",
+      "entity_kind": "organization",
+      "entity_id": 334,
+      "value": "other",
+      "verdict": "true_positive",
+      "expectedSignature": "sin_clasificar"
+    },
+    {
+      "detector": "organizacion_sin_clasificar",
+      "signature": "sin_clasificar",
+      "entity_kind": "organization",
+      "entity_id": 335,
+      "value": "other",
+      "verdict": "true_positive",
+      "expectedSignature": "sin_clasificar"
+    },
+    {
+      "detector": "organizacion_sin_clasificar",
+      "signature": "sin_clasificar",
+      "entity_kind": "organization",
+      "entity_id": 336,
+      "value": "other",
+      "verdict": "true_positive",
+      "expectedSignature": "sin_clasificar"
+    },
+    {
+      "detector": "organizacion_sin_clasificar",
+      "signature": "sin_clasificar",
+      "entity_kind": "organization",
+      "entity_id": 339,
+      "value": "other",
+      "verdict": "true_positive",
+      "expectedSignature": "sin_clasificar"
+    },
+    {
+      "detector": "organizacion_sin_clasificar",
+      "signature": "sin_clasificar",
+      "entity_kind": "organization",
+      "entity_id": 342,
+      "value": "other",
+      "verdict": "true_positive",
+      "expectedSignature": "sin_clasificar"
+    },
+    {
+      "detector": "organizacion_sin_clasificar",
+      "signature": "sin_clasificar",
+      "entity_kind": "organization",
+      "entity_id": 343,
+      "value": "other",
+      "verdict": "true_positive",
+      "expectedSignature": "sin_clasificar"
+    },
+    {
+      "detector": "organizacion_sin_clasificar",
+      "signature": "sin_clasificar",
+      "entity_kind": "organization",
+      "entity_id": 344,
+      "value": "other",
+      "verdict": "true_positive",
+      "expectedSignature": "sin_clasificar"
+    },
+    {
+      "detector": "organizacion_sin_clasificar",
+      "signature": "sin_clasificar",
+      "entity_kind": "organization",
+      "entity_id": 349,
+      "value": "other",
+      "verdict": "true_positive",
+      "expectedSignature": "sin_clasificar"
+    },
+    {
+      "detector": "disco_sin_pistas",
+      "signature": "disco_sin_pistas",
+      "entity_kind": "album",
+      "entity_id": 1023,
+      "value": "Carne de Manzanas",
+      "verdict": "true_positive",
+      "expectedSignature": "disco_sin_pistas"
+    },
+    {
+      "detector": "disco_sin_pistas",
+      "signature": "disco_sin_pistas",
+      "entity_kind": "album",
+      "entity_id": 1026,
+      "value": "Collapse Time",
+      "verdict": "true_positive",
+      "expectedSignature": "disco_sin_pistas"
+    },
+    {
+      "detector": "disco_sin_pistas",
+      "signature": "disco_sin_pistas",
+      "entity_kind": "album",
+      "entity_id": 1029,
+      "value": "Voces de Libertad",
+      "verdict": "true_positive",
+      "expectedSignature": "disco_sin_pistas"
+    },
+    {
+      "detector": "disco_sin_pistas",
+      "signature": "disco_sin_pistas",
+      "entity_kind": "album",
+      "entity_id": 1030,
+      "value": "This Time",
+      "verdict": "true_positive",
+      "expectedSignature": "disco_sin_pistas"
+    },
+    {
+      "detector": "disco_sin_pistas",
+      "signature": "disco_sin_pistas",
+      "entity_kind": "album",
+      "entity_id": 1037,
+      "value": "Demo",
+      "verdict": "true_positive",
+      "expectedSignature": "disco_sin_pistas"
+    },
+    {
+      "detector": "disco_sin_pistas",
+      "signature": "disco_sin_pistas",
+      "entity_kind": "album",
+      "entity_id": 1052,
+      "value": "Moira",
+      "verdict": "true_positive",
+      "expectedSignature": "disco_sin_pistas"
+    },
+    {
+      "detector": "disco_sin_pistas",
+      "signature": "disco_sin_pistas",
+      "entity_kind": "album",
+      "entity_id": 1054,
+      "value": "Victoria Ancestral",
+      "verdict": "true_positive",
+      "expectedSignature": "disco_sin_pistas"
+    },
+    {
+      "detector": "disco_sin_pistas",
+      "signature": "disco_sin_pistas",
+      "entity_kind": "album",
+      "entity_id": 1055,
+      "value": "Sombras de Muerte",
+      "verdict": "true_positive",
+      "expectedSignature": "disco_sin_pistas"
+    },
+    {
+      "detector": "disco_sin_pistas",
+      "signature": "disco_sin_pistas",
+      "entity_kind": "album",
+      "entity_id": 1058,
+      "value": "Inconciencia Humana",
+      "verdict": "true_positive",
+      "expectedSignature": "disco_sin_pistas"
+    },
+    {
+      "detector": "disco_sin_pistas",
+      "signature": "disco_sin_pistas",
+      "entity_kind": "album",
+      "entity_id": 1059,
+      "value": "Demo",
+      "verdict": "true_positive",
+      "expectedSignature": "disco_sin_pistas"
+    },
+    {
+      "detector": "disco_sin_pistas",
+      "signature": "disco_sin_pistas",
+      "entity_kind": "album",
+      "entity_id": 1060,
+      "value": "Dos",
+      "verdict": "true_positive",
+      "expectedSignature": "disco_sin_pistas"
+    },
+    {
+      "detector": "disco_sin_pistas",
+      "signature": "disco_sin_pistas",
+      "entity_kind": "album",
+      "entity_id": 1066,
+      "value": "From the Abyss",
+      "verdict": "true_positive",
+      "expectedSignature": "disco_sin_pistas"
+    },
+    {
+      "detector": "pistas_sin_duracion_en_disco_con_duraciones",
+      "signature": "mezcla_con_y_sin_duracion",
+      "entity_kind": "album",
+      "entity_id": 1717,
+      "value": "Encounters Of The Worst Kind",
+      "verdict": "true_positive",
+      "expectedSignature": "mezcla_con_y_sin_duracion"
+    },
+    {
+      "detector": "pistas_sin_duracion_en_disco_con_duraciones",
+      "signature": "mezcla_con_y_sin_duracion",
+      "entity_kind": "album",
+      "entity_id": 1720,
+      "value": "The Revenge Of The Beast",
+      "verdict": "true_positive",
+      "expectedSignature": "mezcla_con_y_sin_duracion"
+    },
+    {
+      "detector": "pistas_sin_duracion_en_disco_con_duraciones",
+      "signature": "mezcla_con_y_sin_duracion",
+      "entity_kind": "album",
+      "entity_id": 1726,
+      "value": "Kazmor El Prisionero",
+      "verdict": "true_positive",
+      "expectedSignature": "mezcla_con_y_sin_duracion"
+    },
+    {
+      "detector": "pistas_sin_duracion_en_disco_con_duraciones",
+      "signature": "mezcla_con_y_sin_duracion",
+      "entity_kind": "album",
+      "entity_id": 1741,
+      "value": "Behold The Zombie Nation Ep",
+      "verdict": "true_positive",
+      "expectedSignature": "mezcla_con_y_sin_duracion"
+    },
+    {
+      "detector": "pistas_sin_duracion_en_disco_con_duraciones",
+      "signature": "mezcla_con_y_sin_duracion",
+      "entity_kind": "album",
+      "entity_id": 1745,
+      "value": "Devoid of Humanity",
+      "verdict": "true_positive",
+      "expectedSignature": "mezcla_con_y_sin_duracion"
+    },
+    {
+      "detector": "pistas_sin_duracion_en_disco_con_duraciones",
+      "signature": "mezcla_con_y_sin_duracion",
+      "entity_kind": "album",
+      "entity_id": 1753,
+      "value": "Bleeding Wounds",
+      "verdict": "true_positive",
+      "expectedSignature": "mezcla_con_y_sin_duracion"
+    },
+    {
+      "detector": "pistas_sin_duracion_en_disco_con_duraciones",
+      "signature": "mezcla_con_y_sin_duracion",
+      "entity_kind": "album",
+      "entity_id": 1796,
+      "value": "En Honor a Simón",
+      "verdict": "true_positive",
+      "expectedSignature": "mezcla_con_y_sin_duracion"
+    },
+    {
+      "detector": "pistas_sin_duracion_en_disco_con_duraciones",
+      "signature": "mezcla_con_y_sin_duracion",
+      "entity_kind": "album",
+      "entity_id": 1806,
+      "value": "Unleash The Truth Pack",
+      "verdict": "true_positive",
+      "expectedSignature": "mezcla_con_y_sin_duracion"
+    },
+    {
+      "detector": "pistas_sin_duracion_en_disco_con_duraciones",
+      "signature": "mezcla_con_y_sin_duracion",
+      "entity_kind": "album",
+      "entity_id": 1843,
+      "value": "El Gran Escape",
+      "verdict": "true_positive",
+      "expectedSignature": "mezcla_con_y_sin_duracion"
+    },
+    {
+      "detector": "pistas_sin_duracion_en_disco_con_duraciones",
+      "signature": "mezcla_con_y_sin_duracion",
+      "entity_kind": "album",
+      "entity_id": 1847,
+      "value": "Press Start to Try Again",
+      "verdict": "true_positive",
+      "expectedSignature": "mezcla_con_y_sin_duracion"
+    },
+    {
+      "detector": "pistas_sin_duracion_en_disco_con_duraciones",
+      "signature": "mezcla_con_y_sin_duracion",
+      "entity_kind": "album",
+      "entity_id": 1897,
+      "value": "The Encounter",
+      "verdict": "true_positive",
+      "expectedSignature": "mezcla_con_y_sin_duracion"
+    },
+    {
+      "detector": "pistas_sin_duracion_en_disco_con_duraciones",
+      "signature": "mezcla_con_y_sin_duracion",
+      "entity_kind": "album",
+      "entity_id": 1901,
+      "value": "Kharma",
+      "verdict": "true_positive",
+      "expectedSignature": "mezcla_con_y_sin_duracion"
+    },
+    {
+      "detector": "creditos_duplicados",
+      "signature": "album",
+      "entity_kind": "album",
+      "entity_id": 108,
+      "value": "En Concierto En Este País",
+      "verdict": "true_positive",
+      "expectedSignature": "album"
+    },
+    {
+      "detector": "creditos_duplicados",
+      "signature": "album",
+      "entity_kind": "album",
+      "entity_id": 113,
+      "value": "Pueblo Chico Infierno Grande",
+      "verdict": "true_positive",
+      "expectedSignature": "album"
+    },
+    {
+      "detector": "creditos_duplicados",
+      "signature": "album",
+      "entity_kind": "album",
+      "entity_id": 117,
+      "value": "Wheels Of Time / Night And Daydream",
+      "verdict": "true_positive",
+      "expectedSignature": "album"
+    },
+    {
+      "detector": "creditos_duplicados",
+      "signature": "album",
+      "entity_kind": "album",
+      "entity_id": 153,
+      "value": "Claroscuro",
+      "verdict": "true_positive",
+      "expectedSignature": "album"
+    },
+    {
+      "detector": "creditos_duplicados",
+      "signature": "album",
+      "entity_kind": "album",
+      "entity_id": 169,
+      "value": "En Vivo En El Teresa Carreño",
+      "verdict": "true_positive",
+      "expectedSignature": "album"
+    },
+    {
+      "detector": "creditos_duplicados",
+      "signature": "album",
+      "entity_kind": "album",
+      "entity_id": 199,
+      "value": "Desde Una Orilla A La Otra",
+      "verdict": "true_positive",
+      "expectedSignature": "album"
+    },
+    {
+      "detector": "creditos_duplicados",
+      "signature": "album",
+      "entity_kind": "album",
+      "entity_id": 235,
+      "value": "Lapamariposa",
+      "verdict": "true_positive",
+      "expectedSignature": "album"
+    },
+    {
+      "detector": "creditos_duplicados",
+      "signature": "album",
+      "entity_kind": "album",
+      "entity_id": 247,
+      "value": "Arepa 3000: A Venezuelan Journey Into Space",
+      "verdict": "true_positive",
+      "expectedSignature": "album"
+    },
+    {
+      "detector": "creditos_duplicados",
+      "signature": "album",
+      "entity_kind": "album",
+      "entity_id": 334,
+      "value": "Cruel {Instinto De Morder}",
+      "verdict": "true_positive",
+      "expectedSignature": "album"
+    },
+    {
+      "detector": "creditos_duplicados",
+      "signature": "album",
+      "entity_kind": "album",
+      "entity_id": 462,
+      "value": "Cinema 0",
+      "verdict": "true_positive",
+      "expectedSignature": "album"
+    },
+    {
+      "detector": "creditos_duplicados",
+      "signature": "album",
+      "entity_kind": "album",
+      "entity_id": 660,
+      "value": "Azúcar, Cacao & Leche Vol. 1",
+      "verdict": "true_positive",
+      "expectedSignature": "album"
+    },
+    {
+      "detector": "creditos_duplicados",
+      "signature": "track",
+      "entity_kind": "track",
+      "entity_id": 27666,
+      "value": "Por alguien como tu",
+      "verdict": "true_positive",
+      "expectedSignature": "track"
+    },
+    {
+      "detector": "creditos_duplicados",
+      "signature": "track",
+      "entity_kind": "track",
+      "entity_id": 27671,
+      "value": "Taxi",
+      "verdict": "true_positive",
+      "expectedSignature": "track"
+    },
+    {
+      "detector": "creditos_duplicados",
+      "signature": "track",
+      "entity_kind": "track",
+      "entity_id": 27675,
+      "value": "Nunca Nunca",
+      "verdict": "true_positive",
+      "expectedSignature": "track"
+    },
+    {
+      "detector": "creditos_duplicados",
+      "signature": "track",
+      "entity_kind": "track",
+      "entity_id": 27678,
+      "value": "Dónde, Dónde",
+      "verdict": "true_positive",
+      "expectedSignature": "track"
+    },
+    {
+      "detector": "creditos_duplicados",
+      "signature": "track",
+      "entity_kind": "track",
+      "entity_id": 4764,
+      "value": "Si Estuvieras Aquí",
+      "verdict": "true_positive",
+      "expectedSignature": "track"
+    },
+    {
+      "detector": "creditos_duplicados",
+      "signature": "track",
+      "entity_kind": "track",
+      "entity_id": 5403,
+      "value": "Ska De Acá",
+      "verdict": "true_positive",
+      "expectedSignature": "track"
+    },
+    {
+      "detector": "creditos_duplicados",
+      "signature": "track",
+      "entity_kind": "track",
+      "entity_id": 5404,
+      "value": "Con Un Daiquirí En La Boca Del Ángel",
+      "verdict": "true_positive",
+      "expectedSignature": "track"
+    },
+    {
+      "detector": "creditos_duplicados",
+      "signature": "track",
+      "entity_kind": "track",
+      "entity_id": 5415,
+      "value": "Amargo Rencor",
+      "verdict": "true_positive",
+      "expectedSignature": "track"
+    },
+    {
+      "detector": "creditos_duplicados",
+      "signature": "track",
+      "entity_kind": "track",
+      "entity_id": 5427,
+      "value": "Skápate Conmigo",
+      "verdict": "true_positive",
+      "expectedSignature": "track"
+    },
+    {
+      "detector": "creditos_duplicados",
+      "signature": "track",
+      "entity_kind": "track",
+      "entity_id": 5439,
+      "value": "Valle De Balas",
+      "verdict": "true_positive",
+      "expectedSignature": "track"
+    },
+    {
+      "detector": "creditos_duplicados",
+      "signature": "track",
+      "entity_kind": "track",
+      "entity_id": 5449,
+      "value": "Mirándonos*",
+      "verdict": "true_positive",
+      "expectedSignature": "track"
+    },
+    {
+      "detector": "rol_contra_tipo_de_credito",
+      "signature": "musician_o_guest",
+      "entity_kind": "album",
+      "entity_id": 522,
+      "value": "other",
+      "verdict": "true_positive",
+      "expectedSignature": "musician_o_guest"
+    },
+    {
+      "detector": "rol_contra_tipo_de_credito",
+      "signature": "recording",
+      "entity_kind": "album",
+      "entity_id": 1,
+      "value": "mixing",
+      "verdict": "false_positive",
+      "expectedSignature": "recording",
+      "fixedIn": "curation-rules.v6"
+    },
+    {
+      "detector": "rol_contra_tipo_de_credito",
+      "signature": "recording",
+      "entity_kind": "album",
+      "entity_id": 103,
+      "value": "mixing",
+      "verdict": "false_positive",
+      "expectedSignature": "recording",
+      "fixedIn": "curation-rules.v6"
+    },
+    {
+      "detector": "rol_contra_tipo_de_credito",
+      "signature": "recording",
+      "entity_kind": "album",
+      "entity_id": 106,
+      "value": "mixing",
+      "verdict": "false_positive",
+      "expectedSignature": "recording",
+      "fixedIn": "curation-rules.v6"
+    },
+    {
+      "detector": "rol_contra_tipo_de_credito",
+      "signature": "recording",
+      "entity_kind": "album",
+      "entity_id": 1038,
+      "value": "mixing",
+      "verdict": "false_positive",
+      "expectedSignature": "recording",
+      "fixedIn": "curation-rules.v6"
+    },
+    {
+      "detector": "rol_contra_tipo_de_credito",
+      "signature": "recording",
+      "entity_kind": "album",
+      "entity_id": 1062,
+      "value": "mixing",
+      "verdict": "false_positive",
+      "expectedSignature": "recording",
+      "fixedIn": "curation-rules.v6"
+    },
+    {
+      "detector": "rol_contra_tipo_de_credito",
+      "signature": "recording",
+      "entity_kind": "album",
+      "entity_id": 107,
+      "value": "mixing",
+      "verdict": "false_positive",
+      "expectedSignature": "recording",
+      "fixedIn": "curation-rules.v6"
+    },
+    {
+      "detector": "rol_contra_tipo_de_credito",
+      "signature": "recording",
+      "entity_kind": "album",
+      "entity_id": 1072,
+      "value": "mixing",
+      "verdict": "false_positive",
+      "expectedSignature": "recording",
+      "fixedIn": "curation-rules.v6"
+    },
+    {
+      "detector": "rol_contra_tipo_de_credito",
+      "signature": "recording",
+      "entity_kind": "album",
+      "entity_id": 1078,
+      "value": "mixing",
+      "verdict": "false_positive",
+      "expectedSignature": "recording",
+      "fixedIn": "curation-rules.v6"
+    },
+    {
+      "detector": "rol_contra_tipo_de_credito",
+      "signature": "recording",
+      "entity_kind": "album",
+      "entity_id": 110,
+      "value": "mixing",
+      "verdict": "false_positive",
+      "expectedSignature": "recording",
+      "fixedIn": "curation-rules.v6"
+    },
+    {
+      "detector": "rol_contra_tipo_de_credito",
+      "signature": "recording",
+      "entity_kind": "album",
+      "entity_id": 1116,
+      "value": "mixing",
+      "verdict": "false_positive",
+      "expectedSignature": "recording",
+      "fixedIn": "curation-rules.v6"
+    },
+    {
+      "detector": "rol_contra_tipo_de_credito",
+      "signature": "recording",
+      "entity_kind": "album",
+      "entity_id": 114,
+      "value": "mixing",
+      "verdict": "false_positive",
+      "expectedSignature": "recording",
+      "fixedIn": "curation-rules.v6"
+    },
+    {
+      "detector": "rol_contra_tipo_de_credito",
+      "signature": "recording",
+      "entity_kind": "album",
+      "entity_id": 115,
+      "value": "mixing",
+      "verdict": "false_positive",
+      "expectedSignature": "recording",
+      "fixedIn": "curation-rules.v6"
+    },
+    {
+      "detector": "rol_contra_tipo_de_credito",
+      "signature": "recording",
+      "entity_kind": "album",
+      "entity_id": 1150,
+      "value": "mixing",
+      "verdict": "false_positive",
+      "expectedSignature": "recording",
+      "fixedIn": "curation-rules.v6"
+    },
+    {
+      "detector": "rol_contra_tipo_de_credito",
+      "signature": "recording",
+      "entity_kind": "album",
+      "entity_id": 118,
+      "value": "mixing",
+      "verdict": "false_positive",
+      "expectedSignature": "recording",
+      "fixedIn": "curation-rules.v6"
+    },
+    {
+      "detector": "rol_contra_tipo_de_credito",
+      "signature": "recording",
+      "entity_kind": "album",
+      "entity_id": 121,
+      "value": "mixing",
+      "verdict": "false_positive",
+      "expectedSignature": "recording",
+      "fixedIn": "curation-rules.v6"
+    },
+    {
+      "detector": "rol_contra_tipo_de_credito",
+      "signature": "recording",
+      "entity_kind": "album",
+      "entity_id": 137,
+      "value": "mixing",
+      "verdict": "false_positive",
+      "expectedSignature": "recording",
+      "fixedIn": "curation-rules.v6"
+    },
+    {
+      "detector": "rol_contra_tipo_de_credito",
+      "signature": "recording",
+      "entity_kind": "album",
+      "entity_id": 1692,
+      "value": "mixing",
+      "verdict": "false_positive",
+      "expectedSignature": "recording",
+      "fixedIn": "curation-rules.v6"
+    },
+    {
+      "detector": "rol_contra_tipo_de_credito",
+      "signature": "recording",
+      "entity_kind": "album",
+      "entity_id": 1744,
+      "value": "mixing",
+      "verdict": "false_positive",
+      "expectedSignature": "recording",
+      "fixedIn": "curation-rules.v6"
+    },
+    {
+      "detector": "rol_contra_tipo_de_credito",
+      "signature": "recording",
+      "entity_kind": "album",
+      "entity_id": 1818,
+      "value": "mixing",
+      "verdict": "false_positive",
+      "expectedSignature": "recording",
+      "fixedIn": "curation-rules.v6"
+    },
+    {
+      "detector": "rol_contra_tipo_de_credito",
+      "signature": "recording",
+      "entity_kind": "album",
+      "entity_id": 1107,
+      "value": "mixing",
+      "verdict": "false_positive",
+      "expectedSignature": "recording",
+      "fixedIn": "curation-rules.v6"
+    },
+    {
+      "detector": "alias_que_choca_con_otra_ficha",
+      "signature": "album",
+      "entity_kind": "album",
+      "entity_id": 1618,
+      "value": "Regreso Del Abismo",
+      "verdict": "true_positive",
+      "expectedSignature": "album"
+    },
+    {
+      "detector": "alias_que_choca_con_otra_ficha",
+      "signature": "album",
+      "entity_kind": "album",
+      "entity_id": 51,
+      "value": "Spiteri",
+      "verdict": "true_positive",
+      "expectedSignature": "album"
+    },
+    {
+      "detector": "alias_que_choca_con_otra_ficha",
+      "signature": "album",
+      "entity_kind": "album",
+      "entity_id": 795,
+      "value": "Venezuela Bruthal",
+      "verdict": "true_positive",
+      "expectedSignature": "album"
+    },
+    {
+      "detector": "alias_que_choca_con_otra_ficha",
+      "signature": "artist",
+      "entity_kind": "artist",
+      "entity_id": 1028,
+      "value": "Chulius & The Filarmonicos",
+      "verdict": "true_positive",
+      "expectedSignature": "artist"
+    },
+    {
+      "detector": "alias_que_choca_con_otra_ficha",
+      "signature": "person",
+      "entity_kind": "person",
+      "entity_id": 38,
+      "value": "Ashwave",
+      "verdict": "true_positive",
+      "expectedSignature": "person"
+    },
+    {
+      "detector": "alias_que_choca_con_otra_ficha",
+      "signature": "person",
+      "entity_kind": "person",
+      "entity_id": 741,
+      "value": "L. Colina",
+      "verdict": "true_positive",
+      "expectedSignature": "person"
+    },
+    {
+      "detector": "alias_que_choca_con_otra_ficha",
+      "signature": "person",
+      "entity_kind": "person",
+      "entity_id": 742,
+      "value": "A.Hernandez",
+      "verdict": "true_positive",
+      "expectedSignature": "person"
+    },
+    {
+      "detector": "alias_que_choca_con_otra_ficha",
+      "signature": "person",
+      "entity_kind": "person",
+      "entity_id": 6841,
+      "value": "Taj \"The Infinite\"",
+      "verdict": "true_positive",
+      "expectedSignature": "person"
+    },
+    {
+      "detector": "alias_que_choca_con_otra_ficha",
+      "signature": "person",
+      "entity_kind": "person",
+      "entity_id": 7225,
+      "value": "Tema interpretado por \"Poster\"",
+      "verdict": "true_positive",
+      "expectedSignature": "person"
+    },
+    {
+      "detector": "alias_que_choca_con_otra_ficha",
+      "signature": "track",
+      "entity_kind": "track",
+      "entity_id": 10322,
+      "value": "Luz de Esperanza",
+      "verdict": "true_positive",
+      "expectedSignature": "track"
+    },
+    {
+      "detector": "alias_que_choca_con_otra_ficha",
+      "signature": "track",
+      "entity_kind": "track",
+      "entity_id": 11407,
+      "value": "q.k.maluca.",
+      "verdict": "true_positive",
+      "expectedSignature": "track"
+    },
+    {
+      "detector": "alias_que_choca_con_otra_ficha",
+      "signature": "track",
+      "entity_kind": "track",
+      "entity_id": 11662,
+      "value": "Growl And Fuck",
+      "verdict": "true_positive",
+      "expectedSignature": "track"
+    },
+    {
+      "detector": "alias_que_choca_con_otra_ficha",
+      "signature": "track",
+      "entity_kind": "track",
+      "entity_id": 11674,
+      "value": "Luz y Mar",
+      "verdict": "true_positive",
+      "expectedSignature": "track"
+    },
+    {
+      "detector": "alias_que_choca_con_otra_ficha",
+      "signature": "track",
+      "entity_kind": "track",
+      "entity_id": 11934,
+      "value": "Darkness & Betrayal",
+      "verdict": "true_positive",
+      "expectedSignature": "track"
+    },
+    {
+      "detector": "alias_que_choca_con_otra_ficha",
+      "signature": "track",
+      "entity_kind": "track",
+      "entity_id": 11943,
+      "value": "Sentence",
+      "verdict": "true_positive",
+      "expectedSignature": "track"
+    },
+    {
+      "detector": "alias_que_choca_con_otra_ficha",
+      "signature": "track",
+      "entity_kind": "track",
+      "entity_id": 120,
+      "value": "Echoes of Eternal Cold",
+      "verdict": "true_positive",
+      "expectedSignature": "track"
+    },
+    {
+      "detector": "alias_que_choca_con_otra_ficha",
+      "signature": "track",
+      "entity_kind": "track",
+      "entity_id": 121,
+      "value": "Entropy",
+      "verdict": "true_positive",
+      "expectedSignature": "track"
+    },
+    {
+      "detector": "alias_que_choca_con_otra_ficha",
+      "signature": "track",
+      "entity_kind": "track",
+      "entity_id": 122,
+      "value": "Simulated Universe Annihilation",
+      "verdict": "true_positive",
+      "expectedSignature": "track"
+    },
+    {
+      "detector": "alias_que_choca_con_otra_ficha",
+      "signature": "track",
+      "entity_kind": "track",
+      "entity_id": 12833,
+      "value": "Nada Como Tú",
+      "verdict": "true_positive",
+      "expectedSignature": "track"
+    },
+    {
+      "detector": "alias_que_choca_con_otra_ficha",
+      "signature": "track",
+      "entity_kind": "track",
+      "entity_id": 13787,
+      "value": "Ruinas del alma",
+      "verdict": "true_positive",
+      "expectedSignature": "track"
+    },
+    {
+      "detector": "alias_que_choca_con_otra_ficha",
+      "signature": "artist",
+      "entity_kind": "artist",
+      "entity_id": 1286,
+      "value": "",
+      "verdict": "false_positive",
+      "expectedSignature": "artist",
+      "fixedIn": "curation-rules.v6"
+    },
+    {
+      "detector": "alias_que_choca_con_otra_ficha",
+      "signature": "artist",
+      "entity_kind": "artist",
+      "entity_id": 1287,
+      "value": "",
+      "verdict": "false_positive",
+      "expectedSignature": "artist",
+      "fixedIn": "curation-rules.v6"
+    },
+    {
+      "detector": "alias_que_choca_con_otra_ficha",
+      "signature": "artist",
+      "entity_kind": "artist",
+      "entity_id": 1288,
+      "value": "",
+      "verdict": "false_positive",
+      "expectedSignature": "artist",
+      "fixedIn": "curation-rules.v6"
+    },
+    {
+      "detector": "alias_que_choca_con_otra_ficha",
+      "signature": "artist",
+      "entity_kind": "artist",
+      "entity_id": 1289,
+      "value": "",
+      "verdict": "false_positive",
+      "expectedSignature": "artist",
+      "fixedIn": "curation-rules.v6"
+    },
+    {
+      "detector": "alias_que_choca_con_otra_ficha",
+      "signature": "artist",
+      "entity_kind": "artist",
+      "entity_id": 1290,
+      "value": "",
+      "verdict": "false_positive",
+      "expectedSignature": "artist",
+      "fixedIn": "curation-rules.v6"
+    },
+    {
+      "detector": "alias_que_choca_con_otra_ficha",
+      "signature": "artist",
+      "entity_kind": "artist",
+      "entity_id": 1291,
+      "value": "",
+      "verdict": "false_positive",
+      "expectedSignature": "artist",
+      "fixedIn": "curation-rules.v6"
+    },
+    {
+      "detector": "alias_que_choca_con_otra_ficha",
+      "signature": "artist",
+      "entity_kind": "artist",
+      "entity_id": 1292,
+      "value": "",
+      "verdict": "false_positive",
+      "expectedSignature": "artist",
+      "fixedIn": "curation-rules.v6"
+    },
+    {
+      "detector": "alias_que_choca_con_otra_ficha",
+      "signature": "album",
+      "entity_kind": "album",
+      "entity_id": 101,
+      "value": "",
+      "verdict": "false_positive",
+      "expectedSignature": "album",
+      "fixedIn": "curation-rules.v6"
+    },
+    {
+      "detector": "alias_que_choca_con_otra_ficha",
+      "signature": "album",
+      "entity_kind": "album",
+      "entity_id": 1013,
+      "value": "",
+      "verdict": "false_positive",
+      "expectedSignature": "album",
+      "fixedIn": "curation-rules.v6"
+    },
+    {
+      "detector": "alias_que_choca_con_otra_ficha",
+      "signature": "album",
+      "entity_kind": "album",
+      "entity_id": 102,
+      "value": "",
+      "verdict": "false_positive",
+      "expectedSignature": "album",
+      "fixedIn": "curation-rules.v6"
+    },
+    {
+      "detector": "alias_que_choca_con_otra_ficha",
+      "signature": "album",
+      "entity_kind": "album",
+      "entity_id": 1038,
+      "value": "",
+      "verdict": "false_positive",
+      "expectedSignature": "album",
+      "fixedIn": "curation-rules.v6"
+    },
+    {
+      "detector": "alias_que_choca_con_otra_ficha",
+      "signature": "album",
+      "entity_kind": "album",
+      "entity_id": 1040,
+      "value": "",
+      "verdict": "false_positive",
+      "expectedSignature": "album",
+      "fixedIn": "curation-rules.v6"
+    },
+    {
+      "detector": "alias_que_choca_con_otra_ficha",
+      "signature": "album",
+      "entity_kind": "album",
+      "entity_id": 1045,
+      "value": "",
+      "verdict": "false_positive",
+      "expectedSignature": "album",
+      "fixedIn": "curation-rules.v6"
+    },
+    {
+      "detector": "mayusculas_sostenidas",
+      "signature": "mayusculas_sostenidas",
+      "entity_kind": "artist",
+      "entity_id": 1301,
+      "value": "ULTRAZONIDO",
+      "verdict": "false_positive",
+      "expectedSignature": "mayusculas_sostenidas",
+      "fixedIn": "curation-rules.v5"
+    },
+    {
+      "detector": "mayusculas_sostenidas",
+      "signature": "mayusculas_sostenidas",
+      "entity_kind": "artist",
+      "entity_id": 1303,
+      "value": "PROARESIS",
+      "verdict": "false_positive",
+      "expectedSignature": "mayusculas_sostenidas",
+      "fixedIn": "curation-rules.v5"
+    },
+    {
+      "detector": "mayusculas_sostenidas",
+      "signature": "mayusculas_sostenidas",
+      "entity_kind": "artist",
+      "entity_id": 1306,
+      "value": "CAÑERIA",
+      "verdict": "false_positive",
+      "expectedSignature": "mayusculas_sostenidas",
+      "fixedIn": "curation-rules.v5"
+    },
+    {
+      "detector": "mayusculas_sostenidas",
+      "signature": "mayusculas_sostenidas",
+      "entity_kind": "artist",
+      "entity_id": 366,
+      "value": "PI XPRNC",
+      "verdict": "false_positive",
+      "expectedSignature": "mayusculas_sostenidas",
+      "fixedIn": "curation-rules.v5"
+    },
+    {
+      "detector": "mayusculas_sostenidas",
+      "signature": "mayusculas_sostenidas",
+      "entity_kind": "artist",
+      "entity_id": 499,
+      "value": "SOËDADE",
+      "verdict": "false_positive",
+      "expectedSignature": "mayusculas_sostenidas",
+      "fixedIn": "curation-rules.v5"
+    },
+    {
+      "detector": "mayusculas_sostenidas",
+      "signature": "mayusculas_sostenidas",
+      "entity_kind": "artist",
+      "entity_id": 855,
+      "value": "XVIIVX",
+      "verdict": "false_positive",
+      "expectedSignature": "mayusculas_sostenidas",
+      "fixedIn": "curation-rules.v5"
+    },
+    {
+      "detector": "mayusculas_sostenidas",
+      "signature": "mayusculas_sostenidas",
+      "entity_kind": "person",
+      "entity_id": 6867,
+      "value": "CENDIS",
+      "verdict": "false_positive",
+      "expectedSignature": "mayusculas_sostenidas",
+      "fixedIn": "curation-rules.v5"
+    },
+    {
+      "detector": "mayusculas_sostenidas",
+      "signature": "mayusculas_sostenidas",
+      "entity_kind": "organization",
+      "entity_id": 501,
+      "value": "LPM /AVR",
+      "verdict": "false_positive",
+      "expectedSignature": "mayusculas_sostenidas",
+      "fixedIn": "curation-rules.v5"
+    },
+    {
+      "detector": "mayusculas_sostenidas",
+      "signature": "mayusculas_sostenidas",
+      "entity_kind": "organization",
+      "entity_id": 996,
+      "value": "FAVEDICA SN",
+      "verdict": "false_positive",
+      "expectedSignature": "mayusculas_sostenidas",
+      "fixedIn": "curation-rules.v5"
+    },
+    {
+      "detector": "mayusculas_sostenidas",
+      "signature": "mayusculas_sostenidas",
+      "entity_kind": "album",
+      "entity_id": 1522,
+      "value": "P D E C O E O D L V C",
+      "verdict": "false_positive",
+      "expectedSignature": "mayusculas_sostenidas",
+      "fixedIn": "curation-rules.v5"
+    },
+    {
+      "detector": "mayusculas_sostenidas",
+      "signature": "mayusculas_sostenidas",
+      "entity_kind": "album",
+      "entity_id": 1603,
+      "value": "E.L.O.H.I.M.",
+      "verdict": "false_positive",
+      "expectedSignature": "mayusculas_sostenidas",
+      "fixedIn": "curation-rules.v5"
+    },
+    {
+      "detector": "mayusculas_sostenidas",
+      "signature": "mayusculas_sostenidas",
+      "entity_kind": "track",
+      "entity_id": 1761,
+      "value": "I.P.O.S.T.E.L.",
+      "verdict": "false_positive",
+      "expectedSignature": "mayusculas_sostenidas",
+      "fixedIn": "curation-rules.v5"
+    },
+    {
+      "detector": "mayusculas_sostenidas",
+      "signature": "mayusculas_sostenidas",
+      "entity_kind": "track",
+      "entity_id": 17333,
+      "value": "B.U.H.O.N.E.R.O",
+      "verdict": "false_positive",
+      "expectedSignature": "mayusculas_sostenidas",
+      "fixedIn": "curation-rules.v5"
+    },
+    {
+      "detector": "mayusculas_sostenidas",
+      "signature": "mayusculas_sostenidas",
+      "entity_kind": "track",
+      "entity_id": 13589,
+      "value": "REGARD",
+      "verdict": "false_positive",
+      "expectedSignature": "mayusculas_sostenidas",
+      "fixedIn": "curation-rules.v5"
+    },
+    {
+      "detector": "mayusculas_sostenidas",
+      "signature": "mayusculas_sostenidas",
+      "entity_kind": "track",
+      "entity_id": 3311,
+      "value": "MDMMBLM",
+      "verdict": "false_positive",
+      "expectedSignature": "mayusculas_sostenidas",
+      "fixedIn": "curation-rules.v5"
+    },
+    {
+      "detector": "mayusculas_sostenidas",
+      "signature": "mayusculas_sostenidas",
+      "entity_kind": "track",
+      "entity_id": 21361,
+      "value": "N.I.N.A. I.L.L.",
+      "verdict": "false_positive",
+      "expectedSignature": "mayusculas_sostenidas",
+      "fixedIn": "curation-rules.v5"
+    },
+    {
+      "detector": "mayusculas_sostenidas",
+      "signature": "mayusculas_sostenidas",
+      "entity_kind": "track",
+      "entity_id": 4099,
+      "value": "DHD - T.V-O",
+      "verdict": "false_positive",
+      "expectedSignature": "mayusculas_sostenidas",
+      "fixedIn": "curation-rules.v5"
+    },
+    {
+      "detector": "mayusculas_sostenidas",
+      "signature": "mayusculas_sostenidas",
+      "entity_kind": "artist",
+      "entity_id": 1305,
+      "value": "COSMIC PASS",
+      "verdict": "discutible",
+      "expectedSignature": "mayusculas_sostenidas"
+    },
+    {
+      "detector": "mayusculas_sostenidas",
+      "signature": "mayusculas_sostenidas",
+      "entity_kind": "track",
+      "entity_id": 13587,
+      "value": "RIVER II",
+      "verdict": "discutible",
+      "expectedSignature": "mayusculas_sostenidas"
     }
   ]
 }

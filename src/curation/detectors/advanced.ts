@@ -7,8 +7,9 @@
 // o enlaces de medios del catálogo entero.
 import { capitalizeSpanish } from "./text-hygiene.js";
 import { nameKey } from "../lexicon.js";
+import { pairKey } from "./duplicates.js";
 import type {
-  EntityRef, Finding, SnapshotCredit, SnapshotMediaLink, SnapshotRedirect,
+  EntityRef, Finding, SnapshotAlias, SnapshotCredit, SnapshotMediaLink, SnapshotRedirect,
 } from "../types.js";
 import { quote, type AnalysisContext, type Detector } from "./shared.js";
 
@@ -73,15 +74,21 @@ export const duplicateCredits: Detector = {
   },
 };
 
+// Los roles reales vienen en inglés y en participio ("Recorded & Mixed by",
+// "Produced, Recorded, Mixed & Mastered at"). Cada patrón tiene que reconocer
+// TODAS las formas de su familia: si "Mixed" no se reconociera, un rol
+// compuesto parecería pertenecer a una sola familia y el detector acusaría una
+// contradicción que no existe. Medido contra la foto real: sin flexiones,
+// 48 de 49 hallazgos eran falsos positivos.
 const ROLE_EXPECTATIONS: Array<{ pattern: RegExp; types: readonly string[]; label: string }> = [
-  { pattern: /\b(?:productor(?:a)?|producer|produccion|producción)\b/iu, types: ["producer"], label: "producción" },
-  { pattern: /\b(?:mezcla|mix|mixing)\b/iu, types: ["mixing"], label: "mezcla" },
-  { pattern: /\b(?:master(?:ing|izacion|ización)?)\b/iu, types: ["mastering"], label: "mastering" },
-  { pattern: /\b(?:fotografia|fotografía|photo|photography)\b/iu, types: ["photography"], label: "fotografía" },
-  { pattern: /\b(?:arte|artwork|diseno|diseño|portada)\b/iu, types: ["artwork"], label: "arte" },
-  { pattern: /\b(?:compositor(?:a)?|composer|composicion|composición)\b/iu, types: ["composer"], label: "composición" },
-  { pattern: /\b(?:autor(?:a)?|letra|lyrics?|writer)\b/iu, types: ["writer"], label: "autoría" },
-  { pattern: /\b(?:grabacion|grabación|recording|ingenier[oa])\b/iu, types: ["recording"], label: "grabación" },
+  { pattern: /\b(?:productor(?:a|es)?|produc(?:er|ers|ed|tion)|produccion|producción|produccion)\b/iu, types: ["producer"], label: "producción" },
+  { pattern: /\b(?:mezcla(?:d[oa]s?)?|mix(?:ed|ing|es)?)\b/iu, types: ["mixing"], label: "mezcla" },
+  { pattern: /\b(?:master(?:ed|ing|izacion|ización|izad[oa]s?)?)\b/iu, types: ["mastering"], label: "mastering" },
+  { pattern: /\b(?:fotografia|fotografía|fotos?|photo|photos|photography|photographed)\b/iu, types: ["photography"], label: "fotografía" },
+  { pattern: /\b(?:arte|artwork|diseno|diseño|disenad[oa]s?|diseñad[oa]s?|design(?:ed)?|portada)\b/iu, types: ["artwork"], label: "arte" },
+  { pattern: /\b(?:compositor(?:a|es)?|compos(?:er|ers|ed)|composicion|composición)\b/iu, types: ["composer"], label: "composición" },
+  { pattern: /\b(?:autor(?:a|es)?|letra|letras|lyrics?|writer|writers|writt?en|escrit[oa]s?)\b/iu, types: ["writer"], label: "autoría" },
+  { pattern: /\b(?:grabacion|grabación|grabad[oa]s?|record(?:ing|ed)?|ingenier[oa]s?|engineer(?:ed|ing)?)\b/iu, types: ["recording"], label: "grabación" },
   { pattern: /\b(?:guitarr|baj|bateri|teclad|piano|voz|vocal|sax|trompet|percusi|musico|músico)\w*/iu, types: ["musician", "guest"], label: "interpretación" },
 ];
 
@@ -156,10 +163,10 @@ const ORG_MARKERS: Array<{ type: string; pattern: RegExp; label: string }> = [
 ];
 
 export const organizationTypeVsName: Detector = {
-  key: "tipo_de_organizacion_contra_nombre",
+  key: "organizacion_sin_clasificar",
   category: COHERENCE,
-  label: "Tipo de organización contra nombre",
-  description: "El nombre contiene un marcador fuerte de estudio, productora, distribuidora, management o sello que contradice el tipo guardado.",
+  label: "Organización sin clasificar",
+  description: "La organización sigue con tipo «other» y su nombre lleva un marcador inequívoco de estudio, productora, distribuidora, management o sello.",
   run(context) {
     return context.snapshot.organizations.flatMap((org) => {
       // Nombres con dos marcadores ("Records Studio") son ambiguos: no
@@ -315,16 +322,52 @@ function canonicalByKind(context: AnalysisContext): Map<string, Map<string, numb
   return result;
 }
 
+/**
+ * Un homónimo solo es sospechoso cuando las dos fichas comparten padre: dos
+ * discos del mismo artista, dos pistas del mismo disco. Artistas, personas y
+ * organizaciones no tienen padre, así que cualquier choque cuenta.
+ */
+function sameParent(context: AnalysisContext, kind: SnapshotAlias["kind"], a: number, b: number): boolean {
+  if (kind === "album") {
+    const left = context.albums.get(a); const right = context.albums.get(b);
+    return left !== undefined && right !== undefined && left.artistId === right.artistId;
+  }
+  if (kind === "track") {
+    const left = context.tracks.get(a); const right = context.tracks.get(b);
+    return left !== undefined && right !== undefined && left.albumId === right.albumId;
+  }
+  return true;
+}
+
+/** Nombre canónico con calificador entre paréntesis del que el alias es la raíz. */
+function disambiguatedByQualifier(context: AnalysisContext, kind: SnapshotAlias["kind"], id: number, alias: string): boolean {
+  const canonical = entity(context, kind, id).label;
+  const stripped = canonical.replace(/\s*\([^()]*\)\s*$/u, "").trim();
+  return stripped !== canonical && nameKey(stripped) === nameKey(alias);
+}
+
 export const aliasCollidesWithEntity: Detector = {
   key: "alias_que_choca_con_otra_ficha",
   category: DUPLICATES,
   label: "Alias que choca con otra ficha",
-  description: "Un alias normaliza al nombre canónico de otra ficha del mismo tipo.",
+  description: "Un alias normaliza al nombre canónico de otra ficha del mismo tipo. Los discos homónimos solo cuentan dentro del mismo artista y las pistas dentro del mismo disco; un par ya tratado no vuelve.",
   run(context) {
     const canon = canonicalByKind(context);
     const out: Finding[] = [];
     for (const alias of context.snapshot.aliases ?? []) {
-      const hits = (canon.get(alias.kind)?.get(nameKey(alias.alias)) ?? []).filter((id) => id !== alias.entityId);
+      const hits = (canon.get(alias.kind)?.get(nameKey(alias.alias)) ?? [])
+        .filter((id) => id !== alias.entityId)
+        // Dos discos distintos pueden llamarse «Renacer» y dos pistas «Intro»:
+        // el homónimo solo es sospechoso dentro del mismo padre, igual que en
+        // los detectores de fichas repetidas.
+        .filter((id) => sameParent(context, alias.kind, alias.entityId, id))
+        // Un par ya fusionado o declarado distinto no vuelve por la puerta del
+        // alias.
+        .filter((id) => !context.snapshot.handledPairs.has(pairKey(alias.kind, alias.entityId, id)))
+        // «Nemesis (Lara)» con alias «Nemesis» junto a «Nemesis»: el
+        // paréntesis ES la desambiguación, no un choque. Acusarlo sería pedir
+        // que se deshaga el trabajo ya hecho.
+        .filter(() => !disambiguatedByQualifier(context, alias.kind, alias.entityId, alias.alias));
       if (!hits.length) continue;
       out.push({
         detector: this.key, category: this.category, signature: alias.kind, signatureLabel: `Alias de ${alias.kind}`,

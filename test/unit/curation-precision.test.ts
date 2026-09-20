@@ -72,10 +72,13 @@ describe("precisión de los detectores de Curaduría (corpus etiquetado)", () =>
       [...emitted.keys()].map((key) => key.split("|", 1)[0]!).filter((detector) => e11.has(detector)),
     )].sort();
     expect(active).toEqual([
+      "alias_que_choca_con_otra_ficha",
+      "creditos_duplicados",
       "disco_sin_pistas",
       "mayusculas_sostenidas",
+      "organizacion_sin_clasificar",
       "pistas_sin_duracion_en_disco_con_duraciones",
-      "tipo_de_organizacion_contra_nombre",
+      "rol_contra_tipo_de_credito",
     ]);
     for (const detector of active) {
       expect(corpus.precisionThresholds[detector], `${detector}: sin umbral de precisión`).toBeGreaterThanOrEqual(0.9);

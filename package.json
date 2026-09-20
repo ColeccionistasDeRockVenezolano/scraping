@@ -27,6 +27,7 @@
     "db:restore": "./scripts/db-restore.sh",
     "db:restore-check": "./scripts/db-restore-check.sh",
     "core:catalog": "./scripts/with-node22.sh tsx scripts/gen-core-catalog.ts",
+    "curation:relations": "./scripts/with-node22.sh tsx scripts/gen-curation-relations.ts",
     "test": "./scripts/with-node22.sh vitest run",
     "test:watch": "./scripts/with-node22.sh vitest",
     "test:unit": "./scripts/with-node22.sh vitest run test/unit",
