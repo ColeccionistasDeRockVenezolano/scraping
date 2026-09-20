@@ -129,6 +129,12 @@ describe("Curaduría E7/E8: decisión y operación desde la misma superficie", (
       INSERT INTO ingest.review_queue(kind,person_a_id,person_b_id,priority,notes,payload)
       VALUES('person_duplicate',$1,$2,7,'comparar personas','{}'::jsonb) RETURNING id`,
     [personA, personB]);
+    const acceptReviewId = await one(
+      "INSERT INTO ingest.review_queue(kind,priority,notes,payload) VALUES('missing_url',8,'aceptar desde Curaduría','{}'::jsonb) RETURNING id",
+    );
+    const rejectReviewId = await one(
+      "INSERT INTO ingest.review_queue(kind,priority,notes,payload) VALUES('new_source',8,'rechazar desde Curaduría','{}'::jsonb) RETURNING id",
+    );
 
     expect((await runCurationScan({ trigger: "manual" })).status).toBe("ok");
 
@@ -150,6 +156,28 @@ describe("Curaduría E7/E8: decisión y operación desde la misma superficie", (
     const summary = await app.inject({ method: "GET", url: "/curation/summary", headers });
     expect(summary.statusCode, summary.body).toBe(200);
     expect(summary.json().duplicateCandidates).toBeGreaterThanOrEqual(1);
+
+    const accepted = await app.inject({
+      method: "POST", url: `/review-queue/${acceptReviewId}/accept`, headers,
+      payload: { note: "aceptada desde la tarjeta E7" },
+    });
+    expect(accepted.statusCode, accepted.body).toBe(200);
+    expect(accepted.json()).toMatchObject({ reviewId: acceptReviewId, action: "accepted", status: "approved" });
+
+    const rejected = await app.inject({
+      method: "POST", url: `/review-queue/${rejectReviewId}/reject`, headers,
+      payload: { note: "rechazada desde la tarjeta E7" },
+    });
+    expect(rejected.statusCode, rejected.body).toBe(200);
+    expect(rejected.json()).toMatchObject({ reviewId: rejectReviewId, action: "rejected", status: "dismissed" });
+    const states = await getPool().query<{ id: string; status: string }>(
+      "SELECT id::text,status::text FROM ingest.review_queue WHERE id=ANY($1::bigint[]) ORDER BY id",
+      [[acceptReviewId, rejectReviewId]],
+    );
+    expect(states.rows).toEqual([
+      { id: String(acceptReviewId), status: "approved" },
+      { id: String(rejectReviewId), status: "dismissed" },
+    ]);
   }, 60_000);
 
   it("lista lotes y permite archivar una cadena revisada sin perder su historia", async () => {
