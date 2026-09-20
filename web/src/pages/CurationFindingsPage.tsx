@@ -706,6 +706,7 @@ function FindingCard({
       data-finding-id={finding.id}
       tabIndex={0}
       onFocus={onActivate}
+      onClick={onActivate}
       className={`cfind cfind--${finding.severity}${finding.status !== "open" ? " is-closed" : ""}${selected ? " cfind--picked" : ""}${active ? " is-keyboard-active" : ""}`}
     >
       <div className="cfind__badges">
@@ -806,14 +807,16 @@ function FindingCard({
 
       <div className="cfind__foot">
         {evidence.length ? <CurationEvidence evidence={Object.fromEntries(evidence)} /> : <span />}
-        <div className="cfind__actions">
+        <div className="cfind__actions cfind__actions--primary" aria-label="Acciones del hallazgo">
           {finding.status === "open" && finding.actions[0] && finding.actions[0].level <= 2 ? (
             <button
-              type="button" className="btn btn--sm btn--primary"
+              type="button" className="btn btn--sm btn--primary cfind__recommended-action"
               onClick={() => onFix(finding.actions[0]!.key)} disabled={busy}
-              title={`Acción recomendada · nivel ${finding.actions[0].level}`}
+              title={`${finding.actions[0].label} · N${finding.actions[0].level} · ${finding.actions[0].description}`}
             >
-              <Wrench size={14} weight="bold" aria-hidden="true" /> {finding.actions[0].label} · N{finding.actions[0].level}
+              <Wrench size={14} weight="bold" aria-hidden="true" />
+              <span className="cfind__recommended-label">{finding.actions[0].label}</span>
+              <span className="cfind__action-consequence">N{finding.actions[0].level} · {finding.actions[0].description}</span>
             </button>
           ) : null}
           {finding.status === "open" && finding.actions.slice(1).some((action) => action.level <= 2) ? (
