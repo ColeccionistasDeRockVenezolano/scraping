@@ -363,6 +363,56 @@ export async function ignoreGroup(
 }
 
 // ---------------------------------------------------------------------------
+// «Surgidos tras corregir», dados por revisados (M2, PLAN_CURADURIA E8.7).
+//
+// `evidence.triggeredBy` marca el hallazgo que nació donde otro se acababa de
+// resolver. Hasta ahora esa marca era permanente: la lista de «surgidos tras
+// corregir» solo crecía y nadie podía decir «ya lo miré» sin cerrar el
+// hallazgo, que es otra cosa (el problema sigue ahí). Darlo por revisado mueve
+// la marca a `evidence.triggeredHistory` —no se pierde quién lo desencadenó ni
+// cuándo— y lo saca del filtro `chained`, que pregunta por `triggeredBy`.
+//
+// Es duradero: un análisis posterior conserva `triggeredBy` tal como esté
+// (scan.ts lo copia con `jsonb_strip_nulls`, así que una clave ausente no
+// vuelve), y solo se vuelve a marcar si el hallazgo se resuelve y reaparece
+// tras otra corrección, que es una aparición nueva y merece revisarse otra vez.
+// ---------------------------------------------------------------------------
+
+/** Mueve `triggeredBy`/`triggeredInScan` al historial, anotando quién lo revisó y cuándo. */
+const ACKNOWLEDGE_CHAIN_SQL = `
+  evidence = (evidence - 'triggeredBy' - 'triggeredInScan') || jsonb_build_object(
+    'triggeredHistory',
+    coalesce(evidence->'triggeredHistory', '[]'::jsonb) || jsonb_build_array(jsonb_build_object(
+      'at', to_jsonb(now()),
+      'by', to_jsonb($OPERATOR::text),
+      'scanId', evidence->'triggeredInScan',
+      'causes', coalesce(evidence->'triggeredBy', '[]'::jsonb))))`;
+
+export async function acknowledgeChain(id: number, operator: string): Promise<FindingRow> {
+  const { rows } = await getPool().query<{ chained: boolean }>(
+    "SELECT (evidence ? 'triggeredBy') AS chained FROM ingest.curation_findings WHERE id = $1", [id]);
+  if (!rows[0]) throw new CurationError("not_found", `hallazgo inexistente: ${id}`);
+  if (!rows[0].chained) throw new CurationError("invalid", "Ese hallazgo no está marcado como surgido tras corregir.");
+  await getPool().query(
+    `UPDATE ingest.curation_findings SET ${ACKNOWLEDGE_CHAIN_SQL.replace("$OPERATOR", "$2")} WHERE id = $1`, [id, operator]);
+  return (await getFinding(id))!;
+}
+
+/**
+ * Da por revisados de una vez los que cumplen exactamente el filtro de la
+ * pantalla (C3), siempre dentro de los encadenados: «marcar como revisado» no
+ * puede alcanzar un hallazgo que la lista no estaba mostrando.
+ */
+export async function acknowledgeChainGroup(filter: FindingFilter, operator: string): Promise<number> {
+  const { where, params } = buildFindingsWhere({ ...filter, chained: true });
+  params.push(operator);
+  const result = await getPool().query(
+    `UPDATE ingest.curation_findings SET ${ACKNOWLEDGE_CHAIN_SQL.replace("$OPERATOR", `$${params.length}`)}
+      WHERE ${where.join(" AND ")}`, params);
+  return result.rowCount ?? 0;
+}
+
+// ---------------------------------------------------------------------------
 // «Son distintas»: un par de fichas del mismo tipo que el detector de
 // duplicados no debe volver a proponer, aunque cambie el grupo o el nombre.
 // No toca el core: es una decisión sobre el detector, con quién y por qué.

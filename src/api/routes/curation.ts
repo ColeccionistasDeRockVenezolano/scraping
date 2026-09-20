@@ -26,7 +26,7 @@ import { idParamSchema, writeErrorResponses } from "../schemas.js";
 import { fixWithoutReview, type FixItemView } from "../../curation/actions/batches.js";
 import { resolveConflictFinding, resolveConflictsGroupByTrust } from "../../curation/conflicts.js";
 import {
-  CurationError, DISTINCT_PAIR_KINDS, IGNORE_REASONS, declareDistinctPair,
+  CurationError, DISTINCT_PAIR_KINDS, IGNORE_REASONS, acknowledgeChain, acknowledgeChainGroup, declareDistinctPair,
   getCurationSummary, getFinding, ignoreFinding, ignoreGroup, listDistinctPairs, listFindings, listScans, removeDistinctPair, reopenFinding,
 } from "../../curation/repository.js";
 import { isCurationScanRunning, runCurationScan } from "../../curation/scan.js";
@@ -107,6 +107,23 @@ export const groupFilterSchema = {
   severity: severitySchema.optional(), entityKind: z.string().max(30).optional(), q: z.string().max(200).optional(),
   scanId: z.number().int().positive().optional(), chained: z.boolean().optional(),
 };
+
+/**
+ * Filtro de «marcar como revisado» en grupo (PLAN_CURADURIA E8.7): los mismos
+ * filtros del listado, pero sin exigir categoría ni detector — «Surgidos tras
+ * corregir» es justo una vista de todas las categorías. `chained` no viaja:
+ * siempre es true, porque solo los encadenados tienen algo que revisar.
+ */
+const chainGroupFilterSchema = z.object({
+  category: z.string().max(60).optional(),
+  detector: z.string().max(80).optional(),
+  signature: z.string().max(300).optional(),
+  severity: severitySchema.optional(),
+  entityKind: z.string().max(30).optional(),
+  status: z.enum(["open", "ignored", "resolved", "all"]).default("open"),
+  q: z.string().max(200).optional(),
+  scanId: z.number().int().positive().optional(),
+}).strict();
 
 const distinctPairSchema = z.object({
   id: z.number().int(), kind: z.enum(DISTINCT_PAIR_KINDS), aId: z.number().int(), bId: z.number().int(),
@@ -261,6 +278,30 @@ export async function registerCurationRoutes(app: FastifyInstance): Promise<void
       response: { 200: findingSchema, ...writeErrorResponses },
     },
   }, async (request) => reopenFinding(request.params.id).catch(curationError));
+
+  // SURGIDOS TRAS CORREGIR (PLAN_CURADURIA E8.7, M2): darlos por revisados no
+  // cierra nada —el problema sigue abierto— solo quita la marca «apareció al
+  // corregir» y la guarda en el historial del hallazgo. No toca el catálogo,
+  // así que no pide análisis.
+  server.post("/curation/findings/:id/acknowledge-chain", {
+    schema: {
+      tags: ["curation"],
+      summary: "Da por revisado un hallazgo «surgido tras corregir»: la marca pasa a evidence.triggeredHistory con quién y cuándo, y sale de la lista de encadenados. El hallazgo sigue abierto.",
+      security: OPERATOR_SECURITY,
+      params: idParamSchema,
+      response: { 200: findingSchema, ...writeErrorResponses },
+    },
+  }, async (request) => acknowledgeChain(request.params.id, request.operator).catch(curationError));
+
+  server.post("/curation/findings/acknowledge-chain-group", {
+    schema: {
+      tags: ["curation"],
+      summary: "Da por revisados exactamente los hallazgos encadenados que cumplen el filtro visible. No cierra ninguno ni cambia el catálogo.",
+      security: OPERATOR_SECURITY,
+      body: chainGroupFilterSchema,
+      response: { 200: z.object({ acknowledged: z.number().int() }), ...writeErrorResponses },
+    },
+  }, async (request) => ({ acknowledged: await acknowledgeChainGroup(request.body, request.operator).catch(curationError) }));
 
   // VALORES EN DISPUTA (PLAN_CURADURIA E7.1): `conflictos_abiertos` no tiene
   // una revisión viva (`review_queue`) que lo lleve a una persona —la pareja

@@ -593,6 +593,68 @@ export async function getFixBatch(batchId: number, page: ItemPage): Promise<FixB
   };
 }
 
+/**
+ * Una fila del historial de correcciones (PLAN_CURADURIA E8.5): lo que hace
+ * falta para reconocer un lote en la lista —quién, cuándo, qué filtro, cómo
+ * acabó— sin traerse sus ítems. El detalle se pide con `GET /curation/fixes/:id`.
+ */
+export interface FixBatchSummary {
+  id: number;
+  mode: BatchMode;
+  filter: Record<string, unknown>;
+  actionKey: string | null;
+  requestedBy: string;
+  appliedBy: string | null;
+  note: string | null;
+  status: BatchStatus;
+  counts: Record<string, unknown>;
+  verification: Record<string, unknown> | null;
+  createdAt: string;
+  startedAt: string | null;
+  finishedAt: string | null;
+  undoOfBatchId: number | null;
+  undoneByBatchId: number | null;
+  /** Cuántos ítems tiene el lote (los recuentos por estado van en `counts`). */
+  itemCount: number;
+}
+
+export interface FixBatchListQuery {
+  limit: number;
+  offset: number;
+  mode?: BatchMode | undefined;
+  status?: BatchStatus | undefined;
+}
+
+/**
+ * Historial de lotes, del más reciente al más antiguo. Sin filtro de estado se
+ * dejan fuera los `previewed`: una vista previa no escribió nada y abandonarla
+ * es lo normal (cada diálogo que se abre y se cierra deja uno), así que llenaría
+ * el historial de ruido. Pedir `status=previewed` los muestra igual.
+ */
+export async function listFixBatches(query: FixBatchListQuery): Promise<{ rows: FixBatchSummary[]; total: number }> {
+  const { rows } = await getPool().query<BatchRow & { item_count: string; total: string }>(`
+    SELECT ${BATCH_COLUMNS},
+           (SELECT count(*)::text FROM ingest.curation_fix_items i WHERE i.batch_id = b.id) AS item_count,
+           count(*) OVER ()::text AS total
+      FROM ingest.curation_fix_batches b
+     WHERE ($1::text IS NULL OR b.mode = $1)
+       AND CASE WHEN $2::text IS NULL THEN b.status <> 'previewed' ELSE b.status = $2 END
+     ORDER BY b.created_at DESC, b.id DESC
+     LIMIT $3 OFFSET $4`, [query.mode ?? null, query.status ?? null, query.limit, query.offset]);
+  return {
+    rows: rows.map((row) => ({
+      id: Number(row.id), mode: row.mode, filter: row.filter, actionKey: row.action_key,
+      requestedBy: row.requested_by, appliedBy: row.applied_by, note: row.note,
+      status: row.status, counts: row.counts, verification: row.verification,
+      createdAt: iso(row.created_at)!, startedAt: iso(row.started_at), finishedAt: iso(row.finished_at),
+      undoOfBatchId: row.undo_of_batch_id === null ? null : Number(row.undo_of_batch_id),
+      undoneByBatchId: row.undone_by_batch_id === null ? null : Number(row.undone_by_batch_id),
+      itemCount: Number(row.item_count),
+    })),
+    total: Number(rows[0]?.total ?? 0),
+  };
+}
+
 export interface FindingActionView {
   key: string;
   label: string;

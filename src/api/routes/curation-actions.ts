@@ -13,10 +13,10 @@ import type { FastifyInstance } from "fastify";
 import type { ZodTypeProvider } from "fastify-type-provider-zod";
 import { z } from "zod";
 import { OPERATOR_SECURITY } from "../auth.js";
-import { paginationQuerySchema } from "../pagination.js";
+import { paginationQuerySchema, toPage } from "../pagination.js";
 import { idParamSchema, writeErrorResponses } from "../schemas.js";
 import {
-  BATCH_STATUSES, ITEM_STATUSES, applyFixBatch, describeFindingActions, getFixBatch, previewFixBatch, undoFixBatch,
+  BATCH_STATUSES, ITEM_STATUSES, applyFixBatch, describeFindingActions, getFixBatch, listFixBatches, previewFixBatch, undoFixBatch,
 } from "../../curation/actions/batches.js";
 import { waitForCurationScans } from "../../curation/scan.js";
 import { curationError, groupFilterSchema } from "./curation.js";
@@ -76,6 +76,28 @@ export const fixBatchSchema = z.object({
   undoneByBatchId: z.number().int().nullable(),
   items: z.array(fixItemSchema),
   pagination: z.object({ limit: z.number().int(), offset: z.number().int(), total: z.number().int() }),
+});
+
+const BATCH_MODES = ["individual", "selected", "group", "auto", "undo"] as const;
+
+/** Una fila del historial: sin ítems (el detalle se pide por lote). */
+export const fixBatchSummarySchema = z.object({
+  id: z.number().int(),
+  mode: z.enum(BATCH_MODES),
+  filter: z.record(z.unknown()),
+  actionKey: z.string().nullable(),
+  requestedBy: z.string(),
+  appliedBy: z.string().nullable(),
+  note: z.string().nullable(),
+  status: z.enum(BATCH_STATUSES),
+  counts: z.record(z.unknown()),
+  verification: z.record(z.unknown()).nullable(),
+  createdAt: z.string(),
+  startedAt: z.string().nullable(),
+  finishedAt: z.string().nullable(),
+  undoOfBatchId: z.number().int().nullable(),
+  undoneByBatchId: z.number().int().nullable(),
+  itemCount: z.number().int(),
 });
 
 const findingActionsSchema = z.object({
@@ -142,6 +164,21 @@ export async function registerCurationActionRoutes(app: FastifyInstance): Promis
       response: { 200: fixBatchSchema, ...writeErrorResponses },
     },
   }, async (request) => applyFixBatch(request.params.batchId, request.body, request.operator, request.query).catch(curationError));
+
+  server.get("/curation/fixes", {
+    schema: {
+      tags: ["curation"],
+      summary: "Historial de lotes de correcciones, del más reciente al más antiguo: quién lo pidió, con qué filtro, cómo acabó y si ya se deshizo. Sin `status` se omiten los `previewed` (vistas previas que nadie aplicó y no escribieron nada).",
+      querystring: paginationQuerySchema.extend({
+        mode: z.enum(BATCH_MODES).optional(),
+        status: z.enum(BATCH_STATUSES).optional(),
+      }),
+      response: { 200: z.object({ data: z.array(fixBatchSummarySchema), pagination: z.object({ limit: z.number(), offset: z.number(), total: z.number() }) }) },
+    },
+  }, async (request) => {
+    const { rows, total } = await listFixBatches(request.query);
+    return toPage(rows, total, request.query);
+  });
 
   server.get("/curation/fixes/:batchId", {
     schema: {
