@@ -265,56 +265,93 @@ try {
       await page.screenshot({ path: path.join(outputDir, `${viewport.name}-conflictos.png`), fullPage: true });
       await assertNoOverflow(page, `${viewport.name} /curaduria`);
 
-      // 2. Una categoría, con el tramo marcado del carácter invisible.
-      // En la segunda pasada la corrección de la primera ya lo resolvió: se ve en «Resueltos».
-      await page.goto(`${webUrl}/curaduria/categoria/nombres_sucios${index === 0 ? "" : "?status=resolved"}`, { waitUntil: "domcontentloaded" });
-      await page.locator(".cval__cp").first().waitFor({ timeout: 20_000 }).catch(async (error: unknown) => {
+      // 2. Una categoría, con un caso independiente por viewport para poder
+      // probar preview/aplicar/deshacer tanto en escritorio como en móvil.
+      await page.goto(`${webUrl}/curaduria/categoria/nombres_sucios`, { waitUntil: "domcontentloaded" });
+      const targetName = index === 0 ? "Trueno" : "Tormenta";
+      const targetCard = page.locator(".cfind").filter({ hasText: targetName }).first();
+      await targetCard.locator(".cval__cp").first().waitFor({ timeout: 20_000 }).catch(async (error: unknown) => {
         await page.screenshot({ path: path.join(outputDir, `${viewport.name}-nombres-sucios-fallo.png`), fullPage: true });
         const shown = (await page.locator("main").innerText()).slice(0, 600).replaceAll("\n", " | ");
         const html = await page.locator(".cval").first().innerHTML().catch(() => "(sin .cval)");
         throw new Error(`${viewport.name}: sin marca de invisible. Muestra: ${shown} · .cval=${html} (${(error as Error).message.split("\n")[0]})`);
       });
+      await targetCard.click();
       await page.screenshot({ path: path.join(outputDir, `${viewport.name}-nombres-sucios.png`), fullPage: true });
       await assertNoOverflow(page, `${viewport.name} nombres_sucios`);
 
-      // E8: teclado, preview → apply → undo e historial, una vez en escritorio.
+      // E7: en escritorio se ejercita la decisión A/B desde tarjeta y el
+      // lote por trust_level con un empate que debe quedar fuera.
       if (index === 0) {
-        await page.keyboard.press("?");
-        await page.getByRole("dialog").getByText("Atajos de Curaduría", { exact: true }).waitFor();
-        await page.screenshot({ path: path.join(outputDir, "desktop-atajos.png"), fullPage: true });
+        await page.goto(`${webUrl}/curaduria/categoria/valores_en_disputa?detector=cola_de_revision&signature=review%3Afield_conflict`, { waitUntil: "domcontentloaded" });
+        await page.getByText("QA fuente alta", { exact: true }).waitFor({ timeout: 20_000 });
+        await page.getByText("QA fuente baja", { exact: true }).waitFor();
+        await page.screenshot({ path: path.join(outputDir, "desktop-e7-conflicto-ab.png"), fullPage: true });
+        await page.getByRole("button", { name: "Elegir A" }).first().click();
+        const decisionDialog = page.getByRole("dialog");
+        await decisionDialog.getByLabel("Motivo *").fill("QA visual E7: elegir la evidencia de la fuente alta");
+        await decisionDialog.getByRole("button", { name: "Guardar decisión" }).click();
+        await page.getByText("Decisión guardada con auditoría.", { exact: false }).waitFor();
+
+        await page.goto(`${webUrl}/curaduria/categoria/valores_en_disputa?detector=conflictos_abiertos`, { waitUntil: "domcontentloaded" });
+        await page.getByRole("button", { name: "Resolver por fuente más confiable" }).click();
+        const trustDialog = page.getByRole("dialog");
+        await trustDialog.getByText(/1 elegibles · 1 empates/u).waitFor({ timeout: 20_000 });
+        await page.screenshot({ path: path.join(outputDir, "desktop-e7-confianza-preview.png"), fullPage: true });
+        await trustDialog.getByLabel("Motivo *").fill("QA visual E7: aplicar solo trust_level estrictamente mayor");
+        await trustDialog.getByRole("button", { name: "Aplicar 1 decisiones" }).click();
+        await trustDialog.getByText(/Aplicados: 1 · obsoletos: 0 · fallidos: 0/u).waitFor({ timeout: 20_000 });
+        await page.screenshot({ path: path.join(outputDir, "desktop-e7-confianza-aplicada.png"), fullPage: true });
         await page.keyboard.press("Escape");
 
+        // Volver al caso E8 de escritorio después de las decisiones E7.
+        await page.goto(`${webUrl}/curaduria/categoria/nombres_sucios`, { waitUntil: "domcontentloaded" });
+      }
+
+      // E8: teclado + hoja de acciones móvil + preview → aplicar → deshacer
+      // se ejecutan en ambos viewports.
+      const e8Card = page.locator(".cfind").filter({ hasText: targetName }).first();
+      await e8Card.click();
+      await page.keyboard.press("?");
+      await page.getByRole("dialog").getByText("Atajos de Curaduría", { exact: true }).waitFor();
+      await page.screenshot({ path: path.join(outputDir, `${viewport.name}-atajos.png`), fullPage: true });
+      await page.keyboard.press("Escape");
+
+      if (index === 0) {
         await page.keyboard.press("j");
         if (await page.locator(".cfind.is-keyboard-active").count() !== 1) {
           throw new Error("desktop: j/k no deja una tarjeta de Curaduría activa");
         }
+        await e8Card.click();
         await page.keyboard.press("x");
         await page.getByRole("toolbar", { name: "Acciones sobre lo seleccionado" }).waitFor();
         await page.keyboard.press("x");
-
-        const correctionButton = page.locator(".cfind .cfind__actions .btn--primary").first();
-        await correctionButton.click();
-        const fixDialog = page.getByRole("dialog");
-        const seePreview = fixDialog.getByRole("button", { name: "Ver corrección" });
-        if (await seePreview.count()) await seePreview.click();
-        await fixDialog.getByRole("table").waitFor();
-        await fixDialog.getByLabel("Motivo *").fill("QA visual: comprobar preview/apply/undo");
-        await page.screenshot({ path: path.join(outputDir, "desktop-preview-lote.png"), fullPage: true });
-        await fixDialog.getByRole("button", { name: /^Aplicar \d+ correcciones$/u }).click();
-        await fixDialog.getByText("Lote aplicado", { exact: true }).waitFor({ timeout: 20_000 });
-        await page.screenshot({ path: path.join(outputDir, "desktop-lote-aplicado.png"), fullPage: true });
-        await fixDialog.getByLabel("Motivo para deshacer *").fill("QA visual: restaurar el dato original");
-        await fixDialog.getByRole("button", { name: "Deshacer este lote" }).click();
-        await fixDialog.getByText("Lote deshecho.", { exact: false }).waitFor({ timeout: 20_000 });
-        await page.screenshot({ path: path.join(outputDir, "desktop-lote-desecho.png"), fullPage: true });
-        await fixDialog.getByRole("button", { name: "Cerrar" }).click();
-
-        await page.goto(`${webUrl}/curaduria/correcciones`, { waitUntil: "domcontentloaded" });
-        await page.getByRole("heading", { name: "Correcciones" }).waitFor();
-        await page.locator("tbody tr").first().waitFor();
-        await page.screenshot({ path: path.join(outputDir, "desktop-correcciones.png"), fullPage: true });
-        await assertNoOverflow(page, "desktop correcciones");
+      } else {
+        await page.screenshot({ path: path.join(outputDir, "mobile-hoja-acciones.png"), fullPage: true });
       }
+
+      const correctionButton = e8Card.locator(".cfind__actions--primary .btn--primary").first();
+      await correctionButton.click();
+      const fixDialog = page.getByRole("dialog");
+      const seePreview = fixDialog.getByRole("button", { name: "Ver corrección" });
+      if (await seePreview.count()) await seePreview.click();
+      await fixDialog.getByRole("table").waitFor();
+      await fixDialog.getByLabel("Motivo *").fill(`QA visual ${viewport.name}: comprobar preview/apply/undo`);
+      await page.screenshot({ path: path.join(outputDir, `${viewport.name}-preview-lote.png`), fullPage: true });
+      await fixDialog.getByRole("button", { name: /^Aplicar \d+ correcciones$/u }).click();
+      await fixDialog.getByText("Lote aplicado", { exact: true }).waitFor({ timeout: 20_000 });
+      await page.screenshot({ path: path.join(outputDir, `${viewport.name}-lote-aplicado.png`), fullPage: true });
+      await fixDialog.getByLabel("Motivo para deshacer *").fill(`QA visual ${viewport.name}: restaurar el dato original`);
+      await fixDialog.getByRole("button", { name: "Deshacer este lote" }).click();
+      await fixDialog.getByText("Lote deshecho.", { exact: false }).waitFor({ timeout: 20_000 });
+      await page.screenshot({ path: path.join(outputDir, `${viewport.name}-lote-desecho.png`), fullPage: true });
+      await fixDialog.getByRole("button", { name: "Cerrar" }).click();
+
+      await page.goto(`${webUrl}/curaduria/correcciones`, { waitUntil: "domcontentloaded" });
+      await page.getByRole("heading", { name: "Correcciones" }).waitFor();
+      await page.locator("tbody tr").first().waitFor();
+      await page.screenshot({ path: path.join(outputDir, `${viewport.name}-correcciones.png`), fullPage: true });
+      await assertNoOverflow(page, `${viewport.name} correcciones`);
 
       // 3. «Otros»: la anomalía sembrada aparece sin regla escrita para ella, y
       //    sus subgrupos se ven por tandas en vez de todos de golpe.
