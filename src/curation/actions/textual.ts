@@ -573,7 +573,7 @@ export const capitalizeAction = makeRenameAction({
   description: "Aplica mayúsculas de título en español y conserva partículas como de, del, la e y en minúscula.",
   level: 1,
   rank: 25,
-  matches: is("minusculas"),
+  matches: is("minusculas", "mayusculas_sostenidas"),
   value: suggestedValue,
   transform: (before) => capitalizeSpanish(before),
 });

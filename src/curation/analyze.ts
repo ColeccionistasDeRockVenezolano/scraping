@@ -15,6 +15,7 @@ import { DUPLICATE_DETECTORS } from "./detectors/duplicates.js";
 import { COHERENCE_DETECTORS } from "./detectors/coherence.js";
 import { QUEUE_DETECTORS } from "./detectors/queue.js";
 import { ORPHAN_DETECTORS } from "./detectors/orphans.js";
+import { E11_DETECTORS } from "./detectors/advanced.js";
 import { TEXT_FORM_CATEGORIES, catalogAnomalies, detectAnomalies } from "./detectors/anomalies.js";
 
 export const DETECTORS: readonly Detector[] = [
@@ -25,6 +26,7 @@ export const DETECTORS: readonly Detector[] = [
   ...COHERENCE_DETECTORS,
   ...QUEUE_DETECTORS,
   ...ORPHAN_DETECTORS,
+  ...E11_DETECTORS,
 ];
 
 /**
@@ -47,6 +49,7 @@ export const DETECTORS: readonly Detector[] = [
 const GLOBAL_DETECTOR_KEYS: ReadonlySet<string> = new Set([
   ...DUPLICATE_DETECTORS.map((detector) => detector.key),
   ...QUEUE_DETECTORS.map((detector) => detector.key),
+  ...E11_DETECTORS.map((detector) => detector.key),
 ]);
 
 export const LOCAL_DETECTORS: readonly Detector[] = DETECTORS.filter((detector) => !GLOBAL_DETECTOR_KEYS.has(detector.key));
@@ -69,7 +72,7 @@ export const DETECTOR_DEFINITIONS: readonly DetectorDefinition[] = [...DETECTORS
  * v3 (PLAN_CURADURIA E2 cierre 20/20): además de v2, elimina los falsos
  * positivos etiquetados que todavía dejaban detectores por debajo de 90 %.
  */
-export const RULES_VERSION = "curation-rules.v3";
+export const RULES_VERSION = "curation-rules.v4";
 
 export interface DetectorFailure { detector: string; error: string; }
 

@@ -48,9 +48,52 @@ export interface Finding {
 export interface SnapshotArtist { id: number; name: string; originCity: string | null; formedYear: number | null; disbandedYear: number | null; }
 export interface SnapshotPerson { id: number; name: string; }
 export interface SnapshotOrganization { id: number; name: string; type: string; }
-export interface SnapshotAlbum { id: number; artistId: number; title: string; releaseYear: number | null; albumType: string; }
+export interface SnapshotAlbum { id: number; artistId: number; title: string; releaseYear: number | null; albumType: string; labelId?: number | null; }
 export interface SnapshotTrack { id: number; albumId: number; disc: number; number: number; title: string; durationSeconds: number | null; }
 export interface SnapshotCreditRole { role: string; creditType: string; uses: number; }
+
+/** Filas relacionales que solo necesita el análisis completo de E11. */
+export interface SnapshotCredit {
+  id: number;
+  parentKind: "album" | "track";
+  parentId: number;
+  personId: number | null;
+  artistId: number | null;
+  organizationId: number | null;
+  creditType: string;
+  role: string;
+}
+export interface SnapshotMembership {
+  id: number;
+  artistId: number;
+  personId: number;
+  role: string;
+  fromYear: number | null;
+  toYear: number | null;
+  isCurrent: boolean;
+}
+export interface SnapshotAlias {
+  id: number;
+  kind: "artist" | "person" | "organization" | "album" | "track";
+  entityId: number;
+  alias: string;
+  normalizedAlias: string;
+}
+export interface SnapshotRedirect {
+  kind: "artist" | "person" | "organization" | "album" | "track";
+  fromId: number;
+  toId: number;
+}
+export interface SnapshotMediaLink {
+  id: number;
+  entityKind: string;
+  artistId: number | null;
+  personId: number | null;
+  organizationId: number | null;
+  albumId: number | null;
+  url: string;
+  mediaType: string;
+}
 
 export interface SnapshotReview {
   id: number;
@@ -91,6 +134,16 @@ export interface CatalogSnapshot {
   albums: SnapshotAlbum[];
   tracks: SnapshotTrack[];
   creditRoles: SnapshotCreditRole[];
+  /**
+   * Relaciones globales de E11. Son opcionales para mantener pequeños los
+   * fixtures y las fotos dirigidas de E9; los detectores E11 solo corren en
+   * análisis completos y tratan la ausencia como conjunto vacío.
+   */
+  credits?: SnapshotCredit[];
+  memberships?: SnapshotMembership[];
+  aliases?: SnapshotAlias[];
+  redirects?: SnapshotRedirect[];
+  mediaLinks?: SnapshotMediaLink[];
   /** Artistas con los que cada persona tiene vínculo (membresía o crédito). */
   personArtists: Map<number, Set<number>>;
   /** Cuántos vínculos tiene cada ficha (0 = huérfana). */
