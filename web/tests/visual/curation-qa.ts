@@ -11,6 +11,12 @@
 // por tandas, sin overflow horizontal, sin errores de consola, que «No es un
 // problema» pide un motivo y guarda la decisión, y que «Son distintas» guarda el
 // par (PLAN_CURADURIA E2).
+//
+// De E8, además: el botón principal de la tarjeta lleva el nombre de la acción
+// recomendada, la vista previa resalta el tramo que cambia, aplicar deja la
+// barra de resultado y un «Deshacer» a mano, el lote aparece en el historial,
+// «seleccionar los N que cumplen el filtro» sale al elegir uno, los atajos de
+// teclado mueven el foco y en móvil las acciones viven en una hoja inferior.
 import { spawn, type ChildProcess } from "node:child_process";
 import { createServer } from "node:net";
 import { randomBytes, scrypt as scryptCallback } from "node:crypto";
@@ -121,6 +127,12 @@ async function seed(): Promise<{ dirtyArtist: number }> {
     // Nombres de tabla y columna fijos de esta lista, no vienen de fuera.
     await pool.query(`UPDATE public.${table} SET ${column} = regexp_replace(${column}, ' ', $2) WHERE id = $1`, [id, ` ${sign} `]);
   }
+  // Dos nombres con entidades HTML: tienen acción recomendada (`decodificar_html`)
+  // y una alternativa (`limpiar_texto`), así que sirven para la tarjeta con
+  // acciones reales, «Otras correcciones» y la vista previa (E8). Cada pasada
+  // corrige uno, y ninguno es el caso del análisis de verificación del final.
+  await one("INSERT INTO public.artists(name, origin_city) VALUES('Ra&iacute;ces Vivas QA', 'Barquisimeto') RETURNING id");
+  await one("INSERT INTO public.artists(name, origin_city) VALUES('Ni&ntilde;os del Sur QA', 'Mérida') RETURNING id");
   // Un par de artistas escritos de otra forma, para «Son distintas».
   await one("INSERT INTO public.artists(name, origin_city) VALUES('Los Relámpago QA', 'Caracas') RETURNING id");
   await one("INSERT INTO public.artists(name, origin_city) VALUES('Relámpago QA', 'Maracay') RETURNING id");
@@ -144,6 +156,16 @@ async function waitForCorrectionScan(afterId: number): Promise<void> {
 
 async function waitForApp(page: Page): Promise<void> {
   await page.waitForFunction(() => (document.querySelector("#root")?.childElementCount ?? 0) > 0, undefined, { timeout: 60_000 });
+}
+
+/**
+ * En móvil las acciones de una tarjeta están en una hoja inferior (E8.9): antes
+ * de pulsar cualquiera hay que abrirla. En escritorio ya están a la vista.
+ */
+async function openCardActions(page: Page, mobile: boolean): Promise<void> {
+  if (!mobile) return;
+  await page.locator(".cfind").first().getByRole("button", { name: "Acciones" }).click();
+  await page.getByRole("dialog").waitFor({ timeout: 10_000 });
 }
 
 async function assertNoOverflow(page: Page, label: string): Promise<void> {
@@ -261,10 +283,14 @@ try {
       await assertNoOverflow(page, `${viewport.name} otros`);
 
       // 4. «No es un problema» pide un motivo y guarda la decisión con él.
+      //    En móvil las acciones de la tarjeta viven en una hoja inferior (E8.9),
+      //    así que primero se abre.
       await page.goto(`${webUrl}/curaduria/categoria/ficha_de_otro_tipo`, { waitUntil: "domcontentloaded" });
+      await page.locator(".cfind").first().waitFor({ timeout: 20_000 });
+      const before = await page.locator(".cfind").count();
+      await openCardActions(page, index === 1);
       const ignoreButton = page.getByRole("button", { name: "No es un problema" }).first();
       await ignoreButton.waitFor({ timeout: 20_000 });
-      const before = await page.getByRole("button", { name: "No es un problema" }).count();
       await ignoreButton.click();
       const ignoreDialog = page.getByRole("dialog");
       // Sin motivo no se guarda.
@@ -287,6 +313,8 @@ try {
       // 4b. «Son distintas» guarda el par (solo la primera vez: después ya no está abierto).
       if (index === 0) {
         await page.goto(`${webUrl}/curaduria/categoria/fichas_repetidas`, { waitUntil: "domcontentloaded" });
+        await page.locator(".cfind").first().waitFor({ timeout: 20_000 });
+        await openCardActions(page, index === 1);
         const distinctButton = page.getByRole("button", { name: "Son distintas" }).first();
         await distinctButton.waitFor({ timeout: 20_000 });
         const beforeDistinct = await lastScanId();
@@ -304,7 +332,96 @@ try {
         await assertNoOverflow(page, `${viewport.name} fichas_repetidas`);
       }
 
-      // 5. Corrección por la API (solo la primera vez): quita el invisible pero
+      // 5. Triaje con teclado y selección por filtro (E8.3/E8.6) sobre los
+      //    nombres con entidades HTML, que sí tienen corrección de un clic.
+      await page.goto(`${webUrl}/curaduria/categoria/nombres_sucios?detector=entidades_html`, { waitUntil: "domcontentloaded" });
+      const card = page.locator(".cfind").first();
+      await card.waitFor({ timeout: 20_000 });
+      await page.keyboard.press("j");
+      await page.locator(".cfind--focused").first().waitFor({ timeout: 10_000 });
+      await page.keyboard.press("x");
+      const selectionBar = page.getByRole("toolbar", { name: "Acciones sobre lo seleccionado" });
+      await selectionBar.waitFor({ timeout: 10_000 });
+      await selectionBar.getByRole("button", { name: /^Seleccionar los .* que cumplen el filtro$/u }).waitFor({ timeout: 10_000 });
+      await page.waitForTimeout(300);
+      await page.screenshot({ path: path.join(outputDir, `${viewport.name}-seleccion-total.png`), fullPage: true });
+      await assertNoOverflow(page, `${viewport.name} selección por filtro`);
+      await page.keyboard.press("?");
+      const helpDialog = page.getByRole("dialog");
+      await helpDialog.getByText("Atajos de teclado").first().waitFor({ timeout: 10_000 });
+      await page.waitForTimeout(300);
+      await page.screenshot({ path: path.join(outputDir, `${viewport.name}-teclado.png`), fullPage: true });
+      await helpDialog.getByRole("button", { name: "Entendido" }).click();
+      await selectionBar.getByRole("button", { name: "Vaciar selección" }).click();
+
+      // 6. Tarjeta con la acción recomendada → vista previa → aplicar →
+      //    «Deshacer» a mano (E8.1/E8.2/E8.4). En móvil las acciones están en
+      //    una hoja inferior (E8.9).
+      if (index === 1) {
+        await card.getByRole("button", { name: "Acciones" }).click();
+        const sheet = page.getByRole("dialog");
+        await sheet.getByRole("button", { name: /Decodificar/u }).waitFor({ timeout: 10_000 });
+        await page.waitForTimeout(300);
+        await page.screenshot({ path: path.join(outputDir, `${viewport.name}-acciones-hoja.png`), fullPage: true });
+        await assertNoOverflow(page, `${viewport.name} hoja de acciones`);
+        await sheet.getByRole("button", { name: /Decodificar/u }).click();
+      } else {
+        const primary = card.locator(".cfind__actions .btn--primary").first();
+        const primaryLabel = (await primary.innerText()).trim();
+        if (!/decodificar/iu.test(primaryLabel)) {
+          throw new Error(`${viewport.name}: el botón principal debería ser la acción recomendada, dice «${primaryLabel}»`);
+        }
+        const menuButton = card.getByRole("button", { name: "Otras correcciones" });
+        if (!await menuButton.count()) {
+          throw new Error(`${viewport.name}: falta «Otras correcciones» en un hallazgo con dos acciones`);
+        }
+        await menuButton.click();
+        const menu = card.getByRole("menu");
+        await menu.getByRole("menuitem", { name: /Limpiar el texto/u }).waitFor({ timeout: 10_000 });
+        await page.waitForTimeout(200);
+        await page.screenshot({ path: path.join(outputDir, `${viewport.name}-otras-correcciones.png`), fullPage: true });
+        // Un menú tiene que poder abandonarse con el teclado.
+        await page.keyboard.press("Escape");
+        await menu.waitFor({ state: "detached", timeout: 5_000 });
+        await primary.click();
+      }
+
+      const fixDialog = page.getByRole("dialog");
+      await fixDialog.locator(".cdiff").first().waitFor({ timeout: 20_000 });
+      if (!await fixDialog.locator(".cdiff mark").count()) {
+        throw new Error(`${viewport.name}: la vista previa no resalta el tramo que cambia`);
+      }
+      await page.waitForTimeout(300);
+      await page.screenshot({ path: path.join(outputDir, `${viewport.name}-vista-previa.png`), fullPage: true });
+      await assertNoOverflow(page, `${viewport.name} vista previa`);
+      const beforeFix = await lastScanId();
+      await fixDialog.getByLabel(/^Motivo/u).fill("QA: decodificar la entidad HTML");
+      await fixDialog.getByRole("button", { name: /^Aplicar/u }).click();
+      await fixDialog.locator(".cprogress").waitFor({ timeout: 20_000 });
+      await page.waitForTimeout(300);
+      await page.screenshot({ path: path.join(outputDir, `${viewport.name}-lote-aplicado.png`), fullPage: true });
+      await page.locator(".toast__action", { hasText: "Deshacer" }).waitFor({ timeout: 10_000 });
+      await page.screenshot({ path: path.join(outputDir, `${viewport.name}-deshacer.png`), fullPage: true });
+      await assertNoOverflow(page, `${viewport.name} lote aplicado`);
+      await fixDialog.locator(".form-actions").getByRole("button", { name: "Cerrar" }).click();
+      const pending = await getPool().query<{ n: string }>("SELECT count(*)::text AS n FROM public.artists WHERE name LIKE '%&%;%'");
+      if (Number(pending.rows[0]!.n) !== 1 - index) {
+        throw new Error(`${viewport.name}: quedan ${pending.rows[0]!.n} nombres con entidad HTML, se esperaba ${1 - index}`);
+      }
+      await waitForCorrectionScan(beforeFix);
+
+      // 7. Historial de correcciones con su deshacer (E8.5).
+      await page.goto(`${webUrl}/curaduria/correcciones`, { waitUntil: "domcontentloaded" });
+      await page.getByRole("link", { name: /^Lote #/u }).first().waitFor({ timeout: 20_000 });
+      await page.screenshot({ path: path.join(outputDir, `${viewport.name}-correcciones.png`), fullPage: true });
+      await assertNoOverflow(page, `${viewport.name} correcciones`);
+      await page.getByRole("link", { name: /^Lote #/u }).first().click();
+      await page.locator(".cprogress").waitFor({ timeout: 20_000 });
+      await page.getByRole("button", { name: "Deshacer este lote" }).waitFor({ timeout: 10_000 });
+      await page.screenshot({ path: path.join(outputDir, `${viewport.name}-lote-detalle.png`), fullPage: true });
+      await assertNoOverflow(page, `${viewport.name} detalle del lote`);
+
+      // 8. Corrección por la API (solo la primera vez): quita el invisible pero
       //    mete la ciudad en el nombre. El detector debe verificarla solo.
       if (index === 0) {
         const beforePatch = await lastScanId();
