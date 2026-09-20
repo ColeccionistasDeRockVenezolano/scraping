@@ -113,6 +113,42 @@ describe("Curaduría E7/E8: decisión y operación desde la misma superficie", (
       .toEqual({ status: "open" });
   }, 60_000);
 
+  it("resuelve un conflicto con «otro valor» y conserva auditoría y claims rivales", async () => {
+    const high = await source("e7-custom-high", "high");
+    const medium = await source("e7-custom-medium", "medium");
+    const artist = await one("INSERT INTO public.artists(name,origin_city) VALUES('E7 Otro Valor','Valencia') RETURNING id");
+    const custom = await conflict({
+      artistId: artist, sourceA: high, sourceB: medium, valueA: "Caracas", valueB: "Maracay",
+    });
+
+    const response = await app.inject({
+      method: "POST", url: `/curation/conflicts/${custom.conflictId}/resolve`, headers,
+      payload: { value: "Puerto La Cruz", note: "la evidencia humana confirma un tercer valor" },
+    });
+    expect(response.statusCode, response.body).toBe(200);
+    expect(response.json()).toMatchObject({
+      conflictId: custom.conflictId, action: "custom", runId: expect.any(Number),
+    });
+    expect((await getPool().query("SELECT origin_city FROM public.artists WHERE id=$1", [artist])).rows[0])
+      .toEqual({ origin_city: "Puerto La Cruz" });
+    expect((await getPool().query("SELECT status::text,resolved_by FROM ingest.conflicts WHERE id=$1", [custom.conflictId])).rows[0])
+      .toEqual({ status: "dismissed", resolved_by: "human" });
+    expect((await getPool().query(
+      "SELECT id::text,status::text FROM ingest.claims WHERE id=ANY($1::bigint[]) ORDER BY id",
+      [[custom.claimA, custom.claimB]],
+    )).rows).toEqual([
+      { id: String(custom.claimA), status: "superseded" },
+      { id: String(custom.claimB), status: "superseded" },
+    ]);
+    const audit = await getPool().query<{ old_value: unknown; new_value: unknown; performed_by: string }>(
+      "SELECT old_value,new_value,performed_by FROM ingest.merge_audit WHERE artist_id=$1 AND field='origin_city' ORDER BY id DESC LIMIT 1",
+      [artist],
+    );
+    expect(audit.rows[0]).toMatchObject({
+      old_value: "Valencia", new_value: "Puerto La Cruz", performed_by: "human",
+    });
+  }, 60_000);
+
   it("expone revisión con fuente/confianza/fecha y person_duplicate dentro de Curaduría", async () => {
     const high = await source("e7-review-high", "high");
     const medium = await source("e7-review-medium", "medium");
