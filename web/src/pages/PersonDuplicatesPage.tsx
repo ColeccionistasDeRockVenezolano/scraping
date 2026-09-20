@@ -107,8 +107,8 @@ function plural(count: number, singular: string, pluralForm: string): string {
 
 interface CandidatePair {
   reviewId: number;
-  a: PersonDuplicateCandidate["a"];
-  b: PersonDuplicateCandidate["b"];
+  a: { id: number; name: string };
+  b: { id: number; name: string };
 }
 
 export function PersonDuplicatesPage() {
