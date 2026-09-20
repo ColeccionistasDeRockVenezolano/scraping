@@ -969,6 +969,13 @@ td.num { font-family: var(--font-mono); }
 .cfind__evidence[open] summary svg { transform: rotate(180deg); }
 .cfind__evidence pre { margin: 8px 0 0; }
 .cfind__actions { display: flex; gap: 8px; margin-left: auto; }
+.cfind__recommended-action { min-width: 0; max-width: min(100%, 48rem); }
+.cfind__recommended-label { flex: 0 0 auto; }
+.cfind__action-consequence {
+  min-width: 0; max-width: 28rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  padding-left: 8px; margin-left: 2px; border-left: 1px solid color-mix(in srgb, currentColor 35%, transparent);
+  font-size: 11px; font-weight: 500; opacity: .88;
+}
 .cfind__select { display: flex; align-items: flex-start; padding-top: 2px; }
 .cfind--picked { box-shadow: 0 0 0 2px var(--accent, var(--teal)); }
 
@@ -1025,11 +1032,27 @@ td.num { font-family: var(--font-mono); }
 @media (max-width: 640px) {
   .decision-grid { grid-template-columns: 1fr; }
   .evidence-list__row { grid-template-columns: 1fr; gap: .15rem; }
-  .cfind__actions {
-    position: sticky; bottom: calc(72px + env(safe-area-inset-bottom)); z-index: 12;
-    margin: 4px -8px -6px; padding: 8px; border-top: 1px solid var(--border);
-    background: color-mix(in srgb, var(--surface) 96%, transparent);
+  /* E8: las acciones principales del hallazgo activo viven en una hoja inferior.
+     Las decisiones A/B de E7 permanecen dentro de su tarjeta. */
+  .cfind__actions--primary { display: none; }
+  .cfind.is-keyboard-active .cfind__actions--primary {
+    display: flex; position: fixed; left: .75rem; right: .75rem;
+    bottom: calc(.75rem + env(safe-area-inset-bottom)); z-index: 60;
+    max-height: 52vh; overflow-y: auto; flex-wrap: wrap;
+    margin: 0; padding: 12px;
+    border: 1px solid var(--border); border-radius: var(--radius-md);
+    background: color-mix(in srgb, var(--surface) 98%, transparent);
+    box-shadow: var(--shadow-lg, 0 10px 32px rgba(0,0,0,.32));
   }
-  .cfind__more-menu { position: fixed; left: .75rem; right: .75rem; bottom: calc(78px + env(safe-area-inset-bottom)); max-height: 60vh; overflow: auto; }
-  .toast-stack { bottom: calc(82px + env(safe-area-inset-bottom)); }
+  .cfind.is-keyboard-active .cfind__actions--primary::before {
+    content: "Acciones"; width: 100%; font-size: 12px; font-weight: 800;
+    letter-spacing: .05em; text-transform: uppercase; color: var(--text-faint);
+  }
+  .cfind.is-keyboard-active .cfind__actions--primary .btn { width: 100%; min-height: 44px; }
+  .cfind__recommended-action { align-items: flex-start; flex-wrap: wrap; }
+  .cfind__action-consequence {
+    width: 100%; max-width: none; padding-left: 0; margin-left: 24px; border-left: 0;
+  }
+  .cfind__more-menu { position: fixed; left: .75rem; right: .75rem; bottom: calc(5rem + env(safe-area-inset-bottom)); max-height: 60vh; overflow: auto; }
+  .toast-stack { bottom: calc(6rem + env(safe-area-inset-bottom)); }
 }
