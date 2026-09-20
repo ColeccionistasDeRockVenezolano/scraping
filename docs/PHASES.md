@@ -889,3 +889,66 @@ Evidencia y mediciones: `reports/person-candidates-dryrun.md`,
 `reports/person-junk-dryrun.md`, `reports/persons-search-probe.md`. Las sondas
 son de solo lectura (la de fusión revierte su transacción) y están descritas en
 `docs/OPERATIONS.md` §9.
+
+---
+
+## Fase de Curaduría (plan `PLAN_CURADURIA_20_DE_20.md`, etapas C-E0 … C-E12)
+
+> **Ojo con la numeración.** Las etapas `E6`–`E11` de arriba son las del plan
+> original del proyecto. Las de esta fase son las del plan de Curaduría, que
+> numera aparte de `E0` a `E12`; aquí se escriben con el prefijo **`C-`** para
+> que no se confundan. La auditoría de partida (2026-09-16) calificó el sistema
+> en **≈11/20** con 5 defectos críticos (C1–C5), 9 altos (A1–A9), 11 medios y
+> 5 bajos; el objetivo de la fase era cerrar la checklist §4 del plan.
+
+**Objetivo:** que el detector de conflictos del catálogo no mienta (un análisis
+parcial no resuelve lo que no miró), que toda corrección sea una **acción
+tipada** con vista previa, comparación antes de escribir y deshacer, y que la
+decisión humana sea duradera y medible.
+
+**Regla que gobierna la fase:** el core no se toca. Todas las migraciones
+(`0017`–`0024`) crean objetos solo en `ingest`, y toda escritura pasa por
+`src/merge/operator.ts`. La base de desarrollo es de solo lectura para el
+agente: las cifras salen de la foto congelada `catalog-2026-09-16` +
+`relations-2026-09-20` o de PostgreSQL desechable.
+
+| Etapa | Cierra | Estado | Entregable principal |
+|---|---|---|---|
+| **C-E0** Punto de partida | M8 | cerrada | `docs/curation/BASELINE_2026-09-16.md`, corpus `test/fixtures/curation/corpus.json`, módulo versionado y `0018` aplicada |
+| **C-E1** Motor robusto | C1, C2, C5, A3, A4, M1, M11 | cerrada | `status='partial'`, foto en una sola transacción `REPEATABLE READ READ ONLY`, `pg_try_advisory_lock`, motivos de resolución (`0019`), poda |
+| **C-E2** Precisión y decisiones duraderas | A5, A6, B1–B3, B5, M3, M4 | cerrada | corpus etiquetado + `curation-precision.test.ts` con umbral ≥90 %, huella por par, `curation_distinct_pairs` (`0020`), motivo al ignorar |
+| **C-E3** Seguridad de lo que ya escribe | C3, C4, A2, M5 | cerrada | alcance exacto de grupo, CAS con `409 stale`, limpiezas encadenadas sobre la misma ficha, UI honesta |
+| **C-E4** Marco de acciones | A1 (infra), A8, M6 | cerrada | `src/curation/actions/*`, lotes `0021`, `preview → apply → undo` con hash y CAS inverso, verificación dirigida |
+| **C-E5** Acciones de texto | A1 (nombres sucios) | cerrada | 16 acciones de texto sobre el marco, con tabla de casos reales |
+| **C-E6** Acciones estructurales | A1 (estructura) | cerrada | créditos, conversiones, `POST /persons/:id/split`, fusión de discos, renumeración en dos fases |
+| **C-E7** Disputas y cola en la tarjeta | M7 | cerrada | «Resolver» (A/B/otro valor), «Decidir» (aceptar/rechazar), grupo por `trust_level`, contador de duplicados |
+| **C-E8** Experiencia de corrección | A2, M2, M5, M6, M10 | cerrada | vista previa reutilizable, selección total por filtro, progreso y deshacer, triaje con teclado, hoja inferior móvil, 38 capturas de QA |
+| **C-E9** Rendimiento e incremental | A9 | cerrada | detectores locales/globales, análisis dirigido, `persist` por diferencia (`0023`), léxico cacheado |
+| **C-E10** Autocorrección segura | §2.2 | cerrada | `CRV_CURATION_AUTOFIX=false` por defecto, lista blanca `0024`, topes, interruptor de emergencia |
+| **C-E11** Detectores de cobertura | A7 | cerrada con salvedad | 11 detectores nuevos (`detectors/advanced.ts`); ver la salvedad de acciones abajo |
+| **C-E12** Observabilidad, documentación y cierre | — | cerrada | métricas en `/curation/summary`, `crv curation fix --preview`, documentación, y la auditoría de cierre `docs/curation/CIERRE_20_DE_20.md` |
+
+**Criterios de salida (checklist §4 del plan).** Verificados uno a uno en
+`docs/curation/CIERRE_20_DE_20.md` (2026-09-20): los 13 puntos se cumplen, con
+dos salvedades documentadas allí y ninguna de ellas en la checklist.
+
+Cifras del cierre, medidas sobre la foto congelada y sobre PostgreSQL
+desechable, no estimadas:
+
+| Medida | Valor | Criterio |
+|---|---|---|
+| Hallazgos accionables | 5.414 (+1.670 informativos aparte) | — |
+| Con acción de nivel ≤1 | **84,3 %** | ≥30 % |
+| Con acción de nivel ≤2 | **86,6 %** | ≥70 % |
+| Precisión por detector (corpus) | ≥90 % en todos los etiquetados | ≥90 % |
+| Verificación dirigida | 135 ms | <1 s |
+| Análisis completo con el doble del catálogo (117.946 filas) | 4.746 ms | <5 s |
+
+**Salvedad de C-E11.** Cinco de los once detectores nuevos
+(`creditos_duplicados`, `rol_contra_tipo_de_credito`, `organizacion_sin_clasificar`,
+`alias_que_choca_con_otra_ficha`, `pistas_sin_duracion_en_disco_con_duraciones`)
+emiten sobre datos reales pero **no declaran acción**, aunque el plan les asigna
+una en su lista de E11. Son 197 hallazgos de los 5.414 accionables: no mueven la
+checklist §4 (que pide ≥70 % con nivel ≤2 y se cumple con 86,6 %), pero son
+trabajo pendiente si se quiere corregirlos desde la propia tarjeta. Detalle y
+recomendación en el cierre.

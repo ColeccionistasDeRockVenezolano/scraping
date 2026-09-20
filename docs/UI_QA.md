@@ -70,6 +70,44 @@ Se compararon `crv_simple_conceptual.svg` y `crv_simple_relational.svg` con la n
 
 No se detectó una contradicción conceptual entre los SVG y las relaciones mostradas. Los alias y enlaces de medios pertenecen a esquemas auxiliares posteriores y, por ello, no aparecen en esos SVG del core.
 
+## QA visual de Curaduría (plan de Curaduría, C-E8)
+
+Fecha: 2026-09-20. Harness: `npm run test:visual-curation`
+(`web/tests/visual/curation-qa.ts`). **Nunca corre contra la base de
+desarrollo**: levanta su propio PostgreSQL en contenedor, siembra un catálogo
+con casos conocidos, analiza con el código real, arranca API y web, entra como
+admin de QA y captura a **1280 px y 400 px**.
+
+Las 38 capturas están en `docs/ui-qa/curaduria/` (19 de escritorio + las mismas
+19 en móvil, con el prefijo `desktop-`/`mobile-`):
+
+| Qué demuestra | Captura |
+|---|---|
+| Panorama y menú por categoría | `*-panorama.png`, `*-menu.png` (a 400 px el menú se pliega en un botón) |
+| Listado de una categoría y «Otros» por tandas | `*-nombres-sucios.png`, `*-otros.png`, `*-otros-mas.png` |
+| Vista previa antes → después con el tramo resaltado | `*-vista-previa.png` |
+| Otras correcciones de la tarjeta | `*-otras-correcciones.png` |
+| Resultado del lote, detalle e historial | `*-lote-aplicado.png`, `*-lote-detalle.png`, `*-correcciones.png` |
+| Deshacer a mano tras aplicar | `*-deshacer.png` |
+| Verificación dirigida y lo que desencadenó | `*-verificacion.png`, `*-desencadenados.png` |
+| Motivo obligatorio al ignorar y «Son distintas» | `*-ignorar-motivo.png`, `*-son-distintas.png` |
+| Selección de los N que cumplen el filtro | `*-seleccion-total.png` |
+| Valores en disputa decididos desde la tarjeta | `*-conflictos.png` |
+| Autocorrección: reglas, panorama y lo de hoy | `*-autocorreccion.png`, `*-autocorreccion-panorama.png`, `*-autocorreccion-hoy.png` |
+| **Triaje con teclado** (`j/k` mover, `x` seleccionar, `c` corregir, `i` ignorar, `o` abrir, `?` ayuda) | `*-teclado.png` |
+| Acciones en hoja inferior a 400 px | `mobile-acciones-hoja.png` |
+
+El harness no solo captura: falla si hay overflow horizontal, si la consola
+registra errores, si «No es un problema» no exige motivo, si «Son distintas» no
+guarda el par, si el botón principal no lleva el nombre de la acción
+recomendada, si la vista previa no resalta el tramo que cambia o si los atajos
+no mueven el foco. En CI es una puerta que bloquea el PR.
+
+> Regla del harness (§0.1.8 del plan de Curaduría): cualquier harness nuevo debe
+> poner `process.env["CRV_SESSION_COOKIE_PATH"] = "/"` antes de
+> `resetEnvCache()`/`buildApp()`. Con el `/crv` del `.env` el login «funciona»
+> pero todo lo admin responde 401.
+
 ## Verificación ejecutada
 
 ```text
@@ -78,6 +116,7 @@ cd web && npm run build
 cd web && npm run qa:smoke
 cd web && npm run qa:capture
 npm run test:visual-extreme
+npm run test:visual-curation
 npm run test:contract
 ```
 

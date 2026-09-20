@@ -534,6 +534,103 @@ Campos que escribe el flujo de duplicados (E11):
   su propia fila con `performed_by='human'`; al deshacer se **informan**, no se
   revierten (nadie decidió quitarlas).
 
+### 4.17 Curaduría — análisis, hallazgos, decisiones, lotes y autocorrección
+
+Siete tablas de `ingest` (migraciones `0017`, `0018`, `0019`, `0020`, `0021`,
+`0023`, `0024`) sostienen el detector de conflictos y sus correcciones
+(PLAN_CURADURIA E1–E12). **Ninguna toca el core**: Curaduría lee el catálogo y
+escribe solo a través del motor de merge (`withOperatorRun`), que deja su rastro
+en `ingest.merge_audit` como cualquier otra escritura.
+
+#### `ingest.curation_scans` — cada pasada del detector
+
+| columna | tipo | notas |
+| --- | --- | --- |
+| `id` | bigint identity | PK |
+| `status` | varchar(12) | `running`, `ok`, **`partial`** (algún detector falló), **`skipped`** (otro proceso tenía el candado), `failed` |
+| `trigger` | varchar(40) | `manual`, `escritura`, `correccion`, `vigilante` |
+| `scope` | varchar(12) | `completo` o `dirigido` (verificación de un lote, E9) |
+| `requested_by` | text | operador o proceso |
+| `catalog_signature` | text | huella barata de «¿cambió algo?» (contadores de `pg_stat_user_tables`) |
+| `counters` | jsonb | totales, altas, resueltos, encadenados, `rulesVersion`, tiempos por etapa y niveles de acción |
+| `error`, `started_at`, `finished_at` | | |
+
+`partial` es el cierre de **C1**: un detector que lanza no da por mirado lo
+suyo, así que sus hallazgos **no** se resuelven en masa. La resolución filtra
+por los detectores que completaron (`scan.ts`), nunca por la marca de la fila.
+
+#### `ingest.curation_findings` — el hallazgo y su historia
+
+| columna | tipo | notas |
+| --- | --- | --- |
+| `id` | bigint identity | PK |
+| `fingerprint` | text UNIQUE | huella estable: detector + subgrupo + ficha + campo + valor + relacionadas. En un hallazgo de **par** (duplicados) es solo el par ordenado, para que un tercer miembro o un renombrado no borren lo decidido (**A5**) |
+| `category`, `detector`, `signature` | | taxonomía de 9 categorías, 47 detectores y subgrupo |
+| `severity` | varchar(8) | `high` / `medium` / `low` |
+| `entity_kind`, `entity_id`, `entity_label`, `field`, `value` | | la ficha y el dato señalado |
+| `suggested_value` | text (`0018`) | reemplazo determinista cuando existe |
+| `related`, `evidence` | jsonb | fichas relacionadas; evidencia, `signatureLabel`, `pair`, `triggeredBy`, `triggeredHistory`, `history` |
+| `status` | varchar(10) | `open`, `ignored`, `resolved` |
+| `ignore_reason` | varchar(30) (`0020`) | `falso_positivo`, `correcto_a_proposito`, `fuera_de_alcance` — obligatorio al ignorar; es el dato con el que se mide la precisión observada |
+| `resolution` | varchar(20) (`0019`/`0020`) | `fixed_by_curation`, `changed_elsewhere`, `entity_removed`, `rules_changed`, `declared_distinct` (**M1**) |
+| `resolved_by_run_id` | bigint → `ingest.scrape_runs` | el run que lo resolvió, cuando se sabe |
+| `content_hash` | text (`0023`) | huella de lo emitido: si no cambia, el análisis incremental solo refresca `last_seen_*` en vez de reescribir la fila (**E9.4**) |
+| `first_seen_*`, `last_seen_*`, `resolved_at`, `ignored_*` | | historia del hallazgo entre análisis |
+
+Reglas:
+
+- Un hallazgo **resuelto que vuelve** se reabre conservando su historia y cuenta
+  como aparición nueva; lo ignorado se respeta entre análisis y **caduca** a
+  `resolved` cuando el problema desaparece de verdad.
+- `evidence.triggeredBy` marca lo que **apareció al corregir** otra cosa; darlo
+  por revisado mueve la marca a `evidence.triggeredHistory` (**M2**), no la borra.
+- `evidence.history` guarda los últimos cambios de gravedad, título y subgrupo
+  (**M3**): un refresco no cambia nada en silencio.
+
+#### `ingest.curation_distinct_pairs` — «son distintas», para siempre
+
+`(kind, a_id, b_id)` único con `a_id < b_id`, `decided_by` y `note` obligatoria.
+La foto del catálogo la carga en `handledPairs`, así que el par no se vuelve a
+proponer aunque cambie el grupo, el nombre o el subgrupo (**A5**). Retirar la
+fila reabre el hallazgo.
+
+#### `ingest.curation_fix_batches` y `ingest.curation_fix_items` — todo lote es un lote
+
+| `curation_fix_batches` | notas |
+| --- | --- |
+| `mode` | `individual`, `selected`, `group`, `auto`, `undo` |
+| `filter` | lo que se pidió: el filtro **exacto** del listado (categoría, detector, subgrupo, gravedad, tipo de ficha, texto, análisis, encadenados) o los ids elegidos (**C3**) |
+| `preview_hash` | sha-256 de la vista previa; aplicar con otro hash es `409 stale_preview` y no escribe nada |
+| `status` | `previewed`, `running`, `done`, `partial`, `failed`, `undone` |
+| `counts`, `verification` | recuento por estado; resultado de la verificación dirigida (resueltos, nuevos, desencadenados) |
+| `undo_of_batch_id`, `undone_by_batch_id` | el deshacer es otro lote, no un borrado |
+| CHECK | una vista previa no exige nota; aplicar, sí |
+
+| `curation_fix_items` | notas |
+| --- | --- |
+| `position` | orden de aplicación; deshacer va al revés |
+| `finding_id`, `action_key`, `level`, `params` | la acción tipada y sus parámetros |
+| `preview`, `preview_hash` | fichas tocadas, colisiones, avisos, bloqueo y propuesta |
+| `status` | `pending`, `blocked`, `excluded`, `applied`, **`skipped_stale`** (la ficha cambió: **C4**), `failed`, `undone`, **`not_undoable`** |
+| `run_id` | un `withOperatorRun` por ítem: la auditoría queda por ficha |
+| `error_code`, `error`, `before`, `after`, `applied_at` | por qué no se aplicó y qué cambió exactamente |
+
+Un ítem obsoleto o fallido **no detiene el lote**; el resto se aplica y cada
+fila dice qué le pasó. Deshacer usa CAS inverso: solo restaura si el valor
+actual sigue siendo el que dejó la corrección; si no, el ítem queda
+`not_undoable` con su motivo.
+
+#### `ingest.curation_autofix_rules` y `ingest.curation_autofix_events`
+
+Lista blanca de la autocorrección (E10): una regla por `detector + subgrupo +
+acción`, **nace apagada**, solo admite acciones de nivel 0 y lleva su propio
+tope. `disabled_by_batch_id` es el interruptor de emergencia: si un lote
+automático desencadena hallazgos nuevos, se deshace entero y la regla se apaga
+sola. `curation_autofix_events` es el registro append-only de esa política
+(`created`, `enabled`, `disabled`, `auto_disabled`, `applied`, `undone`…), con
+el detector y la acción **copiados** para que el evento sobreviva al borrado de
+la regla.
+
 ## 5. Mapeo del YT Master Spreadsheet
 
 Hoja única `Sheet1`, cabecera en fila 1: `Upload Order | Artist Name |
