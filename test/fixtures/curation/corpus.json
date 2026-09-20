@@ -4,6 +4,7 @@
   "note": "Muestra estratificada de E0 (hasta 20 por detector) etiquetada en E2, más un suplemento (addedIn: E2) con los falsos positivos de A6 que la muestra no recogió. verdict: true_positive | false_positive | discutible. expectedDetector/expectedSignature: dónde debe quedar hoy un verdadero positivo que las reglas reclasificaron. fixedIn: versión de reglas que dejó de emitir un falso positivo.",
   "labeledAt": "2026-09-16",
   "labeledWith": "curation-rules.v2",
+  "precisionThresholdsUpdatedWith": "curation-rules.v3",
   "catalogFixture": "catalog-2026-09-16.json.gz",
   "precisionDefinition": "verdaderos positivos emitidos / (verdaderos + falsos positivos emitidos); los discutibles no cuentan.",
   "precisionThresholds": {
