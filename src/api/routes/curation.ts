@@ -83,7 +83,10 @@ const summarySchema = z.object({
   running: z.boolean(),
   autofix: autofixSummarySchema,
   metrics: metricsSchema,
-  totals: z.object({ open: z.number(), ignored: z.number(), resolved: z.number(), newInLastScan: z.number(), chainedOpen: z.number() }),
+  totals: z.object({
+    open: z.number(), ignored: z.number(), resolved: z.number(), newInLastScan: z.number(),
+    chainedOpen: z.number(), openInformational: z.number(),
+  }),
   categories: z.array(z.object({
     key: z.string(), label: z.string(), description: z.string(),
     open: z.number(), ignored: z.number(), resolved: z.number(), newInLastScan: z.number(), chainedOpen: z.number(),

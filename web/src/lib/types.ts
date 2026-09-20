@@ -417,7 +417,10 @@ export interface CurationSummary {
   lastScan: CurationScan | null;
   lastCorrection: CurationScan | null;
   running: boolean;
-  totals: { open: number; ignored: number; resolved: number; newInLastScan: number; chainedOpen: number };
+  totals: {
+    open: number; ignored: number; resolved: number; newInLastScan: number; chainedOpen: number;
+    openInformational: number;
+  };
   categories: CurationCategorySummary[];
   /** Observabilidad operativa de E12. */
   metrics: CurationMetrics;

@@ -100,7 +100,14 @@ export function CurationOverviewPage() {
       <OperationalMetrics metrics={summary.metrics} />
 
       <dl className="ctotals">
-        <div><dt>Abiertos</dt><dd className="mono">{formatCount(totals.open)}</dd></div>
+        <div>
+          <dt>Abiertos accionables</dt>
+          <dd className="mono">{formatCount(totals.open - totals.openInformational)}</dd>
+        </div>
+        <div>
+          <dt title="Detectores informativos: quedan fuera del KPI de cobertura de acciones">Abiertos informativos</dt>
+          <dd className="mono">{formatCount(totals.openInformational)}</dd>
+        </div>
         <div>
           <dt>Nuevos en el último análisis</dt>
           <dd className="mono">

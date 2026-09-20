@@ -46,7 +46,7 @@ describe("E12 métricas operativas contra PostgreSQL real", () => {
         INSERT INTO ingest.curation_findings
           (fingerprint, category, detector, signature, severity, entity_kind, entity_id, entity_label,
            title, status, resolution, first_seen_at, resolved_at)
-        VALUES ($1, 'datos_incoherentes', 'tipo_de_organizacion_contra_nombre', 'sin_clasificar', 'low',
+        VALUES ($1, 'datos_incoherentes', 'organizacion_sin_clasificar', 'sin_clasificar', 'low',
                 'organization', $2, $3, 'Organización sin clasificar', 'resolved', 'fixed_by_curation',
                 '2026-09-20 10:00:00+00', '2026-09-20 12:00:00+00')`,
       [`metrics-confirmed-${n}`, 1000 + n, `Org confirmada ${n}`]);
@@ -56,7 +56,7 @@ describe("E12 métricas operativas contra PostgreSQL real", () => {
         INSERT INTO ingest.curation_findings
           (fingerprint, category, detector, signature, severity, entity_kind, entity_id, entity_label,
            title, status, ignored_at, ignored_by, ignore_reason)
-        VALUES ($1, 'datos_incoherentes', 'tipo_de_organizacion_contra_nombre', 'sin_clasificar', 'low',
+        VALUES ($1, 'datos_incoherentes', 'organizacion_sin_clasificar', 'sin_clasificar', 'low',
                 'organization', $2, $3, 'Organización sin clasificar', 'ignored', now(), $4, 'falso_positivo')`,
       [`metrics-rejected-${n}`, 2000 + n, `Org rechazada ${n}`, OPERATOR]);
     }
@@ -100,7 +100,13 @@ describe("E12 métricas operativas contra PostgreSQL real", () => {
       headers: { authorization: `Bearer ${TOKEN}`, "x-crv-operator": OPERATOR },
     });
     expect(response.statusCode).toBe(200);
-    const metrics = response.json().metrics;
+    const body = response.json();
+    const metrics = body.metrics;
+
+    // El total grande sigue contando todo, pero dice cuánto de eso es
+    // informativo: 1 hallazgo accionable y 1 informativo sembrados.
+    expect(body.totals.open).toBe(2);
+    expect(body.totals.openInformational).toBe(1);
 
     expect(metrics.actionCoverage).toEqual({
       open: 1,
@@ -120,7 +126,7 @@ describe("E12 métricas operativas contra PostgreSQL real", () => {
     });
 
     const detector = metrics.detectors.find((item: { detector: string }) =>
-      item.detector === "tipo_de_organizacion_contra_nombre");
+      item.detector === "organizacion_sin_clasificar");
     expect(detector).toMatchObject({
       reviewed: 20,
       confirmed: 15,
@@ -131,7 +137,7 @@ describe("E12 métricas operativas contra PostgreSQL real", () => {
       meanCorrectionSeconds: 7200,
     });
     expect(metrics.alerts).toContainEqual(expect.objectContaining({
-      detector: "tipo_de_organizacion_contra_nombre",
+      detector: "organizacion_sin_clasificar",
       precision: 0.75,
       reviewed: 20,
       threshold: 0.8,
