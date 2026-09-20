@@ -352,8 +352,8 @@ try {
 
       // 2. Una categoría, con un caso independiente por viewport para poder
       // probar preview/aplicar/deshacer tanto en escritorio como en móvil.
-      await page.goto(`${webUrl}/curaduria/categoria/nombres_sucios`, { waitUntil: "domcontentloaded" });
       const targetName = index === 0 ? "Trueno" : "Tormenta";
+      await page.goto(`${webUrl}/curaduria/categoria/nombres_sucios?q=${encodeURIComponent(targetName)}`, { waitUntil: "domcontentloaded" });
       const targetCard = page.locator(".cfind").filter({ hasText: targetName }).first();
       await targetCard.locator(".cval__cp").first().waitFor({ timeout: 20_000 }).catch(async (error: unknown) => {
         await page.screenshot({ path: path.join(outputDir, `${viewport.name}-nombres-sucios-fallo.png`), fullPage: true });
@@ -364,6 +364,93 @@ try {
       await targetCard.focus();
       await page.screenshot({ path: path.join(outputDir, `${viewport.name}-nombres-sucios.png`), fullPage: true });
       await assertNoOverflow(page, `${viewport.name} nombres_sucios`);
+
+      if (index === 0) {
+        // E8.3: seleccionar todos los hallazgos del filtro usa el filtro real,
+        // no una lista de ids limitada a la página visible.
+        await page.goto(`${webUrl}/curaduria/categoria/nombres_sucios?detector=caracteres_invisibles`, { waitUntil: "domcontentloaded" });
+        const selectAll = page.getByRole("button", { name: /Seleccionar los \d+ que cumplen el filtro/u });
+        await selectAll.waitFor({ timeout: 20_000 });
+        const totalMatch = /(\d+)/u.exec(await selectAll.innerText());
+        if (!totalMatch || Number(totalMatch[1]) <= 25) throw new Error("E8: la selección total no supera la primera página");
+        await selectAll.click();
+        const selectedToolbar = page.getByRole("toolbar", { name: "Acciones sobre lo seleccionado" });
+        await selectedToolbar.getByText(/seleccionados por filtro/u).waitFor();
+
+        const groupPreviewRequest = page.waitForRequest((request) =>
+          request.method() === "POST" && request.url().includes("/curation/fixes/preview"));
+        await selectedToolbar.getByRole("button", { name: "Corregir seleccionados" }).click();
+        const groupRequest = await groupPreviewRequest;
+        const groupBody = groupRequest.postDataJSON() as Record<string, unknown>;
+        const groupFilterBody = groupBody["filter"] as Record<string, unknown> | undefined;
+        if (groupBody["mode"] !== "group" || groupBody["findingIds"] !== undefined || groupFilterBody?.["detector"] !== "caracteres_invisibles") {
+          throw new Error(`E8: selección total no usó filter: ${JSON.stringify(groupBody)}`);
+        }
+        let batchDialog = page.getByRole("dialog");
+        await batchDialog.getByRole("table").waitFor({ timeout: 20_000 });
+        await page.screenshot({ path: path.join(outputDir, "desktop-seleccion-total-preview.png"), fullPage: true });
+        await batchDialog.getByRole("button", { name: "Cancelar" }).click();
+        await selectedToolbar.getByRole("button", { name: "Vaciar selección" }).click();
+
+        // E8.2: la misma vista previa sirve para una selección explícita.
+        const picks = page.locator('input[id^="cfind-pick-"]');
+        if (await picks.count() < 2) throw new Error("E8: faltan dos hallazgos corregibles para probar selección explícita");
+        await picks.nth(0).check();
+        await picks.nth(1).check();
+        const selectedPreviewRequest = page.waitForRequest((request) =>
+          request.method() === "POST" && request.url().includes("/curation/fixes/preview"));
+        await selectedToolbar.getByRole("button", { name: "Corregir seleccionados" }).click();
+        const selectedRequest = await selectedPreviewRequest;
+        const selectedBody = selectedRequest.postDataJSON() as Record<string, unknown>;
+        const selectedIds = selectedBody["findingIds"] as unknown[] | undefined;
+        if (selectedBody["mode"] !== "selected" || !selectedIds || selectedIds.length !== 2) {
+          throw new Error(`E8: selección explícita no envió dos findingIds: ${JSON.stringify(selectedBody)}`);
+        }
+        batchDialog = page.getByRole("dialog");
+        await batchDialog.getByRole("table").waitFor({ timeout: 20_000 });
+        if (await batchDialog.locator("tbody tr").count() < 2) throw new Error("E8: preview seleccionado no muestra sus dos filas");
+        await page.screenshot({ path: path.join(outputDir, "desktop-seleccionados-preview.png"), fullPage: true });
+        await batchDialog.getByRole("button", { name: "Cancelar" }).click();
+        await selectedToolbar.getByRole("button", { name: "Vaciar selección" }).click();
+
+        // E8.2: una fila con varias acciones puede cambiarse y obliga a
+        // recalcular el hash/vista previa antes de aplicar.
+        await page.goto(`${webUrl}/curaduria/categoria/nombres_sucios?detector=signos_colgantes&q=${encodeURIComponent("QA Acción alternativa")}`, { waitUntil: "domcontentloaded" });
+        const alternateCard = page.locator(".cfind").filter({ hasText: "QA Acción alternativa" }).first();
+        await alternateCard.getByRole("button", { name: /Recortar/u }).click();
+        batchDialog = page.getByRole("dialog");
+        const actionSelect = batchDialog.getByLabel(/Acción para/u);
+        await actionSelect.waitFor({ timeout: 20_000 });
+        const options = await actionSelect.locator("option").allTextContents();
+        if (options.length < 2) throw new Error(`E8: la fila no ofrece acciones alternativas: ${options.join(" | ")}`);
+        await actionSelect.selectOption("limpiar_texto");
+        await batchDialog.getByText(/Cambiaste una acción/u).waitFor();
+        const overrideRequestPromise = page.waitForRequest((request) =>
+          request.method() === "POST" && request.url().includes("/curation/fixes/preview"));
+        await batchDialog.getByRole("button", { name: "Actualizar vista previa" }).click();
+        const overrideRequest = await overrideRequestPromise;
+        const overrideBody = overrideRequest.postDataJSON() as {
+          overrides?: { byFinding?: Record<string, { actionKey?: string }> };
+        };
+        if (!Object.values(overrideBody.overrides?.byFinding ?? {}).some((item) => item.actionKey === "limpiar_texto")) {
+          throw new Error(`E8: el cambio de acción por fila no llegó al preview: ${JSON.stringify(overrideBody)}`);
+        }
+        await batchDialog.getByRole("table").waitFor({ timeout: 20_000 });
+        await page.screenshot({ path: path.join(outputDir, "desktop-accion-por-fila.png"), fullPage: true });
+        await batchDialog.getByRole("button", { name: "Cancelar" }).click();
+
+        // E8.2/M6: una colisión real se muestra antes de cualquier escritura.
+        await page.goto(`${webUrl}/curaduria/categoria/nombres_sucios?detector=caracteres_invisibles&q=${encodeURIComponent("QA Colision")}`, { waitUntil: "domcontentloaded" });
+        const collisionCard = page.locator(".cfind").filter({ hasText: "QA Colision" }).first();
+        await collisionCard.getByRole("button", { name: /Limpiar/u }).click();
+        batchDialog = page.getByRole("dialog");
+        const collisionPreview = batchDialog.getByRole("button", { name: "Ver corrección" });
+        if (await collisionPreview.count()) await collisionPreview.click();
+        await batchDialog.getByRole("table").waitFor({ timeout: 20_000 });
+        await batchDialog.getByText(/Colisión con «QA Colision Limpia»/u).waitFor();
+        await page.screenshot({ path: path.join(outputDir, "desktop-colision-preview.png"), fullPage: true });
+        await batchDialog.getByRole("button", { name: "Cancelar" }).click();
+      }
 
       // E7: en escritorio se ejercita la decisión A/B desde tarjeta y el
       // lote por trust_level con un empate que debe quedar fuera.
@@ -428,7 +515,7 @@ try {
         await page.keyboard.press("Escape");
 
         // Volver al caso E8 de escritorio después de las decisiones E7.
-        await page.goto(`${webUrl}/curaduria/categoria/nombres_sucios`, { waitUntil: "domcontentloaded" });
+        await page.goto(`${webUrl}/curaduria/categoria/nombres_sucios?q=${encodeURIComponent(targetName)}`, { waitUntil: "domcontentloaded" });
       }
 
       // E8: teclado + hoja de acciones móvil + preview → aplicar → deshacer
@@ -467,10 +554,17 @@ try {
       const seePreview = fixDialog.getByRole("button", { name: "Ver corrección" });
       if (await seePreview.count()) await seePreview.click();
       await fixDialog.getByRole("table").waitFor();
+      await fixDialog.getByText(/^Toca:/u).first().waitFor();
+      const includeRow = fixDialog.getByRole("checkbox", { name: /Incluir/u }).first();
+      await includeRow.uncheck();
+      await includeRow.check();
+      await fixDialog.locator(".fix-diff .cval").first().waitFor();
       await fixDialog.getByLabel("Motivo *").fill(`QA visual ${viewport.name}: comprobar preview/apply/undo`);
       await page.screenshot({ path: path.join(outputDir, `${viewport.name}-preview-lote.png`), fullPage: true });
       await fixDialog.getByRole("button", { name: /^Aplicar \d+ correcciones$/u }).click();
       await fixDialog.getByText("Lote aplicado", { exact: true }).waitFor({ timeout: 20_000 });
+      await fixDialog.getByRole("progressbar", { name: "Progreso del lote" }).waitFor();
+      await fixDialog.getByText(/aplicados:\s*1/iu).waitFor();
       await page.getByRole("button", { name: "Deshacer", exact: true }).waitFor({ timeout: 10_000 });
       await page.screenshot({ path: path.join(outputDir, `${viewport.name}-lote-aplicado.png`), fullPage: true });
       await fixDialog.getByLabel("Motivo para deshacer *").fill(`QA visual ${viewport.name}: restaurar el dato original`);
