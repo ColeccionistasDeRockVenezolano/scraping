@@ -473,8 +473,20 @@ try {
           await assertTextContrast(side.locator(".decision-side__label"), `E7 lado ${sideIndex ? "B" : "A"}`);
         }
         await page.screenshot({ path: path.join(outputDir, "desktop-e7-conflicto-ab.png"), fullPage: true });
+        // El tercer camino también está disponible desde la tarjeta: se abre,
+        // exige un valor y vuelve sin escribir para conservar este fixture A/B.
+        await page.getByRole("button", { name: "Otro valor" }).first().click();
+        let decisionDialog = page.getByRole("dialog");
+        await decisionDialog.getByLabel("Valor correcto").fill("Puerto La Cruz");
+        await decisionDialog.getByLabel("Motivo *").fill("QA visual E7: comprobar tercer valor");
+        if (!(await decisionDialog.getByRole("button", { name: "Guardar decisión" }).isEnabled())) {
+          throw new Error("E7: «Otro valor» no habilita la decisión con valor + motivo");
+        }
+        await page.screenshot({ path: path.join(outputDir, "desktop-e7-otro-valor.png"), fullPage: true });
+        await page.keyboard.press("Escape");
+
         await page.getByRole("button", { name: "Elegir A" }).first().click();
-        const decisionDialog = page.getByRole("dialog");
+        decisionDialog = page.getByRole("dialog");
         await decisionDialog.getByLabel("Motivo *").fill("QA visual E7: elegir la evidencia de la fuente alta");
         await decisionDialog.getByRole("button", { name: "Guardar decisión" }).click();
         await page.getByText("Decisión guardada con auditoría.", { exact: false }).waitFor();
@@ -526,9 +538,20 @@ try {
       const e8Card = page.locator(".cfind").filter({ hasText: targetName }).first();
       await e8Card.focus();
       await page.keyboard.press("?");
-      await page.getByRole("dialog").getByText("Atajos de Curaduría", { exact: true }).waitFor();
+      const shortcutDialog = page.getByRole("dialog");
+      await shortcutDialog.getByText("Atajos de Curaduría", { exact: true }).waitFor();
+      const focusInside = await shortcutDialog.evaluate((dialog) => dialog.contains(document.activeElement));
+      if (!focusInside) throw new Error(`${viewport.name}: el diálogo no recibió el foco al abrir`);
+      // En este diálogo el único control es Cerrar; Tab debe ciclar dentro.
+      await page.keyboard.press("Tab");
+      if (!await shortcutDialog.evaluate((dialog) => dialog.contains(document.activeElement))) {
+        throw new Error(`${viewport.name}: Tab escapó del focus trap del diálogo`);
+      }
       await page.screenshot({ path: path.join(outputDir, `${viewport.name}-atajos.png`), fullPage: true });
       await page.keyboard.press("Escape");
+      if (!await e8Card.evaluate((card) => card === document.activeElement)) {
+        throw new Error(`${viewport.name}: al cerrar el diálogo no se restauró el foco a la tarjeta`);
+      }
 
       if (index === 0) {
         await page.keyboard.press("j");
