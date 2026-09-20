@@ -396,3 +396,71 @@ export async function resolveReviewConflict(
     detail: `conflicto ${review.conflictId} → ${resolution}`,
   };
 }
+
+// ---------------------------------------------------------------------------
+// Conflictos sin revisión viva (PLAN_CURADURIA E7.1, detector `conflictos_
+// abiertos`): la pareja review+conflicto se crea junta (src/conflicts/engine.ts),
+// pero una revisión cerrada por otra vía dejó su conflicto abierto sin nadie
+// que lo lleve a una persona. No hay `reviewId`: se resuelve directo contra
+// `ingest.conflicts`, con las mismas garantías (nota firmada, un solo lado a
+// la vez, cierre de claims) que `resolveReviewConflict`.
+// ---------------------------------------------------------------------------
+
+interface LoadedConflict {
+  id: number;
+  status: string;
+  kind: ResolvableClaimKind;
+  targetId: number;
+  field: string;
+}
+
+async function loadOpenConflict(conflictId: number): Promise<LoadedConflict> {
+  const { rows } = await getPool().query<{ id: string; status: string; entity_kind: string; field: string; target_id: string | null }>(`
+    SELECT c.id::text, c.status::text, c.entity_kind::text, c.field,
+           COALESCE(a.artist_id, a.person_id, a.organization_id, a.album_id, a.track_id)::text AS target_id
+      FROM ingest.conflicts c JOIN ingest.claims a ON a.id=c.claim_a_id
+     WHERE c.id=$1`, [conflictId]);
+  const row = rows[0];
+  if (!row) throw new OperatorError("not_found", `conflicto ${conflictId} inexistente`, { entity: "conflict", id: conflictId });
+  const kind = row.entity_kind as ResolvableClaimKind;
+  const targetId = positive(row.target_id);
+  if (!resolvableSpec(kind) || targetId === undefined) throw new OperatorError("invalid", `el conflicto ${conflictId} no identifica una entidad resoluble`);
+  return { id: Number(row.id), status: row.status, kind, targetId, field: row.field };
+}
+
+/**
+ * Resuelve un conflicto que no tiene una revisión viva que lo lleve a una
+ * persona: elegir un lado (`choice`), o afirmar el valor correcto (`value`,
+ * puede no ser ninguno de los rivales). `canonical`/`proposed` no aplican
+ * aquí (son de una revisión con esos valores en su payload).
+ */
+export async function resolveOpenConflict(
+  conflictId: number,
+  input: ReviewActionInput & { choice?: "a" | "b" | "both" | "dismiss"; value?: string | number | boolean | null },
+): Promise<{ conflictId: number; action: "resolved"; runId: number; detail: string }> {
+  const hasValue = Object.hasOwn(input, "value") && input.value !== undefined;
+  if (hasValue === (input.choice !== undefined)) throw new OperatorError("invalid", "indique choice o value, no ambos");
+  const conflict = await loadOpenConflict(conflictId);
+  if (conflict.status !== "open") throw new OperatorError("not_open", `el conflicto ${conflictId} ya está ${conflict.status}`);
+
+  if (hasValue) {
+    const { runId, result } = await withOperatorRun({
+      name: "curation:resolve-conflict", operator: input.operator, note: input.note,
+      params: { conflictId, kind: conflict.kind, targetId: conflict.targetId, field: conflict.field, value: input.value },
+    }, (context) => settleEntityField(context, conflict.kind, conflict.targetId, conflict.field, input.value));
+    return {
+      conflictId, action: "resolved", runId,
+      detail: `${conflict.kind} ${conflict.targetId}.${conflict.field} = ${JSON.stringify(input.value)} (${result.action}); conflictos cerrados: ${result.conflictsClosed.length}`,
+    };
+  }
+
+  const choice = input.choice!;
+  const resolution: ConflictResolution = choice === "a" ? "resolved_a" : choice === "b" ? "resolved_b" : choice === "both" ? "both_kept" : "dismissed";
+  const { runId } = await withOperatorRun({
+    name: "curation:resolve-conflict", operator: input.operator, note: input.note,
+    params: { conflictId, choice, resolution },
+  }, (context) => resolveFieldConflict(conflictId, resolution, {
+    actor: "human", note: signed(input), runId: context.runId, client: context.client,
+  })).catch((error: unknown) => { throw asOperatorError(error); });
+  return { conflictId, action: "resolved", runId, detail: `conflicto ${conflictId} → ${resolution}` };
+}

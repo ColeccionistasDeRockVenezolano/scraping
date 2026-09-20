@@ -24,6 +24,7 @@ import { OPERATOR_SECURITY } from "../auth.js";
 import { paginationQuerySchema, toPage } from "../pagination.js";
 import { idParamSchema, writeErrorResponses } from "../schemas.js";
 import { fixWithoutReview, type FixItemView } from "../../curation/actions/batches.js";
+import { resolveConflictFinding, resolveConflictsGroupByTrust } from "../../curation/conflicts.js";
 import {
   CurationError, DISTINCT_PAIR_KINDS, IGNORE_REASONS, declareDistinctPair,
   getCurationSummary, getFinding, ignoreFinding, ignoreGroup, listDistinctPairs, listFindings, listScans, removeDistinctPair, reopenFinding,
@@ -110,6 +111,22 @@ export const groupFilterSchema = {
 const distinctPairSchema = z.object({
   id: z.number().int(), kind: z.enum(DISTINCT_PAIR_KINDS), aId: z.number().int(), bId: z.number().int(),
   decidedBy: z.string(), note: z.string(), createdAt: z.string(),
+});
+
+/** Resolver un conflicto sin revisión viva (PLAN_CURADURIA E7.1): un lado, ambos, descartar, u otro valor. */
+const conflictChoiceSchema = z.enum(["a", "b", "both", "dismiss"]);
+const conflictResolveBodySchema = z.object({
+  note: noteSchema.min(1),
+  choice: conflictChoiceSchema.optional().describe("Un lado del conflicto: A, B, conservar ambos o descartarlo."),
+  value: z.union([z.string().max(20_000), z.number(), z.boolean(), z.null()]).optional()
+    .describe("Corrección manual: el valor correcto, sea uno de los rivales o ninguno. Excluye choice."),
+}).strict();
+const conflictResolveResultSchema = z.object({
+  conflictId: z.number().int(), action: z.literal("resolved"), runId: z.number().int(), detail: z.string(),
+});
+const conflictResolveGroupResultSchema = z.object({
+  total: z.number().int(), applied: z.number().int(), tied: z.number().int(), failed: z.number().int(),
+  errors: z.array(z.object({ findingId: z.number().int(), error: z.string() })), more: z.boolean(),
 });
 
 /**
@@ -244,6 +261,45 @@ export async function registerCurationRoutes(app: FastifyInstance): Promise<void
       response: { 200: findingSchema, ...writeErrorResponses },
     },
   }, async (request) => reopenFinding(request.params.id).catch(curationError));
+
+  // VALORES EN DISPUTA (PLAN_CURADURIA E7.1): `conflictos_abiertos` no tiene
+  // una revisión viva (`review_queue`) que lo lleve a una persona —la pareja
+  // conflicto+revisión nace junta, pero la revisión pudo cerrarse por otra
+  // vía— así que se resuelve directo contra `ingest.conflicts`.
+  server.post("/curation/findings/:id/resolve-conflict", {
+    schema: {
+      tags: ["curation"],
+      summary: "Resuelve el conflicto de un hallazgo «conflictos_abiertos»: un lado, ambos, descartarlo, o afirmar un valor distinto.",
+      security: OPERATOR_SECURITY,
+      params: idParamSchema,
+      body: conflictResolveBodySchema,
+      response: { 200: conflictResolveResultSchema, ...writeErrorResponses },
+    },
+  }, async (request) => {
+    const body = request.body;
+    const result = await resolveConflictFinding(request.params.id, {
+      operator: request.operator, note: body.note,
+      ...(body.choice === undefined ? {} : { choice: body.choice }),
+      ...(Object.hasOwn(body, "value") && body.value !== undefined ? { value: body.value } : {}),
+    }).catch(curationError);
+    notifyCatalogWrite(request.operator || null, "POST /curation/findings/:id/resolve-conflict");
+    return result;
+  });
+
+  server.post("/curation/findings/resolve-conflicts-group", {
+    schema: {
+      tags: ["curation"],
+      summary: "«Aplicar la fuente de mayor confianza»: resuelve cada conflicto abierto que cumple el filtro visible por el lado de mayor trust_level; los empates quedan fuera.",
+      security: OPERATOR_SECURITY,
+      body: z.object({ ...groupFilterSchema, note: noteSchema.min(1) }).strict(),
+      response: { 200: conflictResolveGroupResultSchema, ...writeErrorResponses },
+    },
+  }, async (request) => {
+    const { note, ...filter } = request.body;
+    const result = await resolveConflictsGroupByTrust(filter, request.operator, note).catch(curationError);
+    if (result.applied > 0) notifyCatalogWrite(request.operator || null, "POST /curation/findings/resolve-conflicts-group");
+    return result;
+  });
 
   server.post("/curation/findings/ignore-group", {
     schema: {

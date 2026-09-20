@@ -72,6 +72,8 @@ export interface ReviewEvidenceClaim {
   confidence: string;
   status: string;
   sourceName: string;
+  /** Confianza declarada de la fuente (PLAN_CURADURIA E7.1), distinta de `confidence` del claim. */
+  sourceTrustLevel: string;
   sourceUrl: string | null;
   evidenceUrl: string | null;
 }
@@ -98,10 +100,10 @@ export async function getReviewQueueDetail(id: number): Promise<ReviewQueueDetai
     .filter((claimId): claimId is number => claimId !== null);
   const evidence = claimIds.length === 0 ? { rows: [] } : await pool.query<{
     id: string; field: string; raw_value: unknown; normalized_value: unknown; confidence: string; status: string;
-    source_name: string; source_url: string | null; evidence_url: string | null;
+    source_name: string; source_trust_level: string; source_url: string | null; evidence_url: string | null;
   }>(
     `SELECT c.id::text, c.field, c.raw_value, c.normalized_value, c.confidence::text, c.status::text,
-            s.name AS source_name, s.url AS source_url, COALESCE(rp.canonical_url, rp.url) AS evidence_url
+            s.name AS source_name, s.trust_level::text AS source_trust_level, s.url AS source_url, COALESCE(rp.canonical_url, rp.url) AS evidence_url
        FROM ingest.claims c
        JOIN ingest.sources s ON s.id = c.source_id
        LEFT JOIN ingest.raw_pages rp ON rp.id = c.raw_page_id
@@ -124,7 +126,7 @@ export async function getReviewQueueDetail(id: number): Promise<ReviewQueueDetai
     resolutionNote: row["resolution_note"] as string | null,
     claims: evidence.rows.map((claim) => ({
       id: Number(claim.id), field: claim.field, rawValue: claim.raw_value, normalizedValue: claim.normalized_value,
-      confidence: claim.confidence, status: claim.status, sourceName: claim.source_name,
+      confidence: claim.confidence, status: claim.status, sourceName: claim.source_name, sourceTrustLevel: claim.source_trust_level,
       sourceUrl: claim.source_url, evidenceUrl: claim.evidence_url,
     })),
   };

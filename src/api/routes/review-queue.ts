@@ -36,7 +36,8 @@ const reviewDetailSchema = reviewListItemSchema.extend({
   resolutionNote: z.string().nullable(),
   claims: z.array(z.object({
     id: z.number().int(), field: z.string(), rawValue: z.unknown(), normalizedValue: z.unknown(),
-    confidence: z.string(), status: z.string(), sourceName: z.string(), sourceUrl: z.string().nullable(), evidenceUrl: z.string().nullable(),
+    confidence: z.string(), status: z.string(), sourceName: z.string(), sourceTrustLevel: z.string(),
+    sourceUrl: z.string().nullable(), evidenceUrl: z.string().nullable(),
   })),
 });
 

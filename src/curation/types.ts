@@ -63,6 +63,14 @@ export interface SnapshotReview {
   refs: Partial<Record<"artistA" | "artistB" | "personA" | "personB" | "organizationA" | "organizationB" | "album" | "track" | "conflict", number>>;
 }
 
+/** Evidencia de un lado del conflicto: qué fuente lo afirma y con qué respaldo (PLAN_CURADURIA E7.1). */
+export interface ConflictSourceEvidence {
+  name: string;
+  trustLevel: string;
+  url: string | null;
+  at: string;
+}
+
 export interface SnapshotConflict {
   id: number;
   entityKind: string;
@@ -71,6 +79,8 @@ export interface SnapshotConflict {
   valueB: unknown;
   targetId: number | null;
   hasLiveReview: boolean;
+  sourceA: ConflictSourceEvidence;
+  sourceB: ConflictSourceEvidence;
 }
 
 export interface CatalogSnapshot {

@@ -88,11 +88,26 @@ async function readCatalog(db: SnapshotClient) {
            artist_a_id::text, artist_b_id::text, person_a_id::text, person_b_id::text,
            organization_a_id::text, organization_b_id::text, album_id::text, track_id::text, conflict_id::text
       FROM ingest.review_queue WHERE status IN ('open','in_progress') ORDER BY id`);
-  const conflicts = await db.query<{ id: string; entity_kind: string; field: string; value_a: unknown; value_b: unknown; target_id: string | null; live_review: boolean }>(`
+  // La evidencia de cada lado (fuente, confianza, fecha, URL) sale de sus
+  // claims: la tarjeta de conflicto (PLAN_CURADURIA E7.1) la necesita sin
+  // depender de una revisión viva, que `conflictos_abiertos` justamente no tiene.
+  const conflicts = await db.query<{
+    id: string; entity_kind: string; field: string; value_a: unknown; value_b: unknown; target_id: string | null; live_review: boolean;
+    source_a_name: string; source_a_trust: string; source_a_url: string | null; source_a_at: Date;
+    source_b_name: string; source_b_trust: string; source_b_url: string | null; source_b_at: Date;
+  }>(`
     SELECT c.id::text, c.entity_kind::text, c.field, c.value_a, c.value_b,
            COALESCE(a.artist_id, a.person_id, a.organization_id, a.album_id, a.track_id)::text AS target_id,
-           EXISTS (SELECT 1 FROM ingest.review_queue r WHERE r.conflict_id=c.id AND r.status IN ('open','in_progress')) AS live_review
-      FROM ingest.conflicts c JOIN ingest.claims a ON a.id=c.claim_a_id
+           EXISTS (SELECT 1 FROM ingest.review_queue r WHERE r.conflict_id=c.id AND r.status IN ('open','in_progress')) AS live_review,
+           sa.name AS source_a_name, sa.trust_level::text AS source_a_trust, COALESCE(rpa.canonical_url, rpa.url, sa.url) AS source_a_url, a.created_at AS source_a_at,
+           sb.name AS source_b_name, sb.trust_level::text AS source_b_trust, COALESCE(rpb.canonical_url, rpb.url, sb.url) AS source_b_url, b.created_at AS source_b_at
+      FROM ingest.conflicts c
+      JOIN ingest.claims a ON a.id=c.claim_a_id
+      JOIN ingest.claims b ON b.id=c.claim_b_id
+      JOIN ingest.sources sa ON sa.id=a.source_id
+      JOIN ingest.sources sb ON sb.id=b.source_id
+      LEFT JOIN ingest.raw_pages rpa ON rpa.id=a.raw_page_id
+      LEFT JOIN ingest.raw_pages rpb ON rpb.id=b.raw_page_id
      WHERE c.status='open' ORDER BY c.id`);
   const handled = await db.query<{ kind: string; person_a_id: string | null; person_b_id: string | null; pair_key: string | null }>(`
     SELECT kind::text, person_a_id::text, person_b_id::text, payload->>'pairKey' AS pair_key
@@ -156,6 +171,8 @@ function buildSnapshot({
     conflicts: conflicts.rows.map((row) => ({
       id: Number(row.id), entityKind: row.entity_kind, field: row.field, valueA: row.value_a, valueB: row.value_b,
       targetId: num(row.target_id), hasLiveReview: row.live_review,
+      sourceA: { name: row.source_a_name, trustLevel: row.source_a_trust, url: row.source_a_url, at: new Date(row.source_a_at).toISOString() },
+      sourceB: { name: row.source_b_name, trustLevel: row.source_b_trust, url: row.source_b_url, at: new Date(row.source_b_at).toISOString() },
     })),
     handledPairs,
     distinctPairs,

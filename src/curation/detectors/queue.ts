@@ -111,7 +111,10 @@ export const openConflicts: Detector = {
         title: `Dos valores para ${quote(conflict.field)}: ${quote(display(conflict.valueA))} y ${quote(display(conflict.valueB))}`,
         suggestion: "Elegir el valor correcto con la evidencia de cada fuente",
         related: target,
-        evidence: { conflictId: conflict.id, entityKind: conflict.entityKind, valueA: conflict.valueA, valueB: conflict.valueB },
+        evidence: {
+          conflictId: conflict.id, entityKind: conflict.entityKind, valueA: conflict.valueA, valueB: conflict.valueB,
+          sourceA: conflict.sourceA, sourceB: conflict.sourceB,
+        },
       };
     });
   },
