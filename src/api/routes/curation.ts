@@ -30,6 +30,7 @@ import {
   getCurationSummary, getFinding, ignoreFinding, ignoreGroup, listDistinctPairs, listFindings, listScans, removeDistinctPair, reopenFinding,
 } from "../../curation/repository.js";
 import { autofixSummary } from "../../curation/autofix.js";
+import { getCurationMetrics } from "../../curation/metrics.js";
 import { isCurationScanRunning, runCurationScan } from "../../curation/scan.js";
 import type { FocusRef } from "../../curation/snapshot.js";
 import type { FindingEntityKind } from "../../curation/types.js";
@@ -54,12 +55,38 @@ const autofixSummarySchema = z.object({
   })),
 });
 
+const metricsSchema = z.object({
+  detectors: z.array(z.object({
+    detector: z.string(), label: z.string(), reviewed: z.number().int(), confirmed: z.number().int(), rejected: z.number().int(),
+    falsePositives: z.number().int(), intentional: z.number().int(), observedPrecision: z.number().nullable(),
+    meanCorrectionSeconds: z.number().nullable(),
+  })),
+  meanCorrectionSeconds: z.number().nullable(),
+  actionCoverage: z.object({
+    open: z.number().int(), excludedInformational: z.number().int(),
+    level1OrLess: z.number().int(), level2OrLess: z.number().int(),
+    level1OrLessPct: z.number().nullable(), level2OrLessPct: z.number().nullable(),
+  }),
+  batches: z.object({
+    total: z.number().int(), previewed: z.number().int(), applied: z.number().int(), undone: z.number().int(),
+    autoApplied: z.number().int(), autoReverted: z.number().int(),
+  }),
+  alerts: z.array(z.object({
+    detector: z.string(), label: z.string(), precision: z.number(), reviewed: z.number().int(),
+    threshold: z.number(), minimumReviewed: z.number().int(),
+  })),
+});
+
 const summarySchema = z.object({
   lastScan: scanSchema.nullable(),
   lastCorrection: scanSchema.nullable(),
   running: z.boolean(),
   autofix: autofixSummarySchema,
-  totals: z.object({ open: z.number(), ignored: z.number(), resolved: z.number(), newInLastScan: z.number(), chainedOpen: z.number() }),
+  metrics: metricsSchema,
+  totals: z.object({
+    open: z.number(), ignored: z.number(), resolved: z.number(), newInLastScan: z.number(),
+    chainedOpen: z.number(), openInformational: z.number(),
+  }),
   categories: z.array(z.object({
     key: z.string(), label: z.string(), description: z.string(),
     open: z.number(), ignored: z.number(), resolved: z.number(), newInLastScan: z.number(), chainedOpen: z.number(),
@@ -268,8 +295,10 @@ export async function registerCurationRoutes(app: FastifyInstance): Promise<void
       response: { 200: summarySchema },
     },
   }, async () => {
-    const [summary, autofix] = await Promise.all([getCurationSummary(isCurationScanRunning()), autofixSummary()]);
-    return { ...summary, autofix };
+    const [summary, metrics, autofix] = await Promise.all([
+      getCurationSummary(isCurationScanRunning()), getCurationMetrics(), autofixSummary(),
+    ]);
+    return { ...summary, metrics, autofix };
   });
 
   server.get("/curation/findings", {

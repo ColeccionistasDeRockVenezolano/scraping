@@ -30,9 +30,9 @@ function addAlbum(snapshot: CatalogSnapshot, title: string, albumType: string, a
   return albumId;
 }
 
-describe("reglas v3: tipo de disco (A6)", () => {
-  it("la versión de las reglas es la v3", () => {
-    expect(RULES_VERSION).toBe("curation-rules.v3");
+describe("reglas v5: tipo de disco y cobertura E11 (A6)", () => {
+  it("la versión de las reglas es la v5", () => {
+    expect(RULES_VERSION).toBe("curation-rules.v6");
   });
 
   it("«vol» nunca se aprende como tipo aunque solo aparezca en recopilatorios", () => {

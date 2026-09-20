@@ -392,12 +392,38 @@ export interface CurationCategorySummary {
   severity: Record<CurationSeverity, number>;
   detectors: CurationDetectorSummary[];
 }
+export interface CurationDetectorMetric {
+  detector: string; label: string; reviewed: number; confirmed: number; rejected: number;
+  falsePositives: number; intentional: number; observedPrecision: number | null; meanCorrectionSeconds: number | null;
+}
+export interface CurationMetrics {
+  detectors: CurationDetectorMetric[];
+  meanCorrectionSeconds: number | null;
+  actionCoverage: {
+    open: number; excludedInformational: number; level1OrLess: number; level2OrLess: number;
+    level1OrLessPct: number | null; level2OrLessPct: number | null;
+  };
+  batches: {
+    total: number; previewed: number; applied: number; undone: number;
+    autoApplied: number; autoReverted: number;
+  };
+  alerts: Array<{
+    detector: string; label: string; precision: number; reviewed: number;
+    threshold: number; minimumReviewed: number;
+  }>;
+}
+
 export interface CurationSummary {
   lastScan: CurationScan | null;
   lastCorrection: CurationScan | null;
   running: boolean;
-  totals: { open: number; ignored: number; resolved: number; newInLastScan: number; chainedOpen: number };
+  totals: {
+    open: number; ignored: number; resolved: number; newInLastScan: number; chainedOpen: number;
+    openInformational: number;
+  };
   categories: CurationCategorySummary[];
+  /** Observabilidad operativa de E12. */
+  metrics: CurationMetrics;
   /** Autocorrección (E10): si el entorno la permite, qué lleva hecho hoy y qué regla se apagó sola. */
   autofix: CurationAutofixSummary;
 }

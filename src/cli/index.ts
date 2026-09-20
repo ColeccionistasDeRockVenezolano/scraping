@@ -45,6 +45,9 @@ import { applySincopaOrganizationRepair, planSincopaOrganizationRepair } from ".
 import { runCurationScan, waitForCurationScans } from "../curation/scan.js";
 import { autofixReport, installAutofix, listAutofixRules, runAutofix } from "../curation/autofix.js";
 import { getCurationSummary } from "../curation/repository.js";
+import { getCurationMetrics } from "../curation/metrics.js";
+import { previewFixBatch } from "../curation/actions/batches.js";
+import { parseCurationFixPreviewArgs } from "./curation-fix.js";
 import { pruneCuration } from "../curation/retention.js";
 import { compactEntityResolutionDecisions } from "../er/retention.js";
 
@@ -737,6 +740,33 @@ async function main(): Promise<number> {
         for (const alert of report.alerts) console.error(`  ! ${alert.detector} → ${alert.actionKey}: ${alert.reason}`);
         return 0;
       }
+      if (subcommand === "fix") {
+        const parsed = parseCurationFixPreviewArgs(args);
+        if (!parsed.ok) {
+          console.error(parsed.error);
+          return 1;
+        }
+        const { detector, signature, actionKey, limit } = parsed.value;
+        const preview = await previewFixBatch({
+          mode: "group",
+          filter: {
+            category: detector.category,
+            detector: detector.key,
+            ...(signature ? { signature } : {}),
+          },
+          ...(actionKey ? { actionKey } : {}),
+        }, "cli", { groupLimit: limit, page: { limit: Math.min(limit, 50), offset: 0 } });
+        console.log(`curation fix --preview: lote #${preview.id} · ${preview.counts["matched"] ?? 0} coincidentes · ${preview.counts["pending"] ?? 0} aplicables · ${preview.counts["blocked"] ?? 0} bloqueados`);
+        console.log(`previewHash: ${preview.previewHash}`);
+        for (const item of preview.items) {
+          console.log(`  #${item.findingId ?? "—"} ${item.actionKey ?? "sin acción"} N${item.level ?? "—"} · ${item.status}${item.error ? ` · ${item.error}` : ""}`);
+        }
+        if (preview.pagination.total > preview.items.length) {
+          console.log(`  … ${preview.pagination.total - preview.items.length} ítems más en el lote`);
+        }
+        console.log("El catálogo NO se modificó. La vista previa sí queda registrada como lote previewed para auditoría.");
+        return 0;
+      }
       if (subcommand === "prune") {
         const result = await pruneCuration({ dryRun: args.includes("--dry-run") });
         if (result.status === "skipped") {
@@ -749,16 +779,23 @@ async function main(): Promise<number> {
         return 0;
       }
       if (subcommand === "summary") {
-        const summary = await getCurationSummary(false);
+        const [summary, metrics] = await Promise.all([getCurationSummary(false), getCurationMetrics()]);
         console.log(`último análisis: ${summary.lastScan ? `#${summary.lastScan.id} ${summary.lastScan.trigger} ${summary.lastScan.status} ${summary.lastScan.startedAt}` : "ninguno"}`);
         console.log(`abiertos ${summary.totals.open} · ignorados ${summary.totals.ignored} · resueltos ${summary.totals.resolved} · nuevos en el último ${summary.totals.newInLastScan}`);
+        const pct = (value: number | null): string => value === null ? "—" : `${(value * 100).toFixed(1)}%`;
+        const time = metrics.meanCorrectionSeconds === null ? "—" : `${(metrics.meanCorrectionSeconds / 3600).toFixed(1)} h`;
+        console.log(`acciones (solo accionables): ≤N1 ${metrics.actionCoverage.level1OrLess}/${metrics.actionCoverage.open} (${pct(metrics.actionCoverage.level1OrLessPct)}) · ≤N2 ${metrics.actionCoverage.level2OrLess}/${metrics.actionCoverage.open} (${pct(metrics.actionCoverage.level2OrLessPct)}) · informativos fuera del KPI ${metrics.actionCoverage.excludedInformational}`);
+        console.log(`tiempo medio hallazgo→corrección: ${time} · lotes aplicados ${metrics.batches.applied} · previews ${metrics.batches.previewed} · deshechos ${metrics.batches.undone} · autocorrecciones activas ${metrics.batches.autoApplied} · revertidas ${metrics.batches.autoReverted}`);
+        for (const alert of metrics.alerts) {
+          console.error(`  ! precisión observada ${alert.label}: ${(alert.precision * 100).toFixed(1)}% (${alert.reviewed} decisiones; umbral ${(alert.threshold * 100).toFixed(0)}%)`);
+        }
         for (const category of summary.categories) {
           console.log(`\n${String(category.open).padStart(6)}  ${category.label}`);
           for (const detector of category.detectors.filter((item) => item.open > 0)) console.log(`${String(detector.open).padStart(12)}  ${detector.label}`);
         }
         return 0;
       }
-      console.error("uso: crv curation scan [--dry-run] | crv curation summary | crv curation prune [--dry-run] | crv curation autofix [--run]");
+      console.error("uso: crv curation scan [--dry-run] | crv curation summary | crv curation fix --preview --detector=<clave> [--signature=<subgrupo>] [--action=<acción>] [--limit=N] | crv curation prune [--dry-run] | crv curation autofix [--run]");
       return 1;
     }
 
@@ -881,7 +918,9 @@ CRV CLI
                              escribe reports/ambiguity-resolution.{json,md}
   curation scan [--dry-run]  analiza el catálogo con el detector de conflictos de Curaduría: nombres sucios,
                              mal segmentados, fichas de otro tipo, repetidas, incoherentes, en disputa, «Otros»
-  curation summary           conteos abiertos por categoría y detector, y el último análisis
+  curation summary           conteos, precisión observada, cobertura por nivel, tiempo medio y reversión de lotes
+  curation fix --preview --detector=<clave> [--signature=<subgrupo>] [--action=<acción>] [--limit=N]
+                             crea una vista previa auditada sin modificar el catálogo
   curation autofix [--run]   estado de la autocorrección segura (reglas, lo de hoy, avisos); --run la aplica ahora
   curation prune [--dry-run] retención: borra los análisis anteriores a los últimos 500 y los hallazgos resueltos
                              hace más de 180 días (nunca abiertos ni ignorados)

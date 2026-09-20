@@ -46,14 +46,51 @@ async function readCatalog(db: SnapshotClient) {
   const persons = await db.query<{ id: string; name: string }>("SELECT id::text, name FROM public.persons ORDER BY id");
   const organizations = await db.query<{ id: string; name: string; organization_type: string }>(
     "SELECT id::text, name, organization_type::text FROM public.organizations ORDER BY id");
-  const albums = await db.query<{ id: string; artist_id: string; title: string; release_year: number | null; album_type: string }>(
-    "SELECT id::text, artist_id::text, title, release_year, album_type::text FROM public.albums ORDER BY id");
+  const albums = await db.query<{ id: string; artist_id: string; title: string; release_year: number | null; album_type: string; label_id: string | null }>(
+    "SELECT id::text, artist_id::text, title, release_year, album_type::text, label_id::text FROM public.albums ORDER BY id");
   const tracks = await db.query<{ id: string; album_id: string; disc_number: number; track_number: number; title: string; duration_seconds: number | null }>(
     "SELECT id::text, album_id::text, disc_number, track_number, title, duration_seconds FROM public.tracks ORDER BY album_id, disc_number, track_number");
   const roles = await db.query<{ role: string; credit_type: string; uses: string }>(`
     SELECT role, credit_type::text, count(*)::text AS uses FROM (
       SELECT role, credit_type FROM public.album_credits UNION ALL SELECT role, credit_type FROM public.track_credits
     ) credits GROUP BY 1, 2`);
+  const credits = await db.query<{
+    id: string; parent_kind: "album" | "track"; parent_id: string;
+    person_id: string | null; artist_id: string | null; organization_id: string | null;
+    credit_type: string; role: string;
+  }>(`
+    SELECT id::text, 'album'::text AS parent_kind, album_id::text AS parent_id,
+           person_id::text, artist_id::text, organization_id::text, credit_type::text, role
+      FROM public.album_credits
+    UNION ALL
+    SELECT id::text, 'track'::text AS parent_kind, track_id::text AS parent_id,
+           person_id::text, artist_id::text, organization_id::text, credit_type::text, role
+      FROM public.track_credits
+     ORDER BY parent_kind, parent_id, id`);
+  const memberships = await db.query<{
+    id: string; artist_id: string; person_id: string; role: string;
+    from_year: number | null; to_year: number | null; is_current: boolean;
+  }>(`
+    SELECT id::text, artist_id::text, person_id::text, role, from_year, to_year, is_current
+      FROM public.artist_members ORDER BY id`);
+  const aliases = await db.query<{
+    id: string; kind: "artist" | "person" | "organization" | "album" | "track";
+    entity_id: string; alias: string; normalized_alias: string;
+  }>(`
+    SELECT id::text, 'artist'::text AS kind, artist_id::text AS entity_id, alias, normalized_alias FROM ingest.artist_aliases
+    UNION ALL SELECT id::text, 'person', person_id::text, alias, normalized_alias FROM ingest.person_aliases
+    UNION ALL SELECT id::text, 'organization', organization_id::text, alias, normalized_alias FROM ingest.organization_aliases
+    UNION ALL SELECT id::text, 'album', album_id::text, alias, normalized_alias FROM ingest.album_aliases
+    UNION ALL SELECT id::text, 'track', track_id::text, alias, normalized_alias FROM ingest.track_aliases
+    ORDER BY kind, entity_id, id`);
+  const redirects = await db.query<{ kind: "artist" | "person" | "organization" | "album" | "track"; from_id: string; to_id: string }>(
+    "SELECT entity_kind::text AS kind, from_id::text, to_id::text FROM ingest.entity_redirects ORDER BY entity_kind, from_id");
+  const mediaLinks = await db.query<{
+    id: string; entity_kind: string; artist_id: string | null; person_id: string | null;
+    organization_id: string | null; album_id: string | null; url: string; media_type: string;
+  }>(`
+    SELECT id::text, entity_kind, artist_id::text, person_id::text, organization_id::text, album_id::text, url, media_type
+      FROM media.media_links ORDER BY id`);
   const personArtists = await db.query<{ person_id: string; artist_id: string }>(`
     SELECT person_id::text, artist_id::text FROM public.artist_members
     UNION SELECT c.person_id::text, a.artist_id::text FROM public.album_credits c JOIN public.albums a ON a.id=c.album_id WHERE c.person_id IS NOT NULL
@@ -119,12 +156,12 @@ async function readCatalog(db: SnapshotClient) {
   const distinct = distinctTable.rows[0]?.present
     ? await db.query<{ kind: string; a_id: string; b_id: string }>("SELECT kind, a_id::text, b_id::text FROM ingest.curation_distinct_pairs")
     : { rows: [] };
-  return { artists, persons, organizations, albums, tracks, roles,
+  return { artists, persons, organizations, albums, tracks, roles, credits, memberships, aliases, redirects, mediaLinks,
     personArtists, personLinks, organizationLinks, artistLinks, reviews, conflicts, handled, distinct };
 }
 
 function buildSnapshot({
-  artists, persons, organizations, albums, tracks, roles,
+  artists, persons, organizations, albums, tracks, roles, credits, memberships, aliases, redirects, mediaLinks,
   personArtists, personLinks, organizationLinks, artistLinks,
   reviews, conflicts, handled, distinct,
 }: Awaited<ReturnType<typeof readCatalog>>): CatalogSnapshot {
@@ -160,9 +197,26 @@ function buildSnapshot({
     artists: artists.rows.map((row) => ({ id: Number(row.id), name: row.name, originCity: row.origin_city, formedYear: row.formed_year, disbandedYear: row.disbanded_year })),
     persons: persons.rows.map((row) => ({ id: Number(row.id), name: row.name })),
     organizations: organizations.rows.map((row) => ({ id: Number(row.id), name: row.name, type: row.organization_type })),
-    albums: albums.rows.map((row) => ({ id: Number(row.id), artistId: Number(row.artist_id), title: row.title, releaseYear: row.release_year, albumType: row.album_type })),
+    albums: albums.rows.map((row) => ({ id: Number(row.id), artistId: Number(row.artist_id), title: row.title, releaseYear: row.release_year, albumType: row.album_type, labelId: num(row.label_id) })),
     tracks: tracks.rows.map((row) => ({ id: Number(row.id), albumId: Number(row.album_id), disc: row.disc_number, number: row.track_number, title: row.title, durationSeconds: row.duration_seconds })),
     creditRoles: roles.rows.map((row) => ({ role: row.role, creditType: row.credit_type, uses: Number(row.uses) })),
+    credits: credits.rows.map((row) => ({
+      id: Number(row.id), parentKind: row.parent_kind, parentId: Number(row.parent_id),
+      personId: num(row.person_id), artistId: num(row.artist_id), organizationId: num(row.organization_id),
+      creditType: row.credit_type, role: row.role,
+    })),
+    memberships: memberships.rows.map((row) => ({
+      id: Number(row.id), artistId: Number(row.artist_id), personId: Number(row.person_id), role: row.role,
+      fromYear: row.from_year, toYear: row.to_year, isCurrent: row.is_current,
+    })),
+    aliases: aliases.rows.map((row) => ({
+      id: Number(row.id), kind: row.kind, entityId: Number(row.entity_id), alias: row.alias, normalizedAlias: row.normalized_alias,
+    })),
+    redirects: redirects.rows.map((row) => ({ kind: row.kind, fromId: Number(row.from_id), toId: Number(row.to_id) })),
+    mediaLinks: mediaLinks.rows.map((row) => ({
+      id: Number(row.id), entityKind: row.entity_kind, artistId: num(row.artist_id), personId: num(row.person_id),
+      organizationId: num(row.organization_id), albumId: num(row.album_id), url: row.url, mediaType: row.media_type,
+    })),
     personArtists: personArtistMap,
     personLinks: countMap(personLinks.rows),
     organizationLinks: countMap(organizationLinks.rows),
@@ -246,8 +300,8 @@ async function readFocus(db: SnapshotClient, focus: readonly FocusRef[]): Promis
     for (const row of rows) albumIds.add(Number(row.id));
   }
 
-  const albums = await db.query<{ id: string; artist_id: string; title: string; release_year: number | null; album_type: string }>(
-    "SELECT id::text, artist_id::text, title, release_year, album_type::text FROM public.albums WHERE id = ANY($1::bigint[]) ORDER BY id", [[...albumIds]]);
+  const albums = await db.query<{ id: string; artist_id: string; title: string; release_year: number | null; album_type: string; label_id: string | null }>(
+    "SELECT id::text, artist_id::text, title, release_year, album_type::text, label_id::text FROM public.albums WHERE id = ANY($1::bigint[]) ORDER BY id", [[...albumIds]]);
   for (const row of albums.rows) artistIds.add(Number(row.artist_id));
 
   // Todas las pistas de los discos cubiertos (la numeración solo se juzga
@@ -304,12 +358,17 @@ async function readFocus(db: SnapshotClient, focus: readonly FocusRef[]): Promis
     artists: artists.rows.map((row) => ({ id: Number(row.id), name: row.name, originCity: row.origin_city, formedYear: row.formed_year, disbandedYear: row.disbanded_year })),
     persons: persons.rows.map((row) => ({ id: Number(row.id), name: row.name })),
     organizations: organizations.rows.map((row) => ({ id: Number(row.id), name: row.name, type: row.organization_type })),
-    albums: albums.rows.map((row) => ({ id: Number(row.id), artistId: Number(row.artist_id), title: row.title, releaseYear: row.release_year, albumType: row.album_type })),
+    albums: albums.rows.map((row) => ({ id: Number(row.id), artistId: Number(row.artist_id), title: row.title, releaseYear: row.release_year, albumType: row.album_type, labelId: num(row.label_id) })),
     tracks: tracks.rows.map((row) => ({ id: Number(row.id), albumId: Number(row.album_id), disc: row.disc_number, number: row.track_number, title: row.title, durationSeconds: row.duration_seconds })),
     // El vocabulario llega aprendido del catálogo entero (E9.3): los roles solo
     // lo alimentan a él. Revisiones, conflictos y pares son de detectores
     // globales, que un análisis dirigido no corre ni resuelve.
     creditRoles: [],
+    credits: [],
+    memberships: [],
+    aliases: [],
+    redirects: [],
+    mediaLinks: [],
     personArtists: personArtistMap,
     personLinks: countMap(personLinks.rows),
     organizationLinks: countMap(organizationLinks.rows),

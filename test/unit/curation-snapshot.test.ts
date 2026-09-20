@@ -28,17 +28,23 @@ describe("foto del catálogo de Curaduría (A3)", () => {
     const snapshot = await loadCatalogSnapshot(client);
     expect(statements[0]).toBe("BEGIN ISOLATION LEVEL REPEATABLE READ READ ONLY");
     expect(statements.at(-1)).toBe("COMMIT");
-    // 13 lecturas del catálogo y la pregunta de si ya existe la tabla de pares distintos (0020).
-    expect(statements.slice(1, -1)).toHaveLength(14);
+    // 18 lecturas del catálogo: E11 suma créditos, membresías, aliases, redirecciones y media_links,
+    // más la pregunta de si ya existe la tabla de pares distintos (0020).
+    expect(statements.slice(1, -1)).toHaveLength(19);
     expect(statements.slice(1, -1).every((statement) => statement.startsWith("SELECT"))).toBe(true);
     expect(snapshot.artists).toEqual([]);
+    expect(snapshot.credits).toEqual([]);
+    expect(snapshot.memberships).toEqual([]);
+    expect(snapshot.aliases).toEqual([]);
+    expect(snapshot.redirects).toEqual([]);
+    expect(snapshot.mediaLinks).toEqual([]);
     expect(snapshot.distinctPairs).toEqual(new Set());
   });
 
   it("carga los pares declarados distintos (E2) dentro de la misma foto, como pares ya tratados", async () => {
     const { statements, client } = recordingClient(undefined, true);
     const snapshot = await loadCatalogSnapshot(client);
-    expect(statements.slice(1, -1)).toHaveLength(15);
+    expect(statements.slice(1, -1)).toHaveLength(20);
     expect(statements.at(-1)).toBe("COMMIT");
     expect(snapshot.distinctPairs).toEqual(new Set(["artist:3-7"]));
     expect(snapshot.handledPairs.has("artist:3-7")).toBe(true);

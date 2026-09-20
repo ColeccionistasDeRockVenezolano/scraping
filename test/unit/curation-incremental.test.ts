@@ -44,12 +44,26 @@ const keysOf = (findings: readonly Finding[], detector: string) => findings.filt
 describe("detectores locales y globales (E9.1)", () => {
   it("son globales los que necesitan el catálogo entero: duplicados, cola y «Otros»", () => {
     expect(GLOBAL_DETECTORS.map((detector) => detector.key).sort()).toEqual([
-      "artistas_equivalentes", "cola_de_revision", "conflictos_abiertos", "discos_repetidos",
-      "organizaciones_equivalentes", "personas_equivalentes", "pistas_repetidas",
+      "alias_que_choca_con_otra_ficha",
+      "artistas_equivalentes",
+      "cola_de_revision",
+      "conflictos_abiertos",
+      "creditos_duplicados",
+      "discos_repetidos",
+      "enlace_de_medio_a_ficha_fusionada",
+      "organizaciones_equivalentes",
+      "periodo_de_membresia_imposible",
+      "personas_equivalentes",
+      "pistas_repetidas",
+      "redireccion_en_cadena",
+      "rol_contra_tipo_de_credito",
+      "sello_que_es_artista",
     ]);
     expect(LOCAL_DETECTORS.length + GLOBAL_DETECTORS.length).toBe(DETECTORS.length);
     expect(isLocalDetector("anomalia_del_catalogo")).toBe(false);
     expect(isLocalDetector("caracteres_invisibles")).toBe(true);
+    expect(isLocalDetector("mayusculas_sostenidas")).toBe(true);
+    expect(isLocalDetector("disco_sin_pistas")).toBe(true);
   });
 
   it("un análisis local no da por mirados los globales: sus hallazgos no se pueden resolver", () => {

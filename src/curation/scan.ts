@@ -228,7 +228,11 @@ export async function catalogSignature(db: Queryable = getPool()): Promise<strin
     SELECT string_agg(schemaname || '.' || relname || ':' || n_tup_ins || ':' || n_tup_upd || ':' || n_tup_del, ',' ORDER BY schemaname, relname) AS signature
       FROM pg_stat_user_tables
      WHERE schemaname = 'public'
-        OR (schemaname = 'ingest' AND relname IN ('conflicts', 'review_queue', 'claims', 'entity_redirects'))`);
+        OR (schemaname = 'ingest' AND relname IN (
+          'conflicts', 'review_queue', 'claims', 'entity_redirects',
+          'artist_aliases', 'person_aliases', 'organization_aliases', 'album_aliases', 'track_aliases'
+        ))
+        OR (schemaname = 'media' AND relname = 'media_links')`);
   return rows[0]?.signature ?? "";
 }
 

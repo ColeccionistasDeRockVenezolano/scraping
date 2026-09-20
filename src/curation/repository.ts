@@ -7,6 +7,7 @@ import type { Pool, PoolClient } from "pg";
 import { getPool } from "../db/client.js";
 import { DETECTOR_DEFINITIONS } from "./analyze.js";
 import { summarizeActions, type ActionSummary } from "./actions/registry.js";
+import { INFORMATIONAL_DETECTOR_KEYS } from "./metrics.js";
 import type { Resolution } from "./resolution.js";
 import { CATEGORIES, OTHER_CATEGORY } from "./taxonomy.js";
 import type { EntityRef, Severity } from "./types.js";
@@ -53,7 +54,16 @@ export interface CurationSummary {
   lastScan: ScanRow | null;
   lastCorrection: ScanRow | null;
   running: boolean;
-  totals: { open: number; ignored: number; resolved: number; newInLastScan: number; chainedOpen: number };
+  totals: {
+    open: number; ignored: number; resolved: number; newInLastScan: number; chainedOpen: number;
+    /**
+     * Parte de `open` que sale de detectores informativos (E12): no cuenta
+     * para el KPI de cobertura de acciones. Se publica aparte para que el
+     * total grande no se lea como una regresión cuando un detector informativo
+     * añade miles de fichas.
+     */
+    openInformational: number;
+  };
   categories: CategorySummary[];
 }
 
@@ -156,6 +166,7 @@ export async function getCurationSummary(running: boolean): Promise<CurationSumm
       })),
   }]));
 
+  let openInformational = 0;
   for (const row of counts.rows) {
     // Una categoría guardada que la taxonomía ya no conoce se muestra en «Otros».
     const category = categories.get(known.has(row.category) ? row.category : OTHER_CATEGORY)!;
@@ -168,6 +179,7 @@ export async function getCurationSummary(running: boolean): Promise<CurationSumm
     category[row.status] += row.n;
     detector[row.status] += row.n;
     if (row.status === "open") {
+      if (INFORMATIONAL_DETECTOR_KEYS.has(row.detector)) openInformational += row.n;
       category.severity[row.severity] += row.n;
       category.newInLastScan += row.fresh;
       category.chainedOpen += row.chained;
@@ -193,6 +205,7 @@ export async function getCurationSummary(running: boolean): Promise<CurationSumm
       resolved: list.reduce((sum, item) => sum + item.resolved, 0),
       newInLastScan: list.reduce((sum, item) => sum + item.newInLastScan, 0),
       chainedOpen: list.reduce((sum, item) => sum + item.chainedOpen, 0),
+      openInformational,
     },
     categories: list,
   };
