@@ -12,9 +12,9 @@
 // «No se pudo cargar».
 import { Suspense, useCallback, useEffect, useRef, useState } from "react";
 import { NavLink, Outlet, useLocation, useOutletContext } from "react-router-dom";
-import { CaretDown, Copy, LockSimple, Pulse, SignIn, type Icon } from "@phosphor-icons/react";
+import { CaretDown, ClockCounterClockwise, Copy, LockSimple, Pulse, SignIn, type Icon } from "@phosphor-icons/react";
 import { useOperator } from "../lib/OperatorContext";
-import { ApiError, curationApi } from "../lib/api";
+import { ApiError, curationApi, entityMergeApi } from "../lib/api";
 import { categoryIcon, formatCount } from "../lib/curation";
 import { LoadingState } from "../components/StateViews";
 import { RowsSkeleton } from "../components/Skeletons";
@@ -66,11 +66,38 @@ function useSummary(enabled: boolean): CurationOutletContext {
   return { summary, summaryError, refreshSummary };
 }
 
+/**
+ * Contador de «Posibles duplicados» (PLAN_CURADURIA E7.4): hoy el enlace del
+ * menú no dice cuántos hay pendientes. Basta el total de la página 1; nadie
+ * necesita el detalle para decidir si entra a revisar.
+ */
+function useDuplicateCount(enabled: boolean): number | undefined {
+  const [count, setCount] = useState<number>();
+
+  useEffect(() => {
+    if (!enabled) return undefined;
+    let current = true;
+    const refresh = () => {
+      entityMergeApi.duplicateCandidates({ limit: 1 })
+        .then((page) => { if (current) setCount(page.pagination.total); })
+        .catch(() => undefined);
+    };
+    refresh();
+    const timer = window.setInterval(() => {
+      if (document.visibilityState === "visible") refresh();
+    }, REFRESH_MS);
+    return () => { current = false; window.clearInterval(timer); };
+  }, [enabled]);
+
+  return count;
+}
+
 export function CurationLayout() {
   const { user, isAdmin, isChecking } = useOperator();
   const [signingIn, setSigningIn] = useState(false);
   const context = useSummary(isAdmin);
   const { summary } = context;
+  const duplicateCount = useDuplicateCount(isAdmin);
 
   return (
     <>
@@ -101,7 +128,7 @@ export function CurationLayout() {
         </div>
       ) : (
         <div className="curation-shell">
-          <CurationNav summary={summary} />
+          <CurationNav summary={summary} duplicateCount={duplicateCount} />
           <div className="curation-shell__main">
             <Suspense fallback={<RowsSkeleton rows={4} label="Cargando la sección…" />}>
               <Outlet context={context} />
@@ -139,7 +166,7 @@ function currentEntry(pathname: string, entries: NavEntry[]): Pick<NavEntry, "la
  * por debajo de 1024 px se pliega en un botón que muestra la sección abierta y
  * despliega la lista completa.
  */
-function CurationNav({ summary }: { summary: CurationSummary | undefined }) {
+function CurationNav({ summary, duplicateCount }: { summary: CurationSummary | undefined; duplicateCount: number | undefined }) {
   const { pathname } = useLocation();
   const [open, setOpen] = useState(false);
 
@@ -160,7 +187,15 @@ function CurationNav({ summary }: { summary: CurationSummary | undefined }) {
     fresh: category.newInLastScan > 0,
     title: category.description,
   })) ?? [];
-  const tools: NavEntry[] = [{ to: "/curaduria/duplicados", label: "Posibles duplicados", icon: Copy }];
+  const tools: NavEntry[] = [
+    {
+      to: "/curaduria/duplicados", label: "Posibles duplicados", icon: Copy,
+      ...(duplicateCount !== undefined ? { count: duplicateCount } : {}),
+    },
+    // Sin contador a propósito: el historial de correcciones no es una bandeja
+    // pendiente, es lo que ya se hizo (PLAN_CURADURIA E8.5).
+    { to: "/curaduria/correcciones", label: "Correcciones", icon: ClockCounterClockwise },
+  ];
   const current = currentEntry(pathname, [overview, ...categories, ...tools]);
   const CurrentIcon = current.icon;
 

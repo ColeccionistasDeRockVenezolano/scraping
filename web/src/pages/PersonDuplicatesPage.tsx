@@ -8,8 +8,8 @@
 // señales encontradas, con tope en 1 (src/review/person-candidates.ts). Aquí se
 // muestra en puntos sobre 100 y con su desglose, para que el número se pueda
 // leer sin conocer el código.
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useRef, useState } from "react";
+import { Link, useSearchParams } from "react-router-dom";
 import { ArrowSquareOut, CaretDown, CaretUp, GitMerge, Info, X } from "@phosphor-icons/react";
 import { ApiError, entityMergeApi, reviewApi } from "../lib/api";
 import { useAsync } from "../lib/useAsync";
@@ -113,11 +113,13 @@ interface CandidatePair {
 
 export function PersonDuplicatesPage() {
   const { notify } = useToast();
+  const [params] = useSearchParams();
   const [offset, setOffset] = useState(0);
   const [onlyStrong, setOnlyStrong] = useState(false);
   const [merging, setMerging] = useState<CandidatePair | null>(null);
   const [dismissing, setDismissing] = useState<CandidatePair | null>(null);
   const [busyPriority, setBusyPriority] = useState<number | null>(null);
+  const highlightedRef = useRef<HTMLLIElement>(null);
 
   const { data, loading, error, reload } = useAsync(
     () => entityMergeApi.duplicateCandidates({
@@ -127,6 +129,20 @@ export function PersonDuplicatesPage() {
   );
 
   const setFilter = (strong: boolean) => { setOnlyStrong(strong); setOffset(0); };
+
+  // Un par precargado (PLAN_CURADURIA E7.3): un `possible_duplicate` de otra
+  // revisión que resultó ser el mismo par que el detector nuevo ya propone.
+  // Sin orden fijo: A/B llegan como los guardó la revisión vieja.
+  const highlightA = Number(params.get("a") ?? "") || undefined;
+  const highlightB = Number(params.get("b") ?? "") || undefined;
+  const isHighlighted = (a: number, b: number) =>
+    highlightA !== undefined && highlightB !== undefined
+    && ((a === highlightA && b === highlightB) || (a === highlightB && b === highlightA));
+
+  useEffect(() => {
+    if (highlightA === undefined || !data) return;
+    highlightedRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+  }, [data, highlightA]);
 
   /**
    * El orden de la cola (1-10, mayor = antes) no lo decide el detector: aquí
@@ -180,8 +196,10 @@ export function PersonDuplicatesPage() {
           <ol className={`dup-list${loading ? " is-refreshing" : ""}`}>
             {data.data.map((candidate) => {
               const pair = { reviewId: candidate.reviewId, a: candidate.a, b: candidate.b };
+              const highlighted = isHighlighted(candidate.a.id, candidate.b.id);
               return (
-                <li key={candidate.reviewId}>
+                <li key={candidate.reviewId} ref={highlighted ? highlightedRef : undefined}
+                  style={highlighted ? { outline: "2px solid var(--accent, #6d5bd0)", outlineOffset: 4, borderRadius: 12 } : undefined}>
                   <CandidateCard
                     candidate={candidate} onMerge={() => setMerging(pair)} onDismiss={() => setDismissing(pair)}
                     priorityBusy={busyPriority === candidate.reviewId}
