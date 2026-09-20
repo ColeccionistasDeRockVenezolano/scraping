@@ -346,7 +346,7 @@ try {
       await fixDialog.getByRole("button", { name: "Deshacer este lote" }).click();
       await fixDialog.getByText("Lote deshecho.", { exact: false }).waitFor({ timeout: 20_000 });
       await page.screenshot({ path: path.join(outputDir, `${viewport.name}-lote-desecho.png`), fullPage: true });
-      await fixDialog.getByRole("button", { name: "Cerrar" }).click();
+      await fixDialog.getByRole("button", { name: "Cerrar", exact: true }).last().click();
 
       await page.goto(`${webUrl}/curaduria/correcciones`, { waitUntil: "domcontentloaded" });
       await page.getByRole("heading", { name: "Correcciones" }).waitFor();
