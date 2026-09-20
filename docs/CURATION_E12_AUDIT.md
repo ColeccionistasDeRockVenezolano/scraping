@@ -5,6 +5,9 @@ Rama: `feat/curaduria-e11-e12`
 PR: #2
 
 > Esta auditoría pertenece al plan de Curaduría E11/E12. `docs/FINAL_AUDIT.md` es una instantánea histórica de otro ciclo y no sustituye este cierre.
+>
+> **Alcance:** solo E11 y E12. El cierre del plan completo contra la checklist §4 —los 13 criterios, medidos— es
+> `docs/curation/CIERRE_20_DE_20.md` (2026-09-20), que además corrige un defecto de cobertura que este documento no vio.
 
 ## Problemas encontrados al auditar E11/E12 contra datos reales
 
