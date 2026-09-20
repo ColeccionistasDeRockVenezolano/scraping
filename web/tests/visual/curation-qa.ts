@@ -347,6 +347,7 @@ try {
         await page.waitForFunction(() => document.querySelector(".cside__toggle")?.getAttribute("aria-expanded") === "false");
       }
       await page.getByText("Último análisis", { exact: false }).first().waitFor();
+      await assertTextContrast(page.locator(".page-kicker"), `${viewport.name}: encabezado de Curaduría`);
       await page.screenshot({ path: path.join(outputDir, `${viewport.name}-conflictos.png`), fullPage: true });
       await assertNoOverflow(page, `${viewport.name} /curaduria`);
 
@@ -587,6 +588,12 @@ try {
       const subgroupChips = subgroups.locator(".cchip--sub");
       const initialChips = await subgroupChips.count();
       if (initialChips !== 7) throw new Error(`${viewport.name}: se esperaban «Todos» y 6 subgrupos de entrada, hay ${initialChips}`);
+      const readableEvidence = page.locator(".cfind__evidence").first();
+      await readableEvidence.locator(":scope > summary").click();
+      await readableEvidence.locator(".evidence-list").waitFor();
+      if (await readableEvidence.locator(".evidence-list__row").count() < 1) throw new Error(`${viewport.name}: la evidencia no tiene filas legibles`);
+      if (await readableEvidence.locator(".evidence-raw pre").isVisible()) throw new Error(`${viewport.name}: el JSON técnico aparece abierto por defecto`);
+      await page.screenshot({ path: path.join(outputDir, `${viewport.name}-evidencia-legible.png`), fullPage: true });
       await page.screenshot({ path: path.join(outputDir, `${viewport.name}-otros.png`), fullPage: true });
       await subgroups.getByRole("button", { name: /^Ver \d+ más/u }).click();
       await page.waitForFunction((count) => document.querySelectorAll(".cfilters--sub .cchip--sub").length > count, initialChips);
