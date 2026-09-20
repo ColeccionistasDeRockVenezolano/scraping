@@ -392,11 +392,17 @@ export function FixBatchDialog({ mode, findingIds, filter, title, description, a
           ) : (
             <>
               {undoBatch ? (
-                <div className="alert-block" style={{ marginTop: 12 }} role="status">
-                  <strong>Lote deshecho.</strong>{" "}
-                  {undoBatch.counts["undone"] !== undefined ? <>Se restauraron {formatCount(Number(undoBatch.counts["undone"] ?? 0))} ítems. </> : null}
-                  {undoBatch.counts["notUndoable"] ? <>No se pudieron restaurar {formatCount(Number(undoBatch.counts["notUndoable"]))} (la ficha cambió después).</> : null}
-                </div>
+                <>
+                  <div className="alert-block" style={{ marginTop: 12 }} role="status" aria-live="polite">
+                    <strong>Lote deshecho.</strong>{" "}
+                    {undoBatch.counts["undone"] !== undefined ? <>Se restauraron {formatCount(Number(undoBatch.counts["undone"] ?? 0))} ítems. </> : null}
+                    {undoBatch.counts["notUndoable"] ? <>No se pudieron restaurar {formatCount(Number(undoBatch.counts["notUndoable"]))} (la ficha cambió después).</> : null}
+                  </div>
+                  <div className="form-actions">
+                    <Link className="btn btn--outline" to={`/curaduria/correcciones?batch=${batch.id}`} onClick={onClose}>Ver lote</Link>
+                    <button type="button" className="btn btn--primary" onClick={onClose}>Cerrar</button>
+                  </div>
+                </>
               ) : batch.status === "running" ? (
                 <div className="form-actions">
                   <button type="button" className="btn" onClick={onClose}>Cerrar</button>
