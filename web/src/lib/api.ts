@@ -11,7 +11,7 @@ import type {
   CurationFinding, CurationFindingStatus, CurationIgnoreReason, CurationPairKind, CurationScan, CurationScanResult,
   CurationSeverity, CurationSummary,
   AlbumMergePreview, AlbumMergeResult, PersonSplitPreview, PersonSplitResult,
-  FindingActionsResult, FixBatch, DistinctPair,
+  FindingActionsResult, FixBatch, FixBatchSummary, DistinctPair, ConflictResolveResult, ConflictResolveGroupResult,
 } from "./types";
 
 /**
@@ -273,6 +273,22 @@ export interface CurationFindingGroupFilter {
   chained?: boolean;
 }
 
+/**
+ * Filtro de «marcar como revisado» en grupo (E8.7): los mismos filtros de la
+ * pantalla, sin exigir categoría ni detector — «Surgidos tras corregir» los
+ * cruza todos. `chained` no viaja: la API siempre lo da por cierto.
+ */
+export interface CurationChainGroupFilter {
+  category?: string;
+  detector?: string;
+  signature?: string;
+  severity?: CurationSeverity;
+  entityKind?: string;
+  status?: CurationFindingStatus | "all";
+  q?: string;
+  scanId?: number;
+}
+
 /** Cuerpo de `POST /curation/fixes/preview` (E4): todo lote nace de una vista previa. */
 export interface CurationFixesPreviewRequest {
   mode: "individual" | "selected" | "group";
@@ -296,6 +312,14 @@ export const curationApi = {
   ignore: (id: number, reason: CurationIgnoreReason, note: string) =>
     request<CurationFinding>(`/curation/findings/${id}/ignore`, { method: "POST", authenticated: true, body: note ? { reason, note } : { reason } }),
   reopen: (id: number) => request<CurationFinding>(`/curation/findings/${id}/reopen`, { method: "POST", authenticated: true }),
+  // ---- Valores en disputa sin revisión viva (E7.1): resolver un conflicto directo ----
+  resolveConflict: (id: number, note: string, choice?: "a" | "b" | "both" | "dismiss", value?: string | number | boolean | null) =>
+    request<ConflictResolveResult>(`/curation/findings/${id}/resolve-conflict`, {
+      method: "POST", authenticated: true,
+      body: { note, ...(choice === undefined ? {} : { choice }), ...(value === undefined ? {} : { value }) },
+    }),
+  resolveConflictsGroup: (input: CurationFindingGroupFilter & { note: string }) =>
+    request<ConflictResolveGroupResult>("/curation/findings/resolve-conflicts-group", { method: "POST", authenticated: true, body: input }),
   ignoreGroup: (input: CurationFindingGroupFilter & { reason: CurationIgnoreReason; note: string }) =>
     request<{ ignored: number }>("/curation/findings/ignore-group", { method: "POST", authenticated: true, body: input }),
   declareDistinct: (input: { kind: CurationPairKind; aId: number; bId: number; note: string }) =>
@@ -310,6 +334,16 @@ export const curationApi = {
     request<FixBatch>(`/curation/fixes/${batchId}/apply`, { method: "POST", authenticated: true, body: input }),
   fixUndo: (batchId: number, note: string) =>
     request<FixBatch>(`/curation/fixes/${batchId}/undo`, { method: "POST", authenticated: true, body: { note } }),
+  /** Historial de lotes (E8.5); sin `status` la API omite las vistas previas que nadie aplicó. */
+  fixes: (params: Paged & { mode?: string; status?: string } = {}) =>
+    request<Page<FixBatchSummary>>("/curation/fixes", { query: params }),
+  fix: (batchId: number, params: Paged & { status?: string } = {}) =>
+    request<FixBatch>(`/curation/fixes/${batchId}`, { query: params }),
+  // ---- «Surgidos tras corregir» dados por revisados (E8.7) ----
+  acknowledgeChain: (id: number) =>
+    request<CurationFinding>(`/curation/findings/${id}/acknowledge-chain`, { method: "POST", authenticated: true }),
+  acknowledgeChainGroup: (filter: CurationChainGroupFilter) =>
+    request<{ acknowledged: number }>("/curation/findings/acknowledge-chain-group", { method: "POST", authenticated: true, body: filter }),
 };
 
 // ---------- escritura de entidades del core ----------

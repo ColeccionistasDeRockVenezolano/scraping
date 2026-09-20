@@ -39,6 +39,7 @@ const DICTS: Record<string, Record<string, string>> = {
     open: "Abierta", in_progress: "En curso", accepted: "Aceptada", rejected: "Rechazada", resolved: "Resuelta",
   },
   confidence: { high: "Alta", medium: "Media", low: "Baja" },
+  trustLevel: { high: "Alta", medium: "Media", low: "Baja", api: "API oficial" },
   searchType: {
     artist: "Artista", person: "Persona", album: "Disco", track: "Pista", organization: "Organización",
   },
@@ -66,6 +67,7 @@ export const publicationStatusLabel = (value: string) => label("publicationStatu
 export const reviewKindLabel = (value: string) => label("reviewKind", value);
 export const reviewStatusLabel = (value: string) => label("reviewStatus", value);
 export const confidenceLabel = (value: string) => label("confidence", value);
+export const trustLevelLabel = (value: string) => label("trustLevel", value);
 export const searchTypeLabel = (value: string) => label("searchType", value);
 export const entityKindLabel = (value: string) => label("entityKind", value);
 export const nameClassLabel = (value: string) => label("personNameClass", value);

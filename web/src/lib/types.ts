@@ -293,12 +293,30 @@ export interface ReviewDetail extends ReviewListItem {
   resolvedAt: string | null; resolvedBy: string | null; resolutionNote: string | null;
   claims: Array<{
     id: number; field: string; rawValue: unknown; normalizedValue: unknown; confidence: string; status: string;
-    sourceName: string; sourceUrl: string | null; evidenceUrl: string | null;
+    sourceName: string; sourceTrustLevel: string; sourceUrl: string | null; evidenceUrl: string | null;
   }>;
 }
 
 export interface ReviewActionResult {
   reviewId: number; kind: string; action: "accepted" | "rejected" | "resolved"; runId: number; status: string; detail: string;
+}
+
+// ---------- valores en disputa sin revisión viva (E7.1) ----------
+/** Evidencia de un lado del conflicto en `evidence.sourceA`/`sourceB` de un hallazgo `conflictos_abiertos`. */
+export interface CurationConflictSource {
+  name: string;
+  trustLevel: string;
+  url: string | null;
+  at: string;
+}
+
+export interface ConflictResolveResult {
+  conflictId: number; action: "resolved"; runId: number; detail: string;
+}
+
+export interface ConflictResolveGroupResult {
+  total: number; applied: number; tied: number; failed: number;
+  errors: Array<{ findingId: number; error: string }>; more: boolean;
 }
 
 // ---------- sources / claims / audit / youtube ----------
@@ -411,7 +429,12 @@ export interface CurationFinding {
   resolution: CurationResolution | null;
   resolvedByRunId: number | null;
   resolvedBy: string | null;
+  /** Correcciones que se ofrecen para este hallazgo; la primera es la recomendada (E4/E8.1). */
+  actions: CurationActionSummary[];
 }
+
+/** Lo que el listado sabe de una acción sin pedir sus parámetros exactos. */
+export interface CurationActionSummary { key: string; label: string; level: number; }
 
 export interface CurationScanResult {
   scanId: number | null;
@@ -554,6 +577,26 @@ export interface FindingAction {
 }
 
 export interface FindingActionsResult { findingId: number; status: string; actions: FindingAction[]; }
+
+/** Una fila del historial de correcciones (E8.5): el lote sin sus ítems. */
+export interface FixBatchSummary {
+  id: number;
+  mode: FixBatchMode;
+  filter: Record<string, unknown>;
+  actionKey: string | null;
+  requestedBy: string;
+  appliedBy: string | null;
+  note: string | null;
+  status: FixBatchStatus;
+  counts: Record<string, unknown>;
+  verification: Record<string, unknown> | null;
+  createdAt: string;
+  startedAt: string | null;
+  finishedAt: string | null;
+  undoOfBatchId: number | null;
+  undoneByBatchId: number | null;
+  itemCount: number;
+}
 
 export interface DistinctPair {
   id: number; kind: string; aId: number; bId: number;
