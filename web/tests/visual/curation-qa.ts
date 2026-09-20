@@ -156,6 +156,20 @@ async function seed(): Promise<{ dirtyArtist: number }> {
   await makeConflict("QA E7 confianza", sourceHigh, sourceLow, "Caracas", "Coro");
   await makeConflict("QA E7 empate", sourceHigh, sourceHigh2, "Mérida", "Barquisimeto");
 
+  // E7: revisiones genéricas que deben poder aceptarse/rechazarse desde la
+  // tarjeta sin salir de Curaduría.
+  await one("INSERT INTO ingest.review_queue(kind,priority,notes,payload) VALUES('missing_url',8,'QA aceptar revisión','{}'::jsonb) RETURNING id");
+  await one("INSERT INTO ingest.review_queue(kind,priority,notes,payload) VALUES('new_source',8,'QA rechazar revisión','{}'::jsonb) RETURNING id");
+
+  // E7: person_duplicate debe abrir su comparador con el par exacto, aunque
+  // la revisión no dependa de la página actual de candidatos.
+  const duplicateA = await one("INSERT INTO public.persons(name) VALUES('QA Persona Duplicada Uno') RETURNING id");
+  const duplicateB = await one("INSERT INTO public.persons(name) VALUES('QA Persona Duplicada Dos') RETURNING id");
+  await one(`
+    INSERT INTO ingest.review_queue(kind,person_a_id,person_b_id,priority,notes,payload)
+    VALUES('person_duplicate',$1,$2,9,'QA precarga duplicado',$3::jsonb) RETURNING id`,
+    [duplicateA, duplicateB, JSON.stringify({ score: 0.95, features: [] })]);
+
   return { dirtyArtist };
 }
 
@@ -303,6 +317,33 @@ try {
         await trustDialog.getByRole("button", { name: "Aplicar 1 decisiones" }).click();
         await trustDialog.getByText(/Aplicados: 1 · obsoletos: 0 · fallidos: 0/u).waitFor({ timeout: 20_000 });
         await page.screenshot({ path: path.join(outputDir, "desktop-e7-confianza-aplicada.png"), fullPage: true });
+        await page.keyboard.press("Escape");
+
+        // Revisiones vivas: Aceptar y Rechazar desde la tarjeta.
+        await page.goto(`${webUrl}/curaduria/categoria/revision_de_ingesta?detector=cola_de_revision&signature=review%3Amissing_url`, { waitUntil: "domcontentloaded" });
+        const acceptCard = page.locator(".cfind").filter({ hasText: "QA aceptar revisión" }).first();
+        await acceptCard.getByRole("button", { name: "Aceptar" }).click();
+        let reviewDialog = page.getByRole("dialog");
+        await reviewDialog.getByLabel("Motivo *").fill("QA visual E7: aceptar revisión desde Curaduría");
+        await reviewDialog.getByRole("button", { name: "Guardar decisión" }).click();
+        await page.getByText("Decisión guardada con auditoría.", { exact: false }).waitFor({ timeout: 20_000 });
+
+        await page.goto(`${webUrl}/curaduria/categoria/revision_de_ingesta?detector=cola_de_revision&signature=review%3Anew_source`, { waitUntil: "domcontentloaded" });
+        const rejectCard = page.locator(".cfind").filter({ hasText: "QA rechazar revisión" }).first();
+        await rejectCard.getByRole("button", { name: "Rechazar" }).click();
+        reviewDialog = page.getByRole("dialog");
+        await reviewDialog.getByLabel("Motivo *").fill("QA visual E7: rechazar revisión desde Curaduría");
+        await reviewDialog.getByRole("button", { name: "Guardar decisión" }).click();
+        await page.getByText("Decisión guardada con auditoría.", { exact: false }).waitFor({ timeout: 20_000 });
+        await page.screenshot({ path: path.join(outputDir, "desktop-e7-revisiones.png"), fullPage: true });
+
+        // person_duplicate: el enlace especializado debe precargar ese par.
+        await page.goto(`${webUrl}/curaduria/categoria/fichas_repetidas?detector=cola_de_revision&signature=review%3Aperson_duplicate`, { waitUntil: "domcontentloaded" });
+        await page.getByRole("link", { name: "Comparar este par" }).first().click();
+        await page.getByRole("dialog").getByRole("heading", { name: "Fusionar personas" }).waitFor({ timeout: 20_000 });
+        await page.getByText("QA Persona Duplicada Uno", { exact: false }).first().waitFor();
+        await page.getByText("QA Persona Duplicada Dos", { exact: false }).first().waitFor();
+        await page.screenshot({ path: path.join(outputDir, "desktop-e7-duplicado-precargado.png"), fullPage: true });
         await page.keyboard.press("Escape");
 
         // Volver al caso E8 de escritorio después de las decisiones E7.
