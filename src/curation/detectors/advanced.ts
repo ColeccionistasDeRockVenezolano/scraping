@@ -6,7 +6,7 @@
 import { capitalizeSpanish } from "./text-hygiene.js";
 import { nameKey } from "../lexicon.js";
 import type {
-  EntityRef, Finding, SnapshotAlias, SnapshotCredit, SnapshotMediaLink, SnapshotRedirect,
+  EntityRef, Finding, SnapshotCredit, SnapshotMediaLink, SnapshotRedirect,
 } from "../types.js";
 import { quote, type AnalysisContext, type Detector } from "./shared.js";
 

@@ -109,8 +109,8 @@ export async function getCurationMetrics(): Promise<CurationMetrics> {
              count(*) FILTER (WHERE resolution='fixed_by_curation')::int AS confirmed,
              count(*) FILTER (WHERE ignore_reason='falso_positivo')::int AS false_positives,
              count(*) FILTER (WHERE ignore_reason='correcto_a_proposito')::int AS intentional,
-             avg(extract(epoch FROM (resolved_at - first_seen_at)))
-               FILTER (WHERE resolution='fixed_by_curation' AND resolved_at IS NOT NULL)::float8 AS mean_correction_seconds
+             (avg(extract(epoch FROM (resolved_at - first_seen_at)))
+               FILTER (WHERE resolution='fixed_by_curation' AND resolved_at IS NOT NULL))::float8 AS mean_correction_seconds
         FROM ingest.curation_findings
        GROUP BY detector
        ORDER BY detector`),
@@ -120,8 +120,8 @@ export async function getCurationMetrics(): Promise<CurationMetrics> {
         FROM ingest.curation_findings
        WHERE status='open'`),
     pool.query<{ mean_correction_seconds: number | null }>(`
-      SELECT avg(extract(epoch FROM (resolved_at - first_seen_at)))
-               FILTER (WHERE resolution='fixed_by_curation' AND resolved_at IS NOT NULL)::float8 AS mean_correction_seconds
+      SELECT (avg(extract(epoch FROM (resolved_at - first_seen_at)))
+               FILTER (WHERE resolution='fixed_by_curation' AND resolved_at IS NOT NULL))::float8 AS mean_correction_seconds
         FROM ingest.curation_findings`),
     pool.query<{ total: number; undone: number; auto_reverted: number }>(`
       SELECT count(*) FILTER (WHERE mode <> 'undo')::int AS total,
