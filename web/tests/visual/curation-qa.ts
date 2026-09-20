@@ -12,7 +12,7 @@
 // deshacer e historial de correcciones, además de las decisiones E2/E7.
 import { spawn, type ChildProcess } from "node:child_process";
 import { createServer } from "node:net";
-import { randomBytes, scrypt as scryptCallback } from "node:crypto";
+import { createHash, randomBytes, scrypt as scryptCallback } from "node:crypto";
 import { mkdir } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -33,6 +33,7 @@ const QA_USER = "qa-curaduria";
 const QA_PASSWORD = randomBytes(18).toString("base64url");
 const QA_TOKEN = randomBytes(24).toString("base64url");
 const ZERO_WIDTH_SPACE = String.fromCharCode(0x200b);
+const sha256 = (value: string): string => createHash("sha256").update(value).digest("hex");
 
 function freePort(): Promise<number> {
   return new Promise((resolve, reject) => {
@@ -78,7 +79,7 @@ async function one(sql: string, params: unknown[] = []): Promise<number> {
 }
 
 /** Catálogo limpio (el mismo de las pruebas unitarias) con los casos conocidos encima. */
-async function seed(): Promise<{ dirtyArtist: number }> {
+async function seed(): Promise<{ dirtyArtist: number; dirtyMobileArtist: number }> {
   const snapshot = cleanSnapshot();
   const pool = getPool();
   for (const artist of snapshot.artists) {
@@ -98,7 +99,9 @@ async function seed(): Promise<{ dirtyArtist: number }> {
 
   // Casos conocidos: uno por categoría de forma, más una anomalía para «Otros».
   const dirtyArtist = 1;
+  const dirtyMobileArtist = 2;
   await pool.query("UPDATE public.artists SET name = $2 WHERE id = $1", [dirtyArtist, `Trueno${ZERO_WIDTH_SPACE} Negro`]);
+  await pool.query("UPDATE public.artists SET name = $2 WHERE id = $1", [dirtyMobileArtist, `Tormenta${ZERO_WIDTH_SPACE} Solar QA`]);
   await pool.query("UPDATE public.tracks SET title = $2 WHERE id = $1", [5, "Sombra Eléctrico - Calle Ciudad"]);
   await pool.query("UPDATE public.albums SET title = 'Memoria § Ciudad' WHERE id = 4");
   const org = await one("INSERT INTO public.organizations(name, organization_type) VALUES('Estudios Sonoros QA', 'recording_studio') RETURNING id");
@@ -123,7 +126,37 @@ async function seed(): Promise<{ dirtyArtist: number }> {
   // Un par de artistas escritos de otra forma, para «Son distintas».
   await one("INSERT INTO public.artists(name, origin_city) VALUES('Los Relámpago QA', 'Caracas') RETURNING id");
   await one("INSERT INTO public.artists(name, origin_city) VALUES('Relámpago QA', 'Maracay') RETURNING id");
-  return { dirtyArtist };
+
+  // E7 visual: un conflicto llevado por review_queue (A/B/otro) y dos
+  // conflictos directos para la acción grupal por trust_level, incluido empate.
+  const sourceHigh = await one("INSERT INTO ingest.sources(slug,name,url,site_type,trust_level,enabled) VALUES('qa-e7-high','QA fuente alta','https://qa.invalid/high','website','high',true) RETURNING id");
+  const sourceLow = await one("INSERT INTO ingest.sources(slug,name,url,site_type,trust_level,enabled) VALUES('qa-e7-low','QA fuente baja','https://qa.invalid/low','website','low',true) RETURNING id");
+  const sourceHigh2 = await one("INSERT INTO ingest.sources(slug,name,url,site_type,trust_level,enabled) VALUES('qa-e7-high-2','QA fuente alta 2','https://qa.invalid/high-2','website','high',true) RETURNING id");
+  const makeConflict = async (name: string, sourceA: number, sourceB: number, valueA: string, valueB: string) => {
+    const artistId = await one("INSERT INTO public.artists(name,origin_city) VALUES($1,'Valencia') RETURNING id", [name]);
+    const claimA = await one(`
+      INSERT INTO ingest.claims(source_id,entity_kind,artist_id,field,raw_value,raw_hash,status,confidence)
+      VALUES($1,'artist',$2,'origin_city',to_jsonb($3::text),$4,'conflict','high') RETURNING id`,
+      [sourceA, artistId, valueA, sha256(`${name}:A:${valueA}`)]);
+    const claimB = await one(`
+      INSERT INTO ingest.claims(source_id,entity_kind,artist_id,field,raw_value,raw_hash,status,confidence)
+      VALUES($1,'artist',$2,'origin_city',to_jsonb($3::text),$4,'conflict','high') RETURNING id`,
+      [sourceB, artistId, valueB, sha256(`${name}:B:${valueB}`)]);
+    const conflictId = await one(`
+      INSERT INTO ingest.conflicts(claim_a_id,claim_b_id,entity_kind,field,value_a,value_b)
+      VALUES($1,$2,'artist','origin_city',to_jsonb($3::text),to_jsonb($4::text)) RETURNING id`,
+      [claimA, claimB, valueA, valueB]);
+    return { artistId, claimA, claimB, conflictId };
+  };
+  const reviewConflict = await makeConflict("QA E7 revisión", sourceHigh, sourceLow, "Caracas", "Maracay");
+  await one(`
+    INSERT INTO ingest.review_queue(kind,conflict_id,claim_a_id,claim_b_id,artist_a_id,priority,notes)
+    VALUES('field_conflict',$1,$2,$3,$4,9,'QA conflicto desde tarjeta') RETURNING id`,
+    [reviewConflict.conflictId, reviewConflict.claimA, reviewConflict.claimB, reviewConflict.artistId]);
+  await makeConflict("QA E7 confianza", sourceHigh, sourceLow, "Caracas", "Coro");
+  await makeConflict("QA E7 empate", sourceHigh, sourceHigh2, "Mérida", "Barquisimeto");
+
+  return { dirtyArtist, dirtyMobileArtist };
 }
 
 async function lastScanId(): Promise<number> {
@@ -166,7 +199,7 @@ try {
   resetEnvCache();
   await applyCore(container.name);
   await migrateUp();
-  const { dirtyArtist } = await seed();
+  const { dirtyArtist, dirtyMobileArtist } = await seed();
   const first = await runCurationScan({ trigger: "manual" });
   if (first.status !== "ok") throw new Error(`el análisis inicial falló: ${first.error ?? "?"}`);
   console.log(`QA: ${first.total} hallazgos sembrados · ${JSON.stringify(first.byCategory)}`);
