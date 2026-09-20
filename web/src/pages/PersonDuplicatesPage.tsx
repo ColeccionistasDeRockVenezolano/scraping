@@ -11,7 +11,7 @@
 import { useEffect, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { ArrowSquareOut, CaretDown, CaretUp, GitMerge, Info, X } from "@phosphor-icons/react";
-import { ApiError, entityMergeApi, reviewApi } from "../lib/api";
+import { ApiError, entityMergeApi, personsApi, reviewApi } from "../lib/api";
 import { useAsync } from "../lib/useAsync";
 import { useToast } from "../lib/ToastContext";
 import { ErrorState, EmptyState } from "../components/StateViews";
@@ -115,6 +115,8 @@ export function PersonDuplicatesPage() {
   const { notify } = useToast();
   const [params] = useSearchParams();
   const requestedReviewId = Number(params.get("reviewId") ?? "") || null;
+  const requestedAId = Number(params.get("a") ?? "") || null;
+  const requestedBId = Number(params.get("b") ?? "") || null;
   const [offset, setOffset] = useState(0);
   const [onlyStrong, setOnlyStrong] = useState(false);
   const [merging, setMerging] = useState<CandidatePair | null>(null);
@@ -129,10 +131,30 @@ export function PersonDuplicatesPage() {
   );
 
   useEffect(() => {
-    if (!requestedReviewId || !data || merging) return;
-    const candidate = data.data.find((item) => item.reviewId === requestedReviewId);
-    if (candidate) setMerging({ reviewId: candidate.reviewId, a: candidate.a, b: candidate.b });
-  }, [requestedReviewId, data, merging]);
+    if (!requestedReviewId || merging) return;
+    const candidate = data?.data.find((item) => item.reviewId === requestedReviewId);
+    if (candidate) {
+      setMerging({ reviewId: candidate.reviewId, a: candidate.a, b: candidate.b });
+      return;
+    }
+    // E7: el enlace desde Curaduría incluye el par; no debe depender de que la
+    // revisión caiga por casualidad en la página actual de 30 candidatos.
+    if (!requestedAId || !requestedBId) return;
+    let active = true;
+    Promise.all([personsApi.get(requestedAId), personsApi.get(requestedBId)])
+      .then(([a, b]) => {
+        if (!active) return;
+        setMerging({
+          reviewId: requestedReviewId,
+          a: { id: a.id, name: a.name },
+          b: { id: b.id, name: b.name },
+        });
+      })
+      .catch((err) => {
+        if (active) notify("error", err instanceof ApiError ? err.message : "No se pudo precargar el par solicitado.");
+      });
+    return () => { active = false; };
+  }, [requestedReviewId, requestedAId, requestedBId, data, merging, notify]);
 
   const setFilter = (strong: boolean) => { setOnlyStrong(strong); setOffset(0); };
 
@@ -160,7 +182,7 @@ export function PersonDuplicatesPage() {
         fusionan o son personas distintas. Nada cambia sin tu decisión.
       </p>
       {requestedReviewId ? (
-        <p className="alert-block">Revisión solicitada: <span className="mono">#{requestedReviewId}</span>. Si está en esta página, el comparador se abre automáticamente.</p>
+        <p className="alert-block">Revisión solicitada: <span className="mono">#{requestedReviewId}</span>. El comparador se abre con ese par aunque no esté en la página actual.</p>
       ) : null}
 
       <ScoreGuide />
