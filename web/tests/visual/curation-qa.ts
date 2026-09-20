@@ -276,7 +276,7 @@ try {
         const html = await page.locator(".cval").first().innerHTML().catch(() => "(sin .cval)");
         throw new Error(`${viewport.name}: sin marca de invisible. Muestra: ${shown} · .cval=${html} (${(error as Error).message.split("\n")[0]})`);
       });
-      await targetCard.click();
+      await targetCard.focus();
       await page.screenshot({ path: path.join(outputDir, `${viewport.name}-nombres-sucios.png`), fullPage: true });
       await assertNoOverflow(page, `${viewport.name} nombres_sucios`);
 
@@ -311,7 +311,7 @@ try {
       // E8: teclado + hoja de acciones móvil + preview → aplicar → deshacer
       // se ejecutan en ambos viewports.
       const e8Card = page.locator(".cfind").filter({ hasText: targetName }).first();
-      await e8Card.click();
+      await e8Card.focus();
       await page.keyboard.press("?");
       await page.getByRole("dialog").getByText("Atajos de Curaduría", { exact: true }).waitFor();
       await page.screenshot({ path: path.join(outputDir, `${viewport.name}-atajos.png`), fullPage: true });
@@ -322,7 +322,7 @@ try {
         if (await page.locator(".cfind.is-keyboard-active").count() !== 1) {
           throw new Error("desktop: j/k no deja una tarjeta de Curaduría activa");
         }
-        await e8Card.click();
+        await e8Card.focus();
         await page.keyboard.press("x");
         await page.getByRole("toolbar", { name: "Acciones sobre lo seleccionado" }).waitFor();
         await page.keyboard.press("x");
