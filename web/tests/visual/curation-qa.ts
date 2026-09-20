@@ -109,6 +109,20 @@ async function seed(): Promise<{ dirtyArtist: number }> {
   await pool.query("INSERT INTO public.album_credits(album_id, person_id, credit_type, role) VALUES(2, $1, 'recording', 'Grabación')", [studioPerson]);
   await pool.query("INSERT INTO public.album_credits(album_id, organization_id, credit_type, role) VALUES(3, $1, 'recording', 'Grabación')", [org]);
   await one("INSERT INTO public.persons(name) VALUES('4:39') RETURNING id");
+
+  // E8: suficiente volumen para comprobar «Seleccionar los N que cumplen el
+  // filtro» más allá de la primera página, sin reutilizar ids de la UI.
+  for (let index = 1; index <= 26; index += 1) {
+    await one("INSERT INTO public.organizations(name) VALUES($1) RETURNING id", [
+      `QA Lote ${String(index).padStart(2, "0")}${ZERO_WIDTH_SPACE} Curaduría`,
+    ]);
+  }
+  // Una fila con dos acciones aplicables para ejercitar el selector por fila.
+  await one("INSERT INTO public.organizations(name) VALUES('QA Acción alternativa -') RETURNING id");
+  // Una corrección determinista que colisiona con otra ficha real.
+  await one("INSERT INTO public.artists(name) VALUES('QA Colision Limpia') RETURNING id");
+  await one("INSERT INTO public.artists(name) VALUES($1) RETURNING id", [`QA Colision${ZERO_WIDTH_SPACE} Limpia`]);
+
   // Signos raros de cada clase (puntuación, moneda, símbolo) en cuatro campos:
   // «Otros» agrupa por clase y campo (B1), así que recibe 12 subgrupos, el caso
   // que se despliega por tandas. El signo va en medio para que ningún detector
