@@ -79,7 +79,7 @@ async function one(sql: string, params: unknown[] = []): Promise<number> {
 }
 
 /** Catálogo limpio (el mismo de las pruebas unitarias) con los casos conocidos encima. */
-async function seed(): Promise<{ dirtyArtist: number; dirtyMobileArtist: number }> {
+async function seed(): Promise<{ dirtyArtist: number }> {
   const snapshot = cleanSnapshot();
   const pool = getPool();
   for (const artist of snapshot.artists) {
@@ -156,7 +156,7 @@ async function seed(): Promise<{ dirtyArtist: number; dirtyMobileArtist: number 
   await makeConflict("QA E7 confianza", sourceHigh, sourceLow, "Caracas", "Coro");
   await makeConflict("QA E7 empate", sourceHigh, sourceHigh2, "Mérida", "Barquisimeto");
 
-  return { dirtyArtist, dirtyMobileArtist };
+  return { dirtyArtist };
 }
 
 async function lastScanId(): Promise<number> {
@@ -199,7 +199,7 @@ try {
   resetEnvCache();
   await applyCore(container.name);
   await migrateUp();
-  const { dirtyArtist, dirtyMobileArtist } = await seed();
+  const { dirtyArtist } = await seed();
   const first = await runCurationScan({ trigger: "manual" });
   if (first.status !== "ok") throw new Error(`el análisis inicial falló: ${first.error ?? "?"}`);
   console.log(`QA: ${first.total} hallazgos sembrados · ${JSON.stringify(first.byCategory)}`);
