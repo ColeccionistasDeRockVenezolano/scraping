@@ -91,8 +91,13 @@ export const roleVsCreditType: Detector = {
   run(context) {
     const out: Finding[] = [];
     for (const credit of context.snapshot.credits ?? []) {
-      const expected = ROLE_EXPECTATIONS.find((item) => item.pattern.test(credit.role));
-      if (!expected || expected.types.includes(credit.creditType)) continue;
+      // Un rol compuesto ("Guitarra / Mezcla") puede pertenecer a varias
+      // familias legítimas. Solo señalamos cuando el texto apunta a UNA clase
+      // inequívoca y el tipo guardado no pertenece a ella.
+      const matches = ROLE_EXPECTATIONS.filter((item) => item.pattern.test(credit.role));
+      if (matches.length !== 1) continue;
+      const expected = matches[0]!;
+      if (expected.types.includes(credit.creditType)) continue;
       const target = creditTarget(credit);
       out.push({
         detector: this.key, category: this.category, signature: expected.types.join("_o_"),
@@ -153,8 +158,12 @@ export const organizationTypeVsName: Detector = {
   description: "El nombre contiene un marcador fuerte de estudio, productora, distribuidora, management o sello que contradice el tipo guardado.",
   run(context) {
     return context.snapshot.organizations.flatMap((org) => {
-      const marker = ORG_MARKERS.find((item) => item.pattern.test(org.name));
-      if (!marker || marker.type === org.type) return [];
+      // Nombres con dos marcadores ("Records Studio") son ambiguos: no
+      // inferimos un único tipo a partir del texto.
+      const markers = ORG_MARKERS.filter((item) => item.pattern.test(org.name));
+      if (markers.length !== 1) return [];
+      const marker = markers[0]!;
+      if (marker.type === org.type) return [];
       return [{
         detector: this.key, category: this.category,
         signature: org.type === "other" ? "sin_clasificar" : "contradice",

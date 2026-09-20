@@ -65,7 +65,8 @@ async function readCatalog(db: SnapshotClient) {
     UNION ALL
     SELECT id::text, 'track'::text AS parent_kind, track_id::text AS parent_id,
            person_id::text, artist_id::text, organization_id::text, credit_type::text, role
-      FROM public.track_credits`);
+      FROM public.track_credits
+     ORDER BY parent_kind, parent_id, id`);
   const memberships = await db.query<{
     id: string; artist_id: string; person_id: string; role: string;
     from_year: number | null; to_year: number | null; is_current: boolean;
@@ -80,7 +81,8 @@ async function readCatalog(db: SnapshotClient) {
     UNION ALL SELECT id::text, 'person', person_id::text, alias, normalized_alias FROM ingest.person_aliases
     UNION ALL SELECT id::text, 'organization', organization_id::text, alias, normalized_alias FROM ingest.organization_aliases
     UNION ALL SELECT id::text, 'album', album_id::text, alias, normalized_alias FROM ingest.album_aliases
-    UNION ALL SELECT id::text, 'track', track_id::text, alias, normalized_alias FROM ingest.track_aliases`);
+    UNION ALL SELECT id::text, 'track', track_id::text, alias, normalized_alias FROM ingest.track_aliases
+    ORDER BY kind, entity_id, id`);
   const redirects = await db.query<{ kind: "artist" | "person" | "organization" | "album" | "track"; from_id: string; to_id: string }>(
     "SELECT entity_kind::text AS kind, from_id::text, to_id::text FROM ingest.entity_redirects ORDER BY entity_kind, from_id");
   const mediaLinks = await db.query<{

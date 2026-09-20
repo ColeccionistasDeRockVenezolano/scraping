@@ -130,18 +130,27 @@ export async function getCurationMetrics(): Promise<CurationMetrics> {
         FROM ingest.curation_fix_batches`),
   ]);
 
-  const detectors = outcomes.rows.map((row): DetectorMetric => {
-    const rejected = row.false_positives + row.intentional;
+  const outcomeByDetector = new Map(outcomes.rows.map((row) => [row.detector, row]));
+  const detectorKeys = new Set([
+    ...DETECTOR_DEFINITIONS.map((detector) => detector.key),
+    ...outcomes.rows.map((row) => row.detector),
+  ]);
+  const detectors = [...detectorKeys].map((detector): DetectorMetric => {
+    const row = outcomeByDetector.get(detector);
+    const confirmed = row?.confirmed ?? 0;
+    const falsePositives = row?.false_positives ?? 0;
+    const intentional = row?.intentional ?? 0;
+    const rejected = falsePositives + intentional;
     return {
-      detector: row.detector,
-      label: labelByDetector.get(row.detector) ?? row.detector,
-      reviewed: row.confirmed + rejected,
-      confirmed: row.confirmed,
+      detector,
+      label: labelByDetector.get(detector) ?? detector,
+      reviewed: confirmed + rejected,
+      confirmed,
       rejected,
-      falsePositives: row.false_positives,
-      intentional: row.intentional,
-      observedPrecision: observedPrecision(row.confirmed, rejected),
-      meanCorrectionSeconds: row.mean_correction_seconds,
+      falsePositives,
+      intentional,
+      observedPrecision: observedPrecision(confirmed, rejected),
+      meanCorrectionSeconds: row?.mean_correction_seconds ?? null,
     };
   });
 
