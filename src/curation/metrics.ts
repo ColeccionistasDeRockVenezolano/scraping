@@ -12,6 +12,14 @@ import type { ActionFinding } from "./actions/types.js";
 import type { EntityRef } from "./types.js";
 
 export const PRECISION_ALERT_THRESHOLD = 0.8;
+/** Una alerta de precisión necesita muestra; por debajo se publica el n, pero no se alarma. */
+export const PRECISION_ALERT_MIN_REVIEWED = 20;
+/** /summary se consulta durante un análisis cada pocos segundos: no releemos miles de filas en cada poll. */
+export const CURATION_METRICS_CACHE_MS = 10_000;
+
+export const INFORMATIONAL_DETECTOR_KEYS: ReadonlySet<string> = new Set(
+  DETECTOR_DEFINITIONS.filter((detector) => detector.actionability === "informational").map((detector) => detector.key),
+);
 
 export interface DetectorMetric {
   detector: string;
@@ -29,15 +37,23 @@ export interface CurationMetrics {
   detectors: DetectorMetric[];
   meanCorrectionSeconds: number | null;
   actionCoverage: {
+    /** Solo hallazgos accionables; los informativos se reportan aparte. */
     open: number;
+    excludedInformational: number;
     level1OrLess: number;
     level2OrLess: number;
     level1OrLessPct: number | null;
     level2OrLessPct: number | null;
   };
   batches: {
+    /** Todos los lotes no-undo, incluidas vistas previas. */
     total: number;
+    previewed: number;
+    /** Lotes que llegaron a aplicar al menos un ítem (aunque luego se deshicieran). */
+    applied: number;
     undone: number;
+    /** Ítems de autocorrección que siguen aplicados / que fueron revertidos. */
+    autoApplied: number;
     autoReverted: number;
   };
   alerts: Array<{
@@ -46,12 +62,17 @@ export interface CurationMetrics {
     precision: number;
     reviewed: number;
     threshold: number;
+    minimumReviewed: number;
   }>;
 }
 
 export function observedPrecision(confirmed: number, rejected: number): number | null {
   const reviewed = confirmed + rejected;
   return reviewed > 0 ? confirmed / reviewed : null;
+}
+
+export function shouldAlertPrecision(precision: number | null, reviewed: number): boolean {
+  return precision !== null && reviewed >= PRECISION_ALERT_MIN_REVIEWED && precision < PRECISION_ALERT_THRESHOLD;
 }
 
 const labelByDetector = new Map(DETECTOR_DEFINITIONS.map((detector) => [detector.key, detector.label]));
@@ -79,6 +100,20 @@ interface OpenRow {
   title: string;
 }
 
+interface GlobalRow {
+  mean_correction_seconds: number | null;
+  excluded_informational: number;
+}
+
+interface BatchRow {
+  total: number;
+  previewed: number;
+  applied: number;
+  undone: number;
+  auto_applied: number;
+  auto_reverted: number;
+}
+
 function actionFinding(row: OpenRow): ActionFinding {
   return {
     id: Number(row.id),
@@ -100,10 +135,16 @@ function actionFinding(row: OpenRow): ActionFinding {
 }
 
 const ratio = (count: number, total: number): number | null => (total > 0 ? count / total : null);
+const informational = [...INFORMATIONAL_DETECTOR_KEYS];
 
-export async function getCurationMetrics(): Promise<CurationMetrics> {
+let cache: { at: number; value: CurationMetrics } | null = null;
+export function clearCurationMetricsCache(): void { cache = null; }
+
+export async function getCurationMetrics(options: { fresh?: boolean } = {}): Promise<CurationMetrics> {
+  if (!options.fresh && cache && Date.now() - cache.at < CURATION_METRICS_CACHE_MS) return cache.value;
+
   const pool = getPool();
-  const [outcomes, openRows, globalTime, batchCounts] = await Promise.all([
+  const [outcomes, openRows, global, batchCounts] = await Promise.all([
     pool.query<OutcomeRow>(`
       SELECT detector,
              count(*) FILTER (WHERE resolution='fixed_by_curation')::int AS confirmed,
@@ -118,16 +159,21 @@ export async function getCurationMetrics(): Promise<CurationMetrics> {
       SELECT id::text, detector, signature, entity_kind, entity_id::text, entity_label,
              field, value, suggested_value, related, evidence, title
         FROM ingest.curation_findings
-       WHERE status='open'`),
-    pool.query<{ mean_correction_seconds: number | null }>(`
+       WHERE status='open' AND NOT (detector = ANY($1::text[]))`, [informational]),
+    pool.query<GlobalRow>(`
       SELECT (avg(extract(epoch FROM (resolved_at - first_seen_at)))
-               FILTER (WHERE resolution='fixed_by_curation' AND resolved_at IS NOT NULL))::float8 AS mean_correction_seconds
-        FROM ingest.curation_findings`),
-    pool.query<{ total: number; undone: number; auto_reverted: number }>(`
-      SELECT count(*) FILTER (WHERE mode <> 'undo')::int AS total,
-             count(*) FILTER (WHERE mode <> 'undo' AND status='undone')::int AS undone,
-             count(*) FILTER (WHERE mode='auto' AND status='undone')::int AS auto_reverted
-        FROM ingest.curation_fix_batches`),
+               FILTER (WHERE resolution='fixed_by_curation' AND resolved_at IS NOT NULL))::float8 AS mean_correction_seconds,
+             count(*) FILTER (WHERE status='open' AND detector = ANY($1::text[]))::int AS excluded_informational
+        FROM ingest.curation_findings`, [informational]),
+    pool.query<BatchRow>(`
+      SELECT count(DISTINCT b.id) FILTER (WHERE b.mode <> 'undo')::int AS total,
+             count(DISTINCT b.id) FILTER (WHERE b.mode <> 'undo' AND b.status='previewed')::int AS previewed,
+             count(DISTINCT b.id) FILTER (WHERE b.mode <> 'undo' AND i.status IN ('applied','undone'))::int AS applied,
+             count(DISTINCT b.id) FILTER (WHERE b.mode <> 'undo' AND b.status='undone')::int AS undone,
+             count(i.id) FILTER (WHERE b.mode='auto' AND i.status='applied')::int AS auto_applied,
+             count(i.id) FILTER (WHERE b.mode='auto' AND i.status='undone')::int AS auto_reverted
+        FROM ingest.curation_fix_batches b
+        LEFT JOIN ingest.curation_fix_items i ON i.batch_id=b.id`),
   ]);
 
   const outcomeByDetector = new Map(outcomes.rows.map((row) => [row.detector, row]));
@@ -165,28 +211,41 @@ export async function getCurationMetrics(): Promise<CurationMetrics> {
   const open = openRows.rows.length;
 
   const alerts = detectors.flatMap((metric) =>
-    metric.observedPrecision !== null && metric.observedPrecision < PRECISION_ALERT_THRESHOLD
+    shouldAlertPrecision(metric.observedPrecision, metric.reviewed)
       ? [{
         detector: metric.detector,
         label: metric.label,
-        precision: metric.observedPrecision,
+        precision: metric.observedPrecision!,
         reviewed: metric.reviewed,
         threshold: PRECISION_ALERT_THRESHOLD,
+        minimumReviewed: PRECISION_ALERT_MIN_REVIEWED,
       }]
       : []);
 
-  const batch = batchCounts.rows[0] ?? { total: 0, undone: 0, auto_reverted: 0 };
-  return {
+  const batch = batchCounts.rows[0] ?? {
+    total: 0, previewed: 0, applied: 0, undone: 0, auto_applied: 0, auto_reverted: 0,
+  };
+  const result: CurationMetrics = {
     detectors,
-    meanCorrectionSeconds: globalTime.rows[0]?.mean_correction_seconds ?? null,
+    meanCorrectionSeconds: global.rows[0]?.mean_correction_seconds ?? null,
     actionCoverage: {
       open,
+      excludedInformational: global.rows[0]?.excluded_informational ?? 0,
       level1OrLess,
       level2OrLess,
       level1OrLessPct: ratio(level1OrLess, open),
       level2OrLessPct: ratio(level2OrLess, open),
     },
-    batches: { total: batch.total, undone: batch.undone, autoReverted: batch.auto_reverted },
+    batches: {
+      total: batch.total,
+      previewed: batch.previewed,
+      applied: batch.applied,
+      undone: batch.undone,
+      autoApplied: batch.auto_applied,
+      autoReverted: batch.auto_reverted,
+    },
     alerts,
   };
+  cache = { at: Date.now(), value: result };
+  return result;
 }

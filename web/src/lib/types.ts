@@ -400,11 +400,17 @@ export interface CurationMetrics {
   detectors: CurationDetectorMetric[];
   meanCorrectionSeconds: number | null;
   actionCoverage: {
-    open: number; level1OrLess: number; level2OrLess: number;
+    open: number; excludedInformational: number; level1OrLess: number; level2OrLess: number;
     level1OrLessPct: number | null; level2OrLessPct: number | null;
   };
-  batches: { total: number; undone: number; autoReverted: number };
-  alerts: Array<{ detector: string; label: string; precision: number; reviewed: number; threshold: number }>;
+  batches: {
+    total: number; previewed: number; applied: number; undone: number;
+    autoApplied: number; autoReverted: number;
+  };
+  alerts: Array<{
+    detector: string; label: string; precision: number; reviewed: number;
+    threshold: number; minimumReviewed: number;
+  }>;
 }
 
 export interface CurationSummary {

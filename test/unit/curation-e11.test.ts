@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { buildContext } from "../../src/curation/analyze.js";
+import { buildContext, isLocalDetector } from "../../src/curation/analyze.js";
 import { E11_DETECTORS } from "../../src/curation/detectors/advanced.js";
 import type { CatalogSnapshot } from "../../src/curation/types.js";
 
@@ -7,7 +7,7 @@ function snapshot(): CatalogSnapshot {
   return {
     takenAt: new Date("2026-09-20T12:00:00Z"),
     artists: [
-      { id: 1, name: "BANDA TOTAL", originCity: null, formedYear: 2010, disbandedYear: null },
+      { id: 1, name: "BANDA TOTAL CARACAS", originCity: null, formedYear: 2010, disbandedYear: null },
       { id: 2, name: "Sello Falso", originCity: null, formedYear: 2000, disbandedYear: null },
     ],
     persons: [
@@ -18,7 +18,7 @@ function snapshot(): CatalogSnapshot {
     ],
     organizations: [
       { id: 10, name: "Sello Falso", type: "record_label" },
-      { id: 11, name: "Estudios Caracas", type: "record_label" },
+      { id: 11, name: "Estudios Caracas", type: "other" },
       { id: 12, name: "Alias Clash", type: "other" },
     ],
     albums: [
@@ -80,5 +80,36 @@ describe("PLAN_CURADURIA E11", () => {
     const context = buildContext(snapshot());
     const emitted = new Set(E11_DETECTORS.flatMap((detector) => detector.run(context)).map((finding) => finding.detector));
     expect([...emitted].sort()).toEqual(E11_DETECTORS.map((detector) => detector.key).sort());
+  });
+
+  it("los cuatro detectores de vecindad participan en la verificación dirigida", () => {
+    for (const key of [
+      "tipo_de_organizacion_contra_nombre",
+      "disco_sin_pistas",
+      "pistas_sin_duracion_en_disco_con_duraciones",
+      "mayusculas_sostenidas",
+    ]) expect(isLocalDetector(key), key).toBe(true);
+    for (const key of [
+      "creditos_duplicados", "rol_contra_tipo_de_credito", "periodo_de_membresia_imposible",
+      "sello_que_es_artista", "alias_que_choca_con_otra_ficha", "redireccion_en_cadena",
+      "enlace_de_medio_a_ficha_fusionada",
+    ]) expect(isLocalDetector(key), key).toBe(false);
+  });
+
+  it("no infiere por nombres ambiguos ni rompe marcas escritas deliberadamente en mayúsculas", () => {
+    const base = snapshot();
+    base.organizations.push(
+      { id: 90, name: "Grabaciones Silvestres", type: "recording_studio" },
+      { id: 91, name: "Record Plant", type: "recording_studio" },
+    );
+    base.artists.push(
+      { id: 90, name: "DIESEL", originCity: null, formedYear: null, disbandedYear: null },
+      { id: 91, name: "MARSHALL", originCity: null, formedYear: null, disbandedYear: null },
+    );
+    const findings = E11_DETECTORS.flatMap((detector) => detector.run(buildContext(base)));
+    expect(findings.some((finding) => finding.entity.id === 90 && finding.value === "DIESEL")).toBe(false);
+    expect(findings.some((finding) => finding.entity.id === 91 && finding.value === "MARSHALL")).toBe(false);
+    expect(findings.some((finding) => finding.entity.id === 90 && finding.entity.kind === "organization")).toBe(false);
+    expect(findings.some((finding) => finding.entity.id === 91 && finding.entity.kind === "organization")).toBe(false);
   });
 });

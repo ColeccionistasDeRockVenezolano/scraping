@@ -177,4 +177,10 @@ export interface DetectorDefinition {
    * `src/curation/actions/registry.ts`. Sin acciones = nivel 3 (manual).
    */
   actions?: Readonly<Record<string, readonly string[]>>;
+  /**
+   * "informational" = el hallazgo describe una carencia real del catálogo,
+   * pero no representa por sí solo un error corregible. Sigue visible para
+   * completar datos, pero no entra en el denominador de cobertura por nivel.
+   */
+  actionability?: "actionable" | "informational";
 }

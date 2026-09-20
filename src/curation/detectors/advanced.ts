@@ -1,8 +1,10 @@
 // CRV · Detectores de cobertura profunda (PLAN_CURADURIA E11).
 //
-// Son deliberadamente GLOBALES: necesitan relaciones que no forman parte de la
-// vecindad pequeña usada por el análisis dirigido de E9. La foto completa carga
-// créditos, membresías, aliases, redirecciones y enlaces de medios una sola vez.
+// E11 mezcla detectores LOCALES y GLOBALES. Los cuatro que dependen solo de la
+// ficha y su vecindad (tipo/nombre de organización, disco/pistas y mayúsculas)
+// participan en la verificación dirigida de E9. Los siete relacionales siguen
+// siendo globales porque necesitan créditos, membresías, aliases, redirecciones
+// o enlaces de medios del catálogo entero.
 import { capitalizeSpanish } from "./text-hygiene.js";
 import { nameKey } from "../lexicon.js";
 import type {
@@ -156,7 +158,9 @@ const ORG_MARKERS: Array<{ type: string; pattern: RegExp; label: string }> = [
   { type: "production_company", pattern: /\b(?:productora|producciones|production|productions)\b/iu, label: "productora" },
   { type: "distributor", pattern: /\b(?:distribuidora|distribucion|distribución|distribution)\b/iu, label: "distribuidora" },
   { type: "management", pattern: /\b(?:management|representacion|representación)\b/iu, label: "management" },
-  { type: "record_label", pattern: /\b(?:records?|discos?|grabaciones|label)\b/iu, label: "sello discográfico" },
+  // "record" singular ("Record Plant") y "grabaciones" son ambiguos: también
+  // aparecen en estudios. Solo marcadores inequívocos de sello.
+  { type: "record_label", pattern: /\b(?:records|discos?|label)\b/iu, label: "sello discográfico" },
 ];
 
 export const organizationTypeVsName: Detector = {
@@ -169,19 +173,20 @@ export const organizationTypeVsName: Detector = {
       // Nombres con dos marcadores ("Records Studio") son ambiguos: no
       // inferimos un único tipo a partir del texto.
       const markers = ORG_MARKERS.filter((item) => item.pattern.test(org.name));
-      if (markers.length !== 1) return [];
+      // Un nombre no basta para contradecir una clasificación ya curada:
+      // "X Records" puede ser también el nombre legal de un estudio. Este
+      // detector solo completa "other" cuando hay UN marcador inequívoco.
+      if (markers.length !== 1 || org.type !== "other") return [];
       const marker = markers[0]!;
-      const storedType = ORG_TYPE_EQUIVALENTS[org.type] ?? org.type;
-      if (marker.type === storedType) return [];
       return [{
         detector: this.key, category: this.category,
-        signature: org.type === "other" ? "sin_clasificar" : "contradice",
-        signatureLabel: org.type === "other" ? "Organización sin clasificar" : "Tipo guardado contradice el nombre",
-        severity: org.type === "other" ? "low" : "medium",
+        signature: "sin_clasificar",
+        signatureLabel: "Organización sin clasificar",
+        severity: "low",
         entity: { kind: "organization" as const, id: org.id, label: org.name }, field: "organization_type", value: org.type,
-        title: `${quote(org.name)} parece ${marker.label}, pero está clasificada como ${org.type}`,
+        title: `${quote(org.name)} parece ${marker.label}, pero está sin clasificar`,
         suggestion: `Revisar el tipo de organización; el nombre sugiere ${marker.type}`,
-        related: [], evidence: { storedType: org.type, normalizedStoredType: storedType, suggestedType: marker.type, marker: marker.label },
+        related: [], evidence: { storedType: org.type, suggestedType: marker.type, marker: marker.label },
       }];
     });
   },
@@ -226,6 +231,7 @@ export const labelIsArtist: Detector = {
 export const albumWithoutTracks: Detector = {
   key: "disco_sin_pistas",
   category: ORPHANS,
+  actionability: "informational",
   label: "Disco sin pistas",
   description: "Un disco canónico no tiene ninguna pista asociada.",
   run(context) {
@@ -269,8 +275,14 @@ function sustainedUpper(value: string): boolean {
   const letters = [...value].filter((char) => /\p{L}/u.test(char));
   if (letters.length < 6) return false;
   const cased = letters.filter((char) => char.toLocaleLowerCase("es") !== char.toLocaleUpperCase("es"));
-  if (cased.length < 6) return false;
-  return value === value.toLocaleUpperCase("es");
+  if (cased.length < 6 || value !== value.toLocaleUpperCase("es")) return false;
+
+  // Una palabra en mayúsculas puede ser una identidad de marca/banda ("DIESEL",
+  // "MARSHALL") y las formas con puntos o barras suelen ser siglas. Solo
+  // proponemos normalizar frases claras; ante ambigüedad, el detector calla.
+  if (/[./\\-]/u.test(value)) return false;
+  const words = value.match(/\p{L}+/gu) ?? [];
+  return words.length >= 3 && words.filter((word) => [...word].length >= 4).length >= 2;
 }
 
 export const sustainedUppercase: Detector = {
@@ -395,6 +407,25 @@ export const mediaLinkToMergedEntity: Detector = {
     return out;
   },
 };
+
+/** Detectores E11 verificables con la vecindad que ya carga E9. */
+export const E11_LOCAL_DETECTORS: readonly Detector[] = [
+  organizationTypeVsName,
+  albumWithoutTracks,
+  missingDurationsInTimedAlbum,
+  sustainedUppercase,
+];
+
+/** Detectores E11 que necesitan relaciones del catálogo entero. */
+export const E11_GLOBAL_DETECTORS: readonly Detector[] = [
+  duplicateCredits,
+  roleVsCreditType,
+  impossibleMembershipPeriod,
+  labelIsArtist,
+  aliasCollidesWithEntity,
+  redirectChain,
+  mediaLinkToMergedEntity,
+];
 
 export const E11_DETECTORS: readonly Detector[] = [
   duplicateCredits,

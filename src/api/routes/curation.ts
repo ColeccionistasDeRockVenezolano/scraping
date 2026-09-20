@@ -63,12 +63,17 @@ const metricsSchema = z.object({
   })),
   meanCorrectionSeconds: z.number().nullable(),
   actionCoverage: z.object({
-    open: z.number().int(), level1OrLess: z.number().int(), level2OrLess: z.number().int(),
+    open: z.number().int(), excludedInformational: z.number().int(),
+    level1OrLess: z.number().int(), level2OrLess: z.number().int(),
     level1OrLessPct: z.number().nullable(), level2OrLessPct: z.number().nullable(),
   }),
-  batches: z.object({ total: z.number().int(), undone: z.number().int(), autoReverted: z.number().int() }),
+  batches: z.object({
+    total: z.number().int(), previewed: z.number().int(), applied: z.number().int(), undone: z.number().int(),
+    autoApplied: z.number().int(), autoReverted: z.number().int(),
+  }),
   alerts: z.array(z.object({
-    detector: z.string(), label: z.string(), precision: z.number(), reviewed: z.number().int(), threshold: z.number(),
+    detector: z.string(), label: z.string(), precision: z.number(), reviewed: z.number().int(),
+    threshold: z.number(), minimumReviewed: z.number().int(),
   })),
 });
 

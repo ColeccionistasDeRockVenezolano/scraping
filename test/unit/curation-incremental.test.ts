@@ -49,23 +49,21 @@ describe("detectores locales y globales (E9.1)", () => {
       "cola_de_revision",
       "conflictos_abiertos",
       "creditos_duplicados",
-      "disco_sin_pistas",
       "discos_repetidos",
       "enlace_de_medio_a_ficha_fusionada",
-      "mayusculas_sostenidas",
       "organizaciones_equivalentes",
       "periodo_de_membresia_imposible",
       "personas_equivalentes",
       "pistas_repetidas",
-      "pistas_sin_duracion_en_disco_con_duraciones",
       "redireccion_en_cadena",
       "rol_contra_tipo_de_credito",
       "sello_que_es_artista",
-      "tipo_de_organizacion_contra_nombre",
     ]);
     expect(LOCAL_DETECTORS.length + GLOBAL_DETECTORS.length).toBe(DETECTORS.length);
     expect(isLocalDetector("anomalia_del_catalogo")).toBe(false);
     expect(isLocalDetector("caracteres_invisibles")).toBe(true);
+    expect(isLocalDetector("mayusculas_sostenidas")).toBe(true);
+    expect(isLocalDetector("disco_sin_pistas")).toBe(true);
   });
 
   it("un análisis local no da por mirados los globales: sus hallazgos no se pueden resolver", () => {

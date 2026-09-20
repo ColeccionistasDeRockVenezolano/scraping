@@ -168,12 +168,17 @@ function OperationalMetrics({ metrics }: { metrics: CurationMetrics }) {
       <h2 id="curation-metrics-title">Salud operativa</h2>
       <p className="hint">
         La precisión observada usa decisiones humanas reales; el corpus etiquetado de E2 sigue siendo la prueba de regresión de reglas.
+        Las alertas necesitan al menos 20 decisiones. Los hallazgos informativos se muestran, pero no degradan la cobertura de acciones.
       </p>
       <dl className="ctotals">
-        <div><dt>Abiertos con acción ≤ nivel 1</dt><dd className="mono">{percent(metrics.actionCoverage.level1OrLessPct)}</dd></div>
-        <div><dt>Abiertos con acción ≤ nivel 2</dt><dd className="mono">{percent(metrics.actionCoverage.level2OrLessPct)}</dd></div>
+        <div><dt>Accionables con acción ≤ nivel 1</dt><dd className="mono">{percent(metrics.actionCoverage.level1OrLessPct)}</dd></div>
+        <div><dt>Accionables con acción ≤ nivel 2</dt><dd className="mono">{percent(metrics.actionCoverage.level2OrLessPct)}</dd></div>
+        <div><dt>Informativos fuera del KPI</dt><dd className="mono">{formatCount(metrics.actionCoverage.excludedInformational)}</dd></div>
         <div><dt>Tiempo medio hasta corrección</dt><dd className="mono">{time}</dd></div>
+        <div><dt>Lotes aplicados</dt><dd className="mono">{formatCount(metrics.batches.applied)}</dd></div>
+        <div><dt>Vistas previas pendientes</dt><dd className="mono">{formatCount(metrics.batches.previewed)}</dd></div>
         <div><dt>Lotes deshechos</dt><dd className="mono">{formatCount(metrics.batches.undone)}</dd></div>
+        <div><dt>Autocorrecciones aplicadas</dt><dd className="mono">{formatCount(metrics.batches.autoApplied)}</dd></div>
         <div><dt>Autocorrecciones revertidas</dt><dd className="mono">{formatCount(metrics.batches.autoReverted)}</dd></div>
       </dl>
       {metrics.alerts.length ? (
