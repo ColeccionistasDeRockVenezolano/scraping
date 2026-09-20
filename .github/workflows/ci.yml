@@ -77,3 +77,34 @@ jobs:
         working-directory: web
       - run: npm run build
         working-directory: web
+
+
+  visual-curation:
+    name: Curaduría visual (desktop y móvil)
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: |
+            package-lock.json
+            web/package-lock.json
+      - run: npm ci
+      - run: npm ci
+        working-directory: web
+      - name: Instalar Chromium de Playwright
+        run: npx playwright install --with-deps chromium
+        working-directory: web
+      - name: QA visual E7/E8
+        run: npm run test:visual-curation
+      - name: Subir capturas de Curaduría
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: curaduria-ui-qa
+          path: docs/ui-qa/curaduria/
+          retention-days: 14
+          if-no-files-found: warn
