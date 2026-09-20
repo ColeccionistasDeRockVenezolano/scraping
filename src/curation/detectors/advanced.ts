@@ -143,6 +143,14 @@ export const impossibleMembershipPeriod: Detector = {
   },
 };
 
+const ORG_TYPE_EQUIVALENTS: Readonly<Record<string, string>> = {
+  studio: "recording_studio",
+  label: "record_label",
+  production: "production_company",
+  producer: "production_company",
+  distribution: "distributor",
+};
+
 const ORG_MARKERS: Array<{ type: string; pattern: RegExp; label: string }> = [
   { type: "recording_studio", pattern: /\b(?:estudio|estudios|studio|studios)\b/iu, label: "estudio de grabación" },
   { type: "production_company", pattern: /\b(?:productora|producciones|production|productions)\b/iu, label: "productora" },
@@ -163,7 +171,8 @@ export const organizationTypeVsName: Detector = {
       const markers = ORG_MARKERS.filter((item) => item.pattern.test(org.name));
       if (markers.length !== 1) return [];
       const marker = markers[0]!;
-      if (marker.type === org.type) return [];
+      const storedType = ORG_TYPE_EQUIVALENTS[org.type] ?? org.type;
+      if (marker.type === storedType) return [];
       return [{
         detector: this.key, category: this.category,
         signature: org.type === "other" ? "sin_clasificar" : "contradice",
@@ -172,7 +181,7 @@ export const organizationTypeVsName: Detector = {
         entity: { kind: "organization" as const, id: org.id, label: org.name }, field: "organization_type", value: org.type,
         title: `${quote(org.name)} parece ${marker.label}, pero está clasificada como ${org.type}`,
         suggestion: `Revisar el tipo de organización; el nombre sugiere ${marker.type}`,
-        related: [], evidence: { storedType: org.type, suggestedType: marker.type, marker: marker.label },
+        related: [], evidence: { storedType: org.type, normalizedStoredType: storedType, suggestedType: marker.type, marker: marker.label },
       }];
     });
   },
