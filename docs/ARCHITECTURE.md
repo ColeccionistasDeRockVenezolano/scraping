@@ -717,6 +717,114 @@ Las acciones siguen la regla «IA propone, nunca ejecuta»: cada una declara sus
 precondiciones, su nivel y su inversa, y no escribe nada fuera de los servicios
 auditados (`withOperatorRun`, `mergeInto`, `removeEntity`).
 
+### 4.16quinquies Análisis incremental y autocorrección (E9–E10, 2026-09-20)
+
+Cierra A9: antes, **cada** escritura disparaba un análisis completo (4,6 s con
+~50k filas), así que una sesión de 30 correcciones eran ~30 análisis enteros.
+
+| módulo | responsabilidad |
+| --- | --- |
+| `src/curation/analyze.ts` | reparto local/global (`LOCAL_DETECTORS`, `GLOBAL_DETECTORS`), opciones del análisis (detectores, léxico, «Otros» sí o no) y `contentHashOf` |
+| `src/curation/snapshot.ts` | `loadFocusedSnapshot`: la vecindad de las fichas tocadas (pista → su disco; artista → sus discos; disco → su artista y **todas** sus pistas) y la lista de lo efectivamente cubierto |
+| `src/curation/lexicon-cache.ts` | el último vocabulario aprendido, con la huella del catálogo del que salió |
+| `src/curation/watcher.ts` | verificación dirigida agrupada (1,5 s) tras cada escritura y **un** análisis completo diferido por racha de escrituras |
+| `src/curation/autofix.ts` | la lista blanca, la pasada automática, el interruptor de emergencia y el informe del panorama |
+| `src/api/routes/curation-autofix.ts` | `/curation/autofix` (estado, reglas, auditoría y `run`) |
+| `web/src/pages/CurationAutofixPage.tsx`, `web/src/components/AutofixToday.tsx` | qué está autorizado, lo corregido hoy con su deshacer y la auditoría; el panorama enseña lo mismo cuando hay algo que contar |
+
+**Detectores locales y globales (E9.1).** Un detector es *local* si la vecindad
+de una ficha basta para decidir (higiene de texto, segmentación, ficha de otro
+tipo, coherencia) y *global* si necesita el catálogo entero: los cinco de fichas
+repetidas, la cola de revisión, los conflictos abiertos y «Otros». Tras una
+corrección solo corren los locales sobre lo tocado; los globales esperan al
+completo. Como un análisis dirigido no da por mirados los globales, sigue en pie
+la regla de E1: **solo se resuelve lo que se miró**. La única excepción es una
+ficha que el foco pidió y ya no está (una fusión, un retiro): eso se ve sin
+correr su detector, así que una fusión cierra su hallazgo de duplicados.
+`duracion_atipica` era global por accidente —usaba la mediana y la MAD de todas
+las pistas—: esa distribución se aprende ahora con el resto del vocabulario y el
+detector pasó a local sin cambiar un solo hallazgo.
+
+**Un completo por racha, no uno por escritura (E9.2).** El vigilante agrupa:
+30 s de calma tras la última escritura, o como mucho cada 10 min si las
+escrituras no paran (`CRV_CURATION_FULL_SCAN_IDLE_MS`,
+`CRV_CURATION_FULL_SCAN_MAX_WAIT_MS`). Lo que la persona ve al instante es la
+verificación dirigida; el repaso global llega después. Una decisión que solo un
+detector global puede verificar —declarar dos fichas distintas, resolver un
+conflicto— pide el completo «pronto» en vez de esperar la calma.
+
+**Vocabulario en caché (E9.3).** Aprender cómo escribe el catálogo cuesta cerca
+de la mitad de un análisis completo. La caché guarda el último con la huella del
+catálogo del que salió (`catalogSignature`). Lo reutiliza **solo** el análisis
+dirigido: por definición el catálogo acaba de cambiar (esa es la escritura que
+se está verificando) y unas filas no mueven una estadística de 44.000 nombres;
+queda escrito en sus contadores si era el de ahora («cache») o el de antes
+(«cache_anterior»). El análisis completo **siempre** reaprende del catálogo que
+acaba de cargar: `catalogSignature` sale de `pg_stat_user_tables`, que llega
+tarde, así que «la huella no cambió» puede significar «las estadísticas aún no
+se enteraron», y el análisis que manda no puede juzgar el catálogo de ahora con
+el vocabulario de antes.
+
+**Guardar solo la diferencia (E9.4, migración 0023).** Cada fila guarda el hash
+de su contenido (`content_hash`: todo lo que el detector emitió, sin su
+historia, más la versión de las reglas). Si el hash coincide con el guardado, la
+fila **no se escribe**: ni siquiera para sellar «te he vuelto a ver», que con
+22.500 hallazgos abiertos era un segundo y cuarto de escrituras por análisis
+para no decir nada nuevo. Qué se ha visto en este análisis se lo dice a la
+resolución la lista de huellas encontradas, no una marca en la fila; que un
+hallazgo siga abierto ya significa que el último análisis que miró su detector
+lo volvió a encontrar. `last_seen_scan_id` queda con su sentido exacto —el
+último análisis que escribió algo de ese hallazgo— y con él la versión de reglas
+con la que se escribió, que es lo que distingue un hallazgo que desapareció
+porque cambiaron las reglas de otro que desapareció porque alguien lo arregló.
+
+**El mismo problema con otro nombre no es un problema nuevo.** La huella de un
+hallazgo de nombre incluye el valor, así que al corregir un nombre todo lo que
+ese nombre tenía abierto se resuelve y vuelve a entrar con huella nueva. Desde
+E9, un hallazgo que reaparece con el mismo detector, subgrupo y ficha que uno
+que se acaba de resolver **no** cuenta como «surgido al corregir»: engañaba a
+quien revisa y hacía saltar el interruptor de emergencia de la autocorrección
+cada vez que la ficha corregida tenía cualquier otro hallazgo de nombre.
+
+**Medido (E9.5).** `test/contract/curation-incremental.test.ts` carga en un
+contenedor **dos copias de la foto real del catálogo** (117.946 filas, 22.503
+hallazgos) y mide con el código real:
+
+| análisis | antes (A9) | ahora |
+| --- | --- | --- |
+| completo en frío (da de alta todo) | — | 6,7 s |
+| completo de régimen (el de cada racha) | 4,6 s con la mitad de catálogo | **4,3 s** (foto 0,4 · vocabulario 0,8 · detectores 2,3 · guardar 0,7) |
+| verificación de una corrección | 4,6 s (era un completo) | **0,12 s** |
+
+**Autocorrección segura (E10, migración 0024).** Es la única parte del sistema
+que escribe en el core sin que nadie pulse nada, así que está construida para no
+poder hacer daño:
+
+1. **Apagada por defecto.** `CRV_CURATION_AUTOFIX=false`: sin eso no corre
+   aunque haya reglas encendidas.
+2. **Lista blanca.** Solo lo que un administrador autorizó desde la web, detector
+   y subgrupo a subgrupo, con una acción concreta
+   (`ingest.curation_autofix_rules`). Una regla nace apagada.
+3. **Solo nivel 0**, comprobado al guardar la regla y otra vez al previsualizar:
+   acciones deterministas y reversibles, sin criterio humano.
+4. **Topes** por análisis y por día (`CRV_CURATION_AUTOFIX_MAX_PER_SCAN`,
+   `..._MAX_PER_DAY`, y uno propio por regla), y **un lote por regla**: si algo
+   sale mal se sabe qué regla lo hizo y se deshace en bloque.
+5. **Interruptor de emergencia (E10.3).** Cada lote automático se verifica
+   dirigido antes de seguir; si la verificación encuentra hallazgos
+   **desencadenados** —la corrección abrió problemas nuevos— el lote se deshace
+   entero, la regla queda apagada con el motivo y el aviso sale en el panorama.
+6. **Todo auditado.** Cada pasada es un lote normal (`mode = 'auto'`, firmado
+   `crv-curaduria-auto`) con su vista previa, su nota, sus runs y su deshacer;
+   cada cambio de regla deja un evento en `ingest.curation_autofix_events`.
+
+Corre tras cada análisis **completo** guardado (`setAfterFullScan`, que instalan
+explícitamente la API y la CLI: nada que escriba solo en el core se activa por
+importar un módulo), nunca tras uno dirigido —un dirigido es justo la
+verificación de una corrección, y encadenar automáticas sin mirar el catálogo
+entero es la forma segura de irse por un barranco—. `crv curation autofix`
+muestra el estado y `--run` fuerza una pasada.
+
 ### 4.17 Desviaciones conocidas
 
 - `public.albums.label_id` es la única FK del catálogo sin índice (auditoría
@@ -766,7 +874,7 @@ El seed YT sigue el mismo flujo saltando 1-2 (el "raw" es la fila XLSX).
   cubre además la migración de enums, y `tests/lib_pg.sh` comparte el arranque
   del contenedor. **Portado a Vitest (F0):**
   `test/contract/core-and-schema.test.ts` reproduce ese mismo contrato
-  (core + todas las migraciones, hoy 0001–0022, vía `src/db/migrate.ts` + rollback + diff
+  (core + todas las migraciones, hoy 0001–0024, vía `src/db/migrate.ts` + rollback + diff
   vacío) contra un contenedor propio (`test/support/pg-container.ts`, mismo
   arranque en dos fases que `tests/lib_pg.sh`), y añade el ejercicio real
   del schema Drizzle: inserts y joins a través de `public`+`ingest`+`media`

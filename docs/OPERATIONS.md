@@ -321,11 +321,19 @@ detalle sigue en `/curaduria/revision/:id`.
 Cuándo analiza:
 
 - tras cada escritura correcta de la API (editar, fusionar, convertir, decidir
-  una revisión), agrupando escrituras seguidas en 1,5 s. El resultado aparece
-  en «Última corrección verificada»: resueltos, nuevos y **desencadenados por
-  la corrección**. Se apaga con `CRV_CURATION_AUTOSCAN=false`;
-- tras aplicar o deshacer un lote de correcciones de Curaduría: un análisis
-  **dirigido** solo a las fichas del lote (ver «Corregir desde Curaduría»);
+  una revisión), agrupando escrituras seguidas en 1,5 s: una verificación
+  **dirigida** a la vecindad de las fichas tocadas, de unas décimas de segundo.
+  El resultado aparece en «Última corrección verificada»: resueltos, nuevos y
+  **desencadenados por la corrección**. Se apaga con `CRV_CURATION_AUTOSCAN=false`;
+- tras aplicar o deshacer un lote de correcciones de Curaduría: otro análisis
+  dirigido solo a las fichas del lote (ver «Corregir desde Curaduría»);
+- **un** análisis completo por racha de escrituras (E9): 30 s de calma tras la
+  última (`CRV_CURATION_FULL_SCAN_IDLE_MS`) o, si las escrituras no paran, cada
+  10 min (`CRV_CURATION_FULL_SCAN_MAX_WAIT_MS`). Los detectores que necesitan el
+  catálogo entero —fichas repetidas, cola de revisión, conflictos abiertos y
+  «Otros»— solo corren ahí, así que un hallazgo de duplicados puede tardar esos
+  segundos en cerrarse tras una fusión; lo que se ve al instante es la
+  verificación dirigida;
 - cada `CRV_CURATION_WATCH_MS` (60 s; 0 lo apaga) si cambiaron los contadores
   del catálogo, lo que cubre ingestas y la CLI; y al arrancar la API;
 - a mano: botón «Analizar ahora» o
@@ -431,17 +439,60 @@ Retención: `curation prune` conserva los últimos 500 análisis y los hallazgos
 resueltos de los últimos 180 días; nunca borra abiertos ni ignorados. Toma el
 mismo candado que el análisis: si hay uno en curso, no borra nada y lo dice.
 
-> **Antes de reiniciar la API con este código, aplicar las migraciones 0019,
-> 0020 y 0021** (`npm run db:migrate`): sin 0019 faltan `resolution`/`resolved_by_run_id`;
+> **Antes de reiniciar la API con este código, aplicar las migraciones 0019 a
+> 0024** (`npm run db:migrate`): sin 0019 faltan `resolution`/`resolved_by_run_id`;
 > sin 0020 fallan ignorar (`ignore_reason`) y los pares declarados distintos;
 > sin 0021 fallan el listado de análisis (`scope`), las correcciones (lotes) y
-> guardar cualquier análisis. Un `curation scan --dry-run` funciona sin 0020 ni 0021.
+> guardar cualquier análisis; sin 0023 falla guardar cualquier análisis
+> (`content_hash`); sin 0024 falla toda la autocorrección, incluida la lectura
+> del panorama. Un `curation scan --dry-run` funciona sin 0020 ni 0021.
 >
 > **Primer análisis con las reglas v2** (`curation-rules.v2`): muchos hallazgos
 > cambian de huella (duplicados por par, subgrupos nuevos, «Otros» por clase).
 > Sobre el catálogo del 2026-09-16: 4.880 se conservan, 502 se resuelven como
 > «cambio de reglas» y 381 aparecen como nuevos. Es esperado, no un cambio del
 > catálogo (`docs/curation/E2_PRECISION_2026-09-16.md`).
+
+#### Autocorrección segura (apagada por defecto, migración 0024)
+
+El sistema puede arreglar solo lo que un administrador autorice, y nada más.
+Hacen falta **dos** cosas a la vez, y las dos son explícitas:
+
+1. `CRV_CURATION_AUTOFIX=true` en el entorno de la API (por defecto `false`:
+   sin esto no se aplica nada aunque haya reglas encendidas);
+2. una regla encendida en **Curaduría › Autocorrección**, que solo admite
+   acciones de **nivel 0** —deterministas y reversibles: quitar invisibles,
+   colapsar espacios, decodificar entidades HTML— y solo las que ese detector
+   propone para ese subgrupo.
+
+Topes: `CRV_CURATION_AUTOFIX_MAX_PER_SCAN` (50) por análisis,
+`CRV_CURATION_AUTOFIX_MAX_PER_DAY` (200) por día, y el propio de cada regla.
+Corre al terminar cada análisis **completo**; nunca tras una verificación
+dirigida.
+
+```bash
+npm run cli -- curation autofix          # entorno, reglas, lo de hoy y los avisos
+npm run cli -- curation autofix --run    # fuerza una pasada con las reglas encendidas
+AUTH=(-H "Authorization: Bearer $CRV_OPERATOR_TOKEN" -H "x-crv-operator: Nombre" -H 'content-type: application/json')
+curl "${AUTH[@]}" "$API/curation/autofix"                       # estado, reglas, auditoría y lo autorizable
+curl "${AUTH[@]}" -X POST "$API/curation/autofix/rules" \
+  -d '{"detector":"caracteres_invisibles","actionKey":"limpiar_texto","enabled":true,"note":"determinista y reversible"}'
+curl "${AUTH[@]}" -X PATCH "$API/curation/autofix/rules/3" -d '{"enabled":false}'
+curl "${AUTH[@]}" -X POST "$API/curation/autofix/run"
+```
+
+Cada pasada deja un lote normal (`mode='auto'`, firmado `crv-curaduria-auto`)
+en el historial de correcciones, con su deshacer. **Interruptor de emergencia:**
+si la verificación dirigida del lote encuentra hallazgos *desencadenados* —la
+corrección abrió problemas nuevos—, el lote se deshace entero y la regla queda
+apagada con el motivo; el aviso sale en el panorama y en
+`Curaduría › Autocorrección`. Encender de nuevo una regla apagada así es una
+decisión nueva: borra el motivo y queda auditada con quién y cuándo.
+
+Si algo se autocorrigió y no debía: deshacer el lote desde el panorama o desde
+`Curaduría › Correcciones`, quitar la regla, y —si urge cortar todo de golpe—
+`CRV_CURATION_AUTOFIX=false` y reiniciar la API: las reglas quedan guardadas
+pero no se aplica nada.
 
 ### Retención de decisiones de resolución (ER, migración 0022)
 
