@@ -16,7 +16,7 @@ import { createHash, randomBytes, scrypt as scryptCallback } from "node:crypto";
 import { mkdir } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { chromium, type Page } from "@playwright/test";
+import { chromium, type Locator, type Page } from "@playwright/test";
 import { startPgContainer } from "../../../test/support/pg-container.js";
 import { applyCore } from "../../../test/support/apply-core.js";
 import { cleanSnapshot } from "../../../test/support/curation-snapshot.js";
@@ -197,6 +197,57 @@ async function assertNoOverflow(page: Page, label: string): Promise<void> {
   if (overflow > 1) throw new Error(`${label}: overflow horizontal de ${overflow}px`);
 }
 
+/** WCAG AA para texto normal: comprueba color computado contra el primer fondo opaco. */
+async function assertTextContrast(locator: Locator, label: string, minimum = 4.5): Promise<void> {
+  const result = await locator.first().evaluate((element) => {
+    const parse = (value: string): [number, number, number, number] => {
+      const match = /rgba?\(\s*([\d.]+)[, ]+\s*([\d.]+)[, ]+\s*([\d.]+)(?:\s*[,/]\s*([\d.]+))?\s*\)/u.exec(value);
+      if (!match) throw new Error(`color no parseable: ${value}`);
+      return [Number(match[1]), Number(match[2]), Number(match[3]), match[4] === undefined ? 1 : Number(match[4])];
+    };
+    const backgroundOf = (start: Element): [number, number, number, number] => {
+      let current: Element | null = start;
+      while (current) {
+        const bg = parse(getComputedStyle(current).backgroundColor);
+        if (bg[3] >= 0.99) return bg;
+        current = current.parentElement;
+      }
+      return [10, 10, 10, 1];
+    };
+    const composite = (fg: [number, number, number, number], bg: [number, number, number, number], opacity: number): [number, number, number] => {
+      const alpha = Math.max(0, Math.min(1, fg[3] * opacity));
+      return [
+        fg[0] * alpha + bg[0] * (1 - alpha),
+        fg[1] * alpha + bg[1] * (1 - alpha),
+        fg[2] * alpha + bg[2] * (1 - alpha),
+      ];
+    };
+    const luminance = (rgb: [number, number, number]): number => {
+      const linear = rgb.map((component) => {
+        const value = component / 255;
+        return value <= 0.04045 ? value / 12.92 : ((value + 0.055) / 1.055) ** 2.4;
+      });
+      return 0.2126 * linear[0]! + 0.7152 * linear[1]! + 0.0722 * linear[2]!;
+    };
+    const style = getComputedStyle(element);
+    const fgRaw = parse(style.color);
+    const bgRaw = backgroundOf(element);
+    let opacity = 1;
+    let current: Element | null = element;
+    while (current) {
+      opacity *= Number(getComputedStyle(current).opacity || "1");
+      current = current.parentElement;
+    }
+    const fg = composite(fgRaw, bgRaw, opacity);
+    const bg: [number, number, number] = [bgRaw[0], bgRaw[1], bgRaw[2]];
+    const [lighter, darker] = [luminance(fg), luminance(bg)].sort((a, b) => b - a);
+    return { ratio: (lighter! + 0.05) / (darker! + 0.05), color: style.color, background: `rgb(${bg.join(", ")})` };
+  });
+  if (result.ratio + 1e-6 < minimum) {
+    throw new Error(`${label}: contraste ${result.ratio.toFixed(2)}:1 < ${minimum}:1 (${result.color} sobre ${result.background})`);
+  }
+}
+
 const container = await startPgContainer();
 let web: ChildProcess | undefined;
 let app: Awaited<ReturnType<typeof buildApp>> | undefined;
@@ -269,6 +320,11 @@ try {
       for (const label of ["Conflictos", "Nombres sucios", "Mal segmentados", "Ficha de otro tipo", "Posibles duplicados", "Correcciones"]) {
         if (await tabs.getByRole("link", { name: new RegExp(label, "u") }).count() !== 1) throw new Error(`${viewport.name}: falta «${label}» en el menú`);
       }
+      const duplicatesLink = tabs.getByRole("link", { name: /Posibles duplicados/u });
+      const duplicatesCount = Number((await duplicatesLink.locator(".cside__count").innerText()).replace(/\D/gu, ""));
+      if (!Number.isFinite(duplicatesCount) || duplicatesCount < 1) {
+        throw new Error(`${viewport.name}: «Posibles duplicados» no muestra su contador vivo`);
+      }
       if (await tabs.getByText("Cola de revisión").count()) throw new Error(`${viewport.name}: sigue «Cola de revisión» en el menú`);
       if (index === 1) {
         await page.waitForTimeout(400);
@@ -301,6 +357,17 @@ try {
         await page.goto(`${webUrl}/curaduria/categoria/valores_en_disputa?detector=cola_de_revision&signature=review%3Afield_conflict`, { waitUntil: "domcontentloaded" });
         await page.getByText("QA fuente alta", { exact: true }).waitFor({ timeout: 20_000 });
         await page.getByText("QA fuente baja", { exact: true }).waitFor();
+        const evidenceSides = page.locator(".decision-side");
+        if (await evidenceSides.count() < 2) throw new Error("E7: faltan los lados A/B del conflicto");
+        for (let sideIndex = 0; sideIndex < 2; sideIndex += 1) {
+          const side = evidenceSides.nth(sideIndex);
+          const text = await side.innerText();
+          if (!/\d{1,2}\/\d{1,2}\/\d{4}/u.test(text)) throw new Error(`E7: el lado ${sideIndex ? "B" : "A"} no muestra la fecha de la evidencia`);
+          const evidenceLink = side.getByRole("link", { name: "Ver evidencia" });
+          const href = await evidenceLink.getAttribute("href");
+          if (!href?.startsWith("https://qa.invalid/")) throw new Error(`E7: el lado ${sideIndex ? "B" : "A"} no muestra la URL de evidencia`);
+          await assertTextContrast(side.locator(".decision-side__label"), `E7 lado ${sideIndex ? "B" : "A"}`);
+        }
         await page.screenshot({ path: path.join(outputDir, "desktop-e7-conflicto-ab.png"), fullPage: true });
         await page.getByRole("button", { name: "Elegir A" }).first().click();
         const decisionDialog = page.getByRole("dialog");
@@ -373,6 +440,14 @@ try {
       }
 
       const correctionButton = e8Card.locator(".cfind__actions--primary .btn--primary").first();
+      const consequence = correctionButton.locator(".cfind__action-consequence");
+      await consequence.waitFor();
+      if (!(await consequence.innerText()).match(/^N[0-2] · .+/u)) throw new Error(`${viewport.name}: la acción recomendada no muestra nivel + consecuencia`);
+      await assertTextContrast(correctionButton, `${viewport.name}: botón recomendado`);
+      await assertTextContrast(consequence, `${viewport.name}: consecuencia de la acción`);
+      await correctionButton.hover();
+      await assertTextContrast(correctionButton, `${viewport.name}: botón recomendado en hover`);
+      await page.mouse.move(0, 0);
       await correctionButton.click();
       const fixDialog = page.getByRole("dialog");
       const seePreview = fixDialog.getByRole("button", { name: "Ver corrección" });
