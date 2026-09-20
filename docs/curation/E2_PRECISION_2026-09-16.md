@@ -1,7 +1,35 @@
-# Precisión y decisiones duraderas — Curaduría E2 (2026-09-16)
+# Precisión y decisiones duraderas — Curaduría E2 (base 2026-09-16 · cierre v3 2026-09-19)
 
-Etapa **E2** de `~/Desktop/PLAN_CURADURIA_20_DE_20.md` (cierra A5, A6, B1, B2, B3, B5, M3, M4). Reglas
-`curation-rules.v2`, migración `0020_curation_durable_decisions`.
+Etapa **E2** de `~/Desktop/PLAN_CURADURIA_20_DE_20.md` (cierra A5, A6, B1, B2, B3, B5, M3, M4).
+La medición real sobre desarrollo se hizo con `curation-rules.v2`; el cierre 20/20 actual usa
+`curation-rules.v3`, migración `0020_curation_durable_decisions`.
+
+## 0. Cierre 20/20 con `curation-rules.v3`
+
+La v3 conserva los arreglos y la reducción real de v2 documentados abajo y cierra el criterio global de
+**precisión mínima del 90 % por detector**. `test/unit/curation-precision.test.ts` analiza la foto congelada
+del mismo catálogo de desarrollo (`catalog-2026-09-16.json.gz`) y ahora exige que **todo detector etiquetado**
+tenga un umbral registrado `>= 0.90`, además de mantener todos los verdaderos positivos y evitar la
+reaparición de falsos positivos ya corregidos.
+
+Los siete detectores que quedaban por debajo del 90 % en v2 se endurecieron en v3:
+
+| Detector | Umbral v3 | Falso positivo que queda protegido |
+|---|---:|---|
+| `anio_titulo_contra_publicacion` | 0,90 | material de archivo / grabación en vivo cuyo año del título no es el de publicación |
+| `anomalia_del_catalogo` | 0,90 | puntuación legítima, apóstrofos tipográficos, cifras y coma en nombres reales |
+| `artista_es_organizacion` | 0,90 | nombres artísticos que contienen vocabulario débil de organización |
+| `organizaciones_equivalentes` | 0,90 | entidades distintas como «Capitol Studios» y «Capitol Records» |
+| `palabras_pegadas` | 0,90 | marcas/estudios estilizados frente a nombres realmente pegados |
+| `signos_sin_cerrar` | 0,90 | pulgadas escritas como `7"` / `12"` |
+| `varias_personas_en_una` | 0,90 | nombres/títulos con «y» que no representan dos personas |
+
+`pistas_repetidas` mantiene su umbral de 0,94 y los demás detectores etiquetados permanecen en 1,00.
+
+**Evidencia de aceptación:** el `--dry-run` real requerido por E2 se ejecutó y documentó con v2 (sección 1);
+v3 no sustituye esos arreglos A6 ni escribe en desarrollo: añade filtros de precisión comprobados contra la
+foto congelada exacta de esa base. En CI, la puerta «Calidad» ejecuta el corpus completo y falla si cualquier
+detector cae por debajo del 90 %.
 
 Contra la base de desarrollo (`127.0.0.1:5433`) **solo hubo lecturas**: `curation scan --dry-run` con el código
 de `HEAD` (v1) y con el de esta etapa (v2), y una foto del catálogo tomada con `SELECT` en `REPEATABLE READ`.
@@ -129,15 +157,11 @@ Precisión por detector, truncada a dos decimales (los que tienen 1,00 en v1 y e
 (En v1, `minusculas` emitía 11 verdaderos positivos que v2 emite en `persona_no_es_un_nombre`: la precisión
 de ambos es 1,00 antes y después.)
 
-**Por debajo del 90 % que pide el plan al cerrar (§8):** `signos_sin_cerrar` (pulgadas `7"` y `12"`),
-`varias_personas_en_una` («Luis Felipe Ramón y Rivera», títulos de canción cargados como persona),
-`organizaciones_equivalentes` (Capitol Records ≠ Capitol Studios), `anomalia_del_catalogo` (apóstrofo
-tipográfico, comas y cifras en nombres reales), `anio_titulo_contra_publicacion` (material de archivo:
-«En Vivo NYC 1990» publicado en 2025), `artista_es_organizacion` y `palabras_pegadas` (marcas de estudio
-estilizadas: «SonoFolk Estudios», «The SoundLab»). E2 no tenía arreglos para ellos; quedan medidos y con
-umbral para que no empeoren, y como insumo de las etapas siguientes. Dos verdaderos positivos quedan en un
-subgrupo peor del ideal (anotado en el corpus): «FrancisLai» en `posible_estilizado` y «Hana Kobayashi» en
-`banda_como_persona`, porque «Francis» y «Hana» no son nombres de pila aprendidos.
+**Nota histórica de v2:** esos siete detectores estaban por debajo del 90 % en la primera entrega de E2.
+La v3 los corrige y eleva sus umbrales a 0,90; la prueba de precisión impide volver a aceptar los casos
+documentados (pulgadas, «Luis Felipe Ramón y Rivera», Capitol Studios/Records, material de archivo, nombres
+artísticos y marcas camelCase). Los valores de la tabla anterior se conservan únicamente como medición
+histórica de v2, no como estado actual de cierre.
 
 ## 3. Qué cambió
 
@@ -199,8 +223,8 @@ subgrupo peor del ideal (anotado en el corpus): «FrancisLai» en `posible_estil
    pares no tenía forma de usarse.
 5. **Ámbito de `distinct_pairs`.** El plan lista artistas, organizaciones, discos y pistas; también cubre
    personas (el detector `personas_equivalentes` también emite pares).
-6. **Umbral de precisión.** El plan pide «el umbral registrado» en E2 y ≥ 90 % al cerrar. Se registró la
-   precisión medida; siete detectores quedan por debajo del 90 % (§2).
+6. **Umbral de precisión (resuelto en v3).** La primera entrega registró siete umbrales inferiores a 0,90.
+   El cierre v3 corrigió esos falsos positivos y elevó todos los umbrales etiquetados a ≥ 0,90; CI lo impone.
 7. **«Singles»/«Sencillos»** no se añadieron a la semilla (§3).
 8. **QA visual de Curaduría** (`npm run test:visual-curation`, contenedor propio): se actualizó porque E2 la
    rompía a propósito. «No es un problema» ya no ignora de un clic (abre el diálogo de motivo) y «Otros» ya no
