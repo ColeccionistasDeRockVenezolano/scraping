@@ -137,13 +137,12 @@ function actionFinding(row: OpenRow): ActionFinding {
 const ratio = (count: number, total: number): number | null => (total > 0 ? count / total : null);
 const informational = [...INFORMATIONAL_DETECTOR_KEYS];
 
-let cache: { at: number; value: CurationMetrics } | null = null;
+let cache: { pool: ReturnType<typeof getPool>; at: number; value: CurationMetrics } | null = null;
 export function clearCurationMetricsCache(): void { cache = null; }
 
 export async function getCurationMetrics(options: { fresh?: boolean } = {}): Promise<CurationMetrics> {
-  if (!options.fresh && cache && Date.now() - cache.at < CURATION_METRICS_CACHE_MS) return cache.value;
-
   const pool = getPool();
+  if (!options.fresh && cache?.pool === pool && Date.now() - cache.at < CURATION_METRICS_CACHE_MS) return cache.value;
   const [outcomes, openRows, global, batchCounts] = await Promise.all([
     pool.query<OutcomeRow>(`
       SELECT detector,
@@ -246,6 +245,6 @@ export async function getCurationMetrics(options: { fresh?: boolean } = {}): Pro
     },
     alerts,
   };
-  cache = { at: Date.now(), value: result };
+  cache = { pool, at: Date.now(), value: result };
   return result;
 }

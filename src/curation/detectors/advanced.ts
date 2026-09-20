@@ -145,14 +145,6 @@ export const impossibleMembershipPeriod: Detector = {
   },
 };
 
-const ORG_TYPE_EQUIVALENTS: Readonly<Record<string, string>> = {
-  studio: "recording_studio",
-  label: "record_label",
-  production: "production_company",
-  producer: "production_company",
-  distribution: "distributor",
-};
-
 const ORG_MARKERS: Array<{ type: string; pattern: RegExp; label: string }> = [
   { type: "recording_studio", pattern: /\b(?:estudio|estudios|studio|studios)\b/iu, label: "estudio de grabación" },
   { type: "production_company", pattern: /\b(?:productora|producciones|production|productions)\b/iu, label: "productora" },
