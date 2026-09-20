@@ -21,7 +21,7 @@ PR: #2
 | CLI preview | `curation fix --preview --detector=...` | crea lote previewed sin mutar catálogo |
 | Panorama web | `CurationOverviewPage.tsx` | salud operativa + alertas + detalle por detector |
 | Documentación | `docs/CURATION_OPERATIONS.md` | definiciones, comandos y límites |
-| CI | PR #2 | **pendiente de resultado final; actualizar este renglón antes de marcar el PR listo** |
+| CI | PR #2 · run #90 · SHA `3d632522f8a6d8c9e71d62faa612e8c8e3714a0d` | **PASS** — Calidad (typecheck, lint, 43 archivos/375 unitarias + cobertura), Contratos PostgreSQL y build web en verde |
 
 ## Límites que se conservan explícitos
 
@@ -32,4 +32,4 @@ PR: #2
 
 ## Criterio de cierre
 
-E11/E12 se consideran técnicamente cerradas cuando los tres jobs del CI del PR #2 (Calidad, Contratos, Web) terminan en verde y no queda error de typecheck, lint o contrato. El estado de CI se documentará en este archivo con el SHA exacto del commit validado.
+E11/E12 quedan técnicamente cerradas para el código validado en el SHA `3d632522f8a6d8c9e71d62faa612e8c8e3714a0d`: los tres jobs del CI #90 (Calidad, Contratos, Web) terminaron en verde, sin error de typecheck, lint, unitarias ni contratos. El commit posterior que actualiza esta auditoría es documental y debe conservar CI verde antes de fusionar.
