@@ -76,7 +76,7 @@ export const DETECTOR_DEFINITIONS: readonly DetectorDefinition[] = [...DETECTORS
  * v3 (PLAN_CURADURIA E2 cierre 20/20): además de v2, elimina los falsos
  * positivos etiquetados que todavía dejaban detectores por debajo de 90 %.
  */
-export const RULES_VERSION = "curation-rules.v4";
+export const RULES_VERSION = "curation-rules.v5";
 
 export interface DetectorFailure { detector: string; error: string; }
 

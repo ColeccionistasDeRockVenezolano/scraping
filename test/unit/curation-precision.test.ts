@@ -14,6 +14,7 @@ import { readFileSync } from "node:fs";
 import { beforeAll, describe, expect, it } from "vitest";
 import { z } from "zod";
 import { analyzeCatalog, DETECTOR_DEFINITIONS } from "../../src/curation/analyze.js";
+import { E11_DETECTORS } from "../../src/curation/detectors/advanced.js";
 import { loadCatalogFixture } from "../support/curation-catalog-fixture.js";
 
 const corpusSchema = z.object({
@@ -62,6 +63,25 @@ describe("precisión de los detectores de Curaduría (corpus etiquetado)", () =>
       expect(known.has(detector), detector).toBe(true);
       expect(corpus.precisionThresholds[detector], detector).toBeTypeOf("number");
       expect(corpus.precisionThresholds[detector], `${detector}: el cierre 20/20 exige precisión mínima de 90 %`).toBeGreaterThanOrEqual(0.9);
+    }
+  });
+
+  it("todo detector E11 evaluable en la foto real tiene corpus y umbral ≥90 %", () => {
+    const e11 = new Set(E11_DETECTORS.map((detector) => detector.key));
+    const active = [...new Set(
+      [...emitted.keys()].map((key) => key.split("|", 1)[0]!).filter((detector) => e11.has(detector)),
+    )].sort();
+    expect(active).toEqual([
+      "disco_sin_pistas",
+      "mayusculas_sostenidas",
+      "pistas_sin_duracion_en_disco_con_duraciones",
+      "tipo_de_organizacion_contra_nombre",
+    ]);
+    for (const detector of active) {
+      expect(corpus.precisionThresholds[detector], `${detector}: sin umbral de precisión`).toBeGreaterThanOrEqual(0.9);
+      const labeled = corpus.findings.filter((item) => detectorOf(item) === detector);
+      expect(labeled.length, `${detector}: sin muestra etiquetada suficiente`).toBeGreaterThanOrEqual(3);
+      expect(labeled.some((item) => item.verdict === "true_positive"), `${detector}: sin positivos reales`).toBe(true);
     }
   });
 

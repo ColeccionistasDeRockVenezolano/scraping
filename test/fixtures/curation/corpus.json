@@ -38,7 +38,11 @@
     "signos_sin_cerrar": 0.9,
     "tipo_de_disco_contra_titulo": 1,
     "url_en_nombre": 1,
-    "varias_personas_en_una": 0.9
+    "varias_personas_en_una": 0.9,
+    "tipo_de_organizacion_contra_nombre": 0.9,
+    "disco_sin_pistas": 0.9,
+    "pistas_sin_duracion_en_disco_con_duraciones": 0.9,
+    "mayusculas_sostenidas": 0.9
   },
   "count": 487,
   "findings": [
@@ -7029,6 +7033,244 @@
       "note": "Pieza breve por naturaleza (intro, outro, presentación).",
       "addedIn": "E2",
       "fixedIn": "curation-rules.v2"
+    },
+    {
+      "detector": "tipo_de_organizacion_contra_nombre",
+      "signature": "sin_clasificar",
+      "entity_kind": "organization",
+      "entity_id": 315,
+      "value": "other",
+      "verdict": "true_positive",
+      "expectedSignature": "sin_clasificar"
+    },
+    {
+      "detector": "tipo_de_organizacion_contra_nombre",
+      "signature": "sin_clasificar",
+      "entity_kind": "organization",
+      "entity_id": 316,
+      "value": "other",
+      "verdict": "true_positive",
+      "expectedSignature": "sin_clasificar"
+    },
+    {
+      "detector": "tipo_de_organizacion_contra_nombre",
+      "signature": "sin_clasificar",
+      "entity_kind": "organization",
+      "entity_id": 318,
+      "value": "other",
+      "verdict": "true_positive",
+      "expectedSignature": "sin_clasificar"
+    },
+    {
+      "detector": "tipo_de_organizacion_contra_nombre",
+      "signature": "sin_clasificar",
+      "entity_kind": "organization",
+      "entity_id": 320,
+      "value": "other",
+      "verdict": "true_positive",
+      "expectedSignature": "sin_clasificar"
+    },
+    {
+      "detector": "tipo_de_organizacion_contra_nombre",
+      "signature": "sin_clasificar",
+      "entity_kind": "organization",
+      "entity_id": 321,
+      "value": "other",
+      "verdict": "true_positive",
+      "expectedSignature": "sin_clasificar"
+    },
+    {
+      "detector": "tipo_de_organizacion_contra_nombre",
+      "signature": "contradice",
+      "entity_kind": "organization",
+      "entity_id": 115,
+      "value": "recording_studio",
+      "verdict": "false_positive",
+      "expectedSignature": "contradice",
+      "fixedIn": "curation-rules.v5"
+    },
+    {
+      "detector": "tipo_de_organizacion_contra_nombre",
+      "signature": "contradice",
+      "entity_kind": "organization",
+      "entity_id": 29,
+      "value": "recording_studio",
+      "verdict": "false_positive",
+      "expectedSignature": "contradice",
+      "fixedIn": "curation-rules.v5"
+    },
+    {
+      "detector": "disco_sin_pistas",
+      "signature": "disco_sin_pistas",
+      "entity_kind": "album",
+      "entity_id": 1000,
+      "value": "El Triunfo",
+      "verdict": "true_positive",
+      "expectedSignature": "disco_sin_pistas"
+    },
+    {
+      "detector": "disco_sin_pistas",
+      "signature": "disco_sin_pistas",
+      "entity_kind": "album",
+      "entity_id": 1005,
+      "value": "Demo",
+      "verdict": "true_positive",
+      "expectedSignature": "disco_sin_pistas"
+    },
+    {
+      "detector": "disco_sin_pistas",
+      "signature": "disco_sin_pistas",
+      "entity_kind": "album",
+      "entity_id": 1006,
+      "value": "Encore",
+      "verdict": "true_positive",
+      "expectedSignature": "disco_sin_pistas"
+    },
+    {
+      "detector": "disco_sin_pistas",
+      "signature": "disco_sin_pistas",
+      "entity_kind": "album",
+      "entity_id": 1013,
+      "value": "El Sofá",
+      "verdict": "true_positive",
+      "expectedSignature": "disco_sin_pistas"
+    },
+    {
+      "detector": "disco_sin_pistas",
+      "signature": "disco_sin_pistas",
+      "entity_kind": "album",
+      "entity_id": 1015,
+      "value": "Corporotocracia EP",
+      "verdict": "true_positive",
+      "expectedSignature": "disco_sin_pistas"
+    },
+    {
+      "detector": "disco_sin_pistas",
+      "signature": "disco_sin_pistas",
+      "entity_kind": "album",
+      "entity_id": 1020,
+      "value": "Destruction of World",
+      "verdict": "true_positive",
+      "expectedSignature": "disco_sin_pistas"
+    },
+    {
+      "detector": "disco_sin_pistas",
+      "signature": "disco_sin_pistas",
+      "entity_kind": "album",
+      "entity_id": 1021,
+      "value": "Ministerios del Odio",
+      "verdict": "true_positive",
+      "expectedSignature": "disco_sin_pistas"
+    },
+    {
+      "detector": "disco_sin_pistas",
+      "signature": "disco_sin_pistas",
+      "entity_kind": "album",
+      "entity_id": 1022,
+      "value": "Ciudad en Llamas",
+      "verdict": "true_positive",
+      "expectedSignature": "disco_sin_pistas"
+    },
+    {
+      "detector": "pistas_sin_duracion_en_disco_con_duraciones",
+      "signature": "mezcla_con_y_sin_duracion",
+      "entity_kind": "album",
+      "entity_id": 1096,
+      "value": "Escalofrío XX Aniversario",
+      "verdict": "true_positive",
+      "expectedSignature": "mezcla_con_y_sin_duracion"
+    },
+    {
+      "detector": "pistas_sin_duracion_en_disco_con_duraciones",
+      "signature": "mezcla_con_y_sin_duracion",
+      "entity_kind": "album",
+      "entity_id": 1190,
+      "value": "Capitulo Trujillo",
+      "verdict": "true_positive",
+      "expectedSignature": "mezcla_con_y_sin_duracion"
+    },
+    {
+      "detector": "pistas_sin_duracion_en_disco_con_duraciones",
+      "signature": "mezcla_con_y_sin_duracion",
+      "entity_kind": "album",
+      "entity_id": 1262,
+      "value": "Cruzando la Linea",
+      "verdict": "true_positive",
+      "expectedSignature": "mezcla_con_y_sin_duracion"
+    },
+    {
+      "detector": "pistas_sin_duracion_en_disco_con_duraciones",
+      "signature": "mezcla_con_y_sin_duracion",
+      "entity_kind": "album",
+      "entity_id": 1296,
+      "value": "Capitulo Monagas",
+      "verdict": "true_positive",
+      "expectedSignature": "mezcla_con_y_sin_duracion"
+    },
+    {
+      "detector": "pistas_sin_duracion_en_disco_con_duraciones",
+      "signature": "mezcla_con_y_sin_duracion",
+      "entity_kind": "album",
+      "entity_id": 1317,
+      "value": "Agente Del Caos",
+      "verdict": "true_positive",
+      "expectedSignature": "mezcla_con_y_sin_duracion"
+    },
+    {
+      "detector": "pistas_sin_duracion_en_disco_con_duraciones",
+      "signature": "mezcla_con_y_sin_duracion",
+      "entity_kind": "album",
+      "entity_id": 1366,
+      "value": "Capítulo Lara",
+      "verdict": "true_positive",
+      "expectedSignature": "mezcla_con_y_sin_duracion"
+    },
+    {
+      "detector": "pistas_sin_duracion_en_disco_con_duraciones",
+      "signature": "mezcla_con_y_sin_duracion",
+      "entity_kind": "album",
+      "entity_id": 15,
+      "value": "Volver Al Futuro",
+      "verdict": "true_positive",
+      "expectedSignature": "mezcla_con_y_sin_duracion"
+    },
+    {
+      "detector": "pistas_sin_duracion_en_disco_con_duraciones",
+      "signature": "mezcla_con_y_sin_duracion",
+      "entity_kind": "album",
+      "entity_id": 1657,
+      "value": "A La Calle",
+      "verdict": "true_positive",
+      "expectedSignature": "mezcla_con_y_sin_duracion"
+    },
+    {
+      "detector": "mayusculas_sostenidas",
+      "signature": "mayusculas_sostenidas",
+      "entity_kind": "artist",
+      "entity_id": 1307,
+      "value": "OFRENDA CON VYTAS BRENNER",
+      "verdict": "true_positive",
+      "expectedSignature": "mayusculas_sostenidas"
+    },
+    {
+      "detector": "mayusculas_sostenidas",
+      "signature": "mayusculas_sostenidas",
+      "entity_kind": "artist",
+      "entity_id": 1302,
+      "value": "DIESEL",
+      "verdict": "false_positive",
+      "expectedSignature": "mayusculas_sostenidas",
+      "fixedIn": "curation-rules.v5"
+    },
+    {
+      "detector": "mayusculas_sostenidas",
+      "signature": "mayusculas_sostenidas",
+      "entity_kind": "artist",
+      "entity_id": 1304,
+      "value": "MARSHALL",
+      "verdict": "false_positive",
+      "expectedSignature": "mayusculas_sostenidas",
+      "fixedIn": "curation-rules.v5"
     }
   ]
 }
