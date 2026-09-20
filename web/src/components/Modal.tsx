@@ -7,9 +7,11 @@ interface ModalProps {
   onClose: () => void;
   children: ReactNode;
   wide?: boolean;
+  /** Hoja inferior en pantallas angostas: el pulgar llega a los botones (PLAN_CURADURIA E8.9). */
+  sheet?: boolean;
 }
 
-export function Modal({ title, onClose, children, wide }: ModalProps) {
+export function Modal({ title, onClose, children, wide, sheet }: ModalProps) {
   const panelRef = useRef<HTMLDivElement>(null);
   const titleId = useId();
 
@@ -41,7 +43,7 @@ export function Modal({ title, onClose, children, wide }: ModalProps) {
 
   return createPortal(
     <div className="modal-overlay" onMouseDown={(event) => { if (event.target === event.currentTarget) onClose(); }}>
-      <div ref={panelRef} className={`modal-panel ${wide ? "modal-panel--wide" : ""}`} role="dialog" aria-modal="true" aria-labelledby={titleId}>
+      <div ref={panelRef} className={`modal-panel${wide ? " modal-panel--wide" : ""}${sheet ? " modal-panel--sheet" : ""}`} role="dialog" aria-modal="true" aria-labelledby={titleId}>
         <div className="modal-header">
           <h2 id={titleId}>{title}</h2>
           <button type="button" className="modal-close" onClick={onClose} aria-label="Cerrar"><X aria-hidden="true" weight="bold" /></button>
