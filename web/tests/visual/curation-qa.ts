@@ -220,6 +220,7 @@ try {
   await waitForUrl(webUrl);
 
   const browser = await chromium.launch({ headless: true });
+  let triggeredScanId: number | null = null;
   try {
     for (const [index, viewport] of [
       { name: "desktop", width: 1280, height: 1000 },
@@ -424,13 +425,20 @@ try {
         });
         if (!response.ok) throw new Error(`la corrección falló: ${response.status} ${await response.text()}`);
         await waitForCorrectionScan(beforePatch);
+        triggeredScanId = await lastScanId();
       }
-      await page.goto(`${webUrl}/curaduria`, { waitUntil: "domcontentloaded" });
-      await page.getByText(/desencadenados? por la corrección/u).first().waitFor({ timeout: 20_000 });
-      await page.getByText("La corrección desencadenó", { exact: false }).first().waitFor();
-      await page.screenshot({ path: path.join(outputDir, `${viewport.name}-verificacion.png`), fullPage: true });
 
-      await page.getByRole("link", { name: /desencadenados? por la corrección/u }).first().click();
+      if (index === 0) {
+        await page.goto(`${webUrl}/curaduria`, { waitUntil: "domcontentloaded" });
+        await page.getByRole("link", { name: /desencadenados? por la corrección/u }).first().waitFor({ timeout: 20_000 });
+        await page.getByText("La corrección desencadenó", { exact: false }).first().waitFor();
+        await page.screenshot({ path: path.join(outputDir, `${viewport.name}-verificacion.png`), fullPage: true });
+        await page.getByRole("link", { name: /desencadenados? por la corrección/u }).first().click();
+      } else {
+        if (triggeredScanId === null) throw new Error("mobile: no se conservó el análisis desencadenado del pase desktop");
+        await page.goto(`${webUrl}/curaduria/hallazgos?scanId=${triggeredScanId}&chained=true`, { waitUntil: "domcontentloaded" });
+        await page.screenshot({ path: path.join(outputDir, `${viewport.name}-verificacion.png`), fullPage: true });
+      }
       await page.getByText("Apareció al corregir", { exact: false }).first().waitFor({ timeout: 20_000 });
       await page.screenshot({ path: path.join(outputDir, `${viewport.name}-desencadenados.png`), fullPage: true });
       await assertNoOverflow(page, `${viewport.name} desencadenados`);
