@@ -277,7 +277,7 @@ export function FixBatchDialog({ mode, findingIds, filter, title, description, a
       {batch ? (
         <>
           {applied ? (
-            <div className="batch-progress">
+            <div className="batch-progress" role="status" aria-live="polite">
               <progress max={totalWork} value={finishedCount} aria-label="Progreso del lote" />
               <span>{finishedCount} / {totalWork}</span>
             </div>
