@@ -211,54 +211,56 @@ async function assertNoOverflow(page: Page, label: string): Promise<void> {
   if (overflow > 1) throw new Error(`${label}: overflow horizontal de ${overflow}px`);
 }
 
-/** WCAG AA para texto normal: comprueba color computado contra el primer fondo opaco. */
+/** Convierte el color computado de Chromium a RGBA para el cálculo WCAG en Node. */
+function parseCssColor(value: string): [number, number, number, number] {
+  const match = /rgba?\(\s*([\d.]+)[, ]+\s*([\d.]+)[, ]+\s*([\d.]+)(?:\s*[,/]\s*([\d.]+))?\s*\)/u.exec(value);
+  if (!match) throw new Error(`color no parseable: ${value}`);
+  return [Number(match[1]), Number(match[2]), Number(match[3]), match[4] === undefined ? 1 : Number(match[4])];
+}
+
+function relativeLuminance(rgb: [number, number, number]): number {
+  const linear = rgb.map((component) => {
+    const value = component / 255;
+    return value <= 0.04045 ? value / 12.92 : ((value + 0.055) / 1.055) ** 2.4;
+  });
+  return 0.2126 * linear[0]! + 0.7152 * linear[1]! + 0.0722 * linear[2]!;
+}
+
+/** WCAG AA para texto normal: color computado contra el primer fondo opaco. */
 async function assertTextContrast(locator: Locator, label: string, minimum = 4.5): Promise<void> {
-  const result = await locator.first().evaluate((element) => {
-    const parse = (value: string): [number, number, number, number] => {
-      const match = /rgba?\(\s*([\d.]+)[, ]+\s*([\d.]+)[, ]+\s*([\d.]+)(?:\s*[,/]\s*([\d.]+))?\s*\)/u.exec(value);
-      if (!match) throw new Error(`color no parseable: ${value}`);
-      return [Number(match[1]), Number(match[2]), Number(match[3]), match[4] === undefined ? 1 : Number(match[4])];
-    };
-    const backgroundOf = (start: Element): [number, number, number, number] => {
-      let current: Element | null = start;
-      while (current) {
-        const bg = parse(getComputedStyle(current).backgroundColor);
-        if (bg[3] >= 0.99) return bg;
-        current = current.parentElement;
-      }
-      return [10, 10, 10, 1];
-    };
-    const composite = (fg: [number, number, number, number], bg: [number, number, number, number], opacity: number): [number, number, number] => {
-      const alpha = Math.max(0, Math.min(1, fg[3] * opacity));
-      return [
-        fg[0] * alpha + bg[0] * (1 - alpha),
-        fg[1] * alpha + bg[1] * (1 - alpha),
-        fg[2] * alpha + bg[2] * (1 - alpha),
-      ];
-    };
-    const luminance = (rgb: [number, number, number]): number => {
-      const linear = rgb.map((component) => {
-        const value = component / 255;
-        return value <= 0.04045 ? value / 12.92 : ((value + 0.055) / 1.055) ** 2.4;
-      });
-      return 0.2126 * linear[0]! + 0.7152 * linear[1]! + 0.0722 * linear[2]!;
-    };
+  // La función que viaja a Chromium es deliberadamente plana: los helpers
+  // anidados que transpila tsx/esbuild no existen dentro del mundo del browser.
+  const sampled = await locator.first().evaluate((element) => {
     const style = getComputedStyle(element);
-    const fgRaw = parse(style.color);
-    const bgRaw = backgroundOf(element);
-    let opacity = 1;
     let current: Element | null = element;
+    let background = "rgb(10, 10, 10)";
+    let opacity = 1;
     while (current) {
-      opacity *= Number(getComputedStyle(current).opacity || "1");
+      const currentStyle = getComputedStyle(current);
+      opacity *= Number(currentStyle.opacity || "1");
+      const candidate = currentStyle.backgroundColor;
+      if (candidate !== "rgba(0, 0, 0, 0)" && candidate !== "transparent") {
+        background = candidate;
+        break;
+      }
       current = current.parentElement;
     }
-    const fg = composite(fgRaw, bgRaw, opacity);
-    const bg: [number, number, number] = [bgRaw[0], bgRaw[1], bgRaw[2]];
-    const [lighter, darker] = [luminance(fg), luminance(bg)].sort((a, b) => b - a);
-    return { ratio: (lighter! + 0.05) / (darker! + 0.05), color: style.color, background: `rgb(${bg.join(", ")})` };
+    return { color: style.color, background, opacity };
   });
-  if (result.ratio + 1e-6 < minimum) {
-    throw new Error(`${label}: contraste ${result.ratio.toFixed(2)}:1 < ${minimum}:1 (${result.color} sobre ${result.background})`);
+
+  const fgRaw = parseCssColor(sampled.color);
+  const bgRaw = parseCssColor(sampled.background);
+  const alpha = Math.max(0, Math.min(1, fgRaw[3] * sampled.opacity));
+  const foreground: [number, number, number] = [
+    fgRaw[0] * alpha + bgRaw[0] * (1 - alpha),
+    fgRaw[1] * alpha + bgRaw[1] * (1 - alpha),
+    fgRaw[2] * alpha + bgRaw[2] * (1 - alpha),
+  ];
+  const background: [number, number, number] = [bgRaw[0], bgRaw[1], bgRaw[2]];
+  const [lighter, darker] = [relativeLuminance(foreground), relativeLuminance(background)].sort((a, b) => b - a);
+  const ratio = (lighter! + 0.05) / (darker! + 0.05);
+  if (ratio + 1e-6 < minimum) {
+    throw new Error(`${label}: contraste ${ratio.toFixed(2)}:1 < ${minimum}:1 (${sampled.color} sobre ${sampled.background})`);
   }
 }
 
