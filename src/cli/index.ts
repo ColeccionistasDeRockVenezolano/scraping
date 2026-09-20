@@ -47,7 +47,7 @@ import { autofixReport, installAutofix, listAutofixRules, runAutofix } from "../
 import { getCurationSummary } from "../curation/repository.js";
 import { getCurationMetrics } from "../curation/metrics.js";
 import { previewFixBatch } from "../curation/actions/batches.js";
-import { DETECTOR_DEFINITIONS } from "../curation/analyze.js";
+import { parseCurationFixPreviewArgs } from "./curation-fix.js";
 import { pruneCuration } from "../curation/retention.js";
 import { compactEntityResolutionDecisions } from "../er/retention.js";
 
@@ -741,30 +741,12 @@ async function main(): Promise<number> {
         return 0;
       }
       if (subcommand === "fix") {
-        const flag = (name: string): string | undefined =>
-          args.find((arg) => arg.startsWith(`--${name}=`))?.slice(name.length + 3);
-        if (!args.includes("--preview")) {
-          console.error("curation fix solo admite --preview: aplicar requiere revisar el lote y usar la API/web");
+        const parsed = parseCurationFixPreviewArgs(args);
+        if (!parsed.ok) {
+          console.error(parsed.error);
           return 1;
         }
-        const detectorKey = flag("detector");
-        if (!detectorKey) {
-          console.error("uso: crv curation fix --preview --detector=<clave> [--signature=<subgrupo>] [--action=<acción>] [--limit=N]");
-          return 1;
-        }
-        const detector = DETECTOR_DEFINITIONS.find((item) => item.key === detectorKey);
-        if (!detector) {
-          console.error(`detector desconocido: ${detectorKey}`);
-          return 1;
-        }
-        const rawLimit = flag("limit");
-        const limit = rawLimit === undefined ? 50 : Number(rawLimit);
-        if (!Number.isSafeInteger(limit) || limit < 1 || limit > 50_000) {
-          console.error("--limit debe ser un entero entre 1 y 50000");
-          return 1;
-        }
-        const signature = flag("signature");
-        const actionKey = flag("action");
+        const { detector, signature, actionKey, limit } = parsed.value;
         const preview = await previewFixBatch({
           mode: "group",
           filter: {
@@ -802,8 +784,8 @@ async function main(): Promise<number> {
         console.log(`abiertos ${summary.totals.open} · ignorados ${summary.totals.ignored} · resueltos ${summary.totals.resolved} · nuevos en el último ${summary.totals.newInLastScan}`);
         const pct = (value: number | null): string => value === null ? "—" : `${(value * 100).toFixed(1)}%`;
         const time = metrics.meanCorrectionSeconds === null ? "—" : `${(metrics.meanCorrectionSeconds / 3600).toFixed(1)} h`;
-        console.log(`acciones: ≤N1 ${metrics.actionCoverage.level1OrLess}/${metrics.actionCoverage.open} (${pct(metrics.actionCoverage.level1OrLessPct)}) · ≤N2 ${metrics.actionCoverage.level2OrLess}/${metrics.actionCoverage.open} (${pct(metrics.actionCoverage.level2OrLessPct)})`);
-        console.log(`tiempo medio hallazgo→corrección: ${time} · lotes deshechos ${metrics.batches.undone}/${metrics.batches.total} · autocorrecciones revertidas ${metrics.batches.autoReverted}`);
+        console.log(`acciones (solo accionables): ≤N1 ${metrics.actionCoverage.level1OrLess}/${metrics.actionCoverage.open} (${pct(metrics.actionCoverage.level1OrLessPct)}) · ≤N2 ${metrics.actionCoverage.level2OrLess}/${metrics.actionCoverage.open} (${pct(metrics.actionCoverage.level2OrLessPct)}) · informativos fuera del KPI ${metrics.actionCoverage.excludedInformational}`);
+        console.log(`tiempo medio hallazgo→corrección: ${time} · lotes aplicados ${metrics.batches.applied} · previews ${metrics.batches.previewed} · deshechos ${metrics.batches.undone} · autocorrecciones activas ${metrics.batches.autoApplied} · revertidas ${metrics.batches.autoReverted}`);
         for (const alert of metrics.alerts) {
           console.error(`  ! precisión observada ${alert.label}: ${(alert.precision * 100).toFixed(1)}% (${alert.reviewed} decisiones; umbral ${(alert.threshold * 100).toFixed(0)}%)`);
         }
