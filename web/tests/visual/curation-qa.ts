@@ -340,6 +340,7 @@ try {
       await page.screenshot({ path: path.join(outputDir, `${viewport.name}-preview-lote.png`), fullPage: true });
       await fixDialog.getByRole("button", { name: /^Aplicar \d+ correcciones$/u }).click();
       await fixDialog.getByText("Lote aplicado", { exact: true }).waitFor({ timeout: 20_000 });
+      await page.getByRole("button", { name: "Deshacer", exact: true }).waitFor({ timeout: 10_000 });
       await page.screenshot({ path: path.join(outputDir, `${viewport.name}-lote-aplicado.png`), fullPage: true });
       await fixDialog.getByLabel("Motivo para deshacer *").fill(`QA visual ${viewport.name}: restaurar el dato original`);
       await fixDialog.getByRole("button", { name: "Deshacer este lote" }).click();
@@ -433,6 +434,15 @@ try {
       await page.getByText("Apareció al corregir", { exact: false }).first().waitFor({ timeout: 20_000 });
       await page.screenshot({ path: path.join(outputDir, `${viewport.name}-desencadenados.png`), fullPage: true });
       await assertNoOverflow(page, `${viewport.name} desencadenados`);
+      if (index === 1) {
+        await page.getByRole("button", { name: "Marcar como revisado" }).first().click();
+        await page.getByText("Cadena revisada", { exact: false }).first().waitFor({ timeout: 20_000 });
+        const archived = await getPool().query<{ n: string }>(
+          `SELECT count(*)::text AS n FROM ingest.curation_findings
+            WHERE evidence ? 'triggeredHistory' AND NOT (evidence ? 'triggeredBy')`
+        );
+        if (Number(archived.rows[0]!.n) < 1) throw new Error("mobile: Marcar como revisado no archivó triggeredBy");
+      }
 
       if (pageErrors.length) throw new Error(`${viewport.name}: ${pageErrors.join("; ")}`);
       await page.close();
