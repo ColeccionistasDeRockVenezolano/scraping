@@ -51,7 +51,7 @@
   --text-faint: #858585;
 
   --red: #e50914;
-  --red-strong: #ff0f1b;
+  --red-strong: #d80c16;
   --red-soft: rgba(229, 9, 20, 0.16);
   --amber: #ffb02e;
   --amber-soft: rgba(255, 176, 46, 0.16);
@@ -974,7 +974,7 @@ td.num { font-family: var(--font-mono); }
 .cfind__action-consequence {
   min-width: 0; max-width: 28rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
   padding-left: 8px; margin-left: 2px; border-left: 1px solid color-mix(in srgb, currentColor 35%, transparent);
-  font-size: 11px; font-weight: 500; opacity: .88;
+  font-size: 11px; font-weight: 600;
 }
 .cfind__select { display: flex; align-items: flex-start; padding-top: 2px; }
 .cfind--picked { box-shadow: 0 0 0 2px var(--accent, var(--teal)); }
@@ -1010,7 +1010,7 @@ td.num { font-family: var(--font-mono); }
 /* Curaduría E7/E8 — decisiones, historial, teclado y móvil. */
 .decision-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; margin: .75rem 0; }
 .decision-side { display: grid; gap: .35rem; padding: .75rem; border: 1px solid var(--border); border-radius: .65rem; background: var(--surface-3); }
-.decision-side__label { font-size: .75rem; font-weight: 800; text-transform: uppercase; color: var(--text-faint); }
+.decision-side__label { font-size: .75rem; font-weight: 800; text-transform: uppercase; color: var(--text-muted); }
 .decision-side__value { overflow-wrap: anywhere; }
 .batch-progress { display: flex; align-items: center; gap: .65rem; margin: .5rem 0 1rem; }
 .batch-progress progress { flex: 1; min-width: 8rem; }
