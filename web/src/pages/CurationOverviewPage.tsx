@@ -17,7 +17,7 @@ import { useAsync } from "../lib/useAsync";
 import { ErrorState } from "../components/StateViews";
 import { HeaderSkeleton, RowsSkeleton } from "../components/Skeletons";
 import { useCurationSummary } from "./CurationLayout";
-import type { CurationAutofixSummary, CurationCategorySummary, CurationScan, DistinctPair } from "../lib/types";
+import type { CurationAutofixSummary, CurationCategorySummary, CurationMetrics, CurationScan, DistinctPair } from "../lib/types";
 
 export function CurationOverviewPage() {
   const { summary, summaryError, refreshSummary } = useCurationSummary();
@@ -97,6 +97,8 @@ export function CurationOverviewPage() {
 
       <AutofixPanorama summary={summary.autofix} />
 
+      <OperationalMetrics metrics={summary.metrics} />
+
       <dl className="ctotals">
         <div><dt>Abiertos</dt><dd className="mono">{formatCount(totals.open)}</dd></div>
         <div>
@@ -149,6 +151,53 @@ export function CurationOverviewPage() {
 
       <DistinctPairsSection />
     </>
+  );
+}
+
+function OperationalMetrics({ metrics }: { metrics: CurationMetrics }) {
+  const percent = (value: number | null) => value === null ? "—" : `${(value * 100).toFixed(1)} %`;
+  const time = metrics.meanCorrectionSeconds === null
+    ? "—"
+    : metrics.meanCorrectionSeconds < 3600
+      ? `${(metrics.meanCorrectionSeconds / 60).toFixed(0)} min`
+      : `${(metrics.meanCorrectionSeconds / 3600).toFixed(1)} h`;
+  const measured = metrics.detectors.filter((detector) => detector.observedPrecision !== null);
+
+  return (
+    <section className="section" aria-labelledby="curation-metrics-title">
+      <h2 id="curation-metrics-title">Salud operativa</h2>
+      <p className="hint">
+        La precisión observada usa decisiones humanas reales; el corpus etiquetado de E2 sigue siendo la prueba de regresión de reglas.
+      </p>
+      <dl className="ctotals">
+        <div><dt>Abiertos con acción ≤ nivel 1</dt><dd className="mono">{percent(metrics.actionCoverage.level1OrLessPct)}</dd></div>
+        <div><dt>Abiertos con acción ≤ nivel 2</dt><dd className="mono">{percent(metrics.actionCoverage.level2OrLessPct)}</dd></div>
+        <div><dt>Tiempo medio hasta corrección</dt><dd className="mono">{time}</dd></div>
+        <div><dt>Lotes deshechos</dt><dd className="mono">{formatCount(metrics.batches.undone)}</dd></div>
+        <div><dt>Autocorrecciones revertidas</dt><dd className="mono">{formatCount(metrics.batches.autoReverted)}</dd></div>
+      </dl>
+      {metrics.alerts.length ? (
+        <div className="form-error-banner" role="alert">
+          <strong>Precisión observada por debajo de 80 %:</strong>{" "}
+          {metrics.alerts.map((alert) => `${alert.label} ${(alert.precision * 100).toFixed(1)} % (${alert.reviewed} decisiones)`).join(" · ")}
+        </div>
+      ) : null}
+      {measured.length ? (
+        <details>
+          <summary>Precisión observada por detector ({measured.length})</summary>
+          <ul style={{ display: "grid", gap: 6, marginTop: 8 }}>
+            {measured.map((detector) => (
+              <li key={detector.detector} className="credit-row">
+                <span>{detector.label}</span>
+                <span className="mono">
+                  {(detector.observedPrecision! * 100).toFixed(1)} % · {detector.confirmed}/{detector.reviewed} confirmados
+                </span>
+              </li>
+            ))}
+          </ul>
+        </details>
+      ) : null}
+    </section>
   );
 }
 
