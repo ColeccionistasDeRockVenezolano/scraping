@@ -9,7 +9,7 @@ import { cleanTextAction, TEXT_CLEANUPS, type CleanTextParams } from "../../src/
 import { mergeAction } from "../../src/curation/actions/merge.js";
 import { MAX_LEVEL, itemHash, stableJson, type ItemHashInput } from "../../src/curation/actions/batches.js";
 import type { ActionFinding } from "../../src/curation/actions/types.js";
-import { inFocus, recommendedActionLevels } from "../../src/curation/scan.js";
+import { recommendedActionLevels } from "../../src/curation/scan.js";
 import type { Finding } from "../../src/curation/types.js";
 
 const ZERO_WIDTH_SPACE = String.fromCharCode(0x200b);
@@ -162,16 +162,6 @@ describe("lotes: tope de nivel por modo y hash canónico (E4.2, §2.1.5)", () =>
     expect(itemHash({ ...base, blocked: "collision" })).not.toBe(hash);
     expect(itemHash({ ...base, noop: true })).not.toBe(hash);
     expect(itemHash({ ...base, material: "hash-de-la-fusion" })).not.toBe(hash);
-  });
-});
-
-describe("verificación dirigida: el foco (E4.6)", () => {
-  it("un hallazgo está en el foco si su ficha o una relacionada lo están", () => {
-    const focus = new Set(["artist:10", "album:3"]);
-    expect(inFocus({ entity: { kind: "artist", id: 10, label: "" }, related: [] }, focus)).toBe(true);
-    expect(inFocus({ entity: { kind: "track", id: 99, label: "" }, related: [{ kind: "album", id: 3, label: "" }] }, focus)).toBe(true);
-    expect(inFocus({ entity: { kind: "artist", id: 11, label: "" }, related: [{ kind: "album", id: 4, label: "" }] }, focus)).toBe(false);
-    expect(inFocus({ entity: { kind: "conflict", id: null, label: "" }, related: [] }, focus)).toBe(false);
   });
 });
 

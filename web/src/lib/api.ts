@@ -10,6 +10,7 @@ import type {
   TrackDetail, TrackListItem,
   CurationFinding, CurationFindingStatus, CurationIgnoreReason, CurationPairKind, CurationScan, CurationScanResult,
   CurationSeverity, CurationSummary,
+  CurationAutofixRule, CurationAutofixRun, CurationAutofixState,
   AlbumMergePreview, AlbumMergeResult, PersonSplitPreview, PersonSplitResult,
   FindingActionsResult, FixBatch, FixBatchSummary, DistinctPair, ConflictResolveResult, ConflictResolveGroupResult,
 } from "./types";
@@ -339,6 +340,15 @@ export const curationApi = {
     request<Page<FixBatchSummary>>("/curation/fixes", { query: params }),
   fix: (batchId: number, params: Paged & { status?: string } = {}) =>
     request<FixBatch>(`/curation/fixes/${batchId}`, { query: params }),
+  // ---- Autocorrección segura (E10): la lista blanca y su pasada ----
+  autofix: () => request<CurationAutofixState>("/curation/autofix"),
+  autofixRun: () => request<CurationAutofixRun>("/curation/autofix/run", { method: "POST", authenticated: true }),
+  autofixCreateRule: (body: { detector: string; signature?: string | null; actionKey: string; enabled?: boolean; maxPerScan?: number | null; note?: string }) =>
+    request<CurationAutofixRule>("/curation/autofix/rules", { method: "POST", authenticated: true, body }),
+  autofixUpdateRule: (id: number, body: { enabled?: boolean; maxPerScan?: number | null; note?: string }) =>
+    request<CurationAutofixRule>(`/curation/autofix/rules/${id}`, { method: "PATCH", authenticated: true, body }),
+  autofixDeleteRule: (id: number) =>
+    request<CurationAutofixRule>(`/curation/autofix/rules/${id}`, { method: "DELETE", authenticated: true }),
   // ---- «Surgidos tras corregir» dados por revisados (E8.7) ----
   acknowledgeChain: (id: number) =>
     request<CurationFinding>(`/curation/findings/${id}/acknowledge-chain`, { method: "POST", authenticated: true }),

@@ -133,15 +133,15 @@ export const atypicalDuration: Detector = {
     muy_larga: ["corregir_unidades"],
   },
   run(context) {
-    const durations = context.snapshot.tracks.map((track) => track.durationSeconds).filter((value): value is number => value !== null && value > 0);
-    if (durations.length < 30) return [];
-    const logs = durations.map(Math.log).sort((a, b) => a - b);
-    const med = logs[Math.floor(logs.length / 2)]!;
-    const mad = [...logs.map((value) => Math.abs(value - med))].sort((a, b) => a - b)[Math.floor(logs.length / 2)]! || 0.1;
+    // La distribución sale del vocabulario, que la aprende del catálogo entero
+    // (PLAN_CURADURIA E9.1): así un análisis dirigido a cuatro pistas compara
+    // contra el mismo catálogo que el análisis completo, no contra sí mismo.
+    const baseline = context.lexicon.durations;
+    if (!baseline) return [];
+    const { median: med, mad } = baseline;
     const format = (seconds: number): string => `${Math.floor(seconds / 60)}:${String(seconds % 60).padStart(2, "0")}`;
-    const durationById = new Map(context.snapshot.tracks.map((track) => [track.id, track.durationSeconds]));
     return context.names.filter((name) => name.kind === "track").flatMap((name) => {
-      const duration = durationById.get(name.id) ?? null;
+      const duration = context.tracks.get(name.id)?.durationSeconds ?? null;
       if (duration === null) return [];
       if (duration === 0) return [nameFinding(this, name, { signature: "cero", signatureLabel: "Duración cero", severity: "medium", title: "Duración guardada en cero" })];
       const z = (Math.log(duration) - med) / (1.4826 * mad);

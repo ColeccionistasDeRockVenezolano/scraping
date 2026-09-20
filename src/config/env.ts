@@ -48,6 +48,20 @@ const envSchema = z.object({
   // cuántos hallazgos entran como máximo en la vista previa de un lote.
   CRV_CURATION_FIX_BATCH_MAX: z.coerce.number().int().positive().max(5000).default(500),
   CRV_CURATION_FIX_PREVIEW_MAX: z.coerce.number().int().positive().max(50_000).default(5000),
+  // Análisis incremental (PLAN_CURADURIA E9, A9): una escritura del catálogo ya
+  // no dispara un análisis completo. Verifica al instante las fichas que tocó
+  // (detectores locales, análisis dirigido) y deja el completo —duplicados,
+  // cola y «Otros»— para cuando las escrituras paren `IDLE_MS`, o como muy
+  // tarde `MAX_WAIT_MS` después de la primera escritura sin analizar.
+  CRV_CURATION_FULL_SCAN_IDLE_MS: z.coerce.number().int().nonnegative().default(30_000),
+  CRV_CURATION_FULL_SCAN_MAX_WAIT_MS: z.coerce.number().int().nonnegative().default(600_000),
+  // Autocorrección segura (PLAN_CURADURIA E10): escribe en el core sin que
+  // nadie lo pida, así que llega apagada. Aun encendida, solo aplica acciones
+  // de nivel 0 de las reglas que un administrador haya encendido
+  // (`ingest.curation_autofix_rules`), con tope por análisis y por día.
+  CRV_CURATION_AUTOFIX: z.enum(["true", "false"]).default("false").transform((value) => value === "true"),
+  CRV_CURATION_AUTOFIX_MAX_PER_SCAN: z.coerce.number().int().nonnegative().max(5000).default(50),
+  CRV_CURATION_AUTOFIX_MAX_PER_DAY: z.coerce.number().int().nonnegative().max(50_000).default(200),
 
   DATA_DIR: z.string().default("./data"),
 

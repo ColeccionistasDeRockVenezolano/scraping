@@ -77,7 +77,7 @@ describe("contrato del core + migraciones (Drizzle/TS)", () => {
     (globalThis as { __crvBeforeSnapshot?: string }).__crvBeforeSnapshot = snapshot;
   });
 
-  it("aplica 0001-0022 vía el runner TS (2 pasadas, la 2ª es no-op)", async () => {
+  it("aplica 0001-0024 vía el runner TS (2 pasadas, la 2ª es no-op)", async () => {
     const first = await migrateUp();
     expect(first.applied).toEqual([
       "0001_ingest_core", "0002_media", "0003_ingest_claims_identity", "0004_review_kinds",
@@ -86,7 +86,7 @@ describe("contrato del core + migraciones (Drizzle/TS)", () => {
       "0011_album_classifications", "0012_ambiguity_resolutions", "0013_fk_indexes",
       "0014_entity_redirects", "0015_review_kind_person_duplicate", "0016_person_duplicate_pair_uk",
       "0017_curation_findings", "0018_curation_finding_fixes", "0019_curation_scan_resolution", "0020_curation_durable_decisions",
-      "0021_curation_fix_batches", "0022_er_decisions_retention",
+      "0021_curation_fix_batches", "0022_er_decisions_retention", "0023_curation_incremental", "0024_curation_autofix",
     ]);
     const second = await migrateUp();
     expect(second.applied).toEqual([]);
@@ -219,7 +219,7 @@ describe("contrato del core + migraciones (Drizzle/TS)", () => {
 
     const result = await migrateDownAll();
     expect(result.reverted).toEqual([
-      "0022_er_decisions_retention", "0021_curation_fix_batches", "0020_curation_durable_decisions", "0019_curation_scan_resolution", "0018_curation_finding_fixes", "0017_curation_findings", "0016_person_duplicate_pair_uk", "0015_review_kind_person_duplicate",
+      "0024_curation_autofix", "0023_curation_incremental", "0022_er_decisions_retention", "0021_curation_fix_batches", "0020_curation_durable_decisions", "0019_curation_scan_resolution", "0018_curation_finding_fixes", "0017_curation_findings", "0016_person_duplicate_pair_uk", "0015_review_kind_person_duplicate",
       "0014_entity_redirects", "0013_fk_indexes", "0012_ambiguity_resolutions", "0011_album_classifications", "0010_review_decisions", "0009_media_link_constraints", "0008_media_link_claims",
       "0007_entity_resolution_ai", "0006_youtube_pipeline", "0005_raw_pages_run", "0004_review_kinds", "0003_ingest_claims_identity", "0002_media", "0001_ingest_core",
     ]);

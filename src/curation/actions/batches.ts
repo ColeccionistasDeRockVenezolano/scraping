@@ -56,7 +56,6 @@ import type {
 
 const log = moduleLogger("curation:fixes");
 
-export type HumanFixMode = Exclude<FixMode, "auto">;
 export type BatchMode = FixMode | "undo";
 export const BATCH_STATUSES = ["previewed", "running", "done", "partial", "failed", "undone"] as const;
 export type BatchStatus = (typeof BATCH_STATUSES)[number];
@@ -83,11 +82,18 @@ export interface ItemOverride {
 }
 
 export interface FixPreviewRequest {
-  mode: HumanFixMode;
+  /** `auto` solo lo pide la autocorrección (E10); la API solo admite los tres humanos. */
+  mode: FixMode;
   findingIds?: readonly number[] | undefined;
   filter?: FindingGroupFilter | undefined;
   /** Acción común a todos los ítems; sin ella, la recomendada de cada hallazgo. */
   actionKey?: string | undefined;
+  /**
+   * De dónde salió el lote, para que el historial lo explique: hoy, la regla de
+   * autocorrección que lo pidió (E10). Se guarda junto al filtro; no selecciona
+   * nada.
+   */
+  origin?: Record<string, unknown> | undefined;
   overrides?: {
     /** Parámetros comunes (p. ej. el valor escrito a mano de una corrección individual). */
     params?: Record<string, unknown> | undefined;
@@ -459,6 +465,7 @@ export async function previewFixBatch(
     if (ids.length > previewMax) throw new CurationError("invalid", `como mucho ${previewMax} hallazgos por lote`);
     filter = { findingIds: ids };
   }
+  if (request.origin) filter = { ...filter, ...request.origin };
 
   const planned = await withSnapshot(async (client) => {
     // Hallazgos y catálogo se leen con el mismo snapshot. Si se tomaran antes
@@ -931,7 +938,8 @@ const CHANGED_LIST_MAX = 500;
  * previsualizan y aplican en la misma llamada: nadie vio esa vista previa.
  */
 export async function applyFixBatch(
-  batchId: number, input: ApplyFixInput, operator: string, page: ItemPage = FIRST_PAGE, options: { recheck?: boolean } = {},
+  batchId: number, input: ApplyFixInput, operator: string, page: ItemPage = FIRST_PAGE,
+  options: { recheck?: boolean; verify?: "background" | "await" } = {},
 ): Promise<FixBatchView> {
   const note = input.note.trim();
   if (!note) throw new CurationError("invalid", "nota obligatoria");
@@ -980,7 +988,13 @@ export async function applyFixBatch(
       if (await applyItem(batch, item, finding, operator, note) === "applied") applied.push(Number(item.id));
     }
     await settleBatch(batchId);
-    scheduleVerification(batchId, applied, operator);
+    // La autocorrección necesita el resultado de la verificación para decidir
+    // si deshace el lote (E10.3): lo espera en vez de dejarlo detrás.
+    if (options.verify === "await") await verifyBatch(batchId, applied, operator).catch((error: unknown) => {
+      log.error({ err: error, batchId }, "no se pudo verificar el lote de correcciones");
+      return false;
+    });
+    else scheduleVerification(batchId, applied, operator);
   });
   return getFixBatch(batchId, page);
 }

@@ -85,7 +85,7 @@ async function one(sql: string, params: unknown[] = []): Promise<number> {
 }
 
 /** Catálogo limpio (el mismo de las pruebas unitarias) con los casos conocidos encima. */
-async function seed(): Promise<{ dirtyArtist: number }> {
+async function seed(): Promise<{ dirtyArtist: number; spacedArtist: number }> {
   const snapshot = cleanSnapshot();
   const pool = getPool();
   for (const artist of snapshot.artists) {
@@ -133,10 +133,20 @@ async function seed(): Promise<{ dirtyArtist: number }> {
   // corrige uno, y ninguno es el caso del análisis de verificación del final.
   await one("INSERT INTO public.artists(name, origin_city) VALUES('Ra&iacute;ces Vivas QA', 'Barquisimeto') RETURNING id");
   await one("INSERT INTO public.artists(name, origin_city) VALUES('Ni&ntilde;os del Sur QA', 'Mérida') RETURNING id");
+  // Dos nombres con un carácter invisible reservados para la autocorrección
+  // (E10): el otro invisible del catálogo —«Trueno Negro»— lo corrige la API al
+  // final, y aquí hace falta algo que ninguna otra parte del QA toque.
+  await one("INSERT INTO public.artists(name, origin_city) VALUES($1, 'Mérida') RETURNING id", [`Bruma${ZERO_WIDTH_SPACE} Austral QA`]);
+  await one("INSERT INTO public.artists(name, origin_city) VALUES($1, 'Cumaná') RETURNING id", [`Faro${ZERO_WIDTH_SPACE} Nocturno QA`]);
+  // Un artista con espacios de más: es la corrección por la API de la segunda
+  // pasada. Cada pasada necesita la suya —la verificación del panorama enseña
+  // la ÚLTIMA corrección— y esta no la toca ni el QA de la web ni la
+  // autocorrección, que solo tiene autorizados los invisibles.
+  const spacedArtist = await one("INSERT INTO public.artists(name, origin_city) VALUES('Marea  Baja QA', 'Caracas') RETURNING id");
   // Un par de artistas escritos de otra forma, para «Son distintas».
   await one("INSERT INTO public.artists(name, origin_city) VALUES('Los Relámpago QA', 'Caracas') RETURNING id");
   await one("INSERT INTO public.artists(name, origin_city) VALUES('Relámpago QA', 'Maracay') RETURNING id");
-  return { dirtyArtist };
+  return { dirtyArtist, spacedArtist };
 }
 
 async function lastScanId(): Promise<number> {
@@ -181,6 +191,9 @@ try {
   process.env["DATABASE_URL"] = container.databaseUrl;
   process.env["LOG_LEVEL"] = "silent";
   process.env["CRV_OPERATOR_TOKEN"] = QA_TOKEN;
+  // El QA sí la enciende: es lo que se va a enseñar (E10). En producción va
+  // apagada y solo la enciende quien la administra.
+  process.env["CRV_CURATION_AUTOFIX"] = "true";
   // El .env de producción sirve la API bajo /crv; aquí la API de QA vive en /.
   process.env["CRV_SESSION_COOKIE_PATH"] = "/";
   process.env["CRV_COLLABORATORS_JSON"] = JSON.stringify([
@@ -189,7 +202,7 @@ try {
   resetEnvCache();
   await applyCore(container.name);
   await migrateUp();
-  const { dirtyArtist } = await seed();
+  const { dirtyArtist, spacedArtist } = await seed();
   const first = await runCurationScan({ trigger: "manual" });
   if (first.status !== "ok") throw new Error(`el análisis inicial falló: ${first.error ?? "?"}`);
   console.log(`QA: ${first.total} hallazgos sembrados · ${JSON.stringify(first.byCategory)}`);
@@ -421,18 +434,21 @@ try {
       await page.screenshot({ path: path.join(outputDir, `${viewport.name}-lote-detalle.png`), fullPage: true });
       await assertNoOverflow(page, `${viewport.name} detalle del lote`);
 
-      // 8. Corrección por la API (solo la primera vez): quita el invisible pero
-      //    mete la ciudad en el nombre. El detector debe verificarla solo.
-      if (index === 0) {
-        const beforePatch = await lastScanId();
-        const response = await fetch(`${apiAddress}/artists/${dirtyArtist}`, {
-          method: "PATCH",
-          headers: { authorization: `Bearer ${QA_TOKEN}`, "x-crv-operator": "QA Curaduria", "content-type": "application/json", origin: webUrl },
-          body: JSON.stringify({ name: "Trueno Negro (Caracas)" }),
-        });
-        if (!response.ok) throw new Error(`la corrección falló: ${response.status} ${await response.text()}`);
-        await waitForCorrectionScan(beforePatch);
-      }
+      // 8. Corrección por la API: arregla un problema del nombre pero mete la
+      //    ciudad, y el detector lo verifica solo. Una por pasada, sobre fichas
+      //    distintas: el panorama enseña la ÚLTIMA corrección, así que la de la
+      //    primera pasada ya no vale cuando llega la segunda.
+      const patched = index === 0
+        ? { id: dirtyArtist, name: "Trueno Negro (Caracas)" }
+        : { id: spacedArtist, name: "Marea Baja QA (Caracas)" };
+      const beforePatch = await lastScanId();
+      const response = await fetch(`${apiAddress}/artists/${patched.id}`, {
+        method: "PATCH",
+        headers: { authorization: `Bearer ${QA_TOKEN}`, "x-crv-operator": "QA Curaduria", "content-type": "application/json", origin: webUrl },
+        body: JSON.stringify({ name: patched.name }),
+      });
+      if (!response.ok) throw new Error(`la corrección falló: ${response.status} ${await response.text()}`);
+      await waitForCorrectionScan(beforePatch);
       await page.goto(`${webUrl}/curaduria`, { waitUntil: "domcontentloaded" });
       await page.getByText(/desencadenados? por la corrección/u).first().waitFor({ timeout: 20_000 });
       await page.getByText("La corrección desencadenó", { exact: false }).first().waitFor();
@@ -442,6 +458,37 @@ try {
       await page.getByText("Apareció al corregir", { exact: false }).first().waitFor({ timeout: 20_000 });
       await page.screenshot({ path: path.join(outputDir, `${viewport.name}-desencadenados.png`), fullPage: true });
       await assertNoOverflow(page, `${viewport.name} desencadenados`);
+
+      // 9. Autocorrección (E10): autorizar una acción de nivel 0, correrla y ver
+      //    lo corregido hoy con su deshacer, aquí y en el panorama.
+      await page.goto(`${webUrl}/curaduria/autocorreccion`, { waitUntil: "domcontentloaded" });
+      await waitForApp(page);
+      await page.getByRole("heading", { name: "Autocorrección", exact: true }).waitFor({ timeout: 20_000 });
+      if (index === 0) {
+        // Lo que exige criterio humano no se puede autorizar: no está en la lista.
+        const offered = await page.locator("#autofix-option option").allInnerTexts();
+        if (offered.some((text) => /Fusionar/u.test(text))) throw new Error(`${viewport.name}: la lista blanca ofrece una acción de nivel 1`);
+        await page.selectOption("#autofix-option", "caracteres_invisibles|*|limpiar_texto");
+        await page.getByLabel("Encenderla ya").check();
+        await page.getByRole("button", { name: "Autorizar" }).click();
+      }
+      await page.getByRole("button", { name: "Apagar", exact: true }).first().waitFor({ timeout: 20_000 });
+      await page.screenshot({ path: path.join(outputDir, `${viewport.name}-autocorreccion.png`), fullPage: true });
+      await assertNoOverflow(page, `${viewport.name} autocorrección`);
+
+      await page.getByRole("button", { name: /Correr ahora/u }).click();
+      await page.getByRole("link", { name: /^Lote #/u }).first().waitFor({ timeout: 20_000 });
+      await page.getByRole("button", { name: /Deshacer el lote/u }).first().waitFor({ timeout: 10_000 });
+      await page.screenshot({ path: path.join(outputDir, `${viewport.name}-autocorreccion-hoy.png`), fullPage: true });
+      if (index === 0) {
+        const left = await getPool().query<{ n: string }>("SELECT count(*)::text AS n FROM public.artists WHERE name LIKE $1", [`%${ZERO_WIDTH_SPACE}%`]);
+        if (left.rows[0]!.n !== "0") throw new Error(`${viewport.name}: la autocorrección dejó ${left.rows[0]!.n} nombres con carácter invisible`);
+      }
+
+      await page.goto(`${webUrl}/curaduria`, { waitUntil: "domcontentloaded" });
+      await page.getByRole("heading", { name: "Autocorrecciones de hoy" }).waitFor({ timeout: 20_000 });
+      await page.screenshot({ path: path.join(outputDir, `${viewport.name}-autocorreccion-panorama.png`), fullPage: true });
+      await assertNoOverflow(page, `${viewport.name} panorama con autocorrección`);
 
       if (pageErrors.length) throw new Error(`${viewport.name}: ${pageErrors.join("; ")}`);
       await page.close();

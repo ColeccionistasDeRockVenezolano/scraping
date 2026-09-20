@@ -178,3 +178,155 @@ function buildSnapshot({
     distinctPairs,
   };
 }
+
+// ---------------------------------------------------------------------------
+// Foto dirigida (PLAN_CURADURIA E9.1)
+// ---------------------------------------------------------------------------
+
+/**
+ * La vecindad de una ficha: lo que un detector LOCAL necesita para decidir
+ * sobre ella y dar el mismo resultado que daría mirando el catálogo entero.
+ *
+ *  * una pista necesita su disco (para el artista del disco y el título) y las
+ *    demás pistas de ese disco (la numeración se juzga por cara completa);
+ *  * un disco necesita su artista y todas sus pistas;
+ *  * un artista tocado necesita sus discos —renombrarlo cambia lo que se
+ *    detecta en los títulos que lo repiten— y, con ellos, sus pistas;
+ *  * una persona o una organización se bastan con sus vínculos.
+ *
+ * Todo lo demás que un detector local consulta —cómo se escriben los nombres
+ * del catálogo, qué artistas existen con cada clave, la distribución de
+ * duraciones— vive en el vocabulario, que se aprende del catálogo entero y se
+ * reutiliza (E9.3).
+ *
+ * `covered` es la promesa que sostiene la resolución: «esto lo miré». Incluye
+ * lo que se pidió aunque ya no exista (una ficha retirada por una fusión: su
+ * ausencia es justo lo que resuelve el hallazgo) y lo que se cargó de vecindad.
+ */
+export interface FocusRef { kind: string; id: number }
+
+export interface FocusedSnapshot {
+  snapshot: CatalogSnapshot;
+  covered: FocusRef[];
+}
+
+/** Tope de discos que arrastra un artista tocado: más allá, el análisis completo se encarga. */
+const FOCUS_ALBUM_LIMIT = 500;
+
+const ids = (focus: readonly FocusRef[], kind: string): number[] =>
+  [...new Set(focus.filter((ref) => ref.kind === kind && Number.isSafeInteger(ref.id)).map((ref) => ref.id))];
+
+export async function loadFocusedSnapshot(db: SnapshotClient, focus: readonly FocusRef[]): Promise<FocusedSnapshot> {
+  await db.query("BEGIN ISOLATION LEVEL REPEATABLE READ READ ONLY");
+  try {
+    const loaded = await readFocus(db, focus);
+    await db.query("COMMIT");
+    return loaded;
+  } catch (error) {
+    await db.query("ROLLBACK").catch(() => undefined);
+    throw error;
+  }
+}
+
+async function readFocus(db: SnapshotClient, focus: readonly FocusRef[]): Promise<FocusedSnapshot> {
+  const artistIds = new Set(ids(focus, "artist"));
+  const personIds = ids(focus, "person");
+  const organizationIds = ids(focus, "organization");
+  const albumIds = new Set(ids(focus, "album"));
+  const trackIds = ids(focus, "track");
+
+  // La pista pedida trae su disco; el disco traerá luego a todas sus hermanas.
+  if (trackIds.length) {
+    const { rows } = await db.query<{ album_id: string }>("SELECT album_id::text FROM public.tracks WHERE id = ANY($1::bigint[])", [trackIds]);
+    for (const row of rows) albumIds.add(Number(row.album_id));
+  }
+  if (artistIds.size) {
+    const { rows } = await db.query<{ id: string }>(
+      "SELECT id::text FROM public.albums WHERE artist_id = ANY($1::bigint[]) ORDER BY id LIMIT $2", [[...artistIds], FOCUS_ALBUM_LIMIT]);
+    for (const row of rows) albumIds.add(Number(row.id));
+  }
+
+  const albums = await db.query<{ id: string; artist_id: string; title: string; release_year: number | null; album_type: string }>(
+    "SELECT id::text, artist_id::text, title, release_year, album_type::text FROM public.albums WHERE id = ANY($1::bigint[]) ORDER BY id", [[...albumIds]]);
+  for (const row of albums.rows) artistIds.add(Number(row.artist_id));
+
+  // Todas las pistas de los discos cubiertos (la numeración solo se juzga
+  // entera), más las pistas pedidas cuyo disco no entró.
+  const tracks = await db.query<{ id: string; album_id: string; disc_number: number; track_number: number; title: string; duration_seconds: number | null }>(`
+    SELECT id::text, album_id::text, disc_number, track_number, title, duration_seconds
+      FROM public.tracks WHERE album_id = ANY($1::bigint[]) OR id = ANY($2::bigint[])
+     ORDER BY album_id, disc_number, track_number`, [[...albumIds], trackIds]);
+
+  const artists = await db.query<{ id: string; name: string; origin_city: string | null; formed_year: number | null; disbanded_year: number | null }>(
+    "SELECT id::text, name, origin_city, formed_year, disbanded_year FROM public.artists WHERE id = ANY($1::bigint[]) ORDER BY id", [[...artistIds]]);
+  const persons = await db.query<{ id: string; name: string }>(
+    "SELECT id::text, name FROM public.persons WHERE id = ANY($1::bigint[]) ORDER BY id", [personIds]);
+  const organizations = await db.query<{ id: string; name: string; organization_type: string }>(
+    "SELECT id::text, name, organization_type::text FROM public.organizations WHERE id = ANY($1::bigint[]) ORDER BY id", [organizationIds]);
+
+  // Vínculos de las fichas cubiertas: sin ellos, «Fichas sin vínculos» daría
+  // por huérfano a todo lo que mira.
+  const personLinks = await db.query<{ id: string; n: string }>(`
+    SELECT id::text, count(*)::text AS n FROM (
+      SELECT person_id AS id FROM public.artist_members WHERE person_id = ANY($1::bigint[])
+      UNION ALL SELECT person_id FROM public.album_credits WHERE person_id = ANY($1::bigint[])
+      UNION ALL SELECT person_id FROM public.track_credits WHERE person_id = ANY($1::bigint[])
+      UNION ALL SELECT person_id FROM public.person_organizations WHERE person_id = ANY($1::bigint[])
+    ) links GROUP BY id`, [personIds]);
+  const organizationLinks = await db.query<{ id: string; n: string }>(`
+    SELECT id::text, count(*)::text AS n FROM (
+      SELECT label_id AS id FROM public.albums WHERE label_id = ANY($1::bigint[])
+      UNION ALL SELECT organization_id FROM public.album_credits WHERE organization_id = ANY($1::bigint[])
+      UNION ALL SELECT organization_id FROM public.track_credits WHERE organization_id = ANY($1::bigint[])
+      UNION ALL SELECT organization_id FROM public.person_organizations WHERE organization_id = ANY($1::bigint[])
+    ) links GROUP BY id`, [organizationIds]);
+  const artistLinks = await db.query<{ id: string; n: string }>(`
+    SELECT id::text, count(*)::text AS n FROM (
+      SELECT artist_id AS id FROM public.albums WHERE artist_id = ANY($1::bigint[])
+      UNION ALL SELECT artist_id FROM public.album_credits WHERE artist_id = ANY($1::bigint[])
+      UNION ALL SELECT artist_id FROM public.track_credits WHERE artist_id = ANY($1::bigint[])
+      UNION ALL SELECT artist_id FROM public.artist_members WHERE artist_id = ANY($1::bigint[])
+    ) links GROUP BY id`, [[...artistIds]]);
+  const personArtists = await db.query<{ person_id: string; artist_id: string }>(`
+    SELECT person_id::text, artist_id::text FROM public.artist_members WHERE person_id = ANY($1::bigint[])
+    UNION SELECT c.person_id::text, a.artist_id::text FROM public.album_credits c JOIN public.albums a ON a.id=c.album_id WHERE c.person_id = ANY($1::bigint[])
+    UNION SELECT c.person_id::text, a.artist_id::text FROM public.track_credits c JOIN public.tracks t ON t.id=c.track_id JOIN public.albums a ON a.id=t.album_id
+     WHERE c.person_id = ANY($1::bigint[])`, [personIds]);
+
+  const personArtistMap = new Map<number, Set<number>>();
+  for (const row of personArtists.rows) {
+    const id = Number(row.person_id);
+    personArtistMap.set(id, (personArtistMap.get(id) ?? new Set<number>()).add(Number(row.artist_id)));
+  }
+
+  const snapshot: CatalogSnapshot = {
+    takenAt: new Date(),
+    artists: artists.rows.map((row) => ({ id: Number(row.id), name: row.name, originCity: row.origin_city, formedYear: row.formed_year, disbandedYear: row.disbanded_year })),
+    persons: persons.rows.map((row) => ({ id: Number(row.id), name: row.name })),
+    organizations: organizations.rows.map((row) => ({ id: Number(row.id), name: row.name, type: row.organization_type })),
+    albums: albums.rows.map((row) => ({ id: Number(row.id), artistId: Number(row.artist_id), title: row.title, releaseYear: row.release_year, albumType: row.album_type })),
+    tracks: tracks.rows.map((row) => ({ id: Number(row.id), albumId: Number(row.album_id), disc: row.disc_number, number: row.track_number, title: row.title, durationSeconds: row.duration_seconds })),
+    // El vocabulario llega aprendido del catálogo entero (E9.3): los roles solo
+    // lo alimentan a él. Revisiones, conflictos y pares son de detectores
+    // globales, que un análisis dirigido no corre ni resuelve.
+    creditRoles: [],
+    personArtists: personArtistMap,
+    personLinks: countMap(personLinks.rows),
+    organizationLinks: countMap(organizationLinks.rows),
+    artistLinks: countMap(artistLinks.rows),
+    reviews: [],
+    conflicts: [],
+    handledPairs: new Set(),
+    distinctPairs: new Set(),
+  };
+
+  const covered = new Map<string, FocusRef>();
+  const cover = (kind: string, id: number) => covered.set(`${kind}:${id}`, { kind, id });
+  for (const ref of focus) if (Number.isSafeInteger(ref.id)) cover(ref.kind, ref.id);
+  for (const artist of snapshot.artists) cover("artist", artist.id);
+  for (const person of snapshot.persons) cover("person", person.id);
+  for (const organization of snapshot.organizations) cover("organization", organization.id);
+  for (const album of snapshot.albums) cover("album", album.id);
+  for (const track of snapshot.tracks) cover("track", track.id);
+  return { snapshot, covered: [...covered.values()] };
+}

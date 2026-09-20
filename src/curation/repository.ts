@@ -507,6 +507,23 @@ export async function listGroupFindings(
   return { rows: result.rows.map((row) => findingRow(row, lastScan)), total: Number(result.rows[0]?.total ?? 0) };
 }
 
+/**
+ * Hallazgos ABIERTOS de un detector (y, si se pide, de un subgrupo) en orden
+ * estable: los candidatos de una regla de autocorrección (PLAN_CURADURIA E10).
+ * Va por el índice parcial de 0023 (detector, signature) sobre lo abierto.
+ */
+export async function listAutofixCandidates(detector: string, signature: string | null, limit: number): Promise<FindingRow[]> {
+  const [lastScan, result] = await Promise.all([
+    lastOkScanId(),
+    getPool().query<RawFinding>(`
+      SELECT ${FINDING_COLUMNS}, '0' AS total
+        FROM ingest.curation_findings
+       WHERE status = 'open' AND detector = $1 AND ($2::text IS NULL OR signature = $2)
+       ORDER BY id LIMIT $3`, [detector, signature, limit]),
+  ]);
+  return result.rows.map((row) => findingRow(row, lastScan));
+}
+
 export async function getFinding(id: number): Promise<FindingRow | undefined> {
   const [lastScan, result] = await Promise.all([
     lastOkScanId(),

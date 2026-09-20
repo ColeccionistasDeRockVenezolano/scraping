@@ -240,6 +240,10 @@ describe("detector de conflictos de Curaduría (persistencia y verificación de 
   }, 60_000);
 
   it("dos procesos que analizan a la vez: uno guarda y el otro se omite (A4)", async () => {
+    // Algo nuevo que guardar: desde E9.4 un análisis que no encuentra ningún
+    // cambio no escribe una sola fila, y esta prueba necesita que el primero se
+    // quede esperando justo en el INSERT para arrancar el segundo.
+    await one("INSERT INTO public.artists(name, origin_city) VALUES($1, 'Valencia') RETURNING id", [`Simultaneo${ZERO_WIDTH_SPACE} A4`]);
     // Otro proceso (la CLI mientras corre la API): módulos y pool propios.
     vi.resetModules();
     const otherScan = await import("../../src/curation/scan.js");

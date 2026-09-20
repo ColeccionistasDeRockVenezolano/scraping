@@ -42,7 +42,8 @@ import { DeepSeekArbiter, FileArbiter, type Arbiter } from "../ambiguity/arbiter
 import { createDeepSeekGateway } from "../ai/gateway.js";
 import { getEnv } from "../config/env.js";
 import { applySincopaOrganizationRepair, planSincopaOrganizationRepair } from "../review/sincopa-organizations.js";
-import { runCurationScan } from "../curation/scan.js";
+import { runCurationScan, waitForCurationScans } from "../curation/scan.js";
+import { autofixReport, installAutofix, listAutofixRules, runAutofix } from "../curation/autofix.js";
 import { getCurationSummary } from "../curation/repository.js";
 import { pruneCuration } from "../curation/retention.js";
 import { compactEntityResolutionDecisions } from "../er/retention.js";
@@ -680,6 +681,9 @@ async function main(): Promise<number> {
     case "curation": {
       const [subcommand] = args;
       if (subcommand === "scan") {
+        // Igual que la API: tras un análisis completo corre la autocorrección
+        // si el entorno la permite y hay reglas encendidas (PLAN_CURADURIA E10).
+        installAutofix();
         const summary = await runCurationScan({ trigger: "cli", dryRun: args.includes("--dry-run") });
         if (summary.status === "failed") {
           console.error(`curation scan falló: ${summary.error ?? "error desconocido"}`);
@@ -703,8 +707,35 @@ async function main(): Promise<number> {
         for (const failure of summary.failures) console.error(`  ! detector ${failure.detector}: ${failure.error}`);
         // Parcial: lo que miraron los detectores sanos quedó guardado; lo del roto, intacto.
         if (summary.status === "partial") console.error("  análisis parcial: los hallazgos de los detectores que fallaron no se tocaron");
+        console.log(`  Tiempo: foto ${summary.timings.snapshotMs} ms · vocabulario ${summary.timings.lexiconMs} ms (${summary.timings.lexicon})`
+          + ` · detectores ${summary.timings.detectMs} ms · guardado ${summary.timings.persistMs} ms`);
         if (summary.dryRun) console.log("  (dry-run: nada se escribió)");
+        // La autocorrección corre detrás del análisis: el proceso la espera.
+        await waitForCurationScans();
         return summary.status === "partial" ? 1 : 0;
+      }
+      if (subcommand === "autofix") {
+        if (args.includes("--run")) {
+          const result = await runAutofix({ scanId: null });
+          console.log(`curation autofix: ${result.status} · ${result.applied} correcciones`);
+          for (const rule of result.rules) {
+            console.log(`  ${rule.detector}${rule.signature ? ` › ${rule.signature}` : ""} → ${rule.actionKey}: `
+              + `${rule.applied} aplicadas${rule.failed ? `, ${rule.failed} sin aplicar` : ""}`
+              + `${rule.reverted ? ` · DESHECHO y regla apagada (${rule.triggered} desencadenados)` : ""} (lote ${rule.batchId ?? "—"})`);
+          }
+          await waitForCurationScans();
+          return result.status === "hecha" || result.status === "sin_candidatos" || result.status === "sin_reglas" ? 0 : 1;
+        }
+        const [report, rules] = await Promise.all([autofixReport(), listAutofixRules()]);
+        console.log(`autocorrección ${report.enabled ? "permitida por el entorno" : "APAGADA en el entorno (CRV_CURATION_AUTOFIX=false)"}`
+          + ` · ${report.rules.active} de ${report.rules.total} reglas encendidas`);
+        console.log(`hoy: ${report.today.batches} lotes · ${report.today.applied} correcciones · ${report.today.undone} deshechas`);
+        for (const rule of rules) {
+          console.log(`  ${rule.enabled ? "ON " : "off"} ${rule.detector}${rule.signature ? ` › ${rule.signature}` : " › (todos)"} → ${rule.actionKey}`
+            + `${rule.disabledReason ? ` · apagada sola: ${rule.disabledReason}` : ""}`);
+        }
+        for (const alert of report.alerts) console.error(`  ! ${alert.detector} → ${alert.actionKey}: ${alert.reason}`);
+        return 0;
       }
       if (subcommand === "prune") {
         const result = await pruneCuration({ dryRun: args.includes("--dry-run") });
@@ -727,7 +758,7 @@ async function main(): Promise<number> {
         }
         return 0;
       }
-      console.error("uso: crv curation scan [--dry-run] | crv curation summary | crv curation prune [--dry-run]");
+      console.error("uso: crv curation scan [--dry-run] | crv curation summary | crv curation prune [--dry-run] | crv curation autofix [--run]");
       return 1;
     }
 
@@ -851,6 +882,7 @@ CRV CLI
   curation scan [--dry-run]  analiza el catálogo con el detector de conflictos de Curaduría: nombres sucios,
                              mal segmentados, fichas de otro tipo, repetidas, incoherentes, en disputa, «Otros»
   curation summary           conteos abiertos por categoría y detector, y el último análisis
+  curation autofix [--run]   estado de la autocorrección segura (reglas, lo de hoy, avisos); --run la aplica ahora
   curation prune [--dry-run] retención: borra los análisis anteriores a los últimos 500 y los hallazgos resueltos
                              hace más de 180 días (nunca abiertos ni ignorados)
   er:prune [--dry-run] [--keep-full-days=N] [--max-rows=N]

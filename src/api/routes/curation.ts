@@ -29,7 +29,10 @@ import {
   CurationError, DISTINCT_PAIR_KINDS, IGNORE_REASONS, acknowledgeChain, acknowledgeChainGroup, declareDistinctPair,
   getCurationSummary, getFinding, ignoreFinding, ignoreGroup, listDistinctPairs, listFindings, listScans, removeDistinctPair, reopenFinding,
 } from "../../curation/repository.js";
+import { autofixSummary } from "../../curation/autofix.js";
 import { isCurationScanRunning, runCurationScan } from "../../curation/scan.js";
+import type { FocusRef } from "../../curation/snapshot.js";
+import type { FindingEntityKind } from "../../curation/types.js";
 import { flushCurationWork, notifyCatalogWrite } from "../../curation/watcher.js";
 
 const severitySchema = z.enum(["high", "medium", "low"]);
@@ -40,10 +43,22 @@ const scanSchema = z.object({
   startedAt: z.string(), finishedAt: z.string().nullable(), error: z.string().nullable(), counters: z.record(z.unknown()),
 });
 
+/** Autocorrección en el panorama (PLAN_CURADURIA E10.4): lo de hoy y los avisos. */
+const autofixSummarySchema = z.object({
+  enabled: z.boolean(),
+  rules: z.object({ total: z.number().int(), active: z.number().int() }),
+  today: z.object({ batches: z.number().int(), applied: z.number().int(), undone: z.number().int() }),
+  alerts: z.array(z.object({
+    ruleId: z.number().int().nullable(), detector: z.string(), signature: z.string().nullable(), actionKey: z.string(),
+    reason: z.string(), batchId: z.number().int().nullable(), at: z.string(),
+  })),
+});
+
 const summarySchema = z.object({
   lastScan: scanSchema.nullable(),
   lastCorrection: scanSchema.nullable(),
   running: z.boolean(),
+  autofix: autofixSummarySchema,
   totals: z.object({ open: z.number(), ignored: z.number(), resolved: z.number(), newInLastScan: z.number(), chainedOpen: z.number() }),
   categories: z.array(z.object({
     key: z.string(), label: z.string(), description: z.string(),
@@ -168,6 +183,31 @@ export function isCatalogWrite(method: string, path: string): boolean {
   return WRITE_METHODS.has(method.toUpperCase()) && CATALOG_WRITES.some((pattern) => pattern.test(path));
 }
 
+/**
+ * Rutas cuyo `:id` ES la ficha que la escritura tocó. Con ella, la escritura se
+ * verifica al instante con un análisis dirigido a su vecindad (PLAN_CURADURIA
+ * E9.1); sin ella —crear una ficha, editar un crédito, decidir una revisión—
+ * solo queda el análisis completo diferido, que llega en menos de un minuto.
+ */
+const WRITE_ENTITY_BY_PREFIX: Readonly<Record<string, FindingEntityKind>> = {
+  artists: "artist", persons: "person", organizations: "organization", albums: "album", tracks: "track",
+};
+
+export function writeFocus(routeUrl: string, params: unknown, body?: unknown): FocusRef[] {
+  const kind = WRITE_ENTITY_BY_PREFIX[routeUrl.split("/")[1] ?? ""];
+  if (!kind) return [];
+  const refs: FocusRef[] = [];
+  const add = (raw: unknown) => {
+    const id = Number(raw);
+    if (raw !== undefined && raw !== null && Number.isSafeInteger(id) && id > 0) refs.push({ kind, id });
+  };
+  add((params as { id?: unknown } | null)?.id);
+  // Una fusión retira la otra ficha del mismo tipo: sin ella, sus hallazgos
+  // esperarían al análisis completo para darse por resueltos.
+  if (routeUrl.endsWith("/merge")) add((body as { dropId?: unknown } | null)?.dropId);
+  return refs;
+}
+
 const CURATION_STATUS: Readonly<Record<CurationError["code"], number>> = {
   not_found: 404,
   not_fixable: 422,
@@ -215,7 +255,8 @@ export async function registerCurationRoutes(app: FastifyInstance): Promise<void
   if (getEnv().CRV_CURATION_AUTOSCAN) {
     app.addHook("onResponse", async (request, reply) => {
       if (reply.statusCode >= 400 || !isCatalogWrite(request.method, request.url.split("?")[0] ?? "")) return;
-      notifyCatalogWrite(request.operator || null, `${request.method} ${request.routeOptions.url ?? request.url.split("?")[0]}`);
+      const route = request.routeOptions.url ?? request.url.split("?")[0] ?? "";
+      notifyCatalogWrite(request.operator || null, `${request.method} ${route}`, writeFocus(route, request.params, request.body));
     });
     app.addHook("onClose", async () => { await flushCurationWork(); });
   }
@@ -226,7 +267,10 @@ export async function registerCurationRoutes(app: FastifyInstance): Promise<void
       summary: "Categorías del detector de conflictos con sus conteos, el último análisis y la última verificación tras una corrección.",
       response: { 200: summarySchema },
     },
-  }, async () => getCurationSummary(isCurationScanRunning()));
+  }, async () => {
+    const [summary, autofix] = await Promise.all([getCurationSummary(isCurationScanRunning()), autofixSummary()]);
+    return { ...summary, autofix };
+  });
 
   server.get("/curation/findings", {
     schema: {
@@ -323,7 +367,9 @@ export async function registerCurationRoutes(app: FastifyInstance): Promise<void
       ...(body.choice === undefined ? {} : { choice: body.choice }),
       ...(Object.hasOwn(body, "value") && body.value !== undefined ? { value: body.value } : {}),
     }).catch(curationError);
-    notifyCatalogWrite(request.operator || null, "POST /curation/findings/:id/resolve-conflict");
+    // Un conflicto resuelto lo ve el detector de cola, que es global: no hay
+    // verificación dirigida posible, así que el completo no espera (E9.2).
+    notifyCatalogWrite(request.operator || null, "POST /curation/findings/:id/resolve-conflict", [], { fullScan: "soon" });
     return result;
   });
 
@@ -338,7 +384,7 @@ export async function registerCurationRoutes(app: FastifyInstance): Promise<void
   }, async (request) => {
     const { note, ...filter } = request.body;
     const result = await resolveConflictsGroupByTrust(filter, request.operator, note).catch(curationError);
-    if (result.applied > 0) notifyCatalogWrite(request.operator || null, "POST /curation/findings/resolve-conflicts-group");
+    if (result.applied > 0) notifyCatalogWrite(request.operator || null, "POST /curation/findings/resolve-conflicts-group", [], { fullScan: "soon" });
     return result;
   });
 
@@ -376,8 +422,9 @@ export async function registerCurationRoutes(app: FastifyInstance): Promise<void
     },
   }, async (request) => {
     const result = await declareDistinctPair(request.body, request.operator, request.body.note).catch(curationError);
-    // Nada del catálogo cambió, pero el par deja de ser un hallazgo: se verifica ya.
-    if (result.created) notifyCatalogWrite(request.operator || null, "POST /curation/distinct-pairs");
+    // Nada del catálogo cambió, pero el par deja de ser un hallazgo. Lo ve el
+    // detector de duplicados, que es global: se pide el análisis completo ya.
+    if (result.created) notifyCatalogWrite(request.operator || null, "POST /curation/distinct-pairs", [], { fullScan: "soon" });
     return result;
   });
 
@@ -391,7 +438,7 @@ export async function registerCurationRoutes(app: FastifyInstance): Promise<void
     },
   }, async (request) => {
     const pair = await removeDistinctPair(request.params.id).catch(curationError);
-    notifyCatalogWrite(request.operator || null, "DELETE /curation/distinct-pairs/:id");
+    notifyCatalogWrite(request.operator || null, "DELETE /curation/distinct-pairs/:id", [], { fullScan: "soon" });
     return { pair };
   });
 

@@ -26,9 +26,31 @@ import { normalizeEntityName } from "../normalization/entity-name.js";
 import { looksLikeOrganization } from "../review/person-names.js";
 import type { CatalogSnapshot, EntityRef, SnapshotAlbum, SnapshotArtist } from "./types.js";
 
-/** Clave sin tildes, mayúsculas ni signos. */
+/**
+ * Clave sin tildes, mayúsculas ni signos.
+ *
+ * Memoizada: normalizar cuesta ~5 µs y el análisis completo la llama más de un
+ * millón de veces sobre los mismos ~44.000 nombres (el vocabulario la recorre
+ * cinco veces y cada detector otras tantas). Con la caché, construir el
+ * vocabulario baja de ~1,2 s a ~0,4 s (PLAN_CURADURIA E9.5). La caché se vacía
+ * entera al llegar al tope: es un acelerador, no un índice, y ningún resultado
+ * depende de qué haya dentro.
+ */
+const KEY_CACHE_MAX = 200_000;
+const keyCache = new Map<string, string>();
+
 export function nameKey(value: string): string {
-  return normalizeEntityName(value).secondaryKey;
+  const cached = keyCache.get(value);
+  if (cached !== undefined) return cached;
+  const key = normalizeEntityName(value).secondaryKey;
+  if (keyCache.size >= KEY_CACHE_MAX) keyCache.clear();
+  keyCache.set(value, key);
+  return key;
+}
+
+/** Solo para pruebas y medidas: vacía la caché de claves. */
+export function resetNameKeyCache(): void {
+  keyCache.clear();
 }
 
 export function keyTokens(value: string): string[] {
@@ -76,6 +98,14 @@ export interface Lexicon {
   descriptorTokens: Set<string>;
   /** Palabras de título de pieza breve: una pista corta con una de ellas no es atípica. */
   briefPieceTokens: Set<string>;
+  /**
+   * Distribución de duraciones del catálogo entero en escala logarítmica
+   * (mediana y desviación robusta). Vive aquí, y no en el detector, porque es
+   * una medida global: un análisis dirigido mira cuatro pistas y no podría
+   * calcularla (PLAN_CURADURIA E9.1). `null` = el catálogo no tiene bastantes
+   * duraciones para comparar.
+   */
+  durations: { median: number; mad: number } | null;
   vocabulary: Set<string>;
   artistsByKey: Map<string, SnapshotArtist[]>;
   personsByKey: Map<string, number[]>;
@@ -425,6 +455,28 @@ export function collectNames(snapshot: CatalogSnapshot): NameValue[] {
   return names;
 }
 
+/** Duraciones mínimas para que la comparación signifique algo. */
+const DURATION_MIN_TRACKS = 30;
+
+/**
+ * Mediana y desviación robusta del logaritmo de las duraciones conocidas: la
+ * referencia contra la que `duracion_atipica` decide si una pista se sale de
+ * lo habitual en este catálogo.
+ */
+function learnDurations(snapshot: CatalogSnapshot): { median: number; mad: number } | null {
+  const logs: number[] = [];
+  for (const track of snapshot.tracks) if (track.durationSeconds !== null && track.durationSeconds > 0) logs.push(Math.log(track.durationSeconds));
+  if (logs.length < DURATION_MIN_TRACKS) return null;
+  // Mediana baja (el elemento central, sin promediar el par central) y su
+  // desviación absoluta mediana, igual que se calculaba dentro del detector:
+  // mover el cálculo no cambia ni un hallazgo.
+  logs.sort((a, b) => a - b);
+  const middle = Math.floor(logs.length / 2);
+  const med = logs[middle]!;
+  const mad = logs.map((value) => Math.abs(value - med)).sort((a, b) => a - b)[middle]!;
+  return { median: med, mad: mad || 0.1 };
+}
+
 export function buildLexicon(snapshot: CatalogSnapshot, names: NameValue[]): Lexicon {
   const places = new Set<string>();
   const placeTokens = new Set<string>();
@@ -461,6 +513,7 @@ export function buildLexicon(snapshot: CatalogSnapshot, names: NameValue[]): Lex
     surnames,
     descriptorTokens,
     briefPieceTokens: learnBriefPieceTokens(snapshot),
+    durations: learnDurations(snapshot),
     vocabulary,
     artistsByKey: group(snapshot.artists, (artist) => nameKey(artist.name)),
     personsByKey: new Map([...group(snapshot.persons, (person) => nameKey(person.name))].map(([key, list]) => [key, list.map((person) => person.id)])),

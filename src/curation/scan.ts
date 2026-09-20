@@ -32,15 +32,21 @@
 //  - Un refresco que cambia gravedad, título o subgrupo deja constancia en
 //    `evidence.history` (los últimos 5 cambios), en vez de cambiarlo en silencio.
 //
-// VERIFICACIÓN DIRIGIDA (PLAN_CURADURIA E4.6): tras aplicar un lote de
-// correcciones, un análisis con `focus` —las fichas que el lote tocó y sus
-// relacionadas— guarda y resuelve SOLO los hallazgos de esas fichas (`scope =
-// 'dirigido'`). Hoy corre todos los detectores sobre la foto entera (separar
-// locales y globales es E9); lo que cambie fuera del foco lo recoge el
-// siguiente análisis completo del vigilante. Un análisis dirigido no cuenta
-// como «último análisis» ni como firma vista por el vigilante. Un hallazgo con
-// un ítem de lote aplicado se resuelve como `fixed_by_curation` con el run de
-// ese ítem, aunque la corrección haya retirado su ficha (una fusión).
+// VERIFICACIÓN DIRIGIDA (PLAN_CURADURIA E4.6, E9.1): tras aplicar un lote de
+// correcciones —o tras una escritura de la API que nombra una ficha— un
+// análisis con `focus` mira SOLO la vecindad de esas fichas y solo con los
+// detectores LOCALES (`scope = 'dirigido'`). Guarda y resuelve únicamente los
+// hallazgos de las fichas que miró (`covered`). Lo global —duplicados, cola,
+// «Otros»— y lo que quede fuera del foco los recoge el análisis completo
+// diferido. Un análisis dirigido no cuenta como «último análisis» ni como
+// firma vista por el vigilante. Un hallazgo con un ítem de lote aplicado se
+// resuelve como `fixed_by_curation` con el run de ese ítem, aunque la
+// corrección haya retirado su ficha (una fusión).
+//
+// RENDIMIENTO (PLAN_CURADURIA E9): el análisis completo ya no se dispara con
+// cada escritura (A9). Se escribe solo la diferencia —altas, reaperturas y
+// cambios—, el vocabulario se reutiliza mientras el catálogo no se mueva y cada
+// análisis deja en sus contadores dónde se fue el tiempo (`timings`).
 //
 // Dentro del proceso, un solo análisis a la vez: las peticiones que llegan
 // mientras corre se agrupan en uno solo posterior. Las verificaciones
@@ -50,9 +56,13 @@ import { getPool } from "../db/client.js";
 import { moduleLogger } from "../logger/index.js";
 import { summarizeActions } from "./actions/registry.js";
 import type { ActionFinding, ActionLevel } from "./actions/types.js";
-import { DETECTOR_DEFINITIONS, RULES_VERSION, analyzeCatalog, storableText, type AnalysisResult } from "./analyze.js";
+import {
+  DETECTOR_DEFINITIONS, LOCAL_DETECTORS, RULES_VERSION, analyzeCatalog, contentHashOf, storableText, type AnalysisResult,
+} from "./analyze.js";
+import { buildLexicon, collectNames } from "./lexicon.js";
+import { cachedLexicon, rememberLexicon, type LexiconSource } from "./lexicon-cache.js";
 import { catalogState, classifyResolution, type AppliedFix, type Resolution, type ValueChange } from "./resolution.js";
-import { loadCatalogSnapshot } from "./snapshot.js";
+import { loadCatalogSnapshot, loadFocusedSnapshot, type FocusRef } from "./snapshot.js";
 import type { CatalogSnapshot, EntityRef, Finding } from "./types.js";
 
 const log = moduleLogger("curation:scan");
@@ -82,7 +92,7 @@ export interface ScanRequest {
   focus?: Focus;
 }
 
-type Focus = ReadonlyArray<{ kind: string; id: number }>;
+type Focus = ReadonlyArray<FocusRef>;
 
 export interface ResolvedRef { id: number; title: string; entityKind: string; entityId: number | null; }
 
@@ -124,6 +134,23 @@ export interface ScanSummary {
   error?: string;
   /** Solo en una verificación dirigida. */
   details?: ScanDetails;
+  /** Dónde se fue el tiempo (PLAN_CURADURIA E9.5): queda en los contadores del análisis. */
+  timings: ScanTimings;
+}
+
+export interface ScanTimings {
+  /** Cargar la foto del catálogo (completa o dirigida). */
+  snapshotMs: number;
+  /** Aprender el vocabulario, o 0 si se reutilizó el de la caché. */
+  lexiconMs: number;
+  /** Correr los detectores. */
+  detectMs: number;
+  /** Guardar altas, cambios y resoluciones. */
+  persistMs: number;
+  /** De dónde salió el vocabulario: del catálogo, de la caché o de una huella anterior. */
+  lexicon: LexiconSource;
+  /** Fichas efectivamente miradas en un análisis dirigido. */
+  covered?: number;
 }
 
 export interface ActionLevelCounts {
@@ -140,6 +167,10 @@ export interface RecommendedActionLevels extends ActionLevelCounts {
 
 function emptyActionCounts(): ActionLevelCounts {
   return { level0: 0, level1: 0, level2: 0, manual: 0 };
+}
+
+function emptyTimings(): ScanTimings {
+  return { snapshotMs: 0, lexiconMs: 0, detectMs: 0, persistMs: 0, lexicon: "catalogo" };
 }
 
 function actionFinding(finding: Finding): ActionFinding {
@@ -211,6 +242,7 @@ const HISTORY_LIMIT = 5;
 function rowOf(finding: Finding & { fingerprint: string }) {
   return {
     fingerprint: finding.fingerprint,
+    content_hash: contentHashOf(finding),
     category: finding.category,
     detector: finding.detector,
     signature: finding.signature,
@@ -246,36 +278,56 @@ const HISTORY_SQL = `CASE WHEN f.severity IS DISTINCT FROM EXCLUDED.severity OR 
         ) WITH ORDINALITY AS h(item, n) WHERE h.n <= ${HISTORY_LIMIT})
   ELSE f.evidence->'history' END`;
 
-const RECORD_COLUMNS = `fingerprint text, category text, detector text, signature text, severity text, entity_kind text, entity_id bigint,
+const RECORD_COLUMNS = `fingerprint text, content_hash text, category text, detector text, signature text, severity text, entity_kind text, entity_id bigint,
   entity_label text, field text, value text, title text, suggestion text, suggested_value text, related jsonb, evidence jsonb`;
 
-/** ¿El hallazgo toca alguna ficha del foco (la suya o una relacionada)? */
-export function inFocus(finding: Pick<Finding, "entity" | "related">, focus: ReadonlySet<string>): boolean {
-  return [finding.entity, ...finding.related].some((ref) => ref.id !== null && focus.has(refKey(ref.kind, ref.id)));
-}
-
-async function persist(client: PoolClient, scanId: number, analysis: AnalysisResult, snapshot: CatalogSnapshot, focus: Focus | null) {
+/**
+ * Guarda el resultado del análisis ESCRIBIENDO SOLO LA DIFERENCIA
+ * (PLAN_CURADURIA E9.4). Antes, cada vuelta reescribía las ~5.400 filas
+ * abiertas aunque nada hubiera cambiado: una versión nueva de cada tupla, sus
+ * índices y su WAL, más el autovacuum detrás.
+ *
+ * Ahora se lee primero el estado guardado de las huellas que este análisis
+ * emitió —id, estado y huella de contenido— y se reparte:
+ *   * alta: la huella no existía;
+ *   * reapertura: existía resuelta y el detector la volvió a ver;
+ *   * cambio: existe abierta o ignorada, pero el contenido es otro (gravedad,
+ *     título, valor, evidencia…);
+ *   * igual: no se toca más que «visto por última vez», en un solo UPDATE
+ *     estrecho por lote.
+ * Solo las tres primeras pasan por el UPSERT completo.
+ */
+async function persist(client: PoolClient, scanId: number, analysis: AnalysisResult, snapshot: CatalogSnapshot, covered: Focus | null) {
   const { findings } = analysis;
-  let inserted = 0; let reopened = 0;
+  let inserted = 0; let reopened = 0; let unchanged = 0;
   // Lo que aparece en este análisis: nuevo o reabierto (se había resuelto y volvió).
   const appearedFingerprints = new Set<string>();
   const idByFingerprint = new Map<string, number>();
-  for (let offset = 0; offset < findings.length; offset += CHUNK) {
-    const chunk = findings.slice(offset, offset + CHUNK);
-    const payload = JSON.stringify(chunk.map(rowOf));
-    const wasResolved = await client.query<{ fingerprint: string }>(`
-      SELECT fingerprint FROM ingest.curation_findings
-       WHERE status = 'resolved' AND fingerprint = ANY($1::text[])`, [chunk.map((finding) => finding.fingerprint)]);
-    reopened += wasResolved.rows.length;
-    for (const row of wasResolved.rows) appearedFingerprints.add(row.fingerprint);
+  const rows = findings.map(rowOf);
+  const stored = await storedState(client, rows.map((row) => row.fingerprint));
+  const pending: Array<ReturnType<typeof rowOf>> = [];
+  for (const row of rows) {
+    const previous = stored.get(row.fingerprint);
+    if (previous && previous.status !== "resolved" && previous.content_hash === row.content_hash) {
+      unchanged += 1;
+      idByFingerprint.set(row.fingerprint, Number(previous.id));
+      continue;
+    }
+    if (previous?.status === "resolved") { reopened += 1; appearedFingerprints.add(row.fingerprint); }
+    pending.push(row);
+  }
+
+  for (let offset = 0; offset < pending.length; offset += CHUNK) {
+    const payload = JSON.stringify(pending.slice(offset, offset + CHUNK));
     const saved = await client.query<{ id: string; fingerprint: string; inserted: boolean }>(`
       INSERT INTO ingest.curation_findings AS f
-        (fingerprint, category, detector, signature, severity, entity_kind, entity_id, entity_label, field, value, title, suggestion,
+        (fingerprint, content_hash, category, detector, signature, severity, entity_kind, entity_id, entity_label, field, value, title, suggestion,
          suggested_value, related, evidence, first_seen_scan_id, last_seen_scan_id)
-      SELECT fingerprint, category, detector, signature, severity, entity_kind, entity_id, entity_label, field, value, title, suggestion,
+      SELECT fingerprint, content_hash, category, detector, signature, severity, entity_kind, entity_id, entity_label, field, value, title, suggestion,
              suggested_value, related, evidence, $2, $2
         FROM jsonb_to_recordset($1::jsonb) AS x(${RECORD_COLUMNS})
       ON CONFLICT (fingerprint) DO UPDATE SET
+        content_hash = EXCLUDED.content_hash,
         category = EXCLUDED.category, detector = EXCLUDED.detector, signature = EXCLUDED.signature, severity = EXCLUDED.severity,
         entity_label = EXCLUDED.entity_label, title = EXCLUDED.title, suggestion = EXCLUDED.suggestion,
         suggested_value = EXCLUDED.suggested_value,
@@ -308,7 +360,16 @@ async function persist(client: PoolClient, scanId: number, analysis: AnalysisRes
     }
   }
 
-  const resolvedRows = await resolveStale(client, scanId, analysis, snapshot, focus);
+  // LO QUE NO CAMBIÓ NO SE ESCRIBE (PLAN_CURADURIA E9.4). Ni siquiera para
+  // sellar «lo he vuelto a ver»: con 22.500 hallazgos abiertos eso era un
+  // segundo y cuarto de escrituras por análisis para no decir nada nuevo. Que
+  // un hallazgo siga abierto ya significa que el último análisis que miró su
+  // detector lo volvió a encontrar, porque si no lo hubiera resuelto; y qué se
+  // ha mirado en ESTE análisis se lo dice a `resolveStale` la lista de huellas
+  // encontradas, no la marca en la fila. `last_seen_scan_id` queda con su
+  // sentido exacto: el último análisis que escribió algo de este hallazgo,
+  // que es también el que fija con qué versión de las reglas se escribió.
+  const resolvedRows = await resolveStale(client, analysis, snapshot, covered);
   const resolutions: Partial<Record<Resolution, number>> = {};
   for (const row of resolvedRows) resolutions[row.resolution] = (resolutions[row.resolution] ?? 0) + 1;
 
@@ -316,9 +377,18 @@ async function persist(client: PoolClient, scanId: number, analysis: AnalysisRes
   // cambio de reglas no es una corrección: lo que las reglas nuevas encuentran
   // no «apareció al corregir» nada.
   const resolvedByEntity = new Map<string, ResolvedRef[]>();
+  // El MISMO problema con otro nombre no es un problema nuevo. La huella de un
+  // hallazgo de nombre incluye el valor, así que al corregir un nombre todo lo
+  // que ese nombre tenía abierto se resuelve y vuelve a entrar con huella nueva:
+  // «Ficha sin vínculos» sobre el mismo artista no apareció al corregir, seguía
+  // ahí. Contarlo como desencadenado engañaba a quien revisa y, peor, hacía
+  // saltar el interruptor de emergencia de la autocorrección (E10.3) cada vez
+  // que la ficha corregida tenía algún otro hallazgo de nombre.
+  const continued = new Set<string>();
   for (const row of resolvedRows) {
     if (row.resolution === "rules_changed") continue;
     const ref: ResolvedRef = { id: Number(row.id), title: row.title, entityKind: row.entity_kind, entityId: row.entity_id === null ? null : Number(row.entity_id) };
+    continued.add(`${row.detector}\u241f${row.signature}\u241f${refKey(row.entity_kind, ref.entityId)}`);
     for (const key of [refKey(row.entity_kind, ref.entityId), ...(row.related ?? []).map((item) => refKey(item.kind, item.id))]) {
       if (key.endsWith(":")) continue;
       resolvedByEntity.set(key, [...(resolvedByEntity.get(key) ?? []), ref]);
@@ -328,6 +398,7 @@ async function persist(client: PoolClient, scanId: number, analysis: AnalysisRes
   if (resolvedByEntity.size && appearedFingerprints.size) {
     for (const finding of findings) {
       if (!appearedFingerprints.has(finding.fingerprint)) continue;
+      if (continued.has(`${finding.detector}\u241f${finding.signature}\u241f${refKey(finding.entity.kind, finding.entity.id)}`)) continue;
       const keys = [refKey(finding.entity.kind, finding.entity.id), ...finding.related.map((item) => refKey(item.kind, item.id))];
       const causes = [...new Map(keys.flatMap((key) => resolvedByEntity.get(key) ?? []).map((ref) => [ref.id, ref])).values()].slice(0, 10);
       if (causes.length) chained.push({ fingerprint: finding.fingerprint, triggered_by: causes.map((ref) => ({ ...ref, title: storableText(ref.title) })) });
@@ -342,7 +413,7 @@ async function persist(client: PoolClient, scanId: number, analysis: AnalysisRes
   }
 
   let details: ScanDetails | undefined;
-  if (focus) {
+  if (covered) {
     const byFingerprint = new Map(findings.map((finding) => [finding.fingerprint, finding]));
     const refsOf = (fingerprints: Iterable<string>): ResolvedRef[] => [...fingerprints].flatMap((fingerprint) => {
       const finding = byFingerprint.get(fingerprint);
@@ -359,14 +430,29 @@ async function persist(client: PoolClient, scanId: number, analysis: AnalysisRes
       triggered: refsOf(chained.map((item) => item.fingerprint)),
     };
   }
-  return { inserted, reopened, resolved: resolvedRows.length, chained: chained.length, resolutions, details };
+  return { inserted, reopened, unchanged, resolved: resolvedRows.length, chained: chained.length, resolutions, details };
+}
+
+/** Estado guardado de las huellas que este análisis emitió: lo justo para repartir. */
+async function storedState(client: PoolClient, fingerprints: readonly string[]): Promise<Map<string, { id: string; status: string; content_hash: string | null }>> {
+  const stored = new Map<string, { id: string; status: string; content_hash: string | null }>();
+  for (let offset = 0; offset < fingerprints.length; offset += CHUNK) {
+    const { rows } = await client.query<{ id: string; fingerprint: string; status: string; content_hash: string | null }>(`
+      SELECT id::text, fingerprint, status, content_hash FROM ingest.curation_findings WHERE fingerprint = ANY($1::text[])`,
+    [fingerprints.slice(offset, offset + CHUNK)]);
+    for (const row of rows) stored.set(row.fingerprint, { id: row.id, status: row.status, content_hash: row.content_hash });
+  }
+  return stored;
 }
 
 type StaleRow = {
   id: string; detector: string; entity_kind: string; entity_id: string | null; field: string | null; value: string | null;
   rules_version: string | null; seen_since: Date | null; pair: unknown;
 };
-type ResolvedRow = { id: string; title: string; entity_kind: string; entity_id: string | null; related: EntityRef[]; resolution: Resolution };
+type ResolvedRow = {
+  id: string; detector: string; signature: string; title: string; entity_kind: string; entity_id: string | null;
+  related: EntityRef[]; resolution: Resolution;
+};
 
 /**
  * Resuelve lo abierto —y lo ignorado— que este análisis no volvió a ver, pero
@@ -374,28 +460,52 @@ type ResolvedRow = { id: string; title: string; entity_kind: string; entity_id: 
  * o de detectores que las reglas actuales ya no tienen. Cada uno con su motivo.
  */
 async function resolveStale(
-  client: PoolClient, scanId: number, analysis: AnalysisResult, snapshot: CatalogSnapshot, focus: Focus | null,
+  client: PoolClient, analysis: AnalysisResult, snapshot: CatalogSnapshot, covered: Focus | null,
 ): Promise<ResolvedRow[]> {
-  // Con foco, solo lo que toca a esas fichas: el resto no se volvió a guardar en
-  // este análisis y resolverlo sería afirmar algo que no se miró.
-  const stale = await client.query<StaleRow>(`
+  // SOLO SE RESUELVE LO QUE SE MIRÓ. En un análisis dirigido, «lo mirado» son
+  // las fichas de la foto dirigida y las que se pidieron y ya no están
+  // (`covered`, snapshot.ts): de cada una se miró su vecindad entera, así que
+  // un hallazgo suyo que no reaparece es un hallazgo resuelto. Un hallazgo de
+  // otra ficha no se toca aunque nombre a una del foco: no se volvió a mirar.
+  // El JOIN contra la lista cubierta usa el índice (entity_kind, entity_id):
+  // recorrer lo abierto entero por cada verificación costaría más que el
+  // análisis. En un análisis completo no hay lista y se mira todo.
+  const scoped = covered !== null;
+  // Lo que este análisis encontró. No se pregunta por la marca de la fila
+  // —que ya no se refresca cuando nada cambió (E9.4)— sino por la huella:
+  // «abierto y no está entre lo que acabo de encontrar» es exactamente lo que
+  // hay que dar por resuelto, y se dice en una comparación que PostgreSQL
+  // resuelve con una tabla hash.
+  const seen = analysis.findings.map((finding) => finding.fingerprint);
+  // Con foco, el filtro por detector no va en SQL: la lista cubierta ya acota
+  // las filas y el reparto fino se hace abajo, con la foto delante.
+  const found = await client.query<StaleRow>(`
     SELECT f.id::text, f.detector, f.entity_kind, f.entity_id::text, f.field, f.value,
            seen.counters->>'rulesVersion' AS rules_version, born.started_at AS seen_since, f.evidence->'pair' AS pair
       FROM ingest.curation_findings f
+      ${scoped ? "JOIN unnest($2::text[], $3::bigint[]) AS covered(kind, id) ON covered.kind = f.entity_kind AND covered.id = f.entity_id" : ""}
       LEFT JOIN ingest.curation_scans seen ON seen.id = f.last_seen_scan_id
       LEFT JOIN ingest.curation_scans born ON born.id = f.first_seen_scan_id
-     WHERE f.status IN ('open', 'ignored') AND f.last_seen_scan_id IS DISTINCT FROM $1
-       AND (f.detector = ANY($2::text[]) OR NOT (f.detector = ANY($3::text[])))
-       AND ($4::jsonb IS NULL OR EXISTS (
-             SELECT 1 FROM jsonb_to_recordset($4::jsonb) AS focus(kind text, id bigint)
-              WHERE (focus.kind = f.entity_kind AND focus.id = f.entity_id)
-                 OR f.related @> jsonb_build_array(jsonb_build_object('kind', focus.kind, 'id', focus.id))))`,
-  [scanId, analysis.completed, KNOWN_DETECTORS, focus ? JSON.stringify(focus) : null]);
+     WHERE f.status IN ('open', 'ignored') AND NOT (f.fingerprint = ANY($1::text[]))
+       ${scoped ? "" : "AND (f.detector = ANY($2::text[]) OR NOT (f.detector = ANY($3::text[])))"}`,
+  scoped
+    ? [seen, covered.map((ref) => ref.kind), covered.map((ref) => ref.id)]
+    : [seen, analysis.completed, KNOWN_DETECTORS]);
+  const state = catalogState(snapshot);
+  // Qué se puede dar por resuelto: lo que miró un detector de este análisis, lo
+  // de una regla que ya no existe y —solo con foco— lo de una ficha que la foto
+  // pidió y ya no está. Que una ficha se haya retirado o fusionado se ve sin
+  // correr su detector, así que una fusión cierra su hallazgo de duplicados
+  // aunque los duplicados sean un detector global que el dirigido no corre.
+  const looked = new Set(analysis.completed);
+  const stale = { rows: found.rows.filter((row) => {
+    if (!KNOWN_DETECTOR_SET.has(row.detector) || looked.has(row.detector)) return true;
+    return row.entity_id !== null && state.exists(row.entity_kind, Number(row.entity_id)) === false;
+  }) };
   if (!stale.rows.length) return [];
 
   const changes = await valueChanges(client, stale.rows);
   const fixes = await appliedFixes(client, stale.rows);
-  const state = catalogState(snapshot);
   const rules = { version: RULES_VERSION, detectors: KNOWN_DETECTOR_SET };
   const verdicts = stale.rows.map((row) => {
     const verdict = classifyResolution({
@@ -412,7 +522,7 @@ async function resolveStale(
          SET status = 'resolved', resolved_at = now(), resolution = x.resolution, resolved_by_run_id = x.run_id
         FROM jsonb_to_recordset($1::jsonb) AS x(id bigint, resolution text, run_id bigint)
        WHERE f.id = x.id AND f.status IN ('open', 'ignored')
-      RETURNING f.id::text, f.title, f.entity_kind, f.entity_id::text, f.related, f.resolution`,
+      RETURNING f.id::text, f.detector, f.signature, f.title, f.entity_kind, f.entity_id::text, f.related, f.resolution`,
     [JSON.stringify(verdicts.slice(offset, offset + CHUNK))]);
     resolved.push(...saved.rows);
   }
@@ -481,6 +591,72 @@ function errorMessage(error: unknown): string {
   return error instanceof Error ? error.message : String(error);
 }
 
+interface AnalysisRun {
+  snapshot: CatalogSnapshot;
+  analysis: AnalysisResult;
+  /** Fichas miradas en un análisis dirigido; `null` en uno completo (se miró todo). */
+  covered: Focus | null;
+}
+
+/**
+ * Análisis COMPLETO: la foto entera, el vocabulario aprendido de ella (o el de
+ * la caché si el catálogo no se ha movido) y todos los detectores.
+ */
+async function analyzeEverything(client: PoolClient, summary: ScanSummary): Promise<AnalysisRun> {
+  const loading = Date.now();
+  const snapshot = await loadCatalogSnapshot(client);
+  summary.timings.snapshotMs = Date.now() - loading;
+
+  const learning = Date.now();
+  // Un análisis completo aprende SIEMPRE del catálogo que acaba de cargar y
+  // deja la caché al día para las verificaciones dirigidas. Reutilizar el
+  // vocabulario cuando la huella no ha cambiado sería fiarse de
+  // `pg_stat_user_tables`, que llega tarde: el análisis que manda no puede
+  // juzgar el catálogo de ahora con el vocabulario de antes.
+  const lexicon = buildLexicon(snapshot, collectNames(snapshot));
+  rememberLexicon(summary.catalogSignature, lexicon);
+  summary.timings.lexicon = "catalogo";
+  summary.timings.lexiconMs = Date.now() - learning;
+
+  const detecting = Date.now();
+  const analysis = analyzeCatalog(snapshot, { lexicon });
+  summary.timings.detectMs = Date.now() - detecting;
+  return { snapshot, analysis, covered: null };
+}
+
+/**
+ * Análisis DIRIGIDO (PLAN_CURADURIA E9.1): la vecindad de las fichas tocadas y
+ * solo los detectores locales. Los globales —duplicados, cola y «Otros»— no
+ * corren ni se dan por mirados: los recoge el completo diferido.
+ *
+ * El vocabulario sale de la caché aunque la huella haya cambiado: la escritura
+ * que se está verificando es justo la que la cambió. Con la caché fría se
+ * aprende del catálogo entero una vez; a partir de ahí, cada verificación
+ * cuesta lo que cuesta leer cuatro fichas.
+ */
+async function analyzeFocus(client: PoolClient, focus: Focus, summary: ScanSummary): Promise<AnalysisRun> {
+  const loading = Date.now();
+  const focused = await loadFocusedSnapshot(client, focus);
+  summary.timings.snapshotMs = Date.now() - loading;
+  summary.timings.covered = focused.covered.length;
+
+  const learning = Date.now();
+  const reused = cachedLexicon(summary.catalogSignature);
+  let lexicon = reused?.lexicon;
+  if (!lexicon) {
+    const whole = await loadCatalogSnapshot(client);
+    lexicon = buildLexicon(whole, collectNames(whole));
+    rememberLexicon(summary.catalogSignature, lexicon);
+  }
+  summary.timings.lexicon = reused?.source ?? "catalogo";
+  summary.timings.lexiconMs = reused ? 0 : Date.now() - learning;
+
+  const detecting = Date.now();
+  const analysis = analyzeCatalog(focused.snapshot, { detectors: LOCAL_DETECTORS, lexicon, anomalies: false });
+  summary.timings.detectMs = Date.now() - detecting;
+  return { snapshot: focused.snapshot, analysis, covered: focused.covered };
+}
+
 async function executeScan(request: ScanRequest): Promise<ScanSummary> {
   const started = Date.now();
   const dryRun = request.dryRun ?? false;
@@ -488,6 +664,7 @@ async function executeScan(request: ScanRequest): Promise<ScanSummary> {
   const summary: ScanSummary = {
     scanId: null, status: "failed", scope: focus ? "dirigido" : "completo", trigger: request.trigger, dryRun, durationMs: 0, catalogSignature: "",
     total: 0, inserted: 0, reopened: 0, resolved: 0, chained: 0, byCategory: {}, actionLevels: { ...emptyActionCounts(), byCategory: {} }, failures: [],
+    timings: emptyTimings(),
   };
   let client: PoolClient | null = null;
   let locked = false;
@@ -517,36 +694,37 @@ async function executeScan(request: ScanRequest): Promise<ScanSummary> {
       }), summary.scope]);
       summary.scanId = Number(created.rows[0]!.id);
     }
-    const snapshot = await loadCatalogSnapshot(client);
-    const complete = analyzeCatalog(snapshot);
-    const focusKeys = focus ? new Set(focus.map((ref) => refKey(ref.kind, ref.id))) : null;
-    const analysis: AnalysisResult = focusKeys
-      ? { ...complete, findings: complete.findings.filter((finding) => inFocus(finding, focusKeys)) }
-      : complete;
+    const { snapshot, analysis, covered } = focus
+      ? await analyzeFocus(client, focus, summary)
+      : await analyzeEverything(client, summary);
     for (const finding of analysis.findings) summary.byCategory[finding.category] = (summary.byCategory[finding.category] ?? 0) + 1;
     summary.total = analysis.findings.length;
     summary.actionLevels = recommendedActionLevels(analysis.findings);
     summary.failures = analysis.failures;
     let resolutions: Partial<Record<Resolution, number>> = {};
+    let unchanged = 0;
     if (summary.scanId !== null) {
+      const persisting = Date.now();
       await client.query("BEGIN");
       try {
-        const counts = await persist(client, summary.scanId, analysis, snapshot, focus);
+        const counts = await persist(client, summary.scanId, analysis, snapshot, covered);
         await client.query("COMMIT");
-        ({ resolutions } = counts);
+        ({ resolutions, unchanged } = counts);
         Object.assign(summary, { inserted: counts.inserted, reopened: counts.reopened, resolved: counts.resolved, chained: counts.chained });
         if (counts.details) summary.details = counts.details;
       } catch (error) {
         await client.query("ROLLBACK").catch(() => undefined);
         throw error;
       }
+      summary.timings.persistMs = Date.now() - persisting;
     }
     summary.status = analysis.failures.length ? "partial" : "ok";
     summary.durationMs = Date.now() - started;
     if (summary.scanId !== null) {
       await client.query(`UPDATE ingest.curation_scans SET status = $3, finished_at = now(), counters = counters || $2::jsonb WHERE id = $1`, [summary.scanId, JSON.stringify({
-        total: summary.total, inserted: summary.inserted, reopened: summary.reopened, resolved: summary.resolved, chained: summary.chained,
-        resolutions, byCategory: summary.byCategory, actionLevels: summary.actionLevels, failures: analysis.failures, durationMs: summary.durationMs, lexicon: analysis.lexicon,
+        total: summary.total, inserted: summary.inserted, reopened: summary.reopened, unchanged, resolved: summary.resolved, chained: summary.chained,
+        resolutions, byCategory: summary.byCategory, actionLevels: summary.actionLevels, failures: analysis.failures, durationMs: summary.durationMs,
+        lexicon: analysis.lexicon, timings: summary.timings,
       }), summary.status]);
     }
     const fields = { scanId: summary.scanId, scope: summary.scope, trigger: request.trigger, total: summary.total, inserted: summary.inserted, resolved: summary.resolved, chained: summary.chained, ms: summary.durationMs };
@@ -562,7 +740,8 @@ async function executeScan(request: ScanRequest): Promise<ScanSummary> {
     log.error({ err: error, scanId: summary.scanId, trigger: request.trigger }, "falló el análisis de curaduría");
     return {
       ...summary, status: "failed", durationMs: Date.now() - started,
-      total: 0, inserted: 0, reopened: 0, resolved: 0, chained: 0, byCategory: {}, actionLevels: { ...emptyActionCounts(), byCategory: {} }, failures: [], error: message,
+      total: 0, inserted: 0, reopened: 0, resolved: 0, chained: 0, byCategory: {}, actionLevels: { ...emptyActionCounts(), byCategory: {} }, failures: [],
+      timings: summary.timings, error: message,
     };
   } finally {
     if (client) await releaseScanClient(client, locked, healthy);
@@ -600,13 +779,42 @@ let directedPending = 0;
 /** Trabajo que termina en un análisis (la verificación de un lote): lo esperan el cierre ordenado y las pruebas. */
 const background = new Set<Promise<unknown>>();
 
+/**
+ * Lo que corre DESPUÉS de un análisis completo guardado: hoy, la
+ * autocorrección (PLAN_CURADURIA E10). Se instala desde fuera
+ * (`src/curation/autofix.ts` ← la API y la CLI) para que el motor de análisis
+ * no dependa del marco de acciones, que a su vez depende de él.
+ *
+ * Corre fuera del análisis, no dentro: mientras `executeScan` vive tiene el
+ * candado entre procesos, y la verificación dirigida de la autocorrección lo
+ * necesita libre.
+ */
+export type AfterFullScan = (summary: ScanSummary) => Promise<unknown>;
+
+let afterFullScan: AfterFullScan | null = null;
+
+export function setAfterFullScan(hook: AfterFullScan | null): void {
+  afterFullScan = hook;
+}
+
+function runAfterFullScan(summary: ScanSummary): void {
+  if (!afterFullScan || summary.dryRun || summary.scope !== "completo") return;
+  if (summary.status !== "ok" && summary.status !== "partial") return;
+  void trackCurationWork(afterFullScan(summary).catch((error: unknown) => {
+    log.error({ err: error, scanId: summary.scanId }, "falló el trabajo posterior al análisis de curaduría");
+  }));
+}
+
 /** Corre un análisis; si ya hay uno en curso, agrupa esta petición en el siguiente. */
 export function runCurationScan(request: ScanRequest): Promise<ScanSummary> {
   if (request.dryRun) return executeScan(request);
   if (request.focus) return runDirectedScan(request);
   if (!running) {
-    running = executeScan(request).finally(() => { running = null; });
-    return running;
+    const current = executeScan(request).finally(() => { running = null; });
+    running = current;
+    // El gancho va detrás del `finally`: cuando corre, el análisis ya soltó su turno.
+    void current.then(runAfterFullScan, () => undefined);
+    return current;
   }
   if (queued) {
     // Se conserva la petición más informativa: una corrección pesa más que un sondeo.

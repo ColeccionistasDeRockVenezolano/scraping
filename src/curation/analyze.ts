@@ -4,7 +4,7 @@
 // anomalías sin explicar («Otros») → hallazgos con huella estable.
 // Sin base de datos: scan.ts carga la foto y persiste el resultado.
 import { createHash } from "node:crypto";
-import { buildLexicon, collectNames } from "./lexicon.js";
+import { buildLexicon, collectNames, type Lexicon } from "./lexicon.js";
 import { OTHER_CATEGORY, effectiveCategory } from "./taxonomy.js";
 import type { CatalogSnapshot, DetectorDefinition, EntityRef, Finding, SnapshotTrack } from "./types.js";
 import type { AnalysisContext, Detector } from "./detectors/shared.js";
@@ -26,6 +26,38 @@ export const DETECTORS: readonly Detector[] = [
   ...QUEUE_DETECTORS,
   ...ORPHAN_DETECTORS,
 ];
+
+/**
+ * LOCALES Y GLOBALES (PLAN_CURADURIA E9.1).
+ *
+ * Un detector LOCAL mira una ficha y su vecindad inmediata —su disco, sus
+ * pistas, su artista— más el vocabulario que el catálogo ya aprendió. Puede
+ * correr sobre un trozo del catálogo y dar exactamente el mismo resultado que
+ * sobre el catálogo entero: es lo que se corre al verificar una corrección.
+ *
+ * Un detector GLOBAL necesita verlo todo para decir algo: los duplicados
+ * comparan cada ficha contra todas las demás, la cola vive en `review_queue` y
+ * en `conflicts` (que no cuelgan de la ficha tocada), y «Otros» necesita el
+ * perfil de todo el campo para saber qué es raro. Esos corren en el análisis
+ * completo diferido.
+ *
+ * La regla que lo sostiene: solo se resuelve lo que se miró. Un análisis
+ * dirigido no toca los hallazgos de los detectores globales.
+ */
+const GLOBAL_DETECTOR_KEYS: ReadonlySet<string> = new Set([
+  ...DUPLICATE_DETECTORS.map((detector) => detector.key),
+  ...QUEUE_DETECTORS.map((detector) => detector.key),
+]);
+
+export const LOCAL_DETECTORS: readonly Detector[] = DETECTORS.filter((detector) => !GLOBAL_DETECTOR_KEYS.has(detector.key));
+export const GLOBAL_DETECTORS: readonly Detector[] = DETECTORS.filter((detector) => GLOBAL_DETECTOR_KEYS.has(detector.key));
+
+/** «Otros» es global: su perfil por campo sale del catálogo entero. */
+export const ANOMALY_DETECTOR_KEY = catalogAnomalies.key;
+
+export function isLocalDetector(key: string): boolean {
+  return key !== ANOMALY_DETECTOR_KEY && !GLOBAL_DETECTOR_KEYS.has(key);
+}
 
 /** Definiciones públicas (sin `run`) de todos los detectores, «Otros» incluido. */
 export const DETECTOR_DEFINITIONS: readonly DetectorDefinition[] = [...DETECTORS, catalogAnomalies]
@@ -51,7 +83,12 @@ export interface AnalysisResult {
   lexicon: { places: number; roleTokens: number; organizationMarkers: string[]; albumTypeWords: number; vocabulary: number };
 }
 
-export function buildContext(snapshot: CatalogSnapshot): AnalysisContext {
+/**
+ * Contexto del análisis. `lexicon` permite inyectar el vocabulario ya
+ * construido: en un análisis dirigido sale de la caché (E9.3) y describe el
+ * catálogo entero, no el trozo que se está mirando.
+ */
+export function buildContext(snapshot: CatalogSnapshot, lexicon?: Lexicon): AnalysisContext {
   const names = collectNames(snapshot);
   const tracksByAlbum = new Map<number, SnapshotTrack[]>();
   for (const track of snapshot.tracks) {
@@ -60,7 +97,7 @@ export function buildContext(snapshot: CatalogSnapshot): AnalysisContext {
   }
   return {
     snapshot,
-    lexicon: buildLexicon(snapshot, names),
+    lexicon: lexicon ?? buildLexicon(snapshot, names),
     names,
     artists: new Map(snapshot.artists.map((artist) => [artist.id, artist])),
     persons: new Map(snapshot.persons.map((person) => [person.id, person])),
@@ -109,8 +146,53 @@ export function fingerprintOf(finding: Finding): string {
   return `${finding.detector}:${createHash("sha256").update(material).digest("hex").slice(0, 32)}`;
 }
 
-export function analyzeCatalog(snapshot: CatalogSnapshot, detectors: readonly Detector[] = DETECTORS): AnalysisResult {
-  const context = buildContext(snapshot);
+export interface AnalyzeOptions {
+  /** Detectores que corren; por defecto, todos. */
+  detectors?: readonly Detector[];
+  /** Vocabulario ya construido (caché E9.3). Sin él se aprende de esta foto. */
+  lexicon?: Lexicon;
+  /** ¿Corre «Otros»? Un análisis dirigido no: es global (E9.1). */
+  anomalies?: boolean;
+}
+
+/**
+ * Huella del CONTENIDO del hallazgo: todo lo que el detector emitió, sin su
+ * historia (cuándo apareció, quién lo ignoró, qué lo desencadenó). El análisis
+ * incremental (PLAN_CURADURIA E9.4) la compara con la guardada y no escribe la
+ * fila si no cambió.
+ *
+ * Incluye la ficha y el campo aunque la huella del hallazgo ya los tenga: la de
+ * un PAR de duplicados es solo el par, y el nombre que muestra sí puede cambiar.
+ *
+ * Y incluye la VERSIÓN DE LAS REGLAS, que no es algo que el detector emita: una
+ * fila guardada es lo que dijeron unas reglas concretas sobre una ficha, así que
+ * al cambiar las reglas está desfasada aunque el texto coincida. Se reescribe
+ * una vez tras cada cambio de reglas, y con ella su `last_seen_scan_id`, que es
+ * lo que luego permite distinguir un hallazgo que desapareció porque cambiaron
+ * las reglas de uno que desapareció porque alguien arregló la ficha.
+ */
+export function contentHashOf(finding: Finding): string {
+  const material = canonical([
+    RULES_VERSION,
+    finding.category, finding.signature, finding.signatureLabel ?? null, finding.severity,
+    [finding.entity.kind, finding.entity.id, finding.entity.label],
+    finding.field ?? null, finding.value ?? null, finding.title, finding.suggestion ?? null, finding.suggestedValue ?? null,
+    finding.related, finding.evidence, finding.pair ?? null,
+  ]);
+  return createHash("sha256").update(material).digest("hex").slice(0, 32);
+}
+
+/** JSON con las claves ordenadas: el mismo contenido da siempre el mismo texto. */
+function canonical(value: unknown): string {
+  if (value === undefined || value === null || typeof value !== "object") return JSON.stringify(value ?? null);
+  if (Array.isArray(value)) return `[${value.map(canonical).join(",")}]`;
+  const entries = Object.entries(value as Record<string, unknown>).filter(([, item]) => item !== undefined).sort(([a], [b]) => (a < b ? -1 : 1));
+  return `{${entries.map(([key, item]) => `${JSON.stringify(key)}:${canonical(item)}`).join(",")}}`;
+}
+
+export function analyzeCatalog(snapshot: CatalogSnapshot, options: AnalyzeOptions = {}): AnalysisResult {
+  const detectors = options.detectors ?? DETECTORS;
+  const context = buildContext(snapshot, options.lexicon);
   const failures: DetectorFailure[] = [];
   const completed: string[] = [];
   const raw: Finding[] = [];
@@ -127,7 +209,10 @@ export function analyzeCatalog(snapshot: CatalogSnapshot, detectors: readonly De
   // ellos falló, «Otros» se llenaría con lo que ese detector habría explicado:
   // tampoco cuenta como mirado, y sus hallazgos guardados quedan como estaban.
   const brokenForm = detectors.filter((detector) => TEXT_FORM_CATEGORIES.has(detector.category) && !completed.includes(detector.key));
-  if (brokenForm.length) {
+  if (options.anomalies === false) {
+    // Nada que decir: un análisis dirigido no mira «Otros» y sus hallazgos
+    // quedan intactos (no entra en `completed`, así que no se resuelve ninguno).
+  } else if (brokenForm.length) {
     failures.push({ detector: catalogAnomalies.key, error: `omitido: falló ${brokenForm.map((detector) => detector.key).join(", ")}` });
   } else {
     try {

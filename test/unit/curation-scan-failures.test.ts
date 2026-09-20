@@ -30,16 +30,41 @@ describe("análisis de Curaduría con la base caída (C5)", () => {
     broken.connect.mockClear();
     try {
       vi.useFakeTimers();
-      notifyCatalogWrite("Tester Curaduria", "PATCH /artists/:id");
+      // La escritura nombra la ficha: verificación dirigida enseguida (E9.1) y
+      // análisis completo diferido detrás (E9.2). Las dos con la base caída.
+      notifyCatalogWrite("Tester Curaduria", "PATCH /artists/:id", [{ kind: "artist", id: 7 }]);
       await vi.advanceTimersByTimeAsync(2_000);
+      const afterDirected = broken.query.mock.calls.length + broken.connect.mock.calls.length;
+      expect(afterDirected).toBeGreaterThan(0);
+      await vi.advanceTimersByTimeAsync(60_000);
       vi.useRealTimers();
       await waitForCurationScans();
       await new Promise((resolve) => setTimeout(resolve, 50));
-      expect(broken.query.mock.calls.length + broken.connect.mock.calls.length).toBeGreaterThan(0);
+      expect(broken.query.mock.calls.length + broken.connect.mock.calls.length).toBeGreaterThan(afterDirected);
       expect(unhandled).toEqual([]);
     } finally {
       vi.useRealTimers();
       process.off("unhandledRejection", listener);
+    }
+  });
+
+  it("una escritura que no nombra ninguna ficha se queda con el análisis completo diferido (E9.2)", async () => {
+    broken.query.mockClear();
+    broken.connect.mockClear();
+    try {
+      vi.useFakeTimers();
+      notifyCatalogWrite("Tester Curaduria", "POST /album-credits");
+      // La ventana de la verificación dirigida pasa sin que nadie analice: no
+      // hay ficha que mirar y un análisis completo por escritura es justo lo
+      // que E9 quita.
+      await vi.advanceTimersByTimeAsync(5_000);
+      expect(broken.query.mock.calls.length + broken.connect.mock.calls.length).toBe(0);
+      await vi.advanceTimersByTimeAsync(60_000);
+      vi.useRealTimers();
+      await waitForCurationScans();
+      expect(broken.query.mock.calls.length + broken.connect.mock.calls.length).toBeGreaterThan(0);
+    } finally {
+      vi.useRealTimers();
     }
   });
 });

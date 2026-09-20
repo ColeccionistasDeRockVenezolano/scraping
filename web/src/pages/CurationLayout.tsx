@@ -12,7 +12,7 @@
 // «No se pudo cargar».
 import { Suspense, useCallback, useEffect, useRef, useState } from "react";
 import { NavLink, Outlet, useLocation, useOutletContext } from "react-router-dom";
-import { CaretDown, ClockCounterClockwise, Copy, LockSimple, Pulse, SignIn, type Icon } from "@phosphor-icons/react";
+import { CaretDown, ClockCounterClockwise, Copy, LockSimple, Pulse, Robot, SignIn, type Icon } from "@phosphor-icons/react";
 import { useOperator } from "../lib/OperatorContext";
 import { ApiError, curationApi, entityMergeApi } from "../lib/api";
 import { categoryIcon, formatCount } from "../lib/curation";
@@ -195,6 +195,14 @@ function CurationNav({ summary, duplicateCount }: { summary: CurationSummary | u
     // Sin contador a propósito: el historial de correcciones no es una bandeja
     // pendiente, es lo que ya se hizo (PLAN_CURADURIA E8.5).
     { to: "/curaduria/correcciones", label: "Correcciones", icon: ClockCounterClockwise },
+    // La lista blanca de lo que el sistema puede arreglar solo (E10). El
+    // contador es lo que lleva corregido hoy: si aparece, algo escribió sin
+    // que nadie lo pidiera y conviene verlo.
+    {
+      to: "/curaduria/autocorreccion", label: "Autocorrección", icon: Robot,
+      ...(summary && summary.autofix.today.applied > 0 ? { count: summary.autofix.today.applied } : {}),
+      ...(summary && summary.autofix.alerts.length > 0 ? { fresh: true } : {}),
+    },
   ];
   const current = currentEntry(pathname, [overview, ...categories, ...tools]);
   const CurrentIcon = current.icon;

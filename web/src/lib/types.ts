@@ -398,6 +398,110 @@ export interface CurationSummary {
   running: boolean;
   totals: { open: number; ignored: number; resolved: number; newInLastScan: number; chainedOpen: number };
   categories: CurationCategorySummary[];
+  /** Autocorrección (E10): si el entorno la permite, qué lleva hecho hoy y qué regla se apagó sola. */
+  autofix: CurationAutofixSummary;
+}
+
+// ---------- autocorrección segura (PLAN_CURADURIA E10) ----------
+
+export interface CurationAutofixRule {
+  id: number;
+  detector: string;
+  detectorLabel: string;
+  /** null = todos los subgrupos del detector. */
+  signature: string | null;
+  actionKey: string;
+  actionLabel: string;
+  enabled: boolean;
+  /** Tope propio por análisis; null = el del entorno. */
+  maxPerScan: number | null;
+  note: string | null;
+  createdBy: string;
+  createdAt: string;
+  updatedBy: string | null;
+  updatedAt: string | null;
+  disabledAt: string | null;
+  disabledReason: string | null;
+  disabledByBatchId: number | null;
+}
+
+/** Regla que el interruptor de emergencia apagó solo (E10.3). */
+export interface CurationAutofixAlert {
+  ruleId: number | null;
+  detector: string;
+  signature: string | null;
+  actionKey: string;
+  reason: string;
+  batchId: number | null;
+  at: string;
+}
+
+export interface CurationAutofixBatch {
+  batchId: number;
+  detector: string;
+  signature: string | null;
+  actionKey: string;
+  status: FixBatchStatus;
+  applied: number;
+  undone: number;
+  /** Hallazgos que la corrección hizo aparecer: si hay alguno, el lote se deshizo solo. */
+  triggered: number;
+  at: string;
+  undoneByBatchId: number | null;
+}
+
+export interface CurationAutofixSummary {
+  /** El interruptor del entorno (`CRV_CURATION_AUTOFIX`): sin él no corre aunque haya reglas. */
+  enabled: boolean;
+  rules: { total: number; active: number };
+  today: { batches: number; applied: number; undone: number };
+  alerts: CurationAutofixAlert[];
+}
+
+export interface CurationAutofixReport extends CurationAutofixSummary {
+  batches: CurationAutofixBatch[];
+}
+
+export interface CurationAutofixEvent {
+  id: number;
+  ruleId: number | null;
+  detector: string;
+  signature: string | null;
+  actionKey: string;
+  event: string;
+  operator: string;
+  note: string | null;
+  batchId: number | null;
+  detail: Record<string, unknown>;
+  at: string;
+}
+
+/** Lo que se puede autorizar: detector + subgrupo + acción de nivel 0. */
+export interface CurationAutofixOption {
+  detector: string;
+  detectorLabel: string;
+  signature: string | null;
+  actionKey: string;
+  actionLabel: string;
+  actionDescription: string;
+}
+
+export interface CurationAutofixState {
+  report: CurationAutofixReport;
+  rules: CurationAutofixRule[];
+  events: CurationAutofixEvent[];
+  catalog: CurationAutofixOption[];
+}
+
+export type CurationAutofixStatus = "apagada" | "sin_reglas" | "sin_candidatos" | "tope_diario" | "ocupada" | "hecha";
+
+export interface CurationAutofixRun {
+  status: CurationAutofixStatus;
+  applied: number;
+  rules: Array<{
+    ruleId: number; detector: string; signature: string | null; actionKey: string; batchId: number | null;
+    applied: number; failed: number; triggered: number; reverted: boolean;
+  }>;
 }
 
 export interface CurationFinding {

@@ -12,10 +12,12 @@ import { ApiError, curationApi } from "../lib/api";
 import { useToast } from "../lib/ToastContext";
 import { ENTITY_KIND_LABEL, categoryIcon, counter, failedDetectors, formatCount, relativeTime, triggerLabel } from "../lib/curation";
 import { entityHref } from "../lib/routes";
+import { AutofixAlerts, AutofixToday } from "../components/AutofixToday";
+import { useAsync } from "../lib/useAsync";
 import { ErrorState } from "../components/StateViews";
 import { HeaderSkeleton, RowsSkeleton } from "../components/Skeletons";
 import { useCurationSummary } from "./CurationLayout";
-import type { CurationCategorySummary, CurationScan, DistinctPair } from "../lib/types";
+import type { CurationAutofixSummary, CurationCategorySummary, CurationScan, DistinctPair } from "../lib/types";
 
 export function CurationOverviewPage() {
   const { summary, summaryError, refreshSummary } = useCurationSummary();
@@ -93,6 +95,8 @@ export function CurationOverviewPage() {
 
       <CorrectionCheck scan={lastCorrection} chainedOpen={totals.chainedOpen} />
 
+      <AutofixPanorama summary={summary.autofix} />
+
       <dl className="ctotals">
         <div><dt>Abiertos</dt><dd className="mono">{formatCount(totals.open)}</dd></div>
         <div>
@@ -144,6 +148,31 @@ export function CurationOverviewPage() {
       ) : null}
 
       <DistinctPairsSection />
+    </>
+  );
+}
+
+/**
+ * Lo que la autocorrección hizo hoy (PLAN_CURADURIA E10.4). Solo se muestra si
+ * hay algo que contar: correcciones de hoy o una regla que se apagó sola. Lo
+ * demás —la lista blanca, quién la tocó— vive en su propia pantalla; aquí está
+ * porque el catálogo cambió sin que nadie lo pidiera, y eso se mira en el
+ * panorama. El detalle con su deshacer se pide aparte para no cargar el
+ * resumen con lo que casi siempre está vacío.
+ */
+function AutofixPanorama({ summary }: { summary: CurationAutofixSummary }) {
+  const interesting = summary.today.batches > 0 || summary.alerts.length > 0;
+  const { data, reload } = useAsync(() => (interesting ? curationApi.autofix() : Promise.resolve(null)), [interesting]);
+  if (!interesting) return null;
+
+  return (
+    <>
+      <AutofixAlerts alerts={data?.report.alerts ?? summary.alerts} />
+      {data ? <AutofixToday report={data.report} onDone={reload} /> : null}
+      <p className="hint">
+        <Link className="text-link" to="/curaduria/autocorreccion">Ver qué está autorizado</Link> · las correcciones
+        automáticas son de nivel 0 y cada lote se puede deshacer.
+      </p>
     </>
   );
 }

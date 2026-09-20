@@ -37,6 +37,8 @@ import { registerAliasRoutes } from "./routes/aliases.js";
 import { registerAuditRoutes } from "./routes/audit.js";
 import { registerCurationRoutes } from "./routes/curation.js";
 import { registerCurationActionRoutes } from "./routes/curation-actions.js";
+import { registerCurationAutofixRoutes } from "./routes/curation-autofix.js";
+import { installAutofix } from "../curation/autofix.js";
 
 const log = moduleLogger("api");
 
@@ -145,6 +147,10 @@ export async function buildApp(): Promise<FastifyInstance> {
   await registerAuditRoutes(app);
   await registerCurationRoutes(app);
   await registerCurationActionRoutes(app);
+  await registerCurationAutofixRoutes(app);
+  // La autocorrección se engancha al final de cada análisis completo. Sigue
+  // apagada mientras CRV_CURATION_AUTOFIX sea false y no haya reglas encendidas.
+  installAutofix();
 
   // El índice de búsqueda (E11.9) se carga en segundo plano: la primera
   // búsqueda real no debe pagar la lectura completa de nombres y alias.

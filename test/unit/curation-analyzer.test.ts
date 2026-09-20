@@ -9,7 +9,7 @@ import { cleanSnapshot } from "../support/curation-snapshot.js";
 const ZERO_WIDTH_SPACE = String.fromCharCode(0x200b);
 
 function findings(snapshot: CatalogSnapshot, detectors?: readonly Detector[]) {
-  return analyzeCatalog(snapshot, detectors).findings;
+  return analyzeCatalog(snapshot, detectors ? { detectors } : {}).findings;
 }
 
 describe("detector de conflictos de Curaduría", () => {
@@ -111,7 +111,7 @@ describe("detector de conflictos de Curaduría", () => {
     const broken: Detector = { key: "roto", category: OTHER_CATEGORY, label: "Roto", description: "", run: () => { throw new Error("boom"); } };
     const snapshot = cleanSnapshot();
     snapshot.artists[0]!.name = `Trueno${ZERO_WIDTH_SPACE} Negro`;
-    const result = analyzeCatalog(snapshot, [broken, ...DETECTORS]);
+    const result = analyzeCatalog(snapshot, { detectors: [broken, ...DETECTORS] });
     expect(result.failures).toEqual([{ detector: "roto", error: "boom" }]);
     expect(result.findings.some((finding) => finding.detector === "caracteres_invisibles")).toBe(true);
   });
@@ -119,7 +119,7 @@ describe("detector de conflictos de Curaduría", () => {
   it("un detector que falla no cuenta como mirado: el análisis no lo da por completo (C1)", () => {
     // «Fichas repetidas» no explica la forma de un nombre: «Otros» sí puede correr.
     const broken: Detector = { key: "roto", category: "fichas_repetidas", label: "Roto", description: "", run: () => { throw new Error("boom"); } };
-    const result = analyzeCatalog(cleanSnapshot(), [broken, ...DETECTORS]);
+    const result = analyzeCatalog(cleanSnapshot(), { detectors: [broken, ...DETECTORS] });
     expect(result.completed).not.toContain("roto");
     expect(result.completed).toEqual(expect.arrayContaining([...DETECTORS.map((detector) => detector.key), "anomalia_del_catalogo"]));
   });
@@ -130,7 +130,7 @@ describe("detector de conflictos de Curaduría", () => {
     };
     const snapshot = cleanSnapshot();
     snapshot.artists[0]!.name = `Trueno${ZERO_WIDTH_SPACE} § Negro`;
-    const result = analyzeCatalog(snapshot, [brokenHygiene, ...DETECTORS.filter((detector) => detector.key !== "caracteres_invisibles")]);
+    const result = analyzeCatalog(snapshot, { detectors: [brokenHygiene, ...DETECTORS.filter((detector) => detector.key !== "caracteres_invisibles")] });
     expect(result.completed).not.toContain("caracteres_invisibles");
     expect(result.completed).not.toContain("anomalia_del_catalogo");
     expect(result.failures.map((failure) => failure.detector)).toEqual(["caracteres_invisibles", "anomalia_del_catalogo"]);
