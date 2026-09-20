@@ -187,7 +187,12 @@ function actionFinding(finding: Finding): ActionFinding {
     value: finding.value ?? null,
     suggestedValue: finding.suggestedValue ?? null,
     related: finding.related,
-    evidence: finding.evidence,
+    // El par viaja aparte en el analizador y dentro de `evidence` en la fila
+    // guardada (ver `persist`). `fusionar` y compañía lo leen de ahí, así que
+    // contar sin él daba los 108 hallazgos de duplicados de la foto real como
+    // «sin acción» mientras `/curation/summary` los daba con acción de nivel
+    // 1: dos cifras distintas del mismo KPI de cobertura.
+    evidence: { ...finding.evidence, ...(finding.pair ? { pair: finding.pair } : {}) },
     title: finding.title,
   };
 }

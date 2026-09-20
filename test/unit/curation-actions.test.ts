@@ -194,4 +194,21 @@ describe("cobertura de acciones en un escaneo seco (E5)", () => {
       byCategory: { nombres_sucios: { level0: 1, level1: 1, level2: 1, manual: 1 } },
     });
   });
+
+  // El par de un hallazgo de duplicados viaja aparte en el analizador y dentro
+  // de `evidence` en la fila guardada. Contar sin él daba los 108 duplicados de
+  // la foto real como «sin acción» mientras `/curation/summary` los daba con
+  // fusión de nivel 1: el mismo KPI con dos cifras (auditoría de cierre E12).
+  it("un hallazgo de par cuenta su fusión, no «sin acción» (cierre 20/20)", () => {
+    const pair: Finding = {
+      detector: "artistas_equivalentes", category: "fichas_repetidas", signature: "misma_clave", severity: "medium",
+      entity: { kind: "artist", id: 7, label: "Los Amigos Invisibles" }, field: "name", value: "Los Amigos Invisibles",
+      title: "Dos artistas con el mismo nombre", related: [{ kind: "artist", id: 9, label: "los amigos invisibles" }],
+      pair: [7, 9], evidence: { values: [{ id: 7, value: "Los Amigos Invisibles" }, { id: 9, value: "los amigos invisibles" }] },
+    };
+    expect(recommendedActionLevels([pair])).toEqual({
+      level0: 0, level1: 1, level2: 0, manual: 0,
+      byCategory: { fichas_repetidas: { level0: 0, level1: 1, level2: 0, manual: 0 } },
+    });
+  });
 });
