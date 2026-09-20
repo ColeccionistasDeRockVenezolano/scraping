@@ -72,6 +72,20 @@ npm run cli -- curation fix --preview --detector=caracteres_invisibles --action=
 
 `--preview` es obligatorio. El parser rechaza detector desconocido y `--limit` fuera de 1–50000. Se crea un lote auditado `previewed`, pero **no se modifica el catálogo**.
 
+## Medir la cobertura sin base de datos
+
+```bash
+npm run curation:coverage
+```
+
+Analiza la foto congelada (`catalog-2026-09-16` + `relations-2026-09-20`) y aplica la **misma regla que
+`/curation/summary`** —nivel del hallazgo = el mínimo de sus acciones, informativos fuera del denominador—
+para publicar el KPI de §4 del plan por categoría y por detector, y decir si cumple. No toca PostgreSQL:
+sirve para verificar el criterio de cierre sin acceso a la base de desarrollo.
+
+Última corrida (2026-09-20): 5.414 accionables + 1.670 informativos; **≤N1 84,3 %** (exige ≥30 %) y
+**≤N2 86,6 %** (exige ≥70 %).
+
 ## Pruebas de aceptación
 
 - `test/unit/curation-e11.test.ts`: 11 claves, positivos, negativos y alcance local/global.
