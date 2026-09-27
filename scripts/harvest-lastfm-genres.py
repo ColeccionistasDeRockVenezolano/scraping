@@ -17,6 +17,8 @@ para que Last.fm no cambie el nombre pedido:
 Las etiquetas van por peso descendente: la primera que la taxonomía resuelva es
 la principal en scripts/apply-source-genres.ts. Las geográficas sirven a la
 identidad y no pasan como género.
+Las etiquetas del disco salen de album.getTopTags y no de album.getInfo: cuando
+el disco no tiene etiquetas propias, getInfo devuelve las del artista (sería heredar).
 
 Clave en LASTFM_API_KEY (entorno o .env); nunca se imprime ni entra en la caché.
 Ritmo ~3 peticiones/s, una a la vez; error 29 o 5xx → espera y reintenta;
@@ -54,7 +56,8 @@ COUNTS = {"nuevas": 0, "fallidas": 0}
 VZ_TAG = re.compile(r"venezuel|venezolan|caracas|maracaibo|valencia venezuela", re.I)
 GEO_TAG = re.compile(r"(latin ?america|latinoamerica|south ?america|sudamerica)n?|(colombia|mexic|argentin|chile|peru|span|espa)\w*"
                      r"|usa|miami|new york|los angeles", re.I)
-MULTI = re.compile(r"(there (are|is) (more than one|multiple|several|at least \w+|\w+) (artists|bands|acts))|hay (varios|m[aá]s de un)", re.I)
+MULTI = re.compile(r"(there (are|is) (more than one|multiple|several|many|at least \w+|\d+|two|three|four|five|six|seven|eight|nine|ten)( different| distinct)? (artists?|bands?|acts?|musicians?)\b)"
+                   r"|hay (varios|m[aá]s de un)", re.I)
 
 
 class Abort(Exception):
