@@ -4,8 +4,10 @@
 Regla de Brian: una fuente basta. Identidad: el artista de Last.fm tiene el
 nombre exacto (normalizado) y además Last.fm lo marca como venezolano
 (etiqueta «venezuela»/«venezolano»/«caracas»… o su biografía menciona
-Venezuela). Biografías que agrupan varios artistas homónimos se descartan: sus
-etiquetas mezclan bandas. Homónimos dentro del catálogo tampoco se buscan.
+Venezuela en sus dos primeras frases: más adelante suele ser una gira). Biografías
+que agrupan varios homónimos («there are several artists…», listas «1) … 2) …»,
+bloques separados por «_____») se descartan: sus etiquetas mezclan bandas.
+Homónimos dentro del catálogo tampoco se buscan.
 Separación: etiquetas del artista → artista; del disco → disco. Nada se hereda.
 
 Solo la API (https://www.last.fm/api), nunca la web. Métodos, con autocorrect=0
@@ -57,7 +59,16 @@ VZ_TAG = re.compile(r"venezuel|venezolan|caracas|maracaibo|valencia venezuela", 
 GEO_TAG = re.compile(r"(latin ?america|latinoamerica|south ?america|sudamerica)n?|(colombia|mexic|argentin|chile|peru|span|espa)\w*"
                      r"|usa|miami|new york|los angeles", re.I)
 MULTI = re.compile(r"(there (are|is) (more than one|multiple|several|many|at least \w+|\d+|two|three|four|five|six|seven|eight|nine|ten)( different| distinct)? (artists?|bands?|acts?|musicians?)\b)"
-                   r"|hay (varios|m[aá]s de un)", re.I)
+                   r"|hay (varios|m[aá]s de un)"
+                   # «1) … 2) …» al abrir la biografía: una entrada por homónimo (más abajo suele ser la discografía)
+                   r"|^.{0,200}?(^|[\s:;.])(\(?1[).]|1\s*-)\s.{3,600}?[\s;.](\(?2[).]|2\s*-)\s"
+                   r"|_{5,}", re.I | re.S)  # bloques de homónimos separados por «_____»
+
+
+def bio_marks_vz(bio: str) -> bool:
+    """La biografía marca el origen si nombra Venezuela en sus dos primeras frases;
+    más adelante suele ser una gira o un músico invitado, no el origen."""
+    return any(re.search(r"venezuel", sentence, re.I) for sentence in re.split(r"(?<=[.!?])\s+", bio)[:2])
 
 
 class Abort(Exception):
@@ -198,7 +209,7 @@ def main() -> None:
             doubts.append({"artistId": artist_id, "name": name, "url": url, "motivo": "la biografía agrupa varios artistas"})
             continue
         artist_tags = weighted_tags(call(key, "artist.getTopTags", artist=name))
-        if not (any(VZ_TAG.search(t) for t in artist_tags) or re.search(r"venezuel", bio, re.I)):
+        if not (any(VZ_TAG.search(t) for t in artist_tags) or bio_marks_vz(bio)):
             stats["sin_marca_vz"] += 1
             continue
         stats["casados"] += 1
