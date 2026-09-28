@@ -17,8 +17,14 @@ reemplazan.
    prueba de identidad).
 3. `tsx scripts/export-biography-dossiers.ts` — un expediente por ficha en
    lotes `reports/bio-dossiers/<tipo>-NNN.jsonl` (+ `manifest.json`).
-4. Subagente Sonnet 5 por lote: lee el lote y esta guía y escribe
-   `reports/bio-synth/<tipo>-NNN.jsonl`.
+4. Síntesis, una llamada por ficha:
+   `tsx scripts/synth-biographies-deepseek.ts --kinds=artist,album,person [--concurrency=20]`
+   (DeepSeek flash; reglas de esta guía copiadas al prompt; control automático con un
+   reintento para nacionalidad sin respaldo, más de 4 títulos en una reseña y años que
+   no están en el expediente; reanudable, cada llamada en `ingest.ai_runs`). Escribe
+   `reports/bio-synth/<tipo>-NNN.jsonl` con `model` en cada línea. Los subagentes
+   (sección «Procedimiento del subagente») quedan solo como alternativa: cada paso
+   reenvía todo el contexto y cuestan ~50 veces más por ficha (medido el 2026-09-28).
 5. `tsx scripts/apply-biographies.ts` (ensayo) y `--confirm` — valida y escribe
    en el core dentro de un run propio, reversible por el diario de cambios.
 

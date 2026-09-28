@@ -21,12 +21,13 @@ import { closeDb, getPool } from "../src/db/client.js";
 type Kind = "artist" | "album" | "person" | "organization";
 interface Source { ref: string; source: string; url: string | null; text: string }
 interface Dossier { caseId: string; kind: Kind; entityId: number; name: string; currentText: string | null; sources: Source[] }
-interface Synth { caseId: string; text: string | null; sourcesUsed?: string[]; discarded?: Array<{ ref: string; reason: string }>; note?: string | null }
+interface Synth { caseId: string; text: string | null; sourcesUsed?: string[]; discarded?: Array<{ ref: string; reason: string }>; note?: string | null; model?: string }
 
 const DOSSIERS = process.env["BIO_DOSSIERS_DIR"] ?? "reports/bio-dossiers";
 const SYNTH = process.env["BIO_SYNTH_DIR"] ?? "reports/bio-synth";
 const SOURCE_SLUG = "crv-sintesis";
 const EXTRACTOR = "sintesis-biografia";
+/** Modelo de las salidas sin campo `model` (las de los subagentes, 2026-09-27/28). */
 const MODEL = "claude-sonnet-5";
 const TARGET: Record<Kind, { table: string; column: string; idColumn: string; field: string; touch: boolean }> = {
   artist: { table: "public.artists", column: "biography", idColumn: "artist_id", field: "biography", touch: true },
@@ -88,7 +89,7 @@ async function main(): Promise<void> {
   }
 
   const report = {
-    mode: confirm ? "confirm" : "dry-run", runId: 0, model: MODEL, outputs: outputs.length, badLines,
+    mode: confirm ? "confirm" : "dry-run", runId: 0, models: [...new Set(outputs.map((o) => o.item.model ?? MODEL))], outputs: outputs.length, badLines,
     applied: { artist: 0, album: 0, person: 0, organization: 0 } as Record<Kind, number>,
     enriched: 0, created: 0, unchanged: 0, noData: 0, changedSinceExport: [] as string[],
     rejected: [] as Array<{ caseId: string; batch: string; reason: string }>,
@@ -109,7 +110,7 @@ async function main(): Promise<void> {
     const sourceId = Number((await client.query<{ id: string }>("SELECT id::text FROM ingest.sources WHERE slug=$1", [SOURCE_SLUG])).rows[0]!.id);
     const run = await client.query<{ id: string }>(
       `INSERT INTO ingest.scrape_runs(kind, status, params) VALUES('merge_run','running',$1::jsonb) RETURNING id::text`,
-      [JSON.stringify({ action: "biography_synthesis", model: MODEL, batches: [...new Set(outputs.map((o) => o.batch))], confirm })]);
+      [JSON.stringify({ action: "biography_synthesis", models: report.models, batches: [...new Set(outputs.map((o) => o.batch))], confirm })]);
     report.runId = Number(run.rows[0]!.id);
 
     for (const { batch, item } of outputs) {
@@ -132,7 +133,7 @@ async function main(): Promise<void> {
 
       const used = item.sourcesUsed ?? [];
       const usedSlugs = [...new Set(dossier.sources.filter((source) => used.includes(source.ref)).map((source) => source.source))];
-      const note = `síntesis ${MODEL}; fuentes: ${usedSlugs.join(", ") || "catálogo"}`;
+      const note = `síntesis ${item.model ?? MODEL}; fuentes: ${usedSlugs.join(", ") || "catálogo"}`;
       const claim = await client.query<{ id: string }>(`
         INSERT INTO ingest.claims(source_id,entity_kind,${target.idColumn},field,raw_value,normalized_value,raw_hash,extractor,
                                   extractor_version,confidence,status,created_by,run_id,notes,identity_key)
