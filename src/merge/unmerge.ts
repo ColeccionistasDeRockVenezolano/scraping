@@ -14,6 +14,9 @@
 import type { PoolClient } from "pg";
 import { OperatorError, type OperatorContext } from "./operator.js";
 import { MERGE_TABLES, type DiscardedRow, type MergeKind, type MovedRef } from "../review/duplicates.js";
+import { loadVerifiedTrace, traceReason } from "./legacy-trace.js";
+import { restoreGenreAssignments, type GenreMergeSnapshot } from "../genres/merge.js";
+import { projectAlbumGenre } from "./genre-projection.js";
 
 /** Contenido de `merge_audit.new_value` en una fusión endurecida (E11.1+). */
 export interface MergeAuditData {
@@ -27,6 +30,8 @@ export interface MergeAuditData {
   detachedReviews: Array<Record<string, unknown>>;
   /** Alias primarios del duplicado que la fusión dejó como secundarios (desde E4; ausente antes). */
   primaryAliases?: number[];
+  /** Géneros de ambas fichas antes de la fusión (desde la migración 0027). */
+  genreRows?: GenreMergeSnapshot;
   version: 2;
 }
 
@@ -77,7 +82,6 @@ const qualify = (table: string): string => (table.includes(".") ? table : `publi
 
 /** Columnas cuyo «vacío» es un DEFAULT del core, no NULL. */
 const EMPTY_AGAIN: Readonly<Record<string, string>> = {
-  "persons.is_venezuelan": "false",
   "albums.album_type": "'other'",
 };
 
@@ -91,6 +95,155 @@ async function emptyAgain(client: PoolClient, kind: MergeKind, column: string, k
      WHERE k.id=$1
        AND k.${column} IS NOT DISTINCT FROM (
          SELECT r.${column} FROM jsonb_populate_record(NULL::${table}, $2::jsonb) r)`, [keepId, dropSnapshot]);
+}
+
+/**
+ * Lo que la fusión guardó, en el formato de E11.1. Una fusión anterior no
+ * guardaba qué filas movió: se usa el rastro reconstruido y verificado
+ * (`ingest.merge_traces`, migración 0030) y, si no lo hay, no se deshace.
+ */
+async function mergeData(client: PoolClient, audit: MergeAuditRow): Promise<MergeAuditData> {
+  const data = audit.new_value as unknown as MergeAuditData | null;
+  const auditId = Number(audit.id);
+  if (!audit.old_value) {
+    throw new OperatorError("invalid", "la auditoría de esa fusión no guarda la fila que borró", { auditId });
+  }
+  if (data?.version === 2) return data;
+  const trace = await loadVerifiedTrace(client, auditId);
+  if (!trace) {
+    throw new OperatorError("not_open",
+      `la fusión #${auditId} no se puede deshacer: ${await traceReason(client, auditId)}`, { auditId });
+  }
+  return {
+    keptId: Number(data?.keptId ?? 0),
+    filled: Array.isArray(data?.filled) ? data.filled : [],
+    moved: Number(data?.moved ?? trace.found),
+    discarded: 0,
+    tracksMerged: Number(data?.tracksMerged ?? 0),
+    movedRefs: trace.movedRefs,
+    discardedRows: [],
+    detachedReviews: [],
+    version: 2,
+  };
+}
+
+/**
+ * Deshace UNA fusión (una fila `merged_duplicate`) dentro de la transacción
+ * del operador: la ficha borrada vuelve, cada fila movida regresa a ella y el
+ * alias que dejó la fusión se retira. Comprueba antes que nada haya cambiado
+ * después; si algo cambió, no toca nada.
+ */
+export async function undoMergeAudit(context: OperatorContext, auditId: number): Promise<{ kind: string; id: number }> {
+  const client = context.client;
+  const { rows } = await client.query<MergeAuditRow>(`
+    SELECT id::text, entity_kind::text AS entity_kind, old_value, new_value
+      FROM ingest.merge_audit WHERE id=$1 AND field='merged_duplicate'`, [auditId]);
+  const audit = rows[0];
+  if (!audit) throw new OperatorError("not_found", `la fusión #${auditId} no existe`, { auditId });
+  return undoOneMerge(context, audit);
+}
+
+async function undoOneMerge(context: OperatorContext, audit: MergeAuditRow): Promise<{ kind: string; id: number }> {
+  const client = context.client;
+
+  const data = await mergeData(client, audit);
+  const drop = audit.old_value!;
+  const kind = audit.entity_kind;
+  const table = MERGE_TABLES[kind];
+  const keepId = data.keptId;
+  const dropId = Number(drop["id"]);
+
+  // Precondiciones: la ficha que quedó sigue siendo la misma y las filas
+  // movidas no se han movido otra vez. Si algo de esto falla, no se toca nada.
+  const keepExists = (await client.query(`SELECT 1 FROM ${table} WHERE id=$1`, [keepId])).rowCount;
+  if (!keepExists) {
+    throw new OperatorError("not_open", `la ficha que quedó (${kind} ${keepId}) ya no existe; se fusionó después`, { keepId });
+  }
+  const redirected = (await client.query(
+    "SELECT 1 FROM ingest.entity_redirects WHERE entity_kind=$1 AND from_id=$2", [kind, keepId])).rowCount;
+  if (redirected) {
+    throw new OperatorError("not_open", `la ficha que quedó (${kind} ${keepId}) se fusionó después en otra`, { keepId });
+  }
+  for (const ref of data.movedRefs) {
+    for (const key of ref.keys) {
+      const pk = Object.keys(key)[0]!;
+      const stillThere = (await client.query(
+        `SELECT 1 FROM ${ref.table} WHERE ${pk}=$1 AND ${ref.column}=$2`, [key[pk], keepId])).rowCount;
+      if (!stillThere) {
+        throw new OperatorError("not_open",
+          `una fila movida por la fusión (${ref.table}.${ref.column}) ya no apunta a ${keepId}: se movió otra vez`, { keepId });
+      }
+    }
+  }
+
+  // 1. La fila borrada vuelve tal cual (la persona primero: lo demás la referencia).
+  await reinsertRow(client, table, drop);
+  // 2. Cada fila movida vuelve a apuntar al duplicado.
+  for (const ref of data.movedRefs) {
+    for (const key of ref.keys) {
+      const pk = Object.keys(key)[0]!;
+      await client.query(
+        `UPDATE ${ref.table} SET ${ref.column}=$1 WHERE ${pk}=$2 AND ${ref.column}=$3`, [dropId, key[pk], keepId]);
+    }
+  }
+  // 3. Las filas descartadas vuelven (claims superseded recuperan destino y estado).
+  for (const discarded of data.discardedRows) {
+    if (discarded.policy === "superseded") {
+      await client.query(`
+        UPDATE ingest.claims
+           SET ${discarded.column}=$2, status=$3::ingest.claim_status, updated_at=now()
+         WHERE id=$1`, [discarded.row["id"], discarded.row[discarded.column] ?? null, discarded.row["status"]]);
+    } else {
+      await reinsertRow(client, discarded.table, discarded.row);
+    }
+  }
+  // 4. Las revisiones que se soltaron vuelven a su fila anterior.
+  for (const review of data.detachedReviews) {
+    // `updated_at` se reescribe con ahora: es el sello de esta reversión.
+    const entries = Object.entries(review).filter(([key]) => key !== "id" && key !== "created_at" && key !== "updated_at");
+    const assignments = entries.map(([key], index) => `${key}=$${index + 2}`).join(", ");
+    await client.query(
+      `UPDATE ingest.review_queue SET ${assignments}, updated_at=now() WHERE id=$1`,
+      [review["id"], ...entries.map(([, value]) => value)]);
+  }
+  // 5. Las columnas que se completaron desde el duplicado vuelven a estar vacías.
+  for (const column of data.filled) await emptyAgain(client, kind, column, keepId, drop);
+  // 6. El alias que dejó la fusión no debería sobrevivir a la fusión, y los
+  //    alias primarios del duplicado vuelven a serlo. Toda ficha con nombre
+  //    propio lo deja (antes solo se retiraba el de personas).
+  const alias = ALIAS_OF[kind];
+  if (alias) {
+    await client.query(
+      `DELETE FROM ${alias.table} WHERE ${kind}_id=$1 AND alias=$2 AND notes='Nombre de un duplicado fusionado'`,
+      [keepId, String(drop[alias.identity])]);
+    if (data.primaryAliases?.length) {
+      await client.query(
+        `UPDATE ${alias.table} SET is_primary=true WHERE id=ANY($1::bigint[]) AND ${kind}_id=$2`, [data.primaryAliases, dropId]);
+    }
+  }
+  // 6b. Los géneros vuelven a su ficha tal como estaban y `albums.genre` se
+  //     recalcula en las dos.
+  if (data.genreRows) {
+    await restoreGenreAssignments(client, data.genreRows).catch((error: Error) => {
+      throw new OperatorError("not_open", error.message, { keepId });
+    });
+    if (kind === "album") {
+      await projectAlbumGenre(client, keepId);
+      await projectAlbumGenre(client, dropId);
+    }
+  }
+  // 7. La redirección del id desaparecido.
+  await client.query(
+    "DELETE FROM ingest.entity_redirects WHERE entity_kind=$1 AND from_id=$2 AND to_id=$3", [kind, dropId, keepId]);
+  // 8. El rastro de la reversión, con los mismos claims que probaban la fusión.
+  const auditRow = await client.query<{ id: string }>(`
+    INSERT INTO ingest.merge_audit(run_id,entity_kind,${kind}_id,field,old_value,new_value,reason,confidence,performed_by)
+    VALUES($1,$2::ingest.claim_entity_kind,$3,'unmerged_duplicate',$4::jsonb,NULL,$5,'high','human') RETURNING id::text`,
+  [context.runId, kind, keepId, JSON.stringify({ undoneAuditId: Number(audit.id), restoredDropId: dropId, ...data }), context.note]);
+  await client.query(
+    "INSERT INTO ingest.merge_audit_claims(merge_audit_id,claim_id) SELECT $1, claim_id FROM ingest.merge_audit_claims WHERE merge_audit_id=$2 ON CONFLICT DO NOTHING",
+    [Number(auditRow.rows[0]!.id), Number(audit.id)]);
+  return { kind, id: dropId };
 }
 
 /**
@@ -110,98 +263,7 @@ export async function undoMergeRun(context: OperatorContext, mergeRunId: number)
   }
 
   const restored: Array<{ kind: string; id: number }> = [];
-  for (const audit of rows) {
-    const data = audit.new_value as unknown as MergeAuditData | null;
-    const drop = audit.old_value;
-    if (!data || data.version !== 2 || !drop) {
-      throw new OperatorError("invalid", "fusión anterior a E11.1: no guarda las filas movidas", { auditId: Number(audit.id) });
-    }
-    const kind = audit.entity_kind;
-    const table = MERGE_TABLES[kind];
-    const keepId = data.keptId;
-    const dropId = Number(drop["id"]);
-
-    // Precondiciones: la ficha que quedó sigue siendo la misma y las filas
-    // movidas no se han movido otra vez. Si algo de esto falla, no se toca nada.
-    const keepExists = (await client.query(`SELECT 1 FROM ${table} WHERE id=$1`, [keepId])).rowCount;
-    if (!keepExists) {
-      throw new OperatorError("not_open", `la ficha que quedó (${kind} ${keepId}) ya no existe; se fusionó después`, { keepId });
-    }
-    const redirected = (await client.query(
-      "SELECT 1 FROM ingest.entity_redirects WHERE entity_kind=$1 AND from_id=$2", [kind, keepId])).rowCount;
-    if (redirected) {
-      throw new OperatorError("not_open", `la ficha que quedó (${kind} ${keepId}) se fusionó después en otra`, { keepId });
-    }
-    for (const ref of data.movedRefs) {
-      for (const key of ref.keys) {
-        const pk = Object.keys(key)[0]!;
-        const stillThere = (await client.query(
-          `SELECT 1 FROM ${ref.table} WHERE ${pk}=$1 AND ${ref.column}=$2`, [key[pk], keepId])).rowCount;
-        if (!stillThere) {
-          throw new OperatorError("not_open",
-            `una fila movida por la fusión (${ref.table}.${ref.column}) ya no apunta a ${keepId}: se movió otra vez`, { keepId });
-        }
-      }
-    }
-
-    // 1. La fila borrada vuelve tal cual (la persona primero: lo demás la referencia).
-    await reinsertRow(client, table, drop);
-    // 2. Cada fila movida vuelve a apuntar al duplicado.
-    for (const ref of data.movedRefs) {
-      for (const key of ref.keys) {
-        const pk = Object.keys(key)[0]!;
-        await client.query(
-          `UPDATE ${ref.table} SET ${ref.column}=$1 WHERE ${pk}=$2 AND ${ref.column}=$3`, [dropId, key[pk], keepId]);
-      }
-    }
-    // 3. Las filas descartadas vuelven (claims superseded recuperan destino y estado).
-    for (const discarded of data.discardedRows) {
-      if (discarded.policy === "superseded") {
-        await client.query(`
-          UPDATE ingest.claims
-             SET ${discarded.column}=$2, status=$3::ingest.claim_status, updated_at=now()
-           WHERE id=$1`, [discarded.row["id"], discarded.row[discarded.column] ?? null, discarded.row["status"]]);
-      } else {
-        await reinsertRow(client, discarded.table, discarded.row);
-      }
-    }
-    // 4. Las revisiones que se soltaron vuelven a su fila anterior.
-    for (const review of data.detachedReviews) {
-      // `updated_at` se reescribe con ahora: es el sello de esta reversión.
-      const entries = Object.entries(review).filter(([key]) => key !== "id" && key !== "created_at" && key !== "updated_at");
-      const assignments = entries.map(([key], index) => `${key}=$${index + 2}`).join(", ");
-      await client.query(
-        `UPDATE ingest.review_queue SET ${assignments}, updated_at=now() WHERE id=$1`,
-        [review["id"], ...entries.map(([, value]) => value)]);
-    }
-    // 5. Las columnas que se completaron desde el duplicado vuelven a estar vacías.
-    for (const column of data.filled) await emptyAgain(client, kind, column, keepId, drop);
-    // 6. El alias que dejó la fusión no debería sobrevivir a la fusión, y los
-    //    alias primarios del duplicado vuelven a serlo. Toda ficha con nombre
-    //    propio lo deja (antes solo se retiraba el de personas).
-    const alias = ALIAS_OF[kind];
-    if (alias) {
-      await client.query(
-        `DELETE FROM ${alias.table} WHERE ${kind}_id=$1 AND alias=$2 AND notes='Nombre de un duplicado fusionado'`,
-        [keepId, String(drop[alias.identity])]);
-      if (data.primaryAliases?.length) {
-        await client.query(
-          `UPDATE ${alias.table} SET is_primary=true WHERE id=ANY($1::bigint[]) AND ${kind}_id=$2`, [data.primaryAliases, dropId]);
-      }
-    }
-    // 7. La redirección del id desaparecido.
-    await client.query(
-      "DELETE FROM ingest.entity_redirects WHERE entity_kind=$1 AND from_id=$2 AND to_id=$3", [kind, dropId, keepId]);
-    // 8. El rastro de la reversión, con los mismos claims que probaban la fusión.
-    const auditRow = await client.query<{ id: string }>(`
-      INSERT INTO ingest.merge_audit(run_id,entity_kind,${kind}_id,field,old_value,new_value,reason,confidence,performed_by)
-      VALUES($1,$2::ingest.claim_entity_kind,$3,'unmerged_duplicate',$4::jsonb,NULL,$5,'high','human') RETURNING id::text`,
-    [context.runId, kind, keepId, JSON.stringify({ undoneAuditId: Number(audit.id), restoredDropId: dropId, ...data }), context.note]);
-    await client.query(
-      "INSERT INTO ingest.merge_audit_claims(merge_audit_id,claim_id) SELECT $1, claim_id FROM ingest.merge_audit_claims WHERE merge_audit_id=$2 ON CONFLICT DO NOTHING",
-      [Number(auditRow.rows[0]!.id), Number(audit.id)]);
-    restored.push({ kind, id: dropId });
-  }
+  for (const audit of rows) restored.push(await undoOneMerge(context, audit));
 
   // Las correcciones de campo del run (updateEntity por fieldChoices) no se
   // revierten: cambiar el valor otra vez sería afirmar algo que nadie decidió.

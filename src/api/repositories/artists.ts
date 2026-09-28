@@ -3,6 +3,8 @@
 // devolver la ficha completa en una sola consulta.
 import { getPool } from "../../db/client.js";
 import type { PaginationQuery } from "../pagination.js";
+import { genreFilterSql, publicGenresFor, type PublicGenre } from "../../genres/public.js";
+import type { GenreStatus } from "../../merge/genre-projection.js";
 
 export interface ArtistListRow {
   id: number;
@@ -13,12 +15,16 @@ export interface ArtistListRow {
   formedYear: number | null;
   disbandedYear: number | null;
   pictureUrl: string | null;
+  /** Género propio del artista (su trayectoria): no se hereda a discos ni pistas. */
+  primaryGenre: PublicGenre | null;
+  genreStatus: GenreStatus;
 }
 
 export async function listArtists(
-  query: PaginationQuery & { q?: string | undefined },
+  query: PaginationQuery & { q?: string | undefined; genre?: string | undefined },
 ): Promise<{ rows: ArtistListRow[]; total: number }> {
   const pattern = query.q ? `%${query.q}%` : null;
+  const genre = query.genre ?? null;
   const [rows, count] = await Promise.all([
     getPool().query<{
       id: string; name: string; artist_type: string; origin_city: string | null;
@@ -27,16 +33,20 @@ export async function listArtists(
     }>(
       `SELECT id, name, artist_type, origin_city, origin_country, formed_year, disbanded_year, picture_url
          FROM public.artists
-        WHERE $1::text IS NULL OR name ILIKE $1
+        WHERE ($1::text IS NULL OR name ILIKE $1)
+          AND ($4::text IS NULL OR ${genreFilterSql("artist", "public.artists.id", "$4")})
         ORDER BY name
         LIMIT $2 OFFSET $3`,
-      [pattern, query.limit, query.offset],
+      [pattern, query.limit, query.offset, genre],
     ),
     getPool().query<{ count: string }>(
-      `SELECT count(*)::text AS count FROM public.artists WHERE $1::text IS NULL OR name ILIKE $1`,
-      [pattern],
+      `SELECT count(*)::text AS count FROM public.artists
+        WHERE ($1::text IS NULL OR name ILIKE $1)
+          AND ($2::text IS NULL OR ${genreFilterSql("artist", "public.artists.id", "$2")})`,
+      [pattern, genre],
     ),
   ]);
+  const genres = await publicGenresFor("artist", rows.rows.map((row) => Number(row.id)));
   return {
     rows: rows.rows.map((row) => ({
       id: Number(row.id),
@@ -47,6 +57,8 @@ export async function listArtists(
       formedYear: row.formed_year,
       disbandedYear: row.disbanded_year,
       pictureUrl: row.picture_url,
+      primaryGenre: genres.get(Number(row.id))?.primaryGenre ?? null,
+      genreStatus: genres.get(Number(row.id))?.genreStatus ?? "unclassified",
     })),
     total: Number(count.rows[0]?.count ?? 0),
   };
@@ -66,6 +78,10 @@ export interface ArtistDetail {
   members: Array<{ id: number; personId: number; personName: string; role: string; fromYear: number | null; toYear: number | null; isCurrent: boolean }>;
   discography: Array<{ albumId: number; title: string; releaseYear: number | null; albumType: string; coverUrl: string | null }>;
   aliases: Array<{ id: number; alias: string; aliasType: string; isPrimary: boolean }>;
+  /** Géneros confirmados del ARTISTA; los discos tienen los suyos. */
+  primaryGenre: PublicGenre | null;
+  genres: PublicGenre[];
+  genreStatus: GenreStatus;
 }
 
 export async function getArtistDetail(id: number): Promise<ArtistDetail | null> {
@@ -97,7 +113,9 @@ export async function getArtistDetail(id: number): Promise<ArtistDetail | null> 
   );
   const row = rows[0];
   if (!row) return null;
+  const genres = (await publicGenresFor("artist", [id])).get(id)!;
   return {
+    ...genres,
     id: Number(row["id"]),
     name: row["name"] as string,
     artistType: row["artist_type"] as string,

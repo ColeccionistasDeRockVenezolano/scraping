@@ -117,8 +117,20 @@ function scanRow(row: RawScan): ScanRow {
 
 const SCAN_COLUMNS = "id::text, status, scope, trigger, requested_by, started_at, finished_at, error, counters";
 
+/**
+ * ORDENAR POR LA COLUMNA, NO POR LO QUE SE DEVUELVE. `SELECT id::text` bautiza
+ * «id» a la salida, y un `ORDER BY id` suelto se ata a ESE nombre antes que a
+ * la columna: ordena el bigint como texto y «9» queda por encima de «58».
+ *
+ * Pasado real (2026-09-20): con 58 análisis guardados, Curaduría llevaba días
+ * anunciando «último análisis hace 4 días» —el número 9— aunque «Analizar
+ * ahora» acabara de correr. Los conteos eran de ahora y el encabezado de
+ * entonces, así que el botón parecía no hacer nada. De ahí el alias de tabla
+ * en cada consulta que ordena por id: `s.id` no puede atarse a la salida.
+ */
+
 export async function listScans(limit = 20): Promise<ScanRow[]> {
-  const { rows } = await getPool().query<RawScan>(`SELECT ${SCAN_COLUMNS} FROM ingest.curation_scans ORDER BY id DESC LIMIT $1`, [limit]);
+  const { rows } = await getPool().query<RawScan>(`SELECT ${SCAN_COLUMNS} FROM ingest.curation_scans s ORDER BY s.id DESC LIMIT $1`, [limit]);
   return rows.map(scanRow);
 }
 
@@ -134,7 +146,7 @@ const COMPLETE_SCAN = `${SAVED_SCAN} AND scope = 'completo'`;
 type CurationQueryable = Pick<Pool | PoolClient, "query">;
 
 async function lastOkScanId(queryable: CurationQueryable = getPool()): Promise<number | null> {
-  const { rows } = await queryable.query<{ id: string }>(`SELECT id::text FROM ingest.curation_scans WHERE ${COMPLETE_SCAN} ORDER BY id DESC LIMIT 1`);
+  const { rows } = await queryable.query<{ id: string }>(`SELECT id::text FROM ingest.curation_scans s WHERE ${COMPLETE_SCAN} ORDER BY s.id DESC LIMIT 1`);
   return rows[0] ? Number(rows[0].id) : null;
 }
 
@@ -142,9 +154,9 @@ export async function getCurationSummary(running: boolean): Promise<CurationSumm
   const pool = getPool();
   const [last, correction, counts] = await Promise.all([
     // Un análisis omitido (otro proceso analizaba) no es «el último análisis», ni una verificación dirigida.
-    pool.query<RawScan>(`SELECT ${SCAN_COLUMNS} FROM ingest.curation_scans WHERE status NOT IN ('running', 'skipped') AND scope = 'completo' ORDER BY id DESC LIMIT 1`),
+    pool.query<RawScan>(`SELECT ${SCAN_COLUMNS} FROM ingest.curation_scans s WHERE status NOT IN ('running', 'skipped') AND scope = 'completo' ORDER BY s.id DESC LIMIT 1`),
     // La última verificación tras una corrección sí puede ser dirigida: es lo que verificó el último lote.
-    pool.query<RawScan>(`SELECT ${SCAN_COLUMNS} FROM ingest.curation_scans WHERE trigger = 'correccion' AND ${SAVED_SCAN} ORDER BY id DESC LIMIT 1`),
+    pool.query<RawScan>(`SELECT ${SCAN_COLUMNS} FROM ingest.curation_scans s WHERE trigger = 'correccion' AND ${SAVED_SCAN} ORDER BY s.id DESC LIMIT 1`),
     pool.query<{ category: string; detector: string; signature: string; label: string | null; status: FindingStatus; severity: Severity; n: number; fresh: number; chained: number }>(`
       WITH last_ok AS (SELECT max(id) AS id FROM ingest.curation_scans WHERE ${COMPLETE_SCAN})
       SELECT category, detector, signature, max(evidence->>'signatureLabel') AS label, status, severity,
@@ -304,9 +316,9 @@ export async function listFindings(query: FindingQuery): Promise<{ rows: Finding
     getPool().query<RawFinding>(`
       SELECT ${FINDING_COLUMNS},
              count(*) OVER ()::text AS total
-        FROM ingest.curation_findings
+        FROM ingest.curation_findings f
        ${where.length ? `WHERE ${where.join(" AND ")}` : ""}
-       ORDER BY CASE severity WHEN 'high' THEN 0 WHEN 'medium' THEN 1 ELSE 2 END, first_seen_at DESC, id
+       ORDER BY CASE severity WHEN 'high' THEN 0 WHEN 'medium' THEN 1 ELSE 2 END, first_seen_at DESC, f.id
        LIMIT $${params.length - 1} OFFSET $${params.length}`, params),
   ]);
   return { rows: result.rows.map((row) => findingRow(row, lastScan)), total: Number(result.rows[0]?.total ?? 0) };
@@ -474,9 +486,9 @@ export async function declareDistinctPair(
 export async function listDistinctPairs(query: { kind?: DistinctPairKind | undefined; limit: number; offset: number }): Promise<{ rows: DistinctPairRow[]; total: number }> {
   const { rows } = await getPool().query<RawDistinctPair & { total: string }>(`
     SELECT id::text, kind, a_id::text, b_id::text, decided_by, note, created_at, count(*) OVER ()::text AS total
-      FROM ingest.curation_distinct_pairs
+      FROM ingest.curation_distinct_pairs p
      WHERE ($1::text IS NULL OR kind = $1)
-     ORDER BY id DESC LIMIT $2 OFFSET $3`, [query.kind ?? null, query.limit, query.offset]);
+     ORDER BY p.id DESC LIMIT $2 OFFSET $3`, [query.kind ?? null, query.limit, query.offset]);
   return { rows: rows.map(distinctPairRow), total: Number(rows[0]?.total ?? 0) };
 }
 
@@ -530,9 +542,9 @@ export async function listAutofixCandidates(detector: string, signature: string 
     lastOkScanId(),
     getPool().query<RawFinding>(`
       SELECT ${FINDING_COLUMNS}, '0' AS total
-        FROM ingest.curation_findings
+        FROM ingest.curation_findings f
        WHERE status = 'open' AND detector = $1 AND ($2::text IS NULL OR signature = $2)
-       ORDER BY id LIMIT $3`, [detector, signature, limit]),
+       ORDER BY f.id LIMIT $3`, [detector, signature, limit]),
   ]);
   return result.rows.map((row) => findingRow(row, lastScan));
 }

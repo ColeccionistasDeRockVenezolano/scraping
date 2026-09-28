@@ -1,4 +1,5 @@
 import { describe, expect, it } from "vitest";
+import { declaredActions } from "../../src/curation/actions/registry.js";
 import { buildContext, isLocalDetector } from "../../src/curation/analyze.js";
 import { E11_DETECTORS } from "../../src/curation/detectors/advanced.js";
 import type { CatalogSnapshot } from "../../src/curation/types.js";
@@ -80,6 +81,10 @@ describe("PLAN_CURADURIA E11", () => {
     const context = buildContext(snapshot());
     const emitted = new Set(E11_DETECTORS.flatMap((detector) => detector.run(context)).map((finding) => finding.detector));
     expect([...emitted].sort()).toEqual(E11_DETECTORS.map((detector) => detector.key).sort());
+  });
+
+  it("organizacion_sin_clasificar ofrece la acción de nivel 1 que pide E11", () => {
+    expect(declaredActions("organizacion_sin_clasificar", "sin_clasificar")).toEqual(["fijar_tipo_de_organizacion"]);
   });
 
   it("los cuatro detectores de vecindad participan en la verificación dirigida", () => {

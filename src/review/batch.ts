@@ -17,6 +17,7 @@
 //     cierra, así que "qué aprobó este lote" es una consulta, no un recuerdo.
 //  3. AISLAMIENTO DEL FALLO. Una entidad que falla no aborta el resto; se
 //     acumula en `errors` y el lote termina 'partial'.
+import { withRunScope } from "../db/run-binding.js";
 import { getDb } from "../db/client.js";
 import { scrapeRuns, sources } from "../db/schema/ingest.js";
 import { eq } from "drizzle-orm";
@@ -170,27 +171,31 @@ export async function runBatch(
     unsupported: 0, reviewsClosed: 0, failed: 0, errors: [],
   };
 
-  for (const kind of kindsFor(filter)) {
-    for (const item of byKind.get(kind) ?? []) {
-      try {
-        const outcome = action === "approve"
-          ? await approveEntity(kind, item.identityKey, batchNote)
-          : await dismissEntity(kind, item.identityKey, batchNote);
-        result.entities += 1;
-        result.applied += outcome.applied;
-        result.unchanged += outcome.unchanged;
-        result.stillCandidate += outcome.stillCandidate;
-        result.unsupported += outcome.unsupported;
-        result.reviewsClosed += outcome.reviewsClosed;
-      } catch (error) {
-        // Un candidato roto no puede tumbar el lote: se anota y se sigue.
-        result.failed += 1;
-        if (result.errors.length < 50) {
-          result.errors.push({ entityKind: kind, identityKey: item.identityKey, error: (error as Error).message });
+  // Cada ficha abre su propia transacción: el alcance del run las liga al
+  // diario de cambios (0028) para poder deshacer el lote entero.
+  await withRunScope(run.id, async () => {
+    for (const kind of kindsFor(filter)) {
+      for (const item of byKind.get(kind) ?? []) {
+        try {
+          const outcome = action === "approve"
+            ? await approveEntity(kind, item.identityKey, batchNote)
+            : await dismissEntity(kind, item.identityKey, batchNote);
+          result.entities += 1;
+          result.applied += outcome.applied;
+          result.unchanged += outcome.unchanged;
+          result.stillCandidate += outcome.stillCandidate;
+          result.unsupported += outcome.unsupported;
+          result.reviewsClosed += outcome.reviewsClosed;
+        } catch (error) {
+          // Un candidato roto no puede tumbar el lote: se anota y se sigue.
+          result.failed += 1;
+          if (result.errors.length < 50) {
+            result.errors.push({ entityKind: kind, identityKey: item.identityKey, error: (error as Error).message });
+          }
         }
       }
     }
-  }
+  });
 
   const status = result.failed === 0 ? "ok" : "partial";
   await finishRun(run.id, status, {

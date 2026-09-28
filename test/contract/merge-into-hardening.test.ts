@@ -193,7 +193,7 @@ describe("mergeInto endurecido", () => {
     const drop = await newPerson("Venezolano B", { isVenezuelan: true });
     const outcome = await merge("person", keep, drop, "prueba de is_venezuelan");
 
-    // is_venezuelan es NOT NULL DEFAULT false: «vacío» es false, no NULL (P9).
+    // Desde 0029 «vacío» es NULL; el true del duplicado completa a la que queda (P9).
     expect(outcome.filled).toContain("is_venezuelan");
     const row = (await getPool().query<{ is_venezuelan: boolean }>("SELECT is_venezuelan FROM public.persons WHERE id=$1", [keep])).rows[0]!;
     expect(row.is_venezuelan).toBe(true);

@@ -1,8 +1,11 @@
 // Unico escritor del core. Toda mutacion pasa por policy, advisory lock,
 // claim y merge_audit. DeepSeek nunca entra en este modulo como ejecutor.
+import { bindRun } from "../db/run-binding.js";
 import type { PoolClient } from "pg";
 import type { DeepSeekGateway } from "../ai/gateway.js";
 import { getPool } from "../db/client.js";
+import { getEnv } from "../config/env.js";
+import { syncEntityGenres } from "../genres/store.js";
 import type { ClaimToPersist, Confidence, PersistedClaim } from "../claims/persistence.js";
 import { createFieldConflict, hasOpenFieldConflict } from "../conflicts/engine.js";
 import { normalizeDisplayName, normalizeEntityName } from "../normalization/entity-name.js";
@@ -541,18 +544,17 @@ async function mergeEntityClaim(
     decision = options.humanResolution?.verdict === "same"
       ? humanSameDecision(input, targetId, canonical, options.humanResolution)
       : inherited ? inheritedDecision(input, targetId, canonical) : explicitDecision(input, targetId, canonical);
+  } else if (options.humanResolution?.verdict === "different") {
+    // La separación humana no evalúa candidatas: volcar el catálogo entero con
+    // score 0 no dice nada y pesaba ~750 kB por decisión de pista (7,7 GB en
+    // la tanda del 2026-09-26). La decisión queda en features y explanation.
+    decision = humanDifferentDecision(input, [], options.humanResolution);
   } else {
     const candidates = await loadResolutionCandidates(input, client);
-    decision = options.humanResolution?.verdict === "different"
-      ? humanDifferentDecision(input, candidates.map((candidate) => ({
-        candidateId: candidate.id, canonicalName: candidate.canonicalName, score: 0,
-        action: "NO_MATCH", features: [], hardConflicts: [], nameBasis: "none",
-        hasContextSupport: false, autoEligible: false,
-      })), options.humanResolution)
-      : await resolveEntity(input, candidates, {
-        thresholds: resolutionThresholdsFromEnv(),
-        ...(options.gateway === undefined ? {} : { gateway: options.gateway }),
-      });
+    decision = await resolveEntity(input, candidates, {
+      thresholds: resolutionThresholdsFromEnv(),
+      ...(options.gateway === undefined ? {} : { gateway: options.gateway }),
+    });
     if (decision.action === "AUTO_MATCH") targetId = decision.candidateId;
   }
   const decisionId = await persistResolutionDecision(decision, input, {
@@ -596,6 +598,18 @@ async function mergeEntityClaim(
     }
     await attachClaim(client, persisted.id, spec, targetId, ambiguous ? "candidate" : "accepted");
     return { action: ambiguous ? "candidate" : "applied", ...targetResult(spec, targetId, { resolutionDecisionId: decisionId }), detail: ambiguous ? "alias ambiguo enviado a revision" : "alias conservado sin cambiar nombre canonico" };
+  }
+  // Con la proyección de géneros encendida, un claim `genre` alimenta
+  // album_genres/artist_genres y `albums.genre` lo escribe solo la proyección
+  // (PLAN_GENEROS §4). Apagada, el motor vuelve a escribir la columna.
+  if (claim.field === "genre" && (spec.kind === "album" || spec.kind === "artist") && getEnv().GENRES_PROJECTION_ENABLED) {
+    await attachClaim(client, persisted.id, spec, targetId, "accepted");
+    const synced = await syncEntityGenres(client, spec.kind, targetId, { runId: claim.runId });
+    const changed = synced.write.inserted + synced.write.updated + synced.write.deleted + synced.write.humanEvidence > 0 || synced.projection?.changed === true;
+    return {
+      action: changed ? "applied" : "unchanged", ...targetResult(spec, targetId, { resolutionDecisionId: decisionId }),
+      detail: changed ? "géneros recalculados desde la evidencia; albums.genre por proyección" : "géneros sin cambios",
+    };
   }
   const column = spec.fields[claim.field];
   if (!column) {
@@ -694,6 +708,7 @@ export async function keepRepeatedTrackOccurrences(
   const client = await getPool().connect();
   try {
     await client.query("BEGIN");
+    await bindRun(client, options.runId);
     const results: RepeatedTrackResolution[] = [];
     for (const conflictId of [...new Set(conflictIds)]) {
       const loaded = await client.query<{
@@ -794,6 +809,7 @@ export async function resolveFieldConflict(
   const client = await getPool().connect();
   try {
     await client.query("BEGIN");
+    await bindRun(client, options.runId);
     await resolveFieldConflictWith(client, conflictId, resolution, options);
     await client.query("COMMIT");
   } catch (error) { await client.query("ROLLBACK"); throw error; }

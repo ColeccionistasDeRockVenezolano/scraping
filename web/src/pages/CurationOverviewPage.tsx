@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 import { ArrowsClockwise, ArrowBendDownRight, CheckCircle, Clock, Sparkle, NotEquals } from "@phosphor-icons/react";
 import { ApiError, curationApi } from "../lib/api";
 import { useToast } from "../lib/ToastContext";
-import { ENTITY_KIND_LABEL, categoryIcon, counter, failedDetectors, formatCount, relativeTime, triggerLabel } from "../lib/curation";
+import { ENTITY_KIND_LABEL, absoluteTime, categoryIcon, counter, failedDetectors, formatCount, relativeTime, scanRulesVersion, scopeLabel, triggerLabel } from "../lib/curation";
 import { entityHref } from "../lib/routes";
 import { AutofixAlerts, AutofixToday } from "../components/AutofixToday";
 import { useAsync } from "../lib/useAsync";
@@ -19,8 +19,11 @@ import { HeaderSkeleton, RowsSkeleton } from "../components/Skeletons";
 import { useCurationSummary } from "./CurationLayout";
 import type { CurationAutofixSummary, CurationCategorySummary, CurationMetrics, CurationScan, DistinctPair } from "../lib/types";
 
+/** A partir de aquí, lo que se ve en pantalla ya no se da por fresco. */
+const STALE_AFTER_MS = 90_000;
+
 export function CurationOverviewPage() {
-  const { summary, summaryError, refreshSummary } = useCurationSummary();
+  const { summary, summaryError, summaryFetchedAt, refreshSummary } = useCurationSummary();
   const { notify } = useToast();
   const [scanning, setScanning] = useState(false);
 
@@ -36,7 +39,11 @@ export function CurationOverviewPage() {
         notify("info", `Análisis parcial: ${formatCount(result.inserted + result.reopened)} nuevos, ${formatCount(result.resolved)} resueltos. `
           + `Fallaron ${result.failures.map((failure) => failure.detector).join(", ")}; sus hallazgos no se tocaron.`);
       } else {
-        notify("success", `Análisis listo: ${formatCount(result.inserted + result.reopened)} nuevos, ${formatCount(result.resolved)} resueltos.`);
+        // Casi siempre sale «0 nuevos, 0 resueltos» —el catálogo no se ha
+        // movido— y eso se lee como «no hizo nada». Se dice también qué miró:
+        // el catálogo entero, cuántos hallazgos sostiene y cuánto tardó.
+        notify("success", `Análisis #${result.scanId ?? "?"} del ${scopeLabel(result.scope)}: ${formatCount(result.total)} hallazgos en total · `
+          + `${formatCount(result.inserted + result.reopened)} nuevos · ${formatCount(result.resolved)} resueltos · ${(result.durationMs / 1000).toFixed(1)} s.`);
       }
     } catch (error) {
       notify("error", error instanceof ApiError ? error.message : "No se pudo analizar el catálogo.");
@@ -57,6 +64,13 @@ export function CurationOverviewPage() {
 
   const running = scanning || summary.running;
   const { lastScan, lastCorrection, totals } = summary;
+  // Lo que se ve puede no ser lo que hay: si el último refresco falló, el
+  // resumen anterior sigue en pantalla (mejor que vaciarla), pero decirlo es
+  // obligatorio —callarlo es lo que dejaba leer conteos de hace días como si
+  // fueran de ahora—. Lo mismo si la lectura ya tiene una edad.
+  const staleMs = summaryFetchedAt === undefined ? null : Date.now() - summaryFetchedAt;
+  const stale = summaryError !== undefined || (staleMs !== null && staleMs > STALE_AFTER_MS);
+  const engine = scanRulesVersion(lastScan);
   // Las categorías con trabajo pendiente van primero y en grande; las que están
   // al día se resumen abajo para no competir por la atención.
   const active = summary.categories.filter((category) => category.open > 0);
@@ -69,20 +83,32 @@ export function CurationOverviewPage() {
         encaja. Cada corrección guardada lo vuelve a correr para comprobar si arregló el problema o si hizo aparecer otros.
       </p>
 
+      {stale ? (
+        <p className="form-error-banner" role="status">
+          {summaryError ?? "Estos datos llevan un rato sin actualizarse."}
+          {" "}Lo que se muestra es la última lectura correcta
+          {summaryFetchedAt === undefined ? "" : ` (${absoluteTime(new Date(summaryFetchedAt).toISOString())})`}, no el estado de ahora.{" "}
+          <button type="button" className="text-link" onClick={() => void refreshSummary()}>Volver a consultar</button>
+        </p>
+      ) : null}
+
       <section className="cscan" aria-live="polite">
         <div className="cscan__status">
           <span className={`cscan__dot${running ? " is-running" : lastScan?.status === "failed" ? " is-failed" : lastScan?.status === "partial" ? " is-partial" : ""}`} aria-hidden="true" />
           <div>
-            <p className="cscan__title">
+            <p className="cscan__title" {...(lastScan && !running ? { title: absoluteTime(lastScan.finishedAt ?? lastScan.startedAt) } : {})}>
               {running ? "Analizando el catálogo…" : lastScan ? `Último análisis ${relativeTime(lastScan.finishedAt ?? lastScan.startedAt)}` : "Aún no hay análisis"}
             </p>
             {lastScan && !running ? (
               <p className="cscan__meta">
+                {`#${lastScan.id} · `}
                 {triggerLabel(lastScan.trigger)}
+                {` · ${scopeLabel(lastScan.scope)}`}
                 {lastScan.requestedBy ? ` · ${lastScan.requestedBy}` : ""}
                 {lastScan.status === "ok" || lastScan.status === "partial" ? ` · ${formatCount(counter(lastScan, "total"))} hallazgos · ${(counter(lastScan, "durationMs") / 1000).toFixed(1)} s` : ""}
                 {lastScan.status === "partial" ? ` · parcial: fallaron ${failedDetectors(lastScan).join(", ")}` : ""}
                 {lastScan.status === "failed" ? ` · falló: ${lastScan.error ?? "error desconocido"}` : ""}
+                {engine ? <span title="Versión de las reglas con la que corrió. La API la carga al arrancar: si no coincide con la del repositorio, hay que reiniciarla.">{` · motor ${engine}`}</span> : null}
               </p>
             ) : null}
           </div>

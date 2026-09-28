@@ -7,7 +7,7 @@
 // reglas propias. El modal no se cierra al fusionar: muestra el resultado y
 // deja deshacer la fusión mientras el run siga siendo reversible.
 import { useCallback, useEffect, useState } from "react";
-import { albumMergeApi, entityMergeApi, ApiError } from "../lib/api";
+import { albumMergeApi, ApiError } from "../lib/api";
 import { formatMergeValue } from "../lib/format";
 import { useToast } from "../lib/ToastContext";
 import { Modal } from "./Modal";
@@ -55,8 +55,6 @@ export function AlbumMergeModal({ albumId, albumTitle, onMerged, onClose }: Albu
   const [note, setNote] = useState("");
   const [busy, setBusy] = useState(false);
   const [result, setResult] = useState<AlbumMergeResult | null>(null);
-  const [undoNote, setUndoNote] = useState("");
-  const [undoing, setUndoing] = useState(false);
 
   const load = useCallback(async (firstId: number, secondId: number, orient: "recommended" | "first" = "recommended") => {
     setLoading(true);
@@ -120,19 +118,6 @@ export function AlbumMergeModal({ albumId, albumTitle, onMerged, onClose }: Albu
     }
   }
 
-  async function undo() {
-    if (!result) return;
-    setUndoing(true);
-    setError(undefined);
-    try {
-      const undone = await entityMergeApi.undo(result.runId, undoNote.trim());
-      notify("success", `Fusión deshecha: ${undone.restored.map((item) => `${item.kind} ${item.id}`).join(", ")} volvió al catálogo.`);
-      onMerged(result.keepId);
-    } catch (err) {
-      setError(err instanceof Error ? err.message : "No se pudo deshacer la fusión.");
-      setUndoing(false);
-    }
-  }
 
   return (
     <Modal title={result ? "Fusión completada" : "Fusionar discos"} onClose={onClose} wide>
@@ -145,19 +130,11 @@ export function AlbumMergeModal({ albumId, albumTitle, onMerged, onClose }: Albu
             {result.fieldsCorrected.length ? `; campos corregidos: ${result.fieldsCorrected.map((field) => FIELD_LABELS[field] ?? field).join(", ")}` : ""}.
           </p>
           <p className="hint">El id del disco que desapareció ya lleva al que quedó (redirección). Los enlaces de medios se repuntaron.</p>
-          <div className="field" style={{ marginTop: 12 }}>
-            <label htmlFor="album-merge-undo-note">Motivo para deshacer *</label>
-            <textarea
-              id="album-merge-undo-note" rows={2} value={undoNote}
-              onChange={(event) => setUndoNote(event.target.value)}
-              placeholder="Por qué se revierte esta fusión (queda en la auditoría)"
-            />
-          </div>
+          <p className="hint">
+            ¿Fue un error? Al cerrar queda a la vista la barra «Deshacer» de este cambio; también está en el Historial.
+          </p>
           {error ? <p className="form-error-banner" style={{ marginTop: 12 }} role="alert">{error}</p> : null}
           <div className="form-actions">
-            <button type="button" className="btn btn--danger" onClick={undo} disabled={undoing || !undoNote.trim()}>
-              {undoing ? "Deshaciendo…" : "Deshacer esta fusión"}
-            </button>
             <button type="button" className="btn btn--primary" onClick={() => onMerged(result.keepId)}>Ir al disco</button>
           </div>
         </>

@@ -46,7 +46,15 @@ export interface DiscographyItem {
   albumId: number; title: string; releaseYear: number | null; albumType: string; coverUrl: string | null;
 }
 
+/** Género público (PLAN_GENEROS §5): solo lo confirmado. */
+export interface PublicGenre { id: number; slug: string; name: string; family: string; }
+export type GenreStatus = "confirmed" | "pending" | "unclassified";
+
 export interface ArtistDetail extends ArtistListItem {
+  /** Géneros propios del artista; no se heredan a sus discos. */
+  genres?: PublicGenre[];
+  primaryGenre?: PublicGenre | null;
+  genreStatus?: GenreStatus;
   biography: string | null;
   notes: string | null;
   members: ArtistMember[];
@@ -63,6 +71,12 @@ export interface AlbumListItem {
   artistId: number;
   artistName: string;
   coverUrl: string | null;
+  /** Solo con sesión iniciada: el género principal lo eligió Laya. */
+  genreByLaya?: boolean;
+}
+
+export interface ScopedCredit extends Credit {
+  tracks: Array<{ discNumber: number; trackNumber: number }>;
 }
 
 export interface Credit {
@@ -115,6 +129,12 @@ export interface AlbumDetail {
   releaseYear: number | null;
   albumType: string;
   genre: string | null;
+  /** Estado del género mostrado (PLAN_GENEROS §5). */
+  genreStatus?: GenreStatus;
+  primaryGenre?: PublicGenre | null;
+  genres?: PublicGenre[];
+  /** Solo con sesión iniciada: el género principal lo eligió Laya. */
+  genreByLaya?: boolean;
   coverUrl: string | null;
   description: string | null;
   notes: string | null;
@@ -129,6 +149,8 @@ export interface AlbumDetail {
   tracklist: Track[];
   credits: Credit[];
   creditsByType: Record<string, Credit[]>;
+  /** Créditos de pista agrupados por acreditado, tipo y rol. */
+  scopedCreditsByType: Record<string, ScopedCredit[]>;
   formats: AlbumFormat[];
   aliases: Alias[];
   youtubeLinks: YoutubeLink[];
@@ -139,7 +161,7 @@ export interface PersonListItem {
   id: number;
   name: string;
   nationality: string | null;
-  isVenezuelan: boolean;
+  isVenezuelan: boolean | null;
   pictureUrl: string | null;
   /** Créditos de disco y de pista (E11.9). */
   creditCount: number;
@@ -372,6 +394,8 @@ export interface CurationEntityRef { kind: string; id: number | null; label: str
 export interface CurationScan {
   id: number;
   status: string;
+  /** completo = se miró todo el catálogo; dirigido = solo la vecindad de unas fichas. */
+  scope: string;
   trigger: string;
   requestedBy: string | null;
   startedAt: string;
@@ -570,6 +594,8 @@ export interface CurationScanResult {
   scanId: number | null;
   /** partial = algún detector falló (sus hallazgos no se tocaron); skipped = otro proceso estaba analizando. */
   status: "ok" | "partial" | "skipped" | "failed";
+  /** «Analizar ahora» siempre es `completo`: mira el catálogo entero. */
+  scope: "completo" | "dirigido";
   trigger: string;
   dryRun: boolean;
   durationMs: number;
@@ -731,4 +757,84 @@ export interface FixBatchSummary {
 export interface DistinctPair {
   id: number; kind: string; aId: number; bId: number;
   decidedBy: string; note: string; createdAt: string;
+}
+
+// ── Historial de cambios y deshacer (GET/POST /changes, migración 0028) ──
+
+export type ChangeEntityKind = "artist" | "person" | "organization" | "album" | "track";
+export type UndoStep = "restore" | "revert" | "remove";
+
+export interface ChangeSummary {
+  runId: number;
+  kind: string;
+  status: string;
+  action: string | null;
+  operator: string | null;
+  note: string | null;
+  startedAt: string;
+  finishedAt: string | null;
+  /** El diario tiene sus cambios: se deshace fila por fila. */
+  journaled: boolean;
+  counts: Record<string, { created: number; changed: number; removed: number }>;
+  total: number;
+  entities: Array<{ kind: ChangeEntityKind; id: number; label: string | null; op: "created" | "removed" | "changed" }>;
+  entityTotal: number;
+  undoneBy: number | null;
+  undoOf: number | null;
+  /** Deshizo un deshacer: este run vuelve a aplicar `redoOf`. */
+  redoOf: number | null;
+}
+
+/**
+ * Lo anterior al diario se deshace decisión por decisión: una fusión
+ * (`merged_duplicate`) o una conversión (`absorbed_person`) del historial.
+ * La vista previa la calcula el backend haciendo el deshacer de verdad dentro
+ * de una transacción que vuelve atrás, así que `undoable` no es una promesa.
+ */
+export interface AuditUndoPreview {
+  auditId: number;
+  runId: number | null;
+  kind: "merge" | "absorption";
+  entityKind: string;
+  field: string;
+  reason: string;
+  at: string;
+  restores: { kind: string; id: number; label: string | null };
+  undoneByAuditId: number | null;
+  undoneByRunId: number | null;
+  undoable: boolean;
+  reasonNot: string | null;
+  result: unknown;
+}
+
+export interface UndoConflict {
+  table: string;
+  pk: Record<string, unknown>;
+  reason: "changed" | "missing" | "exists";
+  columns: string[];
+  laterRunId: number | null;
+  label: string | null;
+}
+
+export interface UndoPlan {
+  runId: number;
+  changes: number;
+  steps: Record<UndoStep, number>;
+  byTable: Record<string, Record<UndoStep, number>>;
+  entities: Array<{ kind: string; id: number; label: string | null; step: UndoStep }>;
+  conflicts: UndoConflict[];
+  skipped: UndoConflict[];
+  claimsToSupersede: number;
+}
+
+export interface ChangeDetail extends ChangeSummary {
+  undo: { method: "journal" | "legacy" | null; undoable: boolean; reason: string | null; plan: UndoPlan | null };
+}
+
+export interface ChangeUndoResult {
+  /** Run del deshacer: deshacerlo es rehacer. */
+  runId: number;
+  undoneRunId: number;
+  method: "journal" | "legacy";
+  result: unknown;
 }

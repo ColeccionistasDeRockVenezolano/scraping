@@ -61,3 +61,13 @@ tmp-analysis/
 # La página de la Mesa de Cotejo se genera desde la base con
 # `npm run cotejo:build`; la plantilla sí vive en src/cotejo/.
 public/cotejo.html
+
+# --- Imágenes descargadas por `npm run media:localize` (web/public/media,
+# ~250 MB). Como data/raw, se respaldan aparte: el core apunta a /crv/media/…
+web/public/media/
+
+# --- Notas y listas de trabajo de las sesiones (no son artefactos) ---
+logs/
+
+# --- Cachés de Python ---
+__pycache__/

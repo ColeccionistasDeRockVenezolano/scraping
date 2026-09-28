@@ -162,7 +162,9 @@ describe("deshacer una fusión (E11.8)", () => {
     expect((await getPool().query("SELECT 1 FROM ingest.entity_redirects WHERE from_id=$1 AND to_id=$2", [b, c])).rows).toHaveLength(1);
   });
 
-  it("rechaza deshacer una fusión anterior a E11.1 (sin filas movidas en la auditoría)", async () => {
+  // Anterior a E11.1 y sin rastro reconstruido (`ingest.merge_traces`, 0030):
+  // se niega diciendo qué hace falta, no «no se puede y ya».
+  it("rechaza deshacer una fusión anterior a E11.1 mientras no tenga rastro reconstruido", async () => {
     const keep = await one("INSERT INTO public.persons(name) VALUES('Antigua A') RETURNING id");
     const drop = await one("INSERT INTO public.persons(name) VALUES('Antigua B') RETURNING id");
     // Fusión «vieja»: la auditoría no guarda movedRefs (version 1 no existe).
@@ -173,6 +175,7 @@ describe("deshacer una fusión (E11.8)", () => {
       VALUES($1,'person',$2,'merged_duplicate',$3::jsonb,$4::jsonb,'fusión antigua','high','human')`,
     [runId, keep, JSON.stringify({ id: drop, name: "Antigua B" }), JSON.stringify({ keptId: keep, filled: [], moved: 0, discarded: 0, tracksMerged: 0 })]);
 
-    await expect(undo(runId)).rejects.toMatchObject({ code: "invalid" });
+    await expect(undo(runId)).rejects.toMatchObject({ code: "not_open" });
+    await expect(undo(runId)).rejects.toThrow(/rebuild-traces/);
   });
 });

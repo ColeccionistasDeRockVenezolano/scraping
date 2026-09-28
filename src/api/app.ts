@@ -35,6 +35,7 @@ import { registerPersonCandidateRoutes } from "./routes/person-candidates.js";
 import { registerMergeRunRoutes } from "./routes/merge-runs.js";
 import { registerAliasRoutes } from "./routes/aliases.js";
 import { registerAuditRoutes } from "./routes/audit.js";
+import { registerChangeRoutes } from "./routes/changes.js";
 import { registerCurationRoutes } from "./routes/curation.js";
 import { registerCurationActionRoutes } from "./routes/curation-actions.js";
 import { registerCurationAutofixRoutes } from "./routes/curation-autofix.js";
@@ -145,6 +146,7 @@ export async function buildApp(): Promise<FastifyInstance> {
   await registerMergeRunRoutes(app);
   await registerAliasRoutes(app);
   await registerAuditRoutes(app);
+  await registerChangeRoutes(app);
   await registerCurationRoutes(app);
   await registerCurationActionRoutes(app);
   await registerCurationAutofixRoutes(app);

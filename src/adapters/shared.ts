@@ -137,16 +137,21 @@ function splitExplicitList(value: string): string[] {
 /** Todas las líneas visuales del documento, en orden de lectura. */
 function documentLines($: CheerioAPI): Array<{ text: string; tag: string }> {
   const out: Array<{ text: string; tag: string }> = [];
-  $("p, li, td, div, h1, h2, h3, h4").each((_, node) => {
+  // En Blogger el marcador «Temas:» y cada pista pueden vivir en spans dentro
+  // de un div que también contiene otros divs. Saltar ese contenedor sin leer
+  // sus hojas inline perdía el listado completo.
+  const lineTags = "p, li, td, div, h1, h2, h3, h4, span, font";
+  $(lineTags).each((_, node) => {
     const el = $(node);
-    if (el.find("p, li, td, div, h1, h2, h3, h4").length > 0) return;
+    if (el.find(lineTags).length > 0) return;
     for (const text of linesOf($, el.html() ?? "")) out.push({ text, tag: node.tagName.toLowerCase() });
   });
   return out;
 }
 
 const TRACKLIST_MARKER = /^(?:tracklist|lista de temas|temas|canciones|track ?list)\s*:?\s*$/i;
-const NUMBERED = /^(\d{1,3})\s*[.\-–)]\s*(.+)$/u;
+const NUMBERED = /^(\d{1,3})(?:\s*[.\-–)]\s*|\s+)(.+)$/u;
+const NUMBERED_WITH_SEPARATOR = /^(\d{1,3})\s*[.\-–)]\s*(.+)$/u;
 
 /**
  * Muchos blogs no usan <ol>: escriben "Tracklist:" y debajo una línea por
@@ -157,11 +162,19 @@ function extractNumberedTracks($: CheerioAPI, url: string, artist: string | unde
   if (!album) return [];
   const lines = documentLines($);
   const start = lines.findIndex((line) => TRACKLIST_MARKER.test(line.text));
-  if (start < 0) return [];
+  // Algunos posts ponen «1. Canción» justo después de Lugar, sin rótulo.
+  // Ahí solo aceptamos una secuencia 1, 2, … con separador visible; dos
+  // números sueltos en prosa no bastan para inventar un tracklist.
+  const sequence = start < 0 ? lines.findIndex((line, index) => {
+    const first = NUMBERED_WITH_SEPARATOR.exec(line.text);
+    const second = NUMBERED_WITH_SEPARATOR.exec(lines[index + 1]?.text ?? "");
+    return first?.[1] === "1" && second?.[1] === "2";
+  }) : -1;
+  if (start < 0 && sequence < 0) return [];
   const records: RawRecord[] = [];
-  for (let index = start + 1; index < lines.length; index += 1) {
+  for (let index = start >= 0 ? start + 1 : sequence; index < lines.length; index += 1) {
     const line = lines[index]!;
-    const match = NUMBERED.exec(line.text);
+    const match = (start >= 0 ? NUMBERED : NUMBERED_WITH_SEPARATOR).exec(line.text);
     if (!match) { if (records.length > 0) break; continue; }
     const title = clean(match[2] ?? "");
     if (!title) continue;

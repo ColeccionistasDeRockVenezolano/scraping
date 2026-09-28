@@ -13,7 +13,11 @@ const LIMIT = 30;
  * actualiza 250 ms después de la última tecla y con `replace`, así teclear no
  * llena el historial ni dispara una consulta por letra.
  */
-export function useEntityList<T>(fetcher: (params: { q?: string; limit: number; offset: number }) => Promise<Page<T>>) {
+export function useEntityList<T>(
+  fetcher: (params: { q?: string; limit: number; offset: number }) => Promise<Page<T>>,
+  /** Claves extra que obligan a pedir de nuevo (p. ej. la sesión). */
+  extraDeps: readonly unknown[] = [],
+) {
   const [params, setParams] = useSearchParams();
   const urlQuery = params.get("q") ?? "";
   const offset = Number(params.get("offset") ?? "0") || 0;
@@ -31,7 +35,7 @@ export function useEntityList<T>(fetcher: (params: { q?: string; limit: number; 
 
   const state = useAsync(
     () => fetcher({ ...(urlQuery.trim() ? { q: urlQuery.trim() } : {}), limit: LIMIT, offset }),
-    [urlQuery, offset],
+    [urlQuery, offset, ...extraDeps],
   );
 
   function setOffset(next: number) {

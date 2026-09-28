@@ -23,6 +23,7 @@ const CurationLayout = lazy(() => import("./pages/CurationLayout").then((module)
 const CurationOverviewPage = lazy(() => import("./pages/CurationOverviewPage").then((module) => ({ default: module.CurationOverviewPage })));
 const CurationFindingsPage = lazy(() => import("./pages/CurationFindingsPage").then((module) => ({ default: module.CurationFindingsPage })));
 const CurationFixesPage = lazy(() => import("./pages/CurationFixesPage").then((module) => ({ default: module.CurationFixesPage })));
+const ChangesHistoryPage = lazy(() => import("./pages/ChangesHistoryPage").then((module) => ({ default: module.ChangesHistoryPage })));
 const CurationAutofixPage = lazy(() => import("./pages/CurationAutofixPage").then((module) => ({ default: module.CurationAutofixPage })));
 
 /** Enlaces viejos (/revision/:id) siguen llevando a la revisión. */
@@ -61,6 +62,7 @@ export function App() {
             {/* Lista blanca de la autocorrección, solo admin (PLAN_CURADURIA E10). */}
             <Route path="autocorreccion" element={<CurationAutofixPage />} />
           </Route>
+          <Route path="/historial" element={<ChangesHistoryPage />} />
           <Route path="/revision" element={<Navigate to="/curaduria" replace />} />
           <Route path="/revision/:id" element={<LegacyReviewRedirect />} />
           <Route path="*" element={<NotFoundPage />} />

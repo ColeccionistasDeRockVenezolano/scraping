@@ -6,7 +6,6 @@ import { useAsync } from "../lib/useAsync";
 import { useMovedToRedirect } from "../lib/useMovedTo";
 import { useOperator } from "../lib/OperatorContext";
 import { useToast } from "../lib/ToastContext";
-import { ErrorState } from "../components/StateViews";
 import { DetailSkeleton } from "../components/Skeletons";
 import { AliasEditor } from "../components/AliasEditor";
 import { EntityFormModal } from "../components/EntityFormModal";
@@ -16,6 +15,7 @@ import { ConfirmDialog } from "../components/ConfirmDialog";
 import { CreditManager } from "../components/CreditManager";
 import { AlbumMergeModal } from "../components/AlbumMergeModal";
 import { EntityHistory } from "../components/EntityHistory";
+import { EntityLoadError } from "../components/RemovedEntityState";
 import { Modal } from "../components/Modal";
 import { initialOf } from "../components/EntityCard";
 import { ALBUM_FIELDS, TRACK_FIELDS } from "../lib/entityFields";
@@ -35,9 +35,9 @@ export function AlbumDetailPage() {
   const { id } = useParams();
   const albumId = Number(id);
   const navigate = useNavigate();
-  const { isAdmin } = useOperator();
+  const { isAdmin, user } = useOperator();
   const { notify } = useToast();
-  const { data: album, loading, error, errorValue, reload } = useAsync(() => albumsApi.get(albumId), [albumId]);
+  const { data: album, loading, error, errorValue, reload } = useAsync(() => albumsApi.get(albumId), [albumId, user?.name]);
   useMovedToRedirect(errorValue);
   const [editing, setEditing] = useState(false);
   const [deleting, setDeleting] = useState(false);
@@ -56,12 +56,14 @@ export function AlbumDetailPage() {
   const [labelLabel, setLabelLabel] = useState<string | null>(null);
 
   if (loading) return <DetailSkeleton />;
-  if (error || !album) return <ErrorState message={error ?? "Disco no encontrado."} onRetry={reload} />;
+  if (error || !album) return <EntityLoadError message={error ?? "Disco no encontrado."} errorValue={errorValue} onRetry={reload} />;
 
   const meta = [
     album.releaseYear ? String(album.releaseYear) : null,
     albumTypeLabel(album.albumType),
-    album.genre,
+    // Confirmados primero; un texto de fuente sin confirmar se muestra, pero marcado.
+    ...(album.genres?.length ? album.genres.map((genre) => genre.name)
+      : album.genre ? [album.genreStatus === "pending" ? `${album.genre} (sin confirmar)` : album.genre] : []),
   ].filter(Boolean);
 
   return (
@@ -79,6 +81,7 @@ export function AlbumDetailPage() {
           </p>
           <div className="entity-hero__meta">
             {meta.map((item) => <span className="badge" key={String(item)}>{item}</span>)}
+            {album.genreByLaya ? <span className="badge badge--amber" title="Género principal elegido por Laya (último recurso). Solo visible con sesión iniciada.">Género por Laya</span> : null}
             {album.label ? <Link to={`/organizaciones/${album.label.id}`} className="badge badge--violet">{album.label.name}</Link> : null}
           </div>
           {album.description ? <p className="entity-hero__desc">{album.description}</p> : null}
@@ -167,10 +170,11 @@ export function AlbumDetailPage() {
         <div className="credit-groups">
           {CREDIT_SECTIONS.map((section) => {
             const items = section.types.flatMap((type) => album.creditsByType[type] ?? []);
+            const scoped = section.types.flatMap((type) => album.scopedCreditsByType[type] ?? []);
             return (
               <div className="credit-group" key={section.title}>
                 <h3>{section.title}</h3>
-                <CreditManager target={{ kind: "album", albumId: album.id }} credits={items} onChanged={reload} />
+                <CreditManager target={{ kind: "album", albumId: album.id }} credits={items} scoped={scoped} onChanged={reload} />
               </div>
             );
           })}

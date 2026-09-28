@@ -136,6 +136,10 @@ export const SEED_ALBUM_TYPE_WORD_SET: ReadonlySet<string> = new Set(SEED_ALBUM_
 
 /** Numeran una serie, no dicen el tipo: «Rock Venezolano Vol. 2» no es un recopilatorio por decir «vol». */
 const VOLUME_TOKENS = new Set(["vol", "vols", "volumen", "volume", "parte", "part", "pt", "tomo", "capitulo", "chapter"]);
+// Al clasificar discos por su título, «En Vivo» es una expresión completa.
+// Aprender «en» o «vivo» por separado tras clasificar muchos directos hace
+// que aparezcan falsos conflictos en títulos como «En la vía» o «Sigo vivo».
+const ALBUM_TYPE_CONTEXT_TOKENS = new Set(["en", "vivo"]);
 /**
  * Una palabra aprendida tiene que describir a la mayoría de los discos que la
  * usan: si más de la mitad está sin clasificar, lo aprendido de la minoría
@@ -313,7 +317,7 @@ function learnAlbumTypeWords(albums: SnapshotAlbum[], descriptors: Set<string>):
       const docs = allDocs.get(token) ?? count;
       if (count >= 5 && share >= 0.7 && lift >= 4 && (artistsPerToken.get(token)?.size ?? 0) >= 5 && count / docs >= 0.25
         && (unclassifiedDocs.get(token) ?? 0) / docs <= MAX_UNCLASSIFIED_SHARE
-        && !VOLUME_TOKENS.has(token) && !descriptors.has(token)
+        && !VOLUME_TOKENS.has(token) && !ALBUM_TYPE_CONTEXT_TOKENS.has(token) && !descriptors.has(token)
         && token.length >= 2 && !/^\d+$/u.test(token) && !words.has(token)) words.set(token, type);
     }
   }

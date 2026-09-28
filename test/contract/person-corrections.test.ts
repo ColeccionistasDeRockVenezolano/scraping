@@ -106,7 +106,11 @@ describe("correcciones de personas contra PostgreSQL", () => {
     const claims = await pool.query<{ n: number; rejected: number; orphan: number }>(`
       SELECT count(*)::int AS n, count(*) FILTER (WHERE status='rejected')::int AS rejected,
              count(*) FILTER (WHERE person_id IS NULL AND album_credit_id IS NULL)::int AS orphan FROM ingest.claims`);
-    expect(claims.rows[0]).toEqual({ n: 13, rejected: 1, orphan: 1 });
+    // 13 de las fuentes + 1 de derivación: Golding queda venezolano por ser
+    // músico de un disco venezolano (migración 0029, `merge/venezuelan.ts`).
+    expect(claims.rows[0]).toEqual({ n: 14, rejected: 1, orphan: 1 });
+    const derived = await pool.query("SELECT person_id::int FROM ingest.claims WHERE extractor='derivacion-venezolano'");
+    expect(derived.rows).toEqual([{ person_id: ids["golding"] }]);
     const unlinked = await pool.query("SELECT count(*)::int AS n FROM ingest.merge_audit m WHERE m.run_id IS NOT NULL AND NOT EXISTS (SELECT 1 FROM ingest.merge_audit_claims x WHERE x.merge_audit_id=m.id)");
     expect(unlinked.rows[0]!.n).toBe(0);
     const absorbed = await pool.query("SELECT old_value->'person'->>'name' AS name FROM ingest.merge_audit WHERE field='absorbed_person'");

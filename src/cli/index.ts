@@ -29,11 +29,21 @@ import { discoverChannelUploads, hydrateYouTubeVideos, importYouTubeMasterSheet,
 import { ingestSeedClaims } from "../youtube/seed-claims.js";
 import { syncAlbumClassifications } from "../youtube/classifications.js";
 import { ingestYouTubeApiClaims } from "../youtube/api-claims.js";
+import {
+  applyCreditSectionPlan, applyMusicianPlan, applyOtherPlan, planChannelSections, planMusicianSections, planOtherCredits,
+  planOtherSources, readCreditRows, readMusicianSectionInputs, readOtherCreditInputs,
+} from "../youtube/credit-sections.js";
 import { confirmYouTubeAlbumLink, linkYouTubeAlbums } from "../youtube/linker.js";
 import { enrichArtistFromYouTube } from "../youtube/enrich.js";
 import { reconcileYouTubeChannel } from "../youtube/reconcile.js";
 import { YT_MASTER_XLSX_PATH } from "../ingest/sources.js";
 import { getPool } from "../db/client.js";
+import { withOperatorRun } from "../merge/operator.js";
+import { previewRunUndo, undoRun } from "../merge/run-undo.js";
+import pg from "pg";
+import { previewAuditUndo, undoAuditEntry } from "../merge/audit-undo.js";
+import { rebuildTraces } from "../merge/legacy-trace.js";
+import { getChange } from "../api/repositories/changes.js";
 import { keepRepeatedTrackOccurrences } from "../merge/engine.js";
 import { scanAmbiguities } from "../ambiguity/scan.js";
 import { resolveAmbiguities } from "../ambiguity/resolve.js";
@@ -42,6 +52,7 @@ import { DeepSeekArbiter, FileArbiter, type Arbiter } from "../ambiguity/arbiter
 import { createDeepSeekGateway } from "../ai/gateway.js";
 import { getEnv } from "../config/env.js";
 import { applySincopaOrganizationRepair, planSincopaOrganizationRepair } from "../review/sincopa-organizations.js";
+import { applyVenezuelanEvidence, readVenezuelanEvidence, venezuelanReason } from "../review/person-venezuelan.js";
 import { runCurationScan, waitForCurationScans } from "../curation/scan.js";
 import { autofixReport, installAutofix, listAutofixRules, runAutofix } from "../curation/autofix.js";
 import { getCurationSummary } from "../curation/repository.js";
@@ -50,6 +61,7 @@ import { previewFixBatch } from "../curation/actions/batches.js";
 import { parseCurationFixPreviewArgs } from "./curation-fix.js";
 import { pruneCuration } from "../curation/retention.js";
 import { compactEntityResolutionDecisions } from "../er/retention.js";
+import { runGenresCommand } from "./genres.js";
 
 /** `--review=1,2,3` → ids; undefined si no vino; null si vino mal escrito. */
 function parseIdList(value: string | undefined): number[] | undefined | null {
@@ -71,10 +83,12 @@ const RENAMED_COMMANDS = new Map([
   ["review:list", "review list"],
   ["review:approve", "review approve <id>"],
   ["review:dismiss", "review dismiss <id>"],
+  ["genre:add", "genres alias-set / genres taxonomy-apply (data/genres/taxonomy.json)"],
+  ["genre:disable", "genres deactivate <slug> --replacement=<slug>"],
 ]);
 
 // Especificados en ARCHITECTURE.md §4.13 y todavía sin implementar.
-const KNOWN_FUTURE_COMMANDS = new Set(["genre:add", "genre:disable", "export:json"]);
+const KNOWN_FUTURE_COMMANDS = new Set(["export:json"]);
 
 async function main(): Promise<number> {
   // Falla ruidoso si el runtime no cumple engines.node (PHASES F0).
@@ -164,8 +178,99 @@ async function main(): Promise<number> {
     }
 
     case "runs": {
-      if (args[0] !== "list") { console.error("uso: crv runs list"); return 1; }
-      for (const run of await listRuns()) console.log(`${run.id}\t${run.kind}\t${run.status}\t${run.startedAt.toISOString()}`);
+      if (args[0] === "list") {
+        for (const run of await listRuns()) console.log(`${run.id}\t${run.kind}\t${run.status}\t${run.startedAt.toISOString()}`);
+        return 0;
+      }
+      // Deshacer cualquier run (migración 0028): la misma puerta que la web.
+      const runId = Number(args[1]);
+      if ((args[0] === "show" || args[0] === "undo") && Number.isSafeInteger(runId) && runId > 0) {
+        const change = await getChange(runId);
+        if (!change) { console.error(`run inexistente: ${runId}`); return 1; }
+        const client = await getPool().connect();
+        let preview;
+        try {
+          preview = await previewRunUndo(client, runId);
+        } finally {
+          client.release();
+        }
+        const note = args.find((arg) => arg.startsWith("--note="))?.slice("--note=".length);
+        if (args[0] === "show" || !args.includes("--confirm") || !note?.trim()) {
+          console.log(JSON.stringify({ change, undo: preview }, null, 2));
+          if (args[0] === "undo") {
+            console.log(preview.undoable
+              ? `\n(previsualización: nada se escribió) para deshacer: crv runs undo ${runId} --note="<motivo>" --confirm`
+              : `\nno se puede deshacer: ${preview.reason}`);
+          }
+          return args[0] === "undo" && !preview.undoable ? 1 : 0;
+        }
+        const { runId: undoRunId, result } = await withOperatorRun({
+          name: "cli:undo:run", operator: getEnv().CRV_OPERATOR_NAME, note, params: { undoesRunId: runId },
+        }, (context) => undoRun(context, runId));
+        console.log(JSON.stringify({ undoRunId, ...result }, null, 2));
+        console.log(`\nrun ${runId} deshecho por el run ${undoRunId}; para rehacerlo: crv runs undo ${undoRunId} --note="<motivo>" --confirm`);
+        return 0;
+      }
+      console.error('uso: crv runs list | show <id> | undo <id> [--note="<motivo>" --confirm]');
+      return 1;
+    }
+
+    // Lo anterior al diario se deshace decisión por decisión (una fusión o una
+    // conversión del historial de la ficha), no run por run.
+    case "audit": {
+      const auditId = Number(args[1]);
+      if ((args[0] === "show" || args[0] === "undo") && Number.isSafeInteger(auditId) && auditId > 0) {
+        const preview = await previewAuditUndo(auditId);
+        if (!preview) { console.error(`cambio del historial inexistente o no reversible por separado: ${auditId}`); return 1; }
+        const note = args.find((arg) => arg.startsWith("--note="))?.slice("--note=".length);
+        if (args[0] === "show" || !args.includes("--confirm") || !note?.trim()) {
+          console.log(JSON.stringify(preview, null, 2));
+          if (args[0] === "undo") {
+            console.log(preview.undoable
+              ? `\n(previsualización: nada se escribió) para deshacer: crv audit undo ${auditId} --note="<motivo>" --confirm`
+              : `\nno se puede deshacer: ${preview.reason_not}`);
+          }
+          return args[0] === "undo" && !preview.undoable ? 1 : 0;
+        }
+        const { runId: undoRunId, result } = await withOperatorRun({
+          name: "cli:undo:audit", operator: getEnv().CRV_OPERATOR_NAME, note, params: { undoesAuditId: auditId },
+        }, (context) => undoAuditEntry(context, auditId));
+        console.log(JSON.stringify({ undoRunId, ...result }, null, 2));
+        console.log(`\ncambio ${auditId} deshecho por el run ${undoRunId}; para rehacerlo: crv runs undo ${undoRunId} --note="<motivo>" --confirm`);
+        return 0;
+      }
+      console.error('uso: crv audit show <auditId> | undo <auditId> [--note="<motivo>" --confirm]');
+      return 1;
+    }
+
+    // Rastro de las fusiones anteriores a E11.1: qué filas movieron, sacado de
+    // una instantánea anterior al cambio (un respaldo restaurado aparte).
+    case "merges": {
+      if (args[0] !== "rebuild-traces") {
+        console.error('uso: crv merges rebuild-traces --snapshot=<postgresql://...> [--run=<id>] [--label="<respaldo>"]');
+        return 1;
+      }
+      const snapshotUrl = args.find((arg) => arg.startsWith("--snapshot="))?.slice("--snapshot=".length);
+      if (!snapshotUrl) { console.error("falta --snapshot=<postgresql://...> (una base con el respaldo restaurado)"); return 1; }
+      const label = args.find((arg) => arg.startsWith("--label="))?.slice("--label=".length) ?? snapshotUrl.replace(/:[^:@/]*@/u, ":***@");
+      const runArg = args.find((arg) => arg.startsWith("--run="))?.slice("--run=".length);
+      const snapshot = new pg.Client({ connectionString: snapshotUrl });
+      await snapshot.connect();
+      const client = await getPool().connect();
+      try {
+        await client.query("BEGIN");
+        const summary = await rebuildTraces(client, snapshot, label,
+          runArg ? { runId: Number(runArg) } : {});
+        await client.query("COMMIT");
+        console.log(JSON.stringify({ ...summary, unverified: summary.unverified.slice(0, 20) }, null, 2));
+        console.log(`\n${summary.verified} de ${summary.merges} fusiones quedaron con rastro verificado (se pueden deshacer).`);
+      } catch (error) {
+        await client.query("ROLLBACK");
+        throw error;
+      } finally {
+        client.release();
+        await snapshot.end();
+      }
       return 0;
     }
 
@@ -284,6 +389,28 @@ async function main(): Promise<number> {
         if (!confirm) console.log('\n(previsualización: nada se escribió) para aplicar: crv review persons --plan=<archivo> --note="<motivo>" --confirm');
         return 0;
       }
+      // Venezolano/a en personas: miembro o músico/invitado de un disco venezolano
+      // (Brian, 2026-09-22). Solo llena lo que está sin dato.
+      if (args[0] === "derive-venezuelan") {
+        const client = await getPool().connect();
+        let summary;
+        try { summary = await readVenezuelanEvidence(client); } finally { client.release(); }
+        const members = summary.evidence.filter((item) => item.bands.length > 0).length;
+        const onlyCredits = summary.evidence.length - members;
+        console.log(`review derive-venezuelan: ${summary.persons} personas; ya afirmadas ${summary.alreadyTrue} venezolanas y ${summary.alreadyFalse} extranjeras`);
+        console.log(`  ${String(summary.evidence.length).padStart(5)}  se marcan venezolanas (${members} miembros de banda, ${onlyCredits} solo por créditos de músico/invitado)`);
+        console.log(`  ${String(summary.withoutEvidence).padStart(5)}  quedan sin dato (sin banda ni créditos de músico/invitado en discos venezolanos)`);
+        if (args.includes("--list")) for (const item of summary.evidence) console.log(`    p${item.personId}\t${item.name}\t${venezuelanReason(item)}`);
+        const note = args.find((arg) => arg.startsWith("--note="))?.slice("--note=".length);
+        if (!args.includes("--confirm")) {
+          console.log('\n(previsualización: nada se escribió) para aplicar: crv review derive-venezuelan --note="<motivo>" --confirm');
+          return 0;
+        }
+        if (!note?.trim()) { console.error("--note es obligatorio al confirmar"); return 1; }
+        const applied = await applyVenezuelanEvidence(summary.evidence, { note, operator: "cli" });
+        console.log(`  aplicado en ${applied.runs.length} runs (${applied.runs[0] ?? "-"}…${applied.runs.at(-1) ?? "-"}): ${applied.updated} marcadas, ${applied.skipped} ya afirmadas mientras tanto`);
+        return 0;
+      }
       if (args[0] === "sincopa-organizations") {
         const note = args.find((arg) => arg.startsWith("--note="))?.slice("--note=".length);
         const plan = await planSincopaOrganizationRepair();
@@ -387,7 +514,7 @@ async function main(): Promise<number> {
         console.log(JSON.stringify(result, null, 2));
         return 0;
       }
-      console.error('uso: crv review list | show <id> | apply-decisions [--note="<motivo>" --confirm] | sincopa-organizations [--note="<motivo>" --confirm] | keep-repeated-tracks <conflict-id,...> --note="<evidencia>" --confirm | entities [kind] [--limit=N] | approve <kind> "<identity>" <nota> | dismiss <kind> "<identity>" <nota> | approve-batch [kind] [--source=<slug>] [--limit=N] --note="<motivo>" --confirm | dismiss-batch [...]');
+      console.error('uso: crv review list | show <id> | apply-decisions [--note="<motivo>" --confirm] | sincopa-organizations [--note="<motivo>" --confirm] | derive-venezuelan [--list] [--note="<motivo>" --confirm] | keep-repeated-tracks <conflict-id,...> --note="<evidencia>" --confirm | entities [kind] [--limit=N] | approve <kind> "<identity>" <nota> | dismiss <kind> "<identity>" <nota> | approve-batch [kind] [--source=<slug>] [--limit=N] --note="<motivo>" --confirm | dismiss-batch [...]');
       return 1;
     }
 
@@ -456,8 +583,98 @@ async function main(): Promise<number> {
       const [subcommand, argument] = args;
       if (subcommand === "import-sheet") {
         const result = await importYouTubeMasterSheet(argument ?? YT_MASTER_XLSX_PATH);
-        console.log(`youtube import-sheet: ${result.inserted} nuevas, ${result.updated} actualizadas, ${result.unchanged} sin cambios; ${result.videos} videos, ${result.reviews} reviews`);
+        console.log(`youtube import-sheet: ${result.inserted} nuevas, ${result.updated} actualizadas, ${result.unchanged} sin cambios, ${result.unlisted} ya no están en la hoja; ${result.videos} videos, ${result.reviews} reviews`);
         return 0;
+      }
+      // Créditos del disco por bloque del canal (Brian, 2026-09-21). Primero
+      // `channel`, luego api-claims + approve-batch, luego `others`.
+      if (subcommand === "credit-sections") {
+        const phase = argument;
+        if (phase === "musicians") {
+          const client = await getPool().connect();
+          let input;
+          try { input = await readMusicianSectionInputs(client); } finally { client.release(); }
+          const plan = planMusicianSections(input.albums, input.people);
+          const summary = new Map<string, number>();
+          for (const change of plan) {
+            const key = change.action === "retype" ? `${change.credit.creditType} -> ${change.to}: ${change.reason}`
+              : change.action === "retire" ? `retirar ${change.credit.creditType}: ${change.reason}`
+              : change.action === "add" ? `agregar ${change.kind} ${change.creditType}: ${change.reason}`
+              : `revisar: ${change.reason}`;
+            summary.set(key, (summary.get(key) ?? 0) + 1);
+          }
+          const albumsTouched = new Set(plan.filter((change) => change.action !== "review").map((change) => change.albumId)).size;
+          console.log(`youtube credit-sections musicians: ${input.albums.length} discos con bloque Musicians, ${albumsTouched} con cambios`);
+          for (const [key, count] of [...summary].sort((a, b) => b[1] - a[1])) console.log(`  ${String(count).padStart(5)}  ${key}`);
+          const albumArg = args.find((arg) => arg.startsWith("--album="))?.slice("--album=".length);
+          if (albumArg) {
+            for (const change of plan.filter((item) => item.albumId === Number(albumArg))) {
+              const what = change.action === "add" ? `${change.kind} ${change.creditType} «${change.role}» ${change.name}${change.personId === null ? " (nueva)" : ` (p${change.personId})`}${change.trackId ? ` pista ${change.trackId}` : ""}`
+                : change.action === "review" ? change.name
+                : `${change.credit.kind} ${change.credit.id} «${change.credit.role}» p${change.credit.personId}${change.action === "retype" ? ` -> ${change.to}` : ""}`;
+              console.log(`    ${change.action.padEnd(6)} ${what} — ${change.reason}`);
+            }
+          }
+          const note = args.find((arg) => arg.startsWith("--note="))?.slice("--note=".length);
+          if (!args.includes("--confirm")) {
+            console.log('\n(previsualización: nada se escribió) para aplicar: crv youtube credit-sections musicians --note="<motivo>" --confirm');
+            return 0;
+          }
+          if (!note?.trim()) { console.error("--note es obligatorio al confirmar"); return 1; }
+          const applied = await applyMusicianPlan(plan, { note, operator: "cli" });
+          console.log(`  aplicado en ${applied.runs.length} runs: ${applied.retyped} retipados, ${applied.retired} retirados, ${applied.added} agregados (${applied.personsCreated} personas nuevas), ${applied.skipped.length} omitidos`);
+          for (const skip of applied.skipped.slice(0, 20)) console.log(`    omitido ${skip.change.action} disco ${skip.change.albumId}: ${skip.error}`);
+          return applied.skipped.length > 0 ? 1 : 0;
+        }
+        if (phase === "other-credits") {
+          const client = await getPool().connect();
+          let input;
+          try { input = await readOtherCreditInputs(client); } finally { client.release(); }
+          const plan = planOtherCredits(input.albums, input.catalog);
+          const summary = new Map<string, number>();
+          for (const change of plan) {
+            const key = change.action === "add" ? `agregar ${change.kind} ${change.creditType}${change.target.id === null ? " (persona nueva)" : ""}`
+              : change.action === "retire" ? `retirar ${change.credit.creditType}: ${change.reason}` : `revisar: ${change.reason}`;
+            summary.set(key, (summary.get(key) ?? 0) + 1);
+          }
+          console.log(`youtube credit-sections other-credits: ${input.albums.length} discos con créditos en la descripción, ${plan.length} cambios`);
+          for (const [key, count] of [...summary].sort((a, b) => b[1] - a[1])) console.log(`  ${String(count).padStart(5)}  ${key}`);
+          const note = args.find((arg) => arg.startsWith("--note="))?.slice("--note=".length);
+          if (!args.includes("--confirm")) {
+            console.log('\n(previsualización: nada se escribió) para aplicar: crv youtube credit-sections other-credits --note="<motivo>" --confirm');
+            return 0;
+          }
+          if (!note?.trim()) { console.error("--note es obligatorio al confirmar"); return 1; }
+          const applied = await applyOtherPlan(plan, { note, operator: "cli" });
+          console.log(`  aplicado en ${applied.runs.length} runs: ${applied.retired} retirados, ${applied.added} agregados (${applied.personsCreated} personas nuevas), ${applied.skipped.length} omitidos`);
+          for (const skip of applied.skipped.slice(0, 30)) console.log(`    omitido ${skip.change.action} disco ${skip.change.albumId}: ${skip.error}`);
+          return applied.skipped.length > 0 ? 1 : 0;
+        }
+        if (phase !== "channel" && phase !== "others") {
+          console.error('uso: crv youtube credit-sections channel|others|musicians|other-credits [--album=<id>] [--note="<motivo>" --confirm]');
+          return 1;
+        }
+        const client = await getPool().connect();
+        let rows;
+        try { rows = await readCreditRows(client); } finally { client.release(); }
+        const plan = phase === "channel" ? planChannelSections(rows) : planOtherSources(rows);
+        const summary = new Map<string, number>();
+        for (const change of plan) {
+          const key = change.action === "retype" ? `${change.credit.creditType} -> ${change.to}: ${change.reason}` : `retirar ${change.credit.creditType}: ${change.reason}`;
+          summary.set(key, (summary.get(key) ?? 0) + 1);
+        }
+        console.log(`youtube credit-sections ${phase}: ${rows.length} créditos en discos del canal, ${plan.length} cambios`);
+        for (const [key, count] of [...summary].sort((a, b) => b[1] - a[1])) console.log(`  ${String(count).padStart(5)}  ${key}`);
+        const note = args.find((arg) => arg.startsWith("--note="))?.slice("--note=".length);
+        if (!args.includes("--confirm")) {
+          console.log(`\n(previsualización: nada se escribió) para aplicar: crv youtube credit-sections ${phase} --note="<motivo>" --confirm`);
+          return 0;
+        }
+        if (!note?.trim()) { console.error("--note es obligatorio al confirmar"); return 1; }
+        const applied = await applyCreditSectionPlan(plan, { note, operator: "cli" });
+        console.log(`  aplicado en ${applied.runs.length} runs (${applied.runs[0] ?? "-"}…${applied.runs.at(-1) ?? "-"}): ${applied.retyped} retipados, ${applied.retired} retirados, ${applied.skipped.length} omitidos`);
+        for (const skip of applied.skipped.slice(0, 20)) console.log(`    omitido ${skip.change.credit.kind} ${skip.change.credit.id}: ${skip.error}`);
+        return applied.skipped.length > 0 ? 1 : 0;
       }
       if (subcommand === "sync-video") {
         if (!argument) { console.error("uso: crv youtube sync-video <video-id>"); return 1; }
@@ -467,7 +684,12 @@ async function main(): Promise<number> {
       }
       // Paso 4: lo derivado entra al catálogo como claims candidatos.
       if (subcommand === "api-claims") {
-        const result = await ingestYouTubeApiClaims(args.includes("--dry-run") ? { dryRun: true } : {});
+        const reconcileNote = args.find((arg) => arg.startsWith("--reconcile="))?.slice("--reconcile=".length);
+        const result = await ingestYouTubeApiClaims({
+          ...(args.includes("--dry-run") ? { dryRun: true } : {}),
+          ...(reconcileNote?.trim() ? { reconcile: { note: reconcileNote } } : {}),
+        });
+        if (result.reconciled) console.log(`youtube api-claims --reconcile: ${result.reconciled.dismissed} identidades candidatas que ya no se emiten ${args.includes("--dry-run") ? "se descartarían" : "descartadas"}, ${result.reconciled.newRecords} registros nuevos`);
         console.log(`youtube api-claims${args.includes("--dry-run") ? " --dry-run" : ""}: ${result.videos} videos `
           + `(${result.releases} discos, ${result.mediaOnly} audiovisuales sin disco, ${result.skipped} sin identidad) -> `
           + `${result.artists} artistas, ${result.albums} discos, ${result.tracks} pistas, ${result.persons} personas, ${result.organizations} organizaciones, `
@@ -833,6 +1055,9 @@ async function main(): Promise<number> {
       return 0;
     }
 
+    case "genres":
+      return runGenresCommand(args);
+
     case undefined:
     case "help":
     case "--help":
@@ -871,6 +1096,13 @@ CRV CLI
   sources:evidence <slug> <url> "<extracto>" [notas]
                       registra evidencia manual de una fuente limitada/manual: abre revisión, no crea claims
   runs list           lista los runs (id, kind, estado, inicio)
+  runs show <id>      qué cambió un run y si se puede deshacer
+  runs undo <id>      deshace un run con el diario de cambios [--note="<motivo>" --confirm]
+  audit show <id>     qué haría deshacer una fusión o conversión del historial (lo anterior al diario)
+  audit undo <id>     la deshace [--note="<motivo>" --confirm]
+  merges rebuild-traces --snapshot=<postgresql://...> [--run=<id>]
+                      reconstruye, desde un respaldo restaurado aparte, qué filas movió cada fusión
+                      anterior a E11.1; solo queda verificado lo que cuadra con lo que la fusión registró
   review list | review show <id>
   review entities [kind] [--limit=N]
                       entidades candidatas pendientes, agrupadas por entidad y no por claim
@@ -890,12 +1122,18 @@ CRV CLI
   review sincopa-organizations [--note="<motivo>" --confirm]
                       reextrae el crudo con el parser vigente y retira falsos sellos
                       sin evidencia externa ni dependencias; conserva auditoría
+  review derive-venezuelan [--list] [--note="<motivo>" --confirm]
+                      marca venezolanas (is_venezuelan=true) a las personas sin dato que son
+                      miembros de una banda venezolana o músicos/invitados en sus discos
   youtube import-sheet <path>  importa YT Master Spreadsheet de forma idempotente
   youtube seed-claims [--dry-run]  emite los claims de la hoja importada (low: candidatos a revisión)
   youtube discover-channel [channel-id] [--resume]  recorre el playlist de uploads sin hidratar
   youtube sync [--pending]     hidrata la unión de hoja y canal en lotes de 50
   youtube rederive [--dry-run]  re-parsea las descripciones guardadas, sin red ni cuota
-  youtube api-claims [--dry-run]  emite los claims del canal (candidatos, van a revisión)
+  youtube api-claims [--dry-run] [--reconcile="<nota>"]  emite los claims del canal (candidatos, van a revisión); --reconcile solo emite lo nuevo y descarta lo que ya no se emite
+  youtube credit-sections channel|others [--note="<motivo>" --confirm]  créditos del disco por bloque del canal
+  youtube credit-sections musicians [--album=<id>] [--note="<motivo>" --confirm]  músicos/invitados por bloque, disco por disco, sin ER
+  youtube credit-sections other-credits [--note="<motivo>" --confirm]  producción, composición y arte del canal, disco por disco, sin ER
   youtube sync-video <video-id>  consulta YouTube Data API (requiere YOUTUBE_API_KEY)
   youtube sync-channel [channel-id]  recorre uploads playlist oficial (requiere YOUTUBE_API_KEY)
   youtube classifications [--dry-run]  guarda todas las clasificaciones que la hoja da a cada disco
@@ -932,6 +1170,31 @@ CRV CLI
                              VACUUM (ANALYZE) ingest.entity_resolution_decisions
   ambiguity:apply [--review=<id,...>] --note="<motivo>" --confirm
                              aplica MATCH y KEEP de reglas; las de árbitro solo nombrando su revisión
+  genres taxonomy-apply [--file=<json>] [--prune] --by=<quién> --reason="<por qué>" [--confirm]
+                             carga la taxonomía aprobada (familias, géneros, alias, no-géneros) y
+                             recalcula solo lo afectado; sin --confirm, reporte antes/después
+  genres backfill [--level=artist|album] [--by=<quién>] [--confirm]
+                             asigna géneros desde los claims de las fuentes (reglas 1–7); no toca
+                             decisiones humanas; escribe reports/genres-backfill-<modo>.{json,md}
+  genres resolve "<valor>"   cómo resuelve la taxonomía un texto de fuente
+  genres alias-set "<texto>" <slug|not_a_genre> | alias-remove "<texto>" | rename <slug> "<nombre>"
+         | deactivate <slug> --replacement=<slug>   (--by --reason obligatorios; --confirm)
+  genres confirm|reject|revert <album|artist> <id> <slug> [--role=primary|secondary] --by=<quién> --reason="<por qué>"
+                             decisión humana sobre un género, con historial y recálculo
+  genres external sources | sheets [--file=<json>]
+                             fichas de evaluación de las fuentes externas (licencia, acceso, límites,
+                             cobertura); cargarlas NO autoriza nada
+  genres external authorize|enable|disable [--purge]|block|bulk-enable|bulk-disable <slug>
+                             decisiones humanas sobre una fuente; retirar no borra lo que alguien decidió
+  genres external sample --source=<slug> --level=album|artist [--limit=N]
+                             mide la precisión contra lo que CRV ya confirmó; con --confirm la guarda
+                             en la ficha (sin alcanzar el umbral no se habilita el volumen)
+  genres external accept --source=<slug> [--level=album|artist] [--limit=N] [--ids=1,2] [--secondaries=confirm]
+                             confirma en bloque lo que la fuente propuso: principal el género más
+                             preciso de cada ficha; nunca pisa lo que decidió una persona
+  genres external import --source=<slug> --level=album|artist [--ids=1,2] [--limit=N]
+                             importa como SUGERENCIA (nunca confirma); escribe
+                             reports/genres-external-<fuente>-<nivel>-<alcance>-<modo>.{json,md}
 
 Nombres de ARCHITECTURE.md §4.13 con otra forma: ${[...RENAMED_COMMANDS.keys()].join(", ")}
 Especificados y aún sin implementar: ${[...KNOWN_FUTURE_COMMANDS].join(", ")}

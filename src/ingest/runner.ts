@@ -1,6 +1,7 @@
 // Orquestación de parser → normalización → claims → merge. Un run es la
 // unidad trazable; dry-run construye exactamente el mismo plan sin INSERT,
 // UPDATE ni acceso de red.
+import { withRunScope } from "../db/run-binding.js";
 import { getDb } from "../db/client.js";
 import { scrapeRuns, sources } from "../db/schema/ingest.js";
 import { asc, eq } from "drizzle-orm";
@@ -51,55 +52,59 @@ export async function ingestRecords(sourceSlug: string, records: Array<RawRecord
   }).returning();
   if (!run) throw new Error("no se pudo crear run de ingestión");
   output.runId = run.id;
-  try {
-    for (const item of records) {
-      const record = "record" in item ? item.record : item;
-      const rawPageId = "record" in item ? item.rawPageId : undefined;
-      const normalized = normalizeRecord(record);
-      let artistId = record.entityKind === "artist" ? await resolveArtistId(normalized[0]?.identity ?? "") : undefined;
-      // Dos fases por registro: primero se persiste el registro completo y
-      // solo después se mergea. Un hecho no vive en un campo suelto — el
-      // número de una pista o el rol de una membresía llegan en claims
-      // hermanos —, y mergear sobre la marcha dejaría al primero decidiendo
-      // sin ver el resto.
-      const inputs: ClaimToPersist[] = normalized.map((claim) => ({
-        ...claim, sourceId: source.id, runId: run.id, confidence: options.confidence,
-        ...(rawPageId === undefined ? {} : { rawPageId }),
-        ...(artistId === undefined ? {} : { artistId }),
-        ...(options.createdBy === undefined ? {} : { createdBy: options.createdBy }),
-      }));
-      const persistedClaims = [];
-      for (const input of inputs) {
-        const persisted = await persistClaim(input);
-        if (persisted.inserted) output.claimsInserted += 1; else output.claimsReused += 1;
-        persistedClaims.push(persisted);
+  // Cada merge abre su propia transacción: el alcance del run las liga todas
+  // al diario de cambios (0028), para poder deshacer la ingesta entera.
+  return withRunScope(run.id, async () => {
+    try {
+      for (const item of records) {
+        const record = "record" in item ? item.record : item;
+        const rawPageId = "record" in item ? item.rawPageId : undefined;
+        const normalized = normalizeRecord(record);
+        let artistId = record.entityKind === "artist" ? await resolveArtistId(normalized[0]?.identity ?? "") : undefined;
+        // Dos fases por registro: primero se persiste el registro completo y
+        // solo después se mergea. Un hecho no vive en un campo suelto — el
+        // número de una pista o el rol de una membresía llegan en claims
+        // hermanos —, y mergear sobre la marcha dejaría al primero decidiendo
+        // sin ver el resto.
+        const inputs: ClaimToPersist[] = normalized.map((claim) => ({
+          ...claim, sourceId: source.id, runId: run.id, confidence: options.confidence,
+          ...(rawPageId === undefined ? {} : { rawPageId }),
+          ...(artistId === undefined ? {} : { artistId }),
+          ...(options.createdBy === undefined ? {} : { createdBy: options.createdBy }),
+        }));
+        const persistedClaims = [];
+        for (const input of inputs) {
+          const persisted = await persistClaim(input);
+          if (persisted.inserted) output.claimsInserted += 1; else output.claimsReused += 1;
+          persistedClaims.push(persisted);
+        }
+        for (const [index, input] of inputs.entries()) {
+          const claim = { ...input, ...(artistId === undefined ? {} : { artistId }) };
+          const persisted = persistedClaims[index]!;
+          // Un claim low reutilizado ya recorrió esta puerta. Volver a pasarlo
+          // por mergeClaim no aporta autoridad ni evidencia nueva y, peor aún,
+          // degradaba a `candidate` un claim que una persona ya había aprobado.
+          // La reingesta exacta debe ser un no-op también sobre el estado de la
+          // cola; una reevaluación intencional pertenece a review/merge, no al
+          // barrido automático.
+          const repeatedAutomaticLow = !persisted.inserted
+            && options.confidence === "low"
+            && options.createdBy !== "human";
+          const merge: MergeOutcome = repeatedAutomaticLow
+            ? { action: "unchanged", detail: "claim low exacto reutilizado; estado de revisión preservado" }
+            : await mergeClaim(claim, persisted);
+          output.merges.push(merge);
+          output.plan.push({ field: claim.field, entityKind: claim.entityKind, action: merge.action, detail: merge.detail });
+          if (claim.entityKind === "artist" && merge.artistId) artistId = merge.artistId;
+        }
       }
-      for (const [index, input] of inputs.entries()) {
-        const claim = { ...input, ...(artistId === undefined ? {} : { artistId }) };
-        const persisted = persistedClaims[index]!;
-        // Un claim low reutilizado ya recorrió esta puerta. Volver a pasarlo
-        // por mergeClaim no aporta autoridad ni evidencia nueva y, peor aún,
-        // degradaba a `candidate` un claim que una persona ya había aprobado.
-        // La reingesta exacta debe ser un no-op también sobre el estado de la
-        // cola; una reevaluación intencional pertenece a review/merge, no al
-        // barrido automático.
-        const repeatedAutomaticLow = !persisted.inserted
-          && options.confidence === "low"
-          && options.createdBy !== "human";
-        const merge: MergeOutcome = repeatedAutomaticLow
-          ? { action: "unchanged", detail: "claim low exacto reutilizado; estado de revisión preservado" }
-          : await mergeClaim(claim, persisted);
-        output.merges.push(merge);
-        output.plan.push({ field: claim.field, entityKind: claim.entityKind, action: merge.action, detail: merge.detail });
-        if (claim.entityKind === "artist" && merge.artistId) artistId = merge.artistId;
-      }
+      await getDb().update(scrapeRuns).set({ status: "ok", finishedAt: new Date(), counters: { ...output, merges: output.merges.length } }).where(eq(scrapeRuns.id, run.id));
+      return output;
+    } catch (error) {
+      await getDb().update(scrapeRuns).set({ status: "failed", finishedAt: new Date(), errorLog: String(error) }).where(eq(scrapeRuns.id, run.id));
+      throw error;
     }
-    await getDb().update(scrapeRuns).set({ status: "ok", finishedAt: new Date(), counters: { ...output, merges: output.merges.length } }).where(eq(scrapeRuns.id, run.id));
-    return output;
-  } catch (error) {
-    await getDb().update(scrapeRuns).set({ status: "failed", finishedAt: new Date(), errorLog: String(error) }).where(eq(scrapeRuns.id, run.id));
-    throw error;
-  }
+  });
 }
 
 /** Ejecuta un parser exclusivamente sobre snapshots ya almacenados. */

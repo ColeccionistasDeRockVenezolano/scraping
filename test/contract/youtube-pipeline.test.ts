@@ -8,6 +8,20 @@ import { migrateUp } from "../../src/db/migrate.js";
 import { importYouTubeMasterSheet, persistVideoPayload } from "../../src/youtube/pipeline.js";
 import { YouTubeDataApi, type YouTubeVideoPayload } from "../../src/youtube/api.js";
 import { enrichArtistFromYouTube, youtubeQuotaUsedToday } from "../../src/youtube/enrich.js";
+import { mkdtemp, rm } from "node:fs/promises";
+import { tmpdir } from "node:os";
+import path from "node:path";
+import ExcelJS from "exceljs";
+
+async function writeSheet(file: string, rows: Array<[number | null, string, string, string, string]>): Promise<void> {
+  const workbook = new ExcelJS.Workbook();
+  const sheet = workbook.addWorksheet("YT");
+  sheet.addRow(["Upload Order", "Artist Name", "Album Name", "Album Year", "Type of Album", "URL", "Status"]);
+  for (const [order, artist, album, type, video] of rows) {
+    sheet.addRow([order, artist, album, 2000, type, `https://www.youtube.com/watch?v=${video}`, "Listed"]);
+  }
+  await workbook.xlsx.writeFile(file);
+}
 
 describe("pipeline de seed y metadatos oficiales de YouTube", () => {
   let container: PgContainer;
@@ -84,5 +98,46 @@ describe("pipeline de seed y metadatos oficiales de YouTube", () => {
     expect(calls).toBe(0);
     // Solo el run sembrado: ni el dry-run ni la búsqueda bloqueada abren un run.
     expect(await enrichRuns()).toBe(runsBefore + 1);
+  });
+
+  // Brian, 2026-09-22: Shorts e Interview van sin Upload Order. La fila se
+  // casa por video, no por número: si no, un cambio de orden haría que cada
+  // disco heredara los datos del vecino.
+  it("casa las filas por video y acepta Shorts e Interview sin número", async () => {
+    const dir = await mkdtemp(path.join(tmpdir(), "crv-sheet-"));
+    try {
+      const pool = getPool();
+      await pool.query("DELETE FROM ingest.review_queue; UPDATE media.youtube_videos SET seed_upload_id=NULL; DELETE FROM ingest.seed_uploads");
+      const before = path.join(dir, "antes.xlsx");
+      await writeSheet(before, [[1, "Dermis Tatú", "La Violó", "Studio Album", "AwEF9RimQm4"], [2, "PAN", "En Vivo", "Live Album", "RpmXYPW7qMs"]]);
+      await importYouTubeMasterSheet(before);
+      const ids = async () => new Map((await pool.query<{ video_id: string; id: string; upload_order: number | null; content_kind: string }>(
+        "SELECT video_id, id::text, upload_order, content_kind FROM ingest.seed_uploads")).rows.map((row) => [row.video_id, row]));
+      const first = await ids();
+
+      const after = path.join(dir, "despues.xlsx");
+      await writeSheet(after, [
+        [null, "Coleccionistas De Rock Venezolano", "Primera Entrevista Radial", "Interview", "6D5RhoPLotE"],
+        [1, "Dermis Tatú", "La Violó", "Studio Album", "AwEF9RimQm4"],
+        [2, "PAN", "En Vivo", "Live Album", "RpmXYPW7qMs"],
+        [null, "Babylon Motorhome", "Interesante reseña", "Shorts", "zNdcRR1rBZE"],
+        [null, "", "Jorge Spiteri: vida, obra y legado", "Shorts", "SSwmX3ZZPi4"],
+      ]);
+      const result = await importYouTubeMasterSheet(after);
+      expect(result).toMatchObject({ inserted: 3, updated: 2, unlisted: 0 });
+      const second = await ids();
+      expect(second.get("AwEF9RimQm4")).toMatchObject({ id: first.get("AwEF9RimQm4")!.id, upload_order: 1 });
+      expect(second.get("RpmXYPW7qMs")).toMatchObject({ id: first.get("RpmXYPW7qMs")!.id, upload_order: 2 });
+      expect(second.get("zNdcRR1rBZE")).toMatchObject({ upload_order: null, content_kind: "media" });
+      expect(second.get("SSwmX3ZZPi4")).toMatchObject({ upload_order: null, content_kind: "media" });
+      expect(second.get("6D5RhoPLotE")).toMatchObject({ upload_order: null, content_kind: "media" });
+
+      // Un disco sin Upload Order sigue siendo un error de la hoja.
+      const broken = path.join(dir, "rota.xlsx");
+      await writeSheet(broken, [[null, "PAN", "En Vivo", "Live Album", "RpmXYPW7qMs"]]);
+      await expect(importYouTubeMasterSheet(broken)).rejects.toThrow(/Upload Order inválido/);
+    } finally {
+      await rm(dir, { recursive: true, force: true });
+    }
   });
 });

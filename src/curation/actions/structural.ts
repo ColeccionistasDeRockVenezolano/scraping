@@ -7,6 +7,7 @@ import { z } from "zod";
 import { mergeAlbums, previewAlbumMerge } from "../../merge/album-merge.js";
 import { withFieldJournal } from "../../merge/field-undo.js";
 import { createEntity, createRelation, deleteEntity, updateEntity } from "../../merge/operator.js";
+import { removeRelation } from "../../merge/removals.js";
 import { ENTITY_SPECS, type ResolvableClaimKind } from "../../merge/specs.js";
 import { mergeInto } from "../../review/duplicates.js";
 import { convertPerson, splitPerson } from "../../review/person-corrections.js";
@@ -28,6 +29,22 @@ function blockedPreview(
     collisions: [],
     warnings: [],
     proposal: null,
+  };
+}
+
+/**
+ * Valores del enum `organization_type` del núcleo. `other` es la AUSENCIA de
+ * clasificación, no un destino: una acción que clasifica solo escribe los otros.
+ */
+const CLASSIFIED_ORGANIZATION_TYPES = ["record_label", "production_company", "recording_studio", "distributor", "management"] as const;
+const ORGANIZATION_TYPES = [...CLASSIFIED_ORGANIZATION_TYPES, "other"] as const;
+
+/** Ya clasificada: si coincide con lo propuesto no hay nada que hacer; si no, el hallazgo caducó. */
+function staleType(stored: string, proposed: string): { key: string; ok: false; code: "noop" | "stale"; message: string } {
+  return {
+    key: "sin_clasificar", ok: false,
+    code: stored === proposed ? "noop" : "stale",
+    message: `la organización ya está clasificada como «${stored}»`,
   };
 }
 
@@ -486,6 +503,77 @@ export const moverDuracionAction: FixActionDefinition<MoverDuracionParams> = {
   },
 };
 
+// 1.8 Fijar tipo de organización sin clasificar (PLAN_CURADURIA E11)
+//
+// Hermana de 1.1 sobre la otra ficha que guarda un tipo. El detector
+// `organizacion_sin_clasificar` solo emite cuando la organización sigue en
+// `other` Y su nombre lleva UN marcador inequívoco, así que el tipo ya viene
+// decidido en la evidencia: la acción no vuelve a inferirlo.
+const fijarTipoOrganizacionParamsSchema = z.object({
+  organizationId: z.number().int().positive(),
+  organizationType: z.enum(CLASSIFIED_ORGANIZATION_TYPES),
+}).strict();
+
+export type FijarTipoOrganizacionParams = z.infer<typeof fijarTipoOrganizacionParamsSchema>;
+
+export const fijarTipoDeOrganizacionAction: FixActionDefinition<FijarTipoOrganizacionParams> = {
+  key: "fijar_tipo_de_organizacion",
+  label: "Fijar tipo de organización",
+  description: "Clasifica una organización que sigue en «other» con el tipo que declara el marcador de su nombre.",
+  level: 1,
+  inverse: "field_restore",
+  paramsSchema: fijarTipoOrganizacionParamsSchema,
+  appliesTo(finding) {
+    return finding.detector === "organizacion_sin_clasificar" && finding.entity.kind === "organization" && finding.entity.id !== null;
+  },
+  // Nunca nivel 0: un marcador en el nombre es un indicio, no una fuente. «Mi
+  // Estudio» puede ser el nombre legal de un sello; se confirma ficha a ficha.
+  levelFor() {
+    return 1;
+  },
+  async defaultParams(finding) {
+    if (finding.entity.id === null) return null;
+    const suggested = z.enum(CLASSIFIED_ORGANIZATION_TYPES).safeParse(finding.evidence["suggestedType"]);
+    if (!suggested.success) return null;
+    return { organizationId: finding.entity.id, organizationType: suggested.data };
+  },
+  async preconditions(finding, params, ctx) {
+    const { rows } = await ctx.client.query<{ organization_type: string }>(
+      "SELECT organization_type::text FROM public.organizations WHERE id=$1", [params.organizationId],
+    );
+    if (!rows[0]) return [{ key: "exists", ok: false, code: "not_found", message: `organización ${params.organizationId} inexistente` }];
+    // El hallazgo afirma «sigue sin clasificar»: si alguien ya la clasificó, la
+    // premisa caducó y escribir encima pisaría trabajo curado, no un hueco.
+    if (rows[0].organization_type !== "other") {
+      return [{ key: "exists", ok: true }, staleType(rows[0].organization_type, params.organizationType)];
+    }
+    return [{ key: "exists", ok: true }, { key: "sin_clasificar", ok: true }];
+  },
+  async preview(finding, params, ctx) {
+    const { rows } = await ctx.client.query<{ name: string; organization_type: string }>(
+      "SELECT name, organization_type::text FROM public.organizations WHERE id=$1", [params.organizationId],
+    );
+    if (!rows[0]) return blockedPreview([{ kind: "organization", id: params.organizationId }], "not_found", "organización no encontrada");
+    const stored = rows[0].organization_type;
+    const stale = stored === "other" ? null : staleType(stored, params.organizationType);
+    return {
+      touched: [{ kind: "organization", id: params.organizationId }],
+      before: { name: rows[0].name, organization_type: stored },
+      after: { organization_type: params.organizationType },
+      blocked: stale === null ? null : { code: stale.code, message: stale.message },
+      collisions: [],
+      warnings: [],
+      proposal: null,
+    };
+  },
+  async apply(context, finding, params) {
+    await withFieldJournal(context, { kind: "organization", id: params.organizationId, fields: ["organization_type"] }, async () => {
+      await updateEntity(context, "organization", params.organizationId, { organization_type: params.organizationType });
+    });
+    return { after: { organization_type: params.organizationType } };
+  },
+};
+
 // ---------------------------------------------------------------------------
 // 2. Acciones compuestas de segmentación (E6.1)
 // ---------------------------------------------------------------------------
@@ -547,7 +635,7 @@ export const extraerInterpreteAction: FixActionDefinition<ExtraerInterpreteParam
     });
     const credit = await createRelation(context, "track_credit", { trackId: params.trackId, artistId: params.artistId }, {
       credit_type: "musician",
-      role: "Intérprete",
+      credit_role: "Intérprete",
     });
     return { after: { title: params.cleanTitle, creditId: credit.id } };
   },
@@ -606,7 +694,7 @@ export const extraerInterpreteCreandoAction: FixActionDefinition<ExtraerInterpre
     });
     const credit = await createRelation(context, "track_credit", { trackId: params.trackId, artistId: artist.id }, {
       credit_type: "musician",
-      role: "Intérprete",
+      credit_role: "Intérprete",
     });
     return { after: { title: params.cleanTitle, createdArtistId: artist.id, creditId: credit.id } };
   },
@@ -690,7 +778,7 @@ export const extraerInvitadoAction: FixActionDefinition<ExtraerInvitadoParams> =
     });
     const credit = await createRelation(context, "track_credit", { trackId: params.trackId, personId }, {
       credit_type: "guest",
-      role: "Invitado",
+      credit_role: "Invitado",
     });
     return { after: { title: params.cleanTitle, guestPersonId: personId, creditId: credit.id } };
   },
@@ -760,7 +848,7 @@ export const extraerAutoresAction: FixActionDefinition<ExtraerAutoresParams> = {
       }
       const credit = await createRelation(context, "track_credit", { trackId: params.trackId, personId }, {
         credit_type: "composer",
-        role: "Compositor",
+        credit_role: "Compositor",
       });
       creditIds.push(credit.id);
     }
@@ -830,7 +918,7 @@ export const convertirEnOrganizacionExistenteAction: FixActionDefinition<Convert
 };
 
 // 3.2 Inferencia de tipo de organización y creación
-function inferOrgType(name: string): "record_label" | "production_company" | "recording_studio" | "distributor" | "management" | "other" {
+function inferOrgType(name: string): (typeof ORGANIZATION_TYPES)[number] {
   const norm = nameKey(name);
   if (/\b(?:estudio|estudios|studio|studios|sound|audio)\b/iu.test(norm)) return "recording_studio";
   if (/\b(?:records|discos|recordings|sello|label|fonografica)\b/iu.test(norm)) return "record_label";
@@ -843,7 +931,7 @@ function inferOrgType(name: string): "record_label" | "production_company" | "re
 const convertirCreandoOrgParamsSchema = z.object({
   personId: z.number().int().positive(),
   organizationName: z.string().min(1),
-  organizationType: z.enum(["record_label", "production_company", "recording_studio", "distributor", "management", "other"]).optional(),
+  organizationType: z.enum(ORGANIZATION_TYPES).optional(),
 }).strict();
 
 export type ConvertirCreandoOrgParams = z.infer<typeof convertirCreandoOrgParamsSchema>;
@@ -1159,11 +1247,22 @@ export const retirarConCreditosAction: FixActionDefinition<RetirarConCreditosPar
         }
       }
     }
-    // Desconectar créditos y membresías
-    await client.query("DELETE FROM public.track_credits WHERE person_id=$1", [params.personId]);
-    await client.query("DELETE FROM public.album_credits WHERE person_id=$1", [params.personId]);
-    await client.query("DELETE FROM public.artist_members WHERE person_id=$1", [params.personId]);
-    await client.query("DELETE FROM public.person_organizations WHERE person_id=$1", [params.personId]);
+    // Retirar cada relación por el motor: desvincula sus claims antes del
+    // DELETE y copia su historia a la ficha padre. Un DELETE directo haría
+    // CASCADE sobre claims que merge_audit_claims referencia con RESTRICT.
+    const relations = [
+      { kind: "track_credit", table: "track_credits" },
+      { kind: "album_credit", table: "album_credits" },
+      { kind: "artist_membership", table: "artist_members" },
+      { kind: "person_organization", table: "person_organizations" },
+    ] as const;
+    for (const relation of relations) {
+      const { rows } = await client.query<{ id: string }>(
+        `SELECT id::text FROM public.${relation.table} WHERE person_id=$1 ORDER BY id`, [params.personId]);
+      for (const row of rows) {
+        await removeRelation(client, relation.kind, Number(row.id), { note: context.note, runId: context.runId });
+      }
+    }
     // Retirar entidad de forma auditada
     const removal = await deleteEntity(context, "person", params.personId);
     return { after: { retiredId: removal.id } };
@@ -1198,7 +1297,7 @@ export const retirarHuerfanaAction: FixActionDefinition<RetirarHuerfanaParams> =
   },
   async preconditions(finding, params, ctx) {
     const table = ENTITY_SPECS[params.kind].table;
-    const exists = (await ctx.client.query(`SELECT 1 FROM public.${table} WHERE id=$1`, [params.id])).rowCount;
+    const exists = (await ctx.client.query(`SELECT 1 FROM ${table} WHERE id=$1`, [params.id])).rowCount;
     if (!exists) return [{ key: "exists", ok: false, code: "not_found", message: `${params.kind} ${params.id} inexistente` }];
     // Re-verificar cero dependientes
     let links = 0;
@@ -1235,7 +1334,7 @@ export const retirarHuerfanaAction: FixActionDefinition<RetirarHuerfanaParams> =
   },
   async preview(finding, params, ctx) {
     const table = ENTITY_SPECS[params.kind].table;
-    const row = (await ctx.client.query<{ name: string }>(`SELECT name FROM public.${table} WHERE id=$1`, [params.id])).rows[0];
+    const row = (await ctx.client.query<{ name: string }>(`SELECT name FROM ${table} WHERE id=$1`, [params.id])).rows[0];
     if (!row) return blockedPreview([{ kind: params.kind, id: params.id }], "not_found", "entidad no encontrada");
     return {
       touched: [{ kind: params.kind, id: params.id }],
@@ -1402,6 +1501,7 @@ export const retirarPistaDuplicadaAction: FixActionDefinition<RetirarPistaDuplic
 // el genérico por defecto para que la inferencia de la unión no se pierda.
 export const STRUCTURAL_ACTIONS: readonly FixActionDefinition[] = [
   fijarTipoDeDiscoAction,
+  fijarTipoDeOrganizacionAction,
   vaciarAnioAction,
   fijarAnioFormacionAction,
   vaciarDuracionAction,

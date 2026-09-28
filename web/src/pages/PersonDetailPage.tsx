@@ -6,7 +6,6 @@ import { useAsync } from "../lib/useAsync";
 import { useMovedToRedirect } from "../lib/useMovedTo";
 import { useOperator } from "../lib/OperatorContext";
 import { useToast } from "../lib/ToastContext";
-import { ErrorState } from "../components/StateViews";
 import { DetailSkeleton } from "../components/Skeletons";
 import { AliasEditor } from "../components/AliasEditor";
 import { EntityFormModal } from "../components/EntityFormModal";
@@ -16,6 +15,7 @@ import { ConvertPersonModal } from "../components/ConvertPersonModal";
 import { SplitPersonModal } from "../components/SplitPersonModal";
 import { PersonOrgManager } from "../components/PersonOrgManager";
 import { EntityHistory } from "../components/EntityHistory";
+import { EntityLoadError } from "../components/RemovedEntityState";
 import { entityHref } from "../lib/routes";
 import { initialOf } from "../components/EntityCard";
 import { PERSON_FIELDS } from "../lib/entityFields";
@@ -36,9 +36,9 @@ export function PersonDetailPage() {
   const [converting, setConverting] = useState<"organization" | "artist" | null>(null);
 
   if (loading) return <DetailSkeleton />;
-  if (error || !person) return <ErrorState message={error ?? "Persona no encontrada."} onRetry={reload} />;
+  if (error || !person) return <EntityLoadError message={error ?? "Persona no encontrada."} errorValue={errorValue} onRetry={reload} />;
 
-  const meta = [person.nationality, person.isVenezuelan ? "Venezolano/a" : null].filter(Boolean);
+  const meta = [person.nationality, person.isVenezuelan === true ? "Venezolano/a" : person.isVenezuelan === false ? "Extranjero/a" : null].filter(Boolean);
 
   return (
     <>

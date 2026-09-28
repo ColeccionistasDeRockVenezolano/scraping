@@ -78,7 +78,14 @@ echo "   fixtures insertados ✓"
 
 echo
 echo "== 7. Tests negativos de constraints/FK =="
-psql_file "$ROOT/tests/constraints_negative.sql" 2>&1 | grep -E 'PASS|FAIL|ERROR' || true
+psql_file "$ROOT/tests/constraints_negative.sql" > "$OUT/negative.txt" 2>&1 || true
+grep -E 'PASS|FAIL|ERROR' "$OUT/negative.txt" || true
+# Un FAIL corta el archivo (ON_ERROR_STOP) y deja sin correr los siguientes:
+# antes se imprimía y la suite seguía en verde.
+if grep -qE 'FAIL|ERROR' "$OUT/negative.txt"; then
+  echo "   *** FALLÓ UN TEST NEGATIVO ***"
+  exit 1
+fi
 
 echo
 echo "== 8. Queries de verificación =="
@@ -90,8 +97,17 @@ echo "== 9. Snapshot del schema public (core) DESPUÉS + diff =="
 docker exec "$CTR" pg_dump -U postgres -d postgres --schema=public --schema-only > "$OUT/core_after.sql"
 # Las líneas \restrict/\unrestrict de pg_dump llevan una clave aleatoria por
 # dump: se excluyen del diff (no representan objetos de base de datos).
-grep -vE '^\\(un)?restrict' "$OUT/core_before.sql" > "$OUT/core_before.filt"
-grep -vE '^\\(un)?restrict' "$OUT/core_after.sql"  > "$OUT/core_after.filt"
+# Los disparadores `crv_journal` del diario de cambios (0028) son la primera
+# excepción aprobada al core: solo registran, no cambian columnas ni datos.
+# La segunda (0029) es `persons.is_venezuelan` nullable (NULL = sin dato):
+# solo esa forma exacta de la columna se lee como la del core.
+core_filt() {
+  grep -vE '^\\(un)?restrict' "$1" \
+    | perl -0pe 's/--\n-- Name: \S+ crv_journal; Type: TRIGGER;[^\n]*\n--\n\nCREATE TRIGGER crv_journal [^\n]*\n\n\n//g' \
+    | sed -E 's/^    is_venezuelan boolean,$/    is_venezuelan boolean DEFAULT false NOT NULL,/'
+}
+core_filt "$OUT/core_before.sql" > "$OUT/core_before.filt"
+core_filt "$OUT/core_after.sql"  > "$OUT/core_after.filt"
 if diff -u "$OUT/core_before.filt" "$OUT/core_after.filt" > "$OUT/core.diff"; then
   echo "   DIFF VACÍO: el schema public (core) NO fue alterado ✓"
 else
@@ -129,7 +145,7 @@ echo "   schemas restantes:"
 docker exec "$CTR" psql -U postgres -d postgres -tA -c \
   "SELECT nspname FROM pg_namespace WHERE nspname IN ('ingest','media');" | sed 's/^/     /' || true
 docker exec "$CTR" pg_dump -U postgres -d postgres --schema=public --schema-only > "$OUT/core_after_rollback.sql"
-grep -vE '^\\(un)?restrict' "$OUT/core_after_rollback.sql" > "$OUT/core_rollback.filt"
+core_filt "$OUT/core_after_rollback.sql" > "$OUT/core_rollback.filt"
 if diff -u "$OUT/core_before.filt" "$OUT/core_rollback.filt" > "$OUT/core_rollback.diff"; then
   echo "   DIFF VACÍO tras rollback: core intacto ✓"
 else

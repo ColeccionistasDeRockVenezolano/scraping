@@ -3,7 +3,9 @@ import type { FastifyInstance } from "fastify";
 import type { ZodTypeProvider } from "fastify-type-provider-zod";
 import { z } from "zod";
 import { paginationQuerySchema, toPage } from "../pagination.js";
-import { idParamSchema, aliasSchema, paginatedResponseSchema } from "../schemas.js";
+import {
+  idParamSchema, aliasSchema, genreSlugQuerySchema, genreStatusSchema, paginatedResponseSchema, publicGenreSchema,
+} from "../schemas.js";
 import { notFoundEntity } from "../repositories/redirects.js";
 import { getTrackDetail, listTracks } from "../repositories/tracks.js";
 
@@ -37,11 +39,16 @@ const trackDetailSchema = trackListItemSchema.extend({
   notes: z.string().nullable(),
   aliases: z.array(aliasSchema),
   credits: z.array(trackCreditSchema),
+  primaryGenre: publicGenreSchema.nullable(),
+  genres: z.array(publicGenreSchema),
+  genreStatus: genreStatusSchema,
+  genreOrigin: z.literal("album").describe("La pista hereda los géneros confirmados de su álbum, nunca los del artista."),
 });
 
 const listQuerySchema = paginationQuerySchema.extend({
   q: z.string().trim().min(1).optional(),
   albumId: z.coerce.number().int().positive().optional(),
+  genre: genreSlugQuerySchema.optional().describe("Género o familia del álbum de la pista."),
 });
 
 export async function registerTrackRoutes(app: FastifyInstance): Promise<void> {

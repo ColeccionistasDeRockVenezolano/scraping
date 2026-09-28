@@ -28,6 +28,8 @@ const REFRESH_RUNNING_MS = 3_000;
 export interface CurationOutletContext {
   summary: CurationSummary | undefined;
   summaryError: string | undefined;
+  /** Cuándo se trajo de la API lo que se está mostrando (epoch ms); undefined = nunca llegó. */
+  summaryFetchedAt: number | undefined;
   refreshSummary: () => Promise<void>;
 }
 
@@ -38,6 +40,7 @@ export function useCurationSummary(): CurationOutletContext {
 function useSummary(enabled: boolean): CurationOutletContext {
   const [summary, setSummary] = useState<CurationSummary>();
   const [summaryError, setSummaryError] = useState<string>();
+  const [summaryFetchedAt, setSummaryFetchedAt] = useState<number>();
   const generation = useRef(0);
 
   const refreshSummary = useCallback(async () => {
@@ -46,6 +49,7 @@ function useSummary(enabled: boolean): CurationOutletContext {
       const next = await curationApi.summary();
       if (current !== generation.current) return;
       setSummary(next);
+      setSummaryFetchedAt(Date.now());
       setSummaryError(undefined);
     } catch (error) {
       if (current !== generation.current) return;
@@ -63,7 +67,23 @@ function useSummary(enabled: boolean): CurationOutletContext {
     return () => window.clearInterval(timer);
   }, [enabled, running, refreshSummary]);
 
-  return { summary, summaryError, refreshSummary };
+  // PESTAÑA DORMIDA. El reloj de arriba no refresca mientras la pestaña está
+  // oculta, y el navegador además congela sus temporizadores: una pestaña
+  // dejada atrás días enteros volvía al frente mostrando el análisis de
+  // entonces —«último análisis hace 4 días»— aunque el catálogo se hubiese
+  // analizado cien veces. Volver a mirarla pide los datos en el acto.
+  useEffect(() => {
+    if (!enabled) return undefined;
+    const wake = () => { if (document.visibilityState === "visible") void refreshSummary(); };
+    document.addEventListener("visibilitychange", wake);
+    window.addEventListener("focus", wake);
+    return () => {
+      document.removeEventListener("visibilitychange", wake);
+      window.removeEventListener("focus", wake);
+    };
+  }, [enabled, refreshSummary]);
+
+  return { summary, summaryError, summaryFetchedAt, refreshSummary };
 }
 
 /**

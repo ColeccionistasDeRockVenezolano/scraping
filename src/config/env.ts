@@ -63,6 +63,27 @@ const envSchema = z.object({
   CRV_CURATION_AUTOFIX_MAX_PER_SCAN: z.coerce.number().int().nonnegative().max(5000).default(50),
   CRV_CURATION_AUTOFIX_MAX_PER_DAY: z.coerce.number().int().nonnegative().max(50_000).default(200),
 
+  // Géneros (PLAN_GENEROS §4): encendido, `albums.genre` deja de escribirlo el
+  // motor de fusión y pasa a ser la proyección de `ingest.album_genres` (único
+  // escritor). Llega apagado: se enciende tras el backfill de géneros.
+  GENRES_PROJECTION_ENABLED: z.enum(["true", "false"]).default("false").transform((value) => value === "true"),
+
+  // Géneros, fuentes externas (PLAN_GENEROS etapa 4). Apagado, ninguna
+  // importación sale a la red y el catálogo funciona igual; además cada fuente
+  // necesita su ficha autorizada en `ingest.genre_external_sources`.
+  GENRES_EXTERNAL_ENABLED: z.enum(["true", "false"]).default("false").transform((value) => value === "true"),
+  // Contacto obligatorio en el User-Agent de las APIs que lo exigen
+  // (MusicBrainz pide identificarse con una forma de contacto).
+  GENRES_EXTERNAL_CONTACT: z.string().optional(),
+  GENRES_EXTERNAL_CACHE_TTL_DAYS: z.coerce.number().int().positive().default(30),
+  GENRES_EXTERNAL_MAX_ENTITIES: z.coerce.number().int().positive().max(5000).default(200),
+  GENRES_EXTERNAL_MATCH_THRESHOLD: z.coerce.number().min(0).max(1).default(0.6),
+  GENRES_EXTERNAL_AMBIGUOUS_THRESHOLD: z.coerce.number().min(0).max(1).default(0.6),
+  GENRES_EXTERNAL_MATCH_MARGIN: z.coerce.number().min(0).max(1).default(0.08),
+  // Token personal de la API de Discogs. Va en la cabecera `Authorization`,
+  // nunca en la URL (la caché guarda la URL de cada respuesta).
+  DISCOGS_TOKEN: z.string().optional(),
+
   DATA_DIR: z.string().default("./data"),
 
   CRAWL_USER_AGENT: z.string().default("CRV-bot/0.1"),

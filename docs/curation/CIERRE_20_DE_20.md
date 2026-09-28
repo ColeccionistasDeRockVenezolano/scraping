@@ -290,6 +290,26 @@ corregirlos desde la propia tarjeta, no un criterio incumplido. **Recomendación
 `organizacion_sin_clasificar` (21 casos, `updateEntity(organization_type)`); las dos son N1 sobre piezas que
 el motor ya tiene.
 
+**Después de la auditoría (2026-09-20).** Las cifras de arriba son las del cierre y se dejan como estaban; lo
+que cambió desde entonces:
+
+- `organizacion_sin_clasificar` **cerrado**: `fijar_tipo_de_organizacion` (`structural.ts` §1.8, nivel 1,
+  inversa `field_restore`) cubre sus 21 hallazgos. La cobertura pasa de 84,3 %/86,6 % a **84,7 %/87,0 %** y la
+  desviación baja de 197 a **176**. La acción no reinfiere el tipo —lee el `suggestedType` que el detector ya
+  decidió— y se bloquea con `stale` si la ficha fue clasificada entretanto.
+- La recomendación de empezar por `creditos_duplicados` **era optimista**: `deleteRelation` existe y guarda el
+  snapshot, pero no hay inversa para una relación *retirada* (`relation_delete` deshace una creación y
+  `entity_restore` pasa por `ENTITY_SPECS`, que no acepta tipos de relación). Necesita un `undoRelationRemoval`
+  nuevo antes que la acción.
+- Dos de los cuatro restantes no son deuda de implementación sino del plan: `pistas_sin_duracion…` (56) pide un
+  N3 y **no existe ninguna acción de nivel 3 en el marco** —toda acción escribe—, y de los 62 choques de alias
+  **56 son de pista o de disco**, que `mergeAction` no admite (solo `person`/`organization`/`artist`).
+- El KPI **ya no depende de que alguien se acuerde de correr el script**: `test/unit/curation-coverage.test.ts`
+  exige en CI los mínimos de §4 sobre la misma foto, un piso de regresión y que todo detector que declara una
+  acción la ofrezca en algún hallazgo real —la forma general del defecto §3.1—. La regla del nivel, que estaba
+  escrita tres veces, vive ahora en `src/curation/coverage.ts` y la usan el script, `/curation/summary` y la
+  prueba. Verificado por mutación: al hacer que la acción deje de aplicar, fallan dos de las cinco pruebas.
+
 ---
 
 ## 4. Límites de esta auditoría

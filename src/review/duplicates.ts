@@ -39,11 +39,15 @@
 //
 // Personas y créditos no se agrupan solos: su fusión la pide una decisión
 // explícita (person-corrections.ts), que reutiliza `mergeInto`.
+import { bindRun } from "../db/run-binding.js";
 import type { PoolClient } from "pg";
 import { getPool } from "../db/client.js";
 import { finishRun } from "../ingest/runs.js";
 import { normalizeEntityName } from "../normalization/entity-name.js";
 import { invalidateSearchIndex } from "../api/search-index.js";
+import { transferGenreAssignments } from "../genres/merge.js";
+import { projectAlbumGenre } from "../merge/genre-projection.js";
+import { deriveVenezuelanFor } from "../merge/venezuelan.js";
 
 export type DuplicateKind = "artist" | "album";
 export type MergeKind = DuplicateKind | "track" | "person" | "organization" | "album_credit" | "track_credit" | "artist_membership";
@@ -87,7 +91,6 @@ const PAIR_COLUMNS: Partial<Record<MergeKind, readonly [string, string]>> = {
 /** Columnas cuyo «vacío» no es NULL sino el DEFAULT del core: «nadie lo dijo». */
 const EMPTY_RULES: Readonly<Record<string, { empty: string; present: string }>> = {
   "albums.album_type": { empty: "k.album_type='other'", present: "d.album_type<>'other'" },
-  "persons.is_venezuelan": { empty: "k.is_venezuelan=false", present: "d.is_venezuelan=true" },
 };
 /**
  * Los mismos «vacíos» en valores, para la previsualización de fusión
@@ -96,7 +99,6 @@ const EMPTY_RULES: Readonly<Record<string, { empty: string; present: string }>> 
  */
 export const MERGE_EMPTY_VALUES: Readonly<Record<string, unknown>> = {
   "albums.album_type": "other",
-  "persons.is_venezuelan": false,
 };
 
 /**
@@ -361,8 +363,9 @@ async function trackCollisions(client: PoolClient, keepId: number, dropId: numbe
  * Completa en `keep` las columnas vacías con el valor del duplicado: una sola
  * sentencia (antes: un `information_schema` y un UPDATE por columna) y
  * `filled` sale de comparar el antes y el después con RETURNING. Reglas de
- * vacío: `album_type='other'` y `is_venezuelan=false` son el DEFAULT del core
- * —«nadie lo dijo»—, así que un `true` del duplicado se conserva (P9).
+ * vacío: `album_type='other'` es el DEFAULT del core —«nadie lo dijo»—, así
+ * que un tipo del duplicado se conserva (P9). `is_venezuelan` admite NULL
+ * desde 0029: su vacío es NULL y un `false` es un extranjero afirmado.
  */
 async function fillEmptyColumns(client: PoolClient, kind: MergeKind, keepId: number, dropId: number): Promise<string[]> {
   const table = TABLE[kind];
@@ -440,6 +443,9 @@ export async function mergeInto(
   // Antes de reapuntar nada: la revisión que careaba las dos fichas no admite
   // el reapunte (chk de distintas) y hay que soltarle el lado que desaparece.
   const detachedReviews = await detachSelfPairs(client, kind, keepId, dropId, runId);
+  // Los géneros viajan con sus reglas de choque antes del reapunte genérico,
+  // que así ya no encuentra filas de género que mover ni descartar.
+  const genreRows = kind === "album" || kind === "artist" ? await transferGenreAssignments(client, kind, keepId, dropId) : undefined;
 
   // Evidencia de ambas filas: sus claims y los enlazados a sus auditorías. Los
   // créditos acotados por número ("tracks 01, 03") solo la tienen por auditoría.
@@ -480,7 +486,7 @@ export async function mergeInto(
     VALUES($1,$2::ingest.claim_entity_kind,$3,'merged_duplicate',$4::jsonb,$5::jsonb,$6,'high','human') RETURNING id::text`,
   [runId, kind, keepId, JSON.stringify(drop),
     JSON.stringify({ keptId: keepId, filled, moved, discarded: discardedRows.length, tracksMerged,
-      movedRefs, discardedRows, detachedReviews, primaryAliases, version: 2 }), note]);
+      movedRefs, discardedRows, detachedReviews, primaryAliases, ...(genreRows ? { genreRows } : {}), version: 2 }), note]);
   const auditId = Number(auditRow.rows[0]!.id);
   // La evidencia completa, sin el recorte a 50 de antes (P4): hay fichas con
   // más de 150 claims y las fusiones ya llegaban al tope.
@@ -502,6 +508,10 @@ export async function mergeInto(
         SET to_id=EXCLUDED.to_id, merge_audit_id=EXCLUDED.merge_audit_id, run_id=EXCLUDED.run_id`,
     [kind, dropId, keepId, auditId, runId]);
   }
+  // `albums.genre` del que queda se recalcula con sus géneros ya unidos.
+  if (kind === "album" && genreRows) await projectAlbumGenre(client, keepId);
+  // La que queda hereda bandas y créditos del duplicado: puede ganar evidencia de venezolana.
+  if (kind === "person") await deriveVenezuelanFor(client, [keepId], runId);
   return { moved, discarded: discardedRows.length, filled, tracksMerged, auditId, movedRefs, discardedRows, detachedReviews };
 }
 
@@ -521,6 +531,7 @@ export async function mergeDuplicate(kind: DuplicateKind, keepId: number, dropId
   const client = await getPool().connect();
   try {
     await client.query("BEGIN");
+    await bindRun(client, runId);
     await client.query("SELECT pg_advisory_xact_lock(hashtext('merge:duplicates'))");
     // El rastro completo vive en la auditoría; el resultado del lote se queda
     // con los contadores de siempre.

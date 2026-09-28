@@ -707,9 +707,10 @@ Sobre el marco de E4 (tipos, lotes, hash, verificación dirigida y deshacer):
 | módulo | responsabilidad |
 | --- | --- |
 | `src/curation/actions/textual.ts` | 15 acciones de texto: `decodificar_html`, `reparar_codificacion`, `reparar_cp1251`, `sustituir_homoglifos`, `restaurar_letra`, `quitar_signo_huerfano`, `cerrar_signo`, `recortar_extremos`, `capitalizar`, `dominio_a_alias`, `quitar_prefijo_artista`, `quitar_rotulo`, `separar_palabras`, `mover_region` (con colisión) y `renombrar_con_alias` (conserva el dato como alias dentro del mismo run para que el deshacer lo retire) |
-| `src/curation/actions/structural.ts` | 20 acciones estructurales: extraer intérprete/invitado/autores, mover duración, convertir a organización/artista, vincular como miembro, dividir persona, retirar con créditos o huérfana, fusionar discos, retirar pista duplicada, fijar tipo, vaciar año/duración, corregir unidades y `renumerar_consecutivo` en dos fases (desplaza +1000 y fija el valor final en la misma transacción: el core exige `track_number > 0`) |
+| `src/curation/actions/structural.ts` | 21 acciones estructurales: extraer intérprete/invitado/autores, mover duración, convertir a organización/artista, vincular como miembro, dividir persona, retirar con créditos o huérfana, fusionar discos, retirar pista duplicada, fijar tipo de disco y de organización, vaciar año/duración, corregir unidades y `renumerar_consecutivo` en dos fases (desplaza +1000 y fija el valor final en la misma transacción: el core exige `track_number > 0`) |
 | `src/merge/album-merge.ts` | fusión de discos con vista previa y hash determinista: empareja pistas por (disco, número) y por título normalizado, unifica créditos y formatos equivalentes, reubica las pistas sueltas y repunta enlaces de medios; la auditoría va con `version: 2`, compatible con `undoMergeRun` |
 | `src/merge/structural-undo.ts` | deshacer de retiros y relaciones creadas por las acciones |
+| `src/curation/coverage.ts` | la regla del nivel de un hallazgo (el mínimo de sus acciones) y el reparto por categoría y detector, una sola vez para `/curation/summary`, `npm run curation:coverage` y la prueba que defiende §4 en CI |
 | `GET /albums/:id/merge-preview`, `POST /albums/:id/merge`, `POST /persons/:id/split` | las rutas de la fusión de discos y la división de personas (reparto de créditos con vista previa) |
 | `crv curation scan --dry-run` | informa la cobertura por niveles de acción (nivel 0/1/2/manual) por categoría antes de aplicar nada |
 
@@ -825,12 +826,92 @@ verificación de una corrección, y encadenar automáticas sin mirar el catálog
 entero es la forma segura de irse por un barranco—. `crv curation autofix`
 muestra el estado y `--run` fuerza una pasada.
 
+### 4.16sexies Deshacer cualquier cambio (diario de cambios, 2026-09-22)
+
+Toda escritura del catálogo es un run, y todo run se puede deshacer:
+ediciones, altas, retiros, fusiones, divisiones, conversiones, lotes de
+Curaduría y procesos de la CLI.
+
+- **Diario** (migración 0028): disparadores AFTER registran en
+  `ingest.change_journal` la fila antes/después de cada cambio, con el run
+  que lo hizo. El run llega por la variable de sesión `crv.run_id`: un run
+  de una sola transacción queda ligado por el disparador `crv_bind_run` al
+  insertar el run; los de varias transacciones (ingesta, lotes de revisión,
+  enriquecimiento) corren dentro de `withRunScope` (`src/db/run-binding.ts`),
+  y el `RunAwarePool` fija la variable en cada conexión que se toma. **No**
+  se liga por `claim.runId`: aprobar re-fusiona claims de runs viejos.
+- **Deshacer** (`src/merge/journal-undo.ts`, puerta única
+  `src/merge/run-undo.ts`): efecto neto por fila (existía y se borró →
+  vuelve; se creó → se retira; se cambió → se revierte), padres antes que
+  hijos, con reintento por FK. Antes comprueba que cada fila siga como la
+  dejó el run: en tablas `strict` (catálogo) un cambio posterior bloquea todo
+  y nombra el run que hay que deshacer primero; en `soft` (evidencia,
+  revisión) esa fila se deja y se informa. Los claims del run quedan
+  `superseded`, nunca se borran. Deshacer es otro run: deshacerlo es rehacer.
+  Los runs anteriores al diario usan la inversa propia de su acción si la
+  tienen (fusión, retiro, relación, corrección de campo).
+- **Superficies**: `GET /changes`, `GET /changes/:runId` (vista previa sin
+  escribir), `POST /changes/:runId/undo`; `crv runs list|show|undo`; en la
+  web, la barra fija «Deshacer» tras cada escritura (evento `crv-change` de
+  `request()`), la página **Historial**, «Cambios de esta ficha» y «Deshacer
+  retiro» en el 404 de una ficha retirada (`removedByRun`). Tras deshacer,
+  las vistas abiertas recargan (`crv-data-changed` en `useAsync`). QA:
+  `npm run test:visual-undo`.
+
+### 4.16septies Deshacer lo anterior al diario, decisión por decisión
+
+Un run de antes del 22-09-2026 podía fusionar 177 personas de una vez:
+deshacerlo entero no es lo que nadie quiere. Esas decisiones se deshacen
+**una a una**, desde la fila de `ingest.merge_audit` que las registró.
+
+- **Conversiones** (`absorbed_person`: la «persona» que era un artista o una
+  organización): se deshacen solo con su auditoría, que guardó la persona
+  entera y una fila `credited` por crédito movido
+  (`src/merge/absorption-undo.ts`). La persona vuelve con su id, sus créditos
+  regresan, el alias que dejó en el destino se retira y sus claims dejan de
+  estar rechazados. Si un crédito convertido ya no existe o ya no está en el
+  destino, no se toca nada y se dice qué fusión deshacer primero.
+- **Fusiones** (`merged_duplicate`) de antes de E11.1 (15-09-2026): su
+  auditoría guardó la fila borrada y **cuántas** filas movió, no cuáles. Esa
+  lista se reconstruye desde un respaldo anterior al run restaurado en una
+  base desechable (`src/merge/legacy-trace.ts`) y se guarda en
+  `ingest.merge_traces` (migración 0030):
+
+  ```bash
+  npm run cli -- merges rebuild-traces --snapshot='postgresql://…/crv_snap' --label='respaldo 15-09'
+  ```
+
+  **Solo se deshace lo verificado**: la reconstrucción se compara con el
+  número que la propia fusión registró y, si no cuadra exactamente (o la
+  fusión descartó filas sin copia), el rastro queda `verified=false` y la
+  fusión sigue sin poder deshacerse, diciendo cuántas filas faltan y por qué.
+  Un respaldo anterior al run no ve las filas nacidas entre él y la fusión:
+  ahí está el límite, no en el código.
+- **Dos puertas**: la reconstrucción completa (puerta A, `verified`) y que
+  nada haya cambiado desde entonces (puerta B, las precondiciones de
+  `undoOneMerge`, que se comprueban al deshacer).
+- **Superficies**: `GET /audit/:auditId/undo` (vista previa que ejecuta el
+  deshacer de verdad dentro de una transacción que **siempre** vuelve atrás,
+  así que no se queda corta) y `POST /audit/:auditId/undo`;
+  `crv audit show|undo <id>`; en la web, el botón «Deshacer» en las filas
+  `merged_duplicate` y `absorbed_person` del **Historial de campos** de la
+  ficha. Deshacer es un run del diario: se rehace deshaciéndolo.
+- **Cobertura en desarrollo** (2026-09-23): 209 de 1.717 fusiones viejas con
+  rastro verificado y las 15 conversiones deshacibles. Los runs 144–220 no
+  tienen ningún respaldo anterior: no hay de dónde reconstruirlos.
+- Pruebas: `test/contract/legacy-undo.test.ts` (dos bases desechables: la
+  viva y la «instantánea»).
+
 ### 4.17 Desviaciones conocidas
 
 - `public.albums.label_id` es la única FK del catálogo sin índice (auditoría
   2026-09-17). No se corrige desde aquí: el core canónico (`public`) es
   inmutable por contrato y `doctor` verifica su huella objeto por objeto, así
   que añadirlo exige regenerar `core:catalog` con aprobación del propietario.
+- Los disparadores `crv_journal` (0028) viven en tablas de `public`: es la
+  única excepción aprobada al core intacto. Solo registran; no cambian
+  columnas, restricciones ni datos, y el diff del core en las pruebas los
+  excluye.
 
 ## 5. Flujo de datos end-to-end
 

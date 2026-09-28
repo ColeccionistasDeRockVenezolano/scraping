@@ -42,3 +42,14 @@ export function paginatedResponseSchema<T extends z.ZodTypeAny>(item: T) {
   });
 }
 
+
+/** Género público (PLAN_GENEROS §5): solo asignaciones confirmadas. */
+export const publicGenreSchema = z.object({
+  id: z.number().int(),
+  slug: z.string(),
+  name: z.string(),
+  family: z.string().describe("Slug de la familia; en una asignación directa a familia, el propio slug."),
+});
+export const genreStatusSchema = z.enum(["confirmed", "pending", "unclassified"]);
+export const genreSlugQuerySchema = z.string().trim().regex(/^[a-z0-9]+(-[a-z0-9]+)*$/u)
+  .describe("Slug de género o familia; una familia incluye sus géneros hijos.");

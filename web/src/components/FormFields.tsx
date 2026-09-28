@@ -5,7 +5,9 @@ export type FieldConfig =
   | { key: string; label: string; type: "number"; required?: boolean; hint?: string }
   | { key: string; label: string; type: "textarea"; required?: boolean; span2?: boolean; hint?: string }
   | { key: string; label: string; type: "select"; required?: boolean; options: ReadonlyArray<{ value: string; label: string }>; allowEmpty?: boolean; hint?: string }
-  | { key: string; label: string; type: "checkbox"; hint?: string };
+  | { key: string; label: string; type: "checkbox"; hint?: string }
+  /** Sí / No / Sin dato: un booleano donde NULL significa «nadie lo dijo». */
+  | { key: string; label: string; type: "tristate"; required?: false; hint?: string };
 
 interface FormFieldsProps {
   fields: readonly FieldConfig[];
@@ -43,6 +45,13 @@ export function FormFields({ fields, values, onChange, errors }: FormFieldsProps
               <select id={`f-${field.key}`} value={(value as string) ?? ""} onChange={(event) => onChange(field.key, event.target.value || null)}>
                 {field.allowEmpty || !field.required ? <option value="">—</option> : null}
                 {field.options.map((option) => <option key={option.value} value={option.value}>{option.label}</option>)}
+              </select>
+            ) : field.type === "tristate" ? (
+              <select id={`f-${field.key}`} value={value === true ? "yes" : value === false ? "no" : ""}
+                onChange={(event) => onChange(field.key, event.target.value === "yes" ? true : event.target.value === "no" ? false : null)}>
+                <option value="">Sin dato</option>
+                <option value="yes">Sí</option>
+                <option value="no">No</option>
               </select>
             ) : field.type === "number" ? (
               <input

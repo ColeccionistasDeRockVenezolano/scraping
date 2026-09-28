@@ -24,6 +24,8 @@
 //    salvedades ("Produced by X, except; Track 12 by Y") se descartan en el
 //    parser: convertirlos en persona inventaría a alguien que no existe.
 import { getPool } from "../db/client.js";
+import { normalizeEntityName } from "../normalization/entity-name.js";
+import { dismissEntity } from "../review/approval.js";
 import { ingestRecords, type IngestionResult } from "../ingest/runner.js";
 import { moduleLogger } from "../logger/index.js";
 import type { Evidence, RawRecord } from "../adapters/contracts.js";
@@ -45,6 +47,8 @@ export interface ApiClaimsResult {
   artists: number; albums: number; tracks: number; persons: number; organizations: number;
   albumCredits: number; trackCredits: number;
   claimsInserted: number; claimsReused: number; runId?: number;
+  /** Con `reconcile`: identidades candidatas descartadas y registros nuevos emitidos. */
+  reconciled?: { dismissed: number; newRecords: number };
 }
 
 interface VideoRow {
@@ -152,7 +156,7 @@ export function recordsForVideo(
     });
   }
 
-  const emitCredit = (name: string, role: string, trackNumbers: number[], selector: string, excerpt: string, kind: "person" | "organization" = "person", location?: string | null): void => {
+  const emitCredit = (name: string, role: string, trackNumbers: number[], selector: string, excerpt: string, kind: "person" | "organization" = "person", location?: string | null, section?: string): void => {
     const where = evidenceFor(video.video_id, selector, excerpt);
     // Cuando el acreditado es la propia banda del disco, se declara: probar
     // `person` primero engancharía el nombre del grupo a un homónimo.
@@ -179,6 +183,9 @@ export function recordsForVideo(
       { field: "credited_kind", value: isSelf ? "artist" : kind, evidence: where },
     ];
     if (scoped) fields.push({ field: "track_numbers", value: trackNumbers.join(","), evidence: where });
+    // El bloque de la descripción decide el tipo: "Keyboards" bajo Guest
+    // Musicians es un invitado aunque el rol sea un instrumento.
+    if (section) fields.push({ field: "credit_section", value: section, evidence: where });
     records.push({
       entityKind: scoped ? "track_credit" : "album_credit",
       identity: `${albumIdentity}::${name}::${role}${scoped ? `::${trackNumbers.join(",")}` : ""}`.slice(0, 250),
@@ -187,7 +194,8 @@ export function recordsForVideo(
   };
 
   for (const credit of parseCreditSections(sections)) {
-    emitCredit(credit.name, credit.role, credit.trackNumbers, `section:${credit.sectionKind}`, `${credit.role}: ${credit.name}`);
+    const section = credit.sectionKind === "musicians" || credit.sectionKind === "guest_musicians" ? credit.sectionKind : undefined;
+    emitCredit(credit.name, credit.role, credit.trackNumbers, `section:${credit.sectionKind}`, `${credit.role}: ${credit.name}`, "person", null, section);
   }
   // "Recorded & Mixed by Jesús Jiménez at Optilaser (Caracas, Venezuela)" son
   // varios hechos en una línea: dos verbos, una persona y un estudio. Se
@@ -210,10 +218,10 @@ export function recordsForVideo(
         // aunque la preposición sea "by": no hay ` at ` que lo delate, pero
         // el nombre sí. Emitirlo como persona inventaría a alguien.
         const kind = looksLikeOrganization(name) ? "organization" : "person";
-        emitCredit(name, role, [], `section:${credit.sectionKind}`, `${role} by ${name}`, kind);
+        emitCredit(name, role, credit.trackNumbers, `section:${credit.sectionKind}`, `${role} by ${name}`, kind);
       }
       if (credit.venue) {
-        emitCredit(credit.venue, `${role} at`, [], `section:${credit.sectionKind}`, `${role} at ${credit.venue}`, "organization", credit.location);
+        emitCredit(credit.venue, `${role} at`, credit.trackNumbers, `section:${credit.sectionKind}`, `${role} at ${credit.venue}`, "organization", credit.location);
       }
     }
   }
@@ -221,8 +229,15 @@ export function recordsForVideo(
   return { records, isRelease: true, skipped: false };
 }
 
-/** Emite los claims del canal ya hidratado. Idempotente: el hash los reusa. */
-export async function ingestYouTubeApiClaims(options: { dryRun?: boolean } = {}): Promise<ApiClaimsResult> {
+/**
+ * Emite los claims del canal ya hidratado. Idempotente: el hash los reusa.
+ *
+ * Con `reconcile`, en vez de re-emitirlo todo (~50 minutos) trabaja por
+ * diferencia contra lo que ya hay de esta fuente: los candidatos cuya
+ * identidad el código actual ya no emite se descartan con nota (quedan
+ * `rejected`, no se borran), y solo se emiten las identidades nuevas.
+ */
+export async function ingestYouTubeApiClaims(options: { dryRun?: boolean; reconcile?: { note: string } } = {}): Promise<ApiClaimsResult> {
   const { videos, tracks } = await readHydratedVideos();
   if (videos.length === 0) throw new Error("no hay videos hidratados: ejecuta `crv youtube sync` primero");
 
@@ -242,8 +257,28 @@ export async function ingestYouTubeApiClaims(options: { dryRun?: boolean } = {})
     records.push(...result.records);
   }
 
+  let toIngest = records;
+  let dismissed = 0;
+  if (options.reconcile) {
+    const emitted = new Set(records.map((record) => `${record.entityKind}\u0000${normalizeEntityName(record.identity).primaryKey}`));
+    const known = await getPool().query<{ entity_kind: string; identity_key: string; candidate: boolean }>(`
+      SELECT entity_kind::text, identity_key, bool_or(status='candidate') AS candidate
+        FROM ingest.claims WHERE source_id=(SELECT id FROM ingest.sources WHERE slug=$1)
+       GROUP BY 1, 2`, [YT_API_SOURCE_SLUG]);
+    const existing = new Set<string>();
+    for (const row of known.rows) {
+      const key = `${row.entity_kind}\u0000${row.identity_key}`;
+      existing.add(key);
+      if (row.candidate && !emitted.has(key)) {
+        dismissed += 1;
+        if (options.dryRun !== true) await dismissEntity(row.entity_kind, row.identity_key, options.reconcile.note);
+      }
+    }
+    toIngest = records.filter((record) => !existing.has(`${record.entityKind}\u0000${normalizeEntityName(record.identity).primaryKey}`));
+  }
+
   const count = (kind: string): number => records.filter((record) => record.entityKind === kind).length;
-  const ingestion: IngestionResult = await ingestRecords(YT_API_SOURCE_SLUG, records, {
+  const ingestion: IngestionResult = await ingestRecords(YT_API_SOURCE_SLUG, toIngest, {
     confidence: "low",
     ...(options.dryRun === true ? { dryRun: true } : {}),
   });
@@ -253,6 +288,7 @@ export async function ingestYouTubeApiClaims(options: { dryRun?: boolean } = {})
     artists: count("artist"), albums: count("album"), tracks: count("track"), persons: count("person"), organizations: count("organization"),
     albumCredits: count("album_credit"), trackCredits: count("track_credit"),
     claimsInserted: ingestion.claimsInserted, claimsReused: ingestion.claimsReused,
+    ...(options.reconcile ? { reconciled: { dismissed, newRecords: toIngest.length } } : {}),
     ...(ingestion.runId === undefined ? {} : { runId: ingestion.runId }),
   };
   log.info({ ...result, dryRun: options.dryRun === true }, "claims del canal emitidos");

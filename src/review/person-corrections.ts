@@ -31,6 +31,7 @@ import { creditEquivalenceKey, type CreditType } from "../merge/relations.js";
 import { removeEntity } from "../merge/removals.js";
 import { normalizeEntityName } from "../normalization/entity-name.js";
 import { invalidateSearchIndex } from "../api/search-index.js";
+import { deriveVenezuelanFor } from "../merge/venezuelan.js";
 
 // La unificación de relaciones equivalentes vive en merge/equivalent-relations.ts
 // (la comparten la API y la corrección por plan). Se re-exporta para no romper
@@ -462,6 +463,8 @@ export async function splitPerson(
     for (const target of targets) {
       credits += await mergeEquivalentCredits(client, { column: "person_id", id: target }, reason, runId);
     }
+    // Cada destino recibió la trayectoria: puede ganar evidencia de venezolana.
+    await deriveVenezuelanFor(client, targets, runId);
   }
   return {
     op: "split", status: removal ? "applied" : "skipped",

@@ -3,7 +3,7 @@
 // determinista y que un rol desconocido caiga en `other` en vez de forzarse
 // a `musician`: inventar que alguien tocó es peor que no clasificarlo.
 import { describe, expect, it } from "vitest";
-import { creditTypeForRole, isRelationKind } from "../../src/merge/relations.js";
+import { creditTypeForRole, creditTypeForSection, isRelationKind } from "../../src/merge/relations.js";
 
 describe("clasificación de créditos", () => {
   it("mapea instrumentos y voces a musician, en inglés y español", () => {
@@ -30,6 +30,18 @@ describe("clasificación de créditos", () => {
     expect(creditTypeForRole("Fotografía")).toBe("photography");
     expect(creditTypeForRole("Diseño de portada")).toBe("artwork");
     expect(creditTypeForRole("Guest Vocals")).toBe("guest");
+  });
+
+  it("el bloque del canal manda sobre el instrumento", () => {
+    expect(creditTypeForSection("guest_musicians", "Keyboards")).toBe("guest");
+    expect(creditTypeForSection("musicians", "Programming")).toBe("musician");
+    expect(creditTypeForSection(undefined, "Keyboards")).toBe("musician");
+    expect(creditTypeForRole("Cover")).toBe("artwork");
+    expect(creditTypeForRole("Logo")).toBe("artwork");
+    expect(creditTypeForRole("Art Direction")).toBe("artwork");
+    expect(creditTypeForRole("Cover Photo")).toBe("photography");
+    expect(creditTypeForRole("lyrics written")).toBe("writer");
+    expect(creditTypeForRole("Executive Production")).toBe("producer");
   });
 
   it("no clasifica lo que no reconoce", () => {

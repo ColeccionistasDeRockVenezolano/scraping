@@ -22,7 +22,9 @@ import { undoFieldCorrections } from "../../src/merge/field-undo.js";
 import { splitPerson } from "../../src/review/person-corrections.js";
 import { mergeAlbums, previewAlbumMerge } from "../../src/merge/album-merge.js";
 import {
+  extraerAutoresAction,
   fijarTipoDeDiscoAction,
+  fijarTipoDeOrganizacionAction,
   moverDuracionAction,
   renumerarConsecutivoAction,
   retirarHuerfanaAction,
@@ -133,6 +135,10 @@ describe("acciones estructurales (PLAN_CURADURIA E6)", () => {
       const keepAlbumId = await one("INSERT INTO public.albums(artist_id, title, release_year, album_type) VALUES ($1, 'Por Fin', 1983, 'studio_album') RETURNING id", [artistId]);
       const dropAlbumId = await one("INSERT INTO public.albums(artist_id, title, release_year, album_type) VALUES ($1, 'Por Fin (Reedición)', 1983, 'studio_album') RETURNING id", [artistId]);
 
+      const guitaristId = await one("INSERT INTO public.persons(name) VALUES ('Guitarrista de prueba') RETURNING id");
+      await one("INSERT INTO public.album_credits(album_id, person_id, credit_type, role) VALUES ($1,$2,'musician','Guitarra') RETURNING id", [keepAlbumId,guitaristId]);
+      await one("INSERT INTO public.album_credits(album_id, person_id, credit_type, role) VALUES ($1,$2,'musician','Guitarra') RETURNING id", [dropAlbumId,guitaristId]);
+
       // Pista emparejada (disco 1, pista 1)
       await one("INSERT INTO public.tracks(album_id, disc_number, track_number, title) VALUES ($1, 1, 1, 'Lluvia') RETURNING id", [keepAlbumId]);
       await one("INSERT INTO public.tracks(album_id, disc_number, track_number, title) VALUES ($1, 1, 1, 'Lluvia') RETURNING id", [dropAlbumId]);
@@ -161,6 +167,8 @@ describe("acciones estructurales (PLAN_CURADURIA E6)", () => {
       expect(result.tracksMerged).toBe(1);
       expect(result.tracksMoved).toBe(1);
       expect(result.formatsMerged).toBe(1);
+      expect(result.creditsMerged).toBe(1);
+      expect(Number((await client.query("SELECT count(*) AS n FROM public.album_credits WHERE album_id=$1 AND person_id=$2", [keepAlbumId,guitaristId])).rows[0]?.n)).toBe(1);
 
       // dropAlbum ya no existe (fue fusionado)
       const dropExists = (await client.query("SELECT 1 FROM public.albums WHERE id=$1", [dropAlbumId])).rowCount;
@@ -182,6 +190,7 @@ describe("acciones estructurales (PLAN_CURADURIA E6)", () => {
       // dropAlbum restaurado tras el deshacer
       const dropRestored = (await client.query("SELECT 1 FROM public.albums WHERE id=$1", [dropAlbumId])).rowCount;
       expect(dropRestored).toBe(1);
+      expect(Number((await client.query("SELECT count(*) AS n FROM public.album_credits WHERE album_id IN ($1,$2) AND person_id=$3", [keepAlbumId,dropAlbumId,guitaristId])).rows[0]?.n)).toBe(2);
     } finally {
       client.release();
     }
@@ -209,6 +218,66 @@ describe("acciones estructurales (PLAN_CURADURIA E6)", () => {
 
     row = (await pool.query<{ album_type: string }>("SELECT album_type::text FROM public.albums WHERE id=$1", [albumId])).rows[0];
     expect(row?.album_type).toBe("other");
+  });
+
+  it("fijar_tipo_de_organizacion clasifica, se deshace y no pisa una ficha ya clasificada", async () => {
+    const orgId = await one("INSERT INTO public.organizations(name, organization_type) VALUES ('Santa Mónica Studios', 'other') RETURNING id");
+    const params = { organizationId: orgId, organizationType: "recording_studio" as const };
+    const pool = getPool();
+
+    const client = await pool.connect();
+    try {
+      const ctx = { client, mode: "preview" as const, batchMode: "individual" as const, pending: new Map(), names: {} as never };
+      const preview = await fijarTipoDeOrganizacionAction.preview({} as never, params, ctx);
+      expect(preview.before).toMatchObject({ organization_type: "other" });
+      expect(preview.after).toEqual({ organization_type: "recording_studio" });
+      expect(preview.blocked).toBeNull();
+      expect(await fijarTipoDeOrganizacionAction.preconditions({} as never, params, ctx)).toEqual([
+        { key: "exists", ok: true }, { key: "sin_clasificar", ok: true },
+      ]);
+    } finally {
+      client.release();
+    }
+
+    const { runId } = await withOperatorRun({ name: "test:fijar-tipo-org", operator: OPERATOR, note: "clasificar organización" }, async (context) => {
+      await fijarTipoDeOrganizacionAction.apply(context, {} as never, params, {} as never);
+    });
+
+    const stored = async (): Promise<string | undefined> =>
+      (await pool.query<{ organization_type: string }>("SELECT organization_type::text FROM public.organizations WHERE id=$1", [orgId])).rows[0]?.organization_type;
+    expect(await stored()).toBe("recording_studio");
+
+    // Ya clasificada: la premisa del hallazgo caducó y la acción se bloquea.
+    const after = await pool.connect();
+    try {
+      const ctx = { client: after, mode: "preview" as const, batchMode: "individual" as const, pending: new Map(), names: {} as never };
+      const blocked = await fijarTipoDeOrganizacionAction.preview({} as never, { ...params, organizationType: "record_label" }, ctx);
+      expect(blocked.blocked).toEqual({ code: "stale", message: "la organización ya está clasificada como «recording_studio»" });
+      const repeated = await fijarTipoDeOrganizacionAction.preconditions({} as never, params, ctx);
+      expect(repeated.at(-1)).toMatchObject({ key: "sin_clasificar", ok: false, code: "noop" });
+    } finally {
+      after.release();
+    }
+
+    await withOperatorRun({ name: "test:undo", operator: OPERATOR, note: "deshacer" }, async (context) => {
+      await undoFieldCorrections(context, runId);
+    });
+    expect(await stored()).toBe("other");
+  });
+
+  it("extraer_autores crea los créditos de compositor con su rol", async () => {
+    const artistId = await one("INSERT INTO public.artists(name) VALUES ('Zapato 3') RETURNING id");
+    const albumId = await one("INSERT INTO public.albums(artist_id, title) VALUES ($1, 'Bang Bang Bang') RETURNING id", [artistId]);
+    const trackId = await one("INSERT INTO public.tracks(album_id, track_number, title) VALUES ($1, 1, 'Sueño (Pedro Pérez)') RETURNING id", [albumId]);
+
+    await withOperatorRun({ name: "test:extraer-autores", operator: OPERATOR, note: "extraer autores" }, async (context) => {
+      await extraerAutoresAction.apply(context, {} as never, { trackId, cleanTitle: "Sueño", authors: ["Pedro Pérez"] }, {} as never);
+    });
+
+    const credits = (await getPool().query<{ credit_type: string; role: string; name: string }>(
+      `SELECT tc.credit_type::text, tc.role, p.name FROM public.track_credits tc JOIN public.persons p ON p.id = tc.person_id
+        WHERE tc.track_id = $1`, [trackId])).rows;
+    expect(credits).toEqual([{ credit_type: "composer", role: "Compositor", name: "Pedro Pérez" }]);
   });
 
   it("mover_duracion extrae segundos al campo de la pista y se deshace", async () => {

@@ -71,7 +71,8 @@ export const persons = pgTable("persons", {
   biography: text("biography"),
   pictureUrl: text("picture_url"),
   nationality: varchar("nationality", { length: 120 }),
-  isVenezuelan: boolean("is_venezuelan").notNull().default(false),
+  /** NULL = sin dato; false = extranjero afirmado (migración 0029). */
+  isVenezuelan: boolean("is_venezuelan"),
   birthDate: date("birth_date"),
   deathDate: date("death_date"),
   notes: text("notes"),

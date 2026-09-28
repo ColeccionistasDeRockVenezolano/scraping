@@ -6,7 +6,6 @@ import { useAsync } from "../lib/useAsync";
 import { useMovedToRedirect } from "../lib/useMovedTo";
 import { useOperator } from "../lib/OperatorContext";
 import { useToast } from "../lib/ToastContext";
-import { ErrorState } from "../components/StateViews";
 import { DetailSkeleton } from "../components/Skeletons";
 import { EntityCard, initialOf } from "../components/EntityCard";
 import { AliasEditor } from "../components/AliasEditor";
@@ -14,6 +13,7 @@ import { EntityFormModal } from "../components/EntityFormModal";
 import { ConfirmDialog } from "../components/ConfirmDialog";
 import { MergeEntityModal } from "../components/MergeEntityModal";
 import { EntityHistory } from "../components/EntityHistory";
+import { EntityLoadError } from "../components/RemovedEntityState";
 import { EntityPicker } from "../components/EntityPicker";
 import { Modal } from "../components/Modal";
 import { ARTIST_FIELDS } from "../lib/entityFields";
@@ -35,10 +35,12 @@ export function ArtistDetailPage() {
   const [merging, setMerging] = useState(false);
 
   if (loading) return <DetailSkeleton />;
-  if (error || !artist) return <ErrorState message={error ?? "Artista no encontrado."} onRetry={reload} />;
+  if (error || !artist) return <EntityLoadError message={error ?? "Artista no encontrado."} errorValue={errorValue} onRetry={reload} />;
 
   const meta = [artistTypeLabel(artist.artistType), artist.originCity ?? artist.originCountry,
-    artist.formedYear ? `${artist.formedYear}${artist.disbandedYear ? `–${artist.disbandedYear}` : "–presente"}` : null]
+    artist.formedYear ? `${artist.formedYear}${artist.disbandedYear ? `–${artist.disbandedYear}` : "–presente"}` : null,
+    // Género del artista (su trayectoria); cada disco muestra el suyo.
+    ...(artist.genres ?? []).map((genre) => genre.name)]
     .filter(Boolean);
 
   return (

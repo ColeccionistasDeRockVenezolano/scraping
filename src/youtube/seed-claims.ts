@@ -29,7 +29,7 @@ import { pathToFileURL } from "node:url";
 import { getPool } from "../db/client.js";
 import { YT_MASTER_XLSX_PATH } from "../ingest/sources.js";
 import { ingestRecords, type IngestionResult } from "../ingest/runner.js";
-import { canonicalVideoUrl, collectReleaseYears, releaseIdentity } from "./normalization.js";
+import { canonicalVideoUrl, collectReleaseYears, releaseIdentity, sheetTypeIsUnnumbered } from "./normalization.js";
 import type { Evidence, RawRecord } from "../adapters/contracts.js";
 import { moduleLogger } from "../logger/index.js";
 
@@ -55,7 +55,7 @@ export interface SeedClaimsResult {
 }
 
 export interface SeedRow {
-  upload_order: number;
+  upload_order: number | null;
   artist_name_raw: string | null;
   album_name_raw: string | null;
   album_year_raw: number | null;
@@ -91,7 +91,9 @@ export async function readSeedRows(): Promise<SeedRow[]> {
            video_id, row_number, content_kind, normalized_type
       FROM ingest.seed_uploads
      ORDER BY upload_order`);
-  return rows;
+  // Sin número solo quedan los Shorts y Others de la hoja y las filas que la
+  // hoja ya no trae; estas últimas no vuelven a emitir claims.
+  return rows.filter((row) => row.upload_order !== null || sheetTypeIsUnnumbered(row.type_raw));
 }
 
 /** Traduce las filas ya importadas a registros crudos, sin tocar la base. */

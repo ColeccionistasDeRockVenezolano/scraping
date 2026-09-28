@@ -6,9 +6,11 @@ interface EntityCardProps {
   subtitle?: string | null | undefined;
   imageUrl?: string | null | undefined;
   placeholder: string;
+  tag?: string | null | undefined;
+  tagTitle?: string | undefined;
 }
 
-export function EntityCard({ to, title, subtitle, imageUrl, placeholder }: EntityCardProps) {
+export function EntityCard({ to, title, subtitle, imageUrl, placeholder, tag, tagTitle }: EntityCardProps) {
   return (
     <Link to={to} className="card entity-card">
       <span className="entity-card__art">
@@ -17,6 +19,7 @@ export function EntityCard({ to, title, subtitle, imageUrl, placeholder }: Entit
       <span className="entity-card__body">
         <span className="entity-card__title">{title}</span>
         {subtitle ? <span className="entity-card__sub">{subtitle}</span> : null}
+        {tag ? <span className="badge badge--amber entity-card__tag" title={tagTitle}>{tag}</span> : null}
       </span>
     </Link>
   );

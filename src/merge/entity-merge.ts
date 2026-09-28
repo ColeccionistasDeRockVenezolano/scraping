@@ -98,7 +98,7 @@ export interface EntityMergeResult {
   membershipsMerged: number;
 }
 
-/** `false` en is_venezuelan es el DEFAULT del core («nadie lo dijo»); el resto vacío es NULL. */
+/** `album_type='other'` es el DEFAULT del core («nadie lo dijo»); el resto vacío es NULL. */
 function present(kind: MergeableKind, field: string, value: unknown): boolean {
   const empty = MERGE_EMPTY_VALUES[`${MERGE_TABLES[kind]}.${field}`];
   if (empty === undefined) return value !== null && value !== undefined;

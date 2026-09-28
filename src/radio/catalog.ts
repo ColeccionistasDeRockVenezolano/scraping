@@ -2,7 +2,9 @@ import { excludedFromRadio } from "../youtube/normalization.js";
 import { parseYouTubeTitle } from "../youtube/parsers.js";
 import { YouTubeDataApi, youtubePublicationStatus, type YouTubeVideoPayload } from "../youtube/api.js";
 
-export const RADIO_CATALOG_VERSION = 2;
+// v3 (PLAN_GENEROS §6): cada canción lleva los géneros CONFIRMADOS de su
+// álbum. Los campos son opcionales para quien siga leyendo un catálogo v2.
+export const RADIO_CATALOG_VERSION = 3;
 export const MIN_TRACK_SECONDS = 30;
 export const MAX_TRACK_SECONDS = 30 * 60;
 
@@ -15,6 +17,21 @@ export interface RadioTrackRow {
   start_seconds: number;
   /** Tipos de la hoja maestra para este video (todas sus filas, separados por coma). */
   sheet_types?: string | null;
+  /** Álbum del catálogo enlazado al video (enlace principal primero), si lo hay. */
+  album_id?: number | string | null;
+}
+
+export interface RadioGenre { slug: string; name: string; family: string }
+
+/** Géneros de la canción: los confirmados de su álbum, nunca los del artista. */
+export interface RadioTrackGenres {
+  primaryGenre: RadioGenre | null;
+  secondaryGenres: RadioGenre[];
+  /** Familias de todos sus géneros, para estaciones amplias (Metal incluye a sus hijos). */
+  families: string[];
+  genreOrigin: "album";
+  /** `confirmed` solo con principal confirmado; sin él la canción suena en la radio general pero no en estaciones. */
+  genreStatus: "confirmed" | "pending" | "unclassified";
 }
 
 export interface RadioTrackItem {
@@ -27,6 +44,8 @@ export interface RadioTrackItem {
   startSeconds: number;
   durationSeconds: number;
   available: true;
+  albumId?: number;
+  genres?: RadioTrackGenres;
 }
 
 function record(value: unknown): Record<string, unknown> | undefined {
@@ -83,7 +102,9 @@ export async function livePlayableVideoIds(
 }
 
 /** Convierte capítulos válidos en piezas independientes de la radio. */
-export function buildRadioTracks(rows: RadioTrackRow[], playable: ReadonlySet<string>): RadioTrackItem[] {
+export function buildRadioTracks(
+  rows: RadioTrackRow[], playable: ReadonlySet<string>, albumGenres: ReadonlyMap<number, RadioTrackGenres> = new Map(),
+): RadioTrackItem[] {
   const groups = new Map<string, RadioTrackRow[]>();
   for (const row of rows) {
     if (!playable.has(row.video_id)) continue;
@@ -120,6 +141,7 @@ export function buildRadioTracks(rows: RadioTrackRow[], playable: ReadonlySet<st
       const endSeconds = tracks[index + 1]?.start_seconds ?? head.video_duration_seconds;
       const durationSeconds = endSeconds - track.start_seconds;
       if (durationSeconds < MIN_TRACK_SECONDS || durationSeconds > MAX_TRACK_SECONDS) continue;
+      const albumId = head.album_id === null || head.album_id === undefined ? undefined : Number(head.album_id);
       items.push({
         videoId: head.video_id,
         title: track.track_title.trim(),
@@ -130,8 +152,28 @@ export function buildRadioTracks(rows: RadioTrackRow[], playable: ReadonlySet<st
         startSeconds: track.start_seconds,
         durationSeconds,
         available: true,
+        ...(albumId === undefined ? {} : { albumId, genres: albumGenres.get(albumId) ?? UNCLASSIFIED_TRACK }),
       });
     }
   }
   return items;
+}
+
+const UNCLASSIFIED_TRACK: RadioTrackGenres = Object.freeze({
+  primaryGenre: null, secondaryGenres: [], families: [], genreOrigin: "album", genreStatus: "unclassified",
+}) as RadioTrackGenres;
+
+/** Arma los géneros de radio de un álbum a partir de sus asignaciones confirmadas. */
+export function radioGenresOf(
+  confirmed: Array<{ slug: string; name: string; family: string; role: "primary" | "secondary" }>, visibleText: string | null,
+): RadioTrackGenres {
+  const primary = confirmed.find((genre) => genre.role === "primary");
+  const pick = ({ slug, name, family }: RadioGenre) => ({ slug, name, family });
+  return {
+    primaryGenre: primary ? pick(primary) : null,
+    secondaryGenres: confirmed.filter((genre) => genre !== primary).map(pick),
+    families: [...new Set(confirmed.map((genre) => genre.family))].sort(),
+    genreOrigin: "album",
+    genreStatus: primary ? "confirmed" : visibleText ? "pending" : "unclassified",
+  };
 }

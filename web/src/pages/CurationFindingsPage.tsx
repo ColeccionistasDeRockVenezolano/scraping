@@ -29,8 +29,7 @@ import {
 } from "@phosphor-icons/react";
 import {
   albumWrites, artistWrites, ApiError, curationApi, organizationWrites, personWrites, trackWrites,
-  type CurationFindingGroupFilter, type CurationFindingQuery,
-} from "../lib/api";
+  type CurationFindingGroupFilter, type CurationFindingQuery, CATALOG_CHANGE_EVENT, type CatalogChangeEvent } from "../lib/api";
 import { useAsync } from "../lib/useAsync";
 import { useToast } from "../lib/ToastContext";
 import { useMediaQuery } from "../lib/useMediaQuery";
@@ -197,11 +196,20 @@ export function CurationFindingsPage() {
   const afterWrite = useCallback(() => { reload(); void refreshSummary(); }, [reload, refreshSummary]);
 
   /**
-   * «Deshacer» a mano durante 30 s tras una corrección individual (E8.4): el
-   * lote ya está en el historial, pero volver ahí por un cambio recién hecho es
-   * más trabajo del que merece.
+   * «Deshacer» tras una corrección individual (E8.4). Con una sola corrección
+   * aplicada, su run va a la barra «Deshacer» de siempre (deshacerlo también
+   * marca la corrección como deshecha en su lote); si el lote tocó varias, el
+   * aviso deshace el lote entero.
    */
   const offerUndo = useCallback((batch: FixBatch) => {
+    const runs = batch.items.filter((item) => item.status === "applied" && item.runId !== null);
+    if (runs.length === 1) {
+      notify("success", "Corrección aplicada.");
+      window.dispatchEvent(new CustomEvent<CatalogChangeEvent>(CATALOG_CHANGE_EVENT, {
+        detail: { runId: runs[0]!.runId!, method: "POST", path: `/curation/fixes/${batch.id}` },
+      }));
+      return;
+    }
     notify("success", "Corrección aplicada.", {
       action: {
         label: "Deshacer",

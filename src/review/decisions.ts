@@ -3,6 +3,7 @@
 // `unsure` es deliberadamente un estado terminal de la sesión de cotejo, no
 // una autorización: permanece visible, activo y sin applied_at hasta que una
 // persona consiga evidencia y cambie el veredicto.
+import { withRunScope } from "../db/run-binding.js";
 import { getPool } from "../db/client.js";
 import type { ClaimToPersist } from "../claims/persistence.js";
 import type { ResolutionInput } from "../er/types.js";
@@ -478,23 +479,27 @@ export async function applyReviewDecisions(
   };
   const runNote = `[mesa ${runId}] ${note.trim()}`;
 
-  for (const item of work) {
-    if ((item.applied && !item.replayAppliedExclusion) || item.verdict === "unsure") continue;
-    if (item.error) {
-      result.failed += 1;
-      result.errors.push({ reviewId: item.reviewId, error: item.error });
-      continue;
+  // Cada decisión abre su propia transacción: el alcance del run las liga al
+  // diario de cambios (0028) para poder deshacer la aplicación entera.
+  await withRunScope(runId, async () => {
+    for (const item of work) {
+      if ((item.applied && !item.replayAppliedExclusion) || item.verdict === "unsure") continue;
+      if (item.error) {
+        result.failed += 1;
+        result.errors.push({ reviewId: item.reviewId, error: item.error });
+        continue;
+      }
+      try {
+        if (MATCH_KINDS.has(item.kind)) await applyMatch(item, runId);
+        else await applyFieldChoice(item, runId, runNote);
+        if (!item.applied) result.appliedDecisionRows += await closeReviewAndMark(item, runId, runNote);
+        result.appliedReviews += 1;
+      } catch (error) {
+        result.failed += 1;
+        if (result.errors.length < 100) result.errors.push({ reviewId: item.reviewId, error: (error as Error).message });
+      }
     }
-    try {
-      if (MATCH_KINDS.has(item.kind)) await applyMatch(item, runId);
-      else await applyFieldChoice(item, runId, runNote);
-      if (!item.applied) result.appliedDecisionRows += await closeReviewAndMark(item, runId, runNote);
-      result.appliedReviews += 1;
-    } catch (error) {
-      result.failed += 1;
-      if (result.errors.length < 100) result.errors.push({ reviewId: item.reviewId, error: (error as Error).message });
-    }
-  }
+  });
 
   await finishRun(runId, result.failed === 0 ? "ok" : "partial", {
     actionable: plan.actionable, unsure: plan.unsure, appliedReviews: result.appliedReviews,

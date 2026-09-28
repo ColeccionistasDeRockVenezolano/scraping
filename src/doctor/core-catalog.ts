@@ -71,7 +71,18 @@ export interface CatalogDiff {
   extra: string[];
 }
 
+/**
+ * Cambios al core aprobados por el propietario que hace una migración: la
+ * forma migrada se lee como la del core. Solo esa forma exacta; cualquier otra
+ * alteración de la misma columna sigue saliendo en el diff.
+ */
+export const APPROVED_CORE_CHANGES: Readonly<Record<string, string>> = {
+  // 0029 (2026-09-22): NULL = sin dato.
+  "COL persons.is_venezuelan boolean": "COL persons.is_venezuelan boolean NOT NULL DEFAULT false",
+};
+
 export function diffCoreCatalog(actual: string[], expected: string[] = CORE_CATALOG.entries): CatalogDiff {
+  actual = actual.map((entry) => APPROVED_CORE_CHANGES[entry] ?? entry);
   const actualSet = new Set(actual);
   const expectedSet = new Set(expected);
   return {

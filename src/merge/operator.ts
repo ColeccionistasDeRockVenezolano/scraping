@@ -19,6 +19,7 @@
 import { createHash, randomUUID } from "node:crypto";
 import type { PoolClient } from "pg";
 import { getPool } from "../db/client.js";
+import { getEnv } from "../config/env.js";
 import { persistClaim, type ClaimTargets, type ClaimToPersist, type RelationEndpoints } from "../claims/persistence.js";
 import { normalizeIdentity } from "../normalization/claims.js";
 import { canonicalFieldValue, mergeClaim, overrideFieldByHuman } from "./engine.js";
@@ -178,6 +179,15 @@ async function writeField(
     wanted = canonicalFieldValue(value, field, "human");
   } catch (error) {
     throw new OperatorError("invalid", (error as Error).message);
+  }
+  // Con la proyección de géneros encendida, `albums.genre` es una proyección
+  // de album_genres: el género se decide con `genres confirm`, no editando el texto.
+  if (field === "genre" && spec.kind === "album" && getEnv().GENRES_PROJECTION_ENABLED) {
+    const current = await context.client.query<{ value: string | null }>(`SELECT ${column}::text AS value FROM ${spec.table} WHERE id=$1`, [targetId]);
+    if (!storedEquals(current.rows[0]?.value ?? null, wanted)) {
+      throw new OperatorError("invalid", "albums.genre es una proyección de los géneros asignados: usa `genres confirm` para decidirlo");
+    }
+    return { field, action: "unchanged", conflictsClosed: [] };
   }
   const claim = humanClaim(context, {
     entityKind: spec.kind, identityKey, label, field, value, targets: { [ENTITY_TARGET_KEY[spec.kind]]: targetId },

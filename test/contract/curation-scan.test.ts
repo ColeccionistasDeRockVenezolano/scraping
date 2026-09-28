@@ -279,6 +279,27 @@ describe("detector de conflictos de Curaduría (persistencia y verificación de 
     expect(scans.rows).toEqual([{ trigger: "manual", status: "ok" }, { trigger: "cli", status: "skipped" }]);
   }, 60_000);
 
+  it("ordena los análisis por el id numérico aunque la API lo devuelva como texto", async () => {
+    // Regresión 2026-09-20: SELECT id::text ... ORDER BY id enlazaba el ORDER
+    // BY al alias textual del SELECT. Al existir #58, PostgreSQL devolvía #9
+    // como el más reciente porque "9" > "58" al ordenar cadenas.
+    await getPool().query(`
+      INSERT INTO ingest.curation_scans(status, scope, trigger, started_at, finished_at, counters)
+      SELECT 'ok', 'completo', 'regresion_orden_id', now(), now(), '{}'::jsonb
+        FROM generate_series(1, 12)`);
+    const expected = await one("SELECT max(id) AS id FROM ingest.curation_scans");
+
+    const summary = await app.inject({ method: "GET", url: "/curation/summary", headers });
+    expect(summary.statusCode).toBe(200);
+    expect(summary.json().lastScan.id).toBe(expected);
+
+    const listed = await app.inject({ method: "GET", url: "/curation/scans?limit=12", headers });
+    expect(listed.statusCode).toBe(200);
+    const ids = listed.json().data.map((scan: { id: number }) => scan.id);
+    expect(ids).toEqual([...ids].sort((a, b) => b - a));
+    expect(ids[0]).toBe(expected);
+  }, 60_000);
+
   it("la poda conserva los últimos análisis y los resueltos recientes; nunca toca abiertos ni ignorados (A9)", async () => {
     const count = async (sql: string) => Number((await getPool().query<{ n: string }>(sql)).rows[0]!.n);
     const [resolved] = (await getPool().query<{ id: string }>("SELECT id::text FROM ingest.curation_findings WHERE status = 'resolved' ORDER BY id LIMIT 1")).rows;

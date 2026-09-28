@@ -5,12 +5,12 @@ import type { PoolClient } from "pg";
 import { getPool } from "../db/client.js";
 import { YT_MASTER_XLSX_PATH } from "../ingest/sources.js";
 import { YouTubeDataApi, iso8601DurationToSeconds, youtubePublicationStatus, type YouTubeChannelPayload, type YouTubePlaylistItemPayload, type YouTubeVideoPayload } from "./api.js";
-import { canonicalVideoUrl, classifySheetRow, extractYouTubeVideoId } from "./normalization.js";
+import { canonicalVideoUrl, classifySheetRow, extractYouTubeVideoId, sheetTypeIsUnnumbered } from "./normalization.js";
 import { parseYouTubeDescription, parseYouTubeTitle } from "./parsers.js";
 
 type Json = Record<string, unknown>;
-export interface SeedImportResult { inserted: number; updated: number; unchanged: number; videos: number; reviews: number; }
-interface SeedRow { uploadOrder: number; artistName: string | null; albumName: string | null; albumYear: number | null; type: string | null; url: string | null; status: string | null; rowNumber: number; }
+export interface SeedImportResult { inserted: number; updated: number; unchanged: number; videos: number; reviews: number; /** Filas de la base que ya no están en la hoja: pierden su número. */ unlisted: number; }
+interface SeedRow { uploadOrder: number | null; artistName: string | null; albumName: string | null; albumYear: number | null; type: string | null; url: string | null; status: string | null; rowNumber: number; }
 
 function asText(value: ExcelJS.CellValue): string | null {
   if (value === null || value === undefined) return null;
@@ -37,6 +37,12 @@ function isEmptySeedRow(row: SeedRow): boolean {
   const blank = (value: string | null) => !value || value.trim().toUpperCase() === "EMPTY";
   return blank(row.artistName) && blank(row.albumName);
 }
+/** Clave de una fila sin URL: el mismo artista y el mismo disco, sin tildes ni mayúsculas. */
+function seedNameKey(artist: string | null, album: string | null): string | null {
+  const clean = (value: string | null) => (value ?? "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+  const a = clean(artist); const b = clean(album);
+  return a && b && a !== "empty" && b !== "empty" ? `${a}::${b}` : null;
+}
 function validYear(value: string | null): number | null { const year = Number(value); return Number.isInteger(year) && year >= 1000 && year <= 3000 ? year : null; }
 
 export async function readYouTubeMasterSheet(filePath = YT_MASTER_XLSX_PATH): Promise<SeedRow[]> {
@@ -53,10 +59,13 @@ export async function readYouTubeMasterSheet(filePath = YT_MASTER_XLSX_PATH): Pr
   const result: SeedRow[] = [];
   sheet.eachRow((row, number) => {
     if (number === 1) return;
-    const order = Number(get(row, "uploadorder"));
+    const orderText = get(row, "uploadorder");
+    const order = orderText === null ? null : Number(orderText);
     // Completely blank trailing/formatted rows are not records.
-    if (!Number.isInteger(order) && !get(row, "artistname") && !get(row, "albumname") && !sourceUrl(row.getCell(columns.get("url")!))) return;
-    if (!Number.isInteger(order) || order < 0 || order > 32767) throw new Error(`${filePath}: Upload Order inválido en fila ${number}`);
+    if (order === null && !get(row, "artistname") && !get(row, "albumname") && !sourceUrl(row.getCell(columns.get("url")!))) return;
+    // Los Shorts e Interview van sin número; cualquier otra fila lo necesita.
+    const unnumbered = order === null && sheetTypeIsUnnumbered(get(row, "typeofalbum"));
+    if (!unnumbered && (order === null || !Number.isInteger(order) || order < 0 || order > 32767)) throw new Error(`${filePath}: Upload Order inválido en fila ${number}`);
     result.push({
       uploadOrder: order, artistName: get(row, "artistname"), albumName: get(row, "albumname"),
       albumYear: validYear(get(row, "albumyear")), type: get(row, "typeofalbum"),
@@ -111,28 +120,68 @@ async function linkExistingRelease(client: PoolClient, seedUploadId: number, vid
 export async function importYouTubeMasterSheet(filePath = YT_MASTER_XLSX_PATH): Promise<SeedImportResult> {
   const rows = await readYouTubeMasterSheet(filePath);
   const orders = new Set<number>();
-  for (const row of rows) { if (orders.has(row.uploadOrder)) throw new Error(`${filePath}: Upload Order duplicado: ${row.uploadOrder}`); orders.add(row.uploadOrder); }
+  for (const row of rows) {
+    if (row.uploadOrder === null) continue;
+    if (orders.has(row.uploadOrder)) throw new Error(`${filePath}: Upload Order duplicado: ${row.uploadOrder}`);
+    orders.add(row.uploadOrder);
+  }
   const client = await getPool().connect();
-  const result: SeedImportResult = { inserted: 0, updated: 0, unchanged: 0, videos: 0, reviews: 0 };
+  const result: SeedImportResult = { inserted: 0, updated: 0, unchanged: 0, videos: 0, reviews: 0, unlisted: 0 };
   try {
     await client.query("BEGIN");
     const source = await ensureSources(client);
     const run = await client.query<{ id: string }>(`INSERT INTO ingest.scrape_runs(kind,source_id,status,params) VALUES ('seed_yt',$1,'running',$2::jsonb) RETURNING id`, [source.seed, JSON.stringify({ action: "youtube_import_sheet", file: path.basename(filePath), rows: rows.length })]);
     const runId = Number(run.rows[0]!.id);
+    // El Upload Order no identifica la fila: se corre cuando se insertan
+    // filas arriba y los Shorts y Others no lo llevan. Se casa por video y,
+    // sin URL, por artista+disco; el número se reasigna y la unicidad se
+    // comprueba al COMMIT (restricción diferida, migración 0025).
+    const existing = await client.query<{ id: string; upload_order: number | null; video_id: string | null; artist_name_raw: string | null; album_name_raw: string | null; row_hash: string }>(
+      "SELECT id,upload_order,video_id,artist_name_raw,album_name_raw,row_hash FROM ingest.seed_uploads ORDER BY id FOR UPDATE");
+    // Varias filas pueden compartir video o artista+disco (la misma URL con
+    // parámetros distintos): cada clave guarda todas y cada fila de la hoja
+    // se queda con una sin reclamar, primero la idéntica (mismo hash).
+    type SeedRow = typeof existing.rows[number];
+    const byVideo = new Map<string, SeedRow[]>();
+    const byName = new Map<string, SeedRow[]>();
+    // Una fila EMPTY no tiene video ni nombre: solo la identifica su número.
+    const byOrder = new Map<number, SeedRow>();
+    const push = (map: Map<string, SeedRow[]>, key: string, row: SeedRow) => map.set(key, [...(map.get(key) ?? []), row]);
+    for (const old of existing.rows) {
+      if (old.video_id) push(byVideo, old.video_id, old);
+      const nameKey = seedNameKey(old.artist_name_raw, old.album_name_raw);
+      if (nameKey && !old.video_id) push(byName, nameKey, old);
+      if (!nameKey && !old.video_id && old.upload_order !== null) byOrder.set(Number(old.upload_order), old);
+    }
+    const claimed = new Set<string>();
+    const pick = (candidates: SeedRow[] | undefined, hash: string): SeedRow | undefined => {
+      const free = (candidates ?? []).filter((row) => !claimed.has(row.id));
+      return free.find((row) => row.row_hash === hash) ?? free[0];
+    };
     for (const row of rows) {
       const videoId = extractYouTubeVideoId(row.url);
       const classification = classifySheetRow(row);
       const hash = seedHash(row, videoId);
-      const old = await client.query<{ id: string; row_hash: string }>("SELECT id,row_hash FROM ingest.seed_uploads WHERE upload_order=$1 FOR UPDATE", [row.uploadOrder]);
-      if (!old.rows[0]) result.inserted += 1;
-      else if (old.rows[0].row_hash === hash) result.unchanged += 1;
+      const nameKey = seedNameKey(row.artistName, row.albumName);
+      // Una fila que antes no tenía URL y ahora sí sigue siendo la misma.
+      const byOrderRow = !videoId && !nameKey && row.uploadOrder !== null ? byOrder.get(row.uploadOrder) : undefined;
+      const old = (videoId ? pick(byVideo.get(videoId), hash) : undefined)
+        ?? (nameKey ? pick(byName.get(nameKey), hash) : undefined)
+        ?? (byOrderRow && !claimed.has(byOrderRow.id) ? byOrderRow : undefined);
+      if (!old) result.inserted += 1;
+      else if (old.row_hash === hash) result.unchanged += 1;
       else result.updated += 1;
-      const saved = await client.query<{ id: string }>(`
-        INSERT INTO ingest.seed_uploads(upload_order,artist_name_raw,album_name_raw,album_year_raw,type_raw,url_raw,status_raw,video_id,row_number,row_hash,content_kind,normalized_type,classification_reason,run_id)
-        VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14)
-        ON CONFLICT(upload_order) DO UPDATE SET artist_name_raw=EXCLUDED.artist_name_raw,album_name_raw=EXCLUDED.album_name_raw,album_year_raw=EXCLUDED.album_year_raw,type_raw=EXCLUDED.type_raw,url_raw=EXCLUDED.url_raw,status_raw=EXCLUDED.status_raw,video_id=EXCLUDED.video_id,row_number=EXCLUDED.row_number,row_hash=EXCLUDED.row_hash,content_kind=EXCLUDED.content_kind,normalized_type=EXCLUDED.normalized_type,classification_reason=EXCLUDED.classification_reason,run_id=EXCLUDED.run_id,imported_at=now()
-        RETURNING id`, [row.uploadOrder,row.artistName,row.albumName,row.albumYear,row.type,row.url, row.status, videoId,row.rowNumber,hash,classification.kind,classification.normalizedType,classification.reason,runId]);
+      const values = [row.uploadOrder,row.artistName,row.albumName,row.albumYear,row.type,row.url, row.status, videoId,row.rowNumber,hash,classification.kind,classification.normalizedType,classification.reason,runId];
+      const saved = old
+        ? await client.query<{ id: string }>(`
+          UPDATE ingest.seed_uploads SET upload_order=$1,artist_name_raw=$2,album_name_raw=$3,album_year_raw=$4,type_raw=$5,url_raw=$6,status_raw=$7,video_id=$8,row_number=$9,row_hash=$10,content_kind=$11,normalized_type=$12,classification_reason=$13,run_id=$14,imported_at=now()
+           WHERE id=$15 RETURNING id`, [...values, old.id])
+        : await client.query<{ id: string }>(`
+          INSERT INTO ingest.seed_uploads(upload_order,artist_name_raw,album_name_raw,album_year_raw,type_raw,url_raw,status_raw,video_id,row_number,row_hash,content_kind,normalized_type,classification_reason,run_id)
+          VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14)
+          RETURNING id`, values);
       const seedUploadId = Number(saved.rows[0]!.id);
+      claimed.add(String(seedUploadId));
       // Una fila EMPTY no describe ningún disco: es un hueco de la hoja, no un
       // disco sin video. Por eso va a seed_incomplete antes que a missing_url.
       if (isEmptySeedRow(row)) { if (await addReview(client, "seed_incomplete", seedUploadId, { artist: row.artistName, album: row.albumName }, "Fila seed EMPTY: no crea entidades")) result.reviews += 1; continue; }
@@ -151,6 +200,10 @@ export async function importYouTubeMasterSheet(filePath = YT_MASTER_XLSX_PATH): 
         if (await addReview(client, "media_type_no_album", seedUploadId, { type: row.type }, "Contenido audiovisual conservado como video; no crea álbum", videoDbId)) result.reviews += 1;
       } else if (await addReview(client, "manual_review", seedUploadId, { type: row.type, reason: classification.reason }, classification.reason, videoDbId)) result.reviews += 1;
     }
+    // Una fila de la base que la hoja ya no trae conserva su historia, pero
+    // no su número: ese número ahora es de otra fila.
+    const unlisted = await client.query("UPDATE ingest.seed_uploads SET upload_order=NULL WHERE NOT (id::text = ANY($1::text[])) AND upload_order IS NOT NULL", [[...claimed]]);
+    result.unlisted = unlisted.rowCount ?? 0;
     await client.query("UPDATE ingest.scrape_runs SET status='ok',finished_at=now(),counters=$2::jsonb WHERE id=$1", [runId, JSON.stringify(result)]);
     await client.query("COMMIT");
     return result;
@@ -536,7 +589,7 @@ export async function knownYouTubeVideoIds(options: { pendingOnly?: boolean } = 
   return result.rows.map((row) => row.video_id);
 }
 
-export async function unmatchedYouTubeRows(): Promise<Array<{ uploadOrder: number; artist: string | null; album: string | null; videoId: string | null; contentKind: string | null }>> {
+export async function unmatchedYouTubeRows(): Promise<Array<{ uploadOrder: number | null; artist: string | null; album: string | null; videoId: string | null; contentKind: string | null }>> {
   const result = await getPool().query(`
     SELECT s.upload_order,s.artist_name_raw,s.album_name_raw,s.video_id,s.content_kind
       FROM ingest.seed_uploads s
@@ -544,7 +597,7 @@ export async function unmatchedYouTubeRows(): Promise<Array<{ uploadOrder: numbe
       LEFT JOIN media.video_albums va ON va.video_id=v.id
      WHERE s.video_id IS NULL OR s.content_kind='review' OR (s.content_kind='release' AND va.album_id IS NULL)
      ORDER BY s.upload_order`);
-  return result.rows.map((row) => ({ uploadOrder: Number(row.upload_order), artist: row.artist_name_raw, album: row.album_name_raw, videoId: row.video_id, contentKind: row.content_kind }));
+  return result.rows.map((row) => ({ uploadOrder: row.upload_order === null ? null : Number(row.upload_order), artist: row.artist_name_raw, album: row.album_name_raw, videoId: row.video_id, contentKind: row.content_kind }));
 }
 
 export { parseYouTubeTitle };

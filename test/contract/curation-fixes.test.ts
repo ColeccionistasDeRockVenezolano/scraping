@@ -500,7 +500,7 @@ describe("marco de acciones de corrección de Curaduría (E4)", () => {
     expect(refused.statusCode, refused.body).toBe(200);
     const reverse: BatchView = refused.json();
     expect(reverse).toMatchObject({ status: "failed", counts: { applied: 0, skippedStale: 1 } });
-    expect(reverse.items[0]).toMatchObject({ status: "skipped_stale", errorCode: "not_open", error: expect.stringContaining("cambió después de la corrección") });
+    expect(reverse.items[0]).toMatchObject({ status: "skipped_stale", errorCode: "not_open", error: expect.stringContaining("cambió después") });
     expect(await nameOf("organizations", org)).toBe("Estudio Faro Nuevo QA");
     expect(await batch(plan.id)).toMatchObject({ status: "done", items: [expect.objectContaining({ status: "not_undoable", errorCode: "not_open" })] });
     // Nada más que deshacer.

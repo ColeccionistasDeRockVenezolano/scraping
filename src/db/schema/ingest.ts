@@ -102,7 +102,7 @@ export const scrapeErrors = ingest.table("scrape_errors", {
 
 export const seedUploads = ingest.table("seed_uploads", {
   id: bigint("id", { mode: "number" }).primaryKey().generatedAlwaysAsIdentity(),
-  uploadOrder: smallint("upload_order").notNull(),
+  uploadOrder: smallint("upload_order"),
   artistNameRaw: varchar("artist_name_raw", { length: 200 }),
   albumNameRaw: varchar("album_name_raw", { length: 250 }),
   albumYearRaw: smallint("album_year_raw"),
@@ -119,11 +119,96 @@ export const seedUploads = ingest.table("seed_uploads", {
   importedAt: timestamp("imported_at", { withTimezone: true }).notNull().defaultNow(),
 });
 
+// Taxonomía de géneros en dos niveles (0027, PLAN_GENEROS §4). El `slug` es
+// estable: renombrar cambia `name`, nunca el slug.
 export const genres = ingest.table("genres", {
   id: bigint("id", { mode: "number" }).primaryKey().generatedAlwaysAsIdentity(),
   name: varchar("name", { length: 100 }).notNull(),
   active: boolean("active").notNull().default(true),
   notes: text("notes"),
+  slug: varchar("slug", { length: 100 }).notNull(),
+  level: varchar("level", { length: 10 }).notNull().default("genre"),
+  parentGenreId: bigint("parent_genre_id", { mode: "number" }),
+  description: text("description"),
+  replacedByGenreId: bigint("replaced_by_genre_id", { mode: "number" }),
+  createdBy: varchar("created_by", { length: 120 }),
+  createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+  updatedBy: varchar("updated_by", { length: 120 }),
+  updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),
+  changeReason: text("change_reason"),
+});
+
+export const genreAliases = ingest.table("genre_aliases", {
+  id: bigint("id", { mode: "number" }).primaryKey().generatedAlwaysAsIdentity(),
+  aliasNormalized: varchar("alias_normalized", { length: 200 }).notNull().unique(),
+  kind: varchar("kind", { length: 20 }).notNull().default("genre"),
+  genreId: bigint("genre_id", { mode: "number" }).references(() => genres.id, { onDelete: "restrict" }),
+  notes: text("notes"),
+  createdBy: varchar("created_by", { length: 120 }).notNull(),
+  createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+  updatedBy: varchar("updated_by", { length: 120 }),
+  updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),
+  changeReason: text("change_reason"),
+});
+
+export const genreTaxonomyChanges = ingest.table("genre_taxonomy_changes", {
+  id: bigint("id", { mode: "number" }).primaryKey().generatedAlwaysAsIdentity(),
+  changeKind: varchar("change_kind", { length: 40 }).notNull(),
+  targetKind: varchar("target_kind", { length: 10 }).notNull(),
+  targetKey: text("target_key").notNull(),
+  before: jsonb("before"),
+  after: jsonb("after"),
+  affected: jsonb("affected"),
+  actor: varchar("actor", { length: 120 }).notNull(),
+  reason: text("reason").notNull(),
+  runId: bigint("run_id", { mode: "number" }),
+  createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+});
+
+export const genreAssignmentLog = ingest.table("genre_assignment_log", {
+  id: bigint("id", { mode: "number" }).primaryKey().generatedAlwaysAsIdentity(),
+  entityKind: varchar("entity_kind", { length: 10 }).notNull(),
+  entityId: bigint("entity_id", { mode: "number" }).notNull(),
+  genreId: bigint("genre_id", { mode: "number" }).references(() => genres.id, { onDelete: "restrict" }),
+  action: varchar("action", { length: 30 }).notNull(),
+  before: jsonb("before"),
+  after: jsonb("after"),
+  actor: varchar("actor", { length: 120 }).notNull(),
+  reason: text("reason").notNull(),
+  runId: bigint("run_id", { mode: "number" }),
+  createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+});
+
+/** Columnas comunes de `artist_genres` y `album_genres`. */
+const genreAssignmentColumns = () => ({
+  id: bigint("id", { mode: "number" }).primaryKey().generatedAlwaysAsIdentity(),
+  genreId: bigint("genre_id", { mode: "number" }).notNull().references(() => genres.id, { onDelete: "restrict" }),
+  role: varchar("role", { length: 10 }).notNull().default("secondary"),
+  status: varchar("status", { length: 12 }).notNull(),
+  confidence: varchar("confidence", { length: 6 }).notNull().default("medium"),
+  sourceKind: varchar("source_kind", { length: 20 }).notNull(),
+  sourceId: bigint("source_id", { mode: "number" }).references(() => sources.id, { onDelete: "restrict" }),
+  claimIds: bigint("claim_ids", { mode: "number" }).array().notNull().default([]),
+  rawValue: text("raw_value"),
+  evidence: jsonb("evidence").notNull().default([]),
+  decidedBy: varchar("decided_by", { length: 120 }),
+  decidedAt: timestamp("decided_at", { withTimezone: true }).notNull().defaultNow(),
+  decisionRule: varchar("decision_rule", { length: 60 }).notNull(),
+  decisionKind: varchar("decision_kind", { length: 10 }).notNull(),
+  decisionNote: text("decision_note"),
+  supersededById: bigint("superseded_by_id", { mode: "number" }),
+  createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+  updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),
+});
+
+export const artistGenres = ingest.table("artist_genres", {
+  artistId: bigint("artist_id", { mode: "number" }).notNull().references(() => artists.id),
+  ...genreAssignmentColumns(),
+});
+
+export const albumGenres = ingest.table("album_genres", {
+  albumId: bigint("album_id", { mode: "number" }).notNull().references(() => albums.id),
+  ...genreAssignmentColumns(),
 });
 
 // --- Tablas (0003): claims / evidencia / identidad / conflictos / review / auditoría ---

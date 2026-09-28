@@ -1,8 +1,10 @@
-import type { FastifyInstance } from "fastify";
+import type { FastifyInstance, FastifyReply } from "fastify";
 import type { ZodTypeProvider } from "fastify-type-provider-zod";
 import { z } from "zod";
 import { paginationQuerySchema, toPage } from "../pagination.js";
-import { idParamSchema, aliasSchema, paginatedResponseSchema, writeErrorResponses } from "../schemas.js";
+import {
+  idParamSchema, aliasSchema, genreSlugQuerySchema, genreStatusSchema, paginatedResponseSchema, publicGenreSchema, writeErrorResponses,
+} from "../schemas.js";
 import { getAlbumDetail, listAlbums } from "../repositories/albums.js";
 import { notFoundEntity } from "../repositories/redirects.js";
 import { OPERATOR_SECURITY } from "../auth.js";
@@ -10,6 +12,7 @@ import { noteSchema } from "./catalog-writes.js";
 import { withOperatorRun } from "../../merge/operator.js";
 import { MERGE_ALBUM_FIELDS, previewAlbumMerge, mergeAlbums } from "../../merge/album-merge.js";
 import { getPool } from "../../db/client.js";
+import { layaDecidedIds } from "../../genres/public.js";
 
 const albumListItemSchema = z.object({
   id: z.number().int(),
@@ -19,6 +22,10 @@ const albumListItemSchema = z.object({
   artistId: z.number().int(),
   artistName: z.string(),
   coverUrl: z.string().nullable(),
+  primaryGenre: publicGenreSchema.nullable(),
+  genreStatus: genreStatusSchema,
+  /** Solo con sesión iniciada: el género principal lo eligió Laya. */
+  genreByLaya: z.boolean().optional(),
 });
 
 const creditSchema = z.object({
@@ -49,6 +56,11 @@ const albumDetailSchema = z.object({
   releaseYear: z.number().int().nullable(),
   albumType: z.string(),
   genre: z.string().nullable(),
+  genreStatus: genreStatusSchema.optional(),
+  primaryGenre: publicGenreSchema.nullable(),
+  genres: z.array(publicGenreSchema),
+  /** Solo con sesión iniciada: el género principal lo eligió Laya. */
+  genreByLaya: z.boolean().optional(),
   coverUrl: z.string().nullable(),
   description: z.string().nullable(),
   notes: z.string().nullable(),
@@ -63,6 +75,9 @@ const albumDetailSchema = z.object({
   tracklist: z.array(trackSchema),
   credits: z.array(creditSchema),
   creditsByType: z.record(z.string(), z.array(creditSchema)),
+  scopedCreditsByType: z.record(z.string(), z.array(creditSchema.extend({
+    tracks: z.array(z.object({ discNumber: z.number().int(), trackNumber: z.number().int() })),
+  }))),
   formats: z.array(z.object({
     id: z.number().int(), format: z.string(), quality: z.string().nullable(), archiveStatus: z.string(),
     filePath: z.string().nullable(), notes: z.string().nullable(),
@@ -76,6 +91,9 @@ const albumDetailSchema = z.object({
 const listQuerySchema = paginationQuerySchema.extend({
   q: z.string().trim().min(1).optional(),
   artistId: z.coerce.number().int().positive().optional(),
+  genre: genreSlugQuerySchema.optional(),
+  decade: z.coerce.number().int().min(1900).max(2100).multipleOf(10).optional(),
+  albumType: z.string().trim().min(1).max(40).optional(),
 });
 
 
@@ -152,6 +170,12 @@ const albumMergeResultSchema = z.object({
   runId: z.number().int(),
 });
 
+/** La etiqueta de Laya cambia con la sesión: se suma Cookie a Vary sin pisar el Origin de CORS. */
+function varyOnCookie(reply: FastifyReply): void {
+  const current = String(reply.getHeader("vary") ?? "");
+  if (!/\bcookie\b/iu.test(current)) reply.header("vary", current ? `${current}, Cookie` : "Cookie");
+}
+
 export async function registerAlbumRoutes(app: FastifyInstance): Promise<void> {
   const server = app.withTypeProvider<ZodTypeProvider>();
 
@@ -161,9 +185,14 @@ export async function registerAlbumRoutes(app: FastifyInstance): Promise<void> {
       querystring: listQuerySchema,
       response: { 200: paginatedResponseSchema(albumListItemSchema) },
     },
-  }, async (request) => {
+  }, async (request, reply) => {
     const { rows, total } = await listAlbums(request.query);
-    return toPage(rows, total, request.query);
+    varyOnCookie(reply);
+    if (!request.viewer) return toPage(rows, total, request.query);
+    // Con sesión la respuesta lleva datos de trabajo: nunca a una caché compartida.
+    reply.header("cache-control", "private, no-store");
+    const laya = await layaDecidedIds("album", rows.map((row) => row.id));
+    return toPage(rows.map((row) => ({ ...row, genreByLaya: laya.has(row.id) })), total, request.query);
   });
 
   server.get("/albums/:id", {
@@ -173,10 +202,13 @@ export async function registerAlbumRoutes(app: FastifyInstance): Promise<void> {
       params: idParamSchema,
       response: { 200: albumDetailSchema },
     },
-  }, async (request) => {
+  }, async (request, reply) => {
     const detail = await getAlbumDetail(request.params.id);
     if (!detail) throw await notFoundEntity("album", request.params.id);
-    return detail;
+    varyOnCookie(reply);
+    if (!request.viewer) return detail;
+    reply.header("cache-control", "private, no-store");
+    return { ...detail, genreByLaya: (await layaDecidedIds("album", [detail.id])).has(detail.id) };
   });
 
   server.get("/albums/:id/merge-preview", {

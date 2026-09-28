@@ -15,6 +15,7 @@ import type { Pool } from "pg";
 import { moduleLogger } from "../logger/index.js";
 import { getPool, closeDb } from "./client.js";
 import { assertSupportedNode } from "../config/runtime.js";
+import { getEnv } from "../config/env.js";
 
 const log = moduleLogger("db:migrate");
 
@@ -87,6 +88,11 @@ export async function migrateDownAll(migrationsDir = DEFAULT_MIGRATIONS_DIR): Pr
 
   const files = (await listMigrationFiles(migrationsDir, ".down.sql")).reverse();
   const reverted: string[] = [];
+  // PLAN_GENEROS §4: quitar las asignaciones con la proyección encendida
+  // dejaría `albums.genre` sin escritor. Se apaga primero; luego se revierte.
+  if (getEnv().GENRES_PROJECTION_ENABLED && files.some((file) => file.startsWith("0027_genre_taxonomy"))) {
+    throw new Error("GENRES_PROJECTION_ENABLED está encendido: apágalo antes de revertir 0027_genre_taxonomy");
+  }
 
   for (const file of files) {
     const version = file.replace(/\.down\.sql$/, "");

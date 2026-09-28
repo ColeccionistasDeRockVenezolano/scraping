@@ -12,6 +12,7 @@
 //      `merge_audit` con `version: 2`, compatible con `undoMergeRun`.
 import { createHash } from "node:crypto";
 import type { PoolClient } from "pg";
+import { getEnv } from "../config/env.js";
 import { mergeInto, MERGE_EMPTY_VALUES } from "../review/duplicates.js";
 import { nameKey } from "../curation/lexicon.js";
 import { mergeEquivalentCreditsOnParent } from "./equivalent-relations.js";
@@ -261,7 +262,11 @@ export async function previewAlbumMerge(
 
   const fieldConflicts: AlbumMergePreview["fieldConflicts"] = [];
   const fieldsFilledFromDrop: AlbumMergeField[] = [];
+  // Con la proyección encendida, los géneros se trasladan fila a fila en la
+  // fusión y `albums.genre` se recalcula: no es un campo que elegir.
+  const genresProjected = getEnv().GENRES_PROJECTION_ENABLED;
   for (const field of MERGE_ALBUM_FIELDS) {
+    if (field === "genre" && genresProjected) continue;
     const keepPresent = present(field, keep.fields[field]);
     const dropPresent = present(field, drop.fields[field]);
     if (!keepPresent && dropPresent) {
@@ -391,19 +396,20 @@ export async function mergeAlbums(context: OperatorContext, request: AlbumMergeR
     formatsMerged += 1;
   }
 
-  // 5. Créditos de disco equivalentes se unifican
-  const creditsMerged = await mergeEquivalentCreditsOnParent(
-    context.client, { kind: "album", id: keepId }, context.note, context.runId,
-  );
-
-  // 6. Enlaces de medios: video_albums y media_links
+  // 5. Enlaces de medios: video_albums y media_links
   await context.client.query("UPDATE media.video_albums SET album_id=$1 WHERE album_id=$2", [keepId, dropId]);
   await context.client.query("UPDATE media.media_links SET album_id=$1 WHERE album_id=$2", [keepId, dropId]);
 
-  // 7. Fusión final del disco vía mergeInto
+  // 6. Fusión final del disco vía mergeInto; aquí llegan los créditos de drop.
   const merged = await mergeInto(
     context.client, "album", keepId, dropId, context.note, context.runId,
     { alias: request.keepDropNameAsAlias ?? false },
+  );
+
+  // 7. Solo ahora pueden compararse los créditos de ambos discos. Hacerlo
+  // antes de mergeInto dejaba duplicados cuando cada ficha tenía el mismo rol.
+  const creditsMerged = await mergeEquivalentCreditsOnParent(
+    context.client, { kind: "album", id: keepId }, context.note, context.runId,
   );
 
 

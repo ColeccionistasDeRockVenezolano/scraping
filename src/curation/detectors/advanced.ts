@@ -167,6 +167,7 @@ export const organizationTypeVsName: Detector = {
   category: COHERENCE,
   label: "Organización sin clasificar",
   description: "La organización sigue con tipo «other» y su nombre lleva un marcador inequívoco de estudio, productora, distribuidora, management o sello.",
+  actions: { "*": ["fijar_tipo_de_organizacion"] },
   run(context) {
     return context.snapshot.organizations.flatMap((org) => {
       // Nombres con dos marcadores ("Records Studio") son ambiguos: no

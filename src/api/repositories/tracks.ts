@@ -8,6 +8,8 @@
 // contexto de álbum/artista.
 import { getPool } from "../../db/client.js";
 import type { PaginationQuery } from "../pagination.js";
+import { genreFilterSql, publicGenresFor, type PublicGenre } from "../../genres/public.js";
+import type { GenreStatus } from "../../merge/genre-projection.js";
 
 export interface TrackListItem {
   id: number;
@@ -46,6 +48,11 @@ export interface TrackDetail extends TrackListItem {
   notes: string | null;
   aliases: TrackAliasRow[];
   credits: TrackCreditRow[];
+  /** Géneros confirmados de SU ÁLBUM (PLAN_GENEROS §5): la pista nunca hereda del artista. */
+  primaryGenre: PublicGenre | null;
+  genres: PublicGenre[];
+  genreStatus: GenreStatus;
+  genreOrigin: "album";
 }
 
 const LIST_COLUMNS = `t.id, t.title, t.album_id, a.title AS album_title, a.artist_id, ar.name AS artist_name,
@@ -70,26 +77,29 @@ function toListItem(row: ListRow): TrackListItem {
 }
 
 export async function listTracks(
-  query: PaginationQuery & { q?: string | undefined; albumId?: number | undefined },
+  query: PaginationQuery & { q?: string | undefined; albumId?: number | undefined; genre?: string | undefined },
 ): Promise<{ rows: TrackListItem[]; total: number }> {
   const pattern = query.q ? `%${query.q}%` : null;
   const albumId = query.albumId ?? null;
+  const genre = query.genre ?? null;
   const [rows, count] = await Promise.all([
     getPool().query<ListRow>(
       `SELECT ${LIST_COLUMNS} ${LIST_FROM}
         WHERE ($1::text IS NULL OR t.title ILIKE $1 OR EXISTS (
                 SELECT 1 FROM ingest.track_aliases ta WHERE ta.track_id = t.id AND ta.alias ILIKE $1))
           AND ($4::bigint IS NULL OR t.album_id = $4)
+          AND ($5::text IS NULL OR ${genreFilterSql("album", "t.album_id", "$5")})
         ORDER BY a.title, t.disc_number, t.track_number, t.id
         LIMIT $2 OFFSET $3`,
-      [pattern, query.limit, query.offset, albumId],
+      [pattern, query.limit, query.offset, albumId, genre],
     ),
     getPool().query<{ count: string }>(
       `SELECT count(*)::text AS count ${LIST_FROM}
         WHERE ($1::text IS NULL OR t.title ILIKE $1 OR EXISTS (
                 SELECT 1 FROM ingest.track_aliases ta WHERE ta.track_id = t.id AND ta.alias ILIKE $1))
-          AND ($2::bigint IS NULL OR t.album_id = $2)`,
-      [pattern, albumId],
+          AND ($2::bigint IS NULL OR t.album_id = $2)
+          AND ($3::text IS NULL OR ${genreFilterSql("album", "t.album_id", "$3")})`,
+      [pattern, albumId, genre],
     ),
   ]);
   return { rows: rows.rows.map(toListItem), total: Number(count.rows[0]?.count ?? 0) };
@@ -97,6 +107,7 @@ export async function listTracks(
 
 interface DetailRow extends ListRow {
   youtube_start_seconds: number | null;
+  album_genre: string | null;
   notes: string | null;
   aliases: TrackAliasRow[];
   credits: TrackCreditRow[];
@@ -104,7 +115,7 @@ interface DetailRow extends ListRow {
 
 export async function getTrackDetail(id: number): Promise<TrackDetail | null> {
   const rows = await getPool().query<DetailRow>(
-    `SELECT ${LIST_COLUMNS}, t.youtube_start_seconds, t.notes,
+    `SELECT ${LIST_COLUMNS}, t.youtube_start_seconds, t.notes, a.genre AS album_genre,
             COALESCE((
               SELECT jsonb_agg(jsonb_build_object('id', x.id, 'alias', x.alias, 'aliasType', x.alias_type, 'isPrimary', x.is_primary) ORDER BY x.id)
                 FROM ingest.track_aliases x WHERE x.track_id = t.id
@@ -127,11 +138,15 @@ export async function getTrackDetail(id: number): Promise<TrackDetail | null> {
   );
   const row = rows.rows[0];
   if (!row) return null;
+  const albumId = Number(row.album_id);
+  const genres = (await publicGenresFor("album", [albumId], new Map([[albumId, row.album_genre]]))).get(albumId)!;
   return {
     ...toListItem(row),
     youtubeStartSeconds: row.youtube_start_seconds,
     notes: row.notes,
     aliases: row.aliases,
     credits: row.credits,
+    ...genres,
+    genreOrigin: "album",
   };
 }

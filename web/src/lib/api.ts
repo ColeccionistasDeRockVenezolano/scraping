@@ -13,6 +13,7 @@ import type {
   CurationAutofixRule, CurationAutofixRun, CurationAutofixState,
   AlbumMergePreview, AlbumMergeResult, PersonSplitPreview, PersonSplitResult,
   FindingActionsResult, FixBatch, FixBatchSummary, DistinctPair, ConflictResolveResult, ConflictResolveGroupResult,
+  AuditUndoPreview, ChangeDetail, ChangeEntityKind, ChangeSummary, ChangeUndoResult,
 } from "./types";
 
 /**
@@ -68,6 +69,8 @@ interface RequestOptions {
   method?: "GET" | "POST" | "PATCH" | "DELETE";
   query?: object;
   body?: unknown;
+  /** Cancela una lectura que ya no representa lo que la persona está viendo. */
+  signal?: AbortSignal;
   /** Esta llamada escribe: exige el token del operador. */
   authenticated?: boolean;
 }
@@ -85,6 +88,7 @@ async function request<T>(path: string, options: RequestOptions = {}): Promise<T
     method,
     headers,
     credentials: "include",
+    ...(options.signal ? { signal: options.signal } : {}),
     ...(options.body === undefined ? {} : { body: JSON.stringify(options.body) }),
   };
   const response = await fetch(buildUrl(path, options.query as Query | undefined), init);
@@ -92,14 +96,35 @@ async function request<T>(path: string, options: RequestOptions = {}): Promise<T
   const json: unknown = text ? JSON.parse(text) : undefined;
   if (!response.ok) {
     const error = (json as { error?: { code?: string; message?: string; details?: Record<string, unknown> } } | undefined)?.error;
-    if (options.authenticated && response.status === 401) {
+    // Una sesión también puede caducar mientras se hace una LECTURA protegida
+    // (Curaduría, candidatos de duplicados). Antes solo reaccionábamos a los
+    // 401 de escrituras: tras reiniciar la API, el panel conservaba el último
+    // resumen bueno y seguía diciendo «hace 4 días» aunque cada refresco
+    // recibiera 401. Si había CSRF en memoria, el navegador creía tener una
+    // sesión: se invalida para que OperatorContext quite el panel viejo y pida
+    // iniciar sesión de nuevo. No se dispara en la visita anónima inicial,
+    // donde todavía no existe CSRF.
+    if (response.status === 401 && getSessionCsrf()) {
       setSessionCsrf("");
       window.dispatchEvent(new Event("crv-session-expired"));
     }
     throw new ApiError(response.status, error?.code ?? "unknown", error?.message ?? response.statusText, error?.details);
   }
+  // Toda escritura del catálogo es un run: se anuncia para que la barra de
+  // «Deshacer» (UndoBar) lo ofrezca a la vista, sea edición, fusión,
+  // división, retiro o un deshacer (que se deshace = rehacer).
+  const runId = (json as { runId?: unknown } | undefined)?.runId;
+  if (method !== "GET" && typeof runId === "number") {
+    window.dispatchEvent(new CustomEvent<CatalogChangeEvent>(CATALOG_CHANGE_EVENT, { detail: { runId, method, path } }));
+  }
   return json as T;
 }
+
+/** Evento de ventana tras cada escritura con run (ver UndoBar). */
+export const CATALOG_CHANGE_EVENT = "crv-change";
+/** Evento de ventana tras deshacer o rehacer: las vistas abiertas recargan (useAsync). */
+export const CATALOG_DATA_CHANGED_EVENT = "crv-data-changed";
+export interface CatalogChangeEvent { runId: number; method: string; path: string }
 
 export interface AuthSession {
   user: OperatorUser;
@@ -127,8 +152,8 @@ export interface Paged { limit?: number; offset?: number; }
 
 // ---------- lectura ----------
 export const searchApi = {
-  search: (q: string, types?: string[], limit = 20) =>
-    request<SearchResults>("/search", { query: { q, limit, ...(types?.length ? { types: types.join(",") } : {}) } }),
+  search: (q: string, types?: string[], limit = 20, signal?: AbortSignal) =>
+    request<SearchResults>("/search", { query: { q, limit, ...(types?.length ? { types: types.join(",") } : {}) }, ...(signal ? { signal } : {}) }),
 };
 
 export const artistsApi = {
@@ -224,7 +249,19 @@ export const claimsApi = {
 
 export const auditApi = {
   forEntity: (entity: string, id: number, params: Paged = {}) => request<Page<AuditRow>>("/audit", { query: { entity, id, ...params } }),
+  /** Qué pasaría al deshacer esa fusión o conversión suelta (no escribe nada). */
+  undoPreview: (auditId: number) => request<AuditUndoPreview>(`/audit/${auditId}/undo`),
+  undoEntry: (auditId: number, note: string) =>
+    request<{ runId: number; auditId: number; kind: "merge" | "absorption" }>(`/audit/${auditId}/undo`, { method: "POST", body: { note }, authenticated: true }),
   run: (id: number) => request<{ id: number; kind: string; status: string; sourceId: number | null; startedAt: string; finishedAt: string | null; params: unknown; counters: unknown; errorLog: string | null }>(`/runs/${id}`),
+};
+
+export const changesApi = {
+  list: (params: Paged & { entity?: ChangeEntityKind; id?: number; journaled?: boolean } = {}) =>
+    request<Page<ChangeSummary>>("/changes", { query: params }),
+  get: (runId: number) => request<ChangeDetail>(`/changes/${runId}`),
+  undo: (runId: number, note: string) =>
+    request<ChangeUndoResult>(`/changes/${runId}/undo`, { method: "POST", body: { note }, authenticated: true }),
 };
 
 export const youtubeApi = {

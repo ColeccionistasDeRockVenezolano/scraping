@@ -41,7 +41,11 @@ VALUES (28, 'Caramelos De Cianuro', 'Las Paticas De La Abuela', 1992, 'EP',
         'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb', 1);
 
 -- --- géneros (configurables) ------------------------------------------------
-INSERT INTO ingest.genres (name) VALUES ('Rock'), ('Heavy Metal'), ('Rumba');
+-- Desde 0027 la taxonomía tiene dos niveles: una familia no tiene padre y un
+-- género cuelga de una familia; el slug es obligatorio.
+INSERT INTO ingest.genres (name, slug, level) VALUES ('Rock', 'rock', 'family'), ('Rumba', 'rumba', 'family');
+INSERT INTO ingest.genres (name, slug, level, parent_genre_id)
+SELECT 'Heavy Metal', 'heavy-metal', 'genre', id FROM ingest.genres WHERE slug = 'rock';
 
 -- --- entidades core (fixtures) ----------------------------------------------
 INSERT INTO public.artists (name, artist_type, origin_city)

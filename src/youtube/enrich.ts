@@ -11,6 +11,7 @@
 //   3. NUNCA ENLAZA NI CREA. Una coincidencia exacta artista+título abre una
 //      revisión `youtube_match` con el candidato; la selección la confirma una
 //      persona con `yt:link --album --video --confirm`. Nunca crea álbumes.
+import { withRunScope } from "../db/run-binding.js";
 import { getPool } from "../db/client.js";
 import { getEnv } from "../config/env.js";
 import { QUOTA_COST, YouTubeDataApi, type YouTubeSearchItem } from "./api.js";
@@ -137,18 +138,21 @@ export async function enrichArtistFromYouTube(
 
     const byAlbum = new Map<number, EnrichmentMatch[]>();
     for (const match of result.matches) byAlbum.set(match.albumId, [...(byAlbum.get(match.albumId) ?? []), match]);
-    for (const [albumId, candidates] of byAlbum) {
-      const inserted = await pool.query(`
-        INSERT INTO ingest.review_queue(kind, priority, album_id, payload, notes)
-        SELECT 'youtube_match', 4, $1, $2::jsonb, $3
-         WHERE NOT EXISTS (SELECT 1 FROM ingest.review_queue WHERE kind='youtube_match' AND status IN ('open','in_progress') AND payload->>'albumId'=$4)`,
-      [albumId, JSON.stringify({ albumId, artist: artist.name, album: candidates[0]!.album, candidates, via: "yt:enrich-artist", runId: result.runId }),
-        candidates.length === 1
-          ? "Búsqueda dirigida en el canal: un video coincide en artista y título; confirmar con yt:link --album --video --confirm"
-          : "Búsqueda dirigida en el canal: varios videos coinciden; requiere selección humana",
-        String(albumId)]);
-      result.reviewsCreated += inserted.rowCount ?? 0;
-    }
+    // Las revisiones que abre la búsqueda van al diario de cambios con su run.
+    await withRunScope(result.runId, async () => {
+      for (const [albumId, candidates] of byAlbum) {
+        const inserted = await pool.query(`
+          INSERT INTO ingest.review_queue(kind, priority, album_id, payload, notes)
+          SELECT 'youtube_match', 4, $1, $2::jsonb, $3
+           WHERE NOT EXISTS (SELECT 1 FROM ingest.review_queue WHERE kind='youtube_match' AND status IN ('open','in_progress') AND payload->>'albumId'=$4)`,
+        [albumId, JSON.stringify({ albumId, artist: artist.name, album: candidates[0]!.album, candidates, via: "yt:enrich-artist", runId: result.runId }),
+          candidates.length === 1
+            ? "Búsqueda dirigida en el canal: un video coincide en artista y título; confirmar con yt:link --album --video --confirm"
+            : "Búsqueda dirigida en el canal: varios videos coinciden; requiere selección humana",
+          String(albumId)]);
+        result.reviewsCreated += inserted.rowCount ?? 0;
+      }    });
+
     await pool.query("UPDATE ingest.scrape_runs SET status='ok', finished_at=now(), counters=$2::jsonb WHERE id=$1",
       [result.runId, JSON.stringify({ quotaSpent: result.quotaSpent, found: result.found, hydrated: result.hydrated, matches: result.matches.length, reviewsCreated: result.reviewsCreated })]);
     return result;
