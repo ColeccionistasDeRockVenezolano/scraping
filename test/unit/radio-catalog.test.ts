@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
-import { buildRadioTracks, livePlayableVideoIds, type RadioTrackRow } from "../../src/radio/catalog.js";
+import { buildRadioTracks, livePlayableVideoIds, radioGenresOf, RADIO_CATALOG_VERSION, type RadioTrackRow } from "../../src/radio/catalog.js";
+import { annotateRadioCatalog } from "../../src/radio/genres.js";
 import type { YouTubeApiResponse, YouTubeVideoPayload } from "../../src/youtube/api.js";
 
 const row = (overrides: Partial<RadioTrackRow> = {}): RadioTrackRow => ({
@@ -13,6 +14,30 @@ const row = (overrides: Partial<RadioTrackRow> = {}): RadioTrackRow => ({
 });
 
 describe("catalogo de radio por canciones", () => {
+  it("v3: cada canción lleva los géneros confirmados de SU álbum, no los del artista", () => {
+    expect(RADIO_CATALOG_VERSION).toBe(3);
+    const confirmed = radioGenresOf([
+      { slug: "thrash-metal", name: "Thrash metal", family: "metal", role: "primary" },
+      { slug: "heavy-metal", name: "Heavy metal", family: "metal", role: "secondary" },
+    ], "Thrash metal");
+    const rows = [
+      row({ album_id: "10" }), row({ album_id: "10", position: 1, track_title: "Segunda", start_seconds: 180 }),
+      row({ video_id: "BBBBBBBBBBB", album_id: 11 }), row({ video_id: "BBBBBBBBBBB", album_id: 11, position: 1, start_seconds: 200 }),
+      row({ video_id: "CCCCCCCCCCC" }), row({ video_id: "CCCCCCCCCCC", position: 1, start_seconds: 200 }),
+    ];
+    const items = buildRadioTracks(rows, new Set(["AAAAAAAAAAA", "BBBBBBBBBBB", "CCCCCCCCCCC"]), new Map([[10, confirmed]]));
+    expect(items[0]).toMatchObject({ albumId: 10, genres: {
+      primaryGenre: { slug: "thrash-metal", family: "metal" }, secondaryGenres: [{ slug: "heavy-metal" }],
+      families: ["metal"], genreOrigin: "album", genreStatus: "confirmed",
+    } });
+    // Álbum sin géneros confirmados: suena, pero sin clasificar (no entra en estaciones).
+    expect(items.find((item) => item.videoId === "BBBBBBBBBBB")?.genres).toMatchObject({ primaryGenre: null, genreStatus: "unclassified" });
+    // Video sin álbum enlazado: los campos opcionales no aparecen (compatible con v2).
+    expect(items.find((item) => item.videoId === "CCCCCCCCCCC")).not.toHaveProperty("genres");
+    // Texto de fuente sin principal confirmado: pendiente, sin géneros.
+    expect(radioGenresOf([], "Heavy/Thrash")).toMatchObject({ genreStatus: "pending", families: [] });
+  });
+
   it("corta cada capítulo y nunca exporta el álbum entero", () => {
     const items = buildRadioTracks([
       row(),
@@ -80,5 +105,27 @@ describe("catalogo de radio por canciones", () => {
       api as never,
     );
     expect([...result]).toEqual(["AAAAAAAAAAA", "HHHHHHHHHHH"]);
+  });
+});
+
+describe("anotación de géneros sobre el catálogo de herra", () => {
+  const confirmed = radioGenresOf([{ slug: "pop-rock", name: "Pop rock", family: "pop", role: "primary" }], "Pop rock");
+  const piece = (videoId: string, extra: Record<string, unknown> = {}) => ({
+    videoId, title: "Canción", artist: "Banda", album: "Disco", year: 1999, trackNumber: 1, startSeconds: 0, durationSeconds: 200, available: true, ...extra,
+  });
+
+  it("anota sin agregar, quitar ni reordenar piezas y sube a v3", () => {
+    const catalog = { version: 2, generatedAt: "g", availabilityCheckedAt: "a", channelId: "c",
+      items: [piece("AAAAAAAAAAA"), piece("BBBBBBBBBBB"), piece("CCCCCCCCCCC", { albumId: 99, genres: confirmed })] };
+    const { catalog: out, stats } = annotateRadioCatalog(catalog, new Map([["AAAAAAAAAAA", 5], ["BBBBBBBBBBB", 6]]),
+      new Map([[5, confirmed], [6, radioGenresOf([], null)]]), "t");
+    const items = out["items"] as Array<Record<string, unknown>>;
+    expect(out).toMatchObject({ version: RADIO_CATALOG_VERSION, generatedAt: "g", availabilityCheckedAt: "a", channelId: "c", genresAnnotatedAt: "t" });
+    expect(items.map((item) => item["videoId"])).toEqual(["AAAAAAAAAAA", "BBBBBBBBBBB", "CCCCCCCCCCC"]);
+    expect(items[0]).toMatchObject({ albumId: 5, genres: { primaryGenre: { slug: "pop-rock" }, genreOrigin: "album" } });
+    expect(items[1]).toMatchObject({ albumId: 6, genres: { genreStatus: "unclassified" } });
+    // Sin álbum enlazado hoy: se quita la anotación vieja, la pieza sigue igual.
+    expect(items[2]).toEqual(piece("CCCCCCCCCCC"));
+    expect(stats).toEqual({ items: 3, linked: 2, confirmed: 1, pending: 0, unclassified: 1, unlinked: 1 });
   });
 });

@@ -45,6 +45,9 @@ import { getPool } from "../db/client.js";
 import { finishRun } from "../ingest/runs.js";
 import { normalizeEntityName } from "../normalization/entity-name.js";
 import { invalidateSearchIndex } from "../api/search-index.js";
+import { transferGenreAssignments } from "../genres/merge.js";
+import { projectAlbumGenre } from "../merge/genre-projection.js";
+import { deriveVenezuelanFor } from "../merge/venezuelan.js";
 
 export type DuplicateKind = "artist" | "album";
 export type MergeKind = DuplicateKind | "track" | "person" | "organization" | "album_credit" | "track_credit" | "artist_membership";
@@ -440,6 +443,9 @@ export async function mergeInto(
   // Antes de reapuntar nada: la revisión que careaba las dos fichas no admite
   // el reapunte (chk de distintas) y hay que soltarle el lado que desaparece.
   const detachedReviews = await detachSelfPairs(client, kind, keepId, dropId, runId);
+  // Los géneros viajan con sus reglas de choque antes del reapunte genérico,
+  // que así ya no encuentra filas de género que mover ni descartar.
+  const genreRows = kind === "album" || kind === "artist" ? await transferGenreAssignments(client, kind, keepId, dropId) : undefined;
 
   // Evidencia de ambas filas: sus claims y los enlazados a sus auditorías. Los
   // créditos acotados por número ("tracks 01, 03") solo la tienen por auditoría.
@@ -480,7 +486,7 @@ export async function mergeInto(
     VALUES($1,$2::ingest.claim_entity_kind,$3,'merged_duplicate',$4::jsonb,$5::jsonb,$6,'high','human') RETURNING id::text`,
   [runId, kind, keepId, JSON.stringify(drop),
     JSON.stringify({ keptId: keepId, filled, moved, discarded: discardedRows.length, tracksMerged,
-      movedRefs, discardedRows, detachedReviews, primaryAliases, version: 2 }), note]);
+      movedRefs, discardedRows, detachedReviews, primaryAliases, ...(genreRows ? { genreRows } : {}), version: 2 }), note]);
   const auditId = Number(auditRow.rows[0]!.id);
   // La evidencia completa, sin el recorte a 50 de antes (P4): hay fichas con
   // más de 150 claims y las fusiones ya llegaban al tope.
@@ -502,6 +508,10 @@ export async function mergeInto(
         SET to_id=EXCLUDED.to_id, merge_audit_id=EXCLUDED.merge_audit_id, run_id=EXCLUDED.run_id`,
     [kind, dropId, keepId, auditId, runId]);
   }
+  // `albums.genre` del que queda se recalcula con sus géneros ya unidos.
+  if (kind === "album" && genreRows) await projectAlbumGenre(client, keepId);
+  // La que queda hereda bandas y créditos del duplicado: puede ganar evidencia de venezolana.
+  if (kind === "person") await deriveVenezuelanFor(client, [keepId], runId);
   return { moved, discarded: discardedRows.length, filled, tracksMerged, auditId, movedRefs, discardedRows, detachedReviews };
 }
 

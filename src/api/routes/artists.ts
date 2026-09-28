@@ -2,7 +2,9 @@ import type { FastifyInstance } from "fastify";
 import type { ZodTypeProvider } from "fastify-type-provider-zod";
 import { z } from "zod";
 import { paginationQuerySchema, toPage } from "../pagination.js";
-import { idParamSchema, aliasSchema, paginatedResponseSchema } from "../schemas.js";
+import {
+  idParamSchema, aliasSchema, genreSlugQuerySchema, genreStatusSchema, paginatedResponseSchema, publicGenreSchema,
+} from "../schemas.js";
 import { getArtistDetail, listArtists } from "../repositories/artists.js";
 import { notFoundEntity } from "../repositories/redirects.js";
 
@@ -15,6 +17,8 @@ const artistListItemSchema = z.object({
   formedYear: z.number().int().nullable(),
   disbandedYear: z.number().int().nullable(),
   pictureUrl: z.string().nullable(),
+  primaryGenre: publicGenreSchema.nullable(),
+  genreStatus: genreStatusSchema,
 });
 
 const artistDetailSchema = artistListItemSchema.extend({
@@ -29,9 +33,13 @@ const artistDetailSchema = artistListItemSchema.extend({
     albumType: z.string(), coverUrl: z.string().nullable(),
   })),
   aliases: z.array(aliasSchema),
+  genres: z.array(publicGenreSchema),
 });
 
-const listQuerySchema = paginationQuerySchema.extend({ q: z.string().trim().min(1).optional() });
+const listQuerySchema = paginationQuerySchema.extend({
+  q: z.string().trim().min(1).optional(),
+  genre: genreSlugQuerySchema.optional().describe("Género propio del artista (no el de sus discos)."),
+});
 
 export async function registerArtistRoutes(app: FastifyInstance): Promise<void> {
   const server = app.withTypeProvider<ZodTypeProvider>();

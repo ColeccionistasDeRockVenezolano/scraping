@@ -35,9 +35,9 @@ export function AlbumDetailPage() {
   const { id } = useParams();
   const albumId = Number(id);
   const navigate = useNavigate();
-  const { isAdmin } = useOperator();
+  const { isAdmin, user } = useOperator();
   const { notify } = useToast();
-  const { data: album, loading, error, errorValue, reload } = useAsync(() => albumsApi.get(albumId), [albumId]);
+  const { data: album, loading, error, errorValue, reload } = useAsync(() => albumsApi.get(albumId), [albumId, user?.name]);
   useMovedToRedirect(errorValue);
   const [editing, setEditing] = useState(false);
   const [deleting, setDeleting] = useState(false);
@@ -56,12 +56,14 @@ export function AlbumDetailPage() {
   const [labelLabel, setLabelLabel] = useState<string | null>(null);
 
   if (loading) return <DetailSkeleton />;
-  if (error || !album) return <ErrorState message={error ?? "Disco no encontrado."} onRetry={reload} />;
+  if (error || !album) return <EntityLoadError message={error ?? "Disco no encontrado."} errorValue={errorValue} onRetry={reload} />;
 
   const meta = [
     album.releaseYear ? String(album.releaseYear) : null,
     albumTypeLabel(album.albumType),
-    album.genre,
+    // Confirmados primero; un texto de fuente sin confirmar se muestra, pero marcado.
+    ...(album.genres?.length ? album.genres.map((genre) => genre.name)
+      : album.genre ? [album.genreStatus === "pending" ? `${album.genre} (sin confirmar)` : album.genre] : []),
   ].filter(Boolean);
 
   return (
@@ -79,6 +81,7 @@ export function AlbumDetailPage() {
           </p>
           <div className="entity-hero__meta">
             {meta.map((item) => <span className="badge" key={String(item)}>{item}</span>)}
+            {album.genreByLaya ? <span className="badge badge--amber" title="Género principal elegido por Laya (último recurso). Solo visible con sesión iniciada.">Género por Laya</span> : null}
             {album.label ? <Link to={`/organizaciones/${album.label.id}`} className="badge badge--violet">{album.label.name}</Link> : null}
           </div>
           {album.description ? <p className="entity-hero__desc">{album.description}</p> : null}

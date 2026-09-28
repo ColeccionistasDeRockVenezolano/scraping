@@ -33,6 +33,7 @@ describe("sesiones de colaboradores", () => {
     app.get("/review-queue", async (request) => ({ operator: request.operator }));
     app.get("/persons/:id/merge-preview", async () => ({ ok: true }));
     app.get("/artists", async () => ({ public: true }));
+    app.get("/albums", async (request) => ({ viewer: request.viewer }));
   });
 
   afterEach(async () => {
@@ -160,5 +161,14 @@ describe("sesiones de colaboradores", () => {
     // así que a lo sumo 5 evaluaron la contraseña de verdad.
     expect(limited).toBeGreaterThanOrEqual(3);
     expect(burst.filter((response) => response.statusCode === 401).length).toBe(8 - limited);
+  });
+
+  it("la lectura pública reconoce a quien tiene sesión, sin exigirla (etiqueta de Laya)", async () => {
+    expect((await app.inject({ method: "GET", url: "/albums" })).json()).toEqual({ viewer: null });
+    const login = await app.inject({ method: "POST", url: "/auth/login", payload: { username: "lucia.lee", password: PASSWORD } });
+    const cookie = (login.headers["set-cookie"] as string).split(";", 1)[0]!;
+    expect((await app.inject({ method: "GET", url: "/albums", headers: { cookie } })).json())
+      .toEqual({ viewer: { name: "Lucía Lectora", role: "reader" } });
+    expect((await app.inject({ method: "GET", url: "/albums", headers: { cookie: "crv_session=inventada" } })).json()).toEqual({ viewer: null });
   });
 });

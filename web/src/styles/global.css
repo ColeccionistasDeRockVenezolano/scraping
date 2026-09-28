@@ -338,6 +338,7 @@ main { padding: 32px 0 96px; }
 .entity-card__body { min-width: 0; }
 .entity-card__title { display: block; font-weight: 600; font-size: 14.5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .entity-card__sub { display: block; color: var(--text-faint); font-size: 12.5px; margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.entity-card__tag { margin-top: 6px; font-size: 10.5px; align-self: flex-start; }
 
 .list-toolbar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 18px; justify-content: space-between; }
 .filter-input {

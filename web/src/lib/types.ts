@@ -46,7 +46,15 @@ export interface DiscographyItem {
   albumId: number; title: string; releaseYear: number | null; albumType: string; coverUrl: string | null;
 }
 
+/** Género público (PLAN_GENEROS §5): solo lo confirmado. */
+export interface PublicGenre { id: number; slug: string; name: string; family: string; }
+export type GenreStatus = "confirmed" | "pending" | "unclassified";
+
 export interface ArtistDetail extends ArtistListItem {
+  /** Géneros propios del artista; no se heredan a sus discos. */
+  genres?: PublicGenre[];
+  primaryGenre?: PublicGenre | null;
+  genreStatus?: GenreStatus;
   biography: string | null;
   notes: string | null;
   members: ArtistMember[];
@@ -63,6 +71,12 @@ export interface AlbumListItem {
   artistId: number;
   artistName: string;
   coverUrl: string | null;
+  /** Solo con sesión iniciada: el género principal lo eligió Laya. */
+  genreByLaya?: boolean;
+}
+
+export interface ScopedCredit extends Credit {
+  tracks: Array<{ discNumber: number; trackNumber: number }>;
 }
 
 export interface Credit {
@@ -115,6 +129,12 @@ export interface AlbumDetail {
   releaseYear: number | null;
   albumType: string;
   genre: string | null;
+  /** Estado del género mostrado (PLAN_GENEROS §5). */
+  genreStatus?: GenreStatus;
+  primaryGenre?: PublicGenre | null;
+  genres?: PublicGenre[];
+  /** Solo con sesión iniciada: el género principal lo eligió Laya. */
+  genreByLaya?: boolean;
   coverUrl: string | null;
   description: string | null;
   notes: string | null;

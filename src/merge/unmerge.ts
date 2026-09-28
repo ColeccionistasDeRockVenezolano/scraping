@@ -30,6 +30,8 @@ export interface MergeAuditData {
   detachedReviews: Array<Record<string, unknown>>;
   /** Alias primarios del duplicado que la fusión dejó como secundarios (desde E4; ausente antes). */
   primaryAliases?: number[];
+  /** Géneros de ambas fichas antes de la fusión (desde la migración 0027). */
+  genreRows?: GenreMergeSnapshot;
   version: 2;
 }
 

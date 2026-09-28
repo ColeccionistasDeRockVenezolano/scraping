@@ -35,10 +35,12 @@ export function ArtistDetailPage() {
   const [merging, setMerging] = useState(false);
 
   if (loading) return <DetailSkeleton />;
-  if (error || !artist) return <ErrorState message={error ?? "Artista no encontrado."} onRetry={reload} />;
+  if (error || !artist) return <EntityLoadError message={error ?? "Artista no encontrado."} errorValue={errorValue} onRetry={reload} />;
 
   const meta = [artistTypeLabel(artist.artistType), artist.originCity ?? artist.originCountry,
-    artist.formedYear ? `${artist.formedYear}${artist.disbandedYear ? `–${artist.disbandedYear}` : "–presente"}` : null]
+    artist.formedYear ? `${artist.formedYear}${artist.disbandedYear ? `–${artist.disbandedYear}` : "–presente"}` : null,
+    // Género del artista (su trayectoria); cada disco muestra el suyo.
+    ...(artist.genres ?? []).map((genre) => genre.name)]
     .filter(Boolean);
 
   return (

@@ -1,0 +1,169 @@
+{
+  "format": "crv-genre-external-sources.v1",
+  "status": "fichas de evaluación",
+  "notes": [
+    "Una ficha NO autoriza nada: se carga con `crv genres external sheets --confirm` y deja la fuente en `evaluating`. Autorizar, habilitar la importación y habilitar el volumen son decisiones humanas separadas (`crv genres external authorize|enable|bulk-enable`).",
+    "Ninguna fuente se raspa: cada una entra por el mecanismo que declara `accessMode` y con la identificación que exige. Si una prohíbe el acceso programático, no se integra.",
+    "`precisionThreshold` es el umbral que CRV exige a la muestra revisada antes de permitir la carga masiva; la base rechaza habilitarla por debajo.",
+    "`tagPolicy` mantiene separadas las clases de etiqueta: `editorial_genre` (vocabulario curado de la fuente), `community_tag` (etiquetas de la comunidad, con votos mínimos) y `technical` (categorías propias de la plataforma, nunca aceptadas).",
+    "`tagPolicy.ignore` lista términos que la fuente usa como etiqueta de catálogo y no como género. Decisión editorial de Brian del 2026-09-24: «Latin» de Discogs marca cualquier disco cantado en español, no el género `fusion-latina`; se ignora al leer Discogs y el alias sigue vivo para las fuentes propias del catálogo, que sí lo usan con su sentido.",
+    "`tagPolicy.buckets` declara qué familias de CRV abarca un cajón de la fuente, cuando la fuente agrupa más grueso que CRV. Decisión editorial de Brian del 2026-09-24: el cajón «Rock» de Discogs cubre rock, metal y punk, que en CRV son familias hermanas. Un cajón nunca propone géneros de más: solo evita contar como desacuerdo lo que ya está cubierto."
+  ],
+  "sources": [
+    {
+      "slug": "musicbrainz",
+      "name": "MusicBrainz",
+      "homepage": "https://musicbrainz.org",
+      "apiBase": "https://musicbrainz.org/ws/2",
+      "accessMode": "api",
+      "accessNote": "Web service documentado para uso programático (/ws/2, JSON). Su política propia pide un User-Agent identificable con forma de contacto (GENRES_EXTERNAL_CONTACT) y como mucho una petición por segundo; aquí se usa por debajo de ese límite. No se rastrea el sitio web ni se elude ningún control de acceso: no hace falta clave ni sesión.",
+      "license": "CC0 1.0 (datos de la base, incluidos los géneros)",
+      "attribution": "Datos de MusicBrainz (CC0 1.0) — https://musicbrainz.org",
+      "termsUrl": "https://musicbrainz.org/doc/MusicBrainz_API/Rate_Limiting",
+      "rateLimitPerMinute": 45,
+      "levels": "both",
+      "coverageNote": "Publica géneros de artista y de grupo de lanzamiento. La cobertura de música venezolana es desigual: buena en metal y en bandas con ediciones internacionales, escasa en autoediciones y casetes de los 80. La etapa 4 la mide con la muestra antes de importar en volumen.",
+      "identifierStability": "MBID estable y permanente; al fusionar dos entidades el MBID viejo redirige al nuevo, así que una identidad guardada no se rompe.",
+      "tagPolicy": {
+        "acceptKinds": [
+          "editorial_genre"
+        ],
+        "minTagCount": 3,
+        "maxValues": 3
+      },
+      "precisionThreshold": 0.85,
+      "reason": "Ficha de evaluación inicial (etapa 4): API documentada, licencia CC0, identificadores estables y géneros en los dos niveles."
+    },
+    {
+      "slug": "discogs",
+      "name": "Discogs",
+      "homepage": "https://www.discogs.com",
+      "apiBase": "https://api.discogs.com",
+      "accessMode": "api",
+      "accessNote": "API autenticada con token personal de CRV (`DISCOGS_TOKEN` en .env, nunca en el repositorio). El token viaja en la cabecera `Authorization`, jamás en la URL, porque la caché guarda la URL de cada respuesta. Sus condiciones prohíben rastrear el sitio web: solo se usa la API, con User-Agent identificable y por debajo de su límite por minuto.",
+      "license": "Los datos del catálogo son CC0 en los volcados públicos; la API tiene condiciones propias de uso y de atribución.",
+      "attribution": "Datos de Discogs — https://www.discogs.com",
+      "termsUrl": "https://support.discogs.com/hc/en-us/articles/360009334593-API-Terms-of-Use",
+      "rateLimitPerMinute": 55,
+      "levels": "album",
+      "coverageNote": "Buena cobertura de ediciones físicas venezolanas (sellos locales, catálogos y prensados), que es justo lo que falta en otras fuentes. No publica géneros de artista: «genres» y «styles» viven en la edición maestra o en el lanzamiento, por eso su nivel es «album». Se ofrecen primero los «styles» (el detalle: Hard Rock, Ska Punk) y después los «genres» (lo ancho: Rock), que el mapeo descarta si solo repiten una familia que CRV ya precisó.",
+      "identifierStability": "El identificador de lanzamiento (release) y el de edición maestra (master) son estables; una edición puede fusionarse con otra y cambiar de master. CRV guarda cuál de los dos usó («master:123» / «release:456»).",
+      "tagPolicy": {
+        "acceptKinds": [
+          "editorial_genre"
+        ],
+        "minTagCount": 1,
+        "maxValues": 3,
+        "buckets": {
+          "Rock": [
+            "rock",
+            "metal",
+            "punk"
+          ]
+        },
+        "ignore": [
+          "Latin"
+        ]
+      },
+      "precisionThreshold": 0.85,
+      "reason": "Ficha de evaluación (etapa 4): candidata fuerte para discos. Token propio entregado el 2026-09-23 y adaptador implementado; falta autorizarla y medir su muestra."
+    },
+    {
+      "slug": "wikidata",
+      "name": "Wikidata",
+      "homepage": "https://www.wikidata.org",
+      "apiBase": "https://query.wikidata.org/sparql",
+      "accessMode": "sparql",
+      "accessNote": "Punto SPARQL público, pensado para consultas programáticas, con User-Agent identificable y consultas acotadas. No se raspa la web ni se descargan volcados completos.",
+      "license": "CC0 1.0",
+      "attribution": "Datos de Wikidata (CC0 1.0) — https://www.wikidata.org",
+      "termsUrl": "https://www.wikidata.org/wiki/Wikidata:Licensing",
+      "rateLimitPerMinute": 20,
+      "levels": "artist",
+      "coverageNote": "Tiene «género musical» (P136) para artistas conocidos y muy poco para discos venezolanos. Sirve sobre todo para corroborar la identidad (país P27/P495, miembros P527) más que para aportar géneros nuevos.",
+      "identifierStability": "El QID es estable; las fusiones dejan redirección.",
+      "tagPolicy": {
+        "acceptKinds": [
+          "editorial_genre"
+        ],
+        "minTagCount": 1,
+        "maxValues": 2
+      },
+      "precisionThreshold": 0.85,
+      "reason": "Ficha de evaluación (etapa 4): licencia e identificadores inmejorables, aporte de géneros previsiblemente bajo. Sin adaptador todavía."
+    },
+    {
+      "slug": "theaudiodb",
+      "name": "TheAudioDB",
+      "homepage": "https://www.theaudiodb.com",
+      "apiBase": "https://www.theaudiodb.com/api/v1/json/123",
+      "accessMode": "api",
+      "accessNote": "API oficial v1 con clave gratuita pública 123, solo para un piloto de evaluación. Se consulta search.php?s= por HTTPS, con User-Agent identificable y un máximo local de 20 peticiones por minuto (el límite publicado para el plan gratuito es 30). No se rastrea el sitio web.",
+      "license": "Contenido de API reutilizable bajo condiciones de TheAudioDB; las licencias de imágenes se verifican por separado.",
+      "attribution": "Datos de TheAudioDB — https://www.theaudiodb.com",
+      "termsUrl": "https://www.theaudiodb.com/docs_terms_of_use.php",
+      "rateLimitPerMinute": 20,
+      "levels": "artist",
+      "coverageNote": "Piloto de 20 artistas CRV: 1 coincidencia de identidad y ningún strGenre/strStyle. La fuente no aporta evidencia útil a esta cohorte.",
+      "identifierStability": "idArtist propio de la base; el campo MusicBrainz_Artist_ID permite corroborar identidad cuando existe.",
+      "tagPolicy": {
+        "acceptKinds": [
+          "editorial_genre"
+        ],
+        "minTagCount": 1,
+        "maxValues": 2
+      },
+      "precisionThreshold": 0.85,
+      "reason": "Evaluada en una muestra ciega de 20 artistas: 0 géneros; no autorizar importación."
+    },
+    {
+      "slug": "itunes",
+      "name": "iTunes Search API",
+      "homepage": "https://itunes.apple.com",
+      "apiBase": "https://itunes.apple.com/search",
+      "accessMode": "api",
+      "accessNote": "API de búsqueda documentada por Apple, sin clave, solo para evaluar metadatos de artista y álbum. Se limita localmente a 15 peticiones por minuto (Apple publica aproximadamente 20) y se cachean respuestas. No se almacenan ni reutilizan portadas, previews u otros materiales promocionales.",
+      "license": "Metadatos sujetos a los términos de la iTunes Search API; sin licencia abierta declarada.",
+      "attribution": "Metadatos de iTunes Search API — https://itunes.apple.com",
+      "termsUrl": "https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/iTuneSearchAPI/index.html",
+      "rateLimitPerMinute": 15,
+      "levels": "both",
+      "coverageNote": "Muestra ciega: 20/20 artistas con nombre exacto pero 9 ambiguos por homónimos; 3/20 álbumes con título y artista exactos, todos etiquetados solo como Rock frente a referencias más específicas o distintas. primaryGenreName sirve como pista, no como fuente única de clasificación CRV.",
+      "identifierStability": "artistId y collectionId de iTunes; la identidad se coteja con nombre de artista, título y fecha de lanzamiento antes de usar el género.",
+      "tagPolicy": {
+        "acceptKinds": [
+          "editorial_genre"
+        ],
+        "minTagCount": 1,
+        "maxValues": 1
+      },
+      "precisionThreshold": 0.85,
+      "reason": "Muestras de 20 artistas y 20 álbumes completadas: precisión y cobertura de álbum insuficientes; no autorizar importación de géneros."
+    },
+    {
+      "slug": "venciclopedia",
+      "name": "La Venciclopedia",
+      "homepage": "https://www.venciclopedia.org/",
+      "apiBase": "https://www.venciclopedia.org/api.php",
+      "accessMode": "api",
+      "accessNote": "API de acciones de MediaWiki disponible en api.php; la política del sitio declara Crawl-delay: 10 y se limita a 6 consultas por minuto. Solo se piden páginas de artistas/discos identificadas por título y sus campos de género; no se recorren imágenes ni se elude control de acceso. Ficha en evaluación, aún sin importador.",
+      "license": "GNU Free Documentation License (GFDL), según la portada y la página de bienvenida del sitio; verificar aviso por página antes de reutilizar contenido sustantivo.",
+      "attribution": "Datos de La Venciclopedia — https://www.venciclopedia.org/ (atribución al artículo enlazado y cumplimiento de GFDL)",
+      "termsUrl": "https://www.venciclopedia.org/index.php?title=Venciclopedia:Bienvenidos",
+      "rateLimitPerMinute": 6,
+      "levels": "both",
+      "coverageNote": "Muestra aún no medida contra el inventario CRV. Los artículos enciclopédicos pueden incluir campo Género para álbumes y artistas; cobertura, identidad y alineación con la taxonomía deben medirse antes de integración.",
+      "identifierStability": "Título de página MediaWiki y pageid; pageid es estable, títulos pueden renombrarse y deben seguirse redirects.",
+      "tagPolicy": {
+        "acceptKinds": [
+          "editorial_genre"
+        ],
+        "minTagCount": 1,
+        "maxValues": 3
+      },
+      "status": "evaluating",
+      "precisionThreshold": 0.85,
+      "reason": "Candidata para ampliar evidencia explícita de música venezolana; medir muestra ciega, identidad, licencia y cobertura antes de proponer importación."
+    }
+  ]
+}

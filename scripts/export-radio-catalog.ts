@@ -10,6 +10,7 @@ import {
   livePlayableVideoIds,
   type RadioTrackRow,
 } from "../src/radio/catalog.js";
+import { loadRadioAlbumGenres } from "../src/radio/genres.js";
 
 const CRV_CHANNEL_ID = "UCtYlrz6GyvRahlhHjocWQYQ";
 
@@ -22,7 +23,9 @@ async function main(): Promise<void> {
            v.duration_seconds AS video_duration_seconds,
            t.position, t.title AS track_title, t.start_seconds,
            (SELECT string_agg(su.type_raw, ', ') FROM ingest.seed_uploads su
-             WHERE su.video_id = v.video_id) AS sheet_types
+             WHERE su.video_id = v.video_id) AS sheet_types,
+           (SELECT va.album_id FROM media.video_albums va
+             WHERE va.video_id = v.id ORDER BY va.is_primary_link DESC, va.album_id LIMIT 1) AS album_id
       FROM media.youtube_videos v
       JOIN media.youtube_tracklist_entries t ON t.video_id = v.id
      WHERE v.channel_id = $1
@@ -34,7 +37,11 @@ async function main(): Promise<void> {
 
   const candidateIds = [...new Set(result.rows.map(row => row.video_id))];
   const playableIds = await livePlayableVideoIds(candidateIds);
-  const items = buildRadioTracks(result.rows, playableIds);
+  // Géneros CONFIRMADOS del álbum de cada canción (PLAN_GENEROS §6): nunca
+  // los del artista; lo pendiente suena en la radio general, no en estaciones.
+  const albumIds = [...new Set(result.rows.flatMap(row => (row.album_id == null ? [] : [Number(row.album_id)])))];
+  const albumGenres = await loadRadioAlbumGenres(getPool(), albumIds);
+  const items = buildRadioTracks(result.rows, playableIds, albumGenres);
   if (items.length < 2) throw new Error(`catalogo insuficiente: ${items.length} canciones elegibles`);
 
   const checkedAt = new Date().toISOString();
@@ -52,7 +59,8 @@ async function main(): Promise<void> {
   fs.renameSync(temporary, outputPath);
   const hours = items.reduce((sum, item) => sum + item.durationSeconds, 0) / 3600;
   const unavailable = candidateIds.length - playableIds.size;
-  process.stdout.write(`Radio CRV: ${items.length} canciones, ${hours.toFixed(1)} horas; ${unavailable} videos no disponibles excluidos -> ${outputPath}\n`);
+  const confirmed = items.filter(item => item.genres?.genreStatus === "confirmed").length;
+  process.stdout.write(`Radio CRV: ${items.length} canciones, ${hours.toFixed(1)} horas; ${unavailable} videos no disponibles excluidos; ${confirmed} con género confirmado -> ${outputPath}\n`);
 }
 
 main()

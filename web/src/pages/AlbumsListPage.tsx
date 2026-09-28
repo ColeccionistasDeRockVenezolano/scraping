@@ -13,8 +13,8 @@ import { ALBUM_FIELDS } from "../lib/entityFields";
 import { albumTypeLabel } from "../lib/labels";
 
 export function AlbumsListPage() {
-  const { data, loading, error, reload, q, offset, limit, setQuery, setOffset } = useEntityList(albumsApi.list);
-  const { isAdmin } = useOperator();
+  const { isAdmin, user } = useOperator();
+  const { data, loading, error, reload, q, offset, limit, setQuery, setOffset } = useEntityList(albumsApi.list, [user?.name]);
   const { notify } = useToast();
   const [creating, setCreating] = useState(false);
   const [artistId, setArtistId] = useState<number | null>(null);
@@ -47,6 +47,8 @@ export function AlbumsListPage() {
                 subtitle={[album.artistName, album.releaseYear, albumTypeLabel(album.albumType)].filter(Boolean).join(" · ")}
                 imageUrl={album.coverUrl}
                 placeholder={initialOf(album.title)}
+                tag={album.genreByLaya ? "Género por Laya" : null}
+                tagTitle="Género principal elegido por Laya (último recurso). Solo visible con sesión iniciada."
               />
             ))}
           </div>

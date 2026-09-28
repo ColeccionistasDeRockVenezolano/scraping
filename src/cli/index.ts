@@ -61,6 +61,7 @@ import { previewFixBatch } from "../curation/actions/batches.js";
 import { parseCurationFixPreviewArgs } from "./curation-fix.js";
 import { pruneCuration } from "../curation/retention.js";
 import { compactEntityResolutionDecisions } from "../er/retention.js";
+import { runGenresCommand } from "./genres.js";
 
 /** `--review=1,2,3` → ids; undefined si no vino; null si vino mal escrito. */
 function parseIdList(value: string | undefined): number[] | undefined | null {
@@ -82,10 +83,12 @@ const RENAMED_COMMANDS = new Map([
   ["review:list", "review list"],
   ["review:approve", "review approve <id>"],
   ["review:dismiss", "review dismiss <id>"],
+  ["genre:add", "genres alias-set / genres taxonomy-apply (data/genres/taxonomy.json)"],
+  ["genre:disable", "genres deactivate <slug> --replacement=<slug>"],
 ]);
 
 // Especificados en ARCHITECTURE.md §4.13 y todavía sin implementar.
-const KNOWN_FUTURE_COMMANDS = new Set(["genre:add", "genre:disable", "export:json"]);
+const KNOWN_FUTURE_COMMANDS = new Set(["export:json"]);
 
 async function main(): Promise<number> {
   // Falla ruidoso si el runtime no cumple engines.node (PHASES F0).
@@ -1052,6 +1055,9 @@ async function main(): Promise<number> {
       return 0;
     }
 
+    case "genres":
+      return runGenresCommand(args);
+
     case undefined:
     case "help":
     case "--help":
@@ -1164,6 +1170,31 @@ CRV CLI
                              VACUUM (ANALYZE) ingest.entity_resolution_decisions
   ambiguity:apply [--review=<id,...>] --note="<motivo>" --confirm
                              aplica MATCH y KEEP de reglas; las de árbitro solo nombrando su revisión
+  genres taxonomy-apply [--file=<json>] [--prune] --by=<quién> --reason="<por qué>" [--confirm]
+                             carga la taxonomía aprobada (familias, géneros, alias, no-géneros) y
+                             recalcula solo lo afectado; sin --confirm, reporte antes/después
+  genres backfill [--level=artist|album] [--by=<quién>] [--confirm]
+                             asigna géneros desde los claims de las fuentes (reglas 1–7); no toca
+                             decisiones humanas; escribe reports/genres-backfill-<modo>.{json,md}
+  genres resolve "<valor>"   cómo resuelve la taxonomía un texto de fuente
+  genres alias-set "<texto>" <slug|not_a_genre> | alias-remove "<texto>" | rename <slug> "<nombre>"
+         | deactivate <slug> --replacement=<slug>   (--by --reason obligatorios; --confirm)
+  genres confirm|reject|revert <album|artist> <id> <slug> [--role=primary|secondary] --by=<quién> --reason="<por qué>"
+                             decisión humana sobre un género, con historial y recálculo
+  genres external sources | sheets [--file=<json>]
+                             fichas de evaluación de las fuentes externas (licencia, acceso, límites,
+                             cobertura); cargarlas NO autoriza nada
+  genres external authorize|enable|disable [--purge]|block|bulk-enable|bulk-disable <slug>
+                             decisiones humanas sobre una fuente; retirar no borra lo que alguien decidió
+  genres external sample --source=<slug> --level=album|artist [--limit=N]
+                             mide la precisión contra lo que CRV ya confirmó; con --confirm la guarda
+                             en la ficha (sin alcanzar el umbral no se habilita el volumen)
+  genres external accept --source=<slug> [--level=album|artist] [--limit=N] [--ids=1,2] [--secondaries=confirm]
+                             confirma en bloque lo que la fuente propuso: principal el género más
+                             preciso de cada ficha; nunca pisa lo que decidió una persona
+  genres external import --source=<slug> --level=album|artist [--ids=1,2] [--limit=N]
+                             importa como SUGERENCIA (nunca confirma); escribe
+                             reports/genres-external-<fuente>-<nivel>-<alcance>-<modo>.{json,md}
 
 Nombres de ARCHITECTURE.md §4.13 con otra forma: ${[...RENAMED_COMMANDS.keys()].join(", ")}
 Especificados y aún sin implementar: ${[...KNOWN_FUTURE_COMMANDS].join(", ")}

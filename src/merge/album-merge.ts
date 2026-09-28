@@ -12,6 +12,7 @@
 //      `merge_audit` con `version: 2`, compatible con `undoMergeRun`.
 import { createHash } from "node:crypto";
 import type { PoolClient } from "pg";
+import { getEnv } from "../config/env.js";
 import { mergeInto, MERGE_EMPTY_VALUES } from "../review/duplicates.js";
 import { nameKey } from "../curation/lexicon.js";
 import { mergeEquivalentCreditsOnParent } from "./equivalent-relations.js";
@@ -261,7 +262,11 @@ export async function previewAlbumMerge(
 
   const fieldConflicts: AlbumMergePreview["fieldConflicts"] = [];
   const fieldsFilledFromDrop: AlbumMergeField[] = [];
+  // Con la proyección encendida, los géneros se trasladan fila a fila en la
+  // fusión y `albums.genre` se recalcula: no es un campo que elegir.
+  const genresProjected = getEnv().GENRES_PROJECTION_ENABLED;
   for (const field of MERGE_ALBUM_FIELDS) {
+    if (field === "genre" && genresProjected) continue;
     const keepPresent = present(field, keep.fields[field]);
     const dropPresent = present(field, drop.fields[field]);
     if (!keepPresent && dropPresent) {

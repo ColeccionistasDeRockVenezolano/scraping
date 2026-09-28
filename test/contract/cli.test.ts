@@ -66,9 +66,13 @@ describe("CLI (contrato de humo)", () => {
     expect(renamed.code).toBe(1);
     expect(renamed.stderr).toContain('"yt:sync" se implementó como: crv youtube sync [--pending]');
 
-    const future = await cli("genre:add");
+    const genre = await cli("genre:disable");
+    expect(genre.code).toBe(1);
+    expect(genre.stderr).toContain('"genre:disable" se implementó como: crv genres deactivate');
+
+    const future = await cli("export:json");
     expect(future.code).toBe(1);
-    expect(future.stderr).toContain('"genre:add" está especificado en ARCHITECTURE.md §4');
+    expect(future.stderr).toContain('"export:json" está especificado en ARCHITECTURE.md §4');
   });
 
   it("doctor corre contra la base migrada y no reporta fallos", async () => {

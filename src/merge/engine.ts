@@ -599,6 +599,18 @@ async function mergeEntityClaim(
     await attachClaim(client, persisted.id, spec, targetId, ambiguous ? "candidate" : "accepted");
     return { action: ambiguous ? "candidate" : "applied", ...targetResult(spec, targetId, { resolutionDecisionId: decisionId }), detail: ambiguous ? "alias ambiguo enviado a revision" : "alias conservado sin cambiar nombre canonico" };
   }
+  // Con la proyección de géneros encendida, un claim `genre` alimenta
+  // album_genres/artist_genres y `albums.genre` lo escribe solo la proyección
+  // (PLAN_GENEROS §4). Apagada, el motor vuelve a escribir la columna.
+  if (claim.field === "genre" && (spec.kind === "album" || spec.kind === "artist") && getEnv().GENRES_PROJECTION_ENABLED) {
+    await attachClaim(client, persisted.id, spec, targetId, "accepted");
+    const synced = await syncEntityGenres(client, spec.kind, targetId, { runId: claim.runId });
+    const changed = synced.write.inserted + synced.write.updated + synced.write.deleted + synced.write.humanEvidence > 0 || synced.projection?.changed === true;
+    return {
+      action: changed ? "applied" : "unchanged", ...targetResult(spec, targetId, { resolutionDecisionId: decisionId }),
+      detail: changed ? "géneros recalculados desde la evidencia; albums.genre por proyección" : "géneros sin cambios",
+    };
+  }
   const column = spec.fields[claim.field];
   if (!column) {
     if (CONTEXT_FIELDS.has(claim.field)) {

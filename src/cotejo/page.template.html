@@ -323,6 +323,59 @@ input[type=range]{width:100%;accent-color:var(--signal)}
   font:500 12.5px "IBM Plex Sans",sans-serif;padding:5px 10px;cursor:pointer}
 @media(prefers-reduced-motion:no-preference){.bar,.shape-bar i{transition:width .18s ease}}
 @media(max-width:560px){.toast{left:18px;right:18px;bottom:14px;transform:none;justify-content:space-between}}
+/* ---- Géneros (PLAN_GENEROS etapa 3) ---- */
+.gen-session{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;border:1px solid var(--line);border-radius:3px;background:var(--panel);padding:12px 14px;margin-bottom:16px;font-size:13px}
+.gen-session form{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.gen-session input,.gen-form input,.gen-form select,.gen-form textarea,.gen-tools select,.gen-tools input{background:var(--sunk);border:1px solid var(--line);border-radius:3px;color:var(--text);font:500 13px "IBM Plex Sans",sans-serif;padding:8px 10px}
+.gen-session input:focus-visible,.gen-form :is(input,select,textarea):focus-visible,.gen-tools :is(input,select):focus-visible{outline:2px solid var(--signal);outline-offset:1px}
+.gen-session .who-is{color:var(--muted)}
+.gen-session .who-is b{color:var(--text)}
+.gen-role{font:500 11.5px "IBM Plex Mono",monospace;padding:2px 6px;border-radius:2px;background:var(--sunk);color:var(--muted)}
+.gen-role.admin{background:var(--for-soft);color:var(--for)}
+.gen-cats{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+.gen-cats button{appearance:none;border:1px solid var(--line);background:var(--panel);color:var(--muted);font:500 12.5px "IBM Plex Sans",sans-serif;padding:6px 10px;border-radius:3px;cursor:pointer}
+.gen-cats button[aria-pressed="true"]{border-color:var(--signal);color:var(--text);box-shadow:inset 0 -2px 0 var(--signal)}
+.gen-cats button:focus-visible{outline:2px solid var(--signal);outline-offset:2px}
+.gen-cats .n{font-family:"IBM Plex Mono",monospace;margin-left:4px;color:var(--faint)}
+.gen-tools{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:14px}
+.gen-chip{display:inline-flex;gap:5px;align-items:center;font-size:12px;border:1px solid var(--line);border-radius:3px;padding:2px 7px;margin:0 5px 5px 0;background:var(--panel)}
+.gen-chip.primary{border-color:var(--for);background:var(--for-soft);color:var(--for)}
+.gen-chip.suggested{border-style:dashed}
+.gen-chip.rejected,.gen-chip.superseded{color:var(--faint);text-decoration:line-through}
+.gen-chip small{color:var(--faint);font-family:"IBM Plex Mono",monospace;font-size:10.5px}
+.gen-head{display:grid;grid-template-columns:96px 1fr;gap:14px;align-items:start;margin-bottom:12px}
+.gen-head img,.gen-head .nocover{width:96px;height:96px;object-fit:cover;border-radius:3px;border:1px solid var(--line);background:var(--sunk)}
+.gen-head h3{font-size:20px;line-height:1.2}
+.gen-status{display:inline-block;font:500 11.5px "IBM Plex Mono",monospace;padding:2px 6px;border-radius:2px;margin-top:6px}
+.gen-status.confirmed{background:var(--for-soft);color:var(--for)}
+.gen-status.pending{background:var(--signal-dim);color:var(--text)}
+.gen-status.unclassified{background:var(--sunk);color:var(--muted)}
+.gen-block{border-top:1px solid var(--line-soft);padding-top:12px;margin-top:14px}
+.gen-source{border:1px solid var(--line-soft);border-radius:3px;padding:10px 12px;margin-bottom:8px;font-size:13px}
+.gen-source .raw{font:500 14px "IBM Plex Mono",monospace;color:var(--text)}
+.gen-frag{display:inline-flex;align-items:center;gap:6px;margin:6px 8px 0 0;font-size:12.5px}
+.gen-frag.unresolved{color:var(--against)}
+.gen-mini{appearance:none;border:1px solid var(--line);background:var(--panel);color:var(--text);font:500 12px "IBM Plex Sans",sans-serif;padding:4px 8px;border-radius:3px;cursor:pointer}
+.gen-mini:hover{border-color:var(--signal)}
+.gen-mini:focus-visible{outline:2px solid var(--signal);outline-offset:2px}
+.gen-mini[disabled],.gen-form button[disabled]{opacity:.45;cursor:not-allowed}
+.gen-artist{border-left:3px solid var(--info);background:var(--info-soft);padding:10px 12px;border-radius:0 3px 3px 0;font-size:13px}
+.gen-artist .tag{font:600 11px "IBM Plex Mono",monospace;letter-spacing:.04em;text-transform:uppercase;color:var(--info)}
+.gen-form{display:grid;gap:8px;margin-top:8px}
+.gen-form .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.gen-form textarea{width:100%;min-height:54px;resize:vertical;font-weight:400}
+.gen-locked{font-size:12.5px;color:var(--muted);background:var(--sunk);border-radius:3px;padding:8px 10px}
+.gen-history{font-size:12.5px;margin:0;padding:0;list-style:none}
+.gen-history li{border-bottom:1px solid var(--line-soft);padding:6px 0}
+.gen-history time{color:var(--faint);font-family:"IBM Plex Mono",monospace;font-size:11.5px}
+.gen-tracks{columns:2 220px;font-size:12.5px;color:var(--muted);margin:6px 0 0;padding-left:22px}
+.gen-sub{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-top:26px}
+.gen-panel{border:1px solid var(--line);border-radius:3px;background:var(--panel);padding:14px 16px;min-width:0}
+.gen-panel .tbl-wrap{max-height:320px;overflow:auto}
+.gen-members{max-height:260px;overflow:auto;font-size:12.5px;border:1px solid var(--line-soft);border-radius:3px;padding:6px 10px;margin:8px 0}
+.gen-guide{font-size:13.5px;max-width:78ch}
+.gen-guide li{margin-bottom:6px}
+@media(max-width:560px){.gen-head{grid-template-columns:64px 1fr}.gen-head img,.gen-head .nocover{width:64px;height:64px}}
 </style>
 </head>
 <body>
@@ -350,6 +403,7 @@ input[type=range]{width:100%;accent-color:var(--signal)}
   <button class="bench" role="tab" id="t-car" aria-selected="false" aria-controls="p-car">Comparar fichas <span class="n" id="n-car">—</span></button>
   <button class="bench" role="tab" id="t-con" aria-selected="false" aria-controls="p-con">Elegir datos <span class="n" id="n-con">—</span></button>
   <button class="bench" role="tab" id="t-col" aria-selected="false" aria-controls="p-col">Revisar lotes <span class="n" id="n-col">—</span></button>
+  <button class="bench" role="tab" id="t-gen" aria-selected="false" aria-controls="p-gen">Géneros <span class="n" id="n-gen">—</span></button>
 </div></nav>
 
 <main class="wrap">
@@ -454,6 +508,53 @@ input[type=range]{width:100%;accent-color:var(--signal)}
       <span id="sample-note" class="lead" style="margin:0"></span>
     </div>
     <div id="sample" class="sample-list" hidden></div>
+  </section>
+  <section id="p-gen" role="tabpanel" aria-labelledby="t-gen" hidden>
+    <h2>Géneros de artistas y discos</h2>
+    <p class="lead">Resuelve géneros desconocidos, compuestos o en desacuerdo. Cada decisión queda firmada con tu cuenta de herra, se puede revertir y se publica en el catálogo y en la Radio CRV con la anotación de cada madrugada. «Sin clasificar» es una respuesta válida: nunca inventes un género.</p>
+    <div class="gen-session" id="gen-session" aria-live="polite">Comprobando la sesión…</div>
+
+    <div class="gen-cats" id="gen-cats" role="group" aria-label="Tipo de caso"></div>
+    <div class="gen-tools">
+      <select id="gen-kind" aria-label="Nivel"><option value="">Discos y artistas</option><option value="album">Solo discos</option><option value="artist">Solo artistas</option></select>
+      <input id="gen-search" type="search" placeholder="Buscar disco o artista" aria-label="Buscar disco o artista">
+      <span class="lead" id="gen-count" style="margin:0"></span>
+    </div>
+    <div class="split">
+      <div>
+        <div class="roll" id="gen-roll" aria-label="Casos de género"></div>
+        <div style="display:flex;gap:6px;margin-top:8px"><button class="act ghost" type="button" id="gen-prev">Anteriores</button><button class="act ghost" type="button" id="gen-next">Siguientes</button></div>
+      </div>
+      <div class="stage" id="gen-stage"><p style="color:var(--faint)">Elige un caso de la lista.</p></div>
+    </div>
+
+    <div class="gen-sub">
+      <div class="gen-panel">
+        <h3 class="cap">Revisar por lote</h3>
+        <p class="lead" style="margin-top:0">Solo casos que comparten exactamente el mismo texto de fuente. Ves la lista completa antes de aplicar; si cambia mientras la miras, el servidor la rechaza.</p>
+        <div id="gen-batches"><p style="color:var(--faint)">Cargando…</p></div>
+      </div>
+      <div class="gen-panel">
+        <h3 class="cap">Métricas editoriales</h3>
+        <div id="gen-metrics"><p style="color:var(--faint)">Cargando…</p></div>
+      </div>
+    </div>
+
+    <details class="technical" style="margin-top:22px">
+      <summary>Guía editorial breve</summary>
+      <div class="technical-content gen-guide">
+        <ol>
+          <li><b>Disco y artista se clasifican por separado.</b> El género del artista describe su trayectoria; el del disco, ese disco. En la ficha de un disco verás el del artista en un recuadro azul «del artista, no del disco»: es contexto, nunca evidencia.</li>
+          <li><b>Las pistas heredan del disco, nunca del artista.</b> Confirmar el género de un artista no cambia ningún disco ni ninguna pista.</li>
+          <li><b>Sin evidencia, sin género.</b> Si ninguna fuente lo dice y no puedes citarlo, marca «Evidencia insuficiente». «Sin clasificar» no es un error.</li>
+          <li><b>Familia si la fuente solo dice la familia.</b> «Rock» se queda en la familia Rock; no bajes a «Hard rock» sin evidencia.</li>
+          <li><b>Guion = un solo término; barra o coma = lista.</b> «Pop-Rock» es un género; «Heavy/Thrash Metal» son dos, y el primero suele ser el principal.</li>
+          <li><b>Formato, sello, lugar o adjetivos no son géneros.</b> «EP», «Independent», «Venezolano», «Underground»: rechaza la propuesta o márcala como insuficiente.</li>
+          <li><b>Término nuevo.</b> Si el término existe y falta en el vocabulario, solicítalo con su familia; la taxonomía se aprueba por separado. No lo sustituyas por uno parecido.</li>
+          <li><b>Revertir no es borrar.</b> Revertir devuelve la ficha a lo que digan hoy las fuentes, y el historial conserva quién decidió qué y por qué.</li>
+        </ol>
+      </div>
+    </details>
   </section>
 </main>
 
@@ -1322,8 +1423,382 @@ document.getElementById("group-source").addEventListener("change",loadGroups);
 document.getElementById("group-kind").addEventListener("change",loadGroups);
 
 /* ---- pestañas ---- */
-var tabs=[["t-pre","p-pre"],["t-car","p-car"],["t-con","p-con"],["t-col","p-col"]];
-var tabHashes={"t-pre":"resumen","t-car":"comparar","t-con":"datos","t-col":"lotes"};
+/* ---- géneros (PLAN_GENEROS etapa 3) ----
+   Leer es libre; decidir exige sesión de administrador de herra. El servidor
+   firma con la sesión (herra:<usuario>) e ignora cualquier nombre que llegue
+   del navegador, así que aquí no se envía el nombre del campo de arriba. */
+var G={user:null,csrf:"",category:"",kind:"",q:"",offset:0,limit:50,page:null,current:null,detail:null,vocab:[],loaded:false,busy:false,batch:null};
+var GEN_CATS=[["","Todo"],["unclassified","Sin clasificar"],["genre_unknown","Desconocido"],["compound","Compuesto"],["disagreement","Desacuerdo entre fuentes"],["contradiction","Contradice una decisión"],["new_term","Término nuevo"],["external_suggestion","Sugerencia externa"],["ai_suggestion","Sugerencia de IA"]];
+var GEN_CAT_LABEL={};GEN_CATS.forEach(function(c){GEN_CAT_LABEL[c[0]]=c[1];});
+var GEN_STATUS={confirmed:"Confirmado",pending:"Pendiente · se ve el texto de la fuente",unclassified:"Sin clasificar"};
+var GEN_ACTION={confirm_primary:"confirmó como principal",confirm_secondary:"confirmó como secundario",add_secondary:"agregó como secundario",reject:"rechazó",revert:"revirtió su decisión sobre",demote_primary:"pasó a secundario",insufficient_evidence:"marcó evidencia insuficiente",reopen:"reabrió la ficha",request_new_term:"pidió un término nuevo"};
+var GEN_ROW_STATUS={confirmed:"confirmado",suggested:"sugerido",rejected:"rechazado",superseded:"reemplazado por un hijo"};
+var GEN_CASE={unknown_value:"Valor desconocido",compound_value:"Valor compuesto sin aprobar",source_disagreement:"Desacuerdo entre fuentes",primary_disagreement:"Las fuentes no coinciden en el principal",human_contradiction:"Evidencia nueva contradice una decisión",new_term:"Término nuevo propuesto",external_ambiguous_identity:"Identidad dudosa en una fuente externa",external_disagreement:"Una fuente externa discrepa de lo confirmado",external_unmapped_term:"Término externo sin equivalencia",external_too_generic:"La fuente externa solo aporta etiquetas generales"};
+function genIsAdmin(){return !!(G.user&&G.user.role==="admin");}
+function genDate(value){try{return new Date(value).toLocaleString("es",{dateStyle:"medium",timeStyle:"short"});}catch(e){return String(value||"");}}
+function genPost(path,body){
+  return api(path,{method:"POST",headers:{"Content-Type":"application/json","X-CRV-CSRF":G.csrf},body:JSON.stringify(body)})
+    .catch(function(error){genSession();throw error;});
+}
+
+/* sesión */
+function genPaintSession(){
+  var host=document.getElementById("gen-session");host.textContent="";
+  if(G.user){
+    var who=el("span","who-is");who.appendChild(document.createTextNode("Sesión de herra: "));
+    who.appendChild(el("b",null,G.user.name));who.appendChild(document.createTextNode(" · "+G.user.username));
+    host.appendChild(who);
+    host.appendChild(el("span","gen-role"+(genIsAdmin()?" admin":""),genIsAdmin()?"administrador · puede decidir":"solo lectura · no puede decidir"));
+    var out=el("button","act ghost","Cerrar sesión");out.type="button";
+    out.addEventListener("click",function(){
+      fetch(ROOT+"api/auth/logout",{method:"POST"}).finally(function(){G.user=null;G.csrf="";genPaintSession();genRenderStage();genRenderBatch();});
+    });
+    host.appendChild(out);
+    return;
+  }
+  host.appendChild(el("span","who-is","Para decidir géneros inicia sesión con tu cuenta de administrador de herra (la misma de CRV Catálogo). Sin sesión puedes mirar."));
+  var form=el("form");
+  var user=el("input");user.type="text";user.autocomplete="username";user.placeholder="Usuario";user.setAttribute("aria-label","Usuario de herra");user.required=true;
+  var pass=el("input");pass.type="password";pass.autocomplete="current-password";pass.placeholder="Contraseña";pass.setAttribute("aria-label","Contraseña de herra");pass.required=true;
+  var go=el("button","act","Entrar");go.type="submit";
+  form.appendChild(user);form.appendChild(pass);form.appendChild(go);
+  form.addEventListener("submit",function(event){
+    event.preventDefault();go.disabled=true;
+    api("api/auth/login",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({username:user.value,password:pass.value})})
+      .then(function(r){G.user=r.user;G.csrf=r.csrf;genPaintSession();genRenderStage();genRenderBatch();say("Sesión iniciada como "+r.user.name+".");})
+      .catch(function(error){say(error.message);pass.value="";pass.focus();})
+      .finally(function(){go.disabled=false;});
+  });
+  host.appendChild(form);
+}
+function genSession(){
+  return fetch(ROOT+"api/auth/me",{cache:"no-store"}).then(function(r){return r.ok?r.json():null;})
+    .then(function(b){G.user=b?b.user:null;G.csrf=b?b.csrf:"";genPaintSession();})
+    .catch(function(){G.user=null;G.csrf="";genPaintSession();});
+}
+
+/* cola */
+function genRenderCats(){
+  var host=document.getElementById("gen-cats");host.textContent="";
+  var page=G.page;if(!page)return;
+  GEN_CATS.forEach(function(c){
+    var n=c[0]?page.counts[c[0]]:(page.byKind.album+page.byKind.artist);
+    if(c[0]&&!n&&G.category!==c[0])return;
+    var b=el("button",null,c[1]);b.type="button";b.setAttribute("aria-pressed",G.category===c[0]?"true":"false");
+    b.appendChild(el("span","n",num(n||0)));
+    b.addEventListener("click",function(){G.category=c[0];G.offset=0;G.current=null;genLoadQueue();});
+    host.appendChild(b);
+  });
+}
+function genRenderRoll(){
+  var roll=document.getElementById("gen-roll");roll.textContent="";
+  var page=G.page;if(!page)return;
+  document.getElementById("gen-count").textContent=page.total?("Mostrando "+num(G.offset+1)+"–"+num(G.offset+page.items.length)+" de "+num(page.total)+" · primero lo que suena en la radio"):"Nada pendiente con este filtro.";
+  document.getElementById("gen-prev").disabled=G.offset===0;
+  document.getElementById("gen-next").disabled=G.offset+page.items.length>=page.total;
+  page.items.forEach(function(item){
+    var b=el("button");b.type="button";
+    if(G.current&&G.current.kind===item.kind&&G.current.entityId===item.entityId)b.setAttribute("aria-current","true");
+    var head=el("div","rn");head.appendChild(el("span",null,item.title));head.appendChild(el("span","rs",item.year?String(item.year):""));
+    b.appendChild(head);
+    b.appendChild(el("div","rk",(item.kind==="album"?"Disco":"Artista")+(item.artistName?" · "+item.artistName:"")+(item.radio?" · en la radio":"")));
+    b.appendChild(el("div","rk",item.categories.map(function(c){return GEN_CAT_LABEL[c]||c;}).join(" · ")+(item.rawValues.length?" · «"+item.rawValues[0]+"»":"")));
+    b.addEventListener("click",function(){genOpen(item.kind,item.entityId);});
+    roll.appendChild(b);
+  });
+}
+function genLoadQueue(){
+  var qs="api/genres/queue?limit="+G.limit+"&offset="+G.offset+(G.category?"&category="+G.category:"")+(G.kind?"&kind="+G.kind:"")+(G.q?"&q="+encodeURIComponent(G.q):"");
+  return api(qs).then(function(page){
+    G.page=page;genRenderCats();genRenderRoll();
+    var open=0;Object.keys(page.counts).forEach(function(k){if(k!=="unclassified")open+=page.counts[k];});
+    document.getElementById("n-gen").textContent=num(open);
+    if(!G.current&&page.items[0])genOpen(page.items[0].kind,page.items[0].entityId);
+  }).catch(function(error){document.getElementById("gen-roll").textContent="No se pudo leer la cola: "+error.message;});
+}
+
+/* ficha */
+function genOpen(kind,entityId){
+  G.current={kind:kind,entityId:entityId};genRenderRoll();
+  var stage=document.getElementById("gen-stage");stage.textContent="";stage.appendChild(el("p",null,"Cargando la ficha…"));
+  return api("api/genres/entity/"+kind+"/"+entityId).then(function(detail){
+    if(!G.current||G.current.kind!==kind||G.current.entityId!==entityId)return;
+    G.detail=detail;genRenderStage();
+  }).catch(function(error){stage.textContent="No se pudo leer la ficha: "+error.message;});
+}
+function genChip(genre,cls,small){
+  var chip=el("span","gen-chip"+(cls?" "+cls:""));chip.appendChild(el("span",null,genre?genre.name:"(género retirado)"));
+  if(genre&&genre.level==="family")chip.appendChild(el("small",null,"familia"));
+  if(small)chip.appendChild(el("small",null,small));
+  return chip;
+}
+function genOpenCaseIds(){return (G.detail?G.detail.cases:[]).filter(function(c){return c.status==="open"||c.status==="in_progress";}).map(function(c){return c.id;});}
+function genReason(){var box=document.getElementById("gen-reason");return box?box.value.trim():"";}
+function genDecide(body,label){
+  if(!genIsAdmin()){say("Inicia sesión con una cuenta administradora de herra para decidir.");return;}
+  var reason=genReason();
+  if(reason.length<3){say("Escribe el motivo de la decisión: queda en el historial.");var box=document.getElementById("gen-reason");if(box)box.focus();return;}
+  if(G.busy)return;G.busy=true;
+  body.kind=G.current.kind;body.entityId=G.current.entityId;body.reason=reason;
+  if(!body.reviewIds)body.reviewIds=genOpenCaseIds();
+  genPost("api/genres/decisions",body).then(function(r){
+    var shown=r.albumGenre&&r.albumGenre.changed?" · el catálogo ahora muestra «"+(r.albumGenre.after||"sin género")+"»":"";
+    say(label+" · run "+r.runId+shown);
+    return Promise.all([genOpen(G.current.kind,G.current.entityId),genLoadQueue(),genLoadMetrics()]);
+  }).catch(function(error){say(error.message);}).finally(function(){G.busy=false;});
+}
+function genMini(label,handler,title){
+  var b=el("button","gen-mini",label);b.type="button";b.disabled=!genIsAdmin();
+  if(title)b.title=title;b.addEventListener("click",handler);return b;
+}
+function genGenreSelect(id){
+  var select=el("select");select.id=id;select.setAttribute("aria-label","Género del vocabulario");
+  var none=el("option",null,"Elige un género del vocabulario…");none.value="";select.appendChild(none);
+  G.vocab.forEach(function(family){
+    if(!family.active)return;
+    var group=el("optgroup");group.label=family.name;
+    var own=el("option",null,family.name+" (familia)");own.value=family.slug;group.appendChild(own);
+    family.children.forEach(function(child){if(!child.active)return;var o=el("option",null,child.name);o.value=child.slug;group.appendChild(o);});
+    select.appendChild(group);
+  });
+  return select;
+}
+function genRenderStage(){
+  var stage=document.getElementById("gen-stage");var d=G.detail;
+  if(!d||!G.current){return;}
+  stage.textContent="";
+  var e=d.entity,isAlbum=e.kind==="album";
+  var head=el("div","gen-head");
+  if(e.coverUrl){var img=el("img");img.src=e.coverUrl;img.alt="";img.loading="lazy";img.referrerPolicy="no-referrer";head.appendChild(img);}else head.appendChild(el("div","nocover"));
+  var info=el("div");
+  info.appendChild(el("div","eyebrow",isAlbum?"Disco":"Artista"));
+  info.appendChild(el("h3",null,e.title));
+  info.appendChild(el("div","lead",isAlbum?[e.artist.name,e.year,e.albumType].filter(Boolean).join(" · "):(e.albums.length+" discos en el catálogo")));
+  info.appendChild(el("span","gen-status "+d.status,GEN_STATUS[d.status]||d.status));
+  if(isAlbum&&e.visibleGenre)info.appendChild(el("div","lead","El catálogo muestra hoy: «"+e.visibleGenre+"»"));
+  head.appendChild(info);stage.appendChild(head);
+
+  /* clasificación actual */
+  var cur=el("div","gen-block");cur.appendChild(el("h3","cap","Clasificación actual"));
+  if(!d.assignments.length)cur.appendChild(el("p","lead","Sin clasificar. Es un estado válido: no hace falta inventar una respuesta."));
+  d.assignments.forEach(function(a){
+    var line=el("div");
+    var cls=a.status==="confirmed"&&a.role==="primary"?"primary":a.status;
+    line.appendChild(genChip(a.genre,cls,(a.role==="primary"?"principal":"secundario")+" · "+(GEN_ROW_STATUS[a.status]||a.status)+" · "+(a.decisionKind==="human"?"decisión de "+a.decidedBy:"regla "+a.decisionRule)));
+    if(a.genre&&(a.status==="confirmed"||a.status==="suggested")){
+      if(!(a.role==="primary"&&a.status==="confirmed"))line.appendChild(genMini("Hacer principal",function(){genDecide({action:"confirm_primary",genreSlug:a.genre.slug},"Principal confirmado");}));
+      line.appendChild(genMini("Rechazar",function(){genDecide({action:"reject",genreSlug:a.genre.slug,closeCases:false},"Género rechazado");}));
+    }
+    if(a.genre&&a.decisionKind==="human")line.appendChild(genMini("Revertir",function(){genDecide({action:"revert",genreSlug:a.genre.slug,closeCases:false},"Decisión revertida: vuelve a lo que dicen las fuentes");},"Devuelve la ficha al resultado de las reglas con los datos de hoy"));
+    cur.appendChild(line);
+  });
+  stage.appendChild(cur);
+
+  /* fuentes */
+  var src=el("div","gen-block");src.appendChild(el("h3","cap","Lo que dicen las fuentes · nivel "+(isAlbum?"disco":"artista")));
+  if(!d.sources.length)src.appendChild(el("p","lead","Ninguna fuente publica un género para "+(isAlbum?"este disco":"este artista")+"."));
+  d.sources.forEach(function(s){
+    var box=el("div","gen-source");
+    box.appendChild(el("span","source-tag",s.sourceName+" · "+(s.level==="album"?"disco":"artista")+(s.status!=="accepted"?" · "+s.status:"")));
+    box.appendChild(el("div","raw",s.rawValue));
+    var frags=el("div");
+    s.resolution.items.forEach(function(item,index){
+      var f=el("span","gen-frag"+(item.kind==="unresolved"?" unresolved":""));
+      if(item.kind==="genre"){
+        f.appendChild(el("span",null,"«"+item.fragment+"» → "));f.appendChild(genChip(item.genre,index===0?"primary":"",index===0?"propuesta principal":null));
+        f.appendChild(genMini("Confirmar principal",function(){genDecide({action:"confirm_primary",genreSlug:item.genre.slug},"Principal confirmado");}));
+        f.appendChild(genMini("Secundario",function(){genDecide({action:"add_secondary",genreSlug:item.genre.slug,closeCases:false},"Secundario agregado");}));
+      }else{
+        f.appendChild(el("span",null,"«"+item.fragment+"» sin resolver"));
+        f.appendChild(genMini("Pedir término",function(){var n=document.getElementById("gen-term");if(n){n.value=item.fragment;n.focus();}var r=document.getElementById("gen-term-raw");if(r)r.value=s.rawValue;}));
+      }
+      frags.appendChild(f);
+    });
+    if(s.resolution.notAGenre.length)frags.appendChild(el("div","lead","No son géneros: "+s.resolution.notAGenre.join(", ")));
+    box.appendChild(frags);
+    (s.evidence||[]).forEach(function(ev){
+      var item=el("div","evidence-item");
+      if(ev.url)item.appendChild(externalLink(ev.url,ev.url));
+      if(ev.excerpt)item.appendChild(el("p",null,"«"+ev.excerpt+"»"));
+      if(ev.capturedAt)item.appendChild(el("small",null,"capturado "+genDate(ev.capturedAt)));
+      box.appendChild(item);
+    });
+    src.appendChild(box);
+  });
+  stage.appendChild(src);
+
+  /* casos */
+  var open=d.cases.filter(function(c){return c.status==="open"||c.status==="in_progress";});
+  if(open.length){
+    var cases=el("div","gen-block");cases.appendChild(el("h3","cap","Por qué está en la cola"));
+    open.forEach(function(c){
+      var p=c.payload||{};var text=GEN_CASE[p.genreCase]||p.genreCase;
+      if(p.rawValue)text+=" · «"+p.rawValue+"»";if(p.unresolved&&p.unresolved.length)text+=" · sin resolver: "+p.unresolved.join(", ");
+      if(p.proposedName)text+=" · «"+p.proposedName+"»"+(p.requestedBy?" (pedido por "+p.requestedBy+")":"");
+      if(p.units)text+=" · "+p.units.map(function(u){return u.sourceSlug+": «"+u.rawValue+"»";}).join(" / ");
+      cases.appendChild(el("p","lead",text));
+    });
+    stage.appendChild(cases);
+  }
+
+  /* identidad en fuentes externas (etapa 4): contexto para juzgar una sugerencia */
+  var ext=d.externalIdentities||[];
+  if(ext.length){
+    var extBox=el("div","gen-block");extBox.appendChild(el("h3","cap","Identidad en fuentes externas"));
+    ext.forEach(function(x){
+      var line=el("p","lead",x.sourceSlug+": "+(x.status==="matched"?"identificada":"dudosa")+" · "+x.externalName+" ("+x.score+")");
+      if(x.externalUrl){var a=el("a",null," ver ficha");a.href=x.externalUrl;a.target="_blank";a.rel="noopener noreferrer";line.appendChild(a);}
+      extBox.appendChild(line);
+      var why=(x.signals||[]).map(function(sig){return sig.name+(sig.detail?" ("+sig.detail+")":"");}).join(" + ");
+      if(why)extBox.appendChild(el("div","lead","señales: "+why));
+      if(x.attribution)extBox.appendChild(el("div","lead",x.attribution));
+    });
+    extBox.appendChild(el("p","lead","Una sugerencia externa no clasifica nada por sí sola: decide con la evidencia de CRV."));
+    stage.appendChild(extBox);
+  }
+
+  /* contexto del artista */
+  if(isAlbum&&d.artistContext){
+    var ctx=el("div","gen-block");var box2=el("div","gen-artist");
+    box2.appendChild(el("div","tag","Del artista, no del disco"));
+    box2.appendChild(el("p",null,"Solo contexto sobre "+e.artist.name+". No cuenta como evidencia para este disco ni se hereda."));
+    if(d.artistContext.genres.length)d.artistContext.genres.forEach(function(g){box2.appendChild(genChip(g.genre,"",g.role==="primary"?"principal del artista":"del artista"));});
+    else box2.appendChild(el("span",null,"El artista no tiene géneros confirmados. "));
+    d.artistContext.sourceValues.forEach(function(v){box2.appendChild(el("div","lead",v.sourceSlug+": «"+v.rawValue+"»"));});
+    ctx.appendChild(box2);stage.appendChild(ctx);
+  }
+
+  /* pistas o discos */
+  var list=el("details","gen-block");
+  if(isAlbum){
+    list.appendChild(el("summary",null,"Pistas del disco ("+e.tracks.length+")"));
+    var ol=el("ol","gen-tracks");e.tracks.forEach(function(t){ol.appendChild(el("li",null,t.title));});list.appendChild(ol);
+  }else{
+    list.appendChild(el("summary",null,"Discos del artista ("+e.albums.length+")"));
+    var ul=el("ul","gen-tracks");e.albums.forEach(function(a){ul.appendChild(el("li",null,a.title+(a.year?" ("+a.year+")":"")+(a.genre?" · "+a.genre:"")));});list.appendChild(ul);
+  }
+  stage.appendChild(list);
+
+  /* decidir */
+  var act=el("div","gen-block");act.appendChild(el("h3","cap","Decidir"));
+  if(!genIsAdmin())act.appendChild(el("p","gen-locked",G.user?"Tu cuenta de herra es de solo lectura: solo los administradores deciden géneros.":"Inicia sesión arriba con tu cuenta de administrador de herra para decidir."));
+  var form=el("div","gen-form");
+  var reason=el("textarea");reason.id="gen-reason";reason.placeholder="Motivo (obligatorio): qué evidencia miraste y por qué decides esto";reason.setAttribute("aria-label","Motivo de la decisión");reason.disabled=!genIsAdmin();
+  form.appendChild(reason);
+  var row=el("div","row");var select=genGenreSelect("gen-pick");select.disabled=!genIsAdmin();row.appendChild(select);
+  row.appendChild(genMini("Elegir como principal",function(){var v=select.value;if(!v){say("Elige un género del vocabulario.");select.focus();return;}genDecide({action:"confirm_primary",genreSlug:v},"Principal confirmado");}));
+  row.appendChild(genMini("Agregar secundario",function(){var v=select.value;if(!v){say("Elige un género del vocabulario.");select.focus();return;}genDecide({action:"add_secondary",genreSlug:v,closeCases:false},"Secundario agregado");}));
+  form.appendChild(row);
+  var row2=el("div","row");
+  var term=el("input");term.id="gen-term";term.placeholder="Término nuevo, p. ej. Rock progresivo";term.setAttribute("aria-label","Nombre del término nuevo");term.disabled=!genIsAdmin();
+  var raw=el("input");raw.type="hidden";raw.id="gen-term-raw";
+  var fam=el("select");fam.setAttribute("aria-label","Familia del término nuevo");fam.disabled=!genIsAdmin();
+  var fo=el("option",null,"Familia (opcional)");fo.value="";fam.appendChild(fo);
+  G.vocab.forEach(function(f){var o=el("option",null,f.name);o.value=f.slug;fam.appendChild(o);});
+  row2.appendChild(term);row2.appendChild(fam);row2.appendChild(raw);
+  row2.appendChild(genMini("Solicitar término nuevo",function(){if(!term.value.trim()){say("Escribe el término que falta.");term.focus();return;}genDecide({action:"request_new_term",proposedName:term.value.trim(),familySlug:fam.value||undefined,rawValue:raw.value||undefined},"Término solicitado");}));
+  form.appendChild(row2);
+  var row3=el("div","row");
+  var lastSetAside=(d.history.filter(function(h){return h.action==="insufficient_evidence"||h.action==="reopen";})[0]||{}).action;
+  if(lastSetAside==="insufficient_evidence")row3.appendChild(genMini("Reabrir la ficha",function(){genDecide({action:"reopen",closeCases:false},"Ficha reabierta");}));
+  else row3.appendChild(genMini("Evidencia insuficiente",function(){genDecide({action:"insufficient_evidence"},"Marcada con evidencia insuficiente: queda sin clasificar");},"No hay con qué clasificar: la ficha queda sin clasificar y sale de la cola"));
+  form.appendChild(row3);
+  act.appendChild(form);stage.appendChild(act);
+
+  /* historial */
+  var hist=el("div","gen-block");hist.appendChild(el("h3","cap","Historial de decisiones"));
+  if(!d.history.length)hist.appendChild(el("p","lead","Nadie ha decidido todavía sobre esta ficha: lo que ves sale de las reglas."));
+  var hl=el("ul","gen-history");
+  d.history.forEach(function(h){
+    var li=el("li");li.appendChild(el("time",null,genDate(h.at)));
+    li.appendChild(document.createTextNode(" · "+h.actor+" "+(GEN_ACTION[h.action]||h.action)+(h.genre?" «"+h.genre.name+"»":"")+(h.runId?" (run "+h.runId+")":"")));
+    li.appendChild(el("div","lead",h.reason));hl.appendChild(li);
+  });
+  hist.appendChild(hl);stage.appendChild(hist);
+}
+
+/* lotes */
+function genRenderBatch(){
+  var host=document.getElementById("gen-batches");if(!host||!G.batchGroups)return;
+  host.textContent="";
+  if(!G.batchGroups.length){host.appendChild(el("p","lead","No hay textos de fuente repetidos en varios casos abiertos."));return;}
+  var list=el("div");
+  G.batchGroups.slice(0,30).forEach(function(g){
+    var b=el("button","gen-mini","«"+g.rawValue+"» · "+g.entities+(g.kind==="album"?" discos":" artistas"));b.type="button";b.style.margin="0 6px 6px 0";
+    b.addEventListener("click",function(){
+      api("api/genres/batches/members?kind="+g.kind+"&rawValue="+encodeURIComponent(g.rawValue)).then(function(r){G.batch=r;genRenderBatch();}).catch(function(error){say(error.message);});
+    });
+    list.appendChild(b);
+  });
+  host.appendChild(list);
+  if(!G.batch)return;
+  var box=el("div","gen-block");
+  box.appendChild(el("p",null,"Texto de fuente «"+G.batch.rawValue+"» · "+G.batch.members.length+" casos. Revisa la lista completa:"));
+  var members=el("ol","gen-members");
+  G.batch.members.forEach(function(m){var li=el("li",null,m.title+(m.artistName?" — "+m.artistName:"")+" · "+m.sourceSlug);members.appendChild(li);});
+  box.appendChild(members);
+  var form=el("div","gen-form");
+  var action=el("select");action.setAttribute("aria-label","Acción del lote");
+  [["confirm_primary","Confirmar como principal"],["add_secondary","Agregar como secundario"],["insufficient_evidence","Evidencia insuficiente"]].forEach(function(o){var op=el("option",null,o[1]);op.value=o[0];action.appendChild(op);});
+  var pick=genGenreSelect("gen-batch-pick");
+  var reason=el("textarea");reason.placeholder="Motivo del lote (obligatorio)";reason.setAttribute("aria-label","Motivo del lote");
+  var go=el("button","act","Aplicar a los "+G.batch.members.length+" casos");go.type="button";
+  [action,pick,reason,go].forEach(function(n){n.disabled=!genIsAdmin();});
+  var row=el("div","row");row.appendChild(action);row.appendChild(pick);form.appendChild(row);form.appendChild(reason);form.appendChild(go);
+  if(!genIsAdmin())form.appendChild(el("p","gen-locked","Solo un administrador de herra con sesión puede aplicar un lote."));
+  go.addEventListener("click",function(){
+    if(action.value!=="insufficient_evidence"&&!pick.value){say("Elige el género del lote.");pick.focus();return;}
+    if(reason.value.trim().length<3){say("Escribe el motivo del lote.");reason.focus();return;}
+    go.disabled=true;
+    genPost("api/genres/batch",{action:action.value,kind:G.batch.kind,rawValue:G.batch.rawValue,genreSlug:pick.value||undefined,
+      expectedReviewIds:G.batch.members.map(function(m){return m.reviewId;}),reason:reason.value.trim()})
+      .then(function(r){say("Lote aplicado a "+r.applied+" fichas · run "+r.runId);G.batch=null;return Promise.all([genLoadBatches(),genLoadQueue(),genLoadMetrics()]);})
+      .catch(function(error){say(error.message);go.disabled=false;});
+  });
+  box.appendChild(form);host.appendChild(box);
+}
+function genLoadBatches(){return api("api/genres/batches").then(function(r){G.batchGroups=r.groups;genRenderBatch();}).catch(function(){});}
+
+/* métricas */
+function genTable(headers,rows){
+  var wrap=el("div","tbl-wrap"),t=el("table"),thead=el("thead"),tr=el("tr");
+  headers.forEach(function(h,i){tr.appendChild(el("th",i?"num":null,h));});thead.appendChild(tr);t.appendChild(thead);
+  var tb=el("tbody");rows.forEach(function(r){var row=el("tr");r.forEach(function(v,i){row.appendChild(el("td",i?"num":null,typeof v==="number"?num(v):String(v==null?"—":v)));});tb.appendChild(row);});
+  t.appendChild(tb);wrap.appendChild(t);return wrap;
+}
+function genLoadMetrics(){
+  return api("api/genres/metrics").then(function(m){
+    var host=document.getElementById("gen-metrics");host.textContent="";
+    host.appendChild(genTable(["Nivel","Total","Principal confirmado","Pendiente","Sin clasificar"],m.levels.map(function(l){return [l.level==="album"?"Discos":"Artistas",l.total,l.confirmed,l.pending,l.unclassified];})));
+    var pending=m.pendingCases.reduce(function(s,c){return s+c.n;},0);
+    host.appendChild(el("p","lead","Casos abiertos: "+num(pending)+" · rechazados por una persona: "+num(m.rejected)+" · resueltos por personas: "+num(m.resolution.resolved)+" · tiempo medio de resolución: "+(m.resolution.resolved?m.resolution.avg_hours+" h":"—")));
+    var more=el("details");more.appendChild(el("summary",null,"Cobertura por fuente, década y familia"));
+    more.appendChild(el("h3","cap","Por fuente"));
+    more.appendChild(genTable(["Fuente","Nivel","Fichas con género","Con principal"],m.bySource.map(function(s){return [s.source,s.level==="album"?"disco":"artista",s.entities,s.confirmed];})));
+    more.appendChild(el("h3","cap","Discos por década"));
+    more.appendChild(genTable(["Década","Discos","Confirmados","Sin género visible"],m.byDecade.map(function(r){return [r.decade==null?"sin año":r.decade+"s",r.total,r.confirmed,r.unclassified];})));
+    more.appendChild(el("h3","cap","Por familia (confirmados, incluye sus géneros)"));
+    more.appendChild(genTable(["Familia","Discos","Artistas"],m.byFamily.map(function(f){return [f.name,f.albums,f.artists];})));
+    host.appendChild(more);
+  }).catch(function(error){document.getElementById("gen-metrics").textContent="No se pudieron leer las métricas: "+error.message;});
+}
+
+function genEnsure(){
+  if(G.loaded)return;G.loaded=true;
+  genSession();
+  api("api/genres/vocabulary").then(function(r){G.vocab=r.families;genRenderStage();}).catch(function(){});
+  genLoadQueue();genLoadBatches();genLoadMetrics();
+}
+document.getElementById("gen-kind").addEventListener("change",function(event){G.kind=event.target.value;G.offset=0;G.current=null;genLoadQueue();});
+var genSearchTimer=null;
+document.getElementById("gen-search").addEventListener("input",function(event){
+  clearTimeout(genSearchTimer);genSearchTimer=setTimeout(function(){G.q=event.target.value.trim();G.offset=0;G.current=null;genLoadQueue();},300);
+});
+document.getElementById("gen-prev").addEventListener("click",function(){G.offset=Math.max(0,G.offset-G.limit);genLoadQueue();});
+document.getElementById("gen-next").addEventListener("click",function(){G.offset+=G.limit;genLoadQueue();});
+
+var tabs=[["t-pre","p-pre"],["t-car","p-car"],["t-con","p-con"],["t-col","p-col"],["t-gen","p-gen"]];
+var tabHashes={"t-pre":"resumen","t-car":"comparar","t-con":"datos","t-col":"lotes","t-gen":"generos"};
 function openTab(tabId,focus,updateHash){
   document.body.setAttribute("data-active-tab",tabId);
   tabs.forEach(function(p){
@@ -1334,6 +1809,7 @@ function openTab(tabId,focus,updateHash){
   });
   if(updateHash&&history.replaceState)history.replaceState(null,"","#"+tabHashes[tabId]);
   if(focus)document.getElementById(tabId).focus();
+  if(tabId==="t-gen")genEnsure();
 }
 tabs.forEach(function(pair,index){
   var tab=document.getElementById(pair[0]);

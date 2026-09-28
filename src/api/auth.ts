@@ -25,6 +25,12 @@ declare module "fastify" {
   interface FastifyRequest {
     /** Nombre de la cuenta autenticada con que se firma esta petición. */
     operator: string;
+    /**
+     * Quién mira, también en lecturas públicas: cualquier cuenta con sesión
+     * (admin o lectora). `null` para visitantes. Sirve para enseñar datos de
+     * trabajo —p. ej. qué géneros eligió Laya— solo a quien inició sesión.
+     */
+    viewer: { name: string; role: AccountRole } | null;
   }
 }
 
@@ -45,6 +51,7 @@ const ADMIN_READS = [
   /^\/[a-z]+\/\d+\/merge-preview$/u,
   /^\/audit(\/|$)/u,
   /^\/runs\/\d+$/u,
+  /^\/changes(\/|$)/u,
 ];
 const OPERATOR_NAME = /^[\p{L}\p{N} ._'-]{1,80}$/u;
 const USERNAME = /^[a-z0-9][a-z0-9._-]{2,39}$/u;
@@ -290,6 +297,7 @@ export async function registerOperatorAuth(app: FastifyInstance): Promise<void> 
     throw new ApiError(429, "rate_limited", "Demasiadas escrituras seguidas (límite por minuto). Espera unos segundos y reintenta: los lotes de Curaduría continúan donde quedaron.");
   };
   app.decorateRequest("operator", "");
+  app.decorateRequest("viewer", null);
   app.addHook("onClose", async () => herra?.close());
 
   /** Sesión activa, descartando las de cuentas que herra ya no habilita. */
@@ -311,7 +319,19 @@ export async function registerOperatorAuth(app: FastifyInstance): Promise<void> 
   app.addHook("onRequest", async (request) => {
     const path = request.url.split("?", 1)[0]!;
     const isRead = READ_METHODS.has(request.method);
-    if (path === "/auth/login" || (isRead && !ADMIN_READS.some((pattern) => pattern.test(path)))) return;
+    if (path === "/auth/login" || (isRead && !ADMIN_READS.some((pattern) => pattern.test(path)))) {
+      if (isRead && path !== "/auth/login") {
+        // Lectura pública: nunca falla por la sesión. Si herra no responde,
+        // se lee como visitante.
+        try {
+          const session = activeSession(request)?.value;
+          request.viewer = session ? { name: session.name, role: session.role } : null;
+        } catch {
+          request.viewer = null;
+        }
+      }
+      return;
+    }
     if (!isRead) assertTrustedOrigin(request);
 
     const session = activeSession(request)?.value;

@@ -24,12 +24,18 @@
 //    de uno en uno. Lo útil no es paginarla sino decir en qué se parecen: el
 //    endpoint /api/groups clasifica los candidatos por la forma de su nombre,
 //    que es donde aparecen los defectos de extracción.
+//  * GÉNEROS CON SESIÓN DE HERRA. La curaduría de géneros (PLAN_GENEROS etapa
+//    3) publica en catálogo y radio, así que sus escrituras exigen iniciar
+//    sesión con una cuenta administradora de herra (auth.ts). Leer sigue libre.
 import Fastify from "fastify";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
 import { getPool } from "../db/client.js";
 import { moduleLogger } from "../logger/index.js";
+import type { HerraAccounts } from "../api/herra-accounts.js";
+import { registerCotejoAuth } from "./auth.js";
+import { registerGenreRoutes } from "./genres-routes.js";
 
 const log = moduleLogger("cotejo");
 const PAGE = path.resolve(process.cwd(), "public/cotejo.html");
@@ -112,8 +118,10 @@ const GROUP_SQL = `
          (array_agg(review_id ORDER BY random()))[1:8] AS review_ids
     FROM shaped GROUP BY shape, entity_kind, source ORDER BY n DESC`;
 
-export function buildServer() {
+export function buildServer(options: { herra?: HerraAccounts } = {}) {
   const app = Fastify({ logger: false });
+  const auth = registerCotejoAuth(app, options);
+  registerGenreRoutes(app, auth);
 
   // Si la mesa sale por Funnel, sale a internet abierto y aquí hay nombres de
   // personas sin revisar. Que se pueda abrir el enlace es una cosa; que Google

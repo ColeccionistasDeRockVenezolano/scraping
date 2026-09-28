@@ -2,7 +2,9 @@
 // de las páginas más importantes"). La ficha agregada trae tracklist,
 // créditos (planos y agrupados por credit_type), formatos, alias y enlaces
 // de YouTube en una sola consulta.
+import { genreStatusOf, type GenreStatus } from "../../merge/genre-projection.js";
 import { getPool } from "../../db/client.js";
+import { genreFilterSql, publicGenresFor, type PublicGenre } from "../../genres/public.js";
 import type { PaginationQuery } from "../pagination.js";
 
 export interface AlbumListRow {
@@ -13,39 +15,54 @@ export interface AlbumListRow {
   artistId: number;
   artistName: string;
   coverUrl: string | null;
+  primaryGenre: PublicGenre | null;
+  genreStatus: GenreStatus;
 }
 
-export async function listAlbums(
-  query: PaginationQuery & { q?: string | undefined; artistId?: number | undefined },
-): Promise<{ rows: AlbumListRow[]; total: number }> {
+export interface AlbumListQuery extends PaginationQuery {
+  q?: string | undefined;
+  artistId?: number | undefined;
+  /** Slug de género o familia (PLAN_GENEROS §5): solo asignaciones confirmadas. */
+  genre?: string | undefined;
+  decade?: number | undefined;
+  albumType?: string | undefined;
+}
+
+export async function listAlbums(query: AlbumListQuery): Promise<{ rows: AlbumListRow[]; total: number }> {
   const pattern = query.q ? `%${query.q}%` : null;
-  const artistId = query.artistId ?? null;
+  // $1 título · $2 artista · $3 género · $4 década · $5 tipo de lanzamiento
+  const filters = `($1::text IS NULL OR al.title ILIKE $1)
+          AND ($2::bigint IS NULL OR al.artist_id = $2)
+          AND ($3::text IS NULL OR ${genreFilterSql("album", "al.id", "$3")})
+          AND ($4::int IS NULL OR (al.release_year >= $4 AND al.release_year < $4 + 10))
+          AND ($5::text IS NULL OR al.album_type::text = $5)`;
+  const params = [pattern, query.artistId ?? null, query.genre ?? null, query.decade ?? null, query.albumType ?? null];
   const [rows, count] = await Promise.all([
     getPool().query<{
       id: string; title: string; release_year: number | null; album_type: string;
-      artist_id: string; artist_name: string; cover_url: string | null;
+      artist_id: string; artist_name: string; cover_url: string | null; genre: string | null;
     }>(
-      `SELECT al.id, al.title, al.release_year, al.album_type, ar.id AS artist_id, ar.name AS artist_name, al.cover_url
+      `SELECT al.id, al.title, al.release_year, al.album_type, ar.id AS artist_id, ar.name AS artist_name, al.cover_url, al.genre
          FROM public.albums al
          JOIN public.artists ar ON ar.id = al.artist_id
-        WHERE ($1::text IS NULL OR al.title ILIKE $1)
-          AND ($4::bigint IS NULL OR al.artist_id = $4)
+        WHERE ${filters}
         ORDER BY al.title
-        LIMIT $2 OFFSET $3`,
-      [pattern, query.limit, query.offset, artistId],
+        LIMIT $6 OFFSET $7`,
+      [...params, query.limit, query.offset],
     ),
     getPool().query<{ count: string }>(
-      `SELECT count(*)::text AS count
-         FROM public.albums al
-        WHERE ($1::text IS NULL OR al.title ILIKE $1)
-          AND ($2::bigint IS NULL OR al.artist_id = $2)`,
-      [pattern, artistId],
+      `SELECT count(*)::text AS count FROM public.albums al WHERE ${filters}`,
+      params,
     ),
   ]);
+  const genres = await publicGenresFor("album", rows.rows.map((row) => Number(row.id)),
+    new Map(rows.rows.map((row) => [Number(row.id), row.genre])));
   return {
     rows: rows.rows.map((row) => ({
       id: Number(row.id), title: row.title, releaseYear: row.release_year, albumType: row.album_type,
       artistId: Number(row.artist_id), artistName: row.artist_name, coverUrl: row.cover_url,
+      primaryGenre: genres.get(Number(row.id))?.primaryGenre ?? null,
+      genreStatus: genres.get(Number(row.id))?.genreStatus ?? "unclassified",
     })),
     total: Number(count.rows[0]?.count ?? 0),
   };
@@ -84,6 +101,11 @@ export interface AlbumDetail {
   releaseYear: number | null;
   albumType: string;
   genre: string | null;
+  /** `confirmed` (principal confirmado), `pending` (texto de fuente sin confirmar) o `unclassified` (PLAN_GENEROS §5). */
+  genreStatus: GenreStatus;
+  /** Principal confirmado y todos los confirmados (PLAN_GENEROS §5); nunca sugerencias. */
+  primaryGenre: PublicGenre | null;
+  genres: PublicGenre[];
   coverUrl: string | null;
   description: string | null;
   notes: string | null;
@@ -146,6 +168,8 @@ export async function getAlbumDetail(id: number): Promise<AlbumDetail | null> {
             al.instagram_url, al.instagram_status, al.wordpress_url, al.wordpress_status,
             ar.id AS artist_id, ar.name AS artist_name,
             lbl.id AS label_id, lbl.name AS label_name,
+            EXISTS (SELECT 1 FROM ingest.album_genres ag
+                     WHERE ag.album_id = al.id AND ag.role = 'primary' AND ag.status = 'confirmed') AS genre_confirmed,
        COALESCE((
          SELECT jsonb_agg(jsonb_build_object(
            'id', t.id, 'discNumber', t.disc_number, 'trackNumber', t.track_number,
@@ -206,12 +230,17 @@ export async function getAlbumDetail(id: number): Promise<AlbumDetail | null> {
   for (const credit of credits) {
     (creditsByType[credit.creditType] ??= []).push(credit);
   }
+  const tracklist = row["tracklist"] as AlbumTrackRow[];
+  const genres = (await publicGenresFor("album", [id], new Map([[id, row["genre"] as string | null]]))).get(id)!;
   return {
     id: Number(row["id"]),
     title: row["title"] as string,
     releaseYear: row["release_year"] as number | null,
     albumType: row["album_type"] as string,
     genre: row["genre"] as string | null,
+    genreStatus: genreStatusOf(row["genre_confirmed"] === true, row["genre"] as string | null),
+    primaryGenre: genres.primaryGenre,
+    genres: genres.genres,
     coverUrl: row["cover_url"] as string | null,
     description: row["description"] as string | null,
     notes: row["notes"] as string | null,
