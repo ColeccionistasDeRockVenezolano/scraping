@@ -136,13 +136,16 @@ async function main(): Promise<void> {
             taskKind: "biography", schemaVersion: SCHEMA_VERSION, instructions, responseSchema,
             input: fix ? { ...(compact(dossier) as object), correccion: fix } : compact(dossier),
           });
+          const refs = new Set(["catalog", "current", ...dossier.sources.map((s) => s.ref)]);
+          const unknownRefs = (used: string[]) => used.filter((ref) => !refs.has(ref));
           let result = await ask();
-          const fix = violations(dossier, result.proposal.text);
+          const wrongRefs = unknownRefs(result.proposal.sourcesUsed);
+          const fix = violations(dossier, result.proposal.text)
+            ?? (wrongRefs.length ? `Tu respuesta anterior citó refs que no existen (${wrongRefs.join(", ")}). En sourcesUsed usa solo catalog, current o los ref de sources.` : null);
           if (fix) { result = await ask(fix); stats.retried += 1; }
           const answer = result.proposal;
           if (answer.caseId !== dossier.caseId) throw new Error(`caseId devuelto ${answer.caseId}`);
-          const refs = new Set(["catalog", "current", ...dossier.sources.map((s) => s.ref)]);
-          const bad = answer.sourcesUsed.filter((ref) => !refs.has(ref));
+          const bad = unknownRefs(answer.sourcesUsed);
           if (bad.length) throw new Error(`cita refs inexistentes ${bad.join(",")}`);
           done.set(dossier.caseId, { ...answer, model: result.model });
           flush();
