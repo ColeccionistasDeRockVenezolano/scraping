@@ -938,17 +938,159 @@ desechable, no estimadas:
 | Medida | Valor | Criterio |
 |---|---|---|
 | Hallazgos accionables | 5.414 (+1.670 informativos aparte) | — |
-| Con acción de nivel ≤1 | **84,3 %** | ≥30 % |
-| Con acción de nivel ≤2 | **86,6 %** | ≥70 % |
+| Con acción de nivel ≤1 | **84,7 %** | ≥30 % |
+| Con acción de nivel ≤2 | **87,0 %** | ≥70 % |
 | Precisión por detector (corpus) | ≥90 % en todos los etiquetados | ≥90 % |
 | Verificación dirigida | 135 ms | <1 s |
 | Análisis completo con el doble del catálogo (117.946 filas) | 4.746 ms | <5 s |
 
-**Salvedad de C-E11.** Cinco de los once detectores nuevos
-(`creditos_duplicados`, `rol_contra_tipo_de_credito`, `organizacion_sin_clasificar`,
+**Salvedad de C-E11.** Cuatro de los once detectores nuevos
+(`creditos_duplicados`, `rol_contra_tipo_de_credito`,
 `alias_que_choca_con_otra_ficha`, `pistas_sin_duracion_en_disco_con_duraciones`)
 emiten sobre datos reales pero **no declaran acción**, aunque el plan les asigna
-una en su lista de E11. Son 197 hallazgos de los 5.414 accionables: no mueven la
-checklist §4 (que pide ≥70 % con nivel ≤2 y se cumple con 86,6 %), pero son
+una en su lista de E11. Son 176 hallazgos de los 5.414 accionables: no mueven la
+checklist §4 (que pide ≥70 % con nivel ≤2 y se cumple con 87,0 %), pero son
 trabajo pendiente si se quiere corregirlos desde la propia tarjeta. Detalle y
 recomendación en el cierre.
+
+El quinto, `organizacion_sin_clasificar`, se cerró el 2026-09-20 con
+`fijar_tipo_de_organizacion` (21 hallazgos, nivel 1): de ahí la subida de
+84,3 %/86,6 % a 84,7 %/87,0 % respecto de las cifras del cierre. De los cuatro
+que quedan, dos no son tan baratos como parecía: `pistas_sin_duracion…` pide una
+acción de nivel 3 y el marco no tiene ninguna —toda acción escribe—, y 56 de los
+62 choques de alias son de pista o de disco, que `fusionar` todavía no admite.
+
+## Géneros — etapa 2: taxonomía, backfill y proyección (plan `PLAN_GENEROS_CATALOGO_Y_RADIO_CRV.md`, 2026-09-22)
+
+- **Migración 0027** (`migrations/0027_genre_taxonomy.*`): taxonomía en dos
+  niveles con `slug` estable, alias normalizados y no-géneros, asignaciones
+  `artist_genres`/`album_genres` con estado `superseded`, historial de taxonomía
+  y de decisiones humanas. Reversible; el runner no la revierte con la
+  proyección encendida.
+- **Taxonomía aprobada**: `data/genres/taxonomy.json` (13 familias, 111
+  géneros, 290 alias y no-géneros), construida desde el inventario de la
+  etapa 1. Se carga con `crv genres taxonomy-apply`.
+- **Reglas** (`src/genres/rules.ts`, puras): principal por alias explícito,
+  orden de lista, acuerdo total o parcial entre fuentes, desacuerdo → todo
+  sugerido y a revisión, familia reemplazada por su hijo. Las filas `human` no
+  se recalculan; lo que las contradice abre un aviso (`genre_unknown`,
+  `genreCase=human_contradiction`).
+- **Proyección** (`src/merge/genre-projection.ts`) tras
+  `GENRES_PROJECTION_ENABLED` (apagada por defecto): con ella encendida, el
+  motor deja de escribir `albums.genre` y lo escribe solo la proyección
+  (principal confirmado → texto de la fuente de mayor rango → NULL).
+- **Fusiones**: `mergeInto` traslada los géneros con las reglas de choque del
+  plan y guarda la foto en la auditoría; `undoMergeRun` la devuelve. Retirar
+  una ficha guarda sus géneros en la historia.
+- **Doctor**: `genres.assignments`.
+- **Medido en desarrollo** (ensayo, 2026-09-22): 1.741 álbumes con principal
+  confirmado; `albums.genre` no nulo 1.950 → 1.950 con la proyección
+  encendida; 112 avisos nuevos, casi todos listas truncadas de compilados
+  («Hard/Heavy/Thrash/Death/Black/Hardcore...»). Reporte en
+  `reports/genres-backfill-dry-run.{json,md}`.
+
+## Géneros — etapa 3: curaduría editorial y publicación (2026-09-22)
+
+- **Mesa de Cotejo, pestaña Géneros**: cola priorizada (radio primero), ficha
+  con portada, pistas, valor y nivel de cada fuente, evidencia, clasificación
+  actual, contexto del artista marcado «del artista, no del disco», acciones,
+  lotes verificables, métricas e historial (`src/genres/curation.ts`,
+  `src/cotejo/genres-routes.ts`, plantilla de la Mesa).
+- **Sesión de herra** en la Mesa (`src/cotejo/auth.ts`): leer es libre; escribir
+  géneros solo admins del proyecto y superadmin (401/403 sin escribir nada),
+  firma `herra:<usuario>`, CSRF.
+- **Decisiones con run** (Mesa y CLI): diario de cambios, `genre_assignment_log`,
+  cierre de los casos a nombre de la persona. Un principal humano resuelve el
+  desacuerdo entre fuentes (ya no reabre el caso).
+- **Catálogo** (§5): `primaryGenre`/`genres`/`genreStatus` en discos y artistas,
+  `genreOrigin: "album"` en pistas, filtros por slug con familia. **Radio** (§6):
+  catálogo v3 con géneros confirmados del disco; herra acepta v2 y v3. La radio
+  en vivo la exporta herra y la anota `npm run radio:genres` en el mismo cron
+  (desplegado el 2026-09-22: 5.370 piezas, 1.741 con principal confirmado).
+- **Guía editorial**: `docs/curation/GUIA_EDITORIAL_GENEROS.md`.
+- **Pruebas**: `test/contract/genres-curation.test.ts` (10 casos contra
+  PostgreSQL real: cola, 401/403, firma de sesión, reversión a las reglas, un
+  solo principal, artista sin efecto en discos, lote, evidencia insuficiente,
+  término nuevo, publicación) y `test/unit/radio-catalog.test.ts`.
+
+## Géneros — etapa 4: fuentes musicales externas autorizadas (2026-09-23)
+
+- **Migración 0031** (`migrations/0031_genre_external_sources.*`): ficha de
+  evaluación y autorización por fuente (`genre_external_sources`, con licencia,
+  atribución, acceso permitido, límite, niveles, cobertura, estabilidad del
+  identificador, política de etiquetas y umbral de precisión), caché de
+  respuestas con URL y fecha, identidades resueltas y registro de
+  importaciones. `album_genres`/`artist_genres` ganan `external_source_id` y
+  `external_ref`. La base rechaza importar sin autorizar y rechaza la carga
+  masiva sin precisión medida por encima del umbral.
+- **Fichas revisables**: `data/genres/external-sources.json` (MusicBrainz,
+  Discogs, Wikidata). Cargarlas no autoriza nada: quedan en `evaluating`.
+  Con adaptador: **MusicBrainz** (API documentada, CC0, MBID estable, los dos
+  niveles) y **Discogs** (token propio en `DISCOGS_TOKEN`, en la cabecera
+  `Authorization` y nunca en la URL; solo nivel de disco, porque no publica
+  géneros de artista). Wikidata sigue sin adaptador. `GENRES_EXTERNAL_CONTACT`
+  es obligatorio: las dos fuentes bloquean un User-Agent sin vía de contacto.
+- **Identidad auditable** (`src/genres/external/identity.ts`, pura): artista por
+  nombre o alias + país + discografía + miembros; lanzamiento siempre bajo un
+  artista ya identificado + título + año, pistas, sello o catálogo. Una
+  coincidencia solo por nombre o título nunca alcanza, y el empate queda
+  `ambiguous` (a la cola), nunca «el primero».
+- **Mapeo** (`src/genres/external/mapping.ts`, puro): clases de etiqueta
+  separadas (editorial / comunitaria / técnica) con votos mínimos; sin alias
+  aprobado no hay género (va a revisión); lo que solo repite la familia de algo
+  ya precisado se descarta.
+- **Importación** (`src/genres/external/import.ts`): escribe únicamente
+  `suggested` con fuente, identificador, fecha y evidencia; nunca toca una
+  pareja ficha–género que ya exista. Dry-run por omisión (la caché sobrevive).
+  La muestra (`scope: sample`) mide precisión contra lo que CRV ya confirmó y
+  no escribe sugerencias.
+- **Mesa**: las propuestas entran en `external_suggestion` y los choques en
+  `disagreement` (origen `genres-external`); la ficha muestra la identidad
+  externa, sus señales y la atribución.
+- **Recálculo**: las reglas ya no son dueñas de las filas `external`/`ai`: no
+  las borran y, si el catálogo llega a afirmar ese género, adoptan la fila.
+- **Apagado**: `crv genres external disable --purge` retira las propuestas sin
+  resolver y conserva intactas las decisiones humanas (igual que la migración
+  `down`).
+- **Doctor**: `genres.external`.
+- **Documentación**: `docs/curation/GENEROS_FUENTES_EXTERNAS.md`.
+- **Pruebas**: `test/unit/genres-external.test.ts` (28 casos: identidad, mapeo,
+  precisión, fichas y adaptador de Discogs —token fuera de la URL incluido—) y `test/contract/genres-external.test.ts` (12 casos contra
+  PostgreSQL real: autorización, umbral de volumen, sugerencia con evidencia,
+  respeto a lo confirmado, identidad dudosa, artista dudoso que bloquea sus
+  discos, paso por la Mesa, caché, convivencia con el backfill, retiro y
+  separación de niveles).
+- **Medido en producción el 2026-09-23**: fichas cargadas, MusicBrainz y Discogs
+  autorizadas, Discogs con importación habilitada. Muestras de 60 discos:
+  Discogs 85,7 % sobre 14 comparables, MusicBrainz 100 % sobre 4. **El volumen
+  sigue sin habilitar**: las dos pasan el umbral pero la muestra comparable es
+  demasiado pequeña para sostenerlo. El cuello de botella es la identidad del
+  artista, no el género.
+- **Aporte medido (ensayo en seco, 40 discos sin clasificar, Discogs)**: tras
+  graduar la discografía, 15 identificados (antes 7), 35 sugerencias (antes 13)
+  y **15 discos ganarían clasificación** (antes 7). De los 41 valores, 31 son de
+  familia y 10 de género específico: la fuente aporta brocha gorda.
+- **Identidad: la discografía se gradúa, el disco homónimo no cuenta**. El techo
+  real de Discogs era 0,45 (`name_exact`) + 0,30 (`discography_strong`) = 0,75,
+  bajo el umbral de 0,85: *ninguna* coincidencia suya podía aprobarse jamás,
+  porque su ficha de artista no trae país. Y el `ratio >= 0.5` cobraba como
+  «fuerte» un único acierto, incluso cuando ese acierto era el disco homónimo
+  —el nombre otra vez, ya cobrado en `name_exact`—, empatando a 0,75 a *Agresión*
+  (tres títulos propios) con *Almendra* (solo su homónimo). Ahora pesa por
+  títulos distintos (3+ → 0,40, 2 → 0,30, 1 → 0,15) y excluye el homónimo:
+  Agresión se resuelve sola en 0,87 y Almendra cae bajo 0,6, a la Mesa.
+- **Efecto en la precisión**: baja de 85,7 % (14 comparables) a **83,3 %** (18),
+  porque al identificar más aparece un desacuerdo editorial legítimo más. De los
+  3 desacuerdos, **2 son un artefacto**: CRV tiene `metal` y `rock` como familias
+  hermanas y Discogs usa «Rock» como cajón que contiene al metal. Descontados,
+  94,4 %. El 85,7 % guardado en la ficha quedó **caduco**.
+- **Corregido a raíz del ensayo**: el alcance `pending` se rechazaba sin volumen
+  habilitado **incluso en seco**, lo que era una pescadilla que se muerde la
+  cola (para habilitar el volumen hay que medir el aporte, y para medirlo hacía
+  falta el volumen). Ahora el candado mira `confirm`: ensayar siempre se puede,
+  escribir no. `enable` se sigue exigiendo porque el ensayo sí sale a la red.
+- **Corregido a raíz de la muestra**: un disco frenado porque su artista quedó
+  dudoso se contaba como «sin candidato» y no abría caso alguno — en una
+  importación real, la mitad del catálogo habría desaparecido en silencio.
+  Ahora cuenta como dudoso y abre **un** caso sobre el artista (deduplicado por
+  `fingerprint`), que al resolverse desbloquea toda su discografía.

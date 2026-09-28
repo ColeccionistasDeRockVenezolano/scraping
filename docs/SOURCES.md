@@ -255,8 +255,10 @@ tomaba por nombre cosas que acompañaban al nombre.
 Corregidos, el porcentaje baja a **0,1%** (4 de 3.743), y de esos cuatro,
 tres son nombres legítimos que el heurístico marca de más: un coro, una
 sección de cuerdas y un nombre artístico. Queda un solo defecto real —dos
-personas separadas por `/`— que **no** se corrige a propósito: admitir `/`
-como separador partiría nombres como AC/DC, y el beneficio es un caso.
+personas separadas por `/`— que **no** se corregía a propósito: admitir `/`
+como separador partiría nombres como AC/DC. **Actualizado 2026-09-21:** la
+barra parte solo si los dos lados tienen al menos tres caracteres
+(`Eduardo Rodríguez/Enrique Añez` son dos; `AC/DC` sigue siendo uno).
 
 De paso, el alcance por pista aceptaba `(track 05)` pero no `(CD2 track 05)`
 ni `(all tracks)`, así que el paréntesis se quedaba dentro del nombre. Los
@@ -282,6 +284,36 @@ otra emisión completa —unos cien minutos— por 32 entidades, así que de mom
 quedan señalados en el Visor de cola, donde se descartan a mano.
 
 ---
+
+### 2.8 Los créditos del disco van en el bloque del canal (2026-09-21)
+
+Regla de Brian: **Músicos** son solo los del bloque *Musicians*;
+**Colaboradores / invitados** son los de *Guest Musicians*, aunque vengan
+acotados a pistas; Producción, Composición y Arte salen de *Other Credits*.
+Hasta entonces el core clasificaba por el texto del rol, así que un
+«Keyboards» invitado caía en Músicos (1.825 créditos) o en Otros (259).
+
+- **El parser** reconoce ahora el alcance delante del verbo («All tracks
+  composed by», «Tracks 02, 04, 09 composed by», «Track 08 Recorded & Mixed
+  by»), matices del verbo («Assistant Engineered», «Co-Produced»,
+  «Drum tracks recorded»), la salvedad sin coma («… except;») y los roles con
+  dos puntos de Other Credits («Graphic Design:», «Photos:», «Executive
+  Production:»). Antes se perdían 513 líneas «Track N composed by», 233
+  «All tracks composed by», 88 «All lyrics written by», 372 «Graphic Design:»
+  y 239 «Photos:».
+- **El claim declara el bloque** (`credit_section`), y el puente lo usa por
+  encima del rol: `creditTypeForSection` en `src/merge/relations.ts`.
+- **La ficha del disco** muestra también los créditos de pista, agrupados
+  («Keyboards · pistas 1, 3, 5, 10»); se corrigen en su pista.
+- **Otras fuentes** sobre un disco con créditos del canal
+  (`crv youtube credit-sections channel|others`): ningún músico se pierde
+  —el que no está en *Musicians* pasa a invitado y solo se retira el que
+  repite a un principal—; en Producción, Composición y Arte solo se retira
+  lo repetido (quien el canal ya acredita en esa sección del disco): lo que
+  el canal no menciona, como un estudio o un productor ejecutivo, se queda
+  (688 créditos que la regla «por sección» habría perdido). «Otros créditos»
+  y lo que una persona escribió no se tocan. Todo por la vía auditada del
+  operador: los claims quedan `rejected`, no se borran.
 
 ## 3. Las 11 fuentes autorizadas (registro del XLSX)
 
@@ -678,7 +710,17 @@ Estos casos confirman que la política de conservación de ambas afirmaciones
 Los XLSX se importan una vez por versión (hash del archivo registrado en
 `ingest.scrape_runs.params`); si el usuario edita el archivo, la nueva
 versión se importa como un run nuevo y las filas nuevas se procesan
-incrementalmente (`upload_order` único + `row_hash` por fila).
+incrementalmente (`row_hash` por fila).
+
+**Upload Order no identifica la fila** (2026-09-21). Los Shorts y Others van
+sin número (decisión de Brian), el video más nuevo va en la última fila y la
+numeración se corre cuando se inserta una fila arriba (la Entrevista en el 1
+corrió todo el catálogo +8). Por eso el importador casa cada fila por video,
+luego por artista+disco si no hay URL, y solo por número en las filas EMPTY;
+el número se reasigna en la misma transacción (unicidad diferida, migración
+0025). Una fila que la hoja ya no trae conserva su historia pero pierde el
+número. Shorts, Others, Interview y Review son piezas editoriales: `media`,
+no crean disco ni suenan en la radio.
 
 ---
 
