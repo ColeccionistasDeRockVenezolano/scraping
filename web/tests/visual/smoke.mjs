@@ -6,9 +6,20 @@ const browser = await chromium.launch({ headless: true });
 try {
   const page = await browser.newPage({ viewport: { width: 1280, height: 900 } });
   const errors = [];
+  const searchRequests = [];
   page.on("pageerror", (error) => errors.push(error.message));
+  page.on("request", (request) => {
+    if (new URL(request.url()).pathname.endsWith("/search")) searchRequests.push(request.url());
+  });
 
-  await page.goto(`${baseUrl}/?q=Caramelos`, { waitUntil: "networkidle" });
+  await page.goto(`${baseUrl}/`, { waitUntil: "networkidle" });
+  const searchInput = page.getByLabel("Buscar en el catálogo");
+  await searchInput.fill("Ca");
+  await page.waitForTimeout(350);
+  expect(searchRequests).toHaveLength(0);
+  await searchInput.fill("Car");
+  await expect.poll(() => searchRequests.filter((url) => new URL(url).searchParams.get("q") === "Car").length).toBe(1);
+  await expect(page.getByRole("link", { name: "Caramelos De Cianuro", exact: true })).toBeVisible();
   await page.locator('a[href="/artistas/58"]').click();
   await expect(page).toHaveURL(/\/artistas\/58$/);
   await page.getByRole("link", { name: /Las Paticas De La Abuela/ }).click();

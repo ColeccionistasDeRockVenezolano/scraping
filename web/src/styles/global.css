@@ -307,6 +307,7 @@ main { padding: 32px 0 96px; }
   color: var(--text);
 }
 .search-input:focus-visible { outline: none; border-color: var(--red); box-shadow: 0 0 0 3px var(--red-soft); }
+.search-status { margin: 14px 0 0; color: var(--text-faint); font-size: 13px; }
 .search-groups { margin-top: 32px; display: grid; gap: 22px; text-align: left; }
 .search-group h2 {
   display: flex; align-items: center; gap: 8px;

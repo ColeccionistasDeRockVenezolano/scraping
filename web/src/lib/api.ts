@@ -69,6 +69,8 @@ interface RequestOptions {
   method?: "GET" | "POST" | "PATCH" | "DELETE";
   query?: object;
   body?: unknown;
+  /** Cancela una lectura que ya no representa lo que la persona está viendo. */
+  signal?: AbortSignal;
   /** Esta llamada escribe: exige el token del operador. */
   authenticated?: boolean;
 }
@@ -86,6 +88,7 @@ async function request<T>(path: string, options: RequestOptions = {}): Promise<T
     method,
     headers,
     credentials: "include",
+    ...(options.signal ? { signal: options.signal } : {}),
     ...(options.body === undefined ? {} : { body: JSON.stringify(options.body) }),
   };
   const response = await fetch(buildUrl(path, options.query as Query | undefined), init);
@@ -93,7 +96,15 @@ async function request<T>(path: string, options: RequestOptions = {}): Promise<T
   const json: unknown = text ? JSON.parse(text) : undefined;
   if (!response.ok) {
     const error = (json as { error?: { code?: string; message?: string; details?: Record<string, unknown> } } | undefined)?.error;
-    if (options.authenticated && response.status === 401) {
+    // Una sesión también puede caducar mientras se hace una LECTURA protegida
+    // (Curaduría, candidatos de duplicados). Antes solo reaccionábamos a los
+    // 401 de escrituras: tras reiniciar la API, el panel conservaba el último
+    // resumen bueno y seguía diciendo «hace 4 días» aunque cada refresco
+    // recibiera 401. Si había CSRF en memoria, el navegador creía tener una
+    // sesión: se invalida para que OperatorContext quite el panel viejo y pida
+    // iniciar sesión de nuevo. No se dispara en la visita anónima inicial,
+    // donde todavía no existe CSRF.
+    if (response.status === 401 && getSessionCsrf()) {
       setSessionCsrf("");
       window.dispatchEvent(new Event("crv-session-expired"));
     }
@@ -141,8 +152,8 @@ export interface Paged { limit?: number; offset?: number; }
 
 // ---------- lectura ----------
 export const searchApi = {
-  search: (q: string, types?: string[], limit = 20) =>
-    request<SearchResults>("/search", { query: { q, limit, ...(types?.length ? { types: types.join(",") } : {}) } }),
+  search: (q: string, types?: string[], limit = 20, signal?: AbortSignal) =>
+    request<SearchResults>("/search", { query: { q, limit, ...(types?.length ? { types: types.join(",") } : {}) }, ...(signal ? { signal } : {}) }),
 };
 
 export const artistsApi = {
