@@ -11,6 +11,7 @@ import {
   extraerInterpreteCreandoAction,
   extraerInvitadoAction,
   fijarTipoDeDiscoAction,
+  fijarTipoDeOrganizacionAction,
   fusionarDiscosAction,
   moverDuracionAction,
   retirarConCreditosAction,
@@ -41,8 +42,8 @@ function mockFinding(overrides: Partial<ActionFinding> = {}): ActionFinding {
 }
 
 describe("acciones estructurales (E6) — registro y esquemas", () => {
-  it("las 20 acciones estructurales están definidas en STRUCTURAL_ACTIONS con claves únicas", () => {
-    expect(STRUCTURAL_ACTIONS.length).toBe(20);
+  it("las 21 acciones estructurales están definidas en STRUCTURAL_ACTIONS con claves únicas", () => {
+    expect(STRUCTURAL_ACTIONS.length).toBe(21);
     const keys = STRUCTURAL_ACTIONS.map((a) => a.key);
     expect(new Set(keys).size).toBe(keys.length);
   });
@@ -58,6 +59,43 @@ describe("acciones estructurales (E6) — registro y esquemas", () => {
     const params = await fijarTipoDeDiscoAction.defaultParams(f, {} as never);
     expect(params).toEqual({ albumId: 42, albumType: "demo" });
     expect(fijarTipoDeDiscoAction.paramsSchema.parse(params)).toEqual(params);
+  });
+
+  it("fijar_tipo_de_organizacion: toma el tipo de la evidencia del detector", async () => {
+    const f = mockFinding({
+      detector: "organizacion_sin_clasificar",
+      signature: "sin_clasificar",
+      entity: { kind: "organization", id: 77, label: "Santa Mónica Studios" },
+      field: "organization_type",
+      value: "other",
+      evidence: { storedType: "other", suggestedType: "recording_studio", marker: "estudio de grabación" },
+    });
+    expect(fijarTipoDeOrganizacionAction.appliesTo(f)).toBe(true);
+    // Un marcador en el nombre nunca autoriza autocorrección: N1, no N0.
+    expect(fijarTipoDeOrganizacionAction.levelFor(f, null)).toBe(1);
+    const params = await fijarTipoDeOrganizacionAction.defaultParams(f, {} as never);
+    expect(params).toEqual({ organizationId: 77, organizationType: "recording_studio" });
+    expect(fijarTipoDeOrganizacionAction.paramsSchema.parse(params)).toEqual(params);
+  });
+
+  it("fijar_tipo_de_organizacion: sin tipo sugerido utilizable no hay parámetros ni «other» como destino", async () => {
+    const sinEvidencia = mockFinding({
+      detector: "organizacion_sin_clasificar",
+      entity: { kind: "organization", id: 77, label: "Sin marcador" },
+      evidence: { storedType: "other" },
+    });
+    expect(await fijarTipoDeOrganizacionAction.defaultParams(sinEvidencia, {} as never)).toBeNull();
+
+    const aOther = mockFinding({
+      detector: "organizacion_sin_clasificar",
+      entity: { kind: "organization", id: 77, label: "Sin marcador" },
+      evidence: { suggestedType: "other" },
+    });
+    expect(await fijarTipoDeOrganizacionAction.defaultParams(aOther, {} as never)).toBeNull();
+    expect(fijarTipoDeOrganizacionAction.paramsSchema.safeParse({ organizationId: 77, organizationType: "other" }).success).toBe(false);
+
+    // No se ofrece sobre hallazgos de otro detector ni sobre otra clase de ficha.
+    expect(fijarTipoDeOrganizacionAction.appliesTo(mockFinding({ detector: "tipo_de_disco_contra_titulo" }))).toBe(false);
   });
 
   it("vaciar_anio: aplica a anios_imposibles y valida parámetros", async () => {

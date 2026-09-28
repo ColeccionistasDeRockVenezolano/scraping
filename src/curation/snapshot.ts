@@ -296,7 +296,7 @@ async function readFocus(db: SnapshotClient, focus: readonly FocusRef[]): Promis
   }
   if (artistIds.size) {
     const { rows } = await db.query<{ id: string }>(
-      "SELECT id::text FROM public.albums WHERE artist_id = ANY($1::bigint[]) ORDER BY id LIMIT $2", [[...artistIds], FOCUS_ALBUM_LIMIT]);
+      "SELECT id::text FROM public.albums a WHERE artist_id = ANY($1::bigint[]) ORDER BY a.id LIMIT $2", [[...artistIds], FOCUS_ALBUM_LIMIT]);
     for (const row of rows) albumIds.add(Number(row.id));
   }
 

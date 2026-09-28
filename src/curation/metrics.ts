@@ -7,19 +7,19 @@
 // si el detector acertó y queda fuera del denominador.
 import { getPool } from "../db/client.js";
 import { DETECTOR_DEFINITIONS } from "./analyze.js";
-import { summarizeActions } from "./actions/registry.js";
 import type { ActionFinding } from "./actions/types.js";
+import { findingActionLevel, INFORMATIONAL_DETECTOR_KEYS } from "./coverage.js";
 import type { EntityRef } from "./types.js";
+
+// La lista de detectores informativos y la regla del nivel viven en
+// `coverage.ts`: se re-exporta para no mover los importadores de siempre.
+export { INFORMATIONAL_DETECTOR_KEYS };
 
 export const PRECISION_ALERT_THRESHOLD = 0.8;
 /** Una alerta de precisión necesita muestra; por debajo se publica el n, pero no se alarma. */
 export const PRECISION_ALERT_MIN_REVIEWED = 20;
 /** /summary se consulta durante un análisis cada pocos segundos: no releemos miles de filas en cada poll. */
 export const CURATION_METRICS_CACHE_MS = 10_000;
-
-export const INFORMATIONAL_DETECTOR_KEYS: ReadonlySet<string> = new Set(
-  DETECTOR_DEFINITIONS.filter((detector) => detector.actionability === "informational").map((detector) => detector.key),
-);
 
 export interface DetectorMetric {
   detector: string;
@@ -202,8 +202,8 @@ export async function getCurationMetrics(options: { fresh?: boolean } = {}): Pro
   let level1OrLess = 0;
   let level2OrLess = 0;
   for (const row of openRows.rows) {
-    const actions = summarizeActions(actionFinding(row));
-    const level = actions.length ? Math.min(...actions.map((action) => action.level)) : Number.POSITIVE_INFINITY;
+    const level = findingActionLevel(actionFinding(row));
+    if (level === null) continue;
     if (level <= 1) level1OrLess += 1;
     if (level <= 2) level2OrLess += 1;
   }

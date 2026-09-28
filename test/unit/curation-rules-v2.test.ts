@@ -53,6 +53,16 @@ describe("reglas v5: tipo de disco y cobertura E11 (A6)", () => {
     expect(words.has("rock")).toBe(false);
   });
 
+  it("clasificar muchos directos no convierte «en» ni «vivo» en tipos por sí solos", () => {
+    const snapshot = cleanSnapshot();
+    for (let index = 1; index <= 12; index += 1) addAlbum(snapshot, `En Vivo en Caracas ${index}`, "live_album");
+    const unrelated = addAlbum(snapshot, "En la vía", "other");
+    const words = lexiconOf(snapshot).albumTypeWords;
+    expect(words.has("en")).toBe(false);
+    expect(words.has("vivo")).toBe(false);
+    expect(detected(snapshot, "tipo_de_disco_contra_titulo").some((finding) => finding.entity.id === unrelated)).toBe(false);
+  });
+
   it("el hallazgo dice si la palabra es semilla (corrección sin criterio) o aprendida", () => {
     const snapshot = cleanSnapshot();
     for (let index = 1; index <= 10; index += 1) addAlbum(snapshot, `Grandes Exitos ${index}`, "compilation");

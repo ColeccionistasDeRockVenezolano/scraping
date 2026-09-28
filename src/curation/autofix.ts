@@ -257,7 +257,7 @@ export async function listAutofixEvents(limit = 50): Promise<AutofixEvent[]> {
     operator: string; note: string | null; batch_id: string | null; detail: Record<string, unknown>; at: Date;
   }>(`
     SELECT id::text, rule_id::text, detector, signature, action_key, event, operator, note, batch_id::text, detail, at
-      FROM ingest.curation_autofix_events ORDER BY id DESC LIMIT $1`, [limit]);
+      FROM ingest.curation_autofix_events e ORDER BY e.id DESC LIMIT $1`, [limit]);
   return rows.map((row) => ({
     id: Number(row.id), ruleId: row.rule_id === null ? null : Number(row.rule_id), detector: row.detector, signature: row.signature,
     actionKey: row.action_key, event: row.event, operator: row.operator, note: row.note,

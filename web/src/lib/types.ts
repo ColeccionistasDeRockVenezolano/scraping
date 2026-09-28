@@ -394,6 +394,8 @@ export interface CurationEntityRef { kind: string; id: number | null; label: str
 export interface CurationScan {
   id: number;
   status: string;
+  /** completo = se miró todo el catálogo; dirigido = solo la vecindad de unas fichas. */
+  scope: string;
   trigger: string;
   requestedBy: string | null;
   startedAt: string;
@@ -592,6 +594,8 @@ export interface CurationScanResult {
   scanId: number | null;
   /** partial = algún detector falló (sus hallazgos no se tocaron); skipped = otro proceso estaba analizando. */
   status: "ok" | "partial" | "skipped" | "failed";
+  /** «Analizar ahora» siempre es `completo`: mira el catálogo entero. */
+  scope: "completo" | "dirigido";
   trigger: string;
   dryRun: boolean;
   durationMs: number;

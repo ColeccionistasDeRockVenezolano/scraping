@@ -29,8 +29,7 @@ import {
 } from "@phosphor-icons/react";
 import {
   albumWrites, artistWrites, ApiError, curationApi, organizationWrites, personWrites, trackWrites,
-  type CurationFindingGroupFilter, type CurationFindingQuery,
-} from "../lib/api";
+  type CurationFindingGroupFilter, type CurationFindingQuery, CATALOG_CHANGE_EVENT, type CatalogChangeEvent } from "../lib/api";
 import { useAsync } from "../lib/useAsync";
 import { useToast } from "../lib/ToastContext";
 import { useMediaQuery } from "../lib/useMediaQuery";

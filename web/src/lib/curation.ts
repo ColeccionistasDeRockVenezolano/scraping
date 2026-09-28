@@ -156,6 +156,33 @@ export function relativeTime(iso: string, now = Date.now()): string {
   return RELATIVE.format(Math.round(seconds / 86400), "day");
 }
 
+/** Fecha y hora exactas para el `title` de un tiempo relativo: «hace 4 días» no dice cuándo. */
+export function absoluteTime(iso: string): string {
+  return new Date(iso).toLocaleString("es-VE", { dateStyle: "medium", timeStyle: "short" });
+}
+
+const SCOPE_LABEL: Readonly<Record<string, string>> = {
+  completo: "catálogo entero",
+  dirigido: "solo las fichas tocadas",
+};
+
+export function scopeLabel(scope: string): string {
+  return SCOPE_LABEL[scope] ?? scope;
+}
+
+/**
+ * Versión de las reglas con la que corrió un análisis (`counters.rulesVersion`).
+ *
+ * Se muestra porque la API se carga en memoria al arrancar: si el servicio
+ * lleva días levantado, «Analizar ahora» corre el motor de entonces aunque el
+ * repositorio ya tenga detectores nuevos. Verlo en pantalla es la diferencia
+ * entre «el análisis es superficial» y «hay que reiniciar la API».
+ */
+export function scanRulesVersion(scan: CurationScan | null): string | null {
+  const version = scan?.counters["rulesVersion"];
+  return typeof version === "string" ? version : null;
+}
+
 export function formatCount(value: number): string {
   return value.toLocaleString("es-VE");
 }
