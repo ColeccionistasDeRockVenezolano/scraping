@@ -12,7 +12,8 @@
 // exacto que cualquier truco en SQL.
 //
 // LAS CLAVES DE BLOQUEO ACOTAN EL COSTO. Solo se puntúan pares que comparten
-// el nombre completo sin apodo o su primer y último token; las claves con más
+// el nombre completo sin apodo, su primer y último token o una variante de
+// firma (hipocorístico, apodo, principio o final del apellido); las claves con más
 // de `maxBlockSize` personas se descartan (un apellido común no es señal).
 //
 // LAS DECISIONES HUMANAS PERSISTEN. Un par cerrado como `dismissed`
@@ -23,7 +24,10 @@ import { getPool } from "../db/client.js";
 import { jaroWinkler } from "../er/scoring.js";
 import { normalizeEntityName } from "../normalization/entity-name.js";
 import { withOperatorRun } from "../merge/operator.js";
-import { looksLikeOrganization, nameWithoutNickname, personBlockingKeys } from "./person-names.js";
+import {
+  firstNameVariants, looksLikeOrganization, nameWithoutNickname, personBlockingKeys, personNameForms,
+  personVariantBlockingKeys, surnameTypo,
+} from "./person-names.js";
 
 // Los helpers de nombre viven en person-names.ts (los comparten la fusión y el
 // clasificador); se re-exportan porque son parte de la API del detector.
@@ -39,6 +43,10 @@ export interface PersonFacts {
   creditTypes: string[];
   birthDate: string | null;
   deathDate: string | null;
+  /** Artistas con los que trabajó: sus bandas y los dueños de los discos acreditados. */
+  artistIds?: number[];
+  /** Personas acreditadas con ella en discos pequeños (sin recopilatorios). */
+  colleagueIds?: number[];
 }
 
 export interface PairFeature {
@@ -96,12 +104,45 @@ function aliasCrossMatch(a: PersonFacts, b: PersonFacts): string | null {
 }
 
 /**
+ * La mejor coincidencia de firma entre dos personas, mirando nombre y alias.
+ * Nombre de pila: igual 0,25 · apodo declarado igual 0,30 · hipocorístico 0,15.
+ * Apellido: igual 0,20 · errata 0,15. Igual/igual no entra (es first_last_equal).
+ */
+function nameVariant(a: PersonFacts, b: PersonFacts): { value: number; evidence: string } | null {
+  let best: { value: number; evidence: string } | null = null;
+  for (const left of personNameForms(a.name, a.aliases)) {
+    for (const right of personNameForms(b.name, b.aliases)) {
+      const lastExact = left.last === right.last;
+      const lastValue = lastExact ? 0.2 : surnameTypo(left.last, right.last) ? 0.15 : 0;
+      if (!lastValue) continue;
+      let firstValue = 0;
+      let how = "";
+      if (left.first === right.first) {
+        if (left.fromNickname || right.fromNickname) { firstValue = 0.3; how = `apodo «${left.first}» como nombre`; }
+        else if (!lastExact) { firstValue = 0.25; how = `mismo nombre ${left.first}`; }
+      } else if (firstNameVariants(left.first).includes(right.first) || firstNameVariants(right.first).includes(left.first)) {
+        firstValue = 0.15; how = `hipocorístico ${left.first} / ${right.first}`;
+      }
+      if (!firstValue) continue;
+      const value = firstValue + lastValue;
+      if (!best || value > best.value) {
+        best = { value, evidence: `${how}; apellido ${lastExact ? "igual" : `con errata ${left.last} / ${right.last}`}` };
+      }
+    }
+  }
+  return best;
+}
+
+/**
  * Puntúa un par de personas (0..1) con sus features explicables.
  *
  * Pesos (tabla del plan E11.5; se ajustan solo si un test lo justifica):
  *   nickname_equal +0,45 · alias_cross +0,45 · first_last_equal +0,25 ·
  *   jaro_winkler +0,15·jw (solo ≥0,92) · shared_band +0,20 ·
  *   shared_album +0,15 · middle_name_clash −0,10.
+ * Añadidos 2026-09-28 (firmas distintas del mismo músico en los créditos):
+ *   name_variant 0,30–0,50 (ver `nameVariant`) · shared_artist +0,10 ·
+ *   shared_colleagues +0,10 (≥2 colegas; estos dos solo sin banda ni disco común).
  * Bloqueos: organización disfrazada de persona y fechas contradictorias.
  */
 export function scorePersonPair(a: PersonFacts, b: PersonFacts): PairScore {
@@ -139,10 +180,25 @@ export function scorePersonPair(a: PersonFacts, b: PersonFacts): PairScore {
   const jw = jaroWinkler(shapeA.base, shapeB.base);
   if (jw >= 0.92) add("jaro_winkler", 0.15 * jw, `Jaro-Winkler=${jw.toFixed(3)} sobre el nombre sin apodo`);
 
+  // El mismo músico con otra firma: hipocorístico o apodo declarado como nombre
+  // de pila («Beto» / «Alberto "Beto"»), o una errata en el apellido
+  // («Monetegro»). Solo cuenta si el par no coincide ya por nombre.
+  if (!nicknameEqual && !cross && !features.some((feature) => feature.key === "first_last_equal")) {
+    const variant = nameVariant(a, b);
+    if (variant) add("name_variant", variant.value, variant.evidence);
+  }
+
   const bands = intersection(a.bandIds, b.bandIds);
   if (bands.length) add("shared_band", 0.2, `bandas compartidas: ${bands.join(", ")}`);
   const albums = intersection(a.albumIds, b.albumIds);
   if (albums.length) add("shared_album", 0.15, `discos acreditados compartidos: ${albums.length}`);
+  // Contexto más lejano: solo si no comparten ya banda ni disco (sería contarlo dos veces).
+  if (!bands.length && !albums.length) {
+    const artists = intersection(a.artistIds ?? [], b.artistIds ?? []);
+    if (artists.length) add("shared_artist", 0.1, `trabajaron con los mismos artistas: ${artists.slice(0, 5).join(", ")}`);
+    const colleagues = intersection(a.colleagueIds ?? [], b.colleagueIds ?? []);
+    if (colleagues.length >= 2) add("shared_colleagues", 0.1, `acreditados junto a las mismas personas: ${colleagues.length}`);
+  }
 
   const middleA = shapeA.tokens.slice(1, -1);
   const middleB = shapeB.tokens.slice(1, -1);
@@ -188,7 +244,10 @@ export interface PersonCandidateOptions {
 export const PERSON_CANDIDATE_MIN_SCORE = 0.45;
 export const PERSON_CANDIDATE_STRONG_SCORE = 0.6;
 
-async function loadFacts(queryable: Pick<PoolClient, "query">): Promise<PersonFacts[]> {
+const COLLEAGUE_ALBUM_MAX = 40;
+
+/** Datos de todas las personas para puntuar pares (lo usa también la verificación de planes). */
+export async function loadPersonFacts(queryable: Pick<PoolClient, "query">): Promise<PersonFacts[]> {
   const persons = (await queryable.query<{ id: string; name: string; birth_date: string | null; death_date: string | null }>(
     "SELECT id::text, name, birth_date::text AS birth_date, death_date::text AS death_date FROM public.persons ORDER BY id")).rows;
   const aliases = (await queryable.query<{ person_id: string; alias: string }>(
@@ -196,11 +255,32 @@ async function loadFacts(queryable: Pick<PoolClient, "query">): Promise<PersonFa
   const bands = (await queryable.query<{ person_id: string; artist_id: string }>(
     "SELECT person_id::text, artist_id::text FROM public.artist_members WHERE person_id IS NOT NULL")).rows;
   // Un solo viaje para discos acreditados y tipos de crédito (de disco y de pista).
+  // Los recopilatorios («Various Artists») no son un proyecto: compartirlos no
+  // relaciona a dos personas (Brian, 2026-09-28), así que no dan artista. Sí dan
+  // colegas (los compañeros de banda que salen juntos en el recopilatorio).
+  const albumArtists = new Map((await queryable.query<{ id: string; artist_id: string | null }>(`
+    SELECT al.id::text, CASE WHEN ar.name ~* '^(v\\.?\\s*a\\.?|various( artists?)?|varios( artistas)?)$' THEN NULL ELSE al.artist_id::text END AS artist_id
+      FROM public.albums al LEFT JOIN public.artists ar ON ar.id=al.artist_id`)).rows
+    .map((row) => [Number(row.id), row.artist_id === null ? null : Number(row.artist_id)]));
   const credits = (await queryable.query<{ person_id: string; album_id: string; credit_type: string }>(`
     SELECT person_id::text, album_id::text, credit_type::text FROM public.album_credits WHERE person_id IS NOT NULL
     UNION
     SELECT tc.person_id::text, t.album_id::text, tc.credit_type::text
       FROM public.track_credits tc JOIN public.tracks t ON t.id=tc.track_id WHERE tc.person_id IS NOT NULL`)).rows;
+
+  // En un recopilatorio el proyecto es la banda acreditada en la misma pista.
+  const trackArtists = (await queryable.query<{ person_id: string; artist_id: string }>(`
+    SELECT DISTINCT tc.person_id::text, ta.artist_id::text
+      FROM public.track_credits tc
+      JOIN public.track_credits ta ON ta.track_id=tc.track_id AND ta.artist_id IS NOT NULL
+      JOIN public.artists ar ON ar.id=ta.artist_id
+     WHERE tc.person_id IS NOT NULL AND ar.name !~* '^(v\\.?\\s*a\\.?|various( artists?)?|varios( artistas)?)$'`)).rows;
+
+  // Y los colegas, los acreditados en la misma pista (recopilatorio o no).
+  const trackColleagues = (await queryable.query<{ a: string; b: string }>(`
+    SELECT DISTINCT x.person_id::text AS a, y.person_id::text AS b
+      FROM public.track_credits x JOIN public.track_credits y ON y.track_id=x.track_id AND y.person_id<>x.person_id
+     WHERE x.person_id IS NOT NULL AND y.person_id IS NOT NULL`)).rows;
 
   const byId = new Map<number, PersonFacts>();
   for (const person of persons) {
@@ -216,6 +296,37 @@ async function loadFacts(queryable: Pick<PoolClient, "query">): Promise<PersonFa
     if (!facts) continue;
     facts.albumIds.push(Number(credit.album_id));
     if (!facts.creditTypes.includes(credit.credit_type)) facts.creditTypes.push(credit.credit_type);
+  }
+  // Colegas: personas acreditadas en el mismo disco, salvo en discos con más de
+  // COLLEAGUE_ALBUM_MAX personas (un recopilatorio grande no es señal).
+  const albumPersons = new Map<number, Set<number>>();
+  for (const facts of byId.values()) {
+    facts.albumIds = [...new Set(facts.albumIds)];
+    for (const albumId of facts.albumIds) {
+      albumPersons.set(albumId, (albumPersons.get(albumId) ?? new Set()).add(facts.id));
+    }
+  }
+  const trackColleaguesOf = new Map<number, number[]>();
+  for (const row of trackColleagues) {
+    trackColleaguesOf.set(Number(row.a), [...(trackColleaguesOf.get(Number(row.a)) ?? []), Number(row.b)]);
+  }
+  const trackArtistsOf = new Map<number, number[]>();
+  for (const row of trackArtists) {
+    trackArtistsOf.set(Number(row.person_id), [...(trackArtistsOf.get(Number(row.person_id)) ?? []), Number(row.artist_id)]);
+  }
+  for (const facts of byId.values()) {
+    const artists = new Set(facts.bandIds);
+    const colleagues = new Set<number>();
+    for (const albumId of facts.albumIds) {
+      const artistId = albumArtists.get(albumId);
+      if (artistId !== null && artistId !== undefined) artists.add(artistId);
+      const people = albumPersons.get(albumId)!;
+      if (people.size <= COLLEAGUE_ALBUM_MAX) for (const other of people) if (other !== facts.id) colleagues.add(other);
+    }
+    for (const artistId of trackArtistsOf.get(facts.id) ?? []) artists.add(artistId);
+    for (const other of trackColleaguesOf.get(facts.id) ?? []) colleagues.add(other);
+    facts.artistIds = [...artists];
+    facts.colleagueIds = [...colleagues];
   }
   return [...byId.values()];
 }
@@ -253,12 +364,12 @@ export async function findPersonCandidates(options: PersonCandidateOptions = {})
   const queryable = options.queryable ?? getPool();
   const minScore = options.minScore ?? PERSON_CANDIDATE_MIN_SCORE;
   const maxBlockSize = options.maxBlockSize ?? 25;
-  const facts = await loadFacts(queryable);
+  const facts = await loadPersonFacts(queryable);
   const settled = await settledPairs(queryable);
 
   const byKey = new Map<string, PersonFacts[]>();
   for (const person of facts) {
-    for (const key of personBlockingKeys(person.name)) {
+    for (const key of [...personBlockingKeys(person.name), ...personVariantBlockingKeys(person.name, person.aliases)]) {
       byKey.set(key, [...(byKey.get(key) ?? []), person]);
     }
   }
