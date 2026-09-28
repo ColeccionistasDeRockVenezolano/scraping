@@ -18,6 +18,9 @@ const SINCOPA_ADAPTER_VERSION = "1.1.0";
 // posición de <br>, no por proximidad en el texto: leerlas como un bloque
 // plano produce cadenas del tipo "Formed: Based: Genre: 1967 in Caracas...".
 const GOLD = "#FFCC00";
+// Algunas fichas omiten el valor de «Genres:»; el emparejamiento por posición
+// acabaría leyendo la lista de instrumentos como si fuese un género.
+const INSTRUMENTS_ONLY = /^(?:vocals?|guitars?|keyboards?|pianos?|violin|percussion)(?:\s*(?:,|&|and)\s*(?:vocals?|guitars?|keyboards?|pianos?|violin|percussion))*$/iu;
 
 function pageTitle($: CheerioAPI): string | undefined {
   const title = clean($("h1,h2,title").first().text());
@@ -43,6 +46,41 @@ function fragmentsByBr($: CheerioAPI, html: string): Array<ReturnType<CheerioAPI
     .split(/<br\s*\/?>/i)
     .map((chunk) => $(`<div>${chunk}</div>`))
     .filter((fragment) => clean(fragment.text()).length > 0);
+}
+
+/**
+ * Título dorado de una pista: TODO el tramo dorado, no solo el primer <font>.
+ * Las fichas reales anidan el paréntesis del crédito dentro del font dorado
+ * («<font dorado>Extranjero <font blanco>(</font></font>…») y parten el título
+ * en dos fonts dorados hermanos («Nostalgias -» + «Argen Version»): leer solo
+ * el primero truncaba el título en el paréntesis o en el guion.
+ * El tramo termina en el primer texto no dorado; un hueco en blanco entre dos
+ * tramos dorados no lo corta (se conserva el espacio que los separa).
+ */
+function goldenTitle(fragment: ReturnType<CheerioAPI>): string {
+  let out = "";
+  let started = false;
+  const visit = (nodes: AnyNode[], gold: boolean): boolean => {
+    for (const node of nodes) {
+      if (node.type === "text") {
+        const value = (node as { data?: string }).data ?? "";
+        if (gold) {
+          if (value.trim().length > 0) started = true;
+          out += value;
+        } else if (started) {
+          if (value.trim().length > 0) return false;   // primer texto no dorado: fin del título
+          out += " ";                                  // hueco en blanco: separa los tramos
+        }
+      } else if ("children" in node) {
+        const color = ((node as { attribs?: Record<string, string> }).attribs?.["color"] ?? "").trim().toUpperCase();
+        const childGold = color === GOLD || (color.length === 0 && gold);
+        if (!visit((node as unknown as { children: AnyNode[] }).children, childGold)) return false;
+      }
+    }
+    return true;
+  };
+  visit(fragment.children().toArray(), false);
+  return clean(out);
 }
 
 /** "3:22" -> 202 segundos. Formatos ajenos se descartan en vez de adivinarse. */
@@ -354,8 +392,8 @@ export class SincopaAdapter implements SourceAdapter {
         if (country && country !== city) artistFields.push({ field: "origin_country", value: country, evidence: evidence("td", formed) });
       }
     }
-    const genre = pairs.get("genre");
-    if (genre) artistFields.push({ field: "genre", value: genre, evidence: evidence("td", genre) });
+    const genre = pairs.get("genre") ?? pairs.get("genres");
+    if (genre && !INSTRUMENTS_ONLY.test(genre)) artistFields.push({ field: "genre", value: genre, evidence: evidence("td", genre) });
     // La foto vive en photos*/ o artist_photos*/: la ruta lo dice, no se infiere.
     const photo = firstImageOfKind(page, url, "artist_photo");
     if (photo) artistFields.push({ field: "picture_url", value: photo.url, evidence: evidence("img", photo.alt || photo.url) });
@@ -479,7 +517,7 @@ export class SincopaAdapter implements SourceAdapter {
       fragmentsByBr(page, cell.html() ?? "").forEach((fragment, position) => {
       const text = clean(fragment.text());
       if (!text) return;
-      const trackTitle = clean(fragment.find(`font[color="${GOLD}"]`).first().text());
+      const trackTitle = goldenTitle(fragment);
       if (!trackTitle) return;
       const number = /^(\d{1,3})\s*[-.]/.exec(text)?.[1];
       const where = evidence("tr td", text, position);

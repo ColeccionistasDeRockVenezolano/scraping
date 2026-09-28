@@ -45,6 +45,18 @@ describe("adapters funcionales de las fuentes autorizadas", () => {
       || (claim.entityKind === "track_credit" && claim.rawValue === "track"))).toBe(true);
   });
 
+  it("las fuentes sin evidencia de género en su fixture no producen ningún claim de género", async () => {
+    // PLAN_GENEROS_CATALOGO_Y_RADIO_CRV etapa 1, punto 0/8: hoy solo Sincopa
+    // y Descargas Metal Venezolano publican "Género"/"Genre" en sus fichas.
+    // El resto (verificado sobre fixtures reales, no sobre el nombre del
+    // sitio) no lo hace; no se le inventa uno.
+    const withoutGenreEvidence = slugs.filter((slug) => slug !== "sincopa" && slug !== "descargas-metal-venezolano");
+    for (const slug of withoutGenreEvidence) {
+      const claims = await parsed(slug);
+      expect(claims.some((claim) => claim.field === "genre")).toBe(false);
+    }
+  });
+
   it("Descargas Metal saca la ficha completa de sus dos formatos de marcado", async () => {
     const claims = await parsed("descargas-metal-venezolano");
     // El post pone una etiqueta por línea; en la mitad de las entradas las
@@ -79,6 +91,35 @@ describe("adapters funcionales de las fuentes autorizadas", () => {
     expect(String(web?.rawValue ?? "")).toMatch(/^https?:\/\//);
   });
 
+  it("lee Temas dentro de spans aunque el contenedor tenga divs anidados", () => {
+    const adapter = adapterFor({ slug: "descargas-metal-venezolano", siteType: "blogger" });
+    if (!adapter?.extractSnapshot) throw new Error("adapter faltante");
+    const html = `<div><div><span>Banda: Ancelot</span></div><div><span>Álbum: El Triunfo</span></div>
+      <div><span>Temas:</span><br><span>1. El Triunfo</span><br><span>2. El Poema</span><br>
+      <div>MEGA</div></div></div>`;
+    const page: StoredPage = {
+      url: "https://fixture.invalid/feed", kind: "json", rawPageId: 1,
+      body: JSON.stringify({ feed: { entry: [{ title: { $t: "Ancelot - El Triunfo" }, content: { $t: html } }] } }),
+    };
+    const tracks = adapter.extractSnapshot(page).filter((row) => row.entityKind === "track");
+    expect(tracks.map((row) => row.fields.find((field) => field.field === "title")?.value)).toEqual(["El Triunfo", "El Poema"]);
+  });
+
+  it("recupera listas numeradas sin rótulo y con número separado por espacio", () => {
+    const adapter = adapterFor({ slug: "descargas-metal-venezolano", siteType: "blogger" });
+    if (!adapter?.extractSnapshot) throw new Error("adapter faltante");
+    const post = (title: string, html: string) => ({ title: { $t: title }, content: { $t: html } });
+    const body=JSON.stringify({feed:{entry:[
+      post('Klimax - Demo', '<div><span>Banda: Klimax</span></div><div><span>Álbum: Demo</span></div><div><span>1. Sombras</span><br><span>2. Lugar Perfecto</span><br><span>3. Todo Lo Que Pasara</span></div>'),
+      post('Odio - Ministerios del Odio', '<div><span>Banda: Odio</span></div><div><span>Álbum: Ministerios del Odio</span></div><div><span>Tracklist:</span><br><span>01 Intro</span><br><span>02 No Hay</span></div>'),
+    ]}});
+    const page: StoredPage={url:'https://fixture.invalid/feed',kind:'json',rawPageId:1,body};
+    const tracks=adapter.extractSnapshot(page).filter(row=>row.entityKind==='track');
+    expect(tracks.map(row=>row.fields.find(field=>field.field==='title')?.value)).toEqual([
+      'Sombras','Lugar Perfecto','Todo Lo Que Pasara','Intro','No Hay',
+    ]);
+  });
+
   it("Sincopa convierte membresía explícita, rol y periodo; créditos no son membresía", async () => {
     const claims = await parsed("sincopa");
     // Ficha de artista: rol y período leídos de la sección "Group Members".
@@ -92,6 +133,35 @@ describe("adapters funcionales de las fuentes autorizadas", () => {
     // Leo Blanco toca piano en pistas concretas de la ficha de disco.
     expect(claims.some((claim) => claim.entityKind === "track_credit" && claim.field === "credited_name" && claim.rawValue === "Leo Blanco")).toBe(true);
     expect(claims.some((claim) => claim.entityKind === "artist_membership" && claim.field === "person_name" && claim.rawValue === "Leo Blanco")).toBe(false);
+  });
+
+  it("Sincopa separa el género de artista y el de álbum, cada uno con su evidencia", async () => {
+    // PLAN_GENEROS_CATALOGO_Y_RADIO_CRV etapa 1, punto 5: un género de la
+    // ficha de artista nunca puede aterrizar como claim de álbum, ni al
+    // revés. Sincopa es la única fuente que hoy publica ambos niveles, en
+    // fichas distintas (artista "Los Kings" = Pop-Rock; disco "Fusión IV::
+    // Tarde Pero Temprano" = Jazz).
+    const claims = await parsed("sincopa");
+    const genreClaims = claims.filter((c) => c.field === "genre");
+    expect(genreClaims.some((c) => c.entityKind === "artist" && c.rawValue === "Pop-Rock")).toBe(true);
+    expect(genreClaims.some((c) => c.entityKind === "album" && c.rawValue === "Jazz")).toBe(true);
+    // Ningún género de artista queda como claim de álbum, ni al revés.
+    expect(genreClaims.some((c) => c.entityKind === "album" && c.rawValue === "Pop-Rock")).toBe(false);
+    expect(genreClaims.some((c) => c.entityKind === "artist" && c.rawValue === "Jazz")).toBe(false);
+    for (const claim of genreClaims) expect(claim.evidence?.url).toBeTruthy();
+  });
+
+  it("Sincopa lee Genres plural en artistas y descarta listas de instrumentos", () => {
+    const adapter = adapterFor({ slug: "sincopa", siteType: "database" });
+    if (!adapter?.extractSnapshot) throw new Error("adapter Sincopa faltante");
+    const extractSnapshot = adapter.extractSnapshot.bind(adapter);
+    const read = (value: string) => extractSnapshot({
+      url: "https://sincopa.com/rock_pop/artist_rock/prueba.htm", kind: "html", rawPageId: 1,
+      body: `<table><tr><td bgcolor="#6A152F">Prueba</td></tr></table><table><tr><td>Genres:</td><td>${value}</td></tr></table>`,
+    }).filter((record) => record.entityKind === "artist")
+      .flatMap((record) => record.fields.filter((field) => field.field === "genre").map((field) => field.value));
+    expect(read("Pop, Rock, Latin")).toEqual(["Pop, Rock, Latin"]);
+    expect(read("Vocals, Guitar, Percussion & Piano")).toEqual([]);
   });
 
   it("lee la lista de pistas completa, que vive entera en una celda", async () => {
