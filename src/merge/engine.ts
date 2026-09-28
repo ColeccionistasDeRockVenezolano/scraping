@@ -541,18 +541,17 @@ async function mergeEntityClaim(
     decision = options.humanResolution?.verdict === "same"
       ? humanSameDecision(input, targetId, canonical, options.humanResolution)
       : inherited ? inheritedDecision(input, targetId, canonical) : explicitDecision(input, targetId, canonical);
+  } else if (options.humanResolution?.verdict === "different") {
+    // La separación humana no evalúa candidatas: volcar el catálogo entero con
+    // score 0 no dice nada y pesaba ~750 kB por decisión de pista (7,7 GB en
+    // la tanda del 2026-09-26). La decisión queda en features y explanation.
+    decision = humanDifferentDecision(input, [], options.humanResolution);
   } else {
     const candidates = await loadResolutionCandidates(input, client);
-    decision = options.humanResolution?.verdict === "different"
-      ? humanDifferentDecision(input, candidates.map((candidate) => ({
-        candidateId: candidate.id, canonicalName: candidate.canonicalName, score: 0,
-        action: "NO_MATCH", features: [], hardConflicts: [], nameBasis: "none",
-        hasContextSupport: false, autoEligible: false,
-      })), options.humanResolution)
-      : await resolveEntity(input, candidates, {
-        thresholds: resolutionThresholdsFromEnv(),
-        ...(options.gateway === undefined ? {} : { gateway: options.gateway }),
-      });
+    decision = await resolveEntity(input, candidates, {
+      thresholds: resolutionThresholdsFromEnv(),
+      ...(options.gateway === undefined ? {} : { gateway: options.gateway }),
+    });
     if (decision.action === "AUTO_MATCH") targetId = decision.candidateId;
   }
   const decisionId = await persistResolutionDecision(decision, input, {
