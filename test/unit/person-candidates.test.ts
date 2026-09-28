@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { nameWithoutNickname, personBlockingKeys, scorePersonPair, type PersonFacts } from "../../src/review/person-candidates.js";
+import { personVariantBlockingKeys, surnameTypo } from "../../src/review/person-names.js";
 
 const person = (over: Partial<PersonFacts> & { id: number; name: string }): PersonFacts => ({
   aliases: [], bandIds: [], albumIds: [], creditTypes: [], birthDate: null, deathDate: null, ...over,
@@ -74,5 +75,35 @@ describe("detector de candidatos de persona (E11.5)", () => {
     const keys = scored.features.map((feature) => feature.key);
     expect(keys).toContain("shared_band");
     expect(keys).toContain("shared_album");
+  });
+
+  it("el apodo declarado como nombre de pila y una errata en el apellido juntan a Beto Monetegro", () => {
+    const alberto = person({ id: 730, name: "Alberto Montenegro", aliases: ['Alberto "Beto" Montenegro'] });
+    const beto = person({ id: 2291, name: "Beto Monetegro" });
+    // Comparten clave de bloqueo aunque ni el nombre ni el apellido coincidan.
+    const shared = personVariantBlockingKeys(beto.name, beto.aliases)
+      .filter((key) => personVariantBlockingKeys(alberto.name, alberto.aliases).includes(key));
+    expect(shared.length).toBeGreaterThan(0);
+    const scored = scorePersonPair(alberto, beto);
+    expect(scored.features.map((feature) => feature.key)).toContain("name_variant");
+    expect(scored.score).toBeGreaterThanOrEqual(0.45);
+  });
+
+  it("un hipocorístico sin apodo declarado necesita contexto para proponerse", () => {
+    const bare = scorePersonPair(person({ id: 1, name: "Beto Rivas" }), person({ id: 2, name: "Roberto Rivas" }));
+    expect(bare.score).toBeLessThan(0.45);
+    const withContext = scorePersonPair(
+      person({ id: 1, name: "Beto Rivas", artistIds: [5], colleagueIds: [8, 9] }),
+      person({ id: 2, name: "Roberto Rivas", artistIds: [5], colleagueIds: [8, 9, 10] }),
+    );
+    expect(withContext.features.map((feature) => feature.key)).toEqual(expect.arrayContaining(["name_variant", "shared_artist", "shared_colleagues"]));
+    expect(withContext.score).toBeGreaterThanOrEqual(0.45);
+  });
+
+  it("surnameTypo admite una errata en apellidos largos y no confunde apellidos distintos", () => {
+    expect(surnameTypo("montenegro", "monetegro")).toBe(true);
+    expect(surnameTypo("martinez", "martines")).toBe(true);
+    expect(surnameTypo("rivas", "rojas")).toBe(false);
+    expect(surnameTypo("paez", "perez")).toBe(false);
   });
 });

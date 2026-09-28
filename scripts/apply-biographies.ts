@@ -51,7 +51,7 @@ function invalid(item: Synth, dossier: Dossier): string | null {
   if (text.length < 40) return "texto demasiado corto";
   if (text.length > 7000) return "texto demasiado largo";
   if (/^\s*(#|[-*•]\s|\d+\.\s)|\*\*|\]\(|https?:\/\//mu.test(text)) return "formato no permitido (Markdown, viñetas o enlaces)";
-  if (/\b(expediente|currentText|sourcesUsed|seg[uú]n (?:el|la|los) (?:cat[aá]logo|fuentes?)|\bs\d+\b)/iu.test(text)) return "habla del expediente o del catálogo en vez de la ficha";
+  if (/\b(expediente|currentText|sourcesUsed|seg[uú]n (?:el|la|los) (?:cat[aá]logo|fuentes?)|(?<!\p{L})s\d+\b)/iu.test(text)) return "habla del expediente o del catálogo en vez de la ficha";
   const es = text.match(ES)?.length ?? 0;
   const en = text.match(EN)?.length ?? 0;
   if (en > es * 0.25 && en >= 4) return "no parece estar en español";

@@ -1,0 +1,1778 @@
+{
+  "decidedAt": "2026-09-28",
+  "evidence": "Duplicados entre créditos hallados por el detector ampliado (apodo o hipocorístico como nombre de pila, errata en el apellido), pedido de Brian con el ejemplo 730/2291. Regla de Brian (2026-09-28): solo se fusiona si comparten banda o proyectos relacionados — misma banda, mismo disco que no sea recopilatorio, misma pista, mismo artista (titular del disco o banda de la pista) o dos o más colegas fuera de los discos comunes. La ficha principal es la ligada al artista (miembro o titular) o, si no, la de más créditos; la absorbida deja su nombre como alias. Los pares con firma parecida pero sin proyecto común quedan abiertos en la cola para verificación manual; 74 pares con roles o épocas incompatibles se cerraron como personas distintas.",
+  "corrections": [
+    {
+      "op": "merge",
+      "keep": {
+        "id": 21,
+        "name": "Iván Velásquez"
+      },
+      "drop": {
+        "id": 2862,
+        "name": "Iván Velázquez"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (colegas: Leo Quintero, Frank Quintero, Alberto Naranjo)."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 29,
+        "name": "Rubén \"Micho\" Correa"
+      },
+      "drop": {
+        "id": 3496,
+        "name": "Rubén Ángel Correa \"Micho\""
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (colegas: Augie \"Oggi\" Verde, Charlie Spiteri); queda la ficha ligada al artista."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 39,
+        "name": "Pablo Manavello"
+      },
+      "drop": {
+        "id": 9272,
+        "name": "Pablo Manvello"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (colegas: Carlos Quintero, Frank Quintero, Leo Quintero); queda la ficha ligada al artista."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 40,
+        "name": "Sandro Liberatoscioli"
+      },
+      "drop": {
+        "id": 9964,
+        "name": "Sandro Liberastocioli"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo artista (36)); queda la ficha ligada al artista."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 93,
+        "name": "Paul McCartney"
+      },
+      "drop": {
+        "id": 11827,
+        "name": "Paul McCarteny"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo artista (1074))."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 124,
+        "name": "Alfredo Doyavorsky \"Frodo\""
+      },
+      "drop": {
+        "id": 5218,
+        "name": "Alfredo Deyavorsky"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (colegas: Alejandro \"Chonto\" Turola, Noel Mijares)."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 174,
+        "name": "Wincho Schäfer"
+      },
+      "drop": {
+        "id": 2662,
+        "name": "Erwin \"Wincho\" Schäfer"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo disco); queda la ficha ligada al artista."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 192,
+        "name": "Carlos \"Kike\" Franco"
+      },
+      "drop": {
+        "id": 1555,
+        "name": "Kike Franco"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo disco); queda la ficha ligada al artista."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 223,
+        "name": "Annabella Almenar"
+      },
+      "drop": {
+        "id": 1554,
+        "name": "Bélica Almenar"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo artista (1111))."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 322,
+        "name": "Alberto J. Barnola"
+      },
+      "drop": {
+        "id": 12812,
+        "name": "Alberto Barnola"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo artista (254))."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 389,
+        "name": "Willy Noya"
+      },
+      "drop": {
+        "id": 6109,
+        "name": "Guillermo Noya"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (colegas: Luciano Calello, Daniel Mora, Armando Flores)."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 395,
+        "name": "Luis Otero"
+      },
+      "drop": {
+        "id": 12626,
+        "name": "Luis Ortero"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo disco)."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 437,
+        "name": "Alejandro \"Chofa\" Loero"
+      },
+      "drop": {
+        "id": 6131,
+        "name": "Chofa Loero"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo disco)."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 437,
+        "name": "Alejandro \"Chofa\" Loero"
+      },
+      "drop": {
+        "id": 2736,
+        "name": "Alfredo \"Chofa\" Loero"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (colegas: Andrés Lara \"Nano\" (†), Alejandro \"Chofa\" Loero (vía Chofa Loero))."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 451,
+        "name": "Tweety González"
+      },
+      "drop": {
+        "id": 1432,
+        "name": "Fabián \"Tweety\" González"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (colegas: Mariano López, Sebastián Araujo \"Sebas\", Héctor Castillo)."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 483,
+        "name": "José Luis \"Caplís\" Chacín"
+      },
+      "drop": {
+        "id": 12725,
+        "name": "Caplis Chacín"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo disco); queda la ficha ligada al artista."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 483,
+        "name": "José Luis \"Caplís\" Chacín"
+      },
+      "drop": {
+        "id": 13097,
+        "name": "Caplís Chachín"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo artista (78)); queda la ficha ligada al artista."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 485,
+        "name": "Francisco \"Kiko\" Nuñez"
+      },
+      "drop": {
+        "id": 3543,
+        "name": "Kiko Núñez"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo disco); queda la ficha ligada al artista."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 486,
+        "name": "José Romero"
+      },
+      "drop": {
+        "id": 2015,
+        "name": "Cheo Romero"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (colegas: Hernán Ascóniga, Richard Parada, Diego Márquez); queda la ficha ligada al artista."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 491,
+        "name": "Jaime Verdaguer"
+      },
+      "drop": {
+        "id": 12754,
+        "name": "Jaime Verdager"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo disco); queda la ficha ligada al artista."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 511,
+        "name": "José \"Pingüino\" Echezuría"
+      },
+      "drop": {
+        "id": 1310,
+        "name": "Pinguino Echezuría"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo disco); queda la ficha ligada al artista."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 515,
+        "name": "Luis Oliver"
+      },
+      "drop": {
+        "id": 6282,
+        "name": "Luis Olivier"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (colegas: Pedro Castillo, Rubén Rebolledo, Vicente Delgado)."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 556,
+        "name": "Michel Chazet"
+      },
+      "drop": {
+        "id": 2549,
+        "name": "Michel Chazett"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (colegas: Salvador Pérez, Gerardo Ubieda, Iker Gastaminza)."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 603,
+        "name": "José \"Joseíto\" Romero"
+      },
+      "drop": {
+        "id": 3070,
+        "name": "Joseíto Romero"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (colegas: Iván Velásquez, Carlos Quintero)."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 629,
+        "name": "Richard Aumaitre"
+      },
+      "drop": {
+        "id": 1731,
+        "name": "Richard Aumeitre"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (colegas: Jesús Toro, Álvaro Falcón); queda la ficha ligada al artista."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 645,
+        "name": "Cayayo Troconis"
+      },
+      "drop": {
+        "id": 3413,
+        "name": "Carlos Eduardo Troconis \"Cayayo\""
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo disco); queda la ficha ligada al artista."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 645,
+        "name": "Cayayo Troconis"
+      },
+      "drop": {
+        "id": 12764,
+        "name": "Carlos E. \"Cayayo\" Troconis"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo disco); queda la ficha ligada al artista."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 646,
+        "name": "Alberto Cabello"
+      },
+      "drop": {
+        "id": 12770,
+        "name": "Alberto Cabelllo"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo disco); queda la ficha ligada al artista."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 656,
+        "name": "Arístides Barbella"
+      },
+      "drop": {
+        "id": 272,
+        "name": "Arístides Barbela"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (colegas: Eddie Cisneros, Malanga, David Pérez); queda la ficha ligada al artista."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 657,
+        "name": "David \"Chapis\" Lasca"
+      },
+      "drop": {
+        "id": 250,
+        "name": "Chapis Lasca"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo artista (259)); queda la ficha ligada al artista."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 684,
+        "name": "Vanessa Rodríguez"
+      },
+      "drop": {
+        "id": 12600,
+        "name": "Vanessa Rodríguez M."
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo disco)."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 711,
+        "name": "Dave McNair"
+      },
+      "drop": {
+        "id": 715,
+        "name": "Dave M'Nair"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (colegas: Asier Cazalis, Héctor Castillo, Ricardo Martínez)."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 730,
+        "name": "Alberto Montenegro"
+      },
+      "drop": {
+        "id": 2291,
+        "name": "Beto Monetegro"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (colegas: Eddie Cisneros, Diego Álvarez); queda la ficha ligada al artista."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 740,
+        "name": "Pipo Ramírez"
+      },
+      "drop": {
+        "id": 2219,
+        "name": "Jorge Ramírez \"Pipo\""
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo disco); queda la ficha ligada al artista."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 742,
+        "name": "Armando Hernández"
+      },
+      "drop": {
+        "id": 7696,
+        "name": "Armandito Hernández"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo disco); queda la ficha ligada al artista."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 775,
+        "name": "Pablo \"Chino\" Agreda"
+      },
+      "drop": {
+        "id": 776,
+        "name": "Chino Agreda"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo disco); queda la ficha ligada al artista."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 789,
+        "name": "Luis Pacheco"
+      },
+      "drop": {
+        "id": 1369,
+        "name": "Luis Pacheco \"Chompiras\""
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (colegas: Carlos Fernández, Yuri Vargas, Mervin Mejias); queda la ficha ligada al artista."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 793,
+        "name": "Igor Kosenkov"
+      },
+      "drop": {
+        "id": 2762,
+        "name": "Igor Konsekov"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (colegas: José \"Cheo\" Rodríguez, Juan Carlos Socorro, Gonzalo Blanco); queda la ficha ligada al artista."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 793,
+        "name": "Igor Kosenkov"
+      },
+      "drop": {
+        "id": 1328,
+        "name": "Igor Kossenkov"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (colegas: José \"Cheo\" Rodríguez, Jorge Herrera, Vladimir Quintero); queda la ficha ligada al artista."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 830,
+        "name": "Rafael López Garnica"
+      },
+      "drop": {
+        "id": 12827,
+        "name": "Rafael Garnica"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo artista (101))."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 916,
+        "name": "Carlos Alberto Domínguez"
+      },
+      "drop": {
+        "id": 3310,
+        "name": "Carlos Alberto Domínguez P."
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo disco); queda la ficha ligada al artista."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 917,
+        "name": "Carlos Alberto Curto"
+      },
+      "drop": {
+        "id": 3309,
+        "name": "Carlos Alberto Curto S."
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo artista (148)); queda la ficha ligada al artista."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 919,
+        "name": "Ricardo Mastromónaco"
+      },
+      "drop": {
+        "id": 3311,
+        "name": "Ricardo Mastromonaco R."
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo artista (148)); queda la ficha ligada al artista."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 977,
+        "name": "Francisco Belisario"
+      },
+      "drop": {
+        "id": 9911,
+        "name": "Frank Belisario"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo disco); queda la ficha ligada al artista."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 987,
+        "name": "Rodolfo \"Rudy\" Pagliuca"
+      },
+      "drop": {
+        "id": 662,
+        "name": "Rudy Pagliuca"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo disco); queda la ficha ligada al artista."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 992,
+        "name": "Gabriel \"Pepo\" Lamberti"
+      },
+      "drop": {
+        "id": 1001,
+        "name": "Pepo Lamberti"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo disco); queda la ficha ligada al artista."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1020,
+        "name": "Iván Gabaldón"
+      },
+      "drop": {
+        "id": 6747,
+        "name": "Iván Gavaldón"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (colegas: Héctor Castillo, Diego Márquez, Oswaldo Grillet)."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1024,
+        "name": "Pedro Pérez Márquez"
+      },
+      "drop": {
+        "id": 12889,
+        "name": "Pedro Pérez Márques"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo disco)."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1068,
+        "name": "Pedro V. Lizardo \"PTT\""
+      },
+      "drop": {
+        "id": 4720,
+        "name": "PTT Lizardo"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo disco); queda la ficha ligada al artista."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1068,
+        "name": "Pedro V. Lizardo \"PTT\""
+      },
+      "drop": {
+        "id": 9433,
+        "name": "Pedro \"PTT\" Lizardo"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (colegas: Valerio do Carmo, Nicky Scarola); queda la ficha ligada al artista."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1113,
+        "name": "Oscar Alcaíno \"Oscarello El Magnifico\""
+      },
+      "drop": {
+        "id": 2789,
+        "name": "Oscar Alcaíno \"Oscarello\""
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo disco); queda la ficha ligada al artista."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1138,
+        "name": "Carola Landaeta"
+      },
+      "drop": {
+        "id": 1568,
+        "name": "Carola de Landaeta"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (colegas: Sandro Bassi, Della Noce, Miguel Ángel Echevarreneta)."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1176,
+        "name": "Gabriel Figueira"
+      },
+      "drop": {
+        "id": 12947,
+        "name": "Gabriel Figuera"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo disco)."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1278,
+        "name": "Leonardo Jaramillo \"Kmarón\""
+      },
+      "drop": {
+        "id": 13291,
+        "name": "Leonardo \"El Kmaron\" Jaramillo"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo artista (185))."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1286,
+        "name": "Alberto Slezynger"
+      },
+      "drop": {
+        "id": 12776,
+        "name": "Alberto Slesinger"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo disco)."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1320,
+        "name": "Pimpi Santistevan"
+      },
+      "drop": {
+        "id": 1206,
+        "name": "Pimpi Santiestevan"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (colegas: Ana Valencia, Benjamín Brea, Gustavo Aranguren)."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1320,
+        "name": "Pimpi Santistevan"
+      },
+      "drop": {
+        "id": 7136,
+        "name": "Pimpi Santiesteban"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (colegas: Anita Valencia, Ana Valencia, Willie Croes)."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1380,
+        "name": "Andrés Buitrago"
+      },
+      "drop": {
+        "id": 1657,
+        "name": "Andrés Buitriago"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (colegas: Felipe Grüber, Tadeo Díaz); queda la ficha ligada al artista."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1395,
+        "name": "Manolo Da Corte"
+      },
+      "drop": {
+        "id": 1488,
+        "name": "Manuel Da Corte"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (colegas: Andrés William, Romains Rosas, César Keiter)."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1428,
+        "name": "Julio Anidez"
+      },
+      "drop": {
+        "id": 616,
+        "name": "Julio Anides"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (colegas: Maricruz Quintero, Michel Chazet, Ana Valencia)."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1434,
+        "name": "Fito Páez"
+      },
+      "drop": {
+        "id": 2819,
+        "name": "Rodolfo \"Fito\" Paez"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo disco); queda la ficha ligada al artista."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1439,
+        "name": "Augie \"Oggi\" Verde"
+      },
+      "drop": {
+        "id": 260,
+        "name": "Oggi Verde"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo disco)."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1460,
+        "name": "Antonio Casas"
+      },
+      "drop": {
+        "id": 734,
+        "name": "Antonio Casas M."
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo artista (206)); queda la ficha ligada al artista."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1556,
+        "name": "Tito Fierro"
+      },
+      "drop": {
+        "id": 299,
+        "name": "Héctor \"Tito\" Fierro"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo artista (2854)); queda la ficha ligada al artista."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1582,
+        "name": "Gianluigi Borrelli"
+      },
+      "drop": {
+        "id": 12690,
+        "name": "Gianluigi Borreli"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo disco)."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1691,
+        "name": "Gilberto Rebolledo"
+      },
+      "drop": {
+        "id": 12607,
+        "name": "Gilberto Reboiledo"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo disco); queda la ficha ligada al artista."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1856,
+        "name": "Giordano Di Marzo \"Yordano\""
+      },
+      "drop": {
+        "id": 4331,
+        "name": "(Giordano Di Marzo)"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo disco)."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1864,
+        "name": "Keith Karabel"
+      },
+      "drop": {
+        "id": 3884,
+        "name": "Keith Karabell"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (colegas: Raúl Agraz, Miguel Blanco)."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1912,
+        "name": "Jeremias \"Jeremy\" Ruiz"
+      },
+      "drop": {
+        "id": 12728,
+        "name": "Jeremy Ruiz"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo disco)."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2032,
+        "name": "Manolo Alvarez"
+      },
+      "drop": {
+        "id": 10080,
+        "name": "Manolo Alvrez"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo artista (1479)); queda la ficha ligada al artista."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2043,
+        "name": "Oscar Fanega"
+      },
+      "drop": {
+        "id": 13023,
+        "name": "Oscar Fanegas"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo disco)."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2151,
+        "name": "Aldo Lamanna \"DJ Lamaña\""
+      },
+      "drop": {
+        "id": 12825,
+        "name": "Aldo Lamana"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo artista (123))."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2307,
+        "name": "Edgar Espinoza"
+      },
+      "drop": {
+        "id": 12997,
+        "name": "Edgar Espinosa"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (colegas: Carlos Quintero, Miguel Ángel Larralde, Ezequiel Serrano)."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2487,
+        "name": "Winston Mandelblúm \"Winsman\""
+      },
+      "drop": {
+        "id": 12792,
+        "name": "Winston Mandelbum"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo disco)."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2493,
+        "name": "Vytas Brenner"
+      },
+      "drop": {
+        "id": 11854,
+        "name": "Vytas Brener"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo artista (261))."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2507,
+        "name": "Carlos Acosta"
+      },
+      "drop": {
+        "id": 4327,
+        "name": "Carlos M. Acosta"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo disco); queda la ficha ligada al artista."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2619,
+        "name": "Glen Pastcha"
+      },
+      "drop": {
+        "id": 7497,
+        "name": "Glenn Patscha"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (colegas: Didi Gutman, Héctor Castillo, Dave McNair)."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2623,
+        "name": "Ana Patricia Mondello"
+      },
+      "drop": {
+        "id": 2994,
+        "name": "Ana Patricia Modello"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo disco)."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2660,
+        "name": "Jesús \"Chu\" Quintero"
+      },
+      "drop": {
+        "id": 514,
+        "name": "Chu Quintero"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo artista (261))."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2686,
+        "name": "Francisco \"Pitufo\" Vivas"
+      },
+      "drop": {
+        "id": 6636,
+        "name": "Pitufo Vivas"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo disco)."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2704,
+        "name": "Miguel Gonzáles \"El Enano\""
+      },
+      "drop": {
+        "id": 1674,
+        "name": "Miguel González \"El Enano\""
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (colegas: Pablo Martínez, Manuel \"Manny\" Diquez, Luis \"Golding\" Barrios); queda la ficha ligada al artista."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2855,
+        "name": "Carlos \"Turbo\" Guerreiro"
+      },
+      "drop": {
+        "id": 4886,
+        "name": "Carlos \"Turbo\" Gerreiro"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (colegas: Luis Emilio Mauri, Wolfgang Vivas, Biella Da Costa)."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2855,
+        "name": "Carlos \"Turbo\" Guerreiro"
+      },
+      "drop": {
+        "id": 1408,
+        "name": "Carlos Guerrero"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (colegas: Carlos Márques, Valerio do Carmo, Anidesonido)."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2902,
+        "name": "José Leonardo \"Pepeleo\" Hernández"
+      },
+      "drop": {
+        "id": 905,
+        "name": "Pepe Leo Hernández"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (colegas: Julio Briceño, Dick Beetham, Erik Aldrey)."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 3032,
+        "name": "Carlos \"Tato\" Rodríguez"
+      },
+      "drop": {
+        "id": 6208,
+        "name": "Tato Rodríguez"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo disco)."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 3069,
+        "name": "Julio \"Mal Tripear Jamás\" Alonso"
+      },
+      "drop": {
+        "id": 6150,
+        "name": "Julio Alonzo"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo disco)."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 3069,
+        "name": "Julio \"Mal Tripear Jamás\" Alonso"
+      },
+      "drop": {
+        "id": 465,
+        "name": "Julio Alfonso"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (colegas: Rafael Cadavieco, Julio Alonzo, Iván Gabaldón)."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 3078,
+        "name": "Juan Pablo Aroutine"
+      },
+      "drop": {
+        "id": 777,
+        "name": "Juan Pablo Aurotine"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (colegas: Rodrigo Vera, Max Martínez); queda la ficha ligada al artista."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 3225,
+        "name": "Humberto E. Lizardo F. \"Ike\""
+      },
+      "drop": {
+        "id": 3618,
+        "name": "Humberto E. Lizardo \"Ike\""
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo artista (134)); queda la ficha ligada al artista."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 3256,
+        "name": "Miguel Blanco"
+      },
+      "drop": {
+        "id": 3260,
+        "name": "Miguel A. Blanco"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo artista (264)); queda la ficha ligada al artista."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 3259,
+        "name": "Rafael Greco"
+      },
+      "drop": {
+        "id": 2218,
+        "name": "Rafael Grego T."
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo artista (262))."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 3259,
+        "name": "Rafael Greco"
+      },
+      "drop": {
+        "id": 1064,
+        "name": "Rafael Grego"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (colegas: Ricardo Martínez, Gustavo Casas, Agustín Espina)."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 3266,
+        "name": "Eddy Pérez"
+      },
+      "drop": {
+        "id": 1289,
+        "name": "Eduardo \"Eddy\" Pérez"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo artista (264))."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 3405,
+        "name": "Edgar Jiménez"
+      },
+      "drop": {
+        "id": 226,
+        "name": "Edgar Jiménez P"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo disco); queda la ficha ligada al artista."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 3493,
+        "name": "Nana Cadavieco"
+      },
+      "drop": {
+        "id": 1225,
+        "name": "Mariana \"Nana\" Cadavieco"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo artista (179)); queda la ficha ligada al artista."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 3668,
+        "name": "Alcides Monroy"
+      },
+      "drop": {
+        "id": 9922,
+        "name": "Alcides Monrroy"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo artista (1797)); queda la ficha ligada al artista."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 3875,
+        "name": "José \"Chego\" Cabrices"
+      },
+      "drop": {
+        "id": 2127,
+        "name": "Chego Cabrices"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (colegas: Ricardo Chigne, Andreina Bravo, Karina Gil)."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 4026,
+        "name": "Edgar Alexander"
+      },
+      "drop": {
+        "id": 13067,
+        "name": "Edgar Quinteor"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo disco); queda la ficha ligada al artista."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 4214,
+        "name": "Carlos Márques"
+      },
+      "drop": {
+        "id": 6029,
+        "name": "Carlos Márquez"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (colegas: Luis Yánez, Carlos Puchi, Francis Benitez)."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 4228,
+        "name": "Danny Harrell"
+      },
+      "drop": {
+        "id": 12606,
+        "name": "Danny Harrel"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo disco)."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 4232,
+        "name": "Bob Ohsson"
+      },
+      "drop": {
+        "id": 3498,
+        "name": "Bob Olhsson"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (colegas: Samuel Quiros, 3er Mundo, Luis Alvarado)."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 4255,
+        "name": "Fran Beaufrand"
+      },
+      "drop": {
+        "id": 7566,
+        "name": "Fran Beufrand"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (colegas: MASA, Mauricio Arcas, Enrique González)."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 4387,
+        "name": "Jesús A. Maduro"
+      },
+      "drop": {
+        "id": 12751,
+        "name": "Jesús Maduro"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo artista (204))."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 4387,
+        "name": "Jesús A. Maduro"
+      },
+      "drop": {
+        "id": 12755,
+        "name": "Jesus Maduro R"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo artista (204))."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 4652,
+        "name": "Ale Ramírez"
+      },
+      "drop": {
+        "id": 4654,
+        "name": "Alejandro Ramírez"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo disco)."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 4771,
+        "name": "Ramón Méndez"
+      },
+      "drop": {
+        "id": 12590,
+        "name": "Ramón I. Méndez A"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo disco)."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 5874,
+        "name": "Giussepe \"Pino\" Lagona"
+      },
+      "drop": {
+        "id": 11795,
+        "name": "Pino Lagona"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo artista (1522)); queda la ficha ligada al artista."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 5990,
+        "name": "Sofia \"La Nena\" Pulido"
+      },
+      "drop": {
+        "id": 7960,
+        "name": "Sophia \"Nena\" Pulido"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (colegas: Carlos Quintero, Ilan Chester, Álvaro Falcón)."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 5997,
+        "name": "Lucio Caminiti"
+      },
+      "drop": {
+        "id": 7127,
+        "name": "Lucio Caminitti"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (colegas: Isaías Urbina, Manuel Urbina, Candy Rojas)."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 6293,
+        "name": "Rafael Pirela"
+      },
+      "drop": {
+        "id": 4258,
+        "name": "Rafael Pirela S."
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (colegas: Carlos Quintero, Roberto Rincón, Edward Perdomo)."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 6571,
+        "name": "Karina Febles Córdoba"
+      },
+      "drop": {
+        "id": 12779,
+        "name": "Karina Flebes Córdova"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo disco)."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 6615,
+        "name": "Jaime Beltrán"
+      },
+      "drop": {
+        "id": 2062,
+        "name": "Jaime Bertrán"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (colegas: Héctor Do Nascimento, José Luis Osuna)."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 6619,
+        "name": "Carlos Vilchez"
+      },
+      "drop": {
+        "id": 6295,
+        "name": "Carlos Julio Vilchez"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo disco)."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 6816,
+        "name": "Gabriel Casal"
+      },
+      "drop": {
+        "id": 6255,
+        "name": "Gabriel Casali"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (colegas: Max Martínez, José \"Chego\" Cabrices); queda la ficha ligada al artista."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 7640,
+        "name": "Stephen Perry"
+      },
+      "drop": {
+        "id": 12585,
+        "name": "Stephen R. Perry"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo disco)."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 7814,
+        "name": "Abdenago \"Neguito\" Borjas"
+      },
+      "drop": {
+        "id": 7818,
+        "name": "Neguito Borjas"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo disco)."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 7828,
+        "name": "Lila Morillo"
+      },
+      "drop": {
+        "id": 11888,
+        "name": "Lila Morilo"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (colegas: Trío Venezuela, Héctor Cabrera)."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 7934,
+        "name": "Gabi Valladares"
+      },
+      "drop": {
+        "id": 12591,
+        "name": "Gabi Valladares O"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo disco)."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 8282,
+        "name": "Giulio Remersaro"
+      },
+      "drop": {
+        "id": 3567,
+        "name": "Giulio Remersario"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (colegas: Oswaldo De La Rosa, Benjamín Brea, Luis Arias)."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 8286,
+        "name": "Manolo Freire"
+      },
+      "drop": {
+        "id": 3384,
+        "name": "Manolo Freires"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (colegas: Oswaldo De La Rosa, Benjamín Brea, Luis Arias)."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 8286,
+        "name": "Manolo Freire"
+      },
+      "drop": {
+        "id": 3551,
+        "name": "Manuel Freire"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (colegas: Félix Colino, Mario Arias, José Olmedo)."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 8288,
+        "name": "Luciano Stecconi"
+      },
+      "drop": {
+        "id": 3576,
+        "name": "Luciano Steconi"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (colegas: Oswaldo De La Rosa, Benjamín Brea, Luis Arias)."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 9671,
+        "name": "Gloria Martín"
+      },
+      "drop": {
+        "id": 9672,
+        "name": "Gloria Marín"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo disco)."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 10051,
+        "name": "Johnny Quiros"
+      },
+      "drop": {
+        "id": 2717,
+        "name": "Juan Camacho"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo disco)."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 11469,
+        "name": "Graham Gouldman"
+      },
+      "drop": {
+        "id": 10071,
+        "name": "Graham Goildman"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo artista (1910))."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 12048,
+        "name": "Herve Villard"
+      },
+      "drop": {
+        "id": 12182,
+        "name": "Herve Vilard"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (colegas: Bert Kaempfert, Las 4 Estaciones, Connie Francis)."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 12133,
+        "name": "María de Lourdes Devonish"
+      },
+      "drop": {
+        "id": 12160,
+        "name": "María Lourdes Devonish"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (colegas: Henry Salvat, Arelys, José Luis Rodríguez)."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 12546,
+        "name": "Franco Cerruti Ardila"
+      },
+      "drop": {
+        "id": 12548,
+        "name": "Franco Cerruti Ardilla"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo disco)."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 12732,
+        "name": "Larry Acosta"
+      },
+      "drop": {
+        "id": 12731,
+        "name": "Larry Alberto Acosta M"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo artista (175))."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 12896,
+        "name": "María Consuelo Faria"
+      },
+      "drop": {
+        "id": 13138,
+        "name": "María Consuelo Fario \"La GoGo\""
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo artista (87))."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 12969,
+        "name": "Juan Carlo Fernández \"Wancalo\""
+      },
+      "drop": {
+        "id": 12967,
+        "name": "Juan Carlo Fernández"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo artista (209))."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 13066,
+        "name": "Augusto Perdomo"
+      },
+      "drop": {
+        "id": 12542,
+        "name": "Augusto Perdono"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (colegas: Gabriel Torrelles, Marcel Fernández, Aurora Luna)."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 13133,
+        "name": "Yoredvi Useche"
+      },
+      "drop": {
+        "id": 12522,
+        "name": "Yoredvi Usecha"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo artista (55))."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 13325,
+        "name": "Gonzalo \"Chile\" Veloz"
+      },
+      "drop": {
+        "id": 6246,
+        "name": "Chile Veloz"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: firma parecida y proyecto relacionado (mismo disco)."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 2619,
+        "name": "Glen Pastcha"
+      },
+      "to": "Glenn Patscha",
+      "keepOldNameAsAlias": true,
+      "why": "Grafía correcta del nombre."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 4232,
+        "name": "Bob Ohsson"
+      },
+      "to": "Bob Ohlsson",
+      "keepOldNameAsAlias": true,
+      "why": "Grafía correcta del nombre."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 12048,
+        "name": "Herve Villard"
+      },
+      "to": "Hervé Vilard",
+      "keepOldNameAsAlias": true,
+      "why": "Grafía correcta del nombre."
+    }
+  ]
+}
