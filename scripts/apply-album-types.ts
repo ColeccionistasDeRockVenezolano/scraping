@@ -8,7 +8,8 @@
 //   * un split en cualquier señal deja el disco sin tocar (no hay tipo para eso);
 //   * si todas las señales concretas (ep, single, demo, compilation, live_album,
 //     remix, soundtrack) dicen lo mismo, ese es el tipo; si discrepan, se salta
-//     y queda en el informe;
+//     y queda en el informe (también si solo Deezer o MusicBrainz lo dan y el
+//     formato físico dice álbum);
 //   * solo «álbum» genérico (LP, Album, record_type=album) → studio_album.
 // Music Video, Live Concert, Documentary y B-Sides no llevan tipo de disco
 // salvo que la hoja lo diga.
@@ -27,6 +28,7 @@ const LEDGERS = [`reports/album-type-evidence-${DATE}.jsonl`, `reports/album-typ
 const SOURCE_SLUG = "crv-tipo-disco";
 const EXTRACTOR = "tipo-disco";
 const NO_TYPE = ["Music Video", "Live Concert", "Documentary", "B-Sides"];
+const ONLINE = new Set(["deezer", "musicbrainz"]);
 const SPECIFIC = new Set(["ep", "single", "demo", "compilation", "live_album", "remix", "soundtrack", "collaboration_album"]);
 
 interface Signal { albumId: number; artist: string; title: string; source: string; via: string; type: string; raw: string; url: string | null }
@@ -38,7 +40,15 @@ export function resolveType(signals: Signal[]): { type: string | null; why: stri
   if (sheet.size === 1) return { type: [...sheet][0]!, why: "hoja" };
   if (sheet.size > 1) return { type: null, why: `la hoja discrepa: ${[...sheet].join(" / ")}` };
   if (signals.some((signal) => signal.type === "split")) return { type: null, why: "split" };
-  const specific = new Set(signals.map((signal) => signal.type === "live" ? "live_album" : signal.type).filter((type) => SPECIFIC.has(type)));
+  const specificOf = (list: Signal[]) =>
+    new Set(list.map((signal) => signal.type === "live" ? "live_album" : signal.type).filter((type) => SPECIFIC.has(type)));
+  const specific = specificOf(signals);
+  // Deezer y MusicBrainz describen la reedición digital (un LP a medias sale como
+  // «ep»): si solo ellos dan el tipo concreto y el disco físico dice álbum, se salta.
+  const offline = signals.filter((signal) => !ONLINE.has(signal.via));
+  if (specific.size === 1 && !specificOf(offline).size && offline.some((signal) => signal.type === "album" || signal.type === "studio_album")) {
+    return { type: null, why: `señales discrepan: album / ${[...specific][0]} (solo en línea)` };
+  }
   if (specific.size === 1) return { type: [...specific][0]!, why: "señales concretas de acuerdo" };
   if (specific.size > 1) return { type: null, why: `señales discrepan: ${[...specific].sort().join(" / ")}` };
   if (signals.some((signal) => signal.type === "album" || signal.type === "studio_album")) return { type: "studio_album", why: "álbum genérico" };
