@@ -2,9 +2,16 @@
 """Géneros de Last.fm (API oficial 2.0) para fichas sin principal.
 
 Regla de Brian: una fuente basta. Identidad: el artista de Last.fm tiene el
-nombre exacto (normalizado) y además Last.fm lo marca como venezolano
-(etiqueta «venezuela»/«venezolano»/«caracas»… o su biografía menciona
-Venezuela en sus dos primeras frases: más adelante suele ser una gira). Biografías
+nombre exacto (normalizado) y además una segunda prueba (Brian, 2026-09-27:
+«si coinciden en nombre, datos, integrantes, discos es muy válido»):
+  - Last.fm lo marca como venezolano: etiqueta «venezuela»/«venezolano»/«caracas»…
+    o su biografía menciona Venezuela en sus dos primeras frases (más adelante
+    suele ser una gira);
+  - su discografía (artist.getTopAlbums) incluye un disco del catálogo de ese
+    artista con el mismo título; un disco homónimo o de título genérico («Demo»,
+    «En vivo», «Greatest Hits») no cuenta: no añade nada al nombre;
+  - su biografía nombra a un integrante del catálogo (nombre de dos palabras o más).
+Biografías
 que agrupan varios homónimos («there are several artists…», listas «1) … 2) …»,
 bloques separados por «_____») se descartan: sus etiquetas mezclan bandas.
 Homónimos dentro del catálogo tampoco se buscan.
@@ -14,6 +21,7 @@ Solo la API (https://www.last.fm/api), nunca la web. Métodos, con autocorrect=0
 para que Last.fm no cambie el nombre pedido:
   artist.getInfo    (artist)        nombre canónico, URL y biografía
   artist.getTopTags (artist)        etiquetas con peso (count)
+  artist.getTopAlbums (artist)      discografía, solo si faltan las otras pruebas
   album.getInfo     (artist, album) nombre canónico, URL y reseña del disco
   album.getTopTags  (artist, album) etiquetas del disco con peso
 Las etiquetas van por peso descendente: la primera que la taxonomía resuelva es
@@ -63,6 +71,17 @@ MULTI = re.compile(r"(there (are|is) (more than one|multiple|several|many|at lea
                    # «1) … 2) …» al abrir la biografía: una entrada por homónimo (más abajo suele ser la discografía)
                    r"|^.{0,200}?(^|[\s:;.])(\(?1[).]|1\s*-)\s.{3,600}?[\s;.](\(?2[).]|2\s*-)\s"
                    r"|_{5,}", re.I | re.S)  # bloques de homónimos separados por «_____»
+
+# Títulos que cualquier homónimo puede tener (tras norm(): sin espacios ni signos).
+GENERIC_TITLE = re.compile(r"(demos?|maquetas?|envivo|live|ep|lp|single|sencillo|promo|grandesexitos|greatesthits|exitos|hits"
+                           r"|unplugged|acustico|sintitulo|untitled|st|bestof|thebestof|lomejor(de)?|compilado|recopilacion"
+                           r"|(vol|volumen)\d*|\d+)")
+
+
+def words(text: str) -> str:
+    """Texto en minúsculas ASCII con los espacios como única puntuación, para buscar nombres enteros."""
+    text = unicodedata.normalize("NFKD", text or "").encode("ascii", "ignore").decode().lower()
+    return " " + re.sub(r"[^a-z0-9]+", " ", text).strip() + " "
 
 
 def bio_marks_vz(bio: str) -> bool:
@@ -166,6 +185,26 @@ def genres_only(tags: list[str]) -> list[str]:
     return [t for t in tags if not VZ_TAG.search(t) and not GEO_TAG.fullmatch(t)]
 
 
+def identity_proof(key: str, name: str, bio: str, tags: list[str], titles: list[str], people: list[str]) -> tuple[str, str] | None:
+    """La segunda prueba de identidad, de la más barata a la que cuesta una petición."""
+    if any(VZ_TAG.search(t) for t in tags) or bio_marks_vz(bio):
+        return "prueba_marca_vz", "Last.fm lo marca como venezolano"
+    text = words(bio)
+    for person in people:
+        if words(person) in text:
+            return "prueba_integrante", f"la biografía nombra a su integrante {person}"
+    ours = {norm(clean_title(title)): title for title in titles
+            if len(norm(clean_title(title))) >= 4 and norm(clean_title(title)) != norm(name)
+            and not GENERIC_TITLE.fullmatch(norm(clean_title(title)))}
+    if ours:
+        top = call(key, "artist.getTopAlbums", artist=name, limit="200").get("topalbums") or {}
+        for album in listed(top.get("album")):
+            title = ours.get(norm(clean_title(album.get("name", ""))))
+            if title:
+                return "prueba_discografia", f"su discografía en Last.fm incluye «{title}»"
+    return None
+
+
 def main() -> None:
     pending = json.loads(Path(sys.argv[1]).read_text(encoding="utf-8"))
     limit = int(sys.argv[sys.argv.index("--limit") + 1]) if "--limit" in sys.argv else None
@@ -176,6 +215,13 @@ def main() -> None:
     for album in pending["albums"]:
         albums_by_artist.setdefault(int(album["artist_id"]), []).append(album)
     names = {int(a["id"]): a["name"] for a in pending["allArtists"]}
+    catalog: dict[int, list[str]] = {}
+    for album in pending["catalogAlbums"]:
+        catalog.setdefault(int(album["artist_id"]), []).append(album["title"])
+    members: dict[int, list[str]] = {}
+    for member in pending["members"]:
+        if len(words(member["name"]).split()) >= 2:
+            members.setdefault(int(member["artist_id"]), []).append(member["name"])
     homonyms: dict[str, int] = {}
     for name in names.values():
         homonyms[norm(name)] = homonyms.get(norm(name), 0) + 1
@@ -188,7 +234,8 @@ def main() -> None:
     rows: list[dict] = []
     texts: list[dict] = []
     doubts: list[dict] = []
-    stats = {"buscados": 0, "varios_artistas": len(various), "homonimos_catalogo": 0, "sin_pagina": 0, "sin_marca_vz": 0,
+    stats = {"buscados": 0, "varios_artistas": len(various), "homonimos_catalogo": 0, "sin_pagina": 0, "sin_segunda_prueba": 0,
+             "prueba_marca_vz": 0, "prueba_integrante": 0, "prueba_discografia": 0,
              "pagina_agrupa_homonimos": 0, "casados": 0, "artistas_con_genero": 0, "artistas_sin_etiquetas": 0,
              "artistas_con_texto": 0, "discos_probados": 0, "discos_casados": 0, "discos_con_genero": 0, "discos_con_texto": 0}
     started = time.time()
@@ -209,9 +256,11 @@ def main() -> None:
             doubts.append({"artistId": artist_id, "name": name, "url": url, "motivo": "la biografía agrupa varios artistas"})
             continue
         artist_tags = weighted_tags(call(key, "artist.getTopTags", artist=name))
-        if not (any(VZ_TAG.search(t) for t in artist_tags) or bio_marks_vz(bio)):
-            stats["sin_marca_vz"] += 1
+        proof = identity_proof(key, name, bio, artist_tags, catalog.get(artist_id, []), members.get(artist_id, []))
+        if not proof:
+            stats["sin_segunda_prueba"] += 1
             continue
+        stats[proof[0]] += 1
         stats["casados"] += 1
         if artist_id in pending_artists:
             values = genres_only(artist_tags)
@@ -219,7 +268,7 @@ def main() -> None:
                 stats["artistas_con_genero"] += 1
                 rows.append({"caseId": f"artist:{artist_id}", "kind": "artist", "entityId": artist_id, "source": "lastfm",
                              "url": url, "title": name, "rawGenres": values,
-                             "identity": "nombre exacto + Last.fm lo marca como venezolano (API)"})
+                             "identity": f"nombre exacto + {proof[1]} (API)"})
             else:
                 stats["artistas_sin_etiquetas"] += 1
             if len(bio) >= 80:
