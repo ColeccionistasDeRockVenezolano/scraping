@@ -11,8 +11,8 @@ describe.runIf(enabled)("DeepSeek real (opt-in)", () => {
       ...(apiKey === undefined ? {} : { apiKey }),
       baseUrl: process.env["DEEPSEEK_BASE_URL"] ?? "https://api.deepseek.com",
       models: {
-        fast: process.env["DEEPSEEK_MODEL_FAST"] ?? "deepseek-v4-flash-0731",
-        reasoning: process.env["DEEPSEEK_MODEL_REASONING"] ?? "deepseek-v4-pro-0813",
+        fast: process.env["DEEPSEEK_MODEL_FAST"] ?? "deepseek-flash",
+        reasoning: process.env["DEEPSEEK_MODEL_REASONING"] ?? "deepseek-v4-pro",
         vision: process.env["DEEPSEEK_MODEL_VISION"] ?? "deepseek-v4-flash-vision-exp",
       },
       maxTokens: 500, timeoutMs: 60_000,
