@@ -80,7 +80,6 @@ const qualify = (table: string): string => (table.includes(".") ? table : `publi
 
 /** Columnas cuyo «vacío» es un DEFAULT del core, no NULL. */
 const EMPTY_AGAIN: Readonly<Record<string, string>> = {
-  "persons.is_venezuelan": "false",
   "albums.album_type": "'other'",
 };
 

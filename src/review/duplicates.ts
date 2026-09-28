@@ -88,7 +88,6 @@ const PAIR_COLUMNS: Partial<Record<MergeKind, readonly [string, string]>> = {
 /** Columnas cuyo «vacío» no es NULL sino el DEFAULT del core: «nadie lo dijo». */
 const EMPTY_RULES: Readonly<Record<string, { empty: string; present: string }>> = {
   "albums.album_type": { empty: "k.album_type='other'", present: "d.album_type<>'other'" },
-  "persons.is_venezuelan": { empty: "k.is_venezuelan=false", present: "d.is_venezuelan=true" },
 };
 /**
  * Los mismos «vacíos» en valores, para la previsualización de fusión
@@ -97,7 +96,6 @@ const EMPTY_RULES: Readonly<Record<string, { empty: string; present: string }>> 
  */
 export const MERGE_EMPTY_VALUES: Readonly<Record<string, unknown>> = {
   "albums.album_type": "other",
-  "persons.is_venezuelan": false,
 };
 
 /**
@@ -362,8 +360,9 @@ async function trackCollisions(client: PoolClient, keepId: number, dropId: numbe
  * Completa en `keep` las columnas vacías con el valor del duplicado: una sola
  * sentencia (antes: un `information_schema` y un UPDATE por columna) y
  * `filled` sale de comparar el antes y el después con RETURNING. Reglas de
- * vacío: `album_type='other'` y `is_venezuelan=false` son el DEFAULT del core
- * —«nadie lo dijo»—, así que un `true` del duplicado se conserva (P9).
+ * vacío: `album_type='other'` es el DEFAULT del core —«nadie lo dijo»—, así
+ * que un tipo del duplicado se conserva (P9). `is_venezuelan` admite NULL
+ * desde 0029: su vacío es NULL y un `false` es un extranjero afirmado.
  */
 async function fillEmptyColumns(client: PoolClient, kind: MergeKind, keepId: number, dropId: number): Promise<string[]> {
   const table = TABLE[kind];

@@ -37,6 +37,7 @@ import { normalizeIdentity } from "../normalization/claims.js";
 import { loadResolutionCandidates, persistResolutionDecision } from "../er/repository.js";
 import { resolveEntity, resolutionThresholdsFromEnv } from "../er/resolver.js";
 import type { ResolutionInput } from "../er/types.js";
+import { deriveVenezuelanFor, VENEZUELAN_CREDIT_TYPES } from "./venezuelan.js";
 
 export const RELATION_KINDS = ["artist_membership", "person_organization", "album_credit", "track_credit", "album_format"] as const;
 export type RelationClaimKind = (typeof RELATION_KINDS)[number];
@@ -487,6 +488,7 @@ async function membership(context: RelationContext): Promise<RelationResult> {
   await auditInsert(context, id,
     { artistId: artist.id, personId: person.id, role, fromYear: from, toYear: to, ...(isCurrent ? { isCurrent } : {}), ...(notes === null ? {} : { notes }) },
     `membresía nueva; ${provenance([["artist", artist], ["person", person]])}`);
+  await deriveVenezuelanFor(client, [person.id], context.claim.runId ?? null);
   return { status: "written", ids: [id], created: 1, detail: "membresía creada y auditada" };
 }
 
@@ -574,13 +576,31 @@ async function insertCredit(
   await auditInsert(context, id,
     { [parentColumn]: parentId, [targetColumn]: targetId, creditType, role, ...(notes === null ? {} : { notes }) },
     `crédito nuevo; ${trace}`);
+  if (targetColumn === "person_id" && isVenezuelanCreditType(creditType)) {
+    await deriveVenezuelanFor(client, [targetId], context.claim.runId ?? null);
+  }
   return { id, created: true };
 }
 
-/** El tipo declarado por una persona manda; si no hay, se clasifica el rol. */
+function isVenezuelanCreditType(type: string): boolean {
+  return (VENEZUELAN_CREDIT_TYPES as readonly string[]).includes(type);
+}
+
+/**
+ * El tipo declarado por una persona manda. Después, el bloque de la fuente:
+ * en la descripción del canal, quien está bajo Musicians es músico y quien
+ * está bajo Guest Musicians es invitado, toque lo que toque. Si no hay
+ * ninguno de los dos, se clasifica el rol.
+ */
+export function creditTypeForSection(section: string | undefined, role: string): CreditType {
+  if (section === "guest_musicians") return "guest";
+  if (section === "musicians") return "musician";
+  return creditTypeForRole(role);
+}
+
 function creditTypeFor(context: RelationContext, role: string): CreditType {
   const declared = humanField(context, "credit_type");
-  return isCreditType(declared) ? declared : creditTypeForRole(role);
+  return isCreditType(declared) ? declared : creditTypeForSection(context.fields.get("credit_section"), role);
 }
 
 async function albumCredit(context: RelationContext): Promise<RelationResult> {
@@ -953,6 +973,10 @@ export async function correctRelationEndpoint(
     }
     await auditRelation(client, input.claim, input.claimId, spec, input.id, field, current, value, "high",
       `corrección humana: ${input.note}`);
+    // La persona que ahora acredita puede ganar evidencia de venezolana.
+    if (field === "person_id" && (input.kind === "artist_membership" || isVenezuelanCreditType(String(row["credit_type"])))) {
+      await deriveVenezuelanFor(client, [value], input.claim.runId ?? null);
+    }
   }
   await client.query(`UPDATE ingest.claims SET ${spec.column}=$1,status='accepted',updated_at=now() WHERE id=$2`, [input.id, input.claimId]);
   await client.query(
@@ -1000,6 +1024,12 @@ export async function correctRelationField(
     await client.query(`UPDATE ${spec.table} SET ${input.field}=$1${cast} WHERE id=$2`, [proposed, input.id]);
     await auditRelation(client, input.claim, input.claimId, spec, input.id, input.field, current, proposed, "high",
       `corrección humana: ${input.note}`);
+    // Un crédito que pasa a músico/invitado puede hacer venezolana a su persona.
+    if (input.field === "credit_type" && isVenezuelanCreditType(String(proposed))) {
+      const credited = await client.query<{ person_id: string | null }>(`SELECT person_id::text FROM ${spec.table} WHERE id=$1`, [input.id]);
+      const personId = credited.rows[0]?.person_id;
+      if (personId) await deriveVenezuelanFor(client, [Number(personId)], input.claim.runId ?? null);
+    }
   }
   await client.query(`UPDATE ingest.claims SET ${spec.column}=$1,status='accepted',updated_at=now() WHERE id=$2`, [input.id, input.claimId]);
   await client.query(

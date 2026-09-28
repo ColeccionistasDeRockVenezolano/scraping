@@ -8,7 +8,7 @@ export interface PersonListRow {
   id: number;
   name: string;
   nationality: string | null;
-  isVenezuelan: boolean;
+  isVenezuelan: boolean | null;
   pictureUrl: string | null;
   /** Créditos de disco y de pista. */
   creditCount: number;
@@ -41,7 +41,7 @@ const HAS_ANY_RELATION = `(
   OR EXISTS (SELECT 1 FROM public.artist_members WHERE person_id=p.id))`;
 
 interface PersonRowShape {
-  id: string; name: string; nationality: string | null; is_venezuelan: boolean; picture_url: string | null;
+  id: string; name: string; nationality: string | null; is_venezuelan: boolean | null; picture_url: string | null;
   credit_count: number; band_count: number;
 }
 
@@ -106,7 +106,7 @@ export interface PersonDetail {
   biography: string | null;
   pictureUrl: string | null;
   nationality: string | null;
-  isVenezuelan: boolean;
+  isVenezuelan: boolean | null;
   birthDate: string | null;
   deathDate: string | null;
   notes: string | null;
@@ -249,7 +249,7 @@ export async function getPersonDetail(id: number): Promise<PersonDetail | null> 
     biography: row["biography"] as string | null,
     pictureUrl: row["picture_url"] as string | null,
     nationality: row["nationality"] as string | null,
-    isVenezuelan: row["is_venezuelan"] as boolean,
+    isVenezuelan: row["is_venezuelan"] as boolean | null,
     birthDate: row["birth_date"] as string | null,
     deathDate: row["death_date"] as string | null,
     notes: row["notes"] as string | null,

@@ -35,7 +35,7 @@ const ENTITY_FIELDS = {
   },
   person: {
     name: text(200), biography: longText.nullable(), pictureUrl: url.nullable(), nationality: text(120).nullable(),
-    isVenezuelan: z.boolean(), birthDate: isoDate.nullable(), deathDate: isoDate.nullable(), notes: longText.nullable(),
+    isVenezuelan: z.boolean().nullable(), birthDate: isoDate.nullable(), deathDate: isoDate.nullable(), notes: longText.nullable(),
   },
   organization: {
     name: text(200),

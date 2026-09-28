@@ -15,7 +15,7 @@ const personListItemSchema = z.object({
   id: z.number().int(),
   name: z.string(),
   nationality: z.string().nullable(),
-  isVenezuelan: z.boolean(),
+  isVenezuelan: z.boolean().nullable().describe("null = sin dato; false = extranjero afirmado."),
   pictureUrl: z.string().nullable(),
   creditCount: z.number().int().describe("Créditos de disco y de pista."),
   bandCount: z.number().int().describe("Membresías de banda."),

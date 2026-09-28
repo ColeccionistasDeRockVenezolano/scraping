@@ -141,7 +141,7 @@ export interface PersonListItem {
   id: number;
   name: string;
   nationality: string | null;
-  isVenezuelan: boolean;
+  isVenezuelan: boolean | null;
   pictureUrl: string | null;
   /** Créditos de disco y de pista (E11.9). */
   creditCount: number;

@@ -52,6 +52,7 @@ import { DeepSeekArbiter, FileArbiter, type Arbiter } from "../ambiguity/arbiter
 import { createDeepSeekGateway } from "../ai/gateway.js";
 import { getEnv } from "../config/env.js";
 import { applySincopaOrganizationRepair, planSincopaOrganizationRepair } from "../review/sincopa-organizations.js";
+import { applyVenezuelanEvidence, readVenezuelanEvidence, venezuelanReason } from "../review/person-venezuelan.js";
 import { runCurationScan, waitForCurationScans } from "../curation/scan.js";
 import { autofixReport, installAutofix, listAutofixRules, runAutofix } from "../curation/autofix.js";
 import { getCurationSummary } from "../curation/repository.js";
@@ -385,6 +386,28 @@ async function main(): Promise<number> {
         if (!confirm) console.log('\n(previsualización: nada se escribió) para aplicar: crv review persons --plan=<archivo> --note="<motivo>" --confirm');
         return 0;
       }
+      // Venezolano/a en personas: miembro o músico/invitado de un disco venezolano
+      // (Brian, 2026-09-22). Solo llena lo que está sin dato.
+      if (args[0] === "derive-venezuelan") {
+        const client = await getPool().connect();
+        let summary;
+        try { summary = await readVenezuelanEvidence(client); } finally { client.release(); }
+        const members = summary.evidence.filter((item) => item.bands.length > 0).length;
+        const onlyCredits = summary.evidence.length - members;
+        console.log(`review derive-venezuelan: ${summary.persons} personas; ya afirmadas ${summary.alreadyTrue} venezolanas y ${summary.alreadyFalse} extranjeras`);
+        console.log(`  ${String(summary.evidence.length).padStart(5)}  se marcan venezolanas (${members} miembros de banda, ${onlyCredits} solo por créditos de músico/invitado)`);
+        console.log(`  ${String(summary.withoutEvidence).padStart(5)}  quedan sin dato (sin banda ni créditos de músico/invitado en discos venezolanos)`);
+        if (args.includes("--list")) for (const item of summary.evidence) console.log(`    p${item.personId}\t${item.name}\t${venezuelanReason(item)}`);
+        const note = args.find((arg) => arg.startsWith("--note="))?.slice("--note=".length);
+        if (!args.includes("--confirm")) {
+          console.log('\n(previsualización: nada se escribió) para aplicar: crv review derive-venezuelan --note="<motivo>" --confirm');
+          return 0;
+        }
+        if (!note?.trim()) { console.error("--note es obligatorio al confirmar"); return 1; }
+        const applied = await applyVenezuelanEvidence(summary.evidence, { note, operator: "cli" });
+        console.log(`  aplicado en ${applied.runs.length} runs (${applied.runs[0] ?? "-"}…${applied.runs.at(-1) ?? "-"}): ${applied.updated} marcadas, ${applied.skipped} ya afirmadas mientras tanto`);
+        return 0;
+      }
       if (args[0] === "sincopa-organizations") {
         const note = args.find((arg) => arg.startsWith("--note="))?.slice("--note=".length);
         const plan = await planSincopaOrganizationRepair();
@@ -488,7 +511,7 @@ async function main(): Promise<number> {
         console.log(JSON.stringify(result, null, 2));
         return 0;
       }
-      console.error('uso: crv review list | show <id> | apply-decisions [--note="<motivo>" --confirm] | sincopa-organizations [--note="<motivo>" --confirm] | keep-repeated-tracks <conflict-id,...> --note="<evidencia>" --confirm | entities [kind] [--limit=N] | approve <kind> "<identity>" <nota> | dismiss <kind> "<identity>" <nota> | approve-batch [kind] [--source=<slug>] [--limit=N] --note="<motivo>" --confirm | dismiss-batch [...]');
+      console.error('uso: crv review list | show <id> | apply-decisions [--note="<motivo>" --confirm] | sincopa-organizations [--note="<motivo>" --confirm] | derive-venezuelan [--list] [--note="<motivo>" --confirm] | keep-repeated-tracks <conflict-id,...> --note="<evidencia>" --confirm | entities [kind] [--limit=N] | approve <kind> "<identity>" <nota> | dismiss <kind> "<identity>" <nota> | approve-batch [kind] [--source=<slug>] [--limit=N] --note="<motivo>" --confirm | dismiss-batch [...]');
       return 1;
     }
 
@@ -1093,6 +1116,9 @@ CRV CLI
   review sincopa-organizations [--note="<motivo>" --confirm]
                       reextrae el crudo con el parser vigente y retira falsos sellos
                       sin evidencia externa ni dependencias; conserva auditoría
+  review derive-venezuelan [--list] [--note="<motivo>" --confirm]
+                      marca venezolanas (is_venezuelan=true) a las personas sin dato que son
+                      miembros de una banda venezolana o músicos/invitados en sus discos
   youtube import-sheet <path>  importa YT Master Spreadsheet de forma idempotente
   youtube seed-claims [--dry-run]  emite los claims de la hoja importada (low: candidatos a revisión)
   youtube discover-channel [channel-id] [--resume]  recorre el playlist de uploads sin hidratar
