@@ -14,7 +14,13 @@ export const longText = z.string().trim().min(1).max(20_000);
 export const year = z.number().int().min(1000).max(9999);
 export const noteSchema = z.string().trim().min(1).max(2000)
   .describe("Motivo de la edición; queda en el run, en la auditoría y en la evidencia del claim.");
-const url = z.string().trim().url().max(2000);
+// Las fichas pueden apuntar a un recurso descargado por el catálogo. Se
+// conserva la validación de URL externa para enlaces editoriales, pero las
+// portadas y fotos locales se expresan como rutas absolutas bajo /crv/media.
+const url = z.string().trim().max(2000).refine(
+  (value) => z.string().url().safeParse(value).success || /^\/crv\/media\/[A-Za-z0-9_./-]+$/u.test(value),
+  "debe ser una URL válida o una ruta local /crv/media/...",
+);
 const isoDate = z.string().regex(/^\d{4}-\d{2}-\d{2}$/u, "fecha AAAA-MM-DD");
 const publication = z.enum(["published", "unlisted", "unpublished", "copyright_blocked", "unknown"]);
 
