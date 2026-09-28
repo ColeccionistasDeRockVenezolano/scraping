@@ -11,6 +11,7 @@
 //    no, se salta y pide volver a resolver. Cada decisión, su transacción.
 //  * Las fusiones reutilizan `mergeInto` (reapunta toda FK, conserva alias,
 //    audita) y los enlaces de video quedan en merge_audit.
+import { withRunScope } from "../db/run-binding.js";
 import type { PoolClient } from "pg";
 import { getPool } from "../db/client.js";
 import { finishRun } from "../ingest/runs.js";
@@ -203,30 +204,34 @@ export async function applyAmbiguityResolutions(options: { reviewIds?: number[];
   const runId = Number(opened.rows[0]!.id);
   result.runId = runId;
 
-  for (const item of planned) {
-    const client = await pool.connect();
-    try {
-      await client.query("BEGIN");
-      await client.query("SELECT pg_advisory_xact_lock(hashtext('merge:duplicates'))");
-      const current = await client.query<{ status: string }>("SELECT status FROM ingest.ambiguity_resolutions WHERE id=$1 FOR UPDATE", [item.resolutionId]);
-      if (current.rows[0]?.status !== "proposed") throw new StaleTarget("la decisión ya no está pendiente");
-      if (item.target && (item.target.action === "link_video_track" || item.target.action === "link_video_album") && !apiSource) throw new Error("falta la fuente youtube-data-api");
-      const detail = await applyTarget(client, item, note, runId, apiSource);
-      await client.query(`
-        UPDATE ingest.ambiguity_resolutions SET status='applied', applied_at=now(), applied_run_id=$2, applied_note=$3 WHERE id=$1`,
-      [item.resolutionId, runId, note]);
-      const closed = await closeReviewIfDone(client, item.reviewId, note, runId);
-      await client.query("COMMIT");
-      result.applied.push({ ...item, detail });
-      if (closed) result.reviewsClosed.push({ reviewId: item.reviewId, status: closed });
-    } catch (error) {
-      await client.query("ROLLBACK");
-      if (error instanceof StaleTarget) result.skipped.push({ ...item, reason: error.message });
-      else result.failed.push({ ...item, error: error instanceof Error ? error.message : String(error) });
-    } finally {
-      client.release();
-    }
-  }
+  // Cada decisión abre su propia transacción: el alcance del run las liga al
+  // diario de cambios (0028) para poder deshacer la aplicación entera.
+  await withRunScope(runId, async () => {
+    for (const item of planned) {
+      const client = await pool.connect();
+      try {
+        await client.query("BEGIN");
+        await client.query("SELECT pg_advisory_xact_lock(hashtext('merge:duplicates'))");
+        const current = await client.query<{ status: string }>("SELECT status FROM ingest.ambiguity_resolutions WHERE id=$1 FOR UPDATE", [item.resolutionId]);
+        if (current.rows[0]?.status !== "proposed") throw new StaleTarget("la decisión ya no está pendiente");
+        if (item.target && (item.target.action === "link_video_track" || item.target.action === "link_video_album") && !apiSource) throw new Error("falta la fuente youtube-data-api");
+        const detail = await applyTarget(client, item, note, runId, apiSource);
+        await client.query(`
+          UPDATE ingest.ambiguity_resolutions SET status='applied', applied_at=now(), applied_run_id=$2, applied_note=$3 WHERE id=$1`,
+        [item.resolutionId, runId, note]);
+        const closed = await closeReviewIfDone(client, item.reviewId, note, runId);
+        await client.query("COMMIT");
+        result.applied.push({ ...item, detail });
+        if (closed) result.reviewsClosed.push({ reviewId: item.reviewId, status: closed });
+      } catch (error) {
+        await client.query("ROLLBACK");
+        if (error instanceof StaleTarget) result.skipped.push({ ...item, reason: error.message });
+        else result.failed.push({ ...item, error: error instanceof Error ? error.message : String(error) });
+      } finally {
+        client.release();
+      }
+    }  });
+
   await finishRun(runId, result.failed.length ? "partial" : "ok", {
     planned: planned.length, applied: result.applied.length, skipped: result.skipped.length, failed: result.failed.length, reviewsClosed: result.reviewsClosed.length,
   }, result.failed.length ? JSON.stringify(result.failed.slice(0, MAX_FAILURES_IN_LOG).map((item) => ({ resolutionId: item.resolutionId, error: item.error }))) : undefined);

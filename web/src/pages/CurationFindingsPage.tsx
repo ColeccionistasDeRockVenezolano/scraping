@@ -197,11 +197,20 @@ export function CurationFindingsPage() {
   const afterWrite = useCallback(() => { reload(); void refreshSummary(); }, [reload, refreshSummary]);
 
   /**
-   * «Deshacer» a mano durante 30 s tras una corrección individual (E8.4): el
-   * lote ya está en el historial, pero volver ahí por un cambio recién hecho es
-   * más trabajo del que merece.
+   * «Deshacer» tras una corrección individual (E8.4). Con una sola corrección
+   * aplicada, su run va a la barra «Deshacer» de siempre (deshacerlo también
+   * marca la corrección como deshecha en su lote); si el lote tocó varias, el
+   * aviso deshace el lote entero.
    */
   const offerUndo = useCallback((batch: FixBatch) => {
+    const runs = batch.items.filter((item) => item.status === "applied" && item.runId !== null);
+    if (runs.length === 1) {
+      notify("success", "Corrección aplicada.");
+      window.dispatchEvent(new CustomEvent<CatalogChangeEvent>(CATALOG_CHANGE_EVENT, {
+        detail: { runId: runs[0]!.runId!, method: "POST", path: `/curation/fixes/${batch.id}` },
+      }));
+      return;
+    }
     notify("success", "Corrección aplicada.", {
       action: {
         label: "Deshacer",

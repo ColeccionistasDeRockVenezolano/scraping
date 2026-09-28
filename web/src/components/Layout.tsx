@@ -1,7 +1,8 @@
 import type { ReactNode } from "react";
 import { NavLink } from "react-router-dom";
-import { Buildings, Disc, MagnifyingGlass, Stack, User, UsersThree, type Icon } from "@phosphor-icons/react";
+import { Buildings, ClockCounterClockwise, Disc, MagnifyingGlass, Stack, User, UsersThree, type Icon } from "@phosphor-icons/react";
 import { OperatorPill } from "./OperatorSettings";
+import { UndoBar } from "./UndoBar";
 import { useOperator } from "../lib/OperatorContext";
 
 interface NavItem { to: string; label: string; mobileLabel?: string; end?: boolean; icon: Icon; adminOnly?: boolean }
@@ -14,6 +15,8 @@ const NAV_ITEMS: ReadonlyArray<NavItem> = [
   { to: "/organizaciones", label: "Organizaciones", mobileLabel: "Organiz.", icon: Buildings },
   // Revisión y Duplicados viven dentro, como pestañas (CurationLayout).
   { to: "/curaduria", label: "Curaduría", mobileLabel: "Curad.", icon: Stack, adminOnly: true },
+  // Todo cambio del catálogo, con su «Deshacer» / «Rehacer».
+  { to: "/historial", label: "Historial", mobileLabel: "Hist.", icon: ClockCounterClockwise, adminOnly: true },
 ];
 
 export function Layout({ children }: { children: ReactNode }) {
@@ -47,6 +50,7 @@ export function Layout({ children }: { children: ReactNode }) {
       <main>
         <div className="container">{children}</div>
       </main>
+      <UndoBar />
     </>
   );
 }

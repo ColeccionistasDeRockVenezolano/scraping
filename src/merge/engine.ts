@@ -1,8 +1,11 @@
 // Unico escritor del core. Toda mutacion pasa por policy, advisory lock,
 // claim y merge_audit. DeepSeek nunca entra en este modulo como ejecutor.
+import { bindRun } from "../db/run-binding.js";
 import type { PoolClient } from "pg";
 import type { DeepSeekGateway } from "../ai/gateway.js";
 import { getPool } from "../db/client.js";
+import { getEnv } from "../config/env.js";
+import { syncEntityGenres } from "../genres/store.js";
 import type { ClaimToPersist, Confidence, PersistedClaim } from "../claims/persistence.js";
 import { createFieldConflict, hasOpenFieldConflict } from "../conflicts/engine.js";
 import { normalizeDisplayName, normalizeEntityName } from "../normalization/entity-name.js";
@@ -693,6 +696,7 @@ export async function keepRepeatedTrackOccurrences(
   const client = await getPool().connect();
   try {
     await client.query("BEGIN");
+    await bindRun(client, options.runId);
     const results: RepeatedTrackResolution[] = [];
     for (const conflictId of [...new Set(conflictIds)]) {
       const loaded = await client.query<{
@@ -793,6 +797,7 @@ export async function resolveFieldConflict(
   const client = await getPool().connect();
   try {
     await client.query("BEGIN");
+    await bindRun(client, options.runId);
     await resolveFieldConflictWith(client, conflictId, resolution, options);
     await client.query("COMMIT");
   } catch (error) { await client.query("ROLLBACK"); throw error; }

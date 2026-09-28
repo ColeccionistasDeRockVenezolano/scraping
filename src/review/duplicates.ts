@@ -39,6 +39,7 @@
 //
 // Personas y créditos no se agrupan solos: su fusión la pide una decisión
 // explícita (person-corrections.ts), que reutiliza `mergeInto`.
+import { bindRun } from "../db/run-binding.js";
 import type { PoolClient } from "pg";
 import { getPool } from "../db/client.js";
 import { finishRun } from "../ingest/runs.js";
@@ -521,6 +522,7 @@ export async function mergeDuplicate(kind: DuplicateKind, keepId: number, dropId
   const client = await getPool().connect();
   try {
     await client.query("BEGIN");
+    await bindRun(client, runId);
     await client.query("SELECT pg_advisory_xact_lock(hashtext('merge:duplicates'))");
     // El rastro completo vive en la auditoría; el resultado del lote se queda
     // con los contadores de siempre.

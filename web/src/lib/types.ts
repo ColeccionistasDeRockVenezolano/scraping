@@ -734,3 +734,83 @@ export interface DistinctPair {
   id: number; kind: string; aId: number; bId: number;
   decidedBy: string; note: string; createdAt: string;
 }
+
+// ── Historial de cambios y deshacer (GET/POST /changes, migración 0028) ──
+
+export type ChangeEntityKind = "artist" | "person" | "organization" | "album" | "track";
+export type UndoStep = "restore" | "revert" | "remove";
+
+export interface ChangeSummary {
+  runId: number;
+  kind: string;
+  status: string;
+  action: string | null;
+  operator: string | null;
+  note: string | null;
+  startedAt: string;
+  finishedAt: string | null;
+  /** El diario tiene sus cambios: se deshace fila por fila. */
+  journaled: boolean;
+  counts: Record<string, { created: number; changed: number; removed: number }>;
+  total: number;
+  entities: Array<{ kind: ChangeEntityKind; id: number; label: string | null; op: "created" | "removed" | "changed" }>;
+  entityTotal: number;
+  undoneBy: number | null;
+  undoOf: number | null;
+  /** Deshizo un deshacer: este run vuelve a aplicar `redoOf`. */
+  redoOf: number | null;
+}
+
+/**
+ * Lo anterior al diario se deshace decisión por decisión: una fusión
+ * (`merged_duplicate`) o una conversión (`absorbed_person`) del historial.
+ * La vista previa la calcula el backend haciendo el deshacer de verdad dentro
+ * de una transacción que vuelve atrás, así que `undoable` no es una promesa.
+ */
+export interface AuditUndoPreview {
+  auditId: number;
+  runId: number | null;
+  kind: "merge" | "absorption";
+  entityKind: string;
+  field: string;
+  reason: string;
+  at: string;
+  restores: { kind: string; id: number; label: string | null };
+  undoneByAuditId: number | null;
+  undoneByRunId: number | null;
+  undoable: boolean;
+  reasonNot: string | null;
+  result: unknown;
+}
+
+export interface UndoConflict {
+  table: string;
+  pk: Record<string, unknown>;
+  reason: "changed" | "missing" | "exists";
+  columns: string[];
+  laterRunId: number | null;
+  label: string | null;
+}
+
+export interface UndoPlan {
+  runId: number;
+  changes: number;
+  steps: Record<UndoStep, number>;
+  byTable: Record<string, Record<UndoStep, number>>;
+  entities: Array<{ kind: string; id: number; label: string | null; step: UndoStep }>;
+  conflicts: UndoConflict[];
+  skipped: UndoConflict[];
+  claimsToSupersede: number;
+}
+
+export interface ChangeDetail extends ChangeSummary {
+  undo: { method: "journal" | "legacy" | null; undoable: boolean; reason: string | null; plan: UndoPlan | null };
+}
+
+export interface ChangeUndoResult {
+  /** Run del deshacer: deshacerlo es rehacer. */
+  runId: number;
+  undoneRunId: number;
+  method: "journal" | "legacy";
+  result: unknown;
+}

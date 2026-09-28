@@ -10,7 +10,9 @@ import type { FastifyInstance } from "fastify";
 import type { ZodTypeProvider } from "fastify-type-provider-zod";
 import { z } from "zod";
 import { withOperatorRun } from "../../merge/operator.js";
-import { undoMergeRun } from "../../merge/unmerge.js";
+import { undoMergeRun, type UnmergeResult } from "../../merge/unmerge.js";
+import { undoRun } from "../../merge/run-undo.js";
+import type { JournalUndoResult } from "../../merge/journal-undo.js";
 import { OPERATOR_SECURITY } from "../auth.js";
 import { writeErrorResponses } from "../schemas.js";
 import { noteSchema } from "./catalog-writes.js";
@@ -41,7 +43,18 @@ export async function registerMergeRunRoutes(app: FastifyInstance): Promise<void
     const mergeRunId = request.params.runId;
     const { runId, result } = await withOperatorRun({
       name: "api:merge:undo", operator: request.operator, note: request.body.note, params: { mergeRunId },
-    }, (context) => undoMergeRun(context, mergeRunId));
+    }, async (context) => {
+      // Con diario (0028) la fusión vuelve entera, también las correcciones
+      // de campo que se eligieron al fusionar; sin él, la inversa propia.
+      const undone = await undoRun(context, mergeRunId, { legacyInverse: undoMergeRun });
+      if (undone.method === "legacy") return undone.result as UnmergeResult;
+      const journal = undone.result as JournalUndoResult;
+      return {
+        mergeRunId,
+        restored: journal.entities.filter((entity) => entity.step === "restore").map((entity) => ({ kind: entity.kind, id: entity.id })),
+        fieldsNotReverted: [],
+      } satisfies UnmergeResult;
+    });
     return { ...result, runId };
   });
 }

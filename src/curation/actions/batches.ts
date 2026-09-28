@@ -40,6 +40,8 @@ import { undoFieldCorrections } from "../../merge/field-undo.js";
 import { OperatorError, withOperatorRun, type OperatorContext } from "../../merge/operator.js";
 import { undoEntityRemoval, undoRelationCreation } from "../../merge/structural-undo.js";
 import { undoMergeRun } from "../../merge/unmerge.js";
+import { runHasJournal } from "../../merge/journal-undo.js";
+import { undoRun } from "../../merge/run-undo.js";
 import {
   CurationError, getFindingForUpdate, getFindingsByIds, listGroupFindings, type FindingGroupFilter, type FindingRow,
 } from "../repository.js";
@@ -1160,7 +1162,13 @@ async function undoItem(original: BatchRow, undoId: number, item: ItemRow, opera
   const runId = typeof item.params["runId"] === "number" ? item.params["runId"] : null;
   const originals = Array.isArray(item.params["itemIds"]) ? item.params["itemIds"].filter((id): id is number => typeof id === "number") : [];
   const action = item.action_key ? getFixAction(item.action_key) : undefined;
-  const inverse = action?.inverse ? INVERSES[action.inverse] : null;
+  // Con diario (0028) toda corrección se deshace igual; sin él, con la inversa
+  // propia de la acción. `undoRun` elige y deja constancia en run_undos.
+  const legacyInverse = action?.inverse ? INVERSES[action.inverse] : null;
+  const journaled = runId !== null && await runHasJournal(getPool(), runId);
+  const inverse: Inverse | null = journaled || legacyInverse
+    ? (context, id) => undoRun(context, id, { legacyInverse })
+    : null;
   if (runId === null || !action || !inverse) {
     const message = runId === null
       ? "la corrección ya no conserva su run: no se puede deshacer"

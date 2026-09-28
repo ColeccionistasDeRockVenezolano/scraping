@@ -222,6 +222,34 @@ async function checkMergeAudit(pool: Pool): Promise<DoctorCheck> {
  * con fuentes pero ninguna habilitada, no puede scrapear nada — es un aviso
  * accionable, no un fallo (ambos estados son válidos y reversibles).
  */
+/**
+ * Diario de cambios (0028): toda tabla registrada que exista tiene su
+ * disparador, y las escrituras de los últimos 7 días quedaron ligadas a un
+ * run. Una escritura sin run está en el diario pero no se puede deshacer
+ * desde el historial: señala un proceso que abre transacciones sin
+ * `withRunScope` (src/db/run-binding.ts).
+ */
+async function checkChangeJournal(pool: Pool): Promise<DoctorCheck> {
+  const exists = await pool.query<{ ok: boolean }>("SELECT to_regclass('ingest.change_journal') IS NOT NULL AS ok");
+  if (!exists.rows[0]?.ok) return check("journal.triggers", "warn", "sin diario de cambios: falta la migración 0028_change_journal (npm run db:migrate)");
+  const missing = await pool.query<{ table_name: string }>(`
+    SELECT t.table_name FROM ingest.change_journal_tables t
+     WHERE to_regclass(t.table_name) IS NOT NULL
+       AND NOT EXISTS (SELECT 1 FROM pg_trigger g WHERE g.tgrelid = to_regclass(t.table_name) AND g.tgname = 'crv_journal')
+     ORDER BY 1`);
+  if (missing.rows.length) {
+    return check("journal.triggers", "fail",
+      `${missing.rows.length} tabla(s) sin disparador del diario (${missing.rows.map((row) => row.table_name).join(", ")}): SELECT ingest.crv_journal_attach_all();`);
+  }
+  const unbound = await pool.query<{ n: string }>(
+    "SELECT count(*)::text AS n FROM ingest.change_journal WHERE run_id IS NULL AND at > now() - interval '7 days'");
+  const n = Number(unbound.rows[0]?.n ?? 0);
+  // Un cambio sin run (SQL a mano, semillas) es legítimo: se informa, no se avisa.
+  return check("journal.triggers", "ok", n > 0
+    ? `todas las tablas registradas tienen disparador; ${n} cambio(s) de los últimos 7 días sin run (hechos fuera de la app: no se deshacen desde el historial)`
+    : "todas las tablas registradas tienen disparador y los cambios recientes tienen run");
+}
+
 async function checkSources(pool: Pool): Promise<DoctorCheck> {
   try {
     const { rows } = await pool.query<{ total: string; enabled: string }>(

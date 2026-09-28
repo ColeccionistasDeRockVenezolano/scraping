@@ -7,8 +7,46 @@ import pg from "pg";
 import { drizzle } from "drizzle-orm/node-postgres";
 import { getEnv } from "../config/env.js";
 import * as schema from "./schema/index.js";
+import { currentRunScope, syncSessionRun } from "./run-binding.js";
 
 const { Pool } = pg;
+
+type ConnectCallback = (err: Error | undefined, client: pg.PoolClient | undefined, done: (release?: unknown) => void) => void;
+
+/**
+ * El pool de siempre, más una cosa: cada conexión que presta lleva `crv.run_id`
+ * con el run de quien la pide (`withRunScope`, src/db/run-binding.ts), para
+ * que el diario de cambios (0028) sepa a qué run pertenece cada escritura.
+ * `pool.query` y Drizzle pasan también por aquí.
+ */
+class RunAwarePool extends Pool {
+  override connect(): Promise<pg.PoolClient>;
+  override connect(callback: ConnectCallback): void;
+  override connect(callback?: ConnectCallback): Promise<pg.PoolClient> | void {
+    // El run se lee aquí, en el contexto de quien pide la conexión: el
+    // préstamo puede resolverse más tarde desde el contexto de otro.
+    const runId = currentRunScope();
+    if (callback) {
+      super.connect((err, client, done) => {
+        if (err || !client) return callback(err, client, done);
+        syncSessionRun(client, runId).then(
+          () => callback(undefined, client, done),
+          (syncError: Error) => { done(syncError); callback(syncError, undefined, done); },
+        );
+      });
+      return;
+    }
+    return super.connect().then(async (client) => {
+      try {
+        await syncSessionRun(client, runId);
+      } catch (error) {
+        client.release(error as Error);
+        throw error;
+      }
+      return client;
+    });
+  }
+}
 
 // DATE sin zona: `pg` lo convierte a un Date en hora local, y la fecha
 // guardada (birth_date = 1970-05-02) deja de ser comparable con la afirmada
@@ -19,7 +57,7 @@ let pool: pg.Pool | undefined;
 
 export function getPool(): pg.Pool {
   if (!pool) {
-    pool = new Pool({ connectionString: getEnv().DATABASE_URL });
+    pool = new RunAwarePool({ connectionString: getEnv().DATABASE_URL });
   }
   return pool;
 }

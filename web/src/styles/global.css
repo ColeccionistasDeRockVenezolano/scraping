@@ -1107,3 +1107,77 @@ tr.is-excluded { opacity: 0.45; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
 }
+
+/* ── Deshacer / Historial de cambios (migración 0028) ──────────────────── */
+.undo-bar {
+  position: fixed; z-index: 190; left: 50%; transform: translateX(-50%);
+  bottom: 20px; width: min(760px, calc(100vw - 32px));
+  display: flex; align-items: center; gap: 12px; padding: 10px 12px 10px 16px;
+  background: var(--surface-3); border: 1px solid color-mix(in srgb, var(--teal) 45%, var(--border));
+  border-radius: var(--radius-sm); box-shadow: var(--shadow-md); font-size: 13px;
+  animation: crv-fade 0.15s ease;
+}
+.undo-bar__text { flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.undo-bar__text strong { overflow-wrap: anywhere; }
+.undo-bar__detail { color: var(--text-muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.undo-bar__actions { display: flex; align-items: center; gap: 6px; flex: 0 0 auto; }
+.undo-bar__actions .btn { display: inline-flex; align-items: center; gap: 6px; }
+.undo-bar__close {
+  display: grid; place-items: center; width: 32px; height: 32px; border-radius: var(--radius-sm);
+  background: transparent; border: 1px solid transparent; color: var(--text-muted); cursor: pointer;
+}
+.undo-bar__close:hover { color: var(--text); background: var(--surface-2); }
+/* La barra no tapa los avisos: suben por encima de ella mientras está. */
+body:has(.undo-bar) .toast-stack { bottom: 96px; }
+body.has-modal .undo-bar { visibility: hidden; }
+
+.undo-dialog__what { display: flex; flex-direction: column; gap: 3px; margin-bottom: 12px; }
+.undo-dialog__note { color: var(--text-muted); font-style: italic; overflow-wrap: anywhere; }
+.undo-dialog__detour { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.undo-dialog__entities, .undo-dialog__conflicts, .undo-dialog__tables ul { margin: 8px 0; padding-left: 18px; display: grid; gap: 4px; }
+.undo-dialog__entities { list-style: none; padding-left: 0; }
+.undo-dialog__tables { margin: 8px 0; color: var(--text-muted); font-size: 12.5px; }
+.undo-dialog__tables summary { cursor: pointer; }
+
+.change-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.change-row {
+  display: flex; gap: 12px; align-items: flex-start; padding: 12px 14px;
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm);
+}
+.change-row--undone { opacity: 0.72; }
+.change-row__main { flex: 1 1 auto; min-width: 0; display: grid; gap: 4px; }
+.change-row__title { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.change-row__meta { font-size: 12.5px; }
+.change-row__note { color: var(--text-muted); font-size: 13px; font-style: italic; overflow-wrap: anywhere; }
+.change-row__entities { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-top: 2px; }
+.change-row__actions { flex: 0 0 auto; }
+.change-row__actions .btn { display: inline-flex; align-items: center; gap: 6px; }
+.change-chip {
+  display: inline-flex; align-items: center; gap: 6px; padding: 3px 8px; font-size: 12px;
+  border-radius: var(--radius-pill); background: var(--surface-2); border: 1px solid var(--border);
+  max-width: 100%; overflow-wrap: anywhere;
+}
+.change-chip__op { font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-faint); }
+.change-chip__op--created { color: var(--teal); }
+.change-chip__op--removed { color: var(--red); }
+.change-chip__op--changed { color: var(--amber); }
+.removed-entity .btn { display: inline-flex; align-items: center; gap: 6px; margin-top: 12px; }
+
+@media (max-width: 760px) {
+  /* Encima de la navegación inferior. */
+  .undo-bar {
+    bottom: calc(72px + env(safe-area-inset-bottom)); flex-wrap: wrap;
+    padding: 10px 10px 10px 12px; gap: 8px;
+  }
+  .undo-bar__actions { width: 100%; }
+  .undo-bar__actions .btn:first-child { flex: 1 1 auto; justify-content: center; }
+  .undo-bar__history { display: none; }
+  .undo-bar__close { width: 44px; height: 44px; }
+  body:has(.undo-bar) .toast-stack { bottom: calc(190px + env(safe-area-inset-bottom)); }
+  body:has(.undo-bar) { padding-bottom: calc(190px + env(safe-area-inset-bottom)); }
+  .change-row { flex-direction: column; }
+  .change-row__actions, .change-row__actions .btn { width: 100%; justify-content: center; }
+}
+@media (min-width: 761px) {
+  body:has(.undo-bar) main { padding-bottom: 96px; }
+}

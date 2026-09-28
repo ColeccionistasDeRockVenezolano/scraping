@@ -6,7 +6,6 @@ import { useAsync } from "../lib/useAsync";
 import { useMovedToRedirect } from "../lib/useMovedTo";
 import { useOperator } from "../lib/OperatorContext";
 import { useToast } from "../lib/ToastContext";
-import { ErrorState } from "../components/StateViews";
 import { DetailSkeleton } from "../components/Skeletons";
 import { AliasEditor } from "../components/AliasEditor";
 import { EntityFormModal } from "../components/EntityFormModal";
@@ -14,6 +13,7 @@ import { ConfirmDialog } from "../components/ConfirmDialog";
 import { MergeEntityModal } from "../components/MergeEntityModal";
 import { PersonOrgManager } from "../components/PersonOrgManager";
 import { EntityHistory } from "../components/EntityHistory";
+import { EntityLoadError } from "../components/RemovedEntityState";
 import { initialOf } from "../components/EntityCard";
 import { ORGANIZATION_FIELDS } from "../lib/entityFields";
 import { organizationTypeLabel } from "../lib/labels";
@@ -31,7 +31,7 @@ export function OrganizationDetailPage() {
   const [merging, setMerging] = useState(false);
 
   if (loading) return <DetailSkeleton />;
-  if (error || !org) return <ErrorState message={error ?? "Organización no encontrada."} onRetry={reload} />;
+  if (error || !org) return <EntityLoadError message={error ?? "Organización no encontrada."} errorValue={errorValue} onRetry={reload} />;
 
   return (
     <>

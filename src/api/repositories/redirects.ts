@@ -10,9 +10,16 @@ export {
 
 import { resolveRedirect, type RedirectKind } from "../../merge/redirects.js";
 import { notFound, type ApiError } from "../http-errors.js";
+import { removedBy } from "./changes.js";
 
-/** 404 de una ficha que no existe, con `movedTo` cuando su id fue fusionado. */
+/**
+ * 404 de una ficha que no existe, con `movedTo` cuando su id fue fusionado y
+ * `removedByRun` cuando el diario sabe qué cambio la retiró (la web ofrece
+ * deshacerlo desde ahí).
+ */
 export async function notFoundEntity(kind: RedirectKind, id: number): Promise<ApiError> {
   const moved = await resolveRedirect(kind, id);
-  return notFound(kind, id, moved ? { movedTo: moved } : undefined);
+  const removedByRun = await removedBy(kind, id);
+  const details = { ...(moved ? { movedTo: moved } : {}), ...(removedByRun === null ? {} : { removedByRun }) };
+  return notFound(kind, id, Object.keys(details).length ? details : undefined);
 }

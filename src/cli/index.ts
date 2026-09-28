@@ -38,6 +38,12 @@ import { enrichArtistFromYouTube } from "../youtube/enrich.js";
 import { reconcileYouTubeChannel } from "../youtube/reconcile.js";
 import { YT_MASTER_XLSX_PATH } from "../ingest/sources.js";
 import { getPool } from "../db/client.js";
+import { withOperatorRun } from "../merge/operator.js";
+import { previewRunUndo, undoRun } from "../merge/run-undo.js";
+import pg from "pg";
+import { previewAuditUndo, undoAuditEntry } from "../merge/audit-undo.js";
+import { rebuildTraces } from "../merge/legacy-trace.js";
+import { getChange } from "../api/repositories/changes.js";
 import { keepRepeatedTrackOccurrences } from "../merge/engine.js";
 import { scanAmbiguities } from "../ambiguity/scan.js";
 import { resolveAmbiguities } from "../ambiguity/resolve.js";
@@ -168,8 +174,99 @@ async function main(): Promise<number> {
     }
 
     case "runs": {
-      if (args[0] !== "list") { console.error("uso: crv runs list"); return 1; }
-      for (const run of await listRuns()) console.log(`${run.id}\t${run.kind}\t${run.status}\t${run.startedAt.toISOString()}`);
+      if (args[0] === "list") {
+        for (const run of await listRuns()) console.log(`${run.id}\t${run.kind}\t${run.status}\t${run.startedAt.toISOString()}`);
+        return 0;
+      }
+      // Deshacer cualquier run (migración 0028): la misma puerta que la web.
+      const runId = Number(args[1]);
+      if ((args[0] === "show" || args[0] === "undo") && Number.isSafeInteger(runId) && runId > 0) {
+        const change = await getChange(runId);
+        if (!change) { console.error(`run inexistente: ${runId}`); return 1; }
+        const client = await getPool().connect();
+        let preview;
+        try {
+          preview = await previewRunUndo(client, runId);
+        } finally {
+          client.release();
+        }
+        const note = args.find((arg) => arg.startsWith("--note="))?.slice("--note=".length);
+        if (args[0] === "show" || !args.includes("--confirm") || !note?.trim()) {
+          console.log(JSON.stringify({ change, undo: preview }, null, 2));
+          if (args[0] === "undo") {
+            console.log(preview.undoable
+              ? `\n(previsualización: nada se escribió) para deshacer: crv runs undo ${runId} --note="<motivo>" --confirm`
+              : `\nno se puede deshacer: ${preview.reason}`);
+          }
+          return args[0] === "undo" && !preview.undoable ? 1 : 0;
+        }
+        const { runId: undoRunId, result } = await withOperatorRun({
+          name: "cli:undo:run", operator: getEnv().CRV_OPERATOR_NAME, note, params: { undoesRunId: runId },
+        }, (context) => undoRun(context, runId));
+        console.log(JSON.stringify({ undoRunId, ...result }, null, 2));
+        console.log(`\nrun ${runId} deshecho por el run ${undoRunId}; para rehacerlo: crv runs undo ${undoRunId} --note="<motivo>" --confirm`);
+        return 0;
+      }
+      console.error('uso: crv runs list | show <id> | undo <id> [--note="<motivo>" --confirm]');
+      return 1;
+    }
+
+    // Lo anterior al diario se deshace decisión por decisión (una fusión o una
+    // conversión del historial de la ficha), no run por run.
+    case "audit": {
+      const auditId = Number(args[1]);
+      if ((args[0] === "show" || args[0] === "undo") && Number.isSafeInteger(auditId) && auditId > 0) {
+        const preview = await previewAuditUndo(auditId);
+        if (!preview) { console.error(`cambio del historial inexistente o no reversible por separado: ${auditId}`); return 1; }
+        const note = args.find((arg) => arg.startsWith("--note="))?.slice("--note=".length);
+        if (args[0] === "show" || !args.includes("--confirm") || !note?.trim()) {
+          console.log(JSON.stringify(preview, null, 2));
+          if (args[0] === "undo") {
+            console.log(preview.undoable
+              ? `\n(previsualización: nada se escribió) para deshacer: crv audit undo ${auditId} --note="<motivo>" --confirm`
+              : `\nno se puede deshacer: ${preview.reason_not}`);
+          }
+          return args[0] === "undo" && !preview.undoable ? 1 : 0;
+        }
+        const { runId: undoRunId, result } = await withOperatorRun({
+          name: "cli:undo:audit", operator: getEnv().CRV_OPERATOR_NAME, note, params: { undoesAuditId: auditId },
+        }, (context) => undoAuditEntry(context, auditId));
+        console.log(JSON.stringify({ undoRunId, ...result }, null, 2));
+        console.log(`\ncambio ${auditId} deshecho por el run ${undoRunId}; para rehacerlo: crv runs undo ${undoRunId} --note="<motivo>" --confirm`);
+        return 0;
+      }
+      console.error('uso: crv audit show <auditId> | undo <auditId> [--note="<motivo>" --confirm]');
+      return 1;
+    }
+
+    // Rastro de las fusiones anteriores a E11.1: qué filas movieron, sacado de
+    // una instantánea anterior al cambio (un respaldo restaurado aparte).
+    case "merges": {
+      if (args[0] !== "rebuild-traces") {
+        console.error('uso: crv merges rebuild-traces --snapshot=<postgresql://...> [--run=<id>] [--label="<respaldo>"]');
+        return 1;
+      }
+      const snapshotUrl = args.find((arg) => arg.startsWith("--snapshot="))?.slice("--snapshot=".length);
+      if (!snapshotUrl) { console.error("falta --snapshot=<postgresql://...> (una base con el respaldo restaurado)"); return 1; }
+      const label = args.find((arg) => arg.startsWith("--label="))?.slice("--label=".length) ?? snapshotUrl.replace(/:[^:@/]*@/u, ":***@");
+      const runArg = args.find((arg) => arg.startsWith("--run="))?.slice("--run=".length);
+      const snapshot = new pg.Client({ connectionString: snapshotUrl });
+      await snapshot.connect();
+      const client = await getPool().connect();
+      try {
+        await client.query("BEGIN");
+        const summary = await rebuildTraces(client, snapshot, label,
+          runArg ? { runId: Number(runArg) } : {});
+        await client.query("COMMIT");
+        console.log(JSON.stringify({ ...summary, unverified: summary.unverified.slice(0, 20) }, null, 2));
+        console.log(`\n${summary.verified} de ${summary.merges} fusiones quedaron con rastro verificado (se pueden deshacer).`);
+      } catch (error) {
+        await client.query("ROLLBACK");
+        throw error;
+      } finally {
+        client.release();
+        await snapshot.end();
+      }
       return 0;
     }
 
@@ -970,6 +1067,13 @@ CRV CLI
   sources:evidence <slug> <url> "<extracto>" [notas]
                       registra evidencia manual de una fuente limitada/manual: abre revisión, no crea claims
   runs list           lista los runs (id, kind, estado, inicio)
+  runs show <id>      qué cambió un run y si se puede deshacer
+  runs undo <id>      deshace un run con el diario de cambios [--note="<motivo>" --confirm]
+  audit show <id>     qué haría deshacer una fusión o conversión del historial (lo anterior al diario)
+  audit undo <id>     la deshace [--note="<motivo>" --confirm]
+  merges rebuild-traces --snapshot=<postgresql://...> [--run=<id>]
+                      reconstruye, desde un respaldo restaurado aparte, qué filas movió cada fusión
+                      anterior a E11.1; solo queda verificado lo que cuadra con lo que la fusión registró
   review list | review show <id>
   review entities [kind] [--limit=N]
                       entidades candidatas pendientes, agrupadas por entidad y no por claim

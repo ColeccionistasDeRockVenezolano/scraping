@@ -48,11 +48,15 @@ export async function resolveRedirect(
   // entity_redirects (no hay persona destino), el destino queda en la
   // auditoría `absorbed_person` de la entidad que la absorbió.
   const { rows } = await queryable.query<{ kind: "artist" | "organization"; id: string }>(`
-    SELECT CASE WHEN organization_id IS NOT NULL THEN 'organization' ELSE 'artist' END AS kind,
-           COALESCE(organization_id, artist_id)::text AS id
-      FROM ingest.merge_audit
-     WHERE field='absorbed_person' AND old_value->'person'->>'id' = $1::text
-     ORDER BY id DESC LIMIT 1`, [id]);
+    SELECT CASE WHEN a.organization_id IS NOT NULL THEN 'organization' ELSE 'artist' END AS kind,
+           COALESCE(a.organization_id, a.artist_id)::text AS id
+      FROM ingest.merge_audit a
+     WHERE a.field='absorbed_person' AND a.old_value->'person'->>'id' = $1::text
+       -- Una conversión deshecha ya no redirige: la persona volvió al catálogo.
+       AND NOT EXISTS (
+         SELECT 1 FROM ingest.merge_audit u
+          WHERE u.field='unabsorbed_person' AND u.old_value->>'undoneAuditId' = a.id::text)
+     ORDER BY a.id DESC LIMIT 1`, [id]);
   const absorbed = rows[0];
   return absorbed ? { kind: absorbed.kind, id: Number(absorbed.id) } : null;
 }

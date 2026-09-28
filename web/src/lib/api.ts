@@ -13,6 +13,7 @@ import type {
   CurationAutofixRule, CurationAutofixRun, CurationAutofixState,
   AlbumMergePreview, AlbumMergeResult, PersonSplitPreview, PersonSplitResult,
   FindingActionsResult, FixBatch, FixBatchSummary, DistinctPair, ConflictResolveResult, ConflictResolveGroupResult,
+  AuditUndoPreview, ChangeDetail, ChangeEntityKind, ChangeSummary, ChangeUndoResult,
 } from "./types";
 
 /**
@@ -98,8 +99,21 @@ async function request<T>(path: string, options: RequestOptions = {}): Promise<T
     }
     throw new ApiError(response.status, error?.code ?? "unknown", error?.message ?? response.statusText, error?.details);
   }
+  // Toda escritura del catálogo es un run: se anuncia para que la barra de
+  // «Deshacer» (UndoBar) lo ofrezca a la vista, sea edición, fusión,
+  // división, retiro o un deshacer (que se deshace = rehacer).
+  const runId = (json as { runId?: unknown } | undefined)?.runId;
+  if (method !== "GET" && typeof runId === "number") {
+    window.dispatchEvent(new CustomEvent<CatalogChangeEvent>(CATALOG_CHANGE_EVENT, { detail: { runId, method, path } }));
+  }
   return json as T;
 }
+
+/** Evento de ventana tras cada escritura con run (ver UndoBar). */
+export const CATALOG_CHANGE_EVENT = "crv-change";
+/** Evento de ventana tras deshacer o rehacer: las vistas abiertas recargan (useAsync). */
+export const CATALOG_DATA_CHANGED_EVENT = "crv-data-changed";
+export interface CatalogChangeEvent { runId: number; method: string; path: string }
 
 export interface AuthSession {
   user: OperatorUser;
@@ -224,7 +238,19 @@ export const claimsApi = {
 
 export const auditApi = {
   forEntity: (entity: string, id: number, params: Paged = {}) => request<Page<AuditRow>>("/audit", { query: { entity, id, ...params } }),
+  /** Qué pasaría al deshacer esa fusión o conversión suelta (no escribe nada). */
+  undoPreview: (auditId: number) => request<AuditUndoPreview>(`/audit/${auditId}/undo`),
+  undoEntry: (auditId: number, note: string) =>
+    request<{ runId: number; auditId: number; kind: "merge" | "absorption" }>(`/audit/${auditId}/undo`, { method: "POST", body: { note }, authenticated: true }),
   run: (id: number) => request<{ id: number; kind: string; status: string; sourceId: number | null; startedAt: string; finishedAt: string | null; params: unknown; counters: unknown; errorLog: string | null }>(`/runs/${id}`),
+};
+
+export const changesApi = {
+  list: (params: Paged & { entity?: ChangeEntityKind; id?: number; journaled?: boolean } = {}) =>
+    request<Page<ChangeSummary>>("/changes", { query: params }),
+  get: (runId: number) => request<ChangeDetail>(`/changes/${runId}`),
+  undo: (runId: number, note: string) =>
+    request<ChangeUndoResult>(`/changes/${runId}/undo`, { method: "POST", body: { note }, authenticated: true }),
 };
 
 export const youtubeApi = {
