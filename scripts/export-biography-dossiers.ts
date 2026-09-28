@@ -22,6 +22,7 @@ import { existsSync, mkdirSync, readFileSync, readdirSync, rmSync, writeFileSync
 import path from "node:path";
 import { getEnv } from "../src/config/env.js";
 import { closeDb, getPool } from "../src/db/client.js";
+import { SKIP_SOURCE_ROWS } from "./genre-source-skip.js";
 import { canonical, indexPosts, prose, TEXT_SOURCES } from "./lib/laya-texts.js";
 
 type Kind = "artist" | "album" | "person" | "organization";
@@ -62,7 +63,11 @@ async function main(): Promise<void> {
 
   // --- Fuentes cosechadas --------------------------------------------------
   const harvested = new Map<string, SourceText[]>();
-  const push = (caseId: string, item: SourceText) => harvested.set(caseId, [...(harvested.get(caseId) ?? []), item]);
+  // Las páginas vetadas en genre-source-skip.ts son de homónimos: tampoco sirven para la biografía.
+  const push = (caseId: string, item: SourceText) => {
+    if (SKIP_SOURCE_ROWS.has(`${item.source}|${caseId}`)) return;
+    harvested.set(caseId, [...(harvested.get(caseId) ?? []), item]);
+  };
   const seenText = new Set<string>();
   if (existsSync(TEXTS_DIR)) {
     for (const file of readdirSync(TEXTS_DIR).filter((name) => name.endsWith(".jsonl") && !name.includes("-sample"))) {
