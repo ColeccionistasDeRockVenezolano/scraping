@@ -1,0 +1,13 @@
+{
+  "decidedAt": "2026-09-28",
+  "evidence": "Interamericana de Grabaciones (Integra) es un sello venezolano de los años 60: figuraba como persona en tres fichas (294, 1915, 8371), fusionadas por las revisiones #193533 y #193684. Sus créditos pasan a la organización creada en el run 10467.",
+  "corrections": [
+    {
+      "op": "to_organization",
+      "person": { "id": 8371, "name": "Interamericana de Grabaciones (Integra)" },
+      "organization": { "id": 1476, "name": "Interamericana de Grabaciones" },
+      "keepNameAsAlias": true,
+      "why": "Es un sello, no una persona: sus créditos (dirección, producción) son del sello en los recopilatorios de 1967–1968"
+    }
+  ]
+}

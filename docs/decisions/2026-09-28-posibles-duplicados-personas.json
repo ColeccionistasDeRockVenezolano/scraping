@@ -1,0 +1,1261 @@
+{
+  "decidedAt": "2026-09-28",
+  "evidence": "Posibles duplicados de persona (167 revisiones) decididos por delegación de Brian (2026-09-28) con la evidencia por par de reports/person-duplicates-evidence-2026-09-28.md: mismo nombre y apodo, o nombre poco común con banda, disco, recopilatorio o compañeros en común. Los pares con apodos o apellidos distintos se cierran como personas distintas; los nombres comunes sin vínculo quedan abiertos.",
+  "corrections": [
+    {
+      "op": "merge",
+      "keep": {
+        "id": 112,
+        "name": "Alejandro Estrada"
+      },
+      "drop": {
+        "id": 859,
+        "name": "Alejandro Estrada \"Alz\""
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Alejandro Estrada \"Alz\"» y «Alejandro Estrada» comparten nombre y apodo o evidencia concreta (revisiones #193524; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 113,
+        "name": "Carlos Astros"
+      },
+      "drop": {
+        "id": 861,
+        "name": "Carlos Astros \"Carlz\""
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Carlos Astros \"Carlz\"» y «Carlos Astros» comparten nombre y apodo o evidencia concreta (revisiones #193525; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 223,
+        "name": "Annabella Almenar"
+      },
+      "drop": {
+        "id": 2033,
+        "name": "Annabella Almenar \"Bélica\""
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Annabella Almenar \"Bélica\"» y «Annabella Almenar» comparten nombre y apodo o evidencia concreta (revisiones #193532; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 372,
+        "name": "Norton Pérez"
+      },
+      "drop": {
+        "id": 2766,
+        "name": "Nörton \"Mars\" Pérez"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Nörton \"Mars\" Pérez» y «Norton Pérez» comparten nombre y apodo o evidencia concreta (revisiones #193538; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 376,
+        "name": "Alfredo Gil"
+      },
+      "drop": {
+        "id": 7963,
+        "name": "Alfredo \"Pollo\" Gil"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Alfredo \"Pollo\" Gil» y «Alfredo Gil» comparten nombre y apodo o evidencia concreta (revisiones #193539; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 730,
+        "name": "Alberto Montenegro"
+      },
+      "drop": {
+        "id": 384,
+        "name": "Alberto \"Beto\" Montenegro"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Alberto \"Beto\" Montenegro» y «Alberto Montenegro» comparten nombre y apodo o evidencia concreta (revisiones #193540; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 739,
+        "name": "Brian Gardner"
+      },
+      "drop": {
+        "id": 1283,
+        "name": "Brian \"Big Bass\" Gardner"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Brian \"Big Bass\" Gardner» y «Brian Gardner» comparten nombre y apodo o evidencia concreta (revisiones #193543, #193544, #193563; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 739,
+        "name": "Brian Gardner"
+      },
+      "drop": {
+        "id": 445,
+        "name": "Brian Gardner \"Big Bass\""
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Brian Gardner \"Big Bass\"» y «Brian Gardner» comparten nombre y apodo o evidencia concreta (revisiones #193543, #193544, #193563; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 511,
+        "name": "José \"Pingüino\" Echezuría"
+      },
+      "drop": {
+        "id": 463,
+        "name": "José \"Pigüino\" Echezuría"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «José \"Pigüino\" Echezuría» y «José \"Pingüino\" Echezuría» comparten nombre y apodo o evidencia concreta (revisiones #193545; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 3413,
+        "name": "Carlos Eduardo Troconis \"Cayayo\""
+      },
+      "drop": {
+        "id": 608,
+        "name": "Carlos Eduardo \"Cayayo\" Troconis"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Carlos Eduardo \"Cayayo\" Troconis» y «Carlos Eduardo Troconis \"Cayayo\"» comparten nombre y apodo o evidencia concreta (revisiones #193554, #193555, #193659, #193680; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 3413,
+        "name": "Carlos Eduardo Troconis \"Cayayo\""
+      },
+      "drop": {
+        "id": 8029,
+        "name": "Carlos Eduardo Troconis"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Carlos Eduardo Troconis» y «Carlos Eduardo Troconis \"Cayayo\"» comparten nombre y apodo o evidencia concreta (revisiones #193554, #193555, #193659, #193680; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 3413,
+        "name": "Carlos Eduardo Troconis \"Cayayo\""
+      },
+      "drop": {
+        "id": 9462,
+        "name": "Carlos Troconis"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Carlos Troconis» y «Carlos Eduardo Troconis \"Cayayo\"» comparten nombre y apodo o evidencia concreta (revisiones #193554, #193555, #193659, #193680; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2857,
+        "name": "Jesús Toro"
+      },
+      "drop": {
+        "id": 627,
+        "name": "Jesús \"Torito\" Toro"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Jesús \"Torito\" Toro» y «Jesús Toro» comparten nombre y apodo o evidencia concreta (revisiones #193556; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 721,
+        "name": "Luis \"Droopy\" Pulido"
+      },
+      "drop": {
+        "id": 2061,
+        "name": "Luis Pulido"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Luis Pulido» y «Luis \"Droopy\" Pulido» comparten nombre y apodo o evidencia concreta (revisiones #193560; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 8415,
+        "name": "Juan Carlos Pineda"
+      },
+      "drop": {
+        "id": 728,
+        "name": "Juan Carlos \"Tito\" Pineda"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Juan Carlos \"Tito\" Pineda» y «Juan Carlos Pineda» comparten nombre y apodo o evidencia concreta (revisiones #193561; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 735,
+        "name": "Vladimir Peña"
+      },
+      "drop": {
+        "id": 2909,
+        "name": "Vladimir \"Arfavor\" Peña"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Vladimir \"Arfavor\" Peña» y «Vladimir Peña» comparten nombre y apodo o evidencia concreta (revisiones #193562; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 770,
+        "name": "Chris Rex \"Elektrobot\""
+      },
+      "drop": {
+        "id": 3268,
+        "name": "Chris Rex"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Chris Rex» y «Chris Rex \"Elektrobot\"» comparten nombre y apodo o evidencia concreta (revisiones #193565; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 794,
+        "name": "Luis Márquez"
+      },
+      "drop": {
+        "id": 896,
+        "name": "Luis \"Papo\" Márquez"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Luis \"Papo\" Márquez» y «Luis Márquez» comparten nombre y apodo o evidencia concreta (revisiones #193567; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 833,
+        "name": "José Luis Osuna"
+      },
+      "drop": {
+        "id": 2905,
+        "name": "José Luis \"Tocayo\" Osuna"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «José Luis \"Tocayo\" Osuna» y «José Luis Osuna» comparten nombre y apodo o evidencia concreta (revisiones #193569; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 3103,
+        "name": "Manuel Montañez"
+      },
+      "drop": {
+        "id": 846,
+        "name": "Manuel Montañez \"Pacho\""
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Manuel Montañez \"Pacho\"» y «Manuel Montañez» comparten nombre y apodo o evidencia concreta (revisiones #193572, #193573, #193652; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 3103,
+        "name": "Manuel Montañez"
+      },
+      "drop": {
+        "id": 6047,
+        "name": "Manuel \"Pancho\" Montañez"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Manuel \"Pancho\" Montañez» y «Manuel Montañez» comparten nombre y apodo o evidencia concreta (revisiones #193572, #193573, #193652; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 873,
+        "name": "Iván Marcano"
+      },
+      "drop": {
+        "id": 2301,
+        "name": "Iván \"Gordo\" Marcano"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Iván \"Gordo\" Marcano» y «Iván Marcano» comparten nombre y apodo o evidencia concreta (revisiones #193574; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 939,
+        "name": "Jesús Jiménez"
+      },
+      "drop": {
+        "id": 4702,
+        "name": "Jesús \"Moti\" Jiménez"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Jesús \"Moti\" Jiménez» y «Jesús Jiménez» comparten nombre y apodo o evidencia concreta (revisiones #193576; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 8974,
+        "name": "Yonathan \"Morocho\" Gavidia"
+      },
+      "drop": {
+        "id": 962,
+        "name": "Yonathan Gavidia"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Yonathan Gavidia» y «Yonathan \"Morocho\" Gavidia» comparten nombre y apodo o evidencia concreta (revisiones #193577; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 963,
+        "name": "Diego Álvarez"
+      },
+      "drop": {
+        "id": 2289,
+        "name": "Diego \"El Negro\" Álvarez"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Diego \"El Negro\" Álvarez» y «Diego Álvarez» comparten nombre y apodo o evidencia concreta (revisiones #193578; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1848,
+        "name": "William \"Magú\" Guzmán"
+      },
+      "drop": {
+        "id": 1014,
+        "name": "William Guzmán \"Magú\""
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «William Guzmán \"Magú\"» y «William \"Magú\" Guzmán» comparten nombre y apodo o evidencia concreta (revisiones #193583; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1849,
+        "name": "Raúl Mota"
+      },
+      "drop": {
+        "id": 1016,
+        "name": "Raul Mota \"Mota\""
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Raul Mota \"Mota\"» y «Raúl Mota» comparten nombre y apodo o evidencia concreta (revisiones #193584; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2490,
+        "name": "Gonzalo Suarez \"Gonzo\""
+      },
+      "drop": {
+        "id": 1187,
+        "name": "Gonzalo Suárez"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Gonzalo Suárez» y «Gonzalo Suarez \"Gonzo\"» comparten nombre y apodo o evidencia concreta (revisiones #193589; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1195,
+        "name": "Rodolfo Reyes"
+      },
+      "drop": {
+        "id": 2906,
+        "name": "Rodolfo \"Panamío\" Reyes"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Rodolfo \"Panamío\" Reyes» y «Rodolfo Reyes» comparten nombre y apodo o evidencia concreta (revisiones #193590; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1370,
+        "name": "Carlos Fernández"
+      },
+      "drop": {
+        "id": 5208,
+        "name": "Carlos \"Morocho\" Fernández"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Carlos \"Morocho\" Fernández» y «Carlos Fernández» comparten nombre y apodo o evidencia concreta (revisiones #193594; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1441,
+        "name": "Enrique Márquez"
+      },
+      "drop": {
+        "id": 1491,
+        "name": "Enrique \"Kike\" Marquez"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Enrique \"Kike\" Marquez» y «Enrique Márquez» comparten nombre y apodo o evidencia concreta (revisiones #193597; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1473,
+        "name": "Pedro Rodríguez"
+      },
+      "drop": {
+        "id": 3544,
+        "name": "Pedro \"Connan\" Rodríguez"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Pedro \"Connan\" Rodríguez» y «Pedro Rodríguez» comparten nombre y apodo o evidencia concreta (revisiones #193598; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1618,
+        "name": "Leonardo Gil"
+      },
+      "drop": {
+        "id": 2554,
+        "name": "Leonardo \"Iguana\" Gil"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Leonardo \"Iguana\" Gil» y «Leonardo Gil» comparten nombre y apodo o evidencia concreta (revisiones #193603; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2415,
+        "name": "Abraham García"
+      },
+      "drop": {
+        "id": 1636,
+        "name": "Abraham \"Cangrejo\" García"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Abraham \"Cangrejo\" García» y «Abraham García» comparten nombre y apodo o evidencia concreta (revisiones #193606; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1856,
+        "name": "Giordano Di Marzo \"Yordano\""
+      },
+      "drop": {
+        "id": 2357,
+        "name": "Giordano \"Yordano\" Di Marzo"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Giordano \"Yordano\" Di Marzo» y «Giordano Di Marzo \"Yordano\"» comparten nombre y apodo o evidencia concreta (revisiones #193613; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2029,
+        "name": "Rodolfo Serra"
+      },
+      "drop": {
+        "id": 3445,
+        "name": "Rodolfo \"Pocho\" Serra"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Rodolfo \"Pocho\" Serra» y «Rodolfo Serra» comparten nombre y apodo o evidencia concreta (revisiones #193617; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 5990,
+        "name": "Sofia \"La Nena\" Pulido"
+      },
+      "drop": {
+        "id": 2040,
+        "name": "Sofía Pulido"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Sofía Pulido» y «Sofia \"La Nena\" Pulido» comparten nombre y apodo o evidencia concreta (revisiones #193618; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2155,
+        "name": "Carlos Crinigan"
+      },
+      "drop": {
+        "id": 2342,
+        "name": "Carlos \"DJ Metra\" Crinigan"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Carlos \"DJ Metra\" Crinigan» y «Carlos Crinigan» comparten nombre y apodo o evidencia concreta (revisiones #193625, #193626, #193631; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2155,
+        "name": "Carlos Crinigan"
+      },
+      "drop": {
+        "id": 5292,
+        "name": "Carlos Crinigan (Dj Metra)"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Carlos Crinigan (Dj Metra)» y «Carlos Crinigan» comparten nombre y apodo o evidencia concreta (revisiones #193625, #193626, #193631; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2383,
+        "name": "Manuel \"Manel\" Muñoz"
+      },
+      "drop": {
+        "id": 3561,
+        "name": "Manuel Muñoz"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Manuel Muñoz» y «Manuel \"Manel\" Muñoz» comparten nombre y apodo o evidencia concreta (revisiones #193632; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2495,
+        "name": "Jesús Chinchilla"
+      },
+      "drop": {
+        "id": 4329,
+        "name": "Jesús \"Chucho\" Chinchilla"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Jesús \"Chucho\" Chinchilla» y «Jesús Chinchilla» comparten nombre y apodo o evidencia concreta (revisiones #193634; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2992,
+        "name": "Jonathan Carrillo \"Jona\""
+      },
+      "drop": {
+        "id": 2577,
+        "name": "Jonathan Carrillo"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Jonathan Carrillo» y «Jonathan Carrillo \"Jona\"» comparten nombre y apodo o evidencia concreta (revisiones #193635; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2667,
+        "name": "Gabriel Millán \"Gabo\""
+      },
+      "drop": {
+        "id": 3140,
+        "name": "Gabriel Millán"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Gabriel Millán» y «Gabriel Millán \"Gabo\"» comparten nombre y apodo o evidencia concreta (revisiones #193639; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2703,
+        "name": "Kiko"
+      },
+      "drop": {
+        "id": 8901,
+        "name": "Kiko (CMYK)"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Kiko (CMYK)» y «Kiko» comparten nombre y apodo o evidencia concreta (revisiones #193641; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2954,
+        "name": "Eulalio \"Churdy\" Toledo"
+      },
+      "drop": {
+        "id": 4091,
+        "name": "Eulalio Toledo"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Eulalio Toledo» y «Eulalio \"Churdy\" Toledo» comparten nombre y apodo o evidencia concreta (revisiones #193648; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 3071,
+        "name": "Raúl Rivas"
+      },
+      "drop": {
+        "id": 11932,
+        "name": "Raúl Rivas (Raulito)"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Raúl Rivas (Raulito)» y «Raúl Rivas» comparten nombre y apodo o evidencia concreta (revisiones #193651; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 3327,
+        "name": "Endel \"El de Choroní\""
+      },
+      "drop": {
+        "id": 3220,
+        "name": "Endel"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Endel» y «Endel \"El de Choroní\"» comparten nombre y apodo o evidencia concreta (revisiones #193656; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 3226,
+        "name": "José \"Pepe\" Vera"
+      },
+      "drop": {
+        "id": 7068,
+        "name": "José Vera"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «José Vera» y «José \"Pepe\" Vera» comparten nombre y apodo o evidencia concreta (revisiones #193657; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 4384,
+        "name": "Ramón Carranza"
+      },
+      "drop": {
+        "id": 3231,
+        "name": "Ramón \"Moncho\" Carranza"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Ramón \"Moncho\" Carranza» y «Ramón Carranza» comparten nombre y apodo o evidencia concreta (revisiones #193658; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 3674,
+        "name": "Croj"
+      },
+      "drop": {
+        "id": 5248,
+        "name": "Croj (Chiqui Rojas)"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Croj (Chiqui Rojas)» y «Croj» comparten nombre y apodo o evidencia concreta (revisiones #193660; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 4782,
+        "name": "Arian (Felipe Nevado)"
+      },
+      "drop": {
+        "id": 4786,
+        "name": "Arian"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Arian» y «Arian (Felipe Nevado)» comparten nombre y apodo o evidencia concreta (revisiones #193667; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 5740,
+        "name": "Máximo Alvarez"
+      },
+      "drop": {
+        "id": 7417,
+        "name": "Máximo \"Kari-Kari\" Alvarez"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Máximo \"Kari-Kari\" Alvarez» y «Máximo Alvarez» comparten nombre y apodo o evidencia concreta (revisiones #193672; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2892,
+        "name": "Ezequiel Serrano"
+      },
+      "drop": {
+        "id": 2435,
+        "name": "Ezequiel Serrano C."
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Ezequiel Serrano C.» y «Ezequiel Serrano» comparten nombre y apodo o evidencia concreta (revisiones #193683; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1061,
+        "name": "Gelson Briceño"
+      },
+      "drop": {
+        "id": 1357,
+        "name": "Gelson Briceño L"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Gelson Briceño L» y «Gelson Briceño» comparten nombre y apodo o evidencia concreta (revisiones #193685; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1258,
+        "name": "Gabriel Arbiza"
+      },
+      "drop": {
+        "id": 1259,
+        "name": "Gabriel Arbiza Z."
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Gabriel Arbiza Z.» y «Gabriel Arbiza» comparten nombre y apodo o evidencia concreta (revisiones #193686; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 5311,
+        "name": "Enrique Rincón C."
+      },
+      "drop": {
+        "id": 9155,
+        "name": "Enrique Rincón"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Enrique Rincón» y «Enrique Rincón C.» comparten nombre y apodo o evidencia concreta (revisiones #193687; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 5013,
+        "name": "Adolfo Gómez"
+      },
+      "drop": {
+        "id": 5022,
+        "name": "Adolfo Gómez P."
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Adolfo Gómez P.» y «Adolfo Gómez» comparten nombre y apodo o evidencia concreta (revisiones #193689; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 6622,
+        "name": "Gustavo Vilchez"
+      },
+      "drop": {
+        "id": 6624,
+        "name": "Gustavo G Vilchez B"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Gustavo G Vilchez B» y «Gustavo Vilchez» comparten nombre y apodo o evidencia concreta (revisiones #193690; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 6619,
+        "name": "Carlos Vilchez"
+      },
+      "drop": {
+        "id": 6625,
+        "name": "Carlos J. Vilchez B"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Carlos J. Vilchez B» y «Carlos Vilchez» comparten nombre y apodo o evidencia concreta (revisiones #193691; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1648,
+        "name": "César Masroua"
+      },
+      "drop": {
+        "id": 2755,
+        "name": "Cesar R. Masroua"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Cesar R. Masroua» y «César Masroua» comparten nombre y apodo o evidencia concreta (revisiones #193692; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 120,
+        "name": "Alejandro \"Chonto\" Turola"
+      },
+      "drop": {
+        "id": 1012,
+        "name": "Alejandro Turola \"Chonto\""
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Alejandro Turola \"Chonto\"» y «Alejandro \"Chonto\" Turola» comparten nombre y apodo o evidencia concreta (revisiones #193526; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 133,
+        "name": "Manuel Macías"
+      },
+      "drop": {
+        "id": 300,
+        "name": "Manuel \"Manolo\" Macías"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Manuel \"Manolo\" Macías» y «Manuel Macías» comparten nombre y apodo o evidencia concreta (revisiones #193528; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 3053,
+        "name": "Ricardo Anthés"
+      },
+      "drop": {
+        "id": 310,
+        "name": "Ricardo \"Ziggy\" Anthes"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Ricardo \"Ziggy\" Anthes» y «Ricardo Anthés» comparten nombre y apodo o evidencia concreta (revisiones #193535; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2826,
+        "name": "José Antonio Bermúdez"
+      },
+      "drop": {
+        "id": 327,
+        "name": "José Antonio Bermúdez \"El Chino\""
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «José Antonio Bermúdez \"El Chino\"» y «José Antonio Bermúdez» comparten nombre y apodo o evidencia concreta (revisiones #193536; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 367,
+        "name": "Mauricio Arcas"
+      },
+      "drop": {
+        "id": 431,
+        "name": "Mauricio Arcas \"Maurimix\""
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Mauricio Arcas \"Maurimix\"» y «Mauricio Arcas» comparten nombre y apodo o evidencia concreta (revisiones #193537; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 5845,
+        "name": "Andrés Morillo \"André\""
+      },
+      "drop": {
+        "id": 443,
+        "name": "Andrés Morillo"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Andrés Morillo» y «Andrés Morillo \"André\"» comparten nombre y apodo o evidencia concreta (revisiones #193542; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 5839,
+        "name": "Jesús Romero \"G-Zaz\""
+      },
+      "drop": {
+        "id": 2185,
+        "name": "Jesús Romero"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Jesús Romero» y «Jesús Romero \"G-Zaz\"» comparten nombre y apodo o evidencia concreta (revisiones #193628; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 498,
+        "name": "Andrés Astorga"
+      },
+      "drop": {
+        "id": 2634,
+        "name": "Andrés Astorga \"Trujillo\""
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Andrés Astorga \"Trujillo\"» y «Andrés Astorga» comparten nombre y apodo o evidencia concreta (revisiones #193547; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 549,
+        "name": "Francisco Rendiles"
+      },
+      "drop": {
+        "id": 1265,
+        "name": "Francisco Rendiles \"FTPinch\""
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Francisco Rendiles \"FTPinch\"» y «Francisco Rendiles» comparten nombre y apodo o evidencia concreta (revisiones #193550; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 822,
+        "name": "Alfonso Ordoñez"
+      },
+      "drop": {
+        "id": 2800,
+        "name": "Alfonso Ordoñez \"Buzz\""
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Alfonso Ordoñez \"Buzz\"» y «Alfonso Ordoñez» comparten nombre y apodo o evidencia concreta (revisiones #193568; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 844,
+        "name": "Andrés Acosta \"Patolín\""
+      },
+      "drop": {
+        "id": 2177,
+        "name": "Andrés \"Patolín\" Acosta"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Andrés \"Patolín\" Acosta» y «Andrés Acosta \"Patolín\"» comparten nombre y apodo o evidencia concreta (revisiones #193571; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2169,
+        "name": "Elix Monsanto"
+      },
+      "drop": {
+        "id": 897,
+        "name": "Elix Monsanto \"Tragavenao\""
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Elix Monsanto \"Tragavenao\"» y «Elix Monsanto» comparten nombre y apodo o evidencia concreta (revisiones #193575; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1008,
+        "name": "Carlos \"Fresa\" Mata"
+      },
+      "drop": {
+        "id": 2606,
+        "name": "Carlos Mata \"Fresa\""
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Carlos Mata \"Fresa\"» y «Carlos \"Fresa\" Mata» comparten nombre y apodo o evidencia concreta (revisiones #193581; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2518,
+        "name": "Manuel Churión"
+      },
+      "drop": {
+        "id": 1211,
+        "name": "Manuel Churión \"Churro\""
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Manuel Churión \"Churro\"» y «Manuel Churión» comparten nombre y apodo o evidencia concreta (revisiones #193591; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1267,
+        "name": "Raúl Alemán"
+      },
+      "drop": {
+        "id": 3452,
+        "name": "Raul Alemán \"Luar Alem\""
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Raul Alemán \"Luar Alem\"» y «Raúl Alemán» comparten nombre y apodo o evidencia concreta (revisiones #193592; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1616,
+        "name": "Daniel Calvo"
+      },
+      "drop": {
+        "id": 2814,
+        "name": "Daniel Calvo \"Calvin\""
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Daniel Calvo \"Calvin\"» y «Daniel Calvo» comparten nombre y apodo o evidencia concreta (revisiones #193602; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1640,
+        "name": "Pável Tello"
+      },
+      "drop": {
+        "id": 3279,
+        "name": "Pavel Tello \"El Ruso\""
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Pavel Tello \"El Ruso\"» y «Pável Tello» comparten nombre y apodo o evidencia concreta (revisiones #193607; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 3496,
+        "name": "Rubén Ángel Correa \"Micho\""
+      },
+      "drop": {
+        "id": 1725,
+        "name": "Ruben Ángel \"Micho\" Correa"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Ruben Ángel \"Micho\" Correa» y «Rubén Ángel Correa \"Micho\"» comparten nombre y apodo o evidencia concreta (revisiones #193609; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 6843,
+        "name": "Emiro Aguilar"
+      },
+      "drop": {
+        "id": 1798,
+        "name": "Emiro Aguilar \"Atari\""
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Emiro Aguilar \"Atari\"» y «Emiro Aguilar» comparten nombre y apodo o evidencia concreta (revisiones #193611; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 6848,
+        "name": "Rayniero Díaz"
+      },
+      "drop": {
+        "id": 1807,
+        "name": "Rayniero Díaz \"Ray\""
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Rayniero Díaz \"Ray\"» y «Rayniero Díaz» comparten nombre y apodo o evidencia concreta (revisiones #193612; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2021,
+        "name": "Freddy Cabezas \"Marshall\""
+      },
+      "drop": {
+        "id": 3438,
+        "name": "Freddy Cabezas"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Freddy Cabezas» y «Freddy Cabezas \"Marshall\"» comparten nombre y apodo o evidencia concreta (revisiones #193616; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2129,
+        "name": "Orlando \"El Joe\" Alvarado"
+      },
+      "drop": {
+        "id": 2181,
+        "name": "Orlando Alvarado \"El Joe\""
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Orlando Alvarado \"El Joe\"» y «Orlando \"El Joe\" Alvarado» comparten nombre y apodo o evidencia concreta (revisiones #193622, #193623, #193627; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2129,
+        "name": "Orlando \"El Joe\" Alvarado"
+      },
+      "drop": {
+        "id": 4141,
+        "name": "Orlando Alvarado"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Orlando Alvarado» y «Orlando \"El Joe\" Alvarado» comparten nombre y apodo o evidencia concreta (revisiones #193622, #193623, #193627; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 3015,
+        "name": "Marcos Arévalo \"Socram\""
+      },
+      "drop": {
+        "id": 2189,
+        "name": "Marcos Arévalo \"Zokram\""
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Marcos Arévalo \"Zokram\"» y «Marcos Arévalo \"Socram\"» comparten nombre y apodo o evidencia concreta (revisiones #193629; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2902,
+        "name": "José Leonardo \"Pepeleo\" Hernández"
+      },
+      "drop": {
+        "id": 2472,
+        "name": "José Leonardo Hernández"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «José Leonardo Hernández» y «José Leonardo \"Pepeleo\" Hernández» comparten nombre y apodo o evidencia concreta (revisiones #193633; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 3775,
+        "name": "Gian Piero Gigante"
+      },
+      "drop": {
+        "id": 2742,
+        "name": "Gian Piero Gigante \"Gian X\""
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Gian Piero Gigante \"Gian X\"» y «Gian Piero Gigante» comparten nombre y apodo o evidencia concreta (revisiones #193642; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 3084,
+        "name": "Jonathan \"Watis\" Gómez"
+      },
+      "drop": {
+        "id": 2805,
+        "name": "Jonathan Gómez \"Watis\""
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Jonathan Gómez \"Watis\"» y «Jonathan \"Watis\" Gómez» comparten nombre y apodo o evidencia concreta (revisiones #193645; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 4170,
+        "name": "Jorge \"Pepino\" González"
+      },
+      "drop": {
+        "id": 2993,
+        "name": "Jorge González \"Pepino\""
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Jorge González \"Pepino\"» y «Jorge \"Pepino\" González» comparten nombre y apodo o evidencia concreta (revisiones #193649; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 6817,
+        "name": "Carlos \"Cuso\" González"
+      },
+      "drop": {
+        "id": 3002,
+        "name": "Carlos González \"Cuso\""
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Carlos González \"Cuso\"» y «Carlos \"Cuso\" González» comparten nombre y apodo o evidencia concreta (revisiones #193650; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 4626,
+        "name": "Luis Miguel Sanabria \"Vampiro\""
+      },
+      "drop": {
+        "id": 4833,
+        "name": "Luis Miguel Sanabria"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Luis Miguel Sanabria» y «Luis Miguel Sanabria \"Vampiro\"» comparten nombre y apodo o evidencia concreta (revisiones #193665; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 7178,
+        "name": "Alberto Lewis"
+      },
+      "drop": {
+        "id": 7194,
+        "name": "Alberto Lewis \"Al Zeppy\""
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Alberto Lewis \"Al Zeppy\"» y «Alberto Lewis» comparten nombre y apodo o evidencia concreta (revisiones #193675; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2367,
+        "name": "Victor Gámez"
+      },
+      "drop": {
+        "id": 11896,
+        "name": "Víctor Gámez"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Víctor Gámez» y «Victor Gámez» comparten nombre y apodo o evidencia concreta (revisiones #193677; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 4189,
+        "name": "Carlos Rondon"
+      },
+      "drop": {
+        "id": 7443,
+        "name": "Carlos Rondón"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Carlos Rondón» y «Carlos Rondon» comparten nombre y apodo o evidencia concreta (revisiones #193678; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 8371,
+        "name": "Interamericana de Grabaciones (Integra)"
+      },
+      "drop": {
+        "id": 294,
+        "name": "Interamericana De Grabaciones"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Interamericana De Grabaciones» y «Interamericana de Grabaciones (Integra)» comparten nombre y apodo o evidencia concreta (revisiones #193684, #193533; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 8371,
+        "name": "Interamericana de Grabaciones (Integra)"
+      },
+      "drop": {
+        "id": 1915,
+        "name": "Interamericana De Grabaciones S.A"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Misma persona: «Interamericana De Grabaciones S.A» y «Interamericana de Grabaciones (Integra)» comparten nombre y apodo o evidencia concreta (revisiones #193684, #193533; reports/person-duplicates-evidence-2026-09-28.md)"
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 2367,
+        "name": "Victor Gámez"
+      },
+      "to": "Víctor Gámez",
+      "keepOldNameAsAlias": true,
+      "why": "Tras la fusión con «Víctor Gámez» (revisión #193677) queda la grafía con tilde; la otra, como alias"
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 4189,
+        "name": "Carlos Rondon"
+      },
+      "to": "Carlos Rondón",
+      "keepOldNameAsAlias": true,
+      "why": "Tras la fusión con «Carlos Rondón» (revisión #193678) queda la grafía con tilde; la otra, como alias"
+    }
+  ]
+}
