@@ -167,10 +167,11 @@ export function AlbumDetailPage() {
         <div className="credit-groups">
           {CREDIT_SECTIONS.map((section) => {
             const items = section.types.flatMap((type) => album.creditsByType[type] ?? []);
+            const scoped = section.types.flatMap((type) => album.scopedCreditsByType[type] ?? []);
             return (
               <div className="credit-group" key={section.title}>
                 <h3>{section.title}</h3>
-                <CreditManager target={{ kind: "album", albumId: album.id }} credits={items} onChanged={reload} />
+                <CreditManager target={{ kind: "album", albumId: album.id }} credits={items} scoped={scoped} onChanged={reload} />
               </div>
             );
           })}

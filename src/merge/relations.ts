@@ -94,7 +94,9 @@ const CREDIT_TYPE_RULES: ReadonlyArray<readonly [RegExp, CreditType]> = [
   [/(compos|m[uú]sica de|autor de la m[uú]sica)/iu, "composer"],
   [/(letra|lyric|writ(er|ten)|escrit|texto)/iu, "writer"],
   [/(photo|foto)/iu, "photography"],
-  [/(art\s?work|dise[nñ]|design|portada|cover\s*art|ilustra|illustrat|gr[aá]fic)/iu, "artwork"],
+  // "Cover", "Logo", "Art Direction" y "Arte" también son arte: así rotula el
+  // canal buena parte de su Other Credits ("Cover: …", "Logo: …").
+  [/(art\s?work|\bart\b|\barte\b|dise[nñ]|design|portada|\bcover\b|\blogos?\b|ilustra|illustrat|gr[aá]fic)/iu, "artwork"],
   [/(guest|invitad|especial|special)/iu, "guest"],
 ];
 

@@ -177,9 +177,11 @@ DO $$ BEGIN
   END;
 END $$;
 
--- N17: upload_order duplicado en seed_uploads
+-- N17: upload_order duplicado en seed_uploads. Desde 0025 la unicidad es
+-- diferida (se comprueba al COMMIT); aquí se pide inmediata para verla.
 DO $$ BEGIN
   BEGIN
+    SET CONSTRAINTS ingest.seed_uploads_order_uk IMMEDIATE;
     INSERT INTO ingest.seed_uploads (upload_order, row_hash)
     VALUES (28, 'cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc');
     RAISE EXCEPTION 'FAIL N17: se esperaba unique_violation';
@@ -278,7 +280,7 @@ END $$;
 -- N27: género duplicado
 DO $$ BEGIN
   BEGIN
-    INSERT INTO ingest.genres (name) VALUES ('Rock');
+    INSERT INTO ingest.genres (name, slug, level) VALUES ('Rock', 'rock-otra', 'family');
     RAISE EXCEPTION 'FAIL N27: se esperaba unique_violation';
   EXCEPTION WHEN unique_violation THEN RAISE NOTICE 'PASS N27 género único';
   END;

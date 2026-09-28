@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import fixture from "../fixtures/youtube-video-Q-pRpO2sYSI.json" with { type: "json" };
 import realFixture from "../fixtures/youtube-video-real-Q-pRpO2sYSI.json" with { type: "json" };
 import { YouTubeDataApi, iso8601DurationToSeconds, youtubePublicationStatus, type YouTubeVideoPayload } from "../../src/youtube/api.js";
-import { canonicalVideoUrl, classifyContentType, extractYouTubeVideoId } from "../../src/youtube/normalization.js";
+import { canonicalVideoUrl, classifyContentType, extractYouTubeVideoId, sheetTypeIsUnnumbered } from "../../src/youtube/normalization.js";
 import { looksLikeOrganization, parseCreditSections, parseYouTubeDescription, parseYouTubeTitle, timestampToSeconds } from "../../src/youtube/parsers.js";
 import { readYouTubeMasterSheet } from "../../src/youtube/pipeline.js";
 
@@ -32,6 +32,12 @@ describe("seed content classification", () => {
     expect(classifyContentType("Documentary")).toMatchObject({ kind: "media", normalizedType: "documentary" });
     expect(classifyContentType("B-Sides / Unplugged").kind).toBe("review");
   });
+
+  it("deja Shorts e Interview sin Upload Order", () => {
+    expect(sheetTypeIsUnnumbered("Shorts")).toBe(true);
+    expect(sheetTypeIsUnnumbered("Interview")).toBe(true);
+    expect(sheetTypeIsUnnumbered("Documentary")).toBe(false);
+  });
 });
 
 describe("YT Master Spreadsheet", () => {
@@ -58,7 +64,7 @@ describe("deterministic description parser", () => {
     // aparece en las 636 descripciones reales del canal (SOURCES.md §2.2).
     expect(parsed.credits).toEqual([
       { verbs: ["produced"], preposition: "by", value: "Productor de prueba", sectionKind: "tracklist",
-        names: ["Productor de prueba"], venue: null, location: null },
+        names: ["Productor de prueba"], venue: null, location: null, trackNumbers: [] },
     ]);
   });
 
@@ -80,21 +86,21 @@ describe("deterministic description parser", () => {
     // conserva íntegro: lo derivado no borra lo que la fuente dijo.
     expect(parsed.credits).toContainEqual(
       { verbs: ["recorded", "mixed"], preposition: "by", value: "Boris Milan, August 1992",
-        sectionKind: "other_credits", names: ["Boris Milan"], venue: null, location: null },
+        sectionKind: "other_credits", names: ["Boris Milan"], venue: null, location: null, trackNumbers: [] },
     );
     expect(parsed.credits).toContainEqual(
       { verbs: ["recorded", "mixed"], preposition: "at", value: "Mad Box's Studios (Caracas, Venezuela)",
-        sectionKind: "other_credits", names: [], venue: "Mad Box's Studios", location: "Caracas, Venezuela" },
+        sectionKind: "other_credits", names: [], venue: "Mad Box's Studios", location: "Caracas, Venezuela", trackNumbers: [] },
     );
     expect(parsed.credits.some((credit) => credit.preposition === "at")).toBe(true);
     // El arte y la foto se escriben con sustantivo, no con participio.
     expect(parsed.credits).toContainEqual(
       { verbs: ["artwork", "illustration"], preposition: "by", value: "Pablo Martínez",
-        sectionKind: "other_credits", names: ["Pablo Martínez"], venue: null, location: null },
+        sectionKind: "other_credits", names: ["Pablo Martínez"], venue: null, location: null, trackNumbers: [] },
     );
     expect(parsed.credits).toContainEqual(
       { verbs: ["photography"], preposition: "by", value: "Carlos Rondon",
-        sectionKind: "other_credits", names: ["Carlos Rondon"], venue: null, location: null },
+        sectionKind: "other_credits", names: ["Carlos Rondon"], venue: null, location: null, trackNumbers: [] },
     );
   });
 
@@ -177,6 +183,17 @@ describe("deterministic description parser", () => {
     // La banda de procedencia tampoco, ni con el corchete sin cerrar.
     expect(credito("Guitar: José Echezuría [from Sentimiento Muerto").map((c) => c.name))
       .toEqual(["José Echezuría"]);
+    // La barra separa personas, pero "AC/DC" es un solo nombre.
+    expect(credito("Graphic Design: Eduardo Rodríguez/Enrique Añez").map((c) => c.name)).toEqual(["Eduardo Rodríguez", "Enrique Añez"]);
+    expect(credito("Guitar: AC/DC").map((c) => c.name)).toEqual(["AC/DC"]);
+    expect(credito('Bass: Luís "Golding" Barrios / Asier Cazalis (tracks 03, 06, 09)').map((c) => c.name)).toEqual(['Luís "Golding" Barrios', "Asier Cazalis"]);
+    expect(credito("Guitars: Dimitri From Paris").map((c) => c.name)).toEqual(["Dimitri From Paris"]);
+    expect(credito("Vocals: Yátu").map((c) => c.name)).toEqual(["Yátu"]);
+    expect(credito('Guitars: Sebastián González "Sebas/Grimmode"').map((c) => c.name)).toEqual(['Sebastián González "Sebas/Grimmode"']);
+    // Lo que no es el nombre: procedencia sin corchetes, otro crédito, una frase.
+    expect(credito('Samples: Viniloversus from "Si No Nos Mata"').map((c) => c.name)).toEqual(["Viniloversus"]);
+    expect(credito("Cover: Hotel Puerta Del Sol by Agustín Espina").map((c) => c.name)).toEqual([]);
+    expect(credito("Guests: and their own respectives bands").map((c) => c.name)).toEqual([]);
     // Un sufijo de linaje pertenece al nombre anterior, no es otra persona.
     expect(credito("Bass: John Smith, Jr.").map((c) => c.name)).toEqual(["John Smith"]);
   });
@@ -187,6 +204,35 @@ describe("deterministic description parser", () => {
     // "all tracks" no acota ninguna, pero tampoco ensucia el nombre.
     const [todas] = parseCreditSections(parseYouTubeDescription("Guest Musicians\n\nPiano: Ana Rojas (all tracks)").sections);
     expect(todas).toMatchObject({ name: "Ana Rojas", trackNumbers: [] });
+  });
+
+  // La descripción completa de Harakiri City (2026-09-21): el alcance va
+  // delante del verbo, la salvedad sin coma y el arte con dos puntos.
+  it("reads scoped, caveated and colon credits from Other Credits", () => {
+    const parsed = parseYouTubeDescription([
+      "Other Credits", "",
+      "All tracks composed by Caramelos De Cianuro except;",
+      "Tracks 02, 04, 09 composed by Asier Cazalis",
+      "All lyrics written by Asier Cazalis except;",
+      "Tracks 07, 12 lyrics by Pablo Martinez & Asier Cazalis",
+      "Mastered by Daniel Fernández at Grabaciones K-Pella (Caracas, Venezuela) except;",
+      "Track 12 Assistant Engineered & Mixed by Enrique Barreto (Caracas, Venezuela)",
+      "Graphic Design: Pablo Martinez", "Photos: Valentina Gamero",
+      "Special thanks to: todos", "Catalog #: 123",
+      "Recording Studios*:", "- Estudio Uno", "- Estudio Dos",
+    ].join("\n"));
+    expect(parsed.credits.map((credit) => [credit.verbs, credit.names, credit.venue, credit.trackNumbers])).toEqual([
+      [["composed"], ["Caramelos De Cianuro"], null, []],
+      [["composed"], ["Asier Cazalis"], null, [2, 4, 9]],
+      [["lyrics written"], ["Asier Cazalis"], null, []],
+      [["lyrics"], ["Pablo Martinez", "Asier Cazalis"], null, [7, 12]],
+      [["mastered"], ["Daniel Fernández"], "Grabaciones K-Pella", []],
+      [["assistant engineered", "mixed"], ["Enrique Barreto"], null, [12]],
+      [["graphic design"], ["Pablo Martinez"], null, []],
+      [["photos"], ["Valentina Gamero"], null, []],
+      [["recording studios"], ["Estudio Uno"], null, []],
+      [["recording studios"], ["Estudio Dos"], null, []],
+    ]);
   });
 
   it("recognises a label or studio credited with \"by\"", () => {

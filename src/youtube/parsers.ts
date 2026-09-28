@@ -9,6 +9,8 @@ export interface CreditLine {
   venue: string | null;
   /** El paréntesis final del lugar: "(Caracas, Venezuela)". */
   location: string | null;
+  /** Pistas a las que se limita: "Tracks 02, 04 composed by" o "(tracks 01, 03)". Vacío = todo el disco. */
+  trackNumbers: number[];
 }
 export interface ParsedDescription { sections: DescriptionSection[]; tracklist: TimestampEntry[]; credits: CreditLine[]; }
 
@@ -51,8 +53,22 @@ const TRACK_SECTIONS = new Set(["tracklist", "bonus_tracks"]);
 // captura entero y se parte después. El arte y la foto se escriben con
 // sustantivo, no con participio: "Artwork & Illustration by", "Photography by",
 // "Photos by", "Graphic Design by" (medido en el canal, 2026-09-14).
-const CREDIT_VERB = "produced|recorded|mixed|mastered|written|composed|arranged|engineered|designed|photographed|illustrated|artwork|illustrations?|photography|photos|graphic\\s+design";
-const CREDIT_LINE = new RegExp(`^\\s*((?:${CREDIT_VERB})(?:\\s*&\\s*(?:${CREDIT_VERB}))*)\\s+(by|at)\\s*:?\\s+(.+?)\\s*$`, "i");
+//
+// Delante del verbo puede ir el alcance —"All tracks composed by", "Tracks 02,
+// 04, 09 composed by", "Track 08 Recorded & Mixed by"— y cada verbo admite
+// hasta tres palabras que lo matizan: "Assistant Engineered", "Co-Produced",
+// "Drum tracks recorded", "Recorded live". Sin eso se perdían 513 líneas
+// "Track N composed by", 233 "All tracks composed by" y 88 "All lyrics
+// written by" (medido en el canal, 2026-09-21).
+const CREDIT_VERB = "produced|recorded|mixed|mastered|remastered|remixed|written|composed|arranged|arrangements?|arragements?|engineered|designed|photographed|illustrated|artwork|illustrations?|photography|photos|graphic\\s+design|lyrics|recordings";
+const CREDIT_PART = `(?:[\\p{L}'-]+\\s+){0,3}?(?:${CREDIT_VERB})(?:\\s+live)?`;
+const CREDIT_SCOPE = String.raw`(all\s+(?:tracks|songs|music|lyrics)(?:\s*&\s*(?:lyrics|music))?|(?:tracks?|pistas?)\s+\d{1,3}(?:\s*(?:,|&|and|y)\s*\d{1,3})*)`;
+const CREDIT_LINE = new RegExp(`^\\s*(?:${CREDIT_SCOPE}\\s+)?(${CREDIT_PART}(?:\\s*(?:&|,)\\s*${CREDIT_PART})*)\\s+(by|at)\\s*:?\\s+(.+?)\\s*$`, "iu");
+// "Graphic Design: Pablo Martinez", "Photos: Valentina Gamero", "Executive
+// Production: …": dentro de Other Credits el rol también va con dos puntos
+// (372, 239 y 165 líneas). Lo que no es crédito se descarta por el rol.
+const OTHER_CREDIT_ROLE = /^\s*[-*]?\s*([^:\d#*]{2,50}?)\s*\*?\s*:\s*(.*)$/u;
+const NOT_A_CREDIT_ROLE = /\b(?:by|at|is|are|format|catalog|title|ig|instagram|facebook|e-?mail|thanks?|gracias|agradec\p{L}*|contact\p{L}*|booking|follow|s[ií]gue\p{L}*|note|nota|tracklist|timestamps?|disponible|available|download|descarga|link|www|https?)\b/iu;
 
 // El título del canal es un registro, no un rótulo: 616 de 646 llevan el año
 // entre paréntesis, 631 el separador " - " y 77 una etiqueta de formato
@@ -108,7 +124,9 @@ export function parseYouTubeDescription(description: string | null | undefined):
   const tracklist: TimestampEntry[] = [];
   const credits: CreditLine[] = [];
   let current: { kind: string; heading: string; content: string[]; position: number } | null = null;
+  let pendingRole: string | null = null;
   const flush = () => {
+    pendingRole = null;
     if (!current) return;
     const content = current.content.join("\n").trim();
     if (content) sections.push({ ...current, content });
@@ -131,18 +149,38 @@ export function parseYouTubeDescription(description: string | null | undefined):
       const isTrackLine = TRACK_SECTIONS.has(current.kind) && (LEADING_TIMESTAMP.test(line) || TRAILING_TIMESTAMP.test(line));
       const credit = isTrackLine ? null : line.match(CREDIT_LINE);
       if (credit) {
-        const preposition = credit[2]!.toLowerCase() as "by" | "at";
-        const value = credit[3]!.trim();
+        pendingRole = null;
+        const preposition = credit[3]!.toLowerCase() as "by" | "at";
+        const value = credit[4]!.trim();
+        const scoped = credit[1] ? trackNumbersIn(credit[1]) : [];
+        // "All lyrics written by" dice qué se escribió: la letra, no la música.
+        const lyricsOnly = /\blyrics\b/iu.test(credit[1] ?? "") && !/\b(?:tracks|songs|music)\b/iu.test(credit[1] ?? "");
+        const verbs = splitRoleParts(credit[2]!).map((verb) => lyricsOnly && !/lyric/u.test(verb) ? `lyrics ${verb}` : verb);
         // Con "at" el valor entero es el lugar; con "by", hay que separarlo.
         const parts = preposition === "at"
-          ? { names: [], ...(() => { const t = trimCreditTail(value); const m = t.match(TRAILING_LOCATION);
+          ? { names: [], trackNumbers: [], ...(() => { const t = trimCreditTail(value); const m = t.match(TRAILING_LOCATION);
               const bare = (m ? t.replace(TRAILING_LOCATION, "") : t).trim();
               return { venue: plausibleName(bare) ? bare : null, location: m ? m[1]!.trim() : null }; })() }
           : splitCreditValue(value);
         credits.push({
-          verbs: credit[1]!.split(/\s*&\s*/).map((verb) => verb.trim().toLowerCase()),
+          verbs,
           preposition, value, sectionKind: current.kind, ...parts,
+          trackNumbers: scoped.length ? scoped : parts.trackNumbers,
         });
+      } else if (current.kind === "other_credits") {
+        const colon = line.match(OTHER_CREDIT_ROLE);
+        const bullet = colon ? null : line.match(BULLET_NAME);
+        if (colon && !NOT_A_CREDIT_ROLE.test(colon[1]!) && colon[1]!.trim().split(/\s+/u).length <= 5) {
+          const role = colon[1]!.trim();
+          const value = colon[2]!.trim();
+          // "Recording Studios:" con los nombres debajo, en viñetas.
+          pendingRole = value ? null : role;
+          if (value) credits.push(roleCredit(role, value, current.kind));
+        } else if (bullet && pendingRole) {
+          credits.push(roleCredit(pendingRole, bullet[1]!, current.kind));
+        } else if (line.trim()) {
+          pendingRole = null;
+        }
       }
       if (TRACK_SECTIONS.has(current.kind)) {
         const leading = line.match(LEADING_TIMESTAMP);
@@ -191,6 +229,9 @@ const ANY_PARENTHETICAL = /\s*\([^()]*\)\s*/gu;
 // Muerto]"— y a veces sin cerrar. Es un dato real, pero no es el nombre y hoy
 // no tiene columna donde vivir; el valor crudo del claim lo conserva.
 const TRAILING_BRACKET = /\s*\[[^\]]*\]?\s*$/u;
+// Lo mismo sin corchetes: 'Viniloversus from "Si No Nos Mata"'. Solo con
+// comillas: "Dimitri From Paris" es un nombre.
+const TRAILING_FROM = /\s+from\s+["“].*$/iu;
 const CREDIT_SECTIONS = new Set(["musicians", "guest_musicians", "artwork", "illustration", "photography"]);
 
 // La coma separa personas tanto como el "&": "Ana Valencia, María José
@@ -199,8 +240,16 @@ const CREDIT_SECTIONS = new Set(["musicians", "guest_musicians", "artwork", "ill
 const NAME_SUFFIX = /^(?:jr|sr|ii|iii|iv|hijo|padre)\.?$/iu;
 
 function splitNames(value: string): string[] {
-  // "Lamarca+Batoni" son dos personas (decisión del propietario, 2026-09-14).
-  return value.split(/\s*&\s*|\s*\+\s*|\s*,\s*|\s+y\s+/u)
+  // "Lamarca+Batoni" son dos personas (decisión del propietario, 2026-09-14),
+  // y "Eduardo Rodríguez/Enrique Añez" también (2026-09-13). " / " con
+  // espacios siempre separa; la barra pegada solo si los dos lados son
+  // nombres ("AC/DC" es uno) y no está dentro de un apodo ("Sebas/Grimmode").
+  return value.split(/\s*&\s*|\s*\+\s*|\s*,\s*|\s+y\s+|\s+\/\s+/u)
+    .flatMap((name) => {
+      const parts = name.split("/");
+      const quoted = (name.split("/")[0]!.match(/"/gu) ?? []).length % 2 === 1;
+      return parts.length > 1 && !quoted && parts.every((part) => part.trim().length >= 3) ? parts : [name];
+    })
     .map((name) => name.trim())
     .filter((name) => name.length > 0 && !NAME_SUFFIX.test(name));
 }
@@ -224,7 +273,9 @@ export function looksLikeOrganization(name: string): boolean {
 // Un año o un mes dentro del valor no son parte del nombre: son la fecha de
 // la sesión ("Boris Milan, August 1992"). Y una salvedad ("…, except;") abre
 // una lista de excepciones que ya no habla del mismo acreditado.
-const NAME_TAIL = /\s*[,;]\s*(?:except|salvo|excepto|but)\b[\s\S]*$|\s*;[\s\S]*$/iu;
+// "Caramelos De Cianuro except;" lleva la salvedad sin coma: "except" y
+// "excepto" también cortan tras un espacio ("Salvo" no: es apellido).
+const NAME_TAIL = /\s*[,;]\s*(?:except|salvo|excepto|but)\b[\s\S]*$|\s+(?:except|excepto)\b[\s\S]*$|\s*;[\s\S]*$/iu;
 const NAME_DATE_TAIL = /\s*,\s*(?:(?:january|february|march|april|may|june|july|august|september|october|november|december|enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)\b[^,]*)?\s*(?:1[89]\d{2}|20\d{2})\s*$/iu;
 
 /** Recorta lo que sigue al nombre: salvedades y fechas de sesión. */
@@ -241,6 +292,11 @@ function plausibleName(value: string): boolean {
   if (value.length < 2 || value.length > 80) return false;
   if (/\b(?:1[89]\d{2}|20\d{2})\b/u.test(value)) return false;
   if (/[;]|\bexcept\b|\bsalvo\b|\bexcepto\b/iu.test(value)) return false;
+  // "Hotel Puerta Del Sol by Agustín Espina", "Music by Nacho": un segundo
+  // crédito dentro del valor; "and their own respectives bands": una frase.
+  if (/\s(?:by|por)\s|^(?:music|musica|música)\s+by\b/iu.test(value)) return false;
+  // Espacio, no \b: en JS "Yátu" empieza por "Y" + límite de palabra.
+  if (/^(?:and|with|y|con|the\s+rest|all\s+of)\s/iu.test(value)) return false;
   return /\p{L}/u.test(value);
 }
 
@@ -249,7 +305,7 @@ function plausibleName(value: string): boolean {
 const VENUE_SPLIT = /\s+\bat\b\s+/iu;
 const TRAILING_LOCATION = /\s*\(([^()]{2,80})\)\s*$/u;
 
-function splitCreditValue(value: string): { names: string[]; venue: string | null; location: string | null } {
+function splitCreditValue(value: string): { names: string[]; venue: string | null; location: string | null; trackNumbers: number[] } {
   const [personPart, ...rest] = value.split(VENUE_SPLIT);
   const venueRaw = rest.length ? rest.join(" at ") : null;
   let venue: string | null = null; let location: string | null = null;
@@ -262,17 +318,32 @@ function splitCreditValue(value: string): { names: string[]; venue: string | nul
   }
   const scoped = scopeOf(trimCreditTail(personPart ?? ""));
   const names = splitNames(scoped.clean).filter(plausibleName);
-  return { names, venue, location };
+  return { names, venue, location, trackNumbers: scoped.trackNumbers };
+}
+
+/** "Recorded, Mixed & Mastered" son tres funciones; cada una conserva sus matices. */
+function splitRoleParts(role: string): string[] {
+  return role.split(/\s*(?:&|,)\s*/u).map((part) => part.trim().toLowerCase()).filter(Boolean);
+}
+
+/** Números de pista de un alcance: "Tracks 02, 04 & 09" → [2, 4, 9]. */
+function trackNumbersIn(scope: string): number[] {
+  return [...new Set((scope.match(/\d{1,3}/gu) ?? []).map(Number))].filter((n) => n > 0 && n < 1000).sort((a, b) => a - b);
+}
+
+/** Un crédito "Rol: nombres" de Other Credits, con la misma forma que los de "by". */
+function roleCredit(role: string, value: string, sectionKind: string): CreditLine {
+  const parts = splitCreditValue(value);
+  return { verbs: splitRoleParts(role), preposition: "by", value, sectionKind, ...parts };
 }
 
 function scopeOf(value: string): { clean: string; trackNumbers: number[] } {
   const match = value.match(TRACK_SCOPE);
-  const numbers = match
-    ? [...new Set((match[1]!.match(/\d{1,3}/gu) ?? []).map(Number))].filter((n) => n > 0 && n < 1000).sort((a, b) => a - b)
-    : [];
+  const numbers = match ? trackNumbersIn(match[1]!) : [];
   // El alcance se extrae primero; después cae cualquier otro paréntesis.
   const clean = (match ? value.replace(TRACK_SCOPE, " ") : value)
-    .replace(ANY_PARENTHETICAL, " ").replace(TRAILING_BRACKET, "").replace(/\s+/gu, " ").trim();
+    .replace(ANY_PARENTHETICAL, " ").replace(TRAILING_BRACKET, "").replace(TRAILING_FROM, "")
+    .replace(/^[\s:]+/u, "").replace(/\s+/gu, " ").trim();
   return { clean, trackNumbers: numbers };
 }
 

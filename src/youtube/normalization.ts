@@ -63,9 +63,23 @@ export function sheetClassifications(raw: string | null | undefined): string[] {
   return (raw ?? "").split(",").map((part) => part.trim()).filter(Boolean);
 }
 
-/** Videoclips, conciertos y documentales no suenan en la radio, aunque además tengan otro tipo. */
+/**
+ * Piezas editoriales del canal: Shorts y entrevistas. No son discos ni tocan
+ * en la radio, y ambas van sin Upload Order. Other/Others se conserva aqui
+ * solo como compatibilidad con datos historicos: la automatizacion lo migra a
+ * Shorts y nunca lo vuelve a emitir.
+ */
+const EDITORIAL_TYPES = new Set(["shorts", "short", "other", "others", "interview", "review"]);
+const UNNUMBERED_TYPES = new Set(["shorts", "short", "interview", "other", "others"]);
+
+/** Tipos de la hoja que van sin Upload Order. */
+export function sheetTypeIsUnnumbered(raw: string | null | undefined): boolean {
+  return sheetClassifications(raw).some((part) => UNNUMBERED_TYPES.has(key(part)));
+}
+
+/** Videoclips, conciertos, documentales y piezas editoriales no suenan en la radio, aunque además tengan otro tipo. */
 export function excludedFromRadio(raw: string | null | undefined): boolean {
-  return sheetClassifications(raw).some((part) => MEDIA_TYPES[key(part)] !== undefined);
+  return sheetClassifications(raw).some((part) => MEDIA_TYPES[key(part)] !== undefined || EDITORIAL_TYPES.has(key(part)));
 }
 
 const INFERRED_LABELS: Record<NormalizedReleaseType, string> = {
@@ -140,5 +154,6 @@ export function classifyContentType(raw: string | null | undefined): ContentClas
   if (release) return { kind: "release", normalizedType: release, reason: "tipo de publicación reconocido" };
   const media = MEDIA_TYPES[normalized];
   if (media) return { kind: "media", normalizedType: media, reason: "contenido audiovisual; no crea álbum" };
+  if (EDITORIAL_TYPES.has(normalized)) return { kind: "media", normalizedType: null, reason: `pieza editorial del canal (${raw?.trim()}); no crea álbum` };
   return { kind: "review", normalizedType: null, reason: `tipo no verificable automáticamente: ${raw}` };
 }

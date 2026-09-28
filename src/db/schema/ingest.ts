@@ -102,7 +102,7 @@ export const scrapeErrors = ingest.table("scrape_errors", {
 
 export const seedUploads = ingest.table("seed_uploads", {
   id: bigint("id", { mode: "number" }).primaryKey().generatedAlwaysAsIdentity(),
-  uploadOrder: smallint("upload_order").notNull(),
+  uploadOrder: smallint("upload_order"),
   artistNameRaw: varchar("artist_name_raw", { length: 200 }),
   albumNameRaw: varchar("album_name_raw", { length: 250 }),
   albumYearRaw: smallint("album_year_raw"),

@@ -63,6 +63,9 @@ const albumDetailSchema = z.object({
   tracklist: z.array(trackSchema),
   credits: z.array(creditSchema),
   creditsByType: z.record(z.string(), z.array(creditSchema)),
+  scopedCreditsByType: z.record(z.string(), z.array(creditSchema.extend({
+    tracks: z.array(z.object({ discNumber: z.number().int(), trackNumber: z.number().int() })),
+  }))),
   formats: z.array(z.object({
     id: z.number().int(), format: z.string(), quality: z.string().nullable(), archiveStatus: z.string(),
     filePath: z.string().nullable(), notes: z.string().nullable(),

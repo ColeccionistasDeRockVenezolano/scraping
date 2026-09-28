@@ -8,15 +8,25 @@ import { useToast } from "../lib/ToastContext";
 import { ConfirmDialog } from "../components/ConfirmDialog";
 import { EntityPicker } from "./EntityPicker";
 import { Modal } from "./Modal";
-import type { Credit } from "../lib/types";
+import type { Credit, ScopedCredit } from "../lib/types";
 
 type CreditTarget = { kind: "album"; albumId: number } | { kind: "track"; trackId: number };
 
 interface CreditManagerProps {
   target: CreditTarget;
   credits: Credit[];
+  /** Créditos de pista vistos desde el disco: solo lectura, se editan en su pista. */
+  scoped?: ScopedCredit[];
   onChanged: () => void;
   compact?: boolean;
+}
+
+function tracksLabel(tracks: ScopedCredit["tracks"]): string {
+  const multiDisc = tracks.some((track) => track.discNumber > 1);
+  const labels = [...tracks]
+    .sort((a, b) => a.discNumber - b.discNumber || a.trackNumber - b.trackNumber)
+    .map((track) => multiDisc ? `${track.discNumber}-${track.trackNumber}` : String(track.trackNumber));
+  return `${labels.length === 1 ? "pista" : "pistas"} ${labels.join(", ")}`;
 }
 
 function creditedHref(credit: Credit): string | undefined {
@@ -44,7 +54,7 @@ function creditedId(credit: Credit, kind: CreditedKind): number | null {
   return credit.personId;
 }
 
-export function CreditManager({ target, credits, onChanged, compact }: CreditManagerProps) {
+export function CreditManager({ target, credits, scoped = [], onChanged, compact }: CreditManagerProps) {
   const { isAdmin } = useOperator();
   const { notify } = useToast();
   const [adding, setAdding] = useState(false);
@@ -62,7 +72,7 @@ export function CreditManager({ target, credits, onChanged, compact }: CreditMan
 
   return (
     <div>
-      {credits.length === 0 ? (
+      {credits.length === 0 && scoped.length === 0 ? (
         <p style={{ color: "var(--text-faint)", fontSize: compact ? 12.5 : 13.5 }}>Sin créditos registrados.</p>
       ) : (
         <ul style={{ display: "grid", gap: 6 }}>
@@ -96,6 +106,21 @@ export function CreditManager({ target, credits, onChanged, compact }: CreditMan
                       </button>
                     </>
                   ) : null}
+                </span>
+              </li>
+            );
+          })}
+          {scoped.map((credit) => {
+            const href = creditedHref(credit);
+            return (
+              <li key={`scoped-${credit.creditType}-${credit.id}`} className="credit-row">
+                <span>
+                  <span className="who">{href ? <Link to={href}>{creditedName(credit)}</Link> : creditedName(credit)}</span>
+                  {!compact ? <span style={{ color: "var(--text-faint)", fontSize: 11, marginLeft: 8 }}>{creditTypeLabel(credit.creditType)}</span> : null}
+                </span>
+                <span className="role" title="Crédito de pista: se corrige en la pista">
+                  {credit.role}
+                  <span style={{ color: "var(--text-faint)", marginLeft: 6 }}>· {tracksLabel(credit.tracks)}</span>
                 </span>
               </li>
             );

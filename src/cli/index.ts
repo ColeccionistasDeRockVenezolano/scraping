@@ -29,6 +29,10 @@ import { discoverChannelUploads, hydrateYouTubeVideos, importYouTubeMasterSheet,
 import { ingestSeedClaims } from "../youtube/seed-claims.js";
 import { syncAlbumClassifications } from "../youtube/classifications.js";
 import { ingestYouTubeApiClaims } from "../youtube/api-claims.js";
+import {
+  applyCreditSectionPlan, applyMusicianPlan, applyOtherPlan, planChannelSections, planMusicianSections, planOtherCredits,
+  planOtherSources, readCreditRows, readMusicianSectionInputs, readOtherCreditInputs,
+} from "../youtube/credit-sections.js";
 import { confirmYouTubeAlbumLink, linkYouTubeAlbums } from "../youtube/linker.js";
 import { enrichArtistFromYouTube } from "../youtube/enrich.js";
 import { reconcileYouTubeChannel } from "../youtube/reconcile.js";
@@ -456,8 +460,98 @@ async function main(): Promise<number> {
       const [subcommand, argument] = args;
       if (subcommand === "import-sheet") {
         const result = await importYouTubeMasterSheet(argument ?? YT_MASTER_XLSX_PATH);
-        console.log(`youtube import-sheet: ${result.inserted} nuevas, ${result.updated} actualizadas, ${result.unchanged} sin cambios; ${result.videos} videos, ${result.reviews} reviews`);
+        console.log(`youtube import-sheet: ${result.inserted} nuevas, ${result.updated} actualizadas, ${result.unchanged} sin cambios, ${result.unlisted} ya no están en la hoja; ${result.videos} videos, ${result.reviews} reviews`);
         return 0;
+      }
+      // Créditos del disco por bloque del canal (Brian, 2026-09-21). Primero
+      // `channel`, luego api-claims + approve-batch, luego `others`.
+      if (subcommand === "credit-sections") {
+        const phase = argument;
+        if (phase === "musicians") {
+          const client = await getPool().connect();
+          let input;
+          try { input = await readMusicianSectionInputs(client); } finally { client.release(); }
+          const plan = planMusicianSections(input.albums, input.people);
+          const summary = new Map<string, number>();
+          for (const change of plan) {
+            const key = change.action === "retype" ? `${change.credit.creditType} -> ${change.to}: ${change.reason}`
+              : change.action === "retire" ? `retirar ${change.credit.creditType}: ${change.reason}`
+              : change.action === "add" ? `agregar ${change.kind} ${change.creditType}: ${change.reason}`
+              : `revisar: ${change.reason}`;
+            summary.set(key, (summary.get(key) ?? 0) + 1);
+          }
+          const albumsTouched = new Set(plan.filter((change) => change.action !== "review").map((change) => change.albumId)).size;
+          console.log(`youtube credit-sections musicians: ${input.albums.length} discos con bloque Musicians, ${albumsTouched} con cambios`);
+          for (const [key, count] of [...summary].sort((a, b) => b[1] - a[1])) console.log(`  ${String(count).padStart(5)}  ${key}`);
+          const albumArg = args.find((arg) => arg.startsWith("--album="))?.slice("--album=".length);
+          if (albumArg) {
+            for (const change of plan.filter((item) => item.albumId === Number(albumArg))) {
+              const what = change.action === "add" ? `${change.kind} ${change.creditType} «${change.role}» ${change.name}${change.personId === null ? " (nueva)" : ` (p${change.personId})`}${change.trackId ? ` pista ${change.trackId}` : ""}`
+                : change.action === "review" ? change.name
+                : `${change.credit.kind} ${change.credit.id} «${change.credit.role}» p${change.credit.personId}${change.action === "retype" ? ` -> ${change.to}` : ""}`;
+              console.log(`    ${change.action.padEnd(6)} ${what} — ${change.reason}`);
+            }
+          }
+          const note = args.find((arg) => arg.startsWith("--note="))?.slice("--note=".length);
+          if (!args.includes("--confirm")) {
+            console.log('\n(previsualización: nada se escribió) para aplicar: crv youtube credit-sections musicians --note="<motivo>" --confirm');
+            return 0;
+          }
+          if (!note?.trim()) { console.error("--note es obligatorio al confirmar"); return 1; }
+          const applied = await applyMusicianPlan(plan, { note, operator: "cli" });
+          console.log(`  aplicado en ${applied.runs.length} runs: ${applied.retyped} retipados, ${applied.retired} retirados, ${applied.added} agregados (${applied.personsCreated} personas nuevas), ${applied.skipped.length} omitidos`);
+          for (const skip of applied.skipped.slice(0, 20)) console.log(`    omitido ${skip.change.action} disco ${skip.change.albumId}: ${skip.error}`);
+          return applied.skipped.length > 0 ? 1 : 0;
+        }
+        if (phase === "other-credits") {
+          const client = await getPool().connect();
+          let input;
+          try { input = await readOtherCreditInputs(client); } finally { client.release(); }
+          const plan = planOtherCredits(input.albums, input.catalog);
+          const summary = new Map<string, number>();
+          for (const change of plan) {
+            const key = change.action === "add" ? `agregar ${change.kind} ${change.creditType}${change.target.id === null ? " (persona nueva)" : ""}`
+              : change.action === "retire" ? `retirar ${change.credit.creditType}: ${change.reason}` : `revisar: ${change.reason}`;
+            summary.set(key, (summary.get(key) ?? 0) + 1);
+          }
+          console.log(`youtube credit-sections other-credits: ${input.albums.length} discos con créditos en la descripción, ${plan.length} cambios`);
+          for (const [key, count] of [...summary].sort((a, b) => b[1] - a[1])) console.log(`  ${String(count).padStart(5)}  ${key}`);
+          const note = args.find((arg) => arg.startsWith("--note="))?.slice("--note=".length);
+          if (!args.includes("--confirm")) {
+            console.log('\n(previsualización: nada se escribió) para aplicar: crv youtube credit-sections other-credits --note="<motivo>" --confirm');
+            return 0;
+          }
+          if (!note?.trim()) { console.error("--note es obligatorio al confirmar"); return 1; }
+          const applied = await applyOtherPlan(plan, { note, operator: "cli" });
+          console.log(`  aplicado en ${applied.runs.length} runs: ${applied.retired} retirados, ${applied.added} agregados (${applied.personsCreated} personas nuevas), ${applied.skipped.length} omitidos`);
+          for (const skip of applied.skipped.slice(0, 30)) console.log(`    omitido ${skip.change.action} disco ${skip.change.albumId}: ${skip.error}`);
+          return applied.skipped.length > 0 ? 1 : 0;
+        }
+        if (phase !== "channel" && phase !== "others") {
+          console.error('uso: crv youtube credit-sections channel|others|musicians|other-credits [--album=<id>] [--note="<motivo>" --confirm]');
+          return 1;
+        }
+        const client = await getPool().connect();
+        let rows;
+        try { rows = await readCreditRows(client); } finally { client.release(); }
+        const plan = phase === "channel" ? planChannelSections(rows) : planOtherSources(rows);
+        const summary = new Map<string, number>();
+        for (const change of plan) {
+          const key = change.action === "retype" ? `${change.credit.creditType} -> ${change.to}: ${change.reason}` : `retirar ${change.credit.creditType}: ${change.reason}`;
+          summary.set(key, (summary.get(key) ?? 0) + 1);
+        }
+        console.log(`youtube credit-sections ${phase}: ${rows.length} créditos en discos del canal, ${plan.length} cambios`);
+        for (const [key, count] of [...summary].sort((a, b) => b[1] - a[1])) console.log(`  ${String(count).padStart(5)}  ${key}`);
+        const note = args.find((arg) => arg.startsWith("--note="))?.slice("--note=".length);
+        if (!args.includes("--confirm")) {
+          console.log(`\n(previsualización: nada se escribió) para aplicar: crv youtube credit-sections ${phase} --note="<motivo>" --confirm`);
+          return 0;
+        }
+        if (!note?.trim()) { console.error("--note es obligatorio al confirmar"); return 1; }
+        const applied = await applyCreditSectionPlan(plan, { note, operator: "cli" });
+        console.log(`  aplicado en ${applied.runs.length} runs (${applied.runs[0] ?? "-"}…${applied.runs.at(-1) ?? "-"}): ${applied.retyped} retipados, ${applied.retired} retirados, ${applied.skipped.length} omitidos`);
+        for (const skip of applied.skipped.slice(0, 20)) console.log(`    omitido ${skip.change.credit.kind} ${skip.change.credit.id}: ${skip.error}`);
+        return applied.skipped.length > 0 ? 1 : 0;
       }
       if (subcommand === "sync-video") {
         if (!argument) { console.error("uso: crv youtube sync-video <video-id>"); return 1; }
@@ -467,7 +561,12 @@ async function main(): Promise<number> {
       }
       // Paso 4: lo derivado entra al catálogo como claims candidatos.
       if (subcommand === "api-claims") {
-        const result = await ingestYouTubeApiClaims(args.includes("--dry-run") ? { dryRun: true } : {});
+        const reconcileNote = args.find((arg) => arg.startsWith("--reconcile="))?.slice("--reconcile=".length);
+        const result = await ingestYouTubeApiClaims({
+          ...(args.includes("--dry-run") ? { dryRun: true } : {}),
+          ...(reconcileNote?.trim() ? { reconcile: { note: reconcileNote } } : {}),
+        });
+        if (result.reconciled) console.log(`youtube api-claims --reconcile: ${result.reconciled.dismissed} identidades candidatas que ya no se emiten ${args.includes("--dry-run") ? "se descartarían" : "descartadas"}, ${result.reconciled.newRecords} registros nuevos`);
         console.log(`youtube api-claims${args.includes("--dry-run") ? " --dry-run" : ""}: ${result.videos} videos `
           + `(${result.releases} discos, ${result.mediaOnly} audiovisuales sin disco, ${result.skipped} sin identidad) -> `
           + `${result.artists} artistas, ${result.albums} discos, ${result.tracks} pistas, ${result.persons} personas, ${result.organizations} organizaciones, `
@@ -895,7 +994,10 @@ CRV CLI
   youtube discover-channel [channel-id] [--resume]  recorre el playlist de uploads sin hidratar
   youtube sync [--pending]     hidrata la unión de hoja y canal en lotes de 50
   youtube rederive [--dry-run]  re-parsea las descripciones guardadas, sin red ni cuota
-  youtube api-claims [--dry-run]  emite los claims del canal (candidatos, van a revisión)
+  youtube api-claims [--dry-run] [--reconcile="<nota>"]  emite los claims del canal (candidatos, van a revisión); --reconcile solo emite lo nuevo y descarta lo que ya no se emite
+  youtube credit-sections channel|others [--note="<motivo>" --confirm]  créditos del disco por bloque del canal
+  youtube credit-sections musicians [--album=<id>] [--note="<motivo>" --confirm]  músicos/invitados por bloque, disco por disco, sin ER
+  youtube credit-sections other-credits [--note="<motivo>" --confirm]  producción, composición y arte del canal, disco por disco, sin ER
   youtube sync-video <video-id>  consulta YouTube Data API (requiere YOUTUBE_API_KEY)
   youtube sync-channel [channel-id]  recorre uploads playlist oficial (requiere YOUTUBE_API_KEY)
   youtube classifications [--dry-run]  guarda todas las clasificaciones que la hoja da a cada disco

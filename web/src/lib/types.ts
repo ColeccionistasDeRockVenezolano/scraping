@@ -129,6 +129,8 @@ export interface AlbumDetail {
   tracklist: Track[];
   credits: Credit[];
   creditsByType: Record<string, Credit[]>;
+  /** Créditos de pista agrupados por acreditado, tipo y rol. */
+  scopedCreditsByType: Record<string, ScopedCredit[]>;
   formats: AlbumFormat[];
   aliases: Alias[];
   youtubeLinks: YoutubeLink[];

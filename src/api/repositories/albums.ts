@@ -63,6 +63,11 @@ export interface AlbumCreditRow {
   organizationName: string | null;
 }
 
+/** Un mismo crédito repetido en varias pistas del disco, visto desde el disco. */
+export interface ScopedCreditRow extends AlbumCreditRow {
+  tracks: Array<{ discNumber: number; trackNumber: number }>;
+}
+
 export interface AlbumTrackRow {
   id: number;
   discNumber: number;
@@ -93,6 +98,12 @@ export interface AlbumDetail {
   tracklist: AlbumTrackRow[];
   credits: AlbumCreditRow[];
   creditsByType: Record<string, AlbumCreditRow[]>;
+  /**
+   * Créditos de pista agrupados por acreditado, tipo y rol: "Keyboards ·
+   * pistas 1, 3, 5, 10". Un invitado del canal casi siempre viene acotado a
+   * pistas y, sin esto, no aparecía en la sección del disco.
+   */
+  scopedCreditsByType: Record<string, ScopedCreditRow[]>;
   formats: Array<{ id: number; format: string; quality: string | null; archiveStatus: string; filePath: string | null; notes: string | null }>;
   aliases: Array<{ id: number; alias: string; aliasType: string; isPrimary: boolean }>;
   youtubeLinks: Array<{ videoId: string; title: string | null; kind: string; isPrimaryLink: boolean }>;
@@ -104,6 +115,29 @@ const CREDIT_FIELDS = `jsonb_build_object(
     'artistId', artist_id, 'artistName', artist_name,
     'organizationId', organization_id, 'organizationName', organization_name
   )`;
+
+function creditKey(credit: AlbumCreditRow): string {
+  const target = credit.personId !== null ? `p${credit.personId}` : credit.artistId !== null ? `a${credit.artistId}` : `o${credit.organizationId}`;
+  return `${credit.creditType}|${credit.role.trim().toLowerCase()}|${target}`;
+}
+
+/** Agrupa los créditos de pista; lo que ya está acreditado en el disco entero no se repite. */
+export function scopedCreditsByType(tracklist: AlbumTrackRow[], albumCredits: AlbumCreditRow[]): Record<string, ScopedCreditRow[]> {
+  const albumWide = new Set(albumCredits.map(creditKey));
+  const grouped = new Map<string, ScopedCreditRow>();
+  for (const track of tracklist) {
+    for (const credit of track.credits) {
+      const key = creditKey(credit);
+      if (albumWide.has(key)) continue;
+      const entry = grouped.get(key) ?? { ...credit, tracks: [] };
+      entry.tracks.push({ discNumber: track.discNumber, trackNumber: track.trackNumber });
+      grouped.set(key, entry);
+    }
+  }
+  const byType: Record<string, ScopedCreditRow[]> = {};
+  for (const entry of grouped.values()) (byType[entry.creditType] ??= []).push(entry);
+  return byType;
+}
 
 export async function getAlbumDetail(id: number): Promise<AlbumDetail | null> {
   const { rows } = await getPool().query<Record<string, unknown>>(
@@ -189,9 +223,10 @@ export async function getAlbumDetail(id: number): Promise<AlbumDetail | null> {
     wordpressStatus: row["wordpress_status"] as string,
     artist: { id: Number(row["artist_id"]), name: row["artist_name"] as string },
     label: row["label_id"] != null ? { id: Number(row["label_id"]), name: row["label_name"] as string } : null,
-    tracklist: row["tracklist"] as AlbumTrackRow[],
+    tracklist,
     credits,
     creditsByType,
+    scopedCreditsByType: scopedCreditsByType(tracklist, credits),
     formats: row["formats"] as AlbumDetail["formats"],
     aliases: row["aliases"] as AlbumDetail["aliases"],
     youtubeLinks: row["youtube_links"] as AlbumDetail["youtubeLinks"],
