@@ -15,9 +15,11 @@ import { normalizeIdentitySecondary } from "../src/normalization/claims.js";
 loadDotenv();
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const REPORTS = path.join(ROOT, "reports");
-const MEDIA_OUT = path.join(REPORTS, "media-sincopa-missing-candidates-2026-09-27.jsonl");
-const GENRE_OUT = path.join(REPORTS, "genre-sincopa-missing-evidence-2026-09-27.jsonl");
-const SUMMARY_OUT = path.join(REPORTS, "sincopa-missing-media-genres-2026-09-27.json");
+function arg(name: string): string | undefined { const i = process.argv.indexOf(name); return i < 0 ? undefined : process.argv[i + 1]; }
+const TAG = arg("--tag") ?? "2026-09-27";
+const MEDIA_OUT = path.join(REPORTS, `media-sincopa-missing-candidates-${TAG}.jsonl`);
+const GENRE_OUT = path.join(REPORTS, `genre-sincopa-missing-evidence-${TAG}.jsonl`);
+const SUMMARY_OUT = path.join(REPORTS, `sincopa-missing-media-genres-${TAG}.json`);
 
 type Kind = "artist" | "album";
 interface Artist { id: number; name: string; }

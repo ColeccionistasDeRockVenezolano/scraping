@@ -1,6 +1,7 @@
-// Busca portadas de discos que siguen vacíos en iTunes Search. Solo emite un
-// candidato si artista y título coinciden de forma exacta tras normalización;
-// descargar y asociar queda a cargo de localize-images.ts.
+// Busca portadas de discos sin cover_url en Deezer (API pública, sin clave).
+// Solo emite un candidato si artista y título coinciden de forma exacta tras
+// normalización y hay un único resultado así; descargar y asociar queda a
+// cargo de localize-images.ts (--candidates).
 import { mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -10,11 +11,11 @@ import { normalizeEntityName } from "../src/normalization/entity-name.js";
 
 loadDotenv();
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const OUT = path.join(ROOT, arg("--out") ?? "reports/media-itunes-album-candidates-2026-09-27.jsonl");
+const OUT = path.join(ROOT, arg("--out") ?? "reports/media-deezer-album-candidates.jsonl");
 
 interface Album { id: number; title: string; artist: string; }
-interface ItunesResult { wrapperType?: string; artistName?: string; collectionName?: string; artworkUrl100?: string; collectionId?: number; }
-interface Candidate { kind: "album"; id: number; sourceUrl: string; label: string; artist: string; source: "itunes"; collectionId: number; }
+interface DeezerResult { id?: number; title?: string; artist?: { name?: string }; cover_xl?: string; cover_big?: string; }
+interface Candidate { kind: "album"; id: number; sourceUrl: string; label: string; artist: string; source: "deezer"; collectionId: number; }
 
 function arg(name: string): string | undefined { const i = process.argv.indexOf(name); return i < 0 ? undefined : process.argv[i + 1]; }
 function numberArg(name: string, fallback: number): number { const raw = arg(name); if (raw === undefined) return fallback; const n = Number(raw); if (!Number.isInteger(n) || n < 1) throw new Error(`${name} debe ser entero positivo`); return n; }
@@ -33,37 +34,26 @@ async function albums(pool: pg.Pool, limit: number | undefined): Promise<Album[]
   const result = [...unique.values()];
   return limit === undefined ? result : result.slice(0, limit);
 }
-async function search(album: Album): Promise<ItunesResult[]> {
-  const url = new URL("https://itunes.apple.com/search");
-  url.search = new URLSearchParams({ term: `${album.artist} ${album.title}`, country: "VE", media: "music", entity: "album", limit: "20" }).toString();
-  // Apple responde 429/403 cuando el ritmo sube: reintento con espera creciente.
-  for (let attempt = 0; attempt < 4; attempt += 1) {
-    const response = await fetch(url, { headers: { "user-agent": "CRV-local-media/1.0 (+coleccionistasderockvenezolano.com)" }, signal: AbortSignal.timeout(30_000) });
-    if (response.ok) return ((await response.json()) as { results?: ItunesResult[] }).results ?? [];
-    if ((response.status === 429 || response.status === 403 || response.status === 503) && attempt < 3) {
-      const wait = 5_000 * (attempt + 1);
-      process.stderr.write(`iTunes: HTTP ${response.status}; reintento en ${wait} ms\n`);
-      await pause(wait);
-      continue;
-    }
-    throw new Error(`iTunes HTTP ${response.status}`);
-  }
-  throw new Error("iTunes agotó los reintentos");
+async function search(album: Album): Promise<DeezerResult[]> {
+  const url = new URL("https://api.deezer.com/search/album");
+  url.search = new URLSearchParams({ q: `${album.artist} ${album.title}`, limit: "20" }).toString();
+  const response = await fetch(url, { headers: { "user-agent": "CRV-local-media/1.0 (+coleccionistasderockvenezolano.com)" }, signal: AbortSignal.timeout(30_000) });
+  if (!response.ok) throw new Error(`Deezer HTTP ${response.status}`);
+  return ((await response.json()) as { data?: DeezerResult[] }).data ?? [];
 }
-function pick(album: Album, results: ItunesResult[]): Candidate | undefined {
-  const matches = results.filter((result) => result.wrapperType === "collection" && result.artistName && result.collectionName && result.artworkUrl100 && result.collectionId
-    && key(result.artistName) === key(album.artist) && key(result.collectionName) === key(album.title));
+function pick(album: Album, results: DeezerResult[]): Candidate | undefined {
+  const matches = results.filter((result) => result.title && result.artist?.name && (result.cover_xl || result.cover_big)
+    && Number.isInteger(result.id) && key(result.artist.name) === key(album.artist) && key(result.title) === key(album.title));
   if (matches.length !== 1) return undefined;
   const result = matches[0]!;
-  // Apple entrega 100px en la búsqueda, pero el CDN permite una versión de
-  // portada adecuada para la ficha sin alterar la identidad del recurso.
-  const sourceUrl = result.artworkUrl100!.replace(/100x100(?:bb|-[0-9]+)?/u, "600x600bb");
-  return { kind: "album", id: album.id, sourceUrl, label: album.title, artist: album.artist, source: "itunes", collectionId: result.collectionId! };
+  const sourceUrl = result.cover_xl ?? result.cover_big!;
+  if (!/^https?:\/\//u.test(sourceUrl)) return undefined;
+  return { kind: "album", id: album.id, sourceUrl, label: album.title, artist: album.artist, source: "deezer", collectionId: result.id! };
 }
 
 async function main(): Promise<void> {
   const limitRaw = arg("--limit"); const limit = limitRaw === undefined ? undefined : numberArg("--limit", 1);
-  const delay = numberArg("--delay-ms", 900); const pool = new pg.Pool({ connectionString: process.env["DATABASE_URL"] });
+  const delay = numberArg("--delay-ms", 250); const pool = new pg.Pool({ connectionString: process.env["DATABASE_URL"] });
   try {
     const pending = await albums(pool, limit); const candidates: Candidate[] = []; let failures = 0;
     for (let index = 0; index < pending.length; index += 1) {

@@ -10,7 +10,7 @@ import pg from "pg";
 
 loadDotenv();
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const OUT = path.join(ROOT, "reports", "media-wikidata-candidates-2026-09-27.jsonl");
+const OUT = path.resolve(ROOT, arg("--out") ?? "reports/media-wikidata-candidates-2026-09-27.jsonl");
 const ENDPOINT = "https://query.wikidata.org/sparql";
 const VENEZUELA = "wd:Q717";
 
