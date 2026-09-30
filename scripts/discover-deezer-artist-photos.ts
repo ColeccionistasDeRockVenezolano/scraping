@@ -17,7 +17,7 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 interface CatalogAlbum { title: string; year: number | null; }
 interface Artist { id: number; name: string; albums: CatalogAlbum[]; }
 interface DzArtist { id?: number; name?: string; picture_xl?: string; picture_big?: string; }
-interface DzAlbum { title?: string; release_date?: string; }
+interface DzAlbum { title?: string; release_date?: string; cover_xl?: string; cover_big?: string; }
 interface Candidate { kind: "artist"; id: number; sourceUrl: string; label: string; source: "deezer-artist"; deezerId: number; sharedAlbums: string[]; }
 interface Doubt { id: number; name: string; deezerId?: number | undefined; reason: string; shared?: string[] | undefined; }
 
@@ -80,13 +80,20 @@ function pictureOf(row: DzArtist): string | undefined {
   return undefined;
 }
 
+// Deezer identifica las imágenes por hash de contenido en la ruta de la CDN;
+// cuando reutiliza una portada como «foto» del artista el hash es el mismo.
+function hashOfImage(url: string | undefined): string | undefined {
+  const match = /\/images\/(?:artist|cover)\/([0-9a-f]{16,})/u.exec(url ?? "");
+  return match?.[1];
+}
+
 async function main(): Promise<void> {
   const limitRaw = arg("--limit"); const limit = limitRaw === undefined ? undefined : numberArg("--limit", 1);
   const delay = numberArg("--delay-ms", 200);
   const pool = new pg.Pool({ connectionString: process.env["DATABASE_URL"] });
   try {
     const pending = await artists(pool, limit);
-    const candidates: Candidate[] = []; const doubts: Doubt[] = []; let ambiguous = 0; let noMatch = 0; let failures = 0;
+    const candidates: Candidate[] = []; const doubts: Doubt[] = []; let ambiguous = 0; let noMatch = 0; let failures = 0; let artworkSkips = 0;
     for (let index = 0; index < pending.length; index += 1) {
       const artist = pending[index]!;
       try {
@@ -97,13 +104,20 @@ async function main(): Promise<void> {
         else {
           const dz = matches[0]!;
           const discography = await artistAlbums(dz.id!);
-          const { strong, weak } = sharedAlbums(artist, discography);
-          if (strong.length > 0) {
-            candidates.push({ kind: "artist", id: artist.id, sourceUrl: pictureOf(dz)!, label: artist.name, source: "deezer-artist", deezerId: dz.id!, sharedAlbums: strong });
-          } else if (weak.length > 0) {
-            doubts.push({ id: artist.id, name: artist.name, deezerId: dz.id, reason: "solo discos genéricos o años dispares", shared: weak });
+          const picture = pictureOf(dz)!;
+          const pictureHash = hashOfImage(picture);
+          if (pictureHash && discography.some((row) => hashOfImage(row.cover_xl ?? row.cover_big) === pictureHash)) {
+            // La «foto» es el artwork de uno de sus discos: no se emite.
+            artworkSkips += 1;
           } else {
-            doubts.push({ id: artist.id, name: artist.name, deezerId: dz.id, reason: "sin discos en común" });
+            const { strong, weak } = sharedAlbums(artist, discography);
+            if (strong.length > 0) {
+              candidates.push({ kind: "artist", id: artist.id, sourceUrl: picture, label: artist.name, source: "deezer-artist", deezerId: dz.id!, sharedAlbums: strong });
+            } else if (weak.length > 0) {
+              doubts.push({ id: artist.id, name: artist.name, deezerId: dz.id, reason: "solo discos genéricos o años dispares", shared: weak });
+            } else {
+              doubts.push({ id: artist.id, name: artist.name, deezerId: dz.id, reason: "sin discos en común" });
+            }
           }
         }
       } catch (error) { failures += 1; process.stderr.write(`artist ${artist.id}: ${(error as Error).message}\n`); }
@@ -117,7 +131,7 @@ async function main(): Promise<void> {
     await mkdir(path.dirname(out), { recursive: true });
     await writeFile(out, candidates.map((row) => JSON.stringify(row)).join("\n") + (candidates.length ? "\n" : ""));
     await writeFile(doubtsOut, doubts.map((row) => JSON.stringify(row)).join("\n") + (doubts.length ? "\n" : ""));
-    process.stdout.write(`${JSON.stringify({ pending: pending.length, candidates: candidates.length, doubts: doubts.length, ambiguous, noMatch, failures, out: path.relative(ROOT, out) })}\n`);
+    process.stdout.write(`${JSON.stringify({ pending: pending.length, candidates: candidates.length, doubts: doubts.length, ambiguous, noMatch, failures, artworkSkips, out: path.relative(ROOT, out) })}\n`);
   } finally { await pool.end(); }
 }
 main().catch((error: unknown) => { console.error(error); process.exitCode = 1; });

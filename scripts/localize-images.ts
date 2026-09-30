@@ -212,6 +212,18 @@ async function exists(file: string): Promise<boolean> {
 async function sourceDownloadUrl(sourceUrl: string): Promise<string> {
   const parsed = new URL(sourceUrl);
   if (parsed.hostname !== "commons.wikimedia.org" || !parsed.pathname.startsWith("/wiki/Special:FilePath/")) return sourceUrl;
+  // Special:FilePath responde 302 hacia upload.wikimedia.org; seguimos el redirect
+  // con redirect:"manual" para no pasar por api.php, que limita con 429.
+  try {
+    const probe = await fetch(sourceUrl, {
+      redirect: "manual", signal: AbortSignal.timeout(30_000),
+      headers: { "user-agent": "CRV-local-media/1.0 (+coleccionistasderockvenezolano.com)" },
+    });
+    if (probe.status >= 300 && probe.status < 400) {
+      const location = probe.headers.get("location");
+      if (location) return new URL(location, sourceUrl).toString();
+    }
+  } catch { /* cae al api.php */ }
   const filename = decodeURIComponent(parsed.pathname.slice("/wiki/Special:FilePath/".length));
   const api = new URL("https://commons.wikimedia.org/w/api.php");
   api.search = new URLSearchParams({ action: "query", format: "json", prop: "imageinfo", iiprop: "url", titles: `File:${filename}` }).toString();
