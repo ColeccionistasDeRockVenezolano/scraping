@@ -1259,3 +1259,10 @@ body.has-modal .undo-bar { visibility: hidden; }
 /* Marca de fallecido/a junto al nombre (sustituye a la cruz «(†)» del nombre). */
 .deceased-mark { display: inline-flex; align-items: center; margin-left: 0.4em; color: var(--text-muted, currentColor); opacity: 0.75; vertical-align: 0.04em; font-size: 0.8em; }
 .entity-hero__title .deceased-mark { font-size: 0.6em; vertical-align: 0.25em; }
+
+/* Marca «reescribir con IA» tras una fusión (RewritePendingMark). */
+.rewrite-mark {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; margin-top: 12px; padding: 8px 12px;
+  border-radius: 8px; background: var(--violet-soft); color: var(--violet); font-size: 13px;
+}
+.rewrite-mark span { flex: 1 1 220px; color: var(--text); }

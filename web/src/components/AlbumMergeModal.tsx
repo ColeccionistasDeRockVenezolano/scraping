@@ -34,6 +34,9 @@ function plural(count: number, singular: string, pluralForm: string): string {
   return `${count} ${count === 1 ? singular : pluralForm}`;
 }
 
+/** Textos que, sin elección, se unen al fusionar (la reseña además queda marcada para la IA). */
+const TEXT_FIELDS = new Set(["description", "notes"]);
+
 interface AlbumMergeModalProps {
   albumId: number;
   albumTitle: string;
@@ -231,10 +234,22 @@ export function AlbumMergeModal({ albumId, albumTitle, onMerged, onClose }: Albu
                           <td>
                             <fieldset style={{ border: 0, margin: 0, padding: 0 }}>
                               <legend className="visually-hidden">Decisión para {FIELD_LABELS[conflict.field] ?? conflict.field}</legend>
+                              {TEXT_FIELDS.has(conflict.field) ? (
+                                <label style={{ display: "block", fontSize: 12.5 }}>
+                                  <input
+                                    type="radio" name={`album-merge-${conflict.field}`}
+                                    checked={choices[conflict.field] === undefined}
+                                    onChange={() => setChoices((current) => {
+                                      const { [conflict.field]: _dropped, ...rest } = current;
+                                      return rest;
+                                    })}
+                                  /> Unir las dos{conflict.field === "description" ? " (la IA las reescribe después)" : ""}
+                                </label>
+                              ) : null}
                               <label style={{ display: "block", fontSize: 12.5 }}>
                                 <input
                                   type="radio" name={`album-merge-${conflict.field}`}
-                                  checked={(choices[conflict.field] ?? "keep") === "keep"}
+                                  checked={TEXT_FIELDS.has(conflict.field) ? choices[conflict.field] === "keep" : (choices[conflict.field] ?? "keep") === "keep"}
                                   onChange={() => setChoices((current) => ({ ...current, [conflict.field]: "keep" }))}
                                 /> Conservar: {formatMergeValue(conflict.keepValue)}
                               </label>
@@ -245,6 +260,7 @@ export function AlbumMergeModal({ albumId, albumTitle, onMerged, onClose }: Albu
                                   onChange={() => setChoices((current) => ({ ...current, [conflict.field]: "drop" }))}
                                 /> Usar: {formatMergeValue(conflict.dropValue)}
                               </label>
+                              {!TEXT_FIELDS.has(conflict.field) ? <span className="hint" style={{ fontSize: 11.5 }}>El otro valor queda anotado en Notas.</span> : null}
                             </fieldset>
                           </td>
                         </tr>

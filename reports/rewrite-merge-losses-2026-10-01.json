@@ -1,0 +1,241 @@
+{
+  "mode": "confirm",
+  "runId": 10769,
+  "pending": 362,
+  "written": 320,
+  "unchanged": 20,
+  "changedMeanwhile": [],
+  "entityGone": [],
+  "failed": [
+    {
+      "id": 28,
+      "error": "la IA no dio un texto válido: habla de los textos, las fuentes, el material o la fusión en vez de integrar los datos"
+    },
+    {
+      "id": 35,
+      "error": "la IA no dio un texto válido: habla de los textos, las fuentes, el material o la fusión en vez de integrar los datos"
+    },
+    {
+      "id": 93,
+      "error": "la IA no dio un texto válido: habla de los textos, las fuentes, el material o la fusión en vez de integrar los datos"
+    },
+    {
+      "id": 19,
+      "error": "la IA no dio un texto válido: habla de los textos, las fuentes, el material o la fusión en vez de integrar los datos"
+    },
+    {
+      "id": 94,
+      "error": "la IA no dio un texto válido: habla de los textos, las fuentes, el material o la fusión en vez de integrar los datos"
+    },
+    {
+      "id": 115,
+      "error": "la IA no dio un texto válido: habla de los textos, las fuentes, el material o la fusión en vez de integrar los datos"
+    },
+    {
+      "id": 111,
+      "error": "la IA no dio un texto válido: habla de los textos, las fuentes, el material o la fusión en vez de integrar los datos"
+    },
+    {
+      "id": 95,
+      "error": "la IA no dio un texto válido: habla de los textos, las fuentes, el material o la fusión en vez de integrar los datos"
+    },
+    {
+      "id": 118,
+      "error": "la IA no dio un texto válido: habla de los textos, las fuentes, el material o la fusión en vez de integrar los datos"
+    },
+    {
+      "id": 164,
+      "error": "la IA no dio un texto válido: habla de los textos, las fuentes, el material o la fusión en vez de integrar los datos"
+    },
+    {
+      "id": 213,
+      "error": "la IA no dio un texto válido: habla de los textos, las fuentes, el material o la fusión en vez de integrar los datos"
+    },
+    {
+      "id": 221,
+      "error": "la IA no dio un texto válido: habla de los textos, las fuentes, el material o la fusión en vez de integrar los datos"
+    },
+    {
+      "id": 198,
+      "error": "la IA no dio un texto válido: habla de los textos, las fuentes, el material o la fusión en vez de integrar los datos"
+    },
+    {
+      "id": 217,
+      "error": "la IA no dio un texto válido: habla de los textos, las fuentes, el material o la fusión en vez de integrar los datos"
+    },
+    {
+      "id": 259,
+      "error": "la IA no dio un texto válido: habla de los textos, las fuentes, el material o la fusión en vez de integrar los datos"
+    },
+    {
+      "id": 276,
+      "error": "la IA no dio un texto válido: habla de los textos, las fuentes, el material o la fusión en vez de integrar los datos"
+    },
+    {
+      "id": 294,
+      "error": "la IA no dio un texto válido: pierde años que sí están en los textos: 1980"
+    },
+    {
+      "id": 293,
+      "error": "la IA no dio un texto válido: habla de los textos, las fuentes, el material o la fusión en vez de integrar los datos"
+    },
+    {
+      "id": 283,
+      "error": "la IA no dio un texto válido: habla de los textos, las fuentes, el material o la fusión en vez de integrar los datos"
+    },
+    {
+      "id": 332,
+      "error": "la IA no dio un texto válido: habla de los textos, las fuentes, el material o la fusión en vez de integrar los datos"
+    },
+    {
+      "id": 334,
+      "error": "la IA no dio un texto válido: habla de los textos, las fuentes, el material o la fusión en vez de integrar los datos"
+    },
+    {
+      "id": 348,
+      "error": "la IA no dio un texto válido: habla de los textos, las fuentes, el material o la fusión en vez de integrar los datos"
+    }
+  ],
+  "samples": [
+    {
+      "id": 15,
+      "kind": "person",
+      "entityId": 376,
+      "name": "Alfredo Gil",
+      "text": "Alfredo Gil, conocido también como Alfredo \"Pollo\" Gil, fue un trompetista y músico. Participó en la grabación del disco «Almendra» de la banda Almendra y en la grabación del tema «Déjame Correr», de la banda Azabache."
+    },
+    {
+      "id": 12,
+      "kind": "person",
+      "entityId": 113,
+      "name": "Carlos Astros",
+      "text": "Carlos Astros fue baterista de Susan, banda con la que grabó el disco «Ya No Hay Nada Que Hacer Aquí». Participó en las grabaciones de «5to Festival Nuevas Bandas», un recopilatorio de varios artistas, y en tres discos de Billy Se Fue: «Todo No Es Suficiente», «Ella» y «Para Siempre»."
+    },
+    {
+      "id": 11,
+      "kind": "person",
+      "entityId": 112,
+      "name": "Alejandro Estrada",
+      "text": "Alejandro Estrada fue cantante y guitarrista de Susan, banda con la que grabó el disco «Ya No Hay Nada Que Hacer Aquí». También participó como vocalista en temas de Billy Se Fue, entre ellos «Ella», «Todo No Es Suficiente» y «Para Siempre», y en «5to Festival Nuevas Bandas», un recopilatorio de varios artistas. Es conocido también como Alejandro Estrada \"Alz\"."
+    },
+    {
+      "id": 13,
+      "kind": "person",
+      "entityId": 223,
+      "name": "Annabella Almenar",
+      "text": "Annabella Almenar es tecladista, percusionista y cantante. Participó en el disco «Papidandeando» de Vagos y Maleantes, donde tocó teclados, pandereta, tambor y coros en varios temas. También grabó teclados en «Bélica» de Bélica, guitarra en «Volando Dormida», y fue productora ejecutiva del disco «Chica Chic» de Bélica. Asimismo, fue productora ejecutiva de su disco «Chica Chic».\n\nPuso voz principal en «Venezuela Llora», incluido en el compilado «Venezuela Subterránea», y voz principal y teclados en «A Conciencia» de Yátu. Participó con coros en «Gran Sabana», del compilado «Festival Nuevas Bandas 20 Años En Vivo», y con teclados y coros en temas de La Hermandad y en «El Pop Venezolano». Como teclista y corista participó en las canciones «Jai» y «Criminal Love» de La Hermandad."
+    },
+    {
+      "id": 14,
+      "kind": "person",
+      "entityId": 372,
+      "name": "Norton Pérez",
+      "text": "Norton Pérez, también conocido como Nörton \"Mars\" Pérez, es guitarrista y cantante que participó en las bandas Pixel y La Puta Eléctrica. En Pixel tocó guitarra y hacía coros en los discos «Pixel», «Poco», «Invítame» y «Lo Último Que Se Pierde». En La Puta Eléctrica fue voz principal, guitarra y coros en «Ladrón De Tu Amor», donde también se encargó de todos los arreglos. Además firmó la letra de temas de «Jackturbo» y «Jackturbo II», de Jacktürbo, y participó como vocalista y guitarrista en varios recopilatorios de festivales y tributos, entre ellos «Festival Nuevas Bandas: La Historia», «5to Festival Nuevas Bandas», «Décimo Festival Nuevas Bandas», «Miércoles Insólitos», «Zona De Obras: Venezuela» y «Tributo Lo-Fi A Sentimiento Muerto», y tocó la guitarra en «Criminal Love», de La Hermandad.\n\nComo vocalista y guitarrista participó en los discos «Jackturbo» y «Jackturbo II» de Jacktürbo, donde también tocó el bajo en el primero."
+    },
+    {
+      "id": 2,
+      "kind": "artist",
+      "entityId": 106,
+      "name": "Grillos Mientras Tanto",
+      "text": "Grillos Mientras Tanto fue una banda de Caracas formada en la primera mitad de los años 90, con un estilo orientado entre el funk y la psicodelia. Estuvo integrada por Eric Colón en guitarra y coros, Alejandro Ramírez en bajo y voz, Ricardo Tirado en teclados y Juan Cristóbal Losada en batería.\n\nParticipó en el 4to Festival Nuevas Bandas y dejó un demo grabado en 1994. En 1996 se despidió de la escena local."
+    },
+    {
+      "id": 1,
+      "kind": "artist",
+      "entityId": 1030,
+      "name": "Big Landin Orquesta",
+      "text": "Agrupación formada en Caracas por músicos que venían de diferentes bandas de la escena nacional y de experiencias en bandas de distintos géneros musicales. Su propuesta se basa en el ska, que fusionan con otros ritmos, con piezas instrumentales donde la improvisación libre ocupa un lugar importante.\n\nSu debut discográfico se produjo en 2007 con el álbum «SKAterriza».\n\nEntre sus integrantes se encontraron el bajista Raúl Mota, el baterista Alberto «Barrabás» Mathison, el tecladista Alexander «Bubu» Izturriaga, el guitarrista Luciano «Lucho» Calello y los saxofonistas Kevin «Lechuga» Alva y Felipe, entre otros músicos."
+    },
+    {
+      "id": 16,
+      "kind": "person",
+      "entityId": 730,
+      "name": "Alberto Montenegro",
+      "text": "Alberto Horacio Montenegro Delgado, conocido también como Beto, es guitarrista y cantante nacido el 21 de enero de 1989 en Caracas, Distrito Capital, Venezuela, y activo desde la década de 2000.\n\nEs el vocalista líder y guitarrista de Rawayana. Con esa agrupación grabó la voz principal y las guitarras acústicas en el disco «RawayanaLand» y la voz principal y la guitarra en «Licencia Para Ser Libre». Su trabajo se enmarca en géneros como el funk, el soul, el pop latino y el pop reggae.\n\nTambién participó como vocalista principal en «Gatos Oliva» y «Falta Poco», incluidos en el disco «Rock And Mau» de Movida Acústica Urbana, y en «Chica Astrológica», del disco «Real Orgánico y Baile» de Majarete Sound Machine."
+    },
+    {
+      "id": 5,
+      "kind": "artist",
+      "entityId": 983,
+      "name": "MxDxH",
+      "text": "Banda de grindcore formada en Los Teques, estado Miranda, Venezuela, también conocida como Muestras de Heces. Su sonido se enmarca en el crust y el grindcore, con influencias de grupos como Extreme Noise Terror, Napalm Death, Looking For An Answer, Machetazo, Terrorizer y Ratos De Porao, entre otros.\n\nLa formación estuvo integrada por Claudio Adrian en la voz, Ruben Granadillo en la guitarra, Javier Aguilera en el bajo y Oliver Alfonson en la batería. Publicó los discos La Ruta De La Miseria (2012) y Cosechando Còlera (2015)."
+    },
+    {
+      "id": 4,
+      "kind": "artist",
+      "entityId": 552,
+      "name": "Flanders",
+      "text": "Flanders es una banda caraqueña de pop rock formada a mediados de 2007 por tres amigos músicos, todos zurdos, de donde proviene el nombre de la banda, ya que la familia Flanders de la serie Los Simpsons también es toda zurda.\n\nLa integran Andrés Pazos en la guitarra y voz principal, Marco Matamoros en el bajo y coros, y Fernando González en la batería y coros. Los tres compaginan la banda con sus estudios universitarios: Marco y Fernando cursan estudios musicales en el decanato de música de la UNEARTE, mientras que Andrés estudia Ingeniería de Materiales en la Universidad Simón Bolívar. Antes de Flanders, los tres tenían experiencia en agrupaciones de la escena del rock caraqueño.\n\nSu propuesta busca entretener al público con letras cotidianas e inteligentes y una música juvenil y alegre, sin pretensiones, apoyada en presentaciones en vivo divertidas y en un concepto musical accesible a todo tipo de público. En 2008 publicaron el disco El Sofá."
+    },
+    {
+      "id": 6,
+      "kind": "artist",
+      "entityId": 459,
+      "name": "Zeta",
+      "text": "Banda de hardcore punk formada en 2003 en Puerto La Cruz y Caracas, conocida inicialmente como Zeta Once. Hablar de la banda es hablar de la escena hardcore y screamo de Venezuela, y The Zeta, también llamada Zeta Once, es la única banda que ha durado 8 años de trabajo constante en su música y de múltiples presentaciones en Venezuela y en el exterior. Entre ellas, una actuación en el tour mundial de la banda canadiense Comeback Kid en Costa Rica en 2008, dos giras por Argentina en 2009 y 2010 y presentaciones en Colombia en 2010, todo un logro para una banda nacional que ha tenido poco apoyo de los medios.\n\nSu discografía incluye el EP Dos (2009), los álbumes Haedo (2010) y Explosión Del Cosmos Del Alma (2013), y el split Voces Del Nuevo Continente (2014) junto a No Somos Marineros. Su más reciente material, Haedo, fue mezclado por Brian Gardner, famoso por trabajar con artistas como 50 Cent, Avenged Sevenfold, Angels and Airwaves, Beck, Beastie Boys y Blink 182, entre otros, y su arte estuvo a cargo de Sonny Kay, actualmente Director Creativo de Rodríguez Lopez Productions, disquera perteneciente a Omar Rodríguez Lopez, fundador y guitarrista de la banda The Mars Volta. Sonny Kay ha sido el responsable del arte de bandas como The Mars Volta, RX Bandits, Red Sparowes, De Facto, Omar Rodríguez Lopez y The Locust, entre otras."
+    },
+    {
+      "id": 7,
+      "kind": "artist",
+      "entityId": 1053,
+      "name": "La Radio Candela",
+      "text": "La Radio Candela es una banda venezolana formada en Barquisimeto (estado Lara) en el año 2000, también conocida como Radio Candela. Su propuesta musical parte del folk y la cultura popular y fusiona ritmos como el pop, el ska, el reggae, el rock y la música tradicional, con letras propias y un enfoque puesto en los valores del arte popular. Con este estilo, la agrupación fue ganando adeptos a nivel regional y, paulatinamente, realizó presentaciones en otras zonas del país, adquiriendo un reconocimiento importante dentro del mundo musical.\n\nEntre sus integrantes figuran Johann Blanco (voz y cuatro), John Blanco (guitarra), Joshuan Blanco (batería), Wilfre Peraza (bajo), Luis Arturo Saavedra (percusión), Luis Alberto Saavedra (guitarra), Xiomer Leal (trompeta) y Carlos Romero (trompeta).\n\nLa banda se ha presentado en numerosos escenarios de la escena alternativa del país y ha actuado en eventos musicales realizados en Alemania, Francia, Argentina y Cuba. En 2009 incluyó los temas La canción del pregonero y Canción sin color en el recopilatorio La Liga - Latido Artístico Independiente, lo que le dio difusión en espacios radiales; ese mismo año publicó Promocionales, y en 2010 editó de forma independiente su debut discográfico, Un Cuento Sin Pensalo."
+    },
+    {
+      "id": 8,
+      "kind": "artist",
+      "entityId": 63,
+      "name": "Chulius & The Filarmónicos",
+      "text": "Chulius & The Filarmónicos es el proyecto musical en solitario de Julio Briceño, vocalista de Los Amigos Invisibles, también conocido como Chulius and The Filarmónicos. Bajo ese nombre, Briceño desarrolla una propuesta que mezcla pop, alternativo, electrónica y downtempo, y que se distancia del sonido de Los Amigos Invisibles. En el proyecto, Briceño no solo es el vocalista, sino que también toca la guitarra, la programación, los teclados y un par de bajos.\n\nEl proyecto comenzó a gestarse desde 2005, cuando Briceño empezó a grabar temas en distintos lugares, entre Estados Unidos, Venezuela e Irlanda. En esas sesiones, que se prolongaron durante unos dos años entre Nueva York, Irlanda, Londres y Caracas, contó con numerosos músicos invitados.\n\nSu álbum debut, MF* Radio (2007), editado por Gozadera Records, reúne doce canciones cantadas en inglés, compuestas y producidas por el propio Briceño. El primer sencillo fue «Shine», con la colaboración de Javier Weyler, baterista de Stereophonics, y en el disco participaron también músicos como Xavier Lozada, integrantes de la sección de metales de Fauna Crepuscular y los ingenieros de sonido Erik Aldrey y Eduardo Larez, entre otros.\n\nEn 2014 el proyecto publicó un segundo disco, Shorts & Sandals, con el que dio continuidad a su discografía. Su discografía incluye «& The Filarmónicos»."
+    },
+    {
+      "id": 24,
+      "kind": "person",
+      "entityId": 770,
+      "name": "Chris Rex \"Elektrobot\"",
+      "text": "Participó en «Transformer» con sintetizador, secuencias, coros y loops. También participó como bajista y corista en la grabación del tema «Black», de la banda Metrozubdivision."
+    },
+    {
+      "id": 17,
+      "kind": "person",
+      "entityId": 739,
+      "name": "Brian Gardner",
+      "text": "Ingeniero de masterización que trabajó en discos de la escena venezolana. Realizó el mastering de «Los Contrarios» de Desorden Público, con temas como «Ciudad De Los Locos» y «Tierra De Gigantes». También masterizó «Licencia Para Ser Libre» de Rawayana, «La Caída De Lucy» de Buenaparte, «Todos Los Topinos De Lebronch» y «Los Topinos Del Pan» de Lebronch.\n\nAsimismo, se encargó de la masterización de los discos «De Día Es Más Oscuro» de Tremolo Violenta, «1986» de 1ra Edición, «Tides» de La Mar y «Reiniciando Transmisión» de Okills.\n\nBrian Gardner \"Big Bass\" realizó la masterización del disco «Reina Contra La Máquina» de Salpachino."
+    },
+    {
+      "id": 21,
+      "kind": "person",
+      "entityId": 721,
+      "name": "Luis \"Droopy\" Pulido",
+      "text": "Luis \"Droopy\" Pulido es un bajista que participó en las grabaciones de Circo Urbano. Tocó el bajo en los discos «Música Moderna» y «Kilómetros», y también figura acreditado en la grabación y mezcla de este último.\n\nParticipó con guitarra en el compilado «Circuito NB1» y en «Santeria» de Bajo Zero, donde también realizó la grabación, la producción, la mezcla y la masterización."
+    },
+    {
+      "id": 9,
+      "kind": "artist",
+      "entityId": 1951,
+      "name": "Paul Gillman",
+      "text": "Cantante venezolano de heavy metal, locutor, presentador y durante algún tiempo actor de doblaje, con más de tres décadas de trayectoria artística. Nació en Caracas en 1960 y reside en Valencia, estado Carabobo. Ayudó a formar las agrupaciones Power Age y Arkangel, y después formó Gillman. Tiene en su haber un total de 12 producciones discográficas oficiales.\n\nCon Arkangel grabó tres discos: Arkangel (1981), Rock Nacional (1982) y Represión Latinoamericana (1983), en los que desarrolló un heavy metal con influencias de bandas anglosajonas como Iron Maiden, pero con identidad propia, y que lo llevaron a enarbolar la bandera del llamado Rock Nacional.\n\nTras su salida de Arkangel formó la banda Gillman, con la que debutó discográficamente con Levántate y Pelea (1984), un disco de letras que denuncian problemas sociales y políticos de Venezuela. Le siguieron El Guerrero (1985), Sígueme (1988) —con un sonido más comercial y el tema «Adriana»— y El Regreso del Guerrero (1990), con el que regresó a su estilo y que incluye el clásico «F-27». Su discografía oficial incluye, entre otros, Escalofrío (1994), Vivo y en Vivo (1995), 25 Años (2001), Cuahtemoc y Despertando en la Historia (2003), Inevitable (2007), 30 Años (2008), El Curandero (2011), Escalofrío II y Tributo a lo Desconocido (2012), Clásicos Recargados (2015), Más Vivo & En Vivo (2016), Levántate y Pelea - 40 Aniversario (2017), Tesoros (2018) y Presente (2021).\n\nHa sido reconocido por fundar el movimiento del Rock Nacional y por crear el Gillmanfest, un festival de heavy metal gratuito que se realiza cada año en distintos estados de Venezuela. Dirige los programas radiales Kultura Rock FM y El idioma del rock, y el espacio televisivo Kultura Rock TV, transmitido desde marzo de 2008 por la Televisora Venezolana Social (TVes). En el doblaje venezolano se le reconoce por interpretar la voz de Patricio Estrella en la serie Bob Esponja."
+    },
+    {
+      "id": 22,
+      "kind": "person",
+      "entityId": 8415,
+      "name": "Juan Carlos Pineda",
+      "text": "Bajista que participó en el disco «Afronauta» de Caseroloops, donde grabó el bajo en temas como «Cerca Del Sol», «Electropical Love» y «Conexión». También participó en el disco «Música Moderna» de Circo Urbano, donde grabó el bajo en el tema «Esta Vez»."
+    },
+    {
+      "id": 3,
+      "kind": "artist",
+      "entityId": 1963,
+      "name": "Los Holiday's",
+      "text": "Los Holiday's fue una banda de pop y rock formada en Caracas a principios de la década de 1960. Su formación inicial estuvo integrada por Richard Coca y Candy Sáez en la voz, Frank Kunez en la guitarra, Chosbo Stienhart en el bajo y Rurik Grassi en la batería. Con una marcada influencia de agrupaciones como The Ventures y The Shadows, interpretaban temas instrumentales y versiones cantadas, y se presentaban en fiestas familiares y circuitos escolares. En otra alineación, la banda aparecía integrada por Wolfgang Vivas en la voz, José Fortuol en el bajo, Frank Kunez en la guitarra y Rurik Grassi en la batería; los únicos venezolanos de esa formación eran Vivas y Fortuol, mientras que Rurik Grassi, italiano, y Frank Kunez, húngaro, tenían varios años en el país.\n\nEl sello Discomoda los contrató como artistas exclusivos y publicó varios sencillos, entre ellos «El perro» y «Mi cacharrito», además del EP Indianápolis (1964). Ese mismo año editaron su primer álbum, Los Holiday's, e incorporaron a la cantante estadounidense Candy Sáez como voz líder junto a Richard Coca. En 1965, tras el retiro de Sáez y la incorporación de José Fortoul como voz líder, publicaron su segunda producción, Holiday's Vol. II, y varios sencillos.\n\nA partir de 1966 la formación comenzó a rotar: se incorporaron Franklin Holland y Wolfgang Vivas ante el retiro de Chosbo Stienhart y Richard Coca, y su orientación musical viró hacia el rock británico y posteriormente hacia la psicodelia. Ese año editaron Sounds of the Holidays y viajaron a España, donde compartieron presentaciones con bandas hispanas como Los Sirex, Los Mustang, Los Brincos y Los Bravos.\n\nA su regreso a Venezuela, Holland, Jean Louis Ajzenberg y Rurik Grassi se agruparon como el primer power trio venezolano, con un sonido heavy y experimental. Grabaron para Discomoda su cuarto y último trabajo, Un Toque Sicodélico (1968), en el que destacan versiones como «Donde están las flores» y «Me vuelvo loco». Tras la grabación, Ajzenberg regresó a Francia y Grassi pasó a formar parte de Los Claners. Holland reformó el grupo como Fresh Holidays con Randy Cottin en la batería y Jesús Díaz en el bajo, y para 1969 se produjo la ruptura definitiva del grupo."
+    },
+    {
+      "id": 25,
+      "kind": "person",
+      "entityId": 794,
+      "name": "Luis Márquez",
+      "text": "Luis Márquez, también conocido como Luis \"Papo\" Márquez, es trompetista y diseñador gráfico.\n\nParticipó en la grabación del disco «Tumbador» de Tumbador, donde se encargó del diseño gráfico. También tocó la trompeta en «Cebollas Ardientes» de Cebollas Ardientes y en «Croj» de Croj.\n\nAsimismo, participó en las sesiones de grabación de tres discos venezolanos: «Qué» de Bulevar, en el tema «Al Tomar Café»; «Vuelve» de Colina, con un solo de trompeta en «El Maestro Me Decía»; y «Con El Sentimiento Muerto» de Edgar Jiménez, en «Una Mirada Dice Todo y Dice Nada»."
+    }
+  ]
+}

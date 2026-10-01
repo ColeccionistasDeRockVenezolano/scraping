@@ -5,7 +5,7 @@
 // campos se completan, cuáles se contradicen, qué relaciones comparten y qué
 // avisos merece el par. La fusión real la ejecuta el servicio (E11.3) dentro
 // de una transacción del operador; aquí no hay reglas propias.
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useId, useState } from "react";
 import { ApiError, entityMergeApi } from "../lib/api";
 import { formatMergeValue } from "../lib/format";
 import { useToast } from "../lib/ToastContext";
@@ -49,6 +49,13 @@ const FIELD_LABELS: Readonly<Record<string, string>> = {
   notes: "Notas",
 };
 
+type FieldChoice = "keep" | "drop" | "combine";
+
+/** Une dos textos en párrafos, como hace la fusión cuando nadie elige. */
+function joinTexts(keep: unknown, drop: unknown): string {
+  return `${String(keep ?? "").trim()}\n\n${String(drop ?? "").trim()}`.trim();
+}
+
 /** Sustantivo por kind, para los textos del modal. */
 const NOUNS: Readonly<Record<MergeableKind, { plural: string; one: string }>> = {
   person: { plural: "personas", one: "persona" },
@@ -79,7 +86,13 @@ export function MergeEntityModal({ kind, entityId, entityName, otherId, otherNam
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string>();
   const [stale, setStale] = useState(false);
-  const [choices, setChoices] = useState<Partial<Record<PersonMergeField, "keep" | "drop">>>({});
+  const [choices, setChoices] = useState<Partial<Record<PersonMergeField, FieldChoice>>>({});
+  /** Texto final de cada campo combinado: empieza con los dos unidos y se puede editar. */
+  const [combined, setCombined] = useState<Record<string, string>>({});
+  const [rewriteLater, setRewriteLater] = useState(true);
+  const [rewriting, setRewriting] = useState<string | null>(null);
+  const [aiUsed, setAiUsed] = useState<Record<string, string>>({});
+  const combinedId = useId();
   const [keepDropNameAsAlias, setKeepDropNameAsAlias] = useState(true);
   const [note, setNote] = useState("");
   const [busy, setBusy] = useState(false);
@@ -104,7 +117,14 @@ export function MergeEntityModal({ kind, entityId, entityName, otherId, otherNam
       setKeepId(result.keep.id);
       setDropId(result.drop.id);
       setPreview(result);
-      setChoices({});
+      // Los textos largos en conflicto empiezan combinados: nada se pierde
+      // salvo que la persona elija un lado a propósito.
+      const combinable = result.combinableFields ?? [];
+      const conflicts = result.fieldConflicts.filter((item) => combinable.includes(item.field));
+      setChoices(Object.fromEntries(conflicts.map((item) => [item.field, "combine" as const])));
+      setCombined(Object.fromEntries(conflicts.map((item) => [item.field, joinTexts(item.keepValue, item.dropValue)])));
+      setAiUsed({});
+      setRewriteLater(true);
     } catch (err) {
       setError(err instanceof Error ? err.message : "No se pudo previsualizar la fusión.");
     } finally {
@@ -125,14 +145,36 @@ export function MergeEntityModal({ kind, entityId, entityName, otherId, otherNam
     if (preview) void load(preview.drop.id, preview.keep.id, "first");
   }
 
+  async function rewriteNow(field: string) {
+    if (!preview) return;
+    setRewriting(field);
+    setError(undefined);
+    try {
+      const proposal = await entityMergeApi.rewrite(kind, preview.keep.id, preview.drop.id, field);
+      setCombined((current) => ({ ...current, [field]: proposal.text }));
+      setAiUsed((current) => ({ ...current, [field]: proposal.model }));
+      // Ya se reescribió: no hace falta dejarla marcada (se puede volver a marcar).
+      setRewriteLater(false);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "La IA no pudo unir los textos.");
+    } finally {
+      setRewriting(null);
+    }
+  }
+
   async function submit() {
     if (!preview || !keepId || !dropId) return;
     setBusy(true);
     setError(undefined);
+    const combinedFields = Object.entries(choices).filter(([, choice]) => choice === "combine").map(([field]) => field);
     try {
       const result = await entityMergeApi.merge(kind, keepId, {
         dropId, previewHash: preview.previewHash,
         ...(Object.keys(choices).length ? { fieldChoices: choices } : {}),
+        ...(combinedFields.length ? {
+          combinedTexts: Object.fromEntries(combinedFields.map((field) => [field, combined[field] ?? ""]).filter(([, text]) => text.trim())),
+          rewriteLater,
+        } : {}),
         keepDropNameAsAlias, note: note.trim(),
       });
       notify("success", `Fusión completada: «${preview.drop.name}» → «${preview.keep.name}» (${plural(result.moved, "referencia movida", "referencias movidas")}).`);
@@ -145,7 +187,6 @@ export function MergeEntityModal({ kind, entityId, entityName, otherId, otherNam
       // a previsualizar y se avisa; nadie fusiona sobre un estado que no vio.
       if (err instanceof ApiError && err.code === "stale_preview") {
         setStale(true);
-        setChoices({});
         void load(preview.keep.id, preview.drop.id, "first");
       } else {
         setError(err instanceof Error ? err.message : "No se pudo fusionar.");
@@ -170,7 +211,11 @@ export function MergeEntityModal({ kind, entityId, entityName, otherId, otherNam
             {" "}{plural(result.creditsMerged, "crédito unificado", "créditos unificados")} y {plural(result.membershipsMerged, "membresía unificada", "membresías unificadas")}
             {result.fieldsCorrected.length ? `; campos corregidos: ${result.fieldsCorrected.join(", ")}` : ""}.
           </p>
-          {result.filled.length ? <p className="hint">Se completaron: {result.filled.join(", ")}.</p> : null}
+          {result.filled.length ? <p className="hint">Se completaron: {result.filled.map((field) => FIELD_LABELS[field] ?? field).join(", ")}.</p> : null}
+          {result.preserved?.length ? (
+            <p className="hint">Lo que aportaba «{preview?.drop.name}» se conservó en: {result.preserved.map((field) => FIELD_LABELS[field] ?? field).join(", ")}.</p>
+          ) : null}
+          {result.rewritePending ? <p className="hint">La biografía quedó marcada para que la IA la reescriba después.</p> : null}
           <p className="hint">El id de la ficha que desapareció ya lleva a la que quedó (redirección).</p>
           <p className="hint">
             ¿Fue un error? Al cerrar queda a la vista la barra «Deshacer» de este cambio; también está en el Historial.
@@ -239,15 +284,26 @@ export function MergeEntityModal({ kind, entityId, entityName, otherId, otherNam
                     {mergeRowFields(preview).map((field) => {
                       const conflict = preview.fieldConflicts.find((item) => item.field === field);
                       const filled = preview.fieldsFilledFromDrop.includes(field);
+                      const combinable = (preview.combinableFields ?? []).includes(field);
+                      const joined = (preview.joinedFields ?? []).includes(field);
                       return (
                         <tr key={field}>
                           <td>{FIELD_LABELS[field]}</td>
                           <td>{formatMergeValue(preview.keep.fields[field])}</td>
                           <td>{formatMergeValue(preview.drop.fields[field])}</td>
                           <td>
-                            {conflict ? (
+                            {conflict && joined ? <span className="badge badge--teal">se unen</span> : conflict ? (
                               <fieldset style={{ border: 0, margin: 0, padding: 0 }}>
                                 <legend className="visually-hidden">Decisión para {FIELD_LABELS[field]}</legend>
+                                {combinable ? (
+                                  <label style={{ display: "block", fontSize: 12.5 }}>
+                                    <input
+                                      type="radio" name={`merge-${field}`}
+                                      checked={choices[field] === "combine"}
+                                      onChange={() => setChoices((current) => ({ ...current, [field]: "combine" }))}
+                                    /> Combinar las dos
+                                  </label>
+                                ) : null}
                                 <label style={{ display: "block", fontSize: 12.5 }}>
                                   <input
                                     type="radio" name={`merge-${field}`}
@@ -262,6 +318,7 @@ export function MergeEntityModal({ kind, entityId, entityName, otherId, otherNam
                                     onChange={() => setChoices((current) => ({ ...current, [field]: "drop" }))}
                                   /> Usar: {formatMergeValue(conflict.dropValue)}
                                 </label>
+                                {!combinable ? <span className="hint" style={{ fontSize: 11.5 }}>El otro valor queda anotado en Notas.</span> : null}
                               </fieldset>
                             ) : filled ? <span className="badge badge--teal">se completa</span> : <span className="hint">—</span>}
                           </td>
@@ -271,6 +328,30 @@ export function MergeEntityModal({ kind, entityId, entityName, otherId, otherNam
                   </tbody>
                 </table>
               </div>
+
+              {Object.entries(choices).filter(([, choice]) => choice === "combine").map(([field]) => (
+                <div className="field" key={field} style={{ marginBottom: 14 }}>
+                  <label htmlFor={`${combinedId}-${field}`}>{FIELD_LABELS[field] ?? field} combinada</label>
+                  <textarea
+                    id={`${combinedId}-${field}`} rows={9} value={combined[field] ?? ""}
+                    onChange={(event) => setCombined((current) => ({ ...current, [field]: event.target.value }))}
+                  />
+                  <span className="hint">
+                    {aiUsed[field]
+                      ? `Propuesta de la IA (${aiUsed[field]}): revísala antes de fusionar.`
+                      : "Los dos textos unidos tal cual; puedes editarlos aquí."}
+                  </span>
+                  <div style={{ display: "flex", gap: 12, alignItems: "center", flexWrap: "wrap", marginTop: 8 }}>
+                    <button type="button" className="btn btn--sm" onClick={() => void rewriteNow(field)} disabled={rewriting !== null || busy}>
+                      {rewriting === field ? "Reescribiendo…" : "Reescribir con IA ahora"}
+                    </button>
+                    <label style={{ display: "flex", gap: 8, alignItems: "center", fontSize: 13 }}>
+                      <input type="checkbox" checked={rewriteLater} onChange={(event) => setRewriteLater(event.target.checked)} />
+                      Reescribir con IA después (la ficha queda marcada)
+                    </label>
+                  </div>
+                </div>
+              ))}
 
               {preview.sharedBands.length || preview.sharedAlbums.length ? (
                 <div className="compare-grid" style={{ marginBottom: 14 }}>

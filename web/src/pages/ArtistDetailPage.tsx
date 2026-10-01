@@ -1,5 +1,6 @@
 import { useId, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
+import { RewritePendingMark } from "../components/RewritePendingMark";
 import { BackLink } from "../components/BackLink";
 import { GitMerge, PencilSimple, Trash } from "@phosphor-icons/react";
 import { artistsApi, artistMemberWrites, artistWrites } from "../lib/api";
@@ -179,6 +180,7 @@ export function ArtistDetailPage() {
           <h1 className="entity-hero__title">{artist.name}<DeceasedMark deceased={artist.isDeceased} /></h1>
           <EntityInfo items={info} wide={{ label: "Alias", content: <AliasEditor path="artists" entityId={artist.id} aliases={artist.aliases} onChanged={reload} /> }} />
           {artist.biography ? <div className="entity-hero__bio"><ExpandableText className="entity-hero__desc" text={artist.biography} /></div> : null}
+          <RewritePendingMark kind="artist" id={artist.id} onDone={reload} />
         </div>
       </div>
 

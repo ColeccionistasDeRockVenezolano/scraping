@@ -19,6 +19,7 @@ import { mergeEquivalentCredits, mergeEquivalentMemberships } from "./equivalent
 import { OperatorError, updateEntity, type OperatorContext } from "./operator.js";
 import { resolveRedirect } from "./redirects.js";
 import { ENTITY_SPECS } from "./specs.js";
+import { joinTexts, PRESERVE_SPECS, type PendingRewrite, type PreserveOptions } from "./preserve.js";
 
 /** Entidades con ficha propia, alias y navegación: las únicas que se fusionan con previsualización. */
 export type MergeableKind = "person" | "organization" | "artist";
@@ -72,16 +73,31 @@ export interface EntityMergePreview {
   /** Revisiones de review_queue que carean las dos fichas. */
   reviewsBetween: number[];
   warnings: string[];
+  /** Textos largos en conflicto que admiten «combinar» (y reescribir con IA). */
+  combinableFields: EntityMergeField[];
+  /** Campos en conflicto que se unen solos (notas, curiosidades…): no hay que elegir. */
+  joinedFields: EntityMergeField[];
   previewHash: string;
 }
+
+export type MergeFieldChoice = "keep" | "drop" | "combine";
 
 export interface EntityMergeRequest {
   kind: MergeableKind;
   keepId: number;
   dropId: number;
   previewHash: string;
-  /** Solo para campos de `fieldConflicts`. Si falta, gana `keep`. */
-  fieldChoices?: Partial<Record<EntityMergeField, "keep" | "drop">> | undefined;
+  /**
+   * Solo para campos de `fieldConflicts`. Sin elección, nada se pierde: los
+   * textos largos se unen y quedan marcados para reescribir con IA, los libres
+   * se unen y el dato corto del duplicado queda anotado en las notas.
+   * `combine` solo vale para `combinableFields`.
+   */
+  fieldChoices?: Partial<Record<EntityMergeField, MergeFieldChoice>> | undefined;
+  /** Texto final de cada campo combinado (editado a mano o reescrito por la IA en el momento). */
+  combinedTexts?: Partial<Record<EntityMergeField, string>> | undefined;
+  /** Los campos combinados quedan marcados para que la IA los reescriba después. */
+  rewriteLater?: boolean | undefined;
   keepDropNameAsAlias: boolean;
 }
 
@@ -94,6 +110,10 @@ export interface EntityMergeResult {
   discarded: number;
   filled: string[];
   fieldsCorrected: EntityMergeField[];
+  /** Campos de la ficha que queda donde se conservó lo del duplicado (unido o anotado en notas). */
+  preserved: EntityMergeField[];
+  /** Hay texto marcado para reescribir con IA. */
+  rewritePending: boolean;
   creditsMerged: number;
   membershipsMerged: number;
 }
@@ -255,8 +275,13 @@ export async function previewEntityMerge(
     drop.fields, drop.name, drop.aliases, drop.counts,
   ])).digest("hex");
 
+  const preserveSpec = PRESERVE_SPECS[kind];
+  const combinableFields = fieldConflicts.map((item) => item.field).filter((field) => preserveSpec.rewrite.includes(field));
+  const joinedFields = fieldConflicts.map((item) => item.field).filter((field) => field === "notes" || preserveSpec.join.includes(field));
+
   return {
     kind, keep, drop,
+    combinableFields, joinedFields,
     recommendedKeepId: referenceCount(keep.counts) >= referenceCount(drop.counts) ? keep.id : drop.id,
     fieldConflicts, fieldsFilledFromDrop, sharedBands: bands, sharedAlbums: albums,
     aliasesToAdd, reviewsBetween, warnings, previewHash,
@@ -272,6 +297,9 @@ export interface MergeEntityRowsResult {
   membershipsMerged: number;
   /** Membresías con períodos contradictorios que quedaron a revisión humana (solo personas). */
   membershipReviewsOpened: number;
+  /** Campos de la ficha que queda donde se conservó lo del duplicado. */
+  preserved: string[];
+  rewritesOpened: number;
 }
 
 /**
@@ -281,9 +309,10 @@ export interface MergeEntityRowsResult {
  */
 export async function mergeEntityRows(
   client: PoolClient, kind: MergeableKind, keepId: number, dropId: number, note: string, runId: number, alias: boolean,
+  preserve?: PreserveOptions,
 ): Promise<MergeEntityRowsResult> {
   const spec = ENTITY_SPECS[kind];
-  const outcome = await mergeInto(client, kind, keepId, dropId, note, runId, { alias });
+  const outcome = await mergeInto(client, kind, keepId, dropId, note, runId, { alias, ...(preserve ? { preserve } : {}) });
   // `MergeableKind` solo tiene fichas navegables: la columna destino es una de estas tres.
   const creditsMerged = await mergeEquivalentCredits(
     client, { column: spec.targetColumn as "person_id" | "artist_id" | "organization_id", id: keepId }, note, runId);
@@ -294,6 +323,7 @@ export async function mergeEntityRows(
     auditId: outcome.auditId, moved: outcome.moved, discarded: outcome.discarded,
     filled: outcome.filled, creditsMerged, membershipsMerged: memberships.merged,
     membershipReviewsOpened: memberships.reviewsOpened,
+    preserved: outcome.preserved, rewritesOpened: outcome.rewritesOpened,
   };
 }
 
@@ -310,17 +340,53 @@ export async function mergeEntities(context: OperatorContext, request: EntityMer
       entity: kind, keepId, dropId, previewHash: preview.previewHash,
     });
   }
+  const preserveSpec = PRESERVE_SPECS[kind];
   const fieldsCorrected: EntityMergeField[] = [];
+  const resolved: string[] = [];
+  const replaced: Array<{ field: string; value: unknown }> = [];
+  const rewrites: PendingRewrite[] = [];
   for (const conflict of preview.fieldConflicts) {
-    if (request.fieldChoices?.[conflict.field] !== "drop") continue;
+    const choice = request.fieldChoices?.[conflict.field];
+    const combinable = preview.combinableFields.includes(conflict.field);
+    if (choice === "combine") {
+      if (!combinable) {
+        throw new OperatorError("invalid", `«${conflict.field}» no se puede combinar; elige keep o drop`, { field: conflict.field });
+      }
+      const text = request.combinedTexts?.[conflict.field]?.trim()
+        || joinTexts(String(conflict.keepValue), String(conflict.dropValue));
+      if (text !== conflict.keepValue) {
+        await updateEntity(context, kind, keepId, { [conflict.field]: text });
+        fieldsCorrected.push(conflict.field);
+      }
+      resolved.push(conflict.field);
+      if (request.rewriteLater) {
+        rewrites.push({
+          field: conflict.field,
+          sources: [{ label: preview.keep.name, text: String(conflict.keepValue) }, { label: preview.drop.name, text: String(conflict.dropValue) }],
+        });
+      }
+      continue;
+    }
+    // Sin elección en un texto largo, el motor los une y lo marca (preserve.ts).
+    if (choice === undefined) continue;
+    // Elegir un lado de un texto largo es descartar el otro a propósito; en un
+    // dato corto, el valor que pierde queda en las notas.
+    if (combinable || preview.joinedFields.includes(conflict.field)) resolved.push(conflict.field);
+    if (choice !== "drop") continue;
     // El valor del duplicado se afirma como corrección humana: claim, auditoría
     // y cierre de conflictos, exactamente como si se hubiera tecleado.
     await updateEntity(context, kind, keepId, { [conflict.field]: conflict.dropValue });
     fieldsCorrected.push(conflict.field);
+    if (conflict.field in preserveSpec.note) {
+      replaced.push({ field: conflict.field, value: conflict.keepValue });
+      resolved.push(conflict.field);
+    }
   }
-  const merged = await mergeEntityRows(context.client, kind, keepId, dropId, context.note, context.runId, request.keepDropNameAsAlias);
+  const merged = await mergeEntityRows(context.client, kind, keepId, dropId, context.note, context.runId, request.keepDropNameAsAlias,
+    { resolved, replaced, rewrites });
   return {
     kind, keepId, dropId, auditId: merged.auditId, moved: merged.moved, discarded: merged.discarded,
-    filled: merged.filled, fieldsCorrected, creditsMerged: merged.creditsMerged, membershipsMerged: merged.membershipsMerged,
+    filled: merged.filled, fieldsCorrected, preserved: merged.preserved, rewritePending: merged.rewritesOpened > 0,
+    creditsMerged: merged.creditsMerged, membershipsMerged: merged.membershipsMerged,
   };
 }

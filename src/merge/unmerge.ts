@@ -17,6 +17,7 @@ import { MERGE_TABLES, type DiscardedRow, type MergeKind, type MovedRef } from "
 import { loadVerifiedTrace, traceReason } from "./legacy-trace.js";
 import { restoreGenreAssignments, type GenreMergeSnapshot } from "../genres/merge.js";
 import { projectAlbumGenre } from "./genre-projection.js";
+import { isPreserveKind, revertPreserved, type PreservedChange } from "./preserve.js";
 
 /** Contenido de `merge_audit.new_value` en una fusión endurecida (E11.1+). */
 export interface MergeAuditData {
@@ -32,6 +33,10 @@ export interface MergeAuditData {
   primaryAliases?: number[];
   /** Géneros de ambas fichas antes de la fusión (desde la migración 0027). */
   genreRows?: GenreMergeSnapshot;
+  /** Lo que la fusión unió o anotó en la ficha que queda (desde la 0034; preserve.ts). */
+  preserved?: PreservedChange[];
+  /** Marcas de reescritura del duplicado que la fusión cerró. */
+  closedRewrites?: number[];
   version: 2;
 }
 
@@ -206,7 +211,13 @@ async function undoOneMerge(context: OperatorContext, audit: MergeAuditRow): Pro
       `UPDATE ingest.review_queue SET ${assignments}, updated_at=now() WHERE id=$1`,
       [review["id"], ...entries.map(([, value]) => value)]);
   }
-  // 5. Las columnas que se completaron desde el duplicado vuelven a estar vacías.
+  // 5. Lo que la fusión unió o anotó vuelve a como estaba (antes de vaciar lo
+  //    completado: una nota anotada encima de una completada se quita primero),
+  //    y la marca de reescritura que abrió se retira.
+  if (isPreserveKind(kind)) {
+    await revertPreserved(client, kind, keepId, data.preserved ?? [], Number(audit.id), data.closedRewrites ?? []);
+  }
+  //    Las columnas que se completaron desde el duplicado vuelven a estar vacías.
   for (const column of data.filled) await emptyAgain(client, kind, column, keepId, drop);
   // 6. El alias que dejó la fusión no debería sobrevivir a la fusión, y los
   //    alias primarios del duplicado vuelven a serlo. Toda ficha con nombre

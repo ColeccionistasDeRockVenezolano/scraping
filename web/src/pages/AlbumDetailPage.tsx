@@ -1,5 +1,6 @@
 import { Fragment, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
+import { RewritePendingMark } from "../components/RewritePendingMark";
 import { BackLink } from "../components/BackLink";
 import { GitMerge, PencilSimple, Trash } from "@phosphor-icons/react";
 import { albumFormatWrites, albumWrites, albumsApi, trackWrites, ApiError } from "../lib/api";
@@ -86,6 +87,7 @@ export function AlbumDetailPage() {
             {album.label ? <Link to={`/organizaciones/${album.label.id}`} className="badge badge--violet">{album.label.name}</Link> : null}
           </div>
           {album.description ? <p className="entity-hero__desc">{album.description}</p> : null}
+          <RewritePendingMark kind="album" id={album.id} onDone={reload} />
         </div>
       </div>
 

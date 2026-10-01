@@ -16,12 +16,16 @@
 import type { FastifyInstance } from "fastify";
 import type { ZodTypeProvider } from "fastify-type-provider-zod";
 import { z } from "zod";
-import { MERGE_FIELDS, mergeEntities, previewEntityMerge, type MergeableKind } from "../../merge/entity-merge.js";
+import { MERGE_FIELDS, mergeEntities, previewEntityMerge, type MergeableKind, type MergeFieldChoice } from "../../merge/entity-merge.js";
+import { createDeepSeekGateway } from "../../ai/gateway.js";
+import { rewritePending, rewriteTexts } from "../../merge/text-rewrite.js";
+import { PRESERVE_SPECS } from "../../merge/preserve.js";
 import { createEntity, withOperatorRun } from "../../merge/operator.js";
 import { convertPerson } from "../../review/person-corrections.js";
 import { getPool } from "../../db/client.js";
 import { OPERATOR_SECURITY } from "../auth.js";
-import { idParamSchema, writeErrorResponses } from "../schemas.js";
+import { errorResponseSchema, idParamSchema, writeErrorResponses } from "../schemas.js";
+import { ApiError } from "../http-errors.js";
 import { artistTypeSchema, noteSchema, organizationTypeSchema, text, toSnake } from "./catalog-writes.js";
 
 /** Las fichas navegables con fusión con previsualización, con su ruta y su etiqueta. */
@@ -79,15 +83,67 @@ const personConversionSchema = z.object({
   runId: z.number().int(),
 });
 
+const pendingRewriteSchema = z.object({
+  pending: z.array(z.object({
+    id: z.number().int(), field: z.string(), sources: z.number().int(), createdAt: z.string(),
+  })),
+});
+
+/**
+ * La marca «reescribir con IA» de una ficha (cola `ingest.text_rewrites`):
+ *   GET  /<entidad>/:id/text-rewrites        qué textos esperan reescritura
+ *   POST /<entidad>/:id/text-rewrites/run    reescribirlos ya (run propio, se puede deshacer)
+ */
+function registerTextRewriteRoutes(app: FastifyInstance, kind: "person" | "organization" | "artist" | "album", path: string, tag: string): void {
+  const server = app.withTypeProvider<ZodTypeProvider>();
+  const pendingFor = async (id: number) => {
+    const { rows } = await getPool().query<{ id: string; field: string; sources: number; created_at: Date }>(`
+      SELECT id::text, field, jsonb_array_length(sources) AS sources, created_at
+        FROM ingest.text_rewrites WHERE entity_kind=$1 AND entity_id=$2 AND status='pending' ORDER BY id`, [kind, id]);
+    return rows.map((row) => ({ id: Number(row.id), field: row.field, sources: row.sources, createdAt: row.created_at.toISOString() }));
+  };
+
+  server.get(`/${path}/:id/text-rewrites`, {
+    schema: {
+      tags: [tag],
+      summary: "Textos de la ficha que una fusión unió y esperan reescritura con IA.",
+      params: idParamSchema,
+      response: { 200: pendingRewriteSchema },
+    },
+  }, async (request) => ({ pending: await pendingFor(request.params.id) }));
+
+  server.post(`/${path}/:id/text-rewrites/run`, {
+    schema: {
+      tags: [tag],
+      summary: "Reescribe ya con IA (DeepSeek flash) los textos marcados de la ficha, en un run propio que se puede deshacer.",
+      security: OPERATOR_SECURITY,
+      params: idParamSchema,
+      body: z.object({ note: noteSchema }).strict(),
+      response: { 200: z.object({ runId: z.number().int().nullable(), written: z.number().int(), failed: z.array(z.string()) }), ...writeErrorResponses },
+    },
+  }, async (request) => {
+    const ids = (await pendingFor(request.params.id)).map((row) => row.id);
+    if (!ids.length) throw new ApiError(404, "not_found", "La ficha no tiene textos pendientes de reescribir.");
+    const report = await rewritePending({
+      gateway: createDeepSeekGateway(), confirm: true, ids, concurrency: 2,
+      note: `${request.body.note} (pedido por ${request.operator ?? "operador"})`,
+    });
+    return { runId: report.runId, written: report.written + report.unchanged, failed: report.failed.map((item) => item.error) };
+  });
+}
+
 export async function registerEntityMergeRoutes(app: FastifyInstance): Promise<void> {
   const server = app.withTypeProvider<ZodTypeProvider>();
+  registerTextRewriteRoutes(app, "album", "albums", "albums:merge");
 
   for (const { kind, path, noun, tag } of KINDS) {
+    registerTextRewriteRoutes(app, kind, path, tag);
     const fields = MERGE_FIELDS[kind] as [string, ...string[]];
     // `fieldChoices` en camelCase, solo para los campos de esta entidad.
     const fieldChoicesSchema = z.object(Object.fromEntries(
-      fields.map((field) => [toCamel(field), z.enum(["keep", "drop"]).optional()]),
-    )).strict().describe("Solo para campos en conflicto; sin entrada, gana la ficha que queda.");
+      fields.map((field) => [toCamel(field), z.enum(["keep", "drop", "combine"]).optional()]),
+    )).strict().describe("Solo para campos en conflicto. Sin entrada nada se pierde: los textos largos se unen (y quedan marcados para reescribir con IA) y el dato corto del duplicado queda en las notas. `combine` solo en `combinableFields`.");
+    const rewriteFields = PRESERVE_SPECS[kind].rewrite as readonly string[];
 
     const previewSchema = z.object({
       kind: z.enum(["person", "organization", "artist"]),
@@ -101,6 +157,8 @@ export async function registerEntityMergeRoutes(app: FastifyInstance): Promise<v
       aliasesToAdd: z.array(z.string()),
       reviewsBetween: z.array(z.number().int()),
       warnings: z.array(z.string()),
+      combinableFields: z.array(z.enum(fields)).describe("Textos largos en conflicto que admiten `combine`."),
+      joinedFields: z.array(z.enum(fields)).describe("Campos en conflicto que se unen solos."),
       previewHash: z.string().regex(/^[0-9a-f]{64}$/u),
     });
 
@@ -113,6 +171,8 @@ export async function registerEntityMergeRoutes(app: FastifyInstance): Promise<v
       discarded: z.number().int(),
       filled: z.array(z.string()),
       fieldsCorrected: z.array(z.enum(fields)),
+      preserved: z.array(z.string()).describe("Campos de la ficha que queda donde se conservó lo del duplicado (unido o en notas)."),
+      rewritePending: z.boolean().describe("Hay texto marcado para reescribir con IA."),
       creditsMerged: z.number().int(),
       membershipsMerged: z.number().int(),
       runId: z.number().int(),
@@ -123,14 +183,17 @@ export async function registerEntityMergeRoutes(app: FastifyInstance): Promise<v
       previewHash: z.string().regex(/^[0-9a-f]{64}$/u)
         .describe(`Hash de GET /${path}/:id/merge-preview; si la ficha cambió, responde 409.`),
       fieldChoices: fieldChoicesSchema.optional(),
+      combinedTexts: z.object(Object.fromEntries(rewriteFields.map((field) => [toCamel(field), z.string().trim().min(1).max(20000).optional()])))
+        .strict().optional().describe("Texto final de cada campo combinado (editado a mano o propuesto por la IA)."),
+      rewriteLater: z.boolean().optional().describe("Los campos combinados quedan marcados para que la IA los reescriba después."),
       keepDropNameAsAlias: z.boolean().describe("Guardar el nombre de la ficha que desaparece como alias."),
       note: noteSchema.describe("Motivo obligatorio: queda en el run, en la auditoría y en el claim."),
     }).strict();
 
     /** camelCase del cuerpo → campos canónicos en snake_case del servicio. */
-    function chosenFields(choices: z.infer<typeof fieldChoicesSchema> | undefined): Record<string, "keep" | "drop"> | undefined {
+    function chosenFields(choices: z.infer<typeof fieldChoicesSchema> | undefined): Record<string, MergeFieldChoice> | undefined {
       if (!choices) return undefined;
-      const decision: Record<string, "keep" | "drop"> = {};
+      const decision: Record<string, MergeFieldChoice> = {};
       for (const [key, value] of Object.entries(choices)) {
         const field = toSnake(key);
         if (value === undefined || !fields.includes(field)) return undefined;
@@ -173,8 +236,44 @@ export async function registerEntityMergeRoutes(app: FastifyInstance): Promise<v
         kind, keepId, dropId: body.dropId, previewHash: body.previewHash,
         keepDropNameAsAlias: body.keepDropNameAsAlias,
         ...(fieldChoices === undefined ? {} : { fieldChoices }),
+        ...(body.combinedTexts ? {
+          combinedTexts: Object.fromEntries(Object.entries(body.combinedTexts)
+            .filter((entry): entry is [string, string] => typeof entry[1] === "string")
+            .map(([key, value]) => [toSnake(key), value])),
+        } : {}),
+        ...(body.rewriteLater === undefined ? {} : { rewriteLater: body.rewriteLater }),
       }));
       return { ...result, runId };
+    });
+
+    // «Reescribir con IA ahora»: DeepSeek flash propone un texto que une los
+    // dos; NO escribe nada. La persona lo revisa en el modal y es la fusión la
+    // que lo guarda, como corrección humana.
+    server.post(`/${path}/:id/merge-rewrite`, {
+      schema: {
+        tags: [tag],
+        summary: "Propone con IA (DeepSeek flash) un texto que une el de las dos fichas. No escribe nada.",
+        security: OPERATOR_SECURITY,
+        params: idParamSchema,
+        body: z.object({
+          dropId: z.number().int().positive(),
+          field: z.enum(rewriteFields as [string, ...string[]]),
+        }).strict(),
+        response: { 200: z.object({ text: z.string(), model: z.string() }), ...writeErrorResponses, 502: errorResponseSchema },
+      },
+    }, async (request) => {
+      const field = request.body.field;
+      const preview = await previewEntityMerge(getPool(), kind, request.params.id, request.body.dropId);
+      const texts = [preview.keep, preview.drop]
+        .filter((side) => typeof side.fields[field] === "string" && String(side.fields[field]).trim())
+        .map((side) => ({ label: side.name, text: String(side.fields[field]) }));
+      if (texts.length < 2) throw new ApiError(400, "invalid", "Solo una de las fichas tiene ese texto: no hay nada que unir.");
+      try {
+        const result = await rewriteTexts(createDeepSeekGateway(), { kind, name: preview.keep.name, sources: texts });
+        return { text: result.text, model: result.model };
+      } catch (error) {
+        throw new ApiError(502, "ai_failed", `La IA no pudo unir los textos: ${(error as Error).message}`);
+      }
     });
   }
 

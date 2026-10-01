@@ -250,6 +250,10 @@ export interface PersonMergePreview {
   aliasesToAdd: string[];
   reviewsBetween: number[];
   warnings: string[];
+  /** Textos largos en conflicto que admiten «combinar» (la API antigua no los manda). */
+  combinableFields?: string[];
+  /** Campos en conflicto que se unen solos (notas, curiosidades…). */
+  joinedFields?: string[];
   previewHash: string;
 }
 
@@ -262,6 +266,10 @@ export interface PersonMergeResult {
   discarded: number;
   filled: string[];
   fieldsCorrected: string[];
+  /** Campos de la ficha que queda donde se conservó lo del duplicado (unido o en notas). */
+  preserved?: string[];
+  /** Hay texto marcado para reescribir con IA. */
+  rewritePending?: boolean;
   creditsMerged: number;
   membershipsMerged: number;
   runId: number;

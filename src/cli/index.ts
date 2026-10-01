@@ -62,6 +62,7 @@ import { parseCurationFixPreviewArgs } from "./curation-fix.js";
 import { pruneCuration } from "../curation/retention.js";
 import { compactEntityResolutionDecisions } from "../er/retention.js";
 import { runGenresCommand } from "./genres.js";
+import { rewritePending } from "../merge/text-rewrite.js";
 
 /** `--review=1,2,3` → ids; undefined si no vino; null si vino mal escrito. */
 function parseIdList(value: string | undefined): number[] | undefined | null {
@@ -1058,6 +1059,28 @@ async function main(): Promise<number> {
     case "genres":
       return runGenresCommand(args);
 
+    case "texts": {
+      // Cola de textos unidos al fusionar (preserve.ts): DeepSeek flash los
+      // reescribe en uno. En seco solo informa; con --confirm escribe en un run.
+      if (args[0] !== "rewrite") {
+        console.error('uso: crv texts rewrite [--confirm] [--limit=N] [--concurrency=N] [--ids=1,2] [--note="<motivo>"]');
+        return 1;
+      }
+      const option = (name: string) => args.find((arg) => arg.startsWith(`--${name}=`))?.slice(name.length + 3);
+      const ids = parseIdList(option("ids"));
+      if (ids === null) { console.error("--ids mal escrito"); return 1; }
+      const report = await rewritePending({
+        gateway: createDeepSeekGateway(),
+        confirm: args.includes("--confirm"),
+        ...(option("limit") ? { limit: Number(option("limit")) } : {}),
+        concurrency: Number(option("concurrency") ?? 8),
+        ...(ids ? { ids } : {}),
+        note: option("note") ?? "reescritura con IA de textos unidos al fusionar",
+      });
+      console.log(JSON.stringify(report, null, 2));
+      return report.failed.length ? 2 : 0;
+    }
+
     case undefined:
     case "help":
     case "--help":
@@ -1100,6 +1123,9 @@ CRV CLI
   runs undo <id>      deshace un run con el diario de cambios [--note="<motivo>" --confirm]
   audit show <id>     qué haría deshacer una fusión o conversión del historial (lo anterior al diario)
   audit undo <id>     la deshace [--note="<motivo>" --confirm]
+  texts rewrite [--confirm] [--limit=N] [--concurrency=N] [--ids=1,2]
+                      reescribe con DeepSeek flash los textos que una fusión unió (cola ingest.text_rewrites);
+                      en seco solo informa, con --confirm escribe en un run que se puede deshacer
   merges rebuild-traces --snapshot=<postgresql://...> [--run=<id>]
                       reconstruye, desde un respaldo restaurado aparte, qué filas movió cada fusión
                       anterior a E11.1; solo queda verificado lo que cuadra con lo que la fusión registró

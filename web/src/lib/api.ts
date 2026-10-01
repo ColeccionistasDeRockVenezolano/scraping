@@ -176,12 +176,19 @@ export const personsApi = {
 export interface PersonMergeRequest {
   dropId: number;
   previewHash: string;
-  fieldChoices?: Partial<Record<string, "keep" | "drop">>;
+  /** `combine` solo para `combinableFields` (biografía). */
+  fieldChoices?: Partial<Record<string, "keep" | "drop" | "combine">>;
+  /** Texto final de cada campo combinado (camelCase: `biography`). */
+  combinedTexts?: Partial<Record<string, string>>;
+  /** Los campos combinados quedan marcados para que la IA los reescriba después. */
+  rewriteLater?: boolean;
   keepDropNameAsAlias: boolean;
   note: string;
 }
 
 const MERGE_PATHS: Record<MergeableKind, string> = { person: "persons", organization: "organizations", artist: "artists" };
+export type RewriteKind = MergeableKind | "album";
+const REWRITE_PATHS: Record<RewriteKind, string> = { ...MERGE_PATHS, album: "albums" };
 
 export const entityMergeApi = {
   /** Previsualización de la fusión de dos fichas del mismo kind (E11.3/E11.10). */
@@ -189,6 +196,15 @@ export const entityMergeApi = {
     request<PersonMergePreview>(`/${MERGE_PATHS[kind]}/${keepId}/merge-preview`, { query: { with: dropId } }),
   merge: (kind: MergeableKind, keepId: number, body: PersonMergeRequest) =>
     request<PersonMergeResult>(`/${MERGE_PATHS[kind]}/${keepId}/merge`, { method: "POST", authenticated: true, body }),
+  /** Textos de la ficha que una fusión unió y esperan reescritura con IA. */
+  pendingRewrites: (kind: RewriteKind, id: number) =>
+    request<{ pending: Array<{ id: number; field: string; sources: number; createdAt: string }> }>(`/${REWRITE_PATHS[kind]}/${id}/text-rewrites`),
+  /** Reescribe ya con IA los textos marcados (run propio, se puede deshacer). */
+  runRewrites: (kind: RewriteKind, id: number, note: string) =>
+    request<{ runId: number | null; written: number; failed: string[] }>(`/${REWRITE_PATHS[kind]}/${id}/text-rewrites/run`, { method: "POST", authenticated: true, body: { note } }),
+  /** DeepSeek flash propone un texto que une los de las dos fichas; no escribe nada. */
+  rewrite: (kind: MergeableKind, keepId: number, dropId: number, field: string) =>
+    request<{ text: string; model: string }>(`/${MERGE_PATHS[kind]}/${keepId}/merge-rewrite`, { method: "POST", authenticated: true, body: { dropId, field } }),
   duplicateCandidates: (params: Paged & { minScore?: number } = {}) =>
     request<Page<PersonDuplicateCandidate>>("/persons/duplicate-candidates", { query: params }),
   convert: (personId: number, body: {

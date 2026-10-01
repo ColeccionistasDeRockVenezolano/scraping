@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
+import { RewritePendingMark } from "../components/RewritePendingMark";
 import { BackLink } from "../components/BackLink";
 import { GitMerge, PencilSimple, Trash } from "@phosphor-icons/react";
 import { organizationWrites, organizationsApi } from "../lib/api";
@@ -122,6 +123,7 @@ export function OrganizationDetailPage() {
           <h1 className="entity-hero__title">{org.name}</h1>
           <EntityInfo items={info} wide={{ label: "Alias", content: <AliasEditor path="organizations" entityId={org.id} aliases={org.aliases} onChanged={reload} /> }} />
           {org.biography ? <div className="entity-hero__bio"><ExpandableText className="entity-hero__desc" text={org.biography} /></div> : null}
+          <RewritePendingMark kind="organization" id={org.id} onDone={reload} />
         </div>
       </div>
 

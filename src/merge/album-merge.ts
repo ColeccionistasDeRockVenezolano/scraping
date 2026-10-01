@@ -13,6 +13,7 @@
 import { createHash } from "node:crypto";
 import type { PoolClient } from "pg";
 import { getEnv } from "../config/env.js";
+import { PRESERVE_SPECS } from "./preserve.js";
 import { mergeInto, MERGE_EMPTY_VALUES } from "../review/duplicates.js";
 import { nameKey } from "../curation/lexicon.js";
 import { mergeEquivalentCreditsOnParent } from "./equivalent-relations.js";
@@ -354,11 +355,24 @@ export async function mergeAlbums(context: OperatorContext, request: AlbumMergeR
   }
 
   // 1. Correcciones de campo elegidas de drop
+  // Sin elección nada se pierde (preserve.ts): la reseña se une y queda
+  // marcada para reescribir; el dato corto del duplicado va a las notas.
+  // Elegir un lado de la reseña es descartar el otro a propósito; elegir el
+  // dato corto del duplicado manda el de la que queda a las notas.
   const fieldsCorrected: AlbumMergeField[] = [];
+  const resolved: string[] = [];
+  const replaced: Array<{ field: string; value: unknown }> = [];
   for (const conflict of preview.fieldConflicts) {
-    if (request.fieldChoices?.[conflict.field] !== "drop") continue;
+    const choice = request.fieldChoices?.[conflict.field];
+    if (choice === undefined) continue;
+    if (conflict.field === "description" || conflict.field === "notes") resolved.push(conflict.field);
+    if (choice !== "drop") continue;
     await updateEntity(context, "album", keepId, { [conflict.field]: conflict.dropValue });
     fieldsCorrected.push(conflict.field);
+    if (conflict.field in PRESERVE_SPECS.album.note) {
+      replaced.push({ field: conflict.field, value: conflict.keepValue });
+      resolved.push(conflict.field);
+    }
   }
 
   // 2. Fusión física de pistas emparejadas
@@ -403,7 +417,7 @@ export async function mergeAlbums(context: OperatorContext, request: AlbumMergeR
   // 6. Fusión final del disco vía mergeInto; aquí llegan los créditos de drop.
   const merged = await mergeInto(
     context.client, "album", keepId, dropId, context.note, context.runId,
-    { alias: request.keepDropNameAsAlias ?? false },
+    { alias: request.keepDropNameAsAlias ?? false, preserve: { resolved, replaced } },
   );
 
   // 7. Solo ahora pueden compararse los créditos de ambos discos. Hacerlo

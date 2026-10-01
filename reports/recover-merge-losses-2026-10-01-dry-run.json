@@ -1,0 +1,6680 @@
+{
+  "summary": {
+    "mode": "dry-run",
+    "audits": 1504,
+    "undone": 16,
+    "keepGone": 6,
+    "compilationHolder": 3,
+    "entities": 526,
+    "rewrites": {
+      "person": 296,
+      "artist": 11,
+      "organization": 0,
+      "album": 55
+    },
+    "joins": 153,
+    "notesLines": 145,
+    "runId": null
+  },
+  "detail": [
+    {
+      "kind": "album",
+      "id": 660,
+      "name": "Azúcar, Cacao & Leche Vol. 1",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 4645,
+      "name": "Los Más Grandes Exitos de Edgar Alexander & Azúcar, Cacao y Leche",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «Grandes Exitos» (#5034, 2026-10-01) quedó fuera — Portada: «https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg4vZj2cwUihdVhwJc7vB6WJkiI1Az8oeeip7zuevdPUZ7YL_XDS4vr92T1a9wefp-36HNFkM-0S9e3GOW8UCU1R3me8nPp-Oq_sWGWPiSqJqVFwjuKJs6wMpFCJJfhzqrgbwlNWzv-dMs/s1600/Azucar,+Cacao+y+Leche.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 4657,
+      "name": "Escenario Juvenil",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «Escenario Juvenil» (#2458, 2026-10-01) quedó fuera — Portada: «https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg5N1wfm2z80SKgrzy_9HL6Q6AEcpJUYziF5qJRWrmjczTu4pYxG9xlA32wbx87g76WWAEx6ADaY7GqiABh17R_UTbJNAJcKCrKwz4PZg22L1MZ5LvKrsIX60Gr4PomgX0R726H6aqwTdc/s1600/escenario.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 2801,
+      "name": "Venerock",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «Venerock» (#4696, 2026-10-01) quedó fuera — Portada: «https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgezEFicYN5sEHgoHHbR2BlSIz0t8_kepXx_Bd0reR5xr18Qcm0TOjjfpyOYef9TEEtleMgbfliyXW4yrPyFbZvPVLC-YiiWdqyAP1DmYaIunHvnyrP9FrgYz9GczRrLAZ-NnwSYsMqssCW/s1600/VA+-+Venerock+%25281982%2529.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 1519,
+      "name": "When dry branches caress the cold hatred",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «When Dry Branches Caress The Cold Hatred» (#3119, 2026-10-01) quedó fuera — Portada: «https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg8wwPRo69N0jAgD7GlMsWqJYIZ2ds7bKhRStd_3yjkNo5JzwOPoJHbU8p2zKdHWGWblEld0ko1DQL5pRi9OyWsHryJrGsdmRryfmKpdL3ib-whsEKz2Otthji29S1QleGvjfJvYI5z_os/s320/fethuruzfearandaghastwh.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 215,
+      "name": "Imperia",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 318,
+      "name": "1983-1993",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 113,
+      "name": "Pueblo Chico Infierno Grande",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «Pueblo Chico» (#3777, 2026-10-01) quedó fuera — Portada: «https://sincopa.com/rock_pop/covers160/alfombraroja_1pueblochico.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 516,
+      "name": "La Condición De Este Mundo",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «Este Mundo» (#3373, 2026-10-01) quedó fuera — Portada: «https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiggEM5ZlBV6i6tQ3I_ZVW0jWZAoIbjxfcUvjlsLVUZMo1JjKtoQ-T_IITilAHEf8BZc-yZRqCe1DDKAxKZJ981-UVLyB2iyjPg6R-G29uX66VZC64F10ibVHQKxvpPJfYANyWZtiWjBTU/s320/yatu3.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 1454,
+      "name": "El Sueño de Thutmosis IV... El Renacer de la Esfinge",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «El Renacer de la Esfinge» (#3256, 2026-10-01) quedó fuera — Portada: «https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhkSTqKHiYNcBSAZJZxxK8Jj4Cyu4S56s4E6ldubxw4shEaJbD8MG1NQdDOfSfrjOjjZ0dQNuSzEpQ5cYQzbrPyXa4vim9ViiPMDO_9IRG-aZql6HPgdzVPQ37nw4z2jAg7HxSXMs_0_dA/s1600/esfingedegizehelsueodet.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 117,
+      "name": "Wheels Of Time / Night And Daydream",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «Night and Daydream» (#3803, 2026-10-01) quedó fuera — Portada: «https://sincopa.com/rock_pop/covers160/ananta1_nightdaydream.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 157,
+      "name": "Flotar No Es Más Que Existir Un Movimiento Ondulatorio",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «Un Movimiento Ondulatorio» (#2717, 2026-10-01) quedó fuera — Portada: «https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiPi_7XvzcTkA6NLIzTviTnnTkgGRoB2aiqmDILZ4ucWV3N3ywrOxtyeGkIJ3M5FFrRC2vrg-nvl3-5YtXVAQhtVnnnoOCUlmeEUlK_ANTFsdkYvAAp2TSqgQk8AUQeoZZStVikcsfW-2M/s320/1.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 247,
+      "name": "Arepa 3000: A Venezuelan Journey Into Space",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «Arepa 3000» (#2182, 2026-10-01) quedó fuera — Portada: «https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhKhUJFzugUujEsd1nUvya-_kbTPR0UGiNahabXYkaaZS1FCwwjOdovmsM30wxCM4qs8dyjUk770OgbQszOQadMwGAtkH_M7ArJBI-kdiLtgCEoAt8GvSjZksZl-ql9qXSEMF1i-k_8ssU/s400/arepa3000.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 356,
+      "name": "Odissey",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «Odyssey» (#2841, 2026-10-01) quedó fuera — Portada: «https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiyCdbsScNqNUdzHwsFM7_rvwZ6d1g3IaFxjwQJ2339tTLP5CvSNnL_Vbjxgprzghev1ZuL9GQXsk3MU6STOrQGBCqmurLba4otdrLJQxbqhaQIdsnrGEhwm1MvXys7_DT8Sq_PWFvtR9I/s1600/1.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 323,
+      "name": "El Amor Ya No Existe",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «El Amor Ya No Existe, Hay Que Hacerlo» (#3341, 2026-10-01) quedó fuera — Portada: «https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh0zWMXe-tYOGKOZQNeqcCiO3Fc0UXua-0Y65FQAUO47EXHLvq7XP6KP-ds-LXKxEdRgSGNBQqjDk4RuxACK0Z7gc1eKoUqIPpUpFDGOaV-UIgR6ZnhPYxTnY4Rv3ORD6cDnZMUs28leKk/s320/87.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 1359,
+      "name": "A Prayer for the Damn",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «A Player for The Damm» (#2796, 2026-10-01) quedó fuera — Portada: «https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj9IXH3YjKy1RWXRUa8xfJcKtwFfCFDm33bVrgzP0mVC1GdjVri4PRSOv0XYRhiRaBMuaoCbDsXtBFAAf1IGyZYx_Pa42pCv8evC-QW-MOUX-6yVGqvusofV7I70AYEzCsnPgoWN_VQKq0/s320/2000.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 1414,
+      "name": "Funeral in the Shades of the Immortal Trees",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «Funeral in The Shades of Inmortal Trees» (#2794, 2026-10-01) quedó fuera — Portada: «https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiuUrkVlYa2FzAOwliAKTJ_gALWDKXYRscbDYDlXJs8oGTFoEKI4ILYMVUwcIJUhGRHCG9Wvv-znDN4eeMDnerD5xkUeO75U5FJrVFZhpUKHna9u-4N3XrvdgUbiqVYiaqXPmiDk4GqbR0/s1600/veldavret2004.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 3953,
+      "name": "Grandes Exitos de Los Darts LP",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «Grandes Exitos» (#4658, 2026-10-01) quedó fuera — Portada: «https://sincopa.com/rock_pop/covers160/darts_grandesexitos.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 108,
+      "name": "En Concierto En Este País",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «En Concierto En» (#4621, 2026-10-01) quedó fuera — Portada: «https://sincopa.com/rock_pop/covers160/aditus_12concert.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 1225,
+      "name": "Rebellion - For The Passion Of Music",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «Rebellion» (#2894, 2026-10-01) quedó fuera — Portada: «https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEindGkvRtUKOeNSgf6-v_xz2Fk2gQOo6EsoNgyEyN_bngclODCNi7FkLu9DB4ur6qjXTOMnYUsRMBAW3_S8kBRPAaJjeeACMx2xdKUMyB_8ZgVQgFSQSNun-DUHbrwH2OMLp_zBpPhPbSA/s1600/sibelius.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 1701,
+      "name": "El Angel De La Muerte",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «Angel de la Muerte» (#3304, 2026-10-01) quedó fuera — Portada: «https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj-NTS2t1L2VKTS60o_sMQ6Akrq3Gjud4R5unXn9aJIBNE0R0wmjNFegnlORuSz0DXjcuGGuOXHVf_b_dTC5FuiE_7p-O8yAcJ3vrDObvXVDfSQd_t9SCMsi8uBATJAlTOYCrrMBrPuyCc/s1600/arkangel+2000.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 490,
+      "name": "En Vivo! Ofrenda",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 1867,
+      "name": "Decapo",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «Dacapo» (#2922, 2026-10-01) quedó fuera — Portada: «https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhEazPRqDLYXUBY-MlNczPhxs3TOg-TffWpP9ClZco9gRy3Ow6UrRKUVwqI0NLwy1aVzxW7jKgqDAX7tg3SYQwitnAFLsN68QZeiOOkBxtOn6KBUGs_OQ04BJpD_fAKtKPZyrdawLGsX5s/s1600/resistencia3.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 2349,
+      "name": "Sobre La Cresta De La Ola",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «Sobre La Cresta» (#4632, 2026-10-01) quedó fuera — Portada: «https://sincopa.com/rock_pop/covers160/ficcion_2sobrelacresta.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 176,
+      "name": "Música Para Los Apóstoles Madres",
+      "rewrite": {},
+      "join": [],
+      "lost": [
+        "Al fusionar «Madres» (#3343, 2026-10-01) quedó fuera — Portada: «https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiMTxALgZ_5lIb8EWbsDd1BOOBZU_wyv92qu_ZwmcrbdqcQhIo2B6bIDMqUVJgEW1SB-EBmy0KSspn6TxrxsQn_n-IZ6zhsf60pXEOkIRp-vqoHlz9N-CY6hR74NA2lu891EWjaY60wt2Y/s320/dios+le+pague+1.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 187,
+      "name": "3 Casas",
+      "rewrite": {},
+      "join": [],
+      "lost": [
+        "Al fusionar «Tres Casas» (#3246, 2026-10-01) quedó fuera — Portada: «https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiNU_5HlzuefflrN_-VX2WZxXNnMDaaofIEJ7O_lJ5rBO3KxiTagXqq3aeH9p4zEnmjDFDUOHaWNunr1E_z2rDHzfxFff-zNxhPsJpft3bFFPS1wRj6D-5z8Rtaz1dWfKn_KGyiR7YoZpo/s1600/famasloop+3+casas.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 405,
+      "name": "No Se Puede Ya Ocultar",
+      "rewrite": {},
+      "join": [],
+      "lost": [
+        "Al fusionar «No Se Puede Ocultar» (#2786, 2026-10-01) quedó fuera — Portada: «https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjupL_sxdXy7skzgayeI-vBqM9_JPom_NgY_z1mzZHnmRt-XVkYUkkBr_IYXmvPe39aN2aHVUsNMgYVYorwSq7BrxeUxFmbSYPjZH2EC7bFjyXxHwMn-kl-ZlER0XZIqm2D63mwkCD1Vxg/s320/portada%252520vox%252520y%252520primavera%252520001.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 429,
+      "name": "11 Cuentos",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «11 Cuento» (#2981, 2026-10-01) quedó fuera — Portada: «https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhHKTIJK_wH5CQ7INgl1R17hl7KwbGPtV-C0QsXxYyhR94xTLdw2AgwoRchiqfIwZJUAMEyOD0s0c2NQnEKb36flIw4s_tMn9nelW5xgTnma5ICH3-_0Aq0jKLoL26r6mMKl5Oip9Vp4so/s400/chucknorri1.jpg».",
+        "Al fusionar «Cuentos» (#2289, 2026-10-01) quedó fuera — Portada: «https://i0.wp.com/coleccionistasderockvenezolano.wordpress.com/wp-content/uploads/2016/02/chucknorris-11-cuentos-portada.jpg?w=243&h=213&ssl=1»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 462,
+      "name": "Cinema 0",
+      "rewrite": {},
+      "join": [],
+      "lost": [
+        "Al fusionar «Cinema Cero» (#4664, 2026-10-01) quedó fuera — Portada: «https://sincopa.com/rock_pop/covers160/luzverde_01cinema0.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 559,
+      "name": "Impala's 66",
+      "rewrite": {},
+      "join": [],
+      "lost": [
+        "Al fusionar «Los Impala ´66» (#2522, 2026-10-01) quedó fuera — Portada: «https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgE1O-0YIoSnxQU7tG5btkej1N-u74ZglOtCcpbChcXCxHhPVAC3Nf9eZ6hgbxTpUE5kY3hRxZegMnGmaro7vpDH8vvQ69YBKvIU41Sem9x_9uzoW0N9SL5T23Tl52SB20SrMm81tSvWjA/s1600/66.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 743,
+      "name": "Demo",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «DEMO casero» (#1809, 2026-10-01) quedó fuera — Portada: «https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhx_Lya1lScjle-tikT5xgFEbYY7dI8kBpYPWtBweV6HscZGmVTCJjGVPTgYupKMoUGypg5H33rq46FWPMSeYl09w0uKyr0AsQEmENqL9XRGUkU_aeDHRQNJaYm6u3L4laZRMFfMGVO/s400/a1049456609_16.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 3248,
+      "name": "Adh Seidh",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «Demo» (#1044, 2026-10-01) quedó fuera — Portada: «https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEipF2h3TTm6cwJmnsOrJwQRMh405VpXzZNzddBFgi4RlcYtZlYm9zi3i-jCUz5XI0EujxFORjBrWzIfYuSCld0UN8qDEpMkpJWVoKC_dwErtBqeO25hWN65NVnxjxQbQAlkl0FKSU3j/s400/Adh+Seidh+%2528Ven%2529+-+Demo+2004.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 1215,
+      "name": "Recuerdos del Olvido (Demos)",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «Recuerdos del Olvido» (#2838, 2026-10-01) quedó fuera — Portada: «https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjl2py6olXk3S132rNSFxJudOcV3lAwAw_AHsKHNXcM87RV3H1e7Ec_XaG6TJLJ2mLvjXJF3wD0tLMTWu_ioKIbq5cMDhOIXx4INmwJVDurSAKP2Gx77-N_RfEhg5KXNtMRe3Gj6W9-IQ4/s1600/tierra+1.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 3259,
+      "name": "Deus Irae",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «Demo» (#1491, 2026-10-01) quedó fuera — Portada: «https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj5srF8Rap5joirtrEaOkYjzA2lVauDnmrRfvJr30s8zppsQKw_0Fip6HXW7m8SL_21o7qA1xokq7FCwEQNs5rtfYfLPw0V4_fYT6Uz49LudjeYBwl3cQ-GPB9hnBHZTfksPuWwEjL-/s400/Deus+Irae+%2528Ven%2529+-+Demo.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 1787,
+      "name": "El Descenso, Furia, Miedo, Hostilidad",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «El Descenso» (#4633, 2026-10-01) quedó fuera — Portada: «https://sincopa.com/rock_pop/covers160/aliceinhell_eldescenso.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 1807,
+      "name": "Angel EP",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «Angel» (#4682, 2026-10-01) quedó fuera — Portada: «https://sincopa.com/rock_pop/covers160/cuartomagno_2angel.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 2361,
+      "name": "Frankamente Acústico, Unplugged",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «Frankamente Acústico» (#4741, 2026-10-01) quedó fuera — Portada: «https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi2d2A-3_mJZkbJXYEhcI1gqK91giQ2d4J3egghBBDzwTLP2Cw-O-ehU7LFG6MYrQkh9JTvy0y-oqIYUwkQfjpt2qScVUvXSmWr-LRpfAdVCoRotR6R2ajh2KJtybonovnbO9Xx0L90QCud/s1600/Frank_Quintero-Frankamente_Acustico-Frontal.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 2536,
+      "name": "Lágrimas Sónicas de Nick",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «Lágrimas Sónicas» (#4406, 2026-10-01) quedó fuera — Portada: «https://sincopa.com/rock_pop/covers160/razanima_1lagrimas.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 3024,
+      "name": "I Don´t Know Why",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «I Don't Know» (#4214, 2026-10-01) quedó fuera — Portada: «https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMiieh3QDDuyjwwfyiwkC7V9YZka_oMP626TDh97G7jB1eq2lgY2cDzuv5Cbg0ZOGpISjLNRWtu5fYHLMncbTSBoUcl5sQJJioxty9GZMoakGk71XL4E9C75jkbBT4KsSXhYLyZOnRAevW/s1600/Caratula+Blog.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 4866,
+      "name": "Los Darts Vol. II",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «Vol. II» (#3394, 2026-10-01) quedó fuera — Portada: «https://sincopa.com/rock_pop/covers160/darts_2.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 4988,
+      "name": "Volumen 2",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «Azúcar Cacao y Leche Vol. II» (#4643, 2026-10-01) quedó fuera — Portada: «https://sincopa.com/rock_pop/covers160/azucar_cl_2.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 5045,
+      "name": "Grandes Exitos de los Años 70",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «Grandes Éxitos De Los» (#4644, 2026-10-01) quedó fuera — Portada: «https://sincopa.com/rock_pop/covers160/compilations/1984_grandesexitosdlos70.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 5087,
+      "name": "Grandes Exitos de Los '70",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «Grandes Exitos de» (#4684, 2026-10-01) quedó fuera — Portada: «https://sincopa.com/rock_pop/covers160/compilations/grandes_exitos_delos70.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 102,
+      "name": "Tiempo De Actuar",
+      "rewrite": {},
+      "join": [],
+      "lost": [
+        "Al fusionar «Es Tiempo De Actuar» (#3271, 2026-10-01) quedó fuera — Año: 2007."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 112,
+      "name": "Los Peligros De Jugar Con Una Caja De Fósforos",
+      "rewrite": {},
+      "join": [],
+      "lost": [
+        "Al fusionar «con una Caja de Fósforo» (#3083, 2026-10-01) quedó fuera — Año: 2005."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 122,
+      "name": "Colonia Para El Alma",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «La Banda» (#740, 2026-10-01) quedó fuera — Portada: «https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiU2bNxs-FEwFyFd_1A4bgkUDcPSRFWQz9PeABhBDzU_Cffs_A6NvP1M6fokUTQtPdZn8-6TnhqPyRV91B1KWfJcM0ZiDEY4hVsyEExwnBkuB2J7cv6DLFZnLxCSKCBw8brZ6iIF3Jk/s400/atkinson.jpg».",
+        "Al fusionar «Colonia Para el Alma» (#3818, 2026-10-01) quedó fuera — Portada: «https://sincopa.com/rock_pop/covers160/atkinson_1colonia.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 199,
+      "name": "Desde Una Orilla A La Otra",
+      "rewrite": {},
+      "join": [],
+      "lost": [
+        "Al fusionar «Desde Una Orilla» (#4229, 2026-10-01) quedó fuera — Portada: «https://sincopa.com/rock_pop/covers160/hydra.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 246,
+      "name": "A Typical & Autoctonal Venezuelan Dance Band",
+      "rewrite": {},
+      "join": [],
+      "lost": [
+        "Al fusionar «Venezuelan Dance Band» (#3358, 2026-10-01) quedó fuera — Portada: «https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgdFECS_EHFDohk6LS34NCNnkLr3ktQwkOsIYh_s8EVI_2Yi7iWhHocli-do3_H6PMbhb_YElcxckVzw7Raz28sCLSsVENnmsI4j7s7r5OA3Dbjb2FMxdg4S4es3iCupr6J6Ab62PF8ghM/s320/amigos95.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 248,
+      "name": "En Una Noche Tan Linda Como Esta",
+      "rewrite": {},
+      "join": [],
+      "lost": [
+        "Al fusionar «Como Esta» (#3350, 2026-10-01) quedó fuera — Portada: «https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgm_SSZmi0HfHDg5nHrv8BfNb-y0FocNfCCYH3aEvdKEAnLzJ_WGIGfyzzprfoKkPVc5QIKLTEh2KEyvuPdWRWMQfHL3Mm_8YPt4B0d-91ATkIf0gL4NzSc82sz0UJco-OcsZqLW_pbGbQ/s320/en+vivo.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 250,
+      "name": "The New Sound of The Venezuelan Gozadera",
+      "rewrite": {},
+      "join": [],
+      "lost": [
+        "Al fusionar «Gozadera» (#3353, 2026-10-01) quedó fuera — Portada: «https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhA1aKYPMobE7dsfhNwLzjBcrndyfpwJ4KI0RVkVHJcsnQX-UefuQY0fFrqLQyswFYjAfCwrgVFDKfo0HiCkGvPrQ_0tW-U_9Icy5Shf_SrSwBfvjXZwF2Emd2gLwPK2vOitTrCjvdJlGo/s320/98.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 362,
+      "name": "Childhood's End / El Fin De La Infancia",
+      "rewrite": {},
+      "join": [],
+      "lost": [
+        "Al fusionar «Fin de la Infancia» (#2455, 2026-10-01) quedó fuera — Año: 2000."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 492,
+      "name": "Jayeche",
+      "rewrite": {},
+      "join": [],
+      "lost": [
+        "Al fusionar «Ofrenda: Jayeche» (#4836, 2026-10-01) quedó fuera — Portada: «https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiY4cAx4VHmbAku5pHb91XGf4c9STLdwl13fjeEMHqc9h2M-mu0BF9y7pnBgizG0n7MEK2UEZvlbK_qMQasr-ueNyaVvu1CmJ7zpS8FDTNMXGJ-cXkt3nNKsL7w5_eXHY5blvs6DNTe_X0Q/s1600/Blog.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 545,
+      "name": "Inéditas",
+      "rewrite": {},
+      "join": [],
+      "lost": [
+        "Al fusionar «Demos» (#2977, 2026-10-01) quedó fuera — Año: 2002."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 558,
+      "name": "The Venezuelan Zinga Son Vol. 1",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «Vol. 1» (#3351, 2026-10-01) quedó fuera — Año: 2003; Portada: «https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhx9azEw6FLa9vepL7h9l6bvLfGnKYcNWQjT9zH5sE6oDJcWoSxiw2oZ1snJr7S3lVg8YfPtqXvtn8DXpQZmuJIe6Q4IytxOPfRi7YznT-rtZrup7rugeO6WIdMzBJEf5L-jpUmffmW3jc/s320/ZINGAZON.jpg».",
+        "Al fusionar «The Venezuelan» (#4637, 2026-10-01) quedó fuera — Portada: «https://sincopa.com/rock_pop/covers160/amigos_4zingazon1.jpg».",
+        "Al fusionar «The Venezuelan Zinga Son Vol. I» (#3801, 2026-10-01) quedó fuera — Año: 2003."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 616,
+      "name": "Ecos De La Tercera Realidad",
+      "rewrite": {},
+      "join": [],
+      "lost": [
+        "Al fusionar «Ecos de la Realidad» (#3295, 2026-10-01) quedó fuera — Portada: «https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhNjp9-uDU3zdk7xkIwL8ACnatgE8IXGOcU3EVlvdBG2qANphQCPf6d3o3BW0OL8hV45OAtMsJaIZ7W0A22z86bW8nRb2FYxGk_B_zvkXUtJrta21oZDfGDtzFQ4MXVw5pNloyqkIUM-qQ/s1600/eco+torre+2004.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 667,
+      "name": "El Nuevo Beat Del Tambor",
+      "rewrite": {},
+      "join": [],
+      "lost": [
+        "Al fusionar «El Beat del Tambor» (#2505, 2026-10-01) quedó fuera — Año: 2008; Portada: «https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiVcFNnIaaIpnM6LwdHWy1UBCyJI-CfYA5SK8nIvXJETr410_HI0GNJvOCBxSuhIUUiN2WhzTHX5q9qE-Y2sAkqKEFbqTg30NRsmcEx0cpUViI5M0jF3-h7q3tNP43DPS7lisQkTmxy0-A/s320/Mango%252BFunk.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 739,
+      "name": "Okta (Maracay 1996)",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «Okta» (#2374, 2026-10-01) quedó fuera — Año: 1995; Portada: «https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgGQn3DWjwwCkERbstCJ_9j8fkVEglC433H212nilG5whT40RQ2shge1uZRx9SNRRCIW-m5ADSmQs4fDr3JZ7_4dNG-syQoX-P8L4itFuzyOBvUHMmS0UNp0f7u_WWEgN1u9VIX-2zQZgs/s1600/en+vivo+otak.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 1014,
+      "name": "Traición",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «Traición» (#3000, 2026-10-01) quedó fuera — Portada: «https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhe8ul9i2I7Of_StafbN_8ctoSuWMHf4xpaifHG4nkWtR6vW7mp15jdf9jERWQ10mCckjUSprla67qdz6YPs2lCA-ybTRmpIfRqvFYi1J95whhsZ5Jb5LyXz0qlfpY4Zx_0vQVP93cZmOg/s320/puah.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 1236,
+      "name": "En Vivo en Ciudad Ojeda",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «En vivo Ciudad Ojeda» (#3294, 2026-10-01) quedó fuera — Portada: «https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh3GUFTMnOkIGFqJCRV_iAjNPMwObjngVnCM0FU6739kJNdHpc1JErT2p3ar9mhfaB7Z8Yc6iuZcFYVkO3KGsa9FygekegCmNEFJ2Ayyqwf_JhIOm8ajc6Akk5QsEVSWdRGUC4s5zAm-sc/s1600/torre+live.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 1339,
+      "name": "La Certeza de lo que se Espera y la Convicción de lo que no se Ve",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «y La Conviccion De LO Que No Se Ve» (#2679, 2026-10-01) quedó fuera — Año: 2010; Portada: «https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhJXxwcagHNiV8wv8r_fu4dws8XjUFif9RWorRoOaWURmVj7pjcB30cjlfGmpSVTb_T3eev5TTsv_hScjPNb6pkS3IQEHvhzmEal-NGBLlWSy9UO3RlE7Mwu2ixOwQ3MyVMBEJN3YZ0PmI/s320/frente+de+ira.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 1347,
+      "name": "Live in Pto. Ordaz",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «En vivo Puerto Ordaz» (#3302, 2026-10-01) quedó fuera — Año: 2003; Portada: «https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEimla2Bcs3IIUOEV8b3tPfx6nOFBzKaGokQQ5hI2IUJlaGpmE0W9P5mQZB7LKN-kKvU_JVEE0Y79z_5tSc5rrTbwFp9-PB5fNNUHokUA8imDbKBi5pWMkztaZEMoDBZdwBBenmnYTGr92Y/s1600/live.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 1348,
+      "name": "El Ángel Caído",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «Demo» (#2813, 2026-10-01) quedó fuera — Portada: «https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiVHiSzwBEd4f8iZ6ui2w6N4790Al0EE-SB3Dj1c_9Jo_QpRycpsIguf0LWkyPPiXHlnJk7mGeVkoXRWygg5TLjFUzdxcty6zNVVPG3PkJ00-1X_xWsNN-eS9-HmGo7EiP17GK6Et7PCvY/s320/Diphteria+-+El+Angel+Caido.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 1351,
+      "name": "Premonition",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «Premotion» (#2895, 2026-10-01) quedó fuera — Año: 2007; Portada: «https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgRd1JL6kiHLHmn8ekFGpeRSmN_W2mXkkr5EdsUc6wS1ovBVYjzRMbUIgv8xbtQfRNnzUByboNmYWG94r4Bgumbx6bx_6nJXObrnS1WRAwZT6wG589EmlcdfxgPf0UlqkRBgzof8YqH2gs/s1600/psicosis2005.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 1371,
+      "name": "La Sombra (Demo 1)",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «Demo» (#2390, 2026-10-01) quedó fuera — Año: 2009; Portada: «https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgimiqgUIx4lhJzfdB05tX43dsXN7J4WO7Owy6pAmTHWwBHHLNZDHTXACmmw9LdyS_NAmTgpBg8K_xzZlogf85cqsIsfnibFLoYJ8hlss7JfMRYmQIuc1Nci1LUwpikex5Adfr0x1Mo1QU/s320/enkdenados1.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 1387,
+      "name": "Decade of Perversion",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «A Decade of Perversion» (#3301, 2026-10-01) quedó fuera — Año: 2002; Portada: «https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEicjxJSc0GwMoisw6MJ9DKwkEZ_a-xLBGp5Uy0fu38RHrh8ELXzRnvluV5jbai3pl6SZ_qFOuM8fOFtuFcAKc-4XWofdIAetC_eIrnGjranRYPT_kPIcZhqFxTeGK9WgruzNi1KGLJbw4k/s1600/decade+de+preversion.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 1441,
+      "name": "Demo",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «Bootleg» (#3249, 2026-10-01) quedó fuera — Portada: «https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjXo51M-ZDNqS5V8u7j_BdfdeGkGa2-AhPHHMKH0A0M3E0uz2B1z60BffNDHac3IksQ6D7F0xpDNPXoOQLp0R4zfG6jQ2K14gJEH9kd93tlB5vmU-6JQhNjtiHWRnRjwUwzzdqZWLxC21k/s1600/carganot.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 1552,
+      "name": "El Arte de la Necrofagia (2003 - 2010)",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «El Arte De La Necrofagia» (#3118, 2026-10-01) quedó fuera — Año: 2003; Portada: «https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhl_3LFs5pvwEv7vr35k8xNXG_ipeXpu6gHJTl4RRb6Hj0Par0jjGY2DIW2ICAkGaXA5jtQetRh0aJZgvb6zIuMxO0UD81zwjpsJ-O-lud_mxRyzVg6Q-FImPfdYwnKINb-9GqpNH7j64s/s320/sectacanibalelartedelan.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 1655,
+      "name": "Pastel de Gente (People Pie)",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «El Blues del Plan Union» (#3284, 2026-10-01) quedó fuera — Portada: «https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgmoWdz0EFiP8p5grJAyEhsb_MrbeHHrNp8f03PQNnjpNxDt0wQnCK-m9CwM2NGCDrb1uY1FkgWr6lhSceggZ03An6h6olI4axITbEFeTkLbeXS4j-K1nTfSOSH-SXqyPGxD3vBqBsJhF8/s1600/pastel1.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 1754,
+      "name": "The Beginning of the Lascivious Addiction",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «The Beginning Of The Lascivious Adicction» (#2930, 2026-10-01) quedó fuera — Año: 2004; Portada: «https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhLIhic7cZ-ZmkbmyunNn_Nshb_TSdiid1zm8i5NdjvOue1cgZ3JCYpZDoAgpKtscs4QoR2FrHsMYbvYMYpvMLFILsBfZjCX0IWQrP9K97LMCUQFhakN6c4okKisHUKES1ACZiJwOXe710/s1600/2004.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 2130,
+      "name": "Indeleble",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «Viajando Lejos» (#3560, 2026-10-01) quedó fuera — Portada: «https://sincopa.com/rock_pop/covers160/aerea_1viajandolejos.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 2629,
+      "name": "El Gigante de la Cancion Juvenil",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «El Gigante De La» (#4655, 2026-10-01) quedó fuera — Portada: «https://sincopa.com/rock_pop/covers160/carlosmorean_2elgigantedlacancion.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 2995,
+      "name": "Cárcel, Muerte o Rock n Roll",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «Cárcel, Muerte» (#4634, 2026-10-01) quedó fuera — Portada: «https://sincopa.com/rock_pop/covers160/altovoltaje_1carcelmuerte.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 4841,
+      "name": "Carlos Moreán en Vivo",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «En Vivo» (#3862, 2026-10-01) quedó fuera — Portada: «https://sincopa.com/rock_pop/covers160/carlosmorean_4envivo.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 5106,
+      "name": "Los Darts de Etiqueta",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «De Etiqueta» (#3955, 2026-10-01) quedó fuera — Portada: «https://sincopa.com/rock_pop/covers160/darts_4etiqueta.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 4692,
+      "name": "Guarachando en Navidad Vol. 1",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «Guarachando En Navidad Volumen 1» (#4685, 2026-10-01) quedó fuera — Portada: «https://sincopa.com/rock_pop/covers160/desorden_guarachando.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 521,
+      "name": "Acústico En Bits Session",
+      "rewrite": {},
+      "join": [],
+      "lost": [
+        "Al fusionar «Bitsessions» (#3541, 2026-10-01) quedó fuera — Portada: «https://sincopa.com/rock_pop/covers160/candy66_5bitsessions.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 751,
+      "name": "En Vivo (FNB Ateneo de Caracas)",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «En vivo en el nuevas bandas» (#3250, 2026-10-01) quedó fuera — Portada: «https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiaU19ynDwQ62jXEdkbaqB7re_hwixpWPkJVrUY8ka9cfAzJ-8DZFcgAVViB2v9eXwreFRRjEtNVVY-fNQJknkC-Z8rH41SaP-fGpXG5XClWW01qE_i7seY0gt_YOIAwOLrz2f8u0CV3XY/s1600/en+vivo+nb.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 1338,
+      "name": "Silence",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «Silencio Demo 92​-​93» (#753, 2026-10-01) quedó fuera — Portada: «https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiyphq-TIUuHibO6V_eSyCDbx-kE6Uq-sopX_T7OqoubLf-oZonD1eordPPMTlYRIFWa5VBeghcTCcZ_ujvfXXNs04toqIkOxBz5q8UKjsuDOqsXFx7lV_BVS9zrWsRvSrjvtodDUmT/s400/a3897824375_16.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 1835,
+      "name": "Demos 1992-1996",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «1992-1996» (#3253, 2026-10-01) quedó fuera — Portada: «https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiqrA7_tGXgx7d7OdjrZWHqgGoT4pvX5CUAp0fMixATlLW9Y78caZBYWdSd6nfLcw-I7aunE_QEF8FAUeNGuDFPEotBefHY58iZOSZFcb-HzMiRu0gjtHBl9N4_dSZqFIiC44JoTx4vKNs/s1600/natastor19921996.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 3581,
+      "name": "Déjala! ...Está Triste",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «!!! Estás Triste» (#3123, 2026-10-01) quedó fuera — Portada: «https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjwzE4Dc2Xf3UHPzagq-xxcbZTjgUCzjSr0UlQOj_I6NcmRaU-7KZ1Ujnndy7DE_EvQxIP324zlhMd4J8w02opGYANBxuog-EXXwB81X-Ohio-e1MQ2LEZhlTz3vNpXPVKPWlrCPSIlLm4/s320/retrovertigo.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 2421,
+      "name": "Rock n' Roll Show Vol.1",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «Rock n Roll Show Vol. I» (#1937, 2026-10-01) quedó fuera — Portada: «https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgEqvFyibn8QC94wAgGMsHH28dpE0SYf-xR2rEIEK9md-K7WyooIxf_5MycEas3tcEAHrPMjNf93RC60LJukZ6vxgx59l3EbP-3hV8xYqX_mdvfQ3YHXCsrpoUwgbalmFdpn_-QjWAMuQ/s400/ladob.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 5033,
+      "name": "Las 4 Monedas Vol. 3",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 5050,
+      "name": "Las 4 Monedas Vol. 2",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 5110,
+      "name": "Diez Años en Acción",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": []
+    },
+    {
+      "kind": "artist",
+      "id": 1030,
+      "name": "Big Landin Orquesta",
+      "rewrite": {
+        "biography": [
+          "Big Landin Orquesta",
+          "La Big Landin Orquesta"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "artist",
+      "id": 106,
+      "name": "Grillos Mientras Tanto",
+      "rewrite": {
+        "biography": [
+          "Grillos Mientras Tanto",
+          "Los Grillos Mientras Tanto"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "artist",
+      "id": 1963,
+      "name": "Los Holiday's",
+      "rewrite": {
+        "biography": [
+          "Los Holiday's",
+          "The Holidays"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "artist",
+      "id": 552,
+      "name": "Flanders",
+      "rewrite": {
+        "biography": [
+          "Flanders",
+          "Los Flanders"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "artist",
+      "id": 983,
+      "name": "MxDxH",
+      "rewrite": {
+        "biography": [
+          "MxDxH",
+          "MxDxH"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 1013,
+      "name": "El Sofá",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «El sofá» (#3231, 2026-10-01) quedó fuera — Portada: «https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj6KZzh9VH0q69-SC15ZkHLntrs5I55ncsmrkc4X1L15vgn1g_DkI9srEbr8dtvjelknrDqLTw9c3okVNI-VobCbiH9D1fAJrDrO9eBCkU6tSjgv-DiM5WcuStWHlmeoQfrEP9MxworeCc/s1600/flanders.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 1874,
+      "name": "La Ruta De La Miseria",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «La Ruta de la Miseria» (#2685, 2026-10-01) quedó fuera — Portada: «https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiRzYB-fUGb2KEyQoNMyH9hf0fmGrs1rh7XgLWOpuSTVnpU-3TGa_lhLOW-21_hah1fXjQZmSIUm8__nFXfk53LbMbN79z3cMMliVzRj2Agk0wfYEi51zisOMXsiqME4ZQy6G0i6M06LPA/s320/MxDxH.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 2941,
+      "name": "SKAterriza",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «SKAterriza» (#1942, 2026-10-01) quedó fuera — Portada: «https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhv2s9vUdKi6Gi5FAQgmUAm0zMkONP4QEGLdiR7N4O50CFtVl7Z2ZMbj-l6r6y2mOZoeBMRWXrUAXyXera1e_uTtYLOvVFOkj88ynmdQ8BWcrdLdXsqC1GGI9yTIh8IbO6P_NxAPpy4NiY/s400/skaterriza.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 2179,
+      "name": "Suburbia",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 2711,
+      "name": "Sounds of the Holidays",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 4678,
+      "name": "Sólo Exitos",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 3469,
+      "name": "Lo Mejor de Colina",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 4671,
+      "name": "Amanecer",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 4674,
+      "name": "Cuando Un Loco Ama...",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 4675,
+      "name": "Vuelve",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 4676,
+      "name": "A Través Del Tiempo",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 4673,
+      "name": "Sampler",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": []
+    },
+    {
+      "kind": "artist",
+      "id": 459,
+      "name": "Zeta",
+      "rewrite": {
+        "biography": [
+          "Zeta",
+          "The Zeta"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "artist",
+      "id": 969,
+      "name": "THE",
+      "rewrite": {},
+      "join": [],
+      "lost": [
+        "Al fusionar «THE (Lara)» (#1290, 2026-10-01) quedó fuera — Ciudad: «Lara»."
+      ]
+    },
+    {
+      "kind": "artist",
+      "id": 511,
+      "name": "Jihad",
+      "rewrite": {},
+      "join": [],
+      "lost": [
+        "Al fusionar «Jihad (Caracas)» (#1291, 2026-10-01) quedó fuera — Ciudad: «Caracas»."
+      ]
+    },
+    {
+      "kind": "artist",
+      "id": 471,
+      "name": "Myzis",
+      "rewrite": {},
+      "join": [],
+      "lost": [
+        "Al fusionar «Myzis (Táchira)» (#1293, 2026-10-01) quedó fuera — Ciudad: «Tachira»."
+      ]
+    },
+    {
+      "kind": "artist",
+      "id": 702,
+      "name": "Equilibrio Vital",
+      "rewrite": {},
+      "join": [],
+      "lost": [
+        "Al fusionar «Equilibrio Vital (Caracas)» (#1294, 2026-10-01) quedó fuera — Ciudad: «Caracas»."
+      ]
+    },
+    {
+      "kind": "artist",
+      "id": 606,
+      "name": "Gutiroth",
+      "rewrite": {},
+      "join": [],
+      "lost": [
+        "Al fusionar «Gutiroth (Carabobo)» (#1296, 2026-10-01) quedó fuera — Ciudad: «Carabobo»."
+      ]
+    },
+    {
+      "kind": "artist",
+      "id": 325,
+      "name": "Gastonia",
+      "rewrite": {},
+      "join": [],
+      "lost": [
+        "Al fusionar «Gastonia (Carabobo)» (#1300, 2026-10-01) quedó fuera — Ciudad: «Valencia»."
+      ]
+    },
+    {
+      "kind": "artist",
+      "id": 1053,
+      "name": "La Radio Candela",
+      "rewrite": {
+        "biography": [
+          "La Radio Candela",
+          "Radio Candela"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "artist",
+      "id": 809,
+      "name": "Noctambulath",
+      "rewrite": {},
+      "join": [],
+      "lost": [
+        "Al fusionar «Noctambulath (Caracas)» (#1286, 2026-10-01) quedó fuera — Ciudad: «Caracas»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 2493,
+      "name": "Masacre",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «Massacre» (#1590, 2026-10-01) quedó fuera — Portada: «https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj0UItZNLIKussUv_cW6GebasWkgP-MAMA81WVXVJ2HrXatGdaTNvFxXxssPJEtqELOesB2iHvYMJICiVU7omXUNFBParl9dyGas0EElzFVdE0iLLltmkmKDXKP-BNBSKv7fvSuVoaN/s400/Necrosis+%2528Ven%2529+-+Massacre+%2528Ep%2529.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 1604,
+      "name": "Hymns From The Underworld In Flames",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 1513,
+      "name": "Demo I",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «Demo I» (#3138, 2026-10-01) quedó fuera — Portada: «https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgYOIu0cBTR55UmkTCQEfiEUDgfm-E_ZpL4N76gNscF8boz-O_C7aCaMezQh3uWwm433JJYcoB0JGDs_Z6C1Jtfq3c0pztEpPREUzMrAQQfKd9xoQElajuUZrP1RPiXXZdwdeJ0-lhzLWE/s320/gutirothdemoi.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 1536,
+      "name": "Scars to Remember...",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «Scars To Remember» (#3137, 2026-10-01) quedó fuera — Portada: «https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiZuS05zVnwpCbsp2bQguwRoK4HyzIzJxZ1TJdD-zyjd4ubRVDDSKv5wT-3h4yraEm_N5g76Y6J1ExK7FXBJkC1Y-ivZuOAlhXcBcJkXdiULPwhD13h1Z1M4f6rG1XR3keVsjtve5IFySE/s320/gutirothscarstoremember.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 951,
+      "name": "Hoy",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 1541,
+      "name": "Crónica de un Vil y Seductor Ritual",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «Cronica de un Vil y Seductor Ritual» (#2430, 2026-10-01) quedó fuera — Portada: «https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgqQzK_sJq7YOwWT5ZJjGm2vTI_20Hgd-h_LlnkSDZfawID4b2Zqz81kx_9MFWpSGCktX8xdNZ5akum-8mKzIWcnRx-wZx7nC7a5OlIv55FZElF0VudOi1I9Xw79Jpf4BCz69MzG2PNRQI/s1600/ultimo.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 2736,
+      "name": "Un Cuento Sin Pensalo",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «Un Cuento Sin Pensalo» (#2962, 2026-10-01) quedó fuera — Portada: «https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjbjVvqMicQ0gZYjqyy0CAhyphenhyphenMx58rTPGLSAILJj_9iTD5lUg3XPcIb9flKRPH7tmJMJQuqfC1OXdQSzDi0ZlSfeA9WsJ_ZGfh1YWsw5HgTsiznhVOMAwyjxYPCloNV07CSvAL8sEJ5bdqY/s320/radio+candela.jpg»."
+      ]
+    },
+    {
+      "kind": "artist",
+      "id": 394,
+      "name": "Torkhe",
+      "rewrite": {},
+      "join": [],
+      "lost": [
+        "Al fusionar «Torkhe (Lara)» (#1295, 2026-10-01) quedó fuera — Ciudad: «Lara»."
+      ]
+    },
+    {
+      "kind": "organization",
+      "id": 361,
+      "name": "Discográfica Pilla",
+      "rewrite": {},
+      "join": [],
+      "lost": [
+        "Al fusionar «Discográfica Pilla Records» (#1111, 2026-10-01) quedó fuera — Tipo: «recording_studio»."
+      ]
+    },
+    {
+      "kind": "artist",
+      "id": 63,
+      "name": "Chulius & The Filarmónicos",
+      "rewrite": {
+        "biography": [
+          "Chulius & The Filarmónicos",
+          "Chulius and The Filarmonicos",
+          "Chulius"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 4677,
+      "name": "7",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": []
+    },
+    {
+      "kind": "artist",
+      "id": 1951,
+      "name": "Paul Gillman",
+      "rewrite": {
+        "biography": [
+          "Paul Gillman",
+          "Paul Gillman"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "artist",
+      "id": 824,
+      "name": "Odo'Sha",
+      "rewrite": {},
+      "join": [],
+      "lost": [
+        "Al fusionar «Odo'Sha - Hekula...» (#764, 2026-10-01) quedó fuera — Ciudad: «Tachira»."
+      ]
+    },
+    {
+      "kind": "artist",
+      "id": 1940,
+      "name": "Fauna Crepuscular",
+      "rewrite": {
+        "biography": [
+          "Fauna Crepuscular",
+          "Fauna Crepúscular"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 2122,
+      "name": "Despertando en la Historia",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 2133,
+      "name": "25 años",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 2135,
+      "name": "15 años",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 2139,
+      "name": "Inevitable",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 2150,
+      "name": "El Guerrero",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 2152,
+      "name": "Levantate y Pelea",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 2157,
+      "name": "El Regreso del Guerrero",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 3059,
+      "name": "Lo Inédito",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 3060,
+      "name": "Lo Más Duro",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 3459,
+      "name": "Entre Cenizas",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 3472,
+      "name": "Por Mi Culpa",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 4630,
+      "name": "Al Zeppy En New York",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 4629,
+      "name": "Los Exitos de Al Zeppy",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 1375,
+      "name": "Voz de los Espíritus",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «Voz de los Espiritus» (#3382, 2026-10-01) quedó fuera — Portada: «https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi3WdYvs3WkIEHQ_espW35ymOt9-Xr-VumEtLrVC2ON_CtZjkmB9GJ3EebqTMdXB8cx-bSNEjVLjmbYx2o4Vn_zOEYoOdiRJbAHC4-fcZY2JnzHhTm7U-Iz-M5GlWSWGYiWuwqgTAGmEcE/s1600/voz.JPG»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 1411,
+      "name": "Againts the world without toilet paper",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «Againts the world without toilet paper» (#3254, 2026-10-01) quedó fuera — Portada: «https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjIoAlzZb0dhYQX6jhuzODFdytNO6DTc0CXKtPVJeRetVcTqPHt_RbSgfsv5D5h1wolz82xKiDF3R3yS4SS75dU5oih6jk0QeLkkOF3BDo3V0j2cL1D2WqQ7XzFgqV9ZF0snw0tfEceubk/s1600/misantropia.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 2020,
+      "name": "Vivo y en Vivo",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «Vivo & En Vivo» (#4136, 2026-10-01) quedó fuera — Año: 1996."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 450,
+      "name": "Escalofrío",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «Escalofrío» (#2142, 2026-10-01) quedó fuera — Portada: «https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiCP59WlUuj6iBcsON8cBAiZJcZbVmV9hJg9W4go0GcKMWEFt8JqrHeDMJh2Ftexoj8WROxhz1mxnndCey35uD0F_6tgfnVm9ZPYDWmSFvm5oKF-OElxYFN5JYlYouFB5qz3YRYauJkNHI/s400/escalofr%C3%ADo.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 2147,
+      "name": "Sigueme",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «Sígueme» (#4124, 2026-10-01) quedó fuera — Año: 1988."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 4140,
+      "name": "Escalofrío II",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 3022,
+      "name": "Sus Éxitos",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «Sus Exitos» (#4213, 2026-10-01) quedó fuera — Año: 2000."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 350,
+      "name": "The Love Depression",
+      "rewrite": {},
+      "join": [],
+      "lost": [
+        "Al fusionar «The Love Depression» (#2063, 2026-10-01) quedó fuera — Portada: «https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjdCbRH3G2W-0rYQzakrG0Bb-0QJIVaXoF0450J-L-xMFDs1xh_kobWjfJUyR2XLyYgNsPI-gscy5Eda49LmZv2GPaFFCMqfU7AOx9od08g6o2Cg3gBzgfIulvWrqLeyBmBsUoehpFIRg/s400/love.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 383,
+      "name": "Festival Nuevas Bandas 20 Años En Vivo",
+      "rewrite": {},
+      "join": [],
+      "lost": [
+        "Al fusionar «Festival Nuevas Bandas» (#3085, 2026-10-01) quedó fuera — Año: 2001; Portada: «https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhVUEjGGCOUeKznlBvKqC5DcmTag2Ytgd8luNH1LCxabfB1svx-QBzmhDmXqgkPhJwMu8LdSFmu2AjYz81UfhCshyphenhyphenXb_udp6dFyGp0GmaNezCI8aoy8RoOcwwx9kx48fTOjdd7etqg4rRY/s320/5to.jpg»."
+      ]
+    },
+    {
+      "kind": "person",
+      "id": 112,
+      "name": "Alejandro Estrada",
+      "rewrite": {
+        "biography": [
+          "Alejandro Estrada",
+          "Alejandro Estrada \"Alz\""
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 113,
+      "name": "Carlos Astros",
+      "rewrite": {
+        "biography": [
+          "Carlos Astros",
+          "Carlos Astros \"Carlz\""
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 223,
+      "name": "Annabella Almenar",
+      "rewrite": {
+        "biography": [
+          "Annabella Almenar",
+          "Annabella Almenar \"Bélica\"",
+          "Bélica Almenar"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 372,
+      "name": "Norton Pérez",
+      "rewrite": {
+        "biography": [
+          "Norton Pérez",
+          "Nörton \"Mars\" Pérez"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 376,
+      "name": "Alfredo Gil",
+      "rewrite": {
+        "biography": [
+          "Alfredo Gil",
+          "Alfredo \"Pollo\" Gil"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 730,
+      "name": "Alberto Montenegro",
+      "rewrite": {
+        "biography": [
+          "Alberto Montenegro",
+          "Alberto \"Beto\" Montenegro",
+          "Beto Monetegro"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 739,
+      "name": "Brian Gardner",
+      "rewrite": {
+        "biography": [
+          "Brian Gardner",
+          "Brian \"Big Bass\" Gardner",
+          "Brian Gardner \"Big Bass\""
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 511,
+      "name": "José \"Pingüino\" Echezuría",
+      "rewrite": {
+        "biography": [
+          "José \"Pingüino\" Echezuría",
+          "José \"Pigüino\" Echezuría",
+          "Pinguino Echezuría"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 645,
+      "name": "Cayayo Troconis",
+      "rewrite": {
+        "biography": [
+          "Cayayo Troconis",
+          "Carlos Eduardo \"Cayayo\" Troconis",
+          "Carlos Eduardo Troconis",
+          "Carlos Troconis",
+          "Carlos Eduardo Troconis \"Cayayo\"",
+          "Carlos E. \"Cayayo\" Troconis"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 2857,
+      "name": "Jesús Toro",
+      "rewrite": {
+        "biography": [
+          "Jesús Toro",
+          "Jesús \"Torito\" Toro"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 721,
+      "name": "Luis \"Droopy\" Pulido",
+      "rewrite": {
+        "biography": [
+          "Luis \"Droopy\" Pulido",
+          "Luis Pulido"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 8415,
+      "name": "Juan Carlos Pineda",
+      "rewrite": {
+        "biography": [
+          "Juan Carlos Pineda",
+          "Juan Carlos \"Tito\" Pineda"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 735,
+      "name": "Vladimir Peña",
+      "rewrite": {
+        "biography": [
+          "Vladimir Peña",
+          "Vladimir \"Arfavor\" Peña"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 770,
+      "name": "Chris Rex \"Elektrobot\"",
+      "rewrite": {
+        "biography": [
+          "Chris Rex \"Elektrobot\"",
+          "Chris Rex"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 794,
+      "name": "Luis Márquez",
+      "rewrite": {
+        "biography": [
+          "Luis Márquez",
+          "Luis \"Papo\" Márquez"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 833,
+      "name": "José Luis Osuna",
+      "rewrite": {
+        "biography": [
+          "José Luis Osuna",
+          "José Luis \"Tocayo\" Osuna"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 3103,
+      "name": "Manuel Montañez",
+      "rewrite": {
+        "biography": [
+          "Manuel Montañez",
+          "Manuel Montañez \"Pacho\"",
+          "Manuel \"Pancho\" Montañez"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 873,
+      "name": "Iván Marcano",
+      "rewrite": {
+        "biography": [
+          "Iván Marcano",
+          "Iván \"Gordo\" Marcano"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 939,
+      "name": "Jesús Jiménez",
+      "rewrite": {
+        "biography": [
+          "Jesús Jiménez",
+          "Jesús \"Moti\" Jiménez"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 8974,
+      "name": "Yonathan \"Morocho\" Gavidia",
+      "rewrite": {
+        "biography": [
+          "Yonathan \"Morocho\" Gavidia",
+          "Yonathan Gavidia"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 963,
+      "name": "Diego Álvarez",
+      "rewrite": {
+        "biography": [
+          "Diego Álvarez",
+          "Diego \"El Negro\" Álvarez"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 1848,
+      "name": "William \"Magú\" Guzmán",
+      "rewrite": {
+        "biography": [
+          "William \"Magú\" Guzmán",
+          "William Guzmán \"Magú\""
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 1849,
+      "name": "Raúl Mota",
+      "rewrite": {
+        "biography": [
+          "Raúl Mota",
+          "Raul Mota \"Mota\""
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 2490,
+      "name": "Gonzalo Suarez \"Gonzo\"",
+      "rewrite": {
+        "biography": [
+          "Gonzalo Suarez \"Gonzo\"",
+          "Gonzalo Suárez"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 1195,
+      "name": "Rodolfo Reyes",
+      "rewrite": {
+        "biography": [
+          "Rodolfo Reyes",
+          "Rodolfo \"Panamío\" Reyes"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 1370,
+      "name": "Carlos Fernández",
+      "rewrite": {
+        "biography": [
+          "Carlos Fernández",
+          "Carlos \"Morocho\" Fernández"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 1441,
+      "name": "Enrique Márquez",
+      "rewrite": {
+        "biography": [
+          "Enrique Márquez",
+          "Enrique \"Kike\" Marquez"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 1473,
+      "name": "Pedro Rodríguez",
+      "rewrite": {
+        "biography": [
+          "Pedro Rodríguez",
+          "Pedro \"Connan\" Rodríguez"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 1618,
+      "name": "Leonardo Gil",
+      "rewrite": {
+        "biography": [
+          "Leonardo Gil",
+          "Leonardo \"Iguana\" Gil"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 2415,
+      "name": "Abraham García",
+      "rewrite": {
+        "biography": [
+          "Abraham García",
+          "Abraham \"Cangrejo\" García"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 1856,
+      "name": "Giordano Di Marzo \"Yordano\"",
+      "rewrite": {
+        "biography": [
+          "Giordano Di Marzo \"Yordano\"",
+          "Giordano \"Yordano\" Di Marzo",
+          "(Giordano Di Marzo)"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 2029,
+      "name": "Rodolfo Serra",
+      "rewrite": {
+        "biography": [
+          "Rodolfo Serra",
+          "Rodolfo \"Pocho\" Serra"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 5990,
+      "name": "Sofia \"La Nena\" Pulido",
+      "rewrite": {
+        "biography": [
+          "Sofia \"La Nena\" Pulido",
+          "Sofía Pulido"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 2155,
+      "name": "Carlos Crinigan",
+      "rewrite": {
+        "biography": [
+          "Carlos Crinigan",
+          "Carlos \"DJ Metra\" Crinigan",
+          "Carlos Crinigan (Dj Metra)"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 2383,
+      "name": "Manuel \"Manel\" Muñoz",
+      "rewrite": {
+        "biography": [
+          "Manuel \"Manel\" Muñoz",
+          "Manuel Muñoz",
+          "Manel Muñoz"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 2495,
+      "name": "Jesús Chinchilla",
+      "rewrite": {
+        "biography": [
+          "Jesús Chinchilla",
+          "Jesús \"Chucho\" Chinchilla"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 2992,
+      "name": "Jonathan Carrillo \"Jona\"",
+      "rewrite": {
+        "biography": [
+          "Jonathan Carrillo \"Jona\"",
+          "Jonathan Carrillo"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 2667,
+      "name": "Gabriel Millán \"Gabo\"",
+      "rewrite": {
+        "biography": [
+          "Gabriel Millán \"Gabo\"",
+          "Gabriel Millán"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 2703,
+      "name": "Kiko",
+      "rewrite": {
+        "biography": [
+          "Kiko",
+          "Kiko (CMYK)"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 2954,
+      "name": "Eulalio \"Churdy\" Toledo",
+      "rewrite": {
+        "biography": [
+          "Eulalio \"Churdy\" Toledo",
+          "Eulalio Toledo"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 3327,
+      "name": "Endel \"El de Choroní\"",
+      "rewrite": {
+        "biography": [
+          "Endel \"El de Choroní\"",
+          "Endel"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 3226,
+      "name": "José \"Pepe\" Vera",
+      "rewrite": {
+        "biography": [
+          "José \"Pepe\" Vera",
+          "José Vera",
+          "Pepe Vera"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 4384,
+      "name": "Ramón Carranza",
+      "rewrite": {
+        "biography": [
+          "Ramón Carranza",
+          "Ramón \"Moncho\" Carranza"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 3674,
+      "name": "Croj",
+      "rewrite": {
+        "biography": [
+          "Croj",
+          "Croj (Chiqui Rojas)"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 2892,
+      "name": "Ezequiel Serrano",
+      "rewrite": {
+        "biography": [
+          "Ezequiel Serrano",
+          "Ezequiel Serrano C."
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 1061,
+      "name": "Gelson Briceño",
+      "rewrite": {
+        "biography": [
+          "Gelson Briceño",
+          "Gelson Briceño L"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 1258,
+      "name": "Gabriel Arbiza",
+      "rewrite": {
+        "biography": [
+          "Gabriel Arbiza",
+          "Gabriel Arbiza Z."
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 5311,
+      "name": "Enrique Rincón C.",
+      "rewrite": {
+        "biography": [
+          "Enrique Rincón C.",
+          "Enrique Rincón"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 5013,
+      "name": "Adolfo Gómez",
+      "rewrite": {
+        "biography": [
+          "Adolfo Gómez",
+          "Adolfo Gómez P."
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 6622,
+      "name": "Gustavo Vilchez",
+      "rewrite": {
+        "biography": [
+          "Gustavo Vilchez",
+          "Gustavo G Vilchez B"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 1648,
+      "name": "César Masroua",
+      "rewrite": {
+        "biography": [
+          "César Masroua",
+          "Cesar R. Masroua",
+          "César Masrroua"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 120,
+      "name": "Alejandro \"Chonto\" Turola",
+      "rewrite": {
+        "biography": [
+          "Alejandro \"Chonto\" Turola",
+          "Alejandro Turola \"Chonto\"",
+          "Chonto Turola"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 133,
+      "name": "Manuel Macías",
+      "rewrite": {
+        "biography": [
+          "Manuel Macías",
+          "Manuel \"Manolo\" Macías"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 3053,
+      "name": "Ricardo Anthés",
+      "rewrite": {
+        "biography": [
+          "Ricardo Anthés",
+          "Ricardo \"Ziggy\" Anthes"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 2826,
+      "name": "José Antonio Bermúdez",
+      "rewrite": {
+        "biography": [
+          "José Antonio Bermúdez",
+          "José Antonio Bermúdez \"El Chino\""
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 367,
+      "name": "Mauricio Arcas",
+      "rewrite": {
+        "biography": [
+          "Mauricio Arcas",
+          "Mauricio Arcas \"Maurimix\""
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 5845,
+      "name": "Andrés Morillo \"André\"",
+      "rewrite": {
+        "biography": [
+          "Andrés Morillo \"André\"",
+          "Andrés Morillo"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 5839,
+      "name": "Jesús Romero \"G-Zaz\"",
+      "rewrite": {
+        "biography": [
+          "Jesús Romero \"G-Zaz\"",
+          "Jesús Romero"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 498,
+      "name": "Andrés Astorga",
+      "rewrite": {
+        "biography": [
+          "Andrés Astorga",
+          "Andrés Astorga \"Trujillo\""
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 549,
+      "name": "Francisco Rendiles",
+      "rewrite": {
+        "biography": [
+          "Francisco Rendiles",
+          "Francisco Rendiles \"FTPinch\""
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 822,
+      "name": "Alfonso Ordoñez",
+      "rewrite": {
+        "biography": [
+          "Alfonso Ordoñez",
+          "Alfonso Ordoñez \"Buzz\""
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 844,
+      "name": "Andrés Acosta \"Patolín\"",
+      "rewrite": {
+        "biography": [
+          "Andrés Acosta \"Patolín\"",
+          "Andrés \"Patolín\" Acosta"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 2169,
+      "name": "Elix Monsanto",
+      "rewrite": {
+        "biography": [
+          "Elix Monsanto",
+          "Elix Monsanto \"Tragavenao\""
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 1008,
+      "name": "Carlos \"Fresa\" Mata",
+      "rewrite": {
+        "biography": [
+          "Carlos \"Fresa\" Mata",
+          "Carlos Mata \"Fresa\""
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 2518,
+      "name": "Manuel Churión",
+      "rewrite": {
+        "biography": [
+          "Manuel Churión",
+          "Manuel Churión \"Churro\""
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 1267,
+      "name": "Raúl Alemán",
+      "rewrite": {
+        "biography": [
+          "Raúl Alemán",
+          "Raul Alemán \"Luar Alem\""
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 1616,
+      "name": "Daniel Calvo",
+      "rewrite": {
+        "biography": [
+          "Daniel Calvo",
+          "Daniel Calvo \"Calvin\""
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 1640,
+      "name": "Pável Tello",
+      "rewrite": {
+        "biography": [
+          "Pável Tello",
+          "Pavel Tello \"El Ruso\""
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 29,
+      "name": "Rubén \"Micho\" Correa",
+      "rewrite": {
+        "biography": [
+          "Rubén \"Micho\" Correa",
+          "Ruben Ángel \"Micho\" Correa",
+          "Rubén Ángel Correa \"Micho\""
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 6843,
+      "name": "Emiro Aguilar",
+      "rewrite": {
+        "biography": [
+          "Emiro Aguilar",
+          "Emiro Aguilar \"Atari\""
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 3293,
+      "name": "Ray Díaz",
+      "rewrite": {
+        "biography": [
+          "Ray Díaz",
+          "Rayniero Díaz \"Ray\"",
+          "Rayniero Díaz"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 2021,
+      "name": "Freddy Cabezas \"Marshall\"",
+      "rewrite": {
+        "biography": [
+          "Freddy Cabezas \"Marshall\"",
+          "Freddy Cabezas"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 2129,
+      "name": "Orlando \"El Joe\" Alvarado",
+      "rewrite": {
+        "biography": [
+          "Orlando \"El Joe\" Alvarado",
+          "Orlando Alvarado \"El Joe\"",
+          "Orlando Alvarado"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 3015,
+      "name": "Marcos Arévalo \"Socram\"",
+      "rewrite": {
+        "biography": [
+          "Marcos Arévalo \"Socram\"",
+          "Marcos Arévalo \"Zokram\""
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 2902,
+      "name": "José Leonardo \"Pepeleo\" Hernández",
+      "rewrite": {
+        "biography": [
+          "José Leonardo \"Pepeleo\" Hernández",
+          "José Leonardo Hernández",
+          "Pepe Leo Hernández"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 3775,
+      "name": "Gian Piero Gigante",
+      "rewrite": {
+        "biography": [
+          "Gian Piero Gigante",
+          "Gian Piero Gigante \"Gian X\"",
+          "Gian Piero Gogante"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 3084,
+      "name": "Jonathan \"Watis\" Gómez",
+      "rewrite": {
+        "biography": [
+          "Jonathan \"Watis\" Gómez",
+          "Jonathan Gómez \"Watis\""
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 6817,
+      "name": "Carlos \"Cuso\" González",
+      "rewrite": {
+        "biography": [
+          "Carlos \"Cuso\" González",
+          "Carlos González \"Cuso\""
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 4626,
+      "name": "Luis Miguel Sanabria \"Vampiro\"",
+      "rewrite": {
+        "biography": [
+          "Luis Miguel Sanabria \"Vampiro\"",
+          "Luis Miguel Sanabria"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 7178,
+      "name": "Alberto Lewis",
+      "rewrite": {
+        "biography": [
+          "Alberto Lewis",
+          "Alberto Lewis \"Al Zeppy\""
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 2367,
+      "name": "Víctor Gámez",
+      "rewrite": {
+        "biography": [
+          "Víctor Gámez",
+          "Víctor Gámez"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 16,
+      "name": "Efraín Rodríguez",
+      "rewrite": {
+        "biography": [
+          "Efraín Rodríguez",
+          "Efraín Rodrígueza"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 19,
+      "name": "Gustavo Carucí",
+      "rewrite": {
+        "biography": [
+          "Gustavo Carucí",
+          "Gustavo Carusi"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 21,
+      "name": "Iván Velásquez",
+      "rewrite": {
+        "biography": [
+          "Iván Velásquez",
+          "Iván Velázquez"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 39,
+      "name": "Pablo Manavello",
+      "rewrite": {
+        "biography": [
+          "Pablo Manavello",
+          "Pablo Manvello"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 40,
+      "name": "Sandro Liberatoscioli",
+      "rewrite": {
+        "biography": [
+          "Sandro Liberatoscioli",
+          "Sandro Liberastocioli"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 93,
+      "name": "Paul McCartney",
+      "rewrite": {
+        "biography": [
+          "Paul McCartney",
+          "Paul McCartnegy",
+          "Paul McCarteny"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 95,
+      "name": "René de Coupand",
+      "rewrite": {
+        "biography": [
+          "René de Coupand",
+          "René de Coupaud"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 124,
+      "name": "Alfredo Doyavorsky \"Frodo\"",
+      "rewrite": {
+        "biography": [
+          "Alfredo Doyavorsky \"Frodo\"",
+          "Alfredo Deyavorsky"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 141,
+      "name": "José I Morales",
+      "rewrite": {
+        "biography": [
+          "José I Morales",
+          "Jose Morales"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 174,
+      "name": "Wincho Schäfer",
+      "rewrite": {
+        "biography": [
+          "Wincho Schäfer",
+          "Erwin \"Wincho\" Schäfer"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 192,
+      "name": "Carlos \"Kike\" Franco",
+      "rewrite": {
+        "biography": [
+          "Carlos \"Kike\" Franco",
+          "Kike Franco"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 322,
+      "name": "Alberto J. Barnola",
+      "rewrite": {
+        "biography": [
+          "Alberto J. Barnola",
+          "Alberto Barnola"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 389,
+      "name": "Willy Noya",
+      "rewrite": {
+        "biography": [
+          "Willy Noya",
+          "Guillermo Noya"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 395,
+      "name": "Luis Otero",
+      "rewrite": {
+        "biography": [
+          "Luis Otero",
+          "Luis Ortero"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 437,
+      "name": "Alejandro \"Chofa\" Loero",
+      "rewrite": {
+        "biography": [
+          "Alejandro \"Chofa\" Loero",
+          "Chofa Loero",
+          "Alfredo \"Chofa\" Loero",
+          "Alfredo Lovero"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 447,
+      "name": "Carlos Schudeck",
+      "rewrite": {
+        "biography": [
+          "Carlos Schudeck",
+          "Carlos Shudeck"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 451,
+      "name": "Tweety González",
+      "rewrite": {
+        "biography": [
+          "Tweety González",
+          "Fabián \"Tweety\" González"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 483,
+      "name": "José Luis \"Caplís\" Chacín",
+      "rewrite": {
+        "biography": [
+          "José Luis \"Caplís\" Chacín",
+          "Caplis Chacín",
+          "Caplís Chachín"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 485,
+      "name": "Francisco \"Kiko\" Nuñez",
+      "rewrite": {
+        "biography": [
+          "Francisco \"Kiko\" Nuñez",
+          "Kiko Núñez"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 486,
+      "name": "José Romero",
+      "rewrite": {
+        "biography": [
+          "José Romero",
+          "Cheo Romero"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 491,
+      "name": "Jaime Verdaguer",
+      "rewrite": {
+        "biography": [
+          "Jaime Verdaguer",
+          "Jaime Verdager"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 515,
+      "name": "Luis Oliver",
+      "rewrite": {
+        "biography": [
+          "Luis Oliver",
+          "Luis Olivier"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 553,
+      "name": "Michael Romanowski",
+      "rewrite": {
+        "biography": [
+          "Michael Romanowski",
+          "Michael Romanowsky"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 556,
+      "name": "Michel Chazet",
+      "rewrite": {
+        "biography": [
+          "Michel Chazet",
+          "Michel Chazett"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 566,
+      "name": "Ángelo Calachin",
+      "rewrite": {
+        "biography": [
+          "Ángelo Calachin",
+          "Angelo Calanchi"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 602,
+      "name": "José Manuel \"Chema\" Arria",
+      "rewrite": {
+        "biography": [
+          "José Manuel \"Chema\" Arria",
+          "José \"Chema\" Arias",
+          "José Manuel Arrias \"Chema\""
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 603,
+      "name": "José \"Joseíto\" Romero",
+      "rewrite": {
+        "biography": [
+          "José \"Joseíto\" Romero",
+          "Joseíto Romero"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 620,
+      "name": "Roberto Menéndez",
+      "rewrite": {
+        "biography": [
+          "Roberto Menéndez",
+          "Roberto Mendendez"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 629,
+      "name": "Richard Aumaitre",
+      "rewrite": {
+        "biography": [
+          "Richard Aumaitre",
+          "Richard Aumeitre"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 646,
+      "name": "Alberto Cabello",
+      "rewrite": {
+        "biography": [
+          "Alberto Cabello",
+          "Alberto Cabelllo"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 656,
+      "name": "Arístides Barbella",
+      "rewrite": {
+        "biography": [
+          "Arístides Barbella",
+          "Arístides Barbela"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 657,
+      "name": "David \"Chapis\" Lasca",
+      "rewrite": {
+        "biography": [
+          "David \"Chapis\" Lasca",
+          "Chapis Lasca"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 661,
+      "name": "Iker Gastaminza",
+      "rewrite": {
+        "biography": [
+          "Iker Gastaminza",
+          "Iker Gastaminsa"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 666,
+      "name": "Mike Couzzi",
+      "rewrite": {
+        "biography": [
+          "Mike Couzzi",
+          "Mike Couzi"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 671,
+      "name": "Bernardo Rísquez",
+      "rewrite": {
+        "biography": [
+          "Bernardo Rísquez",
+          "Bernardo Rízquez"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 674,
+      "name": "Domingo Pagliuca",
+      "rewrite": {
+        "biography": [
+          "Domingo Pagliuca",
+          "Domingo Plagliuca"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 684,
+      "name": "Vanessa Rodríguez",
+      "rewrite": {
+        "biography": [
+          "Vanessa Rodríguez",
+          "Vanessa Rodríguez M."
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 711,
+      "name": "Dave McNair",
+      "rewrite": {
+        "biography": [
+          "Dave McNair",
+          "Dave M'Nair"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 727,
+      "name": "Rodolfo Tarft",
+      "rewrite": {
+        "biography": [
+          "Rodolfo Tarft",
+          "Rodolfo Tarff"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 740,
+      "name": "Pipo Ramírez",
+      "rewrite": {
+        "biography": [
+          "Pipo Ramírez",
+          "Jorge Ramírez \"Pipo\""
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 742,
+      "name": "Armando Hernández",
+      "rewrite": {
+        "biography": [
+          "Armando Hernández",
+          "Armandito Hernández"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 773,
+      "name": "Tony \"Cash\" Maestracci",
+      "rewrite": {
+        "biography": [
+          "Tony \"Cash\" Maestracci",
+          "Tony Maestreacci",
+          "Cash Maestracci"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 775,
+      "name": "Pablo \"Chino\" Agreda",
+      "rewrite": {
+        "biography": [
+          "Pablo \"Chino\" Agreda",
+          "Chino Agreda"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 789,
+      "name": "Luis Pacheco",
+      "rewrite": {
+        "biography": [
+          "Luis Pacheco",
+          "Luis Pacheco \"Chompiras\""
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 793,
+      "name": "Igor Kosenkov",
+      "rewrite": {
+        "biography": [
+          "Igor Kosenkov",
+          "Igor Konsekov",
+          "Igor Kossenkov"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 830,
+      "name": "Rafael López Garnica",
+      "rewrite": {
+        "biography": [
+          "Rafael López Garnica",
+          "Rafael Garnica"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 916,
+      "name": "Carlos Alberto Domínguez",
+      "rewrite": {
+        "biography": [
+          "Carlos Alberto Domínguez",
+          "Carlos Alberto Domínguez P."
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 917,
+      "name": "Carlos Alberto Curto",
+      "rewrite": {
+        "biography": [
+          "Carlos Alberto Curto",
+          "Carlos Alberto Curto S."
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 919,
+      "name": "Ricardo Mastromónaco",
+      "rewrite": {
+        "biography": [
+          "Ricardo Mastromónaco",
+          "Ricardo Mastromonaco R."
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 958,
+      "name": "Gerald \"Chipi\" Chacón",
+      "rewrite": {
+        "biography": [
+          "Gerald \"Chipi\" Chacón",
+          "Gerard \"Chipi\" Chacón"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 977,
+      "name": "Francisco Belisario",
+      "rewrite": {
+        "biography": [
+          "Francisco Belisario",
+          "Frank Belisario"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 980,
+      "name": "Omar Paduay",
+      "rewrite": {
+        "biography": [
+          "Omar Paduay",
+          "Omar Padauy"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 992,
+      "name": "Gabriel \"Pepo\" Lamberti",
+      "rewrite": {
+        "biography": [
+          "Gabriel \"Pepo\" Lamberti",
+          "Pepo Lamberti"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 1020,
+      "name": "Iván Gabaldón",
+      "rewrite": {
+        "biography": [
+          "Iván Gabaldón",
+          "Iván Gavaldón"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 1024,
+      "name": "Pedro Pérez Márquez",
+      "rewrite": {
+        "biography": [
+          "Pedro Pérez Márquez",
+          "Pedro Pérez Márques"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 1029,
+      "name": "Álvaro Benavides",
+      "rewrite": {
+        "biography": [
+          "Álvaro Benavides",
+          "Alvaro Benavidez"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 1068,
+      "name": "Pedro V. Lizardo \"PTT\"",
+      "rewrite": {
+        "biography": [
+          "Pedro V. Lizardo \"PTT\"",
+          "PTT Lizardo",
+          "Pedro \"PTT\" Lizardo"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 1112,
+      "name": "José \"Cheo\" Rodríguez",
+      "rewrite": {
+        "biography": [
+          "José \"Cheo\" Rodríguez",
+          "Maestro \"Cheo\" Rodríguez"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 1113,
+      "name": "Oscar Alcaíno \"Oscarello El Magnifico\"",
+      "rewrite": {
+        "biography": [
+          "Oscar Alcaíno \"Oscarello El Magnifico\"",
+          "Oscar Alcaíno \"Oscarello\""
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 1138,
+      "name": "Carola Landaeta",
+      "rewrite": {
+        "biography": [
+          "Carola Landaeta",
+          "Carola de Landaeta"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 1157,
+      "name": "Xavier Lozada",
+      "rewrite": {
+        "biography": [
+          "Xavier Lozada",
+          "Xavier Losada"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 1167,
+      "name": "Rafael Figliolo",
+      "rewrite": {
+        "biography": [
+          "Rafael Figliolo",
+          "Rafael Figliuolo"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 1176,
+      "name": "Gabriel Figueira",
+      "rewrite": {
+        "biography": [
+          "Gabriel Figueira",
+          "Gabriel Figuera"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 1181,
+      "name": "Roberto Percuoco",
+      "rewrite": {
+        "biography": [
+          "Roberto Percuoco",
+          "Roberto Percuocco"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 1232,
+      "name": "Eugenio Marruffo",
+      "rewrite": {
+        "biography": [
+          "Eugenio Marruffo",
+          "Eugenio Marrufo"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 1262,
+      "name": "Marcelo Toutin",
+      "rewrite": {
+        "biography": [
+          "Marcelo Toutin",
+          "Marcelo Toulin"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 1278,
+      "name": "Leonardo Jaramillo \"Kmarón\"",
+      "rewrite": {
+        "biography": [
+          "Leonardo Jaramillo \"Kmarón\"",
+          "Leonardo \"El Kmaron\" Jaramillo"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 1286,
+      "name": "Alberto Slezynger",
+      "rewrite": {
+        "biography": [
+          "Alberto Slezynger",
+          "Alberto Slesinger",
+          "Alberto Slezyinger"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 1320,
+      "name": "Pimpi Santistevan",
+      "rewrite": {
+        "biography": [
+          "Pimpi Santistevan",
+          "Pimpi Santiestevan",
+          "Pimpi Santiesteban"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 1374,
+      "name": "Rafael Chavarría \"Camarón\"",
+      "rewrite": {
+        "biography": [
+          "Rafael Chavarría \"Camarón\"",
+          "Rafael Chaverría"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 1380,
+      "name": "Andrés Buitrago",
+      "rewrite": {
+        "biography": [
+          "Andrés Buitrago",
+          "Andrés Buitriago"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 1395,
+      "name": "Manolo Da Corte",
+      "rewrite": {
+        "biography": [
+          "Manolo Da Corte",
+          "Manuel Da Corte"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 1428,
+      "name": "Julio Anidez",
+      "rewrite": {
+        "biography": [
+          "Julio Anidez",
+          "Julio Anides"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 1434,
+      "name": "Fito Páez",
+      "rewrite": {
+        "biography": [
+          "Fito Páez",
+          "Rodolfo \"Fito\" Paez"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 1438,
+      "name": "Leonardo Degl'Innocenti",
+      "rewrite": {
+        "biography": [
+          "Leonardo Degl'Innocenti",
+          "Leonardo Degl'innocentl \"Dj Leo\""
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 1439,
+      "name": "Augie \"Oggi\" Verde",
+      "rewrite": {
+        "biography": [
+          "Augie \"Oggi\" Verde",
+          "Oggi Verde"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 1460,
+      "name": "Antonio Casas",
+      "rewrite": {
+        "biography": [
+          "Antonio Casas",
+          "Antonio Casas M.",
+          "Antonio Casas G."
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 1470,
+      "name": "Nelson Rangell",
+      "rewrite": {
+        "biography": [
+          "Nelson Rangell",
+          "Nelson Rengell"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 1556,
+      "name": "Tito Fierro",
+      "rewrite": {
+        "biography": [
+          "Tito Fierro",
+          "Héctor \"Tito\" Ferro"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 1582,
+      "name": "Gianluigi Borrelli",
+      "rewrite": {
+        "biography": [
+          "Gianluigi Borrelli",
+          "Gianluigi Borreli"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 1590,
+      "name": "Carlos Marrero",
+      "rewrite": {
+        "biography": [
+          "Carlos Marrero",
+          "Carlos Marreo",
+          "Carlos Luis Marrero"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 1617,
+      "name": "Alexis Rendón",
+      "rewrite": {
+        "biography": [
+          "Alexis Rendón",
+          "Alexis Rondón"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 1626,
+      "name": "Emmanuel \"Evan\" Fajardo",
+      "rewrite": {
+        "biography": [
+          "Emmanuel \"Evan\" Fajardo",
+          "Emmanuel Fajardo"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 1631,
+      "name": "Víctor Morles",
+      "rewrite": {
+        "biography": [
+          "Víctor Morles",
+          "Víctor Mortes"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 1691,
+      "name": "Gilberto Rebolledo",
+      "rewrite": {
+        "biography": [
+          "Gilberto Rebolledo",
+          "Gilberto Reboiledo"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 1864,
+      "name": "Keith Karabel",
+      "rewrite": {
+        "biography": [
+          "Keith Karabel",
+          "Keith Karabell"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 1891,
+      "name": "Clive Chaman",
+      "rewrite": {
+        "biography": [
+          "Clive Chaman",
+          "Clive Chapman"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 8584,
+      "name": "Pete Thomas",
+      "rewrite": {
+        "biography": [
+          "Pete Thomas",
+          "Pete Thomns",
+          "Pete Thoms"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 1909,
+      "name": "Ricardo Vizcarrondo",
+      "rewrite": {
+        "biography": [
+          "Ricardo Vizcarrondo",
+          "Ricardo Vizcarrrondo"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 1912,
+      "name": "Jeremias \"Jeremy\" Ruiz",
+      "rewrite": {
+        "biography": [
+          "Jeremias \"Jeremy\" Ruiz",
+          "Jeremy Ruiz"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 1949,
+      "name": "Alex Lencinas",
+      "rewrite": {
+        "biography": [
+          "Alex Lencinas",
+          "Alex Lencina"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 1950,
+      "name": "Ulises Bultrón",
+      "rewrite": {
+        "biography": [
+          "Ulises Bultrón",
+          "Ulises Butrón"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 2032,
+      "name": "Manolo Alvarez",
+      "rewrite": {
+        "biography": [
+          "Manolo Alvarez",
+          "Manolo Alvrez"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 2034,
+      "name": "Claudio Cremisini",
+      "rewrite": {
+        "biography": [
+          "Claudio Cremisini",
+          "Claudio Cremiccini"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 2043,
+      "name": "Oscar Fanega",
+      "rewrite": {
+        "biography": [
+          "Oscar Fanega",
+          "Oscar Fanegas"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 2151,
+      "name": "Aldo Lamanna \"DJ Lamaña\"",
+      "rewrite": {
+        "biography": [
+          "Aldo Lamanna \"DJ Lamaña\"",
+          "Aldo Lamana"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 2173,
+      "name": "José Miguel De Robertis",
+      "rewrite": {
+        "biography": [
+          "José Miguel De Robertis",
+          "José Miguel de Roberts"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 2192,
+      "name": "Daniel Arreaza \"Rino\"",
+      "rewrite": {
+        "biography": [
+          "Daniel Arreaza \"Rino\"",
+          "Daniel Arreaza"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 2231,
+      "name": "Goya Sumoza",
+      "rewrite": {
+        "biography": [
+          "Goya Sumoza",
+          "Goya Somoza"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 6241,
+      "name": "Mario Alfonso",
+      "rewrite": {
+        "biography": [
+          "Mario Alfonso",
+          "Mario Alonso",
+          "Mario Alfonzo",
+          "Mario Alfonso B"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 2283,
+      "name": "Ted Jensen",
+      "rewrite": {
+        "biography": [
+          "Ted Jensen",
+          "Ted Jesen"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 2302,
+      "name": "Gabriel Stacio",
+      "rewrite": {
+        "biography": [
+          "Gabriel Stacio",
+          "Gabriel Stasio"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 2307,
+      "name": "Edgar Espinoza",
+      "rewrite": {
+        "biography": [
+          "Edgar Espinoza",
+          "Edgar Espinosa"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 2352,
+      "name": "Giovanni Tradardi",
+      "rewrite": {
+        "biography": [
+          "Giovanni Tradardi",
+          "Giovanni Tratardi"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 2449,
+      "name": "David Alfaro",
+      "rewrite": {
+        "biography": [
+          "David Alfaro",
+          "David Alfarro"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 2487,
+      "name": "Winston Mandelblúm \"Winsman\"",
+      "rewrite": {
+        "biography": [
+          "Winston Mandelblúm \"Winsman\"",
+          "Winston Mandelbum"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 2493,
+      "name": "Vytas Brenner",
+      "rewrite": {
+        "biography": [
+          "Vytas Brenner",
+          "Vytas Brener"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 2507,
+      "name": "Carlos Acosta",
+      "rewrite": {
+        "biography": [
+          "Carlos Acosta",
+          "Carlos M. Acosta"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 2619,
+      "name": "Glenn Patscha",
+      "rewrite": {
+        "biography": [
+          "Glenn Patscha",
+          "Glenn Patscha"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 2623,
+      "name": "Ana Patricia Mondello",
+      "rewrite": {
+        "biography": [
+          "Ana Patricia Mondello",
+          "Ana Patricia Modello"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 2643,
+      "name": "Tom Hutten",
+      "rewrite": {
+        "biography": [
+          "Tom Hutten",
+          "Tom Huttlen"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 2704,
+      "name": "Miguel Gonzáles \"El Enano\"",
+      "rewrite": {
+        "biography": [
+          "Miguel Gonzáles \"El Enano\"",
+          "Miguel González \"El Enano\""
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 2708,
+      "name": "Vinicio Ludovic",
+      "rewrite": {
+        "biography": [
+          "Vinicio Ludovic",
+          "Vinicio Ludovik"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 2772,
+      "name": "Glen Tomasi",
+      "rewrite": {
+        "biography": [
+          "Glen Tomasi",
+          "Glen Tomassi"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 2855,
+      "name": "Carlos \"Turbo\" Guerreiro",
+      "rewrite": {
+        "biography": [
+          "Carlos \"Turbo\" Guerreiro",
+          "Carlos \"Turbo\" Gerreiro",
+          "Carlos Guerrero"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 3032,
+      "name": "Carlos \"Tato\" Rodríguez",
+      "rewrite": {
+        "biography": [
+          "Carlos \"Tato\" Rodríguez",
+          "Tato Rodríguez"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 3069,
+      "name": "Julio \"Mal Tripear Jamás\" Alonso",
+      "rewrite": {
+        "biography": [
+          "Julio \"Mal Tripear Jamás\" Alonso",
+          "Julio Alonzo",
+          "Julio Alfonso"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 3078,
+      "name": "Juan Pablo Aroutine",
+      "rewrite": {
+        "biography": [
+          "Juan Pablo Aroutine",
+          "Juan Pablo Aurotine"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 3225,
+      "name": "Humberto E. Lizardo F. \"Ike\"",
+      "rewrite": {
+        "biography": [
+          "Humberto E. Lizardo F. \"Ike\"",
+          "Humberto E. Lizardo \"Ike\""
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 3256,
+      "name": "Miguel Blanco",
+      "rewrite": {
+        "biography": [
+          "Miguel Blanco",
+          "Miguel A. Blanco"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 3259,
+      "name": "Rafael Greco",
+      "rewrite": {
+        "biography": [
+          "Rafael Greco",
+          "Rafael Grego T.",
+          "Rafael Grego"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 3266,
+      "name": "Eddy Pérez",
+      "rewrite": {
+        "biography": [
+          "Eddy Pérez",
+          "Eduardo \"Eddy\" Pérez"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 3299,
+      "name": "Paúl Jatem",
+      "rewrite": {
+        "biography": [
+          "Paúl Jatem",
+          "Paul Jaten",
+          "Paul Jatern"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 3369,
+      "name": "Francisco Villanueva",
+      "rewrite": {
+        "biography": [
+          "Francisco Villanueva",
+          "Francisco Kiko Villanueva"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 3405,
+      "name": "Edgar Jiménez",
+      "rewrite": {
+        "biography": [
+          "Edgar Jiménez",
+          "Edgar Jiménez P"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 3422,
+      "name": "Rigel Michelena",
+      "rewrite": {
+        "biography": [
+          "Rigel Michelena",
+          "Rigel Mitxelena"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 3491,
+      "name": "Omar Olivero",
+      "rewrite": {
+        "biography": [
+          "Omar Olivero",
+          "Omar Oliveros"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 3493,
+      "name": "Nana Cadavieco",
+      "rewrite": {
+        "biography": [
+          "Nana Cadavieco",
+          "Mariana \"Nana\" Cadavieco"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 3529,
+      "name": "Federico Pacanins",
+      "rewrite": {
+        "biography": [
+          "Federico Pacanins",
+          "Federico Pacanis"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 3617,
+      "name": "Carlos Quintero",
+      "rewrite": {
+        "biography": [
+          "Carlos Quintero",
+          "Nene Quintero",
+          "Iván Marcano Carlos \"Nené\" Quintero",
+          "Carlos \"Nene\" Quintero Jesús \"Chuo\" Quintero"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 3668,
+      "name": "Alcides Monroy",
+      "rewrite": {
+        "biography": [
+          "Alcides Monroy",
+          "Alcides Monrroy"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 4026,
+      "name": "Edgar Alexander",
+      "rewrite": {
+        "biography": [
+          "Edgar Alexander",
+          "Edgar Quinteor"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 4042,
+      "name": "Alberto Barnet",
+      "rewrite": {
+        "biography": [
+          "Alberto Barnet",
+          "Alberto Barnett"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 4214,
+      "name": "Carlos Márques",
+      "rewrite": {
+        "biography": [
+          "Carlos Márques",
+          "Carlos Márquez"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 4228,
+      "name": "Danny Harrell",
+      "rewrite": {
+        "biography": [
+          "Danny Harrell",
+          "Danny Harrel"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 4232,
+      "name": "Bob Ohlsson",
+      "rewrite": {
+        "biography": [
+          "Bob Ohlsson",
+          "Bob Olhsson"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 4255,
+      "name": "Fran Beaufrand",
+      "rewrite": {
+        "biography": [
+          "Fran Beaufrand",
+          "Fran Beufrand"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 4387,
+      "name": "Jesús A. Maduro",
+      "rewrite": {
+        "biography": [
+          "Jesús A. Maduro",
+          "Jesús Maduro",
+          "Jesus Maduro R"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 4652,
+      "name": "Ale Ramírez",
+      "rewrite": {
+        "biography": [
+          "Ale Ramírez",
+          "Alejandro Ramírez"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 4731,
+      "name": "Matatigre (Clara Bolívar)",
+      "rewrite": {
+        "biography": [
+          "Matatigre (Clara Bolívar)",
+          "Matatigre"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 4771,
+      "name": "Ramón Méndez",
+      "rewrite": {
+        "biography": [
+          "Ramón Méndez",
+          "Ramón I. Méndez A"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 4954,
+      "name": "Marcos Mejía",
+      "rewrite": {
+        "biography": [
+          "Marcos Mejía",
+          "Markos Mejías"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 5771,
+      "name": "Franklin Holland",
+      "rewrite": {
+        "biography": [
+          "Franklin Holland",
+          "Franklin Hollan"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 5874,
+      "name": "Giussepe \"Pino\" Lagona",
+      "rewrite": {
+        "biography": [
+          "Giussepe \"Pino\" Lagona",
+          "Pino Lagona"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 5997,
+      "name": "Lucio Caminiti",
+      "rewrite": {
+        "biography": [
+          "Lucio Caminiti",
+          "Lucio Caminitti"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 1800,
+      "name": "Carlos Monserrate",
+      "rewrite": {
+        "biography": [
+          "Carlos Monserrate",
+          "Carlos Moserratte",
+          "Carlos Monserratte"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 6027,
+      "name": "Eduardo Guerrero",
+      "rewrite": {
+        "biography": [
+          "Eduardo Guerrero",
+          "Eduardo Guerrero \"EdWar\""
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 6293,
+      "name": "Rafael Pirela",
+      "rewrite": {
+        "biography": [
+          "Rafael Pirela",
+          "Rafael Pirela S."
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 6519,
+      "name": "Carlos Loggiodice",
+      "rewrite": {
+        "biography": [
+          "Carlos Loggiodice",
+          "Carlos Loggiodicce"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 6571,
+      "name": "Karina Febles Córdoba",
+      "rewrite": {
+        "biography": [
+          "Karina Febles Córdoba",
+          "Karina Flebes Córdova"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 6614,
+      "name": "Héctor Do Nascimento",
+      "rewrite": {
+        "biography": [
+          "Héctor Do Nascimento",
+          "Hector Do Nascimiento"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 6615,
+      "name": "Jaime Beltrán",
+      "rewrite": {
+        "biography": [
+          "Jaime Beltrán",
+          "Jaime Bertrán"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 6619,
+      "name": "Carlos Vilchez",
+      "rewrite": {
+        "biography": [
+          "Carlos Vilchez",
+          "Carlos Julio Vilchez"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 6728,
+      "name": "Sokrates Papadopoulos",
+      "rewrite": {
+        "biography": [
+          "Sokrates Papadopoulos",
+          "Sokrates Papadopolus"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 6816,
+      "name": "Gabriel Casal",
+      "rewrite": {
+        "biography": [
+          "Gabriel Casal",
+          "Gabriel Casali"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 7073,
+      "name": "Roland Streuli",
+      "rewrite": {
+        "biography": [
+          "Roland Streuli",
+          "Roland Streulli"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 7115,
+      "name": "Eduardo Stambury",
+      "rewrite": {
+        "biography": [
+          "Eduardo Stambury",
+          "Eduardo Stanbury"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 7121,
+      "name": "Marisela Lagrave",
+      "rewrite": {
+        "biography": [
+          "Marisela Lagrave",
+          "Marisela Lagrav"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 7321,
+      "name": "Kiko Ricote",
+      "rewrite": {
+        "biography": [
+          "Kiko Ricote",
+          "Kiko Rikote"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 7437,
+      "name": "José Luis Morenza",
+      "rewrite": {
+        "biography": [
+          "José Luis Morenza",
+          "José Luis Moranza"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 7640,
+      "name": "Stephen Perry",
+      "rewrite": {
+        "biography": [
+          "Stephen Perry",
+          "Stephen R. Perry"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 7779,
+      "name": "Luis María \"Billo\" Frómeta",
+      "rewrite": {
+        "biography": [
+          "Luis María \"Billo\" Frómeta",
+          "Billo Frómeta"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 7814,
+      "name": "Abdenago \"Neguito\" Borjas",
+      "rewrite": {
+        "biography": [
+          "Abdenago \"Neguito\" Borjas",
+          "Neguito Borjas"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 7828,
+      "name": "Lila Morillo",
+      "rewrite": {
+        "biography": [
+          "Lila Morillo",
+          "Lila Morilo"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 7934,
+      "name": "Gabi Valladares",
+      "rewrite": {
+        "biography": [
+          "Gabi Valladares",
+          "Gabi Valladares O"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 8273,
+      "name": "Burt Bacharach",
+      "rewrite": {
+        "biography": [
+          "Burt Bacharach",
+          "Burt Bacharad"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 8276,
+      "name": "Luis Wiener",
+      "rewrite": {
+        "biography": [
+          "Luis Wiener",
+          "Luis Weiner"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 8282,
+      "name": "Giulio Remersaro",
+      "rewrite": {
+        "biography": [
+          "Giulio Remersaro",
+          "Giulio Remersario"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 8286,
+      "name": "Manolo Freire",
+      "rewrite": {
+        "biography": [
+          "Manolo Freire",
+          "Manolo Freires",
+          "Manuel Freire",
+          "Manuel Freyre"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 8288,
+      "name": "Luciano Stecconi",
+      "rewrite": {
+        "biography": [
+          "Luciano Stecconi",
+          "Luciano Steconi"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 8300,
+      "name": "Enzo Casella",
+      "rewrite": {
+        "biography": [
+          "Enzo Casella",
+          "Enzo Cassella"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 9444,
+      "name": "Luis Gómez Escolar",
+      "rewrite": {
+        "biography": [
+          "Luis Gómez Escolar",
+          "Luis Gómez Escobar"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 9671,
+      "name": "Gloria Martín",
+      "rewrite": {
+        "biography": [
+          "Gloria Martín",
+          "Gloria Marín"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 9924,
+      "name": "Carlos Enrique Jugo",
+      "rewrite": {
+        "biography": [
+          "Carlos Enrique Jugo",
+          "Carlos Jugo"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 10051,
+      "name": "Johnny Quiros",
+      "rewrite": {
+        "biography": [
+          "Johnny Quiros",
+          "Juan Camacho"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 10109,
+      "name": "Juan Carlos Calderón",
+      "rewrite": {
+        "biography": [
+          "Juan Carlos Calderón",
+          "Juan Carlos Claderón"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 11469,
+      "name": "Graham Gouldman",
+      "rewrite": {
+        "biography": [
+          "Graham Gouldman",
+          "Graham Goildman"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 12048,
+      "name": "Hervé Vilard",
+      "rewrite": {
+        "biography": [
+          "Hervé Vilard",
+          "Herve Vilard"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 12102,
+      "name": "The Platters",
+      "rewrite": {
+        "biography": [
+          "The Platters",
+          "The Platers"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 12133,
+      "name": "María de Lourdes Devonish",
+      "rewrite": {
+        "biography": [
+          "María de Lourdes Devonish",
+          "María Lourdes Devonish"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 12142,
+      "name": "Edgar Winter",
+      "rewrite": {
+        "biography": [
+          "Edgar Winter",
+          "Edgar Winters"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 12546,
+      "name": "Franco Cerruti Ardila",
+      "rewrite": {
+        "biography": [
+          "Franco Cerruti Ardila",
+          "Franco Cerruti Ardilla"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 12566,
+      "name": "Paul Rengel",
+      "rewrite": {
+        "biography": [
+          "Paul Rengel",
+          "Paul Rangel"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 12732,
+      "name": "Larry Acosta",
+      "rewrite": {
+        "biography": [
+          "Larry Acosta",
+          "Larry Alberto Acosta M"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 12896,
+      "name": "María Consuelo Faria",
+      "rewrite": {
+        "biography": [
+          "María Consuelo Faria",
+          "María Consuelo Fario \"La GoGo\""
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 12969,
+      "name": "Juan Carlo Fernández \"Wancalo\"",
+      "rewrite": {
+        "biography": [
+          "Juan Carlo Fernández \"Wancalo\"",
+          "Juan Carlo Fernández"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 13066,
+      "name": "Augusto Perdomo",
+      "rewrite": {
+        "biography": [
+          "Augusto Perdomo",
+          "Augusto Perdono"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 13133,
+      "name": "Yoredvi Useche",
+      "rewrite": {
+        "biography": [
+          "Yoredvi Useche",
+          "Yoredvi Usecha"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 13325,
+      "name": "Gonzalo \"Chile\" Veloz",
+      "rewrite": {
+        "biography": [
+          "Gonzalo \"Chile\" Veloz",
+          "Chile Veloz"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 3795,
+      "name": "The Witch",
+      "rewrite": {
+        "description": [
+          "The Witch",
+          "(María Conchita Alonso)"
+        ]
+      },
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «(María Conchita Alonso)» (#4636, 2026-10-01) quedó fuera — Portada: «/crv/media/album/4636.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 1688,
+      "name": "58/56 Split",
+      "rewrite": {
+        "description": [
+          "58/56 Split",
+          "58/56 (Split with Un Día)"
+        ]
+      },
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «& Un Día» (#4687, 2026-10-01) quedó fuera — Portada: «/crv/media/album/4687.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 149,
+      "name": "MF* Radio",
+      "rewrite": {
+        "description": [
+          "MF* Radio",
+          "MF* Radio"
+        ]
+      },
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «MF* Radio» (#3908, 2026-10-01) quedó fuera — Portada: «/crv/media/album/3908.jpg»."
+      ]
+    },
+    {
+      "kind": "person",
+      "id": 38,
+      "name": "Pedro Castillo",
+      "rewrite": {
+        "biography": [
+          "Pedro Castillo",
+          "Sandrus",
+          "Alexium"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 511,
+      "name": "Tercera Guerra Musical",
+      "rewrite": {
+        "description": [
+          "Tercera Guerra Musical",
+          "Tercera Guerra Musical"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 4530,
+      "name": "Nowhere NowHere",
+      "rewrite": {
+        "description": [
+          "Nowhere NowHere",
+          "Nowhere NowHere"
+        ]
+      },
+      "join": [
+        "notes"
+      ],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 367,
+      "name": "The Agony And The Ecstasy",
+      "rewrite": {
+        "description": [
+          "The Agony And The Ecstasy",
+          "The Agony and The Ecstasy"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 4189,
+      "name": "Esto Fue Un Placer",
+      "rewrite": {
+        "description": [
+          "Esto Fue Un Placer",
+          "Esto Fue Un Placer"
+        ]
+      },
+      "join": [
+        "notes"
+      ],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 1040,
+      "name": "Moving Futures",
+      "rewrite": {
+        "description": [
+          "Moving Futures",
+          "Moving Futures"
+        ]
+      },
+      "join": [
+        "notes"
+      ],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 1268,
+      "name": "Selective Memory",
+      "rewrite": {
+        "description": [
+          "Selective Memory",
+          "Selective Memory"
+        ]
+      },
+      "join": [
+        "notes"
+      ],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 2100,
+      "name": "En el Aire",
+      "rewrite": {
+        "description": [
+          "En el Aire",
+          "En El Aire"
+        ]
+      },
+      "join": [
+        "notes"
+      ],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 2103,
+      "name": "Pp´s",
+      "rewrite": {
+        "description": [
+          "Pp´s",
+          "PPS"
+        ]
+      },
+      "join": [
+        "notes"
+      ],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 4532,
+      "name": "Atabal Yémal (Super Deluxe Vinyl Edition)",
+      "rewrite": {
+        "description": [
+          "Atabal Yémal (Super Deluxe Vinyl Edition)",
+          "Atabal Yémal (Super Deluxe Vinyl Edition)"
+        ]
+      },
+      "join": [
+        "notes"
+      ],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 3016,
+      "name": "AM-Vision",
+      "rewrite": {
+        "description": [
+          "AM-Vision",
+          "AM-Vision"
+        ]
+      },
+      "join": [
+        "notes"
+      ],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 3010,
+      "name": "Diez",
+      "rewrite": {
+        "description": [
+          "Diez",
+          "Diez"
+        ]
+      },
+      "join": [
+        "notes"
+      ],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 3011,
+      "name": "Otro Mundo",
+      "rewrite": {
+        "description": [
+          "Otro Mundo",
+          "Otro Mundo"
+        ]
+      },
+      "join": [
+        "notes"
+      ],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 3017,
+      "name": "Posición Adelantada",
+      "rewrite": {
+        "description": [
+          "Posición Adelantada",
+          "Posición Adelantada"
+        ]
+      },
+      "join": [
+        "notes"
+      ],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 3018,
+      "name": "Fuera de la Ley",
+      "rewrite": {
+        "description": [
+          "Fuera de la Ley",
+          "Fuera de La Ley"
+        ]
+      },
+      "join": [
+        "notes"
+      ],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 3586,
+      "name": "En Vivo Desde Brasil",
+      "rewrite": {
+        "description": [
+          "En Vivo Desde Brasil",
+          "En Vivo Desde Brasil"
+        ]
+      },
+      "join": [
+        "notes"
+      ],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 3637,
+      "name": "Lo Mejor y Lo Peor...",
+      "rewrite": {
+        "description": [
+          "Lo Mejor y Lo Peor...",
+          "Lo Mejor y Lo Peor..."
+        ]
+      },
+      "join": [
+        "notes"
+      ],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 3638,
+      "name": "Lo Mejor de Aditus",
+      "rewrite": {
+        "description": [
+          "Lo Mejor de Aditus",
+          "Lo Mejor de Aditus"
+        ]
+      },
+      "join": [
+        "notes"
+      ],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 4023,
+      "name": "Sin Verguenza",
+      "rewrite": {
+        "description": [
+          "Sin Verguenza",
+          "Sin Verguenza"
+        ]
+      },
+      "join": [
+        "notes"
+      ],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 4187,
+      "name": "Ahora o Nunca",
+      "rewrite": {
+        "description": [
+          "Ahora o Nunca",
+          "Ahora o Nunca"
+        ]
+      },
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «Ahora o Nunca» (#3731, 2026-10-01) quedó fuera — Portada: «/crv/media/album/3731.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 4527,
+      "name": "Atabal Yémal (CD Reissue)",
+      "rewrite": {
+        "description": [
+          "Atabal Yémal (CD Reissue)",
+          "Atabal Yémal (CD Reissue)"
+        ]
+      },
+      "join": [
+        "notes"
+      ],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 4528,
+      "name": "El Fin de La Infancia",
+      "rewrite": {
+        "description": [
+          "El Fin de La Infancia",
+          "El Fin de La Infancia"
+        ]
+      },
+      "join": [
+        "notes"
+      ],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 607,
+      "name": "En Vivo 2013",
+      "rewrite": {
+        "description": [
+          "En Vivo 2013",
+          "En Vivo 2013"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 410,
+      "name": "Amor, Furia y Languidez",
+      "rewrite": {
+        "description": [
+          "Amor, Furia y Languidez",
+          "Amor, Furia y Languidez"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 325,
+      "name": "Fin Del Cuento 1981-1993",
+      "rewrite": {
+        "description": [
+          "Fin Del Cuento 1981-1993",
+          "Fin Del Cuento 1981-1993"
+        ]
+      },
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «Fin Del Cuento» (#2277, 2026-10-01) quedó fuera — Portada: «https://i0.wp.com/coleccionistasderockvenezolano.wordpress.com/wp-content/uploads/2015/09/portada-fin-del-cuento-sentimiento-muerto.jpg?w=492&h=489&ssl=1»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 304,
+      "name": "Pixel",
+      "rewrite": {
+        "description": [
+          "Pixel",
+          "Pixel"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 412,
+      "name": "Cápsula Para Volar",
+      "rewrite": {
+        "description": [
+          "Cápsula Para Volar",
+          "Cápsula Para Volar"
+        ]
+      },
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «Capsula Para Volar \"Segunda Edición\"» (#2284, 2026-10-01) quedó fuera — Portada: «https://i0.wp.com/coleccionistasderockvenezolano.wordpress.com/wp-content/uploads/2015/09/fotor_144150501304677.jpg?w=551&h=552&ssl=1».",
+        "Al fusionar «Libro Gira \"Capsula Para Volar\"» (#2285, 2026-10-01) quedó fuera — Portada: «https://i0.wp.com/coleccionistasderockvenezolano.wordpress.com/wp-content/uploads/2015/09/fotor_144150710546058.jpg?w=251&h=247&ssl=1»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 114,
+      "name": "Almendra",
+      "rewrite": {
+        "description": [
+          "Almendra",
+          "Almendra"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 4018,
+      "name": "Cualquier Bolumen",
+      "rewrite": {
+        "description": [
+          "Cualquier Bolumen",
+          "Cualquier Bolumen"
+        ]
+      },
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «Cualquier Bolumen» (#3879, 2026-10-01) quedó fuera — Tipo: «studio_album»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 200,
+      "name": "Icaro",
+      "rewrite": {
+        "description": [
+          "Icaro",
+          "Icaro"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 303,
+      "name": "Invítame",
+      "rewrite": {
+        "description": [
+          "Invítame",
+          "Invítame"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 335,
+      "name": "Loft",
+      "rewrite": {
+        "description": [
+          "Loft",
+          "Loft"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 334,
+      "name": "Cruel (Instinto De Morder)",
+      "rewrite": {
+        "description": [
+          "Cruel (Instinto De Morder)",
+          "Cruel - Instinto De Morder"
+        ]
+      },
+      "join": [
+        "notes"
+      ],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 413,
+      "name": "Ecos Punzantes Del Ayer",
+      "rewrite": {
+        "description": [
+          "Ecos Punzantes Del Ayer",
+          "Ecos Punzantes Del Ayer"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 411,
+      "name": "Bésame y Suicídate",
+      "rewrite": {
+        "description": [
+          "Bésame y Suicídate",
+          "Bésame y Suicídate"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 415,
+      "name": "Separación",
+      "rewrite": {
+        "description": [
+          "Separación",
+          "Separación"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 4161,
+      "name": "Fuego Eterno",
+      "rewrite": {
+        "description": [
+          "Fuego Eterno",
+          "Fuego Eterno"
+        ]
+      },
+      "join": [
+        "notes"
+      ],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 3990,
+      "name": "Eddy & Delia",
+      "rewrite": {
+        "description": [
+          "Eddy & Delia",
+          "Eddy & Delia"
+        ]
+      },
+      "join": [
+        "notes"
+      ],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 414,
+      "name": "La Última Cruzada",
+      "rewrite": {
+        "description": [
+          "La Última Cruzada",
+          "La Ultima Cruzada"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 5070,
+      "name": "I Don't Know Why / Viendo la lluvia caer",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 4159,
+      "name": "Fogata IV",
+      "rewrite": {
+        "description": [
+          "Fogata IV",
+          "Fogata IV"
+        ]
+      },
+      "join": [
+        "notes"
+      ],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 4268,
+      "name": "The Impala and Their Music (In English)",
+      "rewrite": {
+        "description": [
+          "The Impala and Their Music (In English)",
+          "The Impala and Their Music (In English)",
+          "The Impala and Their Music (In English)"
+        ]
+      },
+      "join": [
+        "notes"
+      ],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 4270,
+      "name": "Los Impala y Su Música (In Spanish)",
+      "rewrite": {
+        "description": [
+          "Los Impala y Su Música (In Spanish)",
+          "Los Impala y Su Música (In Spanish)",
+          "Los Impala y Su Música (In Spanish)"
+        ]
+      },
+      "join": [
+        "notes"
+      ],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 2523,
+      "name": "Nuevamente Los Impala",
+      "rewrite": {
+        "description": [
+          "Nuevamente Los Impala",
+          "Nuevamente Los Impala",
+          "Nuevamente Los Impala"
+        ]
+      },
+      "join": [
+        "notes"
+      ],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 606,
+      "name": "Cuanto Cuesta",
+      "rewrite": {
+        "description": [
+          "Cuanto Cuesta",
+          "Cuanto Cuesta"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 608,
+      "name": "Lo Último Que Se Pierde",
+      "rewrite": {
+        "description": [
+          "Lo Último Que Se Pierde",
+          "Lo Ultimo Que Se Pierde"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 2863,
+      "name": "Cuando yo era Pavo",
+      "rewrite": {
+        "description": [
+          "Cuando yo era Pavo",
+          "Cuando Yo Era Pavo"
+        ]
+      },
+      "join": [
+        "notes"
+      ],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 4641,
+      "name": "First Journey",
+      "rewrite": {
+        "description": [
+          "First Journey",
+          "First Journey"
+        ]
+      },
+      "join": [
+        "notes"
+      ],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 4129,
+      "name": "A Sangre y Fuego",
+      "rewrite": {
+        "description": [
+          "A Sangre y Fuego",
+          "A Sangre y Fuego"
+        ]
+      },
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «A Sangre y Fuego» (#3607, 2026-10-01) quedó fuera — Portada: «/crv/media/album/3607.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 4145,
+      "name": "Gina y Agny",
+      "rewrite": {
+        "description": [
+          "Gina y Agny",
+          "Gina y Agny"
+        ]
+      },
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «Gina y Agny» (#3608, 2026-10-01) quedó fuera — Portada: «/crv/media/album/3608.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 4482,
+      "name": "En Vivo NYC 1990",
+      "rewrite": {
+        "description": [
+          "En Vivo NYC 1990",
+          "En Vivo NYC 1990"
+        ]
+      },
+      "join": [
+        "notes"
+      ],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 4015,
+      "name": "Bolumen 4 / Al Día Siguiente",
+      "rewrite": {
+        "description": [
+          "Bolumen 4 / Al Día Siguiente",
+          "Bolumen 4 / Al Día Siguiente"
+        ]
+      },
+      "join": [
+        "notes"
+      ],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 4162,
+      "name": "Serenata",
+      "rewrite": {
+        "description": [
+          "Serenata",
+          "Serenata"
+        ]
+      },
+      "join": [
+        "notes"
+      ],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 4164,
+      "name": "No Somos Una Banda Más",
+      "rewrite": {
+        "description": [
+          "No Somos Una Banda Más",
+          "No Somos Una Banda Más"
+        ]
+      },
+      "join": [
+        "notes"
+      ],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 325,
+      "name": "Jorge Chapelín",
+      "rewrite": {
+        "biography": [
+          "Jorge Chapelín",
+          "Jorge Chapellín"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 496,
+      "name": "Javier Weyler",
+      "rewrite": {
+        "biography": [
+          "Javier Weyler",
+          "Javier Weiler"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 689,
+      "name": "Claudio Leoni",
+      "rewrite": {
+        "biography": [
+          "Claudio Leoni",
+          "Claudio Leone"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 1185,
+      "name": "Jesús \"Junior\" Morales",
+      "rewrite": {
+        "biography": [
+          "Jesús \"Junior\" Morales",
+          "Jesús Morales"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 3006,
+      "name": "Carlos Figuera",
+      "rewrite": {
+        "biography": [
+          "Carlos Figuera",
+          "Carlos Figueroa"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 3010,
+      "name": "Ernesto Figuera",
+      "rewrite": {
+        "biography": [
+          "Ernesto Figuera",
+          "Ernesto Figueroa"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 1840,
+      "name": "Pablo Fernández",
+      "rewrite": {
+        "biography": [
+          "Pablo Fernández",
+          "Pablo Fernandes"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 5128,
+      "name": "Yein González",
+      "rewrite": {
+        "biography": [
+          "Yein González",
+          "Yein Gonzáles"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 2044,
+      "name": "José Martínez",
+      "rewrite": {
+        "biography": [
+          "José Martínez",
+          "José \"Pepe\" Martínez"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 2527,
+      "name": "Christian \"Funky C\" Moraga",
+      "rewrite": {
+        "biography": [
+          "Christian \"Funky C\" Moraga",
+          "Christián Monaga"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 2740,
+      "name": "Jordi de la Vega",
+      "rewrite": {
+        "biography": [
+          "Jordi de la Vega",
+          "Jorge \"Jordi\" De La Vega"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 6864,
+      "name": "Joel \"Pibo\" Márquez",
+      "rewrite": {
+        "biography": [
+          "Joel \"Pibo\" Márquez",
+          "Joel Marquez"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 2868,
+      "name": "Armando Vitía",
+      "rewrite": {
+        "biography": [
+          "Armando Vitía",
+          "Armando Veitia"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 8636,
+      "name": "Jesús \"Lalo\" Noriega",
+      "rewrite": {
+        "biography": [
+          "Jesús \"Lalo\" Noriega",
+          "Lalo Noriega"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 5833,
+      "name": "Humberto \"Tito\" Iglesias",
+      "rewrite": {
+        "biography": [
+          "Humberto \"Tito\" Iglesias",
+          "Tito Iglesias"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 3198,
+      "name": "Victor González",
+      "rewrite": {
+        "biography": [
+          "Victor González",
+          "Victor González \"Kasino\""
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 8610,
+      "name": "Robert Vilela",
+      "rewrite": {
+        "biography": [
+          "Robert Vilela",
+          "Robert Vilera"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 3711,
+      "name": "Tony Mardini",
+      "rewrite": {
+        "biography": [
+          "Tony Mardini",
+          "Tony Martini"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 3798,
+      "name": "Luis Sisino",
+      "rewrite": {
+        "biography": [
+          "Luis Sisino",
+          "Luis Sisinno"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 5309,
+      "name": "Ricardo Prati",
+      "rewrite": {
+        "biography": [
+          "Ricardo Prati",
+          "Ricardo \"Pot\" Prati"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 5741,
+      "name": "Arnoldo Sergas",
+      "rewrite": {
+        "biography": [
+          "Arnoldo Sergas",
+          "Arnoldo Serga"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 7587,
+      "name": "Sergio Pizzolante",
+      "rewrite": {
+        "biography": [
+          "Sergio Pizzolante",
+          "Sergio Pizolante"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 8842,
+      "name": "Rafael \"Gallo\" Velásquez",
+      "rewrite": {
+        "biography": [
+          "Rafael \"Gallo\" Velásquez",
+          "Rafael Velázquez",
+          "Rafael Velásquez"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 6298,
+      "name": "Corrado Cammisuli",
+      "rewrite": {
+        "biography": [
+          "Corrado Cammisuli",
+          "Corrado Camisuli"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "person",
+      "id": 8350,
+      "name": "John Philips",
+      "rewrite": {
+        "biography": [
+          "John Philips",
+          "John Phillips"
+        ]
+      },
+      "join": [],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 639,
+      "name": "Harakiri City: Tributo A Caramelos De Cianuro",
+      "rewrite": {},
+      "join": [],
+      "lost": [
+        "Al fusionar «Tributo a CDC: Harakiri City» (#587, 2026-10-01) quedó fuera — YouTube: «https://www.youtube.com/watch?v=nUNxlo6cTbc»."
+      ]
+    },
+    {
+      "kind": "artist",
+      "id": 158,
+      "name": "Los Impala",
+      "rewrite": {
+        "biography": [
+          "Los Impala",
+          "Los Impalas"
+        ]
+      },
+      "join": [],
+      "lost": [
+        "Al fusionar «Los Impalas» (#2117, 2026-10-01) quedó fuera — Desde: 1959."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 1201,
+      "name": "The New Time of Chaos",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «The New Times of Chaos» (#1493, 2026-10-01) quedó fuera — Portada: «https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiVZR7RnhoA5If3DDNEN0Bi5VX1ELKWP6bIGepzaohCem4kgt7QlMnwC1CDxdxEMC5jRq5fSDF6c6uqFrldzGuvJHQEvbf26Z0KaaxE-kJ6Uw1Et6k6ZfMLCCyN7Gq_fjdsghNlSVgU/s400/DREAMS+OF+TEARS+-+The+New+Times+of+Chaos+%2528Ep+2009%2529.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 1237,
+      "name": "The World Might Suck",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «The World Might Suck» (#2016, 2026-10-01) quedó fuera — Portada: «https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEicaAMdU8IbFJC3luJ1hykIkDzZzkLp118aNcnn48nuLKFqHghIt0FTVt4She9TxdQzauUesf4o39lVZsYYugiXGpa753EQ3TwihCNhaG4o4LEKxTmFrwOlBX6NFkWxDONPpWmzg8jLiA/s400/laberinto_osdorp.jpg»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 526,
+      "name": "Fauna",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": []
+    },
+    {
+      "kind": "album",
+      "id": 142,
+      "name": "Harakiri City",
+      "rewrite": {},
+      "join": [],
+      "lost": [
+        "Al fusionar «Caramelos - Harakiri» (#2240, 2026-10-01) quedó fuera — Portada: «https://coleccionistasderockvenezolano.wordpress.com/wp-content/uploads/2016/03/caramelos-harakiri.png?w=756»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 141,
+      "name": "Frisbee",
+      "rewrite": {},
+      "join": [],
+      "lost": [
+        "Al fusionar «Parte inerna 1 frisbee» (#2262, 2026-10-01) quedó fuera — Portada: «https://i0.wp.com/coleccionistasderockvenezolano.wordpress.com/wp-content/uploads/2015/09/parte-inerna-1-frisbee-caramelos-de-cianuro.jpg?w=368&h=191&ssl=1»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 140,
+      "name": "Flor De Fuego",
+      "rewrite": {},
+      "join": [],
+      "lost": [
+        "Al fusionar «flor de fuego edición pepsi» (#2264, 2026-10-01) quedó fuera — Portada: «https://i0.wp.com/coleccionistasderockvenezolano.wordpress.com/wp-content/uploads/2015/09/portada-flor-de-fuego-edicic3b3n-pepsi-caramelos-de-cianuro.jpg?w=499&h=499&crop=1&ssl=1».",
+        "Al fusionar «promocional pespsi y cines unidos» (#2266, 2026-10-01) quedó fuera — Portada: «https://i0.wp.com/coleccionistasderockvenezolano.wordpress.com/wp-content/uploads/2015/09/portada-8-promocional-pespsi-y-cines-unidos-caramelos-de-cianuro.jpg?w=498&h=496&ssl=1»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 929,
+      "name": "Caras.Flashes.Clase.",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «Caras Flashes Clase Fashion Show» (#2249, 2026-10-01) quedó fuera — Portada: «https://i0.wp.com/coleccionistasderockvenezolano.wordpress.com/wp-content/uploads/2018/03/blush-magenta-caras-flashes-clase-fashion-show-portada.jpg?w=244&h=245&ssl=1»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 163,
+      "name": "La Violó La Mató y La Picó",
+      "rewrite": {},
+      "join": [],
+      "lost": [
+        "Al fusionar «Dermis-Tatú-La-Violó-La-Mató-La-Picó-1995-Arte-2» (#2253, 2026-10-01) quedó fuera — Portada: «https://coleccionistasderockvenezolano.wordpress.com/wp-content/uploads/2015/08/dermis-tatc3ba-la-violc3b3-la-matc3b3-la-picc3b3-1995-arte-21.jpg?w=300&h=297»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 191,
+      "name": "Mundo",
+      "rewrite": {},
+      "join": [],
+      "lost": [
+        "Al fusionar «Mundo Conraportada» (#2275, 2026-10-01) quedó fuera — Portada: «https://i0.wp.com/coleccionistasderockvenezolano.wordpress.com/wp-content/uploads/2016/02/fordelucs-mundo-conraportada.jpg?w=752&h=587&ssl=1»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 209,
+      "name": "The Return of El Santo",
+      "rewrite": {},
+      "join": [],
+      "lost": [
+        "Al fusionar «El Retorno Del Santo» (#2279, 2026-10-01) quedó fuera — Portada: «https://i0.wp.com/coleccionistasderockvenezolano.wordpress.com/wp-content/uploads/2016/03/king-chango-el-retorno-del-santo-portada.jpg?w=456&h=455&ssl=1»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 225,
+      "name": "Deux Ex Machina",
+      "rewrite": {},
+      "join": [],
+      "lost": [
+        "Al fusionar «Parte Intena» (#2261, 2026-10-01) quedó fuera — Portada: «https://i0.wp.com/coleccionistasderockvenezolano.wordpress.com/wp-content/uploads/2015/09/parte-intena-1-la-muy-bestia-pop.jpg?w=373&h=187&ssl=1»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 532,
+      "name": "Misión Fantasma",
+      "rewrite": {},
+      "join": [],
+      "lost": [
+        "Al fusionar «mision fantasma laputa electrica» (#2267, 2026-10-01) quedó fuera — Portada: «https://i0.wp.com/coleccionistasderockvenezolano.wordpress.com/wp-content/uploads/2015/09/portada-mision-fantasma-laputa-electrica.jpg?w=372&h=376&ssl=1»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 596,
+      "name": "Masacre En El Pin 5",
+      "rewrite": {},
+      "join": [],
+      "lost": [
+        "Al fusionar «Potada Masacre En El Pin» (#2269, 2026-10-01) quedó fuera — Portada: «https://i0.wp.com/coleccionistasderockvenezolano.wordpress.com/wp-content/uploads/2015/09/potada-masacre-en-el-pin-5-los-mentas.jpg?w=249&h=248&ssl=1»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 80,
+      "name": "Long Way To Oblivion",
+      "rewrite": {},
+      "join": [],
+      "lost": [
+        "Al fusionar «Ep Long Way To Oblivion» (#2291, 2026-10-01) quedó fuera — Portada: «https://i0.wp.com/coleccionistasderockvenezolano.wordpress.com/wp-content/uploads/2016/03/mantra-ep-long-way-to-oblivion-portada.jpg?w=501&h=503&ssl=1»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 273,
+      "name": "Caracas",
+      "rewrite": {},
+      "join": [],
+      "lost": [
+        "Al fusionar «Caracas Sobrevive» (#2292, 2026-10-01) quedó fuera — Portada: «https://i0.wp.com/coleccionistasderockvenezolano.wordpress.com/wp-content/uploads/2016/03/maskhera-caracas-sobrevive-portada.jpg?w=246&h=220&ssl=1»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 469,
+      "name": "6101",
+      "rewrite": {},
+      "join": [],
+      "lost": [
+        "Al fusionar «6101 Carton Externo» (#2276, 2026-10-01) quedó fuera — Portada: «https://i0.wp.com/coleccionistasderockvenezolano.wordpress.com/wp-content/uploads/2016/03/ohmio-6101-carton-externo-portada.jpg?w=515&h=444&ssl=1»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 327,
+      "name": "Infecto De Afecto",
+      "rewrite": {},
+      "join": [],
+      "lost": [
+        "Al fusionar «Infecto» (#2239, 2026-10-01) quedó fuera — Portada: «https://i0.wp.com/coleccionistasderockvenezolano.wordpress.com/wp-content/uploads/2016/03/sentimiento-muerto-infecto.png?w=248&h=248&crop=1&ssl=1»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 715,
+      "name": "Encarando La Muerte",
+      "rewrite": {},
+      "join": [
+        "notes"
+      ],
+      "lost": [
+        "Al fusionar «Ep Encarando La Muerte» (#2281, 2026-10-01) quedó fuera — Portada: «https://i0.wp.com/coleccionistasderockvenezolano.wordpress.com/wp-content/uploads/2016/03/zombies-no-ep-encarando-la-muerte-portada.jpg?w=501&h=498&ssl=1»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 358,
+      "name": "Sílabas Eidéticas",
+      "rewrite": {},
+      "join": [],
+      "lost": [
+        "Al fusionar «Trance» (#2241, 2026-10-01) quedó fuera — Portada: «https://coleccionistasderockvenezolano.wordpress.com/wp-content/uploads/2016/03/trance.png?w=756»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 244,
+      "name": "Liquet",
+      "rewrite": {},
+      "join": [],
+      "lost": [
+        "Al fusionar «Liqüet» (#2234, 2026-10-01) quedó fuera — Portada: «https://coleccionistasderockvenezolano.wordpress.com/wp-content/uploads/2016/03/liquet-2004.png?w=756»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 338,
+      "name": "Submarino",
+      "rewrite": {},
+      "join": [],
+      "lost": [
+        "Al fusionar «Submarino» (#2242, 2026-10-01) quedó fuera — Portada: «https://coleccionistasderockvenezolano.wordpress.com/wp-content/uploads/2016/03/submarino.png?w=756»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 339,
+      "name": "Alias",
+      "rewrite": {},
+      "join": [],
+      "lost": [
+        "Al fusionar «Alias» (#2238, 2026-10-01) quedó fuera — Portada: «https://i0.wp.com/coleccionistasderockvenezolano.wordpress.com/wp-content/uploads/2016/02/subsonus-alias-portada.jpg?w=376&h=372&ssl=1»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 340,
+      "name": "Grandes Razones, Fuertes Acciones",
+      "rewrite": {},
+      "join": [],
+      "lost": [
+        "Al fusionar «Grandes Razones, Fuertes Acciones» (#2237, 2026-10-01) quedó fuera — Portada: «https://i0.wp.com/coleccionistasderockvenezolano.wordpress.com/wp-content/uploads/2016/02/subsonus-grandes-razones-fuertes-acciones-portada.jpg?w=372&h=372&crop=1&ssl=1»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 371,
+      "name": "5to Festival Nuevas Bandas",
+      "rewrite": {},
+      "join": [],
+      "lost": [
+        "Al fusionar «5to Festival Nuevas Bandas» (#2146, 2026-10-01) quedó fuera — Tipo: «compilation»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 388,
+      "name": "Miércoles Insólitos",
+      "rewrite": {},
+      "join": [],
+      "lost": [
+        "Al fusionar «Miercoles Insólitos» (#1987, 2026-10-01) quedó fuera — Tipo: «compilation»."
+      ]
+    },
+    {
+      "kind": "album",
+      "id": 581,
+      "name": "Décimo Festival Nuevas Bandas",
+      "rewrite": {},
+      "join": [],
+      "lost": [
+        "Al fusionar «Decimo Festival Nuevas Bandas» (#2181, 2026-10-01) quedó fuera — Tipo: «compilation»."
+      ]
+    }
+  ]
+}

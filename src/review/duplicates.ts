@@ -48,6 +48,7 @@ import { invalidateSearchIndex } from "../api/search-index.js";
 import { transferGenreAssignments } from "../genres/merge.js";
 import { projectAlbumGenre } from "../merge/genre-projection.js";
 import { deriveVenezuelanFor } from "../merge/venezuelan.js";
+import { isPreserveKind, openRewrites, preserveDiscarded, type PreserveOptions, type PreserveOutcome } from "../merge/preserve.js";
 
 export type DuplicateKind = "artist" | "album";
 export type MergeKind = DuplicateKind | "track" | "person" | "organization" | "album_credit" | "track_credit" | "artist_membership";
@@ -400,11 +401,15 @@ export interface MergeOutcome {
   discardedRows: DiscardedRow[];
   /** Revisiones que careaban las dos fichas, tal como estaban antes. */
   detachedReviews: Array<Record<string, unknown>>;
+  /** Columnas de la ficha que queda donde se conservó lo que el duplicado aportaba (unido o en notas). */
+  preserved: string[];
+  /** Marcas de «reescribir con IA» abiertas o ampliadas por esta fusión. */
+  rewritesOpened: number;
 }
 
 export async function mergeInto(
   client: PoolClient, kind: MergeKind, keepId: number, dropId: number, note: string, runId: number,
-  options: { alias?: boolean } = {},
+  options: { alias?: boolean; preserve?: PreserveOptions } = {},
 ): Promise<MergeOutcome> {
   if (keepId === dropId) throw new Error(`${kind} ${keepId}: no se puede fusionar consigo mismo`);
   const table = TABLE[kind];
@@ -470,6 +475,13 @@ export async function mergeInto(
   }
 
   const filled = await fillEmptyColumns(client, kind, keepId, dropId);
+  // Lo que el duplicado aportaba y contradice a la que queda no se descarta:
+  // se une, se anota o queda marcado para reescribir (preserve.ts).
+  let preserved: PreserveOutcome = { changes: [], rewrites: [], closedRewrites: [] };
+  if (isPreserveKind(kind)) {
+    const current = (await client.query<Record<string, unknown>>(`SELECT * FROM public.${table} WHERE id=$1`, [keepId])).rows[0]!;
+    preserved = await preserveDiscarded(client, kind, current, drop, options.preserve);
+  }
   if (identity && aliasTable && options.alias !== false) {
     const dropName = String(drop[identity]);
     if (dropName !== String(keep[identity])) {
@@ -486,8 +498,13 @@ export async function mergeInto(
     VALUES($1,$2::ingest.claim_entity_kind,$3,'merged_duplicate',$4::jsonb,$5::jsonb,$6,'high','human') RETURNING id::text`,
   [runId, kind, keepId, JSON.stringify(drop),
     JSON.stringify({ keptId: keepId, filled, moved, discarded: discardedRows.length, tracksMerged,
-      movedRefs, discardedRows, detachedReviews, primaryAliases, ...(genreRows ? { genreRows } : {}), version: 2 }), note]);
+      movedRefs, discardedRows, detachedReviews, primaryAliases, ...(genreRows ? { genreRows } : {}),
+      ...(preserved.changes.length ? { preserved: preserved.changes } : {}),
+      ...(preserved.closedRewrites.length ? { closedRewrites: preserved.closedRewrites } : {}), version: 2 }), note]);
   const auditId = Number(auditRow.rows[0]!.id);
+  const rewritesOpened = isPreserveKind(kind)
+    ? await openRewrites(client, kind, keepId, preserved.rewrites, { reason: note, runId, mergeAuditId: auditId })
+    : 0;
   // La evidencia completa, sin el recorte a 50 de antes (P4): hay fichas con
   // más de 150 claims y las fusiones ya llegaban al tope.
   await client.query(
@@ -512,7 +529,10 @@ export async function mergeInto(
   if (kind === "album" && genreRows) await projectAlbumGenre(client, keepId);
   // La que queda hereda bandas y créditos del duplicado: puede ganar evidencia de venezolana.
   if (kind === "person") await deriveVenezuelanFor(client, [keepId], runId);
-  return { moved, discarded: discardedRows.length, filled, tracksMerged, auditId, movedRefs, discardedRows, detachedReviews };
+  return {
+    moved, discarded: discardedRows.length, filled, tracksMerged, auditId, movedRefs, discardedRows, detachedReviews,
+    preserved: preserved.changes.map((change) => change.column), rewritesOpened,
+  };
 }
 
 export interface DuplicateMergeResult {
@@ -536,7 +556,8 @@ export async function mergeDuplicate(kind: DuplicateKind, keepId: number, dropId
     // El rastro completo vive en la auditoría; el resultado del lote se queda
     // con los contadores de siempre.
     const {
-      auditId: _auditId, movedRefs: _movedRefs, discardedRows: _discardedRows, detachedReviews: _detachedReviews, ...result
+      auditId: _auditId, movedRefs: _movedRefs, discardedRows: _discardedRows, detachedReviews: _detachedReviews,
+      preserved: _preserved, rewritesOpened: _rewritesOpened, ...result
     } = await mergeInto(client, kind, keepId, dropId, note, runId);
     await client.query("COMMIT");
     return result;
