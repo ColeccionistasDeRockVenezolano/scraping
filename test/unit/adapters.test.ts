@@ -164,6 +164,40 @@ describe("adapters funcionales de las fuentes autorizadas", () => {
     expect(read("Vocals, Guitar, Percussion & Piano")).toEqual([]);
   });
 
+  it("Sincopa abre todas sus secciones: la misma plantilla de ficha en jazz, latin pop, clásica, new age, tradicional y étnica", () => {
+    const adapter = adapterFor({ slug: "sincopa", siteType: "database" });
+    if (!adapter?.extractSnapshot || !adapter.isAllowedUrl) throw new Error("adapter Sincopa faltante");
+    const root = "https://sincopa.com/";
+    for (const path of [
+      "jazz/artists_index.htm", "jazz/artists/eric_chacon.htm", "jazz/cdinfo/eric_chacon_mestizo.htm",
+      "latin_pop/artists_lat/oscar_dleon.htm", "latin_pop/cdinfo_latin/oscar_dleon_x.htm",
+      "classic/artist_class/yumar_castellanos.htm", "classic/cdinfo_class/castellanos_yumar_violin.htm",
+      "new_age/artist_newage/x.htm", "new_age/cdinfo_age/x.htm",
+      "traditional/artists2/x.htm", "traditional/cdinfo2/x.htm", "ethnic/artists1/x.htm", "ethnic/cdinfo1/x.htm",
+      "musicians/bass/x.htm", "rock_pop/artist_rock/los_kings.htm",
+    ]) expect(adapter.isAllowedUrl(`${root}${path}`, root), path).toBe(true);
+    expect(adapter.isAllowedUrl("https://otro.example/jazz/artists/x.htm", root)).toBe(false);
+    expect(adapter.isAllowedUrl(`${root}contact_us.htm`, root)).toBe(false);
+
+    const body = (name: string, genre: string) => `<table><tr><td bgcolor="#6A152F">${name}</td></tr></table>`
+      + `<table><tr><td>Born:<br>Genre:</td><td>In Caracas, Venezuela<br>${genre}</td></tr></table>`;
+    const genres = (url: string, genre: string) => adapter.extractSnapshot!({ url, kind: "html", rawPageId: 1, body: body("Prueba", genre) })
+      .filter((record) => record.entityKind === "artist")
+      .flatMap((record) => record.fields.filter((field) => field.field === "genre").map((field) => field.value));
+    expect(genres(`${root}jazz/artists/prueba.htm`, "Jazz, World")).toEqual(["Jazz, World"]);
+    expect(genres(`${root}latin_pop/artists_lat/prueba.htm`, "Salsa")).toEqual(["Salsa"]);
+    expect(genres(`${root}classic/artist_class/prueba.htm`, "Classical")).toEqual(["Classical"]);
+    expect(genres(`${root}ethnic/artists1/prueba.htm`, "Traditional")).toEqual(["Traditional"]);
+    // Latin pop y tradicional cuelgan las fichas de disco en una subcarpeta por artista.
+    const albumBody = `<table><tr><td>Artist:<br>Album Title:<br>Genre:</td><td><b>Prueba</b><br>Disco<br>Salsa</td></tr></table>`;
+    const albumTitles = (url: string) => adapter.extractSnapshot!({ url, kind: "html", rawPageId: 1, body: albumBody })
+      .filter((record) => record.entityKind === "album").map((record) => record.identity);
+    expect(albumTitles(`${root}latin_pop/cdinfo_latin/pedro_belisario_orq/disco.htm`)).toEqual(["Prueba::Disco"]);
+    expect(albumTitles(`${root}traditional/cdinfo2/taburete/disco.htm`)).toEqual(["Prueba::Disco"]);
+    // Un índice no es una ficha: no emite nada aunque cuelgue de una sección abierta.
+    expect(genres(`${root}jazz/artists_index.htm`, "Jazz")).toEqual([]);
+  });
+
   it("lee la lista de pistas completa, que vive entera en una celda", async () => {
     const claims = await parsed("sincopa");
     // Toda la discografía de la ficha de disco está en un solo <td>, una

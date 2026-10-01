@@ -1,0 +1,1796 @@
+{
+ "generatedAt": "2026-10-01T19:09:42.039Z",
+ "totals": {
+  "values": 3517,
+  "fullyResolved": 2207,
+  "partlyResolved": 467,
+  "unresolved": 843
+ },
+ "resolved": [
+  {
+   "fragment": "latin",
+   "count": 704,
+   "to": [
+    "Fusión latina"
+   ]
+  },
+  {
+   "fragment": "jazz",
+   "count": 531,
+   "to": [
+    "Jazz"
+   ]
+  },
+  {
+   "fragment": "salsa",
+   "count": 271,
+   "to": [
+    "Salsa"
+   ]
+  },
+  {
+   "fragment": "tropical",
+   "count": 249,
+   "to": [
+    "Música tropical"
+   ]
+  },
+  {
+   "fragment": "classical",
+   "count": 241,
+   "to": [
+    "Música clásica"
+   ]
+  },
+  {
+   "fragment": "world",
+   "count": 212,
+   "to": [
+    "World ethnic"
+   ]
+  },
+  {
+   "fragment": "world-ethnic",
+   "count": 183,
+   "to": [
+    "World ethnic"
+   ]
+  },
+  {
+   "fragment": "latin-pop",
+   "count": 124,
+   "to": [
+    "Pop latino"
+   ]
+  },
+  {
+   "fragment": "folk",
+   "count": 110,
+   "to": [
+    "Folk"
+   ]
+  },
+  {
+   "fragment": "latin jazz",
+   "count": 99,
+   "to": [
+    "Jazz latino"
+   ]
+  },
+  {
+   "fragment": "bolero",
+   "count": 85,
+   "to": [
+    "Bolero"
+   ]
+  },
+  {
+   "fragment": "pop",
+   "count": 80,
+   "to": [
+    "Pop"
+   ]
+  },
+  {
+   "fragment": "instrumental",
+   "count": 79,
+   "to": [
+    "Instrumental"
+   ]
+  },
+  {
+   "fragment": "electronic",
+   "count": 79,
+   "to": [
+    "Electrónica"
+   ]
+  },
+  {
+   "fragment": "world ethnic",
+   "count": 67,
+   "to": [
+    "World ethnic"
+   ]
+  },
+  {
+   "fragment": "new age",
+   "count": 55,
+   "to": [
+    "New age"
+   ]
+  },
+  {
+   "fragment": "ballad",
+   "count": 55,
+   "to": [
+    "Balada"
+   ]
+  },
+  {
+   "fragment": "joropo",
+   "count": 44,
+   "to": [
+    "Joropo"
+   ]
+  },
+  {
+   "fragment": "latin pop",
+   "count": 42,
+   "to": [
+    "Pop latino"
+   ]
+  },
+  {
+   "fragment": "pop-latin",
+   "count": 32,
+   "to": [
+    "Pop latino"
+   ]
+  },
+  {
+   "fragment": "rock",
+   "count": 19,
+   "to": [
+    "Rock"
+   ]
+  },
+  {
+   "fragment": "ethnic",
+   "count": 18,
+   "to": [
+    "World ethnic"
+   ]
+  },
+  {
+   "fragment": "christmas",
+   "count": 17,
+   "to": [
+    "Música navideña"
+   ]
+  },
+  {
+   "fragment": "cumbia",
+   "count": 13,
+   "to": [
+    "Cumbia"
+   ]
+  },
+  {
+   "fragment": "world-fusion",
+   "count": 7,
+   "to": [
+    "World ethnic"
+   ]
+  },
+  {
+   "fragment": "world fusion",
+   "count": 7,
+   "to": [
+    "World ethnic"
+   ]
+  },
+  {
+   "fragment": "guaguancó",
+   "count": 7,
+   "to": [
+    "Guaguancó"
+   ]
+  },
+  {
+   "fragment": "chill out",
+   "count": 7,
+   "to": [
+    "Downtempo"
+   ]
+  },
+  {
+   "fragment": "funk",
+   "count": 6,
+   "to": [
+    "Funk"
+   ]
+  },
+  {
+   "fragment": "guaguanco",
+   "count": 6,
+   "to": [
+    "Guaguancó"
+   ]
+  },
+  {
+   "fragment": "jazz fusion",
+   "count": 6,
+   "to": [
+    "Jazz fusión"
+   ]
+  },
+  {
+   "fragment": "latin fusion",
+   "count": 4,
+   "to": [
+    "Fusión latina"
+   ]
+  },
+  {
+   "fragment": "rock-pop",
+   "count": 4,
+   "to": [
+    "Pop rock"
+   ]
+  },
+  {
+   "fragment": "hip-hop",
+   "count": 3,
+   "to": [
+    "Hip hop"
+   ]
+  },
+  {
+   "fragment": "experimental",
+   "count": 3,
+   "to": [
+    "Experimental"
+   ]
+  },
+  {
+   "fragment": "latin-jazz",
+   "count": 3,
+   "to": [
+    "Jazz latino"
+   ]
+  },
+  {
+   "fragment": "avant-garde",
+   "count": 3,
+   "to": [
+    "Avant-garde"
+   ]
+  },
+  {
+   "fragment": "blues",
+   "count": 2,
+   "to": [
+    "Blues"
+   ]
+  },
+  {
+   "fragment": "house",
+   "count": 2,
+   "to": [
+    "House"
+   ]
+  },
+  {
+   "fragment": "jazz-fusion",
+   "count": 2,
+   "to": [
+    "Jazz fusión"
+   ]
+  },
+  {
+   "fragment": "twist",
+   "count": 2,
+   "to": [
+    "Twist"
+   ]
+  },
+  {
+   "fragment": "world music",
+   "count": 2,
+   "to": [
+    "World ethnic"
+   ]
+  },
+  {
+   "fragment": "boogaloo",
+   "count": 2,
+   "to": [
+    "Fusión latina"
+   ]
+  },
+  {
+   "fragment": "hip hop",
+   "count": 1,
+   "to": [
+    "Hip hop"
+   ]
+  },
+  {
+   "fragment": "rock.",
+   "count": 1,
+   "to": [
+    "Rock"
+   ]
+  },
+  {
+   "fragment": "pop.",
+   "count": 1,
+   "to": [
+    "Pop"
+   ]
+  },
+  {
+   "fragment": "jazz ethnic",
+   "count": 1,
+   "to": [
+    "Jazz fusión"
+   ]
+  },
+  {
+   "fragment": "latin-fusion",
+   "count": 1,
+   "to": [
+    "Fusión latina"
+   ]
+  },
+  {
+   "fragment": "latin rock",
+   "count": 1,
+   "to": [
+    "Rock latino"
+   ]
+  },
+  {
+   "fragment": "flamenco",
+   "count": 1,
+   "to": [
+    "Flamenco"
+   ]
+  },
+  {
+   "fragment": "balad",
+   "count": 1,
+   "to": [
+    "Balada"
+   ]
+  },
+  {
+   "fragment": "salsa.",
+   "count": 1,
+   "to": [
+    "Salsa"
+   ]
+  },
+  {
+   "fragment": "rock & roll",
+   "count": 1,
+   "to": [
+    "Rock and roll"
+   ]
+  },
+  {
+   "fragment": "pop-rock",
+   "count": 1,
+   "to": [
+    "Pop rock"
+   ]
+  },
+  {
+   "fragment": "pop-rock.",
+   "count": 1,
+   "to": [
+    "Pop rock"
+   ]
+  },
+  {
+   "fragment": "groove",
+   "count": 1,
+   "to": [
+    "Groove metal"
+   ]
+  },
+  {
+   "fragment": "soul",
+   "count": 1,
+   "to": [
+    "Soul"
+   ]
+  },
+  {
+   "fragment": "chill-out",
+   "count": 1,
+   "to": [
+    "Downtempo"
+   ]
+  },
+  {
+   "fragment": "reggae",
+   "count": 1,
+   "to": [
+    "Reggae"
+   ]
+  }
+ ],
+ "gaps": [
+  {
+   "fragment": "traditional",
+   "count": 840,
+   "examples": [
+    "jazz:Eric Chacón",
+    "classic:Orfeón Lamas",
+    "jazz:Gonzalo Teppa"
+   ],
+   "raws": [
+    "Jazz, World, Fusion, Traditional, Classical",
+    "Classical, Choral, Traditional",
+    "Jazz, World, Ethnic, Traditional",
+    "Classical, Bolero, Traditional, Latin"
+   ]
+  },
+  {
+   "fragment": "latin-folk",
+   "count": 46,
+   "examples": [
+    "latin_pop:Marina Bravo",
+    "traditional:Grupo Palo De Arco",
+    "traditional:P::Que Palo De Arco"
+   ],
+   "raws": [
+    "Latin-Ballad, Latin-Folk, Traditional",
+    "Traditional, Folk, Latin-Folk",
+    "Latin-Folk"
+   ]
+  },
+  {
+   "fragment": "gaita",
+   "count": 39,
+   "examples": [
+    "latin_pop:Guaco",
+    "latin_pop:Guaco::Betania",
+    "latin_pop:Dimensión Latina::Gaita y Trombón"
+   ],
+   "raws": [
+    "Gaita, Salsa, Tropical, Latin",
+    "Latin-Salsa/Gaita",
+    "Salsa/Gaita",
+    "Latin/Gaita"
+   ]
+  },
+  {
+   "fragment": "descarga",
+   "count": 38,
+   "examples": [
+    "latin_pop:Grupo Mango",
+    "latin_pop:Los Blanco / Sexteto Los Blanco",
+    "latin_pop:Sexteto Juventud"
+   ],
+   "raws": [
+    "Salsa, Descarga",
+    "Latin: Guaracha, Cumbia, Salsa, Guaguancó, Descarga,",
+    "Latin Jazz/Descarga",
+    "Salsa/Descarga"
+   ]
+  },
+  {
+   "fragment": "son",
+   "count": 38,
+   "examples": [
+    "latin_pop:La Séptima Bohemia",
+    "latin_pop:Sonero Clásico del Caribe",
+    "jazz:Gerardo Rosales y Su Son Desempleado::Buscando Chamba"
+   ],
+   "raws": [
+    "Latin, Son",
+    "Son, Son Montuno, Bolero",
+    "Latin Jazz / Son",
+    "Latin/Son"
+   ]
+  },
+  {
+   "fragment": "political folk",
+   "count": 28,
+   "examples": [
+    "latin_pop:Alí Primera",
+    "latin_pop:Alí Primera::Canción Mansa Para un Pueblo Bravo Cigarron/Promus",
+    "latin_pop:Alí Primera::Cuando Nombro La Poesía Cigarron/Promus"
+   ],
+   "raws": [
+    "Folk, Political Folk"
+   ]
+  },
+  {
+   "fragment": "latin ballad",
+   "count": 27,
+   "examples": [
+    "latin_pop:Nancy Toro",
+    "traditional:Rosa Virginia Chacín",
+    "traditional:Rosa Virginia Chacín"
+   ],
+   "raws": [
+    "Latin Ballad, Boleros, Traditional",
+    "Traditional, Latin Ballad, Boleros",
+    "Jazz/Latin Ballad",
+    "Latin Ballad"
+   ]
+  },
+  {
+   "fragment": "latin-salsa",
+   "count": 24,
+   "examples": [
+    "latin_pop:Guaco::Amazonas",
+    "latin_pop:Fernando Alarcón::Once De Octubre Independent",
+    "latin_pop:Fernando Alarcón::Amor de Estrellas Independent"
+   ],
+   "raws": [
+    "Latin-Salsa",
+    "Latin-Salsa/Gaita",
+    "Gaita/Latin-Salsa"
+   ]
+  },
+  {
+   "fragment": "latin balad",
+   "count": 19,
+   "examples": [
+    "jazz:María Alejandra Rodríguez",
+    "latin_pop:4to. Creciente::Soñando Azules",
+    "traditional:Lilia Vera"
+   ],
+   "raws": [
+    "Jazz, Latin Balad",
+    "Salsa/Latin Balad",
+    "Traditional, Folk, Trova, Latin Balad",
+    "Latin Balad"
+   ]
+  },
+  {
+   "fragment": "merengue",
+   "count": 19,
+   "examples": [
+    "latin_pop:El Nuevo Clan",
+    "latin_pop:La Gente De La Ciudad::Este Ritmo Nuevo",
+    "traditional:Hernán Marín"
+   ],
+   "raws": [
+    "Guaracha, Bolero, Cumbia, Merengue, Salsa",
+    "Latin/Merengue",
+    "Traditional, Merengue & Joropo Oriental"
+   ]
+  },
+  {
+   "fragment": "latin jazz big band",
+   "count": 17,
+   "examples": [
+    "jazz:Andy Durán",
+    "jazz:Nuevo Mundo Jazz Band",
+    "jazz:Alberto Naranjo::Latin Jazz Big Band Swing Con Son Obeso/Pacanins"
+   ],
+   "raws": [
+    "Latin Jazz Big Band, Salsa",
+    "Latin Jazz Big Band",
+    "Salsa/Latin Jazz Big Band"
+   ]
+  },
+  {
+   "fragment": "nueva trova",
+   "count": 14,
+   "examples": [
+    "latin_pop:Los Guaraguao",
+    "latin_pop:Los Guaraguao::Las Casas De Cartón",
+    "latin_pop:Los Guaraguao::Es Mi Viejo"
+   ],
+   "raws": [
+    "Nueva Trova, Latin, Folk",
+    "Latin, Folk, Nueva Trova"
+   ]
+  },
+  {
+   "fragment": "latin-tropical",
+   "count": 11,
+   "examples": [
+    "latin_pop:Billo's Caracas Boys::Serie 32 Grandes Exitos Para Siempre",
+    "latin_pop:Billo's Caracas Boys::Serie 32 Super Exitos de Billo's",
+    "latin_pop:Billo's Caracas Boys::24 Exitos De Billos"
+   ],
+   "raws": [
+    "Latin-Tropical"
+   ]
+  },
+  {
+   "fragment": "latin-ballad",
+   "count": 10,
+   "examples": [
+    "latin_pop:Caridad Canelón",
+    "latin_pop:Devorah Sasha",
+    "latin_pop:Esperanza Márquez"
+   ],
+   "raws": [
+    "Latin-Ballad, Latin Pop",
+    "Latin-Ballad, Bolero, Ballad, Traditional",
+    "Latin-Ballad, Bolero, Cancion Latinoamericana",
+    "Bolero, Latin-Ballad"
+   ]
+  },
+  {
+   "fragment": "world ethnic-rock",
+   "count": 10,
+   "examples": [
+    "ethnic:Vytas Brenner",
+    "ethnic:Vytas Brenner::Amazonia",
+    "ethnic:Vytas Brenner::Vytas"
+   ],
+   "raws": [
+    "World Ethnic-Rock, Pop-Rock.",
+    "World Ethnic-Rock"
+   ]
+  },
+  {
+   "fragment": "gaita-salsa",
+   "count": 8,
+   "examples": [
+    "latin_pop:Guaco::Maduro...",
+    "latin_pop:Guaco::Guaco 82",
+    "latin_pop:Guaco::Guaco 83"
+   ],
+   "raws": [
+    "Latin/Gaita-Salsa"
+   ]
+  },
+  {
+   "fragment": "smooth jazz",
+   "count": 7,
+   "examples": [
+    "new_age:Masseratti 2lts",
+    "jazz:Beraca::Beraca Instrumental Latin Music",
+    "jazz:Dougla's Douglas"
+   ],
+   "raws": [
+    "Electronic, Smooth Jazz, House",
+    "Smooth Jazz",
+    "Jazz, Smooth Jazz"
+   ]
+  },
+  {
+   "fragment": "boleros",
+   "count": 7,
+   "examples": [
+    "traditional:María Teresa Chacín",
+    "latin_pop:Nancy Toro",
+    "traditional:Rosa Virginia Chacín"
+   ],
+   "raws": [
+    "Traditional, Boleros, Pop",
+    "Latin Ballad, Boleros, Traditional",
+    "Traditional, Latin Ballad, Boleros",
+    "Traditional, Folk, Boleros"
+   ]
+  },
+  {
+   "fragment": "latin big band",
+   "count": 6,
+   "examples": [
+    "ethnic:Aldemaro Romero",
+    "latin_pop:Billo's Caracas Boys / Billos / Billo Frómeta",
+    "latin_pop:Los Melódicos / Renato Capriles"
+   ],
+   "raws": [
+    "World, Classical, Instrumental, Latin Big Band, Jazz",
+    "Tropical, Latin Big Band, Latin",
+    "World/Latin Big Band",
+    "Salsa/Latin Big Band"
+   ]
+  },
+  {
+   "fragment": "classical-antique",
+   "count": 6,
+   "examples": [
+    "classic:Musica Reservata::Angelorum Ministerium Sonorodven",
+    "classic:Musica Reservata::Ave Maris Stella Motetes Marianos de Claudio Monteverdi Independent",
+    "classic:Musica Reservata::Dulcis Amor Cantos de Amor durante el Medioevo Independent"
+   ],
+   "raws": [
+    "Classical-Antique"
+   ]
+  },
+  {
+   "fragment": "2002",
+   "count": 6,
+   "examples": [
+    "new_age:Angel Rada::RadaNetRadio Uraniun Records Keyboards",
+    "new_age:Angel Rada::Psychotronics Uraniun Records Keyboards",
+    "new_age:Angel Rada::Ethnosonics Uraniun Records Keyboards"
+   ],
+   "raws": [
+    "2002"
+   ]
+  },
+  {
+   "fragment": "vallenato",
+   "count": 4,
+   "examples": [
+    "latin_pop:Barranco",
+    "latin_pop:Barranco::Barranco Pop",
+    "latin_pop:Barranco::Barranco Mix"
+   ],
+   "raws": [
+    "Latin-Pop, Cumbia, Vallenato",
+    "LatinPop Cumbia/Vallenato"
+   ]
+  },
+  {
+   "fragment": "guaracha",
+   "count": 4,
+   "examples": [
+    "latin_pop:El Nuevo Clan",
+    "latin_pop:Trío Venezuela",
+    "latin_pop:El Nuevo Clan::El Nuevo Clan"
+   ],
+   "raws": [
+    "Guaracha, Bolero, Cumbia, Merengue, Salsa",
+    "Latin-Pop, Latin, Bolero, Guaracha, Twist, Rock & Roll",
+    "Latin, Guaracha, Cumbia"
+   ]
+  },
+  {
+   "fragment": "chamber music",
+   "count": 3,
+   "examples": [
+    "ethnic:Quinteto BarquisiMetal",
+    "ethnic:Trio Bellas Artes::Solos, Dúos y Tríos del Mundo",
+    "ethnic:Luis Julio Toro::Miranda Su Flauta y La Música Independent"
+   ],
+   "raws": [
+    "Classical, World Ethnic, Chamber Music",
+    "World / Chamber Music",
+    "Chamber Music/Classical"
+   ]
+  },
+  {
+   "fragment": "mambo",
+   "count": 3,
+   "examples": [
+    "latin_pop:Conjunto Ingeniería",
+    "latin_pop:Conjunto Ingeniería::Conjunto Ingeniería",
+    "latin_pop:Conjunto Ingeniería::Aquí Está El Conjunto Ingeniería"
+   ],
+   "raws": [
+    "Latin, Boogaloo, Chachacha, Mambo, Salsa",
+    "Latin, Boogaloo, Mambo",
+    "Cha-Cha-Chá, Mambo"
+   ]
+  },
+  {
+   "fragment": "antique",
+   "count": 3,
+   "examples": [
+    "traditional:Syntagma Ensemble",
+    "traditional:Syntagma Ensemble::Voces de la Nueva Andalucia",
+    "traditional:Syntagma Ensemble::Aires de Siglo"
+   ],
+   "raws": [
+    "Antique / Traditional",
+    "Antique"
+   ]
+  },
+  {
+   "fragment": "world-latin",
+   "count": 3,
+   "examples": [
+    "ethnic:Juan Carlos Núñez::Suite Urbana",
+    "ethnic:María Rivas::Café Negrito Ashé Records",
+    "ethnic:Irene Farrera::Soy De Ti Indigena Records"
+   ],
+   "raws": [
+    "World-Latin"
+   ]
+  },
+  {
+   "fragment": "samba",
+   "count": 3,
+   "examples": [
+    "ethnic:Só Sambistas",
+    "ethnic:Só Sambistas::Só Sambistas",
+    "ethnic:Só Sambistas::Caracas Carioca"
+   ],
+   "raws": [
+    "World Ethnic, Samba",
+    "Samba"
+   ]
+  },
+  {
+   "fragment": "ambiance",
+   "count": 3,
+   "examples": [
+    "new_age:Bernhard Wagner::The Fourth Night",
+    "new_age:Pedaltone::Pedaltone",
+    "new_age:International Live Looping Trio::Synced"
+   ],
+   "raws": [
+    "Electronic/Ambiance"
+   ]
+  },
+  {
+   "fragment": "latinpop cumbia",
+   "count": 3,
+   "examples": [
+    "latin_pop:Barranco::Barranco Pop",
+    "latin_pop:Barranco::Barranco Mix",
+    "latin_pop:Barranco::Amor y Malicía"
+   ],
+   "raws": [
+    "LatinPop Cumbia/Vallenato"
+   ]
+  },
+  {
+   "fragment": "latin-urban",
+   "count": 3,
+   "examples": [
+    "latin_pop:Carlos Jaeger & Solamente Todos::Poetas Sony Music",
+    "latin_pop:Carlos Jaeger & Solamente Todos::Claroscuro Cygnus",
+    "latin_pop:Carlos Jaeger::Canciones Del Artesano Independent"
+   ],
+   "raws": [
+    "Latin-Urban"
+   ]
+  },
+  {
+   "fragment": "latin-merengue",
+   "count": 3,
+   "examples": [
+    "latin_pop:Roberto Antonio::Constelación De Exitos",
+    "latin_pop:Roberto Antonio::Noches De Fantasía 34 Grandes Exitos Serie 32",
+    "latin_pop:Roberto Antonio::Noches De Fantasía 34 Grandes Exitos Serie 32"
+   ],
+   "raws": [
+    "Latin-Merengue"
+   ]
+  },
+  {
+   "fragment": "choral",
+   "count": 2,
+   "examples": [
+    "classic:Orfeón Lamas",
+    "ethnic:Orfeón Universitario & El Cuarteto::Orfeón Universitario y El Cuarteto"
+   ],
+   "raws": [
+    "Classical, Choral, Traditional",
+    "World-Ethnic/Choral"
+   ]
+  },
+  {
+   "fragment": "venezuelan fusion",
+   "count": 2,
+   "examples": [
+    "jazz:Agua 'e Panela::Vol. 1",
+    "jazz:The Luis D'Elias Ensemble::Orígenes y Destinos Independent"
+   ],
+   "raws": [
+    "Jazz/Venezuelan Fusion"
+   ]
+  },
+  {
+   "fragment": "jazz - world music",
+   "count": 2,
+   "examples": [
+    "jazz:Amereida",
+    "jazz:Marisela Leal"
+   ],
+   "raws": [
+    "Jazz - World Music"
+   ]
+  },
+  {
+   "fragment": "jazz-world fusion",
+   "count": 2,
+   "examples": [
+    "ethnic:Carlos Capacho",
+    "jazz:Zaperoco Conspiracy::Zaperoco Conspiracy"
+   ],
+   "raws": [
+    "World Ethnic, Jazz-World Fusion",
+    "Jazz-World Fusion"
+   ]
+  },
+  {
+   "fragment": "brazil",
+   "count": 2,
+   "examples": [
+    "jazz:Ofelia del Rosal",
+    "jazz:Yelitze"
+   ],
+   "raws": [
+    "Jazz, Brazil, Bolero, World",
+    "Jazz, Brazil, Bolero"
+   ]
+  },
+  {
+   "fragment": "urban",
+   "count": 2,
+   "examples": [
+    "latin_pop:Carlos Jaeger",
+    "jazz:Andy Durán::Música Cañonera"
+   ],
+   "raws": [
+    "Urban, Ballad, Latin",
+    "Urban/Latin"
+   ]
+  },
+  {
+   "fragment": "composer",
+   "count": 2,
+   "examples": [
+    "latin_pop:Chelique Sarabia",
+    "latin_pop:Chelique Sarabia"
+   ],
+   "raws": [
+    "Composer, Arranger, Singer"
+   ]
+  },
+  {
+   "fragment": "arranger",
+   "count": 2,
+   "examples": [
+    "latin_pop:Chelique Sarabia",
+    "latin_pop:Chelique Sarabia"
+   ],
+   "raws": [
+    "Composer, Arranger, Singer"
+   ]
+  },
+  {
+   "fragment": "singer",
+   "count": 2,
+   "examples": [
+    "latin_pop:Chelique Sarabia",
+    "latin_pop:Chelique Sarabia"
+   ],
+   "raws": [
+    "Composer, Arranger, Singer"
+   ]
+  },
+  {
+   "fragment": "latin-world",
+   "count": 2,
+   "examples": [
+    "latin_pop:Luis Alejandro Serrano::Admiración",
+    "latin_pop:Raúl Jiménez::Aventura en Caracas"
+   ],
+   "raws": [
+    "Latin-World"
+   ]
+  },
+  {
+   "fragment": "trova",
+   "count": 2,
+   "examples": [
+    "traditional:Lilia Vera",
+    "traditional:Lilia Vera::Lilia Vera y Pablo Milanés"
+   ],
+   "raws": [
+    "Traditional, Folk, Trova, Latin Balad",
+    "Traditional/Folk/Trova"
+   ]
+  },
+  {
+   "fragment": "neo-folk",
+   "count": 2,
+   "examples": [
+    "traditional:Machado & Báez::La Canción De Venezuela",
+    "traditional:Aquiles Baez, Aquiles Machado & Alexis Cardenas::La Canción de Venezuela Volumen 2"
+   ],
+   "raws": [
+    "Traditional/Neo-Folk"
+   ]
+  },
+  {
+   "fragment": "folklore",
+   "count": 2,
+   "examples": [
+    "traditional:Un Solo Pueblo",
+    "traditional:Zeneida Rodríguez"
+   ],
+   "raws": [
+    "Traditional, Folklore, Ethnic",
+    "Traditional, Folklore"
+   ]
+  },
+  {
+   "fragment": "improvisation",
+   "count": 2,
+   "examples": [
+    "ethnic:Tapuruina",
+    "jazz:Edward Simon Art Lande::Daisy Independent"
+   ],
+   "raws": [
+    "World, Experimental, Improvisation",
+    "Jazz/Improvisation"
+   ]
+  },
+  {
+   "fragment": "world-guitar",
+   "count": 2,
+   "examples": [
+    "ethnic:Terracota",
+    "ethnic:Rubén Riera::Rubén Riera Independent"
+   ],
+   "raws": [
+    "World-Guitar"
+   ]
+  },
+  {
+   "fragment": "onda nueva",
+   "count": 2,
+   "examples": [
+    "ethnic:Aldemaro Romero::Como De Costumbre",
+    "ethnic:Aldemaro Romero::40 Años 40 Exitos"
+   ],
+   "raws": [
+    "World/Onda Nueva"
+   ]
+  },
+  {
+   "fragment": "latin folk",
+   "count": 2,
+   "examples": [
+    "jazz:Eliana Cuevas::Golpes y Flores Alma Records/Universal",
+    "traditional:María Teresa Chacín con Chelique Sarabia::Quisiera Preguntar"
+   ],
+   "raws": [
+    "Jazz/Latin Folk",
+    "Latin Folk"
+   ]
+  },
+  {
+   "fragment": "bossa",
+   "count": 2,
+   "examples": [
+    "jazz:Maruja Muci::Dreaming In Caracas Sony/BMG",
+    "jazz:Ofelia del Rosal::Começar de Novo Comenzar de Nuevo Independent"
+   ],
+   "raws": [
+    "Jazz/Bossa",
+    "Latin Jazz/Bossa"
+   ]
+  },
+  {
+   "fragment": "world-experimental",
+   "count": 2,
+   "examples": [
+    "ethnic:Tapuruina::Tapuruina",
+    "ethnic:Tapuruina::Los Dones Del Hombre Verde Independent"
+   ],
+   "raws": [
+    "World-Experimental"
+   ]
+  },
+  {
+   "fragment": "popular",
+   "count": 1,
+   "examples": [
+    "classic:Alberto Grau"
+   ],
+   "raws": [
+    "Classical, Popular"
+   ]
+  },
+  {
+   "fragment": "latin-instrumental",
+   "count": 1,
+   "examples": [
+    "classic:Leopoldo Betancourt"
+   ],
+   "raws": [
+    "Classical, Latin-Instrumental"
+   ]
+  },
+  {
+   "fragment": "classical-vocal",
+   "count": 1,
+   "examples": [
+    "classic:Musica Reservata"
+   ],
+   "raws": [
+    "Classical-Vocal"
+   ]
+  },
+  {
+   "fragment": "classical-guitar",
+   "count": 1,
+   "examples": [
+    "classic:Trío Raúl Borges"
+   ],
+   "raws": [
+    "Classical-Guitar"
+   ]
+  },
+  {
+   "fragment": "ambiance-electronic",
+   "count": 1,
+   "examples": [
+    "new_age:Bernhard Wagner"
+   ],
+   "raws": [
+    "Ambiance-Electronic, Funk, Hip Hop, Jazz, Rock"
+   ]
+  },
+  {
+   "fragment": "groove-lounge-chill out",
+   "count": 1,
+   "examples": [
+    "new_age:Héctor Di Donna / Di Donna"
+   ],
+   "raws": [
+    "New Age, World, Jazz, Blues, Groove-Lounge-Chill Out"
+   ]
+  },
+  {
+   "fragment": "world ethnic - electronic",
+   "count": 1,
+   "examples": [
+    "ethnic:Julio D'Escrivan"
+   ],
+   "raws": [
+    "World Ethnic - Electronic"
+   ]
+  },
+  {
+   "fragment": "jazz contemporary",
+   "count": 1,
+   "examples": [
+    "jazz:Caracas Trio::Folklore"
+   ],
+   "raws": [
+    "Jazz Contemporary"
+   ]
+  },
+  {
+   "fragment": "jazz-bolero",
+   "count": 1,
+   "examples": [
+    "jazz:Dayhan Montiel::Una Sola Toma y Punto Independent"
+   ],
+   "raws": [
+    "Jazz-Bolero"
+   ]
+  },
+  {
+   "fragment": "ska-jazz",
+   "count": 1,
+   "examples": [
+    "jazz:El Arca::Buen Viaje"
+   ],
+   "raws": [
+    "Ska-Jazz"
+   ]
+  },
+  {
+   "fragment": "jazz-avant garde",
+   "count": 1,
+   "examples": [
+    "jazz:Juanma Trujillo"
+   ],
+   "raws": [
+    "Jazz, Jazz-Avant Garde, Experimental"
+   ]
+  },
+  {
+   "fragment": "jazz - latin - world",
+   "count": 1,
+   "examples": [
+    "jazz:María Fernanda Márquez"
+   ],
+   "raws": [
+    "Jazz - Latin - World"
+   ]
+  },
+  {
+   "fragment": "jazz - latin jazz",
+   "count": 1,
+   "examples": [
+    "jazz:María Rivas"
+   ],
+   "raws": [
+    "Jazz - Latin Jazz"
+   ]
+  },
+  {
+   "fragment": "jazz-modern creative",
+   "count": 1,
+   "examples": [
+    "jazz:Mario Rodríguez::Balance Independent"
+   ],
+   "raws": [
+    "Jazz-Modern Creative"
+   ]
+  },
+  {
+   "fragment": "modern free jazz",
+   "count": 1,
+   "examples": [
+    "jazz:Melaza::Distorsionancia"
+   ],
+   "raws": [
+    "Jazz/Modern Free Jazz"
+   ]
+  },
+  {
+   "fragment": "nu-jazz",
+   "count": 1,
+   "examples": [
+    "jazz:Rolando Grooscors"
+   ],
+   "raws": [
+    "Jazz, Nu-Jazz, Fusion"
+   ]
+  },
+  {
+   "fragment": "jazz-ska fusion",
+   "count": 1,
+   "examples": [
+    "jazz:Skaracas::Jazz"
+   ],
+   "raws": [
+    "Jazz-Ska Fusion"
+   ]
+  },
+  {
+   "fragment": "latin jazz fusion",
+   "count": 1,
+   "examples": [
+    "jazz:The VNote Ensamble"
+   ],
+   "raws": [
+    "Latin Jazz Fusion"
+   ]
+  },
+  {
+   "fragment": "latin soul",
+   "count": 1,
+   "examples": [
+    "latin_pop:Caracas Soul Connection::Canciones Del Alma"
+   ],
+   "raws": [
+    "Latin Soul/Salsa"
+   ]
+  },
+  {
+   "fragment": "chachacha",
+   "count": 1,
+   "examples": [
+    "latin_pop:Conjunto Ingeniería"
+   ],
+   "raws": [
+    "Latin, Boogaloo, Chachacha, Mambo, Salsa"
+   ]
+  },
+  {
+   "fragment": "cancion latinoamericana",
+   "count": 1,
+   "examples": [
+    "latin_pop:Esperanza Márquez"
+   ],
+   "raws": [
+    "Latin-Ballad, Bolero, Cancion Latinoamericana"
+   ]
+  },
+  {
+   "fragment": "latin-guaracha-bolero",
+   "count": 1,
+   "examples": [
+    "latin_pop:Kikaro::Kikaro y Su Ritmo De Ayer"
+   ],
+   "raws": [
+    "Latin-Guaracha-Bolero"
+   ]
+  },
+  {
+   "fragment": "calypso-soca",
+   "count": 1,
+   "examples": [
+    "latin_pop:Kurare / Grupo Kurare"
+   ],
+   "raws": [
+    "Latin, Tropical, Calypso-Soca"
+   ]
+  },
+  {
+   "fragment": "flamenco fusion",
+   "count": 1,
+   "examples": [
+    "latin_pop:Los Amos Del Valle"
+   ],
+   "raws": [
+    "Latin, Flamenco Fusion, Venezuelan Folk"
+   ]
+  },
+  {
+   "fragment": "venezuelan folk",
+   "count": 1,
+   "examples": [
+    "latin_pop:Los Amos Del Valle"
+   ],
+   "raws": [
+    "Latin, Flamenco Fusion, Venezuelan Folk"
+   ]
+  },
+  {
+   "fragment": "latin: guaracha",
+   "count": 1,
+   "examples": [
+    "latin_pop:Los Blanco / Sexteto Los Blanco"
+   ],
+   "raws": [
+    "Latin: Guaracha, Cumbia, Salsa, Guaguancó, Descarga,"
+   ]
+  },
+  {
+   "fragment": "techno-merengue",
+   "count": 1,
+   "examples": [
+    "latin_pop:Natusha"
+   ],
+   "raws": [
+    "Techno-Merengue, Latin-Pop"
+   ]
+  },
+  {
+   "fragment": "vocals",
+   "count": 1,
+   "examples": [
+    "latin_pop:Oscar D' León"
+   ],
+   "raws": [
+    "Vocals & Bass"
+   ]
+  },
+  {
+   "fragment": "bass",
+   "count": 1,
+   "examples": [
+    "latin_pop:Oscar D' León"
+   ],
+   "raws": [
+    "Vocals & Bass"
+   ]
+  },
+  {
+   "fragment": "tradidional",
+   "count": 1,
+   "examples": [
+    "latin_pop:Rafael \"Pollo\" Brito"
+   ],
+   "raws": [
+    "Latin, Tradidional, World-Ethnic"
+   ]
+  },
+  {
+   "fragment": "tecno-merengue",
+   "count": 1,
+   "examples": [
+    "latin_pop:Roberto Antonio"
+   ],
+   "raws": [
+    "Latin Pop, Tecno-Merengue, Tropical"
+   ]
+  },
+  {
+   "fragment": "latin- salsa",
+   "count": 1,
+   "examples": [
+    "latin_pop:Salón Carmín::Salón Carmín"
+   ],
+   "raws": [
+    "Latin- Salsa"
+   ]
+  },
+  {
+   "fragment": "nueva cancion",
+   "count": 1,
+   "examples": [
+    "latin_pop:Soledad Bravo"
+   ],
+   "raws": [
+    "Nueva Cancion, Folk, Latin-Pop, Bolero, Salsa."
+   ]
+  },
+  {
+   "fragment": "son montuno",
+   "count": 1,
+   "examples": [
+    "latin_pop:Sonero Clásico del Caribe"
+   ],
+   "raws": [
+    "Son, Son Montuno, Bolero"
+   ]
+  },
+  {
+   "fragment": "caribe",
+   "count": 1,
+   "examples": [
+    "latin_pop:Trina Medina"
+   ],
+   "raws": [
+    "Salsa, Caribe, Latin, Latin-Pop"
+   ]
+  },
+  {
+   "fragment": "pop-soul",
+   "count": 1,
+   "examples": [
+    "latin_pop:Alfred Gómez Jr.::Simple"
+   ],
+   "raws": [
+    "Pop-Soul"
+   ]
+  },
+  {
+   "fragment": "joropo oriental",
+   "count": 1,
+   "examples": [
+    "traditional:Hernán Marín"
+   ],
+   "raws": [
+    "Traditional, Merengue & Joropo Oriental"
+   ]
+  },
+  {
+   "fragment": "llanera",
+   "count": 1,
+   "examples": [
+    "traditional:Luis Silva"
+   ],
+   "raws": [
+    "Traditional, Llanera"
+   ]
+  },
+  {
+   "fragment": "pasaje",
+   "count": 1,
+   "examples": [
+    "traditional:Reynaldo Armas - El Cardenal Sabanero"
+   ],
+   "raws": [
+    "Traditional, Joropo, Pasaje"
+   ]
+  },
+  {
+   "fragment": "celtic music",
+   "count": 1,
+   "examples": [
+    "ethnic:Gaélica"
+   ],
+   "raws": [
+    "World Ethnic, Celtic Music"
+   ]
+  },
+  {
+   "fragment": "world latin",
+   "count": 1,
+   "examples": [
+    "ethnic:Irene Farrera"
+   ],
+   "raws": [
+    "World Ethnic, World Latin"
+   ]
+  },
+  {
+   "fragment": "instrumental folk",
+   "count": 1,
+   "examples": [
+    "ethnic:Los Duaqueños"
+   ],
+   "raws": [
+    "World-Ethnic, Instrumental Folk"
+   ]
+  },
+  {
+   "fragment": "lullabies",
+   "count": 1,
+   "examples": [
+    "ethnic:Norma Madrid::Historias De Luna / Arrullos..."
+   ],
+   "raws": [
+    "World-Ethnic/Lullabies"
+   ]
+  },
+  {
+   "fragment": "progressive",
+   "count": 1,
+   "examples": [
+    "ethnic:Omar Acosta"
+   ],
+   "raws": [
+    "World, Ethnic, Classical, Progressive"
+   ]
+  },
+  {
+   "fragment": "mandolin",
+   "count": 1,
+   "examples": [
+    "ethnic:Ricardo Sandoval"
+   ],
+   "raws": [
+    "Mandolin, Bandola, Cuatro"
+   ]
+  },
+  {
+   "fragment": "bandola",
+   "count": 1,
+   "examples": [
+    "ethnic:Ricardo Sandoval"
+   ],
+   "raws": [
+    "Mandolin, Bandola, Cuatro"
+   ]
+  },
+  {
+   "fragment": "neoclassical",
+   "count": 1,
+   "examples": [
+    "ethnic:Ximena Borges"
+   ],
+   "raws": [
+    "Classical, Neoclassical, World"
+   ]
+  },
+  {
+   "fragment": "ethnic-folk",
+   "count": 1,
+   "examples": [
+    "ethnic:Aldemaro Romero::Maracaibo"
+   ],
+   "raws": [
+    "Ethnic-Folk"
+   ]
+  },
+  {
+   "fragment": "clasical",
+   "count": 1,
+   "examples": [
+    "jazz:Eric Chacón & Luis Quintero::Classical Collection Independent"
+   ],
+   "raws": [
+    "Clasical"
+   ]
+  },
+  {
+   "fragment": "improv",
+   "count": 1,
+   "examples": [
+    "traditional:Simón Díaz & Gabriela Montero::Cuando Las Ganas Se Juntan"
+   ],
+   "raws": [
+    "Improv/Traditional"
+   ]
+  },
+  {
+   "fragment": "jazz-brazil",
+   "count": 1,
+   "examples": [
+    "jazz:Ofelia del Rosal::Brasil en Blanco y Negro Independent"
+   ],
+   "raws": [
+    "Jazz-Brazil"
+   ]
+  },
+  {
+   "fragment": "groove-lounge",
+   "count": 1,
+   "examples": [
+    "new_age:Héctor Di Donna::Canary Islands Bar Groove Alcione"
+   ],
+   "raws": [
+    "Groove-Lounge"
+   ]
+  },
+  {
+   "fragment": "acid jazz",
+   "count": 1,
+   "examples": [
+    "new_age:Héctor Di Donna::Mystical Journey Musical Mind"
+   ],
+   "raws": [
+    "Chill Out/Acid Jazz"
+   ]
+  },
+  {
+   "fragment": "chill",
+   "count": 1,
+   "examples": [
+    "new_age:Héctor Di Donna::Vip Club Groove Alcione"
+   ],
+   "raws": [
+    "Groove/Chill/Electronic"
+   ]
+  },
+  {
+   "fragment": "eclectic",
+   "count": 1,
+   "examples": [
+    "new_age:Di Donna::Do What You Like... Independent"
+   ],
+   "raws": [
+    "Fusion/Eclectic"
+   ]
+  },
+  {
+   "fragment": "world-electronic",
+   "count": 1,
+   "examples": [
+    "ethnic:Julio D'Escriván::Inventos Bárbaros Bongo Musique"
+   ],
+   "raws": [
+    "World-Electronic"
+   ]
+  },
+  {
+   "fragment": "latin jazz band",
+   "count": 1,
+   "examples": [
+    "jazz:Andy Durán::Latin Jazz & More... Independent"
+   ],
+   "raws": [
+    "Latin Jazz Band"
+   ]
+  },
+  {
+   "fragment": "vzla fusion",
+   "count": 1,
+   "examples": [
+    "jazz:Aquiles Báez Trío::San Miguel Guataca"
+   ],
+   "raws": [
+    "Jazz/Vzla Fusion"
+   ]
+  },
+  {
+   "fragment": "latin-tango",
+   "count": 1,
+   "examples": [
+    "traditional:Simón Díaz::Tangos"
+   ],
+   "raws": [
+    "Latin-Tango"
+   ]
+  },
+  {
+   "fragment": "jazz-ethnic fusion",
+   "count": 1,
+   "examples": [
+    "ethnic:Carlos Capacho::Evolución"
+   ],
+   "raws": [
+    "Jazz-Ethnic Fusion"
+   ]
+  },
+  {
+   "fragment": "big band",
+   "count": 1,
+   "examples": [
+    "jazz:Saxomania::Marejada Feliz"
+   ],
+   "raws": [
+    "Latin Jazz/Big Band"
+   ]
+  },
+  {
+   "fragment": "world-instrumental",
+   "count": 1,
+   "examples": [
+    "ethnic:Félix Rodríguez::Mi Llano Tiene Un Trombón Lyric"
+   ],
+   "raws": [
+    "World-Instrumental"
+   ]
+  },
+  {
+   "fragment": "timba",
+   "count": 1,
+   "examples": [
+    "latin_pop:La Timba Loca::Más Allá de la Habana / Beyond Havana"
+   ],
+   "raws": [
+    "Timba/Salsa"
+   ]
+  },
+  {
+   "fragment": "calypso",
+   "count": 1,
+   "examples": [
+    "latin_pop:Chelique Sarabia::Presenta a Mr. Calypso"
+   ],
+   "raws": [
+    "Latin/Twist, Calypso"
+   ]
+  },
+  {
+   "fragment": "cha-cha-chá",
+   "count": 1,
+   "examples": [
+    "latin_pop:Conjunto Ingeniería::Aquí Está El Conjunto Ingeniería"
+   ],
+   "raws": [
+    "Cha-Cha-Chá, Mambo"
+   ]
+  },
+  {
+   "fragment": "latin-balad-folk",
+   "count": 1,
+   "examples": [
+    "latin_pop:Esperanza Márquez::Lo Mejor De Esperanza Márquez"
+   ],
+   "raws": [
+    "Latin-Balad-Folk"
+   ]
+  },
+  {
+   "fragment": "salsa-gaita",
+   "count": 1,
+   "examples": [
+    "latin_pop:Guaco::Guaco"
+   ],
+   "raws": [
+    "Latin/Salsa-Gaita"
+   ]
+  },
+  {
+   "fragment": "gospel",
+   "count": 1,
+   "examples": [
+    "latin_pop:José Luis Rodríguez::En Sus Pasos"
+   ],
+   "raws": [
+    "Gospel"
+   ]
+  },
+  {
+   "fragment": "aguinaldos",
+   "count": 1,
+   "examples": [
+    "traditional:María Teresa Chacín::Aguinaldos Que No Se Olvidan"
+   ],
+   "raws": [
+    "Aguinaldos"
+   ]
+  },
+  {
+   "fragment": "latin-aguinaldo-gaita",
+   "count": 1,
+   "examples": [
+    "latin_pop:Trío Venezuela::Llegaron Las Navidades"
+   ],
+   "raws": [
+    "Latin-Aguinaldo-Gaita"
+   ]
+  },
+  {
+   "fragment": "latin-boleros",
+   "count": 1,
+   "examples": [
+    "traditional:Simón Díaz::Amorosamente"
+   ],
+   "raws": [
+    "Latin-Boleros"
+   ]
+  },
+  {
+   "fragment": "world-flamenco",
+   "count": 1,
+   "examples": [
+    "ethnic:Dorian Avila::Time Traveler"
+   ],
+   "raws": [
+    "World-Flamenco"
+   ]
+  }
+ ]
+}

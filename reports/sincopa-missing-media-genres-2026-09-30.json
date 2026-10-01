@@ -1,0 +1,13 @@
+{
+  "scannedPages": 1924,
+  "missingArtists": 2279,
+  "missingAlbums": 453,
+  "imageCandidates": 1,
+  "genreEvidence": 37,
+  "skipped": {
+    "album_not_unique_missing_target": 3025,
+    "artist_not_unique_missing_target": 1494,
+    "album_year_mismatch": 9,
+    "artist_without_album_crosscheck": 32
+  }
+}

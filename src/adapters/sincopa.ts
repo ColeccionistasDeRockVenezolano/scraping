@@ -6,7 +6,9 @@ import { absoluteUrl, clean, contentImages, excerpt } from "./shared.js";
 // Este adaptador tiene su propia versión porque el HTML FrontPage de Sincopa
 // requiere reglas específicas. 1.1.0 corrige los encabezados multilínea y
 // evita confundir fichas detalladas de sencillos con la tabla de discografía.
-const SINCOPA_ADAPTER_VERSION = "1.1.0";
+// 1.2.0 abre todas las secciones del sitio (jazz, latin pop, clásica, new age,
+// tradicional, étnica): usan la misma plantilla de ficha que rock/pop.
+const SINCOPA_ADAPTER_VERSION = "1.2.0";
 
 // Sincopa es HTML de FrontPage: tablas anidadas, sin clases ni encabezados
 // semánticos. Toda su semántica está codificada en el color de fuente:
@@ -21,6 +23,14 @@ const GOLD = "#FFCC00";
 // Algunas fichas omiten el valor de «Genres:»; el emparejamiento por posición
 // acabaría leyendo la lista de instrumentos como si fuese un género.
 const INSTRUMENTS_ONLY = /^(?:vocals?|guitars?|keyboards?|pianos?|violin|percussion)(?:\s*(?:,|&|and)\s*(?:vocals?|guitars?|keyboards?|pianos?|violin|percussion))*$/iu;
+
+// Cada sección de Sincopa guarda sus fichas en un directorio propio, pero la
+// plantilla es la misma: artist_rock/ y cdinfo_rock/ (rock/pop), artists/ y
+// cdinfo/ (jazz), artists_lat/ y cdinfo_latin/ (latin pop), artist_class/ y
+// cdinfo_class/ (clásica), artist_newage/ y cdinfo_age/ (new age) y
+// artists1/, artists2/, cdinfo1/, cdinfo2/ (étnica y tradicional).
+const ARTIST_PAGE = /\/(?:artist_rock|artists\d?|artists_lat|artist_class|artist_newage)\/(?:[^?#]+\/)?[^/?#]+\.htm$/i;
+const ALBUM_PAGE = /\/(?:cdinfo_rock|cdinfo\d?|cdinfo_latin|cdinfo_class|cdinfo_age)\/(?:[^?#]+\/)?[^/?#]+\.htm$/i;
 
 function pageTitle($: CheerioAPI): string | undefined {
   const title = clean($("h1,h2,title").first().text());
@@ -313,10 +323,12 @@ function firstImageOfKind(page: CheerioAPI, url: string, kind: SincopaImageKind)
 export class SincopaAdapter implements SourceAdapter {
   readonly slug = "sincopa";
   readonly requiresBrowser = false as const;
-  // 1 vertical + índices rock_pop + 627 fichas confirmadas + árbol musicians.
-  // Frontera finita, con margen para que el techo no vuelva a truncar el
-  // corpus: el primer barrido se cortó en 700 con rock/pop al 44%.
-  readonly crawlLimit = 1200;
+  // 1 vertical + índices de las siete secciones + sus fichas de artista y de
+  // disco (medido el 2026-10-01: más de 6.000 páginas en total; latin pop y jazz
+  // cuelgan cientos de fichas de disco de cada artista) +
+  // árbol musicians. Frontera finita, con margen para que el techo no vuelva a
+  // truncar el corpus: el límite cuenta también las páginas ya en caché.
+  readonly crawlLimit = 12000;
 
   async *listPages(rootUrl: string): AsyncIterable<PageRef> {
     const root = absoluteUrl(rootUrl).replace(/\/+$/, "");
@@ -328,12 +340,12 @@ export class SincopaAdapter implements SourceAdapter {
   isAllowedUrl(url: string, rootUrl: string): boolean {
     const candidate = new URL(url); const root = new URL(absoluteUrl(rootUrl));
     if (candidate.origin !== root.origin) return false;
-    // Alcance documentado en SOURCES.md §3: rock/pop más el árbol `musicians`
-    // (páginas de persona por instrumento, la única vía de esta fuente hacia
-    // `persons`). Los demás géneros del sitio —jazz, classic, new_age,
-    // latin_pop, traditional, ethnic— quedan fuera: en el primer barrido se
-    // llevaron 369 de las 700 páginas del presupuesto sin aportar al foco.
-    return /\/(?:vertical\.htm|(?:rock_pop|musicians)\/[^?#]*|artist_rock\/[^?#]+\.htm|cdinfo_rock\/[^?#]+\.htm)$/i.test(candidate.pathname);
+    // Alcance documentado en SOURCES.md §3: todas las secciones del sitio. Es un
+    // archivo de música venezolana, así que cualquier artista con ficha propia
+    // entra; el árbol `musicians` (páginas de persona por instrumento) es la
+    // vía hacia `persons`. Hasta la 1.1.0 solo se leía rock/pop porque el foco
+    // era el rock; con el catálogo abierto a todos los géneros ya no se recorta.
+    return /\/(?:vertical\.htm|(?:rock_pop|jazz|latin_pop|classic|new_age|traditional|ethnic|musicians)\/[^?#]*|(?:artist_rock|artists\d?|artists_lat|artist_class|artist_newage|cdinfo_rock|cdinfo\d?|cdinfo_latin|cdinfo_class|cdinfo_age)\/[^?#]+\.htm)$/i.test(candidate.pathname);
   }
 
   discover(page: StoredPage): PageRef[] {
@@ -352,8 +364,8 @@ export class SincopaAdapter implements SourceAdapter {
 
   extract(page: CheerioAPI, url: string): RawRecord[] {
     const pathname = new URL(url).pathname;
-    const records = /\/artist_rock\//i.test(pathname) ? this.extractArtist(page, url)
-      : /\/cdinfo_rock\//i.test(pathname) ? this.extractAlbum(page, url)
+    const records = ARTIST_PAGE.test(pathname) ? this.extractArtist(page, url)
+      : ALBUM_PAGE.test(pathname) ? this.extractAlbum(page, url)
       : [];
     // Red de seguridad: ninguna identidad sin letras ni dígitos sale de aquí.
     return records.filter((record) => named(record.identity));

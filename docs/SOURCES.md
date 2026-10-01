@@ -344,7 +344,7 @@ de la cabecera están vacías). 11 filas de datos.
 | 4 | Hippito y Sus Chatarritas | 200 | 200 | UTF-8 | no | Atom/JSON Blogger | **1.063 entradas** |
 | 5 | RHV Blogspot | 200 | 200 | UTF-8 | no | Atom/JSON Blogger | **264 entradas** |
 | 6 | Rock Hecho En Venezuela | 200 | 200 | UTF-8 | no | WP REST `/wp-json` | **4 posts + 6 páginas** |
-| 7 | Sincopa | 200 | **404** | **windows-1252** | no | ninguno (HTML estático) | **337 artistas + 290 fichas** (rock/pop) |
+| 7 | Sincopa | 200 | **404** | **windows-1252** | no | ninguno (HTML estático) | **5.772 páginas** en las siete secciones (medido 2026-10-01; antes solo rock/pop: 337 artistas + 290 fichas en el índice) |
 | 8 | CRV WordPress | 200 | 200 | UTF-8 | no | API pública WordPress.com | **92 posts** |
 | 9 | El Punk En Venezuela | 200 | 200 | UTF-8 | no | WP REST `/wp-json` | **0 posts / 17 páginas** |
 | 10 | Deska | no consumido | 200, `Disallow: /` | — | — | ninguno autorizado | `limited/disabled` |
@@ -484,6 +484,24 @@ Rock De Vzla, Hippito y Sus Chatarritas, RHV Blogspot)
   `latin_pop/`, `traditional/`, `ethnic/`, más
   `musicians/musicians_index.htm` (índice de músicos) y
   `rock_pop/rock_compilations_index.htm`.
+- **[CONFIRMADO · 2026-10-01]** **Alcance ampliado a todas las secciones.** Hasta
+  la 1.1.0 el adapter leía solo rock/pop y dejaba fuera jazz, latin pop, clásica,
+  new age, tradicional y étnica; con el catálogo abierto a todos los géneros ya
+  no se recorta (un artista con ficha en Sincopa entra: es un archivo de música
+  venezolana). Todas usan la **misma plantilla de ficha** y cambian solo de
+  directorio: `artist_rock/`·`cdinfo_rock/` (rock/pop), `artists/`·`cdinfo/`
+  (jazz), `artists_lat/`·`cdinfo_latin/` (latin pop), `artist_class/`·
+  `cdinfo_class/` (clásica), `artist_newage/`·`cdinfo_age/` (new age) y
+  `artists1/`·`artists2/`·`cdinfo1/`·`cdinfo2/` (étnica y tradicional). Latin pop
+  y tradicional cuelgan las fichas de disco en **una subcarpeta por artista**
+  (`cdinfo_latin/<artista>/…`). El índice de cada sección enumera solo una parte:
+  las fichas de disco se descubren desde la ficha del artista, por eso el
+  rastreo mide 5.772 páginas (rock/pop 2.108 · latin pop 1.243 · tradicional 824
+  · jazz 702 · étnica 442 · clásica 240 · new age 130 · musicians 81). Los 13
+  enlaces rotos (404) son de la propia fuente (índices de jazz por año, rutas
+  de clásica y tradicional mal armadas). `rock_compilations_index` y las
+  compilaciones (`compilations1/`) siguen sin emitir registros: un recopilatorio
+  de Various Artists no es señal venezolana por sí solo.
 - **[CONFIRMADO]** El índice rock/pop contiene **667 enlaces**: 337 a fichas
   de artista (`artist_rock/<slug>.htm`) y 290 a fichas de disco
   (`cdinfo_rock/<slug>_<album>.htm`).
