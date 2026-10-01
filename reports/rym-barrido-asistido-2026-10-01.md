@@ -9,7 +9,7 @@ nombre de ciudad → siguiente página pendiente; ✓ verde al capturarse.
 
 ## Cosecha
 
-- **549 páginas** únicas cargadas y capturadas (25.210 filas de artista), **145 vistas de
+- **553 páginas** únicas cargadas y capturadas (~25.300 filas de artista), **146 vistas de
   ubicación**, **2.472 artistas únicos** (clave = URL `/artist/…`).
 - Cada fila trae snippet de detalle: `Born…/Died…/Members…` (p.ej. "Born12 March 1928,
   Valencia, Carabobo, VenezuelaDied15 September 2007 // Caracas").
@@ -42,6 +42,14 @@ devuelven el mismo pool regional**. Verificado por href (no por nombre):
   Coro 166, Cumaná 127, Punto Fijo 103, Mérida 97, Puerto Ordaz 44, Maturín 53, Tucupita 63…
 - Variantes duplicadas por encoding/estado (Falcon/Falcón, Anzoategui/Anzoátegui,
   Merida/Mérida, Tachira/Táchira, Ciudad Bolívar ×3 estados) → listas idénticas.
+
+### Cierre de rezagadas (2ª pasada)
+
+8 localidades quedaron pendientes tras la 1ª pasada; en la 2ª (tablero reducido) solo
+**Mariara (Carabobo)** existe en RYM: pool de 1.708 → 3 págs capturadas, **0 artistas nuevos**
+(era el pool grande ya cubierto). Las otras 7 — Güiria, Santa Bárbara del Zulia, San Francisco
+(Zulia), El Vigía, Zaraza, Valle de la Pascua y Machiques — devuelven **«Error»** (RYM no tiene
+listado para esos slugs; también probado vía buscador). **Cobertura RYM cerrada.**
 
 ## Cruce contra el catálogo (2.801 fichas de artista · 11.728 personas al corte)
 
