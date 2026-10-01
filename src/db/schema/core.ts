@@ -61,6 +61,11 @@ export const artists = pgTable("artists", {
   formedYear: smallint("formed_year"),
   disbandedYear: smallint("disbanded_year"),
   notes: text("notes"),
+  // 0033 (captura Metal Archives, 2026-10-01): campos nuevos al core.
+  status: varchar("status", { length: 20 }), // active | split_up | on_hold | unknown | changed_name
+  themes: text("themes"),
+  yearsActive: text("years_active"),
+  logoUrl: text("logo_url"),
   createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
   updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),
 });
@@ -80,6 +85,12 @@ export const persons = pgTable("persons", {
   updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),
   /** NULL = sin dato; true = fallecido/a (migración 0032). */
   isDeceased: boolean("is_deceased"),
+  // 0033 (captura Metal Archives, 2026-10-01): campos nuevos al core.
+  realName: varchar("real_name", { length: 200 }),
+  birthCity: varchar("birth_city", { length: 120 }),
+  deathCause: text("death_cause"),
+  trivia: text("trivia"),
+  gender: varchar("gender", { length: 10 }), // female | male | unknown
 });
 
 export const artistMembers = pgTable("artist_members", {
@@ -131,6 +142,10 @@ export const albums = pgTable("albums", {
   wordpressUrl: text("wordpress_url"),
   wordpressStatus: publicationStatusEnum("wordpress_status").notNull().default("unknown"),
   notes: text("notes"),
+  // 0033 (captura Metal Archives, 2026-10-01): campos nuevos al core.
+  releaseDateText: varchar("release_date_text", { length: 40 }), // literal de la fuente («2006», «March 15th, 1993»)
+  catalogId: varchar("catalog_id", { length: 80 }),
+  mediaFormat: varchar("media_format", { length: 50 }), // CD | MC | LP | Digital…
   createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
   updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),
 });
