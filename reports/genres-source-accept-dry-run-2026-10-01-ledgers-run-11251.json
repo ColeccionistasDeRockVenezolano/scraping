@@ -1,0 +1,109 @@
+{
+  "mode": "dry-run",
+  "runId": 11251,
+  "candidates": 7,
+  "accepted": [
+    {
+      "caseId": "wikipedia-artist-3242",
+      "title": "Cuásar",
+      "source": "wikipedia",
+      "raw": [
+        "Indie rock",
+        "Rock alternativo"
+      ],
+      "primary": "indie-rock",
+      "secondaries": [
+        "rock-alternativo"
+      ]
+    },
+    {
+      "caseId": "wikipedia-artist-3243",
+      "title": "GeneraSion",
+      "source": "wikipedia",
+      "raw": [
+        "Rock cristiano",
+        "Rock en español",
+        "Hard Rock",
+        "Rock alternativo",
+        "Indie rock"
+      ],
+      "primary": "rock-latino",
+      "secondaries": [
+        "hard-rock",
+        "rock-alternativo",
+        "indie-rock"
+      ]
+    },
+    {
+      "caseId": "wikipedia-artist-3244",
+      "title": "La Vesper",
+      "source": "wikipedia",
+      "raw": [
+        "Rock",
+        "Pop Rock",
+        "Rock alternativo"
+      ],
+      "primary": "pop-rock",
+      "secondaries": [
+        "rock-alternativo"
+      ]
+    },
+    {
+      "caseId": "wikipedia-artist-3245",
+      "title": "Proyecto Fenyx",
+      "source": "wikipedia",
+      "raw": [
+        "Rock",
+        "Heavy metal",
+        "Epic Metal"
+      ],
+      "primary": "rock",
+      "secondaries": [
+        "heavy-metal"
+      ]
+    },
+    {
+      "caseId": "wikipedia-artist-3246",
+      "title": "«R»",
+      "source": "wikipedia",
+      "raw": [
+        "Rock",
+        "Pop",
+        "electrónico",
+        "Pop rock"
+      ],
+      "primary": "pop-rock",
+      "secondaries": [
+        "pop"
+      ]
+    },
+    {
+      "caseId": "wikipedia-artist-3247",
+      "title": "Rolling Band",
+      "source": "wikipedia",
+      "raw": [
+        "Rock and Roll"
+      ],
+      "primary": "rock-and-roll",
+      "secondaries": []
+    },
+    {
+      "caseId": "wikipedia-artist-3248",
+      "title": "Sexeappeal",
+      "source": "wikipedia",
+      "raw": [
+        "Rock",
+        "Pop",
+        "Pop rock"
+      ],
+      "primary": "pop-rock",
+      "secondaries": [
+        "pop"
+      ]
+    }
+  ],
+  "alreadyClassified": [],
+  "unresolved": [],
+  "errors": [],
+  "moreSpecificExists": []
+}

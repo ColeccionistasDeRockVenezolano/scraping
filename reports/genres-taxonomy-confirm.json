@@ -1,106 +1,24 @@
 {
-  "actor": "Brian Cesín",
-  "reason": "Alta aprobada por Brian (2026-09-27) según su familia: música infantil (pop), psychobilly (punk) y alias de fuentes (Power Progressive Metal, Psychedelia, Alterlatino, Indie Tropical, Patchanka, heavy metal progresivo sinfónico)",
+  "actor": "hermes",
+  "reason": "Cierre cola genre_unknown 2026-10-01: «shred» y «rac» no son géneros (descriptores) en compuestos de Metal Archives",
   "mode": "confirm",
-  "runId": 10385,
+  "runId": 11029,
   "operations": [
     {
-      "op": "create_genre",
-      "slug": "musica-infantil",
-      "name": "Música infantil",
-      "level": "genre",
-      "parentSlug": "pop",
-      "description": null
-    },
-    {
-      "op": "create_genre",
-      "slug": "psychobilly",
-      "name": "Psychobilly",
-      "level": "genre",
-      "parentSlug": "punk",
-      "description": null
+      "op": "set_alias",
+      "alias": "rac",
+      "target": "not_a_genre",
+      "notes": "no es un género: descriptor"
     },
     {
       "op": "set_alias",
-      "alias": "alterlatino",
-      "target": "rock-latino",
-      "notes": "equivalencia aprobada"
-    },
-    {
-      "op": "set_alias",
-      "alias": "alternativo latino",
-      "target": "rock-latino",
-      "notes": "equivalencia aprobada"
-    },
-    {
-      "op": "set_alias",
-      "alias": "children",
-      "target": "musica-infantil",
-      "notes": "equivalencia aprobada"
-    },
-    {
-      "op": "set_alias",
-      "alias": "childrens music",
-      "target": "musica-infantil",
-      "notes": "equivalencia aprobada"
-    },
-    {
-      "op": "set_alias",
-      "alias": "heavy metal progresivo sinfonico",
-      "target": "metal-progresivo",
-      "notes": "equivalencia aprobada"
-    },
-    {
-      "op": "set_alias",
-      "alias": "indie tropical",
-      "target": "musica-tropical",
-      "notes": "equivalencia aprobada"
-    },
-    {
-      "op": "set_alias",
-      "alias": "infantil",
-      "target": "musica-infantil",
-      "notes": "equivalencia aprobada"
-    },
-    {
-      "op": "set_alias",
-      "alias": "latin alternative",
-      "target": "rock-latino",
-      "notes": "equivalencia aprobada"
-    },
-    {
-      "op": "set_alias",
-      "alias": "musica infantil",
-      "target": "musica-infantil",
-      "notes": "nombre del género"
-    },
-    {
-      "op": "set_alias",
-      "alias": "patchanka",
-      "target": "fusion-latina",
-      "notes": "equivalencia aprobada"
-    },
-    {
-      "op": "set_alias",
-      "alias": "power progressive metal",
-      "target": "power-metal-progresivo",
-      "notes": "equivalencia aprobada"
-    },
-    {
-      "op": "set_alias",
-      "alias": "psychedelia",
-      "target": "rock-psicodelico",
-      "notes": "equivalencia aprobada"
-    },
-    {
-      "op": "set_alias",
-      "alias": "psychobilly",
-      "target": "psychobilly",
-      "notes": "nombre del género"
+      "alias": "shred",
+      "target": "not_a_genre",
+      "notes": "no es un género: descriptor"
     }
   ],
   "affected": {
-    "artist": 0,
+    "artist": 2,
     "album": 0
   },
   "humanNotices": 0,

@@ -12,7 +12,8 @@
     "2026-09-27 (Brian): Pop punk, Post-grunge, Rap experimental, Death groove metal e Instrumental (familia); «metal hardcore» = Metalcore, «electro rock» = Rock electrónico y «Rap-Core» = Rap metal como alias (ya existían).",
     "2026-09-27 (Brian): Spoken word (familia), Música tropical (Fusión latina) y Cantautor (Folk, alias singer/songwriter), pedidos por las fichas de Bandcamp e iTunes que no resolvían.",
     "2026-09-27 (Brian, 2.ª tanda): Guarorock, Barquisimetal, Dream pop, Dubstep, Aggrotech, Bossa nova, Jazz rap y R&B; «indie» suelto = Indie rock (alias). «Fusión» suelta NO se asigna: en las fuentes acompaña a «Jazz Fusion» y a veces es latina; es ambigua.",
-    "2026-10-01 hermes: +36 aliases (fragmentos MA early/later y compuestos) +2 géneros (drone-metal, horror-punk) para cerrar la cola genre_unknown."
+    "2026-10-01 hermes: +36 aliases (fragmentos MA early/later y compuestos) +2 géneros (drone-metal, horror-punk) para cerrar la cola genre_unknown.",
+    "2026-10-01 hermes: «shred» y «rac» a not_a_genre (descriptor) — cierre de la cola genre_unknown (compuestos de Metal Archives)."
   ],
   "families": [
     {
@@ -1968,7 +1969,9 @@
       "Contemporary",
       "Fusion",
       "Minimal",
-      "Tribal"
+      "Tribal",
+      "shred",
+      "rac"
     ],
     "instrumento": [
       "Cuatro",
