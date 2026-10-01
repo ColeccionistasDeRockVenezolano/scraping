@@ -1,0 +1,199 @@
+{
+  "runId": 10866,
+  "report": [
+    {
+      "step": "merge",
+      "keep": "Sol Nocturno (870)",
+      "drop": "Gorepriest (804)",
+      "kind": "artist",
+      "keepId": 870,
+      "dropId": 804,
+      "auditId": 283205,
+      "moved": 71,
+      "discarded": 0,
+      "filled": [
+        "themes"
+      ],
+      "fieldsCorrected": [
+        "origin_city",
+        "formed_year"
+      ],
+      "preserved": [
+        "biography",
+        "notes"
+      ],
+      "rewritePending": true,
+      "creditsMerged": 0,
+      "membershipsMerged": 0
+    },
+    {
+      "step": "merge",
+      "keep": "Kolman (332)",
+      "drop": "Abraxas (651)",
+      "kind": "artist",
+      "keepId": 332,
+      "dropId": 651,
+      "auditId": 283208,
+      "moved": 47,
+      "discarded": 0,
+      "filled": [],
+      "fieldsCorrected": [
+        "origin_city",
+        "formed_year"
+      ],
+      "preserved": [
+        "notes"
+      ],
+      "rewritePending": false,
+      "creditsMerged": 0,
+      "membershipsMerged": 0
+    },
+    {
+      "step": "merge",
+      "keep": "Cthonica (672)",
+      "drop": "Okkvlt (875)",
+      "kind": "artist",
+      "keepId": 672,
+      "dropId": 875,
+      "auditId": 283210,
+      "moved": 34,
+      "discarded": 0,
+      "filled": [],
+      "fieldsCorrected": [
+        "formed_year"
+      ],
+      "preserved": [
+        "biography",
+        "notes"
+      ],
+      "rewritePending": true,
+      "creditsMerged": 0,
+      "membershipsMerged": 0
+    },
+    {
+      "step": "merge",
+      "keep": "Exordium Profanum (661)",
+      "drop": "Hodah (629)",
+      "kind": "artist",
+      "keepId": 661,
+      "dropId": 629,
+      "auditId": 283212,
+      "moved": 64,
+      "discarded": 0,
+      "filled": [
+        "picture_url",
+        "formed_year",
+        "status",
+        "themes",
+        "years_active",
+        "logo_url"
+      ],
+      "fieldsCorrected": [
+        "origin_city"
+      ],
+      "preserved": [
+        "biography",
+        "notes"
+      ],
+      "rewritePending": true,
+      "creditsMerged": 0,
+      "membershipsMerged": 0
+    },
+    {
+      "step": "merge",
+      "keep": "Dreams of Tears (678)",
+      "drop": "Lake of Tears (840)",
+      "kind": "artist",
+      "keepId": 678,
+      "dropId": 840,
+      "auditId": 283215,
+      "moved": 50,
+      "discarded": 0,
+      "filled": [
+        "disbanded_year"
+      ],
+      "fieldsCorrected": [
+        "formed_year"
+      ],
+      "preserved": [
+        "biography",
+        "notes"
+      ],
+      "rewritePending": true,
+      "creditsMerged": 0,
+      "membershipsMerged": 0
+    },
+    {
+      "step": "merge",
+      "keep": "Salpachino (216)",
+      "drop": "Pzoom (202)",
+      "kind": "artist",
+      "keepId": 216,
+      "dropId": 202,
+      "auditId": 283216,
+      "moved": 61,
+      "discarded": 0,
+      "filled": [],
+      "fieldsCorrected": [],
+      "preserved": [
+        "biography"
+      ],
+      "rewritePending": true,
+      "creditsMerged": 0,
+      "membershipsMerged": 0
+    },
+    {
+      "step": "merge",
+      "keep": "PAN (187)",
+      "drop": "Superglicerina (233)",
+      "kind": "artist",
+      "keepId": 187,
+      "dropId": 233,
+      "auditId": 283217,
+      "moved": 29,
+      "discarded": 0,
+      "filled": [],
+      "fieldsCorrected": [],
+      "preserved": [
+        "biography"
+      ],
+      "rewritePending": true,
+      "creditsMerged": 0,
+      "membershipsMerged": 0
+    },
+    {
+      "step": "abraxas-1987",
+      "id": 3228
+    },
+    {
+      "step": "abraxas-1987-album",
+      "id": 5515,
+      "title": "Tan Solo Una Parte",
+      "year": 1989
+    },
+    {
+      "step": "abraxas-1987-album",
+      "id": 5516,
+      "title": "Entre Dos Mundos",
+      "year": 1994
+    },
+    {
+      "step": "alias",
+      "artist": 678,
+      "id": 4151,
+      "entityId": 678,
+      "alias": "Abortion",
+      "aliasType": "former_name",
+      "isPrimary": false
+    },
+    {
+      "step": "alias",
+      "artist": 678,
+      "id": 4152,
+      "entityId": 678,
+      "alias": "Gyroscope",
+      "aliasType": "former_name",
+      "isPrimary": false
+    }
+  ]
+}

@@ -1,0 +1,1018 @@
+{
+  "runId": 10896,
+  "confirm": true,
+  "moved": 63,
+  "mergedCredits": 5,
+  "skipped": 0,
+  "details": [
+    {
+      "table": "album_credits",
+      "creditId": 17490,
+      "parentId": 134,
+      "parent": "Muerte",
+      "creditType": "writer",
+      "role": "all lyrics",
+      "from": {
+        "artistId": 57,
+        "name": "Canserbero"
+      },
+      "to": {
+        "personId": 411,
+        "name": "Tirone González"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 17494,
+      "parentId": 135,
+      "parent": "Vida",
+      "creditType": "writer",
+      "role": "all lyrics",
+      "from": {
+        "artistId": 57,
+        "name": "Canserbero"
+      },
+      "to": {
+        "personId": 411,
+        "name": "Tirone González"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 933,
+      "parentId": 455,
+      "parent": "No Voy Sin Ti",
+      "creditType": "producer",
+      "role": "produced",
+      "from": {
+        "artistId": 120,
+        "name": "Juan Carlos Torrealba"
+      },
+      "to": {
+        "personId": 2390,
+        "name": "Juan Carlos Torrealba"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 1286,
+      "parentId": 455,
+      "parent": "No Voy Sin Ti",
+      "creditType": "musician",
+      "role": "Piano, Harp & Cuatro",
+      "from": {
+        "artistId": 120,
+        "name": "Juan Carlos Torrealba"
+      },
+      "to": {
+        "personId": 2390,
+        "name": "Juan Carlos Torrealba"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 17848,
+      "parentId": 455,
+      "parent": "No Voy Sin Ti",
+      "creditType": "producer",
+      "role": "executive production",
+      "from": {
+        "artistId": 120,
+        "name": "Juan Carlos Torrealba"
+      },
+      "to": {
+        "personId": 2390,
+        "name": "Juan Carlos Torrealba"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 17849,
+      "parentId": 455,
+      "parent": "No Voy Sin Ti",
+      "creditType": "other",
+      "role": "general direction",
+      "from": {
+        "artistId": 120,
+        "name": "Juan Carlos Torrealba"
+      },
+      "to": {
+        "personId": 2390,
+        "name": "Juan Carlos Torrealba"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 199,
+      "parentId": 474,
+      "parent": "EÚS31: El Último Sentimiento Eléctrico",
+      "creditType": "musician",
+      "role": "Lead Vocals & Minor Percussion",
+      "from": {
+        "artistId": 189,
+        "name": "Pablo Dagnino"
+      },
+      "to": {
+        "personId": 607,
+        "name": "Pablo Dagnino"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 2007,
+      "parentId": 474,
+      "parent": "EÚS31: El Último Sentimiento Eléctrico",
+      "creditType": "producer",
+      "role": "produced",
+      "from": {
+        "artistId": 189,
+        "name": "Pablo Dagnino"
+      },
+      "to": {
+        "personId": 607,
+        "name": "Pablo Dagnino"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 3847,
+      "parentId": 473,
+      "parent": "Biorritmos",
+      "creditType": "musician",
+      "role": "Vocals, Percussion, Piano & Programming",
+      "from": {
+        "artistId": 189,
+        "name": "Pablo Dagnino"
+      },
+      "to": {
+        "personId": 607,
+        "name": "Pablo Dagnino"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 4793,
+      "parentId": 565,
+      "parent": "EÚS: El Último Sentimiento Unplugged",
+      "creditType": "producer",
+      "role": "produced",
+      "from": {
+        "artistId": 189,
+        "name": "Pablo Dagnino"
+      },
+      "to": {
+        "personId": 607,
+        "name": "Pablo Dagnino"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 5992,
+      "parentId": 565,
+      "parent": "EÚS: El Último Sentimiento Unplugged",
+      "creditType": "musician",
+      "role": "Lead Vocals & Minor Percussion",
+      "from": {
+        "artistId": 189,
+        "name": "Pablo Dagnino"
+      },
+      "to": {
+        "personId": 607,
+        "name": "Pablo Dagnino"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 19037,
+      "parentId": 403,
+      "parent": "El Proceso Del Deseo",
+      "creditType": "composer",
+      "role": "performed and composed",
+      "from": {
+        "artistId": 258,
+        "name": "Vinicio Adames"
+      },
+      "to": {
+        "personId": 13362,
+        "name": "Vinicio Adames"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 5767,
+      "parentId": 497,
+      "parent": "La + De Las Partes",
+      "creditType": "musician",
+      "role": "Piano, Keyboards & Programming",
+      "from": {
+        "artistId": 263,
+        "name": "Willie Croes"
+      },
+      "to": {
+        "personId": 1291,
+        "name": "Willie Croes"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 6445,
+      "parentId": 497,
+      "parent": "La + De Las Partes",
+      "creditType": "producer",
+      "role": "produced",
+      "from": {
+        "artistId": 263,
+        "name": "Willie Croes"
+      },
+      "to": {
+        "personId": 1291,
+        "name": "Willie Croes"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13521,
+      "parentId": 28277,
+      "parent": "El cordonazo",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 1387,
+        "name": "Alexis Rossell"
+      },
+      "to": {
+        "personId": 7209,
+        "name": "Alexis Rossell"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 12302,
+      "parentId": 27282,
+      "parent": "Presiento",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 1889,
+        "name": "Carlos Mata"
+      },
+      "to": {
+        "personId": 6612,
+        "name": "Carlos Mata"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13560,
+      "parentId": 28389,
+      "parent": "Woman, Woman",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 1475,
+        "name": "Carlos Morean"
+      },
+      "to": {
+        "personId": 1287,
+        "name": "Carlos Moreán"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13619,
+      "parentId": 29817,
+      "parent": "Por cuanto tiempo te amaré",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 1475,
+        "name": "Carlos Morean"
+      },
+      "to": {
+        "personId": 1287,
+        "name": "Carlos Moreán"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13621,
+      "parentId": 29825,
+      "parent": "No dejes que el sol te vea llorar",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 1475,
+        "name": "Carlos Morean"
+      },
+      "to": {
+        "personId": 1287,
+        "name": "Carlos Moreán"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 16905,
+      "parentId": 4913,
+      "parent": "Voces Silenciosas",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 1475,
+        "name": "Carlos Morean"
+      },
+      "to": {
+        "personId": 1287,
+        "name": "Carlos Moreán"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 16953,
+      "parentId": 3005,
+      "parent": "Por Cuanto Tiempo Te Amaré",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 1475,
+        "name": "Carlos Morean"
+      },
+      "to": {
+        "personId": 1287,
+        "name": "Carlos Moreán"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 16957,
+      "parentId": 3043,
+      "parent": "No Dejes Que El Sol Te Vea Llorar",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 1475,
+        "name": "Carlos Morean"
+      },
+      "to": {
+        "personId": 1287,
+        "name": "Carlos Moreán"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 16965,
+      "parentId": 900,
+      "parent": "Woman, Woman",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 1475,
+        "name": "Carlos Morean"
+      },
+      "to": {
+        "personId": 1287,
+        "name": "Carlos Moreán"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 16989,
+      "parentId": 616,
+      "parent": "Everything's Alright",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 1475,
+        "name": "Carlos Morean"
+      },
+      "to": {
+        "personId": 1287,
+        "name": "Carlos Moreán"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 16990,
+      "parentId": 622,
+      "parent": "Sweet Sweet Baby (Since You've Been Gone)",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 1475,
+        "name": "Carlos Morean"
+      },
+      "to": {
+        "personId": 1287,
+        "name": "Carlos Moreán"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 16991,
+      "parentId": 628,
+      "parent": "I Got The Feeling",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 1475,
+        "name": "Carlos Morean"
+      },
+      "to": {
+        "personId": 1287,
+        "name": "Carlos Moreán"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 17079,
+      "parentId": 2765,
+      "parent": "Al Maestro Con Cariño",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 1475,
+        "name": "Carlos Morean"
+      },
+      "to": {
+        "personId": 1287,
+        "name": "Carlos Moreán"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13600,
+      "parentId": 24896,
+      "parent": "Como Siempre",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 1890,
+        "name": "Carlos Moreno"
+      },
+      "to": {
+        "personId": 2378,
+        "name": "Carlos Moreno"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13607,
+      "parentId": 29780,
+      "parent": "Yo trataré de ayudarte",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 1890,
+        "name": "Carlos Moreno"
+      },
+      "to": {
+        "personId": 2378,
+        "name": "Carlos Moreno"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13608,
+      "parentId": 29778,
+      "parent": "Cuando me quieras / Como un loco / Huellas",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 1890,
+        "name": "Carlos Moreno"
+      },
+      "to": {
+        "personId": 2378,
+        "name": "Carlos Moreno"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13609,
+      "parentId": 29781,
+      "parent": "Eres tu Jesús / La Bamba",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 1890,
+        "name": "Carlos Moreno"
+      },
+      "to": {
+        "personId": 2378,
+        "name": "Carlos Moreno"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13610,
+      "parentId": 29784,
+      "parent": "El último beso / Detén la noche / Un rayo de sol / Con una pequeña ayuda de mis amigos",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 1890,
+        "name": "Carlos Moreno"
+      },
+      "to": {
+        "personId": 2378,
+        "name": "Carlos Moreno"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13611,
+      "parentId": 29782,
+      "parent": "La guerra cruel",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 1890,
+        "name": "Carlos Moreno"
+      },
+      "to": {
+        "personId": 2378,
+        "name": "Carlos Moreno"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13612,
+      "parentId": 29783,
+      "parent": "Rock de la prisión",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 1890,
+        "name": "Carlos Moreno"
+      },
+      "to": {
+        "personId": 2378,
+        "name": "Carlos Moreno"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 9981,
+      "parentId": 25760,
+      "parent": "Voy Caminando Feliz",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 1911,
+        "name": "Daniel Grau"
+      },
+      "to": {
+        "personId": 3100,
+        "name": "Daniel Grau"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13520,
+      "parentId": 28276,
+      "parent": "Disco Fantasy",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 1911,
+        "name": "Daniel Grau"
+      },
+      "to": {
+        "personId": 3100,
+        "name": "Daniel Grau"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13712,
+      "parentId": 30742,
+      "parent": "Dejando Volar el Pensamiento",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 1911,
+        "name": "Daniel Grau"
+      },
+      "to": {
+        "personId": 3100,
+        "name": "Daniel Grau"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13713,
+      "parentId": 30743,
+      "parent": "Delirio en Fa Menor",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 1911,
+        "name": "Daniel Grau"
+      },
+      "to": {
+        "personId": 3100,
+        "name": "Daniel Grau"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13567,
+      "parentId": 28414,
+      "parent": "Un día domingo",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 1923,
+        "name": "Edgar Alexander"
+      },
+      "to": {
+        "personId": 4026,
+        "name": "Edgar Alexander"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13570,
+      "parentId": 24824,
+      "parent": "Por Ti Mujer",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 1923,
+        "name": "Edgar Alexander"
+      },
+      "to": {
+        "personId": 4026,
+        "name": "Edgar Alexander"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13586,
+      "parentId": 29237,
+      "parent": "Lo que quiero",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 1923,
+        "name": "Edgar Alexander"
+      },
+      "to": {
+        "personId": 4026,
+        "name": "Edgar Alexander"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13593,
+      "parentId": 29255,
+      "parent": "Hoy",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 1923,
+        "name": "Edgar Alexander"
+      },
+      "to": {
+        "personId": 4026,
+        "name": "Edgar Alexander"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13595,
+      "parentId": 29351,
+      "parent": "Buenos días sol",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 1923,
+        "name": "Edgar Alexander"
+      },
+      "to": {
+        "personId": 4026,
+        "name": "Edgar Alexander"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13679,
+      "parentId": 30432,
+      "parent": "Hoy",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 1923,
+        "name": "Edgar Alexander"
+      },
+      "to": {
+        "personId": 4026,
+        "name": "Edgar Alexander"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13695,
+      "parentId": 30654,
+      "parent": "Soy poeta",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 1923,
+        "name": "Edgar Alexander"
+      },
+      "to": {
+        "personId": 4026,
+        "name": "Edgar Alexander"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 17147,
+      "parentId": 3911,
+      "parent": "El Cisne",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 1923,
+        "name": "Edgar Alexander"
+      },
+      "to": {
+        "personId": 4026,
+        "name": "Edgar Alexander"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13033,
+      "parentId": 27898,
+      "parent": "Apóyate en mi (Frank Quintero)",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 1722,
+        "name": "Frank Quintero"
+      },
+      "to": {
+        "personId": 3346,
+        "name": "Frank Quintero"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 17269,
+      "parentId": 4376,
+      "parent": "Promesas",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 1722,
+        "name": "Frank Quintero"
+      },
+      "to": {
+        "personId": 3346,
+        "name": "Frank Quintero"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18914,
+      "parentId": 34996,
+      "parent": "Promesas",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 1722,
+        "name": "Frank Quintero"
+      },
+      "to": {
+        "personId": 3346,
+        "name": "Frank Quintero"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13529,
+      "parentId": 28292,
+      "parent": "Aleluya No. 2",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 1952,
+        "name": "Germán Freytes"
+      },
+      "to": {
+        "personId": 13361,
+        "name": "Germán Freytes"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13532,
+      "parentId": 28298,
+      "parent": "¿De qué color es la piel de Dios?",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 1952,
+        "name": "Germán Freytes"
+      },
+      "to": {
+        "personId": 13361,
+        "name": "Germán Freytes"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 17076,
+      "parentId": 2736,
+      "parent": "De Que Color Es La Piel De Dios",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 1952,
+        "name": "Germán Freytes"
+      },
+      "to": {
+        "personId": 13361,
+        "name": "Germán Freytes"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 16031,
+      "parentId": 3906,
+      "parent": "No Voy Sin Ti",
+      "creditType": "composer",
+      "role": "composed",
+      "from": {
+        "artistId": 120,
+        "name": "Juan Carlos Torrealba"
+      },
+      "to": {
+        "personId": 2390,
+        "name": "Juan Carlos Torrealba"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 16033,
+      "parentId": 3899,
+      "parent": "Mibelis",
+      "creditType": "composer",
+      "role": "composed",
+      "from": {
+        "artistId": 120,
+        "name": "Juan Carlos Torrealba"
+      },
+      "to": {
+        "personId": 2390,
+        "name": "Juan Carlos Torrealba"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 16034,
+      "parentId": 3919,
+      "parent": "Aldebaran",
+      "creditType": "composer",
+      "role": "composed",
+      "from": {
+        "artistId": 120,
+        "name": "Juan Carlos Torrealba"
+      },
+      "to": {
+        "personId": 2390,
+        "name": "Juan Carlos Torrealba"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 16861,
+      "parentId": 3289,
+      "parent": "Dejó Las Llaves",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 189,
+        "name": "Pablo Dagnino"
+      },
+      "to": {
+        "personId": 607,
+        "name": "Pablo Dagnino"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 16972,
+      "parentId": 3130,
+      "parent": "Crazy Little Thing Called Love",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 189,
+        "name": "Pablo Dagnino"
+      },
+      "to": {
+        "personId": 607,
+        "name": "Pablo Dagnino"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18577,
+      "parentId": 2739,
+      "parent": "Sin Sombra No Hay Luz",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 189,
+        "name": "Pablo Dagnino"
+      },
+      "to": {
+        "personId": 607,
+        "name": "Pablo Dagnino"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 17685,
+      "parentId": 14058,
+      "parent": "Ashes",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 1384,
+        "name": "Pablo Mendoza"
+      },
+      "to": {
+        "personId": 4861,
+        "name": "Pablo Mendoza"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13568,
+      "parentId": 28638,
+      "parent": "Levántate y Pelea",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 1951,
+        "name": "Paul Gillman"
+      },
+      "to": {
+        "personId": 3467,
+        "name": "Paul Silvestre Gillman"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18552,
+      "parentId": 13857,
+      "parent": "Hijos Del Sur",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 1951,
+        "name": "Paul Gillman"
+      },
+      "to": {
+        "personId": 3467,
+        "name": "Paul Silvestre Gillman"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18923,
+      "parentId": 31351,
+      "parent": "Corazón de Rock Pesado",
+      "creditType": "guest",
+      "role": "Invitado",
+      "from": {
+        "artistId": 1951,
+        "name": "Paul Gillman"
+      },
+      "to": {
+        "personId": 3467,
+        "name": "Paul Silvestre Gillman"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 16190,
+      "parentId": 4274,
+      "parent": "If I Had You",
+      "creditType": "composer",
+      "role": "composed",
+      "from": {
+        "artistId": 263,
+        "name": "Willie Croes"
+      },
+      "to": {
+        "personId": 1291,
+        "name": "Willie Croes"
+      }
+    }
+  ],
+  "skippedDetails": []
+}

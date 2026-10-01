@@ -1,0 +1,557 @@
+{
+  "runId": 10868,
+  "report": [
+    {
+      "step": "alias",
+      "artistId": 158,
+      "alias": "The Thunderbirds",
+      "type": "former_name",
+      "aliasId": 4153,
+      "source": "S01 labrujuladelcanto.com"
+    },
+    {
+      "step": "alias",
+      "artistId": 2003,
+      "alias": "Flavio",
+      "type": "former_name",
+      "aliasId": 4154,
+      "source": "S04 rudylascala.com"
+    },
+    {
+      "step": "alias",
+      "artistId": 220,
+      "alias": "Dead Feeling",
+      "type": "former_name",
+      "aliasId": 4155,
+      "source": "S06 lobotoradio.com"
+    },
+    {
+      "step": "alias",
+      "artistId": 2043,
+      "alias": "Dark Fire",
+      "type": "former_name",
+      "aliasId": 4156,
+      "source": "S10 venciclopedia.org"
+    },
+    {
+      "step": "alias",
+      "artistId": 1181,
+      "alias": "Biosss",
+      "type": "former_name",
+      "aliasId": 4157,
+      "source": "S11 lobotoradio.com"
+    },
+    {
+      "step": "alias",
+      "artistId": 547,
+      "alias": "Tempujo",
+      "type": "former_name",
+      "aliasId": 4158,
+      "source": "S12 lobotoradio.com"
+    },
+    {
+      "step": "alias",
+      "artistId": 547,
+      "alias": "AltoPana",
+      "type": "spelling_variant",
+      "aliasId": 4159,
+      "source": "S12 lobotoradio.com"
+    },
+    {
+      "step": "alias",
+      "artistId": 650,
+      "alias": "Black Rainbow",
+      "type": "former_name",
+      "aliasId": 4160,
+      "source": "S18 bateristasvenezuela"
+    },
+    {
+      "step": "alias",
+      "artistId": 248,
+      "alias": "Todosantos Dub",
+      "type": "former_name",
+      "aliasId": 4161,
+      "source": "S32 es.wikipedia.org"
+    },
+    {
+      "step": "alias",
+      "artistId": 1529,
+      "alias": "Zion The Promised Land",
+      "type": "former_name",
+      "aliasId": 4162,
+      "source": "S34/S58"
+    },
+    {
+      "step": "alias",
+      "artistId": 163,
+      "alias": "Majarete",
+      "type": "name_variant",
+      "aliasId": 4163,
+      "source": "S33 plus.cusica.com (nombre abreviado desde 2025)"
+    },
+    {
+      "step": "alias",
+      "artistId": 823,
+      "alias": "Anatomiæ Occultii",
+      "type": "spelling_variant",
+      "aliasId": 4164,
+      "source": "S54 metal-archives.com"
+    },
+    {
+      "step": "bio-pan",
+      "artistId": 187
+    },
+    {
+      "step": "alias-retirado",
+      "artistId": 3186,
+      "alias": "Heylel",
+      "motivo": "categoría 2: relacionado, con ficha propia"
+    },
+    {
+      "step": "ficha",
+      "id": 3229,
+      "name": "Worst Emotions",
+      "members": [
+        {
+          "name": "José Luis Pérez",
+          "personId": 15333,
+          "membershipId": 4700,
+          "existing": false
+        },
+        {
+          "name": "Rafael Peñalver",
+          "personId": 3652,
+          "membershipId": 4701,
+          "existing": true
+        },
+        {
+          "name": "César Sánchez Bello",
+          "personId": 624,
+          "membershipId": 4702,
+          "existing": true
+        },
+        {
+          "name": "José Nahón",
+          "personId": 15334,
+          "membershipId": 4703,
+          "existing": false
+        },
+        {
+          "name": "Vito La Manna",
+          "personId": 15335,
+          "membershipId": 4704,
+          "existing": false
+        },
+        {
+          "name": "Charly Almaral",
+          "personId": 15336,
+          "membershipId": 4705,
+          "existing": false
+        }
+      ],
+      "albums": [
+        {
+          "id": 5517,
+          "title": "You Gotta Understand / Busca Un Camino",
+          "year": 1970
+        }
+      ],
+      "genres": [],
+      "aliases": [
+        "Worst"
+      ]
+    },
+    {
+      "step": "ficha",
+      "id": 3230,
+      "name": "Kámara de Tortura",
+      "members": [
+        {
+          "name": "Ernesto \"Tito\" Dan",
+          "personId": 15337,
+          "membershipId": 4706,
+          "existing": false
+        },
+        {
+          "name": "José Alarcón",
+          "personId": 15338,
+          "membershipId": 4707,
+          "existing": false
+        },
+        {
+          "name": "Ivars Ostors",
+          "personId": 15339,
+          "membershipId": 4708,
+          "existing": false
+        },
+        {
+          "name": "Juan Bautista López «Yátu»",
+          "personId": 1003,
+          "membershipId": 4709,
+          "existing": true
+        },
+        {
+          "name": "Gabriel Quintero",
+          "personId": 15340,
+          "membershipId": 4710,
+          "existing": false
+        },
+        {
+          "name": "Nelson \"Kico\" Campins",
+          "personId": 15341,
+          "membershipId": 4711,
+          "existing": false
+        },
+        {
+          "name": "Omar Quintero",
+          "personId": 281,
+          "membershipId": 4712,
+          "existing": true
+        }
+      ],
+      "albums": [
+        {
+          "id": 5518,
+          "title": "Vampiro",
+          "year": 2003
+        }
+      ],
+      "genres": [
+        "pop-rock (primary)",
+        "rockabilly (secondary)",
+        "new-wave (secondary)"
+      ],
+      "aliases": [
+        "La Panza de Buda",
+        "La Kamara"
+      ]
+    },
+    {
+      "step": "ficha",
+      "id": 3231,
+      "name": "Malegua",
+      "members": [
+        {
+          "name": "Robert Castro",
+          "personId": 15342,
+          "membershipId": 4713,
+          "existing": false
+        },
+        {
+          "name": "Leonardo Moreno",
+          "personId": 15343,
+          "membershipId": 4714,
+          "existing": false
+        },
+        {
+          "name": "David Rojas",
+          "personId": 15344,
+          "membershipId": 4715,
+          "existing": false
+        },
+        {
+          "name": "Christian Estepa",
+          "personId": 15345,
+          "membershipId": 4716,
+          "existing": false
+        },
+        {
+          "name": "Ricardo Castillo",
+          "personId": 15346,
+          "membershipId": 4717,
+          "existing": false
+        },
+        {
+          "name": "Gustavo Villarroel",
+          "personId": 15347,
+          "membershipId": 4718,
+          "existing": false
+        },
+        {
+          "name": "José Alberto Blanco",
+          "personId": 15348,
+          "membershipId": 4719,
+          "existing": false
+        },
+        {
+          "name": "René Rosado",
+          "personId": 15349,
+          "membershipId": 4720,
+          "existing": false
+        },
+        {
+          "name": "Sanjay Abbi",
+          "personId": 15350,
+          "membershipId": 4721,
+          "existing": false
+        }
+      ],
+      "albums": [
+        {
+          "id": 5519,
+          "title": "Demo",
+          "year": 2002
+        },
+        {
+          "id": 5520,
+          "title": "Aní Tá Má",
+          "year": 2005
+        }
+      ],
+      "genres": [
+        "pop-latino (primary)",
+        "reggae (secondary)",
+        "ska (secondary)"
+      ],
+      "aliases": [
+        "Feeling XXI"
+      ]
+    },
+    {
+      "step": "ficha",
+      "id": 3232,
+      "name": "Aire",
+      "members": [
+        {
+          "name": "Haniel Páez",
+          "personId": 15351,
+          "membershipId": 4722,
+          "existing": false
+        },
+        {
+          "name": "Alejandro Páez",
+          "personId": 15352,
+          "membershipId": 4723,
+          "existing": false
+        },
+        {
+          "name": "Dickley Nieves",
+          "personId": 15353,
+          "membershipId": 4724,
+          "existing": false
+        }
+      ],
+      "albums": [],
+      "genres": [],
+      "aliases": [
+        "Soplo de Vida"
+      ]
+    },
+    {
+      "step": "ficha",
+      "id": 3233,
+      "name": "La Venz",
+      "members": [
+        {
+          "name": "Fredber Hernández",
+          "personId": 15354,
+          "membershipId": 4725,
+          "existing": false
+        },
+        {
+          "name": "Marcos López",
+          "personId": 15355,
+          "membershipId": 4726,
+          "existing": false
+        },
+        {
+          "name": "Dimas Martínez",
+          "personId": 15356,
+          "membershipId": 4727,
+          "existing": false
+        },
+        {
+          "name": "David Molina",
+          "personId": 15357,
+          "membershipId": 4728,
+          "existing": false
+        }
+      ],
+      "albums": [],
+      "genres": [
+        "rock (primary)"
+      ],
+      "aliases": []
+    },
+    {
+      "step": "ficha",
+      "id": 3234,
+      "name": "Gran Celaje",
+      "members": [
+        {
+          "name": "Patricia Münch",
+          "personId": 15358,
+          "membershipId": 4729,
+          "existing": false
+        },
+        {
+          "name": "Fredber Hernández",
+          "personId": 15354,
+          "membershipId": 4730,
+          "existing": false
+        },
+        {
+          "name": "Marcos López",
+          "personId": 15355,
+          "membershipId": 4731,
+          "existing": false
+        },
+        {
+          "name": "Dimas Martínez",
+          "personId": 15356,
+          "membershipId": 4732,
+          "existing": false
+        },
+        {
+          "name": "David Molina",
+          "personId": 15357,
+          "membershipId": 4733,
+          "existing": false
+        }
+      ],
+      "albums": [
+        {
+          "id": 5521,
+          "title": "Arde",
+          "year": 2019
+        },
+        {
+          "id": 5522,
+          "title": "Espiral",
+          "year": 2020
+        }
+      ],
+      "genres": [
+        "rock-alternativo (primary)"
+      ],
+      "aliases": []
+    },
+    {
+      "step": "ficha",
+      "id": 3235,
+      "name": "People Pie",
+      "members": [],
+      "albums": [],
+      "genres": [],
+      "aliases": []
+    },
+    {
+      "step": "ficha",
+      "id": 3236,
+      "name": "Plymouth",
+      "members": [
+        {
+          "name": "Victoria Gámez",
+          "personId": 15359,
+          "membershipId": 4734,
+          "existing": false
+        },
+        {
+          "name": "Rubén Strauss",
+          "personId": 15360,
+          "membershipId": 4735,
+          "existing": false
+        }
+      ],
+      "albums": [],
+      "genres": [
+        "rock-progresivo (primary)"
+      ],
+      "aliases": [
+        "Plymoouth"
+      ]
+    },
+    {
+      "step": "ficha",
+      "id": 3237,
+      "name": "Los Aros de Saturno",
+      "members": [
+        {
+          "name": "Victoria Gámez",
+          "personId": 15359,
+          "membershipId": 4736,
+          "existing": false
+        },
+        {
+          "name": "Rubén Strauss",
+          "personId": 15360,
+          "membershipId": 4737,
+          "existing": false
+        }
+      ],
+      "albums": [],
+      "genres": [
+        "rock-psicodelico (primary)",
+        "rock-progresivo (secondary)"
+      ],
+      "aliases": []
+    },
+    {
+      "step": "ficha",
+      "id": 3238,
+      "name": "Urbanda",
+      "members": [
+        {
+          "name": "Pablo \"Mulato\" González",
+          "personId": 1667,
+          "membershipId": 4738,
+          "existing": true
+        }
+      ],
+      "albums": [
+        {
+          "id": 5523,
+          "title": "La Voz de la Ciudad",
+          "year": 1989
+        }
+      ],
+      "genres": [],
+      "aliases": []
+    },
+    {
+      "step": "ficha",
+      "id": 3239,
+      "name": "Irie",
+      "members": [
+        {
+          "name": "Pablo \"Mulato\" González",
+          "personId": 1667,
+          "membershipId": 4739,
+          "existing": true
+        }
+      ],
+      "albums": [],
+      "genres": [],
+      "aliases": [
+        "Mulatos"
+      ]
+    },
+    {
+      "step": "ficha",
+      "id": 3240,
+      "name": "Los NoName",
+      "members": [],
+      "albums": [],
+      "genres": [],
+      "aliases": [
+        "Los No Name"
+      ]
+    },
+    {
+      "step": "ficha",
+      "id": 3241,
+      "name": "Heylel",
+      "members": [
+        {
+          "name": "Varúlfr",
+          "personId": 13381,
+          "membershipId": 4740,
+          "existing": true
+        }
+      ],
+      "albums": [],
+      "genres": [],
+      "aliases": []
+    }
+  ]
+}

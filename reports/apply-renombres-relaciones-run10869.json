@@ -1,0 +1,180 @@
+{
+  "runId": 10869,
+  "relations": [
+    {
+      "id": 1,
+      "from": "Radio Clip",
+      "to": "RC2",
+      "type": "successor",
+      "bridge": "Félix Duque, Arturo Torres"
+    },
+    {
+      "id": 2,
+      "from": "Sentimiento Muerto",
+      "to": "Dermis Tatú",
+      "type": "successor",
+      "bridge": "Cayayo Troconis, Héctor Castillo, Sebastián Araujo"
+    },
+    {
+      "id": 3,
+      "from": "La Venz",
+      "to": "Gran Celaje",
+      "type": "successor",
+      "bridge": "Fredber Hernández, Marcos López, Dimas Martínez, David Molina"
+    },
+    {
+      "id": 4,
+      "from": "People Pie",
+      "to": "Pastel de Gente",
+      "type": "successor",
+      "bridge": "núcleo reconstituido (José Riu desde 1983)"
+    },
+    {
+      "id": 5,
+      "from": "Heylel",
+      "to": "Blodmåne",
+      "type": "successor",
+      "bridge": "Varúlfr"
+    },
+    {
+      "id": 6,
+      "from": "Plymouth",
+      "to": "Los Aros de Saturno",
+      "type": "successor",
+      "bridge": "Rubén Strauss, Victoria Gámez"
+    },
+    {
+      "id": 7,
+      "from": "Irie",
+      "to": "Mulato",
+      "type": "successor",
+      "bridge": "Pablo González"
+    },
+    {
+      "id": 8,
+      "from": "Los Buitres",
+      "to": "Los Beat3",
+      "type": "successor",
+      "bridge": "tres integrantes de Los Buitres"
+    },
+    {
+      "id": 9,
+      "from": "Zignia",
+      "to": "Los NoName",
+      "type": "temporary_name",
+      "bridge": null
+    },
+    {
+      "id": 10,
+      "from": "Urbanda",
+      "to": "Irie",
+      "type": "successor",
+      "bridge": "Pablo González y exintegrantes de Urbanda"
+    },
+    {
+      "id": 11,
+      "from": "Dermis Tatú",
+      "to": "PAN",
+      "type": "ex_member_project",
+      "bridge": "Cayayo Troconis"
+    },
+    {
+      "id": 12,
+      "from": "Sentimiento Muerto",
+      "to": "PAN",
+      "type": "ex_member_project",
+      "bridge": "Wincho Schäfer; también Cayayo Troconis"
+    },
+    {
+      "id": 13,
+      "from": "La Calle",
+      "to": "PAN",
+      "type": "ex_member_project",
+      "bridge": "Miguel Toro"
+    },
+    {
+      "id": 14,
+      "from": "Arkangel",
+      "to": "Paul Gillman",
+      "type": "ex_member_project",
+      "bridge": "Paul Gillman"
+    },
+    {
+      "id": 15,
+      "from": "Aditus",
+      "to": "Ficción",
+      "type": "ex_member_project",
+      "bridge": "José Ignacio Lares; Edgar de Sola"
+    },
+    {
+      "id": 16,
+      "from": "Sentimiento Muerto",
+      "to": "La Calle",
+      "type": "ex_member_project",
+      "bridge": "José Echezuría «Pingüino»"
+    },
+    {
+      "id": 17,
+      "from": "Sentimiento Muerto",
+      "to": "Pixel",
+      "type": "ex_member_project",
+      "bridge": "Pablo Dagnino"
+    },
+    {
+      "id": 18,
+      "from": "La Puta Eléctrica",
+      "to": "Pixel",
+      "type": "ex_member_project",
+      "bridge": "Norton Pérez"
+    },
+    {
+      "id": 19,
+      "from": "Arkangel",
+      "to": "Arcuri Overthrow",
+      "type": "ex_member_project",
+      "bridge": "Felipe Arcuri, Vicente Arcuri"
+    },
+    {
+      "id": 20,
+      "from": "Paul Gillman",
+      "to": "Arcuri Overthrow",
+      "type": "ex_member_project",
+      "bridge": "Felipe Arcuri, Vicente Arcuri"
+    },
+    {
+      "id": 21,
+      "from": "Zapato 3",
+      "to": "Solares",
+      "type": "ex_member_project",
+      "bridge": "Álvaro Segura, Carlos Segura (Jaime Verdaguer se sumó después)"
+    },
+    {
+      "id": 22,
+      "from": "Sentimiento Muerto",
+      "to": "Cero A La Izquierda",
+      "type": "ex_member_project",
+      "bridge": "Cayayo Troconis, José Echezuría"
+    },
+    {
+      "id": 23,
+      "from": "Agresión",
+      "to": "Cultura Tres",
+      "type": "ex_member_project",
+      "bridge": "Alejandro Londoño, Juan Manuel Londoño"
+    },
+    {
+      "id": 24,
+      "from": "Témpano",
+      "to": "Poster",
+      "type": "ex_member_project",
+      "bridge": "Alexis Peña"
+    },
+    {
+      "id": 25,
+      "from": "La Puta Eléctrica",
+      "to": "Jacktürbo",
+      "type": "ex_member_project",
+      "bridge": "Norton Pérez"
+    }
+  ]
+}

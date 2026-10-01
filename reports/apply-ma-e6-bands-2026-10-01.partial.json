@@ -1,0 +1,1145 @@
+{
+  "runs": [
+    10823,
+    10824,
+    10825
+  ],
+  "creadas": [
+    {
+      "maId": "116104",
+      "id": 3051,
+      "name": "Lord",
+      "via": "allowSimilar"
+    },
+    {
+      "maId": "117206",
+      "id": 3052,
+      "name": "Athlos",
+      "via": "directa"
+    },
+    {
+      "maId": "118567",
+      "id": 3053,
+      "name": "Altair",
+      "via": "directa"
+    },
+    {
+      "maId": "118701",
+      "id": 3054,
+      "name": "Hémera",
+      "via": "directa"
+    },
+    {
+      "maId": "118847",
+      "id": 3055,
+      "name": "Aria",
+      "via": "allowSimilar"
+    },
+    {
+      "maId": "118941",
+      "id": 3056,
+      "name": "Reyno Maldito",
+      "via": "directa"
+    },
+    {
+      "maId": "122981",
+      "id": 3057,
+      "name": "Impromptu",
+      "via": "directa"
+    },
+    {
+      "maId": "123087",
+      "id": 3058,
+      "name": "Insane",
+      "via": "allowSimilar"
+    },
+    {
+      "maId": "22865",
+      "id": 3059,
+      "name": "Worm",
+      "via": "directa"
+    },
+    {
+      "maId": "22876",
+      "id": 3060,
+      "name": "Guerrilla",
+      "via": "allowSimilar"
+    },
+    {
+      "maId": "25240",
+      "id": 3061,
+      "name": "Lunatenebra",
+      "via": "directa"
+    },
+    {
+      "maId": "27209",
+      "id": 3062,
+      "name": "Noxious",
+      "via": "directa"
+    },
+    {
+      "maId": "32099",
+      "id": 3063,
+      "name": "Extremo Sur",
+      "via": "directa"
+    },
+    {
+      "maId": "32104",
+      "id": 3064,
+      "name": "Painless",
+      "via": "directa"
+    },
+    {
+      "maId": "32114",
+      "id": 3065,
+      "name": "Mortis Mephisto",
+      "via": "directa"
+    },
+    {
+      "maId": "32117",
+      "id": 3066,
+      "name": "Langret",
+      "via": "directa"
+    },
+    {
+      "maId": "32122",
+      "id": 3067,
+      "name": "Eye Strange",
+      "via": "directa"
+    },
+    {
+      "maId": "32124",
+      "id": 3068,
+      "name": "The Arrival",
+      "via": "allowSimilar"
+    },
+    {
+      "maId": "32423",
+      "id": 3069,
+      "name": "Gallery of Souls",
+      "via": "directa"
+    },
+    {
+      "maId": "32681",
+      "id": 3070,
+      "name": "Dies Fvnebris",
+      "via": "directa"
+    },
+    {
+      "maId": "33240",
+      "id": 3071,
+      "name": "Lucifugo",
+      "via": "directa"
+    },
+    {
+      "maId": "3540255454",
+      "id": 3072,
+      "name": "Regurgitorso",
+      "via": "directa"
+    },
+    {
+      "maId": "3540256832",
+      "id": 3073,
+      "name": "Necromycon",
+      "via": "allowSimilar"
+    },
+    {
+      "maId": "3540266520",
+      "id": 3074,
+      "name": "Kleyder d'Canterville Obertura",
+      "via": "directa"
+    },
+    {
+      "maId": "3540266723",
+      "id": 3075,
+      "name": "Stygian",
+      "via": "directa"
+    },
+    {
+      "maId": "3540268086",
+      "id": 3076,
+      "name": "Shaka",
+      "via": "directa"
+    },
+    {
+      "maId": "3540279646",
+      "id": 3077,
+      "name": "Nonus Aequilibrium",
+      "via": "directa"
+    },
+    {
+      "maId": "3540281563",
+      "id": 3078,
+      "name": "Thamur",
+      "via": "directa"
+    },
+    {
+      "maId": "3540291267",
+      "id": 3079,
+      "name": "Wana'apu Dumiñ",
+      "via": "directa"
+    },
+    {
+      "maId": "3540291814",
+      "id": 3080,
+      "name": "Bosc Fosc",
+      "via": "directa"
+    },
+    {
+      "maId": "3540295319",
+      "id": 3081,
+      "name": "Z.A.A.R.",
+      "via": "directa"
+    },
+    {
+      "maId": "3540303569",
+      "id": 3082,
+      "name": "Warnskarpt",
+      "via": "directa"
+    },
+    {
+      "maId": "3540314745",
+      "id": 3083,
+      "name": "Nihiürbtrath",
+      "via": "directa"
+    },
+    {
+      "maId": "3540319068",
+      "id": 3084,
+      "name": "The Silent of Death",
+      "via": "directa"
+    },
+    {
+      "maId": "3540324511",
+      "id": 3085,
+      "name": "Kannabis",
+      "via": "directa"
+    },
+    {
+      "maId": "3540329065",
+      "id": 3086,
+      "name": "Raster",
+      "via": "directa"
+    },
+    {
+      "maId": "3540329918",
+      "id": 3087,
+      "name": "Asvendark",
+      "via": "directa"
+    },
+    {
+      "maId": "3540346361",
+      "id": 3088,
+      "name": "Imperial Ceremony",
+      "via": "directa"
+    },
+    {
+      "maId": "3540352109",
+      "id": 3089,
+      "name": "Etica Etilica",
+      "via": "directa"
+    },
+    {
+      "maId": "3540356723",
+      "id": 3090,
+      "name": "FG",
+      "via": "directa"
+    },
+    {
+      "maId": "3540361745",
+      "id": 3091,
+      "name": "Grey Forest",
+      "via": "directa"
+    },
+    {
+      "maId": "3540366078",
+      "id": 3092,
+      "name": "Abolitio Nominis",
+      "via": "allowSimilar"
+    },
+    {
+      "maId": "3540366430",
+      "id": 3093,
+      "name": "Gears Attack",
+      "via": "directa"
+    },
+    {
+      "maId": "3540371045",
+      "id": 3094,
+      "name": "Bleak",
+      "via": "directa"
+    },
+    {
+      "maId": "3540374070",
+      "id": 3095,
+      "name": "Chalana",
+      "via": "directa"
+    },
+    {
+      "maId": "3540374734",
+      "id": 3096,
+      "name": "War Machine",
+      "via": "directa"
+    },
+    {
+      "maId": "3540379632",
+      "id": 3097,
+      "name": "Tepuy",
+      "via": "directa"
+    },
+    {
+      "maId": "3540381018",
+      "id": 3098,
+      "name": "Carnivean",
+      "via": "allowSimilar"
+    },
+    {
+      "maId": "3540384381",
+      "id": 3099,
+      "name": "Preclanse",
+      "via": "directa"
+    },
+    {
+      "maId": "3540389447",
+      "id": 3100,
+      "name": "Holbach",
+      "via": "directa"
+    },
+    {
+      "maId": "3540397934",
+      "id": 3101,
+      "name": "Tempus Dark",
+      "via": "directa"
+    },
+    {
+      "maId": "3540402530",
+      "id": 3102,
+      "name": "Moshpit",
+      "via": "directa"
+    },
+    {
+      "maId": "3540402743",
+      "id": 3103,
+      "name": "Oculto Sur",
+      "via": "directa"
+    },
+    {
+      "maId": "3540402744",
+      "id": 3104,
+      "name": "Agonía Infernal",
+      "via": "allowSimilar"
+    },
+    {
+      "maId": "3540405046",
+      "id": 3105,
+      "name": "Ty",
+      "via": "directa"
+    },
+    {
+      "maId": "3540405713",
+      "id": 3106,
+      "name": "Vultures to Carrion",
+      "via": "directa"
+    },
+    {
+      "maId": "3540414290",
+      "id": 3107,
+      "name": "Somdark",
+      "via": "directa"
+    },
+    {
+      "maId": "3540420004",
+      "id": 3108,
+      "name": "Rango Percentil",
+      "via": "directa"
+    },
+    {
+      "maId": "3540422202",
+      "id": 3109,
+      "name": "Disturbing Behavior",
+      "via": "directa"
+    },
+    {
+      "maId": "3540422852",
+      "id": 3110,
+      "name": "Lilith the Fallen",
+      "via": "directa"
+    },
+    {
+      "maId": "3540426019",
+      "id": 3111,
+      "name": "Mortuorium",
+      "via": "allowSimilar"
+    },
+    {
+      "maId": "3540426027",
+      "id": 3112,
+      "name": "M.C.C.",
+      "via": "directa"
+    },
+    {
+      "maId": "3540426396",
+      "id": 3113,
+      "name": "Etixakkh",
+      "via": "directa"
+    },
+    {
+      "maId": "3540430054",
+      "id": 3114,
+      "name": "Trance",
+      "via": "allowSimilar"
+    },
+    {
+      "maId": "3540435837",
+      "id": 3115,
+      "name": "Avernus Satani",
+      "via": "directa"
+    },
+    {
+      "maId": "3540442939",
+      "id": 3116,
+      "name": "Winds of May",
+      "via": "directa"
+    },
+    {
+      "maId": "3540443424",
+      "id": 3117,
+      "name": "Aluvion",
+      "via": "directa"
+    },
+    {
+      "maId": "3540449563",
+      "id": 3118,
+      "name": "Dhargorak",
+      "via": "directa"
+    },
+    {
+      "maId": "3540450300",
+      "id": 3119,
+      "name": "Parasitic Carnivorous",
+      "via": "allowSimilar"
+    },
+    {
+      "maId": "3540455116",
+      "id": 3120,
+      "name": "Prometeo",
+      "via": "directa"
+    },
+    {
+      "maId": "3540460701",
+      "id": 3121,
+      "name": "Südwind",
+      "via": "directa"
+    },
+    {
+      "maId": "3540463255",
+      "id": 3122,
+      "name": "Dagga",
+      "via": "allowSimilar"
+    },
+    {
+      "maId": "3540466900",
+      "id": 3123,
+      "name": "The Crow Witch",
+      "via": "directa"
+    },
+    {
+      "maId": "3540467381",
+      "id": 3124,
+      "name": "Bavtist",
+      "via": "directa"
+    },
+    {
+      "maId": "3540470909",
+      "id": 3125,
+      "name": "Lvctvs",
+      "via": "directa"
+    },
+    {
+      "maId": "3540471025",
+      "id": 3126,
+      "name": "Crushing War Noise",
+      "via": "directa"
+    },
+    {
+      "maId": "3540471395",
+      "id": 3127,
+      "name": "Intifada",
+      "via": "allowSimilar"
+    },
+    {
+      "maId": "3540472313",
+      "id": 3128,
+      "name": "Initium Vortex",
+      "via": "directa"
+    },
+    {
+      "maId": "3540474314",
+      "id": 3129,
+      "name": "X-Blade",
+      "via": "directa"
+    },
+    {
+      "maId": "3540474556",
+      "id": 3130,
+      "name": "Dust Lyceum",
+      "via": "directa"
+    },
+    {
+      "maId": "3540476685",
+      "id": 3131,
+      "name": "The Steven Seagal Project",
+      "via": "directa"
+    },
+    {
+      "maId": "3540478758",
+      "id": 3132,
+      "name": "Belia",
+      "via": "allowSimilar"
+    },
+    {
+      "maId": "3540479171",
+      "id": 3133,
+      "name": "Thule Jugend",
+      "via": "directa"
+    },
+    {
+      "maId": "3540480888",
+      "id": 3134,
+      "name": "Yogthsogoth",
+      "via": "directa"
+    },
+    {
+      "maId": "3540480930",
+      "id": 3135,
+      "name": "Aggressive Solution",
+      "via": "directa"
+    },
+    {
+      "maId": "3540488565",
+      "id": 3136,
+      "name": "Hater",
+      "via": "allowSimilar"
+    },
+    {
+      "maId": "3540488685",
+      "id": 3137,
+      "name": "Absalon",
+      "via": "directa"
+    },
+    {
+      "maId": "3540491845",
+      "id": 3138,
+      "name": "Heavenslave",
+      "via": "directa"
+    },
+    {
+      "maId": "3540492500",
+      "id": 3139,
+      "name": "The Mask of Blood",
+      "via": "directa"
+    },
+    {
+      "maId": "3540493301",
+      "id": 3140,
+      "name": "Blasting Gore",
+      "via": "directa"
+    },
+    {
+      "maId": "3540493361",
+      "id": 3141,
+      "name": "Rotten in Life",
+      "via": "allowSimilar"
+    },
+    {
+      "maId": "3540496600",
+      "id": 3142,
+      "name": "Velork",
+      "via": "directa"
+    },
+    {
+      "maId": "3540497681",
+      "id": 3143,
+      "name": "Silbury Hill",
+      "via": "directa"
+    },
+    {
+      "maId": "3540497809",
+      "id": 3144,
+      "name": "Aeris",
+      "via": "allowSimilar"
+    },
+    {
+      "maId": "3540498063",
+      "id": 3145,
+      "name": "MazaKruda",
+      "via": "allowSimilar"
+    },
+    {
+      "maId": "3540498110",
+      "id": 3146,
+      "name": "Elebastian",
+      "via": "directa"
+    },
+    {
+      "maId": "3540498608",
+      "id": 3147,
+      "name": "Andria",
+      "via": "allowSimilar"
+    },
+    {
+      "maId": "3540500415",
+      "id": 3148,
+      "name": "Témenos",
+      "via": "allowSimilar"
+    },
+    {
+      "maId": "3540500430",
+      "id": 3149,
+      "name": "IIRA",
+      "via": "allowSimilar"
+    },
+    {
+      "maId": "3540500626",
+      "id": 3150,
+      "name": "Targeryus",
+      "via": "directa"
+    },
+    {
+      "maId": "3540503743",
+      "id": 3151,
+      "name": "Okumo",
+      "via": "directa"
+    },
+    {
+      "maId": "3540503799",
+      "id": 3152,
+      "name": "One Night Stand",
+      "via": "directa"
+    },
+    {
+      "maId": "3540503825",
+      "id": 3153,
+      "name": "Morticun",
+      "via": "directa"
+    },
+    {
+      "maId": "3540507577",
+      "id": 3154,
+      "name": "Chimo",
+      "via": "directa"
+    },
+    {
+      "maId": "3540507986",
+      "id": 3155,
+      "name": "Evil and Madness",
+      "via": "directa"
+    },
+    {
+      "maId": "3540508088",
+      "id": 3156,
+      "name": "Odin",
+      "via": "allowSimilar"
+    },
+    {
+      "maId": "3540508561",
+      "id": 3157,
+      "name": "Biocodex",
+      "via": "directa"
+    },
+    {
+      "maId": "3540511477",
+      "id": 3158,
+      "name": "Excretaputreparasiforme",
+      "via": "directa"
+    },
+    {
+      "maId": "3540511993",
+      "id": 3159,
+      "name": "Mutilated Cannibal",
+      "via": "directa"
+    },
+    {
+      "maId": "3540514959",
+      "id": 3160,
+      "name": "Cavernous Assassin",
+      "via": "directa"
+    },
+    {
+      "maId": "3540516190",
+      "id": 3161,
+      "name": "Morbideth",
+      "via": "allowSimilar"
+    },
+    {
+      "maId": "3540516476",
+      "id": 3162,
+      "name": "Instinctus",
+      "via": "directa"
+    },
+    {
+      "maId": "3540517926",
+      "id": 3163,
+      "name": "Ethereal Forms",
+      "via": "directa"
+    },
+    {
+      "maId": "3540517928",
+      "id": 3164,
+      "name": "Casket",
+      "via": "directa"
+    },
+    {
+      "maId": "3540519436",
+      "id": 3165,
+      "name": "Constellaris",
+      "via": "directa"
+    },
+    {
+      "maId": "3540521091",
+      "id": 3166,
+      "name": "God's Storm",
+      "via": "directa"
+    },
+    {
+      "maId": "3540521226",
+      "id": 3167,
+      "name": "Sphingomyelinase",
+      "via": "directa"
+    },
+    {
+      "maId": "3540521244",
+      "id": 3168,
+      "name": "Ignisteel",
+      "via": "directa"
+    },
+    {
+      "maId": "3540522515",
+      "id": 3169,
+      "name": "Simbiosis",
+      "via": "directa"
+    },
+    {
+      "maId": "3540522986",
+      "id": 3170,
+      "name": "Forced Departure",
+      "via": "directa"
+    },
+    {
+      "maId": "3540523047",
+      "id": 3171,
+      "name": "Woodanthorkh",
+      "via": "directa"
+    },
+    {
+      "maId": "3540524842",
+      "id": 3172,
+      "name": "Miserihum",
+      "via": "directa"
+    },
+    {
+      "maId": "3540527311",
+      "id": 3173,
+      "name": "G-Core",
+      "via": "allowSimilar"
+    },
+    {
+      "maId": "3540527458",
+      "id": 3174,
+      "name": "Spartans",
+      "via": "directa"
+    },
+    {
+      "maId": "3540527956",
+      "id": 3175,
+      "name": "Gatillo",
+      "via": "directa"
+    },
+    {
+      "maId": "3540528081",
+      "id": 3176,
+      "name": "Astadmiah",
+      "via": "allowSimilar"
+    },
+    {
+      "maId": "3540528357",
+      "id": 3177,
+      "name": "Devilish Goat",
+      "via": "directa"
+    },
+    {
+      "maId": "3540531807",
+      "id": 3178,
+      "name": "Andenwölfe",
+      "via": "directa"
+    },
+    {
+      "maId": "3540531912",
+      "id": 3179,
+      "name": "Abaddonsheol",
+      "via": "allowSimilar"
+    },
+    {
+      "maId": "3540534440",
+      "id": 3180,
+      "name": "Aftárkeias",
+      "via": "directa"
+    },
+    {
+      "maId": "3540535433",
+      "id": 3181,
+      "name": "MorTyr",
+      "via": "allowSimilar"
+    },
+    {
+      "maId": "3540536743",
+      "id": 3182,
+      "name": "Horus",
+      "via": "directa"
+    },
+    {
+      "maId": "3540538442",
+      "id": 3183,
+      "name": "Mortaless",
+      "via": "directa"
+    },
+    {
+      "maId": "3540540128",
+      "id": 3184,
+      "name": "Svartr",
+      "via": "directa"
+    },
+    {
+      "maId": "3540540537",
+      "id": 3185,
+      "name": "Skoll og Hati",
+      "via": "directa"
+    },
+    {
+      "maId": "3540541470",
+      "id": 3186,
+      "name": "Blodmåne",
+      "via": "allowSimilar"
+    },
+    {
+      "maId": "3540541822",
+      "id": 3187,
+      "name": "Asathor..!",
+      "via": "directa"
+    },
+    {
+      "maId": "3540542778",
+      "id": 3188,
+      "name": "Nomen Omen",
+      "via": "directa"
+    },
+    {
+      "maId": "3540543335",
+      "id": 3189,
+      "name": "Eclesiastes",
+      "via": "directa"
+    },
+    {
+      "maId": "3540544349",
+      "id": 3190,
+      "name": "Virtual Street",
+      "via": "directa"
+    },
+    {
+      "maId": "3540545504",
+      "id": 3191,
+      "name": "Fellothrash",
+      "via": "directa"
+    },
+    {
+      "maId": "3540546207",
+      "id": 3192,
+      "name": "Walter Freitas",
+      "via": "directa"
+    },
+    {
+      "maId": "3540550551",
+      "id": 3193,
+      "name": "Hanged Cross",
+      "via": "directa"
+    },
+    {
+      "maId": "3540554159",
+      "id": 3194,
+      "name": "Profanvm",
+      "via": "directa"
+    },
+    {
+      "maId": "3540554473",
+      "id": 3195,
+      "name": "Celtic Tyrant",
+      "via": "allowSimilar"
+    },
+    {
+      "maId": "3540555768",
+      "id": 3196,
+      "name": "Kaldr",
+      "via": "directa"
+    },
+    {
+      "maId": "3540559067",
+      "id": 3197,
+      "name": "Oblivion of Hybrids",
+      "via": "directa"
+    },
+    {
+      "maId": "3540563028",
+      "id": 3198,
+      "name": "Vhill",
+      "via": "directa"
+    },
+    {
+      "maId": "3540564949",
+      "id": 3199,
+      "name": "Patior Eugea",
+      "via": "directa"
+    },
+    {
+      "maId": "3540565949",
+      "id": 3200,
+      "name": "No More Blood",
+      "via": "allowSimilar"
+    },
+    {
+      "maId": "3540566471",
+      "id": 3201,
+      "name": "Tridente",
+      "via": "directa"
+    },
+    {
+      "maId": "3540569820",
+      "id": 3202,
+      "name": "Mortoth",
+      "via": "directa"
+    },
+    {
+      "maId": "3540573229",
+      "id": 3203,
+      "name": "Ephimeth",
+      "via": "directa"
+    },
+    {
+      "maId": "3540577623",
+      "id": 3204,
+      "name": "Clérigo en Fuego",
+      "via": "directa"
+    },
+    {
+      "maId": "3540579923",
+      "id": 3205,
+      "name": "D.A.C.I.S.",
+      "via": "directa"
+    },
+    {
+      "maId": "3540583903",
+      "id": 3206,
+      "name": "Quam Furor",
+      "via": "directa"
+    },
+    {
+      "maId": "3540586192",
+      "id": 3207,
+      "name": "Jarcy",
+      "via": "directa"
+    },
+    {
+      "maId": "3540590638",
+      "id": 3208,
+      "name": "Abísmal",
+      "via": "allowSimilar"
+    },
+    {
+      "maId": "40507",
+      "id": 3209,
+      "name": "Broken",
+      "via": "allowSimilar"
+    },
+    {
+      "maId": "40589",
+      "id": 3210,
+      "name": "Autarquia",
+      "via": "directa"
+    },
+    {
+      "maId": "43583",
+      "id": 3211,
+      "name": "Darkther",
+      "via": "allowSimilar"
+    },
+    {
+      "maId": "45236",
+      "id": 3212,
+      "name": "Arte Sacro",
+      "via": "directa"
+    },
+    {
+      "maId": "47772",
+      "id": 3213,
+      "name": "Acero Liquido",
+      "via": "allowSimilar"
+    },
+    {
+      "maId": "50537",
+      "id": 3214,
+      "name": "Metal Milicia",
+      "via": "allowSimilar"
+    },
+    {
+      "maId": "61970",
+      "id": 3215,
+      "name": "Arteria",
+      "via": "allowSimilar"
+    },
+    {
+      "maId": "62212",
+      "id": 3216,
+      "name": "Ikhor",
+      "via": "directa"
+    },
+    {
+      "maId": "62759",
+      "id": 3217,
+      "name": "Nosferatus XIII",
+      "via": "directa"
+    },
+    {
+      "maId": "62764",
+      "id": 3218,
+      "name": "Pray",
+      "via": "directa"
+    },
+    {
+      "maId": "6501",
+      "id": 3219,
+      "name": "Penumbra Leal",
+      "via": "allowSimilar"
+    },
+    {
+      "maId": "73720",
+      "id": 3220,
+      "name": "Axariel",
+      "via": "allowSimilar"
+    },
+    {
+      "maId": "80184",
+      "id": 3221,
+      "name": "Alkhon",
+      "via": "allowSimilar"
+    },
+    {
+      "maId": "82563",
+      "id": 3222,
+      "name": "Zagros",
+      "via": "directa"
+    },
+    {
+      "maId": "88504",
+      "id": 3223,
+      "name": "Herejes",
+      "via": "allowSimilar"
+    },
+    {
+      "maId": "96433",
+      "id": 3224,
+      "name": "Veniath",
+      "via": "directa"
+    },
+    {
+      "maId": "99031",
+      "id": 3225,
+      "name": "Heaven Rays",
+      "via": "allowSimilar"
+    },
+    {
+      "maId": "99898",
+      "id": 3226,
+      "name": "Sinopsis",
+      "via": "allowSimilar"
+    }
+  ],
+  "review": [],
+  "existentes": [
+    {
+      "maId": "3540544269",
+      "name": "Transgresor",
+      "existingId": 3050
+    }
+  ],
+  "errores": [],
+  "alias": {
+    "added": [
+      {
+        "maId": "117206",
+        "artistId": 3052,
+        "alias": "Transición",
+        "aliasId": 3958
+      },
+      {
+        "maId": "123087",
+        "artistId": 3058,
+        "alias": "Nanyuhe",
+        "aliasId": 3965
+      },
+      {
+        "maId": "32681",
+        "artistId": 3070,
+        "alias": "Maleficarvm",
+        "aliasId": 3978
+      },
+      {
+        "maId": "3540295319",
+        "artistId": 3081,
+        "alias": "Telecadencia",
+        "aliasId": 3990
+      },
+      {
+        "maId": "3540426396",
+        "artistId": 3113,
+        "alias": "The True Zatrarath",
+        "aliasId": 4023
+      },
+      {
+        "maId": "3540488685",
+        "artistId": 3137,
+        "alias": "Poseidón",
+        "aliasId": 4048
+      },
+      {
+        "maId": "3540498608",
+        "artistId": 3147,
+        "alias": "Death Or Love",
+        "aliasId": 4059
+      },
+      {
+        "maId": "3540519436",
+        "artistId": 3165,
+        "alias": "Nexus",
+        "aliasId": 4078
+      },
+      {
+        "maId": "3540528081",
+        "artistId": 3176,
+        "alias": "Astadmia",
+        "aliasId": 4090
+      },
+      {
+        "maId": "3540540537",
+        "artistId": 3185,
+        "alias": "Skoll and Hati",
+        "aliasId": 4100
+      },
+      {
+        "maId": "3540541470",
+        "artistId": 3186,
+        "alias": "Heylel",
+        "aliasId": 4102
+      }
+    ],
+    "skipped": []
+  }
+}
