@@ -58,6 +58,8 @@ export interface ArtistDetail extends ArtistListItem {
   primaryGenre?: PublicGenre | null;
   genreStatus?: GenreStatus;
   biography: string | null;
+  /** Logo de la banda; null si no hay. */
+  logoUrl?: string | null;
   notes: string | null;
   members: ArtistMember[];
   discography: DiscographyItem[];

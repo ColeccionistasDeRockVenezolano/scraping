@@ -24,6 +24,7 @@ const artistListItemSchema = z.object({
 
 const artistDetailSchema = artistListItemSchema.extend({
   biography: z.string().nullable(),
+  logoUrl: z.string().nullable(),
   notes: z.string().nullable(),
   members: z.array(z.object({
     id: z.number().int(), personId: z.number().int(), personName: z.string(), personIsDeceased: z.boolean(), role: z.string(),

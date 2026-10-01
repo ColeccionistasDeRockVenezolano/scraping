@@ -75,6 +75,8 @@ export interface ArtistDetail {
   artistType: string;
   biography: string | null;
   pictureUrl: string | null;
+  /** Logo de la banda (Metal Archives); null si no hay. */
+  logoUrl: string | null;
   originCity: string | null;
   originCountry: string;
   formedYear: number | null;
@@ -156,7 +158,7 @@ async function similarArtists(id: number, primaryGenre: PublicGenre | null): Pro
 
 export async function getArtistDetail(id: number): Promise<ArtistDetail | null> {
   const { rows } = await getPool().query<Record<string, unknown>>(
-    `SELECT a.id, a.name, a.artist_type, a.biography, a.picture_url, a.origin_city,
+    `SELECT a.id, a.name, a.artist_type, a.biography, a.picture_url, a.logo_url, a.origin_city,
             a.origin_country, a.formed_year, a.disbanded_year, a.notes,
             ${artistDeceasedSql("a.id")} AS is_deceased,
        COALESCE((
@@ -206,6 +208,7 @@ export async function getArtistDetail(id: number): Promise<ArtistDetail | null> 
     artistType: row["artist_type"] as string,
     biography: row["biography"] as string | null,
     pictureUrl: row["picture_url"] as string | null,
+    logoUrl: row["logo_url"] as string | null,
     originCity: row["origin_city"] as string | null,
     originCountry: row["origin_country"] as string,
     formedYear: row["formed_year"] as number | null,

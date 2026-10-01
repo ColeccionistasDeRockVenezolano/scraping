@@ -177,6 +177,9 @@ export function ArtistDetailPage() {
           {artist.pictureUrl ? <img src={artist.pictureUrl} alt="" loading="lazy" decoding="async" /> : <span className="placeholder">{initialOf(artist.name)}</span>}
         </span>
         <div>
+          {artist.logoUrl ? (
+            <span className="entity-hero__logo"><img src={artist.logoUrl} alt={`Logo de ${artist.name}`} loading="lazy" decoding="async" /></span>
+          ) : null}
           <h1 className="entity-hero__title">{artist.name}<DeceasedMark deceased={artist.isDeceased} /></h1>
           <EntityInfo items={info} wide={{ label: "Alias", content: <AliasEditor path="artists" entityId={artist.id} aliases={artist.aliases} onChanged={reload} /> }} />
           {artist.biography ? <div className="entity-hero__bio"><ExpandableText className="entity-hero__desc" text={artist.biography} /></div> : null}
