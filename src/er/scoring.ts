@@ -1,4 +1,4 @@
-import { normalizeEntityName } from "../normalization/entity-name.js";
+import { normalizeEntityName as normalizeEntityNameUncached, type NormalizedEntityName } from "../normalization/entity-name.js";
 import {
   DEFAULT_RESOLUTION_THRESHOLDS,
   resolutionThresholdsSchema,
@@ -11,6 +11,23 @@ import {
   type ScoreFeature,
   type YearRange,
 } from "./types.js";
+
+/**
+ * La normalización es una función pura del texto y el puntaje la repite por cada
+ * candidato en cada claim (decenas de miles de títulos por pista). Se memoriza
+ * dentro de este módulo, que nunca muta el resultado; el tope evita crecer sin
+ * límite en procesos largos.
+ */
+const NORMALIZED_CACHE_LIMIT = 400_000;
+const normalizedCache = new Map<string, NormalizedEntityName>();
+function normalizeEntityName(value: string): NormalizedEntityName {
+  const hit = normalizedCache.get(value);
+  if (hit) return hit;
+  const computed = normalizeEntityNameUncached(value);
+  if (normalizedCache.size >= NORMALIZED_CACHE_LIMIT) normalizedCache.clear();
+  normalizedCache.set(value, computed);
+  return computed;
+}
 
 function round(value: number): number { return Math.round(value * 100_000) / 100_000; }
 function clamp(value: number): number { return Math.max(0, Math.min(1, value)); }

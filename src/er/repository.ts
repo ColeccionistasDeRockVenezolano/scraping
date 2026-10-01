@@ -1,8 +1,11 @@
+import { AsyncLocalStorage } from "node:async_hooks";
 import { createHash } from "node:crypto";
 import type { Pool, PoolClient } from "pg";
 import { getPool } from "../db/client.js";
+import { normalizeEntityName } from "../normalization/entity-name.js";
 import type { DeepSeekGateway } from "../ai/gateway.js";
 import { resolveEntity, type ResolveOptions } from "./resolver.js";
+import { KEEP_CANDIDATES } from "./retention.js";
 import type { ResolutionAlias, ResolutionCandidate, ResolutionDecision, ResolutionInput } from "./types.js";
 
 type Queryable = Pick<Pool | PoolClient, "query">;
@@ -36,7 +39,91 @@ function numberValue(value: unknown): number | undefined {
   return undefined;
 }
 
+/**
+ * Instantánea de candidatos para una tanda de claims `low`. Cada claim vuelve a
+ * leer el catálogo entero de su tipo (miles de personas con seis subconsultas
+ * cada una, ~1 s por claim): con decenas de miles de créditos la ingesta no
+ * termina. Un claim `low` automático nunca escribe en el core, así que dentro de
+ * una tanda la lista solo cambia por escritores ajenos; la instantánea las
+ * ignora hasta que la tanda acaba. Quien la abre decide el alcance. Los
+ * resultados se comparten: el resolutor no los muta.
+ */
+interface SnapshotEntry {
+  candidates: Promise<ResolutionCandidate[]>;
+  tracks?: Promise<TrackIndex>;
+}
+const candidateSnapshot = new AsyncLocalStorage<Map<ResolutionInput["kind"], SnapshotEntry>>();
+
+export function withCandidateSnapshot<T>(fn: () => Promise<T>): Promise<T> {
+  return candidateSnapshot.run(new Map(), fn);
+}
+
+/** Todas las formas de nombre con las que `compareName` declara una coincidencia exacta o previsible. */
+function nameKeys(value: string): string[] {
+  const name = normalizeEntityName(value);
+  return [name.primaryKey, name.articlelessPrimaryKey, name.compactPrimaryKey, name.secondaryKey].filter(Boolean);
+}
+
+/**
+ * Una pista solo puede coincidir con otra del mismo disco o con el mismo
+ * título: cualquier otra queda con conflicto de disco y no puede ganar. Con
+ * 40.000 pistas, puntuarlas todas por cada claim cuesta ~250 ms; este índice
+ * las reduce a las pocas que sí pueden coincidir. Solo se usa en la
+ * instantánea de una tanda `low` (ver arriba).
+ */
+interface TrackIndex {
+  byAlbumId: Map<number, ResolutionCandidate[]>;
+  byAlbumKey: Map<string, ResolutionCandidate[]>;
+  byName: Map<string, ResolutionCandidate[]>;
+}
+
+function buildTrackIndex(candidates: ResolutionCandidate[]): TrackIndex {
+  const index: TrackIndex = { byAlbumId: new Map(), byAlbumKey: new Map(), byName: new Map() };
+  const add = <K>(map: Map<K, ResolutionCandidate[]>, key: K, candidate: ResolutionCandidate) => {
+    const list = map.get(key);
+    if (list) list.push(candidate); else map.set(key, [candidate]);
+  };
+  for (const candidate of candidates) {
+    if (candidate.kind !== "TRACK") continue;
+    if (candidate.album?.id !== undefined) add(index.byAlbumId, candidate.album.id, candidate);
+    if (candidate.album?.name) add(index.byAlbumKey, normalizeEntityName(candidate.album.name).secondaryKey, candidate);
+    const keys = new Set(nameKeys(candidate.canonicalName));
+    for (const alias of candidate.aliases ?? []) for (const key of nameKeys(alias.value)) keys.add(key);
+    for (const key of keys) add(index.byName, key, candidate);
+  }
+  return index;
+}
+
+function trackCandidatesFor(index: TrackIndex, input: ResolutionInput): ResolutionCandidate[] | undefined {
+  // Sin disco conocido el puntaje no se puede acotar: se usa la lista completa.
+  if (input.kind !== "TRACK" || (input.album?.id === undefined && !input.album?.name)) return undefined;
+  const found = new Map<number, ResolutionCandidate>();
+  const take = (list: ResolutionCandidate[] | undefined) => { for (const candidate of list ?? []) found.set(candidate.id, candidate); };
+  if (input.album.id !== undefined) take(index.byAlbumId.get(input.album.id));
+  if (input.album.name) take(index.byAlbumKey.get(normalizeEntityName(input.album.name).secondaryKey));
+  for (const key of nameKeys(input.name)) take(index.byName.get(key));
+  for (const alias of input.aliases ?? []) for (const key of nameKeys(alias.value)) take(index.byName.get(key));
+  return [...found.values()].sort((left, right) => left.id - right.id);
+}
+
 export async function loadResolutionCandidates(input: ResolutionInput, queryable: Queryable = getPool()): Promise<ResolutionCandidate[]> {
+  const snapshot = candidateSnapshot.getStore();
+  if (!snapshot) return queryCandidates(input, queryable);
+  let entry = snapshot.get(input.kind);
+  if (!entry) {
+    const candidates = queryCandidates(input, queryable);
+    entry = { candidates };
+    snapshot.set(input.kind, entry);
+    // Una lectura fallida no se queda en la instantánea: la siguiente reintenta.
+    candidates.catch(() => snapshot.delete(input.kind));
+  }
+  const all = await entry.candidates;
+  if (input.kind !== "TRACK") return all;
+  entry.tracks ??= Promise.resolve(buildTrackIndex(all));
+  return trackCandidatesFor(await entry.tracks, input) ?? all;
+}
+
+async function queryCandidates(input: ResolutionInput, queryable: Queryable): Promise<ResolutionCandidate[]> {
   if (input.kind === "ARTIST") {
     const result = await queryable.query<CandidateRow>(`
       SELECT a.id::text, a.name, a.formed_year, a.disbanded_year, a.origin_city, a.origin_country,
@@ -140,7 +227,17 @@ export async function persistResolutionDecision(
   } = {},
 ): Promise<number> {
   const queryable = options.queryable ?? getPool();
-  const identity = { claimId: options.claimId ?? null, runId: options.runId ?? null, input, decision };
+  // Dentro de una tanda con instantánea el dossier se guarda ya compactado, tal
+  // como lo dejaría la retención (src/er/retention.ts): las mejores candidatas y
+  // el conteo original. Guardar los miles de candidatas de cada claim pesa
+  // ~280 kB por decisión: una sola ingesta de Sincopa llenaría el disco.
+  const compact = candidateSnapshot.getStore() !== undefined;
+  const stored: ResolutionDecision = compact
+    ? { ...decision, candidates: decision.candidates.slice(0, KEEP_CANDIDATES).map((item) => ({
+        candidateId: item.candidateId, canonicalName: item.canonicalName, score: item.score, action: item.action,
+      })) as ResolutionDecision["candidates"] }
+    : decision;
+  const identity = { claimId: options.claimId ?? null, runId: options.runId ?? null, input, decision: stored };
   const decisionHash = createHash("sha256").update(stableJson(identity)).digest("hex");
   const targets = targetColumns(decision.kind, decision.candidateId);
   const saved = await queryable.query<{ id: string }>(`
@@ -148,14 +245,15 @@ export async function persistResolutionDecision(
       decision_hash,run_id,claim_id,ai_run_id,entity_kind,
       artist_id,person_id,album_id,track_id,organization_id,
       input_name_original,input_name_normalized,input_context,score,action,
-      features,candidates,thresholds,explanation,decided_by
-    ) VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13::jsonb,$14,$15,$16::jsonb,$17::jsonb,$18::jsonb,$19,$20)
+      features,candidates,thresholds,explanation,decided_by,candidates_count,compacted_at
+    ) VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13::jsonb,$14,$15,$16::jsonb,$17::jsonb,$18::jsonb,$19,$20,$21::int,CASE WHEN $21::int IS NULL THEN NULL ELSE now() END)
     ON CONFLICT(decision_hash) DO UPDATE SET decision_hash=EXCLUDED.decision_hash
     RETURNING id`, [
     decisionHash, options.runId ?? null, options.claimId ?? null, decision.aiRunId ?? null, decision.kind,
     ...targets, decision.inputOriginal, decision.inputNormalized, JSON.stringify(input), decision.score, decision.action,
-    JSON.stringify(decision.features), JSON.stringify(decision.candidates), JSON.stringify(decision.thresholds),
+    JSON.stringify(decision.features), JSON.stringify(stored.candidates), JSON.stringify(decision.thresholds),
     decision.explanation, options.decidedBy ?? (decision.aiProposal ? "deepseek" : "deterministic"),
+    compact ? decision.candidates.length : null,
   ]);
   const id = saved.rows[0]?.id;
   if (!id) throw new Error("no se pudo persistir entity_resolution_decision");
