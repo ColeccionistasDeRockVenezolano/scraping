@@ -1,0 +1,47 @@
+{
+  "creadas": [
+    {
+      "id": 3242,
+      "name": "Cuásar",
+      "via": "directa"
+    },
+    {
+      "id": 3243,
+      "name": "GeneraSion",
+      "via": "directa"
+    },
+    {
+      "id": 3244,
+      "name": "La Vesper",
+      "via": "directa"
+    },
+    {
+      "id": 3245,
+      "name": "Proyecto Fenyx",
+      "via": "directa"
+    },
+    {
+      "id": 3246,
+      "name": "\"R\"",
+      "via": "directa"
+    },
+    {
+      "id": 3247,
+      "name": "Rolling Band",
+      "via": "directa"
+    },
+    {
+      "id": 3248,
+      "name": "Sexeappeal",
+      "via": "directa"
+    }
+  ],
+  "review": [
+    {
+      "key": "Malegua",
+      "existingId": 3231,
+      "detail": "ya existe (ER)"
+    }
+  ],
+  "errors": []
+}
