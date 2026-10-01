@@ -27,10 +27,12 @@ export function Layout({ children }: { children: ReactNode }) {
       <header className="topbar">
         <div className="container topbar-row">
           <NavLink to="/" className="brand">
-            <span className="brand-badge">CRV</span>
+            <span className="brand-logo" aria-hidden="true">
+              <img src={`${import.meta.env.BASE_URL}crv-logo.jpg`} alt="" width="160" height="160" />
+            </span>
             <span className="brand-text">
-              <strong>Coleccionistas De Rock Venezolano</strong>
-              <span>Catálogo</span>
+              <strong>Coleccionistas</strong>
+              <span>de Rock Venezolano · Catálogo</span>
             </span>
           </NavLink>
           <nav className="main-nav" aria-label="Principal">

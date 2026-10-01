@@ -135,16 +135,11 @@ ul { margin: 0; padding: 0; list-style: none; }
   height: var(--header-h);
 }
 .brand { display: flex; align-items: center; gap: 10px; flex: 0 0 auto; min-width: 0; }
-.brand-badge {
-  width: 36px; height: 36px; flex-shrink: 0;
-  display: grid; place-items: center;
-  background: var(--red); color: #fff;
-  font-family: var(--font-display); font-size: 15px; letter-spacing: 0.5px;
-  border-radius: var(--radius-sm);
-}
-.brand-text { display: flex; flex-direction: column; line-height: 1.15; min-width: 0; }
-.brand-text strong { font-size: 14px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.brand-text span { font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-faint); }
+.brand-logo { width: 44px; height: 44px; flex: 0 0 44px; display: grid; place-items: center; overflow: hidden; border-radius: 10px; }
+.brand-logo img { width: 44px; height: 45px; max-width: none; mix-blend-mode: screen; }
+.brand-text { display: flex; flex-direction: column; gap: 2px; line-height: 1.1; min-width: 0; }
+.brand-text strong { font-family: var(--font-display); font-size: 16px; font-weight: 400; letter-spacing: 0.025em; text-transform: uppercase; white-space: nowrap; }
+.brand-text span { font-size: 10px; font-weight: 600; letter-spacing: 0.055em; text-transform: uppercase; color: var(--text-muted); white-space: nowrap; }
 
 .main-nav { display: flex; align-items: center; gap: 4px; flex: 1 1 auto; overflow-x: auto; scrollbar-width: none; }
 .main-nav::-webkit-scrollbar { display: none; }
@@ -789,9 +784,8 @@ td.num { font-family: var(--font-mono); }
   .topbar { background: #0a0a0a; backdrop-filter: none; }
   .topbar-row { gap: 10px; }
   .brand { flex: 1 1 auto; overflow: hidden; }
-  .brand-badge { width: 34px; height: 34px; }
-  .brand-text strong { font-size: 12.5px; }
-  .brand-text span { display: none; }
+  .brand-text strong { font-size: 14px; }
+  .brand-text span { font-size: 9px; letter-spacing: 0.035em; overflow: hidden; text-overflow: ellipsis; }
   .operator-pill { min-width: 44px; min-height: 44px; padding: 8px; gap: 5px; justify-content: center; }
   .operator-label { display: none; }
 
