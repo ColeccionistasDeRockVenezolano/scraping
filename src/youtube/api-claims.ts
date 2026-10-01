@@ -156,7 +156,7 @@ export function recordsForVideo(
     });
   }
 
-  const emitCredit = (name: string, role: string, trackNumbers: number[], selector: string, excerpt: string, kind: "person" | "organization" = "person", location?: string | null, section?: string): void => {
+  const emitCredit = (name: string, role: string, trackNumbers: number[], selector: string, excerpt: string, kind: "person" | "organization" = "person", location?: string | null, section?: string, deceased = false): void => {
     const where = evidenceFor(video.video_id, selector, excerpt);
     // Cuando el acreditado es la propia banda del disco, se declara: probar
     // `person` primero engancharía el nombre del grupo a un homónimo.
@@ -165,6 +165,8 @@ export function recordsForVideo(
     if (!isSelf && !seen.has(name.toLowerCase())) {
       seen.add(name.toLowerCase());
       const entityFields: RawRecord["fields"] = [{ field: "name", value: name, evidence: where }];
+      // La cruz «(†)» junto al nombre es la fuente diciendo que murió.
+      if (deceased && kind === "person") entityFields.push({ field: "is_deceased", value: "true", evidence: where });
       if (kind === "organization") {
         // Quien firma la foto o el arte es un estudio de diseño o de foto, no
         // uno de grabación. El resto conserva el tipo que ya emitía.
@@ -173,6 +175,12 @@ export function recordsForVideo(
         if (location) entityFields.push({ field: "country", value: location, evidence: where });
       }
       records.push({ entityKind: kind, identity: name, extractor: EXTRACTOR, extractorVersion: EXTRACTOR_VERSION, fields: entityFields });
+    } else if (!isSelf && deceased && kind === "person") {
+      // Ya emitida sin la cruz por otro crédito: la marca se afirma aparte.
+      records.push({
+        entityKind: kind, identity: name, extractor: EXTRACTOR, extractorVersion: EXTRACTOR_VERSION,
+        fields: [{ field: "name", value: name, evidence: where }, { field: "is_deceased", value: "true", evidence: where }],
+      });
     }
     const scoped = trackNumbers.length > 0;
     const fields: RawRecord["fields"] = [
@@ -195,7 +203,7 @@ export function recordsForVideo(
 
   for (const credit of parseCreditSections(sections)) {
     const section = credit.sectionKind === "musicians" || credit.sectionKind === "guest_musicians" ? credit.sectionKind : undefined;
-    emitCredit(credit.name, credit.role, credit.trackNumbers, `section:${credit.sectionKind}`, `${credit.role}: ${credit.name}`, "person", null, section);
+    emitCredit(credit.name, credit.role, credit.trackNumbers, `section:${credit.sectionKind}`, `${credit.role}: ${credit.name}${credit.deceased ? " (†)" : ""}`, "person", null, section, credit.deceased);
   }
   // "Recorded & Mixed by Jesús Jiménez at Optilaser (Caracas, Venezuela)" son
   // varios hechos en una línea: dos verbos, una persona y un estudio. Se

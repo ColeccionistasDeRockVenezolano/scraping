@@ -1,5 +1,6 @@
 import { useId, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
+import { BackLink } from "../components/BackLink";
 import { GitMerge, PencilSimple, Trash } from "@phosphor-icons/react";
 import { artistsApi, artistMemberWrites, artistWrites } from "../lib/api";
 import { useAsync } from "../lib/useAsync";
@@ -8,6 +9,7 @@ import { useOperator } from "../lib/OperatorContext";
 import { useToast } from "../lib/ToastContext";
 import { DetailSkeleton } from "../components/Skeletons";
 import { EntityCard, initialOf } from "../components/EntityCard";
+import { DeceasedMark } from "../components/DeceasedMark";
 import { AliasEditor } from "../components/AliasEditor";
 import { EntityFormModal } from "../components/EntityFormModal";
 import { ConfirmDialog } from "../components/ConfirmDialog";
@@ -17,8 +19,21 @@ import { EntityLoadError } from "../components/RemovedEntityState";
 import { EntityPicker } from "../components/EntityPicker";
 import { Modal } from "../components/Modal";
 import { ARTIST_FIELDS } from "../lib/entityFields";
-import { artistTypeLabel } from "../lib/labels";
+import { EntityInfo, type InfoItem } from "../components/EntityInfo";
+import { EntityTabs, TabEmpty, type TabSpec } from "../components/EntityTabs";
+import { ExpandableText } from "../components/ExpandableText";
+import { albumTypeLabel, artistTypeLabel } from "../lib/labels";
 import type { ArtistMember } from "../lib/types";
+
+const LINK_PLATFORMS = [
+  { key: "youtube", label: "YouTube" },
+  { key: "instagram", label: "Instagram" },
+  { key: "wordpress", label: "Blog (WordPress)" },
+] as const;
+
+function hostOf(url: string): string {
+  try { return new URL(url).hostname.replace(/^www\./, ""); } catch { return url; }
+}
 
 export function ArtistDetailPage() {
   const { id } = useParams();
@@ -37,26 +52,135 @@ export function ArtistDetailPage() {
   if (loading) return <DetailSkeleton />;
   if (error || !artist) return <EntityLoadError message={error ?? "Artista no encontrado."} errorValue={errorValue} onRetry={reload} />;
 
-  const meta = [artistTypeLabel(artist.artistType), artist.originCity ?? artist.originCountry,
-    artist.formedYear ? `${artist.formedYear}${artist.disbandedYear ? `–${artist.disbandedYear}` : "–presente"}` : null,
+  const hasCurrentMember = artist.members.some((member) => member.isCurrent);
+  const status = artist.disbandedYear ? "Disuelto" : hasCurrentMember ? "Activo" : null;
+  const activeYears = artist.formedYear
+    ? `${artist.formedYear}–${artist.disbandedYear ?? (status === "Activo" ? "presente" : "?")}`
+    : null;
+  const info: InfoItem[] = [
+    { label: "País de origen", value: artist.originCountry },
+    { label: "Ubicación", value: artist.originCity },
+    { label: "Estado", value: status, fallback: "Desconocido" },
+    { label: "Formado en", value: artist.formedYear, fallback: "Sin dato" },
+    { label: "Años activos", value: activeYears },
     // Género del artista (su trayectoria); cada disco muestra el suyo.
-    ...(artist.genres ?? []).map((genre) => genre.name)]
-    .filter(Boolean);
+    { label: "Género", value: artist.genres?.length ? (
+      <span className="entity-info__tags">{artist.genres.map((genre) => <span className="badge" key={genre.id}>{genre.name}</span>)}</span>
+    ) : null, fallback: "Sin clasificar" },
+    { label: "Tipo", value: artistTypeLabel(artist.artistType) },
+    { label: "Último sello", value: artist.lastLabel ? <Link to={`/organizaciones/${artist.lastLabel.id}`}>{artist.lastLabel.name}</Link> : null, fallback: "Independiente / sin dato" },
+  ];
+  // La API más antigua no manda estos campos: la ficha sigue abriendo sin ellos.
+  const similar = artist.similar ?? [];
+  const links = artist.links ?? [];
+  const similarByMembers = similar.filter((item) => item.reason === "members");
+  const similarByGenre = similar.filter((item) => item.reason === "genre");
+  const linksByPlatform = LINK_PLATFORMS
+    .map((platform) => ({ ...platform, items: links.filter((link) => link.platform === platform.key) }))
+    .filter((group) => group.items.length > 0);
+
+  const tabs: TabSpec[] = [
+    {
+      key: "discografia", label: "Discografía", count: artist.discography.length,
+      content: artist.discography.length === 0 ? <TabEmpty>Sin discos registrados.</TabEmpty> : (
+        <div className="grid-cards">
+          {artist.discography.map((album) => (
+            <EntityCard key={album.albumId} to={`/discos/${album.albumId}`} title={album.title}
+              subtitle={[albumTypeLabel(album.albumType), album.releaseYear].filter(Boolean).join(" · ") || undefined}
+              imageUrl={album.coverUrl} placeholder={initialOf(album.title)} />
+          ))}
+        </div>
+      ),
+    },
+    {
+      key: "miembros", label: "Miembros", count: artist.members.length,
+      content: (
+        <>
+          {isAdmin ? (
+            <div className="page-actions" style={{ marginBottom: 14 }}>
+              <button type="button" className="btn btn--sm" onClick={() => setAddingMember(true)}>+ Añadir miembro</button>
+            </div>
+          ) : null}
+          {artist.members.length === 0 ? <TabEmpty>Sin miembros registrados.</TabEmpty> : (
+            <div className="table-wrap">
+              <table>
+                <thead><tr><th>Persona</th><th>Rol</th><th>Periodo</th><th></th></tr></thead>
+                <tbody>
+                  {artist.members.map((member) => (
+                    <MemberRow key={member.id} member={member} canEdit={isAdmin} onEdit={() => setEditingMember(member)} onChanged={reload} />
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
+        </>
+      ),
+    },
+    {
+      key: "similares", label: "Artistas similares", count: similar.length,
+      content: similar.length === 0 ? <TabEmpty>Aún no hay artistas con integrantes o género en común.</TabEmpty> : (
+        <>
+          {similarByMembers.length > 0 ? (
+            <>
+              <h3 className="similar-reason">Comparten integrantes</h3>
+              <div className="grid-cards">
+                {similarByMembers.map((item) => (
+                  <EntityCard key={item.id} to={`/artistas/${item.id}`} title={item.name} imageUrl={item.pictureUrl} placeholder={initialOf(item.name)}
+                    subtitle={`${item.originCountry} · ${item.sharedMembers} en común`} />
+                ))}
+              </div>
+            </>
+          ) : null}
+          {similarByGenre.length > 0 ? (
+            <>
+              <h3 className="similar-reason">Mismo género{artist.primaryGenre ? `: ${artist.primaryGenre.name}` : ""}</h3>
+              <div className="grid-cards">
+                {similarByGenre.map((item) => (
+                  <EntityCard key={item.id} to={`/artistas/${item.id}`} title={item.name} imageUrl={item.pictureUrl} placeholder={initialOf(item.name)} subtitle={item.originCountry} />
+                ))}
+              </div>
+            </>
+          ) : null}
+        </>
+      ),
+    },
+    {
+      key: "enlaces", label: "Enlaces", count: links.length,
+      content: linksByPlatform.length === 0 ? <TabEmpty>Sin enlaces registrados.</TabEmpty> : (
+        <div className="link-groups">
+          {linksByPlatform.map((group) => (
+            <section key={group.key}>
+              <h3 className="link-group__title">{group.label}</h3>
+              <ul className="link-list">
+                {group.items.map((link) => (
+                  <li key={`${link.albumId}-${link.platform}`}>
+                    <a href={link.url} target="_blank" rel="noreferrer noopener">
+                      <span>{link.albumTitle}</span>
+                      <span className="link-list__host">{hostOf(link.url)}</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          ))}
+        </div>
+      ),
+    },
+    { key: "historial", label: "Historial", content: <EntityHistory entity="artist" id={artist.id} /> },
+  ];
 
   return (
     <>
-      <Link to="/artistas" className="back-link">← Artistas</Link>
+      <BackLink fallback="/artistas" />
 
       <div className="entity-hero">
         <span className="entity-hero__art">
           {artist.pictureUrl ? <img src={artist.pictureUrl} alt="" loading="lazy" decoding="async" /> : <span className="placeholder">{initialOf(artist.name)}</span>}
         </span>
         <div>
-          <h1 className="entity-hero__title">{artist.name}</h1>
-          <div className="entity-hero__meta">
-            {meta.map((item) => <span className="badge" key={String(item)}>{item}</span>)}
-          </div>
-          {artist.biography ? <p className="entity-hero__desc">{artist.biography}</p> : null}
+          <h1 className="entity-hero__title">{artist.name}<DeceasedMark deceased={artist.isDeceased} /></h1>
+          <EntityInfo items={info} wide={{ label: "Alias", content: <AliasEditor path="artists" entityId={artist.id} aliases={artist.aliases} onChanged={reload} /> }} />
+          {artist.biography ? <div className="entity-hero__bio"><ExpandableText className="entity-hero__desc" text={artist.biography} /></div> : null}
         </div>
       </div>
 
@@ -74,43 +198,7 @@ export function ArtistDetailPage() {
         </div>
       ) : null}
 
-      <div className="section">
-        <h2>Alias</h2>
-        <AliasEditor path="artists" entityId={artist.id} aliases={artist.aliases} onChanged={reload} />
-      </div>
-
-      <div className="section">
-        <h2>
-          Miembros
-          {isAdmin ? <button type="button" className="btn btn--sm btn--ghost" onClick={() => setAddingMember(true)}>+ Añadir miembro</button> : null}
-        </h2>
-        {artist.members.length === 0 ? <p style={{ color: "var(--text-faint)", fontSize: 13.5 }}>Sin miembros registrados.</p> : (
-          <div className="table-wrap">
-            <table>
-              <thead><tr><th>Persona</th><th>Rol</th><th>Periodo</th><th></th></tr></thead>
-              <tbody>
-                {artist.members.map((member) => (
-                  <MemberRow key={member.id} member={member} canEdit={isAdmin} onEdit={() => setEditingMember(member)} onChanged={reload} />
-                ))}
-              </tbody>
-            </table>
-          </div>
-        )}
-      </div>
-
-      <div className="section">
-        <h2>Discografía <span className="mono" style={{ color: "var(--text-faint)", fontWeight: 400 }}>({artist.discography.length})</span></h2>
-        {artist.discography.length === 0 ? <p style={{ color: "var(--text-faint)", fontSize: 13.5 }}>Sin discos registrados.</p> : (
-          <div className="grid-cards">
-            {artist.discography.map((album) => (
-              <EntityCard key={album.albumId} to={`/discos/${album.albumId}`} title={album.title}
-                subtitle={album.releaseYear ? String(album.releaseYear) : undefined} imageUrl={album.coverUrl} placeholder={initialOf(album.title)} />
-            ))}
-          </div>
-        )}
-      </div>
-
-      <EntityHistory entity="artist" id={artist.id} />
+      <EntityTabs tabs={tabs} defaultKey="discografia" />
 
       {editing ? (
         <EntityFormModal
@@ -170,7 +258,7 @@ function MemberRow({ member, canEdit, onEdit, onChanged }: { canEdit: boolean; o
 
   return (
     <tr>
-      <td><Link to={`/personas/${member.personId}`}>{member.personName}</Link></td>
+      <td><Link to={`/personas/${member.personId}`}>{member.personName}</Link><DeceasedMark deceased={member.personIsDeceased} /></td>
       <td>{member.role}</td>
       <td className="mono">{member.fromYear ?? "—"}{member.isCurrent ? "–presente" : member.toYear ? `–${member.toYear}` : ""}</td>
       <td className="row-actions">

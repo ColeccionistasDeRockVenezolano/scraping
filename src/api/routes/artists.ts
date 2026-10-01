@@ -17,6 +17,7 @@ const artistListItemSchema = z.object({
   formedYear: z.number().int().nullable(),
   disbandedYear: z.number().int().nullable(),
   pictureUrl: z.string().nullable(),
+  isDeceased: z.boolean().describe("Su proyecto es de una persona fallecida (titular o único integrante)."),
   primaryGenre: publicGenreSchema.nullable(),
   genreStatus: genreStatusSchema,
 });
@@ -25,7 +26,7 @@ const artistDetailSchema = artistListItemSchema.extend({
   biography: z.string().nullable(),
   notes: z.string().nullable(),
   members: z.array(z.object({
-    id: z.number().int(), personId: z.number().int(), personName: z.string(), role: z.string(),
+    id: z.number().int(), personId: z.number().int(), personName: z.string(), personIsDeceased: z.boolean(), role: z.string(),
     fromYear: z.number().int().nullable(), toYear: z.number().int().nullable(), isCurrent: z.boolean(),
   })),
   discography: z.array(z.object({
@@ -34,6 +35,15 @@ const artistDetailSchema = artistListItemSchema.extend({
   })),
   aliases: z.array(aliasSchema),
   genres: z.array(publicGenreSchema),
+  lastLabel: z.object({ id: z.number().int(), name: z.string() }).nullable()
+    .describe("Sello del disco más reciente que lo declara (derivado)."),
+  links: z.array(z.object({
+    platform: z.enum(["youtube", "instagram", "wordpress"]), url: z.string(), albumId: z.number().int(), albumTitle: z.string(),
+  })).describe("Enlaces públicos de sus discos."),
+  similar: z.array(z.object({
+    id: z.number().int(), name: z.string(), pictureUrl: z.string().nullable(), originCountry: z.string(),
+    reason: z.enum(["members", "genre"]), sharedMembers: z.number().int(),
+  })).describe("Artistas con integrantes o género principal en común."),
 });
 
 const listQuerySchema = paginationQuerySchema.extend({

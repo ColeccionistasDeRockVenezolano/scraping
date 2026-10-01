@@ -35,6 +35,26 @@ export interface NormalizedEntityName {
   tokens: string[];
 }
 
+/**
+ * Cruces que las fuentes ponen junto al nombre de quien murió: «Nombre (†)»,
+ * «Nombre †», «✝ Nombre». Es una marca, no parte del nombre.
+ */
+const DECEASED_MARKS = "†✝✞✟☨✙✛✜";
+const DECEASED_GROUP = new RegExp(`\\s*[(\\[]\\s*[${DECEASED_MARKS}]+\\s*[)\\]]`, "gu");
+const DECEASED_BARE = new RegExp(`\\s*[${DECEASED_MARKS}]+\\s*`, "gu");
+const HAS_DECEASED_MARK = new RegExp(`[${DECEASED_MARKS}]`, "u");
+
+export function hasDeceasedMark(value: string): boolean {
+  return HAS_DECEASED_MARK.test(value);
+}
+
+/** Quita la marca de fallecido del nombre y avisa si la llevaba. */
+export function stripDeceasedMark(value: string): { name: string; deceased: boolean } {
+  if (!hasDeceasedMark(value)) return { name: value, deceased: false };
+  const name = value.replace(DECEASED_GROUP, " ").replace(DECEASED_BARE, " ").replace(/\s+/gu, " ").trim();
+  return { name, deceased: true };
+}
+
 export function normalizeUnicode(value: string): string {
   return value.normalize("NFC");
 }

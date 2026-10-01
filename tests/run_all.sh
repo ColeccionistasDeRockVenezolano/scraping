@@ -101,10 +101,12 @@ docker exec "$CTR" pg_dump -U postgres -d postgres --schema=public --schema-only
 # excepción aprobada al core: solo registran, no cambian columnas ni datos.
 # La segunda (0029) es `persons.is_venezuelan` nullable (NULL = sin dato):
 # solo esa forma exacta de la columna se lee como la del core.
+# La tercera (0032) añade la columna `persons.is_deceased boolean`.
 core_filt() {
   grep -vE '^\\(un)?restrict' "$1" \
     | perl -0pe 's/--\n-- Name: \S+ crv_journal; Type: TRIGGER;[^\n]*\n--\n\nCREATE TRIGGER crv_journal [^\n]*\n\n\n//g' \
-    | sed -E 's/^    is_venezuelan boolean,$/    is_venezuelan boolean DEFAULT false NOT NULL,/'
+    | sed -E 's/^    is_venezuelan boolean,$/    is_venezuelan boolean DEFAULT false NOT NULL,/' \
+    | sed -E '/^    is_deceased boolean,$/d'
 }
 core_filt "$OUT/core_before.sql" > "$OUT/core_before.filt"
 core_filt "$OUT/core_after.sql"  > "$OUT/core_after.filt"

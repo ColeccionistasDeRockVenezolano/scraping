@@ -16,6 +16,7 @@ const personListItemSchema = z.object({
   name: z.string(),
   nationality: z.string().nullable(),
   isVenezuelan: z.boolean().nullable().describe("null = sin dato; false = extranjero afirmado."),
+  isDeceased: z.boolean().describe("Fallecido/a: `is_deceased` o fecha de fallecimiento."),
   pictureUrl: z.string().nullable(),
   creditCount: z.number().int().describe("Créditos de disco y de pista."),
   bandCount: z.number().int().describe("Membresías de banda."),
@@ -26,6 +27,7 @@ const personListItemSchema = z.object({
 
 const personDetailSchema = personListItemSchema.extend({
   biography: z.string().nullable(),
+  isDeceasedFlag: z.boolean().nullable().describe("Columna `is_deceased` tal cual (null = sin dato)."),
   birthDate: z.string().nullable(),
   deathDate: z.string().nullable(),
   notes: z.string().nullable(),

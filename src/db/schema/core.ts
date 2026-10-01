@@ -78,6 +78,8 @@ export const persons = pgTable("persons", {
   notes: text("notes"),
   createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
   updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),
+  /** NULL = sin dato; true = fallecido/a (migración 0032). */
+  isDeceased: boolean("is_deceased"),
 });
 
 export const artistMembers = pgTable("artist_members", {

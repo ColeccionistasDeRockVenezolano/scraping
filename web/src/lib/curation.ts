@@ -109,7 +109,7 @@ const FIELD_LABEL: Readonly<Record<string, string>> = {
   // Etiquetas que usan tanto los hallazgos como el historial por ficha
   // (EntityHistory) para los campos de las cinco entidades y las relaciones.
   genre: "Género", label_id: "Sello", cover_url: "Portada", description: "Descripción", biography: "Biografía",
-  nationality: "Nacionalidad", is_venezuelan: "Venezolano/a", birth_date: "Fecha de nacimiento", death_date: "Fecha de fallecimiento",
+  nationality: "Nacionalidad", is_venezuelan: "Venezolano/a", is_deceased: "Fallecido/a", birth_date: "Fecha de nacimiento", death_date: "Fecha de fallecimiento",
   picture_url: "Foto", origin_country: "País de origen", artist_type: "Tipo de artista", organization_type: "Tipo de organización",
   country: "País", website_url: "Sitio web", disc_number: "Disco N.º", track_number: "Pista N.º", youtube_start_seconds: "Inicio en YouTube",
   role: "Rol", credit_type: "Tipo de crédito", from_year: "Desde", to_year: "Hasta", is_current: "Vigente",

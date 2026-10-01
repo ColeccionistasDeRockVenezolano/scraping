@@ -47,7 +47,7 @@ const CONTEXT_FIELDS = new Set([
   "web_url", "catalog_number", "format", "track_numbers", "track_title", "genre",
 ]);
 const INTEGER_FIELDS = new Set(["formed_year", "disbanded_year", "release_year", "disc_number", "track_number", "duration_seconds", "youtube_start_seconds", "label_id"]);
-const BOOLEAN_FIELDS = new Set(["is_venezuelan"]);
+const BOOLEAN_FIELDS = new Set(["is_venezuelan", "is_deceased"]);
 
 // Textos largos: una biografía escrita por una persona trae párrafos. El
 // normalizador de nombres colapsa todo espacio, saltos incluidos, y eso sigue

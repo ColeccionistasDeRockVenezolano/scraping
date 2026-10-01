@@ -1,0 +1,2150 @@
+{
+  "decidedAt": "2026-09-30",
+  "evidence": "Búsqueda en todo lo cosechado (reports/bio-texts, claims de biografía, cachés de las fuentes) de nacimiento y fallecimiento (Brian, 2026-09-30). Informe: reports/deceased/. Se marca is_deceased a quien tiene dato de ficha, su propia biografía o la biografía de su banda con el nombre pegado al verbo; las fechas completas se guardan por mayoría de fuentes.",
+  "corrections": [
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 39,
+        "name": "Pablo Manavello"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento.",
+      "birthDate": "1950-05-21",
+      "deathDate": "2016-01-18"
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 106,
+        "name": "Alberto Naranjo"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento.",
+      "birthDate": "1941-09-14",
+      "deathDate": "2020-01-27"
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 313,
+        "name": "Nestor Pérez"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento.",
+      "birthDate": "1963-09-14",
+      "deathDate": "2015-10-12"
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 411,
+        "name": "Tirone González \"Canserbero\""
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento.",
+      "birthDate": "1988-03-11",
+      "deathDate": "2015-01-20"
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 503,
+        "name": "Vladimir Rivero"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento.",
+      "deathDate": "2007-08-23"
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 543,
+        "name": "Nerio Quintero"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento.",
+      "birthDate": "1946-10-16",
+      "deathDate": "2023-01-07"
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 601,
+        "name": "Jorge Spiteri"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento.",
+      "birthDate": "1951-05-02",
+      "deathDate": "2020-05-24"
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 604,
+        "name": "Charlie Spiteri"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento.",
+      "birthDate": "1948-10-14",
+      "deathDate": "2007-04-16"
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 605,
+        "name": "Bernardo Ball"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento.",
+      "birthDate": "1946-04-15",
+      "deathDate": "2017-11-20"
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 623,
+        "name": "Mauro Scavroni"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento.",
+      "birthDate": "1950-01-24",
+      "deathDate": "2008-08-09"
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 645,
+        "name": "Cayayo Troconis"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento.",
+      "birthDate": "1968-10-21",
+      "deathDate": "1999-11-17"
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 850,
+        "name": "María Rivas"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento.",
+      "birthDate": "1960-01-26",
+      "deathDate": "2019-09-19"
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 977,
+        "name": "Francisco Belisario"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento.",
+      "birthDate": "1946-03-12",
+      "deathDate": "2009-03-23"
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 978,
+        "name": "Rudy Márquez"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento.",
+      "birthDate": "1942-12-07",
+      "deathDate": "2024-10-09"
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 980,
+        "name": "Omar Paduay"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento."
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 1007,
+        "name": "Diego Márquez"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento.",
+      "birthDate": "1970-12-22",
+      "deathDate": "2022-02-16"
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 1045,
+        "name": "Jesús Narvaez"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento.",
+      "birthDate": "1950-08-26",
+      "deathDate": "2006-01-16"
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 1048,
+        "name": "Gustavo Carmona"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento.",
+      "birthDate": "1952-03-29",
+      "deathDate": "2018-08-28"
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 1056,
+        "name": "Manuel Urbina"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento.",
+      "birthDate": "1954-10-16",
+      "deathDate": "2024-03-29"
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 1083,
+        "name": "Willy Crook"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento.",
+      "deathDate": "2021-06-27"
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 1155,
+        "name": "Iván Loscher"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento.",
+      "birthDate": "1946-01-24",
+      "deathDate": "2017-02-22"
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 1287,
+        "name": "Carlos Moreán"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento.",
+      "birthDate": "1947-07-28",
+      "deathDate": "2017-10-24"
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 1288,
+        "name": "Danilo Aponte"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento."
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 1868,
+        "name": "Henry Augustus Stephen"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento.",
+      "birthDate": "1941-07-15",
+      "deathDate": "2021-04-05"
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 1926,
+        "name": "Adib Casta"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento.",
+      "birthDate": "1946-02-12",
+      "deathDate": "2003-04-12"
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 2032,
+        "name": "Manolo Alvarez"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento.",
+      "birthDate": "1944-08-02",
+      "deathDate": "2014-07-23"
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 2104,
+        "name": "Freddy Roldán"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento.",
+      "birthDate": "1951-05-31",
+      "deathDate": "2022-01-24"
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 2115,
+        "name": "Carlos Spósito"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento.",
+      "birthDate": "1951-08-26",
+      "deathDate": "2021-07-06"
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 2252,
+        "name": "Marisela Pérez"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento.",
+      "deathDate": "2014-12-10"
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 2359,
+        "name": "Evio Di Marzo"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento.",
+      "birthDate": "1954-05-23",
+      "deathDate": "2018-05-28"
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 2415,
+        "name": "Abraham García"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento.",
+      "birthDate": "1955-03-07",
+      "deathDate": "2025-07-22"
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 2424,
+        "name": "Robert Valerio"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento.",
+      "birthDate": "1952-10-03",
+      "deathDate": "2002-12-31"
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 2426,
+        "name": "Enrique Santana"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento.",
+      "birthDate": "1958-08-23",
+      "deathDate": "1994-05-09"
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 2493,
+        "name": "Vytas Brenner"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento.",
+      "birthDate": "1946-09-19",
+      "deathDate": "2004-03-18"
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 2510,
+        "name": "Frank Rojas"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento.",
+      "birthDate": "1948-04-28",
+      "deathDate": "2020-11-25"
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 2520,
+        "name": "Jairo Zuleta"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento.",
+      "birthDate": "1952-06-08",
+      "deathDate": "2020-05-01"
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 2837,
+        "name": "Gustavo Aldrey"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento.",
+      "birthDate": "1952-10-05",
+      "deathDate": "2020-03-18"
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 2947,
+        "name": "Rodrigo Yoma"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento.",
+      "birthDate": "1959-06-26",
+      "deathDate": "2007-01-11"
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 3100,
+        "name": "Daniel Grau"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento.",
+      "birthDate": "1948-12-30",
+      "deathDate": "2021-01-05"
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 3208,
+        "name": "José Andrés Blanco \"Blanquito Man\""
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento.",
+      "deathDate": "2017-11-16"
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 3216,
+        "name": "Gustavo Aranguren"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento.",
+      "birthDate": "1954-08-29",
+      "deathDate": "2019-09-13"
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 3409,
+        "name": "Gustavo Atilano"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento.",
+      "birthDate": "1953-09-20",
+      "deathDate": "2025-11-06"
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 3441,
+        "name": "Julio Hung"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento.",
+      "birthDate": "1957-01-22",
+      "deathDate": "2014-11-26"
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 3442,
+        "name": "Gian Visconti"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento.",
+      "birthDate": "1950-01-22",
+      "deathDate": "2001-07-18"
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 3450,
+        "name": "Roberto Fuentes"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento.",
+      "deathDate": "2010-05-16"
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 3526,
+        "name": "Victor Cuica"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento.",
+      "birthDate": "1949-04-19",
+      "deathDate": "2020-12-26"
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 3558,
+        "name": "Alejandro Pérez Rodríguez"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento.",
+      "birthDate": "1949-07-17",
+      "deathDate": "2017-11-04"
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 3659,
+        "name": "Marcos Chacón"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento."
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 3797,
+        "name": "Esteban Ruíz"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento.",
+      "birthDate": "1942-12-26",
+      "deathDate": "2026-09-03"
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 3805,
+        "name": "Enrique Piñero"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento.",
+      "birthDate": "1947-02-07",
+      "deathDate": "2016-06-22"
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 3868,
+        "name": "José Antonio Bordell"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento.",
+      "birthDate": "1961-11-16",
+      "deathDate": "2017-07-01"
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 4026,
+        "name": "Edgar Alexander"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento.",
+      "birthDate": "1945-01-02",
+      "deathDate": "2016-03-18"
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 4218,
+        "name": "Johnny Bastidas"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento."
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 4531,
+        "name": "James Brown"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento.",
+      "birthDate": "1933-05-03",
+      "deathDate": "2006-12-25"
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 4703,
+        "name": "Nelson Zuleta"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento.",
+      "birthDate": "1958-02-28",
+      "deathDate": "2020-02-20"
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 5050,
+        "name": "Jorge Pineda"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento."
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 5073,
+        "name": "José Arévalo"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento.",
+      "birthDate": "1951-07-20",
+      "deathDate": "2018-03-16"
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 5104,
+        "name": "Luis Musto"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento."
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 5409,
+        "name": "José Dovo"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento.",
+      "birthDate": "1962-07-30",
+      "deathDate": "2011-01-11"
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 5631,
+        "name": "Pablo Schneider"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento.",
+      "birthDate": "1949-04-09",
+      "deathDate": "2019-12-02"
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 5741,
+        "name": "Arnoldo Sergas"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento."
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 5870,
+        "name": "Joel Bravo"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento.",
+      "birthDate": "1947-10-29",
+      "deathDate": "2014-11-16"
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 6052,
+        "name": "Jesús Parra"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento."
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 7192,
+        "name": "Al Zeppy"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento.",
+      "birthDate": "1939-07-30",
+      "deathDate": "2019-10-21"
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 7348,
+        "name": "Luis Mariano Rivera"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento.",
+      "deathDate": "2002-03-15"
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 7728,
+        "name": "Larry Williams"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento.",
+      "birthDate": "1935-05-10"
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 7869,
+        "name": "Jimi Hendrix"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento.",
+      "birthDate": "1942-11-27",
+      "deathDate": "1970-09-18"
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 8327,
+        "name": "Nelson Garrido"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento.",
+      "birthDate": "1952-08-24",
+      "deathDate": "2026-08-20"
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 8494,
+        "name": "Cherry Navarro"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento.",
+      "birthDate": "1944-07-09",
+      "deathDate": "1967-09-28"
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 8775,
+        "name": "Trino Mora"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento.",
+      "birthDate": "1946-04-27",
+      "deathDate": "2024-12-09"
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 9655,
+        "name": "Rafael Bolívar Coronado"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento.",
+      "birthDate": "1884-06-06",
+      "deathDate": "1924-01-31"
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 9671,
+        "name": "Gloria Martín"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento.",
+      "deathDate": "2026-04-20"
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 9926,
+        "name": "Miguel Angel Fuster"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento.",
+      "birthDate": "1933-01-22",
+      "deathDate": "2012-09-25"
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 11732,
+        "name": "Roco Defrenza"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento.",
+      "deathDate": "2018-10-22"
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 12783,
+        "name": "Cheo Feliciano"
+      },
+      "why": "Fuentes ya cosechadas (Lobotoradio, MusicBrainz, Sincopa, Discogs, Wikipedia, Venciclopedia, biografías de banda) dan su fallecimiento.",
+      "birthDate": "1935-07-03",
+      "deathDate": "2014-04-17"
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 6,
+        "name": "Kodiak Aguero"
+      },
+      "birthDate": "1968-05-07",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 21,
+        "name": "Iván Velásquez"
+      },
+      "birthDate": "1955-12-01",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 38,
+        "name": "Pedro Castillo"
+      },
+      "birthDate": "1959-02-14",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 40,
+        "name": "Sandro Liberatoscioli"
+      },
+      "birthDate": "1954-04-20",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 45,
+        "name": "Guillermo Carrasco"
+      },
+      "birthDate": "1951-05-23",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 167,
+        "name": "José Rodríguez"
+      },
+      "birthDate": "1947-05-11",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 214,
+        "name": "Gerardo López"
+      },
+      "birthDate": "1956-12-26",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 232,
+        "name": "Alberto Arcas"
+      },
+      "birthDate": "1987-12-14",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 234,
+        "name": "One Chot"
+      },
+      "birthDate": "1977-11-05",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 280,
+        "name": "Pedro Vilela"
+      },
+      "birthDate": "1952-04-25",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 337,
+        "name": "Apache"
+      },
+      "birthDate": "1982-05-15",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 367,
+        "name": "Mauricio Arcas"
+      },
+      "birthDate": "1973-05-16",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 377,
+        "name": "Armando Figueredo"
+      },
+      "birthDate": "1974-01-22",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 386,
+        "name": "José Luis Pardo"
+      },
+      "birthDate": "1972-05-18",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 467,
+        "name": "Ángel Guanchez"
+      },
+      "birthDate": "1967-07-31",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 481,
+        "name": "Danel Sarmiento"
+      },
+      "birthDate": "1963-10-23",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 490,
+        "name": "Álvaro Segura"
+      },
+      "birthDate": "1967-09-17",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 491,
+        "name": "Jaime Verdaguer"
+      },
+      "birthDate": "1969-10-27",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 495,
+        "name": "Carlos Eduardo Reyes"
+      },
+      "birthDate": "1972-04-26",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 505,
+        "name": "Juan Olmedillo"
+      },
+      "birthDate": "1976-07-12",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 542,
+        "name": "Gabriel Quintero"
+      },
+      "birthDate": "1951-07-05",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 544,
+        "name": "Ilan Chester"
+      },
+      "birthDate": "1952-07-30",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 607,
+        "name": "Pablo Dagnino"
+      },
+      "birthDate": "1966-02-14",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 610,
+        "name": "María Conchita Alonso"
+      },
+      "birthDate": "1955-06-29",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 615,
+        "name": "Rudy La Scala"
+      },
+      "birthDate": "1954-01-20",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 621,
+        "name": "Ginés García"
+      },
+      "birthDate": "1947-04-16",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 624,
+        "name": "César Sánchez Bello"
+      },
+      "birthDate": "1948-05-21",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 628,
+        "name": "Álvaro Falcón"
+      },
+      "birthDate": "1950-05-27",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 629,
+        "name": "Richard Aumaitre"
+      },
+      "birthDate": "1950-05-03",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 633,
+        "name": "Gustavo Calle"
+      },
+      "birthDate": "1950-06-26",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 646,
+        "name": "Alberto Cabello"
+      },
+      "birthDate": "1966-04-03",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 670,
+        "name": "Gerry Weil"
+      },
+      "birthDate": "1939-08-11",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 687,
+        "name": "Ana Valencia"
+      },
+      "birthDate": "1954-09-16",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 690,
+        "name": "Willy Díaz"
+      },
+      "birthDate": "1962-11-03",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 730,
+        "name": "Alberto Montenegro"
+      },
+      "birthDate": "1989-01-21",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 765,
+        "name": "Louie Vega"
+      },
+      "birthDate": "1965-06-12",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 833,
+        "name": "José Luis Osuna"
+      },
+      "birthDate": "1978-11-06",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 883,
+        "name": "Ezequiel Serrano Valencia"
+      },
+      "birthDate": "1919-10-04",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 886,
+        "name": "Tomás Mena"
+      },
+      "birthDate": "1981-06-08",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 921,
+        "name": "Alexis Peña"
+      },
+      "birthDate": "1964-11-17",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 1039,
+        "name": "Oscar D' León"
+      },
+      "birthDate": "1943-07-11",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 1049,
+        "name": "Rodrigo Mendoza"
+      },
+      "birthDate": "1952-08-15",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 1054,
+        "name": "Rodrigo Barboza"
+      },
+      "birthDate": "1943-11-09",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 1071,
+        "name": "Luen Pieters"
+      },
+      "birthDate": "1972-08-05",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 1086,
+        "name": "Franco de Vita"
+      },
+      "birthDate": "1954-01-23",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 1096,
+        "name": "Armando Gómez"
+      },
+      "birthDate": "1977-08-09",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 1099,
+        "name": "Fernando Gómez"
+      },
+      "birthDate": "1977-08-09",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 1168,
+        "name": "Luis Emilio Mauri"
+      },
+      "birthDate": "1953-02-16",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 1195,
+        "name": "Rodolfo Reyes"
+      },
+      "birthDate": "1957-11-27",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 1248,
+        "name": "Alan Douches"
+      },
+      "birthDate": "1961-11-01",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 1262,
+        "name": "Marcelo Toutin"
+      },
+      "birthDate": "1972-03-28",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 1291,
+        "name": "Willie Croes"
+      },
+      "birthDate": "1957-02-17",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 1292,
+        "name": "Lorenzo Barriendos"
+      },
+      "birthDate": "1956-07-01",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 1306,
+        "name": "Arturo Torres"
+      },
+      "birthDate": "1963-11-10",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 1390,
+        "name": "Miguel Noya"
+      },
+      "birthDate": "1956-12-27",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 1428,
+        "name": "Julio Anidez"
+      },
+      "birthDate": "1939-03-07",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 1438,
+        "name": "Leonardo Degl'Innocenti"
+      },
+      "birthDate": "1976-12-31",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 1442,
+        "name": "Eroy Troya"
+      },
+      "birthDate": "1984-02-17",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 1474,
+        "name": "Gilberto Bermúdez"
+      },
+      "birthDate": "1969-10-11",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 1552,
+        "name": "José Mendoza"
+      },
+      "birthDate": "1961-03-17",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 1606,
+        "name": "Gabriel Silva"
+      },
+      "birthDate": "1973-06-18",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 1633,
+        "name": "Agustín Salas"
+      },
+      "birthDate": "1977-10-27",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 1639,
+        "name": "Otmaro Ruiz"
+      },
+      "birthDate": "1964-06-27",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 1640,
+        "name": "Pável Tello"
+      },
+      "birthDate": "1974-04-16",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 1701,
+        "name": "Luisito Quintero"
+      },
+      "birthDate": "1967-08-24",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 1747,
+        "name": "Rómulo Castillo"
+      },
+      "birthDate": "1970-03-07",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 1806,
+        "name": "Hensli Rahn"
+      },
+      "birthDate": "1982-03-30",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 2026,
+        "name": "Giancarlo Picozzi"
+      },
+      "birthDate": "1961-01-28",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 2027,
+        "name": "Giorgio Picozzi"
+      },
+      "birthDate": "1962-11-22",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 2036,
+        "name": "Biella Da Costa"
+      },
+      "birthDate": "1960-07-20",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 2255,
+        "name": "Agni Mogollón"
+      },
+      "birthDate": "1951-06-19",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 2256,
+        "name": "Walton de Jongh"
+      },
+      "birthDate": "1959-11-11",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 2258,
+        "name": "Antonio Rassi"
+      },
+      "birthDate": "1956-05-27",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 2358,
+        "name": "Alberto Borregales"
+      },
+      "birthDate": "1957-07-03",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 2360,
+        "name": "Bartolomé Díaz"
+      },
+      "birthDate": "1956-10-04",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 2388,
+        "name": "Ángel De Taramona"
+      },
+      "birthDate": "1962-07-07",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 2436,
+        "name": "Charles Arapé"
+      },
+      "birthDate": "1974-03-10",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 2507,
+        "name": "Carlos Acosta"
+      },
+      "birthDate": "1942-01-23",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 2517,
+        "name": "Fernando Yvosky"
+      },
+      "birthDate": "1950-05-30",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 2528,
+        "name": "Nuuro"
+      },
+      "birthDate": "1989-10-14",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 2547,
+        "name": "Victor Fiol"
+      },
+      "birthDate": "1959-10-20",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 2559,
+        "name": "Kestutis Orentas"
+      },
+      "birthDate": "1973-02-09",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 2567,
+        "name": "Colina"
+      },
+      "birthDate": "1954-02-15",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 2572,
+        "name": "Elisa Rego"
+      },
+      "birthDate": "1964-05-21",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 2663,
+        "name": "Marco Toro"
+      },
+      "birthDate": "1969-04-06",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 2664,
+        "name": "Rafael Cadavieco"
+      },
+      "birthDate": "1971-10-05",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 2669,
+        "name": "Erik Aldrey"
+      },
+      "birthDate": "1974-12-10",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 2698,
+        "name": "Asier Cazalis"
+      },
+      "birthDate": "1972-05-27",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 2741,
+        "name": "Roger Nuñez"
+      },
+      "birthDate": "1970-05-02",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 2841,
+        "name": "Ibsen Rosales"
+      },
+      "birthDate": "1959-04-18",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 2853,
+        "name": "Glenn Tomassi"
+      },
+      "birthDate": "1962-02-22",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 2856,
+        "name": "Silvano Monasterios"
+      },
+      "birthDate": "1964-10-30",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 2857,
+        "name": "Jesús Toro"
+      },
+      "birthDate": "1948-06-08",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 2866,
+        "name": "Alexis Hernandez"
+      },
+      "birthDate": "1948-02-16",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 2869,
+        "name": "Ivo"
+      },
+      "birthDate": "1947-05-05",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 2892,
+        "name": "Ezequiel Serrano"
+      },
+      "birthDate": "1953-06-03",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 2927,
+        "name": "Lerryns Hernández"
+      },
+      "birthDate": "1968-02-06",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 2945,
+        "name": "Marco Ciargo"
+      },
+      "birthDate": "1961-07-17",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 3034,
+        "name": "Eduardo Benatar"
+      },
+      "birthDate": "1977-01-26",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 3060,
+        "name": "Miguel Toro"
+      },
+      "birthDate": "1971-08-12",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 3091,
+        "name": "Oscar Gómez"
+      },
+      "birthDate": "1949-11-09",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 3244,
+        "name": "Victor Mestas"
+      },
+      "birthDate": "1973-06-19",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 3266,
+        "name": "Eddy Pérez"
+      },
+      "birthDate": "1954-06-18",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 3289,
+        "name": "Freddy Marshall"
+      },
+      "birthDate": "1959-11-07",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 3290,
+        "name": "Pablo Estacio"
+      },
+      "birthDate": "1969-03-12",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 3346,
+        "name": "Frank Quintero"
+      },
+      "birthDate": "1952-11-27",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 3368,
+        "name": "Roberto Jirón"
+      },
+      "birthDate": "1951-02-06",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 3405,
+        "name": "Edgar Jiménez"
+      },
+      "birthDate": "1966-04-17",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 3422,
+        "name": "Rigel Michelena"
+      },
+      "birthDate": "1974-01-15",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 3432,
+        "name": "Daniel Verdi"
+      },
+      "birthDate": "1963-07-13",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 3465,
+        "name": "Mickey Tedeschi"
+      },
+      "birthDate": "1962-05-02",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 3493,
+        "name": "Nana Cadavieco"
+      },
+      "birthDate": "1981-01-02",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 3617,
+        "name": "Carlos Quintero"
+      },
+      "birthDate": "1946-10-21",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 3707,
+        "name": "Oliver Krisch"
+      },
+      "birthDate": "1977-04-19",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 3725,
+        "name": "Bélica"
+      },
+      "birthDate": "1975-09-08",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 3767,
+        "name": "Abraham Gustin"
+      },
+      "birthDate": "1964-12-09",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 3829,
+        "name": "José Baptista"
+      },
+      "birthDate": "1945-08-18",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 3833,
+        "name": "Nino Parisi"
+      },
+      "birthDate": "1947-01-17",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 4117,
+        "name": "Carlos Baute"
+      },
+      "birthDate": "1974-03-08",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 4139,
+        "name": "Yumber Vera"
+      },
+      "birthDate": "1974-11-04",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 4212,
+        "name": "Alejandro Blanco Uribe"
+      },
+      "birthDate": "1948-10-14",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 4332,
+        "name": "Yordano"
+      },
+      "birthDate": "1951-10-27",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 4575,
+        "name": "Marcelo Caponi"
+      },
+      "birthDate": "1952-02-22",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 4616,
+        "name": "Gilberto Finol"
+      },
+      "birthDate": "1978-01-28",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 4788,
+        "name": "Deibys Artigas"
+      },
+      "birthDate": "1992-09-26",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 5315,
+        "name": "Michele Tomasicchio"
+      },
+      "birthDate": "1963-04-16",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 5405,
+        "name": "Daniel Rivetti"
+      },
+      "birthDate": "1962-03-12",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 5414,
+        "name": "Rafael Fiore"
+      },
+      "birthDate": "1959-10-25",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 5607,
+        "name": "Miguel Angel Zozaya"
+      },
+      "birthDate": "1952-08-26",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 5680,
+        "name": "Abelardo Tahan"
+      },
+      "birthDate": "1957-02-21",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 5694,
+        "name": "Janet Goitia"
+      },
+      "birthDate": "1961-10-08",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 5708,
+        "name": "Constantino Estévez"
+      },
+      "birthDate": "1967-07-16",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 5713,
+        "name": "Eduardo Viloria"
+      },
+      "birthDate": "1966-11-26",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 5793,
+        "name": "Juan Carlos Sabater"
+      },
+      "birthDate": "1958-04-02",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 6160,
+        "name": "Matías Pinto D'Lacoste"
+      },
+      "birthDate": "1973-04-22",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 6301,
+        "name": "Antonio Bello"
+      },
+      "birthDate": "1970-06-29",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 6612,
+        "name": "Carlos Mata"
+      },
+      "birthDate": "1952-08-28",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 7116,
+        "name": "Guillermo Dávila"
+      },
+      "birthDate": "1955-03-18",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 7180,
+        "name": "José Luis Rodríguez"
+      },
+      "birthDate": "1943-01-14",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 7209,
+        "name": "Alexis Rossell"
+      },
+      "birthDate": "1951-03-03",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 7313,
+        "name": "Mariana Vega"
+      },
+      "birthDate": "1985-02-11",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 7489,
+        "name": "Enrique Londaits"
+      },
+      "birthDate": "1950-08-13",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 7569,
+        "name": "Ollantay Velásquez"
+      },
+      "birthDate": "1981-01-13",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 8405,
+        "name": "Ricardo Montaner"
+      },
+      "birthDate": "1957-09-08",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 9064,
+        "name": "Wendy"
+      },
+      "birthDate": "1950-09-16",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 9444,
+        "name": "Luis Gómez Escolar"
+      },
+      "birthDate": "1949-03-03",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 9732,
+        "name": "Henrique Lazo"
+      },
+      "birthDate": "1948-03-31",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 9927,
+        "name": "Angel Rada"
+      },
+      "birthDate": "1948-10-09",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 9950,
+        "name": "Luis Panero"
+      },
+      "birthDate": "1961-03-11",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 10328,
+        "name": "Jesús Sanoja Jr."
+      },
+      "birthDate": "1946-04-29",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 10991,
+        "name": "José Ignacio Lares"
+      },
+      "birthDate": "1953-03-13",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 11868,
+        "name": "Nancy Ramos"
+      },
+      "birthDate": "1948-09-08",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 12356,
+        "name": "Helena Ibarra"
+      },
+      "birthDate": "1959-10-28",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 12753,
+        "name": "Daniel Melero"
+      },
+      "birthDate": "1958-01-12",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "set_dates",
+      "person": {
+        "id": 13040,
+        "name": "Cesar Monges"
+      },
+      "birthDate": "1950-02-26",
+      "why": "Nacimiento que dan las fuentes de ficha (Lobotoradio, MusicBrainz, Sincopa, Discogs)."
+    },
+    {
+      "op": "create_titular",
+      "name": "Germán Freytes",
+      "artist": {
+        "id": 1952,
+        "name": "Germán Freytes"
+      },
+      "deceased": true,
+      "birthDate": "1943-05-28",
+      "deathDate": "1984-07-19",
+      "why": "Cantante venezolano (Sincopa y Discogs: 28/5/1943 – 19/7/1984); el artista no tenía persona."
+    },
+    {
+      "op": "create_titular",
+      "name": "Vinicio Adames",
+      "artist": {
+        "id": 258,
+        "name": "Vinicio Adames"
+      },
+      "deceased": true,
+      "birthDate": "1927-03-01",
+      "deathDate": "1976-09-03",
+      "why": "José Vinicio Adames Piñero (Lobotoradio y Venciclopedia: 1/3/1927 – 3/9/1976); el artista no tenía persona."
+    }
+  ]
+}

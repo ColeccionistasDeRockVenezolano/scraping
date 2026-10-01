@@ -9,6 +9,7 @@ import { ConfirmDialog } from "../components/ConfirmDialog";
 import { EntityPicker } from "./EntityPicker";
 import { Modal } from "./Modal";
 import type { Credit, ScopedCredit } from "../lib/types";
+import { DeceasedMark } from "./DeceasedMark";
 
 type CreditTarget = { kind: "album"; albumId: number } | { kind: "track"; trackId: number };
 
@@ -81,7 +82,7 @@ export function CreditManager({ target, credits, scoped = [], onChanged, compact
             return (
               <li key={credit.id} className="credit-row">
                 <span>
-                  <span className="who">{href ? <Link to={href}>{creditedName(credit)}</Link> : creditedName(credit)}</span>
+                  <span className="who">{href ? <Link to={href}>{creditedName(credit)}</Link> : creditedName(credit)}<DeceasedMark deceased={credit.personIsDeceased} /></span>
                   {!compact ? <span style={{ color: "var(--text-faint)", fontSize: 11, marginLeft: 8 }}>{creditTypeLabel(credit.creditType)}</span> : null}
                 </span>
                 <span className="role" style={{ display: "inline-flex", alignItems: "center", gap: 4 }}>
@@ -115,7 +116,7 @@ export function CreditManager({ target, credits, scoped = [], onChanged, compact
             return (
               <li key={`scoped-${credit.creditType}-${credit.id}`} className="credit-row">
                 <span>
-                  <span className="who">{href ? <Link to={href}>{creditedName(credit)}</Link> : creditedName(credit)}</span>
+                  <span className="who">{href ? <Link to={href}>{creditedName(credit)}</Link> : creditedName(credit)}<DeceasedMark deceased={credit.personIsDeceased} /></span>
                   {!compact ? <span style={{ color: "var(--text-faint)", fontSize: 11, marginLeft: 8 }}>{creditTypeLabel(credit.creditType)}</span> : null}
                 </span>
                 <span className="role" title="Crédito de pista: se corrige en la pista">

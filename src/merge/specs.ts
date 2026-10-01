@@ -22,7 +22,7 @@ export const ENTITY_SPECS: Readonly<Record<ResolvableClaimKind, EntitySpec>> = {
   person: {
     kind: "person", erKind: "PERSON", table: "public.persons", targetColumn: "person_id", identityColumn: "name",
     aliasTable: "ingest.person_aliases", aliasTargetColumn: "person_id",
-    fields: { name: "name", biography: "biography", picture_url: "picture_url", nationality: "nationality", is_venezuelan: "is_venezuelan", birth_date: "birth_date", death_date: "death_date", notes: "notes" },
+    fields: { name: "name", biography: "biography", picture_url: "picture_url", nationality: "nationality", is_venezuelan: "is_venezuelan", is_deceased: "is_deceased", birth_date: "birth_date", death_date: "death_date", notes: "notes" },
   },
   album: {
     kind: "album", erKind: "ALBUM", table: "public.albums", targetColumn: "album_id", identityColumn: "title",

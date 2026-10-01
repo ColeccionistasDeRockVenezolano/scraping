@@ -35,10 +35,12 @@ export interface ArtistListItem {
   formedYear: number | null;
   disbandedYear: number | null;
   pictureUrl: string | null;
+  /** Su proyecto es de una persona fallecida (titular o único integrante). */
+  isDeceased?: boolean;
 }
 
 export interface ArtistMember {
-  id: number; personId: number; personName: string; role: string;
+  id: number; personId: number; personName: string; personIsDeceased?: boolean; role: string;
   fromYear: number | null; toYear: number | null; isCurrent: boolean;
 }
 
@@ -60,6 +62,16 @@ export interface ArtistDetail extends ArtistListItem {
   members: ArtistMember[];
   discography: DiscographyItem[];
   aliases: Alias[];
+  /** Sello del disco más reciente que lo declara (derivado). */
+  lastLabel: { id: number; name: string } | null;
+  links: ArtistLink[];
+  similar: SimilarArtist[];
+}
+
+export interface ArtistLink { platform: "youtube" | "instagram" | "wordpress"; url: string; albumId: number; albumTitle: string; }
+export interface SimilarArtist {
+  id: number; name: string; pictureUrl: string | null; originCountry: string;
+  reason: "members" | "genre"; sharedMembers: number;
 }
 
 // ---------- albums ----------
@@ -83,7 +95,7 @@ export interface Credit {
   id: number;
   creditType: string;
   role: string;
-  personId: number | null; personName: string | null;
+  personId: number | null; personName: string | null; personIsDeceased?: boolean;
   artistId: number | null; artistName: string | null;
   organizationId: number | null; organizationName: string | null;
 }
@@ -162,6 +174,8 @@ export interface PersonListItem {
   name: string;
   nationality: string | null;
   isVenezuelan: boolean | null;
+  /** Fallecido/a: `is_deceased` o fecha de fallecimiento. */
+  isDeceased?: boolean;
   pictureUrl: string | null;
   /** Créditos de disco y de pista (E11.9). */
   creditCount: number;
@@ -184,6 +198,8 @@ export interface PersonOrganization { id: number; organizationId: number; organi
 
 export interface PersonDetail extends PersonListItem {
   biography: string | null;
+  /** Columna `is_deceased` tal cual (null = sin dato); alimenta el formulario. */
+  isDeceasedFlag?: boolean | null;
   birthDate: string | null;
   deathDate: string | null;
   notes: string | null;
@@ -282,7 +298,7 @@ export interface OrganizationListItem {
 
 export interface LabelAlbum { albumId: number; title: string; releaseYear: number | null; artistId: number; artistName: string; }
 export interface CreditedArtist { artistId: number; artistName: string; }
-export interface AssociatedPerson { id: number; personId: number; personName: string; role: string; fromYear: number | null; toYear: number | null; }
+export interface AssociatedPerson { id: number; personId: number; personName: string; personIsDeceased?: boolean; role: string; fromYear: number | null; toYear: number | null; }
 
 export interface OrganizationDetail extends OrganizationListItem {
   biography: string | null;

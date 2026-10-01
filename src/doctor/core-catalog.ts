@@ -81,8 +81,17 @@ export const APPROVED_CORE_CHANGES: Readonly<Record<string, string>> = {
   "COL persons.is_venezuelan boolean": "COL persons.is_venezuelan boolean NOT NULL DEFAULT false",
 };
 
+/**
+ * Columnas que una migración aprobada añade al core: no figuran en el
+ * snapshot y no cuentan como «extra». Solo esta forma exacta.
+ */
+export const APPROVED_CORE_ADDITIONS: ReadonlySet<string> = new Set([
+  // 0032 (2026-09-30): NULL = sin dato, true = fallecido/a.
+  "COL persons.is_deceased boolean",
+]);
+
 export function diffCoreCatalog(actual: string[], expected: string[] = CORE_CATALOG.entries): CatalogDiff {
-  actual = actual.map((entry) => APPROVED_CORE_CHANGES[entry] ?? entry);
+  actual = actual.filter((entry) => !APPROVED_CORE_ADDITIONS.has(entry)).map((entry) => APPROVED_CORE_CHANGES[entry] ?? entry);
   const actualSet = new Set(actual);
   const expectedSet = new Set(expected);
   return {

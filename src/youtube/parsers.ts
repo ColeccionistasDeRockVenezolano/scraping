@@ -1,3 +1,5 @@
+import { stripDeceasedMark } from "../normalization/entity-name.js";
+
 export interface ParsedTitle { artist: string | null; title: string; year: number | null; format: string | null; isFullAlbum: boolean; }
 export interface DescriptionSection { kind: string; heading: string; content: string; position: number; }
 export interface TimestampEntry { title: string; startSeconds: number; position: number; }
@@ -211,7 +213,7 @@ export function parseYouTubeDescription(description: string | null | undefined):
 // "except". Son notas de matiz ("Produced by X, except; Track 12 by Y") y
 // convertirlas en nombre de persona inventaría a alguien que no existe.
 
-export interface PersonCredit { role: string; name: string; trackNumbers: number[]; sectionKind: string; }
+export interface PersonCredit { role: string; name: string; trackNumbers: number[]; sectionKind: string; /** La fuente lo marca con una cruz («(†)»). */ deceased: boolean; }
 
 // El valor puede venir vacío ("Guitars:" y debajo los nombres con viñeta),
 // así que `(.*)` en vez de `(.+?)`: con `.+?` esa forma no casaba y el rol
@@ -317,7 +319,7 @@ function splitCreditValue(value: string): { names: string[]; venue: string | nul
     venue = plausibleName(bare) ? bare : null;
   }
   const scoped = scopeOf(trimCreditTail(personPart ?? ""));
-  const names = splitNames(scoped.clean).filter(plausibleName);
+  const names = splitNames(scoped.clean).map((name) => creditName(name).name).filter(plausibleName);
   return { names, venue, location, trackNumbers: scoped.trackNumbers };
 }
 
@@ -337,11 +339,21 @@ function roleCredit(role: string, value: string, sectionKind: string): CreditLin
   return { verbs: splitRoleParts(role), preposition: "by", value, sectionKind, ...parts };
 }
 
-function scopeOf(value: string): { clean: string; trackNumbers: number[] } {
+// «Nombre (†)» → «Nombre †»: la cruz se pega al nombre para que sobreviva al
+// corte por comas y se lea después; el nombre la pierde en `creditName`.
+const DECEASED_PAREN = /\s*\(\s*[\u2020\u271d\u271e\u271f\u2628\u2719\u271b\u271c]+\s*\)/gu;
+
+/** Nombre sin cruz y si la llevaba. */
+function creditName(raw: string): { name: string; deceased: boolean } {
+  return stripDeceasedMark(raw);
+}
+
+function scopeOf(value: string, keepDeceasedMarks = false): { clean: string; trackNumbers: number[] } {
   const match = value.match(TRACK_SCOPE);
   const numbers = match ? trackNumbersIn(match[1]!) : [];
   // El alcance se extrae primero; después cae cualquier otro paréntesis.
-  const clean = (match ? value.replace(TRACK_SCOPE, " ") : value)
+  const marked = keepDeceasedMarks ? value.replace(DECEASED_PAREN, " †") : value;
+  const clean = (match ? marked.replace(TRACK_SCOPE, " ") : marked)
     .replace(ANY_PARENTHETICAL, " ").replace(TRAILING_BRACKET, "").replace(TRAILING_FROM, "")
     .replace(/^[\s:]+/u, "").replace(/\s+/gu, " ").trim();
   return { clean, trackNumbers: numbers };
@@ -361,17 +373,19 @@ export function parseCreditSections(sections: DescriptionSection[]): PersonCredi
         const role = paired[1]!.trim();
         const value = paired[2]!.trim();
         if (!value) { currentRole = role; continue; }
-        const { clean, trackNumbers } = scopeOf(value);
-        for (const name of splitNames(clean)) {
-          if (plausibleName(name)) out.push({ role, name, trackNumbers, sectionKind: section.kind });
+        const { clean, trackNumbers } = scopeOf(value, true);
+        for (const raw of splitNames(clean)) {
+          const { name, deceased } = creditName(raw);
+          if (plausibleName(name)) out.push({ role, name, trackNumbers, sectionKind: section.kind, deceased });
         }
         continue;
       }
       const bullet = line.match(BULLET_NAME);
       if (bullet && currentRole) {
-        const { clean, trackNumbers } = scopeOf(bullet[1]!);
-        for (const name of splitNames(clean)) {
-          if (plausibleName(name)) out.push({ role: currentRole, name, trackNumbers, sectionKind: section.kind });
+        const { clean, trackNumbers } = scopeOf(bullet[1]!, true);
+        for (const raw of splitNames(clean)) {
+          const { name, deceased } = creditName(raw);
+          if (plausibleName(name)) out.push({ role: currentRole, name, trackNumbers, sectionKind: section.kind, deceased });
         }
       }
     }

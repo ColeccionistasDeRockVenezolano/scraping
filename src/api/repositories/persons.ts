@@ -3,12 +3,15 @@ import { getPool } from "../../db/client.js";
 import type { PaginationQuery } from "../pagination.js";
 import { searchIds } from "../search-index.js";
 import { classifyPersonName, type PersonNameClass } from "../../review/person-junk.js";
+import { personDeceasedSql } from "./deceased.js";
 
 export interface PersonListRow {
   id: number;
   name: string;
   nationality: string | null;
   isVenezuelan: boolean | null;
+  /** Fallecido/a: `is_deceased` o fecha de fallecimiento. */
+  isDeceased: boolean;
   pictureUrl: string | null;
   /** Créditos de disco y de pista. */
   creditCount: number;
@@ -30,7 +33,7 @@ export interface PersonListQuery extends PaginationQuery {
 }
 
 const PERSON_COLUMNS = `
-  p.id::text AS id, p.name, p.nationality, p.is_venezuelan, p.picture_url,
+  p.id::text AS id, p.name, p.nationality, p.is_venezuelan, ${personDeceasedSql("p")} AS is_deceased, p.picture_url,
   ((SELECT count(*) FROM public.album_credits WHERE person_id=p.id)
    + (SELECT count(*) FROM public.track_credits WHERE person_id=p.id))::int AS credit_count,
   (SELECT count(*) FROM public.artist_members WHERE person_id=p.id)::int AS band_count`;
@@ -41,7 +44,7 @@ const HAS_ANY_RELATION = `(
   OR EXISTS (SELECT 1 FROM public.artist_members WHERE person_id=p.id))`;
 
 interface PersonRowShape {
-  id: string; name: string; nationality: string | null; is_venezuelan: boolean | null; picture_url: string | null;
+  id: string; name: string; nationality: string | null; is_venezuelan: boolean | null; is_deceased: boolean; picture_url: string | null;
   credit_count: number; band_count: number;
 }
 
@@ -49,7 +52,7 @@ function toPersonRow(row: PersonRowShape): PersonListRow {
   const classification = classifyPersonName(row.name);
   return {
     id: Number(row.id), name: row.name, nationality: row.nationality,
-    isVenezuelan: row.is_venezuelan, pictureUrl: row.picture_url,
+    isVenezuelan: row.is_venezuelan, isDeceased: row.is_deceased, pictureUrl: row.picture_url,
     creditCount: row.credit_count, bandCount: row.band_count,
     nameClass: classification.kind, nameClassReason: classification.reason,
   };
@@ -107,6 +110,10 @@ export interface PersonDetail {
   pictureUrl: string | null;
   nationality: string | null;
   isVenezuelan: boolean | null;
+  /** Fallecido/a: `is_deceased` o fecha de fallecimiento. */
+  isDeceased: boolean;
+  /** Lo que dice la columna `is_deceased` (NULL = sin dato), para el formulario. */
+  isDeceasedFlag: boolean | null;
   birthDate: string | null;
   deathDate: string | null;
   notes: string | null;
@@ -190,6 +197,7 @@ export async function listPersonDuplicateCandidates(
 export async function getPersonDetail(id: number): Promise<PersonDetail | null> {
   const { rows } = await getPool().query<Record<string, unknown>>(
     `SELECT p.id, p.name, p.biography, p.picture_url, p.nationality, p.is_venezuelan,
+            ${personDeceasedSql("p")} AS is_deceased, p.is_deceased AS is_deceased_flag,
             p.birth_date::text AS birth_date, p.death_date::text AS death_date, p.notes,
             ((SELECT count(*) FROM public.album_credits WHERE person_id=p.id)
              + (SELECT count(*) FROM public.track_credits WHERE person_id=p.id))::int AS credit_count,
@@ -250,6 +258,8 @@ export async function getPersonDetail(id: number): Promise<PersonDetail | null> 
     pictureUrl: row["picture_url"] as string | null,
     nationality: row["nationality"] as string | null,
     isVenezuelan: row["is_venezuelan"] as boolean | null,
+    isDeceased: row["is_deceased"] as boolean,
+    isDeceasedFlag: row["is_deceased_flag"] as boolean | null,
     birthDate: row["birth_date"] as string | null,
     deathDate: row["death_date"] as string | null,
     notes: row["notes"] as string | null,

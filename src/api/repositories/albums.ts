@@ -74,6 +74,7 @@ export interface AlbumCreditRow {
   role: string;
   personId: number | null;
   personName: string | null;
+  personIsDeceased: boolean;
   artistId: number | null;
   artistName: string | null;
   organizationId: number | null;
@@ -133,7 +134,7 @@ export interface AlbumDetail {
 
 const CREDIT_FIELDS = `jsonb_build_object(
     'id', id, 'creditType', credit_type, 'role', role,
-    'personId', person_id, 'personName', person_name,
+    'personId', person_id, 'personName', person_name, 'personIsDeceased', person_is_deceased,
     'artistId', artist_id, 'artistName', artist_name,
     'organizationId', organization_id, 'organizationName', organization_name
   )`;
@@ -179,6 +180,7 @@ export async function getAlbumDetail(id: number): Promise<AlbumDetail | null> {
              SELECT jsonb_agg(${CREDIT_FIELDS})
              FROM (
                SELECT tc.id, tc.credit_type, tc.role, tc.person_id, tcp.name AS person_name,
+                      COALESCE(tcp.is_deceased, false) OR tcp.death_date IS NOT NULL AS person_is_deceased,
                       tc.artist_id, tca.name AS artist_name, tc.organization_id, tco.name AS organization_name
                  FROM public.track_credits tc
                  LEFT JOIN public.persons tcp ON tcp.id = tc.person_id
@@ -194,6 +196,7 @@ export async function getAlbumDetail(id: number): Promise<AlbumDetail | null> {
          SELECT jsonb_agg(${CREDIT_FIELDS})
          FROM (
            SELECT ac.id, ac.credit_type, ac.role, ac.person_id, acp.name AS person_name,
+                  COALESCE(acp.is_deceased, false) OR acp.death_date IS NOT NULL AS person_is_deceased,
                   ac.artist_id, aca.name AS artist_name, ac.organization_id, aco.name AS organization_name
              FROM public.album_credits ac
              LEFT JOIN public.persons acp ON acp.id = ac.person_id

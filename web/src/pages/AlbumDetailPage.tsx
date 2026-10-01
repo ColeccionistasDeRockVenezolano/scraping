@@ -1,5 +1,6 @@
 import { Fragment, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
+import { BackLink } from "../components/BackLink";
 import { GitMerge, PencilSimple, Trash } from "@phosphor-icons/react";
 import { albumFormatWrites, albumWrites, albumsApi, trackWrites, ApiError } from "../lib/api";
 import { useAsync } from "../lib/useAsync";
@@ -68,7 +69,7 @@ export function AlbumDetailPage() {
 
   return (
     <>
-      <Link to="/discos" className="back-link">← Discos</Link>
+      <BackLink fallback="/discos" />
 
       <div className="entity-hero">
         <span className="entity-hero__art">
