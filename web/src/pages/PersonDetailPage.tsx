@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
+import { BackLink } from "../components/BackLink";
+import { DeceasedMark } from "../components/DeceasedMark";
 import { ArrowsSplit, GitMerge, PencilSimple, Trash } from "@phosphor-icons/react";
 import { personWrites, personsApi } from "../lib/api";
 import { useAsync } from "../lib/useAsync";
@@ -19,7 +21,34 @@ import { EntityLoadError } from "../components/RemovedEntityState";
 import { entityHref } from "../lib/routes";
 import { initialOf } from "../components/EntityCard";
 import { PERSON_FIELDS } from "../lib/entityFields";
+import { EntityInfo, type InfoItem } from "../components/EntityInfo";
+import { EntityTabs, TabEmpty, type TabSpec } from "../components/EntityTabs";
+import { ExpandableText } from "../components/ExpandableText";
 import { creditTypeLabel, nameClassLabel } from "../lib/labels";
+
+/** «2009-01-31» → «31 de enero de 2009»; si la fecha no es completa o válida, se muestra tal cual. */
+function formatDate(value: string | null): string | null {
+  if (!value) return null;
+  const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(value);
+  if (!match) return value;
+  const date = new Date(Date.UTC(Number(match[1]), Number(match[2]) - 1, Number(match[3])));
+  if (Number.isNaN(date.getTime())) return value;
+  return date.toLocaleDateString("es-VE", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" });
+}
+
+/** Años cumplidos entre el nacimiento y el fallecimiento (o hoy); null si falta una fecha completa. */
+function ageText(birth: string | null, death: string | null): string | null {
+  const parse = (value: string | null) => {
+    const match = value ? /^(\d{4})-(\d{2})-(\d{2})$/.exec(value) : null;
+    return match ? { y: Number(match[1]), m: Number(match[2]), d: Number(match[3]) } : null;
+  };
+  const from = parse(birth);
+  if (!from) return null;
+  const now = new Date();
+  const to = parse(death) ?? { y: now.getFullYear(), m: now.getMonth() + 1, d: now.getDate() };
+  const years = to.y - from.y - (to.m < from.m || (to.m === from.m && to.d < from.d) ? 1 : 0);
+  return years >= 0 && years < 130 ? `${years} años` : null;
+}
 
 export function PersonDetailPage() {
   const { id } = useParams();
@@ -38,20 +67,134 @@ export function PersonDetailPage() {
   if (loading) return <DetailSkeleton />;
   if (error || !person) return <EntityLoadError message={error ?? "Persona no encontrada."} errorValue={errorValue} onRetry={reload} />;
 
-  const meta = [person.nationality, person.isVenezuelan === true ? "Venezolano/a" : person.isVenezuelan === false ? "Extranjero/a" : null].filter(Boolean);
+  const dead = person.isDeceased === true;
+  const info: InfoItem[] = [
+    { label: "Nacionalidad", value: person.nationality, fallback: "Sin dato" },
+    { label: "Venezolano/a", value: person.isVenezuelan === true ? "Sí" : person.isVenezuelan === false ? "No (extranjero/a)" : null, fallback: "Sin dato" },
+    { label: "Estado", value: dead ? "Fallecido/a" : null, fallback: "Sin dato" },
+    { label: "Nacimiento", value: formatDate(person.birthDate) },
+    { label: "Fallecimiento", value: dead ? formatDate(person.deathDate) : null },
+    { label: dead ? "Edad al fallecer" : "Edad", value: dead && !person.deathDate ? null : ageText(person.birthDate, dead ? person.deathDate : null) },
+    { label: "Bandas", value: person.bands.length ? (
+      <>
+        {[...new Map(person.bands.map((band) => [band.artistId, band])).values()].slice(0, 4).map((band, index) => (
+          <span key={band.artistId}>{index > 0 ? ", " : ""}<Link to={`/artistas/${band.artistId}`}>{band.artistName}</Link></span>
+        ))}
+        {new Set(person.bands.map((band) => band.artistId)).size > 4 ? ` y ${new Set(person.bands.map((band) => band.artistId)).size - 4} más` : ""}
+      </>
+    ) : null },
+  ];
+
+  const bandPeriod = (band: { fromYear: number | null; toYear: number | null; isCurrent: boolean }) =>
+    `${band.fromYear ?? "—"}${band.isCurrent ? "–presente" : band.toYear ? `–${band.toYear}` : ""}`;
+
+  const tabs: TabSpec[] = [
+    {
+      key: "bandas", label: "Bandas", count: person.bands.length,
+      content: person.bands.length === 0 ? <TabEmpty>Sin bandas registradas.</TabEmpty> : (
+        <div className="table-wrap">
+          <table>
+            <thead><tr><th>Banda</th><th>Rol</th><th>Periodo</th></tr></thead>
+            <tbody>
+              {person.bands.map((band) => (
+                <tr key={band.id}>
+                  <td><Link to={`/artistas/${band.artistId}`}>{band.artistName}</Link></td>
+                  <td>{band.role}</td>
+                  <td className="mono">{bandPeriod(band)}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      ),
+    },
+    {
+      key: "discos", label: "Créditos de disco", count: person.albumCredits.length,
+      content: person.albumCredits.length === 0 ? <TabEmpty>Sin créditos registrados.</TabEmpty> : (
+        <div className="table-wrap">
+          <table>
+            <thead><tr><th>Disco</th><th>Artista</th><th>Tipo</th><th>Rol</th></tr></thead>
+            <tbody>
+              {person.albumCredits.map((credit) => (
+                <tr key={credit.id}>
+                  <td><Link to={`/discos/${credit.albumId}`}>{credit.albumTitle}</Link></td>
+                  <td><Link to={`/artistas/${credit.artistId}`}>{credit.artistName}</Link></td>
+                  <td><span className="badge">{creditTypeLabel(credit.creditType)}</span></td>
+                  <td>{credit.role}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      ),
+    },
+    {
+      key: "pistas", label: "Créditos de pista", count: person.trackCredits.length,
+      content: person.trackCredits.length === 0 ? <TabEmpty>Sin créditos registrados.</TabEmpty> : (
+        <div className="table-wrap table-wrap--scroll">
+          <table>
+            <thead><tr><th>Pista</th><th>Disco</th><th>Tipo</th><th>Rol</th></tr></thead>
+            <tbody>
+              {person.trackCredits.map((credit) => (
+                <tr key={credit.id}>
+                  <td>{credit.trackTitle}</td>
+                  <td><Link to={`/discos/${credit.albumId}`}>{credit.albumTitle}</Link></td>
+                  <td><span className="badge">{creditTypeLabel(credit.creditType)}</span></td>
+                  <td>{credit.role}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      ),
+    },
+    {
+      key: "organizaciones", label: "Organizaciones", count: person.organizations.length,
+      content: isAdmin ? (
+        <PersonOrgManager
+          fixedKind="person"
+          fixedId={person.id}
+          rows={person.organizations.map((org) => ({
+            id: org.id, role: org.role, fromYear: org.fromYear, toYear: org.toYear,
+            otherId: org.organizationId, otherName: org.organizationName,
+          }))}
+          onChanged={reload}
+          emptyText="Sin organizaciones registradas."
+        />
+      ) : person.organizations.length === 0 ? <TabEmpty>Sin vínculos con organizaciones.</TabEmpty> : (
+        <div className="table-wrap">
+          <table>
+            <thead><tr><th>Organización</th><th>Rol</th><th>Periodo</th></tr></thead>
+            <tbody>
+              {person.organizations.map((org) => (
+                <tr key={org.id}>
+                  <td><Link to={`/organizaciones/${org.organizationId}`}>{org.organizationName}</Link></td>
+                  <td>{org.role}</td>
+                  <td className="mono">{org.fromYear ?? "—"}{org.toYear ? `–${org.toYear}` : ""}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      ),
+    },
+    { key: "historial", label: "Historial", content: <EntityHistory entity="person" id={person.id} /> },
+  ];
+  // La pestaña inicial es la primera con datos: una persona sin bandas abre en sus créditos.
+  const defaultKey = tabs.find((tab) => (tab.count ?? 0) > 0)?.key ?? "bandas";
 
   return (
     <>
-      <Link to="/personas" className="back-link">← Personas</Link>
+      <BackLink fallback="/personas" />
 
       <div className="entity-hero">
         <span className="entity-hero__art">
           {person.pictureUrl ? <img src={person.pictureUrl} alt="" loading="lazy" decoding="async" /> : <span className="placeholder">{initialOf(person.name)}</span>}
         </span>
         <div>
-          <h1 className="entity-hero__title">{person.name}</h1>
-          <div className="entity-hero__meta">{meta.map((item) => <span className="badge" key={String(item)}>{item}</span>)}</div>
-          {person.biography ? <p className="entity-hero__desc">{person.biography}</p> : null}
+          <h1 className="entity-hero__title">{person.name}<DeceasedMark deceased={person.isDeceased} /></h1>
+          <EntityInfo items={info} wide={{ label: "Alias", content: <AliasEditor path="persons" entityId={person.id} aliases={person.aliases} onChanged={reload} /> }} />
+          {person.biography ? <div className="entity-hero__bio"><ExpandableText className="entity-hero__desc" text={person.biography} /></div> : null}
         </div>
       </div>
 
@@ -85,114 +228,14 @@ export function PersonDetailPage() {
         </div>
       ) : null}
 
-      <div className="section">
-        <h2>Alias</h2>
-        <AliasEditor path="persons" entityId={person.id} aliases={person.aliases} onChanged={reload} />
-      </div>
-
-      <div className="section">
-        <h2>Bandas <span className="mono" style={{ color: "var(--text-faint)", fontWeight: 400 }}>({person.bands.length})</span></h2>
-        {person.bands.length === 0 ? <p style={{ color: "var(--text-faint)", fontSize: 13.5 }}>Sin bandas registradas.</p> : (
-          <div className="table-wrap">
-            <table>
-              <thead><tr><th>Banda</th><th>Rol</th><th>Periodo</th></tr></thead>
-              <tbody>
-                {person.bands.map((band) => (
-                  <tr key={band.id}>
-                    <td><Link to={`/artistas/${band.artistId}`}>{band.artistName}</Link></td>
-                    <td>{band.role}</td>
-                    <td className="mono">{band.fromYear ?? "—"}{band.isCurrent ? "–presente" : band.toYear ? `–${band.toYear}` : ""}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        )}
-      </div>
-
-      <div className="section">
-        <h2>Créditos de disco <span className="mono" style={{ color: "var(--text-faint)", fontWeight: 400 }}>({person.albumCredits.length})</span></h2>
-        {person.albumCredits.length === 0 ? <p style={{ color: "var(--text-faint)", fontSize: 13.5 }}>Sin créditos registrados.</p> : (
-          <div className="table-wrap">
-            <table>
-              <thead><tr><th>Disco</th><th>Artista</th><th>Tipo</th><th>Rol</th></tr></thead>
-              <tbody>
-                {person.albumCredits.map((credit) => (
-                  <tr key={credit.id}>
-                    <td><Link to={`/discos/${credit.albumId}`}>{credit.albumTitle}</Link></td>
-                    <td><Link to={`/artistas/${credit.artistId}`}>{credit.artistName}</Link></td>
-                    <td><span className="badge">{creditTypeLabel(credit.creditType)}</span></td>
-                    <td>{credit.role}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        )}
-      </div>
-
-      <div className="section">
-        <h2>Créditos de pista <span className="mono" style={{ color: "var(--text-faint)", fontWeight: 400 }}>({person.trackCredits.length})</span></h2>
-        {person.trackCredits.length === 0 ? <p style={{ color: "var(--text-faint)", fontSize: 13.5 }}>Sin créditos registrados.</p> : (
-          <div className="table-wrap table-wrap--scroll">
-            <table>
-              <thead><tr><th>Pista</th><th>Disco</th><th>Tipo</th><th>Rol</th></tr></thead>
-              <tbody>
-                {person.trackCredits.map((credit) => (
-                  <tr key={credit.id}>
-                    <td>{credit.trackTitle}</td>
-                    <td><Link to={`/discos/${credit.albumId}`}>{credit.albumTitle}</Link></td>
-                    <td><span className="badge">{creditTypeLabel(credit.creditType)}</span></td>
-                    <td>{credit.role}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        )}
-      </div>
-
-      <div className="section">
-        <h2>Organizaciones <span className="mono" style={{ color: "var(--text-faint)", fontWeight: 400 }}>({person.organizations.length})</span></h2>
-        {isAdmin ? (
-          <PersonOrgManager
-            fixedKind="person"
-            fixedId={person.id}
-            rows={person.organizations.map((org) => ({
-              id: org.id, role: org.role, fromYear: org.fromYear, toYear: org.toYear,
-              otherId: org.organizationId, otherName: org.organizationName,
-            }))}
-            onChanged={reload}
-            emptyText="Sin organizaciones registradas."
-          />
-        ) : person.organizations.length === 0 ? (
-          <p style={{ color: "var(--text-faint)", fontSize: 13.5 }}>Sin vínculos con organizaciones.</p>
-        ) : (
-          <div className="table-wrap">
-            <table>
-              <thead><tr><th>Organización</th><th>Rol</th><th>Periodo</th></tr></thead>
-              <tbody>
-                {person.organizations.map((org) => (
-                  <tr key={org.id}>
-                    <td><Link to={`/organizaciones/${org.organizationId}`}>{org.organizationName}</Link></td>
-                    <td>{org.role}</td>
-                    <td className="mono">{org.fromYear ?? "—"}{org.toYear ? `–${org.toYear}` : ""}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        )}
-      </div>
-
-      <EntityHistory entity="person" id={person.id} />
+      <EntityTabs tabs={tabs} defaultKey={defaultKey} />
 
       {editing ? (
         <EntityFormModal
           title={`Editar «${person.name}»`}
           fields={PERSON_FIELDS}
           initialValues={{
-            name: person.name, nationality: person.nationality, isVenezuelan: person.isVenezuelan,
+            name: person.name, nationality: person.nationality, isVenezuelan: person.isVenezuelan, isDeceased: person.isDeceasedFlag ?? null,
             birthDate: person.birthDate, deathDate: person.deathDate, pictureUrl: person.pictureUrl,
             biography: person.biography, notes: person.notes,
           }}

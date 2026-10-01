@@ -23,6 +23,7 @@
 // recomendada, i ignora, o abre la ficha y ? explica los atajos.
 import { useCallback, useEffect, useId, useRef, useState } from "react";
 import { Link, useParams, useSearchParams } from "react-router-dom";
+import { BackLink } from "../components/BackLink";
 import {
   ArrowBendDownRight, ArrowCounterClockwise, ArrowSquareOut, CaretDown, CaretUp, CheckCircle, ClockCounterClockwise, DotsThree,
   EyeSlash, Gavel, GitMerge, Keyboard, Lightbulb, NotEquals, Scales, Sparkle, Trash, Wrench,
@@ -867,7 +868,7 @@ function FindingsHeader({ category, scanId, chained }: { category: CurationCateg
       : scanId ? `Aparecidos en el análisis #${scanId}` : "Todos los hallazgos";
   return (
     <div className="cfind-head">
-      <Link to="/curaduria" className="back-link">← Conflictos</Link>
+      <BackLink fallback="/curaduria" />
       <h2>{title}</h2>
       <p className="curation-lead">
         {chained

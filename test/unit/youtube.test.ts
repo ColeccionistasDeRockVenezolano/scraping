@@ -162,12 +162,23 @@ describe("deterministic description parser", () => {
     ].join("\n");
     const creditos = parseCreditSections(parseYouTubeDescription(description).sections);
     expect(creditos).toEqual([
-      { role: "Lead Vocals & Bass", name: "Asier Cazalis", trackNumbers: [], sectionKind: "musicians" },
-      { role: "Drums", name: "Pablo Martínez", trackNumbers: [], sectionKind: "musicians" },
-      { role: "Additional Vocals", name: "Marcos Rodríguez", trackNumbers: [13], sectionKind: "guest_musicians" },
-      { role: "Guitars", name: "Jefrey Sánchez", trackNumbers: [1, 2, 4], sectionKind: "guest_musicians" },
-      { role: "Guitars", name: "Walter Gangi", trackNumbers: [1, 2], sectionKind: "guest_musicians" },
+      { role: "Lead Vocals & Bass", name: "Asier Cazalis", trackNumbers: [], sectionKind: "musicians", deceased: false },
+      { role: "Drums", name: "Pablo Martínez", trackNumbers: [], sectionKind: "musicians", deceased: false },
+      { role: "Additional Vocals", name: "Marcos Rodríguez", trackNumbers: [13], sectionKind: "guest_musicians", deceased: false },
+      { role: "Guitars", name: "Jefrey Sánchez", trackNumbers: [1, 2, 4], sectionKind: "guest_musicians", deceased: false },
+      { role: "Guitars", name: "Walter Gangi", trackNumbers: [1, 2], sectionKind: "guest_musicians", deceased: false },
     ]);
+  });
+
+  // Caso Canserbero (Brian, 2026-09-30): la cruz «(†)» no es parte del nombre,
+  // es la fuente diciendo que murió. El nombre sale limpio y la marca se conserva.
+  it("reads the deceased cross as a flag, never as part of the name", () => {
+    const credito = (linea: string) => parseCreditSections(parseYouTubeDescription(`Musicians\n\n${linea}`).sections);
+    expect(credito('Lead Vocals: Tirone González "Canserbero" (†)')).toMatchObject([{ name: 'Tirone González "Canserbero"', deceased: true }]);
+    // La cruz solo marca a su nombre, no a toda la línea.
+    expect(credito("Guitars: Gerardo Ochoa (†), Ana Rojas").map((c) => [c.name, c.deceased])).toEqual([["Gerardo Ochoa", true], ["Ana Rojas", false]]);
+    expect(credito("Bass: Manuel Macías Delfino †").map((c) => [c.name, c.deceased])).toEqual([["Manuel Macías Delfino", true]]);
+    expect(credito("Bass: Luis Pérez (Caracas)").map((c) => [c.name, c.deceased])).toEqual([["Luis Pérez", false]]);
   });
 
   // Cuatro defectos medidos sobre los 3.840 candidatos de la primera emisión,

@@ -1,0 +1,73 @@
+{
+  "decidedAt": "2026-09-30",
+  "evidence": "Caso Canserbero (Brian, 2026-09-30): el nombre de la persona arrastraba «(†)» y la ficha del artista no tenía integrantes. (1) La cruz es una marca de fallecido, no parte del nombre: se retira del nombre y se guarda en persons.is_deceased (migración 0032); la web la muestra como icono. (2) Artista sin integrantes cuyo nombre es el apodo entre comillas de una persona acreditada en sus discos → titular del proyecto (regla de Ashwave).",
+  "corrections": [
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 233,
+        "name": "Gerardo Ochoa \"Yayo\" (†)"
+      },
+      "cleanName": "Gerardo Ochoa \"Yayo\"",
+      "why": "El canal de YouTube los acredita con la cruz «(†)» (fallecidos); la marca pasa de nombre a dato (persons.is_deceased)."
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 257,
+        "name": "Manuel Macías Delfino (†)"
+      },
+      "cleanName": "Manuel Macías Delfino",
+      "why": "El canal de YouTube los acredita con la cruz «(†)» (fallecidos); la marca pasa de nombre a dato (persons.is_deceased)."
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 305,
+        "name": "Guaicaipuro \"Waika\" Longa (†)"
+      },
+      "cleanName": "Guaicaipuro \"Waika\" Longa",
+      "why": "El canal de YouTube los acredita con la cruz «(†)» (fallecidos); la marca pasa de nombre a dato (persons.is_deceased)."
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 340,
+        "name": "Elsa María Mateu (†)"
+      },
+      "cleanName": "Elsa María Mateu",
+      "why": "El canal de YouTube los acredita con la cruz «(†)» (fallecidos); la marca pasa de nombre a dato (persons.is_deceased)."
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 411,
+        "name": "Tirone González \"Canserbero\" (†)"
+      },
+      "cleanName": "Tirone González \"Canserbero\"",
+      "why": "El canal de YouTube los acredita con la cruz «(†)» (fallecidos); la marca pasa de nombre a dato (persons.is_deceased)."
+    },
+    {
+      "op": "mark_deceased",
+      "person": {
+        "id": 2188,
+        "name": "Andrés Lara \"Nano\" (†)"
+      },
+      "cleanName": "Andrés Lara \"Nano\"",
+      "why": "El canal de YouTube los acredita con la cruz «(†)» (fallecidos); la marca pasa de nombre a dato (persons.is_deceased)."
+    },
+    {
+      "op": "link_project",
+      "person": {
+        "id": 411,
+        "name": "Tirone González \"Canserbero\""
+      },
+      "artist": {
+        "id": 57,
+        "name": "Canserbero"
+      },
+      "role": "Titular del proyecto",
+      "why": "Artista sin integrantes cuyo nombre es el apodo entre comillas de la persona; ella figura como voz principal y letrista en sus 3 discos (Muerte, Vida, Guía Para La Acción)."
+    }
+  ]
+}

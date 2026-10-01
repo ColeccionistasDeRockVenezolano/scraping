@@ -99,6 +99,7 @@ export function PersonsListPage() {
                 key={person.id}
                 to={`/personas/${person.id}`}
                 title={person.name}
+                deceased={person.isDeceased}
                 subtitle={person.nameClass === "ok"
                   ? person.nationality
                   : `${nameClassLabel(person.nameClass)}: ${person.nameClassReason}`}

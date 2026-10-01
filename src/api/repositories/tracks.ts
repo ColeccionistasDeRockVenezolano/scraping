@@ -30,6 +30,7 @@ export interface TrackCreditRow {
   role: string;
   personId: number | null;
   personName: string | null;
+  personIsDeceased: boolean;
   artistId: number | null;
   artistName: string | null;
   organizationId: number | null;
@@ -124,6 +125,7 @@ export async function getTrackDetail(id: number): Promise<TrackDetail | null> {
               SELECT jsonb_agg(jsonb_build_object(
                        'id', tc.id, 'creditType', tc.credit_type, 'role', tc.role,
                        'personId', tc.person_id, 'personName', pe.name,
+                       'personIsDeceased', COALESCE(pe.is_deceased, false) OR pe.death_date IS NOT NULL,
                        'artistId', tc.artist_id, 'artistName', cr.name,
                        'organizationId', tc.organization_id, 'organizationName', og.name) ORDER BY tc.id)
                 FROM public.track_credits tc

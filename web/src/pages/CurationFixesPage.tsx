@@ -11,6 +11,7 @@
 // diálogo abierto y cerrado deja una (la API las omite salvo que se pidan).
 import { useState } from "react";
 import { Link, useParams, useSearchParams } from "react-router-dom";
+import { BackLink } from "../components/BackLink";
 import { ArrowCounterClockwise, ClockCounterClockwise } from "@phosphor-icons/react";
 import { ApiError, curationApi } from "../lib/api";
 import { useAsync } from "../lib/useAsync";
@@ -155,7 +156,7 @@ function FixBatchDetail({ batchId }: { batchId: number }) {
   return (
     <>
       <div className="cfind-head">
-        <Link to="/curaduria/correcciones" className="back-link">← Correcciones</Link>
+        <BackLink fallback="/curaduria/correcciones" />
         <h2>Lote #{data.id}</h2>
         <p className="curation-lead">
           {fixModeLabel(data.mode)} · lo pidió {data.requestedBy}

@@ -17,17 +17,17 @@ export const ENTITY_SPECS: Readonly<Record<ResolvableClaimKind, EntitySpec>> = {
   artist: {
     kind: "artist", erKind: "ARTIST", table: "public.artists", targetColumn: "artist_id", identityColumn: "name",
     aliasTable: "ingest.artist_aliases", aliasTargetColumn: "artist_id",
-    fields: { name: "name", artist_type: "artist_type", biography: "biography", picture_url: "picture_url", origin_city: "origin_city", origin_country: "origin_country", formed_year: "formed_year", disbanded_year: "disbanded_year", notes: "notes" },
+    fields: { name: "name", artist_type: "artist_type", biography: "biography", picture_url: "picture_url", origin_city: "origin_city", origin_country: "origin_country", formed_year: "formed_year", disbanded_year: "disbanded_year", notes: "notes", status: "status", themes: "themes", years_active: "years_active", logo_url: "logo_url" },
   },
   person: {
     kind: "person", erKind: "PERSON", table: "public.persons", targetColumn: "person_id", identityColumn: "name",
     aliasTable: "ingest.person_aliases", aliasTargetColumn: "person_id",
-    fields: { name: "name", biography: "biography", picture_url: "picture_url", nationality: "nationality", is_venezuelan: "is_venezuelan", birth_date: "birth_date", death_date: "death_date", notes: "notes" },
+    fields: { name: "name", biography: "biography", picture_url: "picture_url", nationality: "nationality", is_venezuelan: "is_venezuelan", is_deceased: "is_deceased", birth_date: "birth_date", death_date: "death_date", notes: "notes", real_name: "real_name", birth_city: "birth_city", death_cause: "death_cause", trivia: "trivia", gender: "gender" },
   },
   album: {
     kind: "album", erKind: "ALBUM", table: "public.albums", targetColumn: "album_id", identityColumn: "title",
     aliasTable: "ingest.album_aliases", aliasTargetColumn: "album_id",
-    fields: { title: "title", release_year: "release_year", album_type: "album_type", genre: "genre", label_id: "label_id", cover_url: "cover_url", description: "description", youtube_url: "youtube_url", youtube_status: "youtube_status", instagram_url: "instagram_url", instagram_status: "instagram_status", wordpress_url: "wordpress_url", wordpress_status: "wordpress_status", notes: "notes" },
+    fields: { title: "title", release_year: "release_year", album_type: "album_type", genre: "genre", label_id: "label_id", cover_url: "cover_url", description: "description", youtube_url: "youtube_url", youtube_status: "youtube_status", instagram_url: "instagram_url", instagram_status: "instagram_status", wordpress_url: "wordpress_url", wordpress_status: "wordpress_status", notes: "notes", release_date_text: "release_date_text", catalog_id: "catalog_id", media_format: "media_format" },
   },
   track: {
     kind: "track", erKind: "TRACK", table: "public.tracks", targetColumn: "track_id", identityColumn: "title",

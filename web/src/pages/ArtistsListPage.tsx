@@ -41,6 +41,7 @@ export function ArtistsListPage() {
                 key={artist.id}
                 to={`/artistas/${artist.id}`}
                 title={artist.name}
+                deceased={artist.isDeceased}
                 subtitle={[artistTypeLabel(artist.artistType), artist.originCity].filter(Boolean).join(" · ")}
                 imageUrl={artist.pictureUrl}
                 placeholder={initialOf(artist.name)}

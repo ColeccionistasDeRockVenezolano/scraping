@@ -46,7 +46,7 @@ export interface OrganizationDetail {
   notes: string | null;
   labelAlbums: Array<{ albumId: number; title: string; releaseYear: number | null; artistId: number; artistName: string }>;
   creditedArtists: Array<{ artistId: number; artistName: string }>;
-  associatedPersons: Array<{ id: number; personId: number; personName: string; role: string; fromYear: number | null; toYear: number | null }>;
+  associatedPersons: Array<{ id: number; personId: number; personName: string; personIsDeceased: boolean; role: string; fromYear: number | null; toYear: number | null }>;
   aliases: Array<{ id: number; alias: string; aliasType: string; isPrimary: boolean }>;
 }
 
@@ -70,7 +70,7 @@ export async function getOrganizationDetail(id: number): Promise<OrganizationDet
        ), '[]'::jsonb) AS credited_artists,
        COALESCE((
          SELECT jsonb_agg(jsonb_build_object(
-           'id', po.id, 'personId', p.id, 'personName', p.name, 'role', po.role,
+           'id', po.id, 'personId', p.id, 'personName', p.name, 'personIsDeceased', COALESCE(p.is_deceased, false) OR p.death_date IS NOT NULL, 'role', po.role,
            'fromYear', po.from_year, 'toYear', po.to_year
          ) ORDER BY p.name)
          FROM public.person_organizations po JOIN public.persons p ON p.id = po.person_id

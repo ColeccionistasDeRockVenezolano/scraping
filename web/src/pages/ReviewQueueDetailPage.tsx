@@ -1,4 +1,5 @@
 import { Link, useNavigate, useParams } from "react-router-dom";
+import { BackLink } from "../components/BackLink";
 import { reviewApi } from "../lib/api";
 import { useAsync } from "../lib/useAsync";
 import { useOperator } from "../lib/OperatorContext";
@@ -53,7 +54,7 @@ export function ReviewQueueDetailPage() {
 
   return (
     <>
-      <Link to="/curaduria" className="back-link">← Conflictos</Link>
+      <BackLink fallback="/curaduria" />
 
       <div className="page-header">
         <div>

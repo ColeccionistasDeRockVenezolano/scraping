@@ -81,8 +81,30 @@ export const APPROVED_CORE_CHANGES: Readonly<Record<string, string>> = {
   "COL persons.is_venezuelan boolean": "COL persons.is_venezuelan boolean NOT NULL DEFAULT false",
 };
 
+/**
+ * Columnas que una migración aprobada añade al core: no figuran en el
+ * snapshot y no cuentan como «extra». Solo esta forma exacta.
+ */
+export const APPROVED_CORE_ADDITIONS: ReadonlySet<string> = new Set([
+  // 0032 (2026-09-30): NULL = sin dato, true = fallecido/a.
+  "COL persons.is_deceased boolean",
+  // 0033 (2026-10-01): campos de la captura de Metal Archives (VE).
+  "COL artists.status character varying(20)",
+  "COL artists.themes text",
+  "COL artists.years_active text",
+  "COL artists.logo_url text",
+  "COL persons.real_name character varying(200)",
+  "COL persons.birth_city character varying(120)",
+  "COL persons.death_cause text",
+  "COL persons.trivia text",
+  "COL persons.gender character varying(10)",
+  "COL albums.release_date_text character varying(40)",
+  "COL albums.catalog_id character varying(80)",
+  "COL albums.media_format character varying(50)",
+]);
+
 export function diffCoreCatalog(actual: string[], expected: string[] = CORE_CATALOG.entries): CatalogDiff {
-  actual = actual.map((entry) => APPROVED_CORE_CHANGES[entry] ?? entry);
+  actual = actual.filter((entry) => !APPROVED_CORE_ADDITIONS.has(entry)).map((entry) => APPROVED_CORE_CHANGES[entry] ?? entry);
   const actualSet = new Set(actual);
   const expectedSet = new Set(expected);
   return {

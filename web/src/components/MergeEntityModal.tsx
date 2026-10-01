@@ -35,6 +35,7 @@ const FIELD_LABELS: Readonly<Record<string, string>> = {
   picture_url: "Foto",
   nationality: "Nacionalidad",
   is_venezuelan: "Venezolano/a",
+  is_deceased: "Fallecido/a",
   birth_date: "Nacimiento",
   death_date: "Fallecimiento",
   organization_type: "Tipo",

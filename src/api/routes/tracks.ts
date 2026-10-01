@@ -28,6 +28,7 @@ const trackCreditSchema = z.object({
   role: z.string(),
   personId: z.number().int().nullable(),
   personName: z.string().nullable(),
+  personIsDeceased: z.boolean(),
   artistId: z.number().int().nullable(),
   artistName: z.string().nullable(),
   organizationId: z.number().int().nullable(),

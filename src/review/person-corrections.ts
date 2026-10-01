@@ -24,6 +24,7 @@ import { z } from "zod";
 import { getEnv } from "../config/env.js";
 import { getPool } from "../db/client.js";
 import { mergeEquivalentCredits } from "../merge/equivalent-relations.js";
+import { mergeAlbums, previewAlbumMerge } from "../merge/album-merge.js";
 import { mergeEntityRows } from "../merge/entity-merge.js";
 import { createEntity, OperatorError, OPERATOR_SOURCE_SLUG, type OperatorContext } from "../merge/operator.js";
 import { resolveRedirect } from "../merge/redirects.js";
@@ -40,6 +41,7 @@ export { mergeEquivalentCredits };
 
 const entityRef = z.object({ id: z.number().int().positive(), name: z.string().min(1) });
 const why = z.string().min(1);
+const isoDay = z.string().regex(/^\d{4}-\d{2}-\d{2}$/);
 const correctionSchema = z.discriminatedUnion("op", [
   z.object({ op: z.literal("rename"), person: entityRef, to: z.string().min(1), keepOldNameAsAlias: z.boolean(), why }),
   z.object({ op: z.literal("merge"), keep: entityRef, drop: entityRef, keepDropNameAsAlias: z.boolean(), why }),
@@ -49,6 +51,25 @@ const correctionSchema = z.discriminatedUnion("op", [
   // Una fila que en realidad son varias personas (E11.7): cada nombre del
   // plan recibe copia de créditos y membresías, y la fila combinada se retira.
   z.object({ op: z.literal("split"), person: entityRef, into: z.array(z.string().min(1)).min(2), why }),
+  // Identidad persona ↔ proyecto (Brian, 2026-09-30, caso Ashwave): el artista
+  // es el proyecto o nombre artístico de la persona. No se fusionan fichas de
+  // tipos distintos: la persona queda como titular (membresía) del artista.
+  z.object({ op: z.literal("link_project"), person: entityRef, artist: entityRef, role: z.string().min(1).default("Titular del proyecto"), why }),
+  z.object({ op: z.literal("add_alias"), person: entityRef, alias: z.string().min(1), why }),
+  // Fallecido/a (Brian, 2026-09-30, caso Canserbero): la cruz «(†)» deja de
+  // ir en el nombre y pasa a `persons.is_deceased`. `cleanName` retira la
+  // marca del nombre en el mismo paso.
+  z.object({ op: z.literal("mark_deceased"), person: entityRef, cleanName: z.string().min(1).optional(), deathDate: isoDay.optional(), birthDate: isoDay.optional(), why }),
+  // Fechas de nacimiento/fallecimiento que dan las fuentes (Brian, 2026-09-30):
+  // solo rellena lo que esté vacío; nunca pisa una fecha ya guardada.
+  z.object({ op: z.literal("set_dates"), person: entityRef, birthDate: isoDay.optional(), deathDate: isoDay.optional(), why }),
+  // Un artista que es una persona (solista) sin ficha de persona: se crea la
+  // persona con ese nombre, titular del proyecto, y si murió, se marca.
+  z.object({ op: z.literal("create_titular"), name: z.string().min(1), artist: entityRef, role: z.string().min(1).default("Titular del proyecto"),
+    deceased: z.boolean().default(false), birthDate: isoDay.optional(), deathDate: isoDay.optional(), why }),
+  // Disco de «participación» duplicado del real (p. ej. el índice de una
+  // persona en Sincopa): sus pistas, créditos y enlaces pasan al que queda.
+  z.object({ op: z.literal("merge_albums"), keep: entityRef, drop: entityRef, why }),
 ]);
 export const personCorrectionPlanSchema = z.object({
   decidedAt: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
@@ -152,7 +173,159 @@ async function applyOne(client: PoolClient, correction: PersonCorrection, note: 
       return absorbPerson(client, correction.op, correction.person, correction.organization, ABSORBERS.organization, correction.keepNameAsAlias, reason, runId);
     case "split":
       return splitPerson(client, correction.person.id, correction.into, reason, runId, correction.person.name);
+    case "link_project":
+      return linkProject(client, correction.person, correction.artist, correction.role, reason, runId);
+    case "add_alias": {
+      expectName("persona", correction.person, await personName(client, correction.person.id));
+      const key = normalizeEntityName(correction.alias).primaryKey;
+      const inserted = await client.query(`
+        INSERT INTO ingest.person_aliases(person_id,alias,alias_type,normalized_alias,is_primary,confidence,notes)
+        SELECT $1::bigint,$2::text,'name_variant',$3::text,false,'high','Alias añadido por una corrección del propietario'
+         WHERE NOT EXISTS (SELECT 1 FROM ingest.person_aliases WHERE person_id=$1::bigint AND (alias=$2::text OR normalized_alias=$3::text))
+           AND lower(btrim((SELECT name FROM public.persons WHERE id=$1::bigint)))<>lower(btrim($2::text))`,
+      [correction.person.id, correction.alias, key]);
+      if (inserted.rowCount === 0) return { op: "add_alias", status: "skipped", detail: `persona ${correction.person.id} ya responde a «${correction.alias}»`, credits: 0 };
+      await audit(client, runId, "person", "person_id", correction.person.id, "aliases", null, [correction.alias], reason, await claimIdsFor(client, "person_id", correction.person.id));
+      return { op: "add_alias", status: "applied", detail: `alias «${correction.alias}» para ${correction.person.id}`, credits: 0 };
+    }
+    case "mark_deceased": {
+      const row = (await client.query<{ name: string; is_deceased: boolean | null }>(
+        "SELECT name, is_deceased FROM public.persons WHERE id=$1 FOR UPDATE", [correction.person.id])).rows[0];
+      const target = correction.cleanName ?? correction.person.name;
+      if (row && row.is_deceased === true && row.name === target && !(await datesPending(client, correction.person.id, correction.birthDate, correction.deathDate))) {
+        return { op: "mark_deceased", status: "skipped", detail: `persona ${correction.person.id} ya figura como fallecida`, credits: 0 };
+      }
+      // El nombre puede ser el del plan o ya el limpio (a medias de una corrida anterior).
+      expectName("persona", { id: correction.person.id, name: row?.name === target ? target : correction.person.name }, row?.name ?? null);
+      const claims = await claimIdsFor(client, "person_id", correction.person.id);
+      if (row!.is_deceased !== true) {
+        await client.query("UPDATE public.persons SET is_deceased=true, updated_at=now() WHERE id=$1", [correction.person.id]);
+        await audit(client, runId, "person", "person_id", correction.person.id, "is_deceased", row!.is_deceased, true, reason, claims);
+      }
+      if (row!.name !== target) {
+        await client.query("UPDATE public.persons SET name=$2, updated_at=now() WHERE id=$1", [correction.person.id, target]);
+        await audit(client, runId, "person", "person_id", correction.person.id, "name", row!.name, target, reason, claims);
+      }
+      const dated = await writeDates(client, runId, correction.person.id, correction.birthDate, correction.deathDate, reason, claims);
+      const credits = await mergeEquivalentCredits(client, { column: "person_id", id: correction.person.id }, reason, runId);
+      return { op: "mark_deceased", status: "applied", detail: `${target} (${correction.person.id}) marcado fallecido${row!.name !== target ? `; nombre «${row!.name}» → «${target}»` : ""}${dated.length ? `; ${dated.join(", ")}` : ""}`, credits };
+    }
+    case "set_dates": {
+      expectName("persona", correction.person, await personName(client, correction.person.id));
+      const dated = await writeDates(client, runId, correction.person.id, correction.birthDate, correction.deathDate, reason, await claimIdsFor(client, "person_id", correction.person.id));
+      return dated.length === 0
+        ? { op: "set_dates", status: "skipped", detail: `persona ${correction.person.id} ya tiene esas fechas (o otras distintas, que no se pisan)`, credits: 0 }
+        : { op: "set_dates", status: "applied", detail: `${correction.person.name} (${correction.person.id}): ${dated.join(", ")}`, credits: 0 };
+    }
+    case "create_titular":
+      return createTitular(client, correction, reason, runId);
+    case "merge_albums": {
+      const titles = (await client.query<{ id: string; title: string }>(
+        "SELECT id::text, title FROM public.albums WHERE id = ANY($1::bigint[])", [[correction.keep.id, correction.drop.id]])).rows;
+      const keep = titles.find((row) => Number(row.id) === correction.keep.id)?.title ?? null;
+      const drop = titles.find((row) => Number(row.id) === correction.drop.id)?.title ?? null;
+      if (drop === null && keep === correction.keep.name) return { op: "merge_albums", status: "skipped", detail: `disco ${correction.drop.id} ya fusionado en ${correction.keep.id}`, credits: 0 };
+      if (keep === null) throw new Error(`disco ${correction.keep.id} no existe (el plan espera «${correction.keep.name}»)`);
+      if (drop === null) throw new Error(`disco ${correction.drop.id} no existe (el plan espera «${correction.drop.name}»)`);
+      if (keep !== correction.keep.name) throw new Error(`disco ${correction.keep.id} se llama «${keep}», el plan espera «${correction.keep.name}»`);
+      if (drop !== correction.drop.name) throw new Error(`disco ${correction.drop.id} se llama «${drop}», el plan espera «${correction.drop.name}»`);
+      const context = await planOperatorContext(client, runId, reason);
+      const preview = await previewAlbumMerge(client, correction.keep.id, correction.drop.id, { lock: true });
+      const merged = await mergeAlbums(context, { keepId: correction.keep.id, dropId: correction.drop.id, previewHash: preview.previewHash, keepDropNameAsAlias: false });
+      return { op: "merge_albums", status: "applied", detail: `«${correction.drop.name}» (${correction.drop.id}) → «${correction.keep.name}» (${correction.keep.id}); ${merged.tracksMerged} pistas unidas, ${merged.tracksMoved} movidas`, credits: merged.creditsMerged };
+    }
   }
+}
+
+/** ¿Falta escribir alguna de las fechas pedidas? */
+async function datesPending(client: PoolClient, id: number, birth?: string, death?: string): Promise<boolean> {
+  const row = (await client.query<{ birth_date: string | null; death_date: string | null }>(
+    "SELECT birth_date::text, death_date::text FROM public.persons WHERE id=$1", [id])).rows[0];
+  return Boolean(row && ((birth && row.birth_date === null) || (death && row.death_date === null)));
+}
+
+/**
+ * Escribe nacimiento y fallecimiento solo donde la columna esté vacía (nunca
+ * pisa una fecha ya guardada), con su auditoría. Devuelve lo que escribió.
+ */
+async function writeDates(
+  client: PoolClient, runId: number, id: number, birth: string | undefined, death: string | undefined, reason: string, claims: number[],
+): Promise<string[]> {
+  const row = (await client.query<{ birth_date: string | null; death_date: string | null }>(
+    "SELECT birth_date::text, death_date::text FROM public.persons WHERE id=$1 FOR UPDATE", [id])).rows[0];
+  if (!row) return [];
+  const newBirth = birth && row.birth_date === null ? birth : null;
+  const newDeath = death && row.death_date === null ? death : null;
+  const finalBirth = newBirth ?? row.birth_date;
+  const finalDeath = newDeath ?? row.death_date;
+  if (finalBirth && finalDeath && finalDeath < finalBirth) throw new Error(`persona ${id}: el fallecimiento (${finalDeath}) no puede ser anterior al nacimiento (${finalBirth})`);
+  const written: string[] = [];
+  if (newBirth) {
+    await client.query("UPDATE public.persons SET birth_date=$2, updated_at=now() WHERE id=$1", [id, newBirth]);
+    await audit(client, runId, "person", "person_id", id, "birth_date", null, newBirth, reason, claims);
+    written.push(`nacimiento ${newBirth}`);
+  }
+  if (newDeath) {
+    await client.query("UPDATE public.persons SET death_date=$2, updated_at=now() WHERE id=$1", [id, newDeath]);
+    await audit(client, runId, "person", "person_id", id, "death_date", null, newDeath, reason, claims);
+    written.push(`fallecimiento ${newDeath}`);
+  }
+  return written;
+}
+
+/**
+ * Persona nueva con el nombre del artista, titular de su proyecto (y marcada
+ * fallecida si corresponde). Si ya existe una persona con ese nombre exacto,
+ * la usa en vez de crear otra.
+ */
+async function createTitular(
+  client: PoolClient, correction: Extract<PersonCorrection, { op: "create_titular" }>, reason: string, runId: number,
+): Promise<CorrectionOutcome & { credits: number }> {
+  const artistName = (await client.query<{ name: string }>("SELECT name FROM public.artists WHERE id=$1 FOR UPDATE", [correction.artist.id])).rows[0]?.name ?? null;
+  expectName("artista", correction.artist, artistName);
+  const existingMember = await client.query(
+    "SELECT 1 FROM public.artist_members am JOIN public.persons p ON p.id=am.person_id WHERE am.artist_id=$1 AND p.name=$2", [correction.artist.id, correction.name]);
+  if ((existingMember.rowCount ?? 0) > 0) return { op: "create_titular", status: "skipped", detail: `${correction.name} ya es miembro de ${artistName}`, credits: 0 };
+  const context = await planOperatorContext(client, runId, reason);
+  let personId = (await personsNamedExactly(client, correction.name))[0];
+  let created = false;
+  if (personId === undefined) {
+    try {
+      personId = (await createEntity(context, "person", { name: correction.name }, { allowSimilar: false })).id;
+    } catch (error) {
+      if (!(error instanceof OperatorError) || error.code !== "needs_review") throw error;
+      personId = (await createEntity(context, "person", { name: correction.name }, { allowSimilar: true })).id;
+    }
+    created = true;
+  }
+  const link = await linkProject(client, { id: personId, name: correction.name }, correction.artist, correction.role, reason, runId);
+  const claims = await claimIdsFor(client, "person_id", personId);
+  if (correction.deceased) {
+    await client.query("UPDATE public.persons SET is_deceased=true, updated_at=now() WHERE id=$1", [personId]);
+    await audit(client, runId, "person", "person_id", personId, "is_deceased", null, true, reason, claims);
+  }
+  const dated = await writeDates(client, runId, personId, correction.birthDate, correction.deathDate, reason, claims);
+  return { op: "create_titular", status: "applied", detail: `${created ? "persona nueva" : "persona existente"} «${correction.name}» (${personId}) → ${link.detail}${correction.deceased ? "; fallecida" : ""}${dated.length ? `; ${dated.join(", ")}` : ""}`, credits: 0 };
+}
+
+/**
+ * La persona es el titular del proyecto: alta de la membresía si no existe ya
+ * (con cualquier rol), con auditoría, y derivación de «venezolano» para ella.
+ */
+async function linkProject(
+  client: PoolClient, person: { id: number; name: string }, artist: { id: number; name: string }, role: string, reason: string, runId: number,
+): Promise<CorrectionOutcome & { credits: number }> {
+  expectName("persona", person, await personName(client, person.id));
+  const artistName = (await client.query<{ name: string }>("SELECT name FROM public.artists WHERE id=$1 FOR UPDATE", [artist.id])).rows[0]?.name ?? null;
+  expectName("artista", artist, artistName);
+  const existing = await client.query("SELECT 1 FROM public.artist_members WHERE person_id=$1 AND artist_id=$2", [person.id, artist.id]);
+  if ((existing.rowCount ?? 0) > 0) return { op: "link_project", status: "skipped", detail: `${person.name} ya es miembro de ${artist.name}`, credits: 0 };
+  const inserted = await client.query<{ id: string }>(
+    "INSERT INTO public.artist_members(artist_id,person_id,role,is_current) VALUES($1,$2,$3,false) RETURNING id::text", [artist.id, person.id, role]);
+  await audit(client, runId, "artist_membership", "artist_membership_id", Number(inserted.rows[0]!.id), "linked_project",
+    null, { person_id: person.id, person: person.name, artist_id: artist.id, artist: artist.name, role }, reason, await claimIdsFor(client, "person_id", person.id));
+  await deriveVenezuelanFor(client, [person.id], runId);
+  return { op: "link_project", status: "applied", detail: `${person.name} (${person.id}) → titular de ${artist.name} (${artist.id})`, credits: 0 };
 }
 
 const ABSORBERS = {

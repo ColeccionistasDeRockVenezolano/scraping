@@ -21,6 +21,7 @@ export const PERSON_FIELDS: readonly FieldConfig[] = [
   { key: "name", label: "Nombre", type: "text", required: true, span2: true },
   { key: "nationality", label: "Nacionalidad", type: "text" },
   { key: "isVenezuelan", label: "Venezolano/a", type: "tristate" },
+  { key: "isDeceased", label: "Fallecido/a", type: "tristate" },
   { key: "birthDate", label: "Fecha de nacimiento", type: "date" },
   { key: "deathDate", label: "Fecha de fallecimiento", type: "date" },
   { key: "pictureUrl", label: "Foto (URL)", type: "url", span2: true },

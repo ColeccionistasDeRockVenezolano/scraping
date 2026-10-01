@@ -247,6 +247,78 @@ main { padding: 32px 0 96px; }
   .entity-hero__desc { overflow-wrap: anywhere; }
 }
 
+/* ---------- ficha: datos en columnas y pestañas ---------- */
+.entity-info {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 36px; margin-top: 16px;
+}
+.entity-info__col { margin: 0; display: flex; flex-direction: column; border-top: 1px solid var(--border-soft); }
+.entity-info__row {
+  display: grid; grid-template-columns: 124px minmax(0, 1fr); gap: 12px; align-items: baseline;
+  padding: 8px 0; border-bottom: 1px solid var(--border-soft);
+}
+.entity-info__row dt {
+  font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-faint);
+}
+.entity-info__row dd { margin: 0; font-size: 14px; color: var(--text); overflow-wrap: anywhere; }
+.entity-info__row dd.is-empty { color: var(--text-faint); }
+.entity-info__row dd a { color: var(--text); text-decoration: underline; text-decoration-color: var(--border); text-underline-offset: 3px; }
+.entity-info__row dd a:hover { text-decoration-color: var(--red); }
+.entity-info__wide {
+  grid-column: 1 / -1; display: grid; grid-template-columns: 124px minmax(0, 1fr); gap: 12px; align-items: baseline;
+  padding: 10px 0 2px;
+}
+.entity-info__wide-label { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-faint); }
+.entity-info__tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.entity-hero__bio { margin-top: 16px; }
+.expandable { display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 0; }
+.expandable.is-open { display: block; -webkit-line-clamp: unset; overflow: visible; }
+.expandable__toggle { margin-top: 4px; padding-left: 0; }
+@media (max-width: 760px) {
+  .entity-info { grid-template-columns: 1fr; }
+  .entity-info__col + .entity-info__col { border-top: 0; }
+  .entity-info__row, .entity-info__wide { grid-template-columns: 104px minmax(0, 1fr); }
+}
+
+.etabs { margin-top: 28px; }
+.etabs__list {
+  display: flex; gap: 4px; border-bottom: 1px solid var(--border);
+  overflow-x: auto; overflow-y: hidden; scrollbar-width: thin;
+}
+.etabs__tab {
+  display: inline-flex; align-items: center; gap: 8px; flex-shrink: 0;
+  padding: 11px 16px; margin-bottom: -1px; background: transparent; cursor: pointer;
+  border: 0; border-bottom: 2px solid transparent; border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+  font: 600 13.5px/1 var(--font-body); color: var(--text-muted);
+  transition: color 0.15s, background 0.15s, border-color 0.15s;
+}
+.etabs__tab:hover { color: var(--text); background: var(--surface); }
+.etabs__tab:focus-visible { outline: 2px solid var(--red); outline-offset: -2px; }
+.etabs__tab.is-active { color: #fff; border-bottom-color: var(--red); background: var(--surface); }
+.etabs__count {
+  min-width: 22px; padding: 2px 7px; border-radius: var(--radius-pill); text-align: center;
+  font: 600 11px/1.3 var(--font-mono); background: var(--surface-3); color: var(--text-muted);
+}
+.etabs__tab.is-active .etabs__count { background: var(--red-soft); color: #ff8b90; }
+.etabs__count.is-zero { opacity: 0.55; }
+.etabs__panel { padding-top: 22px; }
+.etabs__panel > .section:first-child { margin-top: 0; }
+.etabs__empty { color: var(--text-faint); font-size: 13.5px; margin: 0; }
+.etabs__note { color: var(--text-faint); font-size: 12.5px; margin: 0 0 14px; max-width: 70ch; }
+
+/* enlaces relacionados y artistas similares */
+.link-groups { display: grid; gap: 22px; }
+.link-group__title { font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-faint); margin: 0 0 8px; }
+.link-list { list-style: none; margin: 0; padding: 0; border: 1px solid var(--border); border-radius: var(--radius-md); background: var(--surface); overflow: hidden; }
+.link-list li { border-bottom: 1px solid var(--border-soft); }
+.link-list li:last-child { border-bottom: 0; }
+.link-list a {
+  display: flex; justify-content: space-between; gap: 16px; align-items: center; padding: 11px 14px; color: var(--text);
+}
+.link-list a:hover { background: var(--surface-2); }
+.link-list__host { font-size: 12px; color: var(--text-faint); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.similar-reason { margin: 22px 0 10px; font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-faint); }
+.similar-reason:first-child { margin-top: 0; }
+
 /* ---------- badges & chips ---------- */
 .badge {
   display: inline-flex; align-items: center; gap: 5px;
@@ -1183,3 +1255,7 @@ body.has-modal .undo-bar { visibility: hidden; }
 @media (min-width: 761px) {
   body:has(.undo-bar) main { padding-bottom: 96px; }
 }
+
+/* Marca de fallecido/a junto al nombre (sustituye a la cruz «(†)» del nombre). */
+.deceased-mark { display: inline-flex; align-items: center; margin-left: 0.4em; color: var(--text-muted, currentColor); opacity: 0.75; vertical-align: 0.04em; font-size: 0.8em; }
+.entity-hero__title .deceased-mark { font-size: 0.6em; vertical-align: 0.25em; }

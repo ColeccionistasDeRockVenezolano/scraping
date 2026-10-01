@@ -24,7 +24,7 @@ const organizationDetailSchema = organizationListItemSchema.extend({
   })),
   creditedArtists: z.array(z.object({ artistId: z.number().int(), artistName: z.string() })),
   associatedPersons: z.array(z.object({
-    id: z.number().int(), personId: z.number().int(), personName: z.string(), role: z.string(),
+    id: z.number().int(), personId: z.number().int(), personName: z.string(), personIsDeceased: z.boolean(), role: z.string(),
     fromYear: z.number().int().nullable(), toYear: z.number().int().nullable(),
   })),
   aliases: z.array(aliasSchema),
