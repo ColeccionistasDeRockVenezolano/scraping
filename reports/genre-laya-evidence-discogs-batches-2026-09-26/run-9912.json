@@ -1,0 +1,452 @@
+{
+  "targetIds": [
+    3643,
+    3814,
+    4097,
+    4479,
+    4764,
+    5036,
+    1995,
+    2037,
+    2119,
+    2736,
+    4656,
+    2297,
+    2354,
+    2368,
+    2388,
+    2483,
+    2538,
+    2578,
+    2618,
+    2634
+  ],
+  "sourceSlug": "discogs",
+  "level": "album",
+  "scope": "targets",
+  "mode": "confirm",
+  "runId": 9912,
+  "importId": 36,
+  "candidates": 20,
+  "identities": {
+    "matched": 1,
+    "ambiguous": 1,
+    "none": 18
+  },
+  "suggestions": {
+    "inserted": 3,
+    "skipped": 0
+  },
+  "agreement": {
+    "agree": 0,
+    "family_agree": 0,
+    "disagree": 0,
+    "no_reference": 1
+  },
+  "precision": null,
+  "noise": {},
+  "coverageAdded": 1,
+  "cases": {
+    "opened": 0,
+    "byKind": {}
+  },
+  "network": {
+    "requests": 45,
+    "cacheHits": 56
+  },
+  "entities": [
+    {
+      "kind": "album",
+      "entityId": 1995,
+      "title": "Amén",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2037,
+      "title": "Exposición Verano-Verano",
+      "identity": {
+        "status": "matched",
+        "externalId": "release:1579989",
+        "externalName": "Exposición Verano-Verano",
+        "score": 0.9,
+        "signals": [
+          "artist_confirmed (415882)",
+          "title_exact (Exposición Verano-Verano)",
+          "year_exact (2004)"
+        ],
+        "reason": "artist_confirmed + title_exact + year_exact"
+      },
+      "values": [
+        {
+          "raw": "Downtempo",
+          "status": "proposed",
+          "genreSlug": "downtempo",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Ambient",
+          "status": "proposed",
+          "genreSlug": "ambient",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Electronic",
+          "status": "proposed",
+          "genreSlug": "electronica",
+          "reason": "propuesta nueva para revisión"
+        }
+      ],
+      "suggested": [
+        "downtempo",
+        "ambient",
+        "electronica"
+      ],
+      "agreement": "no_reference",
+      "agreementDetail": "CRV no tiene principal confirmado para comparar",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2119,
+      "title": "La Mosca Punk",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2297,
+      "title": "B - side y Rarezas",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2354,
+      "title": "Rebelión",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: la fuente no devolvió candidatos"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2368,
+      "title": "En vivo Cafe Rajatabla",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2388,
+      "title": "Lo Máximo de Vytas Brenner",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2483,
+      "title": "W.T.Fest I",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2538,
+      "title": "Que Pasó?",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2578,
+      "title": "Syma",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2618,
+      "title": "Blanco Vol. 2",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2634,
+      "title": "Homonimo",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: la fuente no devolvió candidatos"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2736,
+      "title": "Un Cuento Sin Pensalo",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 3643,
+      "title": "Ni En Concierto Ni En Estudio...",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 3814,
+      "title": "Arkangel (CD Reissue LP 1 & 3)",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 4097,
+      "title": "Colección Top 50 - Franco De Vita",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 4479,
+      "title": "Seguridad Nacional 1983-1993",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "987023",
+        "externalName": "Seguridad Nacional",
+        "score": 0.6,
+        "signals": [
+          "name_exact (Seguridad Nacional)",
+          "discography_partial (Documento De Actitud)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.6 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 4656,
+      "title": "Serie Lo Máximo",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 4764,
+      "title": "Liverpool Tapes",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 5036,
+      "title": "Génesis 99.5 FM: Encuentro de Generaciones",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    }
+  ],
+  "errors": []
+}

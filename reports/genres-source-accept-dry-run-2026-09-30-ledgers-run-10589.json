@@ -1,0 +1,1288 @@
+{
+  "mode": "dry-run",
+  "runId": 10589,
+  "candidates": 442,
+  "accepted": [
+    {
+      "caseId": "artist:2898",
+      "title": "Norberto Fornerino",
+      "source": "hermes",
+      "raw": [
+        "Deep House",
+        "House"
+      ],
+      "primary": "house",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2944",
+      "title": "Orquesta Sinfónica de Venezuela",
+      "source": "hermes",
+      "raw": [
+        "Música clásica"
+      ],
+      "primary": "musica-clasica",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2902",
+      "title": "Alexis y Fido",
+      "source": "hermes",
+      "raw": [
+        "Reguetón",
+        "música tropical",
+        "pop urbano"
+      ],
+      "primary": "musica-tropical",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2916",
+      "title": "Gein",
+      "source": "hermes",
+      "raw": [
+        "Drum & Bass",
+        "drum and bass"
+      ],
+      "primary": "drum-and-bass",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2940",
+      "title": "Choc Quib Town",
+      "source": "hermes",
+      "raw": [
+        "hip hop",
+        "reggaeton",
+        "reggae"
+      ],
+      "primary": "hip-hop",
+      "secondaries": [
+        "reggae"
+      ]
+    },
+    {
+      "caseId": "artist:2903",
+      "title": "Piso 21",
+      "source": "hermes",
+      "raw": [
+        "latin pop",
+        "reggaeton",
+        "latin"
+      ],
+      "primary": "pop-latino",
+      "secondaries": [
+        "fusion-latina"
+      ]
+    },
+    {
+      "caseId": "artist:2907",
+      "title": "Vortex Involute",
+      "source": "hermes",
+      "raw": [
+        "Drum & Bass"
+      ],
+      "primary": "drum-and-bass",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2924",
+      "title": "Lowbss",
+      "source": "hermes",
+      "raw": [
+        "electronic music"
+      ],
+      "primary": "electronica",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2928",
+      "title": "Receptor",
+      "source": "hermes",
+      "raw": [
+        "drum & bass",
+        "jungle",
+        "neurofunk"
+      ],
+      "primary": "drum-and-bass",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2891",
+      "title": "Analog Circl8",
+      "source": "hermes",
+      "raw": [
+        "Electronic"
+      ],
+      "primary": "electronica",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2933",
+      "title": "Reid Speed",
+      "source": "hermes",
+      "raw": [
+        "Drum & Bass",
+        "Electronic"
+      ],
+      "primary": "drum-and-bass",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2920",
+      "title": "NumberNin6",
+      "source": "hermes",
+      "raw": [
+        "Dubstep",
+        "Drum & Bass"
+      ],
+      "primary": "dubstep",
+      "secondaries": [
+        "drum-and-bass"
+      ]
+    },
+    {
+      "caseId": "artist:2931",
+      "title": "No Money",
+      "source": "hermes",
+      "raw": [
+        "Drum & Bass"
+      ],
+      "primary": "drum-and-bass",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2909",
+      "title": "The Berzerker",
+      "source": "hermes",
+      "raw": [
+        "industrial death metal",
+        "death metal",
+        "grindcore",
+        "industrial metal",
+        "speedcore"
+      ],
+      "primary": "metal-industrial",
+      "secondaries": [
+        "death-metal",
+        "grindcore"
+      ]
+    },
+    {
+      "caseId": "artist:2919",
+      "title": "Mark Instinct",
+      "source": "hermes",
+      "raw": [
+        "electronic"
+      ],
+      "primary": "electronica",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2923",
+      "title": "Throttler",
+      "source": "hermes",
+      "raw": [
+        "drum & bass",
+        "breakbeat"
+      ],
+      "primary": "drum-and-bass",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2904",
+      "title": "KC",
+      "source": "hermes",
+      "raw": [
+        "Drum & Bass",
+        "Techno"
+      ],
+      "primary": "drum-and-bass",
+      "secondaries": [
+        "techno"
+      ]
+    },
+    {
+      "caseId": "artist:2910",
+      "title": "Dark Funeral",
+      "source": "hermes",
+      "raw": [
+        "black metal"
+      ],
+      "primary": "black-metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2935",
+      "title": "Loops",
+      "source": "hermes",
+      "raw": [
+        "Alternative Rock",
+        "Rock",
+        "Pop Rock"
+      ],
+      "primary": "rock-alternativo",
+      "secondaries": [
+        "pop-rock"
+      ]
+    },
+    {
+      "caseId": "artist:2930",
+      "title": "Cooh",
+      "source": "hermes",
+      "raw": [
+        "drum and bass",
+        "darkstep",
+        "Hardcore"
+      ],
+      "primary": "drum-and-bass",
+      "secondaries": [
+        "hardcore-punk"
+      ]
+    },
+    {
+      "caseId": "artist:2894",
+      "title": "Futurason",
+      "source": "hermes",
+      "raw": [
+        "música electrónica",
+        "house"
+      ],
+      "primary": "house",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2913",
+      "title": "XquicksilverX",
+      "source": "hermes",
+      "raw": [
+        "Grindcore",
+        "Breakcore",
+        "Live Electronics"
+      ],
+      "primary": "grindcore",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2912",
+      "title": "Morbid Angel",
+      "source": "hermes",
+      "raw": [
+        "Death metal"
+      ],
+      "primary": "death-metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2937",
+      "title": "Turtled & Emmerson",
+      "source": "hermes",
+      "raw": [
+        "Drum & Bass"
+      ],
+      "primary": "drum-and-bass",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2908",
+      "title": "Voodoo Velkro",
+      "source": "hermes",
+      "raw": [
+        "Electro/Industrial"
+      ],
+      "primary": "industrial",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2921",
+      "title": "Run DMT",
+      "source": "hermes",
+      "raw": [
+        "dubstep / bass music",
+        "electronic dance music"
+      ],
+      "primary": "dubstep",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2911",
+      "title": "Nine Inch Nails",
+      "source": "hermes",
+      "raw": [
+        "industrial rock",
+        "alternative rock",
+        "electronic rock",
+        "industrial metal"
+      ],
+      "primary": "rock-alternativo",
+      "secondaries": [
+        "rock-electronico",
+        "metal-industrial"
+      ]
+    },
+    {
+      "caseId": "artist:2826",
+      "title": "Carlos Cress",
+      "source": "hermes",
+      "raw": [
+        "Deep House",
+        "Electronic"
+      ],
+      "primary": "house",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2927",
+      "title": "Evan Gamble Lewis",
+      "source": "hermes",
+      "raw": [
+        "Drum & Bass",
+        "Breaks",
+        "Trance"
+      ],
+      "primary": "drum-and-bass",
+      "secondaries": [
+        "trance"
+      ]
+    },
+    {
+      "caseId": "artist:2530",
+      "title": "Witch Hunt",
+      "source": "hermes",
+      "raw": [
+        "Speed Metal",
+        "Thrash"
+      ],
+      "primary": "speed-metal",
+      "secondaries": [
+        "thrash-metal"
+      ]
+    },
+    {
+      "caseId": "artist:2922",
+      "title": "Playma",
+      "source": "hermes",
+      "raw": [
+        "Glitch-Hop",
+        "Glitch"
+      ],
+      "primary": "glitch",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2926",
+      "title": "Omar Santana",
+      "source": "hermes",
+      "raw": [
+        "breakbeat",
+        "techno hardcore",
+        "gabber",
+        "dubstep"
+      ],
+      "primary": "dubstep",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2942",
+      "title": "2irie",
+      "source": "hermes",
+      "raw": [
+        "tropical bass",
+        "reggae / soca bass",
+        "moombahton",
+        "dancehall / cumbia"
+      ],
+      "primary": "reggae",
+      "secondaries": [
+        "dancehall",
+        "cumbia"
+      ]
+    },
+    {
+      "caseId": "artist:2918",
+      "title": "Voicians",
+      "source": "hermes",
+      "raw": [
+        "Drum & Bass",
+        "breakcore",
+        "dubstep",
+        "electronic"
+      ],
+      "primary": "drum-and-bass",
+      "secondaries": [
+        "dubstep"
+      ]
+    },
+    {
+      "caseId": "artist:2915",
+      "title": "Counterstrike",
+      "source": "hermes",
+      "raw": [
+        "Drum & bass",
+        "Dubstep",
+        "drum and bass"
+      ],
+      "primary": "drum-and-bass",
+      "secondaries": [
+        "dubstep"
+      ]
+    },
+    {
+      "caseId": "artist:2917",
+      "title": "Robyn Chaos",
+      "source": "hermes",
+      "raw": [
+        "Drum and Bass",
+        "Crossbreed",
+        "Technoid",
+        "Darkcore"
+      ],
+      "primary": "drum-and-bass",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:986",
+      "title": "Van Halen",
+      "source": "hermes",
+      "raw": [
+        "hard rock",
+        "heavy metal",
+        "pop rock",
+        "glam metal"
+      ],
+      "primary": "hard-rock",
+      "secondaries": [
+        "heavy-metal",
+        "pop-rock"
+      ]
+    },
+    {
+      "caseId": "artist:2906",
+      "title": "Concord Dawn",
+      "source": "hermes",
+      "raw": [
+        "Drum and bass",
+        "Drum & bass"
+      ],
+      "primary": "drum-and-bass",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2914",
+      "title": "Exhumed",
+      "source": "hermes",
+      "raw": [
+        "death metal",
+        "goregrind",
+        "grindcore",
+        "deathgrind"
+      ],
+      "primary": "death-metal",
+      "secondaries": [
+        "goregrind",
+        "grindcore",
+        "deathgrind"
+      ]
+    },
+    {
+      "caseId": "artist:2929",
+      "title": "Memtrix",
+      "source": "hermes",
+      "raw": [
+        "drum and bass",
+        "electronic",
+        "dancefloor drum and bass",
+        "Drum & Bass"
+      ],
+      "primary": "drum-and-bass",
+      "secondaries": []
+    }
+  ],
+  "alreadyClassified": [
+    "artist:2155",
+    "artist:2421",
+    "artist:2404",
+    "artist:2320",
+    "artist:2426",
+    "artist:2405",
+    "artist:2703",
+    "artist:2656",
+    "artist:2296",
+    "artist:2669",
+    "artist:2654",
+    "artist:2278",
+    "artist:2557",
+    "artist:2315",
+    "artist:2496",
+    "artist:2277",
+    "artist:2258",
+    "artist:2381",
+    "artist:2487",
+    "artist:2393",
+    "artist:2497",
+    "artist:2389",
+    "artist:2453",
+    "artist:2366",
+    "artist:2382",
+    "artist:2520",
+    "artist:2582",
+    "artist:2132",
+    "artist:2663",
+    "artist:2131",
+    "artist:2196",
+    "artist:2220",
+    "artist:2157",
+    "artist:2394",
+    "artist:2583",
+    "artist:2822",
+    "artist:2284",
+    "artist:2551",
+    "artist:2214",
+    "artist:2090",
+    "artist:2357",
+    "artist:2116",
+    "artist:2304",
+    "artist:2795",
+    "artist:2311",
+    "artist:2163",
+    "artist:2484",
+    "artist:2122",
+    "artist:2119",
+    "artist:2830",
+    "artist:2200",
+    "artist:2269",
+    "artist:2883",
+    "artist:2380",
+    "artist:2270",
+    "artist:2130",
+    "artist:2538",
+    "artist:2403",
+    "artist:2540",
+    "artist:2675",
+    "artist:2361",
+    "artist:2371",
+    "artist:2146",
+    "artist:2384",
+    "artist:2606",
+    "artist:2424",
+    "artist:2055",
+    "artist:2589",
+    "artist:2334",
+    "artist:2327",
+    "artist:2591",
+    "artist:2859",
+    "artist:2445",
+    "artist:2407",
+    "artist:2096",
+    "artist:2080",
+    "artist:2286",
+    "artist:2432",
+    "artist:2191",
+    "artist:2267",
+    "artist:2590",
+    "artist:2504",
+    "artist:2480",
+    "artist:2205",
+    "artist:2400",
+    "artist:2818",
+    "artist:2560",
+    "artist:2430",
+    "artist:2464",
+    "artist:2448",
+    "artist:2412",
+    "artist:2360",
+    "artist:2362",
+    "artist:2158",
+    "artist:2402",
+    "artist:2301",
+    "artist:2317",
+    "artist:2333",
+    "artist:2451",
+    "artist:2167",
+    "artist:2429",
+    "artist:2325",
+    "artist:2260",
+    "artist:2175",
+    "artist:2514",
+    "artist:2512",
+    "artist:2150",
+    "artist:2254",
+    "artist:2510",
+    "artist:2095",
+    "artist:2399",
+    "artist:2597",
+    "artist:2457",
+    "artist:2516",
+    "artist:2356",
+    "artist:2657",
+    "artist:2395",
+    "artist:2274",
+    "artist:2477",
+    "artist:2379",
+    "artist:2418",
+    "artist:2187",
+    "artist:2195",
+    "artist:2473",
+    "artist:2550",
+    "artist:2558",
+    "artist:2341",
+    "artist:2194",
+    "artist:2133",
+    "artist:2173",
+    "artist:2107",
+    "artist:2221",
+    "artist:2476",
+    "artist:2162",
+    "artist:2071",
+    "artist:2856",
+    "artist:2170",
+    "artist:2450",
+    "artist:2088",
+    "artist:2870",
+    "artist:2125",
+    "artist:2076",
+    "artist:2177",
+    "artist:2383",
+    "artist:2598",
+    "artist:2298",
+    "artist:2117",
+    "artist:2396",
+    "artist:2212",
+    "artist:2386",
+    "artist:2101",
+    "artist:2226",
+    "artist:2667",
+    "artist:2222",
+    "artist:2422",
+    "artist:2524",
+    "artist:2074",
+    "artist:2085",
+    "artist:2474",
+    "artist:2438",
+    "artist:2552",
+    "artist:2168",
+    "artist:2169",
+    "artist:2351",
+    "artist:2443",
+    "artist:2531",
+    "artist:2202",
+    "artist:2229",
+    "artist:2561",
+    "artist:2392",
+    "artist:2310",
+    "artist:2840",
+    "artist:2303",
+    "artist:2120",
+    "artist:2548",
+    "artist:2458",
+    "artist:2365",
+    "artist:2555",
+    "artist:2072",
+    "artist:2112",
+    "artist:2376",
+    "artist:2316",
+    "artist:2215",
+    "artist:2816",
+    "artist:2326",
+    "artist:2841",
+    "artist:2075",
+    "artist:2193",
+    "artist:2592",
+    "artist:2083",
+    "artist:2252",
+    "artist:2527",
+    "artist:2507",
+    "artist:2331",
+    "artist:2329",
+    "artist:2586",
+    "artist:2505",
+    "artist:2533",
+    "artist:2498",
+    "artist:2089",
+    "artist:2441",
+    "artist:2283",
+    "artist:2790",
+    "artist:2056",
+    "artist:2517",
+    "artist:2397",
+    "artist:2452",
+    "artist:2098",
+    "artist:2377",
+    "artist:2057",
+    "artist:2259",
+    "artist:2373",
+    "artist:2109",
+    "artist:2595",
+    "artist:2427",
+    "artist:2521",
+    "artist:2106",
+    "artist:2068",
+    "artist:2142",
+    "artist:2449",
+    "artist:2599",
+    "artist:2413",
+    "artist:2353",
+    "artist:2470",
+    "artist:2111",
+    "artist:2500",
+    "artist:2350",
+    "artist:2249",
+    "artist:2811",
+    "artist:2387",
+    "artist:2312",
+    "artist:2513",
+    "artist:2093",
+    "artist:2210",
+    "artist:2434",
+    "artist:2322",
+    "artist:2848",
+    "artist:2063",
+    "artist:2410",
+    "artist:2180",
+    "artist:2488",
+    "artist:2565",
+    "artist:2156",
+    "artist:2297",
+    "artist:2062",
+    "artist:2857",
+    "artist:2199",
+    "artist:2518",
+    "artist:2683",
+    "artist:2324",
+    "artist:2337",
+    "artist:2367",
+    "artist:2660",
+    "artist:2172",
+    "artist:2502",
+    "artist:2148",
+    "artist:2428",
+    "artist:2201",
+    "artist:2073",
+    "artist:2349",
+    "artist:2094",
+    "artist:2577",
+    "artist:2123",
+    "artist:2276",
+    "artist:2355",
+    "artist:2553",
+    "artist:2340",
+    "artist:2129",
+    "artist:2390",
+    "artist:2087",
+    "artist:2544",
+    "artist:2275",
+    "artist:2159",
+    "artist:2481",
+    "artist:2655",
+    "artist:2261",
+    "artist:2346",
+    "artist:2126",
+    "artist:2065",
+    "artist:2077",
+    "artist:2108",
+    "artist:2472",
+    "artist:2145",
+    "artist:2160",
+    "artist:2435",
+    "artist:2596",
+    "artist:2467",
+    "artist:2433",
+    "artist:2171",
+    "artist:2207",
+    "artist:2455",
+    "artist:2447",
+    "artist:2378",
+    "artist:2328",
+    "artist:2499",
+    "artist:2342",
+    "artist:2442",
+    "artist:2439",
+    "artist:2100",
+    "artist:2271",
+    "artist:2105",
+    "artist:2265",
+    "artist:2391",
+    "artist:2335",
+    "artist:2143",
+    "artist:2345",
+    "artist:2532",
+    "artist:2338",
+    "artist:1194",
+    "artist:2308",
+    "artist:2463",
+    "artist:2368",
+    "artist:2726",
+    "artist:2541",
+    "artist:2554",
+    "artist:2354",
+    "artist:2182",
+    "artist:2415",
+    "artist:2370",
+    "artist:2364",
+    "artist:2314",
+    "artist:2118",
+    "artist:2537",
+    "artist:2479",
+    "artist:2347",
+    "artist:2204",
+    "artist:2352",
+    "artist:2344",
+    "artist:2522",
+    "artist:2375",
+    "artist:2064",
+    "artist:2566",
+    "artist:2248",
+    "artist:2459",
+    "artist:2625",
+    "artist:2661",
+    "artist:2206",
+    "artist:2508",
+    "artist:2179",
+    "artist:2483",
+    "artist:2469",
+    "artist:2363",
+    "artist:2358",
+    "artist:2124",
+    "artist:2401",
+    "artist:2526",
+    "artist:2372",
+    "artist:2578",
+    "artist:2839",
+    "artist:2865",
+    "artist:2115",
+    "artist:2299",
+    "artist:2385",
+    "artist:2097",
+    "artist:2587",
+    "artist:2556",
+    "artist:2152",
+    "artist:2411",
+    "artist:2256",
+    "artist:2103",
+    "artist:2567",
+    "artist:1202",
+    "artist:2616"
+  ],
+  "unresolved": [
+    {
+      "caseId": "artist:2932",
+      "source": "hermes",
+      "raw": [
+        "Jungle",
+        "Rave"
+      ],
+      "fragments": [
+        "Jungle",
+        "Rave"
+      ]
+    },
+    {
+      "caseId": "artist:2348",
+      "source": "hermes",
+      "raw": [
+        "Tribal Metal"
+      ],
+      "fragments": [
+        "Tribal Metal"
+      ]
+    },
+    {
+      "caseId": "artist:2425",
+      "source": "hermes",
+      "raw": [
+        "Porno Gore Grind"
+      ],
+      "fragments": [
+        "Porno Gore Grind"
+      ]
+    },
+    {
+      "caseId": "artist:2809",
+      "source": "hermes",
+      "raw": [
+        "Minimal"
+      ],
+      "fragments": []
+    },
+    {
+      "caseId": "artist:2571",
+      "source": "hermes",
+      "raw": [
+        "Guaracha"
+      ],
+      "fragments": [
+        "Guaracha"
+      ]
+    },
+    {
+      "caseId": "artist:2704",
+      "source": "hermes",
+      "raw": [
+        "merengue hip hop"
+      ],
+      "fragments": [
+        "merengue hip hop"
+      ]
+    },
+    {
+      "caseId": "artist:2494",
+      "source": "hermes",
+      "raw": [
+        "Porno Gore Grind"
+      ],
+      "fragments": [
+        "Porno Gore Grind"
+      ]
+    },
+    {
+      "caseId": "artist:2224",
+      "source": "hermes",
+      "raw": [
+        "French house"
+      ],
+      "fragments": [
+        "French house"
+      ]
+    },
+    {
+      "caseId": "artist:2082",
+      "source": "hermes",
+      "raw": [
+        "Rock (banda de covers / tributo de Pink Floyd)"
+      ],
+      "fragments": [
+        "Rock (banda de covers",
+        "tributo de Pink Floyd)"
+      ]
+    },
+    {
+      "caseId": "artist:2456",
+      "source": "hermes",
+      "raw": [
+        "Gorenoise"
+      ],
+      "fragments": [
+        "Gorenoise"
+      ]
+    },
+    {
+      "caseId": "artist:2489",
+      "source": "hermes",
+      "raw": [
+        "Porno Gore Grind"
+      ],
+      "fragments": [
+        "Porno Gore Grind"
+      ]
+    },
+    {
+      "caseId": "artist:2374",
+      "source": "hermes",
+      "raw": [
+        "Groovy PornGrind",
+        "Porno Gore Grind"
+      ],
+      "fragments": [
+        "Groovy PornGrind",
+        "Porno Gore Grind"
+      ]
+    },
+    {
+      "caseId": "artist:2417",
+      "source": "hermes",
+      "raw": [
+        "Grind Death"
+      ],
+      "fragments": [
+        "Grind Death"
+      ]
+    },
+    {
+      "caseId": "artist:2128",
+      "source": "hermes",
+      "raw": [
+        "Punk callejero"
+      ],
+      "fragments": [
+        "Punk callejero"
+      ]
+    },
+    {
+      "caseId": "artist:2478",
+      "source": "hermes",
+      "raw": [
+        "Death Grind"
+      ],
+      "fragments": [
+        "Death Grind"
+      ]
+    },
+    {
+      "caseId": "artist:2446",
+      "source": "hermes",
+      "raw": [
+        "Porno Gore Grind",
+        "Gorenoise"
+      ],
+      "fragments": [
+        "Porno Gore Grind",
+        "Gorenoise"
+      ]
+    },
+    {
+      "caseId": "artist:2486",
+      "source": "hermes",
+      "raw": [
+        "Brutal Death"
+      ],
+      "fragments": [
+        "Brutal Death"
+      ]
+    },
+    {
+      "caseId": "artist:2294",
+      "source": "hermes",
+      "raw": [
+        "Heavy Metal Cristiano"
+      ],
+      "fragments": [
+        "Heavy Metal Cristiano"
+      ]
+    },
+    {
+      "caseId": "artist:2436",
+      "source": "hermes",
+      "raw": [
+        "Cybergrind"
+      ],
+      "fragments": [
+        "Cybergrind"
+      ]
+    },
+    {
+      "caseId": "artist:2282",
+      "source": "hermes",
+      "raw": [
+        "Covers pop rock (70, 80, 90)"
+      ],
+      "fragments": [
+        "Covers pop rock (70",
+        "80",
+        "90)"
+      ]
+    },
+    {
+      "caseId": "artist:2584",
+      "source": "hermes",
+      "raw": [
+        "sci-fi rock",
+        "8 bit"
+      ],
+      "fragments": [
+        "sci",
+        "fi rock",
+        "8 bit"
+      ]
+    },
+    {
+      "caseId": "artist:2653",
+      "source": "hermes",
+      "raw": [
+        "Reggaeton"
+      ],
+      "fragments": [
+        "Reggaeton"
+      ]
+    },
+    {
+      "caseId": "artist:2323",
+      "source": "hermes",
+      "raw": [
+        "Hard Core",
+        "Rock protesta"
+      ],
+      "fragments": [
+        "Hard Core",
+        "Rock protesta"
+      ]
+    },
+    {
+      "caseId": "artist:2414",
+      "source": "hermes",
+      "raw": [
+        "cybergrind",
+        "blackened noise",
+        "digital hardcore"
+      ],
+      "fragments": [
+        "cybergrind",
+        "blackened noise",
+        "digital hardcore"
+      ]
+    },
+    {
+      "caseId": "artist:2444",
+      "source": "hermes",
+      "raw": [
+        "Gorenoise"
+      ],
+      "fragments": [
+        "Gorenoise"
+      ]
+    },
+    {
+      "caseId": "artist:2493",
+      "source": "hermes",
+      "raw": [
+        "Grind Electro"
+      ],
+      "fragments": [
+        "Grind Electro"
+      ]
+    },
+    {
+      "caseId": "artist:2398",
+      "source": "hermes",
+      "raw": [
+        "Gorenoise"
+      ],
+      "fragments": [
+        "Gorenoise"
+      ]
+    },
+    {
+      "caseId": "artist:2594",
+      "source": "hermes",
+      "raw": [
+        "Hard rock progresivo y heavy clásico"
+      ],
+      "fragments": [
+        "Hard rock progresivo",
+        "heavy clásico"
+      ]
+    },
+    {
+      "caseId": "artist:2491",
+      "source": "hermes",
+      "raw": [
+        "Porno Gore Grind"
+      ],
+      "fragments": [
+        "Porno Gore Grind"
+      ]
+    },
+    {
+      "caseId": "artist:2528",
+      "source": "hermes",
+      "raw": [
+        "Thrash Speed"
+      ],
+      "fragments": [
+        "Thrash Speed"
+      ]
+    },
+    {
+      "caseId": "artist:2485",
+      "source": "hermes",
+      "raw": [
+        "Brutal Death"
+      ],
+      "fragments": [
+        "Brutal Death"
+      ]
+    },
+    {
+      "caseId": "artist:2176",
+      "source": "hermes",
+      "raw": [
+        "Rock venezolano"
+      ],
+      "fragments": [
+        "Rock venezolano"
+      ]
+    },
+    {
+      "caseId": "artist:2388",
+      "source": "hermes",
+      "raw": [
+        "groovy goregrind"
+      ],
+      "fragments": [
+        "groovy goregrind"
+      ]
+    },
+    {
+      "caseId": "artist:2431",
+      "source": "hermes",
+      "raw": [
+        "Porno Gore Grind",
+        "Porngore Grind"
+      ],
+      "fragments": [
+        "Porno Gore Grind",
+        "Porngore Grind"
+      ]
+    },
+    {
+      "caseId": "artist:2359",
+      "source": "hermes",
+      "raw": [
+        "Heavy Metal clásico"
+      ],
+      "fragments": [
+        "Heavy Metal clásico"
+      ]
+    },
+    {
+      "caseId": "artist:2482",
+      "source": "hermes",
+      "raw": [
+        "Brutal Death",
+        "Slamming Death Metal"
+      ],
+      "fragments": [
+        "Brutal Death",
+        "Slamming Death Metal"
+      ]
+    },
+    {
+      "caseId": "artist:2440",
+      "source": "hermes",
+      "raw": [
+        "Cyber noise / Anti-Music"
+      ],
+      "fragments": [
+        "Cyber noise",
+        "Anti",
+        "Music"
+      ]
+    },
+    {
+      "caseId": "artist:2866",
+      "source": "hermes",
+      "raw": [
+        "Tribal House",
+        "Progressive House"
+      ],
+      "fragments": [
+        "Tribal House",
+        "Progressive House"
+      ]
+    },
+    {
+      "caseId": "artist:2060",
+      "source": "hermes",
+      "raw": [
+        "Indie Rock con matices de Brit Pop",
+        "Rock con influencia del indie británico y guiños al shoegaze"
+      ],
+      "fragments": [
+        "Indie Rock con matices de Brit Pop",
+        "Rock con influencia del indie británico",
+        "guiños al shoegaze"
+      ]
+    }
+  ],
+  "errors": [],
+  "moreSpecificExists": []
+}

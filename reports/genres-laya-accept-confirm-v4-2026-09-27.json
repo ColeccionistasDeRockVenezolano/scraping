@@ -1,0 +1,88 @@
+{
+  "mode": "confirm",
+  "threshold": 0.75,
+  "runId": 10302,
+  "predictions": 753,
+  "accepted": [
+    {
+      "caseId": "artist:1945",
+      "genre": "heavy-metal",
+      "probability": 0.9734
+    },
+    {
+      "caseId": "artist:681",
+      "genre": "bolero",
+      "probability": 0.9675
+    },
+    {
+      "caseId": "artist:710",
+      "genre": "hard-rock",
+      "probability": 0.9166
+    },
+    {
+      "caseId": "artist:676",
+      "genre": "rock",
+      "probability": 0.7673
+    },
+    {
+      "caseId": "artist:771",
+      "genre": "heavy-metal",
+      "probability": 0.7621
+    },
+    {
+      "caseId": "artist:555",
+      "genre": "rock",
+      "probability": 0.9709
+    },
+    {
+      "caseId": "artist:712",
+      "genre": "rock",
+      "probability": 0.767
+    },
+    {
+      "caseId": "artist:1534",
+      "genre": "cantautor",
+      "probability": 0.7795
+    },
+    {
+      "caseId": "artist:1871",
+      "genre": "glam-rock",
+      "probability": 0.9765
+    },
+    {
+      "caseId": "artist:1864",
+      "genre": "rock",
+      "probability": 0.9917
+    },
+    {
+      "caseId": "artist:1865",
+      "genre": "rock",
+      "probability": 0.7944
+    },
+    {
+      "caseId": "artist:1917",
+      "genre": "reggae",
+      "probability": 0.9537
+    },
+    {
+      "caseId": "artist:1904",
+      "genre": "pop-rock",
+      "probability": 0.9376
+    },
+    {
+      "caseId": "artist:1930",
+      "genre": "pop-rock",
+      "probability": 0.9929
+    },
+    {
+      "caseId": "artist:1969",
+      "genre": "blues",
+      "probability": 0.8953
+    }
+  ],
+  "belowThreshold": 294,
+  "abstained": 168,
+  "errors": 0,
+  "alreadyClassified": 276,
+  "failed": []
+}

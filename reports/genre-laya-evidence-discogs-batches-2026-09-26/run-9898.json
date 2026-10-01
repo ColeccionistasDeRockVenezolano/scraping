@@ -1,0 +1,582 @@
+{
+  "targetIds": [
+    445,
+    446,
+    448,
+    458,
+    459,
+    472,
+    489,
+    506,
+    540,
+    146,
+    164,
+    180,
+    266,
+    287,
+    311,
+    349,
+    374,
+    386,
+    397,
+    435
+  ],
+  "sourceSlug": "discogs",
+  "level": "album",
+  "scope": "targets",
+  "mode": "confirm",
+  "runId": 9898,
+  "importId": 22,
+  "candidates": 20,
+  "identities": {
+    "matched": 4,
+    "ambiguous": 3,
+    "none": 13
+  },
+  "suggestions": {
+    "inserted": 12,
+    "skipped": 0
+  },
+  "agreement": {
+    "agree": 0,
+    "family_agree": 0,
+    "disagree": 0,
+    "no_reference": 4
+  },
+  "precision": null,
+  "noise": {
+    "unmapped": 1
+  },
+  "coverageAdded": 4,
+  "cases": {
+    "opened": 4,
+    "byKind": {
+      "external_ambiguous_identity": 3,
+      "external_unmapped_term": 1
+    }
+  },
+  "network": {
+    "requests": 32,
+    "cacheHits": 66
+  },
+  "entities": [
+    {
+      "kind": "album",
+      "entityId": 146,
+      "title": "Cero A La Izquierda",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 164,
+      "title": "Desiderata",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 180,
+      "title": "Ticket To Youkali",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 266,
+      "title": "Real Orgánico y Baile",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 287,
+      "title": "Vendrán Por Ti",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 311,
+      "title": "Radio Tigre Internacional",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: la fuente no devolvió candidatos"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 349,
+      "title": "The Last April",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 374,
+      "title": "Caracas High Tech",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 386,
+      "title": "La Perfección Del Sonido",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 397,
+      "title": "Sonicosubte",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 435,
+      "title": "Free",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "31066",
+        "externalName": "DJ Afro",
+        "score": 0.75,
+        "signals": [
+          "name_exact (DJ Afro)",
+          "discography_strong (Free · Will work for fun)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.75 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 445,
+      "title": "Fuera De Este Mundo",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "master:918584",
+        "externalName": "Fuera De Este Mundo",
+        "score": 0.9,
+        "signals": [
+          "artist_confirmed (1214067)",
+          "title_exact (Fuera De Este Mundo)",
+          "year_exact (1996)"
+        ],
+        "reason": "dos candidatos casi iguales (0.9 y 0.9)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 446,
+      "title": "Nada Es Igual",
+      "identity": {
+        "status": "matched",
+        "externalId": "master:1054027",
+        "externalName": "Nada Es Igual",
+        "score": 0.9,
+        "signals": [
+          "artist_confirmed (1214067)",
+          "title_exact (Nada Es Igual)",
+          "year_exact (1999)"
+        ],
+        "reason": "artist_confirmed + title_exact + year_exact"
+      },
+      "values": [
+        {
+          "raw": "Ballad",
+          "status": "proposed",
+          "genreSlug": "balada",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Bachata",
+          "status": "unmapped",
+          "genreSlug": null,
+          "reason": "sin equivalencia en la taxonomía aprobada"
+        },
+        {
+          "raw": "Reggae",
+          "status": "proposed",
+          "genreSlug": "reggae",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Latin",
+          "status": "proposed",
+          "genreSlug": "fusion-latina",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Blues",
+          "status": "proposed",
+          "genreSlug": "blues",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Pop",
+          "status": "proposed",
+          "genreSlug": "pop",
+          "reason": "propuesta nueva para revisión"
+        }
+      ],
+      "suggested": [
+        "balada",
+        "reggae",
+        "fusion-latina"
+      ],
+      "agreement": "no_reference",
+      "agreementDetail": "CRV no tiene principal confirmado para comparar",
+      "casesOpened": [
+        "external_unmapped_term"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 448,
+      "title": "Voces A Mi Alrededor",
+      "identity": {
+        "status": "matched",
+        "externalId": "master:906766",
+        "externalName": "Voces A Mi Alrededor",
+        "score": 0.9,
+        "signals": [
+          "artist_confirmed (1214067)",
+          "title_exact (Voces A Mi Alrededor)",
+          "year_exact (1993)"
+        ],
+        "reason": "artist_confirmed + title_exact + year_exact"
+      },
+      "values": [
+        {
+          "raw": "Ballad",
+          "status": "proposed",
+          "genreSlug": "balada",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Latin",
+          "status": "proposed",
+          "genreSlug": "fusion-latina",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Pop",
+          "status": "proposed",
+          "genreSlug": "pop",
+          "reason": "propuesta nueva para revisión"
+        }
+      ],
+      "suggested": [
+        "balada",
+        "fusion-latina",
+        "pop"
+      ],
+      "agreement": "no_reference",
+      "agreementDetail": "CRV no tiene principal confirmado para comparar",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 458,
+      "title": "De Chow",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: la fuente no devolvió candidatos"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 459,
+      "title": "Todos Los Topinos De Lebronch",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: la fuente no devolvió candidatos"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 472,
+      "title": "América Supersónica",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "master:1686645",
+        "externalName": "America Supersonica",
+        "score": 0.75,
+        "signals": [
+          "artist_confirmed (4529502)",
+          "title_normalized (America Supersonica)",
+          "year_close (2015)"
+        ],
+        "reason": "coincidencia débil (0.75 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 489,
+      "title": "Amazonia",
+      "identity": {
+        "status": "matched",
+        "externalId": "master:450094",
+        "externalName": "Amazonia",
+        "score": 0.9,
+        "signals": [
+          "artist_confirmed (1528489)",
+          "title_exact (Amazonia)",
+          "year_exact (1993)"
+        ],
+        "reason": "artist_confirmed + title_exact + year_exact"
+      },
+      "values": [
+        {
+          "raw": "Latin",
+          "status": "proposed",
+          "genreSlug": "fusion-latina",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "New Age",
+          "status": "proposed",
+          "genreSlug": "new-age",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Electronic",
+          "status": "proposed",
+          "genreSlug": "electronica",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Rock",
+          "status": "proposed",
+          "genreSlug": "rock",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Folk, World, & Country",
+          "status": "proposed",
+          "genreSlug": "folk",
+          "reason": "propuesta nueva para revisión"
+        }
+      ],
+      "suggested": [
+        "fusion-latina",
+        "new-age",
+        "electronica"
+      ],
+      "agreement": "no_reference",
+      "agreementDetail": "CRV no tiene principal confirmado para comparar",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 506,
+      "title": "Al Norte Del Sur",
+      "identity": {
+        "status": "matched",
+        "externalId": "master:466038",
+        "externalName": "Al Norte Del Sur",
+        "score": 0.9,
+        "signals": [
+          "artist_confirmed (1214067)",
+          "title_exact (Al Norte Del Sur)",
+          "year_exact (1988)"
+        ],
+        "reason": "artist_confirmed + title_exact + year_exact"
+      },
+      "values": [
+        {
+          "raw": "Ballad",
+          "status": "proposed",
+          "genreSlug": "balada",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Latin",
+          "status": "proposed",
+          "genreSlug": "fusion-latina",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Pop",
+          "status": "proposed",
+          "genreSlug": "pop",
+          "reason": "propuesta nueva para revisión"
+        }
+      ],
+      "suggested": [
+        "balada",
+        "fusion-latina",
+        "pop"
+      ],
+      "agreement": "no_reference",
+      "agreementDetail": "CRV no tiene principal confirmado para comparar",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 540,
+      "title": "Fabricado Acá: Tendencias Del Pop Rock Venezolano",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    }
+  ],
+  "errors": []
+}

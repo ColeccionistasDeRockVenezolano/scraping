@@ -1,0 +1,462 @@
+{
+  "targetIds": [
+    1986,
+    2090,
+    2198,
+    2201,
+    2204,
+    2520,
+    2857,
+    2911,
+    4081,
+    2332,
+    2337,
+    2378,
+    2417,
+    2460,
+    2480,
+    2553,
+    2571,
+    2580,
+    2643,
+    2659
+  ],
+  "sourceSlug": "discogs",
+  "level": "album",
+  "scope": "targets",
+  "mode": "confirm",
+  "runId": 9921,
+  "importId": 45,
+  "candidates": 20,
+  "identities": {
+    "matched": 1,
+    "ambiguous": 4,
+    "none": 15
+  },
+  "suggestions": {
+    "inserted": 2,
+    "skipped": 0
+  },
+  "agreement": {
+    "agree": 0,
+    "family_agree": 0,
+    "disagree": 0,
+    "no_reference": 1
+  },
+  "precision": null,
+  "noise": {},
+  "coverageAdded": 1,
+  "cases": {
+    "opened": 3,
+    "byKind": {
+      "external_ambiguous_identity": 3
+    }
+  },
+  "network": {
+    "requests": 60,
+    "cacheHits": 14
+  },
+  "entities": [
+    {
+      "kind": "album",
+      "entityId": 1986,
+      "title": "De la Casa",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "5901919",
+        "externalName": "Nou Vin Lakay",
+        "score": 0.6,
+        "signals": [
+          "name_exact (Nou Vin Lakay)",
+          "discography_partial (De la Casa)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.6 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 2090,
+      "title": "Paluegoestarde",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: la fuente no devolvió candidatos"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2198,
+      "title": "Skabiosis",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2201,
+      "title": "Atari Amor",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "1106349",
+        "externalName": "Cerouno",
+        "score": 0.6,
+        "signals": [
+          "name_exact (Cerouno)",
+          "discography_partial (Atari Amor)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.6 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 2204,
+      "title": "Historias del Agropop",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "2506843",
+        "externalName": "El Pacto",
+        "score": 0.75,
+        "signals": [
+          "name_exact (El Pacto)",
+          "discography_strong (Bailando con los Gallos · Hyperdance en la curva de San Pablo)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.75 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 2332,
+      "title": "Coño e' la Madre",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2337,
+      "title": "Almas Secuestradas",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: la fuente no devolvió candidatos"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2378,
+      "title": "Conejollo De Indias",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2417,
+      "title": "X-Vicio",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2460,
+      "title": "Ay Mama",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: la fuente no devolvió candidatos"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2480,
+      "title": "Lanzados Al Rodeo",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: la fuente no devolvió candidatos"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2520,
+      "title": "Los Impala y su Música",
+      "identity": {
+        "status": "matched",
+        "externalId": "master:973083",
+        "externalName": "Los Impala Y Su Música",
+        "score": 0.9,
+        "signals": [
+          "artist_confirmed (1057570)",
+          "title_exact (Los Impala Y Su Música)",
+          "year_exact (1966)"
+        ],
+        "reason": "artist_confirmed + title_exact + year_exact"
+      },
+      "values": [
+        {
+          "raw": "Psychedelic Rock",
+          "status": "proposed",
+          "genreSlug": "rock-psicodelico",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Rock",
+          "status": "proposed",
+          "genreSlug": "rock",
+          "reason": "propuesta nueva para revisión"
+        }
+      ],
+      "suggested": [
+        "rock-psicodelico",
+        "rock"
+      ],
+      "agreement": "no_reference",
+      "agreementDetail": "CRV no tiene principal confirmado para comparar",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2553,
+      "title": "Gran Via 80",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2571,
+      "title": "Los Clipers",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "1639866",
+        "externalName": "Los Clippers",
+        "score": 0.6,
+        "signals": [
+          "name_exact (Los Clippers)",
+          "discography_partial (Twist)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.6 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 2580,
+      "title": "Infinito",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2643,
+      "title": "De verdad De Verdad Quiero Que Te Mueras",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2659,
+      "title": "Fledermaus",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: la fuente no devolvió candidatos"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2857,
+      "title": "Junior Squad Vol. II",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2911,
+      "title": "Estación Transatlantic",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: la fuente no devolvió candidatos"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 4081,
+      "title": "Grandes Exitos",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    }
+  ],
+  "errors": []
+}

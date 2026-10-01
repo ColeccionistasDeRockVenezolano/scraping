@@ -1,0 +1,27 @@
+{
+  "mode": "dry-run",
+  "runId": 10405,
+  "compatible": 3,
+  "reverted": [
+    {
+      "caseId": "artist:188",
+      "source": "itunes",
+      "laya": [
+        "new-wave"
+      ],
+      "raw": [
+        "Hip-Hop/Rap"
+      ]
+    },
+    {
+      "caseId": "artist:486",
+      "source": "itunes",
+      "laya": [
+        "rock"
+      ],
+      "raw": [
+        "Metal"
+      ]
+    }
+  ]
+}

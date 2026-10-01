@@ -1,0 +1,496 @@
+{
+  "sourceSlug": "musicbrainz",
+  "level": "artist",
+  "scope": "sample",
+  "mode": "dry-run",
+  "runId": 9908,
+  "importId": 32,
+  "candidates": 20,
+  "identities": {
+    "matched": 14,
+    "ambiguous": 3,
+    "none": 3
+  },
+  "suggestions": {
+    "inserted": 0,
+    "skipped": 0
+  },
+  "agreement": {
+    "agree": 2,
+    "family_agree": 1,
+    "disagree": 1,
+    "no_reference": 10
+  },
+  "precision": 0.75,
+  "noise": {
+    "too_generic": 1
+  },
+  "coverageAdded": 0,
+  "cases": {
+    "opened": 0,
+    "byKind": {}
+  },
+  "network": {
+    "requests": 20,
+    "cacheHits": 24
+  },
+  "entities": [
+    {
+      "kind": "artist",
+      "entityId": 1,
+      "title": "Los Kings",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "la fuente no devolvió candidatos"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 14,
+      "title": "La Abuela Disco",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "la fuente no devolvió candidatos"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 25,
+      "title": "Torre de Marfil",
+      "identity": {
+        "status": "matched",
+        "externalId": "3bb37fac-4e4e-4b59-bf6c-15ab5397b5b3",
+        "externalName": null,
+        "score": 1,
+        "signals": [
+          "identidad ya resuelta"
+        ],
+        "reason": "identidad guardada"
+      },
+      "values": [
+        {
+          "raw": "heavy metal",
+          "status": "already_known",
+          "genreSlug": "heavy-metal",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "power metal",
+          "status": "proposed",
+          "genreSlug": "power-metal",
+          "reason": "propuesta nueva para revisión"
+        }
+      ],
+      "suggested": [],
+      "agreement": "agree",
+      "agreementDetail": "la fuente nombra el principal confirmado (heavy-metal)",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 36,
+      "title": "Aditus",
+      "identity": {
+        "status": "matched",
+        "externalId": "7e9312b6-7f1f-4d26-96b4-1cb1c5d10b9f",
+        "externalName": null,
+        "score": 1,
+        "signals": [
+          "identidad ya resuelta"
+        ],
+        "reason": "identidad guardada"
+      },
+      "values": [
+        {
+          "raw": "progressive rock",
+          "status": "proposed",
+          "genreSlug": "rock-progresivo",
+          "reason": "propuesta nueva para revisión"
+        }
+      ],
+      "suggested": [],
+      "agreement": "disagree",
+      "agreementDetail": "la fuente propone rock-progresivo frente al principal pop-rock",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 37,
+      "title": "Agresión",
+      "identity": {
+        "status": "matched",
+        "externalId": "1782296a-d1db-49df-be89-05b37f4944c8",
+        "externalName": "Agresión",
+        "score": 0.85,
+        "signals": [
+          "name_exact (Agresión)",
+          "discography_strong (3 títulos: Cultura 3 · Guerra Santa · Sur)"
+        ],
+        "reason": "name_exact + discography_strong"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "la fuente no aportó ningún género comparable",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 41,
+      "title": "Americania",
+      "identity": {
+        "status": "matched",
+        "externalId": "a52477bc-7b62-419d-be07-7565f8d2eaa4",
+        "externalName": null,
+        "score": 1,
+        "signals": [
+          "identidad ya resuelta"
+        ],
+        "reason": "identidad guardada"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "la fuente no aportó ningún género comparable",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 42,
+      "title": "Ananta",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "0028729e-a080-4a6c-bc12-6a66a2bcd12e",
+        "externalName": "Ananta",
+        "score": 0.6,
+        "signals": [
+          "name_exact (Ananta)",
+          "discography_partial (Songs From The Future)"
+        ],
+        "reason": "coincidencia débil (0.6 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 43,
+      "title": "Andreazulado",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "la fuente no devolvió candidatos"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 46,
+      "title": "Arkangel",
+      "identity": {
+        "status": "matched",
+        "externalId": "0e115017-99f8-4aec-882d-28b2f1be09d8",
+        "externalName": "Arkangel",
+        "score": 1,
+        "signals": [
+          "name_exact (Arkangel)",
+          "country_ve (Venezuela)",
+          "discography_strong (4 títulos: El Angel De La Muerte · Inmortal · Represión Latinoamericana · Rock Nacional)"
+        ],
+        "reason": "name_exact + country_ve + discography_strong"
+      },
+      "values": [
+        {
+          "raw": "metal",
+          "status": "too_generic",
+          "genreSlug": "metal",
+          "reason": "CRV ya tiene un género hijo confirmado de esa familia"
+        },
+        {
+          "raw": "hard rock",
+          "status": "proposed",
+          "genreSlug": "hard-rock",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "heavy metal",
+          "status": "already_known",
+          "genreSlug": "heavy-metal",
+          "reason": "CRV ya lo tiene en la ficha"
+        }
+      ],
+      "suggested": [],
+      "agreement": "family_agree",
+      "agreementDetail": "la fuente coincide en la familia del principal confirmado",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 47,
+      "title": "Atkinson",
+      "identity": {
+        "status": "matched",
+        "externalId": "e0aa106b-ee90-4bc6-97b6-fba0e11cd253",
+        "externalName": null,
+        "score": 1,
+        "signals": [
+          "identidad ya resuelta"
+        ],
+        "reason": "identidad guardada"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "la fuente no aportó ningún género comparable",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 49,
+      "title": "Bacalao Men",
+      "identity": {
+        "status": "matched",
+        "externalId": "89a2e84f-f218-41d1-9735-8a9b05612fc9",
+        "externalName": "Bacalao Men",
+        "score": 1,
+        "signals": [
+          "name_exact (Bacalao Men)",
+          "country_ve (Venezuela)",
+          "discography_strong (El Nuevo Bugalú · Sabaneando)"
+        ],
+        "reason": "name_exact + country_ve + discography_strong"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "la fuente no aportó ningún género comparable",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 52,
+      "title": "Buenaparte",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "8bf96956-74a1-4975-b317-d6746bf4bd3a",
+        "externalName": "Buenaparte",
+        "score": 0.6,
+        "signals": [
+          "name_exact (Buenaparte)",
+          "discography_partial (La Caída De Lucy)"
+        ],
+        "reason": "coincidencia débil (0.6 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 55,
+      "title": "Candy66",
+      "identity": {
+        "status": "matched",
+        "externalId": "8d45b423-2029-4a6f-8ae4-98e450dcdd80",
+        "externalName": null,
+        "score": 1,
+        "signals": [
+          "identidad ya resuelta"
+        ],
+        "reason": "identidad guardada"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "la fuente no aportó ningún género comparable",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 58,
+      "title": "Caramelos De Cianuro",
+      "identity": {
+        "status": "matched",
+        "externalId": "3ee62edc-3521-4c39-89ce-081aafa79c00",
+        "externalName": null,
+        "score": 1,
+        "signals": [
+          "identidad ya resuelta"
+        ],
+        "reason": "identidad guardada"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "la fuente no aportó ningún género comparable",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 59,
+      "title": "Cebollas Ardientes",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "cb00d0ce-06e3-4a8b-8de9-a57eedc1a8df",
+        "externalName": "Cebollas Ardientes",
+        "score": 0.6,
+        "signals": [
+          "name_exact (Cebollas Ardientes)",
+          "discography_partial (Encebollame éste)"
+        ],
+        "reason": "coincidencia débil (0.6 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 61,
+      "title": "Charliepapa",
+      "identity": {
+        "status": "matched",
+        "externalId": "2f3f633e-2860-46ad-aabc-ab1e629c5884",
+        "externalName": "Charliepapa",
+        "score": 1,
+        "signals": [
+          "name_exact (Charliepapa)",
+          "country_ve (Mérida)",
+          "discography_strong (20000 Leguas Cuadriláteras · Y O)"
+        ],
+        "reason": "name_exact + country_ve + discography_strong"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "la fuente no aportó ningún género comparable",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 66,
+      "title": "Circo Urbano",
+      "identity": {
+        "status": "matched",
+        "externalId": "02be419d-6f33-4a71-af0d-14a08430c2f6",
+        "externalName": "Circo Urbano",
+        "score": 1,
+        "signals": [
+          "name_exact (Circo Urbano)",
+          "country_ve (Venezuela)",
+          "discography_strong (Kilómetros · Música Moderna)"
+        ],
+        "reason": "name_exact + country_ve + discography_strong"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "la fuente no aportó ningún género comparable",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 67,
+      "title": "Claroscuro",
+      "identity": {
+        "status": "matched",
+        "externalId": "6abbc725-28c2-406e-909d-5cebac78a42f",
+        "externalName": "Claroscuro",
+        "score": 1,
+        "signals": [
+          "name_exact (Claroscuro)",
+          "country_ve (Venezuela)",
+          "discography_strong (El Viaje De Una Vida · Supereterodino)"
+        ],
+        "reason": "name_exact + country_ve + discography_strong"
+      },
+      "values": [
+        {
+          "raw": "rock",
+          "status": "already_known",
+          "genreSlug": "rock",
+          "reason": "CRV ya lo tiene en la ficha"
+        }
+      ],
+      "suggested": [],
+      "agreement": "agree",
+      "agreementDetail": "la fuente nombra el principal confirmado (rock)",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 70,
+      "title": "Culto Oculto",
+      "identity": {
+        "status": "matched",
+        "externalId": "0914cdb7-911d-4776-a1ac-387ddba6c706",
+        "externalName": "Culto Oculto",
+        "score": 1,
+        "signals": [
+          "name_exact (Culto Oculto)",
+          "country_ve (Caracas)",
+          "discography_strong (3 títulos: BarAlt000mix · Blanco · Flotar No Es Más Que Existir Un Movimiento Ondulatorio)"
+        ],
+        "reason": "name_exact + country_ve + discography_strong"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "la fuente no aportó ningún género comparable",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 75,
+      "title": "Del Pez",
+      "identity": {
+        "status": "matched",
+        "externalId": "98853d3a-d276-4f7c-9fdf-90f44ae0b768",
+        "externalName": null,
+        "score": 1,
+        "signals": [
+          "identidad ya resuelta"
+        ],
+        "reason": "identidad guardada"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "la fuente no aportó ningún género comparable",
+      "casesOpened": []
+    }
+  ],
+  "errors": []
+}

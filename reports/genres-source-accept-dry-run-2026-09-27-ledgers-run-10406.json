@@ -1,0 +1,150 @@
+{
+  "mode": "dry-run",
+  "runId": 10406,
+  "candidates": 18,
+  "accepted": [
+    {
+      "caseId": "artist:65",
+      "title": "Cinema Sun",
+      "source": "itunes",
+      "raw": [
+        "Rock"
+      ],
+      "primary": "rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:110",
+      "title": "Headweiler",
+      "source": "itunes",
+      "raw": [
+        "Rock"
+      ],
+      "primary": "rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:194",
+      "title": "Pedro Manuel Bolívar",
+      "source": "itunes",
+      "raw": [
+        "Electronic"
+      ],
+      "primary": "electronica",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:282",
+      "title": "Virtual Lakai",
+      "source": "itunes",
+      "raw": [
+        "Metal"
+      ],
+      "primary": "metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:283",
+      "title": "Isa TKM",
+      "source": "itunes",
+      "raw": [
+        "Pop Latino"
+      ],
+      "primary": "pop-latino",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:297",
+      "title": "Nycaloteph",
+      "source": "itunes",
+      "raw": [
+        "Death Metal/Black Metal"
+      ],
+      "primary": "death-metal",
+      "secondaries": [
+        "black-metal"
+      ]
+    },
+    {
+      "caseId": "artist:373",
+      "title": "Magnocore",
+      "source": "itunes",
+      "raw": [
+        "Rock"
+      ],
+      "primary": "rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:380",
+      "title": "Eztado kritiko",
+      "source": "itunes",
+      "raw": [
+        "Rock"
+      ],
+      "primary": "rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:383",
+      "title": "La Puerk",
+      "source": "itunes",
+      "raw": [
+        "Punk"
+      ],
+      "primary": "punk",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:386",
+      "title": "Raza Sur",
+      "source": "itunes",
+      "raw": [
+        "Rock"
+      ],
+      "primary": "rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:455",
+      "title": "Tras Las Fauces",
+      "source": "itunes",
+      "raw": [
+        "Rock"
+      ],
+      "primary": "rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:467",
+      "title": "Salomón",
+      "source": "itunes",
+      "raw": [
+        "Pop"
+      ],
+      "primary": "pop",
+      "secondaries": []
+    }
+  ],
+  "alreadyClassified": [
+    "artist:188",
+    "artist:224",
+    "artist:458",
+    "artist:459",
+    "artist:486"
+  ],
+  "unresolved": [
+    {
+      "caseId": "artist:402",
+      "source": "itunes",
+      "raw": [
+        "Urbano latino"
+      ],
+      "fragments": [
+        "Urbano latino"
+      ]
+    }
+  ],
+  "errors": [],
+  "moreSpecificExists": []
+}

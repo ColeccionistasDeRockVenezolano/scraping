@@ -1,0 +1,553 @@
+{
+  "targetIds": [
+    403,
+    417,
+    455,
+    497,
+    517,
+    538,
+    355,
+    207,
+    67,
+    203,
+    219,
+    324,
+    444,
+    447,
+    449,
+    496,
+    78,
+    124,
+    396,
+    494
+  ],
+  "sourceSlug": "discogs",
+  "level": "album",
+  "scope": "targets",
+  "mode": "confirm",
+  "runId": 9901,
+  "importId": 25,
+  "candidates": 20,
+  "identities": {
+    "matched": 3,
+    "ambiguous": 4,
+    "none": 13
+  },
+  "suggestions": {
+    "inserted": 9,
+    "skipped": 0
+  },
+  "agreement": {
+    "agree": 0,
+    "family_agree": 0,
+    "disagree": 0,
+    "no_reference": 3
+  },
+  "precision": null,
+  "noise": {
+    "unmapped": 1
+  },
+  "coverageAdded": 3,
+  "cases": {
+    "opened": 4,
+    "byKind": {
+      "external_unmapped_term": 1,
+      "external_ambiguous_identity": 3
+    }
+  },
+  "network": {
+    "requests": 41,
+    "cacheHits": 49
+  },
+  "entities": [
+    {
+      "kind": "album",
+      "entityId": 67,
+      "title": "Entre Versos Lo Adverso",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 78,
+      "title": "Del Barrio Sur",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 124,
+      "title": "ComoCumbia",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "1555952",
+        "externalName": "Babylon Motorhome",
+        "score": 0.6,
+        "signals": [
+          "name_exact (Babylon Motorhome)",
+          "discography_partial (La G.A.N Ya!)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.6 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 203,
+      "title": "Jackturbo",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 207,
+      "title": "Ruido Doméstico",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 219,
+      "title": "La Mar",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 324,
+      "title": "En Vivo Mata De Coco",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 355,
+      "title": "Molly",
+      "identity": {
+        "status": "matched",
+        "externalId": "release:14943947",
+        "externalName": "Molly",
+        "score": 0.9,
+        "signals": [
+          "artist_confirmed (5560623)",
+          "title_exact (Molly)",
+          "year_exact (2006)"
+        ],
+        "reason": "artist_confirmed + title_exact + year_exact"
+      },
+      "values": [
+        {
+          "raw": "Pop Rock",
+          "status": "proposed",
+          "genreSlug": "pop-rock",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Rock",
+          "status": "proposed",
+          "genreSlug": "rock",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Pop",
+          "status": "proposed",
+          "genreSlug": "pop",
+          "reason": "propuesta nueva para revisión"
+        }
+      ],
+      "suggested": [
+        "pop-rock",
+        "rock",
+        "pop"
+      ],
+      "agreement": "no_reference",
+      "agreementDetail": "CRV no tiene principal confirmado para comparar",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 396,
+      "title": "Show De Boleros",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 403,
+      "title": "El Proceso Del Deseo",
+      "identity": {
+        "status": "matched",
+        "externalId": "release:6688350",
+        "externalName": "El Proceso Del Deseo",
+        "score": 0.9,
+        "signals": [
+          "artist_confirmed (3009624)",
+          "title_exact (El Proceso Del Deseo)",
+          "year_exact (1990)"
+        ],
+        "reason": "artist_confirmed + title_exact + year_exact"
+      },
+      "values": [
+        {
+          "raw": "Experimental",
+          "status": "proposed",
+          "genreSlug": "experimental",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Ambient",
+          "status": "proposed",
+          "genreSlug": "ambient",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Synth-pop",
+          "status": "unmapped",
+          "genreSlug": null,
+          "reason": "sin equivalencia en la taxonomía aprobada"
+        },
+        {
+          "raw": "Electronic",
+          "status": "proposed",
+          "genreSlug": "electronica",
+          "reason": "propuesta nueva para revisión"
+        }
+      ],
+      "suggested": [
+        "experimental",
+        "ambient",
+        "electronica"
+      ],
+      "agreement": "no_reference",
+      "agreementDetail": "CRV no tiene principal confirmado para comparar",
+      "casesOpened": [
+        "external_unmapped_term"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 417,
+      "title": "Ora Pro Nobis",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 444,
+      "title": "Fantasía",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "master:772427",
+        "externalName": "Fantasia",
+        "score": 0.85,
+        "signals": [
+          "artist_confirmed (1214067)",
+          "title_normalized (Fantasia)",
+          "year_exact (1986)"
+        ],
+        "reason": "dos candidatos casi iguales (0.85 y 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 447,
+      "title": "Stop",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 449,
+      "title": "Cae Nieve En Caracas",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "380222",
+        "externalName": "Garnica",
+        "score": 0.75,
+        "signals": [
+          "name_exact (Garnica)",
+          "discography_strong (Cae Nieve En Caracas · Muchas Maravillas Remixes)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.75 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 455,
+      "title": "No Voy Sin Ti",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 494,
+      "title": "Lo Máximo De Vyas",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 496,
+      "title": "Vytas",
+      "identity": {
+        "status": "matched",
+        "externalId": "master:449758",
+        "externalName": "Vytas",
+        "score": 0.9,
+        "signals": [
+          "artist_confirmed (1528489)",
+          "title_exact (Vytas)",
+          "year_exact (1983)"
+        ],
+        "reason": "artist_confirmed + title_exact + year_exact"
+      },
+      "values": [
+        {
+          "raw": "Folk Rock",
+          "status": "proposed",
+          "genreSlug": "folk-rock",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Latin",
+          "status": "proposed",
+          "genreSlug": "fusion-latina",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Prog Rock",
+          "status": "proposed",
+          "genreSlug": "rock-progresivo",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Electronic",
+          "status": "proposed",
+          "genreSlug": "electronica",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Rock",
+          "status": "proposed",
+          "genreSlug": "rock",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Folk, World, & Country",
+          "status": "proposed",
+          "genreSlug": "folk",
+          "reason": "propuesta nueva para revisión"
+        }
+      ],
+      "suggested": [
+        "folk-rock",
+        "fusion-latina",
+        "rock-progresivo"
+      ],
+      "agreement": "no_reference",
+      "agreementDetail": "CRV no tiene principal confirmado para comparar",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 497,
+      "title": "La + De Las Partes",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "2796634",
+        "externalName": "Willie Croes",
+        "score": 0.6,
+        "signals": [
+          "name_exact (Willie Croes)",
+          "discography_partial (La + De Las Partes)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.6 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 517,
+      "title": "2 Lados B",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 538,
+      "title": "Futuro: Lado A / Lado B",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    }
+  ],
+  "errors": []
+}

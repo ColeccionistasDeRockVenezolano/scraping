@@ -1,0 +1,108 @@
+{
+  "mode": "confirm",
+  "threshold": 0.75,
+  "runId": 10230,
+  "predictions": 727,
+  "accepted": [
+    {
+      "caseId": "album:89",
+      "genre": "rock",
+      "probability": 0.9538
+    },
+    {
+      "caseId": "album:2246",
+      "genre": "rock",
+      "probability": 0.7837
+    },
+    {
+      "caseId": "album:2250",
+      "genre": "rock",
+      "probability": 0.9792
+    },
+    {
+      "caseId": "album:2282",
+      "genre": "rock",
+      "probability": 0.9124
+    },
+    {
+      "caseId": "album:2248",
+      "genre": "rock",
+      "probability": 0.7837
+    },
+    {
+      "caseId": "album:2265",
+      "genre": "rock",
+      "probability": 0.9823
+    },
+    {
+      "caseId": "artist:596",
+      "genre": "heavy-metal",
+      "probability": 0.9169
+    },
+    {
+      "caseId": "artist:618",
+      "genre": "rock",
+      "probability": 0.9654
+    },
+    {
+      "caseId": "artist:798",
+      "genre": "thrash-metal",
+      "probability": 0.8233
+    },
+    {
+      "caseId": "artist:364",
+      "genre": "hardcore-punk",
+      "probability": 0.7549
+    },
+    {
+      "caseId": "artist:486",
+      "genre": "rock",
+      "probability": 0.8086
+    },
+    {
+      "caseId": "artist:1304",
+      "genre": "hard-rock",
+      "probability": 0.9663
+    },
+    {
+      "caseId": "artist:1193",
+      "genre": "rock",
+      "probability": 0.9422
+    },
+    {
+      "caseId": "artist:1352",
+      "genre": "rock",
+      "probability": 0.9419
+    },
+    {
+      "caseId": "artist:2235",
+      "genre": "rock",
+      "probability": 0.9775
+    },
+    {
+      "caseId": "artist:1504",
+      "genre": "rock",
+      "probability": 0.9955
+    },
+    {
+      "caseId": "artist:1553",
+      "genre": "punk",
+      "probability": 0.8511
+    },
+    {
+      "caseId": "artist:2726",
+      "genre": "metal",
+      "probability": 0.972
+    },
+    {
+      "caseId": "artist:1782",
+      "genre": "ska",
+      "probability": 0.7718
+    }
+  ],
+  "belowThreshold": 287,
+  "abstained": 164,
+  "errors": 0,
+  "alreadyClassified": 257,
+  "failed": []
+}

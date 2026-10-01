@@ -1,0 +1,54 @@
+{
+  "mode": "confirm",
+  "runId": 10437,
+  "candidates": 4,
+  "accepted": [
+    {
+      "caseId": "artist:303",
+      "title": "Triciclo",
+      "source": "rock-de-vzla",
+      "raw": [
+        "Rock psicodélico"
+      ],
+      "primary": "rock-psicodelico",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:1521",
+      "title": "Chaos Descends",
+      "source": "rock-de-vzla",
+      "raw": [
+        "Metal extremo"
+      ],
+      "primary": "metal-extremo",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:1558",
+      "title": "Bluff",
+      "source": "rock-de-vzla",
+      "raw": [
+        "Pop",
+        "Indie rock"
+      ],
+      "primary": "pop",
+      "secondaries": [
+        "indie-rock"
+      ]
+    },
+    {
+      "caseId": "artist:1580",
+      "title": "Paralelo",
+      "source": "rock-de-vzla",
+      "raw": [
+        "Indie rock"
+      ],
+      "primary": "indie-rock",
+      "secondaries": []
+    }
+  ],
+  "alreadyClassified": [],
+  "unresolved": [],
+  "errors": [],
+  "moreSpecificExists": []
+}

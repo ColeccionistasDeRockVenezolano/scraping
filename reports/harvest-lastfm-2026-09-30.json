@@ -1,0 +1,43 @@
+{
+  "stats": {
+    "buscados": 56,
+    "varios_artistas": 1,
+    "homonimos_catalogo": 0,
+    "sin_pagina": 2,
+    "sin_segunda_prueba": 13,
+    "prueba_marca_vz": 34,
+    "prueba_integrante": 0,
+    "prueba_discografia": 4,
+    "pagina_agrupa_homonimos": 3,
+    "casados": 38,
+    "artistas_con_genero": 1,
+    "artistas_sin_etiquetas": 2,
+    "artistas_con_texto": 0,
+    "discos_probados": 69,
+    "discos_casados": 31,
+    "discos_con_genero": 0,
+    "discos_con_texto": 0,
+    "peticiones_nuevas": 1,
+    "peticiones_fallidas": 0
+  },
+  "dudas": [
+    {
+      "artistId": 91,
+      "name": "Elektra",
+      "url": "https://www.last.fm/music/Elektra",
+      "motivo": "la biografía agrupa varios artistas"
+    },
+    {
+      "artistId": 187,
+      "name": "PAN",
+      "url": "https://www.last.fm/music/Pan",
+      "motivo": "la biografía agrupa varios artistas"
+    },
+    {
+      "artistId": 197,
+      "name": "Pixel",
+      "url": "https://www.last.fm/music/Pixel",
+      "motivo": "la biografía agrupa varios artistas"
+    }
+  ]
+}

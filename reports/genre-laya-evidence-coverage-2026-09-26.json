@@ -1,0 +1,161 @@
+{
+  "generatedAt": "2026-09-27T01:02:37.884Z",
+  "definition": {
+    "evidence": "claim de género vigente del mismo nivel, biografía aceptada del artista o sugerencia externa de género",
+    "layaReady": "el exportador actual puede producir al menos una opción activa respaldada por evidencia y la política de fuente"
+  },
+  "total": {
+    "total": 5050,
+    "evidence": 922,
+    "noEvidence": 4128,
+    "genreClaim": 12,
+    "biography": 863,
+    "externalSuggestion": 52,
+    "layaReady": 721,
+    "evidenceWithoutOptions": 201
+  },
+  "byKind": {
+    "album": {
+      "total": 2680,
+      "evidence": 59,
+      "noEvidence": 2621,
+      "genreClaim": 11,
+      "biography": 0,
+      "externalSuggestion": 52,
+      "layaReady": 44,
+      "evidenceWithoutOptions": 15
+    },
+    "artist": {
+      "total": 2370,
+      "evidence": 863,
+      "noEvidence": 1507,
+      "genreClaim": 1,
+      "biography": 863,
+      "externalSuggestion": 0,
+      "layaReady": 677,
+      "evidenceWithoutOptions": 186
+    }
+  },
+  "discovery": {
+    "album": {
+      "sourceLink": 2406,
+      "matchedExternalIdentity": 0,
+      "radio": 356,
+      "withTracks": 2124
+    },
+    "artist": {
+      "sourceLink": 590,
+      "matchedExternalIdentity": 4,
+      "radio": 65,
+      "withTracks": 692
+    }
+  },
+  "discoverySources": {
+    "album": {
+      "rock-de-vzla": 1251,
+      "rockzuela": 362,
+      "sincopa": 1013,
+      "descargas-metal-venezolano": 4,
+      "hippito-y-sus-chatarritas": 234,
+      "coleccionistas-de-rock-venezolano": 62,
+      "rhv-blogspot": 8,
+      "el-punk-en-venezuela": 16
+    },
+    "artist": {
+      "descargas-metal-venezolano": 698,
+      "rock-de-vzla": 140,
+      "rockzuela": 114,
+      "hippito-y-sus-chatarritas": 209,
+      "sincopa": 61,
+      "coleccionistas-de-rock-venezolano": 13,
+      "rhv-blogspot": 12,
+      "el-punk-en-venezuela": 3
+    }
+  },
+  "examples": {
+    "noEvidence": [
+      {
+        "caseId": "album:649",
+        "title": "Borrachos y Bolingas Vol. 4 \"Todos Contra Todos\""
+      },
+      {
+        "caseId": "album:372",
+        "title": "Aldemaro Desde Jazz / Jazz Desde Aldemaro"
+      },
+      {
+        "caseId": "album:577",
+        "title": "Borrachos y Bolingas Vol. 2"
+      },
+      {
+        "caseId": "album:643",
+        "title": "De Vuelta A Los 60s"
+      },
+      {
+        "caseId": "album:578",
+        "title": "Borrachos y Bolingas Vol. 3"
+      },
+      {
+        "caseId": "album:373",
+        "title": "Borrachos y Bolingas Vol. 1"
+      },
+      {
+        "caseId": "album:438",
+        "title": "Redunjusta"
+      },
+      {
+        "caseId": "album:597",
+        "title": "Reserva Añeja"
+      },
+      {
+        "caseId": "album:641",
+        "title": "Ska & Punk Venezuelan Bands Vol. 1"
+      },
+      {
+        "caseId": "album:384",
+        "title": "Grabaciones Olvidadas"
+      }
+    ],
+    "evidenceWithoutOptions": [
+      {
+        "caseId": "album:108",
+        "title": "En Concierto En Este País"
+      },
+      {
+        "caseId": "album:176",
+        "title": "Música Para Los Apóstoles Madres"
+      },
+      {
+        "caseId": "album:125",
+        "title": "Bacalao Men"
+      },
+      {
+        "caseId": "album:280",
+        "title": "Boxin' Da House"
+      },
+      {
+        "caseId": "album:334",
+        "title": "Cruel (Instinto De Morder)"
+      },
+      {
+        "caseId": "artist:257",
+        "title": "Various Artists"
+      },
+      {
+        "caseId": "artist:141",
+        "title": "Laberinto"
+      },
+      {
+        "caseId": "artist:219",
+        "title": "Sentencia"
+      },
+      {
+        "caseId": "artist:189",
+        "title": "Pablo Dagnino"
+      },
+      {
+        "caseId": "artist:140",
+        "title": "LaMueka"
+      }
+    ]
+  }
+}

@@ -1,0 +1,449 @@
+{
+  "targetIds": [
+    2989,
+    3062,
+    3177,
+    3267,
+    3346,
+    3727,
+    3948,
+    4313,
+    4332,
+    4782,
+    5011,
+    5080,
+    5095,
+    1951,
+    2191,
+    2339,
+    3022,
+    3219,
+    2294,
+    2325
+  ],
+  "sourceSlug": "discogs",
+  "level": "album",
+  "scope": "targets",
+  "mode": "confirm",
+  "runId": 9918,
+  "importId": 42,
+  "candidates": 20,
+  "identities": {
+    "matched": 0,
+    "ambiguous": 4,
+    "none": 15
+  },
+  "suggestions": {
+    "inserted": 0,
+    "skipped": 0
+  },
+  "agreement": {
+    "agree": 0,
+    "family_agree": 0,
+    "disagree": 0,
+    "no_reference": 0
+  },
+  "precision": null,
+  "noise": {},
+  "coverageAdded": 0,
+  "cases": {
+    "opened": 3,
+    "byKind": {
+      "external_ambiguous_identity": 3
+    }
+  },
+  "network": {
+    "requests": 67,
+    "cacheHits": 40
+  },
+  "entities": [
+    {
+      "kind": "album",
+      "entityId": 1951,
+      "title": "En llamas de rabia",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "1343271",
+        "externalName": "Doña Maldad",
+        "score": 0.75,
+        "signals": [
+          "name_exact (Doña Maldad)",
+          "discography_strong (Discografia · En llamas de rabia)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.75 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 2191,
+      "title": "Rastafari Fi Salvation",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "4660181",
+        "externalName": "Negus Nagast",
+        "score": 0.6,
+        "signals": [
+          "name_exact (Negus Nagast)",
+          "discography_partial (Rastafari Fi Salvation)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.6 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 2294,
+      "title": "Superlirical",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2325,
+      "title": "Vaca, Gandola, Vieja",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2339,
+      "title": "En El Medio De La Nada",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2989,
+      "title": "Total Blues Fusion",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "12524833",
+        "externalName": "Soto Blues Band",
+        "score": 0.6,
+        "signals": [
+          "name_exact (Soto Blues Band)",
+          "discography_partial (Total Blues Fusion)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.6 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 3022,
+      "title": "Sus Éxitos",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 3062,
+      "title": "Sonriendole Al Tiempo",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 3177,
+      "title": "Arepa, Guarapo y Flow",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 3219,
+      "title": "La Verdad",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "release:31705922",
+        "externalName": "La Verdad",
+        "score": 0.8,
+        "signals": [
+          "artist_confirmed (4667203)",
+          "title_exact (La Verdad)",
+          "year_close (1997)"
+        ],
+        "reason": "coincidencia débil (0.8 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 3267,
+      "title": "1 Mensaje Coming Soon",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: la fuente no devolvió candidatos"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 3346,
+      "title": "Edición 20 Aniversario",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 3727,
+      "title": "Acústico",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 3948,
+      "title": "You Are In My Dreams (Jazz)",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": ""
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [],
+      "error": "HTTP 404 en https://api.discogs.com/artists/3489587"
+    },
+    {
+      "kind": "album",
+      "entityId": 4313,
+      "title": "El Alma En Un Microscopio",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 4332,
+      "title": "14 Exitos - Serie Lo Máximo",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 4782,
+      "title": "Momentos...",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 5011,
+      "title": "Eduardo Morell: La Dos Caracas De Un Programa",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 5080,
+      "title": "Los Impala y sus primeras grabaciones",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 5095,
+      "title": "Hits '67 Vol. 1",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    }
+  ],
+  "errors": [
+    {
+      "entityId": 3948,
+      "message": "HTTP 404 en https://api.discogs.com/artists/3489587"
+    }
+  ]
+}

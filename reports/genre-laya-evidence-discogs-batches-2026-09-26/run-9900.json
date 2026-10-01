@@ -1,0 +1,487 @@
+{
+  "targetIds": [
+    508,
+    619,
+    638,
+    120,
+    195,
+    381,
+    452,
+    478,
+    483,
+    490,
+    507,
+    518,
+    605,
+    92,
+    245,
+    278,
+    302,
+    332,
+    376,
+    380
+  ],
+  "sourceSlug": "discogs",
+  "level": "album",
+  "scope": "targets",
+  "mode": "confirm",
+  "runId": 9900,
+  "importId": 24,
+  "candidates": 20,
+  "identities": {
+    "matched": 2,
+    "ambiguous": 5,
+    "none": 13
+  },
+  "suggestions": {
+    "inserted": 4,
+    "skipped": 0
+  },
+  "agreement": {
+    "agree": 0,
+    "family_agree": 0,
+    "disagree": 0,
+    "no_reference": 2
+  },
+  "precision": null,
+  "noise": {},
+  "coverageAdded": 2,
+  "cases": {
+    "opened": 5,
+    "byKind": {
+      "external_ambiguous_identity": 5
+    }
+  },
+  "network": {
+    "requests": 25,
+    "cacheHits": 67
+  },
+  "entities": [
+    {
+      "kind": "album",
+      "entityId": 92,
+      "title": "SP Demos",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 120,
+      "title": "Antena Mantis",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 195,
+      "title": "Pan",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "2722614",
+        "externalName": "Grupo Pan",
+        "score": 0.6,
+        "signals": [
+          "name_exact (Grupo Pan)",
+          "discography_partial (Pan)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.6 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 245,
+      "title": "Lo Que Dejas Atrás",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "4053133",
+        "externalName": "Los Alteregos",
+        "score": 0.6,
+        "signals": [
+          "name_exact (Los Alteregos)",
+          "discography_partial (Lo Que Dejas Atrás)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.6 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 278,
+      "title": "Ritmo Revolución",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 302,
+      "title": "The Ambulance",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 332,
+      "title": "Filtra",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "4990446",
+        "externalName": "Slam Ballet",
+        "score": 0.6,
+        "signals": [
+          "name_exact (Slam Ballet)",
+          "discography_partial (Filtra)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.6 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 376,
+      "title": "Circuito NB1",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 380,
+      "title": "El Pop Venezolano",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 381,
+      "title": "En Un Sótano De La Florida",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 452,
+      "title": "Henrique Lazo",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 478,
+      "title": "RC2",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "332532",
+        "externalName": "RC2",
+        "score": 0.6,
+        "signals": [
+          "name_exact (RC2)",
+          "discography_partial (Future Awaits)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.6 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 483,
+      "title": "Bartok's Room",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "1037447",
+        "externalName": "Rigel Michelena",
+        "score": 0.6,
+        "signals": [
+          "name_exact (Rigel Michelena)",
+          "discography_partial (Bartok's Room)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.6 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 490,
+      "title": "En Vivo! Ofrenda",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 507,
+      "title": "Extranjero",
+      "identity": {
+        "status": "matched",
+        "externalId": "master:628163",
+        "externalName": "Extranjero",
+        "score": 0.9,
+        "signals": [
+          "artist_confirmed (1214067)",
+          "title_exact (Extranjero)",
+          "year_exact (1990)"
+        ],
+        "reason": "artist_confirmed + title_exact + year_exact"
+      },
+      "values": [
+        {
+          "raw": "Ballad",
+          "status": "proposed",
+          "genreSlug": "balada",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Pop",
+          "status": "proposed",
+          "genreSlug": "pop",
+          "reason": "propuesta nueva para revisión"
+        }
+      ],
+      "suggested": [
+        "balada",
+        "pop"
+      ],
+      "agreement": "no_reference",
+      "agreementDetail": "CRV no tiene principal confirmado para comparar",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 508,
+      "title": "Franco De Vita",
+      "identity": {
+        "status": "matched",
+        "externalId": "master:570014",
+        "externalName": "Franco De Vita",
+        "score": 0.9,
+        "signals": [
+          "artist_confirmed (1214067)",
+          "title_exact (Franco De Vita)",
+          "year_exact (1984)"
+        ],
+        "reason": "artist_confirmed + title_exact + year_exact"
+      },
+      "values": [
+        {
+          "raw": "Ballad",
+          "status": "proposed",
+          "genreSlug": "balada",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Pop",
+          "status": "proposed",
+          "genreSlug": "pop",
+          "reason": "propuesta nueva para revisión"
+        }
+      ],
+      "suggested": [
+        "balada",
+        "pop"
+      ],
+      "agreement": "no_reference",
+      "agreementDetail": "CRV no tiene principal confirmado para comparar",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 518,
+      "title": "Cunaguaro Soul",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 605,
+      "title": "Que Se Activen Las Alarmas",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 619,
+      "title": "Lo Blanco Del Ojo",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 638,
+      "title": "Demos",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    }
+  ],
+  "errors": []
+}

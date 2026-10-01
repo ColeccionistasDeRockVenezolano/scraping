@@ -1,0 +1,452 @@
+{
+  "targetIds": [
+    2087,
+    2093,
+    2116,
+    2143,
+    2187,
+    2190,
+    2880,
+    3355,
+    3776,
+    4905,
+    1733,
+    2307,
+    2316,
+    2335,
+    2342,
+    2356,
+    2364,
+    2372,
+    2380,
+    2427
+  ],
+  "sourceSlug": "discogs",
+  "level": "album",
+  "scope": "targets",
+  "mode": "confirm",
+  "runId": 9931,
+  "importId": 55,
+  "candidates": 20,
+  "identities": {
+    "matched": 0,
+    "ambiguous": 6,
+    "none": 14
+  },
+  "suggestions": {
+    "inserted": 0,
+    "skipped": 0
+  },
+  "agreement": {
+    "agree": 0,
+    "family_agree": 0,
+    "disagree": 0,
+    "no_reference": 0
+  },
+  "precision": null,
+  "noise": {},
+  "coverageAdded": 0,
+  "cases": {
+    "opened": 2,
+    "byKind": {
+      "external_ambiguous_identity": 2
+    }
+  },
+  "network": {
+    "requests": 60,
+    "cacheHits": 29
+  },
+  "entities": [
+    {
+      "kind": "album",
+      "entityId": 1733,
+      "title": "Colision Grindcore",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2087,
+      "title": "En el laberinto",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2093,
+      "title": "En Vivo Circus Bar",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "6028166",
+        "externalName": "Papashanty Saund System",
+        "score": 0.75,
+        "signals": [
+          "name_exact (Papashanty Saund System)",
+          "discography_strong (Ashanty Granpa · En Vivo Circus Bar)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.75 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 2116,
+      "title": "Will work for fun",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "31066",
+        "externalName": "DJ Afro",
+        "score": 0.75,
+        "signals": [
+          "name_exact (DJ Afro)",
+          "discography_strong (Free · Will work for fun)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.75 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 2143,
+      "title": "Blind World",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "381109",
+        "externalName": "Soma Raza",
+        "score": 0.6,
+        "signals": [
+          "name_exact (Soma Raza)",
+          "discography_partial (Blind World)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.6 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 2187,
+      "title": "Silfo",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2190,
+      "title": "Lágrima",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2307,
+      "title": "Por Doquier",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: la fuente no devolvió candidatos"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2316,
+      "title": "Recuerdos",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2335,
+      "title": "Ensayo Piedrero",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: la fuente no devolvió candidatos"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2342,
+      "title": "Seres Inocentes",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: la fuente no devolvió candidatos"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2356,
+      "title": "Domingos Desenchufados",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2364,
+      "title": "Ruidos Violentos Vol.1",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: la fuente no devolvió candidatos"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2372,
+      "title": "Vive Sin Miedo",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2380,
+      "title": "Electrofresco",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: la fuente no devolvió candidatos"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2427,
+      "title": "La Mató, La Violó Y La Picó",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "1989410",
+        "externalName": "Dermis Tatú",
+        "score": 0.6,
+        "signals": [
+          "name_exact (Dermis Tatú)",
+          "discography_partial (La Violó La Mató y La Picó)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.6 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 2880,
+      "title": "Revelación",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "5895823",
+        "externalName": "Jahkogba",
+        "score": 0.6,
+        "signals": [
+          "name_exact (Jahkogba)",
+          "discography_partial (Revelación)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.6 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 3355,
+      "title": "La Vela Que No Se Apaga",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 3776,
+      "title": "Alexis Rossell y su Vzla. Joven",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "2529226",
+        "externalName": "Alexis Rossell",
+        "score": 0.75,
+        "signals": [
+          "name_exact (Alexis Rossell)",
+          "discography_strong (Es Navidad · Torbellino)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.75 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 4905,
+      "title": "Mi Dama Triste",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    }
+  ],
+  "errors": []
+}

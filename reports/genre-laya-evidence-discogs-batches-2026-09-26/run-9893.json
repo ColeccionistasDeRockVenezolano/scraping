@@ -1,0 +1,516 @@
+{
+  "targetIds": [
+    653,
+    526,
+    255,
+    285,
+    473,
+    196,
+    208,
+    299,
+    305,
+    460,
+    537,
+    602,
+    613,
+    637,
+    112,
+    182,
+    277,
+    154,
+    240,
+    389
+  ],
+  "sourceSlug": "discogs",
+  "level": "album",
+  "scope": "targets",
+  "mode": "confirm",
+  "runId": 9893,
+  "importId": 17,
+  "candidates": 20,
+  "identities": {
+    "matched": 3,
+    "ambiguous": 4,
+    "none": 13
+  },
+  "suggestions": {
+    "inserted": 8,
+    "skipped": 0
+  },
+  "agreement": {
+    "agree": 0,
+    "family_agree": 0,
+    "disagree": 0,
+    "no_reference": 3
+  },
+  "precision": null,
+  "noise": {},
+  "coverageAdded": 3,
+  "cases": {
+    "opened": 3,
+    "byKind": {
+      "external_ambiguous_identity": 3
+    }
+  },
+  "network": {
+    "requests": 11,
+    "cacheHits": 79
+  },
+  "entities": [
+    {
+      "kind": "album",
+      "entityId": 112,
+      "title": "Los Peligros De Jugar Con Una Caja De Fósforos",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 154,
+      "title": "En Vivo CorpBanca",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 182,
+      "title": "E.S.H.I.",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "8224317",
+        "externalName": "El Supremo Hongo Imaginario",
+        "score": 0.6,
+        "signals": [
+          "name_exact (El Supremo Hongo Imaginario)",
+          "discography_partial (E.S.H.I.)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.6 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 196,
+      "title": "Chabocha Guapachanga",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 208,
+      "title": "King Changó",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 240,
+      "title": "Los Topinos Del Pan",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: la fuente no devolvió candidatos"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 255,
+      "title": "Días De Furia",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 277,
+      "title": "Quémate",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 285,
+      "title": "Mochuelo",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 299,
+      "title": "Ashanty Granpa",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "6028166",
+        "externalName": "Papashanty Saund System",
+        "score": 0.75,
+        "signals": [
+          "name_exact (Papashanty Saund System)",
+          "discography_strong (Ashanty Granpa · En Vivo Circus Bar)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.75 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 305,
+      "title": "Martínez",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 389,
+      "title": "Nueva Onda Nueva Electronic Aldemaro",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 460,
+      "title": "Reseteo",
+      "identity": {
+        "status": "matched",
+        "externalId": "release:11442785",
+        "externalName": "Reseteo",
+        "score": 0.9,
+        "signals": [
+          "artist_confirmed (5059355)",
+          "title_exact (Reseteo)",
+          "year_exact (2012)"
+        ],
+        "reason": "artist_confirmed + title_exact + year_exact"
+      },
+      "values": [
+        {
+          "raw": "Pop Rock",
+          "status": "proposed",
+          "genreSlug": "pop-rock",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Rock",
+          "status": "proposed",
+          "genreSlug": "rock",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Pop",
+          "status": "proposed",
+          "genreSlug": "pop",
+          "reason": "propuesta nueva para revisión"
+        }
+      ],
+      "suggested": [
+        "pop-rock",
+        "rock",
+        "pop"
+      ],
+      "agreement": "no_reference",
+      "agreementDetail": "CRV no tiene principal confirmado para comparar",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 473,
+      "title": "Biorritmos",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "1573781",
+        "externalName": "Pablo Dagnino",
+        "score": 0.75,
+        "signals": [
+          "name_exact (Pablo Dagnino)",
+          "discography_strong (Biorritmos · EÚS: El Último Sentimiento Unplugged)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.75 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 526,
+      "title": "Fauna",
+      "identity": {
+        "status": "matched",
+        "externalId": "release:13669632",
+        "externalName": "Fauna",
+        "score": 0.9,
+        "signals": [
+          "artist_confirmed (3998828)",
+          "title_exact (Fauna)",
+          "year_exact (2006)"
+        ],
+        "reason": "artist_confirmed + title_exact + year_exact"
+      },
+      "values": [
+        {
+          "raw": "Ska",
+          "status": "proposed",
+          "genreSlug": "ska",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Reggae",
+          "status": "proposed",
+          "genreSlug": "reggae",
+          "reason": "propuesta nueva para revisión"
+        }
+      ],
+      "suggested": [
+        "ska",
+        "reggae"
+      ],
+      "agreement": "no_reference",
+      "agreementDetail": "CRV no tiene principal confirmado para comparar",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 537,
+      "title": "¿Cúal Futuro?",
+      "identity": {
+        "status": "matched",
+        "externalId": "release:6114526",
+        "externalName": "¿Cuál Futuro?",
+        "score": 0.85,
+        "signals": [
+          "artist_confirmed (1789487)",
+          "title_normalized (¿Cuál Futuro?)",
+          "year_exact (1998)"
+        ],
+        "reason": "artist_confirmed + title_normalized + year_exact"
+      },
+      "values": [
+        {
+          "raw": "Punk",
+          "status": "proposed",
+          "genreSlug": "punk",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Hardcore",
+          "status": "proposed",
+          "genreSlug": "hardcore-punk",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Rock",
+          "status": "proposed",
+          "genreSlug": "rock",
+          "reason": "propuesta nueva para revisión"
+        }
+      ],
+      "suggested": [
+        "punk",
+        "hardcore-punk",
+        "rock"
+      ],
+      "agreement": "no_reference",
+      "agreementDetail": "CRV no tiene principal confirmado para comparar",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 602,
+      "title": "Aquí Fue",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 613,
+      "title": "Volumen 13",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 637,
+      "title": "Insuficiente Odio",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 653,
+      "title": "Spiteri",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "1240536",
+        "externalName": "Spiteri",
+        "score": 0.6,
+        "signals": [
+          "name_exact (Spiteri)",
+          "discography_partial (The Power Of Disco)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.6 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    }
+  ],
+  "errors": []
+}

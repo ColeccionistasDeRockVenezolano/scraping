@@ -1,0 +1,461 @@
+{
+  "targetIds": [
+    3222,
+    3225,
+    3227,
+    3233,
+    3241,
+    3265,
+    3266,
+    3289,
+    3291,
+    3338,
+    3356,
+    3368,
+    3414,
+    3512,
+    3522,
+    3526,
+    3537,
+    3548,
+    3730,
+    3846
+  ],
+  "sourceSlug": "discogs",
+  "level": "album",
+  "scope": "targets",
+  "mode": "confirm",
+  "runId": 9934,
+  "importId": 58,
+  "candidates": 20,
+  "identities": {
+    "matched": 0,
+    "ambiguous": 6,
+    "none": 13
+  },
+  "suggestions": {
+    "inserted": 0,
+    "skipped": 0
+  },
+  "agreement": {
+    "agree": 0,
+    "family_agree": 0,
+    "disagree": 0,
+    "no_reference": 0
+  },
+  "precision": null,
+  "noise": {},
+  "coverageAdded": 0,
+  "cases": {
+    "opened": 4,
+    "byKind": {
+      "external_ambiguous_identity": 4
+    }
+  },
+  "network": {
+    "requests": 30,
+    "cacheHits": 40
+  },
+  "entities": [
+    {
+      "kind": "album",
+      "entityId": 3222,
+      "title": "Crónicas del Edem",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: la fuente no devolvió candidatos"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 3225,
+      "title": "El Ensamble Sonoro",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: la fuente no devolvió candidatos"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 3227,
+      "title": "Cuenta hasta diez",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 3233,
+      "title": "Hasta que la muerte nos atrape",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 3241,
+      "title": "Hot Water Music",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: la fuente no devolvió candidatos"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 3265,
+      "title": "Grandes Léxicos",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "master:1683472",
+        "externalName": "Grandes Lexicos",
+        "score": 0.75,
+        "signals": [
+          "artist_confirmed (5763680)",
+          "title_normalized (Grandes Lexicos)",
+          "year_close (2005)"
+        ],
+        "reason": "coincidencia débil (0.75 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 3266,
+      "title": "Sin Explicación",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 3289,
+      "title": "Fronteras",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "989795",
+        "externalName": "Apatia No",
+        "score": 0.7,
+        "signals": [
+          "name_normalized (Apatia No)",
+          "discography_strong (El Ruido de Antes Contra los Opresores de Siempre · Fronteras)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.7 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 3291,
+      "title": "Split con Malgobierno",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "989795",
+        "externalName": "Apatia No",
+        "score": 0.7,
+        "signals": [
+          "name_normalized (Apatia No)",
+          "discography_strong (El Ruido de Antes Contra los Opresores de Siempre · Fronteras)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.7 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 3338,
+      "title": "Jingo Bar",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 3356,
+      "title": "En Vivo - Hawai",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 3368,
+      "title": "All Star",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "2491129",
+        "externalName": "Skatz",
+        "score": 0.6,
+        "signals": [
+          "name_exact (Skatz)",
+          "discography_partial (All Stars)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.6 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 3414,
+      "title": "Javying",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: la fuente no devolvió candidatos"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 3512,
+      "title": "Mírame",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "master:845134",
+        "externalName": "Mírame",
+        "score": 0.8,
+        "signals": [
+          "artist_confirmed (994592)",
+          "title_exact (Mírame)",
+          "year_close (1987)"
+        ],
+        "reason": "coincidencia débil (0.8 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 3522,
+      "title": "Lo Mejor de María Conchita LP",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 3526,
+      "title": "Lo Mejor de María Conchita CD",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 3537,
+      "title": "Ritmo Revolution",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "release:10060656",
+        "externalName": "Ritmo Revolution",
+        "score": 0.8,
+        "signals": [
+          "artist_confirmed (5059017)",
+          "title_exact (Ritmo Revolution)",
+          "year_close (1998)"
+        ],
+        "reason": "coincidencia débil (0.8 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 3548,
+      "title": "Melisa",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 3730,
+      "title": "Estás Bien",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": ""
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [],
+      "error": "HTTP 404 en https://api.discogs.com/artists/194"
+    },
+    {
+      "kind": "album",
+      "entityId": 3846,
+      "title": "Flor De Fuego (CD)",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    }
+  ],
+  "errors": [
+    {
+      "entityId": 3730,
+      "message": "HTTP 404 en https://api.discogs.com/artists/194"
+    }
+  ]
+}

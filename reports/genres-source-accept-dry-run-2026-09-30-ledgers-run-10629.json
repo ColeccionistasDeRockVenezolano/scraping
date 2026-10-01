@@ -1,0 +1,579 @@
+{
+  "mode": "dry-run",
+  "runId": 10629,
+  "candidates": 33,
+  "accepted": [
+    {
+      "caseId": "album:383",
+      "title": "Various Artists — Festival Nuevas Bandas 20 Años En Vivo",
+      "source": "discogs",
+      "raw": [
+        "Hip Hop",
+        "Rock",
+        "Funk / Soul",
+        "Pop"
+      ],
+      "primary": "hip-hop",
+      "secondaries": [
+        "rock",
+        "funk",
+        "soul",
+        "pop"
+      ]
+    },
+    {
+      "caseId": "album:377",
+      "title": "Various Artists — DJ Afro's Frequent Traveling Vol. 1",
+      "source": "discogs",
+      "raw": [
+        "Disco",
+        "Latin",
+        "Funk / Soul"
+      ],
+      "primary": "disco",
+      "secondaries": [
+        "fusion-latina",
+        "funk",
+        "soul"
+      ]
+    },
+    {
+      "caseId": "album:402",
+      "title": "Various Artists — Zona De Obras: Venezuela",
+      "source": "discogs",
+      "raw": [
+        "Pop Rock",
+        "Hip Hop",
+        "Pop"
+      ],
+      "primary": "pop-rock",
+      "secondaries": [
+        "hip-hop",
+        "pop"
+      ]
+    },
+    {
+      "caseId": "album:389",
+      "title": "Various Artists — Nueva Onda Nueva Electronic Aldemaro",
+      "source": "discogs",
+      "raw": [
+        "Neo Soul",
+        "IDM",
+        "Electronic",
+        "Funk / Soul"
+      ],
+      "primary": "idm",
+      "secondaries": [
+        "funk",
+        "soul"
+      ]
+    },
+    {
+      "caseId": "album:581",
+      "title": "Various Artists — Décimo Festival Nuevas Bandas",
+      "source": "discogs",
+      "raw": [
+        "Pop Rock",
+        "Punk",
+        "Hardcore Hip-Hop",
+        "Hip Hop",
+        "Rock",
+        "Latin",
+        "Funk / Soul",
+        "Pop"
+      ],
+      "primary": "pop-rock",
+      "secondaries": [
+        "punk",
+        "hip-hop",
+        "fusion-latina",
+        "funk",
+        "soul",
+        "pop"
+      ]
+    },
+    {
+      "caseId": "album:657",
+      "title": "Various Artists — Venezuela Electrónica Vol. 3 \"Pop\"",
+      "source": "discogs",
+      "raw": [
+        "Techno",
+        "Electro House",
+        "Deep House",
+        "Electro",
+        "Electronic"
+      ],
+      "primary": "techno",
+      "secondaries": [
+        "house"
+      ]
+    },
+    {
+      "caseId": "album:658",
+      "title": "Various Artists — Venezuela Electrónica Vol. 3 \"Chill\"",
+      "source": "discogs",
+      "raw": [
+        "Ambient",
+        "Deep Techno",
+        "Electro",
+        "Minimal",
+        "Techno",
+        "Electronic"
+      ],
+      "primary": "ambient",
+      "secondaries": [
+        "techno"
+      ]
+    },
+    {
+      "caseId": "album:374",
+      "title": "Various Artists — Caracas High Tech",
+      "source": "discogs",
+      "raw": [
+        "Synth-pop",
+        "Industrial",
+        "Ambient",
+        "Acid House",
+        "Minimal",
+        "Electronic"
+      ],
+      "primary": "synth-pop",
+      "secondaries": [
+        "industrial",
+        "ambient"
+      ]
+    },
+    {
+      "caseId": "album:372",
+      "title": "Various Artists — Aldemaro Desde Jazz / Jazz Desde Aldemaro",
+      "source": "discogs",
+      "raw": [
+        "Latin Jazz",
+        "Jazz",
+        "Latin"
+      ],
+      "primary": "jazz-latino",
+      "secondaries": [
+        "fusion-latina"
+      ]
+    },
+    {
+      "caseId": "album:630",
+      "title": "Various Artists — Páramo Pictures \"Alma\"",
+      "source": "discogs",
+      "raw": [
+        "Downtempo",
+        "Trip Hop",
+        "Electronic"
+      ],
+      "primary": "downtempo",
+      "secondaries": [
+        "trip-hop"
+      ]
+    },
+    {
+      "caseId": "album:376",
+      "title": "Various Artists — Circuito NB1",
+      "source": "discogs",
+      "raw": [
+        "Synth-pop",
+        "Electronic",
+        "Rock",
+        "Pop"
+      ],
+      "primary": "synth-pop",
+      "secondaries": [
+        "electronica",
+        "rock"
+      ]
+    },
+    {
+      "caseId": "album:650",
+      "title": "Various Artists — Venezuela Electrónica Vol. 1",
+      "source": "discogs",
+      "raw": [
+        "Deep House",
+        "Euro House",
+        "Progressive Trance",
+        "Progressive House",
+        "Minimal",
+        "Tribal",
+        "Electronic"
+      ],
+      "primary": "house",
+      "secondaries": []
+    },
+    {
+      "caseId": "album:651",
+      "title": "Various Artists — Venezuela Electrónica Vol. 2 \"Blanco\"",
+      "source": "discogs",
+      "raw": [
+        "Experimental",
+        "Ambient",
+        "Deep House",
+        "Drum n Bass",
+        "Minimal",
+        "Electro",
+        "Bossanova",
+        "Electronic",
+        "Hip Hop",
+        "Latin",
+        "Folk, World, & Country"
+      ],
+      "primary": "experimental",
+      "secondaries": [
+        "ambient",
+        "house",
+        "drum-and-bass",
+        "bossa-nova",
+        "hip-hop",
+        "world-ethnic"
+      ]
+    },
+    {
+      "caseId": "album:652",
+      "title": "Various Artists — Venezuela Electrónica Vol. 2 \"Verde\"",
+      "source": "discogs",
+      "raw": [
+        "Ambient",
+        "Deep House",
+        "Electro",
+        "Euro House",
+        "Minimal",
+        "Electronic"
+      ],
+      "primary": "ambient",
+      "secondaries": [
+        "house"
+      ]
+    },
+    {
+      "caseId": "album:654",
+      "title": "Various Artists — Páramo Pictures \"Sentido\"",
+      "source": "discogs",
+      "raw": [
+        "Techno",
+        "Deep House",
+        "Tech House",
+        "Electronic"
+      ],
+      "primary": "techno",
+      "secondaries": [
+        "house",
+        "tech-house"
+      ]
+    },
+    {
+      "caseId": "album:655",
+      "title": "Various Artists — Páramo Pictures \"Vida\"",
+      "source": "discogs",
+      "raw": [
+        "House",
+        "Latin",
+        "Electronic"
+      ],
+      "primary": "house",
+      "secondaries": [
+        "fusion-latina"
+      ]
+    },
+    {
+      "caseId": "album:211",
+      "title": "La Banana Voladora — La Banana Voladora",
+      "source": "discogs",
+      "raw": [
+        "Ska",
+        "Reggae",
+        "Rock",
+        "Reggae",
+        "Latin"
+      ],
+      "primary": "ska",
+      "secondaries": [
+        "reggae",
+        "rock",
+        "fusion-latina"
+      ]
+    },
+    {
+      "caseId": "album:78",
+      "title": "Los Gusanos — Del Barrio Sur",
+      "source": "discogs",
+      "raw": [
+        "Punk",
+        "Alternative Rock",
+        "Rock"
+      ],
+      "primary": "punk",
+      "secondaries": [
+        "rock-alternativo"
+      ]
+    },
+    {
+      "caseId": "album:278",
+      "title": "Mata Rica — Ritmo Revolución",
+      "source": "discogs",
+      "raw": [
+        "Ska",
+        "Reggae"
+      ],
+      "primary": "ska",
+      "secondaries": [
+        "reggae"
+      ]
+    },
+    {
+      "caseId": "album:292",
+      "title": "Ojo Fatuo — Ojo Fatuo",
+      "source": "discogs",
+      "raw": [
+        "Techno",
+        "Breaks",
+        "Acid",
+        "Ambient",
+        "Electronic"
+      ],
+      "primary": "techno",
+      "secondaries": [
+        "ambient"
+      ]
+    },
+    {
+      "caseId": "album:583",
+      "title": "Various Artists — Festival Nuevas Bandas Dosmiluno",
+      "source": "discogs",
+      "raw": [
+        "Pop Rock",
+        "Electronic",
+        "Hip Hop",
+        "Rock",
+        "Funk / Soul",
+        "Pop"
+      ],
+      "primary": "pop-rock",
+      "secondaries": [
+        "electronica",
+        "hip-hop",
+        "funk",
+        "soul",
+        "pop"
+      ]
+    },
+    {
+      "caseId": "album:584",
+      "title": "Various Artists — Festival Nuevas Bandas: La Historia",
+      "source": "discogs",
+      "raw": [
+        "Pop Rock",
+        "Synth-pop",
+        "Alternative Rock",
+        "Electronic",
+        "Rock",
+        "Latin",
+        "Pop"
+      ],
+      "primary": "pop-rock",
+      "secondaries": [
+        "synth-pop",
+        "rock-alternativo",
+        "electronica",
+        "fusion-latina"
+      ]
+    },
+    {
+      "caseId": "album:586",
+      "title": "Various Artists — Noveno Festival Nuevas Bandas",
+      "source": "discogs",
+      "raw": [
+        "Synth-pop",
+        "Pop Rock",
+        "Arena Rock",
+        "Ska",
+        "Electronic",
+        "Hip Hop",
+        "Rock",
+        "Pop"
+      ],
+      "primary": "synth-pop",
+      "secondaries": [
+        "pop-rock",
+        "ska",
+        "electronica",
+        "hip-hop"
+      ]
+    },
+    {
+      "caseId": "album:591",
+      "title": "Various Artists — Venezuela Subterránea",
+      "source": "discogs",
+      "raw": [
+        "Hardcore Hip-Hop",
+        "Gangsta",
+        "Instrumental",
+        "Horrorcore",
+        "Boom Bap",
+        "Soundtrack",
+        "Hip Hop",
+        "Latin",
+        "Pop"
+      ],
+      "primary": "gangsta-rap",
+      "secondaries": [
+        "instrumental",
+        "boom-bap",
+        "fusion-latina",
+        "pop"
+      ]
+    },
+    {
+      "caseId": "album:381",
+      "title": "Various Artists — En Un Sótano De La Florida",
+      "source": "discogs",
+      "raw": [
+        "Ballad",
+        "Pop Rock",
+        "Rock",
+        "Pop",
+        "Folk, World, & Country"
+      ],
+      "primary": "balada",
+      "secondaries": [
+        "pop-rock",
+        "world-ethnic"
+      ]
+    },
+    {
+      "caseId": "album:400",
+      "title": "Various Artists — Venezuela 70 Cosmic Visions Of Latin American",
+      "source": "discogs",
+      "raw": [
+        "Experimental",
+        "Prog Rock",
+        "Psychedelic Rock",
+        "Rock"
+      ],
+      "primary": "experimental",
+      "secondaries": [
+        "rock-progresivo",
+        "rock-psicodelico"
+      ]
+    },
+    {
+      "caseId": "album:398",
+      "title": "Various Artists — Tributo A Queen: Los Grandes Del Rock En Español",
+      "source": "discogs",
+      "raw": [
+        "Pop Rock",
+        "Rock",
+        "Latin",
+        "Pop"
+      ],
+      "primary": "pop-rock",
+      "secondaries": [
+        "fusion-latina",
+        "pop"
+      ]
+    },
+    {
+      "caseId": "album:488",
+      "title": "Various Artists — Tsee Mud... Bacro... LSD (1968-1971)",
+      "source": "discogs",
+      "raw": [
+        "Psychedelic Rock",
+        "Rock"
+      ],
+      "primary": "rock-psicodelico",
+      "secondaries": []
+    },
+    {
+      "caseId": "album:390",
+      "title": "Various Artists — Outlandos D'Americas: A Tribute To The Police",
+      "source": "discogs",
+      "raw": [
+        "Pop Rock",
+        "Rock",
+        "Latin",
+        "Pop"
+      ],
+      "primary": "pop-rock",
+      "secondaries": [
+        "fusion-latina",
+        "pop"
+      ]
+    },
+    {
+      "caseId": "album:384",
+      "title": "Various Artists — Grabaciones Olvidadas",
+      "source": "discogs",
+      "raw": [
+        "Synth-pop",
+        "Pop Rock",
+        "Instrumental",
+        "Ska",
+        "Trip Hop",
+        "Electronic",
+        "Hip Hop",
+        "Rock",
+        "Funk / Soul",
+        "Pop"
+      ],
+      "primary": "synth-pop",
+      "secondaries": [
+        "pop-rock",
+        "instrumental",
+        "ska",
+        "trip-hop",
+        "hip-hop",
+        "funk",
+        "soul"
+      ]
+    },
+    {
+      "caseId": "album:375",
+      "title": "Various Artists — Chillout Venezuela",
+      "source": "discogs",
+      "raw": [
+        "House",
+        "Trip Hop",
+        "Downtempo",
+        "Hip Hop",
+        "Electronic"
+      ],
+      "primary": "house",
+      "secondaries": [
+        "trip-hop",
+        "downtempo",
+        "hip-hop"
+      ]
+    },
+    {
+      "caseId": "album:129",
+      "title": "C4 Trío — C4 Trío",
+      "source": "discogs",
+      "raw": [
+        "Cuatro",
+        "Latin"
+      ],
+      "primary": "fusion-latina",
+      "secondaries": []
+    },
+    {
+      "caseId": "album:212",
+      "title": "La Banana Voladora — Tan Sólo Una Sonrisa",
+      "source": "discogs",
+      "raw": [
+        "Reggae",
+        "Ska",
+        "Reggae"
+      ],
+      "primary": "reggae",
+      "secondaries": [
+        "ska"
+      ]
+    }
+  ],
+  "alreadyClassified": [],
+  "unresolved": [],
+  "errors": [],
+  "moreSpecificExists": []
+}

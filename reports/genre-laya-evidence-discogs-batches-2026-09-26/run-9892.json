@@ -1,0 +1,575 @@
+{
+  "targetIds": [
+    650,
+    658,
+    611,
+    486,
+    525,
+    464,
+    576,
+    601,
+    218,
+    286,
+    439,
+    300,
+    406,
+    514,
+    4246,
+    129,
+    134,
+    562,
+    565,
+    588
+  ],
+  "sourceSlug": "discogs",
+  "level": "album",
+  "scope": "targets",
+  "mode": "confirm",
+  "runId": 9892,
+  "importId": 16,
+  "candidates": 20,
+  "identities": {
+    "matched": 4,
+    "ambiguous": 5,
+    "none": 11
+  },
+  "suggestions": {
+    "inserted": 9,
+    "skipped": 0
+  },
+  "agreement": {
+    "agree": 0,
+    "family_agree": 0,
+    "disagree": 0,
+    "no_reference": 4
+  },
+  "precision": null,
+  "noise": {
+    "unmapped": 1
+  },
+  "coverageAdded": 4,
+  "cases": {
+    "opened": 4,
+    "byKind": {
+      "external_ambiguous_identity": 3,
+      "external_unmapped_term": 1
+    }
+  },
+  "network": {
+    "requests": 37,
+    "cacheHits": 91
+  },
+  "entities": [
+    {
+      "kind": "album",
+      "entityId": 129,
+      "title": "C4 Trío",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 134,
+      "title": "Muerte",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "3339525",
+        "externalName": "Canserbero",
+        "score": 0.75,
+        "signals": [
+          "name_exact (Canserbero)",
+          "discography_strong (Guía Para La Acción · Vida)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.75 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 218,
+      "title": "Jai",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 286,
+      "title": "Un Tanto Más",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 300,
+      "title": "Dubdelic",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "2405155",
+        "externalName": "Patafunk",
+        "score": 0.6,
+        "signals": [
+          "name_exact (Patafunk)",
+          "discography_partial (Dubdelic)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.6 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 406,
+      "title": "Buena Vibra Vol. III",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "1849869",
+        "externalName": "Wahala",
+        "score": 0.75,
+        "signals": [
+          "name_exact (Wahala)",
+          "discography_strong (Buena Vibra Vol. III · Homegrown)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.75 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 439,
+      "title": "De Vuelta Al Ska",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "2291712",
+        "externalName": "Don Khumalo",
+        "score": 0.6,
+        "signals": [
+          "name_exact (Don Khumalo)",
+          "discography_partial (De Vuelta Al Ska)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.6 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 464,
+      "title": "Manual De Buenas Costumbres",
+      "identity": {
+        "status": "matched",
+        "externalId": "release:16813827",
+        "externalName": "Manual De Buenas Costumbres",
+        "score": 0.9,
+        "signals": [
+          "artist_confirmed (2095566)",
+          "title_exact (Manual De Buenas Costumbres)",
+          "year_exact (2008)"
+        ],
+        "reason": "artist_confirmed + title_exact + year_exact"
+      },
+      "values": [
+        {
+          "raw": "Indie Rock",
+          "status": "proposed",
+          "genreSlug": "indie-rock",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Jangle Pop",
+          "status": "unmapped",
+          "genreSlug": null,
+          "reason": "sin equivalencia en la taxonomía aprobada"
+        },
+        {
+          "raw": "Rock",
+          "status": "proposed",
+          "genreSlug": "rock",
+          "reason": "propuesta nueva para revisión"
+        }
+      ],
+      "suggested": [
+        "indie-rock",
+        "rock"
+      ],
+      "agreement": "no_reference",
+      "agreementDetail": "CRV no tiene principal confirmado para comparar",
+      "casesOpened": [
+        "external_unmapped_term"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 486,
+      "title": "Tarde O Temprano",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 514,
+      "title": "Inmortal",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 525,
+      "title": "El Primero Siempre Es Rápido",
+      "identity": {
+        "status": "matched",
+        "externalId": "release:10481321",
+        "externalName": "El Primero Siempre Es Rapido",
+        "score": 0.85,
+        "signals": [
+          "artist_confirmed (3998828)",
+          "title_normalized (El Primero Siempre Es Rapido)",
+          "year_exact (2001)"
+        ],
+        "reason": "artist_confirmed + title_normalized + year_exact"
+      },
+      "values": [
+        {
+          "raw": "Ska",
+          "status": "proposed",
+          "genreSlug": "ska",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Pop Rock",
+          "status": "proposed",
+          "genreSlug": "pop-rock",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Reggae-Pop",
+          "status": "proposed",
+          "genreSlug": "reggae",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Electronic",
+          "status": "proposed",
+          "genreSlug": "electronica",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Rock",
+          "status": "proposed",
+          "genreSlug": "rock",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Funk / Soul",
+          "status": "proposed",
+          "genreSlug": "funk",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Funk / Soul",
+          "status": "proposed",
+          "genreSlug": "soul",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Pop",
+          "status": "proposed",
+          "genreSlug": "pop",
+          "reason": "propuesta nueva para revisión"
+        }
+      ],
+      "suggested": [
+        "ska",
+        "pop-rock",
+        "reggae"
+      ],
+      "agreement": "no_reference",
+      "agreementDetail": "CRV no tiene principal confirmado para comparar",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 562,
+      "title": "Rock And Mau 2",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 565,
+      "title": "EÚS: El Último Sentimiento Unplugged",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "1573781",
+        "externalName": "Pablo Dagnino",
+        "score": 0.75,
+        "signals": [
+          "name_exact (Pablo Dagnino)",
+          "discography_strong (Biorritmos · EÚS: El Último Sentimiento Unplugged)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.75 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 576,
+      "title": "Hotel Miramar",
+      "identity": {
+        "status": "matched",
+        "externalId": "release:9817105",
+        "externalName": "Hotel Miramar",
+        "score": 0.9,
+        "signals": [
+          "artist_confirmed (5560623)",
+          "title_exact (Hotel Miramar)",
+          "year_exact (2012)"
+        ],
+        "reason": "artist_confirmed + title_exact + year_exact"
+      },
+      "values": [
+        {
+          "raw": "Pop Rock",
+          "status": "proposed",
+          "genreSlug": "pop-rock",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Rock",
+          "status": "proposed",
+          "genreSlug": "rock",
+          "reason": "propuesta nueva para revisión"
+        }
+      ],
+      "suggested": [
+        "pop-rock",
+        "rock"
+      ],
+      "agreement": "no_reference",
+      "agreementDetail": "CRV no tiene principal confirmado para comparar",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 588,
+      "title": "Tributo Lo-Fi A Sentimiento Muerto",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 601,
+      "title": "AAAH! Estos Son Los Paranoias!",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 611,
+      "title": "D'Art",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 650,
+      "title": "Venezuela Electrónica Vol. 1",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 658,
+      "title": "Venezuela Electrónica Vol. 3 \"Chill\"",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 4246,
+      "title": "Ilan En Vivo",
+      "identity": {
+        "status": "matched",
+        "externalId": "master:485578",
+        "externalName": "Ilan En Vivo",
+        "score": 0.9,
+        "signals": [
+          "artist_confirmed (616922)",
+          "title_exact (Ilan En Vivo)",
+          "year_exact (1988)"
+        ],
+        "reason": "artist_confirmed + title_exact + year_exact"
+      },
+      "values": [
+        {
+          "raw": "Ballad",
+          "status": "proposed",
+          "genreSlug": "balada",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Pop",
+          "status": "proposed",
+          "genreSlug": "pop",
+          "reason": "propuesta nueva para revisión"
+        }
+      ],
+      "suggested": [
+        "balada",
+        "pop"
+      ],
+      "agreement": "no_reference",
+      "agreementDetail": "CRV no tiene principal confirmado para comparar",
+      "casesOpened": []
+    }
+  ],
+  "errors": []
+}

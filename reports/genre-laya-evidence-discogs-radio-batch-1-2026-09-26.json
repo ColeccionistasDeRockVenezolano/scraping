@@ -1,0 +1,559 @@
+{
+  "targetIds": [
+    643,
+    438,
+    597,
+    474,
+    522,
+    569,
+    607,
+    475,
+    645,
+    211,
+    292,
+    135,
+    237,
+    318,
+    545,
+    198,
+    505,
+    527,
+    595,
+    212
+  ],
+  "sourceSlug": "discogs",
+  "level": "album",
+  "scope": "targets",
+  "mode": "confirm",
+  "runId": 9889,
+  "importId": 13,
+  "candidates": 20,
+  "identities": {
+    "matched": 4,
+    "ambiguous": 5,
+    "none": 10
+  },
+  "suggestions": {
+    "inserted": 9,
+    "skipped": 0
+  },
+  "agreement": {
+    "agree": 0,
+    "family_agree": 0,
+    "disagree": 0,
+    "no_reference": 4
+  },
+  "precision": null,
+  "noise": {},
+  "coverageAdded": 4,
+  "cases": {
+    "opened": 4,
+    "byKind": {
+      "external_ambiguous_identity": 4
+    }
+  },
+  "network": {
+    "requests": 41,
+    "cacheHits": 55
+  },
+  "entities": [
+    {
+      "kind": "album",
+      "entityId": 135,
+      "title": "Vida",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "3339525",
+        "externalName": "Canserbero",
+        "score": 0.75,
+        "signals": [
+          "name_exact (Canserbero)",
+          "discography_strong (Guía Para La Acción · Vida)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.75 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 198,
+      "title": "Superllanero",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 211,
+      "title": "La Banana Voladora",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 212,
+      "title": "Tan Sólo Una Sonrisa",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 237,
+      "title": "Los Grandes Éxitos",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 292,
+      "title": "Ojo Fatuo",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 318,
+      "title": "1983-1993",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "987023",
+        "externalName": "Seguridad Nacional",
+        "score": 0.6,
+        "signals": [
+          "name_exact (Seguridad Nacional)",
+          "discography_partial (Documento De Actitud)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.6 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 438,
+      "title": "Redunjusta",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 474,
+      "title": "EÚS31: El Último Sentimiento Eléctrico",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "1573781",
+        "externalName": "Pablo Dagnino",
+        "score": 0.75,
+        "signals": [
+          "name_exact (Pablo Dagnino)",
+          "discography_strong (Biorritmos · EÚS: El Último Sentimiento Unplugged)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.75 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 475,
+      "title": "Aurora",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 505,
+      "title": "Guía Para La Acción",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "3339525",
+        "externalName": "Canserbero",
+        "score": 0.75,
+        "signals": [
+          "name_exact (Canserbero)",
+          "discography_strong (Guía Para La Acción · Vida)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.75 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 522,
+      "title": "Una Dimension De Éxitos",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": ""
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [],
+      "error": "HTTP 404 en https://api.discogs.com/artists/14257531"
+    },
+    {
+      "kind": "album",
+      "entityId": 527,
+      "title": "Puño y Letra",
+      "identity": {
+        "status": "matched",
+        "externalId": "release:15507261",
+        "externalName": "Puño Y Letra",
+        "score": 0.9,
+        "signals": [
+          "artist_confirmed (3998828)",
+          "title_exact (Puño Y Letra)",
+          "year_exact (2010)"
+        ],
+        "reason": "artist_confirmed + title_exact + year_exact"
+      },
+      "values": [
+        {
+          "raw": "Ska",
+          "status": "proposed",
+          "genreSlug": "ska",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Reggae-Pop",
+          "status": "proposed",
+          "genreSlug": "reggae",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Pop Rock",
+          "status": "proposed",
+          "genreSlug": "pop-rock",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Electronic",
+          "status": "proposed",
+          "genreSlug": "electronica",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Rock",
+          "status": "proposed",
+          "genreSlug": "rock",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Pop",
+          "status": "proposed",
+          "genreSlug": "pop",
+          "reason": "propuesta nueva para revisión"
+        }
+      ],
+      "suggested": [
+        "ska",
+        "reggae",
+        "pop-rock"
+      ],
+      "agreement": "no_reference",
+      "agreementDetail": "CRV no tiene principal confirmado para comparar",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 545,
+      "title": "Inéditas",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 569,
+      "title": "En Vivo Teatro Rafael Guinand",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 595,
+      "title": "Hasta Que Los Bares Nos Separen",
+      "identity": {
+        "status": "matched",
+        "externalId": "master:1412943",
+        "externalName": "Hasta Que Los Bares Nos Separen",
+        "score": 0.9,
+        "signals": [
+          "artist_confirmed (1989413)",
+          "title_exact (Hasta Que Los Bares Nos Separen)",
+          "year_exact (2002)"
+        ],
+        "reason": "artist_confirmed + title_exact + year_exact"
+      },
+      "values": [
+        {
+          "raw": "Rockabilly",
+          "status": "proposed",
+          "genreSlug": "rockabilly",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Rock",
+          "status": "proposed",
+          "genreSlug": "rock",
+          "reason": "propuesta nueva para revisión"
+        }
+      ],
+      "suggested": [
+        "rockabilly",
+        "rock"
+      ],
+      "agreement": "no_reference",
+      "agreementDetail": "CRV no tiene principal confirmado para comparar",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 597,
+      "title": "Reserva Añeja",
+      "identity": {
+        "status": "matched",
+        "externalId": "release:12434498",
+        "externalName": "Reserva Añeja",
+        "score": 0.9,
+        "signals": [
+          "artist_confirmed (1989413)",
+          "title_exact (Reserva Añeja)",
+          "year_exact (2009)"
+        ],
+        "reason": "artist_confirmed + title_exact + year_exact"
+      },
+      "values": [
+        {
+          "raw": "Rockabilly",
+          "status": "proposed",
+          "genreSlug": "rockabilly",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Rock",
+          "status": "proposed",
+          "genreSlug": "rock",
+          "reason": "propuesta nueva para revisión"
+        }
+      ],
+      "suggested": [
+        "rockabilly",
+        "rock"
+      ],
+      "agreement": "no_reference",
+      "agreementDetail": "CRV no tiene principal confirmado para comparar",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 607,
+      "title": "En Vivo 2013",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 643,
+      "title": "De Vuelta A Los 60s",
+      "identity": {
+        "status": "matched",
+        "externalId": "release:8027700",
+        "externalName": "De Vuelta a los 60's",
+        "score": 1,
+        "signals": [
+          "artist_confirmed (4843669)",
+          "title_exact (De Vuelta a los 60's)",
+          "year_exact (1999)",
+          "label (Spiteri Records)"
+        ],
+        "reason": "artist_confirmed + title_exact + year_exact + label"
+      },
+      "values": [
+        {
+          "raw": "Rock & Roll",
+          "status": "proposed",
+          "genreSlug": "rock-and-roll",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Rock",
+          "status": "proposed",
+          "genreSlug": "rock",
+          "reason": "propuesta nueva para revisión"
+        }
+      ],
+      "suggested": [
+        "rock-and-roll",
+        "rock"
+      ],
+      "agreement": "no_reference",
+      "agreementDetail": "CRV no tiene principal confirmado para comparar",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 645,
+      "title": "Música en Vara",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "7051633",
+        "externalName": "Los Chevynovas",
+        "score": 0.75,
+        "signals": [
+          "name_exact (Los Chevynovas)",
+          "discography_strong ('Tamos En Yopo · Música en Vara)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.75 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    }
+  ],
+  "errors": [
+    {
+      "entityId": 522,
+      "message": "HTTP 404 en https://api.discogs.com/artists/14257531"
+    }
+  ]
+}

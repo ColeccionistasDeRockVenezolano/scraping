@@ -1,0 +1,205 @@
+{
+  "mode": "dry-run",
+  "runId": 10402,
+  "cases": 78,
+  "changed": [
+    {
+      "caseId": "artist:136",
+      "before": "industrial",
+      "after": "post-rock"
+    },
+    {
+      "caseId": "artist:1163",
+      "before": "hardcore-punk",
+      "after": "thrash-metal"
+    },
+    {
+      "caseId": "artist:44",
+      "before": "electronica",
+      "after": "indie-rock"
+    },
+    {
+      "caseId": "artist:582",
+      "before": "heavy-metal",
+      "after": "metal-progresivo"
+    },
+    {
+      "caseId": "artist:1350",
+      "before": "pop",
+      "after": "pop-rock"
+    },
+    {
+      "caseId": "artist:71",
+      "before": "art-rock",
+      "after": "indie-rock"
+    },
+    {
+      "caseId": "artist:744",
+      "before": "hardcore-punk",
+      "after": "hard-rock"
+    },
+    {
+      "caseId": "artist:107",
+      "before": "fusion-latina",
+      "after": "rock-psicodelico"
+    },
+    {
+      "caseId": "artist:226",
+      "before": "electronica",
+      "after": "experimental"
+    },
+    {
+      "caseId": "artist:2046",
+      "before": "electronica",
+      "after": "hip-hop"
+    },
+    {
+      "caseId": "artist:1877",
+      "before": "pop-rock",
+      "after": "jazz-latino"
+    },
+    {
+      "caseId": "artist:142",
+      "before": "rock-psicodelico",
+      "after": "garage-rock"
+    },
+    {
+      "caseId": "artist:245",
+      "before": "rock-psicodelico",
+      "after": "garage-rock"
+    },
+    {
+      "caseId": "artist:1889",
+      "before": "metal-alternativo",
+      "after": "pop-rock"
+    },
+    {
+      "caseId": "artist:521",
+      "before": "fusion-latina",
+      "after": "indie-rock"
+    },
+    {
+      "caseId": "artist:1730",
+      "before": "fusion-latina",
+      "after": "rock-progresivo"
+    },
+    {
+      "caseId": "artist:2604",
+      "before": "electronica",
+      "after": "funk"
+    },
+    {
+      "caseId": "artist:2785",
+      "before": "metal-alternativo",
+      "after": "nu-metal"
+    },
+    {
+      "caseId": "artist:2727",
+      "before": "electronica",
+      "after": "pop-rock"
+    },
+    {
+      "caseId": "artist:2677",
+      "before": "pop-rock",
+      "after": "jazz-latino"
+    },
+    {
+      "caseId": "artist:2568",
+      "before": "pop",
+      "after": "indie-rock"
+    },
+    {
+      "caseId": "artist:2013",
+      "before": "salsa",
+      "after": "musica-tropical"
+    },
+    {
+      "caseId": "artist:263",
+      "before": "jazz-fusion",
+      "after": "salsa"
+    },
+    {
+      "caseId": "artist:1171",
+      "before": "jazz-fusion",
+      "after": "ska"
+    },
+    {
+      "caseId": "artist:101",
+      "before": "electronica",
+      "after": "pop-rock"
+    },
+    {
+      "caseId": "artist:482",
+      "before": "metal-progresivo",
+      "after": "rock-progresivo"
+    },
+    {
+      "caseId": "artist:666",
+      "before": "metal",
+      "after": "rock"
+    },
+    {
+      "caseId": "artist:969",
+      "before": "noise",
+      "after": "guarorock"
+    },
+    {
+      "caseId": "artist:2036",
+      "before": "reggae",
+      "after": "fusion-latina"
+    },
+    {
+      "caseId": "artist:657",
+      "before": "heavy-metal",
+      "after": "death-metal"
+    },
+    {
+      "caseId": "album:85",
+      "before": "indie-rock",
+      "after": "rock-alternativo"
+    },
+    {
+      "caseId": "album:509",
+      "before": "indie-rock",
+      "after": "rock-alternativo"
+    },
+    {
+      "caseId": "album:2351",
+      "before": "indie-rock",
+      "after": "rock-alternativo"
+    },
+    {
+      "caseId": "album:2012",
+      "before": "reggae",
+      "after": "guarorock"
+    },
+    {
+      "caseId": "album:1915",
+      "before": "reggae",
+      "after": "fusion-latina"
+    },
+    {
+      "caseId": "album:2394",
+      "before": "electronica",
+      "after": "experimental"
+    },
+    {
+      "caseId": "album:2456",
+      "before": "metal",
+      "after": "rock"
+    },
+    {
+      "caseId": "album:2504",
+      "before": "hardcore-punk",
+      "after": "metal"
+    },
+    {
+      "caseId": "album:284",
+      "before": "rock-alternativo",
+      "after": "indie-rock"
+    }
+  ],
+  "abstained": 5,
+  "unchanged": 34,
+  "errors": []
+}

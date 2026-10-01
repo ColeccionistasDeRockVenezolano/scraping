@@ -1,0 +1,36 @@
+{
+  "examined": 976,
+  "recovered": 4,
+  "rejected": [
+    {
+      "caseId": "artist:2336",
+      "qid": "Q122338791",
+      "reason": "not_musical_artist_type"
+    },
+    {
+      "caseId": "artist:2017",
+      "qid": "Q66981413",
+      "reason": "no_second_identity_signal"
+    },
+    {
+      "caseId": "artist:2733",
+      "qid": "Q2090932",
+      "reason": "no_second_identity_signal"
+    },
+    {
+      "caseId": "artist:2231",
+      "qid": "Q105879389",
+      "reason": "no_second_identity_signal"
+    },
+    {
+      "caseId": "artist:149",
+      "qid": "Q113700906",
+      "reason": "no_second_identity_signal"
+    },
+    {
+      "caseId": "artist:1681",
+      "qid": "Q50824960",
+      "reason": "no_second_identity_signal"
+    }
+  ]
+}

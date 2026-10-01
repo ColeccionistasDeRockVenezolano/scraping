@@ -1,0 +1,20 @@
+{
+  "mode": "confirm",
+  "runId": 10381,
+  "reason": "Laya eligió power metal por «power trió» (formato de banda, no género); el detector de menciones ya no cuenta «power» suelto",
+  "reverted": [
+    {
+      "caseId": "album:553",
+      "genres": [
+        "power-metal"
+      ]
+    },
+    {
+      "caseId": "album:203",
+      "genres": [
+        "power-metal"
+      ]
+    }
+  ],
+  "untouched": []
+}

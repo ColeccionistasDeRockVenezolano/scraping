@@ -1,0 +1,18 @@
+{
+  "mode": "dry-run",
+  "threshold": 0.75,
+  "runId": 10722,
+  "predictions": 4,
+  "accepted": [
+    {
+      "caseId": "album:380",
+      "genre": "pop",
+      "probability": 0.8821
+    }
+  ],
+  "belowThreshold": 3,
+  "abstained": 0,
+  "errors": 0,
+  "alreadyClassified": 0,
+  "failed": []
+}

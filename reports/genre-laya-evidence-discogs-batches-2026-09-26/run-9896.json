@@ -1,0 +1,486 @@
+{
+  "targetIds": [
+    133,
+    288,
+    316,
+    328,
+    382,
+    416,
+    501,
+    530,
+    571,
+    572,
+    583,
+    609,
+    646,
+    191,
+    241,
+    356,
+    596,
+    183,
+    202,
+    256
+  ],
+  "sourceSlug": "discogs",
+  "level": "album",
+  "scope": "targets",
+  "mode": "confirm",
+  "runId": 9896,
+  "importId": 20,
+  "candidates": 20,
+  "identities": {
+    "matched": 2,
+    "ambiguous": 6,
+    "none": 12
+  },
+  "suggestions": {
+    "inserted": 3,
+    "skipped": 0
+  },
+  "agreement": {
+    "agree": 0,
+    "family_agree": 0,
+    "disagree": 0,
+    "no_reference": 2
+  },
+  "precision": null,
+  "noise": {},
+  "coverageAdded": 2,
+  "cases": {
+    "opened": 4,
+    "byKind": {
+      "external_ambiguous_identity": 4
+    }
+  },
+  "network": {
+    "requests": 14,
+    "cacheHits": 78
+  },
+  "entities": [
+    {
+      "kind": "album",
+      "entityId": 133,
+      "title": "Inéditas",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 183,
+      "title": "Entre Dos Mundos",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "2684761",
+        "externalName": "Entrenos",
+        "score": 0.6,
+        "signals": [
+          "name_exact (Entrenos)",
+          "discography_partial (Entre Dos Mundos)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.6 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 191,
+      "title": "Mundo",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 202,
+      "title": "Un Día Más",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "3160000",
+        "externalName": "Iguanas De Trapo",
+        "score": 0.72,
+        "signals": [
+          "name_exact (Iguanas De Trapo)",
+          "discography_partial (Lunes)",
+          "members (Carlos Marrero)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.72 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 241,
+      "title": "Escuela Psicoanalítica",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 256,
+      "title": "El Ritual Del Vacilón",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 288,
+      "title": "Rock And Mau",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 316,
+      "title": "No Estás Solo",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "4529500",
+        "externalName": "Rodrigo Solo",
+        "score": 0.6,
+        "signals": [
+          "name_exact (Rodrigo Solo)",
+          "discography_partial (No Estás Solo)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.6 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 328,
+      "title": "Vol. 1: Música Popular y Folklórica Venezolana",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "2069610",
+        "externalName": "Serenata Guayanesa",
+        "score": 0.6,
+        "signals": [
+          "name_exact (Serenata Guayanesa)",
+          "discography_partial (Vol. 3: Música Popular y Folklórica Venezolana)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.6 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 356,
+      "title": "Odissey",
+      "identity": {
+        "status": "matched",
+        "externalId": "release:15259090",
+        "externalName": "Odissey",
+        "score": 0.9,
+        "signals": [
+          "artist_confirmed (5560623)",
+          "title_exact (Odissey)",
+          "year_exact (1999)"
+        ],
+        "reason": "artist_confirmed + title_exact + year_exact"
+      },
+      "values": [
+        {
+          "raw": "Rock",
+          "status": "proposed",
+          "genreSlug": "rock",
+          "reason": "propuesta nueva para revisión"
+        }
+      ],
+      "suggested": [
+        "rock"
+      ],
+      "agreement": "no_reference",
+      "agreementDetail": "CRV no tiene principal confirmado para comparar",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 382,
+      "title": "Encuentro En El Ruedo",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 416,
+      "title": "Showcase: Bésame y Suicídate",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 501,
+      "title": "Extraño Mundo",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 530,
+      "title": "Desenchufado",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 571,
+      "title": "Vol. 2: Música Popular y Folklórica Venezolana",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "2069610",
+        "externalName": "Serenata Guayanesa",
+        "score": 0.6,
+        "signals": [
+          "name_exact (Serenata Guayanesa)",
+          "discography_partial (Vol. 3: Música Popular y Folklórica Venezolana)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.6 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 572,
+      "title": "Vol. 3: Música Popular y Folklórica Venezolana",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "2069610",
+        "externalName": "Serenata Guayanesa",
+        "score": 0.6,
+        "signals": [
+          "name_exact (Serenata Guayanesa)",
+          "discography_partial (Vol. 3: Música Popular y Folklórica Venezolana)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.6 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 583,
+      "title": "Festival Nuevas Bandas Dosmiluno",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 596,
+      "title": "Masacre En El Pin 5",
+      "identity": {
+        "status": "matched",
+        "externalId": "master:1412941",
+        "externalName": "Masacre En El Pin 5",
+        "score": 0.9,
+        "signals": [
+          "artist_confirmed (1989413)",
+          "title_exact (Masacre En El Pin 5)",
+          "year_exact (2004)"
+        ],
+        "reason": "artist_confirmed + title_exact + year_exact"
+      },
+      "values": [
+        {
+          "raw": "Rockabilly",
+          "status": "proposed",
+          "genreSlug": "rockabilly",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Rock",
+          "status": "proposed",
+          "genreSlug": "rock",
+          "reason": "propuesta nueva para revisión"
+        }
+      ],
+      "suggested": [
+        "rockabilly",
+        "rock"
+      ],
+      "agreement": "no_reference",
+      "agreementDetail": "CRV no tiene principal confirmado para comparar",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 609,
+      "title": "This Is How We Pray",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 646,
+      "title": "Suka Jazz En Directo",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    }
+  ],
+  "errors": []
+}

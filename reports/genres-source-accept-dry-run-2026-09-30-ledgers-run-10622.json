@@ -1,0 +1,23 @@
+{
+  "mode": "dry-run",
+  "runId": 10622,
+  "candidates": 2,
+  "accepted": [],
+  "alreadyClassified": [],
+  "unresolved": [],
+  "errors": [],
+  "moreSpecificExists": [
+    {
+      "caseId": "album:449",
+      "raw": [
+        "Electro"
+      ]
+    },
+    {
+      "caseId": "album:505",
+      "raw": [
+        "Rap/Hip Hop"
+      ]
+    }
+  ]
+}

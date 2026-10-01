@@ -1,0 +1,1063 @@
+{
+  "mode": "confirm",
+  "threshold": 0,
+  "runId": 10412,
+  "predictions": 307,
+  "accepted": [
+    {
+      "caseId": "album:6",
+      "genre": "rock",
+      "probability": 0.6692
+    },
+    {
+      "caseId": "album:97",
+      "genre": "ska",
+      "probability": 0.2722
+    },
+    {
+      "caseId": "album:158",
+      "genre": "soul",
+      "probability": 0.5226
+    },
+    {
+      "caseId": "album:252",
+      "genre": "pop-rock",
+      "probability": 0.5603
+    },
+    {
+      "caseId": "album:260",
+      "genre": "rock-and-roll",
+      "probability": 0.5333
+    },
+    {
+      "caseId": "album:406",
+      "genre": "ska",
+      "probability": 0.408
+    },
+    {
+      "caseId": "album:3025",
+      "genre": "rock",
+      "probability": 0.5
+    },
+    {
+      "caseId": "album:518",
+      "genre": "experimental",
+      "probability": 0.3354
+    },
+    {
+      "caseId": "album:3362",
+      "genre": "post-punk",
+      "probability": 0.5725
+    },
+    {
+      "caseId": "album:2688",
+      "genre": "rock",
+      "probability": 0.5906
+    },
+    {
+      "caseId": "album:2346",
+      "genre": "death-metal-tecnico",
+      "probability": 0.4697
+    },
+    {
+      "caseId": "album:2094",
+      "genre": "ska",
+      "probability": 0.7487
+    },
+    {
+      "caseId": "album:2313",
+      "genre": "pop-rock",
+      "probability": 0.5936
+    },
+    {
+      "caseId": "album:2226",
+      "genre": "rock",
+      "probability": 0.7202
+    },
+    {
+      "caseId": "album:2316",
+      "genre": "rock",
+      "probability": 0.6977
+    },
+    {
+      "caseId": "album:1919",
+      "genre": "black-metal",
+      "probability": 0.3506
+    },
+    {
+      "caseId": "album:1922",
+      "genre": "rock-alternativo",
+      "probability": 0.4147
+    },
+    {
+      "caseId": "album:2294",
+      "genre": "funk",
+      "probability": 0.6622
+    },
+    {
+      "caseId": "album:2315",
+      "genre": "rock",
+      "probability": 0.6518
+    },
+    {
+      "caseId": "album:2334",
+      "genre": "ska",
+      "probability": 0.6265
+    },
+    {
+      "caseId": "album:2338",
+      "genre": "rock",
+      "probability": 0.4956
+    },
+    {
+      "caseId": "album:1934",
+      "genre": "rock-alternativo",
+      "probability": 0.6706
+    },
+    {
+      "caseId": "album:2228",
+      "genre": "new-wave",
+      "probability": 0.5775
+    },
+    {
+      "caseId": "album:2230",
+      "genre": "new-wave",
+      "probability": 0.7892
+    },
+    {
+      "caseId": "album:2229",
+      "genre": "new-wave",
+      "probability": 0.7892
+    },
+    {
+      "caseId": "album:1969",
+      "genre": "jazz",
+      "probability": 0.4071
+    },
+    {
+      "caseId": "album:1968",
+      "genre": "punk-rock",
+      "probability": 0.6298
+    },
+    {
+      "caseId": "album:2047",
+      "genre": "rock",
+      "probability": 0.5419
+    },
+    {
+      "caseId": "album:2080",
+      "genre": "crust-punk",
+      "probability": 0.9501
+    },
+    {
+      "caseId": "album:2296",
+      "genre": "pop",
+      "probability": 0.6514
+    },
+    {
+      "caseId": "album:2074",
+      "genre": "metal",
+      "probability": 0.6826
+    },
+    {
+      "caseId": "album:2060",
+      "genre": "ska",
+      "probability": 0.514
+    },
+    {
+      "caseId": "album:2029",
+      "genre": "rock-and-roll",
+      "probability": 0.6775
+    },
+    {
+      "caseId": "album:2066",
+      "genre": "rock",
+      "probability": 0.4535
+    },
+    {
+      "caseId": "album:2712",
+      "genre": "rock",
+      "probability": 0.7055
+    },
+    {
+      "caseId": "album:3205",
+      "genre": "rock",
+      "probability": 0.3846
+    },
+    {
+      "caseId": "album:2109",
+      "genre": "hardcore-punk",
+      "probability": 0.3943
+    },
+    {
+      "caseId": "album:633",
+      "genre": "reggae",
+      "probability": 0.3623
+    },
+    {
+      "caseId": "album:2161",
+      "genre": "rock-and-roll",
+      "probability": 0.6336
+    },
+    {
+      "caseId": "album:2168",
+      "genre": "ska",
+      "probability": 0.7289
+    },
+    {
+      "caseId": "album:2128",
+      "genre": "punk-rock",
+      "probability": 0.7062
+    },
+    {
+      "caseId": "album:2164",
+      "genre": "ska",
+      "probability": 0.5175
+    },
+    {
+      "caseId": "album:2199",
+      "genre": "pop",
+      "probability": 0.5234
+    },
+    {
+      "caseId": "album:2193",
+      "genre": "punk-rock",
+      "probability": 0.7409
+    },
+    {
+      "caseId": "album:2204",
+      "genre": "pop-rock",
+      "probability": 0.5928
+    },
+    {
+      "caseId": "album:2310",
+      "genre": "deathcore",
+      "probability": 0.5522
+    },
+    {
+      "caseId": "album:2722",
+      "genre": "rock-and-roll",
+      "probability": 0.4453
+    },
+    {
+      "caseId": "album:2388",
+      "genre": "rock-sinfonico",
+      "probability": 0.6341
+    },
+    {
+      "caseId": "album:2721",
+      "genre": "cantautor",
+      "probability": 0.6388
+    },
+    {
+      "caseId": "album:2732",
+      "genre": "electronica",
+      "probability": 0.6567
+    },
+    {
+      "caseId": "album:2368",
+      "genre": "post-punk",
+      "probability": 0.6228
+    },
+    {
+      "caseId": "album:2389",
+      "genre": "trance",
+      "probability": 0.4529
+    },
+    {
+      "caseId": "album:2730",
+      "genre": "rock",
+      "probability": 0.6011
+    },
+    {
+      "caseId": "album:2766",
+      "genre": "rock",
+      "probability": 0.5407
+    },
+    {
+      "caseId": "album:2387",
+      "genre": "rock-psicodelico",
+      "probability": 0.6945
+    },
+    {
+      "caseId": "album:2397",
+      "genre": "rock-sinfonico",
+      "probability": 0.6536
+    },
+    {
+      "caseId": "album:2438",
+      "genre": "rock",
+      "probability": 0.4634
+    },
+    {
+      "caseId": "album:2437",
+      "genre": "grunge",
+      "probability": 0.5807
+    },
+    {
+      "caseId": "album:2408",
+      "genre": "metalcore",
+      "probability": 0.4274
+    },
+    {
+      "caseId": "album:2435",
+      "genre": "thrash-metal",
+      "probability": 0.5321
+    },
+    {
+      "caseId": "album:2492",
+      "genre": "rock",
+      "probability": 0.6363
+    },
+    {
+      "caseId": "album:2454",
+      "genre": "rock-alternativo",
+      "probability": 0.5696
+    },
+    {
+      "caseId": "album:2491",
+      "genre": "heavy-metal",
+      "probability": 0.6261
+    },
+    {
+      "caseId": "album:2549",
+      "genre": "rock",
+      "probability": 0.5905
+    },
+    {
+      "caseId": "album:2551",
+      "genre": "rock-alternativo",
+      "probability": 0.7355
+    },
+    {
+      "caseId": "album:2557",
+      "genre": "rock",
+      "probability": 0.6923
+    },
+    {
+      "caseId": "album:2580",
+      "genre": "rock",
+      "probability": 0.5709
+    },
+    {
+      "caseId": "album:2534",
+      "genre": "musica-navidena",
+      "probability": 0.6981
+    },
+    {
+      "caseId": "album:2552",
+      "genre": "rock",
+      "probability": 0.6923
+    },
+    {
+      "caseId": "album:2599",
+      "genre": "punk",
+      "probability": 0.5513
+    },
+    {
+      "caseId": "album:2577",
+      "genre": "punk",
+      "probability": 0.5157
+    },
+    {
+      "caseId": "album:2547",
+      "genre": "electronica",
+      "probability": 0.8389
+    },
+    {
+      "caseId": "album:2593",
+      "genre": "hip-hop",
+      "probability": 0.7033
+    },
+    {
+      "caseId": "album:2598",
+      "genre": "metal",
+      "probability": 0.3814
+    },
+    {
+      "caseId": "album:2585",
+      "genre": "death-metal-melodico",
+      "probability": 0.5214
+    },
+    {
+      "caseId": "album:2556",
+      "genre": "rock",
+      "probability": 0.5905
+    },
+    {
+      "caseId": "album:2606",
+      "genre": "rock",
+      "probability": 0.3523
+    },
+    {
+      "caseId": "album:2600",
+      "genre": "punk",
+      "probability": 0.6709
+    },
+    {
+      "caseId": "album:2653",
+      "genre": "rock",
+      "probability": 0.68
+    },
+    {
+      "caseId": "album:2651",
+      "genre": "grunge",
+      "probability": 0.5717
+    },
+    {
+      "caseId": "album:2624",
+      "genre": "beat",
+      "probability": 0.5902
+    },
+    {
+      "caseId": "album:120",
+      "genre": "rock-latino",
+      "probability": 0.884
+    },
+    {
+      "caseId": "album:2642",
+      "genre": "pop-rock",
+      "probability": 0.3453
+    },
+    {
+      "caseId": "album:2666",
+      "genre": "punk",
+      "probability": 0.6587
+    },
+    {
+      "caseId": "album:2627",
+      "genre": "metal-gotico",
+      "probability": 0.5398
+    },
+    {
+      "caseId": "album:2630",
+      "genre": "reggae",
+      "probability": 0.8399
+    },
+    {
+      "caseId": "album:2672",
+      "genre": "rock",
+      "probability": 0.3688
+    },
+    {
+      "caseId": "album:2650",
+      "genre": "pop-punk",
+      "probability": 0.7318
+    },
+    {
+      "caseId": "album:2656",
+      "genre": "rock",
+      "probability": 0.6577
+    },
+    {
+      "caseId": "album:2781",
+      "genre": "death-metal",
+      "probability": 0.6243
+    },
+    {
+      "caseId": "album:2667",
+      "genre": "punk",
+      "probability": 0.6723
+    },
+    {
+      "caseId": "album:2809",
+      "genre": "rock-alternativo",
+      "probability": 0.5596
+    },
+    {
+      "caseId": "album:2820",
+      "genre": "rock",
+      "probability": 0.7082
+    },
+    {
+      "caseId": "album:2827",
+      "genre": "rock",
+      "probability": 0.6106
+    },
+    {
+      "caseId": "album:2860",
+      "genre": "punk",
+      "probability": 0.4644
+    },
+    {
+      "caseId": "album:2082",
+      "genre": "punk-rock",
+      "probability": 0.7249
+    },
+    {
+      "caseId": "album:2857",
+      "genre": "pop-rock",
+      "probability": 0.5773
+    },
+    {
+      "caseId": "album:1965",
+      "genre": "hard-rock",
+      "probability": 0.3847
+    },
+    {
+      "caseId": "album:2839",
+      "genre": "rock-and-roll",
+      "probability": 0.5963
+    },
+    {
+      "caseId": "album:2845",
+      "genre": "reggae",
+      "probability": 0.6951
+    },
+    {
+      "caseId": "album:2861",
+      "genre": "punk",
+      "probability": 0.4854
+    },
+    {
+      "caseId": "album:1980",
+      "genre": "punk-rock",
+      "probability": 0.7003
+    },
+    {
+      "caseId": "album:3235",
+      "genre": "hard-rock",
+      "probability": 0.6101
+    },
+    {
+      "caseId": "album:2917",
+      "genre": "electronica",
+      "probability": 0.6492
+    },
+    {
+      "caseId": "album:2925",
+      "genre": "jazz",
+      "probability": 0.5222
+    },
+    {
+      "caseId": "album:2881",
+      "genre": "funk",
+      "probability": 0.5528
+    },
+    {
+      "caseId": "album:2885",
+      "genre": "experimental",
+      "probability": 0.6514
+    },
+    {
+      "caseId": "album:2905",
+      "genre": "rock",
+      "probability": 0.4185
+    },
+    {
+      "caseId": "album:3217",
+      "genre": "rock",
+      "probability": 0.4914
+    },
+    {
+      "caseId": "album:2886",
+      "genre": "rock-melodico",
+      "probability": 0.6362
+    },
+    {
+      "caseId": "album:2892",
+      "genre": "beat",
+      "probability": 0.4244
+    },
+    {
+      "caseId": "album:2912",
+      "genre": "rock",
+      "probability": 0.6153
+    },
+    {
+      "caseId": "album:2950",
+      "genre": "rock-and-roll",
+      "probability": 0.3718
+    },
+    {
+      "caseId": "album:3003",
+      "genre": "rock",
+      "probability": 0.7249
+    },
+    {
+      "caseId": "album:2969",
+      "genre": "cumbia",
+      "probability": 0.5467
+    },
+    {
+      "caseId": "album:67",
+      "genre": "rock-experimental",
+      "probability": 0.6983
+    },
+    {
+      "caseId": "album:2968",
+      "genre": "rock-experimental",
+      "probability": 0.7226
+    },
+    {
+      "caseId": "album:3015",
+      "genre": "rock-experimental",
+      "probability": 0.5797
+    },
+    {
+      "caseId": "album:2935",
+      "genre": "jazz",
+      "probability": 0.5437
+    },
+    {
+      "caseId": "album:2957",
+      "genre": "rock",
+      "probability": 0.4065
+    },
+    {
+      "caseId": "album:2993",
+      "genre": "grunge",
+      "probability": 0.5143
+    },
+    {
+      "caseId": "album:3035",
+      "genre": "rock",
+      "probability": 0.7066
+    },
+    {
+      "caseId": "album:3092",
+      "genre": "post-punk",
+      "probability": 0.6102
+    },
+    {
+      "caseId": "album:3107",
+      "genre": "rock",
+      "probability": 0.6697
+    },
+    {
+      "caseId": "album:3036",
+      "genre": "heavy-metal",
+      "probability": 0.5915
+    },
+    {
+      "caseId": "album:3063",
+      "genre": "rock",
+      "probability": 0.7291
+    },
+    {
+      "caseId": "album:3095",
+      "genre": "rock",
+      "probability": 0.3876
+    },
+    {
+      "caseId": "album:3030",
+      "genre": "heavy-metal",
+      "probability": 0.6579
+    },
+    {
+      "caseId": "album:3037",
+      "genre": "punk",
+      "probability": 0.5658
+    },
+    {
+      "caseId": "album:3042",
+      "genre": "punk",
+      "probability": 0.6501
+    },
+    {
+      "caseId": "album:3112",
+      "genre": "metalcore",
+      "probability": 0.6771
+    },
+    {
+      "caseId": "album:3051",
+      "genre": "nu-metal",
+      "probability": 0.4978
+    },
+    {
+      "caseId": "album:3096",
+      "genre": "rock",
+      "probability": 0.6522
+    },
+    {
+      "caseId": "album:3234",
+      "genre": "ska",
+      "probability": 0.4351
+    },
+    {
+      "caseId": "album:3099",
+      "genre": "electronica",
+      "probability": 0.4522
+    },
+    {
+      "caseId": "album:3114",
+      "genre": "electropop",
+      "probability": 0.5622
+    },
+    {
+      "caseId": "album:3158",
+      "genre": "rock",
+      "probability": 0.7082
+    },
+    {
+      "caseId": "album:3116",
+      "genre": "jazz",
+      "probability": 0.5554
+    },
+    {
+      "caseId": "album:3126",
+      "genre": "punk-rock",
+      "probability": 0.6614
+    },
+    {
+      "caseId": "album:3247",
+      "genre": "death-metal",
+      "probability": 0.7235
+    },
+    {
+      "caseId": "album:3155",
+      "genre": "hardcore-punk",
+      "probability": 0.5496
+    },
+    {
+      "caseId": "album:3170",
+      "genre": "rock",
+      "probability": 0.6879
+    },
+    {
+      "caseId": "album:3260",
+      "genre": "funk",
+      "probability": 0.716
+    },
+    {
+      "caseId": "album:3145",
+      "genre": "metal",
+      "probability": 0.7412
+    },
+    {
+      "caseId": "album:3376",
+      "genre": "death-metal",
+      "probability": 0.7122
+    },
+    {
+      "caseId": "album:3325",
+      "genre": "rock",
+      "probability": 0.5957
+    },
+    {
+      "caseId": "album:3366",
+      "genre": "rock",
+      "probability": 0.6563
+    },
+    {
+      "caseId": "album:3332",
+      "genre": "punk",
+      "probability": 0.6066
+    },
+    {
+      "caseId": "album:3324",
+      "genre": "rock",
+      "probability": 0.5957
+    },
+    {
+      "caseId": "album:3330",
+      "genre": "metal",
+      "probability": 0.5621
+    },
+    {
+      "caseId": "album:4809",
+      "genre": "pop-rock",
+      "probability": 0.6893
+    },
+    {
+      "caseId": "album:4837",
+      "genre": "folk",
+      "probability": 0.5591
+    },
+    {
+      "caseId": "album:4915",
+      "genre": "soul",
+      "probability": 0.5138
+    },
+    {
+      "caseId": "album:4932",
+      "genre": "pop-rock",
+      "probability": 0.6012
+    },
+    {
+      "caseId": "album:4933",
+      "genre": "pop-rock",
+      "probability": 0.6058
+    },
+    {
+      "caseId": "album:4914",
+      "genre": "balada",
+      "probability": 0.5929
+    },
+    {
+      "caseId": "album:4916",
+      "genre": "pop-rock",
+      "probability": 0.6671
+    },
+    {
+      "caseId": "album:4856",
+      "genre": "pop-rock",
+      "probability": 0.6689
+    },
+    {
+      "caseId": "album:4881",
+      "genre": "pop-rock",
+      "probability": 0.5622
+    },
+    {
+      "caseId": "album:4892",
+      "genre": "pop-rock",
+      "probability": 0.6943
+    },
+    {
+      "caseId": "album:4910",
+      "genre": "pop-rock",
+      "probability": 0.5429
+    },
+    {
+      "caseId": "album:4979",
+      "genre": "pop-rock",
+      "probability": 0.6272
+    },
+    {
+      "caseId": "album:4956",
+      "genre": "pop-rock",
+      "probability": 0.6809
+    },
+    {
+      "caseId": "album:4957",
+      "genre": "pop-rock",
+      "probability": 0.7009
+    },
+    {
+      "caseId": "album:490",
+      "genre": "rock-sinfonico",
+      "probability": 0.6192
+    },
+    {
+      "caseId": "artist:121",
+      "genre": "ska",
+      "probability": 0.6386
+    },
+    {
+      "caseId": "artist:392",
+      "genre": "death-metal-progresivo",
+      "probability": 0.8287
+    },
+    {
+      "caseId": "artist:746",
+      "genre": "death-metal",
+      "probability": 0.7439
+    },
+    {
+      "caseId": "artist:402",
+      "genre": "death-metal",
+      "probability": 0.5117
+    },
+    {
+      "caseId": "artist:619",
+      "genre": "heavy-metal",
+      "probability": 0.6269
+    },
+    {
+      "caseId": "artist:714",
+      "genre": "thrash-metal",
+      "probability": 0.6228
+    },
+    {
+      "caseId": "artist:1337",
+      "genre": "rock",
+      "probability": 0.6489
+    },
+    {
+      "caseId": "artist:1330",
+      "genre": "rock",
+      "probability": 0.5971
+    },
+    {
+      "caseId": "artist:856",
+      "genre": "death-metal",
+      "probability": 0.5303
+    },
+    {
+      "caseId": "artist:874",
+      "genre": "death-metal",
+      "probability": 0.6783
+    },
+    {
+      "caseId": "artist:966",
+      "genre": "hard-rock",
+      "probability": 0.2968
+    },
+    {
+      "caseId": "artist:1191",
+      "genre": "cumbia",
+      "probability": 0.7202
+    },
+    {
+      "caseId": "artist:1143",
+      "genre": "rock",
+      "probability": 0.3596
+    },
+    {
+      "caseId": "artist:1011",
+      "genre": "rock-alternativo",
+      "probability": 0.5295
+    },
+    {
+      "caseId": "artist:1142",
+      "genre": "grunge",
+      "probability": 0.5651
+    },
+    {
+      "caseId": "artist:1069",
+      "genre": "hip-hop",
+      "probability": 0.4225
+    },
+    {
+      "caseId": "artist:1015",
+      "genre": "rock",
+      "probability": 0.5558
+    },
+    {
+      "caseId": "artist:1026",
+      "genre": "rock-melodico",
+      "probability": 0.4576
+    },
+    {
+      "caseId": "artist:1031",
+      "genre": "punk",
+      "probability": 0.5265
+    },
+    {
+      "caseId": "artist:1393",
+      "genre": "rock",
+      "probability": 0.3795
+    },
+    {
+      "caseId": "artist:1449",
+      "genre": "darkwave",
+      "probability": 0.397
+    },
+    {
+      "caseId": "artist:1453",
+      "genre": "rock-and-roll",
+      "probability": 0.5794
+    },
+    {
+      "caseId": "artist:1465",
+      "genre": "rock",
+      "probability": 0.4612
+    },
+    {
+      "caseId": "artist:1515",
+      "genre": "rock",
+      "probability": 0.4798
+    },
+    {
+      "caseId": "artist:1201",
+      "genre": "rock",
+      "probability": 0.5215
+    },
+    {
+      "caseId": "artist:2900",
+      "genre": "experimental",
+      "probability": 0.7337
+    },
+    {
+      "caseId": "artist:781",
+      "genre": "death-metal",
+      "probability": 0.4807
+    },
+    {
+      "caseId": "artist:919",
+      "genre": "noise",
+      "probability": 0.246
+    },
+    {
+      "caseId": "artist:1557",
+      "genre": "grunge",
+      "probability": 0.5336
+    },
+    {
+      "caseId": "artist:1610",
+      "genre": "rock",
+      "probability": 0.5868
+    },
+    {
+      "caseId": "artist:1102",
+      "genre": "rock",
+      "probability": 0.6792
+    },
+    {
+      "caseId": "artist:621",
+      "genre": "punk-rock",
+      "probability": 0.6389
+    },
+    {
+      "caseId": "artist:119",
+      "genre": "rock",
+      "probability": 0.4535
+    },
+    {
+      "caseId": "artist:1621",
+      "genre": "beat",
+      "probability": 0.6596
+    },
+    {
+      "caseId": "artist:257",
+      "genre": "punk",
+      "probability": 0.6361
+    },
+    {
+      "caseId": "artist:1651",
+      "genre": "rock",
+      "probability": 0.6039
+    },
+    {
+      "caseId": "artist:1674",
+      "genre": "punk-rock",
+      "probability": 0.6934
+    },
+    {
+      "caseId": "artist:1702",
+      "genre": "salsa",
+      "probability": 0.7307
+    },
+    {
+      "caseId": "artist:954",
+      "genre": "heavy-metal",
+      "probability": 0.5815
+    },
+    {
+      "caseId": "artist:1721",
+      "genre": "rock",
+      "probability": 0.4193
+    },
+    {
+      "caseId": "artist:1726",
+      "genre": "rock",
+      "probability": 0.7493
+    },
+    {
+      "caseId": "artist:1145",
+      "genre": "electronica",
+      "probability": 0.363
+    },
+    {
+      "caseId": "artist:1800",
+      "genre": "rock",
+      "probability": 0.4152
+    },
+    {
+      "caseId": "artist:1971",
+      "genre": "pop",
+      "probability": 0.6602
+    },
+    {
+      "caseId": "artist:2015",
+      "genre": "pop",
+      "probability": 0.5958
+    }
+  ],
+  "belowThreshold": 0,
+  "abstained": 93,
+  "errors": 0,
+  "alreadyClassified": 4,
+  "failed": []
+}

@@ -1,0 +1,137 @@
+{
+  "mode": "dry-run",
+  "runId": 10415,
+  "compatible": 171,
+  "reverted": [
+    {
+      "caseId": "artist:1236",
+      "source": "itunes",
+      "laya": [
+        "ska"
+      ],
+      "raw": [
+        "Alternative"
+      ]
+    },
+    {
+      "caseId": "artist:238",
+      "source": "itunes",
+      "laya": [
+        "rock"
+      ],
+      "raw": [
+        "Alternative"
+      ]
+    },
+    {
+      "caseId": "artist:446",
+      "source": "itunes",
+      "laya": [
+        "hardcore-punk"
+      ],
+      "raw": [
+        "Rock"
+      ]
+    },
+    {
+      "caseId": "artist:809",
+      "source": "itunes",
+      "laya": [
+        "metal-gotico"
+      ],
+      "raw": [
+        "Rock"
+      ]
+    },
+    {
+      "caseId": "artist:835",
+      "source": "itunes",
+      "laya": [
+        "dark-ambient"
+      ],
+      "raw": [
+        "Ambient"
+      ]
+    },
+    {
+      "caseId": "artist:899",
+      "source": "itunes",
+      "laya": [
+        "crust-punk"
+      ],
+      "raw": [
+        "Rock"
+      ]
+    },
+    {
+      "caseId": "artist:967",
+      "source": "itunes",
+      "laya": [
+        "black-metal"
+      ],
+      "raw": [
+        "Classical"
+      ]
+    },
+    {
+      "caseId": "artist:1361",
+      "source": "itunes",
+      "laya": [
+        "pop"
+      ],
+      "raw": [
+        "Folk"
+      ]
+    },
+    {
+      "caseId": "artist:1414",
+      "source": "itunes",
+      "laya": [
+        "jazz"
+      ],
+      "raw": [
+        "Reggae"
+      ]
+    },
+    {
+      "caseId": "artist:1529",
+      "source": "itunes",
+      "laya": [
+        "reggae"
+      ],
+      "raw": [
+        "Roots Reggae"
+      ]
+    },
+    {
+      "caseId": "artist:1641",
+      "source": "itunes",
+      "laya": [
+        "hardcore-punk"
+      ],
+      "raw": [
+        "Rock"
+      ]
+    },
+    {
+      "caseId": "artist:1969",
+      "source": "itunes",
+      "laya": [
+        "blues"
+      ],
+      "raw": [
+        "Rock"
+      ]
+    },
+    {
+      "caseId": "artist:1945",
+      "source": "rhv-directorio",
+      "laya": [
+        "heavy-metal"
+      ],
+      "raw": [
+        "heavy metal progresivo sinfónico"
+      ]
+    }
+  ]
+}

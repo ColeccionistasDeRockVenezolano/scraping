@@ -1,0 +1,7415 @@
+{
+  "generatedAt": "2026-09-22T11:25:32.199Z",
+  "bySourceAndLevel": [
+    {
+      "sourceSlug": "descargas-metal-venezolano",
+      "sourceName": "Descargas Metal Venezolano",
+      "level": "album",
+      "totalEntities": 1329,
+      "entitiesWithGenre": 1324,
+      "genreClaims": 1341,
+      "distinctValues": 461
+    },
+    {
+      "sourceSlug": "sincopa",
+      "sourceName": "Sincopa",
+      "level": "album",
+      "totalEntities": 1964,
+      "entitiesWithGenre": 648,
+      "genreClaims": 782,
+      "distinctValues": 207
+    },
+    {
+      "sourceSlug": "sincopa",
+      "sourceName": "Sincopa",
+      "level": "artist",
+      "totalEntities": 604,
+      "entitiesWithGenre": 228,
+      "genreClaims": 230,
+      "distinctValues": 125
+    }
+  ],
+  "valueInventory": [
+    {
+      "level": "artist",
+      "value": "Rock",
+      "claims": 43,
+      "shape": "simple",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Pop-Rock",
+      "claims": 21,
+      "shape": "hyphen_compound",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Rock, Pop",
+      "claims": 12,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Pop",
+      "claims": 8,
+      "shape": "simple",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Progressive Rock",
+      "claims": 7,
+      "shape": "simple",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Death Metal",
+      "claims": 6,
+      "shape": "simple",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Rock-Pop",
+      "claims": 4,
+      "shape": "hyphen_compound",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Rock, Rock-Pop",
+      "claims": 4,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Reggae",
+      "claims": 3,
+      "shape": "simple",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Rock, Alternative Rock",
+      "claims": 3,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Rock, Pop.",
+      "claims": 2,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Melodic Death Metal",
+      "claims": 2,
+      "shape": "simple",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Alternative Rock",
+      "claims": 2,
+      "shape": "simple",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Heavy Metal",
+      "claims": 2,
+      "shape": "simple",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Heavy Metal, Power Metal, Groove Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Heavy Metal, Rock",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Heavy Metal/Death Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Heavy Rock, Trash Metal, Hardcore",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Instrumental Rock",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Instrumental Rock/ Progressive",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Latin Electronic Fusion, Pop-Funk-House",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Latin Hip-Hop",
+      "claims": 1,
+      "shape": "hyphen_compound",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Latin Pop",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Latin-Rock, Funk, Salsa",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Latin-Ska, Latin Rock Fusion",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Metal-Punk",
+      "claims": 1,
+      "shape": "hyphen_compound",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Neo Punk, Melodic Punk",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Neo-Classic, Rock",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Nu-Metal, Death Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Pop, Alternative",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Pop, Doo-Wop, Twist",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Pop, Latin Fusion, Flamenco",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Pop, Latin Pop",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Pop-Latin, Folk, Fusion, Hip-Hop",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Pop-Latin-Rock",
+      "claims": 1,
+      "shape": "hyphen_compound",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Pop-Rock, Alternative, Tropical Rock",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Pop-Rock, Ballad",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Pop-Rock, Beat, Rock & Roll, Surf",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Pop-Rock-Latin",
+      "claims": 1,
+      "shape": "hyphen_compound",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Post Punk, Punk-Folk Fusion, Dark Rock",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Power Metal / Progressive Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Power Metal, Nu Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Power Metal, Thrash, Groove Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Alternative Metal",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Progressive Rock / Afro-Venezuelan Rock",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Progressive Rock/Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Punk Rock",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Punk Rock, New Wave",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Punk, Dark, New Wave",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Punk, Metal, Hardcore",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Progressive Metal",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Alternative Rock, Punk, Rock",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Black Metal, Industrial Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Black Metal, Post Black Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Black Metal/Shoegaze",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Blues-Rock",
+      "claims": 1,
+      "shape": "hyphen_compound",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Blues-Rock, Hard Rock",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Caracas",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Reggae, Ska, Soul, Caribean",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Rock & Blues",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Rock & Roll, Rock, Folk",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Rock Progressive, Fusion, Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Rock, Alternative Rock,",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Rock, Alternative, Avantgarde, Latin",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Rock, Alternative, Fusion",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Rock, Fusion, Jazz, Latin, Funk / Soul",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Rock, Gothic Metal, Symphonic Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Rock, Hard Rock",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Rock, Hard Rock, Nu Metal, Alternative Rock",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Rock, Hard, Glam & Blues",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Rock, Hardcore, Punk",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Rock, Heavy Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Rock, Heavy Metal, Nu Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Rock, Heavy Metal, Trash-Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Rock, Instrumental",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Rock, Latin Funk",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Rock, Nu-Metal, New Age, Techno, Industrial",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Rock, Pop, Jazz, World-Ethnic, Latin",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Rock, Pop, Reggae",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Rock, Pop, Rock & Roll",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Rock, Pop-Rock",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Rock, Power Metal, Heavy Metal, Symphonic-Heavy",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Rock, Power Metal, Melodic Metal, Progressive Power",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Rock, Rock & Roll",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Rock, Rockabilly & Pop",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Rock, Ska",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Rock, Thrash Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Rock, Thrash, Death Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Rock-Latin-Funk-Psych",
+      "claims": 1,
+      "shape": "hyphen_compound",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Rock-Pop, Latin-Pop",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Rock-Pop, Latin-Rock",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Rock-Pop, Reggae, Trippy-Pop",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Rock-Progressive",
+      "claims": 1,
+      "shape": "hyphen_compound",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Rock-Ska",
+      "claims": 1,
+      "shape": "hyphen_compound",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Rock/Funk/House/Latin",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Rock/Industrial",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Rock/Southern Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Rockabilly",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Ska",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Ska, Reggae, Punk",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Ska-Core/Reggae/Latin-Rock",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Ska-Reggae",
+      "claims": 1,
+      "shape": "hyphen_compound",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Ska/Surf Rock",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Sludge-Metal, Heavy-Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Southern Rock, Rock",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Symphonic Rock, Progressive Rock",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Thrash Metal",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Thrash Metal / Groove Metal / Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Thrash Metal / Melodic Trash",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Trash Metal",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Vocal Group, Latin-Pop-Jazz",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Vocal Group, Pop, Latin",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Death & Trash Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Death Metal, Thrash Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Death Metal/Power Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Doom/Death Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Electronic/Dance/Pop",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Experimental/Progressive Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Funk, Latin, Dance",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Fusion, Rock, Ska, Reggae, Latin",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Hard, Trash, Heavy Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Hard-Rock",
+      "claims": 1,
+      "shape": "hyphen_compound",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Hard-Rock/Alternative Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Heavy Metal, Groove Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "artist",
+      "value": "Heavy Metal, Power Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock",
+      "claims": 164,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano",
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Death Metal",
+      "claims": 98,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano",
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Pop",
+      "claims": 95,
+      "shape": "simple",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Black Metal",
+      "claims": 89,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano",
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Pop-Rock",
+      "claims": 76,
+      "shape": "hyphen_compound",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Heavy Metal",
+      "claims": 68,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano",
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock-Pop",
+      "claims": 67,
+      "shape": "hyphen_compound",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Thrash Metal",
+      "claims": 57,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano",
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Melodic Death Metal",
+      "claims": 50,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano",
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Alternative Rock",
+      "claims": 39,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano",
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Hardcore",
+      "claims": 24,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Independent",
+      "claims": 22,
+      "shape": "not_a_genre",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Hard Rock",
+      "claims": 22,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano",
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Slamming Brutal Death Metal",
+      "claims": 20,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Deathcore",
+      "claims": 16,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Heavy/Power Metal",
+      "claims": 14,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock / Ska",
+      "claims": 12,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Groove Metal",
+      "claims": 12,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock/Hardcore/Punk",
+      "claims": 12,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Death Metal/Thrash Metal",
+      "claims": 11,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Progressive Rock",
+      "claims": 10,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano",
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Grindcore",
+      "claims": 10,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Brutal Death Metal",
+      "claims": 9,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Goregrind",
+      "claims": 9,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Thrash Metal/Death Metal",
+      "claims": 9,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Metal",
+      "claims": 9,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Alternative Metal",
+      "claims": 9,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock/Heavy Metal",
+      "claims": 8,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Metalcore",
+      "claims": 8,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Metal Latino",
+      "claims": 8,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Punk Rock",
+      "claims": 8,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano",
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Heavy Metal/Power Metal",
+      "claims": 8,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Raw Black Metal",
+      "claims": 8,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Power Metal/Heavy Metal",
+      "claims": 7,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Hard Rock/Heavy Metal",
+      "claims": 7,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Death Metal/Grindcore",
+      "claims": 7,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Pop/Humor",
+      "claims": 7,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Depressive Black Metal",
+      "claims": 7,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Sludge-Metal",
+      "claims": 7,
+      "shape": "hyphen_compound",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Anarcho-punk | Noise Raw punk",
+      "claims": 6,
+      "shape": "hyphen_compound",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Death & Roll",
+      "claims": 6,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Power Metal",
+      "claims": 6,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano",
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Gothic Metal",
+      "claims": 6,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock/Pop",
+      "claims": 6,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano",
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Ethnic-Rock",
+      "claims": 6,
+      "shape": "hyphen_compound",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Pop/Balad",
+      "claims": 6,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Aternative Rock | Indie Rock | Electronic Rock",
+      "claims": 6,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Hard Rock/ Progressive Rock /Heavy Metal",
+      "claims": 6,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Technical Death Metal",
+      "claims": 6,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Hard/Heavy/Thrash/Death/Black/Hardcore...",
+      "claims": 6,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock-Progressive",
+      "claims": 6,
+      "shape": "hyphen_compound",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Thrash/Death Metal",
+      "claims": 6,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Hardcore/Thrash Metal",
+      "claims": 5,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Reggae",
+      "claims": 5,
+      "shape": "simple",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Progressive Metal",
+      "claims": 5,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano",
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Hardcore/Death Metal/Grindcore",
+      "claims": 5,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Blackened Crust/Post-Punk",
+      "claims": 5,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Black Metal/Death Metal",
+      "claims": 5,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Death Metal/Grindcore/Porngrind",
+      "claims": 5,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Punk Rock | Hardcore Punk",
+      "claims": 5,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Hard Rock/Rock Alternativo",
+      "claims": 5,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Sonográfica",
+      "claims": 5,
+      "shape": "simple",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Post-Black Metal / Post-Rock,",
+      "claims": 5,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Metal Alternativo/Nü Metal",
+      "claims": 5,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Dark Ambient",
+      "claims": 5,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Doom/Death Metal",
+      "claims": 5,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano",
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Punk Rock/ Post Punk/Rock Alternativo",
+      "claims": 4,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Ska-Reggae",
+      "claims": 4,
+      "shape": "hyphen_compound",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Grindcore/Death Metal",
+      "claims": 4,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Stoner/Doom Metal",
+      "claims": 4,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Crossover Thrash Metal | Thrash Metal",
+      "claims": 4,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Crust Punk / Stoner / Experimental",
+      "claims": 4,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Grunge/Alternative Rock",
+      "claims": 4,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Black Metal/Blackened Death Metal",
+      "claims": 4,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Atmospheric Black Metal",
+      "claims": 4,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Thrash Metal / Metal",
+      "claims": 4,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock Progressive",
+      "claims": 4,
+      "shape": "simple",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Thrash-Death Metal",
+      "claims": 4,
+      "shape": "hyphen_compound",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Heavy/Thrash Metal",
+      "claims": 4,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Top Hits",
+      "claims": 4,
+      "shape": "simple",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Death Metal / Melodic Death Metal",
+      "claims": 4,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "World-Ethnic",
+      "claims": 4,
+      "shape": "hyphen_compound",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Progressive-Power Metal",
+      "claims": 4,
+      "shape": "hyphen_compound",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Alternative Rock/ Electronic Rock",
+      "claims": 4,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Punk Hardcore",
+      "claims": 4,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Depressive Post-Black Metal",
+      "claims": 4,
+      "shape": "hyphen_compound",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock/Metal",
+      "claims": 4,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano",
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Ambient",
+      "claims": 4,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Doom Metal",
+      "claims": 4,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Atmospheric/Depressive Black Metal",
+      "claims": 4,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Punk-Metal",
+      "claims": 4,
+      "shape": "hyphen_compound",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Nu-Metal",
+      "claims": 4,
+      "shape": "hyphen_compound",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock-Gothic Metal/",
+      "claims": 3,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Gothic Metal/Doom Metal",
+      "claims": 3,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Melodic Hardcore/ Puk Rock",
+      "claims": 3,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Black Metal/Industrial Metal",
+      "claims": 3,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Alternative Rock | Grunge",
+      "claims": 3,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Thrash-Death Metal | Thrash Metal",
+      "claims": 3,
+      "shape": "hyphen_compound",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Alternative Rock / Punk Rock",
+      "claims": 3,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Hard Rock/ Rock & Roll",
+      "claims": 3,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Thrash Metal/Groove Metal",
+      "claims": 3,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Doom Metal / Sludge Metal",
+      "claims": 3,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Death Metal | Old School Death",
+      "claims": 3,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock´n´Roll/Rotten Blues/Stoner/Metal/Hard Rock",
+      "claims": 3,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Heavy / Thrash Metal",
+      "claims": 3,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock Progresivo",
+      "claims": 3,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock/Balada",
+      "claims": 3,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Black/Heavy/Hard/Thrash/Progresivo/Death/Hardcore...",
+      "claims": 3,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock/Ska",
+      "claims": 3,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Death/Thrash Metal",
+      "claims": 3,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Pop/Latin/Hip Hop",
+      "claims": 3,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock Alternativo",
+      "claims": 3,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Latin Electronic Fusion",
+      "claims": 3,
+      "shape": "simple",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Nu- Metal",
+      "claims": 3,
+      "shape": "hyphen_compound",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Death Metal/Black Metal",
+      "claims": 3,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Alternative Rock | Country | Folk Rock",
+      "claims": 3,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Symphonic Black Metal",
+      "claims": 3,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Experimental/Death/Thrash Metal",
+      "claims": 3,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Stoner Rock",
+      "claims": 3,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Progressive Metal/Jazz/Instrumental",
+      "claims": 3,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock/Metal Progresivo",
+      "claims": 3,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Hardcore | Metal",
+      "claims": 3,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Pop Rock/Prog Rock",
+      "claims": 3,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Pop-Instrumental",
+      "claims": 3,
+      "shape": "hyphen_compound",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock/Pop/Latin",
+      "claims": 3,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock & Roll",
+      "claims": 3,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano",
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock/Post-Rock",
+      "claims": 3,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Progressive Power Metal",
+      "claims": 3,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock/Progressive",
+      "claims": 3,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Black Metal / Death Metal / Blackened Death Metal",
+      "claims": 3,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Latin-Rock",
+      "claims": 3,
+      "shape": "hyphen_compound",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock/Punk",
+      "claims": 3,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano",
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Death Metal / Brutal Death Metal",
+      "claims": 3,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Heavy Metal/White Metal",
+      "claims": 3,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Velvet",
+      "claims": 3,
+      "shape": "simple",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Death & Trash Metal",
+      "claims": 3,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Deathcore/Metalcore",
+      "claims": 3,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Metal Alternativo",
+      "claims": 3,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Industrial",
+      "claims": 3,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Black Metal/Death Metal/Metal",
+      "claims": 3,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Blues/Rock",
+      "claims": 3,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Metal Experimental",
+      "claims": 3,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Post- Rock | Instrumental Rock",
+      "claims": 3,
+      "shape": "hyphen_compound",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Polydor",
+      "claims": 2,
+      "shape": "simple",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Heavy/ Power Metal Sinfónico",
+      "claims": 2,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Death Metal / Grindcore",
+      "claims": 2,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Gothic Metal, Doom Metal, Melodic Death Metal",
+      "claims": 2,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Progressive Death Metal",
+      "claims": 2,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Death Metal / Old School Death Metal",
+      "claims": 2,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Death Metal / Pornogrind",
+      "claims": 2,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Death Metal | Grindcore | Porngrind",
+      "claims": 2,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Progressive Rock/Metal",
+      "claims": 2,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Instrumental Meta/Progressive Metal/ Experimental Metal",
+      "claims": 2,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Instrumental Metal/Atmospheric Black Metal",
+      "claims": 2,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Groove Metal / Hardcore",
+      "claims": 2,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Jazz",
+      "claims": 2,
+      "shape": "simple",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Punk",
+      "claims": 2,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Groove Metal / Thrash Metal",
+      "claims": 2,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Punk Rock| Funk | Experimental",
+      "claims": 2,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Latin World",
+      "claims": 2,
+      "shape": "simple",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Death Metal/Hardcore Punk/Neo Crust",
+      "claims": 2,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Latin-Pop",
+      "claims": 2,
+      "shape": "hyphen_compound",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Death Metal/Heavy Metal/Hardcore/Black Metal/Thrash Metal",
+      "claims": 2,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Groove Metal/Metalcore",
+      "claims": 2,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Groove Metal/Thrash Metal",
+      "claims": 2,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock 'N´ Roll/Rotten Blues/Stoner/Metal/Hard Rock",
+      "claims": 2,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Groove/Thrash Metal",
+      "claims": 2,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Blues Rock",
+      "claims": 2,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Melodic Death Metal/Groove Metal",
+      "claims": 2,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock Sinfonico/Progresivo/Jazz",
+      "claims": 2,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Melodic Hardcore",
+      "claims": 2,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock-Alternative",
+      "claims": 2,
+      "shape": "hyphen_compound",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Hard Rock | Porgressive Rock | Symphonic Rock",
+      "claims": 2,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock-Heavy Metal",
+      "claims": 2,
+      "shape": "hyphen_compound",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Metal Instrumental",
+      "claims": 2,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Deathgrind / Death Metal / Grindcore",
+      "claims": 2,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Alternative Metal /Progressive Metal/ Female Metal",
+      "claims": 2,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock-Ska",
+      "claims": 2,
+      "shape": "hyphen_compound",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock/Alternative",
+      "claims": 2,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock/Blues",
+      "claims": 2,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano",
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Metal/Punk",
+      "claims": 2,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Metalcore /Post-Hardcore",
+      "claims": 2,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock/Funk/House",
+      "claims": 2,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock/Funk/Latin",
+      "claims": 2,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Metalcore/Post-Hardcore",
+      "claims": 2,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock/Hardcore",
+      "claims": 2,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Aggro/ Death Metal",
+      "claims": 2,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "(Colección 20/20)",
+      "claims": 2,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Necronoise",
+      "claims": 2,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Brutal Death Metal / Slamming Brutal Death Metal",
+      "claims": 2,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Nu Metal / Rock",
+      "claims": 2,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Doom Metal/Gothic Metal/White Metal",
+      "claims": 2,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock/Southern Metal",
+      "claims": 2,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Old School Death Metal",
+      "claims": 2,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Alternative Metal/Gothic Rock",
+      "claims": 2,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Power/Dark/Gothic Metal",
+      "claims": 2,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Alternative Rock | Electronic",
+      "claims": 2,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Alternative Rock | Indie Rock",
+      "claims": 2,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Alternative Rock/Alternative Metal",
+      "claims": 2,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Pop-Ballad",
+      "claims": 2,
+      "shape": "hyphen_compound",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Alternative Rock/Pop-Rock",
+      "claims": 2,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Slamming Brutal Death Metal / Guttural Brutal Death Metal",
+      "claims": 2,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Hardcore Punk",
+      "claims": 2,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Pop-Fusion/Flamenco",
+      "claims": 2,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Hardcore Punk/Punk/Alternative Rock",
+      "claims": 2,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Sludge/Stoner Metal",
+      "claims": 2,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Pop-Rock/Latin",
+      "claims": 2,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Symphonic Metal/Female Metal",
+      "claims": 2,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Alternative Rock/Punk Rock",
+      "claims": 2,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Hardcore/Punk",
+      "claims": 2,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Pop/Doo Wop",
+      "claims": 2,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Symphonic Prog Rock",
+      "claims": 2,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Symphonic/Gothic Metal",
+      "claims": 2,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Technical Brutal Death Metal",
+      "claims": 2,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Pop/Latin-Pop/Dance",
+      "claims": 2,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Thrash /Death/ Metal",
+      "claims": 2,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Hardrock",
+      "claims": 2,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Thrash Metal | Groove Metal",
+      "claims": 2,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Thrash Metal/Punk",
+      "claims": 2,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Thrash Metal/White Metal",
+      "claims": 2,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Thrash/Black Metal",
+      "claims": 2,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Porngrind/Grindcore",
+      "claims": 2,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Post -Rock",
+      "claims": 2,
+      "shape": "hyphen_compound",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Ambient Black Metal / Dark Metal",
+      "claims": 2,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Heavy Metal/Female Vocal",
+      "claims": 2,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Top-Hits",
+      "claims": 2,
+      "shape": "hyphen_compound",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Trash Metal",
+      "claims": 2,
+      "shape": "simple",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Post-Hardcore / Hardcore/ Punk Hardcore",
+      "claims": 2,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Postpunk Paranormal/Dark Wave Ilegal/Peligroso Pop",
+      "claims": 2,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Warner Music Spain",
+      "claims": 2,
+      "shape": "simple",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Power Metal/White Metal",
+      "claims": 2,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "New Gothic Metal",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Nintendocore",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Nu Metal Rock",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Nu Metal | Alternative Metal",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Old School Death Metal/Death Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Old School Thrash / Death Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Pop Rock",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Pop Rock/Reggae",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Pop, Latin",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Pop- Rock | Progressive Rock",
+      "claims": 1,
+      "shape": "hyphen_compound",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Pop-Folk",
+      "claims": 1,
+      "shape": "hyphen_compound",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Pop-Folk-Rock",
+      "claims": 1,
+      "shape": "hyphen_compound",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Pop-Fusion/Folk-Tronic",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Pop-Latin",
+      "claims": 1,
+      "shape": "hyphen_compound",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Pop-Latin-Rock",
+      "claims": 1,
+      "shape": "hyphen_compound",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Pop-Rock/Neo-Glam",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Pop-Rock/Rock & Roll",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Pop-Rock/Twist",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Pop/Bolero",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Pop/Dance-House",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Pop/Dance/ Latin",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Pop/Latin",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Pop/Latin Pop",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Pop/Rock",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Pop/Rock Alternativo",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Pop/Rock | New Wave",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Porn/Goregrind",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Porngrind",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Post Hardcore",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Post Punk/ Dark Rock",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Post Punk/ New Wave/Darkwave",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Post-Black Metal/Black Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Post-Hardcore /Alternative Rock",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Power Metal / Progressive Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Power Metal Melódico",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Power Metal Sinfónico",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Power Metal | Folk Metal | Heavy Metal",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Power Metal | Heavy Metal",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Power Metal/Progressive",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Power/Death Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Power/Hardcore/Groove/Heavy/Thrash/Death/Black",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Primal Media Productions",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Prog Rock/Symphonic Rock",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Progresivo/Rock Alternativo/Grunge",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Progressive Extreme Metal/Deathcore",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Progressive Folk Heavy / Black Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Progressive Folk/ Black Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Progressive Gothic Metal",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Progressive Hard Rock",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Progressive Metal / Experimental",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Progressive Metal / Power Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Progressive Metal | Experimental Metal",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Progressive Metal/Djent",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Progressive Metal/Instrumental Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Progressive Rock /Jazz Fusion/Jazz Latin Metal /Metal Latino/Progressive Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Progressive Rock | Alternative Rock | Experimental Rock",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Progressive Rock/Art Rock",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Progressive Rock/Electronic Rock/ New Wave",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Progressive Rock/Experimental/Jazz",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Progressive Rock/Jazz",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Progressive Rock/Pogressive Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Progressive Rock/Pop Rock",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Progressive Rock/Post Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Progressive Technical Thrash/Death Metal/Avantgarde",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Progressive Thrash Metal",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Progressive/Doom Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Psychedelic Rock",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Punk Rock | Anarcho Punk",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Punk Rock | AnarcoPunk",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Punk Rock | Experimental | Hardcore",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Punk Rock | Experimental | Melodic Hardcore",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Punk Rock | Punk Hardcore | Hardcore",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Punk Rock/Post-Punk",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Punk-Folk/Fusion",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Punk/Rock",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Raw Black Metal / Black Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Raw Black Metal/Noise",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Reggae-Pop/Rock",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Reggae/Dancehall/Ska",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Reggae/Ska",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Reggae/Urban Folk",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Resaca Records",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock & Roll/Rock Radical/Punk Rock",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock & Roll/Stoner",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock -Fusion",
+      "claims": 1,
+      "shape": "hyphen_compound",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock / Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock / Metal / Experimental",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock / Nu Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock Alternativo/Rock",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock And Roll/Punk",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock Avantgarde/Fusion",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock Psicodélico",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock Sinfonico",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock Sinfónico",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock Sinfónico Progresivo",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock Sinfónico/Rock Progresivo",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock | Aternative Metal",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock, Alternative Rock",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock, Heavy",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock-Alternative/Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock-Blues",
+      "claims": 1,
+      "shape": "hyphen_compound",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock-Ethnic-Pop",
+      "claims": 1,
+      "shape": "hyphen_compound",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock-Funk-Latin",
+      "claims": 1,
+      "shape": "hyphen_compound",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock-Fusion/Latin",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock-Fusión | Instrumental Metal",
+      "claims": 1,
+      "shape": "hyphen_compound",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock-Jazz Fusion",
+      "claims": 1,
+      "shape": "hyphen_compound",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock-Latin",
+      "claims": 1,
+      "shape": "hyphen_compound",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock-Latin-Fusion",
+      "claims": 1,
+      "shape": "hyphen_compound",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock-Psychedelic",
+      "claims": 1,
+      "shape": "hyphen_compound",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock-Punk",
+      "claims": 1,
+      "shape": "hyphen_compound",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock-Punkrock",
+      "claims": 1,
+      "shape": "hyphen_compound",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock/Alternative Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock/Alternative Rock",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock/Blues/Rock & Roll",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock/Death Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock/Ethnic Fusion",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock/Grunge",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock/Hard Rock/Glam",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock/Latin/Avantgarde",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock/Metal/Heavy/Rock&Roll...",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock/Nu Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock/Post-Punk",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock/Progresivo/Jazz/Latin",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock/Progressive Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock/Progresssive/Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock/Punk-Rock",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock/Rock Alternativo",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock/Rock Progresivo",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock/Ska/Latin/Fusion",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock/Techno-Trance",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rock/Trip-Hop",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Rotten Cemetery Records",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Serie 32",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Sino Todo Lo Contrario",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Ska Core",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Ska-Core/Reggae",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Ska-Punk",
+      "claims": 1,
+      "shape": "hyphen_compound",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Ska/Instrumental",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Ska/Reggae/Fusion",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Ska/Reggae/Latin-Rock",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Ska/Rock/Punk",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Slamming Brutal Death Metal / Flamenco",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Slamming Brutal Death Metal / Slamming Brutal Deathcore",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Sludge Metal",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Sludge Metal / Doom Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Sonograma/Integra",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Souvenir",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Speed/Power Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Stoner Metal/Doom Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Stoner/ Groove Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Street Punk/Crossover",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Streetpunk/Oi!/ Punk Rock",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Symphonic Hard Rock",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Symphonic Metal",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Symphonic Metal/Heavy/Thrash/Death/Progressive",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Symphonic Metal/Progressive Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Symphonic Pagan Metal",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Symphonic Power Metal",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Symphonic Progressive Metal / Female Vocal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Technical Death Metal | Progressive Death Metal",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Technical Death Metal/ Progressive Death Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Technical Death Metal/Death Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Techno-Rock",
+      "claims": 1,
+      "shape": "hyphen_compound",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Thash Metal",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Thrash Metal | Death Metal",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Thrash Metal – Groove Metal",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Thrash Metal/Death Metal/White Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Thrash Rutero",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Thrash/Black/Death Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Thrash/Death/Heavy Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Thrash/Death/Heavy/Groove",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Thrash/Groove Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Thrash/Heavy Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Thrash/Heavy Power Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Thrash/Heavy/Black/RockNRoll/Death Metal...",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Thrash/Rock/Heavy/Death/Black...",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Trash-Death Metal",
+      "claims": 1,
+      "shape": "hyphen_compound",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Trash-Metal",
+      "claims": 1,
+      "shape": "hyphen_compound",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Trash/Rap Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Trip Hop",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Trip-hop/Pop",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Twist/Pop",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "UA Latino/Palacio",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Unblack Metal/White Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Universal",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Valencia",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "WEA Spain",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "White Metal",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Ska/Reggae",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Alternative Rock | Rap-Rock",
+      "claims": 1,
+      "shape": "hyphen_compound",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Alternative Metal/White Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Alternative Rock/ Gothic Rock/Experimental",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Black Metal | Instrumental Metal",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Black Metal | Melodic Porn Black Metal",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Alternative Rock/Punk Hardcore/Heavy/Thrash/Death/Progressive",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Black Metal, Ambient",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Alternative Rock/White Rock",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Alternative/Punk",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Alternative Metal | Progressive Metal",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Black Metal, Shoegaze",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Ambient/Atmospheric Black Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Ambient/Depressive Black Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Alternative Metal | Nu Metal",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Anes Records",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Ariah Records",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Aternative Rock",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Alt-Rock/Electronic/",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Aternative Rock/Indie Rock/Electronic Rock",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Acoustic Rock/Alternative Rock/Grunge",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Atmospheric Black Metal / Ambient",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Atmospheric Black Metal/ Post-Black",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Atmospheric Black Metal/Instrumental Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Atmospheric Doom Metal / Post-Rock",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Acid Hard Rock/Stoner/Latin Hard Rock",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Baladas/Hard Rock",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Beatdown Deathcore / Downtempo / Slamming Brutal Death Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Black / Death Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Black Gothic Metal",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Black Kitsch Abstract Metal",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "36 Temas y Artistas Originales",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Black Metal / Blackened Death Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "(De Dei After)",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Black Metal / Progressive Black Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Black Metal / Thrash Metal/Death Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Black Metal | Blackened",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Black Metal | Blackened Death Metal",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Alternative Rock / Progressive Rock",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Black Metal | Death Metal",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Alternative Rock | Pop/Rock",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Alternative Rock | Post-Punk",
+      "claims": 1,
+      "shape": "hyphen_compound",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Alternative Rock | Post-Punk | Indie Rock",
+      "claims": 1,
+      "shape": "hyphen_compound",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Black Metal/ Death Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Black Metal/Death Metal/Industrial",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Black Metal/Post-Black /Thrash Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Black Metal/Raw Black Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Black Metal/Thrash Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Black/Death/Grindcore",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Black/Hard/Heavy/Death/White/Hardcore...",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Black/Heavy/Thrash/Death",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Black/Heavy/Thrash/Death/Stoner/Un/Progressive",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Black/Thrash Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Blackened / Black Metal/ Death Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Blackened Death Metal",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Blues-Rock",
+      "claims": 1,
+      "shape": "hyphen_compound",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Blues/Hard Rock/Rock Sureño",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Brutal Death Metal / Deathgrind / Grindcore / Slamming Brutal Death Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Brutal Death Metal / Goregrind / Porngrind",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Brutal Death Metal / Grindcore",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Brutal Death Metal | Death Metal | Grindcore | Porngrind",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Brutal Death Metal | Goregrind",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "CBS-Columbia",
+      "claims": 1,
+      "shape": "hyphen_compound",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Chill Out/Down Tempo",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Country | Folk Rock",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Cygnus/AVR",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Dance-Remix",
+      "claims": 1,
+      "shape": "hyphen_compound",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Dark Metal",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Dark/Groove/Metal/Insdrustrial/Punk...",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Death & Roll / Female Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Death Metal / Groove Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Death Metal / Porngrind",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Death Metal / Sinfonico",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Death Metal Band",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Death Metal | Doom/Death Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Death Metal | Goregrind | Grindcore | Porngrind",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Death Metal | Grindcore",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Death Metal/ Thrash Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Death Metal/Grindcore/Industrial",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Death Metal/Grindcore/White Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Death Metal/Hardcore",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Death Metal/Old School Death Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Death metal",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Death/Slamming/Grindcore/GoreGrind...",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Death/Thrash/Grindcore/Extreme Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Deathcore |Metalcore | Melodic Hardcore",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Deathcore/Djent/Hardcore",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Deathgrind / Death Metal / Brutal Death Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Deathgrind /Death Metal/White Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Depressive Suicidal Black Metal",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Discomoda",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Djent |Progressive Metal",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "EMI",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "El Mismo Feeling...",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Electro-Pop/Hip Hop",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Electronic-Rock",
+      "claims": 1,
+      "shape": "hyphen_compound",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Electronic/Industrial/Drum N Bass",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Experimental Metal",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Extreme Metal",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Female Metal / Symphonic Metal / Gothic Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Female Metal/Symphonic Metal/Gothic Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Folk-Rock/Fusion",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "From New Orleans",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "FunkRockExtremo",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Goregrind / Brutal Death Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Goregrind / Guttural Brutal Death Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Goregrind / Slamming Brutal Death Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Goregrind / Slamming Brutal Death Metal / Slamming Brutal Deathcore",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Gothic /Doom Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Gothic Metal | Doom Metal",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Gothic Metal/Power Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Gothic Rock/Post-Punk",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Gothic/Black Metal.",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Gothic/Doom Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Gozadera Records",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Grindcore / Tecnhical Metal / Experimental",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Grindcore/Death Metal/GoreGrind...",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Grindcore/Goregrind",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Grindcore/Noise/Goregrind",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Grindcore/Noisecore",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Grindcore/Porn/Gore",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Groove Metal / Metalcore / Death Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Groove Metal / Metalcore / Progressive Death Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Groove Metal | Melodic Death Metal",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Groove Metal | Melodic Metal | Technical Metal",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Groove Metal/ Death Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Groove Metal/ Metal Latino",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Groove Metal/ Metalcore/Death Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Groove Metal/Alternative Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Groove Metal/Death Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Groove Metal/Melodic Death Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Groove Metal/Progressive Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Groove Metal/Technical Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Grunge | Alternative Rock",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Grunge/Rock Alternativo/Progresivo",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Guttural Brutal Death Metal / Progressive Death Metal / Slamming Brutal Death Metal / Technical Brutal Death Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Guttural Brutal Death Metal / Slamming Brutal Death Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Guttural Brutal Death Metal / Slamming Brutal Death Metal / Pirate Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "HC Punk/Punk Destroy",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Hard Blues/Stoner Rock",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Hard Rock / Progressive Rock",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Hard Rock | Heavy Metal",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Hard Rock/Alternative Rock",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Hard Rock/Glam Rock/Heavy Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Hard Rock/Heavy Rock",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Hard Rock/Progresive Rock",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Hard Rock/Prong Rock",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Hard Rock/White Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Hard/Heavy/Thrash/Death/Black Metal/Rock Alternativo",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Hard/Heavy/Thrash/Death/Black/Doom Metal...",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Hard/Heavy/Thrash/Death/Black/Hardcore/Punk...",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Hard/Heavy/Thrash/Death/Gothic/Black/Hardcore...",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Hard/Heavy/Thrash/Death/Hardcore",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Hard/Heavy/Thrash/Death/Hardcore/Black...",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Hardcore / Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Hardcore / Slamming Brutal Death Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Hardcore /Hardcore Punk",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Hardcore /Punk Hardcore /Thrash Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Hardcore Punk/Punk/Alternative Rock/Thrash Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Hardcore | Metalcore | Progressive Hardcore | Progressive Metalcore | Thrash Metal",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Hardcore | Punk Hardcore",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Hardcore/Groove/Heavy/Thrash/Death",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Hardcore/Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Hardcore/Punk Hardcore",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Hardcore/Thrash Metal/Crossover",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Heavy Metal / Hard Rock",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Heavy Metal | Thrash Metal | Industrial Metal",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Heavy Metal/Female Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Heavy Metal/Gothic/Female Vocal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Heavy Metal/Hard Rock",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Heavy Metal/PowerMetal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Heavy Power Metal",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Heavy Rock",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Heavy Rock/Hard Rock/Progresivo Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Heavy/Death Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Heavy/Groove/Thrash /Death/ Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Heavy/Speed Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Heavy/Thrash/Black/Hardcore...",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Heavy/Thrash/Death/Black",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Hip Hop",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Independent/Luz Rec.",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Indie-Rock",
+      "claims": 1,
+      "shape": "hyphen_compound",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Industrial Death Metal",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Industrial Metal",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Industrial Metal | Alternative Metal",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Industrial Music",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Industrial/Ambient",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Industrial/Electronic/Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Infeliz Records",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Instrumental",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Instrumental Metal",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Instrumental | Progressive Death Metal",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Jazz-Rock Fusion",
+      "claims": 1,
+      "shape": "hyphen_compound",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Jazz/Rock",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "LPM / AVR",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Latin Funk/Rock",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Latin Pop",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Latin Pop-Rock",
+      "claims": 1,
+      "shape": "hyphen_compound",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Latin Pop/Electronic",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Latin Rock",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Latin Rock Fusion",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Latin-Blues",
+      "claims": 1,
+      "shape": "hyphen_compound",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Latin-Rock (Trip hop)",
+      "claims": 1,
+      "shape": "hyphen_compound",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Life Metal (Christian Death Metal)",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Living Metal Producciones",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Luaka Bop/Latin World",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Melodic Black Metal / Symphonic Black Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Melodic Death / Thrash Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Melodic Death Metal | Groove Metal",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Melodic Death Metal | Metalcore",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Melodic Death Metal | Technical Death Metal",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Melodic Death Metal/Gothic Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Melodic Death Metal/Metalcore",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Melodic Death/Thrash",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Melodic Hard Rock",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Melodic Heavy / Power Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Metal / Death Metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Metal Afro/Venezolano",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Metal Doom",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Metal Extremo Experimental",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Metal Industrial",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Metal Pesado Latino Americano",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Metal Progresivo",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Metal Progresivo/Alternative metal",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Metal/EBM/Industrial",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Metal/Electronic",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Metalcore/Hardcore",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Modern Metal | Metalcore",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Mucer/Discomoda",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "Musea Records",
+      "claims": 1,
+      "shape": "simple",
+      "sources": [
+        "sincopa"
+      ]
+    },
+    {
+      "level": "album",
+      "value": "New Age/Rock/Industrial/Sinfónico",
+      "claims": 1,
+      "shape": "list_separator",
+      "sources": [
+        "descargas-metal-venezolano"
+      ]
+    }
+  ],
+  "albumsGenreProjection": {
+    "totalAlbums": 4694,
+    "albumsWithGenre": 1950,
+    "distinctGenreValues": 612
+  },
+  "multiSourceEntities": [
+    {
+      "level": "album",
+      "entityId": 109,
+      "sources": [
+        "descargas-metal-venezolano",
+        "sincopa"
+      ],
+      "values": [
+        "Nu- Metal",
+        "Nu-Metal"
+      ]
+    },
+    {
+      "level": "album",
+      "entityId": 110,
+      "sources": [
+        "descargas-metal-venezolano",
+        "sincopa"
+      ],
+      "values": [
+        "Nu- Metal",
+        "Nu-Metal"
+      ]
+    },
+    {
+      "level": "album",
+      "entityId": 111,
+      "sources": [
+        "descargas-metal-venezolano",
+        "sincopa"
+      ],
+      "values": [
+        "Nu- Metal",
+        "Nu-Metal"
+      ]
+    },
+    {
+      "level": "album",
+      "entityId": 117,
+      "sources": [
+        "descargas-metal-venezolano",
+        "sincopa"
+      ],
+      "values": [
+        "Rock",
+        "Rock Sinfonico/Progresivo/Jazz"
+      ]
+    },
+    {
+      "level": "album",
+      "entityId": 199,
+      "sources": [
+        "descargas-metal-venezolano",
+        "sincopa"
+      ],
+      "values": [
+        "Mucer/Discomoda",
+        "Progressive Rock/Pop Rock"
+      ]
+    },
+    {
+      "level": "album",
+      "entityId": 418,
+      "sources": [
+        "descargas-metal-venezolano",
+        "sincopa"
+      ],
+      "values": [
+        "Alternative Rock"
+      ]
+    },
+    {
+      "level": "album",
+      "entityId": 521,
+      "sources": [
+        "descargas-metal-venezolano",
+        "sincopa"
+      ],
+      "values": [
+        "Alternative Metal",
+        "Rock"
+      ]
+    },
+    {
+      "level": "album",
+      "entityId": 720,
+      "sources": [
+        "descargas-metal-venezolano",
+        "sincopa"
+      ],
+      "values": [
+        "Heavy Metal"
+      ]
+    },
+    {
+      "level": "album",
+      "entityId": 790,
+      "sources": [
+        "descargas-metal-venezolano",
+        "sincopa"
+      ],
+      "values": [
+        "Rock-Pop",
+        "Rock/Pop"
+      ]
+    },
+    {
+      "level": "album",
+      "entityId": 827,
+      "sources": [
+        "descargas-metal-venezolano",
+        "sincopa"
+      ],
+      "values": [
+        "Progressive Power Metal",
+        "Progressive-Power Metal"
+      ]
+    },
+    {
+      "level": "album",
+      "entityId": 859,
+      "sources": [
+        "descargas-metal-venezolano",
+        "sincopa"
+      ],
+      "values": [
+        "Rock-Pop",
+        "Rock/Pop"
+      ]
+    },
+    {
+      "level": "album",
+      "entityId": 1062,
+      "sources": [
+        "descargas-metal-venezolano",
+        "sincopa"
+      ],
+      "values": [
+        "Melodic Death Metal"
+      ]
+    },
+    {
+      "level": "album",
+      "entityId": 1117,
+      "sources": [
+        "descargas-metal-venezolano",
+        "sincopa"
+      ],
+      "values": [
+        "Hard Rock"
+      ]
+    },
+    {
+      "level": "album",
+      "entityId": 1118,
+      "sources": [
+        "descargas-metal-venezolano",
+        "sincopa"
+      ],
+      "values": [
+        "Hard Rock"
+      ]
+    },
+    {
+      "level": "album",
+      "entityId": 1124,
+      "sources": [
+        "descargas-metal-venezolano",
+        "sincopa"
+      ],
+      "values": [
+        "Progressive Power Metal",
+        "Progressive-Power Metal"
+      ]
+    },
+    {
+      "level": "album",
+      "entityId": 1462,
+      "sources": [
+        "descargas-metal-venezolano",
+        "sincopa"
+      ],
+      "values": [
+        "Heavy Metal"
+      ]
+    },
+    {
+      "level": "album",
+      "entityId": 1717,
+      "sources": [
+        "descargas-metal-venezolano",
+        "sincopa"
+      ],
+      "values": [
+        "Melodic Death Metal"
+      ]
+    },
+    {
+      "level": "album",
+      "entityId": 1787,
+      "sources": [
+        "descargas-metal-venezolano",
+        "sincopa"
+      ],
+      "values": [
+        "Groove Metal / Metalcore / Progressive Death Metal",
+        "Independent"
+      ]
+    },
+    {
+      "level": "album",
+      "entityId": 1798,
+      "sources": [
+        "descargas-metal-venezolano",
+        "sincopa"
+      ],
+      "values": [
+        "Progressive Power Metal",
+        "Progressive-Power Metal"
+      ]
+    },
+    {
+      "level": "album",
+      "entityId": 1807,
+      "sources": [
+        "descargas-metal-venezolano",
+        "sincopa"
+      ],
+      "values": [
+        "Death Metal / Groove Metal",
+        "Heavy Metal"
+      ]
+    },
+    {
+      "level": "album",
+      "entityId": 1819,
+      "sources": [
+        "descargas-metal-venezolano",
+        "sincopa"
+      ],
+      "values": [
+        "Doom/Death Metal"
+      ]
+    },
+    {
+      "level": "album",
+      "entityId": 0,
+      "sources": [
+        "descargas-metal-venezolano",
+        "sincopa"
+      ],
+      "values": [
+        "Ariah Records",
+        "Black Metal",
+        "Blues/Rock",
+        "Death & Trash Metal",
+        "Death Metal",
+        "Death Metal Band",
+        "Death Metal/Heavy Metal/Hardcore/Black Metal/Thrash Metal",
+        "Discomoda",
+        "Doom Metal",
+        "EMI",
+        "Electronic-Rock",
+        "Gozadera Records",
+        "Hard Rock",
+        "Hard Rock/Heavy Metal",
+        "Hardcore | Metal",
+        "Heavy Metal",
+        "Heavy Metal/Gothic/Female Vocal",
+        "Heavy Power Metal",
+        "Heavy/Death Metal",
+        "Independent",
+        "Jazz-Rock Fusion",
+        "LPM / AVR",
+        "Latin World",
+        "Melodic Death Metal",
+        "Melodic Death/Thrash",
+        "Melodic Hard Rock",
+        "Metal / Death Metal",
+        "Metal Doom",
+        "Metal Instrumental",
+        "Metal/Electronic",
+        "Metal/Punk",
+        "Nu Metal / Rock",
+        "Nu Metal | Alternative Metal",
+        "Polydor",
+        "Power Metal",
+        "Power/Death Metal",
+        "Progressive Metal",
+        "Progressive Rock",
+        "Progressive Rock/Metal",
+        "Rock",
+        "Rock / Metal / Experimental",
+        "Rock Progressive",
+        "Rock-Alternative",
+        "Rock-Gothic Metal/",
+        "Rock-Progressive",
+        "Rock/Alternative Metal",
+        "Rock/Death Metal",
+        "Rock/Hardcore",
+        "Rock/Heavy Metal",
+        "Rock/Post-Punk",
+        "Rock/Post-Rock",
+        "Rock/Progressive",
+        "Rock/Southern Metal",
+        "Sludge-Metal",
+        "Sonográfica",
+        "Thrash /Death/ Metal",
+        "Thrash Metal",
+        "Thrash Metal / Metal",
+        "Thrash/Death Metal",
+        "Thrash/Heavy Metal",
+        "Top-Hits",
+        "Trash Metal",
+        "Trash/Rap Metal",
+        "Universal",
+        "Velvet"
+      ]
+    }
+  ],
+  "sourcesWithoutGenreEvidence": [
+    {
+      "sourceSlug": "coleccionistas-de-rock-venezolano",
+      "sourceName": "Coleccionistas De Rock Venezolano",
+      "totalClaims": 7278,
+      "distinctFields": 12
+    },
+    {
+      "sourceSlug": "crv-operador",
+      "sourceName": "Operador del catálogo (API)",
+      "totalClaims": 3187,
+      "distinctFields": 11
+    },
+    {
+      "sourceSlug": "el-punk-en-venezuela",
+      "sourceName": "El Punk En Venezuela",
+      "totalClaims": 73,
+      "distinctFields": 8
+    },
+    {
+      "sourceSlug": "hippito-y-sus-chatarritas",
+      "sourceName": "Hippito y Sus Chatarritas",
+      "totalClaims": 130460,
+      "distinctFields": 19
+    },
+    {
+      "sourceSlug": "rhv-blogspot",
+      "sourceName": "RHV Blogspot",
+      "totalClaims": 126,
+      "distinctFields": 6
+    },
+    {
+      "sourceSlug": "rock-de-vzla",
+      "sourceName": "Rock De Vzla",
+      "totalClaims": 54076,
+      "distinctFields": 12
+    },
+    {
+      "sourceSlug": "rock-hecho-en-venezuela",
+      "sourceName": "Rock Hecho En Venezuela",
+      "totalClaims": 8,
+      "distinctFields": 2
+    },
+    {
+      "sourceSlug": "rockzuela",
+      "sourceName": "Rockzuela",
+      "totalClaims": 5326,
+      "distinctFields": 9
+    },
+    {
+      "sourceSlug": "youtube-data-api",
+      "sourceName": "YouTube Data API v3",
+      "totalClaims": 135825,
+      "distinctFields": 18
+    },
+    {
+      "sourceSlug": "yt-master-seed",
+      "sourceName": "YT Master Spreadsheet (seed interno)",
+      "totalClaims": 6098,
+      "distinctFields": 6
+    }
+  ]
+}

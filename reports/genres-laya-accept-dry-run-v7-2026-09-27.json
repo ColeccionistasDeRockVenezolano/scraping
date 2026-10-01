@@ -1,0 +1,48 @@
+{
+  "mode": "dry-run",
+  "threshold": 0,
+  "runId": 10438,
+  "predictions": 7,
+  "accepted": [
+    {
+      "caseId": "artist:1507",
+      "genre": "jazz",
+      "probability": 0.5844
+    },
+    {
+      "caseId": "artist:1516",
+      "genre": "rock",
+      "probability": 0.8979
+    },
+    {
+      "caseId": "artist:1535",
+      "genre": "hip-hop",
+      "probability": 0.7015
+    },
+    {
+      "caseId": "artist:1578",
+      "genre": "rock-and-roll",
+      "probability": 0.9998
+    },
+    {
+      "caseId": "artist:751",
+      "genre": "grindcore",
+      "probability": 0.9138
+    },
+    {
+      "caseId": "artist:1160",
+      "genre": "oi",
+      "probability": 0.9927
+    },
+    {
+      "caseId": "artist:1040",
+      "genre": "rock",
+      "probability": 0.7021
+    }
+  ],
+  "belowThreshold": 0,
+  "abstained": 0,
+  "errors": 0,
+  "alreadyClassified": 0,
+  "failed": []
+}

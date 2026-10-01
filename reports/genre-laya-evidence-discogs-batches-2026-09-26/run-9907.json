@@ -1,0 +1,470 @@
+{
+  "targetIds": [
+    3387,
+    3718,
+    2687,
+    2499,
+    3288,
+    2974,
+    3845,
+    4140,
+    2807,
+    4254,
+    4259,
+    2443,
+    3263,
+    3332,
+    4825,
+    2017,
+    2197,
+    2638,
+    2879,
+    2984
+  ],
+  "sourceSlug": "discogs",
+  "level": "album",
+  "scope": "targets",
+  "mode": "confirm",
+  "runId": 9907,
+  "importId": 31,
+  "candidates": 20,
+  "identities": {
+    "matched": 1,
+    "ambiguous": 4,
+    "none": 15
+  },
+  "suggestions": {
+    "inserted": 2,
+    "skipped": 0
+  },
+  "agreement": {
+    "agree": 0,
+    "family_agree": 0,
+    "disagree": 0,
+    "no_reference": 1
+  },
+  "precision": null,
+  "noise": {
+    "not_a_genre": 1
+  },
+  "coverageAdded": 1,
+  "cases": {
+    "opened": 4,
+    "byKind": {
+      "external_ambiguous_identity": 4
+    }
+  },
+  "network": {
+    "requests": 61,
+    "cacheHits": 22
+  },
+  "entities": [
+    {
+      "kind": "album",
+      "entityId": 2017,
+      "title": "Desde Cero",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2197,
+      "title": "1st Shot",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "2494413",
+        "externalName": "Onechot",
+        "score": 0.6,
+        "signals": [
+          "name_exact (Onechot)",
+          "discography_partial (1st Shot)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.6 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 2443,
+      "title": "Las Naciones Unidas 'El Album'",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: la fuente no devolvió candidatos"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2499,
+      "title": "Beat and Psych",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2638,
+      "title": "Ska Jazz Venezolano",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2687,
+      "title": "8 Way's Split of sadistik shit",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: la fuente no devolvió candidatos"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2807,
+      "title": "V.A Latinoamerica Thrashing the World",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2879,
+      "title": "Jugando Vivo/Yo Contra el Mundo",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "960982",
+        "externalName": "Guerrilla Seca",
+        "score": 0.75,
+        "signals": [
+          "name_exact (Guerrilla Seca)",
+          "discography_strong (La Realidad mas Real · Libre Pero Preso)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.75 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 2974,
+      "title": "Todo Es Una Mierda",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: la fuente no devolvió candidatos"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2984,
+      "title": "EP",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: la fuente no devolvió candidatos"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 3263,
+      "title": "Lujos Y Detalles",
+      "identity": {
+        "status": "matched",
+        "externalId": "release:10303439",
+        "externalName": "Lujos Y Detalles",
+        "score": 0.9,
+        "signals": [
+          "artist_confirmed (5763680)",
+          "title_exact (Lujos Y Detalles)",
+          "year_exact (2010)"
+        ],
+        "reason": "artist_confirmed + title_exact + year_exact"
+      },
+      "values": [
+        {
+          "raw": "Pop Rap",
+          "status": "proposed",
+          "genreSlug": "hip-hop",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Vocal",
+          "status": "not_a_genre",
+          "genreSlug": null,
+          "reason": "«vocal» no es un género"
+        },
+        {
+          "raw": "Pop",
+          "status": "proposed",
+          "genreSlug": "pop",
+          "reason": "propuesta nueva para revisión"
+        }
+      ],
+      "suggested": [
+        "hip-hop",
+        "pop"
+      ],
+      "agreement": "no_reference",
+      "agreementDetail": "CRV no tiene principal confirmado para comparar",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 3288,
+      "title": "de siempre",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "989795",
+        "externalName": "Apatia No",
+        "score": 0.7,
+        "signals": [
+          "name_normalized (Apatia No)",
+          "discography_strong (El Ruido de Antes Contra los Opresores de Siempre · Fronteras)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.7 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 3332,
+      "title": "Bands Vol.1",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: la fuente no devolvió candidatos"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 3387,
+      "title": "Brainwashing",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 3718,
+      "title": "30 Super Exitos",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "1959356",
+        "externalName": "Rudy Marquez",
+        "score": 0.8,
+        "signals": [
+          "name_normalized (Rudy Marquez)",
+          "discography_strong (18 títulos: Amante Mía · Amorosamente, Boleros · Cariñosamente de... · Confesiones · Cuando Muere El Amor)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.8 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 3845,
+      "title": "Flor De Fuego (CD/DVD)",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 4140,
+      "title": "Escalofrío II",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 4254,
+      "title": "CD Colección (2 CDs)",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 4259,
+      "title": "Ilan C. En Vivo (Gira Nac. Amor Vzlano)",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 4825,
+      "title": "Radio Caracas 750 Cincuentenaria",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    }
+  ],
+  "errors": []
+}

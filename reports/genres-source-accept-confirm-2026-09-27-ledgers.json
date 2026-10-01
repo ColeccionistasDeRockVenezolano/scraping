@@ -1,0 +1,89 @@
+{
+  "mode": "confirm",
+  "runId": 10401,
+  "candidates": 23,
+  "accepted": [
+    {
+      "caseId": "album:2125",
+      "title": "Paul Gillman — Cuauhtemoc",
+      "source": "itunes",
+      "raw": [
+        "Pop Latino"
+      ],
+      "primary": "pop-latino",
+      "secondaries": []
+    },
+    {
+      "caseId": "album:2176",
+      "title": "Desierto Porno — Imposible",
+      "source": "itunes",
+      "raw": [
+        "Indie Pop"
+      ],
+      "primary": "pop",
+      "secondaries": []
+    },
+    {
+      "caseId": "album:2419",
+      "title": "Overlook Suite — Tentempié",
+      "source": "itunes",
+      "raw": [
+        "Alternative"
+      ],
+      "primary": "rock-alternativo",
+      "secondaries": []
+    },
+    {
+      "caseId": "album:2890",
+      "title": "Somos Héroes — Inténtalo Otra Vez",
+      "source": "itunes",
+      "raw": [
+        "Pop"
+      ],
+      "primary": "pop",
+      "secondaries": []
+    },
+    {
+      "caseId": "album:3278",
+      "title": "Tan Frió el Verano — Invierno",
+      "source": "itunes",
+      "raw": [
+        "Ambient"
+      ],
+      "primary": "ambient",
+      "secondaries": []
+    },
+    {
+      "caseId": "album:4815",
+      "title": "Henry Stephen — I Don't Know... Yo No Sé",
+      "source": "itunes",
+      "raw": [
+        "Pop Latino"
+      ],
+      "primary": "pop-latino",
+      "secondaries": []
+    }
+  ],
+  "alreadyClassified": [
+    "album:93",
+    "album:281",
+    "album:522",
+    "album:96",
+    "album:135",
+    "album:512",
+    "album:635",
+    "album:1950",
+    "album:2028",
+    "album:2420",
+    "album:2978",
+    "album:4361",
+    "album:4427",
+    "album:2152",
+    "album:2163",
+    "album:2657",
+    "album:2772"
+  ],
+  "unresolved": [],
+  "errors": [],
+  "moreSpecificExists": []
+}

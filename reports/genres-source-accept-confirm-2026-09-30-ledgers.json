@@ -1,0 +1,31 @@
+{
+  "mode": "confirm",
+  "runId": 10703,
+  "candidates": 2,
+  "accepted": [
+    {
+      "caseId": "album:589",
+      "title": "Various Artists — Venezuela Electrónica Vol. 3 \"Mestizo\"",
+      "source": "oidossucios",
+      "raw": [
+        "Electrónica"
+      ],
+      "primary": "electronica",
+      "secondaries": []
+    },
+    {
+      "caseId": "album:487",
+      "title": "Various Artists — Simón Díaz Remixes",
+      "source": "discosvenezolanos",
+      "raw": [
+        "Electrónica"
+      ],
+      "primary": "electronica",
+      "secondaries": []
+    }
+  ],
+  "alreadyClassified": [],
+  "unresolved": [],
+  "errors": [],
+  "moreSpecificExists": []
+}

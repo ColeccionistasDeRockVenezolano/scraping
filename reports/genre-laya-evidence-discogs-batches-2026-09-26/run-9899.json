@@ -1,0 +1,571 @@
+{
+  "targetIds": [
+    488,
+    509,
+    512,
+    549,
+    635,
+    636,
+    647,
+    666,
+    599,
+    201,
+    295,
+    192,
+    220,
+    351,
+    466,
+    467,
+    471,
+    481,
+    492,
+    499
+  ],
+  "sourceSlug": "discogs",
+  "level": "album",
+  "scope": "targets",
+  "mode": "confirm",
+  "runId": 9899,
+  "importId": 23,
+  "candidates": 20,
+  "identities": {
+    "matched": 4,
+    "ambiguous": 5,
+    "none": 11
+  },
+  "suggestions": {
+    "inserted": 10,
+    "skipped": 0
+  },
+  "agreement": {
+    "agree": 0,
+    "family_agree": 0,
+    "disagree": 0,
+    "no_reference": 4
+  },
+  "precision": null,
+  "noise": {
+    "unmapped": 1
+  },
+  "coverageAdded": 4,
+  "cases": {
+    "opened": 3,
+    "byKind": {
+      "external_ambiguous_identity": 2,
+      "external_unmapped_term": 1
+    }
+  },
+  "network": {
+    "requests": 27,
+    "cacheHits": 59
+  },
+  "entities": [
+    {
+      "kind": "album",
+      "entityId": 192,
+      "title": "Ibérica & Latina",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "4529505",
+        "externalName": "Gaélica",
+        "score": 0.7,
+        "signals": [
+          "name_normalized (Gaélica)",
+          "discography_strong (I / O · Ibérica & Latina)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.7 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 201,
+      "title": "Lunes",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "3160000",
+        "externalName": "Iguanas De Trapo",
+        "score": 0.72,
+        "signals": [
+          "name_exact (Iguanas De Trapo)",
+          "discography_partial (Lunes)",
+          "members (Carlos Marrero)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.72 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 220,
+      "title": "Tides",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 295,
+      "title": ".22",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 351,
+      "title": "Los Six",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 466,
+      "title": "Mulato",
+      "identity": {
+        "status": "matched",
+        "externalId": "master:1363321",
+        "externalName": "Mulato",
+        "score": 0.9,
+        "signals": [
+          "artist_confirmed (1214064)",
+          "title_exact (Mulato)",
+          "year_exact (1996)"
+        ],
+        "reason": "artist_confirmed + title_exact + year_exact"
+      },
+      "values": [
+        {
+          "raw": "Reggae",
+          "status": "proposed",
+          "genreSlug": "reggae",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Electronic",
+          "status": "proposed",
+          "genreSlug": "electronica",
+          "reason": "propuesta nueva para revisión"
+        }
+      ],
+      "suggested": [
+        "reggae",
+        "electronica"
+      ],
+      "agreement": "no_reference",
+      "agreementDetail": "CRV no tiene principal confirmado para comparar",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 467,
+      "title": "Exposé",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "4868145",
+        "externalName": "Nana Cadavieco",
+        "score": 0.6,
+        "signals": [
+          "name_exact (Nana Cadavieco)",
+          "discography_partial (Exposé)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.6 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 471,
+      "title": "Origami",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: la fuente no devolvió candidatos"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 481,
+      "title": "Nada Más Ser",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 488,
+      "title": "Tsee Mud... Bacro... LSD (1968-1971)",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 492,
+      "title": "Jayeche",
+      "identity": {
+        "status": "matched",
+        "externalId": "master:596188",
+        "externalName": "Jayeche",
+        "score": 0.9,
+        "signals": [
+          "artist_confirmed (1528489)",
+          "title_exact (Jayeche)",
+          "year_exact (1975)"
+        ],
+        "reason": "artist_confirmed + title_exact + year_exact"
+      },
+      "values": [
+        {
+          "raw": "Latin",
+          "status": "proposed",
+          "genreSlug": "fusion-latina",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Prog Rock",
+          "status": "proposed",
+          "genreSlug": "rock-progresivo",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Space Rock",
+          "status": "unmapped",
+          "genreSlug": null,
+          "reason": "sin equivalencia en la taxonomía aprobada"
+        },
+        {
+          "raw": "Electronic",
+          "status": "proposed",
+          "genreSlug": "electronica",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Rock",
+          "status": "proposed",
+          "genreSlug": "rock",
+          "reason": "propuesta nueva para revisión"
+        }
+      ],
+      "suggested": [
+        "fusion-latina",
+        "rock-progresivo",
+        "electronica"
+      ],
+      "agreement": "no_reference",
+      "agreementDetail": "CRV no tiene principal confirmado para comparar",
+      "casesOpened": [
+        "external_unmapped_term"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 499,
+      "title": "Yordano",
+      "identity": {
+        "status": "matched",
+        "externalId": "master:756524",
+        "externalName": "Yordano",
+        "score": 0.9,
+        "signals": [
+          "artist_confirmed (1214070)",
+          "title_exact (Yordano)",
+          "year_exact (1984)"
+        ],
+        "reason": "artist_confirmed + title_exact + year_exact"
+      },
+      "values": [
+        {
+          "raw": "Pop Rock",
+          "status": "proposed",
+          "genreSlug": "pop-rock",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Ballad",
+          "status": "proposed",
+          "genreSlug": "balada",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Rock",
+          "status": "proposed",
+          "genreSlug": "rock",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Latin",
+          "status": "proposed",
+          "genreSlug": "fusion-latina",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Pop",
+          "status": "proposed",
+          "genreSlug": "pop",
+          "reason": "propuesta nueva para revisión"
+        }
+      ],
+      "suggested": [
+        "pop-rock",
+        "balada",
+        "rock"
+      ],
+      "agreement": "no_reference",
+      "agreementDetail": "CRV no tiene principal confirmado para comparar",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 509,
+      "title": "Alboom!",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 512,
+      "title": "Play With Me",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 549,
+      "title": "IV Festival Nuevas Bandas",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "1989410",
+        "externalName": "Dermis Tatú",
+        "score": 0.6,
+        "signals": [
+          "name_exact (Dermis Tatú)",
+          "discography_partial (La Violó La Mató y La Picó)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.6 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 599,
+      "title": "Taguara's Forever",
+      "identity": {
+        "status": "matched",
+        "externalId": "master:1412944",
+        "externalName": "Taguara's Forever",
+        "score": 0.9,
+        "signals": [
+          "artist_confirmed (1989413)",
+          "title_exact (Taguara's Forever)",
+          "year_exact (2000)"
+        ],
+        "reason": "artist_confirmed + title_exact + year_exact"
+      },
+      "values": [
+        {
+          "raw": "Rockabilly",
+          "status": "proposed",
+          "genreSlug": "rockabilly",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Rock",
+          "status": "proposed",
+          "genreSlug": "rock",
+          "reason": "propuesta nueva para revisión"
+        }
+      ],
+      "suggested": [
+        "rockabilly",
+        "rock"
+      ],
+      "agreement": "no_reference",
+      "agreementDetail": "CRV no tiene principal confirmado para comparar",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 635,
+      "title": "Isa TKM",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 636,
+      "title": "En Vivo Plaza Alfredo Sadel",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 647,
+      "title": "Vol. 4: Música Popular y Folklórica Venezolana",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "2069610",
+        "externalName": "Serenata Guayanesa",
+        "score": 0.6,
+        "signals": [
+          "name_exact (Serenata Guayanesa)",
+          "discography_partial (Vol. 3: Música Popular y Folklórica Venezolana)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.6 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 666,
+      "title": "Despues De La Tormenta",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,1737 @@
+{
+  "sourceSlug": "discogs",
+  "level": "album",
+  "scope": "targets",
+  "mode": "dry-run",
+  "runId": 10361,
+  "importId": 208,
+  "candidates": 37,
+  "identities": {
+    "matched": 37,
+    "ambiguous": 0,
+    "none": 0
+  },
+  "suggestions": {
+    "inserted": 4,
+    "skipped": 0
+  },
+  "agreement": {
+    "agree": 36,
+    "family_agree": 0,
+    "disagree": 1,
+    "no_reference": 0
+  },
+  "precision": 0.973,
+  "noise": {
+    "too_generic": 14,
+    "not_a_genre": 13
+  },
+  "coverageAdded": 0,
+  "cases": {
+    "opened": 0,
+    "byKind": {}
+  },
+  "network": {
+    "requests": 0,
+    "cacheHits": 37
+  },
+  "entities": [
+    {
+      "kind": "album",
+      "entityId": 81,
+      "title": "Somos Jóvenes Me Quiero Divertir",
+      "identity": {
+        "status": "matched",
+        "externalId": "release:22793600",
+        "externalName": null,
+        "score": 1,
+        "signals": [
+          "identidad ya resuelta"
+        ],
+        "reason": "identidad guardada"
+      },
+      "values": [
+        {
+          "raw": "Power Pop",
+          "status": "already_known",
+          "genreSlug": "power-pop",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Rock",
+          "status": "already_known",
+          "genreSlug": "rock",
+          "reason": "CRV ya lo tiene en la ficha"
+        }
+      ],
+      "suggested": [],
+      "agreement": "agree",
+      "agreementDetail": "la fuente nombra el principal confirmado (rock)",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 192,
+      "title": "Ibérica & Latina",
+      "identity": {
+        "status": "matched",
+        "externalId": "release:15271078",
+        "externalName": null,
+        "score": 1,
+        "signals": [
+          "identidad ya resuelta"
+        ],
+        "reason": "identidad guardada"
+      },
+      "values": [
+        {
+          "raw": "Celtic",
+          "status": "already_known",
+          "genreSlug": "folk-celta",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Electronic",
+          "status": "already_known",
+          "genreSlug": "electronica",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Folk, World, & Country",
+          "status": "already_known",
+          "genreSlug": "folk",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Folk, World, & Country",
+          "status": "already_known",
+          "genreSlug": "world-ethnic",
+          "reason": "CRV ya lo tiene en la ficha"
+        }
+      ],
+      "suggested": [],
+      "agreement": "agree",
+      "agreementDetail": "la fuente nombra el principal confirmado (electronica)",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 299,
+      "title": "Ashanty Granpa",
+      "identity": {
+        "status": "matched",
+        "externalId": "master:1938060",
+        "externalName": null,
+        "score": 1,
+        "signals": [
+          "identidad ya resuelta"
+        ],
+        "reason": "identidad guardada"
+      },
+      "values": [
+        {
+          "raw": "Dub",
+          "status": "already_known",
+          "genreSlug": "reggae",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Ragga",
+          "status": "already_known",
+          "genreSlug": "ragga",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Roots Reggae",
+          "status": "already_known",
+          "genreSlug": "roots-reggae",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Hip Hop",
+          "status": "already_known",
+          "genreSlug": "hip-hop",
+          "reason": "CRV ya lo tiene en la ficha"
+        }
+      ],
+      "suggested": [],
+      "agreement": "agree",
+      "agreementDetail": "la fuente nombra el principal confirmado (reggae)",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 403,
+      "title": "El Proceso Del Deseo",
+      "identity": {
+        "status": "matched",
+        "externalId": "release:6688350",
+        "externalName": null,
+        "score": 1,
+        "signals": [
+          "identidad ya resuelta"
+        ],
+        "reason": "identidad guardada"
+      },
+      "values": [
+        {
+          "raw": "Experimental",
+          "status": "already_known",
+          "genreSlug": "experimental",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Ambient",
+          "status": "already_known",
+          "genreSlug": "ambient",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Synth-pop",
+          "status": "already_known",
+          "genreSlug": "synth-pop",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Electronic",
+          "status": "too_generic",
+          "genreSlug": "electronica",
+          "reason": "CRV ya tiene un género hijo confirmado de esa familia"
+        }
+      ],
+      "suggested": [],
+      "agreement": "agree",
+      "agreementDetail": "la fuente nombra el principal confirmado (ambient)",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 439,
+      "title": "De Vuelta Al Ska",
+      "identity": {
+        "status": "matched",
+        "externalId": "release:13258108",
+        "externalName": null,
+        "score": 1,
+        "signals": [
+          "identidad ya resuelta"
+        ],
+        "reason": "identidad guardada"
+      },
+      "values": [
+        {
+          "raw": "Ska",
+          "status": "already_known",
+          "genreSlug": "ska",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Rocksteady",
+          "status": "already_known",
+          "genreSlug": "rocksteady",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Reggae",
+          "status": "already_known",
+          "genreSlug": "reggae",
+          "reason": "CRV ya lo tiene en la ficha"
+        }
+      ],
+      "suggested": [],
+      "agreement": "agree",
+      "agreementDetail": "la fuente nombra el principal confirmado (ska)",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 446,
+      "title": "Nada Es Igual",
+      "identity": {
+        "status": "matched",
+        "externalId": "master:1054027",
+        "externalName": null,
+        "score": 1,
+        "signals": [
+          "identidad ya resuelta"
+        ],
+        "reason": "identidad guardada"
+      },
+      "values": [
+        {
+          "raw": "Ballad",
+          "status": "already_known",
+          "genreSlug": "balada",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Bachata",
+          "status": "already_known",
+          "genreSlug": "bachata",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Reggae",
+          "status": "already_known",
+          "genreSlug": "reggae",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Latin",
+          "status": "already_known",
+          "genreSlug": "fusion-latina",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Blues",
+          "status": "already_known",
+          "genreSlug": "blues",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Pop",
+          "status": "already_known",
+          "genreSlug": "pop",
+          "reason": "CRV ya lo tiene en la ficha"
+        }
+      ],
+      "suggested": [],
+      "agreement": "disagree",
+      "agreementDetail": "la fuente propone balada, bachata, reggae, fusion-latina, blues, pop frente al principal pop-rock",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 449,
+      "title": "Cae Nieve En Caracas",
+      "identity": {
+        "status": "matched",
+        "externalId": "release:1823058",
+        "externalName": null,
+        "score": 1,
+        "signals": [
+          "identidad ya resuelta"
+        ],
+        "reason": "identidad guardada"
+      },
+      "values": [
+        {
+          "raw": "Tech House",
+          "status": "already_known",
+          "genreSlug": "tech-house",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Electronic",
+          "status": "already_known",
+          "genreSlug": "electronica",
+          "reason": "CRV ya lo tiene en la ficha"
+        }
+      ],
+      "suggested": [],
+      "agreement": "agree",
+      "agreementDetail": "la fuente nombra el principal confirmado (electronica)",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 464,
+      "title": "Manual De Buenas Costumbres",
+      "identity": {
+        "status": "matched",
+        "externalId": "release:16813827",
+        "externalName": null,
+        "score": 1,
+        "signals": [
+          "identidad ya resuelta"
+        ],
+        "reason": "identidad guardada"
+      },
+      "values": [
+        {
+          "raw": "Indie Rock",
+          "status": "already_known",
+          "genreSlug": "indie-rock",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Jangle Pop",
+          "status": "already_known",
+          "genreSlug": "jangle-pop",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Rock",
+          "status": "too_generic",
+          "genreSlug": "rock",
+          "reason": "CRV ya tiene un género hijo confirmado de esa familia"
+        }
+      ],
+      "suggested": [],
+      "agreement": "agree",
+      "agreementDetail": "la fuente nombra el principal confirmado (indie-rock)",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 492,
+      "title": "Jayeche",
+      "identity": {
+        "status": "matched",
+        "externalId": "master:596188",
+        "externalName": null,
+        "score": 1,
+        "signals": [
+          "identidad ya resuelta"
+        ],
+        "reason": "identidad guardada"
+      },
+      "values": [
+        {
+          "raw": "Latin",
+          "status": "already_known",
+          "genreSlug": "fusion-latina",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Prog Rock",
+          "status": "already_known",
+          "genreSlug": "rock-progresivo",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Space Rock",
+          "status": "already_known",
+          "genreSlug": "space-rock",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Electronic",
+          "status": "already_known",
+          "genreSlug": "electronica",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Rock",
+          "status": "too_generic",
+          "genreSlug": "rock",
+          "reason": "CRV ya tiene un género hijo confirmado de esa familia"
+        }
+      ],
+      "suggested": [],
+      "agreement": "agree",
+      "agreementDetail": "la fuente nombra el principal confirmado (rock-progresivo)",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 495,
+      "title": "Ofrenda",
+      "identity": {
+        "status": "matched",
+        "externalId": "master:1232355",
+        "externalName": null,
+        "score": 1,
+        "signals": [
+          "identidad ya resuelta"
+        ],
+        "reason": "identidad guardada"
+      },
+      "values": [
+        {
+          "raw": "Fusion",
+          "status": "not_a_genre",
+          "genreSlug": null,
+          "reason": "«fusion» no es un género"
+        },
+        {
+          "raw": "Prog Rock",
+          "status": "already_known",
+          "genreSlug": "rock-progresivo",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Electronic",
+          "status": "already_known",
+          "genreSlug": "electronica",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Jazz",
+          "status": "already_known",
+          "genreSlug": "jazz",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Rock",
+          "status": "too_generic",
+          "genreSlug": "rock",
+          "reason": "CRV ya tiene un género hijo confirmado de esa familia"
+        },
+        {
+          "raw": "Latin",
+          "status": "already_known",
+          "genreSlug": "fusion-latina",
+          "reason": "CRV ya lo tiene en la ficha"
+        }
+      ],
+      "suggested": [],
+      "agreement": "agree",
+      "agreementDetail": "la fuente nombra el principal confirmado (rock-progresivo)",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 505,
+      "title": "Guía Para La Acción",
+      "identity": {
+        "status": "matched",
+        "externalId": "release:26382782",
+        "externalName": null,
+        "score": 1,
+        "signals": [
+          "identidad ya resuelta"
+        ],
+        "reason": "identidad guardada"
+      },
+      "values": [
+        {
+          "raw": "Boom Bap",
+          "status": "already_known",
+          "genreSlug": "boom-bap",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Hip Hop",
+          "status": "already_known",
+          "genreSlug": "hip-hop",
+          "reason": "CRV ya lo tiene en la ficha"
+        }
+      ],
+      "suggested": [],
+      "agreement": "agree",
+      "agreementDetail": "la fuente nombra el principal confirmado (hip-hop)",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2033,
+      "title": "Muchas Maravillas Remixes",
+      "identity": {
+        "status": "matched",
+        "externalId": "release:1211917",
+        "externalName": null,
+        "score": 1,
+        "signals": [
+          "identidad ya resuelta"
+        ],
+        "reason": "identidad guardada"
+      },
+      "values": [
+        {
+          "raw": "Deep House",
+          "status": "already_known",
+          "genreSlug": "house",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Tech House",
+          "status": "already_known",
+          "genreSlug": "tech-house",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Minimal",
+          "status": "not_a_genre",
+          "genreSlug": null,
+          "reason": "«minimal» no es un género"
+        },
+        {
+          "raw": "Electronic",
+          "status": "too_generic",
+          "genreSlug": "electronica",
+          "reason": "CRV ya tiene un género hijo confirmado de esa familia"
+        }
+      ],
+      "suggested": [],
+      "agreement": "agree",
+      "agreementDetail": "la fuente nombra el principal confirmado (house)",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2034,
+      "title": "Coctel #5 Cacao, Mujer y Beats",
+      "identity": {
+        "status": "matched",
+        "externalId": "release:14198269",
+        "externalName": null,
+        "score": 1,
+        "signals": [
+          "identidad ya resuelta"
+        ],
+        "reason": "identidad guardada"
+      },
+      "values": [
+        {
+          "raw": "Chillwave",
+          "status": "already_known",
+          "genreSlug": "chillwave",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Latin",
+          "status": "already_known",
+          "genreSlug": "fusion-latina",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Electronic",
+          "status": "already_known",
+          "genreSlug": "electronica",
+          "reason": "CRV ya lo tiene en la ficha"
+        }
+      ],
+      "suggested": [],
+      "agreement": "agree",
+      "agreementDetail": "la fuente nombra el principal confirmado (fusion-latina)",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2141,
+      "title": "Nunca el olvido",
+      "identity": {
+        "status": "matched",
+        "externalId": "release:3446975",
+        "externalName": null,
+        "score": 1,
+        "signals": [
+          "identidad ya resuelta"
+        ],
+        "reason": "identidad guardada"
+      },
+      "values": [
+        {
+          "raw": "Hardcore",
+          "status": "already_known",
+          "genreSlug": "hardcore-punk",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Punk",
+          "status": "too_generic",
+          "genreSlug": "punk",
+          "reason": "CRV ya tiene un género hijo confirmado de esa familia"
+        },
+        {
+          "raw": "Crust",
+          "status": "already_known",
+          "genreSlug": "crust-punk",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Rock",
+          "status": "already_known",
+          "genreSlug": "rock",
+          "reason": "CRV ya lo tiene en la ficha"
+        }
+      ],
+      "suggested": [],
+      "agreement": "agree",
+      "agreementDetail": "la fuente nombra el principal confirmado (hardcore-punk)",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2143,
+      "title": "Blind World",
+      "identity": {
+        "status": "matched",
+        "externalId": "release:4264580",
+        "externalName": null,
+        "score": 1,
+        "signals": [
+          "identidad ya resuelta"
+        ],
+        "reason": "identidad guardada"
+      },
+      "values": [
+        {
+          "raw": "Pop Rap",
+          "status": "already_known",
+          "genreSlug": "hip-hop",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Jazzy Hip-Hop",
+          "status": "already_known",
+          "genreSlug": "jazz-rap",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Funk",
+          "status": "already_known",
+          "genreSlug": "funk",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Reggae",
+          "status": "already_known",
+          "genreSlug": "reggae",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Turntablism",
+          "status": "already_known",
+          "genreSlug": "turntablism",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Rock",
+          "status": "already_known",
+          "genreSlug": "rock",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Latin",
+          "status": "proposed",
+          "genreSlug": "fusion-latina",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Pop",
+          "status": "proposed",
+          "genreSlug": "pop",
+          "reason": "propuesta nueva para revisión"
+        }
+      ],
+      "suggested": [
+        "fusion-latina",
+        "pop"
+      ],
+      "agreement": "agree",
+      "agreementDetail": "la fuente nombra el principal confirmado (funk)",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2151,
+      "title": "Lifestyle Moods",
+      "identity": {
+        "status": "matched",
+        "externalId": "release:34857239",
+        "externalName": null,
+        "score": 1,
+        "signals": [
+          "identidad ya resuelta"
+        ],
+        "reason": "identidad guardada"
+      },
+      "values": [
+        {
+          "raw": "House",
+          "status": "already_known",
+          "genreSlug": "house",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Downtempo",
+          "status": "already_known",
+          "genreSlug": "downtempo",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Future House",
+          "status": "already_known",
+          "genreSlug": "future-house",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Electronic",
+          "status": "too_generic",
+          "genreSlug": "electronica",
+          "reason": "CRV ya tiene un género hijo confirmado de esa familia"
+        },
+        {
+          "raw": "Rock",
+          "status": "already_known",
+          "genreSlug": "rock",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Funk / Soul",
+          "status": "already_known",
+          "genreSlug": "funk",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Funk / Soul",
+          "status": "proposed",
+          "genreSlug": "soul",
+          "reason": "propuesta nueva para revisión"
+        }
+      ],
+      "suggested": [
+        "soul"
+      ],
+      "agreement": "agree",
+      "agreementDetail": "la fuente nombra el principal confirmado (house)",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2348,
+      "title": "Impresiones Sónicas",
+      "identity": {
+        "status": "matched",
+        "externalId": "release:13522396",
+        "externalName": null,
+        "score": 1,
+        "signals": [
+          "identidad ya resuelta"
+        ],
+        "reason": "identidad guardada"
+      },
+      "values": [
+        {
+          "raw": "Electroacoustic",
+          "status": "already_known",
+          "genreSlug": "electroacustica",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Electronic",
+          "status": "already_known",
+          "genreSlug": "electronica",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Classical",
+          "status": "already_known",
+          "genreSlug": "musica-clasica",
+          "reason": "CRV ya lo tiene en la ficha"
+        }
+      ],
+      "suggested": [],
+      "agreement": "agree",
+      "agreementDetail": "la fuente nombra el principal confirmado (electronica)",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2362,
+      "title": "Después de la Tormenta",
+      "identity": {
+        "status": "matched",
+        "externalId": "master:571129",
+        "externalName": null,
+        "score": 1,
+        "signals": [
+          "identidad ya resuelta"
+        ],
+        "reason": "identidad guardada"
+      },
+      "values": [
+        {
+          "raw": "Fusion",
+          "status": "not_a_genre",
+          "genreSlug": null,
+          "reason": "«fusion» no es un género"
+        },
+        {
+          "raw": "Jazz-Funk",
+          "status": "already_known",
+          "genreSlug": "jazz-funk",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Pop Rock",
+          "status": "already_known",
+          "genreSlug": "pop-rock",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Jazz",
+          "status": "already_known",
+          "genreSlug": "jazz",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Rock",
+          "status": "too_generic",
+          "genreSlug": "rock",
+          "reason": "CRV ya tiene un género hijo confirmado de esa familia"
+        },
+        {
+          "raw": "Latin",
+          "status": "already_known",
+          "genreSlug": "fusion-latina",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Funk / Soul",
+          "status": "already_known",
+          "genreSlug": "funk",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Funk / Soul",
+          "status": "proposed",
+          "genreSlug": "soul",
+          "reason": "propuesta nueva para revisión"
+        }
+      ],
+      "suggested": [
+        "soul"
+      ],
+      "agreement": "agree",
+      "agreementDetail": "la fuente nombra el principal confirmado (pop-rock)",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2395,
+      "title": "El Vals del Mar",
+      "identity": {
+        "status": "matched",
+        "externalId": "release:3047705",
+        "externalName": null,
+        "score": 1,
+        "signals": [
+          "identidad ya resuelta"
+        ],
+        "reason": "identidad guardada"
+      },
+      "values": [
+        {
+          "raw": "AOR",
+          "status": "already_known",
+          "genreSlug": "aor",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Soft Rock",
+          "status": "already_known",
+          "genreSlug": "soft-rock",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Latin",
+          "status": "already_known",
+          "genreSlug": "fusion-latina",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Electronic",
+          "status": "already_known",
+          "genreSlug": "electronica",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Rock",
+          "status": "already_known",
+          "genreSlug": "rock",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Pop",
+          "status": "already_known",
+          "genreSlug": "pop",
+          "reason": "CRV ya lo tiene en la ficha"
+        }
+      ],
+      "suggested": [],
+      "agreement": "agree",
+      "agreementDetail": "la fuente nombra el principal confirmado (fusion-latina)",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2431,
+      "title": "Paper Heart",
+      "identity": {
+        "status": "matched",
+        "externalId": "release:1742688",
+        "externalName": null,
+        "score": 1,
+        "signals": [
+          "identidad ya resuelta"
+        ],
+        "reason": "identidad guardada"
+      },
+      "values": [
+        {
+          "raw": "Abstract",
+          "status": "not_a_genre",
+          "genreSlug": null,
+          "reason": "«abstract» no es un género"
+        },
+        {
+          "raw": "Synth-pop",
+          "status": "already_known",
+          "genreSlug": "synth-pop",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Experimental",
+          "status": "already_known",
+          "genreSlug": "experimental",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Electronic",
+          "status": "already_known",
+          "genreSlug": "electronica",
+          "reason": "CRV ya lo tiene en la ficha"
+        }
+      ],
+      "suggested": [],
+      "agreement": "agree",
+      "agreementDetail": "la fuente nombra el principal confirmado (experimental)",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2792,
+      "title": "Cinema",
+      "identity": {
+        "status": "matched",
+        "externalId": "release:6688382",
+        "externalName": null,
+        "score": 1,
+        "signals": [
+          "identidad ya resuelta"
+        ],
+        "reason": "identidad guardada"
+      },
+      "values": [
+        {
+          "raw": "Soundtrack",
+          "status": "not_a_genre",
+          "genreSlug": null,
+          "reason": "«soundtrack» no es un género"
+        },
+        {
+          "raw": "Electronic",
+          "status": "already_known",
+          "genreSlug": "electronica",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Stage & Screen",
+          "status": "not_a_genre",
+          "genreSlug": null,
+          "reason": "«stage & screen» no es un género"
+        }
+      ],
+      "suggested": [],
+      "agreement": "agree",
+      "agreementDetail": "la fuente nombra el principal confirmado (electronica)",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2868,
+      "title": "El Go Go de los Blonders",
+      "identity": {
+        "status": "matched",
+        "externalId": "master:2258203",
+        "externalName": null,
+        "score": 1,
+        "signals": [
+          "identidad ya resuelta"
+        ],
+        "reason": "identidad guardada"
+      },
+      "values": [
+        {
+          "raw": "Garage Rock",
+          "status": "already_known",
+          "genreSlug": "garage-rock",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Surf",
+          "status": "already_known",
+          "genreSlug": "surf-rock",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Rock & Roll",
+          "status": "already_known",
+          "genreSlug": "rock-and-roll",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Rock",
+          "status": "too_generic",
+          "genreSlug": "rock",
+          "reason": "CRV ya tiene un género hijo confirmado de esa familia"
+        }
+      ],
+      "suggested": [],
+      "agreement": "agree",
+      "agreementDetail": "la fuente nombra el principal confirmado (surf-rock)",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2893,
+      "title": "The Golden Flame",
+      "identity": {
+        "status": "matched",
+        "externalId": "release:7841594",
+        "externalName": null,
+        "score": 1,
+        "signals": [
+          "identidad ya resuelta"
+        ],
+        "reason": "identidad guardada"
+      },
+      "values": [
+        {
+          "raw": "Trance",
+          "status": "already_known",
+          "genreSlug": "trance",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "New Age",
+          "status": "already_known",
+          "genreSlug": "new-age",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Electronic",
+          "status": "too_generic",
+          "genreSlug": "electronica",
+          "reason": "CRV ya tiene un género hijo confirmado de esa familia"
+        }
+      ],
+      "suggested": [],
+      "agreement": "agree",
+      "agreementDetail": "la fuente nombra el principal confirmado (new-age)",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2896,
+      "title": "Libre Pero Preso",
+      "identity": {
+        "status": "matched",
+        "externalId": "release:13383558",
+        "externalName": null,
+        "score": 1,
+        "signals": [
+          "identidad ya resuelta"
+        ],
+        "reason": "identidad guardada"
+      },
+      "values": [
+        {
+          "raw": "Gangsta",
+          "status": "already_known",
+          "genreSlug": "gangsta-rap",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Pop Rap",
+          "status": "already_known",
+          "genreSlug": "hip-hop",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Latin",
+          "status": "already_known",
+          "genreSlug": "fusion-latina",
+          "reason": "CRV ya lo tiene en la ficha"
+        }
+      ],
+      "suggested": [],
+      "agreement": "agree",
+      "agreementDetail": "la fuente nombra el principal confirmado (hip-hop)",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2932,
+      "title": "Impresiones Etnosónicas",
+      "identity": {
+        "status": "matched",
+        "externalId": "release:2508806",
+        "externalName": null,
+        "score": 1,
+        "signals": [
+          "identidad ya resuelta"
+        ],
+        "reason": "identidad guardada"
+      },
+      "values": [
+        {
+          "raw": "New Age",
+          "status": "already_known",
+          "genreSlug": "new-age",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Tribal",
+          "status": "not_a_genre",
+          "genreSlug": null,
+          "reason": "«tribal» no es un género"
+        },
+        {
+          "raw": "Ambient",
+          "status": "already_known",
+          "genreSlug": "ambient",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Experimental",
+          "status": "already_known",
+          "genreSlug": "experimental",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Field Recording",
+          "status": "not_a_genre",
+          "genreSlug": null,
+          "reason": "«field recording» no es un género"
+        },
+        {
+          "raw": "Electronic",
+          "status": "too_generic",
+          "genreSlug": "electronica",
+          "reason": "CRV ya tiene un género hijo confirmado de esa familia"
+        }
+      ],
+      "suggested": [],
+      "agreement": "agree",
+      "agreementDetail": "la fuente nombra el principal confirmado (new-age)",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2934,
+      "title": "Noctámbulo",
+      "identity": {
+        "status": "matched",
+        "externalId": "release:15946107",
+        "externalName": null,
+        "score": 1,
+        "signals": [
+          "identidad ya resuelta"
+        ],
+        "reason": "identidad guardada"
+      },
+      "values": [
+        {
+          "raw": "Latin Jazz",
+          "status": "already_known",
+          "genreSlug": "jazz-latino",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Easy Listening",
+          "status": "already_known",
+          "genreSlug": "easy-listening",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Jazz",
+          "status": "already_known",
+          "genreSlug": "jazz",
+          "reason": "CRV ya lo tiene en la ficha"
+        }
+      ],
+      "suggested": [],
+      "agreement": "agree",
+      "agreementDetail": "la fuente nombra el principal confirmado (jazz)",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2940,
+      "title": "Que Sea Para Siempre",
+      "identity": {
+        "status": "matched",
+        "externalId": "release:4514473",
+        "externalName": null,
+        "score": 1,
+        "signals": [
+          "identidad ya resuelta"
+        ],
+        "reason": "identidad guardada"
+      },
+      "values": [
+        {
+          "raw": "Afro-Cuban Jazz",
+          "status": "already_known",
+          "genreSlug": "jazz-afrocubano",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Latin Jazz",
+          "status": "already_known",
+          "genreSlug": "jazz-latino",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Jazz-Funk",
+          "status": "already_known",
+          "genreSlug": "jazz-funk",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Jazz",
+          "status": "already_known",
+          "genreSlug": "jazz",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Latin",
+          "status": "already_known",
+          "genreSlug": "fusion-latina",
+          "reason": "CRV ya lo tiene en la ficha"
+        }
+      ],
+      "suggested": [],
+      "agreement": "agree",
+      "agreementDetail": "la fuente nombra el principal confirmado (jazz)",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2964,
+      "title": "A cada 11 le llega su 13",
+      "identity": {
+        "status": "matched",
+        "externalId": "release:9806534",
+        "externalName": null,
+        "score": 1,
+        "signals": [
+          "identidad ya resuelta"
+        ],
+        "reason": "identidad guardada"
+      },
+      "values": [
+        {
+          "raw": "Salsa",
+          "status": "already_known",
+          "genreSlug": "salsa",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Guaguancó",
+          "status": "already_known",
+          "genreSlug": "guaguanco",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Hip Hop",
+          "status": "already_known",
+          "genreSlug": "hip-hop",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Latin",
+          "status": "too_generic",
+          "genreSlug": "fusion-latina",
+          "reason": "CRV ya tiene un género hijo confirmado de esa familia"
+        }
+      ],
+      "suggested": [],
+      "agreement": "agree",
+      "agreementDetail": "la fuente nombra el principal confirmado (salsa)",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2989,
+      "title": "Total Blues Fusion",
+      "identity": {
+        "status": "matched",
+        "externalId": "release:26083318",
+        "externalName": null,
+        "score": 1,
+        "signals": [
+          "identidad ya resuelta"
+        ],
+        "reason": "identidad guardada"
+      },
+      "values": [
+        {
+          "raw": "Harmonica Blues",
+          "status": "already_known",
+          "genreSlug": "harmonica-blues",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Blues",
+          "status": "already_known",
+          "genreSlug": "blues",
+          "reason": "CRV ya lo tiene en la ficha"
+        }
+      ],
+      "suggested": [],
+      "agreement": "agree",
+      "agreementDetail": "la fuente nombra el principal confirmado (blues)",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 3074,
+      "title": "Bailando con los Gallos",
+      "identity": {
+        "status": "matched",
+        "externalId": "release:9789919",
+        "externalName": null,
+        "score": 1,
+        "signals": [
+          "identidad ya resuelta"
+        ],
+        "reason": "identidad guardada"
+      },
+      "values": [
+        {
+          "raw": "Joropo",
+          "status": "already_known",
+          "genreSlug": "joropo",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Rock",
+          "status": "already_known",
+          "genreSlug": "rock",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Latin",
+          "status": "already_known",
+          "genreSlug": "fusion-latina",
+          "reason": "CRV ya lo tiene en la ficha"
+        }
+      ],
+      "suggested": [],
+      "agreement": "agree",
+      "agreementDetail": "la fuente nombra el principal confirmado (rock)",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 3208,
+      "title": "Un Bolón",
+      "identity": {
+        "status": "matched",
+        "externalId": "release:14745859",
+        "externalName": null,
+        "score": 1,
+        "signals": [
+          "identidad ya resuelta"
+        ],
+        "reason": "identidad guardada"
+      },
+      "values": [
+        {
+          "raw": "Cumbia",
+          "status": "already_known",
+          "genreSlug": "cumbia",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Rock",
+          "status": "already_known",
+          "genreSlug": "rock",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Latin",
+          "status": "already_known",
+          "genreSlug": "fusion-latina",
+          "reason": "CRV ya lo tiene en la ficha"
+        }
+      ],
+      "suggested": [],
+      "agreement": "agree",
+      "agreementDetail": "la fuente nombra el principal confirmado (rock)",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 3274,
+      "title": "All Clear",
+      "identity": {
+        "status": "matched",
+        "externalId": "release:950657",
+        "externalName": null,
+        "score": 1,
+        "signals": [
+          "identidad ya resuelta"
+        ],
+        "reason": "identidad guardada"
+      },
+      "values": [
+        {
+          "raw": "Glitch",
+          "status": "already_known",
+          "genreSlug": "glitch",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "IDM",
+          "status": "already_known",
+          "genreSlug": "idm",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Synth-pop",
+          "status": "already_known",
+          "genreSlug": "synth-pop",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Electronic",
+          "status": "already_known",
+          "genreSlug": "electronica",
+          "reason": "CRV ya lo tiene en la ficha"
+        }
+      ],
+      "suggested": [],
+      "agreement": "agree",
+      "agreementDetail": "la fuente nombra el principal confirmado (electronica)",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 3733,
+      "title": "Hay Algo Sinfónico Entre Tu y Yo",
+      "identity": {
+        "status": "matched",
+        "externalId": "release:15077119",
+        "externalName": null,
+        "score": 1,
+        "signals": [
+          "identidad ya resuelta"
+        ],
+        "reason": "identidad guardada"
+      },
+      "values": [
+        {
+          "raw": "Contemporary",
+          "status": "not_a_genre",
+          "genreSlug": null,
+          "reason": "«contemporary» no es un género"
+        },
+        {
+          "raw": "Pop Rock",
+          "status": "already_known",
+          "genreSlug": "pop-rock",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Rock",
+          "status": "too_generic",
+          "genreSlug": "rock",
+          "reason": "CRV ya tiene un género hijo confirmado de esa familia"
+        },
+        {
+          "raw": "Pop",
+          "status": "already_known",
+          "genreSlug": "pop",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Classical",
+          "status": "already_known",
+          "genreSlug": "musica-clasica",
+          "reason": "CRV ya lo tiene en la ficha"
+        }
+      ],
+      "suggested": [],
+      "agreement": "agree",
+      "agreementDetail": "la fuente nombra el principal confirmado (pop-rock)",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 3978,
+      "title": "Pa' Fuera",
+      "identity": {
+        "status": "matched",
+        "externalId": "master:1482824",
+        "externalName": null,
+        "score": 1,
+        "signals": [
+          "identidad ya resuelta"
+        ],
+        "reason": "identidad guardada"
+      },
+      "values": [
+        {
+          "raw": "Ska",
+          "status": "already_known",
+          "genreSlug": "ska",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Cuatro",
+          "status": "not_a_genre",
+          "genreSlug": null,
+          "reason": "«cuatro» no es un género"
+        },
+        {
+          "raw": "Reggae",
+          "status": "already_known",
+          "genreSlug": "reggae",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Latin",
+          "status": "already_known",
+          "genreSlug": "fusion-latina",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Folk, World, & Country",
+          "status": "already_known",
+          "genreSlug": "folk",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Folk, World, & Country",
+          "status": "already_known",
+          "genreSlug": "world-ethnic",
+          "reason": "CRV ya lo tiene en la ficha"
+        }
+      ],
+      "suggested": [],
+      "agreement": "agree",
+      "agreementDetail": "la fuente nombra el principal confirmado (ska)",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 4015,
+      "title": "Bolumen 4 / Al Día Siguiente",
+      "identity": {
+        "status": "matched",
+        "externalId": "release:4922885",
+        "externalName": null,
+        "score": 1,
+        "signals": [
+          "identidad ya resuelta"
+        ],
+        "reason": "identidad guardada"
+      },
+      "values": [
+        {
+          "raw": "Comedy",
+          "status": "not_a_genre",
+          "genreSlug": null,
+          "reason": "«comedy» no es un género"
+        },
+        {
+          "raw": "Latin",
+          "status": "already_known",
+          "genreSlug": "fusion-latina",
+          "reason": "CRV ya lo tiene en la ficha"
+        }
+      ],
+      "suggested": [],
+      "agreement": "agree",
+      "agreementDetail": "la fuente nombra el principal confirmado (fusion-latina)",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 4108,
+      "title": "Canciones Para Mis Pequeños Amigos",
+      "identity": {
+        "status": "matched",
+        "externalId": "master:3180144",
+        "externalName": null,
+        "score": 1,
+        "signals": [
+          "identidad ya resuelta"
+        ],
+        "reason": "identidad guardada"
+      },
+      "values": [
+        {
+          "raw": "Ballad",
+          "status": "already_known",
+          "genreSlug": "balada",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Nursery Rhymes",
+          "status": "not_a_genre",
+          "genreSlug": null,
+          "reason": "«nursery rhymes» no es un género"
+        },
+        {
+          "raw": "Pop",
+          "status": "too_generic",
+          "genreSlug": "pop",
+          "reason": "CRV ya tiene un género hijo confirmado de esa familia"
+        },
+        {
+          "raw": "Children's",
+          "status": "not_a_genre",
+          "genreSlug": null,
+          "reason": "«childrens» no es un género"
+        }
+      ],
+      "suggested": [],
+      "agreement": "agree",
+      "agreementDetail": "la fuente nombra el principal confirmado (balada)",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 4553,
+      "title": "Dum Dum",
+      "identity": {
+        "status": "matched",
+        "externalId": "release:2631395",
+        "externalName": null,
+        "score": 1,
+        "signals": [
+          "identidad ya resuelta"
+        ],
+        "reason": "identidad guardada"
+      },
+      "values": [
+        {
+          "raw": "Disco",
+          "status": "already_known",
+          "genreSlug": "disco",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Latin",
+          "status": "already_known",
+          "genreSlug": "fusion-latina",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Funk / Soul",
+          "status": "already_known",
+          "genreSlug": "funk",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "Funk / Soul",
+          "status": "already_known",
+          "genreSlug": "soul",
+          "reason": "CRV ya lo tiene en la ficha"
+        }
+      ],
+      "suggested": [],
+      "agreement": "agree",
+      "agreementDetail": "la fuente nombra el principal confirmado (funk)",
+      "casesOpened": []
+    }
+  ],
+  "errors": []
+}

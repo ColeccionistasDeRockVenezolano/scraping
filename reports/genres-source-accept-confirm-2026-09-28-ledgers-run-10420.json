@@ -1,0 +1,57 @@
+{
+  "mode": "confirm",
+  "runId": 10420,
+  "candidates": 36,
+  "accepted": [
+    {
+      "caseId": "artist:1945",
+      "title": "Flor Di Tormento",
+      "source": "rhv-directorio",
+      "raw": [
+        "heavy metal progresivo sinfónico"
+      ],
+      "primary": "metal-progresivo",
+      "secondaries": []
+    }
+  ],
+  "alreadyClassified": [
+    "artist:1869",
+    "artist:619",
+    "artist:1780",
+    "artist:1620",
+    "artist:980",
+    "artist:1054",
+    "artist:574",
+    "artist:834",
+    "artist:541",
+    "artist:931",
+    "artist:361",
+    "artist:398",
+    "artist:1879",
+    "artist:461",
+    "artist:1625",
+    "artist:896",
+    "artist:1096",
+    "artist:63",
+    "artist:2223",
+    "artist:463",
+    "artist:1305",
+    "artist:676",
+    "artist:427",
+    "artist:83",
+    "artist:745",
+    "artist:1528",
+    "artist:1947",
+    "artist:1253",
+    "artist:796",
+    "artist:1964",
+    "artist:1962",
+    "artist:408",
+    "artist:571",
+    "artist:1966",
+    "artist:1705"
+  ],
+  "unresolved": [],
+  "errors": [],
+  "moreSpecificExists": []
+}

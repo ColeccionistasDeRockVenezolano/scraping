@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "crv-genre-laya-pilot.v1",
+  "generatedAt": "2026-09-26T12:21:10.477245+00:00",
+  "inputSha256": "8ef675b0f982c9d7dfe48692dba722e07c06651f4e190baaefbb8425cfbc09da",
+  "layaVersion": "0.3.20",
+  "promptVersion": "crv-genre-laya-choice.v1",
+  "cases": 9,
+  "suggested": 8,
+  "abstained": 1,
+  "errors": 0,
+  "gold": {
+    "reviewed": 9,
+    "comparable": 9,
+    "exact": 6,
+    "accuracy": 0.6666666666666666,
+    "proposals": 8,
+    "accepted": 6,
+    "proposalPrecision": 0.75,
+    "missedGoldCases": 0,
+    "goldOutsideCandidates": [],
+    "goldInCandidates": 9,
+    "exactInCandidates": 6,
+    "accuracyInCandidates": 0.6666666666666666
+  },
+  "baseline": {
+    "reviewed": 9,
+    "comparable": 9,
+    "exact": 3,
+    "accuracy": 0.3333333333333333,
+    "proposals": 9,
+    "accepted": 3,
+    "proposalPrecision": 0.3333333333333333,
+    "missedGoldCases": 0,
+    "goldOutsideCandidates": [],
+    "goldInCandidates": 9,
+    "exactInCandidates": 3,
+    "accuracyInCandidates": 0.3333333333333333
+  },
+  "externalBaseline": null
+}

@@ -1,0 +1,986 @@
+{
+  "mode": "confirm",
+  "runId": 10427,
+  "layaPrimaries": 1240,
+  "moved": [
+    {
+      "caseId": "artist:1596",
+      "slug": "hip-hop",
+      "source": "lastfm",
+      "raw": [
+        "rap",
+        "Hip-Hop",
+        "hip -hop"
+      ]
+    },
+    {
+      "caseId": "artist:745",
+      "slug": "death-metal",
+      "source": "lastfm",
+      "raw": [
+        "death metal",
+        "Puerto la Cruz Death Metal",
+        "Puerto La Cruz"
+      ]
+    },
+    {
+      "caseId": "artist:762",
+      "slug": "thrash-metal",
+      "source": "lastfm",
+      "raw": [
+        "thrash metal"
+      ]
+    },
+    {
+      "caseId": "artist:779",
+      "slug": "death-metal",
+      "source": "bandcamp",
+      "raw": [
+        "Metal",
+        "Death Metal"
+      ]
+    },
+    {
+      "caseId": "artist:1328",
+      "slug": "ska",
+      "source": "lastfm",
+      "raw": [
+        "ska jazz",
+        "ska",
+        "ska-jazz",
+        "female vocal",
+        "20s",
+        "10s"
+      ]
+    },
+    {
+      "caseId": "artist:967",
+      "slug": "black-metal",
+      "source": "lastfm",
+      "raw": [
+        "black metal"
+      ]
+    },
+    {
+      "caseId": "artist:29",
+      "slug": "metalcore",
+      "source": "lastfm",
+      "raw": [
+        "metalcore",
+        "deathcore"
+      ]
+    },
+    {
+      "caseId": "artist:789",
+      "slug": "doom-metal",
+      "source": "lastfm",
+      "raw": [
+        "doom metal"
+      ]
+    },
+    {
+      "caseId": "artist:464",
+      "slug": "goregrind",
+      "source": "lastfm",
+      "raw": [
+        "goregrind",
+        "grindcore",
+        "death/grind"
+      ]
+    },
+    {
+      "caseId": "artist:755",
+      "slug": "goregrind",
+      "source": "lastfm",
+      "raw": [
+        "goregrind",
+        "Brutal Death Metal",
+        "grindcore"
+      ]
+    },
+    {
+      "caseId": "artist:458",
+      "slug": "punk",
+      "source": "itunes",
+      "raw": [
+        "Punk"
+      ]
+    },
+    {
+      "caseId": "artist:1351",
+      "slug": "indie-rock",
+      "source": "lastfm",
+      "raw": [
+        "indie",
+        "rock",
+        "indie rock",
+        "alternative"
+      ]
+    },
+    {
+      "caseId": "artist:842",
+      "slug": "deathcore",
+      "source": "lastfm",
+      "raw": [
+        "deathcore",
+        "metalcore",
+        "Progressive deathcore",
+        "Melodic Death Metal"
+      ]
+    },
+    {
+      "caseId": "artist:899",
+      "slug": "crust-punk",
+      "source": "lastfm",
+      "raw": [
+        "crust punk",
+        "thrash metal",
+        "crustcore",
+        "Crust",
+        "crossover",
+        "crossover thrash"
+      ]
+    },
+    {
+      "caseId": "artist:870",
+      "slug": "black-metal",
+      "source": "lastfm",
+      "raw": [
+        "black metal",
+        "electronic",
+        "industrial black metal",
+        "industrial metal",
+        "melodic",
+        "Progressive",
+        "Black",
+        "non-english lyrics",
+        "black industrial"
+      ]
+    },
+    {
+      "caseId": "artist:883",
+      "slug": "deathcore",
+      "source": "lastfm",
+      "raw": [
+        "deathcore"
+      ]
+    },
+    {
+      "caseId": "artist:326",
+      "slug": "heavy-metal",
+      "source": "lastfm",
+      "raw": [
+        "heavy metal",
+        "Iron Maiden",
+        "Masterplan",
+        "Angra",
+        "andre matos",
+        "rata blanca",
+        "warcry",
+        "Jorn Lande",
+        "Tierra Santa"
+      ]
+    },
+    {
+      "caseId": "artist:1359",
+      "slug": "rock",
+      "source": "itunes",
+      "raw": [
+        "Rock"
+      ]
+    },
+    {
+      "caseId": "artist:1354",
+      "slug": "rock",
+      "source": "itunes",
+      "raw": [
+        "Rock"
+      ]
+    },
+    {
+      "caseId": "artist:1382",
+      "slug": "hip-hop",
+      "source": "itunes",
+      "raw": [
+        "Hip-Hop/Rap"
+      ]
+    },
+    {
+      "caseId": "artist:1420",
+      "slug": "reggae",
+      "source": "itunes",
+      "raw": [
+        "Reggae"
+      ]
+    },
+    {
+      "caseId": "artist:810",
+      "slug": "thrash-metal",
+      "source": "lastfm",
+      "raw": [
+        "thrash metal"
+      ]
+    },
+    {
+      "caseId": "artist:1444",
+      "slug": "hard-rock",
+      "source": "lastfm",
+      "raw": [
+        "Spanish Rock",
+        "hard rock"
+      ]
+    },
+    {
+      "caseId": "artist:1435",
+      "slug": "pop",
+      "source": "itunes",
+      "raw": [
+        "Pop"
+      ]
+    },
+    {
+      "caseId": "artist:1464",
+      "slug": "post-rock",
+      "source": "lastfm",
+      "raw": [
+        "post rock",
+        "ambient",
+        "indie",
+        "Progressive rock",
+        "alternative",
+        "electronic",
+        "darkpsy",
+        "dream pop",
+        "post-rock"
+      ]
+    },
+    {
+      "caseId": "artist:446",
+      "slug": "hardcore-punk",
+      "source": "lastfm",
+      "raw": [
+        "punk",
+        "hardcore",
+        "crossover"
+      ]
+    },
+    {
+      "caseId": "artist:468",
+      "slug": "black-metal",
+      "source": "lastfm",
+      "raw": [
+        "black metal"
+      ]
+    },
+    {
+      "caseId": "artist:835",
+      "slug": "dark-ambient",
+      "source": "lastfm",
+      "raw": [
+        "dark ambient",
+        "drone",
+        "martial industrial",
+        "industrial",
+        "ambient",
+        "dark soundscape",
+        "drone ambient",
+        "soundscape",
+        "dark"
+      ]
+    },
+    {
+      "caseId": "artist:1529",
+      "slug": "reggae",
+      "source": "lastfm",
+      "raw": [
+        "reggae",
+        "All",
+        "Rasta",
+        "aswad",
+        "Steel pulse",
+        "Morodo",
+        "los cafres",
+        "zion"
+      ]
+    },
+    {
+      "caseId": "artist:1512",
+      "slug": "death-metal",
+      "source": "lastfm",
+      "raw": [
+        "death metal"
+      ]
+    },
+    {
+      "caseId": "artist:1506",
+      "slug": "post-rock",
+      "source": "lastfm",
+      "raw": [
+        "post-rock",
+        "instrumental",
+        "post rock",
+        "experimental",
+        "rock",
+        "ambient",
+        "Tachira",
+        "San Cristobal"
+      ]
+    },
+    {
+      "caseId": "artist:845",
+      "slug": "black-metal",
+      "source": "lastfm",
+      "raw": [
+        "black metal"
+      ]
+    },
+    {
+      "caseId": "artist:854",
+      "slug": "black-metal",
+      "source": "lastfm",
+      "raw": [
+        "black metal",
+        "Metal Negro"
+      ]
+    },
+    {
+      "caseId": "artist:34",
+      "slug": "indie-rock",
+      "source": "lastfm",
+      "raw": [
+        "indie rock",
+        "alternative rock",
+        "Electro-Rock",
+        "pop rock",
+        "under 2000 listeners",
+        "under 100 listeners"
+      ]
+    },
+    {
+      "caseId": "artist:678",
+      "slug": "death-metal-melodico",
+      "source": "lastfm",
+      "raw": [
+        "Melodic Death Metal"
+      ]
+    },
+    {
+      "caseId": "artist:1236",
+      "slug": "ska",
+      "source": "lastfm",
+      "raw": [
+        "Fusion",
+        "ska",
+        "reagge"
+      ]
+    },
+    {
+      "caseId": "artist:1597",
+      "slug": "hip-hop",
+      "source": "itunes",
+      "raw": [
+        "Hip-Hop/Rap"
+      ]
+    },
+    {
+      "caseId": "artist:84",
+      "slug": "ska",
+      "source": "itunes",
+      "raw": [
+        "Ska"
+      ]
+    },
+    {
+      "caseId": "artist:438",
+      "slug": "deathcore",
+      "source": "lastfm",
+      "raw": [
+        "deathcore"
+      ]
+    },
+    {
+      "caseId": "artist:1635",
+      "slug": "rock",
+      "source": "itunes",
+      "raw": [
+        "Rock"
+      ]
+    },
+    {
+      "caseId": "artist:1630",
+      "slug": "post-hardcore",
+      "source": "lastfm",
+      "raw": [
+        "post-hardcore",
+        "electronic"
+      ]
+    },
+    {
+      "caseId": "artist:553",
+      "slug": "metal",
+      "source": "itunes",
+      "raw": [
+        "Metal"
+      ]
+    },
+    {
+      "caseId": "artist:578",
+      "slug": "black-metal",
+      "source": "lastfm",
+      "raw": [
+        "black metal",
+        "death metal"
+      ]
+    },
+    {
+      "caseId": "artist:1678",
+      "slug": "ska",
+      "source": "lastfm",
+      "raw": [
+        "ska",
+        "Gypsy",
+        "jazz",
+        "balkan",
+        "folk",
+        "instrumental",
+        "ska jazz"
+      ]
+    },
+    {
+      "caseId": "artist:240",
+      "slug": "salsa",
+      "source": "lastfm",
+      "raw": [
+        "salsa"
+      ]
+    },
+    {
+      "caseId": "artist:603",
+      "slug": "black-metal",
+      "source": "lastfm",
+      "raw": [
+        "black metal",
+        "Blackened Death Metal",
+        "metal"
+      ]
+    },
+    {
+      "caseId": "artist:1731",
+      "slug": "metal-progresivo",
+      "source": "lastfm",
+      "raw": [
+        "Dream Theater",
+        "metal",
+        "Progressive metal",
+        "Technical Metal"
+      ]
+    },
+    {
+      "caseId": "artist:15",
+      "slug": "black-metal",
+      "source": "lastfm",
+      "raw": [
+        "black metal",
+        "Blackened Death Metal"
+      ]
+    },
+    {
+      "caseId": "artist:589",
+      "slug": "heavy-metal",
+      "source": "lastfm",
+      "raw": [
+        "heavy metal",
+        "thrash metal",
+        "progressive thrash metal"
+      ]
+    },
+    {
+      "caseId": "artist:790",
+      "slug": "thrash-metal",
+      "source": "lastfm",
+      "raw": [
+        "thrash metal"
+      ]
+    },
+    {
+      "caseId": "artist:1140",
+      "slug": "rock",
+      "source": "itunes",
+      "raw": [
+        "Rock"
+      ]
+    },
+    {
+      "caseId": "artist:747",
+      "slug": "black-metal",
+      "source": "lastfm",
+      "raw": [
+        "black metal",
+        "melodic black metal",
+        "Blackened Death Metal",
+        "black death metal",
+        "metal",
+        "male vocalists",
+        "Melodic Death Metal"
+      ]
+    },
+    {
+      "caseId": "artist:1238",
+      "slug": "reggae",
+      "source": "itunes",
+      "raw": [
+        "Reggae"
+      ]
+    },
+    {
+      "caseId": "artist:824",
+      "slug": "black-metal",
+      "source": "lastfm",
+      "raw": [
+        "black metal",
+        "folk metal",
+        "pagan metal",
+        "black metal around the world sampler",
+        "pagan black metal"
+      ]
+    },
+    {
+      "caseId": "artist:983",
+      "slug": "grindcore",
+      "source": "lastfm",
+      "raw": [
+        "grindcore",
+        "metal",
+        "Crust",
+        "Grind"
+      ]
+    },
+    {
+      "caseId": "artist:910",
+      "slug": "thrash-metal",
+      "source": "lastfm",
+      "raw": [
+        "thrash metal",
+        "metal",
+        "speed metal"
+      ]
+    },
+    {
+      "caseId": "artist:1539",
+      "slug": "metal-experimental",
+      "source": "lastfm",
+      "raw": [
+        "experimental metal",
+        "Progressive metal",
+        "metal",
+        "experimental",
+        "ambient metal",
+        "Metal Experimental",
+        "math metal"
+      ]
+    },
+    {
+      "caseId": "artist:1795",
+      "slug": "electronica",
+      "source": "vzlarockea",
+      "raw": [
+        "Electronica",
+        "Fusion"
+      ]
+    },
+    {
+      "caseId": "artist:809",
+      "slug": "metal-gotico",
+      "source": "lastfm",
+      "raw": [
+        "Gothic Metal",
+        "symphonic metal",
+        "metal",
+        "Female fronted metal",
+        "female vocalist",
+        "death metal",
+        "Power metal",
+        "Gothic",
+        "All"
+      ]
+    },
+    {
+      "caseId": "artist:771",
+      "slug": "heavy-metal",
+      "source": "lastfm",
+      "raw": [
+        "heavy metal"
+      ]
+    },
+    {
+      "caseId": "artist:712",
+      "slug": "rock",
+      "source": "itunes",
+      "raw": [
+        "Rock"
+      ]
+    },
+    {
+      "caseId": "artist:1969",
+      "slug": "blues",
+      "source": "lastfm",
+      "raw": [
+        "blues",
+        "bluesrock",
+        "guitar blues"
+      ]
+    },
+    {
+      "caseId": "artist:2058",
+      "slug": "musica-tropical",
+      "source": "lastfm",
+      "raw": [
+        "indie tropical",
+        "alterlatino"
+      ]
+    },
+    {
+      "caseId": "artist:1495",
+      "slug": "rock",
+      "source": "itunes",
+      "raw": [
+        "Rock"
+      ]
+    },
+    {
+      "caseId": "artist:1907",
+      "slug": "reggae",
+      "source": "itunes",
+      "raw": [
+        "Reggae"
+      ]
+    },
+    {
+      "caseId": "album:59",
+      "slug": "indie-rock",
+      "source": "bandcamp",
+      "raw": [
+        "indie rock",
+        "Indie rock",
+        "talon",
+        "caracas",
+        "Nerd Rock",
+        "Caracas",
+        "Dance rock",
+        "dance rock",
+        "chupi lumpi",
+        "Venezuela",
+        "pirata",
+        "volar",
+        "Caracas Metropolitan District",
+        "ni de menos ni de mas",
+        "no hables mas",
+        "venezuela"
+      ]
+    },
+    {
+      "caseId": "album:3191",
+      "slug": "electronica",
+      "source": "deezer",
+      "raw": [
+        "Electro"
+      ]
+    },
+    {
+      "caseId": "album:2707",
+      "slug": "reggae",
+      "source": "deezer",
+      "raw": [
+        "Reggae"
+      ]
+    },
+    {
+      "caseId": "album:1953",
+      "slug": "rock",
+      "source": "vzlarockea",
+      "raw": [
+        "Rock"
+      ]
+    },
+    {
+      "caseId": "album:3204",
+      "slug": "rock",
+      "source": "deezer",
+      "raw": [
+        "Rock",
+        "Singer & Songwriter"
+      ]
+    },
+    {
+      "caseId": "album:2335",
+      "slug": "punk",
+      "source": "vzlarockea",
+      "raw": [
+        "Punk",
+        "Rock"
+      ]
+    },
+    {
+      "caseId": "album:2372",
+      "slug": "rock",
+      "source": "deezer",
+      "raw": [
+        "Rock"
+      ]
+    },
+    {
+      "caseId": "album:2152",
+      "slug": "rock",
+      "source": "itunes",
+      "raw": [
+        "Rock y Alternativo"
+      ]
+    },
+    {
+      "caseId": "album:197",
+      "slug": "rock",
+      "source": "deezer",
+      "raw": [
+        "Rock"
+      ]
+    },
+    {
+      "caseId": "album:2706",
+      "slug": "rock",
+      "source": "deezer",
+      "raw": [
+        "Rock"
+      ]
+    },
+    {
+      "caseId": "album:2345",
+      "slug": "metal-alternativo",
+      "source": "bandcamp",
+      "raw": [
+        "alternative metal",
+        "metal ; rocl",
+        "alice in chains",
+        "alterbridge",
+        "alternative metal",
+        "chaos avatar",
+        "indie",
+        "maracaibo",
+        "metal",
+        "rafael juarez",
+        "rock",
+        "venezuela",
+        "Maracaibo"
+      ]
+    },
+    {
+      "caseId": "album:2759",
+      "slug": "hard-rock",
+      "source": "bandcamp",
+      "raw": [
+        "Rock",
+        "Hard Rock",
+        "psychedelic rock",
+        "funk rock",
+        "Caracas Metropolitan District",
+        "Caracas",
+        "Venezuela",
+        "grunge rock alternative"
+      ]
+    },
+    {
+      "caseId": "album:2753",
+      "slug": "hip-hop",
+      "source": "deezer",
+      "raw": [
+        "Rap/Hip Hop"
+      ]
+    },
+    {
+      "caseId": "album:1985",
+      "slug": "rock",
+      "source": "itunes",
+      "raw": [
+        "Rock"
+      ]
+    },
+    {
+      "caseId": "album:2527",
+      "slug": "reggae",
+      "source": "deezer",
+      "raw": [
+        "Reggae",
+        "Ska"
+      ]
+    },
+    {
+      "caseId": "album:1995",
+      "slug": "reggae",
+      "source": "deezer",
+      "raw": [
+        "Reggae"
+      ]
+    },
+    {
+      "caseId": "album:2657",
+      "slug": "rock",
+      "source": "itunes",
+      "raw": [
+        "Rock"
+      ]
+    },
+    {
+      "caseId": "album:2379",
+      "slug": "pop",
+      "source": "bandcamp",
+      "raw": [
+        "pop",
+        "folk-pop",
+        "indierock",
+        "jan pawel synth pop rock folk",
+        "melodramatic pop song",
+        "songwriter",
+        "La Asunción"
+      ]
+    },
+    {
+      "caseId": "album:2974",
+      "slug": "hardcore-punk",
+      "source": "bandcamp",
+      "raw": [
+        "Comedy",
+        "Punk",
+        "comedy",
+        "hardcore",
+        "grindcore",
+        "Grindcore",
+        "Hardcore",
+        "Carabobo",
+        "carabobo",
+        "valencia",
+        "venezuela",
+        "Venezuela",
+        "Valencia"
+      ]
+    },
+    {
+      "caseId": "album:3113",
+      "slug": "power-metal",
+      "source": "bandcamp",
+      "raw": [
+        "Metal",
+        "Rock",
+        "hardcore",
+        "Venezuela",
+        "Agresion",
+        "Caracas",
+        "Distrito Capital",
+        "La Nueva Era",
+        "power"
+      ]
+    },
+    {
+      "caseId": "album:89",
+      "slug": "rock",
+      "source": "itunes",
+      "raw": [
+        "Rock"
+      ]
+    },
+    {
+      "caseId": "album:2340",
+      "slug": "indie-rock",
+      "source": "bandcamp",
+      "raw": [
+        "dance rock",
+        "indie rock",
+        "nerd rock",
+        "cancion para alegres y fiesteros",
+        "caracas",
+        "china",
+        "dance rock",
+        "foster",
+        "indie rock",
+        "movida",
+        "vanidad",
+        "Caracas"
+      ]
+    },
+    {
+      "caseId": "album:2354",
+      "slug": "hip-hop",
+      "source": "deezer",
+      "raw": [
+        "Rap/Hip Hop"
+      ]
+    },
+    {
+      "caseId": "album:2401",
+      "slug": "hip-hop",
+      "source": "deezer",
+      "raw": [
+        "Rap/Hip Hop"
+      ]
+    },
+    {
+      "caseId": "album:2422",
+      "slug": "hip-hop",
+      "source": "deezer",
+      "raw": [
+        "Rap/Hip Hop"
+      ]
+    },
+    {
+      "caseId": "album:2423",
+      "slug": "hip-hop",
+      "source": "deezer",
+      "raw": [
+        "Rap/Hip Hop"
+      ]
+    },
+    {
+      "caseId": "album:2433",
+      "slug": "hip-hop",
+      "source": "deezer",
+      "raw": [
+        "Rap/Hip Hop"
+      ]
+    },
+    {
+      "caseId": "album:2798",
+      "slug": "rock-alternativo",
+      "source": "bandcamp",
+      "raw": [
+        "alternative",
+        "electronico",
+        "Puerto Píritu"
+      ]
+    },
+    {
+      "caseId": "album:3019",
+      "slug": "hip-hop",
+      "source": "deezer",
+      "raw": [
+        "Rap/Hip Hop"
+      ]
+    },
+    {
+      "caseId": "album:3122",
+      "slug": "rock",
+      "source": "deezer",
+      "raw": [
+        "Rock"
+      ]
+    },
+    {
+      "caseId": "album:3326",
+      "slug": "reggae",
+      "source": "deezer",
+      "raw": [
+        "Reggae"
+      ]
+    }
+  ],
+  "familyOnly": 33,
+  "notFirst": 28,
+  "noSource": 1083
+}

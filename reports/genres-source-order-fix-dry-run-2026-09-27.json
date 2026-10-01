@@ -1,0 +1,211 @@
+{
+  "mode": "dry-run",
+  "runId": 10375,
+  "checked": 2132,
+  "withoutLedgerRow": 442,
+  "alphabetical": [
+    {
+      "caseId": "artist:1719",
+      "source": "lobotoradio",
+      "current": "punk",
+      "corrected": "ska",
+      "raw": [
+        "punk, ska, ska punk"
+      ]
+    },
+    {
+      "caseId": "artist:44",
+      "source": "lobotoradio",
+      "current": "electronica",
+      "corrected": "indie-rock",
+      "raw": [
+        "electrónica, indie rock, pop/rock, rock alternativo"
+      ]
+    },
+    {
+      "caseId": "artist:187",
+      "source": "lobotoradio",
+      "current": "fusion-latina",
+      "corrected": "rock-fusion",
+      "raw": [
+        "fusión latina, hip-hop, rock fusión"
+      ]
+    },
+    {
+      "caseId": "artist:192",
+      "source": "lobotoradio",
+      "current": "hip-hop",
+      "corrected": "reggae",
+      "raw": [
+        "hip-hop, reggae, ska"
+      ]
+    },
+    {
+      "caseId": "artist:1350",
+      "source": "lobotoradio",
+      "current": "pop",
+      "corrected": "pop-rock",
+      "raw": [
+        "pop, pop/rock"
+      ]
+    },
+    {
+      "caseId": "artist:107",
+      "source": "lobotoradio",
+      "current": "fusion-latina",
+      "corrected": "jazz-fusion",
+      "raw": [
+        "fusión latina, jazz fusión, psych rock"
+      ]
+    },
+    {
+      "caseId": "artist:1380",
+      "source": "lobotoradio",
+      "current": "hip-hop",
+      "corrected": "pop-rock",
+      "raw": [
+        "hip-hop, pop/rock, rap"
+      ]
+    },
+    {
+      "caseId": "artist:1683",
+      "source": "lobotoradio",
+      "current": "hip-hop",
+      "corrected": "pop-rock",
+      "raw": [
+        "hip-hop, pop/rock, rap"
+      ]
+    },
+    {
+      "caseId": "artist:521",
+      "source": "lobotoradio",
+      "current": "fusion-latina",
+      "corrected": "indie-rock",
+      "raw": [
+        "dark wave, fusión latina, goth rock, hip-hop, indie rock, new wave, pop/rock, post punk, rock alternativo, rock fusión, rock pop"
+      ]
+    },
+    {
+      "caseId": "artist:1730",
+      "source": "lobotoradio",
+      "current": "fusion-latina",
+      "corrected": "pop-rock",
+      "raw": [
+        "fusión latina, hip-hop, pop/rock, rock progresivo"
+      ]
+    },
+    {
+      "caseId": "artist:2604",
+      "source": "lobotoradio",
+      "current": "electronica",
+      "corrected": "funk",
+      "raw": [
+        "electrónica, funk, fusión latina, latin jazz, pop/rock, pop latino, soul"
+      ]
+    },
+    {
+      "caseId": "artist:2727",
+      "source": "lobotoradio",
+      "current": "electronica",
+      "corrected": "pop-rock",
+      "raw": [
+        "electrónica, hip-hop, pop/rock, rap, ska"
+      ]
+    },
+    {
+      "caseId": "artist:96",
+      "source": "lobotoradio",
+      "current": "experimental",
+      "corrected": "rock-progresivo",
+      "raw": [
+        "experimental, fusión folclórica, rock progresivo, rock sinfónico"
+      ]
+    },
+    {
+      "caseId": "artist:2568",
+      "source": "lobotoradio",
+      "current": "pop",
+      "corrected": "indie-rock",
+      "raw": [
+        "indie pop, indie rock"
+      ]
+    },
+    {
+      "caseId": "artist:263",
+      "source": "lobotoradio",
+      "current": "jazz-fusion",
+      "corrected": "balada",
+      "raw": [
+        "balada, fusión folclórica, jazz, jazz fusión, jazz rock, latin jazz, malpop, pop, pop/rock, pop latino, pop rock, salsa, synth-pop"
+      ]
+    },
+    {
+      "caseId": "artist:101",
+      "source": "lobotoradio",
+      "current": "electronica",
+      "corrected": "pop-rock",
+      "raw": [
+        "electrónica, pop/rock, rock alternativo, rock pop"
+      ]
+    },
+    {
+      "caseId": "artist:969",
+      "source": "vzlarockea",
+      "current": "noise",
+      "corrected": "guarorock",
+      "raw": [
+        "Alternativo",
+        "Guarorock",
+        "Noise",
+        "Rock"
+      ]
+    },
+    {
+      "caseId": "artist:657",
+      "source": "musicbrainz",
+      "current": "heavy-metal",
+      "corrected": "death-metal",
+      "raw": [
+        "death metal",
+        "heavy metal",
+        "metal",
+        "power metal"
+      ]
+    },
+    {
+      "caseId": "album:85",
+      "source": "deezer",
+      "current": "indie-rock",
+      "corrected": "rock-alternativo",
+      "raw": [
+        "Alternative",
+        "Indie Rock",
+        "Rock"
+      ]
+    },
+    {
+      "caseId": "album:509",
+      "source": "deezer",
+      "current": "indie-rock",
+      "corrected": "rock-alternativo",
+      "raw": [
+        "Alternative",
+        "Indie Rock",
+        "Rock"
+      ]
+    },
+    {
+      "caseId": "album:2351",
+      "source": "deezer",
+      "current": "indie-rock",
+      "corrected": "rock-alternativo",
+      "raw": [
+        "Alternative",
+        "Indie Rock",
+        "Rock"
+      ]
+    }
+  ],
+  "fixed": [],
+  "errors": []
+}

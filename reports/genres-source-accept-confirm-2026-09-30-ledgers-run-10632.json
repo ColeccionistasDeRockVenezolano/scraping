@@ -1,0 +1,26 @@
+{
+  "mode": "confirm",
+  "runId": 10632,
+  "candidates": 1,
+  "accepted": [
+    {
+      "caseId": "album:641",
+      "title": "Various Artists — Ska & Punk Venezuelan Bands Vol. 1",
+      "source": "rockzuela",
+      "raw": [
+        "Ska",
+        "Punk",
+        "Rock"
+      ],
+      "primary": "ska",
+      "secondaries": [
+        "punk",
+        "rock"
+      ]
+    }
+  ],
+  "alreadyClassified": [],
+  "unresolved": [],
+  "errors": [],
+  "moreSpecificExists": []
+}

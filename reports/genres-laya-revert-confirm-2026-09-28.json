@@ -1,0 +1,14 @@
+{
+  "mode": "confirm",
+  "runId": 10414,
+  "reason": "El texto usado por Laya era la biografía de Simón Bolívar, no del músico del catálogo; death metal carece de evidencia para esta ficha",
+  "reverted": [
+    {
+      "caseId": "artist:402",
+      "genres": [
+        "death-metal"
+      ]
+    }
+  ],
+  "untouched": []
+}

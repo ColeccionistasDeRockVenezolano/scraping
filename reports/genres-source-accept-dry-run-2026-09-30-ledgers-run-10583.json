@@ -1,0 +1,3488 @@
+{
+  "mode": "dry-run",
+  "runId": 10583,
+  "candidates": 308,
+  "accepted": [
+    {
+      "caseId": "artist:2155",
+      "title": "Los Gabba Gabba Heys",
+      "source": "hermes",
+      "raw": [
+        "punk"
+      ],
+      "primary": "punk",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2421",
+      "title": "Ulcerous Diseased",
+      "source": "hermes",
+      "raw": [
+        "goregrind",
+        "grindcore"
+      ],
+      "primary": "goregrind",
+      "secondaries": [
+        "grindcore"
+      ]
+    },
+    {
+      "caseId": "artist:2404",
+      "title": "Bizarre Tastes",
+      "source": "hermes",
+      "raw": [
+        "pornogore",
+        "experimental"
+      ],
+      "primary": "experimental",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2320",
+      "title": "K2",
+      "source": "hermes",
+      "raw": [
+        "Rock and Roll"
+      ],
+      "primary": "rock-and-roll",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2426",
+      "title": "Pancong Coklat Keju",
+      "source": "hermes",
+      "raw": [
+        "Nintendocore",
+        "Cybergrind",
+        "Metal"
+      ],
+      "primary": "metalcore",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2405",
+      "title": "Gorezadera",
+      "source": "hermes",
+      "raw": [
+        "goregrind",
+        "pornogore"
+      ],
+      "primary": "goregrind",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2296",
+      "title": "MENTES SUBLIMINALES",
+      "source": "hermes",
+      "raw": [
+        "Power Metal",
+        "Rock Progresivo"
+      ],
+      "primary": "power-metal",
+      "secondaries": [
+        "rock-progresivo"
+      ]
+    },
+    {
+      "caseId": "artist:2278",
+      "title": "SOURTHEM TEMPEST",
+      "source": "hermes",
+      "raw": [
+        "Metalcore",
+        "Hardcore"
+      ],
+      "primary": "metalcore",
+      "secondaries": [
+        "hardcore-punk"
+      ]
+    },
+    {
+      "caseId": "artist:2315",
+      "title": "MEDUZA",
+      "source": "hermes",
+      "raw": [
+        "Hard rock",
+        "Rock & Roll"
+      ],
+      "primary": "hard-rock",
+      "secondaries": [
+        "rock-and-roll"
+      ]
+    },
+    {
+      "caseId": "artist:2496",
+      "title": "Kick Ass",
+      "source": "hermes",
+      "raw": [
+        "Thrash/Speed Metal",
+        "Thrash Metal"
+      ],
+      "primary": "thrash-metal",
+      "secondaries": [
+        "speed-metal"
+      ]
+    },
+    {
+      "caseId": "artist:2277",
+      "title": "ALKKON",
+      "source": "hermes",
+      "raw": [
+        "Groove/Heavy Metal",
+        "heavy - thrash and other stuff metal"
+      ],
+      "primary": "groove-metal",
+      "secondaries": [
+        "heavy-metal"
+      ]
+    },
+    {
+      "caseId": "artist:2381",
+      "title": "Glavio",
+      "source": "hermes",
+      "raw": [
+        "grindcore",
+        "goregrind",
+        "death metal"
+      ],
+      "primary": "grindcore",
+      "secondaries": [
+        "goregrind",
+        "death-metal"
+      ]
+    },
+    {
+      "caseId": "artist:2487",
+      "title": "Infestation",
+      "source": "hermes",
+      "raw": [
+        "Slamming Brutal Death Metal",
+        "Brutal Death"
+      ],
+      "primary": "slamming-brutal-death-metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2393",
+      "title": "Kadaverficker",
+      "source": "hermes",
+      "raw": [
+        "grindcore",
+        "death metal",
+        "doom metal",
+        "punkrock",
+        "Nekrokore"
+      ],
+      "primary": "grindcore",
+      "secondaries": [
+        "death-metal",
+        "doom-metal",
+        "punk-rock"
+      ]
+    },
+    {
+      "caseId": "artist:2497",
+      "title": "Sangre Antigua",
+      "source": "hermes",
+      "raw": [
+        "Thrash Metal"
+      ],
+      "primary": "thrash-metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2389",
+      "title": "SxWxMx",
+      "source": "hermes",
+      "raw": [
+        "Goregrind",
+        "Porno Gore Grind"
+      ],
+      "primary": "goregrind",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2453",
+      "title": "I porno You",
+      "source": "hermes",
+      "raw": [
+        "noise",
+        "noisecore",
+        "experimental",
+        "breakcore",
+        "electronic",
+        "comedy"
+      ],
+      "primary": "noise",
+      "secondaries": [
+        "noisecore",
+        "electronica"
+      ]
+    },
+    {
+      "caseId": "artist:2366",
+      "title": "Nasty Surgeons",
+      "source": "hermes",
+      "raw": [
+        "death-grind",
+        "grindcore",
+        "brutal death metal"
+      ],
+      "primary": "death-metal",
+      "secondaries": [
+        "grindcore",
+        "brutal-death-metal"
+      ]
+    },
+    {
+      "caseId": "artist:2382",
+      "title": "Grindigena",
+      "source": "hermes",
+      "raw": [
+        "Grindcore",
+        "Goregrind"
+      ],
+      "primary": "grindcore",
+      "secondaries": [
+        "goregrind"
+      ]
+    },
+    {
+      "caseId": "artist:2131",
+      "title": "Atentado",
+      "source": "hermes",
+      "raw": [
+        "Metal / Hardcore"
+      ],
+      "primary": "metal",
+      "secondaries": [
+        "hardcore-punk"
+      ]
+    },
+    {
+      "caseId": "artist:2196",
+      "title": "Antidoping",
+      "source": "hermes",
+      "raw": [
+        "Heavy Metal"
+      ],
+      "primary": "heavy-metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2220",
+      "title": "Lord of Thunder",
+      "source": "hermes",
+      "raw": [
+        "Death Metal",
+        "Heavy death metal progresivo"
+      ],
+      "primary": "death-metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2157",
+      "title": "Lethal Destroyer",
+      "source": "hermes",
+      "raw": [
+        "thrash/death metal"
+      ],
+      "primary": "thrash-metal",
+      "secondaries": [
+        "death-metal"
+      ]
+    },
+    {
+      "caseId": "artist:2394",
+      "title": "Cum Gayser",
+      "source": "hermes",
+      "raw": [
+        "Goregrind",
+        "Noise",
+        "Experimental"
+      ],
+      "primary": "goregrind",
+      "secondaries": [
+        "noise"
+      ]
+    },
+    {
+      "caseId": "artist:2284",
+      "title": "REMEMBRANCE",
+      "source": "hermes",
+      "raw": [
+        "Death Metal Melódico"
+      ],
+      "primary": "death-metal-melodico",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2214",
+      "title": "Obertura",
+      "source": "hermes",
+      "raw": [
+        "Death Metal"
+      ],
+      "primary": "death-metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2090",
+      "title": "Muf",
+      "source": "hermes",
+      "raw": [
+        "Rock alternativo",
+        "Rock"
+      ],
+      "primary": "rock-alternativo",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2357",
+      "title": "High Risk Strategy",
+      "source": "hermes",
+      "raw": [
+        "Rock/Heavy Metal"
+      ],
+      "primary": "rock",
+      "secondaries": [
+        "heavy-metal"
+      ]
+    },
+    {
+      "caseId": "artist:2116",
+      "title": "Virus Acrata",
+      "source": "hermes",
+      "raw": [
+        "punk",
+        "punk anarquista (anarcopunk)"
+      ],
+      "primary": "punk",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2311",
+      "title": "AVERNO",
+      "source": "hermes",
+      "raw": [
+        "Black Metal",
+        "Metal Negro Venezolano"
+      ],
+      "primary": "black-metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2163",
+      "title": "Obediente",
+      "source": "hermes",
+      "raw": [
+        "Rock/Metal",
+        "Metal"
+      ],
+      "primary": "rock",
+      "secondaries": [
+        "metal"
+      ]
+    },
+    {
+      "caseId": "artist:2484",
+      "title": "Deformed Cadaver",
+      "source": "hermes",
+      "raw": [
+        "Slam Gore",
+        "Brutal Death Metal / Goregrind",
+        "Gore/bdm (one man band)"
+      ],
+      "primary": "brutal-death-metal",
+      "secondaries": [
+        "goregrind"
+      ]
+    },
+    {
+      "caseId": "artist:2119",
+      "title": "Sotter",
+      "source": "hermes",
+      "raw": [
+        "Death Metal",
+        "Grindcore"
+      ],
+      "primary": "death-metal",
+      "secondaries": [
+        "grindcore"
+      ]
+    },
+    {
+      "caseId": "artist:2269",
+      "title": "ANARKIA",
+      "source": "hermes",
+      "raw": [
+        "Metal",
+        "Hardcore",
+        "Death metal"
+      ],
+      "primary": "death-metal",
+      "secondaries": [
+        "hardcore-punk"
+      ]
+    },
+    {
+      "caseId": "artist:2380",
+      "title": "Putrid Cunt",
+      "source": "hermes",
+      "raw": [
+        "Porno Gore Grind",
+        "Gore / Grindcore"
+      ],
+      "primary": "grindcore",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2270",
+      "title": "RIGIL KENTAURUS",
+      "source": "hermes",
+      "raw": [
+        "Rock"
+      ],
+      "primary": "rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2130",
+      "title": "Ruptura",
+      "source": "hermes",
+      "raw": [
+        "Rock"
+      ],
+      "primary": "rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2403",
+      "title": "Chostomo",
+      "source": "hermes",
+      "raw": [
+        "goregrind",
+        "gore grind",
+        "metal"
+      ],
+      "primary": "goregrind",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2361",
+      "title": "Amoklauf",
+      "source": "hermes",
+      "raw": [
+        "death metal",
+        "brutal death metal",
+        "technical death metal",
+        "death metal / brutal metal band"
+      ],
+      "primary": "death-metal",
+      "secondaries": [
+        "brutal-death-metal",
+        "death-metal-tecnico"
+      ]
+    },
+    {
+      "caseId": "artist:2371",
+      "title": "Fluffy Fuckbeast",
+      "source": "hermes",
+      "raw": [
+        "Crust-Grind",
+        "Death Metal / Thrash Metal",
+        "Grind / Crust"
+      ],
+      "primary": "crust-punk",
+      "secondaries": [
+        "death-metal",
+        "thrash-metal"
+      ]
+    },
+    {
+      "caseId": "artist:2384",
+      "title": "Deprauationem Hans Autopsy",
+      "source": "hermes",
+      "raw": [
+        "Porno Gore Grind",
+        "Groovy Gore grind",
+        "goregrind / pornogrind"
+      ],
+      "primary": "goregrind",
+      "secondaries": [
+        "porngrind"
+      ]
+    },
+    {
+      "caseId": "artist:2424",
+      "title": "MxTxFx",
+      "source": "hermes",
+      "raw": [
+        "Brutal Death Metal",
+        "Goregrind / Pornogrind"
+      ],
+      "primary": "brutal-death-metal",
+      "secondaries": [
+        "goregrind",
+        "porngrind"
+      ]
+    },
+    {
+      "caseId": "artist:2055",
+      "title": "Dandy León",
+      "source": "hermes",
+      "raw": [
+        "Pop-Rock",
+        "psicotropical"
+      ],
+      "primary": "pop-rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2334",
+      "title": "Fobia",
+      "source": "hermes",
+      "raw": [
+        "Rock en español",
+        "Alternative rock"
+      ],
+      "primary": "rock-latino",
+      "secondaries": [
+        "rock-alternativo"
+      ]
+    },
+    {
+      "caseId": "artist:2327",
+      "title": "El General",
+      "source": "hermes",
+      "raw": [
+        "Reggae en español",
+        "Reguetón",
+        "Dancehall"
+      ],
+      "primary": "dancehall",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2445",
+      "title": "Radiacion Suicyda",
+      "source": "hermes",
+      "raw": [
+        "Noisecore"
+      ],
+      "primary": "noisecore",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2407",
+      "title": "Fuck Hole",
+      "source": "hermes",
+      "raw": [
+        "Goregrind",
+        "Grindcore"
+      ],
+      "primary": "goregrind",
+      "secondaries": [
+        "grindcore"
+      ]
+    },
+    {
+      "caseId": "artist:2096",
+      "title": "Mustang 78",
+      "source": "hermes",
+      "raw": [
+        "punk rock",
+        "hardcore",
+        "ska"
+      ],
+      "primary": "punk-rock",
+      "secondaries": [
+        "hardcore-punk",
+        "ska"
+      ]
+    },
+    {
+      "caseId": "artist:2080",
+      "title": "Pentavarium",
+      "source": "hermes",
+      "raw": [
+        "Blackened Death Metal"
+      ],
+      "primary": "blackened-death-metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2286",
+      "title": "LENGUAJE CAUSTICO",
+      "source": "hermes",
+      "raw": [
+        "Metal",
+        "Rock"
+      ],
+      "primary": "metal",
+      "secondaries": [
+        "rock"
+      ]
+    },
+    {
+      "caseId": "artist:2432",
+      "title": "Operacion Canguro",
+      "source": "hermes",
+      "raw": [
+        "Grindcore"
+      ],
+      "primary": "grindcore",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2191",
+      "title": "Eclipside",
+      "source": "hermes",
+      "raw": [
+        "Nu Metal",
+        "Metalcore"
+      ],
+      "primary": "nu-metal",
+      "secondaries": [
+        "metalcore"
+      ]
+    },
+    {
+      "caseId": "artist:2267",
+      "title": "SPRAY ONE",
+      "source": "hermes",
+      "raw": [
+        "Rock"
+      ],
+      "primary": "rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2480",
+      "title": "Perverted Dexterity",
+      "source": "hermes",
+      "raw": [
+        "Brutal Death Metal"
+      ],
+      "primary": "brutal-death-metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2205",
+      "title": "Lenguas de Fuego",
+      "source": "hermes",
+      "raw": [
+        "Rock",
+        "Música cristiana"
+      ],
+      "primary": "rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2400",
+      "title": "Clitoris Amputator",
+      "source": "hermes",
+      "raw": [
+        "Porno Gore Grind",
+        "pornogore",
+        "goregrind",
+        "noisegrind"
+      ],
+      "primary": "goregrind",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2430",
+      "title": "Embryo Bulldozer",
+      "source": "hermes",
+      "raw": [
+        "Pornogrind"
+      ],
+      "primary": "porngrind",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2464",
+      "title": "Jorge Manuel",
+      "source": "hermes",
+      "raw": [
+        "balada",
+        "pop rock venezolano"
+      ],
+      "primary": "balada",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2448",
+      "title": "Mordecai Mapper",
+      "source": "hermes",
+      "raw": [
+        "Experimental",
+        "Goregrind"
+      ],
+      "primary": "experimental",
+      "secondaries": [
+        "goregrind"
+      ]
+    },
+    {
+      "caseId": "artist:2412",
+      "title": "Cannibalistic Coprophagia",
+      "source": "hermes",
+      "raw": [
+        "Gorenoise",
+        "Goregrind",
+        "Noise"
+      ],
+      "primary": "goregrind",
+      "secondaries": [
+        "noise"
+      ]
+    },
+    {
+      "caseId": "artist:2360",
+      "title": "Denso",
+      "source": "hermes",
+      "raw": [
+        "stoner rock",
+        "post-grunge",
+        "stoner psicodelic blues"
+      ],
+      "primary": "stoner-rock",
+      "secondaries": [
+        "post-grunge"
+      ]
+    },
+    {
+      "caseId": "artist:2362",
+      "title": "Carnal Diafragma",
+      "source": "hermes",
+      "raw": [
+        "Goregrind"
+      ],
+      "primary": "goregrind",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2402",
+      "title": "Tu Culo",
+      "source": "hermes",
+      "raw": [
+        "goregrind"
+      ],
+      "primary": "goregrind",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2301",
+      "title": "My Oppressed Country",
+      "source": "hermes",
+      "raw": [
+        "Deathcore",
+        "Metal"
+      ],
+      "primary": "deathcore",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2317",
+      "title": "ARCONAUTAS",
+      "source": "hermes",
+      "raw": [
+        "Rock, Ska, Reggae, Chimbanguelmetal"
+      ],
+      "primary": "rock",
+      "secondaries": [
+        "ska",
+        "reggae"
+      ]
+    },
+    {
+      "caseId": "artist:2333",
+      "title": "Ketama",
+      "source": "hermes",
+      "raw": [
+        "New flamenco",
+        "Flamenco fusión",
+        "alternative folk, flamenco"
+      ],
+      "primary": "flamenco",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2451",
+      "title": "Internet Era Alienation",
+      "source": "hermes",
+      "raw": [
+        "Grindcore",
+        "Mincecore"
+      ],
+      "primary": "grindcore",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2167",
+      "title": "Hands Of Murder",
+      "source": "hermes",
+      "raw": [
+        "Metal"
+      ],
+      "primary": "metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2429",
+      "title": "Rot in Space",
+      "source": "hermes",
+      "raw": [
+        "Cybergrind",
+        "Goregrind",
+        "Gorenoise / CyberGore"
+      ],
+      "primary": "goregrind",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2325",
+      "title": "Aterciopelados",
+      "source": "hermes",
+      "raw": [
+        "rock",
+        "alternative rock",
+        "latin"
+      ],
+      "primary": "rock-alternativo",
+      "secondaries": [
+        "fusion-latina"
+      ]
+    },
+    {
+      "caseId": "artist:2260",
+      "title": "DEMOLITION",
+      "source": "hermes",
+      "raw": [
+        "Brutal Death Metal",
+        "Death Metal"
+      ],
+      "primary": "brutal-death-metal",
+      "secondaries": [
+        "death-metal"
+      ]
+    },
+    {
+      "caseId": "artist:2175",
+      "title": "SINAPSIS",
+      "source": "hermes",
+      "raw": [
+        "Funk Rock",
+        "Funk"
+      ],
+      "primary": "funk",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2150",
+      "title": "Sorthe",
+      "source": "hermes",
+      "raw": [
+        "Melodic Metal"
+      ],
+      "primary": "melodic-metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2254",
+      "title": "Chingo D'Meco",
+      "source": "hermes",
+      "raw": [
+        "Rock alternativo"
+      ],
+      "primary": "rock-alternativo",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2510",
+      "title": "Chemical Assault",
+      "source": "hermes",
+      "raw": [
+        "Thrash Metal",
+        "Crossover Thrash"
+      ],
+      "primary": "thrash-metal",
+      "secondaries": [
+        "crossover-thrash"
+      ]
+    },
+    {
+      "caseId": "artist:2095",
+      "title": "Mystica",
+      "source": "hermes",
+      "raw": [
+        "Heavy Metal",
+        "Rock sinfónico"
+      ],
+      "primary": "heavy-metal",
+      "secondaries": [
+        "rock-sinfonico"
+      ]
+    },
+    {
+      "caseId": "artist:2399",
+      "title": "Gonzo",
+      "source": "hermes",
+      "raw": [
+        "PornGrind / porngrind",
+        "goregrind / pornogrindcore"
+      ],
+      "primary": "porngrind",
+      "secondaries": [
+        "goregrind"
+      ]
+    },
+    {
+      "caseId": "artist:2457",
+      "title": "Gastric Edema",
+      "source": "hermes",
+      "raw": [
+        "gorenoise",
+        "goregrind"
+      ],
+      "primary": "goregrind",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2356",
+      "title": "Piel de Lobo",
+      "source": "hermes",
+      "raw": [
+        "Metal Latino",
+        "Metal con música folk venezolana y ritmos afrocaraibici",
+        "metal con ritmos afro-venezolanos"
+      ],
+      "primary": "metal-latino",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2395",
+      "title": "Putrido",
+      "source": "hermes",
+      "raw": [
+        "Goregrind",
+        "Pornogrind",
+        "Deathgrind",
+        "Gorenoise"
+      ],
+      "primary": "goregrind",
+      "secondaries": [
+        "porngrind",
+        "deathgrind"
+      ]
+    },
+    {
+      "caseId": "artist:2274",
+      "title": "RENACIMIENTO",
+      "source": "hermes",
+      "raw": [
+        "Rock"
+      ],
+      "primary": "rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2477",
+      "title": "Slamophiliac",
+      "source": "hermes",
+      "raw": [
+        "Brutal Death",
+        "Brutal death metal",
+        "Slamming Brutal Death Metal"
+      ],
+      "primary": "brutal-death-metal",
+      "secondaries": [
+        "slamming-brutal-death-metal"
+      ]
+    },
+    {
+      "caseId": "artist:2379",
+      "title": "Cursed Burial",
+      "source": "hermes",
+      "raw": [
+        "Death Metal",
+        "grindcore"
+      ],
+      "primary": "death-metal",
+      "secondaries": [
+        "grindcore"
+      ]
+    },
+    {
+      "caseId": "artist:2418",
+      "title": "Cum Book",
+      "source": "hermes",
+      "raw": [
+        "PornGrind",
+        "GoreGrind",
+        "NoiseGrind"
+      ],
+      "primary": "porngrind",
+      "secondaries": [
+        "goregrind"
+      ]
+    },
+    {
+      "caseId": "artist:2187",
+      "title": "SALUDO SECRETO",
+      "source": "hermes",
+      "raw": [
+        "Rock"
+      ],
+      "primary": "rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2195",
+      "title": "Lilianth",
+      "source": "hermes",
+      "raw": [
+        "Metalcore",
+        "Metal Alternativo"
+      ],
+      "primary": "metalcore",
+      "secondaries": [
+        "metal-alternativo"
+      ]
+    },
+    {
+      "caseId": "artist:2473",
+      "title": "Puya",
+      "source": "hermes",
+      "raw": [
+        "progressive metal",
+        "latin rock",
+        "rock en español",
+        "salsa"
+      ],
+      "primary": "metal-progresivo",
+      "secondaries": [
+        "rock-latino",
+        "salsa"
+      ]
+    },
+    {
+      "caseId": "artist:2341",
+      "title": "Días de Agresión",
+      "source": "hermes",
+      "raw": [
+        "Hardcore Metal",
+        "hardcore",
+        "metal"
+      ],
+      "primary": "hardcore-punk",
+      "secondaries": [
+        "metal"
+      ]
+    },
+    {
+      "caseId": "artist:2194",
+      "title": "Aurora",
+      "source": "hermes",
+      "raw": [
+        "Grunge",
+        "Hard Rock"
+      ],
+      "primary": "grunge",
+      "secondaries": [
+        "hard-rock"
+      ]
+    },
+    {
+      "caseId": "artist:2133",
+      "title": "Los Termites",
+      "source": "hermes",
+      "raw": [
+        "Rock"
+      ],
+      "primary": "rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2173",
+      "title": "Infecto de Afecto",
+      "source": "hermes",
+      "raw": [
+        "Rock-punk",
+        "Alternative Rock",
+        "Punk"
+      ],
+      "primary": "punk-rock",
+      "secondaries": [
+        "rock-alternativo"
+      ]
+    },
+    {
+      "caseId": "artist:2107",
+      "title": "AverlinG",
+      "source": "hermes",
+      "raw": [
+        "Grunge, Post Grunge y Punk"
+      ],
+      "primary": "grunge",
+      "secondaries": [
+        "post-grunge",
+        "punk"
+      ]
+    },
+    {
+      "caseId": "artist:2221",
+      "title": "Disonante",
+      "source": "hermes",
+      "raw": [
+        "Rock",
+        "Alternative Rock"
+      ],
+      "primary": "rock-alternativo",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2476",
+      "title": "Los Pericos",
+      "source": "hermes",
+      "raw": [
+        "Reggae",
+        "Ska",
+        "Rock"
+      ],
+      "primary": "reggae",
+      "secondaries": [
+        "ska",
+        "rock"
+      ]
+    },
+    {
+      "caseId": "artist:2162",
+      "title": "Darwin Lubo",
+      "source": "hermes",
+      "raw": [
+        "Rock progresivo"
+      ],
+      "primary": "rock-progresivo",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2071",
+      "title": "Skate Thrasher Punk",
+      "source": "hermes",
+      "raw": [
+        "Punk",
+        "Hardcore",
+        "Thrash",
+        "Powermetal"
+      ],
+      "primary": "hardcore-punk",
+      "secondaries": [
+        "thrash-metal",
+        "power-metal"
+      ]
+    },
+    {
+      "caseId": "artist:2170",
+      "title": "Into The Crisis",
+      "source": "hermes",
+      "raw": [
+        "metal extremo",
+        "deathcore"
+      ],
+      "primary": "metal-extremo",
+      "secondaries": [
+        "deathcore"
+      ]
+    },
+    {
+      "caseId": "artist:2450",
+      "title": "Clitorodectomia",
+      "source": "hermes",
+      "raw": [
+        "Gore Grind",
+        "goregrind"
+      ],
+      "primary": "goregrind",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2088",
+      "title": "Corriente Alterna",
+      "source": "hermes",
+      "raw": [
+        "Rock alternativo",
+        "Psychodelic rock"
+      ],
+      "primary": "rock-alternativo",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2125",
+      "title": "Bioactivo",
+      "source": "hermes",
+      "raw": [
+        "Metal"
+      ],
+      "primary": "metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2076",
+      "title": "Proyecto Boogie Boogie",
+      "source": "hermes",
+      "raw": [
+        "Rock and Roll",
+        "Pop"
+      ],
+      "primary": "rock-and-roll",
+      "secondaries": [
+        "pop"
+      ]
+    },
+    {
+      "caseId": "artist:2177",
+      "title": "MAGNOLIA",
+      "source": "hermes",
+      "raw": [
+        "Rock alternativo",
+        "Alternative Rock"
+      ],
+      "primary": "rock-alternativo",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2383",
+      "title": "Pene Con Challa",
+      "source": "hermes",
+      "raw": [
+        "goregrind",
+        "porngrind",
+        "penegore",
+        "Porno Goregrind"
+      ],
+      "primary": "goregrind",
+      "secondaries": [
+        "porngrind"
+      ]
+    },
+    {
+      "caseId": "artist:2298",
+      "title": "JAREJ",
+      "source": "hermes",
+      "raw": [
+        "Metal Alternativo",
+        "Metal / Alternativo"
+      ],
+      "primary": "metal-alternativo",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2117",
+      "title": "Los Impalas",
+      "source": "hermes",
+      "raw": [
+        "Rock"
+      ],
+      "primary": "rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2396",
+      "title": "Porno Kult",
+      "source": "hermes",
+      "raw": [
+        "porngrind",
+        "porngore"
+      ],
+      "primary": "porngrind",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2212",
+      "title": "Harax",
+      "source": "hermes",
+      "raw": [
+        "Hard Rock"
+      ],
+      "primary": "hard-rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2386",
+      "title": "Condylomata Acuminata",
+      "source": "hermes",
+      "raw": [
+        "Goregrind",
+        "Love-Goregrind"
+      ],
+      "primary": "goregrind",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2101",
+      "title": "Teoría del Caos",
+      "source": "hermes",
+      "raw": [
+        "Metal"
+      ],
+      "primary": "metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2226",
+      "title": "Wyzton Borreo",
+      "source": "hermes",
+      "raw": [
+        "Industrial",
+        "Electrónica"
+      ],
+      "primary": "industrial",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2422",
+      "title": "Game Black Ant",
+      "source": "hermes",
+      "raw": [
+        "Porngrind"
+      ],
+      "primary": "porngrind",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2085",
+      "title": "Sisrema Diez",
+      "source": "hermes",
+      "raw": [
+        "Metal Hardcore",
+        "Thrash",
+        "Punk"
+      ],
+      "primary": "metalcore",
+      "secondaries": [
+        "thrash-metal",
+        "punk"
+      ]
+    },
+    {
+      "caseId": "artist:2474",
+      "title": "Lucybell",
+      "source": "hermes",
+      "raw": [
+        "Rock alternativo",
+        "shoegaze",
+        "rock electrónico",
+        "dream pop"
+      ],
+      "primary": "rock-alternativo",
+      "secondaries": [
+        "shoegaze",
+        "rock-electronico",
+        "dream-pop"
+      ]
+    },
+    {
+      "caseId": "artist:2438",
+      "title": "Comemierda",
+      "source": "hermes",
+      "raw": [
+        "Goregrind",
+        "grindcore"
+      ],
+      "primary": "goregrind",
+      "secondaries": [
+        "grindcore"
+      ]
+    },
+    {
+      "caseId": "artist:2168",
+      "title": "Open Your Mind",
+      "source": "hermes",
+      "raw": [
+        "Metalcore/deathcore"
+      ],
+      "primary": "metalcore",
+      "secondaries": [
+        "deathcore"
+      ]
+    },
+    {
+      "caseId": "artist:2169",
+      "title": "Sepulcro",
+      "source": "hermes",
+      "raw": [
+        "Heavy Metal"
+      ],
+      "primary": "heavy-metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2351",
+      "title": "Audionever",
+      "source": "hermes",
+      "raw": [
+        "groove metal",
+        "hardcore",
+        "nu metal",
+        "sludge"
+      ],
+      "primary": "groove-metal",
+      "secondaries": [
+        "hardcore-punk",
+        "nu-metal"
+      ]
+    },
+    {
+      "caseId": "artist:2443",
+      "title": "Pork Necrophiliac",
+      "source": "hermes",
+      "raw": [
+        "Grindcore",
+        "Goregrind",
+        "Pornogrind"
+      ],
+      "primary": "grindcore",
+      "secondaries": [
+        "goregrind",
+        "porngrind"
+      ]
+    },
+    {
+      "caseId": "artist:2202",
+      "title": "Valery's",
+      "source": "hermes",
+      "raw": [
+        "Rock Alternativo"
+      ],
+      "primary": "rock-alternativo",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2229",
+      "title": "Rafael L. Garnica",
+      "source": "hermes",
+      "raw": [
+        "música electrónica",
+        "rock / trip-hop"
+      ],
+      "primary": "trip-hop",
+      "secondaries": [
+        "rock"
+      ]
+    },
+    {
+      "caseId": "artist:2392",
+      "title": "Infected Maggots",
+      "source": "hermes",
+      "raw": [
+        "Death metal",
+        "Goregrind"
+      ],
+      "primary": "death-metal",
+      "secondaries": [
+        "goregrind"
+      ]
+    },
+    {
+      "caseId": "artist:2310",
+      "title": "MORFINA",
+      "source": "hermes",
+      "raw": [
+        "Death Metal",
+        "Metal"
+      ],
+      "primary": "death-metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2303",
+      "title": "WAR OF DEATH",
+      "source": "hermes",
+      "raw": [
+        "Death Metal",
+        "Death Metal melódico"
+      ],
+      "primary": "death-metal",
+      "secondaries": [
+        "death-metal-melodico"
+      ]
+    },
+    {
+      "caseId": "artist:2458",
+      "title": "Pure Fun",
+      "source": "hermes",
+      "raw": [
+        "grindcore"
+      ],
+      "primary": "grindcore",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2365",
+      "title": "Bitchfork",
+      "source": "hermes",
+      "raw": [
+        "Farmgrind",
+        "Goregrind",
+        "Grindcore",
+        "Death Metal"
+      ],
+      "primary": "goregrind",
+      "secondaries": [
+        "grindcore",
+        "death-metal"
+      ]
+    },
+    {
+      "caseId": "artist:2072",
+      "title": "Roy",
+      "source": "hermes",
+      "raw": [
+        "Rock",
+        "Punk Rock",
+        "Rock alternativo",
+        "punk"
+      ],
+      "primary": "rock-alternativo",
+      "secondaries": [
+        "punk-rock"
+      ]
+    },
+    {
+      "caseId": "artist:2112",
+      "title": "Gas",
+      "source": "hermes",
+      "raw": [
+        "Hardcore",
+        "Punk"
+      ],
+      "primary": "hardcore-punk",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2376",
+      "title": "Enema Torture",
+      "source": "hermes",
+      "raw": [
+        "Goregrind",
+        "Porngrind / Pornogrind",
+        "Grindcore"
+      ],
+      "primary": "goregrind",
+      "secondaries": [
+        "porngrind",
+        "grindcore"
+      ]
+    },
+    {
+      "caseId": "artist:2316",
+      "title": "ENKANTEN MORT",
+      "source": "hermes",
+      "raw": [
+        "Black Metal",
+        "Black Gothic Metal",
+        "Black/Death Metal"
+      ],
+      "primary": "black-metal",
+      "secondaries": [
+        "metal-gotico",
+        "death-metal"
+      ]
+    },
+    {
+      "caseId": "artist:2215",
+      "title": "Sombras Rotas",
+      "source": "hermes",
+      "raw": [
+        "Rock",
+        "Metal"
+      ],
+      "primary": "rock",
+      "secondaries": [
+        "metal"
+      ]
+    },
+    {
+      "caseId": "artist:2326",
+      "title": "La Unión",
+      "source": "hermes",
+      "raw": [
+        "Pop rock",
+        "New wave"
+      ],
+      "primary": "pop-rock",
+      "secondaries": [
+        "new-wave"
+      ]
+    },
+    {
+      "caseId": "artist:2075",
+      "title": "Salón",
+      "source": "hermes",
+      "raw": [
+        "Grunge"
+      ],
+      "primary": "grunge",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2193",
+      "title": "K.A.F.C.",
+      "source": "hermes",
+      "raw": [
+        "punk"
+      ],
+      "primary": "punk",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2252",
+      "title": "Sfinter",
+      "source": "hermes",
+      "raw": [
+        "Neo-metal"
+      ],
+      "primary": "metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2507",
+      "title": "Hell Inside",
+      "source": "hermes",
+      "raw": [
+        "Thrash Metal",
+        "Metal, Thrash Metal"
+      ],
+      "primary": "thrash-metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2331",
+      "title": "Molotov",
+      "source": "hermes",
+      "raw": [
+        "rock en español",
+        "rap metal"
+      ],
+      "primary": "rock-latino",
+      "secondaries": [
+        "rap-metal"
+      ]
+    },
+    {
+      "caseId": "artist:2329",
+      "title": "Soda Stereo",
+      "source": "hermes",
+      "raw": [
+        "Pop rock",
+        "New wave",
+        "Rock alternativo",
+        "Rock electrónico"
+      ],
+      "primary": "pop-rock",
+      "secondaries": [
+        "new-wave",
+        "rock-alternativo",
+        "rock-electronico"
+      ]
+    },
+    {
+      "caseId": "artist:2505",
+      "title": "Sin Mente",
+      "source": "hermes",
+      "raw": [
+        "Thrashcore Punk",
+        "Thrash Hardcore Punk",
+        "Heavy/Speed Metal"
+      ],
+      "primary": "heavy-metal",
+      "secondaries": [
+        "speed-metal"
+      ]
+    },
+    {
+      "caseId": "artist:2498",
+      "title": "Konstrictor",
+      "source": "hermes",
+      "raw": [
+        "Thrash Metal"
+      ],
+      "primary": "thrash-metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2089",
+      "title": "Manta",
+      "source": "hermes",
+      "raw": [
+        "Rock"
+      ],
+      "primary": "rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2441",
+      "title": "Intestinal Pandemic",
+      "source": "hermes",
+      "raw": [
+        "Death Metal",
+        "Grindcore"
+      ],
+      "primary": "death-metal",
+      "secondaries": [
+        "grindcore"
+      ]
+    },
+    {
+      "caseId": "artist:2283",
+      "title": "DULCE VOLÁTIL",
+      "source": "hermes",
+      "raw": [
+        "Rock"
+      ],
+      "primary": "rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2056",
+      "title": "Quincalla",
+      "source": "hermes",
+      "raw": [
+        "Rock psicodélico",
+        "Psicodélico con influencia del indie moderno"
+      ],
+      "primary": "rock-psicodelico",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2397",
+      "title": "Lord Piggy",
+      "source": "hermes",
+      "raw": [
+        "Gore / Goregrind"
+      ],
+      "primary": "goregrind",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2452",
+      "title": "Depornicated",
+      "source": "hermes",
+      "raw": [
+        "Noisecore",
+        "Goregrind"
+      ],
+      "primary": "noisecore",
+      "secondaries": [
+        "goregrind"
+      ]
+    },
+    {
+      "caseId": "artist:2098",
+      "title": "Decapitado Social",
+      "source": "hermes",
+      "raw": [
+        "Punk rock"
+      ],
+      "primary": "punk-rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2377",
+      "title": "Hematoputrefaction Sexologicunt",
+      "source": "hermes",
+      "raw": [
+        "cyber goregrind",
+        "goregrind"
+      ],
+      "primary": "goregrind",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2057",
+      "title": "D'Eras",
+      "source": "hermes",
+      "raw": [
+        "Indie Rock",
+        "Rock"
+      ],
+      "primary": "indie-rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2259",
+      "title": "TRIVIAL",
+      "source": "hermes",
+      "raw": [
+        "New-Metal",
+        "Rock"
+      ],
+      "primary": "metal",
+      "secondaries": [
+        "rock"
+      ]
+    },
+    {
+      "caseId": "artist:2373",
+      "title": "Postmorten",
+      "source": "hermes",
+      "raw": [
+        "Brutal Death Metal/Grindcore",
+        "death/grind metal (gore)"
+      ],
+      "primary": "brutal-death-metal",
+      "secondaries": [
+        "grindcore",
+        "death-metal"
+      ]
+    },
+    {
+      "caseId": "artist:2109",
+      "title": "La Iguana",
+      "source": "hermes",
+      "raw": [
+        "punk",
+        "hard",
+        "rock de garage"
+      ],
+      "primary": "punk",
+      "secondaries": [
+        "hard-rock"
+      ]
+    },
+    {
+      "caseId": "artist:2427",
+      "title": "Bowel Maggots",
+      "source": "hermes",
+      "raw": [
+        "deathgrind",
+        "goregrind"
+      ],
+      "primary": "deathgrind",
+      "secondaries": [
+        "goregrind"
+      ]
+    },
+    {
+      "caseId": "artist:2106",
+      "title": "Poca Fe",
+      "source": "hermes",
+      "raw": [
+        "Punk rock",
+        "Punk covers"
+      ],
+      "primary": "punk-rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2142",
+      "title": "Vida de Campeones",
+      "source": "hermes",
+      "raw": [
+        "Rock",
+        "Música cristiana"
+      ],
+      "primary": "rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2449",
+      "title": "Individual Distortion",
+      "source": "hermes",
+      "raw": [
+        "goregrind"
+      ],
+      "primary": "goregrind",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2413",
+      "title": "Atomization",
+      "source": "hermes",
+      "raw": [
+        "goregrind",
+        "cybergrind",
+        "grindcore",
+        "black metal"
+      ],
+      "primary": "goregrind",
+      "secondaries": [
+        "grindcore",
+        "black-metal"
+      ]
+    },
+    {
+      "caseId": "artist:2353",
+      "title": "Sun Traitors",
+      "source": "hermes",
+      "raw": [
+        "Alternative/hard rock (grunge, metal, psych, prog)"
+      ],
+      "primary": "rock-alternativo",
+      "secondaries": [
+        "metal"
+      ]
+    },
+    {
+      "caseId": "artist:2470",
+      "title": "Ekhymosis",
+      "source": "hermes",
+      "raw": [
+        "thrash metal",
+        "heavy metal",
+        "metalcore",
+        "rock en español"
+      ],
+      "primary": "thrash-metal",
+      "secondaries": [
+        "heavy-metal",
+        "metalcore",
+        "rock-latino"
+      ]
+    },
+    {
+      "caseId": "artist:2111",
+      "title": "Aula",
+      "source": "hermes",
+      "raw": [
+        "Rock alternativo"
+      ],
+      "primary": "rock-alternativo",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2500",
+      "title": "Toxic Invader",
+      "source": "hermes",
+      "raw": [
+        "Thrash Metal",
+        "Thrash/Crossover"
+      ],
+      "primary": "thrash-metal",
+      "secondaries": [
+        "crossover-thrash"
+      ]
+    },
+    {
+      "caseId": "artist:2350",
+      "title": "Gods of Silence",
+      "source": "hermes",
+      "raw": [
+        "Melodic metal",
+        "Heavy metal"
+      ],
+      "primary": "melodic-metal",
+      "secondaries": [
+        "heavy-metal"
+      ]
+    },
+    {
+      "caseId": "artist:2387",
+      "title": "Meatknife",
+      "source": "hermes",
+      "raw": [
+        "Brutal Death Metal"
+      ],
+      "primary": "brutal-death-metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2312",
+      "title": "FRANK MORO",
+      "source": "hermes",
+      "raw": [
+        "Rock",
+        "Blues",
+        "Folk / Pop-rock independiente",
+        "Acústico / Rhythm & Blues"
+      ],
+      "primary": "rock",
+      "secondaries": [
+        "blues",
+        "folk"
+      ]
+    },
+    {
+      "caseId": "artist:2093",
+      "title": "VodkApaticos",
+      "source": "hermes",
+      "raw": [
+        "Rock alternativo",
+        "Rock"
+      ],
+      "primary": "rock-alternativo",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2210",
+      "title": "Vicio",
+      "source": "hermes",
+      "raw": [
+        "Punk n' Roll",
+        "Rock"
+      ],
+      "primary": "rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2434",
+      "title": "Inverted Scrotum",
+      "source": "hermes",
+      "raw": [
+        "goregrind",
+        "cybergrind",
+        "pornogrindcore",
+        "gorenoise",
+        "harsh noise"
+      ],
+      "primary": "goregrind",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2322",
+      "title": "ZAIRE",
+      "source": "hermes",
+      "raw": [
+        "Metal alternativo",
+        "Nu Metal"
+      ],
+      "primary": "metal-alternativo",
+      "secondaries": [
+        "nu-metal"
+      ]
+    },
+    {
+      "caseId": "artist:2063",
+      "title": "Los Navajo",
+      "source": "hermes",
+      "raw": [
+        "Rock and Roll / rock n' roll",
+        "Rock zuliano"
+      ],
+      "primary": "rock-and-roll",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2410",
+      "title": "Gutslut",
+      "source": "hermes",
+      "raw": [
+        "slamming brutal death metal"
+      ],
+      "primary": "slamming-brutal-death-metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2180",
+      "title": "OPPONENT",
+      "source": "hermes",
+      "raw": [
+        "Metal extremo"
+      ],
+      "primary": "metal-extremo",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2488",
+      "title": "Pigto",
+      "source": "hermes",
+      "raw": [
+        "goregrind"
+      ],
+      "primary": "goregrind",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2062",
+      "title": "Xarz",
+      "source": "hermes",
+      "raw": [
+        "Rock"
+      ],
+      "primary": "rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2199",
+      "title": "Nerón",
+      "source": "hermes",
+      "raw": [
+        "Death Metal/Grindcore"
+      ],
+      "primary": "death-metal",
+      "secondaries": [
+        "grindcore"
+      ]
+    },
+    {
+      "caseId": "artist:2324",
+      "title": "Illya Kuryaki & The Valderramas",
+      "source": "hermes",
+      "raw": [
+        "Rap rock",
+        "Funk rock",
+        "Acid jazz",
+        "latin rock"
+      ],
+      "primary": "rap-metal",
+      "secondaries": [
+        "rock-latino"
+      ]
+    },
+    {
+      "caseId": "artist:2337",
+      "title": "Maxxwell",
+      "source": "hermes",
+      "raw": [
+        "Hard Rock",
+        "Heavy Metal"
+      ],
+      "primary": "hard-rock",
+      "secondaries": [
+        "heavy-metal"
+      ]
+    },
+    {
+      "caseId": "artist:2367",
+      "title": "Embryopathia",
+      "source": "hermes",
+      "raw": [
+        "goregrind",
+        "brutal death metal",
+        "Blasting Death/Grind"
+      ],
+      "primary": "goregrind",
+      "secondaries": [
+        "brutal-death-metal"
+      ]
+    },
+    {
+      "caseId": "artist:2172",
+      "title": "EPIGNOSIS",
+      "source": "hermes",
+      "raw": [
+        "rock alternativo"
+      ],
+      "primary": "rock-alternativo",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2502",
+      "title": "Tempestor",
+      "source": "hermes",
+      "raw": [
+        "Thrash Metal"
+      ],
+      "primary": "thrash-metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2148",
+      "title": "La Experiencia Taxi",
+      "source": "hermes",
+      "raw": [
+        "Rock / banda de covers de The Beatles"
+      ],
+      "primary": "rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2428",
+      "title": "Menstruating Cunt",
+      "source": "hermes",
+      "raw": [
+        "Goregrind",
+        "Pornogrind",
+        "Gore-Grind"
+      ],
+      "primary": "goregrind",
+      "secondaries": [
+        "porngrind"
+      ]
+    },
+    {
+      "caseId": "artist:2201",
+      "title": "Opensky",
+      "source": "hermes",
+      "raw": [
+        "Rock"
+      ],
+      "primary": "rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2073",
+      "title": "Vinoacido",
+      "source": "hermes",
+      "raw": [
+        "Rock"
+      ],
+      "primary": "rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2349",
+      "title": "Possessed",
+      "source": "hermes",
+      "raw": [
+        "Death metal",
+        "Thrash metal"
+      ],
+      "primary": "death-metal",
+      "secondaries": [
+        "thrash-metal"
+      ]
+    },
+    {
+      "caseId": "artist:2123",
+      "title": "Incierto",
+      "source": "hermes",
+      "raw": [
+        "Rock"
+      ],
+      "primary": "rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2276",
+      "title": "SUBLIMINAL SENSE",
+      "source": "hermes",
+      "raw": [
+        "Death metal melódico"
+      ],
+      "primary": "death-metal-melodico",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2355",
+      "title": "Gruesome",
+      "source": "hermes",
+      "raw": [
+        "Death Metal",
+        "Old-school Death Metal"
+      ],
+      "primary": "death-metal",
+      "secondaries": [
+        "death-metal-old-school"
+      ]
+    },
+    {
+      "caseId": "artist:2340",
+      "title": "Suicide Silence",
+      "source": "hermes",
+      "raw": [
+        "deathcore",
+        "metalcore"
+      ],
+      "primary": "deathcore",
+      "secondaries": [
+        "metalcore"
+      ]
+    },
+    {
+      "caseId": "artist:2129",
+      "title": "Impulsos",
+      "source": "hermes",
+      "raw": [
+        "Metal"
+      ],
+      "primary": "metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2390",
+      "title": "Mutilation Of Disciples",
+      "source": "hermes",
+      "raw": [
+        "Grindcore, Pornogrind"
+      ],
+      "primary": "grindcore",
+      "secondaries": [
+        "porngrind"
+      ]
+    },
+    {
+      "caseId": "artist:2087",
+      "title": "Elite",
+      "source": "hermes",
+      "raw": [
+        "Rock alternativo"
+      ],
+      "primary": "rock-alternativo",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2159",
+      "title": "Koi",
+      "source": "hermes",
+      "raw": [
+        "Rock"
+      ],
+      "primary": "rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2481",
+      "title": "Human Decomposition",
+      "source": "hermes",
+      "raw": [
+        "Slamming Brutal Death Metal",
+        "brutal death metal"
+      ],
+      "primary": "slamming-brutal-death-metal",
+      "secondaries": [
+        "brutal-death-metal"
+      ]
+    },
+    {
+      "caseId": "artist:2261",
+      "title": "ANAMUC",
+      "source": "hermes",
+      "raw": [
+        "Groove Metal"
+      ],
+      "primary": "groove-metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2346",
+      "title": "Heloise",
+      "source": "hermes",
+      "raw": [
+        "metal",
+        "metalcore",
+        "metal moderno"
+      ],
+      "primary": "metalcore",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2126",
+      "title": "Inercía",
+      "source": "hermes",
+      "raw": [
+        "Metalcore"
+      ],
+      "primary": "metalcore",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2065",
+      "title": "Cleo72",
+      "source": "hermes",
+      "raw": [
+        "Rock alternativo",
+        "Rock venezolano",
+        "Punk"
+      ],
+      "primary": "rock-alternativo",
+      "secondaries": [
+        "punk"
+      ]
+    },
+    {
+      "caseId": "artist:2077",
+      "title": "Evangelium",
+      "source": "hermes",
+      "raw": [
+        "Power Metal",
+        "Heavy Metal",
+        "Rock Cristiano"
+      ],
+      "primary": "power-metal",
+      "secondaries": [
+        "heavy-metal"
+      ]
+    },
+    {
+      "caseId": "artist:2108",
+      "title": "Cronopios",
+      "source": "hermes",
+      "raw": [
+        "Rock Guayanés",
+        "Rock"
+      ],
+      "primary": "rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2472",
+      "title": "Plastilina Mosh",
+      "source": "hermes",
+      "raw": [
+        "rap-rock",
+        "rock alternativo / música electrónica",
+        "avanzada regia"
+      ],
+      "primary": "rap-metal",
+      "secondaries": [
+        "rock-alternativo",
+        "electronica"
+      ]
+    },
+    {
+      "caseId": "artist:2145",
+      "title": "Stereocast",
+      "source": "hermes",
+      "raw": [
+        "Alternative Rock"
+      ],
+      "primary": "rock-alternativo",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2160",
+      "title": "Moriturio",
+      "source": "hermes",
+      "raw": [
+        "Black Metal"
+      ],
+      "primary": "black-metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2435",
+      "title": "Parastratiosphecomyia Stratiosphecomyioides",
+      "source": "hermes",
+      "raw": [
+        "goregrind",
+        "cybergrind",
+        "grindcore"
+      ],
+      "primary": "goregrind",
+      "secondaries": [
+        "grindcore"
+      ]
+    },
+    {
+      "caseId": "artist:2467",
+      "title": "Grupo Espiga",
+      "source": "hermes",
+      "raw": [
+        "rock",
+        "psych pop & folk"
+      ],
+      "primary": "rock",
+      "secondaries": [
+        "folk"
+      ]
+    },
+    {
+      "caseId": "artist:2433",
+      "title": "Kharms",
+      "source": "hermes",
+      "raw": [
+        "goregrind",
+        "grindcore"
+      ],
+      "primary": "goregrind",
+      "secondaries": [
+        "grindcore"
+      ]
+    },
+    {
+      "caseId": "artist:2171",
+      "title": "CUSTOM 70",
+      "source": "hermes",
+      "raw": [
+        "Rock"
+      ],
+      "primary": "rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2207",
+      "title": "Exocet",
+      "source": "hermes",
+      "raw": [
+        "Hard Rock",
+        "Rock Pesado"
+      ],
+      "primary": "hard-rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2455",
+      "title": "Insufferable",
+      "source": "hermes",
+      "raw": [
+        "noisecore",
+        "digital hardcore",
+        "harsh noise",
+        "power electronics",
+        "powerviolence"
+      ],
+      "primary": "noisecore",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2447",
+      "title": "Kusari Gama Kill",
+      "source": "hermes",
+      "raw": [
+        "noisecore",
+        "noisegrind"
+      ],
+      "primary": "noisecore",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2378",
+      "title": "Mortuus Neurons",
+      "source": "hermes",
+      "raw": [
+        "Goregrind",
+        "Grind Death"
+      ],
+      "primary": "goregrind",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2499",
+      "title": "Sorath",
+      "source": "hermes",
+      "raw": [
+        "Thrash Metal/Crossover",
+        "Crossover"
+      ],
+      "primary": "thrash-metal",
+      "secondaries": [
+        "crossover-thrash"
+      ]
+    },
+    {
+      "caseId": "artist:2342",
+      "title": "Rage",
+      "source": "hermes",
+      "raw": [
+        "Heavy metal",
+        "Power metal",
+        "Speed metal",
+        "Progressive metal",
+        "Symphonic metal"
+      ],
+      "primary": "heavy-metal",
+      "secondaries": [
+        "power-metal",
+        "speed-metal",
+        "metal-progresivo",
+        "metal-sinfonico"
+      ]
+    },
+    {
+      "caseId": "artist:2442",
+      "title": "Intestinal Crusher",
+      "source": "hermes",
+      "raw": [
+        "Death Metal"
+      ],
+      "primary": "death-metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2439",
+      "title": "Coprogasm",
+      "source": "hermes",
+      "raw": [
+        "gorenoise",
+        "noisegrind",
+        "porngrind",
+        "pornogrind",
+        "pornonoisegrind"
+      ],
+      "primary": "porngrind",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2100",
+      "title": "Angelus",
+      "source": "hermes",
+      "raw": [
+        "Gothic Metal"
+      ],
+      "primary": "metal-gotico",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2271",
+      "title": "R'LYEH",
+      "source": "hermes",
+      "raw": [
+        "Heavy Metal"
+      ],
+      "primary": "heavy-metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2105",
+      "title": "Loica",
+      "source": "hermes",
+      "raw": [
+        "Pop Rock",
+        "Rock pop",
+        "Pop Rock Punk",
+        "Rock",
+        "Punk",
+        "Pop/Rock"
+      ],
+      "primary": "pop-rock",
+      "secondaries": [
+        "punk"
+      ]
+    },
+    {
+      "caseId": "artist:2265",
+      "title": "NEFARIUS",
+      "source": "hermes",
+      "raw": [
+        "Death Metal",
+        "Death Metal Melódico"
+      ],
+      "primary": "death-metal",
+      "secondaries": [
+        "death-metal-melodico"
+      ]
+    },
+    {
+      "caseId": "artist:2391",
+      "title": "Tripxss",
+      "source": "hermes",
+      "raw": [
+        "Goregrind",
+        "Powerviolence"
+      ],
+      "primary": "goregrind",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2335",
+      "title": "Paulo Ricardo",
+      "source": "hermes",
+      "raw": [
+        "rock",
+        "rock progressivo",
+        "new wave",
+        "pop rock",
+        "MPB"
+      ],
+      "primary": "new-wave",
+      "secondaries": [
+        "pop-rock"
+      ]
+    },
+    {
+      "caseId": "artist:2143",
+      "title": "Cursi Máquina",
+      "source": "hermes",
+      "raw": [
+        "Rock alternativo"
+      ],
+      "primary": "rock-alternativo",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2345",
+      "title": "Nightrage",
+      "source": "hermes",
+      "raw": [
+        "Melodic death metal",
+        "death metal"
+      ],
+      "primary": "death-metal-melodico",
+      "secondaries": [
+        "death-metal"
+      ]
+    },
+    {
+      "caseId": "artist:2338",
+      "title": "Always War",
+      "source": "hermes",
+      "raw": [
+        "Hardcore",
+        "metalcore",
+        "thrash metal"
+      ],
+      "primary": "hardcore-punk",
+      "secondaries": [
+        "metalcore",
+        "thrash-metal"
+      ]
+    },
+    {
+      "caseId": "artist:1194",
+      "title": "Sinsaye de Venezuela",
+      "source": "hermes",
+      "raw": [
+        "Salsa"
+      ],
+      "primary": "salsa",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2308",
+      "title": "LOST GRAVITY",
+      "source": "hermes",
+      "raw": [
+        "Metal",
+        "Nu metal",
+        "Metalcore"
+      ],
+      "primary": "nu-metal",
+      "secondaries": [
+        "metalcore"
+      ]
+    },
+    {
+      "caseId": "artist:2368",
+      "title": "Anal Arcade",
+      "source": "hermes",
+      "raw": [
+        "Porno Gore Grind",
+        "Pornogore",
+        "Goregrind"
+      ],
+      "primary": "goregrind",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2354",
+      "title": "Alexx Mattey",
+      "source": "hermes",
+      "raw": [
+        "dark hard rock",
+        "metal"
+      ],
+      "primary": "metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2182",
+      "title": "PRIMERA LEY",
+      "source": "hermes",
+      "raw": [
+        "Rock alternativo",
+        "Blues",
+        "Pop",
+        "Latin rock",
+        "Rock&Roll",
+        "Baladas"
+      ],
+      "primary": "rock-alternativo",
+      "secondaries": [
+        "blues",
+        "balada",
+        "rock-latino",
+        "rock-and-roll"
+      ]
+    },
+    {
+      "caseId": "artist:2415",
+      "title": "Fekal Vomyt",
+      "source": "hermes",
+      "raw": [
+        "goregrind"
+      ],
+      "primary": "goregrind",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2364",
+      "title": "Cerebral Enema",
+      "source": "hermes",
+      "raw": [
+        "Goregrind"
+      ],
+      "primary": "goregrind",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2118",
+      "title": "XVirus",
+      "source": "hermes",
+      "raw": [
+        "Thrash Metal"
+      ],
+      "primary": "thrash-metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2479",
+      "title": "Dressed for Apocalypse",
+      "source": "hermes",
+      "raw": [
+        "Brutal Death",
+        "Deathcore/Brutal Death"
+      ],
+      "primary": "deathcore",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2347",
+      "title": "Kingbeast",
+      "source": "hermes",
+      "raw": [
+        "Groove Metal",
+        "thrash metal",
+        "hardcore punk"
+      ],
+      "primary": "groove-metal",
+      "secondaries": [
+        "thrash-metal",
+        "hardcore-punk"
+      ]
+    },
+    {
+      "caseId": "artist:2204",
+      "title": "Audiocafé",
+      "source": "hermes",
+      "raw": [
+        "Pop-Rock"
+      ],
+      "primary": "pop-rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2352",
+      "title": "Rainmaker",
+      "source": "hermes",
+      "raw": [
+        "Death Metal",
+        "Death Metal (influencias del metal extremo clásico)"
+      ],
+      "primary": "death-metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2344",
+      "title": "Moonspell",
+      "source": "hermes",
+      "raw": [
+        "Gothic metal",
+        "Doom metal",
+        "Melodic death metal",
+        "Black metal"
+      ],
+      "primary": "metal-gotico",
+      "secondaries": [
+        "doom-metal",
+        "death-metal-melodico",
+        "black-metal"
+      ]
+    },
+    {
+      "caseId": "artist:2375",
+      "title": "Piggy",
+      "source": "hermes",
+      "raw": [
+        "Goregrind",
+        "Grindcore"
+      ],
+      "primary": "goregrind",
+      "secondaries": [
+        "grindcore"
+      ]
+    },
+    {
+      "caseId": "artist:2064",
+      "title": "TAK",
+      "source": "hermes",
+      "raw": [
+        "Rock alternativo",
+        "Alternative Rock"
+      ],
+      "primary": "rock-alternativo",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2459",
+      "title": "Mal Aliento",
+      "source": "hermes",
+      "raw": [
+        "Noisecore",
+        "Goregrind",
+        "Noise metal"
+      ],
+      "primary": "noisecore",
+      "secondaries": [
+        "goregrind"
+      ]
+    },
+    {
+      "caseId": "artist:2206",
+      "title": "Primero Venezuela",
+      "source": "hermes",
+      "raw": [
+        "Punk Hardcore",
+        "Hardcore"
+      ],
+      "primary": "hardcore-punk",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2508",
+      "title": "Ataque Nuclear",
+      "source": "hermes",
+      "raw": [
+        "Crossover",
+        "Thrash Metal",
+        "Thrash/Crossover"
+      ],
+      "primary": "crossover-thrash",
+      "secondaries": [
+        "thrash-metal"
+      ]
+    },
+    {
+      "caseId": "artist:2179",
+      "title": "NEKROPOLIS",
+      "source": "hermes",
+      "raw": [
+        "Heavy Metal",
+        "Rock"
+      ],
+      "primary": "heavy-metal",
+      "secondaries": [
+        "rock"
+      ]
+    },
+    {
+      "caseId": "artist:2483",
+      "title": "Anomalistic",
+      "source": "hermes",
+      "raw": [
+        "Brutal death metal",
+        "Slam"
+      ],
+      "primary": "brutal-death-metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2469",
+      "title": "Skank",
+      "source": "hermes",
+      "raw": [
+        "Pop rock",
+        "ska"
+      ],
+      "primary": "pop-rock",
+      "secondaries": [
+        "ska"
+      ]
+    },
+    {
+      "caseId": "artist:2363",
+      "title": "Pulmonary Fibrosis",
+      "source": "hermes",
+      "raw": [
+        "Goregrind"
+      ],
+      "primary": "goregrind",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2358",
+      "title": "Honra",
+      "source": "hermes",
+      "raw": [
+        "Melodic Death Metal/Deathcore",
+        "Death Metal/Deathcore"
+      ],
+      "primary": "death-metal-melodico",
+      "secondaries": [
+        "deathcore",
+        "death-metal"
+      ]
+    },
+    {
+      "caseId": "artist:2124",
+      "title": "DivisKirius",
+      "source": "hermes",
+      "raw": [
+        "Death metal"
+      ],
+      "primary": "death-metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2401",
+      "title": "Vaginosis Bacteriana",
+      "source": "hermes",
+      "raw": [
+        "Porno Gore Grind",
+        "Metal, Grindcore"
+      ],
+      "primary": "grindcore",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2372",
+      "title": "Rectal Rooter",
+      "source": "hermes",
+      "raw": [
+        "DeathGrind",
+        "brutal death metal"
+      ],
+      "primary": "deathgrind",
+      "secondaries": [
+        "brutal-death-metal"
+      ]
+    },
+    {
+      "caseId": "artist:2115",
+      "title": "Innuendo",
+      "source": "hermes",
+      "raw": [
+        "Metal Progresivo"
+      ],
+      "primary": "metal-progresivo",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2299",
+      "title": "AHRIMAN",
+      "source": "hermes",
+      "raw": [
+        "Blackened Death Metal"
+      ],
+      "primary": "blackened-death-metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2385",
+      "title": "Urinophobic",
+      "source": "hermes",
+      "raw": [
+        "gorenoise",
+        "goregrind",
+        "pornogrind"
+      ],
+      "primary": "goregrind",
+      "secondaries": [
+        "porngrind"
+      ]
+    },
+    {
+      "caseId": "artist:2097",
+      "title": "Abstracta",
+      "source": "hermes",
+      "raw": [
+        "Rock / Experimental",
+        "Rock experimental"
+      ],
+      "primary": "rock-experimental",
+      "secondaries": [
+        "experimental"
+      ]
+    },
+    {
+      "caseId": "artist:2152",
+      "title": "Diaclasa",
+      "source": "hermes",
+      "raw": [
+        "Power metal"
+      ],
+      "primary": "power-metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2411",
+      "title": "CX9",
+      "source": "hermes",
+      "raw": [
+        "Goregrind",
+        "grindcore"
+      ],
+      "primary": "goregrind",
+      "secondaries": [
+        "grindcore"
+      ]
+    },
+    {
+      "caseId": "artist:2256",
+      "title": "Mute",
+      "source": "hermes",
+      "raw": [
+        "Heavy Metal",
+        "Rock & Roll"
+      ],
+      "primary": "heavy-metal",
+      "secondaries": [
+        "rock-and-roll"
+      ]
+    },
+    {
+      "caseId": "artist:2103",
+      "title": "Violetas Negras",
+      "source": "hermes",
+      "raw": [
+        "Rock Latino"
+      ],
+      "primary": "rock-latino",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:1202",
+      "title": "Páymaco",
+      "source": "hermes",
+      "raw": [
+        "Pop-ruido",
+        "Rock pop-ruido"
+      ],
+      "primary": "pop",
+      "secondaries": [
+        "pop-rock"
+      ]
+    }
+  ],
+  "alreadyClassified": [
+    "artist:2258",
+    "artist:2132",
+    "artist:2304",
+    "artist:2122",
+    "artist:2200",
+    "artist:2146",
+    "artist:2158",
+    "artist:2222",
+    "artist:2074",
+    "artist:2120",
+    "artist:2083",
+    "artist:2068",
+    "artist:2249",
+    "artist:2156",
+    "artist:2297",
+    "artist:2094",
+    "artist:2275",
+    "artist:2328",
+    "artist:2463",
+    "artist:2370",
+    "artist:2248"
+  ],
+  "unresolved": [
+    {
+      "caseId": "artist:2348",
+      "source": "hermes",
+      "raw": [
+        "Tribal Metal"
+      ],
+      "fragments": [
+        "Tribal Metal"
+      ]
+    },
+    {
+      "caseId": "artist:2425",
+      "source": "hermes",
+      "raw": [
+        "Porno Gore Grind"
+      ],
+      "fragments": [
+        "Porno Gore Grind"
+      ]
+    },
+    {
+      "caseId": "artist:2494",
+      "source": "hermes",
+      "raw": [
+        "Porno Gore Grind"
+      ],
+      "fragments": [
+        "Porno Gore Grind"
+      ]
+    },
+    {
+      "caseId": "artist:2224",
+      "source": "hermes",
+      "raw": [
+        "French house"
+      ],
+      "fragments": [
+        "French house"
+      ]
+    },
+    {
+      "caseId": "artist:2082",
+      "source": "hermes",
+      "raw": [
+        "Rock (banda de covers / tributo de Pink Floyd)"
+      ],
+      "fragments": [
+        "Rock (banda de covers",
+        "tributo de Pink Floyd)"
+      ]
+    },
+    {
+      "caseId": "artist:2456",
+      "source": "hermes",
+      "raw": [
+        "Gorenoise"
+      ],
+      "fragments": [
+        "Gorenoise"
+      ]
+    },
+    {
+      "caseId": "artist:2489",
+      "source": "hermes",
+      "raw": [
+        "Porno Gore Grind"
+      ],
+      "fragments": [
+        "Porno Gore Grind"
+      ]
+    },
+    {
+      "caseId": "artist:2374",
+      "source": "hermes",
+      "raw": [
+        "Groovy PornGrind",
+        "Porno Gore Grind"
+      ],
+      "fragments": [
+        "Groovy PornGrind",
+        "Porno Gore Grind"
+      ]
+    },
+    {
+      "caseId": "artist:2417",
+      "source": "hermes",
+      "raw": [
+        "Grind Death"
+      ],
+      "fragments": [
+        "Grind Death"
+      ]
+    },
+    {
+      "caseId": "artist:2128",
+      "source": "hermes",
+      "raw": [
+        "Punk callejero"
+      ],
+      "fragments": [
+        "Punk callejero"
+      ]
+    },
+    {
+      "caseId": "artist:2478",
+      "source": "hermes",
+      "raw": [
+        "Death Grind"
+      ],
+      "fragments": [
+        "Death Grind"
+      ]
+    },
+    {
+      "caseId": "artist:2446",
+      "source": "hermes",
+      "raw": [
+        "Porno Gore Grind",
+        "Gorenoise"
+      ],
+      "fragments": [
+        "Porno Gore Grind",
+        "Gorenoise"
+      ]
+    },
+    {
+      "caseId": "artist:2486",
+      "source": "hermes",
+      "raw": [
+        "Brutal Death"
+      ],
+      "fragments": [
+        "Brutal Death"
+      ]
+    },
+    {
+      "caseId": "artist:2294",
+      "source": "hermes",
+      "raw": [
+        "Heavy Metal Cristiano"
+      ],
+      "fragments": [
+        "Heavy Metal Cristiano"
+      ]
+    },
+    {
+      "caseId": "artist:2436",
+      "source": "hermes",
+      "raw": [
+        "Cybergrind"
+      ],
+      "fragments": [
+        "Cybergrind"
+      ]
+    },
+    {
+      "caseId": "artist:2282",
+      "source": "hermes",
+      "raw": [
+        "Covers pop rock (70, 80, 90)"
+      ],
+      "fragments": [
+        "Covers pop rock (70",
+        "80",
+        "90)"
+      ]
+    },
+    {
+      "caseId": "artist:2323",
+      "source": "hermes",
+      "raw": [
+        "Hard Core",
+        "Rock protesta"
+      ],
+      "fragments": [
+        "Hard Core",
+        "Rock protesta"
+      ]
+    },
+    {
+      "caseId": "artist:2414",
+      "source": "hermes",
+      "raw": [
+        "cybergrind",
+        "blackened noise",
+        "digital hardcore"
+      ],
+      "fragments": [
+        "cybergrind",
+        "blackened noise",
+        "digital hardcore"
+      ]
+    },
+    {
+      "caseId": "artist:2444",
+      "source": "hermes",
+      "raw": [
+        "Gorenoise"
+      ],
+      "fragments": [
+        "Gorenoise"
+      ]
+    },
+    {
+      "caseId": "artist:2493",
+      "source": "hermes",
+      "raw": [
+        "Grind Electro"
+      ],
+      "fragments": [
+        "Grind Electro"
+      ]
+    },
+    {
+      "caseId": "artist:2398",
+      "source": "hermes",
+      "raw": [
+        "Gorenoise"
+      ],
+      "fragments": [
+        "Gorenoise"
+      ]
+    },
+    {
+      "caseId": "artist:2491",
+      "source": "hermes",
+      "raw": [
+        "Porno Gore Grind"
+      ],
+      "fragments": [
+        "Porno Gore Grind"
+      ]
+    },
+    {
+      "caseId": "artist:2485",
+      "source": "hermes",
+      "raw": [
+        "Brutal Death"
+      ],
+      "fragments": [
+        "Brutal Death"
+      ]
+    },
+    {
+      "caseId": "artist:2176",
+      "source": "hermes",
+      "raw": [
+        "Rock venezolano"
+      ],
+      "fragments": [
+        "Rock venezolano"
+      ]
+    },
+    {
+      "caseId": "artist:2388",
+      "source": "hermes",
+      "raw": [
+        "groovy goregrind"
+      ],
+      "fragments": [
+        "groovy goregrind"
+      ]
+    },
+    {
+      "caseId": "artist:2431",
+      "source": "hermes",
+      "raw": [
+        "Porno Gore Grind",
+        "Porngore Grind"
+      ],
+      "fragments": [
+        "Porno Gore Grind",
+        "Porngore Grind"
+      ]
+    },
+    {
+      "caseId": "artist:2359",
+      "source": "hermes",
+      "raw": [
+        "Heavy Metal clásico"
+      ],
+      "fragments": [
+        "Heavy Metal clásico"
+      ]
+    },
+    {
+      "caseId": "artist:2482",
+      "source": "hermes",
+      "raw": [
+        "Brutal Death",
+        "Slamming Death Metal"
+      ],
+      "fragments": [
+        "Brutal Death",
+        "Slamming Death Metal"
+      ]
+    },
+    {
+      "caseId": "artist:2440",
+      "source": "hermes",
+      "raw": [
+        "Cyber noise / Anti-Music"
+      ],
+      "fragments": [
+        "Cyber noise",
+        "Anti",
+        "Music"
+      ]
+    },
+    {
+      "caseId": "artist:2060",
+      "source": "hermes",
+      "raw": [
+        "Indie Rock con matices de Brit Pop",
+        "Rock con influencia del indie británico y guiños al shoegaze"
+      ],
+      "fragments": [
+        "Indie Rock con matices de Brit Pop",
+        "Rock con influencia del indie británico",
+        "guiños al shoegaze"
+      ]
+    }
+  ],
+  "errors": [],
+  "moreSpecificExists": []
+}

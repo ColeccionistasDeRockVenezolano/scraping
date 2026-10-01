@@ -1,0 +1,207 @@
+{
+  "mode": "dry-run",
+  "runId": 10424,
+  "reason": "La página de Last.fm es de un homónimo o mezcla artistas (revisión manual 2026-09-28)",
+  "reverted": [
+    {
+      "caseId": "artist:56",
+      "genres": [
+        "avant-garde"
+      ]
+    },
+    {
+      "caseId": "artist:201",
+      "genres": [
+        "rock",
+        "experimental"
+      ]
+    },
+    {
+      "caseId": "artist:303",
+      "genres": [
+        "stoner-rock"
+      ]
+    },
+    {
+      "caseId": "artist:330",
+      "genres": [
+        "indie-rock",
+        "rock-progresivo"
+      ]
+    },
+    {
+      "caseId": "artist:336",
+      "genres": [
+        "power-metal",
+        "metal-progresivo",
+        "metalcore"
+      ]
+    },
+    {
+      "caseId": "artist:531",
+      "genres": [
+        "jazz"
+      ]
+    },
+    {
+      "caseId": "artist:738",
+      "genres": [
+        "ambient",
+        "experimental",
+        "folk",
+        "instrumental",
+        "pop",
+        "hip-hop"
+      ]
+    },
+    {
+      "caseId": "artist:751",
+      "genres": [
+        "psychobilly",
+        "rock-alternativo",
+        "punk-rock"
+      ]
+    },
+    {
+      "caseId": "artist:909",
+      "genres": [
+        "thrash-metal"
+      ]
+    },
+    {
+      "caseId": "artist:1040",
+      "genres": [
+        "indie-rock",
+        "fusion-latina",
+        "rock-alternativo",
+        "electropop",
+        "art-rock"
+      ]
+    },
+    {
+      "caseId": "artist:1048",
+      "genres": [
+        "rock-alternativo",
+        "trip-hop"
+      ]
+    },
+    {
+      "caseId": "artist:1160",
+      "genres": [
+        "hardcore-punk"
+      ]
+    },
+    {
+      "caseId": "artist:1447",
+      "genres": [
+        "black-metal",
+        "rock",
+        "electronica",
+        "metal-gotico"
+      ]
+    },
+    {
+      "caseId": "artist:1507",
+      "genres": [
+        "rock",
+        "jazz",
+        "funk",
+        "blues"
+      ]
+    },
+    {
+      "caseId": "artist:1516",
+      "genres": [
+        "punk-rock"
+      ]
+    },
+    {
+      "caseId": "artist:1521",
+      "genres": [
+        "death-metal",
+        "thrash-metal"
+      ]
+    },
+    {
+      "caseId": "artist:1535",
+      "genres": [
+        "funk",
+        "hardcore-punk",
+        "jazz-fusion"
+      ]
+    },
+    {
+      "caseId": "artist:1558",
+      "genres": [
+        "reggae",
+        "ska"
+      ]
+    },
+    {
+      "caseId": "artist:1578",
+      "genres": [
+        "pop",
+        "rock-alternativo",
+        "indie-rock"
+      ]
+    },
+    {
+      "caseId": "artist:1580",
+      "genres": [
+        "darkwave",
+        "post-punk",
+        "ambient",
+        "new-wave"
+      ]
+    },
+    {
+      "caseId": "artist:1590",
+      "genres": [
+        "jazz",
+        "metal-alternativo"
+      ]
+    },
+    {
+      "caseId": "artist:1750",
+      "genres": [
+        "thrash-metal",
+        "crossover-thrash",
+        "heavy-metal",
+        "hip-hop",
+        "hardcore-punk",
+        "groove-metal"
+      ]
+    },
+    {
+      "caseId": "artist:1815",
+      "genres": [
+        "oi",
+        "rock-alternativo"
+      ]
+    },
+    {
+      "caseId": "artist:1924",
+      "genres": [
+        "gangsta-rap",
+        "instrumental"
+      ]
+    },
+    {
+      "caseId": "artist:1931",
+      "genres": [
+        "grunge",
+        "metal"
+      ]
+    },
+    {
+      "caseId": "artist:1982",
+      "genres": [
+        "rock-progresivo",
+        "jazz-rock",
+        "instrumental",
+        "jazz-fusion"
+      ]
+    }
+  ],
+  "untouched": []
+}

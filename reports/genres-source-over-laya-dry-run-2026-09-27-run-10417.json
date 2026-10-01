@@ -1,0 +1,17 @@
+{
+  "mode": "dry-run",
+  "runId": 10417,
+  "compatible": 1,
+  "reverted": [
+    {
+      "caseId": "artist:1945",
+      "source": "rhv-directorio",
+      "laya": [
+        "heavy-metal"
+      ],
+      "raw": [
+        "heavy metal progresivo sinfónico"
+      ]
+    }
+  ]
+}

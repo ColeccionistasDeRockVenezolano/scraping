@@ -1,0 +1,584 @@
+{
+  "targetIds": [
+    495,
+    81,
+    89,
+    535,
+    548,
+    69,
+    360,
+    550,
+    614,
+    604,
+    560,
+    52,
+    56,
+    86,
+    59,
+    442,
+    519,
+    615,
+    61,
+    126
+  ],
+  "sourceSlug": "discogs",
+  "level": "album",
+  "scope": "targets",
+  "mode": "confirm",
+  "runId": 9903,
+  "importId": 27,
+  "candidates": 20,
+  "identities": {
+    "matched": 4,
+    "ambiguous": 4,
+    "none": 12
+  },
+  "suggestions": {
+    "inserted": 11,
+    "skipped": 0
+  },
+  "agreement": {
+    "agree": 0,
+    "family_agree": 0,
+    "disagree": 0,
+    "no_reference": 4
+  },
+  "precision": null,
+  "noise": {
+    "unmapped": 2
+  },
+  "coverageAdded": 4,
+  "cases": {
+    "opened": 3,
+    "byKind": {
+      "external_ambiguous_identity": 2,
+      "external_unmapped_term": 1
+    }
+  },
+  "network": {
+    "requests": 22,
+    "cacheHits": 60
+  },
+  "entities": [
+    {
+      "kind": "album",
+      "entityId": 52,
+      "title": "Love Maniac",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "695116",
+        "externalName": "A'mbar",
+        "score": 0.75,
+        "signals": [
+          "name_exact (A'mbar)",
+          "discography_strong (Love Maniac · The Witch)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.75 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 56,
+      "title": "Para Siempre",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "3189901",
+        "externalName": "Billy Se Fue",
+        "score": 0.75,
+        "signals": [
+          "name_exact (Billy Se Fue)",
+          "discography_strong (Para Siempre · Todo No Es Suficiente)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.75 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 59,
+      "title": "Una Oveja Más",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: la fuente no devolvió candidatos"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 61,
+      "title": "Despacio",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 69,
+      "title": "Todos y Todo",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 81,
+      "title": "Somos Jóvenes Me Quiero Divertir",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "11054960",
+        "externalName": "Marilanne",
+        "score": 0.6,
+        "signals": [
+          "name_exact (Marilanne)",
+          "discography_partial (Somos Jóvenes Me Quiero Divertir)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.6 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 86,
+      "title": "Resplandor",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: la fuente no devolvió candidatos"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 89,
+      "title": "Destronando Vidas",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 126,
+      "title": "Demos",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 360,
+      "title": "Piñata",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 442,
+      "title": "Beatlemanías",
+      "identity": {
+        "status": "matched",
+        "externalId": "release:8027712",
+        "externalName": "Beatlemanías",
+        "score": 0.9,
+        "signals": [
+          "artist_confirmed (4843669)",
+          "title_exact (Beatlemanías)",
+          "year_exact (1999)"
+        ],
+        "reason": "artist_confirmed + title_exact + year_exact"
+      },
+      "values": [
+        {
+          "raw": "Rock & Roll",
+          "status": "proposed",
+          "genreSlug": "rock-and-roll",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Rock",
+          "status": "proposed",
+          "genreSlug": "rock",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Funk / Soul",
+          "status": "proposed",
+          "genreSlug": "funk",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Funk / Soul",
+          "status": "proposed",
+          "genreSlug": "soul",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Pop",
+          "status": "proposed",
+          "genreSlug": "pop",
+          "reason": "propuesta nueva para revisión"
+        }
+      ],
+      "suggested": [
+        "rock-and-roll",
+        "rock",
+        "funk"
+      ],
+      "agreement": "no_reference",
+      "agreementDetail": "CRV no tiene principal confirmado para comparar",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 495,
+      "title": "Ofrenda",
+      "identity": {
+        "status": "matched",
+        "externalId": "master:1232355",
+        "externalName": "Ofrenda",
+        "score": 0.9,
+        "signals": [
+          "artist_confirmed (1528489)",
+          "title_exact (Ofrenda)",
+          "year_exact (1978)"
+        ],
+        "reason": "artist_confirmed + title_exact + year_exact"
+      },
+      "values": [
+        {
+          "raw": "Fusion",
+          "status": "unmapped",
+          "genreSlug": null,
+          "reason": "sin equivalencia en la taxonomía aprobada"
+        },
+        {
+          "raw": "Prog Rock",
+          "status": "proposed",
+          "genreSlug": "rock-progresivo",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Electronic",
+          "status": "proposed",
+          "genreSlug": "electronica",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Jazz",
+          "status": "proposed",
+          "genreSlug": "jazz",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Rock",
+          "status": "proposed",
+          "genreSlug": "rock",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Latin",
+          "status": "proposed",
+          "genreSlug": "fusion-latina",
+          "reason": "propuesta nueva para revisión"
+        }
+      ],
+      "suggested": [
+        "rock-progresivo",
+        "electronica",
+        "jazz"
+      ],
+      "agreement": "no_reference",
+      "agreementDetail": "CRV no tiene principal confirmado para comparar",
+      "casesOpened": [
+        "external_unmapped_term"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 519,
+      "title": "N[u(n)clear]",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: la fuente no devolvió candidatos"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 535,
+      "title": "El Final Del Mundo Vol. 1",
+      "identity": {
+        "status": "matched",
+        "externalId": "release:16813635",
+        "externalName": "El Final Del Mundo vol. 1",
+        "score": 0.9,
+        "signals": [
+          "artist_confirmed (2095566)",
+          "title_exact (El Final Del Mundo vol. 1)",
+          "year_exact (2012)"
+        ],
+        "reason": "artist_confirmed + title_exact + year_exact"
+      },
+      "values": [
+        {
+          "raw": "Indie Rock",
+          "status": "proposed",
+          "genreSlug": "indie-rock",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Jangle Pop",
+          "status": "unmapped",
+          "genreSlug": null,
+          "reason": "sin equivalencia en la taxonomía aprobada"
+        },
+        {
+          "raw": "Rock",
+          "status": "proposed",
+          "genreSlug": "rock",
+          "reason": "propuesta nueva para revisión"
+        }
+      ],
+      "suggested": [
+        "indie-rock",
+        "rock"
+      ],
+      "agreement": "no_reference",
+      "agreementDetail": "CRV no tiene principal confirmado para comparar",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 548,
+      "title": "Inéditas",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "1989410",
+        "externalName": "Dermis Tatú",
+        "score": 0.6,
+        "signals": [
+          "name_exact (Dermis Tatú)",
+          "discography_partial (La Violó La Mató y La Picó)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.6 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 550,
+      "title": "EP",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 560,
+      "title": "EP",
+      "identity": {
+        "status": "matched",
+        "externalId": "release:23184509",
+        "externalName": "EP",
+        "score": 0.9,
+        "signals": [
+          "artist_confirmed (5558504)",
+          "title_exact (EP)",
+          "year_exact (2010)"
+        ],
+        "reason": "artist_confirmed + title_exact + year_exact"
+      },
+      "values": [
+        {
+          "raw": "Pop Rock",
+          "status": "proposed",
+          "genreSlug": "pop-rock",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Rock",
+          "status": "proposed",
+          "genreSlug": "rock",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Pop",
+          "status": "proposed",
+          "genreSlug": "pop",
+          "reason": "propuesta nueva para revisión"
+        }
+      ],
+      "suggested": [
+        "pop-rock",
+        "rock",
+        "pop"
+      ],
+      "agreement": "no_reference",
+      "agreementDetail": "CRV no tiene principal confirmado para comparar",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 604,
+      "title": "Lesslie Sessions",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 614,
+      "title": "Demos",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 615,
+      "title": "EP",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    }
+  ],
+  "errors": []
+}

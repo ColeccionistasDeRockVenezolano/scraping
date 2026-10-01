@@ -1,0 +1,61 @@
+{
+  "mode": "dry-run",
+  "runId": 10626,
+  "candidates": 5,
+  "accepted": [
+    {
+      "caseId": "album:156",
+      "title": "Claroscuro - Supereterodino Sessions",
+      "source": "sincopa",
+      "raw": [
+        "Rock"
+      ],
+      "primary": "rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "album:322",
+      "title": "Sentimiento Muerto - Demos: Sin Sombra No Hay Luz",
+      "source": "sincopa",
+      "raw": [
+        "Rock"
+      ],
+      "primary": "rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "album:416",
+      "title": "Zapato 3 - Showcase: Bésame y Suicídate",
+      "source": "sincopa",
+      "raw": [
+        "Rock"
+      ],
+      "primary": "rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "album:593",
+      "title": "Zapato 3 - Separación Tour",
+      "source": "sincopa",
+      "raw": [
+        "Rock"
+      ],
+      "primary": "rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "album:588",
+      "title": "Various Artists - Tributo Lo-Fi A Sentimiento Muerto",
+      "source": "sincopa",
+      "raw": [
+        "Rock"
+      ],
+      "primary": "rock",
+      "secondaries": []
+    }
+  ],
+  "alreadyClassified": [],
+  "unresolved": [],
+  "errors": [],
+  "moreSpecificExists": []
+}

@@ -1,0 +1,2288 @@
+{
+  "sourceSlug": "musicbrainz",
+  "level": "artist",
+  "scope": "sample",
+  "mode": "dry-run",
+  "runId": 9916,
+  "importId": 40,
+  "candidates": 100,
+  "identities": {
+    "matched": 54,
+    "ambiguous": 18,
+    "none": 28
+  },
+  "suggestions": {
+    "inserted": 0,
+    "skipped": 0
+  },
+  "agreement": {
+    "agree": 4,
+    "family_agree": 2,
+    "disagree": 7,
+    "no_reference": 41
+  },
+  "precision": 0.462,
+  "noise": {
+    "too_generic": 1,
+    "unmapped": 3,
+    "ignored_kind": 8
+  },
+  "coverageAdded": 0,
+  "cases": {
+    "opened": 0,
+    "byKind": {}
+  },
+  "network": {
+    "requests": 191,
+    "cacheHits": 94
+  },
+  "entities": [
+    {
+      "kind": "artist",
+      "entityId": 1,
+      "title": "Los Kings",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "la fuente no devolvió candidatos"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 14,
+      "title": "La Abuela Disco",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "la fuente no devolvió candidatos"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 25,
+      "title": "Torre de Marfil",
+      "identity": {
+        "status": "matched",
+        "externalId": "3bb37fac-4e4e-4b59-bf6c-15ab5397b5b3",
+        "externalName": null,
+        "score": 1,
+        "signals": [
+          "identidad ya resuelta"
+        ],
+        "reason": "identidad guardada"
+      },
+      "values": [
+        {
+          "raw": "heavy metal",
+          "status": "already_known",
+          "genreSlug": "heavy-metal",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "power metal",
+          "status": "proposed",
+          "genreSlug": "power-metal",
+          "reason": "propuesta nueva para revisión"
+        }
+      ],
+      "suggested": [],
+      "agreement": "agree",
+      "agreementDetail": "la fuente nombra el principal confirmado (heavy-metal)",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 36,
+      "title": "Aditus",
+      "identity": {
+        "status": "matched",
+        "externalId": "7e9312b6-7f1f-4d26-96b4-1cb1c5d10b9f",
+        "externalName": null,
+        "score": 1,
+        "signals": [
+          "identidad ya resuelta"
+        ],
+        "reason": "identidad guardada"
+      },
+      "values": [
+        {
+          "raw": "progressive rock",
+          "status": "proposed",
+          "genreSlug": "rock-progresivo",
+          "reason": "propuesta nueva para revisión"
+        }
+      ],
+      "suggested": [],
+      "agreement": "disagree",
+      "agreementDetail": "la fuente propone rock-progresivo frente al principal pop-rock",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 37,
+      "title": "Agresión",
+      "identity": {
+        "status": "matched",
+        "externalId": "1782296a-d1db-49df-be89-05b37f4944c8",
+        "externalName": "Agresión",
+        "score": 0.85,
+        "signals": [
+          "name_exact (Agresión)",
+          "discography_strong (3 títulos: Cultura 3 · Guerra Santa · Sur)"
+        ],
+        "reason": "name_exact + discography_strong"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "la fuente no aportó ningún género comparable",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 41,
+      "title": "Americania",
+      "identity": {
+        "status": "matched",
+        "externalId": "a52477bc-7b62-419d-be07-7565f8d2eaa4",
+        "externalName": null,
+        "score": 1,
+        "signals": [
+          "identidad ya resuelta"
+        ],
+        "reason": "identidad guardada"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "la fuente no aportó ningún género comparable",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 42,
+      "title": "Ananta",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "0028729e-a080-4a6c-bc12-6a66a2bcd12e",
+        "externalName": "Ananta",
+        "score": 0.6,
+        "signals": [
+          "name_exact (Ananta)",
+          "discography_partial (Songs From The Future)"
+        ],
+        "reason": "coincidencia débil (0.6 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 43,
+      "title": "Andreazulado",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "la fuente no devolvió candidatos"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 46,
+      "title": "Arkangel",
+      "identity": {
+        "status": "matched",
+        "externalId": "0e115017-99f8-4aec-882d-28b2f1be09d8",
+        "externalName": "Arkangel",
+        "score": 1,
+        "signals": [
+          "name_exact (Arkangel)",
+          "country_ve (Venezuela)",
+          "discography_strong (4 títulos: El Angel De La Muerte · Inmortal · Represión Latinoamericana · Rock Nacional)"
+        ],
+        "reason": "name_exact + country_ve + discography_strong"
+      },
+      "values": [
+        {
+          "raw": "metal",
+          "status": "too_generic",
+          "genreSlug": "metal",
+          "reason": "CRV ya tiene un género hijo confirmado de esa familia"
+        },
+        {
+          "raw": "hard rock",
+          "status": "proposed",
+          "genreSlug": "hard-rock",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "heavy metal",
+          "status": "already_known",
+          "genreSlug": "heavy-metal",
+          "reason": "CRV ya lo tiene en la ficha"
+        }
+      ],
+      "suggested": [],
+      "agreement": "family_agree",
+      "agreementDetail": "la fuente coincide en la familia del principal confirmado",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 47,
+      "title": "Atkinson",
+      "identity": {
+        "status": "matched",
+        "externalId": "e0aa106b-ee90-4bc6-97b6-fba0e11cd253",
+        "externalName": null,
+        "score": 1,
+        "signals": [
+          "identidad ya resuelta"
+        ],
+        "reason": "identidad guardada"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "la fuente no aportó ningún género comparable",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 49,
+      "title": "Bacalao Men",
+      "identity": {
+        "status": "matched",
+        "externalId": "89a2e84f-f218-41d1-9735-8a9b05612fc9",
+        "externalName": "Bacalao Men",
+        "score": 1,
+        "signals": [
+          "name_exact (Bacalao Men)",
+          "country_ve (Venezuela)",
+          "discography_strong (El Nuevo Bugalú · Sabaneando)"
+        ],
+        "reason": "name_exact + country_ve + discography_strong"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "la fuente no aportó ningún género comparable",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 52,
+      "title": "Buenaparte",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "8bf96956-74a1-4975-b317-d6746bf4bd3a",
+        "externalName": "Buenaparte",
+        "score": 0.6,
+        "signals": [
+          "name_exact (Buenaparte)",
+          "discography_partial (La Caída De Lucy)"
+        ],
+        "reason": "coincidencia débil (0.6 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 55,
+      "title": "Candy66",
+      "identity": {
+        "status": "matched",
+        "externalId": "8d45b423-2029-4a6f-8ae4-98e450dcdd80",
+        "externalName": null,
+        "score": 1,
+        "signals": [
+          "identidad ya resuelta"
+        ],
+        "reason": "identidad guardada"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "la fuente no aportó ningún género comparable",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 58,
+      "title": "Caramelos De Cianuro",
+      "identity": {
+        "status": "matched",
+        "externalId": "3ee62edc-3521-4c39-89ce-081aafa79c00",
+        "externalName": null,
+        "score": 1,
+        "signals": [
+          "identidad ya resuelta"
+        ],
+        "reason": "identidad guardada"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "la fuente no aportó ningún género comparable",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 59,
+      "title": "Cebollas Ardientes",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "cb00d0ce-06e3-4a8b-8de9-a57eedc1a8df",
+        "externalName": "Cebollas Ardientes",
+        "score": 0.6,
+        "signals": [
+          "name_exact (Cebollas Ardientes)",
+          "discography_partial (Encebollame éste)"
+        ],
+        "reason": "coincidencia débil (0.6 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 61,
+      "title": "Charliepapa",
+      "identity": {
+        "status": "matched",
+        "externalId": "2f3f633e-2860-46ad-aabc-ab1e629c5884",
+        "externalName": "Charliepapa",
+        "score": 1,
+        "signals": [
+          "name_exact (Charliepapa)",
+          "country_ve (Mérida)",
+          "discography_strong (20000 Leguas Cuadriláteras · Y O)"
+        ],
+        "reason": "name_exact + country_ve + discography_strong"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "la fuente no aportó ningún género comparable",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 66,
+      "title": "Circo Urbano",
+      "identity": {
+        "status": "matched",
+        "externalId": "02be419d-6f33-4a71-af0d-14a08430c2f6",
+        "externalName": "Circo Urbano",
+        "score": 1,
+        "signals": [
+          "name_exact (Circo Urbano)",
+          "country_ve (Venezuela)",
+          "discography_strong (Kilómetros · Música Moderna)"
+        ],
+        "reason": "name_exact + country_ve + discography_strong"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "la fuente no aportó ningún género comparable",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 67,
+      "title": "Claroscuro",
+      "identity": {
+        "status": "matched",
+        "externalId": "6abbc725-28c2-406e-909d-5cebac78a42f",
+        "externalName": "Claroscuro",
+        "score": 1,
+        "signals": [
+          "name_exact (Claroscuro)",
+          "country_ve (Venezuela)",
+          "discography_strong (El Viaje De Una Vida · Supereterodino)"
+        ],
+        "reason": "name_exact + country_ve + discography_strong"
+      },
+      "values": [
+        {
+          "raw": "rock",
+          "status": "already_known",
+          "genreSlug": "rock",
+          "reason": "CRV ya lo tiene en la ficha"
+        }
+      ],
+      "suggested": [],
+      "agreement": "agree",
+      "agreementDetail": "la fuente nombra el principal confirmado (rock)",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 70,
+      "title": "Culto Oculto",
+      "identity": {
+        "status": "matched",
+        "externalId": "0914cdb7-911d-4776-a1ac-387ddba6c706",
+        "externalName": "Culto Oculto",
+        "score": 1,
+        "signals": [
+          "name_exact (Culto Oculto)",
+          "country_ve (Caracas)",
+          "discography_strong (3 títulos: BarAlt000mix · Blanco · Flotar No Es Más Que Existir Un Movimiento Ondulatorio)"
+        ],
+        "reason": "name_exact + country_ve + discography_strong"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "la fuente no aportó ningún género comparable",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 75,
+      "title": "Del Pez",
+      "identity": {
+        "status": "matched",
+        "externalId": "98853d3a-d276-4f7c-9fdf-90f44ae0b768",
+        "externalName": null,
+        "score": 1,
+        "signals": [
+          "identidad ya resuelta"
+        ],
+        "reason": "identidad guardada"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "la fuente no aportó ningún género comparable",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 78,
+      "title": "Desorden Público",
+      "identity": {
+        "status": "matched",
+        "externalId": "330966e4-cac3-4e19-927e-0fcb14225547",
+        "externalName": "Desorden Público",
+        "score": 1,
+        "signals": [
+          "name_exact (Desorden Público)",
+          "country_ve (Venezuela)",
+          "discography_strong (11 títulos: Bailando Sobre Las Ruinas · Canto Popular De La Vida y Muerte · Diablo · En Descomposición · Estrellas Del Caos)"
+        ],
+        "reason": "name_exact + country_ve + discography_strong"
+      },
+      "values": [
+        {
+          "raw": "ska",
+          "status": "already_known",
+          "genreSlug": "ska",
+          "reason": "CRV ya lo tiene en la ficha"
+        }
+      ],
+      "suggested": [],
+      "agreement": "agree",
+      "agreementDetail": "la fuente nombra el principal confirmado (ska)",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 80,
+      "title": "Dioslepague",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "3dbdc8f7-effb-4b8e-a9ca-43aef2f4465a",
+        "externalName": "Dioslepague",
+        "score": 0.75,
+        "signals": [
+          "name_exact (Dioslepague)",
+          "discography_strong (Bronceador · Música Para Los Apóstoles Madres)"
+        ],
+        "reason": "coincidencia débil (0.75 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 81,
+      "title": "Dischord",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "d7037d28-c123-464e-b584-6e47e224e657",
+        "externalName": "Dischord",
+        "score": 0.75,
+        "signals": [
+          "name_exact (Dischord)",
+          "discography_strong (Mark My Words · The Constant Fear)"
+        ],
+        "reason": "coincidencia débil (0.75 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 82,
+      "title": "Distrust",
+      "identity": {
+        "status": "matched",
+        "externalId": "0bd880c3-0ece-4906-9f7a-64d631a16a69",
+        "externalName": "Distrust",
+        "score": 1,
+        "signals": [
+          "name_exact (Distrust)",
+          "country_ve (Venezuela)",
+          "discography_strong (3 títulos: Chaos Redefined · Cloned Messiah · Losing Our World)"
+        ],
+        "reason": "name_exact + country_ve + discography_strong"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "la fuente no aportó ningún género comparable",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 92,
+      "title": "EntreNos",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 93,
+      "title": "Estructura",
+      "identity": {
+        "status": "matched",
+        "externalId": "87e16abe-4282-47f8-a89e-464c251d7a8b",
+        "externalName": "Estructura",
+        "score": 0.85,
+        "signals": [
+          "name_exact (Estructura)",
+          "country_ve (Venezuela)",
+          "discography_partial (Más Allá De Tu Mente)"
+        ],
+        "reason": "name_exact + country_ve + discography_partial"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "la fuente no aportó ningún género comparable",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 95,
+      "title": "Famasloop",
+      "identity": {
+        "status": "matched",
+        "externalId": "f51a9f12-47d7-405f-a55d-151fc4ad8b01",
+        "externalName": "Famasloop",
+        "score": 1,
+        "signals": [
+          "name_exact (Famasloop)",
+          "country_ve (Venezuela)",
+          "discography_strong (3 títulos: 3 Casas · Casa 4 · La Quema)"
+        ],
+        "reason": "name_exact + country_ve + discography_strong"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "la fuente no aportó ningún género comparable",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 98,
+      "title": "Fordelucs",
+      "identity": {
+        "status": "matched",
+        "externalId": "4004b13a-8ad5-483e-8e22-b7304fb7204b",
+        "externalName": "Fordelucs",
+        "score": 0.85,
+        "signals": [
+          "name_exact (Fordelucs)",
+          "country_ve (Venezuela)",
+          "discography_partial (Mundo)"
+        ],
+        "reason": "name_exact + country_ve + discography_partial"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "la fuente no aportó ningún género comparable",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 105,
+      "title": "Grand Bite",
+      "identity": {
+        "status": "matched",
+        "externalId": "748081c5-eb43-4112-9b06-a716a40e397b",
+        "externalName": "Grand Bite",
+        "score": 0.85,
+        "signals": [
+          "name_exact (Grand Bite)",
+          "country_ve (Caracas)",
+          "discography_partial (Profetas Del Fin)"
+        ],
+        "reason": "name_exact + country_ve + discography_partial"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "la fuente no aportó ningún género comparable",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 115,
+      "title": "Iguanas De Trapo",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "aec886ce-800f-4d1e-84ad-80342c8c8116",
+        "externalName": "Iguanas de Trapo",
+        "score": 0.75,
+        "signals": [
+          "name_exact (Iguanas de Trapo)",
+          "discography_strong (Lunes · Un Día Más)"
+        ],
+        "reason": "coincidencia débil (0.75 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 124,
+      "title": "KRé",
+      "identity": {
+        "status": "matched",
+        "externalId": "6275c93c-6b9a-4c2b-82e3-3c35e3cec418",
+        "externalName": "kRé",
+        "score": 1,
+        "signals": [
+          "name_exact (kRé)",
+          "country_ve (Venezuela)",
+          "discography_strong (El Radio Esta En La Cocina · Ruido Doméstico)"
+        ],
+        "reason": "name_exact + country_ve + discography_strong"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "la fuente no aportó ningún género comparable",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 129,
+      "title": "La Corte",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "9633d267-66f8-4c6b-aca5-3776aec19710",
+        "externalName": "La Corte",
+        "score": 0.75,
+        "signals": [
+          "name_exact (La Corte)",
+          "discography_strong (Código Demente · Imperia)"
+        ],
+        "reason": "coincidencia débil (0.75 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 130,
+      "title": "La Cándida Virgen",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "la fuente no devolvió candidatos"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 133,
+      "title": "La Mar",
+      "identity": {
+        "status": "matched",
+        "externalId": "b2749da4-809d-47e4-b9ab-275151354a23",
+        "externalName": "La Mar",
+        "score": 0.85,
+        "signals": [
+          "name_exact (La Mar)",
+          "country_ve (Venezuela)",
+          "discography_partial (Tides)"
+        ],
+        "reason": "name_exact + country_ve + discography_partial"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "la fuente no aportó ningún género comparable",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 138,
+      "title": "La Puta Eléctrica",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "5ba8bfaa-12fd-4096-bacf-9eb845026c31",
+        "externalName": "La Puta Eléctrica",
+        "score": 0.7,
+        "signals": [
+          "name_exact (La Puta Eléctrica)",
+          "country_ve (Venezuela)"
+        ],
+        "reason": "coincidencia débil (0.7 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 139,
+      "title": "La Vida Bohème",
+      "identity": {
+        "status": "matched",
+        "externalId": "972ec7b0-25fb-4f24-830d-0851b71b9f80",
+        "externalName": "La Vida Bohème",
+        "score": 1,
+        "signals": [
+          "name_exact (La Vida Bohème)",
+          "country_ve (Venezuela)",
+          "discography_strong (5 títulos: Caribe Caribe · El Nombre De Esta Banda Es La Vida Bohéme · La Lucha · Nuestra · Sera)"
+        ],
+        "reason": "name_exact + country_ve + discography_strong"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "la fuente no aportó ningún género comparable",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 144,
+      "title": "Las Cuatro Monedas",
+      "identity": {
+        "status": "matched",
+        "externalId": "532085db-b982-42cd-8e80-90c869e39495",
+        "externalName": "Las Cuatro Monedas",
+        "score": 1,
+        "signals": [
+          "name_exact (Las Cuatro Monedas)",
+          "country_ve (Venezuela)",
+          "discography_strong (Las Cuatro Monedas A Go-Go · Yo Creo en Dios)"
+        ],
+        "reason": "name_exact + country_ve + discography_strong"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "la fuente no aportó ningún género comparable",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 148,
+      "title": "Levítico",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "la fuente no devolvió candidatos"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 150,
+      "title": "Liqüet",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 152,
+      "title": "Los Amigos Invisibles",
+      "identity": {
+        "status": "matched",
+        "externalId": "c694bf65-83e9-47d5-aeb3-bb68f78ef981",
+        "externalName": null,
+        "score": 1,
+        "signals": [
+          "identidad ya resuelta"
+        ],
+        "reason": "identidad guardada"
+      },
+      "values": [
+        {
+          "raw": "acid jazz",
+          "status": "unmapped",
+          "genreSlug": null,
+          "reason": "sin equivalencia en la taxonomía aprobada"
+        },
+        {
+          "raw": "latin",
+          "status": "already_known",
+          "genreSlug": "fusion-latina",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "latin rock",
+          "status": "proposed",
+          "genreSlug": "rock-latino",
+          "reason": "propuesta nueva para revisión"
+        }
+      ],
+      "suggested": [],
+      "agreement": "disagree",
+      "agreementDetail": "la fuente propone fusion-latina, rock-latino frente al principal funk",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 155,
+      "title": "Los Buitres",
+      "identity": {
+        "status": "matched",
+        "externalId": "6e36d7ed-1682-4b19-a431-f94d073e70ef",
+        "externalName": "Los Buitres",
+        "score": 0.85,
+        "signals": [
+          "name_exact (Los Buitres)",
+          "country_ve (Venezuela)",
+          "discography_partial (Historietas)"
+        ],
+        "reason": "name_exact + country_ve + discography_partial"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "la fuente no aportó ningún género comparable",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 156,
+      "title": "Los Crema Paraíso",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 157,
+      "title": "Los Gusanos",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 158,
+      "title": "Los Impala",
+      "identity": {
+        "status": "matched",
+        "externalId": "ebc9489e-d572-4621-86eb-e9c49d460189",
+        "externalName": "Los Impala",
+        "score": 1,
+        "signals": [
+          "name_exact (Los Impala)",
+          "country_ve (Venezuela)",
+          "discography_strong (3 títulos: Conozca A Los Impala · Impala Syndrome · Impala's ¡Welcome!)"
+        ],
+        "reason": "name_exact + country_ve + discography_strong"
+      },
+      "values": [
+        {
+          "raw": "garage rock",
+          "status": "unmapped",
+          "genreSlug": null,
+          "reason": "sin equivalencia en la taxonomía aprobada"
+        },
+        {
+          "raw": "psychedelic rock",
+          "status": "proposed",
+          "genreSlug": "rock-psicodelico",
+          "reason": "propuesta nueva para revisión"
+        }
+      ],
+      "suggested": [],
+      "agreement": "family_agree",
+      "agreementDetail": "la fuente coincide en la familia del principal confirmado",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 159,
+      "title": "Los Mesoneros",
+      "identity": {
+        "status": "matched",
+        "externalId": "86d400a0-3a2e-42ec-bcd4-c9f500eb823d",
+        "externalName": "Los Mesoneros",
+        "score": 1,
+        "signals": [
+          "name_exact (Los Mesoneros)",
+          "country_ve (Venezuela)",
+          "discography_strong (6 títulos: 10 Años de Indeleble · Caiga La Noche · Indeleble · Live Desde Pangea · Nuestro Año)"
+        ],
+        "reason": "name_exact + country_ve + discography_strong"
+      },
+      "values": [
+        {
+          "raw": "indie rock",
+          "status": "proposed",
+          "genreSlug": "indie-rock",
+          "reason": "propuesta nueva para revisión"
+        }
+      ],
+      "suggested": [],
+      "agreement": "disagree",
+      "agreementDetail": "la fuente propone indie-rock frente al principal rock-alternativo",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 162,
+      "title": "Luz Verde",
+      "identity": {
+        "status": "matched",
+        "externalId": "08a7ccf1-6972-4019-ae6c-24abf7245569",
+        "externalName": "Luz Verde",
+        "score": 0.85,
+        "signals": [
+          "name_exact (Luz Verde)",
+          "country_ve (Venezuela)",
+          "discography_partial (En Llamas)"
+        ],
+        "reason": "name_exact + country_ve + discography_partial"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "la fuente no aportó ningún género comparable",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 164,
+      "title": "Malanga",
+      "identity": {
+        "status": "matched",
+        "externalId": "4a288144-9891-44ab-85f2-f422fb7022b8",
+        "externalName": "Malanga",
+        "score": 1,
+        "signals": [
+          "name_exact (Malanga)",
+          "country_ve (Venezuela)",
+          "discography_strong (Ta' Trancao · Tren De Vuelta)"
+        ],
+        "reason": "name_exact + country_ve + discography_strong"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "la fuente no aportó ningún género comparable",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 165,
+      "title": "Mantra",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "37454696-a972-4027-b28c-62a1562f94ec",
+        "externalName": "Mantra",
+        "score": 0.7,
+        "signals": [
+          "name_exact (Mantra)",
+          "country_ve (Venezuela)"
+        ],
+        "reason": "coincidencia débil (0.7 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 169,
+      "title": "Mata Rica",
+      "identity": {
+        "status": "matched",
+        "externalId": "73e53689-05a8-486d-8502-91a11f3e8722",
+        "externalName": "Mata Rica",
+        "score": 0.85,
+        "signals": [
+          "name_exact (Mata Rica)",
+          "country_ve (Venezuela)",
+          "discography_partial (Pachanga Punk)"
+        ],
+        "reason": "name_exact + country_ve + discography_partial"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "la fuente no aportó ningún género comparable",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 173,
+      "title": "Mermelada Bunch",
+      "identity": {
+        "status": "matched",
+        "externalId": "0d990f29-9ebe-4706-8597-c0444fb4b26e",
+        "externalName": "Mermelada Bunch",
+        "score": 1,
+        "signals": [
+          "name_exact (Mermelada Bunch)",
+          "country_ve (Venezuela)",
+          "discography_strong (4 títulos: Dale a Play · La Novela · Pum Pum · Te La Dedico)"
+        ],
+        "reason": "name_exact + country_ve + discography_strong"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "la fuente no aportó ningún género comparable",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 175,
+      "title": "Mochuelo",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 177,
+      "title": "Mulato",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "715f45da-e1dc-4674-8093-a74518d8235a",
+        "externalName": "Mulato",
+        "score": 0.6,
+        "signals": [
+          "name_exact (Mulato)",
+          "discography_partial (De Aquí Pa' La Playa)"
+        ],
+        "reason": "coincidencia débil (0.6 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 183,
+      "title": "Ohmio",
+      "identity": {
+        "status": "matched",
+        "externalId": "3fa63f70-4f7c-457c-840c-91f487589f97",
+        "externalName": "Ohmio",
+        "score": 1,
+        "signals": [
+          "name_exact (Ohmio)",
+          "country_ve (Sucre)",
+          "discography_strong (6101 · Origami)"
+        ],
+        "reason": "name_exact + country_ve + discography_strong"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "la fuente no aportó ningún género comparable",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 185,
+      "title": "Okills",
+      "identity": {
+        "status": "matched",
+        "externalId": "b6700d73-0ce2-49c0-894e-6487c37a4f0d",
+        "externalName": "Okills",
+        "score": 0.85,
+        "signals": [
+          "name_exact (Okills)",
+          "discography_strong (5 títulos: América Supersónica · Dimensión Caribe · Estar Bien · La Ultima Mudanza · Reiniciando Transmisión)"
+        ],
+        "reason": "name_exact + discography_strong"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "la fuente no aportó ningún género comparable",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 190,
+      "title": "Pacifica",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "b3c0228a-90fa-48bf-a212-ea52eaf83459",
+        "externalName": "Pacífica",
+        "score": 0.65,
+        "signals": [
+          "name_normalized (Pacífica)",
+          "country_ve (Venezuela)"
+        ],
+        "reason": "coincidencia débil (0.65 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 191,
+      "title": "Palmeras Kanibales",
+      "identity": {
+        "status": "matched",
+        "externalId": "c9c11f2b-224b-44cf-8a60-b39b3278dd37",
+        "externalName": "Palmeras Kanibales",
+        "score": 1,
+        "signals": [
+          "name_exact (Palmeras Kanibales)",
+          "country_ve (Venezuela)",
+          "discography_strong (La Ruta · Siempre Comemos Con Hambre)"
+        ],
+        "reason": "name_exact + country_ve + discography_strong"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "la fuente no aportó ningún género comparable",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 197,
+      "title": "Pixel",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 198,
+      "title": "Planeador",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 203,
+      "title": "RC2",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "2922b7d2-8215-4149-8bad-6eff8f04e77b",
+        "externalName": "RC2",
+        "score": 0.6,
+        "signals": [
+          "name_exact (RC2)",
+          "discography_partial (Future Awaits)"
+        ],
+        "reason": "coincidencia débil (0.6 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 204,
+      "title": "Radio Clip",
+      "identity": {
+        "status": "matched",
+        "externalId": "50ca3d20-965b-40a8-bc70-df69feee68eb",
+        "externalName": "Radio Clip",
+        "score": 0.85,
+        "signals": [
+          "name_exact (Radio Clip)",
+          "country_ve (Venezuela)",
+          "discography_partial (Donde Sopla El Viento)"
+        ],
+        "reason": "name_exact + country_ve + discography_partial"
+      },
+      "values": [
+        {
+          "raw": "ochentas",
+          "status": "ignored_kind",
+          "genreSlug": null,
+          "reason": "la ficha de la fuente no acepta etiquetas de clase community_tag"
+        },
+        {
+          "raw": "pop venezolano",
+          "status": "ignored_kind",
+          "genreSlug": null,
+          "reason": "la ficha de la fuente no acepta etiquetas de clase community_tag"
+        },
+        {
+          "raw": "radio clip",
+          "status": "ignored_kind",
+          "genreSlug": null,
+          "reason": "la ficha de la fuente no acepta etiquetas de clase community_tag"
+        },
+        {
+          "raw": "venezuela",
+          "status": "ignored_kind",
+          "genreSlug": null,
+          "reason": "la ficha de la fuente no acepta etiquetas de clase community_tag"
+        }
+      ],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "la fuente no aportó ningún género comparable",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 206,
+      "title": "Rawayana",
+      "identity": {
+        "status": "matched",
+        "externalId": "7de398f0-b4cf-476d-ac60-41d47d3511ca",
+        "externalName": "Rawayana",
+        "score": 1,
+        "signals": [
+          "name_exact (Rawayana)",
+          "country_ve (Venezuela)",
+          "discography_strong (5 títulos: Cuando los Acéfalos Predominan · Licencia Para Ser Libre · Quién Trae Las Cornetas? · RawayanaLand · Trippy Caribbean)"
+        ],
+        "reason": "name_exact + country_ve + discography_strong"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "la fuente no aportó ningún género comparable",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 209,
+      "title": "Repe",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 210,
+      "title": "Resistencia",
+      "identity": {
+        "status": "matched",
+        "externalId": "fb661628-69e3-466c-a00f-4f0f86b9d4e7",
+        "externalName": "Resistencia",
+        "score": 1,
+        "signals": [
+          "name_exact (Resistencia)",
+          "country_ve (Venezuela)",
+          "discography_strong (3 títulos: Estrategia Contra El Movimiento · Hecho En Venezuela · Intenso)"
+        ],
+        "reason": "name_exact + country_ve + discography_strong"
+      },
+      "values": [
+        {
+          "raw": "heavy metal",
+          "status": "proposed",
+          "genreSlug": "heavy-metal",
+          "reason": "propuesta nueva para revisión"
+        }
+      ],
+      "suggested": [],
+      "agreement": "disagree",
+      "agreementDetail": "la fuente propone heavy-metal frente al principal rock",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 212,
+      "title": "Ricochet",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 218,
+      "title": "Seguridad Nacional",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 220,
+      "title": "Sentimiento Muerto",
+      "identity": {
+        "status": "matched",
+        "externalId": "bee0ab95-4117-4f54-83d3-66fb9c0ae5f6",
+        "externalName": "Sentimiento Muerto",
+        "score": 1,
+        "signals": [
+          "name_exact (Sentimiento Muerto)",
+          "country_ve (Venezuela)",
+          "discography_strong (5 títulos: Aunque Usted No Lo Quiera · El Amor Ya No Existe · Fin Del Cuento 1981-1993 · Infecto De Afecto · Sin Sombra No Hay Luz)"
+        ],
+        "reason": "name_exact + country_ve + discography_strong"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "la fuente no aportó ningún género comparable",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 228,
+      "title": "Solares",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "d448e48c-a36f-4059-812c-e08b9a79f6b5",
+        "externalName": "Solares",
+        "score": 0.75,
+        "signals": [
+          "name_exact (Solares)",
+          "discography_strong (Cruel (Instinto De Morder) · Loft)"
+        ],
+        "reason": "coincidencia débil (0.75 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 229,
+      "title": "Spias",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "1c24a00e-1772-4b33-b475-1cb7d52c1d5e",
+        "externalName": "Spias",
+        "score": 0.7,
+        "signals": [
+          "name_exact (Spias)",
+          "country_ve (Venezuela)"
+        ],
+        "reason": "coincidencia débil (0.7 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 232,
+      "title": "Subsonus",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "e0c52a27-abd4-4a60-b92e-2cbcfdf1a5eb",
+        "externalName": "Subsonus",
+        "score": 0.7,
+        "signals": [
+          "name_exact (Subsonus)",
+          "country_ve (Caracas)"
+        ],
+        "reason": "coincidencia débil (0.7 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 235,
+      "title": "Susan",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 237,
+      "title": "Sónica",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 241,
+      "title": "Telegrama",
+      "identity": {
+        "status": "matched",
+        "externalId": "4a3ee0ed-b52b-42ab-a3e3-8a171299d421",
+        "externalName": "Telegrama",
+        "score": 0.85,
+        "signals": [
+          "name_exact (Telegrama)",
+          "discography_strong (3 títulos: A Quien Pueda Interesar · Cambia Tus Amigos · Country Club)"
+        ],
+        "reason": "name_exact + discography_strong"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "la fuente no aportó ningún género comparable",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 247,
+      "title": "Tisuby & Georgina",
+      "identity": {
+        "status": "matched",
+        "externalId": "2deace9a-f466-4df7-9538-e9a3d0da7d31",
+        "externalName": "Tisuby & Georgina",
+        "score": 0.85,
+        "signals": [
+          "name_exact (Tisuby & Georgina)",
+          "country_ve (Venezuela)",
+          "discography_partial (Ruleta Del Amor)"
+        ],
+        "reason": "name_exact + country_ve + discography_partial"
+      },
+      "values": [
+        {
+          "raw": "latin",
+          "status": "proposed",
+          "genreSlug": "fusion-latina",
+          "reason": "propuesta nueva para revisión"
+        }
+      ],
+      "suggested": [],
+      "agreement": "disagree",
+      "agreementDetail": "la fuente propone fusion-latina frente al principal pop-rock",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 249,
+      "title": "Tomates Fritos",
+      "identity": {
+        "status": "matched",
+        "externalId": "01702f6e-2f02-4375-898f-aba7e49db83c",
+        "externalName": "Tomates Fritos",
+        "score": 1,
+        "signals": [
+          "name_exact (Tomates Fritos)",
+          "country_ve (Venezuela)",
+          "discography_strong (4 títulos: Hombre Bala · Hotel Miramar · Molly · Odissey)"
+        ],
+        "reason": "name_exact + country_ve + discography_strong"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "la fuente no aportó ningún género comparable",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 254,
+      "title": "Témpano",
+      "identity": {
+        "status": "matched",
+        "externalId": "803c875c-3c5f-455e-8111-21177d793846",
+        "externalName": "Témpano",
+        "score": 1,
+        "signals": [
+          "name_exact (Témpano)",
+          "country_ve (Venezuela)",
+          "discography_strong (9 títulos: Atabal–Yémal · Childhood's End / El Fin De La Infancia · El Tercer Lado · En Reclamación · Lo Mejor de Témpano)"
+        ],
+        "reason": "name_exact + country_ve + discography_strong"
+      },
+      "values": [
+        {
+          "raw": "crossover prog",
+          "status": "unmapped",
+          "genreSlug": null,
+          "reason": "sin equivalencia en la taxonomía aprobada"
+        },
+        {
+          "raw": "south american",
+          "status": "ignored_kind",
+          "genreSlug": null,
+          "reason": "la ficha de la fuente no acepta etiquetas de clase community_tag"
+        },
+        {
+          "raw": "venezuelan",
+          "status": "ignored_kind",
+          "genreSlug": null,
+          "reason": "la ficha de la fuente no acepta etiquetas de clase community_tag"
+        }
+      ],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "la fuente no aportó ningún género comparable",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 259,
+      "title": "Viniloversus",
+      "identity": {
+        "status": "matched",
+        "externalId": "abf79514-1cf3-4167-9e80-81382861b13c",
+        "externalName": "VINILOVERSUS",
+        "score": 1,
+        "signals": [
+          "name_exact (VINILOVERSUS)",
+          "country_ve (Venezuela)",
+          "discography_strong (7 títulos: Cambie De Nombre · Days Of Exile · El Día Es Hoy · En Vivo · Mi Mejor Enemigo)"
+        ],
+        "reason": "name_exact + country_ve + discography_strong"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "la fuente no aportó ningún género comparable",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 266,
+      "title": "Zapato 3",
+      "identity": {
+        "status": "matched",
+        "externalId": "e4513586-6272-4882-b35d-bc68977cf6b0",
+        "externalName": "Zapato 3",
+        "score": 1,
+        "signals": [
+          "name_exact (Zapato 3)",
+          "country_ve (Venezuela)",
+          "discography_strong (7 títulos: 18 Éxitos De Zapato 3 · Amor, Furia y Languidez · Bésame y Suicídate · Cápsula Para Volar · Ecos Punzantes Del Ayer)"
+        ],
+        "reason": "name_exact + country_ve + discography_strong"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "la fuente no aportó ningún género comparable",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 275,
+      "title": "Circo Vulkano",
+      "identity": {
+        "status": "matched",
+        "externalId": "df699dce-483d-4d2e-8d59-a02dcabae053",
+        "externalName": "Circo Vulkano",
+        "score": 1,
+        "signals": [
+          "name_exact (Circo Vulkano)",
+          "country_ve (Caracas)",
+          "discography_strong (El Reto · La Vida Es ...)"
+        ],
+        "reason": "name_exact + country_ve + discography_strong"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "la fuente no aportó ningún género comparable",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 277,
+      "title": "Los Mentas",
+      "identity": {
+        "status": "matched",
+        "externalId": "31c4cb52-6797-4878-8d7d-cf522164f57b",
+        "externalName": "Los Mentas",
+        "score": 1,
+        "signals": [
+          "name_exact (Los Mentas)",
+          "country_ve (Venezuela)",
+          "discography_strong (7 títulos: Dios, El Diablo y El Dinero · Hasta Que Los Bares Nos Separen · Masacre En El Pin 5 · Reserva Añeja · Sopa Seco y Jugo)"
+        ],
+        "reason": "name_exact + country_ve + discography_strong"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "la fuente no aportó ningún género comparable",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 278,
+      "title": "Los Paranoias",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "5b385d4f-1145-4650-bcfc-7ad4e40bd479",
+        "externalName": "Los Paranoias",
+        "score": 0.7,
+        "signals": [
+          "name_exact (Los Paranoias)",
+          "country_ve (Venezuela)"
+        ],
+        "reason": "coincidencia débil (0.7 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 287,
+      "title": "Los Chevynovas",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "a5b230ea-b308-4fb1-9135-09b32d2073d8",
+        "externalName": "Los Chevynovas",
+        "score": 0.6,
+        "signals": [
+          "name_exact (Los Chevynovas)",
+          "discography_partial (Música en Vara)"
+        ],
+        "reason": "coincidencia débil (0.6 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 289,
+      "title": "Azúcar, Cacao & Leche",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "la fuente no devolvió candidatos"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 298,
+      "title": "Wrathful",
+      "identity": {
+        "status": "matched",
+        "externalId": "f8a6e74c-d9a6-4d73-8bba-52b0919d0987",
+        "externalName": "Wrathful",
+        "score": 0.85,
+        "signals": [
+          "name_exact (Wrathful)",
+          "country_ve (Venezuela)",
+          "discography_partial (Open Chest)"
+        ],
+        "reason": "name_exact + country_ve + discography_partial"
+      },
+      "values": [
+        {
+          "raw": "death metal",
+          "status": "already_known",
+          "genreSlug": "death-metal",
+          "reason": "CRV ya lo tiene en la ficha"
+        }
+      ],
+      "suggested": [],
+      "agreement": "agree",
+      "agreementDetail": "la fuente nombra el principal confirmado (death-metal)",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 320,
+      "title": "Anfitrite",
+      "identity": {
+        "status": "matched",
+        "externalId": "553945e9-f889-4522-b108-bce59aff8129",
+        "externalName": "Anfitrite",
+        "score": 1,
+        "signals": [
+          "name_exact (Anfitrite)",
+          "country_ve (Venezuela)",
+          "discography_strong (3 títulos: Beyond Evolution · Helena De Troya · ORIGO)"
+        ],
+        "reason": "name_exact + country_ve + discography_strong"
+      },
+      "values": [
+        {
+          "raw": "folk metal",
+          "status": "proposed",
+          "genreSlug": "folk-metal",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "power metal",
+          "status": "proposed",
+          "genreSlug": "power-metal",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "symphonic metal",
+          "status": "already_known",
+          "genreSlug": "metal-sinfonico",
+          "reason": "CRV ya lo tiene en la ficha"
+        }
+      ],
+      "suggested": [],
+      "agreement": "disagree",
+      "agreementDetail": "la fuente propone folk-metal, power-metal, metal-sinfonico frente al principal rock",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 322,
+      "title": "Landsemk",
+      "identity": {
+        "status": "matched",
+        "externalId": "079a2d75-d845-4401-965e-d75ab4cdb20e",
+        "externalName": "Landsemk",
+        "score": 1,
+        "signals": [
+          "name_exact (Landsemk)",
+          "country_ve (Venezuela)",
+          "discography_strong (Horizontes Oscuros · Vence Tus Miedos)"
+        ],
+        "reason": "name_exact + country_ve + discography_strong"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "la fuente no aportó ningún género comparable",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 325,
+      "title": "Gastonia",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "la fuente no devolvió candidatos"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 338,
+      "title": "Cultura Tres",
+      "identity": {
+        "status": "matched",
+        "externalId": "26cd995c-3091-4234-b6a8-b6853a840126",
+        "externalName": "Cultura Tres",
+        "score": 1,
+        "signals": [
+          "name_exact (Cultura Tres)",
+          "country_ve (Venezuela)",
+          "discography_strong (6 títulos: Camino De Brujos · El mal del bien · La Cura · La Secta · Rezando Al Miedo)"
+        ],
+        "reason": "name_exact + country_ve + discography_strong"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "la fuente no aportó ningún género comparable",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 344,
+      "title": "Chaos Avatar",
+      "identity": {
+        "status": "matched",
+        "externalId": "3f7c041c-a88f-4aed-a419-f75d4575ca61",
+        "externalName": "Chaos Avatar",
+        "score": 0.85,
+        "signals": [
+          "name_exact (Chaos Avatar)",
+          "country_ve (Venezuela)",
+          "discography_partial (Penitentia Agite)"
+        ],
+        "reason": "name_exact + country_ve + discography_partial"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "la fuente no aportó ningún género comparable",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 356,
+      "title": "Haz",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 374,
+      "title": "Epitafio",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "8adb8320-6e76-44b5-9008-bdb26f8045a8",
+        "externalName": "Epitafio",
+        "score": 0.7,
+        "signals": [
+          "name_exact (Epitafio)",
+          "country_ve (Aragua)"
+        ],
+        "reason": "coincidencia débil (0.7 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 404,
+      "title": "Atlantica",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 409,
+      "title": "Enfasis",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "la fuente no devolvió candidatos"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 419,
+      "title": "Argovia",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 424,
+      "title": "Diatriba",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "la fuente no devolvió candidatos"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 431,
+      "title": "Scythe",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 445,
+      "title": "Sibelíus",
+      "identity": {
+        "status": "matched",
+        "externalId": "d2bf0bec-8662-4e9b-9c1a-7ea63334499b",
+        "externalName": "Sibelius",
+        "score": 0.95,
+        "signals": [
+          "name_normalized (Sibelius)",
+          "country_ve (Venezuela)",
+          "discography_strong (Bipolar · Classical Tendencies)"
+        ],
+        "reason": "name_normalized + country_ve + discography_strong"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "la fuente no aportó ningún género comparable",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 457,
+      "title": "Mojo Pojo",
+      "identity": {
+        "status": "matched",
+        "externalId": "8e4c1a7d-9d94-42f3-b459-91835a3d2061",
+        "externalName": "Mojo Pojo",
+        "score": 1,
+        "signals": [
+          "name_exact (Mojo Pojo)",
+          "country_ve (Venezuela)",
+          "discography_strong (Dos · Tres)"
+        ],
+        "reason": "name_exact + country_ve + discography_strong"
+      },
+      "values": [
+        {
+          "raw": "instrumental rock",
+          "status": "proposed",
+          "genreSlug": "rock-instrumental",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "fusion",
+          "status": "ignored_kind",
+          "genreSlug": null,
+          "reason": "la ficha de la fuente no acepta etiquetas de clase community_tag"
+        },
+        {
+          "raw": "prog rock",
+          "status": "ignored_kind",
+          "genreSlug": null,
+          "reason": "la ficha de la fuente no acepta etiquetas de clase community_tag"
+        }
+      ],
+      "suggested": [],
+      "agreement": "disagree",
+      "agreementDetail": "la fuente propone rock-instrumental frente al principal rock-progresivo",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 477,
+      "title": "Sick Feel",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "la fuente no devolvió candidatos"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 484,
+      "title": "Alice in Hell",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "artist",
+      "entityId": 485,
+      "title": "Guerra Santa",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    }
+  ],
+  "errors": []
+}

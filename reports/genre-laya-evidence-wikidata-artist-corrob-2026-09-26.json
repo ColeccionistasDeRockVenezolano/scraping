@@ -1,0 +1,587 @@
+{
+  "query": "SELECT ?artist ?discogs ?album ?albumLabel WHERE { VALUES ?artist { wd:Q6170276 wd:Q4016680 wd:Q113700906 wd:Q632239 wd:Q271145 wd:Q50824960 wd:Q66981413 wd:Q105879389 wd:Q2090932 } OPTIONAL { ?artist wdt:P1953 ?discogs. } OPTIONAL { ?album wdt:P175 ?artist. } SERVICE wikibase:label { bd:serviceParam wikibase:language \"es,en\". } } LIMIT 500",
+  "data": {
+    "head": {
+      "vars": [
+        "artist",
+        "discogs",
+        "album",
+        "albumLabel"
+      ]
+    },
+    "results": {
+      "bindings": [
+        {
+          "artist": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q271145"
+          },
+          "discogs": {
+            "type": "literal",
+            "value": "994592"
+          },
+          "album": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q6003539"
+          },
+          "albumLabel": {
+            "xml:lang": "es",
+            "type": "literal",
+            "value": "María Conchita"
+          }
+        },
+        {
+          "artist": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q271145"
+          },
+          "discogs": {
+            "type": "literal",
+            "value": "994592"
+          },
+          "album": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q6036073"
+          },
+          "albumLabel": {
+            "xml:lang": "es",
+            "type": "literal",
+            "value": "Mírame"
+          }
+        },
+        {
+          "artist": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q271145"
+          },
+          "discogs": {
+            "type": "literal",
+            "value": "994592"
+          },
+          "album": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q7775272"
+          },
+          "albumLabel": {
+            "xml:lang": "es",
+            "type": "literal",
+            "value": "The Witch"
+          }
+        },
+        {
+          "artist": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q271145"
+          },
+          "discogs": {
+            "type": "literal",
+            "value": "994592"
+          },
+          "album": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q17130763"
+          },
+          "albumLabel": {
+            "xml:lang": "es",
+            "type": "literal",
+            "value": "Love Maniac"
+          }
+        },
+        {
+          "artist": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q271145"
+          },
+          "discogs": {
+            "type": "literal",
+            "value": "994592"
+          },
+          "album": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q20018978"
+          },
+          "albumLabel": {
+            "xml:lang": "es",
+            "type": "literal",
+            "value": "O ella, o yo"
+          }
+        },
+        {
+          "artist": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q632239"
+          },
+          "discogs": {
+            "type": "literal",
+            "value": "1444103"
+          },
+          "album": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q4740345"
+          },
+          "albumLabel": {
+            "xml:lang": "es",
+            "type": "literal",
+            "value": "Amarte Bien"
+          }
+        },
+        {
+          "artist": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q632239"
+          },
+          "discogs": {
+            "type": "literal",
+            "value": "1444103"
+          },
+          "album": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q5144773"
+          },
+          "albumLabel": {
+            "xml:lang": "es",
+            "type": "literal",
+            "value": "Colgando en tus manos"
+          }
+        },
+        {
+          "artist": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q632239"
+          },
+          "discogs": {
+            "type": "literal",
+            "value": "1444103"
+          },
+          "album": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q5244623"
+          },
+          "albumLabel": {
+            "xml:lang": "es",
+            "type": "literal",
+            "value": "De mi puño y letra"
+          }
+        },
+        {
+          "artist": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q632239"
+          },
+          "discogs": {
+            "type": "literal",
+            "value": "1444103"
+          },
+          "album": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q5280491"
+          },
+          "albumLabel": {
+            "xml:lang": "es",
+            "type": "literal",
+            "value": "Directo En Tus Manos"
+          }
+        },
+        {
+          "artist": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q632239"
+          },
+          "discogs": {
+            "type": "literal",
+            "value": "1444103"
+          },
+          "album": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q5884795"
+          },
+          "albumLabel": {
+            "xml:lang": "es",
+            "type": "literal",
+            "value": "Grandes Éxitos"
+          }
+        },
+        {
+          "artist": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q632239"
+          },
+          "discogs": {
+            "type": "literal",
+            "value": "1444103"
+          },
+          "album": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q6037344"
+          },
+          "albumLabel": {
+            "xml:lang": "es",
+            "type": "literal",
+            "value": "Nada se compara a ti"
+          }
+        },
+        {
+          "artist": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q632239"
+          },
+          "discogs": {
+            "type": "literal",
+            "value": "1444103"
+          },
+          "album": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q7161456"
+          },
+          "albumLabel": {
+            "xml:lang": "es",
+            "type": "literal",
+            "value": "Peligroso"
+          }
+        },
+        {
+          "artist": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q632239"
+          },
+          "discogs": {
+            "type": "literal",
+            "value": "1444103"
+          },
+          "album": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q7269689"
+          },
+          "albumLabel": {
+            "xml:lang": "es",
+            "type": "literal",
+            "value": "Que cante la vida por Chile"
+          }
+        },
+        {
+          "artist": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q632239"
+          },
+          "discogs": {
+            "type": "literal",
+            "value": "1444103"
+          },
+          "album": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q61860361"
+          },
+          "albumLabel": {
+            "xml:lang": "es",
+            "type": "literal",
+            "value": "De amor y dolor"
+          }
+        },
+        {
+          "artist": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q632239"
+          },
+          "discogs": {
+            "type": "literal",
+            "value": "1444103"
+          },
+          "album": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q64162712"
+          },
+          "albumLabel": {
+            "xml:lang": "es",
+            "type": "literal",
+            "value": "De amor y dolor"
+          }
+        },
+        {
+          "artist": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q2090932"
+          },
+          "discogs": {
+            "type": "literal",
+            "value": "441493"
+          },
+          "album": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q117835874"
+          },
+          "albumLabel": {
+            "xml:lang": "es",
+            "type": "literal",
+            "value": "El Alma Que Te Trajo"
+          }
+        },
+        {
+          "artist": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q2090932"
+          },
+          "discogs": {
+            "type": "literal",
+            "value": "1322369"
+          },
+          "album": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q117835874"
+          },
+          "albumLabel": {
+            "xml:lang": "es",
+            "type": "literal",
+            "value": "El Alma Que Te Trajo"
+          }
+        },
+        {
+          "artist": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q2090932"
+          },
+          "discogs": {
+            "type": "literal",
+            "value": "8009721"
+          },
+          "album": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q117835874"
+          },
+          "albumLabel": {
+            "xml:lang": "es",
+            "type": "literal",
+            "value": "El Alma Que Te Trajo"
+          }
+        },
+        {
+          "artist": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q4016680"
+          },
+          "discogs": {
+            "type": "literal",
+            "value": "1528489"
+          }
+        },
+        {
+          "artist": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q6170276"
+          },
+          "discogs": {
+            "type": "literal",
+            "value": "1214070"
+          },
+          "album": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q17625697"
+          },
+          "albumLabel": {
+            "xml:lang": "es",
+            "type": "literal",
+            "value": "Por estas calles"
+          }
+        },
+        {
+          "artist": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q6170276"
+          },
+          "discogs": {
+            "type": "literal",
+            "value": "1214070"
+          },
+          "album": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q17632343"
+          },
+          "albumLabel": {
+            "xml:lang": "es",
+            "type": "literal",
+            "value": "Finales de siglo"
+          }
+        },
+        {
+          "artist": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q6170276"
+          },
+          "discogs": {
+            "type": "literal",
+            "value": "1214070"
+          },
+          "album": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q17633080"
+          },
+          "albumLabel": {
+            "xml:lang": "es",
+            "type": "literal",
+            "value": "Yordano"
+          }
+        },
+        {
+          "artist": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q6170276"
+          },
+          "discogs": {
+            "type": "literal",
+            "value": "1214070"
+          },
+          "album": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q17996131"
+          },
+          "albumLabel": {
+            "xml:lang": "es",
+            "type": "literal",
+            "value": "Negocios Son Negocios"
+          }
+        },
+        {
+          "artist": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q6170276"
+          },
+          "discogs": {
+            "type": "literal",
+            "value": "1214070"
+          },
+          "album": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q104433136"
+          },
+          "albumLabel": {
+            "xml:lang": "es",
+            "type": "literal",
+            "value": "Jugando conmigo"
+          }
+        },
+        {
+          "artist": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q6170276"
+          },
+          "discogs": {
+            "type": "literal",
+            "value": "1214070"
+          },
+          "album": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q104433934"
+          },
+          "albumLabel": {
+            "xml:lang": "es",
+            "type": "literal",
+            "value": "Lunas"
+          }
+        },
+        {
+          "artist": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q6170276"
+          },
+          "discogs": {
+            "type": "literal",
+            "value": "1214070"
+          },
+          "album": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q104668146"
+          },
+          "albumLabel": {
+            "xml:lang": "es",
+            "type": "literal",
+            "value": "De Sol A Sol"
+          }
+        },
+        {
+          "artist": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q6170276"
+          },
+          "discogs": {
+            "type": "literal",
+            "value": "1214070"
+          },
+          "album": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q104772708"
+          },
+          "albumLabel": {
+            "xml:lang": "es",
+            "type": "literal",
+            "value": "Sabor de cayena"
+          }
+        },
+        {
+          "artist": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q6170276"
+          },
+          "discogs": {
+            "type": "literal",
+            "value": "1214070"
+          },
+          "album": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q105184066"
+          },
+          "albumLabel": {
+            "xml:lang": "es",
+            "type": "literal",
+            "value": "Fiebre"
+          }
+        },
+        {
+          "artist": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q6170276"
+          },
+          "discogs": {
+            "type": "literal",
+            "value": "1214070"
+          },
+          "album": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q105970385"
+          },
+          "albumLabel": {
+            "xml:lang": "es",
+            "type": "literal",
+            "value": "El Deseo"
+          }
+        },
+        {
+          "artist": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q50824960"
+          }
+        },
+        {
+          "artist": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q66981413"
+          }
+        },
+        {
+          "artist": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q105879389"
+          }
+        },
+        {
+          "artist": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q113700906"
+          },
+          "discogs": {
+            "type": "literal",
+            "value": "4458003"
+          }
+        }
+      ]
+    }
+  }
+}

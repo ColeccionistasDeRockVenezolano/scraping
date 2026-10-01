@@ -1,0 +1,539 @@
+{
+  "targetIds": [
+    2532,
+    2034,
+    2036,
+    2038,
+    2057,
+    2067,
+    2091,
+    2125,
+    2183,
+    2497,
+    2527,
+    2528,
+    2550,
+    2744,
+    2749,
+    2800,
+    2805,
+    2812,
+    2893,
+    2898
+  ],
+  "sourceSlug": "discogs",
+  "level": "album",
+  "scope": "targets",
+  "mode": "confirm",
+  "runId": 9914,
+  "importId": 38,
+  "candidates": 20,
+  "identities": {
+    "matched": 3,
+    "ambiguous": 6,
+    "none": 11
+  },
+  "suggestions": {
+    "inserted": 8,
+    "skipped": 0
+  },
+  "agreement": {
+    "agree": 0,
+    "family_agree": 0,
+    "disagree": 0,
+    "no_reference": 3
+  },
+  "precision": null,
+  "noise": {
+    "unmapped": 1
+  },
+  "coverageAdded": 3,
+  "cases": {
+    "opened": 6,
+    "byKind": {
+      "external_ambiguous_identity": 5,
+      "external_unmapped_term": 1
+    }
+  },
+  "network": {
+    "requests": 42,
+    "cacheHits": 26
+  },
+  "entities": [
+    {
+      "kind": "album",
+      "entityId": 2034,
+      "title": "Coctel #5 Cacao, Mujer y Beats",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "release:14198269",
+        "externalName": "Coctel #5, Cacao, Mujer Y Beats",
+        "score": 0.8,
+        "signals": [
+          "artist_confirmed (415882)",
+          "title_exact (Coctel #5, Cacao, Mujer Y Beats)",
+          "year_close (2006)"
+        ],
+        "reason": "coincidencia débil (0.8 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 2036,
+      "title": "Cuentos de Ada 6",
+      "identity": {
+        "status": "matched",
+        "externalId": "release:14436882",
+        "externalName": "Cuentos de Ada 6",
+        "score": 0.9,
+        "signals": [
+          "artist_confirmed (415882)",
+          "title_exact (Cuentos de Ada 6)",
+          "year_exact (2007)"
+        ],
+        "reason": "artist_confirmed + title_exact + year_exact"
+      },
+      "values": [
+        {
+          "raw": "Downtempo",
+          "status": "proposed",
+          "genreSlug": "downtempo",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Drum n Bass",
+          "status": "proposed",
+          "genreSlug": "drum-and-bass",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Electronic",
+          "status": "proposed",
+          "genreSlug": "electronica",
+          "reason": "propuesta nueva para revisión"
+        }
+      ],
+      "suggested": [
+        "downtempo",
+        "drum-and-bass",
+        "electronica"
+      ],
+      "agreement": "no_reference",
+      "agreementDetail": "CRV no tiene principal confirmado para comparar",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2038,
+      "title": "Folklore No-Tradicional venezolano #4",
+      "identity": {
+        "status": "matched",
+        "externalId": "release:1580181",
+        "externalName": "Folklore No-Tradicional Venezolano #4",
+        "score": 0.9,
+        "signals": [
+          "artist_confirmed (415882)",
+          "title_exact (Folklore No-Tradicional Venezolano #4)",
+          "year_exact (2005)"
+        ],
+        "reason": "artist_confirmed + title_exact + year_exact"
+      },
+      "values": [
+        {
+          "raw": "Downtempo",
+          "status": "proposed",
+          "genreSlug": "downtempo",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Ambient",
+          "status": "proposed",
+          "genreSlug": "ambient",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Electronic",
+          "status": "proposed",
+          "genreSlug": "electronica",
+          "reason": "propuesta nueva para revisión"
+        }
+      ],
+      "suggested": [
+        "downtempo",
+        "ambient",
+        "electronica"
+      ],
+      "agreement": "no_reference",
+      "agreementDetail": "CRV no tiene principal confirmado para comparar",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2057,
+      "title": "Monte y Culebra",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "177004",
+        "externalName": "Panasuyo",
+        "score": 0.6,
+        "signals": [
+          "name_exact (Panasuyo)",
+          "discography_partial (Monte y Culebra)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.6 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 2067,
+      "title": "I and I Pro Jah",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "4660181",
+        "externalName": "Negus Nagast",
+        "score": 0.6,
+        "signals": [
+          "name_exact (Negus Nagast)",
+          "discography_partial (Rastafari Fi Salvation)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.6 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 2091,
+      "title": "Las Venas Abiertas de America Latina",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "1343270",
+        "externalName": "Los Dolares",
+        "score": 0.75,
+        "signals": [
+          "name_exact (Los Dolares)",
+          "discography_strong (Las Venas Abiertas de America Latina · Nunca el olvido)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.75 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 2125,
+      "title": "Cuauhtemoc",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2183,
+      "title": "Ya no estas",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: la fuente no devolvió candidatos"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2497,
+      "title": "behind The Lights",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2527,
+      "title": "Aquellos Tiempos",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: la fuente no devolvió candidatos"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2528,
+      "title": "En Vivo En Club Judibana",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2532,
+      "title": "Kazmor El Prisionero",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "1784271",
+        "externalName": "Equilibrio Vital",
+        "score": 0.8,
+        "signals": [
+          "name_exact (Equilibrio Vital)",
+          "discography_partial (Kazmor El Prisionero)",
+          "members (Arnoldo Serga · Carlos Serga · Elena Prieto · Laureano Rangel · Marcos Chacón)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.8 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 2550,
+      "title": "Veneno",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: la fuente no devolvió candidatos"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2744,
+      "title": "Colores de ideas",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2749,
+      "title": "13 Kañonazos Súper Bailables",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2800,
+      "title": "Red Day",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2805,
+      "title": "March of Death",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2812,
+      "title": "Collapsing System",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: la fuente no devolvió candidatos"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 2893,
+      "title": "The Golden Flame",
+      "identity": {
+        "status": "matched",
+        "externalId": "release:7841594",
+        "externalName": "The Golden Flame",
+        "score": 0.9,
+        "signals": [
+          "artist_confirmed (639039)",
+          "title_exact (The Golden Flame)",
+          "year_exact (2002)"
+        ],
+        "reason": "artist_confirmed + title_exact + year_exact"
+      },
+      "values": [
+        {
+          "raw": "Trance",
+          "status": "unmapped",
+          "genreSlug": null,
+          "reason": "sin equivalencia en la taxonomía aprobada"
+        },
+        {
+          "raw": "New Age",
+          "status": "proposed",
+          "genreSlug": "new-age",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Electronic",
+          "status": "proposed",
+          "genreSlug": "electronica",
+          "reason": "propuesta nueva para revisión"
+        }
+      ],
+      "suggested": [
+        "new-age",
+        "electronica"
+      ],
+      "agreement": "no_reference",
+      "agreementDetail": "CRV no tiene principal confirmado para comparar",
+      "casesOpened": [
+        "external_unmapped_term"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 2898,
+      "title": "La Realidad mas Real",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "960982",
+        "externalName": "Guerrilla Seca",
+        "score": 0.75,
+        "signals": [
+          "name_exact (Guerrilla Seca)",
+          "discography_strong (La Realidad mas Real · Libre Pero Preso)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.75 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    }
+  ],
+  "errors": []
+}

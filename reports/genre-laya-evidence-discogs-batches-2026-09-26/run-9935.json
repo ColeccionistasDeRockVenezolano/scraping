@@ -1,0 +1,521 @@
+{
+  "targetIds": [
+    3884,
+    4020,
+    4233,
+    4243,
+    4252,
+    4360,
+    4426,
+    4578,
+    4695,
+    4700,
+    4746,
+    4779,
+    4783,
+    4808,
+    4809,
+    4812,
+    4889,
+    4926,
+    4979,
+    5055
+  ],
+  "sourceSlug": "discogs",
+  "level": "album",
+  "scope": "targets",
+  "mode": "confirm",
+  "runId": 9935,
+  "importId": 59,
+  "candidates": 20,
+  "identities": {
+    "matched": 3,
+    "ambiguous": 5,
+    "none": 11
+  },
+  "suggestions": {
+    "inserted": 6,
+    "skipped": 0
+  },
+  "agreement": {
+    "agree": 0,
+    "family_agree": 0,
+    "disagree": 0,
+    "no_reference": 3
+  },
+  "precision": null,
+  "noise": {
+    "not_a_genre": 1
+  },
+  "coverageAdded": 3,
+  "cases": {
+    "opened": 1,
+    "byKind": {
+      "external_ambiguous_identity": 1
+    }
+  },
+  "network": {
+    "requests": 18,
+    "cacheHits": 67
+  },
+  "entities": [
+    {
+      "kind": "album",
+      "entityId": 3884,
+      "title": "El Amor Amor Es Como Una Canción",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "104693",
+        "externalName": "Carlos Moreno",
+        "score": 0.6,
+        "signals": [
+          "name_exact (Carlos Moreno)",
+          "discography_partial (Esta Noche)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.6 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 4020,
+      "title": "Las Diez Peores CanSiones de Latino..",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 4233,
+      "title": "Opus # 10",
+      "identity": {
+        "status": "matched",
+        "externalId": "master:866492",
+        "externalName": "Opus #10",
+        "score": 0.9,
+        "signals": [
+          "artist_confirmed (616922)",
+          "title_exact (Opus #10)",
+          "year_exact (1990)"
+        ],
+        "reason": "artist_confirmed + title_exact + year_exact"
+      },
+      "values": [
+        {
+          "raw": "Pop",
+          "status": "proposed",
+          "genreSlug": "pop",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Folk, World, & Country",
+          "status": "proposed",
+          "genreSlug": "folk",
+          "reason": "propuesta nueva para revisión"
+        }
+      ],
+      "suggested": [
+        "pop",
+        "folk"
+      ],
+      "agreement": "no_reference",
+      "agreementDetail": "CRV no tiene principal confirmado para comparar",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 4243,
+      "title": "Tesoros de La Música Vzlana: LLANOS",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 4252,
+      "title": "Tesoros de La Música Vzlana: ANDES",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 4360,
+      "title": "Lo Mejor De La Corte",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 4426,
+      "title": "Montaner & London Metropolitan Orch. 2",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 4578,
+      "title": "Lo Mejor Esta Aun Por Venir",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 4695,
+      "title": "¡Qué Nota! date con el Rock",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 4700,
+      "title": "El Tren de los Regresos",
+      "identity": {
+        "status": "matched",
+        "externalId": "master:1081165",
+        "externalName": "El Tren De Los Regresos",
+        "score": 0.9,
+        "signals": [
+          "artist_confirmed (1214070)",
+          "title_exact (El Tren De Los Regresos)",
+          "year_exact (2016)"
+        ],
+        "reason": "artist_confirmed + title_exact + year_exact"
+      },
+      "values": [
+        {
+          "raw": "Vocal",
+          "status": "not_a_genre",
+          "genreSlug": null,
+          "reason": "«vocal» no es un género"
+        },
+        {
+          "raw": "Latin",
+          "status": "proposed",
+          "genreSlug": "fusion-latina",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Pop",
+          "status": "proposed",
+          "genreSlug": "pop",
+          "reason": "propuesta nueva para revisión"
+        }
+      ],
+      "suggested": [
+        "fusion-latina",
+        "pop"
+      ],
+      "agreement": "no_reference",
+      "agreementDetail": "CRV no tiene principal confirmado para comparar",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 4746,
+      "title": "El Mágico Mundo de Daniel Grau",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": ""
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [],
+      "error": "HTTP 404 en https://api.discogs.com/artists/3489587"
+    },
+    {
+      "kind": "album",
+      "entityId": 4779,
+      "title": "Recuerdos (Memories)",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 4783,
+      "title": "Sobre la Ira de Dios",
+      "identity": {
+        "status": "matched",
+        "externalId": "release:14356124",
+        "externalName": "Sobre La Ira De Dios",
+        "score": 0.9,
+        "signals": [
+          "artist_confirmed (7009133)",
+          "title_exact (Sobre La Ira De Dios)",
+          "year_exact (2013)"
+        ],
+        "reason": "artist_confirmed + title_exact + year_exact"
+      },
+      "values": [
+        {
+          "raw": "Prog Rock",
+          "status": "proposed",
+          "genreSlug": "rock-progresivo",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "Rock",
+          "status": "proposed",
+          "genreSlug": "rock",
+          "reason": "propuesta nueva para revisión"
+        }
+      ],
+      "suggested": [
+        "rock-progresivo",
+        "rock"
+      ],
+      "agreement": "no_reference",
+      "agreementDetail": "CRV no tiene principal confirmado para comparar",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 4808,
+      "title": "Disco Coraven",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 4809,
+      "title": "Rudy Márquez",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "1959356",
+        "externalName": "Rudy Marquez",
+        "score": 0.8,
+        "signals": [
+          "name_normalized (Rudy Marquez)",
+          "discography_strong (18 títulos: Amante Mía · Amorosamente, Boleros · Cariñosamente de... · Confesiones · Cuando Muere El Amor)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.8 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 4812,
+      "title": "Hoy",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "1959356",
+        "externalName": "Rudy Marquez",
+        "score": 0.8,
+        "signals": [
+          "name_normalized (Rudy Marquez)",
+          "discography_strong (18 títulos: Amante Mía · Amorosamente, Boleros · Cariñosamente de... · Confesiones · Cuando Muere El Amor)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.8 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 4889,
+      "title": "Cariñosamente... de Rudy Márquez",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "1959356",
+        "externalName": "Rudy Marquez",
+        "score": 0.8,
+        "signals": [
+          "name_normalized (Rudy Marquez)",
+          "discography_strong (18 títulos: Amante Mía · Amorosamente, Boleros · Cariñosamente de... · Confesiones · Cuando Muere El Amor)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.8 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 4926,
+      "title": "L.C.D.",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 4979,
+      "title": "Los Clippers",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "1639866",
+        "externalName": "Los Clippers",
+        "score": 0.6,
+        "signals": [
+          "name_exact (Los Clippers)",
+          "discography_partial (Twist)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.6 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 5055,
+      "title": "Este es...! Henrique Lazo",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    }
+  ],
+  "errors": [
+    {
+      "entityId": 4746,
+      "message": "HTTP 404 en https://api.discogs.com/artists/3489587"
+    }
+  ]
+}

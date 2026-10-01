@@ -11,7 +11,8 @@
     "2026-09-26 (segunda tanda): Folk punk; erratas y lecturas seguras; «etiqueta_de_fuente» y «descriptor» para los textos que las fuentes usan como género pero no lo son (no vuelven a abrir caso).",
     "2026-09-27 (Brian): Pop punk, Post-grunge, Rap experimental, Death groove metal e Instrumental (familia); «metal hardcore» = Metalcore, «electro rock» = Rock electrónico y «Rap-Core» = Rap metal como alias (ya existían).",
     "2026-09-27 (Brian): Spoken word (familia), Música tropical (Fusión latina) y Cantautor (Folk, alias singer/songwriter), pedidos por las fichas de Bandcamp e iTunes que no resolvían.",
-    "2026-09-27 (Brian, 2.ª tanda): Guarorock, Barquisimetal, Dream pop, Dubstep, Aggrotech, Bossa nova, Jazz rap y R&B; «indie» suelto = Indie rock (alias). «Fusión» suelta NO se asigna: en las fuentes acompaña a «Jazz Fusion» y a veces es latina; es ambigua."
+    "2026-09-27 (Brian, 2.ª tanda): Guarorock, Barquisimetal, Dream pop, Dubstep, Aggrotech, Bossa nova, Jazz rap y R&B; «indie» suelto = Indie rock (alias). «Fusión» suelta NO se asigna: en las fuentes acompaña a «Jazz Fusion» y a veces es latina; es ambigua.",
+    "2026-10-01 hermes: +36 aliases (fragmentos MA early/later y compuestos) +2 géneros (drone-metal, horror-punk) para cerrar la cola genre_unknown."
   ],
   "families": [
     {
@@ -19,7 +20,8 @@
       "name": "Rock",
       "aliases": [
         "rock",
-        "rock nacional"
+        "rock nacional",
+        "rock (later)"
       ]
     },
     {
@@ -60,7 +62,8 @@
       "slug": "jazz",
       "name": "Jazz",
       "aliases": [
-        "jazz"
+        "jazz",
+        "jazz contemporary"
       ]
     },
     {
@@ -111,7 +114,12 @@
       "name": "Folk",
       "aliases": [
         "folk",
-        "Urban Folk"
+        "Urban Folk",
+        "latin folk",
+        "neo folk",
+        "political folk",
+        "instrumental folk",
+        "ethnic folk"
       ]
     },
     {
@@ -143,7 +151,12 @@
     {
       "slug": "musica-clasica",
       "name": "Música clásica",
-      "aliases": ["Classical"]
+      "aliases": [
+        "Classical"
+      ],
+      "typoAliases": [
+        "clasical"
+      ]
     }
   ],
   "genres": [
@@ -151,7 +164,10 @@
       "slug": "ambient",
       "name": "Ambient",
       "family": "electronica",
-      "aliases": []
+      "aliases": [
+        "ambiance",
+        "ambient with industrial influences"
+      ]
     },
     {
       "slug": "dance",
@@ -314,13 +330,17 @@
       "slug": "bolero",
       "name": "Bolero",
       "family": "fusion-latina",
-      "aliases": []
+      "aliases": [
+        "boleros"
+      ]
     },
     {
       "slug": "salsa",
       "name": "Salsa",
       "family": "fusion-latina",
-      "aliases": []
+      "aliases": [
+        "latin salsa"
+      ]
     },
     {
       "slug": "jazz-fusion",
@@ -348,7 +368,13 @@
         "Black",
         "Blackened",
         "Melodic Black Metal",
-        "Progressive Black Metal"
+        "Progressive Black Metal",
+        "black metal (early)",
+        "black metal (later)",
+        "avant-garde black",
+        "epic black metal",
+        "experimental black metal",
+        "black metal with industrial influences"
       ]
     },
     {
@@ -425,7 +451,11 @@
       "name": "Death metal",
       "family": "metal",
       "aliases": [
-        "Death"
+        "Death",
+        "death metal (early)",
+        "death metal (later)",
+        "atmospheric death",
+        "experimental death"
       ]
     },
     {
@@ -434,7 +464,8 @@
       "family": "metal",
       "aliases": [
         "melodic death metal",
-        "melodic death"
+        "melodic death",
+        "melodic death metal with rock and jazz influences"
       ]
     },
     {
@@ -490,7 +521,9 @@
       "family": "metal",
       "aliases": [
         "metal doom",
-        "Atmospheric Doom Metal"
+        "Atmospheric Doom Metal",
+        "doom metal (later)",
+        "doom"
       ]
     },
     {
@@ -513,7 +546,10 @@
       "name": "Grindcore",
       "family": "metal",
       "aliases": [
-        "grind core"
+        "grind core",
+        "grindcore (early)",
+        "grindcore (later)",
+        "experimental grindcore"
       ]
     },
     {
@@ -531,7 +567,12 @@
       "family": "metal",
       "aliases": [
         "Heavy",
-        "Melodic Heavy"
+        "Melodic Heavy",
+        "heavy metal (early)",
+        "heavy metal (later)",
+        "heavy metal with latin influences (later)",
+        "epic heavy",
+        "melodic heavy metal"
       ]
     },
     {
@@ -578,7 +619,9 @@
         "Gothic",
         "Progressive Gothic Metal",
         "Black Gothic Metal",
-        "New Gothic Metal"
+        "New Gothic Metal",
+        "gothic metal (early)",
+        "gothic metal (later)"
       ]
     },
     {
@@ -622,7 +665,9 @@
         "metal progresivo",
         "progresivo metal",
         "Progressive Extreme Metal",
-        "heavy metal progresivo sinfonico"
+        "heavy metal progresivo sinfonico",
+        "melodic progressive",
+        "progressive heavy metal"
       ],
       "typoAliases": [
         "pogressive metal"
@@ -689,7 +734,10 @@
         "powermetal",
         "Power",
         "Heavy Power Metal",
-        "Power Metal Melódico"
+        "Power Metal Melódico",
+        "power metal (later)",
+        "melodic power metal",
+        "power metal with folk elements"
       ]
     },
     {
@@ -733,7 +781,8 @@
       "name": "Slamming brutal death metal",
       "family": "metal",
       "aliases": [
-        "Slamming"
+        "Slamming",
+        "slam"
       ]
     },
     {
@@ -774,7 +823,10 @@
         "Melodic Thrash",
         "Old School Thrash",
         "Tras-Metal",
-        "Thrash Rutero"
+        "Thrash Rutero",
+        "thrash metal (early)",
+        "thrash metal (later)",
+        "melodic thrash metal"
       ],
       "typoAliases": [
         "trash metal",
@@ -801,7 +853,9 @@
         "baladas",
         "ballad",
         "pop ballad",
-        "balada pop"
+        "balada pop",
+        "latin ballad",
+        "latin balad"
       ],
       "typoAliases": [
         "balad"
@@ -886,7 +940,8 @@
         "punk hardcore",
         "hc punk",
         "hardcore punk",
-        "Progressive Hardcore"
+        "Progressive Hardcore",
+        "hardcore (early)"
       ]
     },
     {
@@ -1016,7 +1071,8 @@
       "name": "Ethnic rock",
       "family": "rock",
       "aliases": [
-        "Afro-Venezuelan Rock"
+        "Afro-Venezuelan Rock",
+        "world ethnic rock"
       ]
     },
     {
@@ -1049,7 +1105,8 @@
         "rock duro",
         "Hard",
         "Latin Hard Rock",
-        "Acid Hard Rock"
+        "Acid Hard Rock",
+        "hard rock (early)"
       ]
     },
     {
@@ -1354,7 +1411,8 @@
       "aliases": [
         "tropical",
         "tropical music",
-        "indie tropical"
+        "indie tropical",
+        "latin tropical"
       ]
     },
     {
@@ -1413,7 +1471,8 @@
       "name": "Bossa nova",
       "family": "fusion-latina",
       "aliases": [
-        "bossanova"
+        "bossanova",
+        "bossa"
       ]
     },
     {
@@ -1439,36 +1498,390 @@
         "contemporary r&b"
       ]
     },
-    { "slug": "aor", "name": "AOR", "family": "rock", "aliases": ["adult-oriented rock"] },
-    { "slug": "jazz-afrocubano", "name": "Jazz afrocubano", "family": "jazz", "aliases": ["Afro-Cuban Jazz"] },
-    { "slug": "bachata", "name": "Bachata", "family": "fusion-latina", "aliases": [] },
-    { "slug": "boom-bap", "name": "Boom bap", "family": "hip-hop", "aliases": [] },
-    { "slug": "folk-celta", "name": "Folk celta", "family": "folk", "aliases": ["Celtic"] },
-    { "slug": "chillwave", "name": "Chillwave", "family": "electronica", "aliases": [] },
-    { "slug": "cumbia", "name": "Cumbia", "family": "fusion-latina", "aliases": [] },
-    { "slug": "disco", "name": "Disco", "family": "funk-y-soul", "aliases": [] },
-    { "slug": "easy-listening", "name": "Easy listening", "family": "pop", "aliases": [] },
-    { "slug": "electroacustica", "name": "Electroacústica", "family": "experimental", "aliases": ["Electroacoustic"] },
-    { "slug": "future-house", "name": "Future house", "family": "electronica", "aliases": [] },
-    { "slug": "gangsta-rap", "name": "Gangsta rap", "family": "hip-hop", "aliases": ["Gangsta"] },
-    { "slug": "garage-rock", "name": "Garage rock", "family": "rock", "aliases": [] },
-    { "slug": "glitch", "name": "Glitch", "family": "electronica", "aliases": [] },
-    { "slug": "guaguanco", "name": "Guaguancó", "family": "fusion-latina", "aliases": [] },
-    { "slug": "harmonica-blues", "name": "Harmonica blues", "family": "blues", "aliases": [] },
-    { "slug": "idm", "name": "IDM", "family": "electronica", "aliases": [] },
-    { "slug": "jangle-pop", "name": "Jangle pop", "family": "pop", "aliases": [] },
-    { "slug": "jazz-funk", "name": "Jazz funk", "family": "jazz", "aliases": ["Jazz-Funk"] },
-    { "slug": "joropo", "name": "Joropo", "family": "fusion-latina", "aliases": [] },
-    { "slug": "power-pop", "name": "Power pop", "family": "pop", "aliases": [] },
-    { "slug": "ragga", "name": "Ragga", "family": "reggae-y-ska", "aliases": [] },
-    { "slug": "rocksteady", "name": "Rocksteady", "family": "reggae-y-ska", "aliases": [] },
-    { "slug": "roots-reggae", "name": "Roots reggae", "family": "reggae-y-ska", "aliases": [] },
-    { "slug": "soft-rock", "name": "Soft rock", "family": "rock", "aliases": [] },
-    { "slug": "space-rock", "name": "Space rock", "family": "rock", "aliases": [] },
-    { "slug": "synth-pop", "name": "Synth pop", "family": "pop", "aliases": ["Synth-pop"] },
-    { "slug": "tech-house", "name": "Tech house", "family": "electronica", "aliases": [] },
-    { "slug": "trance", "name": "Trance", "family": "electronica", "aliases": [] },
-    { "slug": "turntablism", "name": "Turntablism", "family": "hip-hop", "aliases": [] }
+    {
+      "slug": "aor",
+      "name": "AOR",
+      "family": "rock",
+      "aliases": [
+        "adult-oriented rock"
+      ]
+    },
+    {
+      "slug": "jazz-afrocubano",
+      "name": "Jazz afrocubano",
+      "family": "jazz",
+      "aliases": [
+        "Afro-Cuban Jazz"
+      ]
+    },
+    {
+      "slug": "bachata",
+      "name": "Bachata",
+      "family": "fusion-latina",
+      "aliases": []
+    },
+    {
+      "slug": "boom-bap",
+      "name": "Boom bap",
+      "family": "hip-hop",
+      "aliases": []
+    },
+    {
+      "slug": "folk-celta",
+      "name": "Folk celta",
+      "family": "folk",
+      "aliases": [
+        "Celtic"
+      ]
+    },
+    {
+      "slug": "chillwave",
+      "name": "Chillwave",
+      "family": "electronica",
+      "aliases": []
+    },
+    {
+      "slug": "cumbia",
+      "name": "Cumbia",
+      "family": "fusion-latina",
+      "aliases": []
+    },
+    {
+      "slug": "disco",
+      "name": "Disco",
+      "family": "funk-y-soul",
+      "aliases": []
+    },
+    {
+      "slug": "easy-listening",
+      "name": "Easy listening",
+      "family": "pop",
+      "aliases": []
+    },
+    {
+      "slug": "electroacustica",
+      "name": "Electroacústica",
+      "family": "experimental",
+      "aliases": [
+        "Electroacoustic"
+      ]
+    },
+    {
+      "slug": "future-house",
+      "name": "Future house",
+      "family": "electronica",
+      "aliases": []
+    },
+    {
+      "slug": "gangsta-rap",
+      "name": "Gangsta rap",
+      "family": "hip-hop",
+      "aliases": [
+        "Gangsta"
+      ]
+    },
+    {
+      "slug": "garage-rock",
+      "name": "Garage rock",
+      "family": "rock",
+      "aliases": []
+    },
+    {
+      "slug": "glitch",
+      "name": "Glitch",
+      "family": "electronica",
+      "aliases": []
+    },
+    {
+      "slug": "guaguanco",
+      "name": "Guaguancó",
+      "family": "fusion-latina",
+      "aliases": []
+    },
+    {
+      "slug": "harmonica-blues",
+      "name": "Harmonica blues",
+      "family": "blues",
+      "aliases": []
+    },
+    {
+      "slug": "idm",
+      "name": "IDM",
+      "family": "electronica",
+      "aliases": []
+    },
+    {
+      "slug": "jangle-pop",
+      "name": "Jangle pop",
+      "family": "pop",
+      "aliases": []
+    },
+    {
+      "slug": "jazz-funk",
+      "name": "Jazz funk",
+      "family": "jazz",
+      "aliases": [
+        "Jazz-Funk"
+      ]
+    },
+    {
+      "slug": "joropo",
+      "name": "Joropo",
+      "family": "fusion-latina",
+      "aliases": [
+        "llanera"
+      ]
+    },
+    {
+      "slug": "power-pop",
+      "name": "Power pop",
+      "family": "pop",
+      "aliases": []
+    },
+    {
+      "slug": "ragga",
+      "name": "Ragga",
+      "family": "reggae-y-ska",
+      "aliases": []
+    },
+    {
+      "slug": "rocksteady",
+      "name": "Rocksteady",
+      "family": "reggae-y-ska",
+      "aliases": []
+    },
+    {
+      "slug": "roots-reggae",
+      "name": "Roots reggae",
+      "family": "reggae-y-ska",
+      "aliases": []
+    },
+    {
+      "slug": "soft-rock",
+      "name": "Soft rock",
+      "family": "rock",
+      "aliases": []
+    },
+    {
+      "slug": "space-rock",
+      "name": "Space rock",
+      "family": "rock",
+      "aliases": []
+    },
+    {
+      "slug": "synth-pop",
+      "name": "Synth pop",
+      "family": "pop",
+      "aliases": [
+        "Synth-pop"
+      ]
+    },
+    {
+      "slug": "tech-house",
+      "name": "Tech house",
+      "family": "electronica",
+      "aliases": []
+    },
+    {
+      "slug": "trance",
+      "name": "Trance",
+      "family": "electronica",
+      "aliases": []
+    },
+    {
+      "slug": "turntablism",
+      "name": "Turntablism",
+      "family": "hip-hop",
+      "aliases": []
+    },
+    {
+      "slug": "gaita",
+      "name": "Gaita",
+      "family": "fusion-latina",
+      "aliases": [
+        "gaita zuliana"
+      ]
+    },
+    {
+      "slug": "descarga",
+      "name": "Descarga",
+      "family": "fusion-latina",
+      "aliases": []
+    },
+    {
+      "slug": "son",
+      "name": "Son",
+      "family": "fusion-latina",
+      "aliases": [
+        "son montuno"
+      ]
+    },
+    {
+      "slug": "merengue",
+      "name": "Merengue",
+      "family": "fusion-latina",
+      "aliases": []
+    },
+    {
+      "slug": "guaracha",
+      "name": "Guaracha",
+      "family": "fusion-latina",
+      "aliases": []
+    },
+    {
+      "slug": "mambo",
+      "name": "Mambo",
+      "family": "fusion-latina",
+      "aliases": []
+    },
+    {
+      "slug": "cha-cha-cha",
+      "name": "Cha-cha-chá",
+      "family": "fusion-latina",
+      "aliases": [
+        "chachacha"
+      ]
+    },
+    {
+      "slug": "vallenato",
+      "name": "Vallenato",
+      "family": "fusion-latina",
+      "aliases": []
+    },
+    {
+      "slug": "timba",
+      "name": "Timba",
+      "family": "fusion-latina",
+      "aliases": []
+    },
+    {
+      "slug": "samba",
+      "name": "Samba",
+      "family": "fusion-latina",
+      "aliases": []
+    },
+    {
+      "slug": "calipso",
+      "name": "Calipso",
+      "family": "fusion-latina",
+      "aliases": [
+        "calypso"
+      ]
+    },
+    {
+      "slug": "tango",
+      "name": "Tango",
+      "family": "fusion-latina",
+      "aliases": [
+        "latin tango"
+      ]
+    },
+    {
+      "slug": "aguinaldo",
+      "name": "Aguinaldo",
+      "family": "fusion-latina",
+      "aliases": [
+        "aguinaldos"
+      ]
+    },
+    {
+      "slug": "nueva-trova",
+      "name": "Nueva trova",
+      "family": "folk",
+      "aliases": [
+        "trova"
+      ]
+    },
+    {
+      "slug": "musica-tradicional",
+      "name": "Música tradicional",
+      "family": "folk",
+      "aliases": [
+        "traditional",
+        "folklore",
+        "folclore",
+        "folklorica"
+      ],
+      "typoAliases": [
+        "tradidional"
+      ]
+    },
+    {
+      "slug": "smooth-jazz",
+      "name": "Smooth jazz",
+      "family": "jazz",
+      "aliases": []
+    },
+    {
+      "slug": "big-band",
+      "name": "Big band",
+      "family": "jazz",
+      "aliases": [
+        "latin big band",
+        "latin jazz big band",
+        "latin jazz band"
+      ]
+    },
+    {
+      "slug": "acid-jazz",
+      "name": "Acid jazz",
+      "family": "jazz",
+      "aliases": []
+    },
+    {
+      "slug": "nu-jazz",
+      "name": "Nu jazz",
+      "family": "jazz",
+      "aliases": []
+    },
+    {
+      "slug": "musica-de-camara",
+      "name": "Música de cámara",
+      "family": "musica-clasica",
+      "aliases": [
+        "chamber music"
+      ]
+    },
+    {
+      "slug": "musica-coral",
+      "name": "Música coral",
+      "family": "musica-clasica",
+      "aliases": [
+        "choral"
+      ]
+    },
+    {
+      "slug": "musica-antigua",
+      "name": "Música antigua",
+      "family": "musica-clasica",
+      "aliases": [
+        "classical antique",
+        "antique",
+        "early music"
+      ]
+    },
+    {
+      "slug": "neoclasica",
+      "name": "Neoclásica",
+      "family": "musica-clasica",
+      "aliases": [
+        "neoclassical"
+      ]
+    },
+    {
+      "slug": "drone-metal",
+      "name": "Drone Metal",
+      "family": "metal",
+      "aliases": [
+        "drone"
+      ]
+    },
+    {
+      "slug": "horror-punk",
+      "name": "Horror Punk",
+      "family": "punk",
+      "aliases": []
+    }
   ],
   "notAGenre": {
     "edicion": [
@@ -1557,9 +1970,23 @@
       "Minimal",
       "Tribal"
     ],
-    "instrumento": ["Cuatro"],
-    "audiencia": ["Children's", "Nursery Rhymes"],
-    "tecnica_de_grabacion": ["Field Recording"],
+    "instrumento": [
+      "Cuatro",
+      "Composer",
+      "Arranger",
+      "Singer",
+      "Vocals",
+      "Bass",
+      "Mandolin",
+      "Bandola"
+    ],
+    "audiencia": [
+      "Children's",
+      "Nursery Rhymes"
+    ],
+    "tecnica_de_grabacion": [
+      "Field Recording"
+    ],
     "etiqueta_de_fuente": [
       "Black Kitsch Abstract Metal",
       "Melodic Porn Black Metal",

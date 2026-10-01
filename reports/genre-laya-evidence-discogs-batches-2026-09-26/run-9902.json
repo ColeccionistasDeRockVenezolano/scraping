@@ -1,0 +1,479 @@
+{
+  "targetIds": [
+    77,
+    281,
+    284,
+    346,
+    362,
+    408,
+    470,
+    477,
+    261,
+    272,
+    399,
+    561,
+    279,
+    510,
+    70,
+    85,
+    156,
+    162,
+    566,
+    97
+  ],
+  "sourceSlug": "discogs",
+  "level": "album",
+  "scope": "targets",
+  "mode": "confirm",
+  "runId": 9902,
+  "importId": 26,
+  "candidates": 20,
+  "identities": {
+    "matched": 0,
+    "ambiguous": 11,
+    "none": 9
+  },
+  "suggestions": {
+    "inserted": 0,
+    "skipped": 0
+  },
+  "agreement": {
+    "agree": 0,
+    "family_agree": 0,
+    "disagree": 0,
+    "no_reference": 0
+  },
+  "precision": null,
+  "noise": {},
+  "coverageAdded": 0,
+  "cases": {
+    "opened": 6,
+    "byKind": {
+      "external_ambiguous_identity": 6
+    }
+  },
+  "network": {
+    "requests": 12,
+    "cacheHits": 79
+  },
+  "entities": [
+    {
+      "kind": "album",
+      "entityId": 70,
+      "title": "Dynamicas",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "16089726",
+        "externalName": "Headweiler",
+        "score": 0.6,
+        "signals": [
+          "name_exact (Headweiler)",
+          "discography_partial (Dynamicas)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.6 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 77,
+      "title": "El Debut",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "4794967",
+        "externalName": "Los Crema Paraiso",
+        "score": 0.82,
+        "signals": [
+          "name_normalized (Los Crema Paraiso)",
+          "discography_strong (De Película · El Debut)",
+          "members (José Luis Pardo)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.82 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 85,
+      "title": "No Te Lo Tomes A Mal",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 97,
+      "title": "Wahala",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "1849869",
+        "externalName": "Wahala",
+        "score": 0.75,
+        "signals": [
+          "name_exact (Wahala)",
+          "discography_strong (Buena Vibra Vol. III · Homegrown)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.75 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 156,
+      "title": "Supereterodino Sessions",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 162,
+      "title": "III Festival Nuevas Bandas",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "1989410",
+        "externalName": "Dermis Tatú",
+        "score": 0.6,
+        "signals": [
+          "name_exact (Dermis Tatú)",
+          "discography_partial (La Violó La Mató y La Picó)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.6 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 261,
+      "title": "Demos",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 272,
+      "title": "Demos",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "11054960",
+        "externalName": "Marilanne",
+        "score": 0.6,
+        "signals": [
+          "name_exact (Marilanne)",
+          "discography_partial (Somos Jóvenes Me Quiero Divertir)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.6 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 279,
+      "title": "Material Tóxico",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: la fuente no devolvió candidatos"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 281,
+      "title": "A Fragment Of My Mind",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 284,
+      "title": "CCS",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "3112695",
+        "externalName": "Metrozubdivision",
+        "score": 0.6,
+        "signals": [
+          "name_exact (Metrozubdivision)",
+          "discography_partial (Black)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.6 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 346,
+      "title": "Aparecieron",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "7149392",
+        "externalName": "Team Malín",
+        "score": 0.6,
+        "signals": [
+          "name_exact (Team Malín)",
+          "discography_partial (Aparecieron)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.6 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 362,
+      "title": "Childhood's End / El Fin De La Infancia",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "master:946448",
+        "externalName": "Childhood's End / El Fin De La Infancia",
+        "score": 0.8,
+        "signals": [
+          "artist_confirmed (1477803)",
+          "title_exact (Childhood's End / El Fin De La Infancia)",
+          "year_close (2000)"
+        ],
+        "reason": "coincidencia débil (0.8 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 399,
+      "title": "U-Rock Discos",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 408,
+      "title": "Mejores Días y Mejores Noches",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "1849869",
+        "externalName": "Wahala",
+        "score": 0.75,
+        "signals": [
+          "name_exact (Wahala)",
+          "discography_strong (Buena Vibra Vol. III · Homegrown)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.75 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 470,
+      "title": "B-Sides: Del Lado De La Pintura",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: la fuente no devolvió candidatos"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 477,
+      "title": "Future Awaits",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "332532",
+        "externalName": "RC2",
+        "score": 0.6,
+        "signals": [
+          "name_exact (RC2)",
+          "discography_partial (Future Awaits)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.6 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 510,
+      "title": "Solo Bass",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "4841884",
+        "externalName": "Oscar Fanega",
+        "score": 0.6,
+        "signals": [
+          "name_exact (Oscar Fanega)",
+          "discography_partial (Solo Bass)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.6 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": [
+        "external_ambiguous_identity"
+      ]
+    },
+    {
+      "kind": "album",
+      "entityId": 561,
+      "title": "Acústico",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 566,
+      "title": "B-Sides: En Vivo En El Teatro Nacional",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    }
+  ],
+  "errors": []
+}

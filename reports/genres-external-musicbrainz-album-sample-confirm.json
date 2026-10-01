@@ -1,0 +1,1317 @@
+{
+  "sourceSlug": "musicbrainz",
+  "level": "album",
+  "scope": "sample",
+  "mode": "confirm",
+  "runId": 1036,
+  "importId": 2,
+  "candidates": 60,
+  "identities": {
+    "matched": 15,
+    "ambiguous": 0,
+    "none": 45
+  },
+  "suggestions": {
+    "inserted": 0,
+    "skipped": 0
+  },
+  "agreement": {
+    "agree": 1,
+    "family_agree": 3,
+    "disagree": 0,
+    "no_reference": 11
+  },
+  "precision": 1,
+  "noise": {
+    "too_generic": 3,
+    "unmapped": 1
+  },
+  "coverageAdded": 0,
+  "cases": {
+    "opened": 0,
+    "byKind": {}
+  },
+  "network": {
+    "requests": 119,
+    "cacheHits": 36
+  },
+  "entities": [
+    {
+      "kind": "album",
+      "entityId": 1,
+      "title": "Tarde Pero Temprano",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: la fuente no devolvió candidatos"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 7,
+      "title": "Cosas Sencillas",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "c194619c-cb6f-4e21-82ea-5dadb98610f8",
+        "externalName": "Pablo Manavello",
+        "score": 0.7,
+        "signals": [
+          "name_exact (Pablo Manavello)",
+          "country_ve (Venezuela)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.7 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 11,
+      "title": "Sangre",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "ae31b0a2-c2f7-4049-878f-6dcfd23fa587",
+        "externalName": "Sangre",
+        "score": 0.75,
+        "signals": [
+          "name_exact (Sangre)",
+          "discography_strong (Sangre)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.75 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 15,
+      "title": "Volver Al Futuro",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "51273c21-f964-4d1e-861e-0efa735b4003",
+        "externalName": "Pedro Castillo",
+        "score": 0.7,
+        "signals": [
+          "name_exact (Pedro Castillo)",
+          "country_ve (Caracas)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.7 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 18,
+      "title": "The Truth",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: la fuente no devolvió candidatos"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 19,
+      "title": "Through The Smoke I've Seen The Truth",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: la fuente no devolvió candidatos"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 20,
+      "title": "Hacia Adelante y Abajo",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: la fuente no devolvió candidatos"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 21,
+      "title": "Reinventándonos",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: la fuente no devolvió candidatos"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 22,
+      "title": "Crónicas Deletéreas I",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 23,
+      "title": "Generador",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: la fuente no devolvió candidatos"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 24,
+      "title": "Polvo Lunar",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: la fuente no devolvió candidatos"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 25,
+      "title": "Rebirth",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: la fuente no devolvió candidatos"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 26,
+      "title": "Chronology of a Downfall",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: la fuente no devolvió candidatos"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 27,
+      "title": "Chapter I Epiphany",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: la fuente no devolvió candidatos"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 28,
+      "title": "Human Scum",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: la fuente no devolvió candidatos"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 29,
+      "title": "Old Skull",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 30,
+      "title": "Sana Modern Mortis",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 31,
+      "title": "Death Of The Last Sun",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "3c2b15fd-91a1-4f69-a339-09a22f9d1e26",
+        "externalName": "Funebria",
+        "score": 0.75,
+        "signals": [
+          "name_exact (Funebria)",
+          "discography_strong (Death Of The Last Sun · Dekatherion: Ten Years of Hate & Pride · In Dominus Blasfemical Est...Ad Noctum Sathania · Two Headed Beast - A Journey of Venezuelan Black Metal)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.75 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 32,
+      "title": "Vencer o Morir",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: la fuente no devolvió candidatos"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 33,
+      "title": "Consigna de Guerra",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 34,
+      "title": "Triumphantly Evil",
+      "identity": {
+        "status": "matched",
+        "externalId": "8bdf2bb1-399e-4bb0-9166-d4a589e20ce4",
+        "externalName": "Triumphantly Evil",
+        "score": 0.9,
+        "signals": [
+          "artist_confirmed (86d296ea-37ff-401f-a3c2-013a5d672413)",
+          "title_exact (Triumphantly Evil)",
+          "year_exact (2021)"
+        ],
+        "reason": "artist_confirmed + title_exact + year_exact"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "la fuente no aportó ningún género comparable",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 35,
+      "title": "Creation",
+      "identity": {
+        "status": "matched",
+        "externalId": "0af99d65-07e0-4b78-9c83-0b81c57cd037",
+        "externalName": "Creation",
+        "score": 0.9,
+        "signals": [
+          "artist_confirmed (30f79818-3a50-4962-b065-f46fd918e320)",
+          "title_exact (Creation)",
+          "year_exact (2023)"
+        ],
+        "reason": "artist_confirmed + title_exact + year_exact"
+      },
+      "values": [
+        {
+          "raw": "death metal",
+          "status": "proposed",
+          "genreSlug": "death-metal",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "melodic death metal",
+          "status": "proposed",
+          "genreSlug": "death-metal-melodico",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "metal",
+          "status": "too_generic",
+          "genreSlug": "metal",
+          "reason": "CRV ya tiene un género hijo confirmado de esa familia"
+        },
+        {
+          "raw": "technical death metal",
+          "status": "already_known",
+          "genreSlug": "death-metal-tecnico",
+          "reason": "CRV ya lo tiene en la ficha"
+        }
+      ],
+      "suggested": [],
+      "agreement": "agree",
+      "agreementDetail": "la fuente nombra el principal confirmado (death-metal-tecnico)",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 36,
+      "title": "The Collapse Of Singularity",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 37,
+      "title": "Listen To Me",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: la fuente no devolvió candidatos"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 38,
+      "title": "Song Of Heroes",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: la fuente no devolvió candidatos"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 39,
+      "title": "Despondency Chord Progressions",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "5b28a0b9-0c9a-4924-b946-6f1a2fb91bc2",
+        "externalName": "Selbst",
+        "score": 0.75,
+        "signals": [
+          "name_exact (Selbst)",
+          "discography_strong (Despondency Chord Progressions · Relatos de Angustia · Secular Compendium · Selbst · Three Ways Of Consciousness)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.75 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 40,
+      "title": "Cantos De Victoria II (Jinetes De Rohan)",
+      "identity": {
+        "status": "matched",
+        "externalId": "e5f5c06a-f18e-4246-b5b0-92c6c3751d17",
+        "externalName": "Cantos de victoria II (Jinetes de Rohan)",
+        "score": 0.9,
+        "signals": [
+          "artist_confirmed (3bb37fac-4e4e-4b59-bf6c-15ab5397b5b3)",
+          "title_exact (Cantos de victoria II (Jinetes de Rohan))",
+          "year_exact (2021)"
+        ],
+        "reason": "artist_confirmed + title_exact + year_exact"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "la fuente no aportó ningún género comparable",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 51,
+      "title": "Spiteri",
+      "identity": {
+        "status": "matched",
+        "externalId": "f6d61f48-b51d-4550-9e50-52df0202f0c4",
+        "externalName": "Spiteri",
+        "score": 0.9,
+        "signals": [
+          "artist_confirmed (38ff4324-9adc-4052-947a-32eed8bbe15a)",
+          "title_exact (Spiteri)",
+          "year_exact (1973)"
+        ],
+        "reason": "artist_confirmed + title_exact + year_exact"
+      },
+      "values": [
+        {
+          "raw": "folk rock",
+          "status": "proposed",
+          "genreSlug": "folk-rock",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "latin",
+          "status": "proposed",
+          "genreSlug": "fusion-latina",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "rock",
+          "status": "too_generic",
+          "genreSlug": "rock",
+          "reason": "CRV ya tiene un género hijo confirmado de esa familia"
+        }
+      ],
+      "suggested": [],
+      "agreement": "family_agree",
+      "agreementDetail": "la fuente coincide en la familia del principal confirmado",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 54,
+      "title": "Estoy Afuera Sal",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 57,
+      "title": "Las Paticas De La Abuela",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 62,
+      "title": "Acción Es Carácter",
+      "identity": {
+        "status": "matched",
+        "externalId": "76565b77-85ed-4bbf-9eff-09d1b703b32b",
+        "externalName": "Acción Es Carácter",
+        "score": 0.9,
+        "signals": [
+          "artist_confirmed (98853d3a-d276-4f7c-9fdf-90f44ae0b768)",
+          "title_exact (Acción Es Carácter)",
+          "year_exact (2012)"
+        ],
+        "reason": "artist_confirmed + title_exact + year_exact"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "la fuente no aportó ningún género comparable",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 64,
+      "title": "Mark My Words",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "d7037d28-c123-464e-b584-6e47e224e657",
+        "externalName": "Dischord",
+        "score": 0.75,
+        "signals": [
+          "name_exact (Dischord)",
+          "discography_strong (Mark My Words · The Constant Fear)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.75 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 74,
+      "title": "Nada Es Eterno",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "18ff3493-63e5-4986-90ec-2eedcf54f6ba",
+        "externalName": "Liquet",
+        "score": 0.7,
+        "signals": [
+          "name_normalized (Liquet)",
+          "discography_strong (Liquet)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.7 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 76,
+      "title": "Not So Commercial",
+      "identity": {
+        "status": "matched",
+        "externalId": "6193da3c-7a02-4ecb-8f0e-91af99c33425",
+        "externalName": "Not So Commercial",
+        "score": 0.9,
+        "signals": [
+          "artist_confirmed (c694bf65-83e9-47d5-aeb3-bb68f78ef981)",
+          "title_exact (Not So Commercial)",
+          "year_exact (2011)"
+        ],
+        "reason": "artist_confirmed + title_exact + year_exact"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "la fuente no aportó ningún género comparable",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 80,
+      "title": "Long Way To Oblivion",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "37454696-a972-4027-b28c-62a1562f94ec",
+        "externalName": "Mantra",
+        "score": 0.7,
+        "signals": [
+          "name_exact (Mantra)",
+          "country_ve (Venezuela)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.7 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 95,
+      "title": "De Día Es Más Oscuro",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: la fuente no devolvió candidatos"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 103,
+      "title": "Sólo Dependo De Ti",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 106,
+      "title": "A Través De La Ventana",
+      "identity": {
+        "status": "matched",
+        "externalId": "5dc2edc5-9af4-41c8-ae8a-a57e5a4ee671",
+        "externalName": "A través de la ventana",
+        "score": 0.9,
+        "signals": [
+          "artist_confirmed (7e9312b6-7f1f-4d26-96b4-1cb1c5d10b9f)",
+          "title_exact (A través de la ventana)",
+          "year_exact (1977)"
+        ],
+        "reason": "artist_confirmed + title_exact + year_exact"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "la fuente no aportó ningún género comparable",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 107,
+      "title": "Aditus/2",
+      "identity": {
+        "status": "matched",
+        "externalId": "433ca319-29d4-4c30-8b4d-f8ae8f813bb9",
+        "externalName": "Aditus / 2",
+        "score": 0.9,
+        "signals": [
+          "artist_confirmed (7e9312b6-7f1f-4d26-96b4-1cb1c5d10b9f)",
+          "title_exact (Aditus / 2)",
+          "year_exact (1979)"
+        ],
+        "reason": "artist_confirmed + title_exact + year_exact"
+      },
+      "values": [
+        {
+          "raw": "jazz",
+          "status": "already_known",
+          "genreSlug": "jazz",
+          "reason": "CRV ya lo tiene en la ficha"
+        },
+        {
+          "raw": "jazz rock",
+          "status": "proposed",
+          "genreSlug": "jazz-rock",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "jazz-funk",
+          "status": "unmapped",
+          "genreSlug": null,
+          "reason": "sin equivalencia en la taxonomía aprobada"
+        },
+        {
+          "raw": "latin",
+          "status": "proposed",
+          "genreSlug": "fusion-latina",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "pop",
+          "status": "proposed",
+          "genreSlug": "pop",
+          "reason": "propuesta nueva para revisión"
+        },
+        {
+          "raw": "rock",
+          "status": "too_generic",
+          "genreSlug": "rock",
+          "reason": "CRV ya tiene un género hijo confirmado de esa familia"
+        }
+      ],
+      "suggested": [],
+      "agreement": "family_agree",
+      "agreementDetail": "la fuente coincide en la familia del principal confirmado",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 109,
+      "title": "Cultura 3",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "1782296a-d1db-49df-be89-05b37f4944c8",
+        "externalName": "Agresión",
+        "score": 0.75,
+        "signals": [
+          "name_exact (Agresión)",
+          "discography_strong (Cultura 3 · Guerra Santa · Sur)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.75 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 110,
+      "title": "Guerra Santa",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "1782296a-d1db-49df-be89-05b37f4944c8",
+        "externalName": "Agresión",
+        "score": 0.75,
+        "signals": [
+          "name_exact (Agresión)",
+          "discography_strong (Cultura 3 · Guerra Santa · Sur)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.75 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 111,
+      "title": "Sur",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "1782296a-d1db-49df-be89-05b37f4944c8",
+        "externalName": "Agresión",
+        "score": 0.75,
+        "signals": [
+          "name_exact (Agresión)",
+          "discography_strong (Cultura 3 · Guerra Santa · Sur)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.75 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 114,
+      "title": "Almendra",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "0b144888-0e76-465c-be88-882cf4f4cb5e",
+        "externalName": "Almendra",
+        "score": 0.75,
+        "signals": [
+          "name_exact (Almendra)",
+          "discography_strong (Almendra)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.75 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 115,
+      "title": "Concierto En La Sala",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 116,
+      "title": "Songs From The Future",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "0028729e-a080-4a6c-bc12-6a66a2bcd12e",
+        "externalName": "Ananta",
+        "score": 0.75,
+        "signals": [
+          "name_exact (Ananta)",
+          "discography_strong (Songs From The Future)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.75 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 117,
+      "title": "Wheels Of Time / Night And Daydream",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "0028729e-a080-4a6c-bc12-6a66a2bcd12e",
+        "externalName": "Ananta",
+        "score": 0.75,
+        "signals": [
+          "name_exact (Ananta)",
+          "discography_strong (Songs From The Future)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.75 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 118,
+      "title": "Crónicas Del Sub",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: la fuente no devolvió candidatos"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 119,
+      "title": "Despegue Eterno",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: la fuente no devolvió candidatos"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 121,
+      "title": "Insecto Milenario",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: la fuente no devolvió candidatos"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 122,
+      "title": "Colonia Para El Alma",
+      "identity": {
+        "status": "matched",
+        "externalId": "fb0b9dbe-381d-48be-8a80-4fe73c194303",
+        "externalName": "Colonia Para El Alma",
+        "score": 0.9,
+        "signals": [
+          "artist_confirmed (e0aa106b-ee90-4bc6-97b6-fba0e11cd253)",
+          "title_exact (Colonia Para El Alma)",
+          "year_exact (2009)"
+        ],
+        "reason": "artist_confirmed + title_exact + year_exact"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "la fuente no aportó ningún género comparable",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 123,
+      "title": "Mota Foca",
+      "identity": {
+        "status": "matched",
+        "externalId": "77fbad99-6370-448f-ba73-c0ce748a7021",
+        "externalName": "Mota Foca",
+        "score": 0.9,
+        "signals": [
+          "artist_confirmed (e0aa106b-ee90-4bc6-97b6-fba0e11cd253)",
+          "title_exact (Mota Foca)",
+          "year_exact (2011)"
+        ],
+        "reason": "artist_confirmed + title_exact + year_exact"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "la fuente no aportó ningún género comparable",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 127,
+      "title": "Alto Calibre",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "el artista no está identificado: ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 128,
+      "title": "Todo No Es Suficiente",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "1a735ea8-c819-4d02-9a0e-550dc0a8492d",
+        "externalName": "Billy Se Fue",
+        "score": 0.75,
+        "signals": [
+          "name_exact (Billy Se Fue)",
+          "discography_strong (Para Siempre · Todo No Es Suficiente)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.75 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 130,
+      "title": "Cabezón Key",
+      "identity": {
+        "status": "ambiguous",
+        "externalId": "85efd602-9dd1-4a62-b77a-a5ac777e63c7",
+        "externalName": "Cabezón Key",
+        "score": 0.75,
+        "signals": [
+          "name_exact (Cabezón Key)",
+          "discography_strong (Cabezón Key)"
+        ],
+        "reason": "el artista no está identificado: coincidencia débil (0.75 < 0.85)"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 131,
+      "title": "A+",
+      "identity": {
+        "status": "matched",
+        "externalId": "0dc30ad2-5085-479c-9f3c-d0d4b28e947b",
+        "externalName": "A+",
+        "score": 0.9,
+        "signals": [
+          "artist_confirmed (8d45b423-2029-4a6f-8ae4-98e450dcdd80)",
+          "title_exact (A+)",
+          "year_exact (2003)"
+        ],
+        "reason": "artist_confirmed + title_exact + year_exact"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "la fuente no aportó ningún género comparable",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 132,
+      "title": "Evolutio",
+      "identity": {
+        "status": "matched",
+        "externalId": "a733fd87-45a6-454b-943c-5e0625324b68",
+        "externalName": "Evolutio",
+        "score": 0.9,
+        "signals": [
+          "artist_confirmed (8d45b423-2029-4a6f-8ae4-98e450dcdd80)",
+          "title_exact (Evolutio)",
+          "year_exact (2009)"
+        ],
+        "reason": "artist_confirmed + title_exact + year_exact"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "la fuente no aportó ningún género comparable",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 136,
+      "title": "8",
+      "identity": {
+        "status": "matched",
+        "externalId": "46bb8677-ebb1-4805-9482-6033cfb878c5",
+        "externalName": "8",
+        "score": 0.9,
+        "signals": [
+          "artist_confirmed (3ee62edc-3521-4c39-89ce-081aafa79c00)",
+          "title_exact (8)",
+          "year_exact (2015)"
+        ],
+        "reason": "artist_confirmed + title_exact + year_exact"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "la fuente no aportó ningún género comparable",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 137,
+      "title": "Caramelos De Cianuro",
+      "identity": {
+        "status": "matched",
+        "externalId": "6bdec5cf-499f-4dd4-8cf2-c7bf8dbc720d",
+        "externalName": "Caramelos de Cianuro",
+        "score": 0.9,
+        "signals": [
+          "artist_confirmed (3ee62edc-3521-4c39-89ce-081aafa79c00)",
+          "title_exact (Caramelos de Cianuro)",
+          "year_exact (2010)"
+        ],
+        "reason": "artist_confirmed + title_exact + year_exact"
+      },
+      "values": [
+        {
+          "raw": "latin rock",
+          "status": "proposed",
+          "genreSlug": "rock-latino",
+          "reason": "propuesta nueva para revisión"
+        }
+      ],
+      "suggested": [],
+      "agreement": "family_agree",
+      "agreementDetail": "la fuente coincide en la familia del principal confirmado",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 138,
+      "title": "Cuentos Para Adultos",
+      "identity": {
+        "status": "matched",
+        "externalId": "4ffc383e-4902-35f4-a160-f871d04b3f7d",
+        "externalName": "Cuentos para adultos",
+        "score": 0.9,
+        "signals": [
+          "artist_confirmed (3ee62edc-3521-4c39-89ce-081aafa79c00)",
+          "title_exact (Cuentos para adultos)",
+          "year_exact (1993)"
+        ],
+        "reason": "artist_confirmed + title_exact + year_exact"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "la fuente no aportó ningún género comparable",
+      "casesOpened": []
+    },
+    {
+      "kind": "album",
+      "entityId": 139,
+      "title": "En Vivo",
+      "identity": {
+        "status": "none",
+        "externalId": null,
+        "externalName": null,
+        "score": 0,
+        "signals": [],
+        "reason": "ningún candidato llega a 0.6"
+      },
+      "values": [],
+      "suggested": [],
+      "agreement": "no_reference",
+      "agreementDetail": "",
+      "casesOpened": []
+    }
+  ],
+  "errors": []
+}

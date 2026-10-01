@@ -1,0 +1,66 @@
+{
+  "mode": "dry-run",
+  "runId": 10606,
+  "candidates": 36,
+  "accepted": [],
+  "alreadyClassified": [
+    "artist:126",
+    "artist:167",
+    "artist:238",
+    "artist:302",
+    "artist:540",
+    "artist:559",
+    "artist:613",
+    "artist:629",
+    "artist:724",
+    "artist:736",
+    "artist:756",
+    "artist:759",
+    "artist:811",
+    "artist:843",
+    "artist:849",
+    "artist:850",
+    "artist:864",
+    "artist:940",
+    "artist:1004",
+    "artist:1105",
+    "artist:1173",
+    "artist:1195",
+    "artist:1361",
+    "artist:1413",
+    "artist:1414",
+    "artist:1454",
+    "artist:1553",
+    "artist:1587",
+    "album:2850",
+    "artist:1629",
+    "artist:1641",
+    "artist:1684",
+    "artist:1739",
+    "artist:1751"
+  ],
+  "unresolved": [
+    {
+      "caseId": "album:3274",
+      "source": "lastfm",
+      "raw": [
+        "2006"
+      ],
+      "fragments": [
+        "2006"
+      ]
+    },
+    {
+      "caseId": "artist:2243",
+      "source": "lastfm",
+      "raw": [
+        "funk_add_to_lidarr_batch_20"
+      ],
+      "fragments": [
+        "funk_add_to_lidarr_batch_20"
+      ]
+    }
+  ],
+  "errors": [],
+  "moreSpecificExists": []
+}

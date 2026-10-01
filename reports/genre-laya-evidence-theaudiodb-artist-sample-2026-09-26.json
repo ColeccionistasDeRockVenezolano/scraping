@@ -1,0 +1,174 @@
+{
+  "fetchedAt": "2026-09-27T01:48:39.483Z",
+  "rows": [
+    {
+      "caseId": "artist:644",
+      "title": "Fethuruz",
+      "reference": "black-metal",
+      "status": 200,
+      "url": "https://www.theaudiodb.com/api/v1/json/123/search.php?s=Fethuruz",
+      "matches": []
+    },
+    {
+      "caseId": "artist:1523",
+      "title": "Electrotribal",
+      "reference": "dance",
+      "status": 200,
+      "url": "https://www.theaudiodb.com/api/v1/json/123/search.php?s=Electrotribal",
+      "matches": []
+    },
+    {
+      "caseId": "artist:889",
+      "title": "Subconsciente?",
+      "reference": "death-metal",
+      "status": 200,
+      "url": "https://www.theaudiodb.com/api/v1/json/123/search.php?s=Subconsciente%3F",
+      "matches": []
+    },
+    {
+      "caseId": "artist:165",
+      "title": "Mantra",
+      "reference": "death-metal-melodico",
+      "status": 200,
+      "url": "https://www.theaudiodb.com/api/v1/json/123/search.php?s=Mantra",
+      "matches": []
+    },
+    {
+      "caseId": "artist:152",
+      "title": "Los Amigos Invisibles",
+      "reference": "funk",
+      "status": 200,
+      "url": "https://www.theaudiodb.com/api/v1/json/123/search.php?s=Los+Amigos+Invisibles",
+      "matches": [
+        {
+          "id": "117299",
+          "name": "Los Amigos Invisibles",
+          "country": "",
+          "genre": "",
+          "style": "",
+          "mbid": "c694bf65-83e9-47d5-aeb3-bb68f78ef981"
+        }
+      ]
+    },
+    {
+      "caseId": "artist:81",
+      "title": "Dischord",
+      "reference": "hardcore-punk",
+      "status": 200,
+      "url": "https://www.theaudiodb.com/api/v1/json/123/search.php?s=Dischord",
+      "matches": []
+    },
+    {
+      "caseId": "artist:322",
+      "title": "Landsemk",
+      "reference": "heavy-metal",
+      "status": 200,
+      "url": "https://www.theaudiodb.com/api/v1/json/123/search.php?s=Landsemk",
+      "matches": []
+    },
+    {
+      "caseId": "artist:148",
+      "title": "Levítico",
+      "reference": "heavy-rock",
+      "status": 200,
+      "url": "https://www.theaudiodb.com/api/v1/json/123/search.php?s=Lev%C3%ADtico",
+      "matches": []
+    },
+    {
+      "caseId": "artist:129",
+      "title": "La Corte",
+      "reference": "hip-hop",
+      "status": 200,
+      "url": "https://www.theaudiodb.com/api/v1/json/123/search.php?s=La+Corte",
+      "matches": []
+    },
+    {
+      "caseId": "artist:1541",
+      "title": "Caseroloops",
+      "reference": "latin-electronic-fusion",
+      "status": 200,
+      "url": "https://www.theaudiodb.com/api/v1/json/123/search.php?s=Caseroloops",
+      "matches": []
+    },
+    {
+      "caseId": "artist:971",
+      "title": "Sexto Sonar",
+      "reference": "metal-progresivo",
+      "status": 200,
+      "url": "https://www.theaudiodb.com/api/v1/json/123/search.php?s=Sexto+Sonar",
+      "matches": []
+    },
+    {
+      "caseId": "artist:1093",
+      "title": "Dame pa Matala",
+      "reference": "pop-latino",
+      "status": 200,
+      "url": "https://www.theaudiodb.com/api/v1/json/123/search.php?s=Dame+pa+Matala",
+      "matches": []
+    },
+    {
+      "caseId": "artist:278",
+      "title": "Los Paranoias",
+      "reference": "pop-rock",
+      "status": 200,
+      "url": "https://www.theaudiodb.com/api/v1/json/123/search.php?s=Los+Paranoias",
+      "matches": []
+    },
+    {
+      "caseId": "artist:1008",
+      "title": "Los Residuos",
+      "reference": "punk-rock",
+      "status": 200,
+      "url": "https://www.theaudiodb.com/api/v1/json/123/search.php?s=Los+Residuos",
+      "matches": []
+    },
+    {
+      "caseId": "artist:1168",
+      "title": "Onice",
+      "reference": "reggae",
+      "status": 200,
+      "url": "https://www.theaudiodb.com/api/v1/json/123/search.php?s=Onice",
+      "matches": []
+    },
+    {
+      "caseId": "artist:158",
+      "title": "Los Impala",
+      "reference": "rock",
+      "status": 200,
+      "url": "https://www.theaudiodb.com/api/v1/json/123/search.php?s=Los+Impala",
+      "matches": []
+    },
+    {
+      "caseId": "artist:1164",
+      "title": "Animas",
+      "reference": "rock-alternativo",
+      "status": 200,
+      "url": "https://www.theaudiodb.com/api/v1/json/123/search.php?s=Animas",
+      "matches": []
+    },
+    {
+      "caseId": "artist:249",
+      "title": "Tomates Fritos",
+      "reference": "rock-and-roll",
+      "status": 200,
+      "url": "https://www.theaudiodb.com/api/v1/json/123/search.php?s=Tomates+Fritos",
+      "matches": []
+    },
+    {
+      "caseId": "artist:49",
+      "title": "Bacalao Men",
+      "reference": "rock-latino",
+      "status": 200,
+      "url": "https://www.theaudiodb.com/api/v1/json/123/search.php?s=Bacalao+Men",
+      "matches": []
+    },
+    {
+      "caseId": "artist:1332",
+      "title": "Calle Santiago",
+      "reference": "rock-progresivo",
+      "status": 200,
+      "url": "https://www.theaudiodb.com/api/v1/json/123/search.php?s=Calle+Santiago",
+      "matches": []
+    }
+  ]
+}

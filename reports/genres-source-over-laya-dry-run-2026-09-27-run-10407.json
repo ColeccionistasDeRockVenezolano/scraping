@@ -1,0 +1,117 @@
+{
+  "mode": "dry-run",
+  "runId": 10407,
+  "compatible": 14,
+  "reverted": [
+    {
+      "caseId": "artist:188",
+      "source": "itunes",
+      "laya": [
+        "new-wave"
+      ],
+      "raw": [
+        "Hip-Hop/Rap"
+      ]
+    },
+    {
+      "caseId": "artist:486",
+      "source": "itunes",
+      "laya": [
+        "rock"
+      ],
+      "raw": [
+        "Metal"
+      ]
+    },
+    {
+      "caseId": "artist:556",
+      "source": "itunes",
+      "laya": [
+        "nu-metal"
+      ],
+      "raw": [
+        "Indie Pop"
+      ]
+    },
+    {
+      "caseId": "artist:887",
+      "source": "itunes",
+      "laya": [
+        "metalcore"
+      ],
+      "raw": [
+        "Rock"
+      ]
+    },
+    {
+      "caseId": "artist:1100",
+      "source": "itunes",
+      "laya": [
+        "ska"
+      ],
+      "raw": [
+        "Dance"
+      ]
+    },
+    {
+      "caseId": "artist:1215",
+      "source": "itunes",
+      "laya": [
+        "punk-rock"
+      ],
+      "raw": [
+        "Hip-Hop/Rap"
+      ]
+    },
+    {
+      "caseId": "artist:1237",
+      "source": "itunes",
+      "laya": [
+        "ska-punk"
+      ],
+      "raw": [
+        "Punk"
+      ]
+    },
+    {
+      "caseId": "artist:1549",
+      "source": "itunes",
+      "laya": [
+        "metalcore"
+      ],
+      "raw": [
+        "Alternative"
+      ]
+    },
+    {
+      "caseId": "artist:1605",
+      "source": "itunes",
+      "laya": [
+        "pop-rock"
+      ],
+      "raw": [
+        "Pop"
+      ]
+    },
+    {
+      "caseId": "artist:1770",
+      "source": "itunes",
+      "laya": [
+        "post-rock"
+      ],
+      "raw": [
+        "Electronic"
+      ]
+    },
+    {
+      "caseId": "artist:1904",
+      "source": "itunes",
+      "laya": [
+        "pop-rock"
+      ],
+      "raw": [
+        "Pop Latino"
+      ]
+    }
+  ]
+}

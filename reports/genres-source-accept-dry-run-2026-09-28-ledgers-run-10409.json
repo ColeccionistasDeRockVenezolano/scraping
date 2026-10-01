@@ -1,0 +1,529 @@
+{
+  "mode": "dry-run",
+  "runId": 10409,
+  "candidates": 64,
+  "accepted": [
+    {
+      "caseId": "artist:65",
+      "title": "Cinema Sun",
+      "source": "itunes",
+      "raw": [
+        "Rock"
+      ],
+      "primary": "rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:110",
+      "title": "Headweiler",
+      "source": "itunes",
+      "raw": [
+        "Rock"
+      ],
+      "primary": "rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:188",
+      "title": "PP's",
+      "source": "itunes",
+      "raw": [
+        "Hip-Hop/Rap"
+      ],
+      "primary": "hip-hop",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:194",
+      "title": "Pedro Manuel Bolívar",
+      "source": "itunes",
+      "raw": [
+        "Electronic"
+      ],
+      "primary": "electronica",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:282",
+      "title": "Virtual Lakai",
+      "source": "itunes",
+      "raw": [
+        "Metal"
+      ],
+      "primary": "metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:283",
+      "title": "Isa TKM",
+      "source": "itunes",
+      "raw": [
+        "Pop Latino"
+      ],
+      "primary": "pop-latino",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:297",
+      "title": "Nycaloteph",
+      "source": "itunes",
+      "raw": [
+        "Death Metal/Black Metal"
+      ],
+      "primary": "death-metal",
+      "secondaries": [
+        "black-metal"
+      ]
+    },
+    {
+      "caseId": "artist:373",
+      "title": "Magnocore",
+      "source": "itunes",
+      "raw": [
+        "Rock"
+      ],
+      "primary": "rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:380",
+      "title": "Eztado kritiko",
+      "source": "itunes",
+      "raw": [
+        "Rock"
+      ],
+      "primary": "rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:383",
+      "title": "La Puerk",
+      "source": "itunes",
+      "raw": [
+        "Punk"
+      ],
+      "primary": "punk",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:386",
+      "title": "Raza Sur",
+      "source": "itunes",
+      "raw": [
+        "Rock"
+      ],
+      "primary": "rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:455",
+      "title": "Tras Las Fauces",
+      "source": "itunes",
+      "raw": [
+        "Rock"
+      ],
+      "primary": "rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:467",
+      "title": "Salomón",
+      "source": "itunes",
+      "raw": [
+        "Pop"
+      ],
+      "primary": "pop",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:486",
+      "title": "Alfredo Herrera",
+      "source": "itunes",
+      "raw": [
+        "Metal"
+      ],
+      "primary": "metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:518",
+      "title": "Across The Ruins",
+      "source": "itunes",
+      "raw": [
+        "Metal"
+      ],
+      "primary": "metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:522",
+      "title": "Mettanoia",
+      "source": "itunes",
+      "raw": [
+        "Rock"
+      ],
+      "primary": "rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:548",
+      "title": "Necronacia",
+      "source": "itunes",
+      "raw": [
+        "Metal"
+      ],
+      "primary": "metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:556",
+      "title": "Desierto Porno",
+      "source": "itunes",
+      "raw": [
+        "Indie Pop"
+      ],
+      "primary": "pop",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:572",
+      "title": "No More Jekyll",
+      "source": "itunes",
+      "raw": [
+        "Rock"
+      ],
+      "primary": "rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:641",
+      "title": "Hostil",
+      "source": "itunes",
+      "raw": [
+        "Rock"
+      ],
+      "primary": "rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:656",
+      "title": "Necroprogenie",
+      "source": "itunes",
+      "raw": [
+        "Alternative"
+      ],
+      "primary": "rock-alternativo",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:675",
+      "title": "Zutura",
+      "source": "itunes",
+      "raw": [
+        "Rock"
+      ],
+      "primary": "rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:679",
+      "title": "El Techo de la Ballena",
+      "source": "itunes",
+      "raw": [
+        "Rock"
+      ],
+      "primary": "rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:691",
+      "title": "Sonidos Foráneos",
+      "source": "itunes",
+      "raw": [
+        "Rock"
+      ],
+      "primary": "rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:732",
+      "title": "Deus Ex Machina",
+      "source": "itunes",
+      "raw": [
+        "Rock"
+      ],
+      "primary": "rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:758",
+      "title": "Incruento",
+      "source": "itunes",
+      "raw": [
+        "Rock"
+      ],
+      "primary": "rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:887",
+      "title": "Halteria",
+      "source": "itunes",
+      "raw": [
+        "Rock"
+      ],
+      "primary": "rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:904",
+      "title": "Mugre",
+      "source": "itunes",
+      "raw": [
+        "Rock"
+      ],
+      "primary": "rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:935",
+      "title": "Goat on Sale",
+      "source": "itunes",
+      "raw": [
+        "Rock"
+      ],
+      "primary": "rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:996",
+      "title": "Superheterodino",
+      "source": "itunes",
+      "raw": [
+        "Rock"
+      ],
+      "primary": "rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:1037",
+      "title": "Keedosh",
+      "source": "itunes",
+      "raw": [
+        "Rock"
+      ],
+      "primary": "rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:1100",
+      "title": "Soma Raza",
+      "source": "itunes",
+      "raw": [
+        "Dance"
+      ],
+      "primary": "dance",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:1115",
+      "title": "OG Project",
+      "source": "itunes",
+      "raw": [
+        "House"
+      ],
+      "primary": "house",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:1203",
+      "title": "V Sides Project",
+      "source": "itunes",
+      "raw": [
+        "Electronic"
+      ],
+      "primary": "electronica",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:1215",
+      "title": "Tsunami",
+      "source": "itunes",
+      "raw": [
+        "Hip-Hop/Rap"
+      ],
+      "primary": "hip-hop",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:1237",
+      "title": "Skabiosis",
+      "source": "itunes",
+      "raw": [
+        "Punk"
+      ],
+      "primary": "punk",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:1376",
+      "title": "Los Automaticos",
+      "source": "itunes",
+      "raw": [
+        "Rock"
+      ],
+      "primary": "rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:1498",
+      "title": "Lasca",
+      "source": "itunes",
+      "raw": [
+        "Pop"
+      ],
+      "primary": "pop",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:1549",
+      "title": "BreakDown",
+      "source": "itunes",
+      "raw": [
+        "Alternative"
+      ],
+      "primary": "rock-alternativo",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:1605",
+      "title": "Somos Héroes",
+      "source": "itunes",
+      "raw": [
+        "Pop"
+      ],
+      "primary": "pop",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:1770",
+      "title": "Tan Frió el Verano",
+      "source": "itunes",
+      "raw": [
+        "Electronic"
+      ],
+      "primary": "electronica",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:1814",
+      "title": "Maiah",
+      "source": "itunes",
+      "raw": [
+        "Singer/Songwriter"
+      ],
+      "primary": "cantautor",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:1904",
+      "title": "Croj",
+      "source": "itunes",
+      "raw": [
+        "Pop Latino"
+      ],
+      "primary": "pop-latino",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:1953",
+      "title": "Gatas Verdes",
+      "source": "itunes",
+      "raw": [
+        "Pop"
+      ],
+      "primary": "pop",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:1983",
+      "title": "Kleyver",
+      "source": "itunes",
+      "raw": [
+        "Metal"
+      ],
+      "primary": "metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:1991",
+      "title": "Lorenzo Adam",
+      "source": "itunes",
+      "raw": [
+        "Alternative"
+      ],
+      "primary": "rock-alternativo",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2001",
+      "title": "Rodolfo \"Pocho\" Serra",
+      "source": "itunes",
+      "raw": [
+        "Rock"
+      ],
+      "primary": "rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2008",
+      "title": "Santuario",
+      "source": "itunes",
+      "raw": [
+        "Metal"
+      ],
+      "primary": "metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:2038",
+      "title": "Williams",
+      "source": "itunes",
+      "raw": [
+        "Electronic"
+      ],
+      "primary": "electronica",
+      "secondaries": []
+    }
+  ],
+  "alreadyClassified": [
+    "artist:224",
+    "artist:458",
+    "artist:459",
+    "artist:604",
+    "artist:712",
+    "artist:1002",
+    "artist:1170",
+    "artist:1359",
+    "artist:1382",
+    "artist:1420",
+    "artist:1495",
+    "artist:1635",
+    "artist:1646",
+    "artist:1907"
+  ],
+  "unresolved": [
+    {
+      "caseId": "artist:402",
+      "source": "itunes",
+      "raw": [
+        "Urbano latino"
+      ],
+      "fragments": [
+        "Urbano latino"
+      ]
+    }
+  ],
+  "errors": [],
+  "moreSpecificExists": []
+}

@@ -1,0 +1,40 @@
+{
+  "mode": "confirm",
+  "runId": 10628,
+  "candidates": 7,
+  "accepted": [
+    {
+      "caseId": "album:227",
+      "title": "La Vida Bohème - Demos: Nuestra",
+      "source": "sincopa",
+      "raw": [
+        "Rock"
+      ],
+      "primary": "rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "album:337",
+      "title": "Submarino - Demos",
+      "source": "sincopa",
+      "raw": [
+        "Rock",
+        "Trip-Hop"
+      ],
+      "primary": "rock",
+      "secondaries": [
+        "trip-hop"
+      ]
+    }
+  ],
+  "alreadyClassified": [
+    "album:156",
+    "album:322",
+    "album:416",
+    "album:593",
+    "album:588"
+  ],
+  "unresolved": [],
+  "errors": [],
+  "moreSpecificExists": []
+}

@@ -1,0 +1,10 @@
+{
+  "scanned": 996,
+  "recovered": 647,
+  "skipped": {
+    "title_mismatch": 152,
+    "artist_mismatch": 155,
+    "year_mismatch": 34,
+    "not_one_album_record": 8
+  }
+}
