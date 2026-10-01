@@ -1,0 +1,412 @@
+{
+  "mode": "dry-run",
+  "runId": 10567,
+  "min": 0.75,
+  "applied": {
+    "studio_album": 407,
+    "ep": 20,
+    "live_album": 8,
+    "compilation": 79,
+    "demo": 14,
+    "single": 50,
+    "remix": 5,
+    "soundtrack": 2
+  },
+  "belowMin": 221,
+  "abstained": 455,
+  "noOptions": 163,
+  "guarded": [
+    {
+      "albumId": 28,
+      "type": "studio_album",
+      "tracks": 4
+    },
+    {
+      "albumId": 676,
+      "type": "studio_album",
+      "tracks": 2
+    },
+    {
+      "albumId": 679,
+      "type": "studio_album",
+      "tracks": 3
+    },
+    {
+      "albumId": 689,
+      "type": "studio_album",
+      "tracks": 1
+    },
+    {
+      "albumId": 694,
+      "type": "studio_album",
+      "tracks": 4
+    },
+    {
+      "albumId": 696,
+      "type": "studio_album",
+      "tracks": 4
+    },
+    {
+      "albumId": 780,
+      "type": "studio_album",
+      "tracks": 4
+    },
+    {
+      "albumId": 863,
+      "type": "studio_album",
+      "tracks": 3
+    },
+    {
+      "albumId": 881,
+      "type": "studio_album",
+      "tracks": 2
+    },
+    {
+      "albumId": 888,
+      "type": "studio_album",
+      "tracks": 2
+    },
+    {
+      "albumId": 934,
+      "type": "studio_album",
+      "tracks": 2
+    },
+    {
+      "albumId": 946,
+      "type": "studio_album",
+      "tracks": 2
+    },
+    {
+      "albumId": 953,
+      "type": "studio_album",
+      "tracks": 4
+    },
+    {
+      "albumId": 955,
+      "type": "studio_album",
+      "tracks": 3
+    },
+    {
+      "albumId": 1036,
+      "type": "studio_album",
+      "tracks": 4
+    },
+    {
+      "albumId": 1145,
+      "type": "studio_album",
+      "tracks": 4
+    },
+    {
+      "albumId": 1151,
+      "type": "studio_album",
+      "tracks": 4
+    },
+    {
+      "albumId": 1183,
+      "type": "studio_album",
+      "tracks": 2
+    },
+    {
+      "albumId": 1187,
+      "type": "studio_album",
+      "tracks": 4
+    },
+    {
+      "albumId": 1193,
+      "type": "studio_album",
+      "tracks": 2
+    },
+    {
+      "albumId": 1241,
+      "type": "studio_album",
+      "tracks": 4
+    },
+    {
+      "albumId": 1272,
+      "type": "studio_album",
+      "tracks": 2
+    },
+    {
+      "albumId": 1282,
+      "type": "studio_album",
+      "tracks": 4
+    },
+    {
+      "albumId": 1309,
+      "type": "studio_album",
+      "tracks": 4
+    },
+    {
+      "albumId": 1357,
+      "type": "studio_album",
+      "tracks": 4
+    },
+    {
+      "albumId": 1381,
+      "type": "studio_album",
+      "tracks": 4
+    },
+    {
+      "albumId": 1435,
+      "type": "studio_album",
+      "tracks": 2
+    },
+    {
+      "albumId": 1460,
+      "type": "studio_album",
+      "tracks": 4
+    },
+    {
+      "albumId": 1555,
+      "type": "studio_album",
+      "tracks": 4
+    },
+    {
+      "albumId": 1607,
+      "type": "studio_album",
+      "tracks": 2
+    },
+    {
+      "albumId": 1640,
+      "type": "studio_album",
+      "tracks": 2
+    },
+    {
+      "albumId": 1642,
+      "type": "studio_album",
+      "tracks": 1
+    },
+    {
+      "albumId": 1667,
+      "type": "studio_album",
+      "tracks": 2
+    },
+    {
+      "albumId": 1696,
+      "type": "studio_album",
+      "tracks": 3
+    },
+    {
+      "albumId": 1699,
+      "type": "studio_album",
+      "tracks": 2
+    },
+    {
+      "albumId": 1709,
+      "type": "studio_album",
+      "tracks": 2
+    },
+    {
+      "albumId": 1750,
+      "type": "studio_album",
+      "tracks": 4
+    },
+    {
+      "albumId": 1764,
+      "type": "studio_album",
+      "tracks": 4
+    },
+    {
+      "albumId": 1856,
+      "type": "studio_album",
+      "tracks": 2
+    },
+    {
+      "albumId": 1873,
+      "type": "studio_album",
+      "tracks": 3
+    },
+    {
+      "albumId": 1896,
+      "type": "studio_album",
+      "tracks": 3
+    },
+    {
+      "albumId": 2014,
+      "type": "single",
+      "tracks": 4
+    },
+    {
+      "albumId": 2330,
+      "type": "studio_album",
+      "tracks": 4
+    },
+    {
+      "albumId": 2391,
+      "type": "single",
+      "tracks": 10
+    },
+    {
+      "albumId": 2393,
+      "type": "single",
+      "tracks": 9
+    },
+    {
+      "albumId": 2397,
+      "type": "studio_album",
+      "tracks": 2
+    },
+    {
+      "albumId": 2418,
+      "type": "ep",
+      "tracks": 13
+    },
+    {
+      "albumId": 2541,
+      "type": "ep",
+      "tracks": 11
+    },
+    {
+      "albumId": 2614,
+      "type": "single",
+      "tracks": 9
+    },
+    {
+      "albumId": 2782,
+      "type": "studio_album",
+      "tracks": 4
+    },
+    {
+      "albumId": 2826,
+      "type": "ep",
+      "tracks": 11
+    },
+    {
+      "albumId": 2935,
+      "type": "studio_album",
+      "tracks": 3
+    },
+    {
+      "albumId": 3064,
+      "type": "single",
+      "tracks": 5
+    },
+    {
+      "albumId": 3211,
+      "type": "ep",
+      "tracks": 13
+    },
+    {
+      "albumId": 3237,
+      "type": "single",
+      "tracks": 7
+    },
+    {
+      "albumId": 3273,
+      "type": "ep",
+      "tracks": 11
+    },
+    {
+      "albumId": 3327,
+      "type": "studio_album",
+      "tracks": 3
+    },
+    {
+      "albumId": 3348,
+      "type": "single",
+      "tracks": 4
+    },
+    {
+      "albumId": 3500,
+      "type": "studio_album",
+      "tracks": 3
+    },
+    {
+      "albumId": 3673,
+      "type": "studio_album",
+      "tracks": 2
+    },
+    {
+      "albumId": 3743,
+      "type": "studio_album",
+      "tracks": 2
+    },
+    {
+      "albumId": 3832,
+      "type": "studio_album",
+      "tracks": 2
+    },
+    {
+      "albumId": 3836,
+      "type": "studio_album",
+      "tracks": 2
+    },
+    {
+      "albumId": 3864,
+      "type": "studio_album",
+      "tracks": 2
+    },
+    {
+      "albumId": 3870,
+      "type": "studio_album",
+      "tracks": 2
+    },
+    {
+      "albumId": 3871,
+      "type": "studio_album",
+      "tracks": 2
+    },
+    {
+      "albumId": 3877,
+      "type": "studio_album",
+      "tracks": 3
+    },
+    {
+      "albumId": 3912,
+      "type": "studio_album",
+      "tracks": 4
+    },
+    {
+      "albumId": 4004,
+      "type": "studio_album",
+      "tracks": 2
+    },
+    {
+      "albumId": 4007,
+      "type": "studio_album",
+      "tracks": 2
+    },
+    {
+      "albumId": 4144,
+      "type": "studio_album",
+      "tracks": 4
+    },
+    {
+      "albumId": 4288,
+      "type": "studio_album",
+      "tracks": 2
+    },
+    {
+      "albumId": 4298,
+      "type": "studio_album",
+      "tracks": 2
+    },
+    {
+      "albumId": 4303,
+      "type": "studio_album",
+      "tracks": 2
+    },
+    {
+      "albumId": 4453,
+      "type": "studio_album",
+      "tracks": 2
+    },
+    {
+      "albumId": 4459,
+      "type": "studio_album",
+      "tracks": 2
+    },
+    {
+      "albumId": 4528,
+      "type": "studio_album",
+      "tracks": 2
+    },
+    {
+      "albumId": 4553,
+      "type": "single",
+      "tracks": 12
+    }
+  ],
+  "excluded": 0,
+  "notOther": 0
+}
