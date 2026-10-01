@@ -1,57 +1,62 @@
 # Backfill de géneros (dry-run)
 
-Run 5973 · proyección de `albums.genre`: ENCENDIDA
+Run 10861 · proyección de `albums.genre`: ENCENDIDA
 
 ## Cobertura antes / después
 
 | Métrica | Antes | Después |
 |---|---:|---:|
-| Álbumes | 4654 | 4654 |
-| Álbumes con principal confirmado | 1745 (37.5 %) | 1745 (37.5 %) |
-| Álbumes con algún género confirmado | 1805 | 1805 |
-| `albums.genre` no nulo | 1950 | 1950 |
-| Pendientes (texto de fuente, sin principal) | 205 | 205 |
-| Sin clasificar | 2704 | 2704 |
-| Artistas | 2658 | 2658 |
-| Artistas con principal confirmado | 211 | 211 |
-| Artistas con algún género confirmado | 216 | 216 |
+| Álbumes | 4953 | 4953 |
+| Álbumes con principal confirmado | 4093 (82.6 %) | 4093 (82.6 %) |
+| Álbumes con algún género confirmado | 4098 | 4098 |
+| `albums.genre` no nulo | 4093 | 4093 |
+| Pendientes (texto de fuente, sin principal) | 0 | 0 |
+| Sin clasificar | 860 | 860 |
+| Artistas | 2803 | 2803 |
+| Artistas con principal confirmado | 2237 | 2387 |
+| Artistas con algún género confirmado | 2237 | 2409 |
 
 ## Escrituras
 
-Procesados: 228 artistas, 1994 álbumes. Filas: +0 / ~0 / −0; evidencia añadida a decisiones humanas: 0. Revisiones abiertas: 0, cerradas: 0.
+Procesados: 776 artistas, 0 álbumes. Filas: +504 / ~75 / −0; evidencia añadida a decisiones humanas: 261. Revisiones abiertas: 260, cerradas: 0.
 
 ## Asignaciones por estado y regla (después)
 
 | Nivel | Estado | Decisión | Regla | Filas |
 |---|---|---|---|---:|
-| album | confirmed | human | human_decision | 8 |
-| album | confirmed | rule | explicit_source_alias | 1071 |
-| album | confirmed | rule | partial_source_agreement | 1 |
-| album | confirmed | rule | source_list_order | 1451 |
-| album | confirmed | rule | sources_agree | 12 |
-| album | suggested | rule | external_suggestion | 127 |
-| album | suggested | rule | sources_disagree | 8 |
-| album | superseded | rule | family_superseded_by_child | 46 |
-| artist | confirmed | rule | explicit_source_alias | 108 |
-| artist | confirmed | rule | source_list_order | 223 |
-| artist | superseded | rule | family_superseded_by_child | 22 |
+| album | confirmed | human | human_decision | 2841 |
+| album | confirmed | rule | explicit_source_alias | 1155 |
+| album | confirmed | rule | partial_source_agreement | 3 |
+| album | confirmed | rule | source_list_order | 1661 |
+| album | confirmed | rule | sources_agree | 11 |
+| album | suggested | rule | external_suggestion | 2 |
+| album | suggested | rule | sources_disagree | 7 |
+| album | superseded | human | human_decision | 41 |
+| album | superseded | rule | explicit_source_alias | 2 |
+| album | superseded | rule | external_suggestion | 117 |
+| album | superseded | rule | family_superseded_by_child | 56 |
+| artist | confirmed | human | human_decision | 2902 |
+| artist | confirmed | rule | explicit_source_alias | 245 |
+| artist | confirmed | rule | partial_source_agreement | 26 |
+| artist | confirmed | rule | source_list_order | 515 |
+| artist | confirmed | rule | sources_agree | 42 |
+| artist | suggested | rule | sources_disagree | 26 |
+| artist | superseded | human | human_decision | 13 |
+| artist | superseded | rule | family_superseded_by_child | 26 |
 
 ## Casos en revisión (después)
 
 | Nivel | Caso | Abiertos |
 |---|---|---:|
-| album | compound_value | 215 |
-| album | external_ambiguous_identity | 5 |
-| album | external_unmapped_term | 11 |
-| album | primary_disagreement | 1 |
-| album | source_disagreement | 3 |
-| album | unknown_value | 32 |
-| artist | compound_value | 39 |
-| artist | external_ambiguous_identity | 28 |
+| artist | compound_value | 33 |
+| artist | human_contradiction | 195 |
+| artist | primary_disagreement | 12 |
+| artist | source_disagreement | 7 |
+| artist | unknown_value | 13 |
 
 ## Proyección de `albums.genre`
 
-Cambian 0 álbumes (0 pasan a NULL). Sin evidencia: 43.
+Cambian 0 álbumes (0 pasan a NULL). Sin evidencia: 0.
 
 | Álbum | Antes | Después | Base |
 |---:|---|---|---|
@@ -60,53 +65,47 @@ Cambian 0 álbumes (0 pasan a NULL). Sin evidencia: 43.
 
 | Tramo | Entidades |
 |---|---:|
-| Death | 33 |
-| Heavy | 27 |
-| Thrash | 24 |
-| Black | 18 |
-| Hard | 17 |
-| Fusion | 10 |
-| Female Metal | 8 |
-| Progresivo | 8 |
-| Progressive | 7 |
-| Roll | 7 |
-| Thrash-Death Metal | 7 |
-| Alternative | 6 |
-| Guttural Brutal Death Metal | 6 |
-| Instrumental | 6 |
-| Noise Raw punk | 6 |
-| Stoner | 6 |
-| Ethnic-Rock | 5 |
-| Rotten Blues | 5 |
-| Ska-Reggae | 5 |
-| World-Ethnic | 5 |
-| Country | 4 |
-| Dark | 4 |
-| Depressive Post-Black Metal | 4 |
-| Groove | 4 |
-| Heavy Rock | 4 |
-| Latin Electronic Fusion | 4 |
-| Punk-Metal | 4 |
-| Dark Metal | 3 |
-| Pop-Fusion | 3 |
-| Pop-Instrumental | 3 |
-| Rock-Ska | 3 |
-| Technical Brutal Death Metal | 3 |
-| Aggro | 2 |
-| Ambient Black Metal | 2 |
-| Black... | 2 |
-| Blackened | 2 |
-| Crossover | 2 |
-| Dark Rock | 2 |
-| Dark Wave Ilegal | 2 |
-| Glam | 2 |
-| Latin Funk | 2 |
-| Latin Rock Fusion | 2 |
-| Melodic Metal | 2 |
-| Necronoise | 2 |
-| Neo Crust | 2 |
-| New Age | 2 |
-| Peligroso Pop | 2 |
-| Pop-Latin-Rock | 2 |
-| Porn | 2 |
-| Postpunk Paranormal | 2 |
+| Slam | 4 |
+| Death Metal (later) | 3 |
+| Melodic Power Metal | 3 |
+| Progressive Heavy Metal | 3 |
+| Atmospheric | 2 |
+| Atmospheric Death | 2 |
+| Black Metal (early) | 2 |
+| Death Metal (early) | 2 |
+| Experimental Black Metal | 2 |
+| Hard Rock (early) | 2 |
+| Hardcore (early) | 2 |
+| Ambient with Industrial influences | 1 |
+| Avant-garde Black | 1 |
+| Black Metal (later) | 1 |
+| Black Metal with Industrial influences | 1 |
+| Depressive | 1 |
+| Doom | 1 |
+| Doom Metal (later) | 1 |
+| Drone | 1 |
+| Epic Black Metal | 1 |
+| Epic Heavy | 1 |
+| Experimental Death | 1 |
+| Experimental Grindcore | 1 |
+| Gothic Metal (early) | 1 |
+| Gothic Metal (later) | 1 |
+| Grindcore (early) | 1 |
+| Grindcore (later) | 1 |
+| Heavy Metal (early) | 1 |
+| Heavy Metal (later) | 1 |
+| Heavy Metal with Latin influences (later) | 1 |
+| Horror Punk | 1 |
+| Melodic Death Metal with Rock and Jazz influences | 1 |
+| Melodic Heavy Metal | 1 |
+| Melodic Progressive | 1 |
+| Melodic Thrash Metal | 1 |
+| Neoclassical | 1 |
+| Power Metal (later) | 1 |
+| Power Metal with Folk elements | 1 |
+| RAC | 1 |
+| Raw | 1 |
+| Rock (later) | 1 |
+| Shred | 1 |
+| Thrash Metal (early) | 1 |
+| Thrash Metal (later) | 1 |
