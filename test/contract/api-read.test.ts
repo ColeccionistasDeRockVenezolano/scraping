@@ -174,6 +174,29 @@ describe("API de lectura (E7A) — caso Caramelos De Cianuro", () => {
     expect(body.aliases).toEqual([{ id: expect.any(Number), alias: "Caramelos de Cianuro", aliasType: "name_variant", isPrimary: true }]);
   });
 
+  it("GET /artists/:id muestra los linajes documentados (0035) en los dos sentidos", async () => {
+    const pool = getPool();
+    const { rows } = await pool.query<{ id: string }>(
+      "INSERT INTO public.artists(name, artist_type) VALUES ('Radio Clip (prueba)','band'), ('RC2 (prueba)','band') RETURNING id::text");
+    const [earlier, later] = rows.map((row) => Number(row.id));
+    await pool.query(`
+      INSERT INTO ingest.artist_relations(from_artist_id,to_artist_id,relation_type,bridge_members,start_year,evidence_note,source_urls,confidence)
+      VALUES ($1,$2,'successor','Félix Duque, Arturo Torres',1999,'Rompieron conceptualmente con la banda.',ARRAY['https://example.org/rc2'],'high'),
+             ($2,$2,'temporary_name',NULL,NULL,NULL,'{}','medium')`, [earlier, later]);
+
+    const fromLater = (await app.inject({ method: "GET", url: `/artists/${later}` })).json();
+    expect(fromLater.related).toEqual([{
+      id: earlier, name: "Radio Clip (prueba)", pictureUrl: null, originCountry: "Venezuela", sharedMembers: 0, sharedMemberNames: [],
+      relations: [{
+        type: "successor", direction: "earlier", bridgeMembers: "Félix Duque, Arturo Torres", startYear: 1999, endYear: null,
+        note: "Rompieron conceptualmente con la banda.", sources: ["https://example.org/rc2"], confidence: "high",
+      }],
+    }]);
+    const fromEarlier = (await app.inject({ method: "GET", url: `/artists/${earlier}` })).json();
+    expect(fromEarlier.related).toEqual([expect.objectContaining({ id: later, relations: [expect.objectContaining({ direction: "later" })] })]);
+    await pool.query("DELETE FROM public.artists WHERE id = ANY($1::bigint[])", [[earlier, later]]);
+  });
+
   it("GET /artists/:id inexistente responde 404 con forma consistente", async () => {
     const res = await app.inject({ method: "GET", url: "/artists/999999" });
     expect(res.statusCode).toBe(404);

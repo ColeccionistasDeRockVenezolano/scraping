@@ -32,7 +32,7 @@ const personDetailSchema = personListItemSchema.extend({
   deathDate: z.string().nullable(),
   notes: z.string().nullable(),
   bands: z.array(z.object({
-    id: z.number().int(), artistId: z.number().int(), artistName: z.string(), role: z.string(),
+    id: z.number().int(), artistId: z.number().int(), artistName: z.string(), artistType: z.string(), role: z.string(),
     fromYear: z.number().int().nullable(), toYear: z.number().int().nullable(), isCurrent: z.boolean(),
   })),
   albumCredits: z.array(z.object({

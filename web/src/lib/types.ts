@@ -39,8 +39,17 @@ export interface ArtistListItem {
   isDeceased?: boolean;
 }
 
+/**
+ * Rol con el que se vincula la persona que ES el artista (su proyecto o nombre
+ * artístico): caso Ashwave (2026-09-30). El catálogo no funde fichas de tipos
+ * distintos, así que este rol es lo que une a las dos.
+ */
+export const TITULAR_ROLE = "Titular del proyecto";
+
 export interface ArtistMember {
   id: number; personId: number; personName: string; personIsDeceased?: boolean; role: string;
+  /** Fechas de la persona: la ficha del proyecto solista las muestra como suyas. */
+  personBirthDate?: string | null; personDeathDate?: string | null;
   fromYear: number | null; toYear: number | null; isCurrent: boolean;
 }
 
@@ -74,10 +83,24 @@ export interface ArtistDetail extends ArtistListItem {
 }
 
 export interface ArtistLink { platform: "youtube" | "instagram" | "wordpress"; url: string; albumId: number; albumTitle: string; }
-/** Banda con dos o más integrantes en común. */
+export type ArtistRelationType = "successor" | "ex_member_project" | "temporary_name";
+/** Linaje documentado; `earlier`: la otra banda es la de origen; `later`: la posterior. */
+export interface ArtistRelation {
+  type: ArtistRelationType;
+  direction: "earlier" | "later";
+  bridgeMembers: string | null;
+  startYear: number | null;
+  endYear: number | null;
+  note: string | null;
+  sources: string[];
+  confidence: string;
+}
+/** Banda de un linaje documentado o con dos o más integrantes en común. */
 export interface RelatedArtist {
   id: number; name: string; pictureUrl: string | null; originCountry: string;
   sharedMembers: number; sharedMemberNames: string[];
+  /** La API más antigua no lo manda. */
+  relations?: ArtistRelation[];
 }
 /** Mismo género principal y misma década de arranque. */
 export interface SimilarArtist {
@@ -200,6 +223,8 @@ export type PersonNameClass = "ok" | "organization_like" | "duration" | "fragmen
 
 export interface PersonBand {
   id: number; artistId: number; artistName: string; role: string;
+  /** La API más antigua no lo manda: sin él, el vínculo se nombra «banda». */
+  artistType?: string;
   fromYear: number | null; toYear: number | null; isCurrent: boolean;
 }
 export interface PersonAlbumCredit { id: number; albumId: number; albumTitle: string; artistId: number; artistName: string; creditType: string; role: string; }

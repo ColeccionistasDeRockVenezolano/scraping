@@ -84,7 +84,7 @@ export interface ArtistDetail {
   notes: string | null;
   /** Su proyecto es de una persona fallecida (titular o único integrante). */
   isDeceased: boolean;
-  members: Array<{ id: number; personId: number; personName: string; personIsDeceased: boolean; role: string; fromYear: number | null; toYear: number | null; isCurrent: boolean }>;
+  members: Array<{ id: number; personId: number; personName: string; personIsDeceased: boolean; role: string; personBirthDate: string | null; personDeathDate: string | null; fromYear: number | null; toYear: number | null; isCurrent: boolean }>;
   discography: Array<{ albumId: number; title: string; releaseYear: number | null; albumType: string; coverUrl: string | null }>;
   aliases: Array<{ id: number; alias: string; aliasType: string; isPrimary: boolean }>;
   /** Géneros confirmados del ARTISTA; los discos tienen los suyos. */
@@ -95,12 +95,36 @@ export interface ArtistDetail {
   lastLabel: { id: number; name: string } | null;
   /** Enlaces públicos de sus discos (YouTube, Instagram, WordPress), uno por disco y plataforma. */
   links: Array<{ platform: "youtube" | "instagram" | "wordpress"; url: string; albumId: number; albumTitle: string }>;
-  /** Bandas con dos o más integrantes en común (solo membresías, de cualquier época). */
-  related: Array<{ id: number; name: string; pictureUrl: string | null; originCountry: string; sharedMembers: number; sharedMemberNames: string[] }>;
+  /**
+   * Bandas relacionadas: las de un linaje documentado (`ingest.artist_relations`:
+   * sucesor, proyecto de exintegrantes, nombre temporal), primero, y las que
+   * comparten dos o más integrantes (membresías de cualquier época).
+   */
+  related: RelatedArtist[];
   /** Década en que arrancó (formación o, si falta, su primer disco); null si no hay año. */
   similarDecade: number | null;
   /** Mismo género principal y misma década de arranque; sin año, solo el género. */
   similar: Array<{ id: number; name: string; pictureUrl: string | null; originCountry: string; startYear: number | null }>;
+}
+
+export type ArtistRelationType = "successor" | "ex_member_project" | "temporary_name";
+
+/** Relación explícita vista desde la ficha: `earlier` = la otra banda es la de origen; `later` = la posterior. */
+export interface ArtistRelation {
+  type: ArtistRelationType;
+  direction: "earlier" | "later";
+  bridgeMembers: string | null;
+  startYear: number | null;
+  endYear: number | null;
+  note: string | null;
+  sources: string[];
+  confidence: string;
+}
+
+export interface RelatedArtist {
+  id: number; name: string; pictureUrl: string | null; originCountry: string;
+  sharedMembers: number; sharedMemberNames: string[];
+  relations: ArtistRelation[];
 }
 
 const RELATED_MIN_SHARED = 2;
@@ -111,26 +135,67 @@ const SIMILAR_LIMIT = 12;
 const START_YEAR_SQL = (artist: string) =>
   `COALESCE(${artist}.formed_year, (SELECT min(al.release_year) FROM public.albums al WHERE al.artist_id = ${artist}.id))`;
 
-async function relatedArtists(id: number): Promise<ArtistDetail["related"]> {
-  const { rows } = await getPool().query<{ id: string; name: string; picture_url: string | null; origin_country: string; shared: number; shared_names: string[] }>(
-    `SELECT o.id::text AS id, o.name, o.picture_url, o.origin_country,
-            count(DISTINCT am.person_id)::int AS shared,
-            array_agg(DISTINCT p.name ORDER BY p.name) AS shared_names
-       FROM public.artist_members am
-       JOIN public.artist_members om ON om.person_id = am.person_id AND om.artist_id <> am.artist_id
-       JOIN public.artists o ON o.id = om.artist_id
-       JOIN public.persons p ON p.id = am.person_id
-      WHERE am.artist_id = $1
-      GROUP BY o.id, o.name, o.picture_url, o.origin_country
-     HAVING count(DISTINCT am.person_id) >= $2
-      ORDER BY shared DESC, o.name
-      LIMIT $3`,
-    [id, RELATED_MIN_SHARED, RELATED_LIMIT],
-  );
-  return rows.map((row) => ({
-    id: Number(row.id), name: row.name, pictureUrl: row.picture_url, originCountry: row.origin_country,
-    sharedMembers: row.shared, sharedMemberNames: row.shared_names,
-  }));
+async function relatedArtists(id: number): Promise<RelatedArtist[]> {
+  const [shared, explicit] = await Promise.all([
+    getPool().query<{ id: string; name: string; picture_url: string | null; origin_country: string; shared: number; shared_names: string[] }>(
+      `SELECT o.id::text AS id, o.name, o.picture_url, o.origin_country,
+              count(DISTINCT am.person_id)::int AS shared,
+              array_agg(DISTINCT p.name ORDER BY p.name) AS shared_names
+         FROM public.artist_members am
+         JOIN public.artist_members om ON om.person_id = am.person_id AND om.artist_id <> am.artist_id
+         JOIN public.artists o ON o.id = om.artist_id
+         JOIN public.persons p ON p.id = am.person_id
+        WHERE am.artist_id = $1
+        GROUP BY o.id, o.name, o.picture_url, o.origin_country
+       HAVING count(DISTINCT am.person_id) >= $2
+        ORDER BY shared DESC, o.name
+        LIMIT $3`,
+      [id, RELATED_MIN_SHARED, RELATED_LIMIT],
+    ),
+    // Las dos direcciones; una relación consigo misma (dos fichas fusionadas) no cuenta.
+    getPool().query<{
+      other_id: string; name: string; picture_url: string | null; origin_country: string; relation_type: ArtistRelationType;
+      direction: "earlier" | "later"; bridge_members: string | null; start_year: number | null; end_year: number | null;
+      evidence_note: string | null; source_urls: string[]; confidence: string;
+    }>(
+      `SELECT o.id::text AS other_id, o.name, o.picture_url, o.origin_country, r.relation_type,
+              CASE WHEN r.to_artist_id = $1 THEN 'earlier' ELSE 'later' END AS direction,
+              r.bridge_members, r.start_year, r.end_year, r.evidence_note, r.source_urls, r.confidence
+         FROM ingest.artist_relations r
+         JOIN public.artists o ON o.id = CASE WHEN r.to_artist_id = $1 THEN r.from_artist_id ELSE r.to_artist_id END
+        WHERE (r.from_artist_id = $1 OR r.to_artist_id = $1) AND r.from_artist_id <> r.to_artist_id
+        ORDER BY r.start_year NULLS LAST, o.name`,
+      [id],
+    ),
+  ]);
+  const byId = new Map<number, RelatedArtist>();
+  for (const row of explicit.rows) {
+    const otherId = Number(row.other_id);
+    const item = byId.get(otherId) ?? {
+      id: otherId, name: row.name, pictureUrl: row.picture_url, originCountry: row.origin_country,
+      sharedMembers: 0, sharedMemberNames: [], relations: [],
+    };
+    item.relations.push({
+      type: row.relation_type, direction: row.direction, bridgeMembers: row.bridge_members,
+      startYear: row.start_year, endYear: row.end_year, note: row.evidence_note, sources: row.source_urls, confidence: row.confidence,
+    });
+    byId.set(otherId, item);
+  }
+  for (const row of shared.rows) {
+    const otherId = Number(row.id);
+    const item = byId.get(otherId);
+    if (item) {
+      item.sharedMembers = row.shared;
+      item.sharedMemberNames = row.shared_names;
+      continue;
+    }
+    byId.set(otherId, {
+      id: otherId, name: row.name, pictureUrl: row.picture_url, originCountry: row.origin_country,
+      sharedMembers: row.shared, sharedMemberNames: row.shared_names, relations: [],
+    });
+  }
+  // Los linajes documentados primero (en su orden cronológico); después, los calculados.
+  return [...byId.values()];
 }
 
 async function similarArtists(id: number, primaryGenre: PublicGenre | null): Promise<Pick<ArtistDetail, "similar" | "similarDecade">> {
@@ -164,6 +229,7 @@ export async function getArtistDetail(id: number): Promise<ArtistDetail | null> 
        COALESCE((
          SELECT jsonb_agg(jsonb_build_object(
            'id', am.id, 'personId', p.id, 'personName', p.name, 'personIsDeceased', ${personDeceasedSql("p")}, 'role', am.role,
+           'personBirthDate', p.birth_date, 'personDeathDate', p.death_date,
            'fromYear', am.from_year, 'toYear', am.to_year, 'isCurrent', am.is_current
          ) ORDER BY am.from_year NULLS LAST, p.name)
          FROM public.artist_members am JOIN public.persons p ON p.id = am.person_id

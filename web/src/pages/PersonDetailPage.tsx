@@ -25,31 +25,8 @@ import { PERSON_FIELDS } from "../lib/entityFields";
 import { EntityInfo, type InfoItem } from "../components/EntityInfo";
 import { EntityTabs, TabEmpty, type TabSpec } from "../components/EntityTabs";
 import { ExpandableText } from "../components/ExpandableText";
-import { creditTypeLabel, nameClassLabel } from "../lib/labels";
-
-/** «2009-01-31» → «31 de enero de 2009»; si la fecha no es completa o válida, se muestra tal cual. */
-function formatDate(value: string | null): string | null {
-  if (!value) return null;
-  const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(value);
-  if (!match) return value;
-  const date = new Date(Date.UTC(Number(match[1]), Number(match[2]) - 1, Number(match[3])));
-  if (Number.isNaN(date.getTime())) return value;
-  return date.toLocaleDateString("es-VE", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" });
-}
-
-/** Años cumplidos entre el nacimiento y el fallecimiento (o hoy); null si falta una fecha completa. */
-function ageText(birth: string | null, death: string | null): string | null {
-  const parse = (value: string | null) => {
-    const match = value ? /^(\d{4})-(\d{2})-(\d{2})$/.exec(value) : null;
-    return match ? { y: Number(match[1]), m: Number(match[2]), d: Number(match[3]) } : null;
-  };
-  const from = parse(birth);
-  if (!from) return null;
-  const now = new Date();
-  const to = parse(death) ?? { y: now.getFullYear(), m: now.getMonth() + 1, d: now.getDate() };
-  const years = to.y - from.y - (to.m < from.m || (to.m === from.m && to.d < from.d) ? 1 : 0);
-  return years >= 0 && years < 130 ? `${years} años` : null;
-}
+import { creditTypeLabel, membershipNoun, nameClassLabel } from "../lib/labels";
+import { ageText, formatDate } from "../lib/format";
 
 export function PersonDetailPage() {
   const { id } = useParams();
@@ -69,6 +46,10 @@ export function PersonDetailPage() {
   if (error || !person) return <EntityLoadError message={error ?? "Persona no encontrada."} errorValue={errorValue} onRetry={reload} />;
 
   const dead = person.isDeceased === true;
+  // Un solista no está «en una banda»: está al frente de su proyecto, y si la
+  // persona ES el artista (caso Ashwave) las dos fichas son la misma identidad
+  // repartida en dos tipos. El vínculo se nombra por lo que es.
+  const vinculo = membershipNoun(person.bands);
   const info: InfoItem[] = [
     { label: "Nacionalidad", value: person.nationality, fallback: "Sin dato" },
     { label: "Venezolano/a", value: person.isVenezuelan === true ? "Sí" : person.isVenezuelan === false ? "No (extranjero/a)" : null, fallback: "Sin dato" },
@@ -76,7 +57,7 @@ export function PersonDetailPage() {
     { label: "Nacimiento", value: formatDate(person.birthDate) },
     { label: "Fallecimiento", value: dead ? formatDate(person.deathDate) : null },
     { label: dead ? "Edad al fallecer" : "Edad", value: dead && !person.deathDate ? null : ageText(person.birthDate, dead ? person.deathDate : null) },
-    { label: "Bandas", value: person.bands.length ? (
+    { label: person.bands.length === 1 ? vinculo.singular : vinculo.plural, value: person.bands.length ? (
       <>
         {[...new Map(person.bands.map((band) => [band.artistId, band])).values()].slice(0, 4).map((band, index) => (
           <span key={band.artistId}>{index > 0 ? ", " : ""}<Link to={`/artistas/${band.artistId}`}>{band.artistName}</Link></span>
@@ -91,11 +72,11 @@ export function PersonDetailPage() {
 
   const tabs: TabSpec[] = [
     {
-      key: "bandas", label: "Bandas", count: person.bands.length,
-      content: person.bands.length === 0 ? <TabEmpty>Sin bandas registradas.</TabEmpty> : (
+      key: "bandas", label: person.bands.length === 1 ? vinculo.singular : vinculo.plural, count: person.bands.length,
+      content: person.bands.length === 0 ? <TabEmpty>Sin bandas ni proyectos registrados.</TabEmpty> : (
         <div className="table-wrap">
           <table>
-            <thead><tr><th>Banda</th><th>Rol</th><th>Periodo</th></tr></thead>
+            <thead><tr><th>{vinculo.singular}</th><th>Rol</th><th>Periodo</th></tr></thead>
             <tbody>
               {person.bands.map((band) => (
                 <tr key={band.id}>

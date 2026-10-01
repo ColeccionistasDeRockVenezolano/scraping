@@ -124,7 +124,7 @@ export interface PersonDetail {
   /** Clasificación del nombre (E11.7): la web avisa cuando no es `ok`. */
   nameClass: PersonNameClass;
   nameClassReason: string;
-  bands: Array<{ id: number; artistId: number; artistName: string; role: string; fromYear: number | null; toYear: number | null; isCurrent: boolean }>;
+  bands: Array<{ id: number; artistId: number; artistName: string; artistType: string; role: string; fromYear: number | null; toYear: number | null; isCurrent: boolean }>;
   albumCredits: Array<{ id: number; albumId: number; albumTitle: string; artistId: number; artistName: string; creditType: string; role: string }>;
   trackCredits: Array<{ id: number; trackId: number; trackTitle: string; albumId: number; albumTitle: string; creditType: string; role: string }>;
   organizations: Array<{ id: number; organizationId: number; organizationName: string; role: string; fromYear: number | null; toYear: number | null }>;
@@ -204,7 +204,7 @@ export async function getPersonDetail(id: number): Promise<PersonDetail | null> 
             (SELECT count(*) FROM public.artist_members WHERE person_id=p.id)::int AS band_count,
        COALESCE((
          SELECT jsonb_agg(jsonb_build_object(
-           'id', am.id, 'artistId', ar.id, 'artistName', ar.name, 'role', am.role,
+           'id', am.id, 'artistId', ar.id, 'artistName', ar.name, 'artistType', ar.artist_type, 'role', am.role,
            'fromYear', am.from_year, 'toYear', am.to_year, 'isCurrent', am.is_current
          ) ORDER BY am.from_year NULLS LAST, ar.name)
          FROM public.artist_members am JOIN public.artists ar ON ar.id = am.artist_id

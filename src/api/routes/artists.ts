@@ -28,6 +28,8 @@ const artistDetailSchema = artistListItemSchema.extend({
   notes: z.string().nullable(),
   members: z.array(z.object({
     id: z.number().int(), personId: z.number().int(), personName: z.string(), personIsDeceased: z.boolean(), role: z.string(),
+    // Fechas de la persona: la ficha de un proyecto solista las muestra como suyas.
+    personBirthDate: z.string().nullable(), personDeathDate: z.string().nullable(),
     fromYear: z.number().int().nullable(), toYear: z.number().int().nullable(), isCurrent: z.boolean(),
   })),
   discography: z.array(z.object({
@@ -44,7 +46,13 @@ const artistDetailSchema = artistListItemSchema.extend({
   related: z.array(z.object({
     id: z.number().int(), name: z.string(), pictureUrl: z.string().nullable(), originCountry: z.string(),
     sharedMembers: z.number().int(), sharedMemberNames: z.array(z.string()),
-  })).describe("Bandas con dos o más integrantes en común (membresías)."),
+    relations: z.array(z.object({
+      type: z.enum(["successor", "ex_member_project", "temporary_name"]),
+      direction: z.enum(["earlier", "later"]).describe("earlier: la otra banda es la de origen; later: la posterior."),
+      bridgeMembers: z.string().nullable(), startYear: z.number().int().nullable(), endYear: z.number().int().nullable(),
+      note: z.string().nullable(), sources: z.array(z.string()), confidence: z.string(),
+    })).describe("Linaje documentado (ingest.artist_relations); vacío si solo comparten integrantes."),
+  })).describe("Linajes documentados (sucesor, proyecto de exintegrantes, nombre temporal) y bandas con dos o más integrantes en común."),
   similarDecade: z.number().int().nullable().describe("Década de arranque (formación o primer disco)."),
   similar: z.array(z.object({
     id: z.number().int(), name: z.string(), pictureUrl: z.string().nullable(), originCountry: z.string(),

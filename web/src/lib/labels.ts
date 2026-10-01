@@ -1,6 +1,8 @@
 // CRV · Etiquetas legibles para los enums del core y de ingest (crv_simple_v1.sql,
 // migrations/*). Solo presentación: los valores que viajan a la API siguen
 // siendo los snake_case originales.
+import { TITULAR_ROLE } from "./types";
+
 const DICTS: Record<string, Record<string, string>> = {
   artistType: {
     band: "Banda", solo_artist: "Solista", duo: "Dúo", project: "Proyecto", group: "Agrupación", other: "Otro",
@@ -87,4 +89,24 @@ export function formatDuration(seconds: number | null | undefined): string {
   const mm = h > 0 ? String(m).padStart(2, "0") : String(m);
   const ss = String(s).padStart(2, "0");
   return h > 0 ? `${h}:${mm}:${ss}` : `${mm}:${ss}`;
+}
+
+/**
+ * Un solista no está «en una banda»: está al frente de su proyecto (Brian,
+ * 2026-10-01). Un vínculo es de proyecto si el artista lo es —solista o
+ * proyecto— o si la persona figura como su titular, que es lo que une a la
+ * persona con el artista cuando los dos son la misma identidad.
+ */
+const PROJECT_ARTIST_TYPES = new Set(["solo_artist", "project"]);
+
+export function isProjectMembership(band: { role: string; artistType?: string }): boolean {
+  return band.role === TITULAR_ROLE || PROJECT_ARTIST_TYPES.has(band.artistType ?? "");
+}
+
+/** Cómo llamar a lo que vincula a una persona con sus artistas, según cuáles sean. */
+export function membershipNoun(bands: ReadonlyArray<{ role: string; artistType?: string }>): { singular: string; plural: string } {
+  const projects = bands.filter(isProjectMembership).length;
+  if (bands.length > 0 && projects === bands.length) return { singular: "Proyecto", plural: "Proyectos" };
+  if (projects === 0) return { singular: "Banda", plural: "Bandas" };
+  return { singular: "Banda o proyecto", plural: "Bandas y proyectos" };
 }

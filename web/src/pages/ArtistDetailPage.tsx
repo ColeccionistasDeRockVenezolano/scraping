@@ -24,7 +24,8 @@ import { EntityInfo, type InfoItem } from "../components/EntityInfo";
 import { EntityTabs, TabEmpty, type TabSpec } from "../components/EntityTabs";
 import { ExpandableText } from "../components/ExpandableText";
 import { albumTypeLabel, artistTypeLabel } from "../lib/labels";
-import type { ArtistMember } from "../lib/types";
+import { ageText, formatDate } from "../lib/format";
+import { TITULAR_ROLE, type ArtistMember, type ArtistRelation, type RelatedArtist } from "../lib/types";
 
 const LINK_PLATFORMS = [
   { key: "youtube", label: "YouTube" },
@@ -34,6 +35,29 @@ const LINK_PLATFORMS = [
 
 function hostOf(url: string): string {
   try { return new URL(url).hostname.replace(/^www\./, ""); } catch { return url; }
+}
+
+/** Qué es la otra banda respecto de esta: el linaje se lee en los dos sentidos. */
+const RELATION_LABELS: Record<ArtistRelation["type"], Record<ArtistRelation["direction"], string>> = {
+  successor: { later: "Proyecto sucesor", earlier: "Proyecto anterior" },
+  ex_member_project: { later: "Proyecto de exintegrantes", earlier: "Banda de origen" },
+  temporary_name: { later: "Nombre temporal", earlier: "Banda de origen" },
+};
+
+function relationLabel(relation: ArtistRelation): string {
+  return RELATION_LABELS[relation.type][relation.direction];
+}
+
+function relatedSubtitle(item: RelatedArtist): string {
+  const relation = item.relations?.[0];
+  const parts: string[] = [];
+  if (relation) {
+    const period = relation.startYear === null ? null
+      : relation.endYear !== null && relation.endYear !== relation.startYear ? `${relation.startYear}–${relation.endYear}` : String(relation.startYear);
+    parts.push([relation.bridgeMembers ? `Vínculo: ${relation.bridgeMembers}` : null, period].filter(Boolean).join(" · "));
+  }
+  if (item.sharedMembers > 0) parts.push(`${item.sharedMembers} en común: ${item.sharedMemberNames.join(", ")}`);
+  return parts.filter(Boolean).join(" — ");
 }
 
 export function ArtistDetailPage() {
@@ -54,14 +78,30 @@ export function ArtistDetailPage() {
   if (error || !artist) return <EntityLoadError message={error ?? "Artista no encontrado."} errorValue={errorValue} onRetry={reload} />;
 
   const hasCurrentMember = artist.members.some((member) => member.isCurrent);
+  // Un artista puede ser el proyecto o el nombre artístico de una persona
+  // (caso Ashwave, 2026-09-30). Entonces la ficha del proyecto es la de alguien
+  // y no tiene por qué mandar a otra página a ver quién: su nombre y sus fechas
+  // se muestran aquí, con el enlace a la ficha donde están sus créditos
+  // (Brian, 2026-10-01, caso Canserbero: «todo en uno, sin perder nada»).
+  const titular = artist.members.find((member) => member.role === TITULAR_ROLE) ?? null;
+  const titularDead = titular?.personIsDeceased === true;
   const status = artist.disbandedYear ? "Disuelto" : hasCurrentMember ? "Activo" : null;
   const activeYears = artist.formedYear
     ? `${artist.formedYear}–${artist.disbandedYear ?? (status === "Activo" ? "presente" : "?")}`
     : null;
   const info: InfoItem[] = [
+    { label: "Nombre real", value: titular ? <Link to={`/personas/${titular.personId}`}>{titular.personName}</Link> : null },
     { label: "País de origen", value: artist.originCountry },
     { label: "Ubicación", value: artist.originCity },
     { label: "Estado", value: status, fallback: "Desconocido" },
+    // En un proyecto solista «formado en» es la carrera, y el nacimiento y el
+    // fallecimiento son los de su titular: solo salen si hay quien los tenga.
+    ...(titular ? [
+      { label: "Nacimiento", value: formatDate(titular.personBirthDate ?? null) },
+      { label: "Fallecimiento", value: titularDead ? formatDate(titular.personDeathDate ?? null) : null },
+      { label: titularDead ? "Edad al fallecer" : "Edad",
+        value: ageText(titular.personBirthDate ?? null, titularDead ? titular.personDeathDate ?? null : null) },
+    ] satisfies InfoItem[] : []),
     { label: "Formado en", value: artist.formedYear, fallback: "Sin dato" },
     { label: "Años activos", value: activeYears },
     // Género del artista (su trayectoria); cada disco muestra el suyo.
@@ -120,12 +160,17 @@ export function ArtistDetailPage() {
     },
     {
       key: "relacionados", label: "Artistas relacionados", count: related.length,
-      content: related.length === 0 ? <TabEmpty>Ninguna otra banda comparte dos o más integrantes con esta.</TabEmpty> : (
+      content: related.length === 0 ? <TabEmpty>Sin linajes documentados ni bandas con dos o más integrantes en común.</TabEmpty> : (
         <div className="grid-cards">
-          {related.map((item) => (
-            <EntityCard key={item.id} to={`/artistas/${item.id}`} title={item.name} imageUrl={item.pictureUrl} placeholder={initialOf(item.name)}
-              subtitle={`${item.sharedMembers} en común: ${item.sharedMemberNames.join(", ")}`} />
-          ))}
+          {related.map((item) => {
+            const relation = item.relations?.[0];
+            return (
+              <EntityCard key={item.id} to={`/artistas/${item.id}`} title={item.name} imageUrl={item.pictureUrl} placeholder={initialOf(item.name)}
+                subtitle={relatedSubtitle(item)}
+                tag={relation ? relationLabel(relation) : null}
+                tagTitle={relation?.note ?? undefined} />
+            );
+          })}
         </div>
       ),
     },
