@@ -1,0 +1,1453 @@
+{
+  "decidedAt": "2026-09-30",
+  "evidence": "Generalización del caso Ashwave (Brian, 2026-09-30; respuestas: solo reglas duras y solistas solo si el nombre parece de persona). (1) Persona homónima de un artista SIN integrantes y con forma de nombre propio, acreditada como músico/productor en sus discos → titular del proyecto (membresía 'Titular del proyecto'); vetos: Laya 'distinta' ≥0.7 y créditos solo técnicos. (2) Artista con ≥2 integrantes cuya homónima 'persona' no es uno de ellos, no tiene forma de nombre propio y no pertenece a otras bandas → la ficha de persona es el grupo y se convierte en el artista (Atkinson y Druidas excluidos por ambiguos). (3) Discos de participación sin pistas ni créditos colgados de un artista-persona (índices personales de Sincopa) que duplican, con mismo título normalizado y año, un disco real donde esa persona figura → se fusionan con el real. Laya (v1, 243 expedientes) solo actuó de veto: sus respuestas sobre grupos evidentes (p. ej. Los Amigos Invisibles = 'misma_persona') no son fiables aquí.",
+  "corrections": [
+    {
+      "op": "link_project",
+      "person": {
+        "id": 7209,
+        "name": "Alexis Rossell"
+      },
+      "artist": {
+        "id": 1387,
+        "name": "Alexis Rossell"
+      },
+      "role": "Titular del proyecto",
+      "why": "Artista sin integrantes con el nombre de la persona; la persona figura en 10 de sus discos (musician: Harp; producer: Produced by)."
+    },
+    {
+      "op": "link_project",
+      "person": {
+        "id": 3346,
+        "name": "Frank Quintero"
+      },
+      "artist": {
+        "id": 1722,
+        "name": "Frank Quintero"
+      },
+      "role": "Titular del proyecto",
+      "why": "Artista sin integrantes con el nombre de la persona; la persona figura en 5 de sus discos (photography: Photo; musician: Guitar)."
+    },
+    {
+      "op": "link_project",
+      "person": {
+        "id": 4117,
+        "name": "Carlos Baute"
+      },
+      "artist": {
+        "id": 1801,
+        "name": "Carlos Baute"
+      },
+      "role": "Titular del proyecto",
+      "why": "Artista sin integrantes con el nombre de la persona; la persona figura en 16 de sus discos (musician: Vocals; musician: Vocals & Backing Vocals)."
+    },
+    {
+      "op": "link_project",
+      "person": {
+        "id": 1287,
+        "name": "Carlos Moreán"
+      },
+      "artist": {
+        "id": 1475,
+        "name": "Carlos Morean"
+      },
+      "role": "Titular del proyecto",
+      "why": "Artista sin integrantes con el nombre de la persona; la persona figura en 4 de sus discos (musician: Vocals; musician: Vocals & Guitar)."
+    },
+    {
+      "op": "link_project",
+      "person": {
+        "id": 607,
+        "name": "Pablo Dagnino"
+      },
+      "artist": {
+        "id": 189,
+        "name": "Pablo Dagnino"
+      },
+      "role": "Titular del proyecto",
+      "why": "Artista sin integrantes con el nombre de la persona; la persona figura en 3 de sus discos (musician: Vocals, Percussion, Piano & Programming; musician: Lead Vocals & Minor Percussion)."
+    },
+    {
+      "op": "link_project",
+      "person": {
+        "id": 8867,
+        "name": "Denis Gonzalez"
+      },
+      "artist": {
+        "id": 1914,
+        "name": "Denis Gonzalez"
+      },
+      "role": "Titular del proyecto",
+      "why": "Artista sin integrantes con el nombre de la persona; la persona figura en 1 de sus discos (musician: Lead Vocals, Bass, Drums & Percussion; producer: Produced by)."
+    },
+    {
+      "op": "link_project",
+      "person": {
+        "id": 2378,
+        "name": "Carlos Moreno"
+      },
+      "artist": {
+        "id": 1890,
+        "name": "Carlos Moreno"
+      },
+      "role": "Titular del proyecto",
+      "why": "Artista sin integrantes con el nombre de la persona; la persona figura en 5 de sus discos (musician: Vocals & Guitar; producer: Produced by)."
+    },
+    {
+      "op": "link_project",
+      "person": {
+        "id": 3626,
+        "name": "Eduardo Soto"
+      },
+      "artist": {
+        "id": 1925,
+        "name": "Eduardo Soto"
+      },
+      "role": "Titular del proyecto",
+      "why": "Artista sin integrantes con el nombre de la persona; la persona figura en 1 de sus discos (musician: Harmonica & Vocals)."
+    },
+    {
+      "op": "link_project",
+      "person": {
+        "id": 921,
+        "name": "Alexis Peña"
+      },
+      "artist": {
+        "id": 379,
+        "name": "Alexis Peña"
+      },
+      "role": "Titular del proyecto",
+      "why": "Artista sin integrantes con el nombre de la persona; la persona figura en 1 de sus discos (musician: Lead Vocals; musician: Background Vocals)."
+    },
+    {
+      "op": "link_project",
+      "person": {
+        "id": 2390,
+        "name": "Juan Carlos Torrealba"
+      },
+      "artist": {
+        "id": 120,
+        "name": "Juan Carlos Torrealba"
+      },
+      "role": "Titular del proyecto",
+      "why": "Artista sin integrantes con el nombre de la persona; la persona figura en 1 de sus discos (musician: Piano, Harp & Cuatro)."
+    },
+    {
+      "op": "link_project",
+      "person": {
+        "id": 4861,
+        "name": "Pablo Mendoza"
+      },
+      "artist": {
+        "id": 1384,
+        "name": "Pablo Mendoza"
+      },
+      "role": "Titular del proyecto",
+      "why": "Artista sin integrantes con el nombre de la persona; la persona figura en 1 de sus discos (producer: Produced by; recording: Recorded by)."
+    },
+    {
+      "op": "link_project",
+      "person": {
+        "id": 3868,
+        "name": "José Antonio Bordell"
+      },
+      "artist": {
+        "id": 1810,
+        "name": "José Antonio Bordell"
+      },
+      "role": "Titular del proyecto",
+      "why": "Artista sin integrantes con el nombre de la persona; la persona figura en 2 de sus discos (musician: Vocals & Backing Vocals; producer: Produced by)."
+    },
+    {
+      "op": "link_project",
+      "person": {
+        "id": 3767,
+        "name": "Abraham Gustin"
+      },
+      "artist": {
+        "id": 1843,
+        "name": "Abraham Gustin"
+      },
+      "role": "Titular del proyecto",
+      "why": "Artista sin integrantes con el nombre de la persona; la persona figura en 2 de sus discos (producer: Produced by; producer: Executive Producer)."
+    },
+    {
+      "op": "link_project",
+      "person": {
+        "id": 4670,
+        "name": "Alfredo Romero"
+      },
+      "artist": {
+        "id": 1863,
+        "name": "Alfredo Romero"
+      },
+      "role": "Titular del proyecto",
+      "why": "Artista sin integrantes con el nombre de la persona; la persona figura en 1 de sus discos (musician: Vocals, Rhythmic Guitars & Cuatro; producer: Produced by)."
+    },
+    {
+      "op": "link_project",
+      "person": {
+        "id": 490,
+        "name": "Álvaro Segura"
+      },
+      "artist": {
+        "id": 1866,
+        "name": "Alvaro Segura"
+      },
+      "role": "Titular del proyecto",
+      "why": "Artista sin integrantes con el nombre de la persona; la persona figura en 1 de sus discos (producer: Produced by; musician: Lead Vocals & Guitar)."
+    },
+    {
+      "op": "link_project",
+      "person": {
+        "id": 6301,
+        "name": "Antonio Bello"
+      },
+      "artist": {
+        "id": 1870,
+        "name": "Antonio Bello"
+      },
+      "role": "Titular del proyecto",
+      "why": "Artista sin integrantes con el nombre de la persona; la persona figura en 1 de sus discos (producer: Executive Producer; musician: Acoustic and Electric Guitars)."
+    },
+    {
+      "op": "link_project",
+      "person": {
+        "id": 1077,
+        "name": "Boris Bossio"
+      },
+      "artist": {
+        "id": 1880,
+        "name": "Boris Bossio"
+      },
+      "role": "Titular del proyecto",
+      "why": "Artista sin integrantes con el nombre de la persona; la persona figura en 1 de sus discos (musician: Vocals; producer: Produced by)."
+    },
+    {
+      "op": "link_project",
+      "person": {
+        "id": 6612,
+        "name": "Carlos Mata"
+      },
+      "artist": {
+        "id": 1889,
+        "name": "Carlos Mata"
+      },
+      "role": "Titular del proyecto",
+      "why": "Artista sin integrantes con el nombre de la persona; la persona figura en 10 de sus discos (producer: Co-Produced by; musician: Vocals)."
+    },
+    {
+      "op": "link_project",
+      "person": {
+        "id": 5110,
+        "name": "César Muñoz"
+      },
+      "artist": {
+        "id": 1893,
+        "name": "César Muñoz"
+      },
+      "role": "Titular del proyecto",
+      "why": "Artista sin integrantes con el nombre de la persona; la persona figura en 1 de sus discos (other: Programming; musician: Vocals & Background Vocals)."
+    },
+    {
+      "op": "link_project",
+      "person": {
+        "id": 3100,
+        "name": "Daniel Grau"
+      },
+      "artist": {
+        "id": 1911,
+        "name": "Daniel Grau"
+      },
+      "role": "Titular del proyecto",
+      "why": "Artista sin integrantes con el nombre de la persona; la persona figura en 11 de sus discos (other: All Instruments; mixing: Recorded & Mixed by)."
+    },
+    {
+      "op": "link_project",
+      "person": {
+        "id": 4026,
+        "name": "Edgar Alexander"
+      },
+      "artist": {
+        "id": 1923,
+        "name": "Edgar Alexander"
+      },
+      "role": "Titular del proyecto",
+      "why": "Artista sin integrantes con el nombre de la persona; la persona figura en 6 de sus discos (musician: Guitar & Lead Vocals; producer: Produced by)."
+    },
+    {
+      "op": "link_project",
+      "person": {
+        "id": 3393,
+        "name": "Fernando Valladares"
+      },
+      "artist": {
+        "id": 1942,
+        "name": "Fernando Valladares"
+      },
+      "role": "Titular del proyecto",
+      "why": "Artista sin integrantes con el nombre de la persona; la persona figura en 1 de sus discos (musician: All Instruments & Vocals; producer: Produced by)."
+    },
+    {
+      "op": "link_project",
+      "person": {
+        "id": 5757,
+        "name": "Frank Morón"
+      },
+      "artist": {
+        "id": 1947,
+        "name": "Frank Morón"
+      },
+      "role": "Titular del proyecto",
+      "why": "Artista sin integrantes con el nombre de la persona; la persona figura en 1 de sus discos (musician: Vocals, Electric Guitar & Slide Guitar; producer: Executive Production)."
+    },
+    {
+      "op": "link_project",
+      "person": {
+        "id": 3467,
+        "name": "Paul Silvestre Gillman"
+      },
+      "artist": {
+        "id": 1951,
+        "name": "Paul Gillman"
+      },
+      "role": "Titular del proyecto",
+      "why": "Artista sin integrantes con el nombre de la persona (alias «Paul Gillman»); la persona figura en 1 de sus discos (producer: produced; musician: Lead Vocals)."
+    },
+    {
+      "op": "link_project",
+      "person": {
+        "id": 6243,
+        "name": "Lorenzo Adam"
+      },
+      "artist": {
+        "id": 1991,
+        "name": "Lorenzo Adam"
+      },
+      "role": "Titular del proyecto",
+      "why": "Artista sin integrantes con el nombre de la persona; la persona figura en 1 de sus discos (musician: Vocals; producer: Produced by)."
+    },
+    {
+      "op": "link_project",
+      "person": {
+        "id": 2029,
+        "name": "Rodolfo Serra"
+      },
+      "artist": {
+        "id": 2001,
+        "name": "Rodolfo \"Pocho\" Serra"
+      },
+      "role": "Titular del proyecto",
+      "why": "Artista sin integrantes con el nombre de la persona (alias «Rodolfo \"Pocho\" Serra»); la persona figura en 1 de sus discos (musician: Guitar, Vocals, Roland GR20 (Harmonica, Piano, Organ & Strings); producer: Produced by)."
+    },
+    {
+      "op": "link_project",
+      "person": {
+        "id": 1291,
+        "name": "Willie Croes"
+      },
+      "artist": {
+        "id": 263,
+        "name": "Willie Croes"
+      },
+      "role": "Titular del proyecto",
+      "why": "Artista sin integrantes con el nombre de la persona; la persona figura en 1 de sus discos (musician: Piano, Keyboards & Programming)."
+    },
+    {
+      "op": "link_project",
+      "person": {
+        "id": 39,
+        "name": "Pablo Manavello"
+      },
+      "artist": {
+        "id": 3,
+        "name": "Pablo Manavello"
+      },
+      "role": "Titular del proyecto",
+      "why": "Artista sin integrantes con el nombre de la persona; la persona figura en 1 de sus discos (musician: Guitars, Mandolin, Strings & Vocals; musician: Background Vocals)."
+    },
+    {
+      "op": "to_artist",
+      "person": {
+        "id": 7434,
+        "name": "Zapato 3"
+      },
+      "artist": {
+        "id": 266,
+        "name": "Zapato 3"
+      },
+      "keepNameAsAlias": false,
+      "why": "La «persona» es el grupo Zapato 3: el artista tiene 7 integrantes y la ficha, acreditada en 2 de sus discos (producer: Produced by), no es un individuo."
+    },
+    {
+      "op": "to_artist",
+      "person": {
+        "id": 8706,
+        "name": "Curva Sur"
+      },
+      "artist": {
+        "id": 862,
+        "name": "Curva Sur"
+      },
+      "keepNameAsAlias": false,
+      "why": "La «persona» es el grupo Curva Sur: el artista tiene 4 integrantes y la ficha, acreditada en 2 de sus discos (producer: Produced by), no es un individuo."
+    },
+    {
+      "op": "to_artist",
+      "person": {
+        "id": 7831,
+        "name": "Animas"
+      },
+      "artist": {
+        "id": 1164,
+        "name": "Animas"
+      },
+      "keepNameAsAlias": false,
+      "why": "La «persona» es el grupo Animas: el artista tiene 4 integrantes y la ficha, acreditada en 1 de sus discos (producer: Produced by), no es un individuo."
+    },
+    {
+      "op": "to_artist",
+      "person": {
+        "id": 4059,
+        "name": "Calle Santiago"
+      },
+      "artist": {
+        "id": 1332,
+        "name": "Calle Santiago"
+      },
+      "keepNameAsAlias": false,
+      "why": "La «persona» es el grupo Calle Santiago: el artista tiene 6 integrantes y la ficha, acreditada en 1 de sus discos (producer: Produced by), no es un individuo."
+    },
+    {
+      "op": "to_artist",
+      "person": {
+        "id": 8404,
+        "name": "Carmina"
+      },
+      "artist": {
+        "id": 1112,
+        "name": "Carmina"
+      },
+      "keepNameAsAlias": false,
+      "why": "La «persona» es el grupo Carmina: el artista tiene 5 integrantes y la ficha, acreditada en 1 de sus discos (mixing: Mixed by), no es un individuo."
+    },
+    {
+      "op": "to_artist",
+      "person": {
+        "id": 8763,
+        "name": "La Misma Gente"
+      },
+      "artist": {
+        "id": 134,
+        "name": "La Misma Gente"
+      },
+      "keepNameAsAlias": false,
+      "why": "La «persona» es el grupo La Misma Gente: el artista tiene 6 integrantes y la ficha, acreditada en 1 de sus discos (producer: Produced by), no es un individuo."
+    },
+    {
+      "op": "to_artist",
+      "person": {
+        "id": 7519,
+        "name": "Los Amigos Invisibles"
+      },
+      "artist": {
+        "id": 152,
+        "name": "Los Amigos Invisibles"
+      },
+      "keepNameAsAlias": false,
+      "why": "La «persona» es el grupo Los Amigos Invisibles: el artista tiene 6 integrantes y la ficha, acreditada en 8 de sus discos (producer: Produced by), no es un individuo."
+    },
+    {
+      "op": "to_artist",
+      "person": {
+        "id": 4116,
+        "name": "Malanga"
+      },
+      "artist": {
+        "id": 164,
+        "name": "Malanga"
+      },
+      "keepNameAsAlias": false,
+      "why": "La «persona» es el grupo Malanga: el artista tiene 4 integrantes y la ficha, acreditada en 1 de sus discos (guest: Backing Vocals), no es un individuo."
+    },
+    {
+      "op": "to_artist",
+      "person": {
+        "id": 7408,
+        "name": "Alter Ego"
+      },
+      "artist": {
+        "id": 1686,
+        "name": "Alter Ego"
+      },
+      "keepNameAsAlias": false,
+      "why": "La «persona» es el grupo Alter Ego: el artista tiene 4 integrantes y la ficha, acreditada en 1 de sus discos (producer: Executive Production), no es un individuo."
+    },
+    {
+      "op": "to_artist",
+      "person": {
+        "id": 7843,
+        "name": "Ankla"
+      },
+      "artist": {
+        "id": 1104,
+        "name": "Ankla"
+      },
+      "keepNameAsAlias": false,
+      "why": "La «persona» es el grupo Ankla: el artista tiene 5 integrantes y la ficha, acreditada en 1 de sus discos (producer: Musical Production), no es un individuo."
+    },
+    {
+      "op": "to_artist",
+      "person": {
+        "id": 7945,
+        "name": "Autopista Sur"
+      },
+      "artist": {
+        "id": 1083,
+        "name": "Autopista Sur"
+      },
+      "keepNameAsAlias": false,
+      "why": "La «persona» es el grupo Autopista Sur: el artista tiene 3 integrantes y la ficha, acreditada en 1 de sus discos (producer: Produced by), no es un individuo."
+    },
+    {
+      "op": "to_artist",
+      "person": {
+        "id": 8721,
+        "name": "Dame P'a Matala"
+      },
+      "artist": {
+        "id": 1093,
+        "name": "Dame pa Matala"
+      },
+      "keepNameAsAlias": false,
+      "why": "La «persona» es el grupo Dame pa Matala: el artista tiene 9 integrantes y la ficha, acreditada en 1 de sus discos (producer: Produced by), no es un individuo."
+    },
+    {
+      "op": "to_artist",
+      "person": {
+        "id": 7033,
+        "name": "La Abuela Disco"
+      },
+      "artist": {
+        "id": 14,
+        "name": "La Abuela Disco"
+      },
+      "keepNameAsAlias": false,
+      "why": "La «persona» es el grupo La Abuela Disco: el artista tiene 6 integrantes y la ficha, acreditada en 1 de sus discos (producer: Produced by), no es un individuo."
+    },
+    {
+      "op": "to_artist",
+      "person": {
+        "id": 7170,
+        "name": "Ahankar"
+      },
+      "artist": {
+        "id": 1530,
+        "name": "Ahankar"
+      },
+      "keepNameAsAlias": false,
+      "why": "La «persona» es el grupo Ahankar: el artista tiene 6 integrantes y la ficha, acreditada en 3 de sus discos (producer: Executive Production), no es un individuo."
+    },
+    {
+      "op": "to_artist",
+      "person": {
+        "id": 7144,
+        "name": "Estructura"
+      },
+      "artist": {
+        "id": 93,
+        "name": "Estructura"
+      },
+      "keepNameAsAlias": false,
+      "why": "La «persona» es el grupo Estructura: el artista tiene 7 integrantes y la ficha, acreditada en 1 de sus discos (producer: Produced & Arranged by), no es un individuo."
+    },
+    {
+      "op": "to_artist",
+      "person": {
+        "id": 3801,
+        "name": "Big Mandrake"
+      },
+      "artist": {
+        "id": 1552,
+        "name": "Big Mandrake"
+      },
+      "keepNameAsAlias": false,
+      "why": "La «persona» es el grupo Big Mandrake: el artista tiene 9 integrantes y la ficha, acreditada en 3 de sus discos (producer: Produced by), no es un individuo."
+    },
+    {
+      "op": "to_artist",
+      "person": {
+        "id": 7764,
+        "name": "Mermelada Bunch"
+      },
+      "artist": {
+        "id": 173,
+        "name": "Mermelada Bunch"
+      },
+      "keepNameAsAlias": false,
+      "why": "La «persona» es el grupo Mermelada Bunch: el artista tiene 9 integrantes y la ficha, acreditada en 1 de sus discos (producer: Produced by), no es un individuo."
+    },
+    {
+      "op": "to_artist",
+      "person": {
+        "id": 7793,
+        "name": "Vocal Song"
+      },
+      "artist": {
+        "id": 1837,
+        "name": "Vocal Song"
+      },
+      "keepNameAsAlias": false,
+      "why": "La «persona» es el grupo Vocal Song: el artista tiene 9 integrantes y la ficha, acreditada en 1 de sus discos (producer: Executive Production), no es un individuo."
+    },
+    {
+      "op": "to_artist",
+      "person": {
+        "id": 8508,
+        "name": "Cien Grados"
+      },
+      "artist": {
+        "id": 1897,
+        "name": "Cien Grados"
+      },
+      "keepNameAsAlias": false,
+      "why": "La «persona» es el grupo Cien Grados: el artista tiene 7 integrantes y la ficha, acreditada en 1 de sus discos (producer: Produced by), no es un individuo."
+    },
+    {
+      "op": "to_artist",
+      "person": {
+        "id": 8308,
+        "name": "Los Darts"
+      },
+      "artist": {
+        "id": 1910,
+        "name": "Los Darts"
+      },
+      "keepNameAsAlias": false,
+      "why": "La «persona» es el grupo Los Darts: el artista tiene 8 integrantes y la ficha, acreditada en 2 de sus discos (producer: Produced by), no es un individuo."
+    },
+    {
+      "op": "to_artist",
+      "person": {
+        "id": 9028,
+        "name": "Dogma Infinito"
+      },
+      "artist": {
+        "id": 1918,
+        "name": "Dogma Infinito"
+      },
+      "keepNameAsAlias": false,
+      "why": "La «persona» es el grupo Dogma Infinito: el artista tiene 4 integrantes y la ficha, acreditada en 2 de sus discos (producer: Produced by), no es un individuo."
+    },
+    {
+      "op": "to_artist",
+      "person": {
+        "id": 8319,
+        "name": "El Medio Evo"
+      },
+      "artist": {
+        "id": 1926,
+        "name": "El Medio Evo"
+      },
+      "keepNameAsAlias": false,
+      "why": "La «persona» es el grupo El Medio Evo: el artista tiene 3 integrantes y la ficha, acreditada en 4 de sus discos (producer: Produced by), no es un individuo."
+    },
+    {
+      "op": "to_artist",
+      "person": {
+        "id": 8393,
+        "name": "La Gran Fogata"
+      },
+      "artist": {
+        "id": 1954,
+        "name": "La Gran Fogata"
+      },
+      "keepNameAsAlias": false,
+      "why": "La «persona» es el grupo La Gran Fogata: el artista tiene 4 integrantes y la ficha, acreditada en 4 de sus discos (producer: Produced by), no es un individuo."
+    },
+    {
+      "op": "to_artist",
+      "person": {
+        "id": 7096,
+        "name": "Gina y Agny"
+      },
+      "artist": {
+        "id": 1955,
+        "name": "Gina y Agny"
+      },
+      "keepNameAsAlias": false,
+      "why": "La «persona» es el grupo Gina y Agny: el artista tiene 2 integrantes y la ficha, acreditada en 2 de sus discos (musician: Vocals), no es un individuo."
+    },
+    {
+      "op": "to_artist",
+      "person": {
+        "id": 7250,
+        "name": "Santos Viejos"
+      },
+      "artist": {
+        "id": 2011,
+        "name": "Santos Viejos"
+      },
+      "keepNameAsAlias": false,
+      "why": "La «persona» es el grupo Santos Viejos: el artista tiene 4 integrantes y la ficha, acreditada en 1 de sus discos (producer: Produced by), no es un individuo."
+    },
+    {
+      "op": "to_artist",
+      "person": {
+        "id": 7320,
+        "name": "Resistencia"
+      },
+      "artist": {
+        "id": 210,
+        "name": "Resistencia"
+      },
+      "keepNameAsAlias": false,
+      "why": "La «persona» es el grupo Resistencia: el artista tiene 10 integrantes y la ficha, acreditada en 1 de sus discos (producer: Produced by), no es un individuo."
+    },
+    {
+      "op": "to_artist",
+      "person": {
+        "id": 7460,
+        "name": "Solares"
+      },
+      "artist": {
+        "id": 228,
+        "name": "Solares"
+      },
+      "keepNameAsAlias": false,
+      "why": "La «persona» es el grupo Solares: el artista tiene 6 integrantes y la ficha, acreditada en 1 de sus discos (producer: Executive Production), no es un individuo."
+    },
+    {
+      "op": "to_artist",
+      "person": {
+        "id": 1581,
+        "name": "Tempano"
+      },
+      "artist": {
+        "id": 254,
+        "name": "Témpano"
+      },
+      "keepNameAsAlias": false,
+      "why": "La «persona» es el grupo Témpano: el artista tiene 12 integrantes y la ficha, acreditada en 3 de sus discos (producer: produced), no es un individuo."
+    },
+    {
+      "op": "to_artist",
+      "person": {
+        "id": 8528,
+        "name": "Circo Vulkano"
+      },
+      "artist": {
+        "id": 275,
+        "name": "Circo Vulkano"
+      },
+      "keepNameAsAlias": false,
+      "why": "La «persona» es el grupo Circo Vulkano: el artista tiene 5 integrantes y la ficha, acreditada en 1 de sus discos (producer: Produced by), no es un individuo."
+    },
+    {
+      "op": "to_artist",
+      "person": {
+        "id": 7048,
+        "name": "Aditus"
+      },
+      "artist": {
+        "id": 36,
+        "name": "Aditus"
+      },
+      "keepNameAsAlias": false,
+      "why": "La «persona» es el grupo Aditus: el artista tiene 11 integrantes y la ficha, acreditada en 13 de sus discos (producer: Produced by), no es un individuo."
+    },
+    {
+      "op": "to_artist",
+      "person": {
+        "id": 7165,
+        "name": "Agresión"
+      },
+      "artist": {
+        "id": 37,
+        "name": "Agresión"
+      },
+      "keepNameAsAlias": false,
+      "why": "La «persona» es el grupo Agresión: el artista tiene 9 integrantes y la ficha, acreditada en 4 de sus discos (producer: Produced by), no es un individuo."
+    },
+    {
+      "op": "to_artist",
+      "person": {
+        "id": 7942,
+        "name": "Atlántica"
+      },
+      "artist": {
+        "id": 404,
+        "name": "Atlantica"
+      },
+      "keepNameAsAlias": false,
+      "why": "La «persona» es el grupo Atlantica: el artista tiene 5 integrantes y la ficha, acreditada en 1 de sus discos (producer: Produced by), no es un individuo."
+    },
+    {
+      "op": "to_artist",
+      "person": {
+        "id": 7491,
+        "name": "Americania"
+      },
+      "artist": {
+        "id": 41,
+        "name": "Americania"
+      },
+      "keepNameAsAlias": false,
+      "why": "La «persona» es el grupo Americania: el artista tiene 3 integrantes y la ficha, acreditada en 3 de sus discos (producer: Produced by), no es un individuo."
+    },
+    {
+      "op": "to_artist",
+      "person": {
+        "id": 7893,
+        "name": "Argovia"
+      },
+      "artist": {
+        "id": 419,
+        "name": "Argovia"
+      },
+      "keepNameAsAlias": false,
+      "why": "La «persona» es el grupo Argovia: el artista tiene 4 integrantes y la ficha, acreditada en 1 de sus discos (producer: Produced by), no es un individuo."
+    },
+    {
+      "op": "to_artist",
+      "person": {
+        "id": 8986,
+        "name": "Diatriba"
+      },
+      "artist": {
+        "id": 424,
+        "name": "Diatriba"
+      },
+      "keepNameAsAlias": false,
+      "why": "La «persona» es el grupo Diatriba: el artista tiene 4 integrantes y la ficha, acreditada en 2 de sus discos (producer: Produced by), no es un individuo."
+    },
+    {
+      "op": "to_artist",
+      "person": {
+        "id": 7648,
+        "name": "Andreazulado"
+      },
+      "artist": {
+        "id": 43,
+        "name": "Andreazulado"
+      },
+      "keepNameAsAlias": false,
+      "why": "La «persona» es el grupo Andreazulado: el artista tiene 5 integrantes y la ficha, acreditada en 3 de sus discos (producer: Produced by), no es un individuo."
+    },
+    {
+      "op": "to_artist",
+      "person": {
+        "id": 7907,
+        "name": "Arkangel"
+      },
+      "artist": {
+        "id": 46,
+        "name": "Arkangel"
+      },
+      "keepNameAsAlias": false,
+      "why": "La «persona» es el grupo Arkangel: el artista tiene 16 integrantes y la ficha, acreditada en 6 de sus discos (other: Cover Concept), no es un individuo."
+    },
+    {
+      "op": "to_artist",
+      "person": {
+        "id": 8026,
+        "name": "Bacalao Men"
+      },
+      "artist": {
+        "id": 49,
+        "name": "Bacalao Men"
+      },
+      "keepNameAsAlias": false,
+      "why": "La «persona» es el grupo Bacalao Men: el artista tiene 6 integrantes y la ficha, acreditada en 2 de sus discos (producer: Produced by), no es un individuo."
+    },
+    {
+      "op": "to_artist",
+      "person": {
+        "id": 1819,
+        "name": "Cebollas Ardientes"
+      },
+      "artist": {
+        "id": 59,
+        "name": "Cebollas Ardientes"
+      },
+      "keepNameAsAlias": false,
+      "why": "La «persona» es el grupo Cebollas Ardientes: el artista tiene 10 integrantes y la ficha, acreditada en 2 de sus discos (producer: Musical Production), no es un individuo."
+    },
+    {
+      "op": "to_artist",
+      "person": {
+        "id": 8988,
+        "name": "Días de Septiembre"
+      },
+      "artist": {
+        "id": 916,
+        "name": "Días de Septiembre"
+      },
+      "keepNameAsAlias": false,
+      "why": "La «persona» es el grupo Días de Septiembre: el artista tiene 5 integrantes y la ficha, acreditada en 1 de sus discos (other: Tracks 2, 4, 6 by), no es un individuo."
+    },
+    {
+      "op": "to_artist",
+      "person": {
+        "id": 8032,
+        "name": "Bajo Zero"
+      },
+      "artist": {
+        "id": 623,
+        "name": "Bajo Zero"
+      },
+      "keepNameAsAlias": false,
+      "why": "La «persona» es el grupo Bajo Zero: el artista tiene 10 integrantes y la ficha, acreditada en 3 de sus discos (producer: Produced by), no es un individuo."
+    },
+    {
+      "op": "to_artist",
+      "person": {
+        "id": 8668,
+        "name": "Cuarto Magno"
+      },
+      "artist": {
+        "id": 627,
+        "name": "Cuarto Magno"
+      },
+      "keepNameAsAlias": false,
+      "why": "La «persona» es el grupo Cuarto Magno: el artista tiene 5 integrantes y la ficha, acreditada en 1 de sus discos (producer: Produced by), no es un individuo."
+    },
+    {
+      "op": "to_artist",
+      "person": {
+        "id": 9013,
+        "name": "Disaster Prophet"
+      },
+      "artist": {
+        "id": 632,
+        "name": "Disaster Prophet"
+      },
+      "keepNameAsAlias": false,
+      "why": "La «persona» es el grupo Disaster Prophet: el artista tiene 5 integrantes y la ficha, acreditada en 2 de sus discos (producer: Musical Production), no es un individuo."
+    },
+    {
+      "op": "to_artist",
+      "person": {
+        "id": 4151,
+        "name": "Canuto's Blues Band"
+      },
+      "artist": {
+        "id": 646,
+        "name": "Canuto’s Blues Band"
+      },
+      "keepNameAsAlias": false,
+      "why": "La «persona» es el grupo Canuto’s Blues Band: el artista tiene 5 integrantes y la ficha, acreditada en 2 de sus discos (producer: Produced by), no es un individuo."
+    },
+    {
+      "op": "to_artist",
+      "person": {
+        "id": 8307,
+        "name": "Circo Urbano"
+      },
+      "artist": {
+        "id": 66,
+        "name": "Circo Urbano"
+      },
+      "keepNameAsAlias": false,
+      "why": "La «persona» es el grupo Circo Urbano: el artista tiene 7 integrantes y la ficha, acreditada en 2 de sus discos (producer: Produced by), no es un individuo."
+    },
+    {
+      "op": "to_artist",
+      "person": {
+        "id": 8542,
+        "name": "Claroscuro"
+      },
+      "artist": {
+        "id": 67,
+        "name": "Claroscuro"
+      },
+      "keepNameAsAlias": false,
+      "why": "La «persona» es el grupo Claroscuro: el artista tiene 3 integrantes y la ficha, acreditada en 2 de sus discos (producer: Produced by), no es un individuo."
+    },
+    {
+      "op": "to_artist",
+      "person": {
+        "id": 8667,
+        "name": "Culto Oculto"
+      },
+      "artist": {
+        "id": 70,
+        "name": "Culto Oculto"
+      },
+      "keepNameAsAlias": false,
+      "why": "La «persona» es el grupo Culto Oculto: el artista tiene 7 integrantes y la ficha, acreditada en 4 de sus discos (mixing: Mixed by), no es un individuo."
+    },
+    {
+      "op": "to_artist",
+      "person": {
+        "id": 8651,
+        "name": "Cronos"
+      },
+      "artist": {
+        "id": 700,
+        "name": "Cronos"
+      },
+      "keepNameAsAlias": false,
+      "why": "La «persona» es el grupo Cronos: el artista tiene 10 integrantes y la ficha, acreditada en 4 de sus discos (producer: Executive Production), no es un individuo."
+    },
+    {
+      "op": "to_artist",
+      "person": {
+        "id": 8784,
+        "name": "Del Pez"
+      },
+      "artist": {
+        "id": 75,
+        "name": "Del Pez"
+      },
+      "keepNameAsAlias": false,
+      "why": "La «persona» es el grupo Del Pez: el artista tiene 4 integrantes y la ficha, acreditada en 3 de sus discos (producer: Produced by), no es un individuo."
+    },
+    {
+      "op": "to_artist",
+      "person": {
+        "id": 9000,
+        "name": "Dios Le Pague"
+      },
+      "artist": {
+        "id": 80,
+        "name": "Dioslepague"
+      },
+      "keepNameAsAlias": false,
+      "why": "La «persona» es el grupo Dioslepague: el artista tiene 5 integrantes y la ficha, acreditada en 1 de sus discos (producer: Produced by), no es un individuo."
+    },
+    {
+      "op": "to_artist",
+      "person": {
+        "id": 9022,
+        "name": "Dischord"
+      },
+      "artist": {
+        "id": 81,
+        "name": "Dischord"
+      },
+      "keepNameAsAlias": false,
+      "why": "La «persona» es el grupo Dischord: el artista tiene 7 integrantes y la ficha, acreditada en 2 de sus discos (producer: Produced by), no es un individuo."
+    },
+    {
+      "op": "merge_albums",
+      "keep": {
+        "id": 607,
+        "name": "En Vivo 2013"
+      },
+      "drop": {
+        "id": 3684,
+        "name": "En Vivo 2013"
+      },
+      "why": "Disco de participación de «Pablo Dagnino» (Pablo Dagnino) sin pistas ni créditos, duplicado del disco real de «Pixel»."
+    },
+    {
+      "op": "merge_albums",
+      "keep": {
+        "id": 410,
+        "name": "Amor, Furia y Languidez"
+      },
+      "drop": {
+        "id": 3782,
+        "name": "Amor, Furia y Languidez"
+      },
+      "why": "Disco de participación de «Alvaro Segura» (Álvaro Segura) sin pistas ni créditos, duplicado del disco real de «Zapato 3»."
+    },
+    {
+      "op": "merge_albums",
+      "keep": {
+        "id": 325,
+        "name": "Fin Del Cuento 1981-1993"
+      },
+      "drop": {
+        "id": 3676,
+        "name": "Fin Del Cuento 1981-1993"
+      },
+      "why": "Disco de participación de «Pablo Dagnino» (Pablo Dagnino) sin pistas ni créditos, duplicado del disco real de «Sentimiento Muerto»."
+    },
+    {
+      "op": "merge_albums",
+      "keep": {
+        "id": 304,
+        "name": "Pixel"
+      },
+      "drop": {
+        "id": 3682,
+        "name": "Pixel"
+      },
+      "why": "Disco de participación de «Pablo Dagnino» (Pablo Dagnino) sin pistas ni créditos, duplicado del disco real de «Pixel»."
+    },
+    {
+      "op": "merge_albums",
+      "keep": {
+        "id": 412,
+        "name": "Cápsula Para Volar"
+      },
+      "drop": {
+        "id": 3786,
+        "name": "Cápsula Para Volar"
+      },
+      "why": "Disco de participación de «Alvaro Segura» (Álvaro Segura) sin pistas ni créditos, duplicado del disco real de «Zapato 3»."
+    },
+    {
+      "op": "merge_albums",
+      "keep": {
+        "id": 114,
+        "name": "Almendra"
+      },
+      "drop": {
+        "id": 3626,
+        "name": "Almendra"
+      },
+      "why": "Disco de participación de «Robert Valerio» (Robert Valerio) sin pistas ni créditos, duplicado del disco real de «Almendra»."
+    },
+    {
+      "op": "merge_albums",
+      "keep": {
+        "id": 4018,
+        "name": "Cualquier Bolumen"
+      },
+      "drop": {
+        "id": 3879,
+        "name": "Cualquier Bolumen"
+      },
+      "why": "Disco de participación de «Carlos Morean» (Carlos Moreán) sin pistas ni créditos, duplicado del disco real de «El Medio Evo»."
+    },
+    {
+      "op": "merge_albums",
+      "keep": {
+        "id": 200,
+        "name": "Icaro"
+      },
+      "drop": {
+        "id": 4102,
+        "name": "Icaro"
+      },
+      "why": "Disco de participación de «Franco De Vita» (Franco de Vita) sin pistas ni créditos, duplicado del disco real de «Icaro»."
+    },
+    {
+      "op": "merge_albums",
+      "keep": {
+        "id": 303,
+        "name": "Invítame"
+      },
+      "drop": {
+        "id": 3679,
+        "name": "Invítame"
+      },
+      "why": "Disco de participación de «Pablo Dagnino» (Pablo Dagnino) sin pistas ni créditos, duplicado del disco real de «Pixel»."
+    },
+    {
+      "op": "merge_albums",
+      "keep": {
+        "id": 335,
+        "name": "Loft"
+      },
+      "drop": {
+        "id": 3787,
+        "name": "Loft"
+      },
+      "why": "Disco de participación de «Alvaro Segura» (Álvaro Segura) sin pistas ni créditos, duplicado del disco real de «Solares»."
+    },
+    {
+      "op": "merge_albums",
+      "keep": {
+        "id": 334,
+        "name": "Cruel (Instinto De Morder)"
+      },
+      "drop": {
+        "id": 3792,
+        "name": "Cruel - Instinto De Morder"
+      },
+      "why": "Disco de participación de «Alvaro Segura» (Álvaro Segura) sin pistas ni créditos, duplicado del disco real de «Solares»."
+    },
+    {
+      "op": "merge_albums",
+      "keep": {
+        "id": 413,
+        "name": "Ecos Punzantes Del Ayer"
+      },
+      "drop": {
+        "id": 3789,
+        "name": "Ecos Punzantes Del Ayer"
+      },
+      "why": "Disco de participación de «Alvaro Segura» (Álvaro Segura) sin pistas ni créditos, duplicado del disco real de «Zapato 3»."
+    },
+    {
+      "op": "merge_albums",
+      "keep": {
+        "id": 411,
+        "name": "Bésame y Suicídate"
+      },
+      "drop": {
+        "id": 3790,
+        "name": "Bésame y Suicídate"
+      },
+      "why": "Disco de participación de «Alvaro Segura» (Álvaro Segura) sin pistas ni créditos, duplicado del disco real de «Zapato 3»."
+    },
+    {
+      "op": "merge_albums",
+      "keep": {
+        "id": 415,
+        "name": "Separación"
+      },
+      "drop": {
+        "id": 3784,
+        "name": "Separación"
+      },
+      "why": "Disco de participación de «Alvaro Segura» (Álvaro Segura) sin pistas ni créditos, duplicado del disco real de «Zapato 3»."
+    },
+    {
+      "op": "merge_albums",
+      "keep": {
+        "id": 4161,
+        "name": "Fuego Eterno"
+      },
+      "drop": {
+        "id": 3502,
+        "name": "Fuego Eterno"
+      },
+      "why": "Disco de participación de «Carlos Moreno» (Carlos Moreno) sin pistas ni créditos, duplicado del disco real de «La Gran Fogata»."
+    },
+    {
+      "op": "merge_albums",
+      "keep": {
+        "id": 3990,
+        "name": "Eddy & Delia"
+      },
+      "drop": {
+        "id": 3967,
+        "name": "Eddy & Delia"
+      },
+      "why": "Disco de participación de «Delia» (Delia) sin pistas ni créditos, duplicado del disco real de «Eddy & Delia»."
+    },
+    {
+      "op": "merge_albums",
+      "keep": {
+        "id": 414,
+        "name": "La Última Cruzada"
+      },
+      "drop": {
+        "id": 3785,
+        "name": "La Ultima Cruzada"
+      },
+      "why": "Disco de participación de «Alvaro Segura» (Álvaro Segura) sin pistas ni créditos, duplicado del disco real de «Zapato 3»."
+    },
+    {
+      "op": "merge_albums",
+      "keep": {
+        "id": 5070,
+        "name": "I Don't Know Why / Viendo la lluvia caer"
+      },
+      "drop": {
+        "id": 4200,
+        "name": "I Don't Know Why/Viendo La Lluvia Caer"
+      },
+      "why": "Disco de participación de «Guillermo Carrasco» (Guillermo Carrasco) sin pistas ni créditos, duplicado del disco real de «Syma»."
+    },
+    {
+      "op": "merge_albums",
+      "keep": {
+        "id": 4159,
+        "name": "Fogata IV"
+      },
+      "drop": {
+        "id": 3887,
+        "name": "Fogata IV"
+      },
+      "why": "Disco de participación de «Carlos Moreno» (Carlos Moreno) sin pistas ni créditos, duplicado del disco real de «La Gran Fogata»."
+    },
+    {
+      "op": "merge_albums",
+      "keep": {
+        "id": 4268,
+        "name": "The Impala and Their Music (In English)"
+      },
+      "drop": {
+        "id": 4458,
+        "name": "The Impala and Their Music (In English)"
+      },
+      "why": "Disco de participación de «Rudy Márquez» (Rudy Márquez) sin pistas ni créditos, duplicado del disco real de «Los Impala»."
+    },
+    {
+      "op": "merge_albums",
+      "keep": {
+        "id": 4268,
+        "name": "The Impala and Their Music (In English)"
+      },
+      "drop": {
+        "id": 4003,
+        "name": "The Impala and Their Music (In English)"
+      },
+      "why": "Disco de participación de «Edgar Alexander» (Edgar Alexander) sin pistas ni créditos, duplicado del disco real de «Los Impala»."
+    },
+    {
+      "op": "merge_albums",
+      "keep": {
+        "id": 4270,
+        "name": "Los Impala y Su Música (In Spanish)"
+      },
+      "drop": {
+        "id": 4002,
+        "name": "Los Impala y Su Música (In Spanish)"
+      },
+      "why": "Disco de participación de «Edgar Alexander» (Edgar Alexander) sin pistas ni créditos, duplicado del disco real de «Los Impala»."
+    },
+    {
+      "op": "merge_albums",
+      "keep": {
+        "id": 4270,
+        "name": "Los Impala y Su Música (In Spanish)"
+      },
+      "drop": {
+        "id": 4455,
+        "name": "Los Impala y Su Música (In Spanish)"
+      },
+      "why": "Disco de participación de «Rudy Márquez» (Rudy Márquez) sin pistas ni créditos, duplicado del disco real de «Los Impala»."
+    },
+    {
+      "op": "merge_albums",
+      "keep": {
+        "id": 2523,
+        "name": "Nuevamente Los Impala"
+      },
+      "drop": {
+        "id": 4456,
+        "name": "Nuevamente Los Impala"
+      },
+      "why": "Disco de participación de «Rudy Márquez» (Rudy Márquez) sin pistas ni créditos, duplicado del disco real de «Los Impala»."
+    },
+    {
+      "op": "merge_albums",
+      "keep": {
+        "id": 2523,
+        "name": "Nuevamente Los Impala"
+      },
+      "drop": {
+        "id": 3998,
+        "name": "Nuevamente Los Impala"
+      },
+      "why": "Disco de participación de «Edgar Alexander» (Edgar Alexander) sin pistas ni créditos, duplicado del disco real de «Los Impala»."
+    },
+    {
+      "op": "merge_albums",
+      "keep": {
+        "id": 606,
+        "name": "Cuanto Cuesta"
+      },
+      "drop": {
+        "id": 3685,
+        "name": "Cuanto Cuesta"
+      },
+      "why": "Disco de participación de «Pablo Dagnino» (Pablo Dagnino) sin pistas ni créditos, duplicado del disco real de «Pixel»."
+    },
+    {
+      "op": "merge_albums",
+      "keep": {
+        "id": 608,
+        "name": "Lo Último Que Se Pierde"
+      },
+      "drop": {
+        "id": 3680,
+        "name": "Lo Ultimo Que Se Pierde"
+      },
+      "why": "Disco de participación de «Pablo Dagnino» (Pablo Dagnino) sin pistas ni créditos, duplicado del disco real de «Pixel»."
+    },
+    {
+      "op": "merge_albums",
+      "keep": {
+        "id": 2863,
+        "name": "Cuando yo era Pavo"
+      },
+      "drop": {
+        "id": 3882,
+        "name": "Cuando Yo Era Pavo"
+      },
+      "why": "Disco de participación de «Carlos Morean» (Carlos Moreán) sin pistas ni créditos, duplicado del disco real de «Lobin Ejnay»."
+    },
+    {
+      "op": "merge_albums",
+      "keep": {
+        "id": 4641,
+        "name": "First Journey"
+      },
+      "drop": {
+        "id": 3585,
+        "name": "First Journey"
+      },
+      "why": "Disco de participación de «Antonio Bello» (Antonio Bello) sin pistas ni créditos, duplicado del disco real de «Blue Strings»."
+    },
+    {
+      "op": "merge_albums",
+      "keep": {
+        "id": 4129,
+        "name": "A Sangre y Fuego"
+      },
+      "drop": {
+        "id": 3607,
+        "name": "A Sangre y Fuego"
+      },
+      "why": "Disco de participación de «Agni Mogollón» (Agni Mogollón) sin pistas ni créditos, duplicado del disco real de «Gina y Agny»."
+    },
+    {
+      "op": "merge_albums",
+      "keep": {
+        "id": 4145,
+        "name": "Gina y Agny"
+      },
+      "drop": {
+        "id": 3608,
+        "name": "Gina y Agny"
+      },
+      "why": "Disco de participación de «Agni Mogollón» (Agni Mogollón) sin pistas ni créditos, duplicado del disco real de «Gina y Agny»."
+    },
+    {
+      "op": "merge_albums",
+      "keep": {
+        "id": 4482,
+        "name": "En Vivo NYC 1990"
+      },
+      "drop": {
+        "id": 3683,
+        "name": "En Vivo NYC 1990"
+      },
+      "why": "Disco de participación de «Pablo Dagnino» (Pablo Dagnino) sin pistas ni créditos, duplicado del disco real de «Sentimiento Muerto»."
+    },
+    {
+      "op": "merge_albums",
+      "keep": {
+        "id": 4015,
+        "name": "Bolumen 4 / Al Día Siguiente"
+      },
+      "drop": {
+        "id": 3874,
+        "name": "Bolumen 4 / Al Día Siguiente"
+      },
+      "why": "Disco de participación de «Carlos Morean» (Carlos Moreán) sin pistas ni créditos, duplicado del disco real de «El Medio Evo»."
+    },
+    {
+      "op": "merge_albums",
+      "keep": {
+        "id": 4162,
+        "name": "Serenata"
+      },
+      "drop": {
+        "id": 3888,
+        "name": "Serenata"
+      },
+      "why": "Disco de participación de «Carlos Moreno» (Carlos Moreno) sin pistas ni créditos, duplicado del disco real de «La Gran Fogata»."
+    },
+    {
+      "op": "merge_albums",
+      "keep": {
+        "id": 4164,
+        "name": "No Somos Una Banda Más"
+      },
+      "drop": {
+        "id": 3889,
+        "name": "No Somos Una Banda Más"
+      },
+      "why": "Disco de participación de «Carlos Moreno» (Carlos Moreno) sin pistas ni créditos, duplicado del disco real de «La Gran Fogata»."
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "decidedAt": "2026-09-28",
+  "evidence": "Hallazgos persona_no_es_un_nombre (severidad alta) antes de publicar el catálogo: siete fichas de persona eran grupos intérpretes u organizaciones. Los destinos se crearon en el run 10555; Velvet de Venezuela pasa al sello Velvet (6). «Unplugged» se retira aparte con retirar_con_creditos.",
+  "corrections": [
+    {
+      "op": "to_artist",
+      "person": { "id": 11884, "name": "Trío Venezuela" },
+      "artist": { "id": 2943, "name": "Trío Venezuela" },
+      "keepNameAsAlias": false,
+      "why": "Trío vocal intérprete de 7 pistas en los recopilatorios Hit Parade de Venezuela, Guaicaipuro de Oro 1961 y Sólo 60 & 70"
+    },
+    {
+      "op": "to_artist",
+      "person": { "id": 12178, "name": "Orquesta Sinfónica de Venezuela" },
+      "artist": { "id": 2944, "name": "Orquesta Sinfónica de Venezuela" },
+      "keepNameAsAlias": false,
+      "why": "Orquesta intérprete de «Suite Melodía en El LLano» (Twist y Crimen)"
+    },
+    {
+      "op": "to_artist",
+      "person": { "id": 7132, "name": "Orquesta Sinfónica Venezuela" },
+      "artist": { "id": 2944, "name": "Orquesta Sinfónica de Venezuela" },
+      "keepNameAsAlias": true,
+      "why": "La misma orquesta, acreditada en cuerdas y orquesta de «A Sangre y Fuego» (Gina y Agny)"
+    },
+    {
+      "op": "to_artist",
+      "person": { "id": 1769, "name": "Los Niños Actores De Venezuela" },
+      "artist": { "id": 2945, "name": "Los Niños Actores De Venezuela" },
+      "keepNameAsAlias": false,
+      "why": "Coro infantil acreditado en «Se Llama Simón»"
+    },
+    {
+      "op": "to_organization",
+      "person": { "id": 1757, "name": "Amnistía Internacional Venezuela" },
+      "organization": { "id": 1477, "name": "Amnistía Internacional Venezuela" },
+      "keepNameAsAlias": false,
+      "why": "ONG productora de «Festival Nuevas Bandas 20 Años En Vivo»"
+    },
+    {
+      "op": "to_organization",
+      "person": { "id": 12450, "name": "Peermusic Venezuela" },
+      "organization": { "id": 1478, "name": "Peermusic Venezuela" },
+      "keepNameAsAlias": false,
+      "why": "Editora musical, producción ejecutiva de «Licencia Para Ser Libre» (Rawayana)"
+    },
+    {
+      "op": "to_organization",
+      "person": { "id": 8501, "name": "Velvet de Venezuela" },
+      "organization": { "id": 6, "name": "Velvet" },
+      "keepNameAsAlias": true,
+      "why": "Filial venezolana del sello Velvet, productora de «Los Reyes Del Acetato Años 60' 70»"
+    }
+  ]
+}

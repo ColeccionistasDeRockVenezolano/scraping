@@ -1,0 +1,319 @@
+{
+  "decidedAt": "2026-09-30",
+  "evidence": "Caso Ashwave (Brian, 2026-09-30): Ashwave es el proyecto solista de Pedro Castillo (biografía del artista 577; «Ashwave» figura entre los alias de la persona 38). Se vincula la persona como titular de sus proyectos, se funden sus seudónimos (Sandrus, Alexium; Petrus queda de alias) y se fusionan los 21 discos de participación que el índice personal de Sincopa colgó del artista «Pedro Castillo» con los discos reales de Ashwave, Aditus, Témpano, PP's y otros.",
+  "corrections": [
+    {
+      "op": "link_project",
+      "person": {
+        "id": 38,
+        "name": "Pedro Castillo"
+      },
+      "artist": {
+        "id": 577,
+        "name": "Ashwave"
+      },
+      "role": "Titular del proyecto",
+      "why": "Ashwave es el proyecto solista de Pedro Castillo (biografía del artista; Sincopa: «Produced Performed & Recorded by Ashwave», todas las pistas compuestas por Pedro Castillo) y ya figuraba como alias de la persona."
+    },
+    {
+      "op": "link_project",
+      "person": {
+        "id": 38,
+        "name": "Pedro Castillo"
+      },
+      "artist": {
+        "id": 5,
+        "name": "Pedro Castillo"
+      },
+      "role": "Titular del proyecto",
+      "why": "El artista «Pedro Castillo» es su carrera en solitario (discos Algo Personal, Volver Al Futuro, Dibujando Historias)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 38,
+        "name": "Pedro Castillo"
+      },
+      "alias": "Petrus",
+      "why": "Sincopa (Moving Futures): «played by: Ashwave (Petrus, Sandrus, Alexium)» — seudónimos del proyecto."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 38,
+        "name": "Pedro Castillo"
+      },
+      "drop": {
+        "id": 4798,
+        "name": "Sandrus"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Seudónimo de Ashwave en Moving Futures (Sincopa: «Ashwave (Petrus, Sandrus, Alexium)»); Ashwave es el proyecto de Pedro Castillo. Mismo disco no recopilatorio."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 38,
+        "name": "Pedro Castillo"
+      },
+      "drop": {
+        "id": 4801,
+        "name": "Alexium"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Seudónimo de Ashwave en Moving Futures (Sincopa: «Ashwave (Petrus, Sandrus, Alexium)»); Ashwave es el proyecto de Pedro Castillo. Mismo disco no recopilatorio."
+    },
+    {
+      "op": "merge_albums",
+      "keep": {
+        "id": 511,
+        "name": "Tercera Guerra Musical"
+      },
+      "drop": {
+        "id": 3757,
+        "name": "Tercera Guerra Musical"
+      },
+      "why": "Disco de participación del índice de Pedro Castillo en Sincopa; el disco real está en «PP's»."
+    },
+    {
+      "op": "merge_albums",
+      "keep": {
+        "id": 4530,
+        "name": "Nowhere NowHere"
+      },
+      "drop": {
+        "id": 3743,
+        "name": "Nowhere NowHere"
+      },
+      "why": "Disco de participación del índice de Pedro Castillo en Sincopa; el disco real está en «Témpano»."
+    },
+    {
+      "op": "merge_albums",
+      "keep": {
+        "id": 367,
+        "name": "The Agony And The Ecstasy"
+      },
+      "drop": {
+        "id": 3741,
+        "name": "The Agony and The Ecstasy"
+      },
+      "why": "Disco de participación del índice de Pedro Castillo en Sincopa; el disco real está en «Témpano»."
+    },
+    {
+      "op": "merge_albums",
+      "keep": {
+        "id": 4189,
+        "name": "Esto Fue Un Placer"
+      },
+      "drop": {
+        "id": 3732,
+        "name": "Esto Fue Un Placer"
+      },
+      "why": "Disco de participación del índice de Pedro Castillo en Sincopa; el disco real está en «Guillermo Carrasco»."
+    },
+    {
+      "op": "merge_albums",
+      "keep": {
+        "id": 1040,
+        "name": "Moving Futures"
+      },
+      "drop": {
+        "id": 3735,
+        "name": "Moving Futures"
+      },
+      "why": "Disco de participación del índice de Pedro Castillo en Sincopa; el disco real está en «Ashwave»."
+    },
+    {
+      "op": "merge_albums",
+      "keep": {
+        "id": 1268,
+        "name": "Selective Memory"
+      },
+      "drop": {
+        "id": 3740,
+        "name": "Selective Memory"
+      },
+      "why": "Disco de participación del índice de Pedro Castillo en Sincopa; el disco real está en «Témpano»."
+    },
+    {
+      "op": "merge_albums",
+      "keep": {
+        "id": 2100,
+        "name": "En el Aire"
+      },
+      "drop": {
+        "id": 3754,
+        "name": "En El Aire"
+      },
+      "why": "Disco de participación del índice de Pedro Castillo en Sincopa; el disco real está en «PP's»."
+    },
+    {
+      "op": "merge_albums",
+      "keep": {
+        "id": 2103,
+        "name": "Pp´s"
+      },
+      "drop": {
+        "id": 3753,
+        "name": "PPS"
+      },
+      "why": "Disco de participación del índice de Pedro Castillo en Sincopa; el disco real está en «PP's»."
+    },
+    {
+      "op": "merge_albums",
+      "keep": {
+        "id": 4532,
+        "name": "Atabal Yémal (Super Deluxe Vinyl Edition)"
+      },
+      "drop": {
+        "id": 3745,
+        "name": "Atabal Yémal (Super Deluxe Vinyl Edition)"
+      },
+      "why": "Disco de participación del índice de Pedro Castillo en Sincopa; el disco real está en «Témpano»."
+    },
+    {
+      "op": "merge_albums",
+      "keep": {
+        "id": 3016,
+        "name": "AM-Vision"
+      },
+      "drop": {
+        "id": 3748,
+        "name": "AM-Vision"
+      },
+      "why": "Disco de participación del índice de Pedro Castillo en Sincopa; el disco real está en «Aditus»."
+    },
+    {
+      "op": "merge_albums",
+      "keep": {
+        "id": 3010,
+        "name": "Diez"
+      },
+      "drop": {
+        "id": 3752,
+        "name": "Diez"
+      },
+      "why": "Disco de participación del índice de Pedro Castillo en Sincopa; el disco real está en «Aditus»."
+    },
+    {
+      "op": "merge_albums",
+      "keep": {
+        "id": 3011,
+        "name": "Otro Mundo"
+      },
+      "drop": {
+        "id": 3749,
+        "name": "Otro Mundo"
+      },
+      "why": "Disco de participación del índice de Pedro Castillo en Sincopa; el disco real está en «Aditus»."
+    },
+    {
+      "op": "merge_albums",
+      "keep": {
+        "id": 3017,
+        "name": "Posición Adelantada"
+      },
+      "drop": {
+        "id": 3747,
+        "name": "Posición Adelantada"
+      },
+      "why": "Disco de participación del índice de Pedro Castillo en Sincopa; el disco real está en «Aditus»."
+    },
+    {
+      "op": "merge_albums",
+      "keep": {
+        "id": 3018,
+        "name": "Fuera de la Ley"
+      },
+      "drop": {
+        "id": 3744,
+        "name": "Fuera de La Ley"
+      },
+      "why": "Disco de participación del índice de Pedro Castillo en Sincopa; el disco real está en «Aditus»."
+    },
+    {
+      "op": "merge_albums",
+      "keep": {
+        "id": 3586,
+        "name": "En Vivo Desde Brasil"
+      },
+      "drop": {
+        "id": 3742,
+        "name": "En Vivo Desde Brasil"
+      },
+      "why": "Disco de participación del índice de Pedro Castillo en Sincopa; el disco real está en «Témpano»."
+    },
+    {
+      "op": "merge_albums",
+      "keep": {
+        "id": 3637,
+        "name": "Lo Mejor y Lo Peor..."
+      },
+      "drop": {
+        "id": 3751,
+        "name": "Lo Mejor y Lo Peor..."
+      },
+      "why": "Disco de participación del índice de Pedro Castillo en Sincopa; el disco real está en «Aditus»."
+    },
+    {
+      "op": "merge_albums",
+      "keep": {
+        "id": 3638,
+        "name": "Lo Mejor de Aditus"
+      },
+      "drop": {
+        "id": 3750,
+        "name": "Lo Mejor de Aditus"
+      },
+      "why": "Disco de participación del índice de Pedro Castillo en Sincopa; el disco real está en «Aditus»."
+    },
+    {
+      "op": "merge_albums",
+      "keep": {
+        "id": 4023,
+        "name": "Sin Verguenza"
+      },
+      "drop": {
+        "id": 3756,
+        "name": "Sin Verguenza"
+      },
+      "why": "Disco de participación del índice de Pedro Castillo en Sincopa; el disco real está en «Los Electrodos»."
+    },
+    {
+      "op": "merge_albums",
+      "keep": {
+        "id": 4187,
+        "name": "Ahora o Nunca"
+      },
+      "drop": {
+        "id": 3731,
+        "name": "Ahora o Nunca"
+      },
+      "why": "Disco de participación del índice de Pedro Castillo en Sincopa; el disco real está en «Guillermo Carrasco»."
+    },
+    {
+      "op": "merge_albums",
+      "keep": {
+        "id": 4527,
+        "name": "Atabal Yémal (CD Reissue)"
+      },
+      "drop": {
+        "id": 3737,
+        "name": "Atabal Yémal (CD Reissue)"
+      },
+      "why": "Disco de participación del índice de Pedro Castillo en Sincopa; el disco real está en «Témpano»."
+    },
+    {
+      "op": "merge_albums",
+      "keep": {
+        "id": 4528,
+        "name": "El Fin de La Infancia"
+      },
+      "drop": {
+        "id": 3739,
+        "name": "El Fin de La Infancia"
+      },
+      "why": "Disco de participación del índice de Pedro Castillo en Sincopa; el disco real está en «Témpano»."
+    }
+  ]
+}

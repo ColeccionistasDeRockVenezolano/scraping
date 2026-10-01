@@ -1,0 +1,1800 @@
+{
+  "decidedAt": "2026-09-30",
+  "evidence": "143 revisiones person_duplicate abiertas decididas por delegación (Hermes, 2026-09-30) con la evidencia por par de reports/person-duplicates-evidence-2026-09-30.md: erratas de apellido, apodos e hipocorísticos sobre el mismo nombre, alias cruzado registrado y vínculos de banda/disco/compañeros. Todas las fusiones conservan la grafía principal, dejan las descartadas como alias y son deshacibles (unmerge).",
+  "corrections": [
+    {
+      "op": "merge",
+      "keep": {
+        "id": 16,
+        "name": "Efraín Rodríguez"
+      },
+      "drop": {
+        "id": 1726,
+        "name": "Efraín Rodrígueza"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249154 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.988 sobre el nombre sin apodo; name_variant: mismo nombre efrain; apellido con errata rodriguez / rodrigueza). Misma persona: se conserva «Efraín Rodríguez» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 19,
+        "name": "Gustavo Carucí"
+      },
+      "drop": {
+        "id": 2382,
+        "name": "Gustavo Carusi"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249220 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.971 sobre el nombre sin apodo; name_variant: mismo nombre gustavo; apellido con errata caruci / carusi). Misma persona: se conserva «Gustavo Carucí» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 93,
+        "name": "Paul McCartney"
+      },
+      "drop": {
+        "id": 10095,
+        "name": "Paul McCartnegy"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249028 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.987 sobre el nombre sin apodo; name_variant: mismo nombre paul; apellido con errata mccartney / mccartnegy; shared_album:). Misma persona: se conserva «Paul McCartney» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 95,
+        "name": "René de Coupand"
+      },
+      "drop": {
+        "id": 10120,
+        "name": "René de Coupaud"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249206 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.973 sobre el nombre sin apodo; name_variant: mismo nombre rene; apellido con errata coupand / coupaud). Misma persona: se conserva «René de Coupand» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 217,
+        "name": "Juan Carlos Almao"
+      },
+      "drop": {
+        "id": 115,
+        "name": "Juan Carlos Almoa"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249155 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.988 sobre el nombre sin apodo; name_variant: mismo nombre juan; apellido con errata almoa / almao). Misma persona: se conserva «Juan Carlos Almao» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 120,
+        "name": "Alejandro \"Chonto\" Turola"
+      },
+      "drop": {
+        "id": 3331,
+        "name": "Chonto Turola"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249270 del detector de duplicados de persona (evidencia 2026-09-30: name_variant: apodo «chonto» como nombre; apellido igual). Misma persona: se conserva «Alejandro \"Chonto\" Turola» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 141,
+        "name": "José I Morales"
+      },
+      "drop": {
+        "id": 13145,
+        "name": "Jose Morales"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249221 del detector de duplicados de persona (evidencia 2026-09-30: first_last_equal: comparten primer y último token: jose … morales; jaro_winkler: Jaro-Winkler=0.971 sobre el nombre sin apodo; shared_album: discos ac). Misma persona: se conserva «José I Morales» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 773,
+        "name": "Tony \"Cash\" Maestracci"
+      },
+      "drop": {
+        "id": 224,
+        "name": "Cash Maestracci"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249272 del detector de duplicados de persona (evidencia 2026-09-30: name_variant: apodo «cash» como nombre; apellido igual). Misma persona: se conserva «Tony \"Cash\" Maestracci» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 773,
+        "name": "Tony \"Cash\" Maestracci"
+      },
+      "drop": {
+        "id": 2596,
+        "name": "Tony Maestreacci"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249068 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.988 sobre el nombre sin apodo; name_variant: mismo nombre tony; apellido con errata maestracci / maestreacci; shared_arti). Misma persona: se conserva «Tony \"Cash\" Maestracci» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1374,
+        "name": "Rafael Chavarría \"Camarón\""
+      },
+      "drop": {
+        "id": 301,
+        "name": "Rafael Chaverría"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249252 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.955 sobre el nombre sin apodo; name_variant: mismo nombre rafael; apellido con errata chaverria / chavarria). Misma persona: se conserva «Rafael Chavarría \"Camarón\"» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 3775,
+        "name": "Gian Piero Gigante"
+      },
+      "drop": {
+        "id": 312,
+        "name": "Gian Piero Gogante"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249091 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.978 sobre el nombre sin apodo; name_variant: mismo nombre gian; apellido con errata gogante / gigante; shared_artist: tra). Misma persona: se conserva «Gian Piero Gigante» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 325,
+        "name": "Jorge Chapelín"
+      },
+      "drop": {
+        "id": 2363,
+        "name": "Jorge Chapellín"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249074 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.987 sobre el nombre sin apodo; name_variant: mismo nombre jorge; apellido con errata chapelin / chapellin; shared_artist:). Misma persona: se conserva «Jorge Chapelín» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 437,
+        "name": "Alejandro \"Chofa\" Loero"
+      },
+      "drop": {
+        "id": 2464,
+        "name": "Alfredo Lovero"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249273 del detector de duplicados de persona (evidencia 2026-09-30: name_variant: mismo nombre alfredo; apellido con errata loero / lovero; shared_artist: trabajaron con los mismos artistas: 257). Misma persona: se conserva «Alejandro \"Chofa\" Loero» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 447,
+        "name": "Carlos Schudeck"
+      },
+      "drop": {
+        "id": 2466,
+        "name": "Carlos Shudeck"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249111 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.951 sobre el nombre sin apodo; name_variant: mismo nombre carlos; apellido con errata schudeck / shudeck; shared_artist: ). Misma persona: se conserva «Carlos Schudeck» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 460,
+        "name": "Pablo Matarazzo"
+      },
+      "drop": {
+        "id": 5586,
+        "name": "Pablo Matarasso"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249260 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.947 sobre el nombre sin apodo; name_variant: mismo nombre pablo; apellido con errata matarazzo / matarasso). Misma persona: se conserva «Pablo Matarazzo» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2173,
+        "name": "José Miguel De Robertis"
+      },
+      "drop": {
+        "id": 469,
+        "name": "José Miguel de Roberts"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249145 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.991 sobre el nombre sin apodo; name_variant: mismo nombre jose; apellido con errata roberts / robertis). Misma persona: se conserva «José Miguel De Robertis» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 6519,
+        "name": "Carlos Loggiodice"
+      },
+      "drop": {
+        "id": 479,
+        "name": "Carlos Loggiodicce"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249149 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.989 sobre el nombre sin apodo; name_variant: mismo nombre carlos; apellido con errata loggiodicce / loggiodice). Misma persona: se conserva «Carlos Loggiodice» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 496,
+        "name": "Javier Weyler"
+      },
+      "drop": {
+        "id": 1156,
+        "name": "Javier Weiler"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249101 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.969 sobre el nombre sin apodo; name_variant: mismo nombre javier; apellido con errata weyler / weiler; shared_colleagues:). Misma persona: se conserva «Javier Weyler» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 553,
+        "name": "Michael Romanowski"
+      },
+      "drop": {
+        "id": 1649,
+        "name": "Michael Romanowsky"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249200 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.978 sobre el nombre sin apodo; name_variant: mismo nombre michael; apellido con errata romanowski / romanowsky). Misma persona: se conserva «Michael Romanowski» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 566,
+        "name": "Ángelo Calachin"
+      },
+      "drop": {
+        "id": 4399,
+        "name": "Angelo Calanchi"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249208 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.973 sobre el nombre sin apodo; name_variant: mismo nombre angelo; apellido con errata calachin / calanchi). Misma persona: se conserva «Ángelo Calachin» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 3090,
+        "name": "Mariana Suárez \"Maly\""
+      },
+      "drop": {
+        "id": 576,
+        "name": "Mariana Suarez"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #193553 del detector de duplicados de persona (evidencia 2026-09-30: nickname_equal: sin apodo coinciden: mariana suarez; alias_cross: «Mariana Suarez» figura como alias «Mariana Suárez \"Maly\"» de «Mariana Suárez \"Maly\"). Misma persona: se conserva «Mariana Suárez \"Maly\"» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 602,
+        "name": "José Manuel \"Chema\" Arria"
+      },
+      "drop": {
+        "id": 2844,
+        "name": "Miguel Arria \"Chema\""
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249275 del detector de duplicados de persona (evidencia 2026-09-30: name_variant: apodo «chema» como nombre; apellido igual). Misma persona: se conserva «José Manuel \"Chema\" Arria» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 602,
+        "name": "José Manuel \"Chema\" Arria"
+      },
+      "drop": {
+        "id": 2861,
+        "name": "José \"Chema\" Arias"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249310 del detector de duplicados de persona (evidencia 2026-09-30: name_variant: apodo «chema» como nombre; apellido con errata arias / arrias). Misma persona: se conserva «José Manuel \"Chema\" Arria» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 602,
+        "name": "José Manuel \"Chema\" Arria"
+      },
+      "drop": {
+        "id": 6130,
+        "name": "José Manuel Arrias \"Chema\""
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249129 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.989 sobre el nombre sin apodo; name_variant: apodo «chema» como nombre; apellido con errata arria / arrias). Misma persona: se conserva «José Manuel \"Chema\" Arria» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 620,
+        "name": "Roberto Menéndez"
+      },
+      "drop": {
+        "id": 2860,
+        "name": "Roberto Mendendez"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249100 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.969 sobre el nombre sin apodo; name_variant: mismo nombre roberto; apellido con errata menendez / mendendez; shared_artis). Misma persona: se conserva «Roberto Menéndez» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1029,
+        "name": "Álvaro Benavides"
+      },
+      "drop": {
+        "id": 652,
+        "name": "Alvaro Benavidez"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249203 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.975 sobre el nombre sin apodo; name_variant: mismo nombre alvaro; apellido con errata benavidez / benavides). Misma persona: se conserva «Álvaro Benavides» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 661,
+        "name": "Iker Gastaminza"
+      },
+      "drop": {
+        "id": 5908,
+        "name": "Iker Gastaminsa"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249209 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.973 sobre el nombre sin apodo; name_variant: mismo nombre iker; apellido con errata gastaminza / gastaminsa). Misma persona: se conserva «Iker Gastaminza» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 666,
+        "name": "Mike Couzzi"
+      },
+      "drop": {
+        "id": 12909,
+        "name": "Mike Couzi"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249192 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.982 sobre el nombre sin apodo; name_variant: mismo nombre mike; apellido con errata couzzi / couzi). Misma persona: se conserva «Mike Couzzi» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 671,
+        "name": "Bernardo Rísquez"
+      },
+      "drop": {
+        "id": 2198,
+        "name": "Bernardo Rízquez"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249112 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.948 sobre el nombre sin apodo; name_variant: mismo nombre bernardo; apellido con errata risquez / rizquez; shared_artist:). Misma persona: se conserva «Bernardo Rísquez» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 674,
+        "name": "Domingo Pagliuca"
+      },
+      "drop": {
+        "id": 3502,
+        "name": "Domingo Plagliuca"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249223 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.969 sobre el nombre sin apodo; name_variant: mismo nombre domingo; apellido con errata pagliuca / plagliuca). Misma persona: se conserva «Domingo Pagliuca» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 689,
+        "name": "Claudio Leoni"
+      },
+      "drop": {
+        "id": 2109,
+        "name": "Claudio Leone"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249102 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.969 sobre el nombre sin apodo; name_variant: mismo nombre claudio; apellido con errata leoni / leone; shared_colleagues: ). Misma persona: se conserva «Claudio Leoni» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 727,
+        "name": "Rodolfo Tarft"
+      },
+      "drop": {
+        "id": 2205,
+        "name": "Rodolfo Tarff"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249225 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.969 sobre el nombre sin apodo; name_variant: mismo nombre rodolfo; apellido con errata tarft / tarff). Misma persona: se conserva «Rodolfo Tarft» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1460,
+        "name": "Antonio Casas"
+      },
+      "drop": {
+        "id": 731,
+        "name": "Antonio Casas G."
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249134 del detector de duplicados de persona (evidencia 2026-09-30: first_last_equal: comparten primer y último token: antonio … casas; jaro_winkler: Jaro-Winkler=0.973 sobre el nombre sin apodo; shared_artist: trabaja). Misma persona: se conserva «Antonio Casas» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 958,
+        "name": "Gerald \"Chipi\" Chacón"
+      },
+      "drop": {
+        "id": 2498,
+        "name": "Gerard \"Chipi\" Chacón"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249103 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.969 sobre el nombre sin apodo; name_variant: apodo «chipi» como nombre; apellido igual). Misma persona: se conserva «Gerald \"Chipi\" Chacón» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 980,
+        "name": "Omar Paduay"
+      },
+      "drop": {
+        "id": 3844,
+        "name": "Omar Padauy"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249193 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.982 sobre el nombre sin apodo; name_variant: mismo nombre omar; apellido con errata paduay / padauy). Misma persona: se conserva «Omar Paduay» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1112,
+        "name": "José \"Cheo\" Rodríguez"
+      },
+      "drop": {
+        "id": 2737,
+        "name": "Maestro \"Cheo\" Rodríguez"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249278 del detector de duplicados de persona (evidencia 2026-09-30: name_variant: apodo «cheo» como nombre; apellido igual). Misma persona: se conserva «José \"Cheo\" Rodríguez» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 5771,
+        "name": "Franklin Holland"
+      },
+      "drop": {
+        "id": 1140,
+        "name": "Franklin Hollan"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249161 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.988 sobre el nombre sin apodo; name_variant: mismo nombre franklin; apellido con errata hollan / holland). Misma persona: se conserva «Franklin Holland» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1157,
+        "name": "Xavier Lozada"
+      },
+      "drop": {
+        "id": 3545,
+        "name": "Xavier Losada"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249226 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.969 sobre el nombre sin apodo; name_variant: mismo nombre xavier; apellido con errata lozada / losada). Misma persona: se conserva «Xavier Lozada» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1167,
+        "name": "Rafael Figliolo"
+      },
+      "drop": {
+        "id": 2364,
+        "name": "Rafael Figliuolo"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249162 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.988 sobre el nombre sin apodo; name_variant: mismo nombre rafael; apellido con errata figliolo / figliuolo). Misma persona: se conserva «Rafael Figliolo» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1181,
+        "name": "Roberto Percuoco"
+      },
+      "drop": {
+        "id": 2972,
+        "name": "Roberto Percuocco"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249156 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.988 sobre el nombre sin apodo; name_variant: mismo nombre roberto; apellido con errata percuoco / percuocco). Misma persona: se conserva «Roberto Percuoco» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1185,
+        "name": "Jesús \"Junior\" Morales"
+      },
+      "drop": {
+        "id": 2830,
+        "name": "Jesús Morales"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #193588 del detector de duplicados de persona (evidencia 2026-09-30: nickname_equal: sin apodo coinciden: jesus morales; alias_cross: «Jesús \"Junior\" Morales» figura como alias «Jesús Morales» de «Jesús Morales»; jaro_w). Misma persona: se conserva «Jesús \"Junior\" Morales» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1192,
+        "name": "Toro Bernal"
+      },
+      "drop": {
+        "id": 8693,
+        "name": "Marco \"Toro\" Bernal"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249279 del detector de duplicados de persona (evidencia 2026-09-30: name_variant: apodo «toro» como nombre; apellido igual). Misma persona: se conserva «Toro Bernal» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1232,
+        "name": "Eugenio Marruffo"
+      },
+      "drop": {
+        "id": 2604,
+        "name": "Eugenio Marrufo"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249069 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.988 sobre el nombre sin apodo; name_variant: mismo nombre eugenio; apellido con errata marruffo / marrufo; shared_artist:). Misma persona: se conserva «Eugenio Marruffo» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1262,
+        "name": "Marcelo Toutin"
+      },
+      "drop": {
+        "id": 2065,
+        "name": "Marcelo Toulin"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249096 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.971 sobre el nombre sin apodo; name_variant: mismo nombre marcelo; apellido con errata toutin / toulin; shared_artist: tr). Misma persona: se conserva «Marcelo Toutin» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1438,
+        "name": "Leonardo Degl'Innocenti"
+      },
+      "drop": {
+        "id": 1264,
+        "name": "Leonardo Degl'innocentl \"Dj Leo\""
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249089 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.982 sobre el nombre sin apodo; name_variant: mismo nombre leonardo; apellido con errata deglinnocentl / deglinnocenti; sh). Misma persona: se conserva «Leonardo Degl'Innocenti» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1286,
+        "name": "Alberto Slezynger"
+      },
+      "drop": {
+        "id": 10122,
+        "name": "Alberto Slezyinger"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249150 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.989 sobre el nombre sin apodo; name_variant: mismo nombre alberto; apellido con errata slezynger / slezyinger). Misma persona: se conserva «Alberto Slezynger» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1648,
+        "name": "César Masroua"
+      },
+      "drop": {
+        "id": 1402,
+        "name": "César Masrroua"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249079 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.986 sobre el nombre sin apodo; name_variant: mismo nombre cesar; apellido con errata masrroua / masroua; shared_artist: t). Misma persona: se conserva «César Masroua» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1425,
+        "name": "Aníbal Malavé"
+      },
+      "drop": {
+        "id": 5611,
+        "name": "Anibal Malav"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249178 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.985 sobre el nombre sin apodo; name_variant: mismo nombre anibal; apellido con errata malave / malav). Misma persona: se conserva «Aníbal Malavé» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1470,
+        "name": "Nelson Rangell"
+      },
+      "drop": {
+        "id": 7261,
+        "name": "Nelson Rengell"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249258 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.948 sobre el nombre sin apodo; name_variant: mismo nombre nelson; apellido con errata rangell / rengell). Misma persona: se conserva «Nelson Rangell» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1556,
+        "name": "Tito Fierro"
+      },
+      "drop": {
+        "id": 4055,
+        "name": "Héctor \"Tito\" Ferro"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249307 del detector de duplicados de persona (evidencia 2026-09-30: name_variant: apodo «tito» como nombre; apellido con errata fierro / ferro). Misma persona: se conserva «Tito Fierro» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 3006,
+        "name": "Carlos Figuera"
+      },
+      "drop": {
+        "id": 1560,
+        "name": "Carlos Figueroa"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249165 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.987 sobre el nombre sin apodo; name_variant: mismo nombre carlos; apellido con errata figueroa / figuera). Misma persona: se conserva «Carlos Figuera» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1590,
+        "name": "Carlos Marrero"
+      },
+      "drop": {
+        "id": 2066,
+        "name": "Carlos Luis Marrero"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249117 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.937 sobre el nombre sin apodo; name_variant: mismo nombre carlos; apellido con errata marrero / marreo; shared_artist: tr). Misma persona: se conserva «Carlos Marrero» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1590,
+        "name": "Carlos Marrero"
+      },
+      "drop": {
+        "id": 3592,
+        "name": "Carlos Marreo"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249171 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.986 sobre el nombre sin apodo; name_variant: mismo nombre carlos; apellido con errata marrero / marreo). Misma persona: se conserva «Carlos Marrero» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1617,
+        "name": "Alexis Rendón"
+      },
+      "drop": {
+        "id": 2811,
+        "name": "Alexis Rondón"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249115 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.944 sobre el nombre sin apodo; name_variant: mismo nombre alexis; apellido con errata rendon / rondon; shared_artist: tra). Misma persona: se conserva «Alexis Rendón» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1626,
+        "name": "Emmanuel \"Evan\" Fajardo"
+      },
+      "drop": {
+        "id": 6141,
+        "name": "Emmanuel Fajardo"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #193605 del detector de duplicados de persona (evidencia 2026-09-30: nickname_equal: sin apodo coinciden: emmanuel fajardo; alias_cross: «Emmanuel \"Evan\" Fajardo» figura como alias «Emmanuel Fajardo» de «Emmanuel Fajard). Misma persona: se conserva «Emmanuel \"Evan\" Fajardo» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1631,
+        "name": "Víctor Morles"
+      },
+      "drop": {
+        "id": 5302,
+        "name": "Víctor Mortes"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249227 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.969 sobre el nombre sin apodo; name_variant: mismo nombre victor; apellido con errata morles / mortes). Misma persona: se conserva «Víctor Morles» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2643,
+        "name": "Tom Hutten"
+      },
+      "drop": {
+        "id": 1684,
+        "name": "Tom Huttlen"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249194 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.982 sobre el nombre sin apodo; name_variant: mismo nombre tom; apellido con errata huttlen / hutten). Misma persona: se conserva «Tom Hutten» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1800,
+        "name": "Carlos Monserrate"
+      },
+      "drop": {
+        "id": 6022,
+        "name": "Carlos Monserratte"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249151 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.989 sobre el nombre sin apodo; name_variant: mismo nombre carlos; apellido con errata monserrate / monserratte). Misma persona: se conserva «Carlos Monserrate» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1800,
+        "name": "Carlos Monserrate"
+      },
+      "drop": {
+        "id": 12869,
+        "name": "Carlos Moserratte"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249153 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.989 sobre el nombre sin apodo; name_variant: mismo nombre carlos; apellido con errata monserratte / moserratte). Misma persona: se conserva «Carlos Monserrate» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 3010,
+        "name": "Ernesto Figuera"
+      },
+      "drop": {
+        "id": 1816,
+        "name": "Ernesto Figueroa"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249163 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.988 sobre el nombre sin apodo; name_variant: mismo nombre ernesto; apellido con errata figueroa / figuera). Misma persona: se conserva «Ernesto Figuera» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1840,
+        "name": "Pablo Fernández"
+      },
+      "drop": {
+        "id": 3228,
+        "name": "Pablo Fernandes"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249212 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.973 sobre el nombre sin apodo; name_variant: mismo nombre pablo; apellido con errata fernandez / fernandes). Misma persona: se conserva «Pablo Fernández» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 5128,
+        "name": "Yein González"
+      },
+      "drop": {
+        "id": 1871,
+        "name": "Yein Gonzáles"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249230 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.969 sobre el nombre sin apodo; name_variant: mismo nombre yein; apellido con errata gonzales / gonzalez). Misma persona: se conserva «Yein González» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2283,
+        "name": "Ted Jensen"
+      },
+      "drop": {
+        "id": 1889,
+        "name": "Ted Jesen"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249261 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.947 sobre el nombre sin apodo; name_variant: mismo nombre ted; apellido con errata jesen / jensen). Misma persona: se conserva «Ted Jensen» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1891,
+        "name": "Clive Chaman"
+      },
+      "drop": {
+        "id": 8567,
+        "name": "Clive Chapman"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249179 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.985 sobre el nombre sin apodo; name_variant: mismo nombre clive; apellido con errata chaman / chapman). Misma persona: se conserva «Clive Chaman» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 8584,
+        "name": "Pete Thomas"
+      },
+      "drop": {
+        "id": 1898,
+        "name": "Pete Thoms"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249196 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.982 sobre el nombre sin apodo; name_variant: mismo nombre pete; apellido con errata thoms / thomas). Misma persona: se conserva «Pete Thomas» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 8584,
+        "name": "Pete Thomas"
+      },
+      "drop": {
+        "id": 8580,
+        "name": "Pete Thomns"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249040 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.964 sobre el nombre sin apodo; name_variant: mismo nombre pete; apellido con errata thomns / thomas; shared_album: discos). Misma persona: se conserva «Pete Thomas» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1909,
+        "name": "Ricardo Vizcarrondo"
+      },
+      "drop": {
+        "id": 4235,
+        "name": "Ricardo Vizcarrrondo"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249147 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.990 sobre el nombre sin apodo; name_variant: mismo nombre ricardo; apellido con errata vizcarrondo / vizcarrrondo). Misma persona: se conserva «Ricardo Vizcarrondo» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1949,
+        "name": "Alex Lencinas"
+      },
+      "drop": {
+        "id": 1981,
+        "name": "Alex Lencina"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249031 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.985 sobre el nombre sin apodo; name_variant: mismo nombre alex; apellido con errata lencinas / lencina; shared_album: dis). Misma persona: se conserva «Alex Lencinas» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 1950,
+        "name": "Ulises Bultrón"
+      },
+      "drop": {
+        "id": 1977,
+        "name": "Ulises Butrón"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249030 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.986 sobre el nombre sin apodo; name_variant: mismo nombre ulises; apellido con errata bultron / butron; shared_album: dis). Misma persona: se conserva «Ulises Bultrón» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2034,
+        "name": "Claudio Cremisini"
+      },
+      "drop": {
+        "id": 8609,
+        "name": "Claudio Cremiccini"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249241 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.966 sobre el nombre sin apodo; name_variant: mismo nombre claudio; apellido con errata cremisini / cremiccini). Misma persona: se conserva «Claudio Cremisini» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2044,
+        "name": "José Martínez"
+      },
+      "drop": {
+        "id": 5733,
+        "name": "José \"Pepe\" Martínez"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #193619 del detector de duplicados de persona (evidencia 2026-09-30: nickname_equal: sin apodo coinciden: jose martinez; alias_cross: «José Martínez» figura como alias «José \"Pepe\" Martínez» de «José \"Pepe\" Martínez»; j). Misma persona: se conserva «José Martínez» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 4042,
+        "name": "Alberto Barnet"
+      },
+      "drop": {
+        "id": 2107,
+        "name": "Alberto Barnett"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249166 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.987 sobre el nombre sin apodo; name_variant: mismo nombre alberto; apellido con errata barnett / barnet). Misma persona: se conserva «Alberto Barnet» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2192,
+        "name": "Daniel Arreaza \"Rino\""
+      },
+      "drop": {
+        "id": 6385,
+        "name": "Daniel Arreaza"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #193630 del detector de duplicados de persona (evidencia 2026-09-30: nickname_equal: sin apodo coinciden: daniel arreaza; alias_cross: «Daniel Arreaza \"Rino\"» figura como alias «Daniel Arreaza» de «Daniel Arreaza»; jaro). Misma persona: se conserva «Daniel Arreaza \"Rino\"» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2231,
+        "name": "Goya Sumoza"
+      },
+      "drop": {
+        "id": 7719,
+        "name": "Goya Somoza"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249266 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.944 sobre el nombre sin apodo; name_variant: mismo nombre goya; apellido con errata sumoza / somoza). Misma persona: se conserva «Goya Sumoza» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 6241,
+        "name": "Mario Alfonso"
+      },
+      "drop": {
+        "id": 2267,
+        "name": "Mario Alfonso B"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249246, #249264 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.960 sobre el nombre sin apodo; name_variant: mismo nombre mario; apellido con errata alfonso / alonso). Misma persona: se conserva «Mario Alfonso» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 6241,
+        "name": "Mario Alfonso"
+      },
+      "drop": {
+        "id": 3904,
+        "name": "Mario Alfonzo"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249236 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.969 sobre el nombre sin apodo; name_variant: mismo nombre mario; apellido con errata alfonzo / alfonso). Misma persona: se conserva «Mario Alfonso» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 6241,
+        "name": "Mario Alfonso"
+      },
+      "drop": {
+        "id": 13152,
+        "name": "Mario Alonso"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249183 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.985 sobre el nombre sin apodo; name_variant: mismo nombre mario; apellido con errata alfonso / alonso). Misma persona: se conserva «Mario Alfonso» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2302,
+        "name": "Gabriel Stacio"
+      },
+      "drop": {
+        "id": 3437,
+        "name": "Gabriel Stasio"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249222 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.971 sobre el nombre sin apodo; name_variant: mismo nombre gabriel; apellido con errata stacio / stasio). Misma persona: se conserva «Gabriel Stacio» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2352,
+        "name": "Giovanni Tradardi"
+      },
+      "drop": {
+        "id": 3446,
+        "name": "Giovanni Tratardi"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249041 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.958 sobre el nombre sin apodo; name_variant: mismo nombre giovanni; apellido con errata tradardi / tratardi; shared_album). Misma persona: se conserva «Giovanni Tradardi» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2383,
+        "name": "Manuel \"Manel\" Muñoz"
+      },
+      "drop": {
+        "id": 4976,
+        "name": "Manel Muñoz"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249118 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.928 sobre el nombre sin apodo; name_variant: apodo «manel» como nombre; apellido igual). Misma persona: se conserva «Manuel \"Manel\" Muñoz» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2449,
+        "name": "David Alfaro"
+      },
+      "drop": {
+        "id": 2797,
+        "name": "David Alfarro"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249180 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.985 sobre el nombre sin apodo; name_variant: mismo nombre david; apellido con errata alfaro / alfarro). Misma persona: se conserva «David Alfaro» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2527,
+        "name": "Christian \"Funky C\" Moraga"
+      },
+      "drop": {
+        "id": 3482,
+        "name": "Christián Monaga"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249204 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.975 sobre el nombre sin apodo; name_variant: mismo nombre christian; apellido con errata moraga / monaga). Misma persona: se conserva «Christian \"Funky C\" Moraga» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2583,
+        "name": "Santiago Avedaño"
+      },
+      "drop": {
+        "id": 5225,
+        "name": "Santiago Avendaño"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249224 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.969 sobre el nombre sin apodo; name_variant: mismo nombre santiago; apellido con errata avedano / avendano). Misma persona: se conserva «Santiago Avedaño» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2708,
+        "name": "Vinicio Ludovic"
+      },
+      "drop": {
+        "id": 7156,
+        "name": "Vinicio Ludovik"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249216 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.973 sobre el nombre sin apodo; name_variant: mismo nombre vinicio; apellido con errata ludovic / ludovik). Misma persona: se conserva «Vinicio Ludovic» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2740,
+        "name": "Jordi de la Vega"
+      },
+      "drop": {
+        "id": 5391,
+        "name": "Jorge \"Jordi\" De La Vega"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249280 del detector de duplicados de persona (evidencia 2026-09-30: name_variant: apodo «jordi» como nombre; apellido igual). Misma persona: se conserva «Jordi de la Vega» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 6027,
+        "name": "Eduardo Guerrero"
+      },
+      "drop": {
+        "id": 2743,
+        "name": "Eduardo Guerrero \"EdWar\""
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #193643 del detector de duplicados de persona (evidencia 2026-09-30: nickname_equal: sin apodo coinciden: eduardo guerrero; alias_cross: «Eduardo Guerrero \"EdWar\"» figura como alias «Eduardo Guerrero» de «Eduardo Guerre). Misma persona: se conserva «Eduardo Guerrero» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2772,
+        "name": "Glen Tomasi"
+      },
+      "drop": {
+        "id": 3528,
+        "name": "Glen Tomassi"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249189 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.983 sobre el nombre sin apodo; name_variant: mismo nombre glen; apellido con errata tomasi / tomassi). Misma persona: se conserva «Glen Tomasi» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 6864,
+        "name": "Joel \"Pibo\" Márquez"
+      },
+      "drop": {
+        "id": 2776,
+        "name": "Joel Marquez"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #193644 del detector de duplicados de persona (evidencia 2026-09-30: nickname_equal: sin apodo coinciden: joel marquez; alias_cross: «Joel Marquez» figura como alias «Joel \"Pibo\" Márquez» de «Joel \"Pibo\" Márquez»; jaro_). Misma persona: se conserva «Joel \"Pibo\" Márquez» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 3299,
+        "name": "Paúl Jatem"
+      },
+      "drop": {
+        "id": 2850,
+        "name": "Paul Jaten"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249247 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.960 sobre el nombre sin apodo; name_variant: mismo nombre paul; apellido con errata jaten / jatem). Misma persona: se conserva «Paúl Jatem» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 3299,
+        "name": "Paúl Jatem"
+      },
+      "drop": {
+        "id": 13029,
+        "name": "Paul Jatern"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249007 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.982 sobre el nombre sin apodo; name_variant: mismo nombre paul; apellido con errata jaten / jatern; shared_artist: trabaj). Misma persona: se conserva «Paúl Jatem» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 2868,
+        "name": "Armando Vitía"
+      },
+      "drop": {
+        "id": 3790,
+        "name": "Armando Veitia"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249173 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.986 sobre el nombre sin apodo; name_variant: mismo nombre armando; apellido con errata vitia / veitia). Misma persona: se conserva «Armando Vitía» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 8636,
+        "name": "Jesús \"Lalo\" Noriega"
+      },
+      "drop": {
+        "id": 2920,
+        "name": "Lalo Noriega"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249281 del detector de duplicados de persona (evidencia 2026-09-30: name_variant: apodo «lalo» como nombre; apellido igual). Misma persona: se conserva «Jesús \"Lalo\" Noriega» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 5833,
+        "name": "Humberto \"Tito\" Iglesias"
+      },
+      "drop": {
+        "id": 2985,
+        "name": "Tito Iglesias"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249282 del detector de duplicados de persona (evidencia 2026-09-30: name_variant: apodo «tito» como nombre; apellido igual). Misma persona: se conserva «Humberto \"Tito\" Iglesias» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 3198,
+        "name": "Victor González"
+      },
+      "drop": {
+        "id": 3224,
+        "name": "Victor González \"Kasino\""
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #193653 del detector de duplicados de persona (evidencia 2026-09-30: nickname_equal: sin apodo coinciden: victor gonzalez; alias_cross: «Victor González» figura como alias «Victor González \"Kasino\"» de «Victor González ). Misma persona: se conserva «Victor González» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 8610,
+        "name": "Robert Vilela"
+      },
+      "drop": {
+        "id": 3223,
+        "name": "Robert Vilera"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249232 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.969 sobre el nombre sin apodo; name_variant: mismo nombre robert; apellido con errata vilera / vilela). Misma persona: se conserva «Robert Vilela» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 3226,
+        "name": "José \"Pepe\" Vera"
+      },
+      "drop": {
+        "id": 8369,
+        "name": "Pepe Vera"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249283 del detector de duplicados de persona (evidencia 2026-09-30: name_variant: apodo «pepe» como nombre; apellido igual). Misma persona: se conserva «José \"Pepe\" Vera» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 3293,
+        "name": "Ray Díaz"
+      },
+      "drop": {
+        "id": 6848,
+        "name": "Rayniero Díaz"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249284 del detector de duplicados de persona (evidencia 2026-09-30: name_variant: apodo «ray» como nombre; apellido igual). Misma persona: se conserva «Ray Díaz» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 3422,
+        "name": "Rigel Michelena"
+      },
+      "drop": {
+        "id": 3306,
+        "name": "Rigel Mitxelena"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249262 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.947 sobre el nombre sin apodo; name_variant: mismo nombre rigel; apellido con errata mitxelena / michelena). Misma persona: se conserva «Rigel Michelena» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 3369,
+        "name": "Francisco Villanueva"
+      },
+      "drop": {
+        "id": 13104,
+        "name": "Francisco Kiko Villanueva"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249299 del detector de duplicados de persona (evidencia 2026-09-30: first_last_equal: comparten primer y último token: francisco … villanueva; jaro_winkler: Jaro-Winkler=0.950 sobre el nombre sin apodo; shared_artist: ). Misma persona: se conserva «Francisco Villanueva» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 3491,
+        "name": "Omar Olivero"
+      },
+      "drop": {
+        "id": 5129,
+        "name": "Omar Oliveros"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249182 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.985 sobre el nombre sin apodo; name_variant: mismo nombre omar; apellido con errata olivero / oliveros). Misma persona: se conserva «Omar Olivero» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 3529,
+        "name": "Federico Pacanins"
+      },
+      "drop": {
+        "id": 8020,
+        "name": "Federico Pacanis"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249157 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.988 sobre el nombre sin apodo; name_variant: mismo nombre federico; apellido con errata pacanins / pacanis). Misma persona: se conserva «Federico Pacanins» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 3617,
+        "name": "Carlos Quintero"
+      },
+      "drop": {
+        "id": 3886,
+        "name": "Iván Marcano Carlos \"Nené\" Quintero"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249127 del detector de duplicados de persona (evidencia 2026-09-30: name_variant: apodo «nene» como nombre; apellido igual; shared_colleagues: acreditados junto a las mismas personas: 10). Misma persona: se conserva «Carlos Quintero» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 3617,
+        "name": "Carlos Quintero"
+      },
+      "drop": {
+        "id": 8851,
+        "name": "Carlos \"Nene\" Quintero Jesús \"Chuo\" Quintero"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249291 del detector de duplicados de persona (evidencia 2026-09-30: name_variant: apodo «nene» como nombre; apellido igual). Misma persona: se conserva «Carlos Quintero» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 3617,
+        "name": "Carlos Quintero"
+      },
+      "drop": {
+        "id": 13340,
+        "name": "Nene Quintero"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249285 del detector de duplicados de persona (evidencia 2026-09-30: name_variant: apodo «nene» como nombre; apellido igual). Misma persona: se conserva «Carlos Quintero» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 3711,
+        "name": "Tony Mardini"
+      },
+      "drop": {
+        "id": 12904,
+        "name": "Tony Martini"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249240 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.967 sobre el nombre sin apodo; name_variant: mismo nombre tony; apellido con errata mardini / martini). Misma persona: se conserva «Tony Mardini» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 3798,
+        "name": "Luis Sisino"
+      },
+      "drop": {
+        "id": 8908,
+        "name": "Luis Sisinno"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249190 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.983 sobre el nombre sin apodo; name_variant: mismo nombre luis; apellido con errata sisino / sisinno). Misma persona: se conserva «Luis Sisino» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 6728,
+        "name": "Sokrates Papadopoulos"
+      },
+      "drop": {
+        "id": 3847,
+        "name": "Sokrates Papadopolus"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249198 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.980 sobre el nombre sin apodo; name_variant: mismo nombre sokrates; apellido con errata papadopolus / papadopoulos). Misma persona: se conserva «Sokrates Papadopoulos» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 3902,
+        "name": "Manuel Torcat"
+      },
+      "drop": {
+        "id": 5955,
+        "name": "Manuel Torcatt"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249174 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.986 sobre el nombre sin apodo; name_variant: mismo nombre manuel; apellido con errata torcat / torcatt). Misma persona: se conserva «Manuel Torcat» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 10109,
+        "name": "Juan Carlos Calderón"
+      },
+      "drop": {
+        "id": 4029,
+        "name": "Juan Carlos Claderón"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249148 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.990 sobre el nombre sin apodo; name_variant: mismo nombre juan; apellido con errata claderon / calderon). Misma persona: se conserva «Juan Carlos Calderón» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 4954,
+        "name": "Marcos Mejía"
+      },
+      "drop": {
+        "id": 4037,
+        "name": "Markos Mejías"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249263 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.945 sobre el nombre sin apodo; name_variant: mismo nombre markos; apellido con errata mejias / mejia). Misma persona: se conserva «Marcos Mejía» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 8286,
+        "name": "Manolo Freire"
+      },
+      "drop": {
+        "id": 4330,
+        "name": "Manuel Freyre"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249235 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.969 sobre el nombre sin apodo; name_variant: mismo nombre manuel; apellido con errata freire / freyre). Misma persona: se conserva «Manolo Freire» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 4408,
+        "name": "Oswaldo \"Oss\" González"
+      },
+      "drop": {
+        "id": 5816,
+        "name": "Oswaldo González"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #193663 del detector de duplicados de persona (evidencia 2026-09-30: nickname_equal: sin apodo coinciden: oswaldo gonzalez; alias_cross: «Oswaldo \"Oss\" González» figura como alias «Oswaldo González» de «Oswaldo González). Misma persona: se conserva «Oswaldo \"Oss\" González» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 4731,
+        "name": "Matatigre (Clara Bolívar)"
+      },
+      "drop": {
+        "id": 6776,
+        "name": "Matatigre"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249001 del detector de duplicados de persona (evidencia 2026-09-30: nickname_equal: sin apodo coinciden: matatigre; alias_cross: «Matatigre (Clara Bolívar)» figura como alias «Matatigre» de «Matatigre»; jaro_winkler: J). Misma persona: se conserva «Matatigre (Clara Bolívar)» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 5309,
+        "name": "Ricardo Prati"
+      },
+      "drop": {
+        "id": 6409,
+        "name": "Ricardo \"Pot\" Prati"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #193669 del detector de duplicados de persona (evidencia 2026-09-30: nickname_equal: sin apodo coinciden: ricardo prati; alias_cross: «Ricardo Prati» figura como alias «Ricardo \"Pot\" Prati» de «Ricardo \"Pot\" Prati»; jar). Misma persona: se conserva «Ricardo Prati» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 5741,
+        "name": "Arnoldo Sergas"
+      },
+      "drop": {
+        "id": 5577,
+        "name": "Arnoldo Serga"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249175 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.986 sobre el nombre sin apodo; name_variant: mismo nombre arnoldo; apellido con errata serga / sergas). Misma persona: se conserva «Arnoldo Sergas» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 7587,
+        "name": "Sergio Pizzolante"
+      },
+      "drop": {
+        "id": 5762,
+        "name": "Sergio Pizolante"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249159 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.988 sobre el nombre sin apodo; name_variant: mismo nombre sergio; apellido con errata pizolante / pizzolante). Misma persona: se conserva «Sergio Pizzolante» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 8842,
+        "name": "Rafael \"Gallo\" Velásquez"
+      },
+      "drop": {
+        "id": 5840,
+        "name": "Rafael Velázquez"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249259 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.948 sobre el nombre sin apodo; name_variant: mismo nombre rafael; apellido con errata velazquez / velasquez). Misma persona: se conserva «Rafael \"Gallo\" Velásquez» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 8842,
+        "name": "Rafael \"Gallo\" Velásquez"
+      },
+      "drop": {
+        "id": 8289,
+        "name": "Rafael Velásquez"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #193676 del detector de duplicados de persona (evidencia 2026-09-30: nickname_equal: sin apodo coinciden: rafael velasquez; alias_cross: «Rafael Velásquez» figura como alias «Rafael \"Gallo\" Velásquez» de «Rafael \"Gallo\"). Misma persona: se conserva «Rafael \"Gallo\" Velásquez» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 6298,
+        "name": "Corrado Cammisuli"
+      },
+      "drop": {
+        "id": 6073,
+        "name": "Corrado Camisuli"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249160 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.988 sobre el nombre sin apodo; name_variant: mismo nombre corrado; apellido con errata camisuli / cammisuli). Misma persona: se conserva «Corrado Cammisuli» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 6614,
+        "name": "Héctor Do Nascimento"
+      },
+      "drop": {
+        "id": 12662,
+        "name": "Hector Do Nascimiento"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249146 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.990 sobre el nombre sin apodo; name_variant: mismo nombre hector; apellido con errata nascimento / nascimiento). Misma persona: se conserva «Héctor Do Nascimento» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 6666,
+        "name": "Teatro Juáres"
+      },
+      "drop": {
+        "id": 8040,
+        "name": "Teatro Juarez"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249237 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.969 sobre el nombre sin apodo; name_variant: mismo nombre teatro; apellido con errata juares / juarez). Misma persona: se conserva «Teatro Juáres» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 7066,
+        "name": "Ramón Bassols"
+      },
+      "drop": {
+        "id": 7952,
+        "name": "Ramón Bassol"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249185 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.985 sobre el nombre sin apodo; name_variant: mismo nombre ramon; apellido con errata bassols / bassol). Misma persona: se conserva «Ramón Bassols» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 7073,
+        "name": "Roland Streuli"
+      },
+      "drop": {
+        "id": 12644,
+        "name": "Roland Streulli"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249168 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.987 sobre el nombre sin apodo; name_variant: mismo nombre roland; apellido con errata streuli / streulli). Misma persona: se conserva «Roland Streuli» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 7115,
+        "name": "Eduardo Stambury"
+      },
+      "drop": {
+        "id": 7812,
+        "name": "Eduardo Stanbury"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249205 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.975 sobre el nombre sin apodo; name_variant: mismo nombre eduardo; apellido con errata stambury / stanbury). Misma persona: se conserva «Eduardo Stambury» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 7121,
+        "name": "Marisela Lagrave"
+      },
+      "drop": {
+        "id": 7436,
+        "name": "Marisela Lagrav"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249164 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.988 sobre el nombre sin apodo; name_variant: mismo nombre marisela; apellido con errata lagrave / lagrav). Misma persona: se conserva «Marisela Lagrave» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 7321,
+        "name": "Kiko Ricote"
+      },
+      "drop": {
+        "id": 12913,
+        "name": "Kiko Rikote"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249243 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.964 sobre el nombre sin apodo; name_variant: mismo nombre kiko; apellido con errata ricote / rikote). Misma persona: se conserva «Kiko Ricote» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 7437,
+        "name": "José Luis Morenza"
+      },
+      "drop": {
+        "id": 8619,
+        "name": "José Luis Moranza"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249248 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.958 sobre el nombre sin apodo; name_variant: mismo nombre jose; apellido con errata morenza / moranza). Misma persona: se conserva «José Luis Morenza» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 7779,
+        "name": "Luis María \"Billo\" Frómeta"
+      },
+      "drop": {
+        "id": 8824,
+        "name": "Billo Frómeta"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249290 del detector de duplicados de persona (evidencia 2026-09-30: name_variant: apodo «billo» como nombre; apellido igual). Misma persona: se conserva «Luis María \"Billo\" Frómeta» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 8273,
+        "name": "Burt Bacharach"
+      },
+      "drop": {
+        "id": 12680,
+        "name": "Burt Bacharad"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249251 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.956 sobre el nombre sin apodo; name_variant: mismo nombre burt; apellido con errata bacharach / bacharad). Misma persona: se conserva «Burt Bacharach» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 8276,
+        "name": "Luis Wiener"
+      },
+      "drop": {
+        "id": 12872,
+        "name": "Luis Weiner"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249197 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.982 sobre el nombre sin apodo; name_variant: mismo nombre luis; apellido con errata wiener / weiner). Misma persona: se conserva «Luis Wiener» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 8300,
+        "name": "Enzo Casella"
+      },
+      "drop": {
+        "id": 12746,
+        "name": "Enzo Cassella"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249186 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.985 sobre el nombre sin apodo; name_variant: mismo nombre enzo; apellido con errata casella / cassella). Misma persona: se conserva «Enzo Casella» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 8347,
+        "name": "Pixels Computación S.A."
+      },
+      "drop": {
+        "id": 12841,
+        "name": "Pixels Computation"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249116 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.943 sobre el nombre sin apodo; name_variant: mismo nombre pixels; apellido con errata computacion / computation; shared_a). Misma persona: se conserva «Pixels Computación S.A.» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 8350,
+        "name": "John Philips"
+      },
+      "drop": {
+        "id": 9219,
+        "name": "John Phillips"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249187 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.985 sobre el nombre sin apodo; name_variant: mismo nombre john; apellido con errata philips / phillips). Misma persona: se conserva «John Philips» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 9444,
+        "name": "Luis Gómez Escolar"
+      },
+      "drop": {
+        "id": 9992,
+        "name": "Luis Gómez Escobar"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249201 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.978 sobre el nombre sin apodo; name_variant: mismo nombre luis; apellido con errata escolar / escobar). Misma persona: se conserva «Luis Gómez Escolar» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 9924,
+        "name": "Carlos Enrique Jugo"
+      },
+      "drop": {
+        "id": 11853,
+        "name": "Carlos Jugo"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249314 del detector de duplicados de persona (evidencia 2026-09-30: first_last_equal: comparten primer y último token: carlos … jugo; shared_artist: trabajaron con los mismos artistas: 257; shared_colleagues: acreditad). Misma persona: se conserva «Carlos Enrique Jugo» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 12142,
+        "name": "Edgar Winter"
+      },
+      "drop": {
+        "id": 11465,
+        "name": "Edgar Winters"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249188 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.985 sobre el nombre sin apodo; name_variant: mismo nombre edgar; apellido con errata winters / winter). Misma persona: se conserva «Edgar Winter» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 12102,
+        "name": "The Platters"
+      },
+      "drop": {
+        "id": 12119,
+        "name": "The Platers"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249087 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.983 sobre el nombre sin apodo; name_variant: mismo nombre the; apellido con errata platters / platers; shared_artist: tra). Misma persona: se conserva «The Platters» y la grafía descartada queda como alias."
+    },
+    {
+      "op": "merge",
+      "keep": {
+        "id": 12566,
+        "name": "Paul Rengel"
+      },
+      "drop": {
+        "id": 13014,
+        "name": "Paul Rangel"
+      },
+      "keepDropNameAsAlias": true,
+      "why": "Revisión(es) #249268 del detector de duplicados de persona (evidencia 2026-09-30: jaro_winkler: Jaro-Winkler=0.934 sobre el nombre sin apodo; name_variant: mismo nombre paul; apellido con errata rengel / rangel). Misma persona: se conserva «Paul Rengel» y la grafía descartada queda como alias."
+    }
+  ]
+}
