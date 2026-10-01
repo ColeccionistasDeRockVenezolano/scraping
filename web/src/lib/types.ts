@@ -65,13 +65,21 @@ export interface ArtistDetail extends ArtistListItem {
   /** Sello del disco más reciente que lo declara (derivado). */
   lastLabel: { id: number; name: string } | null;
   links: ArtistLink[];
+  related: RelatedArtist[];
+  /** Década de arranque (formación o primer disco); null si no hay año. */
+  similarDecade: number | null;
   similar: SimilarArtist[];
 }
 
 export interface ArtistLink { platform: "youtube" | "instagram" | "wordpress"; url: string; albumId: number; albumTitle: string; }
-export interface SimilarArtist {
+/** Banda con dos o más integrantes en común. */
+export interface RelatedArtist {
   id: number; name: string; pictureUrl: string | null; originCountry: string;
-  reason: "members" | "genre"; sharedMembers: number;
+  sharedMembers: number; sharedMemberNames: string[];
+}
+/** Mismo género principal y misma década de arranque. */
+export interface SimilarArtist {
+  id: number; name: string; pictureUrl: string | null; originCountry: string; startYear: number | null;
 }
 
 // ---------- albums ----------

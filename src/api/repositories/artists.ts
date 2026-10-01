@@ -93,43 +93,65 @@ export interface ArtistDetail {
   lastLabel: { id: number; name: string } | null;
   /** Enlaces públicos de sus discos (YouTube, Instagram, WordPress), uno por disco y plataforma. */
   links: Array<{ platform: "youtube" | "instagram" | "wordpress"; url: string; albumId: number; albumTitle: string }>;
-  /** Artistas que comparten integrantes o género principal; los primeros, por integrantes en común. */
-  similar: Array<{ id: number; name: string; pictureUrl: string | null; originCountry: string; reason: "members" | "genre"; sharedMembers: number }>;
+  /** Bandas con dos o más integrantes en común (solo membresías, de cualquier época). */
+  related: Array<{ id: number; name: string; pictureUrl: string | null; originCountry: string; sharedMembers: number; sharedMemberNames: string[] }>;
+  /** Década en que arrancó (formación o, si falta, su primer disco); null si no hay año. */
+  similarDecade: number | null;
+  /** Mismo género principal y misma década de arranque; sin año, solo el género. */
+  similar: Array<{ id: number; name: string; pictureUrl: string | null; originCountry: string; startYear: number | null }>;
 }
 
+const RELATED_MIN_SHARED = 2;
+const RELATED_LIMIT = 24;
 const SIMILAR_LIMIT = 12;
 
-async function similarArtists(id: number, primaryGenre: PublicGenre | null): Promise<ArtistDetail["similar"]> {
-  const shared = await getPool().query<{ id: string; name: string; picture_url: string | null; origin_country: string; shared: number }>(
-    `SELECT o.id::text AS id, o.name, o.picture_url, o.origin_country, count(DISTINCT am.person_id)::int AS shared
+/** Año de arranque: el de formación o, si falta, el de su primer disco. */
+const START_YEAR_SQL = (artist: string) =>
+  `COALESCE(${artist}.formed_year, (SELECT min(al.release_year) FROM public.albums al WHERE al.artist_id = ${artist}.id))`;
+
+async function relatedArtists(id: number): Promise<ArtistDetail["related"]> {
+  const { rows } = await getPool().query<{ id: string; name: string; picture_url: string | null; origin_country: string; shared: number; shared_names: string[] }>(
+    `SELECT o.id::text AS id, o.name, o.picture_url, o.origin_country,
+            count(DISTINCT am.person_id)::int AS shared,
+            array_agg(DISTINCT p.name ORDER BY p.name) AS shared_names
        FROM public.artist_members am
        JOIN public.artist_members om ON om.person_id = am.person_id AND om.artist_id <> am.artist_id
        JOIN public.artists o ON o.id = om.artist_id
+       JOIN public.persons p ON p.id = am.person_id
       WHERE am.artist_id = $1
       GROUP BY o.id, o.name, o.picture_url, o.origin_country
+     HAVING count(DISTINCT am.person_id) >= $2
       ORDER BY shared DESC, o.name
-      LIMIT $2`,
-    [id, SIMILAR_LIMIT],
+      LIMIT $3`,
+    [id, RELATED_MIN_SHARED, RELATED_LIMIT],
   );
-  const out: ArtistDetail["similar"] = shared.rows.map((row) => ({
+  return rows.map((row) => ({
     id: Number(row.id), name: row.name, pictureUrl: row.picture_url, originCountry: row.origin_country,
-    reason: "members", sharedMembers: row.shared,
+    sharedMembers: row.shared, sharedMemberNames: row.shared_names,
   }));
-  if (primaryGenre && out.length < SIMILAR_LIMIT) {
-    const byGenre = await getPool().query<{ id: string; name: string; picture_url: string | null; origin_country: string }>(
-      `SELECT a.id::text AS id, a.name, a.picture_url, a.origin_country
-         FROM public.artists a
-        WHERE a.id <> $1 AND a.id <> ALL($2::bigint[])
-          AND ${genreFilterSql("artist", "a.id", "$3")}
-        ORDER BY (a.picture_url IS NULL), md5(a.id::text || $1::text)
-        LIMIT $4`,
-      [id, out.map((item) => item.id), primaryGenre.slug, SIMILAR_LIMIT - out.length],
-    );
-    for (const row of byGenre.rows) {
-      out.push({ id: Number(row.id), name: row.name, pictureUrl: row.picture_url, originCountry: row.origin_country, reason: "genre", sharedMembers: 0 });
-    }
-  }
-  return out;
+}
+
+async function similarArtists(id: number, primaryGenre: PublicGenre | null): Promise<Pick<ArtistDetail, "similar" | "similarDecade">> {
+  const { rows: [self] } = await getPool().query<{ start_year: number | null }>(
+    `SELECT ${START_YEAR_SQL("a")} AS start_year FROM public.artists a WHERE a.id = $1`, [id]);
+  const similarDecade = self?.start_year == null ? null : Math.floor(self.start_year / 10) * 10;
+  if (!primaryGenre) return { similar: [], similarDecade };
+  const { rows } = await getPool().query<{ id: string; name: string; picture_url: string | null; origin_country: string; start_year: number | null }>(
+    `SELECT c.id::text AS id, c.name, c.picture_url, c.origin_country, c.start_year
+       FROM (SELECT a.id, a.name, a.picture_url, a.origin_country, ${START_YEAR_SQL("a")} AS start_year
+               FROM public.artists a
+              WHERE a.id <> $1 AND ${genreFilterSql("artist", "a.id", "$2")}) c
+      WHERE $3::int IS NULL OR (c.start_year >= $3::int AND c.start_year < $3::int + 10)
+      ORDER BY (c.picture_url IS NULL), md5(c.id::text || $1::text)
+      LIMIT $4`,
+    [id, primaryGenre.slug, similarDecade, SIMILAR_LIMIT],
+  );
+  return {
+    similarDecade,
+    similar: rows.map((row) => ({
+      id: Number(row.id), name: row.name, pictureUrl: row.picture_url, originCountry: row.origin_country, startYear: row.start_year,
+    })),
+  };
 }
 
 export async function getArtistDetail(id: number): Promise<ArtistDetail | null> {
@@ -195,6 +217,7 @@ export async function getArtistDetail(id: number): Promise<ArtistDetail | null> 
     aliases: row["aliases"] as ArtistDetail["aliases"],
     lastLabel: row["last_label"] as ArtistDetail["lastLabel"],
     links: row["links"] as ArtistDetail["links"],
-    similar: await similarArtists(id, genres.primaryGenre),
+    related: await relatedArtists(id),
+    ...await similarArtists(id, genres.primaryGenre),
   };
 }

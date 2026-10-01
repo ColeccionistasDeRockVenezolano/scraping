@@ -71,10 +71,11 @@ export function ArtistDetailPage() {
     { label: "Último sello", value: artist.lastLabel ? <Link to={`/organizaciones/${artist.lastLabel.id}`}>{artist.lastLabel.name}</Link> : null, fallback: "Independiente / sin dato" },
   ];
   // La API más antigua no manda estos campos: la ficha sigue abriendo sin ellos.
+  const related = artist.related ?? [];
   const similar = artist.similar ?? [];
   const links = artist.links ?? [];
-  const similarByMembers = similar.filter((item) => item.reason === "members");
-  const similarByGenre = similar.filter((item) => item.reason === "genre");
+  const similarDecade = artist.similarDecade ?? null;
+  const similarHeading = [artist.primaryGenre?.name, similarDecade === null ? null : `años ${similarDecade}`].filter(Boolean).join(" · ");
   const linksByPlatform = LINK_PLATFORMS
     .map((platform) => ({ ...platform, items: links.filter((link) => link.platform === platform.key) }))
     .filter((group) => group.items.length > 0);
@@ -117,30 +118,27 @@ export function ArtistDetailPage() {
       ),
     },
     {
+      key: "relacionados", label: "Artistas relacionados", count: related.length,
+      content: related.length === 0 ? <TabEmpty>Ninguna otra banda comparte dos o más integrantes con esta.</TabEmpty> : (
+        <div className="grid-cards">
+          {related.map((item) => (
+            <EntityCard key={item.id} to={`/artistas/${item.id}`} title={item.name} imageUrl={item.pictureUrl} placeholder={initialOf(item.name)}
+              subtitle={`${item.sharedMembers} en común: ${item.sharedMemberNames.join(", ")}`} />
+          ))}
+        </div>
+      ),
+    },
+    {
       key: "similares", label: "Artistas similares", count: similar.length,
-      content: similar.length === 0 ? <TabEmpty>Aún no hay artistas con integrantes o género en común.</TabEmpty> : (
+      content: similar.length === 0 ? <TabEmpty>Aún no hay artistas del mismo género y época.</TabEmpty> : (
         <>
-          {similarByMembers.length > 0 ? (
-            <>
-              <h3 className="similar-reason">Comparten integrantes</h3>
-              <div className="grid-cards">
-                {similarByMembers.map((item) => (
-                  <EntityCard key={item.id} to={`/artistas/${item.id}`} title={item.name} imageUrl={item.pictureUrl} placeholder={initialOf(item.name)}
-                    subtitle={`${item.originCountry} · ${item.sharedMembers} en común`} />
-                ))}
-              </div>
-            </>
-          ) : null}
-          {similarByGenre.length > 0 ? (
-            <>
-              <h3 className="similar-reason">Mismo género{artist.primaryGenre ? `: ${artist.primaryGenre.name}` : ""}</h3>
-              <div className="grid-cards">
-                {similarByGenre.map((item) => (
-                  <EntityCard key={item.id} to={`/artistas/${item.id}`} title={item.name} imageUrl={item.pictureUrl} placeholder={initialOf(item.name)} subtitle={item.originCountry} />
-                ))}
-              </div>
-            </>
-          ) : null}
+          {similarHeading ? <h3 className="similar-reason">{similarHeading}</h3> : null}
+          <div className="grid-cards">
+            {similar.map((item) => (
+              <EntityCard key={item.id} to={`/artistas/${item.id}`} title={item.name} imageUrl={item.pictureUrl} placeholder={initialOf(item.name)}
+                subtitle={[item.originCountry, item.startYear].filter(Boolean).join(" · ")} />
+            ))}
+          </div>
         </>
       ),
     },

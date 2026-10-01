@@ -40,10 +40,15 @@ const artistDetailSchema = artistListItemSchema.extend({
   links: z.array(z.object({
     platform: z.enum(["youtube", "instagram", "wordpress"]), url: z.string(), albumId: z.number().int(), albumTitle: z.string(),
   })).describe("Enlaces públicos de sus discos."),
+  related: z.array(z.object({
+    id: z.number().int(), name: z.string(), pictureUrl: z.string().nullable(), originCountry: z.string(),
+    sharedMembers: z.number().int(), sharedMemberNames: z.array(z.string()),
+  })).describe("Bandas con dos o más integrantes en común (membresías)."),
+  similarDecade: z.number().int().nullable().describe("Década de arranque (formación o primer disco)."),
   similar: z.array(z.object({
     id: z.number().int(), name: z.string(), pictureUrl: z.string().nullable(), originCountry: z.string(),
-    reason: z.enum(["members", "genre"]), sharedMembers: z.number().int(),
-  })).describe("Artistas con integrantes o género principal en común."),
+    startYear: z.number().int().nullable(),
+  })).describe("Mismo género principal y misma década de arranque; sin año, solo el género."),
 });
 
 const listQuerySchema = paginationQuerySchema.extend({
