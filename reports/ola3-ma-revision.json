@@ -1,0 +1,150 @@
+{
+ "photo_rejects": [
+  {
+   "n": 20,
+   "artist_id": 314,
+   "artist": "Beyond of Desolation"
+  },
+  {
+   "n": 29,
+   "artist_id": 331,
+   "artist": "Ghriéving"
+  },
+  {
+   "n": 35,
+   "artist_id": 340,
+   "artist": "Blasphemovs War"
+  },
+  {
+   "n": 37,
+   "artist_id": 348,
+   "artist": "Igni Dare"
+  },
+  {
+   "n": 53,
+   "artist_id": 401,
+   "artist": "Zeus"
+  },
+  {
+   "n": 80,
+   "artist_id": 493,
+   "artist": "Messiah In The Abyss"
+  },
+  {
+   "n": 119,
+   "artist_id": 602,
+   "artist": "Impery"
+  },
+  {
+   "n": 144,
+   "artist_id": 672,
+   "artist": "Cthonica"
+  },
+  {
+   "n": 160,
+   "artist_id": 730,
+   "artist": "Nox Desperatio"
+  },
+  {
+   "n": 167,
+   "artist_id": 740,
+   "artist": "Sectasys"
+  },
+  {
+   "n": 189,
+   "artist_id": 769,
+   "artist": "Metastasis"
+  },
+  {
+   "n": 244,
+   "artist_id": 875,
+   "artist": "Okkvlt"
+  },
+  {
+   "n": 251,
+   "artist_id": 895,
+   "artist": "Theurgia"
+  },
+  {
+   "n": 253,
+   "artist_id": 897,
+   "artist": "Walking Over Strings"
+  },
+  {
+   "n": 303,
+   "artist_id": 1451,
+   "artist": "Alfajor Del Dolor"
+  },
+  {
+   "n": 327,
+   "artist_id": 2160,
+   "artist": "Moriturio"
+  }
+ ],
+ "review_cases": [
+  {
+   "artist": "Agonia",
+   "reason": "multi_exact",
+   "cands": [
+    "https://www.metal-archives.com/bands/Agon%C3%ADa/32017",
+    "https://www.metal-archives.com/bands/Agon%C3%ADa/3540380262"
+   ]
+  },
+  {
+   "artist": "Arpía",
+   "reason": "fuzzy",
+   "cands": [
+    [
+     "fuzzy(0.89)",
+     "https://www.metal-archives.com/bands/Aria/118847"
+    ]
+   ]
+  },
+  {
+   "artist": "Bélica",
+   "reason": "fuzzy",
+   "cands": [
+    [
+     "fuzzy(0.91)",
+     "https://www.metal-archives.com/bands/Belia/3540478758"
+    ]
+   ]
+  },
+  {
+   "artist": "Nemesis",
+   "reason": "multi_exact",
+   "cands": [
+    "https://www.metal-archives.com/bands/Nemesis/3540358739",
+    "https://www.metal-archives.com/bands/Nemesis/93598"
+   ]
+  },
+  {
+   "artist": "Orion",
+   "reason": "multi_exact",
+   "cands": [
+    "https://www.metal-archives.com/bands/Orion/32110",
+    "https://www.metal-archives.com/bands/Orion/3540468672"
+   ]
+  },
+  {
+   "artist": "Sorthe",
+   "reason": "fuzzy",
+   "cands": [
+    [
+     "fuzzy(0.91)",
+     "https://www.metal-archives.com/bands/Sorte/3540558770"
+    ]
+   ]
+  },
+  {
+   "artist": "SINAPSIS",
+   "reason": "fuzzy",
+   "cands": [
+    [
+     "fuzzy(0.88)",
+     "https://www.metal-archives.com/bands/Sinopsis/99898"
+    ]
+   ]
+  }
+ ]
+}
