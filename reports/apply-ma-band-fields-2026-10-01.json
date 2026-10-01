@@ -1,0 +1,39 @@
+{
+  "timestamp": "2026-10-01T15:29:32.899Z",
+  "runRanges": [
+    {
+      "runId": 10757,
+      "desde": 1,
+      "hasta": 120,
+      "campos": 317
+    },
+    {
+      "runId": 10758,
+      "desde": 121,
+      "hasta": 240,
+      "campos": 347
+    },
+    {
+      "runId": 10759,
+      "desde": 241,
+      "hasta": 360,
+      "campos": 319
+    },
+    {
+      "runId": 10760,
+      "desde": 361,
+      "hasta": 410,
+      "campos": 169
+    }
+  ],
+  "report": {
+    "status": 413,
+    "themes": 258,
+    "years_active": 383,
+    "origin_city": 54,
+    "biography": 4,
+    "disbanded_year": 33,
+    "formed_year": 7
+  },
+  "errores": []
+}

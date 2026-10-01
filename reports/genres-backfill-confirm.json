@@ -1,0 +1,511 @@
+{
+  "mode": "confirm",
+  "runId": 10862,
+  "projectionEnabled": true,
+  "levels": [
+    "artist"
+  ],
+  "processed": {
+    "artist": 776,
+    "album": 0
+  },
+  "writes": {
+    "inserted": 504,
+    "updated": 75,
+    "deleted": 0,
+    "humanEvidence": 261,
+    "reviewsOpened": 260,
+    "reviewsClosed": 0
+  },
+  "before": {
+    "albums": {
+      "total": 4953,
+      "withConfirmedPrimary": 4093,
+      "withAnyConfirmed": 4098,
+      "genreNotNull": 4093,
+      "pending": 0,
+      "unclassified": 860
+    },
+    "artists": {
+      "total": 2803,
+      "withConfirmedPrimary": 2237,
+      "withAnyConfirmed": 2237
+    },
+    "rows": [
+      {
+        "level": "album",
+        "status": "confirmed",
+        "decisionKind": "human",
+        "decisionRule": "human_decision",
+        "rows": 2841
+      },
+      {
+        "level": "album",
+        "status": "confirmed",
+        "decisionKind": "rule",
+        "decisionRule": "explicit_source_alias",
+        "rows": 1155
+      },
+      {
+        "level": "album",
+        "status": "confirmed",
+        "decisionKind": "rule",
+        "decisionRule": "partial_source_agreement",
+        "rows": 3
+      },
+      {
+        "level": "album",
+        "status": "confirmed",
+        "decisionKind": "rule",
+        "decisionRule": "source_list_order",
+        "rows": 1661
+      },
+      {
+        "level": "album",
+        "status": "confirmed",
+        "decisionKind": "rule",
+        "decisionRule": "sources_agree",
+        "rows": 11
+      },
+      {
+        "level": "album",
+        "status": "suggested",
+        "decisionKind": "rule",
+        "decisionRule": "external_suggestion",
+        "rows": 2
+      },
+      {
+        "level": "album",
+        "status": "suggested",
+        "decisionKind": "rule",
+        "decisionRule": "sources_disagree",
+        "rows": 7
+      },
+      {
+        "level": "album",
+        "status": "superseded",
+        "decisionKind": "human",
+        "decisionRule": "human_decision",
+        "rows": 41
+      },
+      {
+        "level": "album",
+        "status": "superseded",
+        "decisionKind": "rule",
+        "decisionRule": "explicit_source_alias",
+        "rows": 2
+      },
+      {
+        "level": "album",
+        "status": "superseded",
+        "decisionKind": "rule",
+        "decisionRule": "external_suggestion",
+        "rows": 117
+      },
+      {
+        "level": "album",
+        "status": "superseded",
+        "decisionKind": "rule",
+        "decisionRule": "family_superseded_by_child",
+        "rows": 56
+      },
+      {
+        "level": "artist",
+        "status": "confirmed",
+        "decisionKind": "human",
+        "decisionRule": "human_decision",
+        "rows": 2902
+      },
+      {
+        "level": "artist",
+        "status": "confirmed",
+        "decisionKind": "rule",
+        "decisionRule": "explicit_source_alias",
+        "rows": 110
+      },
+      {
+        "level": "artist",
+        "status": "confirmed",
+        "decisionKind": "rule",
+        "decisionRule": "source_list_order",
+        "rows": 241
+      },
+      {
+        "level": "artist",
+        "status": "superseded",
+        "decisionKind": "human",
+        "decisionRule": "human_decision",
+        "rows": 13
+      },
+      {
+        "level": "artist",
+        "status": "superseded",
+        "decisionKind": "rule",
+        "decisionRule": "family_superseded_by_child",
+        "rows": 25
+      }
+    ],
+    "openReviews": []
+  },
+  "after": {
+    "albums": {
+      "total": 4953,
+      "withConfirmedPrimary": 4093,
+      "withAnyConfirmed": 4098,
+      "genreNotNull": 4093,
+      "pending": 0,
+      "unclassified": 860
+    },
+    "artists": {
+      "total": 2803,
+      "withConfirmedPrimary": 2387,
+      "withAnyConfirmed": 2409
+    },
+    "rows": [
+      {
+        "level": "album",
+        "status": "confirmed",
+        "decisionKind": "human",
+        "decisionRule": "human_decision",
+        "rows": 2841
+      },
+      {
+        "level": "album",
+        "status": "confirmed",
+        "decisionKind": "rule",
+        "decisionRule": "explicit_source_alias",
+        "rows": 1155
+      },
+      {
+        "level": "album",
+        "status": "confirmed",
+        "decisionKind": "rule",
+        "decisionRule": "partial_source_agreement",
+        "rows": 3
+      },
+      {
+        "level": "album",
+        "status": "confirmed",
+        "decisionKind": "rule",
+        "decisionRule": "source_list_order",
+        "rows": 1661
+      },
+      {
+        "level": "album",
+        "status": "confirmed",
+        "decisionKind": "rule",
+        "decisionRule": "sources_agree",
+        "rows": 11
+      },
+      {
+        "level": "album",
+        "status": "suggested",
+        "decisionKind": "rule",
+        "decisionRule": "external_suggestion",
+        "rows": 2
+      },
+      {
+        "level": "album",
+        "status": "suggested",
+        "decisionKind": "rule",
+        "decisionRule": "sources_disagree",
+        "rows": 7
+      },
+      {
+        "level": "album",
+        "status": "superseded",
+        "decisionKind": "human",
+        "decisionRule": "human_decision",
+        "rows": 41
+      },
+      {
+        "level": "album",
+        "status": "superseded",
+        "decisionKind": "rule",
+        "decisionRule": "explicit_source_alias",
+        "rows": 2
+      },
+      {
+        "level": "album",
+        "status": "superseded",
+        "decisionKind": "rule",
+        "decisionRule": "external_suggestion",
+        "rows": 117
+      },
+      {
+        "level": "album",
+        "status": "superseded",
+        "decisionKind": "rule",
+        "decisionRule": "family_superseded_by_child",
+        "rows": 56
+      },
+      {
+        "level": "artist",
+        "status": "confirmed",
+        "decisionKind": "human",
+        "decisionRule": "human_decision",
+        "rows": 2902
+      },
+      {
+        "level": "artist",
+        "status": "confirmed",
+        "decisionKind": "rule",
+        "decisionRule": "explicit_source_alias",
+        "rows": 245
+      },
+      {
+        "level": "artist",
+        "status": "confirmed",
+        "decisionKind": "rule",
+        "decisionRule": "partial_source_agreement",
+        "rows": 26
+      },
+      {
+        "level": "artist",
+        "status": "confirmed",
+        "decisionKind": "rule",
+        "decisionRule": "source_list_order",
+        "rows": 515
+      },
+      {
+        "level": "artist",
+        "status": "confirmed",
+        "decisionKind": "rule",
+        "decisionRule": "sources_agree",
+        "rows": 42
+      },
+      {
+        "level": "artist",
+        "status": "suggested",
+        "decisionKind": "rule",
+        "decisionRule": "sources_disagree",
+        "rows": 26
+      },
+      {
+        "level": "artist",
+        "status": "superseded",
+        "decisionKind": "human",
+        "decisionRule": "human_decision",
+        "rows": 13
+      },
+      {
+        "level": "artist",
+        "status": "superseded",
+        "decisionKind": "rule",
+        "decisionRule": "family_superseded_by_child",
+        "rows": 26
+      }
+    ],
+    "openReviews": [
+      {
+        "level": "artist",
+        "genreCase": "compound_value",
+        "reviews": 33
+      },
+      {
+        "level": "artist",
+        "genreCase": "human_contradiction",
+        "reviews": 195
+      },
+      {
+        "level": "artist",
+        "genreCase": "primary_disagreement",
+        "reviews": 12
+      },
+      {
+        "level": "artist",
+        "genreCase": "source_disagreement",
+        "reviews": 7
+      },
+      {
+        "level": "artist",
+        "genreCase": "unknown_value",
+        "reviews": 13
+      }
+    ]
+  },
+  "projection": {
+    "changed": 0,
+    "toNull": 0,
+    "withoutEvidence": [],
+    "sample": []
+  },
+  "unresolved": [
+    {
+      "fragment": "Slam",
+      "entities": 4
+    },
+    {
+      "fragment": "Death Metal (later)",
+      "entities": 3
+    },
+    {
+      "fragment": "Melodic Power Metal",
+      "entities": 3
+    },
+    {
+      "fragment": "Progressive Heavy Metal",
+      "entities": 3
+    },
+    {
+      "fragment": "Atmospheric",
+      "entities": 2
+    },
+    {
+      "fragment": "Atmospheric Death",
+      "entities": 2
+    },
+    {
+      "fragment": "Black Metal (early)",
+      "entities": 2
+    },
+    {
+      "fragment": "Death Metal (early)",
+      "entities": 2
+    },
+    {
+      "fragment": "Experimental Black Metal",
+      "entities": 2
+    },
+    {
+      "fragment": "Hard Rock (early)",
+      "entities": 2
+    },
+    {
+      "fragment": "Hardcore (early)",
+      "entities": 2
+    },
+    {
+      "fragment": "Ambient with Industrial influences",
+      "entities": 1
+    },
+    {
+      "fragment": "Avant-garde Black",
+      "entities": 1
+    },
+    {
+      "fragment": "Black Metal (later)",
+      "entities": 1
+    },
+    {
+      "fragment": "Black Metal with Industrial influences",
+      "entities": 1
+    },
+    {
+      "fragment": "Depressive",
+      "entities": 1
+    },
+    {
+      "fragment": "Doom",
+      "entities": 1
+    },
+    {
+      "fragment": "Doom Metal (later)",
+      "entities": 1
+    },
+    {
+      "fragment": "Drone",
+      "entities": 1
+    },
+    {
+      "fragment": "Epic Black Metal",
+      "entities": 1
+    },
+    {
+      "fragment": "Epic Heavy",
+      "entities": 1
+    },
+    {
+      "fragment": "Experimental Death",
+      "entities": 1
+    },
+    {
+      "fragment": "Experimental Grindcore",
+      "entities": 1
+    },
+    {
+      "fragment": "Gothic Metal (early)",
+      "entities": 1
+    },
+    {
+      "fragment": "Gothic Metal (later)",
+      "entities": 1
+    },
+    {
+      "fragment": "Grindcore (early)",
+      "entities": 1
+    },
+    {
+      "fragment": "Grindcore (later)",
+      "entities": 1
+    },
+    {
+      "fragment": "Heavy Metal (early)",
+      "entities": 1
+    },
+    {
+      "fragment": "Heavy Metal (later)",
+      "entities": 1
+    },
+    {
+      "fragment": "Heavy Metal with Latin influences (later)",
+      "entities": 1
+    },
+    {
+      "fragment": "Horror Punk",
+      "entities": 1
+    },
+    {
+      "fragment": "Melodic Death Metal with Rock and Jazz influences",
+      "entities": 1
+    },
+    {
+      "fragment": "Melodic Heavy Metal",
+      "entities": 1
+    },
+    {
+      "fragment": "Melodic Progressive",
+      "entities": 1
+    },
+    {
+      "fragment": "Melodic Thrash Metal",
+      "entities": 1
+    },
+    {
+      "fragment": "Neoclassical",
+      "entities": 1
+    },
+    {
+      "fragment": "Power Metal (later)",
+      "entities": 1
+    },
+    {
+      "fragment": "Power Metal with Folk elements",
+      "entities": 1
+    },
+    {
+      "fragment": "RAC",
+      "entities": 1
+    },
+    {
+      "fragment": "Raw",
+      "entities": 1
+    },
+    {
+      "fragment": "Rock (later)",
+      "entities": 1
+    },
+    {
+      "fragment": "Shred",
+      "entities": 1
+    },
+    {
+      "fragment": "Thrash Metal (early)",
+      "entities": 1
+    },
+    {
+      "fragment": "Thrash Metal (later)",
+      "entities": 1
+    }
+  ]
+}

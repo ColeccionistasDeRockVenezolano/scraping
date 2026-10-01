@@ -1,0 +1,228 @@
+{
+  "runId": 10755,
+  "applied": 20,
+  "added": [
+    {
+      "id": 3829,
+      "entityId": 951,
+      "alias": "Proyecto Haggard",
+      "aliasType": "former_name",
+      "isPrimary": false,
+      "band": "Nota Profana",
+      "maId": "127883",
+      "url": "https://www.metal-archives.com/bands/x/127883",
+      "evidence": "Years active: 2005-2006 (as Proyecto Haggard ), 2006-present"
+    },
+    {
+      "id": 3830,
+      "entityId": 46,
+      "alias": "Power Age",
+      "aliasType": "former_name",
+      "isPrimary": false,
+      "band": "Arkangel",
+      "maId": "2003",
+      "url": "https://www.metal-archives.com/bands/x/2003",
+      "evidence": "Years active: 1977-1981 (as Power Age ), 1981-present"
+    },
+    {
+      "id": 3831,
+      "entityId": 757,
+      "alias": "Corpse Killer",
+      "aliasType": "former_name",
+      "isPrimary": false,
+      "band": "Tinieblas",
+      "maId": "24284",
+      "url": "https://www.metal-archives.com/bands/x/24284",
+      "evidence": "Years active: 1985 (as Corpse Killer ), 1985-1986 (as Poseidón ), 1986-1997, 2002-present"
+    },
+    {
+      "id": 3832,
+      "entityId": 757,
+      "alias": "Poseidón",
+      "aliasType": "former_name",
+      "isPrimary": false,
+      "band": "Tinieblas",
+      "maId": "24284",
+      "url": "https://www.metal-archives.com/bands/x/24284",
+      "evidence": "Years active: 1985 (as Corpse Killer ), 1985-1986 (as Poseidón ), 1986-1997, 2002-present"
+    },
+    {
+      "id": 3833,
+      "entityId": 2160,
+      "alias": "Nigrium Mortualia",
+      "aliasType": "former_name",
+      "isPrimary": false,
+      "band": "Nigrium Mortualia",
+      "maId": "3540269386",
+      "url": "https://www.metal-archives.com/bands/x/3540269386",
+      "evidence": "Years active: 2007-?, ?-present (as Moriturio )"
+    },
+    {
+      "id": 3834,
+      "entityId": 971,
+      "alias": "6Sonar",
+      "aliasType": "name_variant",
+      "isPrimary": false,
+      "band": "Sexto Sonar",
+      "maId": "3540282964",
+      "url": "https://www.metal-archives.com/bands/x/3540282964",
+      "evidence": "Years active: 2004-2014, 2014-present (as 6Sonar )"
+    },
+    {
+      "id": 3835,
+      "entityId": 649,
+      "alias": "Tenebrum Lukretia",
+      "aliasType": "former_name",
+      "isPrimary": false,
+      "band": "Bleeding Tears",
+      "maId": "3540294397",
+      "url": "https://www.metal-archives.com/bands/x/3540294397",
+      "evidence": "Years active: 2004-? (as Tenebrum Lukretia ), ?-present"
+    },
+    {
+      "id": 3836,
+      "entityId": 791,
+      "alias": "Argoth",
+      "aliasType": "former_name",
+      "isPrimary": false,
+      "band": "Dargothar",
+      "maId": "3540335377",
+      "url": "https://www.metal-archives.com/bands/x/3540335377",
+      "evidence": "Years active: 2003-2004 (as Argoth ), 2004-2007, 2025-present"
+    },
+    {
+      "id": 3837,
+      "entityId": 931,
+      "alias": "Beheaded",
+      "aliasType": "former_name",
+      "isPrimary": false,
+      "band": "Beheaded",
+      "maId": "3540361813",
+      "url": "https://www.metal-archives.com/bands/x/3540361813",
+      "evidence": "Years active: 2012-2015, 2015-present (as Behated Reign )"
+    },
+    {
+      "id": 3838,
+      "entityId": 975,
+      "alias": "Epidia",
+      "aliasType": "former_name",
+      "isPrimary": false,
+      "band": "N.W.D.",
+      "maId": "3540372702",
+      "url": "https://www.metal-archives.com/bands/x/3540372702",
+      "evidence": "Years active: 2007-2011 (as Epidia ), 2011-?"
+    },
+    {
+      "id": 3839,
+      "entityId": 895,
+      "alias": "Daemonhorn",
+      "aliasType": "former_name",
+      "isPrimary": false,
+      "band": "Theurgia",
+      "maId": "3540391949",
+      "url": "https://www.metal-archives.com/bands/x/3540391949",
+      "evidence": "Years active: 2006-2014 (as Daemonhorn ), 2014-present"
+    },
+    {
+      "id": 3840,
+      "entityId": 609,
+      "alias": "Godless Crown",
+      "aliasType": "name_variant",
+      "isPrimary": false,
+      "band": "Godless Crown",
+      "maId": "3540409688",
+      "url": "https://www.metal-archives.com/bands/x/3540409688",
+      "evidence": "Years active: ?-? (as Godless ), ?-present"
+    },
+    {
+      "id": 3841,
+      "entityId": 730,
+      "alias": "Desperatio Dei",
+      "aliasType": "name_variant",
+      "isPrimary": false,
+      "band": "Nox Desperatio",
+      "maId": "3540432180",
+      "url": "https://www.metal-archives.com/bands/x/3540432180",
+      "evidence": "Years active: 2012-2024, 2024-present (as Desperatio Dei )"
+    },
+    {
+      "id": 3842,
+      "entityId": 612,
+      "alias": "Nocturnal Art",
+      "aliasType": "former_name",
+      "isPrimary": false,
+      "band": "Nocturnal",
+      "maId": "3540466114",
+      "url": "https://www.metal-archives.com/bands/x/3540466114",
+      "evidence": "Years active: 2001 (as Nocturnal Art ), 2001-?"
+    },
+    {
+      "id": 3843,
+      "entityId": 645,
+      "alias": "Laberno",
+      "aliasType": "former_name",
+      "isPrimary": false,
+      "band": "Laverno",
+      "maId": "3540469785",
+      "url": "https://www.metal-archives.com/bands/x/3540469785",
+      "evidence": "Years active: 1992-? (as Laberno ), ?-1998, 2015-present"
+    },
+    {
+      "id": 3844,
+      "entityId": 656,
+      "alias": "Vicarius Filii Dei",
+      "aliasType": "former_name",
+      "isPrimary": false,
+      "band": "Necroprogenie",
+      "maId": "3540492067",
+      "url": "https://www.metal-archives.com/bands/x/3540492067",
+      "evidence": "Years active: 2004-2006 (as Vicarius Filii Dei ), 2006-present"
+    },
+    {
+      "id": 3845,
+      "entityId": 758,
+      "alias": "Cruento",
+      "aliasType": "former_name",
+      "isPrimary": false,
+      "band": "Incruento",
+      "maId": "3540501209",
+      "url": "https://www.metal-archives.com/bands/x/3540501209",
+      "evidence": "Years active: 2011-2014 (as Cruento ), 2014-2016 (as Agape ), 2016-present"
+    },
+    {
+      "id": 3846,
+      "entityId": 758,
+      "alias": "Agape",
+      "aliasType": "former_name",
+      "isPrimary": false,
+      "band": "Incruento",
+      "maId": "3540501209",
+      "url": "https://www.metal-archives.com/bands/x/3540501209",
+      "evidence": "Years active: 2011-2014 (as Cruento ), 2014-2016 (as Agape ), 2016-present"
+    },
+    {
+      "id": 3847,
+      "entityId": 589,
+      "alias": "Anti-Régimen",
+      "aliasType": "former_name",
+      "isPrimary": false,
+      "band": "Drahcko",
+      "maId": "59953",
+      "url": "https://www.metal-archives.com/bands/x/59953",
+      "evidence": "Years active: 2001-2005 (as Anti-Régimen ), 2005-present"
+    },
+    {
+      "id": 3848,
+      "entityId": 594,
+      "alias": "Leviathan A.C.",
+      "aliasType": "name_variant",
+      "isPrimary": false,
+      "band": "Leviathan A.C.",
+      "maId": "81136",
+      "url": "https://www.metal-archives.com/bands/x/81136",
+      "evidence": "Years active: 2001-? (as Leviathan ), ?-present"
+    }
+  ],
+  "skipped": [],
+  "errors": []
+}
