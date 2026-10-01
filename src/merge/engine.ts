@@ -8,7 +8,7 @@ import { getEnv } from "../config/env.js";
 import { syncEntityGenres } from "../genres/store.js";
 import type { ClaimToPersist, Confidence, PersistedClaim } from "../claims/persistence.js";
 import { createFieldConflict, hasOpenFieldConflict } from "../conflicts/engine.js";
-import { normalizeDisplayName, normalizeEntityName } from "../normalization/entity-name.js";
+import { normalizeDisplayName, normalizeEntityName, splitTrailingNickname } from "../normalization/entity-name.js";
 import { resolveEntity } from "../er/resolver.js";
 import { resolveEntityDeterministically } from "../er/scoring.js";
 import { loadResolutionCandidates, persistResolutionDecision } from "../er/repository.js";
@@ -421,8 +421,21 @@ async function createEntity(client: PoolClient, claim: ClaimToPersist, claimId: 
   const name = scalar(claim.normalizedValue, claim.field);
   if (typeof name !== "string" || !name) throw new Error(`${spec.kind}.${spec.identityColumn} debe ser texto`);
   let query: string; let params: unknown[];
+  // Apodos que la fuente pegó al final del nombre de una persona: no entran en
+  // el nombre, se guardan como alias (regla de Brian, 2026-10-01, caso
+  // Canserbero). Si el nombre limpio ya es de otra ficha no se usa: decidir si
+  // son la misma persona no le toca a una creación, y bautizar la nueva igual
+  // que la vieja fabricaría un duplicado que nadie pidió.
+  let nicknames: string[] = [];
   if (spec.kind === "artist") { query = "INSERT INTO public.artists(name) VALUES($1) RETURNING id"; params = [name]; }
-  else if (spec.kind === "person") { query = "INSERT INTO public.persons(name) VALUES($1) RETURNING id"; params = [name]; }
+  else if (spec.kind === "person") {
+    const split = splitTrailingNickname(name);
+    const taken = split === null ? false : (await client.query(
+      "SELECT 1 FROM public.persons WHERE lower(btrim(name))=lower(btrim($1)) LIMIT 1", [split.name])).rowCount !== 0;
+    if (split !== null && !taken) nicknames = split.nicknames;
+    query = "INSERT INTO public.persons(name) VALUES($1) RETURNING id";
+    params = [nicknames.length ? split!.name : name];
+  }
   else if (spec.kind === "organization") { query = "INSERT INTO public.organizations(name) VALUES($1) RETURNING id"; params = [name]; }
   else if (spec.kind === "album") {
     const artistName = input.kind === "ALBUM" ? input.artist?.name : undefined;
@@ -460,6 +473,9 @@ async function createEntity(client: PoolClient, claim: ClaimToPersist, claimId: 
   if (!id) throw new Error(`no se pudo crear ${spec.kind}`);
   await attachClaim(client, claimId, spec, id);
   await insertAlias(client, claim, claimId, spec, id, name, true);
+  // El nombre tal como lo escribió la fuente queda de alias primario arriba;
+  // aquí se añade el apodo suelto para que se siga encontrando por él.
+  for (const nickname of nicknames) await insertAlias(client, claim, claimId, spec, id, nickname, false);
   await audit(client, claim, claimId, spec, id, spec.identityColumn, null, name, claim.confidence, `new entity after deterministic NO_MATCH; er_decision=${decisionId}`);
   return id;
 }

@@ -1,0 +1,25 @@
+{
+  "decidedAt": "2026-10-01",
+  "evidence": "Caso Canserbero (Brian, 2026-10-01). El catálogo tiene al artista 57 «Canserbero» (el proyecto, con sus tres discos y su biografía) y a la persona 411, que ya figura como «Titular del proyecto» desde el 2026-09-30. La persona arrastraba el apodo dentro del nombre: «Tirone González \"Canserbero\"». Decisión: la persona se llama Tirone González, el apodo pasa a alias (la búsqueda mira nombres y aliases, así que se sigue encontrando por «Canserbero» y por «Tirone») y los créditos de los discos muestran a Tirone González, no a Canserbero. El nombre completo que da la biografía del artista —Tirone José González Orama— se guarda también como alias para no perderlo.",
+  "corrections": [
+    {
+      "op": "rename",
+      "person": { "id": 411, "name": "Tirone González \"Canserbero\"" },
+      "to": "Tirone González",
+      "keepOldNameAsAlias": true,
+      "why": "El nombre de la persona es su nombre; «Canserbero» es el proyecto, que ya tiene su propia ficha (artista 57)."
+    },
+    {
+      "op": "add_alias",
+      "person": { "id": 411, "name": "Tirone González" },
+      "alias": "Canserbero",
+      "why": "Nombre artístico con el que se lo busca; sin el alias, al limpiar el nombre dejaría de encontrarse por él."
+    },
+    {
+      "op": "add_alias",
+      "person": { "id": 411, "name": "Tirone González" },
+      "alias": "Tirone José González Orama",
+      "why": "Nombre completo según la biografía del artista 57 («Canserbero fue el nombre artístico de Tirone José González Orama»)."
+    }
+  ]
+}

@@ -133,3 +133,35 @@ export function splitDeclaredStageName(value: string): { legalOrCanonical: strin
   const stageName = match?.[2]?.replace(/^["']|["']$/gu, "").trim();
   return legalOrCanonical && stageName ? { legalOrCanonical, stageName } : null;
 }
+
+/**
+ * Apodo entre comillas al final del nombre de una persona: «Tirone González
+ * "Canserbero"», «Reynaldo Goitía "Boston Rex"».
+ *
+ * REGLA DE BRIAN (2026-10-01, caso Canserbero): el nombre de una persona es su
+ * nombre, no su nombre más el apodo. El apodo se guarda como alias —la
+ * búsqueda ya mira nombres y aliases, así que sigue encontrándose por los dos—
+ * y los créditos muestran el nombre («Tirone González», no «Canserbero»).
+ *
+ * No afirma identidad con nada: solo reparte en dos campos de la MISMA ficha lo
+ * que la fuente escribió junto (a diferencia de `splitDeclaredStageName`, que
+ * sí necesita un «aka» explícito porque de ahí se cuelgan decisiones de ER).
+ *
+ * Solo el apodo FINAL y solo con base de dos palabras o más: «Rafael "Pollo"
+ * Brito» es la forma en que se lo nombra (apodo intercalado, decisión de Brian:
+ * no se toca) y de «Pablo "El Che"» quedaría «Pablo», que no identifica a nadie
+ * y choca con otras fichas.
+ */
+const TRAILING_NICKNAME = /^\s*(.+?)\s*["“”«]([^"“”«»]+)["“”»]\s*$/u;
+
+export function splitTrailingNickname(value: string): { name: string; nicknames: string[] } | null {
+  const match = TRAILING_NICKNAME.exec(normalizeDisplayName(value));
+  const base = match?.[1]?.trim();
+  const nickname = match?.[2]?.trim();
+  if (!base || !nickname) return null;
+  // La base tiene que ser un nombre que valga por sí solo (nombre + apellido).
+  if (base.split(/\s+/u).filter(Boolean).length < 2) return null;
+  // Una fuente puede apilar dos apodos en el mismo paréntesis: «Sebas/Grimmode».
+  const nicknames = [...new Set(nickname.split("/").map((part) => part.trim()).filter(Boolean))];
+  return nicknames.length ? { name: base, nicknames } : null;
+}

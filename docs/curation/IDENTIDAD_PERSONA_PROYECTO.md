@@ -34,3 +34,46 @@ Discos de participación sin contraparte (p. ej. «Atabal Yémal» bajo Pedro Ca
 
 **Entorno.** El 29-09 FileCleaner borró archivos de `node_modules`; el de este proyecto se
 reinstaló desde `package-lock.json` (tsx, tsc, vitest OK).
+
+---
+
+## El apodo no va en el nombre (caso Canserbero, 2026-10-01)
+
+**Problema.** El artista 57 «Canserbero» (el proyecto, con sus tres discos y su
+biografía) y la persona 411 ya estaban vinculados desde el 2026-09-30, pero la
+persona arrastraba el apodo dentro del nombre —`Tirone González "Canserbero"`—,
+las letras de *Muerte* y *Vida* figuraban a nombre del ARTISTA (en la ficha del
+disco se leía «Canserbero» donde debía decir quién las escribió) y la ficha del
+proyecto no decía de quién era.
+
+**Regla de Brian.** El nombre de una persona es su nombre. El apodo que la
+fuente pegó al final pasa a `ingest.person_aliases`: la búsqueda mira nombres y
+aliases ([`src/api/search-index.ts`](../../src/api/search-index.ts)), así que se
+sigue encontrando por los dos, y los créditos muestran el nombre de la persona.
+Nada se descarta: el nombre anterior se conserva también como alias.
+
+| Qué | Dónde |
+|-----|-------|
+| Separar el apodo final | `splitTrailingNickname` en `src/normalization/entity-name.ts` |
+| Que no vuelva a entrar | `createEntity` en `src/merge/engine.ts` (la ficha nace con el nombre limpio y el apodo de alias) |
+| Barrido del catálogo | `scripts/plan-person-nicknames.ts` → plan para `crv review persons` |
+| Créditos del proyecto a su titular | `scripts/retarget-titular-credits.ts` |
+| Las dos fichas se ven como una | «Nombre real» y las fechas del titular en la ficha del artista; «Proyecto» en la de la persona |
+
+**Solo el apodo final, y solo con base de dos palabras.** `Rafael "Pollo" Brito`
+es la forma en que se lo nombra (apodo intercalado: no se toca, decisión de
+Brian) y de `Pablo "El Che"` quedaría «Pablo», que no identifica a nadie. Si el
+nombre limpio ya es de otra ficha no se renombra: el mismo nombre es una señal
+de nombre, y una señal de nombre sola no funde a nadie: hace falta proyecto
+común (misma banda, disco, pista o artista). El par va a la mesa como
+`person_duplicate`.
+
+| Run | Efecto |
+|-----|--------|
+| 10895 | Caso Canserbero: persona 411 → «Tirone González»; alias `Canserbero`, `Tirone José González Orama` y el nombre anterior |
+| 10896 | 63 créditos de 14 proyectos solistas pasan del artista a su titular; 5 quedaban repetidos y se unieron |
+| 10898 | 167 fichas más con el apodo al final: nombre limpio + apodo de alias |
+| 10899 | 4 revisiones `person_duplicate` abiertas (Julio Rojas, Víctor Rodríguez, Ricardo Tirado, Luis Enrique) |
+
+Sin tocar: 239 apodos intercalados y 21 cuyo nombre limpio sería una sola
+palabra (detalle en `reports/person-nicknames-2026-10-01.jsonl`).
