@@ -1,0 +1,58 @@
+{
+  "mode": "dry-run",
+  "runId": 10382,
+  "model": "claude-sonnet-5",
+  "outputs": 20,
+  "badLines": [],
+  "applied": {
+    "artist": 5,
+    "album": 5,
+    "person": 6,
+    "organization": 1
+  },
+  "enriched": 3,
+  "created": 14,
+  "unchanged": 0,
+  "noData": 2,
+  "changedSinceExport": [],
+  "rejected": [
+    {
+      "caseId": "artist:1005",
+      "batch": "artist-900",
+      "reason": "habla del expediente o del catálogo en vez de la ficha"
+    }
+  ],
+  "unknownCase": [],
+  "lostYears": [
+    {
+      "caseId": "artist:1012",
+      "years": [
+        "2003",
+        "2008"
+      ]
+    }
+  ],
+  "notes": [
+    {
+      "caseId": "artist:1",
+      "note": "s2 sitúa la formación en 1966 y el catálogo/Sincopa en 1967; se mantuvo el año del catálogo y se anotó la discrepancia en el texto."
+    },
+    {
+      "caseId": "artist:1005",
+      "note": "El nombre del músico aparece como Darwin Lugo (Sincopa, catálogo) y Darwin Lubo (RHV, Rock De Vzla, Rockzuela); se usó Lugo por ser la forma del catálogo, anotando la variante."
+    },
+    {
+      "caseId": "album:1246",
+      "note": "Sincopa fecha la edición en 2003 y el catálogo/Descargas Metal Venezolano en 1983; se mantuvo el año del catálogo."
+    },
+    {
+      "caseId": "person:5698",
+      "note": "Solo se registra un crédito de producción sobre un disco del mismo nombre; no hay datos que confirmen si se trata de una persona o de la banda homónima."
+    },
+    {
+      "caseId": "person:12069",
+      "note": "El catálogo marca venezolano:true, aunque Peppino Di Capri es un nombre artístico asociado a un cantante italiano; se mantiene el dato del catálogo por regla, pero se anota la duda para revisión."
+    }
+  ],
+  "discarded": 6
+}

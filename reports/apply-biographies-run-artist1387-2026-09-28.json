@@ -1,0 +1,98 @@
+{
+  "mode": "confirm",
+  "runId": 10471,
+  "models": [
+    "deepseek-flash"
+  ],
+  "outputs": 28,
+  "badLines": [],
+  "applied": {
+    "artist": 1,
+    "album": 0,
+    "person": 0,
+    "organization": 0
+  },
+  "enriched": 1,
+  "created": 0,
+  "unchanged": 0,
+  "noData": 0,
+  "changedSinceExport": [
+    "artist:1376",
+    "artist:1377",
+    "artist:1378",
+    "artist:1379",
+    "artist:138",
+    "artist:1380",
+    "artist:1381",
+    "artist:1382",
+    "artist:1383",
+    "artist:1384",
+    "artist:1385",
+    "artist:1386",
+    "artist:1388",
+    "artist:1389",
+    "artist:139",
+    "artist:1390",
+    "artist:1391",
+    "artist:1392",
+    "artist:1393",
+    "artist:1395",
+    "artist:1396",
+    "artist:1397",
+    "artist:1398",
+    "artist:1399",
+    "artist:14",
+    "artist:140",
+    "artist:1400"
+  ],
+  "rejected": [],
+  "unknownCase": [],
+  "lostYears": [],
+  "notes": [
+    {
+      "caseId": "artist:1376",
+      "note": "La fuente s1 mezcla la biografía de la banda venezolana con la de un grupo homónimo de Valladolid, España (1985-1991); solo se usaron los datos del conjunto de Caracas."
+    },
+    {
+      "caseId": "artist:1379",
+      "note": "El catálogo fecha «Suite» en 2009 y la fuente en octubre de 2008; se mantiene la fecha de la fuente por ser el dato de origen y se anota la discrepancia."
+    },
+    {
+      "caseId": "artist:138",
+      "note": "Discrepancias: el año de formación varía entre 1993 y 1994; el disco Rayos X aparece como 1999 o 2000 según las fuentes; los créditos de teclados y de la segunda etapa de la banda (Roberto Bernal, Pablo Fernández, Elio Fernández, José Miguel De Robertis) solo constan en algunas fuentes."
+    },
+    {
+      "caseId": "artist:1380",
+      "note": "El disco «Pesos Pesados» aparece como 2007 en el catálogo, mientras que la biografía de Last.fm sitúa los preparativos en 2005 y la venta del disco en ese mismo año; además, en esa fuente el título figura como «Pesos Pesaos», grafía que no se ha usado."
+    },
+    {
+      "caseId": "artist:1382",
+      "note": "La fuente s1 sitúa el nacimiento del grupo a finales de 2003, mientras el catálogo y la biografía actual indican 2003 sin más precisión."
+    },
+    {
+      "caseId": "artist:1384",
+      "note": "Discrepancia en el año de Jarabe Celta: el catálogo indica 2000 y una fuente en inglés indica 2002; se usó el del catálogo. La fuente s1 está truncada."
+    },
+    {
+      "caseId": "artist:1385",
+      "note": "El catálogo registra el EP como «37 (2013) [ep]» y la fuente como «La 37»; se usó la grafía de la fuente por ser el título completo."
+    },
+    {
+      "caseId": "artist:1387",
+      "note": "El catálogo lista el disco de 1976 como «Alexis Rossell y su Vzla. Joven (1976) [other]» y el de 1977 como «Alexis Rossell y su Venezuela Joven (1977)»; las fuentes sitúan el álbum independiente en 1976-1977 y la reedición con Top Hits en 1977. Se mantienen las fechas del catálogo. Algunas fuentes sitúan el arpa en la banda de su hermano y la influencia de Genaro Lobo; se resumió."
+    },
+    {
+      "caseId": "artist:139",
+      "note": "Discrepancia de año en el Festival Nuevas Bandas: el catálogo y s6 indican 2009, mientras que s1, s2 y s3 indican 2008; se optó por 2008 según las fuentes especializadas. El número de oyentes de Last.fm se ha omitido por ser dato cambiante."
+    },
+    {
+      "caseId": "artist:14",
+      "note": "La fuente s1 señala el primer trabajo discográfico como un EP de 6 canciones aún en grabación, mientras el catálogo y s2 registran los álbumes Polvo Lunar (2011) y Generador (2016); se conservan los datos del catálogo y se menciona el EP solo como proyecto anunciado en sus inicios."
+    },
+    {
+      "caseId": "artist:140",
+      "note": "Discrepancia de género entre fuentes: s1 describe rock crudo, s2 punk hardcore, s3 rock & roll/rock radical/punk rock y s4 hardcore punk; el catálogo solo indica rock. No se especifican los integrantes ni el estado actual de la banda."
+    }
+  ],
+  "discarded": 22
+}

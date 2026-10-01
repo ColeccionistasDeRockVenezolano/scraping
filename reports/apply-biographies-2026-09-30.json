@@ -1,0 +1,991 @@
+{
+  "mode": "confirm",
+  "runId": 10590,
+  "models": [
+    "deepseek-flash"
+  ],
+  "outputs": 518,
+  "badLines": [],
+  "applied": {
+    "artist": 150,
+    "album": 0,
+    "person": 0,
+    "organization": 0
+  },
+  "enriched": 0,
+  "created": 150,
+  "unchanged": 0,
+  "noData": 1,
+  "changedSinceExport": [
+    "artist:2155",
+    "artist:2421",
+    "artist:2404",
+    "artist:2149",
+    "artist:2320",
+    "artist:2426",
+    "artist:2405",
+    "artist:2251",
+    "artist:2296",
+    "artist:2278",
+    "artist:2315",
+    "artist:2496",
+    "artist:2277",
+    "artist:2258",
+    "artist:2381",
+    "artist:2487",
+    "artist:2393",
+    "artist:2497",
+    "artist:2389",
+    "artist:2453",
+    "artist:2366",
+    "artist:2382",
+    "artist:2348",
+    "artist:2241",
+    "artist:2165",
+    "artist:2425",
+    "artist:2132",
+    "artist:2131",
+    "artist:2196",
+    "artist:2220",
+    "artist:2157",
+    "artist:2394",
+    "artist:2284",
+    "artist:2092",
+    "artist:2214",
+    "artist:2090",
+    "artist:2357",
+    "artist:2116",
+    "artist:2304",
+    "artist:2311",
+    "artist:2163",
+    "artist:2484",
+    "artist:2122",
+    "artist:2119",
+    "artist:2307",
+    "artist:2113",
+    "artist:2200",
+    "artist:2269",
+    "artist:2380",
+    "artist:2270",
+    "artist:2130",
+    "artist:2321",
+    "artist:2403",
+    "artist:2361",
+    "artist:2494",
+    "artist:2371",
+    "artist:2146",
+    "artist:2384",
+    "artist:2197",
+    "artist:2420",
+    "artist:2424",
+    "artist:2055",
+    "artist:2334",
+    "artist:2186",
+    "artist:2327",
+    "artist:2445",
+    "artist:2407",
+    "artist:2096",
+    "artist:2080",
+    "artist:2286",
+    "artist:2224",
+    "artist:2082",
+    "artist:2432",
+    "artist:2456",
+    "artist:2191",
+    "artist:2267",
+    "artist:2480",
+    "artist:2205",
+    "artist:2400",
+    "artist:2114",
+    "artist:2264",
+    "artist:2430",
+    "artist:2464",
+    "artist:2448",
+    "artist:2412",
+    "artist:2360",
+    "artist:2362",
+    "artist:2158",
+    "artist:2402",
+    "artist:2301",
+    "artist:2317",
+    "artist:2333",
+    "artist:2451",
+    "artist:2167",
+    "artist:2429",
+    "artist:2325",
+    "artist:2260",
+    "artist:2489",
+    "artist:2409",
+    "artist:2147",
+    "artist:2175",
+    "artist:2150",
+    "artist:2510",
+    "artist:2095",
+    "artist:2399",
+    "artist:2457",
+    "artist:2374",
+    "artist:2356",
+    "artist:2203",
+    "artist:2417",
+    "artist:2395",
+    "artist:2274",
+    "artist:2477",
+    "artist:2379",
+    "artist:2418",
+    "artist:2128",
+    "artist:2478",
+    "artist:2187",
+    "artist:2099",
+    "artist:2195",
+    "artist:2473",
+    "artist:2446",
+    "artist:2341",
+    "artist:2194",
+    "artist:2219",
+    "artist:2486",
+    "artist:2242",
+    "artist:2133",
+    "artist:2173",
+    "artist:2107",
+    "artist:2294",
+    "artist:2436",
+    "artist:2221",
+    "artist:2476",
+    "artist:2151",
+    "artist:2162",
+    "artist:2282",
+    "artist:2071",
+    "artist:2170",
+    "artist:2450",
+    "artist:2088",
+    "artist:2125",
+    "artist:2076",
+    "artist:2408",
+    "artist:2177",
+    "artist:2383",
+    "artist:2298",
+    "artist:2117",
+    "artist:2396",
+    "artist:2212",
+    "artist:2268",
+    "artist:2272",
+    "artist:2386",
+    "artist:2101",
+    "artist:2226",
+    "artist:2323",
+    "artist:2222",
+    "artist:2414",
+    "artist:2422",
+    "artist:2074",
+    "artist:2178",
+    "artist:2085",
+    "artist:2444",
+    "artist:2474",
+    "artist:2493",
+    "artist:2398",
+    "artist:2438",
+    "artist:2300",
+    "artist:2168",
+    "artist:2174",
+    "artist:2169",
+    "artist:2351",
+    "artist:1192",
+    "artist:2443",
+    "artist:2202",
+    "artist:2229",
+    "artist:2392",
+    "artist:2310",
+    "artist:2161",
+    "artist:2303",
+    "artist:2120",
+    "artist:2078",
+    "artist:2458",
+    "artist:2365",
+    "artist:2072",
+    "artist:2112",
+    "artist:2376",
+    "artist:2309",
+    "artist:2316",
+    "artist:2215",
+    "artist:2067",
+    "artist:2326",
+    "artist:2075",
+    "artist:2193",
+    "artist:2083",
+    "artist:2252",
+    "artist:2507",
+    "artist:2331",
+    "artist:2329",
+    "artist:2273",
+    "artist:2505",
+    "artist:2498",
+    "artist:2306",
+    "artist:2089",
+    "artist:2441",
+    "artist:2490",
+    "artist:2283",
+    "artist:2056",
+    "artist:2397",
+    "artist:2134",
+    "artist:2452",
+    "artist:2491",
+    "artist:2098",
+    "artist:2377",
+    "artist:2369",
+    "artist:2057",
+    "artist:2259",
+    "artist:2373",
+    "artist:2109",
+    "artist:2427",
+    "artist:2106",
+    "artist:2068",
+    "artist:2285",
+    "artist:2142",
+    "artist:2255",
+    "artist:2449",
+    "artist:2413",
+    "artist:2353",
+    "artist:2470",
+    "artist:2111",
+    "artist:2500",
+    "artist:2350",
+    "artist:2249",
+    "artist:2387",
+    "artist:2312",
+    "artist:2263",
+    "artist:2485",
+    "artist:2093",
+    "artist:2210",
+    "artist:2434",
+    "artist:2240",
+    "artist:2176",
+    "artist:2322",
+    "artist:2437",
+    "artist:2063",
+    "artist:2410",
+    "artist:2180",
+    "artist:2488",
+    "artist:2388",
+    "artist:2431",
+    "artist:2156",
+    "artist:2297",
+    "artist:2062",
+    "artist:2199",
+    "artist:2324",
+    "artist:2337",
+    "artist:2367",
+    "artist:2172",
+    "artist:2502",
+    "artist:2148",
+    "artist:2428",
+    "artist:2201",
+    "artist:2073",
+    "artist:2349",
+    "artist:2094",
+    "artist:2123",
+    "artist:2276",
+    "artist:2355",
+    "artist:2340",
+    "artist:2129",
+    "artist:2390",
+    "artist:2087",
+    "artist:2293",
+    "artist:2164",
+    "artist:2292",
+    "artist:2275",
+    "artist:2253",
+    "artist:2159",
+    "artist:2481",
+    "artist:2192",
+    "artist:2217",
+    "artist:2261",
+    "artist:2346",
+    "artist:2126",
+    "artist:2065",
+    "artist:2077",
+    "artist:2108",
+    "artist:2472",
+    "artist:2145",
+    "artist:2160",
+    "artist:2198",
+    "artist:2239",
+    "artist:2435",
+    "artist:2467",
+    "artist:2433",
+    "artist:2171",
+    "artist:2207",
+    "artist:2455",
+    "artist:2447",
+    "artist:2378",
+    "artist:2328",
+    "artist:2499",
+    "artist:2342",
+    "artist:2442",
+    "artist:2439",
+    "artist:2100",
+    "artist:2271",
+    "artist:2105",
+    "artist:2265",
+    "artist:2391",
+    "artist:2335",
+    "artist:2359",
+    "artist:2143",
+    "artist:2345",
+    "artist:2338",
+    "artist:2211",
+    "artist:2482",
+    "artist:1194",
+    "artist:2308",
+    "artist:2440",
+    "artist:2463",
+    "artist:2368",
+    "artist:2354",
+    "artist:2182",
+    "artist:2415",
+    "artist:2370",
+    "artist:2364",
+    "artist:2238",
+    "artist:2209",
+    "artist:2185",
+    "artist:2118",
+    "artist:2479",
+    "artist:2347",
+    "artist:2204",
+    "artist:2352",
+    "artist:2375",
+    "artist:2081",
+    "artist:2064",
+    "artist:2319",
+    "artist:2248",
+    "artist:2459",
+    "artist:2206",
+    "artist:2508",
+    "artist:2179",
+    "artist:2318",
+    "artist:2483",
+    "artist:2469",
+    "artist:2363",
+    "artist:2358",
+    "artist:2124",
+    "artist:2401",
+    "artist:2372",
+    "artist:2115",
+    "artist:2299",
+    "artist:2385",
+    "artist:2097",
+    "artist:2060",
+    "artist:2152",
+    "artist:2411",
+    "artist:2213",
+    "artist:2256",
+    "artist:2103",
+    "artist:1202"
+  ],
+  "rejected": [
+    {
+      "caseId": "artist:2254",
+      "batch": "artist-003",
+      "reason": "dice partir de una biografía que no existe"
+    },
+    {
+      "caseId": "artist:2540",
+      "batch": "artist-009",
+      "reason": "dice partir de una biografía que no existe"
+    },
+    {
+      "caseId": "artist:2709",
+      "batch": "artist-009",
+      "reason": "dice partir de una biografía que no existe"
+    },
+    {
+      "caseId": "artist:2565",
+      "batch": "artist-010",
+      "reason": "habla del expediente o del catálogo en vez de la ficha"
+    }
+  ],
+  "unknownCase": [],
+  "lostYears": [],
+  "notes": [
+    {
+      "caseId": "artist:2421",
+      "note": "El catálogo solo indica México como país; las fuentes mencionan Hermosillo, dato que no se presenta como origen. No se confirma alineación ni estado actual."
+    },
+    {
+      "caseId": "artist:2389",
+      "note": "El expediente no incluye la nacionalidad de la ficha; el origen (Quito, Ecuador) consta en el catálogo y en las fuentes. Discrepancia de grafía no resuelta: el nombre de la banda abreviado y su forma desarrollada."
+    },
+    {
+      "caseId": "artist:2165",
+      "note": "El catálogo no precisa ciudad de origen; las fuentes no permiten confirmarla."
+    },
+    {
+      "caseId": "artist:2196",
+      "note": "La fuente describe a la banda como «legendaria», adjetivo promocional que no se traslada al texto."
+    },
+    {
+      "caseId": "artist:2092",
+      "note": "El expediente no precisa ciudad ni país de origen; no se indica. La fuente de Facebook es de la propia banda."
+    },
+    {
+      "caseId": "artist:2311",
+      "note": "Discrepancia de año: el catálogo fija la formación en 2006 y una fuente (YouTube) indica 2008 para el demo; se siguió el catálogo para la formación."
+    },
+    {
+      "caseId": "artist:2119",
+      "note": "El catálogo solo indica Venezuela como país; la fuente s2 sitúa a la banda en Zulia, pero no se incluye como origen por no estar en el catálogo."
+    },
+    {
+      "caseId": "artist:2494",
+      "note": "El origen de la banda no consta en el catálogo (solo nacionalidades de sus integrantes según la fuente); no se presenta como origen venezolano."
+    },
+    {
+      "caseId": "artist:2424",
+      "note": "El catálogo no indica ciudad de origen; el s4 (Metal Archives) señala género Brutal Death Metal y sello Mid West Brutality, datos no confirmados por fuentes venezolanas especializadas."
+    },
+    {
+      "caseId": "artist:2327",
+      "note": "La grafía del nombre civil, Edgardo Franco o Edgardo Armando Franco, y las fechas de nacimiento (27 de septiembre de 1968) solo constan en la fuente y no fueron contrastadas con el catálogo; se omitieron del texto por tratarse de una ficha de artista y no de persona."
+    },
+    {
+      "caseId": "artist:2407",
+      "note": "El catálogo indica Suecia como país de origen; las fuentes no aportan ciudad. La grafía del tema varía entre «Sluta Grina Borja Grinda» (catálogo) y «Sluta Grina Börja Grinda» (fuentes)."
+    },
+    {
+      "caseId": "artist:2400",
+      "note": "La demo «Cum Frappé» aparece en la fuente como lanzada el 2 de julio de 2016 y el catálogo solo registra la formación de la banda en 2015; se conserva el año de la fuente para la demo."
+    },
+    {
+      "caseId": "artist:2448",
+      "note": "Las fuentes s2 y s5 dan posibles nombres reales distintos («João Dinis Carvalho» / «Dinis») que no coinciden entre sí ni constan en el catálogo; identidad de la persona detrás del proyecto dudosa."
+    },
+    {
+      "caseId": "artist:2402",
+      "note": "El catálogo solo indica México como país de origen; la fuente s2 menciona Yucatán, México, como procedencia. Se ha omitido la ciudad para no presentar como origen un dato no confirmado por el catálogo."
+    },
+    {
+      "caseId": "artist:2333",
+      "note": "El catálogo da la ciudad de Madrid y el país España como origen; las fuentes coinciden, aunque la nota del catálogo advierte que otros lugares citados pueden corresponder al sello, al recopilatorio o a grabaciones."
+    },
+    {
+      "caseId": "artist:2451",
+      "note": "El catálogo solo indica el país y la ciudad de origen de la banda; sobre la ciudad no hay dato alguno, por lo que no se menciona. No constan integrantes, discografía completa ni estado actual."
+    },
+    {
+      "caseId": "artist:2175",
+      "note": "La fuente s3 menciona un cambio de nombre a QR2 (Kurdos); no consta en el catálogo si Sinapsis continuó activa después de 2003."
+    },
+    {
+      "caseId": "artist:2095",
+      "note": "La fuente s2 escribe el nombre de la banda como «Mistyca», mientras el catálogo y las demás fuentes usan «Mystica»; se mantiene la grafía del catálogo. La fuente indica que el disco contiene «por lo menos 12 canciones» pero solo detalla cuatro; se nombran solo tres."
+    },
+    {
+      "caseId": "artist:2395",
+      "note": "La formación y el país constan en el catálogo; las fuentes no detallan integrantes ni ciudad de origen, y no se puede confirmar si la actividad del proyecto continúa."
+    },
+    {
+      "caseId": "artist:2099",
+      "note": "No se precisan fechas de formación, integrantes ni estado actual; conviene revisar la identidad y la vigencia del proyecto."
+    },
+    {
+      "caseId": "artist:2473",
+      "note": "Discrepancia de fechas de formación: el catálogo y una fuente indican 1991, mientras que otra señala 1988 como proyecto instrumental bajo el nombre Whisker Biscuit."
+    },
+    {
+      "caseId": "artist:2341",
+      "note": "La fuente s1 indica Bogotá como lugar, mientras el catálogo y s3 señalan Barranquilla como origen; se optó por el catálogo y se menciona la radicación en Bogotá según s2."
+    },
+    {
+      "caseId": "artist:2133",
+      "note": "La fuente data la actividad en 1963, pero no se incluye ese año porque el material solo lo menciona de forma indirecta."
+    },
+    {
+      "caseId": "artist:2107",
+      "note": "No se indica país ni ciudad de origen en el catálogo; no se afirma nacionalidad. La grafía del nombre oscila entre AverlinG, Averling Band y Averling."
+    },
+    {
+      "caseId": "artist:2221",
+      "note": "La fuente s1 lista a Jesús Fuenmayor como bajista, mientras que s2 menciona a Jesús Alemán como miembro. No se resuelve la discrepancia sobre la formación."
+    },
+    {
+      "caseId": "artist:2476",
+      "note": "El catálogo y las fuentes discrepan en el año de formación (1987 frente a 1986); se ha usado el del catálogo."
+    },
+    {
+      "caseId": "artist:2071",
+      "note": "La fuente s1 data la formación en septiembre de 1996, dato que no aparece en el catálogo; se incluye como procedente de la fuente."
+    },
+    {
+      "caseId": "artist:2170",
+      "note": "La fuente s1 fecha el single en 2012; el catálogo solo menciona su inclusión en un recopilatorio de 2019. Las fuentes lo adscriben al deathcore, mientras que el catálogo y s1 lo describen como metal extremo."
+    },
+    {
+      "caseId": "artist:2076",
+      "note": "El catálogo atribuye «Mixed» al proyecto, pero la fuente s1 solo lo lista bajo el nombre del proyecto; no se detallan más integrantes ni discografía propia."
+    },
+    {
+      "caseId": "artist:2383",
+      "note": "Los nombres de los integrantes aparecen como seudónimos; se han mantenido tal cual. No se indica año de formación ni estado actual de la banda."
+    },
+    {
+      "caseId": "artist:2298",
+      "note": "La fuente s4 sitúa el nacimiento de la banda en Biscucuy, mientras el catálogo indica Guanare; se usó la ciudad del catálogo."
+    },
+    {
+      "caseId": "artist:2117",
+      "note": "La fuente s1 fecha en septiembre el viaje a Europa sin precisar el año; se ha mantenido sin año."
+    },
+    {
+      "caseId": "artist:2323",
+      "note": "El nombre del fundador y la atribución como banda de rock protesta provienen de fuentes sobre Jhoan Rossell, baterista, cantante, compositor y productor; no se incluyen en el texto por tratarse de datos de otra ficha."
+    },
+    {
+      "caseId": "artist:2222",
+      "note": "El catálogo sitúa la formación en 2009; la fuente s3 data el álbum «Metal Up Your Death» también en 2009, mientras que s2 indica 25 de diciembre de 2011. Discrepancia de fecha del álbum sin resolver."
+    },
+    {
+      "caseId": "artist:2085",
+      "note": "Discrepancia de nombre: el catálogo y s2 la registran como «Sisrema Diez», mientras s3 la llama «Sistema Diez». También hay contradicción de fechas: s2 sitúa el lanzamiento de «Todos Sospechosos» en 2016 y s3 menciona una pre-producción en 2017."
+    },
+    {
+      "caseId": "artist:2444",
+      "note": "El catálogo no indica país ni ciudad de origen; no se puede afirmar nacionalidad. La fuente s2 menciona a Juanp Necrosis Cutanea como integrante, pero no consta en el catálogo."
+    },
+    {
+      "caseId": "artist:2161",
+      "note": "Sin datos sobre su nacionalidad más allá del país del catálogo; las fuentes no aportan origen, formación ni trayectoria."
+    },
+    {
+      "caseId": "artist:2112",
+      "note": "Discrepancia de fecha para «Experto Cobarde»: aparece en un recopilatorio de 2015 y en otro de 2020; no se pudo determinar cuál es la grabación original."
+    },
+    {
+      "caseId": "artist:2215",
+      "note": "La fuente s2 sitúa a la banda en Cabimas en sus inicios y luego en Ciudad Ojeda; el catálogo solo indica Ciudad Ojeda, por lo que no se menciona Cabimas."
+    },
+    {
+      "caseId": "artist:2067",
+      "note": "El expediente no aporta país ni ciudad de origen; no se mencionan."
+    },
+    {
+      "caseId": "artist:2075",
+      "note": "Dos fuentes mencionan a la banda como grunge (s2); el catálogo no asigna género, por lo que se omite."
+    },
+    {
+      "caseId": "artist:2193",
+      "note": "La fuente s4 menciona un demo grabado en un estudio casero, pero no se incluye por falta de datos verificables sobre su año o título."
+    },
+    {
+      "caseId": "artist:2252",
+      "note": "Posible discrepancia de fecha: el catálogo sitúa la aparición en el recopilatorio «4to Compilado» en 2003, mientras la fuente indica que la versión se presentó en el festival en 2004."
+    },
+    {
+      "caseId": "artist:2331",
+      "note": "La fuente s2 sitúa el estreno de «Rap, Soda y Bohemia» en el compilatorio «Molomix» (1998), mientras el catálogo lo vincula al recopilatorio «Tributo A Queen: Los Grandes Del Rock En Español» (1997); se optó por el dato del catálogo."
+    },
+    {
+      "caseId": "artist:2273",
+      "note": "El catálogo no indica país ni ciudad de origen; no se afirma nacionalidad. La única información disponible es la aparición en el recopilatorio."
+    },
+    {
+      "caseId": "artist:2505",
+      "note": "Una fuente la describe como thrashcore punk y otra como heavy/speed metal; se mantiene el género de la fuente más específica (thrashcore punk) y se deja constancia de la discrepancia."
+    },
+    {
+      "caseId": "artist:2306",
+      "note": "Sin datos de formación, género, ciudad de origen ni trayectoria; el catálogo solo aporta la participación en el recopilatorio."
+    },
+    {
+      "caseId": "artist:2490",
+      "note": "No se dispone de más datos biográficos (origen, trayectoria, formación) aparte de su país y de las apariciones en recopilatorios."
+    },
+    {
+      "caseId": "artist:2397",
+      "note": "La fuente s1 menciona «actualmente estamos grabando la próxima producción numero 20», sin fecha; se omite por impreciso. El catálogo solo aporta país y ciudad de origen, que coinciden con las fuentes."
+    },
+    {
+      "caseId": "artist:2491",
+      "note": "El catálogo lo sitúa como banda; la fuente s2 atribuye la música a un único miembro (Clitogusano: voz e instrumentos) y ambas fuentes dan grafías distintas del título de un tema: «Muerte A La Vieja Puta» (catálogo) frente a «Muerte a la Vieja Puta (Hora de la Vengeanza)» (s1); se mantiene la del catálogo."
+    },
+    {
+      "caseId": "artist:2373",
+      "note": "Discrepancia de grafía entre «Postmorten» (catálogo) y «Postmortem» (s3); se usó la del catálogo. s3 indica Girardot como ciudad de origen temprano y Bogotá después, pero el catálogo solo fija el país (Colombia) y advierte que otros lugares pueden corresponder al sello, recopilatorio o grabaciones; no se presenta una ciudad como origen."
+    },
+    {
+      "caseId": "artist:2255",
+      "note": "Las fuentes dan grafías distintas del título («Woman del Callao») y mencionan a Arnoldo Puerta como colaborador; se usó la grafía del catálogo. Sin más datos de formación, trayectoria o discografía propia."
+    },
+    {
+      "caseId": "artist:2449",
+      "note": "La fuente s2 describe la ficha como «Person» con nombre legal Adythia Utama, mientras que el catálogo la registra como artista; no se resuelve si Individual Distortion es un proyecto en solitario de Adythia Utama o una banda con ese nombre. El split «The Whorehouse Of Nagasaki» se omite por ambigüedad."
+    },
+    {
+      "caseId": "artist:2413",
+      "note": "Discrepancia de género entre fuentes: s2 indica goregrind, cybergrind y grindcore, mientras que s3 señala black metal; se optó por la información de s2 sin resolver la contradicción."
+    },
+    {
+      "caseId": "artist:2500",
+      "note": "El nombre aparece como «Toxic Invader» en el catálogo y el recopilatorio, y como «Toxik Invader» en otras fuentes; se usa la grafía del catálogo."
+    },
+    {
+      "caseId": "artist:2312",
+      "note": "El catálogo registra el nombre como FRANK MORO, mientras que las fuentes lo escriben FRANK MORON; se asume la grafía del catálogo. La fuente s3 menciona el proyecto «NADA QUE DECIR» y créditos de grabación (BronwBunkerStudio, 311 Studio, IK Studios) sin quedar claro si corresponden a este artista; se omiten."
+    },
+    {
+      "caseId": "artist:2263",
+      "note": "El expediente no aporta ciudad ni país de origen, ni integrantes, género o trayectoria; solo consta su participación en el recopilatorio con el tema «G10»."
+    },
+    {
+      "caseId": "artist:2485",
+      "note": "El catálogo lo vincula a la escena venezolana pero su país de origen es Filipinas; se mantiene el dato de la fuente."
+    },
+    {
+      "caseId": "artist:2488",
+      "note": "El expediente dice que la banda aparece en un recopilatorio venezolano, pero las fuentes solo la sitúan en México; revisar si corresponde al catálogo de rock venezolano."
+    },
+    {
+      "caseId": "artist:2388",
+      "note": "La fuente s2 sitúa la banda en Austria y Alemania, lo que contradice el catálogo; se omite el origen por no poder resolver la discrepancia."
+    },
+    {
+      "caseId": "artist:2431",
+      "note": "Discrepancia en el año de formación: el catálogo y s2 indican 2015, mientras s3 dice 2014; se usó 2015."
+    },
+    {
+      "caseId": "artist:2156",
+      "note": "Discrepancia en el año de formación: el catálogo indica 2008 y una fuente señala 2007. Se usó el dato del catálogo."
+    },
+    {
+      "caseId": "artist:2502",
+      "note": "La fuente s5 sitúa el debut en julio de 2008, mientras el catálogo da 2007 como año de formación; ambas fechas pueden referirse a momentos distintos."
+    },
+    {
+      "caseId": "artist:2201",
+      "note": "El catálogo solo aporta la aparición en el recopilatorio y advierte de no inferir lugares; las fuentes no indican ciudad ni país de origen, por lo que no se mencionan. Las fuentes s2 y s3 presentan grafías variables (Eeddy/Edy) y no aclaran si el tema es sencillo propio o incluido en un disco."
+    },
+    {
+      "caseId": "artist:2340",
+      "note": "La fuente en inglés no da nombres de integrantes ni más discografía; el dato de la canción «Doris» en el recopilatorio proviene del catálogo."
+    },
+    {
+      "caseId": "artist:2129",
+      "note": "Ninguna fuente confirma la ciudad de origen, solo el país indicado en el catálogo. Las fuentes mencionan Zulia y Maracaibo, pero no se presentan como origen."
+    },
+    {
+      "caseId": "artist:2087",
+      "note": "El catálogo no indica ciudad ni país de origen; la fuente s2 la describe como «banda marabina», dato que se omite al no estar confirmado por el catálogo."
+    },
+    {
+      "caseId": "artist:2253",
+      "note": "El catálogo la ubica en Valencia; la fuente s2 menciona Carabobo como lugar, sin que se pueda precisar si se refiere al origen o al registro del tema."
+    },
+    {
+      "caseId": "artist:2126",
+      "note": "El catálogo solo da el país (Venezuela); las fuentes mencionan el Zulia y Maracaibo, que podrían ser origen, sello o escena. No se afirma la ciudad de origen. Tampoco consta la formación ni la discografía propia."
+    },
+    {
+      "caseId": "artist:2472",
+      "note": "El catálogo fecha el recopilatorio «Outlandos D'Americas» en 2000 y la fuente s1 en 1998; se usó la fecha del catálogo."
+    },
+    {
+      "caseId": "artist:2145",
+      "note": "El catálogo indica formación en 2013; una fuente dice que la banda se formó a principios de 2014."
+    },
+    {
+      "caseId": "artist:2435",
+      "note": "La fuente s1 menciona West Kalimantan (Indonesia), lo que podría indicar una ciudad o región de origen, pero el catálogo solo aporta el país; se omite el dato para no presentar como origen lo que podría ser la ubicación del proyecto en Bandcamp."
+    },
+    {
+      "caseId": "artist:2467",
+      "note": "El catálogo sitúa la formación en 1971 y una fuente fecha la grabación de «Dama Gentil» en 1972; se mantienen ambos años por referirse a hitos distintos."
+    },
+    {
+      "caseId": "artist:2433",
+      "note": "La fuente s3 indica que el proyecto proviene de la región de Ámsterdam, mientras el catálogo fija su origen en Doezum; se mantuvo el dato del catálogo y se descartó el de la fuente."
+    },
+    {
+      "caseId": "artist:2447",
+      "note": "La fuente s1 solo confirma la participación en el recopilatorio, dato ya recogido del catálogo, por lo que no se usa como fuente independiente."
+    },
+    {
+      "caseId": "artist:2328",
+      "note": "El catálogo indica formación en 1978 y ciudad Madrid, coincidente con las fuentes. No consta fecha de fallecimiento en el catálogo; se omite."
+    },
+    {
+      "caseId": "artist:2342",
+      "note": "El catálogo solo da el país (Alemania) y la ciudad (Herne); las fuentes añaden datos de trayectoria y discografía."
+    },
+    {
+      "caseId": "artist:2439",
+      "note": "El catálogo indica Mumbai, Suecia como ciudad y país de origen, pero la fuente s2 indica que la banda es de Suecia, sin mencionar Mumbai. Además, la fuente s3 describe una banda diferente de Mumbai, India, lo que sugiere una posible confusión de identidades. Se recomienda revisar la ubicación correcta de la banda."
+    },
+    {
+      "caseId": "artist:2100",
+      "note": "Las fuentes discrepan sobre el género: una indica Gothic Metal, dato no confirmado por el catálogo."
+    },
+    {
+      "caseId": "artist:2335",
+      "note": "s4 le atribuye nacimiento en Rio de Janeiro el 23 de septiembre de 1962; el expediente no lo confirma, por lo que se omitió."
+    },
+    {
+      "caseId": "artist:2345",
+      "note": "El catálogo sitúa el origen en Gotemburgo (Suecia), mientras que fuentes generales indican un origen griego (Salónica) con posterior traslado; se mantiene el dato del catálogo y queda pendiente de revisión."
+    },
+    {
+      "caseId": "artist:2211",
+      "note": "El catálogo solo aporta la aparición en el recopilatorio y el país; no consta ciudad de origen ni integrantes."
+    },
+    {
+      "caseId": "artist:1194",
+      "note": "El catálogo no registra el nombre del directo; la fuente s1 lo llama «Orquesta Sinsaye, dirigida por el trombonista Felix Hernandez Ibarra», mientras s2 omite el segundo apellido. Se unificó como Félix Hernández Ibarra. El catálogo indica formación en 1991; s2 precisa la fecha al 16 de diciembre de 1991."
+    },
+    {
+      "caseId": "artist:2463",
+      "note": "El catálogo sitúa «Una Sombra En Tu Puerta» en el recopilatorio «Caracas 400 Gente En Ambiente» con fecha 1967, anterior a la formación del grupo en 1968 según la fuente; se mantiene el dato del catálogo sin resolver la discrepancia."
+    },
+    {
+      "caseId": "artist:2209",
+      "note": "El expediente no aporta ciudad ni país de origen de la banda; la única fuente disponible es la página del recopilatorio."
+    },
+    {
+      "caseId": "artist:2375",
+      "note": "El país y la ciudad de origen proceden del catálogo (Chile, Santiago); las fuentes los mencionan de forma coincidente."
+    },
+    {
+      "caseId": "artist:2081",
+      "note": "Una fuente menciona dos alineaciones (primera, 1997-1999) sin más detalle; no se incorpora por falta de datos sobre integrantes."
+    },
+    {
+      "caseId": "artist:2508",
+      "note": "Discrepancia en la fecha de formación: el catálogo indica 2007, mientras que sametalindex.com señala «alrededor de 2007–2008»."
+    },
+    {
+      "caseId": "artist:2483",
+      "note": "El catálogo sitúa la formación en 2014, pero una fuente fecha el álbum «Butchery» en 2013, un año antes de esa fecha de formación."
+    },
+    {
+      "caseId": "artist:2358",
+      "note": "El recopilatorio «Capitulo Migración» (2019) aparece en el catálogo como una aparición de la banda, pero no se especifica su país ni sello; no se presenta como origen."
+    },
+    {
+      "caseId": "artist:2124",
+      "note": "Las fuentes alternan la grafía «DivisKirius» (catálogo y s1) y «Divus Kirius» (s2 y s3); s3 añade «Metal Cristiano» como género, dato no confirmado por las demás fuentes."
+    },
+    {
+      "caseId": "artist:2372",
+      "note": "Las fuentes mencionan el split «Exitium» y el sello Age of Leviathan, pero no está claro si este último es el sello editorial o el origen de la grabación."
+    },
+    {
+      "caseId": "artist:2060",
+      "note": "La fuente s3 indica que la banda se consolidó en El Vigía, mientras el catálogo sitúa la ciudad en Mérida; se mantiene el dato del catálogo."
+    },
+    {
+      "caseId": "artist:2152",
+      "note": "La fuente s3 indica que el tema proviene del compilado «LegadoRock Zuliano», mientras que el catálogo y s1 lo sitúan en «Compilado Zuliano Volumen III - Edición de Colección» (2020); se mantiene el dato del catálogo. La fuente s1 menciona «Cabimas, la cuna del rock», pero no se usa como origen de la banda."
+    },
+    {
+      "caseId": "artist:2103",
+      "note": "Las fuentes describen a Violetas Negras con expresiones promocionales («leyenda», «revolucionó el rock marabino»); se optó por un tono neutro. La fuente s2 menciona dos shows con «uno o dos años de diferencia» sin fechas exactas."
+    },
+    {
+      "caseId": "artist:2703",
+      "note": "El catálogo la sitúa en Colombia y las fuentes coinciden; la fecha 1999 aparece como año del recopilatorio y de la grabación de «La Historia Sin Nombre». Se desconoce la formación y la ciudad de origen."
+    },
+    {
+      "caseId": "artist:2582",
+      "note": "La fuente s2 no ofrece datos biográficos y la s1 no permite confirmar si «Mopecito y Su Orquesta» es el proyecto de un artista concreto o una agrupación independiente; tampoco consta su origen, por lo que no se afirma ninguna ciudad o país."
+    },
+    {
+      "caseId": "artist:2809",
+      "note": "Las fuentes lo identifican como DJ/productor venezolano de minimal, pero no confirman la nacionalidad ni el alias."
+    },
+    {
+      "caseId": "artist:2571",
+      "note": "La fuente s1 menciona Buenos Aires como ubicación, pero el catálogo indica Caracas; se priorizó el catálogo. La fuente s3 solo contiene el nombre del proyecto sin más datos."
+    },
+    {
+      "caseId": "artist:2663",
+      "note": "El catálogo fija la formación en 2001 y una fuente la sitúa en 2002; se usó el dato del catálogo."
+    },
+    {
+      "caseId": "artist:2675",
+      "note": "Las fuentes lo describen como venezolano radicado en Barcelona pasando por Nueva York y mencionan sellos (Culprit, liebe*detail, Sisternoise, entre otros), pero el catálogo solo confirma Caracas, Venezuela, y pide no usar otros lugares como origen ni afirmar la nacionalidad si el país no la da."
+    },
+    {
+      "caseId": "artist:2859",
+      "note": "La grafía del nombre varía entre el catálogo («Disord Sith») y las fuentes («Dysord Sith»); se mantiene la del catálogo. Las fuentes mencionan también Bogotá, que no se presenta como origen por no constar como tal."
+    },
+    {
+      "caseId": "artist:2621",
+      "note": "El expediente no aporta país ni ciudad de origen; solo consta su participación en el recopilatorio. Las fuentes no ofrecen más datos biográficos."
+    },
+    {
+      "caseId": "artist:2856",
+      "note": "El catálogo consigna 1981 como año de formación y s1 también lo da como inicio de actividad; se ha usado como comienzo de su trayectoria, no como formación de una banda."
+    },
+    {
+      "caseId": "artist:2870",
+      "note": "El catálogo lo sitúa en Chile y el recopilatorio es venezolano; conviene revisar si la ficha corresponde a un artista chileno o si hay confusión con una entidad venezolana."
+    },
+    {
+      "caseId": "artist:2653",
+      "note": "El catálogo la sitúa en Colombia y las fuentes la describen como DJ y cantante colombiana, pero una de ellas menciona también ubicación en Estados Unidos; se mantiene el dato del catálogo."
+    },
+    {
+      "caseId": "artist:2667",
+      "note": "La grafía del colaborador varía entre las fuentes (Chris Cags, Chris Caghs). El origen de la ficha se toma del catálogo (Italia); las fuentes no aportan ciudad ni más trayectoria."
+    },
+    {
+      "caseId": "artist:2841",
+      "note": "La fuente s1 lista el tema como «Bless Killa - God Is My DJ» y lo atribuye a Ajd; no queda claro si el intérprete del tema es Ajd o si se trata de un error de listado. La identificación del alias con Antonio José Azócar proviene solo de fuentes de video no especializadas."
+    },
+    {
+      "caseId": "artist:2533",
+      "note": "El estilo black metal aparece tanto en la ficha de la banda como en la de la demo; se ha integrado como género. No constan nombres de integrantes concretos."
+    },
+    {
+      "caseId": "artist:2594",
+      "note": "La fuente s1 lista una formación distinta (Indio Alexis en bajo, Diego Michel en batería, Majo Di Pasquo en teclados, Ariel Ranieri en guitarra y Tano Maiorell en voz) que puede corresponder a la época del recopilatorio; se optó por no detallar la alineación de cada etapa para evitar contradicciones."
+    },
+    {
+      "caseId": "artist:2790",
+      "note": "La fuente s3 lo describe como productor venezolano de drum and bass y menciona el tema «Avani» con Tyler Straub destacado en el sello de Marcus Intalex; no se especifica el año ni el formato de esa publicación."
+    },
+    {
+      "caseId": "artist:2517",
+      "note": "El catálogo data la aparición en «V.A Latinoamerica Thrashing the World» en 2008, mientras que una fuente menciona «Sounds Of Streets 2009»; no se pudo resolver la discrepancia."
+    },
+    {
+      "caseId": "artist:2595",
+      "note": "El catálogo indica España como país; una fuente precisa Galicia como región de origen."
+    },
+    {
+      "caseId": "artist:2513",
+      "note": "La fuente s1 menciona el recopilatorio y una influencia, pero no se detalla más; el género thrash metal proviene de s4 y s5, no del catálogo."
+    },
+    {
+      "caseId": "artist:2848",
+      "note": "Las fuentes discrepan en la grafía del nombre real del productor (Saberio Alanga, Severio Aagna, Berio 303); no se incluye por falta de confirmación."
+    },
+    {
+      "caseId": "artist:2683",
+      "note": "El expediente no aporta más datos sobre la banda; las fuentes disponibles tratan de la trayectoria personal de Jorge Spiteri o de otros proyectos homónimos."
+    },
+    {
+      "caseId": "artist:2544",
+      "note": "Discrepancia de grafía/identidad: MusicBrainz indica que la banda fue renombrada como Corroding Soul; el catálogo no lo recoge. El catálogo indica país Reino Unido; una fuente añade Inglaterra, que no se menciona en el texto."
+    },
+    {
+      "caseId": "artist:2655",
+      "note": "El catálogo sitúa el origen en Ciudad de México, mientras que una corrección interna pide no nombrar lugares que las fuentes no digan; las fuentes s1 y s2 sí mencionan Ciudad de México."
+    },
+    {
+      "caseId": "artist:2716",
+      "note": "Las fuentes aluden a la artista con el nombre «Elsa María Mateu» y la señalan como fallecida (†); el catálogo la registra como «Elsa M. Mateu». Se omite la fecha de fallecimiento por no constar."
+    },
+    {
+      "caseId": "artist:2314",
+      "note": "Una fuente indica que el disco «Destruction of the Old World» es de 2002 y la única publicación de la banda, mientras el catálogo registra una aparición en un recopilatorio de 2020; se mantienen ambos datos sin precisar si la banda ya actuaba como Masiva Energy en esa fecha."
+    },
+    {
+      "caseId": "artist:2537",
+      "note": "El catálogo solo aporta el país (Estonia); no hay datos sobre la ciudad de origen ni sobre la identidad del único miembro. La fuente s2 menciona el EP «Disheartenment» como proyecto en solitario, dato no confirmado por el catálogo."
+    },
+    {
+      "caseId": "artist:2522",
+      "note": "La fuente s4 menciona diez años de trayectoria en 2009, lo que situaría el inicio hacia 1999; el catálogo no precisa año de fundación."
+    },
+    {
+      "caseId": "artist:2625",
+      "note": "El catálogo registra los temas como «No Name No Face» y «No Name, No Face»; se usó la grafía de la fuente. La afirmación de ser la primera banda de hip hop underground de Venezuela proviene de una fuente propia de la agrupación y no está confirmada por fuentes independientes."
+    },
+    {
+      "caseId": "artist:2661",
+      "note": "El catálogo indica que el proyecto tiene base en Londres; la fuente s2 lo confirma y añade que sus directores son venezolanos."
+    },
+    {
+      "caseId": "artist:2855",
+      "note": "Las fuentes lo presentan como cantante y bajista de Liquet y su fallecimiento en 2005, pero el catálogo registra una aparición suya en 2010; no se resuelve si son la misma persona o si hubo actividad posterior."
+    },
+    {
+      "caseId": "artist:2944",
+      "note": "El dato de «Suite Melodía en El Llano» en el recopilatorio figura en el catálogo; ninguna fuente lo menciona. Discrepancia menor: una fuente la llama «Orquesta Sinfónica Venezuela» y otra «Orquesta Sinfónica de Venezuela»."
+    },
+    {
+      "caseId": "artist:2940",
+      "note": "El catálogo indica origen en Quibdó; una fuente menciona también Condoto y Chocó, sin contradicción resuelta."
+    },
+    {
+      "caseId": "artist:2903",
+      "note": "El expediente cataloga el tema de Carlos Baute como «Ando Buscando» en 2019, mientras MusicBrainz lo fecha en 2016."
+    },
+    {
+      "caseId": "artist:2907",
+      "note": "Las fuentes s2 y s3 apuntan a un proyecto de drum & bass de origen ruso, sin relación con el recopilatorio venezolano; solo el catálogo aporta datos de esta ficha."
+    },
+    {
+      "caseId": "artist:2924",
+      "note": "El catálogo solo indica Grecia como país; no consta ciudad de origen."
+    },
+    {
+      "caseId": "artist:2928",
+      "note": "No consta el año de inicio de su actividad ni el sello con el que publicó «Destroy»; el texto no precisa si «Destroy» es sencillo o solo una inclusión en recopilatorio."
+    },
+    {
+      "caseId": "artist:2891",
+      "note": "El catálogo indica Estados Unidos (Miami Beach) como país y ciudad del proyecto, mientras el recopilatorio en el que participa es venezolano; no queda claro si el proyecto es de origen venezolano."
+    },
+    {
+      "caseId": "artist:2933",
+      "note": "El catálogo la ubica en Los Angeles y las fuentes mencionan también Nueva York; se mantiene la ciudad del catálogo."
+    },
+    {
+      "caseId": "artist:2920",
+      "note": "El catálogo lo sitúa como artista estadounidense; MusicBrainz consigna su nombre legal como Nishant Parikh y lo clasifica en dubstep, mientras SoundCloud lo etiqueta como drum & bass: se ha mantenido la mención de ambos géneros. La ciudad de Richmond consta en el catálogo y en SoundCloud; se omite cualquier precisión de nacionalidad no explicitada."
+    },
+    {
+      "caseId": "artist:2931",
+      "note": "El catálogo solo da ciudad (Ostrava) y no país; las fuentes indican República Checa como país de la banda. No se resuelve si la formación sigue activa."
+    },
+    {
+      "caseId": "artist:2909",
+      "note": "El catálogo indica que la banda es de Melbourne (Australia) y la fuente la describe como australiano-británica; se mantiene el dato del catálogo. La formación de 1995 procede de una fuente general, no del catálogo."
+    },
+    {
+      "caseId": "artist:2832",
+      "note": "Fuentes con muy poca información textual; se desconoce la ciudad de origen y la formación del proyecto."
+    },
+    {
+      "caseId": "artist:2930",
+      "note": "El catálogo sitúa la ficha en Sofía (Bulgaria), coherente con las fuentes; no se menciona Venezuela, por lo que se trata de un artista extranjero presente en un recopilatorio."
+    },
+    {
+      "caseId": "artist:2937",
+      "note": "Las fuentes escriben el nombre como «Turtled & Emmerson», «Turtled & Emerson», «Turled & Emmerson» y «emmerson&turtled»; se usa la grafía del catálogo. No consta si el dúo sigue activo."
+    },
+    {
+      "caseId": "artist:2908",
+      "note": "El catálogo solo da ciudad (Atlanta) sin país; las fuentes la califican de banda de Atlanta, pero no aclaran si es estadounidense."
+    },
+    {
+      "caseId": "artist:2941",
+      "note": "La fuente s3 menciona el nombre «Pedro Elias Aquino Cova» en una página de alias del mismo identificador de MusicBrainz, pero no está claro si corresponde a este artista; se omite el dato."
+    },
+    {
+      "caseId": "artist:2892",
+      "note": "Las fuentes s2, s3 y s4 se refieren principalmente a Nacho Nuett, identificado en s1 como la persona detrás de SER+; no hay datos adicionales sobre el proyecto SER+ como entidad independiente."
+    },
+    {
+      "caseId": "artist:2922",
+      "note": "La fuente s1 sitúa el origen de Playma en Rusia, mientras que el catálogo solo vincula el proyecto al recopilatorio «Vulgar Display Of Bass» (2012) y a la mención de Zardonic; conviene confirmar si el origen ruso corresponde a esta misma ficha."
+    },
+    {
+      "caseId": "artist:2942",
+      "note": "El catálogo sitúa su origen en Bridgetown (Barbados) y da 2011 como año de formación; la fuente habla de un debut discográfico en agosto de 2011 y de un traslado de regreso a Barbados tras trece años en Venezuela. El expediente no aclara si «2irie» es un proyecto solista o una banda. El nombre real que aparece en la fuente es Christopher \"2irie\" Harris."
+    },
+    {
+      "caseId": "artist:2917",
+      "note": "El catálogo indica ciudad de origen «London», sin campo de país; el texto se limita a señalarlo como lugar de residencia/origen de su actividad. La fuente la sitúa como fundadora de Anger Management, pero el catálogo no registra ese dato: se incluye por proceder de la fuente."
+    }
+  ],
+  "discarded": 260
+}

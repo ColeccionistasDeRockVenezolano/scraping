@@ -1,0 +1,1526 @@
+{
+  "summary": {
+    "postsIndexed": 4949,
+    "dossiers": 2614,
+    "batches": 67,
+    "byKind": {
+      "artist": {
+        "dossiers": 2614,
+        "withText": 1830,
+        "batches": 67
+      }
+    },
+    "skipped": {
+      "protected": [
+        "artist:1288",
+        "artist:1289",
+        "artist:23",
+        "artist:58",
+        "artist:748"
+      ],
+      "various": 1
+    }
+  },
+  "batches": [
+    {
+      "file": "album-001.jsonl",
+      "kind": "album",
+      "count": 26,
+      "chars": 109655
+    },
+    {
+      "file": "album-002.jsonl",
+      "kind": "album",
+      "count": 46,
+      "chars": 108295
+    },
+    {
+      "file": "album-003.jsonl",
+      "kind": "album",
+      "count": 34,
+      "chars": 105040
+    },
+    {
+      "file": "album-004.jsonl",
+      "kind": "album",
+      "count": 21,
+      "chars": 107074
+    },
+    {
+      "file": "album-005.jsonl",
+      "kind": "album",
+      "count": 22,
+      "chars": 108300
+    },
+    {
+      "file": "album-006.jsonl",
+      "kind": "album",
+      "count": 20,
+      "chars": 102597
+    },
+    {
+      "file": "album-007.jsonl",
+      "kind": "album",
+      "count": 19,
+      "chars": 106772
+    },
+    {
+      "file": "album-008.jsonl",
+      "kind": "album",
+      "count": 24,
+      "chars": 107021
+    },
+    {
+      "file": "album-009.jsonl",
+      "kind": "album",
+      "count": 21,
+      "chars": 107908
+    },
+    {
+      "file": "album-010.jsonl",
+      "kind": "album",
+      "count": 18,
+      "chars": 105733
+    },
+    {
+      "file": "album-011.jsonl",
+      "kind": "album",
+      "count": 17,
+      "chars": 106460
+    },
+    {
+      "file": "album-012.jsonl",
+      "kind": "album",
+      "count": 26,
+      "chars": 104824
+    },
+    {
+      "file": "album-013.jsonl",
+      "kind": "album",
+      "count": 21,
+      "chars": 106882
+    },
+    {
+      "file": "album-014.jsonl",
+      "kind": "album",
+      "count": 23,
+      "chars": 109244
+    },
+    {
+      "file": "album-015.jsonl",
+      "kind": "album",
+      "count": 23,
+      "chars": 102699
+    },
+    {
+      "file": "album-016.jsonl",
+      "kind": "album",
+      "count": 18,
+      "chars": 104276
+    },
+    {
+      "file": "album-017.jsonl",
+      "kind": "album",
+      "count": 20,
+      "chars": 100032
+    },
+    {
+      "file": "album-018.jsonl",
+      "kind": "album",
+      "count": 19,
+      "chars": 106242
+    },
+    {
+      "file": "album-019.jsonl",
+      "kind": "album",
+      "count": 22,
+      "chars": 106185
+    },
+    {
+      "file": "album-020.jsonl",
+      "kind": "album",
+      "count": 23,
+      "chars": 108665
+    },
+    {
+      "file": "album-021.jsonl",
+      "kind": "album",
+      "count": 27,
+      "chars": 109932
+    },
+    {
+      "file": "album-022.jsonl",
+      "kind": "album",
+      "count": 21,
+      "chars": 105350
+    },
+    {
+      "file": "album-023.jsonl",
+      "kind": "album",
+      "count": 26,
+      "chars": 108969
+    },
+    {
+      "file": "album-024.jsonl",
+      "kind": "album",
+      "count": 36,
+      "chars": 106427
+    },
+    {
+      "file": "album-025.jsonl",
+      "kind": "album",
+      "count": 25,
+      "chars": 109705
+    },
+    {
+      "file": "album-026.jsonl",
+      "kind": "album",
+      "count": 32,
+      "chars": 108483
+    },
+    {
+      "file": "album-027.jsonl",
+      "kind": "album",
+      "count": 35,
+      "chars": 109827
+    },
+    {
+      "file": "album-028.jsonl",
+      "kind": "album",
+      "count": 85,
+      "chars": 109941
+    },
+    {
+      "file": "album-029.jsonl",
+      "kind": "album",
+      "count": 85,
+      "chars": 109864
+    },
+    {
+      "file": "album-030.jsonl",
+      "kind": "album",
+      "count": 87,
+      "chars": 108791
+    },
+    {
+      "file": "album-031.jsonl",
+      "kind": "album",
+      "count": 107,
+      "chars": 109625
+    },
+    {
+      "file": "album-032.jsonl",
+      "kind": "album",
+      "count": 84,
+      "chars": 108513
+    },
+    {
+      "file": "album-033.jsonl",
+      "kind": "album",
+      "count": 99,
+      "chars": 109364
+    },
+    {
+      "file": "album-034.jsonl",
+      "kind": "album",
+      "count": 90,
+      "chars": 109821
+    },
+    {
+      "file": "album-035.jsonl",
+      "kind": "album",
+      "count": 85,
+      "chars": 109695
+    },
+    {
+      "file": "album-036.jsonl",
+      "kind": "album",
+      "count": 80,
+      "chars": 107878
+    },
+    {
+      "file": "album-037.jsonl",
+      "kind": "album",
+      "count": 78,
+      "chars": 109313
+    },
+    {
+      "file": "album-038.jsonl",
+      "kind": "album",
+      "count": 87,
+      "chars": 108829
+    },
+    {
+      "file": "album-039.jsonl",
+      "kind": "album",
+      "count": 70,
+      "chars": 108773
+    },
+    {
+      "file": "album-040.jsonl",
+      "kind": "album",
+      "count": 80,
+      "chars": 109152
+    },
+    {
+      "file": "album-041.jsonl",
+      "kind": "album",
+      "count": 67,
+      "chars": 108615
+    },
+    {
+      "file": "album-042.jsonl",
+      "kind": "album",
+      "count": 70,
+      "chars": 108304
+    },
+    {
+      "file": "album-043.jsonl",
+      "kind": "album",
+      "count": 74,
+      "chars": 108023
+    },
+    {
+      "file": "album-044.jsonl",
+      "kind": "album",
+      "count": 72,
+      "chars": 109774
+    },
+    {
+      "file": "album-045.jsonl",
+      "kind": "album",
+      "count": 53,
+      "chars": 109818
+    },
+    {
+      "file": "album-046.jsonl",
+      "kind": "album",
+      "count": 47,
+      "chars": 108477
+    },
+    {
+      "file": "album-047.jsonl",
+      "kind": "album",
+      "count": 44,
+      "chars": 109345
+    },
+    {
+      "file": "album-048.jsonl",
+      "kind": "album",
+      "count": 65,
+      "chars": 109409
+    },
+    {
+      "file": "album-049.jsonl",
+      "kind": "album",
+      "count": 47,
+      "chars": 108196
+    },
+    {
+      "file": "album-050.jsonl",
+      "kind": "album",
+      "count": 65,
+      "chars": 105588
+    },
+    {
+      "file": "album-051.jsonl",
+      "kind": "album",
+      "count": 51,
+      "chars": 108317
+    },
+    {
+      "file": "album-052.jsonl",
+      "kind": "album",
+      "count": 57,
+      "chars": 108904
+    },
+    {
+      "file": "album-053.jsonl",
+      "kind": "album",
+      "count": 59,
+      "chars": 109968
+    },
+    {
+      "file": "album-054.jsonl",
+      "kind": "album",
+      "count": 75,
+      "chars": 105917
+    },
+    {
+      "file": "album-055.jsonl",
+      "kind": "album",
+      "count": 64,
+      "chars": 109471
+    },
+    {
+      "file": "album-056.jsonl",
+      "kind": "album",
+      "count": 73,
+      "chars": 109870
+    },
+    {
+      "file": "album-057.jsonl",
+      "kind": "album",
+      "count": 60,
+      "chars": 106977
+    },
+    {
+      "file": "album-058.jsonl",
+      "kind": "album",
+      "count": 58,
+      "chars": 107829
+    },
+    {
+      "file": "album-059.jsonl",
+      "kind": "album",
+      "count": 42,
+      "chars": 106452
+    },
+    {
+      "file": "album-060.jsonl",
+      "kind": "album",
+      "count": 61,
+      "chars": 109457
+    },
+    {
+      "file": "album-061.jsonl",
+      "kind": "album",
+      "count": 64,
+      "chars": 108607
+    },
+    {
+      "file": "album-062.jsonl",
+      "kind": "album",
+      "count": 62,
+      "chars": 109752
+    },
+    {
+      "file": "album-063.jsonl",
+      "kind": "album",
+      "count": 68,
+      "chars": 109250
+    },
+    {
+      "file": "album-064.jsonl",
+      "kind": "album",
+      "count": 70,
+      "chars": 109267
+    },
+    {
+      "file": "album-065.jsonl",
+      "kind": "album",
+      "count": 56,
+      "chars": 108400
+    },
+    {
+      "file": "album-066.jsonl",
+      "kind": "album",
+      "count": 46,
+      "chars": 105989
+    },
+    {
+      "file": "album-067.jsonl",
+      "kind": "album",
+      "count": 57,
+      "chars": 109248
+    },
+    {
+      "file": "album-068.jsonl",
+      "kind": "album",
+      "count": 60,
+      "chars": 109797
+    },
+    {
+      "file": "album-069.jsonl",
+      "kind": "album",
+      "count": 52,
+      "chars": 107310
+    },
+    {
+      "file": "album-070.jsonl",
+      "kind": "album",
+      "count": 60,
+      "chars": 109720
+    },
+    {
+      "file": "album-071.jsonl",
+      "kind": "album",
+      "count": 63,
+      "chars": 108825
+    },
+    {
+      "file": "album-072.jsonl",
+      "kind": "album",
+      "count": 46,
+      "chars": 108681
+    },
+    {
+      "file": "album-073.jsonl",
+      "kind": "album",
+      "count": 52,
+      "chars": 108310
+    },
+    {
+      "file": "album-074.jsonl",
+      "kind": "album",
+      "count": 50,
+      "chars": 108977
+    },
+    {
+      "file": "album-075.jsonl",
+      "kind": "album",
+      "count": 51,
+      "chars": 106836
+    },
+    {
+      "file": "album-076.jsonl",
+      "kind": "album",
+      "count": 54,
+      "chars": 108399
+    },
+    {
+      "file": "album-077.jsonl",
+      "kind": "album",
+      "count": 51,
+      "chars": 104842
+    },
+    {
+      "file": "album-078.jsonl",
+      "kind": "album",
+      "count": 51,
+      "chars": 109301
+    },
+    {
+      "file": "album-079.jsonl",
+      "kind": "album",
+      "count": 53,
+      "chars": 105499
+    },
+    {
+      "file": "album-080.jsonl",
+      "kind": "album",
+      "count": 52,
+      "chars": 108482
+    },
+    {
+      "file": "album-081.jsonl",
+      "kind": "album",
+      "count": 53,
+      "chars": 108002
+    },
+    {
+      "file": "album-082.jsonl",
+      "kind": "album",
+      "count": 58,
+      "chars": 109438
+    },
+    {
+      "file": "album-083.jsonl",
+      "kind": "album",
+      "count": 51,
+      "chars": 108052
+    },
+    {
+      "file": "album-084.jsonl",
+      "kind": "album",
+      "count": 44,
+      "chars": 108283
+    },
+    {
+      "file": "album-085.jsonl",
+      "kind": "album",
+      "count": 61,
+      "chars": 109873
+    },
+    {
+      "file": "album-086.jsonl",
+      "kind": "album",
+      "count": 56,
+      "chars": 107360
+    },
+    {
+      "file": "album-087.jsonl",
+      "kind": "album",
+      "count": 38,
+      "chars": 105574
+    },
+    {
+      "file": "album-088.jsonl",
+      "kind": "album",
+      "count": 31,
+      "chars": 108576
+    },
+    {
+      "file": "album-089.jsonl",
+      "kind": "album",
+      "count": 32,
+      "chars": 108326
+    },
+    {
+      "file": "album-090.jsonl",
+      "kind": "album",
+      "count": 39,
+      "chars": 109358
+    },
+    {
+      "file": "album-091.jsonl",
+      "kind": "album",
+      "count": 51,
+      "chars": 103783
+    },
+    {
+      "file": "person-001.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 45709
+    },
+    {
+      "file": "person-002.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 54111
+    },
+    {
+      "file": "person-003.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 39463
+    },
+    {
+      "file": "person-004.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 34676
+    },
+    {
+      "file": "person-005.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 45830
+    },
+    {
+      "file": "person-006.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 38005
+    },
+    {
+      "file": "person-007.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 34976
+    },
+    {
+      "file": "person-008.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 33996
+    },
+    {
+      "file": "person-009.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 30109
+    },
+    {
+      "file": "person-010.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 29755
+    },
+    {
+      "file": "person-011.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 33342
+    },
+    {
+      "file": "person-012.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 32274
+    },
+    {
+      "file": "person-013.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 29557
+    },
+    {
+      "file": "person-014.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 33367
+    },
+    {
+      "file": "person-015.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 28104
+    },
+    {
+      "file": "person-016.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 33133
+    },
+    {
+      "file": "person-017.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 31383
+    },
+    {
+      "file": "person-018.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 33254
+    },
+    {
+      "file": "person-019.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 53312
+    },
+    {
+      "file": "person-020.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 43962
+    },
+    {
+      "file": "person-021.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 44332
+    },
+    {
+      "file": "person-022.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 40570
+    },
+    {
+      "file": "person-023.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 51943
+    },
+    {
+      "file": "person-024.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 43059
+    },
+    {
+      "file": "person-025.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 45292
+    },
+    {
+      "file": "person-026.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 51895
+    },
+    {
+      "file": "person-027.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 43595
+    },
+    {
+      "file": "person-028.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 51203
+    },
+    {
+      "file": "person-029.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 47762
+    },
+    {
+      "file": "person-030.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 53395
+    },
+    {
+      "file": "person-031.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 46920
+    },
+    {
+      "file": "person-032.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 47716
+    },
+    {
+      "file": "person-033.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 50899
+    },
+    {
+      "file": "person-034.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 40980
+    },
+    {
+      "file": "person-035.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 51757
+    },
+    {
+      "file": "person-036.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 53870
+    },
+    {
+      "file": "person-037.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 35587
+    },
+    {
+      "file": "person-038.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 44663
+    },
+    {
+      "file": "person-039.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 46257
+    },
+    {
+      "file": "person-040.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 48240
+    },
+    {
+      "file": "person-041.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 42266
+    },
+    {
+      "file": "person-042.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 35276
+    },
+    {
+      "file": "person-043.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 34111
+    },
+    {
+      "file": "person-044.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 38092
+    },
+    {
+      "file": "person-045.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 37198
+    },
+    {
+      "file": "person-046.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 34393
+    },
+    {
+      "file": "person-047.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 44228
+    },
+    {
+      "file": "person-048.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 53761
+    },
+    {
+      "file": "person-049.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 44254
+    },
+    {
+      "file": "person-050.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 49857
+    },
+    {
+      "file": "person-051.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 35233
+    },
+    {
+      "file": "person-052.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 39600
+    },
+    {
+      "file": "person-053.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 40058
+    },
+    {
+      "file": "person-054.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 29856
+    },
+    {
+      "file": "person-055.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 32268
+    },
+    {
+      "file": "person-056.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 29877
+    },
+    {
+      "file": "person-057.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 43979
+    },
+    {
+      "file": "person-058.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 30295
+    },
+    {
+      "file": "person-059.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 36182
+    },
+    {
+      "file": "person-060.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 34319
+    },
+    {
+      "file": "person-061.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 32258
+    },
+    {
+      "file": "person-062.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 43787
+    },
+    {
+      "file": "person-063.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 36742
+    },
+    {
+      "file": "person-064.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 30310
+    },
+    {
+      "file": "person-065.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 38006
+    },
+    {
+      "file": "person-066.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 36903
+    },
+    {
+      "file": "person-067.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 40046
+    },
+    {
+      "file": "person-068.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 39015
+    },
+    {
+      "file": "person-069.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 35860
+    },
+    {
+      "file": "person-070.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 36875
+    },
+    {
+      "file": "person-071.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 35927
+    },
+    {
+      "file": "person-072.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 35242
+    },
+    {
+      "file": "person-073.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 31288
+    },
+    {
+      "file": "person-074.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 36676
+    },
+    {
+      "file": "person-075.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 35568
+    },
+    {
+      "file": "person-076.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 37333
+    },
+    {
+      "file": "person-077.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 32405
+    },
+    {
+      "file": "person-078.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 38721
+    },
+    {
+      "file": "person-079.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 31560
+    },
+    {
+      "file": "person-080.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 41741
+    },
+    {
+      "file": "person-081.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 38515
+    },
+    {
+      "file": "person-082.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 37355
+    },
+    {
+      "file": "person-083.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 36494
+    },
+    {
+      "file": "person-084.jsonl",
+      "kind": "person",
+      "count": 120,
+      "chars": 41696
+    },
+    {
+      "file": "person-085.jsonl",
+      "kind": "person",
+      "count": 118,
+      "chars": 42986
+    },
+    {
+      "file": "organization-001.jsonl",
+      "kind": "organization",
+      "count": 120,
+      "chars": 21965
+    },
+    {
+      "file": "organization-002.jsonl",
+      "kind": "organization",
+      "count": 120,
+      "chars": 19996
+    },
+    {
+      "file": "organization-003.jsonl",
+      "kind": "organization",
+      "count": 120,
+      "chars": 20048
+    },
+    {
+      "file": "organization-004.jsonl",
+      "kind": "organization",
+      "count": 120,
+      "chars": 20099
+    },
+    {
+      "file": "organization-005.jsonl",
+      "kind": "organization",
+      "count": 120,
+      "chars": 22592
+    },
+    {
+      "file": "organization-006.jsonl",
+      "kind": "organization",
+      "count": 120,
+      "chars": 21580
+    },
+    {
+      "file": "organization-007.jsonl",
+      "kind": "organization",
+      "count": 116,
+      "chars": 21451
+    },
+    {
+      "file": "artist-001.jsonl",
+      "kind": "artist",
+      "count": 24,
+      "chars": 104446
+    },
+    {
+      "file": "artist-002.jsonl",
+      "kind": "artist",
+      "count": 29,
+      "chars": 103345
+    },
+    {
+      "file": "artist-003.jsonl",
+      "kind": "artist",
+      "count": 28,
+      "chars": 109927
+    },
+    {
+      "file": "artist-004.jsonl",
+      "kind": "artist",
+      "count": 26,
+      "chars": 98470
+    },
+    {
+      "file": "artist-005.jsonl",
+      "kind": "artist",
+      "count": 27,
+      "chars": 107847
+    },
+    {
+      "file": "artist-006.jsonl",
+      "kind": "artist",
+      "count": 28,
+      "chars": 109486
+    },
+    {
+      "file": "artist-007.jsonl",
+      "kind": "artist",
+      "count": 37,
+      "chars": 108923
+    },
+    {
+      "file": "artist-008.jsonl",
+      "kind": "artist",
+      "count": 22,
+      "chars": 104209
+    },
+    {
+      "file": "artist-009.jsonl",
+      "kind": "artist",
+      "count": 29,
+      "chars": 105979
+    },
+    {
+      "file": "artist-010.jsonl",
+      "kind": "artist",
+      "count": 29,
+      "chars": 95334
+    },
+    {
+      "file": "artist-011.jsonl",
+      "kind": "artist",
+      "count": 35,
+      "chars": 108021
+    },
+    {
+      "file": "artist-012.jsonl",
+      "kind": "artist",
+      "count": 28,
+      "chars": 109046
+    },
+    {
+      "file": "artist-013.jsonl",
+      "kind": "artist",
+      "count": 31,
+      "chars": 109441
+    },
+    {
+      "file": "artist-014.jsonl",
+      "kind": "artist",
+      "count": 23,
+      "chars": 93978
+    },
+    {
+      "file": "artist-015.jsonl",
+      "kind": "artist",
+      "count": 26,
+      "chars": 98452
+    },
+    {
+      "file": "artist-016.jsonl",
+      "kind": "artist",
+      "count": 28,
+      "chars": 105482
+    },
+    {
+      "file": "artist-017.jsonl",
+      "kind": "artist",
+      "count": 28,
+      "chars": 108594
+    },
+    {
+      "file": "artist-018.jsonl",
+      "kind": "artist",
+      "count": 29,
+      "chars": 107202
+    },
+    {
+      "file": "artist-019.jsonl",
+      "kind": "artist",
+      "count": 35,
+      "chars": 107114
+    },
+    {
+      "file": "artist-020.jsonl",
+      "kind": "artist",
+      "count": 27,
+      "chars": 109677
+    },
+    {
+      "file": "artist-021.jsonl",
+      "kind": "artist",
+      "count": 35,
+      "chars": 109503
+    },
+    {
+      "file": "artist-022.jsonl",
+      "kind": "artist",
+      "count": 37,
+      "chars": 106182
+    },
+    {
+      "file": "artist-023.jsonl",
+      "kind": "artist",
+      "count": 38,
+      "chars": 107180
+    },
+    {
+      "file": "artist-024.jsonl",
+      "kind": "artist",
+      "count": 28,
+      "chars": 109654
+    },
+    {
+      "file": "artist-025.jsonl",
+      "kind": "artist",
+      "count": 44,
+      "chars": 107642
+    },
+    {
+      "file": "artist-026.jsonl",
+      "kind": "artist",
+      "count": 24,
+      "chars": 102537
+    },
+    {
+      "file": "artist-027.jsonl",
+      "kind": "artist",
+      "count": 30,
+      "chars": 109706
+    },
+    {
+      "file": "artist-028.jsonl",
+      "kind": "artist",
+      "count": 42,
+      "chars": 106411
+    },
+    {
+      "file": "artist-029.jsonl",
+      "kind": "artist",
+      "count": 19,
+      "chars": 107009
+    },
+    {
+      "file": "artist-030.jsonl",
+      "kind": "artist",
+      "count": 28,
+      "chars": 108331
+    },
+    {
+      "file": "artist-031.jsonl",
+      "kind": "artist",
+      "count": 30,
+      "chars": 105254
+    },
+    {
+      "file": "artist-032.jsonl",
+      "kind": "artist",
+      "count": 20,
+      "chars": 107230
+    },
+    {
+      "file": "artist-033.jsonl",
+      "kind": "artist",
+      "count": 36,
+      "chars": 109194
+    },
+    {
+      "file": "artist-034.jsonl",
+      "kind": "artist",
+      "count": 29,
+      "chars": 104071
+    },
+    {
+      "file": "artist-035.jsonl",
+      "kind": "artist",
+      "count": 42,
+      "chars": 105519
+    },
+    {
+      "file": "artist-036.jsonl",
+      "kind": "artist",
+      "count": 120,
+      "chars": 90761
+    },
+    {
+      "file": "artist-037.jsonl",
+      "kind": "artist",
+      "count": 72,
+      "chars": 108484
+    },
+    {
+      "file": "artist-038.jsonl",
+      "kind": "artist",
+      "count": 120,
+      "chars": 93966
+    },
+    {
+      "file": "artist-039.jsonl",
+      "kind": "artist",
+      "count": 120,
+      "chars": 74431
+    },
+    {
+      "file": "artist-040.jsonl",
+      "kind": "artist",
+      "count": 120,
+      "chars": 98774
+    },
+    {
+      "file": "artist-041.jsonl",
+      "kind": "artist",
+      "count": 51,
+      "chars": 92488
+    },
+    {
+      "file": "artist-042.jsonl",
+      "kind": "artist",
+      "count": 64,
+      "chars": 109997
+    },
+    {
+      "file": "artist-043.jsonl",
+      "kind": "artist",
+      "count": 100,
+      "chars": 109829
+    },
+    {
+      "file": "artist-044.jsonl",
+      "kind": "artist",
+      "count": 66,
+      "chars": 108455
+    },
+    {
+      "file": "artist-045.jsonl",
+      "kind": "artist",
+      "count": 29,
+      "chars": 107305
+    },
+    {
+      "file": "artist-046.jsonl",
+      "kind": "artist",
+      "count": 26,
+      "chars": 109443
+    },
+    {
+      "file": "artist-047.jsonl",
+      "kind": "artist",
+      "count": 31,
+      "chars": 107104
+    },
+    {
+      "file": "artist-048.jsonl",
+      "kind": "artist",
+      "count": 26,
+      "chars": 108564
+    },
+    {
+      "file": "artist-049.jsonl",
+      "kind": "artist",
+      "count": 38,
+      "chars": 102387
+    },
+    {
+      "file": "artist-050.jsonl",
+      "kind": "artist",
+      "count": 24,
+      "chars": 108910
+    },
+    {
+      "file": "artist-051.jsonl",
+      "kind": "artist",
+      "count": 28,
+      "chars": 100153
+    },
+    {
+      "file": "artist-052.jsonl",
+      "kind": "artist",
+      "count": 34,
+      "chars": 105412
+    },
+    {
+      "file": "artist-053.jsonl",
+      "kind": "artist",
+      "count": 33,
+      "chars": 107555
+    },
+    {
+      "file": "artist-054.jsonl",
+      "kind": "artist",
+      "count": 35,
+      "chars": 109604
+    },
+    {
+      "file": "artist-055.jsonl",
+      "kind": "artist",
+      "count": 28,
+      "chars": 108280
+    },
+    {
+      "file": "artist-056.jsonl",
+      "kind": "artist",
+      "count": 43,
+      "chars": 109215
+    },
+    {
+      "file": "artist-057.jsonl",
+      "kind": "artist",
+      "count": 34,
+      "chars": 99065
+    },
+    {
+      "file": "artist-058.jsonl",
+      "kind": "artist",
+      "count": 34,
+      "chars": 109329
+    },
+    {
+      "file": "artist-059.jsonl",
+      "kind": "artist",
+      "count": 32,
+      "chars": 109264
+    },
+    {
+      "file": "artist-060.jsonl",
+      "kind": "artist",
+      "count": 35,
+      "chars": 108729
+    },
+    {
+      "file": "artist-061.jsonl",
+      "kind": "artist",
+      "count": 34,
+      "chars": 107567
+    },
+    {
+      "file": "artist-062.jsonl",
+      "kind": "artist",
+      "count": 36,
+      "chars": 109769
+    },
+    {
+      "file": "artist-063.jsonl",
+      "kind": "artist",
+      "count": 43,
+      "chars": 106514
+    },
+    {
+      "file": "artist-064.jsonl",
+      "kind": "artist",
+      "count": 31,
+      "chars": 107862
+    },
+    {
+      "file": "artist-065.jsonl",
+      "kind": "artist",
+      "count": 29,
+      "chars": 105203
+    },
+    {
+      "file": "artist-066.jsonl",
+      "kind": "artist",
+      "count": 36,
+      "chars": 108949
+    },
+    {
+      "file": "artist-067.jsonl",
+      "kind": "artist",
+      "count": 11,
+      "chars": 43794
+    }
+  ]
+}

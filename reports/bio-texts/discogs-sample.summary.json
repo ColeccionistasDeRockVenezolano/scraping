@@ -1,0 +1,16 @@
+{
+  "source": "discogs",
+  "rows": 10,
+  "entities": 10,
+  "byKind": {
+    "artist": 10
+  },
+  "withText": 6,
+  "stats": {
+    "discogs-bio:peticiones": 56,
+    "discogs:artist": 10,
+    "discogs:sin_prueba": 12,
+    "discogs:sin_candidato": 8
+  },
+  "minutes": 1.4
+}

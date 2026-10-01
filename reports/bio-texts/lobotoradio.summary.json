@@ -1,0 +1,22 @@
+{
+  "source": "lobotoradio",
+  "rows": 2492,
+  "entities": 2489,
+  "byKind": {
+    "artist": 565,
+    "person": 1650,
+    "album": 277
+  },
+  "withText": 97,
+  "stats": {
+    "lobotoradio:casadas": 2154,
+    "lobotoradio:origen_no_vz": 96,
+    "lobotoradio-bio:peticiones": 2843,
+    "lobotoradio:descartadas": 757,
+    "lobotoradio:sin_pagina": 1,
+    "lobotoradio:persona_sin_vinculo": 774,
+    "lobotoradio:album": 277,
+    "lobotoradio-bio:fallidas": 1
+  },
+  "minutes": 484.8
+}

@@ -1,0 +1,15 @@
+{
+  "source": "sincopa",
+  "rows": 2677,
+  "entities": 2216,
+  "byKind": {
+    "album": 2365,
+    "artist": 312
+  },
+  "withText": 2677,
+  "stats": {
+    "sincopa:album": 2365,
+    "sincopa:artist": 312
+  },
+  "minutes": 0.0
+}

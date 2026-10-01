@@ -1,0 +1,21 @@
+{
+  "source": "discogs",
+  "rows": 649,
+  "entities": 649,
+  "byKind": {
+    "artist": 415,
+    "organization": 45,
+    "album": 189
+  },
+  "withText": 283,
+  "stats": {
+    "discogs:artist": 415,
+    "discogs:sin_candidato": 1415,
+    "discogs:sin_prueba": 1502,
+    "discogs-bio:peticiones": 5810,
+    "discogs:ambiguo": 9,
+    "discogs:organization": 45,
+    "discogs:album": 189
+  },
+  "minutes": 106.5
+}

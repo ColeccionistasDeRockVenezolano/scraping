@@ -1,0 +1,23 @@
+{
+  "source": "wikipedia",
+  "rows": 48,
+  "entities": 47,
+  "byKind": {
+    "artist": 16,
+    "person": 24,
+    "album": 8
+  },
+  "withText": 48,
+  "stats": {
+    "wikipedia-bio-es:peticiones": 2260,
+    "wikipedia:sin_prueba": 230,
+    "wikipedia-es:artist": 10,
+    "wikipedia-es:person": 12,
+    "wikipedia-bio-en:peticiones": 1792,
+    "wikipedia-en:artist": 6,
+    "wikipedia-en:person": 12,
+    "wikipedia-es:album": 6,
+    "wikipedia-en:album": 2
+  },
+  "minutes": 87.4
+}

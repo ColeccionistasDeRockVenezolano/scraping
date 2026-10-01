@@ -1,0 +1,18 @@
+{
+  "source": "lastfm",
+  "rows": 29,
+  "entities": 22,
+  "byKind": {
+    "artist": 27,
+    "album": 2
+  },
+  "withText": 24,
+  "stats": {
+    "lastfm-bio:peticiones": 339,
+    "lastfm:sin_marca_vz": 13,
+    "lastfm:casados": 20,
+    "lastfm:agrupa_homonimos": 7,
+    "lastfm:resenas": 1
+  },
+  "minutes": 3.8
+}

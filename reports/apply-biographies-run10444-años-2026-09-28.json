@@ -1,0 +1,223 @@
+{
+  "mode": "confirm",
+  "runId": 10444,
+  "models": [
+    "deepseek-flash"
+  ],
+  "outputs": 20,
+  "badLines": [],
+  "applied": {
+    "artist": 14,
+    "album": 5,
+    "person": 1,
+    "organization": 0
+  },
+  "enriched": 20,
+  "created": 0,
+  "unchanged": 0,
+  "noData": 0,
+  "changedSinceExport": [],
+  "rejected": [],
+  "unknownCase": [],
+  "lostYears": [
+    {
+      "caseId": "album:1306",
+      "years": [
+        "1998"
+      ]
+    },
+    {
+      "caseId": "album:1985",
+      "years": [
+        "1997",
+        "1998"
+      ]
+    },
+    {
+      "caseId": "album:3543",
+      "years": [
+        "2013"
+      ]
+    },
+    {
+      "caseId": "album:3670",
+      "years": [
+        "2001"
+      ]
+    },
+    {
+      "caseId": "album:3844",
+      "years": [
+        "2013"
+      ]
+    },
+    {
+      "caseId": "artist:1105",
+      "years": [
+        "2008"
+      ]
+    },
+    {
+      "caseId": "artist:1376",
+      "years": [
+        "2004",
+        "1999"
+      ]
+    },
+    {
+      "caseId": "artist:144",
+      "years": [
+        "1975"
+      ]
+    },
+    {
+      "caseId": "artist:1616",
+      "years": [
+        "1996",
+        "1998"
+      ]
+    },
+    {
+      "caseId": "artist:1830",
+      "years": [
+        "1990",
+        "1993"
+      ]
+    },
+    {
+      "caseId": "artist:1891",
+      "years": [
+        "1967",
+        "1968",
+        "1969",
+        "1976"
+      ]
+    },
+    {
+      "caseId": "artist:213",
+      "years": [
+        "2000"
+      ]
+    },
+    {
+      "caseId": "artist:2225",
+      "years": [
+        "1997",
+        "1998",
+        "1999",
+        "2000",
+        "2001",
+        "2004",
+        "2003"
+      ]
+    },
+    {
+      "caseId": "artist:2733",
+      "years": [
+        "2009"
+      ]
+    },
+    {
+      "caseId": "artist:2861",
+      "years": [
+        "1960",
+        "1980",
+        "1994",
+        "1996",
+        "1940",
+        "1998"
+      ]
+    },
+    {
+      "caseId": "artist:565",
+      "years": [
+        "1975",
+        "1998",
+        "2003",
+        "2004",
+        "2006",
+        "2005"
+      ]
+    },
+    {
+      "caseId": "artist:618",
+      "years": [
+        "2013"
+      ]
+    },
+    {
+      "caseId": "artist:972",
+      "years": [
+        "2000",
+        "2003",
+        "2006"
+      ]
+    },
+    {
+      "caseId": "person:3070",
+      "years": [
+        "1968",
+        "1980"
+      ]
+    }
+  ],
+  "notes": [
+    {
+      "caseId": "album:1985",
+      "note": "El catálogo lista los temas «Villa chaparra (demo 98)» y «Espeso (demo 98)»; la corrección advierte que 1998 no aparece en el expediente, por lo que no se menciona ese año. La fuente s1 corresponde a la banda Hora Cero y solo se usó para confirmar la existencia del demo en 2008."
+    },
+    {
+      "caseId": "artist:1105",
+      "note": "El texto actual y una fuente dan a entender que el álbum se lanzó «en el presente año» tras dos años de trabajo, pero el catálogo lo fecha en 2010; se usó la fecha del catálogo. La fuente Last.fm menciona «el año pasado» para el Combate de Bandas sin precisar el año."
+    },
+    {
+      "caseId": "artist:1376",
+      "note": "Discrepancia entre la fuente s2, que indica que «Hoy voy a sentirme mejor» ocupa el puesto número 1 en su tercera semana, y s1, que señala que en tres semanas llegó al puesto 6 y luego alcanzó el número 1. La biografía actual no menciona discografía ni el álbum 11:11, datos añadidos desde las fuentes. No hay contradicción de identidad: se descartó la banda homónima española."
+    },
+    {
+      "caseId": "artist:144",
+      "note": "Discrepancia en el título del tema ganador en Barcelona 1969: las fuentes dudan entre «Yo Creo en Dios» (s1, s3, y disco del catálogo) y «Yo Creo en Ti» (s2); se optó por «Yo Creo en Dios». La fuente s2 indica 1975 para el triunfo en el X Festival de la Canción Venezolana, pero s3 lo sitúa un año antes del segundo lugar de la OTI en 1976, por lo que se dató en 1974."
+    },
+    {
+      "caseId": "artist:1538",
+      "note": "El texto de la fuente indicaba 2007 como año de separación con una errata («año 207»); se corrigió según la indicación de que 2007 sí procede del expediente."
+    },
+    {
+      "caseId": "artist:1830",
+      "note": "Discrepancia sobre la nacionalidad: el catálogo (a partir de los créditos) no la especifica; Discogs y MusicBrainz lo sitúan vinculado a Venezuela y Argentina, y una fuente lo describe como venezolano de origen argentino. Las fuentes discrepan sobre la edad de su primer matrimonio y sobre si su primer disco fue de 1978 o 1983."
+    },
+    {
+      "caseId": "artist:1891",
+      "note": "El catálogo indica formación en 1970, mientras la fuente venezolana especializada señala que el proyecto se formó en 1967 con otro nombre y que el grupo surgió en 1970. Se ha usado la fecha del catálogo. La fuente menciona 44 años de vida artística; no se incluyen discos de 1988 por falta de datos claros."
+    },
+    {
+      "caseId": "artist:213",
+      "note": "Discrepancias no resueltas: la grafía del apellido (Michelena/Mitxelena), el título del primer disco («Bartok's Room» / «Bartók's Room») y el año de edición (el catálogo no lo indica; una fuente dice 2000 y otra lo incluye en el año 2001 sin precisarlo). También hay divergencia en el orden de la trilogía: el catálogo titula «Mitxelena 3: Nauthiz» como «other», mientras una fuente lo llama «Mitxelena III: Nauthiz» y primero de la trilogía. La ficha de Lobotoradio (s4) parece corresponder a otro artista o estar contaminada."
+    },
+    {
+      "caseId": "artist:2225",
+      "note": "Se omitieron los años concretos de los eventos (1997, 1998, 1999, etc.) porque no constan en el expediente de forma fiable para cada hecho."
+    },
+    {
+      "caseId": "artist:2861",
+      "note": "El catálogo la registra como banda con María Rivas como miembro; las fuentes coinciden en que fue una solista. Discogs indica que también fue pintora y señala el nombre María Rivas Castro; la cifra de discos varía entre cinco (s1) y seis (s2)."
+    },
+    {
+      "caseId": "artist:565",
+      "note": "El catálogo registra 'Carne de Manzanas' y 'Carne Para Manzanas' como fichas distintas del mismo año; la fuente s1 fecha el inicio de su carrera solista en 2006 y la s3 en 2009. No consta el año de disolución o estado actual de los proyectos mencionados."
+    },
+    {
+      "caseId": "artist:618",
+      "note": "Las fuentes indican fechas de aniversario (4to en 2017, 5to en 2018) que sugieren formación en 2013, pero ese año no aparece explícitamente en el expediente."
+    },
+    {
+      "caseId": "artist:972",
+      "note": "El expediente no incluye el año de formación ni el de lanzamiento de Revivir; las fuentes mencionan 2000 y 2003, pero no constan en el expediente, por lo que se omitieron."
+    },
+    {
+      "caseId": "person:3070",
+      "note": "Discrepancia de fecha de nacimiento: la fuente s1 dice 22 de mayo de 1952 y la fuente s2 y el catálogo, 12 de mayo de 1952; se usó la del catálogo."
+    }
+  ],
+  "discarded": 15
+}

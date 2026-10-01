@@ -1,0 +1,202 @@
+{
+  "mode": "confirm",
+  "runId": 10553,
+  "models": [
+    "deepseek-flash"
+  ],
+  "outputs": 123,
+  "badLines": [],
+  "applied": {
+    "artist": 0,
+    "album": 0,
+    "person": 114,
+    "organization": 0
+  },
+  "enriched": 114,
+  "created": 0,
+  "unchanged": 7,
+  "noData": 0,
+  "changedSinceExport": [],
+  "rejected": [
+    {
+      "caseId": "person:1556",
+      "batch": "person-001",
+      "reason": "habla del expediente o del catálogo en vez de la ficha"
+    },
+    {
+      "caseId": "person:916",
+      "batch": "person-001",
+      "reason": "habla del expediente o del catálogo en vez de la ficha"
+    }
+  ],
+  "unknownCase": [],
+  "lostYears": [
+    {
+      "caseId": "person:3266",
+      "years": [
+        "2000"
+      ]
+    },
+    {
+      "caseId": "person:6571",
+      "years": [
+        "2012"
+      ]
+    }
+  ],
+  "notes": [
+    {
+      "caseId": "person:10051",
+      "note": "El expediente menciona una ficha fusionada «Juan Camacho» sin más datos; no se incluye por falta de información."
+    },
+    {
+      "caseId": "person:1068",
+      "note": "El expediente no indica nacionalidad de forma expresa; el catálogo la deduce de los créditos."
+    },
+    {
+      "caseId": "person:1176",
+      "note": "La ficha fusionada «Gabriel Figuera» menciona composiciones para Nana Cadavieco, ya recogidas en el catálogo; se unificó la grafía del nombre."
+    },
+    {
+      "caseId": "person:12048",
+      "note": "Las fuentes no confirman la nacionalidad francesa del intérprete; se deduce del nombre y del repertorio, pero ningún dato del expediente lo afirma. Discrepancia de grafía entre «Capri ha terminado (Capri C'est Fini)» y «Capry C'est Fini», probablemente el mismo tema."
+    },
+    {
+      "caseId": "person:12546",
+      "note": "El texto actual lo describe como «intérprete» y los créditos solo recogen diseño gráfico, arte y fotografías; se omite la faceta de intérprete al no estar respaldada por los créditos del catálogo."
+    },
+    {
+      "caseId": "person:12896",
+      "note": "La ficha fusionada la nombra como «María Consuelo Fario \"La GoGo\"»; se mantiene la grafía del catálogo, «María Consuelo Faria». Los créditos figuran como «photos», por lo que se describen como participación fotográfica sin precisar el soporte."
+    },
+    {
+      "caseId": "person:13133",
+      "note": "La ficha actual dice «asistente técnico y diseñador gráfico» y los créditos del catálogo lo acreditan en fotografía, apoyo digital y dirección de arte; se mantienen ambos sin resolver la equivalencia exacta de los roles."
+    },
+    {
+      "caseId": "person:1380",
+      "note": "La ficha fusionada menciona «Andrés Buitriago» como variante del nombre; se conserva la grafía del catálogo, «Andrés Buitrago», pero conviene confirmar si se trata de la misma persona."
+    },
+    {
+      "caseId": "person:1434",
+      "note": "El catálogo lista «Fito Páez — Miembro» entre sus bandas, dato que no se desarrolla por falta de contexto; el expediente no afirma la nacionalidad de la persona."
+    },
+    {
+      "caseId": "person:1691",
+      "note": "La ficha fusionada lo menciona como «Gilberto Reboiledo», posible variante del nombre; se usó la grafía del catálogo."
+    },
+    {
+      "caseId": "person:174",
+      "note": "El catálogo no indica nacionalidad y ninguna fuente la afirma expresamente; no se menciona en el texto. La fuente s1 da como nombre completo «Ervin Schäfer» y la ficha fusionada «Erwin \"Wincho\" Schäfer»; se ha optado por no incluir el nombre completo para evitar la discrepancia."
+    },
+    {
+      "caseId": "person:2032",
+      "note": "La nacionalidad venezolana no está afirmada expresamente en las fuentes; se omite del texto."
+    },
+    {
+      "caseId": "person:2043",
+      "note": "El crédito de «Solo Bass» figura en el catálogo como «de Oscar Fanega» y en la ficha fusionada como disco con temas compuestos por Oscar Fanegas grabados por Oscar Fanega; se mantiene la atribución del catálogo."
+    },
+    {
+      "caseId": "person:223",
+      "note": "El catálogo no indica su nacionalidad; se omite."
+    },
+    {
+      "caseId": "person:2307",
+      "note": "La ficha fusionada lo nombra «Edgar Espinosa»; se unificó como Edgar Espinoza. Los años 1984, 1985, 1988 y 1990 provienen de Lobotoradio; el catálogo no los detalla."
+    },
+    {
+      "caseId": "person:2493",
+      "note": "Discrepancia en el año de lanzamiento de Amazonia: 1989 (Wikipedia en inglés) frente a 1993 (Lobotoradio); se ha optado por 1993 según la fuente venezolana especializada. Discrepancia en el año de migración a Venezuela: 1948/1949 (dos años de edad) frente a los dos años indicados en las fuentes."
+    },
+    {
+      "caseId": "person:2686",
+      "note": "La fuente fusion1 repite lo mismo que el catálogo y la biografía actual, por lo que no aporta datos nuevos; se conserva la mención al disco sin repetir el crédito duplicado."
+    },
+    {
+      "caseId": "person:2855",
+      "note": "El expediente fusiona las fichas «Carlos Guerrero» y «Carlos \"Turbo\" Gerreiro»; se unifican sus créditos bajo el nombre actual."
+    },
+    {
+      "caseId": "person:3266",
+      "note": "El expediente no afirma la nacionalidad de la persona; el catálogo la marca venezolana de forma deducida y s1 indica nacimiento en Caracas, dato no incluido por no ser nacionalidad afirmada."
+    },
+    {
+      "caseId": "person:3405",
+      "note": "La fuente s1 indica nacimiento en 1966 en Tenerife (España); el catálogo lo marca como venezolano pero no se incluye la nacionalidad por falta de confirmación explícita."
+    },
+    {
+      "caseId": "person:39",
+      "note": "Lobotoradio lista «Los Claners (1968)» entre sus bandas, dato que no aparece en la biografía actual ni en La Venciclopedia; se omite. La ficha fusionada atribuye la composición de «Arráncame La Vida» a la grafía «Pablo Manvello»; se asume como la misma persona, pendiente de confirmar."
+    },
+    {
+      "caseId": "person:395",
+      "note": "La ficha fusionada lo registra como «Luis Ortero»; se usa la grafía del catálogo («Luis Otero»)."
+    },
+    {
+      "caseId": "person:4026",
+      "note": "La grafía «Edgar Quinteor» de la ficha fusionada parece un error por «Edgar Quintero»; se unificó como Édgar Alexander."
+    },
+    {
+      "caseId": "person:4228",
+      "note": "La ficha fusionada lo describe como intérprete, mientras el catálogo y la biografía actual lo acreditan como ingeniero asistente; se mantiene este último rol."
+    },
+    {
+      "caseId": "person:4387",
+      "note": "El expediente no indica la nacionalidad de la persona; no se afirma que sea venezolana."
+    },
+    {
+      "caseId": "person:451",
+      "note": "La ficha fusionada lo identifica como Fabián \"Tweety\" González, mientras el catálogo lo registra como Tweety González; se mantiene el nombre del catálogo."
+    },
+    {
+      "caseId": "person:4652",
+      "note": "La ficha fusionada se refiere a «Ovalo» como disco de Ale Ramírez y atribuye la producción al propio Ale Ramírez; el catálogo lo registra como tema. No queda claro si Ale Ramírez es la misma persona que el intérprete de la ficha o un artista distinto."
+    },
+    {
+      "caseId": "person:4771",
+      "note": "La fuente fusion1 atribuye a «Ramón I. Méndez A» el papel de intérprete en «Insecto Milenario», mientras el catálogo lo registra como fotógrafo; se mantiene el dato del catálogo."
+    },
+    {
+      "caseId": "person:491",
+      "note": "El texto anterior atribuía nacionalidad venezolana a la persona; ninguna fuente del expediente la afirma expresamente."
+    },
+    {
+      "caseId": "person:603",
+      "note": "Discrepancia en la fecha de nacimiento: s1 indica 22 de mayo de 1952 y fusion1 el 12 de mayo de 1952. El catálogo no la precisa, por lo que el dato se omite en el texto."
+    },
+    {
+      "caseId": "person:646",
+      "note": "El catálogo no incluye «Sentimiento Muerto» (1986); la fecha de 1981-1988 y los datos de nacimiento provienen de Lobotoradio. La ficha indica «A Typical & Autoctonal Venezuelan Dance Band» como disco de Los Amigos Invisibles, con la que el catálogo la relaciona."
+    },
+    {
+      "caseId": "person:6615",
+      "note": "La nacionalidad venezolana no está afirmada por ninguna fuente; se omite."
+    },
+    {
+      "caseId": "person:7640",
+      "note": "La fuente «fusion1» procede de una ficha fusionada que le atribuía también el papel de intérprete en «Songs From The Future»; se omite por contradicción con el catálogo."
+    },
+    {
+      "caseId": "person:8282",
+      "note": "Discrepancia de grafía del apellido: el catálogo usa «Remersaro» y una ficha anterior fusionada usaba «Remersario»."
+    },
+    {
+      "caseId": "person:8288",
+      "note": "La fuente fusionada indica 1976 como año del disco «Después de la tormenta»; el catálogo no recoge ese año, por lo que se ha omitido en el texto."
+    },
+    {
+      "caseId": "person:93",
+      "note": "La ficha de Lobotoradio y la entrada fusionada «Paul McCarteny» se refieren a la misma persona; no se usaron datos nuevos de ellas. No se afirma la nacionalidad porque ninguna fuente la declara expresamente."
+    },
+    {
+      "caseId": "person:9671",
+      "note": "La fuente s1 indica que falleció el 20 de abril de 2026; se omite la fecha de muerte en el texto por corresponder a una fecha futura respecto al resto de los datos y conviene confirmarla. La grafía del tema «Erase Una Vez» aparece sin tilde en el catálogo; se mantiene tal cual."
+    },
+    {
+      "caseId": "person:977",
+      "note": "El expediente no aclara si Francisco Belisario y Frank Belisario son la misma persona; la fuente fusion1 indica que sí, pero se mantiene la duda por si se trata de créditos distintos."
+    }
+  ],
+  "discarded": 1
+}
