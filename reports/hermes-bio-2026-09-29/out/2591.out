@@ -1,0 +1,53 @@
+{
+  "identidad_confirmada": true,
+  "pruebas_identidad": [
+    {
+      "url": "https://www.youtube.com/watch?v=sCS6uX4-xP4",
+      "cita": "Mexica, tema del grupo colombiano Kraken, interpretado por el grupo español VendavaL.\nIncluido en el Tributo Internacional Kraken"
+    },
+    {
+      "url": "https://es.wikipedia.org/wiki/Vendaval_(banda)",
+      "cita": "Este mismo año, la banda es invitada a participar con el tema Méxica en el Tributo Internacional a Kraken."
+    }
+  ],
+  "pais": {
+    "valor": "España",
+    "url": "https://es.wikipedia.org/wiki/Vendaval_(banda)",
+    "cita": "Vendaval es una banda española de heavy metal y power metal, formada en Asturias en 2002 por Txema Trinidad, Miguel Fernández, Fernando Argüelles y Luis Fernández, tras la separación de la banda Nörthwind."
+  },
+  "ciudad": null,
+  "año_formacion": {
+    "valor": 2002,
+    "url": "https://es.wikipedia.org/wiki/Vendaval_(banda)",
+    "cita": "Período de actividad: 2002 - actualidad"
+  },
+  "generos": [
+    {
+      "genero": "Heavy metal",
+      "url": "https://es.wikipedia.org/wiki/Vendaval_(banda)",
+      "cita": "Vendaval es una banda española de heavy metal y power metal"
+    },
+    {
+      "genero": "Power metal",
+      "url": "https://es.wikipedia.org/wiki/Vendaval_(banda)",
+      "cita": "Vendaval es una banda española de heavy metal y power metal"
+    }
+  ],
+  "datos_para_biografia": [
+    {
+      "dato": "Se formó en 2002 tras la separación de la banda asturiana Nörthwind",
+      "url": "https://es.wikipedia.org/wiki/Vendaval_(banda)",
+      "cita": "formada en Asturias en 2002 por Txema Trinidad, Miguel Fernández, Fernando Argüelles y Luis Fernández, tras la separación de la banda Nörthwind"
+    },
+    {
+      "dato": "Su álbum debut homónimo «Vendaval» se publicó en junio de 2003 bajo el sello GOI Music",
+      "url": "https://es.wikipedia.org/wiki/Vendaval_(banda)",
+      "cita": "en junio de 2003 la banda lanza su álbum debut, Vendaval, bajo el sello GOI Music"
+    },
+    {
+      "dato": "En 2007 participó con el tema «Méxica» en el Tributo Internacional a Kraken y posteriormente firmó en exclusiva con GRAVIS Records",
+      "url": "https://es.wikipedia.org/wiki/Vendaval_(banda)",
+      "cita": "Este mismo año, la banda es invitada a participar con el tema Méxica en el Tributo Internacional a Kraken."
+    }
+  ]
+}

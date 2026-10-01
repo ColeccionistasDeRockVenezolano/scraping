@@ -1,0 +1,661 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Ravn (USA) - discography, line-up, biography, interviews, photos</title>
+<meta name="description" content="discography, line-up, biography, interviews, photos">
+<meta name="keywords" content="discography, line-up, biography, interviews, photos,music,metal"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="icon" type="image/png" href="https://www.spirit-of-metal.com/mes%20images/spirit-of-metal.png" />
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- <script defer src="https://pro.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-DtPgXIYsUR6lLmJK14ZNUi11aAoezQtw4ut26Zwy9/6QXHH8W3+gjrRDT+lHiiW4" crossorigin="anonymous"></script>-->
+<script defer src="/css/fontawesome/js/all.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.7.0/sweetalert2.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/css/main.less.css?version=14" media="screen">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+<!-- EZOIC -->
+<script data-cfasync="false" src="https://cmp.gatekeeperconsent.com/min.js"></script>
+<script data-cfasync="false" src="https://the.gatekeeperconsent.com/cmp.min.js"></script>
+<script async src="//www.ezojs.com/ezoic/sa.min.js"></script>
+<script>
+    window.ezstandalone = window.ezstandalone || {};
+    ezstandalone.cmd = ezstandalone.cmd || [];
+</script>
+<script src="//ezoicanalytics.com/analytics.js"></script>
+
+
+<script type="text/javascript" src="/js/Oldmain.js?v=2"></script>
+<script>
+var LANG="en";
+var LANG_TEXT="en";
+
+var TextConfirmationLogout="What do you want to do ?";
+var TextConfirmationLogoutYes="Let me out !";
+var TextConfirmationLogoutNo="Stay here";
+</script>
+<META HTTP-EQUIV="Content-Language" CONTENT="en">
+<link rel="alternate" hreflang="en" href=https://www.spirit-of-metal.com/en/band/Ravn \><link rel="alternate" hreflang="fr" href=https://www.spirit-of-metal.com/fr/band/Ravn \><link rel="alternate" hreflang="de" href=https://www.spirit-of-metal.com/de/band/Ravn \><link rel="alternate" hreflang="zh-cn" href=https://www.spirit-of-metal.com/cn/band/Ravn \><link rel="alternate" hreflang="pt-pt" href=https://www.spirit-of-metal.com/pt/band/Ravn \><link rel="alternate" hreflang="es-es" href=https://www.spirit-of-metal.com/es/band/Ravn \><link rel="alternate" hreflang="ru" href=https://www.spirit-of-metal.com/ru/band/Ravn \><link rel="alternate" hreflang="pl" href=https://www.spirit-of-metal.com/pl/band/Ravn \><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<script type="text/javascript">
+    
+    var _lang="en";   
+	var _BandPage="https://www.spirit-of-metal.com/en/band/Ravn";
+	var _Nb_Page=1;
+	
+	function DisplayAlbumsByType(id_groupe,type)
+	{
+		$('#release-menu > a').each(function () { 
+			$(this).removeClass("current-type");
+		});
+		
+		$('#Menu'+type).addClass("current-type");
+		
+		try{
+			$('#infinitescroll').infiniteScroll('destroy');
+		}catch(err) {
+			//alert(err.message);
+		}
+		
+		$('#infinitescroll').remove();
+		$('#infinitescrollContainer').html('<section id=infinitescroll><div align=center><i class="fa fa-refresh fa-spin fa-fw fa-5x"></i></div></section>');
+		
+		$.ajax({
+			url: "/ajax/getBandDiscoByType.php",
+				type: "GET",
+				data: "id_groupe="+id_groupe+"&type="+type+"&p=1",
+				success: function(XMLHttpRequest) {
+				
+					$("#infinitescroll").html(XMLHttpRequest).infiniteScroll({
+					  // options
+					  path: '.moreinfinitescroll',
+					  append: '.infinitescrollResult',
+					  hideNav: '.pagination',
+					  status: '.page-load-status',
+					  debug: true,
+					  history: false
+					});
+					
+				}
+			});
+			
+		
+	
+	
+	}
+	
+	function JoinFan(login,id_groupe)
+	{
+		if(login=='')
+			windows.location='/ident2.php';
+			
+		$.ajax({
+		  url: '/membre/AJAX_manage_favorites.php?addID='+id_groupe
+		});
+
+		$('#JoinOrLeaveFan').html('<span>You like this band</span><span> <i class="fa fa-thumbs-up" aria-hidden="true"></i></span>');
+		
+		swal({
+		  title: "You joined the fans of Ravn (USA)",
+		  type: "success",
+		  showCancelButton: true,
+		  confirmButtonColor: "#DD6B55",
+		  confirmButtonText: "Access my favorites bands list",
+		  cancelButtonText: "Stay here",
+		  closeOnConfirm: false
+		}).then(function(isConfirm){
+			if (isConfirm)
+				window.location = "/membre/info_membre-pseudo--d-4-l-en.html#Favorites";
+		});
+		
+		
+	}
+	
+	function LeaveFan(login,id_groupe)
+	{
+			
+		$.ajax({
+		  url: '/membre/AJAX_manage_favorites.php?id_groupe='+id_groupe
+		});
+
+		location.reload(); 
+	}
+	
+	/*
+	function disco(url,DiscoType)
+	{
+		_DiscoType = DiscoType + '/';
+		_MyCounter=0; //as we change, we restart
+		
+		var stateObj = {urlPath:url};
+		window.history.pushState(stateObj, 'Title', url);
+		// 
+		// $('#infinitescroll').infinitescroll('binding','unbind');
+		
+		$('#infinitescroll').html('');///loader
+		$.ajax({
+		  url: url
+		}).done(function( xml ) {
+		
+			$(xml).find('.infinitescrollResult').each(function() {
+				$('#infinitescroll').append($(this).html());
+			});
+			
+			$(xml).find('.pagination').each(function() {
+				$('#infinitescroll').append($(this).html());
+			
+				
+			
+			});
+		});
+	
+	}
+	*/
+	
+</script>
+<link rel="stylesheet" type="text/css" href="/js/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+<STYLE type="text/css"> 
+.highslide-caption {
+    display: none;
+    
+    font-family: Verdana, Helvetica;
+    font-size: 10pt;
+    border: 5px solid #444444;
+    border-top: none;
+    padding: 5px;
+    background-color: gray;
+}
+
+.hidden{
+	display:none;
+}
+.hreview-aggregate{
+	display:none;
+}
+</STYLE>
+</head>
+
+<body itemscope itemtype="http://schema.org/MusicGroup">
+<header class="hidden-xs hidden-sm">
+    <div id="topbar">
+	<div>
+	<div id="portal">
+	<span>METAL</span>
+          <span><a href="https://www.spirit-of-rock.com" STYLE="color:#000;">ROCK</a></span>        </div>
+      <div id="language-switcher">
+        <i class="fa fa-language"></i>
+        <img class="close" src="/img/cross.png" alt="Fermer">
+      </div>
+      <div id="languages">
+	  <a href=/en/band/Ravn onclick="setCookie('clang','en',31,'/');">EN</a><a href=/fr/band/Ravn onclick="setCookie('clang','fr',31,'/');">FR</a><a href=/de/band/Ravn onclick="setCookie('clang','de',31,'/');">DE</a><a href=/cn/band/Ravn onclick="setCookie('clang','中文',31,'/');">中文</a><a href=/pt/band/Ravn onclick="setCookie('clang','pt',31,'/');">PT</a><a href=/es/band/Ravn onclick="setCookie('clang','es',31,'/');">ES</a><a href=/ru/band/Ravn onclick="setCookie('clang','ru',31,'/');">RU</a><a href=/pl/band/Ravn onclick="setCookie('clang','pl',31,'/');">PL</a>	  
+      </div>
+	  </div>
+      <nav>
+        <ul>
+          <a href="https://www.spirit-of-metal.com"><li>Webzine</li></a>
+          <a href="/en/encyclopedia"><li>Encyclopedia</li></a>
+          <a href="/forum/en/" target="_blank"><li>Forums</li></a>
+        </ul>
+      </nav>
+      <div id="search-toggle">
+        <i class="fa fa-search" aria-hidden="true"></i>
+        <img class="close" src="/img/cross.png" alt="Fermer">
+      </div>
+      <div id="search-box">
+		<form action="/find.php" method=get><input type=hidden name=l value="en"><input id=GlobalSearchField type="text" name=nom placeholder="Search"></form>
+        <div class="options row">
+		
+		<a href="https://www.spirit-of-metal.com/en/reviews/1" class="col-xs-3">
+            <i class="fa fal fa-edit fa-2x"></i>
+            <div>Reviews</div>
+          </a><a href="https://www.spirit-of-metal.com/en/interviews/1" class="col-xs-3">
+            <i class="fa fa-microphone fa-2x"></i>
+            <div>Interviews</div>
+          </a><a href="https://www.spirit-of-metal.com/en/live/1" class="col-xs-3">
+            <i class="fa fal fa-file-alt fa-2x"></i>
+            <div>Live Reports</div>
+          </a><a href="https://www.spirit-of-metal.com/en/pictures/1" class="col-xs-3">
+            <i class="fa fa-camera fa-2x"></i>
+            <div>Photos galleries</div>
+          </a></div><div class="options row"><a href="/en/bands/1" class="col-xs-3">
+            <i class="fa fa-users fa-2x"></i>
+            <div>Bands</div>
+          </a><a href="https://www.spirit-of-metal.com/en/albums/1" class="col-xs-3">
+            <i class="fa fa-music fa-2x"></i>
+            <div>Albums</div>
+          </a><a href="/en/styles" class="col-xs-3">
+            <i class="fa fa-hashtag fa-2x"></i>
+            <div>Music Style</div>
+          </a><a href="/en/artists/1" class="col-xs-3">
+            <i class="fa fa-address-book fa-2x"></i>
+            <div>Artists</div>
+          </a></div>
+		<div class="options row"><a href="/en/audios/1" class="col-xs-3">
+            <i class="fa fa-file-audio fa-2x"></i>
+            <div>Audio</div>
+          </a><a href="/en/videos/1" class="col-xs-3">
+            <i class="fa fa-video fa-2x"></i>
+            <div>Video</div>
+          </a><a href="/en/labels/1" class="col-xs-3">
+            <i class="fa fa-tag fa-2x"></i>
+            <div>Labels</div>
+          </a><a href="/en/places/1" class="col-xs-3">
+            <i class="fa fa-map-marker fa-2x"></i>
+            <div>Places</div>
+          </a>		
+        </div>
+      </div>
+    </div>
+	
+    <div id="banner">
+      <figure>
+        <a href="https://www.spirit-of-metal.com"><img id="logo" src="/img/logo_1.png" alt="Spirit of Metal"></a>
+      </figure>
+	        <div class=FullDesktopAds STYLE="padding-top:50px">
+	  
+		<!-- Ezoic - Desktop Header Main Site - top_of_page -->
+<div id="ezoic-pub-ad-placeholder-101">
+
+
+		
+		</div><!-- End Ezoic - Desktop Header Main Site - top_of_page -->
+		</div>
+	  <div id=login><form method='post' id='FORMlogin' action='/fonctions/login.php?page=/en/band/Ravn'>
+	
+		<div><input type=text class=SubmitSmallNEW name='login_log' id='login_log' size='30' placeholder=' Login'></div>
+	
+	<div STYLE='margin-top:5px;float:left;'>
+		<div STYLE='margin-top:5px;float:left;'><input type=password class=SubmitSmallNEW name='password_log' id='password_log' size='30' placeholder=' Password'></div>
+		<div STYLE='margin-top:5px;float:left;'><input type=Submit class=btn-yellow value=OK></div>
+	</div>
+	<div STYLE="margin-top:60px;font-size:16px;">
+	<a href=/membre/ajout_membre-l-en.html ref="nofollow"> Subscribing</a> &nbsp; | &nbsp; 
+	<a href=/membre/generate_pass-l-en.html ref="nofollow"> Pass lost ?</a>
+	</div></form></div> 
+      </div>
+    </div>
+  </header>
+  <div id="m-header" class="container-fluid hidden-md hidden-lg hidden-xl">
+    <div id="m-portal" class="row">
+      <div class="col-xs-7 hidden-xs">
+	  
+	  <a class="som" href="https://www.spirit-of-metal.com">SPIRIT OF <span>METAL</span></a> | 
+			<a class="sor" href="https://www.spirit-of-rock.com">SPIRIT OF <span>ROCK</span></a>	
+      </div>
+	  <div class="col-xs-5  hidden-md hidden-lg hidden-xl hidden-sm">
+	  
+	  <a class="som" href="https://www.spirit-of-metal.com"><span>METAL</span></a> | 
+			<a class="sor" href="https://www.spirit-of-rock.com"><span>ROCK</span></a>	
+      </div>
+      <div id="m-switchers" class="col-sm-5 col-xs-7">
+        <i class="fa fa-language" STYLE="cursor:pointer" data-toggle="collapse" data-target="#m-languages"></i>
+        <i class="fa fa-search" STYLE="cursor:pointer" data-toggle="collapse" data-target="#m-options" aria-expanded="true"></i>
+        <i class="fa fa-user" STYLE="cursor:pointer" data-toggle="collapse" data-target="#m-login"></i>
+		      </div>
+    </div>
+    <div id="m-languages" class="row collapse">
+      <div class="col-xs-12">
+        <ul>
+		<li><a href="/en/band/Ravn" onclick="setCookie('clang','en',31,'/');" class="m-active">EN</a></li><li><a href="/fr/band/Ravn" onclick="setCookie('clang','fr',31,'/');">FR</a></li><li><a href="/de/band/Ravn" onclick="setCookie('clang','de',31,'/');">DE</a></li><li><a href="/cn/band/Ravn" onclick="setCookie('clang','中文',31,'/');">中文</a></li><li><a href="/pt/band/Ravn" onclick="setCookie('clang','pt',31,'/');">PT</a></li><li><a href="/es/band/Ravn" onclick="setCookie('clang','es',31,'/');">ES</a></li><li><a href="/ru/band/Ravn" onclick="setCookie('clang','ru',31,'/');">RU</a></li><li><a href="/pl/band/Ravn" onclick="setCookie('clang','pl',31,'/');">PL</a></li>        </ul>
+      </div>
+    </div>
+    <div id="m-options" class="collapse" aria-expanded="true" style="">
+	<form action="/find.php" method=get STYLE="padding:0 10px 0 10px;">
+		<div class=SearchFieldAndButton><input id=GlobalSearchField type="text" name=nom placeholder="Search">
+		<input type=submit value=GO class='btn-yellow'></div></form>
+      <div class="row">
+	  <a href="https://www.spirit-of-metal.com/en/reviews/1" class="col-xs-3">
+            <i class="fa fal fa-edit fa-2x"></i>
+            <div>Reviews</div>
+          </a><a href="https://www.spirit-of-metal.com/en/interviews/1" class="col-xs-3">
+            <i class="fa fa-microphone fa-2x"></i>
+            <div>Interviews</div>
+          </a><a href="https://www.spirit-of-metal.com/en/live/1" class="col-xs-3">
+            <i class="fa fal fa-file-alt fa-2x"></i>
+            <div>Live Reports</div>
+          </a><a href="https://www.spirit-of-metal.com/en/pictures/1" class="col-xs-3">
+            <i class="fa fa-camera fa-2x"></i>
+            <div>Photos galleries</div>
+          </a></div><div class="options row"><a href="/en/bands/1" class="col-xs-3">
+            <i class="fa fa-users fa-2x"></i>
+            <div>Bands</div>
+          </a><a href="https://www.spirit-of-metal.com/en/albums/1" class="col-xs-3">
+            <i class="fa fa-music fa-2x"></i>
+            <div>Albums</div>
+          </a><a href="/en/styles" class="col-xs-3">
+            <i class="fa fa-hashtag fa-2x"></i>
+            <div>Music Style</div>
+          </a><a href="/en/artists/1" class="col-xs-3">
+            <i class="fa fa-address-book fa-2x"></i>
+            <div>Artists</div>
+          </a></div>
+		<div class="options row"><a href="/en/audios/1" class="col-xs-3">
+            <i class="fa fa-file-audio fa-2x"></i>
+            <div>Audio</div>
+          </a><a href="/en/videos/1" class="col-xs-3">
+            <i class="fa fa-video fa-2x"></i>
+            <div>Video</div>
+          </a><a href="/en/labels/1" class="col-xs-3">
+            <i class="fa fa-tag fa-2x"></i>
+            <div>Labels</div>
+          </a><a href="/en/places/1" class="col-xs-3">
+            <i class="fa fa-map-marker fa-2x"></i>
+            <div>Places</div>
+          </a>		
+      </div>
+    </div>
+    <div id="m-login" class="row collapse">
+	<div id=login><form method='post' id='FORMlogin' action='/fonctions/login.php?page=/en/band/Ravn'>
+				<div><input type=text class=SubmitSmallNEW name='login_log' id='login_log' size='30' placeholder=' Login'></div>
+			
+			<div STYLE='margin-top:5px;'>
+				<div STYLE='margin-top:5px;'><input type=password class=SubmitSmallNEW name='password_log' id='password_log' size='30' placeholder=' Password'></div>
+				<div STYLE='margin-top:5px;'><input type=Submit id='m-login-btn' value=OK></div>
+			</div>
+			<div STYLE="margin-top:10px;font-size:16px;">
+			<a href=/membre/ajout_membre-l-en.html ref="nofollow"> AAAASubscribing</a>
+			<a href=/membre/generate_pass-l-en.html ref="nofollow"> Pass lost ?</a>
+			</div></form></div>AAAAAAA    </div>
+    <nav id="m-nav" class="row">
+      <div class="col-xs-4">
+        <a href="https://www.spirit-of-metal.com">Webzine</a>
+      </div>
+      <div class="col-xs-4">
+        <a href="/en/encyclopedia">Encyclopedia</a>
+      </div>
+      <div class="col-xs-4">
+        <a href="/forum/" target="_blank">Forums</a>
+      </div>
+    </nav>
+  </div>
+  <main id="encyclopedia" class="container"><DIV class=popperlink id=topdecklink></DIV>
+<SCRIPT language=JavaScript type=text/javascript>
+
+domok = document.getElementById;
+if (domok)
+{
+	skn = document.getElementById("topdecklink").style;
+	if(navigator.appName.substring(0,3) == "Net")
+		document.captureEvents(Event.MOUSEMOVE);
+	document.onmousemove = get_mouse;
+}
+
+</SCRIPT><ol itemscope itemtype="http://schema.org/BreadcrumbList" class=hidden>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+				<a itemprop="item" href="https://www.spirit-of-metal.com/liste_groupe-l-en.html"><span itemprop="name">Bands</span></a>
+					<meta itemprop="position" content="1"/>
+			</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+				<a itemprop="item" href="https://www.spirit-of-metal.com/en/style/Black_Metal">
+					<span itemprop="name">Black Metal</span></a>
+					<meta itemprop="position" content="2"/>
+				
+			</li>
+			</ol><div class="row">
+      <div class="col-md-8">
+        <section id="band" class="large-box center-block">
+			<div class="controls"><a href=# onclick="$('#controlsoptions').slideDown();return false;"><i class="fa fa-edit fa-lg"></i></a></div>
+			<h2 class="ribbon">Ravn (USA)</h2>
+			<div class="content">
+			<div class=controlsoptions id=controlsoptions>
+				<div class=row>
+					<a href="/soumission/band/band_edit-id_groupe-98201-l-en.html" class="col-xs-4 text-center" rel=nofollow><i class="fa fa-edit fa-2x"></i><BR>Edit the band</a>
+					<a href="/soumission/band/band_history-id_groupe-98201-l-en.html" class="col-xs-4 text-center" rel=nofollow><i class="fa fa-history fa-2x"></i><BR>Modifications history</a>
+				</div>
+				<div class=row>
+					<a href="/soumission/bio_add-id_groupe-98201-l-en.html" class="col-xs-4 text-center" rel=nofollow><i class="fa fa-file fa-2x"></i><BR>Add/Edit a biography</a>
+					<a href="/soumission/video-id_groupe-98201-l-en.html" class="col-xs-4 text-center" rel=nofollow><i class="fa fa-file-video fa-2x"></i></i><BR>Add a video</a>
+					
+					<a href="/contact2-ChangeRequest-1-id_groupe-98201-l-en.html" class="col-xs-4 text-center" rel=nofollow><i class="fa fa-envelope fa-2x"></i><BR>Report an error</a>
+				</div></div><BR><BR><div align='center'><img src="/les%20goupes/R/Ravn/pics/logo.jpg" alt="logo Ravn (USA)" title="logo Ravn (USA)"></div><BR><div class="row">
+              <figure class="col-sm-5 photo text-center">
+                <div class="owl-carousel owl-theme" id=BandCarouselPictures><a href="/les goupes/R/Ravn/pics/9982_1.jpg" class=fancybox data-fancybox-group=gallery><img src="/les goupes/R/Ravn/pics/9982_1.jpg"  onerror="this.style.display='none'"></a><a href="/les goupes/R/Ravn/pics/56ce_2.jpg" class=fancybox data-fancybox-group=gallery><img src="/les goupes/R/Ravn/pics/56ce_2.jpg" onerror="this.style.display='none'"></a><a href="/les goupes/R/Ravn/pics/0c58_3.jpg" class=fancybox data-fancybox-group=gallery><img src="/les goupes/R/Ravn/pics/0c58_3.jpg" onerror="this.style.display='none'"></a></div></figure>
+              <div id="profile" class="col-sm-7"><div>
+                  <span>Style</span>
+                  <span><a href="/en/style/Black_Metal">Black Metal</a></span>
+                </div>
+                <div>
+                  <span>Status</span>
+                  <span>Active</span>
+                </div>
+                <div>
+                  <span>Formed In</span>
+                  <span>2003</span>
+                </div><div>
+                  <span>Country</span><span><a href="/en/bands/USA/1">USA</a></span></div><div>
+                  <span>City</span>
+                  <span>Richmond</span>
+					</div><div>
+                  <span>Popularity</span>
+                  <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                </div>
+                <div>
+                  <span>Fans</span>
+                  <span><a href=https://www.spirit-of-metal.com/forum/en/Ravn/g98201>0</a></span>
+                </div>
+				<div id=JoinOrLeaveFan><span>Do you like this band?</span><span> <a href=# onclick="JoinFan('','98201');return false;"><i class="fal fa-thumbs-up"></i></a></span></div>
+              </div>
+            </div><div class="row"><div class="col-xs-6">
+                <section id="line-up">
+                  <h3>Line-up</h3>
+				  <div>
+                    <ul><a href=https://www.spirit-of-metal.com/en/artist/Morbus_Fatigue/461780  itemprop="musicGroupMember" itemscope itemtype="http://schema.org/Person">
+					<p itemprop="name">Morbus Fatigue</p>
+					<p>Drums</p>
+					<p STYLE="font-size:14px;"></p></a><a href=https://www.spirit-of-metal.com/en/artist/Ulv/461781  itemprop="musicGroupMember" itemscope itemtype="http://schema.org/Person">
+					<p itemprop="name">Ulv</p>
+					<p>Vocals, Guitar, Keyboard</p>
+					<p STYLE="font-size:14px;"></p></a><a href=https://www.spirit-of-metal.com/en/artist/Harrison_Steel/461782  itemprop="musicGroupMember" itemscope itemtype="http://schema.org/Person">
+					<p itemprop="name">Harrison Steel</p>
+					<p>Vocals, Guitar</p>
+					<p STYLE="font-size:14px;"></p></a></ul>
+                  </div>
+                </section>
+              </div><div class="col-xs-6">
+                <section id="former-members">
+                  <h3>Past members</h3>
+				  <div>
+                    <ul><a href=https://www.spirit-of-metal.com/en/artist/Ib/461783 ><p>Ib</p>
+					<p>Bass, Drums </p>
+					<p STYLE="font-size:14px;"></p></a><a href=https://www.spirit-of-metal.com/en/artist/Nihl/461784 ><p>Nihl</p>
+					<p>Keyboard, Programming </p>
+					<p STYLE="font-size:14px;"></p></a><a href=https://www.spirit-of-metal.com/en/artist/Ill_Will/461785 ><p>Ill Will</p>
+					<p>Bass </p>
+					<p STYLE="font-size:14px;"></p></a></ul>
+                  </div>
+                </section>
+              </div></div><BR><BR><div class="row">
+              <div class="col-xs-12">
+                <section id="discography">
+					<div class="controls2"><a href="/soumission/album/album_add.php?id_groupe=98201" rel=nofollow><i class="fa fa-plus fa-lg"></i></a></div>
+					<h3 class="ribbon">Albums</h3>
+					<a name=releases></a><ul id="release-menu"><a href="/en/discography/Ravn/1">All</a><a id=MenuDemos onclick="DisplayAlbumsByType('98201','Demos');return false;" >Demos</a><a id=MenuLive onclick="DisplayAlbumsByType('98201','Live');return false;" >Live</a><a id=MenuSingle onclick="DisplayAlbumsByType('98201','Single');return false;" >Single</a></ul><div id=infinitescrollContainer><div id=infinitescroll><script> _Nb_Page = "1"; </script><div class=infinitescrollResult>
+		<a href="https://www.spirit-of-metal.com/en/album/Perspective/309263" class="row release"  itemprop="album">
+                    <div class="col-xs-3">
+                      <img src="/les%20goupes/R/Ravn/Perspective/Perspective.jpg" alt="Perspective">
+                    </div>
+                    <div class="col-xs-6">
+                      <h4 itemprop="name">Perspective</h4>
+                      MCD - <div itemprop="datePublished" STYLE="display:inline;">2008</div>
+                    </div>
+                    <div class="col-xs-2"><span class="grade">&nbsp;</span></div>
+                    <div class="col-xs-1 indicators">
+                      <div class="row"></div>
+                    </div>
+                  </a></div></div></div><div class="page-load-status large-box">
+	  <div class="infinite-scroll-request">
+		<i class="fas fa-sync fa-spin fa-3x fa-fw"></i> <span>Loading</span>
+	  </div>
+	</div></div></div></section>
+      </div>
+	
+	<aside class="col-md-4">
+		<div class=row>
+			<div class="col-sm-6 col-md-12"><section id="band-news" class="small-box center-block">
+          <h3 class="ribbon">Share</h3>
+		  <div class="content"><!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox">
+   <div class="custom_images">
+      <a class="addthis_button_facebook"><img src="/mes%20images/social_networking_iconpack/facebook_32.png" width="32" height="32" alt="Share to Facebook" /></a>
+      <a class="addthis_button_myspace"><img src="/mes%20images/social_networking_iconpack/myspace_32.png" width="32" height="32" alt="Share to Myspace" /></a>
+      <a class="addthis_button_twitter"><img src="/mes%20images/social_networking_iconpack/twitter_32.png" width="32" height="32" alt="Share to Twitter" /></a>
+      <a class="addthis_button_stumbleupon"><img src="/mes%20images/social_networking_iconpack/stumbleupon_32.png" width="32" height="32" alt="Stumble It" /></a>
+      <a class="addthis_button_email"><img src="/mes%20images/social_networking_iconpack/email_32.png" width="32" height="32" alt="Email This" /></a>
+      <a class="addthis_button_expanded"><img src="/mes%20images/social_networking_iconpack/addthis_32.png" width="32" height="32" alt="More..." /></a>
+   </div>
+</div>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=kivan" async="async"></script>
+<!-- AddThis Button END --></div>
+        </section>
+		
+		</div>
+		<div class="col-sm-6 col-md-12"><section id="band-news" class="small-box center-block">
+          <h3 class="ribbon">Links</h3>
+          <div class="content">
+		  <div class="row sociallinks"><div class="col-xs-3 text-center"><a href="https://www.facebook.com/RAVN9/" target=_blank>
+			<i class="fab fa-facebook-square fa-2x"></i></a></div><div class="col-xs-3 text-center"><a href=http://reverbnation.com/ravn9 target=_blank>
+			<i class="fa fa-star fa-2x" aria-hidden="true"></i></a></div><div class="col-xs-3 text-center"><a href="https://myspace.com/ravn9" target="_blank">
+		<span style="font-size: 12px;padding-top:5px;" class="fa-stack">
+			<i class="fa fa-user fa-stack-2x"
+			   style="font-size: 0.5em; margin-left: -0.67em; margin-top: 0.46em;">
+			</i>
+			<i class="fa fa-user fa-stack-2x fa-user"
+			   style="font-size: 1em;">
+			</i>
+			<i class="fa fa-user fa-stack-2x fa-user"
+			   style="font-size: 1.5em; margin-left: 0.37em; margin-top: -0.16em;">
+			</i>
+		</span></a></div></div>
+        </section></div></div><div class="hidden-xs hidden-sm"></div>
+	
+	</aside>
+			</div></main><footer class="container-fluid hidden-xs">
+    <div class="row">
+      <div id="brand" class="col-md-5 text-left">
+        <div><h1><a href="https://www.spirit-of-metal.com">SPIRIT OF <span>METAL</span></a></h1>
+        <span id="years">&copy; 2003 - 2026</span></div>
+		<div STYLE="font-size:11px;"><a href=/termofuse.php>Terms of Use</a> - <a href=/privacypolicy.php>Privacy Policy</a></div>
+      </div>
+      <div id="social" class="col-md-7 text-right">
+        <a href="/contact2-l-en.html" rel="nofollow"></a>
+		
+	<a href="https://www.facebook.com/som.webzine" target=_blank></a>
+			<a href="https://twitter.com/somwebzine" target=_blank></a>
+			<a href="https://plus.google.com/u/0/b/115561117743748314794/115561117743748314794" target=_blank></a>
+			<a href="https://soundcloud.com/spirit-of-metal-officiel"></a>
+			<a href="https://youtube.com/user/SpiritofMetalWebzine"></a>
+			<a href="https://feeds.feedburner.com/spirit-of-metal/en" target=_blank></a>		
+      </div>
+    </div>
+  </footer>
+  <div id="dimmer" class=dimmer></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.7.0/sweetalert2.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js"></script>
+  
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EKPSRG312B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EKPSRG312B');
+</script>
+  
+  <script type="text/javascript">
+  
+  
+	/*
+	
+ (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1088966-1', 'auto');
+  ga('send', 'pageview');
+  
+  */
+</script>
+<script src="/js/Newmain.js?v=8"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.min.css" rel="stylesheet">
+<script src="/js/fancybox/source/jquery.fancybox.js?v=2.1.5"></script>
+<script src="/js/infinite-scroll.pkgd.min.js"></script>
+<script>
+$(document).ready(function(){
+
+	_DiscoType="";
+	_MyCounter=1;
+	$('.fancybox').fancybox();
+	
+	
+	
+  $('#BandCarouselPictures').owlCarousel({
+		items: 1,
+      center: true,
+      autoHeight:true,
+      loop: true,
+	  itemsScaleUp: true
+		});
+				
+	$('#BandGalleries').owlCarousel({
+		items: 1,
+      center: true,
+      //autoHeight:true,
+      loop: true,
+	  itemsScaleUp: true
+		});
+	
+	
+	$('#VideoCarousel').owlCarousel({
+      items: 1,
+      center: true,
+      autoHeight:true,
+      loop: true,
+      video: true,
+      videoWidth: 570,
+      videoHeight: 428,
+      lazyLoad: true
+    });
+	
+	/*
+	function () {
+	  nextPage=_MyCounter+1;
+	  
+	  console.log(nextPage+" vs "+_Nb_Page);
+	  
+		if(nextPage<=_Nb_Page)
+		{
+			path = _BandPage + '/' + _DiscoType + nextPage;
+			console.log(_BandPage + ' - ' + _DiscoType + ' - ' + nextPage);
+			return path;
+		}
+		else
+			return "";
+		
+    }
+	*/
+	
+	$('#infinitescroll').infiniteScroll({
+	  // options
+	  path: '.moreinfinitescroll',
+	  append: '.infinitescrollResult',
+	  hideNav: '.pagination',
+	  status: '.page-load-status',
+	  debug: true
+	});
+	
+	// $('#infinitescroll').on( 'load.infiniteScroll', function( event, response, path ) {
+	  // _MyCounter=_MyCounter+1;
+	// });
+	
+	// $('#release-menu').hide();
+	// $('#release-menu2').show();
+	
+});
+</script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" data-cf-beacon='{"version":"2024.11.0","token":"fabdff133bbe4218ae20847f93565370","r":1,"spa":2}' crossorigin="anonymous"></script>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a434659d5b038a4f',t:'MTc5MDc4MzU2OQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

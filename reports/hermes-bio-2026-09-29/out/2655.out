@@ -1,0 +1,66 @@
+{
+  "identidad_confirmada": true,
+  "pruebas_identidad": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Pi%C3%B1ata_(Mexican_Institute_of_Sound_album)",
+      "cita": "Studio album by Mexican Institute of Sound ... 5. La Kebradita (\"The Quebradita\")"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Pi%C3%B1ata_(Mexican_Institute_of_Sound_album)",
+      "cita": "Piñata is the second full-length album from Mexican Institute of Sound. It has samples of Mexican and Latin American folk music."
+    },
+    {
+      "url": "https://mexicaninstituteofsound.bandcamp.com/",
+      "cita": "Mexican Institute of Sound — Mexico City, Mexico"
+    }
+  ],
+  "pais": {
+    "valor": "Mexico",
+    "url": "https://mexicaninstituteofsound.bandcamp.com/",
+    "cita": "Mexico City, Mexico"
+  },
+  "ciudad": {
+    "valor": "Mexico City",
+    "url": "https://mexicaninstituteofsound.bandcamp.com/",
+    "cita": "Mexico City, Mexico"
+  },
+  "año_formacion": {
+    "valor": 2004,
+    "url": "https://en.wikipedia.org/wiki/Mexican_Institute_of_Sound",
+    "cita": "Years active 2004–present"
+  },
+  "generos": [
+    {
+      "genero": "Electronic",
+      "url": "https://en.wikipedia.org/wiki/Mexican_Institute_of_Sound",
+      "cita": "Genres Electronic, alternative rock, alternative dance, electro, experimental, Mexican music"
+    },
+    {
+      "genero": "electro",
+      "url": "https://en.wikipedia.org/wiki/Mexican_Institute_of_Sound",
+      "cita": "Genres Electronic, alternative rock, alternative dance, electro, experimental, Mexican music"
+    },
+    {
+      "genero": "Mexican music",
+      "url": "https://en.wikipedia.org/wiki/Mexican_Institute_of_Sound",
+      "cita": "Genres Electronic, alternative rock, alternative dance, electro, experimental, Mexican music"
+    }
+  ],
+  "datos_para_biografia": [
+    {
+      "dato": "Es un proyecto de música electrónica creado por el DJ y productor Camilo Lara, radicado en Ciudad de México; su único miembro es Camilo Lara.",
+      "url": "https://en.wikipedia.org/wiki/Mexican_Institute_of_Sound",
+      "cita": "is an electronic music project created by Mexico City-based DJ and producer Camilo Lara. ... Members: Camilo Lara"
+    },
+    {
+      "dato": "Publica con el sello Nacional Records.",
+      "url": "https://en.wikipedia.org/wiki/Mexican_Institute_of_Sound",
+      "cita": "Label Nacional Records"
+    },
+    {
+      "dato": "Su segundo álbum, Piñata (2007), incluye la pista «La Kebradita» y samplea música folclórica mexicana y latinoamericana.",
+      "url": "https://en.wikipedia.org/wiki/Pi%C3%B1ata_(Mexican_Institute_of_Sound_album)",
+      "cita": "Piñata is the second full-length album from Mexican Institute of Sound. It has samples of Mexican and Latin American folk music. ... 5. La Kebradita (\"The Quebradita\")"
+    }
+  ]
+}

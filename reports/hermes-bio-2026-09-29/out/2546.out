@@ -1,0 +1,65 @@
+{
+  "identidad_confirmada": true,
+  "pruebas_identidad": [
+    {
+      "url": "https://musicbrainz.org/release-group/d39369de-d869-4df5-b1a4-4cc93150ca3c",
+      "cita": "~Release group by Sorrow Plagues / De la Nostalgie / Elderwind / Dreams of Nature"
+    },
+    {
+      "url": "https://musicbrainz.org/release/7c8451f2-c4ff-44e6-91c7-202bd57b8f21",
+      "cita": "~Release by Elderwind — Tracklist: 1 Fires of Autumn (6:56); 2 Temple (8:46); 3 Fires of Autumn (Instrumental); 4 Temple (Instrumental)"
+    },
+    {
+      "url": "https://musicbrainz.org/artist/c5259e3a-b661-4687-b7ff-4383bd2c6e1b",
+      "cita": "Elderwind (Russia / Atmospheric Black Metal) — Discography: 2018 Mater Natura Excelsa"
+    },
+    {
+      "url": "https://elderwind.bandcamp.com/",
+      "cita": "Elderwind — Russia"
+    }
+  ],
+  "pais": {
+    "valor": "Russia",
+    "url": "https://elderwind.bandcamp.com/",
+    "cita": "Russia"
+  },
+  "ciudad": {
+    "valor": "Yekaterinburg",
+    "url": "https://musicbrainz.org/artist/c5259e3a-b661-4687-b7ff-4383bd2c6e1b",
+    "cita": "Founded in: Yekaterinburg, Sverdlovskaya oblast' (Sverdlovsk Oblast), Russia"
+  },
+  "año_formacion": {
+    "valor": 2009,
+    "url": "https://musicbrainz.org/artist/c5259e3a-b661-4687-b7ff-4383bd2c6e1b",
+    "cita": "Founded: 2009 (17 years ago)"
+  },
+  "generos": [
+    {
+      "genero": "atmospheric black metal",
+      "url": "https://musicbrainz.org/artist/c5259e3a-b661-4687-b7ff-4383bd2c6e1b",
+      "cita": "atmospheric black metal"
+    },
+    {
+      "genero": "dark ambient",
+      "url": "https://musicbrainz.org/artist/c5259e3a-b661-4687-b7ff-4383bd2c6e1b",
+      "cita": "dark ambient"
+    }
+  ],
+  "datos_para_biografia": [
+    {
+      "dato": "Elderwind es un grupo ruso de atmospheric black metal fundado en 2009 en Yekaterinburg.",
+      "url": "https://musicbrainz.org/artist/c5259e3a-b661-4687-b7ff-4383bd2c6e1b",
+      "cita": "Elderwind (Russia / Atmospheric Black Metal) ... Founded: 2009 ... Founded in: Yekaterinburg"
+    },
+    {
+      "dato": "«Mater Natura Excelsa» (2018) es un split a cuatro bandas junto a Sorrow Plagues, De la Nostalgie y Dreams of Nature, editado por Avantgarde Music / Flowing Downward.",
+      "url": "https://musicbrainz.org/release-group/d39369de-d869-4df5-b1a4-4cc93150ca3c",
+      "cita": "~Release group by Sorrow Plagues / De la Nostalgie / Elderwind / Dreams of Nature — Label: Avantgarde Music, Flowing Downward"
+    },
+    {
+      "dato": "Su aporte al split incluye «Fires of Autumn» (Пожары осени) y «Temple» (Храм), con versiones instrumentales, publicadas como lanzamiento digital propio (RU, 2018).",
+      "url": "https://musicbrainz.org/release/7c8451f2-c4ff-44e6-91c7-202bd57b8f21",
+      "cita": "~Release by Elderwind — 1 Fires of Autumn; 2 Temple; 3 Fires of Autumn (Instrumental); 4 Temple (Instrumental) — Release event: Russia"
+    }
+  ]
+}

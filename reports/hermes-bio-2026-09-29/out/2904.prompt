@@ -1,0 +1,11 @@
+Usa el navegador (browser_navigate). Empieza en https://html.duckduckgo.com/html/?q=%22KC%22+band e investiga al artista o banda "KC", que aparece con la pista «Extreme Steel (COUNTERSTRIKE Arena Remix)» en «Subcultonegro» (Zardonic, 2008). Puede ser venezolano o extranjero; hay homónimos: solo vale el que encaja con ese disco o ese estilo.
+La página de resultados de DuckDuckGo NO es fuente: sirve solo para elegir qué abrir. Cada URL y cada cita deben ser de una página que abriste con browser_navigate (Bandcamp, SoundCloud, Facebook, Discogs, Metal Archives, MusicBrainz, YouTube, blogs, prensa…), nunca una URL de duckduckgo.com.
+Abre como MÁXIMO 5 páginas además de las búsquedas. Si tras eso no lo identificas, termina con identidad_confirmada=false.
+Devuelve SOLO un objeto JSON, sin texto adicional:
+{"identidad_confirmada": true|false, "pruebas_identidad": [{"url":"...","cita":"texto literal"}],
+ "pais": {"valor":"...","url":"...","cita":"texto literal que nombra el país"} o null,
+ "ciudad": {"valor":"...","url":"...","cita":"texto literal que nombra la ciudad"} o null,
+ "año_formacion": {"valor":1999,"url":"...","cita":"texto literal"} o null,
+ "generos": [{"genero":"...","url":"...","cita":"texto literal"}],
+ "datos_para_biografia": [{"dato":"...","url":"...","cita":"texto literal"}]}
+Reglas: el país, la ciudad y el año solo se ponen si la cita los dice literalmente; si no, null (no deduzcas el país por el idioma, el sello ni el disco). Como mucho 3 datos para biografía. Si no encuentras algo, null o lista vacía. No inventes.

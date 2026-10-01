@@ -1,0 +1,20 @@
+{"identidad_confirmada": true,
+ "pruebas_identidad": [
+  {"url":"https://www.youtube.com/watch?v=WPaJrrkbcXU","cita":"10. Carlos Salazar & DJ Fist - Caracas 40:23"},
+  {"url":"https://api.discogs.com/releases/1196366","cita":"\"year\":2007,\"title\":\"Big Room Sound\",\"artists\":[\"Eduardo Javith\",\"Da Groovemakers\",\"DJ Fist\",\"Carlos Salazar\",\"Noizzer\"]"},
+  {"url":"https://api.discogs.com/artists/180101","cita":"\"name\": \"DJ Fist\", \"realname\": \"Carlos Tejada\""},
+  {"url":"https://musicbrainz.org/artist/84ba833a-a4ee-41ea-9b3c-84c6922a5a39","cita":"~Person ... Area: Medellín Antioquia Colombia"}
+ ],
+ "pais": {"valor":"Colombia","url":"https://musicbrainz.org/artist/84ba833a-a4ee-41ea-9b3c-84c6922a5a39","cita":"Area: Medellín Antioquia Colombia"},
+ "ciudad": {"valor":"Medellín","url":"https://musicbrainz.org/artist/84ba833a-a4ee-41ea-9b3c-84c6922a5a39","cita":"Area: Medellín Antioquia Colombia"},
+ "año_formacion": null,
+ "generos": [
+  {"genero":"Tribal House","url":"https://api.discogs.com/releases/815512","cita":"\"genres\":[\"Electronic\"],\"styles\":[\"Tribal House\"]"},
+  {"genero":"Progressive House","url":"https://api.discogs.com/releases/1196366","cita":"\"genres\": [\"Electronic\"], \"styles\": [\"Progressive House\"]"}
+ ],
+ "datos_para_biografia": [
+  {"dato":"Es el nombre artístico del productor Carlos Tejada","url":"https://api.discogs.com/artists/180101","cita":"\"name\": \"DJ Fist\", \"realname\": \"Carlos Tejada\""},
+  {"dato":"También publica bajo los alias Mr. Tee (2) y Charlie Snitch","url":"https://api.discogs.com/artists/180101","cita":"\"aliases\": [\"Carlos Tejada\", \"Mr. Tee (2)\", \"Charlie Snitch\"]"},
+  {"dato":"Colaboró con Carlos Salazar en «Big Room Sound» (Overline Records, 2007)","url":"https://api.discogs.com/releases/1196366","cita":"\"year\": 2007 ... \"title\": \"Big Room Sound\" ... \"artists\": [\"Eduardo Javith\", \"Da Groovemakers\", \"DJ Fist\", \"Carlos Salazar\", \"Noizzer\"]"}
+ ]
+}

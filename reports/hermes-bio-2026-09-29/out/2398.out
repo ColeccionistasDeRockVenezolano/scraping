@@ -1,0 +1,20 @@
+{"identidad_confirmada": true,
+ "pruebas_identidad": [
+  {"url":"https://api.discogs.com/releases/10982244","cita":"\"tracklist\": [ ... {\"artists\": [{\"anv\": \"\", \"id\": 5474413, \"name\": \"Staphylococcus Aureus\", \"resource_url\": \"https://api.discogs.com/artists/5474413\"}], \"duration\": \"\", \"position\": \"38\", \"title\": \"Cryptosporidium\", \"type_\": \"track\"} ... ]"},
+  {"url":"https://100bands.bandcamp.com/album/100-goregrind-porngore-cybergrind-bands-compilation-n-2","cita":"038. Staphylococcus aureus - Cryptosporidium 01:01"},
+  {"url":"https://api.discogs.com/artists/5474413","cita":"Gorenoise from Ecuador"},
+  {"url":"https://staphylococcusaureus.bandcamp.com/","cita":"Staphylococcus Aureus Ecuador"}
+ ],
+ "pais": {"valor":"Ecuador","url":"https://api.discogs.com/artists/5474413","cita":"Gorenoise from Ecuador"},
+ "ciudad": null,
+ "año_formacion": null,
+ "generos": [
+  {"genero":"Gorenoise","url":"https://api.discogs.com/artists/5474413","cita":"Gorenoise from Ecuador"},
+  {"genero":"Gorenoise","url":"https://api.discogs.com/releases/10528836","cita":"gorenoise from ecuador"}
+ ],
+ "datos_para_biografia": [
+  {"dato":"Proyecto ecuatoriano de gorenoise; aparece con la pista «Cryptosporidium» (posición 38) en el recopilatorio 100 Goregrind Porngore Cybergrind Bands Compilation Vol. 2 (100 Bands Netlabel, BN002, 2017).","url":"https://100bands.bandcamp.com/album/100-goregrind-porngore-cybergrind-bands-compilation-n-2","cita":"038. Staphylococcus aureus - Cryptosporidium 01:01"},
+  {"dato":"Discografía en Bandcamp: «DISMEMBERED CORPSE», «NECROPAPILOSCOPIA», «Neisseria gonorrhoeae» y «Vaginal Infection “EP”».","url":"https://staphylococcusaureus.bandcamp.com/","cita":"DISMEMBERED CORPSE NECROPAPILOSCOPIA Neisseria gonorrhoeae Vaginal Infection \"EP\""},
+  {"dato":"Sus primeros lanzamientos en Discogs datan de 2015 (Split, 2015) y están editados por el sello Imbabura Records.","url":"https://api.discogs.com/artists/5474413/releases","cita":"\"id\": 9601824, \"label\": \"Fusilero Fal 55379 B12 Imbabura Records\", \"role\": \"Main\", \"title\": \"Split\", \"type\": \"release\", \"year\": 2015"}
+ ]
+}

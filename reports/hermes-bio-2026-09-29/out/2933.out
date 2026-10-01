@@ -1,0 +1,19 @@
+{"identidad_confirmada": true,
+ "pruebas_identidad": [
+  {"url": "https://musicbrainz.org/release/818661a9-d474-4577-92f7-cf715124000c", "cita": "12   Sideshow Symphony   Zardonic and Reid Speed   5:13"},
+  {"url": "https://musicbrainz.org/artist/ad9c1711-1bee-4ce0-969b-08015097fdf2", "cita": "Reid Speed   ~ Person"},
+  {"url": "https://musicbrainz.org/search?query=Reid+Speed&type=artist&method=indexed", "cita": "Reid Speed   Speed, Reid   Person   Female   United States   New York"},
+  {"url": "https://soundcloud.com/reidspeed", "cita": "Bass Boss of www.soundcloud.com/playmerecords  /  DJ / producer / extreme cat enthusiast"}
+ ],
+ "pais": {"valor": "United States", "url": "https://soundcloud.com/reidspeed", "cita": "Los Angeles, United States"},
+ "ciudad": {"valor": "Los Angeles", "url": "https://soundcloud.com/reidspeed", "cita": "Reid Speed   Los Angeles, United States"},
+ "año_formacion": null,
+ "generos": [
+  {"genero": "Drum & Bass", "url": "https://soundcloud.com/reidspeed", "cita": "# Drum & Bass"},
+  {"genero": "Electronic", "url": "https://soundcloud.com/reidspeed", "cita": "# Electronic"}
+ ],
+ "datos_para_biografia": [
+  {"dato": "Se presenta como «Bass Boss» del sello Play Me Records; DJ y productora", "url": "https://soundcloud.com/reidspeed", "cita": "Bass Boss of www.soundcloud.com/playmerecords  /  DJ / producer / extreme cat enthusiast"},
+  {"dato": "Registrada en MusicBrainz como persona (femenino), área Estados Unidos, con área de inicio Nueva York", "url": "https://musicbrainz.org/search?query=Reid+Speed&type=artist&method=indexed", "cita": "Reid Speed   Speed, Reid   Person   Female   United States   New York"},
+  {"dato": "Coautora de «Sideshow Symphony», pista 12 del álbum «Vulgar Display of Bass» de Zardonic (Big Riddim Recordings, 2012)", "url": "https://musicbrainz.org/release/818661a9-d474-4577-92f7-cf715124000c", "cita": "12   Sideshow Symphony   Zardonic and Reid Speed   5:13"}
+ ]}

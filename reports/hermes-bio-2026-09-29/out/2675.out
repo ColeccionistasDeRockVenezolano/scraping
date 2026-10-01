@@ -1,0 +1,21 @@
+{"identidad_confirmada": true,
+ "pruebas_identidad": [
+  {"url":"https://musicbrainz.org/release/c301115c-7edc-4f57-b904-998420a4c687","cita":"15\tDetroit Samba\n\tPablo Sanchez\n\t\n\t6:12"},
+  {"url":"https://api.discogs.com/releases/1579036","cita":"{\"position\":\"15\",\"type_\":\"track\",\"artists\":[{\"name\":\"Pablo Sanchez\",\"anv\":\"\",\"join\":\"\",\"role\":\"\",\"tracks\":\"\",\"id\":419767,\"resource_url\":\"https://api.discogs.com/artists/419767\"}],\"title\":\"Detroit Samba\",\"duration\":\"6:10\"}"},
+  {"url":"https://api.discogs.com/artists/419767","cita":"{\"name\": \"Pablo Sanchez\", \"id\": 419767, ... \"realname\": \"Pablo Sánchez \", \"profile\": \"\", \"urls\": [\"http://www.pablosanchez.net\", \"https://soundcloud.com/pablosanchez\"], \"namevariations\": [\"Pablo Sánchez\", \"Pablo Sánchez Sánudo\", \"Páblo Sánchez\"]"},
+  {"url":"https://soundcloud.com/pablosanchez","cita":"Venezuelan Dj and producer currently based in Barcelona via NYC. Label head at sisternoise records. Music released on Culprit, liebe*detail, Endless, Hafendisko, Seven Villas, Sol Selectas, Apersonal"}
+ ],
+ "pais": {"valor":"Venezuela","url":"https://soundcloud.com/pablosanchez","cita":"Venezuelan Dj and producer currently based in Barcelona via NYC."},
+ "ciudad": {"valor":"Caracas","url":"https://soundcloud.com/pablosanchez","cita":"Barcelona, Spain, Caracas"},
+ "año_formacion": null,
+ "generos": [
+  {"genero":"Deep House","url":"https://api.discogs.com/releases/1579036","cita":"\"styles\":[\"Deep House\",\"Tech House\"]"},
+  {"genero":"Tech House","url":"https://api.discogs.com/releases/1579036","cita":"\"styles\":[\"Deep House\",\"Tech House\"]"},
+  {"genero":"Electronic","url":"https://api.discogs.com/releases/1579036","cita":"\"genres\":[\"Electronic\",\"Latin\",\"Pop\"]"}
+ ],
+ "datos_para_biografia": [
+  {"dato":"DJ y productor venezolano radicado actualmente en Barcelona (vía Nueva York); cabeza del sello sisternoise records.","url":"https://soundcloud.com/pablosanchez","cita":"Venezuelan Dj and producer currently based in Barcelona via NYC. Label head at sisternoise records."},
+  {"dato":"Nombre real: Pablo Sánchez (variantes de nombre: Pablo Sánchez, Pablo Sánchez Sánudo, Páblo Sánchez).","url":"https://api.discogs.com/artists/419767","cita":"\"realname\": \"Pablo Sánchez \" ... \"namevariations\": [\"Pablo Sánchez\", \"Pablo Sánchez Sánudo\", \"Páblo Sánchez\"]"},
+  {"dato":"Ha publicado música en sellos como Culprit, liebe*detail, Endless, Hafendisko, Seven Villas, Sol Selectas y Apersonal.","url":"https://soundcloud.com/pablosanchez","cita":"Music released on Culprit, liebe*detail, Endless, Hafendisko, Seven Villas, Sol Selectas, Apersonal"}
+ ]
+}

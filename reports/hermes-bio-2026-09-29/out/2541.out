@@ -1,0 +1,71 @@
+{
+  "identidad_confirmada": true,
+  "pruebas_identidad": [
+    {
+      "url": "https://www.youtube.com/watch?v=27pzgBP72OY&list=PLf0n3jBRhYP3aK6CBDYuxMbbbpGNjWhCH",
+      "cita": "Vestido de cristal Adrian Barilari"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=GfvZ7AZr06w",
+      "cita": "Adrian Barilari en el Homenaje al maestro Elkin Ramirez  en Cali, nos regalo esta gran versión de una de las canciones icono de Kraken, Vestido de Cristal"
+    },
+    {
+      "url": "https://es.wikipedia.org/wiki/Barilari",
+      "cita": "Barilari es un proyecto musical del cantante argentino de heavy metal Adrián Barilari, conocido por su trabajo con bandas como Alianza y especialmente Rata Blanca."
+    }
+  ],
+  "pais": {
+    "valor": "Argentina",
+    "url": "https://es.wikipedia.org/wiki/Barilari",
+    "cita": "Origen: Buenos Aires, Argentina"
+  },
+  "ciudad": {
+    "valor": "Buenos Aires",
+    "url": "https://es.wikipedia.org/wiki/Barilari",
+    "cita": "Origen: Buenos Aires, Argentina"
+  },
+  "año_formacion": {
+    "valor": 2003,
+    "url": "https://es.wikipedia.org/wiki/Barilari",
+    "cita": "Período de actividad: 2003-presente"
+  },
+  "generos": [
+    {
+      "genero": "Heavy metal",
+      "url": "https://es.wikipedia.org/wiki/Barilari",
+      "cita": "Género(s): Heavy metal Hard rock Metal alternativo Rock industrial"
+    },
+    {
+      "genero": "Hard rock",
+      "url": "https://es.wikipedia.org/wiki/Barilari",
+      "cita": "Género(s): Heavy metal Hard rock Metal alternativo Rock industrial"
+    },
+    {
+      "genero": "Metal alternativo",
+      "url": "https://es.wikipedia.org/wiki/Barilari",
+      "cita": "Género(s): Heavy metal Hard rock Metal alternativo Rock industrial"
+    },
+    {
+      "genero": "Rock industrial",
+      "url": "https://es.wikipedia.org/wiki/Barilari",
+      "cita": "Género(s): Heavy metal Hard rock Metal alternativo Rock industrial"
+    }
+  ],
+  "datos_para_biografia": [
+    {
+      "dato": "Barilari es el proyecto musical del cantante argentino de heavy metal Adrián Barilari, conocido por su trabajo con Alianza y especialmente Rata Blanca.",
+      "url": "https://es.wikipedia.org/wiki/Barilari",
+      "cita": "Barilari es un proyecto musical del cantante argentino de heavy metal Adrián Barilari, conocido por su trabajo con bandas como Alianza y especialmente Rata Blanca."
+    },
+    {
+      "dato": "Su primer álbum homónimo se editó en 2003 por NEMS Enterprises, precedido por un EP del mismo nombre.",
+      "url": "https://es.wikipedia.org/wiki/Barilari",
+      "cita": "Este disco homónimo se editaría en 2003 por NEMS Enterprises, siendo precedido por un EP de mismo nombre."
+    },
+    {
+      "dato": "El 8 de febrero de 2019 lanzó su quinto disco de estudio, \"Infierock\", en formato digital y físico, con un estilo apuntado al hardrock.",
+      "url": "https://es.wikipedia.org/wiki/Barilari",
+      "cita": "Finalmente, el 8 de febrero de 2019, lanzó su quinto disco en estudio \"Infierock\", en formato digital y físico, con un estilo apuntado a hardrock."
+    }
+  ]
+}

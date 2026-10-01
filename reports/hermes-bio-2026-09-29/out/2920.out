@@ -1,0 +1,25 @@
+I have enough confirmed evidence from pages I opened (SoundCloud artist profile, MusicBrainz release page, MusicBrainz artist page). Discogs/Bandcamp were blocked and the official site is defunct; I stopped at the 5-page budget.
+
+{"identidad_confirmada": true,
+ "pruebas_identidad": [
+   {"url": "https://musicbrainz.org/release/818661a9-d474-4577-92f7-cf715124000c",
+    "cita": "Real Steel — Zardonic, Mark Instinct, NumberNin6 and Run DMT (track 3 de \"Vulgar Display of Bass\", ~Release by Zardonic, Big Riddim Recordings)"},
+   {"url": "https://soundcloud.com/numbernin6",
+    "cita": "NumberNin6 & Zardonic - The Final Five (NumberNin6 VIP) [free download]"},
+   {"url": "https://soundcloud.com/numbernin6",
+    "cita": "In the game since 2008, from the \"Breathe\" remix to releases on Z-Audio, Migration, Dieselboy's subHUMAN (and subsequent subHUMAN tours)."},
+   {"url": "https://musicbrainz.org/artist/4b8c6407-8eb6-4814-a6fa-956ed9b73596",
+    "cita": "NumberNin6 — ~Person; Legal name: Nishant Parikh; Area: United States; Genre: dubstep"}
+ ],
+ "pais": {"valor": "United States", "url": "https://soundcloud.com/numbernin6", "cita": "Richmond, United States"},
+ "ciudad": {"valor": "Richmond", "url": "https://soundcloud.com/numbernin6", "cita": "Richmond, United States"},
+ "año_formacion": {"valor": 2008, "url": "https://soundcloud.com/numbernin6", "cita": "In the game since 2008, from the \"Breathe\" remix to releases on Z-Audio, Migration, Dieselboy's subHUMAN (and subsequent subHUMAN tours)."},
+ "generos": [
+   {"genero": "Dubstep", "url": "https://musicbrainz.org/artist/4b8c6407-8eb6-4814-a6fa-956ed9b73596", "cita": "Genres: dubstep"},
+   {"genero": "Drum & Bass", "url": "https://soundcloud.com/numbernin6", "cita": "# Drum & Bass"}
+ ],
+ "datos_para_biografia": [
+   {"dato": "Nombre legal / real: Nishant Parikh", "url": "https://musicbrainz.org/artist/4b8c6407-8eb6-4814-a6fa-956ed9b73596", "cita": "Legal name: Nishant Parikh"},
+   {"dato": "Activo desde 2008; discos en Z-Audio, Migration, Dieselboy's subHUMAN, Deceast y Deep Heads", "url": "https://soundcloud.com/numbernin6", "cita": "In the game since 2008, from the \"Breathe\" remix to releases on Z-Audio, Migration, Dieselboy's subHUMAN (and subsequent subHUMAN tours). Now regressing unapologetically into the sounds of the deep and oldschool, with releases on Deco's Deceast and the esteemed Deep Heads label."},
+   {"dato": "Colaboraciones con Zardonic (p. ej. «The Final Five» y la pista «Real Steel» del álbum Vulgar Display of Bass)", "url": "https://soundcloud.com/numbernin6", "cita": "NumberNin6 & Zardonic - The Final Five (NumberNin6 VIP) [free download]"}
+ ]}

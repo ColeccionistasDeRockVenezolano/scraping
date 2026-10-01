@@ -1,0 +1,20 @@
+{"identidad_confirmada": true,
+ "pruebas_identidad": [
+   {"url": "https://musicbrainz.org/ws/2/release/818661a9-d474-4577-92f7-cf715124000c?inc=recordings%2Bartist-credits&fmt=json", "cita": "\"title\":\"Kickass\" ... {\"name\":\"PLAYMA\",\"artist\":{\"id\":\"64db1349-6d52-4f1f-a4eb-00b4dfc7bfa9\",\"name\":\"PLAYMA\""},
+   {"url": "https://musicbrainz.org/ws/2/artist/64db1349-6d52-4f1f-a4eb-00b4dfc7bfa9?inc=url-rels%2Bartist-rels&fmt=json", "cita": "\"type\":\"soundcloud\",\"url\":{\"resource\":\"https://soundcloud.com/playmamusic\""},
+   {"url": "https://soundcloud.com/playmamusic", "cita": "A musical meeting of minds between acclaimed Russian producers Davip and Mars, PLAYMA represents a hybrid of creative visions."},
+   {"url": "https://api.discogs.com/artists/2684355/releases?per_page=100", "cita": "\"title\":\"Vulgar Display Of Bass\",\"resource_url\":\"https://api.discogs.com/releases/3499875\",\"role\":\"TrackAppearance\",\"artist\":\"Zardonic\",\"trackinfo\":\"Kickass\",\"year\":2012"}
+ ],
+ "pais": {"valor": "Russian Federation", "url": "https://soundcloud.com/playmamusic", "cita": "Russian Federation"},
+ "ciudad": null,
+ "año_formacion": {"valor": 2011, "url": "https://musicbrainz.org/ws/2/artist/64db1349-6d52-4f1f-a4eb-00b4dfc7bfa9?inc=url-rels%2Bartist-rels&fmt=json", "cita": "\"begin\":\"2011\""},
+ "generos": [
+   {"genero": "Glitch-Hop", "url": "https://soundcloud.com/playmamusic", "cita": "# Glitch-Hop"},
+   {"genero": "Glitch", "url": "https://soundcloud.com/playmamusic", "cita": "# Glitch"}
+ ],
+ "datos_para_biografia": [
+   {"dato": "PLAYMA es un proyecto/dúo de los productores rusos Davip y Mars", "url": "https://soundcloud.com/playmamusic", "cita": "A musical meeting of minds between acclaimed Russian producers Davip and Mars, PLAYMA represents a hybrid of creative visions."},
+   {"dato": "En Discogs figura como grupo con los miembros DaVIP, Mars (12) y Ben William", "url": "https://api.discogs.com/artists/2684355", "cita": "\"members\":[{\"id\":721426,\"name\":\"DaVIP\",\"resource_url\":\"https://api.discogs.com/artists/721426\",\"active\":true},{\"id\":1094476,\"name\":\"Mars (12)\""},
+   {"dato": "Aparece acreditado con Zardonic en la pista Kickass de 'Vulgar Display Of Bass' (2012)", "url": "https://api.discogs.com/artists/2684355/releases?per_page=100", "cita": "\"role\":\"TrackAppearance\",\"artist\":\"Zardonic\",\"trackinfo\":\"Kickass\",\"year\":2012"}
+ ]
+}

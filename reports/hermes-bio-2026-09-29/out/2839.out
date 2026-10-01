@@ -1,0 +1,20 @@
+{
+  "identidad_confirmada": true,
+  "pruebas_identidad": [
+    {"url": "https://api.discogs.com/artists/1468838/releases", "cita": "\"title\": \"Venezuela Electronica Vol. 2 Blanco\" ... \"trackinfo\": \"Xt Wire (Minimal)\", \"artist\": \"Various\", \"year\": 2007"},
+    {"url": "https://api.discogs.com/artists/1468838", "cita": "\"name\": \"Roberto Chiriqui\", \"id\": 1468838"},
+    {"url": "https://moodulab.bandcamp.com/album/moodulab006-one-man-army", "cita": "Every original mix was produced by Roberto Chiriqui."}
+  ],
+  "pais": {"valor": "Venezuela", "url": "https://moodulab.bandcamp.com/album/moodulab006-one-man-army", "cita": "this Venezuelan producer based in USA"},
+  "ciudad": null,
+  "año_formacion": null,
+  "generos": [
+    {"genero": "Techno", "url": "https://moodulab.bandcamp.com/album/moodulab006-one-man-army", "cita": "solid and powerful Techno, made for Techno Lovers"},
+    {"genero": "Minimal", "url": "https://api.discogs.com/releases/2231361", "cita": "Xt Wire (Minimal)"}
+  ],
+  "datos_para_biografia": [
+    {"dato": "Productor venezolano de techno radicado en Estados Unidos", "url": "https://moodulab.bandcamp.com/album/moodulab006-one-man-army", "cita": "this Venezuelan producer based in USA"},
+    {"dato": "Sus mezclas originales están producidas por él, bajo el nombre Roberto Chiriqui (alias «Rob Chiriqui»)", "url": "https://moodulab.bandcamp.com/album/moodulab006-one-man-army", "cita": "Every original mix was produced by Roberto Chiriqui."},
+    {"dato": "Ha publicado temas en sellos de Europa y América", "url": "https://moodulab.bandcamp.com/album/moodulab006-one-man-army", "cita": "some of his tracks have been released by important record labels from Europe and America"}
+  ]
+}

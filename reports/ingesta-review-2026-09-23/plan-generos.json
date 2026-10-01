@@ -1,0 +1,8085 @@
+[
+  {
+    "reviewId": 234649,
+    "entityKind": "artist",
+    "entityId": 70,
+    "raw": "Rock, Alternative, Avantgarde, Latin",
+    "resolution": {
+      "raw": "Rock, Alternative, Avantgarde, Latin",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 125,
+          "slug": "rock",
+          "fragment": "Rock",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Alternative"
+        },
+        {
+          "kind": "genre",
+          "genreId": 248,
+          "slug": "avant-garde",
+          "fragment": "Avantgarde",
+          "via": "alias"
+        },
+        {
+          "kind": "genre",
+          "genreId": 131,
+          "slug": "fusion-latina",
+          "fragment": "Latin",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Alternative"
+  },
+  {
+    "reviewId": 234650,
+    "entityKind": "artist",
+    "entityId": 133,
+    "raw": "Instrumental Rock/ Progressive",
+    "resolution": {
+      "raw": "Instrumental Rock/ Progressive",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 149,
+          "slug": "rock-instrumental",
+          "fragment": "Instrumental Rock",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Progressive"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Progressive"
+  },
+  {
+    "reviewId": 234651,
+    "entityKind": "artist",
+    "entityId": 148,
+    "raw": "Heavy Rock, Trash Metal, Hardcore",
+    "resolution": {
+      "raw": "Heavy Rock, Trash Metal, Hardcore",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Heavy Rock"
+        },
+        {
+          "kind": "genre",
+          "genreId": 182,
+          "slug": "thrash-metal",
+          "fragment": "Trash Metal",
+          "via": "alias"
+        },
+        {
+          "kind": "genre",
+          "genreId": 212,
+          "slug": "hardcore-punk",
+          "fragment": "Hardcore",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Heavy Rock"
+  },
+  {
+    "reviewId": 234652,
+    "entityKind": "artist",
+    "entityId": 156,
+    "raw": "Rock, Fusion, Jazz, Latin, Funk / Soul",
+    "resolution": {
+      "raw": "Rock, Fusion, Jazz, Latin, Funk / Soul",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 125,
+          "slug": "rock",
+          "fragment": "Rock",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Fusion"
+        },
+        {
+          "kind": "genre",
+          "genreId": 130,
+          "slug": "jazz",
+          "fragment": "Jazz",
+          "via": "alias"
+        },
+        {
+          "kind": "genre",
+          "genreId": 131,
+          "slug": "fusion-latina",
+          "fragment": "Latin",
+          "via": "alias"
+        },
+        {
+          "kind": "genre",
+          "genreId": 244,
+          "slug": "funk",
+          "fragment": "Funk",
+          "via": "alias"
+        },
+        {
+          "kind": "genre",
+          "genreId": 245,
+          "slug": "soul",
+          "fragment": "Soul",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Fusion"
+  },
+  {
+    "reviewId": 234653,
+    "entityKind": "artist",
+    "entityId": 164,
+    "raw": "Rock, Latin Funk",
+    "resolution": {
+      "raw": "Rock, Latin Funk",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 125,
+          "slug": "rock",
+          "fragment": "Rock",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Latin Funk"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Latin Funk"
+  },
+  {
+    "reviewId": 234654,
+    "entityKind": "artist",
+    "entityId": 185,
+    "raw": "Pop-Rock, Alternative, Tropical Rock",
+    "resolution": {
+      "raw": "Pop-Rock, Alternative, Tropical Rock",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 142,
+          "slug": "pop-rock",
+          "fragment": "Pop-Rock",
+          "via": "alias"
+        },
+        {
+          "kind": "genre",
+          "genreId": 139,
+          "slug": "rock-alternativo",
+          "fragment": "Alternative",
+          "via": "shared_suffix"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Tropical Rock"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Tropical Rock"
+  },
+  {
+    "reviewId": 234655,
+    "entityKind": "artist",
+    "entityId": 206,
+    "raw": "Rock-Pop, Reggae, Trippy-Pop",
+    "resolution": {
+      "raw": "Rock-Pop, Reggae, Trippy-Pop",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 142,
+          "slug": "pop-rock",
+          "fragment": "Rock-Pop",
+          "via": "alias"
+        },
+        {
+          "kind": "genre",
+          "genreId": 228,
+          "slug": "reggae",
+          "fragment": "Reggae",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Trippy-Pop"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Trippy-Pop"
+  },
+  {
+    "reviewId": 234656,
+    "entityKind": "artist",
+    "entityId": 218,
+    "raw": "Punk, Dark, New Wave",
+    "resolution": {
+      "raw": "Punk, Dark, New Wave",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 127,
+          "slug": "punk",
+          "fragment": "Punk",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Dark"
+        },
+        {
+          "kind": "genre",
+          "genreId": 160,
+          "slug": "new-wave",
+          "fragment": "New Wave",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Dark"
+  },
+  {
+    "reviewId": 234657,
+    "entityKind": "artist",
+    "entityId": 325,
+    "raw": "Rock, Power Metal, Heavy Metal, Symphonic-Heavy",
+    "resolution": {
+      "raw": "Rock, Power Metal, Heavy Metal, Symphonic-Heavy",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 125,
+          "slug": "rock",
+          "fragment": "Rock",
+          "via": "alias"
+        },
+        {
+          "kind": "genre",
+          "genreId": 185,
+          "slug": "power-metal",
+          "fragment": "Power Metal",
+          "via": "alias"
+        },
+        {
+          "kind": "genre",
+          "genreId": 165,
+          "slug": "heavy-metal",
+          "fragment": "Heavy Metal",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Symphonic-Heavy"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Symphonic-Heavy"
+  },
+  {
+    "reviewId": 234658,
+    "entityKind": "artist",
+    "entityId": 344,
+    "raw": "Rock, Nu-Metal, New Age, Techno, Industrial",
+    "resolution": {
+      "raw": "Rock, Nu-Metal, New Age, Techno, Industrial",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 125,
+          "slug": "rock",
+          "fragment": "Rock",
+          "via": "alias"
+        },
+        {
+          "kind": "genre",
+          "genreId": 194,
+          "slug": "nu-metal",
+          "fragment": "Nu-Metal",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "New Age"
+        },
+        {
+          "kind": "genre",
+          "genreId": 235,
+          "slug": "techno",
+          "fragment": "Techno",
+          "via": "alias"
+        },
+        {
+          "kind": "genre",
+          "genreId": 240,
+          "slug": "industrial",
+          "fragment": "Industrial",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: New Age"
+  },
+  {
+    "reviewId": 234659,
+    "entityKind": "artist",
+    "entityId": 445,
+    "raw": "Neo-Classic, Rock",
+    "resolution": {
+      "raw": "Neo-Classic, Rock",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Neo-Classic"
+        },
+        {
+          "kind": "genre",
+          "genreId": 125,
+          "slug": "rock",
+          "fragment": "Rock",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Neo-Classic"
+  },
+  {
+    "reviewId": 234660,
+    "entityKind": "artist",
+    "entityId": 527,
+    "raw": "Thrash Metal / Melodic Trash",
+    "resolution": {
+      "raw": "Thrash Metal / Melodic Trash",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 182,
+          "slug": "thrash-metal",
+          "fragment": "Thrash Metal",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Melodic Trash"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Melodic Trash"
+  },
+  {
+    "reviewId": 234661,
+    "entityKind": "artist",
+    "entityId": 632,
+    "raw": "Hard, Trash, Heavy Metal",
+    "resolution": {
+      "raw": "Hard, Trash, Heavy Metal",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Hard"
+        },
+        {
+          "kind": "genre",
+          "genreId": 182,
+          "slug": "thrash-metal",
+          "fragment": "Trash",
+          "via": "shared_suffix"
+        },
+        {
+          "kind": "genre",
+          "genreId": 165,
+          "slug": "heavy-metal",
+          "fragment": "Heavy Metal",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Hard"
+  },
+  {
+    "reviewId": 234662,
+    "entityKind": "artist",
+    "entityId": 644,
+    "raw": "Black Metal/Shoegaze",
+    "resolution": {
+      "raw": "Black Metal/Shoegaze",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 175,
+          "slug": "black-metal",
+          "fragment": "Black Metal",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Shoegaze"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Shoegaze"
+  },
+  {
+    "reviewId": 234663,
+    "entityKind": "artist",
+    "entityId": 916,
+    "raw": "Rock, Instrumental",
+    "resolution": {
+      "raw": "Rock, Instrumental",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 125,
+          "slug": "rock",
+          "fragment": "Rock",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Instrumental"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Instrumental"
+  },
+  {
+    "reviewId": 234664,
+    "entityKind": "artist",
+    "entityId": 917,
+    "raw": "Rock/Southern Metal",
+    "resolution": {
+      "raw": "Rock/Southern Metal",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 125,
+          "slug": "rock",
+          "fragment": "Rock",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Southern Metal"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Southern Metal"
+  },
+  {
+    "reviewId": 234665,
+    "entityKind": "artist",
+    "entityId": 1093,
+    "raw": "Pop-Latin, Folk, Fusion, Hip-Hop",
+    "resolution": {
+      "raw": "Pop-Latin, Folk, Fusion, Hip-Hop",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 221,
+          "slug": "pop-latino",
+          "fragment": "Pop-Latin",
+          "via": "alias"
+        },
+        {
+          "kind": "genre",
+          "genreId": 135,
+          "slug": "folk",
+          "fragment": "Folk",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Fusion"
+        },
+        {
+          "kind": "genre",
+          "genreId": 134,
+          "slug": "hip-hop",
+          "fragment": "Hip-Hop",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Fusion"
+  },
+  {
+    "reviewId": 234666,
+    "entityKind": "artist",
+    "entityId": 1533,
+    "raw": "Rock, Alternative, Fusion",
+    "resolution": {
+      "raw": "Rock, Alternative, Fusion",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 125,
+          "slug": "rock",
+          "fragment": "Rock",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Alternative"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Fusion"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Alternative, Fusion"
+  },
+  {
+    "reviewId": 234667,
+    "entityKind": "artist",
+    "entityId": 1606,
+    "raw": "Reggae, Ska, Soul, Caribean",
+    "resolution": {
+      "raw": "Reggae, Ska, Soul, Caribean",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 228,
+          "slug": "reggae",
+          "fragment": "Reggae",
+          "via": "alias"
+        },
+        {
+          "kind": "genre",
+          "genreId": 229,
+          "slug": "ska",
+          "fragment": "Ska",
+          "via": "alias"
+        },
+        {
+          "kind": "genre",
+          "genreId": 245,
+          "slug": "soul",
+          "fragment": "Soul",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Caribean"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Caribean"
+  },
+  {
+    "reviewId": 234668,
+    "entityKind": "artist",
+    "entityId": 1805,
+    "raw": "Progressive Rock / Afro-Venezuelan Rock",
+    "resolution": {
+      "raw": "Progressive Rock / Afro-Venezuelan Rock",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 140,
+          "slug": "rock-progresivo",
+          "fragment": "Progressive Rock",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Afro-Venezuelan Rock"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Afro-Venezuelan Rock"
+  },
+  {
+    "reviewId": 234669,
+    "entityKind": "artist",
+    "entityId": 1820,
+    "raw": "Post Punk, Punk-Folk Fusion, Dark Rock",
+    "resolution": {
+      "raw": "Post Punk, Punk-Folk Fusion, Dark Rock",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 215,
+          "slug": "post-punk",
+          "fragment": "Post Punk",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Punk-Folk Fusion"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Dark Rock"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Punk-Folk Fusion, Dark Rock"
+  },
+  {
+    "reviewId": 234670,
+    "entityKind": "artist",
+    "entityId": 1831,
+    "raw": "Rock, Hard, Glam & Blues",
+    "resolution": {
+      "raw": "Rock, Hard, Glam & Blues",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 125,
+          "slug": "rock",
+          "fragment": "Rock",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Hard"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Glam"
+        },
+        {
+          "kind": "genre",
+          "genreId": 129,
+          "slug": "blues",
+          "fragment": "Blues",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Hard, Glam"
+  },
+  {
+    "reviewId": 234671,
+    "entityKind": "artist",
+    "entityId": 1851,
+    "raw": "Fusion, Rock, Ska, Reggae, Latin",
+    "resolution": {
+      "raw": "Fusion, Rock, Ska, Reggae, Latin",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Fusion"
+        },
+        {
+          "kind": "genre",
+          "genreId": 125,
+          "slug": "rock",
+          "fragment": "Rock",
+          "via": "alias"
+        },
+        {
+          "kind": "genre",
+          "genreId": 229,
+          "slug": "ska",
+          "fragment": "Ska",
+          "via": "alias"
+        },
+        {
+          "kind": "genre",
+          "genreId": 228,
+          "slug": "reggae",
+          "fragment": "Reggae",
+          "via": "alias"
+        },
+        {
+          "kind": "genre",
+          "genreId": 131,
+          "slug": "fusion-latina",
+          "fragment": "Latin",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Fusion"
+  },
+  {
+    "reviewId": 234672,
+    "entityKind": "artist",
+    "entityId": 1854,
+    "raw": "Vocal Group, Pop, Latin",
+    "resolution": {
+      "raw": "Vocal Group, Pop, Latin",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Vocal Group"
+        },
+        {
+          "kind": "genre",
+          "genreId": 128,
+          "slug": "pop",
+          "fragment": "Pop",
+          "via": "alias"
+        },
+        {
+          "kind": "genre",
+          "genreId": 131,
+          "slug": "fusion-latina",
+          "fragment": "Latin",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Vocal Group"
+  },
+  {
+    "reviewId": 234673,
+    "entityKind": "artist",
+    "entityId": 1867,
+    "raw": "Pop, Alternative",
+    "resolution": {
+      "raw": "Pop, Alternative",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 128,
+          "slug": "pop",
+          "fragment": "Pop",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Alternative"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Alternative"
+  },
+  {
+    "reviewId": 234674,
+    "entityKind": "artist",
+    "entityId": 1942,
+    "raw": "Rock, Pop, Jazz, World-Ethnic, Latin",
+    "resolution": {
+      "raw": "Rock, Pop, Jazz, World-Ethnic, Latin",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 125,
+          "slug": "rock",
+          "fragment": "Rock",
+          "via": "alias"
+        },
+        {
+          "kind": "genre",
+          "genreId": 128,
+          "slug": "pop",
+          "fragment": "Pop",
+          "via": "alias"
+        },
+        {
+          "kind": "genre",
+          "genreId": 130,
+          "slug": "jazz",
+          "fragment": "Jazz",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "World-Ethnic"
+        },
+        {
+          "kind": "genre",
+          "genreId": 131,
+          "slug": "fusion-latina",
+          "fragment": "Latin",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: World-Ethnic"
+  },
+  {
+    "reviewId": 234675,
+    "entityKind": "artist",
+    "entityId": 1968,
+    "raw": "Rock, Power Metal, Melodic Metal, Progressive Power",
+    "resolution": {
+      "raw": "Rock, Power Metal, Melodic Metal, Progressive Power",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 125,
+          "slug": "rock",
+          "fragment": "Rock",
+          "via": "alias"
+        },
+        {
+          "kind": "genre",
+          "genreId": 185,
+          "slug": "power-metal",
+          "fragment": "Power Metal",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Melodic Metal"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Progressive Power"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Melodic Metal, Progressive Power"
+  },
+  {
+    "reviewId": 234676,
+    "entityKind": "artist",
+    "entityId": 1972,
+    "raw": "Rock Progressive, Fusion, Metal",
+    "resolution": {
+      "raw": "Rock Progressive, Fusion, Metal",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 140,
+          "slug": "rock-progresivo",
+          "fragment": "Rock Progressive",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Fusion"
+        },
+        {
+          "kind": "genre",
+          "genreId": 126,
+          "slug": "metal",
+          "fragment": "Metal",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Fusion"
+  },
+  {
+    "reviewId": 234677,
+    "entityKind": "album",
+    "entityId": 116,
+    "raw": "Rock Sinfonico/Progresivo/Jazz",
+    "resolution": {
+      "raw": "Rock Sinfonico/Progresivo/Jazz",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 141,
+          "slug": "rock-sinfonico",
+          "fragment": "Rock Sinfonico",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Progresivo"
+        },
+        {
+          "kind": "genre",
+          "genreId": 130,
+          "slug": "jazz",
+          "fragment": "Jazz",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Progresivo"
+  },
+  {
+    "reviewId": 234678,
+    "entityKind": "album",
+    "entityId": 117,
+    "raw": "Rock Sinfonico/Progresivo/Jazz",
+    "resolution": {
+      "raw": "Rock Sinfonico/Progresivo/Jazz",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 141,
+          "slug": "rock-sinfonico",
+          "fragment": "Rock Sinfonico",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Progresivo"
+        },
+        {
+          "kind": "genre",
+          "genreId": 130,
+          "slug": "jazz",
+          "fragment": "Jazz",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Progresivo"
+  },
+  {
+    "reviewId": 234679,
+    "entityKind": "album",
+    "entityId": 128,
+    "raw": "Pop-Rock/Neo-Glam",
+    "resolution": {
+      "raw": "Pop-Rock/Neo-Glam",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 142,
+          "slug": "pop-rock",
+          "fragment": "Pop-Rock",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Neo-Glam"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Neo-Glam"
+  },
+  {
+    "reviewId": 234680,
+    "entityKind": "album",
+    "entityId": 199,
+    "raw": "Mucer/Discomoda",
+    "resolution": {
+      "raw": "Mucer/Discomoda",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Mucer"
+        }
+      ],
+      "notAGenre": [
+        "discomoda"
+      ],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Mucer"
+  },
+  {
+    "reviewId": 234681,
+    "entityKind": "album",
+    "entityId": 238,
+    "raw": "Chill Out/Down Tempo",
+    "resolution": {
+      "raw": "Chill Out/Down Tempo",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Chill Out"
+        },
+        {
+          "kind": "genre",
+          "genreId": 237,
+          "slug": "downtempo",
+          "fragment": "Down Tempo",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Chill Out"
+  },
+  {
+    "reviewId": 234682,
+    "entityKind": "album",
+    "entityId": 247,
+    "raw": "Luaka Bop/Latin World",
+    "resolution": {
+      "raw": "Luaka Bop/Latin World",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Latin World"
+        }
+      ],
+      "notAGenre": [
+        "luaka bop"
+      ],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Latin World"
+  },
+  {
+    "reviewId": 234683,
+    "entityKind": "album",
+    "entityId": 521,
+    "raw": "",
+    "resolution": {
+      "raw": "",
+      "items": [],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "revision",
+    "note": "Sin resolver: "
+  },
+  {
+    "reviewId": 234684,
+    "entityKind": "album",
+    "entityId": 618,
+    "raw": "Rock/Alternative",
+    "resolution": {
+      "raw": "Rock/Alternative",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 125,
+          "slug": "rock",
+          "fragment": "Rock",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Alternative"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Alternative"
+  },
+  {
+    "reviewId": 234685,
+    "entityKind": "album",
+    "entityId": 667,
+    "raw": "Latin Funk/Rock",
+    "resolution": {
+      "raw": "Latin Funk/Rock",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Latin Funk"
+        },
+        {
+          "kind": "genre",
+          "genreId": 125,
+          "slug": "rock",
+          "fragment": "Rock",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Latin Funk"
+  },
+  {
+    "reviewId": 234686,
+    "entityKind": "album",
+    "entityId": 695,
+    "raw": "Atmospheric/Depressive Black Metal",
+    "resolution": {
+      "raw": "Atmospheric/Depressive Black Metal",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 178,
+          "slug": "black-metal-atmosferico",
+          "fragment": "Atmospheric",
+          "via": "shared_suffix_ext"
+        },
+        {
+          "kind": "genre",
+          "genreId": 176,
+          "slug": "black-metal-depresivo",
+          "fragment": "Depressive Black Metal",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "aplicable",
+    "applies": [
+      {
+        "slug": "black-metal-atmosferico",
+        "role": "primary"
+      },
+      {
+        "slug": "black-metal-depresivo",
+        "role": "secondary"
+      }
+    ],
+    "note": "Todo el texto «Atmospheric/Depressive Black Metal» queda cubierto: black-metal-atmosferico, black-metal-depresivo"
+  },
+  {
+    "reviewId": 234687,
+    "entityKind": "album",
+    "entityId": 696,
+    "raw": "Atmospheric/Depressive Black Metal",
+    "resolution": {
+      "raw": "Atmospheric/Depressive Black Metal",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 178,
+          "slug": "black-metal-atmosferico",
+          "fragment": "Atmospheric",
+          "via": "shared_suffix_ext"
+        },
+        {
+          "kind": "genre",
+          "genreId": 176,
+          "slug": "black-metal-depresivo",
+          "fragment": "Depressive Black Metal",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "aplicable",
+    "applies": [
+      {
+        "slug": "black-metal-atmosferico",
+        "role": "primary"
+      },
+      {
+        "slug": "black-metal-depresivo",
+        "role": "secondary"
+      }
+    ],
+    "note": "Todo el texto «Atmospheric/Depressive Black Metal» queda cubierto: black-metal-atmosferico, black-metal-depresivo"
+  },
+  {
+    "reviewId": 234688,
+    "entityKind": "album",
+    "entityId": 698,
+    "raw": "Atmospheric/Depressive Black Metal",
+    "resolution": {
+      "raw": "Atmospheric/Depressive Black Metal",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 178,
+          "slug": "black-metal-atmosferico",
+          "fragment": "Atmospheric",
+          "via": "shared_suffix_ext"
+        },
+        {
+          "kind": "genre",
+          "genreId": 176,
+          "slug": "black-metal-depresivo",
+          "fragment": "Depressive Black Metal",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "aplicable",
+    "applies": [
+      {
+        "slug": "black-metal-atmosferico",
+        "role": "primary"
+      },
+      {
+        "slug": "black-metal-depresivo",
+        "role": "secondary"
+      }
+    ],
+    "note": "Todo el texto «Atmospheric/Depressive Black Metal» queda cubierto: black-metal-atmosferico, black-metal-depresivo"
+  },
+  {
+    "reviewId": 234689,
+    "entityKind": "album",
+    "entityId": 699,
+    "raw": "Atmospheric/Depressive Black Metal",
+    "resolution": {
+      "raw": "Atmospheric/Depressive Black Metal",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 178,
+          "slug": "black-metal-atmosferico",
+          "fragment": "Atmospheric",
+          "via": "shared_suffix_ext"
+        },
+        {
+          "kind": "genre",
+          "genreId": 176,
+          "slug": "black-metal-depresivo",
+          "fragment": "Depressive Black Metal",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "aplicable",
+    "applies": [
+      {
+        "slug": "black-metal-atmosferico",
+        "role": "primary"
+      },
+      {
+        "slug": "black-metal-depresivo",
+        "role": "secondary"
+      }
+    ],
+    "note": "Todo el texto «Atmospheric/Depressive Black Metal» queda cubierto: black-metal-atmosferico, black-metal-depresivo"
+  },
+  {
+    "reviewId": 234690,
+    "entityKind": "album",
+    "entityId": 730,
+    "raw": "Heavy Metal/Female Metal",
+    "resolution": {
+      "raw": "Heavy Metal/Female Metal",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 165,
+          "slug": "heavy-metal",
+          "fragment": "Heavy Metal",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Female Metal"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Female Metal"
+  },
+  {
+    "reviewId": 234691,
+    "entityKind": "album",
+    "entityId": 737,
+    "raw": "Goregrind / Slamming Brutal Death Metal / Slamming Brutal Deathcore",
+    "resolution": {
+      "raw": "Goregrind / Slamming Brutal Death Metal / Slamming Brutal Deathcore",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 199,
+          "slug": "goregrind",
+          "fragment": "Goregrind",
+          "via": "alias"
+        },
+        {
+          "kind": "genre",
+          "genreId": 171,
+          "slug": "slamming-brutal-death-metal",
+          "fragment": "Slamming Brutal Death Metal",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Slamming Brutal Deathcore"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Slamming Brutal Deathcore"
+  },
+  {
+    "reviewId": 234692,
+    "entityKind": "album",
+    "entityId": 742,
+    "raw": "New Age/Rock/Industrial/Sinfónico",
+    "resolution": {
+      "raw": "New Age/Rock/Industrial/Sinfónico",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "New Age"
+        },
+        {
+          "kind": "genre",
+          "genreId": 125,
+          "slug": "rock",
+          "fragment": "Rock",
+          "via": "alias"
+        },
+        {
+          "kind": "genre",
+          "genreId": 240,
+          "slug": "industrial",
+          "fragment": "Industrial",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Sinfónico"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: New Age, Sinfónico"
+  },
+  {
+    "reviewId": 234693,
+    "entityKind": "album",
+    "entityId": 743,
+    "raw": "Rock & Roll/Rock Radical/Punk Rock",
+    "resolution": {
+      "raw": "Rock & Roll/Rock Radical/Punk Rock",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 143,
+          "slug": "rock-and-roll",
+          "fragment": "Rock & Roll",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Rock Radical"
+        },
+        {
+          "kind": "genre",
+          "genreId": 211,
+          "slug": "punk-rock",
+          "fragment": "Punk Rock",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Rock Radical"
+  },
+  {
+    "reviewId": 234694,
+    "entityKind": "album",
+    "entityId": 743,
+    "raw": "",
+    "resolution": {
+      "raw": "",
+      "items": [],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "revision",
+    "note": "Sin resolver: "
+  },
+  {
+    "reviewId": 234695,
+    "entityKind": "album",
+    "entityId": 762,
+    "raw": "Progressive Technical Thrash/Death Metal/Avantgarde",
+    "resolution": {
+      "raw": "Progressive Technical Thrash/Death Metal/Avantgarde",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Progressive Technical Thrash"
+        },
+        {
+          "kind": "genre",
+          "genreId": 167,
+          "slug": "death-metal",
+          "fragment": "Death Metal",
+          "via": "alias"
+        },
+        {
+          "kind": "genre",
+          "genreId": 248,
+          "slug": "avant-garde",
+          "fragment": "Avantgarde",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Progressive Technical Thrash"
+  },
+  {
+    "reviewId": 234696,
+    "entityKind": "album",
+    "entityId": 766,
+    "raw": "Grunge/Rock Alternativo/Progresivo",
+    "resolution": {
+      "raw": "Grunge/Rock Alternativo/Progresivo",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 152,
+          "slug": "grunge",
+          "fragment": "Grunge",
+          "via": "alias"
+        },
+        {
+          "kind": "genre",
+          "genreId": 139,
+          "slug": "rock-alternativo",
+          "fragment": "Rock Alternativo",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Progresivo"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Progresivo"
+  },
+  {
+    "reviewId": 234697,
+    "entityKind": "album",
+    "entityId": 767,
+    "raw": "Guttural Brutal Death Metal / Progressive Death Metal / Slamming Brutal Death Metal / Technical Brutal Death Metal",
+    "resolution": {
+      "raw": "Guttural Brutal Death Metal / Progressive Death Metal / Slamming Brutal Death Metal / Technical Brutal Death Metal",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Guttural Brutal Death Metal"
+        },
+        {
+          "kind": "genre",
+          "genreId": 173,
+          "slug": "death-metal-progresivo",
+          "fragment": "Progressive Death Metal",
+          "via": "alias"
+        },
+        {
+          "kind": "genre",
+          "genreId": 171,
+          "slug": "slamming-brutal-death-metal",
+          "fragment": "Slamming Brutal Death Metal",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Technical Brutal Death Metal"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Guttural Brutal Death Metal, Technical Brutal Death Metal"
+  },
+  {
+    "reviewId": 234698,
+    "entityKind": "album",
+    "entityId": 772,
+    "raw": "Dark/Groove/Metal/Insdrustrial/Punk...",
+    "resolution": {
+      "raw": "Dark/Groove/Metal/Insdrustrial/Punk...",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Dark"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Groove"
+        },
+        {
+          "kind": "genre",
+          "genreId": 126,
+          "slug": "metal",
+          "fragment": "Metal",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Insdrustrial"
+        },
+        {
+          "kind": "genre",
+          "genreId": 127,
+          "slug": "punk",
+          "fragment": "Punk...",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Dark, Groove, Insdrustrial"
+  },
+  {
+    "reviewId": 234699,
+    "entityKind": "album",
+    "entityId": 774,
+    "raw": "Progresivo/Rock Alternativo/Grunge",
+    "resolution": {
+      "raw": "Progresivo/Rock Alternativo/Grunge",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Progresivo"
+        },
+        {
+          "kind": "genre",
+          "genreId": 139,
+          "slug": "rock-alternativo",
+          "fragment": "Rock Alternativo",
+          "via": "alias"
+        },
+        {
+          "kind": "genre",
+          "genreId": 152,
+          "slug": "grunge",
+          "fragment": "Grunge",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Progresivo"
+  },
+  {
+    "reviewId": 234700,
+    "entityKind": "album",
+    "entityId": 777,
+    "raw": "Rock/Metal/Heavy/Rock&Roll...",
+    "resolution": {
+      "raw": "Rock/Metal/Heavy/Rock&Roll...",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 125,
+          "slug": "rock",
+          "fragment": "Rock",
+          "via": "alias"
+        },
+        {
+          "kind": "genre",
+          "genreId": 126,
+          "slug": "metal",
+          "fragment": "Metal",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Heavy"
+        },
+        {
+          "kind": "genre",
+          "genreId": 143,
+          "slug": "rock-and-roll",
+          "fragment": "Rock&Roll...",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Heavy"
+  },
+  {
+    "reviewId": 234701,
+    "entityKind": "album",
+    "entityId": 789,
+    "raw": "Progressive Metal/Jazz/Instrumental",
+    "resolution": {
+      "raw": "Progressive Metal/Jazz/Instrumental",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 188,
+          "slug": "metal-progresivo",
+          "fragment": "Progressive Metal",
+          "via": "alias"
+        },
+        {
+          "kind": "genre",
+          "genreId": 130,
+          "slug": "jazz",
+          "fragment": "Jazz",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Instrumental"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Instrumental"
+  },
+  {
+    "reviewId": 234702,
+    "entityKind": "album",
+    "entityId": 798,
+    "raw": "Black/Hard/Heavy/Death/White/Hardcore...",
+    "resolution": {
+      "raw": "Black/Hard/Heavy/Death/White/Hardcore...",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Black"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Hard"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Heavy"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Death"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "White"
+        },
+        {
+          "kind": "genre",
+          "genreId": 212,
+          "slug": "hardcore-punk",
+          "fragment": "Hardcore...",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Black, Hard, Heavy, Death, White"
+  },
+  {
+    "reviewId": 234703,
+    "entityKind": "album",
+    "entityId": 813,
+    "raw": "Street Punk/Crossover",
+    "resolution": {
+      "raw": "Street Punk/Crossover",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 219,
+          "slug": "street-punk",
+          "fragment": "Street Punk",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Crossover"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Crossover"
+  },
+  {
+    "reviewId": 234704,
+    "entityKind": "album",
+    "entityId": 816,
+    "raw": "Hard/Heavy/Thrash/Death/Gothic/Black/Hardcore...",
+    "resolution": {
+      "raw": "Hard/Heavy/Thrash/Death/Gothic/Black/Hardcore...",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Hard"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Heavy"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Thrash"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Death"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Gothic"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Black"
+        },
+        {
+          "kind": "genre",
+          "genreId": 212,
+          "slug": "hardcore-punk",
+          "fragment": "Hardcore...",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Hard, Heavy, Thrash, Death, Gothic, Black"
+  },
+  {
+    "reviewId": 234705,
+    "entityKind": "album",
+    "entityId": 820,
+    "raw": "Heavy/Thrash/Black/Hardcore...",
+    "resolution": {
+      "raw": "Heavy/Thrash/Black/Hardcore...",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Heavy"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Thrash"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Black"
+        },
+        {
+          "kind": "genre",
+          "genreId": 212,
+          "slug": "hardcore-punk",
+          "fragment": "Hardcore...",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Heavy, Thrash, Black"
+  },
+  {
+    "reviewId": 234706,
+    "entityKind": "album",
+    "entityId": 828,
+    "raw": "Hard/Heavy/Thrash/Death/Black/Hardcore...",
+    "resolution": {
+      "raw": "Hard/Heavy/Thrash/Death/Black/Hardcore...",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Hard"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Heavy"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Thrash"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Death"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Black"
+        },
+        {
+          "kind": "genre",
+          "genreId": 212,
+          "slug": "hardcore-punk",
+          "fragment": "Hardcore...",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Hard, Heavy, Thrash, Death, Black"
+  },
+  {
+    "reviewId": 234707,
+    "entityKind": "album",
+    "entityId": 835,
+    "raw": "Death/Slamming/Grindcore/GoreGrind...",
+    "resolution": {
+      "raw": "Death/Slamming/Grindcore/GoreGrind...",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Death"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Slamming"
+        },
+        {
+          "kind": "genre",
+          "genreId": 198,
+          "slug": "grindcore",
+          "fragment": "Grindcore",
+          "via": "alias"
+        },
+        {
+          "kind": "genre",
+          "genreId": 199,
+          "slug": "goregrind",
+          "fragment": "GoreGrind...",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Death, Slamming"
+  },
+  {
+    "reviewId": 234708,
+    "entityKind": "album",
+    "entityId": 840,
+    "raw": "Metal Afro/Venezolano",
+    "resolution": {
+      "raw": "Metal Afro/Venezolano",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Metal Afro"
+        }
+      ],
+      "notAGenre": [
+        "venezolano"
+      ],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Metal Afro"
+  },
+  {
+    "reviewId": 234709,
+    "entityKind": "album",
+    "entityId": 849,
+    "raw": "Symphonic Progressive Metal / Female Vocal",
+    "resolution": {
+      "raw": "Symphonic Progressive Metal / Female Vocal",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Symphonic Progressive Metal"
+        }
+      ],
+      "notAGenre": [
+        "female vocal"
+      ],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Symphonic Progressive Metal"
+  },
+  {
+    "reviewId": 234710,
+    "entityKind": "album",
+    "entityId": 866,
+    "raw": "Guttural Brutal Death Metal / Slamming Brutal Death Metal",
+    "resolution": {
+      "raw": "Guttural Brutal Death Metal / Slamming Brutal Death Metal",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Guttural Brutal Death Metal"
+        },
+        {
+          "kind": "genre",
+          "genreId": 171,
+          "slug": "slamming-brutal-death-metal",
+          "fragment": "Slamming Brutal Death Metal",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Guttural Brutal Death Metal"
+  },
+  {
+    "reviewId": 234711,
+    "entityKind": "album",
+    "entityId": 888,
+    "raw": "Rock & Roll/Stoner",
+    "resolution": {
+      "raw": "Rock & Roll/Stoner",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 143,
+          "slug": "rock-and-roll",
+          "fragment": "Rock & Roll",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Stoner"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Stoner"
+  },
+  {
+    "reviewId": 234712,
+    "entityKind": "album",
+    "entityId": 898,
+    "raw": "Hard Rock/Prong Rock",
+    "resolution": {
+      "raw": "Hard Rock/Prong Rock",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 138,
+          "slug": "hard-rock",
+          "fragment": "Hard Rock",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Prong Rock"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Prong Rock"
+  },
+  {
+    "reviewId": 234713,
+    "entityKind": "album",
+    "entityId": 899,
+    "raw": "Progressive Extreme Metal/Deathcore",
+    "resolution": {
+      "raw": "Progressive Extreme Metal/Deathcore",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Progressive Extreme Metal"
+        },
+        {
+          "kind": "genre",
+          "genreId": 197,
+          "slug": "deathcore",
+          "fragment": "Deathcore",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Progressive Extreme Metal"
+  },
+  {
+    "reviewId": 234714,
+    "entityKind": "album",
+    "entityId": 905,
+    "raw": "Goregrind / Guttural Brutal Death Metal",
+    "resolution": {
+      "raw": "Goregrind / Guttural Brutal Death Metal",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 199,
+          "slug": "goregrind",
+          "fragment": "Goregrind",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Guttural Brutal Death Metal"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Guttural Brutal Death Metal"
+  },
+  {
+    "reviewId": 234715,
+    "entityKind": "album",
+    "entityId": 910,
+    "raw": "Symphonic Metal/Female Metal",
+    "resolution": {
+      "raw": "Symphonic Metal/Female Metal",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 189,
+          "slug": "metal-sinfonico",
+          "fragment": "Symphonic Metal",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Female Metal"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Female Metal"
+  },
+  {
+    "reviewId": 234716,
+    "entityKind": "album",
+    "entityId": 911,
+    "raw": "Symphonic Metal/Female Metal",
+    "resolution": {
+      "raw": "Symphonic Metal/Female Metal",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 189,
+          "slug": "metal-sinfonico",
+          "fragment": "Symphonic Metal",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Female Metal"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Female Metal"
+  },
+  {
+    "reviewId": 234717,
+    "entityKind": "album",
+    "entityId": 948,
+    "raw": "Death Metal/Hardcore Punk/Neo Crust",
+    "resolution": {
+      "raw": "Death Metal/Hardcore Punk/Neo Crust",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 167,
+          "slug": "death-metal",
+          "fragment": "Death Metal",
+          "via": "alias"
+        },
+        {
+          "kind": "genre",
+          "genreId": 212,
+          "slug": "hardcore-punk",
+          "fragment": "Hardcore Punk",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Neo Crust"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Neo Crust"
+  },
+  {
+    "reviewId": 234718,
+    "entityKind": "album",
+    "entityId": 952,
+    "raw": "Hard/Heavy/Thrash/Death/Black Metal/Rock Alternativo",
+    "resolution": {
+      "raw": "Hard/Heavy/Thrash/Death/Black Metal/Rock Alternativo",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 138,
+          "slug": "hard-rock",
+          "fragment": "Hard",
+          "via": "shared_suffix"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Heavy"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Thrash"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Death"
+        },
+        {
+          "kind": "genre",
+          "genreId": 175,
+          "slug": "black-metal",
+          "fragment": "Black Metal",
+          "via": "alias"
+        },
+        {
+          "kind": "genre",
+          "genreId": 139,
+          "slug": "rock-alternativo",
+          "fragment": "Rock Alternativo",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Heavy, Thrash, Death"
+  },
+  {
+    "reviewId": 234719,
+    "entityKind": "album",
+    "entityId": 956,
+    "raw": "Death Metal/Hardcore Punk/Neo Crust",
+    "resolution": {
+      "raw": "Death Metal/Hardcore Punk/Neo Crust",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 167,
+          "slug": "death-metal",
+          "fragment": "Death Metal",
+          "via": "alias"
+        },
+        {
+          "kind": "genre",
+          "genreId": 212,
+          "slug": "hardcore-punk",
+          "fragment": "Hardcore Punk",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Neo Crust"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Neo Crust"
+  },
+  {
+    "reviewId": 234720,
+    "entityKind": "album",
+    "entityId": 958,
+    "raw": "Hard/Heavy/Thrash/Death/Black/Doom Metal...",
+    "resolution": {
+      "raw": "Hard/Heavy/Thrash/Death/Black/Doom Metal...",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Hard"
+        },
+        {
+          "kind": "genre",
+          "genreId": 165,
+          "slug": "heavy-metal",
+          "fragment": "Heavy",
+          "via": "shared_suffix"
+        },
+        {
+          "kind": "genre",
+          "genreId": 182,
+          "slug": "thrash-metal",
+          "fragment": "Thrash",
+          "via": "shared_suffix"
+        },
+        {
+          "kind": "genre",
+          "genreId": 167,
+          "slug": "death-metal",
+          "fragment": "Death",
+          "via": "shared_suffix"
+        },
+        {
+          "kind": "genre",
+          "genreId": 175,
+          "slug": "black-metal",
+          "fragment": "Black",
+          "via": "shared_suffix"
+        },
+        {
+          "kind": "genre",
+          "genreId": 190,
+          "slug": "doom-metal",
+          "fragment": "Doom Metal...",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Hard"
+  },
+  {
+    "reviewId": 234721,
+    "entityKind": "album",
+    "entityId": 966,
+    "raw": "Slamming Brutal Death Metal / Guttural Brutal Death Metal",
+    "resolution": {
+      "raw": "Slamming Brutal Death Metal / Guttural Brutal Death Metal",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 171,
+          "slug": "slamming-brutal-death-metal",
+          "fragment": "Slamming Brutal Death Metal",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Guttural Brutal Death Metal"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Guttural Brutal Death Metal"
+  },
+  {
+    "reviewId": 234722,
+    "entityKind": "album",
+    "entityId": 972,
+    "raw": "Unblack Metal/White Metal",
+    "resolution": {
+      "raw": "Unblack Metal/White Metal",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Unblack Metal"
+        },
+        {
+          "kind": "genre",
+          "genreId": 181,
+          "slug": "white-metal",
+          "fragment": "White Metal",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Unblack Metal"
+  },
+  {
+    "reviewId": 234723,
+    "entityKind": "album",
+    "entityId": 974,
+    "raw": "Slamming Brutal Death Metal / Guttural Brutal Death Metal",
+    "resolution": {
+      "raw": "Slamming Brutal Death Metal / Guttural Brutal Death Metal",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 171,
+          "slug": "slamming-brutal-death-metal",
+          "fragment": "Slamming Brutal Death Metal",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Guttural Brutal Death Metal"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Guttural Brutal Death Metal"
+  },
+  {
+    "reviewId": 234724,
+    "entityKind": "album",
+    "entityId": 987,
+    "raw": "Hard Blues/Stoner Rock",
+    "resolution": {
+      "raw": "Hard Blues/Stoner Rock",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Hard Blues"
+        },
+        {
+          "kind": "genre",
+          "genreId": 155,
+          "slug": "stoner-rock",
+          "fragment": "Stoner Rock",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Hard Blues"
+  },
+  {
+    "reviewId": 234725,
+    "entityKind": "album",
+    "entityId": 1014,
+    "raw": "Groove Metal/Technical Metal",
+    "resolution": {
+      "raw": "Groove Metal/Technical Metal",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 184,
+          "slug": "groove-metal",
+          "fragment": "Groove Metal",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Technical Metal"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Technical Metal"
+  },
+  {
+    "reviewId": 234726,
+    "entityKind": "album",
+    "entityId": 1032,
+    "raw": "Power Metal/Progressive",
+    "resolution": {
+      "raw": "Power Metal/Progressive",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 185,
+          "slug": "power-metal",
+          "fragment": "Power Metal",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Progressive"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Progressive"
+  },
+  {
+    "reviewId": 234727,
+    "entityKind": "album",
+    "entityId": 1047,
+    "raw": "Rock-Fusión | Instrumental Metal",
+    "resolution": {
+      "raw": "Rock-Fusión | Instrumental Metal",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Rock-Fusión"
+        },
+        {
+          "kind": "genre",
+          "genreId": 204,
+          "slug": "metal-instrumental",
+          "fragment": "Instrumental Metal",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Rock-Fusión"
+  },
+  {
+    "reviewId": 234728,
+    "entityKind": "album",
+    "entityId": 1060,
+    "raw": "Rock/Progresivo/Jazz/Latin",
+    "resolution": {
+      "raw": "Rock/Progresivo/Jazz/Latin",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 125,
+          "slug": "rock",
+          "fragment": "Rock",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Progresivo"
+        },
+        {
+          "kind": "genre",
+          "genreId": 130,
+          "slug": "jazz",
+          "fragment": "Jazz",
+          "via": "alias"
+        },
+        {
+          "kind": "genre",
+          "genreId": 131,
+          "slug": "fusion-latina",
+          "fragment": "Latin",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Progresivo"
+  },
+  {
+    "reviewId": 234729,
+    "entityKind": "album",
+    "entityId": 1080,
+    "raw": "Black Metal | Melodic Porn Black Metal",
+    "resolution": {
+      "raw": "Black Metal | Melodic Porn Black Metal",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 175,
+          "slug": "black-metal",
+          "fragment": "Black Metal",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Melodic Porn Black Metal"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Melodic Porn Black Metal"
+  },
+  {
+    "reviewId": 234730,
+    "entityKind": "album",
+    "entityId": 1081,
+    "raw": "Aggro/ Death Metal",
+    "resolution": {
+      "raw": "Aggro/ Death Metal",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Aggro"
+        },
+        {
+          "kind": "genre",
+          "genreId": 167,
+          "slug": "death-metal",
+          "fragment": "Death Metal",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Aggro"
+  },
+  {
+    "reviewId": 234731,
+    "entityKind": "album",
+    "entityId": 1113,
+    "raw": "Guttural Brutal Death Metal / Slamming Brutal Death Metal / Pirate Metal",
+    "resolution": {
+      "raw": "Guttural Brutal Death Metal / Slamming Brutal Death Metal / Pirate Metal",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Guttural Brutal Death Metal"
+        },
+        {
+          "kind": "genre",
+          "genreId": 171,
+          "slug": "slamming-brutal-death-metal",
+          "fragment": "Slamming Brutal Death Metal",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Pirate Metal"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Guttural Brutal Death Metal, Pirate Metal"
+  },
+  {
+    "reviewId": 234732,
+    "entityKind": "album",
+    "entityId": 1126,
+    "raw": "Hard Rock/Heavy Rock",
+    "resolution": {
+      "raw": "Hard Rock/Heavy Rock",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 138,
+          "slug": "hard-rock",
+          "fragment": "Hard Rock",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Heavy Rock"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Heavy Rock"
+  },
+  {
+    "reviewId": 234733,
+    "entityKind": "album",
+    "entityId": 1140,
+    "raw": "Black Metal | Blackened",
+    "resolution": {
+      "raw": "Black Metal | Blackened",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 175,
+          "slug": "black-metal",
+          "fragment": "Black Metal",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Blackened"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Blackened"
+  },
+  {
+    "reviewId": 234734,
+    "entityKind": "album",
+    "entityId": 1153,
+    "raw": "Progressive Metal/Jazz/Instrumental",
+    "resolution": {
+      "raw": "Progressive Metal/Jazz/Instrumental",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 188,
+          "slug": "metal-progresivo",
+          "fragment": "Progressive Metal",
+          "via": "alias"
+        },
+        {
+          "kind": "genre",
+          "genreId": 130,
+          "slug": "jazz",
+          "fragment": "Jazz",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Instrumental"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Instrumental"
+  },
+  {
+    "reviewId": 234735,
+    "entityKind": "album",
+    "entityId": 1156,
+    "raw": "Modern Metal | Metalcore",
+    "resolution": {
+      "raw": "Modern Metal | Metalcore",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Modern Metal"
+        },
+        {
+          "kind": "genre",
+          "genreId": 196,
+          "slug": "metalcore",
+          "fragment": "Metalcore",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Modern Metal"
+  },
+  {
+    "reviewId": 234736,
+    "entityKind": "album",
+    "entityId": 1171,
+    "raw": "Hard/Heavy/Thrash/Death/Black/Hardcore...",
+    "resolution": {
+      "raw": "Hard/Heavy/Thrash/Death/Black/Hardcore...",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Hard"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Heavy"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Thrash"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Death"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Black"
+        },
+        {
+          "kind": "genre",
+          "genreId": 212,
+          "slug": "hardcore-punk",
+          "fragment": "Hardcore...",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Hard, Heavy, Thrash, Death, Black"
+  },
+  {
+    "reviewId": 234737,
+    "entityKind": "album",
+    "entityId": 1173,
+    "raw": "Hard/Heavy/Thrash/Death/Black/Hardcore...",
+    "resolution": {
+      "raw": "Hard/Heavy/Thrash/Death/Black/Hardcore...",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Hard"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Heavy"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Thrash"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Death"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Black"
+        },
+        {
+          "kind": "genre",
+          "genreId": 212,
+          "slug": "hardcore-punk",
+          "fragment": "Hardcore...",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Hard, Heavy, Thrash, Death, Black"
+  },
+  {
+    "reviewId": 234738,
+    "entityKind": "album",
+    "entityId": 1174,
+    "raw": "Hard/Heavy/Thrash/Death/Black/Hardcore...",
+    "resolution": {
+      "raw": "Hard/Heavy/Thrash/Death/Black/Hardcore...",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Hard"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Heavy"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Thrash"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Death"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Black"
+        },
+        {
+          "kind": "genre",
+          "genreId": 212,
+          "slug": "hardcore-punk",
+          "fragment": "Hardcore...",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Hard, Heavy, Thrash, Death, Black"
+  },
+  {
+    "reviewId": 234739,
+    "entityKind": "album",
+    "entityId": 1176,
+    "raw": "Hard/Heavy/Thrash/Death/Black/Hardcore...",
+    "resolution": {
+      "raw": "Hard/Heavy/Thrash/Death/Black/Hardcore...",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Hard"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Heavy"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Thrash"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Death"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Black"
+        },
+        {
+          "kind": "genre",
+          "genreId": 212,
+          "slug": "hardcore-punk",
+          "fragment": "Hardcore...",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Hard, Heavy, Thrash, Death, Black"
+  },
+  {
+    "reviewId": 234740,
+    "entityKind": "album",
+    "entityId": 1188,
+    "raw": "Hard/Heavy/Thrash/Death/Black/Hardcore...",
+    "resolution": {
+      "raw": "Hard/Heavy/Thrash/Death/Black/Hardcore...",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Hard"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Heavy"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Thrash"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Death"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Black"
+        },
+        {
+          "kind": "genre",
+          "genreId": 212,
+          "slug": "hardcore-punk",
+          "fragment": "Hardcore...",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Hard, Heavy, Thrash, Death, Black"
+  },
+  {
+    "reviewId": 234741,
+    "entityKind": "album",
+    "entityId": 1190,
+    "raw": "Hard/Heavy/Thrash/Death/Black/Hardcore/Punk...",
+    "resolution": {
+      "raw": "Hard/Heavy/Thrash/Death/Black/Hardcore/Punk...",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Hard"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Heavy"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Thrash"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Death"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Black"
+        },
+        {
+          "kind": "genre",
+          "genreId": 212,
+          "slug": "hardcore-punk",
+          "fragment": "Hardcore",
+          "via": "alias"
+        },
+        {
+          "kind": "genre",
+          "genreId": 127,
+          "slug": "punk",
+          "fragment": "Punk...",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Hard, Heavy, Thrash, Death, Black"
+  },
+  {
+    "reviewId": 234742,
+    "entityKind": "album",
+    "entityId": 1204,
+    "raw": "Grindcore/Noisecore",
+    "resolution": {
+      "raw": "Grindcore/Noisecore",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 198,
+          "slug": "grindcore",
+          "fragment": "Grindcore",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Noisecore"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Noisecore"
+  },
+  {
+    "reviewId": 234743,
+    "entityKind": "album",
+    "entityId": 1211,
+    "raw": "Female Metal/Symphonic Metal/Gothic Metal",
+    "resolution": {
+      "raw": "Female Metal/Symphonic Metal/Gothic Metal",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Female Metal"
+        },
+        {
+          "kind": "genre",
+          "genreId": 189,
+          "slug": "metal-sinfonico",
+          "fragment": "Symphonic Metal",
+          "via": "alias"
+        },
+        {
+          "kind": "genre",
+          "genreId": 191,
+          "slug": "metal-gotico",
+          "fragment": "Gothic Metal",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Female Metal"
+  },
+  {
+    "reviewId": 234744,
+    "entityKind": "album",
+    "entityId": 1217,
+    "raw": "Hard/Heavy/Thrash/Death/Hardcore/Black...",
+    "resolution": {
+      "raw": "Hard/Heavy/Thrash/Death/Hardcore/Black...",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Hard"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Heavy"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Thrash"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Death"
+        },
+        {
+          "kind": "genre",
+          "genreId": 212,
+          "slug": "hardcore-punk",
+          "fragment": "Hardcore",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Black..."
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Hard, Heavy, Thrash, Death, Black..."
+  },
+  {
+    "reviewId": 234745,
+    "entityKind": "album",
+    "entityId": 1218,
+    "raw": "Heavy Rock/Hard Rock/Progresivo Metal",
+    "resolution": {
+      "raw": "Heavy Rock/Hard Rock/Progresivo Metal",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Heavy Rock"
+        },
+        {
+          "kind": "genre",
+          "genreId": 138,
+          "slug": "hard-rock",
+          "fragment": "Hard Rock",
+          "via": "alias"
+        },
+        {
+          "kind": "genre",
+          "genreId": 188,
+          "slug": "metal-progresivo",
+          "fragment": "Progresivo Metal",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Heavy Rock"
+  },
+  {
+    "reviewId": 234746,
+    "entityKind": "album",
+    "entityId": 1221,
+    "raw": "Acid Hard Rock/Stoner/Latin Hard Rock",
+    "resolution": {
+      "raw": "Acid Hard Rock/Stoner/Latin Hard Rock",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Acid Hard Rock"
+        },
+        {
+          "kind": "genre",
+          "genreId": 155,
+          "slug": "stoner-rock",
+          "fragment": "Stoner",
+          "via": "shared_suffix"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Latin Hard Rock"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Acid Hard Rock, Latin Hard Rock"
+  },
+  {
+    "reviewId": 234747,
+    "entityKind": "album",
+    "entityId": 1223,
+    "raw": "Hard/Heavy/Thrash/Death/Hardcore",
+    "resolution": {
+      "raw": "Hard/Heavy/Thrash/Death/Hardcore",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Hard"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Heavy"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Thrash"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Death"
+        },
+        {
+          "kind": "genre",
+          "genreId": 212,
+          "slug": "hardcore-punk",
+          "fragment": "Hardcore",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Hard, Heavy, Thrash, Death"
+  },
+  {
+    "reviewId": 234748,
+    "entityKind": "album",
+    "entityId": 1243,
+    "raw": "HC Punk/Punk Destroy",
+    "resolution": {
+      "raw": "HC Punk/Punk Destroy",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 212,
+          "slug": "hardcore-punk",
+          "fragment": "HC Punk",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Punk Destroy"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Punk Destroy"
+  },
+  {
+    "reviewId": 234749,
+    "entityKind": "album",
+    "entityId": 1244,
+    "raw": "Rock´n´Roll/Rotten Blues/Stoner/Metal/Hard Rock",
+    "resolution": {
+      "raw": "Rock´n´Roll/Rotten Blues/Stoner/Metal/Hard Rock",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 143,
+          "slug": "rock-and-roll",
+          "fragment": "Rock´n´Roll",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Rotten Blues"
+        },
+        {
+          "kind": "genre",
+          "genreId": 155,
+          "slug": "stoner-rock",
+          "fragment": "Stoner",
+          "via": "shared_suffix"
+        },
+        {
+          "kind": "genre",
+          "genreId": 126,
+          "slug": "metal",
+          "fragment": "Metal",
+          "via": "alias"
+        },
+        {
+          "kind": "genre",
+          "genreId": 138,
+          "slug": "hard-rock",
+          "fragment": "Hard Rock",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Rotten Blues"
+  },
+  {
+    "reviewId": 234750,
+    "entityKind": "album",
+    "entityId": 1248,
+    "raw": "Rock´n´Roll/Rotten Blues/Stoner/Metal/Hard Rock",
+    "resolution": {
+      "raw": "Rock´n´Roll/Rotten Blues/Stoner/Metal/Hard Rock",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 143,
+          "slug": "rock-and-roll",
+          "fragment": "Rock´n´Roll",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Rotten Blues"
+        },
+        {
+          "kind": "genre",
+          "genreId": 155,
+          "slug": "stoner-rock",
+          "fragment": "Stoner",
+          "via": "shared_suffix"
+        },
+        {
+          "kind": "genre",
+          "genreId": 126,
+          "slug": "metal",
+          "fragment": "Metal",
+          "via": "alias"
+        },
+        {
+          "kind": "genre",
+          "genreId": 138,
+          "slug": "hard-rock",
+          "fragment": "Hard Rock",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Rotten Blues"
+  },
+  {
+    "reviewId": 234751,
+    "entityKind": "album",
+    "entityId": 1249,
+    "raw": "Rock´n´Roll/Rotten Blues/Stoner/Metal/Hard Rock",
+    "resolution": {
+      "raw": "Rock´n´Roll/Rotten Blues/Stoner/Metal/Hard Rock",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 143,
+          "slug": "rock-and-roll",
+          "fragment": "Rock´n´Roll",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Rotten Blues"
+        },
+        {
+          "kind": "genre",
+          "genreId": 155,
+          "slug": "stoner-rock",
+          "fragment": "Stoner",
+          "via": "shared_suffix"
+        },
+        {
+          "kind": "genre",
+          "genreId": 126,
+          "slug": "metal",
+          "fragment": "Metal",
+          "via": "alias"
+        },
+        {
+          "kind": "genre",
+          "genreId": 138,
+          "slug": "hard-rock",
+          "fragment": "Hard Rock",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Rotten Blues"
+  },
+  {
+    "reviewId": 234752,
+    "entityKind": "album",
+    "entityId": 1250,
+    "raw": "Rock 'N´ Roll/Rotten Blues/Stoner/Metal/Hard Rock",
+    "resolution": {
+      "raw": "Rock 'N´ Roll/Rotten Blues/Stoner/Metal/Hard Rock",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 143,
+          "slug": "rock-and-roll",
+          "fragment": "Rock 'N´ Roll",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Rotten Blues"
+        },
+        {
+          "kind": "genre",
+          "genreId": 155,
+          "slug": "stoner-rock",
+          "fragment": "Stoner",
+          "via": "shared_suffix"
+        },
+        {
+          "kind": "genre",
+          "genreId": 126,
+          "slug": "metal",
+          "fragment": "Metal",
+          "via": "alias"
+        },
+        {
+          "kind": "genre",
+          "genreId": 138,
+          "slug": "hard-rock",
+          "fragment": "Hard Rock",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Rotten Blues"
+  },
+  {
+    "reviewId": 234753,
+    "entityKind": "album",
+    "entityId": 1251,
+    "raw": "Rock 'N´ Roll/Rotten Blues/Stoner/Metal/Hard Rock",
+    "resolution": {
+      "raw": "Rock 'N´ Roll/Rotten Blues/Stoner/Metal/Hard Rock",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 143,
+          "slug": "rock-and-roll",
+          "fragment": "Rock 'N´ Roll",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Rotten Blues"
+        },
+        {
+          "kind": "genre",
+          "genreId": 155,
+          "slug": "stoner-rock",
+          "fragment": "Stoner",
+          "via": "shared_suffix"
+        },
+        {
+          "kind": "genre",
+          "genreId": 126,
+          "slug": "metal",
+          "fragment": "Metal",
+          "via": "alias"
+        },
+        {
+          "kind": "genre",
+          "genreId": 138,
+          "slug": "hard-rock",
+          "fragment": "Hard Rock",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Rotten Blues"
+  },
+  {
+    "reviewId": 234754,
+    "entityKind": "album",
+    "entityId": 1275,
+    "raw": "Black/Death/Grindcore",
+    "resolution": {
+      "raw": "Black/Death/Grindcore",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Black"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Death"
+        },
+        {
+          "kind": "genre",
+          "genreId": 198,
+          "slug": "grindcore",
+          "fragment": "Grindcore",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Black, Death"
+  },
+  {
+    "reviewId": 234755,
+    "entityKind": "album",
+    "entityId": 1294,
+    "raw": "Black/Heavy/Hard/Thrash/Progresivo/Death/Hardcore...",
+    "resolution": {
+      "raw": "Black/Heavy/Hard/Thrash/Progresivo/Death/Hardcore...",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Black"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Heavy"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Hard"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Thrash"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Progresivo"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Death"
+        },
+        {
+          "kind": "genre",
+          "genreId": 212,
+          "slug": "hardcore-punk",
+          "fragment": "Hardcore...",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Black, Heavy, Hard, Thrash, Progresivo, Death"
+  },
+  {
+    "reviewId": 234756,
+    "entityKind": "album",
+    "entityId": 1295,
+    "raw": "Black/Heavy/Hard/Thrash/Progresivo/Death/Hardcore...",
+    "resolution": {
+      "raw": "Black/Heavy/Hard/Thrash/Progresivo/Death/Hardcore...",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Black"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Heavy"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Hard"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Thrash"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Progresivo"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Death"
+        },
+        {
+          "kind": "genre",
+          "genreId": 212,
+          "slug": "hardcore-punk",
+          "fragment": "Hardcore...",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Black, Heavy, Hard, Thrash, Progresivo, Death"
+  },
+  {
+    "reviewId": 234757,
+    "entityKind": "album",
+    "entityId": 1296,
+    "raw": "Black/Heavy/Hard/Thrash/Progresivo/Death/Hardcore...",
+    "resolution": {
+      "raw": "Black/Heavy/Hard/Thrash/Progresivo/Death/Hardcore...",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Black"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Heavy"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Hard"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Thrash"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Progresivo"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Death"
+        },
+        {
+          "kind": "genre",
+          "genreId": 212,
+          "slug": "hardcore-punk",
+          "fragment": "Hardcore...",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Black, Heavy, Hard, Thrash, Progresivo, Death"
+  },
+  {
+    "reviewId": 234758,
+    "entityKind": "album",
+    "entityId": 1298,
+    "raw": "Thrash/Rock/Heavy/Death/Black...",
+    "resolution": {
+      "raw": "Thrash/Rock/Heavy/Death/Black...",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Thrash"
+        },
+        {
+          "kind": "genre",
+          "genreId": 125,
+          "slug": "rock",
+          "fragment": "Rock",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Heavy"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Death"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Black..."
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Thrash, Heavy, Death, Black..."
+  },
+  {
+    "reviewId": 234759,
+    "entityKind": "album",
+    "entityId": 1315,
+    "raw": "Melodic Heavy / Power Metal",
+    "resolution": {
+      "raw": "Melodic Heavy / Power Metal",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Melodic Heavy"
+        },
+        {
+          "kind": "genre",
+          "genreId": 185,
+          "slug": "power-metal",
+          "fragment": "Power Metal",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Melodic Heavy"
+  },
+  {
+    "reviewId": 234760,
+    "entityKind": "album",
+    "entityId": 1319,
+    "raw": "Progressive Rock /Jazz Fusion/Jazz Latin Metal /Metal Latino/Progressive Metal",
+    "resolution": {
+      "raw": "Progressive Rock /Jazz Fusion/Jazz Latin Metal /Metal Latino/Progressive Metal",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 140,
+          "slug": "rock-progresivo",
+          "fragment": "Progressive Rock",
+          "via": "alias"
+        },
+        {
+          "kind": "genre",
+          "genreId": 224,
+          "slug": "jazz-fusion",
+          "fragment": "Jazz Fusion",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Jazz Latin Metal"
+        },
+        {
+          "kind": "genre",
+          "genreId": 205,
+          "slug": "metal-latino",
+          "fragment": "Metal Latino",
+          "via": "alias"
+        },
+        {
+          "kind": "genre",
+          "genreId": 188,
+          "slug": "metal-progresivo",
+          "fragment": "Progressive Metal",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Jazz Latin Metal"
+  },
+  {
+    "reviewId": 234761,
+    "entityKind": "album",
+    "entityId": 1323,
+    "raw": "Symphonic Metal/Heavy/Thrash/Death/Progressive",
+    "resolution": {
+      "raw": "Symphonic Metal/Heavy/Thrash/Death/Progressive",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 189,
+          "slug": "metal-sinfonico",
+          "fragment": "Symphonic Metal",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Heavy"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Thrash"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Death"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Progressive"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Heavy, Thrash, Death, Progressive"
+  },
+  {
+    "reviewId": 234762,
+    "entityKind": "album",
+    "entityId": 1326,
+    "raw": "Alternative Rock/Punk Hardcore/Heavy/Thrash/Death/Progressive",
+    "resolution": {
+      "raw": "Alternative Rock/Punk Hardcore/Heavy/Thrash/Death/Progressive",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 139,
+          "slug": "rock-alternativo",
+          "fragment": "Alternative Rock",
+          "via": "alias"
+        },
+        {
+          "kind": "genre",
+          "genreId": 212,
+          "slug": "hardcore-punk",
+          "fragment": "Punk Hardcore",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Heavy"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Thrash"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Death"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Progressive"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Heavy, Thrash, Death, Progressive"
+  },
+  {
+    "reviewId": 234763,
+    "entityKind": "album",
+    "entityId": 1338,
+    "raw": "",
+    "resolution": {
+      "raw": "",
+      "items": [],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "revision",
+    "note": "Sin resolver: "
+  },
+  {
+    "reviewId": 234764,
+    "entityKind": "album",
+    "entityId": 1343,
+    "raw": "Power/Hardcore/Groove/Heavy/Thrash/Death/Black",
+    "resolution": {
+      "raw": "Power/Hardcore/Groove/Heavy/Thrash/Death/Black",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Power"
+        },
+        {
+          "kind": "genre",
+          "genreId": 212,
+          "slug": "hardcore-punk",
+          "fragment": "Hardcore",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Groove"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Heavy"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Thrash"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Death"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Black"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Power, Groove, Heavy, Thrash, Death, Black"
+  },
+  {
+    "reviewId": 234765,
+    "entityKind": "album",
+    "entityId": 1349,
+    "raw": "Aggro/ Death Metal",
+    "resolution": {
+      "raw": "Aggro/ Death Metal",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Aggro"
+        },
+        {
+          "kind": "genre",
+          "genreId": 167,
+          "slug": "death-metal",
+          "fragment": "Death Metal",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Aggro"
+  },
+  {
+    "reviewId": 234766,
+    "entityKind": "album",
+    "entityId": 1354,
+    "raw": "Hardcore/Groove/Heavy/Thrash/Death",
+    "resolution": {
+      "raw": "Hardcore/Groove/Heavy/Thrash/Death",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 212,
+          "slug": "hardcore-punk",
+          "fragment": "Hardcore",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Groove"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Heavy"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Thrash"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Death"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Groove, Heavy, Thrash, Death"
+  },
+  {
+    "reviewId": 234767,
+    "entityKind": "album",
+    "entityId": 1411,
+    "raw": "Porn/Goregrind",
+    "resolution": {
+      "raw": "Porn/Goregrind",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Porn"
+        },
+        {
+          "kind": "genre",
+          "genreId": 199,
+          "slug": "goregrind",
+          "fragment": "Goregrind",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Porn"
+  },
+  {
+    "reviewId": 234768,
+    "entityKind": "album",
+    "entityId": 1416,
+    "raw": "Alternative Rock/White Rock",
+    "resolution": {
+      "raw": "Alternative Rock/White Rock",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 139,
+          "slug": "rock-alternativo",
+          "fragment": "Alternative Rock",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "White Rock"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: White Rock"
+  },
+  {
+    "reviewId": 234769,
+    "entityKind": "album",
+    "entityId": 1449,
+    "raw": "Power/Dark/Gothic Metal",
+    "resolution": {
+      "raw": "Power/Dark/Gothic Metal",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 185,
+          "slug": "power-metal",
+          "fragment": "Power",
+          "via": "shared_suffix"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Dark"
+        },
+        {
+          "kind": "genre",
+          "genreId": 191,
+          "slug": "metal-gotico",
+          "fragment": "Gothic Metal",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Dark"
+  },
+  {
+    "reviewId": 234770,
+    "entityKind": "album",
+    "entityId": 1450,
+    "raw": "Power/Dark/Gothic Metal",
+    "resolution": {
+      "raw": "Power/Dark/Gothic Metal",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 185,
+          "slug": "power-metal",
+          "fragment": "Power",
+          "via": "shared_suffix"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Dark"
+        },
+        {
+          "kind": "genre",
+          "genreId": 191,
+          "slug": "metal-gotico",
+          "fragment": "Gothic Metal",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Dark"
+  },
+  {
+    "reviewId": 234771,
+    "entityKind": "album",
+    "entityId": 1454,
+    "raw": "Progressive Folk/ Black Metal",
+    "resolution": {
+      "raw": "Progressive Folk/ Black Metal",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Progressive Folk"
+        },
+        {
+          "kind": "genre",
+          "genreId": 175,
+          "slug": "black-metal",
+          "fragment": "Black Metal",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Progressive Folk"
+  },
+  {
+    "reviewId": 234772,
+    "entityKind": "album",
+    "entityId": 1506,
+    "raw": "Grindcore/Porn/Gore",
+    "resolution": {
+      "raw": "Grindcore/Porn/Gore",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 198,
+          "slug": "grindcore",
+          "fragment": "Grindcore",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Porn"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Gore"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Porn, Gore"
+  },
+  {
+    "reviewId": 234773,
+    "entityKind": "album",
+    "entityId": 1553,
+    "raw": "Hardcore/Thrash Metal/Crossover",
+    "resolution": {
+      "raw": "Hardcore/Thrash Metal/Crossover",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 212,
+          "slug": "hardcore-punk",
+          "fragment": "Hardcore",
+          "via": "alias"
+        },
+        {
+          "kind": "genre",
+          "genreId": 182,
+          "slug": "thrash-metal",
+          "fragment": "Thrash Metal",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Crossover"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Crossover"
+  },
+  {
+    "reviewId": 234774,
+    "entityKind": "album",
+    "entityId": 1592,
+    "raw": "Blackened / Black Metal/ Death Metal",
+    "resolution": {
+      "raw": "Blackened / Black Metal/ Death Metal",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Blackened"
+        },
+        {
+          "kind": "genre",
+          "genreId": 175,
+          "slug": "black-metal",
+          "fragment": "Black Metal",
+          "via": "alias"
+        },
+        {
+          "kind": "genre",
+          "genreId": 167,
+          "slug": "death-metal",
+          "fragment": "Death Metal",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Blackened"
+  },
+  {
+    "reviewId": 234775,
+    "entityKind": "album",
+    "entityId": 1599,
+    "raw": "Slamming Brutal Death Metal / Slamming Brutal Deathcore",
+    "resolution": {
+      "raw": "Slamming Brutal Death Metal / Slamming Brutal Deathcore",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 171,
+          "slug": "slamming-brutal-death-metal",
+          "fragment": "Slamming Brutal Death Metal",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Slamming Brutal Deathcore"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Slamming Brutal Deathcore"
+  },
+  {
+    "reviewId": 234776,
+    "entityKind": "album",
+    "entityId": 1618,
+    "raw": "Thrash-Death Metal | Thrash Metal",
+    "resolution": {
+      "raw": "Thrash-Death Metal | Thrash Metal",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Thrash-Death Metal"
+        },
+        {
+          "kind": "genre",
+          "genreId": 182,
+          "slug": "thrash-metal",
+          "fragment": "Thrash Metal",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Thrash-Death Metal"
+  },
+  {
+    "reviewId": 234777,
+    "entityKind": "album",
+    "entityId": 1621,
+    "raw": "Thrash-Death Metal | Thrash Metal",
+    "resolution": {
+      "raw": "Thrash-Death Metal | Thrash Metal",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Thrash-Death Metal"
+        },
+        {
+          "kind": "genre",
+          "genreId": 182,
+          "slug": "thrash-metal",
+          "fragment": "Thrash Metal",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Thrash-Death Metal"
+  },
+  {
+    "reviewId": 234778,
+    "entityKind": "album",
+    "entityId": 1649,
+    "raw": "Alternative Rock | Country | Folk Rock",
+    "resolution": {
+      "raw": "Alternative Rock | Country | Folk Rock",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 139,
+          "slug": "rock-alternativo",
+          "fragment": "Alternative Rock",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Country"
+        },
+        {
+          "kind": "genre",
+          "genreId": 163,
+          "slug": "folk-rock",
+          "fragment": "Folk Rock",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Country"
+  },
+  {
+    "reviewId": 234779,
+    "entityKind": "album",
+    "entityId": 1651,
+    "raw": "Alternative Rock | Country | Folk Rock",
+    "resolution": {
+      "raw": "Alternative Rock | Country | Folk Rock",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 139,
+          "slug": "rock-alternativo",
+          "fragment": "Alternative Rock",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Country"
+        },
+        {
+          "kind": "genre",
+          "genreId": 163,
+          "slug": "folk-rock",
+          "fragment": "Folk Rock",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Country"
+  },
+  {
+    "reviewId": 234780,
+    "entityKind": "album",
+    "entityId": 1652,
+    "raw": "Alternative Rock | Country | Folk Rock",
+    "resolution": {
+      "raw": "Alternative Rock | Country | Folk Rock",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 139,
+          "slug": "rock-alternativo",
+          "fragment": "Alternative Rock",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Country"
+        },
+        {
+          "kind": "genre",
+          "genreId": 163,
+          "slug": "folk-rock",
+          "fragment": "Folk Rock",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Country"
+  },
+  {
+    "reviewId": 234781,
+    "entityKind": "album",
+    "entityId": 1653,
+    "raw": "Country | Folk Rock",
+    "resolution": {
+      "raw": "Country | Folk Rock",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Country"
+        },
+        {
+          "kind": "genre",
+          "genreId": 163,
+          "slug": "folk-rock",
+          "fragment": "Folk Rock",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Country"
+  },
+  {
+    "reviewId": 234782,
+    "entityKind": "album",
+    "entityId": 1672,
+    "raw": "Alternative Rock | Rap-Rock",
+    "resolution": {
+      "raw": "Alternative Rock | Rap-Rock",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 139,
+          "slug": "rock-alternativo",
+          "fragment": "Alternative Rock",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Rap-Rock"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Rap-Rock"
+  },
+  {
+    "reviewId": 234783,
+    "entityKind": "album",
+    "entityId": 1681,
+    "raw": "Melodic Black Metal / Symphonic Black Metal",
+    "resolution": {
+      "raw": "Melodic Black Metal / Symphonic Black Metal",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Melodic Black Metal"
+        },
+        {
+          "kind": "genre",
+          "genreId": 180,
+          "slug": "black-metal-sinfonico",
+          "fragment": "Symphonic Black Metal",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Melodic Black Metal"
+  },
+  {
+    "reviewId": 234784,
+    "entityKind": "album",
+    "entityId": 1711,
+    "raw": "Anarcho-punk | Noise Raw punk",
+    "resolution": {
+      "raw": "Anarcho-punk | Noise Raw punk",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 216,
+          "slug": "anarcopunk",
+          "fragment": "Anarcho-punk",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Noise Raw punk"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Noise Raw punk"
+  },
+  {
+    "reviewId": 234785,
+    "entityKind": "album",
+    "entityId": 1712,
+    "raw": "Anarcho-punk | Noise Raw punk",
+    "resolution": {
+      "raw": "Anarcho-punk | Noise Raw punk",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 216,
+          "slug": "anarcopunk",
+          "fragment": "Anarcho-punk",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Noise Raw punk"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Noise Raw punk"
+  },
+  {
+    "reviewId": 234786,
+    "entityKind": "album",
+    "entityId": 1713,
+    "raw": "Anarcho-punk | Noise Raw punk",
+    "resolution": {
+      "raw": "Anarcho-punk | Noise Raw punk",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 216,
+          "slug": "anarcopunk",
+          "fragment": "Anarcho-punk",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Noise Raw punk"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Noise Raw punk"
+  },
+  {
+    "reviewId": 234787,
+    "entityKind": "album",
+    "entityId": 1714,
+    "raw": "Anarcho-punk | Noise Raw punk",
+    "resolution": {
+      "raw": "Anarcho-punk | Noise Raw punk",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 216,
+          "slug": "anarcopunk",
+          "fragment": "Anarcho-punk",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Noise Raw punk"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Noise Raw punk"
+  },
+  {
+    "reviewId": 234788,
+    "entityKind": "album",
+    "entityId": 1715,
+    "raw": "Anarcho-punk | Noise Raw punk",
+    "resolution": {
+      "raw": "Anarcho-punk | Noise Raw punk",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 216,
+          "slug": "anarcopunk",
+          "fragment": "Anarcho-punk",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Noise Raw punk"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Noise Raw punk"
+  },
+  {
+    "reviewId": 234789,
+    "entityKind": "album",
+    "entityId": 1716,
+    "raw": "Anarcho-punk | Noise Raw punk",
+    "resolution": {
+      "raw": "Anarcho-punk | Noise Raw punk",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 216,
+          "slug": "anarcopunk",
+          "fragment": "Anarcho-punk",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Noise Raw punk"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Noise Raw punk"
+  },
+  {
+    "reviewId": 234790,
+    "entityKind": "album",
+    "entityId": 1734,
+    "raw": "Death Metal / Sinfonico",
+    "resolution": {
+      "raw": "Death Metal / Sinfonico",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 167,
+          "slug": "death-metal",
+          "fragment": "Death Metal",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Sinfonico"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Sinfonico"
+  },
+  {
+    "reviewId": 234791,
+    "entityKind": "album",
+    "entityId": 1739,
+    "raw": "Beatdown Deathcore / Downtempo / Slamming Brutal Death Metal",
+    "resolution": {
+      "raw": "Beatdown Deathcore / Downtempo / Slamming Brutal Death Metal",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Beatdown Deathcore"
+        },
+        {
+          "kind": "genre",
+          "genreId": 237,
+          "slug": "downtempo",
+          "fragment": "Downtempo",
+          "via": "alias"
+        },
+        {
+          "kind": "genre",
+          "genreId": 171,
+          "slug": "slamming-brutal-death-metal",
+          "fragment": "Slamming Brutal Death Metal",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Beatdown Deathcore"
+  },
+  {
+    "reviewId": 234792,
+    "entityKind": "album",
+    "entityId": 1760,
+    "raw": "Black Metal / Progressive Black Metal",
+    "resolution": {
+      "raw": "Black Metal / Progressive Black Metal",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 175,
+          "slug": "black-metal",
+          "fragment": "Black Metal",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Progressive Black Metal"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Progressive Black Metal"
+  },
+  {
+    "reviewId": 234793,
+    "entityKind": "album",
+    "entityId": 1766,
+    "raw": "Female Metal / Symphonic Metal / Gothic Metal",
+    "resolution": {
+      "raw": "Female Metal / Symphonic Metal / Gothic Metal",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Female Metal"
+        },
+        {
+          "kind": "genre",
+          "genreId": 189,
+          "slug": "metal-sinfonico",
+          "fragment": "Symphonic Metal",
+          "via": "alias"
+        },
+        {
+          "kind": "genre",
+          "genreId": 191,
+          "slug": "metal-gotico",
+          "fragment": "Gothic Metal",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Female Metal"
+  },
+  {
+    "reviewId": 234794,
+    "entityKind": "album",
+    "entityId": 1779,
+    "raw": "Alternative Metal /Progressive Metal/ Female Metal",
+    "resolution": {
+      "raw": "Alternative Metal /Progressive Metal/ Female Metal",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 195,
+          "slug": "metal-alternativo",
+          "fragment": "Alternative Metal",
+          "via": "alias"
+        },
+        {
+          "kind": "genre",
+          "genreId": 188,
+          "slug": "metal-progresivo",
+          "fragment": "Progressive Metal",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Female Metal"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Female Metal"
+  },
+  {
+    "reviewId": 234795,
+    "entityKind": "album",
+    "entityId": 1780,
+    "raw": "Alternative Metal /Progressive Metal/ Female Metal",
+    "resolution": {
+      "raw": "Alternative Metal /Progressive Metal/ Female Metal",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 195,
+          "slug": "metal-alternativo",
+          "fragment": "Alternative Metal",
+          "via": "alias"
+        },
+        {
+          "kind": "genre",
+          "genreId": 188,
+          "slug": "metal-progresivo",
+          "fragment": "Progressive Metal",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Female Metal"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Female Metal"
+  },
+  {
+    "reviewId": 234796,
+    "entityKind": "album",
+    "entityId": 1807,
+    "raw": "",
+    "resolution": {
+      "raw": "",
+      "items": [],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "revision",
+    "note": "Sin resolver: "
+  },
+  {
+    "reviewId": 234797,
+    "entityKind": "album",
+    "entityId": 1817,
+    "raw": "Black Metal, Shoegaze",
+    "resolution": {
+      "raw": "Black Metal, Shoegaze",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 175,
+          "slug": "black-metal",
+          "fragment": "Black Metal",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Shoegaze"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Shoegaze"
+  },
+  {
+    "reviewId": 234798,
+    "entityKind": "album",
+    "entityId": 1822,
+    "raw": "Progressive Folk Heavy / Black Metal",
+    "resolution": {
+      "raw": "Progressive Folk Heavy / Black Metal",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Progressive Folk Heavy"
+        },
+        {
+          "kind": "genre",
+          "genreId": 175,
+          "slug": "black-metal",
+          "fragment": "Black Metal",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Progressive Folk Heavy"
+  },
+  {
+    "reviewId": 234799,
+    "entityKind": "album",
+    "entityId": 1834,
+    "raw": "Grindcore / Tecnhical Metal / Experimental",
+    "resolution": {
+      "raw": "Grindcore / Tecnhical Metal / Experimental",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 198,
+          "slug": "grindcore",
+          "fragment": "Grindcore",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Tecnhical Metal"
+        },
+        {
+          "kind": "genre",
+          "genreId": 137,
+          "slug": "experimental",
+          "fragment": "Experimental",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Tecnhical Metal"
+  },
+  {
+    "reviewId": 234800,
+    "entityKind": "album",
+    "entityId": 1845,
+    "raw": "Thrash-Death Metal | Thrash Metal",
+    "resolution": {
+      "raw": "Thrash-Death Metal | Thrash Metal",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Thrash-Death Metal"
+        },
+        {
+          "kind": "genre",
+          "genreId": 182,
+          "slug": "thrash-metal",
+          "fragment": "Thrash Metal",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Thrash-Death Metal"
+  },
+  {
+    "reviewId": 234801,
+    "entityKind": "album",
+    "entityId": 1849,
+    "raw": "Crust Punk / Stoner / Experimental",
+    "resolution": {
+      "raw": "Crust Punk / Stoner / Experimental",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 217,
+          "slug": "crust-punk",
+          "fragment": "Crust Punk",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Stoner"
+        },
+        {
+          "kind": "genre",
+          "genreId": 137,
+          "slug": "experimental",
+          "fragment": "Experimental",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Stoner"
+  },
+  {
+    "reviewId": 234802,
+    "entityKind": "album",
+    "entityId": 1850,
+    "raw": "Crust Punk / Stoner / Experimental",
+    "resolution": {
+      "raw": "Crust Punk / Stoner / Experimental",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 217,
+          "slug": "crust-punk",
+          "fragment": "Crust Punk",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Stoner"
+        },
+        {
+          "kind": "genre",
+          "genreId": 137,
+          "slug": "experimental",
+          "fragment": "Experimental",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Stoner"
+  },
+  {
+    "reviewId": 234803,
+    "entityKind": "album",
+    "entityId": 1851,
+    "raw": "Crust Punk / Stoner / Experimental",
+    "resolution": {
+      "raw": "Crust Punk / Stoner / Experimental",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 217,
+          "slug": "crust-punk",
+          "fragment": "Crust Punk",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Stoner"
+        },
+        {
+          "kind": "genre",
+          "genreId": 137,
+          "slug": "experimental",
+          "fragment": "Experimental",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Stoner"
+  },
+  {
+    "reviewId": 234804,
+    "entityKind": "album",
+    "entityId": 1852,
+    "raw": "Crust Punk / Stoner / Experimental",
+    "resolution": {
+      "raw": "Crust Punk / Stoner / Experimental",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 217,
+          "slug": "crust-punk",
+          "fragment": "Crust Punk",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Stoner"
+        },
+        {
+          "kind": "genre",
+          "genreId": 137,
+          "slug": "experimental",
+          "fragment": "Experimental",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Stoner"
+  },
+  {
+    "reviewId": 234805,
+    "entityKind": "album",
+    "entityId": 1862,
+    "raw": "Thrash/Heavy Power Metal",
+    "resolution": {
+      "raw": "Thrash/Heavy Power Metal",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 182,
+          "slug": "thrash-metal",
+          "fragment": "Thrash",
+          "via": "shared_suffix"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Heavy Power Metal"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Heavy Power Metal"
+  },
+  {
+    "reviewId": 234806,
+    "entityKind": "album",
+    "entityId": 1875,
+    "raw": "Old School Thrash / Death Metal",
+    "resolution": {
+      "raw": "Old School Thrash / Death Metal",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Old School Thrash"
+        },
+        {
+          "kind": "genre",
+          "genreId": 167,
+          "slug": "death-metal",
+          "fragment": "Death Metal",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Old School Thrash"
+  },
+  {
+    "reviewId": 234807,
+    "entityKind": "album",
+    "entityId": 1879,
+    "raw": "Atmospheric Doom Metal / Post-Rock",
+    "resolution": {
+      "raw": "Atmospheric Doom Metal / Post-Rock",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Atmospheric Doom Metal"
+        },
+        {
+          "kind": "genre",
+          "genreId": 154,
+          "slug": "post-rock",
+          "fragment": "Post-Rock",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Atmospheric Doom Metal"
+  },
+  {
+    "reviewId": 234808,
+    "entityKind": "album",
+    "entityId": 1880,
+    "raw": "Progressive Metal/Jazz/Instrumental",
+    "resolution": {
+      "raw": "Progressive Metal/Jazz/Instrumental",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 188,
+          "slug": "metal-progresivo",
+          "fragment": "Progressive Metal",
+          "via": "alias"
+        },
+        {
+          "kind": "genre",
+          "genreId": 130,
+          "slug": "jazz",
+          "fragment": "Jazz",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Instrumental"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Instrumental"
+  },
+  {
+    "reviewId": 234809,
+    "entityKind": "album",
+    "entityId": 1888,
+    "raw": "Hardcore | Metalcore | Progressive Hardcore | Progressive Metalcore | Thrash Metal",
+    "resolution": {
+      "raw": "Hardcore | Metalcore | Progressive Hardcore | Progressive Metalcore | Thrash Metal",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 212,
+          "slug": "hardcore-punk",
+          "fragment": "Hardcore",
+          "via": "alias"
+        },
+        {
+          "kind": "genre",
+          "genreId": 196,
+          "slug": "metalcore",
+          "fragment": "Metalcore",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Progressive Hardcore"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Progressive Metalcore"
+        },
+        {
+          "kind": "genre",
+          "genreId": 182,
+          "slug": "thrash-metal",
+          "fragment": "Thrash Metal",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Progressive Hardcore, Progressive Metalcore"
+  },
+  {
+    "reviewId": 234810,
+    "entityKind": "album",
+    "entityId": 1901,
+    "raw": "Groove Metal | Melodic Metal | Technical Metal",
+    "resolution": {
+      "raw": "Groove Metal | Melodic Metal | Technical Metal",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 184,
+          "slug": "groove-metal",
+          "fragment": "Groove Metal",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Melodic Metal"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Technical Metal"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Melodic Metal, Technical Metal"
+  },
+  {
+    "reviewId": 234811,
+    "entityKind": "album",
+    "entityId": 2043,
+    "raw": "Pop/Dance-House",
+    "resolution": {
+      "raw": "Pop/Dance-House",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 128,
+          "slug": "pop",
+          "fragment": "Pop",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Dance-House"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Dance-House"
+  },
+  {
+    "reviewId": 234812,
+    "entityKind": "album",
+    "entityId": 2171,
+    "raw": "Rock, Heavy",
+    "resolution": {
+      "raw": "Rock, Heavy",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 125,
+          "slug": "rock",
+          "fragment": "Rock",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Heavy"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Heavy"
+  },
+  {
+    "reviewId": 234813,
+    "entityKind": "album",
+    "entityId": 2189,
+    "raw": "Alternative/Punk",
+    "resolution": {
+      "raw": "Alternative/Punk",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Alternative"
+        },
+        {
+          "kind": "genre",
+          "genreId": 127,
+          "slug": "punk",
+          "fragment": "Punk",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Alternative"
+  },
+  {
+    "reviewId": 234814,
+    "entityKind": "album",
+    "entityId": 2355,
+    "raw": "Rock/Ethnic Fusion",
+    "resolution": {
+      "raw": "Rock/Ethnic Fusion",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 125,
+          "slug": "rock",
+          "fragment": "Rock",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Ethnic Fusion"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Ethnic Fusion"
+  },
+  {
+    "reviewId": 234815,
+    "entityKind": "album",
+    "entityId": 2941,
+    "raw": "Ska/Instrumental",
+    "resolution": {
+      "raw": "Ska/Instrumental",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 229,
+          "slug": "ska",
+          "fragment": "Ska",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Instrumental"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Instrumental"
+  },
+  {
+    "reviewId": 234816,
+    "entityKind": "album",
+    "entityId": 2960,
+    "raw": "Ska/Reggae/Fusion",
+    "resolution": {
+      "raw": "Ska/Reggae/Fusion",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 229,
+          "slug": "ska",
+          "fragment": "Ska",
+          "via": "alias"
+        },
+        {
+          "kind": "genre",
+          "genreId": 228,
+          "slug": "reggae",
+          "fragment": "Reggae",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Fusion"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Fusion"
+  },
+  {
+    "reviewId": 234817,
+    "entityKind": "album",
+    "entityId": 3404,
+    "raw": "Folk-Rock/Fusion",
+    "resolution": {
+      "raw": "Folk-Rock/Fusion",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 163,
+          "slug": "folk-rock",
+          "fragment": "Folk-Rock",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Fusion"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Fusion"
+  },
+  {
+    "reviewId": 234818,
+    "entityKind": "album",
+    "entityId": 3434,
+    "raw": "Pop-Fusion/Flamenco",
+    "resolution": {
+      "raw": "Pop-Fusion/Flamenco",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Pop-Fusion"
+        },
+        {
+          "kind": "genre",
+          "genreId": 243,
+          "slug": "flamenco",
+          "fragment": "Flamenco",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Pop-Fusion"
+  },
+  {
+    "reviewId": 234819,
+    "entityKind": "album",
+    "entityId": 3535,
+    "raw": "Post Punk/ Dark Rock",
+    "resolution": {
+      "raw": "Post Punk/ Dark Rock",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 215,
+          "slug": "post-punk",
+          "fragment": "Post Punk",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Dark Rock"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Dark Rock"
+  },
+  {
+    "reviewId": 234820,
+    "entityKind": "album",
+    "entityId": 3629,
+    "raw": "Pop-Fusion/Flamenco",
+    "resolution": {
+      "raw": "Pop-Fusion/Flamenco",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Pop-Fusion"
+        },
+        {
+          "kind": "genre",
+          "genreId": 243,
+          "slug": "flamenco",
+          "fragment": "Flamenco",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Pop-Fusion"
+  },
+  {
+    "reviewId": 234821,
+    "entityKind": "album",
+    "entityId": 3635,
+    "raw": "Rock/Alternative",
+    "resolution": {
+      "raw": "Rock/Alternative",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 125,
+          "slug": "rock",
+          "fragment": "Rock",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Alternative"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Alternative"
+  },
+  {
+    "reviewId": 234822,
+    "entityKind": "album",
+    "entityId": 3652,
+    "raw": "Rock/Ska/Latin/Fusion",
+    "resolution": {
+      "raw": "Rock/Ska/Latin/Fusion",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 125,
+          "slug": "rock",
+          "fragment": "Rock",
+          "via": "alias"
+        },
+        {
+          "kind": "genre",
+          "genreId": 229,
+          "slug": "ska",
+          "fragment": "Ska",
+          "via": "alias"
+        },
+        {
+          "kind": "genre",
+          "genreId": 131,
+          "slug": "fusion-latina",
+          "fragment": "Latin",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Fusion"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Fusion"
+  },
+  {
+    "reviewId": 234823,
+    "entityKind": "album",
+    "entityId": 3692,
+    "raw": "Rock/Progressive",
+    "resolution": {
+      "raw": "Rock/Progressive",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 125,
+          "slug": "rock",
+          "fragment": "Rock",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Progressive"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Progressive"
+  },
+  {
+    "reviewId": 234824,
+    "entityKind": "album",
+    "entityId": 3807,
+    "raw": "Rock-Fusion/Latin",
+    "resolution": {
+      "raw": "Rock-Fusion/Latin",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Rock-Fusion"
+        },
+        {
+          "kind": "genre",
+          "genreId": 131,
+          "slug": "fusion-latina",
+          "fragment": "Latin",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Rock-Fusion"
+  },
+  {
+    "reviewId": 234825,
+    "entityKind": "album",
+    "entityId": 3813,
+    "raw": "Rock/Hard Rock/Glam",
+    "resolution": {
+      "raw": "Rock/Hard Rock/Glam",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 125,
+          "slug": "rock",
+          "fragment": "Rock",
+          "via": "alias"
+        },
+        {
+          "kind": "genre",
+          "genreId": 138,
+          "slug": "hard-rock",
+          "fragment": "Hard Rock",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Glam"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Glam"
+  },
+  {
+    "reviewId": 234826,
+    "entityKind": "album",
+    "entityId": 3899,
+    "raw": "Rock/Techno-Trance",
+    "resolution": {
+      "raw": "Rock/Techno-Trance",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 125,
+          "slug": "rock",
+          "fragment": "Rock",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Techno-Trance"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Techno-Trance"
+  },
+  {
+    "reviewId": 234827,
+    "entityKind": "album",
+    "entityId": 3915,
+    "raw": "Reggae/Urban Folk",
+    "resolution": {
+      "raw": "Reggae/Urban Folk",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 228,
+          "slug": "reggae",
+          "fragment": "Reggae",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Urban Folk"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Urban Folk"
+  },
+  {
+    "reviewId": 234828,
+    "entityKind": "album",
+    "entityId": 3934,
+    "raw": "Reggae-Pop/Rock",
+    "resolution": {
+      "raw": "Reggae-Pop/Rock",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Reggae-Pop"
+        },
+        {
+          "kind": "genre",
+          "genreId": 125,
+          "slug": "rock",
+          "fragment": "Rock",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Reggae-Pop"
+  },
+  {
+    "reviewId": 234829,
+    "entityKind": "album",
+    "entityId": 4071,
+    "raw": "Rock/Progressive",
+    "resolution": {
+      "raw": "Rock/Progressive",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 125,
+          "slug": "rock",
+          "fragment": "Rock",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Progressive"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Progressive"
+  },
+  {
+    "reviewId": 234830,
+    "entityKind": "album",
+    "entityId": 4526,
+    "raw": "Rock/Progresssive/Metal",
+    "resolution": {
+      "raw": "Rock/Progresssive/Metal",
+      "items": [
+        {
+          "kind": "genre",
+          "genreId": 125,
+          "slug": "rock",
+          "fragment": "Rock",
+          "via": "alias"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Progresssive"
+        },
+        {
+          "kind": "genre",
+          "genreId": 126,
+          "slug": "metal",
+          "fragment": "Metal",
+          "via": "alias"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": false
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Progresssive"
+  },
+  {
+    "reviewId": 235167,
+    "entityKind": "artist",
+    "entityId": 59,
+    "raw": "Ska-Reggae",
+    "resolution": {
+      "raw": "Ska-Reggae",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Ska-Reggae"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Ska-Reggae"
+  },
+  {
+    "reviewId": 235168,
+    "entityKind": "artist",
+    "entityId": 129,
+    "raw": "Latin Hip-Hop",
+    "resolution": {
+      "raw": "Latin Hip-Hop",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Latin Hip-Hop"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Latin Hip-Hop"
+  },
+  {
+    "reviewId": 235169,
+    "entityKind": "artist",
+    "entityId": 191,
+    "raw": "Latin-Ska, Latin Rock Fusion",
+    "resolution": {
+      "raw": "Latin-Ska, Latin Rock Fusion",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Latin-Ska"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Latin Rock Fusion"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Latin-Ska, Latin Rock Fusion"
+  },
+  {
+    "reviewId": 235170,
+    "entityKind": "artist",
+    "entityId": 237,
+    "raw": "Neo Punk, Melodic Punk",
+    "resolution": {
+      "raw": "Neo Punk, Melodic Punk",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Neo Punk"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Melodic Punk"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Neo Punk, Melodic Punk"
+  },
+  {
+    "reviewId": 235171,
+    "entityKind": "artist",
+    "entityId": 1306,
+    "raw": "Metal-Punk",
+    "resolution": {
+      "raw": "Metal-Punk",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Metal-Punk"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Metal-Punk"
+  },
+  {
+    "reviewId": 235172,
+    "entityKind": "artist",
+    "entityId": 1541,
+    "raw": "Latin Electronic Fusion, Pop-Funk-House",
+    "resolution": {
+      "raw": "Latin Electronic Fusion, Pop-Funk-House",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Latin Electronic Fusion"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Pop-Funk-House"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Latin Electronic Fusion, Pop-Funk-House"
+  },
+  {
+    "reviewId": 235173,
+    "entityKind": "artist",
+    "entityId": 1797,
+    "raw": "Pop-Rock-Latin",
+    "resolution": {
+      "raw": "Pop-Rock-Latin",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Pop-Rock-Latin"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Pop-Rock-Latin"
+  },
+  {
+    "reviewId": 235174,
+    "entityKind": "artist",
+    "entityId": 1837,
+    "raw": "Vocal Group, Latin-Pop-Jazz",
+    "resolution": {
+      "raw": "Vocal Group, Latin-Pop-Jazz",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Vocal Group"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Latin-Pop-Jazz"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Vocal Group, Latin-Pop-Jazz"
+  },
+  {
+    "reviewId": 235175,
+    "entityKind": "artist",
+    "entityId": 1940,
+    "raw": "Rock-Ska",
+    "resolution": {
+      "raw": "Rock-Ska",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Rock-Ska"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Rock-Ska"
+  },
+  {
+    "reviewId": 235176,
+    "entityKind": "artist",
+    "entityId": 1958,
+    "raw": "Rock-Latin-Funk-Psych",
+    "resolution": {
+      "raw": "Rock-Latin-Funk-Psych",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Rock-Latin-Funk-Psych"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Rock-Latin-Funk-Psych"
+  },
+  {
+    "reviewId": 235177,
+    "entityKind": "artist",
+    "entityId": 2011,
+    "raw": "Pop-Latin-Rock",
+    "resolution": {
+      "raw": "Pop-Latin-Rock",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Pop-Latin-Rock"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Pop-Latin-Rock"
+  },
+  {
+    "reviewId": 235178,
+    "entityKind": "album",
+    "entityId": 125,
+    "raw": "Latin-Rock (Trip hop)",
+    "resolution": {
+      "raw": "Latin-Rock (Trip hop)",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Latin-Rock (Trip hop)"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Latin-Rock (Trip hop)"
+  },
+  {
+    "reviewId": 235179,
+    "entityKind": "album",
+    "entityId": 145,
+    "raw": "Ska-Reggae",
+    "resolution": {
+      "raw": "Ska-Reggae",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Ska-Reggae"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Ska-Reggae"
+  },
+  {
+    "reviewId": 235180,
+    "entityKind": "album",
+    "entityId": 251,
+    "raw": "Latin Pop-Rock",
+    "resolution": {
+      "raw": "Latin Pop-Rock",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Latin Pop-Rock"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Latin Pop-Rock"
+  },
+  {
+    "reviewId": 235181,
+    "entityKind": "album",
+    "entityId": 280,
+    "raw": "Dance-Remix",
+    "resolution": {
+      "raw": "Dance-Remix",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Dance-Remix"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Dance-Remix"
+  },
+  {
+    "reviewId": 235182,
+    "entityKind": "album",
+    "entityId": 436,
+    "raw": "Rock-Ska",
+    "resolution": {
+      "raw": "Rock-Ska",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Rock-Ska"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Rock-Ska"
+  },
+  {
+    "reviewId": 235183,
+    "entityKind": "album",
+    "entityId": 457,
+    "raw": "Rock-Punkrock",
+    "resolution": {
+      "raw": "Rock-Punkrock",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Rock-Punkrock"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Rock-Punkrock"
+  },
+  {
+    "reviewId": 235184,
+    "entityKind": "album",
+    "entityId": 513,
+    "raw": "Pop-Folk-Rock",
+    "resolution": {
+      "raw": "Pop-Folk-Rock",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Pop-Folk-Rock"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Pop-Folk-Rock"
+  },
+  {
+    "reviewId": 235185,
+    "entityKind": "album",
+    "entityId": 693,
+    "raw": "Depressive Post-Black Metal",
+    "resolution": {
+      "raw": "Depressive Post-Black Metal",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Depressive Post-Black Metal"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Depressive Post-Black Metal"
+  },
+  {
+    "reviewId": 235186,
+    "entityKind": "album",
+    "entityId": 694,
+    "raw": "Depressive Post-Black Metal",
+    "resolution": {
+      "raw": "Depressive Post-Black Metal",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Depressive Post-Black Metal"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Depressive Post-Black Metal"
+  },
+  {
+    "reviewId": 235187,
+    "entityKind": "album",
+    "entityId": 704,
+    "raw": "Symphonic Pagan Metal",
+    "resolution": {
+      "raw": "Symphonic Pagan Metal",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Symphonic Pagan Metal"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Symphonic Pagan Metal"
+  },
+  {
+    "reviewId": 235188,
+    "entityKind": "album",
+    "entityId": 810,
+    "raw": "Postpunk Paranormal/Dark Wave Ilegal/Peligroso Pop",
+    "resolution": {
+      "raw": "Postpunk Paranormal/Dark Wave Ilegal/Peligroso Pop",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Postpunk Paranormal"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Dark Wave Ilegal"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Peligroso Pop"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Postpunk Paranormal, Dark Wave Ilegal, Peligroso Pop"
+  },
+  {
+    "reviewId": 235189,
+    "entityKind": "album",
+    "entityId": 818,
+    "raw": "Metal Extremo Experimental",
+    "resolution": {
+      "raw": "Metal Extremo Experimental",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Metal Extremo Experimental"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Metal Extremo Experimental"
+  },
+  {
+    "reviewId": 235190,
+    "entityKind": "album",
+    "entityId": 856,
+    "raw": "FunkRockExtremo",
+    "resolution": {
+      "raw": "FunkRockExtremo",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "FunkRockExtremo"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: FunkRockExtremo"
+  },
+  {
+    "reviewId": 235191,
+    "entityKind": "album",
+    "entityId": 867,
+    "raw": "Thrash Rutero",
+    "resolution": {
+      "raw": "Thrash Rutero",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Thrash Rutero"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Thrash Rutero"
+  },
+  {
+    "reviewId": 235192,
+    "entityKind": "album",
+    "entityId": 957,
+    "raw": "Technical Brutal Death Metal",
+    "resolution": {
+      "raw": "Technical Brutal Death Metal",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Technical Brutal Death Metal"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Technical Brutal Death Metal"
+  },
+  {
+    "reviewId": 235193,
+    "entityKind": "album",
+    "entityId": 965,
+    "raw": "Death & Roll",
+    "resolution": {
+      "raw": "Death & Roll",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Death"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Roll"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Death, Roll"
+  },
+  {
+    "reviewId": 235194,
+    "entityKind": "album",
+    "entityId": 970,
+    "raw": "Death & Roll",
+    "resolution": {
+      "raw": "Death & Roll",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Death"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Roll"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Death, Roll"
+  },
+  {
+    "reviewId": 235195,
+    "entityKind": "album",
+    "entityId": 978,
+    "raw": "Death & Roll",
+    "resolution": {
+      "raw": "Death & Roll",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Death"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Roll"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Death, Roll"
+  },
+  {
+    "reviewId": 235196,
+    "entityKind": "album",
+    "entityId": 982,
+    "raw": "Death & Roll",
+    "resolution": {
+      "raw": "Death & Roll",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Death"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Roll"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Death, Roll"
+  },
+  {
+    "reviewId": 235197,
+    "entityKind": "album",
+    "entityId": 990,
+    "raw": "Death & Roll",
+    "resolution": {
+      "raw": "Death & Roll",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Death"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Roll"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Death, Roll"
+  },
+  {
+    "reviewId": 235198,
+    "entityKind": "album",
+    "entityId": 991,
+    "raw": "Death & Roll",
+    "resolution": {
+      "raw": "Death & Roll",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Death"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Roll"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Death, Roll"
+  },
+  {
+    "reviewId": 235199,
+    "entityKind": "album",
+    "entityId": 1006,
+    "raw": "Necronoise",
+    "resolution": {
+      "raw": "Necronoise",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Necronoise"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Necronoise"
+  },
+  {
+    "reviewId": 235200,
+    "entityKind": "album",
+    "entityId": 1008,
+    "raw": "Necronoise",
+    "resolution": {
+      "raw": "Necronoise",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Necronoise"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Necronoise"
+  },
+  {
+    "reviewId": 235201,
+    "entityKind": "album",
+    "entityId": 1120,
+    "raw": "Depressive Post-Black Metal",
+    "resolution": {
+      "raw": "Depressive Post-Black Metal",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Depressive Post-Black Metal"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Depressive Post-Black Metal"
+  },
+  {
+    "reviewId": 235202,
+    "entityKind": "album",
+    "entityId": 1122,
+    "raw": "Depressive Post-Black Metal",
+    "resolution": {
+      "raw": "Depressive Post-Black Metal",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Depressive Post-Black Metal"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Depressive Post-Black Metal"
+  },
+  {
+    "reviewId": 235203,
+    "entityKind": "album",
+    "entityId": 1130,
+    "raw": "Technical Brutal Death Metal",
+    "resolution": {
+      "raw": "Technical Brutal Death Metal",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Technical Brutal Death Metal"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Technical Brutal Death Metal"
+  },
+  {
+    "reviewId": 235204,
+    "entityKind": "album",
+    "entityId": 1163,
+    "raw": "Nintendocore",
+    "resolution": {
+      "raw": "Nintendocore",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Nintendocore"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Nintendocore"
+  },
+  {
+    "reviewId": 235205,
+    "entityKind": "album",
+    "entityId": 1213,
+    "raw": "Postpunk Paranormal/Dark Wave Ilegal/Peligroso Pop",
+    "resolution": {
+      "raw": "Postpunk Paranormal/Dark Wave Ilegal/Peligroso Pop",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Postpunk Paranormal"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Dark Wave Ilegal"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Peligroso Pop"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Postpunk Paranormal, Dark Wave Ilegal, Peligroso Pop"
+  },
+  {
+    "reviewId": 235206,
+    "entityKind": "album",
+    "entityId": 1230,
+    "raw": "Black Kitsch Abstract Metal",
+    "resolution": {
+      "raw": "Black Kitsch Abstract Metal",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Black Kitsch Abstract Metal"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Black Kitsch Abstract Metal"
+  },
+  {
+    "reviewId": 235207,
+    "entityKind": "album",
+    "entityId": 1252,
+    "raw": "Power Metal Melódico",
+    "resolution": {
+      "raw": "Power Metal Melódico",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Power Metal Melódico"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Power Metal Melódico"
+  },
+  {
+    "reviewId": 235208,
+    "entityKind": "album",
+    "entityId": 1277,
+    "raw": "Metal Pesado Latino Americano",
+    "resolution": {
+      "raw": "Metal Pesado Latino Americano",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Metal Pesado Latino Americano"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Metal Pesado Latino Americano"
+  },
+  {
+    "reviewId": 235209,
+    "entityKind": "album",
+    "entityId": 1289,
+    "raw": "Black Gothic Metal",
+    "resolution": {
+      "raw": "Black Gothic Metal",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Black Gothic Metal"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Black Gothic Metal"
+  },
+  {
+    "reviewId": 235210,
+    "entityKind": "album",
+    "entityId": 1322,
+    "raw": "Black/Heavy/Thrash/Death/Stoner/Un/Progressive",
+    "resolution": {
+      "raw": "Black/Heavy/Thrash/Death/Stoner/Un/Progressive",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Black"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Heavy"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Thrash"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Death"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Stoner"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Un"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Progressive"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Black, Heavy, Thrash, Death, Stoner, Un, Progressive"
+  },
+  {
+    "reviewId": 235211,
+    "entityKind": "album",
+    "entityId": 1324,
+    "raw": "Black/Heavy/Thrash/Death",
+    "resolution": {
+      "raw": "Black/Heavy/Thrash/Death",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Black"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Heavy"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Thrash"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Death"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Black, Heavy, Thrash, Death"
+  },
+  {
+    "reviewId": 235212,
+    "entityKind": "album",
+    "entityId": 1366,
+    "raw": "Heavy/Thrash/Death/Black",
+    "resolution": {
+      "raw": "Heavy/Thrash/Death/Black",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Heavy"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Thrash"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Death"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Black"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Heavy, Thrash, Death, Black"
+  },
+  {
+    "reviewId": 235213,
+    "entityKind": "album",
+    "entityId": 1367,
+    "raw": "Life Metal (Christian Death Metal)",
+    "resolution": {
+      "raw": "Life Metal (Christian Death Metal)",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Life Metal (Christian Death Metal)"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Life Metal (Christian Death Metal)"
+  },
+  {
+    "reviewId": 235214,
+    "entityKind": "album",
+    "entityId": 1472,
+    "raw": "Progressive Gothic Metal",
+    "resolution": {
+      "raw": "Progressive Gothic Metal",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Progressive Gothic Metal"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Progressive Gothic Metal"
+  },
+  {
+    "reviewId": 235215,
+    "entityKind": "album",
+    "entityId": 1607,
+    "raw": "Ambient Black Metal / Dark Metal",
+    "resolution": {
+      "raw": "Ambient Black Metal / Dark Metal",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Ambient Black Metal"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Dark Metal"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Ambient Black Metal, Dark Metal"
+  },
+  {
+    "reviewId": 235216,
+    "entityKind": "album",
+    "entityId": 1610,
+    "raw": "Thrash Metal – Groove Metal",
+    "resolution": {
+      "raw": "Thrash Metal – Groove Metal",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Thrash Metal – Groove Metal"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Thrash Metal – Groove Metal"
+  },
+  {
+    "reviewId": 235217,
+    "entityKind": "album",
+    "entityId": 1637,
+    "raw": "Progressive Thrash Metal",
+    "resolution": {
+      "raw": "Progressive Thrash Metal",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Progressive Thrash Metal"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Progressive Thrash Metal"
+  },
+  {
+    "reviewId": 235218,
+    "entityKind": "album",
+    "entityId": 1727,
+    "raw": "Thrash/Death/Heavy/Groove",
+    "resolution": {
+      "raw": "Thrash/Death/Heavy/Groove",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Thrash"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Death"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Heavy"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Groove"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Thrash, Death, Heavy, Groove"
+  },
+  {
+    "reviewId": 235219,
+    "entityKind": "album",
+    "entityId": 1731,
+    "raw": "Ambient Black Metal / Dark Metal",
+    "resolution": {
+      "raw": "Ambient Black Metal / Dark Metal",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Ambient Black Metal"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Dark Metal"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Ambient Black Metal, Dark Metal"
+  },
+  {
+    "reviewId": 235220,
+    "entityKind": "album",
+    "entityId": 1732,
+    "raw": "Thrash-Death Metal",
+    "resolution": {
+      "raw": "Thrash-Death Metal",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Thrash-Death Metal"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Thrash-Death Metal"
+  },
+  {
+    "reviewId": 235221,
+    "entityKind": "album",
+    "entityId": 1736,
+    "raw": "Dark Metal",
+    "resolution": {
+      "raw": "Dark Metal",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Dark Metal"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Dark Metal"
+  },
+  {
+    "reviewId": 235222,
+    "entityKind": "album",
+    "entityId": 1835,
+    "raw": "Thrash-Death Metal",
+    "resolution": {
+      "raw": "Thrash-Death Metal",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Thrash-Death Metal"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Thrash-Death Metal"
+  },
+  {
+    "reviewId": 235223,
+    "entityKind": "album",
+    "entityId": 1836,
+    "raw": "New Gothic Metal",
+    "resolution": {
+      "raw": "New Gothic Metal",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "New Gothic Metal"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: New Gothic Metal"
+  },
+  {
+    "reviewId": 235224,
+    "entityKind": "album",
+    "entityId": 1839,
+    "raw": "Thrash-Death Metal",
+    "resolution": {
+      "raw": "Thrash-Death Metal",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Thrash-Death Metal"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Thrash-Death Metal"
+  },
+  {
+    "reviewId": 235225,
+    "entityKind": "album",
+    "entityId": 1842,
+    "raw": "Death & Roll / Female Metal",
+    "resolution": {
+      "raw": "Death & Roll / Female Metal",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Death"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Roll"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Female Metal"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Death, Roll, Female Metal"
+  },
+  {
+    "reviewId": 235226,
+    "entityKind": "album",
+    "entityId": 1887,
+    "raw": "Thrash-Death Metal",
+    "resolution": {
+      "raw": "Thrash-Death Metal",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Thrash-Death Metal"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Thrash-Death Metal"
+  },
+  {
+    "reviewId": 235227,
+    "entityKind": "album",
+    "entityId": 2107,
+    "raw": "Ska-Reggae",
+    "resolution": {
+      "raw": "Ska-Reggae",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Ska-Reggae"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Ska-Reggae"
+  },
+  {
+    "reviewId": 235228,
+    "entityKind": "album",
+    "entityId": 2166,
+    "raw": "Pop-Fusion/Folk-Tronic",
+    "resolution": {
+      "raw": "Pop-Fusion/Folk-Tronic",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Pop-Fusion"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Folk-Tronic"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Pop-Fusion, Folk-Tronic"
+  },
+  {
+    "reviewId": 235229,
+    "entityKind": "album",
+    "entityId": 2225,
+    "raw": "Punk-Metal",
+    "resolution": {
+      "raw": "Punk-Metal",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Punk-Metal"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Punk-Metal"
+  },
+  {
+    "reviewId": 235230,
+    "entityKind": "album",
+    "entityId": 2366,
+    "raw": "Symphonic Hard Rock",
+    "resolution": {
+      "raw": "Symphonic Hard Rock",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Symphonic Hard Rock"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Symphonic Hard Rock"
+  },
+  {
+    "reviewId": 235231,
+    "entityKind": "album",
+    "entityId": 2441,
+    "raw": "World-Ethnic",
+    "resolution": {
+      "raw": "World-Ethnic",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "World-Ethnic"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: World-Ethnic"
+  },
+  {
+    "reviewId": 235232,
+    "entityKind": "album",
+    "entityId": 2445,
+    "raw": "World-Ethnic",
+    "resolution": {
+      "raw": "World-Ethnic",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "World-Ethnic"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: World-Ethnic"
+  },
+  {
+    "reviewId": 235233,
+    "entityKind": "album",
+    "entityId": 2447,
+    "raw": "World-Ethnic",
+    "resolution": {
+      "raw": "World-Ethnic",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "World-Ethnic"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: World-Ethnic"
+  },
+  {
+    "reviewId": 235234,
+    "entityKind": "album",
+    "entityId": 2448,
+    "raw": "World-Ethnic",
+    "resolution": {
+      "raw": "World-Ethnic",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "World-Ethnic"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: World-Ethnic"
+  },
+  {
+    "reviewId": 235235,
+    "entityKind": "album",
+    "entityId": 2451,
+    "raw": "Ethnic-Rock",
+    "resolution": {
+      "raw": "Ethnic-Rock",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Ethnic-Rock"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Ethnic-Rock"
+  },
+  {
+    "reviewId": 235236,
+    "entityKind": "album",
+    "entityId": 2453,
+    "raw": "Ethnic-Rock",
+    "resolution": {
+      "raw": "Ethnic-Rock",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Ethnic-Rock"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Ethnic-Rock"
+  },
+  {
+    "reviewId": 235237,
+    "entityKind": "album",
+    "entityId": 2457,
+    "raw": "Ethnic-Rock",
+    "resolution": {
+      "raw": "Ethnic-Rock",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Ethnic-Rock"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Ethnic-Rock"
+  },
+  {
+    "reviewId": 235238,
+    "entityKind": "album",
+    "entityId": 2459,
+    "raw": "Ethnic-Rock",
+    "resolution": {
+      "raw": "Ethnic-Rock",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Ethnic-Rock"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Ethnic-Rock"
+  },
+  {
+    "reviewId": 235239,
+    "entityKind": "album",
+    "entityId": 2467,
+    "raw": "Ethnic-Rock",
+    "resolution": {
+      "raw": "Ethnic-Rock",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Ethnic-Rock"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Ethnic-Rock"
+  },
+  {
+    "reviewId": 235240,
+    "entityKind": "album",
+    "entityId": 2629,
+    "raw": "Souvenir",
+    "resolution": {
+      "raw": "Souvenir",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Souvenir"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "no_genero",
+    "note": "Piezas que no son género: Souvenir"
+  },
+  {
+    "reviewId": 235241,
+    "entityKind": "album",
+    "entityId": 2737,
+    "raw": "Latin Electronic Fusion",
+    "resolution": {
+      "raw": "Latin Electronic Fusion",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Latin Electronic Fusion"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Latin Electronic Fusion"
+  },
+  {
+    "reviewId": 235242,
+    "entityKind": "album",
+    "entityId": 2740,
+    "raw": "Latin Electronic Fusion",
+    "resolution": {
+      "raw": "Latin Electronic Fusion",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Latin Electronic Fusion"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Latin Electronic Fusion"
+  },
+  {
+    "reviewId": 235243,
+    "entityKind": "album",
+    "entityId": 2937,
+    "raw": "Techno-Rock",
+    "resolution": {
+      "raw": "Techno-Rock",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Techno-Rock"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Techno-Rock"
+  },
+  {
+    "reviewId": 235244,
+    "entityKind": "album",
+    "entityId": 3223,
+    "raw": "Rock-Ska",
+    "resolution": {
+      "raw": "Rock-Ska",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Rock-Ska"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Rock-Ska"
+  },
+  {
+    "reviewId": 235245,
+    "entityKind": "album",
+    "entityId": 3413,
+    "raw": "Cygnus/AVR",
+    "resolution": {
+      "raw": "Cygnus/AVR",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Cygnus"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "AVR"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Cygnus, AVR"
+  },
+  {
+    "reviewId": 235246,
+    "entityKind": "album",
+    "entityId": 3534,
+    "raw": "Punk-Folk/Fusion",
+    "resolution": {
+      "raw": "Punk-Folk/Fusion",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Punk-Folk"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Fusion"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Punk-Folk, Fusion"
+  },
+  {
+    "reviewId": 235247,
+    "entityKind": "album",
+    "entityId": 3540,
+    "raw": "Punk-Metal",
+    "resolution": {
+      "raw": "Punk-Metal",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Punk-Metal"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Punk-Metal"
+  },
+  {
+    "reviewId": 235248,
+    "entityKind": "album",
+    "entityId": 3545,
+    "raw": "Rock-Gothic Metal/",
+    "resolution": {
+      "raw": "Rock-Gothic Metal/",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Rock-Gothic Metal"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Rock-Gothic Metal"
+  },
+  {
+    "reviewId": 235249,
+    "entityKind": "album",
+    "entityId": 3558,
+    "raw": "Punk-Metal",
+    "resolution": {
+      "raw": "Punk-Metal",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Punk-Metal"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Punk-Metal"
+  },
+  {
+    "reviewId": 235250,
+    "entityKind": "album",
+    "entityId": 3563,
+    "raw": "Punk-Metal",
+    "resolution": {
+      "raw": "Punk-Metal",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Punk-Metal"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Punk-Metal"
+  },
+  {
+    "reviewId": 235251,
+    "entityKind": "album",
+    "entityId": 3590,
+    "raw": "Rock-Ethnic-Pop",
+    "resolution": {
+      "raw": "Rock-Ethnic-Pop",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Rock-Ethnic-Pop"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Rock-Ethnic-Pop"
+  },
+  {
+    "reviewId": 235252,
+    "entityKind": "album",
+    "entityId": 3591,
+    "raw": "Rock-Heavy Metal",
+    "resolution": {
+      "raw": "Rock-Heavy Metal",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Rock-Heavy Metal"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Rock-Heavy Metal"
+  },
+  {
+    "reviewId": 235253,
+    "entityKind": "album",
+    "entityId": 3625,
+    "raw": "Rock-Latin-Fusion",
+    "resolution": {
+      "raw": "Rock-Latin-Fusion",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Rock-Latin-Fusion"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Rock-Latin-Fusion"
+  },
+  {
+    "reviewId": 235254,
+    "entityKind": "album",
+    "entityId": 3627,
+    "raw": "Industrial Death Metal",
+    "resolution": {
+      "raw": "Industrial Death Metal",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Industrial Death Metal"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Industrial Death Metal"
+  },
+  {
+    "reviewId": 235255,
+    "entityKind": "album",
+    "entityId": 3632,
+    "raw": "Instrumental",
+    "resolution": {
+      "raw": "Instrumental",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Instrumental"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Instrumental"
+  },
+  {
+    "reviewId": 235256,
+    "entityKind": "album",
+    "entityId": 3808,
+    "raw": "Rock-Gothic Metal/",
+    "resolution": {
+      "raw": "Rock-Gothic Metal/",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Rock-Gothic Metal"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Rock-Gothic Metal"
+  },
+  {
+    "reviewId": 235257,
+    "entityKind": "album",
+    "entityId": 3828,
+    "raw": "Latin Rock Fusion",
+    "resolution": {
+      "raw": "Latin Rock Fusion",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Latin Rock Fusion"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Latin Rock Fusion"
+  },
+  {
+    "reviewId": 235258,
+    "entityKind": "album",
+    "entityId": 3842,
+    "raw": "Ska-Reggae",
+    "resolution": {
+      "raw": "Ska-Reggae",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Ska-Reggae"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Ska-Reggae"
+  },
+  {
+    "reviewId": 235259,
+    "entityKind": "album",
+    "entityId": 3890,
+    "raw": "Latin Electronic Fusion",
+    "resolution": {
+      "raw": "Latin Electronic Fusion",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Latin Electronic Fusion"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Latin Electronic Fusion"
+  },
+  {
+    "reviewId": 235260,
+    "entityKind": "album",
+    "entityId": 3895,
+    "raw": "Ska-Reggae",
+    "resolution": {
+      "raw": "Ska-Reggae",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Ska-Reggae"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Ska-Reggae"
+  },
+  {
+    "reviewId": 235261,
+    "entityKind": "album",
+    "entityId": 3928,
+    "raw": "El Mismo Feeling...",
+    "resolution": {
+      "raw": "El Mismo Feeling...",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "El Mismo Feeling..."
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "no_genero",
+    "note": "Piezas que no son género: El Mismo Feeling..."
+  },
+  {
+    "reviewId": 235262,
+    "entityKind": "album",
+    "entityId": 3940,
+    "raw": "Pop-Instrumental",
+    "resolution": {
+      "raw": "Pop-Instrumental",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Pop-Instrumental"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Pop-Instrumental"
+  },
+  {
+    "reviewId": 235263,
+    "entityKind": "album",
+    "entityId": 3941,
+    "raw": "Pop-Instrumental",
+    "resolution": {
+      "raw": "Pop-Instrumental",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Pop-Instrumental"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Pop-Instrumental"
+  },
+  {
+    "reviewId": 235264,
+    "entityKind": "album",
+    "entityId": 3949,
+    "raw": "Pop-Instrumental",
+    "resolution": {
+      "raw": "Pop-Instrumental",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Pop-Instrumental"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Pop-Instrumental"
+  },
+  {
+    "reviewId": 235265,
+    "entityKind": "album",
+    "entityId": 3956,
+    "raw": "Heavy Rock",
+    "resolution": {
+      "raw": "Heavy Rock",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Heavy Rock"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Heavy Rock"
+  },
+  {
+    "reviewId": 235266,
+    "entityKind": "album",
+    "entityId": 4223,
+    "raw": "Trash-Death Metal",
+    "resolution": {
+      "raw": "Trash-Death Metal",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Trash-Death Metal"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Trash-Death Metal"
+  },
+  {
+    "reviewId": 235267,
+    "entityKind": "album",
+    "entityId": 4225,
+    "raw": "Rock -Fusion",
+    "resolution": {
+      "raw": "Rock -Fusion",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Rock -Fusion"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Rock -Fusion"
+  },
+  {
+    "reviewId": 235268,
+    "entityKind": "album",
+    "entityId": 4330,
+    "raw": "Latin-Blues",
+    "resolution": {
+      "raw": "Latin-Blues",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Latin-Blues"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Latin-Blues"
+  },
+  {
+    "reviewId": 235269,
+    "entityKind": "album",
+    "entityId": 4357,
+    "raw": "Pop-Folk",
+    "resolution": {
+      "raw": "Pop-Folk",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Pop-Folk"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Pop-Folk"
+  },
+  {
+    "reviewId": 235270,
+    "entityKind": "album",
+    "entityId": 4476,
+    "raw": "Pop-Latin-Rock",
+    "resolution": {
+      "raw": "Pop-Latin-Rock",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Pop-Latin-Rock"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Pop-Latin-Rock"
+  },
+  {
+    "reviewId": 235271,
+    "entityKind": "album",
+    "entityId": 4478,
+    "raw": "Rock-Heavy Metal",
+    "resolution": {
+      "raw": "Rock-Heavy Metal",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Rock-Heavy Metal"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Rock-Heavy Metal"
+  },
+  {
+    "reviewId": 235272,
+    "entityKind": "album",
+    "entityId": 4544,
+    "raw": "Progressive Hard Rock",
+    "resolution": {
+      "raw": "Progressive Hard Rock",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Progressive Hard Rock"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Progressive Hard Rock"
+  },
+  {
+    "reviewId": 235273,
+    "entityKind": "album",
+    "entityId": 4568,
+    "raw": "Rock Avantgarde/Fusion",
+    "resolution": {
+      "raw": "Rock Avantgarde/Fusion",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Rock Avantgarde"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Fusion"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Rock Avantgarde, Fusion"
+  },
+  {
+    "reviewId": 235274,
+    "entityKind": "album",
+    "entityId": 4575,
+    "raw": "Rock-Funk-Latin",
+    "resolution": {
+      "raw": "Rock-Funk-Latin",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Rock-Funk-Latin"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Rock-Funk-Latin"
+  },
+  {
+    "reviewId": 235275,
+    "entityKind": "album",
+    "entityId": 4624,
+    "raw": "Sino Todo Lo Contrario",
+    "resolution": {
+      "raw": "Sino Todo Lo Contrario",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Sino Todo Lo Contrario"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Sino Todo Lo Contrario"
+  },
+  {
+    "reviewId": 235276,
+    "entityKind": "album",
+    "entityId": 4660,
+    "raw": "(De Dei After)",
+    "resolution": {
+      "raw": "(De Dei After)",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "(De Dei After)"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: (De Dei After)"
+  },
+  {
+    "reviewId": 235277,
+    "entityKind": "album",
+    "entityId": 4662,
+    "raw": "Sonograma/Integra",
+    "resolution": {
+      "raw": "Sonograma/Integra",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Sonograma"
+        },
+        {
+          "kind": "unresolved",
+          "fragment": "Integra"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Sonograma, Integra"
+  },
+  {
+    "reviewId": 235278,
+    "entityKind": "album",
+    "entityId": 4670,
+    "raw": "Nu Metal Rock",
+    "resolution": {
+      "raw": "Nu Metal Rock",
+      "items": [
+        {
+          "kind": "unresolved",
+          "fragment": "Nu Metal Rock"
+        }
+      ],
+      "notAGenre": [],
+      "primaryPending": true
+    },
+    "class": "termino_nuevo",
+    "note": "Sin resolver: Nu Metal Rock"
+  }
+]

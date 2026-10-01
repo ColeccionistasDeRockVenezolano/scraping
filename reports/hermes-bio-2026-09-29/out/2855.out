@@ -1,0 +1,18 @@
+Found solid confirmation. Here is my result:
+
+{"identidad_confirmada": true,
+ "pruebas_identidad": [
+   {"url":"https://www.youtube.com/watch?v=PqJdaDy57n0","cita":"10. Manuel Macías & Bélica - Corazón Gris 48:40"},
+   {"url":"https://www.youtube.com/watch?v=PqJdaDy57n0","cita":"-Manuel \"Manolo\" Macías [from Liquet] (track 10)"},
+   {"url":"https://www.youtube.com/watch?v=IRSBLQ0K7fU","cita":"Hago homehaje a una de mis bandas venezolanas favoritas, LIQUET y a su desaparecido cantante y bajista Manuel Macías..."}
+ ],
+ "pais": {"valor":"Venezuela","url":"https://www.youtube.com/watch?v=IRSBLQ0K7fU","cita":"una de mis bandas venezolanas favoritas, LIQUET y a su desaparecido cantante y bajista Manuel Macías"},
+ "ciudad": null,
+ "año_formacion": {"valor":1997,"url":"https://musicbrainz.org/artist/18ff3493-63e5-4986-90ec-2eedcf54f6ba","cita":"Founded: 1997"},
+ "generos": [],
+ "datos_para_biografia": [
+   {"dato":"Manuel Macías fue el líder, vocalista y bajista de la banda Liqüet; la banda se desintegró tras su 'desaparición física' en diciembre de 2005.","url":"https://www.youtube.com/watch?v=668E670ajhg","cita":"Liquet se desintegra tras la desaparicion fisica de su lider vocalista y bajista Manuel Macias en Diciembre de 2005."},
+   {"dato":"Liqüet se formó en 1997 y se disolvió en 2005 (grupo venezolano).","url":"https://musicbrainz.org/artist/18ff3493-63e5-4986-90ec-2eedcf54f6ba","cita":"Founded: 1997"},
+   {"dato":"Su interpretación de 'Corazón Gris' se grabó en vivo en el Festival Nuevas Bandas 2010, en Plaza La Castellana (Caracas, Venezuela), producido por Amnistía Internacional Venezuela; el tema original es de Dermis Tatú.","url":"https://www.youtube.com/watch?v=PqJdaDy57n0","cita":"Recorded Live at Plaza La Castellana, Festival Nuevas Bandas 2010 (Caracas, Venezuela)"}
+ ]
+}

@@ -1,0 +1,23 @@
+He identificado al artista. Resultado:
+
+{"identidad_confirmada": true,
+ "pruebas_identidad": [
+  {"url": "https://100bands.bandcamp.com/album/100-goregrind-porngore-cybergrind-bands-compilation-n-2", "cita": "008. Anal Arcade - Shemale Monster Cock 05:17"},
+  {"url": "https://analarcade.bandcamp.com/track/shemale-monster-cock", "cita": "Shemale Monster Cock | de Black Album (Anal Arcade), de Anal Arcade ... pornogore goregrind grind grindcore Quito"},
+  {"url": "https://www.spirit-of-metal.com/en/band/Anal_Arcade", "cita": "Style Porno Gore Grind | Status Active | Formed In 2011 | Country Ecuador | City Quito"}
+ ],
+ "pais": {"valor": "Ecuador", "url": "https://analarcade.bandcamp.com/track/shemale-monster-cock", "cita": "Anal Arcade\nQuito, Ecuador"},
+ "ciudad": {"valor": "Quito", "url": "https://analarcade.bandcamp.com/track/shemale-monster-cock", "cita": "Quito, Ecuador"},
+ "año_formacion": {"valor": 2011, "url": "https://www.spirit-of-metal.com/en/band/Anal_Arcade", "cita": "Formed In 2011"},
+ "generos": [
+  {"genero": "Porno Gore Grind", "url": "https://www.spirit-of-metal.com/en/band/Anal_Arcade", "cita": "Style Porno Gore Grind"},
+  {"genero": "Pornogore", "url": "https://analarcade.bandcamp.com/track/shemale-monster-cock", "cita": "Anal Arcade is a Porngore Band Burn in Quito Ecuador at 2012."},
+  {"genero": "Goregrind", "url": "https://analarcade.bandcamp.com/track/shemale-monster-cock", "cita": "pornogore goregrind"}
+ ],
+ "datos_para_biografia": [
+  {"dato": "Alineación: David Bustamante (voz), Diego Romero (bajo), Pedro Carvajal (voz) y Alex Chuncho (guitarra).", "url": "https://www.spirit-of-metal.com/en/band/Anal_Arcade", "cita": "David Bustamante Vocals ... Diego Romero Bass ... Pedro Carvajal Vocals ... Alex Chuncho Guitar"},
+  {"dato": "Banda de porngore latinoamericana radicada en Quito, Ecuador, activa desde 2012.", "url": "https://analarcade.bandcamp.com/track/shemale-monster-cock", "cita": "Anal Arcade is a Porngore Band Burn in Quito Ecuador at 2012. #pornogorelatino"},
+  {"dato": "«Shemale Monster Cock» es pista de su álbum «Black Album (Anal Arcade)», lanzado el 28 de agosto de 2018.", "url": "https://analarcade.bandcamp.com/track/shemale-monster-cock", "cita": "de Black Album (Anal Arcade), se lanzó el 28deagostode2018"}
+ ]}
+
+Nota: la nota de Bandcamp dice «at 2012» mientras Spirit of Metal indica «Formed In 2011»; prioricé el campo explícito «Formed In» (2011) para año_formacion.

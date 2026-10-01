@@ -1,0 +1,53 @@
+{
+  "identidad_confirmada": true,
+  "pruebas_identidad": [
+    {
+      "url": "https://www.youtube.com/watch?v=tVh7jFIEhaw",
+      "cita": "\"Ex K La\" also known as Ex-K-La / Ex.K.La (track 09)"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=43QjCQpRGo0",
+      "cita": "La Historia Sin Nombre · EX-K-LA · Arneyson Uzuriaga\n\nEx-K-La\n\n℗ 1999 Sonolux"
+    },
+    {
+      "url": "https://api.discogs.com/releases/11076233",
+      "cita": "\"artists\":[{\"name\":\"EX-K.LA\"...}] ... \"title\":\"Desahogate\",\"country\":\"Colombia\",\"released\":\"1996\""
+    }
+  ],
+  "pais": {
+    "valor": "Colombia",
+    "url": "https://api.discogs.com/releases/11076233",
+    "cita": "\"title\":\"Desahogate\",\"country\":\"Colombia\",\"released\":\"1996\""
+  },
+  "ciudad": null,
+  "año_formacion": null,
+  "generos": [
+    {
+      "genero": "Latin",
+      "url": "https://api.discogs.com/releases/11076233",
+      "cita": "\"genres\":[\"Latin\",\"Folk, World, & Country\"]"
+    },
+    {
+      "genero": "Pop",
+      "url": "https://www.youtube.com/watch?v=LQgMzyrn2Ic",
+      "cita": "Desahógate – Ex K La | Pop"
+    }
+  ],
+  "datos_para_biografia": [
+    {
+      "dato": "Publicó el álbum 'Desahogate' con el sello colombiano Sonolux en 1996 (catálogo 01-0131-02149).",
+      "url": "https://api.discogs.com/releases/11076233",
+      "cita": "\"labels\":[{\"name\":\"Sonolux\",\"catno\":\"01-0131-02149\"...}] ... \"title\":\"Desahogate\",\"country\":\"Colombia\",\"released\":\"1996\""
+    },
+    {
+      "dato": "Editó el álbum 'Ex-K-La' el 17 de junio de 1999 (℗ 1999 Sonolux), con Arneyson Uzuriaga como intérprete/autor.",
+      "url": "https://www.youtube.com/watch?v=43QjCQpRGo0",
+      "cita": "La Historia Sin Nombre · EX-K-LA · Arneyson Uzuriaga ... Ex-K-La ... ℗ 1999 Sonolux ... Released on: 1999-06-17"
+    },
+    {
+      "dato": "Interpretó el tema 'Pide Más' en el compilatorio 'Pepsi Music: Pide Más' (Various Artists, 1999).",
+      "url": "https://www.youtube.com/watch?v=tVh7jFIEhaw",
+      "cita": "09. Ex K La - Pide Más 17:27"
+    }
+  ]
+}

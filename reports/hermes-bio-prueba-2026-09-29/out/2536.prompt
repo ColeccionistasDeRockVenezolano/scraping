@@ -1,0 +1,8 @@
+Usa el navegador (browser_navigate). Empieza en https://html.duckduckgo.com/html/?q=%22Ravn%22+band e investiga al artista o banda "Ravn", que aparece con la pista «Uisce Beatha» en el recopilatorio «Black Metal Agenda Vol.18» (Forgotten Moon, 2010). Puede ser venezolano o extranjero; hay homónimos: solo vale el que encaja con ese recopilatorio o ese estilo.
+Abre como MÁXIMO 4 páginas. Si tras eso no lo identificas, termina con identidad_confirmada=false.
+Devuelve SOLO un objeto JSON, sin texto adicional:
+{"identidad_confirmada": true|false, "pruebas_identidad": [{"url":"...","cita":"texto literal"}],
+ "pais": "... o null", "ciudad": "... o null", "año_formacion": null,
+ "generos": [{"genero":"...","url":"...","cita":"texto literal"}],
+ "datos_para_biografia": [{"dato":"...","url":"...","cita":"texto literal"}]}
+Reglas: cada dato sale de una página que abriste, con su URL y cita literal; como mucho 3 datos para biografía; si no encuentras algo, null o lista vacía. No inventes.

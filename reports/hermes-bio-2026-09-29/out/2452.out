@@ -1,0 +1,19 @@
+{
+  "identidad_confirmada": true,
+  "pruebas_identidad": [
+    {"url": "https://api.discogs.com/artists/4796604/releases", "cita": "100 Goregrind Porngore Cybergrind Bands Compilation Vol. 2"},
+    {"url": "https://api.discogs.com/releases/10982244", "cita": "Depornicated — Gorey Anal Vomit Into The Vagina And Penis Then Slurped Up By Kody"}
+  ],
+  "pais": {"valor": "USA", "url": "https://api.discogs.com/artists/4796604", "cita": "Noiscore from USA."},
+  "ciudad": null,
+  "año_formacion": null,
+  "generos": [
+    {"genero": "Noisecore", "url": "https://api.discogs.com/artists/4796604", "cita": "Noiscore from USA."},
+    {"genero": "Goregrind", "url": "https://api.discogs.com/releases/10982244", "cita": "Goregrind, Grindcore, Pornogrind"}
+  ],
+  "datos_para_biografia": [
+    {"dato": "Proyecto de noisecore estadounidense; en Discogs se describe como «Noiscore from USA».", "url": "https://api.discogs.com/artists/4796604", "cita": "Noiscore from USA."},
+    {"dato": "Participó con el tema «Gorey Anal Vomit Into The Vagina And Penis Then Slurped Up By Kody» (pista 93) en la compilación «100 Goregrind Porngore Cybergrind Bands Compilation Vol. 2» (2017, sello 100 Bands Netlabel).", "url": "https://api.discogs.com/releases/10982244", "cita": "Depornicated — Gorey Anal Vomit Into The Vagina And Penis Then Slurped Up By Kody"},
+    {"dato": "Su catálogo se concentra en 2016, con lanzamientos temáticos sobre «Kody»: «Extreme Kody Torture - To Pimp a Gay Faggot Like Kody», «Fuck Kody» y un split con Fist Fuck Friendship.", "url": "https://api.discogs.com/artists/4796604/releases", "cita": "Extreme Kody Torture - To Pimp a Gay Faggot Like Kody"}
+  ]
+}

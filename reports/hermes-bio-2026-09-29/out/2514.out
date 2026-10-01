@@ -1,0 +1,21 @@
+JSON:
+
+{"identidad_confirmada": true,
+ "pruebas_identidad": [
+   {"url": "https://www.youtube.com/watch?v=LFDS8eSjVfg", "cita": "05 00:13:01 Guerra Total - Guerra Total (Colombia)"},
+   {"url": "https://www.youtube.com/watch?v=vJUWPxJUQhA", "cita": "Guerra Total - Nuklear Zombie Division [Black/Thrash] (Full Album (2010))"},
+   {"url": "https://guerratotal.bandcamp.com/album/nuklear-zombie-division", "cita": "7. Guerra Total 03:50"}
+ ],
+ "pais": {"valor": "Colombia", "url": "https://musicbrainz.org/artist/48815610-b69e-4c6b-bb87-e2f4e12a6d6a", "cita": "Colombia"},
+ "ciudad": {"valor": "Bogotá", "url": "https://musicbrainz.org/artist/48815610-b69e-4c6b-bb87-e2f4e12a6d6a", "cita": "Bogotá, Colombia"},
+ "año_formacion": {"valor": 2002, "url": "https://musicbrainz.org/artist/48815610-b69e-4c6b-bb87-e2f4e12a6d6a", "cita": "2002 (24 years ago)"},
+ "generos": [
+   {"genero": "black/thrash", "url": "https://www.youtube.com/watch?v=vJUWPxJUQhA", "cita": "Guerra Total - Nuklear Zombie Division [Black/Thrash] (Full Album (2010))"},
+   {"genero": "black metal", "url": "https://musicbrainz.org/artist/48815610-b69e-4c6b-bb87-e2f4e12a6d6a", "cita": "black metal"},
+   {"genero": "speed metal", "url": "https://guerratotal.bandcamp.com/album/nuklear-zombie-division", "cita": "speed metal"}
+ ],
+ "datos_para_biografia": [
+   {"dato": "Formación en Nuklear Zombie Division: Demonslaught (voz y bajo), Destruktor (guitarra), Sick Punisher (batería)", "url": "https://www.youtube.com/watch?v=vJUWPxJUQhA", "cita": "Vocals and Bass: Demonslaught\nGuitars: Destruktor\nDrums: Sick Punisher"},
+   {"dato": "Publicó splits con Metalucifer (2016) y Vulcan Tyrant (2019)", "url": "https://musicbrainz.org/artist/48815610-b69e-4c6b-bb87-e2f4e12a6d6a", "cita": "Guerra Total / Metalucifer"},
+   {"dato": "El álbum Nuklear Zombie Division se lanzó el 3 de enero de 2011", "url": "https://guerratotal.bandcamp.com/album/nuklear-zombie-division", "cita": "se lanzó el 3deenerode2011"}
+ ]}

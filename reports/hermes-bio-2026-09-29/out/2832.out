@@ -1,0 +1,35 @@
+{
+  "identidad_confirmada": true,
+  "pruebas_identidad": [
+    {
+      "url": "https://api.discogs.com/releases/2231361",
+      "cita": "\"artists\":[{\"name\":\"Chriqui\",\"anv\":\"\",\"join\":\"Vs\",\"role\":\"\",\"tracks\":\"\",\"id\":7797402,\"resource_url\":\"https://api.discogs.com/artists/7797402\"},{\"name\":\"Klahr (2)\",\"anv\":\"\",\"join\":\"\",\"role\":\"\",\"tracks\":\"\",\"id\":7797401,...}],\"title\":\"La Froggy Latina (Minimal)\",\"duration\":\"6:00\""
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=dC0sgXxxEKA",
+      "cita": "07. Chriqui Vs Klahr - La Froggy Latina 28:27"
+    }
+  ],
+  "pais": null,
+  "ciudad": null,
+  "año_formacion": null,
+  "generos": [
+    {
+      "genero": "Minimal",
+      "url": "https://api.discogs.com/releases/2231361",
+      "cita": "\"title\":\"La Froggy Latina (Minimal)\",\"duration\":\"6:00\""
+    }
+  ],
+  "datos_para_biografia": [
+    {
+      "dato": "Su pista «La Froggy Latina» (Minimal) figura como tema 7 de «Venezuela Electronica Vol. 2 Blanco» (2007), acreditada como «Chriqui Vs Klahr (2)».",
+      "url": "https://api.discogs.com/releases/2231361",
+      "cita": "\"title\":\"Venezuela Electronica Vol. 2 Blanco\",\"country\":\"Venezuela\",\"released\":\"2007\""
+    },
+    {
+      "dato": "«Chriqui» es el único registro del artista en Discogs y su única aparición acreditada es ese compilatorio de 2007.",
+      "url": "https://api.discogs.com/artists/7797402",
+      "cita": "{\"name\":\"Chriqui\",\"id\":7797402,\"resource_url\":\"https://api.discogs.com/artists/7797402\",\"uri\":\"https://www.discogs.com/artist/7797402-Chriqui\""
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "stats": {
+    "entradas": 524,
+    "casadas": 303,
+    "pendientes_con_genero": 36,
+    "pendientes_con_texto": 71,
+    "sin_frase": 35,
+    "homonimos": 2
+  },
+  "dudas": [
+    {
+      "title": "Aborigen",
+      "url": "https://rockhechovenezuela.com/a/aborigen-2/",
+      "artistIds": [
+        720
+      ],
+      "motivo": "homónimo en catálogo o en RHV"
+    },
+    {
+      "title": "Aborigen",
+      "url": "https://rockhechovenezuela.com/a/aborigen/",
+      "artistIds": [
+        720
+      ],
+      "motivo": "homónimo en catálogo o en RHV"
+    }
+  ]
+}

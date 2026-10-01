@@ -1,0 +1,21 @@
+{
+  "identidad_confirmada": true,
+  "pruebas_identidad": [
+    {"url": "https://musicbrainz.org/artist/12737292-3bae-44c8-abff-b1ebae9e384c", "cita": "Sorrow Plagues (UK / Atmospheric Black Metal)"},
+    {"url": "https://musicbrainz.org/search?query=%22Mater+Natura+Excelsa%22&type=release&method=indexed", "cita": "Mater Natura Excelsa | Sorrow Plagues / De la Nostalgie / Elderwind / Dreams of Nature | Digital Media | 8 | XW | Avantgarde Music | Album | Official"},
+    {"url": "https://sorrowplagues.bandcamp.com/album/mater-natura-excelsa", "cita": "Sorrow Plagues - Vista 09:29"},
+    {"url": "https://sorrowplagues.bandcamp.com/album/mater-natura-excelsa", "cita": "Sorrow Plagues - Bloom 11:54"}
+  ],
+  "pais": {"valor": "United Kingdom", "url": "https://web.archive.org/web/20240228094359id_/https://www.metal-archives.com/bands/Sorrow_Plagues/3540392382", "cita": "Country of origin: United Kingdom"},
+  "ciudad": {"valor": "Brighton", "url": "https://web.archive.org/web/20240228094359id_/https://www.metal-archives.com/bands/Sorrow_Plagues/3540392382", "cita": "Location: Brighton, East Sussex, England"},
+  "año_formacion": {"valor": 2014, "url": "https://web.archive.org/web/20240228094359id_/https://www.metal-archives.com/bands/Sorrow_Plagues/3540392382", "cita": "Formed in: 2014"},
+  "generos": [
+    {"genero": "Atmospheric Black Metal", "url": "https://web.archive.org/web/20240228094359id_/https://www.metal-archives.com/bands/Sorrow_Plagues/3540392382", "cita": "Genre: Atmospheric Black Metal"},
+    {"genero": "blackgaze", "url": "https://musicbrainz.org/artist/12737292-3bae-44c8-abff-b1ebae9e384c", "cita": "blackgaze"}
+  ],
+  "datos_para_biografia": [
+    {"dato": "El proyecto pasó a llamarse 'Corroding Soul'.", "url": "https://musicbrainz.org/artist/12737292-3bae-44c8-abff-b1ebae9e384c", "cita": "Renamed to: Corroding Soul"},
+    {"dato": "Estuvo activa entre 2014 y 2020.", "url": "https://web.archive.org/web/20240228094359id_/https://www.metal-archives.com/bands/Sorrow_Plagues/3540392382", "cita": "Years active: 2014-2020"},
+    {"dato": "'Mater Natura Excelsa' (2018) es un split a cuatro bandas publicado por Avantgarde Music / Flowing Downward.", "url": "https://sorrowplagues.bandcamp.com/album/mater-natura-excelsa", "cita": "de Sorrow Plagues/De La Nostalgie/Elderwind/Dreams Of Nature"}
+  ]
+}

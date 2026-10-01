@@ -1,0 +1,26 @@
+{"identidad_confirmada": true,
+ "pruebas_identidad": [
+   {"url": "https://musicbrainz.org/release/818661a9-d474-4577-92f7-cf715124000c",
+    "cita": "Revolution | Zardonic, Counterstrike, Gein and Robyn Kaos"},
+   {"url": "https://musicbrainz.org/artist/e9cf225a-3259-489c-b73c-da57d69139d3",
+    "cita": "Counterstrike (South African Drum & Bass collective / Algorythm Recordings)"},
+   {"url": "https://en.wikipedia.org/wiki/Counterstrike_(drum_and_bass_group)",
+    "cita": "Counterstrike is a drum and bass music producer duo from Cape Town consisting of Justin Scholtemeyer and Eaton Crous."}
+ ],
+ "pais": {"valor": "Sudáfrica", "url": "https://musicbrainz.org/artist/e9cf225a-3259-489c-b73c-da57d69139d3",
+   "cita": "Area: South Africa"},
+ "ciudad": {"valor": "Ciudad del Cabo (Cape Town)", "url": "https://en.wikipedia.org/wiki/Counterstrike_(drum_and_bass_group)",
+   "cita": "Counterstrike is a drum and bass music producer duo from Cape Town consisting of Justin Scholtemeyer and Eaton Crous."},
+ "año_formacion": {"valor": 1998, "url": "https://en.wikipedia.org/wiki/Counterstrike_(drum_and_bass_group)",
+   "cita": "Years active 1998–present"},
+ "generos": [
+   {"genero": "Drum & bass", "url": "https://en.wikipedia.org/wiki/Counterstrike_(drum_and_bass_group)", "cita": "Genres Drum & bass, dubstep"},
+   {"genero": "Dubstep", "url": "https://en.wikipedia.org/wiki/Counterstrike_(drum_and_bass_group)", "cita": "Genres Drum & bass, dubstep"},
+   {"genero": "drum and bass", "url": "https://musicbrainz.org/artist/e9cf225a-3259-489c-b73c-da57d69139d3", "cita": "Genres drum and bass"}
+ ],
+ "datos_para_biografia": [
+   {"dato": "Dúo sudafricano de drum & bass integrado por Justin Scholtemeyer y Eaton Crous.", "url": "https://en.wikipedia.org/wiki/Counterstrike_(drum_and_bass_group)", "cita": "consisting of Justin Scholtemeyer and Eaton Crous"},
+   {"dato": "Considerados uno de los pioneros de la escena drum and bass de Sudáfrica.", "url": "https://en.wikipedia.org/wiki/Counterstrike_(drum_and_bass_group)", "cita": "They are considered to be one of the pioneers of the South African drum and bass scene."},
+   {"dato": "Su sello propio, Algorythm Recordings, fue relanzado en 2005.", "url": "https://en.wikipedia.org/wiki/Counterstrike_(drum_and_bass_group)", "cita": "Algorythm Recordings, their own imprint, was re-launched in 2005"}
+ ]
+}
