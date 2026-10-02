@@ -230,6 +230,19 @@ export async function approveEntity(
 }
 
 /** Descarta los candidatos de una entidad sin tocar el core. */
+/**
+ * Rechaza claims candidatos sueltos (no la entidad entera): un valor que la
+ * fuente ya no afirma porque el extractor lo leía mal. Nunca se borran.
+ */
+export async function rejectClaims(claimIds: number[], note: string): Promise<{ rejected: number; reviewsClosed: number }> {
+  if (!note.trim()) throw new Error("nota de resolución obligatoria");
+  if (claimIds.length === 0) return { rejected: 0, reviewsClosed: 0 };
+  const { rowCount } = await getPool().query(
+    "UPDATE ingest.claims SET status='rejected',updated_at=now() WHERE id = ANY($1::bigint[]) AND status='candidate'", [claimIds]);
+  const reviewsClosed = await closeReviews(claimIds, "dismissed", note);
+  return { rejected: rowCount ?? 0, reviewsClosed };
+}
+
 export async function dismissEntity(entityKind: string, identityKey: string, note: string): Promise<ApprovalResult> {
   if (!note.trim()) throw new Error("nota de resolución obligatoria");
   const { rows } = await getPool().query<{ id: string }>(

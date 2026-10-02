@@ -51,6 +51,14 @@ function splitByBr($: CheerioAPI, html: string): string[] {
  * pista solo se distingue por su color dorado. Leer la celda como texto
  * plano perdía todas las pistas menos la primera.
  */
+/**
+ * Encabezado de cara de un vinilo o casete: «Side B», «Lado A», «Cara 2»,
+ * también con rótulo («Side B - Irakere», «Side B (Studio)»). Un fragmento que
+ * además trae una pista numerada («01- …») no es solo un encabezado.
+ */
+const SIDE_HEADER = /^(?:side|lado|cara)\s*[a-d1-4](?![\p{L}\d])/iu;
+const isSideHeader = (text: string): boolean => SIDE_HEADER.test(text) && !/\d{1,3}\s*[-.]\s/u.test(text);
+
 function fragmentsByBr($: CheerioAPI, html: string): Array<ReturnType<CheerioAPI>> {
   return html
     .split(/<br\s*\/?>/i)
@@ -528,14 +536,31 @@ export class SincopaAdapter implements SourceAdapter {
 
     // Pistas: "01- Título (Compositor)". El título va en dorado; el compositor
     // entre paréntesis es un crédito de la pista, nunca una membresía.
+    // Un vinilo trae «Side A» / «Side B» y la cara B vuelve a empezar en 01:
+    // el core numera el disco corrido (la B sigue en 5, 6…), así que tras un
+    // encabezado de cara que REINICIA la cuenta se suma lo ya numerado. Si la
+    // fuente ya numera corrido, no se toca; sin caras, el número va tal cual.
+    let lastNumber = 0;
+    let sideStart: number | undefined;
+    let offset = 0;
     rowsUnderSection(page, /tracks?|pistas?|temas?/i).forEach((row) => {
       const cell = page(row).find("td").first();
       fragmentsByBr(page, cell.html() ?? "").forEach((fragment, position) => {
       const text = clean(fragment.text());
       if (!text) return;
+      if (isSideHeader(text)) {
+        if (lastNumber > 0) sideStart = lastNumber;
+        return;
+      }
       const trackTitle = goldenTitle(fragment);
       if (!trackTitle) return;
-      const number = /^(\d{1,3})\s*[-.]/.exec(text)?.[1];
+      const printed = /^(\d{1,3})\s*[-.]/.exec(text)?.[1];
+      if (printed !== undefined && sideStart !== undefined) {
+        offset = Number(printed) <= sideStart ? sideStart : 0;
+        sideStart = undefined;
+      }
+      const number = printed === undefined || offset === 0 ? printed : String(Number(printed) + offset);
+      if (number !== undefined) lastNumber = Math.max(lastNumber, Number(number));
       const where = evidence("tr td", text, position);
       const trackFields: RawRecord["fields"] = [
         { field: "title", value: trackTitle, evidence: where },

@@ -1,0 +1,4765 @@
+{
+  "section": "classic",
+  "dryRun": false,
+  "note": "Sincopa classic: promoción masiva por reglas (política bulk-policy v1; pedido de Brian 2026-10-02); retoma el run 11353 cortado por reinicio",
+  "kinds": {
+    "organization": {
+      "identities": 11,
+      "claims": 106,
+      "verdicts": {
+        "hold:nombre-casi-igual": 6,
+        "hold:mismo-nombre-en-el-core": 1,
+        "different:solo-coincidencias-debiles": 3,
+        "approve:auto-match": 1
+      },
+      "applied": 6,
+      "unchanged": 168,
+      "stillCandidate": 18,
+      "dismissed": 0,
+      "failed": 0
+    },
+    "artist": {
+      "identities": 5,
+      "claims": 26,
+      "verdicts": {
+        "hold:nombre-casi-igual": 3,
+        "approve:auto-match": 2
+      },
+      "applied": 0,
+      "unchanged": 0,
+      "stillCandidate": 14,
+      "dismissed": 0,
+      "failed": 0
+    },
+    "person": {
+      "identities": 252,
+      "claims": 429,
+      "verdicts": {
+        "hold:no-es-una-persona:organization_like": 41,
+        "hold:no-es-una-persona:agrupacion-o-lugar": 65,
+        "hold:no-es-una-persona:multiple_people": 116,
+        "different:homonimo-sin-proyecto-comun": 3,
+        "different:nombre-parecido-sin-proyecto-comun": 3,
+        "different:solo-coincidencias-debiles": 5,
+        "hold:no-es-una-persona:parece-un-titulo": 18,
+        "approve:auto-match": 1
+      },
+      "applied": 11,
+      "unchanged": 139,
+      "stillCandidate": 1,
+      "dismissed": 0,
+      "failed": 0
+    },
+    "album": {
+      "identities": 27,
+      "claims": 233,
+      "verdicts": {
+        "hold:padre-sin-resolver": 25,
+        "hold:titulo-igual-con-contradiccion": 2
+      },
+      "applied": 0,
+      "unchanged": 0,
+      "stillCandidate": 0,
+      "dismissed": 0,
+      "failed": 0
+    },
+    "track": {
+      "identities": 730,
+      "claims": 2827,
+      "verdicts": {
+        "different:sin-coincidencia": 357,
+        "hold:padre-sin-resolver": 372,
+        "hold:sin-decision-er": 1
+      },
+      "applied": 0,
+      "unchanged": 0,
+      "stillCandidate": 1352,
+      "dismissed": 0,
+      "failed": 0
+    },
+    "artist_membership": {
+      "identities": 3,
+      "claims": 9,
+      "verdicts": {
+        "puente": 3
+      },
+      "applied": 0,
+      "unchanged": 0,
+      "stillCandidate": 9,
+      "dismissed": 0,
+      "failed": 0
+    },
+    "album_credit": {
+      "identities": 1064,
+      "claims": 5325,
+      "verdicts": {
+        "puente": 1064
+      },
+      "applied": 11,
+      "unchanged": 44,
+      "stillCandidate": 5285,
+      "dismissed": 0,
+      "failed": 0
+    },
+    "track_credit": {
+      "identities": 2054,
+      "claims": 12396,
+      "verdicts": {
+        "puente": 2054
+      },
+      "applied": 1396,
+      "unchanged": 6992,
+      "stillCandidate": 4014,
+      "dismissed": 0,
+      "failed": 0
+    }
+  },
+  "holds": [
+    {
+      "kind": "organization",
+      "identityRaw": "Espiral/Polydor",
+      "rule": "nombre-casi-igual",
+      "detail": "3 «Polydor»",
+      "claims": 2
+    },
+    {
+      "kind": "organization",
+      "identityRaw": "EMI-Odeon",
+      "rule": "nombre-casi-igual",
+      "detail": "350 «EMI»",
+      "claims": 16
+    },
+    {
+      "kind": "organization",
+      "identityRaw": "Circulo Musical",
+      "rule": "mismo-nombre-en-el-core",
+      "detail": "980 «Círculo Musical»",
+      "claims": 4
+    },
+    {
+      "kind": "organization",
+      "identityRaw": "El Universal",
+      "rule": "nombre-casi-igual",
+      "detail": "322 «Universal»",
+      "claims": 4
+    },
+    {
+      "kind": "organization",
+      "identityRaw": "EMI Classic",
+      "rule": "nombre-casi-igual",
+      "detail": "350 «EMI»",
+      "claims": 10
+    },
+    {
+      "kind": "organization",
+      "identityRaw": "EMI Classics",
+      "rule": "nombre-casi-igual",
+      "detail": "350 «EMI»",
+      "claims": 8
+    },
+    {
+      "kind": "organization",
+      "identityRaw": "EMI Music - Germany",
+      "rule": "nombre-casi-igual",
+      "detail": "350 «EMI»",
+      "claims": 2
+    },
+    {
+      "kind": "artist",
+      "identityRaw": "Juan Francisco Sans & Luis Gómez Imbert",
+      "rule": "nombre-casi-igual",
+      "detail": "1977 «Juan Francisco»",
+      "claims": 1
+    },
+    {
+      "kind": "artist",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)",
+      "rule": "nombre-casi-igual",
+      "detail": "2944 «Orquesta Sinfónica de Venezuela»; 8 «OSV»",
+      "claims": 10
+    },
+    {
+      "kind": "artist",
+      "identityRaw": "Orfeón Lamas & Orquesta Sinfónica Venezuela",
+      "rule": "nombre-casi-igual",
+      "detail": "2944 «Orquesta Sinfónica de Venezuela»",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Musicarte Producciones",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Sala \"Lorenzo Mendoza Fleury\" de la Fundación Polar",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "LG Studios",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "ARS Digital Studios",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Telmo Almada/Arr: Juan Arteta",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Telmo Almada/Arr: Alberto NAranjo",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Pixinguinha/Arr: Alejandro Rodríguez",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Estudios Legato",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Fundación Camerata de Caracas",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Embajada del Brasil y Centro de Estudios Brasileños",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Mariangelina Celis y Asociados",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "parece una lista de varias personas",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "José Félix Ribas Concert Hall",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 6
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Teatro Municipal De Caracas",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 4
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Fundación Anala",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "for solo clarinet",
+      "rule": "no-es-una-persona:parece-un-titulo",
+      "detail": "empieza en minúscula o lleva varias palabras en minúscula: parece un título o un texto suelto",
+      "claims": 5
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Preferably clarinet in A",
+      "rule": "no-es-una-persona:parece-un-titulo",
+      "detail": "empieza en minúscula o lleva varias palabras en minúscula: parece un título o un texto suelto",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Preferably clarinet in Bb",
+      "rule": "no-es-una-persona:parece-un-titulo",
+      "detail": "empieza en minúscula o lleva varias palabras en minúscula: parece un título o un texto suelto",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Edgar Sound Estudio",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Estudios Fidelis",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 3
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Le Garage Studio",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 14
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Alfonso Montes & Irina Kircher",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "parece una lista de varias personas",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Estudios",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Estudios Artevisión USB",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Graphic Surgery Company - Lionel Roger Arida",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "demasiados tokens para un nombre",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "The London Symphony Orchestra",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Fundación Bisagra",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Iglesia Saint-Gabriel",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Iglesia Evangélica Luterana",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Catedral de Mérida",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Estudios del Canal Clásico de la Radio Nacional de Venezuela",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "WLRN Studios",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Folk Estudio",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Rose Rodríguez Productions",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Mariolito's Productions",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "marttdgraf@gmail.com",
+      "rule": "no-es-una-persona:parece-un-titulo",
+      "detail": "empieza en minúscula o lleva varias palabras en minúscula: parece un título o un texto suelto",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Sandrah Silvio, Claudia Galavis, Andrea Imaginario, Virginia Largo, Yuruani Lavado, Mariaelena Muro, Anna Rosa Rodríguez, Verónica Sosa & Cristina Vogeler",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "parece una lista de varias personas",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Marianna Caleca, María Eugenia Izquierdo,",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "parece una lista de varias personas",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "José Félix Ribas Concert Hall (Teatro Teresa Carreño)",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "demasiados tokens para un nombre",
+      "claims": 7
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Henry Martínez/Luis Laguna",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Estudios Sonográfica",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Folklore/Lui Ramón y Rivera",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Orquesta Típica Nacional",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Arts Producciones C.A.",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Auditorium Colegio Emil Friedman",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "L:Salvador de Madariaga/M: Alberto Grau",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "L: Rubén Darío/M: Alberto Grau",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "L: Manuel F. Rugeles/M: Alberto Grau",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Estudios Arte Digital",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "José Felix Rivas Concert Hall",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Orquesta Sinfónica Simón Bolívar (OSSB)",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Schola Cantorum de Caracas Orfeón Universitario Simón Bolívar",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "demasiados tokens para un nombre",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "\"Gallos de Pelea\" by Hugo Serrano",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "demasiados tokens para un nombre",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Aula Magna of the Universidad Central de Venezuela",
+      "rule": "no-es-una-persona:parece-un-titulo",
+      "detail": "empieza en minúscula o lleva varias palabras en minúscula: parece un título o un texto suelto",
+      "claims": 8
+    },
+    {
+      "kind": "person",
+      "identityRaw": "design M design W",
+      "rule": "no-es-una-persona:parece-un-titulo",
+      "detail": "empieza en minúscula o lleva varias palabras en minúscula: parece un título o un texto suelto",
+      "claims": 5
+    },
+    {
+      "kind": "person",
+      "identityRaw": "\"A Spanish Festival\" by John Frederick Lewis",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "demasiados tokens para un nombre",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Rubén Darío/Alberto Grau",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Manuel Felipe Rugeles/Alberto Grau",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Ediciones Fundación Schola Cantorum de Caracas",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 9
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Sala José Félix Ribas del Teatro Teresa Carreño",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "demasiados tokens para un nombre",
+      "claims": 5
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Anónimo/Rec. Vicente Emilio Sojo",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Rogelio Caraballo/Rec. Vicente Emilio Sojo",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Mario Benedetti/Alberto Favero",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 3
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Antonio Machado/Joan Manuel Serrat",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 3
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Juan Ramón Jiménez/Gonzalo Castellanos",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Francisco Lárez Granados/Modesta Bor",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Rubén Darío/Vicente Emilio Sojo",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Alberto Arvelo Torrealba/Antonio Estévez",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 3
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Federico García Lorca/Miguel Letelier",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Orquesta Sinfónica Simón Bolívar",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Schola Cantorum de Caracas Cantoría Alberto Grau",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "demasiados tokens para un nombre",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Andrés Eloy Blanco/Modesta Bor",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Francisco Lares Granados/Modesta Bor",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Alberto Arvelo Torrealba/Antonio Lauro",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Juan R. Jiménez/Juan Bautista Plaza",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Nicolás Guillén/Electo Silva",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "A/V Studio of the HTWK",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Sociedad Amigos De La Música",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Benito Canónico/Arranged by Antonio Lauro",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Estudio",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Estudios Larrain",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Members Of The Spanish National Orchestra",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "demasiados tokens para un nombre",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Castelnovo/Tedesco",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Allegri String Quartet",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Orquesta Sinfónica De Venezuela",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Orquesta Nacional De España",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Almar Music Editores",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Caroní Music",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Fundación Alirio Díaz",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Mariolito's Production Corp",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Iglesia Luterana \"La Resurrección\"",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Fernando Paz Castillo/Juan Bautista Plaza",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Andrés Eloy Blanco/Maibel Troia",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 3
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Pedro Herrero/José Armenteros",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Ignacio \"Indio\" Figueredo/Arr: Felipe Izcaray",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Atahualpa Yupanqui/Arreglo: Emilio Solé",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Miguel Matamoros/Arr: Alberto Grau",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Eliseo Grenet/Arreglo: María Adela Alvarado",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Zenaida Vásquez y Amanda Soriano",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "parece una lista de varias personas",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Auditorio Banco Mercantil",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Guido López Gavilán/Johana Pizani",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Felipe Izcaray & Luimar Arismendi",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "parece una lista de varias personas",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Südwerstrundfunk / SWR",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Fundación Andrés Mata",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Wyastone Concert Hall",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "doubletakedesign.co.uk",
+      "rule": "no-es-una-persona:parece-un-titulo",
+      "detail": "empieza en minúscula o lleva varias palabras en minúscula: parece un título o un texto suelto",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Osvaldo Tarantino/Saul Cosentino",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Juan Delgado Music",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Gloria De Los Angeles Trevino Ruiz",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "demasiados tokens para un nombre",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Red Dot Studios",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Diana Franklin/Kristhyan Benitez",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Gianni Togni/Ver: R. Montaner",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Thelonius Monk/Arr: D. d Los Reyes",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Lennon/McCartney",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Manuel Felipe Ramón y Rivera",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "parece una lista de varias personas",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "from Suite Popular Brasileña",
+      "rule": "no-es-una-persona:parece-un-titulo",
+      "detail": "empieza en minúscula o lleva varias palabras en minúscula: parece un título o un texto suelto",
+      "claims": 5
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Anónimo/Arr: J. Benzaquén",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Estudio Etcétera",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Quasar Estudios",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Big Band Jazz de Las Americas",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Francisco Depaula Aguirre/Leoncio Martínez",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Sala José Félix Rivas del Teresa Carreño",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 6
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Folklore/Version: Rafael Osuna",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Pablo Herrero/José Luis Armenteros",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Pedro Elías Gutiérrez/Rafael Bolívar",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Luis Felipe Ramón y Rivera",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "parece una lista de varias personas",
+      "claims": 5
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Luis Silva/Joel Leonardo",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Pedro Arcila/Alfredo Cortina",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Gregorio J. Timote/Angel M. Landaeta",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Laudelino Mejias/Valentin Caruci",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Anìbal Córdova/Jhosir Córdova",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Tomaso Albinoni/J.S.Bach",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Estudios Eshkol",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Aleph Estudios",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Seldon Hall",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Sala José Felix Ribas",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "solo Alfonso",
+      "rule": "no-es-una-persona:parece-un-titulo",
+      "detail": "empieza en minúscula o lleva varias palabras en minúscula: parece un título o un texto suelto",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "solo Irina",
+      "rule": "no-es-una-persona:parece-un-titulo",
+      "detail": "empieza en minúscula o lleva varias palabras en minúscula: parece un título o un texto suelto",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Trio with John Taylor",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Zequeinha/Abreu",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Ortiz/Mirkin",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Trio",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Quartet",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Sala Alexander Von Humboldt",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "tracks 1-4",
+      "rule": "no-es-una-persona:parece-un-titulo",
+      "detail": "empieza en minúscula o lleva varias palabras en minúscula: parece un título o un texto suelto",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Auditorio Manuel de Falla",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Iberia Studio",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Estudios Intersonido",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "A. González y Fernández",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "parece una lista de varias personas",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Coro De La Escuela Superior De Música",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Auditorio de La Escuela Superior de Música",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Salle Pierre-Mercure du Centre Pierre Péladeau",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "demasiados tokens para un nombre",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "tracks 2 to 5",
+      "rule": "no-es-una-persona:parece-un-titulo",
+      "detail": "empieza en minúscula o lleva varias palabras en minúscula: parece un título o un texto suelto",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Abbey Road Studios",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Auditorio Stelio Molo",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "tracks 18-21",
+      "rule": "no-es-una-persona:parece-un-titulo",
+      "detail": "empieza en minúscula o lleva varias palabras en minúscula: parece un título o un texto suelto",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Henry Wood Hall",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "from Symphony No. 9 In D Minor - Finale",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "demasiados tokens para un nombre",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Yoa Orchestra Of The Americas",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Teatro Nacional de Costa Rica",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "The Orchestra of The Americas",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Teatro Del Lago Frutillar",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Jesús Rosas Marcano/Julio Delgado",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Orquesta Sinfónica Venezuela",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 3
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Guiomar Narváez * Luisa Elena Paesano **",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "demasiados tokens para un nombre",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "versión a 4 Manos",
+      "rule": "no-es-una-persona:parece-un-titulo",
+      "detail": "empieza en minúscula o lleva varias palabras en minúscula: parece un título o un texto suelto",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "versión a 2 Pianos",
+      "rule": "no-es-una-persona:parece-un-titulo",
+      "detail": "empieza en minúscula o lleva varias palabras en minúscula: parece un título o un texto suelto",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Dúo Juan Bautista Plaza: Beatriz Klein",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "demasiados tokens para un nombre",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Fundación Juan Bautista Plaza",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Jazzmania Estudio",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Sala José Félix Rivas",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Anilda Carrasquillo - Cover to Cover Design",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "demasiados tokens para un nombre",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Sala de Conciertos del Centro Consolidado",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Sala de Conciertos de La Fundación Cultural Corp Group",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "demasiados tokens para un nombre",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Jazzmanía Estudio",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 8
+    },
+    {
+      "kind": "person",
+      "identityRaw": "I. Meserón y Aranda",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "parece una lista de varias personas",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Teatro Alexander Von Humboldt",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 8
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Legato Producciones",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 8
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Homero y Virgilio Espósito",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "parece una lista de varias personas",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Diezo/Cabral",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Ensamble Vocal Homines Urbi",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Anónimo/Rec. V.E. Sojo",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Pablo Herrero/José Luis Armentero",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Daniela Romo/Bebu Silvetti",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Jorge Chacín/Ricardo Montaner",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Estudios Digiplay",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Carlos Gardel/Alfredo Le Pera",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Roberto Carlos/Erasmo Carlos",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Stanley Adams/María Grever",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Musica Reservata",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 5
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Teatro Emil Friedman",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Studio Kos",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Estudio Rock",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "\"La Crucifixion\" by Jan van Eick (Detalle: Jerusalén)",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "demasiados tokens para un nombre",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Auditorio del Colegio Instituto Andes",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "José Francisco Velásquez, El Joven",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "parece una lista de varias personas",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Grupo Vocal Sacro",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Schola Cantorum de Caracas Orfeón Universitario Simón Bolívar Cantoría Alberto Grau",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "demasiados tokens para un nombre",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Isabel Herrera de Umerez & Luis Morales Bance",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "parece una lista de varias personas",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "José Rodríguez/Nolberto Pirela",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Ricardo Pérez/Rafael Isaza/R. Caraballo/Folklore/D.D.",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Coro De Opera del Teatro Teresa Carreño",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "demasiados tokens para un nombre",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Fundación O.S.G.M.A.",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Estudios Del Este",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Estudios 1106",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Para ahuyentar los malos aspíritus",
+      "rule": "no-es-una-persona:parece-un-titulo",
+      "detail": "empieza en minúscula o lleva varias palabras en minúscula: parece un título o un texto suelto",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Sobre el nombre de Enrique Fernández Arbós",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "demasiados tokens para un nombre",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "\"Toros Coleados\" by Andrés Antonio Alvarez",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "demasiados tokens para un nombre",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Orquesta Sinfónica Municipal de Caracas",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Amigos del Coro del Teatro Teresa Carreño",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "demasiados tokens para un nombre",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Compañía Nacional de Ópera \"Alfredo Sadel\"",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "demasiados tokens para un nombre",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Sala Ríos Reyna del Teatro Teresa Carreño",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "demasiados tokens para un nombre",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Bilbao/Teruel",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "FTM Studios",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 3
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Antonio Vivaldi/J. Sebastian Bach",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Alessandro Marcello/J. Sebastian Bach",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Seis Preludios Incaicos - Pablo Chávez Aguilar",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "demasiados tokens para un nombre",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Sala José Félix Ribas",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Quasar Estudios KGD C.A.",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Trío Raúl Borges",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Lorenzo Camejo José Luis Presa Alberto Espinoza",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "demasiados tokens para un nombre",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Estudios Grau",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Zona P/Mouseñadores",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Freddy León/E. Chirinos",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "C.B.S. Studios",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 7
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Luis F. Ramón y Rivera",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "parece una lista de varias personas",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Andrade/Rodríguez Cárdenas",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Luis Laguna/Henry Martínez",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "National Philarmonic Orchestra of London",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 4
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Recop. Luis Felipe Ramón y Rivera",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "parece una lista de varias personas",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Pablo Canela/María Jiménez",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Real Orquesta Filarmónica De Madrid",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Estudios Kirios",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 3
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Estudios Musigrama",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Valentín Carucci/Manuel Luna",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Fco. de Paula Aguirre/Leoncio Martínez",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Pedro E. Gutierrez/Bolivar Coronado",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Real Orquesta Filarmonica De Madrid",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "tracks 3 to 9",
+      "rule": "no-es-una-persona:parece-un-titulo",
+      "detail": "empieza en minúscula o lleva varias palabras en minúscula: parece un título o un texto suelto",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "tracks 14 to 16",
+      "rule": "no-es-una-persona:parece-un-titulo",
+      "detail": "empieza en minúscula o lleva varias palabras en minúscula: parece un título o un texto suelto",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Clear Note Studio",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Concierto De Las Tres Esferas",
+      "rule": "padre-sin-resolver",
+      "detail": "el artista del disco aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Concierto Sacro",
+      "rule": "padre-sin-resolver",
+      "detail": "el artista del disco aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela - Oriente",
+      "rule": "padre-sin-resolver",
+      "detail": "el artista del disco aún no está en el core",
+      "claims": 13
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela - Centro",
+      "rule": "padre-sin-resolver",
+      "detail": "el artista del disco aún no está en el core",
+      "claims": 13
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela - Occidente",
+      "rule": "padre-sin-resolver",
+      "detail": "el artista del disco aún no está en el core",
+      "claims": 13
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela - Llanos",
+      "rule": "padre-sin-resolver",
+      "detail": "el artista del disco aún no está en el core",
+      "claims": 13
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela - Sur",
+      "rule": "padre-sin-resolver",
+      "detail": "el artista del disco aún no está en el core",
+      "claims": 13
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela - Valses",
+      "rule": "padre-sin-resolver",
+      "detail": "el artista del disco aún no está en el core",
+      "claims": 13
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Hay Algo Sinfónico Entre Tu y Yo",
+      "rule": "padre-sin-resolver",
+      "detail": "el artista del disco aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Danzón - Música de Latinoamerica",
+      "rule": "padre-sin-resolver",
+      "detail": "el artista del disco aún no está en el core",
+      "claims": 7
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas",
+      "rule": "padre-sin-resolver",
+      "detail": "el artista del disco aún no está en el core",
+      "claims": 8
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Orfeón Lamas & Orquesta Sinfónica Venezuela::Concierto Sacro",
+      "rule": "padre-sin-resolver",
+      "detail": "el artista del disco aún no está en el core",
+      "claims": 8
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Beethoven",
+      "rule": "padre-sin-resolver",
+      "detail": "el artista del disco aún no está en el core",
+      "claims": 8
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Venezuela Sinfónica",
+      "rule": "padre-sin-resolver",
+      "detail": "el artista del disco aún no está en el core",
+      "claims": 8
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Tchaikosvky Espectacular",
+      "rule": "padre-sin-resolver",
+      "detail": "el artista del disco aún no está en el core",
+      "claims": 8
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Navidad Sinfónica",
+      "rule": "padre-sin-resolver",
+      "detail": "el artista del disco aún no está en el core",
+      "claims": 7
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Simón Bolívar Symphony Orchestra of Venezuela::Revueltas, Orbón & Ginastera",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "5925 «Revueltas, Orbon & Ginastera»: el ER vio una contradicción (año, duración…)",
+      "claims": 7
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Venezuela Suite (Series)::Suite Zuliana",
+      "rule": "padre-sin-resolver",
+      "detail": "el artista del disco aún no está en el core",
+      "claims": 8
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Venezuela Suite (Series)::Suite Andina",
+      "rule": "padre-sin-resolver",
+      "detail": "el artista del disco aún no está en el core",
+      "claims": 8
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Venezuela Suite (Series)::Suite Central",
+      "rule": "padre-sin-resolver",
+      "detail": "el artista del disco aún no está en el core",
+      "claims": 8
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Venezuela Suite (Series)::Suite Oriental",
+      "rule": "padre-sin-resolver",
+      "detail": "el artista del disco aún no está en el core",
+      "claims": 8
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Venezuela Suite (Series)::Suite Larense",
+      "rule": "padre-sin-resolver",
+      "detail": "el artista del disco aún no está en el core",
+      "claims": 8
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera",
+      "rule": "padre-sin-resolver",
+      "detail": "el artista del disco aún no está en el core",
+      "claims": 8
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite",
+      "rule": "padre-sin-resolver",
+      "detail": "el artista del disco aún no está en el core",
+      "claims": 8
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2",
+      "rule": "padre-sin-resolver",
+      "detail": "el artista del disco aún no está en el core",
+      "claims": 8
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Juan Francisco Sans & Luis Gómez Imbert::Con Corda",
+      "rule": "padre-sin-resolver",
+      "detail": "el artista del disco aún no está en el core",
+      "claims": 7
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Leopoldo Betancourt::Con El Corazón En Las Manos",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "5897 «Con El Corazon En Las Manos»: el ER vio una contradicción (año, duración…)",
+      "claims": 8
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Danzón - Música de Latinoamerica::Danzón Nº 2",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Danzón - Música de Latinoamerica::Danzón Nº 3 for Flute, Guitar & Orchestra",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Danzón - Música de Latinoamerica::La Muerte Del Angel",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Danzón - Música de Latinoamerica::Danzón Nº 4",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Danzón - Música de Latinoamerica::Melodia en La",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Danzón - Música de Latinoamerica::Ten Presente El Presente",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Danzón - Música de Latinoamerica::Suite Onda Nueva",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Alirio Díaz::Recital::Guasa",
+      "rule": "sin-decision-er",
+      "detail": "la identidad no tiene decisión de ER registrada",
+      "claims": 1
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela CENTRO::Toy' Contento",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela CENTRO::Analicia",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela CENTRO::Desilusión",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela CENTRO::Caballo Viejo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela CENTRO::Dama Antañona",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela CENTRO::Ansiedad",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela CENTRO::Carmen La Que Contaba 16 Años",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela CENTRO::Moliendo Café",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela CENTRO::La Pelota De Carey",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela CENTRO::La Burra",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela ORIENTE::Polo Margariteño",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela ORIENTE::Luna De Margarita",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela ORIENTE::María Antonia",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela ORIENTE::Presagio",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela ORIENTE::Mare Mare",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela ORIENTE::El Carite",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela ORIENTE::La Burriquita",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela ORIENTE::Zumba Que Zumba",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela ORIENTE::Venezuela",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela ORIENTE::Alma Llanera",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela OCCIDENTE::Mujer Merideña",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela OCCIDENTE::Conticinio",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela OCCIDENTE::Brisas Del Torbes",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela OCCIDENTE::Sierra Nevada",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela OCCIDENTE::Mucuchies",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela OCCIDENTE::Pluma y Lira",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela OCCIDENTE::Sin Rencor",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela OCCIDENTE::Maracaibera",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela OCCIDENTE::Endrina",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela OCCIDENTE::Sombra En Los Medanos",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela OCCIDENTE::Crepúsculo Coriano",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela SUR::La Sapoara",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela SUR::Woman Del Callao",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela SUR::El Callao Tunai",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela SUR::Guayana Es",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela SUR::Yo Me Quedo En venezuela",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela SUR::Matilda",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela SUR::Bandido",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela SUR::El Sapo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela SUR::Mujer Guayanesa",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela SUR::Viajera Del Rio",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela LLANOS::Fiesta En Elorza",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela LLANOS::Neudys - Pajarillo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela LLANOS::Chaparralito Llanero",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela LLANOS::El Gavilán",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela LLANOS::Carrao, Carrao",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela LLANOS::Linda Barinas",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela LLANOS::El Becerrito",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela LLANOS::Vestida De Garza Blanca",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela LLANOS::Viejo Soguero",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela LLANOS::Enfurecida",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela VALSES::Las Bellas Noches De Maiquetía",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela VALSES::Adiós A Ocumare",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela VALSES::Conticinio",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela VALSES::Dama Antañona",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela VALSES::Luna De Margarita",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela VALSES::Mujer Merideña",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela VALSES::Sombra En Los Medanos",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela VALSES::Ansiedad",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela VALSES::Pluma y Lira",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela VALSES::Crepúsculo Coriano",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Crepúsculo Coriano",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Polo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Sombra En Los Médanos",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::La Zapoara",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Calipso Del Callao",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Woman Del Callao",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Moliendo Café",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Maravillosa",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Ansiedad",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Venezuela",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Margarita Carreño",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Tobogán De La Selva",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Luisa",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Caracas Vieja",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Desesperanza",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Algo Sublime",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Tío Amaury",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Merideña",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Voraz",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Viajera Del Río",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Romance",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Ausencia",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Siete Estrellas",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Paisaje Apureño",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Romance En La Lejanía",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Linda Barinas",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Canto De Guaraña",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Río Orinoco",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::La Burra",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::El Cocuy Que Alumbra",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orfeón Lamas & Orquesta Sinfónica Venezuela::Concierto Sacro::Stabat Mater",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orfeón Lamas & Orquesta Sinfónica Venezuela::Concierto Sacro::Llorad Mortales. Pésame a La Virgen",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orfeón Lamas & Orquesta Sinfónica Venezuela::Concierto Sacro::Es María Norte y Guía",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orfeón Lamas & Orquesta Sinfónica Venezuela::Concierto Sacro::Salve Regina",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orfeón Lamas & Orquesta Sinfónica Venezuela::Concierto Sacro::Popule Meus",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Beethoven::Beethoven Sinfonía # 9",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Venezuela Sinfónica::Antelación e Imitación Fugaz",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Venezuela Sinfónica::Camino Entre lo Sutil e Inerrante",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Tchaikosvky Espectacular::Obertura Fantasía \"Romeo y Julieta\"",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Tchaikosvky Espectacular::Marcha Eslava Op. 31",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Tchaikosvky Espectacular::Obertura Solemne 1812 Op. 49",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Navidad Sinfónica::Navidad Venezolana",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Navidad Sinfónica::- Niño Lindo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 8
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Navidad Sinfónica::- Aguinaldo Criollo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 8
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Navidad Sinfónica::- Niño Jesús Llanero",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 8
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Navidad Sinfónica::- Luna Decembrina",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Navidad Sinfónica::- Fuego Al Cañon",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Navidad Sinfónica::Sentir Zuliano",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Navidad Sinfónica::Noche De Paz",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Navidad Sinfónica::Aguinaldos",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Navidad Sinfónica::- Esplendida Noche",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Navidad Sinfónica::- De Contento",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Navidad Sinfónica::- La Virgen Del Valle",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Navidad Sinfónica::- Nació El Redentor",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Navidad Sinfónica::- Niño Venturoso",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Navidad Sinfónica::- La Capilla Esta Abierta",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Navidad Sinfónica::El Niño Del Avila",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Navidad Sinfónica::Haremos Promesas",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Navidad Sinfónica::Esta Bella Noche",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Navidad Sinfónica::Sin Rencor",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Navidad Sinfónica::Gaita A La Orquesta",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Navidad Sinfónica::Canto A La Vida",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Bolívar Symphony Orchestra of Venezuela::Revueltas, Orbón & Ginastera::The Fishermen",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Bolívar Symphony Orchestra of Venezuela::Revueltas, Orbón & Ginastera::The Child's Funeral",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Bolívar Symphony Orchestra of Venezuela::Revueltas, Orbón & Ginastera::Setting Out to Fish",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Bolívar Symphony Orchestra of Venezuela::Revueltas, Orbón & Ginastera::The Fight",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Bolívar Symphony Orchestra of Venezuela::Revueltas, Orbón & Ginastera::The Return of The Fishermen with Their Dead Friend",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Bolívar Symphony Orchestra of Venezuela::Revueltas, Orbón & Ginastera::Moderato",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Bolívar Symphony Orchestra of Venezuela::Revueltas, Orbón & Ginastera::Lento",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Bolívar Symphony Orchestra of Venezuela::Revueltas, Orbón & Ginastera::Allegro",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Bolívar Symphony Orchestra of Venezuela::Revueltas, Orbón & Ginastera::Sensemaya",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Bolívar Symphony Orchestra of Venezuela::Revueltas, Orbón & Ginastera::Adagio contemplativo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Bolívar Symphony Orchestra of Venezuela::Revueltas, Orbón & Ginastera::Impetuosamente",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Bolívar Symphony Orchestra of Venezuela::Revueltas, Orbón & Ginastera::Largo con poetica",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Zuliana::Pregones Zulianos",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Zuliana::Maracaibo En La Noche",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Zuliana::Horizonte",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Zuliana::Amanecer Zuliano",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Zuliana::El Diablo Suelto",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Zuliana::La Reina",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Zuliana::Juliana",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Zuliana::Lluvia",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Zuliana::Desvelo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Zuliana::Brisas Del Zulia",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Zuliana::Soberana",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Zuliana::Chinita De Maracaibo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Zuliana::La Cabra Mocha",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Zuliana::Luna De Maracaibo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Zuliana::Luisa",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Zuliana::Inquietud",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Zuliana::La Guitarra De Mi Lago",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Zuliana::Tu Boca",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Zuliana::La Novia Del Lago",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Zuliana::Virgen De Chiquinquira",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Zuliana::Mi Lago Azul",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Zuliana::El Cocotero",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Zuliana::La Restinga",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Zuliana::La Grey Zuliana",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Zuliana::Gaita Mundial",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Andina::Conticinio",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Andina::Pluma y Lira",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Andina::Flor De Loto",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Andina::Nostalgia Andina",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Andina::Brisas del Torbes",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Andina::Cuando Me Quieras",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Andina::Andino",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Andina::El Ultimo Ruego",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Andina::Tierra Andina",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Andina::Lejanía",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Andina::Trujillo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Andina::Cantos De Mi Tierra",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Andina::Capricho Andino",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Andina::Preciosa",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Andina::Desesperanza",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Andina::Canción Del Adiós",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Andina::Elevación",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Andina::Si Tú Me Das Amor",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Andina::Bésame",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Andina::Rosa De Tentación",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Andina::Si Sonríe",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Andina::Yo Sin Tí No Puedo Estar",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Andina::Igual Que Tú",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Central::Dama Antañona",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Central::Morir Es Nacer",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Central::Valencia",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Central::Mañanita Caraqueña",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Central::El Cumaco De San Juan",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Central::Barlovento",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Central::Canto a Caracas",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Central::Besos En Mis Sueños",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Central::Tu Partida",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Central::Amalia",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Central::Totumo De Guarenas",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Central::Marisela",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Central::Las Bellas De Maiquetia",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Central::Adios a Ocumare",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Central::Natalia - Vals Nº3",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Central::Criollisima",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Central::El Muñeco De La Ciudad",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Central::Fulgida Luna",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Central::Puerto Cabello",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Central::Esta Noche Serena",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Central::Quinta Anauco",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Central::Alma Llanera",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Central::Jarro Mocho",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Central::Tristeza",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Central::Lamento Borincano",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Central::Tristeza Moruna",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Central::Lady Love",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Central::No Puedo Olvidarte",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Oriental::Margarita",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Oriental::Polo Margariteño",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Oriental::Golpe y Estribillo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Oriental::La Bandola de Cesáreo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Oriental::Alma Cumanesa",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Oriental::Joropo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Oriental::Rio Manzanares",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Oriental::El Carite",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Oriental::Costas De Oriente",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Oriental::Mar De La Virgen Bonita",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Oriental::Canchunchu Florido",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Oriental::La Lagrima",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Oriental::Luna De Margarita",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Oriental::Galeron Margariteño",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Oriental::Gaita Oriental",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Oriental::Capricho Oriental",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Larense::Noches Larenses",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Larense::Chaparralito",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Larense::Pablera",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Larense::El Gavilan Tocuyano",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Larense::La Negra",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Larense::Golpe Tocuyano",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Larense::La Bella Del Tamunangue",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Larense::Como Llora Una Estrella",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Larense::Barquisimeto",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Larense::Hendrina",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Larense::María Elena",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Larense::Guitarra Larense",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Larense::Ramoncito En Cimarrona",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Larense::Capricho Larense",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Larense::La Veragacha",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Larense::Carora",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Larense::Amalia Rosa",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Larense::La Casona - Pablera",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Larense::Capricho Caraqueño",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Larense::La Guayaba",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Larense::Lisboa Antigua",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Larense::Alma Llanera",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Larense::Abril En Portugal",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Larense::Volare",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Concierto En La Llanura",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Madrugada Llanera",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Pesadilla Entre Las Flores",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Mi Querencia",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Caballo Viejo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Sentimiento Apureño",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Vestida de Garza Blanca",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::El Gavilán",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Fiesta En Elorza",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Pasillaneando",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::El Burrito",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Adiós",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Pajarillo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Fantasía Llanera",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Quirpa",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Zumba que Zumba",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Preludio",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Periquera",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Seis Numerao",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::San Rafael",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Quitapesares",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::El Carnaval",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Tonada",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Seis por Derecho",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::El Gabán",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Venezuela Habla Cantando",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Joropo Final",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Semana Santa en Achaguas",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::La Chipola",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Dime Luna",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Estrella India",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Palma Sola",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Mi Merengue",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Corre Lucero",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Un Heladero Con Clase",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Dulce Locura",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite::Conticinio",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite::Mi Querencia",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite::Caballo Viejo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite::Sentimiento Apureño",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite::Vestida de Garza Blanca",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite::Margarita",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite::La Cabra Mocha",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite::Pablera",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite::El Gavilán Tocuyano",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite::La Negra",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite::Golpe Tocuyano",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite::La Bella del Tamunangue",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite::Amalia",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite::El Totumo de Guarenas",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite::Marisela",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite::Polo Margariteño",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite::Golpe y Estribillo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite::La Bandola de Cesareo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite::Cantos De Mi Tierra",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite::Quinta Anauco",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite::Criollísima",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite::El Jarro Mocho",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite::Alma Llanera",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Mar De La Virgen Bonita",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Canchunchu Florido",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Noches Larenses",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Chaparralito",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Desvelo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Brisas Del Zulia",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Soberana",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Andino",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Fulgida Luna",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Puerto Cabello",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Esta Noche Serena",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Concierto En La Llanura",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Carora",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Hendrina",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::María Elena",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Guitarra Larense",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::La Veragacha",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Lluvia",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Moliendo Café",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Juliana",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Desesperanza",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Caracas Vieja",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Algo Sublime",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Juan Francisco Sans & Luis Gómez Imbert::Con Corda::De La Liberación de Las Formas",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Juan Francisco Sans & Luis Gómez Imbert::Con Corda::Hispania",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Juan Francisco Sans & Luis Gómez Imbert::Con Corda::Joropo Cibernético",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Juan Francisco Sans & Luis Gómez Imbert::Con Corda::Tonada",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Juan Francisco Sans & Luis Gómez Imbert::Con Corda::Gaita",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Juan Francisco Sans & Luis Gómez Imbert::Con Corda::Lied de Bolsillo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Juan Francisco Sans & Luis Gómez Imbert::Con Corda::Andante Evangélico",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Juan Francisco Sans & Luis Gómez Imbert::Con Corda::Tocatta",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Juan Francisco Sans & Luis Gómez Imbert::Con Corda::I",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Juan Francisco Sans & Luis Gómez Imbert::Con Corda::II",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Juan Francisco Sans & Luis Gómez Imbert::Con Corda::Con Corda",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Juan Francisco Sans & Luis Gómez Imbert::Con Corda::Matinal",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Juan Francisco Sans & Luis Gómez Imbert::Con Corda::Nocturnal",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Juan Francisco Sans & Luis Gómez Imbert::Con Corda::Elegía",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Juan Francisco Sans & Luis Gómez Imbert::Con Corda::Danza",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Juan Francisco Sans & Luis Gómez Imbert::Con Corda::Omaggio",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Juan Francisco Sans & Luis Gómez Imbert::Con Corda::Rohanda",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Juan Francisco Sans & Luis Gómez Imbert::Con Corda::Cruces de Intención",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Juan Francisco Sans & Luis Gómez Imbert::Con Corda::La Gran Puerta",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Juan Francisco Sans & Luis Gómez Imbert::Con Corda::Retratos: Luis Gómez Imbert",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Leopoldo Betancourt::Con El Corazón En Las Manos::Tan Enamorados",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Leopoldo Betancourt::Con El Corazón En Las Manos::Noche De Mar - Motivos",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Leopoldo Betancourt::Con El Corazón En Las Manos::Es Verdad",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Leopoldo Betancourt::Con El Corazón En Las Manos::Desesperanza",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Leopoldo Betancourt::Con El Corazón En Las Manos::De Conde A Principal",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Leopoldo Betancourt::Con El Corazón En Las Manos::Viajera Del Rio",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Leopoldo Betancourt::Con El Corazón En Las Manos::Bésame",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Leopoldo Betancourt::Con El Corazón En Las Manos::Besos En Mis Sueños",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Leopoldo Betancourt::Con El Corazón En Las Manos::Mi Querencia",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Leopoldo Betancourt::Con El Corazón En Las Manos::Si La Ves",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Leopoldo Betancourt::Con El Corazón En Las Manos::En Aquel Lugar Secreto",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Leopoldo Betancourt::Con El Corazón En Las Manos::Serenata",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    }
+  ],
+  "duplicateFlags": [
+    {
+      "kind": "person",
+      "identityRaw": "Jaime Martinez",
+      "rule": "homonimo-sin-proyecto-comun",
+      "flag": {
+        "reason": "homonimo-exacto",
+        "otherIds": [
+          7025
+        ],
+        "otherNames": [
+          "Jaime Martínez"
+        ]
+      },
+      "targetId": 20620
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Gregory Parra",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          14846
+        ],
+        "otherNames": [
+          "Gregorio Parra"
+        ]
+      },
+      "targetId": 20621
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Carlos Bello",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          16548
+        ],
+        "otherNames": [
+          "Carlos Abello"
+        ]
+      },
+      "targetId": 20622
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Rainer Ossott",
+      "rule": "homonimo-sin-proyecto-comun",
+      "flag": {
+        "reason": "homonimo-exacto",
+        "otherIds": [
+          16434
+        ],
+        "otherNames": [
+          "Rainer Ossott"
+        ]
+      },
+      "targetId": 20624
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Adrián Suárez",
+      "rule": "homonimo-sin-proyecto-comun",
+      "flag": {
+        "reason": "homonimo-exacto",
+        "otherIds": [
+          3051
+        ],
+        "otherNames": [
+          "Adrián Suarez"
+        ]
+      },
+      "targetId": 20625
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Manuel Hernández Silva",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          5456,
+          15950
+        ],
+        "otherNames": [
+          "Manuel Hernández",
+          "Manuel Hernández"
+        ]
+      },
+      "targetId": 20627
+    }
+  ],
+  "errors": [],
+  "runId": 11355
+}

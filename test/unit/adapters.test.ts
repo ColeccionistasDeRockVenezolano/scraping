@@ -263,6 +263,36 @@ describe("adapters funcionales de las fuentes autorizadas", () => {
     expect(claims.some((claim) => claim.entityKind === "organization" && claim.rawValue === "Violin")).toBe(false);
   });
 
+  it("Sincopa numera corrido un vinilo cuya cara B vuelve a empezar en 01", () => {
+    const adapter = adapterFor({ slug: "sincopa", siteType: "database" });
+    if (!adapter?.extractSnapshot) throw new Error("adapter Sincopa faltante");
+    const fixture = (sideB: string) => `
+      <table><tr>
+        <td>Artist:<br>Album Title:<br>Company:<br>Genre:<br>Release Year:</td>
+        <td><b>Bienmesabe</b><br>Para Siempre<br>CBS/Columbia<br>Latin-Fusion<br>1985 (LP)</td>
+      </tr></table>
+      <table><tr><td bgcolor="#FFCC00"><b>Tracks</b></td></tr></table>
+      <table><tr><td>
+        <font color="#FFFFCC">Side A</font><font color="#FFFFFF"><br>
+        01- </font><font color="#FFCC00">Las Maracuchas </font><font color="#FFFFFF">(Manuel Urbina) 3:40<br>
+        02- </font><font color="#FFCC00">Siete Minutos </font><font color="#FFFFFF">(Alí Aguero) 4:19<br><br></font>
+        <font color="#FFFFCC">Side B - Estudio</font><font color="#FFFFFF"><br>
+        ${sideB}
+      </td></tr></table>`;
+    const numbers = (body: string) => adapter.extractSnapshot!({
+      url: "https://fixture.invalid/latin_pop/cdinfo_latin/bienmesabe_parasiempre.htm", kind: "html", rawPageId: 1, body,
+    }).flatMap(normalizeRecord)
+      .filter((claim) => claim.entityKind === "track" && claim.field === "track_number")
+      .map((claim) => claim.rawValue);
+
+    expect(numbers(fixture(`01- </font><font color="#FFCC00">Dejala Que Baile </font><font color="#FFFFFF">(Manuel Urbina) 3:25<br>
+        02- </font><font color="#FFCC00">No Es Nada </font><font color="#FFFFFF">(Edgar Salazar) 3:02</font>`)))
+      .toEqual(["01", "02", "3", "4"]);
+    expect(numbers(fixture(`03- </font><font color="#FFCC00">Dejala Que Baile </font><font color="#FFFFFF">(Manuel Urbina) 3:25<br>
+        04- </font><font color="#FFCC00">No Es Nada </font><font color="#FFFFFF">(Edgar Salazar) 3:02</font>`)))
+      .toEqual(["01", "02", "03", "04"]);
+  });
+
   it("Sincopa no trata una ficha detallada de sencillo como año, álbum y sello", () => {
     const adapter = adapterFor({ slug: "sincopa", siteType: "database" });
     if (!adapter?.extractSnapshot) throw new Error("adapter Sincopa faltante");
