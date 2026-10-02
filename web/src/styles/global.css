@@ -240,12 +240,57 @@ main { padding: 32px 0 96px; }
 .entity-hero__title { font-size: 30px; margin: 0; letter-spacing: -0.01em; line-height: 1.1; overflow-wrap: anywhere; }
 .entity-hero__meta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
 .entity-hero__desc { color: var(--text-muted); font-size: 14px; margin-top: 12px; max-width: 72ch; white-space: pre-wrap; }
+.artist-profile { grid-template-columns: 232px minmax(0, 1fr); gap: 24px 32px; }
+.artist-profile__media { position: relative; width: 232px; max-width: 100%; align-self: start; }
+.artist-profile .entity-hero__art { position: relative; width: 100%; height: auto; aspect-ratio: 1; padding: 0; }
+.artist-profile .entity-hero__logo {
+  position: absolute; z-index: 1; right: 8px; bottom: 8px;
+  width: 88px; height: 30px; min-height: 0; margin: 0; padding: 7px;
+  background: #00000082; box-shadow: 0 5px 16px #00000080;
+}
+.artist-profile .entity-hero__logo--square,
+.artist-profile .entity-hero__logo--near-square { width: 88px; height: 88px; }
+.artist-profile .entity-hero__logo--pending { visibility: hidden; }
+.artist-profile .entity-hero__logo img { width: 100%; height: 100%; max-height: none; object-fit: contain; }
+.artist-profile__image-button { cursor: zoom-in; font: inherit; color: inherit; }
+.artist-profile__image-button:hover { border-color: var(--text-faint); background: var(--surface-3); }
+.artist-profile .entity-hero__logo:hover { background: #000000b0; }
+.artist-profile__image-button:focus-visible { outline: 2px solid var(--red); outline-offset: 3px; }
+.artist-profile__photo-hint {
+  position: absolute; left: 8px; bottom: 8px; display: inline-flex; align-items: center; gap: 5px;
+  padding: 6px 8px; border-radius: var(--radius-md); background: #000000b0; border: 1px solid var(--border);
+  color: #fff; font-size: 11px; font-weight: 600; line-height: 1;
+}
+.artist-profile__logo-hint { position: absolute; top: 5px; right: 5px; color: #fff; filter: drop-shadow(0 1px 2px #000); }
+.artist-profile__content { min-width: 0; }
+.artist-profile__content .entity-hero__title { margin: 0 0 20px; }
+.artist-profile__aliases { min-width: 0; margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--border); }
+.artist-profile__aliases h2, .artist-profile__biography h2 { margin: 0 0 10px; color: var(--text-faint); font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.artist-profile__aliases .chip { max-width: 100%; flex-wrap: nowrap; }
+.alias-chip__name { min-width: 0; overflow-wrap: anywhere; }
+.alias-chip__type { color: var(--text-faint); font-size: 11px; white-space: nowrap; }
+.artist-profile__biography { grid-column: 1 / -1; padding-top: 20px; border-top: 1px solid var(--border); }
+.artist-profile .entity-hero__bio { margin: 0; min-width: 0; }
+.artist-profile .entity-hero__desc { margin: 0; line-height: 1.65; }
+.artist-profile > .rewrite-mark { grid-column: 1 / -1; }
+.artist-image-viewer { display: grid; place-items: center; min-height: 160px; background: none; border-radius: none; overflow: hidden; }
+.artist-image-viewer img { max-width: 100%; max-height: min(70dvh, 800px); width: auto; height: auto; object-fit: contain; }
+@media (max-width: 900px) {
+  .artist-profile .entity-info { grid-template-columns: 1fr; }
+  .artist-profile .entity-info__group + .entity-info__group { margin-top: 16px; }
+}
 @media (max-width: 640px) {
   .entity-hero { grid-template-columns: 1fr; }
   .entity-hero__art { width: 88px; height: 88px; }
   .entity-hero__title { font-size: 24px; }
   .entity-hero__meta .badge { max-width: 100%; white-space: normal; overflow-wrap: anywhere; }
   .entity-hero__desc { overflow-wrap: anywhere; }
+  .artist-profile { gap: 20px; }
+  .artist-profile__media { width: 176px; }
+  .artist-profile__photo-hint { padding: 6px; }
+  .artist-profile__photo-hint span { display: none; }
+  .artist-profile__content .entity-hero__title { margin-bottom: 4px; }
+  .artist-profile__aliases { margin-top: 20px; }
 }
 
 /* ---------- ficha: datos en columnas y pestañas ---------- */
@@ -253,6 +298,10 @@ main { padding: 32px 0 96px; }
   display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 36px; margin-top: 16px;
 }
 .entity-info__col { margin: 0; display: flex; flex-direction: column; border-top: 1px solid var(--border-soft); }
+.entity-info__group { min-width: 0; }
+.entity-info__heading { margin: 0 0 10px; color: var(--text-faint); font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.entity-info--grouped { margin-top: 0; }
+.entity-info--grouped .entity-info__col { border-top: 0; }
 .entity-info__row {
   display: grid; grid-template-columns: 124px minmax(0, 1fr); gap: 12px; align-items: baseline;
   padding: 8px 0; border-bottom: 1px solid var(--border-soft);
@@ -276,7 +325,8 @@ main { padding: 32px 0 96px; }
 .expandable__toggle { margin-top: 4px; padding-left: 0; }
 @media (max-width: 760px) {
   .entity-info { grid-template-columns: 1fr; }
-  .entity-info__col + .entity-info__col { border-top: 0; }
+  .entity-info__group + .entity-info__group { margin-top: 16px; }
+  .entity-info__group + .entity-info__group .entity-info__col { border-top: 0; }
   .entity-info__row, .entity-info__wide { grid-template-columns: 104px minmax(0, 1fr); }
 }
 
@@ -720,11 +770,15 @@ td.num { font-family: var(--font-mono); }
 }
 @keyframes crv-fade { from { opacity: 0; } to { opacity: 1; } }
 .modal-panel {
-  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-lg); width: min(560px, 100%); max-height: 86vh; overflow-y: auto;
+  background: #000000e0;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg); 
+  width: min(560px, 100%); 
+  max-height: 86vh; 
+  overflow-y: hidden;
   padding: 22px 24px;
 }
-.modal-panel--wide { width: min(760px, 100%); }
+/*.modal-panel--wide { width: min(760px, 100%); }*/
 .modal-header { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 16px; }
 .modal-header h2 { font-size: 18px; margin: 0; }
 .modal-close { background: none; border: 0; color: var(--text-faint); font-size: 20px; cursor: pointer; line-height: 1; padding: 4px; }

@@ -13,9 +13,10 @@ interface AliasEditorProps {
   entityId: number;
   aliases: Alias[];
   onChanged: () => void;
+  compactTypeLabels?: boolean;
 }
 
-export function AliasEditor({ path, entityId, aliases, onChanged }: AliasEditorProps) {
+export function AliasEditor({ path, entityId, aliases, onChanged, compactTypeLabels = false }: AliasEditorProps) {
   const { isAdmin } = useOperator();
   const { notify } = useToast();
   const [adding, setAdding] = useState(false);
@@ -68,10 +69,10 @@ export function AliasEditor({ path, entityId, aliases, onChanged }: AliasEditorP
     <div>
       <ul style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
         {aliases.map((item) => (
-          <li key={item.id} className={`chip ${item.isPrimary ? "is-primary" : ""}`}>
+          <li key={item.id} className={`chip alias-chip ${item.isPrimary ? "is-primary" : ""}`}>
             {item.isPrimary ? <Star className="chip-icon chip-icon--primary" aria-label="Alias principal" weight="fill" /> : null}
-            <span>{item.alias}</span>
-            <span style={{ color: "var(--text-faint)", fontSize: 11 }}>{aliasTypeLabel(item.aliasType)}</span>
+            <span className="alias-chip__name">{item.alias}</span>
+            <span className="alias-chip__type" title={aliasTypeLabel(item.aliasType)}>{compactTypeLabels && item.aliasType === "name_variant" ? "Variante" : aliasTypeLabel(item.aliasType)}</span>
             {isAdmin ? (
               <>
                 {!item.isPrimary ? (

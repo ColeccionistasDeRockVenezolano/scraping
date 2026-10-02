@@ -36,7 +36,7 @@ export default tseslint.config(
       parserOptions: {
         projectService: {
           // Configuración de herramientas que ningún tsconfig incluye.
-          allowDefaultProject: ["vitest.config.ts", "web/vite.config.ts", "web/tests/visual/*.ts"],
+          allowDefaultProject: ["vitest.config.ts", "web/vite.config.ts", "web/tests/visual/*.ts", "web/tests/unit/*.ts"],
         },
         tsconfigRootDir: import.meta.dirname,
       },

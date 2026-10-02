@@ -8,8 +8,11 @@
     "node": ">=22.0.0"
   },
   "scripts": {
+    "predev": "node scripts/generate-logo-dimensions.mjs",
     "dev": "vite",
+    "prebuild": "node scripts/generate-logo-dimensions.mjs",
     "build": "tsc -p tsconfig.json --noEmit && vite build",
+    "prebuild:public": "node scripts/generate-logo-dimensions.mjs",
     "build:public": "tsc -p tsconfig.json --noEmit && vite build --base=/crv/ --outDir dist-public",
     "preview": "vite preview",
     "serve:public": "node server.mjs",

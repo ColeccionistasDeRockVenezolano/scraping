@@ -2,7 +2,7 @@ import { useId, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { RewritePendingMark } from "../components/RewritePendingMark";
 import { BackLink } from "../components/BackLink";
-import { GitMerge, PencilSimple, Trash } from "@phosphor-icons/react";
+import { ArrowsOutSimple, GitMerge, PencilSimple, Trash } from "@phosphor-icons/react";
 import { artistsApi, artistMemberWrites, artistWrites } from "../lib/api";
 import { useAsync } from "../lib/useAsync";
 import { useMovedToRedirect } from "../lib/useMovedTo";
@@ -12,6 +12,7 @@ import { DetailSkeleton } from "../components/Skeletons";
 import { EntityCard, initialOf } from "../components/EntityCard";
 import { DeceasedMark } from "../components/DeceasedMark";
 import { AliasEditor } from "../components/AliasEditor";
+import { ArtistLogoButton } from "../components/ArtistLogoButton";
 import { EntityFormModal } from "../components/EntityFormModal";
 import { ConfirmDialog } from "../components/ConfirmDialog";
 import { MergeEntityModal } from "../components/MergeEntityModal";
@@ -20,7 +21,7 @@ import { EntityLoadError } from "../components/RemovedEntityState";
 import { EntityPicker } from "../components/EntityPicker";
 import { Modal } from "../components/Modal";
 import { ARTIST_FIELDS } from "../lib/entityFields";
-import { EntityInfo, type InfoItem } from "../components/EntityInfo";
+import { EntityInfo, type InfoGroup, type InfoItem } from "../components/EntityInfo";
 import { EntityTabs, TabEmpty, type TabSpec } from "../components/EntityTabs";
 import { ExpandableText } from "../components/ExpandableText";
 import { albumTypeLabel, artistTypeLabel } from "../lib/labels";
@@ -73,6 +74,7 @@ export function ArtistDetailPage() {
   const [addingMember, setAddingMember] = useState(false);
   const [editingMember, setEditingMember] = useState<ArtistMember | null>(null);
   const [merging, setMerging] = useState(false);
+  const [viewingImage, setViewingImage] = useState<"photo" | "logo" | null>(null);
 
   if (loading) return <DetailSkeleton />;
   if (error || !artist) return <EntityLoadError message={error ?? "Artista no encontrado."} errorValue={errorValue} onRetry={reload} />;
@@ -89,11 +91,15 @@ export function ArtistDetailPage() {
   const activeYears = artist.formedYear
     ? `${artist.formedYear}–${artist.disbandedYear ?? (status === "Activo" ? "presente" : "?")}`
     : null;
-  const info: InfoItem[] = [
-    { label: "Nombre real", value: titular ? <Link to={`/personas/${titular.personId}`}>{titular.personName}</Link> : null },
+  const originInfo: InfoItem[] = [
     { label: "País de origen", value: artist.originCountry },
     { label: "Ubicación", value: artist.originCity },
     { label: "Estado", value: status, fallback: "Desconocido" },
+    { label: "Formado en", value: artist.formedYear, fallback: "Sin dato" },
+    { label: "Años activos", value: activeYears },
+  ];
+  const identityInfo: InfoItem[] = [
+    { label: "Nombre real", value: titular ? <Link to={`/personas/${titular.personId}`}>{titular.personName}</Link> : null },
     // En un proyecto solista «formado en» es la carrera, y el nacimiento y el
     // fallecimiento son los de su titular: solo salen si hay quien los tenga.
     ...(titular ? [
@@ -102,14 +108,16 @@ export function ArtistDetailPage() {
       { label: titularDead ? "Edad al fallecer" : "Edad",
         value: ageText(titular.personBirthDate ?? null, titularDead ? titular.personDeathDate ?? null : null) },
     ] satisfies InfoItem[] : []),
-    { label: "Formado en", value: artist.formedYear, fallback: "Sin dato" },
-    { label: "Años activos", value: activeYears },
     // Género del artista (su trayectoria); cada disco muestra el suyo.
     { label: "Género", value: artist.genres?.length ? (
       <span className="entity-info__tags">{artist.genres.map((genre) => <span className="badge" key={genre.id}>{genre.name}</span>)}</span>
     ) : null, fallback: "Sin clasificar" },
     { label: "Tipo", value: artistTypeLabel(artist.artistType) },
     { label: "Último sello", value: artist.lastLabel ? <Link to={`/organizaciones/${artist.lastLabel.id}`}>{artist.lastLabel.name}</Link> : null, fallback: "Independiente / sin dato" },
+  ];
+  const infoGroups: InfoGroup[] = [
+    { title: "Origen y trayectoria", items: originInfo },
+    { title: "Identidad musical", items: identityInfo },
   ];
   // La API más antigua no manda estos campos: la ficha sigue abriendo sin ellos.
   const related = artist.related ?? [];
@@ -217,20 +225,37 @@ export function ArtistDetailPage() {
     <>
       <BackLink fallback="/artistas" />
 
-      <div className="entity-hero">
-        <span className="entity-hero__art">
-          {artist.pictureUrl ? <img src={artist.pictureUrl} alt="" loading="lazy" decoding="async" /> : <span className="placeholder">{initialOf(artist.name)}</span>}
-        </span>
-        <div>
+      <section className="entity-hero artist-profile" aria-label={`Ficha de ${artist.name}`}>
+        <div className="artist-profile__media">
+          {artist.pictureUrl ? (
+            <button type="button" className="entity-hero__art artist-profile__image-button" aria-label={`Ampliar foto de ${artist.name}`} onClick={() => setViewingImage("photo")}>
+              <img src={artist.pictureUrl} alt="" loading="eager" decoding="async" />
+              <span className="artist-profile__photo-hint" aria-hidden="true"><ArrowsOutSimple size={16} /><span>Ampliar foto</span></span>
+            </button>
+          ) : <span className="entity-hero__art"><span className="placeholder">{initialOf(artist.name)}</span></span>}
           {artist.logoUrl ? (
-            <span className="entity-hero__logo"><img src={artist.logoUrl} alt={`Logo de ${artist.name}`} loading="lazy" decoding="async" /></span>
+            <ArtistLogoButton key={artist.logoUrl} src={artist.logoUrl} artistId={artist.id} name={artist.name} onOpen={() => setViewingImage("logo")} />
           ) : null}
-          <h1 className="entity-hero__title">{artist.name}<DeceasedMark deceased={artist.isDeceased} /></h1>
-          <EntityInfo items={info} wide={{ label: "Alias", content: <AliasEditor path="artists" entityId={artist.id} aliases={artist.aliases} onChanged={reload} /> }} />
-          {artist.biography ? <div className="entity-hero__bio"><ExpandableText className="entity-hero__desc" text={artist.biography} /></div> : null}
-          <RewritePendingMark kind="artist" id={artist.id} onDone={reload} />
         </div>
-      </div>
+        <div className="artist-profile__content">
+          <h1 className="entity-hero__title">{artist.name}<DeceasedMark deceased={artist.isDeceased} /></h1>
+          <EntityInfo items={[]} groups={infoGroups} />
+          <div className="artist-profile__aliases">
+            <h2>Alias</h2>
+            <AliasEditor path="artists" entityId={artist.id} aliases={artist.aliases} onChanged={reload} compactTypeLabels />
+          </div>
+        </div>
+        {artist.biography ? <div className="artist-profile__biography entity-hero__bio"><h2>Biografía</h2><ExpandableText className="entity-hero__desc" text={artist.biography} /></div> : null}
+        <RewritePendingMark kind="artist" id={artist.id} onDone={reload} />
+      </section>
+
+      {viewingImage ? (
+        <Modal title={`${viewingImage === "photo" ? "Foto" : "Logo"} de ${artist.name}`} wide onClose={() => setViewingImage(null)}>
+          <div className="artist-image-viewer">
+            <img src={viewingImage === "photo" ? artist.pictureUrl ?? "" : artist.logoUrl ?? ""} alt={`${viewingImage === "photo" ? "Foto" : "Logo"} de ${artist.name}`} />
+          </div>
+        </Modal>
+      ) : null}
 
       {isAdmin ? (
         <div className="page-actions" style={{ marginTop: 14 }}>
