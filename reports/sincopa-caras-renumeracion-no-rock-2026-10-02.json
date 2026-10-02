@@ -1,0 +1,2228 @@
+{
+  "dryRun": false,
+  "runId": 11430,
+  "pages": 1311,
+  "albums": 106,
+  "tracksToMove": 137,
+  "moved": 137,
+  "skipped": 12,
+  "plans": [
+    {
+      "albumId": 5604,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 44713,
+          "title": "Alien Bazaar",
+          "from": 5,
+          "to": 11,
+          "oldClaimIds": [
+            1715468
+          ],
+          "newClaimId": 1821699,
+          "url": "https://sincopa.com/new_age/cdinfo_age/rada_armagedon.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 5759,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 45857,
+          "title": "Norteña",
+          "from": 4,
+          "to": 7,
+          "oldClaimIds": [
+            783490
+          ],
+          "newClaimId": 1821531,
+          "url": "https://sincopa.com/classic/cdinfo_class/aliriodiaz_1956recitaldguitare1.htm"
+        },
+        {
+          "trackId": 45858,
+          "title": "Valse Vénézuelienne",
+          "from": 5,
+          "to": 8,
+          "oldClaimIds": [
+            783525
+          ],
+          "newClaimId": 1821532,
+          "url": "https://sincopa.com/classic/cdinfo_class/aliriodiaz_1956recitaldguitare1.htm"
+        },
+        {
+          "trackId": 45859,
+          "title": "El Testamento De Amelia",
+          "from": 6,
+          "to": 9,
+          "oldClaimIds": [
+            783567
+          ],
+          "newClaimId": 1821533,
+          "url": "https://sincopa.com/classic/cdinfo_class/aliriodiaz_1956recitaldguitare1.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 5760,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 45864,
+          "title": "Villano",
+          "from": 5,
+          "to": 9,
+          "oldClaimIds": [
+            784182
+          ],
+          "newClaimId": 1821538,
+          "url": "https://sincopa.com/classic/cdinfo_class/aliriodiaz_1957recitaldguitare2.htm"
+        },
+        {
+          "trackId": 45865,
+          "title": "Etude Nº 7",
+          "from": 6,
+          "to": 10,
+          "oldClaimIds": [
+            784224
+          ],
+          "newClaimId": 1821539,
+          "url": "https://sincopa.com/classic/cdinfo_class/aliriodiaz_1957recitaldguitare2.htm"
+        },
+        {
+          "trackId": 45866,
+          "title": "Aconquija",
+          "from": 7,
+          "to": 11,
+          "oldClaimIds": [
+            784266
+          ],
+          "newClaimId": 1821540,
+          "url": "https://sincopa.com/classic/cdinfo_class/aliriodiaz_1957recitaldguitare2.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 5766,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 45904,
+          "title": "Valse Op. 8 Nº 4",
+          "from": 1,
+          "to": 5,
+          "oldClaimIds": [
+            787467
+          ],
+          "newClaimId": 1821566,
+          "url": "https://sincopa.com/classic/cdinfo_class/aliriodiaz_66solosdguitarra.htm"
+        },
+        {
+          "trackId": 45905,
+          "title": "Aire De Samba",
+          "from": 3,
+          "to": 7,
+          "oldClaimIds": [
+            787477
+          ],
+          "newClaimId": 1821568,
+          "url": "https://sincopa.com/classic/cdinfo_class/aliriodiaz_66solosdguitarra.htm"
+        },
+        {
+          "trackId": 45906,
+          "title": "Cueca",
+          "from": 5,
+          "to": 9,
+          "oldClaimIds": [
+            787517
+          ],
+          "newClaimId": 1821570,
+          "url": "https://sincopa.com/classic/cdinfo_class/aliriodiaz_66solosdguitarra.htm"
+        },
+        {
+          "trackId": 45907,
+          "title": "Pais De Abanico",
+          "from": 6,
+          "to": 10,
+          "oldClaimIds": [
+            787526
+          ],
+          "newClaimId": 1821571,
+          "url": "https://sincopa.com/classic/cdinfo_class/aliriodiaz_66solosdguitarra.htm"
+        },
+        {
+          "trackId": 45908,
+          "title": "Medallón Antiguo",
+          "from": 7,
+          "to": 11,
+          "oldClaimIds": [
+            787532
+          ],
+          "newClaimId": 1821572,
+          "url": "https://sincopa.com/classic/cdinfo_class/aliriodiaz_66solosdguitarra.htm"
+        },
+        {
+          "trackId": 45909,
+          "title": "Preludio Nº 1, Op. 5",
+          "from": 8,
+          "to": 12,
+          "oldClaimIds": [
+            787570
+          ],
+          "newClaimId": 1821573,
+          "url": "https://sincopa.com/classic/cdinfo_class/aliriodiaz_66solosdguitarra.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 5769,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 45926,
+          "title": "Bourrée 1 & 2",
+          "from": 5,
+          "to": 9,
+          "oldClaimIds": [
+            788714
+          ],
+          "newClaimId": 1821588,
+          "url": "https://sincopa.com/classic/cdinfo_class/aliriodiaz_68playsbach.htm"
+        },
+        {
+          "trackId": 45927,
+          "title": "Gigue",
+          "from": 6,
+          "to": 10,
+          "oldClaimIds": [
+            788718
+          ],
+          "newClaimId": 1821589,
+          "url": "https://sincopa.com/classic/cdinfo_class/aliriodiaz_68playsbach.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 5774,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 45961,
+          "title": "Las Perdices",
+          "from": 5,
+          "to": 14,
+          "oldClaimIds": [
+            791189
+          ],
+          "newClaimId": 1821620,
+          "url": "https://sincopa.com/classic/cdinfo_class/aliriodiaz_melodiaslarenses_lp.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 5775,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 45965,
+          "title": "Ella No Me Ama",
+          "from": 4,
+          "to": 7,
+          "oldClaimIds": [
+            791439
+          ],
+          "newClaimId": 1821627,
+          "url": "https://sincopa.com/classic/cdinfo_class/aliriodiaz_76conciertogtryorq.htm"
+        },
+        {
+          "trackId": 45966,
+          "title": "Galeron",
+          "from": 5,
+          "to": 8,
+          "oldClaimIds": [
+            791465
+          ],
+          "newClaimId": 1821628,
+          "url": "https://sincopa.com/classic/cdinfo_class/aliriodiaz_76conciertogtryorq.htm"
+        },
+        {
+          "trackId": 45967,
+          "title": "Sonata No. 2",
+          "from": 6,
+          "to": 9,
+          "oldClaimIds": [
+            791483
+          ],
+          "newClaimId": 1821629,
+          "url": "https://sincopa.com/classic/cdinfo_class/aliriodiaz_76conciertogtryorq.htm"
+        },
+        {
+          "trackId": 45968,
+          "title": "Sonata No. 5",
+          "from": 7,
+          "to": 10,
+          "oldClaimIds": [
+            791508
+          ],
+          "newClaimId": 1821630,
+          "url": "https://sincopa.com/classic/cdinfo_class/aliriodiaz_76conciertogtryorq.htm"
+        },
+        {
+          "trackId": 45969,
+          "title": "Danza De La Suite Para Orquesta",
+          "from": 8,
+          "to": 11,
+          "oldClaimIds": [
+            791534
+          ],
+          "newClaimId": 1821631,
+          "url": "https://sincopa.com/classic/cdinfo_class/aliriodiaz_76conciertogtryorq.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 5968,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 46001,
+          "title": "Dos Sonatas",
+          "from": 4,
+          "to": 7,
+          "oldClaimIds": [
+            793923
+          ],
+          "newClaimId": 1821665,
+          "url": "https://sincopa.com/classic/cdinfo_class/alirio_diaz/aliriodiaz_86italia.htm"
+        },
+        {
+          "trackId": 46002,
+          "title": "Canzonetta De Salvator Rosa",
+          "from": 5,
+          "to": 8,
+          "oldClaimIds": [
+            793969
+          ],
+          "newClaimId": 1821666,
+          "url": "https://sincopa.com/classic/cdinfo_class/alirio_diaz/aliriodiaz_86italia.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 6097,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 50143,
+          "title": "La Casa Azul",
+          "from": 6,
+          "to": 11,
+          "oldClaimIds": [
+            1707325
+          ],
+          "newClaimId": 1821678,
+          "url": "https://sincopa.com/jazz/cdinfo/aqba_aquilesmusic.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 6227,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 51177,
+          "title": "Blues Force",
+          "from": 4,
+          "to": 7,
+          "oldClaimIds": [
+            1754215
+          ],
+          "newClaimId": 1821919,
+          "url": "https://sincopa.com/jazz/cdinfo/febri_conexionjazz.htm"
+        },
+        {
+          "trackId": 51178,
+          "title": "Okey Paganini",
+          "from": 5,
+          "to": 8,
+          "oldClaimIds": [
+            1754225
+          ],
+          "newClaimId": 1821920,
+          "url": "https://sincopa.com/jazz/cdinfo/febri_conexionjazz.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 7387,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 53381,
+          "title": "Chocolate",
+          "from": 5,
+          "to": 9,
+          "oldClaimIds": [
+            828753
+          ],
+          "newClaimId": 1821765,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/los_kenya/loskenya_2rara.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 6892,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 53402,
+          "title": "Despertar Es Nacer",
+          "from": 5,
+          "to": 9,
+          "oldClaimIds": [
+            832036
+          ],
+          "newClaimId": 1821789,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/chelique_sarabia/chelique_14lagarzanegra.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 7897,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 53711,
+          "title": "Si Queremos Podemos",
+          "from": 6,
+          "to": 11,
+          "oldClaimIds": [
+            889561
+          ],
+          "newClaimId": 1821950,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/jose_luis_rodriguez/joseluis_89tengoderecho.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 7898,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 53715,
+          "title": "Viva La Noche",
+          "from": 5,
+          "to": 9,
+          "oldClaimIds": [
+            892105
+          ],
+          "newClaimId": 1821955,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/jose_luis_rodriguez/joseluis_91pumaenritmo1.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 7668,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 53911,
+          "title": "El Derecho De Nacer",
+          "from": 4,
+          "to": 7,
+          "oldClaimIds": [
+            921056
+          ],
+          "newClaimId": 1822067,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/oscar_d_leon/oscardleon_1982eldiscobolo.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 7670,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 53919,
+          "title": "De Ti Depende",
+          "from": 4,
+          "to": 7,
+          "oldClaimIds": [
+            922738
+          ],
+          "newClaimId": 1822075,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/oscar_d_leon/oscardleon_1983condulzura.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 7623,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 54092,
+          "title": "Mosaico Navideño",
+          "from": 6,
+          "to": 11,
+          "oldClaimIds": [
+            950498
+          ],
+          "newClaimId": 1822135,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/nancy_ramos/nancyramos_lanavidadesnuestra.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 7907,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 54152,
+          "title": "El Meneito",
+          "from": 4,
+          "to": 9,
+          "oldClaimIds": [
+            957002
+          ],
+          "newClaimId": 1822152,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/natusha/natusha_3remix.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 7927,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 54511,
+          "title": "Caraqueñita",
+          "from": 5,
+          "to": 9,
+          "oldClaimIds": [
+            1004857
+          ],
+          "newClaimId": 1822330,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/gramcko/billos_paula.htm"
+        },
+        {
+          "trackId": 54512,
+          "title": "La Pachanga",
+          "from": 6,
+          "to": 10,
+          "oldClaimIds": [
+            1004901
+          ],
+          "newClaimId": 1822331,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/gramcko/billos_paula.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 7930,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 54530,
+          "title": "Mi Caballo",
+          "from": 6,
+          "to": 11,
+          "oldClaimIds": [
+            1007238
+          ],
+          "newClaimId": 1822349,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/discomoda/billos_01_comunicando.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 7951,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 54643,
+          "title": "Mi Cunde",
+          "from": 6,
+          "to": 11,
+          "oldClaimIds": [
+            1026088
+          ],
+          "newClaimId": 1822459,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/fonograma/billos_510_ysumusica.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 8001,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 54910,
+          "title": "Paisaje",
+          "from": 1,
+          "to": 6,
+          "oldClaimIds": [
+            1069956
+          ],
+          "newClaimId": 1822678,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/discoteca/billos_561_billo77_5.htm"
+        },
+        {
+          "trackId": 54911,
+          "title": "No Me Dejan Divertir",
+          "from": 6,
+          "to": 11,
+          "oldClaimIds": [
+            1070148
+          ],
+          "newClaimId": 1822683,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/discoteca/billos_561_billo77_5.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 8006,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 54942,
+          "title": "Gitana",
+          "from": 14,
+          "to": 27,
+          "oldClaimIds": [
+            1076414
+          ],
+          "newClaimId": 1822709,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/discoteca/billos_565_billo79_5.htm"
+        },
+        {
+          "trackId": 54943,
+          "title": "La Casa De Fernando",
+          "from": 15,
+          "to": 28,
+          "oldClaimIds": [
+            1076460
+          ],
+          "newClaimId": 1822710,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/discoteca/billos_565_billo79_5.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 8016,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 55012,
+          "title": "Morenito De Maracay",
+          "from": 5,
+          "to": 9,
+          "oldClaimIds": [
+            1086970
+          ],
+          "newClaimId": 1822743,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/disqueras_unidas/billos_182_lanotadbillos.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 8030,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 55086,
+          "title": "Caña Brava",
+          "from": 4,
+          "to": 9,
+          "oldClaimIds": [
+            1098579
+          ],
+          "newClaimId": 1822810,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/velvet/billos_2350_lamedallita.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 8035,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 55117,
+          "title": "Amar y Sufrir",
+          "from": 6,
+          "to": 11,
+          "oldClaimIds": [
+            1103276
+          ],
+          "newClaimId": 1822844,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/rca_victor/billos_23091_aquellosboleros.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 6858,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 55445,
+          "title": "Son 1",
+          "from": 5,
+          "to": 9,
+          "oldClaimIds": [
+            1122354
+          ],
+          "newClaimId": 1822876,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/canelita_medina/canelita_88bailableyconclase.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 6885,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 55663,
+          "title": "Tema Despedida",
+          "from": 6,
+          "to": 11,
+          "oldClaimIds": [
+            1142739
+          ],
+          "newClaimId": 1822996,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/chelique_sarabia/chelique_10mediahoracon.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 7664,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 55768,
+          "title": "Tu Son",
+          "from": 4,
+          "to": 7,
+          "oldClaimIds": [
+            1155944
+          ],
+          "newClaimId": 1823132,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/oscar_d_leon/oscardleon_1979elmasgrande.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 8077,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 56017,
+          "title": "Aunque El Tiempo",
+          "from": 5,
+          "to": 9,
+          "oldClaimIds": [
+            1173173
+          ],
+          "newClaimId": 1823201,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/dimension_latina/dimensionlatina_10_780kilosdsalsa.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 6953,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 56064,
+          "title": "Dos Letras",
+          "from": 5,
+          "to": 9,
+          "oldClaimIds": [
+            1182452
+          ],
+          "newClaimId": 1823252,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/dimension_latina/dimensionlatina_21_10anos.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 7097,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 56701,
+          "title": "Bubú Guaco",
+          "from": 6,
+          "to": 11,
+          "oldClaimIds": [
+            1234641
+          ],
+          "newClaimId": 1823606,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/guaco/guaco_1972estagaitasi.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 7105,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 56738,
+          "title": "Nuestro Derecho",
+          "from": 6,
+          "to": 11,
+          "oldClaimIds": [
+            1240494
+          ],
+          "newClaimId": 1823653,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/guaco/guaco_1979.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 7107,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 56749,
+          "title": "Aguilas Del Zulia",
+          "from": 6,
+          "to": 11,
+          "oldClaimIds": [
+            1242218
+          ],
+          "newClaimId": 1823664,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/guaco/guaco_1981.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 7108,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 56754,
+          "title": "Parranda De Navidad",
+          "from": 5,
+          "to": 9,
+          "oldClaimIds": [
+            1243043
+          ],
+          "newClaimId": 1823669,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/guaco/guaco_1982.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 8120,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 56776,
+          "title": "Rumba De Tambores",
+          "from": 5,
+          "to": 9,
+          "oldClaimIds": [
+            1245657
+          ],
+          "newClaimId": 1823690,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/guaco/guaco_1984guacoesguaco.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 7113,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 56781,
+          "title": "Guaco-Loquero",
+          "from": 5,
+          "to": 9,
+          "oldClaimIds": [
+            1246557
+          ],
+          "newClaimId": 1823695,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/guaco/guaco_1985.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 7155,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 57128,
+          "title": "Merengue De Navidad",
+          "from": 6,
+          "to": 11,
+          "oldClaimIds": [
+            1266930
+          ],
+          "newClaimId": 1823763,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/hugo_blanco/hugoblanco_099selecnavidena.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 7170,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 57218,
+          "title": "Arco Iris",
+          "from": 6,
+          "to": 11,
+          "oldClaimIds": [
+            1271984
+          ],
+          "newClaimId": 1823849,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/hugo_blanco/hugoblanco_331bailables10.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 7171,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 57224,
+          "title": "Mani Tostado",
+          "from": 6,
+          "to": 11,
+          "oldClaimIds": [
+            1272180
+          ],
+          "newClaimId": 1823855,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/hugo_blanco/hugoblanco_371bailables11.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 7172,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 57229,
+          "title": "Arena Caliente",
+          "from": 5,
+          "to": 9,
+          "oldClaimIds": [
+            1272357
+          ],
+          "newClaimId": 1823860,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/hugo_blanco/hugoblanco_445bailables12.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 7176,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 57254,
+          "title": "Un Padre Nuestro En La Playa",
+          "from": 10,
+          "to": 19,
+          "oldClaimIds": [
+            1273877
+          ],
+          "newClaimId": 1823884,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/hugo_blanco/hugoblanco_elsabord.htm"
+        },
+        {
+          "trackId": 57255,
+          "title": "Cumbia Con Arpa",
+          "from": 11,
+          "to": 20,
+          "oldClaimIds": [
+            1273884
+          ],
+          "newClaimId": 1823885,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/hugo_blanco/hugoblanco_elsabord.htm"
+        },
+        {
+          "trackId": 57256,
+          "title": "Si Te Vas, Te Vas",
+          "from": 12,
+          "to": 21,
+          "oldClaimIds": [
+            1273891
+          ],
+          "newClaimId": 1823886,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/hugo_blanco/hugoblanco_elsabord.htm"
+        },
+        {
+          "trackId": 57257,
+          "title": "Corazón De Fresa",
+          "from": 13,
+          "to": 22,
+          "oldClaimIds": [
+            1273901
+          ],
+          "newClaimId": 1823887,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/hugo_blanco/hugoblanco_elsabord.htm"
+        },
+        {
+          "trackId": 57258,
+          "title": "Estoy Prendido",
+          "from": 14,
+          "to": 23,
+          "oldClaimIds": [
+            1273908
+          ],
+          "newClaimId": 1823888,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/hugo_blanco/hugoblanco_elsabord.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 8135,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 57570,
+          "title": "No Pudes Dejarme",
+          "from": 6,
+          "to": 11,
+          "oldClaimIds": [
+            1284810
+          ],
+          "newClaimId": 1823948,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/jose_luis_rodriguez/joseluis_72elhombreenlacima.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 8152,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 57655,
+          "title": "El Siquisiri",
+          "from": 6,
+          "to": 11,
+          "oldClaimIds": [
+            1295165
+          ],
+          "newClaimId": 1824028,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/jose_luis_rodriguez/joseluis_89senorabonita.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 8170,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 57817,
+          "title": "Amalia Rosa",
+          "from": 8,
+          "to": 15,
+          "oldClaimIds": [
+            1307601
+          ],
+          "newClaimId": 1824093,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/jose_luis_rodriguez/joseluis_ayerhoysiempre_88.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 8215,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 58221,
+          "title": "Ubícate En El Concepto",
+          "from": 5,
+          "to": 9,
+          "oldClaimIds": [
+            1360954
+          ],
+          "newClaimId": 1824290,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/los_blanco/losblanco_32inmemorian.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 8220,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 58261,
+          "title": "Mezcla A Lo Blanco II",
+          "from": 5,
+          "to": 9,
+          "oldClaimIds": [
+            1369305
+          ],
+          "newClaimId": 1824300,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/los_blanco/losblanco_soloexitos.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 8227,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 58377,
+          "title": "Descarga A Lo Ray",
+          "from": 6,
+          "to": 11,
+          "oldClaimIds": [
+            1375692
+          ],
+          "newClaimId": 1824306,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/los_dementes/dementes_1966alertamundollegan.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 8250,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 58483,
+          "title": "Melenco",
+          "from": 4,
+          "to": 7,
+          "oldClaimIds": [
+            1387677
+          ],
+          "newClaimId": 1824407,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/los_dementes/dementes_1992dinerollamadinero.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 8268,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 58749,
+          "title": "Ocanasordi",
+          "from": 6,
+          "to": 11,
+          "oldClaimIds": [
+            1394597
+          ],
+          "newClaimId": 1824535,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/melodicos/melodicos_dcm258_esvictor.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 8301,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 58940,
+          "title": "La Escoba",
+          "from": 6,
+          "to": 11,
+          "oldClaimIds": [
+            1403336
+          ],
+          "newClaimId": 1824710,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/melodicos/melodicos_dcm763_recuerdos17.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 8305,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 58963,
+          "title": "Nube Negra",
+          "from": 6,
+          "to": 11,
+          "oldClaimIds": [
+            1404045
+          ],
+          "newClaimId": 1824731,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/melodicos/melodicos_dcm820_recuerdos20.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 7496,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 59343,
+          "title": "Un Precioso Sueño",
+          "from": 6,
+          "to": 11,
+          "oldClaimIds": [
+            1418987
+          ],
+          "newClaimId": 1824996,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/los_terricolas/terricolas_0845teamare.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 7499,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 59361,
+          "title": "Como Dos Huerfanitos",
+          "from": 6,
+          "to": 11,
+          "oldClaimIds": [
+            1419546
+          ],
+          "newClaimId": 1825020,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/los_terricolas/terricolas_0927unacarta.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 7504,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 59391,
+          "title": "Vete Pronto",
+          "from": 6,
+          "to": 11,
+          "oldClaimIds": [
+            1420437
+          ],
+          "newClaimId": 1825067,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/los_terricolas/terricolas_1080consentidosdamerica.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 8367,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 59641,
+          "title": "Al Atardecer",
+          "from": 5,
+          "to": 9,
+          "oldClaimIds": [
+            1427642
+          ],
+          "newClaimId": 1825418,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/mirla_castellanos/mirla_78_mirla79.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 8368,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 59646,
+          "title": "Mi Pueblo",
+          "from": 5,
+          "to": 9,
+          "oldClaimIds": [
+            1427789
+          ],
+          "newClaimId": 1825423,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/mirla_castellanos/mirla_79engrande1980.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 8376,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 59696,
+          "title": "Venezuela",
+          "from": 6,
+          "to": 11,
+          "oldClaimIds": [
+            1429272
+          ],
+          "newClaimId": 1825472,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/mirla_castellanos/mirla_92venezuela.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 7592,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 59821,
+          "title": "Esperame En El Cielo",
+          "from": 6,
+          "to": 11,
+          "oldClaimIds": [
+            1431894
+          ],
+          "newClaimId": 1825562,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/mirtha_perez/mirtha_79interpretavirginialopez.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 7593,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 59827,
+          "title": "Amor Perdido",
+          "from": 6,
+          "to": 11,
+          "oldClaimIds": [
+            1432062
+          ],
+          "newClaimId": 1825568,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/mirtha_perez/mirtha_80exitosdsiempre.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 8383,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 59854,
+          "title": "Hoy Hable De Tí",
+          "from": 6,
+          "to": 11,
+          "oldClaimIds": [
+            1432774
+          ],
+          "newClaimId": 1825595,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/mirtha_perez/mirtha_85conhugoblanco.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 7601,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 59866,
+          "title": "Cuando Se Acaben Las Lagrimas",
+          "from": 6,
+          "to": 11,
+          "oldClaimIds": [
+            1433124
+          ],
+          "newClaimId": 1825607,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/mirtha_perez/mirtha_87inmensamentetuya.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 8384,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 59935,
+          "title": "Adeste Fidelis",
+          "from": 5,
+          "to": 9,
+          "oldClaimIds": [
+            1434984
+          ],
+          "newClaimId": 1825661,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/nancy_ramos/nancyramos_tambiennavidad2.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 7617,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 59940,
+          "title": "Aires De Tango",
+          "from": 5,
+          "to": 9,
+          "oldClaimIds": [
+            1435200
+          ],
+          "newClaimId": 1825666,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/nancy_ramos/nancyramos_80tuyyo.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 7627,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 59980,
+          "title": "Corre Caballito",
+          "from": 5,
+          "to": 11,
+          "oldClaimIds": [
+            1436851
+          ],
+          "newClaimId": 1825717,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/nancy_ramos/nancyramos_siempresnavidad.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 7749,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 60446,
+          "title": "Tantas Palabras",
+          "from": 7,
+          "to": 13,
+          "oldClaimIds": [
+            1450894
+          ],
+          "newClaimId": 1825930,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/roberto_antonio/robertoantonio_03mix.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 7773,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 60626,
+          "title": "Mi Calvario",
+          "from": 5,
+          "to": 9,
+          "oldClaimIds": [
+            1454083
+          ],
+          "newClaimId": 1826014,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/sexteto_juventud/6ttojuventud_lajuvenimpone.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 7778,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 60650,
+          "title": "Oye Este Consejo",
+          "from": 5,
+          "to": 9,
+          "oldClaimIds": [
+            1454609
+          ],
+          "newClaimId": 1826037,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/sexteto_juventud/6ttojuventud_elsonido.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 7858,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 61007,
+          "title": "A Puerto Rico",
+          "from": 6,
+          "to": 11,
+          "oldClaimIds": [
+            1468238
+          ],
+          "newClaimId": 1826247,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/tania/tania_74incomparable.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 7801,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 61758,
+          "title": "Padre Nuestro (Recitado)",
+          "from": 9,
+          "to": 17,
+          "oldClaimIds": [
+            1806140
+          ],
+          "newClaimId": 1826113,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/soledad_74soledadenvivo.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 7802,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 61764,
+          "title": "Allá Viene Un Corazón",
+          "from": 1,
+          "to": 7,
+          "oldClaimIds": [
+            1806230
+          ],
+          "newClaimId": 1826114,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/soledad_74cantovzla1.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 7803,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 61770,
+          "title": "Guitarra",
+          "from": 6,
+          "to": 11,
+          "oldClaimIds": [
+            1806470
+          ],
+          "newClaimId": 1826125,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/soledad_75cantopoesia.htm"
+        },
+        {
+          "trackId": 61771,
+          "title": "Coplas De La Amapola",
+          "from": 7,
+          "to": 12,
+          "oldClaimIds": [
+            1806480
+          ],
+          "newClaimId": 1826126,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/soledad_75cantopoesia.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 8417,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 61776,
+          "title": "Mariposas",
+          "from": 5,
+          "to": 9,
+          "oldClaimIds": [
+            1806628
+          ],
+          "newClaimId": 1826131,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/soledad_76nuevatrova2.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 7805,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 61782,
+          "title": "Balada Del Posible Regreso",
+          "from": 6,
+          "to": 11,
+          "oldClaimIds": [
+            1806774
+          ],
+          "newClaimId": 1826137,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/soledad_77alberti.htm"
+        },
+        {
+          "trackId": 61783,
+          "title": "Balada Del Paraná",
+          "from": 7,
+          "to": 12,
+          "oldClaimIds": [
+            1806784
+          ],
+          "newClaimId": 1826138,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/soledad_77alberti.htm"
+        },
+        {
+          "trackId": 61784,
+          "title": "Yo Mataba A Los Murciélagos",
+          "from": 8,
+          "to": 13,
+          "oldClaimIds": [
+            1806794
+          ],
+          "newClaimId": 1826139,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/soledad_77alberti.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 7811,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 61821,
+          "title": "Yo Vivo Enamorado",
+          "from": 1,
+          "to": 6,
+          "oldClaimIds": [
+            1808125
+          ],
+          "newClaimId": 1826162,
+          "url": "https://sincopa.com/latin_pop/cdinfo_latin/soledad_85.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 8500,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 61942,
+          "title": "Ademas y Ademas",
+          "from": 1,
+          "to": 6,
+          "oldClaimIds": [
+            768803
+          ],
+          "newClaimId": 1821487,
+          "url": "https://sincopa.com/traditional/cdinfo2/los_cunaos5.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 8429,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 62402,
+          "title": "Soñando Despiertos",
+          "from": 6,
+          "to": 11,
+          "oldClaimIds": [
+            859560
+          ],
+          "newClaimId": 1821799,
+          "url": "https://sincopa.com/traditional/cdinfo2/matecha_74miquerencia.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 9118,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 62470,
+          "title": ":Mi Linda Muchachita",
+          "from": 4,
+          "to": 11,
+          "oldClaimIds": [
+            871229
+          ],
+          "newClaimId": 1821857,
+          "url": "https://sincopa.com/traditional/cdinfo2/serenata/sg_100alejandro_vargas.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 8442,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 62577,
+          "title": "Caminemos",
+          "from": 6,
+          "to": 11,
+          "oldClaimIds": [
+            890238
+          ],
+          "newClaimId": 1821926,
+          "url": "https://sincopa.com/traditional/cdinfo2/matecha_90asi.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 9129,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 62884,
+          "title": "Brisas Del Zulia",
+          "from": 6,
+          "to": 11,
+          "oldClaimIds": [
+            928231
+          ],
+          "newClaimId": 1823002,
+          "url": "https://sincopa.com/traditional/cdinfo2/matecha_64quisierapreguntar.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 8516,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 63504,
+          "title": "Seis Numerao",
+          "from": 6,
+          "to": 11,
+          "oldClaimIds": [
+            995987
+          ],
+          "newClaimId": 1826467,
+          "url": "https://sincopa.com/traditional/cdinfo2/adilia_castillo/adiliacastillo_elregresod.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 9151,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 63633,
+          "title": "Caminito Del Palmar",
+          "from": 1,
+          "to": 13,
+          "oldClaimIds": [
+            1009616
+          ],
+          "newClaimId": 1826570,
+          "url": "https://sincopa.com/traditional/cdinfo2/anselmo_lopez/anselmolpez_tipico.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 9164,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 64155,
+          "title": "El Diablo Suelto",
+          "from": 5,
+          "to": 9,
+          "oldClaimIds": [
+            1078391
+          ],
+          "newClaimId": 1826787,
+          "url": "https://sincopa.com/traditional/cdinfo2/gual_ibarreto_04.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 9015,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 64603,
+          "title": "La Chacalera",
+          "from": 6,
+          "to": 11,
+          "oldClaimIds": [
+            1110356
+          ],
+          "newClaimId": 1826893,
+          "url": "https://sincopa.com/traditional/cdinfo2/serenata/sg_10years_hits.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 9174,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 64611,
+          "title": "Zumba que Zumba",
+          "from": 1,
+          "to": 10,
+          "oldClaimIds": [
+            1110621
+          ],
+          "newClaimId": 1826894,
+          "url": "https://sincopa.com/traditional/cdinfo2/serenata/sg_bolivar1.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 9185,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 64846,
+          "title": "Y Si Tú No Estas",
+          "from": 5,
+          "to": 9,
+          "oldClaimIds": [
+            1121960
+          ],
+          "newClaimId": 1826949,
+          "url": "https://sincopa.com/traditional/cdinfo2/hildemaro_rodriguez/hildemarorodriguez_1hildemarorodriguez.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 9214,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 65220,
+          "title": "Maracaibo",
+          "from": 6,
+          "to": 11,
+          "oldClaimIds": [
+            1159777
+          ],
+          "newClaimId": 1827129,
+          "url": "https://sincopa.com/traditional/cdinfo2/jv_torrealba/jvt_cincoestrellas.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 9231,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 65322,
+          "title": "Glosa Del Amor Desnudo",
+          "from": 5,
+          "to": 9,
+          "oldClaimIds": [
+            1164396
+          ],
+          "newClaimId": 1827240,
+          "url": "https://sincopa.com/traditional/cdinfo2/jv_torrealba/jvt_estampasllaneras.htm"
+        },
+        {
+          "trackId": 65323,
+          "title": "La Negra Del Maraquero",
+          "from": 6,
+          "to": 10,
+          "oldClaimIds": [
+            1164400
+          ],
+          "newClaimId": 1827241,
+          "url": "https://sincopa.com/traditional/cdinfo2/jv_torrealba/jvt_estampasllaneras.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 9242,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 65385,
+          "title": "Barlovento",
+          "from": 5,
+          "to": 9,
+          "oldClaimIds": [
+            1167950
+          ],
+          "newClaimId": 1827309,
+          "url": "https://sincopa.com/traditional/cdinfo2/jv_torrealba/jvt_suitetorrealbera.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 9245,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 65403,
+          "title": "Sueño Azul",
+          "from": 6,
+          "to": 11,
+          "oldClaimIds": [
+            1169593
+          ],
+          "newClaimId": 1827327,
+          "url": "https://sincopa.com/traditional/cdinfo2/jv_torrealba/jvt_estampida_elect2.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 8754,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 65511,
+          "title": "Carmen - El Porteño",
+          "from": 5,
+          "to": 9,
+          "oldClaimIds": [
+            1178995
+          ],
+          "newClaimId": 1827460,
+          "url": "https://sincopa.com/traditional/cdinfo2/jv_torrealba/jvt_merenguesvzlanos.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 8775,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 65715,
+          "title": "La Paloma",
+          "from": 2,
+          "to": 6,
+          "oldClaimIds": [
+            1192983
+          ],
+          "newClaimId": 1827540,
+          "url": "https://sincopa.com/traditional/cdinfo2/sardina_naiguata/sardinanaiguata_vol1.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 9277,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 65720,
+          "title": "La Paloma",
+          "from": 3,
+          "to": 8,
+          "oldClaimIds": [
+            1194164
+          ],
+          "newClaimId": 1827545,
+          "url": "https://sincopa.com/traditional/cdinfo2/sardina_naiguata/sardinanaiguata_vol1_84.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 8815,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 65939,
+          "title": "Un Bohemio y Una Estampa",
+          "from": 5,
+          "to": 9,
+          "oldClaimIds": [
+            1213095
+          ],
+          "newClaimId": 1827651,
+          "url": "https://sincopa.com/traditional/cdinfo2/luis_silva/luissilva_86alguientespera.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 8816,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 65945,
+          "title": "Porta Voz De Mi Folklor",
+          "from": 6,
+          "to": 11,
+          "oldClaimIds": [
+            1213642
+          ],
+          "newClaimId": 1827657,
+          "url": "https://sincopa.com/traditional/cdinfo2/luis_silva/luissilva_87aquienolevagustar.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 9314,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 66446,
+          "title": "No Llores Cariño",
+          "from": 6,
+          "to": 11,
+          "oldClaimIds": [
+            1241451
+          ],
+          "newClaimId": 1827783,
+          "url": "https://sincopa.com/traditional/cdinfo2/reyna_lucero/reynalucero_84nohaytierra.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 9344,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 66708,
+          "title": "El Ultimo Heredero",
+          "from": 6,
+          "to": 11,
+          "oldClaimIds": [
+            1256976
+          ],
+          "newClaimId": 1827904,
+          "url": "https://sincopa.com/traditional/cdinfo2/reynaldo_armas/reyarmas_17amoryenvidia.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 9349,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 66740,
+          "title": "Buscando Tu Querer",
+          "from": 6,
+          "to": 11,
+          "oldClaimIds": [
+            1258736
+          ],
+          "newClaimId": 1827926,
+          "url": "https://sincopa.com/traditional/cdinfo2/reynaldo_armas/reyarmas_22lamanzana.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 9363,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 66886,
+          "title": "Soledad",
+          "from": 11,
+          "to": 31,
+          "oldClaimIds": [
+            1263374
+          ],
+          "newClaimId": 1827960,
+          "url": "https://sincopa.com/traditional/cdinfo2/reynaldo_armas/reynaldoarmas_40superexitosd.htm"
+        },
+        {
+          "trackId": 66887,
+          "title": "Ni Fronteras, Ni Palabras",
+          "from": 12,
+          "to": 32,
+          "oldClaimIds": [
+            1263387
+          ],
+          "newClaimId": 1827961,
+          "url": "https://sincopa.com/traditional/cdinfo2/reynaldo_armas/reynaldoarmas_40superexitosd.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 9419,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 67732,
+          "title": "La Batalla Del Sancocho",
+          "from": 3,
+          "to": 5,
+          "oldClaimIds": [
+            1316817
+          ],
+          "newClaimId": 1828232,
+          "url": "https://sincopa.com/traditional/cdinfo2/simondiaz_gaitas73_candidato.htm"
+        },
+        {
+          "trackId": 67733,
+          "title": "La Vecina De Al Lado",
+          "from": 4,
+          "to": 6,
+          "oldClaimIds": [
+            1316837
+          ],
+          "newClaimId": 1828233,
+          "url": "https://sincopa.com/traditional/cdinfo2/simondiaz_gaitas73_candidato.htm"
+        },
+        {
+          "trackId": 67734,
+          "title": "Carlos Andrés y Lorenzo",
+          "from": 5,
+          "to": 7,
+          "oldClaimIds": [
+            1316859
+          ],
+          "newClaimId": 1828234,
+          "url": "https://sincopa.com/traditional/cdinfo2/simondiaz_gaitas73_candidato.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 9071,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 67842,
+          "title": "Estribillo De Pascua",
+          "from": 6,
+          "to": 11,
+          "oldClaimIds": [
+            1345873
+          ],
+          "newClaimId": 1828295,
+          "url": "https://sincopa.com/traditional/cdinfo2/1solo_pueblo/1solopueblo_vol1.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 9086,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 67900,
+          "title": "Mi Barquito Marinero",
+          "from": 5,
+          "to": 9,
+          "oldClaimIds": [
+            1363126
+          ],
+          "newClaimId": 1828356,
+          "url": "https://sincopa.com/traditional/cdinfo2/1solo_pueblo/1solopueblo_1990_lamusica.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 9441,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 68826,
+          "title": "Compadre Pancho",
+          "from": 6,
+          "to": 11,
+          "oldClaimIds": [
+            820486
+          ],
+          "newClaimId": 1828859,
+          "url": "https://sincopa.com/ethnic/cdinfo1/aldro_elgarrasi.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 9455,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 68900,
+          "title": "Never Can Say Goodbye (Nunca Digas Adios)",
+          "from": 6,
+          "to": 11,
+          "oldClaimIds": [
+            827611
+          ],
+          "newClaimId": 1828918,
+          "url": "https://sincopa.com/ethnic/cdinfo1/aldro_andhisonda.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 9456,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 68906,
+          "title": "Nunca Digas Adios (Never Can Say Goodbye)",
+          "from": 6,
+          "to": 11,
+          "oldClaimIds": [
+            828106
+          ],
+          "newClaimId": 1828924,
+          "url": "https://sincopa.com/ethnic/cdinfo1/aldro_ondaeningles.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 9784,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 72299,
+          "title": "Swallows",
+          "from": 1,
+          "to": 7,
+          "oldClaimIds": [
+            1815045
+          ],
+          "newClaimId": 1829046,
+          "url": "https://sincopa.com/ethnic/cdinfo1/ruri_rubenriera83.htm"
+        },
+        {
+          "trackId": 72300,
+          "title": "Danza",
+          "from": 7,
+          "to": 13,
+          "oldClaimIds": [
+            1815069
+          ],
+          "newClaimId": 1829052,
+          "url": "https://sincopa.com/ethnic/cdinfo1/ruri_rubenriera83.htm"
+        }
+      ]
+    }
+  ],
+  "skippedList": [
+    {
+      "albumId": 5771,
+      "disc": 1,
+      "url": "https://sincopa.com/classic/cdinfo_class/aliriodiaz_recital.htm",
+      "reason": "posición 7: «Guasa» y «Dos Canciones Catalanas»"
+    },
+    {
+      "albumId": 7905,
+      "disc": 1,
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/mayra_marti/mayramarti_84mayramarti.htm",
+      "reason": "posición 9: «Ya Lo He Intentado Todo» y «Ni Más, Ni Menos»"
+    },
+    {
+      "albumId": 6900,
+      "disc": 1,
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/conjunto_ingenieria/conjuntoingenieria_4conjuntoingenieria.htm",
+      "reason": "posición 7: «Mambo Silbado» y «La Boa»"
+    },
+    {
+      "albumId": 7109,
+      "disc": 1,
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/guaco/guaco_1983estoesguaco.htm",
+      "reason": "«El Billetero»: el core ya no tiene el número 2"
+    },
+    {
+      "albumId": 7785,
+      "disc": 1,
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/sexteto_juventud/6ttojuventud_cocinandosalsa.htm",
+      "reason": "posición 8: «Mi Viejita» y «Mi Niña Quiere Una Cuna»"
+    },
+    {
+      "albumId": 7786,
+      "disc": 1,
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/sexteto_juventud/6ttojuventud_brujeria.htm",
+      "reason": "«Corazón De Araña Negra»: el core ya no tiene el número 1"
+    },
+    {
+      "albumId": 8430,
+      "disc": 1,
+      "url": "https://sincopa.com/traditional/cdinfo2/matecha_74aguinaldos.htm",
+      "reason": "posición 10: «Nace El Niño» y «Salve De Guatire»"
+    },
+    {
+      "albumId": 8515,
+      "disc": 1,
+      "url": "https://sincopa.com/traditional/cdinfo2/adilia_castillo/adiliacastillo_lomejord.htm",
+      "reason": "posición 11: «Lucero De Los Llanos» y «Pajarillo Nº2»"
+    },
+    {
+      "albumId": 9210,
+      "disc": 1,
+      "url": "https://sincopa.com/traditional/cdinfo2/jv_torrealba/jvt_torrealberos503.htm",
+      "reason": "posición 8: «Sueño Llanero» y «El Sancocho»"
+    },
+    {
+      "albumId": 9383,
+      "disc": 1,
+      "url": "https://sincopa.com/traditional/cdinfo2/rondalla_vzlana/rondalla_mariachitapatio_lp.htm",
+      "reason": "«Linda Merideña»: el core ya no tiene el número 4"
+    },
+    {
+      "albumId": 9434,
+      "disc": 1,
+      "url": "https://sincopa.com/ethnic/cdinfo1/aldro_dinnerccs_lp.htm",
+      "reason": "posición 10: «Conticinio» y «Fúlgida Luna»"
+    },
+    {
+      "albumId": 9559,
+      "disc": 1,
+      "url": "https://sincopa.com/ethnic/cdinfo1/raices_1982.htm",
+      "reason": "«Raíces Llaneras»: el core ya no tiene el número 1"
+    }
+  ]
+}

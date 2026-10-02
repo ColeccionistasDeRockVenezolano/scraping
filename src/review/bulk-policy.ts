@@ -123,6 +123,11 @@ const CREDIT_LABEL = new RegExp([
   String.raw`\(track`,
   String.raw`(?<![\p{L}\d])(?:live|bonus|tracks?|mix|remix|version|versión|mov|movement|movimiento|intro|outro|interlude|interludio|reprise|instrumental|unplugged|unpluged|en vivo)(?![\p{L}\d])`,
   String.raw`(?<![\p{L}\d])parte?\s+(?:[ivx]+|\d+)(?![\p{L}\d])`,
+  // Rol pegado al nombre: «Comp: X», «Recop: X», «Rec. X», «Compilation: X».
+  String.raw`^(?:comp|recop|recopilaci[oó]n|compilation|compilaci[oó]n|letra|lyrics|m[uú]sica|music|words|adaptaci[oó]n)\s*:`,
+  String.raw`^(?:rec|recp|recop|comp|adapt|vers?)\.\s`,
+  // Una palabra que describe la pista, no a su autor: «(Cuento)», «(Demo)».
+  String.raw`^(?:cuento|poema|poes[ií]a|narraci[oó]n|recitad[oa]|declamaci[oó]n|demo|ac[uú]stic[oa]|acoustic|in[eé]dit[oa]|medley|popurr[ií]|potpourri|tributo|cover|hidden track|tema oculto|a cap+el+a|dub|edit|radio edit|extended)$`,
 ].join("|"), "iu");
 
 /** Un año, un número o un rango («1928», «1248-1254»): no es un nombre. */

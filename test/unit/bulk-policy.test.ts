@@ -113,10 +113,13 @@ describe("decideVerdict", () => {
   it("rótulos y números en el lugar del nombre quedan abiertos", () => {
     const autoMatch: DecisionEvidence = { action: "AUTO_MATCH", score: 0.97, candidates: [] };
     for (const name of ["Feat. Elisa Rego", "Arr: Miguel Astor", "Bonus Track", "tracks 1-4", "Radio Version", "versión a 4 Manos",
-      "3rd Mov", "Carlos Rodríguez (track", "The Incoming Race Part II", "Ernesto Schweinburger a.ka. tropi69", "1928", "1248-1254"]) {
+      "3rd Mov", "Carlos Rodríguez (track", "The Incoming Race Part II", "Ernesto Schweinburger a.ka. tropi69", "1928", "1248-1254",
+      "Comp: Vicente Emilio Sojo", "Recop: Vicente Emilio Sojo", "Recopilación: Vicente Emilio Sojo", "Rec. Vicente Emilio Sojo",
+      "Recp. Vicente Emilio Sojo", "Compilation: Vicente Emilio Sojo", "Cuento", "Demo", "Acústico", "Medley"]) {
       expect(decideVerdict({ kind: "person", name, decision: autoMatch, sameName: [] }), name).toMatchObject({ kind: "hold", rule: "no-es-una-persona:rotulo" });
     }
-    for (const name of ["Arvo Part", "Mixtli Gómez", "Olivia Bonuse", "Liveth Rojas", "Introíto Pérez"]) {
+    for (const name of ["Arvo Part", "Mixtli Gómez", "Olivia Bonuse", "Liveth Rojas", "Introíto Pérez",
+      "Rebeca Castro", "Compay Segundo", "Cuentos Pérez", "Demóstenes Rojas", "Musical Youth"]) {
       expect(decideVerdict({ kind: "person", name, decision: noMatch, sameName: [] }).kind, name).toBe("different");
     }
   });

@@ -1,0 +1,4314 @@
+{
+  "dryRun": false,
+  "runId": 11428,
+  "pages": 465,
+  "staleCandidates": 1405,
+  "missingNew": 0,
+  "rejected": 1402,
+  "reviewsClosed": 1402,
+  "acceptedWrong": 717,
+  "acceptedWrongList": [
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/losdiscotecos_agogolatino.htm",
+      "identity": "Los Discotecos::A Go Gó Latino::Crucero",
+      "core": "01",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/losdiscotecos_agogolatino.htm",
+      "identity": "Los Discotecos::A Go Gó Latino::Baila Go-Go y Ye-Ye",
+      "core": "02",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/losdiscotecos_agogolatino.htm",
+      "identity": "Los Discotecos::A Go Gó Latino::Maravilloso",
+      "core": "03",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/losdiscotecos_agogolatino.htm",
+      "identity": "Los Discotecos::A Go Gó Latino::El Amor Es Azul (Love Is Blue)",
+      "core": "04",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/losdiscotecos_agogolatino.htm",
+      "identity": "Los Discotecos::A Go Gó Latino::Torpe",
+      "core": "05",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/losdiscotecos_agogolatino.htm",
+      "identity": "Los Discotecos::A Go Gó Latino::Masachussetts",
+      "core": "06",
+      "page": "12"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/acme_escorpion.htm",
+      "identity": "ACME::Escorpión Seducción::Seducción",
+      "core": "01",
+      "page": "2"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/alta_freq_1cruzando.htm",
+      "identity": "Alta Frecuencia::Cruzando La Linea::Exito",
+      "core": "01",
+      "page": "5"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/alta_freq_1cruzando.htm",
+      "identity": "Alta Frecuencia::Cruzando La Linea::Otra Oportunidad",
+      "core": "02",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/alta_freq_1cruzando.htm",
+      "identity": "Alta Frecuencia::Cruzando La Linea::Cruzando la Línea",
+      "core": "03",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/alta_freq_1cruzando.htm",
+      "identity": "Alta Frecuencia::Cruzando La Linea::Qué es lo que Quieres de Mi",
+      "core": "04",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/asimilation_rock.htm",
+      "identity": "Asimilation::Rock Thru The Time::Get Back",
+      "core": "01",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/asimilation_rock.htm",
+      "identity": "Asimilation::Rock Thru The Time::Walking Down",
+      "core": "02",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/asimilation_rock.htm",
+      "identity": "Asimilation::Rock Thru The Time::Isn't Seally",
+      "core": "03",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/asimilation_rock.htm",
+      "identity": "Asimilation::Rock Thru The Time::Carlucy",
+      "core": "04",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/asimilation_rock.htm",
+      "identity": "Asimilation::Rock Thru The Time::Rock Road",
+      "core": "05",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/asimilation_rock.htm",
+      "identity": "Asimilation::Rock Thru The Time::So Long (See You Again)",
+      "core": "06",
+      "page": "12"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/casablanca_1.htm",
+      "identity": "La Banda de Casablanca::El Sueño::Háblame",
+      "core": "01",
+      "page": "5"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/casablanca_1.htm",
+      "identity": "La Banda de Casablanca::El Sueño::25 or 6 to 4",
+      "core": "02",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/casablanca_1.htm",
+      "identity": "La Banda de Casablanca::El Sueño::I Don't Need No Doctor",
+      "core": "03",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/casablanca_1.htm",
+      "identity": "La Banda de Casablanca::El Sueño::Esta Rutina",
+      "core": "04",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/bronce_1.htm",
+      "identity": "Bronce::Bronce::A Mi Tierra",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/bronce_1.htm",
+      "identity": "Bronce::Bronce::Fin De Semana",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/bronce_1.htm",
+      "identity": "Bronce::Bronce::Soy Motorizado",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/bronce_1.htm",
+      "identity": "Bronce::Bronce::Calles",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/bronce_1.htm",
+      "identity": "Bronce::Bronce::Un Día De Abril",
+      "core": "05",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_bugats_1.htm",
+      "identity": "Los Bugat's::Los Bugat's::O.K. Tu Ganas",
+      "core": "01",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_bugats_1.htm",
+      "identity": "Los Bugat's::Los Bugat's::Tienes Que Amar",
+      "core": "02",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_bugats_1.htm",
+      "identity": "Los Bugat's::Los Bugat's::Te Quiero",
+      "core": "03",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_bugats_1.htm",
+      "identity": "Los Bugat's::Los Bugat's::Limbo Chocolate",
+      "core": "04",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_bugats_1.htm",
+      "identity": "Los Bugat's::Los Bugat's::Nuevo Amor",
+      "core": "05",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_bugats_1.htm",
+      "identity": "Los Bugat's::Los Bugat's::Dancero",
+      "core": "06",
+      "page": "12"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/callejon88_pasionario.htm",
+      "identity": "Callejon 88::Pasionario::Dame Amor",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/callejon88_pasionario.htm",
+      "identity": "Callejon 88::Pasionario::Te Me Vas",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/callejon88_pasionario.htm",
+      "identity": "Callejon 88::Pasionario::Caderas Locas",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/callejon88_pasionario.htm",
+      "identity": "Callejon 88::Pasionario::Que Va A Ser De Tí",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/callejon88_pasionario.htm",
+      "identity": "Callejon 88::Pasionario::Goza Como Gozo Yo",
+      "core": "05",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/grupocanon_barlovento.htm",
+      "identity": "Grupo Cañon::Barlovento::Busco Mi Destino",
+      "core": "01",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/grupocanon_barlovento.htm",
+      "identity": "Grupo Cañon::Barlovento::Madre De Hoy",
+      "core": "02",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/grupocanon_barlovento.htm",
+      "identity": "Grupo Cañon::Barlovento::Laguna De Cristal",
+      "core": "03",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/grupocanon_barlovento.htm",
+      "identity": "Grupo Cañon::Barlovento::Soledad",
+      "core": "04",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/grupocanon_barlovento.htm",
+      "identity": "Grupo Cañon::Barlovento::Espíritu Alado",
+      "core": "05",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/grupocanon_barlovento.htm",
+      "identity": "Grupo Cañon::Barlovento::Boca De Aroa",
+      "core": "06",
+      "page": "12"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/cyam_estavez.htm",
+      "identity": "Cyam::Esta Vez::Es Hora",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/cyam_estavez.htm",
+      "identity": "Cyam::Esta Vez::Cantos (Que Se Cruzan Al Andar)",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/cyam_estavez.htm",
+      "identity": "Cyam::Esta Vez::Escondiéndome De Ti",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/cyam_estavez.htm",
+      "identity": "Cyam::Esta Vez::Da La Cara Al Viento",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/cyam_estavez.htm",
+      "identity": "Cyam::Esta Vez::Debemos Volver",
+      "core": "05",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/dficitt_1musicavzlana.htm",
+      "identity": "Dficitt::Música Venezolana Contemporanea::Mata E'Coco",
+      "core": "01",
+      "page": "5"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/dficitt_1musicavzlana.htm",
+      "identity": "Dficitt::Música Venezolana Contemporanea::A Través De La Oscuridad",
+      "core": "02",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/dficitt_1musicavzlana.htm",
+      "identity": "Dficitt::Música Venezolana Contemporanea::Reflejo Del Humboldt",
+      "core": "03",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/dficitt_1musicavzlana.htm",
+      "identity": "Dficitt::Música Venezolana Contemporanea::Controversia",
+      "core": "04",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/eclipse_todo_o_todo.htm",
+      "identity": "Eclipse::Todo o Todo::Reacción",
+      "core": "01",
+      "page": "4"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/eclipse_todo_o_todo.htm",
+      "identity": "Eclipse::Todo o Todo::Secreto Contigo",
+      "core": "02",
+      "page": "5"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/eclipse_todo_o_todo.htm",
+      "identity": "Eclipse::Todo o Todo::Macondo",
+      "core": "03",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/delia_1eddydelia.htm",
+      "identity": "Eddy & Delia::Eddy & Delia::Era",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/delia_1eddydelia.htm",
+      "identity": "Eddy & Delia::Eddy & Delia::Comunicando",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/delia_1eddydelia.htm",
+      "identity": "Eddy & Delia::Eddy & Delia::Adonde Vas",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/delia_1eddydelia.htm",
+      "identity": "Eddy & Delia::Eddy & Delia::Sueño De Enamorados",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/delia_1eddydelia.htm",
+      "identity": "Eddy & Delia::Eddy & Delia::Algo Divino",
+      "core": "05",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/electrodos_sinverguenza.htm",
+      "identity": "Los Electrodos::Sin Verguenza::El Venudo",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/electrodos_sinverguenza.htm",
+      "identity": "Los Electrodos::Sin Verguenza::El Trovador Del Valle",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/electrodos_sinverguenza.htm",
+      "identity": "Los Electrodos::Sin Verguenza::Mi Carrito",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/electrodos_sinverguenza.htm",
+      "identity": "Los Electrodos::Sin Verguenza::Mi Pavo",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/etc_malascompanias.htm",
+      "identity": "ETC::Malas Compañias::Pasaje A La Soledad",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/etc_malascompanias.htm",
+      "identity": "ETC::Malas Compañias::La Lluvia",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/etc_malascompanias.htm",
+      "identity": "ETC::Malas Compañias::Muñeca De Blanco",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/etc_malascompanias.htm",
+      "identity": "ETC::Malas Compañias::El Petróleo",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/etc_malascompanias.htm",
+      "identity": "ETC::Malas Compañias::Fumando Agachado Bajo La Cresta De Un Arbol",
+      "core": "05",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/fabricadsuenos_1fueradfase.htm",
+      "identity": "Fábrica De Sueños::Fuera De Fase::Te Marchastes De Mi",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/fabricadsuenos_1fueradfase.htm",
+      "identity": "Fábrica De Sueños::Fuera De Fase::Juegos",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/fabricadsuenos_1fueradfase.htm",
+      "identity": "Fábrica De Sueños::Fuera De Fase::Detrás De Las Puertas",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/fabricadsuenos_1fueradfase.htm",
+      "identity": "Fábrica De Sueños::Fuera De Fase::Ocho Horas",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/fabricadsuenos_1fueradfase.htm",
+      "identity": "Fábrica De Sueños::Fuera De Fase::Automatización",
+      "core": "05",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/fahrenheit_1.htm",
+      "identity": "Fahrenheit::Fahrenheit::Un Día Más",
+      "core": "03",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/fahrenheit_1.htm",
+      "identity": "Fahrenheit::Fahrenheit::Dónde Me Encuentro?",
+      "core": "04",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/fhes_ojosvidrio.htm",
+      "identity": "Fhes::Ojos Vidriosos::Gente Artificial",
+      "core": "01",
+      "page": "3"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/fhes_ojosvidrio.htm",
+      "identity": "Fhes::Ojos Vidriosos::Circunstancias",
+      "core": "02",
+      "page": "4"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/franklin_holland1.htm",
+      "identity": "Proyecto Franklin Holland::Al Público::Sólo El Tiempo Dirá",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/franklin_holland1.htm",
+      "identity": "Proyecto Franklin Holland::Al Público::Al Público",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/franklin_holland1.htm",
+      "identity": "Proyecto Franklin Holland::Al Público::El Blues De Caracas",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/franklin_holland1.htm",
+      "identity": "Proyecto Franklin Holland::Al Público::Al Músico",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/fuga_1.htm",
+      "identity": "Fuga::Fuga::No Quiero A Tu Padre",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/fuga_1.htm",
+      "identity": "Fuga::Fuga::No Me Acordaba",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/fuga_1.htm",
+      "identity": "Fuga::Fuga::Día De Parada",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/fuga_1.htm",
+      "identity": "Fuga::Fuga::No Aguanto Más",
+      "core": "05",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/fusion_proyecto1.htm",
+      "identity": "Fusión::Proyecto 1::Me Tienes Loco",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/fusion_proyecto1.htm",
+      "identity": "Fusión::Proyecto 1::Poca Fantasía",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/fusion_proyecto1.htm",
+      "identity": "Fusión::Proyecto 1::Quiero Estar a Tu Lado",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/fusion_proyecto1.htm",
+      "identity": "Fusión::Proyecto 1::Eclipsado",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/gladys_lahijadlaoscuridad.htm",
+      "identity": "Gladys::La Hija De La Oscuridad::Concilia",
+      "core": "01",
+      "page": "5"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/gladys_lahijadlaoscuridad.htm",
+      "identity": "Gladys::La Hija De La Oscuridad::Quiero Casarme",
+      "core": "02",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/gladys_lahijadlaoscuridad.htm",
+      "identity": "Gladys::La Hija De La Oscuridad::Bits (Pedacitos)",
+      "core": "04",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/homer_donts_shindig.htm",
+      "identity": "Homer & The Dont's::Shindig::Satisfaction",
+      "core": "01",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/homer_donts_shindig.htm",
+      "identity": "Homer & The Dont's::Shindig::I'm Falling",
+      "core": "02",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/homer_donts_shindig.htm",
+      "identity": "Homer & The Dont's::Shindig::Wasting My Time",
+      "core": "03",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/homer_donts_shindig.htm",
+      "identity": "Homer & The Dont's::Shindig::Till I Met You",
+      "core": "04",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/homer_donts_shindig.htm",
+      "identity": "Homer & The Dont's::Shindig::Because",
+      "core": "05",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/homer_donts_shindig.htm",
+      "identity": "Homer & The Dont's::Shindig::Carol",
+      "core": "06",
+      "page": "12"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/jade_jade.htm",
+      "identity": "Jade::Jade::Vete",
+      "core": "01",
+      "page": "5"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/jade_jade.htm",
+      "identity": "Jade::Jade::Acordes",
+      "core": "02",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/jade_jade.htm",
+      "identity": "Jade::Jade::Ahora Que Te Encontré",
+      "core": "03",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/jade_jade.htm",
+      "identity": "Jade::Jade::Encontré Un Amor",
+      "core": "04",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/jade_jade.htm",
+      "identity": "Jade::Jade::Por Favor",
+      "core": "05",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/lobin_ejnay_cuando.htm",
+      "identity": "Lobin Ejnay::Cuando Yo Era Pavo::Potpourri Los Claners",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/losclippers_1twist.htm",
+      "identity": "Los Clippers::Twist::Remolino",
+      "core": "01",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/losclippers_1twist.htm",
+      "identity": "Los Clippers::Twist::Bailando Sobre Cuerdas",
+      "core": "02",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/losclippers_1twist.htm",
+      "identity": "Los Clippers::Twist::Tu Ausencia",
+      "core": "03",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/losclippers_1twist.htm",
+      "identity": "Los Clippers::Twist::Multiplicado",
+      "core": "04",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/losclippers_1twist.htm",
+      "identity": "Los Clippers::Twist::Hechizo",
+      "core": "05",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/losclippers_1twist.htm",
+      "identity": "Los Clippers::Twist::Luna De Miel En La Luna",
+      "core": "06",
+      "page": "12"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/noggers_discotheque.htm",
+      "identity": "Los Nogger's::Mi Discotheque::LLegaremos Tarde",
+      "core": "01",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/noggers_discotheque.htm",
+      "identity": "Los Nogger's::Mi Discotheque::Poema Dos",
+      "core": "02",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/noggers_discotheque.htm",
+      "identity": "Los Nogger's::Mi Discotheque::Soñé Contigo",
+      "core": "03",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/noggers_discotheque.htm",
+      "identity": "Los Nogger's::Mi Discotheque::Te Diré La Verdad",
+      "core": "04",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/noggers_discotheque.htm",
+      "identity": "Los Nogger's::Mi Discotheque::Medianoche",
+      "core": "05",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/noggers_discotheque.htm",
+      "identity": "Los Nogger's::Mi Discotheque::Debes Decir Que Me Quieres",
+      "core": "06",
+      "page": "12"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/the_pets_1.htm",
+      "identity": "The Pets::The Pets::Si Tu Quisieras",
+      "core": "01",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/the_pets_1.htm",
+      "identity": "The Pets::The Pets::Una Como Ella",
+      "core": "02",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/the_pets_1.htm",
+      "identity": "The Pets::The Pets::Revolución",
+      "core": "03",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/the_pets_1.htm",
+      "identity": "The Pets::The Pets::Toma La Guitarra",
+      "core": "04",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/the_pets_1.htm",
+      "identity": "The Pets::The Pets::La Pobreza",
+      "core": "05",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/the_pets_1.htm",
+      "identity": "The Pets::The Pets::En El Verano",
+      "core": "06",
+      "page": "12"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/lossharks_enelautocine.htm",
+      "identity": "Los Sharks::En El Autocine::Contento Estoy",
+      "core": "01",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/lossharks_enelautocine.htm",
+      "identity": "Los Sharks::En El Autocine::Samba De Una Nota Sola",
+      "core": "02",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/lossharks_enelautocine.htm",
+      "identity": "Los Sharks::En El Autocine::Desencadena Mi Corazón",
+      "core": "03",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/lossharks_enelautocine.htm",
+      "identity": "Los Sharks::En El Autocine::Detén La Noche",
+      "core": "04",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/lossharks_enelautocine.htm",
+      "identity": "Los Sharks::En El Autocine::Recuerdos De Bahía",
+      "core": "05",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/lossharks_enelautocine.htm",
+      "identity": "Los Sharks::En El Autocine::Camina Recto",
+      "core": "06",
+      "page": "12"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_x5.htm",
+      "identity": "Los X5::Los X5::Vives En Mi Mente",
+      "core": "01",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_x5.htm",
+      "identity": "Los X5::Los X5::He Encontrado Un Amor",
+      "core": "02",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_x5.htm",
+      "identity": "Los X5::Los X5::Y La Amaré",
+      "core": "03",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_x5.htm",
+      "identity": "Los X5::Los X5::De Visita En Mi País",
+      "core": "04",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_x5.htm",
+      "identity": "Los X5::Los X5::Ese Amor No Volverá",
+      "core": "05",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/madus_1.htm",
+      "identity": "Madu's::Madu's::No Puedo",
+      "core": "01",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/madus_1.htm",
+      "identity": "Madu's::Madu's::Entre La Espada y La Pared",
+      "core": "02",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/madus_1.htm",
+      "identity": "Madu's::Madu's::No Basta Pensar",
+      "core": "03",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/madus_1.htm",
+      "identity": "Madu's::Madu's::El Primer Amor",
+      "core": "04",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/madus_1.htm",
+      "identity": "Madu's::Madu's::El Tiempo",
+      "core": "05",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/melao_nuestramagia.htm",
+      "identity": "Melao::Nuestra Magia::Verte Otra Vez",
+      "core": "01",
+      "page": "5"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/melao_nuestramagia.htm",
+      "identity": "Melao::Nuestra Magia::Magia",
+      "core": "02",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/melao_nuestramagia.htm",
+      "identity": "Melao::Nuestra Magia::Cuento Pasado",
+      "core": "03",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/melao_nuestramagia.htm",
+      "identity": "Melao::Nuestra Magia::Como Ayer",
+      "core": "04",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/mussa_mussa.htm",
+      "identity": "Mussa::Mussa::Te Veo En La Televisión",
+      "core": "01",
+      "page": "5"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/mussa_mussa.htm",
+      "identity": "Mussa::Mussa::Se Que No Soy",
+      "core": "02",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/mussa_mussa.htm",
+      "identity": "Mussa::Mussa::Sin El Teléfono",
+      "core": "03",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/mussa_mussa.htm",
+      "identity": "Mussa::Mussa::Como Quien No Quiere",
+      "core": "04",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/pan_1970.htm",
+      "identity": "Pan::Pan::Daisy",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/pan_1970.htm",
+      "identity": "Pan::Pan::Yo La Ví",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/pan_1970.htm",
+      "identity": "Pan::Pan::Vete",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/pan_1970.htm",
+      "identity": "Pan::Pan::Sinfonía N° 20",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/pan_1970.htm",
+      "identity": "Pan::Pan::No Te Olvides Del Señor",
+      "core": "05",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/profecia_1.htm",
+      "identity": "Profecia::Profecia::Sigues Siendo Mia",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/profecia_1.htm",
+      "identity": "Profecia::Profecia::Tratare",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/profecia_1.htm",
+      "identity": "Profecia::Profecia::Puedes Encontrarlo",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/profecia_1.htm",
+      "identity": "Profecia::Profecia::Más Allá De Tu Ser",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/profecia_1.htm",
+      "identity": "Profecia::Profecia::Jazzaly",
+      "core": "05",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/quarzo_1.htm",
+      "identity": "Quarzo::Quarzo::Qué Importan Las Cosas",
+      "core": "01",
+      "page": "5"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/quarzo_1.htm",
+      "identity": "Quarzo::Quarzo::Dulce",
+      "core": "02",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/quarzo_1.htm",
+      "identity": "Quarzo::Quarzo::Ladrona De Sueños",
+      "core": "03",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/quarzo_1.htm",
+      "identity": "Quarzo::Quarzo::Música Del Alma",
+      "core": "04",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/15yultimo_01.htm",
+      "identity": "Quince y Ultimo::15 y Ultimo::Tu Indiferencia",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/15yultimo_01.htm",
+      "identity": "Quince y Ultimo::15 y Ultimo::Martha",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/15yultimo_01.htm",
+      "identity": "Quince y Ultimo::15 y Ultimo::Dime",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/15yultimo_01.htm",
+      "identity": "Quince y Ultimo::15 y Ultimo::Que Cosa Tan Loca",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/san_francisco_1.htm",
+      "identity": "San Francisco::San Francisco::Perdóname",
+      "core": "01",
+      "page": "5"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/san_francisco_1.htm",
+      "identity": "San Francisco::San Francisco::Esperaré",
+      "core": "02",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/san_francisco_1.htm",
+      "identity": "San Francisco::San Francisco::Caminando",
+      "core": "03",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/san_francisco_1.htm",
+      "identity": "San Francisco::San Francisco::Venezuela",
+      "core": "04",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/sangre_1.htm",
+      "identity": "Sangre::Sangre::Los Momentos Que Estas Junto a Mi",
+      "core": "01",
+      "page": "5"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/sangre_1.htm",
+      "identity": "Sangre::Sangre::The Girl With The Big Green Eyes",
+      "core": "03",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/sangre_1.htm",
+      "identity": "Sangre::Sangre::We'll Live a Little Bit More",
+      "core": "04",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/santa_paula1.htm",
+      "identity": "Santa Paula::Santa Paula::Blanca Navidad",
+      "core": "01",
+      "page": "5"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/santa_paula1.htm",
+      "identity": "Santa Paula::Santa Paula::Autocontrol",
+      "core": "02",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/santa_paula1.htm",
+      "identity": "Santa Paula::Santa Paula::Johanna",
+      "core": "03",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/santa_paula1.htm",
+      "identity": "Santa Paula::Santa Paula::Toda La Noche",
+      "core": "04",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/six_1.htm",
+      "identity": "The Six::Six::Dr. Barnard",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/six_1.htm",
+      "identity": "The Six::Six::No Se Cómo Se Puede",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/six_1.htm",
+      "identity": "The Six::Six::Chiwawa",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/six_1.htm",
+      "identity": "The Six::Six::Regreso",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/six_1.htm",
+      "identity": "The Six::Six::Si Tu Estas",
+      "core": "05",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/trampas_1.htm",
+      "identity": "Trampas::Trampas::Comienzo",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/trampas_1.htm",
+      "identity": "Trampas::Trampas::Sientelo",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/trampas_1.htm",
+      "identity": "Trampas::Trampas::Camina",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/trampas_1.htm",
+      "identity": "Trampas::Trampas::El Tiempo Pasa",
+      "core": "05",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/wag_1.htm",
+      "identity": "Wag::Wag::Depende De Ti",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/wag_1.htm",
+      "identity": "Wag::Wag::Hay Un Fantasma",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/wag_1.htm",
+      "identity": "Wag::Wag::Una Verdadera Inspiración",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/wag_1.htm",
+      "identity": "Wag::Wag::Profundo",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/williams_marcadfuego.htm",
+      "identity": "Williams::Marca De Fuego::Marca De Fuego",
+      "core": "01",
+      "page": "5"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/williams_marcadfuego.htm",
+      "identity": "Williams::Marca De Fuego::Así Es El Amor",
+      "core": "02",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/williams_marcadfuego.htm",
+      "identity": "Williams::Marca De Fuego::Amiga",
+      "core": "03",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/williams_marcadfuego.htm",
+      "identity": "Williams::Marca De Fuego::Te Quiero Amar",
+      "core": "04",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/aditus_03fueraley.htm",
+      "identity": "Aditus::Fuera de La Ley::Fuera de La Ley",
+      "core": "01",
+      "page": "5"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/aditus_04posicion.htm",
+      "identity": "Aditus::Posición Adelantada::Eres Todo Digital",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/aditus_04posicion.htm",
+      "identity": "Aditus::Posición Adelantada::Que Más Da",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/aditus_04posicion.htm",
+      "identity": "Aditus::Posición Adelantada::Apartamento",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/aditus_04posicion.htm",
+      "identity": "Aditus::Posición Adelantada::El Viajero",
+      "core": "05",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/aditus_05amvision.htm",
+      "identity": "Aditus::AM-VISION::Televisión",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/aditus_05amvision.htm",
+      "identity": "Aditus::AM-VISION::Con Su Mismo Embriagador",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/aditus_05amvision.htm",
+      "identity": "Aditus::AM-VISION::No Hay Comunicación",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/aditus_06juegos.htm",
+      "identity": "Aditus::Juegos de Azar::Crisis",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/aditus_06juegos.htm",
+      "identity": "Aditus::Juegos de Azar::Háblame De Ti",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/aditus_06juegos.htm",
+      "identity": "Aditus::Juegos de Azar::5 Años Luz",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/aditus_07algoelectrico.htm",
+      "identity": "Aditus::Algo Eléctrico::Tiempo",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/aditus_07algoelectrico.htm",
+      "identity": "Aditus::Algo Eléctrico::Qué Le Vamos A Hacer?",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/aditus_07algoelectrico.htm",
+      "identity": "Aditus::Algo Eléctrico::Ella Tiene (No Sé Qué)",
+      "core": "05",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/aditus_08mejor_peor.htm",
+      "identity": "Aditus::Lo Mejor y Lo Peor...::Quiero Ser Tu Heroe",
+      "core": "01",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/aditus_08mejor_peor.htm",
+      "identity": "Aditus::Lo Mejor y Lo Peor...::Casualidad",
+      "core": "02",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/aditus_08mejor_peor.htm",
+      "identity": "Aditus::Lo Mejor y Lo Peor...::Tiempo (en Vivo)",
+      "core": "05",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/aditus_09otromundo.htm",
+      "identity": "Aditus::Otro Mundo::Hora De Partir",
+      "core": "02",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/aditus_09otromundo.htm",
+      "identity": "Aditus::Otro Mundo::Perdiendo Altura",
+      "core": "04",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/aditus_09otromundo.htm",
+      "identity": "Aditus::Otro Mundo::Y A Mí Qué?",
+      "core": "05",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/aditus_10.htm",
+      "identity": "Aditus::Diez::Quise Olvidarte",
+      "core": "01",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/aditus_10.htm",
+      "identity": "Aditus::Diez::Soy Como Tu",
+      "core": "02",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/aditus_10.htm",
+      "identity": "Aditus::Diez::Cosas de Noche",
+      "core": "03",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/aditus_10.htm",
+      "identity": "Aditus::Diez::En Este Pais",
+      "core": "04",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/aditus_15reversible.htm",
+      "identity": "Aditus::Reversible Por Ambos Lados::Buscando Un Maizal",
+      "core": "01",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/aditus_15reversible.htm",
+      "identity": "Aditus::Reversible Por Ambos Lados::Un Amor Por Un Amor",
+      "core": "02",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/aditus_15reversible.htm",
+      "identity": "Aditus::Reversible Por Ambos Lados::Rompecabezas",
+      "core": "03",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/aditus_15reversible.htm",
+      "identity": "Aditus::Reversible Por Ambos Lados::Soñar y Cantar",
+      "core": "04",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/aditus_15reversible.htm",
+      "identity": "Aditus::Reversible Por Ambos Lados::El Final",
+      "core": "05",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/agni_propiasyajenas.htm",
+      "identity": "Agni Mogollón::Propias y Ajenas::Somos Mas De La Cuenta",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/agni_propiasyajenas.htm",
+      "identity": "Agni Mogollón::Propias y Ajenas::Dicen",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/agni_propiasyajenas.htm",
+      "identity": "Agni Mogollón::Propias y Ajenas::Los Locos De Siempre",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/agni_propiasyajenas.htm",
+      "identity": "Agni Mogollón::Propias y Ajenas::Quien Dijo Rock",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/agni_propiasyajenas.htm",
+      "identity": "Agni Mogollón::Propias y Ajenas::Despistando Al Enemigo",
+      "core": "05",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/agni_entreduendes.htm",
+      "identity": "Agni Mogollón::Entre Duendes::Ahi Les Queda Eso",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/agni_entreduendes.htm",
+      "identity": "Agni Mogollón::Entre Duendes::No Hace Falta Que",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/agni_entreduendes.htm",
+      "identity": "Agni Mogollón::Entre Duendes::Ana Me Duele",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/agni_entreduendes.htm",
+      "identity": "Agni Mogollón::Entre Duendes::Tan Solo Un Blues",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/agni_entreduendes.htm",
+      "identity": "Agni Mogollón::Entre Duendes::Cabalgando El Arco Iris",
+      "core": "05",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/gina_agny1.htm",
+      "identity": "Gina y Agny::Gina y Agny::Poco A Poco",
+      "core": "01",
+      "page": "5"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/gina_agny1.htm",
+      "identity": "Gina y Agny::Gina y Agny::Yo Quiero",
+      "core": "02",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/gina_agny1.htm",
+      "identity": "Gina y Agny::Gina y Agny::Si Te Vas",
+      "core": "03",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/gina_agny1.htm",
+      "identity": "Gina y Agny::Gina y Agny::Soledades",
+      "core": "04",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/gina_agny1.htm",
+      "identity": "Gina y Agny::Gina y Agny::Somos Amantes Otra Vez",
+      "core": "05",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/gina_agny2_sangrefuego.htm",
+      "identity": "Gina y Agny::A Sangre y Fuego::Silencio",
+      "core": "01",
+      "page": "5"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/gina_agny2_sangrefuego.htm",
+      "identity": "Gina y Agny::A Sangre y Fuego::Dicen",
+      "core": "02",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/gina_agny2_sangrefuego.htm",
+      "identity": "Gina y Agny::A Sangre y Fuego::Tu y Yo",
+      "core": "03",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/gina_agny2_sangrefuego.htm",
+      "identity": "Gina y Agny::A Sangre y Fuego::Será Mejor",
+      "core": "04",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/gina_agny3.htm",
+      "identity": "Gina y Agny::Gina y Agny::Nada",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/gina_agny3.htm",
+      "identity": "Gina y Agny::Gina y Agny::Yo Se Lo Que Siento",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/gina_agny3.htm",
+      "identity": "Gina y Agny::Gina y Agny::Como Antes",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/gina_agny3.htm",
+      "identity": "Gina y Agny::Gina y Agny::Lejos",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/gina_agny3.htm",
+      "identity": "Gina y Agny::Gina y Agny::Es Amor",
+      "core": "05",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_zeppy_1.htm",
+      "identity": "Los Zeppy::Los Zeppy::Personalidad",
+      "core": "01",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_zeppy_1.htm",
+      "identity": "Los Zeppy::Los Zeppy::Mi Pobre Corazón",
+      "core": "02",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_zeppy_1.htm",
+      "identity": "Los Zeppy::Los Zeppy::Dudas",
+      "core": "03",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_zeppy_1.htm",
+      "identity": "Los Zeppy::Los Zeppy::Retardo",
+      "core": "04",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_zeppy_1.htm",
+      "identity": "Los Zeppy::Los Zeppy::Amorcito",
+      "core": "05",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_zeppy_1.htm",
+      "identity": "Los Zeppy::Los Zeppy::Estremécete",
+      "core": "06",
+      "page": "12"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_zeppy_2hits.htm",
+      "identity": "Los Zeppy::Hits de Los Zeppy::Tormento",
+      "core": "01",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_zeppy_2hits.htm",
+      "identity": "Los Zeppy::Hits de Los Zeppy::Lluvia",
+      "core": "02",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_zeppy_2hits.htm",
+      "identity": "Los Zeppy::Hits de Los Zeppy::Vuelve a Mi",
+      "core": "03",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_zeppy_2hits.htm",
+      "identity": "Los Zeppy::Hits de Los Zeppy::Médico Brujo",
+      "core": "04",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_zeppy_2hits.htm",
+      "identity": "Los Zeppy::Hits de Los Zeppy::Buen Tiempo",
+      "core": "05",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_zeppy_2hits.htm",
+      "identity": "Los Zeppy::Hits de Los Zeppy::San Tomé",
+      "core": "06",
+      "page": "12"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/alzeppy_64exitosdalzeppy.htm",
+      "identity": "Al Zeppy::Los Exitos de Al Zeppy::Es Un Placer",
+      "core": "01",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/alzeppy_64exitosdalzeppy.htm",
+      "identity": "Al Zeppy::Los Exitos de Al Zeppy::Muñecos",
+      "core": "02",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/alzeppy_64exitosdalzeppy.htm",
+      "identity": "Al Zeppy::Los Exitos de Al Zeppy::Llorando En La Iglesia",
+      "core": "03",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/alzeppy_64exitosdalzeppy.htm",
+      "identity": "Al Zeppy::Los Exitos de Al Zeppy::Mi Corazón Quiere Saber",
+      "core": "04",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/alzeppy_64exitosdalzeppy.htm",
+      "identity": "Al Zeppy::Los Exitos de Al Zeppy::Minutos Sin Ti",
+      "core": "05",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/alzeppy_64exitosdalzeppy.htm",
+      "identity": "Al Zeppy::Los Exitos de Al Zeppy::Te Pido Que Me Olvides",
+      "core": "06",
+      "page": "12"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/alzeppy_67ennewyork.htm",
+      "identity": "Al Zeppy::Al Zeppy En New York::La Casa Más Bonita Del Mundo",
+      "core": "01",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/alzeppy_67ennewyork.htm",
+      "identity": "Al Zeppy::Al Zeppy En New York::No, No Me Dejes Ir",
+      "core": "02",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/alzeppy_67ennewyork.htm",
+      "identity": "Al Zeppy::Al Zeppy En New York::Llorando De Alegría",
+      "core": "03",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/alzeppy_67ennewyork.htm",
+      "identity": "Al Zeppy::Al Zeppy En New York::Al Fin Volverás",
+      "core": "04",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/alzeppy_67ennewyork.htm",
+      "identity": "Al Zeppy::Al Zeppy En New York::Llámame",
+      "core": "05",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/alexrossell_0vzla_joven.htm",
+      "identity": "Alexis Rossell::Alexis Rossell y su Venezuela Joven::Adicora",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/alexrossell_2vuelo.htm",
+      "identity": "Alexis Rossell::Vuelo Del Icaro::El Vuelo Del Icaro",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/alexrossell_2vuelo.htm",
+      "identity": "Alexis Rossell::Vuelo Del Icaro::Polo Coriano",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/alexrossell_2vuelo.htm",
+      "identity": "Alexis Rossell::Vuelo Del Icaro::Río Manzanares",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/alexrossell_2vuelo.htm",
+      "identity": "Alexis Rossell::Vuelo Del Icaro::Viaje Hacia Un Arco Iris",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/alexrossell_2vuelo.htm",
+      "identity": "Alexis Rossell::Vuelo Del Icaro::Cerecita",
+      "core": "05",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/alexrossell_3cordonazo.htm",
+      "identity": "Alexis Rossell::El Cordonazo::Fiesta En Elorza",
+      "core": "01",
+      "page": "5"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/alexrossell_3cordonazo.htm",
+      "identity": "Alexis Rossell::El Cordonazo::Sueños De Un Mañana",
+      "core": "02",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/alexrossell_3cordonazo.htm",
+      "identity": "Alexis Rossell::El Cordonazo::El Cordonazo",
+      "core": "03",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/alexrossell_3cordonazo.htm",
+      "identity": "Alexis Rossell::El Cordonazo::Crepúsculo",
+      "core": "04",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/alexrossell_4torbellino.htm",
+      "identity": "Alexis Rossell::Torbellino::Fantasia Tocuyana",
+      "core": "01",
+      "page": "4"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/alexrossell_4torbellino.htm",
+      "identity": "Alexis Rossell::Torbellino::Paseito Oriental",
+      "core": "02",
+      "page": "5"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/alexrossell_4torbellino.htm",
+      "identity": "Alexis Rossell::Torbellino::La Taparita",
+      "core": "03",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/alexrossell_4esnavidad.htm",
+      "identity": "Alexis Rossell::... Es Navidad::Aguinaldo Venezolano",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/alexrossell_4esnavidad.htm",
+      "identity": "Alexis Rossell::... Es Navidad::La Cabra Mocha",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/alexrossell_4esnavidad.htm",
+      "identity": "Alexis Rossell::... Es Navidad::Al Cantar Del Gallo",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/alexrossell_4esnavidad.htm",
+      "identity": "Alexis Rossell::... Es Navidad::De Contento",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/alexrossell_4esnavidad.htm",
+      "identity": "Alexis Rossell::... Es Navidad::Selección Navideña Internacional",
+      "core": "05",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/alexrossell_5sangre.htm",
+      "identity": "Alexis Rossell::Sangre Negra::Concierto Para Eva",
+      "core": "01",
+      "page": "5"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/alexrossell_5sangre.htm",
+      "identity": "Alexis Rossell::Sangre Negra::La Burriquita",
+      "core": "03",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/alexrossell_6alrescate.htm",
+      "identity": "Alexis Rossell::Al Rescate::Selección Oriental",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/alexrossell_6alrescate.htm",
+      "identity": "Alexis Rossell::Al Rescate::Criollísima",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/alexrossell_6alrescate.htm",
+      "identity": "Alexis Rossell::Al Rescate::El Porteño",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/alexrossell_6alrescate.htm",
+      "identity": "Alexis Rossell::Al Rescate::El Norte Es Una Quimera",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/alexrossell_6alrescate.htm",
+      "identity": "Alexis Rossell::Al Rescate::Sombra En Los Medanos",
+      "core": "05",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/alexrossell_8zapatico.htm",
+      "identity": "Alexis Rossell::Zapatico de Navidad::Sentimiento Navideño",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/alexrossell_8zapatico.htm",
+      "identity": "Alexis Rossell::Zapatico de Navidad::Donde Vives",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/alexrossell_8zapatico.htm",
+      "identity": "Alexis Rossell::Zapatico de Navidad::Dichosos Mortales",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/alexrossell_8zapatico.htm",
+      "identity": "Alexis Rossell::Zapatico de Navidad::Para Ti Mi Cantar",
+      "core": "05",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/alexrossell_9infinito.htm",
+      "identity": "Alexis Rossell::Desde el Infinito::Caroni",
+      "core": "01",
+      "page": "5"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/alexrossell_9infinito.htm",
+      "identity": "Alexis Rossell::Desde el Infinito::Regalito de Dios",
+      "core": "03",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/alexrossell_9infinito.htm",
+      "identity": "Alexis Rossell::Desde el Infinito::Martha Elena",
+      "core": "04",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/alterego_1lacalle.htm",
+      "identity": "Alter Ego::La Calle Es La Misma::La Calle Es La Misma",
+      "core": "01",
+      "page": "3"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/alterego_1lacalle.htm",
+      "identity": "Alter Ego::La Calle Es La Misma::Revolución Para ...",
+      "core": "02",
+      "page": "4"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/alvarosegura_1asiloveoyo.htm",
+      "identity": "Alvaro Segura::Así Lo Veo Yo::Layers",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/alvarosegura_1asiloveoyo.htm",
+      "identity": "Alvaro Segura::Así Lo Veo Yo::Osita de Peluche",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/alvarosegura_1asiloveoyo.htm",
+      "identity": "Alvaro Segura::Así Lo Veo Yo::Respuestas",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/alvarosegura_1asiloveoyo.htm",
+      "identity": "Alvaro Segura::Así Lo Veo Yo::Virgen De Escarcha",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/ambar_3californiashade.htm",
+      "identity": "Ambar::California Shade::Camionero (Trucking Man)",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/ambar_3californiashade.htm",
+      "identity": "Ambar::California Shade::Si Quieres (If You Want)",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/ambar_3californiashade.htm",
+      "identity": "Ambar::California Shade::Bailando Lento (Slow Dancin')",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/ambar_3californiashade.htm",
+      "identity": "Ambar::California Shade::Es Verdadero Amor? (Is It True Love)",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/ananta_1nightdaydream.htm",
+      "identity": "Ananta::Night And Daydream::The Game",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/ananta_1nightdaydream.htm",
+      "identity": "Ananta::Night And Daydream::Be With You",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/ananta_1nightdaydream.htm",
+      "identity": "Ananta::Night And Daydream::Fill Your Heart And Mind",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/ananta_1nightdaydream.htm",
+      "identity": "Ananta::Night And Daydream::Night And Daydream",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/ananta_1wheelsoftime.htm",
+      "identity": "Ananta::Wheels Of Time::Fill Your Heart And Mind",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/ananta_1wheelsoftime.htm",
+      "identity": "Ananta::Wheels Of Time::Night And Daydream",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/ankla_1fantasia.htm",
+      "identity": "Ankla::Fantasía::El Tiempo Se Va",
+      "core": "01",
+      "page": "5"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/ankla_1fantasia.htm",
+      "identity": "Ankla::Fantasía::Un Día Normal",
+      "core": "02",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/ankla_1fantasia.htm",
+      "identity": "Ankla::Fantasía::Entrega",
+      "core": "03",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/ankla_1fantasia.htm",
+      "identity": "Ankla::Fantasía::Un Mundo Nuevo",
+      "core": "04",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/ankla_2dfrente.htm",
+      "identity": "Ankla::De Frente::Mademoiselle",
+      "core": "02",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/ankla_2dfrente.htm",
+      "identity": "Ankla::De Frente::El Pelón",
+      "core": "04",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/ankla_3baile.htm",
+      "identity": "Ankla::Baile Americano::Reflexiones",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/ankla_3baile.htm",
+      "identity": "Ankla::Baile Americano::Silvia",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/ankla_3baile.htm",
+      "identity": "Ankla::Baile Americano::Tú y Yo",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/ankla_3baile.htm",
+      "identity": "Ankla::Baile Americano::Enamorados Otra Vez",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/ankla_3baile.htm",
+      "identity": "Ankla::Baile Americano::Quédate Esta Noche",
+      "core": "05",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/azabache_abailar.htm",
+      "identity": "Azabache::A Bailar::A Bailar",
+      "core": "01",
+      "page": "3"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/azabache_abailar.htm",
+      "identity": "Azabache::A Bailar::A Bailar",
+      "core": "01",
+      "page": "3"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/azabache_dejamecorrer.htm",
+      "identity": "Azabache::Déjame Correr::Déjame Correr",
+      "core": "01",
+      "page": "5"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/azabache_dejamecorrer.htm",
+      "identity": "Azabache::Déjame Correr::De Caramelo",
+      "core": "02",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/azabache_dejamecorrer.htm",
+      "identity": "Azabache::Déjame Correr::Si Amaste Alguna Vez",
+      "core": "03",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/azabache_dejamecorrer.htm",
+      "identity": "Azabache::Déjame Correr::La Magia De Tu Amor",
+      "core": "04",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/azabache_dejamecorrer.htm",
+      "identity": "Azabache::Déjame Correr::A Bailar",
+      "core": "05",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/azucar_cacaoyle_1.htm",
+      "identity": "Azúcar Cacao y Leche::Azúcar Cacao y Leche::Palabra De Amor",
+      "core": "01",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/azucar_cacaoyle_1.htm",
+      "identity": "Azúcar Cacao y Leche::Azúcar Cacao y Leche::Tiempo Para Amar",
+      "core": "02",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/azucar_cacaoyle_1.htm",
+      "identity": "Azúcar Cacao y Leche::Azúcar Cacao y Leche::Joven Amor",
+      "core": "03",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/azucar_cacaoyle_1.htm",
+      "identity": "Azúcar Cacao y Leche::Azúcar Cacao y Leche::Tómalo o Déjalo",
+      "core": "04",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/azucar_cacaoyle_1.htm",
+      "identity": "Azúcar Cacao y Leche::Azúcar Cacao y Leche::La Guitarra",
+      "core": "05",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/azucar_cacaoyle_2.htm",
+      "identity": "Azúcar Cacao y Leche::Azúcar Cacao y Leche Vol. II::Al Contrario",
+      "core": "01",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/azucar_cacaoyle_2.htm",
+      "identity": "Azúcar Cacao y Leche::Azúcar Cacao y Leche Vol. II::Su Adiós",
+      "core": "02",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/azucar_cacaoyle_2.htm",
+      "identity": "Azúcar Cacao y Leche::Azúcar Cacao y Leche Vol. II::Es Un Cuento",
+      "core": "03",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/azucar_cacaoyle_2.htm",
+      "identity": "Azúcar Cacao y Leche::Azúcar Cacao y Leche Vol. II::Partiré",
+      "core": "04",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/azucar_cacaoyle_2.htm",
+      "identity": "Azúcar Cacao y Leche::Azúcar Cacao y Leche Vol. II::Tal Como Lo Dijo",
+      "core": "05",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/blonder_1gogo.htm",
+      "identity": "Blonder::El Go-Go De Los Blonders::Si Decides Ir",
+      "core": "01",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/blonder_1gogo.htm",
+      "identity": "Blonder::El Go-Go De Los Blonders::El Día Aquel",
+      "core": "02",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/blonder_1gogo.htm",
+      "identity": "Blonder::El Go-Go De Los Blonders::Nieblas Del Riachuelo",
+      "core": "03",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/blonder_1gogo.htm",
+      "identity": "Blonder::El Go-Go De Los Blonders::Tenía Que Terminar",
+      "core": "04",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/blonder_1gogo.htm",
+      "identity": "Blonder::El Go-Go De Los Blonders::Tanto Sufrir",
+      "core": "05",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/blonder_1gogo.htm",
+      "identity": "Blonder::El Go-Go De Los Blonders::En La Playa",
+      "core": "06",
+      "page": "12"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/blonder_2.htm",
+      "identity": "Blonder::Blonder II::Tu Manera De Ser",
+      "core": "01",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/blonder_2.htm",
+      "identity": "Blonder::Blonder II::Atlantis",
+      "core": "02",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/blonder_2.htm",
+      "identity": "Blonder::Blonder II::Bueno y Qué?",
+      "core": "03",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/blonder_2.htm",
+      "identity": "Blonder::Blonder II::Yo Desespero",
+      "core": "04",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/blonder_2.htm",
+      "identity": "Blonder::Blonder II::Si Te Quiero",
+      "core": "05",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/blonder_2.htm",
+      "identity": "Blonder::Blonder II::Matanza En La 10ª Av.",
+      "core": "06",
+      "page": "12"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/blonder_84.htm",
+      "identity": "Blonder::Blonder 84::Jamás Sin Ti",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/blonder_84.htm",
+      "identity": "Blonder::Blonder 84::Yo Quiero Saber",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/blonder_84.htm",
+      "identity": "Blonder::Blonder 84::Volaré",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/blonder_84.htm",
+      "identity": "Blonder::Blonder 84::Logus JJT",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/blonder_84.htm",
+      "identity": "Blonder::Blonder 84::Tu Felicidad",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/joseantoniobordell_1entrecenizas.htm",
+      "identity": "José Antonio Bordell::Entre Cenizas::Entre Cenizas",
+      "core": "01",
+      "page": "5"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/joseantoniobordell_1entrecenizas.htm",
+      "identity": "José Antonio Bordell::Entre Cenizas::Hipnotizado Sobre Un Cuerpo",
+      "core": "02",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/joseantoniobordell_1entrecenizas.htm",
+      "identity": "José Antonio Bordell::Entre Cenizas::Amiga",
+      "core": "03",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/joseantoniobordell_1entrecenizas.htm",
+      "identity": "José Antonio Bordell::Entre Cenizas::Herida Mortal",
+      "core": "04",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/joseantoniobordell_1entrecenizas.htm",
+      "identity": "José Antonio Bordell::Entre Cenizas::No Volverá",
+      "core": "05",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/joseantoniobordell_2pormiculpa.htm",
+      "identity": "José Antonio Bordell::Por Mi Culpa::Amor De Compra y Venta",
+      "core": "01",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/joseantoniobordell_2pormiculpa.htm",
+      "identity": "José Antonio Bordell::Por Mi Culpa::Señor Ayúdame",
+      "core": "02",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/joseantoniobordell_2pormiculpa.htm",
+      "identity": "José Antonio Bordell::Por Mi Culpa::Ave María",
+      "core": "03",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/joseantoniobordell_2pormiculpa.htm",
+      "identity": "José Antonio Bordell::Por Mi Culpa::Questo Piccolo Grande Amore",
+      "core": "04",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/joseantoniobordell_2pormiculpa.htm",
+      "identity": "José Antonio Bordell::Por Mi Culpa::Sobre El Amparo",
+      "core": "05",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/unicornio_1unicornio.htm",
+      "identity": "Unicornio::Unicornio::Baila Conmigo",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/unicornio_1unicornio.htm",
+      "identity": "Unicornio::Unicornio::Me Enamore Otra Vez",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/unicornio_1unicornio.htm",
+      "identity": "Unicornio::Unicornio::No Nos Pararan",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/unicornio_1unicornio.htm",
+      "identity": "Unicornio::Unicornio::Seis Por Derecho",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/unicornio_1unicornio.htm",
+      "identity": "Unicornio::Unicornio::Unicornio En Puerto Rico",
+      "core": "05",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/unicornio_2lamagia.htm",
+      "identity": "Unicornio::La Magia De Unicornio::Vida Mia",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/unicornio_2lamagia.htm",
+      "identity": "Unicornio::La Magia De Unicornio::Tu",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/unicornio_2lamagia.htm",
+      "identity": "Unicornio::La Magia De Unicornio::Cuando Yo Tengo 64",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/unicornio_2lamagia.htm",
+      "identity": "Unicornio::La Magia De Unicornio::Concierto Para Un Adios",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/unicornio_2lamagia.htm",
+      "identity": "Unicornio::La Magia De Unicornio::Unirock II",
+      "core": "05",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/unicornio_3envivo.htm",
+      "identity": "Unicornio::En Vivo::Te Puedes Marchar",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/unicornio_3envivo.htm",
+      "identity": "Unicornio::En Vivo::Unicornio En Broadway",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/unicornio_3envivo.htm",
+      "identity": "Unicornio::En Vivo::Sobrevivir",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/unicornio_3envivo.htm",
+      "identity": "Unicornio::En Vivo::Madrid",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/unicornio_3envivo.htm",
+      "identity": "Unicornio::En Vivo::Señora Chabuca Granda",
+      "core": "05",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/unicornio_4triunfadores.htm",
+      "identity": "Unicornio::Triunfadores::Quiero Aprender",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/unicornio_4triunfadores.htm",
+      "identity": "Unicornio::Triunfadores::Cristina",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/unicornio_4triunfadores.htm",
+      "identity": "Unicornio::Triunfadores::Tu Canción",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/unicornio_4triunfadores.htm",
+      "identity": "Unicornio::Triunfadores::No Te Aguanto Más",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/unicornio_4triunfadores.htm",
+      "identity": "Unicornio::Triunfadores::Amalia",
+      "core": "05",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosbaute_01origenes.htm",
+      "identity": "Carlos Baute::Orígenes::El Gavilán",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosbaute_01origenes.htm",
+      "identity": "Carlos Baute::Orígenes::Pasillaneando",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosbaute_01origenes.htm",
+      "identity": "Carlos Baute::Orígenes::Muchacha De Ojazos Negros",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosbaute_01origenes.htm",
+      "identity": "Carlos Baute::Orígenes::Corrío Baute",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosbaute_01origenes.htm",
+      "identity": "Carlos Baute::Orígenes::Fiesta De Calipsos",
+      "core": "05",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosbaute_01origenes.htm",
+      "identity": "Carlos Baute::Orígenes::Alma Llanera",
+      "core": "06",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmata_83carlosmata.htm",
+      "identity": "Carlos Mata::Carlos Mata::Cállate",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmata_83carlosmata.htm",
+      "identity": "Carlos Mata::Carlos Mata::Dame Esa Oportunidad",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmata_83carlosmata.htm",
+      "identity": "Carlos Mata::Carlos Mata::Sin Ella",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmata_83carlosmata.htm",
+      "identity": "Carlos Mata::Carlos Mata::Tú",
+      "core": "09",
+      "page": "14"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmata_83carlosmata.htm",
+      "identity": "Carlos Mata::Carlos Mata::Una Llamada Más",
+      "core": "10",
+      "page": "15"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmata_85porqtquiero.htm",
+      "identity": "Carlos Mata::...Porque Te Quiero::Qué Por Qué Te Quiero",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmata_85porqtquiero.htm",
+      "identity": "Carlos Mata::...Porque Te Quiero::Amor A Solas",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmata_85porqtquiero.htm",
+      "identity": "Carlos Mata::...Porque Te Quiero::Vamos A Celebrar",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmata_85porqtquiero.htm",
+      "identity": "Carlos Mata::...Porque Te Quiero::A Lo Mejor",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmata_85porqtquiero.htm",
+      "identity": "Carlos Mata::...Porque Te Quiero::Déjame En Paz",
+      "core": "05",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmata_86otravez.htm",
+      "identity": "Carlos Mata::Otra Vez::Solo Tú",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmata_86otravez.htm",
+      "identity": "Carlos Mata::Otra Vez::Que Me Has Hecho?",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmata_86otravez.htm",
+      "identity": "Carlos Mata::Otra Vez::Cuéntame",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmata_86otravez.htm",
+      "identity": "Carlos Mata::Otra Vez::Que Vas A Hacer",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmata_86otravez.htm",
+      "identity": "Carlos Mata::Otra Vez::Presiento",
+      "core": "05",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmata_88enamoradodti.htm",
+      "identity": "Carlos Mata::Enamorado De Tí::Como Tú No Hay",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmata_88enamoradodti.htm",
+      "identity": "Carlos Mata::Enamorado De Tí::Yo Te Amaba",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmata_88enamoradodti.htm",
+      "identity": "Carlos Mata::Enamorado De Tí::Una Ves Más",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmata_88enamoradodti.htm",
+      "identity": "Carlos Mata::Enamorado De Tí::Tú Serás",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmata_88enamoradodti.htm",
+      "identity": "Carlos Mata::Enamorado De Tí::Te Entregué",
+      "core": "05",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmata_90cautivo.htm",
+      "identity": "Carlos Mata::Cautivo::Sera Lo Que Sera",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmata_90cautivo.htm",
+      "identity": "Carlos Mata::Cautivo::Cuando Tu No Estas",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmata_90cautivo.htm",
+      "identity": "Carlos Mata::Cautivo::Si Te Vuelvo A Ver",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmata_90cautivo.htm",
+      "identity": "Carlos Mata::Cautivo::Alguien Divino",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmata_90cautivo.htm",
+      "identity": "Carlos Mata::Cautivo::Busco Un Corazón",
+      "core": "05",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmata_93miramelosojos.htm",
+      "identity": "Carlos Mata::Mírame A Los Ojos::Castellana 21",
+      "core": "01",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmata_93miramelosojos.htm",
+      "identity": "Carlos Mata::Mírame A Los Ojos::Caballero De La Alegre Figura",
+      "core": "02",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmata_93miramelosojos.htm",
+      "identity": "Carlos Mata::Mírame A Los Ojos::Tan Lejos De Ti",
+      "core": "03",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmata_93miramelosojos.htm",
+      "identity": "Carlos Mata::Mírame A Los Ojos::Puesto A Valer",
+      "core": "04",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmata_93miramelosojos.htm",
+      "identity": "Carlos Mata::Mírame A Los Ojos::Más Me Hubiera Valido",
+      "core": "05",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmorean_1carlosmorean.htm",
+      "identity": "Carlos Moreán::Carlos Moreán::Sigue De Largo (Walk On By)",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmorean_1carlosmorean.htm",
+      "identity": "Carlos Moreán::Carlos Moreán::Dana",
+      "core": "06",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmorean_3aquiestoy.htm",
+      "identity": "Carlos Moreán::Aquí Estoy::Caminemos Bajo El Sol",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmorean_3aquiestoy.htm",
+      "identity": "Carlos Moreán::Aquí Estoy::Que Sentiré",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmorean_3aquiestoy.htm",
+      "identity": "Carlos Moreán::Aquí Estoy::Llévame",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmorean_3aquiestoy.htm",
+      "identity": "Carlos Moreán::Aquí Estoy::De Nuevo Soy Feliz",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmorean_3aquiestoy.htm",
+      "identity": "Carlos Moreán::Aquí Estoy::Quiero Decirte Algo",
+      "core": "05",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/darts_1.htm",
+      "identity": "Los Darts::Los Darts::Siempre Te Recordaré",
+      "core": "01",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/darts_1.htm",
+      "identity": "Los Darts::Los Darts::Nueva Forma De Amar",
+      "core": "02",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/darts_1.htm",
+      "identity": "Los Darts::Los Darts::Inclúyeme",
+      "core": "03",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/darts_1.htm",
+      "identity": "Los Darts::Los Darts::Cuando Tu No Estás",
+      "core": "04",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/darts_1.htm",
+      "identity": "Los Darts::Los Darts::Por Tu Amor",
+      "core": "05",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/darts_1.htm",
+      "identity": "Los Darts::Los Darts::Gritos",
+      "core": "06",
+      "page": "12"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/darts_2.htm",
+      "identity": "Los Darts::Vol. II::No Tienes Nada Que Explicar",
+      "core": "01",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/darts_2.htm",
+      "identity": "Los Darts::Vol. II::Te Llamo A Ti",
+      "core": "02",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/darts_2.htm",
+      "identity": "Los Darts::Vol. II::Sólo Pienso En Tí",
+      "core": "03",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/darts_2.htm",
+      "identity": "Los Darts::Vol. II::Tu Nunca Sabrás",
+      "core": "04",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/darts_2.htm",
+      "identity": "Los Darts::Vol. II::Sólo Existes Tu",
+      "core": "05",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/darts_2.htm",
+      "identity": "Los Darts::Vol. II::Dime Por Qué",
+      "core": "06",
+      "page": "12"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/darts_3unavezmas.htm",
+      "identity": "Los Darts::Una Vez Más::Nunca Nunca",
+      "core": "01",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/darts_3unavezmas.htm",
+      "identity": "Los Darts::Una Vez Más::En Verdad Te Quiero",
+      "core": "02",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/darts_3unavezmas.htm",
+      "identity": "Los Darts::Una Vez Más::Donde Tu Estés, Allí Estaré",
+      "core": "03",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/darts_3unavezmas.htm",
+      "identity": "Los Darts::Una Vez Más::Te Pido Que Te Quedes",
+      "core": "04",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/darts_3unavezmas.htm",
+      "identity": "Los Darts::Una Vez Más::Situación Peculiar",
+      "core": "05",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/darts_3unavezmas.htm",
+      "identity": "Los Darts::Una Vez Más::Sonríe Otra Vez",
+      "core": "06",
+      "page": "12"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/darts_4etiqueta.htm",
+      "identity": "Los Darts::De Etiqueta::Yo",
+      "core": "01",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/darts_4etiqueta.htm",
+      "identity": "Los Darts::De Etiqueta::Si Quieres Bailar",
+      "core": "02",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/darts_4etiqueta.htm",
+      "identity": "Los Darts::De Etiqueta::Olvídala",
+      "core": "03",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/darts_4etiqueta.htm",
+      "identity": "Los Darts::De Etiqueta::No Te Importa",
+      "core": "04",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/darts_4etiqueta.htm",
+      "identity": "Los Darts::De Etiqueta::Desde Que Se Fue",
+      "core": "05",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/darts_4etiqueta.htm",
+      "identity": "Los Darts::De Etiqueta::Windy",
+      "core": "06",
+      "page": "12"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/medioevo_01las10.htm",
+      "identity": "El Medio Evo::Las Diez Peores CanSiones De Latinoamerica::La Vida y sus Cosas De La Vida",
+      "core": "01",
+      "page": "5"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/medioevo_01las10.htm",
+      "identity": "El Medio Evo::Las Diez Peores CanSiones De Latinoamerica::Ingrata Pérfida",
+      "core": "02",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/medioevo_01las10.htm",
+      "identity": "El Medio Evo::Las Diez Peores CanSiones De Latinoamerica::El Puñal Del Olvido",
+      "core": "03",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/medioevo_01las10.htm",
+      "identity": "El Medio Evo::Las Diez Peores CanSiones De Latinoamerica::Aquella Clase De Mirada Serena",
+      "core": "04",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/medioevo_01las10.htm",
+      "identity": "El Medio Evo::Las Diez Peores CanSiones De Latinoamerica::Incumbencia Cruel",
+      "core": "05",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/medioevo_01las10.htm",
+      "identity": "El Medio Evo::Las Diez Peores CanSiones De Latinoamerica::Eres Una Brújula",
+      "core": "06",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/medioevo_02.htm",
+      "identity": "El Medio Evo::Bolumen 2::Leopoldo Jackson (Er Matao)",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/medioevo_02.htm",
+      "identity": "El Medio Evo::Bolumen 2::Guadalupe",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/medioevo_02.htm",
+      "identity": "El Medio Evo::Bolumen 2::La Erótica",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/medioevo_03.htm",
+      "identity": "El Medio Evo::Bolumen 3::El Baile De Losijue",
+      "core": "01",
+      "page": "4"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/medioevo_03.htm",
+      "identity": "El Medio Evo::Bolumen 3::Mamma Mía",
+      "core": "02",
+      "page": "5"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/medioevo_03.htm",
+      "identity": "El Medio Evo::Bolumen 3::Papeles",
+      "core": "03",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/medioevo_03.htm",
+      "identity": "El Medio Evo::Bolumen 3::Francisco Caina",
+      "core": "04",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/medioevo_03.htm",
+      "identity": "El Medio Evo::Bolumen 3::Asma Mía",
+      "core": "05",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/medioevo_05denuevo.htm",
+      "identity": "El Medio Evo::El Medio Evo de Nu-Evo::La Suerte Del Negro",
+      "core": "01",
+      "page": "5"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/medioevo_05denuevo.htm",
+      "identity": "El Medio Evo::El Medio Evo de Nu-Evo::Chaminha",
+      "core": "02",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/medioevo_05denuevo.htm",
+      "identity": "El Medio Evo::El Medio Evo de Nu-Evo::Malvina Maradona, Viuda De Galtieri",
+      "core": "03",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/medioevo_05denuevo.htm",
+      "identity": "El Medio Evo::El Medio Evo de Nu-Evo::Una Buena Mamá",
+      "core": "04",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/medioevo_05denuevo.htm",
+      "identity": "El Medio Evo::El Medio Evo de Nu-Evo::Viele Kleine Hunchen Sagen",
+      "core": "05",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/medioevo_06.htm",
+      "identity": "El Medio Evo::Bolumen 6::Mi Alegre Parrandón",
+      "core": "01",
+      "page": "5"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/medioevo_06.htm",
+      "identity": "El Medio Evo::Bolumen 6::A Trabajar",
+      "core": "02",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/medioevo_06.htm",
+      "identity": "El Medio Evo::Bolumen 6::El Recurso De Amparo",
+      "core": "03",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/medioevo_06.htm",
+      "identity": "El Medio Evo::Bolumen 6::A Mi No Me Gusta Er Mundo",
+      "core": "04",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/compilations1/escenario_juvenil1.htm",
+      "identity": "Various Artists::Escenarío Juvenil::Obladi Oblada",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/compilations1/escenario_juvenil1.htm",
+      "identity": "Various Artists::Escenarío Juvenil::Cuando Mueren Las Estrellas",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/compilations1/escenario_juvenil1.htm",
+      "identity": "Various Artists::Escenarío Juvenil::I've Got You",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/compilations1/escenario_juvenil1.htm",
+      "identity": "Various Artists::Escenarío Juvenil::Otro Amor",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/compilations1/escenario_juvenil1.htm",
+      "identity": "Various Artists::Escenarío Juvenil::51st. Anniversary",
+      "core": "05",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmoreno_79amigosyamantes.htm",
+      "identity": "Carlos Moreno::Amigos y Amantes::Tú",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmoreno_79amigosyamantes.htm",
+      "identity": "Carlos Moreno::Amigos y Amantes::Recuerda Que Aún Te Quiero",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmoreno_79amigosyamantes.htm",
+      "identity": "Carlos Moreno::Amigos y Amantes::Cuando Termina Un Amor",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmoreno_79amigosyamantes.htm",
+      "identity": "Carlos Moreno::Amigos y Amantes::Mi Amigo El Niño",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmoreno_79amigosyamantes.htm",
+      "identity": "Carlos Moreno::Amigos y Amantes::Cuando Me Quieras",
+      "core": "05",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmoreno_80estanoche.htm",
+      "identity": "Carlos Moreno::Esta Noche::Un Hombre y Una Mujer",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmoreno_80estanoche.htm",
+      "identity": "Carlos Moreno::Esta Noche::Recuérdame",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmoreno_80estanoche.htm",
+      "identity": "Carlos Moreno::Esta Noche::Espérame",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmoreno_80estanoche.htm",
+      "identity": "Carlos Moreno::Esta Noche::Que Difícil Es Decir Te Quiero",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmoreno_80estanoche.htm",
+      "identity": "Carlos Moreno::Esta Noche::Déjalo Vivir",
+      "core": "05",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmoreno_83comosiempre.htm",
+      "identity": "Carlos Moreno::Como Siempre::Lo Siento",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmoreno_83comosiempre.htm",
+      "identity": "Carlos Moreno::Como Siempre::El Amor Más Grande Del Mundo",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmoreno_83comosiempre.htm",
+      "identity": "Carlos Moreno::Como Siempre::Desde Cuando",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmoreno_83comosiempre.htm",
+      "identity": "Carlos Moreno::Como Siempre::Sólo Por Ti",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmoreno_83comosiempre.htm",
+      "identity": "Carlos Moreno::Como Siempre::Vivo Pensando En Ti",
+      "core": "05",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmoreno_89aquiestoyotravez.htm",
+      "identity": "Carlos Moreno::Aquí Estoy Otra Vez::Un Amigo Más",
+      "core": "01",
+      "page": "5"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmoreno_89aquiestoyotravez.htm",
+      "identity": "Carlos Moreno::Aquí Estoy Otra Vez::Abrázame",
+      "core": "02",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmoreno_89aquiestoyotravez.htm",
+      "identity": "Carlos Moreno::Aquí Estoy Otra Vez::Estoy Marcado",
+      "core": "03",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmoreno_89aquiestoyotravez.htm",
+      "identity": "Carlos Moreno::Aquí Estoy Otra Vez::El y El",
+      "core": "04",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/granfogata_1fuego.htm",
+      "identity": "La Gran Fogata::Fuego Eterno::Todas Esas Cosas",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/granfogata_1fuego.htm",
+      "identity": "La Gran Fogata::Fuego Eterno::Por Mas Que Me Escuches",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/granfogata_1fuego.htm",
+      "identity": "La Gran Fogata::Fuego Eterno::Igual Siempre igual",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/granfogata_1fuego.htm",
+      "identity": "La Gran Fogata::Fuego Eterno::Como Un Loco",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/granfogata_1fuego.htm",
+      "identity": "La Gran Fogata::Fuego Eterno::Qué Vamos a Hacer?",
+      "core": "05",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/granfogata_2nosomos.htm",
+      "identity": "La Gran Fogata::No Somos Una Banda Más::Tu Te Equivovas",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/granfogata_2nosomos.htm",
+      "identity": "La Gran Fogata::No Somos Una Banda Más::Esa Gente",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/granfogata_2nosomos.htm",
+      "identity": "La Gran Fogata::No Somos Una Banda Más::Septiembre",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/granfogata_2nosomos.htm",
+      "identity": "La Gran Fogata::No Somos Una Banda Más::Nuestra Canción",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/granfogata_2nosomos.htm",
+      "identity": "La Gran Fogata::No Somos Una Banda Más::Confía En Mi",
+      "core": "05",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/granfogata_3serenata.htm",
+      "identity": "La Gran Fogata::Serenata::Eras Tu Jesús",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/granfogata_3serenata.htm",
+      "identity": "La Gran Fogata::Serenata::Tu Me Enciendes",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/granfogata_3serenata.htm",
+      "identity": "La Gran Fogata::Serenata::Primavera",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/granfogata_3serenata.htm",
+      "identity": "La Gran Fogata::Serenata::Nunca Te Enamores De Un Músico de Rock´n´Roll",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/granfogata_3serenata.htm",
+      "identity": "La Gran Fogata::Serenata::Nuestro Gran Amor",
+      "core": "05",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/granfogata_4.htm",
+      "identity": "La Gran Fogata::Fogata IV::Siempre Habrá Una Primera Vez",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/granfogata_4.htm",
+      "identity": "La Gran Fogata::Fogata IV::Huella",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/granfogata_4.htm",
+      "identity": "La Gran Fogata::Fogata IV::Más Que Una Amistad",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/granfogata_4.htm",
+      "identity": "La Gran Fogata::Fogata IV::Travesía",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/compilations1/enlaonda_1987.htm",
+      "identity": "Various Artists::En La Onda::Lluvia",
+      "core": "01",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/compilations1/enlaonda_1987.htm",
+      "identity": "Various Artists::En La Onda::Te Me Vas",
+      "core": "02",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/compilations1/enlaonda_1987.htm",
+      "identity": "Various Artists::En La Onda::Plaza Caracas",
+      "core": "03",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/compilations1/enlaonda_1987.htm",
+      "identity": "Various Artists::En La Onda::Una Rosa Roja",
+      "core": "04",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/compilations1/enlaonda_1987.htm",
+      "identity": "Various Artists::En La Onda::Sola",
+      "core": "05",
+      "page": "12"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/compilations1/enlaonda_1987.htm",
+      "identity": "Various Artists::En La Onda::Canta Viejo Canta",
+      "core": "06",
+      "page": "13"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/compilations1/enlaonda_1987.htm",
+      "identity": "Various Artists::En La Onda::Estaré Junto A Ti",
+      "core": "07",
+      "page": "14"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_cazadores_72vuelvete.htm",
+      "identity": "Los Cazadores::Vuélvete::Esa Canción",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_cazadores_72vuelvete.htm",
+      "identity": "Los Cazadores::Vuélvete::No Entiendo",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_cazadores_72vuelvete.htm",
+      "identity": "Los Cazadores::Vuélvete::Ese Hombre",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_cazadores_72vuelvete.htm",
+      "identity": "Los Cazadores::Vuélvete::Te Lo Diré",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_cazadores_72vuelvete.htm",
+      "identity": "Los Cazadores::Vuélvete::Qué Piensas Hacer",
+      "core": "05",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_cazadores_72vuelvete.htm",
+      "identity": "Los Cazadores::Vuélvete::Un Algo Que No Se",
+      "core": "06",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_cazadores_79lucia.htm",
+      "identity": "Los Cazadores::Lucia::Cierto Día De Mañana",
+      "core": "01",
+      "page": "05"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_cazadores_79lucia.htm",
+      "identity": "Los Cazadores::Lucia::Cierto Día De Mañana",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_cazadores_79lucia.htm",
+      "identity": "Los Cazadores::Lucia::Dime",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_cazadores_79lucia.htm",
+      "identity": "Los Cazadores::Lucia::Venezuela",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_cazadores_79lucia.htm",
+      "identity": "Los Cazadores::Lucia::Canto A La Vida",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_cazadores_79lucia.htm",
+      "identity": "Los Cazadores::Lucia::Lucia",
+      "core": "01",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_cazadores_80loscazadores.htm",
+      "identity": "Los Cazadores::Los Cazadores::Oye Guitarra Mía",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_cazadores_80loscazadores.htm",
+      "identity": "Los Cazadores::Los Cazadores::Sueños",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_cazadores_80loscazadores.htm",
+      "identity": "Los Cazadores::Los Cazadores::Fiesta Nocturna De Amor",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_cazadores_80loscazadores.htm",
+      "identity": "Los Cazadores::Los Cazadores::Ven A Mí",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_cazadores_80loscazadores.htm",
+      "identity": "Los Cazadores::Los Cazadores::La Niña De Guatemala",
+      "core": "05",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_cazadores_83credulidades.htm",
+      "identity": "Los Cazadores::Credulidades::Tú",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_cazadores_83credulidades.htm",
+      "identity": "Los Cazadores::Credulidades::Una Canción De Amor",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_cazadores_83credulidades.htm",
+      "identity": "Los Cazadores::Credulidades::Guajira De Amor",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_cazadores_83credulidades.htm",
+      "identity": "Los Cazadores::Credulidades::Papá",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_cazadores_88loscazadores.htm",
+      "identity": "Los Cazadores::Los Cazadores::Canta Mi Canción",
+      "core": "01",
+      "page": "5"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_cazadores_88loscazadores.htm",
+      "identity": "Los Cazadores::Los Cazadores::No Quiero Enamorarme Más",
+      "core": "02",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_cazadores_88loscazadores.htm",
+      "identity": "Los Cazadores::Los Cazadores::Sufro Por Ti",
+      "core": "03",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_cazadores_88loscazadores.htm",
+      "identity": "Los Cazadores::Los Cazadores::Prefiero Creer En Ti",
+      "core": "04",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/cherrynav_1aleluya.htm",
+      "identity": "Cherry Navarro::Aleluya::No Quisiera",
+      "core": "01",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/cherrynav_1aleluya.htm",
+      "identity": "Cherry Navarro::Aleluya::Ciao-Ciao-Ciao",
+      "core": "02",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/cherrynav_1aleluya.htm",
+      "identity": "Cherry Navarro::Aleluya::María María",
+      "core": "03",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/cherrynav_1aleluya.htm",
+      "identity": "Cherry Navarro::Aleluya::Ven Cerca de Mi",
+      "core": "04",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/cherrynav_1aleluya.htm",
+      "identity": "Cherry Navarro::Aleluya::Catherina",
+      "core": "05",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/cherrynav_1aleluya.htm",
+      "identity": "Cherry Navarro::Aleluya::Grovin",
+      "core": "06",
+      "page": "12"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/100grados_clima.htm",
+      "identity": "Cien Grados::Clima de Extásis::Más",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/100grados_clima.htm",
+      "identity": "Cien Grados::Clima de Extásis::Profundo",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/100grados_clima.htm",
+      "identity": "Cien Grados::Clima de Extásis::María Alejandra",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/100grados_clima.htm",
+      "identity": "Cien Grados::Clima de Extásis::Sin Sentido",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/100grados_clima.htm",
+      "identity": "Cien Grados::Clima de Extásis::Clima De Extásis",
+      "core": "05",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/claners1_yeah.htm",
+      "identity": "Los Claners::Yeah Yeah Yeah!::Dices Yeah",
+      "core": "01",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/claners1_yeah.htm",
+      "identity": "Los Claners::Yeah Yeah Yeah!::Ticket De Viaje",
+      "core": "02",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/claners1_yeah.htm",
+      "identity": "Los Claners::Yeah Yeah Yeah!::Zambesi",
+      "core": "04",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/claners1_yeah.htm",
+      "identity": "Los Claners::Yeah Yeah Yeah!::Puedes Ver Que Te Amo",
+      "core": "05",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/claners1_yeah.htm",
+      "identity": "Los Claners::Yeah Yeah Yeah!::Satisfacciones",
+      "core": "06",
+      "page": "12"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/claners2_gentejoven.htm",
+      "identity": "Los Claners::Para La Gente Joven::Qué Me Has Dado",
+      "core": "01",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/claners2_gentejoven.htm",
+      "identity": "Los Claners::Para La Gente Joven::Tu Baby",
+      "core": "02",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/claners2_gentejoven.htm",
+      "identity": "Los Claners::Para La Gente Joven::Mejor",
+      "core": "03",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/claners2_gentejoven.htm",
+      "identity": "Los Claners::Para La Gente Joven::Abrázame Para Amarme",
+      "core": "04",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/claners2_gentejoven.htm",
+      "identity": "Los Claners::Para La Gente Joven::Olvida Ya",
+      "core": "05",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/claners2_gentejoven.htm",
+      "identity": "Los Claners::Para La Gente Joven::Debes Cambiar",
+      "core": "06",
+      "page": "12"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/claners3.htm",
+      "identity": "Los Claners::Volumen 3::Ya No Veo A Nadie",
+      "core": "01",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/claners3.htm",
+      "identity": "Los Claners::Volumen 3::Me Voy",
+      "core": "02",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/claners3.htm",
+      "identity": "Los Claners::Volumen 3::No Queremos Luchar",
+      "core": "03",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/claners3.htm",
+      "identity": "Los Claners::Volumen 3::Guantanamera",
+      "core": "04",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/claners3.htm",
+      "identity": "Los Claners::Volumen 3::Nunca Un Domingo Será Igual",
+      "core": "05",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/claners3.htm",
+      "identity": "Los Claners::Volumen 3::Pronto Te Arrepentirás",
+      "core": "06",
+      "page": "12"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/clarox_1.htm",
+      "identity": "Clarox::Clarox::Deseo",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/clarox_1.htm",
+      "identity": "Clarox::Clarox::Luna",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/clarox_1.htm",
+      "identity": "Clarox::Clarox::Odisea",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/clarox_1.htm",
+      "identity": "Clarox::Clarox::Lejania",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/clarox_1.htm",
+      "identity": "Clarox::Clarox::(Risolin) Roky Santiago",
+      "core": "05",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/clarox_2zona.htm",
+      "identity": "Clarox::Zona Peligrosa::Solo Una Vez",
+      "core": "01",
+      "page": "5"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/clarox_2zona.htm",
+      "identity": "Clarox::Zona Peligrosa::Andando",
+      "core": "02",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/clarox_2zona.htm",
+      "identity": "Clarox::Zona Peligrosa::Desengaño",
+      "core": "03",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/clarox_2zona.htm",
+      "identity": "Clarox::Zona Peligrosa::Estación de Gato Negro",
+      "core": "04",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/colina_0amanecer.htm",
+      "identity": "Colina::Amanecer::Qué Vas A Hacer",
+      "core": "01",
+      "page": "5"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/colina_0amanecer.htm",
+      "identity": "Colina::Amanecer::It's A Secret",
+      "core": "02",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/colina_0amanecer.htm",
+      "identity": "Colina::Amanecer::Little China",
+      "core": "03",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/colina_0amanecer.htm",
+      "identity": "Colina::Amanecer::Don't Take Friends Away",
+      "core": "04",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/colina_2sampler.htm",
+      "identity": "Colina::Sampler::You Can't Keep Doing This Foerever",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/colina_2sampler.htm",
+      "identity": "Colina::Sampler::If You Try",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/colina_2sampler.htm",
+      "identity": "Colina::Sampler::Just A Little Bit Closer",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/colina_2sampler.htm",
+      "identity": "Colina::Sampler::Curacao With Love",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/colina_3cuandoloco.htm",
+      "identity": "Colina::Cuando Un Loco Ama...::Aprendiendo A Olvidar",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/colina_3cuandoloco.htm",
+      "identity": "Colina::Cuando Un Loco Ama...::Algo Bueno Tiene Que Pasar",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/colina_3cuandoloco.htm",
+      "identity": "Colina::Cuando Un Loco Ama...::Tratándose De Ti",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/colina_3cuandoloco.htm",
+      "identity": "Colina::Cuando Un Loco Ama...::Lo Que Siento Por Ti",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/colina_3cuandoloco.htm",
+      "identity": "Colina::Cuando Un Loco Ama...::Vuelve A Casa",
+      "core": "05",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/luzmarina_flordepiel.htm",
+      "identity": "Luz Marina::A Flor De Piel::Tentación",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/luzmarina_flordepiel.htm",
+      "identity": "Luz Marina::A Flor De Piel::Jugando Tu Juego",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/luzmarina_flordepiel.htm",
+      "identity": "Luz Marina::A Flor De Piel::Mar Abierto",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/luzmarina_flordepiel.htm",
+      "identity": "Luz Marina::A Flor De Piel::Comenzar De Nuevo",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/luzmarina_flordepiel.htm",
+      "identity": "Luz Marina::A Flor De Piel::A Mis Amigos",
+      "core": "05",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/cronos_1alfin.htm",
+      "identity": "Cronos::Al Fin Una Victoria::Buscando Perdón",
+      "core": "01",
+      "page": "2"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_dangers_1asesdelsurf.htm",
+      "identity": "Los Dangers::Los Ases Del Sourf!::González",
+      "core": "01",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_dangers_1asesdelsurf.htm",
+      "identity": "Los Dangers::Los Ases Del Sourf!::I Saw Her Standing There",
+      "core": "02",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_dangers_1asesdelsurf.htm",
+      "identity": "Los Dangers::Los Ases Del Sourf!::Pipa De Paz",
+      "core": "03",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_dangers_1asesdelsurf.htm",
+      "identity": "Los Dangers::Los Ases Del Sourf!::Quiero Tomar Tu Mano",
+      "core": "04",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_dangers_1asesdelsurf.htm",
+      "identity": "Los Dangers::Los Ases Del Sourf!::Medianoche",
+      "core": "05",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_dangers_1asesdelsurf.htm",
+      "identity": "Los Dangers::Los Ases Del Sourf!::Tu Me Excitas",
+      "core": "06",
+      "page": "12"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_01dejando.htm",
+      "identity": "Daniel Grau::Dejando Volar El Pensamiento::La Ceiba",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_01dejando.htm",
+      "identity": "Daniel Grau::Dejando Volar El Pensamiento::Amantes",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_01dejando.htm",
+      "identity": "Daniel Grau::Dejando Volar El Pensamiento::La Hora Azul",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_01dejando.htm",
+      "identity": "Daniel Grau::Dejando Volar El Pensamiento::Voy Caminando Feliz",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_01dejando.htm",
+      "identity": "Daniel Grau::Dejando Volar El Pensamiento::Trece Días En Francia",
+      "core": "05",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_01dejando.htm",
+      "identity": "Daniel Grau::Dejando Volar El Pensamiento::Canción De Patilla",
+      "core": "06",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_02orquesta.htm",
+      "identity": "Daniel Grau::La Orquesta De Daniel Grau::Delirio en Fa Menor",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_02orquesta.htm",
+      "identity": "Daniel Grau::La Orquesta De Daniel Grau::Recuerdos De Un Mañana",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_02orquesta.htm",
+      "identity": "Daniel Grau::La Orquesta De Daniel Grau::Carrusel Para Mi Hijo",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_02orquesta.htm",
+      "identity": "Daniel Grau::La Orquesta De Daniel Grau::O Sole Mio",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_02orquesta.htm",
+      "identity": "Daniel Grau::La Orquesta De Daniel Grau::Mi Realidad",
+      "core": "05",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_03sonidomagico.htm",
+      "identity": "Daniel Grau::El Sonido Mágico De Daniel Grau::Beside Me",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_03sonidomagico.htm",
+      "identity": "Daniel Grau::El Sonido Mágico De Daniel Grau::Noche De Copacabana",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_03sonidomagico.htm",
+      "identity": "Daniel Grau::El Sonido Mágico De Daniel Grau::Gatito Mecanico",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_03sonidomagico.htm",
+      "identity": "Daniel Grau::El Sonido Mágico De Daniel Grau::Planeta Azul",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_03sonidomagico.htm",
+      "identity": "Daniel Grau::El Sonido Mágico De Daniel Grau::Robot Mágico",
+      "core": "05",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_04discofantasy.htm",
+      "identity": "Daniel Grau::Disco Fantasy::Doopey",
+      "core": "01",
+      "page": "4"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_04discofantasy.htm",
+      "identity": "Daniel Grau::Disco Fantasy::Dulce Armonía",
+      "core": "02",
+      "page": "5"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_04discofantasy.htm",
+      "identity": "Daniel Grau::Disco Fantasy::Swing Rock",
+      "core": "03",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_04discofantasy.htm",
+      "identity": "Daniel Grau::Disco Fantasy::Guitarra y Amor",
+      "core": "04",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_04discofantasy.htm",
+      "identity": "Daniel Grau::Disco Fantasy::Tus Besos Junto Al Mar",
+      "core": "05",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_05kryptonita.htm",
+      "identity": "Daniel Grau::Kryptonita Líquida::Kryptonita Líquida",
+      "core": "01",
+      "page": "5"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_05kryptonita.htm",
+      "identity": "Daniel Grau::Kryptonita Líquida::Hablando Con El Viento",
+      "core": "02",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_05kryptonita.htm",
+      "identity": "Daniel Grau::Kryptonita Líquida::Skylab",
+      "core": "03",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_05kryptonita.htm",
+      "identity": "Daniel Grau::Kryptonita Líquida::Concierto De Violines",
+      "core": "04",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_06leon.htm",
+      "identity": "Daniel Grau::El León Bailarín::Correcaminos (Roadrunner)",
+      "core": "01",
+      "page": "4"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_06leon.htm",
+      "identity": "Daniel Grau::El León Bailarín::Sentimiento De Amor",
+      "core": "02",
+      "page": "5"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_06leon.htm",
+      "identity": "Daniel Grau::El León Bailarín::El Fenix",
+      "core": "03",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_06leon.htm",
+      "identity": "Daniel Grau::El León Bailarín::Mi Canción Especial (My Special Song)",
+      "core": "04",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_06leon.htm",
+      "identity": "Daniel Grau::El León Bailarín::Nostalgia",
+      "core": "05",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_07porqueno.htm",
+      "identity": "Daniel Grau::Por Qué No Podemos Hacerlo?::Ayer Descubrí Tu Mirada",
+      "core": "01",
+      "page": "5"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_07porqueno.htm",
+      "identity": "Daniel Grau::Por Qué No Podemos Hacerlo?::Balada De Cumpleaños",
+      "core": "02",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_07porqueno.htm",
+      "identity": "Daniel Grau::Por Qué No Podemos Hacerlo?::Combination",
+      "core": "03",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_07porqueno.htm",
+      "identity": "Daniel Grau::Por Qué No Podemos Hacerlo?::Nuestra Aventura",
+      "core": "04",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_07porqueno.htm",
+      "identity": "Daniel Grau::Por Qué No Podemos Hacerlo?::Mi Pequeña Canción De Navidad",
+      "core": "05",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_08cancion.htm",
+      "identity": "Daniel Grau::Canción Del Amanecer::No Debes Ocultar Más Tu Amor",
+      "core": "01",
+      "page": "5"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_08cancion.htm",
+      "identity": "Daniel Grau::Canción Del Amanecer::Hello Dolly",
+      "core": "02",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_08cancion.htm",
+      "identity": "Daniel Grau::Canción Del Amanecer::She Is A Lady",
+      "core": "03",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_08cancion.htm",
+      "identity": "Daniel Grau::Canción Del Amanecer::El Aguila Volará",
+      "core": "04",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_08cancion.htm",
+      "identity": "Daniel Grau::Canción Del Amanecer::Meditación",
+      "core": "05",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_09_440torker.htm",
+      "identity": "Daniel Grau::440 Torker / Vol. 9::Amor A Primera Vista",
+      "core": "01",
+      "page": "5"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_09_440torker.htm",
+      "identity": "Daniel Grau::440 Torker / Vol. 9::Amandote",
+      "core": "02",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_09_440torker.htm",
+      "identity": "Daniel Grau::440 Torker / Vol. 9::Rock De Papupapa",
+      "core": "03",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_09_440torker.htm",
+      "identity": "Daniel Grau::440 Torker / Vol. 9::Hasta Mi Estrella",
+      "core": "04",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_09_440torker.htm",
+      "identity": "Daniel Grau::440 Torker / Vol. 9::Reflejos",
+      "core": "05",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/mismagente_4calle.htm",
+      "identity": "La Misma Gente::A La Calle::La He Visto Reir, La He Visto Llorar",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/mismagente_4calle.htm",
+      "identity": "La Misma Gente::A La Calle::Oportunidad (Una Historia de Malandros)",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/mismagente_4calle.htm",
+      "identity": "La Misma Gente::A La Calle::Canción Corta",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/mismagente_4calle.htm",
+      "identity": "La Misma Gente::A La Calle::La Luna (No Me Hace Falta Ver La Luna)",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/darts_5lindahistoria.htm",
+      "identity": "Los Darts::Una Linda Historia::No Se Que Decirte",
+      "core": "02",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/darts_5lindahistoria.htm",
+      "identity": "Los Darts::Una Linda Historia::Lady Madonna",
+      "core": "04",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/delia_2chicano.htm",
+      "identity": "Delia::Chicano::Porque Te Quiero",
+      "core": "01",
+      "page": "5"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/delia_2chicano.htm",
+      "identity": "Delia::Chicano::Ser Amigo",
+      "core": "02",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/delia_2chicano.htm",
+      "identity": "Delia::Chicano::Adios Compañero",
+      "core": "03",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/delia_2chicano.htm",
+      "identity": "Delia::Chicano::Deja Que Pase El Tiempo",
+      "core": "04",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/delia_3unpoquitomas.htm",
+      "identity": "Delia::Y...Un Poquito Más::Chicano",
+      "core": "01",
+      "page": "5"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/delia_3unpoquitomas.htm",
+      "identity": "Delia::Y...Un Poquito Más::Vendra",
+      "core": "02",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/delia_3unpoquitomas.htm",
+      "identity": "Delia::Y...Un Poquito Más::Que Me Esta Pasando",
+      "core": "03",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/delia_3unpoquitomas.htm",
+      "identity": "Delia::Y...Un Poquito Más::Nubes Sobre El Mar",
+      "core": "04",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/delia_4yel.htm",
+      "identity": "Delia::Y El::Y La Arena Siempre Espera",
+      "core": "01",
+      "page": "5"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/delia_4yel.htm",
+      "identity": "Delia::Y El::Para Vivir",
+      "core": "02",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/delia_4yel.htm",
+      "identity": "Delia::Y El::Quedate Esta Noche",
+      "core": "03",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/delia_4yel.htm",
+      "identity": "Delia::Y El::Dejame",
+      "core": "04",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/delia_4yel.htm",
+      "identity": "Delia::Y El::Para Que",
+      "core": "05",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/delia_5tuyyo.htm",
+      "identity": "Delia::Tu y Yo::Tu y Yo",
+      "core": "01",
+      "page": "5"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/delia_5tuyyo.htm",
+      "identity": "Delia::Tu y Yo::No Volveran",
+      "core": "02",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/delia_5tuyyo.htm",
+      "identity": "Delia::Tu y Yo::Canto Extranjero",
+      "core": "03",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/delia_5tuyyo.htm",
+      "identity": "Delia::Tu y Yo::Insaciable Amante",
+      "core": "04",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/delia_6lavozdelcorazon.htm",
+      "identity": "Delia::La Voz del Corazón::Son Mentiras",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/delia_6lavozdelcorazon.htm",
+      "identity": "Delia::La Voz del Corazón::Que Equivocado",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/delia_6lavozdelcorazon.htm",
+      "identity": "Delia::La Voz del Corazón::Te Deseo",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/delia_6lavozdelcorazon.htm",
+      "identity": "Delia::La Voz del Corazón::Perdóneme",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/delia_6lavozdelcorazon.htm",
+      "identity": "Delia::La Voz del Corazón::Si Me Contaras",
+      "core": "05",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/delia_6enmishoras.htm",
+      "identity": "Delia::En Mis Horas Más Intimas::Abrazame",
+      "core": "01",
+      "page": "5"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/delia_6enmishoras.htm",
+      "identity": "Delia::En Mis Horas Más Intimas::Para El",
+      "core": "02",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/delia_6enmishoras.htm",
+      "identity": "Delia::En Mis Horas Más Intimas::Ironia",
+      "core": "03",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/delia_6enmishoras.htm",
+      "identity": "Delia::En Mis Horas Más Intimas::Pensandolo Bien",
+      "core": "04",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/delia_6enmishoras.htm",
+      "identity": "Delia::En Mis Horas Más Intimas::Sin Palabras",
+      "core": "05",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/manavello_1cosas.htm",
+      "identity": "Pablo Manavello::Cosas Sencillas::Cosas Sencillas",
+      "core": "02",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/manavello_1cosas.htm",
+      "identity": "Pablo Manavello::Cosas Sencillas::Costas Del Mediterraneo",
+      "core": "04",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/edgaralexander_1hoysonrie.htm",
+      "identity": "Edgar Alexander::Hoy Sonríe Mi Corazón::El Cisne",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/edgaralexander_1hoysonrie.htm",
+      "identity": "Edgar Alexander::Hoy Sonríe Mi Corazón::Canto De Boda",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/edgaralexander_1hoysonrie.htm",
+      "identity": "Edgar Alexander::Hoy Sonríe Mi Corazón::El Ruiseñor (San Pedro)",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/edgaralexander_1hoysonrie.htm",
+      "identity": "Edgar Alexander::Hoy Sonríe Mi Corazón::El y Ella",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/edgaralexander_1hoysonrie.htm",
+      "identity": "Edgar Alexander::Hoy Sonríe Mi Corazón::Nuestro Ayer Volverá",
+      "core": "05",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/edgaralexander_2edgaralexander.htm",
+      "identity": "Edgar Alexander::Edgar Alexander::Un Día Domingo",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/edgaralexander_2edgaralexander.htm",
+      "identity": "Edgar Alexander::Edgar Alexander::Nunca Lloraré",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/edgaralexander_2edgaralexander.htm",
+      "identity": "Edgar Alexander::Edgar Alexander::Mi Señor",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/edgaralexander_2edgaralexander.htm",
+      "identity": "Edgar Alexander::Edgar Alexander::Por Qué No Llorar",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/edgaralexander_2edgaralexander.htm",
+      "identity": "Edgar Alexander::Edgar Alexander::Gabriela",
+      "core": "05",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/edgaralexander_83edgar.htm",
+      "identity": "Edgar Alexander::Edgar::Una Canción Para Ti",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/edgaralexander_83edgar.htm",
+      "identity": "Edgar Alexander::Edgar::Tu Olor Tu Piel Tu Voz",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/edgaralexander_83edgar.htm",
+      "identity": "Edgar Alexander::Edgar::El Milagro Más Grande",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/edgaralexander_bajalaluz.htm",
+      "identity": "Edgar Alexander::Baja La Luz::Baja La Luz",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/edgaralexander_bajalaluz.htm",
+      "identity": "Edgar Alexander::Baja La Luz::Esa Chica",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/edgaralexander_bajalaluz.htm",
+      "identity": "Edgar Alexander::Baja La Luz::Alma",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/edgaralexander_bajalaluz.htm",
+      "identity": "Edgar Alexander::Baja La Luz::Aquí Estoy",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/edgaralexander_bajalaluz.htm",
+      "identity": "Edgar Alexander::Baja La Luz::Para Qué",
+      "core": "05",
+      "page": "10"
+    }
+  ]
+}
