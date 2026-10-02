@@ -243,6 +243,26 @@ describe("adapters funcionales de las fuentes autorizadas", () => {
     expect(claims.some((claim) => claim.entityKind === "organization" && claim.rawValue === "58/56")).toBe(false);
   });
 
+  it("Sincopa cuenta la fila «Instrument:» de las fichas de jazz y clásica: no es el sello", () => {
+    const adapter = adapterFor({ slug: "sincopa", siteType: "database" });
+    if (!adapter?.extractSnapshot) throw new Error("adapter Sincopa faltante");
+    const body = `
+      <table><tr>
+        <td>Artist:<br>Album Title:<br>Company:<br>Instrument:<br>Genre:<br>Release Year:</td>
+        <td><b>Daniela Padrón</b><br>Bach To Venezuela<br>Independent<br>Violin<br>Classical/World<br>2016 (CD)</td>
+      </tr></table>`;
+    const records = adapter.extractSnapshot({
+      url: "https://fixture.invalid/classic/cdinfo_class/daniela_padron/danielapadron1_bachtovzla.htm",
+      kind: "html", rawPageId: 1, body,
+    });
+    const claims = records.flatMap(normalizeRecord);
+
+    expect(claims.some((claim) => claim.entityKind === "album" && claim.field === "title" && claim.rawValue === "Bach To Venezuela")).toBe(true);
+    expect(claims.some((claim) => claim.entityKind === "album" && claim.field === "label" && claim.rawValue === "Independent")).toBe(true);
+    expect(claims.some((claim) => claim.entityKind === "album" && claim.field === "genre" && claim.rawValue === "Classical/World")).toBe(true);
+    expect(claims.some((claim) => claim.entityKind === "organization" && claim.rawValue === "Violin")).toBe(false);
+  });
+
   it("Sincopa no trata una ficha detallada de sencillo como año, álbum y sello", () => {
     const adapter = adapterFor({ slug: "sincopa", siteType: "database" });
     if (!adapter?.extractSnapshot) throw new Error("adapter Sincopa faltante");

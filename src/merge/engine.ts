@@ -293,11 +293,16 @@ function explicitDecision(input: ResolutionInput, id: number, canonical: string)
 
 // `reviewDecisionId` falta cuando la decisión no sale de la Mesa sino de una
 // petición directa del operador a la API (crear una ficha homónima a sabiendas).
+//
+// `reference` nombra el origen cuando no es ni la Mesa ni una petición suelta:
+// la promoción masiva por reglas (src/review/bulk-policy.ts) la usa para que el
+// rastro diga QUÉ regla y QUÉ lote decidieron, no «una petición del operador».
 export type HumanResolutionOverride =
-  | { verdict: "same"; targetId: number; reviewDecisionId?: number; decidedBy: string }
-  | { verdict: "different"; reviewDecisionId?: number; decidedBy: string };
+  | { verdict: "same"; targetId: number; reviewDecisionId?: number; decidedBy: string; reference?: string }
+  | { verdict: "different"; reviewDecisionId?: number; decidedBy: string; reference?: string };
 
 function humanReference(override: HumanResolutionOverride): string {
+  if (override.reference !== undefined) return override.reference;
   return override.reviewDecisionId === undefined ? "una petición del operador" : `review_decision ${override.reviewDecisionId}`;
 }
 

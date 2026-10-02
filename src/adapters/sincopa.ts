@@ -8,7 +8,7 @@ import { absoluteUrl, clean, contentImages, excerpt } from "./shared.js";
 // evita confundir fichas detalladas de sencillos con la tabla de discografía.
 // 1.2.0 abre todas las secciones del sitio (jazz, latin pop, clásica, new age,
 // tradicional, étnica): usan la misma plantilla de ficha que rock/pop.
-const SINCOPA_ADAPTER_VERSION = "1.2.0";
+const SINCOPA_ADAPTER_VERSION = "1.2.1";
 
 // Sincopa es HTML de FrontPage: tablas anidadas, sin clases ni encabezados
 // semánticos. Toda su semántica está codificada en el color de fuente:
@@ -146,9 +146,13 @@ function albumHeaderPairs($: CheerioAPI): Map<string, string> {
 
       const valueCell = $(cells[index + 1]!);
       const values = splitByBr($, valueCell.html() ?? "");
+      // Las fichas de jazz, clásica, new age, étnica y latin pop añaden un
+      // «Instrument:» entre Company y Genre. Sin contarlo, el ancla desde el
+      // final se corre una línea: el sello pasa a título y el instrumento a
+      // sello («Bach To Venezuela Independent» / sello «Violin»).
       const trailingLabels = labels.slice(titleAt + 1)
-        .filter((label): label is "company" | "genre" | "release year" =>
-          label === "company" || label === "genre" || label === "release year");
+        .filter((label): label is "company" | "instrument" | "genre" | "release year" =>
+          label === "company" || label === "instrument" || label === "genre" || label === "release year");
       const titleEnd = values.length - trailingLabels.length;
       if (titleEnd <= 1) continue;
       const join = (from: number, to: number) => clean(values.slice(from, to).filter(Boolean).join(" "));

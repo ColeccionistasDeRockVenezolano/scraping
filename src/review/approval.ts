@@ -4,7 +4,7 @@
 // YA contempla para crear entidades — no se abre una vía nueva al core ni se
 // eleva la confianza del claim, que sigue siendo `low` y trazable como tal.
 import { getPool } from "../db/client.js";
-import { mergeClaim } from "../merge/engine.js";
+import { mergeClaim, type HumanResolutionOverride } from "../merge/engine.js";
 import { resolvableSpec } from "../merge/specs.js";
 import type { ClaimToPersist, Confidence } from "../claims/persistence.js";
 import { moduleLogger } from "../logger/index.js";
@@ -60,8 +60,20 @@ interface ClaimRow {
 
 const num = (value: string | null): number | undefined => (value === null ? undefined : Number(value));
 
+/**
+ * Lo que una decisión explícita añade al merge de una entidad. La persona (o la
+ * regla masiva que habla por ella) puede fijar el veredicto de identidad y los
+ * padres por id: así el merge no vuelve a adivinar contra todo el catálogo lo
+ * que ya se decidió, y un disco o una pista nacen colgados del padre correcto.
+ */
+export interface ApprovalOptions {
+  humanResolution?: HumanResolutionOverride;
+  parentArtistId?: number;
+  parentAlbumId?: number;
+}
+
 /** Reconstruye el claim ya persistido para volver a pasarlo por el merge. */
-function toClaimToPersist(row: ClaimRow): ClaimToPersist {
+function toClaimToPersist(row: ClaimRow, options: ApprovalOptions = {}): ClaimToPersist {
   const identity = row.identity_raw ?? row.identity_key ?? "";
   return {
     entityKind: row.entity_kind as ClaimToPersist["entityKind"],
@@ -87,6 +99,8 @@ function toClaimToPersist(row: ClaimRow): ClaimToPersist {
     ...(num(row.organization_id) === undefined ? {} : { organizationId: num(row.organization_id) }),
     ...(num(row.album_id) === undefined ? {} : { albumId: num(row.album_id) }),
     ...(num(row.track_id) === undefined ? {} : { trackId: num(row.track_id) }),
+    ...(options.parentArtistId === undefined ? {} : { parentArtistId: options.parentArtistId }),
+    ...(options.parentAlbumId === undefined ? {} : { parentAlbumId: options.parentAlbumId }),
   } as ClaimToPersist;
 }
 
@@ -169,7 +183,9 @@ async function closeReviews(claimIds: number[], resolution: "approved" | "dismis
  * identidad va primero: `createEntity` solo actúa sobre él, y el resto necesita
  * que la entidad exista para engancharse por AUTO_MATCH.
  */
-export async function approveEntity(entityKind: string, identityKey: string, note: string): Promise<ApprovalResult> {
+export async function approveEntity(
+  entityKind: string, identityKey: string, note: string, options: ApprovalOptions = {},
+): Promise<ApprovalResult> {
   if (!note.trim()) throw new Error("nota de resolución obligatoria");
   const spec = resolvableSpec(entityKind as ClaimToPersist["entityKind"]);
   const { rows } = await getPool().query<ClaimRow>(
@@ -188,7 +204,10 @@ export async function approveEntity(entityKind: string, identityKey: string, not
   // su ítem queda abierto en vez de esconder trabajo sin hacer.
   const progressed: number[] = [];
   for (const row of rows) {
-    const outcome = await mergeClaim(toClaimToPersist(row), { id: Number(row.id), inserted: false });
+    const outcome = await mergeClaim(
+      toClaimToPersist(row, options), { id: Number(row.id), inserted: false },
+      options.humanResolution === undefined ? {} : { humanResolution: options.humanResolution },
+    );
     if (outcome.action === "applied") {
       result.applied += 1;
       progressed.push(Number(row.id));
