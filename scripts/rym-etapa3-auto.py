@@ -372,6 +372,30 @@ def esperar_carga(m, timeout=45):
     return {"ready": "timeout"}
 
 
+def url_actual(m):
+    """URL normalizada de la pestaña activa ('' si no se pudo leer)."""
+    try:
+        return norm_href(jd(m, JS_URL).get("u") or "")
+    except Exception:
+        return ""
+
+
+def click_js(href):
+    """JS que pulsa el enlace del disco DESDE la página del artista.
+
+    Compara normalizado (decodificado, sin dominio/query/barra final) y cae a
+    cualquier <a> de la página si el enlace no está bajo #discography (widgets).
+    """
+    return ('return (function(){var tgt=' + json.dumps(href) +
+            ';function dec(s){try{return decodeURIComponent(s)}catch(e){return s}}'
+            ';function nrm(s){s=dec(String(s||"")).split("?")[0].split("#")[0];'
+            's=s.replace(/^https?:\\/\\/rateyourmusic\\.com/,"");return s.replace(/\\/$/,"")}'
+            ';var t=nrm(tgt);'
+            ';var a=[...document.querySelectorAll("#discography a[href]")].find(function(x){return nrm(x.getAttribute("href"))===t})'
+            '||[...document.querySelectorAll("a[href]")].find(function(x){return nrm(x.getAttribute("href"))===t});'
+            'if(!a)return "no";a.click();return "ok"})()')
+
+
 def main():
     estado = {}
     if os.path.exists(STATE):
@@ -410,14 +434,35 @@ def main():
             vistos.add(rel)
             if not es_ok(estado.get(rel) or {}):
                 releases.append(("release", rel, {"name": f"{row['name']} - {r.get('t') or ''}", "parent": norm_href(row["rymHref"])}))
+    # Pacing humano (aprendido del forense de bloqueos 2026-10-01):
+    #  - orden barajado (sin caminata alfabética de máquina),
+    #  - intervalos 5-9 s con cola larga ocasional,
+    #  - micro-descanso cada 30 ítems.
+    # Los discos se barajan POR GRUPO de artista (mantiene la adyacencia del
+    # padre, que ahorra una navegación por disco).
+    random.shuffle(pendientes)
+    grupos = {}
+    for rel in releases:
+        grupos.setdefault(rel[2].get("parent") or "?", []).append(rel)
+    orden_grupos = list(grupos.values())
+    random.shuffle(orden_grupos)
+    releases = [rel for grupo in orden_grupos for rel in grupo]
     cola_trabajo = pendientes + releases
     print(f"pendientes: {len(pendientes)} artistas + {len(releases)} discos", flush=True)
+
+    def pausa_humana(i):
+        p = random.uniform(5, 9)
+        if random.random() < 0.08:
+            p += random.uniform(20, 60)
+        if (i + 1) % 30 == 0:
+            p += random.uniform(40, 90)
+            print(f"[pausa] descanso humano de {p:.0f}s tras {i + 1} ítems", flush=True)
+        time.sleep(p)
 
     _k = {"lastPlay": 0, "lastPause": 0, "blocked": False, "blockedAt": 0}
     pausado = False
     i = 0
     nav_errs = 0
-    ultima_pagina = None
     while i < len(cola_trabajo):
         kind, href, row = cola_trabajo[i]
         # control: leer play/pause del tablero
@@ -453,18 +498,24 @@ def main():
                     print(f"[release-sin-padre] {href}", flush=True)
                     i += 1
                     continue
-                if ultima_pagina != parent:
-                    m.cmd("WebDriver:Navigate", {"url": "https://rateyourmusic.com" + parent})
-                    ultima_pagina = parent
-                    st0 = esperar_carga(m, 45)
+                # El clic solo funciona DESDE la página del artista: al capturar
+                # un disco la pestaña quedó en /release/ y el clic siguiente
+                # fallaba (110 click-no medidos, todos con enlace presente).
+                cur = url_actual(m)
+                if cur != parent:
+                    try:
+                        m.cmd("WebDriver:Back", {})
+                    except Exception:
+                        pass
+                    time.sleep(0.8)
+                    cur = url_actual(m)
+                    if cur != parent:
+                        m.cmd("WebDriver:Navigate", {"url": "https://rateyourmusic.com" + parent})
+                    esperar_carga(m, 45)
                     time.sleep(0.6)
-                click = ('return (function(){var tgt=' + json.dumps(href) +
-                         ';var a=[...document.querySelectorAll(\'#discography a[href]\')].find(function(x){'
-                         'var h=(x.getAttribute(\'href\')||\'\').split(\'?\')[0].replace(/\\/$/,\'\');return h===tgt;});'
-                         'if(!a)return \'no\';a.click();return \'ok\';})()')
-                res = m.js(click)
+                res = m.js(click_js(href))
                 if res != "ok":
-                    print(f"[click-no] {href} en {parent}", flush=True)
+                    print(f"[click-no] {href} en {parent} (desde {url_actual(m) or '?'})", flush=True)
                     i += 1
                     continue
             else:
@@ -524,14 +575,18 @@ def main():
                     if play > _k["lastPlay"]:
                         _k["lastPlay"] = play
                         _k["blocked"] = False
-                        print("[bloqueo] play: reintento el mismo", flush=True)
+                        enfriar = random.uniform(120, 300)
+                        print(f"[bloqueo] play: enfriamiento de {enfriar:.0f}s y reintento del mismo", flush=True)
+                        time.sleep(enfriar)
                         break
                     try:
                         m.cmd("WebDriver:SwitchToWindow", {"handle": trabajo})
                         st3 = jd(m, JS_STATUS)
                         if st3.get("ready") == "complete" and not st3.get("blocked") and "rateyourmusic.com" in (st3.get("u") or ""):
                             _k["blocked"] = False
-                            print("[bloqueo] página limpia: reintento", flush=True)
+                            enfriar = random.uniform(150, 360)
+                            print(f"[bloqueo] página limpia: enfriamiento de {enfriar:.0f}s y reintento", flush=True)
+                            time.sleep(enfriar)
                             break
                     except Exception:
                         pass
@@ -549,7 +604,6 @@ def main():
             i += 1
             continue
         guardar_pagina(kind, href, rec, html)
-        ultima_pagina = href if kind == "artist" else ultima_pagina
         estado[href] = recortar(rec)
         json.dump(estado, open(STATE, "w", encoding="utf-8"), ensure_ascii=False, indent=0)
         e = estado[href]
@@ -570,7 +624,7 @@ def main():
         except Exception as exc:
             print("aviso tablero:", str(exc)[:100], flush=True)
         i += 1
-        time.sleep(random.uniform(3, 5))
+        pausa_humana(i)
     print("COLA TERMINADA", flush=True)
     escribir_tablero(estado, nota="Cola terminada.")
 
