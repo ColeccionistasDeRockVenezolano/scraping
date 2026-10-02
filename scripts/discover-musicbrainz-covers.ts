@@ -11,7 +11,7 @@ import { normalizeEntityName } from "../src/normalization/entity-name.js";
 
 loadDotenv();
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const OUT = path.join(ROOT, "reports", "media-musicbrainz-caa-album-candidates-2026-09-27.jsonl");
+const OUT = path.join(ROOT, arg("--out") ?? "reports/media-musicbrainz-caa-album-candidates-2026-09-27.jsonl");
 const USER_AGENT = "CRV-local-media/1.0 (+coleccionistasderockvenezolano.com)";
 
 interface Album { id: number; title: string; artist: string; }
