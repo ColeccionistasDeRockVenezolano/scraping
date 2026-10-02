@@ -13,8 +13,15 @@
 //   (resto)  mismo nombre y mismo rol sin proyecto común: quedan abiertos (regla
 //            de Brian del 2026-09-28: la firma parecida sola no basta).
 //
+// Tanda 2 (Brian: «¿no hay nada que los relacione?»): de los 8 abiertos, tres
+// tenían prueba escrita que el detector no vio porque solo comparaba con el
+// PRIMER homónimo: la biografía de Big Mandrake dice que la formaron músicos de
+// Sin Sospechas (mismo cantante, guitarrista y saxofonista); la de Factor
+// Mental, que Felipe Nevado formó Arian en 2005; y la de Demise, que su bajista
+// Christian Estepa es el de Intemperia (donde había dos fichas suyas).
+//
 // Previsualiza por defecto; --confirm escribe (fusiones y renombres en una run,
-// descartes con `rejectReview`, cada uno con su run).
+// descartes con `rejectReview`, cada uno con su run). --tanda=1|2 (por defecto 1).
 import { writeFileSync } from "node:fs";
 import type { PoolClient } from "pg";
 import { closeDb } from "../src/db/client.js";
@@ -36,6 +43,16 @@ const MERGES: Array<{ keep: number; drop: number; name: string; aliases?: string
   { keep: 15451, drop: 16586, name: "El Cura", aliases: ["Roamin 'Alley 69'"], why: "la fuente lo nombra «El Cura ex La Corte»" },
   { keep: 18060, drop: 18077, name: "Cristian Moraga", aliases: ["Funky C"], why: "la biografía de C-funk da su nombre real, Cristian Moraga; ambos en los recopilatorios de DJ Afro" },
   { keep: 17663, drop: 3602, name: "Reynaldo Morales", why: "la biografía de DJ Rey da su nombre real, Reynaldo Morales; ambos en Noveno Festival Nuevas Bandas (1999)" },
+];
+
+const BIG_MANDRAKE = "la biografía de Big Mandrake (2011) dice que la integran músicos que antes tocaron en Sin Sospechas: mismo cantante, guitarrista y saxofonista";
+const MERGES_2: typeof MERGES = [
+  { keep: 3777, drop: 3810, name: "Gilberto Lazo", aliases: ["Control X"], why: "«Control X - Gilberto Lazo» acreditado en La Fantástica Máquina Mágica, disco de Big Mandrake donde Gilberto Lazo es la voz" },
+  { keep: 3777, drop: 16244, name: "Gilberto Lazo", why: BIG_MANDRAKE },
+  { keep: 3774, drop: 16246, name: "Eduardo Malavé", why: BIG_MANDRAKE },
+  { keep: 2509, drop: 16250, name: "Francisco Issa", why: `${BIG_MANDRAKE} («Frank» Issa en Sin Sospechas, Francisco Issa al saxo en Big Mandrake)` },
+  { keep: 4782, drop: 5648, name: "Felipe Nevado", why: "la biografía de Factor Mental: «Felipe Nevado desarrolló una carrera como solista al formar la agrupación Arian en 2005»; la de Arian: «formada por Felipe Nevado, conocido como Arian»" },
+  { keep: 13887, drop: 262, name: "Christian Estepa", why: "las dos fichas son el bajista de Intemperia; la biografía de Demise nombra a «Christian Estepa en el bajo (Intemperia)» y Metal Archives da Pipi = Christian Estepa" },
 ];
 
 const DISMISS: Array<{ review: number; rename?: { id: number; to: string }; why: string }> = [
@@ -76,15 +93,18 @@ async function rename(client: PoolClient, runId: number, id: number, to: string,
 }
 
 async function main(): Promise<void> {
-  const out: Record<string, unknown> = { merges: MERGES, dismiss: DISMISS, confirm: CONFIRM };
-  if (!CONFIRM) { console.log(JSON.stringify({ merges: MERGES.length, dismiss: DISMISS.length })); return; }
+  const tanda = process.argv.find((value) => value.startsWith("--tanda="))?.slice("--tanda=".length) ?? "1";
+  const merges = tanda === "2" ? MERGES_2 : MERGES;
+  const dismiss = tanda === "2" ? [] : DISMISS;
+  const out: Record<string, unknown> = { tanda, merges, dismiss, confirm: CONFIRM };
+  if (!CONFIRM) { console.log(JSON.stringify({ tanda, merges: merges.length, dismiss: dismiss.length })); return; }
 
   const failed: Array<{ step: string; error: string }> = [];
   out["mergeRunId"] = (await withOperatorRun({
     name: "personas:canserbero-mesa", operator: OPERATOR,
     note: "Caso Canserbero extendido: pares de la mesa decididos con evidencia (Brian, 2026-10-02: «apruébalos según lo que recomiendes»).",
   }, async (context) => {
-    for (const pair of MERGES) {
+    for (const pair of merges) {
       await context.client.query("SAVEPOINT pair");
       try {
         const preview = await previewEntityMerge(context.client, "person", pair.keep, pair.drop);
@@ -103,14 +123,14 @@ async function main(): Promise<void> {
         failed.push({ step: `merge ${pair.drop}→${pair.keep}`, error: (error as Error).message.slice(0, 200) });
       }
     }
-    for (const item of DISMISS) {
+    for (const item of dismiss) {
       if (!item.rename) continue;
       await rename(context.client, context.runId, item.rename.id, item.rename.to, `son personas distintas: ${item.why}`);
     }
   })).runId;
 
   const dismissed: number[] = [];
-  for (const item of DISMISS) {
+  for (const item of dismiss) {
     try {
       await rejectReview(item.review, { operator: OPERATOR, note: `Son personas distintas: ${item.why} (caso Canserbero extendido, 2026-10-02)` });
       dismissed.push(item.review);
@@ -120,7 +140,7 @@ async function main(): Promise<void> {
   }
   out["dismissed"] = dismissed;
   out["failed"] = failed;
-  writeFileSync("reports/canserbero-mesa-2026-10-02.json", `${JSON.stringify(out, null, 2)}\n`);
+  writeFileSync(tanda === "2" ? "reports/canserbero-mesa-2026-10-02-tanda2.json" : "reports/canserbero-mesa-2026-10-02.json", `${JSON.stringify(out, null, 2)}\n`);
   console.log(JSON.stringify({ mergeRunId: out["mergeRunId"], dismissed: dismissed.length, failed }, null, 2));
 }
 

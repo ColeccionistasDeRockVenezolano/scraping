@@ -116,5 +116,6 @@ repetidas («Pedro Pedro Arvelo») se descartan.
 | 11312 | 112 nombres de proyecto como alias de su titular |
 | 11313 | 364 créditos de proyectos a su titular; 24 repetidos unidos |
 | 11314 | Mesa (Brian: «apruébalos según lo que recomiendes», `scripts/resolve-canserbero-reviews.ts`): 9 fusiones con evidencia (Luz Verde = Frankie & The Blue Devils, Niño Nuclear = Los Spectors, «El gordo», A.K.A. Trece, «El Cura ex La Corte», C-funk, DJ Rey); 13 pares descartados como personas distintas, que pasan a su nombre limpio. Quedan 8 abiertos: mismo nombre y mismo rol sin proyecto común |
+| 11361 | Tanda 2 de la mesa: el detector solo comparaba con el PRIMER homónimo. Con prueba escrita: Gilberto Lazo (3 fichas), Eduardo Malavé y Francisco «Frank» Issa (Big Mandrake la formaron músicos de Sin Sospechas), Felipe Nevado (Factor Mental → Arian, 2005) y Christian Estepa (dos fichas de bajista de Intemperia). Quedan abiertos Christian Estepa/Malegua, Jonathan Piñeiro, Jesús Dávila y José Barrios; las fichas 360 «Daniel» y 6387 «Fernando» juntan a varias personas (Metal Archives da dos nombres reales a 6387) y piden separarse |
 
 Respaldo previo: `/mnt/datos/backups/crv/crv-20261002T035652Z`.
