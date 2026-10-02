@@ -1,0 +1,214 @@
+{
+  "splits": [
+    {
+      "from": 360,
+      "dropAliases": [
+        22336
+      ],
+      "why": "la ficha de Sincopa (baterista de Skatz) recibió por nombre de pila tres perfiles de Metal Archives y el Daniel de Los Riff",
+      "parts": [
+        {
+          "name": "Daniel Díaz",
+          "realName": "Daniel Díaz",
+          "aliases": [
+            "Daniel"
+          ],
+          "memberships": [
+            1672
+          ],
+          "claims": [
+            664083,
+            664086
+          ],
+          "note": "Metal Archives: https://www.metal-archives.com/artists/Daniel/240301 (Secta Canibal, voz y guitarra 2002–2009)."
+        },
+        {
+          "name": "Daniel",
+          "aliases": [
+            "Lord Cruz"
+          ],
+          "memberships": [
+            1764
+          ],
+          "claims": [],
+          "note": "Metal Archives: https://www.metal-archives.com/artists/Daniel/124378 («As Lord Cruz», guitarra de Demonical Rites)."
+        },
+        {
+          "name": "Daniel",
+          "aliases": [],
+          "memberships": [
+            4031
+          ],
+          "claims": [],
+          "note": "Metal Archives: https://www.metal-archives.com/artists/Daniel/343091 (guitarra de Aria)."
+        },
+        {
+          "name": "Daniel",
+          "aliases": [],
+          "memberships": [
+            5844
+          ],
+          "claims": [],
+          "note": "Baterista y corista de Los Riff (Porlamar); https://rockdevzla.blogspot.com/2011/02/los-riff-banda-de-margarita-estado.html",
+          "reviewWith": {
+            "id": 360,
+            "why": "los dos son «Daniel», baterista; Los Riff es de Porlamar y Skatz de Caracas, sin proyecto común"
+          }
+        }
+      ],
+      "dismiss": [
+        {
+          "review": 1171514,
+          "why": "el par salió del nombre real «Daniel Díaz» de Metal Archives, que era de otro perfil (Secta Canibal); 360 es el baterista de Skatz"
+        }
+      ]
+    },
+    {
+      "from": 6387,
+      "dropAliases": [
+        22380
+      ],
+      "why": "la ficha de Sincopa (diseño gráfico de Retrovértigo) recibió por nombre de pila dos perfiles de Metal Archives con nombres reales distintos",
+      "parts": [
+        {
+          "name": "Fernando Guillén",
+          "realName": "Fernando Guillén",
+          "aliases": [
+            "Fernando",
+            "Fernando Guillen"
+          ],
+          "memberships": [
+            2191
+          ],
+          "claims": [
+            666597
+          ],
+          "note": "Metal Archives: https://www.metal-archives.com/artists/Fernando/303901 (batería de Ritual; la biografía de Ritual lo nombra «Fernando Guillén»)."
+        },
+        {
+          "name": "Fernando Villa",
+          "realName": "Fernando Villa",
+          "aliases": [
+            "Fernando"
+          ],
+          "memberships": [
+            2733
+          ],
+          "claims": [
+            666593,
+            666601
+          ],
+          "note": "Metal Archives: https://www.metal-archives.com/artists/Fernando/573020 (voz de Optofobia).",
+          "reviewWith": {
+            "id": 17033,
+            "why": "mismo nombre que «Fernando villa» de Disentir (Mérida); sin proyecto común"
+          }
+        }
+      ],
+      "dismiss": [
+        {
+          "review": 1171515,
+          "why": "el par salió del nombre real «Fernando Villa» de Metal Archives, que era de otro perfil (Optofobia); 6387 es el diseñador gráfico de Retrovértigo. El par se reabre con la ficha nueva"
+        }
+      ]
+    }
+  ],
+  "membershipsBefore": [
+    {
+      "id": "1672",
+      "person_id": "360",
+      "artist": "Secta Canibal",
+      "role": "Vocals (lead), Guitars"
+    },
+    {
+      "id": "1764",
+      "person_id": "360",
+      "artist": "Demonical Rites",
+      "role": "Guitars"
+    },
+    {
+      "id": "2191",
+      "person_id": "6387",
+      "artist": "Ritual",
+      "role": "Drums"
+    },
+    {
+      "id": "2733",
+      "person_id": "6387",
+      "artist": "Optofobia",
+      "role": "Vocals"
+    },
+    {
+      "id": "4031",
+      "person_id": "360",
+      "artist": "Aria",
+      "role": "Guitars"
+    },
+    {
+      "id": "5844",
+      "person_id": "360",
+      "artist": "Los Riff",
+      "role": "batería y coros"
+    }
+  ],
+  "confirm": true,
+  "runId": 11362,
+  "created": [
+    {
+      "from": 360,
+      "id": 20631,
+      "name": "Daniel Díaz",
+      "memberships": [
+        1672
+      ]
+    },
+    {
+      "from": 360,
+      "id": 20632,
+      "name": "Daniel",
+      "memberships": [
+        1764
+      ]
+    },
+    {
+      "from": 360,
+      "id": 20633,
+      "name": "Daniel",
+      "memberships": [
+        4031
+      ]
+    },
+    {
+      "from": 360,
+      "id": 20634,
+      "name": "Daniel",
+      "memberships": [
+        5844
+      ]
+    },
+    {
+      "from": 6387,
+      "id": 20635,
+      "name": "Fernando Guillén",
+      "memberships": [
+        2191
+      ]
+    },
+    {
+      "from": 6387,
+      "id": 20636,
+      "name": "Fernando Villa",
+      "memberships": [
+        2733
+      ]
+    }
+  ],
+  "reviewsOpened": [
+    1332097,
+    1332098
+  ],
+  "dismissed": [
+    1171514,
+    1171515
+  ]
+}
