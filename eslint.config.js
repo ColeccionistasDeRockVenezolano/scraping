@@ -13,6 +13,9 @@ export default tseslint.config(
       "**/node_modules/**", "**/dist/**", "**/dist-public/**", "build/**", "coverage/**",
       "data/**", "backups/**", "public/**", "tmp-analysis/**",
       "web/tests/artifacts/**", "docs/**",
+      // Worktrees y estado de Claude Code: es tooling, no código del repo
+      // (sus archivos rompen el parser por doble tsconfig raíz).
+      "**/.claude/**",
     ],
   },
   js.configs.recommended,
@@ -36,7 +39,10 @@ export default tseslint.config(
       parserOptions: {
         projectService: {
           // Configuración de herramientas que ningún tsconfig incluye.
+          // El tope sube a 32 porque los tests unit/visual crecieron por encima
+          // del valor por defecto (8) y todos deben parsear con el proyecto por defecto.
           allowDefaultProject: ["vitest.config.ts", "web/vite.config.ts", "web/tests/visual/*.ts", "web/tests/unit/*.ts"],
+          maximumDefaultProjectFileMatchCount_THIS_WILL_SLOW_DOWN_LINTING: 32,
         },
         tsconfigRootDir: import.meta.dirname,
       },

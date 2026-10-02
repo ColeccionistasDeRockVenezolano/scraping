@@ -78,7 +78,7 @@ function windowAround(text: string, title: string): string | null {
   const foldedLines = lines.map(fold);
   const hit = foldedLines.findIndex((l) => l.includes(key));
   if (hit < 0) return folded.includes(key) ? text.slice(0, MAX_TEXT) : null;
-  let start = Math.max(0, hit - 15);
+  const start = Math.max(0, hit - 15);
   let out = lines.slice(start, start + 400).join("\n");
   if (out.length > MAX_TEXT) out = out.slice(0, MAX_TEXT);
   return out;
