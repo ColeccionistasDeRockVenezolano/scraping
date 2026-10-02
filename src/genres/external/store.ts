@@ -302,14 +302,17 @@ export async function insertSuggestion(client: PoolClient, input: SuggestionInpu
 export async function loadCrvState(
   client: PoolClient, kind: GenreEntityKind, entityId: number,
 ): Promise<{ primaryGenreId: number | null; confirmedGenreIds: number[]; suggestedGenreIds: number[]; rejectedGenreIds: number[] }> {
-  const { rows } = await client.query<{ genre_id: string; role: string; status: string }>(`
-    SELECT genre_id::text, role, status FROM ${GENRE_TABLE[kind]} WHERE ${GENRE_COLUMN[kind]} = $1`, [entityId]);
+  const { rows } = await client.query<{ genre_id: string; role: string; status: string; derived: boolean }>(`
+    SELECT genre_id::text, role, status, (source_kind = 'albums' AND decision_kind = 'rule') AS derived
+      FROM ${GENRE_TABLE[kind]} WHERE ${GENRE_COLUMN[kind]} = $1`, [entityId]);
   const state = { primaryGenreId: null as number | null, confirmedGenreIds: [] as number[], suggestedGenreIds: [] as number[], rejectedGenreIds: [] as number[] };
   for (const row of rows) {
     const genreId = Number(row.genre_id);
     if (row.status === "confirmed") {
       state.confirmedGenreIds.push(genreId);
-      if (row.role === "primary") state.primaryGenreId = genreId;
+      // Lo que el artista recibe de sus discos (0036) ya se ve, pero no es su
+      // principal propio: una fuente que nombra otro no lo contradice.
+      if (row.role === "primary" && !row.derived) state.primaryGenreId = genreId;
     } else if (row.status === "suggested") state.suggestedGenreIds.push(genreId);
     else if (row.status === "rejected") state.rejectedGenreIds.push(genreId);
   }

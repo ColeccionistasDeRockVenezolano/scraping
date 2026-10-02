@@ -6,6 +6,8 @@ import type { Page } from "./types";
 
 const LIMIT = 30;
 
+type ListFilters = Record<string, string | number | boolean | undefined>;
+
 /**
  * Lista paginada con `q`/`offset` reflejados en la URL (recargable, compartible).
  *
@@ -13,10 +15,12 @@ const LIMIT = 30;
  * actualiza 250 ms después de la última tecla y con `replace`, así teclear no
  * llena el historial ni dispara una consulta por letra.
  */
-export function useEntityList<T>(
-  fetcher: (params: { q?: string; limit: number; offset: number }) => Promise<Page<T>>,
+export function useEntityList<T, F extends ListFilters = ListFilters>(
+  fetcher: (params: { q?: string; limit: number; offset: number } & F) => Promise<Page<T>>,
   /** Claves extra que obligan a pedir de nuevo (p. ej. la sesión). */
   extraDeps: readonly unknown[] = [],
+  /** Filtros que la página ya leyó de la URL (p. ej. el género); viajan tal cual a la API. */
+  filters: F = {} as F,
 ) {
   const [params, setParams] = useSearchParams();
   const urlQuery = params.get("q") ?? "";
@@ -33,9 +37,10 @@ export function useEntityList<T>(
 
   const [q, setQuery] = useDebouncedQuery(urlQuery, applyQuery);
 
+  const filterKey = JSON.stringify(filters);
   const state = useAsync(
-    () => fetcher({ ...(urlQuery.trim() ? { q: urlQuery.trim() } : {}), limit: LIMIT, offset }),
-    [urlQuery, offset, ...extraDeps],
+    () => fetcher({ ...filters, ...(urlQuery.trim() ? { q: urlQuery.trim() } : {}), limit: LIMIT, offset }),
+    [urlQuery, offset, filterKey, ...extraDeps],
   );
 
   function setOffset(next: number) {

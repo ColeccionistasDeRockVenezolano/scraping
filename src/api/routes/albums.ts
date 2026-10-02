@@ -3,7 +3,7 @@ import type { ZodTypeProvider } from "fastify-type-provider-zod";
 import { z } from "zod";
 import { paginationQuerySchema, toPage } from "../pagination.js";
 import {
-  idParamSchema, aliasSchema, genreSlugQuerySchema, genreStatusSchema, paginatedResponseSchema, publicGenreSchema, writeErrorResponses,
+  idParamSchema, aliasSchema, genreListFilterSchema, relatedGenreQuerySchema, genreStatusSchema, paginatedResponseSchema, publicGenreSchema, writeErrorResponses,
 } from "../schemas.js";
 import { getAlbumDetail, listAlbums } from "../repositories/albums.js";
 import { notFoundEntity } from "../repositories/redirects.js";
@@ -24,6 +24,7 @@ const albumListItemSchema = z.object({
   coverUrl: z.string().nullable(),
   primaryGenre: publicGenreSchema.nullable(),
   genreStatus: genreStatusSchema,
+  hasOwnGenre: z.boolean().describe("Tiene género propio confirmado; con `relatedGenre`, false = entró por su artista."),
   /** Solo con sesión iniciada: el género principal lo eligió Laya. */
   genreByLaya: z.boolean().optional(),
 });
@@ -92,7 +93,8 @@ const albumDetailSchema = z.object({
 const listQuerySchema = paginationQuerySchema.extend({
   q: z.string().trim().min(1).optional(),
   artistId: z.coerce.number().int().positive().optional(),
-  genre: genreSlugQuerySchema.optional(),
+  ...genreListFilterSchema,
+  relatedGenre: relatedGenreQuerySchema,
   decade: z.coerce.number().int().min(1900).max(2100).multipleOf(10).optional(),
   albumType: z.string().trim().min(1).max(40).optional(),
 });
@@ -172,7 +174,7 @@ const albumMergeResultSchema = z.object({
 });
 
 /** La etiqueta de Laya cambia con la sesión: se suma Cookie a Vary sin pisar el Origin de CORS. */
-function varyOnCookie(reply: FastifyReply): void {
+export function varyOnCookie(reply: FastifyReply): void {
   const current = String(reply.getHeader("vary") ?? "");
   if (!/\bcookie\b/iu.test(current)) reply.header("vary", current ? `${current}, Cookie` : "Cookie");
 }

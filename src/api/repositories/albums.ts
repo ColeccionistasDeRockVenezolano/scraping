@@ -4,7 +4,7 @@
 // de YouTube en una sola consulta.
 import { genreStatusOf, type GenreStatus } from "../../merge/genre-projection.js";
 import { getPool } from "../../db/client.js";
-import { genreFilterSql, publicGenresFor, type PublicGenre } from "../../genres/public.js";
+import { genreFilterSql, genreMissingSql, publicGenresFor, relatedGenreFilterSql, type PublicGenre } from "../../genres/public.js";
 import type { PaginationQuery } from "../pagination.js";
 
 export interface AlbumListRow {
@@ -17,6 +17,8 @@ export interface AlbumListRow {
   coverUrl: string | null;
   primaryGenre: PublicGenre | null;
   genreStatus: GenreStatus;
+  /** Tiene al menos un género confirmado propio (con `relatedGenre`, los que no lo tienen entraron por su artista). */
+  hasOwnGenre: boolean;
 }
 
 export interface AlbumListQuery extends PaginationQuery {
@@ -24,6 +26,10 @@ export interface AlbumListQuery extends PaginationQuery {
   artistId?: number | undefined;
   /** Slug de género o familia (PLAN_GENEROS §5): solo asignaciones confirmadas. */
   genre?: string | undefined;
+  /** Solo discos sin ningún género confirmado. */
+  withoutGenre?: boolean | undefined;
+  /** Con `genre`: suma los discos sin género propio cuyo artista tiene ese género. */
+  relatedGenre?: boolean | undefined;
   decade?: number | undefined;
   albumType?: string | undefined;
 }
@@ -31,12 +37,16 @@ export interface AlbumListQuery extends PaginationQuery {
 export async function listAlbums(query: AlbumListQuery): Promise<{ rows: AlbumListRow[]; total: number }> {
   const pattern = query.q ? `%${query.q}%` : null;
   // $1 título · $2 artista · $3 género · $4 década · $5 tipo de lanzamiento
+  // $6 solo sin género · $7 sumar por el género del artista
   const filters = `($1::text IS NULL OR al.title ILIKE $1)
           AND ($2::bigint IS NULL OR al.artist_id = $2)
-          AND ($3::text IS NULL OR ${genreFilterSql("album", "al.id", "$3")})
+          AND ($3::text IS NULL OR ${genreFilterSql("album", "al.id", "$3")}
+               OR ($7::boolean AND ${genreMissingSql("album", "al.id")} AND ${relatedGenreFilterSql("al.id", "$3")}))
           AND ($4::int IS NULL OR (al.release_year >= $4 AND al.release_year < $4 + 10))
-          AND ($5::text IS NULL OR al.album_type::text = $5)`;
-  const params = [pattern, query.artistId ?? null, query.genre ?? null, query.decade ?? null, query.albumType ?? null];
+          AND ($5::text IS NULL OR al.album_type::text = $5)
+          AND (NOT $6::boolean OR ${genreMissingSql("album", "al.id")})`;
+  const params = [pattern, query.artistId ?? null, query.genre ?? null, query.decade ?? null, query.albumType ?? null,
+    query.withoutGenre ?? false, query.relatedGenre ?? false];
   const [rows, count] = await Promise.all([
     getPool().query<{
       id: string; title: string; release_year: number | null; album_type: string;
@@ -47,7 +57,7 @@ export async function listAlbums(query: AlbumListQuery): Promise<{ rows: AlbumLi
          JOIN public.artists ar ON ar.id = al.artist_id
         WHERE ${filters}
         ORDER BY al.title
-        LIMIT $6 OFFSET $7`,
+        LIMIT $8 OFFSET $9`,
       [...params, query.limit, query.offset],
     ),
     getPool().query<{ count: string }>(
@@ -63,6 +73,7 @@ export async function listAlbums(query: AlbumListQuery): Promise<{ rows: AlbumLi
       artistId: Number(row.artist_id), artistName: row.artist_name, coverUrl: row.cover_url,
       primaryGenre: genres.get(Number(row.id))?.primaryGenre ?? null,
       genreStatus: genres.get(Number(row.id))?.genreStatus ?? "unclassified",
+      hasOwnGenre: (genres.get(Number(row.id))?.genres.length ?? 0) > 0,
     })),
     total: Number(count.rows[0]?.count ?? 0),
   };

@@ -9,7 +9,7 @@
 // datos actuales, no a una foto antigua.
 import type { PoolClient } from "pg";
 import type { GenreEntityKind } from "./rules.js";
-import { GENRE_COLUMN, GENRE_TABLE, loadTaxonomy, recomputeEntityGenres, type RecomputeResult } from "./store.js";
+import { DERIVED_FROM_ALBUMS_SQL, GENRE_COLUMN, GENRE_TABLE, loadTaxonomy, recomputeEntityGenres, type RecomputeResult } from "./store.js";
 import { isFamilyOf } from "./taxonomy.js";
 
 export interface HumanDecisionInput {
@@ -89,10 +89,13 @@ export async function confirmGenre(
   const genre = await genreId(client, input.genreSlug, true);
   const table = GENRE_TABLE[input.kind];
   const column = GENRE_COLUMN[input.kind];
-  const live = (await client.query<{ id: string; genre_id: string; decision_kind: string }>(
-    `SELECT id::text, genre_id::text, decision_kind FROM ${table} WHERE ${column}=$1 AND status IN ('confirmed','suggested') AND genre_id<>$2`,
+  const live = (await client.query<{ id: string; genre_id: string; decision_kind: string; derived: boolean }>(
+    `SELECT id::text, genre_id::text, decision_kind, ${DERIVED_FROM_ALBUMS_SQL(table)} AS derived
+       FROM ${table} WHERE ${column}=$1 AND status IN ('confirmed','suggested') AND genre_id<>$2`,
     [input.entityId, genre])).rows;
-  const child = live.find((row) => isFamilyOf(taxonomy, genre, Number(row.genre_id)));
+  // Un subgénero que el artista solo recibe de sus discos no impide confirmar
+  // la familia como género propio.
+  const child = live.find((row) => !row.derived && isFamilyOf(taxonomy, genre, Number(row.genre_id)));
   if (child) throw new Error(`${input.genreSlug} es la familia de un género ya asignado: confirma o rechaza el hijo`);
   if (input.role === "primary") {
     const previous = (await client.query<Record<string, unknown>>(

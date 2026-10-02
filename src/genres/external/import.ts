@@ -136,8 +136,10 @@ interface AlbumEntity {
 
 const SCOPE_CONDITION: Record<ImportScope, string> = {
   // La muestra se mide contra lo que CRV ya confirmó: es el terreno conocido.
-  sample: "EXISTS (SELECT 1 FROM ingest.%TABLE% g WHERE g.%COLUMN% = e.id AND g.role = 'primary' AND g.status = 'confirmed')",
-  pending: "NOT EXISTS (SELECT 1 FROM ingest.%TABLE% g WHERE g.%COLUMN% = e.id AND g.role = 'primary' AND g.status = 'confirmed')",
+  // El principal que un artista solo recibe de sus discos (0036) no cuenta:
+  // sigue pendiente de un género propio.
+  sample: "EXISTS (SELECT 1 FROM ingest.%TABLE% g WHERE g.%COLUMN% = e.id AND g.role = 'primary' AND g.status = 'confirmed' AND NOT (g.source_kind = 'albums' AND g.decision_kind = 'rule'))",
+  pending: "NOT EXISTS (SELECT 1 FROM ingest.%TABLE% g WHERE g.%COLUMN% = e.id AND g.role = 'primary' AND g.status = 'confirmed' AND NOT (g.source_kind = 'albums' AND g.decision_kind = 'rule'))",
   targets: "TRUE",
 };
 

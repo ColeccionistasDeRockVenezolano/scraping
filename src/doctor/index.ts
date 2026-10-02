@@ -14,6 +14,7 @@ import { getPool } from "../db/client.js";
 import { getEnv } from "../config/env.js";
 import { MIN_NODE_MAJOR, isSupportedNode } from "../config/runtime.js";
 import { CORE_CATALOG, readCoreCatalog, diffCoreCatalog } from "./core-catalog.js";
+import { derivedDrift } from "../genres/derived.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..", "..");
@@ -251,6 +252,30 @@ async function checkChangeJournal(pool: Pool): Promise<DoctorCheck> {
     : "todas las tablas registradas tienen disparador y los cambios recientes tienen run");
 }
 
+/**
+ * Géneros que el artista recibe de sus discos (0036): los tres disparadores
+ * están puestos y ninguna ficha se quedó desfasada (p. ej. tras mantenimiento
+ * con la regla apagada). El arreglo es `crv genres derive-artists --confirm`.
+ */
+async function checkDerivedArtistGenres(pool: Pool): Promise<DoctorCheck> {
+  const exists = await pool.query<{ ok: boolean }>(
+    "SELECT to_regprocedure('ingest.crv_derive_artist_genres(bigint,boolean)') IS NOT NULL AS ok");
+  if (!exists.rows[0]?.ok) return check("genres.artist_from_albums", "warn", "falta la migración 0036_artist_genres_from_albums (npm run db:migrate)");
+  const triggers = await pool.query<{ table_name: string }>(`
+    SELECT t AS table_name FROM unnest(ARRAY['public.albums', 'ingest.album_genres', 'ingest.artist_genres']) AS t
+     WHERE NOT EXISTS (SELECT 1 FROM pg_trigger g WHERE g.tgrelid = to_regclass(t) AND g.tgname = 'crv_artist_genres_from_albums')`);
+  if (triggers.rows.length) {
+    return check("genres.artist_from_albums", "fail",
+      `sin disparador de géneros por discos en ${triggers.rows.map((row) => row.table_name).join(", ")}: vuelve a aplicar 0036`);
+  }
+  const drift = await derivedDrift(pool);
+  if (drift.length) {
+    return check("genres.artist_from_albums", "warn",
+      `${drift.length} artista(s) con géneros de sus discos desfasados (ej. ${drift.slice(0, 5).join(", ")}): crv genres derive-artists --confirm`);
+  }
+  return check("genres.artist_from_albums", "ok", "los géneros que los artistas reciben de sus discos están al día");
+}
+
 async function checkSources(pool: Pool): Promise<DoctorCheck> {
   try {
     const { rows } = await pool.query<{ total: string; enabled: string }>(
@@ -378,6 +403,7 @@ export async function runDoctor(): Promise<DoctorReport> {
   checks.push(await checkSources(pool));
   checks.push(await checkGenres(pool));
   checks.push(await checkExternalGenres(pool));
+  checks.push(await checkDerivedArtistGenres(pool));
   checks.push(await checkChangeJournal(pool));
 
   return finish();

@@ -1320,3 +1320,144 @@ body.has-modal .undo-bar { visibility: hidden; }
   border-radius: 8px; background: var(--violet-soft); color: var(--violet); font-size: 13px;
 }
 .rewrite-mark span { flex: 1 1 220px; color: var(--text); }
+
+/* ---------- filtro por género (listas de discos y artistas) ---------- */
+.gfilter {
+  display: grid; gap: 12px; margin: -4px 0 14px; padding: 14px 16px;
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); min-width: 0;
+}
+.gfilter--error { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; color: var(--text-muted); font-size: 13.5px; }
+.gfilter__head { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-width: 0; }
+.gfilter__label { margin: 0; font: 700 11px/1.5 var(--font-body); letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-faint); }
+.gfilter__rail { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; min-width: 0; }
+.gfilter__divider { width: 1px; height: 22px; background: var(--border); margin: 0 2px; flex: 0 0 auto; }
+.gfilter__subs { display: grid; gap: 8px; padding-top: 12px; border-top: 1px solid var(--border-soft); min-width: 0; }
+.gfilter__sublabel { margin: 0; font-size: 12.5px; color: var(--text-faint); }
+.gfilter__sublabel strong { color: var(--text-muted); font-weight: 600; }
+.gfilter__subchips { display: flex; flex-wrap: wrap; gap: 6px; min-width: 0; }
+
+.gchip {
+  display: inline-flex; align-items: center; gap: 7px; min-height: 36px; padding: 6px 13px; flex: 0 0 auto;
+  border-radius: var(--radius-pill); border: 1px solid var(--border); background: var(--surface-2);
+  color: var(--text-muted); font: 600 13px/1.2 var(--font-body); cursor: pointer; max-width: 100%;
+  transition: background 0.15s, border-color 0.15s, color 0.15s, transform 0.12s;
+  -webkit-tap-highlight-color: transparent;
+}
+.gchip:hover { color: var(--text); border-color: color-mix(in srgb, var(--text) 28%, var(--border)); }
+.gchip:active { transform: scale(0.97); }
+.gchip:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
+.gchip[aria-pressed="true"] {
+  background: var(--red-soft); color: #fff; border-color: color-mix(in srgb, var(--red) 70%, var(--border));
+}
+.gchip__check { width: 14px; height: 14px; color: #ff5a63; flex: 0 0 auto; }
+.gchip svg:not(.gchip__check) { width: 14px; height: 14px; flex: 0 0 auto; }
+.gchip__text { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.gchip__count { font: 500 11.5px/1 var(--font-mono); font-variant-numeric: tabular-nums; color: var(--text-faint); }
+.gchip[aria-pressed="true"] .gchip__count { color: var(--text-muted); }
+.gchip--sub { min-height: 32px; padding: 5px 11px; font-weight: 500; font-size: 12.5px; background: transparent; }
+.gchip--none { border-style: dashed; background: transparent; }
+.gchip--more { border-style: dashed; background: transparent; color: var(--text); min-height: 32px; padding: 5px 12px; font-size: 12.5px; }
+.gchip--skeleton {
+  height: 36px; border: 0; cursor: default;
+  background: linear-gradient(90deg, var(--surface-2) 25%, var(--border) 37%, var(--surface-2) 63%); background-size: 400% 100%;
+  animation: crv-shimmer 1.4s ease infinite;
+}
+.gchip.is-revealed { animation: crv-chip-in 0.22s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+
+.gfilter__related {
+  display: flex; align-items: flex-start; gap: 10px; padding: 10px 12px; cursor: pointer;
+  background: var(--surface-2); border: 1px solid var(--border); border-radius: var(--radius-sm);
+  transition: border-color 0.15s;
+}
+.gfilter__related:hover { border-color: color-mix(in srgb, var(--violet) 45%, var(--border)); }
+.gfilter__related:has(input:checked) { border-color: color-mix(in srgb, var(--violet) 60%, var(--border)); background: color-mix(in srgb, var(--violet-soft) 45%, var(--surface-2)); }
+.gfilter__related input { width: 18px; height: 18px; margin: 1px 0 0; flex: 0 0 auto; accent-color: var(--violet); cursor: pointer; }
+.gfilter__related input:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
+.gfilter__related > span { display: grid; gap: 2px; min-width: 0; }
+.gfilter__related-text { font-size: 13.5px; font-weight: 600; color: var(--text); }
+.gfilter__related-hint { font-size: 12px; color: var(--text-faint); }
+.gfilter__without { display: grid; gap: 8px; padding-top: 12px; border-top: 1px solid var(--border-soft); }
+.gfilter__without > p:first-child { margin: 0; font-size: 13.5px; color: var(--text-muted); }
+
+/* Buscador de estilos dentro del filtro. */
+.gfinder { position: relative; flex: 0 1 300px; min-width: 0; }
+.gfinder__icon { position: absolute; left: 11px; top: 50%; transform: translateY(-50%); width: 15px; height: 15px; color: var(--text-faint); pointer-events: none; }
+.gfinder__input {
+  width: 100%; min-height: 36px; padding: 7px 34px 7px 33px; border-radius: var(--radius-pill);
+  border: 1px solid var(--border); background: var(--surface-2); color: var(--text); font-size: 13.5px;
+  -webkit-appearance: none; appearance: none;
+}
+.gfinder__input::-webkit-search-cancel-button { display: none; }
+.gfinder__input::placeholder { color: var(--text-faint); }
+.gfinder__input:focus-visible { outline: none; border-color: var(--red); }
+.gfinder__clear {
+  position: absolute; right: 4px; top: 50%; transform: translateY(-50%); width: 28px; height: 28px;
+  display: grid; place-items: center; border: 0; border-radius: 50%; background: transparent; color: var(--text-faint); cursor: pointer;
+}
+.gfinder__clear:hover { color: var(--text); background: var(--surface-3); }
+.gfinder__clear:focus-visible { outline: 2px solid var(--red); outline-offset: 1px; }
+.gfinder__list {
+  position: absolute; top: calc(100% + 6px); left: 0; right: 0; z-index: 30; min-width: 260px;
+  max-height: 320px; overflow-y: auto; padding: 4px; background: var(--surface-2);
+  border: 1px solid var(--border); border-radius: var(--radius-md); box-shadow: var(--shadow-md);
+  animation: crv-fade 0.15s ease;
+}
+.gfinder__option {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 1px 12px; width: 100%; padding: 8px 10px;
+  border: 0; border-radius: var(--radius-sm); background: none; color: var(--text); text-align: left; cursor: pointer;
+}
+.gfinder__option[aria-selected="true"] { background: var(--surface-3); }
+.gfinder__name { font-size: 13.5px; font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.gfinder__context { grid-column: 1; font-size: 11.5px; color: var(--text-faint); }
+.gfinder__count { grid-column: 2; grid-row: 1 / span 2; align-self: center; font: 500 12px/1 var(--font-mono); color: var(--text-muted); }
+.gfinder__empty { margin: 0; padding: 10px; font-size: 13px; color: var(--text-faint); }
+
+/* Resumen de resultados y filtros activos. */
+.list-summary { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 12px; margin: 0 0 14px; min-height: 32px; }
+.list-summary__count { margin: 0; font-size: 13.5px; color: var(--text-muted); }
+.list-summary__count strong { color: var(--text); font-family: var(--font-mono); font-variant-numeric: tabular-nums; font-weight: 600; }
+.list-summary__filters { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: 0; padding: 0; list-style: none; min-width: 0; }
+.list-summary__filters li { min-width: 0; max-width: 100%; }
+.fpill {
+  display: inline-flex; align-items: center; gap: 6px; max-width: 100%; min-height: 30px; padding: 4px 8px 4px 12px;
+  border-radius: var(--radius-pill); border: 1px solid color-mix(in srgb, var(--red) 45%, var(--border));
+  background: var(--surface); color: var(--text); font-size: 12.5px; font-weight: 600; cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+.fpill svg { width: 13px; height: 13px; color: var(--text-muted); flex: 0 0 auto; }
+.fpill:hover { background: var(--red-soft); border-color: var(--red); }
+.fpill:hover svg { color: #fff; }
+.fpill:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
+.fpill__text { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.entity-card__genre { display: block; margin-top: 3px; font-size: 12px; color: var(--text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+@media (max-width: 760px) {
+  .gfilter { padding: 12px 0; gap: 10px; }
+  .gfilter__head, .gfilter__related, .gfilter--error { margin-left: 12px; margin-right: 12px; }
+  .gfilter__head { flex-direction: column; align-items: stretch; gap: 10px; }
+  .gfinder { flex: 1 1 auto; }
+  .gfinder__input { min-height: 44px; font-size: 16px; }
+  .gfinder__clear { width: 40px; height: 40px; right: 2px; }
+  .gfinder__list { min-width: 0; }
+  .gfinder__option { padding: 11px 10px; }
+  /* En móvil las filas de géneros se deslizan con el pulgar en vez de ocupar media pantalla. */
+  .gfilter__sublabel, .gfilter__without > p:first-child { padding: 0 12px; }
+  .gfilter__rail, .gfilter__subchips {
+    flex-wrap: nowrap; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x proximity;
+    padding: 2px 12px; scroll-padding: 0 12px; scrollbar-width: none;
+    -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 12px, #000 calc(100% - 28px), transparent 100%);
+    mask-image: linear-gradient(90deg, transparent 0, #000 12px, #000 calc(100% - 28px), transparent 100%);
+  }
+  .gfilter__rail::-webkit-scrollbar, .gfilter__subchips::-webkit-scrollbar { display: none; }
+  .gfilter__rail .gchip, .gfilter__subchips .gchip { scroll-snap-align: start; }
+  .gfilter__rail::after, .gfilter__subchips::after { content: ""; flex: 0 0 16px; }
+  .gfilter__related-hint { display: none; }
+  .gchip { min-height: 44px; padding: 8px 14px; font-size: 13.5px; }
+  .gchip--sub, .gchip--more { min-height: 40px; }
+  .gfilter__related { padding: 12px; }
+  .gfilter__related input { width: 20px; height: 20px; }
+  .list-summary__filters { width: 100%; }
+  .fpill { min-height: 36px; }
+  .list-summary__clear { min-height: 36px; }
+}

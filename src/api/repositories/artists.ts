@@ -3,7 +3,7 @@
 // devolver la ficha completa en una sola consulta.
 import { getPool } from "../../db/client.js";
 import type { PaginationQuery } from "../pagination.js";
-import { genreFilterSql, publicGenresFor, type PublicGenre } from "../../genres/public.js";
+import { genreFilterSql, genreMissingSql, publicGenresFor, type PublicGenre } from "../../genres/public.js";
 import type { GenreStatus } from "../../merge/genre-projection.js";
 import { artistDeceasedSql, personDeceasedSql } from "./deceased.js";
 
@@ -24,10 +24,19 @@ export interface ArtistListRow {
 }
 
 export async function listArtists(
-  query: PaginationQuery & { q?: string | undefined; genre?: string | undefined },
+  query: PaginationQuery & {
+    q?: string | undefined;
+    genre?: string | undefined;
+    /** Solo artistas sin ningún género confirmado (ni propio ni de sus discos). */
+    withoutGenre?: boolean | undefined;
+  },
 ): Promise<{ rows: ArtistListRow[]; total: number }> {
   const pattern = query.q ? `%${query.q}%` : null;
-  const genre = query.genre ?? null;
+  // $1 nombre · $2 género (propio o de sus discos, 0036) · $3 solo sin género
+  const filters = `($1::text IS NULL OR name ILIKE $1)
+          AND ($2::text IS NULL OR ${genreFilterSql("artist", "public.artists.id", "$2")})
+          AND (NOT $3::boolean OR ${genreMissingSql("artist", "public.artists.id")})`;
+  const params = [pattern, query.genre ?? null, query.withoutGenre ?? false];
   const [rows, count] = await Promise.all([
     getPool().query<{
       id: string; name: string; artist_type: string; origin_city: string | null;
@@ -37,17 +46,14 @@ export async function listArtists(
       `SELECT id, name, artist_type, origin_city, origin_country, formed_year, disbanded_year, picture_url,
               ${artistDeceasedSql("public.artists.id")} AS is_deceased
          FROM public.artists
-        WHERE ($1::text IS NULL OR name ILIKE $1)
-          AND ($4::text IS NULL OR ${genreFilterSql("artist", "public.artists.id", "$4")})
+        WHERE ${filters}
         ORDER BY name
-        LIMIT $2 OFFSET $3`,
-      [pattern, query.limit, query.offset, genre],
+        LIMIT $4 OFFSET $5`,
+      [...params, query.limit, query.offset],
     ),
     getPool().query<{ count: string }>(
-      `SELECT count(*)::text AS count FROM public.artists
-        WHERE ($1::text IS NULL OR name ILIKE $1)
-          AND ($2::text IS NULL OR ${genreFilterSql("artist", "public.artists.id", "$2")})`,
-      [pattern, genre],
+      `SELECT count(*)::text AS count FROM public.artists WHERE ${filters}`,
+      params,
     ),
   ]);
   const genres = await publicGenresFor("artist", rows.rows.map((row) => Number(row.id)));

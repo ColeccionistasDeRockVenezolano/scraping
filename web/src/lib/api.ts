@@ -13,7 +13,7 @@ import type {
   CurationAutofixRule, CurationAutofixRun, CurationAutofixState,
   AlbumMergePreview, AlbumMergeResult, PersonSplitPreview, PersonSplitResult,
   FindingActionsResult, FixBatch, FixBatchSummary, DistinctPair, ConflictResolveResult, ConflictResolveGroupResult,
-  AuditUndoPreview, ChangeDetail, ChangeEntityKind, ChangeSummary, ChangeUndoResult,
+  AuditUndoPreview, ChangeDetail, ChangeEntityKind, ChangeSummary, ChangeUndoResult, GenreFacets,
 } from "./types";
 
 /**
@@ -156,13 +156,20 @@ export const searchApi = {
     request<SearchResults>("/search", { query: { q, limit, ...(types?.length ? { types: types.join(",") } : {}) }, ...(signal ? { signal } : {}) }),
 };
 
+/** Filtros por género de las listas de discos y artistas (ver `genreListFilterSchema`). */
+export type GenreListParams = { genre?: string; withoutGenre?: boolean; relatedGenre?: boolean };
+
+export const genresApi = {
+  facets: (kind: "album" | "artist") => request<GenreFacets>("/genres/facets", { query: { kind } }),
+};
+
 export const artistsApi = {
-  list: (params: Paged & { q?: string } = {}) => request<Page<ArtistListItem>>("/artists", { query: params }),
+  list: (params: Paged & Omit<GenreListParams, "relatedGenre"> & { q?: string } = {}) => request<Page<ArtistListItem>>("/artists", { query: params }),
   get: (id: number) => request<ArtistDetail>(`/artists/${id}`),
 };
 
 export const albumsApi = {
-  list: (params: Paged & { q?: string; artistId?: number } = {}) => request<Page<AlbumListItem>>("/albums", { query: params }),
+  list: (params: Paged & GenreListParams & { q?: string; artistId?: number } = {}) => request<Page<AlbumListItem>>("/albums", { query: params }),
   get: (id: number) => request<AlbumDetail>(`/albums/${id}`),
 };
 

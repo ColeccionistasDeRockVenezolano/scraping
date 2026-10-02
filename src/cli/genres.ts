@@ -11,6 +11,7 @@ import {
   type TaxonomyChangeReport, type TaxonomyOperation,
 } from "../genres/admin.js";
 import { renderBackfillMarkdown, runGenreBackfill } from "../genres/backfill.js";
+import { runDeriveArtistGenres } from "../genres/derived.js";
 import { decideGenre } from "../genres/curation.js";
 import { runGenresExternalCommand } from "./genres-external.js";
 import type { GenreEntityKind } from "../genres/rules.js";
@@ -150,6 +151,16 @@ export async function runGenresCommand(args: string[]): Promise<number> {
       if (!confirm) console.log("  (dry-run: todo se deshizo; repite con --confirm)");
       return 0;
     }
+    case "derive-artists": {
+      // Reconciliación completa de 0036 (la regla ya corre sola en cada cambio).
+      const confirm = args.includes("--confirm");
+      const report = await runDeriveArtistGenres({ confirm, actor: option(args, "by") ?? "cli" });
+      console.log(`genres derive-artists (${report.mode}, run ${report.runId}): ${report.artistsChanged} artistas · ${report.rowsChanged} filas cambian`);
+      console.log(`  filas de sus discos: ${report.before.rows} → ${report.after.rows} (principales ${report.before.primaries} → ${report.after.primaries})`
+        + ` · artistas sin género: ${report.before.artistsWithoutGenre} → ${report.after.artistsWithoutGenre}`);
+      if (!confirm) console.log("  (dry-run: todo se deshizo; repite con --confirm)");
+      return 0;
+    }
     case "resolve": {
       const [, value] = positional(args);
       if (!value) {
@@ -191,7 +202,7 @@ export async function runGenresCommand(args: string[]): Promise<number> {
       return human(args, "revert", "crv genres revert <album|artist> <id> <slug> --by=<quién> --reason=\"<por qué>\"");
     default:
       console.error(`subcomando de genres desconocido: "${subcommand ?? ""}"`);
-      console.error("  taxonomy-apply | backfill | resolve | alias-set | alias-remove | rename | deactivate | confirm | reject | revert | external");
+      console.error("  taxonomy-apply | backfill | derive-artists | resolve | alias-set | alias-remove | rename | deactivate | confirm | reject | revert | external");
       return 1;
   }
 }

@@ -7,12 +7,13 @@ export function LoadingState({ label = "Cargando…" }: { label?: string }) {
   );
 }
 
-export function EmptyState({ title, hint }: { title: string; hint?: string | undefined }) {
+export function EmptyState({ title, hint, action }: { title: string; hint?: string | undefined; action?: ReactNode }) {
   return (
     <div className="state-block">
       <MagnifyingGlass className="icon" aria-hidden="true" />
       <h3>{title}</h3>
       {hint ? <p>{hint}</p> : null}
+      {action ? <div style={{ marginTop: 14 }}>{action}</div> : null}
     </div>
   );
 }
@@ -31,4 +32,5 @@ export function ErrorState({ message, onRetry }: { message: string; onRetry?: ()
     </div>
   );
 }
+import type { ReactNode } from "react";
 import { MagnifyingGlass, WarningCircle } from "@phosphor-icons/react";

@@ -21,7 +21,7 @@ import { getPool } from "../../db/client.js";
 import { moduleLogger } from "../../logger/index.js";
 import { confirmGenre } from "../human.js";
 import type { GenreEntityKind } from "../rules.js";
-import { GENRE_COLUMN, GENRE_TABLE, loadTaxonomy, lockGenres } from "../store.js";
+import { DERIVED_FROM_ALBUMS_SQL, GENRE_COLUMN, GENRE_TABLE, loadTaxonomy, lockGenres } from "../store.js";
 import type { Taxonomy } from "../taxonomy.js";
 import { ExternalSourceError, requireExternalSource } from "./store.js";
 
@@ -93,9 +93,11 @@ async function loadSuggestions(
        AND g.status = 'suggested' AND g.decision_kind = 'rule'
        AND t.active
        AND ($2::bigint[] IS NULL OR g.${column} = ANY($2::bigint[]))
-       -- Una ficha que ya tiene principal confirmado no se toca.
+       -- Una ficha que ya tiene principal confirmado PROPIO no se toca (el que
+       -- un artista recibe de sus discos, 0036, cede ante el de una fuente).
        AND NOT EXISTS (SELECT 1 FROM ${table} p
-                        WHERE p.${column} = g.${column} AND p.role = 'primary' AND p.status = 'confirmed')
+                        WHERE p.${column} = g.${column} AND p.role = 'primary' AND p.status = 'confirmed'
+                          AND NOT ${DERIVED_FROM_ALBUMS_SQL("p")})
        AND g.${column} IN (
          SELECT DISTINCT s.${column} FROM ${table} s
           WHERE s.external_source_id = $1 AND s.source_kind = 'external'

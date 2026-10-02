@@ -27,6 +27,11 @@ const REVIEW_COLUMN: Readonly<Record<GenreEntityKind, "artist_a_id" | "album_id"
   artist: "artist_a_id",
   album: "album_id",
 };
+/**
+ * Filas que el artista recibe de sus discos (migración 0036): las escribe solo
+ * `ingest.crv_derive_artist_genres` y nunca cuentan como género propio.
+ */
+export const DERIVED_FROM_ALBUMS_SQL = (alias: string) => `(${alias}.source_kind = 'albums' AND ${alias}.decision_kind = 'rule')`;
 /** Quién firma las filas que escriben las reglas (no es una persona). */
 export const RULE_ACTOR = "sistema:reglas-de-generos";
 /** Origen con que una fusión de artistas o álbumes abre su caso de género (primary_disagreement). */
@@ -199,6 +204,14 @@ async function writeRuleRows(
   if (oldPrimary && oldPrimary.genreId !== newPrimary?.genreId) {
     await client.query(`UPDATE ${table} SET role = 'secondary', updated_at = now() WHERE id = $1`, [oldPrimary.id]);
     oldPrimary.role = "secondary";
+  }
+  // Un principal que el artista solo tenía por sus discos cede ante el propio
+  // (al confirmar, la regla de 0036 lo recalcula como secundario).
+  if (kind === "artist" && newPrimary) {
+    await client.query(`
+      UPDATE ${table} x SET role = 'secondary', updated_at = now()
+       WHERE x.${column} = $1 AND x.role = 'primary' AND x.status = 'confirmed' AND x.genre_id <> $2
+         AND ${DERIVED_FROM_ALBUMS_SQL("x")}`, [entityId, newPrimary.genreId]);
   }
 
   // 2. Filas `rule` que ya no tienen evidencia. Quien las citaba como reemplazo

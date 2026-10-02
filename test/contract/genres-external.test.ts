@@ -369,11 +369,16 @@ describe("géneros: fuentes externas autorizadas (PLAN_GENEROS etapa 4)", () => 
       sourceSlug: "musicbrainz", level: "artist", scope: "targets", confirm: true,
       actor: ACTOR, reason: "géneros de artista", fetcher, entityIds: [artist],
     });
-    expect(report.suggestions.inserted).toBe(1);
+    // El artista ya muestra hard rock por sus discos (0036): la fuente coincide
+    // y no hay nada nuevo que proponer.
+    expect(report.suggestions.inserted).toBe(0);
     const artistRows = await rows<{ slug: string; status: string; source_kind: string }>(`
       SELECT g.slug, ag.status, ag.source_kind FROM ingest.artist_genres ag JOIN ingest.genres g ON g.id = ag.genre_id
-       WHERE ag.artist_id = $1`, [artist]);
-    expect(artistRows).toEqual([expect.objectContaining({ slug: "hard-rock", status: "suggested", source_kind: "external" })]);
+       WHERE ag.artist_id = $1 AND ag.source_kind <> 'albums'`, [artist]);
+    expect(artistRows).toEqual([]);
+    expect(await rows<{ slug: string }>(`
+      SELECT g.slug FROM ingest.artist_genres ag JOIN ingest.genres g ON g.id = ag.genre_id
+       WHERE ag.artist_id = $1 AND ag.source_kind = 'albums'`, [artist])).toEqual(expect.arrayContaining([{ slug: "hard-rock" }]));
     expect(await rows<{ n: string }>("SELECT count(*)::text AS n FROM ingest.album_genres")).toEqual(before);
   });
 

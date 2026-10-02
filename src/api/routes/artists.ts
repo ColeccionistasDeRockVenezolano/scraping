@@ -3,12 +3,14 @@ import type { ZodTypeProvider } from "fastify-type-provider-zod";
 import { z } from "zod";
 import { paginationQuerySchema, toPage } from "../pagination.js";
 import {
-  idParamSchema, aliasSchema, genreSlugQuerySchema, genreStatusSchema, paginatedResponseSchema, publicGenreSchema,
+  idParamSchema, aliasSchema, genreListFilterSchema, genreStatusSchema, paginatedResponseSchema, publicGenreSchema,
 } from "../schemas.js";
 import { getArtistDetail, listArtists } from "../repositories/artists.js";
 import { notFoundEntity } from "../repositories/redirects.js";
+import { layaDecidedIds } from "../../genres/public.js";
+import { varyOnCookie } from "./albums.js";
 
-const artistListItemSchema = z.object({
+const artistBaseSchema = z.object({
   id: z.number().int(),
   name: z.string(),
   artistType: z.string(),
@@ -22,7 +24,12 @@ const artistListItemSchema = z.object({
   genreStatus: genreStatusSchema,
 });
 
-const artistDetailSchema = artistListItemSchema.extend({
+const artistListItemSchema = artistBaseSchema.extend({
+  /** Solo con sesión iniciada: el género principal lo eligió Laya (o vino de discos cuyo único origen fue Laya). */
+  genreByLaya: z.boolean().optional(),
+});
+
+const artistDetailSchema = artistBaseSchema.extend({
   biography: z.string().nullable(),
   logoUrl: z.string().nullable(),
   notes: z.string().nullable(),
@@ -62,7 +69,8 @@ const artistDetailSchema = artistListItemSchema.extend({
 
 const listQuerySchema = paginationQuerySchema.extend({
   q: z.string().trim().min(1).optional(),
-  genre: genreSlugQuerySchema.optional().describe("Género propio del artista (no el de sus discos)."),
+  ...genreListFilterSchema,
+  genre: genreListFilterSchema.genre.describe("Género del artista: el propio y los que recibe de sus discos (0036)."),
 });
 
 export async function registerArtistRoutes(app: FastifyInstance): Promise<void> {
@@ -74,9 +82,14 @@ export async function registerArtistRoutes(app: FastifyInstance): Promise<void> 
       querystring: listQuerySchema,
       response: { 200: paginatedResponseSchema(artistListItemSchema) },
     },
-  }, async (request) => {
+  }, async (request, reply) => {
     const { rows, total } = await listArtists(request.query);
-    return toPage(rows, total, request.query);
+    varyOnCookie(reply);
+    if (!request.viewer) return toPage(rows, total, request.query);
+    // Con sesión la respuesta lleva datos de trabajo: nunca a una caché compartida.
+    reply.header("cache-control", "private, no-store");
+    const laya = await layaDecidedIds("artist", rows.map((row) => row.id));
+    return toPage(rows.map((row) => ({ ...row, genreByLaya: laya.has(row.id) })), total, request.query);
   });
 
   server.get("/artists/:id", {

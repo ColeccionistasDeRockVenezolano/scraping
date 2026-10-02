@@ -53,3 +53,12 @@ export const publicGenreSchema = z.object({
 export const genreStatusSchema = z.enum(["confirmed", "pending", "unclassified"]);
 export const genreSlugQuerySchema = z.string().trim().regex(/^[a-z0-9]+(-[a-z0-9]+)*$/u)
   .describe("Slug de género o familia; una familia incluye sus géneros hijos.");
+const queryFlagSchema = z.enum(["true", "false"]).transform((value) => value === "true");
+/** Filtros por género compartidos por las listas de discos y artistas. */
+export const genreListFilterSchema = {
+  genre: genreSlugQuerySchema.optional(),
+  withoutGenre: queryFlagSchema.optional().describe("Solo fichas sin ningún género confirmado."),
+};
+/** Solo discos: con `genre`, suma los discos sin género propio cuyo artista tiene ese género. */
+export const relatedGenreQuerySchema = queryFlagSchema.optional()
+  .describe("Con `genre`: suma los discos sin género propio cuyo artista tiene ese género (vista de búsqueda; no asigna nada).");

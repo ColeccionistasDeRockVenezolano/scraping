@@ -37,6 +37,10 @@ export interface ArtistListItem {
   pictureUrl: string | null;
   /** Su proyecto es de una persona fallecida (titular o único integrante). */
   isDeceased?: boolean;
+  /** Género principal confirmado: el propio o, si no tiene, el que recibe de sus discos. */
+  primaryGenre?: PublicGenre | null;
+  /** Solo con sesión iniciada: el género principal lo eligió Laya (o vino de discos elegidos por Laya). */
+  genreByLaya?: boolean;
 }
 
 /**
@@ -116,8 +120,29 @@ export interface AlbumListItem {
   artistId: number;
   artistName: string;
   coverUrl: string | null;
+  primaryGenre?: PublicGenre | null;
+  /** false = el disco no tiene género propio (con `relatedGenre`, entró por su artista). */
+  hasOwnGenre?: boolean;
   /** Solo con sesión iniciada: el género principal lo eligió Laya. */
   genreByLaya?: boolean;
+}
+
+// ---------- géneros (filtros de lista) ----------
+export interface GenreFacet {
+  slug: string;
+  name: string;
+  /** Fichas con el género confirmado; en una familia, también sus subgéneros. */
+  count: number;
+  /** Discos sin género propio que entran por el de su artista (en artistas, siempre 0). */
+  relatedCount: number;
+}
+
+export interface GenreFamilyFacet extends GenreFacet { genres: GenreFacet[]; }
+
+export interface GenreFacets {
+  total: number;
+  withoutGenre: number;
+  families: GenreFamilyFacet[];
 }
 
 export interface ScopedCredit extends Credit {
