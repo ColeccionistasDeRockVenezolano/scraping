@@ -77,3 +77,44 @@ común (misma banda, disco, pista o artista). El par va a la mesa como
 
 Sin tocar: 239 apodos intercalados y 21 cuyo nombre limpio sería una sola
 palabra (detalle en `reports/person-nicknames-2026-10-01.jsonl`).
+
+---
+
+## Caso Canserbero extendido a todo el catálogo (2026-10-02)
+
+**Decisiones de Brian** (clarify del 2026-10-02): extender las cinco piezas del
+caso a todas las fichas; con el paréntesis al revés («Frankie Devil (Francisco
+Belda)») queda el nombre real; **todo apodo es también alias**, aunque no salga
+del nombre (los intercalados siguen sin renombrarse); aplicar con respaldo.
+
+| Pieza | Herramienta |
+|-------|-------------|
+| Paréntesis, @usuario, «aka», «Firma - Persona» | `scripts/plan-canserbero-extendido.ts --stage=parens` (tabla revisada a mano) |
+| Nombre real según fuente | `--stage=realnames`: Metal Archives (`persons.real_name`) y biografías citadas en la tabla del script |
+| Apodos como alias | `--stage=nicknames` |
+| Proyecto como alias del titular | `--stage=projects` (sin nombres de grupo: «Chulius & The Filarmónicos») |
+| Nombre nuevo que ya es de otra ficha | `scripts/merge-canserbero-collisions.ts`: fusiona con proyecto común; si no, `person_duplicate` |
+| Créditos del proyecto al titular | `scripts/retarget-titular-credits.ts` (ahora enlaza claims en la auditoría) |
+| Que no vuelva a entrar | `splitTrailingNickname` separa también el `@usuario` final |
+
+**Nombre real.** Si la ficha ya lleva una forma del nombre real (comparte un
+apellido, aun con errata: «Carlos Baute» ⊂ «Carlos Roberto Baute Jiménez»), el
+nombre completo solo se suma como alias. Si no comparte ninguno, la ficha lleva
+el nombre artístico y pasa a llamarse por el real: «Kerch» → «Juan Aponte»,
+«Edgar Alexander» → «Édgar Enrique Quintero Castillo»; el artístico queda de
+alias. Fuentes que se contradicen no se tocan (Luz Marina, MASA, José Martínez,
+Ezequiel Serrano Valencia). Nombres reales de una palabra o con palabras
+repetidas («Pedro Pedro Arvelo») se descartan.
+
+| Run | Efecto |
+|-----|--------|
+| 11306 | Paréntesis/@/aka: 39 renombres, 70 alias (11 fichas que no son personas quedan en `reports/canserbero-parens-2026-10-02.jsonl`) |
+| 11307 | Nombre real: 134 renombres, 242 alias |
+| 11308 | 11 fusiones con proyecto común (p. ej. Rocky Devil → Francisco «CoCo» Díaz; Argel → Argel Trejo) |
+| 11309, 11310 | 25 revisiones `person_duplicate` (choques sin proyecto común y pares marcados a mano) |
+| 11311 | 344 apodos como alias |
+| 11312 | 112 nombres de proyecto como alias de su titular |
+| 11313 | 364 créditos de proyectos a su titular; 24 repetidos unidos |
+| 11314 | Mesa (Brian: «apruébalos según lo que recomiendes», `scripts/resolve-canserbero-reviews.ts`): 9 fusiones con evidencia (Luz Verde = Frankie & The Blue Devils, Niño Nuclear = Los Spectors, «El gordo», A.K.A. Trece, «El Cura ex La Corte», C-funk, DJ Rey); 13 pares descartados como personas distintas, que pasan a su nombre limpio. Quedan 8 abiertos: mismo nombre y mismo rol sin proyecto común |
+
+Respaldo previo: `/mnt/datos/backups/crv/crv-20261002T035652Z`.

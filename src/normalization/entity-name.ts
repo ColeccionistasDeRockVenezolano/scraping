@@ -153,15 +153,27 @@ export function splitDeclaredStageName(value: string): { legalOrCanonical: strin
  * y choca con otras fichas.
  */
 const TRAILING_NICKNAME = /^\s*(.+?)\s*["“”«]([^"“”«»]+)["“”»]\s*$/u;
+/**
+ * Usuario de red social al final: «Gustavo Dal Farra @GustavoDB» (caso
+ * Canserbero extendido, Brian 2026-10-02). Los paréntesis no se separan aquí:
+ * «Luis Pérez (Caracas)» es una ciudad y «Surrearts Graphics (Erick León)»
+ * lleva el nombre DENTRO; esos se revisan a mano.
+ */
+const TRAILING_HANDLE = /^\s*(.+?)\s+@([\p{L}\p{N}_.]{2,})\s*$/u;
 
 export function splitTrailingNickname(value: string): { name: string; nicknames: string[] } | null {
-  const match = TRAILING_NICKNAME.exec(normalizeDisplayName(value));
-  const base = match?.[1]?.trim();
-  const nickname = match?.[2]?.trim();
-  if (!base || !nickname) return null;
+  let rest = normalizeDisplayName(value);
+  const found: string[] = [];
+  const handle = TRAILING_HANDLE.exec(rest);
+  if (handle?.[1] && handle[2]) { rest = handle[1].trim(); found.push(handle[2]); }
+  const match = TRAILING_NICKNAME.exec(rest);
+  if (match?.[1]?.trim() && match[2]?.trim()) {
+    rest = match[1].trim();
+    // Una fuente puede apilar dos apodos en el mismo paréntesis: «Sebas/Grimmode».
+    found.unshift(...match[2].split("/").map((part) => part.trim()));
+  }
   // La base tiene que ser un nombre que valga por sí solo (nombre + apellido).
-  if (base.split(/\s+/u).filter(Boolean).length < 2) return null;
-  // Una fuente puede apilar dos apodos en el mismo paréntesis: «Sebas/Grimmode».
-  const nicknames = [...new Set(nickname.split("/").map((part) => part.trim()).filter(Boolean))];
-  return nicknames.length ? { name: base, nicknames } : null;
+  if (!found.length || rest.split(/\s+/u).filter(Boolean).length < 2) return null;
+  const nicknames = [...new Set(found.filter(Boolean))];
+  return nicknames.length ? { name: rest, nicknames } : null;
 }

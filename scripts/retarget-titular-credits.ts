@@ -74,13 +74,21 @@ async function main(): Promise<void> {
         await client.query(`UPDATE public.${table} SET person_id=$2, artist_id=NULL WHERE id=$1`, [Number(row.id), Number(row.person_id)]);
         const column = table === "album_credits" ? "album_credit_id" : "track_credit_id";
         const kind = table === "album_credits" ? "album_credit" : "track_credit";
-        await client.query(`
+        const audit = await client.query<{ id: string }>(`
           INSERT INTO ingest.merge_audit(run_id,entity_kind,${column},field,old_value,new_value,reason,confidence,performed_by)
-          VALUES($1,$2::ingest.claim_entity_kind,$3,'credited_to',$4::jsonb,$5::jsonb,$6,'high','human')`,
+          VALUES($1,$2::ingest.claim_entity_kind,$3,'credited_to',$4::jsonb,$5::jsonb,$6,'high','human') RETURNING id::text`,
         [runId, kind, Number(row.id),
           JSON.stringify({ artistId: Number(row.artist_id), name: row.artist_name }),
           JSON.stringify({ personId: Number(row.person_id), name: row.person_name }),
           `${NOTE} — «${row.role}» en «${row.parent_title}» es de la persona, no del proyecto`]);
+        // La evidencia del crédito: sus claims y los de auditorías previas de la
+        // misma fila (doctor `merge_audit.coverage`: toda auditoría enlaza claims).
+        await client.query(`
+          INSERT INTO ingest.merge_audit_claims(merge_audit_id,claim_id)
+          SELECT $1::bigint, id FROM ingest.claims WHERE ${column}=$2
+          UNION SELECT $1::bigint, mac.claim_id FROM ingest.merge_audit ma
+            JOIN ingest.merge_audit_claims mac ON mac.merge_audit_id=ma.id WHERE ma.${column}=$2
+          ON CONFLICT DO NOTHING`, [Number(audit.rows[0]!.id), Number(row.id)]);
         moved.push(detail);
         touchedPersons.add(Number(row.person_id));
       }

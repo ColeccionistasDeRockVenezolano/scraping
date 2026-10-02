@@ -1,0 +1,1014 @@
+{
+  "decidedAt": "2026-10-02",
+  "evidence": "Caso Canserbero extendido, etapa «projects» (Brian, 2026-10-02). Ver scripts/plan-canserbero-extendido.ts.",
+  "corrections": [
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 2716,
+        "name": "Henry Augustus Stephen Pierre"
+      },
+      "alias": "Henry Stephen",
+      "why": "Nombre del proyecto del que es titular (artista 4), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 615,
+        "name": "Rudy La Scala"
+      },
+      "alias": "A'mbar",
+      "why": "Nombre del proyecto del que es titular (artista 33), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 2016,
+        "name": "Gabriel Arbiza Zuluaga"
+      },
+      "alias": "Arbiza",
+      "why": "Nombre del proyecto del que es titular (artista 45), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 2675,
+        "name": "Oscar De Jesús Colina"
+      },
+      "alias": "Colina",
+      "why": "Nombre del proyecto del que es titular (artista 69), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 894,
+        "name": "Edgar Jiménez Pérez"
+      },
+      "alias": "Edgar Jiménez",
+      "why": "Nombre del proyecto del que es titular (artista 86), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 830,
+        "name": "Rafael López Garnica"
+      },
+      "alias": "Garnica",
+      "why": "Nombre del proyecto del que es titular (artista 101), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 2669,
+        "name": "Erik Aldrey"
+      },
+      "alias": "Le Picó",
+      "why": "Nombre del proyecto del que es titular (artista 146), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 2832,
+        "name": "Marlon Morales"
+      },
+      "alias": "Lil Supa'",
+      "why": "Nombre del proyecto del que es titular (artista 149), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 367,
+        "name": "Mauricio Arcas"
+      },
+      "alias": "Maurimix",
+      "why": "Nombre del proyecto del que es titular (artista 171), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 1667,
+        "name": "Pablo \"Mulato\" González"
+      },
+      "alias": "Mulato",
+      "why": "Nombre del proyecto del que es titular (artista 177), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 923,
+        "name": "Gerardo Ubieda"
+      },
+      "alias": "OdraReg",
+      "why": "Nombre del proyecto del que es titular (artista 182), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 15470,
+        "name": "Carlos Eduardo Martínez"
+      },
+      "alias": "Patafunk",
+      "why": "Nombre del proyecto del que es titular (artista 193), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 648,
+        "name": "Rodrigo Gonsalves"
+      },
+      "alias": "Rodrigo Solo",
+      "why": "Nombre del proyecto del que es titular (artista 214), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 1134,
+        "name": "Giuglio Cesare Della Noce"
+      },
+      "alias": "iX",
+      "why": "Nombre del proyecto del que es titular (artista 267), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 15590,
+        "name": "Peter K"
+      },
+      "alias": "Raw Oath",
+      "why": "Nombre del proyecto del que es titular (artista 415), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 2953,
+        "name": "Facundo Coral"
+      },
+      "alias": "Coral",
+      "why": "Nombre del proyecto del que es titular (artista 434), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 15790,
+        "name": "Carlos Álvarez"
+      },
+      "alias": "Carlos75.com",
+      "why": "Nombre del proyecto del que es titular (artista 714), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 15801,
+        "name": "Federico Augusto Ágreda Álvarez"
+      },
+      "alias": "Zardonic",
+      "why": "Nombre del proyecto del que es titular (artista 795), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 15802,
+        "name": "Federico Agreda"
+      },
+      "alias": "Blackholepit",
+      "why": "Nombre del proyecto del que es titular (artista 806), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 15808,
+        "name": "Federico Ágreda Álvarez"
+      },
+      "alias": "Triangular Ascension",
+      "why": "Nombre del proyecto del que es titular (artista 835), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 15809,
+        "name": "Kirvic Aguilera"
+      },
+      "alias": "Stunningstorm",
+      "why": "Nombre del proyecto del que es titular (artista 849), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 15834,
+        "name": "Evelio Gómez"
+      },
+      "alias": "El Globo Oscuro",
+      "why": "Nombre del proyecto del que es titular (artista 911), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14335,
+        "name": "Egidio Chirinos"
+      },
+      "alias": "Indigestable Suppuration",
+      "why": "Nombre del proyecto del que es titular (artista 988), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 15875,
+        "name": "Nelson Camacaro"
+      },
+      "alias": "Enorme Roca Navaja",
+      "why": "Nombre del proyecto del que es titular (artista 1003), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 15913,
+        "name": "Noel Grisanti"
+      },
+      "alias": "El Caminante",
+      "why": "Nombre del proyecto del que es titular (artista 1016), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 218,
+        "name": "Carlos Alvarez"
+      },
+      "alias": "Carlos1975",
+      "why": "Nombre del proyecto del que es titular (artista 1084), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 223,
+        "name": "Annabella Almenar"
+      },
+      "alias": "Bélica",
+      "why": "Nombre del proyecto del que es titular (artista 1111), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 1021,
+        "name": "Oswaldo Grillet"
+      },
+      "alias": "OG Project",
+      "why": "Nombre del proyecto del que es titular (artista 1115), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 16117,
+        "name": "Aureliano Méndez Cadet"
+      },
+      "alias": "Panasuyo",
+      "why": "Nombre del proyecto del que es titular (artista 1116), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 496,
+        "name": "Javier Weyler"
+      },
+      "alias": "Capitán Melao",
+      "why": "Nombre del proyecto del que es titular (artista 1145), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 2234,
+        "name": "Ricardo Toscano"
+      },
+      "alias": "En el laberinto",
+      "why": "Nombre del proyecto del que es titular (artista 1158), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 2891,
+        "name": "Kuámasi González Vidal"
+      },
+      "alias": "Kuámasi",
+      "why": "Nombre del proyecto del que es titular (artista 1198), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 16264,
+        "name": "Juan D. Chacón"
+      },
+      "alias": "Onechot",
+      "why": "Nombre del proyecto del que es titular (artista 1238), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 16338,
+        "name": "France Velásquez"
+      },
+      "alias": "Vel France",
+      "why": "Nombre del proyecto del que es titular (artista 1318), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 16339,
+        "name": "Ramsés Guillermo Meneses"
+      },
+      "alias": "Mc Klopedia",
+      "why": "Nombre del proyecto del que es titular (artista 1319), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 16464,
+        "name": "Darío Sosa"
+      },
+      "alias": "Sonda a Barnard",
+      "why": "Nombre del proyecto del que es titular (artista 1367), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 16566,
+        "name": "Franklin Charles"
+      },
+      "alias": "Selector Cocoman",
+      "why": "Nombre del proyecto del que es titular (artista 1420), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 16620,
+        "name": "Ezequiel Bertho"
+      },
+      "alias": "Algodón Egipcio",
+      "why": "Nombre del proyecto del que es titular (artista 1435), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 16625,
+        "name": "Erly J. Ruiz"
+      },
+      "alias": "Dolli",
+      "why": "Nombre del proyecto del que es titular (artista 1437), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 16633,
+        "name": "Juan Moreno"
+      },
+      "alias": "Proyecto Brujo",
+      "why": "Nombre del proyecto del que es titular (artista 1441), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 16637,
+        "name": "Elías Castro"
+      },
+      "alias": "Taremurú",
+      "why": "Nombre del proyecto del que es titular (artista 1455), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 16661,
+        "name": "José Ignacio Benítez"
+      },
+      "alias": "Domingo En Llamas",
+      "why": "Nombre del proyecto del que es titular (artista 1463), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 16674,
+        "name": "Koko"
+      },
+      "alias": "Titi Cundekas'on",
+      "why": "Nombre del proyecto del que es titular (artista 1477), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 657,
+        "name": "David \"Chapis\" Lasca"
+      },
+      "alias": "Lasca",
+      "why": "Nombre del proyecto del que es titular (artista 1498), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 16736,
+        "name": "Cornelio"
+      },
+      "alias": "Cornelio Estación Caribe",
+      "why": "Nombre del proyecto del que es titular (artista 1499), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 16802,
+        "name": "Linda Sjöquist"
+      },
+      "alias": "...Al cruzar La Calle",
+      "why": "Nombre del proyecto del que es titular (artista 1525), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 16803,
+        "name": "Kirvic Aguilera"
+      },
+      "alias": "Host",
+      "why": "Nombre del proyecto del que es titular (artista 1527), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 16688,
+        "name": "Francisco Gómez"
+      },
+      "alias": "Ok Fran",
+      "why": "Nombre del proyecto del que es titular (artista 1564), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 16919,
+        "name": "Clementina Francisco"
+      },
+      "alias": "La Clem De La Clem",
+      "why": "Nombre del proyecto del que es titular (artista 1586), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 6301,
+        "name": "Antonio Bello"
+      },
+      "alias": "Antonio Bello Blues Band",
+      "why": "Nombre del proyecto del que es titular (artista 1624), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 3202,
+        "name": "Eric Colón Moleiro"
+      },
+      "alias": "Call-On",
+      "why": "Nombre del proyecto del que es titular (artista 1633), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 17118,
+        "name": "Giovanni Emilio Conte Trezza"
+      },
+      "alias": "Yani",
+      "why": "Nombre del proyecto del que es titular (artista 1671), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 17191,
+        "name": "Heberto Áñez Novoa"
+      },
+      "alias": "Presidente",
+      "why": "Nombre del proyecto del que es titular (artista 1696), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 16735,
+        "name": "Nahu Padilla"
+      },
+      "alias": "Betamax",
+      "why": "Nombre del proyecto del que es titular (artista 1729), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 7101,
+        "name": "Alfredo Matheus Diez"
+      },
+      "alias": "Matheus 10",
+      "why": "Nombre del proyecto del que es titular (artista 1822), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 7178,
+        "name": "Alberto Lewis"
+      },
+      "alias": "Al Zeppy",
+      "why": "Nombre del proyecto del que es titular (artista 1861), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 2360,
+        "name": "Bartolomé Díaz"
+      },
+      "alias": "Bartolomé Diaz",
+      "why": "Nombre del proyecto del que es titular (artista 1877), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 5428,
+        "name": "Tony Galo"
+      },
+      "alias": "Divina Ciencia",
+      "why": "Nombre del proyecto del que es titular (artista 1917), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 3672,
+        "name": "Eduardo Osorio"
+      },
+      "alias": "I-Mind",
+      "why": "Nombre del proyecto del que es titular (artista 1966), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 5559,
+        "name": "Licio Lugarini Melloni"
+      },
+      "alias": "Licio Lugarini Melloni \"Licho\"",
+      "why": "Nombre del proyecto del que es titular (artista 1989), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 17405,
+        "name": "Santiago Rodriguez Almenara"
+      },
+      "alias": "Srod",
+      "why": "Nombre del proyecto del que es titular (artista 2018), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 17435,
+        "name": "Andrés Morillo"
+      },
+      "alias": "TAK",
+      "why": "Nombre del proyecto del que es titular (artista 2064), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 17450,
+        "name": "José Roberto"
+      },
+      "alias": "Proyecto Boogie Boogie",
+      "why": "Nombre del proyecto del que es titular (artista 2076), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 17665,
+        "name": "Gabriel Pérez"
+      },
+      "alias": "Mare Imbrium",
+      "why": "Nombre del proyecto del que es titular (artista 2227), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 17862,
+        "name": "Antoine Dourlent"
+      },
+      "alias": "Glavio",
+      "why": "Nombre del proyecto del que es titular (artista 2381), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 17889,
+        "name": "Kevin Alvarado"
+      },
+      "alias": "Vaginosis Bacteriana",
+      "why": "Nombre del proyecto del que es titular (artista 2401), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 17890,
+        "name": "Wouter Hudales"
+      },
+      "alias": "Atomization",
+      "why": "Nombre del proyecto del que es titular (artista 2413), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 17891,
+        "name": "Cholo Del Diablo"
+      },
+      "alias": "Proyecto Panica",
+      "why": "Nombre del proyecto del que es titular (artista 2414), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 17901,
+        "name": "Angga Ramadhan"
+      },
+      "alias": "Pancong Coklat Keju",
+      "why": "Nombre del proyecto del que es titular (artista 2426), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 17902,
+        "name": "Nikolas Dexx"
+      },
+      "alias": "Bowel Maggots",
+      "why": "Nombre del proyecto del que es titular (artista 2427), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 17903,
+        "name": "Lafawijn"
+      },
+      "alias": "Menstruating Cunt",
+      "why": "Nombre del proyecto del que es titular (artista 2428), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 17904,
+        "name": "ROT"
+      },
+      "alias": "Rot in Space",
+      "why": "Nombre del proyecto del que es titular (artista 2429), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 17917,
+        "name": "The Infinite Nihilist"
+      },
+      "alias": "Feasting on Scaphism Remains",
+      "why": "Nombre del proyecto del que es titular (artista 2440), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 17920,
+        "name": "Joe Badtaste"
+      },
+      "alias": "Epidemic Pain",
+      "why": "Nombre del proyecto del que es titular (artista 2446), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 17922,
+        "name": "Adythia Utama"
+      },
+      "alias": "Individual Distortion",
+      "why": "Nombre del proyecto del que es titular (artista 2449), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 17954,
+        "name": "Darryn Palmer"
+      },
+      "alias": "Slamophiliac",
+      "why": "Nombre del proyecto del que es titular (artista 2477), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 17955,
+        "name": "Tim Read"
+      },
+      "alias": "Septic Mutagen",
+      "why": "Nombre del proyecto del que es titular (artista 2478), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 17956,
+        "name": "Alienlord"
+      },
+      "alias": "Dressed for Apocalypse",
+      "why": "Nombre del proyecto del que es titular (artista 2479), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 17957,
+        "name": "Januaryo Hardy"
+      },
+      "alias": "Perverted Dexterity",
+      "why": "Nombre del proyecto del que es titular (artista 2480), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 17962,
+        "name": "Andi"
+      },
+      "alias": "Deformed Cadaver",
+      "why": "Nombre del proyecto del que es titular (artista 2484), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 17974,
+        "name": "Steve Montero"
+      },
+      "alias": "Bizarre Bondage",
+      "why": "Nombre del proyecto del que es titular (artista 2489), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 18015,
+        "name": "Adrián Barilari"
+      },
+      "alias": "Barilari",
+      "why": "Nombre del proyecto del que es titular (artista 2541), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 18025,
+        "name": "Vladimir Cochet"
+      },
+      "alias": "Mirrorthrone",
+      "why": "Nombre del proyecto del que es titular (artista 2555), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 18040,
+        "name": "Andrecho Sequea"
+      },
+      "alias": "Andrecho",
+      "why": "Nombre del proyecto del que es titular (artista 2577), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 18067,
+        "name": "Leopoldo Bello"
+      },
+      "alias": "Demetrio De CCS",
+      "why": "Nombre del proyecto del que es titular (artista 2618), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 18068,
+        "name": "Matias Monteagudo"
+      },
+      "alias": "Spyro",
+      "why": "Nombre del proyecto del que es titular (artista 2620), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 18076,
+        "name": "Camilo Lara"
+      },
+      "alias": "Mexican Institute Of Sound",
+      "why": "Nombre del proyecto del que es titular (artista 2655), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 18077,
+        "name": "Cristian Moraga"
+      },
+      "alias": "Funky C",
+      "why": "Nombre del proyecto del que es titular (artista 2657), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 1540,
+        "name": "Francisco Mejía"
+      },
+      "alias": "Pacheko",
+      "why": "Nombre del proyecto del que es titular (artista 2662), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 18080,
+        "name": "Fernando Garmendia"
+      },
+      "alias": "DJ Beat",
+      "why": "Nombre del proyecto del que es titular (artista 2669), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 18081,
+        "name": "Eduardo Larez"
+      },
+      "alias": "Yare",
+      "why": "Nombre del proyecto del que es titular (artista 2672), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 18088,
+        "name": "José Antonio Blanco Angulo"
+      },
+      "alias": "Dr. Muu",
+      "why": "Nombre del proyecto del que es titular (artista 2727), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 18089,
+        "name": "Luis Garbán"
+      },
+      "alias": "Cardopusher",
+      "why": "Nombre del proyecto del que es titular (artista 2733), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 1617,
+        "name": "Alexis Rendón"
+      },
+      "alias": "Club Nuclear",
+      "why": "Nombre del proyecto del que es titular (artista 2789), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 18093,
+        "name": "Eduardo Javith"
+      },
+      "alias": "Javith",
+      "why": "Nombre del proyecto del que es titular (artista 2813), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 18096,
+        "name": "Tony Funiciello"
+      },
+      "alias": "Dj Aureal",
+      "why": "Nombre del proyecto del que es titular (artista 2819), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 18098,
+        "name": "Ed Vera"
+      },
+      "alias": "Turtled",
+      "why": "Nombre del proyecto del que es titular (artista 2837), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 18099,
+        "name": "Antonio José Azócar"
+      },
+      "alias": "Ajd",
+      "why": "Nombre del proyecto del que es titular (artista 2841), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 18100,
+        "name": "Reinaldo López"
+      },
+      "alias": "Reix",
+      "why": "Nombre del proyecto del que es titular (artista 2864), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 18102,
+        "name": "Gustavo R."
+      },
+      "alias": "Moreon",
+      "why": "Nombre del proyecto del que es titular (artista 2877), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 18103,
+        "name": "Manuel Alberto Bolívar"
+      },
+      "alias": "Manybeat",
+      "why": "Nombre del proyecto del que es titular (artista 2885), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 18104,
+        "name": "Daniel Maal"
+      },
+      "alias": "Analog Circl8",
+      "why": "Nombre del proyecto del que es titular (artista 2891), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 18105,
+        "name": "Nacho Nuett"
+      },
+      "alias": "SER+",
+      "why": "Nombre del proyecto del que es titular (artista 2892), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 18108,
+        "name": "Federico Blank"
+      },
+      "alias": "Ordep Zerep",
+      "why": "Nombre del proyecto del que es titular (artista 2897), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 18132,
+        "name": "Josh Quicksilver"
+      },
+      "alias": "XquicksilverX",
+      "why": "Nombre del proyecto del que es titular (artista 2913), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 18136,
+        "name": "Daniel Voicians"
+      },
+      "alias": "Voicians",
+      "why": "Nombre del proyecto del que es titular (artista 2918), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 18137,
+        "name": "Mark Trotta"
+      },
+      "alias": "Mark Instinct",
+      "why": "Nombre del proyecto del que es titular (artista 2919), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 18141,
+        "name": "Steve Foskolos"
+      },
+      "alias": "Throttler",
+      "why": "Nombre del proyecto del que es titular (artista 2923), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 18142,
+        "name": "Vasso Skopelou"
+      },
+      "alias": "Lowbss",
+      "why": "Nombre del proyecto del que es titular (artista 2924), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 18143,
+        "name": "James Fiorella"
+      },
+      "alias": "Messinian",
+      "why": "Nombre del proyecto del que es titular (artista 2925), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 18144,
+        "name": "Dmitry Veschunov"
+      },
+      "alias": "Receptor",
+      "why": "Nombre del proyecto del que es titular (artista 2928), como «Canserbero» en Tirone González."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 18145,
+        "name": "Ivan Shopov"
+      },
+      "alias": "Cooh",
+      "why": "Nombre del proyecto del que es titular (artista 2930), como «Canserbero» en Tirone González."
+    }
+  ]
+}

@@ -1,0 +1,1026 @@
+{
+  "decidedAt": "2026-10-02",
+  "evidence": "Caso Canserbero extendido, etapa «parens» (Brian, 2026-10-02). Ver scripts/plan-canserbero-extendido.ts.",
+  "corrections": [
+    {
+      "op": "rename",
+      "person": {
+        "id": 16523,
+        "name": "Alberto Camacaro (Kama)"
+      },
+      "to": "Alberto Camacaro",
+      "keepOldNameAsAlias": true,
+      "why": "Lo pegado al nombre «Alberto Camacaro (Kama)» pasa a alias; queda el nombre de la persona (caso Canserbero, Brian 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 16523,
+        "name": "Alberto Camacaro"
+      },
+      "alias": "Kama",
+      "why": "Apodo o firma que la fuente escribió dentro del nombre «Alberto Camacaro (Kama)»."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 17736,
+        "name": "Carlos Granado (Sharly Grand)"
+      },
+      "to": "Carlos Granado",
+      "keepOldNameAsAlias": true,
+      "why": "Lo pegado al nombre «Carlos Granado (Sharly Grand)» pasa a alias; queda el nombre de la persona (caso Canserbero, Brian 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 17736,
+        "name": "Carlos Granado"
+      },
+      "alias": "Sharly Grand",
+      "why": "Apodo o firma que la fuente escribió dentro del nombre «Carlos Granado (Sharly Grand)»."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 6021,
+        "name": "Carlos Hernández (DJ HOOCH)"
+      },
+      "alias": "DJ HOOCH",
+      "why": "Apodo o firma que la fuente escribió dentro del nombre «Carlos Hernández (DJ HOOCH)»."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 15502,
+        "name": "César Monge (Albóndiga)"
+      },
+      "to": "César Monge",
+      "keepOldNameAsAlias": true,
+      "why": "Lo pegado al nombre «César Monge (Albóndiga)» pasa a alias; queda el nombre de la persona (caso Canserbero, Brian 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 15502,
+        "name": "César Monge"
+      },
+      "alias": "Albóndiga",
+      "why": "Apodo o firma que la fuente escribió dentro del nombre «César Monge (Albóndiga)»."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 18117,
+        "name": "David Escobar (Dim)"
+      },
+      "to": "David Escobar",
+      "keepOldNameAsAlias": true,
+      "why": "Lo pegado al nombre «David Escobar (Dim)» pasa a alias; queda el nombre de la persona (caso Canserbero, Brian 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 18117,
+        "name": "David Escobar"
+      },
+      "alias": "Dim",
+      "why": "Apodo o firma que la fuente escribió dentro del nombre «David Escobar (Dim)»."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 18119,
+        "name": "David Lorduy Hernández (Lorduy)"
+      },
+      "to": "David Lorduy Hernández",
+      "keepOldNameAsAlias": true,
+      "why": "Lo pegado al nombre «David Lorduy Hernández (Lorduy)» pasa a alias; queda el nombre de la persona (caso Canserbero, Brian 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 18119,
+        "name": "David Lorduy Hernández"
+      },
+      "alias": "Lorduy",
+      "why": "Apodo o firma que la fuente escribió dentro del nombre «David Lorduy Hernández (Lorduy)»."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 17782,
+        "name": "Francisco Araujo (Clincho)"
+      },
+      "to": "Francisco Araujo",
+      "keepOldNameAsAlias": true,
+      "why": "Lo pegado al nombre «Francisco Araujo (Clincho)» pasa a alias; queda el nombre de la persona (caso Canserbero, Brian 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 17782,
+        "name": "Francisco Araujo"
+      },
+      "alias": "Clincho",
+      "why": "Apodo o firma que la fuente escribió dentro del nombre «Francisco Araujo (Clincho)»."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 17772,
+        "name": "Isabel Matheus (Isa)"
+      },
+      "to": "Isabel Matheus",
+      "keepOldNameAsAlias": true,
+      "why": "Lo pegado al nombre «Isabel Matheus (Isa)» pasa a alias; queda el nombre de la persona (caso Canserbero, Brian 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 17772,
+        "name": "Isabel Matheus"
+      },
+      "alias": "Isa",
+      "why": "Apodo o firma que la fuente escribió dentro del nombre «Isabel Matheus (Isa)»."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 15736,
+        "name": "Jesus Nieto ( El gordo )"
+      },
+      "to": "Jesus Nieto",
+      "keepOldNameAsAlias": true,
+      "why": "Lo pegado al nombre «Jesus Nieto ( El gordo )» pasa a alias; queda el nombre de la persona (caso Canserbero, Brian 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 15736,
+        "name": "Jesus Nieto"
+      },
+      "alias": "El gordo",
+      "why": "Apodo o firma que la fuente escribió dentro del nombre «Jesus Nieto ( El gordo )»."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 16608,
+        "name": "Jhoan Bello (tablon)"
+      },
+      "to": "Jhoan Bello",
+      "keepOldNameAsAlias": true,
+      "why": "Lo pegado al nombre «Jhoan Bello (tablon)» pasa a alias; queda el nombre de la persona (caso Canserbero, Brian 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 16608,
+        "name": "Jhoan Bello"
+      },
+      "alias": "tablon",
+      "why": "Apodo o firma que la fuente escribió dentro del nombre «Jhoan Bello (tablon)»."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 8562,
+        "name": "Jorge García (Paté Sónico)"
+      },
+      "alias": "Paté Sónico",
+      "why": "Apodo o firma que la fuente escribió dentro del nombre «Jorge García (Paté Sónico)»."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 15503,
+        "name": "José Antonio Rojas (Rojitas)"
+      },
+      "alias": "Rojitas",
+      "why": "Apodo o firma que la fuente escribió dentro del nombre «José Antonio Rojas (Rojitas)»."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 17784,
+        "name": "José Barrios (Pulún)"
+      },
+      "alias": "Pulún",
+      "why": "Apodo o firma que la fuente escribió dentro del nombre «José Barrios (Pulún)»."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 18118,
+        "name": "Juan David Castaño (El Llane)"
+      },
+      "to": "Juan David Castaño",
+      "keepOldNameAsAlias": true,
+      "why": "Lo pegado al nombre «Juan David Castaño (El Llane)» pasa a alias; queda el nombre de la persona (caso Canserbero, Brian 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 18118,
+        "name": "Juan David Castaño"
+      },
+      "alias": "El Llane",
+      "why": "Apodo o firma que la fuente escribió dentro del nombre «Juan David Castaño (El Llane)»."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 18116,
+        "name": "Juan David Huertas (El Profe)"
+      },
+      "to": "Juan David Huertas",
+      "keepOldNameAsAlias": true,
+      "why": "Lo pegado al nombre «Juan David Huertas (El Profe)» pasa a alias; queda el nombre de la persona (caso Canserbero, Brian 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 18116,
+        "name": "Juan David Huertas"
+      },
+      "alias": "El Profe",
+      "why": "Apodo o firma que la fuente escribió dentro del nombre «Juan David Huertas (El Profe)»."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 17768,
+        "name": "Juan Espinoza (Búho)"
+      },
+      "to": "Juan Espinoza",
+      "keepOldNameAsAlias": true,
+      "why": "Lo pegado al nombre «Juan Espinoza (Búho)» pasa a alias; queda el nombre de la persona (caso Canserbero, Brian 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 17768,
+        "name": "Juan Espinoza"
+      },
+      "alias": "Búho",
+      "why": "Apodo o firma que la fuente escribió dentro del nombre «Juan Espinoza (Búho)»."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 15540,
+        "name": "Leonardo Chacon (Orekio)"
+      },
+      "to": "Leonardo Chacon",
+      "keepOldNameAsAlias": true,
+      "why": "Lo pegado al nombre «Leonardo Chacon (Orekio)» pasa a alias; queda el nombre de la persona (caso Canserbero, Brian 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 15540,
+        "name": "Leonardo Chacon"
+      },
+      "alias": "Orekio",
+      "why": "Apodo o firma que la fuente escribió dentro del nombre «Leonardo Chacon (Orekio)»."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 16525,
+        "name": "Marco León (Mate)"
+      },
+      "alias": "Mate",
+      "why": "Apodo o firma que la fuente escribió dentro del nombre «Marco León (Mate)»."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 15537,
+        "name": "Maria Castro (Mauxi)"
+      },
+      "to": "Maria Castro",
+      "keepOldNameAsAlias": true,
+      "why": "Lo pegado al nombre «Maria Castro (Mauxi)» pasa a alias; queda el nombre de la persona (caso Canserbero, Brian 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 15537,
+        "name": "Maria Castro"
+      },
+      "alias": "Mauxi",
+      "why": "Apodo o firma que la fuente escribió dentro del nombre «Maria Castro (Mauxi)»."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 15539,
+        "name": "Miguel Soteldo (Banano)"
+      },
+      "alias": "Banano",
+      "why": "Apodo o firma que la fuente escribió dentro del nombre «Miguel Soteldo (Banano)»."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 17597,
+        "name": "Nelson Ramírez (Kiro)"
+      },
+      "alias": "Kiro",
+      "why": "Apodo o firma que la fuente escribió dentro del nombre «Nelson Ramírez (Kiro)»."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 15538,
+        "name": "Ovidio Pernalete (Obi1)"
+      },
+      "alias": "Obi1",
+      "why": "Apodo o firma que la fuente escribió dentro del nombre «Ovidio Pernalete (Obi1)»."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 18115,
+        "name": "Pablo Mejía (Pablito)"
+      },
+      "to": "Pablo Mejía",
+      "keepOldNameAsAlias": true,
+      "why": "Lo pegado al nombre «Pablo Mejía (Pablito)» pasa a alias; queda el nombre de la persona (caso Canserbero, Brian 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 18115,
+        "name": "Pablo Mejía"
+      },
+      "alias": "Pablito",
+      "why": "Apodo o firma que la fuente escribió dentro del nombre «Pablo Mejía (Pablito)»."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 17785,
+        "name": "Pedro Viloria (Peter)"
+      },
+      "to": "Pedro Viloria",
+      "keepOldNameAsAlias": true,
+      "why": "Lo pegado al nombre «Pedro Viloria (Peter)» pasa a alias; queda el nombre de la persona (caso Canserbero, Brian 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 17785,
+        "name": "Pedro Viloria"
+      },
+      "alias": "Peter",
+      "why": "Apodo o firma que la fuente escribió dentro del nombre «Pedro Viloria (Peter)»."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 4370,
+        "name": "Rafael Llorente (Rafa)"
+      },
+      "to": "Rafael Llorente",
+      "keepOldNameAsAlias": true,
+      "why": "Lo pegado al nombre «Rafael Llorente (Rafa)» pasa a alias; queda el nombre de la persona (caso Canserbero, Brian 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 4370,
+        "name": "Rafael Llorente"
+      },
+      "alias": "Rafa",
+      "why": "Apodo o firma que la fuente escribió dentro del nombre «Rafael Llorente (Rafa)»."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 17774,
+        "name": "Ramón Briceño (Cheklem)"
+      },
+      "to": "Ramón Briceño",
+      "keepOldNameAsAlias": true,
+      "why": "Lo pegado al nombre «Ramón Briceño (Cheklem)» pasa a alias; queda el nombre de la persona (caso Canserbero, Brian 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 17774,
+        "name": "Ramón Briceño"
+      },
+      "alias": "Cheklem",
+      "why": "Apodo o firma que la fuente escribió dentro del nombre «Ramón Briceño (Cheklem)»."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 17773,
+        "name": "Richard Ribas (Astaroth)"
+      },
+      "to": "Richard Ribas",
+      "keepOldNameAsAlias": true,
+      "why": "Lo pegado al nombre «Richard Ribas (Astaroth)» pasa a alias; queda el nombre de la persona (caso Canserbero, Brian 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 17773,
+        "name": "Richard Ribas"
+      },
+      "alias": "Astaroth",
+      "why": "Apodo o firma que la fuente escribió dentro del nombre «Richard Ribas (Astaroth)»."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 17769,
+        "name": "Samuel Terán (Samael)"
+      },
+      "to": "Samuel Terán",
+      "keepOldNameAsAlias": true,
+      "why": "Lo pegado al nombre «Samuel Terán (Samael)» pasa a alias; queda el nombre de la persona (caso Canserbero, Brian 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 17769,
+        "name": "Samuel Terán"
+      },
+      "alias": "Samael",
+      "why": "Apodo o firma que la fuente escribió dentro del nombre «Samuel Terán (Samael)»."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 6517,
+        "name": "Santiago Rodríguez (Srod)"
+      },
+      "to": "Santiago Rodríguez",
+      "keepOldNameAsAlias": true,
+      "why": "Lo pegado al nombre «Santiago Rodríguez (Srod)» pasa a alias; queda el nombre de la persona (caso Canserbero, Brian 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 6517,
+        "name": "Santiago Rodríguez"
+      },
+      "alias": "Srod",
+      "why": "Apodo o firma que la fuente escribió dentro del nombre «Santiago Rodríguez (Srod)»."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 6315,
+        "name": "Suzi De Madeiros (Suzi D)"
+      },
+      "to": "Suzi De Madeiros",
+      "keepOldNameAsAlias": true,
+      "why": "Lo pegado al nombre «Suzi De Madeiros (Suzi D)» pasa a alias; queda el nombre de la persona (caso Canserbero, Brian 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 6315,
+        "name": "Suzi De Madeiros"
+      },
+      "alias": "Suzi D",
+      "why": "Apodo o firma que la fuente escribió dentro del nombre «Suzi De Madeiros (Suzi D)»."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 17770,
+        "name": "Vanessa Fernández (Hecate)"
+      },
+      "to": "Vanessa Fernández",
+      "keepOldNameAsAlias": true,
+      "why": "Lo pegado al nombre «Vanessa Fernández (Hecate)» pasa a alias; queda el nombre de la persona (caso Canserbero, Brian 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 17770,
+        "name": "Vanessa Fernández"
+      },
+      "alias": "Hecate",
+      "why": "Apodo o firma que la fuente escribió dentro del nombre «Vanessa Fernández (Hecate)»."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 5764,
+        "name": "Charlie Devil (Carlos Mendoza)"
+      },
+      "alias": "Charlie Devil",
+      "why": "Apodo o firma que la fuente escribió dentro del nombre «Charlie Devil (Carlos Mendoza)»."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 15447,
+        "name": "DJ 13 (Tony Armas)"
+      },
+      "to": "Tony Armas",
+      "keepOldNameAsAlias": true,
+      "why": "Lo pegado al nombre «DJ 13 (Tony Armas)» pasa a alias; queda el nombre de la persona (caso Canserbero, Brian 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 15447,
+        "name": "Tony Armas"
+      },
+      "alias": "DJ 13",
+      "why": "Apodo o firma que la fuente escribió dentro del nombre «DJ 13 (Tony Armas)»."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 5766,
+        "name": "Eddie Devil (Eduardo Benatar)"
+      },
+      "alias": "Eddie Devil",
+      "why": "Apodo o firma que la fuente escribió dentro del nombre «Eddie Devil (Eduardo Benatar)»."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 5767,
+        "name": "Frankie Devil (Francisco Belda)"
+      },
+      "to": "Francisco Belda",
+      "keepOldNameAsAlias": true,
+      "why": "Lo pegado al nombre «Frankie Devil (Francisco Belda)» pasa a alias; queda el nombre de la persona (caso Canserbero, Brian 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 5767,
+        "name": "Francisco Belda"
+      },
+      "alias": "Frankie Devil",
+      "why": "Apodo o firma que la fuente escribió dentro del nombre «Frankie Devil (Francisco Belda)»."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 5761,
+        "name": "Willie Devil (Willbert Alvarez)"
+      },
+      "to": "Willbert Alvarez",
+      "keepOldNameAsAlias": true,
+      "why": "Lo pegado al nombre «Willie Devil (Willbert Alvarez)» pasa a alias; queda el nombre de la persona (caso Canserbero, Brian 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 5761,
+        "name": "Willbert Alvarez"
+      },
+      "alias": "Willie Devil",
+      "why": "Apodo o firma que la fuente escribió dentro del nombre «Willie Devil (Willbert Alvarez)»."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 5765,
+        "name": "Rocky Devil (Francisco \"Coco\" Díaz)"
+      },
+      "alias": "Rocky Devil",
+      "why": "Apodo o firma que la fuente escribió dentro del nombre «Rocky Devil (Francisco \"Coco\" Díaz)»."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 5765,
+        "name": "Rocky Devil (Francisco \"Coco\" Díaz)"
+      },
+      "alias": "Coco",
+      "why": "Apodo o firma que la fuente escribió dentro del nombre «Rocky Devil (Francisco \"Coco\" Díaz)»."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 4731,
+        "name": "Matatigre (Clara Bolívar)"
+      },
+      "to": "Clara Bolívar",
+      "keepOldNameAsAlias": true,
+      "why": "Lo pegado al nombre «Matatigre (Clara Bolívar)» pasa a alias; queda el nombre de la persona (caso Canserbero, Brian 2026-10-02)."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 17386,
+        "name": "Mike (Miguel Cerdá)"
+      },
+      "to": "Miguel Cerdá",
+      "keepOldNameAsAlias": true,
+      "why": "Lo pegado al nombre «Mike (Miguel Cerdá)» pasa a alias; queda el nombre de la persona (caso Canserbero, Brian 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 17386,
+        "name": "Miguel Cerdá"
+      },
+      "alias": "Mike",
+      "why": "Apodo o firma que la fuente escribió dentro del nombre «Mike (Miguel Cerdá)»."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 6400,
+        "name": "Leizer for The Masses (Leizer Oliveros Lara)"
+      },
+      "to": "Leizer Oliveros Lara",
+      "keepOldNameAsAlias": true,
+      "why": "Lo pegado al nombre «Leizer for The Masses (Leizer Oliveros Lara)» pasa a alias; queda el nombre de la persona (caso Canserbero, Brian 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 6400,
+        "name": "Leizer Oliveros Lara"
+      },
+      "alias": "Leizer for The Masses",
+      "why": "Apodo o firma que la fuente escribió dentro del nombre «Leizer for The Masses (Leizer Oliveros Lara)»."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 6576,
+        "name": "Surrearts Graphics (Erick León)"
+      },
+      "alias": "Surrearts Graphics",
+      "why": "Apodo o firma que la fuente escribió dentro del nombre «Surrearts Graphics (Erick León)»."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 7609,
+        "name": "Doped Up Dollies (Sirae Richardson)"
+      },
+      "to": "Sirae Richardson",
+      "keepOldNameAsAlias": true,
+      "why": "Lo pegado al nombre «Doped Up Dollies (Sirae Richardson)» pasa a alias; queda el nombre de la persona (caso Canserbero, Brian 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 7609,
+        "name": "Sirae Richardson"
+      },
+      "alias": "Doped Up Dollies",
+      "why": "Apodo o firma que la fuente escribió dentro del nombre «Doped Up Dollies (Sirae Richardson)»."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 15448,
+        "name": "Bostas Brain (El Juez)"
+      },
+      "to": "Luis Quintero",
+      "keepOldNameAsAlias": true,
+      "why": "Lo pegado al nombre «Bostas Brain (El Juez)» pasa a alias; queda el nombre de la persona (caso Canserbero, Brian 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 15448,
+        "name": "Luis Quintero"
+      },
+      "alias": "Bostas Brain",
+      "why": "Apodo o firma que la fuente escribió dentro del nombre «Bostas Brain (El Juez)»."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 15448,
+        "name": "Luis Quintero"
+      },
+      "alias": "El Juez",
+      "why": "Apodo o firma que la fuente escribió dentro del nombre «Bostas Brain (El Juez)»."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 15450,
+        "name": "El Cubano (Big Habana)"
+      },
+      "to": "El Cubano",
+      "keepOldNameAsAlias": true,
+      "why": "Lo pegado al nombre «El Cubano (Big Habana)» pasa a alias; queda el nombre de la persona (caso Canserbero, Brian 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 15450,
+        "name": "El Cubano"
+      },
+      "alias": "Big Habana",
+      "why": "Apodo o firma que la fuente escribió dentro del nombre «El Cubano (Big Habana)»."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 15451,
+        "name": "El Cura (Ristaman)"
+      },
+      "to": "El Cura",
+      "keepOldNameAsAlias": true,
+      "why": "Lo pegado al nombre «El Cura (Ristaman)» pasa a alias; queda el nombre de la persona (caso Canserbero, Brian 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 15451,
+        "name": "El Cura"
+      },
+      "alias": "Ristaman",
+      "why": "Apodo o firma que la fuente escribió dentro del nombre «El Cura (Ristaman)»."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 15449,
+        "name": "Ruso 40 (Big Smoke)"
+      },
+      "to": "Ruso 40",
+      "keepOldNameAsAlias": true,
+      "why": "Lo pegado al nombre «Ruso 40 (Big Smoke)» pasa a alias; queda el nombre de la persona (caso Canserbero, Brian 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 15449,
+        "name": "Ruso 40"
+      },
+      "alias": "Big Smoke",
+      "why": "Apodo o firma que la fuente escribió dentro del nombre «Ruso 40 (Big Smoke)»."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 13518,
+        "name": "Adonay (Q.E.E.P)"
+      },
+      "alias": "Q.E.E.P",
+      "why": "Apodo o firma que la fuente escribió dentro del nombre «Adonay (Q.E.E.P)»."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 17069,
+        "name": "Alex (RicochetCcs)"
+      },
+      "alias": "RicochetCcs",
+      "why": "Apodo o firma que la fuente escribió dentro del nombre «Alex (RicochetCcs)»."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 15453,
+        "name": "Apolonia (Miss Knox)"
+      },
+      "alias": "Miss Knox",
+      "why": "Apodo o firma que la fuente escribió dentro del nombre «Apolonia (Miss Knox)»."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 16223,
+        "name": "Jaime (SJ)"
+      },
+      "alias": "SJ",
+      "why": "Apodo o firma que la fuente escribió dentro del nombre «Jaime (SJ)»."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 15735,
+        "name": "Jesus ( El gordo )"
+      },
+      "alias": "El gordo",
+      "why": "Apodo o firma que la fuente escribió dentro del nombre «Jesus ( El gordo )»."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 16225,
+        "name": "Rafael (Tornillo)"
+      },
+      "alias": "Tornillo",
+      "why": "Apodo o firma que la fuente escribió dentro del nombre «Rafael (Tornillo)»."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 15452,
+        "name": "E.G. (Rotwaila)"
+      },
+      "alias": "Rotwaila",
+      "why": "Apodo o firma que la fuente escribió dentro del nombre «E.G. (Rotwaila)»."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 7776,
+        "name": "Alejandro (Jackson) Castillo"
+      },
+      "alias": "Jackson",
+      "why": "Apodo o firma que la fuente escribió dentro del nombre «Alejandro (Jackson) Castillo»."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 15504,
+        "name": "José (Joseíto) Rodríguez"
+      },
+      "alias": "Joseíto",
+      "why": "Apodo o firma que la fuente escribió dentro del nombre «José (Joseíto) Rodríguez»."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 16691,
+        "name": "Luis (Pepe) Campos"
+      },
+      "alias": "Pepe",
+      "why": "Apodo o firma que la fuente escribió dentro del nombre «Luis (Pepe) Campos»."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 13637,
+        "name": "C.A.F.P.C. aka A.N.Y.S.K. M.S.D.W."
+      },
+      "alias": "C.A.F.P.C.",
+      "why": "Apodo o firma que la fuente escribió dentro del nombre «C.A.F.P.C. aka A.N.Y.S.K. M.S.D.W.»."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 13637,
+        "name": "C.A.F.P.C. aka A.N.Y.S.K. M.S.D.W."
+      },
+      "alias": "A.N.Y.S.K. M.S.D.W.",
+      "why": "Apodo o firma que la fuente escribió dentro del nombre «C.A.F.P.C. aka A.N.Y.S.K. M.S.D.W.»."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 5198,
+        "name": "RCA (aka) Nutria"
+      },
+      "alias": "RCA",
+      "why": "Apodo o firma que la fuente escribió dentro del nombre «RCA (aka) Nutria»."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 5198,
+        "name": "RCA (aka) Nutria"
+      },
+      "alias": "Nutria",
+      "why": "Apodo o firma que la fuente escribió dentro del nombre «RCA (aka) Nutria»."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 8228,
+        "name": "Antonio Huizi - Graficción"
+      },
+      "alias": "Graficción",
+      "why": "Apodo o firma que la fuente escribió dentro del nombre «Antonio Huizi - Graficción»."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 3810,
+        "name": "Control X - Gilberto Lazo"
+      },
+      "alias": "Control X",
+      "why": "Apodo o firma que la fuente escribió dentro del nombre «Control X - Gilberto Lazo»."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 13217,
+        "name": "Hale Villalobos - Frente"
+      },
+      "to": "Hale Villalobos",
+      "keepOldNameAsAlias": true,
+      "why": "Lo pegado al nombre «Hale Villalobos - Frente» pasa a alias; queda el nombre de la persona (caso Canserbero, Brian 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 13217,
+        "name": "Hale Villalobos"
+      },
+      "alias": "Frente",
+      "why": "Apodo o firma que la fuente escribió dentro del nombre «Hale Villalobos - Frente»."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 12301,
+        "name": "Diego Alejandro García @BonkDesign"
+      },
+      "alias": "BonkDesign",
+      "why": "Apodo o firma que la fuente escribió dentro del nombre «Diego Alejandro García @BonkDesign»."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 2158,
+        "name": "Edward Vera \"Turtled\" @Turtleddj"
+      },
+      "alias": "Turtled",
+      "why": "Apodo o firma que la fuente escribió dentro del nombre «Edward Vera \"Turtled\" @Turtleddj»."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 2158,
+        "name": "Edward Vera \"Turtled\" @Turtleddj"
+      },
+      "alias": "Turtleddj",
+      "why": "Apodo o firma que la fuente escribió dentro del nombre «Edward Vera \"Turtled\" @Turtleddj»."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 12328,
+        "name": "Euden Ojeda @ElCalvok"
+      },
+      "to": "Euden Ojeda",
+      "keepOldNameAsAlias": true,
+      "why": "Lo pegado al nombre «Euden Ojeda @ElCalvok» pasa a alias; queda el nombre de la persona (caso Canserbero, Brian 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 12328,
+        "name": "Euden Ojeda"
+      },
+      "alias": "ElCalvok",
+      "why": "Apodo o firma que la fuente escribió dentro del nombre «Euden Ojeda @ElCalvok»."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 3243,
+        "name": "Gustavo Dal Farra @GustavoDB"
+      },
+      "to": "Gustavo Dal Farra",
+      "keepOldNameAsAlias": true,
+      "why": "Lo pegado al nombre «Gustavo Dal Farra @GustavoDB» pasa a alias; queda el nombre de la persona (caso Canserbero, Brian 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 3243,
+        "name": "Gustavo Dal Farra"
+      },
+      "alias": "GustavoDB",
+      "why": "Apodo o firma que la fuente escribió dentro del nombre «Gustavo Dal Farra @GustavoDB»."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 47,
+        "name": "Remo Caremartori a.k.a.Recard"
+      },
+      "to": "Remo Caremartori",
+      "keepOldNameAsAlias": true,
+      "why": "Lo pegado al nombre «Remo Caremartori a.k.a.Recard» pasa a alias; queda el nombre de la persona (caso Canserbero, Brian 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 47,
+        "name": "Remo Caremartori"
+      },
+      "alias": "Recard",
+      "why": "Apodo o firma que la fuente escribió dentro del nombre «Remo Caremartori a.k.a.Recard»."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 18555,
+        "name": "1993–1997); Pingüino Echezuría (miembro)"
+      },
+      "to": "Pingüino Echezuría",
+      "keepOldNameAsAlias": true,
+      "why": "Lo pegado al nombre «1993–1997); Pingüino Echezuría (miembro)» pasa a alias; queda el nombre de la persona (caso Canserbero, Brian 2026-10-02)."
+    }
+  ]
+}

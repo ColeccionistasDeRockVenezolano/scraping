@@ -1,0 +1,5834 @@
+{
+  "runId": 11313,
+  "confirm": true,
+  "moved": 364,
+  "mergedCredits": 24,
+  "skipped": 0,
+  "details": [
+    {
+      "table": "album_credits",
+      "creditId": 7420,
+      "parentId": 421,
+      "parent": "Amor Oscuro",
+      "creditType": "producer",
+      "role": "produced",
+      "from": {
+        "artistId": 45,
+        "name": "Arbiza"
+      },
+      "to": {
+        "personId": 2016,
+        "name": "Gabriel Arbiza Zuluaga"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 408,
+      "parentId": 299,
+      "parent": "Ashanty Granpa",
+      "creditType": "musician",
+      "role": "Lead Vocals",
+      "from": {
+        "artistId": 1683,
+        "name": "Bostas Brain"
+      },
+      "to": {
+        "personId": 15448,
+        "name": "Luis Quintero"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 6170,
+      "parentId": 342,
+      "parent": "Debut",
+      "creditType": "guest",
+      "role": "Lead Vocals",
+      "from": {
+        "artistId": 1683,
+        "name": "Bostas Brain"
+      },
+      "to": {
+        "personId": 15448,
+        "name": "Luis Quintero"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 12088,
+      "parentId": 358,
+      "parent": "Sílabas Eidéticas",
+      "creditType": "producer",
+      "role": "Track 09 Produced by",
+      "from": {
+        "artistId": 56,
+        "name": "Cangrejo"
+      },
+      "to": {
+        "personId": 3414,
+        "name": "Abraham García Liendo"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 15956,
+      "parentId": 2175,
+      "parent": "Nada como el sol",
+      "creditType": "musician",
+      "role": "Vocals & Harmonica",
+      "from": {
+        "artistId": 56,
+        "name": "Cangrejo"
+      },
+      "to": {
+        "personId": 3414,
+        "name": "Abraham García Liendo"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 252,
+      "parentId": 443,
+      "parent": "Dos Mundos",
+      "creditType": "musician",
+      "role": "Tenores",
+      "from": {
+        "artistId": 96,
+        "name": "Fernando Yvosky"
+      },
+      "to": {
+        "personId": 2517,
+        "name": "Fernando Yvosky"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 1164,
+      "parentId": 443,
+      "parent": "Dos Mundos",
+      "creditType": "musician",
+      "role": "Guitar, Cuatro, Percussion & Vocals",
+      "from": {
+        "artistId": 96,
+        "name": "Fernando Yvosky"
+      },
+      "to": {
+        "personId": 2517,
+        "name": "Fernando Yvosky"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 760,
+      "parentId": 508,
+      "parent": "Franco De Vita",
+      "creditType": "producer",
+      "role": "produced",
+      "from": {
+        "artistId": 99,
+        "name": "Franco De Vita"
+      },
+      "to": {
+        "personId": 1086,
+        "name": "Franco de Vita"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 813,
+      "parentId": 446,
+      "parent": "Nada Es Igual",
+      "creditType": "producer",
+      "role": "produced",
+      "from": {
+        "artistId": 99,
+        "name": "Franco De Vita"
+      },
+      "to": {
+        "personId": 1086,
+        "name": "Franco de Vita"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 1913,
+      "parentId": 448,
+      "parent": "Voces A Mi Alrededor",
+      "creditType": "producer",
+      "role": "produced",
+      "from": {
+        "artistId": 99,
+        "name": "Franco De Vita"
+      },
+      "to": {
+        "personId": 1086,
+        "name": "Franco de Vita"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 2416,
+      "parentId": 448,
+      "parent": "Voces A Mi Alrededor",
+      "creditType": "musician",
+      "role": "Lead Vocals & Piano",
+      "from": {
+        "artistId": 99,
+        "name": "Franco De Vita"
+      },
+      "to": {
+        "personId": 1086,
+        "name": "Franco de Vita"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 2548,
+      "parentId": 508,
+      "parent": "Franco De Vita",
+      "creditType": "musician",
+      "role": "Lead Vocals, Piano & Keyboards",
+      "from": {
+        "artistId": 99,
+        "name": "Franco De Vita"
+      },
+      "to": {
+        "personId": 1086,
+        "name": "Franco de Vita"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 3303,
+      "parentId": 507,
+      "parent": "Extranjero",
+      "creditType": "musician",
+      "role": "Lead Vocals & Piano",
+      "from": {
+        "artistId": 99,
+        "name": "Franco De Vita"
+      },
+      "to": {
+        "personId": 1086,
+        "name": "Franco de Vita"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 4302,
+      "parentId": 444,
+      "parent": "Fantasía",
+      "creditType": "producer",
+      "role": "produced",
+      "from": {
+        "artistId": 99,
+        "name": "Franco De Vita"
+      },
+      "to": {
+        "personId": 1086,
+        "name": "Franco de Vita"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 4400,
+      "parentId": 506,
+      "parent": "Al Norte Del Sur",
+      "creditType": "mixing",
+      "role": "mixed",
+      "from": {
+        "artistId": 99,
+        "name": "Franco De Vita"
+      },
+      "to": {
+        "personId": 1086,
+        "name": "Franco de Vita"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 5374,
+      "parentId": 447,
+      "parent": "Stop",
+      "creditType": "mixing",
+      "role": "mixed",
+      "from": {
+        "artistId": 99,
+        "name": "Franco De Vita"
+      },
+      "to": {
+        "personId": 1086,
+        "name": "Franco de Vita"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 5593,
+      "parentId": 446,
+      "parent": "Nada Es Igual",
+      "creditType": "musician",
+      "role": "Lead Vocals",
+      "from": {
+        "artistId": 99,
+        "name": "Franco De Vita"
+      },
+      "to": {
+        "personId": 1086,
+        "name": "Franco de Vita"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 6293,
+      "parentId": 445,
+      "parent": "Fuera De Este Mundo",
+      "creditType": "musician",
+      "role": "Lead Vocals & Piano",
+      "from": {
+        "artistId": 99,
+        "name": "Franco De Vita"
+      },
+      "to": {
+        "personId": 1086,
+        "name": "Franco de Vita"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 6649,
+      "parentId": 507,
+      "parent": "Extranjero",
+      "creditType": "mixing",
+      "role": "mixed",
+      "from": {
+        "artistId": 99,
+        "name": "Franco De Vita"
+      },
+      "to": {
+        "personId": 1086,
+        "name": "Franco de Vita"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 6807,
+      "parentId": 445,
+      "parent": "Fuera De Este Mundo",
+      "creditType": "other",
+      "role": "arranged",
+      "from": {
+        "artistId": 99,
+        "name": "Franco De Vita"
+      },
+      "to": {
+        "personId": 1086,
+        "name": "Franco de Vita"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 6994,
+      "parentId": 445,
+      "parent": "Fuera De Este Mundo",
+      "creditType": "producer",
+      "role": "produced",
+      "from": {
+        "artistId": 99,
+        "name": "Franco De Vita"
+      },
+      "to": {
+        "personId": 1086,
+        "name": "Franco de Vita"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 7148,
+      "parentId": 447,
+      "parent": "Stop",
+      "creditType": "musician",
+      "role": "Lead Vocals",
+      "from": {
+        "artistId": 99,
+        "name": "Franco De Vita"
+      },
+      "to": {
+        "personId": 1086,
+        "name": "Franco de Vita"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 7192,
+      "parentId": 444,
+      "parent": "Fantasía",
+      "creditType": "musician",
+      "role": "Lead & Backing Vocals, Keyboards",
+      "from": {
+        "artistId": 99,
+        "name": "Franco De Vita"
+      },
+      "to": {
+        "personId": 1086,
+        "name": "Franco de Vita"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 7237,
+      "parentId": 447,
+      "parent": "Stop",
+      "creditType": "producer",
+      "role": "produced",
+      "from": {
+        "artistId": 99,
+        "name": "Franco De Vita"
+      },
+      "to": {
+        "personId": 1086,
+        "name": "Franco de Vita"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 7568,
+      "parentId": 506,
+      "parent": "Al Norte Del Sur",
+      "creditType": "producer",
+      "role": "produced",
+      "from": {
+        "artistId": 99,
+        "name": "Franco De Vita"
+      },
+      "to": {
+        "personId": 1086,
+        "name": "Franco de Vita"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 7641,
+      "parentId": 508,
+      "parent": "Franco De Vita",
+      "creditType": "guest",
+      "role": "Backing Vocals",
+      "from": {
+        "artistId": 99,
+        "name": "Franco De Vita"
+      },
+      "to": {
+        "personId": 1086,
+        "name": "Franco de Vita"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 7813,
+      "parentId": 506,
+      "parent": "Al Norte Del Sur",
+      "creditType": "musician",
+      "role": "Lead Vocals & Piano",
+      "from": {
+        "artistId": 99,
+        "name": "Franco De Vita"
+      },
+      "to": {
+        "personId": 1086,
+        "name": "Franco de Vita"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 17769,
+      "parentId": 506,
+      "parent": "Al Norte Del Sur",
+      "creditType": "composer",
+      "role": "composed",
+      "from": {
+        "artistId": 99,
+        "name": "Franco De Vita"
+      },
+      "to": {
+        "personId": 1086,
+        "name": "Franco de Vita"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 17770,
+      "parentId": 506,
+      "parent": "Al Norte Del Sur",
+      "creditType": "artwork",
+      "role": "cover concept",
+      "from": {
+        "artistId": 99,
+        "name": "Franco De Vita"
+      },
+      "to": {
+        "personId": 1086,
+        "name": "Franco de Vita"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 17773,
+      "parentId": 507,
+      "parent": "Extranjero",
+      "creditType": "artwork",
+      "role": "cover concept",
+      "from": {
+        "artistId": 99,
+        "name": "Franco De Vita"
+      },
+      "to": {
+        "personId": 1086,
+        "name": "Franco de Vita"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 17778,
+      "parentId": 508,
+      "parent": "Franco De Vita",
+      "creditType": "composer",
+      "role": "composed",
+      "from": {
+        "artistId": 99,
+        "name": "Franco De Vita"
+      },
+      "to": {
+        "personId": 1086,
+        "name": "Franco de Vita"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 17782,
+      "parentId": 445,
+      "parent": "Fuera De Este Mundo",
+      "creditType": "composer",
+      "role": "composed",
+      "from": {
+        "artistId": 99,
+        "name": "Franco De Vita"
+      },
+      "to": {
+        "personId": 1086,
+        "name": "Franco de Vita"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 17791,
+      "parentId": 448,
+      "parent": "Voces A Mi Alrededor",
+      "creditType": "composer",
+      "role": "composed",
+      "from": {
+        "artistId": 99,
+        "name": "Franco De Vita"
+      },
+      "to": {
+        "personId": 1086,
+        "name": "Franco de Vita"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 334,
+      "parentId": 449,
+      "parent": "Cae Nieve En Caracas",
+      "creditType": "producer",
+      "role": "produced",
+      "from": {
+        "artistId": 101,
+        "name": "Garnica"
+      },
+      "to": {
+        "personId": 830,
+        "name": "Rafael López Garnica"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 4112,
+      "parentId": 449,
+      "parent": "Cae Nieve En Caracas",
+      "creditType": "mixing",
+      "role": "mixed",
+      "from": {
+        "artistId": 101,
+        "name": "Garnica"
+      },
+      "to": {
+        "personId": 830,
+        "name": "Rafael López Garnica"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 7357,
+      "parentId": 449,
+      "parent": "Cae Nieve En Caracas",
+      "creditType": "recording",
+      "role": "recorded",
+      "from": {
+        "artistId": 101,
+        "name": "Garnica"
+      },
+      "to": {
+        "personId": 830,
+        "name": "Rafael López Garnica"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 2536,
+      "parentId": 451,
+      "parent": "Minimalista",
+      "creditType": "producer",
+      "role": "produced",
+      "from": {
+        "artistId": 108,
+        "name": "Gustavo Dal Farra"
+      },
+      "to": {
+        "personId": 3243,
+        "name": "Gustavo Dal Farra"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 17812,
+      "parentId": 451,
+      "parent": "Minimalista",
+      "creditType": "composer",
+      "role": "are composed",
+      "from": {
+        "artistId": 108,
+        "name": "Gustavo Dal Farra"
+      },
+      "to": {
+        "personId": 3243,
+        "name": "Gustavo Dal Farra"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 18473,
+      "parentId": 269,
+      "parent": "Ta' Trancao",
+      "creditType": "composer",
+      "role": "composed",
+      "from": {
+        "artistId": 1498,
+        "name": "Lasca"
+      },
+      "to": {
+        "personId": 657,
+        "name": "David \"Chapis\" Lasca"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 7324,
+      "parentId": 280,
+      "parent": "Boxin' Da House",
+      "creditType": "producer",
+      "role": "produced",
+      "from": {
+        "artistId": 171,
+        "name": "Maurimix"
+      },
+      "to": {
+        "personId": 367,
+        "name": "Mauricio Arcas"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 12828,
+      "parentId": 3604,
+      "parent": "Entre Duendes",
+      "creditType": "musician",
+      "role": "Vocals",
+      "from": {
+        "artistId": 6,
+        "name": "Melissa"
+      },
+      "to": {
+        "personId": 15374,
+        "name": "Melissa"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 5951,
+      "parentId": 509,
+      "parent": "Alboom!",
+      "creditType": "guest",
+      "role": "Backing Vocals",
+      "from": {
+        "artistId": 180,
+        "name": "Ninah Mars"
+      },
+      "to": {
+        "personId": 1125,
+        "name": "Ninah Mars"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 6101,
+      "parentId": 509,
+      "parent": "Alboom!",
+      "creditType": "musician",
+      "role": "Lead Vocals & Guitars",
+      "from": {
+        "artistId": 180,
+        "name": "Ninah Mars"
+      },
+      "to": {
+        "personId": 1125,
+        "name": "Ninah Mars"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 19386,
+      "parentId": 509,
+      "parent": "Alboom!",
+      "creditType": "producer",
+      "role": "executive producer",
+      "from": {
+        "artistId": 180,
+        "name": "Ninah Mars"
+      },
+      "to": {
+        "personId": 1125,
+        "name": "Ninah Mars"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 19389,
+      "parentId": 509,
+      "parent": "Alboom!",
+      "creditType": "writer",
+      "role": "written",
+      "from": {
+        "artistId": 180,
+        "name": "Ninah Mars"
+      },
+      "to": {
+        "personId": 1125,
+        "name": "Ninah Mars"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 19722,
+      "parentId": 609,
+      "parent": "This Is How We Pray",
+      "creditType": "producer",
+      "role": "produced",
+      "from": {
+        "artistId": 180,
+        "name": "Ninah Mars"
+      },
+      "to": {
+        "personId": 1125,
+        "name": "Ninah Mars"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 19724,
+      "parentId": 609,
+      "parent": "This Is How We Pray",
+      "creditType": "writer",
+      "role": "lyrics written",
+      "from": {
+        "artistId": 180,
+        "name": "Ninah Mars"
+      },
+      "to": {
+        "personId": 1125,
+        "name": "Ninah Mars"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 19725,
+      "parentId": 609,
+      "parent": "This Is How We Pray",
+      "creditType": "composer",
+      "role": "composed",
+      "from": {
+        "artistId": 180,
+        "name": "Ninah Mars"
+      },
+      "to": {
+        "personId": 1125,
+        "name": "Ninah Mars"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 1118,
+      "parentId": 510,
+      "parent": "Solo Bass",
+      "creditType": "producer",
+      "role": "produced",
+      "from": {
+        "artistId": 186,
+        "name": "Oscar Fanega"
+      },
+      "to": {
+        "personId": 2043,
+        "name": "Oscar Fanega"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 2446,
+      "parentId": 510,
+      "parent": "Solo Bass",
+      "creditType": "musician",
+      "role": "Bass & MPC2000 Sampler",
+      "from": {
+        "artistId": 186,
+        "name": "Oscar Fanega"
+      },
+      "to": {
+        "personId": 2043,
+        "name": "Oscar Fanega"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 5820,
+      "parentId": 510,
+      "parent": "Solo Bass",
+      "creditType": "recording",
+      "role": "recorded",
+      "from": {
+        "artistId": 186,
+        "name": "Oscar Fanega"
+      },
+      "to": {
+        "personId": 2043,
+        "name": "Oscar Fanega"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 1775,
+      "parentId": 189,
+      "parent": "La Quema",
+      "creditType": "producer",
+      "role": "produced",
+      "from": {
+        "artistId": 2662,
+        "name": "Pacheko"
+      },
+      "to": {
+        "personId": 1540,
+        "name": "Francisco Mejía"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 3176,
+      "parentId": 188,
+      "parent": "Casa 4",
+      "creditType": "recording",
+      "role": "recorded",
+      "from": {
+        "artistId": 2662,
+        "name": "Pacheko"
+      },
+      "to": {
+        "personId": 1540,
+        "name": "Francisco Mejía"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 17733,
+      "parentId": 188,
+      "parent": "Casa 4",
+      "creditType": "producer",
+      "role": "additional production",
+      "from": {
+        "artistId": 2662,
+        "name": "Pacheko"
+      },
+      "to": {
+        "personId": 1540,
+        "name": "Francisco Mejía"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 2085,
+      "parentId": 483,
+      "parent": "Bartok's Room",
+      "creditType": "musician",
+      "role": "Guitars, Sequences, Programming & Percussion",
+      "from": {
+        "artistId": 213,
+        "name": "Rigel Michelena"
+      },
+      "to": {
+        "personId": 3422,
+        "name": "Rigel Michelena"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 2355,
+      "parentId": 483,
+      "parent": "Bartok's Room",
+      "creditType": "recording",
+      "role": "engineered",
+      "from": {
+        "artistId": 213,
+        "name": "Rigel Michelena"
+      },
+      "to": {
+        "personId": 3422,
+        "name": "Rigel Michelena"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 6856,
+      "parentId": 483,
+      "parent": "Bartok's Room",
+      "creditType": "producer",
+      "role": "produced",
+      "from": {
+        "artistId": 213,
+        "name": "Rigel Michelena"
+      },
+      "to": {
+        "personId": 3422,
+        "name": "Rigel Michelena"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 833,
+      "parentId": 316,
+      "parent": "No Estás Solo",
+      "creditType": "producer",
+      "role": "produced",
+      "from": {
+        "artistId": 214,
+        "name": "Rodrigo Solo"
+      },
+      "to": {
+        "personId": 648,
+        "name": "Rodrigo Gonsalves"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 17295,
+      "parentId": 316,
+      "parent": "No Estás Solo",
+      "creditType": "artwork",
+      "role": "illustrations",
+      "from": {
+        "artistId": 214,
+        "name": "Rodrigo Solo"
+      },
+      "to": {
+        "personId": 648,
+        "name": "Rodrigo Gonsalves"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 18661,
+      "parentId": 316,
+      "parent": "No Estás Solo",
+      "creditType": "producer",
+      "role": "executive production",
+      "from": {
+        "artistId": 214,
+        "name": "Rodrigo Solo"
+      },
+      "to": {
+        "personId": 648,
+        "name": "Rodrigo Gonsalves"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 1433,
+      "parentId": 582,
+      "parent": "El Subte Venezolano",
+      "creditType": "musician",
+      "role": "DJ's",
+      "from": {
+        "artistId": 1535,
+        "name": "Trece"
+      },
+      "to": {
+        "personId": 16811,
+        "name": "Trece"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 3508,
+      "parentId": 214,
+      "parent": "Código Demente",
+      "creditType": "recording",
+      "role": "recorded",
+      "from": {
+        "artistId": 1535,
+        "name": "Trece"
+      },
+      "to": {
+        "personId": 16811,
+        "name": "Trece"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 4634,
+      "parentId": 280,
+      "parent": "Boxin' Da House",
+      "creditType": "recording",
+      "role": "recorded",
+      "from": {
+        "artistId": 1535,
+        "name": "Trece"
+      },
+      "to": {
+        "personId": 16811,
+        "name": "Trece"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 5642,
+      "parentId": 214,
+      "parent": "Código Demente",
+      "creditType": "mixing",
+      "role": "mixed",
+      "from": {
+        "artistId": 1535,
+        "name": "Trece"
+      },
+      "to": {
+        "personId": 16811,
+        "name": "Trece"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 8160,
+      "parentId": 2704,
+      "parent": "Bélica",
+      "creditType": "producer",
+      "role": "Produced by",
+      "from": {
+        "artistId": 1535,
+        "name": "Trece"
+      },
+      "to": {
+        "personId": 16811,
+        "name": "Trece"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 8781,
+      "parentId": 280,
+      "parent": "Boxin' Da House",
+      "creditType": "other",
+      "role": "Rap",
+      "from": {
+        "artistId": 1535,
+        "name": "Trece"
+      },
+      "to": {
+        "personId": 16811,
+        "name": "Trece"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 16968,
+      "parentId": 175,
+      "parent": "Bronceador",
+      "creditType": "other",
+      "role": "Scratches",
+      "from": {
+        "artistId": 1535,
+        "name": "Trece"
+      },
+      "to": {
+        "personId": 16811,
+        "name": "Trece"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 17024,
+      "parentId": 175,
+      "parent": "Bronceador",
+      "creditType": "other",
+      "role": "Edited by",
+      "from": {
+        "artistId": 1535,
+        "name": "Trece"
+      },
+      "to": {
+        "personId": 16811,
+        "name": "Trece"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 1595,
+      "parentId": 495,
+      "parent": "Ofrenda",
+      "creditType": "producer",
+      "role": "produced",
+      "from": {
+        "artistId": 261,
+        "name": "Vytas Brenner"
+      },
+      "to": {
+        "personId": 2493,
+        "name": "Vytas Brenner"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 2187,
+      "parentId": 491,
+      "parent": "Hermanos",
+      "creditType": "producer",
+      "role": "produced",
+      "from": {
+        "artistId": 261,
+        "name": "Vytas Brenner"
+      },
+      "to": {
+        "personId": 2493,
+        "name": "Vytas Brenner"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 3484,
+      "parentId": 492,
+      "parent": "Jayeche",
+      "creditType": "musician",
+      "role": "Piano, Synthesizers, 12 String Guitar & Strings",
+      "from": {
+        "artistId": 261,
+        "name": "Vytas Brenner"
+      },
+      "to": {
+        "personId": 2493,
+        "name": "Vytas Brenner"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 4514,
+      "parentId": 496,
+      "parent": "Vytas",
+      "creditType": "musician",
+      "role": "Lead Vocals, Keyboards & Acoustic Guitar",
+      "from": {
+        "artistId": 261,
+        "name": "Vytas Brenner"
+      },
+      "to": {
+        "personId": 2493,
+        "name": "Vytas Brenner"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 4854,
+      "parentId": 494,
+      "parent": "Lo Máximo De Vyas",
+      "creditType": "producer",
+      "role": "produced",
+      "from": {
+        "artistId": 261,
+        "name": "Vytas Brenner"
+      },
+      "to": {
+        "personId": 2493,
+        "name": "Vytas Brenner"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 5317,
+      "parentId": 496,
+      "parent": "Vytas",
+      "creditType": "producer",
+      "role": "produced",
+      "from": {
+        "artistId": 261,
+        "name": "Vytas Brenner"
+      },
+      "to": {
+        "personId": 2493,
+        "name": "Vytas Brenner"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 5326,
+      "parentId": 493,
+      "parent": "La Ofrenda De Vytas Brenner",
+      "creditType": "musician",
+      "role": "Piano, Organ, Clavicorn, Synthesizers & Guitar",
+      "from": {
+        "artistId": 261,
+        "name": "Vytas Brenner"
+      },
+      "to": {
+        "personId": 2493,
+        "name": "Vytas Brenner"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 5405,
+      "parentId": 491,
+      "parent": "Hermanos",
+      "creditType": "musician",
+      "role": "Piano, Synthesizers, Guitar, Timpani & Vocals",
+      "from": {
+        "artistId": 261,
+        "name": "Vytas Brenner"
+      },
+      "to": {
+        "personId": 2493,
+        "name": "Vytas Brenner"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 6203,
+      "parentId": 495,
+      "parent": "Ofrenda",
+      "creditType": "musician",
+      "role": "Piano, Synthesizers, Strings & Vocal",
+      "from": {
+        "artistId": 261,
+        "name": "Vytas Brenner"
+      },
+      "to": {
+        "personId": 2493,
+        "name": "Vytas Brenner"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 6554,
+      "parentId": 490,
+      "parent": "En Vivo! Ofrenda",
+      "creditType": "musician",
+      "role": "Piano, Synthesizers, Guitar, Arp String Ensemble",
+      "from": {
+        "artistId": 261,
+        "name": "Vytas Brenner"
+      },
+      "to": {
+        "personId": 2493,
+        "name": "Vytas Brenner"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 6610,
+      "parentId": 492,
+      "parent": "Jayeche",
+      "creditType": "producer",
+      "role": "produced",
+      "from": {
+        "artistId": 261,
+        "name": "Vytas Brenner"
+      },
+      "to": {
+        "personId": 2493,
+        "name": "Vytas Brenner"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 6945,
+      "parentId": 490,
+      "parent": "En Vivo! Ofrenda",
+      "creditType": "producer",
+      "role": "produced",
+      "from": {
+        "artistId": 261,
+        "name": "Vytas Brenner"
+      },
+      "to": {
+        "personId": 2493,
+        "name": "Vytas Brenner"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 7326,
+      "parentId": 489,
+      "parent": "Amazonia",
+      "creditType": "musician",
+      "role": "Keyboards & Sequencers",
+      "from": {
+        "artistId": 261,
+        "name": "Vytas Brenner"
+      },
+      "to": {
+        "personId": 2493,
+        "name": "Vytas Brenner"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 7658,
+      "parentId": 494,
+      "parent": "Lo Máximo De Vyas",
+      "creditType": "musician",
+      "role": "Keyboards",
+      "from": {
+        "artistId": 261,
+        "name": "Vytas Brenner"
+      },
+      "to": {
+        "personId": 2493,
+        "name": "Vytas Brenner"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 19322,
+      "parentId": 489,
+      "parent": "Amazonia",
+      "creditType": "composer",
+      "role": "composed",
+      "from": {
+        "artistId": 261,
+        "name": "Vytas Brenner"
+      },
+      "to": {
+        "personId": 2493,
+        "name": "Vytas Brenner"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 19327,
+      "parentId": 490,
+      "parent": "En Vivo! Ofrenda",
+      "creditType": "composer",
+      "role": "composed",
+      "from": {
+        "artistId": 261,
+        "name": "Vytas Brenner"
+      },
+      "to": {
+        "personId": 2493,
+        "name": "Vytas Brenner"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 19331,
+      "parentId": 491,
+      "parent": "Hermanos",
+      "creditType": "artwork",
+      "role": "graphic design",
+      "from": {
+        "artistId": 261,
+        "name": "Vytas Brenner"
+      },
+      "to": {
+        "personId": 2493,
+        "name": "Vytas Brenner"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 19335,
+      "parentId": 493,
+      "parent": "La Ofrenda De Vytas Brenner",
+      "creditType": "composer",
+      "role": "composed",
+      "from": {
+        "artistId": 261,
+        "name": "Vytas Brenner"
+      },
+      "to": {
+        "personId": 2493,
+        "name": "Vytas Brenner"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 19339,
+      "parentId": 494,
+      "parent": "Lo Máximo De Vyas",
+      "creditType": "composer",
+      "role": "composed",
+      "from": {
+        "artistId": 261,
+        "name": "Vytas Brenner"
+      },
+      "to": {
+        "personId": 2493,
+        "name": "Vytas Brenner"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 19343,
+      "parentId": 496,
+      "parent": "Vytas",
+      "creditType": "writer",
+      "role": "all lyrics",
+      "from": {
+        "artistId": 261,
+        "name": "Vytas Brenner"
+      },
+      "to": {
+        "personId": 2493,
+        "name": "Vytas Brenner"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 1219,
+      "parentId": 501,
+      "parent": "Extraño Mundo",
+      "creditType": "producer",
+      "role": "produced",
+      "from": {
+        "artistId": 265,
+        "name": "Yátu"
+      },
+      "to": {
+        "personId": 1003,
+        "name": "Juan Bautista López"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 3615,
+      "parentId": 514,
+      "parent": "Inmortal",
+      "creditType": "producer",
+      "role": "produced",
+      "from": {
+        "artistId": 265,
+        "name": "Yátu"
+      },
+      "to": {
+        "personId": 1003,
+        "name": "Juan Bautista López"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 6927,
+      "parentId": 515,
+      "parent": "Joroporoll",
+      "creditType": "producer",
+      "role": "produced",
+      "from": {
+        "artistId": 265,
+        "name": "Yátu"
+      },
+      "to": {
+        "personId": 1003,
+        "name": "Juan Bautista López"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 19366,
+      "parentId": 501,
+      "parent": "Extraño Mundo",
+      "creditType": "composer",
+      "role": "composed",
+      "from": {
+        "artistId": 265,
+        "name": "Yátu"
+      },
+      "to": {
+        "personId": 1003,
+        "name": "Juan Bautista López"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 19367,
+      "parentId": 501,
+      "parent": "Extraño Mundo",
+      "creditType": "writer",
+      "role": "lyrics written",
+      "from": {
+        "artistId": 265,
+        "name": "Yátu"
+      },
+      "to": {
+        "personId": 1003,
+        "name": "Juan Bautista López"
+      }
+    },
+    {
+      "table": "album_credits",
+      "creditId": 19417,
+      "parentId": 515,
+      "parent": "Joroporoll",
+      "creditType": "composer",
+      "role": "composed",
+      "from": {
+        "artistId": 265,
+        "name": "Yátu"
+      },
+      "to": {
+        "personId": 1003,
+        "name": "Juan Bautista López"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18534,
+      "parentId": 4410,
+      "parent": "God Is My DJ",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2841,
+        "name": "Ajd"
+      },
+      "to": {
+        "personId": 18099,
+        "name": "Antonio José Azócar"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18920,
+      "parentId": 35030,
+      "parent": "God Is My DJ",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2841,
+        "name": "Ajd"
+      },
+      "to": {
+        "personId": 18099,
+        "name": "Antonio José Azócar"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13606,
+      "parentId": 29517,
+      "parent": "Es un placer",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 1861,
+        "name": "Al Zeppy"
+      },
+      "to": {
+        "personId": 7178,
+        "name": "Alberto Lewis"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18732,
+      "parentId": 19257,
+      "parent": "El Gran Pintor",
+      "creditType": "guest",
+      "role": "Invitado",
+      "from": {
+        "artistId": 1435,
+        "name": "Algodón Egipcio"
+      },
+      "to": {
+        "personId": 16620,
+        "name": "Ezequiel Bertho"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18669,
+      "parentId": 2496,
+      "parent": "Riding",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2891,
+        "name": "Analog Circl8"
+      },
+      "to": {
+        "personId": 18104,
+        "name": "Daniel Maal"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18394,
+      "parentId": 13346,
+      "parent": "in-humanoides",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2577,
+        "name": "Andrecho"
+      },
+      "to": {
+        "personId": 18040,
+        "name": "Andrecho Sequea"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18167,
+      "parentId": 7919,
+      "parent": "Double Flash",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2413,
+        "name": "Atomization"
+      },
+      "to": {
+        "personId": 17890,
+        "name": "Wouter Hudales"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18366,
+      "parentId": 13836,
+      "parent": "Vestido de Cristal",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2541,
+        "name": "Barilari"
+      },
+      "to": {
+        "personId": 18015,
+        "name": "Adrián Barilari"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18270,
+      "parentId": 11975,
+      "parent": "Extreme Bondage To Extreme Whores",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2489,
+        "name": "Bizarre Bondage"
+      },
+      "to": {
+        "personId": 17974,
+        "name": "Steve Montero"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18322,
+      "parentId": 11980,
+      "parent": "Fetichista Aficionado",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2489,
+        "name": "Bizarre Bondage"
+      },
+      "to": {
+        "personId": 17974,
+        "name": "Steve Montero"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18323,
+      "parentId": 11987,
+      "parent": "A.P. Cover",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2489,
+        "name": "Bizarre Bondage"
+      },
+      "to": {
+        "personId": 17974,
+        "name": "Steve Montero"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18324,
+      "parentId": 11993,
+      "parent": "Jenna Vs. Courtney",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2489,
+        "name": "Bizarre Bondage"
+      },
+      "to": {
+        "personId": 17974,
+        "name": "Steve Montero"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18325,
+      "parentId": 12001,
+      "parent": "Cicciolina",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2489,
+        "name": "Bizarre Bondage"
+      },
+      "to": {
+        "personId": 17974,
+        "name": "Steve Montero"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 1651,
+      "parentId": 346,
+      "parent": "Jibarito",
+      "creditType": "guest",
+      "role": "Additional Voices",
+      "from": {
+        "artistId": 1683,
+        "name": "Bostas Brain"
+      },
+      "to": {
+        "personId": 15448,
+        "name": "Luis Quintero"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 2430,
+      "parentId": 3096,
+      "parent": "90's All Stars - La Tierra Tiembla",
+      "creditType": "musician",
+      "role": "Lead Vocals",
+      "from": {
+        "artistId": 1683,
+        "name": "Bostas Brain"
+      },
+      "to": {
+        "personId": 15448,
+        "name": "Luis Quintero"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 6933,
+      "parentId": 655,
+      "parent": "Vocabulario Del Alma",
+      "creditType": "composer",
+      "role": "composer",
+      "from": {
+        "artistId": 1683,
+        "name": "Bostas Brain"
+      },
+      "to": {
+        "personId": 15448,
+        "name": "Luis Quintero"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 6940,
+      "parentId": 655,
+      "parent": "Vocabulario Del Alma",
+      "creditType": "musician",
+      "role": "Vocals",
+      "from": {
+        "artistId": 1683,
+        "name": "Bostas Brain"
+      },
+      "to": {
+        "personId": 15448,
+        "name": "Luis Quintero"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 7551,
+      "parentId": 23784,
+      "parent": "Hazme Daño",
+      "creditType": "other",
+      "role": "Rap",
+      "from": {
+        "artistId": 1683,
+        "name": "Bostas Brain"
+      },
+      "to": {
+        "personId": 15448,
+        "name": "Luis Quintero"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 15540,
+      "parentId": 655,
+      "parent": "Vocabulario Del Alma",
+      "creditType": "composer",
+      "role": "composed",
+      "from": {
+        "artistId": 1683,
+        "name": "Bostas Brain"
+      },
+      "to": {
+        "personId": 15448,
+        "name": "Luis Quintero"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 17780,
+      "parentId": 20900,
+      "parent": "Cancion de la Montana",
+      "creditType": "guest",
+      "role": "Invitado",
+      "from": {
+        "artistId": 1683,
+        "name": "Bostas Brain"
+      },
+      "to": {
+        "personId": 15448,
+        "name": "Luis Quintero"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18181,
+      "parentId": 7998,
+      "parent": "Clitophagy",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2427,
+        "name": "Bowel Maggots"
+      },
+      "to": {
+        "personId": 17902,
+        "name": "Nikolas Dexx"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18580,
+      "parentId": 2774,
+      "parent": "Corazón Gris",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 1111,
+        "name": "Bélica"
+      },
+      "to": {
+        "personId": 223,
+        "name": "Annabella Almenar"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18611,
+      "parentId": 6340,
+      "parent": "Venezuela Llora",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 1111,
+        "name": "Bélica"
+      },
+      "to": {
+        "personId": 223,
+        "name": "Annabella Almenar"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18420,
+      "parentId": 19850,
+      "parent": "Joya",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2606,
+        "name": "C-funk"
+      },
+      "to": {
+        "personId": 18060,
+        "name": "C-funk"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 17924,
+      "parentId": 9915,
+      "parent": "La Ciudad de las Calles Amarillas",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2185,
+        "name": "CARLO QUIJADA"
+      },
+      "to": {
+        "personId": 17619,
+        "name": "CARLO QUIJADA"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 5796,
+      "parentId": 3099,
+      "parent": "Salto",
+      "creditType": "guest",
+      "role": "Harmonica & Backing Vocals",
+      "from": {
+        "artistId": 56,
+        "name": "Cangrejo"
+      },
+      "to": {
+        "personId": 3414,
+        "name": "Abraham García Liendo"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18492,
+      "parentId": 5225,
+      "parent": "Mi Querencia (Cardopusher)",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2733,
+        "name": "Cardopusher"
+      },
+      "to": {
+        "personId": 18089,
+        "name": "Luis Garbán"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 17900,
+      "parentId": 9665,
+      "parent": "Detrás de Ti",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2161,
+        "name": "Carlos Perez"
+      },
+      "to": {
+        "personId": 17591,
+        "name": "Carlos Perez"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18634,
+      "parentId": 3573,
+      "parent": "Caracas",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2865,
+        "name": "Carlos Salazar"
+      },
+      "to": {
+        "personId": 18101,
+        "name": "Carlos Salazar"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 17636,
+      "parentId": 11153,
+      "parent": "Estafador De Almas",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 714,
+        "name": "Carlos75.com"
+      },
+      "to": {
+        "personId": 15790,
+        "name": "Carlos Álvarez"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 17694,
+      "parentId": 14437,
+      "parent": "Muerte Por Odio",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 714,
+        "name": "Carlos75.com"
+      },
+      "to": {
+        "personId": 15790,
+        "name": "Carlos Álvarez"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18459,
+      "parentId": 5888,
+      "parent": "Nota",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2679,
+        "name": "Cecilia Todd"
+      },
+      "to": {
+        "personId": 18082,
+        "name": "Cecilia Todd"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13527,
+      "parentId": 28289,
+      "parent": "Sunny",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 1896,
+        "name": "Cherry Navarro"
+      },
+      "to": {
+        "personId": 8494,
+        "name": "Cherry Navarro"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13537,
+      "parentId": 28334,
+      "parent": "No viviré sin ti",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 1896,
+        "name": "Cherry Navarro"
+      },
+      "to": {
+        "personId": 8494,
+        "name": "Cherry Navarro"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13538,
+      "parentId": 28339,
+      "parent": "Yo soy aquel",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 1896,
+        "name": "Cherry Navarro"
+      },
+      "to": {
+        "personId": 8494,
+        "name": "Cherry Navarro"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13569,
+      "parentId": 24797,
+      "parent": "Aleluya",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 1896,
+        "name": "Cherry Navarro"
+      },
+      "to": {
+        "personId": 8494,
+        "name": "Cherry Navarro"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13636,
+      "parentId": 30065,
+      "parent": "No te muerdas los labios",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 1896,
+        "name": "Cherry Navarro"
+      },
+      "to": {
+        "personId": 8494,
+        "name": "Cherry Navarro"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13639,
+      "parentId": 30075,
+      "parent": "Te pido que me guíes",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 1896,
+        "name": "Cherry Navarro"
+      },
+      "to": {
+        "personId": 8494,
+        "name": "Cherry Navarro"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13641,
+      "parentId": 30082,
+      "parent": "Norma",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 1896,
+        "name": "Cherry Navarro"
+      },
+      "to": {
+        "personId": 8494,
+        "name": "Cherry Navarro"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13643,
+      "parentId": 30094,
+      "parent": "Remate",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 1896,
+        "name": "Cherry Navarro"
+      },
+      "to": {
+        "personId": 8494,
+        "name": "Cherry Navarro"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 17082,
+      "parentId": 2794,
+      "parent": "Aleluya",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 1896,
+        "name": "Cherry Navarro"
+      },
+      "to": {
+        "personId": 8494,
+        "name": "Cherry Navarro"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 16849,
+      "parentId": 1518,
+      "parent": "Power Freak",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 63,
+        "name": "Chulius & The Filarmónicos"
+      },
+      "to": {
+        "personId": 366,
+        "name": "Julio Briceño"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 315,
+      "parentId": 3364,
+      "parent": "Cumbia Nuclear Mix",
+      "creditType": "guest",
+      "role": "Programming & Sampling",
+      "from": {
+        "artistId": 2789,
+        "name": "Club Nuclear"
+      },
+      "to": {
+        "personId": 1617,
+        "name": "Alexis Rendón"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 14553,
+      "parentId": 3364,
+      "parent": "Cumbia Nuclear Mix",
+      "creditType": "producer",
+      "role": "produced",
+      "from": {
+        "artistId": 2789,
+        "name": "Club Nuclear"
+      },
+      "to": {
+        "personId": 1617,
+        "name": "Alexis Rendón"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18499,
+      "parentId": 6119,
+      "parent": "Letters From Zion",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2789,
+        "name": "Club Nuclear"
+      },
+      "to": {
+        "personId": 1617,
+        "name": "Alexis Rendón"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18605,
+      "parentId": 6136,
+      "parent": "We'll Dub Them",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2789,
+        "name": "Club Nuclear"
+      },
+      "to": {
+        "personId": 1617,
+        "name": "Alexis Rendón"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13669,
+      "parentId": 24234,
+      "parent": "Macarapana",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 69,
+        "name": "Colina"
+      },
+      "to": {
+        "personId": 2675,
+        "name": "Oscar De Jesús Colina"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18891,
+      "parentId": 39977,
+      "parent": "Cut Raw",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2930,
+        "name": "Cooh"
+      },
+      "to": {
+        "personId": 18145,
+        "name": "Ivan Shopov"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18452,
+      "parentId": 1452,
+      "parent": "You Make Me Happy",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2669,
+        "name": "DJ Beat"
+      },
+      "to": {
+        "personId": 18080,
+        "name": "Fernando Garmendia"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18620,
+      "parentId": 5792,
+      "parent": "I Can't Wait",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2669,
+        "name": "DJ Beat"
+      },
+      "to": {
+        "personId": 18080,
+        "name": "Fernando Garmendia"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18631,
+      "parentId": 3554,
+      "parent": "Housin' In La Playa",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2669,
+        "name": "DJ Beat"
+      },
+      "to": {
+        "personId": 18080,
+        "name": "Fernando Garmendia"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 17979,
+      "parentId": 1789,
+      "parent": "I Have A Dream, James",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2225,
+        "name": "DJ Rey"
+      },
+      "to": {
+        "personId": 17663,
+        "name": "DJ Rey"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18238,
+      "parentId": 6632,
+      "parent": "The Capuleto Boys",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2225,
+        "name": "DJ Rey"
+      },
+      "to": {
+        "personId": 17663,
+        "name": "DJ Rey"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18240,
+      "parentId": 417,
+      "parent": "Cock Lover 808",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2225,
+        "name": "DJ Rey"
+      },
+      "to": {
+        "personId": 17663,
+        "name": "DJ Rey"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 17901,
+      "parentId": 9671,
+      "parent": "Tributo A Rush",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2162,
+        "name": "Darwin Lubo"
+      },
+      "to": {
+        "personId": 17592,
+        "name": "Darwin Lubo"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18265,
+      "parentId": 7996,
+      "parent": "Infection",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2484,
+        "name": "Deformed Cadaver"
+      },
+      "to": {
+        "personId": 17962,
+        "name": "Andi"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18358,
+      "parentId": 8003,
+      "parent": "Blood",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2484,
+        "name": "Deformed Cadaver"
+      },
+      "to": {
+        "personId": 17962,
+        "name": "Andi"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18359,
+      "parentId": 8013,
+      "parent": "Human Suffering",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2484,
+        "name": "Deformed Cadaver"
+      },
+      "to": {
+        "personId": 17962,
+        "name": "Andi"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13280,
+      "parentId": 28052,
+      "parent": "Quédate esta noche conmigo",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 1855,
+        "name": "Delia"
+      },
+      "to": {
+        "personId": 369,
+        "name": "Delia Dorta"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18428,
+      "parentId": 19309,
+      "parent": "El Catire (Retardao Mix)",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2618,
+        "name": "Demetrio De CCS"
+      },
+      "to": {
+        "personId": 18067,
+        "name": "Leopoldo Bello"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18572,
+      "parentId": 1463,
+      "parent": "Mimumambo",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2618,
+        "name": "Demetrio De CCS"
+      },
+      "to": {
+        "personId": 18067,
+        "name": "Leopoldo Bello"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18591,
+      "parentId": 575,
+      "parent": "El Catire (Retardao Mix)",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2618,
+        "name": "Demetrio De CCS"
+      },
+      "to": {
+        "personId": 18067,
+        "name": "Leopoldo Bello"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18516,
+      "parentId": 5804,
+      "parent": "Who Am I?",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2819,
+        "name": "Dj Aureal"
+      },
+      "to": {
+        "personId": 18096,
+        "name": "Tony Funiciello"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 17655,
+      "parentId": 13292,
+      "parent": "dolli",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 1437,
+        "name": "Dolli"
+      },
+      "to": {
+        "personId": 16625,
+        "name": "Erly J. Ruiz"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 17710,
+      "parentId": 15344,
+      "parent": "'Danza De San Blas'",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 1463,
+        "name": "Domingo En Llamas"
+      },
+      "to": {
+        "personId": 16661,
+        "name": "José Ignacio Benítez"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18489,
+      "parentId": 5173,
+      "parent": "Sabana (Dr. Muu)",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2727,
+        "name": "Dr. Muu"
+      },
+      "to": {
+        "personId": 18088,
+        "name": "José Antonio Blanco Angulo"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18625,
+      "parentId": 4359,
+      "parent": "Canción Para Ti",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2727,
+        "name": "Dr. Muu"
+      },
+      "to": {
+        "personId": 18088,
+        "name": "José Antonio Blanco Angulo"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18911,
+      "parentId": 34978,
+      "parent": "Frank King",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2727,
+        "name": "Dr. Muu"
+      },
+      "to": {
+        "personId": 18088,
+        "name": "José Antonio Blanco Angulo"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18260,
+      "parentId": 7284,
+      "parent": "Gojira Vs. Lacoste's Crocodile",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2479,
+        "name": "Dressed for Apocalypse"
+      },
+      "to": {
+        "personId": 17956,
+        "name": "Alienlord"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18345,
+      "parentId": 7290,
+      "parent": "Illuminati",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2479,
+        "name": "Dressed for Apocalypse"
+      },
+      "to": {
+        "personId": 17956,
+        "name": "Alienlord"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18346,
+      "parentId": 7298,
+      "parent": "Bilderberg",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2479,
+        "name": "Dressed for Apocalypse"
+      },
+      "to": {
+        "personId": 17956,
+        "name": "Alienlord"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 883,
+      "parentId": 994,
+      "parent": "Culebrón",
+      "creditType": "guest",
+      "role": "Backing Vocals",
+      "from": {
+        "artistId": 86,
+        "name": "Edgar Jiménez"
+      },
+      "to": {
+        "personId": 894,
+        "name": "Edgar Jiménez Pérez"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 15964,
+      "parentId": 1007,
+      "parent": "Un Agradable Calor",
+      "creditType": "composer",
+      "role": "composed",
+      "from": {
+        "artistId": 86,
+        "name": "Edgar Jiménez"
+      },
+      "to": {
+        "personId": 894,
+        "name": "Edgar Jiménez Pérez"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 15965,
+      "parentId": 1025,
+      "parent": "Cabeza",
+      "creditType": "composer",
+      "role": "composed",
+      "from": {
+        "artistId": 86,
+        "name": "Edgar Jiménez"
+      },
+      "to": {
+        "personId": 894,
+        "name": "Edgar Jiménez Pérez"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 15966,
+      "parentId": 1031,
+      "parent": "Revolución Anterior",
+      "creditType": "composer",
+      "role": "composed",
+      "from": {
+        "artistId": 86,
+        "name": "Edgar Jiménez"
+      },
+      "to": {
+        "personId": 894,
+        "name": "Edgar Jiménez Pérez"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 15967,
+      "parentId": 1052,
+      "parent": "En Mi Cuarto",
+      "creditType": "composer",
+      "role": "composed",
+      "from": {
+        "artistId": 86,
+        "name": "Edgar Jiménez"
+      },
+      "to": {
+        "personId": 894,
+        "name": "Edgar Jiménez Pérez"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18081,
+      "parentId": 3079,
+      "parent": "We Will Rock You",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2327,
+        "name": "El General"
+      },
+      "to": {
+        "personId": 17798,
+        "name": "El General"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18708,
+      "parentId": 12947,
+      "parent": "Rock Mafia",
+      "creditType": "guest",
+      "role": "Invitado",
+      "from": {
+        "artistId": 1596,
+        "name": "El Prieto"
+      },
+      "to": {
+        "personId": 16934,
+        "name": "El Prieto"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18926,
+      "parentId": 33873,
+      "parent": "Por Amor Al Ghetto",
+      "creditType": "guest",
+      "role": "Invitado",
+      "from": {
+        "artistId": 1596,
+        "name": "El Prieto"
+      },
+      "to": {
+        "personId": 16934,
+        "name": "El Prieto"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18200,
+      "parentId": 8100,
+      "parent": "Gnawing Through Rancid Tissues",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2446,
+        "name": "Epidemic Pain"
+      },
+      "to": {
+        "personId": 17920,
+        "name": "Joe Badtaste"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18194,
+      "parentId": 8072,
+      "parent": "Activate Virtual Circuit",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2440,
+        "name": "Feasting on Scaphism Remains"
+      },
+      "to": {
+        "personId": 17917,
+        "name": "The Infinite Nihilist"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 10006,
+      "parentId": 25779,
+      "parent": "Barco de Papel",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 96,
+        "name": "Fernando Yvosky"
+      },
+      "to": {
+        "personId": 2517,
+        "name": "Fernando Yvosky"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 16985,
+      "parentId": 987,
+      "parent": "Barcos De Papel",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 96,
+        "name": "Fernando Yvosky"
+      },
+      "to": {
+        "personId": 2517,
+        "name": "Fernando Yvosky"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 12301,
+      "parentId": 27281,
+      "parent": "Solo importas tu",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 99,
+        "name": "Franco De Vita"
+      },
+      "to": {
+        "personId": 1086,
+        "name": "Franco de Vita"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 16871,
+      "parentId": 5868,
+      "parent": "Sólo Importas Tú",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 99,
+        "name": "Franco De Vita"
+      },
+      "to": {
+        "personId": 1086,
+        "name": "Franco de Vita"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18813,
+      "parentId": 24492,
+      "parent": "Nada Se Compara A Ti",
+      "creditType": "guest",
+      "role": "Invitado",
+      "from": {
+        "artistId": 99,
+        "name": "Franco De Vita"
+      },
+      "to": {
+        "personId": 1086,
+        "name": "Franco de Vita"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18441,
+      "parentId": 5601,
+      "parent": "Chocolate",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2657,
+        "name": "Funky C"
+      },
+      "to": {
+        "personId": 18077,
+        "name": "Cristian Moraga"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 16823,
+      "parentId": 3500,
+      "parent": "Intro",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 101,
+        "name": "Garnica"
+      },
+      "to": {
+        "personId": 830,
+        "name": "Rafael López Garnica"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 16842,
+      "parentId": 5636,
+      "parent": "Soplar Con Fuerza",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 101,
+        "name": "Garnica"
+      },
+      "to": {
+        "personId": 830,
+        "name": "Rafael López Garnica"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 16847,
+      "parentId": 1499,
+      "parent": "Right (Cariño)",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 101,
+        "name": "Garnica"
+      },
+      "to": {
+        "personId": 830,
+        "name": "Rafael López Garnica"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 17024,
+      "parentId": 5196,
+      "parent": "Sabana (Garnica)",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 101,
+        "name": "Garnica"
+      },
+      "to": {
+        "personId": 830,
+        "name": "Rafael López Garnica"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 17271,
+      "parentId": 5094,
+      "parent": "Varadero",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 101,
+        "name": "Garnica"
+      },
+      "to": {
+        "personId": 830,
+        "name": "Rafael López Garnica"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 12294,
+      "parentId": 27277,
+      "parent": "Alguien a quien amar (Love Is The Answer)",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 1417,
+        "name": "Gladys"
+      },
+      "to": {
+        "personId": 5835,
+        "name": "Gladys María del Rosario Di Ruggiero"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13546,
+      "parentId": 28361,
+      "parent": "La hija de la oscuridad",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 1417,
+        "name": "Gladys"
+      },
+      "to": {
+        "personId": 5835,
+        "name": "Gladys María del Rosario Di Ruggiero"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18135,
+      "parentId": 7758,
+      "parent": "Anal Market",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2381,
+        "name": "Glavio"
+      },
+      "to": {
+        "personId": 17862,
+        "name": "Antoine Dourlent"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13584,
+      "parentId": 29186,
+      "parent": "Mi Teresa",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 1109,
+        "name": "Guillermo Carrasco"
+      },
+      "to": {
+        "personId": 45,
+        "name": "Guillermo Carrasco"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13585,
+      "parentId": 29189,
+      "parent": "Taller del orfebre (Tema Central)",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 1960,
+        "name": "Guillermo Dávila"
+      },
+      "to": {
+        "personId": 7116,
+        "name": "Guillermo Dávila"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13561,
+      "parentId": 28394,
+      "parent": "Funky Street",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 111,
+        "name": "Henrique Lazo"
+      },
+      "to": {
+        "personId": 9732,
+        "name": "Henrique Lazo"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13597,
+      "parentId": 29350,
+      "parent": "Latinoamericano",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 111,
+        "name": "Henrique Lazo"
+      },
+      "to": {
+        "personId": 9732,
+        "name": "Henrique Lazo"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13618,
+      "parentId": 29820,
+      "parent": "Un lugar en el cielo",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 111,
+        "name": "Henrique Lazo"
+      },
+      "to": {
+        "personId": 9732,
+        "name": "Henrique Lazo"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 16854,
+      "parentId": 2756,
+      "parent": "Funky Street",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 111,
+        "name": "Henrique Lazo"
+      },
+      "to": {
+        "personId": 9732,
+        "name": "Henrique Lazo"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 16907,
+      "parentId": 4942,
+      "parent": "Confesiones De Medianoche",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 111,
+        "name": "Henrique Lazo"
+      },
+      "to": {
+        "personId": 9732,
+        "name": "Henrique Lazo"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 16954,
+      "parentId": 3016,
+      "parent": "Un Lugar En El Cielo",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 111,
+        "name": "Henrique Lazo"
+      },
+      "to": {
+        "personId": 9732,
+        "name": "Henrique Lazo"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 17078,
+      "parentId": 2760,
+      "parent": "Sarah",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 111,
+        "name": "Henrique Lazo"
+      },
+      "to": {
+        "personId": 9732,
+        "name": "Henrique Lazo"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 10135,
+      "parentId": 25822,
+      "parent": "Lady Madonna",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 4,
+        "name": "Henry Stephen"
+      },
+      "to": {
+        "personId": 2716,
+        "name": "Henry Augustus Stephen Pierre"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 11856,
+      "parentId": 27011,
+      "parent": "Te He Perdido",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 4,
+        "name": "Henry Stephen"
+      },
+      "to": {
+        "personId": 2716,
+        "name": "Henry Augustus Stephen Pierre"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 12973,
+      "parentId": 27863,
+      "parent": "Julio",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 4,
+        "name": "Henry Stephen"
+      },
+      "to": {
+        "personId": 2716,
+        "name": "Henry Augustus Stephen Pierre"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13029,
+      "parentId": 27894,
+      "parent": "Te he perdido",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 4,
+        "name": "Henry Stephen"
+      },
+      "to": {
+        "personId": 2716,
+        "name": "Henry Augustus Stephen Pierre"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13539,
+      "parentId": 28331,
+      "parent": "Lady Madonna",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 4,
+        "name": "Henry Stephen"
+      },
+      "to": {
+        "personId": 2716,
+        "name": "Henry Augustus Stephen Pierre"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13540,
+      "parentId": 28336,
+      "parent": "Limón limonero",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 4,
+        "name": "Henry Stephen"
+      },
+      "to": {
+        "personId": 2716,
+        "name": "Henry Augustus Stephen Pierre"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13542,
+      "parentId": 28349,
+      "parent": "Un vaso de vino",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 4,
+        "name": "Henry Stephen"
+      },
+      "to": {
+        "personId": 2716,
+        "name": "Henry Augustus Stephen Pierre"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13587,
+      "parentId": 29238,
+      "parent": "Deja que te tome la mano",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 4,
+        "name": "Henry Stephen"
+      },
+      "to": {
+        "personId": 2716,
+        "name": "Henry Augustus Stephen Pierre"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13691,
+      "parentId": 30571,
+      "parent": "Limón limonero",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 4,
+        "name": "Henry Stephen"
+      },
+      "to": {
+        "personId": 2716,
+        "name": "Henry Augustus Stephen Pierre"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 15998,
+      "parentId": 4587,
+      "parent": "En El Club",
+      "creditType": "composer",
+      "role": "composed",
+      "from": {
+        "artistId": 4,
+        "name": "Henry Stephen"
+      },
+      "to": {
+        "personId": 2716,
+        "name": "Henry Augustus Stephen Pierre"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 11819,
+      "parentId": 26971,
+      "parent": "Aquí, Allá y en Todas Partes (Here, There And Everywhere)",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 116,
+        "name": "Ilan Chester"
+      },
+      "to": {
+        "personId": 544,
+        "name": "Ilan Czenstochouski Schechter"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 16867,
+      "parentId": 5840,
+      "parent": "Como Ayer",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 116,
+        "name": "Ilan Chester"
+      },
+      "to": {
+        "personId": 544,
+        "name": "Ilan Czenstochouski Schechter"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18574,
+      "parentId": 5880,
+      "parent": "El Destino",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 116,
+        "name": "Ilan Chester"
+      },
+      "to": {
+        "personId": 544,
+        "name": "Ilan Czenstochouski Schechter"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18203,
+      "parentId": 8109,
+      "parent": "Bang Gang Boom",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2449,
+        "name": "Individual Distortion"
+      },
+      "to": {
+        "personId": 17922,
+        "name": "Adythia Utama"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 16808,
+      "parentId": 1777,
+      "parent": "Para Los Que Se Fueron",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 1969,
+        "name": "Ivan Higa"
+      },
+      "to": {
+        "personId": 1160,
+        "name": "Iván Higa"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18511,
+      "parentId": 5782,
+      "parent": "Spamkiller",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2813,
+        "name": "Javith"
+      },
+      "to": {
+        "personId": 18093,
+        "name": "Eduardo Javith"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18529,
+      "parentId": 4383,
+      "parent": "Not Smooth",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2835,
+        "name": "José Cabello"
+      },
+      "to": {
+        "personId": 705,
+        "name": "José Cabello"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18661,
+      "parentId": 454,
+      "parent": "Don't Stop (Ambito Remix)",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2835,
+        "name": "José Cabello"
+      },
+      "to": {
+        "personId": 705,
+        "name": "José Cabello"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18915,
+      "parentId": 35000,
+      "parent": "Not Smooth",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2835,
+        "name": "José Cabello"
+      },
+      "to": {
+        "personId": 705,
+        "name": "José Cabello"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18859,
+      "parentId": 40936,
+      "parent": "Extreme Steel (COUNTERSTRIKE Arena Remix)",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2904,
+        "name": "KC"
+      },
+      "to": {
+        "personId": 18120,
+        "name": "Kevin Cunningham"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 17657,
+      "parentId": 13317,
+      "parent": "kuámasi",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 1198,
+        "name": "Kuámasi"
+      },
+      "to": {
+        "personId": 2891,
+        "name": "Kuámasi González Vidal"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 17727,
+      "parentId": 18206,
+      "parent": "'No Puedo Dejar De Pensar'",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 1586,
+        "name": "La Clem De La Clem"
+      },
+      "to": {
+        "personId": 16919,
+        "name": "Clementina Francisco"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 16818,
+      "parentId": 3453,
+      "parent": "All Around",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 146,
+        "name": "Le Picó"
+      },
+      "to": {
+        "personId": 2669,
+        "name": "Erik Aldrey"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 16843,
+      "parentId": 1446,
+      "parent": "A Vida Rara",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 146,
+        "name": "Le Picó"
+      },
+      "to": {
+        "personId": 2669,
+        "name": "Erik Aldrey"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18885,
+      "parentId": 39953,
+      "parent": "Hypnotized",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2924,
+        "name": "Lowbss"
+      },
+      "to": {
+        "personId": 18142,
+        "name": "Vasso Skopelou"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 12299,
+      "parentId": 27280,
+      "parent": "A flor de piel",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 1811,
+        "name": "Luz Marina"
+      },
+      "to": {
+        "personId": 3258,
+        "name": "Luz Marina"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 16869,
+      "parentId": 5851,
+      "parent": "Frente A Frente",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 1811,
+        "name": "Luz Marina"
+      },
+      "to": {
+        "personId": 3258,
+        "name": "Luz Marina"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18575,
+      "parentId": 5880,
+      "parent": "El Destino",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 1811,
+        "name": "Luz Marina"
+      },
+      "to": {
+        "personId": 3258,
+        "name": "Luz Marina"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18660,
+      "parentId": 448,
+      "parent": "Warairax Repanox",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2885,
+        "name": "Manybeat"
+      },
+      "to": {
+        "personId": 18103,
+        "name": "Manuel Alberto Bolívar"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 17981,
+      "parentId": 1807,
+      "parent": "Eco",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2227,
+        "name": "Mare Imbrium"
+      },
+      "to": {
+        "personId": 17665,
+        "name": "Gabriel Pérez"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18880,
+      "parentId": 39941,
+      "parent": "Real Steel",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2919,
+        "name": "Mark Instinct"
+      },
+      "to": {
+        "personId": 18137,
+        "name": "Mark Trotta"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18826,
+      "parentId": 29180,
+      "parent": "Canción de la boda",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 6,
+        "name": "Melissa"
+      },
+      "to": {
+        "personId": 15374,
+        "name": "Melissa"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18828,
+      "parentId": 29185,
+      "parent": "El amor no es un momento",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 6,
+        "name": "Melissa"
+      },
+      "to": {
+        "personId": 15374,
+        "name": "Melissa"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18830,
+      "parentId": 29187,
+      "parent": "Hasta nunca soledad",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 6,
+        "name": "Melissa"
+      },
+      "to": {
+        "personId": 15374,
+        "name": "Melissa"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18182,
+      "parentId": 8002,
+      "parent": "The Rape Babe",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2428,
+        "name": "Menstruating Cunt"
+      },
+      "to": {
+        "personId": 17903,
+        "name": "Lafawijn"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18886,
+      "parentId": 39960,
+      "parent": "Survive",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2925,
+        "name": "Messinian"
+      },
+      "to": {
+        "personId": 18143,
+        "name": "James Fiorella"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18439,
+      "parentId": 5588,
+      "parent": "La Kebradita",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2655,
+        "name": "Mexican Institute Of Sound"
+      },
+      "to": {
+        "personId": 18076,
+        "name": "Camilo Lara"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 17359,
+      "parentId": 9520,
+      "parent": "Escrita de Noche",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 868,
+        "name": "Michael Zapata"
+      },
+      "to": {
+        "personId": 15823,
+        "name": "Michael Zapata"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18378,
+      "parentId": 12336,
+      "parent": "Florilege Lunatique Occultement Revelateur Et Neantisation Caduquee Engendree (Zardonic Remix)",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2555,
+        "name": "Mirrorthrone"
+      },
+      "to": {
+        "personId": 18025,
+        "name": "Vladimir Cochet"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18648,
+      "parentId": 389,
+      "parent": "Trasero Religioso",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2877,
+        "name": "Moreon"
+      },
+      "to": {
+        "personId": 18102,
+        "name": "Gustavo R."
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 16945,
+      "parentId": 5937,
+      "parent": "Pide Más (Int.: Mulato)",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 177,
+        "name": "Mulato"
+      },
+      "to": {
+        "personId": 1667,
+        "name": "Pablo \"Mulato\" González"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18431,
+      "parentId": 19304,
+      "parent": "Sueño De Una Niña Grande (Gran Sueño Horizontal Mix)",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2621,
+        "name": "Nicolai Chek Chenkov"
+      },
+      "to": {
+        "personId": 18069,
+        "name": "Nicolai Chek Chenkov"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18594,
+      "parentId": 592,
+      "parent": "Sueño De Una Niña Grande (Gran Sueño Horizontal Mix)",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2621,
+        "name": "Nicolai Chek Chenkov"
+      },
+      "to": {
+        "personId": 18069,
+        "name": "Nicolai Chek Chenkov"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 17734,
+      "parentId": 15331,
+      "parent": "'Sabes Lo Que Hago'",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 1238,
+        "name": "Onechot"
+      },
+      "to": {
+        "personId": 16264,
+        "name": "Juan D. Chacón"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18680,
+      "parentId": 2563,
+      "parent": "Me And U",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2897,
+        "name": "Ordep Zerep"
+      },
+      "to": {
+        "personId": 18108,
+        "name": "Federico Blank"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 14919,
+      "parentId": 1930,
+      "parent": "The Choro Dance",
+      "creditType": "composer",
+      "role": "composed",
+      "from": {
+        "artistId": 2662,
+        "name": "Pacheko"
+      },
+      "to": {
+        "personId": 1540,
+        "name": "Francisco Mejía"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18445,
+      "parentId": 5642,
+      "parent": "Bi Polar Bear",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2662,
+        "name": "Pacheko"
+      },
+      "to": {
+        "personId": 1540,
+        "name": "Francisco Mejía"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 16759,
+      "parentId": 6649,
+      "parent": "Selva, Playa, Montaña, Sabana",
+      "creditType": "producer",
+      "role": "produced",
+      "from": {
+        "artistId": 1116,
+        "name": "Panasuyo"
+      },
+      "to": {
+        "personId": 16117,
+        "name": "Aureliano Méndez Cadet"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 16820,
+      "parentId": 3465,
+      "parent": "Río Bellísimo",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 1116,
+        "name": "Panasuyo"
+      },
+      "to": {
+        "personId": 16117,
+        "name": "Aureliano Méndez Cadet"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 17023,
+      "parentId": 5184,
+      "parent": "Mi Querencia (Panasuyo)",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 1116,
+        "name": "Panasuyo"
+      },
+      "to": {
+        "personId": 16117,
+        "name": "Aureliano Méndez Cadet"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18180,
+      "parentId": 7993,
+      "parent": "Madafaka Silent Reader",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2426,
+        "name": "Pancong Coklat Keju"
+      },
+      "to": {
+        "personId": 17901,
+        "name": "Angga Ramadhan"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 16939,
+      "parentId": 557,
+      "parent": "La Caracola (Fast Step Remix By Cem)",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 193,
+        "name": "Patafunk"
+      },
+      "to": {
+        "personId": 15470,
+        "name": "Carlos Eduardo Martínez"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 17290,
+      "parentId": 2545,
+      "parent": "God Is The Sun",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 193,
+        "name": "Patafunk"
+      },
+      "to": {
+        "personId": 15470,
+        "name": "Carlos Eduardo Martínez"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18560,
+      "parentId": 19306,
+      "parent": "La Caracola",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 193,
+        "name": "Patafunk"
+      },
+      "to": {
+        "personId": 15470,
+        "name": "Carlos Eduardo Martínez"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18947,
+      "parentId": 33984,
+      "parent": "Left - Right",
+      "creditType": "guest",
+      "role": "Invitado",
+      "from": {
+        "artistId": 193,
+        "name": "Patafunk"
+      },
+      "to": {
+        "personId": 15470,
+        "name": "Carlos Eduardo Martínez"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18261,
+      "parentId": 7439,
+      "parent": "Dissecting the Infected Entrails",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2480,
+        "name": "Perverted Dexterity"
+      },
+      "to": {
+        "personId": 17957,
+        "name": "Januaryo Hardy"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18347,
+      "parentId": 7447,
+      "parent": "Ingested Piece by Piece",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2480,
+        "name": "Perverted Dexterity"
+      },
+      "to": {
+        "personId": 17957,
+        "name": "Januaryo Hardy"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18348,
+      "parentId": 7453,
+      "parent": "Rotten Fetus from a Putrefied Womb",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2480,
+        "name": "Perverted Dexterity"
+      },
+      "to": {
+        "personId": 17957,
+        "name": "Januaryo Hardy"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 17656,
+      "parentId": 13311,
+      "parent": "presidente",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 1696,
+        "name": "Presidente"
+      },
+      "to": {
+        "personId": 17191,
+        "name": "Heberto Áñez Novoa"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 17815,
+      "parentId": 9487,
+      "parent": "Mixed",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2076,
+        "name": "Proyecto Boogie Boogie"
+      },
+      "to": {
+        "personId": 17450,
+        "name": "José Roberto"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18168,
+      "parentId": 7926,
+      "parent": "Enemigos de Dios",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2414,
+        "name": "Proyecto Panica"
+      },
+      "to": {
+        "personId": 17891,
+        "name": "Cholo Del Diablo"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18390,
+      "parentId": 13304,
+      "parent": "fiesta 8 bit",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2573,
+        "name": "Rafael Rico"
+      },
+      "to": {
+        "personId": 18037,
+        "name": "Rafael Rico"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18889,
+      "parentId": 39971,
+      "parent": "Destroy",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2928,
+        "name": "Receptor"
+      },
+      "to": {
+        "personId": 18144,
+        "name": "Dmitry Veschunov"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18894,
+      "parentId": 39994,
+      "parent": "Sideshow Symphony",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2933,
+        "name": "Reid Speed"
+      },
+      "to": {
+        "personId": 18148,
+        "name": "Reid Speed"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18633,
+      "parentId": 3566,
+      "parent": "Elektrica",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2864,
+        "name": "Reix"
+      },
+      "to": {
+        "personId": 18100,
+        "name": "Reinaldo López"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18673,
+      "parentId": 2521,
+      "parent": "Simple Deluxe",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2864,
+        "name": "Reix"
+      },
+      "to": {
+        "personId": 18100,
+        "name": "Reinaldo López"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18723,
+      "parentId": 20895,
+      "parent": "The VK",
+      "creditType": "guest",
+      "role": "Invitado",
+      "from": {
+        "artistId": 1595,
+        "name": "Rekeson"
+      },
+      "to": {
+        "personId": 16933,
+        "name": "Gustavo Ferrín"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18513,
+      "parentId": 5799,
+      "parent": "Re Transmition",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2816,
+        "name": "Robert Rabbath"
+      },
+      "to": {
+        "personId": 18094,
+        "name": "Robert Rabbath"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18183,
+      "parentId": 8008,
+      "parent": "Possessed Entity",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2429,
+        "name": "Rot in Space"
+      },
+      "to": {
+        "personId": 17904,
+        "name": "ROT"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 10364,
+      "parentId": 25951,
+      "parent": "Mi Razón (My Reason)",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 2004,
+        "name": "Rudy Márquez"
+      },
+      "to": {
+        "personId": 978,
+        "name": "Rudy Márquez"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 10420,
+      "parentId": 25970,
+      "parent": "Háblame suavemente (Speak Softly Love)",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 2004,
+        "name": "Rudy Márquez"
+      },
+      "to": {
+        "personId": 978,
+        "name": "Rudy Márquez"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 10433,
+      "parentId": 25974,
+      "parent": "Será",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 2004,
+        "name": "Rudy Márquez"
+      },
+      "to": {
+        "personId": 978,
+        "name": "Rudy Márquez"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13278,
+      "parentId": 28054,
+      "parent": "Si te habla de mi",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 2004,
+        "name": "Rudy Márquez"
+      },
+      "to": {
+        "personId": 978,
+        "name": "Rudy Márquez"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13289,
+      "parentId": 28058,
+      "parent": "Hablemos",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 2004,
+        "name": "Rudy Márquez"
+      },
+      "to": {
+        "personId": 978,
+        "name": "Rudy Márquez"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13564,
+      "parentId": 28403,
+      "parent": "La canción de nuestro amor",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 2004,
+        "name": "Rudy Márquez"
+      },
+      "to": {
+        "personId": 978,
+        "name": "Rudy Márquez"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13571,
+      "parentId": 29016,
+      "parent": "Se que algo vendrá",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 2004,
+        "name": "Rudy Márquez"
+      },
+      "to": {
+        "personId": 978,
+        "name": "Rudy Márquez"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13579,
+      "parentId": 29024,
+      "parent": "Cuando alguien te pregunte",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 2004,
+        "name": "Rudy Márquez"
+      },
+      "to": {
+        "personId": 978,
+        "name": "Rudy Márquez"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13589,
+      "parentId": 29243,
+      "parent": "Mi razón",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 2004,
+        "name": "Rudy Márquez"
+      },
+      "to": {
+        "personId": 978,
+        "name": "Rudy Márquez"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13592,
+      "parentId": 29254,
+      "parent": "El vals del padrino",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 2004,
+        "name": "Rudy Márquez"
+      },
+      "to": {
+        "personId": 978,
+        "name": "Rudy Márquez"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13596,
+      "parentId": 29349,
+      "parent": "Quien fué",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 2004,
+        "name": "Rudy Márquez"
+      },
+      "to": {
+        "personId": 978,
+        "name": "Rudy Márquez"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13624,
+      "parentId": 29923,
+      "parent": "Mi primera noche sin ti (My First Night Alone Without You)",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 2004,
+        "name": "Rudy Márquez"
+      },
+      "to": {
+        "personId": 978,
+        "name": "Rudy Márquez"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13657,
+      "parentId": 30212,
+      "parent": "Sombras",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 2004,
+        "name": "Rudy Márquez"
+      },
+      "to": {
+        "personId": 978,
+        "name": "Rudy Márquez"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13681,
+      "parentId": 30436,
+      "parent": "Quiero ser yo",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 2004,
+        "name": "Rudy Márquez"
+      },
+      "to": {
+        "personId": 978,
+        "name": "Rudy Márquez"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 17153,
+      "parentId": 3943,
+      "parent": "Háblame Suavemente",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2004,
+        "name": "Rudy Márquez"
+      },
+      "to": {
+        "personId": 978,
+        "name": "Rudy Márquez"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18670,
+      "parentId": 2503,
+      "parent": "Señales",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2892,
+        "name": "SER+"
+      },
+      "to": {
+        "personId": 18105,
+        "name": "Nacho Nuett"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18259,
+      "parentId": 7263,
+      "parent": "Neogenesis",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2478,
+        "name": "Septic Mutagen"
+      },
+      "to": {
+        "personId": 17955,
+        "name": "Tim Read"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18343,
+      "parentId": 7268,
+      "parent": "It Came from the Septic Tank",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2478,
+        "name": "Septic Mutagen"
+      },
+      "to": {
+        "personId": 17955,
+        "name": "Tim Read"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18344,
+      "parentId": 7278,
+      "parent": "Extraterrestrial Cephalopod Impalement",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2478,
+        "name": "Septic Mutagen"
+      },
+      "to": {
+        "personId": 17955,
+        "name": "Tim Read"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18258,
+      "parentId": 7241,
+      "parent": "Pre-Meditated Genital Reformation",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2477,
+        "name": "Slamophiliac"
+      },
+      "to": {
+        "personId": 17954,
+        "name": "Darryn Palmer"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18341,
+      "parentId": 7250,
+      "parent": "Grotesque Cranial Copulation",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2477,
+        "name": "Slamophiliac"
+      },
+      "to": {
+        "personId": 17954,
+        "name": "Darryn Palmer"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18342,
+      "parentId": 7256,
+      "parent": "Disgorgeing Vaginal Fluid",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2477,
+        "name": "Slamophiliac"
+      },
+      "to": {
+        "personId": 17954,
+        "name": "Darryn Palmer"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18785,
+      "parentId": 7278,
+      "parent": "Extraterrestrial Cephalopod Impalement",
+      "creditType": "guest",
+      "role": "Invitado",
+      "from": {
+        "artistId": 2477,
+        "name": "Slamophiliac"
+      },
+      "to": {
+        "personId": 17954,
+        "name": "Darryn Palmer"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18430,
+      "parentId": 19302,
+      "parent": "Quinta Anauco (Raspaíto De Tamarindo Remix)",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2620,
+        "name": "Spyro"
+      },
+      "to": {
+        "personId": 18068,
+        "name": "Matias Monteagudo"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18573,
+      "parentId": 1475,
+      "parent": "Bad Habit",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2620,
+        "name": "Spyro"
+      },
+      "to": {
+        "personId": 18068,
+        "name": "Matias Monteagudo"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18593,
+      "parentId": 586,
+      "parent": "Quinta Anauco (Raspaíto De Tamarindo Remix)",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2620,
+        "name": "Spyro"
+      },
+      "to": {
+        "personId": 18068,
+        "name": "Matias Monteagudo"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18600,
+      "parentId": 5189,
+      "parent": "Tonada Del Cabrestero (Spyro)",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2620,
+        "name": "Spyro"
+      },
+      "to": {
+        "personId": 18068,
+        "name": "Matias Monteagudo"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 17803,
+      "parentId": 9372,
+      "parent": "Noches y Mañanas",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2064,
+        "name": "TAK"
+      },
+      "to": {
+        "personId": 17435,
+        "name": "Andrés Morillo"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 17349,
+      "parentId": 7724,
+      "parent": "Damned you are Jesus Christ",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 381,
+        "name": "The Art of Jor"
+      },
+      "to": {
+        "personId": 15563,
+        "name": "Jor"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 17447,
+      "parentId": 9649,
+      "parent": "Preachers Bastard",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 381,
+        "name": "The Art of Jor"
+      },
+      "to": {
+        "personId": 15563,
+        "name": "Jor"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 17466,
+      "parentId": 9867,
+      "parent": "Sentense to the Nazarene",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 381,
+        "name": "The Art of Jor"
+      },
+      "to": {
+        "personId": 15563,
+        "name": "Jor"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18884,
+      "parentId": 39953,
+      "parent": "Hypnotized",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2923,
+        "name": "Throttler"
+      },
+      "to": {
+        "personId": 18141,
+        "name": "Steve Foskolos"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 832,
+      "parentId": 6045,
+      "parent": "Reina De Oro",
+      "creditType": "guest",
+      "role": "Scratches",
+      "from": {
+        "artistId": 1535,
+        "name": "Trece"
+      },
+      "to": {
+        "personId": 16811,
+        "name": "Trece"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 833,
+      "parentId": 6063,
+      "parent": "Starshy",
+      "creditType": "guest",
+      "role": "Scratches",
+      "from": {
+        "artistId": 1535,
+        "name": "Trece"
+      },
+      "to": {
+        "personId": 16811,
+        "name": "Trece"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 834,
+      "parentId": 6112,
+      "parent": "Sonata",
+      "creditType": "guest",
+      "role": "Scratches",
+      "from": {
+        "artistId": 1535,
+        "name": "Trece"
+      },
+      "to": {
+        "personId": 16811,
+        "name": "Trece"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 9553,
+      "parentId": 5154,
+      "parent": "Playa Venus \"A.C.T. Mix\"",
+      "creditType": "producer",
+      "role": "Produced by",
+      "from": {
+        "artistId": 1535,
+        "name": "Trece"
+      },
+      "to": {
+        "personId": 16811,
+        "name": "Trece"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 9968,
+      "parentId": 21359,
+      "parent": "After Today",
+      "creditType": "other",
+      "role": "Sequences Programming",
+      "from": {
+        "artistId": 1535,
+        "name": "Trece"
+      },
+      "to": {
+        "personId": 16811,
+        "name": "Trece"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 9969,
+      "parentId": 21361,
+      "parent": "N.I.N.A. I.L.L.",
+      "creditType": "other",
+      "role": "Sequences Programming",
+      "from": {
+        "artistId": 1535,
+        "name": "Trece"
+      },
+      "to": {
+        "personId": 16811,
+        "name": "Trece"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 9970,
+      "parentId": 21366,
+      "parent": "No One Ever Really Dies",
+      "creditType": "other",
+      "role": "Sequences Programming",
+      "from": {
+        "artistId": 1535,
+        "name": "Trece"
+      },
+      "to": {
+        "personId": 16811,
+        "name": "Trece"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 9971,
+      "parentId": 21367,
+      "parent": "Laugh & Cry",
+      "creditType": "other",
+      "role": "Sequences Programming",
+      "from": {
+        "artistId": 1535,
+        "name": "Trece"
+      },
+      "to": {
+        "personId": 16811,
+        "name": "Trece"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 9972,
+      "parentId": 21375,
+      "parent": "Volando Dormida",
+      "creditType": "other",
+      "role": "Sequences Programming",
+      "from": {
+        "artistId": 1535,
+        "name": "Trece"
+      },
+      "to": {
+        "personId": 16811,
+        "name": "Trece"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 9973,
+      "parentId": 21372,
+      "parent": "You're Mine",
+      "creditType": "other",
+      "role": "Sequences Programming",
+      "from": {
+        "artistId": 1535,
+        "name": "Trece"
+      },
+      "to": {
+        "personId": 16811,
+        "name": "Trece"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 17016,
+      "parentId": 5154,
+      "parent": "Playa Venus \"A.C.T. Mix\"",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 1535,
+        "name": "Trece"
+      },
+      "to": {
+        "personId": 16811,
+        "name": "Trece"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 17124,
+      "parentId": 6405,
+      "parent": "Revolución",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 1535,
+        "name": "Trece"
+      },
+      "to": {
+        "personId": 16811,
+        "name": "Trece"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18744,
+      "parentId": 17884,
+      "parent": "Mala Conducta",
+      "creditType": "guest",
+      "role": "Invitado",
+      "from": {
+        "artistId": 1535,
+        "name": "Trece"
+      },
+      "to": {
+        "personId": 16811,
+        "name": "Trece"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 17650,
+      "parentId": 12537,
+      "parent": "Extraterrestrial Lodge Of His Infernal Majesty I",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 835,
+        "name": "Triangular Ascension"
+      },
+      "to": {
+        "personId": 15808,
+        "name": "Federico Ágreda Álvarez"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 17651,
+      "parentId": 12543,
+      "parent": "Extraterrestrial Lodge Of His Infernal Majesty II",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 835,
+        "name": "Triangular Ascension"
+      },
+      "to": {
+        "personId": 15808,
+        "name": "Federico Ágreda Álvarez"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 17652,
+      "parentId": 12549,
+      "parent": "Extraterrestrial Lodge Of His Infernal Majesty III",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 835,
+        "name": "Triangular Ascension"
+      },
+      "to": {
+        "personId": 15808,
+        "name": "Federico Ágreda Álvarez"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 17653,
+      "parentId": 12560,
+      "parent": "Lodge Of His Infernal Majesty IV",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 835,
+        "name": "Triangular Ascension"
+      },
+      "to": {
+        "personId": 15808,
+        "name": "Federico Ágreda Álvarez"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 10035,
+      "parentId": 25799,
+      "parent": "Cuando Las Estrellas Muere",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 2031,
+        "name": "Trino Mora"
+      },
+      "to": {
+        "personId": 8775,
+        "name": "Trino Mora"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 10376,
+      "parentId": 25956,
+      "parent": "Te Quiero Todavía",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 2031,
+        "name": "Trino Mora"
+      },
+      "to": {
+        "personId": 8775,
+        "name": "Trino Mora"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 10391,
+      "parentId": 25960,
+      "parent": "Libera Tu Mente",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 2031,
+        "name": "Trino Mora"
+      },
+      "to": {
+        "personId": 8775,
+        "name": "Trino Mora"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 10408,
+      "parentId": 25966,
+      "parent": "No olvides recordarme (Don't Forget To Remember)",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 2031,
+        "name": "Trino Mora"
+      },
+      "to": {
+        "personId": 8775,
+        "name": "Trino Mora"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 10424,
+      "parentId": 25971,
+      "parent": "Mi tristeza (Custe o Que Custar)",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 2031,
+        "name": "Trino Mora"
+      },
+      "to": {
+        "personId": 8775,
+        "name": "Trino Mora"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 12982,
+      "parentId": 27871,
+      "parent": "Di que no es verdad (Say It Isn't So)",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 2031,
+        "name": "Trino Mora"
+      },
+      "to": {
+        "personId": 8775,
+        "name": "Trino Mora"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13551,
+      "parentId": 28373,
+      "parent": "Mi tristeza",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 2031,
+        "name": "Trino Mora"
+      },
+      "to": {
+        "personId": 8775,
+        "name": "Trino Mora"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13553,
+      "parentId": 28378,
+      "parent": "El campo está florido",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 2031,
+        "name": "Trino Mora"
+      },
+      "to": {
+        "personId": 8775,
+        "name": "Trino Mora"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13562,
+      "parentId": 28392,
+      "parent": "Boogalo en Broadway",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 2031,
+        "name": "Trino Mora"
+      },
+      "to": {
+        "personId": 8775,
+        "name": "Trino Mora"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13605,
+      "parentId": 29443,
+      "parent": "Tengo que ser yo (D. en D. / Versión español: Trino Mora) / 1969",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 2031,
+        "name": "Trino Mora"
+      },
+      "to": {
+        "personId": 8775,
+        "name": "Trino Mora"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13613,
+      "parentId": 29794,
+      "parent": "Mi tristeza",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 2031,
+        "name": "Trino Mora"
+      },
+      "to": {
+        "personId": 8775,
+        "name": "Trino Mora"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13616,
+      "parentId": 29816,
+      "parent": "La música sonó",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 2031,
+        "name": "Trino Mora"
+      },
+      "to": {
+        "personId": 8775,
+        "name": "Trino Mora"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13620,
+      "parentId": 29822,
+      "parent": "Escribiré tu nombre sobre la arena",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 2031,
+        "name": "Trino Mora"
+      },
+      "to": {
+        "personId": 8775,
+        "name": "Trino Mora"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13654,
+      "parentId": 30213,
+      "parent": "Mi corazón",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 2031,
+        "name": "Trino Mora"
+      },
+      "to": {
+        "personId": 8775,
+        "name": "Trino Mora"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13660,
+      "parentId": 30218,
+      "parent": "Sigue adelante",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 2031,
+        "name": "Trino Mora"
+      },
+      "to": {
+        "personId": 8775,
+        "name": "Trino Mora"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13666,
+      "parentId": 24226,
+      "parent": "Mi Corazón",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 2031,
+        "name": "Trino Mora"
+      },
+      "to": {
+        "personId": 8775,
+        "name": "Trino Mora"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13680,
+      "parentId": 30437,
+      "parent": "Mi corazón",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 2031,
+        "name": "Trino Mora"
+      },
+      "to": {
+        "personId": 8775,
+        "name": "Trino Mora"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13698,
+      "parentId": 30657,
+      "parent": "Mi corazón",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 2031,
+        "name": "Trino Mora"
+      },
+      "to": {
+        "personId": 8775,
+        "name": "Trino Mora"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 16903,
+      "parentId": 4887,
+      "parent": "Mi Tristeza",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2031,
+        "name": "Trino Mora"
+      },
+      "to": {
+        "personId": 8775,
+        "name": "Trino Mora"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 16951,
+      "parentId": 2994,
+      "parent": "La Música Sonó",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2031,
+        "name": "Trino Mora"
+      },
+      "to": {
+        "personId": 8775,
+        "name": "Trino Mora"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 16956,
+      "parentId": 3032,
+      "parent": "Escribiré Tu Nombre En La Arena",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2031,
+        "name": "Trino Mora"
+      },
+      "to": {
+        "personId": 8775,
+        "name": "Trino Mora"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 16966,
+      "parentId": 935,
+      "parent": "Boogaloo Down Broadway",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2031,
+        "name": "Trino Mora"
+      },
+      "to": {
+        "personId": 8775,
+        "name": "Trino Mora"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 16994,
+      "parentId": 657,
+      "parent": "Stag-O-Lee",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2031,
+        "name": "Trino Mora"
+      },
+      "to": {
+        "personId": 8775,
+        "name": "Trino Mora"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 16995,
+      "parentId": 663,
+      "parent": "Yesterday",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2031,
+        "name": "Trino Mora"
+      },
+      "to": {
+        "personId": 8775,
+        "name": "Trino Mora"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 17077,
+      "parentId": 2742,
+      "parent": "Soy Tremendo",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2031,
+        "name": "Trino Mora"
+      },
+      "to": {
+        "personId": 8775,
+        "name": "Trino Mora"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18530,
+      "parentId": 4392,
+      "parent": "Sex Chat",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2837,
+        "name": "Turtled"
+      },
+      "to": {
+        "personId": 18098,
+        "name": "Ed Vera"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18683,
+      "parentId": 2581,
+      "parent": "Lovers",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2837,
+        "name": "Turtled"
+      },
+      "to": {
+        "personId": 18098,
+        "name": "Ed Vera"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18155,
+      "parentId": 7858,
+      "parent": "Happy Vaginal Dismemberment",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2401,
+        "name": "Vaginosis Bacteriana"
+      },
+      "to": {
+        "personId": 17889,
+        "name": "Kevin Alvarado"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18879,
+      "parentId": 39937,
+      "parent": "Bring Back The Glory",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2918,
+        "name": "Voicians"
+      },
+      "to": {
+        "personId": 18136,
+        "name": "Daniel Voicians"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 9977,
+      "parentId": 25757,
+      "parent": "La Sabana",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 261,
+        "name": "Vytas Brenner"
+      },
+      "to": {
+        "personId": 2493,
+        "name": "Vytas Brenner"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 9988,
+      "parentId": 25767,
+      "parent": "Morrocoy",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 261,
+        "name": "Vytas Brenner"
+      },
+      "to": {
+        "personId": 2493,
+        "name": "Vytas Brenner"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 9998,
+      "parentId": 25764,
+      "parent": "Tragavenado",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 261,
+        "name": "Vytas Brenner"
+      },
+      "to": {
+        "personId": 2493,
+        "name": "Vytas Brenner"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 9999,
+      "parentId": 25770,
+      "parent": "Araguaney",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 261,
+        "name": "Vytas Brenner"
+      },
+      "to": {
+        "personId": 2493,
+        "name": "Vytas Brenner"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 10024,
+      "parentId": 25791,
+      "parent": "Bang-Going-Gone",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 261,
+        "name": "Vytas Brenner"
+      },
+      "to": {
+        "personId": 2493,
+        "name": "Vytas Brenner"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13032,
+      "parentId": 27903,
+      "parent": "Canto del Pilón (Vytas Brenner)",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 261,
+        "name": "Vytas Brenner"
+      },
+      "to": {
+        "personId": 2493,
+        "name": "Vytas Brenner"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13534,
+      "parentId": 28323,
+      "parent": "San Agustín",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 261,
+        "name": "Vytas Brenner"
+      },
+      "to": {
+        "personId": 2493,
+        "name": "Vytas Brenner"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13603,
+      "parentId": 29354,
+      "parent": "Una rosa roja",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 261,
+        "name": "Vytas Brenner"
+      },
+      "to": {
+        "personId": 2493,
+        "name": "Vytas Brenner"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13710,
+      "parentId": 30746,
+      "parent": "Agua Clara",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 261,
+        "name": "Vytas Brenner"
+      },
+      "to": {
+        "personId": 2493,
+        "name": "Vytas Brenner"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13715,
+      "parentId": 30741,
+      "parent": "Gavilán",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 261,
+        "name": "Vytas Brenner"
+      },
+      "to": {
+        "personId": 2493,
+        "name": "Vytas Brenner"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 13721,
+      "parentId": 30748,
+      "parent": "Mandingo",
+      "creditType": "musician",
+      "role": "intérprete",
+      "from": {
+        "artistId": 261,
+        "name": "Vytas Brenner"
+      },
+      "to": {
+        "personId": 2493,
+        "name": "Vytas Brenner"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 16982,
+      "parentId": 956,
+      "parent": "Araguaney",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 261,
+        "name": "Vytas Brenner"
+      },
+      "to": {
+        "personId": 2493,
+        "name": "Vytas Brenner"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 16986,
+      "parentId": 998,
+      "parent": "Bang-Going-Gone",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 261,
+        "name": "Vytas Brenner"
+      },
+      "to": {
+        "personId": 2493,
+        "name": "Vytas Brenner"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 16987,
+      "parentId": 1022,
+      "parent": "Caracas Para Locos",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 261,
+        "name": "Vytas Brenner"
+      },
+      "to": {
+        "personId": 2493,
+        "name": "Vytas Brenner"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 17980,
+      "parentId": 1801,
+      "parent": "Pongcefálico",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2226,
+        "name": "Wyzton Borreo"
+      },
+      "to": {
+        "personId": 17664,
+        "name": "Wyzton Borreo"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18873,
+      "parentId": 40980,
+      "parent": "36 Hours (ZARDONIC Remix)",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2913,
+        "name": "XquicksilverX"
+      },
+      "to": {
+        "personId": 18132,
+        "name": "Josh Quicksilver"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 17304,
+      "parentId": 7431,
+      "parent": "Hope",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 1671,
+        "name": "Yani"
+      },
+      "to": {
+        "personId": 17118,
+        "name": "Giovanni Emilio Conte Trezza"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 18453,
+      "parentId": 1486,
+      "parent": "Straight Lines",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 2672,
+        "name": "Yare"
+      },
+      "to": {
+        "personId": 18081,
+        "name": "Eduardo Larez"
+      }
+    },
+    {
+      "table": "track_credits",
+      "creditId": 17187,
+      "parentId": 6153,
+      "parent": "Light Divine",
+      "creditType": "musician",
+      "role": "Intérprete",
+      "from": {
+        "artistId": 795,
+        "name": "Zardonic"
+      },
+      "to": {
+        "personId": 15801,
+        "name": "Federico Augusto Ágreda Álvarez"
+      }
+    }
+  ],
+  "skippedDetails": []
+}

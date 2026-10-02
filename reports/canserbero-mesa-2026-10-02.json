@@ -1,0 +1,188 @@
+{
+  "merges": [
+    {
+      "keep": 599,
+      "drop": 5764,
+      "name": "Carlos Mendoza",
+      "why": "Luz Verde (Carlos Mendoza y Eduardo Benatar) es también Frankie & The Blue Devils (Charlie y Eddie Devil)"
+    },
+    {
+      "keep": 3034,
+      "drop": 5766,
+      "name": "Eduardo Benatar",
+      "why": "Luz Verde (Carlos Mendoza y Eduardo Benatar) es también Frankie & The Blue Devils (Charlie y Eddie Devil)"
+    },
+    {
+      "keep": 15539,
+      "drop": 17042,
+      "name": "Miguel Soteldo",
+      "why": "Niño Nuclear (Miguel Soteldo y Ovidio Pernalete) es también Los Spectors"
+    },
+    {
+      "keep": 15538,
+      "drop": 17039,
+      "name": "Ovidio Pernalete",
+      "why": "Niño Nuclear (Miguel Soteldo y Ovidio Pernalete) es también Los Spectors"
+    },
+    {
+      "keep": 15736,
+      "drop": 15735,
+      "name": "Jesus Nieto",
+      "why": "mismo apodo «El gordo» y misma batería en Raped Dolls"
+    },
+    {
+      "keep": 16811,
+      "drop": 9004,
+      "name": "Trece",
+      "why": "«A.K.A. Trece» acreditado en Dioslepague / Venus Mixes (2001), disco donde figura Trece"
+    },
+    {
+      "keep": 15451,
+      "drop": 16586,
+      "name": "El Cura",
+      "aliases": [
+        "Roamin 'Alley 69'"
+      ],
+      "why": "la fuente lo nombra «El Cura ex La Corte»"
+    },
+    {
+      "keep": 18060,
+      "drop": 18077,
+      "name": "Cristian Moraga",
+      "aliases": [
+        "Funky C"
+      ],
+      "why": "la biografía de C-funk da su nombre real, Cristian Moraga; ambos en los recopilatorios de DJ Afro"
+    },
+    {
+      "keep": 17663,
+      "drop": 3602,
+      "name": "Reynaldo Morales",
+      "why": "la biografía de DJ Rey da su nombre real, Reynaldo Morales; ambos en Noveno Festival Nuevas Bandas (1999)"
+    }
+  ],
+  "dismiss": [
+    {
+      "review": 1171494,
+      "rename": {
+        "id": 6021,
+        "to": "Carlos Hernández"
+      },
+      "why": "DJ de Jahkogba frente a guitarrista de jazz (Tree Of Life, Pablo Gil)"
+    },
+    {
+      "review": 1171495,
+      "rename": {
+        "id": 8562,
+        "to": "Jorge García"
+      },
+      "why": "guitarrista de Icaro (1983) frente a Paté Sónico de Colectivo Proyectil (2002)"
+    },
+    {
+      "review": 1171502,
+      "rename": {
+        "id": 13388,
+        "to": "Jesus Soto"
+      },
+      "why": "dos perfiles separados en Metal Archives: batería de Noctis Imperium y guitarra de Carnage"
+    },
+    {
+      "review": 1171503,
+      "rename": {
+        "id": 13784,
+        "to": "Luis Rojas"
+      },
+      "why": "bajo de Nocturnal (metal) frente a batería de Dandy León"
+    },
+    {
+      "review": 1171505,
+      "rename": {
+        "id": 13943,
+        "to": "Luis Martinez"
+      },
+      "why": "guitarra de Axariel (metal) frente a Ficción y Ojo Fatuo"
+    },
+    {
+      "review": 1171506,
+      "rename": {
+        "id": 14299,
+        "to": "Raul Garcia"
+      },
+      "why": "dos perfiles separados en Metal Archives: guitarra de Funebria y voz de Infestus"
+    },
+    {
+      "review": 1171508,
+      "rename": {
+        "id": 14544,
+        "to": "Alejandro García"
+      },
+      "why": "guitarrista colombiano de Morghduet frente a Jahbafana (reggae)"
+    },
+    {
+      "review": 1171510,
+      "rename": {
+        "id": 14737,
+        "to": "Luis Aguilar"
+      },
+      "why": "bajo de Disturbing Behavior y Overhate frente a Los Oceánicos y The Luchos"
+    },
+    {
+      "review": 1171511,
+      "rename": {
+        "id": 15045,
+        "to": "Alejandro Galicia"
+      },
+      "why": "voz de Hater (metal) frente a guitarra de Sin Salida"
+    },
+    {
+      "review": 1171512,
+      "rename": {
+        "id": 15239,
+        "to": "Luis Gonzalez"
+      },
+      "why": "bajo de Grotesque Deformity frente a batería de Stereografía"
+    },
+    {
+      "review": 1171513,
+      "rename": {
+        "id": 15362,
+        "to": "Daniel Perdomo"
+      },
+      "why": "Danian (Wikipedia) frente al proyecto unipersonal Dhargorak"
+    },
+    {
+      "review": 903992,
+      "rename": {
+        "id": 16525,
+        "to": "Marco León"
+      },
+      "why": "batería de Tensión Cero frente a voz y guitarra de Odo'Sha"
+    },
+    {
+      "review": 904363,
+      "rename": {
+        "id": 17597,
+        "to": "Nelson Ramírez"
+      },
+      "why": "voz de Sepulcro frente a teclados de Radio Clip"
+    }
+  ],
+  "confirm": true,
+  "mergeRunId": 11314,
+  "dismissed": [
+    1171494,
+    1171495,
+    1171502,
+    1171503,
+    1171505,
+    1171506,
+    1171508,
+    1171510,
+    1171511,
+    1171512,
+    1171513,
+    903992,
+    904363
+  ],
+  "failed": []
+}

@@ -26,6 +26,13 @@ describe("splitTrailingNickname", () => {
     expect(splitTrailingNickname('"R"')).toBeNull();
   });
 
+  it("separa el @usuario final, solo o detrás de un apodo (2026-10-02)", () => {
+    expect(splitTrailingNickname("Gustavo Dal Farra @GustavoDB")).toEqual({ name: "Gustavo Dal Farra", nicknames: ["GustavoDB"] });
+    expect(splitTrailingNickname('Edward Vera "Turtled" @Turtleddj')).toEqual({ name: "Edward Vera", nicknames: ["Turtled", "Turtleddj"] });
+    expect(splitTrailingNickname("joa@DiArt")).toBeNull();
+    expect(splitTrailingNickname("Joa @DiArt")).toBeNull();
+  });
+
   it("deja en paz lo que no lleva apodo entre comillas", () => {
     expect(splitTrailingNickname("Tirone González")).toBeNull();
     expect(splitTrailingNickname("Luis Pérez (Caracas)")).toBeNull();

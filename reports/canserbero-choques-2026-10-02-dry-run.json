@@ -1,0 +1,392 @@
+{
+  "merges": [
+    {
+      "keep": 15503,
+      "drop": 1040,
+      "keepName": "José Antonio Rojas (Rojitas)",
+      "dropName": "José Antonio Rojas",
+      "finalName": "José Antonio Rojas",
+      "why": "25 colegas en común"
+    },
+    {
+      "keep": 519,
+      "drop": 5765,
+      "keepName": "Francisco \"CoCo\" Díaz",
+      "dropName": "Rocky Devil (Francisco \"Coco\" Díaz)",
+      "finalName": "Francisco \"Coco\" Díaz",
+      "why": "proyecto común: album:4117"
+    },
+    {
+      "keep": 12781,
+      "drop": 6576,
+      "keepName": "Erick León",
+      "dropName": "Surrearts Graphics (Erick León)",
+      "finalName": "Erick León",
+      "why": "proyecto común: album:333"
+    },
+    {
+      "keep": 5774,
+      "drop": 8228,
+      "keepName": "Antonio Huizi",
+      "dropName": "Antonio Huizi - Graficción",
+      "finalName": "Antonio Huizi",
+      "why": "9 colegas en común"
+    },
+    {
+      "keep": 12547,
+      "drop": 12301,
+      "keepName": "Diego Alejandro García",
+      "dropName": "Diego Alejandro García @BonkDesign",
+      "finalName": "Diego Alejandro García",
+      "why": "proyecto común: album:69"
+    },
+    {
+      "keep": 12592,
+      "drop": 2158,
+      "keepName": "Edward Vera",
+      "dropName": "Edward Vera \"Turtled\" @Turtleddj",
+      "finalName": "Edward Vera",
+      "why": "proyecto común: album:124, artist:48"
+    },
+    {
+      "keep": 489,
+      "drop": 16025,
+      "keepName": "Argel",
+      "dropName": "Argel Trejo",
+      "finalName": "Argel Trejo",
+      "why": "proyecto común: artist:1068"
+    },
+    {
+      "keep": 5968,
+      "drop": 13886,
+      "keepName": "Carlos Robles",
+      "dropName": "Afro",
+      "finalName": "Carlos Robles",
+      "why": "proyecto común: artist:1968"
+    },
+    {
+      "keep": 5956,
+      "drop": 13888,
+      "keepName": "Juls Sosa",
+      "dropName": "Juls",
+      "finalName": "Juls Sosa",
+      "why": "proyecto común: artist:1968"
+    },
+    {
+      "keep": 1193,
+      "drop": 14458,
+      "keepName": "Gregorio Rangel",
+      "dropName": "Gregorio",
+      "finalName": "Gregorio Rangel",
+      "why": "proyecto común: artist:141"
+    },
+    {
+      "keep": 15161,
+      "drop": 5947,
+      "keepName": "Cuervo",
+      "dropName": "Luis Villamizar",
+      "finalName": "Luis Villamizar",
+      "why": "2 colegas en común"
+    }
+  ],
+  "queued": [
+    {
+      "id": 6021,
+      "name": "Carlos Hernández (DJ HOOCH)",
+      "target": "Carlos Hernández",
+      "collidesWith": {
+        "id": 6773,
+        "name": "Carlos Hernández"
+      },
+      "reason": "el nombre nuevo ya es de otra ficha: puede ser la misma persona, pero eso se decide con la regla de proyecto común",
+      "why": "sin proyecto común: a la mesa"
+    },
+    {
+      "id": 8562,
+      "name": "Jorge García (Paté Sónico)",
+      "target": "Jorge García",
+      "collidesWith": {
+        "id": 1427,
+        "name": "Jorge García"
+      },
+      "reason": "el nombre nuevo ya es de otra ficha: puede ser la misma persona, pero eso se decide con la regla de proyecto común",
+      "why": "sin proyecto común: a la mesa"
+    },
+    {
+      "id": 17784,
+      "name": "José Barrios (Pulún)",
+      "target": "José Barrios",
+      "collidesWith": {
+        "id": 4005,
+        "name": "José Barrios"
+      },
+      "reason": "el nombre nuevo ya es de otra ficha: puede ser la misma persona, pero eso se decide con la regla de proyecto común",
+      "why": "sin proyecto común: a la mesa"
+    },
+    {
+      "id": 16525,
+      "name": "Marco León (Mate)",
+      "target": "Marco León",
+      "collidesWith": {
+        "id": 14095,
+        "name": "Marco León"
+      },
+      "reason": "el nombre nuevo ya es de otra ficha: puede ser la misma persona, pero eso se decide con la regla de proyecto común",
+      "why": "sin proyecto común: a la mesa"
+    },
+    {
+      "id": 15539,
+      "name": "Miguel Soteldo (Banano)",
+      "target": "Miguel Soteldo",
+      "collidesWith": {
+        "id": 17042,
+        "name": "Miguel Soteldo"
+      },
+      "reason": "el nombre nuevo ya es de otra ficha: puede ser la misma persona, pero eso se decide con la regla de proyecto común",
+      "why": "sin proyecto común: a la mesa"
+    },
+    {
+      "id": 17597,
+      "name": "Nelson Ramírez (Kiro)",
+      "target": "Nelson Ramírez",
+      "collidesWith": {
+        "id": 1303,
+        "name": "Nelson Ramírez"
+      },
+      "reason": "el nombre nuevo ya es de otra ficha: puede ser la misma persona, pero eso se decide con la regla de proyecto común",
+      "why": "sin proyecto común: a la mesa"
+    },
+    {
+      "id": 15538,
+      "name": "Ovidio Pernalete (Obi1)",
+      "target": "Ovidio Pernalete",
+      "collidesWith": {
+        "id": 17039,
+        "name": "Ovidio Pernalete"
+      },
+      "reason": "el nombre nuevo ya es de otra ficha: puede ser la misma persona, pero eso se decide con la regla de proyecto común",
+      "why": "sin proyecto común: a la mesa"
+    },
+    {
+      "id": 4782,
+      "name": "Arian (Felipe Nevado)",
+      "target": "Felipe Nevado",
+      "collidesWith": {
+        "id": 5648,
+        "name": "Felipe Nevado"
+      },
+      "reason": "el nombre nuevo ya es de otra ficha: puede ser la misma persona, pero eso se decide con la regla de proyecto común",
+      "why": "sin proyecto común: a la mesa"
+    },
+    {
+      "id": 5764,
+      "name": "Charlie Devil (Carlos Mendoza)",
+      "target": "Carlos Mendoza",
+      "collidesWith": {
+        "id": 599,
+        "name": "Carlos Mendoza"
+      },
+      "reason": "el nombre nuevo ya es de otra ficha: puede ser la misma persona, pero eso se decide con la regla de proyecto común",
+      "why": "sin proyecto común: a la mesa"
+    },
+    {
+      "id": 5766,
+      "name": "Eddie Devil (Eduardo Benatar)",
+      "target": "Eduardo Benatar",
+      "collidesWith": {
+        "id": 3034,
+        "name": "Eduardo Benatar"
+      },
+      "reason": "el nombre nuevo ya es de otra ficha: puede ser la misma persona, pero eso se decide con la regla de proyecto común",
+      "why": "sin proyecto común: a la mesa"
+    },
+    {
+      "id": 3810,
+      "name": "Control X - Gilberto Lazo",
+      "target": "Gilberto Lazo",
+      "collidesWith": {
+        "id": 16244,
+        "name": "Gilberto Lazo"
+      },
+      "reason": "el nombre nuevo ya es de otra ficha: puede ser la misma persona, pero eso se decide con la regla de proyecto común",
+      "why": "sin proyecto común: a la mesa"
+    },
+    {
+      "id": 18060,
+      "name": "C-funk",
+      "target": "Cristian Moraga",
+      "collidesWith": {
+        "id": 18077,
+        "name": "Cristian Moraga"
+      },
+      "reason": "el nombre nuevo ya es de otra ficha: puede ser la misma persona, pero eso se decide con la regla de proyecto común",
+      "why": "sin proyecto común: a la mesa"
+    },
+    {
+      "id": 17663,
+      "name": "DJ Rey",
+      "target": "Reynaldo Morales",
+      "collidesWith": {
+        "id": 3602,
+        "name": "Reynaldo Morales"
+      },
+      "reason": "el nombre nuevo ya es de otra ficha: puede ser la misma persona, pero eso se decide con la regla de proyecto común",
+      "why": "sin proyecto común: a la mesa"
+    },
+    {
+      "id": 13388,
+      "name": "Soto",
+      "target": "Jesus Soto",
+      "collidesWith": {
+        "id": 13418,
+        "name": "Jesus Soto"
+      },
+      "reason": "el nombre nuevo ya es de otra ficha: puede ser la misma persona, pero eso se decide con la regla de proyecto común",
+      "why": "sin proyecto común: a la mesa"
+    },
+    {
+      "id": 13784,
+      "name": "Astaroth",
+      "target": "Luis Rojas",
+      "collidesWith": {
+        "id": 17413,
+        "name": "Luis Rojas"
+      },
+      "reason": "el nombre nuevo ya es de otra ficha: puede ser la misma persona, pero eso se decide con la regla de proyecto común",
+      "why": "sin proyecto común: a la mesa"
+    },
+    {
+      "id": 13887,
+      "name": "Pipi",
+      "target": "Christian Estepa",
+      "collidesWith": {
+        "id": 15345,
+        "name": "Christian Estepa"
+      },
+      "reason": "el nombre nuevo ya es de otra ficha: puede ser la misma persona, pero eso se decide con la regla de proyecto común",
+      "why": "sin proyecto común: a la mesa"
+    },
+    {
+      "id": 13943,
+      "name": "Infernal Doom",
+      "target": "Luis Martinez",
+      "collidesWith": {
+        "id": 3459,
+        "name": "Luis Martinez"
+      },
+      "reason": "el nombre nuevo ya es de otra ficha: puede ser la misma persona, pero eso se decide con la regla de proyecto común",
+      "why": "sin proyecto común: a la mesa"
+    },
+    {
+      "id": 14299,
+      "name": "Hex Xezbet",
+      "target": "Raul Garcia",
+      "collidesWith": {
+        "id": 15013,
+        "name": "Raul Garcia"
+      },
+      "reason": "el nombre nuevo ya es de otra ficha: puede ser la misma persona, pero eso se decide con la regla de proyecto común",
+      "why": "sin proyecto común: a la mesa"
+    },
+    {
+      "id": 14402,
+      "name": "Mortem",
+      "target": "Jesús Dávila",
+      "collidesWith": {
+        "id": 4406,
+        "name": "Jesús Dávila"
+      },
+      "reason": "el nombre nuevo ya es de otra ficha: puede ser la misma persona, pero eso se decide con la regla de proyecto común",
+      "why": "sin proyecto común: a la mesa"
+    },
+    {
+      "id": 14544,
+      "name": "GoreRoman",
+      "target": "Alejandro García",
+      "collidesWith": {
+        "id": 16038,
+        "name": "Alejandro García"
+      },
+      "reason": "el nombre nuevo ya es de otra ficha: puede ser la misma persona, pero eso se decide con la regla de proyecto común",
+      "why": "sin proyecto común: a la mesa"
+    },
+    {
+      "id": 14578,
+      "name": "Hellbeats",
+      "target": "Jonathan Piñeiro",
+      "collidesWith": {
+        "id": 16479,
+        "name": "Jonathan Piñeiro"
+      },
+      "reason": "el nombre nuevo ya es de otra ficha: puede ser la misma persona, pero eso se decide con la regla de proyecto común",
+      "why": "sin proyecto común: a la mesa"
+    },
+    {
+      "id": 14737,
+      "name": "Luis Kooper",
+      "target": "Luis Aguilar",
+      "collidesWith": {
+        "id": 1059,
+        "name": "Luis Aguilar"
+      },
+      "reason": "el nombre nuevo ya es de otra ficha: puede ser la misma persona, pero eso se decide con la regla de proyecto común",
+      "why": "sin proyecto común: a la mesa"
+    },
+    {
+      "id": 15045,
+      "name": "Alex Chami",
+      "target": "Alejandro Galicia",
+      "collidesWith": {
+        "id": 17686,
+        "name": "Alejandro Galicia"
+      },
+      "reason": "el nombre nuevo ya es de otra ficha: puede ser la misma persona, pero eso se decide con la regla de proyecto común",
+      "why": "sin proyecto común: a la mesa"
+    },
+    {
+      "id": 15239,
+      "name": "Luis \"Noni\"",
+      "target": "Luis Gonzalez",
+      "collidesWith": {
+        "id": 16533,
+        "name": "Luis Gonzalez"
+      },
+      "reason": "el nombre nuevo ya es de otra ficha: puede ser la misma persona, pero eso se decide con la regla de proyecto común",
+      "why": "sin proyecto común: a la mesa"
+    },
+    {
+      "id": 15362,
+      "name": "Danian",
+      "target": "Daniel Perdomo",
+      "collidesWith": {
+        "id": 14729,
+        "name": "Dhargorak"
+      },
+      "reason": "el nombre nuevo ya es de otra ficha: puede ser la misma persona, pero eso se decide con la regla de proyecto común",
+      "why": "sin proyecto común: a la mesa"
+    },
+    {
+      "id": 360,
+      "name": "Daniel",
+      "target": "Daniel Díaz",
+      "collidesWith": {
+        "id": 2392,
+        "name": "Daniel Díaz"
+      },
+      "reason": "el nombre nuevo ya es de otra ficha: puede ser la misma persona, pero eso se decide con la regla de proyecto común",
+      "why": "sin proyecto común: a la mesa"
+    },
+    {
+      "id": 6387,
+      "name": "Fernando",
+      "target": "Fernando Villa",
+      "collidesWith": {
+        "id": 17033,
+        "name": "Fernando villa"
+      },
+      "reason": "el nombre nuevo ya es de otra ficha: puede ser la misma persona, pero eso se decide con la regla de proyecto común",
+      "why": "sin proyecto común: a la mesa"
+    }
+  ],
+  "confirm": false
+}

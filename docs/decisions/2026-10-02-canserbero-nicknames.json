@@ -1,0 +1,3102 @@
+{
+  "decidedAt": "2026-10-02",
+  "evidence": "Caso Canserbero extendido, etapa «nicknames» (Brian, 2026-10-02). Ver scripts/plan-canserbero-extendido.ts.",
+  "corrections": [
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 10076,
+        "name": "Mauricio \"Vermar\" Rigaldi"
+      },
+      "alias": "Vermar",
+      "why": "Apodo dentro del nombre «Mauricio \"Vermar\" Rigaldi»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 1008,
+        "name": "Carlos \"Fresa\" Mata"
+      },
+      "alias": "Fresa",
+      "why": "Apodo dentro del nombre «Carlos \"Fresa\" Mata»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 10116,
+        "name": "\"Fabio Jr.\" Ayrosa Correia Galvao"
+      },
+      "alias": "Fabio Jr.",
+      "why": "Apodo dentro del nombre «\"Fabio Jr.\" Ayrosa Correia Galvao»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 1046,
+        "name": "\"Joseito\" Rodríguez"
+      },
+      "alias": "Joseito",
+      "why": "Apodo dentro del nombre «\"Joseito\" Rodríguez»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 1081,
+        "name": "Jorge \"Bruja\" Suárez"
+      },
+      "alias": "Bruja",
+      "why": "Apodo dentro del nombre «Jorge \"Bruja\" Suárez»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 1094,
+        "name": "Alessio \"Mini\" Castaldo"
+      },
+      "alias": "Mini",
+      "why": "Apodo dentro del nombre «Alessio \"Mini\" Castaldo»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 1112,
+        "name": "José \"Cheo\" Rodríguez"
+      },
+      "alias": "Cheo",
+      "why": "Apodo dentro del nombre «José \"Cheo\" Rodríguez»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 1129,
+        "name": "Rodolfo \"Rod\" Vanmarcke"
+      },
+      "alias": "Rod",
+      "why": "Apodo dentro del nombre «Rodolfo \"Rod\" Vanmarcke»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 1185,
+        "name": "Jesús \"Junior\" Morales"
+      },
+      "alias": "Junior",
+      "why": "Apodo dentro del nombre «Jesús \"Junior\" Morales»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 120,
+        "name": "Alejandro \"Chonto\" Turola"
+      },
+      "alias": "Chonto",
+      "why": "Apodo dentro del nombre «Alejandro \"Chonto\" Turola»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 122,
+        "name": "Luis \"Luisle\" López"
+      },
+      "alias": "Luisle",
+      "why": "Apodo dentro del nombre «Luis \"Luisle\" López»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 12336,
+        "name": "Faria \"La Gogo\""
+      },
+      "alias": "La Gogo",
+      "why": "Apodo dentro del nombre «Faria \"La Gogo\"»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 12374,
+        "name": "James \"Jimmy\" Kovacks"
+      },
+      "alias": "Jimmy",
+      "why": "Apodo dentro del nombre «James \"Jimmy\" Kovacks»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 12382,
+        "name": "Julia \"July\" Mendoza"
+      },
+      "alias": "July",
+      "why": "Apodo dentro del nombre «Julia \"July\" Mendoza»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 12588,
+        "name": "Diego \"Martín\" Guerrero"
+      },
+      "alias": "Martín",
+      "why": "Apodo dentro del nombre «Diego \"Martín\" Guerrero»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 12613,
+        "name": "María Isabel \"Bubu\" Alvarez"
+      },
+      "alias": "Bubu",
+      "why": "Apodo dentro del nombre «María Isabel \"Bubu\" Alvarez»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 12733,
+        "name": "Jesús \"Chuo\" Torrealba"
+      },
+      "alias": "Chuo",
+      "why": "Apodo dentro del nombre «Jesús \"Chuo\" Torrealba»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 12826,
+        "name": "Mauricio \"Enano\" Montero"
+      },
+      "alias": "Enano",
+      "why": "Apodo dentro del nombre «Mauricio \"Enano\" Montero»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 12871,
+        "name": "Francisco \"Paco\" Puig"
+      },
+      "alias": "Paco",
+      "why": "Apodo dentro del nombre «Francisco \"Paco\" Puig»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 1312,
+        "name": "Sidney \"Gato\" Reyes"
+      },
+      "alias": "Gato",
+      "why": "Apodo dentro del nombre «Sidney \"Gato\" Reyes»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 1325,
+        "name": "Sebastían \"Chevy\" Ayala Terán"
+      },
+      "alias": "Chevy",
+      "why": "Apodo dentro del nombre «Sebastían \"Chevy\" Ayala Terán»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 13302,
+        "name": "Jesús \"Titi\" Marval"
+      },
+      "alias": "Titi",
+      "why": "Apodo dentro del nombre «Jesús \"Titi\" Marval»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 13303,
+        "name": "Luis \"Munky\"Castro"
+      },
+      "alias": "Munky",
+      "why": "Apodo dentro del nombre «Luis \"Munky\"Castro»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 13325,
+        "name": "Gonzalo \"Chile\" Veloz"
+      },
+      "alias": "Chile",
+      "why": "Apodo dentro del nombre «Gonzalo \"Chile\" Veloz»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 13391,
+        "name": "Daniel \"Loco Loco\" Brito"
+      },
+      "alias": "Loco Loco",
+      "why": "Apodo dentro del nombre «Daniel \"Loco Loco\" Brito»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 13442,
+        "name": "Javier \"Tripa\" Ramírez"
+      },
+      "alias": "Tripa",
+      "why": "Apodo dentro del nombre «Javier \"Tripa\" Ramírez»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 1356,
+        "name": "Orlando \"El Joe\""
+      },
+      "alias": "El Joe",
+      "why": "Apodo dentro del nombre «Orlando \"El Joe\"»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 13622,
+        "name": "Franklin \"Fratan\" Cardona"
+      },
+      "alias": "Fratan",
+      "why": "Apodo dentro del nombre «Franklin \"Fratan\" Cardona»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 13624,
+        "name": "Carlos \"Marciano\" Pinto"
+      },
+      "alias": "Marciano",
+      "why": "Apodo dentro del nombre «Carlos \"Marciano\" Pinto»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 1373,
+        "name": "Julio Rojas \"Colmillo\""
+      },
+      "alias": "Colmillo",
+      "why": "Apodo dentro del nombre «Julio Rojas \"Colmillo\"»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 13790,
+        "name": "Luís \"Beto\" Olivier"
+      },
+      "alias": "Beto",
+      "why": "Apodo dentro del nombre «Luís \"Beto\" Olivier»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 13794,
+        "name": "Gabriel \"Gabo\" Monasterios"
+      },
+      "alias": "Gabo",
+      "why": "Apodo dentro del nombre «Gabriel \"Gabo\" Monasterios»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 13877,
+        "name": "Cesar \"Fish\" Ospina"
+      },
+      "alias": "Fish",
+      "why": "Apodo dentro del nombre «Cesar \"Fish\" Ospina»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 13915,
+        "name": "\"Carlucho\" Bulfón"
+      },
+      "alias": "Carlucho",
+      "why": "Apodo dentro del nombre «\"Carlucho\" Bulfón»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 13941,
+        "name": "Jorge “Epica”"
+      },
+      "alias": "Epica",
+      "why": "Apodo dentro del nombre «Jorge “Epica”»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 13951,
+        "name": "Victor “Shirly” Peña"
+      },
+      "alias": "Shirly",
+      "why": "Apodo dentro del nombre «Victor “Shirly” Peña»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 13953,
+        "name": "Eduardo \"Yayo\" Castillo"
+      },
+      "alias": "Yayo",
+      "why": "Apodo dentro del nombre «Eduardo \"Yayo\" Castillo»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14180,
+        "name": "Irwin \"Samael\""
+      },
+      "alias": "Samael",
+      "why": "Apodo dentro del nombre «Irwin \"Samael\"»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14325,
+        "name": "Jhonatan \"Morfeo\" Zabala"
+      },
+      "alias": "Morfeo",
+      "why": "Apodo dentro del nombre «Jhonatan \"Morfeo\" Zabala»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14364,
+        "name": "Ben \"Beerny\" Gómez"
+      },
+      "alias": "Beerny",
+      "why": "Apodo dentro del nombre «Ben \"Beerny\" Gómez»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14365,
+        "name": "Javier \"Cleta\" Burlando"
+      },
+      "alias": "Cleta",
+      "why": "Apodo dentro del nombre «Javier \"Cleta\" Burlando»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 1439,
+        "name": "Augie \"Oggi\" Verde"
+      },
+      "alias": "Oggi",
+      "why": "Apodo dentro del nombre «Augie \"Oggi\" Verde»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14456,
+        "name": "André \"Maitzeth\" Iván"
+      },
+      "alias": "Maitzeth",
+      "why": "Apodo dentro del nombre «André \"Maitzeth\" Iván»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14465,
+        "name": "Alejandro \"Throll\" Colmenarez"
+      },
+      "alias": "Throll",
+      "why": "Apodo dentro del nombre «Alejandro \"Throll\" Colmenarez»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14476,
+        "name": "Michael \"El Enano\" Beauford"
+      },
+      "alias": "El Enano",
+      "why": "Apodo dentro del nombre «Michael \"El Enano\" Beauford»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14487,
+        "name": "Julio \"Palín\" Arrieche"
+      },
+      "alias": "Palín",
+      "why": "Apodo dentro del nombre «Julio \"Palín\" Arrieche»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14499,
+        "name": "José \"Flea\" Villalba"
+      },
+      "alias": "Flea",
+      "why": "Apodo dentro del nombre «José \"Flea\" Villalba»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14618,
+        "name": "Alan \"Plátano\" Pérez"
+      },
+      "alias": "Plátano",
+      "why": "Apodo dentro del nombre «Alan \"Plátano\" Pérez»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14697,
+        "name": "José “Plaza” Blanca"
+      },
+      "alias": "Plaza",
+      "why": "Apodo dentro del nombre «José “Plaza” Blanca»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14698,
+        "name": "José \"Hao\" Chirinos"
+      },
+      "alias": "Hao",
+      "why": "Apodo dentro del nombre «José \"Hao\" Chirinos»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14699,
+        "name": "Simón “Gun” Beja"
+      },
+      "alias": "Gun",
+      "why": "Apodo dentro del nombre «Simón “Gun” Beja»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14700,
+        "name": "Jorfrank \"Timon\" Mendez"
+      },
+      "alias": "Timon",
+      "why": "Apodo dentro del nombre «Jorfrank \"Timon\" Mendez»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14748,
+        "name": "Ricardo \"Lord\" Kerch"
+      },
+      "alias": "Lord",
+      "why": "Apodo dentro del nombre «Ricardo \"Lord\" Kerch»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14765,
+        "name": "Diego \"Chapu\" Sanchez"
+      },
+      "alias": "Chapu",
+      "why": "Apodo dentro del nombre «Diego \"Chapu\" Sanchez»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14812,
+        "name": "David \"Pipo\" Abraham"
+      },
+      "alias": "Pipo",
+      "why": "Apodo dentro del nombre «David \"Pipo\" Abraham»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14818,
+        "name": "Miguel \"Zophiel\" Martínez"
+      },
+      "alias": "Zophiel",
+      "why": "Apodo dentro del nombre «Miguel \"Zophiel\" Martínez»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14819,
+        "name": "Carlos \"Totenvarg\" Contreras"
+      },
+      "alias": "Totenvarg",
+      "why": "Apodo dentro del nombre «Carlos \"Totenvarg\" Contreras»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14822,
+        "name": "Ricardo \"El Mostro\""
+      },
+      "alias": "El Mostro",
+      "why": "Apodo dentro del nombre «Ricardo \"El Mostro\"»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 1483,
+        "name": "\"Magic\" Moreno"
+      },
+      "alias": "Magic",
+      "why": "Apodo dentro del nombre «\"Magic\" Moreno»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14854,
+        "name": "Heiroon \"Beldar\" Partidas"
+      },
+      "alias": "Beldar",
+      "why": "Apodo dentro del nombre «Heiroon \"Beldar\" Partidas»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14897,
+        "name": "José \"Kike\" Vázquez"
+      },
+      "alias": "Kike",
+      "why": "Apodo dentro del nombre «José \"Kike\" Vázquez»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14911,
+        "name": "Yasmal \"Destructor\" Gutierrez"
+      },
+      "alias": "Destructor",
+      "why": "Apodo dentro del nombre «Yasmal \"Destructor\" Gutierrez»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14912,
+        "name": "Albert \"Pancho\" Oleaga"
+      },
+      "alias": "Pancho",
+      "why": "Apodo dentro del nombre «Albert \"Pancho\" Oleaga»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 1494,
+        "name": "Karina \"Kara\" Febles"
+      },
+      "alias": "Kara",
+      "why": "Apodo dentro del nombre «Karina \"Kara\" Febles»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 1495,
+        "name": "Gregorio \"Gregory\" Mercado"
+      },
+      "alias": "Gregory",
+      "why": "Apodo dentro del nombre «Gregorio \"Gregory\" Mercado»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14983,
+        "name": "Carlos \"Portu\" de Sousa"
+      },
+      "alias": "Portu",
+      "why": "Apodo dentro del nombre «Carlos \"Portu\" de Sousa»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 15204,
+        "name": "Alex \"Hueso\" Sosa"
+      },
+      "alias": "Hueso",
+      "why": "Apodo dentro del nombre «Alex \"Hueso\" Sosa»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 1522,
+        "name": "Daniel \"Mono\" De Sousa"
+      },
+      "alias": "Mono",
+      "why": "Apodo dentro del nombre «Daniel \"Mono\" De Sousa»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 1523,
+        "name": "Victor \"Locolaca\" Contreras"
+      },
+      "alias": "Locolaca",
+      "why": "Apodo dentro del nombre «Victor \"Locolaca\" Contreras»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 15239,
+        "name": "Luis \"Noni\""
+      },
+      "alias": "Noni",
+      "why": "Apodo dentro del nombre «Luis \"Noni\"»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 15252,
+        "name": "Leopoldo \"el Paco\""
+      },
+      "alias": "el Paco",
+      "why": "Apodo dentro del nombre «Leopoldo \"el Paco\"»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 15337,
+        "name": "Ernesto \"Tito\" Dan"
+      },
+      "alias": "Tito",
+      "why": "Apodo dentro del nombre «Ernesto \"Tito\" Dan»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 15341,
+        "name": "Nelson \"Kico\" Campins"
+      },
+      "alias": "Kico",
+      "why": "Apodo dentro del nombre «Nelson \"Kico\" Campins»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 15528,
+        "name": "Luis “Prosti“ Solano"
+      },
+      "alias": "Prosti",
+      "why": "Apodo dentro del nombre «Luis “Prosti“ Solano»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 15531,
+        "name": "Luis «Felo» Araujo"
+      },
+      "alias": "Felo",
+      "why": "Apodo dentro del nombre «Luis «Felo» Araujo»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 15582,
+        "name": "Felipe \"Mandingo\" Rengifo"
+      },
+      "alias": "Mandingo",
+      "why": "Apodo dentro del nombre «Felipe \"Mandingo\" Rengifo»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 15593,
+        "name": "Edward «Keiko» Zuleta"
+      },
+      "alias": "Keiko",
+      "why": "Apodo dentro del nombre «Edward «Keiko» Zuleta»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 15621,
+        "name": "Ernesto «Cuerdas Duras» Rojas"
+      },
+      "alias": "Cuerdas Duras",
+      "why": "Apodo dentro del nombre «Ernesto «Cuerdas Duras» Rojas»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 15622,
+        "name": "Ricardo «El Perro» Bermúdez"
+      },
+      "alias": "El Perro",
+      "why": "Apodo dentro del nombre «Ricardo «El Perro» Bermúdez»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 15633,
+        "name": "Julian \"Dante\" D'wuentt"
+      },
+      "alias": "Dante",
+      "why": "Apodo dentro del nombre «Julian \"Dante\" D'wuentt»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 15689,
+        "name": "Manuel «Chicharrón»"
+      },
+      "alias": "Chicharrón",
+      "why": "Apodo dentro del nombre «Manuel «Chicharrón»»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 15690,
+        "name": "«el Gordo» Pianca"
+      },
+      "alias": "el Gordo",
+      "why": "Apodo dentro del nombre ««el Gordo» Pianca»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 15694,
+        "name": "Alejandro «Pituko» Serritiello"
+      },
+      "alias": "Pituko",
+      "why": "Apodo dentro del nombre «Alejandro «Pituko» Serritiello»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 15695,
+        "name": "«Ticko» Romero"
+      },
+      "alias": "Ticko",
+      "why": "Apodo dentro del nombre ««Ticko» Romero»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 15732,
+        "name": "Oscar “Raspy” Silva"
+      },
+      "alias": "Raspy",
+      "why": "Apodo dentro del nombre «Oscar “Raspy” Silva»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 15744,
+        "name": "Antonio “Márgaro” Díaz"
+      },
+      "alias": "Márgaro",
+      "why": "Apodo dentro del nombre «Antonio “Márgaro” Díaz»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 15914,
+        "name": "Wilmer \"Mime\""
+      },
+      "alias": "Mime",
+      "why": "Apodo dentro del nombre «Wilmer \"Mime\"»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 15969,
+        "name": "Alberto «Beto»"
+      },
+      "alias": "Beto",
+      "why": "Apodo dentro del nombre «Alberto «Beto»»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 15973,
+        "name": "Alonso «Nano» Moreno"
+      },
+      "alias": "Nano",
+      "why": "Apodo dentro del nombre «Alonso «Nano» Moreno»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 16022,
+        "name": "Carlo «El gordo»"
+      },
+      "alias": "El gordo",
+      "why": "Apodo dentro del nombre «Carlo «El gordo»»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 16037,
+        "name": "\"Breker\" Márquez"
+      },
+      "alias": "Breker",
+      "why": "Apodo dentro del nombre «\"Breker\" Márquez»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 16074,
+        "name": "Renier «Bolo» Simón"
+      },
+      "alias": "Bolo",
+      "why": "Apodo dentro del nombre «Renier «Bolo» Simón»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 16076,
+        "name": "Wilfen «Mono» Salazar"
+      },
+      "alias": "Mono",
+      "why": "Apodo dentro del nombre «Wilfen «Mono» Salazar»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 1608,
+        "name": "Víctor Rodríguez \"Albahaca\""
+      },
+      "alias": "Albahaca",
+      "why": "Apodo dentro del nombre «Víctor Rodríguez \"Albahaca\"»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 16155,
+        "name": "Agustín Salas \"Mars Polem\""
+      },
+      "alias": "Mars Polem",
+      "why": "Apodo dentro del nombre «Agustín Salas \"Mars Polem\"»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 16158,
+        "name": "Carlos Sojo «Raffly»"
+      },
+      "alias": "Raffly",
+      "why": "Apodo dentro del nombre «Carlos Sojo «Raffly»»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 1621,
+        "name": "Carlos \"Tato\" García"
+      },
+      "alias": "Tato",
+      "why": "Apodo dentro del nombre «Carlos \"Tato\" García»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 1623,
+        "name": "José \"Joey\" Gonzalez"
+      },
+      "alias": "Joey",
+      "why": "Apodo dentro del nombre «José \"Joey\" Gonzalez»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 1626,
+        "name": "Emmanuel \"Evan\" Fajardo"
+      },
+      "alias": "Evan",
+      "why": "Apodo dentro del nombre «Emmanuel \"Evan\" Fajardo»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 16280,
+        "name": "Tomy «LeB» Chávez"
+      },
+      "alias": "LeB",
+      "why": "Apodo dentro del nombre «Tomy «LeB» Chávez»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 16283,
+        "name": "Alejandro «El Kravitz»"
+      },
+      "alias": "El Kravitz",
+      "why": "Apodo dentro del nombre «Alejandro «El Kravitz»»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 16289,
+        "name": "Freddy «Cololo» Granado"
+      },
+      "alias": "Cololo",
+      "why": "Apodo dentro del nombre «Freddy «Cololo» Granado»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 16304,
+        "name": "Víctor \"Yayin\" Castillo"
+      },
+      "alias": "Yayin",
+      "why": "Apodo dentro del nombre «Víctor \"Yayin\" Castillo»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 16446,
+        "name": "Alberto “Beto” Lozada"
+      },
+      "alias": "Beto",
+      "why": "Apodo dentro del nombre «Alberto “Beto” Lozada»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 16518,
+        "name": "Mario \"Pit\" Martínez"
+      },
+      "alias": "Pit",
+      "why": "Apodo dentro del nombre «Mario \"Pit\" Martínez»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 16594,
+        "name": "Carlos \"Nene\" Quintero"
+      },
+      "alias": "Nene",
+      "why": "Apodo dentro del nombre «Carlos \"Nene\" Quintero»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 16595,
+        "name": "Rubén \"Micho\" Correa"
+      },
+      "alias": "Micho",
+      "why": "Apodo dentro del nombre «Rubén \"Micho\" Correa»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 16597,
+        "name": "Jesús \"Chu\" Quintero"
+      },
+      "alias": "Chu",
+      "why": "Apodo dentro del nombre «Jesús \"Chu\" Quintero»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 16626,
+        "name": "José Carlos «Pepe» Cabrera Morell"
+      },
+      "alias": "Pepe",
+      "why": "Apodo dentro del nombre «José Carlos «Pepe» Cabrera Morell»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 16627,
+        "name": "Francisco «Paco» Escuela Morell"
+      },
+      "alias": "Paco",
+      "why": "Apodo dentro del nombre «Francisco «Paco» Escuela Morell»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 16632,
+        "name": "Carmelo «Kike» Fernández"
+      },
+      "alias": "Kike",
+      "why": "Apodo dentro del nombre «Carmelo «Kike» Fernández»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 16659,
+        "name": "Mauricio «Morris» Alvins"
+      },
+      "alias": "Morris",
+      "why": "Apodo dentro del nombre «Mauricio «Morris» Alvins»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 16660,
+        "name": "Gustavo «Gus» Plaza"
+      },
+      "alias": "Gus",
+      "why": "Apodo dentro del nombre «Gustavo «Gus» Plaza»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 1667,
+        "name": "Pablo \"Mulato\" González"
+      },
+      "alias": "Mulato",
+      "why": "Apodo dentro del nombre «Pablo \"Mulato\" González»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 16680,
+        "name": "Carlos «Neno» Alcalá"
+      },
+      "alias": "Neno",
+      "why": "Apodo dentro del nombre «Carlos «Neno» Alcalá»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 1669,
+        "name": "Manuel \"Manny\" Diquez"
+      },
+      "alias": "Manny",
+      "why": "Apodo dentro del nombre «Manuel \"Manny\" Diquez»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 16697,
+        "name": "Andrés Acosta «Patolin»"
+      },
+      "alias": "Patolin",
+      "why": "Apodo dentro del nombre «Andrés Acosta «Patolin»»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 1671,
+        "name": "Daniel \"Danny\" García"
+      },
+      "alias": "Danny",
+      "why": "Apodo dentro del nombre «Daniel \"Danny\" García»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 1672,
+        "name": "Luis \"Golding\" Barrios"
+      },
+      "alias": "Golding",
+      "why": "Apodo dentro del nombre «Luis \"Golding\" Barrios»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 16721,
+        "name": "Augusto «Sandino» Manaure"
+      },
+      "alias": "Sandino",
+      "why": "Apodo dentro del nombre «Augusto «Sandino» Manaure»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 16805,
+        "name": "Bryan «Slide» Torelló"
+      },
+      "alias": "Slide",
+      "why": "Apodo dentro del nombre «Bryan «Slide» Torelló»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 16808,
+        "name": "Reynaldo «Ren Arrow» Rangel"
+      },
+      "alias": "Ren Arrow",
+      "why": "Apodo dentro del nombre «Reynaldo «Ren Arrow» Rangel»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 16819,
+        "name": "Gustavo \"Chui\" Pietrini"
+      },
+      "alias": "Chui",
+      "why": "Apodo dentro del nombre «Gustavo \"Chui\" Pietrini»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 16874,
+        "name": "Luis «Tato» Rivas"
+      },
+      "alias": "Tato",
+      "why": "Apodo dentro del nombre «Luis «Tato» Rivas»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 16891,
+        "name": "Néstor «Chinojoint» Meneses"
+      },
+      "alias": "Chinojoint",
+      "why": "Apodo dentro del nombre «Néstor «Chinojoint» Meneses»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 16926,
+        "name": "Alves \"Chepo\" González"
+      },
+      "alias": "Chepo",
+      "why": "Apodo dentro del nombre «Alves \"Chepo\" González»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 17071,
+        "name": "“Mike” Hernández"
+      },
+      "alias": "Mike",
+      "why": "Apodo dentro del nombre «“Mike” Hernández»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 17082,
+        "name": "José Antonio “Cheo” Mendoza"
+      },
+      "alias": "Cheo",
+      "why": "Apodo dentro del nombre «José Antonio “Cheo” Mendoza»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 17099,
+        "name": "Alejandro \"Jackson\" Narváez"
+      },
+      "alias": "Jackson",
+      "why": "Apodo dentro del nombre «Alejandro \"Jackson\" Narváez»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 17125,
+        "name": "Rafael «El Grillo» Dona"
+      },
+      "alias": "El Grillo",
+      "why": "Apodo dentro del nombre «Rafael «El Grillo» Dona»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 17126,
+        "name": "Carmelo «Pascualito» Petti"
+      },
+      "alias": "Pascualito",
+      "why": "Apodo dentro del nombre «Carmelo «Pascualito» Petti»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 17127,
+        "name": "Edwin «Wincho» Avendaño"
+      },
+      "alias": "Wincho",
+      "why": "Apodo dentro del nombre «Edwin «Wincho» Avendaño»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 17129,
+        "name": "Eduardo Ponce «Edthunder»"
+      },
+      "alias": "Edthunder",
+      "why": "Apodo dentro del nombre «Eduardo Ponce «Edthunder»»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 17132,
+        "name": "Daniel Arreaza «El Negro»"
+      },
+      "alias": "El Negro",
+      "why": "Apodo dentro del nombre «Daniel Arreaza «El Negro»»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 17249,
+        "name": "Luis \"Pepón\" Del Risco"
+      },
+      "alias": "Pepón",
+      "why": "Apodo dentro del nombre «Luis \"Pepón\" Del Risco»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 17253,
+        "name": "Manuel Cabello «Chewbacca»"
+      },
+      "alias": "Chewbacca",
+      "why": "Apodo dentro del nombre «Manuel Cabello «Chewbacca»»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 17293,
+        "name": "Victorino \"Kasino\" González"
+      },
+      "alias": "Kasino",
+      "why": "Apodo dentro del nombre «Victorino \"Kasino\" González»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 17308,
+        "name": "Juan \"El Gocho\" Lopez"
+      },
+      "alias": "El Gocho",
+      "why": "Apodo dentro del nombre «Juan \"El Gocho\" Lopez»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 17346,
+        "name": "Rubén «Sirit» Vargas"
+      },
+      "alias": "Sirit",
+      "why": "Apodo dentro del nombre «Rubén «Sirit» Vargas»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 17350,
+        "name": "Nelson «Guaramato» Zea"
+      },
+      "alias": "Guaramato",
+      "why": "Apodo dentro del nombre «Nelson «Guaramato» Zea»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 17611,
+        "name": "Antonio «Toño» Méndez"
+      },
+      "alias": "Toño",
+      "why": "Apodo dentro del nombre «Antonio «Toño» Méndez»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 17614,
+        "name": "Johan «Seth»"
+      },
+      "alias": "Seth",
+      "why": "Apodo dentro del nombre «Johan «Seth»»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 17615,
+        "name": "Lioan «Tenfre»"
+      },
+      "alias": "Tenfre",
+      "why": "Apodo dentro del nombre «Lioan «Tenfre»»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 17705,
+        "name": "José «Joseito» Romero"
+      },
+      "alias": "Joseito",
+      "why": "Apodo dentro del nombre «José «Joseito» Romero»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 17753,
+        "name": "Junior \"Camba\" Gamez"
+      },
+      "alias": "Camba",
+      "why": "Apodo dentro del nombre «Junior \"Camba\" Gamez»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 17759,
+        "name": "Carlos «Krueger» Azueje"
+      },
+      "alias": "Krueger",
+      "why": "Apodo dentro del nombre «Carlos «Krueger» Azueje»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 17760,
+        "name": "Carlos «Krueger» Azuaje"
+      },
+      "alias": "Krueger",
+      "why": "Apodo dentro del nombre «Carlos «Krueger» Azuaje»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 17806,
+        "name": "Francisco «Paco» Huidobro"
+      },
+      "alias": "Paco",
+      "why": "Apodo dentro del nombre «Francisco «Paco» Huidobro»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 17840,
+        "name": "Italo «Talo» Hurtado"
+      },
+      "alias": "Talo",
+      "why": "Apodo dentro del nombre «Italo «Talo» Hurtado»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 17841,
+        "name": "Ramón «Moncho» Vilugrón"
+      },
+      "alias": "Moncho",
+      "why": "Apodo dentro del nombre «Ramón «Moncho» Vilugrón»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 17843,
+        "name": "Ignacio «Nacho» Abarca"
+      },
+      "alias": "Nacho",
+      "why": "Apodo dentro del nombre «Ignacio «Nacho» Abarca»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 17845,
+        "name": "Rodolfo «Chuck» Rivera"
+      },
+      "alias": "Chuck",
+      "why": "Apodo dentro del nombre «Rodolfo «Chuck» Rivera»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 17846,
+        "name": "Alejandro «Damage Boy» Rossell"
+      },
+      "alias": "Damage Boy",
+      "why": "Apodo dentro del nombre «Alejandro «Damage Boy» Rossell»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 17848,
+        "name": "Robert «Rožan» Rožanski"
+      },
+      "alias": "Rožan",
+      "why": "Apodo dentro del nombre «Robert «Rožan» Rožanski»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 17850,
+        "name": "Michal «Kameň» Kaminski"
+      },
+      "alias": "Kameň",
+      "why": "Apodo dentro del nombre «Michal «Kameň» Kaminski»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 1787,
+        "name": "Elida \"Gina\" De Alamo Leon"
+      },
+      "alias": "Gina",
+      "why": "Apodo dentro del nombre «Elida \"Gina\" De Alamo Leon»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 1790,
+        "name": "\"Nenuco\" Cuy"
+      },
+      "alias": "Nenuco",
+      "why": "Apodo dentro del nombre «\"Nenuco\" Cuy»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 17900,
+        "name": "Fredrik «Mr.Poo» Palo"
+      },
+      "alias": "Mr.Poo",
+      "why": "Apodo dentro del nombre «Fredrik «Mr.Poo» Palo»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 17949,
+        "name": "Juan Esteban «Juanes» Aristizábal Vásquez"
+      },
+      "alias": "Juanes",
+      "why": "Apodo dentro del nombre «Juan Esteban «Juanes» Aristizábal Vásquez»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 18018,
+        "name": "Thomas «Quorthon» Forsberg"
+      },
+      "alias": "Quorthon",
+      "why": "Apodo dentro del nombre «Thomas «Quorthon» Forsberg»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 18086,
+        "name": "Daniel Herrera «Dalion»"
+      },
+      "alias": "Dalion",
+      "why": "Apodo dentro del nombre «Daniel Herrera «Dalion»»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 18109,
+        "name": "Antony \"Koru\" Jiménez"
+      },
+      "alias": "Koru",
+      "why": "Apodo dentro del nombre «Antony \"Koru\" Jiménez»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 18110,
+        "name": "John \"Johnny Parrot Joe\" Bustamante"
+      },
+      "alias": "Johnny Parrot Joe",
+      "why": "Apodo dentro del nombre «John \"Johnny Parrot Joe\" Bustamante»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 18111,
+        "name": "Juan Carlo \"Chewie\" Zaccaro"
+      },
+      "alias": "Chewie",
+      "why": "Apodo dentro del nombre «Juan Carlo \"Chewie\" Zaccaro»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 18113,
+        "name": "Raúl «Alexis» Ortiz"
+      },
+      "alias": "Alexis",
+      "why": "Apodo dentro del nombre «Raúl «Alexis» Ortiz»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 18114,
+        "name": "Joel «Fido» Martínez"
+      },
+      "alias": "Fido",
+      "why": "Apodo dentro del nombre «Joel «Fido» Martínez»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 18150,
+        "name": "Gloria «Goyo» Martínez"
+      },
+      "alias": "Goyo",
+      "why": "Apodo dentro del nombre «Gloria «Goyo» Martínez»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 18151,
+        "name": "Carlos «Tostao» Valencia"
+      },
+      "alias": "Tostao",
+      "why": "Apodo dentro del nombre «Carlos «Tostao» Valencia»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 18152,
+        "name": "Miguel «Slow» Martínez"
+      },
+      "alias": "Slow",
+      "why": "Apodo dentro del nombre «Miguel «Slow» Martínez»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 18163,
+        "name": "Eleazar \"Tito\" Vargas"
+      },
+      "alias": "Tito",
+      "why": "Apodo dentro del nombre «Eleazar \"Tito\" Vargas»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 18175,
+        "name": "Juan \"baSSura\" Marín"
+      },
+      "alias": "baSSura",
+      "why": "Apodo dentro del nombre «Juan \"baSSura\" Marín»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 1848,
+        "name": "William \"Magú\" Guzmán"
+      },
+      "alias": "Magú",
+      "why": "Apodo dentro del nombre «William \"Magú\" Guzmán»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 18579,
+        "name": "\"Cheo\" Valenzuela"
+      },
+      "alias": "Cheo",
+      "why": "Apodo dentro del nombre «\"Cheo\" Valenzuela»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 1908,
+        "name": "Agustín \"Justin\" Parra"
+      },
+      "alias": "Justin",
+      "why": "Apodo dentro del nombre «Agustín \"Justin\" Parra»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 1912,
+        "name": "Jeremias \"Jeremy\" Ruiz"
+      },
+      "alias": "Jeremy",
+      "why": "Apodo dentro del nombre «Jeremias \"Jeremy\" Ruiz»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 192,
+        "name": "Carlos \"Kike\" Franco"
+      },
+      "alias": "Kike",
+      "why": "Apodo dentro del nombre «Carlos \"Kike\" Franco»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 1937,
+        "name": "Alejandro \"Alejo\" Gómez"
+      },
+      "alias": "Alejo",
+      "why": "Apodo dentro del nombre «Alejandro \"Alejo\" Gómez»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 1941,
+        "name": "Rafael \"Rafa\" Sánchez"
+      },
+      "alias": "Rafa",
+      "why": "Apodo dentro del nombre «Rafael \"Rafa\" Sánchez»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 1954,
+        "name": "Héctor \"Zeta\" Bossio"
+      },
+      "alias": "Zeta",
+      "why": "Apodo dentro del nombre «Héctor \"Zeta\" Bossio»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 1962,
+        "name": "Miguel Ángel \"Miky\" Huidobro"
+      },
+      "alias": "Miky",
+      "why": "Apodo dentro del nombre «Miguel Ángel \"Miky\" Huidobro»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 1964,
+        "name": "Juan Francisco \"Paco\" Ayala"
+      },
+      "alias": "Paco",
+      "why": "Apodo dentro del nombre «Juan Francisco \"Paco\" Ayala»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 1965,
+        "name": "Ismael \"Tito\" Fuentes"
+      },
+      "alias": "Tito",
+      "why": "Apodo dentro del nombre «Ismael \"Tito\" Fuentes»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 1969,
+        "name": "Randall \"Randy\" Ebright"
+      },
+      "alias": "Randy",
+      "why": "Apodo dentro del nombre «Randall \"Randy\" Ebright»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 1978,
+        "name": "Francisco \"Paco\" Huidobro"
+      },
+      "alias": "Paco",
+      "why": "Apodo dentro del nombre «Francisco \"Paco\" Huidobro»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 2013,
+        "name": "Carlos \"Chuck\" Rodríguez"
+      },
+      "alias": "Chuck",
+      "why": "Apodo dentro del nombre «Carlos \"Chuck\" Rodríguez»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 2129,
+        "name": "Orlando \"El Joe\" Alvarado"
+      },
+      "alias": "El Joe",
+      "why": "Apodo dentro del nombre «Orlando \"El Joe\" Alvarado»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 2184,
+        "name": "José \"Cebolla\" Briceño"
+      },
+      "alias": "Cebolla",
+      "why": "Apodo dentro del nombre «José \"Cebolla\" Briceño»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 2190,
+        "name": "Carlo \"Loquillo\" Arriaga"
+      },
+      "alias": "Loquillo",
+      "why": "Apodo dentro del nombre «Carlo \"Loquillo\" Arriaga»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 2193,
+        "name": "Javier \"Rodilla\" Farías"
+      },
+      "alias": "Rodilla",
+      "why": "Apodo dentro del nombre «Javier \"Rodilla\" Farías»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 2226,
+        "name": "Ricardo \"El Pollo\" Bastidas"
+      },
+      "alias": "El Pollo",
+      "why": "Apodo dentro del nombre «Ricardo \"El Pollo\" Bastidas»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 2227,
+        "name": "Diego \"El Negro\" Álvarez Muñoz"
+      },
+      "alias": "El Negro",
+      "why": "Apodo dentro del nombre «Diego \"El Negro\" Álvarez Muñoz»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 2335,
+        "name": "Alberto \"Beto\" Yajure"
+      },
+      "alias": "Beto",
+      "why": "Apodo dentro del nombre «Alberto \"Beto\" Yajure»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 237,
+        "name": "Luis \"Tata\" Guerra"
+      },
+      "alias": "Tata",
+      "why": "Apodo dentro del nombre «Luis \"Tata\" Guerra»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 2383,
+        "name": "Manuel \"Manel\" Muñoz"
+      },
+      "alias": "Manel",
+      "why": "Apodo dentro del nombre «Manuel \"Manel\" Muñoz»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 2423,
+        "name": "David \"Morocho\" Hernández"
+      },
+      "alias": "Morocho",
+      "why": "Apodo dentro del nombre «David \"Morocho\" Hernández»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 2447,
+        "name": "Manuel \"Dr Faustus\""
+      },
+      "alias": "Dr Faustus",
+      "why": "Apodo dentro del nombre «Manuel \"Dr Faustus\"»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 2460,
+        "name": "Félix \"El Gato\" Duque"
+      },
+      "alias": "El Gato",
+      "why": "Apodo dentro del nombre «Félix \"El Gato\" Duque»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 2521,
+        "name": "José \"Chemi\" Gutierrez"
+      },
+      "alias": "Chemi",
+      "why": "Apodo dentro del nombre «José \"Chemi\" Gutierrez»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 2527,
+        "name": "Christian \"Funky C\" Moraga"
+      },
+      "alias": "Funky C",
+      "why": "Apodo dentro del nombre «Christian \"Funky C\" Moraga»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 2607,
+        "name": "Humberto \"Pocho\" Pérez"
+      },
+      "alias": "Pocho",
+      "why": "Apodo dentro del nombre «Humberto \"Pocho\" Pérez»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 2608,
+        "name": "Johan \"El Panameño\""
+      },
+      "alias": "El Panameño",
+      "why": "Apodo dentro del nombre «Johan \"El Panameño\"»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 264,
+        "name": "Mario \"Torres\" Romero"
+      },
+      "alias": "Torres",
+      "why": "Apodo dentro del nombre «Mario \"Torres\" Romero»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 2641,
+        "name": "Alciro \"Trosqui\" Valentinés"
+      },
+      "alias": "Trosqui",
+      "why": "Apodo dentro del nombre «Alciro \"Trosqui\" Valentinés»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 2660,
+        "name": "Jesús \"Chu\" Quintero"
+      },
+      "alias": "Chu",
+      "why": "Apodo dentro del nombre «Jesús \"Chu\" Quintero»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 2668,
+        "name": "Alejandro \"Piti\" González"
+      },
+      "alias": "Piti",
+      "why": "Apodo dentro del nombre «Alejandro \"Piti\" González»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 2686,
+        "name": "Francisco \"Pitufo\" Vivas"
+      },
+      "alias": "Pitufo",
+      "why": "Apodo dentro del nombre «Francisco \"Pitufo\" Vivas»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 2697,
+        "name": "RCA \"Nutria\""
+      },
+      "alias": "Nutria",
+      "why": "Apodo dentro del nombre «RCA \"Nutria\"»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 2770,
+        "name": "Manuel Enrique \"Manry\" Pérez Olivares"
+      },
+      "alias": "Manry",
+      "why": "Apodo dentro del nombre «Manuel Enrique \"Manry\" Pérez Olivares»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 2838,
+        "name": "Leandro \"KPU\" Añez"
+      },
+      "alias": "KPU",
+      "why": "Apodo dentro del nombre «Leandro \"KPU\" Añez»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 2855,
+        "name": "Carlos \"Turbo\" Guerreiro"
+      },
+      "alias": "Turbo",
+      "why": "Apodo dentro del nombre «Carlos \"Turbo\" Guerreiro»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 29,
+        "name": "Rubén \"Micho\" Correa"
+      },
+      "alias": "Micho",
+      "why": "Apodo dentro del nombre «Rubén \"Micho\" Correa»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 2902,
+        "name": "José Leonardo \"Pepeleo\" Hernández"
+      },
+      "alias": "Pepeleo",
+      "why": "Apodo dentro del nombre «José Leonardo \"Pepeleo\" Hernández»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 2904,
+        "name": "Alejandro \"Niño\" Berti"
+      },
+      "alias": "Niño",
+      "why": "Apodo dentro del nombre «Alejandro \"Niño\" Berti»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 2954,
+        "name": "Eulalio \"Churdy\" Toledo"
+      },
+      "alias": "Churdy",
+      "why": "Apodo dentro del nombre «Eulalio \"Churdy\" Toledo»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 2996,
+        "name": "Daniel \"Mono\" Briceño"
+      },
+      "alias": "Mono",
+      "why": "Apodo dentro del nombre «Daniel \"Mono\" Briceño»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 2997,
+        "name": "Fernando \"Fer\" Rodríguez"
+      },
+      "alias": "Fer",
+      "why": "Apodo dentro del nombre «Fernando \"Fer\" Rodríguez»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 3032,
+        "name": "Carlos \"Tato\" Rodríguez"
+      },
+      "alias": "Tato",
+      "why": "Apodo dentro del nombre «Carlos \"Tato\" Rodríguez»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 305,
+        "name": "Guaicaipuro \"Waika\" Longa"
+      },
+      "alias": "Waika",
+      "why": "Apodo dentro del nombre «Guaicaipuro \"Waika\" Longa»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 3069,
+        "name": "Julio \"Mal Tripear Jamás\" Alonso"
+      },
+      "alias": "Mal Tripear Jamás",
+      "why": "Apodo dentro del nombre «Julio \"Mal Tripear Jamás\" Alonso»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 3084,
+        "name": "Jonathan \"Watis\" Gómez"
+      },
+      "alias": "Watis",
+      "why": "Apodo dentro del nombre «Jonathan \"Watis\" Gómez»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 3111,
+        "name": "Jonás \"Tabasco\" Hidalgo"
+      },
+      "alias": "Tabasco",
+      "why": "Apodo dentro del nombre «Jonás \"Tabasco\" Hidalgo»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 3157,
+        "name": "Leonardo \"Leo\" Borges"
+      },
+      "alias": "Leo",
+      "why": "Apodo dentro del nombre «Leonardo \"Leo\" Borges»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 3188,
+        "name": "Gastón \"Moreira\" Goncalves"
+      },
+      "alias": "Moreira",
+      "why": "Apodo dentro del nombre «Gastón \"Moreira\" Goncalves»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 3190,
+        "name": "\"Soraya\" Raquel Lamilla"
+      },
+      "alias": "Soraya",
+      "why": "Apodo dentro del nombre «\"Soraya\" Raquel Lamilla»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 3199,
+        "name": "Carlos \"Kako\" Enrique Guzmán"
+      },
+      "alias": "Kako",
+      "why": "Apodo dentro del nombre «Carlos \"Kako\" Enrique Guzmán»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 3206,
+        "name": "Ricardo Tirado \"Reta\""
+      },
+      "alias": "Reta",
+      "why": "Apodo dentro del nombre «Ricardo Tirado \"Reta\"»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 3226,
+        "name": "José \"Pepe\" Vera"
+      },
+      "alias": "Pepe",
+      "why": "Apodo dentro del nombre «José \"Pepe\" Vera»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 3286,
+        "name": "José Rafael \"Cucaracha\" Gómez"
+      },
+      "alias": "Cucaracha",
+      "why": "Apodo dentro del nombre «José Rafael \"Cucaracha\" Gómez»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 3295,
+        "name": "José Miguel \"Chemi\" Gutiérrez"
+      },
+      "alias": "Chemi",
+      "why": "Apodo dentro del nombre «José Miguel \"Chemi\" Gutiérrez»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 3327,
+        "name": "Endel \"El de Choroní\""
+      },
+      "alias": "El de Choroní",
+      "why": "Apodo dentro del nombre «Endel \"El de Choroní\"»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 3332,
+        "name": "Luis \"Luca\" Ortega"
+      },
+      "alias": "Luca",
+      "why": "Apodo dentro del nombre «Luis \"Luca\" Ortega»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 3333,
+        "name": "Miguel \"El Mopri\" Padrón"
+      },
+      "alias": "El Mopri",
+      "why": "Apodo dentro del nombre «Miguel \"El Mopri\" Padrón»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 3344,
+        "name": "Orlando \"Mangan\" Martínez"
+      },
+      "alias": "Mangan",
+      "why": "Apodo dentro del nombre «Orlando \"Mangan\" Martínez»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 3353,
+        "name": "Carlos \"Turbo\" G"
+      },
+      "alias": "Turbo",
+      "why": "Apodo dentro del nombre «Carlos \"Turbo\" G»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 3443,
+        "name": "Francisco \"Chicho\" Tedesco"
+      },
+      "alias": "Chicho",
+      "why": "Apodo dentro del nombre «Francisco \"Chicho\" Tedesco»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 3519,
+        "name": "José \"Cholo\" Ortiz"
+      },
+      "alias": "Cholo",
+      "why": "Apodo dentro del nombre «José \"Cholo\" Ortiz»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 3523,
+        "name": "Oscar \"El Negro\" Maggi"
+      },
+      "alias": "El Negro",
+      "why": "Apodo dentro del nombre «Oscar \"El Negro\" Maggi»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 3631,
+        "name": "Simón \"Calma\" Williams"
+      },
+      "alias": "Calma",
+      "why": "Apodo dentro del nombre «Simón \"Calma\" Williams»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 375,
+        "name": "Nestor \"El Chino\" Meneces"
+      },
+      "alias": "El Chino",
+      "why": "Apodo dentro del nombre «Nestor \"El Chino\" Meneces»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 3875,
+        "name": "José \"Chego\" Cabrices"
+      },
+      "alias": "Chego",
+      "why": "Apodo dentro del nombre «José \"Chego\" Cabrices»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 3934,
+        "name": "Alejandro \"Nene\" Pérez"
+      },
+      "alias": "Nene",
+      "why": "Apodo dentro del nombre «Alejandro \"Nene\" Pérez»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 4054,
+        "name": "Raúl \"Zack\" López"
+      },
+      "alias": "Zack",
+      "why": "Apodo dentro del nombre «Raúl \"Zack\" López»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 4130,
+        "name": "Sebastián \"Sebasplay\" Nuñez"
+      },
+      "alias": "Sebasplay",
+      "why": "Apodo dentro del nombre «Sebastián \"Sebasplay\" Nuñez»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 4131,
+        "name": "Maximo \"Cari Cari\""
+      },
+      "alias": "Cari Cari",
+      "why": "Apodo dentro del nombre «Maximo \"Cari Cari\"»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 4150,
+        "name": "Luis \"Tato\" Rivas"
+      },
+      "alias": "Tato",
+      "why": "Apodo dentro del nombre «Luis \"Tato\" Rivas»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 4170,
+        "name": "Jorge \"Pepino\" González"
+      },
+      "alias": "Pepino",
+      "why": "Apodo dentro del nombre «Jorge \"Pepino\" González»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 437,
+        "name": "Alejandro \"Chofa\" Loero"
+      },
+      "alias": "Chofa",
+      "why": "Apodo dentro del nombre «Alejandro \"Chofa\" Loero»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 4408,
+        "name": "Oswaldo \"Oss\" González"
+      },
+      "alias": "Oss",
+      "why": "Apodo dentro del nombre «Oswaldo \"Oss\" González»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 4415,
+        "name": "Gabriel \"Guapito\" Ferrer"
+      },
+      "alias": "Guapito",
+      "why": "Apodo dentro del nombre «Gabriel \"Guapito\" Ferrer»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 4441,
+        "name": "Jesús \"Kike\" Rodriguez"
+      },
+      "alias": "Kike",
+      "why": "Apodo dentro del nombre «Jesús \"Kike\" Rodriguez»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 4684,
+        "name": "Rubén \"El Enano\" Castro"
+      },
+      "alias": "El Enano",
+      "why": "Apodo dentro del nombre «Rubén \"El Enano\" Castro»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 4766,
+        "name": "Daniel \"Kaio\" Soto"
+      },
+      "alias": "Kaio",
+      "why": "Apodo dentro del nombre «Daniel \"Kaio\" Soto»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 483,
+        "name": "José Luis \"Caplís\" Chacín"
+      },
+      "alias": "Caplís",
+      "why": "Apodo dentro del nombre «José Luis \"Caplís\" Chacín»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 485,
+        "name": "Francisco \"Kiko\" Nuñez"
+      },
+      "alias": "Kiko",
+      "why": "Apodo dentro del nombre «Francisco \"Kiko\" Nuñez»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 4924,
+        "name": "Victor \"Kasiax\" Bermudez"
+      },
+      "alias": "Kasiax",
+      "why": "Apodo dentro del nombre «Victor \"Kasiax\" Bermudez»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 4966,
+        "name": "Eduardo \"Kike\" Cabanzo"
+      },
+      "alias": "Kike",
+      "why": "Apodo dentro del nombre «Eduardo \"Kike\" Cabanzo»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 5107,
+        "name": "Miguel \"Miki\" Bermúdez"
+      },
+      "alias": "Miki",
+      "why": "Apodo dentro del nombre «Miguel \"Miki\" Bermúdez»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 511,
+        "name": "José \"Pingüino\" Echezuría"
+      },
+      "alias": "Pingüino",
+      "why": "Apodo dentro del nombre «José \"Pingüino\" Echezuría»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 5139,
+        "name": "César \"Loloice\" Mila"
+      },
+      "alias": "Loloice",
+      "why": "Apodo dentro del nombre «César \"Loloice\" Mila»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 5198,
+        "name": "RCA (aka) Nutria"
+      },
+      "alias": "aka",
+      "why": "Apodo dentro del nombre «RCA (aka) Nutria»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 5307,
+        "name": "Rafael \"Tato\" Monsalve"
+      },
+      "alias": "Tato",
+      "why": "Apodo dentro del nombre «Rafael \"Tato\" Monsalve»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 539,
+        "name": "Ilan \"Chester\" Czentochowsky"
+      },
+      "alias": "Chester",
+      "why": "Apodo dentro del nombre «Ilan \"Chester\" Czentochowsky»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 541,
+        "name": "Pedro \"Pete\" Matute"
+      },
+      "alias": "Pete",
+      "why": "Apodo dentro del nombre «Pedro \"Pete\" Matute»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 5493,
+        "name": "Mariachi \"Mexico 88\""
+      },
+      "alias": "Mexico 88",
+      "why": "Apodo dentro del nombre «Mariachi \"Mexico 88\"»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 5555,
+        "name": "Oswaldo \"Chupa\" Méndez"
+      },
+      "alias": "Chupa",
+      "why": "Apodo dentro del nombre «Oswaldo \"Chupa\" Méndez»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 5598,
+        "name": "Giusepe \"Pepino\" Rubino"
+      },
+      "alias": "Pepino",
+      "why": "Apodo dentro del nombre «Giusepe \"Pepino\" Rubino»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 5833,
+        "name": "Humberto \"Tito\" Iglesias"
+      },
+      "alias": "Tito",
+      "why": "Apodo dentro del nombre «Humberto \"Tito\" Iglesias»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 5863,
+        "name": "Carlos \"El Negro\" Betancourt"
+      },
+      "alias": "El Negro",
+      "why": "Apodo dentro del nombre «Carlos \"El Negro\" Betancourt»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 5864,
+        "name": "Francisco \"Kiko\" Campins"
+      },
+      "alias": "Kiko",
+      "why": "Apodo dentro del nombre «Francisco \"Kiko\" Campins»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 5873,
+        "name": "Oswaldo \"Puchy\" Rojas"
+      },
+      "alias": "Puchy",
+      "why": "Apodo dentro del nombre «Oswaldo \"Puchy\" Rojas»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 5874,
+        "name": "Giussepe \"Pino\" Lagona"
+      },
+      "alias": "Pino",
+      "why": "Apodo dentro del nombre «Giussepe \"Pino\" Lagona»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 5882,
+        "name": "Ebenezer \"Pocho\" García Navarro"
+      },
+      "alias": "Pocho",
+      "why": "Apodo dentro del nombre «Ebenezer \"Pocho\" García Navarro»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 5965,
+        "name": "César \"Chapa\" Muñoz"
+      },
+      "alias": "Chapa",
+      "why": "Apodo dentro del nombre «César \"Chapa\" Muñoz»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 5990,
+        "name": "Sofia \"La Nena\" Pulido"
+      },
+      "alias": "La Nena",
+      "why": "Apodo dentro del nombre «Sofia \"La Nena\" Pulido»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 6006,
+        "name": "José Gregorio \"Goyo\" Mijares"
+      },
+      "alias": "Goyo",
+      "why": "Apodo dentro del nombre «José Gregorio \"Goyo\" Mijares»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 602,
+        "name": "José Manuel \"Chema\" Arria"
+      },
+      "alias": "Chema",
+      "why": "Apodo dentro del nombre «José Manuel \"Chema\" Arria»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 603,
+        "name": "José \"Joseíto\" Romero"
+      },
+      "alias": "Joseíto",
+      "why": "Apodo dentro del nombre «José \"Joseíto\" Romero»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 6072,
+        "name": "José \"Pepe\" Rodríguez"
+      },
+      "alias": "Pepe",
+      "why": "Apodo dentro del nombre «José \"Pepe\" Rodríguez»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 6077,
+        "name": "José \"Cheo\" Morillo"
+      },
+      "alias": "Cheo",
+      "why": "Apodo dentro del nombre «José \"Cheo\" Morillo»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 6098,
+        "name": "José \"Viruta\" Martínez"
+      },
+      "alias": "Viruta",
+      "why": "Apodo dentro del nombre «José \"Viruta\" Martínez»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 6117,
+        "name": "Jose \"Goyo\" Mijares"
+      },
+      "alias": "Goyo",
+      "why": "Apodo dentro del nombre «Jose \"Goyo\" Mijares»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 6124,
+        "name": "Guillermo \"Tato\" Marcano"
+      },
+      "alias": "Tato",
+      "why": "Apodo dentro del nombre «Guillermo \"Tato\" Marcano»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 6142,
+        "name": "Luis \"Pilucho\" Trujillo"
+      },
+      "alias": "Pilucho",
+      "why": "Apodo dentro del nombre «Luis \"Pilucho\" Trujillo»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 6188,
+        "name": "José \"Nacho\" Rondón"
+      },
+      "alias": "Nacho",
+      "why": "Apodo dentro del nombre «José \"Nacho\" Rondón»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 6299,
+        "name": "Sascha \"Busy\" Bühren"
+      },
+      "alias": "Busy",
+      "why": "Apodo dentro del nombre «Sascha \"Busy\" Bühren»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 6337,
+        "name": "Guillermo \"Tito\" Falcón"
+      },
+      "alias": "Tito",
+      "why": "Apodo dentro del nombre «Guillermo \"Tito\" Falcón»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 6476,
+        "name": "Edmundo \"Memo\" Rincón"
+      },
+      "alias": "Memo",
+      "why": "Apodo dentro del nombre «Edmundo \"Memo\" Rincón»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 6488,
+        "name": "Cesar \"Sapo\" Zorrilla"
+      },
+      "alias": "Sapo",
+      "why": "Apodo dentro del nombre «Cesar \"Sapo\" Zorrilla»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 6494,
+        "name": "José \"Pollo\" Sifontes"
+      },
+      "alias": "Pollo",
+      "why": "Apodo dentro del nombre «José \"Pollo\" Sifontes»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 6558,
+        "name": "Hilario \"Lalo\" Guaidó"
+      },
+      "alias": "Lalo",
+      "why": "Apodo dentro del nombre «Hilario \"Lalo\" Guaidó»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 657,
+        "name": "David \"Chapis\" Lasca"
+      },
+      "alias": "Chapis",
+      "why": "Apodo dentro del nombre «David \"Chapis\" Lasca»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 6611,
+        "name": "E. \"Wincho\" Schafer"
+      },
+      "alias": "Wincho",
+      "why": "Apodo dentro del nombre «E. \"Wincho\" Schafer»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 6674,
+        "name": "Aram \"Judge\" DeGiuli"
+      },
+      "alias": "Judge",
+      "why": "Apodo dentro del nombre «Aram \"Judge\" DeGiuli»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 680,
+        "name": "Pablo \"El Che\""
+      },
+      "alias": "El Che",
+      "why": "Apodo dentro del nombre «Pablo \"El Che\"»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 6813,
+        "name": "Carlos \"Maracucho\" Padrón"
+      },
+      "alias": "Maracucho",
+      "why": "Apodo dentro del nombre «Carlos \"Maracucho\" Padrón»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 6815,
+        "name": "José \"Tricky\" González"
+      },
+      "alias": "Tricky",
+      "why": "Apodo dentro del nombre «José \"Tricky\" González»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 6817,
+        "name": "Carlos \"Cuso\" González"
+      },
+      "alias": "Cuso",
+      "why": "Apodo dentro del nombre «Carlos \"Cuso\" González»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 6821,
+        "name": "Carlos \"Luccio\" Rios"
+      },
+      "alias": "Luccio",
+      "why": "Apodo dentro del nombre «Carlos \"Luccio\" Rios»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 6841,
+        "name": "Taj \"The Infinite\""
+      },
+      "alias": "The Infinite",
+      "why": "Apodo dentro del nombre «Taj \"The Infinite\"»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 6861,
+        "name": "Carlos \"Chars\" Alvarez"
+      },
+      "alias": "Chars",
+      "why": "Apodo dentro del nombre «Carlos \"Chars\" Alvarez»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 6862,
+        "name": "Joleyka \"Viover\" Mosquera"
+      },
+      "alias": "Viover",
+      "why": "Apodo dentro del nombre «Joleyka \"Viover\" Mosquera»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 6864,
+        "name": "Joel \"Pibo\" Márquez"
+      },
+      "alias": "Pibo",
+      "why": "Apodo dentro del nombre «Joel \"Pibo\" Márquez»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 69,
+        "name": "Giampero \"Drupi\" Anelli"
+      },
+      "alias": "Drupi",
+      "why": "Apodo dentro del nombre «Giampero \"Drupi\" Anelli»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 700,
+        "name": "Marcelo \"Chamín\" Añez"
+      },
+      "alias": "Chamín",
+      "why": "Apodo dentro del nombre «Marcelo \"Chamín\" Añez»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 7011,
+        "name": "\"El Mosaico de la Alegría\" by Abraham Gustin"
+      },
+      "alias": "El Mosaico de la Alegría",
+      "why": "Apodo dentro del nombre «\"El Mosaico de la Alegría\" by Abraham Gustin»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 702,
+        "name": "Oswaldo \"Tarz\" Suels"
+      },
+      "alias": "Tarz",
+      "why": "Apodo dentro del nombre «Oswaldo \"Tarz\" Suels»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 704,
+        "name": "Eduardo \"Chino\" Sandoval"
+      },
+      "alias": "Chino",
+      "why": "Apodo dentro del nombre «Eduardo \"Chino\" Sandoval»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 709,
+        "name": "Alejandro José \"Junior\" Pinto"
+      },
+      "alias": "Junior",
+      "why": "Apodo dentro del nombre «Alejandro José \"Junior\" Pinto»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 721,
+        "name": "Luis \"Droopy\" Pulido"
+      },
+      "alias": "Droopy",
+      "why": "Apodo dentro del nombre «Luis \"Droopy\" Pulido»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 7224,
+        "name": "Ignacio \"Bolo\" Segura"
+      },
+      "alias": "Bolo",
+      "why": "Apodo dentro del nombre «Ignacio \"Bolo\" Segura»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 7311,
+        "name": "Luis Enrique \"Divine\""
+      },
+      "alias": "Divine",
+      "why": "Apodo dentro del nombre «Luis Enrique \"Divine\"»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 7416,
+        "name": "Gabriel \"Arkanhell\" Vallecillos"
+      },
+      "alias": "Arkanhell",
+      "why": "Apodo dentro del nombre «Gabriel \"Arkanhell\" Vallecillos»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 745,
+        "name": "Edmundo \"Kiky\" Rincón"
+      },
+      "alias": "Kiky",
+      "why": "Apodo dentro del nombre «Edmundo \"Kiky\" Rincón»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 773,
+        "name": "Tony \"Cash\" Maestracci"
+      },
+      "alias": "Cash",
+      "why": "Apodo dentro del nombre «Tony \"Cash\" Maestracci»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 775,
+        "name": "Pablo \"Chino\" Agreda"
+      },
+      "alias": "Chino",
+      "why": "Apodo dentro del nombre «Pablo \"Chino\" Agreda»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 7779,
+        "name": "Luis María \"Billo\" Frómeta"
+      },
+      "alias": "Billo",
+      "why": "Apodo dentro del nombre «Luis María \"Billo\" Frómeta»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 7813,
+        "name": "Ramón \"Tito\" Barrios"
+      },
+      "alias": "Tito",
+      "why": "Apodo dentro del nombre «Ramón \"Tito\" Barrios»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 7814,
+        "name": "Abdenago \"Neguito\" Borjas"
+      },
+      "alias": "Neguito",
+      "why": "Apodo dentro del nombre «Abdenago \"Neguito\" Borjas»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 7923,
+        "name": "Nicolás \"Tato\" Barrera"
+      },
+      "alias": "Tato",
+      "why": "Apodo dentro del nombre «Nicolás \"Tato\" Barrera»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 7951,
+        "name": "José \"Chuo\" Martín"
+      },
+      "alias": "Chuo",
+      "why": "Apodo dentro del nombre «José \"Chuo\" Martín»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 796,
+        "name": "Derrick \"Pupa Mickey\" Bishop"
+      },
+      "alias": "Pupa Mickey",
+      "why": "Apodo dentro del nombre «Derrick \"Pupa Mickey\" Bishop»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 8129,
+        "name": "Guillermo \"Willy\" Trejo"
+      },
+      "alias": "Willy",
+      "why": "Apodo dentro del nombre «Guillermo \"Willy\" Trejo»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 8142,
+        "name": "Ricardo \"LeMoc\" Morales"
+      },
+      "alias": "LeMoc",
+      "why": "Apodo dentro del nombre «Ricardo \"LeMoc\" Morales»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 8148,
+        "name": "Francisco \"Chucky\" Oroz"
+      },
+      "alias": "Chucky",
+      "why": "Apodo dentro del nombre «Francisco \"Chucky\" Oroz»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 8166,
+        "name": "Enrique \"Bugs\" Hernández"
+      },
+      "alias": "Bugs",
+      "why": "Apodo dentro del nombre «Enrique \"Bugs\" Hernández»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 8174,
+        "name": "Sergio \"Guiñapo\" García"
+      },
+      "alias": "Guiñapo",
+      "why": "Apodo dentro del nombre «Sergio \"Guiñapo\" García»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 8184,
+        "name": "Adrian \"Rojo\" Treviño"
+      },
+      "alias": "Rojo",
+      "why": "Apodo dentro del nombre «Adrian \"Rojo\" Treviño»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 8318,
+        "name": "José \"Cheo\" Navarro"
+      },
+      "alias": "Cheo",
+      "why": "Apodo dentro del nombre «José \"Cheo\" Navarro»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 8409,
+        "name": "Jesús \"Chui\" Viloria"
+      },
+      "alias": "Chui",
+      "why": "Apodo dentro del nombre «Jesús \"Chui\" Viloria»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 8573,
+        "name": "Raúl \"El Portugués\""
+      },
+      "alias": "El Portugués",
+      "why": "Apodo dentro del nombre «Raúl \"El Portugués\"»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 8636,
+        "name": "Jesús \"Lalo\" Noriega"
+      },
+      "alias": "Lalo",
+      "why": "Apodo dentro del nombre «Jesús \"Lalo\" Noriega»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 8694,
+        "name": "Jaap \"Monchito\" Melman"
+      },
+      "alias": "Monchito",
+      "why": "Apodo dentro del nombre «Jaap \"Monchito\" Melman»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 876,
+        "name": "José \"Pupy\" Salazar"
+      },
+      "alias": "Pupy",
+      "why": "Apodo dentro del nombre «José \"Pupy\" Salazar»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 8819,
+        "name": "Carlos \"Tabaco\" Quintana"
+      },
+      "alias": "Tabaco",
+      "why": "Apodo dentro del nombre «Carlos \"Tabaco\" Quintana»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 884,
+        "name": "Eduardo \"Fercho\" Fernández"
+      },
+      "alias": "Fercho",
+      "why": "Apodo dentro del nombre «Eduardo \"Fercho\" Fernández»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 8842,
+        "name": "Rafael \"Gallo\" Velásquez"
+      },
+      "alias": "Gallo",
+      "why": "Apodo dentro del nombre «Rafael \"Gallo\" Velásquez»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 8939,
+        "name": "Angel \"Taba\" Mora"
+      },
+      "alias": "Taba",
+      "why": "Apodo dentro del nombre «Angel \"Taba\" Mora»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 8942,
+        "name": "William \"Cheito\" Romero"
+      },
+      "alias": "Cheito",
+      "why": "Apodo dentro del nombre «William \"Cheito\" Romero»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 8974,
+        "name": "Yonathan \"Morocho\" Gavidia"
+      },
+      "alias": "Morocho",
+      "why": "Apodo dentro del nombre «Yonathan \"Morocho\" Gavidia»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 903,
+        "name": "Thomas \"Two Fingers\" Allen"
+      },
+      "alias": "Two Fingers",
+      "why": "Apodo dentro del nombre «Thomas \"Two Fingers\" Allen»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 934,
+        "name": "Rafael \"Pollo\" Brito"
+      },
+      "alias": "Pollo",
+      "why": "Apodo dentro del nombre «Rafael \"Pollo\" Brito»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 958,
+        "name": "Gerald \"Chipi\" Chacón"
+      },
+      "alias": "Chipi",
+      "why": "Apodo dentro del nombre «Gerald \"Chipi\" Chacón»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 987,
+        "name": "Rodolfo \"Rudy\" Pagliuca"
+      },
+      "alias": "Rudy",
+      "why": "Apodo dentro del nombre «Rodolfo \"Rudy\" Pagliuca»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 992,
+        "name": "Gabriel \"Pepo\" Lamberti"
+      },
+      "alias": "Pepo",
+      "why": "Apodo dentro del nombre «Gabriel \"Pepo\" Lamberti»: el nombre no cambia (apodo intercalado o base de una palabra), pero se encuentra también por el apodo (Brian, 2026-10-02)."
+    }
+  ]
+}

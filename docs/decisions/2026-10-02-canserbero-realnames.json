@@ -1,0 +1,3524 @@
+{
+  "decidedAt": "2026-10-02",
+  "evidence": "Caso Canserbero extendido, etapa «realnames» (Brian, 2026-10-02). Ver scripts/plan-canserbero-extendido.ts.",
+  "corrections": [
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 18060,
+        "name": "C-funk"
+      },
+      "alias": "Cristian Moraga",
+      "why": "Nombre real según la fuente (biografía del artista 2606: «su nombre real es Cristian Moraga»); no se renombra porque ya es el nombre de otra ficha."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 17663,
+        "name": "DJ Rey"
+      },
+      "alias": "Reynaldo Morales",
+      "why": "Nombre real según la fuente (biografía del artista 2225: «Su nombre real es Reynaldo Morales»); no se renombra porque ya es el nombre de otra ficha."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 369,
+        "name": "Delia"
+      },
+      "to": "Delia Dorta",
+      "keepOldNameAsAlias": true,
+      "why": "«Delia» es el nombre artístico; la persona se llama «Delia Dorta» (biografía del artista 1855: «Delia Dorta, conocida artísticamente como Delia»). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 4026,
+        "name": "Edgar Alexander"
+      },
+      "to": "Édgar Enrique Quintero Castillo",
+      "keepOldNameAsAlias": true,
+      "why": "«Edgar Alexander» es el nombre artístico; la persona se llama «Édgar Enrique Quintero Castillo» (biografía del artista 1923: «Édgar Enrique Quintero Castillo, conocido artísticamente como Edgar Alexander»). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 5835,
+        "name": "Gladys"
+      },
+      "to": "Gladys María del Rosario Di Ruggiero",
+      "keepOldNameAsAlias": true,
+      "why": "«Gladys» es el nombre artístico; la persona se llama «Gladys María del Rosario Di Ruggiero» (biografía del artista 1417: «Gladys María del Rosario Di Ruggiero, conocida artísticamente como Gladys»). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 18120,
+        "name": "KC"
+      },
+      "to": "Kevin Cunningham",
+      "keepOldNameAsAlias": true,
+      "why": "«KC» es el nombre artístico; la persona se llama «Kevin Cunningham» (biografía del artista 2904: «cuyo nombre real es Kevin Cunningham»). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 17364,
+        "name": "Nella"
+      },
+      "to": "Marianella Rojas",
+      "keepOldNameAsAlias": true,
+      "why": "«Nella» es el nombre artístico; la persona se llama «Marianella Rojas» (biografía del artista 1836: «Su nombre completo es Marianella Rojas»). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 16406,
+        "name": "Psikopata"
+      },
+      "to": "Pedro Manuel Ortiz Osorio",
+      "keepOldNameAsAlias": true,
+      "why": "«Psikopata» es el nombre artístico; la persona se llama «Pedro Manuel Ortiz Osorio» (biografía del artista 1338: «Psikopata es el alias de Pedro Manuel Ortiz Osorio»). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 16933,
+        "name": "Rekeson"
+      },
+      "to": "Gustavo Ferrín",
+      "keepOldNameAsAlias": true,
+      "why": "«Rekeson» es el nombre artístico; la persona se llama «Gustavo Ferrín» (biografía del artista 1595: «conocido artísticamente como Rekesón, también Baby Hustla y El Astronauta, cuyo nombre de nacimiento es Gustavo Ferrín»). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 16933,
+        "name": "Gustavo Ferrín"
+      },
+      "alias": "Rekesón",
+      "why": "Otro nombre artístico (biografía del artista 1595: «conocido artísticamente como Rekesón, también Baby Hustla y El Astronauta, cuyo nombre de nacimiento es Gustavo Ferrín»)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 16933,
+        "name": "Gustavo Ferrín"
+      },
+      "alias": "Baby Hustla",
+      "why": "Otro nombre artístico (biografía del artista 1595: «conocido artísticamente como Rekesón, también Baby Hustla y El Astronauta, cuyo nombre de nacimiento es Gustavo Ferrín»)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 16933,
+        "name": "Gustavo Ferrín"
+      },
+      "alias": "El Astronauta",
+      "why": "Otro nombre artístico (biografía del artista 1595: «conocido artísticamente como Rekesón, también Baby Hustla y El Astronauta, cuyo nombre de nacimiento es Gustavo Ferrín»)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 489,
+        "name": "Argel"
+      },
+      "alias": "Argel Trejo",
+      "why": "Nombre real según la fuente (biografía de la persona: «nombre completo Argel Trejo»); no se renombra porque ya es el nombre de otra ficha."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 544,
+        "name": "Ilan Chester"
+      },
+      "to": "Ilan Czenstochouski Schechter",
+      "keepOldNameAsAlias": true,
+      "why": "«Ilan Chester» es el nombre artístico; la persona se llama «Ilan Czenstochouski Schechter» (biografía de la persona: «nombre completo Ilan Czenstochouski Schechter»). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 11915,
+        "name": "Mayra Martí"
+      },
+      "to": "Moira Elisa Martínez Álvarez",
+      "keepOldNameAsAlias": true,
+      "why": "«Mayra Martí» es el nombre artístico; la persona se llama «Moira Elisa Martínez Álvarez» (biografía de la persona: «su nombre de nacimiento es Moira Elisa Martínez Álvarez»). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 4117,
+        "name": "Carlos Baute"
+      },
+      "alias": "Carlos Roberto Baute Jiménez",
+      "why": "Nombre completo de la persona (biografía del artista 1801: «Carlos Roberto Baute Jiménez, conocido como Carlos Baute»); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 3100,
+        "name": "Daniel Grau"
+      },
+      "alias": "Daniel Grau Sosa",
+      "why": "Nombre completo de la persona (biografía del artista 1911: «Daniel Grau Sosa, conocido como Daniel Grau»); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 1086,
+        "name": "Franco de Vita"
+      },
+      "alias": "Franco Atilio de Vita de Vito",
+      "why": "Nombre completo de la persona (biografía del artista 99: «de nombre completo Franco Atilio de Vita de Vito»); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 7116,
+        "name": "Guillermo Dávila"
+      },
+      "alias": "Guillermo José Dávila Ruiz",
+      "why": "Nombre completo de la persona (biografía del artista 1960: «Guillermo José Dávila Ruiz, conocido artísticamente como Guillermo Dávila»); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 3597,
+        "name": "Maricruz Quintero"
+      },
+      "alias": "María de la Cruz Quintero Mendoza",
+      "why": "Nombre completo de la persona (biografía del artista 1819: «Su nombre real es María de la Cruz Quintero Mendoza»); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 17394,
+        "name": "Julio César"
+      },
+      "alias": "Julio César Rodríguez",
+      "why": "Nombre completo de la persona (biografía del artista 1979: «Nacido como Julio César Rodríguez»); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 7300,
+        "name": "Alex Berti"
+      },
+      "alias": "Alexander Berti Soteldo",
+      "why": "Nombre completo de la persona (biografía de la persona: «su nombre completo es Alexander Berti Soteldo»); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 2853,
+        "name": "Glenn Tomassi"
+      },
+      "alias": "Glenn Humberto Tomassi Hung",
+      "why": "Nombre completo de la persona (biografía de la persona); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 2841,
+        "name": "Ibsen Rosales"
+      },
+      "alias": "Ibsen Fidel Rosales Betancourt",
+      "why": "Nombre completo de la persona (biografía de la persona); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 5694,
+        "name": "Janet Goitia"
+      },
+      "alias": "Janet del Carmen Goitia Román",
+      "why": "Nombre completo de la persona (biografía de la persona); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 2857,
+        "name": "Jesús Toro"
+      },
+      "alias": "Jesús Rafael Toro Zambrano",
+      "why": "Nombre completo de la persona (biografía de la persona); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 5073,
+        "name": "José Arévalo"
+      },
+      "alias": "José Antonio Arévalo González",
+      "why": "Nombre completo de la persona (biografía de la persona); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 2032,
+        "name": "Manolo Alvarez"
+      },
+      "alias": "Manuel Álvarez",
+      "why": "Nombre completo de la persona (biografía de la persona: «cuyo nombre completo era Manuel Álvarez»); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 3091,
+        "name": "Oscar Gómez"
+      },
+      "alias": "Óscar Basilio Gómez Díaz",
+      "why": "Nombre completo de la persona (biografía de la persona); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 4697,
+        "name": "Piero Gigante"
+      },
+      "alias": "Mario Piero Gigante",
+      "why": "Nombre completo de la persona (biografía de la persona); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 978,
+        "name": "Rudy Márquez"
+      },
+      "alias": "Rodolfo Márquez Van Stenis",
+      "why": "Nombre completo de la persona (biografía de la persona: «cuyo nombre completo era Rodolfo Márquez Van Stenis»); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 690,
+        "name": "Willy Díaz"
+      },
+      "alias": "Wilmer Antonio Díaz Lara",
+      "why": "Nombre completo de la persona (biografía de la persona); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 1244,
+        "name": "Eduardo Rodríguez"
+      },
+      "alias": "Eduardo José Rodríguez Fernández",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 12735,
+        "name": "Juan Trujillo"
+      },
+      "alias": "Juan Carlos Trujillo",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 13298,
+        "name": "Jorge Medina"
+      },
+      "alias": "Jorge Luis Medina",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 13299,
+        "name": "Alfredo Herrera"
+      },
+      "alias": "Alfredo José Herrera",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 13364,
+        "name": "Dana Dubal"
+      },
+      "to": "Dayana Daza",
+      "keepOldNameAsAlias": true,
+      "why": "«Dana Dubal» es el nombre artístico; la persona se llama «Dayana Daza» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 13366,
+        "name": "Handy Vortex"
+      },
+      "to": "Handy Bastidas",
+      "keepOldNameAsAlias": true,
+      "why": "«Handy Vortex» es el nombre artístico; la persona se llama «Handy Bastidas» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 13367,
+        "name": "Abaddonsheol"
+      },
+      "to": "Carlos H. Siverio",
+      "keepOldNameAsAlias": true,
+      "why": "«Abaddonsheol» es el nombre artístico; la persona se llama «Carlos H. Siverio» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 13372,
+        "name": "Sebas Miraballe"
+      },
+      "alias": "Sebastian Miraballe",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 13376,
+        "name": "Girald"
+      },
+      "to": "Jose Jesus Girald",
+      "keepOldNameAsAlias": true,
+      "why": "«Girald» es el nombre artístico; la persona se llama «Jose Jesus Girald» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 13378,
+        "name": "Hever"
+      },
+      "to": "Hever Cárdenas",
+      "keepOldNameAsAlias": true,
+      "why": "«Hever» es el nombre artístico; la persona se llama «Hever Cárdenas» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 13385,
+        "name": "Fellothrash"
+      },
+      "to": "Félix Osorio",
+      "keepOldNameAsAlias": true,
+      "why": "«Fellothrash» es el nombre artístico; la persona se llama «Félix Osorio» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 13388,
+        "name": "Soto"
+      },
+      "alias": "Jesus Soto",
+      "why": "Nombre real según la fuente (nombre real según Metal Archives (persons.real_name)); no se renombra porque ya es el nombre de otra ficha."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 13391,
+        "name": "Daniel \"Loco Loco\" Brito"
+      },
+      "alias": "Daniel Brito",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 13407,
+        "name": "Héctor López"
+      },
+      "alias": "Héctor Satamer López",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 13416,
+        "name": "Abraham Ramirez"
+      },
+      "alias": "Abraham David Ramirez Quintero",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 13424,
+        "name": "Diego Sánchez"
+      },
+      "alias": "Diego Armando Sanchez",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 13425,
+        "name": "Julio Aguilar"
+      },
+      "alias": "Julio Daniel Aguilar",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 13427,
+        "name": "Pablo Ramírez"
+      },
+      "alias": "Pablo Eliezer Ramirez Villarreal",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 13440,
+        "name": "Félix Ríos"
+      },
+      "alias": "Félix Eduardo Ríos Garcia",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 13442,
+        "name": "Javier \"Tripa\" Ramírez"
+      },
+      "alias": "Javier Ramírez",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 13449,
+        "name": "Edward Throne"
+      },
+      "to": "Edward Rondon",
+      "keepOldNameAsAlias": true,
+      "why": "«Edward Throne» es el nombre artístico; la persona se llama «Edward Rondon» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 13455,
+        "name": "Marron"
+      },
+      "to": "Luis Cedeño",
+      "keepOldNameAsAlias": true,
+      "why": "«Marron» es el nombre artístico; la persona se llama «Luis Cedeño» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 13459,
+        "name": "William J. Dahl"
+      },
+      "alias": "William James Dahl",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 13463,
+        "name": "Raúl Coello"
+      },
+      "alias": "Raúl Ricardo Coello",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 13466,
+        "name": "Andres Jaen"
+      },
+      "alias": "Andres Jaen Viera",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 13467,
+        "name": "Leo Galindo"
+      },
+      "alias": "Leonardo Galindo",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 13472,
+        "name": "Giorggio Vargas"
+      },
+      "alias": "Arturo Giorggio Vargas Lopez",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 13484,
+        "name": "Gabriel Caraballo"
+      },
+      "alias": "Gabriel Antonio Caraballo",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 13485,
+        "name": "Nicholas Onfray"
+      },
+      "alias": "Nicolás Onfray",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 13520,
+        "name": "Óscar García"
+      },
+      "alias": "Óscar Alex García",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 13527,
+        "name": "AB sanchez"
+      },
+      "alias": "Abfredy sanchez",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 13532,
+        "name": "Moty"
+      },
+      "to": "Euler Carrasquero",
+      "keepOldNameAsAlias": true,
+      "why": "«Moty» es el nombre artístico; la persona se llama «Euler Carrasquero» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 13536,
+        "name": "Hanna XTC"
+      },
+      "to": "Hanna Estacia",
+      "keepOldNameAsAlias": true,
+      "why": "«Hanna XTC» es el nombre artístico; la persona se llama «Hanna Estacia» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 13539,
+        "name": "Daemonae"
+      },
+      "to": "Ranndy Garcia",
+      "keepOldNameAsAlias": true,
+      "why": "«Daemonae» es el nombre artístico; la persona se llama «Ranndy Garcia» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 13540,
+        "name": "Seth Nekromancer"
+      },
+      "to": "Johan Marin",
+      "keepOldNameAsAlias": true,
+      "why": "«Seth Nekromancer» es el nombre artístico; la persona se llama «Johan Marin» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 13541,
+        "name": "Samech"
+      },
+      "to": "Ivan Delgado",
+      "keepOldNameAsAlias": true,
+      "why": "«Samech» es el nombre artístico; la persona se llama «Ivan Delgado» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 13542,
+        "name": "Addu"
+      },
+      "to": "José Luis Faria",
+      "keepOldNameAsAlias": true,
+      "why": "«Addu» es el nombre artístico; la persona se llama «José Luis Faria» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 13543,
+        "name": "Iblis"
+      },
+      "to": "Luis Maltez",
+      "keepOldNameAsAlias": true,
+      "why": "«Iblis» es el nombre artístico; la persona se llama «Luis Maltez» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 13598,
+        "name": "Inverno"
+      },
+      "to": "Ernesto Rengel",
+      "keepOldNameAsAlias": true,
+      "why": "«Inverno» es el nombre artístico; la persona se llama «Ernesto Rengel» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 13607,
+        "name": "Dora K"
+      },
+      "to": "Dora Pacheco",
+      "keepOldNameAsAlias": true,
+      "why": "«Dora K» es el nombre artístico; la persona se llama «Dora Pacheco» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 13609,
+        "name": "Wil D"
+      },
+      "to": "Wilmer Delgado",
+      "keepOldNameAsAlias": true,
+      "why": "«Wil D» es el nombre artístico; la persona se llama «Wilmer Delgado» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 13622,
+        "name": "Franklin \"Fratan\" Cardona"
+      },
+      "alias": "Franklin Cardona",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 13624,
+        "name": "Carlos \"Marciano\" Pinto"
+      },
+      "alias": "Carlos Pinto",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 13627,
+        "name": "Alain Fernández"
+      },
+      "alias": "Alain Fernández Portella",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 13637,
+        "name": "C.A.F.P.C. aka A.N.Y.S.K. M.S.D.W."
+      },
+      "to": "Ciro Colina",
+      "keepOldNameAsAlias": true,
+      "why": "«C.A.F.P.C. aka A.N.Y.S.K. M.S.D.W.» es el nombre artístico; la persona se llama «Ciro Colina» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 13643,
+        "name": "Toni Belisario"
+      },
+      "alias": "Antonio Belisario",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 13663,
+        "name": "Kike Montero"
+      },
+      "alias": "Enrique Alfonso Montero",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 13666,
+        "name": "Igor Vecchini"
+      },
+      "alias": "Igor Alejandro Vecchini",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 13667,
+        "name": "Rankhy Zabala"
+      },
+      "alias": "Rankhy Fernando Zabala Jimenez",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 13672,
+        "name": "Carlos Galindez"
+      },
+      "alias": "Carlos Luis Galindez",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 13687,
+        "name": "Rubén \"Chiqui\""
+      },
+      "to": "Rubén Pérez",
+      "keepOldNameAsAlias": true,
+      "why": "«Rubén \"Chiqui\"» es el nombre artístico; la persona se llama «Rubén Pérez» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 13687,
+        "name": "Rubén Pérez"
+      },
+      "alias": "Chiqui",
+      "why": "Apodo que iba en el nombre «Rubén \"Chiqui\"»."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 13690,
+        "name": "Sebbe"
+      },
+      "to": "Sebastian Unić",
+      "keepOldNameAsAlias": true,
+      "why": "«Sebbe» es el nombre artístico; la persona se llama «Sebastian Unić» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 13691,
+        "name": "Darío Palacio"
+      },
+      "alias": "Darío Palacio Polo",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 13709,
+        "name": "Mundo Funk"
+      },
+      "to": "José Arrillaga",
+      "keepOldNameAsAlias": true,
+      "why": "«Mundo Funk» es el nombre artístico; la persona se llama «José Arrillaga» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 13715,
+        "name": "Mortoth"
+      },
+      "to": "Geiver Camacaro",
+      "keepOldNameAsAlias": true,
+      "why": "«Mortoth» es el nombre artístico; la persona se llama «Geiver Camacaro» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 13717,
+        "name": "Velorio"
+      },
+      "to": "Misoa Nav",
+      "keepOldNameAsAlias": true,
+      "why": "«Velorio» es el nombre artístico; la persona se llama «Misoa Nav» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 13743,
+        "name": "Magda"
+      },
+      "to": "Magda Gallardo",
+      "keepOldNameAsAlias": true,
+      "why": "«Magda» es el nombre artístico; la persona se llama «Magda Gallardo» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 13752,
+        "name": "Fran Drahcko"
+      },
+      "to": "Frank Riascov",
+      "keepOldNameAsAlias": true,
+      "why": "«Fran Drahcko» es el nombre artístico; la persona se llama «Frank Riascov» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 13755,
+        "name": "Lucho"
+      },
+      "to": "Luis Hernández",
+      "keepOldNameAsAlias": true,
+      "why": "«Lucho» es el nombre artístico; la persona se llama «Luis Hernández» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 13761,
+        "name": "Henrique Pucci"
+      },
+      "alias": "Henrique Tadeu de Melo Pucci",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 13764,
+        "name": "$kam"
+      },
+      "to": "Carls López",
+      "keepOldNameAsAlias": true,
+      "why": "«$kam» es el nombre artístico; la persona se llama «Carls López» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 13765,
+        "name": "Reonaru"
+      },
+      "to": "Leonard Rangel",
+      "keepOldNameAsAlias": true,
+      "why": "«Reonaru» es el nombre artístico; la persona se llama «Leonard Rangel» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 13769,
+        "name": "Simón Martínez"
+      },
+      "alias": "Simón Alberto Martínez Ávila",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 13770,
+        "name": "Daniel Molina"
+      },
+      "alias": "Cesar Daniel Molina",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 13771,
+        "name": "Baal"
+      },
+      "to": "William Andres Gonzalez Garcia",
+      "keepOldNameAsAlias": true,
+      "why": "«Baal» es el nombre artístico; la persona se llama «William Andres Gonzalez Garcia» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 13775,
+        "name": "Blackmiroz"
+      },
+      "to": "Dalmiro Lora Vasquez",
+      "keepOldNameAsAlias": true,
+      "why": "«Blackmiroz» es el nombre artístico; la persona se llama «Dalmiro Lora Vasquez» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 13776,
+        "name": "Tormentor"
+      },
+      "to": "Giancarlo Alessandro Vettor",
+      "keepOldNameAsAlias": true,
+      "why": "«Tormentor» es el nombre artístico; la persona se llama «Giancarlo Alessandro Vettor» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 13777,
+        "name": "Ismael Gómez"
+      },
+      "alias": "Ismael Gómez Sime",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 13780,
+        "name": "Serbna"
+      },
+      "to": "Andres Hernandez",
+      "keepOldNameAsAlias": true,
+      "why": "«Serbna» es el nombre artístico; la persona se llama «Andres Hernandez» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 13784,
+        "name": "Astaroth"
+      },
+      "alias": "Luis Rojas",
+      "why": "Nombre real según la fuente (nombre real según Metal Archives (persons.real_name)); no se renombra porque ya es el nombre de otra ficha."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 13786,
+        "name": "Francisco Laprea"
+      },
+      "alias": "Francisco Laprea Millán",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 13794,
+        "name": "Gabriel \"Gabo\" Monasterios"
+      },
+      "alias": "Gabriel Monasterios",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 13803,
+        "name": "Alvaro Alfinger"
+      },
+      "alias": "Álvaro Luis Manzanero Alfinger",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 13808,
+        "name": "Raul"
+      },
+      "to": "Raúl García",
+      "keepOldNameAsAlias": true,
+      "why": "«Raul» es el nombre artístico; la persona se llama «Raúl García» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 13809,
+        "name": "Vrolok"
+      },
+      "to": "Marco Ossandón",
+      "keepOldNameAsAlias": true,
+      "why": "«Vrolok» es el nombre artístico; la persona se llama «Marco Ossandón» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 13810,
+        "name": "Thule"
+      },
+      "to": "Tulio Boada",
+      "keepOldNameAsAlias": true,
+      "why": "«Thule» es el nombre artístico; la persona se llama «Tulio Boada» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 13811,
+        "name": "Kerch"
+      },
+      "to": "Juan Aponte",
+      "keepOldNameAsAlias": true,
+      "why": "«Kerch» es el nombre artístico; la persona se llama «Juan Aponte» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 13812,
+        "name": "Chris de Brabandere"
+      },
+      "alias": "Christian de Brabandere",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 13858,
+        "name": "Rafael"
+      },
+      "to": "Rafael Aleman",
+      "keepOldNameAsAlias": true,
+      "why": "«Rafael» es el nombre artístico; la persona se llama «Rafael Aleman» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 13870,
+        "name": "Hugo Zerpa"
+      },
+      "alias": "Hugo Daniel Zerpa",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 13877,
+        "name": "Cesar \"Fish\" Ospina"
+      },
+      "alias": "Cesar Osppina Chavez",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 13886,
+        "name": "Afro"
+      },
+      "alias": "Carlos Robles",
+      "why": "Nombre real según la fuente (nombre real según Metal Archives (persons.real_name)); no se renombra porque ya es el nombre de otra ficha."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 13887,
+        "name": "Pipi"
+      },
+      "alias": "Christian Estepa",
+      "why": "Nombre real según la fuente (nombre real según Metal Archives (persons.real_name)); no se renombra porque ya es el nombre de otra ficha."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 13888,
+        "name": "Juls"
+      },
+      "alias": "Juls Sosa",
+      "why": "Nombre real según la fuente (nombre real según Metal Archives (persons.real_name)); no se renombra porque ya es el nombre de otra ficha."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 13899,
+        "name": "Victor"
+      },
+      "to": "Victor Rodriguez",
+      "keepOldNameAsAlias": true,
+      "why": "«Victor» es el nombre artístico; la persona se llama «Victor Rodriguez» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 13915,
+        "name": "\"Carlucho\" Bulfón"
+      },
+      "alias": "Carlos Bulfón",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 13919,
+        "name": "Joseph Pinto"
+      },
+      "alias": "José Pinto",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 13927,
+        "name": "Johan Bolívar"
+      },
+      "alias": "Johan D. Bolívar H.",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 13932,
+        "name": "Jilgämech"
+      },
+      "to": "Emanuel Goncalves",
+      "keepOldNameAsAlias": true,
+      "why": "«Jilgämech» es el nombre artístico; la persona se llama «Emanuel Goncalves» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 13936,
+        "name": "Césarpestilente"
+      },
+      "to": "César Batorins",
+      "keepOldNameAsAlias": true,
+      "why": "«Césarpestilente» es el nombre artístico; la persona se llama «César Batorins» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 13942,
+        "name": "Dario Axariel"
+      },
+      "to": "Dario Gallardo",
+      "keepOldNameAsAlias": true,
+      "why": "«Dario Axariel» es el nombre artístico; la persona se llama «Dario Gallardo» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 13943,
+        "name": "Infernal Doom"
+      },
+      "alias": "Luis Martinez",
+      "why": "Nombre real según la fuente (nombre real según Metal Archives (persons.real_name)); no se renombra porque ya es el nombre de otra ficha."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 13952,
+        "name": "Roxana Herrera"
+      },
+      "alias": "Roxana de Jesus Herrera Manzabel",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 14028,
+        "name": "Agnan"
+      },
+      "to": "Gamir Octavio Zambrano Pérez",
+      "keepOldNameAsAlias": true,
+      "why": "«Agnan» es el nombre artístico; la persona se llama «Gamir Octavio Zambrano Pérez» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14050,
+        "name": "Raúl Echeverria"
+      },
+      "alias": "Raúl Dez Echeverría Etxeberría",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14081,
+        "name": "Orlando Cordero"
+      },
+      "alias": "Orlando Jesús Cordero",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 14084,
+        "name": "José Rico"
+      },
+      "to": "Jose Fernando Ricoduque",
+      "keepOldNameAsAlias": true,
+      "why": "«José Rico» es el nombre artístico; la persona se llama «Jose Fernando Ricoduque» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 14110,
+        "name": "Blood Thannathos"
+      },
+      "to": "Jorge Acosta",
+      "keepOldNameAsAlias": true,
+      "why": "«Blood Thannathos» es el nombre artístico; la persona se llama «Jorge Acosta» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 14164,
+        "name": "Lhysta"
+      },
+      "to": "Jesus Lhysta",
+      "keepOldNameAsAlias": true,
+      "why": "«Lhysta» es el nombre artístico; la persona se llama «Jesus Lhysta» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14168,
+        "name": "Gustavo Quiroga"
+      },
+      "alias": "Gustavo Daniel Quiroga",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14181,
+        "name": "Diego Lopez"
+      },
+      "alias": "Diego J. Lopez",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 14198,
+        "name": "O. Wolfscariot"
+      },
+      "to": "Oscar I. Orellana",
+      "keepOldNameAsAlias": true,
+      "why": "«O. Wolfscariot» es el nombre artístico; la persona se llama «Oscar I. Orellana» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14261,
+        "name": "Leo Andrade"
+      },
+      "alias": "Leonardo Andrade",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14299,
+        "name": "Hex Xezbet"
+      },
+      "alias": "Raul Garcia",
+      "why": "Nombre real según la fuente (nombre real según Metal Archives (persons.real_name)); no se renombra porque ya es el nombre de otra ficha."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 14316,
+        "name": "Jart"
+      },
+      "to": "Jose Angel Ramirez",
+      "keepOldNameAsAlias": true,
+      "why": "«Jart» es el nombre artístico; la persona se llama «Jose Angel Ramirez» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 14322,
+        "name": "Leonard Stark"
+      },
+      "to": "Leonard Ovalles",
+      "keepOldNameAsAlias": true,
+      "why": "«Leonard Stark» es el nombre artístico; la persona se llama «Leonard Ovalles» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14325,
+        "name": "Jhonatan \"Morfeo\" Zabala"
+      },
+      "alias": "Jhonatan Zabala",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 14328,
+        "name": "M. Desolatvm"
+      },
+      "to": "Jocsan G. Rosales",
+      "keepOldNameAsAlias": true,
+      "why": "«M. Desolatvm» es el nombre artístico; la persona se llama «Jocsan G. Rosales» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14329,
+        "name": "Carl Anthony"
+      },
+      "alias": "Carl Anthony Rojas",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 14346,
+        "name": "Mikhail A."
+      },
+      "to": "Mikhail Alexander",
+      "keepOldNameAsAlias": true,
+      "why": "«Mikhail A.» es el nombre artístico; la persona se llama «Mikhail Alexander» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 14349,
+        "name": "Bizarro"
+      },
+      "to": "Andres Leal",
+      "keepOldNameAsAlias": true,
+      "why": "«Bizarro» es el nombre artístico; la persona se llama «Andres Leal» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 14352,
+        "name": "Willow"
+      },
+      "to": "David Gomez",
+      "keepOldNameAsAlias": true,
+      "why": "«Willow» es el nombre artístico; la persona se llama «David Gomez» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 14368,
+        "name": "Negattive"
+      },
+      "to": "Kelvin Graterol",
+      "keepOldNameAsAlias": true,
+      "why": "«Negattive» es el nombre artístico; la persona se llama «Kelvin Graterol» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14371,
+        "name": "Goar Sanchez"
+      },
+      "alias": "Alec Goar Figueroa Sanchez",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 14386,
+        "name": "Darkyra Black"
+      },
+      "to": "Gina Bafile",
+      "keepOldNameAsAlias": true,
+      "why": "«Darkyra Black» es el nombre artístico; la persona se llama «Gina Bafile» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14391,
+        "name": "Daniel Marín"
+      },
+      "alias": "Jose Daniel Marín",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14397,
+        "name": "Harold Sánquiz"
+      },
+      "alias": "Harold Alfonso Sánquiz Cabrera",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 14400,
+        "name": "Vezzmar"
+      },
+      "to": "José Miguel Peraza Marvéz",
+      "keepOldNameAsAlias": true,
+      "why": "«Vezzmar» es el nombre artístico; la persona se llama «José Miguel Peraza Marvéz» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 14401,
+        "name": "Helltorment"
+      },
+      "to": "Jonathan Requena",
+      "keepOldNameAsAlias": true,
+      "why": "«Helltorment» es el nombre artístico; la persona se llama «Jonathan Requena» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14402,
+        "name": "Mortem"
+      },
+      "alias": "Jesús Dávila",
+      "why": "Nombre real según la fuente (nombre real según Metal Archives (persons.real_name)); no se renombra porque ya es el nombre de otra ficha."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 14407,
+        "name": "Rayner V."
+      },
+      "to": "Rayner Valera",
+      "keepOldNameAsAlias": true,
+      "why": "«Rayner V.» es el nombre artístico; la persona se llama «Rayner Valera» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14416,
+        "name": "Deivy Foliaco"
+      },
+      "alias": "Deivy Jesus Foliaco Mujica",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14438,
+        "name": "Felipe Gardeazabal"
+      },
+      "alias": "Felipe Javier Gardeazabal",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14443,
+        "name": "Miguel Yendys"
+      },
+      "alias": "Miguel Yendis",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 14446,
+        "name": "Coatl"
+      },
+      "to": "Jaime Montiel Coatl",
+      "keepOldNameAsAlias": true,
+      "why": "«Coatl» es el nombre artístico; la persona se llama «Jaime Montiel Coatl» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14455,
+        "name": "Frank Longart"
+      },
+      "alias": "Francisco Longart",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14456,
+        "name": "André \"Maitzeth\" Iván"
+      },
+      "alias": "André Iván",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14458,
+        "name": "Gregorio"
+      },
+      "alias": "Gregorio Rangel",
+      "why": "Nombre real según la fuente (nombre real según Metal Archives (persons.real_name)); no se renombra porque ya es el nombre de otra ficha."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 14459,
+        "name": "Demiurge"
+      },
+      "to": "Iván Torres",
+      "keepOldNameAsAlias": true,
+      "why": "«Demiurge» es el nombre artístico; la persona se llama «Iván Torres» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14460,
+        "name": "Enyer Quiroz"
+      },
+      "alias": "Enyer Quiroz Bracho",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14465,
+        "name": "Alejandro \"Throll\" Colmenarez"
+      },
+      "alias": "Alejandro Colmenarez",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 14470,
+        "name": "Lord Necrus Goliardo"
+      },
+      "to": "Marcos Marcano",
+      "keepOldNameAsAlias": true,
+      "why": "«Lord Necrus Goliardo» es el nombre artístico; la persona se llama «Marcos Marcano» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 14471,
+        "name": "Kira Black"
+      },
+      "to": "Jose Jimenez",
+      "keepOldNameAsAlias": true,
+      "why": "«Kira Black» es el nombre artístico; la persona se llama «Jose Jimenez» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14476,
+        "name": "Michael \"El Enano\" Beauford"
+      },
+      "alias": "Michael Beauford",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14483,
+        "name": "Antony Plaza"
+      },
+      "alias": "Antony Plaza Vegas",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14486,
+        "name": "Bernardo Conde"
+      },
+      "alias": "Bernardo Daniel Conde",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14487,
+        "name": "Julio \"Palín\" Arrieche"
+      },
+      "alias": "Julio Arrieche Velazquez",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14499,
+        "name": "José \"Flea\" Villalba"
+      },
+      "alias": "José Villalba",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 14503,
+        "name": "Armathar"
+      },
+      "to": "Adolfo Brea",
+      "keepOldNameAsAlias": true,
+      "why": "«Armathar» es el nombre artístico; la persona se llama «Adolfo Brea» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 14504,
+        "name": "Mathan"
+      },
+      "to": "Víctor Morales Peña",
+      "keepOldNameAsAlias": true,
+      "why": "«Mathan» es el nombre artístico; la persona se llama «Víctor Morales Peña» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14505,
+        "name": "Eddie Cañizares"
+      },
+      "alias": "Edward Cañizares",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14514,
+        "name": "Lorenzo Padrón"
+      },
+      "alias": "Lorenzo Fabián Padrón Díaz",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 14515,
+        "name": "Hugo"
+      },
+      "to": "Hugo Figueroa",
+      "keepOldNameAsAlias": true,
+      "why": "«Hugo» es el nombre artístico; la persona se llama «Hugo Figueroa» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14518,
+        "name": "Rodrigo López"
+      },
+      "alias": "Rodrigo José López Hernández",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14522,
+        "name": "Abszhagath Och Krusnakh"
+      },
+      "alias": "Abzagath Och Krusnakh",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14526,
+        "name": "Alex García"
+      },
+      "alias": "Alejandro García",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 14529,
+        "name": "James Hameth"
+      },
+      "to": "James Allen Flores",
+      "keepOldNameAsAlias": true,
+      "why": "«James Hameth» es el nombre artístico; la persona se llama «James Allen Flores» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14531,
+        "name": "Eliester Ramos"
+      },
+      "alias": "Eliester Ramos Ponce",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 14534,
+        "name": "Nemo.de.Oz"
+      },
+      "to": "Luis Amundaray",
+      "keepOldNameAsAlias": true,
+      "why": "«Nemo.de.Oz» es el nombre artístico; la persona se llama «Luis Amundaray» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14540,
+        "name": "Erwin Medina"
+      },
+      "alias": "Erwin De Medina",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14544,
+        "name": "GoreRoman"
+      },
+      "alias": "Alejandro García",
+      "why": "Nombre real según la fuente (nombre real según Metal Archives (persons.real_name)); no se renombra porque ya es el nombre de otra ficha."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14554,
+        "name": "Eduardo Salazar"
+      },
+      "alias": "Eduardo Salazar Vicuña",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14555,
+        "name": "Fernando Paz"
+      },
+      "alias": "Fernando Paz Jimenez",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14557,
+        "name": "Gerardo Bermúdez"
+      },
+      "alias": "Gerardo Enrique Bermudez Borjas",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14560,
+        "name": "Anibal Torres"
+      },
+      "alias": "Anibal J Torres",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 14561,
+        "name": "Neuromancer"
+      },
+      "to": "Julián Ovalle",
+      "keepOldNameAsAlias": true,
+      "why": "«Neuromancer» es el nombre artístico; la persona se llama «Julián Ovalle» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 14575,
+        "name": "Naberius"
+      },
+      "to": "Juan Camilo Porras Parra",
+      "keepOldNameAsAlias": true,
+      "why": "«Naberius» es el nombre artístico; la persona se llama «Juan Camilo Porras Parra» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14578,
+        "name": "Hellbeats"
+      },
+      "alias": "Jonathan Piñeiro",
+      "why": "Nombre real según la fuente (nombre real según Metal Archives (persons.real_name)); no se renombra porque ya es el nombre de otra ficha."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14587,
+        "name": "Andrew Tovar"
+      },
+      "alias": "Andrew Joan Tovar Alarcon",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14613,
+        "name": "EJ Oropza"
+      },
+      "alias": "Ernesto Oropza",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 14624,
+        "name": "Jean \"Muro\""
+      },
+      "to": "Jean Parra",
+      "keepOldNameAsAlias": true,
+      "why": "«Jean \"Muro\"» es el nombre artístico; la persona se llama «Jean Parra» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14624,
+        "name": "Jean Parra"
+      },
+      "alias": "Muro",
+      "why": "Apodo que iba en el nombre «Jean \"Muro\"»."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14625,
+        "name": "Israel David"
+      },
+      "alias": "Israel David Galian",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 14627,
+        "name": "Brian Spirit"
+      },
+      "to": "Brian Vasquez",
+      "keepOldNameAsAlias": true,
+      "why": "«Brian Spirit» es el nombre artístico; la persona se llama «Brian Vasquez» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 14633,
+        "name": "Iadalbaoth"
+      },
+      "to": "Sergio Rosi",
+      "keepOldNameAsAlias": true,
+      "why": "«Iadalbaoth» es el nombre artístico; la persona se llama «Sergio Rosi» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 14639,
+        "name": "Teurastus"
+      },
+      "to": "Yosi Lopez L.",
+      "keepOldNameAsAlias": true,
+      "why": "«Teurastus» es el nombre artístico; la persona se llama «Yosi Lopez L.» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14644,
+        "name": "Andrés Valencia"
+      },
+      "alias": "Arcesio Andres Valencia Aldana",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14648,
+        "name": "Martin Lucena"
+      },
+      "alias": "Martin A. Lucena",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 14654,
+        "name": "Riddler J"
+      },
+      "to": "Diego Rico",
+      "keepOldNameAsAlias": true,
+      "why": "«Riddler J» es el nombre artístico; la persona se llama «Diego Rico» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14661,
+        "name": "Javier Scorza"
+      },
+      "alias": "Javier P. Scorza",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14667,
+        "name": "Som Quintero"
+      },
+      "alias": "David Quintero",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14681,
+        "name": "Brian Simmons"
+      },
+      "alias": "Brian A. Simmons Nout",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 14682,
+        "name": "Mariana Bassist"
+      },
+      "to": "Mariana Rojas",
+      "keepOldNameAsAlias": true,
+      "why": "«Mariana Bassist» es el nombre artístico; la persona se llama «Mariana Rojas» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14694,
+        "name": "Torres Cruz"
+      },
+      "alias": "Jesus Torres Cruz",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14697,
+        "name": "José “Plaza” Blanca"
+      },
+      "alias": "José Blanca",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14698,
+        "name": "José \"Hao\" Chirinos"
+      },
+      "alias": "José Chirinos",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14702,
+        "name": "Alev Bello"
+      },
+      "alias": "Marina Bello",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 14703,
+        "name": "Njörth"
+      },
+      "to": "Elvis Salazar",
+      "keepOldNameAsAlias": true,
+      "why": "«Njörth» es el nombre artístico; la persona se llama «Elvis Salazar» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 14704,
+        "name": "UrukHai"
+      },
+      "to": "Ignacio Fernandez",
+      "keepOldNameAsAlias": true,
+      "why": "«UrukHai» es el nombre artístico; la persona se llama «Ignacio Fernandez» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 14711,
+        "name": "Ophelia Belial's"
+      },
+      "to": "Isamar Rico",
+      "keepOldNameAsAlias": true,
+      "why": "«Ophelia Belial's» es el nombre artístico; la persona se llama «Isamar Rico» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 14712,
+        "name": "Deathly"
+      },
+      "to": "Teresa Hernandez",
+      "keepOldNameAsAlias": true,
+      "why": "«Deathly» es el nombre artístico; la persona se llama «Teresa Hernandez» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 14713,
+        "name": "Nadie"
+      },
+      "to": "Peter Ramon",
+      "keepOldNameAsAlias": true,
+      "why": "«Nadie» es el nombre artístico; la persona se llama «Peter Ramon» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 14714,
+        "name": "Mortum P."
+      },
+      "to": "Hernán Montaño Calderón",
+      "keepOldNameAsAlias": true,
+      "why": "«Mortum P.» es el nombre artístico; la persona se llama «Hernán Montaño Calderón» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14715,
+        "name": "Rodrigo Vargas"
+      },
+      "alias": "Carlos Rodrigo Vargas",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14725,
+        "name": "Freddy Rivero"
+      },
+      "alias": "Freddy Rivero Ramirez",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 14729,
+        "name": "Dhargorak"
+      },
+      "to": "Daniel Perdomo",
+      "keepOldNameAsAlias": true,
+      "why": "«Dhargorak» es el nombre artístico; la persona se llama «Daniel Perdomo» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 14730,
+        "name": "Cryptos"
+      },
+      "to": "Deivy Medina",
+      "keepOldNameAsAlias": true,
+      "why": "«Cryptos» es el nombre artístico; la persona se llama «Deivy Medina» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14737,
+        "name": "Luis Kooper"
+      },
+      "alias": "Luis Aguilar",
+      "why": "Nombre real según la fuente (nombre real según Metal Archives (persons.real_name)); no se renombra porque ya es el nombre de otra ficha."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14748,
+        "name": "Ricardo \"Lord\" Kerch"
+      },
+      "alias": "Ricardo Kerch",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 14758,
+        "name": "Lord Death"
+      },
+      "to": "Sergio Luis Ferreyra",
+      "keepOldNameAsAlias": true,
+      "why": "«Lord Death» es el nombre artístico; la persona se llama «Sergio Luis Ferreyra» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14760,
+        "name": "Gregory Gonzalez"
+      },
+      "alias": "Gregory Gonzalez Gallardo",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14761,
+        "name": "Deivis Camacho"
+      },
+      "alias": "Deivis Jesus Camacho Perez",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14765,
+        "name": "Diego \"Chapu\" Sanchez"
+      },
+      "alias": "Diego Armando Sanchez",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14792,
+        "name": "Leo Bressanutti"
+      },
+      "alias": "Leonardo Bressanutti",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14812,
+        "name": "David \"Pipo\" Abraham"
+      },
+      "alias": "David Abraham",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 14813,
+        "name": "Noath"
+      },
+      "to": "Karlos Rodriguez",
+      "keepOldNameAsAlias": true,
+      "why": "«Noath» es el nombre artístico; la persona se llama «Karlos Rodriguez» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14818,
+        "name": "Miguel \"Zophiel\" Martínez"
+      },
+      "alias": "Miguel Martínez",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14823,
+        "name": "Raúl Linares"
+      },
+      "alias": "Raúl Enrique Linares",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 14824,
+        "name": "Lucho Hammer"
+      },
+      "to": "Luis Hernán Medina Pacheco-Benavides",
+      "keepOldNameAsAlias": true,
+      "why": "«Lucho Hammer» es el nombre artístico; la persona se llama «Luis Hernán Medina Pacheco-Benavides» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14841,
+        "name": "Osmel Sosa"
+      },
+      "alias": "Osmel Alberto Sosa",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 14842,
+        "name": "Yesel Bastardo"
+      },
+      "to": "Yesel Manuel",
+      "keepOldNameAsAlias": true,
+      "why": "«Yesel Bastardo» es el nombre artístico; la persona se llama «Yesel Manuel» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14846,
+        "name": "Gregorio Parra"
+      },
+      "alias": "José Gregorio Parra",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14854,
+        "name": "Heiroon \"Beldar\" Partidas"
+      },
+      "alias": "Heiroon Partidas",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 14858,
+        "name": "Juan De Dios"
+      },
+      "to": "Juan Luis Gonzalez Diaz",
+      "keepOldNameAsAlias": true,
+      "why": "«Juan De Dios» es el nombre artístico; la persona se llama «Juan Luis Gonzalez Diaz» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14861,
+        "name": "Pedro Notario"
+      },
+      "alias": "Pedro Notario Peña",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14889,
+        "name": "Eimel Trejo"
+      },
+      "alias": "Eimel Nistrain Trejo",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 14895,
+        "name": "Alex Sosa"
+      },
+      "to": "Ramon Alexandro Chirino",
+      "keepOldNameAsAlias": true,
+      "why": "«Alex Sosa» es el nombre artístico; la persona se llama «Ramon Alexandro Chirino» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14900,
+        "name": "Mick Demon"
+      },
+      "alias": "Mick Demond",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14902,
+        "name": "Romny Gutiérrez"
+      },
+      "alias": "Romny Gutiérrez Sotter",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14911,
+        "name": "Yasmal \"Destructor\" Gutierrez"
+      },
+      "alias": "Yasmal Gutierrez",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14919,
+        "name": "El Gurú"
+      },
+      "alias": "Gilbert Gurú",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14922,
+        "name": "Wismar Pulido"
+      },
+      "alias": "Gabriel Wismar Pulido Cordero",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14927,
+        "name": "Isaac Medina"
+      },
+      "alias": "Isaac David Medina Hernandez",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14929,
+        "name": "Humberto Pariche"
+      },
+      "alias": "Humberto Pariche Hrich",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 14934,
+        "name": "Chaos Mortiferiis"
+      },
+      "to": "Chris Lopez",
+      "keepOldNameAsAlias": true,
+      "why": "«Chaos Mortiferiis» es el nombre artístico; la persona se llama «Chris Lopez» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 14935,
+        "name": "Spektral"
+      },
+      "to": "Jessika Lorena Rodriguez",
+      "keepOldNameAsAlias": true,
+      "why": "«Spektral» es el nombre artístico; la persona se llama «Jessika Lorena Rodriguez» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 14940,
+        "name": "Lemias"
+      },
+      "to": "Carlos Lemias",
+      "keepOldNameAsAlias": true,
+      "why": "«Lemias» es el nombre artístico; la persona se llama «Carlos Lemias» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14942,
+        "name": "Eduardo O. Gil"
+      },
+      "alias": "Carlos Eduardo Osuna Gil",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14944,
+        "name": "Winston Jarquin"
+      },
+      "alias": "Winston A. Jarquin",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14947,
+        "name": "Chris Eklund"
+      },
+      "alias": "Christopher Eklund",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 14953,
+        "name": "Rosbel-Pepe"
+      },
+      "to": "Rosbel Rangel",
+      "keepOldNameAsAlias": true,
+      "why": "«Rosbel-Pepe» es el nombre artístico; la persona se llama «Rosbel Rangel» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 14954,
+        "name": "Jhosue-Kchito"
+      },
+      "to": "Jhosue Palomino",
+      "keepOldNameAsAlias": true,
+      "why": "«Jhosue-Kchito» es el nombre artístico; la persona se llama «Jhosue Palomino» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 14956,
+        "name": "Edickson-El Demente"
+      },
+      "to": "Edickson Salazar",
+      "keepOldNameAsAlias": true,
+      "why": "«Edickson-El Demente» es el nombre artístico; la persona se llama «Edickson Salazar» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14983,
+        "name": "Carlos \"Portu\" de Sousa"
+      },
+      "alias": "Carlos de Sousa",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 14988,
+        "name": "Tempestus"
+      },
+      "to": "Asdrubal Viana",
+      "keepOldNameAsAlias": true,
+      "why": "«Tempestus» es el nombre artístico; la persona se llama «Asdrubal Viana» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14990,
+        "name": "Carlos Damiano"
+      },
+      "alias": "Carlos Damiano Bracho",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 14998,
+        "name": "Valtasael"
+      },
+      "to": "Agustin Avila",
+      "keepOldNameAsAlias": true,
+      "why": "«Valtasael» es el nombre artístico; la persona se llama «Agustin Avila» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 14999,
+        "name": "Kike Chavez"
+      },
+      "alias": "Enrique Chavez",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 15005,
+        "name": "Alfredo Trooper González"
+      },
+      "alias": "Alfredo González",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 1501,
+        "name": "Chuck David"
+      },
+      "alias": "Carlos David",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 15012,
+        "name": "Demongoat"
+      },
+      "to": "Alejandro Parra",
+      "keepOldNameAsAlias": true,
+      "why": "«Demongoat» es el nombre artístico; la persona se llama «Alejandro Parra» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 15027,
+        "name": "Carlo Pirazzo"
+      },
+      "alias": "Carlos Pirazzo",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 15031,
+        "name": "Luna Franco"
+      },
+      "alias": "Franco Luna",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 15039,
+        "name": "Lino Garcia"
+      },
+      "alias": "Lino García Villalobos",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 15041,
+        "name": "Mladen Horvat"
+      },
+      "alias": "Mladen Horvat-Bartl",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 15045,
+        "name": "Alex Chami"
+      },
+      "alias": "Alejandro Galicia",
+      "why": "Nombre real según la fuente (nombre real según Metal Archives (persons.real_name)); no se renombra porque ya es el nombre de otra ficha."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 15068,
+        "name": "Daniel Chan"
+      },
+      "to": "Daniel Valdivieso",
+      "keepOldNameAsAlias": true,
+      "why": "«Daniel Chan» es el nombre artístico; la persona se llama «Daniel Valdivieso» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 15071,
+        "name": "Rosalinda Dao"
+      },
+      "alias": "Rosalinda Dao Romero",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 15098,
+        "name": "El Cuervo"
+      },
+      "to": "César Urquiola",
+      "keepOldNameAsAlias": true,
+      "why": "«El Cuervo» es el nombre artístico; la persona se llama «César Urquiola» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 15102,
+        "name": "Diego Cabrujas"
+      },
+      "alias": "Diego Cabrujas Palacios",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 15136,
+        "name": "Hekura"
+      },
+      "to": "Gustavo Porrello",
+      "keepOldNameAsAlias": true,
+      "why": "«Hekura» es el nombre artístico; la persona se llama «Gustavo Porrello» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 15137,
+        "name": "Barné"
+      },
+      "to": "Olbert Jiménez",
+      "keepOldNameAsAlias": true,
+      "why": "«Barné» es el nombre artístico; la persona se llama «Olbert Jiménez» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 15138,
+        "name": "Yopo"
+      },
+      "to": "Rodny Armas",
+      "keepOldNameAsAlias": true,
+      "why": "«Yopo» es el nombre artístico; la persona se llama «Rodny Armas» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 15139,
+        "name": "Yarake"
+      },
+      "to": "Alejandro Barros",
+      "keepOldNameAsAlias": true,
+      "why": "«Yarake» es el nombre artístico; la persona se llama «Alejandro Barros» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 15140,
+        "name": "Yamiju"
+      },
+      "to": "Francisco Sanguinetty",
+      "keepOldNameAsAlias": true,
+      "why": "«Yamiju» es el nombre artístico; la persona se llama «Francisco Sanguinetty» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 15141,
+        "name": "Yamandu"
+      },
+      "to": "José Caña",
+      "keepOldNameAsAlias": true,
+      "why": "«Yamandu» es el nombre artístico; la persona se llama «José Caña» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 15148,
+        "name": "Alice Vb"
+      },
+      "to": "Alice Velasquez",
+      "keepOldNameAsAlias": true,
+      "why": "«Alice Vb» es el nombre artístico; la persona se llama «Alice Velasquez» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 15155,
+        "name": "Dayvanna Salas"
+      },
+      "alias": "Dayvanna Salas León",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 15160,
+        "name": "Sangre Licaentz"
+      },
+      "to": "Audrey Rose",
+      "keepOldNameAsAlias": true,
+      "why": "«Sangre Licaentz» es el nombre artístico; la persona se llama «Audrey Rose» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 15161,
+        "name": "Cuervo"
+      },
+      "alias": "Luis Villamizar",
+      "why": "Nombre real según la fuente (nombre real según Metal Archives (persons.real_name)); no se renombra porque ya es el nombre de otra ficha."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 15162,
+        "name": "Samuel D. Sosa"
+      },
+      "alias": "Samuel Darío Sosa",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 15171,
+        "name": "José María Abache"
+      },
+      "alias": "José María Abache Salas",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 15183,
+        "name": "Jean Hernández"
+      },
+      "alias": "Jean Carlo Rene Hernández Marriaga",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 15198,
+        "name": "Luis Platano"
+      },
+      "to": "Luis Tovar",
+      "keepOldNameAsAlias": true,
+      "why": "«Luis Platano» es el nombre artístico; la persona se llama «Luis Tovar» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 15199,
+        "name": "Luis Zapata"
+      },
+      "alias": "Luis David Zapata",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 15202,
+        "name": "Daniel Excreta"
+      },
+      "to": "Daniel Jaramillo",
+      "keepOldNameAsAlias": true,
+      "why": "«Daniel Excreta» es el nombre artístico; la persona se llama «Daniel Jaramillo» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 15203,
+        "name": "Ereshkigal"
+      },
+      "to": "Valeria Ascencio",
+      "keepOldNameAsAlias": true,
+      "why": "«Ereshkigal» es el nombre artístico; la persona se llama «Valeria Ascencio» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 15204,
+        "name": "Alex \"Hueso\" Sosa"
+      },
+      "alias": "Alexander Sosa",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 15205,
+        "name": "Banshee"
+      },
+      "to": "Héctor Esteban Lavid",
+      "keepOldNameAsAlias": true,
+      "why": "«Banshee» es el nombre artístico; la persona se llama «Héctor Esteban Lavid» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 15215,
+        "name": "Sven"
+      },
+      "to": "Sven Havlíček",
+      "keepOldNameAsAlias": true,
+      "why": "«Sven» es el nombre artístico; la persona se llama «Sven Havlíček» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 15233,
+        "name": "Hermán Riera"
+      },
+      "alias": "Hermán A Riera",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 15236,
+        "name": "Carlos Chiesa"
+      },
+      "alias": "Carlos M Chiesa-Estomba",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 15239,
+        "name": "Luis \"Noni\""
+      },
+      "alias": "Luis Gonzalez",
+      "why": "Nombre real según la fuente (nombre real según Metal Archives (persons.real_name)); no se renombra porque ya es el nombre de otra ficha."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 15273,
+        "name": "María Silva"
+      },
+      "alias": "María Jesús Silva Hernández",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 15283,
+        "name": "Krozty"
+      },
+      "to": "Alberto Pinto",
+      "keepOldNameAsAlias": true,
+      "why": "«Krozty» es el nombre artístico; la persona se llama «Alberto Pinto» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 15287,
+        "name": "Emilio de la Vega"
+      },
+      "alias": "Emilio de la Vega Rapallo",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 15304,
+        "name": "Juan Manuel Nieto"
+      },
+      "alias": "Juan Manuel Nieto Colmenarez",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 15362,
+        "name": "Danian"
+      },
+      "alias": "Daniel Perdomo",
+      "why": "Nombre real según la fuente (nombre real según Metal Archives (persons.real_name)); no se renombra porque ya es el nombre de otra ficha."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 15368,
+        "name": "Jeremías"
+      },
+      "to": "Carlos Eduardo López Ávila",
+      "keepOldNameAsAlias": true,
+      "why": "«Jeremías» es el nombre artístico; la persona se llama «Carlos Eduardo López Ávila» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 1733,
+        "name": "José Camacho"
+      },
+      "alias": "Jose Reinaldo Camacho",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 196,
+        "name": "Julio Hernández"
+      },
+      "alias": "Julio César Hernández Oropeza",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 2025,
+        "name": "Victor López"
+      },
+      "alias": "Víctor Manuel López Inaudi",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 2166,
+        "name": "Adrián"
+      },
+      "to": "Adrian Carrasquel",
+      "keepOldNameAsAlias": true,
+      "why": "«Adrián» es el nombre artístico; la persona se llama «Adrian Carrasquel» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 2433,
+        "name": "Alejandro Londoño"
+      },
+      "alias": "Alejandro Londoño Montoya",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 2434,
+        "name": "Juan Manuel De Ferrari"
+      },
+      "alias": "Juan Manuel De Ferrari Montoya",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 2591,
+        "name": "Luis Flores"
+      },
+      "alias": "Luis Manuel Flores",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 2631,
+        "name": "Luis Gonzalez"
+      },
+      "alias": "Luis Ángel González",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 2663,
+        "name": "Marco Toro"
+      },
+      "to": "Marco Bernal",
+      "keepOldNameAsAlias": true,
+      "why": "«Marco Toro» es el nombre artístico; la persona se llama «Marco Bernal» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 2943,
+        "name": "César Alberto Somoza"
+      },
+      "alias": "César Alberto Somoza Torres",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 2945,
+        "name": "Marco Ciargo"
+      },
+      "alias": "Marco Tulio Ciargo Sarri",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 2947,
+        "name": "Rodrigo Yoma"
+      },
+      "alias": "Rodrigo Antonio Yoma Aparici",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 3252,
+        "name": "Jonathan Quinto"
+      },
+      "alias": "Jonathan Enrique Quinto Gamboa",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 3289,
+        "name": "Freddy Marshall"
+      },
+      "to": "Freddy Cabezas Álvarez",
+      "keepOldNameAsAlias": true,
+      "why": "«Freddy Marshall» es el nombre artístico; la persona se llama «Freddy Cabezas Álvarez» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 360,
+        "name": "Daniel"
+      },
+      "alias": "Daniel Díaz",
+      "why": "Nombre real según la fuente (nombre real según Metal Archives (persons.real_name)); no se renombra porque ya es el nombre de otra ficha."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 3809,
+        "name": "Andrés"
+      },
+      "to": "Andrés Sánchez",
+      "keepOldNameAsAlias": true,
+      "why": "«Andrés» es el nombre artístico; la persona se llama «Andrés Sánchez» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 3875,
+        "name": "José \"Chego\" Cabrices"
+      },
+      "alias": "Jose Cabrices",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 3979,
+        "name": "Asdrúbal Pinto"
+      },
+      "alias": "Asdrubal Pinto Marcano",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 4224,
+        "name": "Carlos Salas"
+      },
+      "alias": "Carlos Salas Venegas",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 4367,
+        "name": "Pedro Colotto"
+      },
+      "alias": "Pedro Pablo Colotto",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 4409,
+        "name": "Jesús Hernández"
+      },
+      "alias": "Jesús Alberto Hernández Rondon",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 4484,
+        "name": "Humberto Ortega"
+      },
+      "alias": "Humberto Miguel Ortega Taylhardat",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 4676,
+        "name": "Ricardo Jardines"
+      },
+      "alias": "Ricardo Alberto Jardines Garcia",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 4678,
+        "name": "Fabio Martins"
+      },
+      "alias": "Fabio Martins Ferreira",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 4679,
+        "name": "Dieter Cedeño"
+      },
+      "alias": "Dieter Rafael Cedeño Flores",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 4681,
+        "name": "José Medina"
+      },
+      "alias": "Rafael José Medina",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 4738,
+        "name": "Paul Rincón"
+      },
+      "alias": "Paul Enrique Rincón Urdaneta",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 4745,
+        "name": "Juan Carlos Casañas"
+      },
+      "alias": "Juan Carlos Casañas Silva",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 4751,
+        "name": "Sara Rodriguez"
+      },
+      "alias": "Sara Sofia Rodriguez",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 4787,
+        "name": "Jean Puccia"
+      },
+      "alias": "Jean Robert Puccia Suarez",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 4788,
+        "name": "Deibys Artigas"
+      },
+      "alias": "Deibys Artigas Venegas",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 4789,
+        "name": "José Gregorio Spíndola"
+      },
+      "alias": "Jose Gregorio Brito Spindolla",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 4792,
+        "name": "Carlos Arvelo"
+      },
+      "alias": "Carlos Arvelo Soriano",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 5195,
+        "name": "Félix Molina"
+      },
+      "alias": "Félix Armando Molina Torres",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 521,
+        "name": "Tomás Pérez"
+      },
+      "alias": "Tomás E. Pérez Ocariz",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 5255,
+        "name": "Bryan Millán"
+      },
+      "alias": "Brian Millán",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 5257,
+        "name": "David Guti"
+      },
+      "to": "David Gutierrez",
+      "keepOldNameAsAlias": true,
+      "why": "«David Guti» es el nombre artístico; la persona se llama «David Gutierrez» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 5343,
+        "name": "Angel Moreno"
+      },
+      "alias": "Angel Guillermo Moreno",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 5390,
+        "name": "Luis Ramirez"
+      },
+      "alias": "Luis Enrique Ramírez",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 5392,
+        "name": "Christian Pérez"
+      },
+      "alias": "Christian Pérez Rodriguez",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 5603,
+        "name": "José Maneiro"
+      },
+      "alias": "Joseph Maneiro",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 5624,
+        "name": "Jesús Maneiro"
+      },
+      "alias": "Jesus Daniel Maneiro",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 5677,
+        "name": "Jesús Espinoza"
+      },
+      "alias": "Marcel Jesús Espinoza",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 5723,
+        "name": "Volkov"
+      },
+      "to": "Miguel Angel Major Rodriguez",
+      "keepOldNameAsAlias": true,
+      "why": "«Volkov» es el nombre artístico; la persona se llama «Miguel Angel Major Rodriguez» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 5736,
+        "name": "Douglas Rodríguez"
+      },
+      "alias": "Douglas José Rodríguez Millán",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 5742,
+        "name": "Luis Celimene"
+      },
+      "alias": "Luis Gabriel Celimene Rubin",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 5847,
+        "name": "Federico Agreda"
+      },
+      "alias": "Federico Augusto Ágreda Álvarez",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 5886,
+        "name": "Oscar Contramaestre"
+      },
+      "alias": "Oswaldo Maracucho Contramaestre",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 5891,
+        "name": "Danny Alba Coelho"
+      },
+      "alias": "Danny Orlando Alba Coelho",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 5900,
+        "name": "Ezlen Ramos"
+      },
+      "alias": "José Antonio Ramos",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 5912,
+        "name": "Marco Pratolongo"
+      },
+      "alias": "Marcos Protolongo Colanzingari",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 6057,
+        "name": "Juan Carlos Medina"
+      },
+      "alias": "Juan Carlos Medina Puerta",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 6080,
+        "name": "Javier López"
+      },
+      "alias": "Javier Lopez Bolaños",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 6087,
+        "name": "Phill Alvarez"
+      },
+      "alias": "Felipe Alvarez",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 6183,
+        "name": "Moro Acacio"
+      },
+      "alias": "Ivan Moro Acacio",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 6188,
+        "name": "José \"Nacho\" Rondón"
+      },
+      "alias": "Ignacio Rondón",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 6193,
+        "name": "Marcial Meléndez"
+      },
+      "alias": "Marcial Meléndez González",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 6372,
+        "name": "Ricardo Escobar"
+      },
+      "alias": "Ricardo Alberto Escobar Bruce",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 6387,
+        "name": "Fernando"
+      },
+      "alias": "Fernando Villa",
+      "why": "Nombre real según la fuente (nombre real según Metal Archives (persons.real_name)); no se renombra porque ya es el nombre de otra ficha."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 6471,
+        "name": "Adrian De Abreu"
+      },
+      "alias": "Adrian Xavier De Abreu",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 6478,
+        "name": "Kenny Burmistrov"
+      },
+      "alias": "Kenny Valentin Peña Burmistrov",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 6523,
+        "name": "Ricardo Fenchuy"
+      },
+      "to": "Ricardo Marin",
+      "keepOldNameAsAlias": true,
+      "why": "«Ricardo Fenchuy» es el nombre artístico; la persona se llama «Ricardo Marin» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 6526,
+        "name": "Javier Vadaker"
+      },
+      "to": "Javier Garcia",
+      "keepOldNameAsAlias": true,
+      "why": "«Javier Vadaker» es el nombre artístico; la persona se llama «Javier Garcia» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 664,
+        "name": "Ricardo Martínez"
+      },
+      "alias": "Ricardo Martinez D'andrea",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 6647,
+        "name": "Juan Carlos Villar"
+      },
+      "alias": "Juan Carlos Villar Bermudez",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 6980,
+        "name": "Luis Loyo"
+      },
+      "alias": "Luis Alfredo Loyo Hernandez",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 6981,
+        "name": "Carlos Campos"
+      },
+      "alias": "Carlos Enrique Campos",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 6987,
+        "name": "José Miguel Ahmad"
+      },
+      "alias": "José Miguel Ahmad Osorio",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 7041,
+        "name": "Juan González"
+      },
+      "alias": "Juan Alfredo Gonzalez",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 7786,
+        "name": "Alejandro"
+      },
+      "to": "Alejandro Luzardo",
+      "keepOldNameAsAlias": true,
+      "why": "«Alejandro» es el nombre artístico; la persona se llama «Alejandro Luzardo» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 924,
+        "name": "Francisco Morales"
+      },
+      "alias": "Francisco Morales Cáceres",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "rename",
+      "person": {
+        "id": 9280,
+        "name": "Pipo"
+      },
+      "to": "Francisco Gonzalez",
+      "keepOldNameAsAlias": true,
+      "why": "«Pipo» es el nombre artístico; la persona se llama «Francisco Gonzalez» (nombre real según Metal Archives (persons.real_name)). El nombre artístico queda de alias (caso Canserbero)."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 989,
+        "name": "Luis Rodríguez"
+      },
+      "alias": "Luis Eduardo Rodríguez",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    },
+    {
+      "op": "add_alias",
+      "person": {
+        "id": 9950,
+        "name": "Luis Panero"
+      },
+      "alias": "Luis Valentín Panero Benito",
+      "why": "Nombre completo de la persona (nombre real según Metal Archives (persons.real_name)); la ficha ya lleva una forma de ese nombre."
+    }
+  ]
+}
