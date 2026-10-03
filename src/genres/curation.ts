@@ -23,7 +23,7 @@ import { EXTERNAL_REVIEW_ORIGIN } from "./external/store.js";
 import { normalizeGenreText } from "./normalize.js";
 import type { GenreEntityKind } from "./rules.js";
 import { GENRE_REVIEW_KIND, MERGE_REVIEW_ORIGIN, loadTaxonomy, lockGenres, type RecomputeResult } from "./store.js";
-import { familyOf, resolveGenreValue } from "./taxonomy.js";
+import { familyOf, genreLevelOf, resolveGenreValue, type GenreLevel } from "./taxonomy.js";
 
 /** Canal oficial cuya discografía alimenta la Radio CRV (scripts/export-radio-catalog.ts). */
 export const RADIO_CHANNEL_ID = "UCtYlrz6GyvRahlhHjocWQYQ";
@@ -433,13 +433,17 @@ export async function listGenreQueue(client: PoolClient, query: QueueQuery = {})
 
 // --- Lectura: ficha -----------------------------------------------------------
 
-export interface GenreRef { id: number; slug: string; name: string; level: "family" | "genre"; family: string | null; active: boolean }
+/** `genre`: el género del nodo (el propio, o el padre de un subgénero); nulo en una familia. */
+export interface GenreRef { id: number; slug: string; name: string; level: GenreLevel; family: string | null; genre: string | null; active: boolean }
 
 async function genreRefs(client: PoolClient): Promise<Map<number, GenreRef>> {
   const taxonomy = await loadTaxonomy(client);
   const refs = new Map<number, GenreRef>();
   for (const genre of taxonomy.genres.values()) {
-    refs.set(genre.id, { id: genre.id, slug: genre.slug, name: genre.name, level: genre.level, family: familyOf(taxonomy, genre.id)?.slug ?? null, active: genre.active });
+    refs.set(genre.id, {
+      id: genre.id, slug: genre.slug, name: genre.name, level: genre.level, family: familyOf(taxonomy, genre.id)?.slug ?? null,
+      genre: genreLevelOf(taxonomy, genre.id)?.slug ?? null, active: genre.active,
+    });
   }
   return refs;
 }
@@ -573,17 +577,23 @@ export async function genreEntityDetail(client: PoolClient, kind: GenreEntityKin
 
 // --- Lectura: vocabulario -----------------------------------------------------
 
-export async function genreVocabulary(client: PoolClient): Promise<Array<GenreRef & { description: string | null; children: GenreRef[]; aliases: number }>> {
+type VocabularyEntry = GenreRef & { description: string | null; aliases: number };
+
+/** Familias → géneros → subgéneros (cada nivel en `children`, por nombre). */
+export async function genreVocabulary(client: PoolClient): Promise<Array<VocabularyEntry & { children: Array<VocabularyEntry & { children: VocabularyEntry[] }> }>> {
   const { rows } = await client.query<{ id: string; description: string | null; aliases: number }>(`
     SELECT g.id::text, g.description, (SELECT count(*)::int FROM ingest.genre_aliases a WHERE a.genre_id = g.id) AS aliases
       FROM ingest.genres g`);
   const extra = new Map(rows.map((row) => [Number(row.id), row]));
   const refs = [...(await genreRefs(client)).values()];
-  const withExtra = (genre: GenreRef) => ({ ...genre, description: extra.get(genre.id)?.description ?? null, aliases: extra.get(genre.id)?.aliases ?? 0 });
-  return refs.filter((genre) => genre.level === "family").sort((a, b) => a.name.localeCompare(b.name, "es")).map((family) => ({
+  const withExtra = (genre: GenreRef): VocabularyEntry => ({ ...genre, description: extra.get(genre.id)?.description ?? null, aliases: extra.get(genre.id)?.aliases ?? 0 });
+  const byName = (a: GenreRef, b: GenreRef) => a.name.localeCompare(b.name, "es");
+  return refs.filter((genre) => genre.level === "family").sort(byName).map((family) => ({
     ...withExtra(family),
-    children: refs.filter((genre) => genre.level === "genre" && genre.family === family.slug)
-      .sort((a, b) => a.name.localeCompare(b.name, "es")).map(withExtra),
+    children: refs.filter((genre) => genre.level === "genre" && genre.family === family.slug).sort(byName).map((genre) => ({
+      ...withExtra(genre),
+      children: refs.filter((sub) => sub.level === "subgenre" && sub.genre === genre.slug).sort(byName).map(withExtra),
+    })),
   }));
 }
 
@@ -635,7 +645,7 @@ export async function genreMetrics(client: PoolClient): Promise<Record<string, u
       SELECT f.slug, f.name,
              count(DISTINCT ag.album_id)::int AS albums, count(DISTINCT rg.artist_id)::int AS artists
         FROM ingest.genres f
-        LEFT JOIN ingest.genres g ON g.id = f.id OR g.parent_genre_id = f.id
+        LEFT JOIN ingest.genre_lineage g ON g.family_id = f.id
         LEFT JOIN ingest.album_genres ag ON ag.genre_id = g.id AND ag.status = 'confirmed'
         LEFT JOIN ingest.artist_genres rg ON rg.genre_id = g.id AND rg.status = 'confirmed'
        WHERE f.level = 'family' GROUP BY f.slug, f.name ORDER BY 3 DESC, 1`);

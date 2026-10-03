@@ -16,6 +16,8 @@ export interface PublicGenre {
   name: string;
   /** Slug de la familia; en una asignación directa a familia, el propio slug. */
   family: string;
+  /** Solo en un subgénero: el slug de su género (pasaje → joropo). */
+  parentGenre?: string;
 }
 
 export interface PublicGenres {
@@ -38,17 +40,20 @@ export async function publicGenresFor(
   const unique = [...new Set(ids)];
   if (!unique.length) return result;
   const column = kind === "album" ? "album_id" : "artist_id";
-  const { rows } = await db.query<{ entity_id: string; id: string; slug: string; name: string; family: string; role: string }>(`
-    SELECT x.${column}::text AS entity_id, g.id::text, g.slug, g.name, COALESCE(f.slug, g.slug) AS family, x.role
+  const { rows } = await db.query<{ entity_id: string; id: string; slug: string; name: string; family: string; parent_genre: string | null; role: string }>(`
+    SELECT x.${column}::text AS entity_id, g.id::text, g.slug, g.name, COALESCE(f.slug, g.slug) AS family,
+           CASE WHEN g.level = 'subgenre' THEN pg.slug END AS parent_genre, x.role
       FROM ingest.${kind}_genres x
-      JOIN ingest.genres g ON g.id = x.genre_id
-      LEFT JOIN ingest.genres f ON f.id = g.parent_genre_id
+      JOIN ingest.genre_lineage g ON g.id = x.genre_id
+      LEFT JOIN ingest.genres f ON f.id = g.family_id
+      LEFT JOIN ingest.genres pg ON pg.id = g.genre_id
      WHERE x.${column} = ANY($1::bigint[]) AND x.status = 'confirmed'
      ORDER BY x.${column}, (x.role = 'primary') DESC, g.name`, [unique]);
   for (const id of unique) result.set(id, { primaryGenre: null, genres: [], genreStatus: "unclassified" });
   for (const row of rows) {
     const entry = result.get(Number(row.entity_id))!;
     const genre: PublicGenre = { id: Number(row.id), slug: row.slug, name: row.name, family: row.family };
+    if (row.parent_genre) genre.parentGenre = row.parent_genre;
     entry.genres.push(genre);
     if (row.role === "primary") entry.primaryGenre = genre;
   }
@@ -61,17 +66,17 @@ export async function publicGenresFor(
 }
 
 /**
- * Condición SQL para filtrar por slug (PLAN §5): una familia incluye lo
- * asignado a la familia y a sus hijos. `$n` es el parámetro con el slug.
+ * Condición SQL para filtrar por slug (PLAN §5): un nodo incluye lo asignado
+ * a él y a sus descendientes (una familia, sus géneros y subgéneros; un
+ * género, sus subgéneros). `$n` es el parámetro con el slug.
  */
 export function genreFilterSql(kind: GenreEntityKind, entityExpr: string, param: string): string {
   const column = kind === "album" ? "album_id" : "artist_id";
   return `EXISTS (
     SELECT 1 FROM ingest.${kind}_genres gf
-      JOIN ingest.genres gg ON gg.id = gf.genre_id
-      LEFT JOIN ingest.genres gp ON gp.id = gg.parent_genre_id
-     WHERE gf.${column} = ${entityExpr} AND gf.status = 'confirmed'
-       AND (gg.slug = ${param} OR gp.slug = ${param}))`;
+      JOIN ingest.genre_lineage gg ON gg.id = gf.genre_id
+      JOIN ingest.genres gp ON gp.id IN (gg.id, gg.genre_id, gg.family_id)
+     WHERE gf.${column} = ${entityExpr} AND gf.status = 'confirmed' AND gp.slug = ${param})`;
 }
 
 /** Condición SQL: la entidad no tiene ningún género confirmado (filtro «Sin género»). */
@@ -95,14 +100,19 @@ export function relatedGenreFilterSql(entityExpr: string, param: string): string
 export interface GenreFacet {
   slug: string;
   name: string;
-  /** Fichas con este género confirmado (en una familia, también sus hijos). */
+  /** Fichas con este género confirmado (también las de sus descendientes). */
   count: number;
   /** Discos sin género propio que entran por el de su artista (en artistas, siempre 0). */
   relatedCount: number;
 }
 
+export interface GenreGenreFacet extends GenreFacet {
+  /** Subgéneros con fichas; ausente si no tiene ninguno. */
+  subgenres?: GenreFacet[];
+}
+
 export interface GenreFamilyFacet extends GenreFacet {
-  genres: GenreFacet[];
+  genres: GenreGenreFacet[];
 }
 
 export interface GenreFacets {
@@ -129,15 +139,17 @@ export async function genreFacets(kind: GenreEntityKind, db: Queryable = getPool
     : "SELECT NULL::bigint AS entity_id, NULL::bigint AS genre_id WHERE false";
   const entityTable = kind === "album" ? "public.albums" : "public.artists";
   const [counts, totals] = await Promise.all([
-    db.query<{ source: "own" | "related"; genre_id: string | null; family_id: string | null; count: string }>(`
+    // Cada asignación suma a su nodo y a sus antepasados (género y familia).
+    db.query<{ source: "own" | "related"; node_id: string; count: string }>(`
       WITH hits AS (
-        SELECT 'own' AS source, h.entity_id, g.id AS genre_id, COALESCE(g.parent_genre_id, g.id) AS family_id
-          FROM (${own}) h JOIN ingest.genres g ON g.id = h.genre_id
+        SELECT 'own' AS source, h.entity_id, h.genre_id FROM (${own}) h
         UNION ALL
-        SELECT 'related', h.entity_id, g.id, COALESCE(g.parent_genre_id, g.id)
-          FROM (${related}) h JOIN ingest.genres g ON g.id = h.genre_id)
-      SELECT source, genre_id::text, family_id::text, count(DISTINCT entity_id)::text AS count
-        FROM hits GROUP BY GROUPING SETS ((source, genre_id), (source, family_id))`),
+        SELECT 'related', h.entity_id, h.genre_id FROM (${related}) h)
+      SELECT h.source, n.node_id::text, count(DISTINCT h.entity_id)::text AS count
+        FROM hits h
+        JOIN ingest.genre_lineage l ON l.id = h.genre_id
+        CROSS JOIN LATERAL (SELECT DISTINCT v FROM unnest(ARRAY[l.id, l.genre_id, l.family_id]) v WHERE v IS NOT NULL) n(node_id)
+       GROUP BY h.source, n.node_id`),
     db.query<{ total: string; without: string }>(`
       SELECT count(*)::text AS total, count(*) FILTER (WHERE ${genreMissingSql(kind, "e.id")})::text AS without
         FROM ${entityTable} e`),
@@ -146,24 +158,23 @@ export async function genreFacets(kind: GenreEntityKind, db: Queryable = getPool
     SELECT id::text, slug, name, level, parent_genre_id::text AS parent_id
       FROM ingest.genres WHERE active ORDER BY name`);
 
-  const byGenre = new Map<string, { own: number; related: number }>();
-  const byFamily = new Map<string, { own: number; related: number }>();
+  const byNode = new Map<string, { own: number; related: number }>();
   for (const row of counts.rows) {
-    const [map, key] = row.genre_id !== null ? [byGenre, row.genre_id] : [byFamily, row.family_id!];
-    const entry = map.get(key) ?? { own: 0, related: 0 };
+    const entry = byNode.get(row.node_id) ?? { own: 0, related: 0 };
     entry[row.source] = Number(row.count);
-    map.set(key, entry);
+    byNode.set(row.node_id, entry);
   }
+  const facetOf = (node: { id: string; slug: string; name: string }): GenreFacet => ({
+    slug: node.slug, name: node.name, count: byNode.get(node.id)?.own ?? 0, relatedCount: byNode.get(node.id)?.related ?? 0,
+  });
   const visible = (facet: GenreFacet) => facet.count > 0 || facet.relatedCount > 0;
   const byCount = (a: GenreFacet, b: GenreFacet) => b.count - a.count || b.relatedCount - a.relatedCount || a.name.localeCompare(b.name, "es");
   const families: GenreFamilyFacet[] = nodes.filter((node) => node.level === "family").map((family) => ({
-    slug: family.slug,
-    name: family.name,
-    count: byFamily.get(family.id)?.own ?? 0,
-    relatedCount: byFamily.get(family.id)?.related ?? 0,
-    genres: nodes.filter((node) => node.level === "genre" && node.parent_id === family.id)
-      .map((genre) => ({ slug: genre.slug, name: genre.name, count: byGenre.get(genre.id)?.own ?? 0, relatedCount: byGenre.get(genre.id)?.related ?? 0 }))
-      .filter(visible).sort(byCount),
+    ...facetOf(family),
+    genres: nodes.filter((node) => node.level === "genre" && node.parent_id === family.id).map((genre) => {
+      const subgenres = nodes.filter((node) => node.level === "subgenre" && node.parent_id === genre.id).map(facetOf).filter(visible).sort(byCount);
+      return subgenres.length ? { ...facetOf(genre), subgenres } : facetOf(genre);
+    }).filter(visible).sort(byCount),
   })).filter(visible).sort(byCount);
   return { total: Number(totals.rows[0]?.total ?? 0), withoutGenre: Number(totals.rows[0]?.without ?? 0), families };
 }

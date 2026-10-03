@@ -1,6 +1,6 @@
 import { useEffect, useId, useMemo, useRef, useState } from "react";
 import { Check, MagnifyingGlass, Question, X } from "@phosphor-icons/react";
-import type { GenreFacet, GenreFacets, GenreFamilyFacet } from "../lib/types";
+import type { GenreFacet, GenreFacets, GenreFamilyFacet, GenreGenreFacet } from "../lib/types";
 import { WITHOUT_GENRE, type GenreSelection } from "../lib/useGenreFilter";
 import { useMediaQuery } from "../lib/useMediaQuery";
 
@@ -47,6 +47,8 @@ interface GenreFilterProps {
   selection: GenreSelection;
   onFamily: (slug: string | null) => void;
   onSub: (family: string, slug: string | null) => void;
+  /** Elige un estilo (tercer nivel) del subgénero; `null` deja todo el subgénero. */
+  onStyle: (family: string, sub: string, slug: string | null) => void;
   onRelated: (value: boolean) => void;
   /** Elige una familia y suma las fichas por relación de un solo paso (desde «Sin género»). */
   onFamilyRelated: (slug: string) => void;
@@ -55,16 +57,17 @@ interface GenreFilterProps {
 /**
  * Filtro por género y subgénero de las listas de discos y artistas: una fila
  * de géneros (familias) con cuántas fichas tiene cada uno, los subgéneros del
- * elegido, un buscador para saltar directo a cualquier estilo y la vía para
+ * elegido, los estilos del subgénero si los tiene (joropo → pasaje, golpe…), un buscador para saltar directo a cualquier estilo y la vía para
  * las fichas sin género (verlas todas o encontrarlas por su relación).
  */
-export function GenreFilter({ kind, facets, facetsError, onRetryFacets, selection, onFamily, onSub, onRelated, onFamilyRelated }: GenreFilterProps) {
+export function GenreFilter({ kind, facets, facetsError, onRetryFacets, selection, onFamily, onSub, onStyle, onRelated, onFamilyRelated }: GenreFilterProps) {
   const copy = COPY[kind];
   const [expanded, setExpanded] = useState(false);
   // En móvil los subgéneros van en una fila que se desliza: caben todos sin «Ver más».
   const isMobile = useMediaQuery("(max-width: 760px)");
   const railRef = useRef<HTMLDivElement>(null);
   const subRailRef = useRef<HTMLDivElement>(null);
+  const styleRailRef = useRef<HTMLDivElement>(null);
   const labelId = useId();
 
   const family = facets?.families.find((entry) => entry.slug === selection.family) ?? null;
@@ -77,14 +80,14 @@ export function GenreFilter({ kind, facets, facetsError, onRetryFacets, selectio
   // Las filas se desplazan en móvil: la opción elegida (p. ej. desde un enlace
   // compartido o el buscador) se trae a la vista sin mover la página.
   useEffect(() => {
-    for (const rail of [railRef.current, subRailRef.current]) {
+    for (const rail of [railRef.current, subRailRef.current, styleRailRef.current]) {
       const pressed = rail?.querySelector<HTMLElement>('[aria-pressed="true"]');
       if (!rail || !pressed || rail.scrollWidth <= rail.clientWidth) continue;
       const left = pressed.offsetLeft - rail.offsetLeft - rail.clientWidth / 2 + pressed.offsetWidth / 2;
       const calm = window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
       rail.scrollTo({ left: Math.max(0, left), behavior: calm ? "auto" : "smooth" });
     }
-  }, [selection.family, selection.sub, facets, isMobile]);
+  }, [selection.family, selection.sub, selection.style, facets, isMobile]);
 
   if (facetsError && !facets) {
     return (
@@ -113,8 +116,11 @@ export function GenreFilter({ kind, facets, facetsError, onRetryFacets, selectio
   if (selectedSub && !shortSubs.includes(selectedSub)) shortSubs.push(selectedSub);
   const visibleSubs = expanded || isMobile ? subs : shortSubs;
   const hiddenCount = isMobile ? 0 : subs.length - shortSubs.length;
-  const genreName = selectedSub?.name ?? family?.name ?? "";
-  const relatedCount = selectedSub ? selectedSub.relatedCount : family?.relatedCount ?? 0;
+  // Estilos: el tercer nivel solo aparece bajo un subgénero que los tenga, y son pocos (sin «Ver más»).
+  const styles = selectedSub?.subgenres?.filter((entry) => effective(entry) > 0 || entry.slug === selection.style) ?? [];
+  const selectedStyle = styles.find((entry) => entry.slug === selection.style);
+  const genreName = selectedStyle?.name ?? selectedSub?.name ?? family?.name ?? "";
+  const relatedCount = (selectedStyle ?? selectedSub ?? family)?.relatedCount ?? 0;
   const withoutBreakdown = facets.families.filter((entry) => entry.relatedCount > 0)
     .sort((a, b) => b.relatedCount - a.relatedCount);
 
@@ -122,7 +128,7 @@ export function GenreFilter({ kind, facets, facetsError, onRetryFacets, selectio
     <section className="gfilter" aria-labelledby={labelId}>
       <div className="gfilter__head">
         <h2 id={labelId} className="gfilter__label">Filtrar por género</h2>
-        <GenreFinder facets={facets} related={selection.related} onFamily={(slug) => { if (slug !== selection.family || selection.sub) onFamily(slug); }} onSub={onSub} />
+        <GenreFinder facets={facets} related={selection.related} onFamily={(slug) => { if (slug !== selection.family || selection.sub) onFamily(slug); }} onSub={onSub} onStyle={onStyle} />
       </div>
 
       <div className="gfilter__rail" ref={railRef} role="group" aria-label="Géneros">
@@ -152,6 +158,20 @@ export function GenreFilter({ kind, facets, facetsError, onRetryFacets, selectio
                 {expanded ? "Ver menos" : `Ver ${hiddenCount} más`}
               </button>
             ) : null}
+          </div>
+        </div>
+      ) : null}
+
+      {family && selectedSub && styles.length > 0 ? (
+        <div className="gfilter__subs">
+          <p className="gfilter__sublabel">Estilos de <strong>{selectedSub.name}</strong></p>
+          <div className="gfilter__subchips" ref={styleRailRef} role="group" aria-label={`Estilos de ${selectedSub.name}`}>
+            <GenreChip label={`Todo ${selectedSub.name}`} count={effective(selectedSub)} pressed={selection.style === null} small
+              onClick={() => { if (selection.style !== null) onStyle(family.slug, selectedSub.slug, null); }} />
+            {styles.map((entry) => (
+              <GenreChip key={entry.slug} label={entry.name} count={effective(entry)} pressed={selection.style === entry.slug} small
+                onClick={() => onStyle(family.slug, selectedSub.slug, selection.style === entry.slug ? null : entry.slug)} />
+            ))}
           </div>
         </div>
       ) : null}
@@ -216,15 +236,17 @@ interface FinderOption {
   context: string;
   count: number;
   family: GenreFamilyFacet;
-  sub: GenreFacet | null;
+  sub: GenreGenreFacet | null;
+  style: GenreFacet | null;
 }
 
-/** Buscador de estilos: escribe «thrash» o «ska» y salta al subgénero sin saber su familia. */
-function GenreFinder({ facets, related, onFamily, onSub }: {
+/** Buscador de estilos: escribe «thrash», «ska» o «pasaje» y salta al subgénero o estilo sin saber su familia. */
+function GenreFinder({ facets, related, onFamily, onSub, onStyle }: {
   facets: GenreFacets;
   related: boolean;
   onFamily: (slug: string) => void;
   onSub: (family: string, slug: string | null) => void;
+  onStyle: (family: string, sub: string, slug: string | null) => void;
 }) {
   const [query, setQuery] = useState("");
   const [open, setOpen] = useState(false);
@@ -238,9 +260,12 @@ function GenreFinder({ facets, related, onFamily, onSub }: {
     const all: FinderOption[] = [];
     const total = (facet: GenreFacet) => facet.count + (related ? facet.relatedCount : 0);
     for (const family of facets.families) {
-      all.push({ key: family.slug, name: family.name, context: "Género", count: total(family), family, sub: null });
+      all.push({ key: family.slug, name: family.name, context: "Género", count: total(family), family, sub: null, style: null });
       for (const sub of family.genres) {
-        all.push({ key: `${family.slug}/${sub.slug}`, name: sub.name, context: `Subgénero de ${family.name}`, count: total(sub), family, sub });
+        all.push({ key: `${family.slug}/${sub.slug}`, name: sub.name, context: `Subgénero de ${family.name}`, count: total(sub), family, sub, style: null });
+        for (const style of sub.subgenres ?? []) {
+          all.push({ key: `${family.slug}/${sub.slug}/${style.slug}`, name: style.name, context: `Estilo de ${sub.name}`, count: total(style), family, sub, style });
+        }
       }
     }
     return all.filter((option) => option.count > 0);
@@ -270,7 +295,9 @@ function GenreFinder({ facets, related, onFamily, onSub }: {
 
   function choose(option: FinderOption | undefined) {
     if (!option) return;
-    if (option.sub) onSub(option.family.slug, option.sub.slug); else onFamily(option.family.slug);
+    if (option.sub && option.style) onStyle(option.family.slug, option.sub.slug, option.style.slug);
+    else if (option.sub) onSub(option.family.slug, option.sub.slug);
+    else onFamily(option.family.slug);
     setQuery("");
     setOpen(false);
     inputRef.current?.blur();
@@ -386,12 +413,14 @@ export function ListSummary({ total, noun, query, genreLabel, onClearQuery, onCl
   );
 }
 
-/** Nombre legible del filtro activo («Metal › Thrash metal», «Sin género»), con la ampliación si está puesta. */
+/** Nombre legible del filtro activo («Metal › Thrash metal», «Música venezolana › Joropo › Pasaje», «Sin género»), con la ampliación si está puesta. */
 export function genreSelectionLabel(facets: GenreFacets | undefined, selection: GenreSelection): string | null {
   if (!selection.family) return null;
   if (selection.family === WITHOUT_GENRE) return "Sin género";
   const family = facets?.families.find((entry) => entry.slug === selection.family);
   const sub = selection.sub ? family?.genres.find((entry) => entry.slug === selection.sub) : undefined;
-  const base = [family?.name ?? selection.family, selection.sub ? sub?.name ?? selection.sub : null].filter(Boolean).join(" › ");
+  const style = selection.style ? sub?.subgenres?.find((entry) => entry.slug === selection.style) : undefined;
+  const base = [family?.name ?? selection.family, selection.sub ? sub?.name ?? selection.sub : null, selection.style ? style?.name ?? selection.style : null]
+    .filter(Boolean).join(" › ");
   return selection.related ? `${base} (+ por su artista)` : base;
 }

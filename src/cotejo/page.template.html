@@ -1558,7 +1558,10 @@ function genGenreSelect(id){
     if(!family.active)return;
     var group=el("optgroup");group.label=family.name;
     var own=el("option",null,family.name+" (familia)");own.value=family.slug;group.appendChild(own);
-    family.children.forEach(function(child){if(!child.active)return;var o=el("option",null,child.name);o.value=child.slug;group.appendChild(o);});
+    family.children.forEach(function(child){
+      if(!child.active)return;var o=el("option",null,child.name);o.value=child.slug;group.appendChild(o);
+      (child.children||[]).forEach(function(sub){if(!sub.active)return;var so=el("option",null,"\u00a0\u00a0\u21b3 "+sub.name);so.value=sub.slug;group.appendChild(so);});
+    });
     select.appendChild(group);
   });
   return select;

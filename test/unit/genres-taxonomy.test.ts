@@ -6,7 +6,10 @@ import { describe, expect, it } from "vitest";
 import { desiredFromFile, DEFAULT_TAXONOMY_FILE } from "../../src/genres/admin.js";
 import { normalizeGenreText, splitStrong, splitWeak } from "../../src/genres/normalize.js";
 import { computeRuleAssignments, reconcileWithHuman, type GenreClaimEvidence } from "../../src/genres/rules.js";
-import { buildTaxonomy, candidateAliasKeys, resolveGenreValue, type AliasTarget, type GenreNode, type Taxonomy } from "../../src/genres/taxonomy.js";
+import {
+  ancestorsOf, buildTaxonomy, candidateAliasKeys, familyOf, genreLevelOf, isAncestorOf, isFamilyOf, resolveGenreValue,
+  type AliasTarget, type GenreNode, type Taxonomy,
+} from "../../src/genres/taxonomy.js";
 
 function realTaxonomy(): Taxonomy {
   const desired = desiredFromFile(JSON.parse(readFileSync(DEFAULT_TAXONOMY_FILE, "utf8")));
@@ -186,5 +189,65 @@ describe("prioridad humana (§4)", () => {
     expect(reconciled.assignments).toEqual([]);
     expect(reconciled.cases).toEqual([]);
     expect(reconciled.evidenceForHuman).toEqual([expect.objectContaining({ humanId: 12 })]);
+  });
+});
+
+describe("tercer nivel: subgéneros (0037)", () => {
+  // Música venezolana → Joropo → Pasaje / Golpe; Rock → Hard rock como testigo.
+  const node = (nodeId: number, slug: string, level: GenreNode["level"], parentId: number | null): GenreNode => ({
+    id: nodeId, slug, name: slug, level, parentId, active: true, replacedById: null,
+  });
+  const sub = buildTaxonomy([
+    node(1, "musica-venezolana", "family", null), node(2, "joropo", "genre", 1),
+    node(3, "pasaje", "subgenre", 2), node(4, "golpe", "subgenre", 2),
+    node(5, "rock", "family", null), node(6, "hard-rock", "genre", 5),
+  ], [
+    ["musica venezolana", { kind: "genre", genreId: 1 }], ["joropo", { kind: "genre", genreId: 2 }],
+    ["pasaje", { kind: "genre", genreId: 3 }], ["golpe", { kind: "genre", genreId: 4 }],
+    ["rock", { kind: "genre", genreId: 5 }], ["hard rock", { kind: "genre", genreId: 6 }],
+  ]);
+
+  it("el linaje sube del subgénero al género y a la familia", () => {
+    expect(ancestorsOf(sub, 3).map((item) => item.slug)).toEqual(["joropo", "musica-venezolana"]);
+    expect(isAncestorOf(sub, 2, 3)).toBe(true);
+    expect(isAncestorOf(sub, 1, 3)).toBe(true);
+    expect(isAncestorOf(sub, 3, 2)).toBe(false);
+    expect(isFamilyOf(sub, 1, 3)).toBe(true);
+    expect(isFamilyOf(sub, 2, 3)).toBe(false);
+    expect(familyOf(sub, 3)?.slug).toBe("musica-venezolana");
+    expect(genreLevelOf(sub, 3)?.slug).toBe("joropo");
+    expect(genreLevelOf(sub, 2)?.slug).toBe("joropo");
+    expect(genreLevelOf(sub, 1)).toBeUndefined();
+  });
+
+  it("el género cede al subgénero de otra fuente, como la familia cede al género", () => {
+    const outcome = computeRuleAssignments(sub, [claim(1, "Joropo"), claim(2, "Pasaje")]);
+    expect(outcome.assignments.find((row) => row.genreId === 2)).toMatchObject({ status: "superseded", supersededByGenreId: 3 });
+    expect(outcome.assignments.find((row) => row.genreId === 3)).toMatchObject({ status: "confirmed", role: "primary" });
+  });
+
+  it("la familia cede al nodo más profundo presente, no al intermedio", () => {
+    const outcome = computeRuleAssignments(sub, [claim(1, "Música venezolana"), claim(2, "Joropo"), claim(3, "Pasaje")]);
+    expect(outcome.assignments.find((row) => row.genreId === 1)).toMatchObject({ status: "superseded", supersededByGenreId: 3 });
+  });
+
+  it("un principal humano en el género no choca con un subgénero suyo", () => {
+    const outcome = computeRuleAssignments(sub, [claim(1, "Pasaje")]);
+    const reconciled = reconcileWithHuman(sub, outcome, [
+      { id: 20, genreId: 2, role: "primary", status: "confirmed", decidedBy: "brian" },
+    ]);
+    expect(reconciled.cases.map((item) => item.genreCase)).toEqual(["human_contradiction"]);
+    expect(reconciled.cases[0]!.detail).toMatchObject({ kind: "more_specific_than_human_family" });
+    expect(reconciled.cases.some((item) => (item.detail as { kind: string }).kind === "primary_differs")).toBe(false);
+  });
+
+  it("el archivo de taxonomía admite subgéneros y exige que cuelguen de un género", () => {
+    const base = { format: "crv-genre-taxonomy.v1", families: [{ slug: "musica-venezolana", name: "Música venezolana" }],
+      genres: [{ slug: "joropo", name: "Joropo", family: "musica-venezolana" }] };
+    const ok = desiredFromFile({ ...base, subgenres: [{ slug: "pasaje", name: "Pasaje", genre: "joropo", aliases: ["pasaje llanero"] }] });
+    expect(ok.genres.find((genre) => genre.slug === "pasaje")).toMatchObject({ level: "subgenre", parentSlug: "joropo" });
+    expect(ok.aliases.get("pasaje llanero")).toMatchObject({ target: "pasaje" });
+    expect(() => desiredFromFile({ ...base, subgenres: [{ slug: "pasaje", name: "Pasaje", genre: "musica-venezolana" }] }))
+      .toThrow(/género inexistente musica-venezolana/);
   });
 });

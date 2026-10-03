@@ -21,7 +21,7 @@ import {
   GENRE_COLUMN, GENRE_REVIEW_KIND, GENRE_TABLE, loadAssignments, loadGenreClaims, loadTaxonomy, lockGenres,
   recomputeEntityGenres,
 } from "./store.js";
-import { candidateAliasKeys, resolveGenreValue } from "./taxonomy.js";
+import { candidateAliasKeys, resolveGenreValue, type GenreLevel } from "./taxonomy.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 export const DEFAULT_TAXONOMY_FILE = path.resolve(__dirname, "..", "..", "data", "genres", "taxonomy.json");
@@ -40,13 +40,18 @@ const fileSchema = z.object({
     slug: slugSchema, name: z.string().trim().min(1).max(100), family: slugSchema, description: z.string().optional(),
     aliases: z.array(z.string()).default([]), typoAliases: z.array(z.string()).default([]),
   })),
+  // Tercer nivel (0037): cada subgénero cuelga de un género del archivo.
+  subgenres: z.array(z.object({
+    slug: slugSchema, name: z.string().trim().min(1).max(100), genre: slugSchema, description: z.string().optional(),
+    aliases: z.array(z.string()).default([]), typoAliases: z.array(z.string()).default([]),
+  })).default([]),
   notAGenre: z.record(z.string(), z.array(z.string())).default({}),
 }).passthrough();
 
 export type TaxonomyFile = z.infer<typeof fileSchema>;
 
 export interface DesiredTaxonomy {
-  genres: Array<{ slug: string; name: string; level: "family" | "genre"; parentSlug: string | null; description: string | null }>;
+  genres: Array<{ slug: string; name: string; level: GenreLevel; parentSlug: string | null; description: string | null }>;
   /** alias normalizado → slug o `not_a_genre`, con la nota que explica de dónde sale. */
   aliases: Map<string, { target: string; notes: string }>;
 }
@@ -58,6 +63,7 @@ export function desiredFromFile(input: unknown): DesiredTaxonomy {
   const genres: DesiredTaxonomy["genres"] = [];
   const slugs = new Set<string>();
   const families = new Set(file.families.map((family) => family.slug));
+  const genreSlugs = new Set(file.genres.map((genre) => genre.slug));
   const aliases = new Map<string, { target: string; notes: string }>();
   const addAlias = (raw: string, target: string, notes: string) => {
     const key = normalizeGenreText(raw);
@@ -66,7 +72,7 @@ export function desiredFromFile(input: unknown): DesiredTaxonomy {
     if (previous && previous.target !== target) errors.push(`alias «${key}» apunta a ${previous.target} y a ${target}`);
     else if (!previous) aliases.set(key, { target, notes });
   };
-  const addGenre = (entry: { slug: string; name: string; description?: string | undefined; aliases: string[]; typoAliases: string[] }, level: "family" | "genre", parentSlug: string | null) => {
+  const addGenre = (entry: { slug: string; name: string; description?: string | undefined; aliases: string[]; typoAliases: string[] }, level: GenreLevel, parentSlug: string | null) => {
     if (slugs.has(entry.slug)) errors.push(`slug repetido: ${entry.slug}`);
     slugs.add(entry.slug);
     genres.push({ slug: entry.slug, name: entry.name, level, parentSlug, description: entry.description ?? null });
@@ -78,6 +84,10 @@ export function desiredFromFile(input: unknown): DesiredTaxonomy {
   for (const genre of file.genres) {
     if (!families.has(genre.family)) errors.push(`${genre.slug}: familia inexistente ${genre.family}`);
     addGenre(genre, "genre", genre.family);
+  }
+  for (const subgenre of file.subgenres) {
+    if (!genreSlugs.has(subgenre.genre)) errors.push(`${subgenre.slug}: género inexistente ${subgenre.genre} (el padre de un subgénero es un género)`);
+    addGenre(subgenre, "subgenre", subgenre.genre);
   }
   for (const [category, values] of Object.entries(file.notAGenre)) {
     for (const value of values) addAlias(value, "not_a_genre", `no es un género: ${category}`);
@@ -93,7 +103,7 @@ export async function readTaxonomyFile(file = DEFAULT_TAXONOMY_FILE): Promise<De
 // --- Operaciones ----------------------------------------------------------
 
 export type TaxonomyOperation =
-  | { op: "create_genre"; slug: string; name: string; level: "family" | "genre"; parentSlug: string | null; description: string | null }
+  | { op: "create_genre"; slug: string; name: string; level: GenreLevel; parentSlug: string | null; description: string | null }
   | { op: "rename_genre"; slug: string; name: string }
   | { op: "reparent_genre"; slug: string; parentSlug: string }
   | { op: "set_alias"; alias: string; target: string; notes: string | null }
@@ -120,7 +130,9 @@ async function currentState(client: PoolClient): Promise<{ genres: Map<string, C
 export async function planFromDesired(client: PoolClient, desired: DesiredTaxonomy, options: { prune?: boolean } = {}): Promise<TaxonomyOperation[]> {
   const current = await currentState(client);
   const ops: TaxonomyOperation[] = [];
-  const ordered = [...desired.genres].sort((a, b) => Number(a.level === "genre") - Number(b.level === "genre"));
+  // Los padres se crean antes que los hijos: familias, géneros, subgéneros.
+  const depth = (level: GenreLevel) => (level === "family" ? 0 : level === "genre" ? 1 : 2);
+  const ordered = [...desired.genres].sort((a, b) => depth(a.level) - depth(b.level));
   for (const genre of ordered) {
     const existing = current.genres.get(genre.slug);
     if (!existing) {
@@ -165,7 +177,9 @@ async function applyOperation(client: PoolClient, op: TaxonomyOperation, ctx: Ch
   switch (op.op) {
     case "create_genre": {
       const parent = op.parentSlug ? await genreBySlug(client, op.parentSlug) : undefined;
-      if (op.parentSlug && !parent) throw new Error(`${op.slug}: familia ${op.parentSlug} inexistente`);
+      if (op.parentSlug && !parent) throw new Error(`${op.slug}: padre ${op.parentSlug} inexistente`);
+      const expected = op.level === "genre" ? "family" : op.level === "subgenre" ? "genre" : null;
+      if (parent && parent.level !== expected) throw new Error(`${op.slug} (${op.level}): su padre ${op.parentSlug} es ${parent.level}, debe ser ${expected}`);
       await client.query(`
         INSERT INTO ingest.genres(slug, name, level, parent_genre_id, description, created_by, change_reason)
         VALUES($1,$2,$3,$4,$5,$6,$7)`, [op.slug, op.name, op.level, parent?.id ?? null, op.description, ctx.actor, ctx.reason]);
@@ -185,7 +199,9 @@ async function applyOperation(client: PoolClient, op: TaxonomyOperation, ctx: Ch
     case "reparent_genre": {
       const genre = await genreBySlug(client, op.slug);
       const parent = await genreBySlug(client, op.parentSlug);
-      if (!genre || !parent) throw new Error(`reparent ${op.slug} → ${op.parentSlug}: género o familia inexistente`);
+      if (!genre || !parent) throw new Error(`reparent ${op.slug} → ${op.parentSlug}: género o padre inexistente`);
+      const expected = genre.level === "genre" ? "family" : genre.level === "subgenre" ? "genre" : null;
+      if (parent.level !== expected) throw new Error(`reparent ${op.slug} (${genre.level}) → ${op.parentSlug}: el padre debe ser ${expected ?? "ninguno"}`);
       await client.query("UPDATE ingest.genres SET parent_genre_id=$2, updated_by=$3, updated_at=now(), change_reason=$4 WHERE id=$1",
         [genre.id, parent.id, ctx.actor, ctx.reason]);
       touched.genreIds.add(genre.id);
@@ -227,9 +243,9 @@ async function applyOperation(client: PoolClient, op: TaxonomyOperation, ctx: Ch
       const replacement = await genreBySlug(client, op.replacementSlug);
       if (!genre || !replacement) throw new Error(`desactivar ${op.slug} → ${op.replacementSlug}: género inexistente`);
       if (!replacement.active || replacement.id === genre.id) throw new Error(`el reemplazo ${op.replacementSlug} debe ser otro género activo`);
-      if (genre.level === "family") {
+      if (genre.level !== "subgenre") {
         const children = await client.query("SELECT 1 FROM ingest.genres WHERE parent_genre_id=$1 AND active LIMIT 1", [genre.id]);
-        if (children.rowCount) throw new Error(`la familia ${op.slug} tiene géneros activos: desactívalos o muévelos antes`);
+        if (children.rowCount) throw new Error(`${op.slug} tiene hijos activos: desactívalos o muévelos antes`);
       }
       await client.query(`
         UPDATE ingest.genres SET active=false, replaced_by_genre_id=$2, updated_by=$3, updated_at=now(), change_reason=$4 WHERE id=$1`,

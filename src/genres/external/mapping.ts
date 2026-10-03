@@ -15,7 +15,7 @@
 //  * NUNCA SE TOCA LO CONFIRMADO. Lo que CRV ya confirmó o rechazó no se
 //    vuelve a proponer; si la fuente lo contradice, se anota como desacuerdo.
 import { normalizeGenreText } from "../normalize.js";
-import { familyOf, isFamilyOf, resolveGenreValue, type Taxonomy } from "../taxonomy.js";
+import { familyOf, isAncestorOf, resolveGenreValue, type Taxonomy } from "../taxonomy.js";
 
 /** Clase de etiqueta tal como la publica la fuente. */
 export type ExternalTagKind = "editorial_genre" | "community_tag" | "technical";
@@ -166,7 +166,7 @@ export interface MappingResult {
 }
 
 function related(taxonomy: Taxonomy, left: number, right: number): boolean {
-  return left === right || isFamilyOf(taxonomy, left, right) || isFamilyOf(taxonomy, right, left);
+  return left === right || isAncestorOf(taxonomy, left, right) || isAncestorOf(taxonomy, right, left);
 }
 
 /**
@@ -242,7 +242,7 @@ export function mapExternalValues(
         continue;
       }
       // Solo la familia de algo que CRV ya precisó: no aporta, resta.
-      const moreSpecific = [...confirmed].some((known) => isFamilyOf(taxonomy, genreId, known));
+      const moreSpecific = [...confirmed].some((known) => isAncestorOf(taxonomy, genreId, known));
       if (moreSpecific) {
         push("too_generic", "CRV ya tiene un género hijo confirmado de esa familia", genreId);
         continue;

@@ -9,7 +9,8 @@ import {
   hasListSeparator, normalizeGenreText, sharedHead, splitStrong, splitWeak,
 } from "./normalize.js";
 
-export type GenreLevel = "family" | "genre";
+/** Tres niveles desde 0037: familia → género → subgénero (pasaje, galerón…). */
+export type GenreLevel = "family" | "genre" | "subgenre";
 
 export interface GenreNode {
   id: number;
@@ -49,17 +50,41 @@ export function effectiveGenreId(taxonomy: Taxonomy, genreId: number): number | 
   return current?.active ? current.id : undefined;
 }
 
-/** `true` si `familyId` es la familia de `genreId`. */
+/** Antepasados de un nodo, del padre hacia la familia (vacío en una familia). */
+export function ancestorsOf(taxonomy: Taxonomy, genreId: number): GenreNode[] {
+  const out: GenreNode[] = [];
+  let current = taxonomy.genres.get(genreId);
+  for (let hops = 0; current && current.parentId !== null && hops < 8; hops += 1) {
+    current = taxonomy.genres.get(current.parentId);
+    if (current) out.push(current);
+  }
+  return out;
+}
+
+/**
+ * `true` si `ancestorId` está por encima de `genreId` en la taxonomía (su
+ * familia, o su género si es un subgénero). Base de «el más específico manda».
+ */
+export function isAncestorOf(taxonomy: Taxonomy, ancestorId: number, genreId: number): boolean {
+  return ancestorsOf(taxonomy, genreId).some((node) => node.id === ancestorId);
+}
+
+/** `true` si `familyId` es la familia de `genreId` (directa o a través de su género). */
 export function isFamilyOf(taxonomy: Taxonomy, familyId: number, genreId: number): boolean {
-  const family = taxonomy.genres.get(familyId);
-  const genre = taxonomy.genres.get(genreId);
-  return family?.level === "family" && genre?.parentId === familyId;
+  return taxonomy.genres.get(familyId)?.level === "family" && isAncestorOf(taxonomy, familyId, genreId);
 }
 
 export function familyOf(taxonomy: Taxonomy, genreId: number): GenreNode | undefined {
   const genre = taxonomy.genres.get(genreId);
   if (!genre) return undefined;
-  return genre.level === "family" ? genre : genre.parentId === null ? undefined : taxonomy.genres.get(genre.parentId);
+  return genre.level === "family" ? genre : ancestorsOf(taxonomy, genreId).find((node) => node.level === "family");
+}
+
+/** Género de un nodo: el propio si es género, su padre si es subgénero; nada en una familia. */
+export function genreLevelOf(taxonomy: Taxonomy, genreId: number): GenreNode | undefined {
+  const genre = taxonomy.genres.get(genreId);
+  if (!genre || genre.level === "family") return undefined;
+  return genre.level === "genre" ? genre : ancestorsOf(taxonomy, genreId).find((node) => node.level === "genre");
 }
 
 export type ResolvedItem =
