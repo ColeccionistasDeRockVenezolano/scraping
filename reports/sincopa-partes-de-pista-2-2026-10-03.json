@@ -1,0 +1,4539 @@
+{
+  "dryRun": false,
+  "runId": 11705,
+  "pages": 95,
+  "partes": 487,
+  "pistasConPartes": 105,
+  "encabezados": 9,
+  "dejadas": 239,
+  "notes": 105,
+  "rejected": 1490,
+  "failed": 0,
+  "plan": [
+    {
+      "op": "dejar",
+      "url": "https://sincopa.com/jazz/cdinfo/var_jazaldemaro.htm",
+      "items": [
+        {
+          "identityRaw": "Various Artists::Jazz Desde Aldemaro::Poco a Poco",
+          "title": "Various Artists::Jazz Desde Aldemaro::Poco a Poco"
+        }
+      ],
+      "why": "el adaptador actual ya no la emite sin número"
+    },
+    {
+      "op": "encabezado",
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/frankquint_04denoche.htm",
+      "header": {
+        "identityRaw": "Frank Quintero::De Noche y Con Poca Luz::Sueño De Medianoche Part II",
+        "title": "Sueño De Medianoche Part II"
+      },
+      "before": "2. De Noche y Con Poca Luz"
+    },
+    {
+      "op": "encabezado",
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/frankquint_04denoche.htm",
+      "header": {
+        "identityRaw": "Frank Quintero::De Noche y Con Poca Luz::Mediodia",
+        "title": "Mediodia"
+      },
+      "before": "4. Muchacha Timida"
+    },
+    {
+      "op": "dejar",
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/frankquint_04denoche.htm",
+      "items": [
+        {
+          "identityRaw": "Frank Quintero::De Noche y Con Poca Luz::Preludio",
+          "title": "Preludio"
+        },
+        {
+          "identityRaw": "Frank Quintero::De Noche y Con Poca Luz::Leo",
+          "title": "Leo"
+        }
+      ],
+      "why": "la pista 9 del core no es «Profundo En Mi Corazón»"
+    },
+    {
+      "op": "dejar",
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/ficcion_2sobrelacresta.htm",
+      "items": [
+        {
+          "identityRaw": "Ficción::Sobre La Cresta De La Ola::La Mula",
+          "title": "La Mula"
+        },
+        {
+          "identityRaw": "Ficción::Sobre La Cresta De La Ola::Las Siete Vírgenes",
+          "title": "Las Siete Vírgenes"
+        }
+      ],
+      "why": "la pista 8 del core no es «Suite De Las Siete Vírgenes y Una Mula»"
+    },
+    {
+      "op": "dejar",
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/impala_10_40exitos.htm",
+      "items": [
+        {
+          "identityRaw": "Los Impala::40 Años 40 Exitos::El Niñito",
+          "title": "Los Impala::40 Años 40 Exitos::El Niñito"
+        },
+        {
+          "identityRaw": "Los Impala::40 Años 40 Exitos::El Salto Del Conejo",
+          "title": "Los Impala::40 Años 40 Exitos::El Salto Del Conejo"
+        },
+        {
+          "identityRaw": "Los Impala::40 Años 40 Exitos::La Guitarra Que Llora",
+          "title": "Los Impala::40 Años 40 Exitos::La Guitarra Que Llora"
+        }
+      ],
+      "why": "el adaptador actual ya no la emite sin número"
+    },
+    {
+      "op": "dejar",
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/holidays_2.htm",
+      "items": [
+        {
+          "identityRaw": "Los Holiday's::Los Holiday's Vol. II::Baila La Yenka",
+          "title": "Los Holiday's::Los Holiday's Vol. II::Baila La Yenka"
+        },
+        {
+          "identityRaw": "Los Holiday's::Los Holiday's Vol. II::El Día Que Tú Partiste",
+          "title": "Los Holiday's::Los Holiday's Vol. II::El Día Que Tú Partiste"
+        }
+      ],
+      "why": "el adaptador actual ya no la emite sin número"
+    },
+    {
+      "op": "dejar",
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/yordano_hoyenvivo.htm",
+      "items": [
+        {
+          "identityRaw": "Yordano::Yordano Hoy - En Vivo::Aquel Lugar Secreto",
+          "title": "Yordano::Yordano Hoy - En Vivo::Aquel Lugar Secreto"
+        },
+        {
+          "identityRaw": "Yordano::Yordano Hoy - En Vivo::Bailando Tan Cerca",
+          "title": "Yordano::Yordano Hoy - En Vivo::Bailando Tan Cerca"
+        },
+        {
+          "identityRaw": "Yordano::Yordano Hoy - En Vivo::El Deseo",
+          "title": "Yordano::Yordano Hoy - En Vivo::El Deseo"
+        },
+        {
+          "identityRaw": "Yordano::Yordano Hoy - En Vivo::La Mujer Equivocada",
+          "title": "Yordano::Yordano Hoy - En Vivo::La Mujer Equivocada"
+        },
+        {
+          "identityRaw": "Yordano::Yordano Hoy - En Vivo::Locos De Amor",
+          "title": "Yordano::Yordano Hoy - En Vivo::Locos De Amor"
+        },
+        {
+          "identityRaw": "Yordano::Yordano Hoy - En Vivo::Manantial De Corazón",
+          "title": "Yordano::Yordano Hoy - En Vivo::Manantial De Corazón"
+        },
+        {
+          "identityRaw": "Yordano::Yordano Hoy - En Vivo::Niña Mala",
+          "title": "Yordano::Yordano Hoy - En Vivo::Niña Mala"
+        },
+        {
+          "identityRaw": "Yordano::Yordano Hoy - En Vivo::Otra Cara Bonita",
+          "title": "Yordano::Yordano Hoy - En Vivo::Otra Cara Bonita"
+        },
+        {
+          "identityRaw": "Yordano::Yordano Hoy - En Vivo::Perla Negra",
+          "title": "Yordano::Yordano Hoy - En Vivo::Perla Negra"
+        },
+        {
+          "identityRaw": "Yordano::Yordano Hoy - En Vivo::Por Estas Calles",
+          "title": "Yordano::Yordano Hoy - En Vivo::Por Estas Calles"
+        },
+        {
+          "identityRaw": "Yordano::Yordano Hoy - En Vivo::Se Me Para La Noche",
+          "title": "Yordano::Yordano Hoy - En Vivo::Se Me Para La Noche"
+        },
+        {
+          "identityRaw": "Yordano::Yordano Hoy - En Vivo::Todo El Amor",
+          "title": "Yordano::Yordano Hoy - En Vivo::Todo El Amor"
+        },
+        {
+          "identityRaw": "Yordano::Yordano Hoy - En Vivo::Un Minuto y Ya",
+          "title": "Yordano::Yordano Hoy - En Vivo::Un Minuto y Ya"
+        }
+      ],
+      "why": "el adaptador actual ya no la emite sin número"
+    },
+    {
+      "op": "dejar",
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/melissa_32exitos.htm",
+      "items": [
+        {
+          "identityRaw": "Melissa::32 Grandes Exitos::Una y Otra Vez",
+          "title": "Una y Otra Vez"
+        },
+        {
+          "identityRaw": "Melissa::32 Grandes Exitos::Dulces Sueños",
+          "title": "Dulces Sueños"
+        },
+        {
+          "identityRaw": "Melissa::32 Grandes Exitos::Apartate",
+          "title": "Apartate"
+        }
+      ],
+      "why": "la pista 16 del core no es «Potpourri:»"
+    },
+    {
+      "op": "dejar",
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/rudylascala_01mialmatropical.htm",
+      "items": [
+        {
+          "identityRaw": "Rudy La Scala::Mi Alma Es Tropical::Tu Dulce Flor",
+          "title": "Rudy La Scala::Mi Alma Es Tropical::Tu Dulce Flor"
+        }
+      ],
+      "why": "el adaptador actual ya no la emite sin número"
+    },
+    {
+      "op": "dejar",
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/raimundorodulfo_5mareterra.htm",
+      "items": [
+        {
+          "identityRaw": "Raimundo Rodulfo::Mare Et Terra::Thoughts",
+          "title": "Thoughts"
+        }
+      ],
+      "why": "un solo título suelto al final"
+    },
+    {
+      "op": "dejar",
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/epitafio_4yearsofdominion.htm",
+      "items": [
+        {
+          "identityRaw": "Epitafio::Years Of Dominion::Into The Land Of Horror",
+          "title": "Epitafio::Years Of Dominion::Into The Land Of Horror"
+        }
+      ],
+      "why": "el adaptador actual ya no la emite sin número"
+    },
+    {
+      "op": "dejar",
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/ilanchester_tmv2_costas.htm",
+      "items": [
+        {
+          "identityRaw": "Ilan Chester::Tesoros De La Música Venezolana: COSTAS::Viva Venezuela",
+          "title": "Viva Venezuela"
+        }
+      ],
+      "why": "un solo título suelto al final"
+    },
+    {
+      "op": "dejar",
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/gcarrasco_3visual.htm",
+      "items": [
+        {
+          "identityRaw": "Guillermo Carrasco::Visual::Cuando Salgo",
+          "title": "Guillermo Carrasco::Visual::Cuando Salgo"
+        },
+        {
+          "identityRaw": "Guillermo Carrasco::Visual::Los Normales",
+          "title": "Guillermo Carrasco::Visual::Los Normales"
+        },
+        {
+          "identityRaw": "Guillermo Carrasco::Visual::Soy Tuyo",
+          "title": "Guillermo Carrasco::Visual::Soy Tuyo"
+        }
+      ],
+      "why": "el adaptador actual ya no la emite sin número"
+    },
+    {
+      "op": "dejar",
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/trinomora_1970tremendo.htm",
+      "items": [
+        {
+          "identityRaw": "Trino Mora::El Tremendo Romántico::Soy Tremendo",
+          "title": "Trino Mora::El Tremendo Romántico::Soy Tremendo"
+        }
+      ],
+      "why": "el adaptador actual ya no la emite sin número"
+    },
+    {
+      "op": "dejar",
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/frankquint_05pajaros.htm",
+      "items": [
+        {
+          "identityRaw": "Frank Quintero::Pájaros y Estrellas::Estrella De Orion",
+          "title": "Estrella De Orion"
+        },
+        {
+          "identityRaw": "Frank Quintero::Pájaros y Estrellas::Sra. Luna",
+          "title": "Sra. Luna"
+        }
+      ],
+      "why": "la pista 6 del core no es «Pájaros Y Estrellas (Part I)»"
+    },
+    {
+      "op": "dejar",
+      "url": "https://sincopa.com/ethnic/cdinfo1/jesuscamacho_adn.htm",
+      "items": [
+        {
+          "identityRaw": "Jesús Camacho Morles::ADN::Pa’ Curimagua",
+          "title": "Pa’ Curimagua"
+        }
+      ],
+      "why": "un solo título suelto al final"
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/classic/cdinfo_class/aliriodiaz_66solosdguitarra.htm",
+      "trackId": 157776,
+      "parent": "Cinco Piezas Venezolanas (Vicente Emilio Sojo)",
+      "number": 1,
+      "parts": [
+        {
+          "identityRaw": "Alirio Díaz::Solos De Guitarra::San Juan Se Va",
+          "title": "San Juan Se Va"
+        },
+        {
+          "identityRaw": "Alirio Díaz::Solos De Guitarra::Precioso Querube",
+          "title": "Precioso Querube"
+        },
+        {
+          "identityRaw": "Alirio Díaz::Solos De Guitarra::Salve",
+          "title": "Salve"
+        },
+        {
+          "identityRaw": "Alirio Díaz::Solos De Guitarra::El Pañuelo De Teresa",
+          "title": "El Pañuelo De Teresa"
+        },
+        {
+          "identityRaw": "Alirio Díaz::Solos De Guitarra::Que No Te Quiera Más",
+          "title": "Que No Te Quiera Más"
+        }
+      ],
+      "notes": "Incluye: San Juan Se Va; Precioso Querube; Salve; El Pañuelo De Teresa; Que No Te Quiera Más."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/classic/cdinfo_class/aliriodiaz_66solosdguitarra.htm",
+      "trackId": 157777,
+      "parent": "Cinco Valses Venezolanos (Antonio Lauro)",
+      "number": 3,
+      "parts": [
+        {
+          "identityRaw": "Alirio Díaz::Solos De Guitarra::Angostura",
+          "title": "Angostura"
+        },
+        {
+          "identityRaw": "Alirio Díaz::Solos De Guitarra::El Marabino",
+          "title": "El Marabino"
+        },
+        {
+          "identityRaw": "Alirio Díaz::Solos De Guitarra::Maria Luisa",
+          "title": "Maria Luisa"
+        },
+        {
+          "identityRaw": "Alirio Díaz::Solos De Guitarra::Valse Nº 3",
+          "title": "Valse Nº 3"
+        },
+        {
+          "identityRaw": "Alirio Díaz::Solos De Guitarra::Valse No. 4",
+          "title": "Valse No. 4"
+        }
+      ],
+      "notes": "Incluye: Angostura; El Marabino; Maria Luisa; Valse Nº 3; Valse No. 4."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/classic/cdinfo_class/aliriodiaz_1970gtrspain_latin.htm",
+      "trackId": 157705,
+      "parent": "Gaspar Sanz",
+      "number": 1,
+      "parts": [
+        {
+          "identityRaw": "Alirio Díaz::Guitar Music of Spain & Latin America::Pavanas",
+          "title": "Pavanas"
+        },
+        {
+          "identityRaw": "Alirio Díaz::Guitar Music of Spain & Latin America::Españoleta",
+          "title": "Españoleta"
+        },
+        {
+          "identityRaw": "Alirio Díaz::Guitar Music of Spain & Latin America::Marizapolos",
+          "title": "Marizapolos"
+        },
+        {
+          "identityRaw": "Alirio Díaz::Guitar Music of Spain & Latin America::Canarios",
+          "title": "Canarios"
+        }
+      ],
+      "notes": "Incluye: Pavanas; Españoleta; Marizapolos; Canarios."
+    },
+    {
+      "op": "encabezado",
+      "url": "https://sincopa.com/classic/cdinfo_class/aliriodiaz_1970gtrspain_latin.htm",
+      "header": {
+        "identityRaw": "Alirio Díaz::Guitar Music of Spain & Latin America::Variations on a theme from \"The Magic Flute\"",
+        "title": "Variations on a theme from \"The Magic Flute\""
+      },
+      "before": "3. Fernando Sor"
+    },
+    {
+      "op": "encabezado",
+      "url": "https://sincopa.com/classic/cdinfo_class/aliriodiaz_1970gtrspain_latin.htm",
+      "header": {
+        "identityRaw": "Alirio Díaz::Guitar Music of Spain & Latin America::Rondo from the Sonata in C Major",
+        "title": "Rondo from the Sonata in C Major"
+      },
+      "before": "4. Regino Sainz De La Maza"
+    },
+    {
+      "op": "encabezado",
+      "url": "https://sincopa.com/classic/cdinfo_class/aliriodiaz_1970gtrspain_latin.htm",
+      "header": {
+        "identityRaw": "Alirio Díaz::Guitar Music of Spain & Latin America::Petenera",
+        "title": "Petenera"
+      },
+      "before": "5. Three Popular Catalonian Melodies"
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/classic/cdinfo_class/aliriodiaz_1970gtrspain_latin.htm",
+      "trackId": 157708,
+      "parent": "Three Popular Catalonian Melodies",
+      "number": 5,
+      "parts": [
+        {
+          "identityRaw": "Alirio Díaz::Guitar Music of Spain & Latin America::El Testament d'Amelia",
+          "title": "El Testament d'Amelia"
+        },
+        {
+          "identityRaw": "Alirio Díaz::Guitar Music of Spain & Latin America::Canco Del Lladre",
+          "title": "Canco Del Lladre"
+        },
+        {
+          "identityRaw": "Alirio Díaz::Guitar Music of Spain & Latin America::El Noye De La Mare",
+          "title": "El Noye De La Mare"
+        }
+      ],
+      "notes": "Incluye: El Testament d'Amelia; Canco Del Lladre; El Noye De La Mare."
+    },
+    {
+      "op": "encabezado",
+      "url": "https://sincopa.com/classic/cdinfo_class/aliriodiaz_1970gtrspain_latin.htm",
+      "header": {
+        "identityRaw": "Alirio Díaz::Guitar Music of Spain & Latin America::Canción",
+        "title": "Canción"
+      },
+      "before": "7. Six Venezuelan Valses"
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/classic/cdinfo_class/aliriodiaz_1970gtrspain_latin.htm",
+      "trackId": 157710,
+      "parent": "Six Venezuelan Valses",
+      "number": 7,
+      "parts": [
+        {
+          "identityRaw": "Alirio Díaz::Guitar Music of Spain & Latin America::El Marabino",
+          "title": "El Marabino"
+        },
+        {
+          "identityRaw": "Alirio Díaz::Guitar Music of Spain & Latin America::El Totumo De Guarenas",
+          "title": "El Totumo De Guarenas"
+        },
+        {
+          "identityRaw": "Alirio Díaz::Guitar Music of Spain & Latin America::Venezuelan Valse Nº 3",
+          "title": "Venezuelan Valse Nº 3"
+        },
+        {
+          "identityRaw": "Alirio Díaz::Guitar Music of Spain & Latin America::Carora",
+          "title": "Carora"
+        },
+        {
+          "identityRaw": "Alirio Díaz::Guitar Music of Spain & Latin America::Angostura",
+          "title": "Angostura"
+        },
+        {
+          "identityRaw": "Alirio Díaz::Guitar Music of Spain & Latin America::Maria Luisa",
+          "title": "Maria Luisa"
+        }
+      ],
+      "notes": "Incluye: El Marabino; El Totumo De Guarenas; Venezuelan Valse Nº 3; Carora; Angostura; Maria Luisa."
+    },
+    {
+      "op": "encabezado",
+      "url": "https://sincopa.com/classic/cdinfo_class/aliriodiaz_1970gtrspain_latin.htm",
+      "header": {
+        "identityRaw": "Alirio Díaz::Guitar Music of Spain & Latin America::Norteña",
+        "title": "Norteña"
+      },
+      "before": "9. Manuel Ponce"
+    },
+    {
+      "op": "encabezado",
+      "url": "https://sincopa.com/classic/cdinfo_class/aliriodiaz_1970gtrspain_latin.htm",
+      "header": {
+        "identityRaw": "Alirio Díaz::Guitar Music of Spain & Latin America::Scherzino Mexicano",
+        "title": "Scherzino Mexicano"
+      },
+      "before": "10. Agustin Barrios"
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/classic/cdinfo_class/aliriodiaz_1970gtrspain_latin.htm",
+      "trackId": 157713,
+      "parent": "Agustin Barrios",
+      "number": 10,
+      "parts": [
+        {
+          "identityRaw": "Alirio Díaz::Guitar Music of Spain & Latin America::Aire de Zamba",
+          "title": "Aire de Zamba"
+        },
+        {
+          "identityRaw": "Alirio Díaz::Guitar Music of Spain & Latin America::Danza Paraguaya",
+          "title": "Danza Paraguaya"
+        },
+        {
+          "identityRaw": "Alirio Díaz::Guitar Music of Spain & Latin America::Cueca (Chilean Dance)",
+          "title": "Cueca (Chilean Dance)"
+        }
+      ],
+      "notes": "Incluye: Aire de Zamba; Danza Paraguaya; Cueca (Chilean Dance)."
+    },
+    {
+      "op": "dejar",
+      "url": "https://sincopa.com/classic/cdinfo_class/aliriodiaz_recital.htm",
+      "items": [
+        {
+          "identityRaw": "Alirio Díaz::Recital::Preludio",
+          "title": "Preludio"
+        },
+        {
+          "identityRaw": "Alirio Díaz::Recital::Capricho",
+          "title": "Capricho"
+        },
+        {
+          "identityRaw": "Alirio Díaz::Recital::Aire De Danza Criolla",
+          "title": "Aire De Danza Criolla"
+        }
+      ],
+      "why": "la pista 6 del core no es «Suite»"
+    },
+    {
+      "op": "dejar",
+      "url": "https://sincopa.com/classic/cdinfo_class/aliriodiaz_recital.htm",
+      "items": [
+        {
+          "identityRaw": "Alirio Díaz::Recital::La Huerta De Doña Ana",
+          "title": "La Huerta De Doña Ana"
+        },
+        {
+          "identityRaw": "Alirio Díaz::Recital::El Cuento De La Abuelita",
+          "title": "El Cuento De La Abuelita"
+        },
+        {
+          "identityRaw": "Alirio Díaz::Recital::El Cuento Del Gallo Pelón",
+          "title": "El Cuento Del Gallo Pelón"
+        },
+        {
+          "identityRaw": "Alirio Díaz::Recital::Tilingo",
+          "title": "Tilingo"
+        },
+        {
+          "identityRaw": "Alirio Díaz::Recital::Angelito Negro",
+          "title": "Angelito Negro"
+        }
+      ],
+      "why": "la pista 8 del core no es «Cinco Piezas Infantiles»"
+    },
+    {
+      "op": "dejar",
+      "url": "https://sincopa.com/classic/cdinfo_class/alirio_diaz/aliriodiaz_78piezasparagtr.htm",
+      "items": [
+        {
+          "identityRaw": "Alirio Díaz::Piezas Para Guitarra::Preludio - Madrigal - Aire De Danza",
+          "title": "Preludio - Madrigal - Aire De Danza"
+        }
+      ],
+      "why": "un solo título suelto al final"
+    },
+    {
+      "op": "dejar",
+      "url": "https://sincopa.com/traditional/cdinfo2/serenata/sg_amistad_25.htm",
+      "items": [
+        {
+          "identityRaw": "Serenata Guayanesa::Una Amistad de 25 Años::- Corre Caballito",
+          "title": "- Corre Caballito"
+        },
+        {
+          "identityRaw": "Serenata Guayanesa::Una Amistad de 25 Años::- El Papagayo",
+          "title": "- El Papagayo"
+        },
+        {
+          "identityRaw": "Serenata Guayanesa::Una Amistad de 25 Años::- La Botellita",
+          "title": "- La Botellita"
+        },
+        {
+          "identityRaw": "Serenata Guayanesa::Una Amistad de 25 Años::- A la Una",
+          "title": "- A la Una"
+        }
+      ],
+      "why": "la pista 9 del core no es «MIX No.3»"
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/classic/cdinfo_class/vzsuite_7stars.htm",
+      "trackId": 157714,
+      "parent": "Primera Parte (Part I)",
+      "number": 1,
+      "parts": [
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Crepúsculo Coriano",
+          "title": "Crepúsculo Coriano"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Polo",
+          "title": "Polo"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Sombra En Los Médanos",
+          "title": "Sombra En Los Médanos"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::La Zapoara",
+          "title": "La Zapoara"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Calipso Del Callao",
+          "title": "Calipso Del Callao"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Woman Del Callao",
+          "title": "Woman Del Callao"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Moliendo Café",
+          "title": "Moliendo Café"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Maravillosa",
+          "title": "Maravillosa"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Ansiedad",
+          "title": "Ansiedad"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Venezuela",
+          "title": "Venezuela"
+        }
+      ],
+      "notes": "Incluye: Crepúsculo Coriano; Polo; Sombra En Los Médanos; La Zapoara; Calipso Del Callao; Woman Del Callao; Moliendo Café; Maravillosa; Ansiedad; Venezuela."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/classic/cdinfo_class/vzsuite_7stars.htm",
+      "trackId": 157715,
+      "parent": "Segunda Parte (Part II)",
+      "number": 2,
+      "parts": [
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Margarita Carreño",
+          "title": "Margarita Carreño"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Tobogán De La Selva",
+          "title": "Tobogán De La Selva"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Luisa",
+          "title": "Luisa"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Caracas Vieja",
+          "title": "Caracas Vieja"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Desesperanza",
+          "title": "Desesperanza"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Algo Sublime",
+          "title": "Algo Sublime"
+        }
+      ],
+      "notes": "Incluye: Margarita Carreño; Tobogán De La Selva; Luisa; Caracas Vieja; Desesperanza; Algo Sublime."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/classic/cdinfo_class/vzsuite_7stars.htm",
+      "trackId": 157716,
+      "parent": "Tercera Parte (Part III)",
+      "number": 3,
+      "parts": [
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Tío Amaury",
+          "title": "Tío Amaury"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Merideña",
+          "title": "Merideña"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Voraz",
+          "title": "Voraz"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Viajera Del Río",
+          "title": "Viajera Del Río"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Romance",
+          "title": "Romance"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Ausencia",
+          "title": "Ausencia"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Siete Estrellas",
+          "title": "Siete Estrellas"
+        }
+      ],
+      "notes": "Incluye: Tío Amaury; Merideña; Voraz; Viajera Del Río; Romance; Ausencia; Siete Estrellas."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/classic/cdinfo_class/vzsuite_7stars.htm",
+      "trackId": 157717,
+      "parent": "Cuarta Parte (Part IV)",
+      "number": 4,
+      "parts": [
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Paisaje Apureño",
+          "title": "Paisaje Apureño"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Romance En La Lejanía",
+          "title": "Romance En La Lejanía"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Linda Barinas",
+          "title": "Linda Barinas"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Canto De Guaraña",
+          "title": "Canto De Guaraña"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Río Orinoco",
+          "title": "Río Orinoco"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::La Burra",
+          "title": "La Burra"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::El Cocuy Que Alumbra",
+          "title": "El Cocuy Que Alumbra"
+        }
+      ],
+      "notes": "Incluye: Paisaje Apureño; Romance En La Lejanía; Linda Barinas; Canto De Guaraña; Río Orinoco; La Burra; El Cocuy Que Alumbra."
+    },
+    {
+      "op": "dejar",
+      "url": "https://sincopa.com/classic/cdinfo_class/kristhyan_benitez/kristhyanbenitez_1beethovenpianoconcerto.htm",
+      "items": [
+        {
+          "identityRaw": "Kristhyan Benitez::Beethoven Piano Concerto Nº 2::\"Les Adieux\": III Das Wiedersehen. Vivacissinamente",
+          "title": "\"Les Adieux\": III Das Wiedersehen. Vivacissinamente"
+        }
+      ],
+      "why": "un solo título suelto al final"
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/classic/cdinfo_class/vzsuite_1zuliana.htm",
+      "trackId": 157781,
+      "parent": "Suite Zuliana Part I (Side A on LP)",
+      "number": 1,
+      "parts": [
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Zuliana::Pregones Zulianos",
+          "title": "Pregones Zulianos"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Zuliana::Maracaibo En La Noche",
+          "title": "Maracaibo En La Noche"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Zuliana::Horizonte",
+          "title": "Horizonte"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Zuliana::Amanecer Zuliano",
+          "title": "Amanecer Zuliano"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Zuliana::El Diablo Suelto",
+          "title": "El Diablo Suelto"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Zuliana::La Reina",
+          "title": "La Reina"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Zuliana::Juliana",
+          "title": "Juliana"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Zuliana::Lluvia",
+          "title": "Lluvia"
+        }
+      ],
+      "notes": "Incluye: Pregones Zulianos; Maracaibo En La Noche; Horizonte; Amanecer Zuliano; El Diablo Suelto; La Reina; Juliana; Lluvia."
+    },
+    {
+      "op": "dejar",
+      "url": "https://sincopa.com/classic/cdinfo_class/vzsuite_1zuliana.htm",
+      "items": [
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Zuliana::Desvelo",
+          "title": "Desvelo"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Zuliana::Brisas Del Zulia",
+          "title": "Brisas Del Zulia"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Zuliana::Soberana",
+          "title": "Soberana"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Zuliana::Chinita De Maracaibo",
+          "title": "Chinita De Maracaibo"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Zuliana::La Cabra Mocha",
+          "title": "La Cabra Mocha"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Zuliana::Luna De Maracaibo",
+          "title": "Luna De Maracaibo"
+        }
+      ],
+      "why": "la pista 2 del core no es «Suite Zuliana Part II (Side B on LP)»"
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/classic/cdinfo_class/vzsuite_2andina.htm",
+      "trackId": 157782,
+      "parent": "Suite Andina Part I (Side A on LP)",
+      "number": 1,
+      "parts": [
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Andina::Conticinio",
+          "title": "Conticinio"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Andina::Pluma y Lira",
+          "title": "Pluma y Lira"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Andina::Flor De Loto",
+          "title": "Flor De Loto"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Andina::Nostalgia Andina",
+          "title": "Nostalgia Andina"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Andina::Brisas del Torbes",
+          "title": "Brisas del Torbes"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Andina::Cuando Me Quieras",
+          "title": "Cuando Me Quieras"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Andina::Andino",
+          "title": "Andino"
+        }
+      ],
+      "notes": "Incluye: Conticinio; Pluma y Lira; Flor De Loto; Nostalgia Andina; Brisas del Torbes; Cuando Me Quieras; Andino."
+    },
+    {
+      "op": "dejar",
+      "url": "https://sincopa.com/classic/cdinfo_class/vzsuite_2andina.htm",
+      "items": [
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Andina::El Ultimo Ruego",
+          "title": "El Ultimo Ruego"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Andina::Tierra Andina",
+          "title": "Tierra Andina"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Andina::Lejanía",
+          "title": "Lejanía"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Andina::Trujillo",
+          "title": "Trujillo"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Andina::Cantos De Mi Tierra",
+          "title": "Cantos De Mi Tierra"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Andina::Capricho Andino",
+          "title": "Capricho Andino"
+        }
+      ],
+      "why": "la pista 2 del core no es «Suite Andina Part II (Side B on LP)»"
+    },
+    {
+      "op": "dejar",
+      "url": "https://sincopa.com/classic/cdinfo_class/vzsuite_3central.htm",
+      "items": [
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Central::Dama Antañona",
+          "title": "Dama Antañona"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Central::Morir Es Nacer",
+          "title": "Morir Es Nacer"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Central::Valencia",
+          "title": "Valencia"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Central::Mañanita Caraqueña",
+          "title": "Mañanita Caraqueña"
+        }
+      ],
+      "why": "la pista 1 del core no es «Valses»"
+    },
+    {
+      "op": "dejar",
+      "url": "https://sincopa.com/classic/cdinfo_class/vzsuite_3central.htm",
+      "items": [
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Central::El Cumaco De San Juan",
+          "title": "El Cumaco De San Juan"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Central::Barlovento",
+          "title": "Barlovento"
+        }
+      ],
+      "why": "la pista 2 del core no es «Merengues»"
+    },
+    {
+      "op": "dejar",
+      "url": "https://sincopa.com/classic/cdinfo_class/vzsuite_3central.htm",
+      "items": [
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Central::Canto a Caracas",
+          "title": "Canto a Caracas"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Central::Besos En Mis Sueños",
+          "title": "Besos En Mis Sueños"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Central::Tu Partida",
+          "title": "Tu Partida"
+        }
+      ],
+      "why": "la pista 3 del core no es «Canciones»"
+    },
+    {
+      "op": "dejar",
+      "url": "https://sincopa.com/classic/cdinfo_class/vzsuite_3central.htm",
+      "items": [
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Central::Amalia",
+          "title": "Amalia"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Central::Totumo De Guarenas",
+          "title": "Totumo De Guarenas"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Central::Marisela",
+          "title": "Marisela"
+        }
+      ],
+      "why": "la pista 4 del core no es «Joropos»"
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/classic/cdinfo_class/vzsuite_3central.htm",
+      "trackId": 157783,
+      "parent": "Valses",
+      "number": 5,
+      "parts": [
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Central::Las Bellas De Maiquetia",
+          "title": "Las Bellas De Maiquetia"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Central::Adios a Ocumare",
+          "title": "Adios a Ocumare"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Central::Natalia - Vals Nº3",
+          "title": "Natalia - Vals Nº3"
+        }
+      ],
+      "notes": "Incluye: Las Bellas De Maiquetia; Adios a Ocumare; Natalia - Vals Nº3."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/classic/cdinfo_class/vzsuite_3central.htm",
+      "trackId": 157784,
+      "parent": "Merengues",
+      "number": 6,
+      "parts": [
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Central::Criollisima",
+          "title": "Criollisima"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Central::El Muñeco De La Ciudad",
+          "title": "El Muñeco De La Ciudad"
+        }
+      ],
+      "notes": "Incluye: Criollisima; El Muñeco De La Ciudad."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/classic/cdinfo_class/vzsuite_3central.htm",
+      "trackId": 157785,
+      "parent": "Canciones",
+      "number": 7,
+      "parts": [
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Central::Fulgida Luna",
+          "title": "Fulgida Luna"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Central::Puerto Cabello",
+          "title": "Puerto Cabello"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Central::Esta Noche Serena",
+          "title": "Esta Noche Serena"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Central::Quinta Anauco",
+          "title": "Quinta Anauco"
+        }
+      ],
+      "notes": "Incluye: Fulgida Luna; Puerto Cabello; Esta Noche Serena; Quinta Anauco."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/classic/cdinfo_class/vzsuite_3central.htm",
+      "trackId": 157786,
+      "parent": "Joropos",
+      "number": 8,
+      "parts": [
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Central::Alma Llanera",
+          "title": "Alma Llanera"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Central::Jarro Mocho",
+          "title": "Jarro Mocho"
+        }
+      ],
+      "notes": "Incluye: Alma Llanera; Jarro Mocho."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/classic/cdinfo_class/vzsuite_5oriental.htm",
+      "trackId": 157718,
+      "parent": "Suite Oriental Part I (Side A on LP)",
+      "number": 1,
+      "parts": [
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Oriental::Margarita",
+          "title": "Margarita"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Oriental::Polo Margariteño",
+          "title": "Polo Margariteño"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Oriental::Golpe y Estribillo",
+          "title": "Golpe y Estribillo"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Oriental::La Bandola de Cesáreo",
+          "title": "La Bandola de Cesáreo"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Oriental::Alma Cumanesa",
+          "title": "Alma Cumanesa"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Oriental::Joropo",
+          "title": "Joropo"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Oriental::Rio Manzanares",
+          "title": "Rio Manzanares"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Oriental::El Carite",
+          "title": "El Carite"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Oriental::Costas De Oriente",
+          "title": "Costas De Oriente"
+        }
+      ],
+      "notes": "Incluye: Margarita; Polo Margariteño; Golpe y Estribillo; La Bandola de Cesáreo; Alma Cumanesa; Joropo; Rio Manzanares; El Carite; Costas De Oriente."
+    },
+    {
+      "op": "dejar",
+      "url": "https://sincopa.com/classic/cdinfo_class/vzsuite_5oriental.htm",
+      "items": [
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Oriental::Mar De La Virgen Bonita",
+          "title": "Mar De La Virgen Bonita"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Oriental::Canchunchu Florido",
+          "title": "Canchunchu Florido"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Oriental::La Lagrima",
+          "title": "La Lagrima"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Oriental::Luna De Margarita",
+          "title": "Luna De Margarita"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Oriental::Galeron Margariteño",
+          "title": "Galeron Margariteño"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Oriental::Gaita Oriental",
+          "title": "Gaita Oriental"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Oriental::Capricho Oriental",
+          "title": "Capricho Oriental"
+        }
+      ],
+      "why": "la pista 2 del core no es «Suite Oriental Part II (Side B on LP)»"
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/classic/cdinfo_class/vzsuite_4larense.htm",
+      "trackId": 157787,
+      "parent": "Suite Larense Part I (Side A on LP)",
+      "number": 1,
+      "parts": [
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Larense::Noches Larenses",
+          "title": "Noches Larenses"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Larense::Chaparralito",
+          "title": "Chaparralito"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Larense::Pablera",
+          "title": "Pablera"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Larense::El Gavilan Tocuyano",
+          "title": "El Gavilan Tocuyano"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Larense::La Negra",
+          "title": "La Negra"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Larense::Golpe Tocuyano",
+          "title": "Golpe Tocuyano"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Larense::La Bella Del Tamunangue",
+          "title": "La Bella Del Tamunangue"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Larense::Como Llora Una Estrella",
+          "title": "Como Llora Una Estrella"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Larense::Barquisimeto",
+          "title": "Barquisimeto"
+        }
+      ],
+      "notes": "Incluye: Noches Larenses; Chaparralito; Pablera; El Gavilan Tocuyano; La Negra; Golpe Tocuyano; La Bella Del Tamunangue; Como Llora Una Estrella; Barquisimeto."
+    },
+    {
+      "op": "dejar",
+      "url": "https://sincopa.com/classic/cdinfo_class/vzsuite_4larense.htm",
+      "items": [
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Larense::Hendrina",
+          "title": "Hendrina"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Larense::María Elena",
+          "title": "María Elena"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Larense::Guitarra Larense",
+          "title": "Guitarra Larense"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Larense::Ramoncito En Cimarrona",
+          "title": "Ramoncito En Cimarrona"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Larense::Capricho Larense",
+          "title": "Capricho Larense"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Larense::La Veragacha",
+          "title": "La Veragacha"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Larense::Carora",
+          "title": "Carora"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Larense::Amalia Rosa",
+          "title": "Amalia Rosa"
+        }
+      ],
+      "why": "la pista 2 del core no es «Suite Larense Part II (Side B on LP)»"
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/classic/cdinfo_class/vzsuite_6llanera.htm",
+      "trackId": 157788,
+      "parent": "Suite Llanera Part I (Side A on LP)",
+      "number": 1,
+      "parts": [
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Concierto En La Llanura",
+          "title": "Concierto En La Llanura"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Madrugada Llanera",
+          "title": "Madrugada Llanera"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Pesadilla Entre Las Flores",
+          "title": "Pesadilla Entre Las Flores"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Mi Querencia",
+          "title": "Mi Querencia"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Caballo Viejo",
+          "title": "Caballo Viejo"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Sentimiento Apureño",
+          "title": "Sentimiento Apureño"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Vestida de Garza Blanca",
+          "title": "Vestida de Garza Blanca"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Llanera::El Gavilán",
+          "title": "El Gavilán"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Fiesta En Elorza",
+          "title": "Fiesta En Elorza"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Pasillaneando",
+          "title": "Pasillaneando"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Llanera::El Burrito",
+          "title": "El Burrito"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Adiós",
+          "title": "Adiós"
+        }
+      ],
+      "notes": "Incluye: Concierto En La Llanura; Madrugada Llanera; Pesadilla Entre Las Flores; Mi Querencia; Caballo Viejo; Sentimiento Apureño; Vestida de Garza Blanca; El Gavilán; Fiesta En Elorza; Pasillaneando; El Burrito; Adiós."
+    },
+    {
+      "op": "dejar",
+      "url": "https://sincopa.com/classic/cdinfo_class/vzsuite_6llanera.htm",
+      "items": [
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Pajarillo",
+          "title": "Pajarillo"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Fantasía Llanera",
+          "title": "Fantasía Llanera"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Quirpa",
+          "title": "Quirpa"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Zumba que Zumba",
+          "title": "Zumba que Zumba"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Preludio",
+          "title": "Preludio"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Periquera",
+          "title": "Periquera"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Seis Numerao",
+          "title": "Seis Numerao"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Llanera::San Rafael",
+          "title": "San Rafael"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Quitapesares",
+          "title": "Quitapesares"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Llanera::El Carnaval",
+          "title": "El Carnaval"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Tonada",
+          "title": "Tonada"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Seis por Derecho",
+          "title": "Seis por Derecho"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Llanera::El Gabán",
+          "title": "El Gabán"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Venezuela Habla Cantando",
+          "title": "Venezuela Habla Cantando"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Joropo Final",
+          "title": "Joropo Final"
+        }
+      ],
+      "why": "la pista 2 del core no es «Suite Llanera Part II (Side B on LP)»"
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/classic/cdinfo_class/vzsuite_8lomejor2.htm",
+      "trackId": 157768,
+      "parent": "Mar De La Virgen Bonita",
+      "number": 1,
+      "parts": [
+        {
+          "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Canchunchu Florido",
+          "title": "Canchunchu Florido"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Noches Larenses",
+          "title": "Noches Larenses"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Chaparralito",
+          "title": "Chaparralito"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Desvelo",
+          "title": "Desvelo"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Brisas Del Zulia",
+          "title": "Brisas Del Zulia"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Soberana",
+          "title": "Soberana"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Andino",
+          "title": "Andino"
+        }
+      ],
+      "notes": "Incluye: Canchunchu Florido; Noches Larenses; Chaparralito; Desvelo; Brisas Del Zulia; Soberana; Andino."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/classic/cdinfo_class/vzsuite_8lomejor2.htm",
+      "trackId": 157769,
+      "parent": "Fulgida Luna",
+      "number": 2,
+      "parts": [
+        {
+          "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Puerto Cabello",
+          "title": "Puerto Cabello"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Esta Noche Serena",
+          "title": "Esta Noche Serena"
+        }
+      ],
+      "notes": "Incluye: Puerto Cabello; Esta Noche Serena."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/classic/cdinfo_class/vzsuite_8lomejor2.htm",
+      "trackId": 157771,
+      "parent": "Carora",
+      "number": 4,
+      "parts": [
+        {
+          "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Hendrina",
+          "title": "Hendrina"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::María Elena",
+          "title": "María Elena"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Guitarra Larense",
+          "title": "Guitarra Larense"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::La Veragacha",
+          "title": "La Veragacha"
+        }
+      ],
+      "notes": "Incluye: Hendrina; María Elena; Guitarra Larense; La Veragacha."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/classic/cdinfo_class/vzsuite_8lomejor2.htm",
+      "trackId": 157775,
+      "parent": "Desesperanza",
+      "number": 8,
+      "parts": [
+        {
+          "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Caracas Vieja",
+          "title": "Caracas Vieja"
+        },
+        {
+          "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Algo Sublime",
+          "title": "Algo Sublime"
+        }
+      ],
+      "notes": "Incluye: Caracas Vieja; Algo Sublime."
+    },
+    {
+      "op": "dejar",
+      "url": "https://sincopa.com/jazz/cdinfo/gomi_juegos.htm",
+      "items": [
+        {
+          "identityRaw": "Gonzalo Micó::Juegos de Playa::Juegos de Playa, How sad it was",
+          "title": "Juegos de Playa, How sad it was"
+        }
+      ],
+      "why": "un solo título suelto al final"
+    },
+    {
+      "op": "dejar",
+      "url": "https://sincopa.com/jazz/cdinfo/male_brasil.htm",
+      "items": [
+        {
+          "identityRaw": "Marisela Leal::Todo Brasil::Canto A Nana",
+          "title": "Canto A Nana"
+        }
+      ],
+      "why": "un solo título suelto al final"
+    },
+    {
+      "op": "dejar",
+      "url": "https://sincopa.com/traditional/cdinfo2/serenata/sg_100alejandro_vargas.htm",
+      "items": [
+        {
+          "identityRaw": "Various Artists::Alejandro Vargas Cien Años De Canto Special Edition for:::El sapo",
+          "title": "Various Artists::Alejandro Vargas Cien Años De Canto Special Edition for:::El sapo"
+        }
+      ],
+      "why": "el adaptador actual ya no la emite sin número"
+    },
+    {
+      "op": "dejar",
+      "url": "https://sincopa.com/traditional/cdinfo2/los_cunaos1_musicavz.htm",
+      "items": [
+        {
+          "identityRaw": "Los Cuñaos::Música Venezolana::El Carite",
+          "title": "El Carite"
+        }
+      ],
+      "why": "un solo título suelto al final"
+    },
+    {
+      "op": "dejar",
+      "url": "https://sincopa.com/traditional/cdinfo2/matecha_98ysusamigosenconcierto.htm",
+      "items": [
+        {
+          "identityRaw": "María Teresa Chacín::María Teresa y Sus Amigos Concierto En Vivo en el TTC::Lejanía",
+          "title": "Lejanía"
+        },
+        {
+          "identityRaw": "María Teresa Chacín::María Teresa y Sus Amigos Concierto En Vivo en el TTC::Pasillaneando",
+          "title": "Pasillaneando"
+        },
+        {
+          "identityRaw": "María Teresa Chacín::María Teresa y Sus Amigos Concierto En Vivo en el TTC::Romance",
+          "title": "Romance"
+        },
+        {
+          "identityRaw": "María Teresa Chacín::María Teresa y Sus Amigos Concierto En Vivo en el TTC::Cuenta Conmigo",
+          "title": "Cuenta Conmigo"
+        },
+        {
+          "identityRaw": "María Teresa Chacín::María Teresa y Sus Amigos Concierto En Vivo en el TTC::La Potranca",
+          "title": "La Potranca"
+        }
+      ],
+      "why": "la pista 6 del core no es «Openning»"
+    },
+    {
+      "op": "dejar",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/jose_luis_rodriguez/joseluis_91pumaenritmo1.htm",
+      "items": [
+        {
+          "identityRaw": "José Luis Rodríguez::El Puma En Ritmo::Ella Me Vacila",
+          "title": "José Luis Rodríguez::El Puma En Ritmo::Ella Me Vacila"
+        }
+      ],
+      "why": "el adaptador actual ya no la emite sin número"
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/jazz/cdinfo/gero_chanopozo.htm",
+      "trackId": 52243,
+      "parent": "Son Montuno A Lo Chano Pozo (Medley)",
+      "number": 6,
+      "parts": [
+        {
+          "identityRaw": "Gerardo Rosales::Afro Cuban Jazz Quintet Chano Pozo's Music::Cómetelo To’",
+          "title": "Cómetelo To’"
+        }
+      ],
+      "notes": "Incluye: Sangre Son Colorá; Seven Seven; El Pin Pin.\nIncluye: Cómetelo To’."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/ethnic/cdinfo1/huba_latineando.htm",
+      "trackId": 157829,
+      "parent": "Venezolanísimo:",
+      "number": 7,
+      "parts": [
+        {
+          "identityRaw": "Huáscar Barradas & Maracaibo::Latineando::- Caballo Viejo",
+          "title": "- Caballo Viejo"
+        },
+        {
+          "identityRaw": "Huáscar Barradas & Maracaibo::Latineando::- Alma Llanera",
+          "title": "- Alma Llanera"
+        }
+      ],
+      "notes": "Incluye: Caballo Viejo; Alma Llanera."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/ethnic/cdinfo1/huba_latineando.htm",
+      "trackId": 157830,
+      "parent": "Tudo Brasil:",
+      "number": 8,
+      "parts": [
+        {
+          "identityRaw": "Huáscar Barradas & Maracaibo::Latineando::- Apanhei-Te Cavaquinho",
+          "title": "- Apanhei-Te Cavaquinho"
+        },
+        {
+          "identityRaw": "Huáscar Barradas & Maracaibo::Latineando::- Desafinado",
+          "title": "- Desafinado"
+        },
+        {
+          "identityRaw": "Huáscar Barradas & Maracaibo::Latineando::- Garota De Ipanema",
+          "title": "- Garota De Ipanema"
+        }
+      ],
+      "notes": "Incluye: Apanhei-Te Cavaquinho; Desafinado; Garota De Ipanema."
+    },
+    {
+      "op": "encabezado",
+      "url": "https://sincopa.com/ethnic/cdinfo1/huba_latineando.htm",
+      "header": {
+        "identityRaw": "Huáscar Barradas & Maracaibo::Latineando::- Volver / El Día Que Me Quieras",
+        "title": "- Volver / El Día Que Me Quieras"
+      },
+      "before": "10. Sabor Colombiano:"
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/ethnic/cdinfo1/huba_latineando.htm",
+      "trackId": 157832,
+      "parent": "Sabor Colombiano:",
+      "number": 10,
+      "parts": [
+        {
+          "identityRaw": "Huáscar Barradas & Maracaibo::Latineando::- El Testamento",
+          "title": "- El Testamento"
+        },
+        {
+          "identityRaw": "Huáscar Barradas & Maracaibo::Latineando::- Matilde Lina",
+          "title": "- Matilde Lina"
+        },
+        {
+          "identityRaw": "Huáscar Barradas & Maracaibo::Latineando::- Cumbia Sampuesana",
+          "title": "- Cumbia Sampuesana"
+        }
+      ],
+      "notes": "Incluye: El Testamento; Matilde Lina; Cumbia Sampuesana."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/ethnic/cdinfo1/huba_latineando.htm",
+      "trackId": 157833,
+      "parent": "Fantasía Del Altiplano",
+      "number": 11,
+      "parts": [
+        {
+          "identityRaw": "Huáscar Barradas & Maracaibo::Latineando::- El Humahuaqueño",
+          "title": "- El Humahuaqueño"
+        },
+        {
+          "identityRaw": "Huáscar Barradas & Maracaibo::Latineando::- El Condor Pasa",
+          "title": "- El Condor Pasa"
+        }
+      ],
+      "notes": "Incluye: El Humahuaqueño; El Condor Pasa."
+    },
+    {
+      "op": "dejar",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/alf_sadel/sadel_granddvzla.htm",
+      "items": [
+        {
+          "identityRaw": "Alfredo Sadel::El Grande de Venezuela::Magia Blanca",
+          "title": "Magia Blanca"
+        },
+        {
+          "identityRaw": "Alfredo Sadel::El Grande de Venezuela::Me Queda El Consuelo",
+          "title": "Me Queda El Consuelo"
+        },
+        {
+          "identityRaw": "Alfredo Sadel::El Grande de Venezuela::Tamborín",
+          "title": "Tamborín"
+        }
+      ],
+      "why": "la pista 5 del core no es «Mosaico:»"
+    },
+    {
+      "op": "dejar",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/gramcko/billos_paula.htm",
+      "items": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Paula::Ojos Malvados",
+          "title": "Ojos Malvados"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Paula::La Negra Leonor",
+          "title": "La Negra Leonor"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Paula::Letargo",
+          "title": "Letargo"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Paula::Para Vigo Me Voy",
+          "title": "Para Vigo Me Voy"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Paula::Los Componedores",
+          "title": "Los Componedores"
+        }
+      ],
+      "why": "la pista 5 del core no es «Mosaico Nº 1»"
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/discomoda/billos_02_pobredelpobre.htm",
+      "trackId": 157789,
+      "parent": "Mosaico Nº 4",
+      "number": 11,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Pobre Del Pobre::No Hay Como Tú",
+          "title": "No Hay Como Tú"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Pobre Del Pobre::Bruca Maniguá",
+          "title": "Bruca Maniguá"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Pobre Del Pobre::Cuando Ya No Me Quieras",
+          "title": "Cuando Ya No Me Quieras"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Pobre Del Pobre::Guarachona",
+          "title": "Guarachona"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Pobre Del Pobre::Pare Cochero",
+          "title": "Pare Cochero"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Pobre Del Pobre::Danzonete",
+          "title": "Danzonete"
+        }
+      ],
+      "notes": "Incluye: No Hay Como Tú; Bruca Maniguá; Cuando Ya No Me Quieras; Guarachona; Pare Cochero; Danzonete."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/discomoda/billos_04_3regalos.htm",
+      "trackId": 157790,
+      "parent": "Mosaico Nº 6",
+      "number": 11,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Tres Regalos::Celos",
+          "title": "Celos"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Tres Regalos::Mis Cinco Hijos",
+          "title": "Mis Cinco Hijos"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Tres Regalos::Congojas",
+          "title": "Congojas"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Tres Regalos::Vamonos",
+          "title": "Vamonos"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Tres Regalos::Oigan Mi Pregon",
+          "title": "Oigan Mi Pregon"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Tres Regalos::El Muñeco",
+          "title": "El Muñeco"
+        }
+      ],
+      "notes": "Incluye: Celos; Mis Cinco Hijos; Congojas; Vamonos; Oigan Mi Pregon; El Muñeco."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/discomoda/billos_09_mosaicos1.htm",
+      "trackId": 157731,
+      "parent": "Mosaico Nº 1",
+      "number": 1,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo::Ojos Malvados",
+          "title": "Ojos Malvados"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo::La Negra Leonor",
+          "title": "La Negra Leonor"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo::Letargo",
+          "title": "Letargo"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo::Para Vigo Me Voy",
+          "title": "Para Vigo Me Voy"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo::Los Componedores",
+          "title": "Los Componedores"
+        }
+      ],
+      "notes": "Incluye: Ojos Malvados; La Negra Leonor; Letargo; Para Vigo Me Voy; Los Componedores."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/discomoda/billos_09_mosaicos1.htm",
+      "trackId": 157742,
+      "parent": "Mosaico Nº 2",
+      "number": 2,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo::Palabras De Mujer",
+          "title": "Palabras De Mujer"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo::Bambarito",
+          "title": "Bambarito"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo::Nostalgia",
+          "title": "Nostalgia"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo::Cachita",
+          "title": "Cachita"
+        }
+      ],
+      "notes": "Incluye: Palabras De Mujer; Bambarito; Nostalgia; Cachita."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/discomoda/billos_09_mosaicos1.htm",
+      "trackId": 157743,
+      "parent": "Mosaico Nº 3",
+      "number": 3,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo::Enamorada",
+          "title": "Enamorada"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo::Funfuñando",
+          "title": "Funfuñando"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo::Tu Volverás",
+          "title": "Tu Volverás"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo::Cuando Vuelvas",
+          "title": "Cuando Vuelvas"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo::Parampampin",
+          "title": "Parampampin"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo::No Te Retrates",
+          "title": "No Te Retrates"
+        }
+      ],
+      "notes": "Incluye: Enamorada; Funfuñando; Tu Volverás; Cuando Vuelvas; Parampampin; No Te Retrates."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/discomoda/billos_09_mosaicos1.htm",
+      "trackId": 157744,
+      "parent": "Mosaico Nº 4",
+      "number": 4,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo::No Hay Como Tú",
+          "title": "No Hay Como Tú"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo::Bruca Maniguá",
+          "title": "Bruca Maniguá"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo::Cuando Ya No Me Quieras",
+          "title": "Cuando Ya No Me Quieras"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo::Guarachona",
+          "title": "Guarachona"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo::Pare Cochero",
+          "title": "Pare Cochero"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo::Danzonete Rompiendo La Rutina",
+          "title": "Danzonete Rompiendo La Rutina"
+        }
+      ],
+      "notes": "Incluye: No Hay Como Tú; Bruca Maniguá; Cuando Ya No Me Quieras; Guarachona; Pare Cochero; Danzonete Rompiendo La Rutina."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/discomoda/billos_09_mosaicos1.htm",
+      "trackId": 157745,
+      "parent": "Mosaico Nº 5",
+      "number": 5,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo::Dolor Cobarde",
+          "title": "Dolor Cobarde"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo::Todo Para Ti",
+          "title": "Todo Para Ti"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo::En El Reino De Tus Ojos",
+          "title": "En El Reino De Tus Ojos"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo::Panamá",
+          "title": "Panamá"
+        }
+      ],
+      "notes": "Incluye: Dolor Cobarde; Todo Para Ti; En El Reino De Tus Ojos; Panamá."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/discomoda/billos_09_mosaicos1.htm",
+      "trackId": 157746,
+      "parent": "Mosaico Nº 6",
+      "number": 6,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo::Celos",
+          "title": "Celos"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo::Mis Cinco Hijos",
+          "title": "Mis Cinco Hijos"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo::Congojas",
+          "title": "Congojas"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo::Vamonos",
+          "title": "Vamonos"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo::Oigan Mi Pregon",
+          "title": "Oigan Mi Pregon"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo::El Muñeco",
+          "title": "El Muñeco"
+        }
+      ],
+      "notes": "Incluye: Celos; Mis Cinco Hijos; Congojas; Vamonos; Oigan Mi Pregon; El Muñeco."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/fonograma/billos_505_mosaicosvol2.htm",
+      "trackId": 157732,
+      "parent": "Mosaico Nº 7",
+      "number": 1,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Vol. II::Frenesí",
+          "title": "Frenesí"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Vol. II::No Negrita No",
+          "title": "No Negrita No"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Vol. II::Ya No Me Quieres",
+          "title": "Ya No Me Quieres"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Vol. II::Cuidadito Compay Gallo",
+          "title": "Cuidadito Compay Gallo"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Vol. II::Compay Póngase Duro",
+          "title": "Compay Póngase Duro"
+        }
+      ],
+      "notes": "Incluye: Frenesí; No Negrita No; Ya No Me Quieres; Cuidadito Compay Gallo; Compay Póngase Duro."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/fonograma/billos_505_mosaicosvol2.htm",
+      "trackId": 157747,
+      "parent": "Mosaico Nº 8",
+      "number": 2,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Vol. II::Flores Negras",
+          "title": "Flores Negras"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Vol. II::Serenata",
+          "title": "Serenata"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Vol. II::Naufragio",
+          "title": "Naufragio"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Vol. II::Carnaval Del Uruguay",
+          "title": "Carnaval Del Uruguay"
+        }
+      ],
+      "notes": "Incluye: Flores Negras; Serenata; Naufragio; Carnaval Del Uruguay."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/fonograma/billos_505_mosaicosvol2.htm",
+      "trackId": 157748,
+      "parent": "Mosaico Nº 9",
+      "number": 3,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Vol. II::Consentida",
+          "title": "Consentida"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Vol. II::Chacumbele",
+          "title": "Chacumbele"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Vol. II::Siempre Viva",
+          "title": "Siempre Viva"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Vol. II::La Ola Marina",
+          "title": "La Ola Marina"
+        }
+      ],
+      "notes": "Incluye: Consentida; Chacumbele; Siempre Viva; La Ola Marina."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/fonograma/billos_505_mosaicosvol2.htm",
+      "trackId": 157733,
+      "parent": "Mosaico Nº 10",
+      "number": 4,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Vol. II::Maribal",
+          "title": "Maribal"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Vol. II::Ahora Seremos Felices",
+          "title": "Ahora Seremos Felices"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Vol. II::Te Sigo Esperando",
+          "title": "Te Sigo Esperando"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Vol. II::Dímelo",
+          "title": "Dímelo"
+        }
+      ],
+      "notes": "Incluye: Maribal; Ahora Seremos Felices; Te Sigo Esperando; Dímelo."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/fonograma/billos_505_mosaicosvol2.htm",
+      "trackId": 157749,
+      "parent": "Mosaico Nº 11",
+      "number": 5,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Vol. II::Vieja Luna",
+          "title": "Vieja Luna"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Vol. II::El Limpiabotas",
+          "title": "El Limpiabotas"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Vol. II::Besar",
+          "title": "Besar"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Vol. II::Bonyé",
+          "title": "Bonyé"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Vol. II::Sin Timbal",
+          "title": "Sin Timbal"
+        }
+      ],
+      "notes": "Incluye: Vieja Luna; El Limpiabotas; Besar; Bonyé; Sin Timbal."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/fonograma/billos_505_mosaicosvol2.htm",
+      "trackId": 157750,
+      "parent": "Mosaico Nº 12",
+      "number": 6,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Vol. II::Frio En El Alma",
+          "title": "Frio En El Alma"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Vol. II::Capullito De Aleli",
+          "title": "Capullito De Aleli"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Vol. II::Cuando Vuelva A Tu Lado",
+          "title": "Cuando Vuelva A Tu Lado"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Vol. II::Potpourrit De Congas",
+          "title": "Potpourrit De Congas"
+        }
+      ],
+      "notes": "Incluye: Frio En El Alma; Capullito De Aleli; Cuando Vuelva A Tu Lado; Potpourrit De Congas."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/fonograma/billos_506_santodomingo.htm",
+      "trackId": 157791,
+      "parent": "Mosaico Nº 13",
+      "number": 11,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo En Santo Domingo::No Vale La Pena",
+          "title": "No Vale La Pena"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo En Santo Domingo::La Mora",
+          "title": "La Mora"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo En Santo Domingo::Oui Madame",
+          "title": "Oui Madame"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo En Santo Domingo::El Muerto Se Fue De Rumba",
+          "title": "El Muerto Se Fue De Rumba"
+        }
+      ],
+      "notes": "Incluye: No Vale La Pena; La Mora; Oui Madame; El Muerto Se Fue De Rumba."
+    },
+    {
+      "op": "dejar",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/fonograma/billos_518_mosaicos13a18.htm",
+      "items": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::No Vale La Pena",
+          "title": "No Vale La Pena"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::La Mora",
+          "title": "La Mora"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::Ouí Madame",
+          "title": "Ouí Madame"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::El Muerto Se Fué De Rumba",
+          "title": "El Muerto Se Fué De Rumba"
+        }
+      ],
+      "why": "la pista 1 del core no es «Mosaico Nº 13»"
+    },
+    {
+      "op": "dejar",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/fonograma/billos_518_mosaicos13a18.htm",
+      "items": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::Muchos Besos",
+          "title": "Muchos Besos"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::Qué Me Importa",
+          "title": "Qué Me Importa"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::Amor Ciego",
+          "title": "Amor Ciego"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::Se Va Covadonga",
+          "title": "Se Va Covadonga"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::Anabacoa",
+          "title": "Anabacoa"
+        }
+      ],
+      "why": "la pista 2 del core no es «Mosaico Nº 14»"
+    },
+    {
+      "op": "dejar",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/fonograma/billos_518_mosaicos13a18.htm",
+      "items": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::Nuestras Vidas",
+          "title": "Nuestras Vidas"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::Cuatro Personas",
+          "title": "Cuatro Personas"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::Reflexión",
+          "title": "Reflexión"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::Uno Dos Tres",
+          "title": "Uno Dos Tres"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::Ay! Mamá Inés",
+          "title": "Ay! Mamá Inés"
+        }
+      ],
+      "why": "la pista 3 del core no es «Mosaico Nº 15»"
+    },
+    {
+      "op": "dejar",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/fonograma/billos_518_mosaicos13a18.htm",
+      "items": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::Qué Te Pasa?",
+          "title": "Qué Te Pasa?"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::El Cantante",
+          "title": "El Cantante"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::No Te Importe Saber",
+          "title": "No Te Importe Saber"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::Bumba",
+          "title": "Bumba"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::Cutiro",
+          "title": "Cutiro"
+        }
+      ],
+      "why": "la pista 4 del core no es «Mosaico Nº 16»"
+    },
+    {
+      "op": "dejar",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/fonograma/billos_518_mosaicos13a18.htm",
+      "items": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::20 Años",
+          "title": "20 Años"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::Así Quería Verte",
+          "title": "Así Quería Verte"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::Perfidia",
+          "title": "Perfidia"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::Sun Sun Babae",
+          "title": "Sun Sun Babae"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::El Carbonero",
+          "title": "El Carbonero"
+        }
+      ],
+      "why": "la pista 5 del core no es «Mosaico Nº 17»"
+    },
+    {
+      "op": "dejar",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/fonograma/billos_518_mosaicos13a18.htm",
+      "items": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::Alma De Niño",
+          "title": "Alma De Niño"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::Como Arrullo De Palmas",
+          "title": "Como Arrullo De Palmas"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::Entre Tú y Yo",
+          "title": "Entre Tú y Yo"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::Cosita Linda",
+          "title": "Cosita Linda"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::Se Acabó",
+          "title": "Se Acabó"
+        }
+      ],
+      "why": "la pista 6 del core no es «Mosaico Nº 18»"
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/fonograma/billos_520_larenga.htm",
+      "trackId": 157792,
+      "parent": "Mosaico Nº 19",
+      "number": 11,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::La Renga::Celos",
+          "title": "Celos"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::La Renga::Me Lo Dijo Adela",
+          "title": "Me Lo Dijo Adela"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::La Renga::Estoy Triste",
+          "title": "Estoy Triste"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::La Renga::La Maricutana",
+          "title": "La Maricutana"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::La Renga::El Disco Rayao",
+          "title": "El Disco Rayao"
+        }
+      ],
+      "notes": "Incluye: Celos; Me Lo Dijo Adela; Estoy Triste; La Maricutana; El Disco Rayao."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/fonograma/billos_524_felicesfiestas.htm",
+      "trackId": 157793,
+      "parent": "Mosaico Nº 20",
+      "number": 11,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Felices Fiestas::Ven Acá Toma",
+          "title": "Ven Acá Toma"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Felices Fiestas::Una Mujer",
+          "title": "Una Mujer"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Felices Fiestas::Hay Que Vivir El Momento",
+          "title": "Hay Que Vivir El Momento"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Felices Fiestas::La Múcura",
+          "title": "La Múcura"
+        }
+      ],
+      "notes": "Incluye: Ven Acá Toma; Una Mujer; Hay Que Vivir El Momento; La Múcura."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/fonograma/billos_525_senecesitan2.htm",
+      "trackId": 157794,
+      "parent": "Mosaico Nº 21",
+      "number": 11,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Se Necesitan Dos::Virgen De Medianoche",
+          "title": "Virgen De Medianoche"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Se Necesitan Dos::Los Gustos De Víctor Pérez",
+          "title": "Los Gustos De Víctor Pérez"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Se Necesitan Dos::Caminito De Guarenas",
+          "title": "Caminito De Guarenas"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Se Necesitan Dos::Que Me La Den Entera",
+          "title": "Que Me La Den Entera"
+        }
+      ],
+      "notes": "Incluye: Virgen De Medianoche; Los Gustos De Víctor Pérez; Caminito De Guarenas; Que Me La Den Entera."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/discoteca/billos_531_todoloqtengo.htm",
+      "trackId": 157795,
+      "parent": "Mosaico Nº 23:",
+      "number": 11,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Todo Lo Que Tengo::Noche Azul",
+          "title": "Noche Azul"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Todo Lo Que Tengo::Camarones y Mamoncillos",
+          "title": "Camarones y Mamoncillos"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Todo Lo Que Tengo::Qué Es Lo Que Pasa",
+          "title": "Qué Es Lo Que Pasa"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Todo Lo Que Tengo::La Cocaleca",
+          "title": "La Cocaleca"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Todo Lo Que Tengo::La Vaca Vieja",
+          "title": "La Vaca Vieja"
+        }
+      ],
+      "notes": "Incluye: Noche Azul; Camarones y Mamoncillos; Qué Es Lo Que Pasa; La Cocaleca; La Vaca Vieja."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/discoteca/billos_532_billo69.htm",
+      "trackId": 157796,
+      "parent": "Mosaico Nº 24",
+      "number": 11,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 69::Me Dices Que Te Vas",
+          "title": "Me Dices Que Te Vas"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 69::Bacosó",
+          "title": "Bacosó"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 69::Un Castillito De Arena",
+          "title": "Un Castillito De Arena"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 69::Porqué Será",
+          "title": "Porqué Será"
+        }
+      ],
+      "notes": "Incluye: Me Dices Que Te Vas; Bacosó; Un Castillito De Arena; Porqué Será."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/discoteca/billos_533_mosaicos19_24.htm",
+      "trackId": 157734,
+      "parent": "Mosaico Nº 19",
+      "number": 1,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 19 al 24::Celos",
+          "title": "Celos"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 19 al 24::Me Lo Dijo Adela",
+          "title": "Me Lo Dijo Adela"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 19 al 24::Estoy Triste",
+          "title": "Estoy Triste"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 19 al 24::La Maricutana",
+          "title": "La Maricutana"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 19 al 24::El Disco Rayao",
+          "title": "El Disco Rayao"
+        }
+      ],
+      "notes": "Incluye: Celos; Me Lo Dijo Adela; Estoy Triste; La Maricutana; El Disco Rayao."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/discoteca/billos_533_mosaicos19_24.htm",
+      "trackId": 157735,
+      "parent": "Mosaico Nº 20",
+      "number": 2,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 19 al 24::Ven Acá Toma",
+          "title": "Ven Acá Toma"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 19 al 24::Una Mujer",
+          "title": "Una Mujer"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 19 al 24::Hay Que Vivir El Momento",
+          "title": "Hay Que Vivir El Momento"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 19 al 24::La Múcura",
+          "title": "La Múcura"
+        }
+      ],
+      "notes": "Incluye: Ven Acá Toma; Una Mujer; Hay Que Vivir El Momento; La Múcura."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/discoteca/billos_533_mosaicos19_24.htm",
+      "trackId": 157751,
+      "parent": "Mosaico Nº 21",
+      "number": 3,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 19 al 24::Virgen De Medianoche",
+          "title": "Virgen De Medianoche"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 19 al 24::Los Gustos De Víctor Pérez",
+          "title": "Los Gustos De Víctor Pérez"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 19 al 24::Caminito De Guarenas",
+          "title": "Caminito De Guarenas"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 19 al 24::Que Me La Den Entera",
+          "title": "Que Me La Den Entera"
+        }
+      ],
+      "notes": "Incluye: Virgen De Medianoche; Los Gustos De Víctor Pérez; Caminito De Guarenas; Que Me La Den Entera."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/discoteca/billos_533_mosaicos19_24.htm",
+      "trackId": 157752,
+      "parent": "Mosaico Nº 22",
+      "number": 4,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 19 al 24::La Cita",
+          "title": "La Cita"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 19 al 24::La Burrita De Petare",
+          "title": "La Burrita De Petare"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 19 al 24::Mar",
+          "title": "Mar"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 19 al 24::Y Qué y Qué",
+          "title": "Y Qué y Qué"
+        }
+      ],
+      "notes": "Incluye: La Cita; La Burrita De Petare; Mar; Y Qué y Qué."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/discoteca/billos_533_mosaicos19_24.htm",
+      "trackId": 157753,
+      "parent": "Mosaico Nº 23",
+      "number": 5,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 19 al 24::Noche Azul",
+          "title": "Noche Azul"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 19 al 24::Camarones y Mamoncillos",
+          "title": "Camarones y Mamoncillos"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 19 al 24::Qué Es Lo Que Pasa",
+          "title": "Qué Es Lo Que Pasa"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 19 al 24::La Cocaleca",
+          "title": "La Cocaleca"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 19 al 24::La Vaca Vieja",
+          "title": "La Vaca Vieja"
+        }
+      ],
+      "notes": "Incluye: Noche Azul; Camarones y Mamoncillos; Qué Es Lo Que Pasa; La Cocaleca; La Vaca Vieja."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/discoteca/billos_533_mosaicos19_24.htm",
+      "trackId": 157754,
+      "parent": "Mosaico Nº 24",
+      "number": 6,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 19 al 24::Me Dices Que Te Vas",
+          "title": "Me Dices Que Te Vas"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 19 al 24::Bacosó",
+          "title": "Bacosó"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 19 al 24::Un Castillito De Arena",
+          "title": "Un Castillito De Arena"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 19 al 24::Porqué Será",
+          "title": "Porqué Será"
+        }
+      ],
+      "notes": "Incluye: Me Dices Que Te Vas; Bacosó; Un Castillito De Arena; Porqué Será."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/discoteca/billos_534_lamaspopular.htm",
+      "trackId": 157797,
+      "parent": "Mosaico Nº 25",
+      "number": 11,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::La Más Popular De Venezuela::El Tumbaito",
+          "title": "El Tumbaito"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::La Más Popular De Venezuela::Piel Canela",
+          "title": "Piel Canela"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::La Más Popular De Venezuela::La Rueda",
+          "title": "La Rueda"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::La Más Popular De Venezuela::A Ti Na' Ma'",
+          "title": "A Ti Na' Ma'"
+        }
+      ],
+      "notes": "Incluye: El Tumbaito; Piel Canela; La Rueda; A Ti Na' Ma'."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/fonograma/billos_533_mosaicosvol3.htm",
+      "trackId": 157798,
+      "parent": "Mosaico Nº 19",
+      "number": 1,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Vol.III::Celos",
+          "title": "Celos"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Vol.III::Me Lo Dijo Adela",
+          "title": "Me Lo Dijo Adela"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Vol.III::Estoy Triste",
+          "title": "Estoy Triste"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Vol.III::La Maricutana",
+          "title": "La Maricutana"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Vol.III::El Disco Rayao",
+          "title": "El Disco Rayao"
+        }
+      ],
+      "notes": "Incluye: Celos; Me Lo Dijo Adela; Estoy Triste; La Maricutana; El Disco Rayao."
+    },
+    {
+      "op": "dejar",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/fonograma/billos_533_mosaicosvol3.htm",
+      "items": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Vol.III::Ven Acá Toma",
+          "title": "Ven Acá Toma"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Vol.III::Una Mujer",
+          "title": "Una Mujer"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Vol.III::Hay Que Vivir El Momento",
+          "title": "Hay Que Vivir El Momento"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Vol.III::La Múcura",
+          "title": "La Múcura"
+        }
+      ],
+      "why": "la pista 2 del core no es «Mosaico Nº 20»"
+    },
+    {
+      "op": "dejar",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/fonograma/billos_533_mosaicosvol3.htm",
+      "items": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Vol.III::Virgen De Medianoche",
+          "title": "Virgen De Medianoche"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Vol.III::Los Gustos De Víctor Pérez",
+          "title": "Los Gustos De Víctor Pérez"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Vol.III::Caminito De Guarenas",
+          "title": "Caminito De Guarenas"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Vol.III::Que Me La Den Entera",
+          "title": "Que Me La Den Entera"
+        }
+      ],
+      "why": "la pista 3 del core no es «Mosaico Nº 21»"
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/fonograma/billos_533_mosaicosvol3.htm",
+      "trackId": 157799,
+      "parent": "Mosaico Nº 22",
+      "number": 4,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Vol.III::La Cita",
+          "title": "La Cita"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Vol.III::La Burrita De Petare",
+          "title": "La Burrita De Petare"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Vol.III::Mar",
+          "title": "Mar"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Vol.III::Y Qué y Qué",
+          "title": "Y Qué y Qué"
+        }
+      ],
+      "notes": "Incluye: La Cita; La Burrita De Petare; Mar; Y Qué y Qué."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/fonograma/billos_533_mosaicosvol3.htm",
+      "trackId": 54781,
+      "parent": "Mosaico Nº 10",
+      "number": 6,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Vol.III::Maribal",
+          "title": "Maribal"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Vol.III::Ahora Seremos Felices",
+          "title": "Ahora Seremos Felices"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Vol.III::Te Sigo Esperando",
+          "title": "Te Sigo Esperando"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Vol.III::Dimelo",
+          "title": "Dimelo"
+        }
+      ],
+      "notes": "Incluye: Maribal; Ahora Seremos Felices; Te Sigo Esperando; Dimelo."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/discoteca/billos_535_billo70.htm",
+      "trackId": 157800,
+      "parent": "Mosaico Nº 26",
+      "number": 11,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 70::Soñar",
+          "title": "Soñar"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 70::Un Poquito De Tu Amor",
+          "title": "Un Poquito De Tu Amor"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 70::Almendra",
+          "title": "Almendra"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 70::Irremediablemente Solo",
+          "title": "Irremediablemente Solo"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 70::Oye Negra",
+          "title": "Oye Negra"
+        }
+      ],
+      "notes": "Incluye: Soñar; Un Poquito De Tu Amor; Almendra; Irremediablemente Solo; Oye Negra."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/discoteca/billos_536_elpajarillo.htm",
+      "trackId": 157801,
+      "parent": "Mosaico Nº 27",
+      "number": 10,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::El Pajarillo::Perfume De Gardenias",
+          "title": "Perfume De Gardenias"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::El Pajarillo::Quién Será",
+          "title": "Quién Será"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::El Pajarillo::Solamente Una Vez",
+          "title": "Solamente Una Vez"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::El Pajarillo::Una, Dos y Tres",
+          "title": "Una, Dos y Tres"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::El Pajarillo::Piedra Cu Tamare",
+          "title": "Piedra Cu Tamare"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::El Pajarillo::Panamá Me Tombé",
+          "title": "Panamá Me Tombé"
+        }
+      ],
+      "notes": "Incluye: Perfume De Gardenias; Quién Será; Solamente Una Vez; Una, Dos y Tres; Piedra Cu Tamare; Panamá Me Tombé."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/discoteca/billos_538_billo71.htm",
+      "trackId": 157802,
+      "parent": "Mosaico Nº 28",
+      "number": 11,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 71::Desesperadamente",
+          "title": "Desesperadamente"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 71::Picaflor",
+          "title": "Picaflor"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 71::Albur",
+          "title": "Albur"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 71::Rumba Blanca",
+          "title": "Rumba Blanca"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 71::Se Formo El Desorden",
+          "title": "Se Formo El Desorden"
+        }
+      ],
+      "notes": "Incluye: Desesperadamente; Picaflor; Albur; Rumba Blanca; Se Formo El Desorden."
+    },
+    {
+      "op": "dejar",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/discoteca/billos_540_billo72.htm",
+      "items": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 72::Merengue Venezolano",
+          "title": "Merengue Venezolano"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 72::El Bojote",
+          "title": "El Bojote"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 72::Préstame Tu Maquina",
+          "title": "Préstame Tu Maquina"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 72::La Yuca",
+          "title": "La Yuca"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 72::El Manguito De Hilacha",
+          "title": "El Manguito De Hilacha"
+        }
+      ],
+      "why": "la pista 6 del core no es «Mosaico Criollo Nº 1»"
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/discoteca/billos_540_billo72.htm",
+      "trackId": 157803,
+      "parent": "Mosaico Nº 29",
+      "number": 11,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 72::Nocturnal",
+          "title": "Nocturnal"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 72::Tambó",
+          "title": "Tambó"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 72::Maldición Gitana",
+          "title": "Maldición Gitana"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 72::Jardinero",
+          "title": "Jardinero"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 72::Maquina Hilandera",
+          "title": "Maquina Hilandera"
+        }
+      ],
+      "notes": "Incluye: Nocturnal; Tambó; Maldición Gitana; Jardinero; Maquina Hilandera."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/discoteca/billos_541_mosaicos25_29.htm",
+      "trackId": 157736,
+      "parent": "Mosaico Nº 25",
+      "number": 1,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 25 al 29::El Tumbaito",
+          "title": "El Tumbaito"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 25 al 29::Piel Canela",
+          "title": "Piel Canela"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 25 al 29::La Rueda",
+          "title": "La Rueda"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 25 al 29::A Ti Na' Ma'",
+          "title": "A Ti Na' Ma'"
+        }
+      ],
+      "notes": "Incluye: El Tumbaito; Piel Canela; La Rueda; A Ti Na' Ma'."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/discoteca/billos_541_mosaicos25_29.htm",
+      "trackId": 157755,
+      "parent": "Mosaico Nº 26",
+      "number": 2,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 25 al 29::Soñar",
+          "title": "Soñar"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 25 al 29::Un Poquito De Tu Amor",
+          "title": "Un Poquito De Tu Amor"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 25 al 29::Almendra",
+          "title": "Almendra"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 25 al 29::Irremediablemente",
+          "title": "Irremediablemente"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 25 al 29::Oye Negra",
+          "title": "Oye Negra"
+        }
+      ],
+      "notes": "Incluye: Soñar; Un Poquito De Tu Amor; Almendra; Irremediablemente; Oye Negra."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/discoteca/billos_541_mosaicos25_29.htm",
+      "trackId": 157756,
+      "parent": "Mosaico Nº 27",
+      "number": 3,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 25 al 29::Perfume De Gardenias",
+          "title": "Perfume De Gardenias"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 25 al 29::Quién Será",
+          "title": "Quién Será"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 25 al 29::Solamente Una Vez",
+          "title": "Solamente Una Vez"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 25 al 29::Una, Dos y Tres",
+          "title": "Una, Dos y Tres"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 25 al 29::Piedra Cu Tamaré",
+          "title": "Piedra Cu Tamaré"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 25 al 29::Panamá Me Tombé",
+          "title": "Panamá Me Tombé"
+        }
+      ],
+      "notes": "Incluye: Perfume De Gardenias; Quién Será; Solamente Una Vez; Una, Dos y Tres; Piedra Cu Tamaré; Panamá Me Tombé."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/discoteca/billos_541_mosaicos25_29.htm",
+      "trackId": 157757,
+      "parent": "Mosaico Nº 28",
+      "number": 4,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 25 al 29::Desesperadamente",
+          "title": "Desesperadamente"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 25 al 29::Picaflor",
+          "title": "Picaflor"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 25 al 29::Albur",
+          "title": "Albur"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 25 al 29::Rumba Blanca",
+          "title": "Rumba Blanca"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 25 al 29::Se Formo El Desorden",
+          "title": "Se Formo El Desorden"
+        }
+      ],
+      "notes": "Incluye: Desesperadamente; Picaflor; Albur; Rumba Blanca; Se Formo El Desorden."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/discoteca/billos_541_mosaicos25_29.htm",
+      "trackId": 157758,
+      "parent": "Mosaico Nº 29",
+      "number": 5,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 25 al 29::Nocturnal",
+          "title": "Nocturnal"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 25 al 29::Tambó",
+          "title": "Tambó"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 25 al 29::Maldición Gitana",
+          "title": "Maldición Gitana"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 25 al 29::Jardinero",
+          "title": "Jardinero"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 25 al 29::Maquina Hilandera",
+          "title": "Maquina Hilandera"
+        }
+      ],
+      "notes": "Incluye: Nocturnal; Tambó; Maldición Gitana; Jardinero; Maquina Hilandera."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/discoteca/billos_541_mosaicos25_29.htm",
+      "trackId": 157737,
+      "parent": "Mosaico Criollo Nº 1",
+      "number": 6,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 25 al 29::Merengue Venezolano",
+          "title": "Merengue Venezolano"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 25 al 29::El Bojote",
+          "title": "El Bojote"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 25 al 29::Prestame Tu Máquina",
+          "title": "Prestame Tu Máquina"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 25 al 29::La Yuca",
+          "title": "La Yuca"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 25 al 29::El Manguito De Hilacha",
+          "title": "El Manguito De Hilacha"
+        }
+      ],
+      "notes": "Incluye: Merengue Venezolano; El Bojote; Prestame Tu Máquina; La Yuca; El Manguito De Hilacha."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/discoteca/billos_543_billo72_5.htm",
+      "trackId": 157804,
+      "parent": "Mosaico Nº 30",
+      "number": 11,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 72 ½::Alma Mía",
+          "title": "Alma Mía"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 72 ½::El Paso Del Burro",
+          "title": "El Paso Del Burro"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 72 ½::Dime Que Sí",
+          "title": "Dime Que Sí"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 72 ½::La Ultima Guaracha",
+          "title": "La Ultima Guaracha"
+        }
+      ],
+      "notes": "Incluye: Alma Mía; El Paso Del Burro; Dime Que Sí; La Ultima Guaracha."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/discoteca/billos_545_billo73.htm",
+      "trackId": 157805,
+      "parent": "Mosaico Nº 31",
+      "number": 11,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 73::Viajera",
+          "title": "Viajera"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 73::El Palo Tiene Curujey",
+          "title": "El Palo Tiene Curujey"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 73::Negra Consentida",
+          "title": "Negra Consentida"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 73::Apretaíto",
+          "title": "Apretaíto"
+        }
+      ],
+      "notes": "Incluye: Viajera; El Palo Tiene Curujey; Negra Consentida; Apretaíto."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/discoteca/billos_547_billo73_5.htm",
+      "trackId": 157806,
+      "parent": "Mosaico Nº 32",
+      "number": 11,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 73 ½::Toda Una Vida",
+          "title": "Toda Una Vida"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 73 ½::Lágrimas Negras",
+          "title": "Lágrimas Negras"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 73 ½::No Me Vayas A Engañar",
+          "title": "No Me Vayas A Engañar"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 73 ½::Quiero Un Sombrero",
+          "title": "Quiero Un Sombrero"
+        }
+      ],
+      "notes": "Incluye: Toda Una Vida; Lágrimas Negras; No Me Vayas A Engañar; Quiero Un Sombrero."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/discoteca/billos_550_billo74.htm",
+      "trackId": 157807,
+      "parent": "Mosaico Nº 33",
+      "number": 11,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 74::Que Linda Eres",
+          "title": "Que Linda Eres"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 74::Babalu",
+          "title": "Babalu"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 74::Dos Cruces",
+          "title": "Dos Cruces"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 74::La Conga",
+          "title": "La Conga"
+        }
+      ],
+      "notes": "Incluye: Que Linda Eres; Babalu; Dos Cruces; La Conga."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/discoteca/billos_551_billo74_5.htm",
+      "trackId": 157808,
+      "parent": "Mosaico Nº 34",
+      "number": 11,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 74 ½::Tu No Comprendes",
+          "title": "Tu No Comprendes"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 74 ½::El Que Siembra Su Maíz",
+          "title": "El Que Siembra Su Maíz"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 74 ½::El Tiempo Será Testigo",
+          "title": "El Tiempo Será Testigo"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 74 ½::Caracas Siempre Caracas",
+          "title": "Caracas Siempre Caracas"
+        }
+      ],
+      "notes": "Incluye: Tu No Comprendes; El Que Siembra Su Maíz; El Tiempo Será Testigo; Caracas Siempre Caracas."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/discoteca/billos_552_billo75.htm",
+      "trackId": 157809,
+      "parent": "Mosaico Nº 35",
+      "number": 11,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 75::Por Eso No Debes",
+          "title": "Por Eso No Debes"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 75::Mi Ropa",
+          "title": "Mi Ropa"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 75::Tu Rica Boca",
+          "title": "Tu Rica Boca"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 75::Oiga Cantinero",
+          "title": "Oiga Cantinero"
+        }
+      ],
+      "notes": "Incluye: Por Eso No Debes; Mi Ropa; Tu Rica Boca; Oiga Cantinero."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/discoteca/billos_553_billo75_5.htm",
+      "trackId": 157810,
+      "parent": "Mosaico Nº 36",
+      "number": 11,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 75 ½::Noche",
+          "title": "Noche"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 75 ½::Tingo Talango",
+          "title": "Tingo Talango"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 75 ½::El Ole",
+          "title": "El Ole"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 75 ½::El Disco Rayao",
+          "title": "El Disco Rayao"
+        }
+      ],
+      "notes": "Incluye: Noche; Tingo Talango; El Ole; El Disco Rayao."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/discoteca/billos_554_billo76.htm",
+      "trackId": 157811,
+      "parent": "Mosaico Nº 37",
+      "number": 11,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 76::Usted",
+          "title": "Usted"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 76::Al Paso",
+          "title": "Al Paso"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 76::Luna Caraqueña",
+          "title": "Luna Caraqueña"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 76::Los Cadetes",
+          "title": "Los Cadetes"
+        }
+      ],
+      "notes": "Incluye: Usted; Al Paso; Luna Caraqueña; Los Cadetes."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/discoteca/billos_556_mosaicos30_35.htm",
+      "trackId": 157738,
+      "parent": "Mosaico Nº 30",
+      "number": 1,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 30 al 35::Alma Mía",
+          "title": "Alma Mía"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 30 al 35::El Paso Del Burro",
+          "title": "El Paso Del Burro"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 30 al 35::Dime Que Sí",
+          "title": "Dime Que Sí"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 30 al 35::La Ultima Guaracha",
+          "title": "La Ultima Guaracha"
+        }
+      ],
+      "notes": "Incluye: Alma Mía; El Paso Del Burro; Dime Que Sí; La Ultima Guaracha."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/discoteca/billos_556_mosaicos30_35.htm",
+      "trackId": 157759,
+      "parent": "Mosaico Nº 31",
+      "number": 2,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 30 al 35::Viajera",
+          "title": "Viajera"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 30 al 35::El Palo Tiene Curujey",
+          "title": "El Palo Tiene Curujey"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 30 al 35::Negra Consentida",
+          "title": "Negra Consentida"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 30 al 35::Apretaíto",
+          "title": "Apretaíto"
+        }
+      ],
+      "notes": "Incluye: Viajera; El Palo Tiene Curujey; Negra Consentida; Apretaíto."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/discoteca/billos_556_mosaicos30_35.htm",
+      "trackId": 157760,
+      "parent": "Mosaico Nº 32",
+      "number": 3,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 30 al 35::Toda Una Vida",
+          "title": "Toda Una Vida"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 30 al 35::Lágrimas Negras",
+          "title": "Lágrimas Negras"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 30 al 35::No Me Vayas A Engañar",
+          "title": "No Me Vayas A Engañar"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 30 al 35::Quiero Un Sombrero",
+          "title": "Quiero Un Sombrero"
+        }
+      ],
+      "notes": "Incluye: Toda Una Vida; Lágrimas Negras; No Me Vayas A Engañar; Quiero Un Sombrero."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/discoteca/billos_556_mosaicos30_35.htm",
+      "trackId": 157761,
+      "parent": "Mosaico Nº 33",
+      "number": 4,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 30 al 35::Que Linda Eres",
+          "title": "Que Linda Eres"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 30 al 35::Babalu",
+          "title": "Babalu"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 30 al 35::Dos Cruces",
+          "title": "Dos Cruces"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 30 al 35::La Conga",
+          "title": "La Conga"
+        }
+      ],
+      "notes": "Incluye: Que Linda Eres; Babalu; Dos Cruces; La Conga."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/discoteca/billos_556_mosaicos30_35.htm",
+      "trackId": 157762,
+      "parent": "Mosaico Nº 34",
+      "number": 5,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 30 al 35::Tu No Comprendes",
+          "title": "Tu No Comprendes"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 30 al 35::El Que Siembra Su Maíz",
+          "title": "El Que Siembra Su Maíz"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 30 al 35::El Tiempo Será Testigo",
+          "title": "El Tiempo Será Testigo"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 30 al 35::Caracas Siempre Caracas",
+          "title": "Caracas Siempre Caracas"
+        }
+      ],
+      "notes": "Incluye: Tu No Comprendes; El Que Siembra Su Maíz; El Tiempo Será Testigo; Caracas Siempre Caracas."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/discoteca/billos_556_mosaicos30_35.htm",
+      "trackId": 157763,
+      "parent": "Mosaico Nº 35",
+      "number": 6,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 30 al 35::Por Eso No Debes",
+          "title": "Por Eso No Debes"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 30 al 35::Mi Ropa",
+          "title": "Mi Ropa"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 30 al 35::Tu Rica Boca",
+          "title": "Tu Rica Boca"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 30 al 35::Oiga Cantinero",
+          "title": "Oiga Cantinero"
+        }
+      ],
+      "notes": "Incluye: Por Eso No Debes; Mi Ropa; Tu Rica Boca; Oiga Cantinero."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/discoteca/billos_557_billo76_5.htm",
+      "trackId": 157812,
+      "parent": "Mosaico Nº 38",
+      "number": 11,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 76 ½::Cómo Fue",
+          "title": "Cómo Fue"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 76 ½::Amor De Mi Bohío",
+          "title": "Amor De Mi Bohío"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 76 ½::Por Favor No Me Hagan Ruido",
+          "title": "Por Favor No Me Hagan Ruido"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 76 ½::La Conga Se Va",
+          "title": "La Conga Se Va"
+        }
+      ],
+      "notes": "Incluye: Cómo Fue; Amor De Mi Bohío; Por Favor No Me Hagan Ruido; La Conga Se Va."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/discoteca/billos_560_billo77.htm",
+      "trackId": 157813,
+      "parent": "Mosaico Nº 39",
+      "number": 11,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 77::Alma Libre",
+          "title": "Alma Libre"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 77::Dónde Estabas Tú",
+          "title": "Dónde Estabas Tú"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 77::Perdóname Vida",
+          "title": "Perdóname Vida"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 77::Camelia",
+          "title": "Camelia"
+        }
+      ],
+      "notes": "Incluye: Alma Libre; Dónde Estabas Tú; Perdóname Vida; Camelia."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/discoteca/billos_561_billo77_5.htm",
+      "trackId": 157814,
+      "parent": "Mosaico Nº 40",
+      "number": 1,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 77 ½::El Ruiseñor",
+          "title": "El Ruiseñor"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 77 ½::Quien Será",
+          "title": "Quien Será"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 77 ½::Cachito",
+          "title": "Cachito"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 77 ½::Magdalena",
+          "title": "Magdalena"
+        }
+      ],
+      "notes": "Incluye: El Ruiseñor; Quien Será; Cachito; Magdalena."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/discoteca/billos_563_billo78.htm",
+      "trackId": 157815,
+      "parent": "Mosaico Costeño Nº 41",
+      "number": 6,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 78::El Caimán",
+          "title": "El Caimán"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 78::Juepa",
+          "title": "Juepa"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 78::Rico Merecumbé",
+          "title": "Rico Merecumbé"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 78::Noche Novembrina",
+          "title": "Noche Novembrina"
+        }
+      ],
+      "notes": "Incluye: El Caimán; Juepa; Rico Merecumbé; Noche Novembrina."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/discoteca/billos_558_mosaicos36_41.htm",
+      "trackId": 157739,
+      "parent": "Mosaico Nº 36",
+      "number": 1,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 36 al 41::Noche",
+          "title": "Noche"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 36 al 41::Tingo Talango",
+          "title": "Tingo Talango"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 36 al 41::El Ole",
+          "title": "El Ole"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 36 al 41::El Disco Rayao",
+          "title": "El Disco Rayao"
+        }
+      ],
+      "notes": "Incluye: Noche; Tingo Talango; El Ole; El Disco Rayao."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/discoteca/billos_558_mosaicos36_41.htm",
+      "trackId": 157764,
+      "parent": "Mosaico Nº 37",
+      "number": 2,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 36 al 41::Usted",
+          "title": "Usted"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 36 al 41::Al Paso",
+          "title": "Al Paso"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 36 al 41::Luna Caraqueña",
+          "title": "Luna Caraqueña"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 36 al 41::Los Cadetes",
+          "title": "Los Cadetes"
+        }
+      ],
+      "notes": "Incluye: Usted; Al Paso; Luna Caraqueña; Los Cadetes."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/discoteca/billos_558_mosaicos36_41.htm",
+      "trackId": 157765,
+      "parent": "Mosaico Nº 38",
+      "number": 3,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 36 al 41::Cómo Fue",
+          "title": "Cómo Fue"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 36 al 41::Amor De Mi Bohío",
+          "title": "Amor De Mi Bohío"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 36 al 41::Por Favor No Me Hagan Ruido",
+          "title": "Por Favor No Me Hagan Ruido"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 36 al 41::La Conga Se Va",
+          "title": "La Conga Se Va"
+        }
+      ],
+      "notes": "Incluye: Cómo Fue; Amor De Mi Bohío; Por Favor No Me Hagan Ruido; La Conga Se Va."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/discoteca/billos_558_mosaicos36_41.htm",
+      "trackId": 157766,
+      "parent": "Mosaico Nº 39",
+      "number": 4,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 36 al 41::Alma Libre",
+          "title": "Alma Libre"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 36 al 41::Dónde Estabas Tú",
+          "title": "Dónde Estabas Tú"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 36 al 41::Perdóname Vida",
+          "title": "Perdóname Vida"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 36 al 41::Camelia",
+          "title": "Camelia"
+        }
+      ],
+      "notes": "Incluye: Alma Libre; Dónde Estabas Tú; Perdóname Vida; Camelia."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/discoteca/billos_558_mosaicos36_41.htm",
+      "trackId": 157740,
+      "parent": "Mosaico Nº 40",
+      "number": 5,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 36 al 41::El Ruiseñor",
+          "title": "El Ruiseñor"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 36 al 41::Quien Será",
+          "title": "Quien Será"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 36 al 41::Cachito",
+          "title": "Cachito"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 36 al 41::Magdalena",
+          "title": "Magdalena"
+        }
+      ],
+      "notes": "Incluye: El Ruiseñor; Quien Será; Cachito; Magdalena."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/discoteca/billos_558_mosaicos36_41.htm",
+      "trackId": 157741,
+      "parent": "Mosaico Costeño Nº 41",
+      "number": 6,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 36 al 41::El Caimán",
+          "title": "El Caimán"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 36 al 41::Juepa",
+          "title": "Juepa"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 36 al 41::Rico Merecumbé",
+          "title": "Rico Merecumbé"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Mosaicos a La Billo 36 al 41::Noche Novembrina",
+          "title": "Noche Novembrina"
+        }
+      ],
+      "notes": "Incluye: El Caimán; Juepa; Rico Merecumbé; Noche Novembrina."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/discoteca/billos_564_billo78_5.htm",
+      "trackId": 157816,
+      "parent": "Mosaico Nº 42",
+      "number": 7,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 78 ½ Su Majestad La Música::Bogotana",
+          "title": "Bogotana"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 78 ½ Su Majestad La Música::Masculino y Femenino",
+          "title": "Masculino y Femenino"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 78 ½ Su Majestad La Música::El Pato y La Pata",
+          "title": "El Pato y La Pata"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 78 ½ Su Majestad La Música::La Renga",
+          "title": "La Renga"
+        }
+      ],
+      "notes": "Incluye: Bogotana; Masculino y Femenino; El Pato y La Pata; La Renga."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/discoteca/billos_565_billo79.htm",
+      "trackId": 157817,
+      "parent": "Mosaico Nº 43",
+      "number": 9,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 79::Humanidad",
+          "title": "Humanidad"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 79::En El Tiempo e’ La Colonia",
+          "title": "En El Tiempo e’ La Colonia"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 79::Que Dulce Fue El Beso",
+          "title": "Que Dulce Fue El Beso"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 79::Unión De Reyes",
+          "title": "Unión De Reyes"
+        }
+      ],
+      "notes": "Incluye: Humanidad; En El Tiempo e’ La Colonia; Que Dulce Fue El Beso; Unión De Reyes."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/discoteca/billos_1613_80endiscoteca.htm",
+      "trackId": 157818,
+      "parent": "Mosaico Moruno",
+      "number": 15,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 80 En Discoteca::Que Tonteria",
+          "title": "Que Tonteria"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 80 En Discoteca::Y Viva España",
+          "title": "Y Viva España"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 80 En Discoteca::Zambra De Mi Soledad",
+          "title": "Zambra De Mi Soledad"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 80 En Discoteca::Rumores",
+          "title": "Rumores"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 80 En Discoteca::Amarillo Limón",
+          "title": "Amarillo Limón"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 80 En Discoteca::Damele Betun",
+          "title": "Damele Betun"
+        }
+      ],
+      "notes": "Incluye: Que Tonteria; Y Viva España; Zambra De Mi Soledad; Rumores; Amarillo Limón; Damele Betun."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/discoteca/billos_1613_80endiscoteca.htm",
+      "trackId": 157819,
+      "parent": "Mosaico Magallanero",
+      "number": 16,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 80 En Discoteca::No Hay Quien Le Gane",
+          "title": "No Hay Quien Le Gane"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 80 En Discoteca::Magallanes y Susana",
+          "title": "Magallanes y Susana"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 80 En Discoteca::Magallanes Será Campeón",
+          "title": "Magallanes Será Campeón"
+        }
+      ],
+      "notes": "Incluye: No Hay Quien Le Gane; Magallanes y Susana; Magallanes Será Campeón."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/discoteca/billos_1613_80endiscoteca.htm",
+      "trackId": 157820,
+      "parent": "Mosaico Navideño",
+      "number": 17,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 80 En Discoteca::Nochebuena",
+          "title": "Nochebuena"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 80 En Discoteca::Navidad Negra",
+          "title": "Navidad Negra"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 80 En Discoteca::Gaita Con Billo",
+          "title": "Gaita Con Billo"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 80 En Discoteca::Aguinaldo Con Billo",
+          "title": "Aguinaldo Con Billo"
+        }
+      ],
+      "notes": "Incluye: Nochebuena; Navidad Negra; Gaita Con Billo; Aguinaldo Con Billo."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/disqueras_unidas/billos_279_fiestaconbillo.htm",
+      "trackId": 157821,
+      "parent": "Tamboreras (Dedicado a Panamá)",
+      "number": 5,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Fiesta Con Billo::Llórele Llórela",
+          "title": "Llórele Llórela"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Fiesta Con Billo::Panameña",
+          "title": "Panameña"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Fiesta Con Billo::Guararé",
+          "title": "Guararé"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Fiesta Con Billo::Que Viva Panamá",
+          "title": "Que Viva Panamá"
+        }
+      ],
+      "notes": "Incluye: Llórele Llórela; Panameña; Guararé; Que Viva Panamá."
+    },
+    {
+      "op": "dejar",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/disqueras_unidas/billos_279_fiestaconbillo.htm",
+      "items": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Fiesta Con Billo::Hay Que Saber Perder",
+          "title": "Hay Que Saber Perder"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Fiesta Con Billo::Tierra Va a Tembla’",
+          "title": "Tierra Va a Tembla’"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Fiesta Con Billo::Alma De Roca",
+          "title": "Alma De Roca"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Fiesta Con Billo::Apágame La Vela",
+          "title": "Apágame La Vela"
+        }
+      ],
+      "why": "la pista 6 del core no es «Mosaico Nº 45»"
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/disqueras_unidas/billos_180_cocktailmusical.htm",
+      "trackId": 157822,
+      "parent": "Mosaico Nº 46:",
+      "number": 11,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Cocktail Musical \"Billo\"::Traicionera",
+          "title": "Traicionera"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Cocktail Musical \"Billo\"::Triana Morena",
+          "title": "Triana Morena"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Cocktail Musical \"Billo\"::Bésame Morenita",
+          "title": "Bésame Morenita"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Cocktail Musical \"Billo\"::Arroz Con Leche",
+          "title": "Arroz Con Leche"
+        }
+      ],
+      "notes": "Incluye: Traicionera; Triana Morena; Bésame Morenita; Arroz Con Leche."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/discoteca/billos_1643_805endiscoteca.htm",
+      "trackId": 157823,
+      "parent": "Mosaico Colombiano",
+      "number": 14,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 80 ½ En Discoteca::Los Terrones Del Camino",
+          "title": "Los Terrones Del Camino"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 80 ½ En Discoteca::Raza",
+          "title": "Raza"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 80 ½ En Discoteca::Las Pilanderas",
+          "title": "Las Pilanderas"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 80 ½ En Discoteca::Maracay",
+          "title": "Maracay"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 80 ½ En Discoteca::Playas De Mi Tierra",
+          "title": "Playas De Mi Tierra"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 80 ½ En Discoteca::Amor y Penas",
+          "title": "Amor y Penas"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 80 ½ En Discoteca::Roberto Ruiz",
+          "title": "Roberto Ruiz"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 80 ½ En Discoteca::Carmen De Bolivar",
+          "title": "Carmen De Bolivar"
+        }
+      ],
+      "notes": "Incluye: Los Terrones Del Camino; Raza; Las Pilanderas; Maracay; Playas De Mi Tierra; Amor y Penas; Roberto Ruiz; Carmen De Bolivar."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/discoteca/billos_1643_805endiscoteca.htm",
+      "trackId": 157824,
+      "parent": "Mosaico Dominicano",
+      "number": 15,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 80 ½ En Discoteca::La Soga",
+          "title": "La Soga"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 80 ½ En Discoteca::Piano Bonito",
+          "title": "Piano Bonito"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 80 ½ En Discoteca::Música De Papá Dios",
+          "title": "Música De Papá Dios"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 80 ½ En Discoteca::La Cañada",
+          "title": "La Cañada"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 80 ½ En Discoteca::Compadre Pedro Juan",
+          "title": "Compadre Pedro Juan"
+        }
+      ],
+      "notes": "Incluye: La Soga; Piano Bonito; Música De Papá Dios; La Cañada; Compadre Pedro Juan."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/disqueras_unidas/billos_380_81patodoelano.htm",
+      "trackId": 157825,
+      "parent": "Mosaico No.47",
+      "number": 11,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::1981 y Para Todo El Año::Mi Ley Es Amarte",
+          "title": "Mi Ley Es Amarte"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::1981 y Para Todo El Año::Amor De Mis Amores",
+          "title": "Amor De Mis Amores"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::1981 y Para Todo El Año::Madrid",
+          "title": "Madrid"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::1981 y Para Todo El Año::Farolito",
+          "title": "Farolito"
+        }
+      ],
+      "notes": "Incluye: Mi Ley Es Amarte; Amor De Mis Amores; Madrid; Farolito."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/disqueras_unidas/billos_281_billo81_5.htm",
+      "trackId": 157826,
+      "parent": "Mosaico Nº 48",
+      "number": 10,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 81 ½::Las Perlas De Tu Boca",
+          "title": "Las Perlas De Tu Boca"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 81 ½::Serenata Mulata",
+          "title": "Serenata Mulata"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 81 ½::La Cinta Verde",
+          "title": "La Cinta Verde"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Billo 81 ½::José Belén Santana",
+          "title": "José Belén Santana"
+        }
+      ],
+      "notes": "Incluye: Las Perlas De Tu Boca; Serenata Mulata; La Cinta Verde; José Belén Santana."
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/velvet/billos_2416_sinfronteras.htm",
+      "trackId": 157828,
+      "parent": "Mosaico",
+      "number": 6,
+      "parts": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Sin Fronteras::Fiesta en Corralejas",
+          "title": "Fiesta en Corralejas"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Sin Fronteras::Carmen de Bolívar",
+          "title": "Carmen de Bolívar"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Sin Fronteras::Macondo",
+          "title": "Macondo"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Sin Fronteras::Tres Perlas",
+          "title": "Tres Perlas"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Sin Fronteras::Boquita Sala",
+          "title": "Boquita Sala"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Sin Fronteras::La Butifarra",
+          "title": "La Butifarra"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Sin Fronteras::Vicky",
+          "title": "Vicky"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Sin Fronteras::Medellin",
+          "title": "Medellin"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Sin Fronteras::Mi Cali Bella",
+          "title": "Mi Cali Bella"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Sin Fronteras::Pa' Que Gocen",
+          "title": "Pa' Que Gocen"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Sin Fronteras::Cumbia Sinceleja",
+          "title": "Cumbia Sinceleja"
+        }
+      ],
+      "notes": "Incluye: Fiesta en Corralejas; Carmen de Bolívar; Macondo; Tres Perlas; Boquita Sala; La Butifarra; Vicky; Medellin; Mi Cali Bella; Pa' Que Gocen; Cumbia Sinceleja."
+    },
+    {
+      "op": "dejar",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/billos_serie32_parasiempre.htm",
+      "items": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Serie 32 Grandes Exitos Para Siempre::Vieja Luna - El Limpiabotas - Besar - Boyne - Sin Timbal",
+          "title": "Vieja Luna - El Limpiabotas - Besar - Boyne - Sin Timbal"
+        }
+      ],
+      "why": "un solo título suelto al final"
+    },
+    {
+      "op": "dejar",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/billos_serie32_superexitos.htm",
+      "items": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Serie 32 Super Exitos de Billo's::Ojos Malvados",
+          "title": "Ojos Malvados"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Serie 32 Super Exitos de Billo's::La Negra Leonor",
+          "title": "La Negra Leonor"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Serie 32 Super Exitos de Billo's::Letargo",
+          "title": "Letargo"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Serie 32 Super Exitos de Billo's::Para Vigo Me Voy",
+          "title": "Para Vigo Me Voy"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Serie 32 Super Exitos de Billo's::Los Componedores",
+          "title": "Los Componedores"
+        }
+      ],
+      "why": "la pista 16 del core no es «Mosaico a La Billo's Nº 1»"
+    },
+    {
+      "op": "dejar",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/billos_gold.htm",
+      "items": [
+        {
+          "identityRaw": "Billo's Caracas Boys::Gold::Palabras De Mujer",
+          "title": "Palabras De Mujer"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Gold::Bambarito",
+          "title": "Bambarito"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Gold::Nostalgia",
+          "title": "Nostalgia"
+        },
+        {
+          "identityRaw": "Billo's Caracas Boys::Gold::Cachita",
+          "title": "Cachita"
+        }
+      ],
+      "why": "la pista 17 del core no es «Mosaico Nº 2»"
+    },
+    {
+      "op": "dejar",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/trina_medina/trinamedina_03envivo.htm",
+      "items": [
+        {
+          "identityRaw": "Trina Medina::En Vivo!::Lagrimas Negras",
+          "title": "Lagrimas Negras"
+        },
+        {
+          "identityRaw": "Trina Medina::En Vivo!::Acuyuyé",
+          "title": "Acuyuyé"
+        },
+        {
+          "identityRaw": "Trina Medina::En Vivo!::Parampampan",
+          "title": "Parampampan"
+        },
+        {
+          "identityRaw": "Trina Medina::En Vivo!::Maquinolandera",
+          "title": "Maquinolandera"
+        },
+        {
+          "identityRaw": "Trina Medina::En Vivo!::Bravo Rumbero",
+          "title": "Bravo Rumbero"
+        }
+      ],
+      "why": "la pista 2 del core no es «Medley 3»"
+    },
+    {
+      "op": "dejar",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/trina_medina/trinamedina_03envivo.htm",
+      "items": [
+        {
+          "identityRaw": "Trina Medina::En Vivo!::Un Camino Conocido",
+          "title": "Un Camino Conocido"
+        },
+        {
+          "identityRaw": "Trina Medina::En Vivo!::Rosas Rojas",
+          "title": "Rosas Rojas"
+        }
+      ],
+      "why": "la pista 3 del core no es «Medley 4»"
+    },
+    {
+      "op": "dejar",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/devorah_sasha/devorahsasha_09envivo.htm",
+      "items": [
+        {
+          "identityRaw": "Devorah Sasha::En Vivo::New York, New York",
+          "title": "New York, New York"
+        }
+      ],
+      "why": "un solo título suelto al final"
+    },
+    {
+      "op": "dejar",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/guaco/guaco_guacomania.htm",
+      "items": [
+        {
+          "identityRaw": "Guaco::Guacomania::Intro Masculino",
+          "title": "Intro Masculino"
+        },
+        {
+          "identityRaw": "Guaco::Guacomania::El Billetero",
+          "title": "El Billetero"
+        },
+        {
+          "identityRaw": "Guaco::Guacomania::Para Ella",
+          "title": "Para Ella"
+        },
+        {
+          "identityRaw": "Guaco::Guacomania::Pastelero",
+          "title": "Pastelero"
+        }
+      ],
+      "why": "la pista 1 del core no es «Guacomania 1»"
+    },
+    {
+      "op": "dejar",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/guaco/guaco_guacomania.htm",
+      "items": [
+        {
+          "identityRaw": "Guaco::Guacomania::Maracucha",
+          "title": "Maracucha"
+        },
+        {
+          "identityRaw": "Guaco::Guacomania::Noche Sensacional",
+          "title": "Noche Sensacional"
+        },
+        {
+          "identityRaw": "Guaco::Guacomania::Disco Guaco",
+          "title": "Disco Guaco"
+        }
+      ],
+      "why": "la pista 2 del core no es «Guacomania 2»"
+    },
+    {
+      "op": "dejar",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/guaco/guaco_guacomania.htm",
+      "items": [
+        {
+          "identityRaw": "Guaco::Guacomania::Homenaje a Jesús Lozano",
+          "title": "Homenaje a Jesús Lozano"
+        },
+        {
+          "identityRaw": "Guaco::Guacomania::Noviazgo En Noche Buena",
+          "title": "Noviazgo En Noche Buena"
+        },
+        {
+          "identityRaw": "Guaco::Guacomania::La Diferencia",
+          "title": "La Diferencia"
+        }
+      ],
+      "why": "la pista 3 del core no es «Guacomania 3»"
+    },
+    {
+      "op": "dejar",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/guaco/guaco_guacomania.htm",
+      "items": [
+        {
+          "identityRaw": "Guaco::Guacomania::Venite Pa' Maracaibo",
+          "title": "Venite Pa' Maracaibo"
+        },
+        {
+          "identityRaw": "Guaco::Guacomania::A Patinar",
+          "title": "A Patinar"
+        },
+        {
+          "identityRaw": "Guaco::Guacomania::Maracaibo Linda",
+          "title": "Maracaibo Linda"
+        },
+        {
+          "identityRaw": "Guaco::Guacomania::Lola y Su Perola",
+          "title": "Lola y Su Perola"
+        }
+      ],
+      "why": "la pista 4 del core no es «Guacomania 4»"
+    },
+    {
+      "op": "dejar",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/guaco/guaco_guacomania.htm",
+      "items": [
+        {
+          "identityRaw": "Guaco::Guacomania::Guaco y Tambora",
+          "title": "Guaco y Tambora"
+        },
+        {
+          "identityRaw": "Guaco::Guacomania::Linda Caraqueña",
+          "title": "Linda Caraqueña"
+        },
+        {
+          "identityRaw": "Guaco::Guacomania::Sandunguera",
+          "title": "Sandunguera"
+        }
+      ],
+      "why": "la pista 5 del core no es «Guacomania 5»"
+    },
+    {
+      "op": "dejar",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/guaco/guaco_guacomania.htm",
+      "items": [
+        {
+          "identityRaw": "Guaco::Guacomania::Intro Femenino",
+          "title": "Intro Femenino"
+        },
+        {
+          "identityRaw": "Guaco::Guacomania::Las Pulgas",
+          "title": "Las Pulgas"
+        },
+        {
+          "identityRaw": "Guaco::Guacomania::Aguilas Del Zulia",
+          "title": "Aguilas Del Zulia"
+        },
+        {
+          "identityRaw": "Guaco::Guacomania::Parranda De Navidad",
+          "title": "Parranda De Navidad"
+        }
+      ],
+      "why": "la pista 6 del core no es «Guacomania 6»"
+    },
+    {
+      "op": "dejar",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/los_blanco/losblanco_ysusgrandesexitos.htm",
+      "items": [
+        {
+          "identityRaw": "L::Los Blanco y Sus Grandes Exitos::Volando",
+          "title": "Volando"
+        },
+        {
+          "identityRaw": "L::Los Blanco y Sus Grandes Exitos::Linda Mejicana",
+          "title": "Linda Mejicana"
+        },
+        {
+          "identityRaw": "L::Los Blanco y Sus Grandes Exitos::Me Voy A Casar",
+          "title": "Me Voy A Casar"
+        },
+        {
+          "identityRaw": "L::Los Blanco y Sus Grandes Exitos::La Gota Gorda",
+          "title": "La Gota Gorda"
+        }
+      ],
+      "why": "la pista 6 del core no es «Potpurri No. 1»"
+    },
+    {
+      "op": "dejar",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/los_blanco/losblanco_ysusgrandesexitos.htm",
+      "items": [
+        {
+          "identityRaw": "L::Los Blanco y Sus Grandes Exitos::Y Va Volando",
+          "title": "Y Va Volando"
+        },
+        {
+          "identityRaw": "L::Los Blanco y Sus Grandes Exitos::Estoy Sabroso",
+          "title": "Estoy Sabroso"
+        },
+        {
+          "identityRaw": "L::Los Blanco y Sus Grandes Exitos::Mi Salve",
+          "title": "Mi Salve"
+        },
+        {
+          "identityRaw": "L::Los Blanco y Sus Grandes Exitos::El Tiburon",
+          "title": "El Tiburon"
+        }
+      ],
+      "why": "la pista 7 del core no es «Potpurri No. 2»"
+    },
+    {
+      "op": "dejar",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/los_blanco/losblanco_ysusgrandesexitos.htm",
+      "items": [
+        {
+          "identityRaw": "L::Los Blanco y Sus Grandes Exitos::Mi Novia De Naiguatá",
+          "title": "Mi Novia De Naiguatá"
+        },
+        {
+          "identityRaw": "L::Los Blanco y Sus Grandes Exitos::Ven Mi Vidita",
+          "title": "Ven Mi Vidita"
+        },
+        {
+          "identityRaw": "L::Los Blanco y Sus Grandes Exitos::Amor, Amor",
+          "title": "Amor, Amor"
+        },
+        {
+          "identityRaw": "L::Los Blanco y Sus Grandes Exitos::Josefina",
+          "title": "Josefina"
+        }
+      ],
+      "why": "la pista 8 del core no es «Potpurri No. 3»"
+    },
+    {
+      "op": "dejar",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/los_blanco/losblanco_ysusgrandesexitos.htm",
+      "items": [
+        {
+          "identityRaw": "L::Los Blanco y Sus Grandes Exitos::Busca Lo Tuyo",
+          "title": "Busca Lo Tuyo"
+        },
+        {
+          "identityRaw": "L::Los Blanco y Sus Grandes Exitos::Flor",
+          "title": "Flor"
+        },
+        {
+          "identityRaw": "L::Los Blanco y Sus Grandes Exitos::En La Arena",
+          "title": "En La Arena"
+        }
+      ],
+      "why": "la pista 9 del core no es «Potpurri No. 4»"
+    },
+    {
+      "op": "dejar",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/los_blanco/losblanco_ysusgrandesexitos.htm",
+      "items": [
+        {
+          "identityRaw": "L::Los Blanco y Sus Grandes Exitos::Linda Muchachita",
+          "title": "Linda Muchachita"
+        },
+        {
+          "identityRaw": "L::Los Blanco y Sus Grandes Exitos::Santa Marta",
+          "title": "Santa Marta"
+        },
+        {
+          "identityRaw": "L::Los Blanco y Sus Grandes Exitos::Estas Delirando",
+          "title": "Estas Delirando"
+        }
+      ],
+      "why": "la pista 10 del core no es «Potpurri No. 5»"
+    },
+    {
+      "op": "dejar",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/melodicos/melodicos_dcm668_nuevamente.htm",
+      "items": [
+        {
+          "identityRaw": "Los Melódicos::Nuevamente::Corazón",
+          "title": "Corazón"
+        },
+        {
+          "identityRaw": "Los Melódicos::Nuevamente::Al Paso",
+          "title": "Al Paso"
+        },
+        {
+          "identityRaw": "Los Melódicos::Nuevamente::Quítate El Zapato",
+          "title": "Quítate El Zapato"
+        }
+      ],
+      "why": "la pista 10 del core no es «Recuerdos No. 15:»"
+    },
+    {
+      "op": "dejar",
+      "url": "https://sincopa.com/ethnic/cdinfo1/vytas_envivo4.htm",
+      "items": [
+        {
+          "identityRaw": "Vytas Brenner::En Vivo! Ofrenda::Interludio",
+          "title": "Vytas Brenner::En Vivo! Ofrenda::Interludio"
+        }
+      ],
+      "why": "el adaptador actual ya no la emite sin número"
+    },
+    {
+      "op": "dejar",
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/regardless_2whatitwas.htm",
+      "items": [
+        {
+          "identityRaw": "Regardless::What It Was Independent::Poor Miss Wilder",
+          "title": "Poor Miss Wilder"
+        },
+        {
+          "identityRaw": "Regardless::What It Was Independent::Inside the Abyss That Is Bradford's Mind",
+          "title": "Inside the Abyss That Is Bradford's Mind"
+        }
+      ],
+      "why": "la pista 8 del core no es «The Night That Mr Bradford Lost His Mind:»"
+    },
+    {
+      "op": "dejar",
+      "url": "https://sincopa.com/ethnic/cdinfo1/raices_1982.htm",
+      "items": [
+        {
+          "identityRaw": "Grupo Raíces de Venezuela::Grupo Raíces de Venezuela::Seis Tocuyano",
+          "title": "Seis Tocuyano"
+        }
+      ],
+      "why": "la pista 1 del core no es «Raíces Tocuyanas»"
+    },
+    {
+      "op": "dejar",
+      "url": "https://sincopa.com/traditional/cdinfo2/1solo_pueblo/1solopueblo_vol4.htm",
+      "items": [
+        {
+          "identityRaw": "Un Solo Pueblo::La Música de Un Solo Pueblo Vol. 4::(Lo He E' - Ave María - La Mariposa)",
+          "title": "(Lo He E' - Ave María - La Mariposa)"
+        }
+      ],
+      "why": "un solo título suelto al final"
+    },
+    {
+      "op": "dejar",
+      "url": "https://sincopa.com/traditional/cdinfo2/1solo_pueblo/1solopueblo_serie32.htm",
+      "items": [
+        {
+          "identityRaw": "Un Solo Pueblo::Serie 32 Cantos y Parrandas::Pastor Divino",
+          "title": "Pastor Divino"
+        },
+        {
+          "identityRaw": "Un Solo Pueblo::Serie 32 Cantos y Parrandas::En El Medio Del Cielo",
+          "title": "En El Medio Del Cielo"
+        },
+        {
+          "identityRaw": "Un Solo Pueblo::Serie 32 Cantos y Parrandas::Toro e Candela",
+          "title": "Toro e Candela"
+        },
+        {
+          "identityRaw": "Un Solo Pueblo::Serie 32 Cantos y Parrandas::La Garza",
+          "title": "La Garza"
+        },
+        {
+          "identityRaw": "Un Solo Pueblo::Serie 32 Cantos y Parrandas::El Pajarito",
+          "title": "El Pajarito"
+        }
+      ],
+      "why": "la pista 16 del core no es «Mezcla #2»"
+    },
+    {
+      "op": "partes",
+      "url": "https://sincopa.com/ethnic/cdinfo1/tapuruina_1tapuruina.htm",
+      "trackId": 157834,
+      "parent": "Ciclo Del Origen y La Transmutación",
+      "number": 6,
+      "parts": [
+        {
+          "identityRaw": "Tapuruina::Tapuruina::El Lugar De Donde Vienen Las Almas",
+          "title": "El Lugar De Donde Vienen Las Almas"
+        },
+        {
+          "identityRaw": "Tapuruina::Tapuruina::La Tarea Del Espíritu",
+          "title": "La Tarea Del Espíritu"
+        },
+        {
+          "identityRaw": "Tapuruina::Tapuruina::Soy Uno Con El Todo",
+          "title": "Soy Uno Con El Todo"
+        }
+      ],
+      "notes": "Incluye: El Lugar De Donde Vienen Las Almas; La Tarea Del Espíritu; Soy Uno Con El Todo."
+    }
+  ]
+}
