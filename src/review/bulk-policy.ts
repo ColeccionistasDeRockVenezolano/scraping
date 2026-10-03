@@ -67,6 +67,21 @@ export interface PolicyInput {
    * crea sin enlace seguro del ER (Brian, 2026-10-02: tramos C y D).
    */
   onlySplitPart?: boolean;
+  /**
+   * Discos y pistas: los hermanos del core bajo el mismo padre (los discos del
+   * artista, las pistas del disco). El ER solo compara con lo que existía
+   * cuando decidió; los hermanos son el core de AHORA.
+   */
+  siblings?: ExistingRef[];
+  /**
+   * Discos: cuántas pistas de la ficha (`total`) ya están, por título, en cada
+   * hermano de título casi igual (`shared`). El repertorio separa «Café Negrito
+   * (World-Latin)» = «Café Negrito» de «Upadesa Reloaded» ≠ «Upadesa». Un
+   * hermano sin pistas (`core` = 0) no mide nada: queda abierto.
+   */
+  repertoire?: Record<number, { shared: number; total: number; core: number }>;
+  /** Pistas: la pista del core que ocupa la misma posición en el disco. */
+  samePositionId?: number;
 }
 
 export type Verdict =
@@ -208,6 +223,14 @@ export function nearness(a: string, b: string, minContainedTokens: number): Near
   return undefined;
 }
 
+/** «Mosaico Nº 2» frente a «Mosaico Nº 1»: los dos llevan números y no son los mismos. */
+export function numbersDiffer(a: string, b: string): boolean {
+  const numbers = (text: string) => [...text.matchAll(/\d+/gu)].map((m) => String(Number(m[0]))).sort().join(" ");
+  const na = numbers(a);
+  const nb = numbers(b);
+  return na !== "" && nb !== "" && na !== nb;
+}
+
 function nearCandidates(input: PolicyInput, minContainedTokens: number, sameParentOnly: boolean): CandidateEvidence[] {
   const pool = input.decision?.candidates ?? [];
   return pool.filter((candidate) => {
@@ -264,9 +287,14 @@ export function decideVerdict(input: PolicyInput): Verdict {
       return { kind: "hold", rule: "no-es-una-persona:parentesis-de-titulo", detail: "solo aparece como paréntesis final de títulos de pista; puede ser un subtítulo o una traducción" };
     }
   }
-  if (decision === undefined) return { kind: "hold", rule: "sin-decision-er", detail: "la identidad no tiene decisión de ER registrada" };
-  if (decision.action === "AUTO_MATCH") return { kind: "approve", rule: "auto-match" };
-  const contradicted = decision.action === "NO_MATCH";
+  if (decision?.action === "AUTO_MATCH") return { kind: "approve", rule: "auto-match" };
+  // Un disco o una pista con el padre resuelto se decide aunque falte la
+  // decisión del ER: se compara con sus hermanos del core, que es lo que el ER
+  // habría mirado.
+  if (decision === undefined && !((input.kind === "album" || input.kind === "track") && input.parentId !== undefined)) {
+    return { kind: "hold", rule: "sin-decision-er", detail: "la identidad no tiene decisión de ER registrada" };
+  }
+  const contradicted = decision?.action === "NO_MATCH";
 
   if (input.kind === "album" || input.kind === "track") {
     if (input.parentId === undefined) {
@@ -277,15 +305,40 @@ export function decideVerdict(input: PolicyInput): Verdict {
     }
     if (input.sameName.length === 1) {
       const other = input.sameName[0]!;
-      if (contradicted) return { kind: "hold", rule: "titulo-igual-con-contradiccion", detail: `${other.id} «${other.name}»: el ER vio una contradicción (año, duración…)` };
-      return { kind: "same", targetId: other.id, rule: input.kind === "album" ? "mismo-titulo-mismo-artista" : "mismo-titulo-mismo-disco" };
+      // El NO_MATCH solo contradice a lo que el ER comparó: si el homónimo
+      // llegó al core después de la decisión, el ER nunca lo vio.
+      const sawIt = decision !== undefined && (decision.candidates.length === 0 || decision.candidates.some((c) => c.id === other.id));
+      if (contradicted && sawIt) return { kind: "hold", rule: "titulo-igual-con-contradiccion", detail: `${other.id} «${other.name}»: el ER vio una contradicción (año, duración…)` };
+      const rule = input.kind === "album" ? "mismo-titulo-mismo-artista" : "mismo-titulo-mismo-disco";
+      return { kind: "same", targetId: other.id, rule: contradicted ? `${rule}:decision-er-anterior` : rule };
     }
-    const near = nearCandidates(input, 1, true);
+    const nearIds = new Set<number>();
+    const near: ExistingRef[] = [];
+    for (const ref of [...nearCandidates(input, 1, true), ...(input.siblings ?? []).filter((s) => nearness(input.name, s.name, 1) !== undefined)]) {
+      if (nearIds.has(ref.id)) continue;
+      nearIds.add(ref.id);
+      near.push({ id: ref.id, name: ref.name });
+    }
     if (near.length > 0) {
-      return { kind: "hold", rule: "titulo-casi-igual-mismo-padre", detail: near.slice(0, 3).map((c) => `${c.id} «${c.name}»`).join("; ") };
+      const detail = near.slice(0, 3).map((c) => `${c.id} «${c.name}»`).join("; ");
+      if (input.kind === "track") {
+        const atPosition = near.find((ref) => ref.id === input.samePositionId);
+        if (atPosition !== undefined && !numbersDiffer(input.name, atPosition.name)) return { kind: "same", targetId: atPosition.id, rule: "titulo-casi-igual-misma-posicion" };
+        return { kind: "hold", rule: "titulo-casi-igual-mismo-padre", detail };
+      }
+      const repertoire = input.repertoire ?? {};
+      const measured = near.map((ref) => ({ ref, overlap: repertoire[ref.id] })).filter((item) => item.overlap !== undefined && item.overlap.total >= 2 && item.overlap.core > 0);
+      const sharing = measured.filter((item) => item.overlap!.shared * 2 >= item.overlap!.total);
+      if (sharing.length === 1) return { kind: "same", targetId: sharing[0]!.ref.id, rule: "titulo-casi-igual-mismo-repertorio" };
+      if (sharing.length === 0 && measured.length === near.length && measured.every((item) => item.overlap!.shared === 0)) {
+        return { kind: "different", rule: "titulo-casi-igual-otro-repertorio" };
+      }
+      return { kind: "hold", rule: "titulo-casi-igual-mismo-padre", detail };
     }
+    if (decision === undefined) return { kind: "different", rule: "sin-decision-er-sin-parecido" };
     return { kind: "different", rule: contradicted ? "sin-coincidencia" : "solo-coincide-bajo-otro-padre" };
   }
+  if (decision === undefined) return { kind: "hold", rule: "sin-decision-er", detail: "la identidad no tiene decisión de ER registrada" };
 
   if (input.kind === "person") {
     // Un «crédito» que no es una persona (lista, estudio, duración, fragmento)

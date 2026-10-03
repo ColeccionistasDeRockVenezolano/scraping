@@ -182,4 +182,45 @@ describe("decideVerdict", () => {
     const decision = review({ id: 77, name: "Alma Llanera (Versión)", parentId: 5 });
     expect(decideVerdict({ kind: "track", name: "Alma Llanera", decision, sameName: [], parentId: 5 }).kind).toBe("hold");
   });
+
+  it("un NO_MATCH tomado antes de que el homónimo existiera no es una contradicción", () => {
+    const stale: DecisionEvidence = { action: "NO_MATCH", score: 0.45, candidates: [{ id: 1062, name: "Zen", score: 0.45 }] };
+    expect(decideVerdict({ kind: "album", name: "Xen", decision: stale, sameName: [{ id: 12764, name: "Xen" }], parentId: 4235 }))
+      .toEqual({ kind: "same", targetId: 12764, rule: "mismo-titulo-mismo-artista:decision-er-anterior" });
+    const seen: DecisionEvidence = { action: "NO_MATCH", score: 0.9, candidates: [{ id: 12764, name: "Xen", score: 0.9 }] };
+    expect(decideVerdict({ kind: "album", name: "Xen", decision: seen, sameName: [{ id: 12764, name: "Xen" }], parentId: 4235 }).kind).toBe("hold");
+  });
+
+  it("sin decisión de ER, un disco o pista con padre se compara con sus hermanos del core", () => {
+    expect(decideVerdict({ kind: "album", name: "Stigma", decision: undefined, sameName: [{ id: 3, name: "Stigma" }], parentId: 5 }))
+      .toEqual({ kind: "same", targetId: 3, rule: "mismo-titulo-mismo-artista" });
+    expect(decideVerdict({ kind: "album", name: "Stigma", decision: undefined, sameName: [], parentId: 5, siblings: [{ id: 4, name: "Rojo Sangre" }] }))
+      .toEqual({ kind: "different", rule: "sin-decision-er-sin-parecido" });
+    expect(decideVerdict({ kind: "album", name: "Stigma", decision: undefined, sameName: [] }).kind).toBe("hold");
+    expect(decideVerdict({ kind: "artist", name: "Stigma", decision: undefined, sameName: [] }).kind).toBe("hold");
+  });
+
+  it("un disco de título casi igual se decide por su repertorio", () => {
+    const siblings = [{ id: 5558, name: "Café Negrito" }];
+    expect(decideVerdict({ kind: "album", name: "Café Negrito (World-Latin)", decision: noMatch, sameName: [], parentId: 9, siblings, repertoire: { 5558: { shared: 9, total: 12, core: 12 } } }))
+      .toEqual({ kind: "same", targetId: 5558, rule: "titulo-casi-igual-mismo-repertorio" });
+    const upadesa = [{ id: 2945, name: "Upadesa" }];
+    expect(decideVerdict({ kind: "album", name: "Upadesa Reloaded", decision: noMatch, sameName: [], parentId: 9, siblings: upadesa, repertoire: { 2945: { shared: 0, total: 8, core: 7 } } }))
+      .toEqual({ kind: "different", rule: "titulo-casi-igual-otro-repertorio" });
+    expect(decideVerdict({ kind: "album", name: "Upadesa Reloaded", decision: noMatch, sameName: [], parentId: 9, siblings: upadesa, repertoire: { 2945: { shared: 2, total: 8, core: 7 } } }).kind)
+      .toBe("hold");
+    expect(decideVerdict({ kind: "album", name: "Upadesa Reloaded", decision: noMatch, sameName: [], parentId: 9, siblings: upadesa }).kind).toBe("hold");
+    // Un disco del core sin pistas no dice nada del repertorio.
+    expect(decideVerdict({ kind: "album", name: "Ni Na, Ni Na", decision: noMatch, sameName: [], parentId: 9, siblings: [{ id: 5539, name: "Nina, ni ná" }], repertoire: { 5539: { shared: 0, total: 10, core: 0 } } }).kind)
+      .toBe("hold");
+  });
+
+  it("una pista de título casi igual en la misma posición es la misma", () => {
+    const siblings = [{ id: 16822, name: "Hippie session" }];
+    expect(decideVerdict({ kind: "track", name: "Hippie Session 2069", decision: noMatch, sameName: [], parentId: 9, siblings, samePositionId: 16822 }))
+      .toEqual({ kind: "same", targetId: 16822, rule: "titulo-casi-igual-misma-posicion" });
+    expect(decideVerdict({ kind: "track", name: "Hippie Session 2069", decision: noMatch, sameName: [], parentId: 9, siblings, samePositionId: 1 }).kind).toBe("hold");
+    const mosaico = [{ id: 55280, name: "Mosaico Nº 1" }];
+    expect(decideVerdict({ kind: "track", name: "Mosaico Nº 2", decision: noMatch, sameName: [], parentId: 9, siblings: mosaico, samePositionId: 55280 }).kind).toBe("hold");
+  });
 });

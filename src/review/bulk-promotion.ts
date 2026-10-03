@@ -26,7 +26,7 @@ import { moduleLogger } from "../logger/index.js";
 import { normalizeEntityName } from "../normalization/entity-name.js";
 import { approveEntity, dismissEntity, type ApprovalOptions } from "./approval.js";
 import {
-  decideVerdict, foldName,
+  decideVerdict, foldName, nearness,
   type BulkKind, type CandidateEvidence, type DecisionEvidence, type DuplicateFlag, type ErAction, type ExistingRef, type Verdict,
 } from "./bulk-policy.js";
 
@@ -89,13 +89,13 @@ export interface PromotionReport {
   note: string;
   kinds: Partial<Record<PromotionKind, KindSummary>>;
   holds: HoldItem[];
+  /** Veredictos de las reglas que se apoyan en evidencia del core (repertorio, posición, decisión vieja), para auditarlos. */
+  evidenceVerdicts?: Array<{ kind: PromotionKind; identityRaw: string; rule: string; targetId?: number; detail?: string }>;
   duplicateFlags: FlagItem[];
   errors: Array<{ kind: string; identityRaw: string; error: string }>;
 }
 
 interface IdentityRow { identityKey: string; identityRaw: string; claims: number }
-
-const num = (value: unknown): number => Number(value);
 
 async function sourceIdFor(slug: string): Promise<number> {
   const { rows } = await getPool().query<{ id: string }>("SELECT id::text FROM ingest.sources WHERE slug=$1", [slug]);
@@ -226,6 +226,7 @@ export async function loadSplitPartOnly(sourceId: number, section: PromotionSect
 class CoreIndex {
   private readonly byKey = new Map<string, ExistingRef[]>();
   private readonly parentOf = new Map<number, number>();
+  private readonly childrenOf = new Map<number, ExistingRef[]>();
   private constructor(private readonly kind: BulkKind) {}
 
   static async load(kind: BulkKind): Promise<CoreIndex> {
@@ -238,7 +239,12 @@ class CoreIndex {
   }
 
   add(id: number, name: string, parentId?: number): void {
-    if (parentId !== undefined) this.parentOf.set(id, parentId);
+    if (parentId !== undefined) {
+      this.parentOf.set(id, parentId);
+      const children = this.childrenOf.get(parentId);
+      if (children === undefined) this.childrenOf.set(parentId, [{ id, name }]);
+      else if (!children.some((ref) => ref.id === id)) children.push({ id, name });
+    }
     const key = this.key(foldName(name), parentId);
     const list = this.byKey.get(key);
     if (list === undefined) this.byKey.set(key, [{ id, name }]);
@@ -251,9 +257,50 @@ class CoreIndex {
 
   parentFor(id: number): number | undefined { return this.parentOf.get(id); }
 
+  /** Hermanos del core bajo el padre (discos del artista, pistas del disco). */
+  children(parentId: number): ExistingRef[] { return this.childrenOf.get(parentId) ?? []; }
+
   private key(folded: string, parentId?: number): string {
     return this.kind === "album" || this.kind === "track" ? `${parentId ?? "-"}|${folded}` : folded;
   }
+}
+
+/**
+ * Evidencia del core para un disco o pista de título casi igual a un hermano:
+ * el repertorio compartido (discos) o la pista en la misma posición (pistas).
+ * Solo se consulta cuando hay un hermano parecido, que es la minoría.
+ */
+async function siblingEvidence(
+  kind: BulkKind, item: IdentityRow, name: string, parentId: number, siblings: ExistingRef[], sourceId: number,
+): Promise<{ repertoire?: Record<number, { shared: number; total: number; core: number }>; samePositionId?: number }> {
+  const near = siblings.filter((ref) => nearness(name, ref.name, 1) !== undefined && foldName(ref.name) !== foldName(name));
+  if (near.length === 0) return {};
+  const pool = getPool();
+  if (kind === "track") {
+    const { rows } = await pool.query<{ id: string }>(`
+      SELECT t.id::text FROM public.tracks t
+       WHERE t.album_id = $1 AND t.track_number = (
+         SELECT min((c.normalized_value #>> '{}')::int) FROM ingest.claims c
+          WHERE c.source_id = $2 AND c.entity_kind = 'track' AND c.field = 'track_number' AND c.identity_key = $3
+            AND c.status = 'candidate' AND (c.normalized_value #>> '{}') ~ '^[0-9]+$')`,
+    [parentId, sourceId, item.identityKey]);
+    return rows.length === 1 ? { samePositionId: Number(rows[0]!.id) } : {};
+  }
+  if (kind !== "album") return {};
+  const { rows: own } = await pool.query<{ title: string }>(`
+    SELECT DISTINCT c.normalized_value #>> '{}' AS title FROM ingest.claims c
+     WHERE c.source_id = $1 AND c.entity_kind = 'track' AND c.field = 'title' AND c.status <> 'rejected'
+       AND c.identity_raw LIKE $2 || '::%'`,
+  [sourceId, item.identityRaw]);
+  const titles = new Set(own.map((row) => foldName(row.title)).filter(Boolean));
+  if (titles.size === 0) return {};
+  const repertoire: Record<number, { shared: number; total: number; core: number }> = {};
+  for (const ref of near) {
+    const { rows } = await pool.query<{ title: string }>("SELECT title FROM public.tracks WHERE album_id = $1", [ref.id]);
+    const core = new Set(rows.map((row) => foldName(row.title)));
+    repertoire[ref.id] = { shared: [...titles].filter((title) => core.has(title)).length, total: titles.size, core: core.size };
+  }
+  return { repertoire };
 }
 
 /** Partes de la identidad `Artista::Disco::Pista` ya limpias. */
@@ -355,14 +402,27 @@ export async function promoteSection(options: PromotionOptions): Promise<Promoti
           parentId = albumTargets.get(normalizeEntityName(`${parts[0]}::${parts[1]}`).primaryKey);
           if (parentId !== undefined) options2.parentAlbumId = parentId;
         }
+        const siblings = parentId === undefined ? [] : index.children(parentId);
+        const evidence = parentId === undefined ? {} : await siblingEvidence(entityKind, item, name, parentId, siblings, sourceId);
         const verdict: Verdict = decideVerdict({
           kind: entityKind, name, decision: decisions.get(item.identityKey),
           sameName: index.sameName(name, parentId),
-          ...(parentId === undefined ? {} : { parentId }),
+          ...(parentId === undefined ? {} : { parentId, siblings }),
+          ...evidence,
           ...(titleParenthesisOnly.has(item.identityKey) ? { onlyTitleParenthesis: true } : {}),
           ...(splitPartOnly.has(item.identityKey) ? { onlySplitPart: true } : {}),
         });
         bump(`${verdict.kind}:${verdict.rule}`);
+        if (/casi-igual|anterior|sin-decision/u.test(verdict.rule) && verdict.kind !== "hold") {
+          (report.evidenceVerdicts ??= []).push({
+            kind, identityRaw: item.identityRaw, rule: verdict.rule,
+            ...(verdict.kind === "same" ? { targetId: verdict.targetId } : {}),
+            detail: [
+              verdict.kind === "same" ? siblings.find((ref) => ref.id === verdict.targetId)?.name ?? "" : "",
+              evidence.repertoire === undefined ? "" : JSON.stringify(evidence.repertoire),
+            ].filter(Boolean).join(" "),
+          });
+        }
 
         if (verdict.kind === "hold") {
           report.holds.push({ kind, identityRaw: item.identityRaw, rule: verdict.rule, detail: verdict.detail, claims: item.claims });
