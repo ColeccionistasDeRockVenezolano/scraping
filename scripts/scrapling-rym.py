@@ -194,6 +194,12 @@ def ext_release(page):
         tx = a.css("::text").get()
         credits.append({"h": attr(a, "href"), "n": (tx or "").strip()[:90]})
     rec["creditLinks"] = credits
+    # ¿fantasma? página servida 200 pero SIN datos en origen (sin og, sin pistas, sin
+    # géneros, con nombre): entradas vacías/caídas de RYM — no hay nada más que capturar.
+    rec["sinDatos"] = bool(
+        rec.get("name") and not rec.get("wall")
+        and not rec.get("og") and not rec.get("tracks") and not rec.get("genres")
+    )
     return rec
 
 
@@ -207,7 +213,8 @@ def recortar(rec):
             "formed": rec.get("formed"), "og": rec.get("og"), "wall": bool(rec.get("wall")),
             "nTracks": len(rec.get("tracks") or []), "nCredits": len(rec.get("creditLinks") or []),
             "at": time.strftime("%H:%M:%S"), "v": rec.get("v"), "src": "scrapling",
-            "sinDiscografia": bool(rec.get("sinDiscografia"))}
+            "sinDiscografia": bool(rec.get("sinDiscografia")),
+            "sinDatos": bool(rec.get("sinDatos"))}
 
 
 def es_ok_artista(e):
