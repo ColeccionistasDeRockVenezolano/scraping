@@ -62,7 +62,8 @@ export interface DiscographyItem {
 }
 
 /** Género público (PLAN_GENEROS §5): solo lo confirmado. */
-export interface PublicGenre { id: number; slug: string; name: string; family: string; }
+/** `parentGenre`: solo en un subgénero, el slug de su género (pasaje → joropo). */
+export interface PublicGenre { id: number; slug: string; name: string; family: string; parentGenre?: string; }
 export type GenreStatus = "confirmed" | "pending" | "unclassified";
 
 export interface ArtistDetail extends ArtistListItem {
@@ -131,13 +132,16 @@ export interface AlbumListItem {
 export interface GenreFacet {
   slug: string;
   name: string;
-  /** Fichas con el género confirmado; en una familia, también sus subgéneros. */
+  /** Fichas con el género confirmado, también las de sus descendientes. */
   count: number;
   /** Discos sin género propio que entran por el de su artista (en artistas, siempre 0). */
   relatedCount: number;
 }
 
-export interface GenreFamilyFacet extends GenreFacet { genres: GenreFacet[]; }
+/** Un género de una familia; `subgenres` (estilos) solo si alguno tiene fichas. */
+export interface GenreGenreFacet extends GenreFacet { subgenres?: GenreFacet[]; }
+
+export interface GenreFamilyFacet extends GenreFacet { genres: GenreGenreFacet[]; }
 
 export interface GenreFacets {
   total: number;

@@ -43,7 +43,7 @@ export function AlbumsListPage() {
       </div>
 
       <GenreFilter kind="album" facets={facets.data} facetsError={facets.error} onRetryFacets={facets.reload}
-        selection={genre.selection} onFamily={genre.selectFamily} onSub={genre.selectSub} onRelated={genre.setRelated}
+        selection={genre.selection} onFamily={genre.selectFamily} onSub={genre.selectSub} onStyle={genre.selectStyle} onRelated={genre.setRelated}
         onFamilyRelated={genre.selectFamilyRelated} />
 
       <ListSummary total={data?.pagination.total} noun={{ one: "disco", many: "discos" }} loading={loading}
