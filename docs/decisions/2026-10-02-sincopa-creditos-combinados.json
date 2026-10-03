@@ -1,0 +1,9 @@
+{
+  "decidedAt": "2026-10-02",
+  "evidence": "Sincopa da varios autores en un solo crédito separados por «/» (adapter 1.3.0 ya los parte). Brian aprobó partir los que tienen nombre completo (A/B) y los de apellido solo con enlace seguro; aquí cada apellido coincide con una sola persona de nombre completo del core y la pareja es una autoría conocida.",
+  "corrections": [
+    { "op": "split", "person": { "id": 34628, "name": "María Conchita Alonso/K.C. Porter" }, "into": ["María Conchita Alonso", "K.C. Porter"], "why": "dos nombres completos que ya son personas del core" },
+    { "op": "split", "person": { "id": 27642, "name": "Lennon/McCartney" }, "into": ["John Lennon", "Paul McCartney"], "why": "autoría Lennon/McCartney; cada apellido es una sola persona de nombre completo en el core" },
+    { "op": "split", "person": { "id": 25125, "name": "Donida/Mogol" }, "into": ["Carlo Donida", "Gulio Rapetti Mogol"], "why": "autoría Donida/Mogol; cada apellido es una sola persona de nombre completo en el core" }
+  ]
+}

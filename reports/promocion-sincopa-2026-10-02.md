@@ -136,28 +136,73 @@ Ninguna tiene membresías; 4 tienen datos de otras fuentes; suman 519 créditos.
 | D. Apellidos sueltos («Lennon/McCartney», «Sadel/Rengifo») | 668 | 931 | Alto: no se crean personas; se enlaza solo si el ER es seguro. |
 | E. Traen rótulo («Vers. Esp. P. Medeiros», «Anónimo/Arr: X») | 328 | 472 | Medio: hay que leer el rol. |
 
-## Pendiente, a decisión de Brian
+## Tercera fase (2026-10-02/03): lo que Brian aprobó
 
-1. **Rock/pop.** Ensayo en `promocion-sincopa-rock_pop-ensayo-2026-10-02.json`.
-   Casi todo enlaza con lo que ya existe (202 artistas, 836 discos y 8.704
-   pistas reconocidos), pero es lo que ya está curado a mano: escribiría sobre
-   fichas existentes y crearía ~980 personas homónimas de otras ya
-   catalogadas, marcadas como posible duplicado. Antes de promoverla conviene
-   reingerir sus 465 fichas con caras (`ingest-sincopa-stored.ts
-   --urls-file`, con la lista de rock de `sincopa-paginas-con-caras-2026-10-02.txt`
-   + `fix-sincopa-sides.ts`).
-2. **191 personas basura** que crearon el piloto y clásica antes de la v2
-   (155 títulos de paréntesis, 29 rótulos, 7 agrupaciones o fragmentos):
-   `promocion-sincopa-personas-a-revisar-2026-10-02.json`. Ninguna tiene
-   membresías y solo 2 tienen datos de otras fuentes. Se pueden borrar con sus
-   créditos, o convertir las que son agrupaciones. «Arr: Vicente Emilio Sojo»
-   debería pasar a Vicente Emilio Sojo.
-3. **196 pistas con el número equivocado en el core**: son caras B que entraron
-   sin el arreglo, como «Norteña» de Alirio Díaz, que quedó como 4 y en la
-   ficha es la 7. La lista está en `sincopa-caras-correccion-lote1-2026-10-02.json`
-   (`acceptedWrongList`). El corrector no toca el core.
-4. **Siguiente regla con más rendimiento:** partir los créditos de varios
-   autores separados por «/» («Lennon/McCartney»). Son la mayor retención de
-   personas y arrastran miles de créditos de pista.
-5. Fichas con «CD 2 / Disco 2» (≈327) no se trataron. Hay además 15 fichas con
-   números repetidos por otras estructuras, que siguen en la cola.
+### Pistas con «posición ocupada» (199)
+
+No se perdieron: 184 ya estaban en el disco con el número corrido del core
+(Sincopa reinicia en el CD 2: Franco De Vita, «Ana», 04 → 15). Ponerlas al
+final las habría duplicado. `scripts/fix-sincopa-position-collisions.ts`,
+run 11459: el número reiniciado queda `superseded` y el resto de sus datos se
+aprueba sobre la pista que ya existe (284 pistas). Quedan 22: 13 de
+recopilaciones sin disco resuelto, 6 sin título y 3 de discos con dos
+ediciones mezcladas (`sincopa-posiciones-ocupadas-2026-10-02.json`).
+
+### Personas basura (opción B)
+
+`scripts/cleanup-sincopa-junk-persons.ts`, run 11460: 277 aplicadas. El rótulo
+pasa a rol («Arr:» → Arreglos, «Recop:» → Recopilación, «Feat» → Invitado), el
+nombre a su persona o artista, y los títulos a la nota de la pista. 165
+créditos movidos, 280 retirados, 60 notas. Regla nueva de Brian: el nombre
+entero entre comillas («"Cervantes el campeón"») es un título; el apodo
+intercalado (Rafael "Pollo" Brito, "Cheo" Valenzuela) es persona y conserva
+las comillas.
+
+### Créditos de varios autores («A/B»)
+
+Brian: «aplicar A y B ahora, C y D solo con enlace seguro, y E después».
+
+- Adapter 1.3.0: compositores y nombres se parten por «/», un crédito por autor.
+- Política: una parte que solo aparece dentro de un crédito partido y es una
+  palabra o lleva iniciales se retiene salvo AUTO_MATCH del ER
+  (`parte-de-credito-multiple:sin-enlace-seguro`). Los rótulos (tramo E) siguen
+  retenidos como rótulo.
+- Reingesta de 2.129 fichas; `scripts/reject-stale-sincopa-credits.ts` (run
+  11519) rechazó 47.591 claims de las cadenas combinadas y cerró 88.403
+  revisiones. Los ~1.100 claims combinados ya aceptados apuntan a créditos que
+  otras pasadas ya habían partido (Sandro Liberatoscioli, José Luis Pardo…).
+- Promoción, solo en esas fichas:
+
+| Sección | Run | Personas | Créditos de disco | Créditos de pista | Retenidos |
+| --- | --- | ---: | ---: | ---: | ---: |
+| classic | 11520 | 40 | 4 | 103 | 78 |
+| ethnic | 11524 | 96 | 12 | 425 | 412 |
+| jazz | 11536 | 216 | 26 | 687 | 578 |
+| latin_pop | 11538 | 520 | 25 | 2.239 | 1.345 |
+| new_age | 11539 | 5 | 0 | 13 | 20 |
+| rock_pop | 11540 | 446 | 180 | 3.004 | 1.731 |
+| traditional | 11541 | 309 | 10 | 1.977 | 540 |
+| **Total** | | **1.632** | **257** | **8.448** | **4.704** |
+
+  Retenidos: 3.052 partes sin enlace seguro (tramos C/D), 757 sellos o
+  estudios, 385 rótulos, 314 agrupaciones o lugares, 148 que siguen siendo
+  varias personas.
+- Fichas combinadas que ya estaban en el core: run 11468
+  (`docs/decisions/2026-10-02-sincopa-creditos-combinados.json`) partió
+  «María Conchita Alonso/K.C. Porter», «Lennon/McCartney» y «Donida/Mogol» en
+  sus personas. El resto, en `sincopa-revision-manual-2026-10-02.md`.
+- Trampa encontrada: un claim viejo cuya identidad se reescribió sin recalcular
+  el hash (Hydra, «Desde Una Orilla a La Otra») hacía que la reingesta metiera
+  un gemelo y rompiera `claims_dedupe_uk`. El motor ahora lo deja `superseded`
+  (commit e1969f4) y las 588 fichas restantes se reingirieron.
+
+## Pendiente
+
+1. Tramos C/D: 3.052 partes con iniciales o una palabra («A. Nazoa»,
+   «Lennon»). Entran solas si un día el ER las enlaza con seguridad; si no,
+   hace falta una regla de apellido + proyecto común.
+2. Tramo E (rótulos dentro de créditos partidos): sin tocar, como pidió Brian.
+3. Revisión manual: `sincopa-revision-manual-2026-10-02.md` (14 fichas
+   combinadas, 37 rótulos sin enlace, 2 conversiones detenidas por el ER).
+4. Fichas con «CD 2 / Disco 2» (≈327) y 15 con números repetidos por otras
+   estructuras siguen en la cola.

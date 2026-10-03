@@ -1,0 +1,5639 @@
+{
+  "section": "traditional",
+  "dryRun": false,
+  "note": "Sincopa traditional: un crédito por autor en «A/B»; partes sueltas solo con enlace seguro (pedido de Brian 2026-10-02)",
+  "kinds": {
+    "person": {
+      "identities": 1075,
+      "claims": 2127,
+      "verdicts": {
+        "hold:no-es-una-persona:organization_like": 78,
+        "hold:no-es-una-persona:parece-un-titulo": 4,
+        "hold:no-es-una-persona:rotulo": 62,
+        "hold:no-es-una-persona:agrupacion-o-lugar": 51,
+        "hold:no-es-una-persona:multiple_people": 36,
+        "approve:auto-match": 226,
+        "hold:no-es-una-persona:parentesis-de-titulo": 5,
+        "different:nombre-parecido-sin-proyecto-comun": 86,
+        "hold:parte-de-credito-multiple:sin-enlace-seguro": 304,
+        "different:sin-coincidencia": 36,
+        "different:solo-coincidencias-debiles": 160,
+        "different:homonimo-sin-proyecto-comun": 27
+      },
+      "applied": 309,
+      "unchanged": 549,
+      "stillCandidate": 172,
+      "dismissed": 0,
+      "failed": 0
+    },
+    "album_credit": {
+      "identities": 746,
+      "claims": 3785,
+      "verdicts": {
+        "puente": 746
+      },
+      "applied": 10,
+      "unchanged": 40,
+      "stillCandidate": 3865,
+      "dismissed": 0,
+      "failed": 0
+    },
+    "track_credit": {
+      "identities": 4148,
+      "claims": 25494,
+      "verdicts": {
+        "puente": 4148
+      },
+      "applied": 1977,
+      "unchanged": 10011,
+      "stillCandidate": 13524,
+      "dismissed": 0,
+      "failed": 0
+    }
+  },
+  "holds": [
+    {
+      "kind": "person",
+      "identityRaw": "Estudios Larrain",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 12
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Estudios Sincrosonido",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 7
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Estudios Romulo Riera",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "bienhecho.com",
+      "rule": "no-es-una-persona:parece-un-titulo",
+      "detail": "empieza en minúscula o lleva varias palabras en minúscula: parece un título o un texto suelto",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Comp. Tambor y Canto",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 3
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Estudios Intersonido",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 5
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Grupo Tepuy",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Producciones Síncopa",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 5
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Imaginario XXI Producciones C.A.",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Estudios Fidelis",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 23
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Fundación Bigott",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 7
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Le Garage Studio",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 40
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Orquesta Sinfónica de Londres",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Wessex Studios",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "El Cuarteto",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Joensa Estudios",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 7
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Estudios Del Este",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 9
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Luis Felipe Ramón y Rivera",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "parece una lista de varias personas",
+      "claims": 20
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Producciones Matecha",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Camoba Taller Gráfico - Laura Morales Balza",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "demasiados tokens para un nombre",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Estudios Telearte",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Master House Studios",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Producciones Light",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Grau Estudio",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 4
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Somos Estudios",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Edgar Sound Estudio",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Estudios Sardá",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "ABV Taller de Diseño - Carolina Arnal",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "demasiados tokens para un nombre",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Estudio 1106",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Tea For Two",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "detail": "solo aparece como paréntesis final de títulos de pista; puede ser un subtítulo o una traducción",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Metti La Canottiera",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "detail": "solo aparece como paréntesis final de títulos de pista; puede ser un subtítulo o una traducción",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Daniel Grau's Estudio",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "K-Pella Studio",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Jammin Downtown Studios",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "F.A. Studios",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Paquito Barón - Folklore",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Jazzmanía Estudios",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Jazzmania Estudios",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Manuel González Ruiz - Mago Atelier",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "demasiados tokens para un nombre",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Sonofilia Studio Record",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Serena Estudios",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Conjunto de Henry Rubio",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Carmelo Russo y sus Vampiros",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "parece una lista de varias personas",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Estudios Audio Uno",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 7
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Miguel Blanco José Velásquez \"El Patuo\"",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "demasiados tokens para un nombre",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "José \"Pollo\" Sifontes - Rubén Fuentes",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "demasiados tokens para un nombre",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Arr: Alí Aguero",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "ubén Montesino",
+      "rule": "no-es-una-persona:parece-un-titulo",
+      "detail": "empieza en minúscula o lleva varias palabras en minúscula: parece un título o un texto suelto",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "osé Quevedo",
+      "rule": "no-es-una-persona:parece-un-titulo",
+      "detail": "empieza en minúscula o lleva varias palabras en minúscula: parece un título o un texto suelto",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "U.S.P. Estudio",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Daniel Grau Studio",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Sur Records Estudio",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Drumit Studios",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Grafi Record",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 7
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Estudios Tarareo",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "BBB Records C.A.",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "G. y A. García Segura",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "parece una lista de varias personas",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Chelique Sarabia y Su Conjunto",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "parece una lista de varias personas",
+      "claims": 3
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Orquesta De Anibal Abreu",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Fuller Sound",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Latin World Studio",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Turbo Record Studio",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Digital Atomics Archiving",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Mastering",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Conjunto de Juan Vicente Torrealba",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Conjunto de Ramón Hernández",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Estudios Joensa",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Alejandro González y Fernández",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "parece una lista de varias personas",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Grupo Raices",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Estudios Sono Dosmil",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Coordinación General de Mercadeo y Relaciones Públicas de Seguros Nuevo Mundo",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "parece una lista de varias personas",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Grupo Makuaya",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Estudios O.H.M.",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Estudios Edwin Pulgar",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Gloria & Emilio Stefan",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "parece una lista de varias personas",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Back Stage Studio",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Francisco Pacheco y su Grupo",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "parece una lista de varias personas",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Estudios Síncopa",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Raul Fortunato y Su Orquesta Chelique Sarabia y Su Conjunto",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "parece una lista de varias personas",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Estudios Grau",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Conjunto de José Romero",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Conjunto de Guillermo Hernández",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 11
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Arr. José Carpio",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Arr. Anselmo López",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 3
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Estudios Hansa",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Musiceau Productions",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Estudios Larain",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Recomp: Luis F.R. y Rivera",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "parece una lista de varias personas",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Acqua Records",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Sala Martín Coronado del Teatro Gral. San Martín",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Estudio El Ombligo",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Estudios Tumbador",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Estudio Jamorama Chapis Lasca",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Nefasto Estudio",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "En vivo",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Gonzalito Estudio",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Daniel Grau Estudio",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Edilio Bermúdez Studio",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Estudio Decca Sono 2000",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Folklore Antillano",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Estudio Midi",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "EBG Harp Productions",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Enrique Hidalgo y su Grupo Cuerda Brava",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "parece una lista de varias personas",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Recopilación y versión de Federico Ruiz",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Total Music Studio Majadahonda",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Estudio El Arco",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Comp. Grupo Taburete",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 6
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Grupo Taburete",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Grupo Vera",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 3
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Comp. Grupo Vera",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 13
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Recop. Guillermina y Gualberto Ibarreto",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "IC Records",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Luis F. Ramón y Rivera",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "parece una lista de varias personas",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Drumit Production",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Drumit Production Studios",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Quasar Estudios",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Histeria Music Group Studies",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Sociedad de Amigos Calypso de El Callao",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 3
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Sociedad Amigos del Callao",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "(Grupo de Parrandas)",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Quinteto Cantaclaro",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Estudios La Discoteca",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 6
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Estudios Continente",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 3
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Grupo Coral",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Canciones de Venezuela y América Vol. 1",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "parece una lista de varias personas",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Canciones de Venezuela y América Vol. 2",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "parece una lista de varias personas",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Canta Jesús Sevillano con Venezuela 4",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "demasiados tokens para un nombre",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Aguinaldos y Parrandas Venezolanas",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "parece una lista de varias personas",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Deejay Productions C.A.",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Tano & Cheché Acosta",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "parece una lista de varias personas",
+      "claims": 3
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Sebastián Yradier y Salaverri",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "parece una lista de varias personas",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "L. F. Ramón y Rivera",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "parece una lista de varias personas",
+      "claims": 4
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Orquesta de Cuerdas",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Pequeñísima Serenata",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "detail": "solo aparece como paréntesis final de títulos de pista; puede ser un subtítulo o una traducción",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Cuando Me Enamoro",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "detail": "solo aparece como paréntesis final de títulos de pista; puede ser un subtítulo o una traducción",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Anes Records C.A.",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Folklore Pto. Cabello",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 3
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Recop. Grupo Vera",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Folklore Litoral Central",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Recop. Grupo Makuaya",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Estudios Sono Dos Mil",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Rec: Grupo Luango",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "D. en D. - Mitiliano Díaz",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "demasiados tokens para un nombre",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Sonofilia Estudio",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Liqui2 Producciones",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Recop: Francisco Carreño & A. Vallmitjana",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Recop: Luis Felipe Ramón y Rivera",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Turbo Record",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "version Internacional",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Estudios Sonofolk",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Folklore Falconiano",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Folklore Zuliano",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Remix Estudios",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Estudios Del Centro",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Guillermo Hernández y Su Conjunto",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "parece una lista de varias personas",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "ony Bolívar",
+      "rule": "no-es-una-persona:parece-un-titulo",
+      "detail": "empieza en minúscula o lleva varias palabras en minúscula: parece un título o un texto suelto",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Conjunto Tradición Gaitera",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Estudios Requena",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 4
+    },
+    {
+      "kind": "person",
+      "identityRaw": "\"Hacienda La Vega\" by Luis Alfredo López Méndez",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "demasiados tokens para un nombre",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Mike y Mandy Rivas",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "parece una lista de varias personas",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Estudio Fidelis",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Blue Moon",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "detail": "solo aparece como paréntesis final de títulos de pista; puede ser un subtítulo o una traducción",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Mardeni's Sound",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 3
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Sardá Studio",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Based on \"The Stonemasons\" by Tom Newman",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "demasiados tokens para un nombre",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Centro De La Cultura Popular Canaria",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "demasiados tokens para un nombre",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Estudios Manzana",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Hugo Blanco y Su Conjunto",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "parece una lista de varias personas",
+      "claims": 7
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Conjunto Criollo de Candido Herrera",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Conjunto Criollo de Candido Herrera El Cuarteto",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "demasiados tokens para un nombre",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Carota Ñema y Tajá",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "parece una lista de varias personas",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Estudios OHM",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Hernán Capriles & Simón Díaz",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "parece una lista de varias personas",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "DEEJAY Productions",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Syntagma Ensemble",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "El Teatro Municipal de Puerto Cabello",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Fundación Mozarteum de Venezuela",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Estudio 1 de la Fundación Artevisión USB",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Recop. Instituto Nacional de Folklore",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Estudios Audio Matrices",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Estudios Velvet Audio",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 3
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Mario & Juan Parra",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "parece una lista de varias personas",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Folklore - Jesús Morillo",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Folklore",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 221
+    },
+    {
+      "kind": "person",
+      "identityRaw": "C. Bonnet",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "L. A. Larrain",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "A. Guanipa",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Record",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Luis M. Badaraco",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "F. Montoya",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "A.C. Loyola",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Pedro E. Hernández F.",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Jorge L. Chacín",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "F. Valladares",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Ver. Elisa Soteldo",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "P. Herrero-J. Almenteros",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Version: Iván Pérez Rossi",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 5
+    },
+    {
+      "kind": "person",
+      "identityRaw": "A. Lauro",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Luis Durán R.",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Beatriz M. de Pastori",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Manuel F. Rugeles",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "G. de León Calles",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 8
+    },
+    {
+      "kind": "person",
+      "identityRaw": "I. P. Rossi",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 4
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Tomás I. Potentini",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "I. Pérez Rossi",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 3
+    },
+    {
+      "kind": "person",
+      "identityRaw": "J.F. Desvarieux",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "J. Béroad",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Recop. Un Solo Pueblo",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 15
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Lepera",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 5
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Version: Luis Cruz",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "María T. Chacín",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Fasano",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Recop. María Rodríguez",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Recop. Luis P. Laffer",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Grupo Candela",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "E. Maroni",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "P. Contursi",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "G. Matos Rodríguez",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "E. Heyman",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "R. Sour",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "F. Eyton",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "J. Green",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Massias",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Eddy Marcano - J. Dames",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "H. Sanghinetti",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Pedro F. Sosa",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Comp: Iván Pérez Rossi",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Comp. Francisco Pacheco",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 6
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Comp: Rosa María Muños",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "E. L. Rodríguez",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 8
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Durán-Vila",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Boixader",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Azagra",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "J. O. Villan",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 3
+    },
+    {
+      "kind": "person",
+      "identityRaw": "R. Villan F.",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Banda Del Sol",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Ver: J. Velásquez",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "L. Enrique Bello",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Cortázar",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "M. Pérez",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 3
+    },
+    {
+      "kind": "person",
+      "identityRaw": "J. Rodas",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Luhrs",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "H. Monteverde",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "R. Sampaio",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "B. Santos",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "J. Quiróz",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Mogol",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Donida",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Avellanet",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "v: J. Quirós",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Lennon",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "McCartney",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Cassin-D",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Pomus-Mort",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Schuman",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Hunter",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Ornellas",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Warren",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 4
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Gordon",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Springfield",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Dale",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Newton",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "M. London",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "C. Sarabia",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 4
+    },
+    {
+      "kind": "person",
+      "identityRaw": "N. Diamond",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Miller",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Stevenson",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "L. Arismendi",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "R. Sanoja Medina",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Anónimo",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 22
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Recop: V.E. Sojo",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 5
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Mohr",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Mapel",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Adamson",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Carey",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "M. Graterol",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 7
+    },
+    {
+      "kind": "person",
+      "identityRaw": "E. Cabrera",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Lee",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Hazlewood",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Grant",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Patrick",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Hendricks",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Cassin",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "D. Pomus",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "M. Shuman",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "F. Pourcel",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "R. Lefevre",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Morales",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 3
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Powell",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 3
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Goffin",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "King",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "J. Byers",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "C. Mapel",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Beretta",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "C. Taylor",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "B. Vera",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Matel",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "North",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Zaret",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "C. Rodas",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "R. López Méndez",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 4
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Carota Ñema y Taja",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "parece una lista de varias personas",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Graterolacho",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 22
+    },
+    {
+      "kind": "person",
+      "identityRaw": "O. V. Rocha",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "C. M. Campos",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Sampaio",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 3
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Santos",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 3
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Quiroz",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 3
+    },
+    {
+      "kind": "person",
+      "identityRaw": "R. Lindd",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "P. Pole",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "E. Hoffman",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Carmen R. Rondón",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "L. Liendo",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "M. Muñoz",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Gorny",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Kramer",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Menéndez",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Sarabia",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Mercer",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Kosma",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Prevert",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Meccia",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Fontana",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Pes",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "M. Menéndez",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "C. Carson Parks",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "A. Ramos",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Graterol",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 3
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Heywood-Ithier",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Version: Carreras",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "V. Beltran",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "M. Selles",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "V. Morales",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "J. Torrealba",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "J. Romero",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "E. Torrealbas",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Arr: A. López",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "L. Lozada",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Figueredo",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Fleytas",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Sánchez",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Blacut",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Traditional",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 8
+    },
+    {
+      "kind": "person",
+      "identityRaw": "H.Villalobos",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "D.R.",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 4
+    },
+    {
+      "kind": "person",
+      "identityRaw": "L. María Rodríguez",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "E. Joan Da Silva Tineo",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "J. Julián Villafranca",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Carlos E. Acota",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "José R. Acosta",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "M.F. Rugeles",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "L.G. González",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "A.E. Blanco",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "G. Ibarreto-E. Hidalgo",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Newell",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Oliveiro",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Ortalani",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Spanish Version Gualberto Ibarreto",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "H. Gamboa",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 5
+    },
+    {
+      "kind": "person",
+      "identityRaw": "N. Chimenez",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "O. Galindwe",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "G. Mistral",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "H. Rodríguez",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Luis A. Fuget",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Folklore Oriental",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Recop: Gualberto Ibarreto",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 3
+    },
+    {
+      "kind": "person",
+      "identityRaw": "L. Beltrán Rodríguez",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "G. Ibarreto",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "P. Aredes",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "A. Yupanqui",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "G. De Curtis",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Louiguy",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Andrade",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Cárdenas",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "F. Mejias",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "S. Delgado",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "José R. Medina",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Luis B. Prieto Figueroa",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Julio C. Sanders",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "G. Cardenas",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Favini",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Version H. Gamboa",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Luis A. Domínguez",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Alberto Arvelo T.",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "A. Loreto",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "A. Sánchez",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Recop: José Francisco Gil",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Recop: Ricardo Gomzález",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "A. Nazoa",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "R. Rojas",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "J. Manzo",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "J. Sabre Marroqui",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Mujica",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Capiran",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "A. Arvelo Torrealba",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "R. Suárez",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Popular",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 3
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Arr: A. Estévez",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Arr: V.E. Sojo",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "J.T. Arismendi",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "A. A. Torrealba",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "G. J. Leal",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "J. Cancio Rodríguez",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "D. García Barbin",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "H. Figueira de Valero",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "J.C. Nuñez",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "M.C. Fermín",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "M. René Rojas",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Jesús S. Rubio",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Pascual García B.",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "D. Mendoza",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "José T. Arismendi",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Levi E. Carvallo",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "José M. Jiménez",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "P.P. Caldera",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "R. Domínguez",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "E. Pérez",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "J.M. Jiménez",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Yépez",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Coronado",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Velázquez",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Arvelo",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "V. Carucí",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Jesús M. Moreno",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Rafael R. Rojas",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "José A. Borjas",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Jesús M. Moreno M.",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "G. Fleitas Beroes",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 11
+    },
+    {
+      "kind": "person",
+      "identityRaw": "M. Graterol Santander",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "H. López M.",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "E. Cortazar",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 6
+    },
+    {
+      "kind": "person",
+      "identityRaw": "M. Esperón",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 8
+    },
+    {
+      "kind": "person",
+      "identityRaw": "M. Hurtado",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Vanella",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Cabanillas",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "H. Martins",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "P. Uridimales",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Pedro C. Luna",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "J. Moreno",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 4
+    },
+    {
+      "kind": "person",
+      "identityRaw": "S. Graterol",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "L. Rodríguez",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "L.G. Fleitas Beroes",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 5
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Ernesto Luis R.",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "G. Fleitas Veroes",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "L.G. Freitas",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "L. Kalass",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "C. Ferreira",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "A. Ribeiro",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Alcones",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Arr: Chucho Sanoja Jr.",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Galíndez",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "P. Camacaro",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Rec: Grupo Candela",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "José A. Olavarría",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Denis",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "José V. Rojas",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Juan R. Martínez",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "M. Luna",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "P. E. Sánchez",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "V. Carucci",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Del Folklore",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Juan R. Ramírez",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Germán Fleitas B.",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 4
+    },
+    {
+      "kind": "person",
+      "identityRaw": "N. Pirela",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "J. Briceño",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "H. B. Oneca",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "P. B. Pérez",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "M. Durán",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Dames",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Sanguinetti",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "V. Rocha",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "C. M. Ocampo",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Martí-Angulo",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Gutiérrez-Coronado",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "G. Ruíz",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "P. Emilio Sánchez",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Cortázan",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "L.Tenco",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Lerner",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Loewe",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Julio C. Sánchez",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Beatriz M. de Pastor",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "H. G. Villalobos",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "E. Luis Rodríguez",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Héctor G. Villalobos",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Version: Antonio Lauro",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Netto",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Carvalhinho",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Sabler",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Moor",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "M: Muñeca",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "A. Velázco",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "L: Hugo Blanco",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 3
+    },
+    {
+      "kind": "person",
+      "identityRaw": "M: R. Ray",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "M: Augusto Alguero",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "M: D.enD.",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "L: H. Blanco",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Gorman",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "McGear",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "McGouh",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Anthony",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Prada",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "V. Galindo",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "E. Méndez",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Díaz",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Eliseo J. Alvarado",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "M. Aldana",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "O. Serfaty",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Manuel A. Fadul",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "I. Figueredo",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Parodia",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Pedro R. Arcila Ponte",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "A. Cortina",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Grateloracho",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Manuel F. Azpurúa",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "R.B. Coronado",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Recop: Tambor Urbano",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "L. M. Rivera",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Recop. Luis Laffer",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Recop. Aquiles Báez",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Recop. Juan Correa",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Recop. Francisco Pacheco",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 7
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Recop. Vzla. Un Solo Pueblo",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 3
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Rec. Un Solo Pueblo",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 12
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Rec. Gerónima Escobar",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "F. Pacheco",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 3
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Rec: F. Pacheco",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 4
+    },
+    {
+      "kind": "person",
+      "identityRaw": "J. Rojas Marcano",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "N. Alizo",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "M. Delgado",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "M. Delgado E.",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Isael l. Torres",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "J.R. Marcano",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "S. Pacheco",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Comp. Un Solo Pueblo",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 9
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Comp. Jerónima Escobar",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Compilation: Edwin Yearwood",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Recop: Daniel Gil",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Compilation: Vicente Emilio Sojo",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Compilation: Francisco Pacheco",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 1
+    }
+  ],
+  "duplicateFlags": [
+    {
+      "kind": "person",
+      "identityRaw": "Félix Cardona Moreno",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          37563
+        ],
+        "otherNames": [
+          "Félix Cardona"
+        ]
+      },
+      "targetId": 39449
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Luciano Ardy",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          27483,
+          22783
+        ],
+        "otherNames": [
+          "Luciano Hardy",
+          "Luciano Ardi"
+        ]
+      },
+      "targetId": 39450
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Alberto Ravelo Torrealba",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          30612,
+          12977,
+          31288
+        ],
+        "otherNames": [
+          "Alberto Arvelo Torrealba",
+          "Alberto A. Torrealba",
+          "Alberto A. Torrealba"
+        ]
+      },
+      "targetId": 39451
+    },
+    {
+      "kind": "person",
+      "identityRaw": "José Román Pérez",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          25496
+        ],
+        "otherNames": [
+          "José Román"
+        ]
+      },
+      "targetId": 39453
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Cesar Roda",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          30487
+        ],
+        "otherNames": [
+          "César Rada"
+        ]
+      },
+      "targetId": 39454
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Gilberto Arciniegas",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          30503
+        ],
+        "otherNames": [
+          "Gilberto Arciniegas Germán Machado"
+        ]
+      },
+      "targetId": 39456
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Pedro Elías Hernández",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          19361
+        ],
+        "otherNames": [
+          "Pedro Hernández"
+        ]
+      },
+      "targetId": 39458
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Alberto Torrealba",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          12977,
+          31288
+        ],
+        "otherNames": [
+          "Alberto A. Torrealba",
+          "Alberto A. Torrealba"
+        ]
+      },
+      "targetId": 39459
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Simón López Contreras",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          30592
+        ],
+        "otherNames": [
+          "Simón Eduardo López-Contreras"
+        ]
+      },
+      "targetId": 39460
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Willi Chirino",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          29150,
+          35356,
+          8229
+        ],
+        "otherNames": [
+          "Willi Chirinos",
+          "Willie Chirino",
+          "Willy Chirino"
+        ]
+      },
+      "targetId": 39464
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Erasmo Llamozas",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          29909
+        ],
+        "otherNames": [
+          "Erasmo Llamoza"
+        ]
+      },
+      "targetId": 39465
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Rubén González",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          17729
+        ],
+        "otherNames": [
+          "Luen González"
+        ]
+      },
+      "targetId": 39466
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Isabel Herrera de Umérez",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          13078
+        ],
+        "otherNames": [
+          "Isabel de Umérez"
+        ]
+      },
+      "targetId": 39470
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Luis Morales Vance",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          13079,
+          31841,
+          161,
+          27984
+        ],
+        "otherNames": [
+          "Luis Morales Bance",
+          "Luis Morales Bance",
+          "Luis Morales",
+          "Luís Morales"
+        ]
+      },
+      "targetId": 39471
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Jesús Rosas",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          5333,
+          9650,
+          32526
+        ],
+        "otherNames": [
+          "Jesús Rojas",
+          "Jesús Rosas Marcano",
+          "Jesús Rosas Marcano"
+        ]
+      },
+      "targetId": 39472
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Alfredo Bolívar",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          8067
+        ],
+        "otherNames": [
+          "Alfredo Oliva"
+        ]
+      },
+      "targetId": 39475
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Germán Freitas Veroes",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          12934,
+          31266
+        ],
+        "otherNames": [
+          "German Fleitas Beroes",
+          "Germán Fleitas Beroes"
+        ]
+      },
+      "targetId": 39476
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Juan Parra",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          13158,
+          14624
+        ],
+        "otherNames": [
+          "Juan C Parra",
+          "Jean Parra"
+        ]
+      },
+      "targetId": 39480
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Petra Ramírez",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          16312
+        ],
+        "otherNames": [
+          "Pedro Ramírez"
+        ]
+      },
+      "targetId": 39481
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Alfonso Gómez",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          19103
+        ],
+        "otherNames": [
+          "Alfonso López"
+        ]
+      },
+      "targetId": 39482
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Julio César Sanders",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          17394,
+          34414
+        ],
+        "otherNames": [
+          "Julio César",
+          "Julio César"
+        ]
+      },
+      "targetId": 39483
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Saira Andrade",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          30749
+        ],
+        "otherNames": [
+          "Saira Andrades"
+        ]
+      },
+      "targetId": 39484
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Mario Batistela",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          11296
+        ],
+        "otherNames": [
+          "Mario Battistella"
+        ]
+      },
+      "targetId": 39487
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Ramón Sanoja Medina",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          24905
+        ],
+        "otherNames": [
+          "Ramón Medina"
+        ]
+      },
+      "targetId": 39490
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Francisco Láres",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          13786,
+          33536
+        ],
+        "otherNames": [
+          "Francisco Laprea",
+          "Francisco Flores"
+        ]
+      },
+      "targetId": 39492
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Ruben Fuentes",
+      "rule": "homonimo-sin-proyecto-comun",
+      "flag": {
+        "reason": "homonimo-exacto",
+        "otherIds": [
+          20000
+        ],
+        "otherNames": [
+          "Rubén Fuentes"
+        ]
+      },
+      "targetId": 39494
+    },
+    {
+      "kind": "person",
+      "identityRaw": "William García Castro",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          988,
+          25711
+        ],
+        "otherNames": [
+          "William García",
+          "William Castro"
+        ]
+      },
+      "targetId": 39499
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Fracisco Pacheco",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          1709,
+          20566
+        ],
+        "otherNames": [
+          "Francisco Pacheco",
+          "Francisco Pacheco"
+        ]
+      },
+      "targetId": 39511
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Mario Molina",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          5439
+        ],
+        "otherNames": [
+          "Marco Molina"
+        ]
+      },
+      "targetId": 39512
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Jesús Madero",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          22237,
+          4387
+        ],
+        "otherNames": [
+          "Jesús Maduro",
+          "Jesús A. Maduro"
+        ]
+      },
+      "targetId": 39516
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Manuel de Jesús Ruiz",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          27196
+        ],
+        "otherNames": [
+          "Manuel de Jesús"
+        ]
+      },
+      "targetId": 39520
+    },
+    {
+      "kind": "person",
+      "identityRaw": "V de Moraes",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          9505
+        ],
+        "otherNames": [
+          "de Moraes"
+        ]
+      },
+      "targetId": 39524
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Raúl Delgado",
+      "rule": "homonimo-sin-proyecto-comun",
+      "flag": {
+        "reason": "homonimo-exacto",
+        "otherIds": [
+          15054,
+          35865
+        ],
+        "otherNames": [
+          "Raúl Delgado",
+          "Raul Delgado"
+        ]
+      },
+      "targetId": 39529
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Eliazer Guzmán",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          31817,
+          31837
+        ],
+        "otherNames": [
+          "Eliezer Guzmán",
+          "Eliézer Guzmán"
+        ]
+      },
+      "targetId": 39530
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Elias Hernández",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          32026
+        ],
+        "otherNames": [
+          "Elvis Hernández"
+        ]
+      },
+      "targetId": 39535
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Angel Loyola",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          20593,
+          31703
+        ],
+        "otherNames": [
+          "Angel C. Loyola",
+          "Angel Custodio Loyola"
+        ]
+      },
+      "targetId": 39536
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Rec: Gualberto Ibarreto",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          31670,
+          619,
+          21200
+        ],
+        "otherNames": [
+          "Recop: Gualberto Ibarreto",
+          "Gualberto Ibarreto",
+          "Gualberto Ibarreto"
+        ]
+      },
+      "targetId": 39537
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Manuel Alfredo Rodríguez",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          16569,
+          16653,
+          17139,
+          36392
+        ],
+        "otherNames": [
+          "Manuel Rodríguez",
+          "Manuel Rodríguez",
+          "Manuel Rodríguez",
+          "Manuel Rodríguez"
+        ]
+      },
+      "targetId": 39541
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Georgio Velásquez",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          14431
+        ],
+        "otherNames": [
+          "Sergio Velásquez"
+        ]
+      },
+      "targetId": 39542
+    },
+    {
+      "kind": "person",
+      "identityRaw": "German Fleitas",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          12220,
+          30400,
+          12934,
+          31266
+        ],
+        "otherNames": [
+          "Germán Freites",
+          "Germán Freites",
+          "German Fleitas Beroes",
+          "Germán Fleitas Beroes"
+        ]
+      },
+      "targetId": 39552
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Víctor Vera Morales",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          6016,
+          37667
+        ],
+        "otherNames": [
+          "Víctor Vera",
+          "Víctor Morales"
+        ]
+      },
+      "targetId": 39554
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Jesús Páez",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          31339
+        ],
+        "otherNames": [
+          "Jesús \"Gordo\" Paéz"
+        ]
+      },
+      "targetId": 39557
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Raúl Umanes",
+      "rule": "homonimo-sin-proyecto-comun",
+      "flag": {
+        "reason": "homonimo-exacto",
+        "otherIds": [
+          39546
+        ],
+        "otherNames": [
+          "Raúl Umanés"
+        ]
+      },
+      "targetId": 39558
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Hernan Gamboa",
+      "rule": "homonimo-sin-proyecto-comun",
+      "flag": {
+        "reason": "homonimo-exacto",
+        "otherIds": [
+          913,
+          24377,
+          30836
+        ],
+        "otherNames": [
+          "Hernán Gamboa",
+          "Hernán Gamboa",
+          "Hérnan Gamboa"
+        ]
+      },
+      "targetId": 39559
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Antonio Nella Castro",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          27570
+        ],
+        "otherNames": [
+          "Antonio Castro"
+        ]
+      },
+      "targetId": 39561
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Pedro Silva",
+      "rule": "homonimo-sin-proyecto-comun",
+      "flag": {
+        "reason": "homonimo-exacto",
+        "otherIds": [
+          16867
+        ],
+        "otherNames": [
+          "Pedro Silva"
+        ]
+      },
+      "targetId": 39564
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Hilda Carmona",
+      "rule": "homonimo-sin-proyecto-comun",
+      "flag": {
+        "reason": "homonimo-exacto",
+        "otherIds": [
+          1006
+        ],
+        "otherNames": [
+          "Hilda Carmona"
+        ]
+      },
+      "targetId": 39565
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Ernesto Joan Da Silva Tineo",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          31174
+        ],
+        "otherNames": [
+          "Ernesto Da Silva"
+        ]
+      },
+      "targetId": 39571
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Ángel Palacios",
+      "rule": "homonimo-sin-proyecto-comun",
+      "flag": {
+        "reason": "homonimo-exacto",
+        "otherIds": [
+          30555
+        ],
+        "otherNames": [
+          "Angel Palacios"
+        ]
+      },
+      "targetId": 39572
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Manuel Rodríguez Cárdenas",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          16569,
+          16653,
+          17139,
+          36392
+        ],
+        "otherNames": [
+          "Manuel Rodríguez",
+          "Manuel Rodríguez",
+          "Manuel Rodríguez",
+          "Manuel Rodríguez"
+        ]
+      },
+      "targetId": 39574
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Juan Luis Osta",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          16419
+        ],
+        "otherNames": [
+          "Juan Luis"
+        ]
+      },
+      "targetId": 39580
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Miguel Ángel Bosch",
+      "rule": "homonimo-sin-proyecto-comun",
+      "flag": {
+        "reason": "homonimo-exacto",
+        "otherIds": [
+          938,
+          21977
+        ],
+        "otherNames": [
+          "Miguel Angel Bosch",
+          "Miguel Angel Bosch"
+        ]
+      },
+      "targetId": 39584
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Andrés Mata",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          16156
+        ],
+        "otherNames": [
+          "Andrés Mara"
+        ]
+      },
+      "targetId": 39591
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Carmito Gamboa",
+      "rule": "homonimo-sin-proyecto-comun",
+      "flag": {
+        "reason": "homonimo-exacto",
+        "otherIds": [
+          12280
+        ],
+        "otherNames": [
+          "Carmito Gamboa"
+        ]
+      },
+      "targetId": 39594
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Enrique Cádcamo",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          9521
+        ],
+        "otherNames": [
+          "Enrique Cadicamo"
+        ]
+      },
+      "targetId": 39596
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Pablo Herrera",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          9480,
+          28470,
+          8783,
+          3218,
+          37608
+        ],
+        "otherNames": [
+          "Pablo Herrero",
+          "Pablo Herrero",
+          "Pablo Carrera",
+          "Pablo López Herrera",
+          "Pablo López Herrera"
+        ]
+      },
+      "targetId": 39601
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Antonio Spinetti Dini",
+      "rule": "homonimo-sin-proyecto-comun",
+      "flag": {
+        "reason": "homonimo-exacto",
+        "otherIds": [
+          13076
+        ],
+        "otherNames": [
+          "Antonio Spinetti Dini"
+        ]
+      },
+      "targetId": 39602
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Román González",
+      "rule": "homonimo-sin-proyecto-comun",
+      "flag": {
+        "reason": "homonimo-exacto",
+        "otherIds": [
+          13141
+        ],
+        "otherNames": [
+          "Román González"
+        ]
+      },
+      "targetId": 39603
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Luis Olinto Medina",
+      "rule": "homonimo-sin-proyecto-comun",
+      "flag": {
+        "reason": "homonimo-exacto",
+        "otherIds": [
+          13144
+        ],
+        "otherNames": [
+          "Luis Olinto Medina"
+        ]
+      },
+      "targetId": 39604
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Luis Arturo Domínguez",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          13143
+        ],
+        "otherNames": [
+          "Luis A. Domínguez"
+        ]
+      },
+      "targetId": 39607
+    },
+    {
+      "kind": "person",
+      "identityRaw": "José Ramón González",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          635,
+          17153
+        ],
+        "otherNames": [
+          "José González",
+          "José Gonzalez"
+        ]
+      },
+      "targetId": 39608
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Antonio Spinetti",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          13076
+        ],
+        "otherNames": [
+          "Antonio Spinetti Dini"
+        ]
+      },
+      "targetId": 39609
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Damaso García Barbin",
+      "rule": "homonimo-sin-proyecto-comun",
+      "flag": {
+        "reason": "homonimo-exacto",
+        "otherIds": [
+          31804
+        ],
+        "otherNames": [
+          "Dámaso García Barbin"
+        ]
+      },
+      "targetId": 39621
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Vinicio de Moraes",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          29521
+        ],
+        "otherNames": [
+          "Vinicius de Moraes"
+        ]
+      },
+      "targetId": 39625
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Enrique Manzano",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          23930
+        ],
+        "otherNames": [
+          "Enrique Marcano"
+        ]
+      },
+      "targetId": 39628
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Réne Rojas",
+      "rule": "homonimo-sin-proyecto-comun",
+      "flag": {
+        "reason": "homonimo-exacto",
+        "otherIds": [
+          26488
+        ],
+        "otherNames": [
+          "René Rojas"
+        ]
+      },
+      "targetId": 39630
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Manuel Pérez Cruzzatti",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          2397
+        ],
+        "otherNames": [
+          "Manuel Pérez"
+        ]
+      },
+      "targetId": 39636
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Germán Fleitas Beróes",
+      "rule": "homonimo-sin-proyecto-comun",
+      "flag": {
+        "reason": "homonimo-exacto",
+        "otherIds": [
+          12934,
+          31266
+        ],
+        "otherNames": [
+          "German Fleitas Beroes",
+          "Germán Fleitas Beroes"
+        ]
+      },
+      "targetId": 39637
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Aris Ortíz",
+      "rule": "homonimo-sin-proyecto-comun",
+      "flag": {
+        "reason": "homonimo-exacto",
+        "otherIds": [
+          30218
+        ],
+        "otherNames": [
+          "Aris Ortiz"
+        ]
+      },
+      "targetId": 39639
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Nilo Menéndez",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          26492
+        ],
+        "otherNames": [
+          "Nilo Melendez"
+        ]
+      },
+      "targetId": 39641
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Pedro C",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          9837
+        ],
+        "otherNames": [
+          "Pedro P."
+        ]
+      },
+      "targetId": 39644
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Pedro J. Freitas",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          8374,
+          33103
+        ],
+        "otherNames": [
+          "Pedro J. de Freitas",
+          "Pedro J. de Freites"
+        ]
+      },
+      "targetId": 39650
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Hugo Blanco Manzo",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          761
+        ],
+        "otherNames": [
+          "Hugo Blanco"
+        ]
+      },
+      "targetId": 39651
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Rec: Luís Mariano Rivera",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          7348
+        ],
+        "otherNames": [
+          "Luis Mariano Rivera"
+        ]
+      },
+      "targetId": 39652
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Efraín Ortega",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          30437,
+          31861
+        ],
+        "otherNames": [
+          "Efraín Arteaga",
+          "Efrain Arteaga"
+        ]
+      },
+      "targetId": 39655
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Juan Pablo Sojo",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          11917,
+          33624
+        ],
+        "otherNames": [
+          "Juan Pablo",
+          "Juan Pablo"
+        ]
+      },
+      "targetId": 39657
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Fsco. de Paula Aguirre",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          31926
+        ],
+        "otherNames": [
+          "Fco. de Paula Aguirre"
+        ]
+      },
+      "targetId": 39658
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Torres Molina",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          32253
+        ],
+        "otherNames": [
+          "Tomas Torres Molina"
+        ]
+      },
+      "targetId": 39660
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Armando Flames",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          2513
+        ],
+        "otherNames": [
+          "Armando Flores"
+        ]
+      },
+      "targetId": 39662
+    },
+    {
+      "kind": "person",
+      "identityRaw": "José Leonardo",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          23237,
+          32088
+        ],
+        "otherNames": [
+          "José Leonardo León",
+          "Joel Leonardo"
+        ]
+      },
+      "targetId": 39667
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Lencho Amero",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          31037
+        ],
+        "otherNames": [
+          "Lencho Amaro"
+        ]
+      },
+      "targetId": 39670
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Edgar Chirinos",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          32047
+        ],
+        "otherNames": [
+          "Edgardo Chirinos"
+        ]
+      },
+      "targetId": 39674
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Andrés Vera",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          5232
+        ],
+        "otherNames": [
+          "Andrés Vega"
+        ]
+      },
+      "targetId": 39675
+    },
+    {
+      "kind": "person",
+      "identityRaw": "El Indio Figueredo",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          21722
+        ],
+        "otherNames": [
+          "Indio Figueredo"
+        ]
+      },
+      "targetId": 39677
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Tomás Torres Molina",
+      "rule": "homonimo-sin-proyecto-comun",
+      "flag": {
+        "reason": "homonimo-exacto",
+        "otherIds": [
+          32253
+        ],
+        "otherNames": [
+          "Tomas Torres Molina"
+        ]
+      },
+      "targetId": 39678
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Tomás Molina",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          32253
+        ],
+        "otherNames": [
+          "Tomas Torres Molina"
+        ]
+      },
+      "targetId": 39682
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Luis Sarmiento",
+      "rule": "homonimo-sin-proyecto-comun",
+      "flag": {
+        "reason": "homonimo-exacto",
+        "otherIds": [
+          1763
+        ],
+        "otherNames": [
+          "Luis Sarmiento"
+        ]
+      },
+      "targetId": 39684
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Adelzo Paz \"Rolito\"",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          32224
+        ],
+        "otherNames": [
+          "Adelso Paz \"Rolito\""
+        ]
+      },
+      "targetId": 39686
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Diógenes Bermúdez",
+      "rule": "homonimo-sin-proyecto-comun",
+      "flag": {
+        "reason": "homonimo-exacto",
+        "otherIds": [
+          39685
+        ],
+        "otherNames": [
+          "Diogenes Bermúdez"
+        ]
+      },
+      "targetId": 39689
+    },
+    {
+      "kind": "person",
+      "identityRaw": "José Ali",
+      "rule": "homonimo-sin-proyecto-comun",
+      "flag": {
+        "reason": "homonimo-exacto",
+        "otherIds": [
+          39681
+        ],
+        "otherNames": [
+          "José Alí"
+        ]
+      },
+      "targetId": 39690
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Julio Sanchez",
+      "rule": "homonimo-sin-proyecto-comun",
+      "flag": {
+        "reason": "homonimo-exacto",
+        "otherIds": [
+          21187
+        ],
+        "otherNames": [
+          "Julio Sánchez"
+        ]
+      },
+      "targetId": 39692
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Chico Rodríguez",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          27913,
+          27400
+        ],
+        "otherNames": [
+          "Chucho Rodríguez",
+          "Ciro Rodríguez"
+        ]
+      },
+      "targetId": 39695
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Rafael Rincon González",
+      "rule": "homonimo-sin-proyecto-comun",
+      "flag": {
+        "reason": "homonimo-exacto",
+        "otherIds": [
+          7802,
+          33260
+        ],
+        "otherNames": [
+          "Rafael Rincón González",
+          "Rafael Rincon Gonzalez"
+        ]
+      },
+      "targetId": 39696
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Rafel Rincón",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          1588,
+          20304
+        ],
+        "otherNames": [
+          "Rafael Rincón",
+          "Rafael Rincón"
+        ]
+      },
+      "targetId": 39697
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Andrés Var",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          1994
+        ],
+        "otherNames": [
+          "Andrés Lar"
+        ]
+      },
+      "targetId": 39699
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Alejandro Wills",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          32986
+        ],
+        "otherNames": [
+          "Alejandro Willis"
+        ]
+      },
+      "targetId": 39704
+    },
+    {
+      "kind": "person",
+      "identityRaw": "José Sabre Marroquí",
+      "rule": "homonimo-sin-proyecto-comun",
+      "flag": {
+        "reason": "homonimo-exacto",
+        "otherIds": [
+          24318,
+          26988
+        ],
+        "otherNames": [
+          "José Sabré Marroquí",
+          "José Sabre Marroqui"
+        ]
+      },
+      "targetId": 39705
+    },
+    {
+      "kind": "person",
+      "identityRaw": "José Mojica",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          15894
+        ],
+        "otherNames": [
+          "José Mujica"
+        ]
+      },
+      "targetId": 39706
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Juan Carlosd Cobián",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          33334
+        ],
+        "otherNames": [
+          "Juan Carlos Cobián"
+        ]
+      },
+      "targetId": 39708
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Carlos Andrés Bahr",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          28493
+        ],
+        "otherNames": [
+          "Carlos Andrés"
+        ]
+      },
+      "targetId": 39710
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Ernesto Luís Rodríguez",
+      "rule": "homonimo-sin-proyecto-comun",
+      "flag": {
+        "reason": "homonimo-exacto",
+        "otherIds": [
+          9481,
+          38239
+        ],
+        "otherNames": [
+          "Ernesto Luis Rodríguez",
+          "Ernesto Luis Rodríguez"
+        ]
+      },
+      "targetId": 39711
+    },
+    {
+      "kind": "person",
+      "identityRaw": "José María Giménez",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          32033
+        ],
+        "otherNames": [
+          "José María Jiménez"
+        ]
+      },
+      "targetId": 39715
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Felix Villa",
+      "rule": "homonimo-sin-proyecto-comun",
+      "flag": {
+        "reason": "homonimo-exacto",
+        "otherIds": [
+          39702
+        ],
+        "otherNames": [
+          "Félix Villa"
+        ]
+      },
+      "targetId": 39720
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Lucho Mendoza",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          31245
+        ],
+        "otherNames": [
+          "Lucio Mendoza"
+        ]
+      },
+      "targetId": 39721
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Luis Domínguez",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          13143
+        ],
+        "otherNames": [
+          "Luis A. Domínguez"
+        ]
+      },
+      "targetId": 39722
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Manuel Torrealba",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          13671
+        ],
+        "otherNames": [
+          "Daniel Torrealba"
+        ]
+      },
+      "targetId": 39732
+    },
+    {
+      "kind": "person",
+      "identityRaw": "E. Castro",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          28912
+        ],
+        "otherNames": [
+          "H. Castro"
+        ]
+      },
+      "targetId": 39733
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Ricardo López Méndez",
+      "rule": "homonimo-sin-proyecto-comun",
+      "flag": {
+        "reason": "homonimo-exacto",
+        "otherIds": [
+          38660
+        ],
+        "otherNames": [
+          "Ricardo López Mendéz"
+        ]
+      },
+      "targetId": 39739
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Omar Quiñones",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          37314
+        ],
+        "otherNames": [
+          "Marc Quiñones"
+        ]
+      },
+      "targetId": 39746
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Simóm Pacheco",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          31991
+        ],
+        "otherNames": [
+          "Simón Pacheco"
+        ]
+      },
+      "targetId": 39747
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Rec: Francisco Pacheco",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          1709,
+          20566
+        ],
+        "otherNames": [
+          "Francisco Pacheco",
+          "Francisco Pacheco"
+        ]
+      },
+      "targetId": 39748
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Simon Pacheco",
+      "rule": "homonimo-sin-proyecto-comun",
+      "flag": {
+        "reason": "homonimo-exacto",
+        "otherIds": [
+          31991
+        ],
+        "otherNames": [
+          "Simón Pacheco"
+        ]
+      },
+      "targetId": 39750
+    },
+    {
+      "kind": "person",
+      "identityRaw": "V: Eloisa Pérez",
+      "rule": "nombre-parecido-sin-proyecto-comun",
+      "flag": {
+        "reason": "nombre-parecido",
+        "otherIds": [
+          32554
+        ],
+        "otherNames": [
+          "Eloísa Pérez"
+        ]
+      },
+      "targetId": 39755
+    }
+  ],
+  "errors": [],
+  "runId": 11541
+}
