@@ -11,7 +11,7 @@ import { persistClaim, type ClaimToPersist, type Confidence } from "../../src/cl
 import type { ResolutionInput } from "../../src/er/types.js";
 import { DeepSeekGateway, MockDeepSeekTransport, PostgresDeepSeekRunStore, type DeepSeekGatewayConfig } from "../../src/ai/gateway.js";
 import { approveBiographyDraft, generateBiographyDraft } from "../../src/ai/biographies.js";
-import { aiBiographies, aiBiographyClaims, claims, conflicts, entityResolutionDecisions, mergeAudit, reviewQueue, sources } from "../../src/db/schema/ingest.js";
+import { aiBiographies, aiBiographyClaims, claims, conflicts, entityResolutionDecisions, mergeAudit, reviewQueue, scrapeRuns, sources } from "../../src/db/schema/ingest.js";
 import { albums, artists, organizations, persons, tracks } from "../../src/db/schema/core.js";
 
 let evidenceCounter = 0;
@@ -119,6 +119,25 @@ describe("ER + claims + conflictos + merge auditado", () => {
     expect(organization.outcome.action).toBe("applied");
     expect(await getDb().select().from(organizations).where(eq(organizations.name, "Sonográfica"))).toHaveLength(1);
     expect((await getDb().select().from(albums).where(eq(albums.id, albumId)))[0]?.title).toBe("Las Paticas De La Abuela");
+  });
+
+  it("reintentar el merge de un claim sin resolver no abre una segunda revisión", async () => {
+    const url = "https://fixture.invalid/er/person-asier-casi";
+    const openReviews = async (claimId: number) => (await getPool().query<{ kind: string; decision: string }>(
+      `SELECT kind::text, payload->>'resolutionDecisionId' AS decision FROM ingest.review_queue
+        WHERE claim_a_id=$1 AND status IN ('open','in_progress')`, [claimId])).rows;
+    // Cada pasada de una promoción corre en su run: el ER guarda otra decisión.
+    const [runA, runB] = await getDb().insert(scrapeRuns).values([{ kind: "manual", status: "running" }, { kind: "manual", status: "running" }]).returning();
+    const first = await applyClaim({ sourceId, kind: "person", identity: "Asier Cazali", field: "name", value: "Asier Cazali", evidenceUrl: url, confidence: "medium", targets: { runId: runA!.id } });
+    const before = await openReviews(first.persisted.id);
+    expect(before).toHaveLength(1);
+    const again = await applyClaim({ sourceId, kind: "person", identity: "Asier Cazali", field: "name", value: "Asier Cazali", evidenceUrl: url, confidence: "medium", targets: { runId: runB!.id } });
+    expect(again.persisted.inserted).toBe(false);
+    const after = await openReviews(first.persisted.id);
+    expect(after).toHaveLength(1);
+    expect(after[0]!.kind).toBe(before[0]!.kind);
+    // La revisión que queda lleva la decisión más reciente del ER.
+    expect(Number(after[0]!.decision)).toBeGreaterThan(Number(before[0]!.decision));
   });
 
   it("conserva dos ocurrencias reales con el mismo título y retira el unsure sustituido", async () => {

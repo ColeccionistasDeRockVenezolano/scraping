@@ -1,0 +1,5129 @@
+{
+  "dryRun": false,
+  "runId": 11432,
+  "pages": 465,
+  "albums": 82,
+  "tracksToMove": 380,
+  "moved": 380,
+  "skipped": 74,
+  "plans": [
+    {
+      "albumId": 4630,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 23612,
+          "title": "Llorando De Alegría",
+          "from": 3,
+          "to": 9,
+          "oldClaimIds": [
+            299508
+          ],
+          "newClaimId": 1829573,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/alzeppy_67ennewyork.htm"
+        },
+        {
+          "trackId": 23613,
+          "title": "Llámame",
+          "from": 5,
+          "to": 11,
+          "oldClaimIds": [
+            299532
+          ],
+          "newClaimId": 1829575,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/alzeppy_67ennewyork.htm"
+        },
+        {
+          "trackId": 23614,
+          "title": "Al Fin Volverás",
+          "from": 4,
+          "to": 10,
+          "oldClaimIds": [
+            299520
+          ],
+          "newClaimId": 1829574,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/alzeppy_67ennewyork.htm"
+        },
+        {
+          "trackId": 23609,
+          "title": "La Casa Más Bonita Del Mundo",
+          "from": 1,
+          "to": 7,
+          "oldClaimIds": [
+            299486
+          ],
+          "newClaimId": 1829571,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/alzeppy_67ennewyork.htm"
+        },
+        {
+          "trackId": 23611,
+          "title": "No, No Me Dejes Ir",
+          "from": 2,
+          "to": 8,
+          "oldClaimIds": [
+            299497
+          ],
+          "newClaimId": 1829572,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/alzeppy_67ennewyork.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 3783,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 23784,
+          "title": "Respuestas",
+          "from": 3,
+          "to": 8,
+          "oldClaimIds": [
+            306296
+          ],
+          "newClaimId": 1829650,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/alvarosegura_1asiloveoyo.htm"
+        },
+        {
+          "trackId": 23782,
+          "title": "Osita de Peluche",
+          "from": 2,
+          "to": 7,
+          "oldClaimIds": [
+            306284
+          ],
+          "newClaimId": 1829649,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/alvarosegura_1asiloveoyo.htm"
+        },
+        {
+          "trackId": 23778,
+          "title": "Layers",
+          "from": 1,
+          "to": 6,
+          "oldClaimIds": [
+            306279
+          ],
+          "newClaimId": 1829648,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/alvarosegura_1asiloveoyo.htm"
+        },
+        {
+          "trackId": 23780,
+          "title": "Virgen De Escarcha",
+          "from": 4,
+          "to": 9,
+          "oldClaimIds": [
+            306309
+          ],
+          "newClaimId": 1829651,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/alvarosegura_1asiloveoyo.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 3780,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 23750,
+          "title": "Revolución Para ...",
+          "from": 2,
+          "to": 4,
+          "oldClaimIds": [
+            305468
+          ],
+          "newClaimId": 1829646,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/alterego_1lacalle.htm"
+        },
+        {
+          "trackId": 23751,
+          "title": "La Calle Es La Misma",
+          "from": 1,
+          "to": 3,
+          "oldClaimIds": [
+            305464
+          ],
+          "newClaimId": 1829645,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/alterego_1lacalle.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 4155,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 21277,
+          "title": "Qué Importan Las Cosas",
+          "from": 1,
+          "to": 5,
+          "oldClaimIds": [
+            272225
+          ],
+          "newClaimId": 1829304,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/quarzo_1.htm"
+        },
+        {
+          "trackId": 21279,
+          "title": "Ladrona De Sueños",
+          "from": 3,
+          "to": 7,
+          "oldClaimIds": [
+            272233
+          ],
+          "newClaimId": 1829306,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/quarzo_1.htm"
+        },
+        {
+          "trackId": 22555,
+          "title": "Música Del Alma",
+          "from": 4,
+          "to": 8,
+          "oldClaimIds": [
+            272235
+          ],
+          "newClaimId": 1829307,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/quarzo_1.htm"
+        },
+        {
+          "trackId": 22706,
+          "title": "Dulce",
+          "from": 2,
+          "to": 6,
+          "oldClaimIds": [
+            272228
+          ],
+          "newClaimId": 1829305,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/quarzo_1.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 3971,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 21290,
+          "title": "Vete",
+          "from": 1,
+          "to": 5,
+          "oldClaimIds": [
+            253590
+          ],
+          "newClaimId": 1829212,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/jade_jade.htm"
+        },
+        {
+          "trackId": 21292,
+          "title": "Ahora Que Te Encontré",
+          "from": 3,
+          "to": 7,
+          "oldClaimIds": [
+            253598
+          ],
+          "newClaimId": 1829214,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/jade_jade.htm"
+        },
+        {
+          "trackId": 21295,
+          "title": "Por Favor",
+          "from": 5,
+          "to": 9,
+          "oldClaimIds": [
+            253606
+          ],
+          "newClaimId": 1829216,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/jade_jade.htm"
+        },
+        {
+          "trackId": 21297,
+          "title": "Acordes",
+          "from": 2,
+          "to": 6,
+          "oldClaimIds": [
+            253595
+          ],
+          "newClaimId": 1829213,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/jade_jade.htm"
+        },
+        {
+          "trackId": 22780,
+          "title": "Encontré Un Amor",
+          "from": 4,
+          "to": 8,
+          "oldClaimIds": [
+            253602
+          ],
+          "newClaimId": 1829215,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/jade_jade.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 3646,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 21291,
+          "title": "Pasillaneando",
+          "from": 2,
+          "to": 7,
+          "oldClaimIds": [
+            338752
+          ],
+          "newClaimId": 1829800,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosbaute_01origenes.htm"
+        },
+        {
+          "trackId": 22010,
+          "title": "Muchacha De Ojazos Negros",
+          "from": 3,
+          "to": 8,
+          "oldClaimIds": [
+            338763
+          ],
+          "newClaimId": 1829801,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosbaute_01origenes.htm"
+        },
+        {
+          "trackId": 21984,
+          "title": "El Gavilán",
+          "from": 1,
+          "to": 6,
+          "oldClaimIds": [
+            338740
+          ],
+          "newClaimId": 1829799,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosbaute_01origenes.htm"
+        },
+        {
+          "trackId": 22009,
+          "title": "Corrío Baute",
+          "from": 4,
+          "to": 9,
+          "oldClaimIds": [
+            338775
+          ],
+          "newClaimId": 1829802,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosbaute_01origenes.htm"
+        },
+        {
+          "trackId": 24330,
+          "title": "Fiesta De Calipsos",
+          "from": 5,
+          "to": 10,
+          "oldClaimIds": [
+            338786
+          ],
+          "newClaimId": 1829803,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosbaute_01origenes.htm"
+        },
+        {
+          "trackId": 24329,
+          "title": "Alma Llanera",
+          "from": 6,
+          "to": 11,
+          "oldClaimIds": [
+            338829
+          ],
+          "newClaimId": 1829804,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosbaute_01origenes.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 3892,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 21300,
+          "title": "Canto A La Vida",
+          "from": 4,
+          "to": 9,
+          "oldClaimIds": [
+            352575
+          ],
+          "newClaimId": 1830064,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_cazadores_79lucia.htm"
+        },
+        {
+          "trackId": 21296,
+          "title": "Venezuela",
+          "from": 3,
+          "to": 8,
+          "oldClaimIds": [
+            352564
+          ],
+          "newClaimId": 1830063,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_cazadores_79lucia.htm"
+        },
+        {
+          "trackId": 24932,
+          "title": "Dime",
+          "from": 2,
+          "to": 7,
+          "oldClaimIds": [
+            352552
+          ],
+          "newClaimId": 1830062,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_cazadores_79lucia.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 4394,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 21306,
+          "title": "Martha",
+          "from": 2,
+          "to": 7,
+          "oldClaimIds": [
+            272414
+          ],
+          "newClaimId": 1829310,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/15yultimo_01.htm"
+        },
+        {
+          "trackId": 21303,
+          "title": "Tu Indiferencia",
+          "from": 1,
+          "to": 6,
+          "oldClaimIds": [
+            272401
+          ],
+          "newClaimId": 1829309,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/15yultimo_01.htm"
+        },
+        {
+          "trackId": 21313,
+          "title": "Dime",
+          "from": 3,
+          "to": 8,
+          "oldClaimIds": [
+            272423
+          ],
+          "newClaimId": 1829311,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/15yultimo_01.htm"
+        },
+        {
+          "trackId": 21332,
+          "title": "Que Cosa Tan Loca",
+          "from": 4,
+          "to": 9,
+          "oldClaimIds": [
+            272435
+          ],
+          "newClaimId": 1829312,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/15yultimo_01.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 3938,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 21323,
+          "title": "Cantos (Que Se Cruzan Al Andar)",
+          "from": 2,
+          "to": 7,
+          "oldClaimIds": [
+            239990
+          ],
+          "newClaimId": 1829118,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/cyam_estavez.htm"
+        },
+        {
+          "trackId": 22427,
+          "title": "Escondiéndome De Ti",
+          "from": 3,
+          "to": 8,
+          "oldClaimIds": [
+            240000
+          ],
+          "newClaimId": 1829119,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/cyam_estavez.htm"
+        },
+        {
+          "trackId": 22429,
+          "title": "Es Hora",
+          "from": 1,
+          "to": 6,
+          "oldClaimIds": [
+            239978
+          ],
+          "newClaimId": 1829117,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/cyam_estavez.htm"
+        },
+        {
+          "trackId": 22428,
+          "title": "Da La Cara Al Viento",
+          "from": 4,
+          "to": 9,
+          "oldClaimIds": [
+            240012
+          ],
+          "newClaimId": 1829120,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/cyam_estavez.htm"
+        },
+        {
+          "trackId": 22430,
+          "title": "Debemos Volver",
+          "from": 5,
+          "to": 10,
+          "oldClaimIds": [
+            240026
+          ],
+          "newClaimId": 1829121,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/cyam_estavez.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 3840,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 21455,
+          "title": "Calles",
+          "from": 4,
+          "to": 9,
+          "oldClaimIds": [
+            233152
+          ],
+          "newClaimId": 1829094,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/bronce_1.htm"
+        },
+        {
+          "trackId": 21415,
+          "title": "Soy Motorizado",
+          "from": 3,
+          "to": 8,
+          "oldClaimIds": [
+            233141
+          ],
+          "newClaimId": 1829093,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/bronce_1.htm"
+        },
+        {
+          "trackId": 21774,
+          "title": "A Mi Tierra",
+          "from": 1,
+          "to": 6,
+          "oldClaimIds": [
+            233119
+          ],
+          "newClaimId": 1829091,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/bronce_1.htm"
+        },
+        {
+          "trackId": 21413,
+          "title": "Fin De Semana",
+          "from": 2,
+          "to": 7,
+          "oldClaimIds": [
+            233130
+          ],
+          "newClaimId": 1829092,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/bronce_1.htm"
+        },
+        {
+          "trackId": 21484,
+          "title": "Un Día De Abril",
+          "from": 5,
+          "to": 10,
+          "oldClaimIds": [
+            233163
+          ],
+          "newClaimId": 1829095,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/bronce_1.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 3449,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 21449,
+          "title": "Si Decides Ir",
+          "from": 1,
+          "to": 7,
+          "oldClaimIds": [
+            329722
+          ],
+          "newClaimId": 1829735,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/blonder_1gogo.htm"
+        },
+        {
+          "trackId": 21446,
+          "title": "El Día Aquel",
+          "from": 2,
+          "to": 8,
+          "oldClaimIds": [
+            329727
+          ],
+          "newClaimId": 1829736,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/blonder_1gogo.htm"
+        },
+        {
+          "trackId": 21447,
+          "title": "Nieblas Del Riachuelo",
+          "from": 3,
+          "to": 9,
+          "oldClaimIds": [
+            329732
+          ],
+          "newClaimId": 1829737,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/blonder_1gogo.htm"
+        },
+        {
+          "trackId": 21456,
+          "title": "En La Playa",
+          "from": 6,
+          "to": 12,
+          "oldClaimIds": [
+            329743
+          ],
+          "newClaimId": 1829740,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/blonder_1gogo.htm"
+        },
+        {
+          "trackId": 21451,
+          "title": "Tenía Que Terminar",
+          "from": 4,
+          "to": 10,
+          "oldClaimIds": [
+            329735
+          ],
+          "newClaimId": 1829738,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/blonder_1gogo.htm"
+        },
+        {
+          "trackId": 21454,
+          "title": "Tanto Sufrir",
+          "from": 5,
+          "to": 11,
+          "oldClaimIds": [
+            329738
+          ],
+          "newClaimId": 1829739,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/blonder_1gogo.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 3450,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 21461,
+          "title": "Bueno y Qué?",
+          "from": 3,
+          "to": 9,
+          "oldClaimIds": [
+            329812
+          ],
+          "newClaimId": 1829744,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/blonder_2.htm"
+        },
+        {
+          "trackId": 21468,
+          "title": "Si Te Quiero",
+          "from": 5,
+          "to": 11,
+          "oldClaimIds": [
+            329820
+          ],
+          "newClaimId": 1829746,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/blonder_2.htm"
+        },
+        {
+          "trackId": 21465,
+          "title": "Atlantis",
+          "from": 2,
+          "to": 8,
+          "oldClaimIds": [
+            329809
+          ],
+          "newClaimId": 1829743,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/blonder_2.htm"
+        },
+        {
+          "trackId": 21466,
+          "title": "Yo Desespero",
+          "from": 4,
+          "to": 10,
+          "oldClaimIds": [
+            329816
+          ],
+          "newClaimId": 1829745,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/blonder_2.htm"
+        },
+        {
+          "trackId": 21464,
+          "title": "Matanza En La 10ª Av.",
+          "from": 6,
+          "to": 12,
+          "oldClaimIds": [
+            329825
+          ],
+          "newClaimId": 1829747,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/blonder_2.htm"
+        },
+        {
+          "trackId": 21463,
+          "title": "Tu Manera De Ser",
+          "from": 1,
+          "to": 7,
+          "oldClaimIds": [
+            329805
+          ],
+          "newClaimId": 1829742,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/blonder_2.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 3451,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 21477,
+          "title": "Jamás Sin Ti",
+          "from": 1,
+          "to": 6,
+          "oldClaimIds": [
+            329888
+          ],
+          "newClaimId": 1829749,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/blonder_84.htm"
+        },
+        {
+          "trackId": 21470,
+          "title": "Yo Quiero Saber",
+          "from": 2,
+          "to": 7,
+          "oldClaimIds": [
+            329893
+          ],
+          "newClaimId": 1829750,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/blonder_84.htm"
+        },
+        {
+          "trackId": 21483,
+          "title": "Tu Felicidad",
+          "from": 4,
+          "to": 9,
+          "oldClaimIds": [
+            329907
+          ],
+          "newClaimId": 1829753,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/blonder_84.htm"
+        },
+        {
+          "trackId": 21472,
+          "title": "Volaré",
+          "from": 3,
+          "to": 8,
+          "oldClaimIds": [
+            329898
+          ],
+          "newClaimId": 1829751,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/blonder_84.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 3472,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 21512,
+          "title": "Ave María",
+          "from": 3,
+          "to": 9,
+          "oldClaimIds": [
+            330442
+          ],
+          "newClaimId": 1829763,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/joseantoniobordell_2pormiculpa.htm"
+        },
+        {
+          "trackId": 21509,
+          "title": "Señor Ayúdame",
+          "from": 2,
+          "to": 8,
+          "oldClaimIds": [
+            330432
+          ],
+          "newClaimId": 1829762,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/joseantoniobordell_2pormiculpa.htm"
+        },
+        {
+          "trackId": 21515,
+          "title": "Questo Piccolo Grande Amore",
+          "from": 4,
+          "to": 10,
+          "oldClaimIds": [
+            330454
+          ],
+          "newClaimId": 1829764,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/joseantoniobordell_2pormiculpa.htm"
+        },
+        {
+          "trackId": 21513,
+          "title": "Sobre El Amparo",
+          "from": 5,
+          "to": 11,
+          "oldClaimIds": [
+            330465
+          ],
+          "newClaimId": 1829765,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/joseantoniobordell_2pormiculpa.htm"
+        },
+        {
+          "trackId": 21510,
+          "title": "Amor De Compra y Venta",
+          "from": 1,
+          "to": 7,
+          "oldClaimIds": [
+            330420
+          ],
+          "newClaimId": 1829761,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/joseantoniobordell_2pormiculpa.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 3471,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 21518,
+          "title": "El Tiempo",
+          "from": 5,
+          "to": 11,
+          "oldClaimIds": [
+            263111
+          ],
+          "newClaimId": 1829274,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/madus_1.htm"
+        },
+        {
+          "trackId": 21507,
+          "title": "No Puedo",
+          "from": 1,
+          "to": 7,
+          "oldClaimIds": [
+            263066
+          ],
+          "newClaimId": 1829270,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/madus_1.htm"
+        },
+        {
+          "trackId": 21508,
+          "title": "Entre La Espada y La Pared",
+          "from": 2,
+          "to": 8,
+          "oldClaimIds": [
+            263080
+          ],
+          "newClaimId": 1829271,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/madus_1.htm"
+        },
+        {
+          "trackId": 21517,
+          "title": "El Primer Amor",
+          "from": 4,
+          "to": 10,
+          "oldClaimIds": [
+            263099
+          ],
+          "newClaimId": 1829273,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/madus_1.htm"
+        },
+        {
+          "trackId": 21514,
+          "title": "No Basta Pensar",
+          "from": 3,
+          "to": 9,
+          "oldClaimIds": [
+            263090
+          ],
+          "newClaimId": 1829272,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/madus_1.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 3477,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 21551,
+          "title": "Madrid",
+          "from": 4,
+          "to": 9,
+          "oldClaimIds": [
+            331091
+          ],
+          "newClaimId": 1829782,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/unicornio_3envivo.htm"
+        },
+        {
+          "trackId": 21550,
+          "title": "Te Puedes Marchar",
+          "from": 1,
+          "to": 6,
+          "oldClaimIds": [
+            331059
+          ],
+          "newClaimId": 1829779,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/unicornio_3envivo.htm"
+        },
+        {
+          "trackId": 21548,
+          "title": "Unicornio En Broadway",
+          "from": 2,
+          "to": 7,
+          "oldClaimIds": [
+            331071
+          ],
+          "newClaimId": 1829780,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/unicornio_3envivo.htm"
+        },
+        {
+          "trackId": 21546,
+          "title": "Señora Chabuca Granda",
+          "from": 5,
+          "to": 10,
+          "oldClaimIds": [
+            331104
+          ],
+          "newClaimId": 1829783,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/unicornio_3envivo.htm"
+        },
+        {
+          "trackId": 21549,
+          "title": "Sobrevivir",
+          "from": 3,
+          "to": 8,
+          "oldClaimIds": [
+            331082
+          ],
+          "newClaimId": 1829781,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/unicornio_3envivo.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 4538,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 21890,
+          "title": "Regreso",
+          "from": 4,
+          "to": 9,
+          "oldClaimIds": [
+            282406
+          ],
+          "newClaimId": 1829372,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/six_1.htm"
+        },
+        {
+          "trackId": 21886,
+          "title": "Si Tu Estas",
+          "from": 5,
+          "to": 10,
+          "oldClaimIds": [
+            282417
+          ],
+          "newClaimId": 1829373,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/six_1.htm"
+        },
+        {
+          "trackId": 21889,
+          "title": "Chiwawa",
+          "from": 3,
+          "to": 8,
+          "oldClaimIds": [
+            282394
+          ],
+          "newClaimId": 1829371,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/six_1.htm"
+        },
+        {
+          "trackId": 23149,
+          "title": "No Se Cómo Se Puede",
+          "from": 2,
+          "to": 7,
+          "oldClaimIds": [
+            282384
+          ],
+          "newClaimId": 1829370,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/six_1.htm"
+        },
+        {
+          "trackId": 23157,
+          "title": "Dr. Barnard",
+          "from": 1,
+          "to": 6,
+          "oldClaimIds": [
+            282373
+          ],
+          "newClaimId": 1829369,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/six_1.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 3616,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 21910,
+          "title": "El Amor Es Azul (Love Is Blue)",
+          "from": 4,
+          "to": 10,
+          "oldClaimIds": [
+            223011
+          ],
+          "newClaimId": 1829056,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/losdiscotecos_agogolatino.htm"
+        },
+        {
+          "trackId": 21909,
+          "title": "Maravilloso",
+          "from": 3,
+          "to": 9,
+          "oldClaimIds": [
+            223003
+          ],
+          "newClaimId": 1829055,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/losdiscotecos_agogolatino.htm"
+        },
+        {
+          "trackId": 21913,
+          "title": "Torpe",
+          "from": 5,
+          "to": 11,
+          "oldClaimIds": [
+            223026
+          ],
+          "newClaimId": 1829057,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/losdiscotecos_agogolatino.htm"
+        },
+        {
+          "trackId": 21914,
+          "title": "Masachussetts",
+          "from": 6,
+          "to": 12,
+          "oldClaimIds": [
+            223036
+          ],
+          "newClaimId": 1829058,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/losdiscotecos_agogolatino.htm"
+        },
+        {
+          "trackId": 21916,
+          "title": "Crucero",
+          "from": 1,
+          "to": 7,
+          "oldClaimIds": [
+            222980
+          ],
+          "newClaimId": 1829053,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/losdiscotecos_agogolatino.htm"
+        },
+        {
+          "trackId": 21912,
+          "title": "Baila Go-Go y Ye-Ye",
+          "from": 2,
+          "to": 8,
+          "oldClaimIds": [
+            222992
+          ],
+          "newClaimId": 1829054,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/losdiscotecos_agogolatino.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 3421,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 21320,
+          "title": "Detén La Noche",
+          "from": 4,
+          "to": 10,
+          "oldClaimIds": [
+            262220
+          ],
+          "newClaimId": 1829260,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/lossharks_enelautocine.htm"
+        },
+        {
+          "trackId": 21310,
+          "title": "Desencadena Mi Corazón",
+          "from": 3,
+          "to": 9,
+          "oldClaimIds": [
+            262210
+          ],
+          "newClaimId": 1829259,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/lossharks_enelautocine.htm"
+        },
+        {
+          "trackId": 21333,
+          "title": "Contento Estoy",
+          "from": 1,
+          "to": 7,
+          "oldClaimIds": [
+            262187
+          ],
+          "newClaimId": 1829257,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/lossharks_enelautocine.htm"
+        },
+        {
+          "trackId": 21409,
+          "title": "Samba De Una Nota Sola",
+          "from": 2,
+          "to": 8,
+          "oldClaimIds": [
+            262198
+          ],
+          "newClaimId": 1829258,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/lossharks_enelautocine.htm"
+        },
+        {
+          "trackId": 21321,
+          "title": "Recuerdos De Bahía",
+          "from": 5,
+          "to": 11,
+          "oldClaimIds": [
+            262231
+          ],
+          "newClaimId": 1829261,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/lossharks_enelautocine.htm"
+        },
+        {
+          "trackId": 21410,
+          "title": "Camina Recto",
+          "from": 6,
+          "to": 12,
+          "oldClaimIds": [
+            262242
+          ],
+          "newClaimId": 1829262,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/lossharks_enelautocine.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 2196,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 22014,
+          "title": "Daisy",
+          "from": 1,
+          "to": 6,
+          "oldClaimIds": [
+            268959
+          ],
+          "newClaimId": 1829286,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/pan_1970.htm"
+        },
+        {
+          "trackId": 22016,
+          "title": "Yo La Ví",
+          "from": 2,
+          "to": 7,
+          "oldClaimIds": [
+            268963
+          ],
+          "newClaimId": 1829287,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/pan_1970.htm"
+        },
+        {
+          "trackId": 22018,
+          "title": "No Te Olvides Del Señor",
+          "from": 5,
+          "to": 10,
+          "oldClaimIds": [
+            268975
+          ],
+          "newClaimId": 1829290,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/pan_1970.htm"
+        },
+        {
+          "trackId": 22017,
+          "title": "Sinfonía N° 20",
+          "from": 4,
+          "to": 9,
+          "oldClaimIds": [
+            268971
+          ],
+          "newClaimId": 1829289,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/pan_1970.htm"
+        },
+        {
+          "trackId": 22019,
+          "title": "Vete",
+          "from": 3,
+          "to": 8,
+          "oldClaimIds": [
+            268968
+          ],
+          "newClaimId": 1829288,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/pan_1970.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 3577,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 21834,
+          "title": "Se Que No Soy",
+          "from": 2,
+          "to": 6,
+          "oldClaimIds": [
+            266228
+          ],
+          "newClaimId": 1829282,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/mussa_mussa.htm"
+        },
+        {
+          "trackId": 21832,
+          "title": "Te Veo En La Televisión",
+          "from": 1,
+          "to": 5,
+          "oldClaimIds": [
+            266217
+          ],
+          "newClaimId": 1829281,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/mussa_mussa.htm"
+        },
+        {
+          "trackId": 21833,
+          "title": "Sin El Teléfono",
+          "from": 3,
+          "to": 7,
+          "oldClaimIds": [
+            266239
+          ],
+          "newClaimId": 1829283,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/mussa_mussa.htm"
+        },
+        {
+          "trackId": 21836,
+          "title": "Como Quien No Quiere",
+          "from": 4,
+          "to": 8,
+          "oldClaimIds": [
+            266250
+          ],
+          "newClaimId": 1829284,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/mussa_mussa.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 3633,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 21946,
+          "title": "Seducción",
+          "from": 1,
+          "to": 2,
+          "oldClaimIds": [
+            224090
+          ],
+          "newClaimId": 1829066,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/acme_escorpion.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 3817,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 22180,
+          "title": "Carlucy",
+          "from": 4,
+          "to": 10,
+          "oldClaimIds": [
+            228748
+          ],
+          "newClaimId": 1829081,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/asimilation_rock.htm"
+        },
+        {
+          "trackId": 22172,
+          "title": "Isn't Seally",
+          "from": 3,
+          "to": 9,
+          "oldClaimIds": [
+            228742
+          ],
+          "newClaimId": 1829080,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/asimilation_rock.htm"
+        },
+        {
+          "trackId": 22177,
+          "title": "So Long (See You Again)",
+          "from": 6,
+          "to": 12,
+          "oldClaimIds": [
+            228754
+          ],
+          "newClaimId": 1829083,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/asimilation_rock.htm"
+        },
+        {
+          "trackId": 22173,
+          "title": "Walking Down",
+          "from": 2,
+          "to": 8,
+          "oldClaimIds": [
+            228738
+          ],
+          "newClaimId": 1829079,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/asimilation_rock.htm"
+        },
+        {
+          "trackId": 22176,
+          "title": "Rock Road",
+          "from": 5,
+          "to": 11,
+          "oldClaimIds": [
+            228750
+          ],
+          "newClaimId": 1829082,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/asimilation_rock.htm"
+        },
+        {
+          "trackId": 22175,
+          "title": "Get Back",
+          "from": 1,
+          "to": 7,
+          "oldClaimIds": [
+            228734
+          ],
+          "newClaimId": 1829078,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/asimilation_rock.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 3841,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 22283,
+          "title": "Goza Como Gozo Yo",
+          "from": 5,
+          "to": 10,
+          "oldClaimIds": [
+            234725
+          ],
+          "newClaimId": 1829108,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/callejon88_pasionario.htm"
+        },
+        {
+          "trackId": 22282,
+          "title": "Que Va A Ser De Tí",
+          "from": 4,
+          "to": 9,
+          "oldClaimIds": [
+            234715
+          ],
+          "newClaimId": 1829107,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/callejon88_pasionario.htm"
+        },
+        {
+          "trackId": 22286,
+          "title": "Te Me Vas",
+          "from": 2,
+          "to": 7,
+          "oldClaimIds": [
+            234692
+          ],
+          "newClaimId": 1829105,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/callejon88_pasionario.htm"
+        },
+        {
+          "trackId": 22285,
+          "title": "Caderas Locas",
+          "from": 3,
+          "to": 8,
+          "oldClaimIds": [
+            234703
+          ],
+          "newClaimId": 1829106,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/callejon88_pasionario.htm"
+        },
+        {
+          "trackId": 22281,
+          "title": "Dame Amor",
+          "from": 1,
+          "to": 6,
+          "oldClaimIds": [
+            234681
+          ],
+          "newClaimId": 1829104,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/callejon88_pasionario.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 3843,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 22294,
+          "title": "Madre De Hoy",
+          "from": 2,
+          "to": 8,
+          "oldClaimIds": [
+            235269
+          ],
+          "newClaimId": 1829111,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/grupocanon_barlovento.htm"
+        },
+        {
+          "trackId": 22292,
+          "title": "Laguna De Cristal",
+          "from": 3,
+          "to": 9,
+          "oldClaimIds": [
+            235280
+          ],
+          "newClaimId": 1829112,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/grupocanon_barlovento.htm"
+        },
+        {
+          "trackId": 22296,
+          "title": "Boca De Aroa",
+          "from": 6,
+          "to": 12,
+          "oldClaimIds": [
+            235313
+          ],
+          "newClaimId": 1829115,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/grupocanon_barlovento.htm"
+        },
+        {
+          "trackId": 22293,
+          "title": "Soledad",
+          "from": 4,
+          "to": 10,
+          "oldClaimIds": [
+            235291
+          ],
+          "newClaimId": 1829113,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/grupocanon_barlovento.htm"
+        },
+        {
+          "trackId": 22297,
+          "title": "Espíritu Alado",
+          "from": 5,
+          "to": 11,
+          "oldClaimIds": [
+            235302
+          ],
+          "newClaimId": 1829114,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/grupocanon_barlovento.htm"
+        },
+        {
+          "trackId": 22295,
+          "title": "Busco Mi Destino",
+          "from": 1,
+          "to": 7,
+          "oldClaimIds": [
+            235258
+          ],
+          "newClaimId": 1829110,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/grupocanon_barlovento.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 3991,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 22517,
+          "title": "Macondo",
+          "from": 3,
+          "to": 6,
+          "oldClaimIds": [
+            243438
+          ],
+          "newClaimId": 1829130,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/eclipse_todo_o_todo.htm"
+        },
+        {
+          "trackId": 22520,
+          "title": "Reacción",
+          "from": 1,
+          "to": 4,
+          "oldClaimIds": [
+            243429
+          ],
+          "newClaimId": 1829128,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/eclipse_todo_o_todo.htm"
+        },
+        {
+          "trackId": 22519,
+          "title": "Secreto Contigo",
+          "from": 2,
+          "to": 5,
+          "oldClaimIds": [
+            243433
+          ],
+          "newClaimId": 1829129,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/eclipse_todo_o_todo.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 4477,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 22044,
+          "title": "Johanna",
+          "from": 3,
+          "to": 7,
+          "oldClaimIds": [
+            276616
+          ],
+          "newClaimId": 1829327,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/santa_paula1.htm"
+        },
+        {
+          "trackId": 23038,
+          "title": "Toda La Noche",
+          "from": 4,
+          "to": 8,
+          "oldClaimIds": [
+            276627
+          ],
+          "newClaimId": 1829328,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/santa_paula1.htm"
+        },
+        {
+          "trackId": 23037,
+          "title": "Blanca Navidad",
+          "from": 1,
+          "to": 5,
+          "oldClaimIds": [
+            276595
+          ],
+          "newClaimId": 1829325,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/santa_paula1.htm"
+        },
+        {
+          "trackId": 23040,
+          "title": "Autocontrol",
+          "from": 2,
+          "to": 6,
+          "oldClaimIds": [
+            276606
+          ],
+          "newClaimId": 1829326,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/santa_paula1.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 3980,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 22471,
+          "title": "A Través De La Oscuridad",
+          "from": 2,
+          "to": 6,
+          "oldClaimIds": [
+            242331
+          ],
+          "newClaimId": 1829124,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/dficitt_1musicavzlana.htm"
+        },
+        {
+          "trackId": 22475,
+          "title": "Controversia",
+          "from": 4,
+          "to": 8,
+          "oldClaimIds": [
+            242355
+          ],
+          "newClaimId": 1829126,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/dficitt_1musicavzlana.htm"
+        },
+        {
+          "trackId": 22468,
+          "title": "Mata E'Coco",
+          "from": 1,
+          "to": 5,
+          "oldClaimIds": [
+            242322
+          ],
+          "newClaimId": 1829123,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/dficitt_1musicavzlana.htm"
+        },
+        {
+          "trackId": 22472,
+          "title": "Reflejo Del Humboldt",
+          "from": 3,
+          "to": 7,
+          "oldClaimIds": [
+            242344
+          ],
+          "newClaimId": 1829125,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/dficitt_1musicavzlana.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 3990,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 22522,
+          "title": "Algo Divino",
+          "from": 5,
+          "to": 10,
+          "oldClaimIds": [
+            243571
+          ],
+          "newClaimId": 1829136,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/delia_1eddydelia.htm"
+        },
+        {
+          "trackId": 22521,
+          "title": "Era",
+          "from": 1,
+          "to": 6,
+          "oldClaimIds": [
+            243557
+          ],
+          "newClaimId": 1829132,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/delia_1eddydelia.htm"
+        },
+        {
+          "trackId": 22527,
+          "title": "Sueño De Enamorados",
+          "from": 4,
+          "to": 9,
+          "oldClaimIds": [
+            243569
+          ],
+          "newClaimId": 1829135,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/delia_1eddydelia.htm"
+        },
+        {
+          "trackId": 22518,
+          "title": "Comunicando",
+          "from": 2,
+          "to": 7,
+          "oldClaimIds": [
+            243561
+          ],
+          "newClaimId": 1829133,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/delia_1eddydelia.htm"
+        },
+        {
+          "trackId": 22526,
+          "title": "Adonde Vas",
+          "from": 3,
+          "to": 8,
+          "oldClaimIds": [
+            243565
+          ],
+          "newClaimId": 1829134,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/delia_1eddydelia.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 3613,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 24167,
+          "title": "A Bailar",
+          "from": 5,
+          "to": 9,
+          "oldClaimIds": [
+            324076
+          ],
+          "newClaimId": 1829721,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/azabache_dejamecorrer.htm"
+        },
+        {
+          "trackId": 24168,
+          "title": "La Magia De Tu Amor",
+          "from": 4,
+          "to": 8,
+          "oldClaimIds": [
+            324067
+          ],
+          "newClaimId": 1829720,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/azabache_dejamecorrer.htm"
+        },
+        {
+          "trackId": 24162,
+          "title": "Déjame Correr",
+          "from": 1,
+          "to": 5,
+          "oldClaimIds": [
+            324035
+          ],
+          "newClaimId": 1829717,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/azabache_dejamecorrer.htm"
+        },
+        {
+          "trackId": 24151,
+          "title": "De Caramelo",
+          "from": 2,
+          "to": 6,
+          "oldClaimIds": [
+            324044
+          ],
+          "newClaimId": 1829718,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/azabache_dejamecorrer.htm"
+        },
+        {
+          "trackId": 24166,
+          "title": "Si Amaste Alguna Vez",
+          "from": 3,
+          "to": 7,
+          "oldClaimIds": [
+            324057
+          ],
+          "newClaimId": 1829719,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/azabache_dejamecorrer.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 3721,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 22053,
+          "title": "No Volveran",
+          "from": 2,
+          "to": 6,
+          "oldClaimIds": [
+            368698
+          ],
+          "newClaimId": 1830345,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/delia_5tuyyo.htm"
+        },
+        {
+          "trackId": 22049,
+          "title": "Tu y Yo",
+          "from": 1,
+          "to": 5,
+          "oldClaimIds": [
+            368686
+          ],
+          "newClaimId": 1830344,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/delia_5tuyyo.htm"
+        },
+        {
+          "trackId": 21810,
+          "title": "Canto Extranjero",
+          "from": 3,
+          "to": 7,
+          "oldClaimIds": [
+            368708
+          ],
+          "newClaimId": 1830346,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/delia_5tuyyo.htm"
+        },
+        {
+          "trackId": 21784,
+          "title": "Insaciable Amante",
+          "from": 4,
+          "to": 8,
+          "oldClaimIds": [
+            368719
+          ],
+          "newClaimId": 1830347,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/delia_5tuyyo.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 4023,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 22551,
+          "title": "Mi Pavo",
+          "from": 4,
+          "to": 9,
+          "oldClaimIds": [
+            244737
+          ],
+          "newClaimId": 1829146,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/electrodos_sinverguenza.htm"
+        },
+        {
+          "trackId": 22552,
+          "title": "El Venudo",
+          "from": 1,
+          "to": 6,
+          "oldClaimIds": [
+            244707
+          ],
+          "newClaimId": 1829143,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/electrodos_sinverguenza.htm"
+        },
+        {
+          "trackId": 22553,
+          "title": "El Trovador Del Valle",
+          "from": 2,
+          "to": 7,
+          "oldClaimIds": [
+            244718
+          ],
+          "newClaimId": 1829144,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/electrodos_sinverguenza.htm"
+        },
+        {
+          "trackId": 22554,
+          "title": "Mi Carrito",
+          "from": 3,
+          "to": 8,
+          "oldClaimIds": [
+            244727
+          ],
+          "newClaimId": 1829145,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/electrodos_sinverguenza.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 4040,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 22573,
+          "title": "La Lluvia",
+          "from": 2,
+          "to": 7,
+          "oldClaimIds": [
+            245731
+          ],
+          "newClaimId": 1829149,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/etc_malascompanias.htm"
+        },
+        {
+          "trackId": 22574,
+          "title": "Muñeca De Blanco",
+          "from": 3,
+          "to": 8,
+          "oldClaimIds": [
+            245743
+          ],
+          "newClaimId": 1829150,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/etc_malascompanias.htm"
+        },
+        {
+          "trackId": 22575,
+          "title": "Pasaje A La Soledad",
+          "from": 1,
+          "to": 6,
+          "oldClaimIds": [
+            245720
+          ],
+          "newClaimId": 1829148,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/etc_malascompanias.htm"
+        },
+        {
+          "trackId": 22576,
+          "title": "Fumando Agachado Bajo La Cresta De Un Arbol",
+          "from": 5,
+          "to": 10,
+          "oldClaimIds": [
+            245767
+          ],
+          "newClaimId": 1829152,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/etc_malascompanias.htm"
+        },
+        {
+          "trackId": 22577,
+          "title": "El Petróleo",
+          "from": 4,
+          "to": 9,
+          "oldClaimIds": [
+            245756
+          ],
+          "newClaimId": 1829151,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/etc_malascompanias.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 4046,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 22581,
+          "title": "Juegos",
+          "from": 2,
+          "to": 7,
+          "oldClaimIds": [
+            246176
+          ],
+          "newClaimId": 1829155,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/fabricadsuenos_1fueradfase.htm"
+        },
+        {
+          "trackId": 22580,
+          "title": "Automatización",
+          "from": 5,
+          "to": 10,
+          "oldClaimIds": [
+            246209
+          ],
+          "newClaimId": 1829158,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/fabricadsuenos_1fueradfase.htm"
+        },
+        {
+          "trackId": 22582,
+          "title": "Ocho Horas",
+          "from": 4,
+          "to": 9,
+          "oldClaimIds": [
+            246198
+          ],
+          "newClaimId": 1829157,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/fabricadsuenos_1fueradfase.htm"
+        },
+        {
+          "trackId": 22584,
+          "title": "Detrás De Las Puertas",
+          "from": 3,
+          "to": 8,
+          "oldClaimIds": [
+            246187
+          ],
+          "newClaimId": 1829156,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/fabricadsuenos_1fueradfase.htm"
+        },
+        {
+          "trackId": 22585,
+          "title": "Te Marchastes De Mi",
+          "from": 1,
+          "to": 6,
+          "oldClaimIds": [
+            246165
+          ],
+          "newClaimId": 1829154,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/fabricadsuenos_1fueradfase.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 4047,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 22604,
+          "title": "Jazzaly",
+          "from": 5,
+          "to": 10,
+          "oldClaimIds": [
+            271732
+          ],
+          "newClaimId": 1829302,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/profecia_1.htm"
+        },
+        {
+          "trackId": 22589,
+          "title": "Tratare",
+          "from": 2,
+          "to": 7,
+          "oldClaimIds": [
+            271698
+          ],
+          "newClaimId": 1829299,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/profecia_1.htm"
+        },
+        {
+          "trackId": 22588,
+          "title": "Puedes Encontrarlo",
+          "from": 3,
+          "to": 8,
+          "oldClaimIds": [
+            271709
+          ],
+          "newClaimId": 1829300,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/profecia_1.htm"
+        },
+        {
+          "trackId": 22591,
+          "title": "Sigues Siendo Mia",
+          "from": 1,
+          "to": 6,
+          "oldClaimIds": [
+            271687
+          ],
+          "newClaimId": 1829298,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/profecia_1.htm"
+        },
+        {
+          "trackId": 22603,
+          "title": "Más Allá De Tu Ser",
+          "from": 4,
+          "to": 9,
+          "oldClaimIds": [
+            271721
+          ],
+          "newClaimId": 1829301,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/profecia_1.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 4065,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 22618,
+          "title": "Circunstancias",
+          "from": 2,
+          "to": 4,
+          "oldClaimIds": [
+            247638
+          ],
+          "newClaimId": 1829176,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/fhes_ojosvidrio.htm"
+        },
+        {
+          "trackId": 22621,
+          "title": "Gente Artificial",
+          "from": 1,
+          "to": 3,
+          "oldClaimIds": [
+            247630
+          ],
+          "newClaimId": 1829175,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/fhes_ojosvidrio.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 4226,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 22740,
+          "title": "I'm Falling",
+          "from": 2,
+          "to": 8,
+          "oldClaimIds": [
+            252008
+          ],
+          "newClaimId": 1829201,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/homer_donts_shindig.htm"
+        },
+        {
+          "trackId": 22738,
+          "title": "Wasting My Time",
+          "from": 3,
+          "to": 9,
+          "oldClaimIds": [
+            252019
+          ],
+          "newClaimId": 1829202,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/homer_donts_shindig.htm"
+        },
+        {
+          "trackId": 22741,
+          "title": "Because",
+          "from": 5,
+          "to": 11,
+          "oldClaimIds": [
+            252040
+          ],
+          "newClaimId": 1829204,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/homer_donts_shindig.htm"
+        },
+        {
+          "trackId": 22739,
+          "title": "Carol",
+          "from": 6,
+          "to": 12,
+          "oldClaimIds": [
+            252052
+          ],
+          "newClaimId": 1829205,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/homer_donts_shindig.htm"
+        },
+        {
+          "trackId": 22736,
+          "title": "Satisfaction",
+          "from": 1,
+          "to": 7,
+          "oldClaimIds": [
+            251996
+          ],
+          "newClaimId": 1829200,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/homer_donts_shindig.htm"
+        },
+        {
+          "trackId": 22744,
+          "title": "Till I Met You",
+          "from": 4,
+          "to": 10,
+          "oldClaimIds": [
+            252030
+          ],
+          "newClaimId": 1829203,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/homer_donts_shindig.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 4471,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 23021,
+          "title": "Caminando",
+          "from": 3,
+          "to": 7,
+          "oldClaimIds": [
+            276237
+          ],
+          "newClaimId": 1829316,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/san_francisco_1.htm"
+        },
+        {
+          "trackId": 23022,
+          "title": "Venezuela",
+          "from": 4,
+          "to": 8,
+          "oldClaimIds": [
+            276241
+          ],
+          "newClaimId": 1829317,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/san_francisco_1.htm"
+        },
+        {
+          "trackId": 23020,
+          "title": "Perdóname",
+          "from": 1,
+          "to": 5,
+          "oldClaimIds": [
+            276227
+          ],
+          "newClaimId": 1829314,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/san_francisco_1.htm"
+        },
+        {
+          "trackId": 23024,
+          "title": "Esperaré",
+          "from": 2,
+          "to": 6,
+          "oldClaimIds": [
+            276231
+          ],
+          "newClaimId": 1829315,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/san_francisco_1.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 4112,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 22667,
+          "title": "El Blues De Caracas",
+          "from": 3,
+          "to": 8,
+          "oldClaimIds": [
+            248896
+          ],
+          "newClaimId": 1829180,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/franklin_holland1.htm"
+        },
+        {
+          "trackId": 22665,
+          "title": "Sólo El Tiempo Dirá",
+          "from": 1,
+          "to": 6,
+          "oldClaimIds": [
+            248888
+          ],
+          "newClaimId": 1829178,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/franklin_holland1.htm"
+        },
+        {
+          "trackId": 22649,
+          "title": "Al Público",
+          "from": 2,
+          "to": 7,
+          "oldClaimIds": [
+            248894
+          ],
+          "newClaimId": 1829179,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/franklin_holland1.htm"
+        },
+        {
+          "trackId": 22668,
+          "title": "Al Músico",
+          "from": 4,
+          "to": 9,
+          "oldClaimIds": [
+            248900
+          ],
+          "newClaimId": 1829181,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/franklin_holland1.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 3594,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 23497,
+          "title": "Quien Dijo Rock",
+          "from": 4,
+          "to": 9,
+          "oldClaimIds": [
+            295532
+          ],
+          "newClaimId": 1829508,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/agni_propiasyajenas.htm"
+        },
+        {
+          "trackId": 23492,
+          "title": "Dicen",
+          "from": 2,
+          "to": 7,
+          "oldClaimIds": [
+            295507
+          ],
+          "newClaimId": 1829506,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/agni_propiasyajenas.htm"
+        },
+        {
+          "trackId": 23495,
+          "title": "Somos Mas De La Cuenta",
+          "from": 1,
+          "to": 6,
+          "oldClaimIds": [
+            295496
+          ],
+          "newClaimId": 1829505,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/agni_propiasyajenas.htm"
+        },
+        {
+          "trackId": 23493,
+          "title": "Los Locos De Siempre",
+          "from": 3,
+          "to": 8,
+          "oldClaimIds": [
+            295520
+          ],
+          "newClaimId": 1829507,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/agni_propiasyajenas.htm"
+        },
+        {
+          "trackId": 23499,
+          "title": "Despistando Al Enemigo",
+          "from": 5,
+          "to": 10,
+          "oldClaimIds": [
+            295543
+          ],
+          "newClaimId": 1829509,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/agni_propiasyajenas.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 3604,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 23504,
+          "title": "Tan Solo Un Blues",
+          "from": 4,
+          "to": 9,
+          "oldClaimIds": [
+            295773
+          ],
+          "newClaimId": 1829514,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/agni_entreduendes.htm"
+        },
+        {
+          "trackId": 23500,
+          "title": "No Hace Falta Que",
+          "from": 2,
+          "to": 7,
+          "oldClaimIds": [
+            295751
+          ],
+          "newClaimId": 1829512,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/agni_entreduendes.htm"
+        },
+        {
+          "trackId": 23498,
+          "title": "Ana Me Duele",
+          "from": 3,
+          "to": 8,
+          "oldClaimIds": [
+            295762
+          ],
+          "newClaimId": 1829513,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/agni_entreduendes.htm"
+        },
+        {
+          "trackId": 23501,
+          "title": "Ahi Les Queda Eso",
+          "from": 1,
+          "to": 6,
+          "oldClaimIds": [
+            295740
+          ],
+          "newClaimId": 1829511,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/agni_entreduendes.htm"
+        },
+        {
+          "trackId": 23502,
+          "title": "Cabalgando El Arco Iris",
+          "from": 5,
+          "to": 10,
+          "oldClaimIds": [
+            295784
+          ],
+          "newClaimId": 1829515,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/agni_entreduendes.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 4129,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 23535,
+          "title": "Silencio",
+          "from": 1,
+          "to": 5,
+          "oldClaimIds": [
+            296562
+          ],
+          "newClaimId": 1829523,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/gina_agny2_sangrefuego.htm"
+        },
+        {
+          "trackId": 23539,
+          "title": "Será Mejor",
+          "from": 4,
+          "to": 8,
+          "oldClaimIds": [
+            296574
+          ],
+          "newClaimId": 1829526,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/gina_agny2_sangrefuego.htm"
+        },
+        {
+          "trackId": 23536,
+          "title": "Tu y Yo",
+          "from": 3,
+          "to": 7,
+          "oldClaimIds": [
+            296569
+          ],
+          "newClaimId": 1829525,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/gina_agny2_sangrefuego.htm"
+        },
+        {
+          "trackId": 23537,
+          "title": "Dicen",
+          "from": 2,
+          "to": 6,
+          "oldClaimIds": [
+            296565
+          ],
+          "newClaimId": 1829524,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/gina_agny2_sangrefuego.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 4145,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 23538,
+          "title": "Yo Se Lo Que Siento",
+          "from": 2,
+          "to": 7,
+          "oldClaimIds": [
+            296720
+          ],
+          "newClaimId": 1829533,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/gina_agny3.htm"
+        },
+        {
+          "trackId": 23532,
+          "title": "Como Antes",
+          "from": 3,
+          "to": 8,
+          "oldClaimIds": [
+            296725
+          ],
+          "newClaimId": 1829534,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/gina_agny3.htm"
+        },
+        {
+          "trackId": 23454,
+          "title": "Es Amor",
+          "from": 5,
+          "to": 10,
+          "oldClaimIds": [
+            296733
+          ],
+          "newClaimId": 1829536,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/gina_agny3.htm"
+        },
+        {
+          "trackId": 23531,
+          "title": "Nada",
+          "from": 1,
+          "to": 6,
+          "oldClaimIds": [
+            296718
+          ],
+          "newClaimId": 1829532,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/gina_agny3.htm"
+        },
+        {
+          "trackId": 23455,
+          "title": "Lejos",
+          "from": 4,
+          "to": 9,
+          "oldClaimIds": [
+            296728
+          ],
+          "newClaimId": 1829535,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/gina_agny3.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 3860,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 24527,
+          "title": "Castellana 21",
+          "from": 1,
+          "to": 7,
+          "oldClaimIds": [
+            343773
+          ],
+          "newClaimId": 1829836,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmata_93miramelosojos.htm"
+        },
+        {
+          "trackId": 24524,
+          "title": "Tan Lejos De Ti",
+          "from": 3,
+          "to": 9,
+          "oldClaimIds": [
+            343797
+          ],
+          "newClaimId": 1829838,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmata_93miramelosojos.htm"
+        },
+        {
+          "trackId": 24531,
+          "title": "Más Me Hubiera Valido",
+          "from": 5,
+          "to": 11,
+          "oldClaimIds": [
+            343823
+          ],
+          "newClaimId": 1829840,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmata_93miramelosojos.htm"
+        },
+        {
+          "trackId": 24526,
+          "title": "Puesto A Valer",
+          "from": 4,
+          "to": 10,
+          "oldClaimIds": [
+            343806
+          ],
+          "newClaimId": 1829839,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmata_93miramelosojos.htm"
+        },
+        {
+          "trackId": 24528,
+          "title": "Caballero De La Alegre Figura",
+          "from": 2,
+          "to": 8,
+          "oldClaimIds": [
+            343783
+          ],
+          "newClaimId": 1829837,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmata_93miramelosojos.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 3859,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 24523,
+          "title": "Si Te Vuelvo A Ver",
+          "from": 3,
+          "to": 8,
+          "oldClaimIds": [
+            343549
+          ],
+          "newClaimId": 1829832,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmata_90cautivo.htm"
+        },
+        {
+          "trackId": 24518,
+          "title": "Sera Lo Que Sera",
+          "from": 1,
+          "to": 6,
+          "oldClaimIds": [
+            343527
+          ],
+          "newClaimId": 1829830,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmata_90cautivo.htm"
+        },
+        {
+          "trackId": 24520,
+          "title": "Cuando Tu No Estas",
+          "from": 2,
+          "to": 7,
+          "oldClaimIds": [
+            343538
+          ],
+          "newClaimId": 1829831,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmata_90cautivo.htm"
+        },
+        {
+          "trackId": 24522,
+          "title": "Alguien Divino",
+          "from": 4,
+          "to": 9,
+          "oldClaimIds": [
+            343559
+          ],
+          "newClaimId": 1829833,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmata_90cautivo.htm"
+        },
+        {
+          "trackId": 24521,
+          "title": "Busco Un Corazón",
+          "from": 5,
+          "to": 10,
+          "oldClaimIds": [
+            343570
+          ],
+          "newClaimId": 1829834,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmata_90cautivo.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 3498,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 24626,
+          "title": "Sigue De Largo (Walk On By)",
+          "from": 1,
+          "to": 6,
+          "oldClaimIds": [
+            345036
+          ],
+          "newClaimId": 1829882,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmorean_1carlosmorean.htm"
+        },
+        {
+          "trackId": 24584,
+          "title": "Dana",
+          "from": 6,
+          "to": 11,
+          "oldClaimIds": [
+            345092
+          ],
+          "newClaimId": 1829923,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmorean_1carlosmorean.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 3499,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 24829,
+          "title": "Un Hombre y Una Mujer",
+          "from": 1,
+          "to": 6,
+          "oldClaimIds": [
+            350480
+          ],
+          "newClaimId": 1830006,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmoreno_80estanoche.htm"
+        },
+        {
+          "trackId": 24838,
+          "title": "Déjalo Vivir",
+          "from": 5,
+          "to": 10,
+          "oldClaimIds": [
+            350496
+          ],
+          "newClaimId": 1830010,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmoreno_80estanoche.htm"
+        },
+        {
+          "trackId": 24837,
+          "title": "Recuérdame",
+          "from": 2,
+          "to": 7,
+          "oldClaimIds": [
+            350484
+          ],
+          "newClaimId": 1830007,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmoreno_80estanoche.htm"
+        },
+        {
+          "trackId": 24834,
+          "title": "Espérame",
+          "from": 3,
+          "to": 8,
+          "oldClaimIds": [
+            350487
+          ],
+          "newClaimId": 1830008,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmoreno_80estanoche.htm"
+        },
+        {
+          "trackId": 24835,
+          "title": "Que Difícil Es Decir Te Quiero",
+          "from": 4,
+          "to": 9,
+          "oldClaimIds": [
+            350492
+          ],
+          "newClaimId": 1830009,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmoreno_80estanoche.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 3885,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 24844,
+          "title": "Lo Siento",
+          "from": 1,
+          "to": 6,
+          "oldClaimIds": [
+            350616
+          ],
+          "newClaimId": 1830012,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmoreno_83comosiempre.htm"
+        },
+        {
+          "trackId": 24846,
+          "title": "Sólo Por Ti",
+          "from": 4,
+          "to": 9,
+          "oldClaimIds": [
+            350626
+          ],
+          "newClaimId": 1830015,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmoreno_83comosiempre.htm"
+        },
+        {
+          "trackId": 24841,
+          "title": "Desde Cuando",
+          "from": 3,
+          "to": 8,
+          "oldClaimIds": [
+            350624
+          ],
+          "newClaimId": 1830014,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmoreno_83comosiempre.htm"
+        },
+        {
+          "trackId": 24848,
+          "title": "Vivo Pensando En Ti",
+          "from": 5,
+          "to": 10,
+          "oldClaimIds": [
+            350631
+          ],
+          "newClaimId": 1830016,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmoreno_83comosiempre.htm"
+        },
+        {
+          "trackId": 24845,
+          "title": "El Amor Más Grande Del Mundo",
+          "from": 2,
+          "to": 7,
+          "oldClaimIds": [
+            350618
+          ],
+          "newClaimId": 1830013,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmoreno_83comosiempre.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 3880,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 24850,
+          "title": "Abrázame",
+          "from": 2,
+          "to": 6,
+          "oldClaimIds": [
+            350723
+          ],
+          "newClaimId": 1830019,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmoreno_89aquiestoyotravez.htm"
+        },
+        {
+          "trackId": 24854,
+          "title": "El y El",
+          "from": 4,
+          "to": 8,
+          "oldClaimIds": [
+            350732
+          ],
+          "newClaimId": 1830021,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmoreno_89aquiestoyotravez.htm"
+        },
+        {
+          "trackId": 24851,
+          "title": "Un Amigo Más",
+          "from": 1,
+          "to": 5,
+          "oldClaimIds": [
+            350720
+          ],
+          "newClaimId": 1830018,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmoreno_89aquiestoyotravez.htm"
+        },
+        {
+          "trackId": 24856,
+          "title": "Estoy Marcado",
+          "from": 3,
+          "to": 7,
+          "oldClaimIds": [
+            350726
+          ],
+          "newClaimId": 1830020,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmoreno_89aquiestoyotravez.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 4164,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 24861,
+          "title": "Tu Te Equivovas",
+          "from": 1,
+          "to": 6,
+          "oldClaimIds": [
+            350913
+          ],
+          "newClaimId": 1830029,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/granfogata_2nosomos.htm"
+        },
+        {
+          "trackId": 24859,
+          "title": "Esa Gente",
+          "from": 2,
+          "to": 7,
+          "oldClaimIds": [
+            350915
+          ],
+          "newClaimId": 1830030,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/granfogata_2nosomos.htm"
+        },
+        {
+          "trackId": 24862,
+          "title": "Septiembre",
+          "from": 3,
+          "to": 8,
+          "oldClaimIds": [
+            350920
+          ],
+          "newClaimId": 1830031,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/granfogata_2nosomos.htm"
+        },
+        {
+          "trackId": 24860,
+          "title": "Nuestra Canción",
+          "from": 4,
+          "to": 9,
+          "oldClaimIds": [
+            350923
+          ],
+          "newClaimId": 1830032,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/granfogata_2nosomos.htm"
+        },
+        {
+          "trackId": 24867,
+          "title": "Confía En Mi",
+          "from": 5,
+          "to": 10,
+          "oldClaimIds": [
+            350926
+          ],
+          "newClaimId": 1830033,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/granfogata_2nosomos.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 4159,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 24863,
+          "title": "Siempre Habrá Una Primera Vez",
+          "from": 1,
+          "to": 6,
+          "oldClaimIds": [
+            351098
+          ],
+          "newClaimId": 1830041,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/granfogata_4.htm"
+        },
+        {
+          "trackId": 24871,
+          "title": "Travesía",
+          "from": 4,
+          "to": 9,
+          "oldClaimIds": [
+            351110
+          ],
+          "newClaimId": 1830044,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/granfogata_4.htm"
+        },
+        {
+          "trackId": 24873,
+          "title": "Huella",
+          "from": 2,
+          "to": 7,
+          "oldClaimIds": [
+            351103
+          ],
+          "newClaimId": 1830042,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/granfogata_4.htm"
+        },
+        {
+          "trackId": 24870,
+          "title": "Más Que Una Amistad",
+          "from": 3,
+          "to": 8,
+          "oldClaimIds": [
+            351106
+          ],
+          "newClaimId": 1830043,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/granfogata_4.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 3891,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 24925,
+          "title": "No Entiendo",
+          "from": 2,
+          "to": 7,
+          "oldClaimIds": [
+            352374
+          ],
+          "newClaimId": 1830055,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_cazadores_72vuelvete.htm"
+        },
+        {
+          "trackId": 24926,
+          "title": "Qué Piensas Hacer",
+          "from": 5,
+          "to": 10,
+          "oldClaimIds": [
+            352406
+          ],
+          "newClaimId": 1830058,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_cazadores_72vuelvete.htm"
+        },
+        {
+          "trackId": 24924,
+          "title": "Esa Canción",
+          "from": 1,
+          "to": 6,
+          "oldClaimIds": [
+            352363
+          ],
+          "newClaimId": 1830054,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_cazadores_72vuelvete.htm"
+        },
+        {
+          "trackId": 24930,
+          "title": "Un Algo Que No Se",
+          "from": 6,
+          "to": 11,
+          "oldClaimIds": [
+            352418
+          ],
+          "newClaimId": 1830059,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_cazadores_72vuelvete.htm"
+        },
+        {
+          "trackId": 24927,
+          "title": "Ese Hombre",
+          "from": 3,
+          "to": 8,
+          "oldClaimIds": [
+            352386
+          ],
+          "newClaimId": 1830056,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_cazadores_72vuelvete.htm"
+        },
+        {
+          "trackId": 24928,
+          "title": "Te Lo Diré",
+          "from": 4,
+          "to": 9,
+          "oldClaimIds": [
+            352396
+          ],
+          "newClaimId": 1830057,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_cazadores_72vuelvete.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 4162,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 24865,
+          "title": "Nunca Te Enamores De Un Músico de Rock´n´Roll",
+          "from": 4,
+          "to": 9,
+          "oldClaimIds": [
+            351025
+          ],
+          "newClaimId": 1830038,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/granfogata_3serenata.htm"
+        },
+        {
+          "trackId": 24849,
+          "title": "Tu Me Enciendes",
+          "from": 2,
+          "to": 7,
+          "oldClaimIds": [
+            351014
+          ],
+          "newClaimId": 1830036,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/granfogata_3serenata.htm"
+        },
+        {
+          "trackId": 24866,
+          "title": "Primavera",
+          "from": 3,
+          "to": 8,
+          "oldClaimIds": [
+            351020
+          ],
+          "newClaimId": 1830037,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/granfogata_3serenata.htm"
+        },
+        {
+          "trackId": 24864,
+          "title": "Nuestro Gran Amor",
+          "from": 5,
+          "to": 10,
+          "oldClaimIds": [
+            351027
+          ],
+          "newClaimId": 1830039,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/granfogata_3serenata.htm"
+        },
+        {
+          "trackId": 24847,
+          "title": "Eras Tu Jesús",
+          "from": 1,
+          "to": 6,
+          "oldClaimIds": [
+            351012
+          ],
+          "newClaimId": 1830035,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/granfogata_3serenata.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 4659,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 24692,
+          "title": "Ingrata Pérfida",
+          "from": 2,
+          "to": 6,
+          "oldClaimIds": [
+            346841
+          ],
+          "newClaimId": 1829960,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/medioevo_01las10.htm"
+        },
+        {
+          "trackId": 24686,
+          "title": "La Vida y sus Cosas De La Vida",
+          "from": 1,
+          "to": 5,
+          "oldClaimIds": [
+            346836
+          ],
+          "newClaimId": 1829959,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/medioevo_01las10.htm"
+        },
+        {
+          "trackId": 24687,
+          "title": "Aquella Clase De Mirada Serena",
+          "from": 4,
+          "to": 8,
+          "oldClaimIds": [
+            346849
+          ],
+          "newClaimId": 1829962,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/medioevo_01las10.htm"
+        },
+        {
+          "trackId": 24690,
+          "title": "Incumbencia Cruel",
+          "from": 5,
+          "to": 9,
+          "oldClaimIds": [
+            346851
+          ],
+          "newClaimId": 1829963,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/medioevo_01las10.htm"
+        },
+        {
+          "trackId": 24689,
+          "title": "El Puñal Del Olvido",
+          "from": 3,
+          "to": 7,
+          "oldClaimIds": [
+            346842
+          ],
+          "newClaimId": 1829961,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/medioevo_01las10.htm"
+        },
+        {
+          "trackId": 24691,
+          "title": "Eres Una Brújula",
+          "from": 6,
+          "to": 10,
+          "oldClaimIds": [
+            346857
+          ],
+          "newClaimId": 1829964,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/medioevo_01las10.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 3909,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 25079,
+          "title": "Sin Sentido",
+          "from": 4,
+          "to": 9,
+          "oldClaimIds": [
+            356506
+          ],
+          "newClaimId": 1830093,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/100grados_clima.htm"
+        },
+        {
+          "trackId": 25078,
+          "title": "Más",
+          "from": 1,
+          "to": 6,
+          "oldClaimIds": [
+            356474
+          ],
+          "newClaimId": 1830090,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/100grados_clima.htm"
+        },
+        {
+          "trackId": 25028,
+          "title": "Profundo",
+          "from": 2,
+          "to": 7,
+          "oldClaimIds": [
+            356484
+          ],
+          "newClaimId": 1830091,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/100grados_clima.htm"
+        },
+        {
+          "trackId": 25081,
+          "title": "Clima De Extásis",
+          "from": 5,
+          "to": 10,
+          "oldClaimIds": [
+            356518
+          ],
+          "newClaimId": 1830094,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/100grados_clima.htm"
+        },
+        {
+          "trackId": 25080,
+          "title": "María Alejandra",
+          "from": 3,
+          "to": 8,
+          "oldClaimIds": [
+            356496
+          ],
+          "newClaimId": 1830092,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/100grados_clima.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 4674,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 25159,
+          "title": "Lo Que Siento Por Ti",
+          "from": 4,
+          "to": 9,
+          "oldClaimIds": [
+            360021
+          ],
+          "newClaimId": 1830147,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/colina_3cuandoloco.htm"
+        },
+        {
+          "trackId": 25161,
+          "title": "Aprendiendo A Olvidar",
+          "from": 1,
+          "to": 6,
+          "oldClaimIds": [
+            359987
+          ],
+          "newClaimId": 1830144,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/colina_3cuandoloco.htm"
+        },
+        {
+          "trackId": 25160,
+          "title": "Algo Bueno Tiene Que Pasar",
+          "from": 2,
+          "to": 7,
+          "oldClaimIds": [
+            359998
+          ],
+          "newClaimId": 1830145,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/colina_3cuandoloco.htm"
+        },
+        {
+          "trackId": 25162,
+          "title": "Tratándose De Ti",
+          "from": 3,
+          "to": 8,
+          "oldClaimIds": [
+            360009
+          ],
+          "newClaimId": 1830146,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/colina_3cuandoloco.htm"
+        },
+        {
+          "trackId": 25163,
+          "title": "Vuelve A Casa",
+          "from": 5,
+          "to": 10,
+          "oldClaimIds": [
+            360031
+          ],
+          "newClaimId": 1830148,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/colina_3cuandoloco.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 3893,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 24931,
+          "title": "Tú",
+          "from": 1,
+          "to": 6,
+          "oldClaimIds": [
+            352833
+          ],
+          "newClaimId": 1830073,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_cazadores_83credulidades.htm"
+        },
+        {
+          "trackId": 24935,
+          "title": "Papá",
+          "from": 4,
+          "to": 9,
+          "oldClaimIds": [
+            352865
+          ],
+          "newClaimId": 1830076,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_cazadores_83credulidades.htm"
+        },
+        {
+          "trackId": 24933,
+          "title": "Guajira De Amor",
+          "from": 3,
+          "to": 8,
+          "oldClaimIds": [
+            352854
+          ],
+          "newClaimId": 1830075,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_cazadores_83credulidades.htm"
+        },
+        {
+          "trackId": 24934,
+          "title": "Una Canción De Amor",
+          "from": 2,
+          "to": 7,
+          "oldClaimIds": [
+            352844
+          ],
+          "newClaimId": 1830074,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_cazadores_83credulidades.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 3911,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 25107,
+          "title": "Odisea",
+          "from": 3,
+          "to": 8,
+          "oldClaimIds": [
+            358727
+          ],
+          "newClaimId": 1830119,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/clarox_1.htm"
+        },
+        {
+          "trackId": 25122,
+          "title": "Deseo",
+          "from": 1,
+          "to": 6,
+          "oldClaimIds": [
+            358711
+          ],
+          "newClaimId": 1830117,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/clarox_1.htm"
+        },
+        {
+          "trackId": 25121,
+          "title": "Luna",
+          "from": 2,
+          "to": 7,
+          "oldClaimIds": [
+            358715
+          ],
+          "newClaimId": 1830118,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/clarox_1.htm"
+        },
+        {
+          "trackId": 25119,
+          "title": "(Risolin) Roky Santiago",
+          "from": 5,
+          "to": 10,
+          "oldClaimIds": [
+            358749
+          ],
+          "newClaimId": 1830121,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/clarox_1.htm"
+        },
+        {
+          "trackId": 25120,
+          "title": "Lejania",
+          "from": 4,
+          "to": 9,
+          "oldClaimIds": [
+            358737
+          ],
+          "newClaimId": 1830120,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/clarox_1.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 4016,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 24707,
+          "title": "La Suerte Del Negro",
+          "from": 1,
+          "to": 5,
+          "oldClaimIds": [
+            347493
+          ],
+          "newClaimId": 1829976,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/medioevo_05denuevo.htm"
+        },
+        {
+          "trackId": 24706,
+          "title": "Malvina Maradona, Viuda De Galtieri",
+          "from": 3,
+          "to": 7,
+          "oldClaimIds": [
+            347501
+          ],
+          "newClaimId": 1829978,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/medioevo_05denuevo.htm"
+        },
+        {
+          "trackId": 24709,
+          "title": "Una Buena Mamá",
+          "from": 4,
+          "to": 8,
+          "oldClaimIds": [
+            347505
+          ],
+          "newClaimId": 1829979,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/medioevo_05denuevo.htm"
+        },
+        {
+          "trackId": 24702,
+          "title": "Chaminha",
+          "from": 2,
+          "to": 6,
+          "oldClaimIds": [
+            347497
+          ],
+          "newClaimId": 1829977,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/medioevo_05denuevo.htm"
+        },
+        {
+          "trackId": 24710,
+          "title": "Viele Kleine Hunchen Sagen",
+          "from": 5,
+          "to": 9,
+          "oldClaimIds": [
+            347509
+          ],
+          "newClaimId": 1829980,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/medioevo_05denuevo.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 3883,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 24803,
+          "title": "Mi Amigo El Niño",
+          "from": 4,
+          "to": 9,
+          "oldClaimIds": [
+            350375
+          ],
+          "newClaimId": 1830003,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmoreno_79amigosyamantes.htm"
+        },
+        {
+          "trackId": 24832,
+          "title": "Cuando Me Quieras",
+          "from": 5,
+          "to": 10,
+          "oldClaimIds": [
+            350377
+          ],
+          "newClaimId": 1830004,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmoreno_79amigosyamantes.htm"
+        },
+        {
+          "trackId": 24812,
+          "title": "Tú",
+          "from": 1,
+          "to": 6,
+          "oldClaimIds": [
+            350362
+          ],
+          "newClaimId": 1830000,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmoreno_79amigosyamantes.htm"
+        },
+        {
+          "trackId": 24833,
+          "title": "Recuerda Que Aún Te Quiero",
+          "from": 2,
+          "to": 7,
+          "oldClaimIds": [
+            350366
+          ],
+          "newClaimId": 1830001,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmoreno_79amigosyamantes.htm"
+        },
+        {
+          "trackId": 24831,
+          "title": "Cuando Termina Un Amor",
+          "from": 3,
+          "to": 8,
+          "oldClaimIds": [
+            350369
+          ],
+          "newClaimId": 1830002,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmoreno_79amigosyamantes.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 3912,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 25125,
+          "title": "Andando",
+          "from": 2,
+          "to": 6,
+          "oldClaimIds": [
+            358872
+          ],
+          "newClaimId": 1830124,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/clarox_2zona.htm"
+        },
+        {
+          "trackId": 25123,
+          "title": "Solo Una Vez",
+          "from": 1,
+          "to": 5,
+          "oldClaimIds": [
+            358861
+          ],
+          "newClaimId": 1830123,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/clarox_2zona.htm"
+        },
+        {
+          "trackId": 25127,
+          "title": "Desengaño",
+          "from": 3,
+          "to": 7,
+          "oldClaimIds": [
+            358883
+          ],
+          "newClaimId": 1830125,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/clarox_2zona.htm"
+        },
+        {
+          "trackId": 25124,
+          "title": "Estación de Gato Negro",
+          "from": 4,
+          "to": 8,
+          "oldClaimIds": [
+            358894
+          ],
+          "newClaimId": 1830126,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/clarox_2zona.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 4019,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 24694,
+          "title": "Leopoldo Jackson (Er Matao)",
+          "from": 1,
+          "to": 6,
+          "oldClaimIds": [
+            346945
+          ],
+          "newClaimId": 1829966,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/medioevo_02.htm"
+        },
+        {
+          "trackId": 24685,
+          "title": "Guadalupe",
+          "from": 2,
+          "to": 7,
+          "oldClaimIds": [
+            346957
+          ],
+          "newClaimId": 1829967,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/medioevo_02.htm"
+        },
+        {
+          "trackId": 24693,
+          "title": "La Erótica",
+          "from": 3,
+          "to": 8,
+          "oldClaimIds": [
+            346958
+          ],
+          "newClaimId": 1829968,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/medioevo_02.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 3942,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 25375,
+          "title": "Kryptonita Líquida",
+          "from": 1,
+          "to": 5,
+          "oldClaimIds": [
+            365949
+          ],
+          "newClaimId": 1830190,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_05kryptonita.htm"
+        },
+        {
+          "trackId": 25376,
+          "title": "Skylab",
+          "from": 3,
+          "to": 7,
+          "oldClaimIds": [
+            365957
+          ],
+          "newClaimId": 1830192,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_05kryptonita.htm"
+        },
+        {
+          "trackId": 25379,
+          "title": "Concierto De Violines",
+          "from": 4,
+          "to": 8,
+          "oldClaimIds": [
+            365961
+          ],
+          "newClaimId": 1830193,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_05kryptonita.htm"
+        },
+        {
+          "trackId": 25377,
+          "title": "Hablando Con El Viento",
+          "from": 2,
+          "to": 6,
+          "oldClaimIds": [
+            365952
+          ],
+          "newClaimId": 1830191,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_05kryptonita.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 3943,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 25388,
+          "title": "Nuestra Aventura",
+          "from": 4,
+          "to": 8,
+          "oldClaimIds": [
+            366216
+          ],
+          "newClaimId": 1830204,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_07porqueno.htm"
+        },
+        {
+          "trackId": 25385,
+          "title": "Ayer Descubrí Tu Mirada",
+          "from": 1,
+          "to": 5,
+          "oldClaimIds": [
+            366184
+          ],
+          "newClaimId": 1830201,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_07porqueno.htm"
+        },
+        {
+          "trackId": 25386,
+          "title": "Balada De Cumpleaños",
+          "from": 2,
+          "to": 6,
+          "oldClaimIds": [
+            366194
+          ],
+          "newClaimId": 1830202,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_07porqueno.htm"
+        },
+        {
+          "trackId": 25387,
+          "title": "Combination",
+          "from": 3,
+          "to": 7,
+          "oldClaimIds": [
+            366205
+          ],
+          "newClaimId": 1830203,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_07porqueno.htm"
+        },
+        {
+          "trackId": 25390,
+          "title": "Mi Pequeña Canción De Navidad",
+          "from": 5,
+          "to": 9,
+          "oldClaimIds": [
+            366227
+          ],
+          "newClaimId": 1830205,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_07porqueno.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 3946,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 25395,
+          "title": "Amor A Primera Vista",
+          "from": 1,
+          "to": 5,
+          "oldClaimIds": [
+            366510
+          ],
+          "newClaimId": 1830213,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_09_440torker.htm"
+        },
+        {
+          "trackId": 25396,
+          "title": "Hasta Mi Estrella",
+          "from": 4,
+          "to": 8,
+          "oldClaimIds": [
+            366541
+          ],
+          "newClaimId": 1830216,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_09_440torker.htm"
+        },
+        {
+          "trackId": 25393,
+          "title": "Amandote",
+          "from": 2,
+          "to": 6,
+          "oldClaimIds": [
+            366520
+          ],
+          "newClaimId": 1830214,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_09_440torker.htm"
+        },
+        {
+          "trackId": 25400,
+          "title": "Reflejos",
+          "from": 5,
+          "to": 9,
+          "oldClaimIds": [
+            366554
+          ],
+          "newClaimId": 1830217,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_09_440torker.htm"
+        },
+        {
+          "trackId": 25398,
+          "title": "Rock De Papupapa",
+          "from": 3,
+          "to": 7,
+          "oldClaimIds": [
+            366531
+          ],
+          "newClaimId": 1830215,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_09_440torker.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 3962,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 25472,
+          "title": "Que Me Esta Pasando",
+          "from": 3,
+          "to": 7,
+          "oldClaimIds": [
+            368315
+          ],
+          "newClaimId": 1830335,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/delia_3unpoquitomas.htm"
+        },
+        {
+          "trackId": 25470,
+          "title": "Vendra",
+          "from": 2,
+          "to": 6,
+          "oldClaimIds": [
+            368304
+          ],
+          "newClaimId": 1830334,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/delia_3unpoquitomas.htm"
+        },
+        {
+          "trackId": 25467,
+          "title": "Chicano",
+          "from": 1,
+          "to": 5,
+          "oldClaimIds": [
+            368292
+          ],
+          "newClaimId": 1830333,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/delia_3unpoquitomas.htm"
+        },
+        {
+          "trackId": 25471,
+          "title": "Nubes Sobre El Mar",
+          "from": 4,
+          "to": 8,
+          "oldClaimIds": [
+            368326
+          ],
+          "newClaimId": 1830336,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/delia_3unpoquitomas.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 3966,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 25478,
+          "title": "Son Mentiras",
+          "from": 1,
+          "to": 6,
+          "oldClaimIds": [
+            368796
+          ],
+          "newClaimId": 1830349,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/delia_6lavozdelcorazon.htm"
+        },
+        {
+          "trackId": 25482,
+          "title": "Perdóneme",
+          "from": 4,
+          "to": 9,
+          "oldClaimIds": [
+            368808
+          ],
+          "newClaimId": 1830352,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/delia_6lavozdelcorazon.htm"
+        },
+        {
+          "trackId": 25480,
+          "title": "Te Deseo",
+          "from": 3,
+          "to": 8,
+          "oldClaimIds": [
+            368804
+          ],
+          "newClaimId": 1830351,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/delia_6lavozdelcorazon.htm"
+        },
+        {
+          "trackId": 25479,
+          "title": "Que Equivocado",
+          "from": 2,
+          "to": 7,
+          "oldClaimIds": [
+            368802
+          ],
+          "newClaimId": 1830350,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/delia_6lavozdelcorazon.htm"
+        },
+        {
+          "trackId": 25481,
+          "title": "Si Me Contaras",
+          "from": 5,
+          "to": 10,
+          "oldClaimIds": [
+            368812
+          ],
+          "newClaimId": 1830353,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/delia_6lavozdelcorazon.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 3963,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 25476,
+          "title": "Para Que",
+          "from": 5,
+          "to": 9,
+          "oldClaimIds": [
+            368476
+          ],
+          "newClaimId": 1830342,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/delia_4yel.htm"
+        },
+        {
+          "trackId": 25473,
+          "title": "Quedate Esta Noche",
+          "from": 3,
+          "to": 7,
+          "oldClaimIds": [
+            368455
+          ],
+          "newClaimId": 1830340,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/delia_4yel.htm"
+        },
+        {
+          "trackId": 25475,
+          "title": "Dejame",
+          "from": 4,
+          "to": 8,
+          "oldClaimIds": [
+            368464
+          ],
+          "newClaimId": 1830341,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/delia_4yel.htm"
+        },
+        {
+          "trackId": 25477,
+          "title": "Y La Arena Siempre Espera",
+          "from": 1,
+          "to": 5,
+          "oldClaimIds": [
+            368433
+          ],
+          "newClaimId": 1830338,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/delia_4yel.htm"
+        },
+        {
+          "trackId": 25474,
+          "title": "Para Vivir",
+          "from": 2,
+          "to": 6,
+          "oldClaimIds": [
+            368444
+          ],
+          "newClaimId": 1830339,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/delia_4yel.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 3994,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 25719,
+          "title": "Tu Olor Tu Piel Tu Voz",
+          "from": 2,
+          "to": 7,
+          "oldClaimIds": [
+            379168
+          ],
+          "newClaimId": 1830379,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/edgaralexander_83edgar.htm"
+        },
+        {
+          "trackId": 25716,
+          "title": "El Milagro Más Grande",
+          "from": 3,
+          "to": 8,
+          "oldClaimIds": [
+            379172
+          ],
+          "newClaimId": 1830380,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/edgaralexander_83edgar.htm"
+        },
+        {
+          "trackId": 25722,
+          "title": "Una Canción Para Ti",
+          "from": 1,
+          "to": 6,
+          "oldClaimIds": [
+            379164
+          ],
+          "newClaimId": 1830378,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/edgaralexander_83edgar.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 3945,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 25360,
+          "title": "O Sole Mio",
+          "from": 4,
+          "to": 9,
+          "oldClaimIds": [
+            365727
+          ],
+          "newClaimId": 1830175,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_02orquesta.htm"
+        },
+        {
+          "trackId": 25361,
+          "title": "Delirio en Fa Menor",
+          "from": 1,
+          "to": 6,
+          "oldClaimIds": [
+            365715
+          ],
+          "newClaimId": 1830172,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_02orquesta.htm"
+        },
+        {
+          "trackId": 25358,
+          "title": "Recuerdos De Un Mañana",
+          "from": 2,
+          "to": 7,
+          "oldClaimIds": [
+            365719
+          ],
+          "newClaimId": 1830173,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_02orquesta.htm"
+        },
+        {
+          "trackId": 25359,
+          "title": "Carrusel Para Mi Hijo",
+          "from": 3,
+          "to": 8,
+          "oldClaimIds": [
+            365722
+          ],
+          "newClaimId": 1830174,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_02orquesta.htm"
+        },
+        {
+          "trackId": 25363,
+          "title": "Mi Realidad",
+          "from": 5,
+          "to": 10,
+          "oldClaimIds": [
+            365731
+          ],
+          "newClaimId": 1830176,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_02orquesta.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 3424,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 23266,
+          "title": "Marca De Fuego",
+          "from": 1,
+          "to": 5,
+          "oldClaimIds": [
+            287211
+          ],
+          "newClaimId": 1829387,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/williams_marcadfuego.htm"
+        },
+        {
+          "trackId": 23264,
+          "title": "Así Es El Amor",
+          "from": 2,
+          "to": 6,
+          "oldClaimIds": [
+            287213
+          ],
+          "newClaimId": 1829388,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/williams_marcadfuego.htm"
+        },
+        {
+          "trackId": 23267,
+          "title": "Amiga",
+          "from": 3,
+          "to": 7,
+          "oldClaimIds": [
+            287217
+          ],
+          "newClaimId": 1829389,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/williams_marcadfuego.htm"
+        },
+        {
+          "trackId": 23268,
+          "title": "Te Quiero Amar",
+          "from": 4,
+          "to": 8,
+          "oldClaimIds": [
+            287221
+          ],
+          "newClaimId": 1829390,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/williams_marcadfuego.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 3437,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 21398,
+          "title": "Si Tu Quisieras",
+          "from": 1,
+          "to": 7,
+          "oldClaimIds": [
+            261928
+          ],
+          "newClaimId": 1829250,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/the_pets_1.htm"
+        },
+        {
+          "trackId": 21255,
+          "title": "Una Como Ella",
+          "from": 2,
+          "to": 8,
+          "oldClaimIds": [
+            261941
+          ],
+          "newClaimId": 1829251,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/the_pets_1.htm"
+        },
+        {
+          "trackId": 21265,
+          "title": "Revolución",
+          "from": 3,
+          "to": 9,
+          "oldClaimIds": [
+            261956
+          ],
+          "newClaimId": 1829252,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/the_pets_1.htm"
+        },
+        {
+          "trackId": 21276,
+          "title": "Toma La Guitarra",
+          "from": 4,
+          "to": 10,
+          "oldClaimIds": [
+            261964
+          ],
+          "newClaimId": 1829253,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/the_pets_1.htm"
+        },
+        {
+          "trackId": 21280,
+          "title": "La Pobreza",
+          "from": 5,
+          "to": 11,
+          "oldClaimIds": [
+            261974
+          ],
+          "newClaimId": 1829254,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/the_pets_1.htm"
+        },
+        {
+          "trackId": 21284,
+          "title": "En El Verano",
+          "from": 6,
+          "to": 12,
+          "oldClaimIds": [
+            261985
+          ],
+          "newClaimId": 1829255,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/the_pets_1.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 3476,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 21533,
+          "title": "Vida Mia",
+          "from": 1,
+          "to": 6,
+          "oldClaimIds": [
+            330868
+          ],
+          "newClaimId": 1829773,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/unicornio_2lamagia.htm"
+        },
+        {
+          "trackId": 21535,
+          "title": "Tu",
+          "from": 2,
+          "to": 7,
+          "oldClaimIds": [
+            330880
+          ],
+          "newClaimId": 1829774,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/unicornio_2lamagia.htm"
+        },
+        {
+          "trackId": 21537,
+          "title": "Cuando Yo Tengo 64",
+          "from": 3,
+          "to": 8,
+          "oldClaimIds": [
+            330890
+          ],
+          "newClaimId": 1829775,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/unicornio_2lamagia.htm"
+        },
+        {
+          "trackId": 21538,
+          "title": "Concierto Para Un Adios",
+          "from": 4,
+          "to": 9,
+          "oldClaimIds": [
+            330902
+          ],
+          "newClaimId": 1829776,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/unicornio_2lamagia.htm"
+        },
+        {
+          "trackId": 21540,
+          "title": "Unirock II",
+          "from": 5,
+          "to": 10,
+          "oldClaimIds": [
+            330912
+          ],
+          "newClaimId": 1829777,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/unicornio_2lamagia.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 3480,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 21554,
+          "title": "Quiero Aprender",
+          "from": 1,
+          "to": 6,
+          "oldClaimIds": [
+            331216
+          ],
+          "newClaimId": 1829785,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/unicornio_4triunfadores.htm"
+        },
+        {
+          "trackId": 21559,
+          "title": "Cristina",
+          "from": 2,
+          "to": 7,
+          "oldClaimIds": [
+            331227
+          ],
+          "newClaimId": 1829786,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/unicornio_4triunfadores.htm"
+        },
+        {
+          "trackId": 21558,
+          "title": "Tu Canción",
+          "from": 3,
+          "to": 8,
+          "oldClaimIds": [
+            331239
+          ],
+          "newClaimId": 1829787,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/unicornio_4triunfadores.htm"
+        },
+        {
+          "trackId": 21557,
+          "title": "No Te Aguanto Más",
+          "from": 4,
+          "to": 9,
+          "oldClaimIds": [
+            331249
+          ],
+          "newClaimId": 1829788,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/unicornio_4triunfadores.htm"
+        },
+        {
+          "trackId": 21561,
+          "title": "Amalia",
+          "from": 5,
+          "to": 10,
+          "oldClaimIds": [
+            331260
+          ],
+          "newClaimId": 1829789,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/unicornio_4triunfadores.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 3493,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 24495,
+          "title": "Solo Tú",
+          "from": 1,
+          "to": 6,
+          "oldClaimIds": [
+            343154
+          ],
+          "newClaimId": 1829818,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmata_86otravez.htm"
+        },
+        {
+          "trackId": 24483,
+          "title": "Que Me Has Hecho?",
+          "from": 2,
+          "to": 7,
+          "oldClaimIds": [
+            343166
+          ],
+          "newClaimId": 1829819,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmata_86otravez.htm"
+        },
+        {
+          "trackId": 24511,
+          "title": "Cuéntame",
+          "from": 3,
+          "to": 8,
+          "oldClaimIds": [
+            343177
+          ],
+          "newClaimId": 1829820,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmata_86otravez.htm"
+        },
+        {
+          "trackId": 24513,
+          "title": "Que Vas A Hacer",
+          "from": 4,
+          "to": 9,
+          "oldClaimIds": [
+            343189
+          ],
+          "newClaimId": 1829821,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmata_86otravez.htm"
+        },
+        {
+          "trackId": 24512,
+          "title": "Presiento",
+          "from": 5,
+          "to": 10,
+          "oldClaimIds": [
+            343199
+          ],
+          "newClaimId": 1829822,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmata_86otravez.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 3857,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 24515,
+          "title": "Como Tú No Hay",
+          "from": 1,
+          "to": 6,
+          "oldClaimIds": [
+            343317
+          ],
+          "newClaimId": 1829824,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmata_88enamoradodti.htm"
+        },
+        {
+          "trackId": 24514,
+          "title": "Yo Te Amaba",
+          "from": 2,
+          "to": 7,
+          "oldClaimIds": [
+            343326
+          ],
+          "newClaimId": 1829825,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmata_88enamoradodti.htm"
+        },
+        {
+          "trackId": 24517,
+          "title": "Una Ves Más",
+          "from": 3,
+          "to": 8,
+          "oldClaimIds": [
+            343339
+          ],
+          "newClaimId": 1829826,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmata_88enamoradodti.htm"
+        },
+        {
+          "trackId": 24519,
+          "title": "Tú Serás",
+          "from": 4,
+          "to": 9,
+          "oldClaimIds": [
+            343350
+          ],
+          "newClaimId": 1829827,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmata_88enamoradodti.htm"
+        },
+        {
+          "trackId": 24516,
+          "title": "Te Entregué",
+          "from": 5,
+          "to": 10,
+          "oldClaimIds": [
+            343361
+          ],
+          "newClaimId": 1829828,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmata_88enamoradodti.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 3940,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 25356,
+          "title": "La Ceiba",
+          "from": 1,
+          "to": 6,
+          "oldClaimIds": [
+            365637
+          ],
+          "newClaimId": 1830165,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_01dejando.htm"
+        },
+        {
+          "trackId": 25353,
+          "title": "Amantes",
+          "from": 2,
+          "to": 7,
+          "oldClaimIds": [
+            365642
+          ],
+          "newClaimId": 1830166,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_01dejando.htm"
+        },
+        {
+          "trackId": 25355,
+          "title": "La Hora Azul",
+          "from": 3,
+          "to": 8,
+          "oldClaimIds": [
+            365645
+          ],
+          "newClaimId": 1830167,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_01dejando.htm"
+        },
+        {
+          "trackId": 25354,
+          "title": "Voy Caminando Feliz",
+          "from": 4,
+          "to": 9,
+          "oldClaimIds": [
+            365648
+          ],
+          "newClaimId": 1830168,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_01dejando.htm"
+        },
+        {
+          "trackId": 25357,
+          "title": "Trece Días En Francia",
+          "from": 5,
+          "to": 10,
+          "oldClaimIds": [
+            365652
+          ],
+          "newClaimId": 1830169,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_01dejando.htm"
+        },
+        {
+          "trackId": 25352,
+          "title": "Canción De Patilla",
+          "from": 6,
+          "to": 11,
+          "oldClaimIds": [
+            365656
+          ],
+          "newClaimId": 1830170,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_01dejando.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 3950,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 25391,
+          "title": "No Debes Ocultar Más Tu Amor",
+          "from": 1,
+          "to": 5,
+          "oldClaimIds": [
+            366364
+          ],
+          "newClaimId": 1830207,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_08cancion.htm"
+        },
+        {
+          "trackId": 25389,
+          "title": "Hello Dolly",
+          "from": 2,
+          "to": 6,
+          "oldClaimIds": [
+            366376
+          ],
+          "newClaimId": 1830208,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_08cancion.htm"
+        },
+        {
+          "trackId": 25380,
+          "title": "She Is A Lady",
+          "from": 3,
+          "to": 7,
+          "oldClaimIds": [
+            366385
+          ],
+          "newClaimId": 1830209,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_08cancion.htm"
+        },
+        {
+          "trackId": 25392,
+          "title": "El Aguila Volará",
+          "from": 4,
+          "to": 8,
+          "oldClaimIds": [
+            366397
+          ],
+          "newClaimId": 1830210,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_08cancion.htm"
+        },
+        {
+          "trackId": 25394,
+          "title": "Meditación",
+          "from": 5,
+          "to": 9,
+          "oldClaimIds": [
+            366408
+          ],
+          "newClaimId": 1830211,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_08cancion.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 4017,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 24708,
+          "title": "Mi Alegre Parrandón",
+          "from": 1,
+          "to": 5,
+          "oldClaimIds": [
+            347658
+          ],
+          "newClaimId": 1829982,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/medioevo_06.htm"
+        },
+        {
+          "trackId": 24711,
+          "title": "A Trabajar",
+          "from": 2,
+          "to": 6,
+          "oldClaimIds": [
+            347663
+          ],
+          "newClaimId": 1829983,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/medioevo_06.htm"
+        },
+        {
+          "trackId": 24712,
+          "title": "El Recurso De Amparo",
+          "from": 3,
+          "to": 7,
+          "oldClaimIds": [
+            347666
+          ],
+          "newClaimId": 1829984,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/medioevo_06.htm"
+        },
+        {
+          "trackId": 24714,
+          "title": "A Mi No Me Gusta Er Mundo",
+          "from": 4,
+          "to": 8,
+          "oldClaimIds": [
+            347671
+          ],
+          "newClaimId": 1829985,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/medioevo_06.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 4021,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 24696,
+          "title": "El Baile De Losijue",
+          "from": 1,
+          "to": 4,
+          "oldClaimIds": [
+            347046
+          ],
+          "newClaimId": 1829970,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/medioevo_03.htm"
+        },
+        {
+          "trackId": 24698,
+          "title": "Mamma Mía",
+          "from": 2,
+          "to": 5,
+          "oldClaimIds": [
+            347052
+          ],
+          "newClaimId": 1829971,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/medioevo_03.htm"
+        },
+        {
+          "trackId": 24700,
+          "title": "Papeles",
+          "from": 3,
+          "to": 6,
+          "oldClaimIds": [
+            347054
+          ],
+          "newClaimId": 1829972,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/medioevo_03.htm"
+        },
+        {
+          "trackId": 24699,
+          "title": "Francisco Caina",
+          "from": 4,
+          "to": 7,
+          "oldClaimIds": [
+            347058
+          ],
+          "newClaimId": 1829973,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/medioevo_03.htm"
+        },
+        {
+          "trackId": 24697,
+          "title": "Asma Mía",
+          "from": 5,
+          "to": 8,
+          "oldClaimIds": [
+            347062
+          ],
+          "newClaimId": 1829974,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/medioevo_03.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 4161,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 24852,
+          "title": "Todas Esas Cosas",
+          "from": 1,
+          "to": 6,
+          "oldClaimIds": [
+            350826
+          ],
+          "newClaimId": 1830023,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/granfogata_1fuego.htm"
+        },
+        {
+          "trackId": 24857,
+          "title": "Por Mas Que Me Escuches",
+          "from": 2,
+          "to": 7,
+          "oldClaimIds": [
+            350830
+          ],
+          "newClaimId": 1830024,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/granfogata_1fuego.htm"
+        },
+        {
+          "trackId": 24858,
+          "title": "Igual Siempre igual",
+          "from": 3,
+          "to": 8,
+          "oldClaimIds": [
+            350834
+          ],
+          "newClaimId": 1830025,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/granfogata_1fuego.htm"
+        },
+        {
+          "trackId": 24853,
+          "title": "Como Un Loco",
+          "from": 4,
+          "to": 9,
+          "oldClaimIds": [
+            350839
+          ],
+          "newClaimId": 1830026,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/granfogata_1fuego.htm"
+        },
+        {
+          "trackId": 24855,
+          "title": "Qué Vamos a Hacer?",
+          "from": 5,
+          "to": 10,
+          "oldClaimIds": [
+            350842
+          ],
+          "newClaimId": 1830027,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/granfogata_1fuego.htm"
+        }
+      ]
+    },
+    {
+      "albumId": 4673,
+      "disc": 1,
+      "moves": [
+        {
+          "trackId": 25158,
+          "title": "You Can't Keep Doing This Foerever",
+          "from": 1,
+          "to": 6,
+          "oldClaimIds": [
+            359877
+          ],
+          "newClaimId": 1830139,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/colina_2sampler.htm"
+        },
+        {
+          "trackId": 21418,
+          "title": "If You Try",
+          "from": 2,
+          "to": 7,
+          "oldClaimIds": [
+            359880
+          ],
+          "newClaimId": 1830140,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/colina_2sampler.htm"
+        },
+        {
+          "trackId": 25153,
+          "title": "Just A Little Bit Closer",
+          "from": 3,
+          "to": 8,
+          "oldClaimIds": [
+            359883
+          ],
+          "newClaimId": 1830141,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/colina_2sampler.htm"
+        },
+        {
+          "trackId": 25157,
+          "title": "Curacao With Love",
+          "from": 4,
+          "to": 9,
+          "oldClaimIds": [
+            359888
+          ],
+          "newClaimId": 1830142,
+          "url": "https://sincopa.com/rock_pop/cdinfo_rock/colina_2sampler.htm"
+        }
+      ]
+    }
+  ],
+  "skippedList": [
+    {
+      "albumId": 7,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/manavello_1cosas.htm",
+      "reason": "«Cosas Sencillas»: hippito-y-sus-chatarritas,rock-de-vzla sostiene el número 2"
+    },
+    {
+      "albumId": 660,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/azucar_cacaoyle_1.htm",
+      "reason": "«Palabra De Amor»: youtube-data-api sostiene el número 1"
+    },
+    {
+      "albumId": 2872,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/claners2_gentejoven.htm",
+      "reason": "«Debes Cambiar»: hippito-y-sus-chatarritas sostiene el número 6"
+    },
+    {
+      "albumId": 117,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/ananta_1nightdaydream.htm",
+      "reason": "«The Game»: descargas-metal-venezolano,youtube-data-api sostiene el número 1"
+    },
+    {
+      "albumId": 3452,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_zeppy_1.htm",
+      "reason": "«Mi Pobre Corazón»: hippito-y-sus-chatarritas sostiene el número 2"
+    },
+    {
+      "albumId": 3453,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_zeppy_2hits.htm",
+      "reason": "«San Tomé»: hippito-y-sus-chatarritas sostiene el número 6"
+    },
+    {
+      "albumId": 859,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/fuga_1.htm",
+      "reason": "«No Quiero A Tu Padre»: descargas-metal-venezolano,hippito-y-sus-chatarritas sostiene el número 2"
+    },
+    {
+      "albumId": 1262,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/alta_freq_1cruzando.htm",
+      "reason": "«Otra Oportunidad»: descargas-metal-venezolano,rock-de-vzla sostiene el número 2"
+    },
+    {
+      "albumId": 892,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/fahrenheit_1.htm",
+      "reason": "«Un Día Más»: descargas-metal-venezolano,rock-de-vzla sostiene el número 3"
+    },
+    {
+      "albumId": 1657,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/mismagente_4calle.htm",
+      "reason": "«La He Visto Reir, La He Visto Llorar»: descargas-metal-venezolano sostiene el número 1"
+    },
+    {
+      "albumId": 4629,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/alzeppy_64exitosdalzeppy.htm",
+      "reason": "«Es Un Placer»: hippito-y-sus-chatarritas sostiene el número 1"
+    },
+    {
+      "albumId": 2357,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_x5.htm",
+      "reason": "«De Visita En Mi País»: hippito-y-sus-chatarritas,rock-de-vzla sostiene el número 4"
+    },
+    {
+      "albumId": 2375,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/trampas_1.htm",
+      "reason": "«Comienzo»: hippito-y-sus-chatarritas,rock-de-vzla sostiene el número 1"
+    },
+    {
+      "albumId": 2441,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/alexrossell_8zapatico.htm",
+      "reason": "«Donde Vives»: rock-de-vzla sostiene el número 3"
+    },
+    {
+      "albumId": 2052,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/ankla_3baile.htm",
+      "reason": "«Silvia»: rock-de-vzla sostiene el número 2"
+    },
+    {
+      "albumId": 2445,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/alexrossell_9infinito.htm",
+      "reason": "«Caroni»: rock-de-vzla sostiene el número 1"
+    },
+    {
+      "albumId": 2447,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/alexrossell_6alrescate.htm",
+      "reason": "«Selección Oriental»: rock-de-vzla sostiene el número 1"
+    },
+    {
+      "albumId": 2451,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/alexrossell_5sangre.htm",
+      "reason": "«La Burriquita»: rock-de-vzla sostiene el número 3"
+    },
+    {
+      "albumId": 2448,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/alexrossell_4esnavidad.htm",
+      "reason": "«Aguinaldo Venezolano»: rock-de-vzla sostiene el número 1"
+    },
+    {
+      "albumId": 2459,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/alexrossell_2vuelo.htm",
+      "reason": "«Polo Coriano»: rock-de-vzla sostiene el número 2"
+    },
+    {
+      "albumId": 2467,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/alexrossell_0vzla_joven.htm",
+      "reason": "«Adicora»: crv-operador sostiene el número 2"
+    },
+    {
+      "albumId": 2524,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/melao_nuestramagia.htm",
+      "reason": "«Como Ayer»: hippito-y-sus-chatarritas,rock-de-vzla sostiene el número 4"
+    },
+    {
+      "albumId": 2045,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/ankla_2dfrente.htm",
+      "reason": "«El Pelón»: rock-de-vzla sostiene el número 4"
+    },
+    {
+      "albumId": 2487,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/casablanca_1.htm",
+      "reason": "«Háblame»: rock-de-vzla sostiene el número 1"
+    },
+    {
+      "albumId": 2457,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/alexrossell_3cordonazo.htm",
+      "reason": "«Sueños De Un Mañana»: hippito-y-sus-chatarritas,rock-de-vzla sostiene el número 2"
+    },
+    {
+      "albumId": 2517,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/gladys_lahijadlaoscuridad.htm",
+      "reason": "«Quiero Casarme»: rock-de-vzla sostiene el número 2"
+    },
+    {
+      "albumId": 2453,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/alexrossell_4torbellino.htm",
+      "reason": "«Fantasia Tocuyana»: rock-de-vzla sostiene el número 1"
+    },
+    {
+      "albumId": 2625,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_dangers_1asesdelsurf.htm",
+      "reason": "«Quiero Tomar Tu Mano»: rock-de-vzla sostiene el número 4"
+    },
+    {
+      "albumId": 11,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/sangre_1.htm",
+      "reason": "«We'll Live a Little Bit More»: rock-de-vzla sostiene el número 4"
+    },
+    {
+      "albumId": 2620,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/wag_1.htm",
+      "reason": "«Depende De Ti»: rock-de-vzla sostiene el número 1"
+    },
+    {
+      "albumId": 3010,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/aditus_10.htm",
+      "reason": "«Quise Olvidarte»: hippito-y-sus-chatarritas,rock-de-vzla sostiene el número 1"
+    },
+    {
+      "albumId": 3011,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/aditus_09otromundo.htm",
+      "reason": "«Y A Mí Qué?»: rock-de-vzla sostiene el número 5"
+    },
+    {
+      "albumId": 3014,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/aditus_06juegos.htm",
+      "reason": "«Crisis»: hippito-y-sus-chatarritas,rock-de-vzla sostiene el número 2"
+    },
+    {
+      "albumId": 3016,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/aditus_05amvision.htm",
+      "reason": "«Televisión»: rock-de-vzla sostiene el número 1"
+    },
+    {
+      "albumId": 3017,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/aditus_04posicion.htm",
+      "reason": "«Apartamento»: rock-de-vzla sostiene el número 4"
+    },
+    {
+      "albumId": 3018,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/aditus_03fueraley.htm",
+      "reason": "«Fuera de La Ley»: rock-de-vzla sostiene el número 1"
+    },
+    {
+      "albumId": 3013,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/aditus_07algoelectrico.htm",
+      "reason": "«Ella Tiene (No Sé Qué)»: hippito-y-sus-chatarritas,rock-de-vzla sostiene el número 5"
+    },
+    {
+      "albumId": 3005,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/aditus_15reversible.htm",
+      "reason": "«Buscando Un Maizal»: rock-de-vzla sostiene el número 1"
+    },
+    {
+      "albumId": 2779,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/fusion_proyecto1.htm",
+      "reason": "«Quiero Estar a Tu Lado»: hippito-y-sus-chatarritas,rock-de-vzla sostiene el número 3"
+    },
+    {
+      "albumId": 2863,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/lobin_ejnay_cuando.htm",
+      "reason": "«Potpourri Los Claners»: rock-de-vzla sostiene el número 1"
+    },
+    {
+      "albumId": 2869,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/claners3.htm",
+      "reason": "«Nunca Un Domingo Será Igual»: rock-de-vzla sostiene el número 5"
+    },
+    {
+      "albumId": 2601,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/ankla_1fantasia.htm",
+      "reason": "«Un Mundo Nuevo»: rock-de-vzla sostiene el número 4"
+    },
+    {
+      "albumId": 2873,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/claners1_yeah.htm",
+      "reason": "«Satisfacciones»: hippito-y-sus-chatarritas,rock-de-vzla sostiene el número 6"
+    },
+    {
+      "albumId": 3793,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/ambar_3californiashade.htm",
+      "reason": "«Bailando Lento (Slow Dancin')»: hippito-y-sus-chatarritas sostiene el número 3"
+    },
+    {
+      "albumId": 3403,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/noggers_discotheque.htm",
+      "reason": "«Poema Dos»: hippito-y-sus-chatarritas sostiene el número 2"
+    },
+    {
+      "albumId": 3459,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/joseantoniobordell_1entrecenizas.htm",
+      "reason": "«Herida Mortal»: hippito-y-sus-chatarritas sostiene el número 4"
+    },
+    {
+      "albumId": 3904,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/cherrynav_1aleluya.htm",
+      "reason": "«María María»: hippito-y-sus-chatarritas sostiene el número 3"
+    },
+    {
+      "albumId": 3474,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/unicornio_1unicornio.htm",
+      "reason": "«Me Enamore Otra Vez»: hippito-y-sus-chatarritas sostiene el número 2"
+    },
+    {
+      "albumId": 4392,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/losclippers_1twist.htm",
+      "reason": "«Tu Ausencia»: hippito-y-sus-chatarritas sostiene el número 3"
+    },
+    {
+      "albumId": 3455,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_bugats_1.htm",
+      "reason": "«Tienes Que Amar»: hippito-y-sus-chatarritas sostiene el número 2"
+    },
+    {
+      "albumId": 3637,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/aditus_08mejor_peor.htm",
+      "reason": "«Quiero Ser Tu Heroe»: hippito-y-sus-chatarritas sostiene el número 1"
+    },
+    {
+      "albumId": 3491,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmata_83carlosmata.htm",
+      "reason": "posición 8: «Hazme Una Fiesta» y «Sin Ella»"
+    },
+    {
+      "albumId": 3393,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/darts_1.htm",
+      "reason": "«Por Tu Amor»: hippito-y-sus-chatarritas sostiene el número 5"
+    },
+    {
+      "albumId": 4657,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/compilations1/escenario_juvenil1.htm",
+      "reason": "«I've Got You»: hippito-y-sus-chatarritas sostiene el número 3"
+    },
+    {
+      "albumId": 4669,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/compilations1/enlaonda_1987.htm",
+      "reason": "«Una Rosa Roja»: hippito-y-sus-chatarritas sostiene el número 4"
+    },
+    {
+      "albumId": 3507,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_cazadores_80loscazadores.htm",
+      "reason": "posición 6: «Cuando Viviremos Como Dios Manda» y «La Noche Me Ilusiona»"
+    },
+    {
+      "albumId": 3954,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/darts_3unavezmas.htm",
+      "reason": "«En Verdad Te Quiero»: hippito-y-sus-chatarritas sostiene el número 2"
+    },
+    {
+      "albumId": 3863,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmorean_3aquiestoy.htm",
+      "reason": "«Caminemos Bajo El Sol»: hippito-y-sus-chatarritas sostiene el número 1"
+    },
+    {
+      "albumId": 4671,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/colina_0amanecer.htm",
+      "reason": "«Qué Vas A Hacer»: hippito-y-sus-chatarritas sostiene el número 1"
+    },
+    {
+      "albumId": 3952,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/darts_5lindahistoria.htm",
+      "reason": "posición 8: «No Se Que Decirte» y «No se que decirte (Frazier / Vers. V. Gámez)»"
+    },
+    {
+      "albumId": 3968,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/delia_6enmishoras.htm",
+      "reason": "«Ironia»: hippito-y-sus-chatarritas sostiene el número 3"
+    },
+    {
+      "albumId": 3993,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/edgaralexander_2edgaralexander.htm",
+      "reason": "«Gabriela»: hippito-y-sus-chatarritas sostiene el número 5"
+    },
+    {
+      "albumId": 3992,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/edgaralexander_1hoysonrie.htm",
+      "reason": "«El y Ella»: hippito-y-sus-chatarritas sostiene el número 4"
+    },
+    {
+      "albumId": 5106,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/darts_4etiqueta.htm",
+      "reason": "«Desde Que Se Fue»: hippito-y-sus-chatarritas sostiene el número 5"
+    },
+    {
+      "albumId": 3965,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/delia_2chicano.htm",
+      "reason": "«Porque Te Quiero»: hippito-y-sus-chatarritas sostiene el número 1"
+    },
+    {
+      "albumId": 3462,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/luzmarina_flordepiel.htm",
+      "reason": "«Tentación»: hippito-y-sus-chatarritas sostiene el número 1"
+    },
+    {
+      "albumId": 3492,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosmata_85porqtquiero.htm",
+      "reason": "«Déjame En Paz»: hippito-y-sus-chatarritas sostiene el número 5"
+    },
+    {
+      "albumId": 3949,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_03sonidomagico.htm",
+      "reason": "«Beside Me»: hippito-y-sus-chatarritas sostiene el número 1"
+    },
+    {
+      "albumId": 3941,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_04discofantasy.htm",
+      "reason": "«Doopey»: hippito-y-sus-chatarritas sostiene el número 1"
+    },
+    {
+      "albumId": 4866,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/darts_2.htm",
+      "reason": "«Sólo Pienso En Tí»: hippito-y-sus-chatarritas sostiene el número 3"
+    },
+    {
+      "albumId": 4988,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/azucar_cacaoyle_2.htm",
+      "reason": "«Su Adiós»: hippito-y-sus-chatarritas sostiene el número 2"
+    },
+    {
+      "albumId": 2126,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/cronos_1alfin.htm",
+      "reason": "«Buscando Perdón»: rock-de-vzla sostiene el número 1"
+    },
+    {
+      "albumId": 3947,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/danielgrau_06leon.htm",
+      "reason": "«Correcaminos (Roadrunner)»: hippito-y-sus-chatarritas sostiene el número 1"
+    },
+    {
+      "albumId": 4001,
+      "disc": 1,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/edgaralexander_bajalaluz.htm",
+      "reason": "«Baja La Luz»: hippito-y-sus-chatarritas sostiene el número 1"
+    }
+  ]
+}

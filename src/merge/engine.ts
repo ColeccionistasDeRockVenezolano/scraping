@@ -216,19 +216,30 @@ async function resolutionReview(client: PoolClient, claimId: number, decisionId:
     track: decision.kind === "TRACK" ? target ?? null : null,
     artist: decision.kind === "ARTIST" ? target ?? null : null,
   };
+  const values = [
+    kind, claimId, decision.action === "POSSIBLE_MATCH" ? 7 : 6,
+    columns.person, columns.organization, columns.album, columns.track, columns.artist,
+    json({ resolutionDecisionId: decisionId, action: decision.action, score: decision.score, explanation: decision.explanation, features: decision.features, aiProposal: decision.aiProposal ?? null, aiFailure: decision.aiFailure ?? null }),
+  ];
+  // Cada nuevo intento de merge produce otra decisión del ER. La revisión
+  // abierta del mismo claim y tipo se actualiza con la última en vez de
+  // abrir una segunda.
   const existing = await client.query<{ id: string }>(`
-    SELECT id FROM ingest.review_queue WHERE claim_a_id=$1 AND status IN ('open','in_progress')
-      AND payload->>'resolutionDecisionId'=$2::text ORDER BY id LIMIT 1`, [claimId, decisionId]);
-  if (existing.rows[0]?.id) return Number(existing.rows[0].id);
+    SELECT id FROM ingest.review_queue WHERE claim_a_id=$1 AND kind=$2::ingest.review_kind AND status IN ('open','in_progress')
+       AND payload ? 'resolutionDecisionId'
+     ORDER BY id LIMIT 1`, [claimId, kind]);
+  if (existing.rows[0]?.id) {
+    await client.query(`
+      UPDATE ingest.review_queue
+         SET priority=$2,person_a_id=$3,organization_a_id=$4,album_id=$5,track_id=$6,artist_a_id=$7,payload=$8::jsonb,updated_at=now()
+       WHERE id=$1`, [Number(existing.rows[0].id), ...values.slice(2)]);
+    return Number(existing.rows[0].id);
+  }
   const saved = await client.query<{ id: string }>(`
     INSERT INTO ingest.review_queue(
       kind,claim_a_id,priority,person_a_id,organization_a_id,album_id,track_id,artist_a_id,payload,notes
     ) VALUES($1::ingest.review_kind,$2,$3,$4,$5,$6,$7,$8,$9::jsonb,'ER no autorizo auto-merge')
-    RETURNING id`, [
-    kind, claimId, decision.action === "POSSIBLE_MATCH" ? 7 : 6,
-    columns.person, columns.organization, columns.album, columns.track, columns.artist,
-    json({ resolutionDecisionId: decisionId, action: decision.action, score: decision.score, explanation: decision.explanation, features: decision.features, aiProposal: decision.aiProposal ?? null, aiFailure: decision.aiFailure ?? null }),
-  ]);
+    RETURNING id`, values);
   return Number(saved.rows[0]!.id);
 }
 
