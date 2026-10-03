@@ -7,7 +7,7 @@
 // nada depende del orden de llegada ni de la captura «más reciente», y el
 // rango de la fuente nunca desempata estilos.
 import { normalizeGenreText } from "./normalize.js";
-import { familyOf, isFamilyOf, resolveGenreValue, type Taxonomy, type ValueResolution } from "./taxonomy.js";
+import { isAncestorOf, resolveGenreValue, type Taxonomy, type ValueResolution } from "./taxonomy.js";
 
 export type GenreEntityKind = "artist" | "album";
 export type AssignmentStatus = "suggested" | "confirmed" | "rejected" | "superseded";
@@ -103,10 +103,14 @@ function evidenceRefs(claims: GenreClaimEvidence[]): EvidenceRef[] {
   }));
 }
 
-/** Primer hijo de `familyId` presente en `genres`, por orden. */
-function firstChild(taxonomy: Taxonomy, familyId: number, genres: Iterable<number>): number | undefined {
-  for (const genreId of genres) if (isFamilyOf(taxonomy, familyId, genreId)) return genreId;
-  return undefined;
+/**
+ * Descendiente de `ancestorId` presente en `genres` que lo reemplaza: el
+ * primero, por orden, que no tenga a su vez un descendiente presente («Folk,
+ * Joropo, Pasaje» → la familia y el género ceden ambos al subgénero).
+ */
+function firstChild(taxonomy: Taxonomy, ancestorId: number, genres: Iterable<number>): number | undefined {
+  const descendants = [...genres].filter((genreId) => isAncestorOf(taxonomy, ancestorId, genreId));
+  return descendants.find((genreId) => !descendants.some((other) => isAncestorOf(taxonomy, genreId, other))) ?? descendants[0];
 }
 
 function buildUnits(taxonomy: Taxonomy, claims: GenreClaimEvidence[]): EvidenceUnit[] {
@@ -323,7 +327,7 @@ export function reconcileWithHuman(taxonomy: Taxonomy, outcome: RuleOutcome, hum
       continue;
     }
     // Un hijo con evidencia no puede desplazar a una familia que una persona confirmó.
-    const humanFamily = human.find((item) => live(item) && isFamilyOf(taxonomy, item.genreId, desired.genreId));
+    const humanFamily = human.find((item) => live(item) && isAncestorOf(taxonomy, item.genreId, desired.genreId));
     if (humanFamily && desired.status !== "superseded") {
       warn("more_specific_than_human_family", desired.genreId, humanFamily, desired.claimIds);
       continue;
@@ -335,7 +339,7 @@ export function reconcileWithHuman(taxonomy: Taxonomy, outcome: RuleOutcome, hum
   if (humanPrimary) {
     for (const item of kept) if (item.role === "primary") item.role = "secondary";
     if (desiredPrimary && desiredPrimary.genreId !== humanPrimary.genreId
-      && familyOf(taxonomy, desiredPrimary.genreId)?.id !== humanPrimary.genreId) {
+      && !isAncestorOf(taxonomy, humanPrimary.genreId, desiredPrimary.genreId)) {
       warn("primary_differs", desiredPrimary.genreId, humanPrimary, desiredPrimary.claimIds);
     }
   }

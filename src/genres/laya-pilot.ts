@@ -2,7 +2,7 @@
 // nivel. No escribe asignaciones ni convierte una probabilidad en confirmación.
 import { normalizeGenreText } from "./normalize.js";
 import type { TagPolicy, ExternalTagKind } from "./external/mapping.js";
-import { resolveGenreValue, type GenreNode, type Taxonomy } from "./taxonomy.js";
+import { familyOf, resolveGenreValue, type GenreLevel, type GenreNode, type Taxonomy } from "./taxonomy.js";
 import type { GenreEntityKind } from "./rules.js";
 
 export const LAYA_PILOT_SCHEMA = "crv-genre-laya-pilot.v1";
@@ -19,7 +19,7 @@ export interface PilotEvidence {
 export interface PilotCandidate {
   slug: string;
   name: string;
-  level: "family" | "genre";
+  level: GenreLevel;
   family: string | null;
   evidenceRefs: string[];
 }
@@ -136,7 +136,7 @@ export function buildLayaPilotCase(input: {
   const candidates = new Map<string, PilotCandidate>();
   const add = (node: GenreNode, ref: string) => {
     if (!node.active) return;
-    const family = node.level === "family" ? node : node.parentId === null ? undefined : taxonomy.genres.get(node.parentId);
+    const family = familyOf(taxonomy, node.id);
     const candidate = candidates.get(node.slug) ?? {
       slug: node.slug, name: node.name, level: node.level, family: family?.slug ?? null, evidenceRefs: [],
     };
@@ -201,7 +201,7 @@ export function buildLayaPilotCase(input: {
   };
 
   const ranked = [...candidates.values()].sort((a, b) =>
-    b.evidenceRefs.length - a.evidenceRefs.length || Number(b.level === "genre") - Number(a.level === "genre")
+    b.evidenceRefs.length - a.evidenceRefs.length || Number(b.level !== "family") - Number(a.level !== "family")
     || a.slug.localeCompare(b.slug));
   if (!ranked.length) return null;
   const selected = ranked.slice(0, 8);

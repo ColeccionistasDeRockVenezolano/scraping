@@ -22,8 +22,8 @@ export async function loadRadioAlbumGenres(db: Queryable, albumIds: number[]): P
     SELECT al.id::text AS album_id, al.genre, g.slug, g.name, COALESCE(f.slug, g.slug) AS family, ag.role
       FROM public.albums al
       LEFT JOIN ingest.album_genres ag ON ag.album_id = al.id AND ag.status = 'confirmed'
-      LEFT JOIN ingest.genres g ON g.id = ag.genre_id
-      LEFT JOIN ingest.genres f ON f.id = g.parent_genre_id
+      LEFT JOIN ingest.genre_lineage g ON g.id = ag.genre_id
+      LEFT JOIN ingest.genres f ON f.id = g.family_id
      WHERE al.id = ANY($1::bigint[])
      ORDER BY al.id, (ag.role = 'primary') DESC, g.name`, [unique]);
   const byAlbum = new Map<number, { visible: string | null; confirmed: Array<{ slug: string; name: string; family: string; role: "primary" | "secondary" }> }>();

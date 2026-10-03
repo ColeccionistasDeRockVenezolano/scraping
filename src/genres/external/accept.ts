@@ -22,7 +22,7 @@ import { moduleLogger } from "../../logger/index.js";
 import { confirmGenre } from "../human.js";
 import type { GenreEntityKind } from "../rules.js";
 import { DERIVED_FROM_ALBUMS_SQL, GENRE_COLUMN, GENRE_TABLE, loadTaxonomy, lockGenres } from "../store.js";
-import type { Taxonomy } from "../taxonomy.js";
+import { isAncestorOf, type Taxonomy } from "../taxonomy.js";
 import { ExternalSourceError, requireExternalSource } from "./store.js";
 
 const log = moduleLogger("genres:external:accept");
@@ -119,9 +119,9 @@ async function loadSuggestions(
 }
 
 /**
- * El principal de una ficha: un género hijo antes que una familia y, dentro de
- * cada grupo, el que la fuente nombró primero. Devuelve el resto como
- * secundarios, en el mismo orden.
+ * El principal de una ficha: un género o subgénero antes que una familia y,
+ * dentro de cada grupo, el que la fuente nombró primero. Devuelve el resto
+ * como secundarios, en el mismo orden.
  */
 export function pickPrimary(suggestions: SuggestionRow[]): { primary: SuggestionRow; rest: SuggestionRow[] } | null {
   if (!suggestions.length) return null;
@@ -130,12 +130,13 @@ export function pickPrimary(suggestions: SuggestionRow[]): { primary: Suggestion
 }
 
 /**
- * Una familia cuyo hijo también viene propuesto no se confirma: sería perder
- * precisión, y `confirmGenre` lo rechaza de todos modos.
+ * Un nodo cuyo descendiente también viene propuesto (familia o género de un
+ * subgénero) no se confirma: sería perder precisión, y `confirmGenre` lo
+ * rechaza de todos modos.
  */
 function redundantFamily(taxonomy: Taxonomy, row: SuggestionRow, others: SuggestionRow[]): boolean {
-  if (row.level !== "family") return false;
-  return others.some((other) => taxonomy.genres.get(other.genreId)?.parentId === row.genreId);
+  if (row.level === "subgenre") return false;
+  return others.some((other) => isAncestorOf(taxonomy, row.genreId, other.genreId));
 }
 
 export async function runAccept(options: AcceptOptions): Promise<AcceptReport> {

@@ -14,7 +14,7 @@
 import type { PoolClient } from "pg";
 import type { GenreEntityKind } from "./rules.js";
 import { canonicalJson, GENRE_COLUMN, GENRE_REVIEW_KIND, GENRE_TABLE, MERGE_REVIEW_ORIGIN, loadTaxonomy } from "./store.js";
-import { isFamilyOf } from "./taxonomy.js";
+import { isAncestorOf } from "./taxonomy.js";
 
 type Row = Record<string, unknown>;
 
@@ -98,8 +98,8 @@ export async function transferGenreAssignments(
     const demotedGenreId = Number(loser["genre_id"]);
     // Una familia genérica y su subgénero no discrepan: el paso 3 ya deja
     // vigente el término más específico y desplaza la familia.
-    if (!isFamilyOf(taxonomy, keptGenreId, demotedGenreId)
-      && !isFamilyOf(taxonomy, demotedGenreId, keptGenreId)) {
+    if (!isAncestorOf(taxonomy, keptGenreId, demotedGenreId)
+      && !isAncestorOf(taxonomy, demotedGenreId, keptGenreId)) {
       await openMergeReview(client, kind, keepId, {
         mergedFrom: dropId, keptPrimaryGenreId: keptGenreId, demotedGenreId,
       });
@@ -137,8 +137,11 @@ export async function transferGenreAssignments(
   const merged = (await client.query<Row>(`SELECT * FROM ${table} WHERE ${column}=$1 ORDER BY id`, [keepId])).rows;
   const live = merged.filter(isLive);
   for (const family of live) {
-    const child = live.find((other) => other !== family && isFamilyOf(taxonomy, Number(family["genre_id"]), Number(other["genre_id"]))
+    // Con familia, género y subgénero vigentes, ambos ceden al más específico.
+    const descendants = live.filter((other) => other !== family && isAncestorOf(taxonomy, Number(family["genre_id"]), Number(other["genre_id"]))
       && (isHuman(other) || !isHuman(family)));
+    const child = descendants.find((row) => !descendants.some((other) => isAncestorOf(taxonomy, Number(row["genre_id"]), Number(other["genre_id"]))))
+      ?? descendants[0];
     if (!child) continue;
     await client.query(
       `UPDATE ${table} SET status='superseded', role='secondary', superseded_by_id=$2, updated_at=now() WHERE id=$1`, [family["id"], child["id"]]);

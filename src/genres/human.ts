@@ -10,7 +10,7 @@
 import type { PoolClient } from "pg";
 import type { GenreEntityKind } from "./rules.js";
 import { DERIVED_FROM_ALBUMS_SQL, GENRE_COLUMN, GENRE_TABLE, loadTaxonomy, recomputeEntityGenres, type RecomputeResult } from "./store.js";
-import { isFamilyOf } from "./taxonomy.js";
+import { isAncestorOf } from "./taxonomy.js";
 
 export interface HumanDecisionInput {
   kind: GenreEntityKind;
@@ -95,8 +95,8 @@ export async function confirmGenre(
     [input.entityId, genre])).rows;
   // Un subgénero que el artista solo recibe de sus discos no impide confirmar
   // la familia como género propio.
-  const child = live.find((row) => !row.derived && isFamilyOf(taxonomy, genre, Number(row.genre_id)));
-  if (child) throw new Error(`${input.genreSlug} es la familia de un género ya asignado: confirma o rechaza el hijo`);
+  const child = live.find((row) => !row.derived && isAncestorOf(taxonomy, genre, Number(row.genre_id)));
+  if (child) throw new Error(`${input.genreSlug} está por encima de un género ya asignado (familia o género de un subgénero): confirma o rechaza el más específico`);
   if (input.role === "primary") {
     const previous = (await client.query<Record<string, unknown>>(
       `UPDATE ${table} SET role='secondary', updated_at=now() WHERE ${column}=$1 AND role='primary' AND status='confirmed' AND genre_id<>$2 RETURNING *`,
@@ -106,7 +106,7 @@ export async function confirmGenre(
     }
   }
   const saved = await upsertHuman(client, input, genre, { role: input.role, status: "confirmed" });
-  const families = live.filter((row) => isFamilyOf(taxonomy, Number(row.genre_id), genre));
+  const families = live.filter((row) => isAncestorOf(taxonomy, Number(row.genre_id), genre));
   for (const family of families) {
     await client.query(`UPDATE ${table} SET status='superseded', role='secondary', superseded_by_id=$2, updated_at=now() WHERE id=$1`,
       [Number(family.id), Number(saved["id"])]);

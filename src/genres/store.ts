@@ -12,7 +12,7 @@ import {
   type AssignmentRole, type AssignmentStatus, type DesiredAssignment, type EvidenceRef, type GenreCase,
   type GenreClaimEvidence, type GenreEntityKind, type HumanAssignment,
 } from "./rules.js";
-import { buildTaxonomy, type AliasTarget, type GenreNode, type Taxonomy } from "./taxonomy.js";
+import { buildTaxonomy, type AliasTarget, type GenreLevel, type GenreNode, type Taxonomy } from "./taxonomy.js";
 
 export const GENRE_TABLE: Readonly<Record<GenreEntityKind, string>> = {
   artist: "ingest.artist_genres",
@@ -67,7 +67,7 @@ export interface AssignmentRow {
 // --- Taxonomía -------------------------------------------------------------
 
 export async function loadTaxonomy(client: PoolClient): Promise<Taxonomy> {
-  const genres = await client.query<{ id: string; slug: string; name: string; level: "family" | "genre"; parent_genre_id: string | null; active: boolean; replaced_by_genre_id: string | null }>(
+  const genres = await client.query<{ id: string; slug: string; name: string; level: GenreLevel; parent_genre_id: string | null; active: boolean; replaced_by_genre_id: string | null }>(
     "SELECT id::text, slug, name, level, parent_genre_id::text, active, replaced_by_genre_id::text FROM ingest.genres ORDER BY id");
   const aliases = await client.query<{ alias_normalized: string; kind: "genre" | "not_a_genre"; genre_id: string | null }>(
     "SELECT alias_normalized, kind, genre_id::text FROM ingest.genre_aliases ORDER BY alias_normalized");
