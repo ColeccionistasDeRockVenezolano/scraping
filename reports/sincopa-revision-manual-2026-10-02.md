@@ -69,3 +69,33 @@ limpieza.
 | --- | --- | --- |
 | 19843 Acoustic Recording Service | organización | el ER lo ve parecido a 2256 «Acoustic Music Records» |
 | 37813 La Otra Gente | artista | el ER encontró un candidato parecido |
+
+## Resuelto el 2026-10-03 (runs 11585 y 11586)
+
+Decisiones de Brian, aplicadas con `scripts/resolve-sincopa-manual-review.ts`
+(deshacer: `crv runs undo 11586` y luego `crv runs undo 11585`):
+
+- **Iniciales, una palabra o sigla** (11 fichas): el rótulo pasa a rol y la
+  ficha queda con el nombre limpio, sin enlazar («Arr: A. Lauro» → «A. Lauro»,
+  arreglos). «Comp: UDAF» y «Recop: UDAF» quedan en una sola ficha «UDAF».
+- **Homónimos con proyecto común** (6): Francisco Pacheco → 20566 (2 créditos
+  ya estaban y se retiraron), Hernán Marín → 24616, Gualberto Ibarreto → 21200
+  (mismo disco); Eduardo Martínez → 3907, Reinaldo López → 5800, Daniel Gil →
+  30434 (mismo artista).
+- **Grupos a artista**: Los Araucanos (4328, absorbe también la persona 31232
+  «Los Araucanos»; el ER lo veía parecido a «Los Anauco» 3980, que es otro
+  grupo), Los Golperos Del Tocuyo (4325), Experimental Barlovento (4326, sin
+  créditos: la ficha no tenía ninguno). El dúo «Guilllermina-Gualberto
+  Ibarreto» se partió: el crédito va a Gualberto Ibarreto (21200) y a una
+  ficha «Guillermina».
+- **Conversiones**: Acoustic Recording Service → organización 2350 (estudio,
+  distinta de 2256 «Acoustic Music Records»); La Otra Gente → artista 4327.
+
+Siguen en revisión, porque ningún homónimo comparte disco ni artista con la obra:
+
+| Ficha | Nombre | Candidatos |
+| --- | --- | --- |
+| 28490 | Rec. Iván Pérez Rossi | 911, 20644 (la ficha no tiene créditos) |
+| 31028 | Comp. Jesús Rosas Marcano | 9650, 32526 |
+| 31379 | Recop: Juan Estévez | 13874, 23293, 23319 |
+| 32176 | Recop: José Antonio Calcaño | 6195, 15669, 16048 |
