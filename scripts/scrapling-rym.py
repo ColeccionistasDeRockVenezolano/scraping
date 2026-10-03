@@ -378,8 +378,12 @@ def tablero_html(estado, cola, nota):
         rate = ev["n"] / max((now - d["run_start"]) / 60.0, 0.3)
     rem = (ev.get("tot", 0) - ev.get("n", 0)) if ev else None
     eta = None
+    eta_txt = None
     if rate and rem and rem > 0:
-        eta = _tab_mm(now + (rem / max(rate, 0.1)) * 60)
+        eta = now + (rem / max(rate, 0.1)) * 60
+        seg = eta - now
+        eta_txt = (_tab_mm(eta) if seg <= 43200
+                   else f"~{seg / 3600:.0f} h ({time.strftime('%a', time.localtime(eta))})")
 
     if "COLA TERMINADA" in nota:
         pcls, ptxt = "done", "✅ COLA TERMINADA"
@@ -427,7 +431,7 @@ def tablero_html(estado, cola, nota):
     c_rit = card("Ritmo", (f"~{rate:.1f}/min" if rate else "—"),
                  ((f"{ev.get('n')}/{ev.get('tot')} esta corrida" +
                    (f" · desde {_tab_mm(d['run_start'])}" if d.get("run_start") else "")) if ev else "sin datos todavía"))
-    c_eta = card("ETA fase en curso", (eta or "—"), (f"faltan ≈{rem} ítems de la fase" if rem else "—"))
+    c_eta = card("ETA fase en curso", (eta_txt or "—"), (f"faltan ≈{rem} ítems de la fase" if rem else "—"))
     if ev:
         c_ult = card("Última captura", esc(ev["name"][:26]),
                      f'<span class="ago" data-t="{d["ult_ts"]}">{_tab_hace(d["ult_ts"])}</span> · {ev["kind"]}')
