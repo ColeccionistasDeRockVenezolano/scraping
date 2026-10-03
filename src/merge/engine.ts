@@ -161,6 +161,20 @@ async function wasAsserted(client: PoolClient, spec: EntitySpec, targetId: numbe
 }
 
 async function attachClaim(client: PoolClient, claimId: number, spec: EntitySpec, targetId: number, status: "accepted" | "candidate" | "conflict" = "accepted"): Promise<void> {
+  // La misma ficha puede volver con otra identidad (el adapter cambió cómo lee
+  // el título) y el mismo valor: el gemelo ya está pegado a la entidad, y
+  // pegar este rompería claims_dedupe_uk. Queda superseded, sin destino.
+  const { rows: [twin] } = await client.query<{ id: string }>(`
+    SELECT o.id::text FROM ingest.claims o JOIN ingest.claims c ON c.id=$2
+     WHERE o.${spec.targetColumn}=$1 AND o.id<>c.id AND o.source_id=c.source_id
+       AND coalesce(o.raw_page_id,0)=coalesce(c.raw_page_id,0) AND coalesce(o.seed_upload_id,0)=coalesce(c.seed_upload_id,0)
+       AND o.entity_kind=c.entity_kind AND o.field=c.field AND o.raw_hash=c.raw_hash
+     LIMIT 1`, [targetId, claimId]);
+  if (twin) {
+    await client.query(`UPDATE ingest.claims SET status='superseded',updated_at=now(),notes=concat_ws(' · ',notes,$2::text) WHERE id=$1`,
+      [claimId, `mismo valor que el claim ${twin.id}, ya en la entidad ${targetId}`]);
+    return;
+  }
   await client.query(`UPDATE ingest.claims SET ${spec.targetColumn}=$1,status=$2,updated_at=now() WHERE id=$3`, [targetId, status, claimId]);
 }
 

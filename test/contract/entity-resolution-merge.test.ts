@@ -140,6 +140,22 @@ describe("ER + claims + conflictos + merge auditado", () => {
     expect(Number(after[0]!.decision)).toBeGreaterThan(Number(before[0]!.decision));
   });
 
+  it("un gemelo ya pegado a la entidad no rompe claims_dedupe_uk", async () => {
+    const url = "https://fixture.invalid/er/album-paticas-genre";
+    const albumInput: ResolutionInput = { kind: "ALBUM", name: "Las Paticas De La Abuela", artist: { id: artistId, name: "Caramelos de Cianuro" }, year: 1992, releaseType: "ep" };
+    const genre = () => applyClaim({ sourceId, kind: "album", identity: "Caramelos de Cianuro::Las Paticas De La Abuela", field: "genre", value: "Rock", evidenceUrl: url, resolutionInput: albumInput, targets: { parentArtistId: artistId } });
+    const first = await genre();
+    expect(first.outcome.albumId).toBe(albumId);
+    // Un script viejo reescribió la identidad del claim sin recalcular su
+    // hash (caso Hydra, Sincopa 939): la reingesta ya no lo reconoce.
+    await getPool().query("UPDATE ingest.claims SET identity_key='caramelos de cianuro las paticas' WHERE id=$1", [first.persisted.id]);
+    const second = await genre();
+    expect(second.persisted.inserted).toBe(true);
+    const { rows } = await getPool().query<{ status: string; album_id: string | null }>(
+      "SELECT status::text, album_id::text FROM ingest.claims WHERE id=$1", [second.persisted.id]);
+    expect(rows[0]).toEqual({ status: "superseded", album_id: null });
+  });
+
   it("conserva dos ocurrencias reales con el mismo título y retira el unsure sustituido", async () => {
     const existing = await getPool().query<{ id: string }>(
       "SELECT id::text FROM tracks WHERE album_id=$1 AND disc_number=1 AND track_number=1",
