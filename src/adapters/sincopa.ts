@@ -8,7 +8,7 @@ import { absoluteUrl, clean, contentImages, excerpt } from "./shared.js";
 // evita confundir fichas detalladas de sencillos con la tabla de discografía.
 // 1.2.0 abre todas las secciones del sitio (jazz, latin pop, clásica, new age,
 // tradicional, étnica): usan la misma plantilla de ficha que rock/pop.
-const SINCOPA_ADAPTER_VERSION = "1.2.1";
+const SINCOPA_ADAPTER_VERSION = "1.3.0";
 
 // Sincopa es HTML de FrontPage: tablas anidadas, sin clases ni encabezados
 // semánticos. Toda su semántica está codificada en el color de fuente:
@@ -271,10 +271,13 @@ function named(value: string): boolean {
   return /[\p{L}\p{N}]/u.test(value);
 }
 
-/** Solo coma y "&": partir por " y " rompería nombres propios en español. */
+/**
+ * Coma, "&", "+" y "/" (Brian, 2026-10-02: «Lennon/McCartney» son dos
+ * autores). Partir por " y " rompería nombres propios en español.
+ */
 function splitNames(value: string): string[] {
   return value
-    .split(/\s*(?:,|&|\+)\s*/)
+    .split(/\s*(?:,|&|\+|\/)\s*/)
     .map((part) => clean(part))
     .filter((part) => part.length > 1 && part.length <= 200 && named(part));
 }
@@ -575,8 +578,10 @@ export class SincopaAdapter implements SourceAdapter {
       // El compositor va entre paréntesis; la duración lo sigue y no forma
       // parte del crédito.
       const composer = /\(([^)]+)\)(?:\s*\d{1,2}:[0-5]\d)?\s*$/.exec(text)?.[1];
-      const credited = composer ? clean(composer) : "";
-      if (credited && named(credited)) {
+      // Varios autores van separados por «/»: un crédito por cada uno.
+      const authors = composer ? composer.split(/\s*\/\s*/).map((part) => clean(part)) : [];
+      for (const credited of authors) {
+        if (!credited || !named(credited)) continue;
         records.push(this.record("person", credited, [{ field: "name", value: credited, evidence: where }]));
         const composerCredit: RawRecord["fields"] = [
           { field: "album_title", value: title, evidence: where },

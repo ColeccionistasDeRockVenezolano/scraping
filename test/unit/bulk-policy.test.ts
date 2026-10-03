@@ -133,6 +133,26 @@ describe("decideVerdict", () => {
     }
   });
 
+  it("de un crédito con varios autores, iniciales y apellidos sueltos solo entran con enlace seguro", () => {
+    const part = { kind: "person" as const, decision: noMatch, sameName: [], onlySplitPart: true };
+    // Tramo B: nombre completo nuevo, se crea.
+    expect(decideVerdict({ ...part, name: "Carlos Vilchez" }).kind).toBe("different");
+    // Tramos C y D sin enlace: quedan abiertos.
+    for (const name of ["M. Sullivan", "J.F. Coots", "Lennon", "Rengifo"]) {
+      expect(decideVerdict({ ...part, name }), name).toMatchObject({ kind: "hold", rule: "parte-de-credito-multiple:sin-enlace-seguro" });
+    }
+    const autoMatch: DecisionEvidence = { action: "AUTO_MATCH", score: 0.97, candidates: [{ id: 9, name: "Aquiles Nazoa", score: 0.97 }] };
+    expect(decideVerdict({ ...part, name: "A. Nazoa", decision: autoMatch })).toEqual({ kind: "approve", rule: "auto-match" });
+    // Una sola palabra pide además que el nombre exista una sola vez.
+    expect(decideVerdict({ ...part, name: "Leo", decision: autoMatch }).kind).toBe("hold");
+    expect(decideVerdict({ ...part, name: "Leo", decision: autoMatch, sameName: [{ id: 9, name: "Leo" }] })).toEqual({ kind: "approve", rule: "auto-match" });
+    // Sin la señal, un apellido suelto se trata como siempre.
+    expect(decideVerdict({ kind: "person", name: "Joselo", decision: noMatch, sameName: [] }).kind).toBe("different");
+    for (const name of ["Anónimo", "Popular", "D.P.", "L: Dagnino", "M: Dagnino"]) {
+      expect(decideVerdict({ ...part, name }), name).toMatchObject({ kind: "hold", rule: "no-es-una-persona:rotulo" });
+    }
+  });
+
   it("lo que solo llega como paréntesis de un título no se crea", () => {
     const parenthesis = { kind: "person" as const, decision: noMatch, sameName: [], onlyTitleParenthesis: true };
     expect(decideVerdict({ ...parenthesis, name: "Capricornio" })).toMatchObject({ kind: "hold", rule: "no-es-una-persona:parentesis-de-titulo" });

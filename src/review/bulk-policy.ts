@@ -61,6 +61,12 @@ export interface PolicyInput {
    * otra línea de créditos.
    */
   onlyTitleParenthesis?: boolean;
+  /**
+   * Solo llega como uno de varios autores de un crédito partido por «/»
+   * («Lennon/McCartney» → «Lennon»). Con iniciales o una sola palabra no se
+   * crea sin enlace seguro del ER (Brian, 2026-10-02: tramos C y D).
+   */
+  onlySplitPart?: boolean;
 }
 
 export type Verdict =
@@ -126,12 +132,17 @@ const CREDIT_LABEL = new RegExp([
   // Rol pegado al nombre: «Comp: X», «Recop: X», «Rec. X», «Compilation: X».
   String.raw`^(?:comp|recop|recopilaci[oó]n|compilation|compilaci[oó]n|letra|lyrics|m[uú]sica|music|words|adaptaci[oó]n)\s*:`,
   String.raw`^(?:rec|recp|recop|comp|adapt|vers?)\.\s`,
+  // «L: Dagnino / M: Dagnino» (letra y música).
+  String.raw`^[lm]\s*:`,
   // Una palabra que describe la pista, no a su autor: «(Cuento)», «(Demo)».
-  String.raw`^(?:cuento|poema|poes[ií]a|narraci[oó]n|recitad[oa]|declamaci[oó]n|demo|ac[uú]stic[oa]|acoustic|in[eé]dit[oa]|medley|popurr[ií]|potpourri|tributo|cover|hidden track|tema oculto|a cap+el+a|dub|edit|radio edit|extended)$`,
+  String.raw`^(?:cuento|poema|poes[ií]a|narraci[oó]n|recitad[oa]|declamaci[oó]n|demo|ac[uú]stic[oa]|acoustic|in[eé]dit[oa]|medley|popurr[ií]|potpourri|tributo|cover|hidden track|tema oculto|a cap+el+a|dub|edit|radio edit|extended|an[oó]nimo|popular|tradicional|traditional|folklore|folclore|dominio p[uú]blico|d\.?\s?p\.?|p\.?\s?d\.?|d\.?\s?r\.?|d\.?\s?r\.?\s?a\.?)$`,
 ].join("|"), "iu");
 
 /** Un año, un número o un rango («1928», «1248-1254»): no es un nombre. */
 const ONLY_DIGITS = /^[\d\s.,/-]+$/u;
+
+/** «M. Sullivan», «J.F. Coots»: una inicial con punto. */
+const INITIAL_TOKEN = /(?:^|[\s.])\p{L}\.(?=\s|\p{L}|$)/u;
 
 /** «"Mi Tío Pánfilo"»: abre y cierra con comillas y no lleva otras dentro. */
 const WHOLLY_QUOTED = /^\s*["“”«][^"“”«»]+["“”»]\s*$/u;
@@ -238,6 +249,16 @@ export function decideVerdict(input: PolicyInput): Verdict {
     // «(Capricornio)» o «(Goyescas)». En jazz, clásica y new age, lo que SOLO
     // llega por ese paréntesis resultó ser casi siempre un título. Se crea
     // únicamente si el ER ya lo enlazó con seguridad a una persona existente.
+    if (input.onlySplitPart === true) {
+      const single = nameTokenCount(input.name) < 2;
+      const initials = INITIAL_TOKEN.test(input.name);
+      const linked = decision?.action === "AUTO_MATCH" && (!single || input.sameName.length === 1);
+      if ((single || initials) && !linked) {
+        return { kind: "hold", rule: "parte-de-credito-multiple:sin-enlace-seguro", detail: single
+          ? "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente"
+          : "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente" };
+      }
+    }
     const safeLink = decision?.action === "AUTO_MATCH" && nameTokenCount(input.name) >= 2;
     if (input.onlyTitleParenthesis === true && !safeLink) {
       return { kind: "hold", rule: "no-es-una-persona:parentesis-de-titulo", detail: "solo aparece como paréntesis final de títulos de pista; puede ser un subtítulo o una traducción" };

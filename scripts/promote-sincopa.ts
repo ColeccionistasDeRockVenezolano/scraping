@@ -2,8 +2,8 @@
 //
 //   tsx scripts/promote-sincopa.ts --section=jazz                 # ensayo: plan y listas, no escribe
 //   tsx scripts/promote-sincopa.ts --section=jazz --confirm --note="…"
-//   opciones: --kinds=artist,album  --limit=50  --out=reports/…json
-import { mkdirSync, writeFileSync } from "node:fs";
+//   opciones: --kinds=artist,album  --limit=50  --out=reports/…json  --urls-file=…txt (solo esas fichas)
+import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname } from "node:path";
 import { closeDb } from "../src/db/client.js";
 import { PROMOTION_SECTIONS, promoteSection, type PromotionKind, type PromotionSection } from "../src/review/bulk-promotion.js";
@@ -22,10 +22,13 @@ async function main(): Promise<void> {
   const note = flag("note") ?? `Sincopa ${section}: promoción masiva por reglas`;
   const kinds = flag("kinds")?.split(",") as PromotionKind[] | undefined;
   const limit = flag("limit") === undefined ? undefined : Number(flag("limit"));
+  const urlsFile = flag("urls-file");
+  const pageUrls = urlsFile === undefined ? undefined : readFileSync(urlsFile, "utf8").split("\n").map((line) => line.trim()).filter(Boolean);
   const report = await promoteSection({
     section, note, confirm,
     ...(kinds === undefined ? {} : { kinds }),
     ...(limit === undefined ? {} : { limitPerKind: limit }),
+    ...(pageUrls === undefined ? {} : { pageUrls }),
   });
   const out = flag("out") ?? `reports/promocion-sincopa-${section}-${confirm ? `run${report.runId}` : "ensayo"}.json`;
   mkdirSync(dirname(out), { recursive: true });

@@ -64,6 +64,8 @@ export interface PromotionOptions {
   kinds?: readonly PromotionKind[];
   /** Techo de identidades por tipo (pruebas piloto). */
   limitPerKind?: number;
+  /** Solo las identidades con claims candidatos en estas fichas (reingestas dirigidas). */
+  pageUrls?: readonly string[];
   decidedBy?: string;
 }
 
@@ -101,18 +103,19 @@ async function sourceIdFor(slug: string): Promise<number> {
   return Number(rows[0].id);
 }
 
-/** Identidades con al menos un claim candidato en páginas de la sección. */
-async function selectIdentities(sourceId: number, kind: PromotionKind, section: PromotionSection, limit?: number): Promise<IdentityRow[]> {
+/** Identidades con al menos un claim candidato en páginas de la sección (o de las fichas dadas). */
+async function selectIdentities(sourceId: number, kind: PromotionKind, section: PromotionSection, limit?: number, pageUrls?: readonly string[]): Promise<IdentityRow[]> {
   const { rows } = await getPool().query<{ identity_key: string; raw: string | null; claims: number }>(`
     SELECT c.identity_key, min(c.identity_raw) AS raw, count(*)::int AS claims
       FROM ingest.claims c
       JOIN ingest.raw_pages p ON p.id = c.raw_page_id
      WHERE c.source_id = $1 AND c.status = 'candidate' AND c.entity_kind = $2::ingest.claim_entity_kind
        AND c.identity_key IS NOT NULL AND p.url LIKE $3
+       ${pageUrls === undefined ? "" : "AND p.url = ANY($4::text[])"}
      GROUP BY c.identity_key
      ORDER BY min(c.id)
      ${limit === undefined ? "" : `LIMIT ${Math.max(1, Math.floor(limit))}`}`,
-  [sourceId, kind, `%sincopa.com/${section}/%`]);
+  [sourceId, kind, `%sincopa.com/${section}/%`, ...(pageUrls === undefined ? [] : [pageUrls])]);
   return rows.map((row) => ({ identityKey: row.identity_key, identityRaw: row.raw ?? row.identity_key, claims: row.claims }));
 }
 
@@ -182,6 +185,40 @@ export async function loadTitleParenthesisOnly(sourceId: number, section: Promot
     `c.identity_key IN (SELECT n.identity_key FROM ingest.claims n
                          WHERE n.source_id = $1 AND n.entity_kind IN ('album_credit', 'track_credit')
                            AND n.field = 'credited_name' AND n.raw_value #>> '{}' = ANY($2::text[]))`, [rawNames]));
+  return new Set(suspects.map(([key]) => key).filter((key) => (global.get(key)?.other ?? 0) === 0));
+}
+
+/**
+ * Personas que la fuente SOLO nombra como uno de varios autores separados por
+ * «/» («(Lennon/McCartney)» → «Lennon»). Se mira la evidencia del crédito: el
+ * nombre pegado a una barra. Un solo crédito propio en cualquier ficha de la
+ * fuente la saca de la lista.
+ */
+export async function loadSplitPartOnly(sourceId: number, section: PromotionSection): Promise<Set<string>> {
+  const creditsOf = async (where: string, params: unknown[]) => (await getPool().query<{ name: string; excerpt: string | null }>(`
+    SELECT c.raw_value #>> '{}' AS name, max(e.excerpt) AS excerpt
+      FROM ingest.claims c LEFT JOIN ingest.claim_evidence e ON e.claim_id = c.id
+     WHERE c.source_id = $1 AND c.entity_kind IN ('album_credit', 'track_credit') AND c.field = 'credited_name' AND ${where}
+     GROUP BY c.raw_page_id, c.entity_kind, c.identity_key, c.raw_value #>> '{}'`, [sourceId, ...params])).rows;
+  const escape = (text: string) => text.replace(/[.*+?^${}()|[\]\\]/gu, "\\$&");
+  const tally = (rows: Array<{ name: string; excerpt: string | null }>) => {
+    const out = new Map<string, { split: number; other: number; raw: Set<string> }>();
+    for (const row of rows) {
+      if (!row.name) continue;
+      const key = normalizeEntityName(row.name).primaryKey;
+      const entry = out.get(key) ?? { split: 0, other: 0, raw: new Set<string>() };
+      entry.raw.add(row.name);
+      const name = escape(row.name);
+      if (new RegExp(`(?:/\\s*${name}|${name}\\s*/)`, "u").test(row.excerpt ?? "")) entry.split += 1;
+      else entry.other += 1;
+      out.set(key, entry);
+    }
+    return out;
+  };
+  const local = tally(await creditsOf(`c.raw_page_id IN (SELECT id FROM ingest.raw_pages WHERE url LIKE $2)`, [`%sincopa.com/${section}/%`]));
+  const suspects = [...local].filter(([, entry]) => entry.split > 0 && entry.other === 0);
+  if (suspects.length === 0) return new Set();
+  const global = tally(await creditsOf(`c.raw_value #>> '{}' = ANY($2::text[])`, [suspects.flatMap(([, entry]) => [...entry.raw])]));
   return new Set(suspects.map(([key]) => key).filter((key) => (global.get(key)?.other ?? 0) === 0));
 }
 
@@ -275,7 +312,7 @@ export async function promoteSection(options: PromotionOptions): Promise<Promoti
       if (!kinds.includes(kind)) continue;
       const summary = emptySummary();
       report.kinds[kind] = summary;
-      const identities = await selectIdentities(sourceId, kind, options.section, options.limitPerKind);
+      const identities = await selectIdentities(sourceId, kind, options.section, options.limitPerKind, options.pageUrls);
       summary.identities = identities.length;
       summary.claims = identities.reduce((sum, item) => sum + item.claims, 0);
       if (identities.length === 0) continue;
@@ -295,6 +332,7 @@ export async function promoteSection(options: PromotionOptions): Promise<Promoti
       const decisions = await loadDecisions(sourceId, entityKind, identities.map((item) => item.identityKey));
       const index = await CoreIndex.load(entityKind);
       const titleParenthesisOnly = entityKind === "person" ? await loadTitleParenthesisOnly(sourceId, options.section) : new Set<string>();
+      const splitPartOnly = entityKind === "person" ? await loadSplitPartOnly(sourceId, options.section) : new Set<string>();
       // Padre de cada candidata (discos → artista, pistas → disco) para compararla solo con sus pares.
       if (CORE_TABLE[entityKind].parent !== undefined) {
         for (const decision of decisions.values()) {
@@ -322,6 +360,7 @@ export async function promoteSection(options: PromotionOptions): Promise<Promoti
           sameName: index.sameName(name, parentId),
           ...(parentId === undefined ? {} : { parentId }),
           ...(titleParenthesisOnly.has(item.identityKey) ? { onlyTitleParenthesis: true } : {}),
+          ...(splitPartOnly.has(item.identityKey) ? { onlySplitPart: true } : {}),
         });
         bump(`${verdict.kind}:${verdict.rule}`);
 

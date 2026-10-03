@@ -293,6 +293,25 @@ describe("adapters funcionales de las fuentes autorizadas", () => {
       .toEqual(["01", "02", "03", "04"]);
   });
 
+  it("Sincopa da un crédito por autor cuando el paréntesis los separa con «/»", () => {
+    const adapter = adapterFor({ slug: "sincopa", siteType: "database" });
+    if (!adapter?.extractSnapshot) throw new Error("adapter Sincopa faltante");
+    const body = `
+      <table><tr>
+        <td>Artist:<br>Album Title:<br>Company:<br>Genre:<br>Release Year:</td>
+        <td><b>Syriak</b><br>Dentro De Los Cuentos Del Día<br>Independiente<br>Rock<br>1997 (CD)</td>
+      </tr></table>
+      <table><tr><td bgcolor="#FFCC00"><b>Tracks</b></td></tr></table>
+      <table><tr><td><font color="#FFFFFF">
+        01- </font><font color="#FFCC00">Baile De Locos </font><font color="#FFFFFF">(Syriak / Carlos Vilchez) 3:40<br>
+        02- </font><font color="#FFCC00">Día Tras Día </font><font color="#FFFFFF">(Roberto Tarzieris)</font>
+      </td></tr></table>`;
+    const claims = adapter.extractSnapshot({ url: "https://fixture.invalid/rock_pop/cdinfo_rock/syriak.htm", kind: "html", rawPageId: 1, body }).flatMap(normalizeRecord);
+    const composers = claims.filter((claim) => claim.entityKind === "track_credit" && claim.field === "credited_name").map((claim) => claim.rawValue);
+    expect(composers).toEqual(["Syriak", "Carlos Vilchez", "Roberto Tarzieris"]);
+    expect(claims.filter((claim) => claim.entityKind === "person").map((claim) => claim.rawValue)).not.toContain("Syriak / Carlos Vilchez");
+  });
+
   it("Sincopa no trata una ficha detallada de sencillo como año, álbum y sello", () => {
     const adapter = adapterFor({ slug: "sincopa", siteType: "database" });
     if (!adapter?.extractSnapshot) throw new Error("adapter Sincopa faltante");
