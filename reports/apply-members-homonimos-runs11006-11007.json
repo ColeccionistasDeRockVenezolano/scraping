@@ -1,0 +1,58 @@
+{
+  "mergeRun": 11006,
+  "queueRun": 11007,
+  "merged": [
+    {
+      "keep": 1378,
+      "drop": 16149,
+      "name": "Franklin Zambrano",
+      "artist": "Baphomet",
+      "shared": [
+        "George Knive",
+        "Hugo Fuguet",
+        "Jorge Torres",
+        "Nelson Hoyer",
+        "Pablo Minoli",
+        "Rafael Pannacci",
+        "Ram Maniram",
+        "Reinaldo Aponte"
+      ]
+    }
+  ],
+  "failed": [
+    {
+      "keep": 15736,
+      "drop": 15736,
+      "name": "Jesus Nieto",
+      "artist": "Raped Dolls",
+      "shared": [
+        "Addys",
+        "Addys Vargas",
+        "Arturo Ibarra",
+        "Jesus ( El gordo )",
+        "Oscar “Raspy” Silva",
+        "Pedro",
+        "Pedro Bermudez",
+        "Raspy"
+      ],
+      "error": "no se puede fusionar una ficha consigo misma"
+    },
+    {
+      "keep": 17296,
+      "drop": 17296,
+      "name": "Glen “tomeetyou” Aveledo",
+      "artist": "Los Carraldos",
+      "shared": [
+        "Blanco",
+        "Gabriel Carrero",
+        "Gabriel piruli Carrero",
+        "Guillermo Labarca",
+        "Ismael Galíndez",
+        "Ricardo Ortiz"
+      ],
+      "error": "no se puede fusionar una ficha consigo misma"
+    }
+  ],
+  "opened": 866,
+  "skipped": 2
+}

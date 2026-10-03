@@ -1,0 +1,193 @@
+{
+  "phase": "llm",
+  "runs": [
+    11273
+  ],
+  "memberships": 15,
+  "alreadyMember": 0,
+  "personsCreated": 9,
+  "reused": {
+    "nueva": 9,
+    "credited": 6
+  },
+  "artistTypes": 2,
+  "possibleDuplicates": [
+    {
+      "artistId": 1089,
+      "artist": "Via de Escape",
+      "name": "Marco Salaverría",
+      "newPersonId": 18632,
+      "homonyms": [
+        2410
+      ]
+    },
+    {
+      "artistId": 1089,
+      "artist": "Via de Escape",
+      "name": "Ramsés Antolines",
+      "newPersonId": 18634,
+      "homonyms": [
+        2412
+      ]
+    },
+    {
+      "artistId": 1089,
+      "artist": "Via de Escape",
+      "name": "Chiara Cazzulani",
+      "newPersonId": 18635,
+      "homonyms": [
+        2408
+      ]
+    },
+    {
+      "artistId": 1089,
+      "artist": "Via de Escape",
+      "name": "Jonathan Rodríguez",
+      "newPersonId": 18636,
+      "homonyms": [
+        2404
+      ]
+    },
+    {
+      "artistId": 1089,
+      "artist": "Via de Escape",
+      "name": "Daniel Moser",
+      "newPersonId": 18637,
+      "homonyms": [
+        2414
+      ]
+    },
+    {
+      "artistId": 1089,
+      "artist": "Via de Escape",
+      "name": "León Moser",
+      "newPersonId": 18638,
+      "homonyms": [
+        2411
+      ]
+    }
+  ],
+  "errors": [],
+  "applied": [
+    {
+      "artistId": 1089,
+      "artist": "Via de Escape",
+      "personId": 18631,
+      "name": "Moser Salaverría",
+      "role": "guitarra",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1089,
+      "artist": "Via de Escape",
+      "personId": 18632,
+      "name": "Marco Salaverría",
+      "role": "batería",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1089,
+      "artist": "Via de Escape",
+      "personId": 18633,
+      "name": "Marco Machado",
+      "role": "guitarra",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1089,
+      "artist": "Via de Escape",
+      "personId": 18634,
+      "name": "Ramsés Antolines",
+      "role": "saxofón",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1089,
+      "artist": "Via de Escape",
+      "personId": 18635,
+      "name": "Chiara Cazzulani",
+      "role": "coros",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1089,
+      "artist": "Via de Escape",
+      "personId": 18636,
+      "name": "Jonathan Rodríguez",
+      "role": "voz líder, segunda guitarra",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1089,
+      "artist": "Via de Escape",
+      "personId": 18637,
+      "name": "Daniel Moser",
+      "role": "bajo",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1089,
+      "artist": "Via de Escape",
+      "personId": 18638,
+      "name": "León Moser",
+      "role": "guitarra líder",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1111,
+      "artist": "Bélica",
+      "personId": 223,
+      "name": "Annabella Almenar",
+      "role": "Titular del proyecto",
+      "how": "credited"
+    },
+    {
+      "artistId": 1247,
+      "artist": "Skatz",
+      "personId": 735,
+      "name": "Vladimir Peña",
+      "role": "trombón, teclados",
+      "how": "credited"
+    },
+    {
+      "artistId": 1247,
+      "artist": "Skatz",
+      "personId": 184,
+      "name": "Marcel",
+      "role": "voz líder, guitarra, programación",
+      "how": "credited"
+    },
+    {
+      "artistId": 1247,
+      "artist": "Skatz",
+      "personId": 6567,
+      "name": "Elguille",
+      "role": "guitarra líder, coros",
+      "how": "credited"
+    },
+    {
+      "artistId": 1247,
+      "artist": "Skatz",
+      "personId": 4674,
+      "name": "Pablo",
+      "role": "bajo, coros",
+      "how": "credited"
+    },
+    {
+      "artistId": 1247,
+      "artist": "Skatz",
+      "personId": 360,
+      "name": "Daniel",
+      "role": "batería",
+      "how": "credited"
+    },
+    {
+      "artistId": 1715,
+      "artist": "Vargas",
+      "personId": 18639,
+      "name": "Vargas",
+      "role": "Titular del proyecto",
+      "how": "nueva"
+    }
+  ]
+}

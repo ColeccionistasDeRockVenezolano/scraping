@@ -1,0 +1,6192 @@
+{
+  "phase": "structured",
+  "runs": [
+    11008
+  ],
+  "memberships": 403,
+  "alreadyMember": 329,
+  "personsCreated": 375,
+  "reused": {
+    "proyecto-comun": 54,
+    "credited": 303,
+    "nueva": 375
+  },
+  "artistTypes": 0,
+  "possibleDuplicates": [
+    {
+      "artistId": 38,
+      "artist": "Alban Arthuan",
+      "name": "Devorah Hermoso",
+      "newPersonId": 18177,
+      "homonyms": [
+        15404
+      ]
+    },
+    {
+      "artistId": 44,
+      "artist": "Antena Mantis",
+      "name": "Mervin Santiago",
+      "newPersonId": 18179,
+      "homonyms": [
+        15406
+      ]
+    },
+    {
+      "artistId": 50,
+      "artist": "Bala Perdida",
+      "name": "Juan Cifuentes",
+      "newPersonId": 18180,
+      "homonyms": [
+        15413
+      ]
+    },
+    {
+      "artistId": 51,
+      "artist": "Billy Se Fue",
+      "name": "Liz",
+      "newPersonId": 18182,
+      "homonyms": [
+        9143
+      ]
+    },
+    {
+      "artistId": 60,
+      "artist": "Cero A La Izquierda",
+      "name": "Fernando Batoni",
+      "newPersonId": 18183,
+      "homonyms": [
+        494
+      ]
+    },
+    {
+      "artistId": 60,
+      "artist": "Cero A La Izquierda",
+      "name": "Jaime Verdaguer",
+      "newPersonId": 18184,
+      "homonyms": [
+        491
+      ]
+    },
+    {
+      "artistId": 62,
+      "artist": "Chucknorris",
+      "name": "Claudio Ramírez",
+      "newPersonId": 18185,
+      "homonyms": [
+        15653,
+        885
+      ]
+    },
+    {
+      "artistId": 71,
+      "artist": "Cunaguaro Soul",
+      "name": "Christian Hoj",
+      "newPersonId": 18187,
+      "homonyms": [
+        15421
+      ]
+    },
+    {
+      "artistId": 71,
+      "artist": "Cunaguaro Soul",
+      "name": "Javier Gárnica",
+      "newPersonId": 18188,
+      "homonyms": [
+        2337
+      ]
+    },
+    {
+      "artistId": 90,
+      "artist": "El Supremo Hongo Imaginario",
+      "name": "José Manuel Pinto",
+      "newPersonId": 18190,
+      "homonyms": [
+        2523
+      ]
+    },
+    {
+      "artistId": 90,
+      "artist": "El Supremo Hongo Imaginario",
+      "name": "Luis Arroyo",
+      "newPersonId": 18191,
+      "homonyms": [
+        15430
+      ]
+    },
+    {
+      "artistId": 95,
+      "artist": "Famasloop",
+      "name": "Vanessa Gouveia",
+      "newPersonId": 18192,
+      "homonyms": [
+        2481
+      ]
+    },
+    {
+      "artistId": 103,
+      "artist": "Gaêlica",
+      "name": "César Natera",
+      "newPersonId": 18193,
+      "homonyms": [
+        960
+      ]
+    },
+    {
+      "artistId": 114,
+      "artist": "Icaro",
+      "name": "Pedro Berischa",
+      "newPersonId": 18195,
+      "homonyms": [
+        15434
+      ]
+    },
+    {
+      "artistId": 129,
+      "artist": "La Corte",
+      "name": "Ruso 40",
+      "newPersonId": 18199,
+      "homonyms": [
+        15449
+      ]
+    },
+    {
+      "artistId": 129,
+      "artist": "La Corte",
+      "name": "Apolonia",
+      "newPersonId": 18200,
+      "homonyms": [
+        678,
+        15453
+      ]
+    },
+    {
+      "artistId": 129,
+      "artist": "La Corte",
+      "name": "DJ 13",
+      "newPersonId": 18202,
+      "homonyms": [
+        15447
+      ]
+    },
+    {
+      "artistId": 143,
+      "artist": "Lapamariposa",
+      "name": "Tato Rodríguez",
+      "newPersonId": 18203,
+      "homonyms": [
+        3032
+      ]
+    },
+    {
+      "artistId": 154,
+      "artist": "Los Beat3",
+      "name": "Alexandra Romero",
+      "newPersonId": 18204,
+      "homonyms": [
+        15456
+      ]
+    },
+    {
+      "artistId": 154,
+      "artist": "Los Beat3",
+      "name": "Andrés Seger",
+      "newPersonId": 18205,
+      "homonyms": [
+        1359
+      ]
+    },
+    {
+      "artistId": 154,
+      "artist": "Los Beat3",
+      "name": "Axel Rojas",
+      "newPersonId": 18206,
+      "homonyms": [
+        15455
+      ]
+    },
+    {
+      "artistId": 154,
+      "artist": "Los Beat3",
+      "name": "Luke Grande",
+      "newPersonId": 18208,
+      "homonyms": [
+        1245
+      ]
+    },
+    {
+      "artistId": 160,
+      "artist": "Los Oceánicos",
+      "name": "Jesús Núñez",
+      "newPersonId": 18211,
+      "homonyms": [
+        3480,
+        16033
+      ]
+    },
+    {
+      "artistId": 160,
+      "artist": "Los Oceánicos",
+      "name": "Joan La Riva",
+      "newPersonId": 18212,
+      "homonyms": [
+        2739
+      ]
+    },
+    {
+      "artistId": 192,
+      "artist": "PapaShanty Saund System",
+      "name": "Daniel Sarmiento",
+      "newPersonId": 18213,
+      "homonyms": [
+        481
+      ]
+    },
+    {
+      "artistId": 192,
+      "artist": "PapaShanty Saund System",
+      "name": "Onechot",
+      "newPersonId": 18214,
+      "homonyms": [
+        234
+      ]
+    },
+    {
+      "artistId": 192,
+      "artist": "PapaShanty Saund System",
+      "name": "Juan David Chacon",
+      "newPersonId": 18216,
+      "homonyms": [
+        16137
+      ]
+    },
+    {
+      "artistId": 222,
+      "artist": "Sietecuero",
+      "name": "Luisito Quintero",
+      "newPersonId": 18217,
+      "homonyms": [
+        1701
+      ]
+    },
+    {
+      "artistId": 222,
+      "artist": "Sietecuero",
+      "name": "Rafael Figliuolo",
+      "newPersonId": 18218,
+      "homonyms": [
+        1167
+      ]
+    },
+    {
+      "artistId": 222,
+      "artist": "Sietecuero",
+      "name": "Pedro Matute",
+      "newPersonId": 18219,
+      "homonyms": [
+        15472,
+        541
+      ]
+    },
+    {
+      "artistId": 226,
+      "artist": "Slam Ballet",
+      "name": "Caliarina Izarra",
+      "newPersonId": 18220,
+      "homonyms": [
+        15478
+      ]
+    },
+    {
+      "artistId": 226,
+      "artist": "Slam Ballet",
+      "name": "Caribay Celis",
+      "newPersonId": 18221,
+      "homonyms": [
+        15479
+      ]
+    },
+    {
+      "artistId": 226,
+      "artist": "Slam Ballet",
+      "name": "Claudia Campos",
+      "newPersonId": 18222,
+      "homonyms": [
+        2803
+      ]
+    },
+    {
+      "artistId": 226,
+      "artist": "Slam Ballet",
+      "name": "Estrella Sulbarán",
+      "newPersonId": 18223,
+      "homonyms": [
+        15481
+      ]
+    },
+    {
+      "artistId": 226,
+      "artist": "Slam Ballet",
+      "name": "Mayerlín Tellería",
+      "newPersonId": 18224,
+      "homonyms": [
+        15482
+      ]
+    },
+    {
+      "artistId": 226,
+      "artist": "Slam Ballet",
+      "name": "Osvaldo Michelli",
+      "newPersonId": 18225,
+      "homonyms": [
+        15483
+      ]
+    },
+    {
+      "artistId": 226,
+      "artist": "Slam Ballet",
+      "name": "Pablo Campos",
+      "newPersonId": 18226,
+      "homonyms": [
+        1313,
+        15484
+      ]
+    },
+    {
+      "artistId": 239,
+      "artist": "Tarot",
+      "name": "Marco Hietala",
+      "newPersonId": 18227,
+      "homonyms": [
+        15485
+      ]
+    },
+    {
+      "artistId": 239,
+      "artist": "Tarot",
+      "name": "Janne Tolsa",
+      "newPersonId": 18228,
+      "homonyms": [
+        15487
+      ]
+    },
+    {
+      "artistId": 239,
+      "artist": "Tarot",
+      "name": "Pecu Cinnari",
+      "newPersonId": 18230,
+      "homonyms": [
+        15491
+      ]
+    },
+    {
+      "artistId": 239,
+      "artist": "Tarot",
+      "name": "Mako H.",
+      "newPersonId": 18231,
+      "homonyms": [
+        15490
+      ]
+    },
+    {
+      "artistId": 239,
+      "artist": "Tarot",
+      "name": "Zachary Hietala",
+      "newPersonId": 18232,
+      "homonyms": [
+        15486
+      ]
+    },
+    {
+      "artistId": 239,
+      "artist": "Tarot",
+      "name": "Tommi Salmela",
+      "newPersonId": 18233,
+      "homonyms": [
+        15488
+      ]
+    },
+    {
+      "artistId": 240,
+      "artist": "Team Malín",
+      "name": "David Moreira",
+      "newPersonId": 18234,
+      "homonyms": [
+        15492,
+        3494
+      ]
+    },
+    {
+      "artistId": 256,
+      "artist": "Vagos y Maleantes",
+      "name": "Budu",
+      "newPersonId": 18238,
+      "homonyms": [
+        6977,
+        15500
+      ]
+    },
+    {
+      "artistId": 256,
+      "artist": "Vagos y Maleantes",
+      "name": "El Nigga",
+      "newPersonId": 18239,
+      "homonyms": [
+        15501
+      ]
+    },
+    {
+      "artistId": 270,
+      "artist": "Dimension Latina",
+      "name": "Oscar D' León",
+      "newPersonId": 18242,
+      "homonyms": [
+        1039
+      ]
+    },
+    {
+      "artistId": 270,
+      "artist": "Dimension Latina",
+      "name": "José Rodriguez",
+      "newPersonId": 18243,
+      "homonyms": [
+        167,
+        6072,
+        17754,
+        15504,
+        16174,
+        1112
+      ]
+    },
+    {
+      "artistId": 270,
+      "artist": "Dimension Latina",
+      "name": "Samuel Del Real",
+      "newPersonId": 18244,
+      "homonyms": [
+        8324
+      ]
+    },
+    {
+      "artistId": 270,
+      "artist": "Dimension Latina",
+      "name": "Andy Montañez",
+      "newPersonId": 18245,
+      "homonyms": [
+        1038,
+        15510
+      ]
+    },
+    {
+      "artistId": 270,
+      "artist": "Dimension Latina",
+      "name": "Victor Mendoza",
+      "newPersonId": 18246,
+      "homonyms": [
+        478
+      ]
+    },
+    {
+      "artistId": 270,
+      "artist": "Dimension Latina",
+      "name": "Rodrigo Mendoza",
+      "newPersonId": 18247,
+      "homonyms": [
+        1049,
+        15509
+      ]
+    },
+    {
+      "artistId": 270,
+      "artist": "Dimension Latina",
+      "name": "Gustavo Carmona",
+      "newPersonId": 18248,
+      "homonyms": [
+        1048
+      ]
+    },
+    {
+      "artistId": 270,
+      "artist": "Dimension Latina",
+      "name": "Carlos Guillen",
+      "newPersonId": 18250,
+      "homonyms": [
+        3385
+      ]
+    },
+    {
+      "artistId": 270,
+      "artist": "Dimension Latina",
+      "name": "Jesus Narvaez",
+      "newPersonId": 18251,
+      "homonyms": [
+        1045
+      ]
+    },
+    {
+      "artistId": 270,
+      "artist": "Dimension Latina",
+      "name": "César Monge",
+      "newPersonId": 18255,
+      "homonyms": [
+        15502
+      ]
+    },
+    {
+      "artistId": 270,
+      "artist": "Dimension Latina",
+      "name": "Elio Pacheco",
+      "newPersonId": 18256,
+      "homonyms": [
+        15505,
+        1041
+      ]
+    },
+    {
+      "artistId": 270,
+      "artist": "Dimension Latina",
+      "name": "Argenis Carruyo",
+      "newPersonId": 18258,
+      "homonyms": [
+        1044,
+        15508
+      ]
+    },
+    {
+      "artistId": 270,
+      "artist": "Dimension Latina",
+      "name": "Carlos Guerra Jr.",
+      "newPersonId": 18259,
+      "homonyms": [
+        1047
+      ]
+    },
+    {
+      "artistId": 270,
+      "artist": "Dimension Latina",
+      "name": "Jesus Torres",
+      "newPersonId": 18261,
+      "homonyms": [
+        2680
+      ]
+    },
+    {
+      "artistId": 270,
+      "artist": "Dimension Latina",
+      "name": "Cesár Monges",
+      "newPersonId": 18262,
+      "homonyms": [
+        13040
+      ]
+    },
+    {
+      "artistId": 270,
+      "artist": "Dimension Latina",
+      "name": "Édgar Rodríguez",
+      "newPersonId": 18265,
+      "homonyms": [
+        4507
+      ]
+    },
+    {
+      "artistId": 270,
+      "artist": "Dimension Latina",
+      "name": "Oscar D'León",
+      "newPersonId": 18270,
+      "homonyms": [
+        1039
+      ]
+    },
+    {
+      "artistId": 270,
+      "artist": "Dimension Latina",
+      "name": "Wladimir Lozano",
+      "newPersonId": 18271,
+      "homonyms": [
+        1042
+      ]
+    },
+    {
+      "artistId": 285,
+      "artist": "Psh Psh",
+      "name": "Lorena Gimeno Sassone",
+      "newPersonId": 18277,
+      "homonyms": [
+        15512
+      ]
+    },
+    {
+      "artistId": 301,
+      "artist": "Doña Maldad",
+      "name": "Troco",
+      "newPersonId": 18279,
+      "homonyms": [
+        15518
+      ]
+    },
+    {
+      "artistId": 301,
+      "artist": "Doña Maldad",
+      "name": "Jorge Pelusa",
+      "newPersonId": 18280,
+      "homonyms": [
+        15519
+      ]
+    },
+    {
+      "artistId": 301,
+      "artist": "Doña Maldad",
+      "name": "Juan Pablo Nunez",
+      "newPersonId": 18281,
+      "homonyms": [
+        15520,
+        4033
+      ]
+    },
+    {
+      "artistId": 366,
+      "artist": "PI XPRNC",
+      "name": "Karen González",
+      "newPersonId": 18282,
+      "homonyms": [
+        15553,
+        5518
+      ]
+    },
+    {
+      "artistId": 366,
+      "artist": "PI XPRNC",
+      "name": "Miguel Blanco",
+      "newPersonId": 18283,
+      "homonyms": [
+        3256,
+        15557
+      ]
+    },
+    {
+      "artistId": 366,
+      "artist": "PI XPRNC",
+      "name": "David Cajías",
+      "newPersonId": 18284,
+      "homonyms": [
+        15558
+      ]
+    },
+    {
+      "artistId": 366,
+      "artist": "PI XPRNC",
+      "name": "Yonder Rodríguez",
+      "newPersonId": 18285,
+      "homonyms": [
+        15559
+      ]
+    },
+    {
+      "artistId": 390,
+      "artist": "Los Callejeros",
+      "name": "Douglas Barrios",
+      "newPersonId": 18286,
+      "homonyms": [
+        15564
+      ]
+    },
+    {
+      "artistId": 390,
+      "artist": "Los Callejeros",
+      "name": "Gerardo Rodríguez",
+      "newPersonId": 18287,
+      "homonyms": [
+        15565
+      ]
+    },
+    {
+      "artistId": 390,
+      "artist": "Los Callejeros",
+      "name": "Jairo Carrasquel",
+      "newPersonId": 18288,
+      "homonyms": [
+        15897,
+        15566
+      ]
+    },
+    {
+      "artistId": 390,
+      "artist": "Los Callejeros",
+      "name": "Yvan Gil",
+      "newPersonId": 18289,
+      "homonyms": [
+        15567
+      ]
+    },
+    {
+      "artistId": 403,
+      "artist": "Maracaibo",
+      "name": "Jorge Galbassini",
+      "newPersonId": 18290,
+      "homonyms": [
+        15580
+      ]
+    },
+    {
+      "artistId": 403,
+      "artist": "Maracaibo",
+      "name": "Huáscar Barradas",
+      "newPersonId": 18291,
+      "homonyms": [
+        15581,
+        726
+      ]
+    },
+    {
+      "artistId": 403,
+      "artist": "Maracaibo",
+      "name": "Felipe \"Mandingo\" Rengifo",
+      "newPersonId": 18292,
+      "homonyms": [
+        513,
+        15582
+      ]
+    },
+    {
+      "artistId": 403,
+      "artist": "Maracaibo",
+      "name": "José Antonio Zambrano",
+      "newPersonId": 18293,
+      "homonyms": [
+        15583
+      ]
+    },
+    {
+      "artistId": 403,
+      "artist": "Maracaibo",
+      "name": "Rafael Simón Bolívar",
+      "newPersonId": 18294,
+      "homonyms": [
+        7694,
+        15584
+      ]
+    },
+    {
+      "artistId": 454,
+      "artist": "Arrecho",
+      "name": "Gopinatha Dasa Prabu",
+      "newPersonId": 18297,
+      "homonyms": [
+        15618
+      ]
+    },
+    {
+      "artistId": 454,
+      "artist": "Arrecho",
+      "name": "Ian Olmedo",
+      "newPersonId": 18298,
+      "homonyms": [
+        15619,
+        14673
+      ]
+    },
+    {
+      "artistId": 454,
+      "artist": "Arrecho",
+      "name": "Vladimir Dorante",
+      "newPersonId": 18299,
+      "homonyms": [
+        15620
+      ]
+    },
+    {
+      "artistId": 454,
+      "artist": "Arrecho",
+      "name": "Witold Michaljlow",
+      "newPersonId": 18300,
+      "homonyms": [
+        15616
+      ]
+    },
+    {
+      "artistId": 524,
+      "artist": "Gladys Cordero",
+      "name": "Abelardo Álvarez",
+      "newPersonId": 18301,
+      "homonyms": [
+        14118
+      ]
+    },
+    {
+      "artistId": 524,
+      "artist": "Gladys Cordero",
+      "name": "Carlos González",
+      "newPersonId": 18303,
+      "homonyms": [
+        16450,
+        6817,
+        17646,
+        15645,
+        560
+      ]
+    },
+    {
+      "artistId": 524,
+      "artist": "Gladys Cordero",
+      "name": "Daniel Dávila",
+      "newPersonId": 18304,
+      "homonyms": [
+        2746
+      ]
+    },
+    {
+      "artistId": 524,
+      "artist": "Gladys Cordero",
+      "name": "Gabriel Urbina",
+      "newPersonId": 18306,
+      "homonyms": [
+        15647
+      ]
+    },
+    {
+      "artistId": 524,
+      "artist": "Gladys Cordero",
+      "name": "Horacio Chacín",
+      "newPersonId": 18307,
+      "homonyms": [
+        2748
+      ]
+    },
+    {
+      "artistId": 524,
+      "artist": "Gladys Cordero",
+      "name": "José Miguel de Robertis",
+      "newPersonId": 18308,
+      "homonyms": [
+        2173,
+        16255
+      ]
+    },
+    {
+      "artistId": 534,
+      "artist": "Los Humanoides",
+      "name": "Claudio Ramírez",
+      "newPersonId": 18309,
+      "homonyms": [
+        15653,
+        885,
+        18185
+      ]
+    },
+    {
+      "artistId": 534,
+      "artist": "Los Humanoides",
+      "name": "Kuámasi González",
+      "newPersonId": 18310,
+      "homonyms": [
+        15654,
+        1804
+      ]
+    },
+    {
+      "artistId": 534,
+      "artist": "Los Humanoides",
+      "name": "Luis Méndez",
+      "newPersonId": 18311,
+      "homonyms": [
+        6932,
+        15655
+      ]
+    },
+    {
+      "artistId": 535,
+      "artist": "Zumo",
+      "name": "Carlos Blanco",
+      "newPersonId": 18312,
+      "homonyms": [
+        15656,
+        5970
+      ]
+    },
+    {
+      "artistId": 535,
+      "artist": "Zumo",
+      "name": "Carlos Lanetti",
+      "newPersonId": 18313,
+      "homonyms": [
+        15657
+      ]
+    },
+    {
+      "artistId": 535,
+      "artist": "Zumo",
+      "name": "Elías Aparicio",
+      "newPersonId": 18314,
+      "homonyms": [
+        15659
+      ]
+    },
+    {
+      "artistId": 535,
+      "artist": "Zumo",
+      "name": "Jesús Eduardo Nieto",
+      "newPersonId": 18315,
+      "homonyms": [
+        15660
+      ]
+    },
+    {
+      "artistId": 535,
+      "artist": "Zumo",
+      "name": "Jorge Ubieta",
+      "newPersonId": 18316,
+      "homonyms": [
+        15661
+      ]
+    },
+    {
+      "artistId": 535,
+      "artist": "Zumo",
+      "name": "Luis Milano (2007–Presente)",
+      "newPersonId": 18317,
+      "homonyms": [
+        15658,
+        14326
+      ]
+    },
+    {
+      "artistId": 535,
+      "artist": "Zumo",
+      "name": "Texy Díaz",
+      "newPersonId": 18318,
+      "homonyms": [
+        15662
+      ]
+    },
+    {
+      "artistId": 547,
+      "artist": "Alto Pana",
+      "name": "Ángel Guanchez",
+      "newPersonId": 18319,
+      "homonyms": [
+        467,
+        15664,
+        16227
+      ]
+    },
+    {
+      "artistId": 547,
+      "artist": "Alto Pana",
+      "name": "Juan Lizardo",
+      "newPersonId": 18320,
+      "homonyms": [
+        3624,
+        17690,
+        15663
+      ]
+    },
+    {
+      "artistId": 547,
+      "artist": "Alto Pana",
+      "name": "Pablo Fernández",
+      "newPersonId": 18321,
+      "homonyms": [
+        1840
+      ]
+    },
+    {
+      "artistId": 668,
+      "artist": "Subliminal Code",
+      "name": "Raul Jose Padron",
+      "newPersonId": 18322,
+      "homonyms": [
+        13828,
+        15749
+      ]
+    },
+    {
+      "artistId": 711,
+      "artist": "Alta Frecuencia",
+      "name": "Francisco Tedesco",
+      "newPersonId": 18324,
+      "homonyms": [
+        3443
+      ]
+    },
+    {
+      "artistId": 711,
+      "artist": "Alta Frecuencia",
+      "name": "Julio Hung",
+      "newPersonId": 18326,
+      "homonyms": [
+        3441
+      ]
+    },
+    {
+      "artistId": 817,
+      "artist": "La Cienaga",
+      "name": "Jean Paul Clarac",
+      "newPersonId": 18327,
+      "homonyms": [
+        15805
+      ]
+    },
+    {
+      "artistId": 1009,
+      "artist": "4to Reich",
+      "name": "Ángel Pineda",
+      "newPersonId": 18329,
+      "homonyms": [
+        2470
+      ]
+    },
+    {
+      "artistId": 1009,
+      "artist": "4to Reich",
+      "name": "Guillermo Méndez",
+      "newPersonId": 18330,
+      "homonyms": [
+        1324
+      ]
+    },
+    {
+      "artistId": 1009,
+      "artist": "4to Reich",
+      "name": "Juan Ignacio Morasso",
+      "newPersonId": 18331,
+      "homonyms": [
+        2465
+      ]
+    },
+    {
+      "artistId": 1009,
+      "artist": "4to Reich",
+      "name": "Kike Poleo",
+      "newPersonId": 18332,
+      "homonyms": [
+        15890
+      ]
+    },
+    {
+      "artistId": 1009,
+      "artist": "4to Reich",
+      "name": "Mauricio Cepeda",
+      "newPersonId": 18333,
+      "homonyms": [
+        425
+      ]
+    },
+    {
+      "artistId": 1009,
+      "artist": "4to Reich",
+      "name": "Omar Fernández",
+      "newPersonId": 18334,
+      "homonyms": [
+        2471,
+        16772,
+        15891
+      ]
+    },
+    {
+      "artistId": 1010,
+      "artist": "7 Balazos",
+      "name": "Carlos Villamizar",
+      "newPersonId": 18335,
+      "homonyms": [
+        15900
+      ]
+    },
+    {
+      "artistId": 1010,
+      "artist": "7 Balazos",
+      "name": "David Melo",
+      "newPersonId": 18336,
+      "homonyms": [
+        15903
+      ]
+    },
+    {
+      "artistId": 1010,
+      "artist": "7 Balazos",
+      "name": "Eliézer Briceño",
+      "newPersonId": 18338,
+      "homonyms": [
+        15896
+      ]
+    },
+    {
+      "artistId": 1010,
+      "artist": "7 Balazos",
+      "name": "Félix Vivenes",
+      "newPersonId": 18340,
+      "homonyms": [
+        15902
+      ]
+    },
+    {
+      "artistId": 1010,
+      "artist": "7 Balazos",
+      "name": "Jairo Carrasquel",
+      "newPersonId": 18341,
+      "homonyms": [
+        15897,
+        15566,
+        18288
+      ]
+    },
+    {
+      "artistId": 1010,
+      "artist": "7 Balazos",
+      "name": "Johenis Angarita",
+      "newPersonId": 18342,
+      "homonyms": [
+        15899,
+        2751
+      ]
+    },
+    {
+      "artistId": 1010,
+      "artist": "7 Balazos",
+      "name": "José Mujica",
+      "newPersonId": 18343,
+      "homonyms": [
+        15894
+      ]
+    },
+    {
+      "artistId": 1010,
+      "artist": "7 Balazos",
+      "name": "Juan Ricardo",
+      "newPersonId": 18344,
+      "homonyms": [
+        15892
+      ]
+    },
+    {
+      "artistId": 1010,
+      "artist": "7 Balazos",
+      "name": "Luis Chirinos",
+      "newPersonId": 18346,
+      "homonyms": [
+        15893
+      ]
+    },
+    {
+      "artistId": 1010,
+      "artist": "7 Balazos",
+      "name": "Víctor Villanueva",
+      "newPersonId": 18347,
+      "homonyms": [
+        2632,
+        15898
+      ]
+    },
+    {
+      "artistId": 1047,
+      "artist": "Tercer Cuarto",
+      "name": "Pablo Mora",
+      "newPersonId": 18349,
+      "homonyms": [
+        2888,
+        15982
+      ]
+    },
+    {
+      "artistId": 1049,
+      "artist": "Toberias",
+      "name": "Germain Coronado",
+      "newPersonId": 18350,
+      "homonyms": [
+        128,
+        15988
+      ]
+    },
+    {
+      "artistId": 1079,
+      "artist": "Apatía No",
+      "name": "Carolina",
+      "newPersonId": 18351,
+      "homonyms": [
+        16055
+      ]
+    },
+    {
+      "artistId": 1079,
+      "artist": "Apatía No",
+      "name": "Julia Araque",
+      "newPersonId": 18352,
+      "homonyms": [
+        16056
+      ]
+    },
+    {
+      "artistId": 1079,
+      "artist": "Apatía No",
+      "name": "Gordo Edward",
+      "newPersonId": 18353,
+      "homonyms": [
+        16057
+      ]
+    },
+    {
+      "artistId": 1079,
+      "artist": "Apatía No",
+      "name": "Luis Druppies",
+      "newPersonId": 18354,
+      "homonyms": [
+        16058
+      ]
+    },
+    {
+      "artistId": 1079,
+      "artist": "Apatía No",
+      "name": "Miguel Romero",
+      "newPersonId": 18355,
+      "homonyms": [
+        3390,
+        16059
+      ]
+    },
+    {
+      "artistId": 1079,
+      "artist": "Apatía No",
+      "name": "Jhonny Castro",
+      "newPersonId": 18356,
+      "homonyms": [
+        16388,
+        723
+      ]
+    },
+    {
+      "artistId": 1080,
+      "artist": "Furia de Buzo Ciego",
+      "name": "Fernando González",
+      "newPersonId": 18357,
+      "homonyms": [
+        16060,
+        15683
+      ]
+    },
+    {
+      "artistId": 1080,
+      "artist": "Furia de Buzo Ciego",
+      "name": "Jesús Velásquez",
+      "newPersonId": 18358,
+      "homonyms": [
+        16062
+      ]
+    },
+    {
+      "artistId": 1080,
+      "artist": "Furia de Buzo Ciego",
+      "name": "Luis Caballero",
+      "newPersonId": 18359,
+      "homonyms": [
+        16061
+      ]
+    },
+    {
+      "artistId": 1080,
+      "artist": "Furia de Buzo Ciego",
+      "name": "Ricardo Montiel",
+      "newPersonId": 18360,
+      "homonyms": [
+        16063
+      ]
+    },
+    {
+      "artistId": 1080,
+      "artist": "Furia de Buzo Ciego",
+      "name": "Roberto Rincón",
+      "newPersonId": 18361,
+      "homonyms": [
+        4260,
+        16064
+      ]
+    },
+    {
+      "artistId": 1094,
+      "artist": "Parke Inactivo",
+      "name": "Frank Pardo",
+      "newPersonId": 18362,
+      "homonyms": [
+        2747,
+        16082
+      ]
+    },
+    {
+      "artistId": 1094,
+      "artist": "Parke Inactivo",
+      "name": "José Méndez",
+      "newPersonId": 18363,
+      "homonyms": [
+        2753
+      ]
+    },
+    {
+      "artistId": 1094,
+      "artist": "Parke Inactivo",
+      "name": "Maurizio Iazzetta",
+      "newPersonId": 18364,
+      "homonyms": [
+        16084,
+        984
+      ]
+    },
+    {
+      "artistId": 1094,
+      "artist": "Parke Inactivo",
+      "name": "Octavio Paredes",
+      "newPersonId": 18365,
+      "homonyms": [
+        2749,
+        16083
+      ]
+    },
+    {
+      "artistId": 1100,
+      "artist": "Soma Raza",
+      "name": "Arnold de Vries",
+      "newPersonId": 18366,
+      "homonyms": [
+        16091
+      ]
+    },
+    {
+      "artistId": 1100,
+      "artist": "Soma Raza",
+      "name": "Robert Gibiaqui",
+      "newPersonId": 18367,
+      "homonyms": [
+        3283,
+        16092
+      ]
+    },
+    {
+      "artistId": 1106,
+      "artist": "El Enano de la Catedral",
+      "name": "Douglas Álvarez",
+      "newPersonId": 18368,
+      "homonyms": [
+        16104,
+        1923
+      ]
+    },
+    {
+      "artistId": 1106,
+      "artist": "El Enano de la Catedral",
+      "name": "Julio Pacheco",
+      "newPersonId": 18369,
+      "homonyms": [
+        16103
+      ]
+    },
+    {
+      "artistId": 1106,
+      "artist": "El Enano de la Catedral",
+      "name": "Lorena Gimeno Sassone",
+      "newPersonId": 18370,
+      "homonyms": [
+        15512,
+        18277
+      ]
+    },
+    {
+      "artistId": 1106,
+      "artist": "El Enano de la Catedral",
+      "name": "Luis Sanabria",
+      "newPersonId": 18371,
+      "homonyms": [
+        16105
+      ]
+    },
+    {
+      "artistId": 1106,
+      "artist": "El Enano de la Catedral",
+      "name": "Oswaldo Gobeo",
+      "newPersonId": 18372,
+      "homonyms": [
+        16106
+      ]
+    },
+    {
+      "artistId": 1159,
+      "artist": "Deskarriados",
+      "name": "Francisco López Alcántara",
+      "newPersonId": 18375,
+      "homonyms": [
+        16167
+      ]
+    },
+    {
+      "artistId": 1159,
+      "artist": "Deskarriados",
+      "name": "Héctor Laya",
+      "newPersonId": 18376,
+      "homonyms": [
+        16171
+      ]
+    },
+    {
+      "artistId": 1159,
+      "artist": "Deskarriados",
+      "name": "Jorge de la Vega",
+      "newPersonId": 18377,
+      "homonyms": [
+        2740
+      ]
+    },
+    {
+      "artistId": 1159,
+      "artist": "Deskarriados",
+      "name": "Julio Magdalena",
+      "newPersonId": 18378,
+      "homonyms": [
+        16169
+      ]
+    },
+    {
+      "artistId": 1163,
+      "artist": "Los Dolares",
+      "name": "Juan Mi",
+      "newPersonId": 18379,
+      "homonyms": [
+        16179
+      ]
+    },
+    {
+      "artistId": 1163,
+      "artist": "Los Dolares",
+      "name": "Cheo",
+      "newPersonId": 18380,
+      "homonyms": [
+        2705,
+        16127,
+        16180,
+        17219
+      ]
+    },
+    {
+      "artistId": 1163,
+      "artist": "Los Dolares",
+      "name": "Fernando Marquez",
+      "newPersonId": 18381,
+      "homonyms": [
+        16181
+      ]
+    },
+    {
+      "artistId": 1174,
+      "artist": "Juan Peyote",
+      "name": "Carlos Figuera",
+      "newPersonId": 18382,
+      "homonyms": [
+        16195,
+        3006
+      ]
+    },
+    {
+      "artistId": 1174,
+      "artist": "Juan Peyote",
+      "name": "Diego Fuensalida",
+      "newPersonId": 18383,
+      "homonyms": [
+        16194
+      ]
+    },
+    {
+      "artistId": 1174,
+      "artist": "Juan Peyote",
+      "name": "Federico Dib",
+      "newPersonId": 18384,
+      "homonyms": [
+        528,
+        16192
+      ]
+    },
+    {
+      "artistId": 1174,
+      "artist": "Juan Peyote",
+      "name": "Fernando Carrasquel",
+      "newPersonId": 18385,
+      "homonyms": [
+        16193,
+        2745
+      ]
+    },
+    {
+      "artistId": 1174,
+      "artist": "Juan Peyote",
+      "name": "Zoltan Kunkel",
+      "newPersonId": 18386,
+      "homonyms": [
+        16191,
+        2744
+      ]
+    },
+    {
+      "artistId": 1177,
+      "artist": "Master Gurú",
+      "name": "José Ignacio Benítez",
+      "newPersonId": 18387,
+      "homonyms": [
+        16661,
+        7946,
+        16197
+      ]
+    },
+    {
+      "artistId": 1177,
+      "artist": "Master Gurú",
+      "name": "Manuel Oramas",
+      "newPersonId": 18388,
+      "homonyms": [
+        16198
+      ]
+    },
+    {
+      "artistId": 1177,
+      "artist": "Master Gurú",
+      "name": "Oscar Mibeli",
+      "newPersonId": 18389,
+      "homonyms": [
+        16199
+      ]
+    },
+    {
+      "artistId": 1177,
+      "artist": "Master Gurú",
+      "name": "Pedro Leal",
+      "newPersonId": 18390,
+      "homonyms": [
+        1805,
+        16200
+      ]
+    },
+    {
+      "artistId": 1181,
+      "artist": "Aerea",
+      "name": "Alejandro Patiño",
+      "newPersonId": 18391,
+      "homonyms": [
+        16768
+      ]
+    },
+    {
+      "artistId": 1181,
+      "artist": "Aerea",
+      "name": "Mariliz Bettiol",
+      "newPersonId": 18392,
+      "homonyms": [
+        2614
+      ]
+    },
+    {
+      "artistId": 1203,
+      "artist": "V Sides Project",
+      "name": "Leonardo Degl'Innocenti",
+      "newPersonId": 18393,
+      "homonyms": [
+        1438,
+        17662
+      ]
+    },
+    {
+      "artistId": 1203,
+      "artist": "V Sides Project",
+      "name": "Francisco Rendiles",
+      "newPersonId": 18394,
+      "homonyms": [
+        549,
+        17661
+      ]
+    },
+    {
+      "artistId": 1210,
+      "artist": "X-Vicio",
+      "name": "Raúl Rodríguez",
+      "newPersonId": 18395,
+      "homonyms": [
+        16226
+      ]
+    },
+    {
+      "artistId": 1210,
+      "artist": "X-Vicio",
+      "name": "Angel Güanchez",
+      "newPersonId": 18396,
+      "homonyms": [
+        467,
+        15664,
+        16227,
+        18319
+      ]
+    },
+    {
+      "artistId": 1210,
+      "artist": "X-Vicio",
+      "name": "Daniel Hernández",
+      "newPersonId": 18397,
+      "homonyms": [
+        1255,
+        16131,
+        16228
+      ]
+    },
+    {
+      "artistId": 1230,
+      "artist": "Silfo",
+      "name": "José Miguel de Robertis",
+      "newPersonId": 18398,
+      "homonyms": [
+        2173,
+        16255,
+        18308
+      ]
+    },
+    {
+      "artistId": 1230,
+      "artist": "Silfo",
+      "name": "Kuámasi González",
+      "newPersonId": 18399,
+      "homonyms": [
+        15654,
+        1804,
+        18310
+      ]
+    },
+    {
+      "artistId": 1242,
+      "artist": "9mm",
+      "name": "Alejandro Berti",
+      "newPersonId": 18400,
+      "homonyms": [
+        2904,
+        16270
+      ]
+    },
+    {
+      "artistId": 1242,
+      "artist": "9mm",
+      "name": "Andrés Elutchanz",
+      "newPersonId": 18401,
+      "homonyms": [
+        16271
+      ]
+    },
+    {
+      "artistId": 1242,
+      "artist": "9mm",
+      "name": "César Level",
+      "newPersonId": 18402,
+      "homonyms": [
+        16272
+      ]
+    },
+    {
+      "artistId": 1242,
+      "artist": "9mm",
+      "name": "Eduardo Cabanzo (1994–Presente)",
+      "newPersonId": 18403,
+      "homonyms": [
+        16269,
+        4966
+      ]
+    },
+    {
+      "artistId": 1242,
+      "artist": "9mm",
+      "name": "Gerónimo Díaz",
+      "newPersonId": 18404,
+      "homonyms": [
+        16273
+      ]
+    },
+    {
+      "artistId": 1242,
+      "artist": "9mm",
+      "name": "José Luis Montes",
+      "newPersonId": 18405,
+      "homonyms": [
+        16274
+      ]
+    },
+    {
+      "artistId": 1242,
+      "artist": "9mm",
+      "name": "Kevin Alva",
+      "newPersonId": 18406,
+      "homonyms": [
+        16275,
+        6108
+      ]
+    },
+    {
+      "artistId": 1242,
+      "artist": "9mm",
+      "name": "Mauricio Rojas",
+      "newPersonId": 18407,
+      "homonyms": [
+        16276
+      ]
+    },
+    {
+      "artistId": 1242,
+      "artist": "9mm",
+      "name": "Simón Toro",
+      "newPersonId": 18408,
+      "homonyms": [
+        16277
+      ]
+    },
+    {
+      "artistId": 1243,
+      "artist": "Cerouno",
+      "name": "Javier Otero",
+      "newPersonId": 18409,
+      "homonyms": [
+        16278
+      ]
+    },
+    {
+      "artistId": 1243,
+      "artist": "Cerouno",
+      "name": "Alejandro Suarez",
+      "newPersonId": 18410,
+      "homonyms": [
+        16279
+      ]
+    },
+    {
+      "artistId": 1308,
+      "artist": "Víctimas de la Democracia",
+      "name": "Claudio de Blois",
+      "newPersonId": 18411,
+      "homonyms": [
+        16315
+      ]
+    },
+    {
+      "artistId": 1308,
+      "artist": "Víctimas de la Democracia",
+      "name": "Elías Yánez",
+      "newPersonId": 18412,
+      "homonyms": [
+        16314
+      ]
+    },
+    {
+      "artistId": 1308,
+      "artist": "Víctimas de la Democracia",
+      "name": "Gustavo Votasu",
+      "newPersonId": 18413,
+      "homonyms": [
+        16316
+      ]
+    },
+    {
+      "artistId": 1308,
+      "artist": "Víctimas de la Democracia",
+      "name": "Javier Vázquez",
+      "newPersonId": 18414,
+      "homonyms": [
+        16150,
+        16317
+      ]
+    },
+    {
+      "artistId": 1308,
+      "artist": "Víctimas de la Democracia",
+      "name": "Kresta Castellanos",
+      "newPersonId": 18415,
+      "homonyms": [
+        16318
+      ]
+    },
+    {
+      "artistId": 1308,
+      "artist": "Víctimas de la Democracia",
+      "name": "Omar López",
+      "newPersonId": 18416,
+      "homonyms": [
+        16319
+      ]
+    },
+    {
+      "artistId": 1308,
+      "artist": "Víctimas de la Democracia",
+      "name": "Sebastián Lattouf",
+      "newPersonId": 18417,
+      "homonyms": [
+        16320
+      ]
+    },
+    {
+      "artistId": 1308,
+      "artist": "Víctimas de la Democracia",
+      "name": "Yury Delysqui",
+      "newPersonId": 18418,
+      "homonyms": [
+        16321
+      ]
+    },
+    {
+      "artistId": 1310,
+      "artist": "Holocausto",
+      "name": "Rafael Cadavieco",
+      "newPersonId": 18419,
+      "homonyms": [
+        16322,
+        2664
+      ]
+    },
+    {
+      "artistId": 1310,
+      "artist": "Holocausto",
+      "name": "Carlos Chacín",
+      "newPersonId": 18420,
+      "homonyms": [
+        16323,
+        1637
+      ]
+    },
+    {
+      "artistId": 1310,
+      "artist": "Holocausto",
+      "name": "Gabriel Sánchez",
+      "newPersonId": 18421,
+      "homonyms": [
+        16324
+      ]
+    },
+    {
+      "artistId": 1310,
+      "artist": "Holocausto",
+      "name": "Julio Estrada",
+      "newPersonId": 18422,
+      "homonyms": [
+        16325
+      ]
+    },
+    {
+      "artistId": 1310,
+      "artist": "Holocausto",
+      "name": "Rodrigo Monterrey",
+      "newPersonId": 18423,
+      "homonyms": [
+        16326
+      ]
+    },
+    {
+      "artistId": 1328,
+      "artist": "Ska Jazz Messengers",
+      "name": "Jhonny Castro",
+      "newPersonId": 18424,
+      "homonyms": [
+        16388,
+        723,
+        18356
+      ]
+    },
+    {
+      "artistId": 1328,
+      "artist": "Ska Jazz Messengers",
+      "name": "Omar Fernando Viloria",
+      "newPersonId": 18425,
+      "homonyms": [
+        16389
+      ]
+    },
+    {
+      "artistId": 1328,
+      "artist": "Ska Jazz Messengers",
+      "name": "Giovanny Berroterán",
+      "newPersonId": 18426,
+      "homonyms": [
+        16390
+      ]
+    },
+    {
+      "artistId": 1328,
+      "artist": "Ska Jazz Messengers",
+      "name": "Rafael Frías",
+      "newPersonId": 18427,
+      "homonyms": [
+        16383
+      ]
+    },
+    {
+      "artistId": 1328,
+      "artist": "Ska Jazz Messengers",
+      "name": "César García Solís",
+      "newPersonId": 18428,
+      "homonyms": [
+        16386
+      ]
+    },
+    {
+      "artistId": 1328,
+      "artist": "Ska Jazz Messengers",
+      "name": "Javier Pinto",
+      "newPersonId": 18429,
+      "homonyms": [
+        16391
+      ]
+    },
+    {
+      "artistId": 1328,
+      "artist": "Ska Jazz Messengers",
+      "name": "Ronald Alvarado",
+      "newPersonId": 18430,
+      "homonyms": [
+        16384
+      ]
+    },
+    {
+      "artistId": 1328,
+      "artist": "Ska Jazz Messengers",
+      "name": "Ruthsy Fuentes",
+      "newPersonId": 18431,
+      "homonyms": [
+        16392,
+        2293
+      ]
+    },
+    {
+      "artistId": 1350,
+      "artist": "Post Data",
+      "name": "Néstor Blanco",
+      "newPersonId": 18432,
+      "homonyms": [
+        16424,
+        17701
+      ]
+    },
+    {
+      "artistId": 1350,
+      "artist": "Post Data",
+      "name": "Pompeo Zotti",
+      "newPersonId": 18433,
+      "homonyms": [
+        16425
+      ]
+    },
+    {
+      "artistId": 1350,
+      "artist": "Post Data",
+      "name": "Roberto Rigobon",
+      "newPersonId": 18434,
+      "homonyms": [
+        16423
+      ]
+    },
+    {
+      "artistId": 1426,
+      "artist": "El Cuarto del Blues",
+      "name": "Andrés Silva",
+      "newPersonId": 18435,
+      "homonyms": [
+        16582
+      ]
+    },
+    {
+      "artistId": 1426,
+      "artist": "El Cuarto del Blues",
+      "name": "Francisco Izza",
+      "newPersonId": 18437,
+      "homonyms": [
+        1820
+      ]
+    },
+    {
+      "artistId": 1426,
+      "artist": "El Cuarto del Blues",
+      "name": "Jesús Morales",
+      "newPersonId": 18441,
+      "homonyms": [
+        1185
+      ]
+    },
+    {
+      "artistId": 1519,
+      "artist": "Aponwao",
+      "name": "María Elena Millán",
+      "newPersonId": 18444,
+      "homonyms": [
+        16789
+      ]
+    },
+    {
+      "artistId": 1519,
+      "artist": "Aponwao",
+      "name": "William González",
+      "newPersonId": 18445,
+      "homonyms": [
+        16791
+      ]
+    },
+    {
+      "artistId": 1524,
+      "artist": "Thorvald",
+      "name": "David Flores",
+      "newPersonId": 18446,
+      "homonyms": [
+        1368,
+        16800
+      ]
+    },
+    {
+      "artistId": 1524,
+      "artist": "Thorvald",
+      "name": "Eliézer Delgado",
+      "newPersonId": 18447,
+      "homonyms": [
+        1367
+      ]
+    },
+    {
+      "artistId": 1524,
+      "artist": "Thorvald",
+      "name": "Inti Maldonado",
+      "newPersonId": 18448,
+      "homonyms": [
+        16798,
+        1364
+      ]
+    },
+    {
+      "artistId": 1524,
+      "artist": "Thorvald",
+      "name": "Iván Taboski",
+      "newPersonId": 18449,
+      "homonyms": [
+        1366
+      ]
+    },
+    {
+      "artistId": 1524,
+      "artist": "Thorvald",
+      "name": "Luis Garzón",
+      "newPersonId": 18450,
+      "homonyms": [
+        16799,
+        1365
+      ]
+    },
+    {
+      "artistId": 1524,
+      "artist": "Thorvald",
+      "name": "Reynaldo Castro",
+      "newPersonId": 18451,
+      "homonyms": [
+        16796,
+        1363
+      ]
+    },
+    {
+      "artistId": 1537,
+      "artist": "11011",
+      "name": "Johnny de Canha",
+      "newPersonId": 18452,
+      "homonyms": [
+        16813
+      ]
+    },
+    {
+      "artistId": 1577,
+      "artist": "Guarapita",
+      "name": "Tristan Mazire",
+      "newPersonId": 18453,
+      "homonyms": [
+        16894
+      ]
+    },
+    {
+      "artistId": 1577,
+      "artist": "Guarapita",
+      "name": "Tom Decaestecker",
+      "newPersonId": 18454,
+      "homonyms": [
+        16895
+      ]
+    },
+    {
+      "artistId": 1594,
+      "artist": "Fracaso",
+      "name": "Nico",
+      "newPersonId": 18455,
+      "homonyms": [
+        16930,
+        1559
+      ]
+    },
+    {
+      "artistId": 1594,
+      "artist": "Fracaso",
+      "name": "Cabeza",
+      "newPersonId": 18456,
+      "homonyms": [
+        16931
+      ]
+    },
+    {
+      "artistId": 1594,
+      "artist": "Fracaso",
+      "name": "Carlos",
+      "newPersonId": 18457,
+      "homonyms": [
+        17027,
+        16932,
+        2418,
+        16372,
+        16744
+      ]
+    },
+    {
+      "artistId": 1656,
+      "artist": "Baquedanu's",
+      "name": "Rafael Hernández",
+      "newPersonId": 18460,
+      "homonyms": [
+        12625,
+        17087
+      ]
+    },
+    {
+      "artistId": 1656,
+      "artist": "Baquedanu's",
+      "name": "Adalberto Barrera",
+      "newPersonId": 18461,
+      "homonyms": [
+        17086
+      ]
+    },
+    {
+      "artistId": 1656,
+      "artist": "Baquedanu's",
+      "name": "Alexis Ramos",
+      "newPersonId": 18462,
+      "homonyms": [
+        17089
+      ]
+    },
+    {
+      "artistId": 1656,
+      "artist": "Baquedanu's",
+      "name": "Eleazar Perdomo",
+      "newPersonId": 18463,
+      "homonyms": [
+        17084
+      ]
+    },
+    {
+      "artistId": 1656,
+      "artist": "Baquedanu's",
+      "name": "Héctor Pineda",
+      "newPersonId": 18464,
+      "homonyms": [
+        17090
+      ]
+    },
+    {
+      "artistId": 1656,
+      "artist": "Baquedanu's",
+      "name": "Honorio Ledezma",
+      "newPersonId": 18465,
+      "homonyms": [
+        17088
+      ]
+    },
+    {
+      "artistId": 1656,
+      "artist": "Baquedanu's",
+      "name": "José Antonio Mendoza",
+      "newPersonId": 18467,
+      "homonyms": [
+        17082
+      ]
+    },
+    {
+      "artistId": 1656,
+      "artist": "Baquedanu's",
+      "name": "Santiago Baquedano",
+      "newPersonId": 18469,
+      "homonyms": [
+        17081
+      ]
+    },
+    {
+      "artistId": 1678,
+      "artist": "Gypsy Ska Orquesta",
+      "name": "Mauricio Vivas",
+      "newPersonId": 18470,
+      "homonyms": [
+        17138
+      ]
+    },
+    {
+      "artistId": 1678,
+      "artist": "Gypsy Ska Orquesta",
+      "name": "Manuel Rodriguez",
+      "newPersonId": 18471,
+      "homonyms": [
+        16569,
+        16653,
+        17139
+      ]
+    },
+    {
+      "artistId": 1678,
+      "artist": "Gypsy Ska Orquesta",
+      "name": "Sebastián León",
+      "newPersonId": 18472,
+      "homonyms": [
+        17140
+      ]
+    },
+    {
+      "artistId": 1678,
+      "artist": "Gypsy Ska Orquesta",
+      "name": "Joe García",
+      "newPersonId": 18473,
+      "homonyms": [
+        17141
+      ]
+    },
+    {
+      "artistId": 1678,
+      "artist": "Gypsy Ska Orquesta",
+      "name": "Marco Vettor",
+      "newPersonId": 18474,
+      "homonyms": [
+        16754,
+        17142,
+        2196
+      ]
+    },
+    {
+      "artistId": 1678,
+      "artist": "Gypsy Ska Orquesta",
+      "name": "Luis Lestón",
+      "newPersonId": 18475,
+      "homonyms": [
+        17143
+      ]
+    },
+    {
+      "artistId": 1678,
+      "artist": "Gypsy Ska Orquesta",
+      "name": "Luis Ducharne",
+      "newPersonId": 18476,
+      "homonyms": [
+        17144
+      ]
+    },
+    {
+      "artistId": 1767,
+      "artist": "4to Poder",
+      "name": "Cotur (miembro)",
+      "newPersonId": 18478,
+      "homonyms": [
+        5272,
+        17327
+      ]
+    },
+    {
+      "artistId": 1770,
+      "artist": "Tan Frió el Verano",
+      "name": "Andrés Ojeda",
+      "newPersonId": 18479,
+      "homonyms": [
+        17328
+      ]
+    },
+    {
+      "artistId": 1770,
+      "artist": "Tan Frió el Verano",
+      "name": "Carlos Sánchez",
+      "newPersonId": 18480,
+      "homonyms": [
+        1797,
+        17412,
+        17329
+      ]
+    },
+    {
+      "artistId": 1770,
+      "artist": "Tan Frió el Verano",
+      "name": "Samuel Ballesteros",
+      "newPersonId": 18481,
+      "homonyms": [
+        16342,
+        17330
+      ]
+    },
+    {
+      "artistId": 1770,
+      "artist": "Tan Frió el Verano",
+      "name": "Rafael García",
+      "newPersonId": 18482,
+      "homonyms": [
+        17331,
+        16593
+      ]
+    },
+    {
+      "artistId": 1770,
+      "artist": "Tan Frió el Verano",
+      "name": "Diego Blanco",
+      "newPersonId": 18483,
+      "homonyms": [
+        17332,
+        3187,
+        16592
+      ]
+    },
+    {
+      "artistId": 1770,
+      "artist": "Tan Frió el Verano",
+      "name": "Diego Roque",
+      "newPersonId": 18484,
+      "homonyms": [
+        17333
+      ]
+    },
+    {
+      "artistId": 1770,
+      "artist": "Tan Frió el Verano",
+      "name": "Juan Rojas",
+      "newPersonId": 18485,
+      "homonyms": [
+        17334,
+        5961
+      ]
+    },
+    {
+      "artistId": 1770,
+      "artist": "Tan Frió el Verano",
+      "name": "Oswaldo Rodríguez",
+      "newPersonId": 18486,
+      "homonyms": [
+        667,
+        17335
+      ]
+    },
+    {
+      "artistId": 1770,
+      "artist": "Tan Frió el Verano",
+      "name": "Daniel (Mandino) Montesinos",
+      "newPersonId": 18487,
+      "homonyms": [
+        17336
+      ]
+    },
+    {
+      "artistId": 1770,
+      "artist": "Tan Frió el Verano",
+      "name": "Leonardo Simmons",
+      "newPersonId": 18488,
+      "homonyms": [
+        17337
+      ]
+    },
+    {
+      "artistId": 1804,
+      "artist": "The Pets",
+      "name": "Giacomino Tunzi",
+      "newPersonId": 18489,
+      "homonyms": [
+        17355
+      ]
+    },
+    {
+      "artistId": 1804,
+      "artist": "The Pets",
+      "name": "José Miguel Méndez",
+      "newPersonId": 18490,
+      "homonyms": [
+        17356
+      ]
+    },
+    {
+      "artistId": 1804,
+      "artist": "The Pets",
+      "name": "Nicola Tunzi",
+      "newPersonId": 18491,
+      "homonyms": [
+        17357
+      ]
+    },
+    {
+      "artistId": 1804,
+      "artist": "The Pets",
+      "name": "Trino Jiménez",
+      "newPersonId": 18492,
+      "homonyms": [
+        17358
+      ]
+    },
+    {
+      "artistId": 1804,
+      "artist": "The Pets",
+      "name": "Víctor Jiménez",
+      "newPersonId": 18493,
+      "homonyms": [
+        12004,
+        17359
+      ]
+    },
+    {
+      "artistId": 1823,
+      "artist": "Metrópolis",
+      "name": "Efraín González",
+      "newPersonId": 18494,
+      "homonyms": [
+        16629,
+        17360,
+        1729
+      ]
+    },
+    {
+      "artistId": 1823,
+      "artist": "Metrópolis",
+      "name": "Efraín Rodríguez",
+      "newPersonId": 18495,
+      "homonyms": [
+        16,
+        17362,
+        16628
+      ]
+    },
+    {
+      "artistId": 1823,
+      "artist": "Metrópolis",
+      "name": "Marcus Vinicius",
+      "newPersonId": 18496,
+      "homonyms": [
+        17363,
+        5585
+      ]
+    },
+    {
+      "artistId": 1823,
+      "artist": "Metrópolis",
+      "name": "Raúl Morillo",
+      "newPersonId": 18497,
+      "homonyms": [
+        17361
+      ]
+    },
+    {
+      "artistId": 1842,
+      "artist": "Azotea",
+      "name": "Rafael Lárez",
+      "newPersonId": 18498,
+      "homonyms": [
+        681
+      ]
+    },
+    {
+      "artistId": 1846,
+      "artist": "ADN",
+      "name": "Andrés Reyes",
+      "newPersonId": 18499,
+      "homonyms": [
+        565
+      ]
+    },
+    {
+      "artistId": 1846,
+      "artist": "ADN",
+      "name": "Ángelo Calanchi",
+      "newPersonId": 18500,
+      "homonyms": [
+        566
+      ]
+    },
+    {
+      "artistId": 1852,
+      "artist": "Parthenon",
+      "name": "Andrés González",
+      "newPersonId": 18501,
+      "homonyms": [
+        16414,
+        6227
+      ]
+    },
+    {
+      "artistId": 1852,
+      "artist": "Parthenon",
+      "name": "Máximo Panigada",
+      "newPersonId": 18502,
+      "homonyms": [
+        16413
+      ]
+    },
+    {
+      "artistId": 1852,
+      "artist": "Parthenon",
+      "name": "Nicolás Hernández",
+      "newPersonId": 18503,
+      "homonyms": [
+        16416
+      ]
+    },
+    {
+      "artistId": 1852,
+      "artist": "Parthenon",
+      "name": "Nicolás Labropoulus",
+      "newPersonId": 18504,
+      "homonyms": [
+        16417
+      ]
+    },
+    {
+      "artistId": 1852,
+      "artist": "Parthenon",
+      "name": "Rafael González C.",
+      "newPersonId": 18505,
+      "homonyms": [
+        13000
+      ]
+    },
+    {
+      "artistId": 2014,
+      "artist": "Servando y Florentino",
+      "name": "Servando Primera",
+      "newPersonId": 18508,
+      "homonyms": [
+        17399
+      ]
+    },
+    {
+      "artistId": 2014,
+      "artist": "Servando y Florentino",
+      "name": "Florentino Primera",
+      "newPersonId": 18509,
+      "homonyms": [
+        17400
+      ]
+    },
+    {
+      "artistId": 2140,
+      "artist": "Danto",
+      "name": "Alexander Toyo",
+      "newPersonId": 18510,
+      "homonyms": [
+        17556
+      ]
+    },
+    {
+      "artistId": 2140,
+      "artist": "Danto",
+      "name": "Lenin Nieto",
+      "newPersonId": 18511,
+      "homonyms": [
+        17553
+      ]
+    },
+    {
+      "artistId": 2140,
+      "artist": "Danto",
+      "name": "Nelson Azuaje",
+      "newPersonId": 18512,
+      "homonyms": [
+        17555
+      ]
+    },
+    {
+      "artistId": 2140,
+      "artist": "Danto",
+      "name": "Roberto Márquez",
+      "newPersonId": 18513,
+      "homonyms": [
+        17554
+      ]
+    },
+    {
+      "artistId": 2232,
+      "artist": "The Nasty Pillows",
+      "name": "Felipe Arias",
+      "newPersonId": 18514,
+      "homonyms": [
+        871
+      ]
+    },
+    {
+      "artistId": 2232,
+      "artist": "The Nasty Pillows",
+      "name": "Filo Valera",
+      "newPersonId": 18515,
+      "homonyms": [
+        875
+      ]
+    },
+    {
+      "artistId": 2232,
+      "artist": "The Nasty Pillows",
+      "name": "Iván Marcano",
+      "newPersonId": 18516,
+      "homonyms": [
+        873
+      ]
+    },
+    {
+      "artistId": 2232,
+      "artist": "The Nasty Pillows",
+      "name": "Jesús Toro",
+      "newPersonId": 18517,
+      "homonyms": [
+        2857,
+        17711
+      ]
+    },
+    {
+      "artistId": 2233,
+      "artist": "Los Snobs",
+      "name": "Don Gornes",
+      "newPersonId": 18518,
+      "homonyms": [
+        874,
+        17675
+      ]
+    },
+    {
+      "artistId": 2233,
+      "artist": "Los Snobs",
+      "name": "Eddy Gugliotta",
+      "newPersonId": 18519,
+      "homonyms": [
+        17676,
+        878
+      ]
+    },
+    {
+      "artistId": 2233,
+      "artist": "Los Snobs",
+      "name": "Jimmy Ross",
+      "newPersonId": 18520,
+      "homonyms": [
+        17677
+      ]
+    },
+    {
+      "artistId": 2233,
+      "artist": "Los Snobs",
+      "name": "José Salazar",
+      "newPersonId": 18521,
+      "homonyms": [
+        876,
+        17678
+      ]
+    },
+    {
+      "artistId": 2235,
+      "artist": "Los Bonnevilles",
+      "name": "Cesar Sanchez Bello",
+      "newPersonId": 18522,
+      "homonyms": [
+        17684,
+        624
+      ]
+    },
+    {
+      "artistId": 2244,
+      "artist": "Un Dos Tres y Fuera",
+      "name": "Edgar Lara",
+      "newPersonId": 18523,
+      "homonyms": [
+        9930,
+        17697
+      ]
+    },
+    {
+      "artistId": 2244,
+      "artist": "Un Dos Tres y Fuera",
+      "name": "Elias Barreto",
+      "newPersonId": 18524,
+      "homonyms": [
+        17698
+      ]
+    },
+    {
+      "artistId": 2244,
+      "artist": "Un Dos Tres y Fuera",
+      "name": "Eudys Blanco",
+      "newPersonId": 18525,
+      "homonyms": [
+        17699
+      ]
+    },
+    {
+      "artistId": 2244,
+      "artist": "Un Dos Tres y Fuera",
+      "name": "William Sigismondi",
+      "newPersonId": 18526,
+      "homonyms": [
+        3881,
+        17700
+      ]
+    },
+    {
+      "artistId": 2244,
+      "artist": "Un Dos Tres y Fuera",
+      "name": "Nestor Blanco",
+      "newPersonId": 18527,
+      "homonyms": [
+        16424,
+        17701,
+        18432
+      ]
+    },
+    {
+      "artistId": 2247,
+      "artist": "Apocalipsis",
+      "name": "Alfredo Marcano",
+      "newPersonId": 18528,
+      "homonyms": [
+        17704
+      ]
+    },
+    {
+      "artistId": 2247,
+      "artist": "Apocalipsis",
+      "name": "Gustavo Lizardo",
+      "newPersonId": 18529,
+      "homonyms": [
+        17703
+      ]
+    },
+    {
+      "artistId": 2247,
+      "artist": "Apocalipsis",
+      "name": "Humberto Enrique Lizardo",
+      "newPersonId": 18530,
+      "homonyms": [
+        17702
+      ]
+    },
+    {
+      "artistId": 2250,
+      "artist": "Bacro",
+      "name": "Gabriel Quintero",
+      "newPersonId": 18531,
+      "homonyms": [
+        542,
+        15340,
+        17714
+      ]
+    },
+    {
+      "artistId": 2250,
+      "artist": "Bacro",
+      "name": "Luis Emilio Mauri",
+      "newPersonId": 18532,
+      "homonyms": [
+        1168,
+        17713
+      ]
+    },
+    {
+      "artistId": 2250,
+      "artist": "Bacro",
+      "name": "José Romero",
+      "newPersonId": 18533,
+      "homonyms": [
+        603,
+        17708,
+        486,
+        17705
+      ]
+    },
+    {
+      "artistId": 2463,
+      "artist": "La Fe Perdida",
+      "name": "Rafael Medina",
+      "newPersonId": 18534,
+      "homonyms": [
+        1702
+      ]
+    },
+    {
+      "artistId": 2463,
+      "artist": "La Fe Perdida",
+      "name": "Rubén A. Correa",
+      "newPersonId": 18535,
+      "homonyms": [
+        17926
+      ]
+    },
+    {
+      "artistId": 2465,
+      "artist": "Ciruela",
+      "name": "Alejandro Pulido",
+      "newPersonId": 18536,
+      "homonyms": [
+        17927
+      ]
+    },
+    {
+      "artistId": 2465,
+      "artist": "Ciruela",
+      "name": "Hernán Medina",
+      "newPersonId": 18537,
+      "homonyms": [
+        17928
+      ]
+    },
+    {
+      "artistId": 2465,
+      "artist": "Ciruela",
+      "name": "Isaías Urbina",
+      "newPersonId": 18538,
+      "homonyms": [
+        17929,
+        1051
+      ]
+    },
+    {
+      "artistId": 2465,
+      "artist": "Ciruela",
+      "name": "Luis Manzo",
+      "newPersonId": 18539,
+      "homonyms": [
+        17930
+      ]
+    },
+    {
+      "artistId": 2465,
+      "artist": "Ciruela",
+      "name": "Manuel Urbina",
+      "newPersonId": 18540,
+      "homonyms": [
+        17931,
+        1056
+      ]
+    },
+    {
+      "artistId": 2465,
+      "artist": "Ciruela",
+      "name": "Matías Pérez",
+      "newPersonId": 18541,
+      "homonyms": [
+        17932
+      ]
+    },
+    {
+      "artistId": 2466,
+      "artist": "Adelante Juventud",
+      "name": "Beatriz de Majo",
+      "newPersonId": 18542,
+      "homonyms": [
+        17933
+      ]
+    },
+    {
+      "artistId": 2466,
+      "artist": "Adelante Juventud",
+      "name": "Claudio Henríquez",
+      "newPersonId": 18543,
+      "homonyms": [
+        17934
+      ]
+    },
+    {
+      "artistId": 2466,
+      "artist": "Adelante Juventud",
+      "name": "Clodomiro Torres",
+      "newPersonId": 18544,
+      "homonyms": [
+        17935
+      ]
+    },
+    {
+      "artistId": 2466,
+      "artist": "Adelante Juventud",
+      "name": "Franklin Holland",
+      "newPersonId": 18545,
+      "homonyms": [
+        17936,
+        5771
+      ]
+    },
+    {
+      "artistId": 2466,
+      "artist": "Adelante Juventud",
+      "name": "José Antonio Ríos",
+      "newPersonId": 18546,
+      "homonyms": [
+        17937
+      ]
+    },
+    {
+      "artistId": 2466,
+      "artist": "Adelante Juventud",
+      "name": "Leonardo Orue",
+      "newPersonId": 18547,
+      "homonyms": [
+        17938
+      ]
+    },
+    {
+      "artistId": 2466,
+      "artist": "Adelante Juventud",
+      "name": "Leonor Jove",
+      "newPersonId": 18548,
+      "homonyms": [
+        17939,
+        1476
+      ]
+    },
+    {
+      "artistId": 2574,
+      "artist": "Different Fountains",
+      "name": "Michael Langeder",
+      "newPersonId": 18549,
+      "homonyms": [
+        18039
+      ]
+    },
+    {
+      "artistId": 2574,
+      "artist": "Different Fountains",
+      "name": "Bernardo Risquez",
+      "newPersonId": 18550,
+      "homonyms": [
+        671,
+        18038
+      ]
+    },
+    {
+      "artistId": 2934,
+      "artist": "Nomadas",
+      "name": "Orlando Briceño",
+      "newPersonId": 18551,
+      "homonyms": [
+        11459,
+        18149
+      ]
+    }
+  ],
+  "errors": [],
+  "applied": [
+    {
+      "artistId": 9,
+      "artist": "Sangre",
+      "personId": 5202,
+      "name": "Carl Martin",
+      "role": "Integrante",
+      "how": "proyecto-comun"
+    },
+    {
+      "artistId": 38,
+      "artist": "Alban Arthuan",
+      "personId": 18177,
+      "name": "Devorah Hermoso",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 38,
+      "artist": "Alban Arthuan",
+      "personId": 18178,
+      "name": "Vincenzo Vitulli",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 44,
+      "artist": "Antena Mantis",
+      "personId": 18179,
+      "name": "Mervin Santiago",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 50,
+      "artist": "Bala Perdida",
+      "personId": 18180,
+      "name": "Juan Cifuentes",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 50,
+      "artist": "Bala Perdida",
+      "personId": 18181,
+      "name": "Kenny Celli",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 51,
+      "artist": "Billy Se Fue",
+      "personId": 18182,
+      "name": "Liz",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 60,
+      "artist": "Cero A La Izquierda",
+      "personId": 18183,
+      "name": "Fernando Batoni",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 60,
+      "artist": "Cero A La Izquierda",
+      "personId": 18184,
+      "name": "Jaime Verdaguer",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 62,
+      "artist": "Chucknorris",
+      "personId": 18185,
+      "name": "Claudio Ramírez",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 71,
+      "artist": "Cunaguaro Soul",
+      "personId": 18186,
+      "name": "Alexis Rivero",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 71,
+      "artist": "Cunaguaro Soul",
+      "personId": 18187,
+      "name": "Christian Hoj",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 71,
+      "artist": "Cunaguaro Soul",
+      "personId": 18188,
+      "name": "Javier Gárnica",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 71,
+      "artist": "Cunaguaro Soul",
+      "personId": 2901,
+      "name": "Juan Pablo Castillo",
+      "role": "Integrante",
+      "how": "credited"
+    },
+    {
+      "artistId": 89,
+      "artist": "El Rastro",
+      "personId": 2544,
+      "name": "Carlos Panepinto",
+      "role": "Integrante",
+      "how": "credited"
+    },
+    {
+      "artistId": 90,
+      "artist": "El Supremo Hongo Imaginario",
+      "personId": 18189,
+      "name": "Diego Schapira",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 90,
+      "artist": "El Supremo Hongo Imaginario",
+      "personId": 18190,
+      "name": "José Manuel Pinto",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 90,
+      "artist": "El Supremo Hongo Imaginario",
+      "personId": 18191,
+      "name": "Luis Arroyo",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 95,
+      "artist": "Famasloop",
+      "personId": 18192,
+      "name": "Vanessa Gouveia",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 103,
+      "artist": "Gaêlica",
+      "personId": 1183,
+      "name": "Yon Carlos Medina",
+      "role": "Integrante",
+      "how": "credited"
+    },
+    {
+      "artistId": 103,
+      "artist": "Gaêlica",
+      "personId": 18193,
+      "name": "César Natera",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 103,
+      "artist": "Gaêlica",
+      "personId": 657,
+      "name": "David Lasca",
+      "role": "Integrante",
+      "how": "proyecto-comun"
+    },
+    {
+      "artistId": 107,
+      "artist": "Grupo Pan",
+      "personId": 18194,
+      "name": "Ricardo Quintero",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 114,
+      "artist": "Icaro",
+      "personId": 18195,
+      "name": "Pedro Berischa",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 125,
+      "artist": "King Changó",
+      "personId": 18196,
+      "name": "Martín Adrián Cunningham",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 128,
+      "artist": "La Calle",
+      "personId": 3063,
+      "name": "Rafael Sáez",
+      "role": "Integrante",
+      "how": "credited"
+    },
+    {
+      "artistId": 128,
+      "artist": "La Calle",
+      "personId": 18197,
+      "name": "1993–1997); Pingüino Echezuría (miembro)",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 129,
+      "artist": "La Corte",
+      "personId": 16811,
+      "name": "Trece",
+      "role": "Integrante",
+      "how": "proyecto-comun"
+    },
+    {
+      "artistId": 129,
+      "artist": "La Corte",
+      "personId": 16490,
+      "name": "Big Habana",
+      "role": "Integrante",
+      "how": "proyecto-comun"
+    },
+    {
+      "artistId": 129,
+      "artist": "La Corte",
+      "personId": 18198,
+      "name": "Rotwaila",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 129,
+      "artist": "La Corte",
+      "personId": 18199,
+      "name": "Ruso 40",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 129,
+      "artist": "La Corte",
+      "personId": 18200,
+      "name": "Apolonia",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 129,
+      "artist": "La Corte",
+      "personId": 18201,
+      "name": "Apolonia Guilarte",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 129,
+      "artist": "La Corte",
+      "personId": 18202,
+      "name": "DJ 13",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 131,
+      "artist": "La Hermandad",
+      "personId": 3725,
+      "name": "Bélica",
+      "role": "Integrante",
+      "how": "proyecto-comun"
+    },
+    {
+      "artistId": 132,
+      "artist": "La Leche",
+      "personId": 2337,
+      "name": "Javier Gárnica",
+      "role": "Integrante",
+      "how": "credited"
+    },
+    {
+      "artistId": 143,
+      "artist": "Lapamariposa",
+      "personId": 18203,
+      "name": "Tato Rodríguez",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 154,
+      "artist": "Los Beat3",
+      "personId": 3558,
+      "name": "Alejandro Pérez Rodríguez",
+      "role": "Integrante",
+      "how": "proyecto-comun"
+    },
+    {
+      "artistId": 154,
+      "artist": "Los Beat3",
+      "personId": 18204,
+      "name": "Alexandra Romero",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 154,
+      "artist": "Los Beat3",
+      "personId": 18205,
+      "name": "Andrés Seger",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 154,
+      "artist": "Los Beat3",
+      "personId": 18206,
+      "name": "Axel Rojas",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 154,
+      "artist": "Los Beat3",
+      "personId": 18207,
+      "name": "Carlos Kinttero",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 154,
+      "artist": "Los Beat3",
+      "personId": 2837,
+      "name": "Gustavo Aldrey",
+      "role": "Integrante",
+      "how": "proyecto-comun"
+    },
+    {
+      "artistId": 154,
+      "artist": "Los Beat3",
+      "personId": 18208,
+      "name": "Luke Grande",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 154,
+      "artist": "Los Beat3",
+      "personId": 18209,
+      "name": "Renzo Cirivolo",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 154,
+      "artist": "Los Beat3",
+      "personId": 18210,
+      "name": "Zarich Medina",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 160,
+      "artist": "Los Oceánicos",
+      "personId": 18211,
+      "name": "Jesús Núñez",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 160,
+      "artist": "Los Oceánicos",
+      "personId": 18212,
+      "name": "Joan La Riva",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 192,
+      "artist": "PapaShanty Saund System",
+      "personId": 18213,
+      "name": "Daniel Sarmiento",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 192,
+      "artist": "PapaShanty Saund System",
+      "personId": 18214,
+      "name": "Onechot",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 192,
+      "artist": "PapaShanty Saund System",
+      "personId": 18215,
+      "name": "Oscar Pastorelli Di Lorenzo",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 192,
+      "artist": "PapaShanty Saund System",
+      "personId": 18216,
+      "name": "Juan David Chacon",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 192,
+      "artist": "PapaShanty Saund System",
+      "personId": 15448,
+      "name": "Bostas Brain",
+      "role": "Integrante",
+      "how": "proyecto-comun"
+    },
+    {
+      "artistId": 221,
+      "artist": "Serenata Guayanesa",
+      "personId": 937,
+      "name": "Mauricio Castro",
+      "role": "Integrante",
+      "how": "credited"
+    },
+    {
+      "artistId": 222,
+      "artist": "Sietecuero",
+      "personId": 18217,
+      "name": "Luisito Quintero",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 222,
+      "artist": "Sietecuero",
+      "personId": 18218,
+      "name": "Rafael Figliuolo",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 222,
+      "artist": "Sietecuero",
+      "personId": 18219,
+      "name": "Pedro Matute",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 226,
+      "artist": "Slam Ballet",
+      "personId": 18220,
+      "name": "Caliarina Izarra",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 226,
+      "artist": "Slam Ballet",
+      "personId": 18221,
+      "name": "Caribay Celis",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 226,
+      "artist": "Slam Ballet",
+      "personId": 18222,
+      "name": "Claudia Campos",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 226,
+      "artist": "Slam Ballet",
+      "personId": 18223,
+      "name": "Estrella Sulbarán",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 226,
+      "artist": "Slam Ballet",
+      "personId": 18224,
+      "name": "Mayerlín Tellería",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 226,
+      "artist": "Slam Ballet",
+      "personId": 18225,
+      "name": "Osvaldo Michelli",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 226,
+      "artist": "Slam Ballet",
+      "personId": 18226,
+      "name": "Pablo Campos",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 234,
+      "artist": "Sur Carabela",
+      "personId": 1553,
+      "name": "DJ Baffa",
+      "role": "Integrante",
+      "how": "proyecto-comun"
+    },
+    {
+      "artistId": 239,
+      "artist": "Tarot",
+      "personId": 18227,
+      "name": "Marco Hietala",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 239,
+      "artist": "Tarot",
+      "personId": 18228,
+      "name": "Janne Tolsa",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 239,
+      "artist": "Tarot",
+      "personId": 18229,
+      "name": "DQ",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 239,
+      "artist": "Tarot",
+      "personId": 18230,
+      "name": "Pecu Cinnari",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 239,
+      "artist": "Tarot",
+      "personId": 18231,
+      "name": "Mako H.",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 239,
+      "artist": "Tarot",
+      "personId": 18232,
+      "name": "Zachary Hietala",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 239,
+      "artist": "Tarot",
+      "personId": 18233,
+      "name": "Tommi Salmela",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 240,
+      "artist": "Team Malín",
+      "personId": 18234,
+      "name": "David Moreira",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 245,
+      "artist": "The Love Depression",
+      "personId": 1928,
+      "name": "Jaime Seijas",
+      "role": "Integrante",
+      "how": "proyecto-comun"
+    },
+    {
+      "artistId": 248,
+      "artist": "Todosantos",
+      "personId": 18235,
+      "name": "Sunsplash",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 248,
+      "artist": "Todosantos",
+      "personId": 18236,
+      "name": "Leo Aldrey",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 248,
+      "artist": "Todosantos",
+      "personId": 18237,
+      "name": "Mpeach",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 256,
+      "artist": "Vagos y Maleantes",
+      "personId": 18238,
+      "name": "Budu",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 256,
+      "artist": "Vagos y Maleantes",
+      "personId": 18239,
+      "name": "El Nigga",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 262,
+      "artist": "Wahala",
+      "personId": 18240,
+      "name": "lead vocals)",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 270,
+      "artist": "Dimension Latina",
+      "personId": 18241,
+      "name": "Wladimir",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 270,
+      "artist": "Dimension Latina",
+      "personId": 18242,
+      "name": "Oscar D' León",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 270,
+      "artist": "Dimension Latina",
+      "personId": 18243,
+      "name": "José Rodriguez",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 270,
+      "artist": "Dimension Latina",
+      "personId": 18244,
+      "name": "Samuel Del Real",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 270,
+      "artist": "Dimension Latina",
+      "personId": 18245,
+      "name": "Andy Montañez",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 270,
+      "artist": "Dimension Latina",
+      "personId": 18246,
+      "name": "Victor Mendoza",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 270,
+      "artist": "Dimension Latina",
+      "personId": 18247,
+      "name": "Rodrigo Mendoza",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 270,
+      "artist": "Dimension Latina",
+      "personId": 18248,
+      "name": "Gustavo Carmona",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 270,
+      "artist": "Dimension Latina",
+      "personId": 18249,
+      "name": "José Rojas",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 270,
+      "artist": "Dimension Latina",
+      "personId": 18250,
+      "name": "Carlos Guillen",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 270,
+      "artist": "Dimension Latina",
+      "personId": 18251,
+      "name": "Jesus Narvaez",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 270,
+      "artist": "Dimension Latina",
+      "personId": 18252,
+      "name": "Luis Machado",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 270,
+      "artist": "Dimension Latina",
+      "personId": 18253,
+      "name": "Alejandro Pérez Palma",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 270,
+      "artist": "Dimension Latina",
+      "personId": 18254,
+      "name": "Julio Moreno",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 270,
+      "artist": "Dimension Latina",
+      "personId": 18255,
+      "name": "César Monge",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 270,
+      "artist": "Dimension Latina",
+      "personId": 18256,
+      "name": "Elio Pacheco",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 270,
+      "artist": "Dimension Latina",
+      "personId": 18257,
+      "name": "\"Cheo\" Valenzuela",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 270,
+      "artist": "Dimension Latina",
+      "personId": 18258,
+      "name": "Argenis Carruyo",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 270,
+      "artist": "Dimension Latina",
+      "personId": 5804,
+      "name": "Alexis Martinez",
+      "role": "Integrante",
+      "how": "proyecto-comun"
+    },
+    {
+      "artistId": 270,
+      "artist": "Dimension Latina",
+      "personId": 18259,
+      "name": "Carlos Guerra Jr.",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 270,
+      "artist": "Dimension Latina",
+      "personId": 18260,
+      "name": "Lic. Luis Pérez",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 270,
+      "artist": "Dimension Latina",
+      "personId": 18261,
+      "name": "Jesus Torres",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 270,
+      "artist": "Dimension Latina",
+      "personId": 18262,
+      "name": "Cesár Monges",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 270,
+      "artist": "Dimension Latina",
+      "personId": 18263,
+      "name": "Cheo Mendoza",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 270,
+      "artist": "Dimension Latina",
+      "personId": 18264,
+      "name": "Cheo Valenzuela",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 270,
+      "artist": "Dimension Latina",
+      "personId": 18265,
+      "name": "Édgar Rodríguez",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 270,
+      "artist": "Dimension Latina",
+      "personId": 18266,
+      "name": "Enrique Iriarte",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 270,
+      "artist": "Dimension Latina",
+      "personId": 18267,
+      "name": "Freddy Nieto",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 270,
+      "artist": "Dimension Latina",
+      "personId": 18268,
+      "name": "Israel Rebolledo",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 270,
+      "artist": "Dimension Latina",
+      "personId": 18269,
+      "name": "Joseíto Rodríguez",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 270,
+      "artist": "Dimension Latina",
+      "personId": 18270,
+      "name": "Oscar D'León",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 270,
+      "artist": "Dimension Latina",
+      "personId": 18271,
+      "name": "Wladimir Lozano",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 270,
+      "artist": "Dimension Latina",
+      "personId": 18272,
+      "name": "1972–1984); Wladimir Lozano (lead vocals",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 270,
+      "artist": "Dimension Latina",
+      "personId": 18273,
+      "name": "1974–1978); Argenis Carruyo (miembro",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 270,
+      "artist": "Dimension Latina",
+      "personId": 18274,
+      "name": "1977–1981); Wladimir Lozano (lead vocals",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 270,
+      "artist": "Dimension Latina",
+      "personId": 18275,
+      "name": "1985–1990); Freddy Sánchez (miembro",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 285,
+      "artist": "Psh Psh",
+      "personId": 18276,
+      "name": "Paz Alejandra Idalgo",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 285,
+      "artist": "Psh Psh",
+      "personId": 18277,
+      "name": "Lorena Gimeno Sassone",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 285,
+      "artist": "Psh Psh",
+      "personId": 18278,
+      "name": "Tania Diacich",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 301,
+      "artist": "Doña Maldad",
+      "personId": 18279,
+      "name": "Troco",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 301,
+      "artist": "Doña Maldad",
+      "personId": 18280,
+      "name": "Jorge Pelusa",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 301,
+      "artist": "Doña Maldad",
+      "personId": 18281,
+      "name": "Juan Pablo Nunez",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 366,
+      "artist": "PI XPRNC",
+      "personId": 18282,
+      "name": "Karen González",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 366,
+      "artist": "PI XPRNC",
+      "personId": 18283,
+      "name": "Miguel Blanco",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 366,
+      "artist": "PI XPRNC",
+      "personId": 18284,
+      "name": "David Cajías",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 366,
+      "artist": "PI XPRNC",
+      "personId": 18285,
+      "name": "Yonder Rodríguez",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 390,
+      "artist": "Los Callejeros",
+      "personId": 18286,
+      "name": "Douglas Barrios",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 390,
+      "artist": "Los Callejeros",
+      "personId": 18287,
+      "name": "Gerardo Rodríguez",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 390,
+      "artist": "Los Callejeros",
+      "personId": 18288,
+      "name": "Jairo Carrasquel",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 390,
+      "artist": "Los Callejeros",
+      "personId": 18289,
+      "name": "Yvan Gil",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 403,
+      "artist": "Maracaibo",
+      "personId": 18290,
+      "name": "Jorge Galbassini",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 403,
+      "artist": "Maracaibo",
+      "personId": 18291,
+      "name": "Huáscar Barradas",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 403,
+      "artist": "Maracaibo",
+      "personId": 18292,
+      "name": "Felipe \"Mandingo\" Rengifo",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 403,
+      "artist": "Maracaibo",
+      "personId": 18293,
+      "name": "José Antonio Zambrano",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 403,
+      "artist": "Maracaibo",
+      "personId": 18294,
+      "name": "Rafael Simón Bolívar",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 428,
+      "artist": "Fuga",
+      "personId": 18295,
+      "name": "original",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 428,
+      "artist": "Fuga",
+      "personId": 18296,
+      "name": "1980–1990); Juan Carlos Sabater (electric guitar",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 454,
+      "artist": "Arrecho",
+      "personId": 18297,
+      "name": "Gopinatha Dasa Prabu",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 454,
+      "artist": "Arrecho",
+      "personId": 18298,
+      "name": "Ian Olmedo",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 454,
+      "artist": "Arrecho",
+      "personId": 18299,
+      "name": "Vladimir Dorante",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 454,
+      "artist": "Arrecho",
+      "personId": 18300,
+      "name": "Witold Michaljlow",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 524,
+      "artist": "Gladys Cordero",
+      "personId": 18301,
+      "name": "Abelardo Álvarez",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 524,
+      "artist": "Gladys Cordero",
+      "personId": 18302,
+      "name": "Andrés Iturbe",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 524,
+      "artist": "Gladys Cordero",
+      "personId": 18303,
+      "name": "Carlos González",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 524,
+      "artist": "Gladys Cordero",
+      "personId": 18304,
+      "name": "Daniel Dávila",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 524,
+      "artist": "Gladys Cordero",
+      "personId": 18305,
+      "name": "Diego Fantasma",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 524,
+      "artist": "Gladys Cordero",
+      "personId": 18306,
+      "name": "Gabriel Urbina",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 524,
+      "artist": "Gladys Cordero",
+      "personId": 18307,
+      "name": "Horacio Chacín",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 524,
+      "artist": "Gladys Cordero",
+      "personId": 18308,
+      "name": "José Miguel de Robertis",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 534,
+      "artist": "Los Humanoides",
+      "personId": 18309,
+      "name": "Claudio Ramírez",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 534,
+      "artist": "Los Humanoides",
+      "personId": 18310,
+      "name": "Kuámasi González",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 534,
+      "artist": "Los Humanoides",
+      "personId": 18311,
+      "name": "Luis Méndez",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 535,
+      "artist": "Zumo",
+      "personId": 18312,
+      "name": "Carlos Blanco",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 535,
+      "artist": "Zumo",
+      "personId": 18313,
+      "name": "Carlos Lanetti",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 535,
+      "artist": "Zumo",
+      "personId": 18314,
+      "name": "Elías Aparicio",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 535,
+      "artist": "Zumo",
+      "personId": 18315,
+      "name": "Jesús Eduardo Nieto",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 535,
+      "artist": "Zumo",
+      "personId": 18316,
+      "name": "Jorge Ubieta",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 535,
+      "artist": "Zumo",
+      "personId": 18317,
+      "name": "Luis Milano (2007–Presente)",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 535,
+      "artist": "Zumo",
+      "personId": 18318,
+      "name": "Texy Díaz",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 547,
+      "artist": "Alto Pana",
+      "personId": 18319,
+      "name": "Ángel Guanchez",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 547,
+      "artist": "Alto Pana",
+      "personId": 18320,
+      "name": "Juan Lizardo",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 547,
+      "artist": "Alto Pana",
+      "personId": 18321,
+      "name": "Pablo Fernández",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 668,
+      "artist": "Subliminal Code",
+      "personId": 18322,
+      "name": "Raul Jose Padron",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 711,
+      "artist": "Alta Frecuencia",
+      "personId": 4703,
+      "name": "Nelson Zuleta",
+      "role": "Integrante",
+      "how": "credited"
+    },
+    {
+      "artistId": 711,
+      "artist": "Alta Frecuencia",
+      "personId": 18323,
+      "name": "Cecilio Perrozzi",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 711,
+      "artist": "Alta Frecuencia",
+      "personId": 18324,
+      "name": "Francisco Tedesco",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 711,
+      "artist": "Alta Frecuencia",
+      "personId": 18325,
+      "name": "Giorgio Faieta",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 711,
+      "artist": "Alta Frecuencia",
+      "personId": 18326,
+      "name": "Julio Hung",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 711,
+      "artist": "Alta Frecuencia",
+      "personId": 3450,
+      "name": "Roberto Fuentes",
+      "role": "Integrante",
+      "how": "credited"
+    },
+    {
+      "artistId": 817,
+      "artist": "La Cienaga",
+      "personId": 18327,
+      "name": "Jean Paul Clarac",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1009,
+      "artist": "4to Reich",
+      "personId": 18328,
+      "name": "Alberto Montero",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1009,
+      "artist": "4to Reich",
+      "personId": 18329,
+      "name": "Ángel Pineda",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1009,
+      "artist": "4to Reich",
+      "personId": 18330,
+      "name": "Guillermo Méndez",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1009,
+      "artist": "4to Reich",
+      "personId": 18331,
+      "name": "Juan Ignacio Morasso",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1009,
+      "artist": "4to Reich",
+      "personId": 18332,
+      "name": "Kike Poleo",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1009,
+      "artist": "4to Reich",
+      "personId": 18333,
+      "name": "Mauricio Cepeda",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1009,
+      "artist": "4to Reich",
+      "personId": 18334,
+      "name": "Omar Fernández",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1010,
+      "artist": "7 Balazos",
+      "personId": 18335,
+      "name": "Carlos Villamizar",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1010,
+      "artist": "7 Balazos",
+      "personId": 18336,
+      "name": "David Melo",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1010,
+      "artist": "7 Balazos",
+      "personId": 18337,
+      "name": "Diego Baque",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1010,
+      "artist": "7 Balazos",
+      "personId": 18338,
+      "name": "Eliézer Briceño",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1010,
+      "artist": "7 Balazos",
+      "personId": 18339,
+      "name": "Elvis Escalona",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1010,
+      "artist": "7 Balazos",
+      "personId": 18340,
+      "name": "Félix Vivenes",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1010,
+      "artist": "7 Balazos",
+      "personId": 18341,
+      "name": "Jairo Carrasquel",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1010,
+      "artist": "7 Balazos",
+      "personId": 18342,
+      "name": "Johenis Angarita",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1010,
+      "artist": "7 Balazos",
+      "personId": 18343,
+      "name": "José Mujica",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1010,
+      "artist": "7 Balazos",
+      "personId": 18344,
+      "name": "Juan Ricardo",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1010,
+      "artist": "7 Balazos",
+      "personId": 18345,
+      "name": "Lizandro Gómez",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1010,
+      "artist": "7 Balazos",
+      "personId": 18346,
+      "name": "Luis Chirinos",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1010,
+      "artist": "7 Balazos",
+      "personId": 18347,
+      "name": "Víctor Villanueva",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1045,
+      "artist": "Agugutata",
+      "personId": 18348,
+      "name": "Juancho Garrido",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1047,
+      "artist": "Tercer Cuarto",
+      "personId": 18349,
+      "name": "Pablo Mora",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1049,
+      "artist": "Toberias",
+      "personId": 18350,
+      "name": "Germain Coronado",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1079,
+      "artist": "Apatía No",
+      "personId": 18351,
+      "name": "Carolina",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1079,
+      "artist": "Apatía No",
+      "personId": 18352,
+      "name": "Julia Araque",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1079,
+      "artist": "Apatía No",
+      "personId": 18353,
+      "name": "Gordo Edward",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1079,
+      "artist": "Apatía No",
+      "personId": 18354,
+      "name": "Luis Druppies",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1079,
+      "artist": "Apatía No",
+      "personId": 18355,
+      "name": "Miguel Romero",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1079,
+      "artist": "Apatía No",
+      "personId": 18356,
+      "name": "Jhonny Castro",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1080,
+      "artist": "Furia de Buzo Ciego",
+      "personId": 18357,
+      "name": "Fernando González",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1080,
+      "artist": "Furia de Buzo Ciego",
+      "personId": 18358,
+      "name": "Jesús Velásquez",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1080,
+      "artist": "Furia de Buzo Ciego",
+      "personId": 18359,
+      "name": "Luis Caballero",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1080,
+      "artist": "Furia de Buzo Ciego",
+      "personId": 18360,
+      "name": "Ricardo Montiel",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1080,
+      "artist": "Furia de Buzo Ciego",
+      "personId": 18361,
+      "name": "Roberto Rincón",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1094,
+      "artist": "Parke Inactivo",
+      "personId": 18362,
+      "name": "Frank Pardo",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1094,
+      "artist": "Parke Inactivo",
+      "personId": 18363,
+      "name": "José Méndez",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1094,
+      "artist": "Parke Inactivo",
+      "personId": 18364,
+      "name": "Maurizio Iazzetta",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1094,
+      "artist": "Parke Inactivo",
+      "personId": 18365,
+      "name": "Octavio Paredes",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1100,
+      "artist": "Soma Raza",
+      "personId": 18366,
+      "name": "Arnold de Vries",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1100,
+      "artist": "Soma Raza",
+      "personId": 18367,
+      "name": "Robert Gibiaqui",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1106,
+      "artist": "El Enano de la Catedral",
+      "personId": 18368,
+      "name": "Douglas Álvarez",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1106,
+      "artist": "El Enano de la Catedral",
+      "personId": 18369,
+      "name": "Julio Pacheco",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1106,
+      "artist": "El Enano de la Catedral",
+      "personId": 18370,
+      "name": "Lorena Gimeno Sassone",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1106,
+      "artist": "El Enano de la Catedral",
+      "personId": 18371,
+      "name": "Luis Sanabria",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1106,
+      "artist": "El Enano de la Catedral",
+      "personId": 18372,
+      "name": "Oswaldo Gobeo",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1159,
+      "artist": "Deskarriados",
+      "personId": 18373,
+      "name": "Adolfo Dávila",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1159,
+      "artist": "Deskarriados",
+      "personId": 18374,
+      "name": "Emperatriz Obatalá",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1159,
+      "artist": "Deskarriados",
+      "personId": 18375,
+      "name": "Francisco López Alcántara",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1159,
+      "artist": "Deskarriados",
+      "personId": 18376,
+      "name": "Héctor Laya",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1159,
+      "artist": "Deskarriados",
+      "personId": 18377,
+      "name": "Jorge de la Vega",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1159,
+      "artist": "Deskarriados",
+      "personId": 18378,
+      "name": "Julio Magdalena",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1163,
+      "artist": "Los Dolares",
+      "personId": 18379,
+      "name": "Juan Mi",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1163,
+      "artist": "Los Dolares",
+      "personId": 18380,
+      "name": "Cheo",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1163,
+      "artist": "Los Dolares",
+      "personId": 18381,
+      "name": "Fernando Marquez",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1174,
+      "artist": "Juan Peyote",
+      "personId": 18382,
+      "name": "Carlos Figuera",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1174,
+      "artist": "Juan Peyote",
+      "personId": 18383,
+      "name": "Diego Fuensalida",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1174,
+      "artist": "Juan Peyote",
+      "personId": 18384,
+      "name": "Federico Dib",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1174,
+      "artist": "Juan Peyote",
+      "personId": 18385,
+      "name": "Fernando Carrasquel",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1174,
+      "artist": "Juan Peyote",
+      "personId": 18386,
+      "name": "Zoltan Kunkel",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1177,
+      "artist": "Master Gurú",
+      "personId": 18387,
+      "name": "José Ignacio Benítez",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1177,
+      "artist": "Master Gurú",
+      "personId": 18388,
+      "name": "Manuel Oramas",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1177,
+      "artist": "Master Gurú",
+      "personId": 18389,
+      "name": "Oscar Mibeli",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1177,
+      "artist": "Master Gurú",
+      "personId": 18390,
+      "name": "Pedro Leal",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1181,
+      "artist": "Aerea",
+      "personId": 18391,
+      "name": "Alejandro Patiño",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1181,
+      "artist": "Aerea",
+      "personId": 18392,
+      "name": "Mariliz Bettiol",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1203,
+      "artist": "V Sides Project",
+      "personId": 18393,
+      "name": "Leonardo Degl'Innocenti",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1203,
+      "artist": "V Sides Project",
+      "personId": 18394,
+      "name": "Francisco Rendiles",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1210,
+      "artist": "X-Vicio",
+      "personId": 18395,
+      "name": "Raúl Rodríguez",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1210,
+      "artist": "X-Vicio",
+      "personId": 18396,
+      "name": "Angel Güanchez",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1210,
+      "artist": "X-Vicio",
+      "personId": 18397,
+      "name": "Daniel Hernández",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1230,
+      "artist": "Silfo",
+      "personId": 501,
+      "name": "Andrés Sosa",
+      "role": "Integrante",
+      "how": "proyecto-comun"
+    },
+    {
+      "artistId": 1230,
+      "artist": "Silfo",
+      "personId": 833,
+      "name": "José Luis Osuna",
+      "role": "Integrante",
+      "how": "proyecto-comun"
+    },
+    {
+      "artistId": 1230,
+      "artist": "Silfo",
+      "personId": 18398,
+      "name": "José Miguel de Robertis",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1230,
+      "artist": "Silfo",
+      "personId": 18399,
+      "name": "Kuámasi González",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1242,
+      "artist": "9mm",
+      "personId": 18400,
+      "name": "Alejandro Berti",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1242,
+      "artist": "9mm",
+      "personId": 18401,
+      "name": "Andrés Elutchanz",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1242,
+      "artist": "9mm",
+      "personId": 18402,
+      "name": "César Level",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1242,
+      "artist": "9mm",
+      "personId": 18403,
+      "name": "Eduardo Cabanzo (1994–Presente)",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1242,
+      "artist": "9mm",
+      "personId": 18404,
+      "name": "Gerónimo Díaz",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1242,
+      "artist": "9mm",
+      "personId": 18405,
+      "name": "José Luis Montes",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1242,
+      "artist": "9mm",
+      "personId": 18406,
+      "name": "Kevin Alva",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1242,
+      "artist": "9mm",
+      "personId": 18407,
+      "name": "Mauricio Rojas",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1242,
+      "artist": "9mm",
+      "personId": 18408,
+      "name": "Simón Toro",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1243,
+      "artist": "Cerouno",
+      "personId": 18409,
+      "name": "Javier Otero",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1243,
+      "artist": "Cerouno",
+      "personId": 18410,
+      "name": "Alejandro Suarez",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1308,
+      "artist": "Víctimas de la Democracia",
+      "personId": 18411,
+      "name": "Claudio de Blois",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1308,
+      "artist": "Víctimas de la Democracia",
+      "personId": 18412,
+      "name": "Elías Yánez",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1308,
+      "artist": "Víctimas de la Democracia",
+      "personId": 18413,
+      "name": "Gustavo Votasu",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1308,
+      "artist": "Víctimas de la Democracia",
+      "personId": 18414,
+      "name": "Javier Vázquez",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1308,
+      "artist": "Víctimas de la Democracia",
+      "personId": 18415,
+      "name": "Kresta Castellanos",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1308,
+      "artist": "Víctimas de la Democracia",
+      "personId": 18416,
+      "name": "Omar López",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1308,
+      "artist": "Víctimas de la Democracia",
+      "personId": 18417,
+      "name": "Sebastián Lattouf",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1308,
+      "artist": "Víctimas de la Democracia",
+      "personId": 18418,
+      "name": "Yury Delysqui",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1310,
+      "artist": "Holocausto",
+      "personId": 18419,
+      "name": "Rafael Cadavieco",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1310,
+      "artist": "Holocausto",
+      "personId": 18420,
+      "name": "Carlos Chacín",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1310,
+      "artist": "Holocausto",
+      "personId": 18421,
+      "name": "Gabriel Sánchez",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1310,
+      "artist": "Holocausto",
+      "personId": 18331,
+      "name": "Juan Ignacio Morasso",
+      "role": "Integrante",
+      "how": "proyecto-comun"
+    },
+    {
+      "artistId": 1310,
+      "artist": "Holocausto",
+      "personId": 18422,
+      "name": "Julio Estrada",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1310,
+      "artist": "Holocausto",
+      "personId": 18423,
+      "name": "Rodrigo Monterrey",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1328,
+      "artist": "Ska Jazz Messengers",
+      "personId": 18424,
+      "name": "Jhonny Castro",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1328,
+      "artist": "Ska Jazz Messengers",
+      "personId": 18425,
+      "name": "Omar Fernando Viloria",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1328,
+      "artist": "Ska Jazz Messengers",
+      "personId": 18426,
+      "name": "Giovanny Berroterán",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1328,
+      "artist": "Ska Jazz Messengers",
+      "personId": 18427,
+      "name": "Rafael Frías",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1328,
+      "artist": "Ska Jazz Messengers",
+      "personId": 18428,
+      "name": "César García Solís",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1328,
+      "artist": "Ska Jazz Messengers",
+      "personId": 18429,
+      "name": "Javier Pinto",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1328,
+      "artist": "Ska Jazz Messengers",
+      "personId": 18430,
+      "name": "Ronald Alvarado",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1328,
+      "artist": "Ska Jazz Messengers",
+      "personId": 18431,
+      "name": "Ruthsy Fuentes",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1350,
+      "artist": "Post Data",
+      "personId": 18432,
+      "name": "Néstor Blanco",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1350,
+      "artist": "Post Data",
+      "personId": 18433,
+      "name": "Pompeo Zotti",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1350,
+      "artist": "Post Data",
+      "personId": 18434,
+      "name": "Roberto Rigobon",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1426,
+      "artist": "El Cuarto del Blues",
+      "personId": 18435,
+      "name": "Andrés Silva",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1426,
+      "artist": "El Cuarto del Blues",
+      "personId": 18436,
+      "name": "Carlos Rojas Rivas",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1426,
+      "artist": "El Cuarto del Blues",
+      "personId": 3626,
+      "name": "Eduardo Soto",
+      "role": "Integrante",
+      "how": "proyecto-comun"
+    },
+    {
+      "artistId": 1426,
+      "artist": "El Cuarto del Blues",
+      "personId": 18437,
+      "name": "Francisco Izza",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1426,
+      "artist": "El Cuarto del Blues",
+      "personId": 18438,
+      "name": "Greta Martins",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1426,
+      "artist": "El Cuarto del Blues",
+      "personId": 18439,
+      "name": "Gustavo Krismael",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1426,
+      "artist": "El Cuarto del Blues",
+      "personId": 18440,
+      "name": "Jefferson Rodríguez",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1426,
+      "artist": "El Cuarto del Blues",
+      "personId": 18441,
+      "name": "Jesús Morales",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1426,
+      "artist": "El Cuarto del Blues",
+      "personId": 18442,
+      "name": "Jonathan Otero",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1426,
+      "artist": "El Cuarto del Blues",
+      "personId": 18443,
+      "name": "Rafael Guerrero",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1519,
+      "artist": "Aponwao",
+      "personId": 18444,
+      "name": "María Elena Millán",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1519,
+      "artist": "Aponwao",
+      "personId": 18445,
+      "name": "William González",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1524,
+      "artist": "Thorvald",
+      "personId": 18446,
+      "name": "David Flores",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1524,
+      "artist": "Thorvald",
+      "personId": 18447,
+      "name": "Eliézer Delgado",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1524,
+      "artist": "Thorvald",
+      "personId": 18448,
+      "name": "Inti Maldonado",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1524,
+      "artist": "Thorvald",
+      "personId": 18449,
+      "name": "Iván Taboski",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1524,
+      "artist": "Thorvald",
+      "personId": 18450,
+      "name": "Luis Garzón",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1524,
+      "artist": "Thorvald",
+      "personId": 18451,
+      "name": "Reynaldo Castro",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1537,
+      "artist": "11011",
+      "personId": 18452,
+      "name": "Johnny de Canha",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1577,
+      "artist": "Guarapita",
+      "personId": 18453,
+      "name": "Tristan Mazire",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1577,
+      "artist": "Guarapita",
+      "personId": 18454,
+      "name": "Tom Decaestecker",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1594,
+      "artist": "Fracaso",
+      "personId": 18455,
+      "name": "Nico",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1594,
+      "artist": "Fracaso",
+      "personId": 18456,
+      "name": "Cabeza",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1594,
+      "artist": "Fracaso",
+      "personId": 18457,
+      "name": "Carlos",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1597,
+      "artist": "Guerrilla Seca",
+      "personId": 16933,
+      "name": "Rekeson",
+      "role": "Integrante",
+      "how": "proyecto-comun"
+    },
+    {
+      "artistId": 1642,
+      "artist": "Aeternus Sum",
+      "personId": 18458,
+      "name": "Gildardo González",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1642,
+      "artist": "Aeternus Sum",
+      "personId": 18459,
+      "name": "Henry Crecini",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1656,
+      "artist": "Baquedanu's",
+      "personId": 18460,
+      "name": "Rafael Hernández",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1656,
+      "artist": "Baquedanu's",
+      "personId": 18461,
+      "name": "Adalberto Barrera",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1656,
+      "artist": "Baquedanu's",
+      "personId": 18462,
+      "name": "Alexis Ramos",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1656,
+      "artist": "Baquedanu's",
+      "personId": 18463,
+      "name": "Eleazar Perdomo",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1656,
+      "artist": "Baquedanu's",
+      "personId": 18464,
+      "name": "Héctor Pineda",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1656,
+      "artist": "Baquedanu's",
+      "personId": 18465,
+      "name": "Honorio Ledezma",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1656,
+      "artist": "Baquedanu's",
+      "personId": 18466,
+      "name": "Jesús Giménez",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1656,
+      "artist": "Baquedanu's",
+      "personId": 18467,
+      "name": "José Antonio Mendoza",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1656,
+      "artist": "Baquedanu's",
+      "personId": 18468,
+      "name": "Rolando Alfonzo",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1656,
+      "artist": "Baquedanu's",
+      "personId": 18469,
+      "name": "Santiago Baquedano",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1678,
+      "artist": "Gypsy Ska Orquesta",
+      "personId": 18470,
+      "name": "Mauricio Vivas",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1678,
+      "artist": "Gypsy Ska Orquesta",
+      "personId": 18471,
+      "name": "Manuel Rodriguez",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1678,
+      "artist": "Gypsy Ska Orquesta",
+      "personId": 18472,
+      "name": "Sebastián León",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1678,
+      "artist": "Gypsy Ska Orquesta",
+      "personId": 18473,
+      "name": "Joe García",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1678,
+      "artist": "Gypsy Ska Orquesta",
+      "personId": 18474,
+      "name": "Marco Vettor",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1678,
+      "artist": "Gypsy Ska Orquesta",
+      "personId": 18475,
+      "name": "Luis Lestón",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1678,
+      "artist": "Gypsy Ska Orquesta",
+      "personId": 18476,
+      "name": "Luis Ducharne",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1704,
+      "artist": "Retrovértigo",
+      "personId": 18477,
+      "name": "David Fotaiña",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1767,
+      "artist": "4to Poder",
+      "personId": 18478,
+      "name": "Cotur (miembro)",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1770,
+      "artist": "Tan Frió el Verano",
+      "personId": 18479,
+      "name": "Andrés Ojeda",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1770,
+      "artist": "Tan Frió el Verano",
+      "personId": 18480,
+      "name": "Carlos Sánchez",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1770,
+      "artist": "Tan Frió el Verano",
+      "personId": 18481,
+      "name": "Samuel Ballesteros",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1770,
+      "artist": "Tan Frió el Verano",
+      "personId": 18482,
+      "name": "Rafael García",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1770,
+      "artist": "Tan Frió el Verano",
+      "personId": 18483,
+      "name": "Diego Blanco",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1770,
+      "artist": "Tan Frió el Verano",
+      "personId": 18484,
+      "name": "Diego Roque",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1770,
+      "artist": "Tan Frió el Verano",
+      "personId": 18485,
+      "name": "Juan Rojas",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1770,
+      "artist": "Tan Frió el Verano",
+      "personId": 18486,
+      "name": "Oswaldo Rodríguez",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1770,
+      "artist": "Tan Frió el Verano",
+      "personId": 18487,
+      "name": "Daniel (Mandino) Montesinos",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1770,
+      "artist": "Tan Frió el Verano",
+      "personId": 18488,
+      "name": "Leonardo Simmons",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1804,
+      "artist": "The Pets",
+      "personId": 18489,
+      "name": "Giacomino Tunzi",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1804,
+      "artist": "The Pets",
+      "personId": 18490,
+      "name": "José Miguel Méndez",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1804,
+      "artist": "The Pets",
+      "personId": 18491,
+      "name": "Nicola Tunzi",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1804,
+      "artist": "The Pets",
+      "personId": 18492,
+      "name": "Trino Jiménez",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1804,
+      "artist": "The Pets",
+      "personId": 18493,
+      "name": "Víctor Jiménez",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1823,
+      "artist": "Metrópolis",
+      "personId": 18494,
+      "name": "Efraín González",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1823,
+      "artist": "Metrópolis",
+      "personId": 18495,
+      "name": "Efraín Rodríguez",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1823,
+      "artist": "Metrópolis",
+      "personId": 18496,
+      "name": "Marcus Vinicius",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1823,
+      "artist": "Metrópolis",
+      "personId": 18497,
+      "name": "Raúl Morillo",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1842,
+      "artist": "Azotea",
+      "personId": 18498,
+      "name": "Rafael Lárez",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1846,
+      "artist": "ADN",
+      "personId": 18499,
+      "name": "Andrés Reyes",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1846,
+      "artist": "ADN",
+      "personId": 18500,
+      "name": "Ángelo Calanchi",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1852,
+      "artist": "Parthenon",
+      "personId": 18501,
+      "name": "Andrés González",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1852,
+      "artist": "Parthenon",
+      "personId": 4566,
+      "name": "Laureano Rangel",
+      "role": "Integrante",
+      "how": "credited"
+    },
+    {
+      "artistId": 1852,
+      "artist": "Parthenon",
+      "personId": 18502,
+      "name": "Máximo Panigada",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1852,
+      "artist": "Parthenon",
+      "personId": 18503,
+      "name": "Nicolás Hernández",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1852,
+      "artist": "Parthenon",
+      "personId": 18504,
+      "name": "Nicolás Labropoulus",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1852,
+      "artist": "Parthenon",
+      "personId": 38,
+      "name": "Pedro Castillo",
+      "role": "Integrante",
+      "how": "proyecto-comun"
+    },
+    {
+      "artistId": 1852,
+      "artist": "Parthenon",
+      "personId": 18505,
+      "name": "Rafael González C.",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1852,
+      "artist": "Parthenon",
+      "personId": 2547,
+      "name": "Víctor Fiol",
+      "role": "Integrante",
+      "how": "credited"
+    },
+    {
+      "artistId": 1884,
+      "artist": "Bronce",
+      "personId": 18506,
+      "name": "Leonardo Guaglianone",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1965,
+      "artist": "Homer & The Dont's",
+      "personId": 18507,
+      "name": "Steve Shook",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 2014,
+      "artist": "Servando y Florentino",
+      "personId": 18508,
+      "name": "Servando Primera",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 2014,
+      "artist": "Servando y Florentino",
+      "personId": 18509,
+      "name": "Florentino Primera",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 2140,
+      "artist": "Danto",
+      "personId": 18510,
+      "name": "Alexander Toyo",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 2140,
+      "artist": "Danto",
+      "personId": 18511,
+      "name": "Lenin Nieto",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 2140,
+      "artist": "Danto",
+      "personId": 18512,
+      "name": "Nelson Azuaje",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 2140,
+      "artist": "Danto",
+      "personId": 18513,
+      "name": "Roberto Márquez",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 2232,
+      "artist": "The Nasty Pillows",
+      "personId": 18514,
+      "name": "Felipe Arias",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 2232,
+      "artist": "The Nasty Pillows",
+      "personId": 18515,
+      "name": "Filo Valera",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 2232,
+      "artist": "The Nasty Pillows",
+      "personId": 18516,
+      "name": "Iván Marcano",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 2232,
+      "artist": "The Nasty Pillows",
+      "personId": 18517,
+      "name": "Jesús Toro",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 2233,
+      "artist": "Los Snobs",
+      "personId": 18518,
+      "name": "Don Gornes",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 2233,
+      "artist": "Los Snobs",
+      "personId": 18519,
+      "name": "Eddy Gugliotta",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 2233,
+      "artist": "Los Snobs",
+      "personId": 18520,
+      "name": "Jimmy Ross",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 2233,
+      "artist": "Los Snobs",
+      "personId": 18521,
+      "name": "José Salazar",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 2235,
+      "artist": "Los Bonnevilles",
+      "personId": 18522,
+      "name": "Cesar Sanchez Bello",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 2244,
+      "artist": "Un Dos Tres y Fuera",
+      "personId": 18523,
+      "name": "Edgar Lara",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 2244,
+      "artist": "Un Dos Tres y Fuera",
+      "personId": 18524,
+      "name": "Elias Barreto",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 2244,
+      "artist": "Un Dos Tres y Fuera",
+      "personId": 18525,
+      "name": "Eudys Blanco",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 2244,
+      "artist": "Un Dos Tres y Fuera",
+      "personId": 18526,
+      "name": "William Sigismondi",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 2244,
+      "artist": "Un Dos Tres y Fuera",
+      "personId": 18527,
+      "name": "Nestor Blanco",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 2247,
+      "artist": "Apocalipsis",
+      "personId": 18528,
+      "name": "Alfredo Marcano",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 2247,
+      "artist": "Apocalipsis",
+      "personId": 18529,
+      "name": "Gustavo Lizardo",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 2247,
+      "artist": "Apocalipsis",
+      "personId": 18530,
+      "name": "Humberto Enrique Lizardo",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 2250,
+      "artist": "Bacro",
+      "personId": 603,
+      "name": "Joseito Romero",
+      "role": "Integrante",
+      "how": "proyecto-comun"
+    },
+    {
+      "artistId": 2250,
+      "artist": "Bacro",
+      "personId": 18531,
+      "name": "Gabriel Quintero",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 2250,
+      "artist": "Bacro",
+      "personId": 18532,
+      "name": "Luis Emilio Mauri",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 2250,
+      "artist": "Bacro",
+      "personId": 18533,
+      "name": "José Romero",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 2463,
+      "artist": "La Fe Perdida",
+      "personId": 18534,
+      "name": "Rafael Medina",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 2463,
+      "artist": "La Fe Perdida",
+      "personId": 18535,
+      "name": "Rubén A. Correa",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 2465,
+      "artist": "Ciruela",
+      "personId": 18536,
+      "name": "Alejandro Pulido",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 2465,
+      "artist": "Ciruela",
+      "personId": 18537,
+      "name": "Hernán Medina",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 2465,
+      "artist": "Ciruela",
+      "personId": 18538,
+      "name": "Isaías Urbina",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 2465,
+      "artist": "Ciruela",
+      "personId": 18539,
+      "name": "Luis Manzo",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 2465,
+      "artist": "Ciruela",
+      "personId": 18540,
+      "name": "Manuel Urbina",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 2465,
+      "artist": "Ciruela",
+      "personId": 18541,
+      "name": "Matías Pérez",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 2466,
+      "artist": "Adelante Juventud",
+      "personId": 18542,
+      "name": "Beatriz de Majo",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 2466,
+      "artist": "Adelante Juventud",
+      "personId": 18543,
+      "name": "Claudio Henríquez",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 2466,
+      "artist": "Adelante Juventud",
+      "personId": 18544,
+      "name": "Clodomiro Torres",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 2466,
+      "artist": "Adelante Juventud",
+      "personId": 18545,
+      "name": "Franklin Holland",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 2466,
+      "artist": "Adelante Juventud",
+      "personId": 18546,
+      "name": "José Antonio Ríos",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 2466,
+      "artist": "Adelante Juventud",
+      "personId": 18547,
+      "name": "Leonardo Orue",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 2466,
+      "artist": "Adelante Juventud",
+      "personId": 18548,
+      "name": "Leonor Jove",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 2574,
+      "artist": "Different Fountains",
+      "personId": 18549,
+      "name": "Michael Langeder",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 2574,
+      "artist": "Different Fountains",
+      "personId": 18550,
+      "name": "Bernardo Risquez",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 2934,
+      "artist": "Nomadas",
+      "personId": 18551,
+      "name": "Orlando Briceño",
+      "role": "Integrante",
+      "how": "nueva"
+    }
+  ]
+}

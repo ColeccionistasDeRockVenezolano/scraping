@@ -20,6 +20,9 @@
 // nombran. Si no, se crea; cuando había homónimos sin vínculo, el par queda en
 // el reporte como posible duplicado para revisión manual.
 //
+// Guarda de homónimos: si la nota del modelo descarta una fuente por ser de OTRA banda, los integrantes citados de
+// ella no se aplican y van a reports/apply-members-foreign-review.json.
+//
 // Uso: tsx scripts/apply-members.mts --phase=structured|credits|llm --dossiers=<jsonl> [--extraction=<jsonl>] [--ids=…] [--confirm]
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { closeDb, getPool } from "../src/db/client.js";
@@ -46,15 +49,43 @@ const readJsonl = <T,>(file: string): T[] => (existsSync(file) ? readFileSync(fi
 const fold = (text: string) => text.normalize("NFKD").replace(/[̀-ͯ]/gu, "").toLowerCase();
 const key = (name: string) => nameWithoutNickname(name.replace(/\s*\(\d+\)\s*$/u, ""));
 const tokens = (name: string) => key(name).split(/\s+/u).filter((token) => token.length > 1);
-const clean = (name: string) => name.replace(/\s*\(\d+\)\s*$/u, "").replace(/\s+/gu, " ").trim();
+// Quita el número de homónimo de Discogs «(2)», la cruz de fallecido y las comillas que envuelven el nombre entero («Siniestra»).
+const clean = (name: string) => name.replace(/\s*\(\d+\)\s*$/u, "").replace(/\s*†\s*/gu, " ").replace(/\s+/gu, " ").trim()
+  .replace(/^[«"“'‘]([^«»"“”'‘’]+)[»"”'’]$/u, "$1").trim();
 
-/** Misma persona dentro de UNA ficha: clave igual, o los tokens de un nombre contenidos en el otro (≥2 y mismo apellido). */
+/**
+ * Misma persona dentro de UNA ficha: clave igual, o los tokens del nombre corto (≥2) contenidos en el largo con el
+ * mismo nombre de pila o el mismo último apellido («Federico Agreda» ⊂ «Federico Augusto Ágreda Álvarez»).
+ */
 function sameWithinArtist(left: string, right: string): boolean {
   if (key(left) === key(right)) return true;
   const a = tokens(left);
   const b = tokens(right);
   const [short, long] = a.length <= b.length ? [a, b] : [b, a];
-  return short.length >= 2 && short.every((token) => long.includes(token)) && short[short.length - 1] === long[long.length - 1];
+  if (short.length < 2 || !short.every((token) => long.includes(token))) return false;
+  return short[0] === long[0] || short[short.length - 1] === long[long.length - 1];
+}
+
+/** Mismo número de palabras y cada una igual o a una letra de distancia (sin contar las de ≤3 letras). */
+function nearlySame(left: string, right: string): boolean {
+  const a = tokens(left);
+  const b = tokens(right);
+  if (a.length < 2 || a.length !== b.length) return false;
+  return a.every((token, index) => token === b[index] || (token.length > 3 && editDistance(token, b[index]!) <= 1));
+}
+
+function editDistance(a: string, b: string): number {
+  const row = Array.from({ length: b.length + 1 }, (_, index) => index);
+  for (let i = 1; i <= a.length; i += 1) {
+    let previous = row[0]!;
+    row[0] = i;
+    for (let j = 1; j <= b.length; j += 1) {
+      const saved = row[j]!;
+      row[j] = Math.min(row[j]! + 1, row[j - 1]! + 1, previous + (a[i - 1] === b[j - 1] ? 0 : 1));
+      previous = saved;
+    }
+  }
+  return row[b.length]!;
 }
 
 function dossierText(dossier: MemberDossier): string {
@@ -87,7 +118,8 @@ function structuredPlan(dossier: MemberDossier, row: ExtractionRow | undefined):
     if (facts["miembros (Discogs)"]) lists.push(...splitNames(facts["miembros (Discogs)"]));
     if (facts["miembros (MusicBrainz)"]) lists.push(...splitNames(facts["miembros (MusicBrainz)"]));
     const entries = lists.map(withYears);
-    if (!entries.some((entry) => row.members.some((member) => sameWithinArtist(member.name, entry.name)))) continue;
+    const trusted = row.members.filter((member) => !foreignMembers(row).includes(member));
+    if (!entries.some((entry) => trusted.some((member) => sameWithinArtist(member.name, entry.name)))) continue;
     for (const entry of entries) {
       if (out.some((item) => sameWithinArtist(item.name, entry.name))) continue;
       out.push({ ...entry, personId: null, role: "Integrante", current: null, evidence: `Lista de miembros de ${source.source}: ${source.url ?? ""}` });
@@ -96,31 +128,75 @@ function structuredPlan(dossier: MemberDossier, row: ExtractionRow | undefined):
   return out;
 }
 
-function creditsPlan(dossier: MemberDossier): Planned[] {
-  return dossier.credited.filter((person) => !person.guestOnly).map((person) => {
+/**
+ * Regla de Brian (2026-10-01): un `musician` acreditado en los discos propios de una banda es integrante. En las
+ * grandes producciones (Resaca, Bulevar: 25 músicos en un disco, Simón Díaz incluido) eso mete músicos de sesión,
+ * así que entra directo solo si los textos lo nombran, toca en ≥2 años de discos o la ficha tiene ≤7 músicos; el
+ * resto, y quien es artista por cuenta propia sin que el texto lo nombre, va a la lista de revisión.
+ */
+const SMALL_LINEUP = 7;
+function creditsPlan(dossier: MemberDossier, artistNames: Set<string>): { members: Planned[]; review: Array<{ name: string; personId: number; roles: string[]; years: number[]; why: string }> } {
+  const text = dossierText(dossier);
+  const musicians = dossier.credited.filter((person) => !person.guestOnly);
+  const members: Planned[] = [];
+  const review: Array<{ name: string; personId: number; roles: string[]; years: number[]; why: string }> = [];
+  for (const person of musicians) {
     const years = person.years.filter((year) => year > 0);
-    return {
+    const named = fold(person.name).length >= 4 && text.includes(fold(person.name));
+    const isArtist = artistNames.has(fold(person.name)) && fold(person.name) !== fold(dossier.name);
+    let why: string | null = null;
+    if (named) why = "nombrado en los textos";
+    else if (isArtist) { review.push({ name: person.name, personId: person.personId, roles: person.roles, years, why: "es artista por su cuenta" }); continue; }
+    else if (new Set(years).size >= 2) why = `en discos de ${new Set(years).size} años`;
+    else if (musicians.length <= SMALL_LINEUP) why = `formación pequeña (${musicians.length} músicos)`;
+    else { review.push({ name: person.name, personId: person.personId, roles: person.roles, years, why: `posible músico de sesión (${musicians.length} músicos)` }); continue; }
+    members.push({
       name: person.name, personId: person.personId, role: person.roles.join(", ").slice(0, 200),
       fromYear: years.length ? Math.min(...years) : null, toYear: years.length ? Math.max(...years) : null, current: null,
-      evidence: `Músico acreditado en sus discos propios (${years.join(", ") || "sin año"}); regla de Brian 2026-10-01`,
-    };
-  });
+      evidence: `Músico acreditado en sus discos propios (${years.join(", ") || "sin año"}; ${why}); regla de Brian 2026-10-01`,
+    });
+  }
+  return { members, review };
 }
+
+/**
+ * Fuentes que la propia nota del modelo descarta por hablar de OTRA banda (homónima, de otro país). El modelo a
+ * veces lo dice y aun así devuelve sus integrantes (Tarot finlandés, Discarga de São Paulo): cuentan las refs
+ * nombradas en la frase ANTES de la señal («Las fuentes s1 y s2 describen a la banda finlandesa…»).
+ */
+const FOREIGN = /hom[oó]nim|ajen[ao]s? a (?:esta|la) ficha|otra banda (?:con el mismo nombre|distinta)|no coinciden? (?:en pa[ií]s|con (?:la ficha|el cat[aá]logo|esta))|de (?:otro pa[ií]s|Finlandia|Brasil|Suecia|Alemania|Chile|M[eé]xico|Argentina|Espa[nñ]a|Colombia|Per[uú]|Holanda|Francia|Italia|Polonia|Estados Unidos)|banda (?:finlandesa|brasile[nñ]a|sueca|alemana|chilena|mexicana|argentina|espa[nñ]ola|colombiana|peruana|holandesa|francesa|italiana|polaca|estadounidense|brit[aá]nica|inglesa|noruega|rusa|japonesa)/iu;
+export function foreignRefs(note: string | null): Set<string> {
+  const refs = new Set<string>();
+  for (const sentence of (note ?? "").split(/(?<=[.;])\s+/u)) {
+    const match = FOREIGN.exec(sentence);
+    if (!match) continue;
+    for (const ref of sentence.slice(0, match.index).match(/\b(?:s\d+|bio)\b/gu) ?? []) refs.add(ref);
+  }
+  return refs;
+}
+
+/** Integrantes extraídos cuya cita sale de una fuente que la nota descarta (van a revisión, no al core). */
+const foreignMembers = (row: ExtractionRow) => { const refs = foreignRefs(row.note); return row.members.filter((member) => refs.has(member.evidence.sourceRef)); };
 
 function llmPlan(dossier: MemberDossier, row: ExtractionRow): ArtistPlan | null {
   const source = (ref: string) => (ref === "bio" ? "biografía" : dossier.sources.find((item) => item.ref === ref)?.url ?? ref);
   if ((row.kind === "solista" || row.kind === "proyecto_personal") && row.titular) {
+    // «Solista» cuyo titular no comparte ni una palabra con la ficha es un proyecto (Bélica → Annabella Almenar).
+    const solo = row.kind === "solista" && tokens(row.titular.name).some((token) => tokens(dossier.name).includes(token));
     return {
       artistId: dossier.artistId, artistName: dossier.name,
-      artistType: row.kind === "solista" ? "solo_artist" : "project",
-      members: [{ name: clean(row.titular.name), personId: row.titular.personId, role: TITULAR_ROLE, fromYear: null, toYear: null, current: null,
+      // Un «proyecto» que se llama como su titular es un solista (Ilan Chester).
+      artistType: solo || key(row.titular.name) === key(dossier.name) ? "solo_artist" : "project",
+      // El titular de un solista es la persona con el nombre de la ficha (Rudy Márquez, no «Rodolfo Márquez Van Steins»).
+      members: [{ name: solo ? dossier.name : clean(row.titular.name), personId: row.titular.personId, role: TITULAR_ROLE, fromYear: null, toYear: null, current: null,
         evidence: `${source(row.titular.evidence.sourceRef)}: «${row.titular.evidence.quote}»` }],
     };
   }
   if (row.kind !== "banda") return null;
+  const foreign = new Set(foreignMembers(row));
   return {
     artistId: dossier.artistId, artistName: dossier.name,
-    members: row.members.map((member) => ({
+    members: row.members.filter((member) => !foreign.has(member)).map((member) => ({
       name: clean(member.name), personId: member.personId, role: member.role.slice(0, 200) || "Integrante",
       fromYear: member.fromYear, toYear: member.toYear, current: member.current,
       evidence: `${source(member.evidence.sourceRef)}: «${member.evidence.quote}»`,
@@ -155,14 +231,24 @@ async function linkedArtistNames(context: OperatorContext, personId: number): Pr
   return rows.map((row) => row.name);
 }
 
-interface Resolution { personId: number; how: "credited" | "proyecto-comun" | "homonimo-solista" | "nueva"; homonyms: number[] }
+interface Resolution { personId: number; how: "credited" | "ya-integrante" | "proyecto-comun" | "homonimo-solista" | "nueva"; homonyms: number[] }
 
 async function resolvePerson(
   context: OperatorContext, persons: PersonIndex, dossier: MemberDossier, planned: Planned, text: string, isTitular: boolean, created: Map<string, number>,
 ): Promise<Resolution> {
   if (planned.personId) return { personId: planned.personId, how: "credited", homonyms: [] };
+  // Ya es integrante de ESTA ficha (otra fase, otra fuente o una errata: «Vincenzo»/«Vicenzo» Vitulli).
+  const { rows: current } = await context.client.query<{ person_id: string; name: string }>(
+    "SELECT m.person_id::text, p.name FROM public.artist_members m JOIN public.persons p ON p.id=m.person_id WHERE m.artist_id=$1", [dossier.artistId]);
+  const member = current.find((row) => sameWithinArtist(row.name, planned.name) || nearlySame(row.name, planned.name));
+  if (member) return { personId: Number(member.person_id), how: "ya-integrante", homonyms: [] };
   const credited = dossier.credited.find((person) => sameWithinArtist(person.name, planned.name));
   if (credited) return { personId: credited.personId, how: "credited", homonyms: [] };
+  // Solo nombre de pila o apodo («Wil»): vale si UN único músico acreditado de la ficha lo lleva («Wil Punk»).
+  if (tokens(planned.name).length === 1) {
+    const only = dossier.credited.filter((person) => !person.guestOnly && tokens(person.name).includes(tokens(planned.name)[0]!));
+    if (only.length === 1) return { personId: only[0]!.personId, how: "credited", homonyms: [] };
+  }
   const candidates = persons.byKey.get(key(planned.name)) ?? [];
   // Un solista y su persona homónima (nombre de persona) son la misma ficha humana (caso Ashwave).
   if (isTitular && candidates.length === 1 && key(planned.name) === key(dossier.name)) return { personId: candidates[0]!, how: "homonimo-solista", homonyms: [] };
@@ -192,21 +278,36 @@ async function main(): Promise<void> {
   const isBand = (dossier: MemberDossier) => extraction.get(dossier.artistId)?.kind === "banda";
 
   const plans: ArtistPlan[] = [];
+  const creditsReview: unknown[] = [];
+  const foreignReview: unknown[] = [];
+  const artistNames = new Set((await getPool().query<{ name: string }>("SELECT name FROM public.artists")).rows.map((row) => fold(row.name)));
   for (const dossier of dossiers) {
     if (PHASE === "structured") {
       const members = structuredPlan(dossier, extraction.get(dossier.artistId));
       if (members.length) plans.push({ artistId: dossier.artistId, artistName: dossier.name, members });
     } else if (PHASE === "credits") {
-      const members = creditsPlan(dossier);
-      if (members.length && isBand(dossier)) plans.push({ artistId: dossier.artistId, artistName: dossier.name, members });
+      if (!isBand(dossier)) continue;
+      const { members, review } = creditsPlan(dossier, artistNames);
+      if (members.length) plans.push({ artistId: dossier.artistId, artistName: dossier.name, members });
+      if (review.length) creditsReview.push({ artistId: dossier.artistId, artistName: dossier.name, review });
     } else {
       const row = extraction.get(dossier.artistId);
       const plan = row ? llmPlan(dossier, row) : null;
       if (plan?.members.length) plans.push(plan);
+      const foreign = row?.kind === "banda" ? foreignMembers(row) : [];
+      if (foreign.length) foreignReview.push({ artistId: dossier.artistId, artistName: dossier.name, note: row!.note, members: foreign.map((member) => member.name) });
     }
   }
   const totalMembers = plans.reduce((sum, plan) => sum + plan.members.length, 0);
   console.log(`fase ${PHASE}: ${plans.length} artistas, ${totalMembers} integrantes propuestos`);
+  if (foreignReview.length && !ONLY) {
+    writeFileSync("reports/apply-members-foreign-review.json", JSON.stringify(foreignReview, null, 2));
+    console.log(`revisión: ${foreignReview.length} artistas con integrantes de fuentes que la nota descarta, en reports/apply-members-foreign-review.json`);
+  }
+  if (creditsReview.length && !ONLY) {
+    writeFileSync("reports/apply-members-credits-review.json", JSON.stringify(creditsReview, null, 2));
+    console.log(`revisión: ${creditsReview.length} artistas en reports/apply-members-credits-review.json`);
+  }
   if (!CONFIRM) {
     writeFileSync(`reports/apply-members-${PHASE}-dry-run.json`, JSON.stringify(plans, null, 2));
     console.log(`dry-run en reports/apply-members-${PHASE}-dry-run.json; ejecuta con --confirm`);
@@ -214,6 +315,7 @@ async function main(): Promise<void> {
     return;
   }
 
+  if (!plans.length) { console.log("nada que aplicar"); await closeDb(); return; }
   const persons = await loadPersons();
   const byId = new Map(dossiers.map((dossier) => [dossier.artistId, dossier]));
   const report = { phase: PHASE, runs: [] as number[], memberships: 0, alreadyMember: 0, personsCreated: 0, reused: {} as Record<string, number>,
@@ -263,7 +365,9 @@ async function main(): Promise<void> {
     report.runs.push(runId);
     console.log(`run ${runId}: ${slice.length} artistas`);
   }
-  writeFileSync(`reports/apply-members-${PHASE}-runs${report.runs[0]}-${report.runs.at(-1)}.json`, JSON.stringify(report, null, 2));
+  const reportFile = `reports/apply-members-${PHASE}-runs${report.runs[0]}-${report.runs.at(-1)}.json`;
+  writeFileSync(reportFile, JSON.stringify(report, null, 2));
+  console.log(`informe: ${reportFile}`);
   const { applied: _applied, possibleDuplicates, errors, ...summary } = report;
   console.log(JSON.stringify({ ...summary, possibleDuplicates: possibleDuplicates.length, errors: errors.length }, null, 2));
   await closeDb();

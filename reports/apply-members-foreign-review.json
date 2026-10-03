@@ -1,0 +1,60 @@
+[
+  {
+    "artistId": 239,
+    "artistName": "Tarot",
+    "note": "Las fuentes s1 y s2 describen a la banda finlandesa Tarot (heavy metal), que no coincide con el catálogo (disco «Tarot (1984)») ni con los créditos del expediente (Sergio Brown, Fernando Aloisi, Miguel López, Francisco «Pitufo» Vivas, Giovanni Tradardi). Los integrantes de los créditos no pueden citarse porque no hay texto fuente que los respalde. Los miembros listados proceden solo de s2.",
+    "members": [
+      "Marco Hietala",
+      "Zachary Hietala",
+      "Janne Tolsa",
+      "Tommi Salmela",
+      "Antero Seppänen",
+      "Mako H",
+      "Pecu Cinnari"
+    ]
+  },
+  {
+    "artistId": 1457,
+    "artistName": "Nocturnal Avernus",
+    "note": "Todos los integrantes se citan solo por su nombre tal como aparecen en las fuentes; no se dispone de personId. La bio en español se apoya en la misma fuente s1; no hay credited ni otras fuentes. El texto de s1 coincide con la ficha y no presenta bandas homónimas distintas.",
+    "members": [
+      "Casper Van Dien",
+      "Luis Ramos",
+      "Edwin Aguirre",
+      "Erick Ordoñez",
+      "Edyn Gamez",
+      "Henry Kamikal",
+      "Marriete"
+    ]
+  },
+  {
+    "artistId": 1793,
+    "artistName": "Discarga",
+    "note": "La ficha (artistId 1793) se describe en bio y s2 como banda punk de Venezuela sin integrantes conocidos y con la demo «Discarga» (2009). Las fuentes s1 y s3 de Last.fm describen una banda hardcore de São Paulo, Brasil, activa desde 1998 (trio, demo previa, 7\", giras), que no coincide en país, época ni discografía con la ficha venezolana; he ignorado esa banda homónima. Por tanto, no hay datos fiables de integrantes para la ficha venezolana. Si se confirma que la ficha es la banda brasileña, habría que reclasificar y revisar los integrantes (Douglas, Juninho) y el catálogo.",
+    "members": [
+      "Douglas",
+      "Juninho"
+    ]
+  },
+  {
+    "artistId": 1800,
+    "artistName": "Los Sharks",
+    "note": "La bio presenta a «Los Sharks» como banda venezolana de rock de los 60. La única fuente con texto sustantivo (s1) discute el recopilatorio «Fiesta Existencialista» y afirma explícitamente que los «Los Sharks» incluidos en esa selección «nada tienen en común con los verdaderos pioneros», por lo que el pasaje sobre Iván Loscher como baterista debe tratarse con cautela: parece referirse a la banda homónima o a una creencia errónea repetida en blogs. No hay citas literales en las fuentes que nombren a Carlos Arturo, Ronald Hobaica, Guillermo Berincua ni Héctor Rufino, por lo que no se incluyen como integrantes. La fuente s2 solo aporta la etiqueta «Venezuelan 60s band». Se requiere revisión humana para confirmar la identidad de la banda y su alineación.",
+    "members": [
+      "Iván Loscher"
+    ]
+  },
+  {
+    "artistId": 2594,
+    "artistName": "Jasón",
+    "note": "La bio describe a Jasón como banda argentina formada en 1991 e integrada por varias personas, por lo que se clasifica como banda. Los exmiembros se marcan con current=false según lo indicado en el texto. No hay fuentes adicionales para verificar datos o fechas de ingreso/salida.",
+    "members": [
+      "Ariel Ranieri",
+      "Tano Maiorell",
+      "Martín De Pas",
+      "Pulpiyo Velizan",
+      "Alexis Indio Jacobchuc",
+      "Majo Di Pasquo"
+    ]
+  }
+]

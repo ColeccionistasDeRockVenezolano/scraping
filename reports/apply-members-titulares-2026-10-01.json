@@ -1,0 +1,1413 @@
+{
+ "runs": [
+  10992,
+  10993,
+  10994,
+  10996,
+  10998,
+  10999,
+  11001
+ ],
+ "titulares": [
+  {
+   "artistId": 4,
+   "artist": "Henry Stephen",
+   "personId": 2716,
+   "name": "Henry Stephen",
+   "how": "credited"
+  },
+  {
+   "artistId": 6,
+   "artist": "Melissa",
+   "personId": 15374,
+   "name": "Melissa",
+   "how": "nueva"
+  },
+  {
+   "artistId": 33,
+   "artist": "A'mbar",
+   "personId": 615,
+   "name": "Rudy La Scala",
+   "how": "proyecto-comun"
+  },
+  {
+   "artistId": 45,
+   "artist": "Arbiza",
+   "personId": 2016,
+   "name": "Arbiza",
+   "how": "credited"
+  },
+  {
+   "artistId": 56,
+   "artist": "Cangrejo",
+   "personId": 3414,
+   "name": "Abraham García",
+   "how": "credited"
+  },
+  {
+   "artistId": 63,
+   "artist": "Chulius & The Filarmónicos",
+   "personId": 366,
+   "name": "Julio Briceño",
+   "how": "credited"
+  },
+  {
+   "artistId": 69,
+   "artist": "Colina",
+   "personId": 2675,
+   "name": "Óscar de Jesús Colina",
+   "how": "credited"
+  },
+  {
+   "artistId": 86,
+   "artist": "Edgar Jiménez",
+   "personId": 894,
+   "name": "Edgar Jiménez",
+   "how": "credited"
+  },
+  {
+   "artistId": 87,
+   "artist": "El Clan Spiteri",
+   "personId": 601,
+   "name": "Jorge Spiteri",
+   "how": "credited"
+  },
+  {
+   "artistId": 96,
+   "artist": "Fernando Yvosky",
+   "personId": 2517,
+   "name": "Fernando Yvosky",
+   "how": "credited"
+  },
+  {
+   "artistId": 99,
+   "artist": "Franco De Vita",
+   "personId": 1086,
+   "name": "Franco De Vita",
+   "how": "credited"
+  },
+  {
+   "artistId": 101,
+   "artist": "Garnica",
+   "personId": 830,
+   "name": "Rafael López Garnica",
+   "how": "credited"
+  },
+  {
+   "artistId": 108,
+   "artist": "Gustavo Dal Farra",
+   "personId": 3243,
+   "name": "Gustavo Dal Farra",
+   "how": "credited"
+  },
+  {
+   "artistId": 111,
+   "artist": "Henrique Lazo",
+   "personId": 9732,
+   "name": "Henrique Lazo",
+   "how": "homonimo-solista"
+  },
+  {
+   "artistId": 116,
+   "artist": "Ilan Chester",
+   "personId": 544,
+   "name": "Ilan Chester",
+   "how": "credited"
+  },
+  {
+   "artistId": 146,
+   "artist": "Le Picó",
+   "personId": 2669,
+   "name": "Erik Aldrey",
+   "how": "credited"
+  },
+  {
+   "artistId": 149,
+   "artist": "Lil Supa'",
+   "personId": 2832,
+   "name": "Lil Supa'",
+   "how": "credited"
+  },
+  {
+   "artistId": 171,
+   "artist": "Maurimix",
+   "personId": 367,
+   "name": "Mauricio Arcas",
+   "how": "credited"
+  },
+  {
+   "artistId": 177,
+   "artist": "Mulato",
+   "personId": 1667,
+   "name": "Pablo Rafael González Romero",
+   "how": "credited"
+  },
+  {
+   "artistId": 180,
+   "artist": "Ninah Mars",
+   "personId": 1125,
+   "name": "Ninah Mars",
+   "how": "credited"
+  },
+  {
+   "artistId": 182,
+   "artist": "OdraReg",
+   "personId": 923,
+   "name": "Gerardo Ubieda",
+   "how": "credited"
+  },
+  {
+   "artistId": 186,
+   "artist": "Oscar Fanega",
+   "personId": 2043,
+   "name": "Oscar Fanega",
+   "how": "credited"
+  },
+  {
+   "artistId": 193,
+   "artist": "Patafunk",
+   "personId": 15470,
+   "name": "Carlos Eduardo Martínez",
+   "how": "nueva"
+  },
+  {
+   "artistId": 213,
+   "artist": "Rigel Michelena",
+   "personId": 3422,
+   "name": "Rigel Michelena",
+   "how": "credited"
+  },
+  {
+   "artistId": 214,
+   "artist": "Rodrigo Solo",
+   "personId": 648,
+   "name": "Rodrigo Gonsalves",
+   "how": "credited"
+  },
+  {
+   "artistId": 261,
+   "artist": "Vytas Brenner",
+   "personId": 2493,
+   "name": "Vytas Brenner",
+   "how": "credited"
+  },
+  {
+   "artistId": 265,
+   "artist": "Yátu",
+   "personId": 1003,
+   "name": "Yátu",
+   "how": "credited"
+  },
+  {
+   "artistId": 267,
+   "artist": "iX",
+   "personId": 1134,
+   "name": "Giuglio Cesare Della Noce",
+   "how": "credited"
+  },
+  {
+   "artistId": 381,
+   "artist": "The Art of Jor",
+   "personId": 15563,
+   "name": "Jor",
+   "how": "nueva"
+  },
+  {
+   "artistId": 415,
+   "artist": "Raw Oath",
+   "personId": 15590,
+   "name": "Peter K",
+   "how": "nueva"
+  },
+  {
+   "artistId": 434,
+   "artist": "Coral",
+   "personId": 2953,
+   "name": "Facundo Coral",
+   "how": "proyecto-comun"
+  },
+  {
+   "artistId": 467,
+   "artist": "Salomón",
+   "personId": 15625,
+   "name": "Salomón",
+   "how": "nueva"
+  },
+  {
+   "artistId": 714,
+   "artist": "Carlos75.com",
+   "personId": 15790,
+   "name": "Carlos Álvarez",
+   "how": "nueva"
+  },
+  {
+   "artistId": 735,
+   "artist": "Félix Martin",
+   "personId": 15791,
+   "name": "Félix Martin",
+   "how": "nueva"
+  },
+  {
+   "artistId": 795,
+   "artist": "Zardonic",
+   "personId": 15801,
+   "name": "Federico Augusto Ágreda Álvarez",
+   "how": "nueva"
+  },
+  {
+   "artistId": 806,
+   "artist": "Blackholepit",
+   "personId": 15802,
+   "name": "Federico Agreda",
+   "how": "nueva"
+  },
+  {
+   "artistId": 835,
+   "artist": "Triangular Ascension",
+   "personId": 15808,
+   "name": "Federico Ágreda Álvarez",
+   "how": "nueva"
+  },
+  {
+   "artistId": 849,
+   "artist": "Stunningstorm",
+   "personId": 15809,
+   "name": "Kirvic Aguilera",
+   "how": "nueva"
+  },
+  {
+   "artistId": 868,
+   "artist": "Michael Zapata",
+   "personId": 15823,
+   "name": "Michael Zapata",
+   "how": "nueva"
+  },
+  {
+   "artistId": 911,
+   "artist": "El Globo Oscuro",
+   "personId": 15834,
+   "name": "Evelio Gómez",
+   "how": "nueva"
+  },
+  {
+   "artistId": 988,
+   "artist": "Indigestable Suppuration",
+   "personId": 14335,
+   "name": "Egidio Chirinos",
+   "how": "proyecto-comun"
+  },
+  {
+   "artistId": 1003,
+   "artist": "Enorme Roca Navaja",
+   "personId": 15875,
+   "name": "Nelson Camacaro",
+   "how": "nueva"
+  },
+  {
+   "artistId": 1014,
+   "artist": "Judy Buendía y Los Impostores",
+   "personId": 15912,
+   "name": "Judy Buendía",
+   "how": "nueva"
+  },
+  {
+   "artistId": 1016,
+   "artist": "El Caminante",
+   "personId": 15913,
+   "name": "Noel Grisanti",
+   "how": "nueva"
+  },
+  {
+   "artistId": 1084,
+   "artist": "Carlos1975",
+   "personId": 218,
+   "name": "Carlos Álvarez",
+   "how": "proyecto-comun"
+  },
+  {
+   "artistId": 1109,
+   "artist": "Guillermo Carrasco",
+   "personId": 45,
+   "name": "Guillermo Carrasco",
+   "how": "homonimo-solista"
+  },
+  {
+   "artistId": 1115,
+   "artist": "OG Project",
+   "personId": 1021,
+   "name": "Oswaldo Grillet",
+   "how": "proyecto-comun"
+  },
+  {
+   "artistId": 1116,
+   "artist": "Panasuyo",
+   "personId": 16117,
+   "name": "Aureliano Méndez Cadet",
+   "how": "nueva"
+  },
+  {
+   "artistId": 1145,
+   "artist": "Capitán Melao",
+   "personId": 496,
+   "name": "Javier Weyler",
+   "how": "proyecto-comun"
+  },
+  {
+   "artistId": 1158,
+   "artist": "En el laberinto",
+   "personId": 2234,
+   "name": "Ricardo Toscano",
+   "how": "proyecto-comun"
+  },
+  {
+   "artistId": 1198,
+   "artist": "Kuámasi",
+   "personId": 2891,
+   "name": "Kuámasi González Vidal",
+   "how": "proyecto-comun"
+  },
+  {
+   "artistId": 1199,
+   "artist": "Laiza",
+   "personId": 16218,
+   "name": "Laiza",
+   "how": "nueva"
+  },
+  {
+   "artistId": 1238,
+   "artist": "Onechot",
+   "personId": 16264,
+   "name": "Juan D. Chacón",
+   "how": "nueva"
+  },
+  {
+   "artistId": 1318,
+   "artist": "Vel France",
+   "personId": 16338,
+   "name": "France Velásquez",
+   "how": "nueva"
+  },
+  {
+   "artistId": 1319,
+   "artist": "Mc Klopedia",
+   "personId": 16339,
+   "name": "Ramsés Guillermo Meneses",
+   "how": "nueva"
+  },
+  {
+   "artistId": 1338,
+   "artist": "Psikopata",
+   "personId": 16406,
+   "name": "Psikopata",
+   "how": "nueva"
+  },
+  {
+   "artistId": 1341,
+   "artist": "Josefina Benedetti",
+   "personId": 16412,
+   "name": "Josefina Benedetti",
+   "how": "nueva"
+  },
+  {
+   "artistId": 1348,
+   "artist": "Pablo Torres",
+   "personId": 3320,
+   "name": "Pablo Torres",
+   "how": "credited"
+  },
+  {
+   "artistId": 1355,
+   "artist": "Virgilio Araque",
+   "personId": 16440,
+   "name": "Virgilio Araque",
+   "how": "nueva"
+  },
+  {
+   "artistId": 1361,
+   "artist": "Jan Pawel",
+   "personId": 16453,
+   "name": "Jan Pawel",
+   "how": "nueva"
+  },
+  {
+   "artistId": 1367,
+   "artist": "Sonda a Barnard",
+   "personId": 16464,
+   "name": "Darío Sosa",
+   "how": "nueva"
+  },
+  {
+   "artistId": 1373,
+   "artist": "Thickballah",
+   "personId": 16477,
+   "name": "Thickballah",
+   "how": "nueva"
+  },
+  {
+   "artistId": 1380,
+   "artist": "Big Habana",
+   "personId": 16490,
+   "name": "Big Habana",
+   "how": "nueva"
+  },
+  {
+   "artistId": 1396,
+   "artist": "John Guarena",
+   "personId": 16522,
+   "name": "John Guarena",
+   "how": "nueva"
+  },
+  {
+   "artistId": 1417,
+   "artist": "Gladys",
+   "personId": 5835,
+   "name": "Gladys",
+   "how": "credited"
+  },
+  {
+   "artistId": 1420,
+   "artist": "Selector Cocoman",
+   "personId": 16566,
+   "name": "Franklin Charles",
+   "how": "nueva"
+  },
+  {
+   "artistId": 1435,
+   "artist": "Algodón Egipcio",
+   "personId": 16620,
+   "name": "Ezequiel Bertho",
+   "how": "nueva"
+  },
+  {
+   "artistId": 1437,
+   "artist": "Dolli",
+   "personId": 16625,
+   "name": "Erly J. Ruiz",
+   "how": "nueva"
+  },
+  {
+   "artistId": 1441,
+   "artist": "Proyecto Brujo",
+   "personId": 16633,
+   "name": "Juan Moreno",
+   "how": "nueva"
+  },
+  {
+   "artistId": 1449,
+   "artist": "The Arrival Babylon Monks",
+   "personId": 14922,
+   "name": "Wismar Pulido",
+   "how": "proyecto-comun"
+  },
+  {
+   "artistId": 1455,
+   "artist": "Taremurú",
+   "personId": 16637,
+   "name": "Elías Castro",
+   "how": "nueva"
+  },
+  {
+   "artistId": 1463,
+   "artist": "Domingo En Llamas",
+   "personId": 16661,
+   "name": "José Ignacio Benítez",
+   "how": "nueva"
+  },
+  {
+   "artistId": 1477,
+   "artist": "Titi Cundekas'on",
+   "personId": 16674,
+   "name": "Koko",
+   "how": "nueva"
+  },
+  {
+   "artistId": 1496,
+   "artist": "Lasso",
+   "personId": 16734,
+   "name": "Lasso",
+   "how": "nueva"
+  },
+  {
+   "artistId": 1497,
+   "artist": "Nahu Padilla",
+   "personId": 16735,
+   "name": "Nahu Padilla",
+   "how": "nueva"
+  },
+  {
+   "artistId": 1498,
+   "artist": "Lasca",
+   "personId": 657,
+   "name": "Chapis Lasca",
+   "how": "proyecto-comun"
+  },
+  {
+   "artistId": 1499,
+   "artist": "Cornelio Estación Caribe",
+   "personId": 16736,
+   "name": "Cornelio",
+   "how": "nueva"
+  },
+  {
+   "artistId": 1503,
+   "artist": "The Sounds From RA",
+   "personId": 16746,
+   "name": "Antonio Fernández Ríos",
+   "how": "nueva"
+  },
+  {
+   "artistId": 1515,
+   "artist": "Frank Risquez",
+   "personId": 16783,
+   "name": "Frank Risquez",
+   "how": "nueva"
+  },
+  {
+   "artistId": 1525,
+   "artist": "...Al cruzar La Calle",
+   "personId": 16802,
+   "name": "Linda Sjöquist",
+   "how": "nueva"
+  },
+  {
+   "artistId": 1527,
+   "artist": "Host",
+   "personId": 16803,
+   "name": "Kirvic Aguilera",
+   "how": "nueva"
+  },
+  {
+   "artistId": 1535,
+   "artist": "Trece",
+   "personId": 16811,
+   "name": "Trece",
+   "how": "nueva"
+  },
+  {
+   "artistId": 1536,
+   "artist": "Jesús Tomed",
+   "personId": 16812,
+   "name": "Jesús Tomed",
+   "how": "nueva"
+  },
+  {
+   "artistId": 1548,
+   "artist": "Aldy",
+   "personId": 16842,
+   "name": "Aldy",
+   "how": "nueva"
+  },
+  {
+   "artistId": 1564,
+   "artist": "Ok Fran",
+   "personId": 16688,
+   "name": "Francisco Gómez",
+   "how": "proyecto-comun"
+  },
+  {
+   "artistId": 1586,
+   "artist": "La Clem De La Clem",
+   "personId": 16919,
+   "name": "Clementina Francisco",
+   "how": "nueva"
+  },
+  {
+   "artistId": 1595,
+   "artist": "Rekeson",
+   "personId": 16933,
+   "name": "Rekeson",
+   "how": "nueva"
+  },
+  {
+   "artistId": 1596,
+   "artist": "El Prieto",
+   "personId": 16934,
+   "name": "El Prieto",
+   "how": "nueva"
+  },
+  {
+   "artistId": 1624,
+   "artist": "Antonio Bello Blues Band",
+   "personId": 6301,
+   "name": "Antonio Bello",
+   "how": "proyecto-comun"
+  },
+  {
+   "artistId": 1633,
+   "artist": "Call-On",
+   "personId": 3202,
+   "name": "Eric Colón Moleiro",
+   "how": "proyecto-comun"
+  },
+  {
+   "artistId": 1671,
+   "artist": "Yani",
+   "personId": 17118,
+   "name": "Giovanni Emilio Conte Trezza",
+   "how": "nueva"
+  },
+  {
+   "artistId": 1683,
+   "artist": "Bostas Brain",
+   "personId": 15448,
+   "name": "Bostas Brain",
+   "how": "proyecto-comun"
+  },
+  {
+   "artistId": 1688,
+   "artist": "David Montiel",
+   "personId": 16426,
+   "name": "David Montiel",
+   "how": "homonimo-solista"
+  },
+  {
+   "artistId": 1695,
+   "artist": "Cindy López",
+   "personId": 17190,
+   "name": "Cindy López",
+   "how": "nueva"
+  },
+  {
+   "artistId": 1696,
+   "artist": "Presidente",
+   "personId": 17191,
+   "name": "Heberto Áñez Novoa",
+   "how": "nueva"
+  },
+  {
+   "artistId": 1708,
+   "artist": "Daniela Bascopé",
+   "personId": 17218,
+   "name": "Daniela Bascopé",
+   "how": "nueva"
+  },
+  {
+   "artistId": 1729,
+   "artist": "Betamax",
+   "personId": 16735,
+   "name": "Nahu Padilla",
+   "how": "proyecto-comun"
+  },
+  {
+   "artistId": 1809,
+   "artist": "Luiser",
+   "personId": 6537,
+   "name": "Luiser",
+   "how": "homonimo-solista"
+  },
+  {
+   "artistId": 1811,
+   "artist": "Luz Marina",
+   "personId": 3258,
+   "name": "Luz Marina",
+   "how": "credited"
+  },
+  {
+   "artistId": 1819,
+   "artist": "Maricruz Quintero",
+   "personId": 3597,
+   "name": "Maricruz Quintero",
+   "how": "credited"
+  },
+  {
+   "artistId": 1822,
+   "artist": "Matheus 10",
+   "personId": 7101,
+   "name": "Alfredo Matheus Diez",
+   "how": "proyecto-comun"
+  },
+  {
+   "artistId": 1832,
+   "artist": "Agni Mogollón",
+   "personId": 2255,
+   "name": "Agni Mogollón",
+   "how": "credited"
+  },
+  {
+   "artistId": 1834,
+   "artist": "Azabache",
+   "personId": 7953,
+   "name": "Azabache",
+   "how": "credited"
+  },
+  {
+   "artistId": 1836,
+   "artist": "Nella",
+   "personId": 17364,
+   "name": "Nella",
+   "how": "nueva"
+  },
+  {
+   "artistId": 1838,
+   "artist": "Robert Valerio",
+   "personId": 2424,
+   "name": "Robert Valerio",
+   "how": "homonimo-solista"
+  },
+  {
+   "artistId": 1853,
+   "artist": "Paula Morales",
+   "personId": 17371,
+   "name": "Paula Morales",
+   "how": "nueva"
+  },
+  {
+   "artistId": 1855,
+   "artist": "Delia",
+   "personId": 369,
+   "name": "Delia",
+   "how": "credited"
+  },
+  {
+   "artistId": 1861,
+   "artist": "Al Zeppy",
+   "personId": 7178,
+   "name": "Al Zeppy",
+   "how": "credited"
+  },
+  {
+   "artistId": 1867,
+   "artist": "Andrea Lacoste",
+   "personId": 7039,
+   "name": "Andrea Lacoste",
+   "how": "credited"
+  },
+  {
+   "artistId": 1868,
+   "artist": "Angela",
+   "personId": 1107,
+   "name": "Angela",
+   "how": "credited"
+  },
+  {
+   "artistId": 1877,
+   "artist": "Bartolomé Diaz",
+   "personId": 2360,
+   "name": "Bartolomé Diaz",
+   "how": "credited"
+  },
+  {
+   "artistId": 1895,
+   "artist": "Charly Duur",
+   "personId": 8490,
+   "name": "Carlos Caro",
+   "how": "credited"
+  },
+  {
+   "artistId": 1896,
+   "artist": "Cherry Navarro",
+   "personId": 8494,
+   "name": "Cherry Navarro",
+   "how": "credited"
+  },
+  {
+   "artistId": 1904,
+   "artist": "Croj",
+   "personId": 3674,
+   "name": "Chiqui Rojas",
+   "how": "credited"
+  },
+  {
+   "artistId": 1917,
+   "artist": "Divina Ciencia",
+   "personId": 5428,
+   "name": "Tony Galo",
+   "how": "credited"
+  },
+  {
+   "artistId": 1960,
+   "artist": "Guillermo Dávila",
+   "personId": 7116,
+   "name": "Guillermo Dávila",
+   "how": "homonimo-solista"
+  },
+  {
+   "artistId": 1966,
+   "artist": "I-Mind",
+   "personId": 3672,
+   "name": "Eduardo José Osorio",
+   "how": "credited"
+  },
+  {
+   "artistId": 1969,
+   "artist": "Ivan Higa",
+   "personId": 1160,
+   "name": "Ivan Higa",
+   "how": "credited"
+  },
+  {
+   "artistId": 1974,
+   "artist": "Jorge Cid",
+   "personId": 6030,
+   "name": "Jorge Cid",
+   "how": "credited"
+  },
+  {
+   "artistId": 1977,
+   "artist": "Juan Francisco",
+   "personId": 17392,
+   "name": "Juan Francisco",
+   "how": "nueva"
+  },
+  {
+   "artistId": 1979,
+   "artist": "Julio César",
+   "personId": 17394,
+   "name": "Julio César",
+   "how": "nueva"
+  },
+  {
+   "artistId": 1981,
+   "artist": "Kiara",
+   "personId": 17395,
+   "name": "Kiara",
+   "how": "nueva"
+  },
+  {
+   "artistId": 1988,
+   "artist": "Leo Carnicella",
+   "personId": 7328,
+   "name": "Leo Carnicella",
+   "how": "credited"
+  },
+  {
+   "artistId": 1989,
+   "artist": "Licio Lugarini Melloni \"Licho\"",
+   "personId": 5559,
+   "name": "Licio Lugarini Melloni \"Licho\"",
+   "how": "homonimo-solista"
+  },
+  {
+   "artistId": 1994,
+   "artist": "Raimundo Rodulfo",
+   "personId": 17396,
+   "name": "Raimundo Rodulfo",
+   "how": "nueva"
+  },
+  {
+   "artistId": 2002,
+   "artist": "Roque Valero",
+   "personId": 17397,
+   "name": "Roque Valero",
+   "how": "nueva"
+  },
+  {
+   "artistId": 2004,
+   "artist": "Rudy Márquez",
+   "personId": 978,
+   "name": "Rudy Márquez",
+   "how": "homonimo-solista"
+  },
+  {
+   "artistId": 2009,
+   "artist": "Sandino",
+   "personId": 17398,
+   "name": "Sandino",
+   "how": "nueva"
+  },
+  {
+   "artistId": 2013,
+   "artist": "Sergio Pérez",
+   "personId": 2570,
+   "name": "Sergio Pérez",
+   "how": "homonimo-solista"
+  },
+  {
+   "artistId": 2018,
+   "artist": "Srod",
+   "personId": 17405,
+   "name": "Santiago Rodriguez Almenara",
+   "how": "nueva"
+  },
+  {
+   "artistId": 2020,
+   "artist": "Suki Landaeta",
+   "personId": 15373,
+   "name": "Suki Landaeta",
+   "how": "homonimo-solista"
+  },
+  {
+   "artistId": 2021,
+   "artist": "Susana Abreu",
+   "personId": 17406,
+   "name": "Susana Abreu",
+   "how": "nueva"
+  },
+  {
+   "artistId": 2031,
+   "artist": "Trino Mora",
+   "personId": 8775,
+   "name": "Trino Mora",
+   "how": "credited"
+  },
+  {
+   "artistId": 2034,
+   "artist": "Víctor Muñoz",
+   "personId": 17407,
+   "name": "Víctor Muñoz",
+   "how": "nueva"
+  },
+  {
+   "artistId": 2064,
+   "artist": "TAK",
+   "personId": 17435,
+   "name": "Andrés Morillo",
+   "how": "nueva"
+  },
+  {
+   "artistId": 2076,
+   "artist": "Proyecto Boogie Boogie",
+   "personId": 17450,
+   "name": "José Roberto",
+   "how": "nueva"
+  },
+  {
+   "artistId": 2161,
+   "artist": "Carlos Perez",
+   "personId": 17591,
+   "name": "Carlos Perez",
+   "how": "nueva"
+  },
+  {
+   "artistId": 2162,
+   "artist": "Darwin Lubo",
+   "personId": 17592,
+   "name": "Darwin Lubo",
+   "how": "nueva"
+  },
+  {
+   "artistId": 2185,
+   "artist": "CARLO QUIJADA",
+   "personId": 17619,
+   "name": "CARLO QUIJADA",
+   "how": "nueva"
+  },
+  {
+   "artistId": 2225,
+   "artist": "DJ Rey",
+   "personId": 17663,
+   "name": "DJ Rey",
+   "how": "nueva"
+  },
+  {
+   "artistId": 2226,
+   "artist": "Wyzton Borreo",
+   "personId": 17664,
+   "name": "Wyzton Borreo",
+   "how": "nueva"
+  },
+  {
+   "artistId": 2227,
+   "artist": "Mare Imbrium",
+   "personId": 17665,
+   "name": "Gabriel Pérez",
+   "how": "nueva"
+  },
+  {
+   "artistId": 2327,
+   "artist": "El General",
+   "personId": 17798,
+   "name": "El General",
+   "how": "nueva"
+  },
+  {
+   "artistId": 2381,
+   "artist": "Glavio",
+   "personId": 17862,
+   "name": "Antoine Dourlent",
+   "how": "nueva"
+  },
+  {
+   "artistId": 2401,
+   "artist": "Vaginosis Bacteriana",
+   "personId": 17889,
+   "name": "Kevin Alvarado",
+   "how": "nueva"
+  },
+  {
+   "artistId": 2413,
+   "artist": "Atomization",
+   "personId": 17890,
+   "name": "Wouter Hudales",
+   "how": "nueva"
+  },
+  {
+   "artistId": 2414,
+   "artist": "Proyecto Panica",
+   "personId": 17891,
+   "name": "Cholo Del Diablo",
+   "how": "nueva"
+  },
+  {
+   "artistId": 2426,
+   "artist": "Pancong Coklat Keju",
+   "personId": 17901,
+   "name": "Angga Ramadhan",
+   "how": "nueva"
+  },
+  {
+   "artistId": 2427,
+   "artist": "Bowel Maggots",
+   "personId": 17902,
+   "name": "Nikolas Dexx",
+   "how": "nueva"
+  },
+  {
+   "artistId": 2428,
+   "artist": "Menstruating Cunt",
+   "personId": 17903,
+   "name": "Lafawijn",
+   "how": "nueva"
+  },
+  {
+   "artistId": 2429,
+   "artist": "Rot in Space",
+   "personId": 17904,
+   "name": "ROT",
+   "how": "nueva"
+  },
+  {
+   "artistId": 2440,
+   "artist": "Feasting on Scaphism Remains",
+   "personId": 17917,
+   "name": "The Infinite Nihilist",
+   "how": "nueva"
+  },
+  {
+   "artistId": 2446,
+   "artist": "Epidemic Pain",
+   "personId": 17920,
+   "name": "Joe Badtaste",
+   "how": "nueva"
+  },
+  {
+   "artistId": 2449,
+   "artist": "Individual Distortion",
+   "personId": 17922,
+   "name": "Adythia Utama",
+   "how": "nueva"
+  },
+  {
+   "artistId": 2477,
+   "artist": "Slamophiliac",
+   "personId": 17954,
+   "name": "Darryn Palmer",
+   "how": "nueva"
+  },
+  {
+   "artistId": 2478,
+   "artist": "Septic Mutagen",
+   "personId": 17955,
+   "name": "Tim Read",
+   "how": "nueva"
+  },
+  {
+   "artistId": 2479,
+   "artist": "Dressed for Apocalypse",
+   "personId": 17956,
+   "name": "Alienlord",
+   "how": "nueva"
+  },
+  {
+   "artistId": 2480,
+   "artist": "Perverted Dexterity",
+   "personId": 17957,
+   "name": "Januaryo Hardy",
+   "how": "nueva"
+  },
+  {
+   "artistId": 2484,
+   "artist": "Deformed Cadaver",
+   "personId": 17962,
+   "name": "Andi",
+   "how": "nueva"
+  },
+  {
+   "artistId": 2489,
+   "artist": "Bizarre Bondage",
+   "personId": 17974,
+   "name": "Steve Montero",
+   "how": "nueva"
+  },
+  {
+   "artistId": 2541,
+   "artist": "Barilari",
+   "personId": 18015,
+   "name": "Adrián Barilari",
+   "how": "nueva"
+  },
+  {
+   "artistId": 2555,
+   "artist": "Mirrorthrone",
+   "personId": 18025,
+   "name": "Vladimir Cochet",
+   "how": "nueva"
+  },
+  {
+   "artistId": 2573,
+   "artist": "Rafael Rico",
+   "personId": 18037,
+   "name": "Rafael Rico",
+   "how": "nueva"
+  },
+  {
+   "artistId": 2577,
+   "artist": "Andrecho",
+   "personId": 18040,
+   "name": "Andrecho Sequea",
+   "how": "nueva"
+  },
+  {
+   "artistId": 2606,
+   "artist": "C-funk",
+   "personId": 18060,
+   "name": "C-funk",
+   "how": "nueva"
+  },
+  {
+   "artistId": 2618,
+   "artist": "Demetrio De CCS",
+   "personId": 18067,
+   "name": "Leopoldo Bello",
+   "how": "nueva"
+  },
+  {
+   "artistId": 2620,
+   "artist": "Spyro",
+   "personId": 18068,
+   "name": "Matias Monteagudo",
+   "how": "nueva"
+  },
+  {
+   "artistId": 2621,
+   "artist": "Nicolai Chek Chenkov",
+   "personId": 18069,
+   "name": "Nicolai Chek Chenkov",
+   "how": "nueva"
+  },
+  {
+   "artistId": 2655,
+   "artist": "Mexican Institute Of Sound",
+   "personId": 18076,
+   "name": "Camilo Lara",
+   "how": "nueva"
+  },
+  {
+   "artistId": 2657,
+   "artist": "Funky C",
+   "personId": 18077,
+   "name": "Cristian Moraga",
+   "how": "nueva"
+  },
+  {
+   "artistId": 2662,
+   "artist": "Pacheko",
+   "personId": 1540,
+   "name": "Francisco Mejía",
+   "how": "proyecto-comun"
+  },
+  {
+   "artistId": 2669,
+   "artist": "DJ Beat",
+   "personId": 18080,
+   "name": "Fernando Garmendia",
+   "how": "nueva"
+  },
+  {
+   "artistId": 2672,
+   "artist": "Yare",
+   "personId": 18081,
+   "name": "Eduardo Larez",
+   "how": "nueva"
+  },
+  {
+   "artistId": 2679,
+   "artist": "Cecilia Todd",
+   "personId": 18082,
+   "name": "Cecilia Todd",
+   "how": "nueva"
+  },
+  {
+   "artistId": 2727,
+   "artist": "Dr. Muu",
+   "personId": 18088,
+   "name": "José Antonio Blanco Angulo",
+   "how": "nueva"
+  },
+  {
+   "artistId": 2733,
+   "artist": "Cardopusher",
+   "personId": 18089,
+   "name": "Luis Garbán",
+   "how": "nueva"
+  },
+  {
+   "artistId": 2789,
+   "artist": "Club Nuclear",
+   "personId": 1617,
+   "name": "Alexis Rendón",
+   "how": "proyecto-comun"
+  },
+  {
+   "artistId": 2813,
+   "artist": "Javith",
+   "personId": 18093,
+   "name": "Eduardo Javith",
+   "how": "nueva"
+  },
+  {
+   "artistId": 2816,
+   "artist": "Robert Rabbath",
+   "personId": 18094,
+   "name": "Robert Rabbath",
+   "how": "nueva"
+  },
+  {
+   "artistId": 2819,
+   "artist": "Dj Aureal",
+   "personId": 18096,
+   "name": "Tony Funiciello",
+   "how": "nueva"
+  },
+  {
+   "artistId": 2835,
+   "artist": "José Cabello",
+   "personId": 705,
+   "name": "José Cabello",
+   "how": "homonimo-solista"
+  },
+  {
+   "artistId": 2837,
+   "artist": "Turtled",
+   "personId": 18098,
+   "name": "Ed Vera",
+   "how": "nueva"
+  },
+  {
+   "artistId": 2841,
+   "artist": "Ajd",
+   "personId": 18099,
+   "name": "Antonio José Azócar",
+   "how": "nueva"
+  },
+  {
+   "artistId": 2864,
+   "artist": "Reix",
+   "personId": 18100,
+   "name": "Reinaldo López",
+   "how": "nueva"
+  },
+  {
+   "artistId": 2865,
+   "artist": "Carlos Salazar",
+   "personId": 18101,
+   "name": "Carlos Salazar",
+   "how": "nueva"
+  },
+  {
+   "artistId": 2877,
+   "artist": "Moreon",
+   "personId": 18102,
+   "name": "Gustavo R.",
+   "how": "nueva"
+  },
+  {
+   "artistId": 2885,
+   "artist": "Manybeat",
+   "personId": 18103,
+   "name": "Manuel Alberto Bolívar",
+   "how": "nueva"
+  },
+  {
+   "artistId": 2891,
+   "artist": "Analog Circl8",
+   "personId": 18104,
+   "name": "Daniel Maal",
+   "how": "nueva"
+  },
+  {
+   "artistId": 2892,
+   "artist": "SER+",
+   "personId": 18105,
+   "name": "Nacho Nuett",
+   "how": "nueva"
+  },
+  {
+   "artistId": 2897,
+   "artist": "Ordep Zerep",
+   "personId": 18108,
+   "name": "Federico Blank",
+   "how": "nueva"
+  },
+  {
+   "artistId": 2904,
+   "artist": "KC",
+   "personId": 18120,
+   "name": "KC",
+   "how": "nueva"
+  },
+  {
+   "artistId": 2913,
+   "artist": "XquicksilverX",
+   "personId": 18132,
+   "name": "Josh Quicksilver",
+   "how": "nueva"
+  },
+  {
+   "artistId": 2918,
+   "artist": "Voicians",
+   "personId": 18136,
+   "name": "Daniel Voicians",
+   "how": "nueva"
+  },
+  {
+   "artistId": 2919,
+   "artist": "Mark Instinct",
+   "personId": 18137,
+   "name": "Mark Trotta",
+   "how": "nueva"
+  },
+  {
+   "artistId": 2923,
+   "artist": "Throttler",
+   "personId": 18141,
+   "name": "Steve Foskolos",
+   "how": "nueva"
+  },
+  {
+   "artistId": 2924,
+   "artist": "Lowbss",
+   "personId": 18142,
+   "name": "Vasso Skopelou",
+   "how": "nueva"
+  },
+  {
+   "artistId": 2925,
+   "artist": "Messinian",
+   "personId": 18143,
+   "name": "James Fiorella",
+   "how": "nueva"
+  },
+  {
+   "artistId": 2928,
+   "artist": "Receptor",
+   "personId": 18144,
+   "name": "Dmitry Veschunov",
+   "how": "nueva"
+  },
+  {
+   "artistId": 2930,
+   "artist": "Cooh",
+   "personId": 18145,
+   "name": "Ivan Shopov",
+   "how": "nueva"
+  },
+  {
+   "artistId": 2933,
+   "artist": "Reid Speed",
+   "personId": 18148,
+   "name": "Reid Speed",
+   "how": "nueva"
+  }
+ ]
+}

@@ -28,7 +28,18 @@ const evidenceSchema = z.object({ quote: z.string(), sourceRef: z.string() });
 const responseSchema = z.object({
   caseId: z.string(),
   kind: z.enum(["banda", "solista", "proyecto_personal", "no_artista", "desconocido"]),
-  titular: z.object({ name: z.string(), personId: z.number().int().nullable(), evidence: evidenceSchema }).nullable(),
+  // El modelo a veces manda el titular como texto suelto: se acepta sin cita y la validación pide la cita en el reintento.
+  titular: z.preprocess(
+    (value) => {
+      if (typeof value === "string") return { name: value, personId: null, evidence: { quote: "", sourceRef: "" } };
+      if (!value || typeof value !== "object") return value;
+      const titular = value as { personId?: unknown; evidence?: unknown };
+      const personId = typeof titular.personId === "string" && /^\d+$/u.test(titular.personId) ? Number(titular.personId)
+        : typeof titular.personId === "number" ? titular.personId : null;
+      return { ...titular, personId, evidence: titular.evidence ?? { quote: "", sourceRef: "" } };
+    },
+    z.object({ name: z.string(), personId: z.number().int().nullable(), evidence: evidenceSchema }).nullable(),
+  ),
   members: z.array(z.object({
     name: z.string(),
     personId: z.number().int().nullable(),
@@ -48,12 +59,12 @@ La bio se cita con sourceRef "bio"; cada fuente, con su ref (s1, s2…).
 
 kind:
 - "banda": grupo con varios integrantes (banda, dúo, trío, orquesta, colectivo).
-- "solista": la ficha es una persona (su nombre o su nombre artístico).
-- "proyecto_personal": proyecto, alias o seudónimo de UNA persona con otro nombre (p. ej. «Zardonic es el alias de Federico Ágreda»).
+- "solista": la ficha lleva el nombre de UNA persona, real o artístico (Ilan Chester, Rudy Márquez, Cecilia Todd).
+- "proyecto_personal": la ficha es de UNA persona pero con un nombre que no es de persona (Zardonic, Ashwave, «Chulius & The Filarmónicos»).
 - "no_artista": recopilatorio, serie de discos, sello, festival, programa o similar.
 - "desconocido": los textos no permiten decidirlo.
 
-titular (solo para solista y proyecto_personal): la persona, con el nombre más completo con que la nombran los textos (nombre artístico si es el de la persona; si el texto da nombre real y alias, el nombre por el que se la conoce en la música). En otro caso, null.
+titular (solo para solista y proyecto_personal): un OBJETO {name, personId, evidence:{quote, sourceRef}} (nunca un texto suelto). Para solista: la persona con el nombre de la ficha tal como lo escriben los textos. Para proyecto_personal: la PERSONA detrás del proyecto (su nombre real o con el que firma, p. ej. «Federico Ágreda» para Zardonic), NUNCA el nombre del proyecto; si los textos no la nombran, titular = null. En banda, no_artista o desconocido: null.
 
 members (solo para banda): personas que los textos presentan como integrantes de ESTA banda en cualquier época (fundadores, formación, alineación, «integrada por», «X en la guitarra», «el bajista X», «se unió», «salió»).
 NO incluyas: invitados, músicos de sesión, productores, ingenieros, managers, ni integrantes de OTRAS bandas que el texto nombra. Para solista o proyecto_personal, members = [] (sus músicos acompañantes no son integrantes).
@@ -125,7 +136,8 @@ async function main(): Promise<void> {
   const pending = dossiers.filter((dossier) => !done.has(dossier.caseId)).slice(0, LIMIT);
   const gateway = createDeepSeekGateway();
   const stats = { pending: pending.length, written: 0, retried: 0, cached: 0, failed: [] as Array<{ caseId: string; error: string }>, hashes: [] as string[] };
-  const flush = () => writeFileSync(OUT, dossiers.filter((d) => done.has(d.caseId)).map((d) => JSON.stringify(done.get(d.caseId))).join("\n") + "\n");
+  // Escribe TODO lo hecho, también lo que quedó fuera de --ids/--limit (antes una corrida parcial borraba el resto).
+  const flush = () => writeFileSync(OUT, [...done.values()].map((row) => JSON.stringify(row)).join("\n") + "\n");
 
   const queue = [...pending];
   const worker = async () => {

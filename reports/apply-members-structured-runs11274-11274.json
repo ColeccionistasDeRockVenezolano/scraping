@@ -1,0 +1,44 @@
+{
+  "phase": "structured",
+  "runs": [
+    11274
+  ],
+  "memberships": 2,
+  "alreadyMember": 7,
+  "personsCreated": 2,
+  "reused": {
+    "nueva": 2,
+    "ya-integrante": 7
+  },
+  "artistTypes": 0,
+  "possibleDuplicates": [
+    {
+      "artistId": 1089,
+      "artist": "Via de Escape",
+      "name": "Vanessa Rodríguez M.",
+      "newPersonId": 18641,
+      "homonyms": [
+        684
+      ]
+    }
+  ],
+  "errors": [],
+  "applied": [
+    {
+      "artistId": 1089,
+      "artist": "Via de Escape",
+      "personId": 18640,
+      "name": "Carlos Maneiro",
+      "role": "Integrante",
+      "how": "nueva"
+    },
+    {
+      "artistId": 1089,
+      "artist": "Via de Escape",
+      "personId": 18641,
+      "name": "Vanessa Rodríguez M.",
+      "role": "Integrante",
+      "how": "nueva"
+    }
+  ]
+}

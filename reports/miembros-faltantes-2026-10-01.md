@@ -57,3 +57,53 @@ De las 1.006 sin señal:
 3. **Listas estructuradas ya cosechadas (B):** se aplican directamente. Las personas se casan con la regla de proyecto común; sin ese vínculo, se crean.
 4. **Extracción con DeepSeek flash (C+D):** una llamada por ficha sobre los **textos originales** (el post del blog y las fuentes del expediente), no sobre la bio sintetizada. Devuelve `{nombre, rol, años, cita}` y se valida que el nombre aparezca literalmente en la fuente. Lo dudoso va a la cola.
 5. **Futuro:** que los adaptadores de blogs extraigan las secciones «Integrantes:», y que la síntesis de bios devuelva también la alineación estructurada.
+
+## Aplicación (2026-10-01, aprobada por Brian: «Apruebo todo»)
+
+Scripts:
+
+- `scripts/export-member-dossiers.mts`: expedientes por ficha sin miembros.
+- `scripts/extract-members-deepseek.mts`: DeepSeek flash, una llamada por ficha, con cita literal validada en código.
+- `scripts/apply-members.mts`: aplicador por fases.
+- Ajustes puntuales en `tmp-analysis/miembros-2026-10-01/`.
+
+Extracción: 1.810 de 1.816 expedientes (6 rechazos de esquema), 2,87 M tokens de entrada y 0,48 M de salida. Clasificación:
+
+| Clase | Fichas |
+|---|---|
+| Banda | 1.328 |
+| Proyecto personal | 158 |
+| Solista | 105 |
+| Desconocido | 190 |
+| No-artista | 37 |
+
+| Run(s) | Qué | Resultado |
+|---|---|---|
+| 10992–11001 | Fase IA: integrantes con cita, más titulares de solistas y proyectos | 3.976 membresías; 200 titulares (`artist_type`: 87 `solo_artist`, 113 `project`); 2.805 personas nuevas |
+| 11003, 11006 | Homónimos nuevos con colegas en común con una ficha previa | 55 fusiones |
+| 11007 | Homónimos sin proyecto común → cola `person_duplicate` | 866 revisiones |
+| 11008 → 11009 | Primera fase `structured`: duplicaba personas dentro de la misma banda | deshecho |
+| 11011 | Listas estructuradas, solo si la IA dijo banda y confirmó a alguien de esa misma lista | 106 membresías, 79 personas |
+| 11012–11013 | Créditos `musician` → membresía, con filtro: el texto lo nombra, ≥2 años de discos o ≤7 músicos | 363 membresías; 72 fichas a revisión (`reports/apply-members-credits-review.json`) |
+| 11014 | Duplicados dentro de una misma banda (nombre corto/largo, errata) | 12 fusiones |
+| 11015 | Bandas homónimas extranjeras coladas (Tarot de Finlandia, Discarga de Brasil) | 10 membresías y 10 personas retiradas |
+| 11016 | Titulares con una persona previa de nombre compatible → cola | 9 revisiones |
+
+Resultado: las fichas sin membresía bajan de **1.953 a 885**.
+
+Pendiente:
+
+- La cola `person_duplicate`: unas 875 revisiones nuevas.
+- Los 72 artistas con posibles músicos de sesión.
+- 190 fichas «desconocido» y 37 «no-artista»: Various Artists, series, orquestas; la OSV fue clasificada como no-artista y no se tocó.
+- El reapuntado de créditos de los nuevos titulares (`retarget-titular-credits.ts`, de la sesión del caso Canserbero; dry-run primero).
+- El punto 5 del plan: que los adaptadores de blogs y la síntesis de bios devuelvan la alineación estructurada.
+
+### Segunda pasada (2026-10-02)
+
+- **6 fichas que fallaron:** reintentadas; 5 aplicadas en los runs 11273–11277 (Vía de Escape, Bélica como proyecto de Annabella Almenar, Skatz, Vargas).
+- **Fallo del extractor:** una corrida con `--ids` reescribía el archivo de salida con solo esas fichas. Está corregido, y el archivo se reconstruyó desde la caché de `ingest.ai_runs` sin coste.
+- **Punto 5, hecho como proceso reutilizable:** los adaptadores siguen sin inferir membresías de la prosa, por decisión del proyecto.
+  - `scripts/fill-members.sh [--confirm] [--ids=…]` encadena expedientes, extracción, las tres fases, `scripts/members-cleanup.mts --phase=dedupe` y `--phase=homonyms`.
+  - Guarda de homónimos en el aplicador: si la nota del modelo descarta una fuente por ser de otra banda, sus integrantes van a `reports/apply-members-foreign-review.json`. Hoy hay 5: Tarot, Discarga, Los Sharks, Nocturnal Avernus y Jasón.
+- **Pertinencia (para Brian):** Infestation (Vilnius), Jasón (Argentina) y Nocturnal Avernus (Houston) son fichas de bandas extranjeras; su presencia en el catálogo no se tocó.
