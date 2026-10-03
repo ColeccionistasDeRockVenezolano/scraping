@@ -1,0 +1,92 @@
+{
+ "generado": "2026-10-03 20:32:38",
+ "total": 1591,
+ "por_accion": {
+  "ya_persona": 216,
+  "revisar_persona_solista": 369,
+  "revisar_persona": 354,
+  "alta_persona_miembro": 55,
+  "revisar_tipo": 124,
+  "ya_artista": 39,
+  "ya_ambos": 96,
+  "cola_fria": 23,
+  "ya_persona_alias": 11,
+  "revisar_homonimo": 79,
+  "alta_artista_banda": 222,
+  "ya_artista_alias": 3
+ },
+ "clase_x_accion": {
+  "D_sin_senal": {
+   "ya_ambos": 65,
+   "ya_artista": 14,
+   "ya_artista_alias": 1,
+   "ya_persona": 121,
+   "ya_persona_alias": 4,
+   "revisar_homonimo": 50,
+   "alta_artista_banda": 28,
+   "revisar_persona_solista": 369,
+   "revisar_persona": 246,
+   "revisar_tipo": 124,
+   "cola_fria": 23
+  },
+  "D": {
+   "ya_ambos": 18,
+   "ya_artista": 1,
+   "ya_persona": 78,
+   "ya_persona_alias": 2,
+   "revisar_homonimo": 12,
+   "alta_persona_miembro": 31,
+   "revisar_persona": 108
+  },
+  "E_banda_con_instrumentos": {
+   "ya_ambos": 11,
+   "ya_artista": 18,
+   "ya_artista_alias": 1,
+   "ya_persona": 1,
+   "alta_artista_banda": 194
+  },
+  "A_ya_en_catalogo": {
+   "ya_ambos": 2,
+   "ya_artista": 6,
+   "ya_artista_alias": 1,
+   "revisar_homonimo": 2
+  },
+  "C_miembro_de_banda_catalogo": {
+   "ya_persona": 15,
+   "ya_persona_alias": 5,
+   "revisar_homonimo": 1,
+   "alta_persona_miembro": 23
+  },
+  "A_probable": {
+   "ya_persona": 1,
+   "revisar_homonimo": 5
+  },
+  "B_near_miss_revisar": {
+   "revisar_homonimo": 9,
+   "alta_persona_miembro": 1
+  }
+ },
+ "sin_pagina_capturada": 0,
+ "frescura_catalogo": {
+  "artist": {
+   "2026-09-11": 4,
+   "2026-09-13": 18,
+   "2026-09-24": 1,
+   "2026-10-01": 5,
+   "2026-10-02": 80,
+   "2026-10-03": 50
+  },
+  "person": {
+   "2026-09-13": 39,
+   "2026-09-14": 2,
+   "2026-09-22": 2,
+   "2026-10-01": 23,
+   "2026-10-02": 303,
+   "2026-10-03": 24
+  }
+ },
+ "matches_creados_desde_2026-10-01": {
+  "artist": 135,
+  "person": 350
+ }
+}

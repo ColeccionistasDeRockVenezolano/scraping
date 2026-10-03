@@ -1,0 +1,22 @@
+{
+  "nota": "MUESTRA propuesta por Hermes para la prueba EN SECO del motor de altas (etapa 4). Pendiente del OK de Brian: nada se aplica hasta su aprobación. 16 casos: 5 bandas, 5 personas-miembro y 6 discos (2 del ledger de los 222 + 4 de las bandas de la muestra).",
+  "generado": "2026-10-03",
+  "casos": [
+    {"tipo": "artist", "rym_href": "/artist/serenada", "motivo": "banda con 12 álbumes (1979-2004), meta formed 1975"},
+    {"tipo": "artist", "rym_href": "/artist/orquesta-la-tremenda", "motivo": "orquesta, 10 álbumes (1979-1991), nlocs 21"},
+    {"tipo": "artist", "rym_href": "/artist/los-imperials", "motivo": "banda cumbia, formed 1962, 9 álbumes"},
+    {"tipo": "artist", "rym_href": "/artist/la-danta-mas-cabra", "motivo": "banda free jazz activa, formed 2024, 10 discos"},
+    {"tipo": "artist", "rym_href": "/artist/anakena", "motivo": "banda latin alt pop, formed 2016, 41 discos"},
+    {"tipo": "person", "rym_href": "/artist/marianne-mali", "motivo": "miembro de Mochuelo [cat], 1 disco"},
+    {"tipo": "person", "rym_href": "/artist/ava-casas", "motivo": "miembro de Americania [cat], 1 disco"},
+    {"tipo": "person", "rym_href": "/artist/akilin", "motivo": "miembro de Bituaya [cat], 1 disco"},
+    {"tipo": "person", "rym_href": "/artist/jose-rosario", "motivo": "miembro de Sonero Clásico del Caribe [cat], born"},
+    {"tipo": "person", "rym_href": "/artist/underaiki", "motivo": "miembro de Goat on Sale [cat], born, 42 discos"},
+    {"tipo": "album", "origen": "ledger", "rym_href": "/release/album/la-puta-electrica/automatron", "artist_id": 138, "motivo": "ledger 222; año real 2024 (el ledger traía 1610); 48 pistas capturadas"},
+    {"tipo": "album", "origen": "ledger", "rym_href": "/release/ep/la-puta-electrica/a-gogo-maldito", "artist_id": 138, "motivo": "ledger 222; EP 1995, 16 pistas capturadas"},
+    {"tipo": "album", "origen": "nuevos", "rym_href": "/release/album/los-imperials/ritmo-juvenil-con-los-imperials", "parent_href": "/artist/los-imperials", "motivo": "primer álbum de la banda de la muestra (1965)"},
+    {"tipo": "album", "origen": "nuevos", "rym_href": "/release/album/serenada/serenada_volumen", "parent_href": "/artist/serenada", "motivo": "primer álbum de la banda de la muestra (1979)"},
+    {"tipo": "album", "origen": "nuevos", "rym_href": "/release/album/orquesta-la-tremenda/fieston-79", "parent_href": "/artist/orquesta-la-tremenda", "motivo": "primer álbum de la orquesta de la muestra (1979, apóstrofo en título)"},
+    {"tipo": "album", "origen": "nuevos", "rym_href": "/release/album/la-danta-mas-cabra/triple-in-tension", "parent_href": "/artist/la-danta-mas-cabra", "motivo": "álbum de la banda de la muestra (2025, guion en título)"}
+  ]
+}
