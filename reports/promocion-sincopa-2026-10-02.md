@@ -79,6 +79,63 @@ Se reingirieron 1.311 fichas no rock: los claims nuevos son solo los números
 corregidos. Los números viejos se rechazaron en runs propios y la 2.ª pasada
 metió las pistas de la cara B (3.725 solo en latin pop).
 
+## Seguimiento (noche del 2026-10-02)
+
+Brian: «1. Caso Rock/Pop, hazlo; 2. Qué opciones hay para estas personas;
+3. Ordénalas correctamente; 4. Qué opciones hay?».
+
+**Rock/pop, hecho.** Reingesta de sus 465 vinilos y rechazo de 1.402 números
+viejos (run 11428). La promoción se cortó a mano en el run 11429 al aparecer
+«Cuento» como persona; se amplió la política y siguió en el 11431. Entraron 10
+artistas, 73 discos, 1.366 pistas, 3.729 personas, 82 organizaciones, 11.017
+créditos de disco y 5.802 de pista. Las 199 pistas que chocan de posición
+siguen candidatas (casi todas en los 74 discos de abajo).
+
+**Caras B ya aceptadas, reordenadas.** `scripts/renumber-sincopa-sides.ts`
+mueve cada disco en una transacción: claim viejo `superseded`, nuevo
+`accepted`, auditoría en `merge_audit`. Run 11430: 137 pistas en 106 discos no
+rock. Run 11432: 380 pistas en 82 discos de rock. Tercera pasada de pistas
+(runs 11433–11440) para las que estaban bloqueadas. Saltados, para revisión
+(`sincopa-caras-renumeracion-*-2026-10-02.json`, `skippedList`): 12 discos no
+rock, donde dos fichas de Sincopa cayeron en el mismo disco del core («Recital»
+de Alirio Díaz), y 74 de rock, donde Hippito, Rock de Vzla o Descargas Metal
+sostienen la numeración por cara.
+
+**Rótulos que la v2 no veía:** «Comp:», «Recop:», «Rec.», «Compilation:»,
+«Lyrics:» y palabras sueltas («Cuento», «Demo», «Acústico», «Medley»). La lista
+de personas basura sube de 191 a 300
+(`promocion-sincopa-personas-a-revisar-v3-2026-10-02.json`).
+
+**Fallo del motor, corregido.** Cada pasada abría otra revisión del ER para el
+mismo claim (la decisión del ER cambia de hash con el run). Se cerraron 31.247
+repetidas de 15.827 claims (run 11442), y ahora la revisión abierta se
+actualiza con la decisión más reciente.
+
+### Opciones: las 300 personas basura
+
+Ninguna tiene membresías; 4 tienen datos de otras fuentes; suman 519 créditos.
+
+| Grupo | Cuántas | Qué hacer |
+|---|---:|---|
+| Paréntesis de título («Night Flight Over Tokyo») | 155 | Borrar persona y crédito; opcional: guardar el texto como nota de la pista (suele ser la traducción o el subtítulo). |
+| Rótulo con persona real («Arr:», «Comp:», «Recop:», «Rec.», «Lyrics:», «Feat.») | ≈105 | Pasar el crédito a la persona real, existente o nueva, con el rol correcto (arreglos, compositor, recopilación, letra, invitado) y borrar la falsa. |
+| Rótulo puro («Live», «Bonus Track», «3rd Mov», «Cuento») | ≈16 | Borrar persona y crédito. |
+| Varios autores juntos («Lennon/McCartney») | 12 | Se resuelven con la regla de abajo. |
+| Agrupaciones y lugares («Ensamble Gurrufio», «Rios Reyna Concert Hall») | 5 | Pasar a artista u organización. |
+| Nombres cortados o dudosos («tan Fredericks», «mar Oliveros», «piano solo») | 7 | Revisar contra la ficha, a mano. |
+
+### Opciones: créditos de varios autores («A/B»)
+
+4.212 cadenas, unos 6.800 créditos candidatos; es la mayor retención de personas.
+
+| Tramo | Cadenas | Créditos | Riesgo |
+|---|---:|---:|---|
+| A. Todas las partes ya existen en el core | 1.262 | 2.625 | Bajo, pero solo si cada parte tiene nombre y apellido («Leo» o «Ubieda» sueltos no bastan). |
+| B. Todas son nombres completos, alguna nueva | 993 | 1.298 | Bajo: se crea la persona nueva como cualquier otra. |
+| C. Hay iniciales («M. Sullivan», «A. Nazoa») | 961 | 1.512 | Medio: «A. Nazoa» puede ser Aquiles Nazoa; solo con enlace seguro del ER. |
+| D. Apellidos sueltos («Lennon/McCartney», «Sadel/Rengifo») | 668 | 931 | Alto: no se crean personas; se enlaza solo si el ER es seguro. |
+| E. Traen rótulo («Vers. Esp. P. Medeiros», «Anónimo/Arr: X») | 328 | 472 | Medio: hay que leer el rol. |
+
 ## Pendiente, a decisión de Brian
 
 1. **Rock/pop.** Ensayo en `promocion-sincopa-rock_pop-ensayo-2026-10-02.json`.
