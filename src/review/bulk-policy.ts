@@ -324,6 +324,8 @@ export function decideVerdict(input: PolicyInput): Verdict {
       if (input.kind === "track") {
         const atPosition = near.find((ref) => ref.id === input.samePositionId);
         if (atPosition !== undefined && !numbersDiffer(input.name, atPosition.name)) return { kind: "same", targetId: atPosition.id, rule: "titulo-casi-igual-misma-posicion" };
+        // «Mosaico Nº 2» junto a «Mosaico Nº 1» y «Nº 3»: otra pista de la serie.
+        if (near.every((ref) => numbersDiffer(input.name, ref.name))) return { kind: "different", rule: "titulo-casi-igual-otro-numero", detail };
         return { kind: "hold", rule: "titulo-casi-igual-mismo-padre", detail };
       }
       const repertoire = input.repertoire ?? {};

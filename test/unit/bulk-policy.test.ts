@@ -221,6 +221,12 @@ describe("decideVerdict", () => {
       .toEqual({ kind: "same", targetId: 16822, rule: "titulo-casi-igual-misma-posicion" });
     expect(decideVerdict({ kind: "track", name: "Hippie Session 2069", decision: noMatch, sameName: [], parentId: 9, siblings, samePositionId: 1 }).kind).toBe("hold");
     const mosaico = [{ id: 55280, name: "Mosaico Nº 1" }];
-    expect(decideVerdict({ kind: "track", name: "Mosaico Nº 2", decision: noMatch, sameName: [], parentId: 9, siblings: mosaico, samePositionId: 55280 }).kind).toBe("hold");
+    expect(decideVerdict({ kind: "track", name: "Mosaico Nº 2", decision: noMatch, sameName: [], parentId: 9, siblings: mosaico, samePositionId: 55280 }).kind).toBe("different");
+  });
+
+  it("una pista de la misma serie con otro número es otra pista; sin números, se retiene", () => {
+    const serie = [{ id: 1, name: "Mosaico Nº 1" }, { id: 3, name: "Mosaico Nº 3" }];
+    expect(decideVerdict({ kind: "track", name: "Mosaico Nº 2", decision: noMatch, sameName: [], parentId: 9, siblings: serie }).rule).toBe("titulo-casi-igual-otro-numero");
+    expect(decideVerdict({ kind: "track", name: "Mosaico Nº 2", decision: noMatch, sameName: [], parentId: 9, siblings: [...serie, { id: 4, name: "Mosaico" }] }).kind).toBe("hold");
   });
 });
