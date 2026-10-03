@@ -50,16 +50,23 @@ def avisar_throttled(msg, min_gap=900, clave="gen"):
 
 
 def load_cookies():
-    """Lee las cookies de RYM del perfil de Firefox más fresco (copia inmune a locks)."""
-    best = None
+    """Lee las cookies de RYM del perfil de Firefox más fresco (copia inmune a locks).
+
+    Preferencia: el perfil del dueño (canónico). /tmp/rym-prof solo gana si su sqlite
+    es >15 min más fresco — así no se elige su copia con sesión caducada solo porque
+    el marionette tocó el archivo al arrancar (403 al primer fetch, visto 17:26)."""
+    cands = []
     for src in COOKIE_SOURCES:
         f = os.path.join(src, "cookies.sqlite")
         if not os.path.exists(f):
             continue
         mts = [os.path.getmtime(f)] + [os.path.getmtime(f + s) for s in ("-wal", "-shm") if os.path.exists(f + s)]
-        mt = max(mts)
-        if best is None or mt > best[0]:
-            best = (mt, src)
+        cands.append((max(mts), src))
+    own = next((c for c in cands if ".mozilla" in c[1]), None)
+    if own and all(c[0] <= own[0] + 900 for c in cands):
+        best = own
+    else:
+        best = max(cands, key=lambda c: c[0]) if cands else None
     if best is None:
         raise SystemExit("no hay cookies.sqlite en las fuentes configuradas")
     tmp = tempfile.mkdtemp(prefix="crv-cookies-")
@@ -274,17 +281,19 @@ def _tab_datos():
     """Datos del log, supervisor y avisos para el tablero — nunca lanza."""
     now = time.time()
     d = {"bloq15": 0, "bloq_ult": None, "ev": None, "ult_ts": 0, "run_start": 0,
-         "cookies": None, "fase2_total": None, "sup_arranque": None, "sup_relanzos": 0,
+         "cookies": None, "cookies_live": None, "caps_ts": [], "clicker": None,
+         "fase2_total": None, "sup_arranque": None, "sup_relanzos": 0,
          "sup_ult": None, "latido_ts": 0, "telegram": [],
          "fase1_mark": os.path.exists("/tmp/crv-scrapling-fase1mark")}
     try:
-        for ln in _tab_tail(os.path.join(REPO, "reports", "scrapling-nuevos.log")).splitlines():
+        for ln in _tab_tail(os.path.join(REPO, "reports", "scrapling-nuevos.log"), 1500000).splitlines():
             m = re.match(r"\[(\d{2}:\d{2}:\d{2})\]\s+\+ \[(artist|release)\] (.+) \((\d+)/(\d+)\)\s*$", ln)
             if m:
                 nm = m.group(3).split(" -> ", 1)[-1].split(" | ", 1)[0]
                 d["ev"] = {"t": m.group(1), "kind": m.group(2), "name": nm,
                            "n": int(m.group(4)), "tot": int(m.group(5))}
                 d["ult_ts"] = _tab_epoch(m.group(1))
+                d["caps_ts"].append(d["ult_ts"])
             m = re.match(r"\[(\d{2}:\d{2}:\d{2})\] \[bloqueo\] \((\d+)\) ([^-—]+)", ln)
             if m:
                 be = _tab_epoch(m.group(1))
@@ -303,6 +312,25 @@ def _tab_datos():
             m = re.search(r"fase 2 \(discos\): (\d+) fichas", ln)
             if m:
                 d["fase2_total"] = int(m.group(1))
+    except Exception:
+        pass
+    try:
+        best = None
+        for cand in ("/home/brian/.mozilla/firefox/d4qtp99b.default-esr", "/tmp/rym-prof"):
+            p = os.path.join(cand, "cookies.sqlite")
+            try:
+                mt = os.path.getmtime(p)
+            except Exception:
+                continue
+            if best is None or mt > best[1]:
+                best = (cand, mt)
+        if best:
+            d["cookies_live"] = {"src": os.path.basename(best[0]), "mt": _tab_mm(best[1])}
+    except Exception:
+        pass
+    try:
+        with open(os.path.join(REPO, "reports", "crv-marcas", "clicker-ep"), encoding="utf-8") as f:
+            d["clicker"] = int(json.loads(f.read()).get("clics", 0))
     except Exception:
         pass
     try:
@@ -343,7 +371,10 @@ def tablero_html(estado, cola, nota):
     edad = int(now - d["ult_ts"]) if d.get("ult_ts") else None
 
     rate = None
-    if d.get("run_start") and ev.get("n") and now > d["run_start"] + 30:
+    ct = (d.get("caps_ts") or [])[-150:]
+    if len(ct) >= 30 and ct[-1] - ct[0] >= 120:
+        rate = (len(ct) - 1) / max((ct[-1] - ct[0]) / 60.0, 0.3)
+    if rate is None and d.get("run_start") and ev.get("n") and now > d["run_start"] + 30:
         rate = ev["n"] / max((now - d["run_start"]) / 60.0, 0.3)
     rem = (ev.get("tot", 0) - ev.get("n", 0)) if ev else None
     eta = None
@@ -363,16 +394,18 @@ def tablero_html(estado, cola, nota):
 
     bq = d.get("bloq_ult") or {}
     bq_rec = bool(bq) and (now - bq.get("ts", 0)) <= 3600
-    bq_cf = bq_rec and (bq.get("status") == 403 or
-                        bool(re.search(r"Un momento|Just a moment|Attention Required", bq.get("title", ""), re.I)))
+    bq_cf = bq_rec and (bq.get("status") in (403, 503) or
+                        bool(re.search(r"Un momento|Just a moment|Attention Required|Security check",
+                                       bq.get("title", ""), re.I)))
     hace_ult = (f'<span class="ago" data-t="{d["ult_ts"]}">{_tab_hace(d["ult_ts"])}</span>'
                 if d.get("ult_ts") else "—")
     banner = ""
     if "COLA TERMINADA" not in nota and (edad is None or edad > 360):
         if bq_cf:
-            banner = (f'<div class="banner cf"><b>🔴 Muro de Cloudflare — la sesión venció.</b> '
-                      f'Reintentar no lo destraba. <b>Acción: abre rateyourmusic.com en tu Firefox (~30 s).</b> '
-                      f'Sin capturas {hace_ult}.</div>')
+            ctxt = (f' Cliquer: {d["clicker"]} clics en tu Firefox.' if d.get("clicker")
+                    else ' El cliquer hará clics en tu Firefox para renovar la sesión.')
+            banner = (f'<div class="banner cf"><b>🟠 Muro de Cloudflare.</b> '
+                      f'Sin capturas {hace_ult}.{ctxt} Sin acción tuya — si cede, lo verás aquí.</div>')
         elif bq_rec:
             banner = (f'<div class="banner soft"><b>🟡 Muro suave de RYM.</b> Auto-recupera con enfriamiento '
                       f'y reintentos; sin acción tuya. Sin capturas {hace_ult}.</div>')
@@ -390,7 +423,7 @@ def tablero_html(estado, cola, nota):
         bp2 = int(rel_ok * 100 / max(d["fase2_total"], 1))
         c_dis = card("Discos (fase 2)", f"{rel_ok} / {d['fase2_total']}", f"{bp2} % de la cola de discos", barra=bp2)
     else:
-        c_dis = card("Discos (fase 2)", "—", "arranca al cerrar la fase 1")
+        c_dis = card("Discos (fase 2)", "—", f"arranca al cerrar la fase 1 · faltan {faltan} artistas")
     c_rit = card("Ritmo", (f"~{rate:.1f}/min" if rate else "—"),
                  ((f"{ev.get('n')}/{ev.get('tot')} esta corrida" +
                    (f" · desde {_tab_mm(d['run_start'])}" if d.get("run_start") else "")) if ev else "sin datos todavía"))
@@ -400,15 +433,28 @@ def tablero_html(estado, cola, nota):
                      f'<span class="ago" data-t="{d["ult_ts"]}">{_tab_hace(d["ult_ts"])}</span> · {ev["kind"]}')
     else:
         c_ult = card("Última captura", "—", "sin capturas en el log")
-    c_mur = card("Muros (15 min)", str(d["bloq15"]),
-                 (f"último {_tab_hace(d['bloq_ult']['ts'])}" if d.get("bloq_ult") else "RYM sin bloqueos recientes"),
-                 cls=("warn" if d["bloq15"] >= 3 else ""))
-    if d.get("cookies"):
-        ck = d["cookies"]
-        src = os.path.basename(ck["src"].rstrip("/")) or ck["src"]
-        c_ses = card("Sesión (cookies)", "OK", f"{esc(src)} · mtime {esc(ck['mt'])} · {ck['n']} cookies")
+    if "COLA TERMINADA" not in nota and edad is not None and edad > 360 and bq_cf:
+        mur_big = "🔴 CF activo"
+    elif "COLA TERMINADA" not in nota and edad is not None and edad > 360 and bq_rec:
+        mur_big = "🟡 suave (auto)"
     else:
-        c_ses = card("Sesión (cookies)", "—", "sin dato en el log")
+        mur_big = "sin muro"
+    mur_sub = (f"{d['bloq15']} en 15 min" +
+               (f" · último {_tab_hace(d['bloq_ult']['ts'])}" if d.get("bloq_ult") else ""))
+    if d.get("clicker") is not None:
+        mur_sub += f" · 🛠️ cliquer: {d['clicker']} clics"
+    c_mur = card("Muro", mur_big, mur_sub, cls=("warn" if mur_big.startswith("🔴") else ""))
+    ck = d.get("cookies")
+    ckl = d.get("cookies_live")
+    if ck:
+        src = os.path.basename(ck["src"].rstrip("/")) or ck["src"]
+        extra = f" · archivo al {esc(ckl['mt'])}" if ckl else ""
+        c_ses = card("Sesión (cookies)", "OK",
+                     f"{esc(src)} · {ck['n']} cookies · cargada {esc(ck['mt'])}{extra}")
+    elif ckl:
+        c_ses = card("Sesión (cookies)", "OK", f"archivo más fresco: {esc(ckl['src'])} · {esc(ckl['mt'])}")
+    else:
+        c_ses = card("Sesión (cookies)", "—", "sin dato")
     lat = d.get("latido_ts") or 0
     if lat and now - lat < 420:
         sup_big, sup_sub = "🟢 activo", f'latido <span class="ago" data-t="{lat}">{_tab_hace(lat)}</span>'
