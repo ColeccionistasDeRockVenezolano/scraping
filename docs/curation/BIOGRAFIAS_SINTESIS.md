@@ -153,3 +153,16 @@ organizaciones con pocos datos), desde el directorio del proyecto:
 
 Los directorios salen de `BIO_DOSSIERS_DIR` y `BIO_SYNTH_DIR` (por defecto
 `reports/bio-dossiers` y `reports/bio-synth`); la segunda pasada usa otros.
+
+## Después de sintetizar: integrantes (2026-10-01)
+
+La síntesis escribe prosa; no llena `artist_members`. Tras una tanda de bios o una ingesta de blogs, corre
+`scripts/fill-members.sh` (dry-run) y luego `scripts/fill-members.sh --confirm`. El proceso hace cuatro cosas:
+
+1. Para cada artista sin miembros, DeepSeek flash extrae el titular o los integrantes de los textos originales, con una cita literal que el código valida.
+2. Aplica el resultado por fases y en runs.
+3. Fusiona los duplicados dentro de cada banda.
+4. Manda los homónimos a la cola `person_duplicate`.
+
+Lo dudoso queda en `reports/apply-members-foreign-review.json` (fuentes que hablan de otra banda) y en
+`reports/apply-members-credits-review.json` (posibles músicos de sesión). Contexto: `reports/miembros-faltantes-2026-10-01.md`.
