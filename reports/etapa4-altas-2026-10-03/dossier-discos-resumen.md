@@ -36,7 +36,7 @@ ficha de disco capturada + consulta viva a `public.albums/artists`.
 - **8.164 filas** (títulos listados en las discografías; 354 artistas no listan ningún disco).
 - Propias: **5.868** (Album 2.338 · Single 2.407 · EP 617 · Compilation 170 · Live 83 · DJ Mix 110 · Mixtape 61)
   · No propias: 2.296 (Appears On, V/A Compilation, Music video) → la columna `anio_nota` marca «no propio».
-- **Captura fase 2: 122 fichas de disco** (de las ~7.255 en cola) — completar re-ejecutando este script al
+- **Captura fase 2: 123 fichas de disco** (de las ~7.255 en cola) — completar re-ejecutando este script al
   terminar la extracción; no bloquea nada.
 - **135 artistas de los 1.591 ya están creados** por el workstream «Nuevo lote» (claims de
   `lote-investigacion-2026-10-02`): 604 discos ya están y 895 quedan fuera/revisión (mirar `tipo_rym`).

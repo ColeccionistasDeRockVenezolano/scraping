@@ -1,6 +1,6 @@
 # Dossier de revisión — 1.591 artistas «nuevos» de RYM (etapa 4 «Altas» — preparación)
 
-Generado: 2026-10-03 21:0x por `scripts/etapa4-altas-2026-10-03/dossier-nuevos.py` (solo lectura).
+Generado: 2026-10-03 20:32 por `scripts/etapa4-altas-2026-10-03/dossier-nuevos.py` (solo lectura).
 Regenerar en cualquier momento (≈1 min): `python3 scripts/etapa4-altas-2026-10-03/dossier-nuevos.py`
 
 Fuentes por fila (columnas `fuente_cruce` y `fuente_evidencia`):
@@ -47,7 +47,7 @@ las llenas tú al revisar), `dossier-nuevos.jsonl` (misma data; la consumirá el
 3. **869 para revisión**: 369 solistas potenciales, 354 personas (246 sin evidencia musical),
    124 sin tipo, 23 frías. Los no-musicales del barrido de localidades caen aquí.
 4. **79 homónimos** a discriminar antes de tocar alias/altas.
-5. **Evidencia capturada**: 712 con géneros · 437 sin discos · 1.058 con imagen… **pero 0 retratos
+5. **Evidencia capturada**: 712 con géneros · 437 sin discos · 1.059 con imagen (portada de relleno RYM)… **pero 0 retratos
    reales** (todas las imágenes de artista son portada de relleno de RYM, `photoEsCover=true`).
    La foto real de estos artistas requeriría una campaña de imágenes (patrón etapa 3) — no está capturada.
 6. `discos_match_cat_n/ej`: títulos de disco coincidentes con OTRO artista del catálogo (ej. «Reflejos»);
