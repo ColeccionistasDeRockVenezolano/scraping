@@ -1,0 +1,2836 @@
+[
+ {
+  "lote_id": "simon-diaz",
+  "nombre": "Simón Díaz",
+  "tipo_lote": "solo",
+  "estado": "existe",
+  "metodo": "nombre/alias",
+  "artistas": [
+   {
+    "id": 1022,
+    "nombre": "Simón Díaz Remixes",
+    "tipo": "band",
+    "bio": 268,
+    "foto": false,
+    "ciudad": null,
+    "anio": null,
+    "discos": 1,
+    "miembros": []
+   }
+  ],
+  "personas_candidatas": [
+   {
+    "id": 3235,
+    "nombre": "Simón Díaz",
+    "nombre_real": null,
+    "nacimiento": null,
+    "muerte": null,
+    "fallecido": null,
+    "venezolano": "true",
+    "bio": 327,
+    "creditos": 177
+   },
+   {
+    "id": 22595,
+    "nombre": "Simon Díaz",
+    "nombre_real": null,
+    "nacimiento": null,
+    "muerte": null,
+    "fallecido": null,
+    "venezolano": null,
+    "bio": 0,
+    "creditos": 6
+   },
+   {
+    "id": 36363,
+    "nombre": "Simon Diaz",
+    "nombre_real": null,
+    "nacimiento": null,
+    "muerte": null,
+    "fallecido": null,
+    "venezolano": null,
+    "bio": 0,
+    "creditos": 0
+   }
+  ],
+  "nombre_real": "Simón Narciso Díaz Márquez",
+  "nacimiento": {
+   "date": "1928-08-08",
+   "place": "Barbacoas, Aragua, Venezuela"
+  },
+  "muerte": {
+   "date": "2014-02-19",
+   "place": "Caracas, Venezuela"
+  },
+  "miembros_lote": [],
+  "obras": 5,
+  "nacionalidad": "Venezuelan"
+ },
+ {
+  "lote_id": "juan-vicente-torrealba",
+  "nombre": "Juan Vicente Torrealba",
+  "tipo_lote": "solo",
+  "estado": "existe",
+  "metodo": "nombre/alias",
+  "artistas": [
+   {
+    "id": 3829,
+    "nombre": "Juan Vicente Torrealba",
+    "tipo": "band",
+    "bio": 0,
+    "foto": true,
+    "ciudad": null,
+    "anio": null,
+    "discos": 79,
+    "miembros": []
+   }
+  ],
+  "personas_candidatas": [
+   {
+    "id": 4456,
+    "nombre": "Juan Vicente Torrealba",
+    "nombre_real": null,
+    "nacimiento": "1917-02-20",
+    "muerte": "2019-05-02",
+    "fallecido": "true",
+    "venezolano": "true",
+    "bio": 1668,
+    "creditos": 337
+   }
+  ],
+  "nombre_real": "Juan Vicente Torrealba Pérez",
+  "nacimiento": {
+   "date": "1917-02-20",
+   "place": "Caracas, Venezuela"
+  },
+  "muerte": {
+   "date": "2019-05-02",
+   "place": "Caracas, Venezuela"
+  },
+  "miembros_lote": [],
+  "obras": 1,
+  "nacionalidad": "Venezuelan"
+ },
+ {
+  "lote_id": "reynaldo-armas",
+  "nombre": "Reynaldo Armas",
+  "tipo_lote": "solo",
+  "estado": "existe",
+  "metodo": "nombre/alias",
+  "artistas": [
+   {
+    "id": 3889,
+    "nombre": "Reynaldo Armas",
+    "tipo": "band",
+    "bio": 0,
+    "foto": false,
+    "ciudad": null,
+    "anio": null,
+    "discos": 52,
+    "miembros": []
+   }
+  ],
+  "personas_candidatas": [
+   {
+    "id": 20590,
+    "nombre": "Reynaldo Armas",
+    "nombre_real": null,
+    "nacimiento": null,
+    "muerte": null,
+    "fallecido": null,
+    "venezolano": "true",
+    "bio": 0,
+    "creditos": 109
+   }
+  ],
+  "nombre_real": null,
+  "nacimiento": {
+   "date": "1953-08-04",
+   "place": "Santa María de Ipire, Guárico, Venezuela"
+  },
+  "muerte": {
+   "date": null,
+   "place": null
+  },
+  "miembros_lote": [],
+  "obras": 2,
+  "nacionalidad": "Venezuelan"
+ },
+ {
+  "lote_id": "eneas-perdomo",
+  "nombre": "Eneas Perdomo",
+  "tipo_lote": "solo",
+  "estado": "nuevo",
+  "metodo": "nuevo",
+  "artistas": [],
+  "personas_candidatas": [
+   {
+    "id": 7352,
+    "nombre": "Eneas Perdomo",
+    "nombre_real": null,
+    "nacimiento": "1930-07-11",
+    "muerte": "2011-02-25",
+    "fallecido": "true",
+    "venezolano": null,
+    "bio": 189,
+    "creditos": 36
+   },
+   {
+    "id": 32324,
+    "nombre": "Enéas Perdomo",
+    "nombre_real": null,
+    "nacimiento": null,
+    "muerte": null,
+    "fallecido": null,
+    "venezolano": null,
+    "bio": 0,
+    "creditos": 0
+   }
+  ],
+  "nombre_real": "Eneas Perdomo Carrillo",
+  "nacimiento": {
+   "date": "1930-07-11",
+   "place": "El Yagual, Apure, Venezuela"
+  },
+  "muerte": {
+   "date": "2011-02-25",
+   "place": "Caracas, Venezuela"
+  },
+  "miembros_lote": [],
+  "obras": 2,
+  "nacionalidad": "Venezuelan"
+ },
+ {
+  "lote_id": "angel-custodio-loyola",
+  "nombre": "Ángel Custodio Loyola",
+  "tipo_lote": "solo",
+  "estado": "nuevo",
+  "metodo": "nuevo",
+  "artistas": [],
+  "personas_candidatas": [
+   {
+    "id": 31703,
+    "nombre": "Angel Custodio Loyola",
+    "nombre_real": null,
+    "nacimiento": null,
+    "muerte": null,
+    "fallecido": null,
+    "venezolano": "true",
+    "bio": 0,
+    "creditos": 4
+   }
+  ],
+  "nombre_real": null,
+  "nacimiento": {
+   "date": "1926-09-04",
+   "place": "Mata Arzolera, Guárico, Venezuela"
+  },
+  "muerte": {
+   "date": "1985-09-24",
+   "place": "Cagua, Aragua, Venezuela"
+  },
+  "miembros_lote": [],
+  "obras": 0,
+  "nacionalidad": "Venezuelan"
+ },
+ {
+  "lote_id": "francisco-montoya",
+  "nombre": "Francisco Montoya",
+  "tipo_lote": "solo",
+  "estado": "nuevo",
+  "metodo": "nuevo",
+  "artistas": [],
+  "personas_candidatas": [
+   {
+    "id": 31223,
+    "nombre": "Francisco Montoya",
+    "nombre_real": null,
+    "nacimiento": null,
+    "muerte": null,
+    "fallecido": null,
+    "venezolano": null,
+    "bio": 0,
+    "creditos": 11
+   }
+  ],
+  "nombre_real": null,
+  "nacimiento": {
+   "date": "1943-07-20",
+   "place": "San Juan de Payara, Apure, Venezuela"
+  },
+  "muerte": {
+   "date": "2026-05-06",
+   "place": "Venezuela"
+  },
+  "miembros_lote": [],
+  "obras": 0,
+  "nacionalidad": "Venezuelan"
+ },
+ {
+  "lote_id": "reyna-lucero",
+  "nombre": "Reyna Lucero",
+  "tipo_lote": "solo",
+  "estado": "existe",
+  "metodo": "nombre/alias",
+  "artistas": [
+   {
+    "id": 3870,
+    "nombre": "Reyna Lucero",
+    "tipo": "band",
+    "bio": 0,
+    "foto": false,
+    "ciudad": null,
+    "anio": null,
+    "discos": 20,
+    "miembros": []
+   }
+  ],
+  "personas_candidatas": [
+   {
+    "id": 31056,
+    "nombre": "Reyna Lucero",
+    "nombre_real": null,
+    "nacimiento": null,
+    "muerte": null,
+    "fallecido": null,
+    "venezolano": "true",
+    "bio": 0,
+    "creditos": 25
+   }
+  ],
+  "nombre_real": "Reina Romero García",
+  "nacimiento": {
+   "date": "1950-01-06",
+   "place": "Santa Cruz de Aragua, Aragua, Venezuela"
+  },
+  "muerte": {
+   "date": null,
+   "place": null
+  },
+  "miembros_lote": [],
+  "obras": 0,
+  "nacionalidad": "Venezuelan"
+ },
+ {
+  "lote_id": "luis-silva",
+  "nombre": "Luis Silva",
+  "tipo_lote": "solo",
+  "estado": "existe",
+  "metodo": "nombre/alias",
+  "artistas": [
+   {
+    "id": 3833,
+    "nombre": "Luis Silva",
+    "tipo": "band",
+    "bio": 0,
+    "foto": true,
+    "ciudad": null,
+    "anio": null,
+    "discos": 33,
+    "miembros": []
+   }
+  ],
+  "personas_candidatas": [
+   {
+    "id": 3197,
+    "nombre": "Luis Silva",
+    "nombre_real": null,
+    "nacimiento": "1962-12-05",
+    "muerte": null,
+    "fallecido": null,
+    "venezolano": "true",
+    "bio": 279,
+    "creditos": 87
+   }
+  ],
+  "nombre_real": "Luis Felipe Silva Pérez",
+  "nacimiento": {
+   "date": "1962-12-05",
+   "place": "Santa Rosa, Barinas, Venezuela"
+  },
+  "muerte": {
+   "date": null,
+   "place": null
+  },
+  "miembros_lote": [],
+  "obras": 2,
+  "nacionalidad": "Venezuelan"
+ },
+ {
+  "lote_id": "rummy-olivo",
+  "nombre": "Rummy Olivo",
+  "tipo_lote": "solo",
+  "estado": "nuevo",
+  "metodo": "nuevo",
+  "artistas": [],
+  "personas_candidatas": [
+   {
+    "id": 35890,
+    "nombre": "Rummy Olivo",
+    "nombre_real": null,
+    "nacimiento": null,
+    "muerte": null,
+    "fallecido": null,
+    "venezolano": null,
+    "bio": 0,
+    "creditos": 0
+   }
+  ],
+  "nombre_real": null,
+  "nacimiento": {
+   "date": "1964-01-22",
+   "place": "Las Placitas, Guárico, Venezuela"
+  },
+  "muerte": {
+   "date": null,
+   "place": null
+  },
+  "miembros_lote": [],
+  "obras": 1,
+  "nacionalidad": "Venezuelan"
+ },
+ {
+  "lote_id": "teo-galindez",
+  "nombre": "Teo Galíndez",
+  "tipo_lote": "solo",
+  "estado": "nuevo",
+  "metodo": "nuevo",
+  "artistas": [],
+  "personas_candidatas": [
+   {
+    "id": 35891,
+    "nombre": "Teo Galíndez",
+    "nombre_real": null,
+    "nacimiento": null,
+    "muerte": null,
+    "fallecido": null,
+    "venezolano": null,
+    "bio": 0,
+    "creditos": 0
+   }
+  ],
+  "nombre_real": "Teófilo Antonio Galíndez Cordero",
+  "nacimiento": {
+   "date": "1958-10-12",
+   "place": "Tinaquillo, Cojedes, Venezuela"
+  },
+  "muerte": {
+   "date": null,
+   "place": null
+  },
+  "miembros_lote": [],
+  "obras": 3,
+  "nacionalidad": "Venezuelan"
+ },
+ {
+  "lote_id": "jorge-guerrero",
+  "nombre": "Jorge Guerrero",
+  "tipo_lote": "solo",
+  "estado": "nuevo",
+  "metodo": "nuevo",
+  "artistas": [],
+  "personas_candidatas": [
+   {
+    "id": 32267,
+    "nombre": "Jorge Guerrero",
+    "nombre_real": null,
+    "nacimiento": null,
+    "muerte": null,
+    "fallecido": null,
+    "venezolano": "true",
+    "bio": 0,
+    "creditos": 1
+   }
+  ],
+  "nombre_real": "Jorge Fernando Guerrero Sánchez",
+  "nacimiento": {
+   "date": "1965-02-14",
+   "place": "Elorza, Apure, Venezuela"
+  },
+  "muerte": {
+   "date": null,
+   "place": null
+  },
+  "miembros_lote": [],
+  "obras": 0,
+  "nacionalidad": "Venezuelan"
+ },
+ {
+  "lote_id": "armando-martinez-llanero",
+  "nombre": "Armando Martínez",
+  "tipo_lote": "solo",
+  "estado": "nuevo",
+  "metodo": "nuevo",
+  "artistas": [],
+  "personas_candidatas": [
+   {
+    "id": 825,
+    "nombre": "Armando Martínez",
+    "nombre_real": null,
+    "nacimiento": null,
+    "muerte": null,
+    "fallecido": null,
+    "venezolano": "true",
+    "bio": 201,
+    "creditos": 3
+   },
+   {
+    "id": 16123,
+    "nombre": "Armando Martínez",
+    "nombre_real": null,
+    "nacimiento": null,
+    "muerte": null,
+    "fallecido": null,
+    "venezolano": "true",
+    "bio": 0,
+    "creditos": 0
+   }
+  ],
+  "nombre_real": null,
+  "nacimiento": {
+   "date": "1957-12-31",
+   "place": "Valle de la Pascua, Guárico, Venezuela"
+  },
+  "muerte": {
+   "date": null,
+   "place": null
+  },
+  "miembros_lote": [],
+  "obras": 0,
+  "nacionalidad": "Venezuelan"
+ },
+ {
+  "lote_id": "ivan-jose",
+  "nombre": "Iván José",
+  "tipo_lote": "solo",
+  "estado": "nuevo",
+  "metodo": "nuevo",
+  "artistas": [],
+  "personas_candidatas": [
+   {
+    "id": 32167,
+    "nombre": "Iván José Rodríguez",
+    "nombre_real": null,
+    "nacimiento": null,
+    "muerte": null,
+    "fallecido": null,
+    "venezolano": null,
+    "bio": 0,
+    "creditos": 2
+   }
+  ],
+  "nombre_real": "Iván José Rodríguez",
+  "nacimiento": {
+   "date": null,
+   "place": null
+  },
+  "muerte": {
+   "date": null,
+   "place": null
+  },
+  "miembros_lote": [],
+  "obras": 1,
+  "nacionalidad": "Venezuelan"
+ },
+ {
+  "lote_id": "iris-gavidia",
+  "nombre": "Iris Gavidia",
+  "tipo_lote": "solo",
+  "estado": "nuevo",
+  "metodo": "nuevo",
+  "artistas": [],
+  "personas_candidatas": [
+   {
+    "id": 31169,
+    "nombre": "Iris Gavidia",
+    "nombre_real": null,
+    "nacimiento": null,
+    "muerte": null,
+    "fallecido": null,
+    "venezolano": "true",
+    "bio": 0,
+    "creditos": 1
+   }
+  ],
+  "nombre_real": null,
+  "nacimiento": {
+   "date": null,
+   "place": null
+  },
+  "muerte": {
+   "date": null,
+   "place": null
+  },
+  "miembros_lote": [],
+  "obras": 2,
+  "nacionalidad": "Venezuelan"
+ },
+ {
+  "lote_id": "ignacio-figueredo",
+  "nombre": "Ignacio “Indio” Figueredo",
+  "tipo_lote": "solo",
+  "estado": "nuevo",
+  "metodo": "nuevo",
+  "artistas": [],
+  "personas_candidatas": [
+   {
+    "id": 21722,
+    "nombre": "Indio Figueredo",
+    "nombre_real": null,
+    "nacimiento": null,
+    "muerte": null,
+    "fallecido": null,
+    "venezolano": null,
+    "bio": 0,
+    "creditos": 12
+   },
+   {
+    "id": 31290,
+    "nombre": "Ignacio \"Indio\" Figueredo",
+    "nombre_real": null,
+    "nacimiento": null,
+    "muerte": null,
+    "fallecido": null,
+    "venezolano": null,
+    "bio": 0,
+    "creditos": 6
+   }
+  ],
+  "nombre_real": "Ignacio Ventura Figueredo",
+  "nacimiento": {
+   "date": "1900-07-31",
+   "place": "Algarrobito, Apure, Venezuela"
+  },
+  "muerte": {
+   "date": "1995-09-03",
+   "place": "San Fernando de Apure, Venezuela"
+  },
+  "miembros_lote": [],
+  "obras": 6,
+  "nacionalidad": "Venezuelan"
+ },
+ {
+  "lote_id": "hugo-blanco",
+  "nombre": "Hugo Blanco",
+  "tipo_lote": "solo",
+  "estado": "existe",
+  "metodo": "nombre/alias",
+  "artistas": [
+   {
+    "id": 3710,
+    "nombre": "Hugo Blanco",
+    "tipo": "band",
+    "bio": 0,
+    "foto": true,
+    "ciudad": null,
+    "anio": null,
+    "discos": 50,
+    "miembros": []
+   }
+  ],
+  "personas_candidatas": [
+   {
+    "id": 761,
+    "nombre": "Hugo Blanco",
+    "nombre_real": null,
+    "nacimiento": "1940-09-25",
+    "muerte": "2015-06-14",
+    "fallecido": "true",
+    "venezolano": "true",
+    "bio": 1020,
+    "creditos": 268
+   }
+  ],
+  "nombre_real": "Hugo César Blanco Manzo",
+  "nacimiento": {
+   "date": "1940-09-25",
+   "place": "Caracas, Venezuela"
+  },
+  "muerte": {
+   "date": "2015-06-14",
+   "place": "Caracas, Venezuela"
+  },
+  "miembros_lote": [],
+  "obras": 2,
+  "nacionalidad": "Venezuelan"
+ },
+ {
+  "lote_id": "saul-vera",
+  "nombre": "Saúl Vera",
+  "tipo_lote": "solo",
+  "estado": "existe",
+  "metodo": "nombre/alias",
+  "artistas": [
+   {
+    "id": 4003,
+    "nombre": "Saúl Vera",
+    "tipo": "band",
+    "bio": 0,
+    "foto": true,
+    "ciudad": null,
+    "anio": null,
+    "discos": 13,
+    "miembros": [
+     {
+      "persona": 21280,
+      "rol": "Mandolin & Bandola"
+     },
+     {
+      "persona": 1865,
+      "rol": "Cuatro"
+     },
+     {
+      "persona": 32925,
+      "rol": "Acoustic Bass"
+     },
+     {
+      "persona": 19907,
+      "rol": "Oboe"
+     },
+     {
+      "persona": 32926,
+      "rol": "Flute"
+     },
+     {
+      "persona": 32927,
+      "rol": "Fagot"
+     },
+     {
+      "persona": 32928,
+      "rol": "Clarinet"
+     },
+     {
+      "persona": 3303,
+      "rol": "French Horn"
+     },
+     {
+      "persona": 22287,
+      "rol": "Maracas"
+     }
+    ]
+   }
+  ],
+  "personas_candidatas": [
+   {
+    "id": 21280,
+    "nombre": "Saúl Vera",
+    "nombre_real": null,
+    "nacimiento": null,
+    "muerte": null,
+    "fallecido": null,
+    "venezolano": "true",
+    "bio": 0,
+    "creditos": 87
+   },
+   {
+    "id": 2852,
+    "nombre": "Saúl Vera",
+    "nombre_real": null,
+    "nacimiento": "1959-10-02",
+    "muerte": null,
+    "fallecido": null,
+    "venezolano": "true",
+    "bio": 372,
+    "creditos": 1
+   },
+   {
+    "id": 30348,
+    "nombre": "Saul Vera",
+    "nombre_real": null,
+    "nacimiento": null,
+    "muerte": null,
+    "fallecido": null,
+    "venezolano": "true",
+    "bio": 0,
+    "creditos": 0
+   }
+  ],
+  "nombre_real": null,
+  "nacimiento": {
+   "date": null,
+   "place": null
+  },
+  "muerte": {
+   "date": null,
+   "place": null
+  },
+  "miembros_lote": [],
+  "obras": 0,
+  "nacionalidad": "Venezuelan"
+ },
+ {
+  "lote_id": "ali-primera",
+  "nombre": "Alí Primera",
+  "tipo_lote": "solo",
+  "estado": "existe",
+  "metodo": "nombre/alias",
+  "artistas": [
+   {
+    "id": 3677,
+    "nombre": "Alí Primera",
+    "tipo": "band",
+    "bio": 0,
+    "foto": true,
+    "ciudad": null,
+    "anio": null,
+    "discos": 29,
+    "miembros": []
+   }
+  ],
+  "personas_candidatas": [
+   {
+    "id": 22238,
+    "nombre": "Alí Primera",
+    "nombre_real": null,
+    "nacimiento": null,
+    "muerte": null,
+    "fallecido": null,
+    "venezolano": "true",
+    "bio": 0,
+    "creditos": 87
+   },
+   {
+    "id": 12890,
+    "nombre": "Alí Primera",
+    "nombre_real": null,
+    "nacimiento": "1941-10-31",
+    "muerte": "1985-02-16",
+    "fallecido": "true",
+    "venezolano": null,
+    "bio": 89,
+    "creditos": 1
+   },
+   {
+    "id": 26261,
+    "nombre": "Ali Primera",
+    "nombre_real": null,
+    "nacimiento": null,
+    "muerte": null,
+    "fallecido": null,
+    "venezolano": null,
+    "bio": 0,
+    "creditos": 1
+   }
+  ],
+  "nombre_real": "Ely Rafael Primera Rossell",
+  "nacimiento": {
+   "date": "1941-10-31",
+   "place": "Coro, Falcón, Venezuela"
+  },
+  "muerte": {
+   "date": "1985-02-16",
+   "place": "Caracas, Venezuela"
+  },
+  "miembros_lote": [],
+  "obras": 3,
+  "nacionalidad": "Venezuelan"
+ },
+ {
+  "lote_id": "cecilia-todd",
+  "nombre": "Cecilia Todd",
+  "tipo_lote": "solo",
+  "estado": "existe",
+  "metodo": "nombre/alias",
+  "artistas": [
+   {
+    "id": 2679,
+    "nombre": "Cecilia Todd",
+    "tipo": "solo_artist",
+    "bio": 2320,
+    "foto": true,
+    "ciudad": null,
+    "anio": null,
+    "discos": 19,
+    "miembros": [
+     {
+      "persona": 18082,
+      "rol": "Titular del proyecto"
+     }
+    ]
+   }
+  ],
+  "personas_candidatas": [
+   {
+    "id": 21283,
+    "nombre": "Cecilia Todd",
+    "nombre_real": null,
+    "nacimiento": null,
+    "muerte": null,
+    "fallecido": null,
+    "venezolano": "true",
+    "bio": 0,
+    "creditos": 46
+   },
+   {
+    "id": 18082,
+    "nombre": "Cecilia Todd",
+    "nombre_real": null,
+    "nacimiento": null,
+    "muerte": null,
+    "fallecido": null,
+    "venezolano": "true",
+    "bio": 0,
+    "creditos": 1
+   }
+  ],
+  "nombre_real": "Cecilia Todd Vallenilla",
+  "nacimiento": {
+   "date": "1951-03-04",
+   "place": "Caracas, Venezuela"
+  },
+  "muerte": {
+   "date": null,
+   "place": null
+  },
+  "miembros_lote": [],
+  "obras": 0,
+  "nacionalidad": "Venezuelan"
+ },
+ {
+  "lote_id": "soledad-bravo",
+  "nombre": "Soledad Bravo",
+  "tipo_lote": "solo",
+  "estado": "existe",
+  "metodo": "nombre/alias",
+  "artistas": [
+   {
+    "id": 3749,
+    "nombre": "Soledad Bravo",
+    "tipo": "band",
+    "bio": 0,
+    "foto": true,
+    "ciudad": null,
+    "anio": null,
+    "discos": 43,
+    "miembros": []
+   }
+  ],
+  "personas_candidatas": [
+   {
+    "id": 25256,
+    "nombre": "Soledad Bravo",
+    "nombre_real": null,
+    "nacimiento": null,
+    "muerte": null,
+    "fallecido": null,
+    "venezolano": "true",
+    "bio": 0,
+    "creditos": 53
+   }
+  ],
+  "nombre_real": null,
+  "nacimiento": {
+   "date": "1943-11-13",
+   "place": "Logroño, España"
+  },
+  "muerte": {
+   "date": null,
+   "place": null
+  },
+  "miembros_lote": [],
+  "obras": 0,
+  "nacionalidad": "Venezuelan (Spanish-born; Venezuelan artist/nationality documented by sources)"
+ },
+ {
+  "lote_id": "lilia-vera",
+  "nombre": "Lilia Vera",
+  "tipo_lote": "solo",
+  "estado": "existe",
+  "metodo": "nombre/alias",
+  "artistas": [
+   {
+    "id": 3831,
+    "nombre": "Lilia Vera",
+    "tipo": "band",
+    "bio": 0,
+    "foto": true,
+    "ciudad": null,
+    "anio": null,
+    "discos": 20,
+    "miembros": []
+   }
+  ],
+  "personas_candidatas": [
+   {
+    "id": 31135,
+    "nombre": "Lilia Vera",
+    "nombre_real": null,
+    "nacimiento": null,
+    "muerte": null,
+    "fallecido": null,
+    "venezolano": "true",
+    "bio": 0,
+    "creditos": 13
+   }
+  ],
+  "nombre_real": "Lilia Ramírez Villamizar",
+  "nacimiento": {
+   "date": "1951-10-19",
+   "place": "Caracas, Venezuela"
+  },
+  "muerte": {
+   "date": null,
+   "place": null
+  },
+  "miembros_lote": [],
+  "obras": 3,
+  "nacionalidad": "Venezuelan"
+ },
+ {
+  "lote_id": "gualberto-ibarreto",
+  "nombre": "Gualberto Ibarreto",
+  "tipo_lote": "solo",
+  "estado": "existe",
+  "metodo": "nombre/alias",
+  "artistas": [
+   {
+    "id": 3821,
+    "nombre": "Gualberto Ibarreto",
+    "tipo": "band",
+    "bio": 0,
+    "foto": true,
+    "ciudad": null,
+    "anio": null,
+    "discos": 29,
+    "miembros": []
+   }
+  ],
+  "personas_candidatas": [
+   {
+    "id": 21200,
+    "nombre": "Gualberto Ibarreto",
+    "nombre_real": null,
+    "nacimiento": null,
+    "muerte": null,
+    "fallecido": null,
+    "venezolano": "true",
+    "bio": 0,
+    "creditos": 46
+   },
+   {
+    "id": 619,
+    "nombre": "Gualberto Ibarreto",
+    "nombre_real": null,
+    "nacimiento": "1947-07-12",
+    "muerte": null,
+    "fallecido": null,
+    "venezolano": "true",
+    "bio": 2007,
+    "creditos": 1
+   }
+  ],
+  "nombre_real": "Gualberto José Ibarreto Barrios",
+  "nacimiento": {
+   "date": "1947-07-12",
+   "place": "El Pilar, Sucre, Venezuela"
+  },
+  "muerte": {
+   "date": null,
+   "place": null
+  },
+  "miembros_lote": [],
+  "obras": 0,
+  "nacionalidad": "Venezuelan"
+ },
+ {
+  "lote_id": "maria-teresa-chacin",
+  "nombre": "María Teresa Chacín",
+  "tipo_lote": "solo",
+  "estado": "existe",
+  "metodo": "nombre/alias",
+  "artistas": [
+   {
+    "id": 3797,
+    "nombre": "María Teresa Chacín",
+    "tipo": "band",
+    "bio": 0,
+    "foto": true,
+    "ciudad": null,
+    "anio": null,
+    "discos": 50,
+    "miembros": []
+   }
+  ],
+  "personas_candidatas": [
+   {
+    "id": 3972,
+    "nombre": "María Teresa Chacín",
+    "nombre_real": null,
+    "nacimiento": "1945-01-22",
+    "muerte": null,
+    "fallecido": null,
+    "venezolano": "true",
+    "bio": 359,
+    "creditos": 85
+   },
+   {
+    "id": 27465,
+    "nombre": "María Teresa Chacin",
+    "nombre_real": null,
+    "nacimiento": null,
+    "muerte": null,
+    "fallecido": null,
+    "venezolano": "true",
+    "bio": 0,
+    "creditos": 2
+   }
+  ],
+  "nombre_real": "María Teresa Chacín de López Contreras",
+  "nacimiento": {
+   "date": "1945-01-22",
+   "place": "Caracas, Venezuela"
+  },
+  "muerte": {
+   "date": null,
+   "place": null
+  },
+  "miembros_lote": [],
+  "obras": 0,
+  "nacionalidad": "Venezuelan"
+ },
+ {
+  "lote_id": "otilio-galindez",
+  "nombre": "Otilio Galíndez",
+  "tipo_lote": "solo",
+  "estado": "nuevo",
+  "metodo": "nuevo",
+  "artistas": [],
+  "personas_candidatas": [
+   {
+    "id": 7389,
+    "nombre": "Otilio Galíndez",
+    "nombre_real": null,
+    "nacimiento": "1935-12-13",
+    "muerte": "2009-06-13",
+    "fallecido": "true",
+    "venezolano": null,
+    "bio": 187,
+    "creditos": 106
+   },
+   {
+    "id": 21395,
+    "nombre": "Otilio Galindez",
+    "nombre_real": null,
+    "nacimiento": null,
+    "muerte": null,
+    "fallecido": null,
+    "venezolano": null,
+    "bio": 0,
+    "creditos": 13
+   },
+   {
+    "id": 33744,
+    "nombre": "Otílio Galindez",
+    "nombre_real": null,
+    "nacimiento": null,
+    "muerte": null,
+    "fallecido": null,
+    "venezolano": null,
+    "bio": 0,
+    "creditos": 1
+   }
+  ],
+  "nombre_real": "Otilio Galíndez",
+  "nacimiento": {
+   "date": "1935-12-13",
+   "place": "Yaritagua, Yaracuy, Venezuela"
+  },
+  "muerte": {
+   "date": "2009-06-13",
+   "place": "Maracay, Aragua, Venezuela"
+  },
+  "miembros_lote": [],
+  "obras": 4,
+  "nacionalidad": "Venezuelan"
+ },
+ {
+  "lote_id": "c4-trio",
+  "nombre": "C4 Trío",
+  "tipo_lote": "group",
+  "estado": "existe",
+  "metodo": "nombre/alias",
+  "artistas": [
+   {
+    "id": 53,
+    "nombre": "C4 Trío",
+    "tipo": "band",
+    "bio": 2390,
+    "foto": true,
+    "ciudad": "Caracas",
+    "anio": "2005",
+    "discos": 6,
+    "miembros": [
+     {
+      "persona": 928,
+      "rol": "cuatro"
+     },
+     {
+      "persona": 929,
+      "rol": "cuatro"
+     },
+     {
+      "persona": 930,
+      "rol": "cuatro"
+     },
+     {
+      "persona": 965,
+      "rol": "bajo"
+     },
+     {
+      "persona": 965,
+      "rol": "Bass"
+     },
+     {
+      "persona": 8967,
+      "rol": "Bass"
+     }
+    ]
+   }
+  ],
+  "personas_candidatas": [
+   {
+    "id": 8970,
+    "nombre": "C4 Trío",
+    "nombre_real": null,
+    "nacimiento": null,
+    "muerte": null,
+    "fallecido": null,
+    "venezolano": "true",
+    "bio": 76,
+    "creditos": 9
+   }
+  ],
+  "nombre_real": null,
+  "nacimiento": null,
+  "muerte": null,
+  "miembros_lote": [
+   "Jorge Glem",
+   "Edward Ramírez",
+   "Héctor Molina",
+   "Gustavo Márquez"
+  ],
+  "obras": 0,
+  "nacionalidad": "Venezuelan"
+ },
+ {
+  "lote_id": "aquiles-baez",
+  "nombre": "Aquiles Báez",
+  "tipo_lote": "solo",
+  "estado": "existe",
+  "metodo": "nombre/alias",
+  "artistas": [
+   {
+    "id": 3449,
+    "nombre": "Aquiles Báez",
+    "tipo": "band",
+    "bio": 0,
+    "foto": true,
+    "ciudad": null,
+    "anio": null,
+    "discos": 11,
+    "miembros": []
+   }
+  ],
+  "personas_candidatas": [
+   {
+    "id": 935,
+    "nombre": "Aquiles Báez",
+    "nombre_real": null,
+    "nacimiento": "1964-03-01",
+    "muerte": "2022-09-12",
+    "fallecido": "true",
+    "venezolano": "true",
+    "bio": 402,
+    "creditos": 182
+   }
+  ],
+  "nombre_real": "Aquiles Alejandro Báez Reyes",
+  "nacimiento": {
+   "date": "1964-03-01",
+   "place": "Caracas, Venezuela"
+  },
+  "muerte": {
+   "date": "2022-09-12",
+   "place": "Aachen, Alemania"
+  },
+  "miembros_lote": [],
+  "obras": 0,
+  "nacionalidad": "Venezuelan"
+ },
+ {
+  "lote_id": "pollo-brito",
+  "nombre": "Rafael “Pollo” Brito",
+  "tipo_lote": "solo",
+  "estado": "existe",
+  "metodo": "nombre/alias",
+  "artistas": [
+   {
+    "id": 3743,
+    "nombre": "Rafael \"Pollo\" Brito",
+    "tipo": "band",
+    "bio": 0,
+    "foto": true,
+    "ciudad": null,
+    "anio": null,
+    "discos": 7,
+    "miembros": []
+   }
+  ],
+  "personas_candidatas": [
+   {
+    "id": 934,
+    "nombre": "Rafael \"Pollo\" Brito",
+    "nombre_real": null,
+    "nacimiento": "1971-11-14",
+    "muerte": null,
+    "fallecido": null,
+    "venezolano": "true",
+    "bio": 328,
+    "creditos": 73
+   }
+  ],
+  "nombre_real": "Rafael José Brito Materano",
+  "nacimiento": {
+   "date": "1971-11-14",
+   "place": "Caracas, Venezuela"
+  },
+  "muerte": {
+   "date": null,
+   "place": null
+  },
+  "miembros_lote": [],
+  "obras": 0,
+  "nacionalidad": "Venezuelan"
+ },
+ {
+  "lote_id": "ensamble-gurrufio",
+  "nombre": "Ensamble Gurrufío",
+  "tipo_lote": "group",
+  "estado": "existe",
+  "metodo": "nombre/alias",
+  "artistas": [
+   {
+    "id": 3950,
+    "nombre": "Ensamble Gurrufío",
+    "tipo": "band",
+    "bio": 0,
+    "foto": true,
+    "ciudad": "Caracas",
+    "anio": "1984",
+    "discos": 14,
+    "miembros": [
+     {
+      "persona": 20626,
+      "rol": "Cuatro & Guitar"
+     },
+     {
+      "persona": 3466,
+      "rol": "Flute & Maracas"
+     },
+     {
+      "persona": 2728,
+      "rol": "Bass & Guitar"
+     },
+     {
+      "persona": 4913,
+      "rol": "Maracas"
+     },
+     {
+      "persona": 25534,
+      "rol": "Mandolin & Guitar"
+     },
+     {
+      "persona": 7025,
+      "rol": "Oboe"
+     }
+    ]
+   }
+  ],
+  "personas_candidatas": [
+   {
+    "id": 19112,
+    "nombre": "Ensamble Gurrufio",
+    "nombre_real": null,
+    "nacimiento": null,
+    "muerte": null,
+    "fallecido": null,
+    "venezolano": "true",
+    "bio": 0,
+    "creditos": 8
+   }
+  ],
+  "nombre_real": null,
+  "nacimiento": null,
+  "muerte": null,
+  "miembros_lote": [
+   "Cheo Hurtado",
+   "Luis Julio Toro",
+   "David Peña",
+   "Juan Ernesto Laya",
+   "Jaime Martínez"
+  ],
+  "obras": 0,
+  "nacionalidad": "Venezuelan"
+ },
+ {
+  "lote_id": "quinteto-contrapunto",
+  "nombre": "Quinteto Contrapunto",
+  "tipo_lote": "group",
+  "estado": "existe",
+  "metodo": "nombre/alias",
+  "artistas": [
+   {
+    "id": 3843,
+    "nombre": "Quinteto Contrapunto",
+    "tipo": "band",
+    "bio": 0,
+    "foto": true,
+    "ciudad": "Caracas",
+    "anio": "1962",
+    "discos": 17,
+    "miembros": [
+     {
+      "persona": 30439,
+      "rol": "Baritone Vocals, Musical Director & Arranger"
+     },
+     {
+      "persona": 30440,
+      "rol": "Tenor Vocals"
+     },
+     {
+      "persona": 19994,
+      "rol": "Bass Vocals, Guitar & Cuatro"
+     },
+     {
+      "persona": 8294,
+      "rol": "Mezzosoprano Vocals"
+     },
+     {
+      "persona": 30441,
+      "rol": "Soprano Vocals"
+     },
+     {
+      "persona": 19163,
+      "rol": "Contralto Vocals"
+     }
+    ]
+   }
+  ],
+  "personas_candidatas": [],
+  "nombre_real": null,
+  "nacimiento": null,
+  "muerte": null,
+  "miembros_lote": [
+   "Rafael Suárez",
+   "Jesús Sevillano",
+   "Domingo Mendoza",
+   "Morella Muñoz",
+   "Aída Navarro",
+   "Gloris López",
+   "Marina Auristela Guanche",
+   "Otilia Rodríguez"
+  ],
+  "obras": 0,
+  "nacionalidad": "Venezuelan"
+ },
+ {
+  "lote_id": "carota-nema-taja",
+  "nombre": "Carota, Ñema y Tajá",
+  "tipo_lote": "group",
+  "estado": "existe",
+  "metodo": "nombre/alias",
+  "artistas": [
+   {
+    "id": 3811,
+    "nombre": "Carota, Ñema y Tajá",
+    "tipo": "band",
+    "bio": 0,
+    "foto": true,
+    "ciudad": "Barquisimeto",
+    "anio": "1981",
+    "discos": 13,
+    "miembros": []
+   }
+  ],
+  "personas_candidatas": [],
+  "nombre_real": null,
+  "nacimiento": null,
+  "muerte": null,
+  "miembros_lote": [],
+  "obras": 0,
+  "nacionalidad": "Venezuelan"
+ },
+ {
+  "lote_id": "el-cuarteto",
+  "nombre": "El Cuarteto",
+  "tipo_lote": "group",
+  "estado": "existe",
+  "metodo": "nombre/alias",
+  "artistas": [
+   {
+    "id": 3944,
+    "nombre": "El Cuarteto",
+    "tipo": "band",
+    "bio": 0,
+    "foto": true,
+    "ciudad": "Caracas",
+    "anio": "1979",
+    "discos": 19,
+    "miembros": [
+     {
+      "persona": 21606,
+      "rol": "Cuatro, Tiple & Guitar"
+     },
+     {
+      "persona": 21690,
+      "rol": "Flute"
+     },
+     {
+      "persona": 21605,
+      "rol": "Guitar & Cuatro"
+     },
+     {
+      "persona": 21607,
+      "rol": "Acoustic Bass"
+     }
+    ]
+   }
+  ],
+  "personas_candidatas": [],
+  "nombre_real": null,
+  "nacimiento": null,
+  "muerte": null,
+  "miembros_lote": [
+   "José Antonio Naranjo",
+   "Miguel Delgado Estévez",
+   "Raúl Delgado Estévez",
+   "Telésforo Naranjo"
+  ],
+  "obras": 0,
+  "nacionalidad": "Venezuelan"
+ },
+ {
+  "lote_id": "los-cunaos",
+  "nombre": "Los Cuñaos",
+  "tipo_lote": "group",
+  "estado": "existe",
+  "metodo": "nombre/alias",
+  "artistas": [
+   {
+    "id": 3801,
+    "nombre": "Los Cuñaos",
+    "tipo": "band",
+    "bio": 0,
+    "foto": true,
+    "ciudad": "Caracas",
+    "anio": "1974",
+    "discos": 15,
+    "miembros": [
+     {
+      "persona": 3601,
+      "rol": "Vocals"
+     },
+     {
+      "persona": 2037,
+      "rol": "Vocals"
+     },
+     {
+      "persona": 13,
+      "rol": "Vocals"
+     },
+     {
+      "persona": 7133,
+      "rol": "Vocals"
+     },
+     {
+      "persona": 2,
+      "rol": "Vocals"
+     },
+     {
+      "persona": 864,
+      "rol": "Vocals"
+     },
+     {
+      "persona": 30398,
+      "rol": "Vocals"
+     },
+     {
+      "persona": 30399,
+      "rol": "Vocals"
+     },
+     {
+      "persona": 8294,
+      "rol": "Vocals"
+     },
+     {
+      "persona": 30400,
+      "rol": "Vocals"
+     },
+     {
+      "persona": 462,
+      "rol": "Vocals"
+     },
+     {
+      "persona": 3606,
+      "rol": "Vocals"
+     },
+     {
+      "persona": 20930,
+      "rol": "Vocals"
+     },
+     {
+      "persona": 21762,
+      "rol": "Vocals"
+     },
+     {
+      "persona": 3597,
+      "rol": "Vocals"
+     },
+     {
+      "persona": 1287,
+      "rol": "Vocals"
+     },
+     {
+      "persona": 30251,
+      "rol": "Vocals"
+     },
+     {
+      "persona": 21351,
+      "rol": "Vocals"
+     },
+     {
+      "persona": 30401,
+      "rol": "Vocals"
+     },
+     {
+      "persona": 30402,
+      "rol": "Vocals"
+     },
+     {
+      "persona": 30403,
+      "rol": "Vocals"
+     },
+     {
+      "persona": 21605,
+      "rol": "Vocals"
+     }
+    ]
+   }
+  ],
+  "personas_candidatas": [
+   {
+    "id": 20427,
+    "nombre": "Los Cuñaos",
+    "nombre_real": null,
+    "nacimiento": null,
+    "muerte": null,
+    "fallecido": null,
+    "venezolano": "true",
+    "bio": 0,
+    "creditos": 5
+   }
+  ],
+  "nombre_real": null,
+  "nacimiento": null,
+  "muerte": null,
+  "miembros_lote": [
+   "Alí Agüero",
+   "José R. Angarita",
+   "Fanny Barrios",
+   "Ofelinda García",
+   "Zenaida Riera",
+   "Gonzalo Peña",
+   "Carlos Moreán",
+   "Maricruz Quintero"
+  ],
+  "obras": 0,
+  "nacionalidad": "Venezuelan"
+ },
+ {
+  "lote_id": "un-solo-pueblo",
+  "nombre": "Un Solo Pueblo",
+  "tipo_lote": "group",
+  "estado": "existe",
+  "metodo": "nombre/alias",
+  "artistas": [
+   {
+    "id": 3857,
+    "nombre": "Un Solo Pueblo",
+    "tipo": "band",
+    "bio": 0,
+    "foto": false,
+    "ciudad": "Caracas",
+    "anio": "1975",
+    "discos": 31,
+    "miembros": []
+   }
+  ],
+  "personas_candidatas": [
+   {
+    "id": 20141,
+    "nombre": "Un Solo Pueblo",
+    "nombre_real": null,
+    "nacimiento": null,
+    "muerte": null,
+    "fallecido": null,
+    "venezolano": "true",
+    "bio": 0,
+    "creditos": 42
+   }
+  ],
+  "nombre_real": null,
+  "nacimiento": null,
+  "muerte": null,
+  "miembros_lote": [],
+  "obras": 0,
+  "nacionalidad": "Venezuelan"
+ },
+ {
+  "lote_id": "francisco-pacheco",
+  "nombre": "Francisco Pacheco",
+  "tipo_lote": "solo",
+  "estado": "existe",
+  "metodo": "nombre/alias",
+  "artistas": [
+   {
+    "id": 3816,
+    "nombre": "Francisco Pacheco",
+    "tipo": "band",
+    "bio": 0,
+    "foto": true,
+    "ciudad": null,
+    "anio": null,
+    "discos": 4,
+    "miembros": []
+   }
+  ],
+  "personas_candidatas": [
+   {
+    "id": 20566,
+    "nombre": "Francisco Pacheco",
+    "nombre_real": null,
+    "nacimiento": null,
+    "muerte": null,
+    "fallecido": null,
+    "venezolano": "true",
+    "bio": 0,
+    "creditos": 76
+   },
+   {
+    "id": 1709,
+    "nombre": "Francisco Pacheco",
+    "nombre_real": null,
+    "nacimiento": null,
+    "muerte": null,
+    "fallecido": null,
+    "venezolano": "true",
+    "bio": 59,
+    "creditos": 1
+   }
+  ],
+  "nombre_real": null,
+  "nacimiento": {
+   "date": null,
+   "place": "Cata, Aragua, Venezuela"
+  },
+  "muerte": {
+   "date": null,
+   "place": null
+  },
+  "miembros_lote": [],
+  "obras": 0,
+  "nacionalidad": "Venezuelan"
+ },
+ {
+  "lote_id": "tambor-urbano",
+  "nombre": "Tambor Urbano",
+  "tipo_lote": "group",
+  "estado": "existe",
+  "metodo": "nombre/alias",
+  "artistas": [
+   {
+    "id": 3854,
+    "nombre": "Tambor Urbano",
+    "tipo": "band",
+    "bio": 0,
+    "foto": true,
+    "ciudad": "1988 in Caracas",
+    "anio": "1988",
+    "discos": 11,
+    "miembros": [
+     {
+      "persona": 30474,
+      "rol": "Lead Vocals & Director"
+     },
+     {
+      "persona": 30475,
+      "rol": "Vocals & Backing Vocals"
+     },
+     {
+      "persona": 30476,
+      "rol": "Vocals, Guiro & Backing Vocals"
+     },
+     {
+      "persona": 30477,
+      "rol": "1ra Guarura & Backing Vocals"
+     },
+     {
+      "persona": 30478,
+      "rol": "2da Guarura & Backing Vocals"
+     },
+     {
+      "persona": 30479,
+      "rol": "3ra Guarura & Backing Vocals"
+     },
+     {
+      "persona": 30480,
+      "rol": "Tambor Bajo"
+     },
+     {
+      "persona": 30481,
+      "rol": "Tambor Medio"
+     },
+     {
+      "persona": 30482,
+      "rol": "Tambor Prima"
+     },
+     {
+      "persona": 30483,
+      "rol": "Congas"
+     },
+     {
+      "persona": 30484,
+      "rol": "Congas"
+     },
+     {
+      "persona": 30485,
+      "rol": "Laures & Backing Vocals"
+     },
+     {
+      "persona": 20820,
+      "rol": "Bass"
+     }
+    ]
+   }
+  ],
+  "personas_candidatas": [],
+  "nombre_real": null,
+  "nacimiento": null,
+  "muerte": null,
+  "miembros_lote": [],
+  "obras": 0,
+  "nacionalidad": "Venezuelan"
+ },
+ {
+  "lote_id": "grupo-madera",
+  "nombre": "Grupo Madera",
+  "tipo_lote": "group",
+  "estado": "nuevo",
+  "metodo": "nuevo",
+  "artistas": [],
+  "personas_candidatas": [],
+  "nombre_real": null,
+  "nacimiento": null,
+  "muerte": null,
+  "miembros_lote": [],
+  "obras": 0,
+  "nacionalidad": "Venezuelan"
+ },
+ {
+  "lote_id": "serenata-guayanesa",
+  "nombre": "Serenata Guayanesa",
+  "tipo_lote": "group",
+  "estado": "existe",
+  "metodo": "nombre/alias",
+  "artistas": [
+   {
+    "id": 221,
+    "nombre": "Serenata Guayanesa",
+    "tipo": "band",
+    "bio": 2730,
+    "foto": true,
+    "ciudad": "Ciudad Bolivar",
+    "anio": "1971",
+    "discos": 85,
+    "miembros": [
+     {
+      "persona": 914,
+      "rol": "contratenor, percusión; tenor"
+     },
+     {
+      "persona": 913,
+      "rol": "cuatro, tenor"
+     },
+     {
+      "persona": 911,
+      "rol": "cuatro, barítono"
+     },
+     {
+      "persona": 912,
+      "rol": "cuatro, maracas, voz de bajo"
+     },
+     {
+      "persona": 938,
+      "rol": "integrante"
+     },
+     {
+      "persona": 914,
+      "rol": "Tenor Vocals & Percussion"
+     },
+     {
+      "persona": 21977,
+      "rol": "Tenor Vocals, First Cuatro & Guitar"
+     },
+     {
+      "persona": 25537,
+      "rol": "Contratenor Vocals & Percussion"
+     },
+     {
+      "persona": 20644,
+      "rol": "Baritone Vocals & Second Cuatro"
+     },
+     {
+      "persona": 25536,
+      "rol": "Bass Vocals & Percussion"
+     },
+     {
+      "persona": 24377,
+      "rol": "Tenor Vocals & First Cuatro"
+     }
+    ]
+   }
+  ],
+  "personas_candidatas": [
+   {
+    "id": 20430,
+    "nombre": "Serenata Guayanesa",
+    "nombre_real": null,
+    "nacimiento": null,
+    "muerte": null,
+    "fallecido": null,
+    "venezolano": "true",
+    "bio": 0,
+    "creditos": 68
+   }
+  ],
+  "nombre_real": null,
+  "nacimiento": null,
+  "muerte": null,
+  "miembros_lote": [],
+  "obras": 3,
+  "nacionalidad": "Venezuelan"
+ },
+ {
+  "lote_id": "betsayda-machado-parranda-el-clavo",
+  "nombre": "Betsayda Machado y La Parranda El Clavo",
+  "tipo_lote": "group",
+  "estado": "nuevo",
+  "metodo": "nuevo",
+  "artistas": [],
+  "personas_candidatas": [],
+  "nombre_real": null,
+  "nacimiento": null,
+  "muerte": null,
+  "miembros_lote": [],
+  "obras": 0,
+  "nacionalidad": "Venezuelan"
+ },
+ {
+  "lote_id": "francisco-mata",
+  "nombre": "Francisco Mata",
+  "tipo_lote": "solo",
+  "estado": "nuevo",
+  "metodo": "nuevo",
+  "artistas": [],
+  "personas_candidatas": [
+   {
+    "id": 29466,
+    "nombre": "Francisco Mata",
+    "nombre_real": null,
+    "nacimiento": null,
+    "muerte": null,
+    "fallecido": null,
+    "venezolano": null,
+    "bio": 0,
+    "creditos": 1
+   }
+  ],
+  "nombre_real": "Francisco Antonio Mata",
+  "nacimiento": {
+   "date": "1932-07-24",
+   "place": "Juan Griego, Nueva Esparta, Venezuela"
+  },
+  "muerte": {
+   "date": "2011-01-24",
+   "place": "Porlamar, Nueva Esparta, Venezuela"
+  },
+  "miembros_lote": [],
+  "obras": 0,
+  "nacionalidad": "Venezuelan"
+ },
+ {
+  "lote_id": "hernan-marin",
+  "nombre": "Hernán Marín",
+  "tipo_lote": "solo",
+  "estado": "existe",
+  "metodo": "nombre/alias",
+  "artistas": [
+   {
+    "id": 3823,
+    "nombre": "Hernán Marín",
+    "tipo": "band",
+    "bio": 0,
+    "foto": true,
+    "ciudad": null,
+    "anio": null,
+    "discos": 9,
+    "miembros": []
+   }
+  ],
+  "personas_candidatas": [
+   {
+    "id": 24616,
+    "nombre": "Hernán Marín",
+    "nombre_real": null,
+    "nacimiento": null,
+    "muerte": null,
+    "fallecido": null,
+    "venezolano": "true",
+    "bio": 0,
+    "creditos": 27
+   },
+   {
+    "id": 31053,
+    "nombre": "Hernan Marín",
+    "nombre_real": null,
+    "nacimiento": null,
+    "muerte": null,
+    "fallecido": null,
+    "venezolano": "true",
+    "bio": 0,
+    "creditos": 1
+   }
+  ],
+  "nombre_real": "Hernán José Marín D’Flora",
+  "nacimiento": {
+   "date": "1940-10-06",
+   "place": "Cumaná, Sucre, Venezuela"
+  },
+  "muerte": {
+   "date": "2025-11-22",
+   "place": "Cumaná, Sucre, Venezuela"
+  },
+  "miembros_lote": [],
+  "obras": 4,
+  "nacionalidad": "Venezuelan"
+ },
+ {
+  "lote_id": "luis-mariano-rivera",
+  "nombre": "Luis Mariano Rivera",
+  "tipo_lote": "solo",
+  "estado": "nuevo",
+  "metodo": "nuevo",
+  "artistas": [],
+  "personas_candidatas": [
+   {
+    "id": 7348,
+    "nombre": "Luis Mariano Rivera",
+    "nombre_real": null,
+    "nacimiento": "1906-08-19",
+    "muerte": "2002-03-15",
+    "fallecido": "true",
+    "venezolano": null,
+    "bio": 2099,
+    "creditos": 65
+   },
+   {
+    "id": 32029,
+    "nombre": "Luís Mariano Rivera",
+    "nombre_real": null,
+    "nacimiento": null,
+    "muerte": null,
+    "fallecido": null,
+    "venezolano": null,
+    "bio": 0,
+    "creditos": 5
+   }
+  ],
+  "nombre_real": "Luis Mariano Rivera Font",
+  "nacimiento": {
+   "date": "1906-08-19",
+   "place": "Canchunchú, Sucre, Venezuela"
+  },
+  "muerte": {
+   "date": "2002-03-15",
+   "place": "Carúpano, Sucre, Venezuela"
+  },
+  "miembros_lote": [],
+  "obras": 3,
+  "nacionalidad": "Venezuelan"
+ },
+ {
+  "lote_id": "chelique-sarabia",
+  "nombre": "Chelique Sarabia",
+  "tipo_lote": "solo",
+  "estado": "existe",
+  "metodo": "nombre/alias",
+  "artistas": [
+   {
+    "id": 3689,
+    "nombre": "Chelique Sarabia",
+    "tipo": "band",
+    "bio": 0,
+    "foto": true,
+    "ciudad": null,
+    "anio": null,
+    "discos": 27,
+    "miembros": []
+   }
+  ],
+  "personas_candidatas": [
+   {
+    "id": 23115,
+    "nombre": "Chelique Sarabia",
+    "nombre_real": null,
+    "nacimiento": null,
+    "muerte": null,
+    "fallecido": null,
+    "venezolano": "true",
+    "bio": 0,
+    "creditos": 258
+   },
+   {
+    "id": 57,
+    "nombre": "Chelique Sarabia",
+    "nombre_real": null,
+    "nacimiento": "1940-03-13",
+    "muerte": "2022-02-16",
+    "fallecido": "true",
+    "venezolano": null,
+    "bio": 374,
+    "creditos": 4
+   },
+   {
+    "id": 31206,
+    "nombre": "Chelique",
+    "nombre_real": null,
+    "nacimiento": null,
+    "muerte": null,
+    "fallecido": null,
+    "venezolano": null,
+    "bio": 0,
+    "creditos": 1
+   }
+  ],
+  "nombre_real": "José Enrique Sarabia Rodríguez",
+  "nacimiento": {
+   "date": "1940-03-13",
+   "place": "La Asunción, Nueva Esparta, Venezuela"
+  },
+  "muerte": {
+   "date": "2022-02-16",
+   "place": "Lechería, Anzoátegui, Venezuela"
+  },
+  "miembros_lote": [],
+  "obras": 1,
+  "nacionalidad": "Venezuelan"
+ },
+ {
+  "lote_id": "cruz-quinal",
+  "nombre": "Cruz Quinal",
+  "tipo_lote": "solo",
+  "estado": "nuevo",
+  "metodo": "nuevo",
+  "artistas": [],
+  "personas_candidatas": [
+   {
+    "id": 31641,
+    "nombre": "Cruz Quinal",
+    "nombre_real": null,
+    "nacimiento": null,
+    "muerte": null,
+    "fallecido": null,
+    "venezolano": null,
+    "bio": 0,
+    "creditos": 5
+   }
+  ],
+  "nombre_real": null,
+  "nacimiento": {
+   "date": "1934-05-03",
+   "place": "Botucal, Sucre, Venezuela"
+  },
+  "muerte": {
+   "date": "1987-07-17",
+   "place": "Venezuela"
+  },
+  "miembros_lote": [],
+  "obras": 0,
+  "nacionalidad": "Venezuelan"
+ },
+ {
+  "lote_id": "marco-antonio-rivera-useche",
+  "nombre": "Marco Antonio Rivera Useche",
+  "tipo_lote": "solo",
+  "estado": "nuevo",
+  "metodo": "nuevo",
+  "artistas": [],
+  "personas_candidatas": [],
+  "nombre_real": null,
+  "nacimiento": {
+   "date": "1895-06-19",
+   "place": "San Cristóbal, Táchira, Venezuela"
+  },
+  "muerte": {
+   "date": "1990-07-15",
+   "place": "San Cristóbal, Táchira, Venezuela"
+  },
+  "miembros_lote": [],
+  "obras": 1,
+  "nacionalidad": "Venezuelan"
+ },
+ {
+  "lote_id": "luis-felipe-ramon-rivera",
+  "nombre": "Luis Felipe Ramón y Rivera",
+  "tipo_lote": "solo",
+  "estado": "nuevo",
+  "metodo": "nuevo",
+  "artistas": [],
+  "personas_candidatas": [
+   {
+    "id": 11811,
+    "nombre": "Luis Felipe Ramón y Rivera",
+    "nombre_real": null,
+    "nacimiento": null,
+    "muerte": null,
+    "fallecido": null,
+    "venezolano": null,
+    "bio": 80,
+    "creditos": 1
+   }
+  ],
+  "nombre_real": null,
+  "nacimiento": {
+   "date": "1913-08-23",
+   "place": "San Cristóbal, Táchira, Venezuela"
+  },
+  "muerte": {
+   "date": "1993-10-22",
+   "place": "Caracas, Venezuela"
+  },
+  "miembros_lote": [],
+  "obras": 1,
+  "nacionalidad": "Venezuelan"
+ },
+ {
+  "lote_id": "chucho-corrales",
+  "nombre": "Chucho Corrales",
+  "tipo_lote": "solo",
+  "estado": "nuevo",
+  "metodo": "nuevo",
+  "artistas": [],
+  "personas_candidatas": [
+   {
+    "id": 32304,
+    "nombre": "Chucho Corrales",
+    "nombre_real": null,
+    "nacimiento": null,
+    "muerte": null,
+    "fallecido": null,
+    "venezolano": null,
+    "bio": 0,
+    "creditos": 2
+   }
+  ],
+  "nombre_real": "Jesús Manuel Corrales Sánchez",
+  "nacimiento": {
+   "date": "1926-12-28",
+   "place": "San Cristóbal, Táchira, Venezuela"
+  },
+  "muerte": {
+   "date": "1998",
+   "place": "Venezuela"
+  },
+  "miembros_lote": [],
+  "obras": 0,
+  "nacionalidad": "Venezuelan"
+ },
+ {
+  "lote_id": "yhony-leon-pueblos-sur",
+  "nombre": "Yhony León y los Pueblos del Sur",
+  "tipo_lote": "group",
+  "estado": "nuevo",
+  "metodo": "nuevo",
+  "artistas": [],
+  "personas_candidatas": [],
+  "nombre_real": null,
+  "nacimiento": null,
+  "muerte": null,
+  "miembros_lote": [],
+  "obras": 0,
+  "nacionalidad": "Venezuelan"
+ },
+ {
+  "lote_id": "los-montaneros-andes",
+  "nombre": "Los Montañeros",
+  "tipo_lote": "group",
+  "estado": "nuevo",
+  "metodo": "nuevo",
+  "artistas": [],
+  "personas_candidatas": [],
+  "nombre_real": null,
+  "nacimiento": null,
+  "muerte": null,
+  "miembros_lote": [],
+  "obras": 0,
+  "nacionalidad": "Venezuelan"
+ },
+ {
+  "lote_id": "ricardo-aguirre",
+  "nombre": "Ricardo Aguirre",
+  "tipo_lote": "solo",
+  "estado": "nuevo",
+  "metodo": "nuevo",
+  "artistas": [],
+  "personas_candidatas": [
+   {
+    "id": 20547,
+    "nombre": "Ricardo Aguirre",
+    "nombre_real": null,
+    "nacimiento": null,
+    "muerte": null,
+    "fallecido": null,
+    "venezolano": "true",
+    "bio": 0,
+    "creditos": 14
+   }
+  ],
+  "nombre_real": "Ricardo José Aguirre González",
+  "nacimiento": {
+   "date": "1939-05-09",
+   "place": "Maracaibo, Zulia, Venezuela"
+  },
+  "muerte": {
+   "date": "1969-11-08",
+   "place": "Maracaibo, Zulia, Venezuela"
+  },
+  "miembros_lote": [],
+  "obras": 1,
+  "nacionalidad": "Venezuelan"
+ },
+ {
+  "lote_id": "cardenales-del-exito",
+  "nombre": "Cardenales del Éxito",
+  "tipo_lote": "group",
+  "estado": "nuevo",
+  "metodo": "nuevo",
+  "artistas": [],
+  "personas_candidatas": [],
+  "nombre_real": null,
+  "nacimiento": null,
+  "muerte": null,
+  "miembros_lote": [],
+  "obras": 0,
+  "nacionalidad": "Venezuelan"
+ },
+ {
+  "lote_id": "gran-coquivacoa",
+  "nombre": "Gran Coquivacoa",
+  "tipo_lote": "group",
+  "estado": "nuevo",
+  "metodo": "nuevo",
+  "artistas": [],
+  "personas_candidatas": [],
+  "nombre_real": null,
+  "nacimiento": null,
+  "muerte": null,
+  "miembros_lote": [],
+  "obras": 4,
+  "nacionalidad": "Venezuelan"
+ },
+ {
+  "lote_id": "maracaibo-15",
+  "nombre": "Maracaibo 15",
+  "tipo_lote": "group",
+  "estado": "nuevo",
+  "metodo": "nuevo",
+  "artistas": [],
+  "personas_candidatas": [],
+  "nombre_real": null,
+  "nacimiento": null,
+  "muerte": null,
+  "miembros_lote": [
+   "Betulio Medina (fundador, voz líder, director)"
+  ],
+  "obras": 4,
+  "nacionalidad": "Venezuelan"
+ },
+ {
+  "lote_id": "betulio-medina",
+  "nombre": "Betulio Medina",
+  "tipo_lote": "solo",
+  "estado": "nuevo",
+  "metodo": "nuevo",
+  "artistas": [],
+  "personas_candidatas": [
+   {
+    "id": 7820,
+    "nombre": "Betulio Medina",
+    "nombre_real": null,
+    "nacimiento": null,
+    "muerte": null,
+    "fallecido": null,
+    "venezolano": "true",
+    "bio": 152,
+    "creditos": 5
+   }
+  ],
+  "nombre_real": "Betulio Enrique Medina Paz",
+  "nacimiento": {
+   "date": "1949-07-05",
+   "place": "San Rafael de El Moján, Zulia, Venezuela"
+  },
+  "muerte": {
+   "date": null,
+   "place": null
+  },
+  "miembros_lote": [],
+  "obras": 0,
+  "nacionalidad": "Venezuelan"
+ },
+ {
+  "lote_id": "rincon-morales",
+  "nombre": "Rincón Morales",
+  "tipo_lote": "group",
+  "estado": "nuevo",
+  "metodo": "nuevo",
+  "artistas": [],
+  "personas_candidatas": [],
+  "nombre_real": null,
+  "nacimiento": null,
+  "muerte": null,
+  "miembros_lote": [],
+  "obras": 0,
+  "nacionalidad": "Venezuelan"
+ },
+ {
+  "lote_id": "barrio-obrero-cabimas",
+  "nombre": "Barrio Obrero de Cabimas",
+  "tipo_lote": "group",
+  "estado": "nuevo",
+  "metodo": "nuevo",
+  "artistas": [],
+  "personas_candidatas": [],
+  "nombre_real": null,
+  "nacimiento": null,
+  "muerte": null,
+  "miembros_lote": [],
+  "obras": 0,
+  "nacionalidad": "Venezuelan"
+ },
+ {
+  "lote_id": "ricardo-cepeda",
+  "nombre": "Ricardo Cepeda",
+  "tipo_lote": "solo",
+  "estado": "nuevo",
+  "metodo": "nuevo",
+  "artistas": [],
+  "personas_candidatas": [
+   {
+    "id": 7819,
+    "nombre": "Ricardo Cepeda",
+    "nombre_real": null,
+    "nacimiento": null,
+    "muerte": null,
+    "fallecido": null,
+    "venezolano": "true",
+    "bio": 133,
+    "creditos": 6
+   }
+  ],
+  "nombre_real": "Ricardo José Cepeda Olivares",
+  "nacimiento": {
+   "date": "1952-11-08",
+   "place": "Maracaibo, Zulia, Venezuela"
+  },
+  "muerte": {
+   "date": null,
+   "place": null
+  },
+  "miembros_lote": [],
+  "obras": 0,
+  "nacionalidad": "Venezuelan"
+ },
+ {
+  "lote_id": "astolfo-romero",
+  "nombre": "Astolfo Romero",
+  "tipo_lote": "solo",
+  "estado": "nuevo",
+  "metodo": "nuevo",
+  "artistas": [],
+  "personas_candidatas": [
+   {
+    "id": 27158,
+    "nombre": "Astolfo Romero",
+    "nombre_real": null,
+    "nacimiento": null,
+    "muerte": null,
+    "fallecido": null,
+    "venezolano": null,
+    "bio": 0,
+    "creditos": 7
+   }
+  ],
+  "nombre_real": "Astolfo José Romero Chacín",
+  "nacimiento": {
+   "date": "1950-02-08",
+   "place": "Maracaibo, Zulia, Venezuela"
+  },
+  "muerte": {
+   "date": "2000-05-20",
+   "place": "Maracaibo, Zulia, Venezuela"
+  },
+  "miembros_lote": [],
+  "obras": 0,
+  "nacionalidad": "Venezuelan"
+ },
+ {
+  "lote_id": "the-same-people",
+  "nombre": "The Same People",
+  "tipo_lote": "group",
+  "estado": "nuevo",
+  "metodo": "nuevo",
+  "artistas": [],
+  "personas_candidatas": [],
+  "nombre_real": null,
+  "nacimiento": null,
+  "muerte": null,
+  "miembros_lote": [],
+  "obras": 0,
+  "nacionalidad": "Venezuelan"
+ },
+ {
+  "lote_id": "family-ground",
+  "nombre": "Family Ground",
+  "tipo_lote": "group",
+  "estado": "nuevo",
+  "metodo": "nuevo",
+  "artistas": [],
+  "personas_candidatas": [],
+  "nombre_real": null,
+  "nacimiento": null,
+  "muerte": null,
+  "miembros_lote": [],
+  "obras": 0,
+  "nacionalidad": "Venezuelan"
+ },
+ {
+  "lote_id": "los-antanos-stadium",
+  "nombre": "Los Antaños del Stadium",
+  "tipo_lote": "group",
+  "estado": "nuevo",
+  "metodo": "nuevo",
+  "artistas": [],
+  "personas_candidatas": [],
+  "nombre_real": null,
+  "nacimiento": null,
+  "muerte": null,
+  "miembros_lote": [],
+  "obras": 0,
+  "nacionalidad": "Venezuelan"
+ },
+ {
+  "lote_id": "los-tucusitos",
+  "nombre": "Los Tucusitos",
+  "tipo_lote": "group",
+  "estado": "nuevo",
+  "metodo": "nuevo",
+  "artistas": [],
+  "personas_candidatas": [],
+  "nombre_real": null,
+  "nacimiento": null,
+  "muerte": null,
+  "miembros_lote": [],
+  "obras": 0,
+  "nacionalidad": "Venezuelan"
+ },
+ {
+  "lote_id": "popy",
+  "nombre": "Popy",
+  "tipo_lote": "solo",
+  "estado": "nuevo",
+  "metodo": "nuevo",
+  "artistas": [],
+  "personas_candidatas": [
+   {
+    "id": 11856,
+    "nombre": "Diony López",
+    "nombre_real": null,
+    "nacimiento": null,
+    "muerte": null,
+    "fallecido": null,
+    "venezolano": null,
+    "bio": 94,
+    "creditos": 1
+   },
+   {
+    "id": 29308,
+    "nombre": "Diony López",
+    "nombre_real": null,
+    "nacimiento": null,
+    "muerte": null,
+    "fallecido": null,
+    "venezolano": null,
+    "bio": 0,
+    "creditos": 1
+   }
+  ],
+  "nombre_real": "Dionisio Rafael López Ramos",
+  "nacimiento": {
+   "date": "1946-03-03",
+   "place": "Caracas, Venezuela"
+  },
+  "muerte": {
+   "date": "2010-08-27",
+   "place": "Caracas, Venezuela"
+  },
+  "miembros_lote": [],
+  "obras": 4,
+  "nacionalidad": "Venezuelan"
+ },
+ {
+  "lote_id": "nifu-nifa",
+  "nombre": "Payasitas Nifu Nifa",
+  "tipo_lote": "group",
+  "estado": "nuevo",
+  "metodo": "nuevo",
+  "artistas": [],
+  "personas_candidatas": [],
+  "nombre_real": null,
+  "nacimiento": null,
+  "muerte": null,
+  "miembros_lote": [],
+  "obras": 0,
+  "nacionalidad": "Venezuelan"
+ },
+ {
+  "lote_id": "la-rondallita",
+  "nombre": "La Rondallita",
+  "tipo_lote": "group",
+  "estado": "nuevo",
+  "metodo": "nuevo",
+  "artistas": [],
+  "personas_candidatas": [],
+  "nombre_real": null,
+  "nacimiento": null,
+  "muerte": null,
+  "miembros_lote": [],
+  "obras": 1,
+  "nacionalidad": "Venezuelan"
+ },
+ {
+  "lote_id": "billos-caracas-boys",
+  "nombre": "Billo's Caracas Boys",
+  "tipo_lote": "group",
+  "estado": "existe",
+  "metodo": "nombre/alias",
+  "artistas": [
+   {
+    "id": 3764,
+    "nombre": "Billo's Caracas Boys",
+    "tipo": "band",
+    "bio": 0,
+    "foto": false,
+    "ciudad": null,
+    "anio": null,
+    "discos": 127,
+    "miembros": []
+   }
+  ],
+  "personas_candidatas": [
+   {
+    "id": 26639,
+    "nombre": "Billo's Caracas Boys",
+    "nombre_real": null,
+    "nacimiento": null,
+    "muerte": null,
+    "fallecido": null,
+    "venezolano": null,
+    "bio": 0,
+    "creditos": 147
+   },
+   {
+    "id": 11996,
+    "nombre": "Billo's Caracas Boys",
+    "nombre_real": null,
+    "nacimiento": null,
+    "muerte": null,
+    "fallecido": null,
+    "venezolano": "true",
+    "bio": 0,
+    "creditos": 4
+   }
+  ],
+  "nombre_real": null,
+  "nacimiento": null,
+  "muerte": null,
+  "miembros_lote": [],
+  "obras": 0,
+  "nacionalidad": "Venezuelan"
+ },
+ {
+  "lote_id": "magdalena-sanchez",
+  "nombre": "Magdalena Sánchez",
+  "tipo_lote": "solo",
+  "estado": "existe",
+  "metodo": "nombre/alias",
+  "artistas": [
+   {
+    "id": 3890,
+    "nombre": "Magdalena Sánchez",
+    "tipo": "band",
+    "bio": 0,
+    "foto": false,
+    "ciudad": null,
+    "anio": null,
+    "discos": 2,
+    "miembros": []
+   }
+  ],
+  "personas_candidatas": [
+   {
+    "id": 31057,
+    "nombre": "Magdalena Sánchez",
+    "nombre_real": null,
+    "nacimiento": null,
+    "muerte": null,
+    "fallecido": null,
+    "venezolano": "true",
+    "bio": 0,
+    "creditos": 5
+   }
+  ],
+  "nombre_real": "María Magdalena Sánchez",
+  "nacimiento": {
+   "date": null,
+   "place": null
+  },
+  "muerte": {
+   "date": "2005-08-18",
+   "place": "Palo Negro, Aragua, Venezuela"
+  },
+  "miembros_lote": [],
+  "obras": 4,
+  "nacionalidad": "Venezuelan"
+ },
+ {
+  "lote_id": "daniel-calveti",
+  "nombre": "Daniel Calveti",
+  "tipo_lote": "solo",
+  "estado": "nuevo",
+  "metodo": "nuevo",
+  "artistas": [],
+  "personas_candidatas": [],
+  "nombre_real": null,
+  "nacimiento": {
+   "date": "1977-11-29",
+   "place": "Caracas, Venezuela"
+  },
+  "muerte": {
+   "date": null,
+   "place": null
+  },
+  "miembros_lote": [],
+  "obras": 0,
+  "nacionalidad": "Venezuelan"
+ },
+ {
+  "lote_id": "schola-cantorum-venezuela",
+  "nombre": "Schola Cantorum de Venezuela",
+  "tipo_lote": "group",
+  "estado": "nuevo",
+  "metodo": "nuevo",
+  "artistas": [],
+  "personas_candidatas": [],
+  "nombre_real": null,
+  "nacimiento": null,
+  "muerte": null,
+  "miembros_lote": [
+   "Alberto Grau (director fundador)",
+   "María Guinand (directora artística)",
+   "Luimar Arismendi (directora asociada)"
+  ],
+  "obras": 0,
+  "nacionalidad": "Venezuelan"
+ },
+ {
+  "lote_id": "orfeon-universitario-ucv",
+  "nombre": "Orfeón Universitario de la UCV",
+  "tipo_lote": "group",
+  "estado": "nuevo",
+  "metodo": "nuevo",
+  "artistas": [],
+  "personas_candidatas": [
+   {
+    "id": 25544,
+    "nombre": "Orfeón Universitario de la UCV",
+    "nombre_real": null,
+    "nacimiento": null,
+    "muerte": null,
+    "fallecido": null,
+    "venezolano": "true",
+    "bio": 0,
+    "creditos": 2
+   }
+  ],
+  "nombre_real": null,
+  "nacimiento": null,
+  "muerte": null,
+  "miembros_lote": [
+   "Antonio Estévez (fundador y primer director)"
+  ],
+  "obras": 0,
+  "nacionalidad": "Venezuelan"
+ },
+ {
+  "lote_id": "cantoria-alberto-grau",
+  "nombre": "Cantoría Alberto Grau",
+  "tipo_lote": "group",
+  "estado": "existe",
+  "metodo": "nombre/alias",
+  "artistas": [
+   {
+    "id": 3387,
+    "nombre": "Cantoría Alberto Grau",
+    "tipo": "band",
+    "bio": 0,
+    "foto": true,
+    "ciudad": null,
+    "anio": null,
+    "discos": 9,
+    "miembros": []
+   }
+  ],
+  "personas_candidatas": [
+   {
+    "id": 19339,
+    "nombre": "Cantoría Alberto Grau",
+    "nombre_real": null,
+    "nacimiento": null,
+    "muerte": null,
+    "fallecido": null,
+    "venezolano": null,
+    "bio": 0,
+    "creditos": 13
+   }
+  ],
+  "nombre_real": null,
+  "nacimiento": null,
+  "muerte": null,
+  "miembros_lote": [
+   "María Guinand (directora histórica)"
+  ],
+  "obras": 0,
+  "nacionalidad": "Venezuelan"
+ }
+]

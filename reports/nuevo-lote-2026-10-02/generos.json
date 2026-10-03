@@ -1,0 +1,1340 @@
+[
+ {
+  "termino": "Pop",
+  "usos": 47,
+  "estado": "exacto",
+  "slug": "pop"
+ },
+ {
+  "termino": "Rock",
+  "usos": 34,
+  "estado": "exacto",
+  "slug": "rock"
+ },
+ {
+  "termino": "Latin pop",
+  "usos": 30,
+  "estado": "exacto",
+  "slug": "pop-latino"
+ },
+ {
+  "termino": "Electronic",
+  "usos": 28,
+  "estado": "exacto",
+  "slug": "electronica"
+ },
+ {
+  "termino": "Clasica",
+  "usos": 25,
+  "estado": "propuesta",
+  "slug": "musica-clasica"
+ },
+ {
+  "termino": "Baladas",
+  "usos": 18,
+  "estado": "exacto",
+  "slug": "balada"
+ },
+ {
+  "termino": "Merengue",
+  "usos": 14,
+  "estado": "exacto",
+  "slug": "merengue"
+ },
+ {
+  "termino": "Salsa",
+  "usos": 14,
+  "estado": "exacto",
+  "slug": "salsa"
+ },
+ {
+  "termino": "Hip-Hop",
+  "usos": 13,
+  "estado": "exacto",
+  "slug": "hip-hop"
+ },
+ {
+  "termino": "Rap",
+  "usos": 13,
+  "estado": "exacto",
+  "slug": "hip-hop"
+ },
+ {
+  "termino": "romantic ballad",
+  "usos": 13,
+  "estado": "propuesta",
+  "slug": "balada"
+ },
+ {
+  "termino": "Bolero",
+  "usos": 11,
+  "estado": "exacto",
+  "slug": "bolero"
+ },
+ {
+  "termino": "R&B",
+  "usos": 11,
+  "estado": "exacto",
+  "slug": "r-and-b"
+ },
+ {
+  "termino": "Reggaeton",
+  "usos": 11,
+  "estado": "nuevo",
+  "slug": null
+ },
+ {
+  "termino": "Jazz",
+  "usos": 10,
+  "estado": "exacto",
+  "slug": "jazz"
+ },
+ {
+  "termino": "Soundtracks",
+  "usos": 10,
+  "estado": "nuevo",
+  "slug": null
+ },
+ {
+  "termino": "bolero",
+  "usos": 9,
+  "estado": "exacto",
+  "slug": "bolero"
+ },
+ {
+  "termino": "tropical",
+  "usos": 9,
+  "estado": "exacto",
+  "slug": "musica-tropical"
+ },
+ {
+  "termino": "alternative rock",
+  "usos": 8,
+  "estado": "exacto",
+  "slug": "rock-alternativo"
+ },
+ {
+  "termino": "Latin jazz",
+  "usos": 7,
+  "estado": "exacto",
+  "slug": "jazz-latino"
+ },
+ {
+  "termino": "Opera",
+  "usos": 7,
+  "estado": "nuevo",
+  "slug": null
+ },
+ {
+  "termino": "Reggae",
+  "usos": 7,
+  "estado": "exacto",
+  "slug": "reggae"
+ },
+ {
+  "termino": "Venezuelan nationalist music",
+  "usos": 7,
+  "estado": "nuevo",
+  "slug": null
+ },
+ {
+  "termino": "electroacoustic",
+  "usos": 6,
+  "estado": "exacto",
+  "slug": "electroacustica"
+ },
+ {
+  "termino": "orchestral",
+  "usos": 6,
+  "estado": "propuesta",
+  "slug": "musica-clasica"
+ },
+ {
+  "termino": "pop-rock",
+  "usos": 6,
+  "estado": "exacto",
+  "slug": "pop-rock"
+ },
+ {
+  "termino": "Punk",
+  "usos": 6,
+  "estado": "exacto",
+  "slug": "punk"
+ },
+ {
+  "termino": "technomerengue",
+  "usos": 6,
+  "estado": "nuevo",
+  "slug": null
+ },
+ {
+  "termino": "contemporary classical",
+  "usos": 5,
+  "estado": "propuesta",
+  "slug": "musica-clasica"
+ },
+ {
+  "termino": "Gothic",
+  "usos": 5,
+  "estado": "exacto",
+  "slug": "metal-gotico"
+ },
+ {
+  "termino": "post-punk",
+  "usos": 5,
+  "estado": "exacto",
+  "slug": "post-punk"
+ },
+ {
+  "termino": "reggaeton",
+  "usos": 5,
+  "estado": "nuevo",
+  "slug": null
+ },
+ {
+  "termino": "salsa",
+  "usos": 5,
+  "estado": "exacto",
+  "slug": "salsa"
+ },
+ {
+  "termino": "urban pop",
+  "usos": 5,
+  "estado": "nuevo",
+  "slug": null
+ },
+ {
+  "termino": "ambient",
+  "usos": 4,
+  "estado": "exacto",
+  "slug": "ambient"
+ },
+ {
+  "termino": "blues",
+  "usos": 4,
+  "estado": "exacto",
+  "slug": "blues"
+ },
+ {
+  "termino": "Blues",
+  "usos": 4,
+  "estado": "exacto",
+  "slug": "blues"
+ },
+ {
+  "termino": "blues-rock",
+  "usos": 4,
+  "estado": "exacto",
+  "slug": "blues-rock"
+ },
+ {
+  "termino": "disco",
+  "usos": 4,
+  "estado": "exacto",
+  "slug": "disco"
+ },
+ {
+  "termino": "Latin rap",
+  "usos": 4,
+  "estado": "propuesta",
+  "slug": "hip-hop"
+ },
+ {
+  "termino": "merengue",
+  "usos": 4,
+  "estado": "exacto",
+  "slug": "merengue"
+ },
+ {
+  "termino": "opera",
+  "usos": 4,
+  "estado": "nuevo",
+  "slug": null
+ },
+ {
+  "termino": "reggae",
+  "usos": 4,
+  "estado": "exacto",
+  "slug": "reggae"
+ },
+ {
+  "termino": "boom bap",
+  "usos": 3,
+  "estado": "exacto",
+  "slug": "boom-bap"
+ },
+ {
+  "termino": "Caribbean fusion",
+  "usos": 3,
+  "estado": "nuevo",
+  "slug": null
+ },
+ {
+  "termino": "chamber music",
+  "usos": 3,
+  "estado": "exacto",
+  "slug": "musica-de-camara"
+ },
+ {
+  "termino": "choral",
+  "usos": 3,
+  "estado": "exacto",
+  "slug": "musica-coral"
+ },
+ {
+  "termino": "conscious rap",
+  "usos": 3,
+  "estado": "propuesta",
+  "slug": "hip-hop"
+ },
+ {
+  "termino": "experimental electronic",
+  "usos": 3,
+  "estado": "propuesta",
+  "slug": "electronica"
+ },
+ {
+  "termino": "film score",
+  "usos": 3,
+  "estado": "nuevo",
+  "slug": null
+ },
+ {
+  "termino": "funk",
+  "usos": 3,
+  "estado": "exacto",
+  "slug": "funk"
+ },
+ {
+  "termino": "gothic rock",
+  "usos": 3,
+  "estado": "exacto",
+  "slug": "rock-gotico"
+ },
+ {
+  "termino": "house",
+  "usos": 3,
+  "estado": "exacto",
+  "slug": "house"
+ },
+ {
+  "termino": "indie rock",
+  "usos": 3,
+  "estado": "exacto",
+  "slug": "indie-rock"
+ },
+ {
+  "termino": "Latin rock",
+  "usos": 3,
+  "estado": "exacto",
+  "slug": "rock-latino"
+ },
+ {
+  "termino": "Latin trap",
+  "usos": 3,
+  "estado": "nuevo",
+  "slug": null
+ },
+ {
+  "termino": "new wave",
+  "usos": 3,
+  "estado": "exacto",
+  "slug": "new-wave"
+ },
+ {
+  "termino": "punk rock",
+  "usos": 3,
+  "estado": "exacto",
+  "slug": "punk-rock"
+ },
+ {
+  "termino": "sacred music",
+  "usos": 3,
+  "estado": "nuevo",
+  "slug": null
+ },
+ {
+  "termino": "salsa romántica",
+  "usos": 3,
+  "estado": "nuevo",
+  "slug": null
+ },
+ {
+  "termino": "ska",
+  "usos": 3,
+  "estado": "exacto",
+  "slug": "ska"
+ },
+ {
+  "termino": "tropical dance",
+  "usos": 3,
+  "estado": "propuesta",
+  "slug": "musica-tropical"
+ },
+ {
+  "termino": "underground hip-hop",
+  "usos": 3,
+  "estado": "propuesta",
+  "slug": "hip-hop"
+ },
+ {
+  "termino": "urbano",
+  "usos": 3,
+  "estado": "nuevo",
+  "slug": null
+ },
+ {
+  "termino": "Vallenato",
+  "usos": 3,
+  "estado": "exacto",
+  "slug": "vallenato"
+ },
+ {
+  "termino": "alternative pop",
+  "usos": 2,
+  "estado": "propuesta",
+  "slug": "pop"
+ },
+ {
+  "termino": "art song",
+  "usos": 2,
+  "estado": "no_genero",
+  "slug": null
+ },
+ {
+  "termino": "Bachata",
+  "usos": 2,
+  "estado": "exacto",
+  "slug": "bachata"
+ },
+ {
+  "termino": "contemporary jazz",
+  "usos": 2,
+  "estado": "propuesta",
+  "slug": "jazz"
+ },
+ {
+  "termino": "dancehall",
+  "usos": 2,
+  "estado": "exacto",
+  "slug": "dancehall"
+ },
+ {
+  "termino": "dark rock",
+  "usos": 2,
+  "estado": "exacto",
+  "slug": "rock-gotico"
+ },
+ {
+  "termino": "dark wave",
+  "usos": 2,
+  "estado": "propuesta",
+  "slug": "darkwave"
+ },
+ {
+  "termino": "deconstructed reggaeton",
+  "usos": 2,
+  "estado": "nuevo",
+  "slug": null
+ },
+ {
+  "termino": "drum and bass",
+  "usos": 2,
+  "estado": "exacto",
+  "slug": "drum-and-bass"
+ },
+ {
+  "termino": "dubstep",
+  "usos": 2,
+  "estado": "exacto",
+  "slug": "dubstep"
+ },
+ {
+  "termino": "electronic rock",
+  "usos": 2,
+  "estado": "exacto",
+  "slug": "rock-electronico"
+ },
+ {
+  "termino": "electropop",
+  "usos": 2,
+  "estado": "exacto",
+  "slug": "electropop"
+ },
+ {
+  "termino": "fusion",
+  "usos": 2,
+  "estado": "no_genero",
+  "slug": null
+ },
+ {
+  "termino": "hard rock",
+  "usos": 2,
+  "estado": "exacto",
+  "slug": "hard-rock"
+ },
+ {
+  "termino": "heavy metal",
+  "usos": 2,
+  "estado": "exacto",
+  "slug": "heavy-metal"
+ },
+ {
+  "termino": "lambada",
+  "usos": 2,
+  "estado": "nuevo",
+  "slug": null
+ },
+ {
+  "termino": "Latin alternative",
+  "usos": 2,
+  "estado": "exacto",
+  "slug": "rock-latino"
+ },
+ {
+  "termino": "Latin R&B",
+  "usos": 2,
+  "estado": "propuesta",
+  "slug": "r-and-b"
+ },
+ {
+  "termino": "lyric tenor",
+  "usos": 2,
+  "estado": "no_genero",
+  "slug": null
+ },
+ {
+  "termino": "neo-soul",
+  "usos": 2,
+  "estado": "propuesta",
+  "slug": "soul"
+ },
+ {
+  "termino": "pop rock",
+  "usos": 2,
+  "estado": "exacto",
+  "slug": "pop-rock"
+ },
+ {
+  "termino": "psychedelic pop",
+  "usos": 2,
+  "estado": "nuevo",
+  "slug": null
+ },
+ {
+  "termino": "R&B-influenced pop",
+  "usos": 2,
+  "estado": "propuesta",
+  "slug": "pop"
+ },
+ {
+  "termino": "romantic salsa",
+  "usos": 2,
+  "estado": "nuevo",
+  "slug": null
+ },
+ {
+  "termino": "romantic song",
+  "usos": 2,
+  "estado": "propuesta",
+  "slug": "balada"
+ },
+ {
+  "termino": "singer-songwriter",
+  "usos": 2,
+  "estado": "exacto",
+  "slug": "cantautor"
+ },
+ {
+  "termino": "techno",
+  "usos": 2,
+  "estado": "exacto",
+  "slug": "techno"
+ },
+ {
+  "termino": "tropical pop",
+  "usos": 2,
+  "estado": "propuesta",
+  "slug": "musica-tropical"
+ },
+ {
+  "termino": "underground rap",
+  "usos": 2,
+  "estado": "propuesta",
+  "slug": "hip-hop"
+ },
+ {
+  "termino": "accordion pop",
+  "usos": 1,
+  "estado": "nuevo",
+  "slug": null
+ },
+ {
+  "termino": "acid house",
+  "usos": 1,
+  "estado": "propuesta",
+  "slug": "house"
+ },
+ {
+  "termino": "acid jazz",
+  "usos": 1,
+  "estado": "exacto",
+  "slug": "acid-jazz"
+ },
+ {
+  "termino": "acousmatic",
+  "usos": 1,
+  "estado": "propuesta",
+  "slug": "electroacustica"
+ },
+ {
+  "termino": "Afro-Caribbean electronic",
+  "usos": 1,
+  "estado": "propuesta",
+  "slug": "latin-electronic-fusion"
+ },
+ {
+  "termino": "Afro-Caribbean pop",
+  "usos": 1,
+  "estado": "nuevo",
+  "slug": null
+ },
+ {
+  "termino": "alternative hip-hop",
+  "usos": 1,
+  "estado": "propuesta",
+  "slug": "rap-experimental"
+ },
+ {
+  "termino": "alternative metal",
+  "usos": 1,
+  "estado": "exacto",
+  "slug": "metal-alternativo"
+ },
+ {
+  "termino": "alternative R&B",
+  "usos": 1,
+  "estado": "propuesta",
+  "slug": "r-and-b"
+ },
+ {
+  "termino": "atonal/serial",
+  "usos": 1,
+  "estado": "no_genero",
+  "slug": null
+ },
+ {
+  "termino": "audio-reactive art",
+  "usos": 1,
+  "estado": "no_genero",
+  "slug": null
+ },
+ {
+  "termino": "avant-pop",
+  "usos": 1,
+  "estado": "nuevo",
+  "slug": null
+ },
+ {
+  "termino": "bachata",
+  "usos": 1,
+  "estado": "exacto",
+  "slug": "bachata"
+ },
+ {
+  "termino": "bachata crossover",
+  "usos": 1,
+  "estado": "nuevo",
+  "slug": null
+ },
+ {
+  "termino": "bachata-pop",
+  "usos": 1,
+  "estado": "nuevo",
+  "slug": null
+ },
+ {
+  "termino": "bachata-vallenato crossover",
+  "usos": 1,
+  "estado": "nuevo",
+  "slug": null
+ },
+ {
+  "termino": "baroque",
+  "usos": 1,
+  "estado": "propuesta",
+  "slug": "musica-antigua"
+ },
+ {
+  "termino": "beat",
+  "usos": 1,
+  "estado": "exacto",
+  "slug": "beat"
+ },
+ {
+  "termino": "Berlin School",
+  "usos": 1,
+  "estado": "propuesta",
+  "slug": "electronica"
+ },
+ {
+  "termino": "boogaloo",
+  "usos": 1,
+  "estado": "exacto",
+  "slug": "fusion-latina"
+ },
+ {
+  "termino": "breakcore",
+  "usos": 1,
+  "estado": "propuesta",
+  "slug": "drum-and-bass"
+ },
+ {
+  "termino": "Caribbean hip-hop",
+  "usos": 1,
+  "estado": "propuesta",
+  "slug": "hip-hop"
+ },
+ {
+  "termino": "chamber",
+  "usos": 1,
+  "estado": "propuesta",
+  "slug": "musica-de-camara"
+ },
+ {
+  "termino": "chamber jazz",
+  "usos": 1,
+  "estado": "propuesta",
+  "slug": "jazz"
+ },
+ {
+  "termino": "cinematic electronic",
+  "usos": 1,
+  "estado": "propuesta",
+  "slug": "electronica"
+ },
+ {
+  "termino": "classical guitar",
+  "usos": 1,
+  "estado": "no_genero",
+  "slug": null
+ },
+ {
+  "termino": "classical vocal",
+  "usos": 1,
+  "estado": "no_genero",
+  "slug": null
+ },
+ {
+  "termino": "computer music",
+  "usos": 1,
+  "estado": "propuesta",
+  "slug": "electroacustica"
+ },
+ {
+  "termino": "contemporary composition",
+  "usos": 1,
+  "estado": "propuesta",
+  "slug": "musica-clasica"
+ },
+ {
+  "termino": "contemporary singer-songwriter",
+  "usos": 1,
+  "estado": "propuesta",
+  "slug": "cantautor"
+ },
+ {
+  "termino": "cumbia",
+  "usos": 1,
+  "estado": "exacto",
+  "slug": "cumbia"
+ },
+ {
+  "termino": "cumbia-electronica",
+  "usos": 1,
+  "estado": "propuesta",
+  "slug": "latin-electronic-fusion"
+ },
+ {
+  "termino": "dance",
+  "usos": 1,
+  "estado": "exacto",
+  "slug": "dance"
+ },
+ {
+  "termino": "dance-punk",
+  "usos": 1,
+  "estado": "propuesta",
+  "slug": "post-punk"
+ },
+ {
+  "termino": "dance-rock",
+  "usos": 1,
+  "estado": "propuesta",
+  "slug": "rock-alternativo"
+ },
+ {
+  "termino": "dark folk",
+  "usos": 1,
+  "estado": "nuevo",
+  "slug": null
+ },
+ {
+  "termino": "deep house",
+  "usos": 1,
+  "estado": "exacto",
+  "slug": "house"
+ },
+ {
+  "termino": "descarga",
+  "usos": 1,
+  "estado": "exacto",
+  "slug": "descarga"
+ },
+ {
+  "termino": "documentary score",
+  "usos": 1,
+  "estado": "no_genero",
+  "slug": null
+ },
+ {
+  "termino": "drill",
+  "usos": 1,
+  "estado": "nuevo",
+  "slug": null
+ },
+ {
+  "termino": "drumless hip-hop",
+  "usos": 1,
+  "estado": "nuevo",
+  "slug": null
+ },
+ {
+  "termino": "EBM",
+  "usos": 1,
+  "estado": "exacto",
+  "slug": "ebm"
+ },
+ {
+  "termino": "EDM pop",
+  "usos": 1,
+  "estado": "propuesta",
+  "slug": "dance"
+ },
+ {
+  "termino": "electro",
+  "usos": 1,
+  "estado": "exacto",
+  "slug": "electronica"
+ },
+ {
+  "termino": "electronic dance music",
+  "usos": 1,
+  "estado": "propuesta",
+  "slug": "dance"
+ },
+ {
+  "termino": "electronic jazz",
+  "usos": 1,
+  "estado": "propuesta",
+  "slug": "nu-jazz"
+ },
+ {
+  "termino": "electronic music",
+  "usos": 1,
+  "estado": "exacto",
+  "slug": "electronica"
+ },
+ {
+  "termino": "ethnosonics",
+  "usos": 1,
+  "estado": "no_genero",
+  "slug": null
+ },
+ {
+  "termino": "experimental club",
+  "usos": 1,
+  "estado": "propuesta",
+  "slug": "electronica"
+ },
+ {
+  "termino": "folk-pop",
+  "usos": 1,
+  "estado": "propuesta",
+  "slug": "folk"
+ },
+ {
+  "termino": "freestyle",
+  "usos": 1,
+  "estado": "nuevo",
+  "slug": null
+ },
+ {
+  "termino": "gaita fusion",
+  "usos": 1,
+  "estado": "propuesta",
+  "slug": "gaita"
+ },
+ {
+  "termino": "garage",
+  "usos": 1,
+  "estado": "propuesta",
+  "slug": "garage-rock"
+ },
+ {
+  "termino": "ghost-wave",
+  "usos": 1,
+  "estado": "nuevo",
+  "slug": null
+ },
+ {
+  "termino": "grunge",
+  "usos": 1,
+  "estado": "exacto",
+  "slug": "grunge"
+ },
+ {
+  "termino": "guajira",
+  "usos": 1,
+  "estado": "propuesta",
+  "slug": "son"
+ },
+ {
+  "termino": "guaracha",
+  "usos": 1,
+  "estado": "exacto",
+  "slug": "guaracha"
+ },
+ {
+  "termino": "hard techno",
+  "usos": 1,
+  "estado": "propuesta",
+  "slug": "techno"
+ },
+ {
+  "termino": "hip-hop fusion",
+  "usos": 1,
+  "estado": "propuesta",
+  "slug": "hip-hop"
+ },
+ {
+  "termino": "house fusion",
+  "usos": 1,
+  "estado": "propuesta",
+  "slug": "house"
+ },
+ {
+  "termino": "IDM",
+  "usos": 1,
+  "estado": "exacto",
+  "slug": "idm"
+ },
+ {
+  "termino": "industrial drum and bass",
+  "usos": 1,
+  "estado": "propuesta",
+  "slug": "drum-and-bass"
+ },
+ {
+  "termino": "industrial hip-hop",
+  "usos": 1,
+  "estado": "nuevo",
+  "slug": null
+ },
+ {
+  "termino": "industrial metal",
+  "usos": 1,
+  "estado": "exacto",
+  "slug": "metal-industrial"
+ },
+ {
+  "termino": "instrumental electronic",
+  "usos": 1,
+  "estado": "propuesta",
+  "slug": "electronica"
+ },
+ {
+  "termino": "jazz fusion",
+  "usos": 1,
+  "estado": "exacto",
+  "slug": "jazz-fusion"
+ },
+ {
+  "termino": "jazz-pop",
+  "usos": 1,
+  "estado": "propuesta",
+  "slug": "jazz"
+ },
+ {
+  "termino": "jungle",
+  "usos": 1,
+  "estado": "propuesta",
+  "slug": "drum-and-bass"
+ },
+ {
+  "termino": "krautrock",
+  "usos": 1,
+  "estado": "propuesta",
+  "slug": "rock-experimental"
+ },
+ {
+  "termino": "Latin dance",
+  "usos": 1,
+  "estado": "propuesta",
+  "slug": "dance"
+ },
+ {
+  "termino": "left-field pop",
+  "usos": 1,
+  "estado": "nuevo",
+  "slug": null
+ },
+ {
+  "termino": "live electronics",
+  "usos": 1,
+  "estado": "propuesta",
+  "slug": "electroacustica"
+ },
+ {
+  "termino": "lo-fi",
+  "usos": 1,
+  "estado": "propuesta",
+  "slug": "electronica"
+ },
+ {
+  "termino": "male soprano",
+  "usos": 1,
+  "estado": "no_genero",
+  "slug": null
+ },
+ {
+  "termino": "melodic techno",
+  "usos": 1,
+  "estado": "propuesta",
+  "slug": "techno"
+ },
+ {
+  "termino": "merengue venezolano",
+  "usos": 1,
+  "estado": "propuesta",
+  "slug": "merengue"
+ },
+ {
+  "termino": "metalstep",
+  "usos": 1,
+  "estado": "propuesta",
+  "slug": "dubstep"
+ },
+ {
+  "termino": "modern classical",
+  "usos": 1,
+  "estado": "propuesta",
+  "slug": "neoclasica"
+ },
+ {
+  "termino": "modern jazz",
+  "usos": 1,
+  "estado": "propuesta",
+  "slug": "jazz"
+ },
+ {
+  "termino": "new age",
+  "usos": 1,
+  "estado": "exacto",
+  "slug": "new-age"
+ },
+ {
+  "termino": "noise",
+  "usos": 1,
+  "estado": "exacto",
+  "slug": "noise"
+ },
+ {
+  "termino": "nu metal",
+  "usos": 1,
+  "estado": "exacto",
+  "slug": "nu-metal"
+ },
+ {
+  "termino": "Onda Nueva",
+  "usos": 1,
+  "estado": "nuevo",
+  "slug": null
+ },
+ {
+  "termino": "opera conducting",
+  "usos": 1,
+  "estado": "no_genero",
+  "slug": null
+ },
+ {
+  "termino": "operatic soprano",
+  "usos": 1,
+  "estado": "no_genero",
+  "slug": null
+ },
+ {
+  "termino": "orchestral conducting",
+  "usos": 1,
+  "estado": "no_genero",
+  "slug": null
+ },
+ {
+  "termino": "orchestral pop",
+  "usos": 1,
+  "estado": "nuevo",
+  "slug": null
+ },
+ {
+  "termino": "political rap",
+  "usos": 1,
+  "estado": "propuesta",
+  "slug": "hip-hop"
+ },
+ {
+  "termino": "popular song",
+  "usos": 1,
+  "estado": "no_genero",
+  "slug": null
+ },
+ {
+  "termino": "popular Venezuelan forms",
+  "usos": 1,
+  "estado": "propuesta",
+  "slug": "musica-tradicional"
+ },
+ {
+  "termino": "progressive ambient",
+  "usos": 1,
+  "estado": "propuesta",
+  "slug": "ambient"
+ },
+ {
+  "termino": "progressive electronic",
+  "usos": 1,
+  "estado": "propuesta",
+  "slug": "electronica"
+ },
+ {
+  "termino": "progressive rock",
+  "usos": 1,
+  "estado": "exacto",
+  "slug": "rock-progresivo"
+ },
+ {
+  "termino": "psychedelic rock",
+  "usos": 1,
+  "estado": "exacto",
+  "slug": "rock-psicodelico"
+ },
+ {
+  "termino": "rap rock",
+  "usos": 1,
+  "estado": "exacto",
+  "slug": "rap-metal"
+ },
+ {
+  "termino": "Raptor House",
+  "usos": 1,
+  "estado": "nuevo",
+  "slug": null
+ },
+ {
+  "termino": "rastafari reggae",
+  "usos": 1,
+  "estado": "propuesta",
+  "slug": "roots-reggae"
+ },
+ {
+  "termino": "retrofuturismopsicotropical",
+  "usos": 1,
+  "estado": "nuevo",
+  "slug": null
+ },
+ {
+  "termino": "rock",
+  "usos": 1,
+  "estado": "exacto",
+  "slug": "rock"
+ },
+ {
+  "termino": "Romantic piano",
+  "usos": 1,
+  "estado": "no_genero",
+  "slug": null
+ },
+ {
+  "termino": "romantic pop",
+  "usos": 1,
+  "estado": "propuesta",
+  "slug": "pop-latino"
+ },
+ {
+  "termino": "roots reggae",
+  "usos": 1,
+  "estado": "exacto",
+  "slug": "roots-reggae"
+ },
+ {
+  "termino": "salsa brava",
+  "usos": 1,
+  "estado": "propuesta",
+  "slug": "salsa"
+ },
+ {
+  "termino": "salsa dura",
+  "usos": 1,
+  "estado": "propuesta",
+  "slug": "salsa"
+ },
+ {
+  "termino": "salsa juvenil",
+  "usos": 1,
+  "estado": "nuevo",
+  "slug": null
+ },
+ {
+  "termino": "ska punk",
+  "usos": 1,
+  "estado": "exacto",
+  "slug": "ska-punk"
+ },
+ {
+  "termino": "son cubano",
+  "usos": 1,
+  "estado": "propuesta",
+  "slug": "son"
+ },
+ {
+  "termino": "songwriting",
+  "usos": 1,
+  "estado": "no_genero",
+  "slug": null
+ },
+ {
+  "termino": "soul-inflected urbano",
+  "usos": 1,
+  "estado": "nuevo",
+  "slug": null
+ },
+ {
+  "termino": "symphonic repertory",
+  "usos": 1,
+  "estado": "propuesta",
+  "slug": "musica-clasica"
+ },
+ {
+  "termino": "symphonic rock",
+  "usos": 1,
+  "estado": "exacto",
+  "slug": "rock-sinfonico"
+ },
+ {
+  "termino": "synthesizer music",
+  "usos": 1,
+  "estado": "propuesta",
+  "slug": "electronica"
+ },
+ {
+  "termino": "telenovela theme music",
+  "usos": 1,
+  "estado": "no_genero",
+  "slug": null
+ },
+ {
+  "termino": "television music",
+  "usos": 1,
+  "estado": "no_genero",
+  "slug": null
+ },
+ {
+  "termino": "television song",
+  "usos": 1,
+  "estado": "no_genero",
+  "slug": null
+ },
+ {
+  "termino": "traditional popular music",
+  "usos": 1,
+  "estado": "propuesta",
+  "slug": "musica-tradicional"
+ },
+ {
+  "termino": "trap",
+  "usos": 1,
+  "estado": "nuevo",
+  "slug": null
+ },
+ {
+  "termino": "tribal house",
+  "usos": 1,
+  "estado": "propuesta",
+  "slug": "house"
+ },
+ {
+  "termino": "tropical bass",
+  "usos": 1,
+  "estado": "propuesta",
+  "slug": "latin-electronic-fusion"
+ },
+ {
+  "termino": "tropical dance orchestra",
+  "usos": 1,
+  "estado": "propuesta",
+  "slug": "musica-tropical"
+ },
+ {
+  "termino": "tropical fusion",
+  "usos": 1,
+  "estado": "propuesta",
+  "slug": "musica-tropical"
+ },
+ {
+  "termino": "vallenato crossover",
+  "usos": 1,
+  "estado": "nuevo",
+  "slug": null
+ },
+ {
+  "termino": "vallenato repertory",
+  "usos": 1,
+  "estado": "nuevo",
+  "slug": null
+ },
+ {
+  "termino": "Venezuelan folk fusion",
+  "usos": 1,
+  "estado": "propuesta",
+  "slug": "joropo-fusion"
+ },
+ {
+  "termino": "Venezuelan hip-hop",
+  "usos": 1,
+  "estado": "propuesta",
+  "slug": "hip-hop"
+ },
+ {
+  "termino": "Venezuelan jazz",
+  "usos": 1,
+  "estado": "propuesta",
+  "slug": "jazz-latino"
+ },
+ {
+  "termino": "Venezuelan traditions",
+  "usos": 1,
+  "estado": "propuesta",
+  "slug": "musica-tradicional"
+ },
+ {
+  "termino": "world fusion",
+  "usos": 1,
+  "estado": "exacto",
+  "slug": "world-ethnic"
+ },
+ {
+  "termino": "world music",
+  "usos": 1,
+  "estado": "exacto",
+  "slug": "world-ethnic"
+ }
+]

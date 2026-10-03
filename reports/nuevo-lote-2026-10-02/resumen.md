@@ -1,0 +1,222 @@
+# Nuevo lote 2026-10-02 — etapa 0
+
+Artistas: 67 existen, 51 nuevos.
+Términos de género: {'exacto': 84, 'propuesta': 80, 'nuevo': 40, 'no_genero': 19}.
+Discos del lote: {'artista_nuevo': 133, 'falta': 70, 'existe': 218, 'variante': 30}.
+
+## Artistas nuevos y personas que ya existen con ese nombre
+
+- **José Coraspe** (solo): —
+- **Aérea Negrot** (solo): —
+- **DJ Babatr** (solo): —
+- **Sunsplash** (solo): P1022 Alberto Stangarone (6 créditos); P19776 Sunsplash (1 créditos); P19777 Alberto Stangarone (1 créditos); P18567 Sunsplash (0 créditos)
+- **Adolescent's Orquesta** (orchestra): —
+- **Porfi Baloa** (solo): —
+- **Fedora Alemán** (solo): —
+- **Aquiles Machado** (solo): P30404 Aquiles Machado (2 créditos)
+- **Edgar Bastidas** (solo): —
+- **Diveana** (solo): P27228 Diveana (12 créditos)
+- **Miguel Moly** (solo): —
+- **Joseph Palacios** (solo): —
+- **Chino & Nacho** (duo): P25848 Chino y Nacho (3 créditos)
+- **Mau y Ricky** (duo): —
+- **Danny Ocean** (solo): —
+- **Jerry Di** (solo): —
+- **Micro TDH** (solo): —
+- **Elena Rose** (solo): —
+- **Joaquina** (solo): —
+- **Aneeka** (solo): —
+- **Akapellah** (solo): —
+- **Neutro Shorty** (solo): —
+- **Big Soto** (solo): —
+- **Gabylonia** (solo): —
+- **BigBro Blues Band** (band): —
+- **Nascuy Linares** (solo): P8997 Nascuy Linares (1 créditos)
+- **Diego Ayala Raffalli** (solo): —
+- **Teresa Carreño** (solo): P19257 Teresa Carreño (5 créditos)
+- **Antonio Lauro** (solo): P19071 Antonio Lauro (75 créditos)
+- **Vicente Emilio Sojo** (solo): P19382 Vicente Emilio Sojo (19 créditos)
+- **Modesta Bor** (solo): P19499 Modesta Bor (5 créditos)
+- **Antonio Estévez** (solo): P19720 Antonio Estévez (19 créditos); P19503 Antonio Estevez (8 créditos)
+- **Inocente Carreño** (solo): P3562 Inocente Carreño (38 créditos)
+- **Juan Bautista Plaza** (solo): P19213 Juan Bautista Plaza (22 créditos)
+- **Adina Izarra** (solo): P33221 Adina Izarra (2 créditos)
+- **Alfredo Rugeles** (solo): P2645 Alfredo Rugeles (6 créditos)
+- **Gustavo Dudamel** (solo): —
+- **Guillermo Castillo Bustamante** (solo): P25598 Guillermo Castillo Bustamante (6 créditos)
+- **Irepelusa** (solo): —
+- **Motherflowers** (group): —
+- **Salserín** (group): —
+- **Nelson Arrieta** (solo): P3622 Nelson Arrieta (45 créditos)
+- **Omar Enrique** (solo): —
+- **Karolina con K** (solo): —
+- **Los Fantasmas del Caribe** (group): —
+- **LAGOS** (group): —
+- **Samuel Mariño** (solo): —
+- **Fur Coat** (group): —
+- **Oksana Linde** (solo): —
+- **Alfredo del Mónaco** (solo): P33209 Alfredo del Mónaco (2 créditos)
+- **Pablo Gil** (solo): P18955 Pablo Gil (62 créditos); P2398 Pablo Gil (7 créditos)
+
+## Términos de género sin equivalente (decide Brian)
+
+- Reggaeton (11)
+- Soundtracks (10)
+- Opera (7)
+- Venezuelan nationalist music (7)
+- technomerengue (6)
+- reggaeton (5)
+- urban pop (5)
+- opera (4)
+- Caribbean fusion (3)
+- film score (3)
+- Latin trap (3)
+- sacred music (3)
+- salsa romántica (3)
+- urbano (3)
+- deconstructed reggaeton (2)
+- lambada (2)
+- psychedelic pop (2)
+- romantic salsa (2)
+- accordion pop (1)
+- Afro-Caribbean pop (1)
+- avant-pop (1)
+- bachata crossover (1)
+- bachata-pop (1)
+- bachata-vallenato crossover (1)
+- dark folk (1)
+- drill (1)
+- drumless hip-hop (1)
+- freestyle (1)
+- ghost-wave (1)
+- industrial hip-hop (1)
+- left-field pop (1)
+- Onda Nueva (1)
+- orchestral pop (1)
+- Raptor House (1)
+- retrofuturismopsicotropical (1)
+- salsa juvenil (1)
+- soul-inflected urbano (1)
+- trap (1)
+- vallenato crossover (1)
+- vallenato repertory (1)
+
+## Equivalencias propuestas (revisar)
+
+- Clasica → `musica-clasica` (25)
+- romantic ballad → `balada` (13)
+- orchestral → `musica-clasica` (6)
+- contemporary classical → `musica-clasica` (5)
+- Latin rap → `hip-hop` (4)
+- conscious rap → `hip-hop` (3)
+- experimental electronic → `electronica` (3)
+- tropical dance → `musica-tropical` (3)
+- underground hip-hop → `hip-hop` (3)
+- alternative pop → `pop` (2)
+- contemporary jazz → `jazz` (2)
+- dark wave → `darkwave` (2)
+- Latin R&B → `r-and-b` (2)
+- neo-soul → `soul` (2)
+- R&B-influenced pop → `pop` (2)
+- romantic song → `balada` (2)
+- tropical pop → `musica-tropical` (2)
+- underground rap → `hip-hop` (2)
+- acid house → `house` (1)
+- acousmatic → `electroacustica` (1)
+- Afro-Caribbean electronic → `latin-electronic-fusion` (1)
+- alternative hip-hop → `rap-experimental` (1)
+- alternative R&B → `r-and-b` (1)
+- baroque → `musica-antigua` (1)
+- Berlin School → `electronica` (1)
+- breakcore → `drum-and-bass` (1)
+- Caribbean hip-hop → `hip-hop` (1)
+- chamber → `musica-de-camara` (1)
+- chamber jazz → `jazz` (1)
+- cinematic electronic → `electronica` (1)
+- computer music → `electroacustica` (1)
+- contemporary composition → `musica-clasica` (1)
+- contemporary singer-songwriter → `cantautor` (1)
+- cumbia-electronica → `latin-electronic-fusion` (1)
+- dance-punk → `post-punk` (1)
+- dance-rock → `rock-alternativo` (1)
+- EDM pop → `dance` (1)
+- electronic dance music → `dance` (1)
+- electronic jazz → `nu-jazz` (1)
+- experimental club → `electronica` (1)
+- folk-pop → `folk` (1)
+- gaita fusion → `gaita` (1)
+- garage → `garage-rock` (1)
+- guajira → `son` (1)
+- hard techno → `techno` (1)
+- hip-hop fusion → `hip-hop` (1)
+- house fusion → `house` (1)
+- industrial drum and bass → `drum-and-bass` (1)
+- instrumental electronic → `electronica` (1)
+- jazz-pop → `jazz` (1)
+- jungle → `drum-and-bass` (1)
+- krautrock → `rock-experimental` (1)
+- Latin dance → `dance` (1)
+- live electronics → `electroacustica` (1)
+- lo-fi → `electronica` (1)
+- melodic techno → `techno` (1)
+- merengue venezolano → `merengue` (1)
+- metalstep → `dubstep` (1)
+- modern classical → `neoclasica` (1)
+- modern jazz → `jazz` (1)
+- political rap → `hip-hop` (1)
+- popular Venezuelan forms → `musica-tradicional` (1)
+- progressive ambient → `ambient` (1)
+- progressive electronic → `electronica` (1)
+- rastafari reggae → `roots-reggae` (1)
+- romantic pop → `pop-latino` (1)
+- salsa brava → `salsa` (1)
+- salsa dura → `salsa` (1)
+- son cubano → `son` (1)
+- symphonic repertory → `musica-clasica` (1)
+- synthesizer music → `electronica` (1)
+- traditional popular music → `musica-tradicional` (1)
+- tribal house → `house` (1)
+- tropical bass → `latin-electronic-fusion` (1)
+- tropical dance orchestra → `musica-tropical` (1)
+- tropical fusion → `musica-tropical` (1)
+- Venezuelan folk fusion → `joropo-fusion` (1)
+- Venezuelan hip-hop → `hip-hop` (1)
+- Venezuelan jazz → `jazz-latino` (1)
+- Venezuelan traditions → `musica-tradicional` (1)
+
+## Descartados por no ser estilo
+
+art song, fusion, lyric tenor, atonal/serial, audio-reactive art, classical guitar, classical vocal, documentary score, ethnosonics, male soprano, opera conducting, operatic soprano, orchestral conducting, popular song, Romantic piano, songwriting, telenovela theme music, television music, television song
+
+## Discos con título variante (revisar antes de la etapa 3)
+
+- Dimensión Latina: «Dimensión Latina en New York» (1976) ≈ «Dimensión Latina 76 1/2 en Nueva York» (1976, id 6939)
+- Dimensión Latina: «Dueños del Caribe» (1990) ≈ «Los Dueños Del Caribe» (1990, id 6956)
+- Aldemaro Romero: «Brisa Brasilera» (2001) ≈ «Brisa Brasileña» (2001, id 9475)
+- Aldemaro Romero: «40 años de éxitos» (2007) ≈ «40 Años 40 Exitos» (2007, id 9478)
+- Ricardo Montaner: «Ricardo Montaner, Vol. 2» (1988) ≈ «Ricardo Montaner 2» (1988, id 3600)
+- Ricardo Montaner: «Con la London Metropolitan Orchestra» (1999) ≈ «London Metropolitan Orchestra» (1999, id 9935)
+- Ilan Chester: «Canciones de Todos» (1983) ≈ «Canciones De Todos Los Días» (1983, id 4231)
+- Ilan Chester: «Tesoros de la Música Venezolana» (2009) ≈ «Tesoros De La Música Venezolana: LARA» (2009, id 9926)
+- Dermis Tatú: «La violó, la mató, la picó» (1995) ≈ «La Violó La Mató y La Picó» (1995, id 163)
+- La Vida Bohème: «Diáspora Vol. 1» (2024) ≈ «Diáspora (Vol. 1)» (2024, id 5548)
+- Pastel de Gente: «Estas Viejo Rock and Roll» (None) ≈ «Estas Viejo Rock N' Roll» (1987, id 1654)
+- Carlos Baute: «Orígenes I» (1994) ≈ «Orígenes» (1994, id 3646)
+- Carlos Baute: «Orígenes II» (1997) ≈ «Orígenes II Tambores» (1996, id 3420)
+- Carlos Baute: «Yo Nací Para Quererte» (1999) ≈ «Yo Nací Para Querer...» (1999, id 3849)
+- Servando & Florentino: «Servando & Florentino» (2004) ≈ «Servando y Florentino» (2004, id 4496)
+- Federico y su Combo Latino: «Durísimo» (1967) ≈ «Durísimo - Vol. 4» (1967, id 7002)
+- Federico y su Combo Latino: «Federico booga-loo» (1968) ≈ «Federico Boogaloo» (1968, id 7003)
+- Federico y su Combo Latino: «Vibración & ritmo» (1969) ≈ «Vibración y Ritmo» (1969, id 7006)
+- Federico y su Combo Latino: «Dos sets con Federico y Su Combo» (1970) ≈ «Dos Sets» (1970, id 7007)
+- Federico y su Combo Latino: «Nuevamente Federico» (1984) ≈ «Nuevamente» (1983, id 7020)
+- Natusha: «Natusha 94» (1994) ≈ «Natusha» (1993, id 7642)
+- Natusha: «Natusha Remix 1» (None) ≈ «Remix» (1991, id 7641)
+- Natusha: «Natusha Remix 2» (None) ≈ «Remix» (1991, id 7641)
+- Natusha: «Natusha Sol y Luna» (None) ≈ «Natusha» (1993, id 7642)
+- Guillermo Dávila: «Guillermo Dávila V» (1988) ≈ «Guillermo Dávila 5» (1988, id 4193)
+- José Luis Rodríguez “El Puma”: «Inolvidable» (1997) ≈ «con Los Panchos Inolvidable» (1997, id 8155)
+- José Luis Rodríguez “El Puma”: «Immenso» (2017) ≈ «Inmenso» (2017, id 7894)
+- Mirla Castellanos: «Mirla Castellanos en Italia» (1968) ≈ «En Italia» (1968, id 8361)
+- Mirla Castellanos: «Mirla en vivo» (1980) ≈ «Mirla En Vivo - 20 Años» (1980, id 8369)
+- Rudy La Scala: «Cuerpo y alma» (1997) ≈ «En Cuerpo y Alma» (1997, id 3651)

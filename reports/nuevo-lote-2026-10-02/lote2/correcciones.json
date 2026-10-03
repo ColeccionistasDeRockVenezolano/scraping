@@ -1,0 +1,70 @@
+[
+ {
+  "op": "fusionar_artista",
+  "de": 3712,
+  "en": 3756,
+  "nota": "José Luis Rodríguez «El Puma» duplicado; nombre artístico como alias"
+ },
+ {
+  "op": "renombrar_artista",
+  "id": 1250,
+  "nombre": "Arca",
+  "alias": [
+   "Nuuro"
+  ],
+  "nota": "Arca publicó primero como Nuuro"
+ },
+ {
+  "op": "fusionar_artista",
+  "de": 835,
+  "en": 795,
+  "nota": "Triangular Ascension es alias de Zardonic; Gorepriest también",
+  "alias": [
+   "Triangular Ascension",
+   "Gorepriest"
+  ]
+ },
+ {
+  "op": "fusionar_persona",
+  "ids": [
+   1022,
+   19777
+  ],
+  "nota": "Alberto Stangarone (solo si comparten proyecto)"
+ },
+ {
+  "op": "fusionar_persona",
+  "ids": [
+   18567,
+   19776
+  ],
+  "nota": "Sunsplash como persona (solo si comparten proyecto)"
+ },
+ {
+  "op": "fusionar_persona",
+  "ids": [
+   2398,
+   18955
+  ],
+  "nota": "Pablo Gil (solo si comparten proyecto)"
+ },
+ {
+  "op": "fusionar_persona",
+  "ids": [
+   19503,
+   19720
+  ],
+  "nota": "Antonio Estévez (solo si comparten proyecto)"
+ },
+ {
+  "op": "persona_a_artista",
+  "persona": 25848,
+  "nota": "Chino y Nacho es un dúo"
+ },
+ {
+  "op": "persona_a_artista",
+  "persona": 26549,
+  "artista": 2014,
+  "nota": "Servando & Florentino ya es el artista 2014"
+ }
+]
