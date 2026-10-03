@@ -150,6 +150,12 @@ def ext_artist(page):
         ty = r.xpath("preceding::*[contains(@class,'disco_header_label')][1]//text()").get()
         rows.append({"h": h, "t": t, "y": (y.strip()[:12] if y else None), "ty": (ty.strip() if ty else None)})
     rec["rows"] = [x for x in rows if x["h"]]
+    # ¿stub? página de artista servida completa pero SIN discografía NI foto en RYM
+    # (verificado en vivo: #discography vacío en el HTML, 0 enlaces a /release/). No hay más que capturar.
+    rec["sinDiscografia"] = bool(
+        rec.get("name") and not rec.get("wall") and page.css("#discography")
+        and not page.css('a[href*="/release/"]') and not rec.get("photo")
+    )
     return rec
 
 
@@ -200,7 +206,8 @@ def recortar(rec):
             "nGen": len(rec.get("genres") or []), "photo": foto,
             "formed": rec.get("formed"), "og": rec.get("og"), "wall": bool(rec.get("wall")),
             "nTracks": len(rec.get("tracks") or []), "nCredits": len(rec.get("creditLinks") or []),
-            "at": time.strftime("%H:%M:%S"), "v": rec.get("v"), "src": "scrapling"}
+            "at": time.strftime("%H:%M:%S"), "v": rec.get("v"), "src": "scrapling",
+            "sinDiscografia": bool(rec.get("sinDiscografia"))}
 
 
 def es_ok_artista(e):
@@ -331,7 +338,7 @@ def main():
                 title = (page.css("title::text").get() or "")[:80]
             except Exception:
                 pass
-            blocked = page.status in (403, 503) or re.search(r"Un momento|Just a moment|Security check|Attention Required", title, re.I) or (page.status == 200 and not page.css("h1"))
+            blocked = page.status in (403, 503) or re.search(r"Un momento|Just a moment|Security check|Attention Required", title, re.I)
             if not blocked:
                 return page
             log(f"[bloqueo] ({page.status}) {title} — refresco cookies y enfrío (intento {intento}/{max_tries})")
@@ -344,7 +351,7 @@ def main():
     def procesar(items, fase, total_fase):
         hechos = 0
         fallos_seguidos = 0
-        for kind, href, row in items:
+        for pos, (kind, href, row) in enumerate(items):
             if args.limit and hechos >= args.limit:
                 return hechos
             url = "https://rateyourmusic.com" + href
@@ -354,18 +361,33 @@ def main():
                 log(f"[fallo] {href}: bloqueo persistente ({fallos_seguidos} seguidos)")
                 if fallos_seguidos >= 5:
                     # Cortacircuitos: muro sostenido -> espera paciente con sondas cada ~20 min
-                    # (refresca cookies en cada sonda; NO quema la cola saltando ítems).
+                    # (refresca cookies en cada sonda; no quema la cola).
                     log("[muro] sostenido: modo espera paciente (sondas cada ~20 min)")
-                    avisar_throttled("⚠️ CRV · Scrapling-RYM: RYM sostiene el muro. Quedo en espera paciente; si puedes, resuelve el captcha en el Firefox del marionette para refrescar la sesión compartida.")
+                    avisar_throttled("⚠️ CRV · Scrapling-RYM: RYM sostiene el muro. Quedo en espera paciente; si puedes, abre RYM un momento en tu Firefox.")
+                    ciclos = 0
                     while True:
                         time.sleep(random.uniform(900, 1500))
+                        ciclos += 1
                         page = fetch_una(url, max_tries=2)
                         if page is not None:
                             log("[muro] cedió: reanudo la cola")
                             avisar_throttled("▶️ CRV · Scrapling-RYM: el muro cedió; reanudé la captura.", min_gap=0)
                             fallos_seguidos = 0
                             break
-                continue
+                        # ¿ítem malo o tormenta global? sonda a un vecino de la cola:
+                        if ciclos >= 3 and pos + 1 < len(items):
+                            _k2, href2, _r2 = items[pos + 1]
+                            alt = fetch_una("https://rateyourmusic.com" + href2, max_tries=1)
+                            if alt is not None:
+                                log(f"[muro] hay página para otros: salto {href} (queda pendiente en esta pasada)")
+                                page = None
+                                break
+                        if ciclos >= 12:
+                            log(f"[muro] {ciclos} ciclos sin ceder: salto {href} (queda pendiente en esta pasada)")
+                            page = None
+                            break
+                if page is None:
+                    continue
             fallos_seguidos = 0
             try:
                 rec = ext_artist(page) if kind == "artist" else ext_release(page)
