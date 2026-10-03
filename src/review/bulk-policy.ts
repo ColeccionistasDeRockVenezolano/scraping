@@ -133,6 +133,9 @@ const CREDIT_LABEL = new RegExp([
 /** Un año, un número o un rango («1928», «1248-1254»): no es un nombre. */
 const ONLY_DIGITS = /^[\d\s.,/-]+$/u;
 
+/** «"Mi Tío Pánfilo"»: abre y cierra con comillas y no lleva otras dentro. */
+const WHOLLY_QUOTED = /^\s*["“”«][^"“”«»]+["“”»]\s*$/u;
+
 /** Palabras del nombre. */
 function nameTokenCount(name: string): number {
   return name.split(/\s+/u).filter(Boolean).length;
@@ -223,6 +226,13 @@ export function decideVerdict(input: PolicyInput): Verdict {
   if (input.kind === "person") {
     if (CREDIT_LABEL.test(input.name) || ONLY_DIGITS.test(input.name)) {
       return { kind: "hold", rule: "no-es-una-persona:rotulo", detail: "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)" };
+    }
+    // Brian (2026-10-02): lo que llega entero entre comillas suele ser un
+    // título («Cover Painting: "Mi Tío Pánfilo"»), aunque a veces es un apodo
+    // («"Ferrusquilla"»). No se crea: lo decide una persona. Las comillas
+    // dentro del nombre (Rafael "Pollo" Brito) no cuentan.
+    if (WHOLLY_QUOTED.test(input.name) && decision?.action !== "AUTO_MATCH") {
+      return { kind: "hold", rule: "no-es-una-persona:entre-comillas", detail: "nombre entero entre comillas: título o apodo, lo decide una persona" };
     }
     // Sincopa escribe «Título (Compositor)», pero también «Título (traducción)»,
     // «(Capricornio)» o «(Goyescas)». En jazz, clásica y new age, lo que SOLO

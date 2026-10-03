@@ -124,6 +124,15 @@ describe("decideVerdict", () => {
     }
   });
 
+  it("un nombre entero entre comillas queda abierto; las comillas de un apodo dentro del nombre no", () => {
+    for (const name of ['"Mi Tío Pánfilo"', '“Green Rectangles on Black”', '"Ferrusquilla"']) {
+      expect(decideVerdict({ kind: "person", name, decision: noMatch, sameName: [] }), name).toMatchObject({ kind: "hold", rule: "no-es-una-persona:entre-comillas" });
+    }
+    for (const name of ['Rafael "Pollo" Brito', '"Cheo" Valenzuela', 'Ignacio "Indio" Figueredo']) {
+      expect(decideVerdict({ kind: "person", name, decision: noMatch, sameName: [] }).kind, name).toBe("different");
+    }
+  });
+
   it("lo que solo llega como paréntesis de un título no se crea", () => {
     const parenthesis = { kind: "person" as const, decision: noMatch, sameName: [], onlyTitleParenthesis: true };
     expect(decideVerdict({ ...parenthesis, name: "Capricornio" })).toMatchObject({ kind: "hold", rule: "no-es-una-persona:parentesis-de-titulo" });
