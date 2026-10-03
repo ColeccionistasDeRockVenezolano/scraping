@@ -91,11 +91,18 @@ Decisiones de Brian, aplicadas con `scripts/resolve-sincopa-manual-review.ts`
 - **Conversiones**: Acoustic Recording Service → organización 2350 (estudio,
   distinta de 2256 «Acoustic Music Records»); La Otra Gente → artista 4327.
 
-Siguen en revisión, porque ningún homónimo comparte disco ni artista con la obra:
+Los cuatro en los que ningún homónimo compartía disco ni artista (Brian, 2026-10-03;
+fusiones en el run 11594 con `docs/decisions/2026-10-03-sincopa-homonimos-revision.json`,
+el resto en el run 11596):
 
-| Ficha | Nombre | Candidatos |
+| Ficha | Nombre | Resultado |
 | --- | --- | --- |
-| 28490 | Rec. Iván Pérez Rossi | 911, 20644 (la ficha no tiene créditos) |
-| 31028 | Comp. Jesús Rosas Marcano | 9650, 32526 |
-| 31379 | Recop: Juan Estévez | 13874, 23293, 23319 |
-| 32176 | Recop: José Antonio Calcaño | 6195, 15669, 16048 |
+| 28490 | Rec. Iván Pérez Rossi | 911 fusionado en 20644 (los dos de Serenata Guayanesa); la ficha vacía se retiró |
+| 31028 | Comp. Jesús Rosas Marcano | 9650 fusionado en 32526 (los dos en discos de Carlos Baute); los 3 créditos de «Sabor a Pueblo» pasaron a 32526 |
+| 31379 | Recop: Juan Estévez | ficha propia «Juan Estévez», recopilación (no es el de Angelus ni el productor de Ed Calle) |
+| 32176 | Recop: José Antonio Calcaño | ficha propia «José Antonio Calcaño», recopilación (no es ninguno de los rockeros) |
+
+Pendiente: el crédito «Rec. Iván Pérez Rossi» de «Corre Caballito» es del disco
+«La Luz Que Me Guía» de Juan Carlos Salazar (Sincopa latin_pop), que no está en
+el core: el artista quedó candidato (¿«Carlos Salazar» 2865?, ¿el dúo con Hernán
+Gamboa 3788?). Al promover ese disco el crédito debe ir a 20644.

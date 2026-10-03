@@ -38,6 +38,8 @@ const PREFIXES: Array<{ re: RegExp; role: Role }> = [
 
 type Decision =
   | { id: number; op: "rol"; into?: number }
+  | { id: number; op: "enlazar"; target: number; why: string }
+  | { id: number; op: "retirar"; why: string }
   | { id: number; op: "homonimo" }
   | { id: number; op: "grupo"; name: string; also?: number[] }
   | { id: number; op: "duo"; keepAs: string; partner: string }
@@ -50,9 +52,14 @@ const DECISIONS: Decision[] = [
   { id: 32206, op: "rol", into: 32205 }, // «Recop: UDAF» y «Comp: UDAF» son la misma sigla: una sola ficha.
   { id: 36374, op: "rol" }, { id: 36375, op: "rol" }, { id: 36376, op: "rol" },
   // Homónimos: enlace por proyecto común.
-  { id: 28490, op: "homonimo" }, { id: 30938, op: "homonimo" }, { id: 31028, op: "homonimo" }, { id: 31379, op: "homonimo" },
+  { id: 30938, op: "homonimo" },
   { id: 31426, op: "homonimo" }, { id: 31574, op: "homonimo" }, { id: 31670, op: "homonimo" }, { id: 31770, op: "homonimo" },
-  { id: 32176, op: "homonimo" }, { id: 32491, op: "homonimo" },
+  { id: 32491, op: "homonimo" },
+  // Los cuatro sin proyecto común (Brian, 2026-10-03; fusiones previas en el run 11594).
+  { id: 28490, op: "retirar", why: "ficha vacía: su crédito es de un disco que aún no está en el core; 911 y 20644 ya fusionados" },
+  { id: 31028, op: "enlazar", target: 32526, why: "el compositor Jesús Rosas Marcano (79 créditos); no hay otro que componga" },
+  { id: 31379, op: "rol" }, // Juan Estévez: ninguno de los homónimos encaja, ficha propia.
+  { id: 32176, op: "rol" }, // José Antonio Calcaño, no los rockeros homónimos: ficha propia.
   // Grupos: a artista. 31232 «Los Araucanos» es el mismo grupo mal tipado como persona.
   { id: 31247, op: "grupo", name: "Los Araucanos", also: [31232] },
   { id: 31335, op: "grupo", name: "Los Golperos Del Tocuyo" },
@@ -149,6 +156,8 @@ async function main(): Promise<void> {
     if (name === undefined) { plan.push({ ...decision, skip: "la ficha ya no existe" }); continue; }
     const credits = (await creditsOf(pool, decision.id)).length;
     if (decision.op === "rol") plan.push({ ...decision, name, credits, ...parseLabel(name) });
+    else if (decision.op === "enlazar") plan.push({ ...decision, name, credits, ...parseLabel(name) });
+    else if (decision.op === "retirar") plan.push({ ...decision, name, credits, ...(credits > 0 ? { skip: "la ficha tiene créditos" } : {}) });
     else if (decision.op === "homonimo") {
       const { bare, role } = parseLabel(name);
       plan.push({ ...decision, name, credits, bare, role, ...(await linkByProject(pool, decision.id, bare, labelled)) });
@@ -187,7 +196,12 @@ async function main(): Promise<void> {
         await context.client.query("SAVEPOINT manual_review");
         try {
           const credits = await creditsOf(context.client, item.id);
-          if (item.op === "rol") {
+          if (item.op === "retirar") {
+            await deleteEntity(context, "person", item.id);
+          } else if (item.op === "enlazar") {
+            await setRole(credits, item.role!, { person_id: item.target });
+            await deleteEntity(context, "person", item.id);
+          } else if (item.op === "rol") {
             const { bare, role } = parseLabel(item.name!);
             if (item.into !== undefined) {
               await setRole(credits, role, { person_id: item.into });
