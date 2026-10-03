@@ -293,6 +293,38 @@ describe("adapters funcionales de las fuentes autorizadas", () => {
       .toEqual(["01", "02", "03", "04"]);
   });
 
+  it("Sincopa lee la pista de un popurrí en otro color y el número sin guion", () => {
+    const adapter = adapterFor({ slug: "sincopa", siteType: "database" });
+    if (!adapter?.extractSnapshot) throw new Error("adapter Sincopa faltante");
+    const tracks = (list: string) => adapter.extractSnapshot!({
+      url: "https://fixture.invalid/latin_pop/cdinfo_latin/billos/billos_09_mosaicos1.htm", kind: "html", rawPageId: 1, body: `
+      <table><tr>
+        <td>Artist:<br>Album Title:<br>Company:<br>Genre:<br>Release Year:</td>
+        <td><b>Billo's Caracas Boys</b><br>Mosaicos A La Billo<br>Velvet<br>Latin<br>1975 (LP)</td>
+      </tr></table>
+      <table><tr><td bgcolor="#FFCC00"><b>Tracks</b></td></tr></table>
+      <table><tr><td>${list}</td></tr></table>`,
+    }).flatMap(normalizeRecord)
+      .filter((claim) => claim.entityKind === "track" && (claim.field === "title" || claim.field === "track_number"))
+      .map((claim) => `${claim.field}=${claim.rawValue}`);
+
+    expect(tracks(`<font color="#FFFFCC">Side A</font><font color="#FFFFFF"><br>
+        01- </font><font color="#FFFFCC">Mosaico Nº 1</font><font color="#FFFFFF"><br>
+        &nbsp;&nbsp; a- </font><font color="#FFCC00">Ojos Malvados </font><font color="#FFFFFF">(C. Soladrigas)<br>
+        &nbsp;&nbsp; b- </font><font color="#FFCC00">La Negra Leonor </font><font color="#FFFFFF">(Antonio Fernández)</font>`))
+      .toEqual(["title=Mosaico Nº 1", "track_number=01", "title=Ojos Malvados", "title=La Negra Leonor"]);
+    expect(tracks(`<font color="#FFFFFF">01
+        </font><font color="#FFCC00">Amaranto
+        </font><font color="#FFFFFF">(Lester Paredes) 4.04</font><font color="#FFFFFF"><br>
+        02–
+        </font><font color="#FFCC00">Tulalita
+        </font><font color="#FFFFFF">(Lester Paredes) 3.13</font><font color="#FFFFFF"><br>
+        03
+        </font><font color="#FFCC00">24 Horas
+        </font><font color="#FFFFFF">(Lester Paredes) 3.13</font>`))
+      .toEqual(["title=Amaranto", "track_number=01", "title=Tulalita", "track_number=02", "title=24 Horas"]);
+  });
+
   it("Sincopa da un crédito por autor cuando el paréntesis los separa con «/»", () => {
     const adapter = adapterFor({ slug: "sincopa", siteType: "database" });
     if (!adapter?.extractSnapshot) throw new Error("adapter Sincopa faltante");

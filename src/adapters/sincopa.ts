@@ -8,7 +8,7 @@ import { absoluteUrl, clean, contentImages, excerpt } from "./shared.js";
 // evita confundir fichas detalladas de sencillos con la tabla de discografía.
 // 1.2.0 abre todas las secciones del sitio (jazz, latin pop, clásica, new age,
 // tradicional, étnica): usan la misma plantilla de ficha que rock/pop.
-const SINCOPA_ADAPTER_VERSION = "1.3.0";
+const SINCOPA_ADAPTER_VERSION = "1.3.1";
 
 // Sincopa es HTML de FrontPage: tablas anidadas, sin clases ni encabezados
 // semánticos. Toda su semántica está codificada en el color de fuente:
@@ -555,9 +555,18 @@ export class SincopaAdapter implements SourceAdapter {
         if (lastNumber > 0) sideStart = lastNumber;
         return;
       }
-      const trackTitle = goldenTitle(fragment);
+      // «01- Mosaico Nº 1» (Billo's, Guaco, Venezuelan Suite): la pista que
+      // agrupa un popurrí va en otro color y debajo vienen sus partes
+      // («a- Ojos Malvados») en dorado. Con número impreso y sin dorado, el
+      // título es lo que sigue al número, sin duración ni arreglista.
+      const plain = /^\d{1,3}\s*[-.–—\u0096]\s*(\S.*)$/u.exec(text)?.[1]
+        ?.replace(/\s*\(\s*(?:arr|arranged|arreglo|arreglos)\b[^)]*\)/giu, "")
+        .replace(/\s*\(?\d{1,2}[:.][0-5]\d\)?\s*$/u, "").trim();
+      const trackTitle = goldenTitle(fragment) || plain || "";
       if (!trackTitle) return;
-      const printed = /^(\d{1,3})\s*[-.]/.exec(text)?.[1];
+      // «01 Amaranto (Lester Paredes) 4.04»: número sin guion, solo si el título no empieza por cifra.
+      const printed = /^(\d{1,3})\s*[-.–—\u0096]/u.exec(text)?.[1]
+        ?? (/^\d/u.test(trackTitle) ? undefined : /^(\d{1,3})\s+(?=\S)/u.exec(text)?.[1]);
       if (printed !== undefined && sideStart !== undefined) {
         offset = Number(printed) <= sideStart ? sideStart : 0;
         sideStart = undefined;
