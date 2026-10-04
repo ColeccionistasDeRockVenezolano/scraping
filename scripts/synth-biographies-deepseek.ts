@@ -136,12 +136,13 @@ async function main(): Promise<void> {
             taskKind: "biography", schemaVersion: SCHEMA_VERSION, instructions, responseSchema,
             input: fix ? { ...(compact(dossier) as object), correccion: fix } : compact(dossier),
           });
-          const refs = new Set(["catalog", "current", ...dossier.sources.map((s) => s.ref)]);
+          // «current» solo existe si la ficha ya tiene texto (apply-biographies rechaza lo contrario).
+          const refs = new Set(["catalog", ...(dossier["currentText"] ? ["current"] : []), ...dossier.sources.map((s) => s.ref)]);
           const unknownRefs = (used: string[]) => used.filter((ref) => !refs.has(ref));
           let result = await ask();
           const wrongRefs = unknownRefs(result.proposal.sourcesUsed);
           const fix = violations(dossier, result.proposal.text)
-            ?? (wrongRefs.length ? `Tu respuesta anterior citó refs que no existen (${wrongRefs.join(", ")}). En sourcesUsed usa solo catalog, current o los ref de sources.` : null);
+            ?? (wrongRefs.length ? `Tu respuesta anterior citó refs que no existen (${wrongRefs.join(", ")}). En sourcesUsed usa solo catalog, los ref de sources y «current» únicamente si hay texto actual.` : null);
           if (fix) { result = await ask(fix); stats.retried += 1; }
           const answer = result.proposal;
           if (answer.caseId !== dossier.caseId) throw new Error(`caseId devuelto ${answer.caseId}`);

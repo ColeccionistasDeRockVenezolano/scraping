@@ -2259,20 +2259,6 @@
       "name": "Onda nueva",
       "family": "musica-venezolana",
       "aliases": []
-    },
-    {
-      "slug": "ritmo-orquidea",
-      "name": "Ritmo orquídea",
-      "family": "musica-venezolana",
-      "aliases": [
-        "orquídea"
-      ]
-    },
-    {
-      "slug": "musica-de-camara-popular",
-      "name": "Música de cámara popular",
-      "family": "musica-venezolana",
-      "aliases": []
     }
   ],
   "notAGenre": {
@@ -2366,6 +2352,7 @@
       "etnomusicologia aplicada",
       "armonia vocal",
       "musica profana",
+      "musica de camara popular",
       "freestyle"
     ],
     "instrumento": [
@@ -2575,18 +2562,6 @@
       "aliases": [
         "sones de negro"
       ]
-    },
-    {
-      "slug": "gaban",
-      "name": "Gabán",
-      "genre": "joropo",
-      "aliases": []
-    },
-    {
-      "slug": "motivo-guaiqueri",
-      "name": "Motivo guaiquerí",
-      "genre": "musica-oriental",
-      "aliases": []
     }
   ]
 }

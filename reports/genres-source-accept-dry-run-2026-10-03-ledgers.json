@@ -1,0 +1,1632 @@
+{
+  "mode": "dry-run",
+  "runId": 11598,
+  "candidates": 188,
+  "accepted": [
+    {
+      "caseId": "artist:288",
+      "title": "Pablo Gil",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Jazz",
+        "Latin jazz"
+      ],
+      "primary": "jazz-latino",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:4234",
+      "title": "José Coraspe",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Electronic",
+        "Soundtracks",
+        "ambient",
+        "Electrónica"
+      ],
+      "primary": "ambient",
+      "secondaries": [
+        "banda-sonora"
+      ]
+    },
+    {
+      "caseId": "artist:4235",
+      "title": "Arca",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Electronic",
+        "Reggaeton",
+        "Pop",
+        "Rap",
+        "Hip-Hop",
+        "R&B",
+        "Soundtracks",
+        "Electrónica",
+        "IDM",
+        "industrial hip-hop",
+        "avant-pop",
+        "deconstructed reggaeton",
+        "noise",
+        "left-field pop"
+      ],
+      "primary": "idm",
+      "secondaries": [
+        "reggaeton",
+        "art-pop",
+        "rap-experimental",
+        "r-and-b",
+        "banda-sonora",
+        "noise"
+      ]
+    },
+    {
+      "caseId": "artist:4236",
+      "title": "Aérea Negrot",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Electronic",
+        "Pop",
+        "house",
+        "dance",
+        "disco",
+        "electropop"
+      ],
+      "primary": "house",
+      "secondaries": [
+        "electropop",
+        "dance",
+        "disco"
+      ]
+    },
+    {
+      "caseId": "artist:4237",
+      "title": "DJ Babatr",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Electronic",
+        "Raptor House",
+        "Techno",
+        "House",
+        "house"
+      ],
+      "primary": "techno",
+      "secondaries": [
+        "raptor-house"
+      ]
+    },
+    {
+      "caseId": "artist:4238",
+      "title": "Sunsplash",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Electronic",
+        "Latin electronic fusion",
+        "house",
+        "cumbia-electronica",
+        "Electrónica"
+      ],
+      "primary": "latin-electronic-fusion",
+      "secondaries": [
+        "house",
+        "cumbia"
+      ]
+    },
+    {
+      "caseId": "artist:4239",
+      "title": "Adolescent's Orquesta",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Salsa",
+        "romantic salsa",
+        "tropical"
+      ],
+      "primary": "salsa-romantica",
+      "secondaries": [
+        "musica-tropical"
+      ]
+    },
+    {
+      "caseId": "artist:4240",
+      "title": "Porfi Baloa",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Salsa",
+        "romantic salsa",
+        "tropical"
+      ],
+      "primary": "salsa-romantica",
+      "secondaries": [
+        "musica-tropical"
+      ]
+    },
+    {
+      "caseId": "artist:4241",
+      "title": "Fedora Alemán",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Opera",
+        "Música clásica"
+      ],
+      "primary": "opera",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:4242",
+      "title": "Aquiles Machado",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Opera",
+        "Música clásica",
+        "opera"
+      ],
+      "primary": "opera",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:4243",
+      "title": "Edgar Bastidas",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Opera",
+        "Música clásica"
+      ],
+      "primary": "opera",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:4244",
+      "title": "Diveana",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Merengue",
+        "Pop",
+        "technomerengue",
+        "tropical"
+      ],
+      "primary": "tecnomerengue",
+      "secondaries": [
+        "pop",
+        "musica-tropical"
+      ]
+    },
+    {
+      "caseId": "artist:4245",
+      "title": "Miguel Moly",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Merengue",
+        "Pop",
+        "technomerengue"
+      ],
+      "primary": "tecnomerengue",
+      "secondaries": [
+        "pop"
+      ]
+    },
+    {
+      "caseId": "artist:4246",
+      "title": "Joseph Palacios",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Bachata",
+        "Salsa",
+        "Merengue",
+        "Vallenato",
+        "bachata",
+        "bachata-pop",
+        "salsa",
+        "bachata-vallenato crossover"
+      ],
+      "primary": "bachata",
+      "secondaries": [
+        "salsa",
+        "merengue",
+        "vallenato",
+        "pop"
+      ]
+    },
+    {
+      "caseId": "artist:4247",
+      "title": "Chino & Nacho",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Reggaeton",
+        "Pop",
+        "Merengue",
+        "reggaeton",
+        "Música tropical",
+        "Latin pop",
+        "merengue"
+      ],
+      "primary": "reggaeton",
+      "secondaries": [
+        "pop-latino",
+        "merengue",
+        "musica-tropical"
+      ]
+    },
+    {
+      "caseId": "artist:4248",
+      "title": "Mau y Ricky",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Pop",
+        "Reggaeton",
+        "Latin pop",
+        "urban pop",
+        "reggaeton"
+      ],
+      "primary": "pop-latino",
+      "secondaries": [
+        "reggaeton"
+      ]
+    },
+    {
+      "caseId": "artist:4249",
+      "title": "Danny Ocean",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Pop",
+        "Reggaeton",
+        "Electronic",
+        "R&B",
+        "Latin pop",
+        "urban pop",
+        "Dance",
+        "reggaeton"
+      ],
+      "primary": "pop-latino",
+      "secondaries": [
+        "reggaeton",
+        "dance",
+        "r-and-b"
+      ]
+    },
+    {
+      "caseId": "artist:4250",
+      "title": "Jerry Di",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Reggaeton",
+        "Rap",
+        "Hip-Hop",
+        "R&B",
+        "Pop",
+        "urbano",
+        "Latin trap",
+        "Dance",
+        "reggaeton",
+        "Latin pop"
+      ],
+      "primary": "reggaeton",
+      "secondaries": [
+        "hip-hop",
+        "r-and-b",
+        "pop-latino",
+        "trap-latino",
+        "dance"
+      ]
+    },
+    {
+      "caseId": "artist:4251",
+      "title": "Micro TDH",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Rap",
+        "Hip-Hop",
+        "R&B",
+        "Reggaeton",
+        "Pop",
+        "Hip hop",
+        "trap",
+        "soul-inflected urbano",
+        "reggaeton"
+      ],
+      "primary": "trap",
+      "secondaries": [
+        "r-and-b",
+        "reggaeton",
+        "pop"
+      ]
+    },
+    {
+      "caseId": "artist:4252",
+      "title": "Elena Rose",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Pop",
+        "R&B",
+        "Reggaeton",
+        "Latin pop",
+        "singer-songwriter",
+        "urban pop",
+        "R&B-influenced pop"
+      ],
+      "primary": "pop-latino",
+      "secondaries": [
+        "r-and-b",
+        "reggaeton",
+        "cantautor"
+      ]
+    },
+    {
+      "caseId": "artist:4253",
+      "title": "Joaquina",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Pop",
+        "Rock",
+        "Latin pop",
+        "Cantautor",
+        "Latin rock",
+        "folk-pop"
+      ],
+      "primary": "pop-latino",
+      "secondaries": [
+        "rock-latino",
+        "cantautor"
+      ]
+    },
+    {
+      "caseId": "artist:4254",
+      "title": "Aneeka",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Pop",
+        "R&B",
+        "Latin pop"
+      ],
+      "primary": "pop-latino",
+      "secondaries": [
+        "r-and-b"
+      ]
+    },
+    {
+      "caseId": "artist:4255",
+      "title": "Akapellah",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Rap",
+        "Hip-Hop",
+        "Hip hop",
+        "boom bap"
+      ],
+      "primary": "boom-bap",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:4256",
+      "title": "Neutro Shorty",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Rap",
+        "Hip-Hop",
+        "Latin trap",
+        "drill",
+        "Hip hop",
+        "boom bap",
+        "urbano"
+      ],
+      "primary": "drill",
+      "secondaries": [
+        "trap-latino",
+        "boom-bap"
+      ]
+    },
+    {
+      "caseId": "artist:4257",
+      "title": "Big Soto",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Rap",
+        "Hip-Hop",
+        "Reggaeton",
+        "Latin trap",
+        "urbano",
+        "Hip hop"
+      ],
+      "primary": "hip-hop",
+      "secondaries": [
+        "reggaeton",
+        "trap-latino"
+      ]
+    },
+    {
+      "caseId": "artist:4258",
+      "title": "Gabylonia",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Rap",
+        "Hip-Hop",
+        "Hip hop"
+      ],
+      "primary": "hip-hop",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:4259",
+      "title": "BigBro Blues Band",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Blues",
+        "Rock",
+        "blues",
+        "blues-rock"
+      ],
+      "primary": "blues",
+      "secondaries": [
+        "blues-rock"
+      ]
+    },
+    {
+      "caseId": "artist:4260",
+      "title": "Nascuy Linares",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Soundtracks",
+        "Música clásica",
+        "Electronic",
+        "film score",
+        "documentary score"
+      ],
+      "primary": "banda-sonora",
+      "secondaries": [
+        "musica-clasica",
+        "electronica"
+      ]
+    },
+    {
+      "caseId": "artist:4261",
+      "title": "Diego Ayala Raffalli",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Soundtracks",
+        "Música clásica",
+        "Electronic",
+        "Jazz",
+        "Rock",
+        "film score",
+        "electroacoustic"
+      ],
+      "primary": "banda-sonora",
+      "secondaries": [
+        "musica-clasica",
+        "electronica",
+        "jazz",
+        "rock",
+        "electroacustica"
+      ]
+    },
+    {
+      "caseId": "artist:4262",
+      "title": "Teresa Carreño",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Música clásica",
+        "Opera",
+        "chamber music"
+      ],
+      "primary": "opera",
+      "secondaries": [
+        "musica-de-camara"
+      ]
+    },
+    {
+      "caseId": "artist:4263",
+      "title": "Antonio Lauro",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Música clásica",
+        "Venezuelan nationalist music"
+      ],
+      "primary": "nacionalismo-musical",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:4264",
+      "title": "Vicente Emilio Sojo",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Música clásica",
+        "Venezuelan nationalist music",
+        "choral",
+        "sacred music"
+      ],
+      "primary": "nacionalismo-musical",
+      "secondaries": [
+        "musica-coral",
+        "musica-sacra"
+      ]
+    },
+    {
+      "caseId": "artist:4265",
+      "title": "Modesta Bor",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Música clásica",
+        "choral",
+        "Neoclásica",
+        "Venezuelan nationalist music"
+      ],
+      "primary": "musica-coral",
+      "secondaries": [
+        "neoclasica",
+        "nacionalismo-musical"
+      ]
+    },
+    {
+      "caseId": "artist:4266",
+      "title": "Antonio Estévez",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Música clásica",
+        "Venezuelan nationalist music",
+        "choral"
+      ],
+      "primary": "nacionalismo-musical",
+      "secondaries": [
+        "musica-coral"
+      ]
+    },
+    {
+      "caseId": "artist:4267",
+      "title": "Inocente Carreño",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Música clásica",
+        "Bolero",
+        "Merengue",
+        "Venezuelan nationalist music",
+        "opera",
+        "Música tradicional"
+      ],
+      "primary": "nacionalismo-musical",
+      "secondaries": [
+        "bolero",
+        "merengue",
+        "opera",
+        "musica-tradicional"
+      ]
+    },
+    {
+      "caseId": "artist:4268",
+      "title": "Juan Bautista Plaza",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Música clásica",
+        "sacred music",
+        "Venezuelan nationalist music",
+        "Música de cámara"
+      ],
+      "primary": "musica-sacra",
+      "secondaries": [
+        "nacionalismo-musical",
+        "musica-de-camara"
+      ]
+    },
+    {
+      "caseId": "artist:4269",
+      "title": "Adina Izarra",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Música clásica",
+        "Electronic",
+        "electroacoustic",
+        "Electroacústica"
+      ],
+      "primary": "musica-clasica",
+      "secondaries": [
+        "electronica",
+        "electroacustica"
+      ]
+    },
+    {
+      "caseId": "artist:4270",
+      "title": "Alfredo Rugeles",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Música clásica",
+        "Electronic",
+        "electroacoustic"
+      ],
+      "primary": "musica-clasica",
+      "secondaries": [
+        "electronica",
+        "electroacustica"
+      ]
+    },
+    {
+      "caseId": "artist:4271",
+      "title": "Gustavo Dudamel",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Música clásica",
+        "Opera",
+        "Soundtracks"
+      ],
+      "primary": "opera",
+      "secondaries": [
+        "banda-sonora"
+      ]
+    },
+    {
+      "caseId": "artist:4272",
+      "title": "Guillermo Castillo Bustamante",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Bolero",
+        "Música clásica",
+        "bolero"
+      ],
+      "primary": "bolero",
+      "secondaries": [
+        "musica-clasica"
+      ]
+    },
+    {
+      "caseId": "artist:4273",
+      "title": "Irepelusa",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "R&B",
+        "Hip-Hop",
+        "Pop",
+        "Rap",
+        "neo-soul",
+        "urban pop",
+        "Hip hop"
+      ],
+      "primary": "r-and-b",
+      "secondaries": [
+        "hip-hop",
+        "pop",
+        "soul",
+        "urbano-latino"
+      ]
+    },
+    {
+      "caseId": "artist:4274",
+      "title": "Motherflowers",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Hip-Hop",
+        "Rap",
+        "Pop",
+        "Reggae",
+        "Electronic",
+        "Rock",
+        "R&B",
+        "Rap experimental",
+        "neo-soul",
+        "Caribbean fusion",
+        "psychedelic pop",
+        "House"
+      ],
+      "primary": "rap-experimental",
+      "secondaries": [
+        "pop-psicodelico",
+        "reggae",
+        "house",
+        "rock",
+        "r-and-b",
+        "soul",
+        "musica-tropical"
+      ]
+    },
+    {
+      "caseId": "artist:4275",
+      "title": "Salserín",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Salsa",
+        "Pop",
+        "salsa juvenil",
+        "salsa romántica",
+        "Latin pop"
+      ],
+      "primary": "salsa-romantica",
+      "secondaries": [
+        "pop-latino"
+      ]
+    },
+    {
+      "caseId": "artist:4276",
+      "title": "Nelson Arrieta",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Salsa",
+        "Pop",
+        "salsa romántica",
+        "tropical",
+        "Latin pop"
+      ],
+      "primary": "salsa-romantica",
+      "secondaries": [
+        "pop-latino",
+        "musica-tropical"
+      ]
+    },
+    {
+      "caseId": "artist:4277",
+      "title": "Omar Enrique",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Merengue",
+        "Pop",
+        "merengue",
+        "tropical",
+        "Latin pop"
+      ],
+      "primary": "merengue",
+      "secondaries": [
+        "pop-latino",
+        "musica-tropical"
+      ]
+    },
+    {
+      "caseId": "artist:4278",
+      "title": "Karolina con K",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Merengue",
+        "Pop",
+        "Electronic",
+        "technomerengue",
+        "Música tropical",
+        "Latin pop"
+      ],
+      "primary": "tecnomerengue",
+      "secondaries": [
+        "pop-latino",
+        "electronica",
+        "musica-tropical"
+      ]
+    },
+    {
+      "caseId": "artist:4279",
+      "title": "Los Fantasmas del Caribe",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Merengue",
+        "Pop",
+        "Electronic",
+        "technomerengue",
+        "Música tropical",
+        "Latin pop"
+      ],
+      "primary": "tecnomerengue",
+      "secondaries": [
+        "pop-latino",
+        "electronica",
+        "musica-tropical"
+      ]
+    },
+    {
+      "caseId": "artist:4280",
+      "title": "LAGOS",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Pop",
+        "Electronic",
+        "Reggaeton",
+        "Latin pop",
+        "urban pop",
+        "electropop",
+        "Música tropical"
+      ],
+      "primary": "pop-latino",
+      "secondaries": [
+        "electronica",
+        "reggaeton",
+        "electropop",
+        "musica-tropical"
+      ]
+    },
+    {
+      "caseId": "artist:4281",
+      "title": "Samuel Mariño",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Opera",
+        "Música clásica",
+        "opera",
+        "Música antigua"
+      ],
+      "primary": "opera",
+      "secondaries": [
+        "musica-antigua"
+      ]
+    },
+    {
+      "caseId": "artist:4282",
+      "title": "Fur Coat",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Electronic",
+        "techno",
+        "Techno",
+        "deep house",
+        "Dance"
+      ],
+      "primary": "techno",
+      "secondaries": [
+        "house",
+        "dance"
+      ]
+    },
+    {
+      "caseId": "artist:4283",
+      "title": "Oksana Linde",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Electronic",
+        "Electrónica",
+        "ambient",
+        "electroacoustic"
+      ],
+      "primary": "ambient",
+      "secondaries": [
+        "electroacustica"
+      ]
+    },
+    {
+      "caseId": "artist:4284",
+      "title": "Alfredo del Mónaco",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Música clásica",
+        "Electronic",
+        "electroacoustic",
+        "electronic music",
+        "chamber music"
+      ],
+      "primary": "musica-de-camara",
+      "secondaries": [
+        "electronica",
+        "electroacustica"
+      ]
+    },
+    {
+      "caseId": "artist:4285",
+      "title": "Simón Díaz",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Joropo",
+        "Música llanera",
+        "Folclor tradicional",
+        "tonada llanera",
+        "pasaje",
+        "joropo llanero",
+        "canto de trabajo"
+      ],
+      "primary": "pasaje",
+      "secondaries": [
+        "musica-tradicional",
+        "tonada"
+      ]
+    },
+    {
+      "caseId": "artist:4286",
+      "title": "Eneas Perdomo",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Música llanera",
+        "Joropo",
+        "pasaje",
+        "corrío",
+        "canto sabanero"
+      ],
+      "primary": "pasaje",
+      "secondaries": [
+        "corrio",
+        "tonada"
+      ]
+    },
+    {
+      "caseId": "artist:4287",
+      "title": "Ángel Custodio Loyola",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Música llanera",
+        "Joropo",
+        "contrapunteo",
+        "canto recio",
+        "corrío"
+      ],
+      "primary": "contrapunteo",
+      "secondaries": [
+        "golpe-llanero",
+        "corrio"
+      ]
+    },
+    {
+      "caseId": "artist:4288",
+      "title": "Francisco Montoya",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Música llanera",
+        "Joropo",
+        "canto recio",
+        "contrapunteo",
+        "pasaje"
+      ],
+      "primary": "golpe-llanero",
+      "secondaries": [
+        "contrapunteo",
+        "pasaje"
+      ]
+    },
+    {
+      "caseId": "artist:4289",
+      "title": "Rummy Olivo",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Música llanera",
+        "Joropo",
+        "Folclor tradicional",
+        "canto recio",
+        "pasaje"
+      ],
+      "primary": "golpe-llanero",
+      "secondaries": [
+        "musica-tradicional",
+        "pasaje"
+      ]
+    },
+    {
+      "caseId": "artist:4290",
+      "title": "Teo Galíndez",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Música llanera",
+        "Joropo",
+        "pasaje",
+        "canción llanera"
+      ],
+      "primary": "pasaje",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:4291",
+      "title": "Jorge Guerrero",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Música llanera",
+        "Joropo",
+        "pasaje",
+        "canto sabanero"
+      ],
+      "primary": "pasaje",
+      "secondaries": [
+        "tonada"
+      ]
+    },
+    {
+      "caseId": "artist:4292",
+      "title": "Armando Martínez",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Música llanera",
+        "Joropo",
+        "canto recio",
+        "pasaje"
+      ],
+      "primary": "golpe-llanero",
+      "secondaries": [
+        "pasaje"
+      ]
+    },
+    {
+      "caseId": "artist:4293",
+      "title": "Iván José",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Música llanera",
+        "Joropo",
+        "Folclor tradicional",
+        "pasaje",
+        "tonada",
+        "gaita",
+        "merengue venezolano"
+      ],
+      "primary": "pasaje",
+      "secondaries": [
+        "musica-tradicional",
+        "tonada",
+        "gaita",
+        "merengue-venezolano"
+      ]
+    },
+    {
+      "caseId": "artist:4294",
+      "title": "Iris Gavidia",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Música llanera",
+        "Folclor tradicional",
+        "pasaje llanero",
+        "canción criolla"
+      ],
+      "primary": "pasaje",
+      "secondaries": [
+        "musica-tradicional"
+      ]
+    },
+    {
+      "caseId": "artist:4295",
+      "title": "Ignacio “Indio” Figueredo",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Joropo",
+        "Música llanera",
+        "Instrumental venezolano",
+        "pasaje"
+      ],
+      "primary": "pasaje",
+      "secondaries": [
+        "folclor-fusion"
+      ]
+    },
+    {
+      "caseId": "artist:4296",
+      "title": "Otilio Galíndez",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Folclor tradicional",
+        "Nueva canción",
+        "canción venezolana",
+        "aguinaldo",
+        "tonada"
+      ],
+      "primary": "musica-tradicional",
+      "secondaries": [
+        "nueva-cancion",
+        "aguinaldo",
+        "tonada"
+      ]
+    },
+    {
+      "caseId": "artist:4297",
+      "title": "Grupo Madera",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Afrovenezolano",
+        "Afrocaribeño",
+        "Folclor experimental",
+        "afropercusión",
+        "tambor de la costa",
+        "jazz fusión"
+      ],
+      "primary": "tambor-afrovenezolano",
+      "secondaries": [
+        "musica-tropical",
+        "folclor-fusion",
+        "jazz-fusion"
+      ]
+    },
+    {
+      "caseId": "artist:4298",
+      "title": "Betsayda Machado y La Parranda El Clavo",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Afrovenezolano",
+        "Parranda",
+        "tambor barloventeño",
+        "parranda afrovenezolana",
+        "canto comunitario"
+      ],
+      "primary": "tambor-afrovenezolano",
+      "secondaries": [
+        "aguinaldo",
+        "musica-tradicional"
+      ]
+    },
+    {
+      "caseId": "artist:4299",
+      "title": "Francisco Mata",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Música oriental",
+        "Folclor tradicional",
+        "polo margariteño",
+        "malagueña",
+        "puntillanto",
+        "gaitón",
+        "gaita margariteña",
+        "merengue oriental"
+      ],
+      "primary": "polo-oriental",
+      "secondaries": [
+        "musica-tradicional",
+        "malaguena",
+        "puntillanto",
+        "gaita",
+        "gaita-oriental",
+        "merengue-oriental"
+      ]
+    },
+    {
+      "caseId": "artist:4300",
+      "title": "Luis Mariano Rivera",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Música oriental",
+        "Folclor tradicional",
+        "parranda oriental",
+        "polo",
+        "canción campesina"
+      ],
+      "primary": "polo-oriental",
+      "secondaries": [
+        "musica-tradicional"
+      ]
+    },
+    {
+      "caseId": "artist:4301",
+      "title": "Cruz Quinal",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Música oriental",
+        "Joropo",
+        "joropo oriental",
+        "joropo con estribillo",
+        "merengue oriental"
+      ],
+      "primary": "merengue-oriental",
+      "secondaries": [
+        "golpe-y-estribillo"
+      ]
+    },
+    {
+      "caseId": "artist:4302",
+      "title": "Marco Antonio Rivera Useche",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Música andina venezolana",
+        "bambuco tachirense",
+        "vals",
+        "contradanza",
+        "galerón",
+        "marcha"
+      ],
+      "primary": "bambuco",
+      "secondaries": [
+        "vals-venezolano",
+        "galeron",
+        "musica-tradicional"
+      ]
+    },
+    {
+      "caseId": "artist:4303",
+      "title": "Luis Felipe Ramón y Rivera",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Música andina venezolana",
+        "Folclor tradicional",
+        "bambuco tachirense",
+        "música coral"
+      ],
+      "primary": "bambuco",
+      "secondaries": [
+        "musica-tradicional",
+        "musica-coral"
+      ]
+    },
+    {
+      "caseId": "artist:4304",
+      "title": "Chucho Corrales",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Música andina venezolana",
+        "Folclor tradicional",
+        "bambuco",
+        "vals",
+        "canción tachirense",
+        "bolero"
+      ],
+      "primary": "bambuco",
+      "secondaries": [
+        "musica-tradicional",
+        "vals-venezolano",
+        "bolero"
+      ]
+    },
+    {
+      "caseId": "artist:4305",
+      "title": "Yhony León y los Pueblos del Sur",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Música andina venezolana",
+        "Folclor tradicional",
+        "merengue campesino",
+        "vals andino"
+      ],
+      "primary": "vals-andino",
+      "secondaries": [
+        "musica-tradicional",
+        "merengue-oriental"
+      ]
+    },
+    {
+      "caseId": "artist:4306",
+      "title": "Los Montañeros",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Música andina venezolana",
+        "Folclor tradicional",
+        "merengue campesino",
+        "bambuco",
+        "vals andino",
+        "joropo andino"
+      ],
+      "primary": "bambuco",
+      "secondaries": [
+        "musica-tradicional",
+        "merengue-oriental",
+        "vals-andino"
+      ]
+    },
+    {
+      "caseId": "artist:4307",
+      "title": "Ricardo Aguirre",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Gaita zuliana",
+        "gaita de furro",
+        "gaita de protesta"
+      ],
+      "primary": "gaita-de-furro",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:4308",
+      "title": "Cardenales del Éxito",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Gaita zuliana",
+        "gaita de furro",
+        "gaita tradicional",
+        "gaita de protesta"
+      ],
+      "primary": "gaita-de-furro",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:4309",
+      "title": "Gran Coquivacoa",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Gaita zuliana",
+        "tamborera zuliana",
+        "gaita de furro"
+      ],
+      "primary": "gaita-de-furro",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:4310",
+      "title": "Maracaibo 15",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Gaita zuliana",
+        "Música navideña",
+        "Folclor fusión",
+        "gaita",
+        "tamunangue fusión",
+        "parranda",
+        "aguinaldo",
+        "música oriental"
+      ],
+      "primary": "gaita",
+      "secondaries": [
+        "musica-navidena",
+        "folclor-fusion",
+        "aguinaldo",
+        "musica-oriental"
+      ]
+    },
+    {
+      "caseId": "artist:4311",
+      "title": "Betulio Medina",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Gaita zuliana",
+        "Música navideña",
+        "gaita",
+        "parranda"
+      ],
+      "primary": "gaita",
+      "secondaries": [
+        "musica-navidena",
+        "aguinaldo"
+      ]
+    },
+    {
+      "caseId": "artist:4312",
+      "title": "Rincón Morales",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Gaita zuliana",
+        "gaita de furro",
+        "gaita tradicional"
+      ],
+      "primary": "gaita-de-furro",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:4313",
+      "title": "Barrio Obrero de Cabimas",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Gaita zuliana",
+        "gaita tradicional",
+        "gaita de furro"
+      ],
+      "primary": "gaita-de-furro",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:4314",
+      "title": "Ricardo Cepeda",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Gaita zuliana",
+        "gaita de furro"
+      ],
+      "primary": "gaita-de-furro",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:4315",
+      "title": "Astolfo Romero",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Gaita zuliana",
+        "gaita de furro"
+      ],
+      "primary": "gaita-de-furro",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:4316",
+      "title": "The Same People",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Calipso de El Callao",
+        "calipso callaoense",
+        "soca"
+      ],
+      "primary": "calipso",
+      "secondaries": [
+        "soca"
+      ]
+    },
+    {
+      "caseId": "artist:4317",
+      "title": "Family Ground",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Calipso de El Callao"
+      ],
+      "primary": "calipso",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:4318",
+      "title": "Los Antaños del Stadium",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Música cañonera",
+        "Merengue venezolano",
+        "merengue caraqueño",
+        "merengue rucaneao",
+        "pasodoble",
+        "polca",
+        "vals"
+      ],
+      "primary": "merengue-venezolano",
+      "secondaries": [
+        "musica-tradicional",
+        "vals-venezolano"
+      ]
+    },
+    {
+      "caseId": "artist:4319",
+      "title": "Los Tucusitos",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Aguinaldo",
+        "Música navideña",
+        "Música infantil",
+        "villancico",
+        "parranda navideña",
+        "coro infantil"
+      ],
+      "primary": "aguinaldo",
+      "secondaries": [
+        "musica-navidena",
+        "musica-infantil",
+        "musica-coral"
+      ]
+    },
+    {
+      "caseId": "artist:4320",
+      "title": "Popy",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Música infantil",
+        "canción infantil",
+        "aguinaldo infantil"
+      ],
+      "primary": "musica-infantil",
+      "secondaries": [
+        "aguinaldo"
+      ]
+    },
+    {
+      "caseId": "artist:4321",
+      "title": "Payasitas Nifu Nifa",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Música infantil",
+        "canción infantil",
+        "rondas",
+        "pop infantil"
+      ],
+      "primary": "musica-infantil",
+      "secondaries": []
+    },
+    {
+      "caseId": "artist:4322",
+      "title": "La Rondallita",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Música navideña",
+        "Música infantil",
+        "Aguinaldo",
+        "villancico venezolano",
+        "coro infantil"
+      ],
+      "primary": "musica-navidena",
+      "secondaries": [
+        "musica-infantil",
+        "aguinaldo",
+        "musica-coral"
+      ]
+    },
+    {
+      "caseId": "artist:4323",
+      "title": "Daniel Calveti",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Música cristiana contemporánea",
+        "CCM latino",
+        "worship",
+        "pop cristiano",
+        "balada cristiana"
+      ],
+      "primary": "musica-cristiana-contemporanea",
+      "secondaries": [
+        "adoracion"
+      ]
+    },
+    {
+      "caseId": "artist:4324",
+      "title": "Orfeón Universitario de la UCV",
+      "source": "lote-investigacion-2026-10-02",
+      "raw": [
+        "Música coral",
+        "Música vocal",
+        "canto orfeónico",
+        "música académica coral",
+        "música popular venezolana coral",
+        "música sacra"
+      ],
+      "primary": "musica-coral",
+      "secondaries": [
+        "musica-sacra"
+      ]
+    }
+  ],
+  "alreadyClassified": [
+    "artist:46",
+    "artist:53",
+    "artist:55",
+    "artist:57",
+    "artist:58",
+    "artist:70",
+    "artist:76",
+    "artist:78",
+    "artist:99",
+    "artist:116",
+    "artist:139",
+    "artist:149",
+    "artist:152",
+    "artist:159",
+    "artist:192",
+    "artist:206",
+    "artist:218",
+    "artist:220",
+    "artist:221",
+    "artist:227",
+    "artist:259",
+    "artist:261",
+    "artist:264",
+    "artist:266",
+    "artist:270",
+    "artist:795",
+    "artist:908",
+    "artist:1132",
+    "artist:1238",
+    "artist:1426",
+    "artist:1496",
+    "artist:1738",
+    "artist:1743",
+    "artist:1765",
+    "artist:1801",
+    "artist:1829",
+    "artist:1830",
+    "artist:1951",
+    "artist:1960",
+    "artist:1980",
+    "artist:1981",
+    "artist:2003",
+    "artist:2004",
+    "artist:2014",
+    "artist:2679",
+    "artist:2733",
+    "artist:2794",
+    "artist:2861",
+    "artist:3387",
+    "artist:3400",
+    "artist:3420",
+    "artist:3449",
+    "artist:3480",
+    "artist:3500",
+    "artist:3529",
+    "artist:3558",
+    "artist:3676",
+    "artist:3677",
+    "artist:3684",
+    "artist:3689",
+    "artist:3700",
+    "artist:3703",
+    "artist:3709",
+    "artist:3710",
+    "artist:3732",
+    "artist:3739",
+    "artist:3740",
+    "artist:3743",
+    "artist:3745",
+    "artist:3749",
+    "artist:3756",
+    "artist:3764",
+    "artist:3785",
+    "artist:3794",
+    "artist:3796",
+    "artist:3797",
+    "artist:3801",
+    "artist:3811",
+    "artist:3816",
+    "artist:3821",
+    "artist:3823",
+    "artist:3829",
+    "artist:3831",
+    "artist:3832",
+    "artist:3833",
+    "artist:3843",
+    "artist:3854",
+    "artist:3857",
+    "artist:3870",
+    "artist:3889",
+    "artist:3890",
+    "artist:3897",
+    "artist:3944",
+    "artist:3950",
+    "artist:3993",
+    "artist:4003"
+  ],
+  "unresolved": [],
+  "errors": [],
+  "moreSpecificExists": []
+}

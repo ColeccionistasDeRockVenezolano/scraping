@@ -12,9 +12,7 @@
     "2026-09-27 (Brian): Pop punk, Post-grunge, Rap experimental, Death groove metal e Instrumental (familia); «metal hardcore» = Metalcore, «electro rock» = Rock electrónico y «Rap-Core» = Rap metal como alias (ya existían).",
     "2026-09-27 (Brian): Spoken word (familia), Música tropical (Fusión latina) y Cantautor (Folk, alias singer/songwriter), pedidos por las fichas de Bandcamp e iTunes que no resolvían.",
     "2026-09-27 (Brian, 2.ª tanda): Guarorock, Barquisimetal, Dream pop, Dubstep, Aggrotech, Bossa nova, Jazz rap y R&B; «indie» suelto = Indie rock (alias). «Fusión» suelta NO se asigna: en las fuentes acompaña a «Jazz Fusion» y a veces es latina; es ambigua.",
-    "2026-10-01 hermes: +36 aliases (fragmentos MA early/later y compuestos) +2 géneros (drone-metal, horror-punk) para cerrar la cola genre_unknown.",
-    "2026-10-01 hermes: «shred» y «rac» a not_a_genre (descriptor) — cierre de la cola genre_unknown (compuestos de Metal Archives).",
-    "2026-10-02 (Brian, nuevo lote §0b): tercer nivel (subgenres, migración 0037); familias Urbano latino, Bandas sonoras, Música cristiana y Música venezolana (joropo, gaita, aguinaldo y calipso salen de Fusión latina); géneros G+ de los lotes 1 y 2; «Soundtrack» deja de ser contexto y es Banda sonora; gótico: deathrock y coldwave (punk), ethereal wave y futurepop (electrónica), dark folk (folk). «Gothic» suelto sigue en metal gótico: la regla de contexto va en el adaptador del lote."
+    "2026-10-01 hermes: +36 aliases (fragmentos MA early/later y compuestos) +2 géneros (drone-metal, horror-punk) para cerrar la cola genre_unknown."
   ],
   "families": [
     {
@@ -49,9 +47,7 @@
         "pop",
         "Pop-Instrumental",
         "Indie Pop",
-        "Peligroso Pop",
-        "orchestral pop",
-        "accordion pop"
+        "Peligroso Pop"
       ]
     },
     {
@@ -67,8 +63,7 @@
       "name": "Jazz",
       "aliases": [
         "jazz",
-        "jazz contemporary",
-        "jazz vocal"
+        "jazz contemporary"
       ]
     },
     {
@@ -100,9 +95,7 @@
         "electronica",
         "electronic music",
         "musica electronica",
-        "Electro",
-        "electronica pionera",
-        "musica electronica temprana"
+        "Electro"
       ]
     },
     {
@@ -163,43 +156,6 @@
       ],
       "typoAliases": [
         "clasical"
-      ]
-    },
-    {
-      "slug": "urbano-latino",
-      "name": "Urbano latino",
-      "aliases": [
-        "urbano",
-        "urban pop",
-        "latin urban",
-        "soul-inflected urbano",
-        "musica urbana"
-      ]
-    },
-    {
-      "slug": "bandas-sonoras",
-      "name": "Bandas sonoras",
-      "aliases": []
-    },
-    {
-      "slug": "musica-cristiana",
-      "name": "Música cristiana",
-      "aliases": [
-        "christian",
-        "musica cristiana",
-        "cristiana"
-      ]
-    },
-    {
-      "slug": "musica-venezolana",
-      "name": "Música venezolana",
-      "aliases": [
-        "folclor venezolano",
-        "folklore venezolano",
-        "musica criolla",
-        "cancion venezolana",
-        "canto venezolano",
-        "cancion criolla"
       ]
     }
   ],
@@ -341,8 +297,7 @@
         "world music",
         "musica del mundo",
         "ethnic",
-        "world fusion",
-        "cantos sefardies"
+        "world fusion"
       ]
     },
     {
@@ -931,10 +886,7 @@
         "children",
         "childrens music",
         "musica infantil",
-        "infantil",
-        "cancion infantil",
-        "pop infantil",
-        "rondas"
+        "infantil"
       ]
     },
     {
@@ -1379,9 +1331,7 @@
         "navidad",
         "navidena",
         "musica navidena",
-        "navideno",
-        "villancico",
-        "villancico venezolano"
+        "navideno"
       ]
     },
     {
@@ -1442,9 +1392,7 @@
       "aliases": [
         "experimental rap",
         "experimental hip hop",
-        "hip hop experimental",
-        "drumless hip-hop",
-        "industrial hip-hop"
+        "hip hop experimental"
       ]
     },
     {
@@ -1464,16 +1412,7 @@
         "tropical",
         "tropical music",
         "indie tropical",
-        "latin tropical",
-        "lambada",
-        "caribbean fusion",
-        "afro-caribbean pop",
-        "orquesta bailable",
-        "musica de baile",
-        "mosaico tropical",
-        "arpa tropical",
-        "porro",
-        "afrocaribeño"
+        "latin tropical"
       ]
     },
     {
@@ -1579,11 +1518,7 @@
       "slug": "bachata",
       "name": "Bachata",
       "family": "fusion-latina",
-      "aliases": [
-        "bachata-pop",
-        "bachata crossover",
-        "bachata-vallenato crossover"
-      ]
+      "aliases": []
     },
     {
       "slug": "boom-bap",
@@ -1692,15 +1627,8 @@
     {
       "slug": "joropo",
       "name": "Joropo",
-      "family": "musica-venezolana",
+      "family": "fusion-latina",
       "aliases": [
-        "llanera",
-        "musica llanera",
-        "joropo llanero",
-        "joropo estilizado",
-        "joropo instrumental",
-        "joropo vocal",
-        "cancion llanera",
         "llanera"
       ]
     },
@@ -1769,17 +1697,9 @@
     {
       "slug": "gaita",
       "name": "Gaita",
-      "family": "musica-venezolana",
+      "family": "fusion-latina",
       "aliases": [
-        "gaita zuliana",
-        "Latin/Gaita",
-        "Gaita/Latin",
-        "Latin/Salsa-Gaita",
-        "gaita tradicional",
-        "gaita de protesta",
-        "gaita humoristica",
-        "gaiton",
-        "tamborera zuliana"
+        "gaita zuliana"
       ]
     },
     {
@@ -1826,10 +1746,7 @@
       "slug": "vallenato",
       "name": "Vallenato",
       "family": "fusion-latina",
-      "aliases": [
-        "vallenato crossover",
-        "vallenato repertory"
-      ]
+      "aliases": []
     },
     {
       "slug": "timba",
@@ -1846,11 +1763,9 @@
     {
       "slug": "calipso",
       "name": "Calipso",
-      "family": "musica-venezolana",
+      "family": "fusion-latina",
       "aliases": [
-        "calypso",
-        "calipso de el callao",
-        "calipso callaoense"
+        "calypso"
       ]
     },
     {
@@ -1864,13 +1779,9 @@
     {
       "slug": "aguinaldo",
       "name": "Aguinaldo",
-      "family": "musica-venezolana",
+      "family": "fusion-latina",
       "aliases": [
-        "aguinaldos",
-        "parranda",
-        "parranda navideña",
-        "aguinaldo coral",
-        "aguinaldo infantil"
+        "aguinaldos"
       ]
     },
     {
@@ -1889,17 +1800,7 @@
         "traditional",
         "folklore",
         "folclore",
-        "folklorica",
-        "folclor tradicional",
-        "folclor latinoamericano",
-        "folklore latinoamericano",
-        "cantos tradicionales regionales",
-        "canto comunitario",
-        "cancion popular",
-        "cancion campesina",
-        "pasodoble",
-        "polca",
-        "marcha"
+        "folklorica"
       ],
       "typoAliases": [
         "tradidional"
@@ -1946,17 +1847,7 @@
       "name": "Música coral",
       "family": "musica-clasica",
       "aliases": [
-        "choral",
-        "musica vocal",
-        "canto orfeonico",
-        "coro infantil",
-        "coro de voces femeninas",
-        "musica academica coral",
-        "musica coral latinoamericana",
-        "musica popular venezolana coral",
-        "polifonia venezolana",
-        "madrigal venezolano",
-        "musica sinfonico-coral"
+        "choral"
       ]
     },
     {
@@ -1989,289 +1880,6 @@
       "slug": "horror-punk",
       "name": "Horror Punk",
       "family": "punk",
-      "aliases": []
-    },
-    {
-      "slug": "reggaeton",
-      "name": "Reggaetón",
-      "family": "urbano-latino",
-      "aliases": [
-        "reguetón",
-        "reggaetón",
-        "regueton",
-        "deconstructed reggaeton"
-      ]
-    },
-    {
-      "slug": "trap-latino",
-      "name": "Trap latino",
-      "family": "urbano-latino",
-      "aliases": [
-        "latin trap",
-        "trap venezolano"
-      ]
-    },
-    {
-      "slug": "trap",
-      "name": "Trap",
-      "family": "hip-hop",
-      "aliases": []
-    },
-    {
-      "slug": "drill",
-      "name": "Drill",
-      "family": "hip-hop",
-      "aliases": []
-    },
-    {
-      "slug": "banda-sonora",
-      "name": "Banda sonora",
-      "family": "bandas-sonoras",
-      "aliases": [
-        "soundtrack",
-        "soundtracks",
-        "film score",
-        "documentary score",
-        "television music",
-        "telenovela music",
-        "musica de telenovela",
-        "musica de cine",
-        "banda sonora original"
-      ]
-    },
-    {
-      "slug": "opera",
-      "name": "Ópera",
-      "family": "musica-clasica",
-      "aliases": []
-    },
-    {
-      "slug": "nacionalismo-musical",
-      "name": "Nacionalismo musical",
-      "family": "musica-clasica",
-      "aliases": [
-        "venezuelan nationalist music",
-        "nacionalismo musical venezolano"
-      ]
-    },
-    {
-      "slug": "musica-sacra",
-      "name": "Música sacra",
-      "family": "musica-clasica",
-      "aliases": [
-        "sacred music"
-      ]
-    },
-    {
-      "slug": "folclor-fusion",
-      "name": "Folclor fusión",
-      "family": "fusion-latina",
-      "aliases": [
-        "folklore fusion",
-        "instrumental venezolano",
-        "folclor experimental",
-        "fusion instrumental",
-        "tamunangue fusion",
-        "tradicion con swing",
-        "bossa nova fusion"
-      ]
-    },
-    {
-      "slug": "soca",
-      "name": "Soca",
-      "family": "fusion-latina",
-      "aliases": []
-    },
-    {
-      "slug": "pop-psicodelico",
-      "name": "Pop psicodélico",
-      "family": "pop",
-      "aliases": [
-        "psychedelic pop"
-      ]
-    },
-    {
-      "slug": "art-pop",
-      "name": "Art pop",
-      "family": "pop",
-      "aliases": [
-        "avant-pop",
-        "left-field pop",
-        "leftfield pop"
-      ]
-    },
-    {
-      "slug": "deathrock",
-      "name": "Deathrock",
-      "family": "punk",
-      "aliases": [
-        "death rock"
-      ]
-    },
-    {
-      "slug": "coldwave",
-      "name": "Coldwave",
-      "family": "punk",
-      "aliases": [
-        "cold wave"
-      ]
-    },
-    {
-      "slug": "ethereal-wave",
-      "name": "Ethereal wave",
-      "family": "electronica",
-      "aliases": [
-        "ethereal darkwave"
-      ]
-    },
-    {
-      "slug": "futurepop",
-      "name": "Futurepop",
-      "family": "electronica",
-      "aliases": [
-        "future pop",
-        "synth gotico"
-      ]
-    },
-    {
-      "slug": "dark-folk",
-      "name": "Dark folk",
-      "family": "folk",
-      "aliases": [
-        "neofolk"
-      ]
-    },
-    {
-      "slug": "nueva-cancion",
-      "name": "Nueva canción",
-      "family": "folk",
-      "aliases": [
-        "nueva cancion latinoamericana",
-        "cancion de protesta",
-        "cancion necesaria",
-        "cancion social latinoamericana",
-        "cancion latinoamericana"
-      ]
-    },
-    {
-      "slug": "musica-cristiana-contemporanea",
-      "name": "Música cristiana contemporánea",
-      "family": "musica-cristiana",
-      "aliases": [
-        "ccm",
-        "ccm latino",
-        "pop cristiano",
-        "balada cristiana",
-        "contemporary christian"
-      ]
-    },
-    {
-      "slug": "adoracion",
-      "name": "Adoración",
-      "family": "musica-cristiana",
-      "aliases": [
-        "worship",
-        "alabanza",
-        "alabanza y adoracion"
-      ]
-    },
-    {
-      "slug": "tonada",
-      "name": "Tonada",
-      "family": "musica-venezolana",
-      "aliases": [
-        "tonada llanera",
-        "canto de trabajo",
-        "cantos de trabajo",
-        "canto sabanero",
-        "canto de ordeño",
-        "cantos de ordeño"
-      ]
-    },
-    {
-      "slug": "musica-oriental",
-      "name": "Música oriental",
-      "family": "musica-venezolana",
-      "aliases": [
-        "musica oriental venezolana",
-        "folclor oriental",
-        "joropo oriental",
-        "parranda oriental"
-      ]
-    },
-    {
-      "slug": "musica-andina-venezolana",
-      "name": "Música andina venezolana",
-      "family": "musica-venezolana",
-      "aliases": [
-        "andino venezolano",
-        "cancion tachirense",
-        "joropo andino"
-      ]
-    },
-    {
-      "slug": "tambor-afrovenezolano",
-      "name": "Tambor afrovenezolano",
-      "family": "musica-venezolana",
-      "aliases": [
-        "afrovenezolano",
-        "tambor",
-        "golpe de tambor",
-        "tambor barloventeño",
-        "tambor de la costa",
-        "cumaco",
-        "parranda afrovenezolana",
-        "afropercusion",
-        "tradiciones costeras",
-        "musica afrovenezolana"
-      ]
-    },
-    {
-      "slug": "golpe-larense",
-      "name": "Golpe larense",
-      "family": "musica-venezolana",
-      "aliases": [
-        "golpe tocuyano",
-        "folclor larense"
-      ]
-    },
-    {
-      "slug": "merengue-venezolano",
-      "name": "Merengue venezolano",
-      "family": "musica-venezolana",
-      "aliases": [
-        "merengue caraqueño",
-        "merengue rucaneao",
-        "musica cañonera"
-      ]
-    },
-    {
-      "slug": "vals-venezolano",
-      "name": "Vals venezolano",
-      "family": "musica-venezolana",
-      "aliases": [
-        "vals",
-        "contradanza"
-      ]
-    },
-    {
-      "slug": "onda-nueva",
-      "name": "Onda nueva",
-      "family": "musica-venezolana",
-      "aliases": []
-    },
-    {
-      "slug": "ritmo-orquidea",
-      "name": "Ritmo orquídea",
-      "family": "musica-venezolana",
-      "aliases": [
-        "orquídea"
-      ]
-    },
-    {
-      "slug": "musica-de-camara-popular",
-      "name": "Música de cámara popular",
-      "family": "musica-venezolana",
       "aliases": []
     }
   ],
@@ -2307,6 +1915,7 @@
       "20",
       "humor",
       "Comedy",
+      "Soundtrack",
       "Stage & Screen"
     ],
     "procedencia": [
@@ -2359,14 +1968,7 @@
       "Contemporary",
       "Fusion",
       "Minimal",
-      "Tribal",
-      "shred",
-      "rac",
-      "improvisacion",
-      "etnomusicologia aplicada",
-      "armonia vocal",
-      "musica profana",
-      "freestyle"
+      "Tribal"
     ],
     "instrumento": [
       "Cuatro",
@@ -2376,12 +1978,7 @@
       "Vocals",
       "Bass",
       "Mandolin",
-      "Bandola",
-      "arpa llanera",
-      "bandola llanera",
-      "cuatro venezolano",
-      "guitarra venezolana",
-      "arpa y orquesta"
+      "Bandola"
     ],
     "audiencia": [
       "Children's",
@@ -2399,194 +1996,5 @@
       "White Rock",
       "Un"
     ]
-  },
-  "subgenres": [
-    {
-      "slug": "salsa-romantica",
-      "name": "Salsa romántica",
-      "genre": "salsa",
-      "aliases": [
-        "romantic salsa",
-        "salsa juvenil"
-      ]
-    },
-    {
-      "slug": "tecnomerengue",
-      "name": "Tecnomerengue",
-      "genre": "merengue",
-      "aliases": [
-        "technomerengue",
-        "techno merengue",
-        "tecno merengue"
-      ]
-    },
-    {
-      "slug": "raptor-house",
-      "name": "Raptor house",
-      "genre": "house",
-      "aliases": [
-        "raptor"
-      ]
-    },
-    {
-      "slug": "pasaje",
-      "name": "Pasaje",
-      "genre": "joropo",
-      "aliases": [
-        "pasaje llanero",
-        "pasaje instrumental",
-        "pasaje romantico"
-      ]
-    },
-    {
-      "slug": "golpe-llanero",
-      "name": "Golpe llanero",
-      "genre": "joropo",
-      "aliases": [
-        "canto recio",
-        "golpe recio"
-      ]
-    },
-    {
-      "slug": "corrio",
-      "name": "Corrío",
-      "genre": "joropo",
-      "aliases": [
-        "corrido llanero"
-      ]
-    },
-    {
-      "slug": "contrapunteo",
-      "name": "Contrapunteo",
-      "genre": "joropo",
-      "aliases": [
-        "contrapunto llanero"
-      ]
-    },
-    {
-      "slug": "golpe-y-estribillo",
-      "name": "Golpe y estribillo",
-      "genre": "joropo",
-      "aliases": [
-        "joropo con estribillo",
-        "joropo central",
-        "joropo tuyero"
-      ]
-    },
-    {
-      "slug": "guasa",
-      "name": "Guasa",
-      "genre": "joropo",
-      "aliases": []
-    },
-    {
-      "slug": "puntillanto",
-      "name": "Puntillanto",
-      "genre": "joropo",
-      "aliases": []
-    },
-    {
-      "slug": "gaita-de-furro",
-      "name": "Gaita de furro",
-      "genre": "gaita",
-      "aliases": []
-    },
-    {
-      "slug": "polo-oriental",
-      "name": "Polo oriental",
-      "genre": "musica-oriental",
-      "aliases": [
-        "polo",
-        "polo margariteño",
-        "polo margariteno"
-      ]
-    },
-    {
-      "slug": "malaguena",
-      "name": "Malagueña",
-      "genre": "musica-oriental",
-      "aliases": [
-        "malagueña oriental"
-      ]
-    },
-    {
-      "slug": "galeron",
-      "name": "Galerón",
-      "genre": "musica-oriental",
-      "aliases": [
-        "galeron oriental"
-      ]
-    },
-    {
-      "slug": "jota-oriental",
-      "name": "Jota oriental",
-      "genre": "musica-oriental",
-      "aliases": [
-        "jota margariteña"
-      ]
-    },
-    {
-      "slug": "gaita-oriental",
-      "name": "Gaita oriental",
-      "genre": "musica-oriental",
-      "aliases": [
-        "gaita margariteña"
-      ]
-    },
-    {
-      "slug": "merengue-oriental",
-      "name": "Merengue oriental",
-      "genre": "musica-oriental",
-      "aliases": [
-        "merengue campesino"
-      ]
-    },
-    {
-      "slug": "bambuco",
-      "name": "Bambuco",
-      "genre": "musica-andina-venezolana",
-      "aliases": [
-        "bambuco tachirense",
-        "bambuco andino"
-      ]
-    },
-    {
-      "slug": "vals-andino",
-      "name": "Vals andino",
-      "genre": "musica-andina-venezolana",
-      "aliases": []
-    },
-    {
-      "slug": "sangueo",
-      "name": "Sangueo",
-      "genre": "tambor-afrovenezolano",
-      "aliases": []
-    },
-    {
-      "slug": "fulia",
-      "name": "Fulía",
-      "genre": "tambor-afrovenezolano",
-      "aliases": []
-    },
-    {
-      "slug": "tamunangue",
-      "name": "Tamunangue",
-      "genre": "golpe-larense",
-      "aliases": [
-        "sones de negro"
-      ]
-    },
-    {
-      "slug": "gaban",
-      "name": "Gabán",
-      "genre": "joropo",
-      "aliases": []
-    },
-    {
-      "slug": "motivo-guaiqueri",
-      "name": "Motivo guaiquerí",
-      "genre": "musica-oriental",
-      "aliases": []
-    }
-  ]
+  }
 }

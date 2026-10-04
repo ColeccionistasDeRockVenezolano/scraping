@@ -1,0 +1,122 @@
+{
+  "mode": "confirm",
+  "runId": 11658,
+  "models": [
+    "deepseek-flash"
+  ],
+  "outputs": 139,
+  "badLines": [],
+  "applied": {
+    "artist": 139,
+    "album": 0,
+    "person": 0,
+    "organization": 0
+  },
+  "enriched": 0,
+  "created": 139,
+  "unchanged": 0,
+  "noData": 0,
+  "changedSinceExport": [],
+  "rejected": [],
+  "unknownCase": [],
+  "lostYears": [],
+  "notes": [
+    {
+      "caseId": "artist:3387",
+      "note": "La fuente s2, página de discografía, menciona la agrupación «Cantoría Alberto Grau» en varios títulos; se han usado solo los créditos claramente atribuidos a esta agrupación. El catálogo no registra su estado actual."
+    },
+    {
+      "caseId": "artist:3420",
+      "note": "El catálogo registra la formación como 'Schola Cantorum de Caracas', mientras que fuentes recientes la denominan 'Schola Cantorum de Venezuela'; se mantiene el nombre del catálogo."
+    },
+    {
+      "caseId": "artist:3677",
+      "note": "El catálogo lista el primer disco como «Vamos Gente De Mi Tierra (1969)» y la fuente biográfica como «Gente de mi tierra»; se mantiene la grafía del catálogo en la mención del disco."
+    },
+    {
+      "caseId": "artist:3700",
+      "note": "El campo «ciudad» del catálogo tiene el valor \"1965 in Caracas\"; se usó 1965 como año de fundación y no se atribuyó a Caracas como ciudad de origen por tratarse de un dato mal formado."
+    },
+    {
+      "caseId": "artist:3710",
+      "note": "El listado de discos del catálogo incluye títulos duplicados y reediciones ('other', recopilaciones) que no se detallan; la fecha exacta de nacimiento y la controversia por la autoría de «Moliendo Café» provienen de la fuente y no del catálogo."
+    },
+    {
+      "caseId": "artist:3745",
+      "note": "Discrepancia de fecha de nacimiento: el sitio oficial indica 30 de marzo de 1963, mientras fuentes secundarias antiguas reportan 1962."
+    },
+    {
+      "caseId": "artist:3756",
+      "note": "La única fuente disponible aporta la descripción general del artista; la discografía y las etapas provienen del catálogo."
+    },
+    {
+      "caseId": "artist:3796",
+      "note": "La fuente s2 indica fecha de nacimiento (31 de marzo de 1941) y más de 13 millones de copias vendidas; no se incluyen por no estar confirmados por otras fuentes del expediente."
+    },
+    {
+      "caseId": "artist:3831",
+      "note": "El catálogo sitúa el debut homónimo en 1973, mientras que la fuente lo fecha en 1974."
+    },
+    {
+      "caseId": "artist:3833",
+      "note": "La nacionalidad venezolana consta en el catálogo y en la fuente. La fuente no ofrece fechas ni detalle de la discografía listada en el catálogo, por lo que los discos se nombran de forma indirecta."
+    },
+    {
+      "caseId": "artist:3843",
+      "note": "Discrepancia de fechas y volúmenes entre el catálogo y la fuente: el catálogo asigna 1964 al Vol. 2 y 1965 al Vol. 3, mientras la fuente los sitúa en junio de 1964 y noviembre de 1964 respectivamente, y describe el Vol. 1 como de diciembre de 1963. También hay diferencias en los nombres de las integrantes (el catálogo lista a Gloris López como contralto y a Marina Auristela Guánche como soprano, la fuente las sitúa de otro modo) y en la grafía de Guanche/Guánche."
+    },
+    {
+      "caseId": "artist:4003",
+      "note": "Las fuentes dan el disco «Saúl Vera y su Ensamble» como de 1994 y el catálogo lo lista en 1993; se ha usado el año del catálogo. Los años de «Brisas» y «Tierra Cálida» coinciden entre catálogo y fuente."
+    },
+    {
+      "caseId": "artist:4234",
+      "note": "No se pudo confirmar biografía pública, nombre civil, fecha ni lugar de nacimiento; no debe fusionarse con el cantante llanero José Gregorio Coraspe."
+    },
+    {
+      "caseId": "artist:4243",
+      "note": "La fuente aporta muy pocos datos: no se recogen fechas, formación ni discografía."
+    },
+    {
+      "caseId": "artist:4245",
+      "note": "La fuente s1 aporta el debut de 1988, dato que no aparece en el catálogo; se conserva por no contradecirlo. No se detallan integrantes ni otros hitos por falta de datos en el expediente."
+    },
+    {
+      "caseId": "artist:4257",
+      "note": "La fuente en inglés está inconclusa (corta en 2019) y contradice en parte al catálogo: atribuye Young Cream a 2016 y lo llama primer álbum de estudio, mientras el catálogo lo fecha en 2017 y lo clasifica como «other»; Apokalypsis, que la fuente presenta como álbum de 2018, figura en el catálogo como Apokalypsis 2 (2021) [other]. No se incluyen fechas de nacimiento ni cifras de reproducciones por no poder confirmarlas con el catálogo. Estilo no cubierto por las fuentes más allá de la adscripción al trap latino."
+    },
+    {
+      "caseId": "artist:4263",
+      "note": "Discrepancia de fuentes: el lugar de nacimiento consta en Ciudad Bolívar, pero una fuente lo presenta como lugar de origen de la familia; se usó el dato del catálogo. La fuente principal está en inglés y se tradujo."
+    },
+    {
+      "caseId": "artist:4265",
+      "note": "El expediente no fija fechas de nacimiento ni de muerte; no se incluyen para no depender de conocimiento externo."
+    },
+    {
+      "caseId": "artist:4274",
+      "note": "El catálogo indica formación en 2018, mientras que una fuente señala que el proyecto entrega sonidos desde 2016; se mantiene el dato del catálogo y se deja constancia de la discrepancia."
+    },
+    {
+      "caseId": "artist:4285",
+      "note": "Discrepancia en el lugar de nacimiento: el catálogo indica Barbacoas y la fuente en inglés precisa que entonces pertenecía al estado Guárico (hoy Aragua); se ha optado por mencionar solo Barbacoas con el estado que figura en el catálogo. Las fechas de nacimiento y muerte no constan en el catálogo y se han omitido."
+    },
+    {
+      "caseId": "artist:4286",
+      "note": "El catálogo lista «Apure Siempre Es Apure», «Adios A Mi Tierra», «El Cabrestero de la Copla» (1977), «Cantor De Cielo y Sabana» (1978), «A Eneas de Mi Tierra Cantora», «Romance De La Niña India» (1980), «Un Señor Cantante» (1976) y «A Lo Criollo» (1996); se resumió la discografía por límite de extensión y no se listaron todos. El catálogo no incluye fecha ni lugar de nacimiento; se tomaron de la fuente (El Yagual, 11 de julio de 1930)."
+    },
+    {
+      "caseId": "artist:4291",
+      "note": "La fuente s2 incluye una lista extensa de canciones que no se detalla en el texto; el catálogo registra discos de 2025 como «Entreveradas del Guerrero» y «Los Hachazos del Guerrero» que no se nombran."
+    },
+    {
+      "caseId": "artist:4295",
+      "note": "Discrepancia de año de nacimiento: la Fundación Empresas Polar documenta 1900 y otras fuentes 1899; el catálogo no fija el dato, por lo que se mencionan ambas versiones sin resolver."
+    },
+    {
+      "caseId": "artist:4310",
+      "note": "El catálogo registra la fundación en 1974, pero algunas fuentes mencionan más de 50 años de trayectoria y 52 años en 2026; no se resuelve la discrepancia entre las fechas de aniversario y el año de fundación."
+    }
+  ],
+  "discarded": 12
+}
