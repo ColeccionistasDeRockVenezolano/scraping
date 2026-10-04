@@ -635,6 +635,7 @@ def main():
     ap.add_argument("--cola", required=True)
     ap.add_argument("--outdir", required=True)
     ap.add_argument("--phase", choices=["artists", "releases", "both"], default="both")
+    ap.add_argument("--prioridad", default="", help="archivo con hrefs de artistas (uno por línea) cuyos discos van primero")
     ap.add_argument("--limit", type=int, default=0)
     ap.add_argument("--headful", action="store_true")
     ap.add_argument("--base-min", type=float, default=7.0)
@@ -700,7 +701,12 @@ def main():
                     avisar_throttled("🔒 CRV · «nuevos»: muro de Cloudflare («Un momento…» = sesión vencida). Reintentar NO lo destraba: abre rateyourmusic.com en tu Firefox ~30 s. Nada se pierde (los ítems quedan pendientes).", min_gap=3600, clave="cf")
                 else:
                     avisar_throttled("🟡 CRV · «nuevos»: muro suave de RYM (503). Auto-recupera con enfriamiento; sin acción tuya.", min_gap=3600, clave="soft")
-            time.sleep(random.uniform(90, 240))
+            # El 503 suave de RYM suele ceder en segundos: primera espera corta; solo
+            # el muro CF (necesita al dueño) o los reintentos tardíos enfrían largo.
+            if not tipo_cf and intento == 1:
+                time.sleep(random.uniform(15, 35))
+            else:
+                time.sleep(random.uniform(90, 240))
             nueva_sesion()
         return None
 
@@ -711,6 +717,8 @@ def main():
             if args.limit and hechos >= args.limit:
                 return hechos
             url = "https://rateyourmusic.com" + href
+            if not url.endswith("/"):
+                url += "/"
             page = fetch_una(url)
             if page is None:
                 fallos_seguidos += 1
@@ -801,7 +809,33 @@ def main():
 
     if args.phase in ("releases", "both"):
         releases = construir_releases(cola, pages_dir, estado)
-        random.shuffle(releases)
+        prio = set()
+        if args.prioridad and os.path.exists(args.prioridad):
+            prio = {l.strip() for l in open(args.prioridad, encoding="utf-8") if l.strip()}
+        if prio:
+            from collections import Counter
+            nrel = Counter(it[2].get("parent") for it in releases)
+            def orden(it):
+                parent = it[2].get("parent") or ""
+                return (0 if parent in prio else 1, -nrel[parent])
+            releases.sort(key=orden)
+            # shuffle solo DENTRO de bloques de igual prioridad (dispersa patrones sin perder el orden de valor)
+            ordenados = []
+            i = 0
+            while i < len(releases):
+                j = i
+                k = orden(releases[i])
+                while j < len(releases) and orden(releases[j]) == k:
+                    j += 1
+                bloque = releases[i:j]
+                random.shuffle(bloque)
+                ordenados.extend(bloque)
+                i = j
+            releases = ordenados
+            n_prio = sum(1 for it in releases if orden(it)[0] == 0)
+            log(f"fase 2 (discos): prioridad aplicada — {n_prio} de artistas en catálogo van primero")
+        else:
+            random.shuffle(releases)
         log(f"fase 2 (discos): {len(releases)} fichas por capturar")
         procesar(releases, 2, len(releases))
         log("COLA TERMINADA")
