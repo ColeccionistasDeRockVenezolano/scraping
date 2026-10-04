@@ -11,6 +11,7 @@ import path from "node:path";
 
 const directory = path.dirname(fileURLToPath(import.meta.url));
 const dist = path.join(directory, "dist-public");
+const media = path.join(directory, "public", "media");
 const host = process.env.CRV_WEB_HOST ?? "127.0.0.1";
 const port = Number(process.env.CRV_WEB_PORT ?? "3120");
 const apiHost = process.env.CRV_API_HOST ?? "127.0.0.1";
@@ -68,25 +69,38 @@ async function serveFile(req, res, pathname) {
   catch { return reply(res, 400, "Ruta inválida."); }
   if (relativePath.split("/").includes("..")) return reply(res, 403, "Ruta no permitida.");
 
-  const requested = path.join(dist, relativePath || "index.html");
+  // Las imágenes canónicas viven en public/media. Vite vacía y reconstruye
+  // dist-public en cada publicación; servirlas desde ese build deja solicitudes
+  // sin archivo (o con una copia aún en curso) mientras se publica.
+  const isMedia = relativePath === "media" || relativePath.startsWith("media/");
+  const requested = isMedia
+    ? path.join(media, relativePath.slice("media".length))
+    : path.join(dist, relativePath || "index.html");
   let file = requested;
+  let fileStat;
   try {
-    if (!(await stat(file)).isFile()) throw new Error("not-a-file");
+    fileStat = await stat(file);
+    if (!fileStat.isFile()) throw new Error("not-a-file");
   } catch {
     // Las rutas del router de React no son archivos: devuelven la SPA.
-    if (path.extname(relativePath)) return reply(res, 404, "Archivo no encontrado.");
+    if (isMedia || path.extname(relativePath)) return reply(res, 404, "Archivo no encontrado.");
     file = path.join(dist, "index.html");
+    try { fileStat = await stat(file); }
+    catch { return reply(res, 503, "La aplicación no está disponible."); }
   }
 
   const ext = path.extname(file).toLowerCase();
   const headers = {
     "content-type": MIME_TYPES[ext] ?? "application/octet-stream",
+    "content-length": fileStat.size,
     ...SECURITY_HEADERS,
-    ...(file.includes(`${path.sep}assets${path.sep}`) ? { "cache-control": "public, max-age=31536000, immutable" } : { "cache-control": "no-cache" }),
+    ...(isMedia ? { "cache-control": "public, max-age=300, stale-while-revalidate=3600" }
+      : file.includes(`${path.sep}assets${path.sep}`) ? { "cache-control": "public, max-age=31536000, immutable" }
+        : { "cache-control": "no-cache" }),
   };
   res.writeHead(200, headers);
   if (req.method === "HEAD") return res.end();
-  createReadStream(file).pipe(res);
+  createReadStream(file).on("error", (error) => res.destroy(error)).pipe(res);
 }
 
 const server = http.createServer(async (req, res) => {

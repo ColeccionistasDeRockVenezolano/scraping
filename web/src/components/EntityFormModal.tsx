@@ -34,7 +34,15 @@ export function EntityFormModal({
     setBusy(true);
     setError(undefined);
     try {
-      const result = await onSubmit(values, note.trim());
+      const normalized = { ...values };
+      for (const field of fields) {
+        const value = normalized[field.key];
+        if ((field.type === "url" || field.type === "mediaUrl" || field.type === "text" || field.type === "textarea")
+          && !field.required && typeof value === "string" && !value.trim()) {
+          normalized[field.key] = null;
+        }
+      }
+      const result = await onSubmit(normalized, note.trim());
       onSuccess(result);
     } catch (err) {
       setError(err instanceof ApiError ? err.message : "No se pudo guardar.");

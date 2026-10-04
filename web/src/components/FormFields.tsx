@@ -1,7 +1,7 @@
 export type FieldValue = string | number | boolean | null | undefined;
 
 export type FieldConfig =
-  | { key: string; label: string; type: "text" | "url" | "date"; required?: boolean; span2?: boolean; hint?: string }
+  | { key: string; label: string; type: "text" | "url" | "mediaUrl" | "date"; required?: boolean; span2?: boolean; hint?: string }
   | { key: string; label: string; type: "number"; required?: boolean; hint?: string }
   | { key: string; label: string; type: "textarea"; required?: boolean; span2?: boolean; hint?: string }
   | { key: string; label: string; type: "select"; required?: boolean; options: ReadonlyArray<{ value: string; label: string }>; allowEmpty?: boolean; hint?: string }
@@ -61,6 +61,7 @@ export function FormFields({ fields, values, onChange, errors }: FormFieldsProps
             ) : (
               <input
                 id={`f-${field.key}`} type={field.type === "url" ? "url" : field.type === "date" ? "date" : "text"}
+                inputMode={field.type === "mediaUrl" ? "url" : undefined}
                 value={(value as string) ?? ""} onChange={(event) => onChange(field.key, event.target.value)}
               />
             )}

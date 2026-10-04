@@ -12,7 +12,7 @@ export const ARTIST_FIELDS: readonly FieldConfig[] = [
   { key: "originCity", label: "Ciudad de origen", type: "text" },
   { key: "formedYear", label: "Año de formación", type: "number" },
   { key: "disbandedYear", label: "Año de disolución", type: "number" },
-  { key: "pictureUrl", label: "Foto (URL)", type: "url", span2: true },
+  { key: "pictureUrl", label: "Foto (URL)", type: "mediaUrl", span2: true },
   { key: "biography", label: "Biografía", type: "textarea", span2: true },
   { key: "notes", label: "Notas internas", type: "textarea", span2: true },
 ];
@@ -24,7 +24,7 @@ export const PERSON_FIELDS: readonly FieldConfig[] = [
   { key: "isDeceased", label: "Fallecido/a", type: "tristate" },
   { key: "birthDate", label: "Fecha de nacimiento", type: "date" },
   { key: "deathDate", label: "Fecha de fallecimiento", type: "date" },
-  { key: "pictureUrl", label: "Foto (URL)", type: "url", span2: true },
+  { key: "pictureUrl", label: "Foto (URL)", type: "mediaUrl", span2: true },
   { key: "biography", label: "Biografía", type: "textarea", span2: true },
   { key: "notes", label: "Notas internas", type: "textarea", span2: true },
 ];
@@ -34,7 +34,7 @@ export const ORGANIZATION_FIELDS: readonly FieldConfig[] = [
   { key: "organizationType", label: "Tipo", type: "select", required: true, options: options(ORGANIZATION_TYPES, organizationTypeLabel) },
   { key: "country", label: "País", type: "text" },
   { key: "websiteUrl", label: "Sitio web", type: "url" },
-  { key: "pictureUrl", label: "Imagen (URL)", type: "url", span2: true },
+  { key: "pictureUrl", label: "Imagen (URL)", type: "mediaUrl", span2: true },
   { key: "biography", label: "Descripción", type: "textarea", span2: true },
   { key: "notes", label: "Notas internas", type: "textarea", span2: true },
 ];
@@ -44,7 +44,7 @@ export const ALBUM_FIELDS: readonly FieldConfig[] = [
   { key: "albumType", label: "Tipo", type: "select", required: true, options: options(ALBUM_TYPES, albumTypeLabel) },
   { key: "releaseYear", label: "Año de publicación", type: "number" },
   { key: "genre", label: "Género", type: "text" },
-  { key: "coverUrl", label: "Portada (URL)", type: "url", span2: true },
+  { key: "coverUrl", label: "Portada (URL)", type: "mediaUrl", span2: true },
   { key: "youtubeUrl", label: "URL de YouTube", type: "url" },
   { key: "youtubeStatus", label: "Estado en YouTube", type: "select", options: options(PUBLICATION_STATUSES, publicationStatusLabel) },
   { key: "instagramUrl", label: "URL de Instagram", type: "url" },
