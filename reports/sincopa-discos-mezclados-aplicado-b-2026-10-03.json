@@ -1,0 +1,388 @@
+{
+  "albumsRun": 11758,
+  "created": {
+    "1368": 15675,
+    "1432": 15672,
+    "1479": 15683,
+    "1518": 15684,
+    "1606": 3855,
+    "1649": 15685,
+    "1670": 3894,
+    "1675": 15671,
+    "1830": 2520,
+    "2795": 15669,
+    "2956": 15673,
+    "2958": 15674,
+    "2963": 15681,
+    "2975": 15680,
+    "2991": 15676,
+    "2992": 15677,
+    "2993": 15678,
+    "3012": 15679,
+    "3028": 15682,
+    "3044": 15670
+  },
+  "runId": 11759,
+  "result": {
+    "tracks": 7,
+    "credits": 140,
+    "failed": 1,
+    "rejected": 741,
+    "superseded": 1079
+  },
+  "work": [
+    {
+      "albumId": 259,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/impala_05sumusica.htm",
+      "suffix": "impala_05sumusica",
+      "newAlbum": 2520,
+      "tracks": [],
+      "credits": []
+    },
+    {
+      "albumId": 259,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/impala_06europa2.htm",
+      "suffix": "1968",
+      "newAlbum": 15669,
+      "tracks": [],
+      "credits": []
+    },
+    {
+      "albumId": 259,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/impala_09_1996.htm",
+      "suffix": "1996",
+      "newAlbum": 15670,
+      "tracks": [],
+      "credits": []
+    },
+    {
+      "albumId": 3413,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/banana_voladora2.htm",
+      "suffix": "1997",
+      "tracks": [],
+      "credits": [
+        8112,
+        8115,
+        8116,
+        8119,
+        8120,
+        8121,
+        8124,
+        8125,
+        8111,
+        8113,
+        8131,
+        8133,
+        8134,
+        8140,
+        8142,
+        8144,
+        8137,
+        8128,
+        8132,
+        8135,
+        8136
+      ]
+    },
+    {
+      "albumId": 3507,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_cazadores_71thehunters.htm",
+      "suffix": "los_cazadores_71thehunters",
+      "newAlbum": 3894,
+      "tracks": [
+        24919
+      ],
+      "credits": [
+        15535,
+        15539,
+        15537,
+        15538,
+        15542,
+        15541
+      ]
+    },
+    {
+      "albumId": 3507,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/los_cazadores_88loscazadores.htm",
+      "suffix": "1988",
+      "newAlbum": 15671,
+      "tracks": [],
+      "credits": [
+        15587,
+        15589,
+        15591,
+        15592,
+        15594,
+        15588,
+        15590,
+        15593,
+        15595
+      ]
+    },
+    {
+      "albumId": 3795,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/ambar_1lovemaniac.htm",
+      "suffix": "ambar_1lovemaniac",
+      "newAlbum": 15672,
+      "tracks": [],
+      "credits": []
+    },
+    {
+      "albumId": 4081,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/francodvita_grandesexitos.htm",
+      "suffix": "2014",
+      "newAlbum": 15673,
+      "tracks": [
+        79356,
+        79357,
+        79358,
+        79359,
+        79360
+      ],
+      "credits": []
+    },
+    {
+      "albumId": 4125,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/germanfreytes2_6276.htm",
+      "suffix": "1969",
+      "newAlbum": 15674,
+      "tracks": [],
+      "credits": []
+    },
+    {
+      "albumId": 4145,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/gina_agny3.htm",
+      "suffix": "1984",
+      "newAlbum": 15675,
+      "tracks": [
+        79965
+      ],
+      "credits": [
+        12922,
+        12924,
+        12930,
+        12936,
+        12926,
+        12874,
+        12921,
+        12923,
+        12925,
+        12927,
+        12928,
+        12931,
+        12934,
+        12932,
+        12933
+      ]
+    },
+    {
+      "albumId": 4172,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/grupobota_1975.htm",
+      "suffix": "1975",
+      "newAlbum": 15676,
+      "tracks": [],
+      "credits": [
+        60622,
+        60623,
+        60624,
+        60625,
+        60626
+      ]
+    },
+    {
+      "albumId": 4172,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/grupobota_1976.htm",
+      "suffix": "1976",
+      "newAlbum": 15677,
+      "tracks": [],
+      "credits": [
+        60629,
+        60630,
+        60631,
+        60635
+      ]
+    },
+    {
+      "albumId": 4172,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/grupobota_1977.htm",
+      "suffix": "1977",
+      "newAlbum": 15678,
+      "tracks": [],
+      "credits": [
+        60636,
+        60637,
+        60638,
+        60639,
+        60640,
+        60641
+      ]
+    },
+    {
+      "albumId": 4181,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/gcarrasco_2gc_polyd.htm",
+      "suffix": "1981",
+      "newAlbum": 15679,
+      "tracks": [],
+      "credits": [
+        60911,
+        60912,
+        60913,
+        60914,
+        60915,
+        60916,
+        60917,
+        60918,
+        60919,
+        60920,
+        60921,
+        60922,
+        60923,
+        60924,
+        60925,
+        60926,
+        60927,
+        60928,
+        60929,
+        60930,
+        60931,
+        60932,
+        60933,
+        60934,
+        60935,
+        60936,
+        60937,
+        60938,
+        60939,
+        60940,
+        60941,
+        60942,
+        60943,
+        60944,
+        60945,
+        60946,
+        60947,
+        60948,
+        60949,
+        60950,
+        60951,
+        60952
+      ]
+    },
+    {
+      "albumId": 42,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/melissa_6melissa.htm",
+      "suffix": "1990",
+      "newAlbum": 15680,
+      "tracks": [],
+      "credits": [
+        60429,
+        60430,
+        60431,
+        60432,
+        60433,
+        60434,
+        60435,
+        60436,
+        60437,
+        60438,
+        60439,
+        60440,
+        60441,
+        60442,
+        60443,
+        60444,
+        60445,
+        60446,
+        60447,
+        60448,
+        60449,
+        60450,
+        60451,
+        60452,
+        60453,
+        60454,
+        60455,
+        60456,
+        60457
+      ]
+    },
+    {
+      "albumId": 4283,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/ivo_3ivo.htm",
+      "suffix": "1978",
+      "newAlbum": 15681,
+      "tracks": [],
+      "credits": [
+        60264,
+        60265,
+        60266
+      ]
+    },
+    {
+      "albumId": 4416,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/rhapsodia_2.htm",
+      "suffix": "1987",
+      "newAlbum": 15682,
+      "tracks": [
+        79390
+      ],
+      "credits": [
+        61160,
+        61161,
+        61162,
+        61163,
+        61164,
+        61165,
+        61166,
+        61167
+      ]
+    },
+    {
+      "albumId": 4640,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/antbellobluesband_2bumblebee.htm",
+      "suffix": "antbellobluesband_2bumblebee",
+      "newAlbum": 15683,
+      "tracks": [],
+      "credits": [
+        14398,
+        14400,
+        14402,
+        14406,
+        14404,
+        14403,
+        14405,
+        14407,
+        14409
+      ]
+    },
+    {
+      "albumId": 4650,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/compilations1/2020_20exitos2_6070.htm",
+      "suffix": "2020_20exitos2_6070",
+      "newAlbum": 15684,
+      "tracks": [],
+      "credits": []
+    },
+    {
+      "albumId": 4653,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/carlosbaute_13historiasvol2.htm",
+      "suffix": "carlosbaute_13historiasvol2",
+      "newAlbum": 3855,
+      "tracks": [],
+      "credits": []
+    },
+    {
+      "albumId": 4656,
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/compilations1/lomaximo_16exitosd60_70.htm",
+      "suffix": "lomaximo_16exitosd60_70",
+      "newAlbum": 15685,
+      "tracks": [],
+      "credits": [
+        15400,
+        15402,
+        15403,
+        15401
+      ]
+    }
+  ]
+}
