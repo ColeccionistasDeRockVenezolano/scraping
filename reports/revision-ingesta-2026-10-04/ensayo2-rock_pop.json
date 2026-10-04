@@ -1,0 +1,1236 @@
+{
+  "section": "rock_pop",
+  "dryRun": true,
+  "note": "Sincopa rock_pop: promoción masiva por reglas",
+  "kinds": {
+    "album": {
+      "identities": 44,
+      "claims": 248,
+      "verdicts": {
+        "same:revision-ingesta-titulo": 6,
+        "different:revision-ingesta-otro-disco": 4,
+        "approve:auto-match": 6,
+        "same:revision-ingesta-repertorio": 23,
+        "same:mismo-titulo-mismo-artista": 2,
+        "same:revision-ingesta-edicion": 2,
+        "same:titulo-casi-igual-mismo-repertorio": 1
+      },
+      "applied": 0,
+      "unchanged": 0,
+      "stillCandidate": 0,
+      "dismissed": 0,
+      "failed": 0
+    },
+    "track": {
+      "identities": 1283,
+      "claims": 2924,
+      "verdicts": {
+        "approve:auto-match": 246,
+        "hold:titulo-casi-igual-mismo-padre": 87,
+        "hold:varios-con-el-mismo-titulo": 10,
+        "different:sin-coincidencia": 86,
+        "same:mismo-titulo-mismo-disco": 703,
+        "different:solo-coincide-bajo-otro-padre": 78,
+        "hold:titulo-igual-con-contradiccion": 5,
+        "same:titulo-casi-igual-misma-posicion": 56,
+        "different:sin-decision-er-sin-parecido": 12
+      },
+      "applied": 0,
+      "unchanged": 0,
+      "stillCandidate": 0,
+      "dismissed": 0,
+      "failed": 0
+    }
+  },
+  "holds": [
+    {
+      "kind": "track",
+      "identityRaw": "Los Impala::40 Años 40 Exitos::Introducción Al Surf",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "15396 «Corina, Introducción al surf»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Impala::40 Años 40 Exitos::Do Wah Diddy Diddy",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "15408 «Do wah diddy»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Epitafio::III Op3ris T3rtium::Pánico",
+      "rule": "varios-con-el-mismo-titulo",
+      "detail": "ya hay 2 con ese título bajo el mismo padre: 32521, 32445",
+      "claims": 8
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Témpano::Nowhere NowHere::NowHere",
+      "rule": "varios-con-el-mismo-titulo",
+      "detail": "ya hay 2 con ese título bajo el mismo padre: 32536, 32555",
+      "claims": 8
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Juan Francisco::Calle Furia::Calle Furia (Acoustic Version)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "32579 «Calle Furia»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Supersónicos::Más de Los Supersónicos::Lana",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "20796 «Más, Lana, Romance en Rusia»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Supersónicos::Más de Los Supersónicos::Romance En Rusia",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "20796 «Más, Lana, Romance en Rusia»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Más Vivo & En Vivo::Rey Dinero",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "33030 «El Rey Dinero»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Más Vivo & En Vivo::Procesión De Satanás",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "33036 «La Procesión De»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Más Vivo & En Vivo::Loco Por El Rock & Roll / Misión Cumplida",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "157615 «Loco Por El Rock And Roll / Misión Cumplida»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ricardo Montaner::Prohibido Olvidar::No Me Puedo Aguantar (Dance)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "33416 «No Me Puedo Aguantar»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Yordano::Yordano Hoy - En Vivo::Como Se Deja De Querer",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "40422 «Como se deja querer»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Témpano::El Fin De La Infancia / Childhood's End::Timorato",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "2500 «Timorato»: el ER vio una contradicción (año, duración…)",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Impala::The Impala and Their Music::Poison Of Love",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "15545 «So I Am, Poison of Love»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Impala::The Impala and Their Music::You're My Girl",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "15555 «You Are my Girl»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Franco de Vita::Mil Y Una Historias En Vivo::Popurri: Aquí Estas Otra Ves / Ya Lo He Vivido /",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "34911 «Popurri: Aquí Estas Otra Ves / Ya Lo He Vivido / Si Quieres Decir Adiós / Y Te Pienso / Sólo Importas Tú / Te Recordaré»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Raimundo Rodulfo::To LIVE a Dream (Official Bootleg)::Esperanza",
+      "rule": "varios-con-el-mismo-titulo",
+      "detail": "ya hay 2 con ese título bajo el mismo padre: 34827, 34851",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rudy La Scala::Mi Alma Es Tropical::Tu Dulce Flor",
+      "rule": "varios-con-el-mismo-titulo",
+      "detail": "ya hay 2 con ese título bajo el mismo padre: 36013, 36046",
+      "claims": 6
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Kiara::32 Grandes Exitos Serie 32::No",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "78956 «No Me Importa Nada»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "María Conchita Alonso::Soy::Soy",
+      "rule": "varios-con-el-mismo-titulo",
+      "detail": "ya hay 8 con ese título bajo el mismo padre: 36357, 36363, 36369, 36375, 36393, 36398, 36404, 36411",
+      "claims": 32
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Pixel::Cuánto Cuesta::Cuánto Cuesta",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "1685 «Cuanto Cuesta»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Pixel::Cuánto Cuesta::Por Ahora No Estás",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "1726 «Por Ahora No Estas»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Karina::Renacer::Déjame Libre",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "36225 «Déjame Libre (Rudy La Scala)»",
+      "claims": 1
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rudy La Scala::En Cuerpo y Alma::Como Te Extraño",
+      "rule": "varios-con-el-mismo-titulo",
+      "detail": "ya hay 2 con ese título bajo el mismo padre: 37623, 37653",
+      "claims": 8
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Malanga::Sr. Malanga::Cuando Se Rompe Un Corazón",
+      "rule": "varios-con-el-mismo-titulo",
+      "detail": "ya hay 2 con ese título bajo el mismo padre: 37404, 37434",
+      "claims": 8
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Juan Carlos Pérez Soto::Juan Carlos Pérez Soto::Atarme A La Luna",
+      "rule": "varios-con-el-mismo-titulo",
+      "detail": "ya hay 2 con ese título bajo el mismo padre: 38087, 38103",
+      "claims": 10
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gore Priest::Beneath Eternal Oceans of Melancholy::Darkness Arrives",
+      "rule": "varios-con-el-mismo-titulo",
+      "detail": "ya hay 2 con ese título bajo el mismo padre: 42571, 42583",
+      "claims": 8
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::Para Mí No Más",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "137593 «Para Mi No Mas (En Vivo)»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::A Pasarla Bien",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "137594 «A Pasarla Bien (En Vivo)»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::Por Alguien Como Tú",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "137595 «Por Alguien Como Tu (En Vivo)»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::Palabras Del Alma",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "137596 «Palabras Del Alma (En Vivo)»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::Es Verdad",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "137597 «Es Verdad (En Vivo)»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::Eres Una En Un Millón",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "137598 «Eres Una En Un Millon (En Vivo)»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::Sabe A Calidad",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "137599 «Sabe A Calidad (En Vivo)»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::Un Querer Como El Tuyo",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "137600 «Un Querer Como El Tuyo (En Vivo)»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::Para Siempre",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "137601 «Para Siempre (En Vivo)»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::Historia De Un Buen Día",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "137602 «Historia De Un Buen Dia (En Vivo)»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::Canto Al Avila",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "137603 «Canto Al Avila (En Vivo)»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::Contigo",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "137604 «Contigo (En Vivo)»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Karina::Karina::Dejaré",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "37750 «Dejaré (Juan Carlos Pérez Soto)»",
+      "claims": 1
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Sentimiento Muerto::Aunque Usted No Lo Quiera::Culebrón",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "6301 «Culebrón (Cabello/Troconis)»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Sentimiento Muerto::Aunque Usted No Lo Quiera::Estado: Alucinando",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "6306 «Estado: Alucinando (Cabello/Troconis)»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Sentimiento Muerto::Aunque Usted No Lo Quiera::Descargar",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "6311 «Descargar (Cabello/Troconis)»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Sentimiento Muerto::Aunque Usted No Lo Quiera::Ganas",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "6318 «Ganas (Cabello/Troconis)»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Sentimiento Muerto::Aunque Usted No Lo Quiera::Un Agradable Calor",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "6323 «Un Agradable Calor (Cabello/Troconis/Jiménez)»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Sentimiento Muerto::Aunque Usted No Lo Quiera::Nuevas Sensaciones",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "6328 «Nuevas Sensaciones (Cabello/Dagnino)»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Sentimiento Muerto::Aunque Usted No Lo Quiera::Siete Mares",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "6336 «Siete Mares (Dagnino)»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Sentimiento Muerto::Aunque Usted No Lo Quiera::El Delito",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "6342 «El Delito (Cabello/Troconis)»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Sentimiento Muerto::Aunque Usted No Lo Quiera::Alerta",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "6348 «Alerta (Cabello/Troconis)»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Sentimiento Muerto::Aunque Usted No Lo Quiera::Cabeza",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "6353 «Cabeza (Cabello/Troconis/Jiménez)»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Sentimiento Muerto::Aunque Usted No Lo Quiera::Qué Es Lo Que Te Pasa",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "6359 «¿Qué Es Lo Que Te Pasa? (Cabello/Troconis)»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Sentimiento Muerto::Aunque Usted No Lo Quiera::Un Tono",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "6365 «Un Tono (Dagnino/Jiménez/G. Atilano)»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Sentimiento Muerto::Aunque Usted No Lo Quiera::Una Mirada Dice Todo y Dice Nada",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "6367 «Una Mirada Dice Todo y Dice Nada (Cabello/Schafer)»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Sentimiento Muerto::Aunque Usted No Lo Quiera::Resiste",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "6375 «Resiste (Cabello/Troconis)»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Frank Quintero::Horas de Vuelo::Feeling",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "79208 «Feeling (La Fe Perdida)»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "La Corte::Codigo Demente::Boom Chakataka",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "5203 «Boom Chakataca»",
+      "claims": 9
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Kiara::Como Un Huracán::Azúcar (Extended Version)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "40806 «Azúcar»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Chevynovas::Música En Vara::Shack Dag Du Papa",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "846 «Shag Dag Du Papa»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Mentas::Hasta Que Los Bares Nos Separen::El Peo (End)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "5419 «El Peo»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Mentas::Hasta Que Los Bares Nos Separen::Intro",
+      "rule": "varios-con-el-mismo-titulo",
+      "detail": "ya hay 3 con ese título bajo el mismo padre: 6823, 6824, 5397",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Mochuelo::Mochuelo::Me Desenfocas (Mix)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "4499 «Me Desenfocas»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Mochuelo::Mochuelo::Mi Guerra (Mix)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "4511 «Mi Guerra»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Okills::Reiniciando Transmisión::Nube",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "1790 «Nube/Segundo»; 1837 «Nube (Pocz Remix)»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Franco de Vita::Fuera De Este Mundo::Tocando el Cielo (Unplugged)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "5235 «Tocando El Cielo»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Franco de Vita::Voces A Mi Alrededor::Calido y Frio (Unplugged Version)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "2192 «Cálido y Frío»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "G::25 Años::El Anticristo",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "18900 «La historia de Anticristo»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Equilibrio Vital::Kazmor El Prisionero::Mi Canción (Part II)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "15645 «Mi Canción II»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Henry Stephen::Mi Limon, Mi Limonero Sus Exitos::Lady Madona",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "18548 «Lady madonna»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Henry Stephen::Mi Limon, Mi Limonero Sus Exitos::Mamá Rego Azucar En Mi",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "18556 «Mamá regó el azúcar en mí»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Telecaster::Los Telecaster::Dandy Boy (Radio Version)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "16489 «Dandy Boy»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Trino Mora::El Tremendo Romántico::Encontré Un Amor",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "28619 «Encontré el amor»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Trino Mora::El Tremendo Romántico::Recuerdos De Ayer",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "28612 «Recuerdo del ayer»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Frank Quintero::Pájaros y Estrellas::Estrella De Orion",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "40172 «Pájaros y Estrellas I (a.Estrella de Orión b.Señora Luna)»",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Levántate y Pelea::Corazón De Rock Pesado",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "19014 «Corazon De Rock Pesado»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Levántate y Pelea::Víctima De La Sociedad",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "19015 «Victima De La Sociedad»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Frank Quintero::Agua Dulce::Leñador",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "42137 «Jazz, El Leñador»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Frank Quintero::Agua Dulce::Jugando Solitario",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "42141 «Jugando al Solitario»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Spias::Tres Cruces::El Ratón (Versión Radio)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "6290 «El Ratón»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Epitafio::Dying Out::Satanic Diabolical Dispositions",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "7562 «Satanic Diabolical Dispositions (World Damnation Zardonic Remix)»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Guerra Santa::La Sombra De Un Bufón::Don't Talk to Strangers",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "13768 «Don't Talk To Strangers (Dio Cover)»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "La Misma Gente::Luz y Fuerza::Canción de La Calle",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "12864 «La canción de la calle»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Okills::La Ultima Mudanza::Si Tú y Yo Fuéramos Novios",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "34986 «Tú»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Regardless::What It Was Independent::Poor Miss Wilder",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "41446 «The night that Mr Bradford lost his mind: I. Poor Miss Wilder, II. Inside the abyss that is Bradford's mind»",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Regardless::What It Was Independent::Inside the Abyss That Is Bradford's Mind",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "41446 «The night that Mr Bradford lost his mind: I. Poor Miss Wilder, II. Inside the abyss that is Bradford's mind»",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Lobin Ejnay::Cuando Yo Era Pavo::Potpourri Los Claners",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "17454 «Potpourrit Los Claners»",
+      "claims": 1
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Lobin Ejnay::Cuando Yo Era Pavo::I'll Follow The Sun",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "17455 «I´ll follow the sun»",
+      "claims": 1
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Lobin Ejnay::Cuando Yo Era Pavo::I'll Be Back",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "17463 «I´ll be back»",
+      "claims": 1
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Spiteri::Spiteri::Muchacha",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "675 «Muchacha (Demo)»",
+      "claims": 1
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Aditus::Juegos de Azar::Háblame De Ti",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "18444 «Crisis, Háblame de Tí»",
+      "claims": 1
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Carlos Moreán::Carlos Moreán::Regresa A Mí (Come On Back To Me)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "24626 «Regresa A Mí»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Edgar Alexander::Edgar Alexander::Por Qué No Llorar",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "28798 «Porque no llorar»",
+      "claims": 1
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Impala::Nuevamente Los Impala::Oportunidad de Edgar",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "15586 «Oportunidad»",
+      "claims": 1
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Winda::Huellas::Huellas (Acoustic Version)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "21324 «Huellas»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Solares::Cruel (Instinto de Morder)::Atardecer (Remixed by Jaime Verdaguer)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "6825 «Atardecer»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Desorden Público::DP18 En Concierto::Como Sabroso/Bemba Colorá",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "136938 «Como sabroso - Bomba colorá»",
+      "claims": 2
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Frank Quintero::De Noche y Con Poca Luz::Preludio de Mediodia",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "42148 «Preludio de Mediodia, Mediodia»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Frank Quintero::De Noche y Con Poca Luz::Sueño De Medianoche Part III/Dirgni",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "42150 «Dirgni, Sueño De Medianoche III»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Frank Quintero::De Noche y Con Poca Luz::Preludio",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "42148 «Preludio de Mediodia, Mediodia»",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ficción::Sobre La Cresta De La Ola::La Mula",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "14631 «Suite De Las Siete Vírgenes y La Mula (Parte a: La Mula, Parte b: Las siete vírgenes)»; 157870 «Suite De Las Siete Vírgenes y Una Mula»",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ficción::Sobre La Cresta De La Ola::Las Siete Vírgenes",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "14631 «Suite De Las Siete Vírgenes y La Mula (Parte a: La Mula, Parte b: Las siete vírgenes)»; 157870 «Suite De Las Siete Vírgenes y Una Mula»",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Viva Una Experiencia Psicotomimética::Since You've Been Gone",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "622 «Sweet Sweet Baby (Since You've Been Gone)»",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ivo::Ivo (1978)::Quiero",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "158344 «Ya No Quiero Enamorarme»; 158341 «Quiero Ser Feliz»",
+      "claims": 4
+    }
+  ],
+  "duplicateFlags": [],
+  "errors": [],
+  "evidenceVerdicts": [
+    {
+      "kind": "album",
+      "identityRaw": "Desorden Público::DP18 En Concierto",
+      "rule": "titulo-casi-igual-mismo-repertorio",
+      "targetId": 13972,
+      "detail": "DP18 {\"13972\":{\"shared\":28,\"total\":32,\"core\":31}}"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tributo A Los Desconocidos::La Marcha De Los Desconocidos",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 42554,
+      "detail": "La marcha de los desconocidos (Intro)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tributo A Los Desconocidos::Carrera Con El Diablo",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 42555,
+      "detail": "Carrera con el diablo (Gun cover)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tributo A Los Desconocidos::Civilizados Para Matar",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 42556,
+      "detail": "Civilizados para matar (Budgie cover)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tributo A Los Desconocidos::La Legión",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 42557,
+      "detail": "La legión (UFO cover)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tributo A Los Desconocidos::Venceré",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 42558,
+      "detail": "Venceré (Blue Öyster Cult cover)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tributo A Los Desconocidos::La Batalla De Carabobo",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 42559,
+      "detail": "La batalla de Carabobo (Thin Lizzy cover)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tributo A Los Desconocidos::Ya No Siento Nada",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 42562,
+      "detail": "Ya no siento nada (Captain Beyond cover)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tributo A Los Desconocidos::El Curandero",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 42563,
+      "detail": "El curandero (The Sensational Alex Harvey Band cover)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tributo A Los Desconocidos::Valiente",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 42564,
+      "detail": "Valiente (Riot cover)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tributo A Los Desconocidos::Misión Cumplida",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 42565,
+      "detail": "Misión cumplida (The Godz cover)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tributo A Los Desconocidos::Burn On The Flame",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 42566,
+      "detail": "Burn on the Flame (Sweet cover)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tributo A Los Desconocidos::Razamanaz",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 42567,
+      "detail": "Razamanaz (Nazareth cover)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tributo A Los Desconocidos::Tom Sawyer",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 42568,
+      "detail": "Tom Sawyer (Rush cover)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tributo A Los Desconocidos::Sabbath Bloody Sabbath",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 42569,
+      "detail": "Sabbath Bloody Sabbath (Black Sabbath cover)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tributo A Los Desconocidos::Somos",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 42570,
+      "detail": "Somos (Resistencia cover)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Cuauhtemoc::El Regreso Del Guerrero",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 18876,
+      "detail": "El Regreso Del Guerrero (Intro)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Cuauhtemoc::Castillo Sobre El Mar",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 18879,
+      "detail": "Castillos Sobre El Mar"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Cuauhtemoc::Resistiré",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 18886,
+      "detail": "Resistiré (Baron Rojo cover)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::Dama Antañona",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 137581,
+      "detail": "Dama Antañona (En Vivo)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::Cuando No Sé De Ti",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 137582,
+      "detail": "Cuando No Se De Ti (En Vivo)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::Criollísima",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 137585,
+      "detail": "Criollisima (En Vivo)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::Presagio",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 137586,
+      "detail": "Presagio (En Vivo)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::Golosinas Criollas",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 137587,
+      "detail": "Golosinas Criollas (En Vivo)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::El Papagayo",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 137588,
+      "detail": "El Papagayo (En Vivo)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::El San Pedro",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 137589,
+      "detail": "El San Pedro (En Vivo)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::Mi Tripón",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 137590,
+      "detail": "Mi Tripon (En Vivo)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::Alumbra Cocuyito",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 137591,
+      "detail": "Alumbra Cocuyito (En Vivo)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::Arrullo Para Un Negrito",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 137592,
+      "detail": "Arrullo Para Un Negrito (En Vivo)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tesoros 40 Aniversario::Guardianes Del Metal",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 42510,
+      "detail": "Guardianos del metal"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tesoros 40 Aniversario::Evil",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 42518,
+      "detail": "Evil (Cactus cover)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tesoros 40 Aniversario::Libera Tu Mente",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 42521,
+      "detail": "Libera tu mente (Trino Mora cover)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tesoros 40 Aniversario::Linda Barinas / El Adiós",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 42522,
+      "detail": "Linda Barinas / El adiós (Eladio Tarife cover)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Inevitable::La Leyenda Del Holandés Errante",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 18849,
+      "detail": "La leyenda del Holandés errante (Cuento)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Inevitable::El Mito de María Lionza",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 18845,
+      "detail": "El mito de María Lionza (Cuento)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Inevitable::Los Visitantes (Fenómeno O.V.N.I.) '2007",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 18848,
+      "detail": "Los visitantes (2007) *"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Inevitable::Mosaico De \"Escalofrio\"",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 18850,
+      "detail": "Mosaico \"Escalofrío\" Sinfónico *"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo C::Grupo C Canta Edgar Castro::Por La Expresión De Tu Rostro",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 40136,
+      "detail": "Por la expresión de mi rostro"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo C::Grupo C Canta Edgar Castro::Culto Al Amor (Instrumental)",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 40153,
+      "detail": "Culto al amor"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::El Guerrero::La Serenata Del Estrangulador",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 19005,
+      "detail": "La Serenata Del Estrrangulador"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Levántate y Pelea::Levántate y Pelea",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 19013,
+      "detail": "Levante Y Pelea"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Levántate y Pelea::El Rock'n Roll De La Amistad",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 19012,
+      "detail": "El Rock'n'Roll De La Amistad"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Levántate y Pelea::Agonía (Q.E.P.D.)",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 19018,
+      "detail": "Agonia (QEPD)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "La Banda de Casablanca::El Sueño::I Don't Need No Doctor",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 15384,
+      "detail": "I Don´t Need no Doctor"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Fuga::Fuga::Día De Parada",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 9045,
+      "detail": "El Día de Parada"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Sangre::Sangre::We'll Live a Little Bit More",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 16094,
+      "detail": "We´ll live a little bit more"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Spiteri::Spiteri::El Interior Del Alma",
+      "rule": "sin-decision-er-sin-parecido",
+      "detail": ""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Spiteri::Spiteri::Verano Dspués De Invierno",
+      "rule": "sin-decision-er-sin-parecido",
+      "detail": ""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Spiteri::Spiteri::Dejalo Ya, Me haces Perder El Tiempo",
+      "rule": "sin-decision-er-sin-parecido",
+      "detail": ""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Aditus::Juegos de Azar::Crisis",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 18444,
+      "detail": "Crisis, Háblame de Tí"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Alexis Rossell::Alexis Rossell y su Venezuela Joven::Orinoco",
+      "rule": "sin-decision-er-sin-parecido",
+      "detail": ""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Alexis Rossell::Alexis Rossell y su Venezuela Joven::Crepúsculo",
+      "rule": "sin-decision-er-sin-parecido",
+      "detail": ""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Alexis Rossell::Torbellino::Paseito Oriental",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 15186,
+      "detail": "Paseito Criental"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Alexis Rossell::... Es Navidad::Selección Navideña Internacional",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 15180,
+      "detail": "Selección Navideña Interrnacional"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arkangel::No Más Apariencias::Pasajero Como El Viento",
+      "rule": "sin-decision-er-sin-parecido",
+      "detail": ""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arkangel::No Más Apariencias::No Puedes Reprocharme",
+      "rule": "sin-decision-er-sin-parecido",
+      "detail": ""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Azúcar Cacao y Leche::Azúcar Cacao y Leche Vol. II::Tal Como Lo Dijo",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 29233,
+      "detail": "Tal como lo dijo D'asid O'Anik"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Caramelos de Cianuro::Cuentos Para Adultos::Chan Chaca Chan",
+      "rule": "sin-decision-er-sin-parecido",
+      "detail": ""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Darts::De Etiqueta::No Te Importa",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 30647,
+      "detail": "No te importe"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Escenarío Juvenil::Cuando Mueren Las Estrellas",
+      "rule": "sin-decision-er-sin-parecido",
+      "detail": ""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Escenarío Juvenil::I've Got You",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 25801,
+      "detail": "I've Got You (Sonny Bono)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Escenarío Juvenil::Otro Amor",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 25802,
+      "detail": "Otro Amor (You Got To Me)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Claners::Yeah Yeah Yeah!::Zambesi",
+      "rule": "sin-decision-er-sin-parecido",
+      "detail": ""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Colina::Amanecer::Don't Take Friends Away",
+      "rule": "sin-decision-er-sin-parecido",
+      "detail": ""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Cronos::Al Fin Una Victoria::Buscando Perdón",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 42441,
+      "detail": "Buscando el perdón"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "La Misma Gente::A La Calle::Oportunidad (Una Historia de Malandros)",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 12866,
+      "detail": "Oportunidad"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "La Misma Gente::A La Calle::Canción Corta",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 12871,
+      "detail": "Canción Corta. Canción de Amor Para Una Niña Triste"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Delia::Chicano::Porque Te Quiero",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 30692,
+      "detail": "Por qué te quiero"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Impala::Conozca a Los Impala::My Bonny",
+      "rule": "sin-decision-er-sin-parecido",
+      "detail": ""
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "section": "new_age",
+  "dryRun": false,
+  "note": "Revisión de ingesta 2026-10-04 (Brian): promoción por reglas de lo que ya tiene destino (puentes)",
+  "kinds": {
+    "artist_membership": {
+      "identities": 0,
+      "claims": 0,
+      "verdicts": {},
+      "applied": 0,
+      "unchanged": 0,
+      "stillCandidate": 0,
+      "dismissed": 0,
+      "failed": 0
+    },
+    "album_credit": {
+      "identities": 1,
+      "claims": 5,
+      "verdicts": {
+        "puente": 1
+      },
+      "applied": 0,
+      "unchanged": 0,
+      "stillCandidate": 5,
+      "dismissed": 0,
+      "failed": 0
+    },
+    "track_credit": {
+      "identities": 43,
+      "claims": 258,
+      "verdicts": {
+        "puente": 43
+      },
+      "applied": 0,
+      "unchanged": 0,
+      "stillCandidate": 258,
+      "dismissed": 0,
+      "failed": 0
+    }
+  },
+  "holds": [],
+  "duplicateFlags": [],
+  "errors": [],
+  "runId": 11991
+}

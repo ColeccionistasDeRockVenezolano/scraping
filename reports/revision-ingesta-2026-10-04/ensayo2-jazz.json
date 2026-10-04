@@ -1,0 +1,240 @@
+{
+  "section": "jazz",
+  "dryRun": true,
+  "note": "Sincopa jazz: promoción masiva por reglas",
+  "kinds": {
+    "album": {
+      "identities": 8,
+      "claims": 48,
+      "verdicts": {
+        "same:revision-ingesta-titulo": 6,
+        "hold:padre-sin-resolver": 1,
+        "same:revision-ingesta-repertorio": 1
+      },
+      "applied": 0,
+      "unchanged": 0,
+      "stillCandidate": 0,
+      "dismissed": 0,
+      "failed": 0
+    },
+    "track": {
+      "identities": 80,
+      "claims": 325,
+      "verdicts": {
+        "hold:varios-con-el-mismo-titulo": 2,
+        "same:mismo-titulo-mismo-disco": 26,
+        "hold:titulo-casi-igual-mismo-padre": 11,
+        "approve:auto-match": 1,
+        "different:sin-coincidencia": 24,
+        "hold:padre-sin-resolver": 12,
+        "hold:titulo-igual-con-contradiccion": 2,
+        "different:solo-coincide-bajo-otro-padre": 2
+      },
+      "applied": 0,
+      "unchanged": 0,
+      "stillCandidate": 0,
+      "dismissed": 0,
+      "failed": 0
+    }
+  },
+  "holds": [
+    {
+      "kind": "album",
+      "identityRaw": "Oscar::Cuidao Con Los Escalones",
+      "rule": "padre-sin-resolver",
+      "detail": "el artista del disco aún no está en el core",
+      "claims": 7
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Jazz Desde Aldemaro::El Negro José",
+      "rule": "varios-con-el-mismo-titulo",
+      "detail": "ya hay 2 con ese título bajo el mismo padre: 6829, 6483",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Jazz Desde Aldemaro::Tema de Amor",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "6528 «Temas De Amor»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Jazz Desde Aldemaro::De Conde a Principal",
+      "rule": "varios-con-el-mismo-titulo",
+      "detail": "ya hay 2 con ese título bajo el mismo padre: 6828, 6489",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Jazz Desde Aldemaro::Carretera",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "6586 «Carretera: Edgar Macías Solo»; 6594 «Carretera: Alberto Lazo Solo»; 6597 «Carretera: Pedro López Solo»",
+      "claims": 15
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gonzalo Micó::Juegos de Playa::Juegos de Playa, How sad it was",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "50215 «Juegos de Playa»",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Oscar::Cuidao Con Los Escalones::Cuidao Con Los Escalones",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Oscar::Cuidao Con Los Escalones::Ojos De Una Noche",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Oscar::Cuidao Con Los Escalones::En Noviembre",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Oscar::Cuidao Con Los Escalones::Caracas Alto Barranco",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Oscar::Cuidao Con Los Escalones::Flaicito Al Cuadro",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Oscar::Cuidao Con Los Escalones::Flaquitud",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Oscar::Cuidao Con Los Escalones::Take Five",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Oscar::Cuidao Con Los Escalones::Lluvia En La Tarde",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Oscar::Cuidao Con Los Escalones::Para Elisa",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Oscar::Cuidao Con Los Escalones::L.D.L.M.",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Oscar::Cuidao Con Los Escalones::Refractions",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Oscar::Cuidao Con Los Escalones::The 60's Never Die",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ed Calle::Mamblue::Luz De Luna (Moonlight)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "51572 «Moonlight (Luz De Luna)»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ed Calle::Mamblue::Cortadito con Bajo (Cortadito)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "51575 «Cortadito»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ed Calle::Mamblue::Isla Urbana (Urban Island)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "51571 «Urban Island (Isla Urbana)»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ed Calle::Mamblue::Por De Lado (Sidewinder)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "51576 «Sidewinder (Por De Lado)»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ed Calle::Mamblue::Otoño (Autumn)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "51577 «Autumn (Otoño)»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ed Calle::Mamblue::San Sebastián (Radio Version)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "51573 «San Sebastián»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ed Calle::Mamblue::Arroz y Frijoles (Rice & Beans) (Radio version)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "51567 «Rice & Beans (Arroz y Frijoles)»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ed Calle::Mamblue::Arroz y Frijoles (Rice & Beans) (Extended Version)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "51567 «Rice & Beans (Arroz y Frijoles)»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Bartók's Room::Artilugio (Florilégio Artefáctico)",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "3082 «Artilugio (Florilegio Artefáctico)»: el ER vio una contradicción (año, duración…)",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Bartók's Room::Song For Bartók",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "3100 «Song For Bartok»: el ER vio una contradicción (año, duración…)",
+      "claims": 5
+    }
+  ],
+  "duplicateFlags": [],
+  "errors": []
+}

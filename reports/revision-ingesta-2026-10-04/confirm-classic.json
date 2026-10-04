@@ -1,0 +1,54 @@
+{
+  "section": "classic",
+  "dryRun": false,
+  "note": "Revisión de ingesta 2026-10-04 (Brian): promover discos y pistas pendientes con ER; zona gris decidida por repertorio (overrides.json)",
+  "kinds": {
+    "album": {
+      "identities": 2,
+      "claims": 12,
+      "verdicts": {
+        "same:revision-ingesta-titulo": 2
+      },
+      "applied": 4,
+      "unchanged": 8,
+      "stillCandidate": 0,
+      "dismissed": 0,
+      "failed": 0
+    },
+    "track": {
+      "identities": 82,
+      "claims": 267,
+      "verdicts": {
+        "different:sin-coincidencia": 71,
+        "different:titulo-casi-igual-otro-numero": 1,
+        "same:revision-ingesta-a-mano": 1,
+        "approve:auto-match": 2,
+        "same:revision-ingesta-titulo-contenido": 1,
+        "different:revision-ingesta-otra-pista": 6
+      },
+      "applied": 23,
+      "unchanged": 44,
+      "stillCandidate": 195,
+      "dismissed": 0,
+      "failed": 1
+    }
+  },
+  "holds": [],
+  "duplicateFlags": [],
+  "errors": [
+    {
+      "kind": "track",
+      "identityRaw": "Alirio Díaz::Classic Portraits The Best Of Alirio Díaz::Fantasía",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    }
+  ],
+  "runId": 11960,
+  "evidenceVerdicts": [
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Danzón - Música de Latinoamerica::Danzón Nº 4",
+      "rule": "titulo-casi-igual-otro-numero",
+      "detail": ""
+    }
+  ]
+}

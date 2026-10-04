@@ -1,0 +1,1259 @@
+[
+ {
+  "s": "jazz",
+  "rule": "titulo-casi-igual-mismo-padre",
+  "id": "María Rivas::Café Negrito (World-Latin)",
+  "sinc": 0,
+  "cands": [
+   {
+    "id": 5558,
+    "title": "Café Negrito",
+    "year": 1999,
+    "core": 11,
+    "inter": 0
+   }
+  ]
+ },
+ {
+  "s": "jazz",
+  "rule": "titulo-casi-igual-mismo-padre",
+  "id": "María Rivas::Aquador (Chill-Out)",
+  "sinc": 0,
+  "cands": [
+   {
+    "id": 5554,
+    "title": "Aquador",
+    "year": 2005,
+    "core": 14,
+    "inter": 0
+   }
+  ]
+ },
+ {
+  "s": "jazz",
+  "rule": "titulo-igual-con-contradiccion",
+  "id": "Rigel Mitxelena::Bártok's Room",
+  "sinc": 0,
+  "cands": [
+   {
+    "id": 483,
+    "title": "Bartok's Room",
+    "year": 2001,
+    "core": 10,
+    "inter": 0
+   }
+  ]
+ },
+ {
+  "s": "jazz",
+  "rule": "titulo-casi-igual-mismo-padre",
+  "id": "Virgilio Araque Reyes::Virgilio Araque En Concierto",
+  "sinc": 0,
+  "cands": [
+   {
+    "id": 2373,
+    "title": "En Concierto",
+    "year": 1982,
+    "core": 8,
+    "inter": 0
+   }
+  ]
+ },
+ {
+  "s": "jazz",
+  "rule": "titulo-igual-con-contradiccion",
+  "id": "Rigel Mitxelena::Bartók's Room",
+  "sinc": 10,
+  "cands": [
+   {
+    "id": 483,
+    "title": "Bartok's Room",
+    "year": 2001,
+    "core": 10,
+    "inter": 10
+   }
+  ]
+ },
+ {
+  "s": "jazz",
+  "rule": "titulo-casi-igual-mismo-padre",
+  "id": "Rigel Mitxelena::Música De Película",
+  "sinc": 15,
+  "cands": [
+   {
+    "id": 15283,
+    "title": "Música De Película (Rock)",
+    "year": 2004,
+    "core": 0,
+    "inter": 0
+   }
+  ]
+ },
+ {
+  "s": "jazz",
+  "rule": "titulo-casi-igual-mismo-padre",
+  "id": "Rigel Mitxelena::Volumen 1 Junta Parroquial",
+  "sinc": 9,
+  "cands": [
+   {
+    "id": 15285,
+    "title": "Volumen1: Junta Parroquial",
+    "year": 2011,
+    "core": 0,
+    "inter": 0
+   }
+  ]
+ },
+ {
+  "s": "classic",
+  "rule": "titulo-casi-igual-mismo-padre",
+  "id": "Orquesta Sinfónica Venezuela (OSV)::Concierto De Las Tres Esferas",
+  "sinc": 0,
+  "cands": [
+   {
+    "id": 5980,
+    "title": "I Concurso de Composición Sinfónica \"Concierto De Las Tres Esferas\"",
+    "year": 1990,
+    "core": 6,
+    "inter": 0
+   }
+  ]
+ },
+ {
+  "s": "classic",
+  "rule": "titulo-casi-igual-mismo-padre",
+  "id": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Danzón - Música de Latinoamerica",
+  "sinc": 7,
+  "cands": [
+   {
+    "id": 5921,
+    "title": "Danzón",
+    "year": 1998,
+    "core": 0,
+    "inter": 0
+   }
+  ]
+ },
+ {
+  "s": "latin_pop",
+  "rule": "titulo-casi-igual-mismo-padre",
+  "id": "Daiquiri::La Historia Lo Mejor del Chamo Candela",
+  "sinc": 13,
+  "cands": [
+   {
+    "id": 6919,
+    "title": "La Historia",
+    "year": 2004,
+    "core": 0,
+    "inter": 0
+   }
+  ]
+ },
+ {
+  "s": "traditional",
+  "rule": "titulo-casi-igual-mismo-padre",
+  "id": "Cecilia Todd::Romanciando",
+  "sinc": 0,
+  "cands": [
+   {
+    "id": 5536,
+    "title": "Romanciando (junto a Cali Fernández)",
+    "year": 1993,
+    "core": 0,
+    "inter": 0
+   },
+   {
+    "id": 9155,
+    "title": "Romanciando / Romances Tradicionales Canarios",
+    "year": 1993,
+    "core": 12,
+    "inter": 0
+   }
+  ]
+ },
+ {
+  "s": "traditional",
+  "rule": "titulo-casi-igual-mismo-padre",
+  "id": "Cecilia Todd::Pajarillo Verde (CD Reissue)",
+  "sinc": 0,
+  "cands": [
+   {
+    "id": 5540,
+    "title": "Pajarillo verde",
+    "year": 1974,
+    "core": 12,
+    "inter": 0
+   }
+  ]
+ },
+ {
+  "s": "traditional",
+  "rule": "titulo-casi-igual-mismo-padre",
+  "id": "Simón Díaz::Simón En Gaita - En Salsa",
+  "sinc": 0,
+  "cands": [
+   {
+    "id": 14620,
+    "title": "Simon en Salsa... En Gaita...",
+    "year": 2013,
+    "core": 10,
+    "inter": 0
+   }
+  ]
+ },
+ {
+  "s": "traditional",
+  "rule": "titulo-casi-igual-mismo-padre",
+  "id": "Simón Díaz::Las Gaitas De Simón",
+  "sinc": 15,
+  "cands": [
+   {
+    "id": 15251,
+    "title": "Gaitas y Parrandas con Simón",
+    "year": 1966,
+    "core": 10,
+    "inter": 1
+   },
+   {
+    "id": 15257,
+    "title": "Las Gaitas De Simón (Culpable?)",
+    "year": 1975,
+    "core": 5,
+    "inter": 0
+   },
+   {
+    "id": 15256,
+    "title": "Las Gaitas De Simón (Enemigo Público)",
+    "year": 1974,
+    "core": 0,
+    "inter": 0
+   }
+  ]
+ },
+ {
+  "s": "traditional",
+  "rule": "titulo-casi-igual-mismo-padre",
+  "id": "Simón Díaz::Golpe y Pasaje / Caballo Viejo",
+  "sinc": 0,
+  "cands": [
+   {
+    "id": 14608,
+    "title": "Golpe y pasaje",
+    "year": 1980,
+    "core": 11,
+    "inter": 0
+   }
+  ]
+ },
+ {
+  "s": "traditional",
+  "rule": "titulo-casi-igual-mismo-padre",
+  "id": "Simón Díaz::Cuenta y Canta Vol. 2",
+  "sinc": 14,
+  "cands": [
+   {
+    "id": 15265,
+    "title": "Cuenta y Canta Vol.1",
+    "year": 1994,
+    "core": 15,
+    "inter": 1
+   }
+  ]
+ },
+ {
+  "s": "traditional",
+  "rule": "titulo-casi-igual-mismo-padre",
+  "id": "Simón Díaz::Muy Venezolano Vol.2 (La Rondalla Vzlana)",
+  "sinc": 0,
+  "cands": [
+   {
+    "id": 15266,
+    "title": "Muy Venezolano Vol.1 (La Rondalla Vzlana)",
+    "year": 1995,
+    "core": 0,
+    "inter": 0
+   },
+   {
+    "id": 15276,
+    "title": "Muy Venezolano Vol. 2",
+    "year": 1995,
+    "core": 12,
+    "inter": 0
+   }
+  ]
+ },
+ {
+  "s": "traditional",
+  "rule": "titulo-casi-igual-mismo-padre",
+  "id": "Simón Díaz::Muy Venezolano Vol.3 (La Rondalla Vzlana)",
+  "sinc": 0,
+  "cands": [
+   {
+    "id": 15266,
+    "title": "Muy Venezolano Vol.1 (La Rondalla Vzlana)",
+    "year": 1995,
+    "core": 0,
+    "inter": 0
+   },
+   {
+    "id": 15330,
+    "title": "Muy Venezolano Vol. 3",
+    "year": 1997,
+    "core": 12,
+    "inter": 0
+   }
+  ]
+ },
+ {
+  "s": "traditional",
+  "rule": "titulo-casi-igual-mismo-padre",
+  "id": "Simón Díaz::Muy Venezolano Vol.4 (La Rondalla Vzlana)",
+  "sinc": 0,
+  "cands": [
+   {
+    "id": 15348,
+    "title": "Muy Venezolano Vol. 4",
+    "year": 1999,
+    "core": 16,
+    "inter": 0
+   },
+   {
+    "id": 15266,
+    "title": "Muy Venezolano Vol.1 (La Rondalla Vzlana)",
+    "year": 1995,
+    "core": 0,
+    "inter": 0
+   }
+  ]
+ },
+ {
+  "s": "traditional",
+  "rule": "titulo-casi-igual-mismo-padre",
+  "id": "Simón Díaz::Caracha Negro CD",
+  "sinc": 0,
+  "cands": [
+   {
+    "id": 15376,
+    "title": "Caracha Negro",
+    "year": 1997,
+    "core": 12,
+    "inter": 0
+   },
+   {
+    "id": 15250,
+    "title": "Caracha Negro",
+    "year": 1966,
+    "core": 12,
+    "inter": 0
+   }
+  ]
+ },
+ {
+  "s": "traditional",
+  "rule": "titulo-casi-igual-mismo-padre",
+  "id": "Simón Díaz::Muy Venezolano Vol.5 (La Rondalla Vzlana)",
+  "sinc": 0,
+  "cands": [
+   {
+    "id": 15266,
+    "title": "Muy Venezolano Vol.1 (La Rondalla Vzlana)",
+    "year": 1995,
+    "core": 0,
+    "inter": 0
+   }
+  ]
+ },
+ {
+  "s": "traditional",
+  "rule": "titulo-casi-igual-mismo-padre",
+  "id": "Simón Díaz::Muy Venezolano Vol.6 (La Rondalla Vzlana)",
+  "sinc": 0,
+  "cands": [
+   {
+    "id": 15266,
+    "title": "Muy Venezolano Vol.1 (La Rondalla Vzlana)",
+    "year": 1995,
+    "core": 0,
+    "inter": 0
+   }
+  ]
+ },
+ {
+  "s": "traditional",
+  "rule": "titulo-casi-igual-mismo-padre",
+  "id": "Simón Díaz::Mis Tonadas 16 Grandes Exitos (Lo Máximo)",
+  "sinc": 0,
+  "cands": [
+   {
+    "id": 15275,
+    "title": "16 Grandes Exitos (Lo Máximo)",
+    "year": 2006,
+    "core": 0,
+    "inter": 0
+   },
+   {
+    "id": 14610,
+    "title": "Tonadas",
+    "year": 1974,
+    "core": 12,
+    "inter": 0
+   }
+  ]
+ },
+ {
+  "s": "traditional",
+  "rule": "titulo-casi-igual-mismo-padre",
+  "id": "Cecilia Todd::Ni Na, Ni Na",
+  "sinc": 10,
+  "cands": [
+   {
+    "id": 5539,
+    "title": "Nina, ni ná",
+    "year": 1977,
+    "core": 0,
+    "inter": 0
+   },
+   {
+    "id": 8563,
+    "title": "Ni Na, Ni Na / Vol.2",
+    "year": 1977,
+    "core": 0,
+    "inter": 0
+   }
+  ]
+ },
+ {
+  "s": "traditional",
+  "rule": "titulo-casi-igual-mismo-padre",
+  "id": "Simón Díaz::Muy Venezolano Vol. 1",
+  "sinc": 13,
+  "cands": [
+   {
+    "id": 15348,
+    "title": "Muy Venezolano Vol. 4",
+    "year": 1999,
+    "core": 16,
+    "inter": 0
+   },
+   {
+    "id": 15266,
+    "title": "Muy Venezolano Vol.1 (La Rondalla Vzlana)",
+    "year": 1995,
+    "core": 0,
+    "inter": 0
+   },
+   {
+    "id": 15276,
+    "title": "Muy Venezolano Vol. 2",
+    "year": 1995,
+    "core": 12,
+    "inter": 0
+   }
+  ]
+ },
+ {
+  "s": "traditional",
+  "rule": "titulo-casi-igual-mismo-padre",
+  "id": "Simón Díaz::Las Gaitas De Simón Enemigo Publico Nº1",
+  "sinc": 5,
+  "cands": [
+   {
+    "id": 15256,
+    "title": "Las Gaitas De Simón (Enemigo Público)",
+    "year": 1974,
+    "core": 0,
+    "inter": 0
+   }
+  ]
+ },
+ {
+  "s": "traditional",
+  "rule": "titulo-casi-igual-mismo-padre",
+  "id": "Simón Díaz::Tonada y Pasaje La Yegua Blanca",
+  "sinc": 8,
+  "cands": [
+   {
+    "id": 15260,
+    "title": "Tonada y Pasaje",
+    "year": 1981,
+    "core": 0,
+    "inter": 0
+   }
+  ]
+ },
+ {
+  "s": "traditional",
+  "rule": "titulo-casi-igual-mismo-padre",
+  "id": "Simón Díaz::32 Grandes Exitos",
+  "sinc": 32,
+  "cands": [
+   {
+    "id": 15267,
+    "title": "32 Grandes Exitos (Serie 32)",
+    "year": 1998,
+    "core": 0,
+    "inter": 0
+   }
+  ]
+ },
+ {
+  "s": "traditional",
+  "rule": "titulo-casi-igual-mismo-padre",
+  "id": "Simón Díaz::Serie Lo Máximo Simón Díaz 16 Grandes Exitos",
+  "sinc": 16,
+  "cands": [
+   {
+    "id": 15275,
+    "title": "16 Grandes Exitos (Lo Máximo)",
+    "year": 2006,
+    "core": 0,
+    "inter": 0
+   }
+  ]
+ },
+ {
+  "s": "traditional",
+  "rule": "titulo-casi-igual-mismo-padre",
+  "id": "Simón Díaz::Serie Lo Máximo Simón Díaz-Mis Tonadas 16 Grandes Exitos",
+  "sinc": 16,
+  "cands": [
+   {
+    "id": 15275,
+    "title": "16 Grandes Exitos (Lo Máximo)",
+    "year": 2006,
+    "core": 0,
+    "inter": 0
+   },
+   {
+    "id": 14619,
+    "title": "Las Tonadas de Simon",
+    "year": 2013,
+    "core": 19,
+    "inter": 11
+   },
+   {
+    "id": 14629,
+    "title": "Simón Díaz Mis Tonadas & 16 Grandes Éxitos",
+    "year": 2008,
+    "core": 16,
+    "inter": 14
+   }
+  ]
+ },
+ {
+  "s": "ethnic",
+  "rule": "titulo-casi-igual-mismo-padre",
+  "id": "C4 Trío::C4 Trío y Desorden Público - Pa' Fuera",
+  "sinc": 0,
+  "cands": [
+   {
+    "id": 129,
+    "title": "C4 Trío",
+    "year": 2006,
+    "core": 14,
+    "inter": 0
+   },
+   {
+    "id": 4686,
+    "title": "Desorden Público",
+    "year": null,
+    "core": 12,
+    "inter": 0
+   },
+   {
+    "id": 15448,
+    "title": "Pa' fuera",
+    "year": 2016,
+    "core": 0,
+    "inter": 0
+   }
+  ]
+ },
+ {
+  "s": "ethnic",
+  "rule": "titulo-casi-igual-mismo-padre",
+  "id": "C4 Trío::C4 Trío y Luis Enrique - Tiempo al Tiempo",
+  "sinc": 0,
+  "cands": [
+   {
+    "id": 129,
+    "title": "C4 Trío",
+    "year": 2006,
+    "core": 14,
+    "inter": 0
+   },
+   {
+    "id": 15713,
+    "title": "Tiempo al tiempo",
+    "year": 2019,
+    "core": 0,
+    "inter": 0
+   }
+  ]
+ },
+ {
+  "s": "ethnic",
+  "rule": "titulo-casi-igual-mismo-padre",
+  "id": "Gaélica::Paz: Una Navidad Celta En Venezuela",
+  "sinc": 10,
+  "cands": [
+   {
+    "id": 2534,
+    "title": "Celta en Venezuela",
+    "year": 2009,
+    "core": 10,
+    "inter": 4
+   }
+  ]
+ },
+ {
+  "s": "rock_pop",
+  "rule": "titulo-casi-igual-mismo-padre",
+  "id": "Ad Intra::The Attic (EP)",
+  "sinc": 0,
+  "cands": [
+   {
+    "id": 1819,
+    "title": "The Attic",
+    "year": 2009,
+    "core": 2,
+    "inter": 0
+   }
+  ]
+ },
+ {
+  "s": "rock_pop",
+  "rule": "titulo-casi-igual-mismo-padre",
+  "id": "Ad Intra::We Aren't Ready To Take Off (EP)",
+  "sinc": 0,
+  "cands": [
+   {
+    "id": 3634,
+    "title": "We Aren't Ready To Take Off",
+    "year": 2011,
+    "core": 4,
+    "inter": 0
+   }
+  ]
+ },
+ {
+  "s": "rock_pop",
+  "rule": "titulo-casi-igual-mismo-padre",
+  "id": "Aditus::Juegos del Azar",
+  "sinc": 0,
+  "cands": [
+   {
+    "id": 3014,
+    "title": "Juegos de Azar",
+    "year": 1985,
+    "core": 9,
+    "inter": 0
+   }
+  ]
+ },
+ {
+  "s": "rock_pop",
+  "rule": "titulo-casi-igual-mismo-padre",
+  "id": "Agni Mogollón::Gina y Agny",
+  "sinc": 0,
+  "cands": [
+   {
+    "id": 3566,
+    "title": "Gina y Agny 3",
+    "year": 1984,
+    "core": 0,
+    "inter": 0
+   }
+  ]
+ },
+ {
+  "s": "rock_pop",
+  "rule": "titulo-casi-igual-mismo-padre",
+  "id": "Agresión::Silent Smile (EP)",
+  "sinc": 0,
+  "cands": [
+   {
+    "id": 3392,
+    "title": "Silent Smile",
+    "year": 1999,
+    "core": 5,
+    "inter": 0
+   }
+  ]
+ },
+ {
+  "s": "rock_pop",
+  "rule": "titulo-igual-con-contradiccion",
+  "id": "Gillman::Levántate y Pelea 40 Aniversario",
+  "sinc": 14,
+  "cands": [
+   {
+    "id": 4150,
+    "title": "Levántate y Pelea - 40 Aniversario",
+    "year": 2017,
+    "core": 0,
+    "inter": 0
+   }
+  ]
+ },
+ {
+  "s": "rock_pop",
+  "rule": "titulo-casi-igual-mismo-padre",
+  "id": "Henry Stephen::Mi Limon, Mi Limonero 40 Años 40 Exitos",
+  "sinc": 42,
+  "cands": [
+   {
+    "id": 4216,
+    "title": "Limón Limonero 40 Años 40 Exitos",
+    "year": 2008,
+    "core": 42,
+    "inter": 42
+   },
+   {
+    "id": 453,
+    "title": "Limón Limonero",
+    "year": 1968,
+    "core": 12,
+    "inter": 8
+   },
+   {
+    "id": 3021,
+    "title": "40 Años, 40 Éxitos",
+    "year": 2008,
+    "core": 42,
+    "inter": 38
+   }
+  ]
+ },
+ {
+  "s": "rock_pop",
+  "rule": "titulo-casi-igual-mismo-padre",
+  "id": "Los Mentas::U.E.L.M. \"Unidad Educativa Los Mentas\"",
+  "sinc": 12,
+  "cands": [
+   {
+    "id": 600,
+    "title": "U.E.L.M: Unidad Educativa",
+    "year": 2010,
+    "core": 12,
+    "inter": 12
+   },
+   {
+    "id": 3390,
+    "title": "U.E.L.M.",
+    "year": 2010,
+    "core": 12,
+    "inter": 12
+   },
+   {
+    "id": 3360,
+    "title": "Unidad Educativa Los Mentas",
+    "year": 2010,
+    "core": 12,
+    "inter": 12
+   }
+  ]
+ },
+ {
+  "s": "rock_pop",
+  "rule": "titulo-casi-igual-mismo-padre",
+  "id": "Témpano::El Fin De La Infancia / Childhood's End",
+  "sinc": 8,
+  "cands": [
+   {
+    "id": 4528,
+    "title": "El Fin de La Infancia",
+    "year": 1999,
+    "core": 8,
+    "inter": 7
+   },
+   {
+    "id": 362,
+    "title": "Childhood's End / El Fin De La Infancia",
+    "year": 1999,
+    "core": 8,
+    "inter": 8
+   }
+  ]
+ },
+ {
+  "s": "rock_pop",
+  "rule": "titulo-casi-igual-mismo-padre",
+  "id": "Karina::14 Exitos de Karina Serie Lo Máximo",
+  "sinc": 14,
+  "cands": [
+   {
+    "id": 4332,
+    "title": "14 Exitos - Serie Lo Máximo",
+    "year": 2006,
+    "core": 14,
+    "inter": 14
+   },
+   {
+    "id": 3417,
+    "title": "Exitos",
+    "year": 1994,
+    "core": 20,
+    "inter": 7
+   },
+   {
+    "id": 4319,
+    "title": "Karina",
+    "year": 1998,
+    "core": 12,
+    "inter": 0
+   }
+  ]
+ },
+ {
+  "s": "rock_pop",
+  "rule": "titulo-casi-igual-mismo-padre",
+  "id": "Rudy La Scala::16 Grandes Exitos / Serie Lo Máximo",
+  "sinc": 16,
+  "cands": [
+   {
+    "id": 3655,
+    "title": "16 Grandes Exitos (Lo Máximo)",
+    "year": 2008,
+    "core": 16,
+    "inter": 16
+   },
+   {
+    "id": 3653,
+    "title": "Grandes Exitos",
+    "year": 1995,
+    "core": 12,
+    "inter": 9
+   }
+  ]
+ },
+ {
+  "s": "rock_pop",
+  "rule": "titulo-igual-con-contradiccion",
+  "id": "Los Pixel::Cuánto Cuesta",
+  "sinc": 13,
+  "cands": [
+   {
+    "id": 606,
+    "title": "Cuanto Cuesta",
+    "year": 2010,
+    "core": 13,
+    "inter": 12
+   }
+  ]
+ },
+ {
+  "s": "rock_pop",
+  "rule": "titulo-casi-igual-mismo-padre",
+  "id": "Karina::32 Grandes Exitos Serie 32",
+  "sinc": 32,
+  "cands": [
+   {
+    "id": 4324,
+    "title": "32 Grandes Exitos",
+    "year": 1998,
+    "core": 32,
+    "inter": 32
+   },
+   {
+    "id": 3417,
+    "title": "Exitos",
+    "year": 1994,
+    "core": 20,
+    "inter": 19
+   }
+  ]
+ },
+ {
+  "s": "rock_pop",
+  "rule": "titulo-casi-igual-mismo-padre",
+  "id": "Kiara::Exitos - The Universal Masters Collection",
+  "sinc": 18,
+  "cands": [
+   {
+    "id": 4345,
+    "title": "Exitos (Universal Masters Collection)",
+    "year": 2000,
+    "core": 18,
+    "inter": 18
+   },
+   {
+    "id": 4344,
+    "title": "Exitos",
+    "year": 1994,
+    "core": 18,
+    "inter": 18
+   }
+  ]
+ },
+ {
+  "s": "rock_pop",
+  "rule": "titulo-igual-con-contradiccion",
+  "id": "Gillman::Tributo A Los Desconocidos",
+  "sinc": 17,
+  "cands": [
+   {
+    "id": 4148,
+    "title": "Tributo A Los Desconocidos",
+    "year": 2011,
+    "core": 17,
+    "inter": 16
+   }
+  ]
+ },
+ {
+  "s": "rock_pop",
+  "rule": "titulo-igual-con-contradiccion",
+  "id": "Gillman::Cuauhtemoc",
+  "sinc": 15,
+  "cands": [
+   {
+    "id": 2125,
+    "title": "Cuauhtemoc",
+    "year": 2003,
+    "core": 15,
+    "inter": 14
+   }
+  ]
+ },
+ {
+  "s": "rock_pop",
+  "rule": "titulo-casi-igual-mismo-padre",
+  "id": "Jorge Aguilar::Aguilar (Spanish Version)",
+  "sinc": 8,
+  "cands": [
+   {
+    "id": 4292,
+    "title": "Aguilar",
+    "year": 1982,
+    "core": 8,
+    "inter": 1
+   }
+  ]
+ },
+ {
+  "s": "rock_pop",
+  "rule": "titulo-casi-igual-mismo-padre",
+  "id": "Neblina::Una Canción De Navidad",
+  "sinc": 1,
+  "cands": [
+   {
+    "id": 3597,
+    "title": "Una Canción De Navidad (CD single)",
+    "year": 2016,
+    "core": 1,
+    "inter": 1
+   }
+  ]
+ },
+ {
+  "s": "rock_pop",
+  "rule": "titulo-casi-igual-mismo-padre",
+  "id": "Gillman::Tesoros 40 Aniversario",
+  "sinc": 30,
+  "cands": [
+   {
+    "id": 4141,
+    "title": "Tesoros",
+    "year": 2018,
+    "core": 15,
+    "inter": 14
+   }
+  ]
+ },
+ {
+  "s": "rock_pop",
+  "rule": "titulo-igual-con-contradiccion",
+  "id": "Gillman::Presente",
+  "sinc": 18,
+  "cands": [
+   {
+    "id": 4143,
+    "title": "Presente",
+    "year": 2021,
+    "core": 13,
+    "inter": 13
+   }
+  ]
+ },
+ {
+  "s": "rock_pop",
+  "rule": "titulo-igual-con-contradiccion",
+  "id": "Gusanos::Días De Furia",
+  "sinc": 13,
+  "cands": [
+   {
+    "id": 255,
+    "title": "Días De Furia",
+    "year": 1996,
+    "core": 13,
+    "inter": 13
+   }
+  ]
+ },
+ {
+  "s": "rock_pop",
+  "rule": "titulo-igual-con-contradiccion",
+  "id": "Gillman::Inevitable",
+  "sinc": 14,
+  "cands": [
+   {
+    "id": 2139,
+    "title": "Inevitable",
+    "year": 2007,
+    "core": 14,
+    "inter": 9
+   }
+  ]
+ },
+ {
+  "s": "rock_pop",
+  "rule": "titulo-casi-igual-mismo-padre",
+  "id": "Grupo C::Grupo C Canta Edgar Castro",
+  "sinc": 12,
+  "cands": [
+   {
+    "id": 4174,
+    "title": "Grupo C",
+    "year": 1971,
+    "core": 12,
+    "inter": 9
+   },
+   {
+    "id": 2697,
+    "title": "Canta Edgar Castro",
+    "year": 1971,
+    "core": 12,
+    "inter": 11
+   }
+  ]
+ },
+ {
+  "s": "rock_pop",
+  "rule": "titulo-igual-con-contradiccion",
+  "id": "Gillman::El Guerrero",
+  "sinc": 8,
+  "cands": [
+   {
+    "id": 2150,
+    "title": "El Guerrero",
+    "year": 1985,
+    "core": 8,
+    "inter": 7
+   }
+  ]
+ },
+ {
+  "s": "rock_pop",
+  "rule": "titulo-igual-con-contradiccion",
+  "id": "Gillman::Levántate y Pelea",
+  "sinc": 7,
+  "cands": [
+   {
+    "id": 2152,
+    "title": "Levantate y Pelea",
+    "year": 1984,
+    "core": 7,
+    "inter": 6
+   }
+  ]
+ },
+ {
+  "s": "rock_pop",
+  "rule": "titulo-casi-igual-mismo-padre",
+  "id": "Los Mentas::Arriba Carajo 15 Años En Vivo",
+  "sinc": 21,
+  "cands": [
+   {
+    "id": 2273,
+    "title": "Arriba Carajo",
+    "year": 2013,
+    "core": 0,
+    "inter": 0
+   },
+   {
+    "id": 3361,
+    "title": "En Vivo",
+    "year": 2008,
+    "core": 9,
+    "inter": 4
+   }
+  ]
+ },
+ {
+  "s": "rock_pop",
+  "rule": "titulo-igual-con-contradiccion",
+  "id": "Gillman::Escalofrío",
+  "sinc": 22,
+  "cands": [
+   {
+    "id": 450,
+    "title": "Escalofrío",
+    "year": 1994,
+    "core": 28,
+    "inter": 22
+   }
+  ]
+ },
+ {
+  "s": "rock_pop",
+  "rule": "titulo-casi-igual-mismo-padre",
+  "id": "Various Artists::Rock",
+  "sinc": 9,
+  "cands": [
+   {
+    "id": 640,
+    "title": "Rock: \"El Compilado\" Vol. 1",
+    "year": 2002,
+    "core": 17,
+    "inter": 0
+   },
+   {
+    "id": 656,
+    "title": "Rock: \"El Compilado\" Vol. 2",
+    "year": 2003,
+    "core": 18,
+    "inter": 0
+   },
+   {
+    "id": 1543,
+    "title": "Rock contra la dictadura. Venezuela, volumen 02",
+    "year": 2018,
+    "core": 16,
+    "inter": 0
+   }
+  ]
+ },
+ {
+  "s": "rock_pop",
+  "rule": "titulo-casi-igual-mismo-padre",
+  "id": "Various Artists::Serie Lo Máximo 19 Exitos de Donde Son Los Cantantes Vol. 2",
+  "sinc": 19,
+  "cands": [
+   {
+    "id": 4656,
+    "title": "Serie Lo Máximo",
+    "year": null,
+    "core": 16,
+    "inter": 1
+   }
+  ]
+ },
+ {
+  "s": "rock_pop",
+  "rule": "varios-con-el-mismo-titulo",
+  "id": "Spiteri::Spiteri",
+  "sinc": 11,
+  "cands": []
+ },
+ {
+  "s": "rock_pop",
+  "rule": "titulo-casi-igual-mismo-padre",
+  "id": "Aditus::Lo Mejor de Aditus Colección del Milenio",
+  "sinc": 20,
+  "cands": [
+   {
+    "id": 3638,
+    "title": "Lo Mejor de Aditus",
+    "year": 1991,
+    "core": 20,
+    "inter": 20
+   },
+   {
+    "id": 3642,
+    "title": "Lo Mejor de Aditus (Milenio)",
+    "year": 2000,
+    "core": 20,
+    "inter": 20
+   }
+  ]
+ },
+ {
+  "s": "rock_pop",
+  "rule": "titulo-casi-igual-mismo-padre",
+  "id": "Aditus::25 Aniversario Y La Historia Continúa Serie 32",
+  "sinc": 38,
+  "cands": [
+   {
+    "id": 4619,
+    "title": "25 Aniversario",
+    "year": null,
+    "core": 38,
+    "inter": 38
+   },
+   {
+    "id": 2134,
+    "title": "25 aniversario / Serie 32",
+    "year": 2000,
+    "core": 38,
+    "inter": 38
+   },
+   {
+    "id": 5524,
+    "title": "La historia continúa/Serie 32",
+    "year": 2000,
+    "core": 0,
+    "inter": 0
+   }
+  ]
+ },
+ {
+  "s": "rock_pop",
+  "rule": "titulo-casi-igual-mismo-padre",
+  "id": "Aditus::Ni En Concierto Ni En Estudio Sino Todo Lo Contrario",
+  "sinc": 17,
+  "cands": [
+   {
+    "id": 3643,
+    "title": "Ni En Concierto Ni En Estudio...",
+    "year": 2015,
+    "core": 17,
+    "inter": 17
+   },
+   {
+    "id": 4624,
+    "title": "Ni En Concierto",
+    "year": null,
+    "core": 17,
+    "inter": 17
+   }
+  ]
+ },
+ {
+  "s": "rock_pop",
+  "rule": "titulo-casi-igual-mismo-padre",
+  "id": "Caramelos de Cianuro::Flor De Fuego (Special Edition)",
+  "sinc": 25,
+  "cands": [
+   {
+    "id": 140,
+    "title": "Flor De Fuego",
+    "year": 2006,
+    "core": 10,
+    "inter": 10
+   }
+  ]
+ },
+ {
+  "s": "rock_pop",
+  "rule": "titulo-casi-igual-mismo-padre",
+  "id": "Distrust::Behold The Zombie Nation",
+  "sinc": 2,
+  "cands": [
+   {
+    "id": 4688,
+    "title": "Behold The Zombie",
+    "year": null,
+    "core": 2,
+    "inter": 2
+   },
+   {
+    "id": 1741,
+    "title": "Behold The Zombie Nation Ep",
+    "year": 2010,
+    "core": 3,
+    "inter": 2
+   }
+  ]
+ }
+]

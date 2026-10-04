@@ -1,0 +1,150 @@
+{
+  "section": "latin_pop",
+  "dryRun": true,
+  "note": "Sincopa latin_pop: promoción masiva por reglas",
+  "kinds": {
+    "album": {
+      "identities": 11,
+      "claims": 25,
+      "verdicts": {
+        "hold:padre-sin-resolver": 1,
+        "approve:auto-match": 9,
+        "same:revision-ingesta-titulo": 1
+      },
+      "applied": 0,
+      "unchanged": 0,
+      "stillCandidate": 0,
+      "dismissed": 0,
+      "failed": 0
+    },
+    "track": {
+      "identities": 230,
+      "claims": 929,
+      "verdicts": {
+        "hold:padre-sin-resolver": 9,
+        "different:sin-coincidencia": 150,
+        "different:revision-ingesta-otra-pista": 3,
+        "dismiss:revision-ingesta-parte-de-popurri": 46,
+        "different:titulo-casi-igual-otro-numero": 5,
+        "same:revision-ingesta-titulo-contenido": 2,
+        "same:revision-ingesta-a-mano": 2,
+        "dismiss:revision-ingesta-titulo-truncado": 2,
+        "different:revision-ingesta-otro-numero": 1,
+        "different:revision-ingesta-otra-version": 1,
+        "approve:auto-match": 1,
+        "same:mismo-titulo-mismo-disco": 8
+      },
+      "applied": 0,
+      "unchanged": 0,
+      "stillCandidate": 0,
+      "dismissed": 0,
+      "failed": 0
+    }
+  },
+  "holds": [
+    {
+      "kind": "album",
+      "identityRaw": "Juan Carlos::Baila",
+      "rule": "padre-sin-resolver",
+      "detail": "el artista del disco aún no está en el core",
+      "claims": 8
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Juan Carlos::Baila::Baila Con Tu Sabrosura",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Juan Carlos::Baila::Asesina A Sueldo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Juan Carlos::Baila::Te Di Mi Amor",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Juan Carlos::Baila::Cínica",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Juan Carlos::Baila::Nada Pasó",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Juan Carlos::Baila::Te Prohibó",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Juan Carlos::Baila::Por Qué",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Juan Carlos::Baila::Era Su Primer Beso",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Juan Carlos::Baila::Cínica Remix",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    }
+  ],
+  "duplicateFlags": [],
+  "errors": [],
+  "evidenceVerdicts": [
+    {
+      "kind": "track",
+      "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::20 Años",
+      "rule": "titulo-casi-igual-otro-numero",
+      "detail": ""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Billo's Caracas Boys::Serie 32 Super Exitos de Billo's::Mosaico a La Billo's Nº 1",
+      "rule": "titulo-casi-igual-otro-numero",
+      "detail": ""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Billo's Caracas Boys::Gold::Mosaico Nº 2",
+      "rule": "titulo-casi-igual-otro-numero",
+      "detail": ""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Trina Medina::En Vivo!::Medley 3",
+      "rule": "titulo-casi-igual-otro-numero",
+      "detail": ""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Trina Medina::En Vivo!::Medley 4",
+      "rule": "titulo-casi-igual-otro-numero",
+      "detail": ""
+    }
+  ]
+}

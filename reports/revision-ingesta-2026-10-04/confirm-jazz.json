@@ -1,0 +1,167 @@
+{
+  "section": "jazz",
+  "dryRun": false,
+  "note": "Revisión de ingesta 2026-10-04 (Brian): promover discos y pistas pendientes con ER; zona gris decidida por repertorio (overrides.json)",
+  "kinds": {
+    "album": {
+      "identities": 8,
+      "claims": 48,
+      "verdicts": {
+        "same:revision-ingesta-titulo": 7,
+        "same:revision-ingesta-repertorio": 1
+      },
+      "applied": 14,
+      "unchanged": 33,
+      "stillCandidate": 1,
+      "dismissed": 0,
+      "failed": 0
+    },
+    "track": {
+      "identities": 80,
+      "claims": 325,
+      "verdicts": {
+        "same:revision-ingesta-repetida-en-el-disco": 2,
+        "same:mismo-titulo-mismo-disco": 26,
+        "same:revision-ingesta-errata": 1,
+        "approve:auto-match": 1,
+        "different:revision-ingesta-otra-pista": 1,
+        "different:sin-coincidencia": 35,
+        "same:revision-ingesta-titulo-contenido": 1,
+        "different:solo-coincide-bajo-otro-padre": 3,
+        "same:revision-ingesta-a-mano": 5,
+        "different:revision-ingesta-otra-version": 3,
+        "same:revision-ingesta-mismo-titulo": 2
+      },
+      "applied": 51,
+      "unchanged": 154,
+      "stillCandidate": 54,
+      "dismissed": 0,
+      "failed": 24
+    }
+  },
+  "holds": [],
+  "duplicateFlags": [],
+  "errors": [
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Jazz Desde Aldemaro::Catuche",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Jazz Desde Aldemaro::Tema de Amor",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Jazz Desde Aldemaro::Calor",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Jazz Desde Aldemaro::Cimarrón",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Jazz Desde Aldemaro::Mi Niño No Me Quiere",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Jazz Desde Aldemaro::El Catire",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Jazz Desde Aldemaro::Señora Chabuca Granda",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Jazz Desde Aldemaro::No Necesito de Ti",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Jazz Desde Aldemaro::Doña Mentira",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Jazz Desde Aldemaro::De Repente",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Jazz Desde Aldemaro::Dos Golondrinas",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Jazz Desde Aldemaro::Mambo Timbal",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::Suka - Jazz En Directo::Sukkah",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::Suka - Jazz En Directo::A La Espera",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::Suka - Jazz En Directo::CCS Hip",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::Suka - Jazz En Directo::Tukeke",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::Suka - Jazz En Directo::Pablo De Caracas",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::Suka - Jazz En Directo::Solar",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::Suka - Jazz En Directo::Otra Vez",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ed Calle::Mamblue::Luz De Luna (Moonlight)",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ed Calle::Mamblue::Cortadito con Bajo (Cortadito)",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ed Calle::Mamblue::Isla Urbana (Urban Island)",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ed Calle::Mamblue::Por De Lado (Sidewinder)",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ed Calle::Mamblue::Otoño (Autumn)",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    }
+  ],
+  "runId": 11959
+}

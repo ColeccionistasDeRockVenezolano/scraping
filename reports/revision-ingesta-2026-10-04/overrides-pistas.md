@@ -1,0 +1,238 @@
+# Pistas retenidas: veredictos
+
+{"revision-ingesta-repetida-en-el-disco":13,"revision-ingesta-errata":17,"revision-ingesta-otra-pista":25,"revision-ingesta-titulo-contenido":52,"revision-ingesta-a-mano":14,"revision-ingesta-otra-version":16,"revision-ingesta-mismo-titulo":30,"revision-ingesta-parte-de-popurri":62,"revision-ingesta-titulo-truncado":3,"revision-ingesta-otro-numero":2}
+
+- same → 6483 · Various Artists::Jazz Desde Aldemaro::El Negro José · posición 01 → «El Negro José» #12
+- same → 6528 · Various Artists::Jazz Desde Aldemaro::Tema de Amor · errata de «Temas De Amor»
+- same → 6489 · Various Artists::Jazz Desde Aldemaro::De Conde a Principal · posición 10 → «De Conde A Principal» #21
+- different · Various Artists::Jazz Desde Aldemaro::Carretera · sin pareja segura («Carretera: Edgar Macías Solo», «Carretera: Alberto Lazo Solo», «Carretera: Pedro López Solo»)
+- same → 50215 · Gonzalo Micó::Juegos de Playa::Juegos de Playa, How sad it was · «Juegos de Playa»
+- same → 51572 · Ed Calle::Mamblue::Luz De Luna (Moonlight) · revisada a mano
+- same → 51575 · Ed Calle::Mamblue::Cortadito con Bajo (Cortadito) · revisada a mano
+- same → 51571 · Ed Calle::Mamblue::Isla Urbana (Urban Island) · revisada a mano
+- same → 51576 · Ed Calle::Mamblue::Por De Lado (Sidewinder) · revisada a mano
+- same → 51577 · Ed Calle::Mamblue::Otoño (Autumn) · revisada a mano
+- different · Ed Calle::Mamblue::San Sebastián (Radio Version) · versión distinta de «San Sebastián»
+- different · Ed Calle::Mamblue::Arroz y Frijoles (Rice & Beans) (Radio version) · versión distinta de «Rice & Beans (Arroz y Frijoles)»
+- different · Ed Calle::Mamblue::Arroz y Frijoles (Rice & Beans) (Extended Version) · versión distinta de «Rice & Beans (Arroz y Frijoles)»
+- same → 3082 · Rigel Mitxelena::Bartók's Room::Artilugio (Florilégio Artefáctico) · «Artilugio (Florilegio Artefáctico)»
+- same → 3100 · Rigel Mitxelena::Bartók's Room::Song For Bartók · «Song For Bartok»
+- same → 46059 · Alirio Díaz::Classic Portraits The Best Of Alirio Díaz::Fantasía · revisada a mano
+- same → 84040 · Simón Bolívar Symphony Orchestra of Venezuela::Revueltas, Orbón & Ginastera::The Return of The Fishermen with Their Dead Friend · «The Fishermen»
+- different · Venezuela Suite (Series)::Suite Central::Tristeza Moruna · sin pareja segura («Tristeza»)
+- different · Venezuela Suite (Series)::Suite Oriental::Suite Oriental Part II (Side B on LP) · sin pareja segura («Suite Oriental Part I (Side A on LP)»)
+- different · Venezuela Suite (Series)::Suite Zuliana::Suite Zuliana Part II (Side B on LP) · sin pareja segura («Suite Zuliana Part I (Side A on LP)»)
+- different · Venezuela Suite (Series)::Suite Andina::Suite Andina Part II (Side B on LP) · sin pareja segura («Suite Andina Part I (Side A on LP)»)
+- different · Venezuela Suite (Series)::Suite Larense::Suite Larense Part II (Side B on LP) · sin pareja segura («Suite Larense Part I (Side A on LP)»)
+- different · Venezuela Suite (Series)::Suite Llanera::Suite Llanera Part II (Side B on LP) · sin pareja segura («Suite Llanera Part I (Side A on LP)»)
+- different · Nancy Ramos::Esta Parranda Te La Debía::La Parranda · sin pareja segura («Esta Parranda Te La Debía»)
+- dismiss · Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::No Vale La Pena · ya nombrada en «Mosaico No. 13: No Vale la Pena / la Mora / Qui Madame / el Muerto Se Fue de Rumba»
+- dismiss · Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::La Mora · ya nombrada en «Mosaico No. 13: No Vale la Pena / la Mora / Qui Madame / el Muerto Se Fue de Rumba»
+- dismiss · Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::El Muerto Se Fué De Rumba · ya nombrada en «Mosaico No. 13: No Vale la Pena / la Mora / Qui Madame / el Muerto Se Fue de Rumba»
+- dismiss · Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::Muchos Besos · ya nombrada en «Mosaico No. 14: Muchos Besos / Que Me Importa / Amor Ciego / Se Va Covadonga / Anabacoa»
+- dismiss · Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::Qué Me Importa · ya nombrada en «Mosaico No. 14: Muchos Besos / Que Me Importa / Amor Ciego / Se Va Covadonga / Anabacoa»
+- dismiss · Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::Amor Ciego · ya nombrada en «Mosaico No. 14: Muchos Besos / Que Me Importa / Amor Ciego / Se Va Covadonga / Anabacoa»
+- dismiss · Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::Se Va Covadonga · ya nombrada en «Mosaico No. 14: Muchos Besos / Que Me Importa / Amor Ciego / Se Va Covadonga / Anabacoa»
+- dismiss · Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::Anabacoa · ya nombrada en «Mosaico No. 14: Muchos Besos / Que Me Importa / Amor Ciego / Se Va Covadonga / Anabacoa»
+- dismiss · Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::Nuestras Vidas · ya nombrada en «Mosaico N 15 Nuestras Vidas; Cuatro Personas; Reflexion; Uno Dos Y Tres; Ay Mama Ines»
+- dismiss · Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::Cuatro Personas · ya nombrada en «Mosaico N 15 Nuestras Vidas; Cuatro Personas; Reflexion; Uno Dos Y Tres; Ay Mama Ines»
+- dismiss · Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::Reflexión · ya nombrada en «Mosaico N 15 Nuestras Vidas; Cuatro Personas; Reflexion; Uno Dos Y Tres; Ay Mama Ines»
+- dismiss · Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::Uno Dos Tres · parte del mosaico 15
+- dismiss · Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::Ay! Mamá Inés · ya nombrada en «Mosaico N 15 Nuestras Vidas; Cuatro Personas; Reflexion; Uno Dos Y Tres; Ay Mama Ines»
+- dismiss · Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::Qué Te Pasa? · ya nombrada en «Mosaico N 16 Que Te Pasa / El Cantante / Note Importe Saber / Bumba / Cutiro»
+- dismiss · Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::El Cantante · ya nombrada en «Mosaico N 16 Que Te Pasa / El Cantante / Note Importe Saber / Bumba / Cutiro»
+- dismiss · Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::Bumba · ya nombrada en «Mosaico N 16 Que Te Pasa / El Cantante / Note Importe Saber / Bumba / Cutiro»
+- dismiss · Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::Cutiro · ya nombrada en «Mosaico N 16 Que Te Pasa / El Cantante / Note Importe Saber / Bumba / Cutiro»
+- dismiss · Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::Así Quería Verte · ya nombrada en «Mosaico N 17 20 Años / Asi Queria Verte / Perfidia / Sun Sun Babae / El Carbonero»
+- dismiss · Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::Perfidia · ya nombrada en «Mosaico N 17 20 Años / Asi Queria Verte / Perfidia / Sun Sun Babae / El Carbonero»
+- dismiss · Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::Sun Sun Babae · ya nombrada en «Mosaico N 17 20 Años / Asi Queria Verte / Perfidia / Sun Sun Babae / El Carbonero»
+- dismiss · Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::El Carbonero · ya nombrada en «Mosaico N 17 20 Años / Asi Queria Verte / Perfidia / Sun Sun Babae / El Carbonero»
+- dismiss · Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::Alma De Niño · ya nombrada en «Mosaico N 18 Alma De Niño / Como Arrullo / Entre Tu Y Yo / Cosita Linda / Se Acabo»
+- dismiss · Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::Entre Tú y Yo · ya nombrada en «Mosaico N 18 Alma De Niño / Como Arrullo / Entre Tu Y Yo / Cosita Linda / Se Acabo»
+- dismiss · Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::Cosita Linda · ya nombrada en «Mosaico N 18 Alma De Niño / Como Arrullo / Entre Tu Y Yo / Cosita Linda / Se Acabo»
+- dismiss · Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::Se Acabó · ya nombrada en «Mosaico N 18 Alma De Niño / Como Arrullo / Entre Tu Y Yo / Cosita Linda / Se Acabo»
+- dismiss · Guaco::Guacomania::Intro Masculino · ya nombrada en «Guacomania 1: Intro Masculino / El Billetero / Para Ella / Pastelero»
+- dismiss · Guaco::Guacomania::El Billetero · ya nombrada en «Guacomania 1: Intro Masculino / El Billetero / Para Ella / Pastelero»
+- dismiss · Guaco::Guacomania::Para Ella · ya nombrada en «Guacomania 1: Intro Masculino / El Billetero / Para Ella / Pastelero»
+- dismiss · Guaco::Guacomania::Pastelero · ya nombrada en «Guacomania 1: Intro Masculino / El Billetero / Para Ella / Pastelero»
+- dismiss · Guaco::Guacomania::Maracucha · ya nombrada en «Guacomania 2: Maracucha / Noche Sensacional / Disco Guaco»
+- dismiss · Guaco::Guacomania::Noche Sensacional · ya nombrada en «Guacomania 2: Maracucha / Noche Sensacional / Disco Guaco»
+- dismiss · Guaco::Guacomania::Disco Guaco · ya nombrada en «Guacomania 2: Maracucha / Noche Sensacional / Disco Guaco»
+- dismiss · Guaco::Guacomania::Homenaje a Jesús Lozano · ya nombrada en «Guacomania 3: Homenaje A Jesus Lozano / Noviazgo En Noche Buena / La Diferencia»
+- dismiss · Guaco::Guacomania::Noviazgo En Noche Buena · ya nombrada en «Guacomania 3: Homenaje A Jesus Lozano / Noviazgo En Noche Buena / La Diferencia»
+- dismiss · Guaco::Guacomania::La Diferencia · ya nombrada en «Guacomania 3: Homenaje A Jesus Lozano / Noviazgo En Noche Buena / La Diferencia»
+- dismiss · Guaco::Guacomania::Venite Pa' Maracaibo · ya nombrada en «Guacomania 4: Venite Pa Maracaibo / A Patinar / Maracaibo Linda / Lola Y Su Perola»
+- dismiss · Guaco::Guacomania::A Patinar · ya nombrada en «Guacomania 4: Venite Pa Maracaibo / A Patinar / Maracaibo Linda / Lola Y Su Perola»
+- dismiss · Guaco::Guacomania::Maracaibo Linda · ya nombrada en «Guacomania 4: Venite Pa Maracaibo / A Patinar / Maracaibo Linda / Lola Y Su Perola»
+- dismiss · Guaco::Guacomania::Lola y Su Perola · ya nombrada en «Guacomania 4: Venite Pa Maracaibo / A Patinar / Maracaibo Linda / Lola Y Su Perola»
+- dismiss · Guaco::Guacomania::Guaco y Tambora · ya nombrada en «Guacomania 5: Guaco Y Tambora / Linda Caraqueña / Sandunguera»
+- dismiss · Guaco::Guacomania::Linda Caraqueña · ya nombrada en «Guacomania 5: Guaco Y Tambora / Linda Caraqueña / Sandunguera»
+- dismiss · Guaco::Guacomania::Sandunguera · ya nombrada en «Guacomania 5: Guaco Y Tambora / Linda Caraqueña / Sandunguera»
+- dismiss · Guaco::Guacomania::Intro Femenino · ya nombrada en «Guacomania 6: Intro Femenino / Las Pulgas / Aguilas Del Zulia / Parranda De Navidad»
+- dismiss · Guaco::Guacomania::Las Pulgas · ya nombrada en «Guacomania 6: Intro Femenino / Las Pulgas / Aguilas Del Zulia / Parranda De Navidad»
+- dismiss · Guaco::Guacomania::Aguilas Del Zulia · ya nombrada en «Guacomania 6: Intro Femenino / Las Pulgas / Aguilas Del Zulia / Parranda De Navidad»
+- dismiss · Guaco::Guacomania::Parranda De Navidad · ya nombrada en «Guacomania 6: Intro Femenino / Las Pulgas / Aguilas Del Zulia / Parranda De Navidad»
+- same → 56990 · Guaco::Super Guaco Serie 32::Las Caraqueñas · «Me Gustan Las Caraqueñas»
+- different · Guaco::Super Guaco Serie 32::Regalame Tu Amor · sin pareja segura («Amor Amor»)
+- same → 58546 · Los Dementes::40 Años, 40 Exitos::Floro · revisada a mano
+- same → 59525 · Mayra Martí::40 Años 40 Exitos::Lejania · «Tu Lejanía»
+- dismiss · Mirtha Pérez::40 Años 40 Exitos::No · título truncado «No»
+- dismiss · Punto Sur::40 Años 40 Exitos::Yo · título truncado «Yo»
+- different · Sexteto Juventud::40 Años 40 Exitos::Guasanco No. 3 · otro número que «Guasanco»
+- different · Esteban Demián::Subyugante::Desgarrado (Remix Version) · versión distinta de «Desgarrado»
+- same → 144877 · Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::Mosaico Nº 14 · revisada a mano
+- different · Antonietta::Antonietta (1988)::Siento · sin pareja segura («Yo Lo Siento»)
+- dismiss · Angel Rada::Solar Concert For Bhagavan::Shangri-La · ya nombrada en «I ching, Shangri-la»
+- same → 19530 · Angel Rada::Continuvm::Continuvm... Y Salió El Sol · «Y Salió el Sol»
+- same → 17655 · Angel Rada::2012::Surical Kingdom Rave · errata de «Suricat Kingdom Rave»
+- same → 17659 · Angel Rada::2012::Ground Zero Jam Sesion · errata de «Ground Zero Jam Session»
+- same → 2001 · Dogon::Redunjusta::23 jhnohm · «23 Jhnohm (Jhno Remix)»
+- same → 2006 · Dogon::Redunjusta::Flesh Frogs · «Flesh Frogs (Paul Godwin Remix)»
+- same → 2011 · Dogon::Redunjusta::Desarollo V · «Desarollo V (Miguel Noya Remix)»
+- same → 2030 · Dogon::Redunjusta::Eulogy · «Eulogy (Paul Godwin Remix)»
+- same → 2042 · Dogon::Redunjusta::Increado · «Increado (Miguel Noya Remix)»
+- same → 2048 · Dogon::Redunjusta::Reza's Dream · «Reza's Dream (Reza Remix)»
+- same → 2054 · Dogon::Redunjusta::The Seer Mix · «The Seer Mix (Seer Remix)»
+- different · Serenata Guayanesa::Una Amistad de 25 Años::- A la Una · sin pareja segura («Una Serenata para Serenata»)
+- different · Anselmo López::El Rey De La Bandola Guacamaya Records &::Pajarillo Nº 3 · sin pareja segura («El Pajarillo»)
+- different · Serenata Guayanesa::40 Años 40 Exitos Vol. 2::Calypso de El Callao Nº 2 · otro número que «Calypso de El Callao»
+- different · Serenata Guayanesa::40 Años 40 Exitos Vol. 2::La Zapoara · sin pareja segura («Pesca De Zapoara»)
+- different · Serenata Guayanesa::40 Años 40 Exitos Vol. 2::La Paloma · sin pareja segura («Casta Paloma»)
+- different · Reynaldo Armas::Luis Silva Serie Platinum::Es Que Te Quiero · sin pareja segura («La Quiero y Qué?»)
+- different · Serenata Guayanesa::Bolívar Canta a Bolívar::Joropo De Bolívar Para Simón · sin pareja segura («Simón, Simón»)
+- different · Serenata Guayanesa::Bolívar Canta a Bolívar::Angostura · sin pareja segura («Fragmento 1 (Del Discurso de Angostura)», «Fragmento 2 (Del Discurso de Angostura)», «Fragmento 3 (Del Discurso de Angostura)»)
+- dismiss · Serenata Guayanesa::Bolívar Canta a Bolívar::Bolívar · ya nombrada en «Bolívar, Gran Héroe (Poem)»
+- different · Serenata Guayanesa::Bolívar Canta a Bolívar::Este Niño Don Simón · sin pareja segura («Simón, Simón»)
+- same → 153106 · Simón Díaz::Simón En Gaita En Salsa::Gaita Llanera · «Gaita Llanera»
+- same → 153107 · Simón Díaz::Simón En Gaita En Salsa::Abran La Puerta · «Abran la Puerta»
+- same → 153108 · Simón Díaz::Simón En Gaita En Salsa::Doña Cuatricentenaria · «Doña Cuatricentenaria»
+- same → 153109 · Simón Díaz::Simón En Gaita En Salsa::Tilin Tingolin · «Tilin Tingolin»
+- same → 153110 · Simón Díaz::Simón En Gaita En Salsa::Matrimonio No · «Matrimonio No»
+- same → 153111 · Simón Díaz::Simón En Gaita En Salsa::Mister Bugalu · «Mister Bugalu»
+- same → 153112 · Simón Díaz::Simón En Gaita En Salsa::La Palma De Coco · «La Palma de Coco»
+- same → 153113 · Simón Díaz::Simón En Gaita En Salsa::Carro Por Puesto · «Carro por Puesto»
+- same → 153114 · Simón Díaz::Simón En Gaita En Salsa::Simón No Tiene Trabajo · «Simon No Tiene Trabajo»
+- same → 153010 · Simón Díaz::Golpe y Pasaje Caballo Viejo::El Beso · «El beso»
+- same → 153011 · Simón Díaz::Golpe y Pasaje Caballo Viejo::Romance En la Lejania · «Romance en la lejanía»
+- same → 153014 · Simón Díaz::Golpe y Pasaje Caballo Viejo::El Preso · «El preso»
+- same → 153015 · Simón Díaz::Golpe y Pasaje Caballo Viejo::Lección De Canto · «Lección de canto»
+- same → 153016 · Simón Díaz::Golpe y Pasaje Caballo Viejo::Caballo Viejo · «Caballo viejo»
+- same → 153018 · Simón Díaz::Golpe y Pasaje Caballo Viejo::Mercedes · «Mercedes»
+- different · Simón Díaz::Amorosamente::Palabras De Mujer · sin pareja segura («Mujer»)
+- same → 153237 · Simón Díaz::Serie Lo Máximo Simón Díaz-Mis Tonadas 16 Grandes Exitos::La Pena Del Becerrero · «La Pena Del Becerrero»
+- same → 153238 · Simón Díaz::Serie Lo Máximo Simón Díaz-Mis Tonadas 16 Grandes Exitos::Tonada De Las Espigas · «Tonada De Las Espigas»
+- same → 153241 · Simón Díaz::Serie Lo Máximo Simón Díaz-Mis Tonadas 16 Grandes Exitos::Voy A Buscar La Palmera · «Voy A Buscar La Palmera»
+- same → 153243 · Simón Díaz::Serie Lo Máximo Simón Díaz-Mis Tonadas 16 Grandes Exitos::Así Es Mi Tierra · «Así Es Mi Tierra»
+- same → 153244 · Simón Díaz::Serie Lo Máximo Simón Díaz-Mis Tonadas 16 Grandes Exitos::Guillermina · «Guillermina»
+- same → 153245 · Simón Díaz::Serie Lo Máximo Simón Díaz-Mis Tonadas 16 Grandes Exitos::Tonadas · «Tonadas»
+- same → 153246 · Simón Díaz::Serie Lo Máximo Simón Díaz-Mis Tonadas 16 Grandes Exitos::Canto De Ordeño · «Canto De Ordeño»
+- same → 153248 · Simón Díaz::Serie Lo Máximo Simón Díaz-Mis Tonadas 16 Grandes Exitos::Tricolor · «Tricolor»
+- same → 153125 · Simón Díaz::40 Años 40 Exitos::El Cuarto y El Interés · errata de «El Cuatro y el Intéres»
+- same → 153131 · Simón Díaz::40 Años 40 Exitos::Regalo De Dios (Canto A La Madre) · «Regalo de Dios»
+- same → 153135 · Simón Díaz::40 Años 40 Exitos::Caballo Viejo (Cuenta y Canta) · «Caballo Viejo»
+- same → 84639 · Simón Díaz::Grandes Exitos::Tonada Del Cabestrero · errata de «Tonada Del Cabrestero»
+- different · Quinteto Contrapunto::Música Popular y Folklórica de Venezuela 32 Grandes Exitos::La Bella · sin pareja segura («Bella Rosa»)
+- different · Aldemaro Romero::40 Años 40 Exitos::A La Orilla De La Carretera · sin pareja segura («Carretera»)
+- same → 4504 · Vytas Brenner::En Vivo! Ofrenda::Interludio · posición 10 → «Interludio» #10
+- dismiss · Los Impala::40 Años 40 Exitos::Introducción Al Surf · ya nombrada en «Corina, Introducción al surf»
+- same → 15408 · Los Impala::40 Años 40 Exitos::Do Wah Diddy Diddy · «Do wah diddy»
+- same → 32445 · Epitafio::III Op3ris T3rtium::Pánico · posición 02 → «Pánico» #2
+- same → 32555 · Témpano::Nowhere NowHere::NowHere · posición 5 → «NowHere» #5
+- different · Juan Francisco::Calle Furia::Calle Furia (Acoustic Version) · versión distinta de «Calle Furia»
+- dismiss · Los Supersónicos::Más de Los Supersónicos::Lana · ya nombrada en «Más, Lana, Romance en Rusia»
+- dismiss · Los Supersónicos::Más de Los Supersónicos::Romance En Rusia · ya nombrada en «Más, Lana, Romance en Rusia»
+- same → 33030 · Gillman::Más Vivo & En Vivo::Rey Dinero · «El Rey Dinero»
+- same → 33036 · Gillman::Más Vivo & En Vivo::Procesión De Satanás · revisada a mano
+- same → 157615 · Gillman::Más Vivo & En Vivo::Loco Por El Rock & Roll / Misión Cumplida · «Loco Por El Rock And Roll / Misión Cumplida»
+- different · Ricardo Montaner::Prohibido Olvidar::No Me Puedo Aguantar (Dance) · versión distinta de «No Me Puedo Aguantar»
+- same → 40422 · Yordano::Yordano Hoy - En Vivo::Como Se Deja De Querer · errata de «Como se deja querer»
+- same → 2500 · Témpano::El Fin De La Infancia / Childhood's End::Timorato · «Timorato»
+- dismiss · Los Impala::The Impala and Their Music::Poison Of Love · ya nombrada en «So I Am, Poison of Love»
+- same → 15555 · Los Impala::The Impala and Their Music::You're My Girl · errata de «You Are my Girl»
+- same → 34911 · Franco de Vita::Mil Y Una Historias En Vivo::Popurri: Aquí Estas Otra Ves / Ya Lo He Vivido / · «Popurri: Aquí Estas Otra Ves / Ya Lo He Vivido / Si Quieres Decir Adiós / Y Te Pienso / Sólo Importas Tú / Te Recordaré»
+- same → 34827 · Raimundo Rodulfo::To LIVE a Dream (Official Bootleg)::Esperanza · posición 01 → «Esperanza» #1
+- same → 36046 · Rudy La Scala::Mi Alma Es Tropical::Tu Dulce Flor · posición 9 → «Tu Dulce Flor» #9
+- dismiss · Kiara::32 Grandes Exitos Serie 32::No · título truncado «No»
+- same → 36393 · María Conchita Alonso::Soy::Soy · posición 07 → «Soy» #7
+- same → 1685 · Los Pixel::Cuánto Cuesta::Cuánto Cuesta · «Cuanto Cuesta»
+- same → 1726 · Los Pixel::Cuánto Cuesta::Por Ahora No Estás · «Por Ahora No Estas»
+- same → 36225 · Karina::Renacer::Déjame Libre · «Déjame Libre (Rudy La Scala)»
+- same → 37623 · Rudy La Scala::En Cuerpo y Alma::Como Te Extraño · posición 09 → «Como Te Extraño» #9
+- same → 37404 · Malanga::Sr. Malanga::Cuando Se Rompe Un Corazón · posición 05 → «Cuando Se Rompe Un Corazón» #5
+- same → 38087 · Juan Carlos Pérez Soto::Juan Carlos Pérez Soto::Atarme A La Luna · posición 08 → «Atarme A La Luna» #8
+- same → 42571 · Gore Priest::Beneath Eternal Oceans of Melancholy::Darkness Arrives · posición 01 → «Darkness Arrives» #1
+- same → 137593 · Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::Para Mí No Más · «Para Mi No Mas (En Vivo)»
+- same → 137594 · Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::A Pasarla Bien · «A Pasarla Bien (En Vivo)»
+- same → 137595 · Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::Por Alguien Como Tú · «Por Alguien Como Tu (En Vivo)»
+- same → 137596 · Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::Palabras Del Alma · «Palabras Del Alma (En Vivo)»
+- same → 137597 · Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::Es Verdad · «Es Verdad (En Vivo)»
+- same → 137598 · Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::Eres Una En Un Millón · «Eres Una En Un Millon (En Vivo)»
+- same → 137599 · Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::Sabe A Calidad · «Sabe A Calidad (En Vivo)»
+- same → 137600 · Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::Un Querer Como El Tuyo · «Un Querer Como El Tuyo (En Vivo)»
+- same → 137601 · Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::Para Siempre · «Para Siempre (En Vivo)»
+- same → 137602 · Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::Historia De Un Buen Día · «Historia De Un Buen Dia (En Vivo)»
+- same → 137603 · Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::Canto Al Avila · «Canto Al Avila (En Vivo)»
+- same → 137604 · Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::Contigo · «Contigo (En Vivo)»
+- same → 37750 · Karina::Karina::Dejaré · revisada a mano
+- same → 6301 · Sentimiento Muerto::Aunque Usted No Lo Quiera::Culebrón · «Culebrón (Cabello/Troconis)»
+- same → 6306 · Sentimiento Muerto::Aunque Usted No Lo Quiera::Estado: Alucinando · «Estado: Alucinando (Cabello/Troconis)»
+- same → 6311 · Sentimiento Muerto::Aunque Usted No Lo Quiera::Descargar · «Descargar (Cabello/Troconis)»
+- same → 6318 · Sentimiento Muerto::Aunque Usted No Lo Quiera::Ganas · «Ganas (Cabello/Troconis)»
+- same → 6323 · Sentimiento Muerto::Aunque Usted No Lo Quiera::Un Agradable Calor · «Un Agradable Calor (Cabello/Troconis/Jiménez)»
+- same → 6328 · Sentimiento Muerto::Aunque Usted No Lo Quiera::Nuevas Sensaciones · «Nuevas Sensaciones (Cabello/Dagnino)»
+- same → 6336 · Sentimiento Muerto::Aunque Usted No Lo Quiera::Siete Mares · «Siete Mares (Dagnino)»
+- same → 6342 · Sentimiento Muerto::Aunque Usted No Lo Quiera::El Delito · «El Delito (Cabello/Troconis)»
+- same → 6348 · Sentimiento Muerto::Aunque Usted No Lo Quiera::Alerta · «Alerta (Cabello/Troconis)»
+- same → 6353 · Sentimiento Muerto::Aunque Usted No Lo Quiera::Cabeza · «Cabeza (Cabello/Troconis/Jiménez)»
+- same → 6359 · Sentimiento Muerto::Aunque Usted No Lo Quiera::Qué Es Lo Que Te Pasa · «¿Qué Es Lo Que Te Pasa? (Cabello/Troconis)»
+- same → 6365 · Sentimiento Muerto::Aunque Usted No Lo Quiera::Un Tono · «Un Tono (Dagnino/Jiménez/G. Atilano)»
+- same → 6367 · Sentimiento Muerto::Aunque Usted No Lo Quiera::Una Mirada Dice Todo y Dice Nada · «Una Mirada Dice Todo y Dice Nada (Cabello/Schafer)»
+- same → 6375 · Sentimiento Muerto::Aunque Usted No Lo Quiera::Resiste · «Resiste (Cabello/Troconis)»
+- same → 79208 · Frank Quintero::Horas de Vuelo::Feeling · revisada a mano
+- same → 5203 · La Corte::Codigo Demente::Boom Chakataka · errata de «Boom Chakataca»
+- different · Kiara::Como Un Huracán::Azúcar (Extended Version) · versión distinta de «Azúcar»
+- same → 846 · Los Chevynovas::Música En Vara::Shack Dag Du Papa · errata de «Shag Dag Du Papa»
+- different · Los Mentas::Hasta Que Los Bares Nos Separen::El Peo (End) · versión distinta de «El Peo»
+- same → 6823 · Los Mentas::Hasta Que Los Bares Nos Separen::Intro · posición 5 → «Intro» #5
+- different · Mochuelo::Mochuelo::Me Desenfocas (Mix) · versión distinta de «Me Desenfocas»
+- different · Mochuelo::Mochuelo::Mi Guerra (Mix) · versión distinta de «Mi Guerra»
+- dismiss · Okills::Reiniciando Transmisión::Nube · ya nombrada en «Nube/Segundo»
+- different · Franco de Vita::Fuera De Este Mundo::Tocando el Cielo (Unplugged) · versión distinta de «Tocando El Cielo»
+- different · Franco de Vita::Voces A Mi Alrededor::Calido y Frio (Unplugged Version) · versión distinta de «Cálido y Frío»
+- different · G::25 Años::El Anticristo · sin pareja segura («La historia de Anticristo»)
+- same → 15645 · Equilibrio Vital::Kazmor El Prisionero::Mi Canción (Part II) · revisada a mano
+- same → 18548 · Henry Stephen::Mi Limon, Mi Limonero Sus Exitos::Lady Madona · errata de «Lady madonna»
+- same → 18556 · Henry Stephen::Mi Limon, Mi Limonero Sus Exitos::Mamá Rego Azucar En Mi · errata de «Mamá regó el azúcar en mí»
+- different · Los Telecaster::Los Telecaster::Dandy Boy (Radio Version) · versión distinta de «Dandy Boy»
+- same → 28619 · Trino Mora::El Tremendo Romántico::Encontré Un Amor · errata de «Encontré el amor»
+- same → 28612 · Trino Mora::El Tremendo Romántico::Recuerdos De Ayer · errata de «Recuerdo del ayer»
+- dismiss · Frank Quintero::Pájaros y Estrellas::Estrella De Orion · ya nombrada en «Pájaros y Estrellas I (a.Estrella de Orión b.Señora Luna)»
+- same → 19014 · Gillman::Levántate y Pelea::Corazón De Rock Pesado · «Corazon De Rock Pesado»
+- same → 19015 · Gillman::Levántate y Pelea::Víctima De La Sociedad · «Victima De La Sociedad»
+- dismiss · Frank Quintero::Agua Dulce::Leñador · ya nombrada en «Jazz, El Leñador»
+- same → 42141 · Frank Quintero::Agua Dulce::Jugando Solitario · errata de «Jugando al Solitario»
+- different · Spias::Tres Cruces::El Ratón (Versión Radio) · versión distinta de «El Ratón»
+- same → 7562 · Epitafio::Dying Out::Satanic Diabolical Dispositions · «Satanic Diabolical Dispositions (World Damnation Zardonic Remix)»
+- same → 13768 · Guerra Santa::La Sombra De Un Bufón::Don't Talk to Strangers · «Don't Talk To Strangers (Dio Cover)»
+- same → 12864 · La Misma Gente::Luz y Fuerza::Canción de La Calle · «La canción de la calle»
+- different · Okills::La Ultima Mudanza::Si Tú y Yo Fuéramos Novios · sin pareja segura («Tú»)
+- dismiss · Regardless::What It Was Independent::Poor Miss Wilder · ya nombrada en «The night that Mr Bradford lost his mind: I. Poor Miss Wilder, II. Inside the abyss that is Bradford's mind»
+- dismiss · Regardless::What It Was Independent::Inside the Abyss That Is Bradford's Mind · ya nombrada en «The night that Mr Bradford lost his mind: I. Poor Miss Wilder, II. Inside the abyss that is Bradford's mind»
+- same → 17454 · Lobin Ejnay::Cuando Yo Era Pavo::Potpourri Los Claners · errata de «Potpourrit Los Claners»
+- same → 17455 · Lobin Ejnay::Cuando Yo Era Pavo::I'll Follow The Sun · «I´ll follow the sun»
+- same → 17463 · Lobin Ejnay::Cuando Yo Era Pavo::I'll Be Back · «I´ll be back»
+- same → 636 · Spiteri::Spiteri::Muchacha · revisada a mano
+- dismiss · Aditus::Juegos de Azar::Háblame De Ti · ya nombrada en «Crisis, Háblame de Tí»
+- same → 24626 · Carlos Moreán::Carlos Moreán::Regresa A Mí (Come On Back To Me) · «Regresa A Mí»
+- same → 28798 · Edgar Alexander::Edgar Alexander::Por Qué No Llorar · errata de «Porque no llorar»
+- different · Los Impala::Nuevamente Los Impala::Oportunidad de Edgar · sin pareja segura («Oportunidad»)
+- different · Winda::Huellas::Huellas (Acoustic Version) · versión distinta de «Huellas»
+- different · Solares::Cruel (Instinto de Morder)::Atardecer (Remixed by Jaime Verdaguer) · versión distinta de «Atardecer»
+- same → 136938 · Desorden Público::DP18 En Concierto::Como Sabroso/Bemba Colorá · errata de «Como sabroso - Bomba colorá»
+- dismiss · Frank Quintero::De Noche y Con Poca Luz::Preludio de Mediodia · ya nombrada en «Preludio de Mediodia, Mediodia»
+- same → 42150 · Frank Quintero::De Noche y Con Poca Luz::Sueño De Medianoche Part III/Dirgni · revisada a mano
+- dismiss · Frank Quintero::De Noche y Con Poca Luz::Preludio · ya nombrada en «Preludio de Mediodia, Mediodia»
+- dismiss · Ficción::Sobre La Cresta De La Ola::La Mula · ya nombrada en «Suite De Las Siete Vírgenes y La Mula (Parte a: La Mula, Parte b: Las siete vírgenes)»
+- dismiss · Ficción::Sobre La Cresta De La Ola::Las Siete Vírgenes · ya nombrada en «Suite De Las Siete Vírgenes y La Mula (Parte a: La Mula, Parte b: Las siete vírgenes)»
+- same → 622 · Various Artists::Viva Una Experiencia Psicotomimética::Since You've Been Gone · «Sweet Sweet Baby (Since You've Been Gone)»
+- different · Ivo::Ivo (1978)::Quiero · sin pareja segura («Quiero Ser Feliz», «Ya No Quiero Enamorarme»)

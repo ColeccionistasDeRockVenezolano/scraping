@@ -1,0 +1,45 @@
+{
+  "section": "jazz",
+  "dryRun": true,
+  "note": "Sincopa jazz: promoción masiva por reglas",
+  "kinds": {
+    "album": {
+      "identities": 8,
+      "claims": 48,
+      "verdicts": {
+        "same:revision-ingesta-titulo": 7,
+        "same:revision-ingesta-repertorio": 1
+      },
+      "applied": 0,
+      "unchanged": 0,
+      "stillCandidate": 0,
+      "dismissed": 0,
+      "failed": 0
+    },
+    "track": {
+      "identities": 80,
+      "claims": 325,
+      "verdicts": {
+        "same:revision-ingesta-repetida-en-el-disco": 2,
+        "same:mismo-titulo-mismo-disco": 26,
+        "same:revision-ingesta-errata": 1,
+        "approve:auto-match": 1,
+        "different:revision-ingesta-otra-pista": 1,
+        "different:sin-coincidencia": 35,
+        "same:revision-ingesta-titulo-contenido": 1,
+        "different:solo-coincide-bajo-otro-padre": 3,
+        "same:revision-ingesta-a-mano": 5,
+        "different:revision-ingesta-otra-version": 3,
+        "same:revision-ingesta-mismo-titulo": 2
+      },
+      "applied": 0,
+      "unchanged": 0,
+      "stillCandidate": 0,
+      "dismissed": 0,
+      "failed": 0
+    }
+  },
+  "holds": [],
+  "duplicateFlags": [],
+  "errors": []
+}

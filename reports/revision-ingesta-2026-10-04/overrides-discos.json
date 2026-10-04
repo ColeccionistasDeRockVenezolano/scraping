@@ -1,0 +1,353 @@
+{
+ "María Rivas::Café Negrito (World-Latin)": {
+  "kind": "same",
+  "rule": "revision-ingesta-titulo",
+  "targetId": 5558
+ },
+ "María Rivas::Aquador (Chill-Out)": {
+  "kind": "same",
+  "rule": "revision-ingesta-titulo",
+  "targetId": 5554
+ },
+ "Rigel Mitxelena::Bártok's Room": {
+  "kind": "same",
+  "rule": "revision-ingesta-titulo",
+  "targetId": 483
+ },
+ "Rigel Mitxelena::Bartók's Room": {
+  "kind": "same",
+  "rule": "revision-ingesta-repertorio",
+  "targetId": 483
+ },
+ "Virgilio Araque Reyes::Virgilio Araque En Concierto": {
+  "kind": "same",
+  "rule": "revision-ingesta-titulo",
+  "targetId": 2373
+ },
+ "Rigel Mitxelena::Música De Película": {
+  "kind": "same",
+  "rule": "revision-ingesta-titulo",
+  "targetId": 15283
+ },
+ "Rigel Mitxelena::Volumen 1 Junta Parroquial": {
+  "kind": "same",
+  "rule": "revision-ingesta-titulo",
+  "targetId": 15285
+ },
+ "Orquesta Sinfónica Venezuela (OSV)::Concierto De Las Tres Esferas": {
+  "kind": "same",
+  "rule": "revision-ingesta-titulo",
+  "targetId": 5980
+ },
+ "Orquesta Sinfónica Gran Mariscal de Ayacucho::Danzón - Música de Latinoamerica": {
+  "kind": "same",
+  "rule": "revision-ingesta-titulo",
+  "targetId": 5921
+ },
+ "Daiquiri::La Historia Lo Mejor del Chamo Candela": {
+  "kind": "same",
+  "rule": "revision-ingesta-titulo",
+  "targetId": 6919
+ },
+ "Cecilia Todd::Romanciando": {
+  "kind": "same",
+  "rule": "revision-ingesta-titulo",
+  "targetId": 9155
+ },
+ "Cecilia Todd::Pajarillo Verde (CD Reissue)": {
+  "kind": "same",
+  "rule": "revision-ingesta-edicion",
+  "targetId": 5540
+ },
+ "Simón Díaz::Simón En Gaita - En Salsa": {
+  "kind": "same",
+  "rule": "revision-ingesta-titulo",
+  "targetId": 14620
+ },
+ "Simón Díaz::Las Gaitas De Simón": {
+  "kind": "different",
+  "rule": "revision-ingesta-otro-disco"
+ },
+ "Simón Díaz::Golpe y Pasaje / Caballo Viejo": {
+  "kind": "same",
+  "rule": "revision-ingesta-titulo",
+  "targetId": 14608
+ },
+ "Simón Díaz::Cuenta y Canta Vol. 2": {
+  "kind": "different",
+  "rule": "revision-ingesta-otro-disco"
+ },
+ "Simón Díaz::Muy Venezolano Vol.2 (La Rondalla Vzlana)": {
+  "kind": "same",
+  "rule": "revision-ingesta-titulo",
+  "targetId": 15276
+ },
+ "Simón Díaz::Muy Venezolano Vol.3 (La Rondalla Vzlana)": {
+  "kind": "same",
+  "rule": "revision-ingesta-titulo",
+  "targetId": 15330
+ },
+ "Simón Díaz::Muy Venezolano Vol.4 (La Rondalla Vzlana)": {
+  "kind": "same",
+  "rule": "revision-ingesta-titulo",
+  "targetId": 15348
+ },
+ "Simón Díaz::Caracha Negro CD": {
+  "kind": "same",
+  "rule": "revision-ingesta-edicion",
+  "targetId": 15376
+ },
+ "Simón Díaz::Muy Venezolano Vol.5 (La Rondalla Vzlana)": {
+  "kind": "different",
+  "rule": "revision-ingesta-otro-disco"
+ },
+ "Simón Díaz::Muy Venezolano Vol.6 (La Rondalla Vzlana)": {
+  "kind": "different",
+  "rule": "revision-ingesta-otro-disco"
+ },
+ "Simón Díaz::Mis Tonadas 16 Grandes Exitos (Lo Máximo)": {
+  "kind": "same",
+  "rule": "revision-ingesta-titulo",
+  "targetId": 15275
+ },
+ "Cecilia Todd::Ni Na, Ni Na": {
+  "kind": "same",
+  "rule": "revision-ingesta-titulo",
+  "targetId": 5539
+ },
+ "Simón Díaz::Muy Venezolano Vol. 1": {
+  "kind": "same",
+  "rule": "revision-ingesta-titulo",
+  "targetId": 15266
+ },
+ "Simón Díaz::Las Gaitas De Simón Enemigo Publico Nº1": {
+  "kind": "same",
+  "rule": "revision-ingesta-titulo",
+  "targetId": 15256
+ },
+ "Simón Díaz::Tonada y Pasaje La Yegua Blanca": {
+  "kind": "same",
+  "rule": "revision-ingesta-titulo",
+  "targetId": 15260
+ },
+ "Simón Díaz::32 Grandes Exitos": {
+  "kind": "same",
+  "rule": "revision-ingesta-titulo",
+  "targetId": 15267
+ },
+ "Simón Díaz::Serie Lo Máximo Simón Díaz 16 Grandes Exitos": {
+  "kind": "same",
+  "rule": "revision-ingesta-titulo",
+  "targetId": 15275
+ },
+ "Simón Díaz::Serie Lo Máximo Simón Díaz-Mis Tonadas 16 Grandes Exitos": {
+  "kind": "same",
+  "rule": "revision-ingesta-repertorio",
+  "targetId": 14629
+ },
+ "C4 Trío::C4 Trío y Desorden Público - Pa' Fuera": {
+  "kind": "same",
+  "rule": "revision-ingesta-titulo",
+  "targetId": 15448
+ },
+ "C4 Trío::C4 Trío y Luis Enrique - Tiempo al Tiempo": {
+  "kind": "same",
+  "rule": "revision-ingesta-titulo",
+  "targetId": 15713
+ },
+ "Gaélica::Paz: Una Navidad Celta En Venezuela": {
+  "kind": "different",
+  "rule": "revision-ingesta-otro-disco"
+ },
+ "Ad Intra::The Attic (EP)": {
+  "kind": "same",
+  "rule": "revision-ingesta-titulo",
+  "targetId": 1819
+ },
+ "Ad Intra::We Aren't Ready To Take Off (EP)": {
+  "kind": "same",
+  "rule": "revision-ingesta-titulo",
+  "targetId": 3634
+ },
+ "Aditus::Juegos del Azar": {
+  "kind": "same",
+  "rule": "revision-ingesta-titulo",
+  "targetId": 3014
+ },
+ "Agni Mogollón::Gina y Agny": {
+  "kind": "different",
+  "rule": "revision-ingesta-otro-disco"
+ },
+ "Agresión::Silent Smile (EP)": {
+  "kind": "same",
+  "rule": "revision-ingesta-titulo",
+  "targetId": 3392
+ },
+ "Gillman::Levántate y Pelea 40 Aniversario": {
+  "kind": "same",
+  "rule": "revision-ingesta-titulo",
+  "targetId": 4150
+ },
+ "Henry Stephen::Mi Limon, Mi Limonero 40 Años 40 Exitos": {
+  "kind": "same",
+  "rule": "revision-ingesta-repertorio",
+  "targetId": 4216
+ },
+ "Los Mentas::U.E.L.M. \"Unidad Educativa Los Mentas\"": {
+  "kind": "same",
+  "rule": "revision-ingesta-repertorio",
+  "targetId": 600
+ },
+ "Témpano::El Fin De La Infancia / Childhood's End": {
+  "kind": "same",
+  "rule": "revision-ingesta-repertorio",
+  "targetId": 362
+ },
+ "Karina::14 Exitos de Karina Serie Lo Máximo": {
+  "kind": "same",
+  "rule": "revision-ingesta-repertorio",
+  "targetId": 4332
+ },
+ "Rudy La Scala::16 Grandes Exitos / Serie Lo Máximo": {
+  "kind": "same",
+  "rule": "revision-ingesta-repertorio",
+  "targetId": 3655
+ },
+ "Los Pixel::Cuánto Cuesta": {
+  "kind": "same",
+  "rule": "revision-ingesta-repertorio",
+  "targetId": 606
+ },
+ "Karina::32 Grandes Exitos Serie 32": {
+  "kind": "same",
+  "rule": "revision-ingesta-repertorio",
+  "targetId": 4324
+ },
+ "Kiara::Exitos - The Universal Masters Collection": {
+  "kind": "same",
+  "rule": "revision-ingesta-repertorio",
+  "targetId": 4345
+ },
+ "Gillman::Tributo A Los Desconocidos": {
+  "kind": "same",
+  "rule": "revision-ingesta-repertorio",
+  "targetId": 4148
+ },
+ "Gillman::Cuauhtemoc": {
+  "kind": "same",
+  "rule": "revision-ingesta-repertorio",
+  "targetId": 2125
+ },
+ "Jorge Aguilar::Aguilar (Spanish Version)": {
+  "kind": "different",
+  "rule": "revision-ingesta-otro-disco"
+ },
+ "Neblina::Una Canción De Navidad": {
+  "kind": "same",
+  "rule": "revision-ingesta-repertorio",
+  "targetId": 3597
+ },
+ "Gillman::Tesoros 40 Aniversario": {
+  "kind": "same",
+  "rule": "revision-ingesta-edicion",
+  "targetId": 4141
+ },
+ "Gillman::Presente": {
+  "kind": "same",
+  "rule": "revision-ingesta-repertorio",
+  "targetId": 4143
+ },
+ "Gusanos::Días De Furia": {
+  "kind": "same",
+  "rule": "revision-ingesta-repertorio",
+  "targetId": 255
+ },
+ "Gillman::Inevitable": {
+  "kind": "same",
+  "rule": "revision-ingesta-repertorio",
+  "targetId": 2139
+ },
+ "Grupo C::Grupo C Canta Edgar Castro": {
+  "kind": "same",
+  "rule": "revision-ingesta-repertorio",
+  "targetId": 2697
+ },
+ "Gillman::El Guerrero": {
+  "kind": "same",
+  "rule": "revision-ingesta-repertorio",
+  "targetId": 2150
+ },
+ "Gillman::Levántate y Pelea": {
+  "kind": "same",
+  "rule": "revision-ingesta-repertorio",
+  "targetId": 2152
+ },
+ "Los Mentas::Arriba Carajo 15 Años En Vivo": {
+  "kind": "same",
+  "rule": "revision-ingesta-titulo",
+  "targetId": 2273
+ },
+ "Gillman::Escalofrío": {
+  "kind": "same",
+  "rule": "revision-ingesta-repertorio",
+  "targetId": 450
+ },
+ "Various Artists::Rock": {
+  "kind": "different",
+  "rule": "revision-ingesta-otro-disco"
+ },
+ "Various Artists::Serie Lo Máximo 19 Exitos de Donde Son Los Cantantes Vol. 2": {
+  "kind": "different",
+  "rule": "revision-ingesta-otro-disco"
+ },
+ "Aditus::Lo Mejor de Aditus Colección del Milenio": {
+  "kind": "same",
+  "rule": "revision-ingesta-repertorio",
+  "targetId": 3642
+ },
+ "Aditus::25 Aniversario Y La Historia Continúa Serie 32": {
+  "kind": "same",
+  "rule": "revision-ingesta-repertorio",
+  "targetId": 2134
+ },
+ "Aditus::Ni En Concierto Ni En Estudio Sino Todo Lo Contrario": {
+  "kind": "same",
+  "rule": "revision-ingesta-repertorio",
+  "targetId": 3643
+ },
+ "Caramelos de Cianuro::Flor De Fuego (Special Edition)": {
+  "kind": "same",
+  "rule": "revision-ingesta-edicion",
+  "targetId": 140
+ },
+ "Distrust::Behold The Zombie Nation": {
+  "kind": "same",
+  "rule": "revision-ingesta-repertorio",
+  "targetId": 1741
+ },
+ "Spiteri::Spiteri": {
+  "kind": "same",
+  "rule": "revision-ingesta-repertorio",
+  "targetId": 51
+ },
+ "Oscar::Cuidao Con Los Escalones": {
+  "kind": "same",
+  "rule": "revision-ingesta-titulo",
+  "targetId": 6428
+ },
+ "Grupo::Grupo Taburete": {
+  "kind": "same",
+  "rule": "revision-ingesta-titulo",
+  "targetId": 8585
+ },
+ "Grupo::Grupo Raíces": {
+  "kind": "same",
+  "rule": "revision-ingesta-titulo",
+  "targetId": 9560
+ },
+ "Grupo::Raices": {
+  "kind": "same",
+  "rule": "revision-ingesta-titulo",
+  "targetId": 9561
+ }
+}

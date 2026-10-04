@@ -1,0 +1,573 @@
+{
+  "section": "traditional",
+  "dryRun": false,
+  "note": "Revisión de ingesta 2026-10-04 (Brian): promover discos y pistas pendientes con ER; zona gris decidida por repertorio (overrides.json)",
+  "kinds": {
+    "album": {
+      "identities": 29,
+      "claims": 230,
+      "verdicts": {
+        "same:revision-ingesta-titulo": 14,
+        "same:revision-ingesta-edicion": 2,
+        "different:revision-ingesta-otro-disco": 4,
+        "approve:auto-match": 5,
+        "hold:padre-sin-resolver": 1,
+        "hold:titulo-casi-igual-mismo-padre": 2,
+        "same:revision-ingesta-repertorio": 1
+      },
+      "applied": 46,
+      "unchanged": 132,
+      "stillCandidate": 20,
+      "dismissed": 0,
+      "failed": 0
+    },
+    "track": {
+      "identities": 346,
+      "claims": 1408,
+      "verdicts": {
+        "different:titulo-casi-igual-otro-numero": 1,
+        "different:sin-coincidencia": 170,
+        "different:revision-ingesta-otra-pista": 10,
+        "approve:auto-match": 19,
+        "different:solo-coincide-bajo-otro-padre": 32,
+        "hold:padre-sin-resolver": 49,
+        "different:revision-ingesta-otro-numero": 1,
+        "dismiss:revision-ingesta-parte-de-popurri": 1,
+        "same:titulo-casi-igual-misma-posicion": 3,
+        "same:revision-ingesta-mismo-titulo": 23,
+        "same:mismo-titulo-mismo-disco": 33,
+        "same:revision-ingesta-errata": 2,
+        "same:revision-ingesta-titulo-contenido": 2
+      },
+      "applied": 146,
+      "unchanged": 446,
+      "stillCandidate": 568,
+      "dismissed": 1,
+      "failed": 25
+    }
+  },
+  "holds": [
+    {
+      "kind": "album",
+      "identityRaw": "Grupo::Música Tradicional Venezolana",
+      "rule": "padre-sin-resolver",
+      "detail": "el artista del disco aún no está en el core",
+      "claims": 16
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 5",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "15348 «Muy Venezolano Vol. 4»; 15276 «Muy Venezolano Vol. 2»; 15330 «Muy Venezolano Vol. 3»",
+      "claims": 8
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 6",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "15348 «Muy Venezolano Vol. 4»; 15276 «Muy Venezolano Vol. 2»; 15330 «Muy Venezolano Vol. 3»",
+      "claims": 8
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::El Cangrejo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::El Perico",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::Madre Selva",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::El Porteño",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::Rosa De Amor",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::Los Hijos De La Noche",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::La Garragata",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::Los Vitocos",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::El Violinista",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::Mónica Pérez",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::El Vaivén De La Negra",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::Carmela",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::La Mona",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::El Billetero",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::Noches Caraqueñas",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::El Burro Bragaote",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::El Portugues",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::Las Cocineras",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::Las Golondrinas",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::La Chiva",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::Noches En Calma",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::El Chivo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 5::Amanecer Tuyero",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 5::Secretos de Amor",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 5::Dí",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 5::Flor Sabanera",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 5::Sueños De Ayer",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 5::Adios Barrancas de Arauca",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 5::La Noche De Tú Partida",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 5::Lejanía",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 5::Amor En Corozal",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 5::Cuatreros Del Chaparral",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 5::Tarde Gris",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 5::Piraguero",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 5::Muchachita Sabanera",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 5::Chaparralito Llanero",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 5::El Gavilán",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 6::Primaveral",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 6::Rosario",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 6::Morena",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 6::Vives En Mi",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 6::Chinita De Maracaibo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 6::Anhelante",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 6::Juan Solito",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 6::Ojitos Soñadores",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 6::Los Garceros",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 6::Sombra En Los Medanos",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 6::Caraqueñita",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 6::Aguacerito Llanero",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    }
+  ],
+  "duplicateFlags": [],
+  "errors": [
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Tonadas Favoritas::Tonada Del Cabrestero",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::40 Años 40 Exitos::El Cuarto y El Interés",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::40 Años 40 Exitos::Adiós Barrancas De Arauca",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::40 Años 40 Exitos::El Gavilán",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::40 Años 40 Exitos::Al Niño Jesús Llanero",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::40 Años 40 Exitos::Mujer Guayanesa",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::40 Años 40 Exitos::Regalo De Dios (Canto A La Madre)",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::40 Años 40 Exitos::Contrapunteo",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::40 Años 40 Exitos::Caballo Viejo (Cuenta y Canta)",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Grandes Exitos::Caballo Viejo",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Grandes Exitos::Mercedes",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Grandes Exitos::El Becerrito",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Grandes Exitos::Mi Querencia",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Grandes Exitos::Sabana",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Grandes Exitos::Tonada Del Cabestrero",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Grandes Exitos::Tonada De Luna Llena",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Grandes Exitos::Luna De Margarita",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Grandes Exitos::Cristal",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Grandes Exitos::Todo Este Campo Es Mío",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Grandes Exitos::Tonada De Las Espigas",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Grandes Exitos::Pasaje Del Olvido",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "María Teresa Chacín::Aguinaldos Que No Se Olvidan::Nace El Niño",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "María Teresa Chacín::Aguinaldos Que No Se Olvidan::Parranda",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Adilia Castillo::Lo Mejor de Adilia Castillo::Lucero De Los Llanos",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rondalla Venezolana con El Mariachi Tapatio::Serenata A Venezuela::Por El Camino",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    }
+  ],
+  "runId": 11963,
+  "evidenceVerdicts": [
+    {
+      "kind": "track",
+      "identityRaw": "Serenata Guayanesa::Una Amistad de 25 Años::MIX No.3",
+      "rule": "titulo-casi-igual-otro-numero",
+      "detail": ""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Simón En Gaita En Salsa::La Gaita De Las Cuñas Nº 2",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 153105,
+      "detail": "Gaitas de las Cuñas, No. 2"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Serie Lo Máximo Simón Díaz-Mis Tonadas 16 Grandes Exitos::Tonada Del Cabrestero",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 153240,
+      "detail": "Tonada del Cabestrero"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Serie Lo Máximo Simón Díaz-Mis Tonadas 16 Grandes Exitos::La Flor Del Apamate",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 153247,
+      "detail": "La Flor De Apamate"
+    }
+  ]
+}

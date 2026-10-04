@@ -1,0 +1,47 @@
+{
+  "section": "ethnic",
+  "dryRun": false,
+  "note": "Revisión de ingesta 2026-10-04 (Brian): promoción por reglas de lo que ya tiene destino (puentes)",
+  "kinds": {
+    "artist_membership": {
+      "identities": 8,
+      "claims": 24,
+      "verdicts": {
+        "puente": 8
+      },
+      "applied": 0,
+      "unchanged": 0,
+      "stillCandidate": 24,
+      "dismissed": 0,
+      "failed": 0
+    },
+    "album_credit": {
+      "identities": 112,
+      "claims": 610,
+      "verdicts": {
+        "puente": 112
+      },
+      "applied": 39,
+      "unchanged": 156,
+      "stillCandidate": 435,
+      "dismissed": 0,
+      "failed": 0
+    },
+    "track_credit": {
+      "identities": 372,
+      "claims": 2514,
+      "verdicts": {
+        "puente": 372
+      },
+      "applied": 29,
+      "unchanged": 145,
+      "stillCandidate": 2358,
+      "dismissed": 0,
+      "failed": 0
+    }
+  },
+  "holds": [],
+  "duplicateFlags": [],
+  "errors": [],
+  "runId": 11993
+}

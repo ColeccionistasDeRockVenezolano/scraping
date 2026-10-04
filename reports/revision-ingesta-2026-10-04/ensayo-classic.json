@@ -1,0 +1,157 @@
+{
+  "section": "classic",
+  "dryRun": true,
+  "note": "Sincopa classic: promoción masiva por reglas",
+  "kinds": {
+    "album": {
+      "identities": 2,
+      "claims": 12,
+      "verdicts": {
+        "hold:titulo-casi-igual-mismo-padre": 2
+      },
+      "applied": 0,
+      "unchanged": 0,
+      "stillCandidate": 0,
+      "dismissed": 0,
+      "failed": 0
+    },
+    "track": {
+      "identities": 82,
+      "claims": 267,
+      "verdicts": {
+        "hold:padre-sin-resolver": 7,
+        "different:sin-coincidencia": 65,
+        "hold:titulo-casi-igual-mismo-padre": 8,
+        "approve:auto-match": 2
+      },
+      "applied": 0,
+      "unchanged": 0,
+      "stillCandidate": 0,
+      "dismissed": 0,
+      "failed": 0
+    }
+  },
+  "holds": [
+    {
+      "kind": "album",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Concierto De Las Tres Esferas",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "5980 «I Concurso de Composición Sinfónica \"Concierto De Las Tres Esferas\"»",
+      "claims": 5
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Danzón - Música de Latinoamerica",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "5921 «Danzón»",
+      "claims": 7
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Danzón - Música de Latinoamerica::Danzón Nº 2",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Danzón - Música de Latinoamerica::Danzón Nº 3 for Flute, Guitar & Orchestra",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Danzón - Música de Latinoamerica::La Muerte Del Angel",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Danzón - Música de Latinoamerica::Danzón Nº 4",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Danzón - Música de Latinoamerica::Melodia en La",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Danzón - Música de Latinoamerica::Ten Presente El Presente",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Danzón - Música de Latinoamerica::Suite Onda Nueva",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Alirio Díaz::Classic Portraits The Best Of Alirio Díaz::Fantasía",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "46059 «Fantasia XXXVIII»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Bolívar Symphony Orchestra of Venezuela::Revueltas, Orbón & Ginastera::The Return of The Fishermen with Their Dead Friend",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "84040 «The Fishermen»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Central::Tristeza Moruna",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "157099 «Tristeza»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Oriental::Suite Oriental Part II (Side B on LP)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "157718 «Suite Oriental Part I (Side A on LP)»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Zuliana::Suite Zuliana Part II (Side B on LP)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "157781 «Suite Zuliana Part I (Side A on LP)»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Andina::Suite Andina Part II (Side B on LP)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "157782 «Suite Andina Part I (Side A on LP)»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Larense::Suite Larense Part II (Side B on LP)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "157787 «Suite Larense Part I (Side A on LP)»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Suite Llanera Part II (Side B on LP)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "157788 «Suite Llanera Part I (Side A on LP)»",
+      "claims": 5
+    }
+  ],
+  "duplicateFlags": [],
+  "errors": []
+}

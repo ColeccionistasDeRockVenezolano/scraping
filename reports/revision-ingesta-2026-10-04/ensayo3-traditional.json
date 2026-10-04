@@ -1,0 +1,255 @@
+{
+  "section": "traditional",
+  "dryRun": true,
+  "note": "Sincopa traditional: promoción masiva por reglas",
+  "kinds": {
+    "album": {
+      "identities": 29,
+      "claims": 230,
+      "verdicts": {
+        "same:revision-ingesta-titulo": 14,
+        "same:revision-ingesta-edicion": 2,
+        "different:revision-ingesta-otro-disco": 4,
+        "approve:auto-match": 5,
+        "hold:padre-sin-resolver": 1,
+        "different:titulo-casi-igual-otro-repertorio": 2,
+        "same:revision-ingesta-repertorio": 1
+      },
+      "applied": 0,
+      "unchanged": 0,
+      "stillCandidate": 0,
+      "dismissed": 0,
+      "failed": 0
+    },
+    "track": {
+      "identities": 346,
+      "claims": 1408,
+      "verdicts": {
+        "different:titulo-casi-igual-otro-numero": 1,
+        "different:sin-coincidencia": 190,
+        "different:revision-ingesta-otra-pista": 10,
+        "approve:auto-match": 19,
+        "different:solo-coincide-bajo-otro-padre": 39,
+        "hold:padre-sin-resolver": 22,
+        "different:revision-ingesta-otro-numero": 1,
+        "dismiss:revision-ingesta-parte-de-popurri": 1,
+        "same:titulo-casi-igual-misma-posicion": 3,
+        "same:revision-ingesta-mismo-titulo": 23,
+        "same:mismo-titulo-mismo-disco": 33,
+        "same:revision-ingesta-errata": 2,
+        "same:revision-ingesta-titulo-contenido": 2
+      },
+      "applied": 0,
+      "unchanged": 0,
+      "stillCandidate": 0,
+      "dismissed": 0,
+      "failed": 0
+    }
+  },
+  "holds": [
+    {
+      "kind": "album",
+      "identityRaw": "Grupo::Música Tradicional Venezolana",
+      "rule": "padre-sin-resolver",
+      "detail": "el artista del disco aún no está en el core",
+      "claims": 16
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::El Cangrejo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::El Perico",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::Madre Selva",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::El Porteño",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::Rosa De Amor",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::Los Hijos De La Noche",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::La Garragata",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::Los Vitocos",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::El Violinista",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::Mónica Pérez",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::El Vaivén De La Negra",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::Carmela",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::La Mona",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::El Billetero",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::Noches Caraqueñas",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::El Burro Bragaote",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::El Portugues",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::Las Cocineras",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::Las Golondrinas",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::La Chiva",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::Noches En Calma",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::El Chivo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    }
+  ],
+  "duplicateFlags": [],
+  "errors": [],
+  "evidenceVerdicts": [
+    {
+      "kind": "album",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 5",
+      "rule": "titulo-casi-igual-otro-repertorio",
+      "detail": "{\"15276\":{\"shared\":0,\"total\":15,\"core\":12},\"15330\":{\"shared\":0,\"total\":15,\"core\":12},\"15348\":{\"shared\":0,\"total\":15,\"core\":16}}"
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 6",
+      "rule": "titulo-casi-igual-otro-repertorio",
+      "detail": "{\"15276\":{\"shared\":0,\"total\":12,\"core\":12},\"15330\":{\"shared\":0,\"total\":12,\"core\":12},\"15348\":{\"shared\":0,\"total\":12,\"core\":16}}"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Serenata Guayanesa::Una Amistad de 25 Años::MIX No.3",
+      "rule": "titulo-casi-igual-otro-numero",
+      "detail": ""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Simón En Gaita En Salsa::La Gaita De Las Cuñas Nº 2",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 153105,
+      "detail": "Gaitas de las Cuñas, No. 2"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Serie Lo Máximo Simón Díaz-Mis Tonadas 16 Grandes Exitos::Tonada Del Cabrestero",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 153240,
+      "detail": "Tonada del Cabestrero"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Serie Lo Máximo Simón Díaz-Mis Tonadas 16 Grandes Exitos::La Flor Del Apamate",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 153247,
+      "detail": "La Flor De Apamate"
+    }
+  ]
+}
