@@ -1,0 +1,199 @@
+# Artistas duplicados y nombres rotos (confirm, run 11811)
+
+Barrido de artistas duplicados y nombres rotos (Brian, 2026-10-04)
+
+## Fusiones
+
+- **artista 4364 «VNote Ensemble» → 3623 «The VNote Ensemble»**: 8 movidos, 0 discos gemelos
+- disco 9139 «40 Años 40 Exitos» (2011) → 9006 «40 Años 40 Exitos» (2011): 0 pistas unidas, 40 movidas
+- disco 9398 «Serie 32 Grandes Exitos» (1999) → 8999 «Serie 32 Grandes Exitos» (1999): 0 pistas unidas, 32 movidas
+- disco 9400 «Gold» (2002) → 9002 «Gold» (2002): 0 pistas unidas, 19 movidas
+- disco 9399 «Solo Exitos» (2001) → 9000 «Solo Exitos» (2001): 0 pistas unidas, 20 movidas
+- **artista 3872 «La Rondalla Venezolana» → 3848 «Rondalla Venezolana»**: 12 movidos, 4 discos gemelos
+- **artista 4641 «Homer and The Dont's» → 1965 «Homer & The Dont's»**: 11 movidos, 0 discos gemelos
+- **artista 4561 «Los Zumo» → 535 «Zumo»**: 11 movidos, 0 discos gemelos
+- disco 7326 «La Gaita Llegó» (2004) → 8216 «La Gaita Llegó» (2004): 0 pistas unidas, 0 movidas
+- disco 7331 «Clásicos De Oro» (1997) → 8221 «Clásicos De Oro» (1997): 0 pistas unidas, 0 movidas
+- **artista 3719 «Los Blanco / Sexteto Los Blanco» → 3791 «Los Blanco»**: 181 movidos, 2 discos gemelos, alias «Sexteto Los Blanco»
+- **artista 3600 «"El Pavo" Frank» → 3601 «"El Pavo" Frank Hernández»**: 4 movidos, 0 discos gemelos
+- **artista 3366 «Héctor Di Donna / Di Donna» → 3376 «Héctor Di Donna»**: 46 movidos, 0 discos gemelos, alias «Di Donna»
+- disco 7028 «Unicamente Tú» (1964) → 8089 «Unicamente Tú» (1964): 0 pistas unidas, 0 movidas
+- disco 7029 «Entre Tu Amor y Mi Amor» (1964) → 8090 «Entre Tu Amor y Mi Amor» (1964): 0 pistas unidas, 0 movidas
+- disco 7031 «Sombras Nada Más» (1965) → 8092 «Sombras Nada Más» (1965): 0 pistas unidas, 0 movidas
+- disco 7032 «Sin Ella» (1965) → 8093 «Sin Ella» (1965): 0 pistas unidas, 0 movidas
+- disco 7033 «Felipe...Sigue de Frente!» (1965) → 8094 «Felipe...Sigue de Frente!» (1965): 0 pistas unidas, 0 movidas
+- disco 7034 «Pirela y Sus Exitos» (1966) → 8095 «Pirela y Sus Exitos» (1966): 0 pistas unidas, 0 movidas
+- disco 7035 «Cuando Vivas Conmigo» (1966) → 8096 «Cuando Vivas Conmigo» (1966): 0 pistas unidas, 0 movidas
+- disco 7036 «Recordando A Rafael Hernández» (1966) → 8097 «Recordando A Rafael Hernández» (1966): 0 pistas unidas, 0 movidas
+- disco 7037 «Lo Siento Por Ti» (1966) → 8098 «Lo Siento Por Ti» (1966): 0 pistas unidas, 0 movidas
+- disco 7038 «Injusto Despecho» (1966) → 8099 «Injusto Despecho» (1966): 0 pistas unidas, 0 movidas
+- disco 7039 «Dios Sabe Lo Que Hace» (1966) → 8100 «Dios Sabe Lo Que Hace» (1966): 0 pistas unidas, 0 movidas
+- disco 7040 «Canta... Felipe Pirela» (1967) → 8101 «Canta... Felipe Pirela» (1967): 0 pistas unidas, 0 movidas
+- disco 7041 «Interpreta a Manzanero» (1967) → 8102 «Interpreta a Manzanero» (1967): 0 pistas unidas, 0 movidas
+- disco 7042 «Boleros Con Guitarras» (1967) → 8103 «Boleros Con Guitarras» (1967): 0 pistas unidas, 0 movidas
+- disco 7043 «Lo Que Es La Vida!» (1968) → 8104 «Lo Que Es La Vida!» (1968): 0 pistas unidas, 0 movidas
+- disco 7044 «De Todo Soy Capaz» (1969) → 8105 «De Todo Soy Capaz» (1969): 0 pistas unidas, 0 movidas
+- disco 7045 «Un Poco De Mí» (1969) → 8106 «Un Poco De Mí» (1969): 0 pistas unidas, 0 movidas
+- disco 7046 «Aquí Mis Exitos» (1970) → 8107 «Aquí Mis Exitos» (1970): 0 pistas unidas, 0 movidas
+- disco 7047 «Tu Camino y El Mío» (1970) → 8108 «Tu Camino y El Mío» (1970): 0 pistas unidas, 0 movidas
+- disco 7048 «Encadenados» (1971) → 8109 «Encadenados» (1971): 0 pistas unidas, 0 movidas
+- disco 7049 «Volvamos A Querernos» (1971) → 8110 «Volvamos A Querernos» (1971): 0 pistas unidas, 0 movidas
+- disco 7050 «El Adios Del Inmortal» (1972) → 8111 «El Adiós Del Inmortal» (1972): 0 pistas unidas, 0 movidas
+- disco 7051 «El Album De Felipe Pirela 1941-1972» (1976) → 8112 «El Album De Felipe Pirela 1941-1972» (1976): 0 pistas unidas, 0 movidas
+- disco 7053 «Gold» (2003) → 8114 «Gold» (2003): 0 pistas unidas, 0 movidas
+- **artista 3701 «Felipe Pirela / El Bolerista de América» → 3785 «Felipe Pirela»**: 32 movidos, 24 discos gemelos, alias «El Bolerista de América»
+- disco 7281 «Es Kurare» (1985) → 15323 «Es Kurare» (1985): 0 pistas unidas, 0 movidas
+- disco 7282 «Más Kurare» (1986) → 15324 «Más Kurare» (1986): 0 pistas unidas, 0 movidas
+- **artista 3714 «Kurare / Grupo Kurare» → 4343 «Kurare»**: 28 movidos, 2 discos gemelos, alias «Grupo Kurare»
+- disco 8729 «La Nueva Dimensión De Juan Galea» (1973) → 9201 «La Nueva Dimensión de Juan Galea» (1973): 0 pistas unidas, 0 movidas
+- disco 8743 «Con Sus Grandes Exitos De Siempre» (1993) → 9207 «Con Sus Grandes Exitos De Siempre» (1993): 0 pistas unidas, 0 movidas
+- **artista 3828 «Juan Galea / Juan Galea y Su Grupo» → 3880 «Juan Galea»**: 33 movidos, 2 discos gemelos, alias «Juan Galea y Su Grupo»
+- disco 6249 «Low Registers» (2006) → 6639 «Low Registers» (2006): 0 pistas unidas, 0 movidas
+- **artista 3496 «Gabriel Vivas / Gaby Vivas» → 3649 «Gabriel Vivas»**: 14 movidos, 1 discos gemelos, alias «Gaby Vivas»
+- disco 6738 sin fusionar: varias ediciones posibles
+- disco 6741 sin fusionar: varias ediciones posibles
+- disco 6785 sin fusionar: varias ediciones posibles
+- disco 6791 sin fusionar: varias ediciones posibles
+- disco 6793 sin fusionar: varias ediciones posibles
+- disco 6794 sin fusionar: varias ediciones posibles
+- disco 6799 sin fusionar: varias ediciones posibles
+- disco 6812 sin fusionar: varias ediciones posibles
+- disco 6823 sin fusionar: varias ediciones posibles
+- disco 6830 sin fusionar: varias ediciones posibles
+- disco 6718 «Recordando Al Roof Garden» (1958) → 7917 «Recordando Al Roof Garden» (1958): 0 pistas unidas, 0 movidas
+- disco 6719 «Evocación» (1958) → 7918 «Evocación» (1958): 0 pistas unidas, 0 movidas
+- disco 6720 «La Lisa - Maracaibo» (1959) → 7919 «La Lisa - Maracaibo» (1959): 0 pistas unidas, 0 movidas
+- disco 6721 «Tres Viejos Amigos» (1959) → 7920 «Tres Viejos Amigos» (1959): 0 pistas unidas, 0 movidas
+- disco 6722 «Baile De Carnaval» (1959) → 7921 «Baile De Carnaval» (1959): 0 pistas unidas, 0 movidas
+- disco 6723 «Navidad Con Billo» (1959) → 7922 «Navidad Con Billo» (1959): 0 pistas unidas, 0 movidas
+- disco 6724 «Oyendo A Billo» (1959) → 7923 «Oyendo A Billo» (1959): 0 pistas unidas, 0 movidas
+- disco 6725 «Billo presenta: Candita Vazquez» (1959) → 7924 «Billo presenta: Candita Vazquez» (1959): 0 pistas unidas, 0 movidas
+- disco 6726 «Exitos De Billo» (1959) → 7925 «Exitos De Billo» (1959): 0 pistas unidas, 0 movidas
+- disco 6727 «Paula» (1960) → 7927 «Paula» (1960): 0 pistas unidas, 0 movidas
+- disco 6728 «Comunicando» (1961) → 7930 «Comunicando» (1961): 0 pistas unidas, 0 movidas
+- disco 6729 «Pobre Del Pobre» (1961) → 7931 «Pobre Del Pobre» (1961): 0 pistas unidas, 0 movidas
+- disco 6730 «Canciones De Ayer y Hoy» (1961) → 7932 «Canciones De Ayer y Hoy» (1961): 0 pistas unidas, 0 movidas
+- disco 6731 «Tres Regalos» (1962) → 7933 «Tres Regalos» (1962): 0 pistas unidas, 0 movidas
+- disco 6732 «Historia De Mi Orquesta 1937-1962» (1962) → 7934 «Historia De Mi Orquesta 1937-1962» (1962): 0 pistas unidas, 0 movidas
+- disco 6735 «Esta Noche» (1962) → 7937 «Esta Noche» (1962): 0 pistas unidas, 0 movidas
+- disco 6736 «Mosaicos A La Billo» (1962) → 7938 «Mosaicos A La Billo» (1962): 0 pistas unidas, 0 movidas
+- disco 6737 «Impactos De Billo» (1962) → 7939 «Impactos De Billo» (1962): 0 pistas unidas, 0 movidas
+- disco 6739 «Famosos Tangos» (1962) → 7941 «Famosos Tangos» (1962): 0 pistas unidas, 0 movidas
+- disco 6740 «Billo En Fonograma» (1963) → 7942 «Billo En Fonograma» (1963): 0 pistas unidas, 0 movidas
+- disco 6742 «2 Sets Con Billo» (1963) → 7944 «2 Sets Con Billo» (1963): 0 pistas unidas, 0 movidas
+- disco 6743 «Billo En Colombia» (1964) → 7945 «Billo En Colombia» (1964): 0 pistas unidas, 0 movidas
+- disco 6744 «Mosaicos A La Billo, Vol. II» (1964) → 7946 «Mosaicos A La Billo Vol. II» (1964): 0 pistas unidas, 0 movidas
+- disco 6745 «Billo En Santo Domingo» (1964) → 7947 «Billo En Santo Domingo» (1964): 0 pistas unidas, 0 movidas
+- disco 6746 «Cantares De Navidad» (1964) → 7948 «Cantares De Navidad» (1964): 0 pistas unidas, 0 movidas
+- disco 6747 «Billo En Puerto Rico» (1965) → 7949 «Billo En Puerto Rico» (1965): 0 pistas unidas, 0 movidas
+- disco 6748 «El Yo-Yo» (1965) → 7950 «El Yo-Yo» (1965): 0 pistas unidas, 0 movidas
+- disco 6749 «Billo y Su Música» (1965) → 7951 «Billo y Su Música» (1965): 0 pistas unidas, 0 movidas
+- disco 6750 «Fin De Año» (1965) → 7952 «Fin De Año» (1965): 0 pistas unidas, 0 movidas
+- disco 6751 «Mosaico 17» (1965) → 7953 «Mosaico 17» (1966): 0 pistas unidas, 0 movidas
+- disco 6752 «25 Años Con Billo» (1965) → 7954 «25 Años Con Billo» (1965): 0 pistas unidas, 0 movidas
+- disco 6757 «Desde 1937 a 1966 Bailando Con Billo» (1966) → 7959 «Desde 1937 a 1966 Bailando Con Billo» (1966): 0 pistas unidas, 0 movidas
+- disco 6758 «Mosaicos a La Billo Del 13 al 18» (1966) → 7960 «Mosaicos A La Billo Del 13 al 18» (1966): 0 pistas unidas, 0 movidas
+- disco 6759 «Resumen De Exitos Vol.I» (1966) → 7961 «Resumen De Exitos Vol.I» (1966): 0 pistas unidas, 0 movidas
+- disco 6760 «La Renga» (1966) → 7962 «La Renga» (1966): 0 pistas unidas, 0 movidas
+- disco 6764 «Felices Fiestas» (1967) → 7966 «Felices Fiestas» (1967): 0 pistas unidas, 0 movidas
+- disco 6765 «Se Necesitan Dos» (1967) → 7967 «Se Necesitan Dos» (1967): 0 pistas unidas, 0 movidas
+- disco 6766 «Billo y Su Ritmo» (1967) → 7968 «Billo y Su Ritmo» (1967): 0 pistas unidas, 0 movidas
+- disco 6769 «La Rubia y La Trigueña» (1968) → 7971 «La Rubia y La Trigueña» (1968): 0 pistas unidas, 0 movidas
+- disco 6770 «Al Compas De Billo... Carnaval» (1968) → 7972 «Al Compas De Billo Carnaval» (1968): 0 pistas unidas, 0 movidas
+- disco 6771 «Todo Lo Que Tengo» (1968) → 7973 «Todo Lo Que Tengo» (1968): 0 pistas unidas, 0 movidas
+- disco 6772 «Billo 69» (1968) → 7974 «Billo 69» (1968): 0 pistas unidas, 0 movidas
+- disco 6774 «La Más Popular De Venezuela» (1969) → 7976 «La Más Popular De Venezuela» (1969): 0 pistas unidas, 0 movidas
+- disco 6775 «Mosaicos A La Billo, Vol. III» (1969) → 7977 «Mosaicos A La Billo Vol.III» (1969): 0 pistas unidas, 0 movidas
+- disco 6776 «Billo 70» (1969) → 7978 «Billo 70» (1969): 0 pistas unidas, 0 movidas
+- disco 6777 «El Pajarillo» (1970) → 7979 «El Pajarillo» (1970): 0 pistas unidas, 0 movidas
+- disco 6778 «Billo Canta Sus Canciones» (1970) → 7980 «Billo Canta Sus Canciones» (1970): 0 pistas unidas, 0 movidas
+- disco 6779 «Billo 71» (1970) → 7981 «Billo 71» (1970): 0 pistas unidas, 0 movidas
+- disco 6780 «La Onda De Billo» (1971) → 7982 «La Onda De Billo» (1971): 0 pistas unidas, 0 movidas
+- disco 6781 «Billo 72» (1971) → 7983 «Billo 72» (1971): 0 pistas unidas, 0 movidas
+- disco 6782 «Mosaicos a La Billo 25 al 29» (1971) → 7984 «Mosaicos a La Billo 25 al 29» (1972): 0 pistas unidas, 0 movidas
+- disco 6787 «Billo 73» (1972) → 7989 «Billo 73» (1972): 0 pistas unidas, 0 movidas
+- disco 6789 «Billo 73 ½» (1973) → 7991 «Billo 73 ½» (1973): 0 pistas unidas, 0 movidas
+- disco 6790 «Billo 74» (1973) → 7992 «Billo 74» (1973): 0 pistas unidas, 0 movidas
+- disco 6792 «Billo 75» (1974) → 7994 «Billo 75» (1974): 0 pistas unidas, 0 movidas
+- disco 6795 «Billo-Miltiño - Doctores En Ritmo» (1975) → 7997 «Billo-Miltiño Doctores En Ritmo» (1975): 0 pistas unidas, 0 movidas
+- disco 6796 «Mosaicos a La Billo 30 Al 35» (1976) → 7998 «Mosaicos a La Billo 30 al 35» (1976): 0 pistas unidas, 0 movidas
+- disco 6797 «Billo 76 ½» (1976) → 7999 «Billo 76 ½» (1976): 0 pistas unidas, 0 movidas
+- disco 6798 «Billo 77» (1976) → 8000 «Billo 77» (1976): 0 pistas unidas, 0 movidas
+- disco 6800 «Billo 78» (1977) → 8002 «Billo 78» (1977): 0 pistas unidas, 0 movidas
+- disco 6801 «Mosaicos a La Billo 36 al 41» (1978) → 8003 «Mosaicos a La Billo 36 al 41» (1978): 0 pistas unidas, 0 movidas
+- disco 6802 «Billo 78 ½» (1978) → 15110 «Billo 78 1/2» (1978): 0 pistas unidas, 0 movidas
+- disco 6803 «Billo 79» (1978) → 8005 «Billo 79» (1978): 0 pistas unidas, 0 movidas
+- disco 6805 «Billo 80 En Discoteca» (1979) → 8007 «Billo 80 En Discoteca» (1979): 0 pistas unidas, 0 movidas
+- disco 6806 «Ayer, Hoy y Siempre» (1979) → 8008 «Ayer, Hoy y Siempre» (1979): 0 pistas unidas, 0 movidas
+- disco 6807 «Fiesta Con Billo» (1979) → 8009 «Fiesta Con Billo» (1979): 0 pistas unidas, 0 movidas
+- disco 6808 «Cocktail Musical "Billo"» (1980) → 8010 «Cocktail Musical "Billo"» (1980): 0 pistas unidas, 0 movidas
+- disco 6809 «Billo 80 ½ En Discoteca» (1980) → 8011 «Billo 80 ½ En Discoteca» (1980): 0 pistas unidas, 0 movidas
+- disco 6811 «Billo y Sus Invitados» (1981) → 8013 «Billo y Sus Invitados» (1981): 0 pistas unidas, 0 movidas
+- disco 6814 «La Nota De Billo's» (1982) → 8016 «La Nota De Billo's» (1982): 0 pistas unidas, 0 movidas
+- disco 6816 «Costa Colombiana» (1983) → 8018 «Costa Colombiana» (1983): 0 pistas unidas, 0 movidas
+- disco 6817 «La Gata Borracha» (1983) → 8019 «La Gata Borracha» (1983): 0 pistas unidas, 0 movidas
+- disco 6818 «Caracas Quiere Una Gaita» (1983) → 8020 «Caracas Quiere Una Gaita» (1983): 0 pistas unidas, 0 movidas
+- disco 6819 «Merengueando Con...» (1984) → 8021 «Merengueando Con...» (1984): 0 pistas unidas, 0 movidas
+- disco 6820 «Billo En Meridiano» (1984) → 8022 «Billo En Meridiano» (1984): 0 pistas unidas, 0 movidas
+- disco 6821 «Oye...a Billo's» (1984) → 8023 «Oye...a Billo's!» (1984): 0 pistas unidas, 0 movidas
+- disco 6822 «Nuevo Circo» (1985) → 8024 «Nuevo Circo» (1985): 0 pistas unidas, 0 movidas
+- disco 6824 «Sigan Bailando» (1987) → 8026 «Sigan Bailando» (1987): 0 pistas unidas, 0 movidas
+- disco 6826 «Viva La Billo's» (1988) → 8028 «Viva La Billo's» (1988): 0 pistas unidas, 0 movidas
+- disco 6827 «El Sonido de Billo - Amor Vegetal» (1990) → 8029 «El Sonido de Billo Amor Vegetal» (1990): 0 pistas unidas, 0 movidas
+- disco 6828 «La Medallita» (1992) → 8030 «La Medallita» (1992): 0 pistas unidas, 0 movidas
+- disco 6829 «Sin Fronteras» (1994) → 8031 «Sin Fronteras» (1994): 0 pistas unidas, 0 movidas
+- disco 6832 «Aquellos Boleros De Billo's» (1987) → 8035 «Aquellos Boleros De Billo's» (1987): 0 pistas unidas, 0 movidas
+- disco 6833 «Clásicos De Oro» (1995) → 8036 «Clásicos De Oro» (1995): 0 pistas unidas, 0 movidas
+- disco 6835 «Serie 32 Super Exitos de Billo's» (1998) → 8038 «Serie 32 Super Exitos de Billo's» (1998): 0 pistas unidas, 0 movidas
+- disco 6836 «Clásicos De Oro Vol. II» (1998) → 8039 «Clásicos De Oro Vol. II» (1998): 0 pistas unidas, 0 movidas
+- disco 6840 «40 Años 40 Exitos» (2001) → 8043 «40 Años 40 Exitos» (2001): 0 pistas unidas, 0 movidas
+- disco 6841 «Gold» (2003) → 8044 «Gold» (2003): 0 pistas unidas, 0 movidas
+- disco 6842 «Colección Los Número 1» (2004) → 8045 «Colección Los Número 1» (2004): 0 pistas unidas, 0 movidas
+- disco 6845 «40 Años 40 Exitos Vol. 2» (2006) → 8048 «40 Años 40 Exitos Vol.2» (2006): 0 pistas unidas, 0 movidas
+- disco 6848 «Serie Premium - Solo Exitos» (2014) → 8051 «Serie Premium Solo Exitos» (2014): 0 pistas unidas, 0 movidas
+- disco 6849 «Grandes Exitos» (2015) → 8052 «Grandes Exitos» (2015): 0 pistas unidas, 0 movidas
+- **artista 3682 «Billo's Caracas Boys / Billos / Billo Frómeta» → 3764 «Billo's Caracas Boys»**: 62 movidos, 92 discos gemelos, alias «Billos»
+- disco 8882 «Aires De Mi Tierra» (1978) → 14704 «Aires De Mi Tierra» (1978): 0 pistas unidas, 0 movidas
+- disco 8884 «La Consentida» (1979) → 14701 «La Consentida» (1979): 0 pistas unidas, 0 movidas
+- disco 8885 «La Triunfadora» (1980) → 9307 «La Triunfadora» (1980): 0 pistas unidas, 0 movidas
+- disco 8886 «La Impactante» (1981) → 9308 «La Impactante» (1981): 0 pistas unidas, 0 movidas
+- disco 8887 «Amiga» (1981) → 9309 «Amiga» (1981): 0 pistas unidas, 0 movidas
+- disco 8888 «Lo Nuevo De Reyna Lucero» (1982) → 9310 «Lo Nuevo De Reyna Lucero» (1982): 0 pistas unidas, 0 movidas
+- disco 8889 «El Disco De Oro De Reyna Lucero» (1982) → 9311 «El Disco De Oro De Reyna Lucero» (1982): 0 pistas unidas, 0 movidas
+- disco 8892 «No Hay Tierra Como Mi Tierra» (1984) → 9314 «No Hay Tierra Como Mi Tierra» (1984): 0 pistas unidas, 0 movidas
+- disco 8893 «Anunciando Navidad» (1985) → 9182 «Anunciando Navidad» (1985): 0 pistas unidas, 0 movidas
+- disco 8894 «Sigo Siendo Reyna» (1986) → 9131 «Sigo Siendo Reyna» (1986): 0 pistas unidas, 0 movidas
+- disco 8895 «Dueña y Señora» (1988) → 9315 «Dueña y Señora» (1988): 0 pistas unidas, 0 movidas
+- disco 8896 «Triángulo De Amor» (1989) → 9316 «Triángulo De Amor» (1989): 0 pistas unidas, 0 movidas
+- disco 8898 «A Mi Gente» (1991) → 9318 «A Mi Gente» (1991): 0 pistas unidas, 0 movidas
+- disco 8899 «Esencia y Estilo» (1995) → 9319 «Esencia y Estilo» (1995): 0 pistas unidas, 0 movidas
+- disco 8900 «El Hogar De La Reyna» (1996) → 9320 «El Hogar De La Reyna» (1996): 0 pistas unidas, 0 movidas
+- disco 8901 «Cancionera» (1998) → 9321 «Cancionera» (1998): 0 pistas unidas, 0 movidas
+- disco 8903 «Ganandole Al Corazón» (2015) → 9323 «Ganándole Al Corazón» (2015): 0 pistas unidas, 0 movidas
+- disco 8904 «Homenaje A La Gaita» (2020) → 9324 «Homenaje A La Gaita» (2020): 0 pistas unidas, 0 movidas
+- disco 8905 «Lunita Llanera» (2021) → 9325 «Lunita Llanera» (2021): 0 pistas unidas, 0 movidas
+- disco 8906 «Sus Exitos» (2001) → 9326 «Sus Exitos» (2001): 0 pistas unidas, 0 movidas
+- **artista 3846 «Reyna Lucero / Reina Lucero» → 3870 «Reyna Lucero»**: 19 movidos, 20 discos gemelos, alias «Reina Lucero»
+
+## Nombres «A / B» → nombre + alias
+
+- 3699: «Esteban Demián / Steven Damian» → «Esteban Demián» + alias «Steven Damian»
+
+## Fichas basura
+
+- crédito 65665 («Accompanied by») del disco 8356 → nota del disco
+- artista 4422 borrado
+- crédito 63415 («Accompanied by») del disco 8357 → nota del disco
+- artista 4423 borrado
+- artista 3246 borrado (sin discos, créditos ni miembros)
+
+## Alias de una letra (fusión de los truncados de Sincopa)
+
+- artista 1861: alias «A» quitado
+- artista 1928: alias «E» quitado
+- artista 1951: alias «G» quitado
+- artista 3791: alias «L» quitado
+
+## Para Brian: dos artistas en una ficha o banda + director
+
+Fichas 3365, 3720, 3723, 3516, 3552, 4042, 890, 351, 793: no se tocan.

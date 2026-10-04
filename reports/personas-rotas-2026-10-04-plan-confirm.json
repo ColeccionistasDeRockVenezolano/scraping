@@ -1,0 +1,2580 @@
+{
+  "dryRun": false,
+  "runId": 11814,
+  "persons": 264,
+  "byAction": {
+    "dejar": 123,
+    "revisar": 39,
+    "convertir": 33,
+    "reasignar": 68,
+    "partir": 1
+  },
+  "applied": 83,
+  "failed": 19,
+  "creditsMoved": 101,
+  "creditsRemoved": 0,
+  "notes": 0,
+  "errors": [
+    {
+      "id": 12003,
+      "name": "Grupo Sangre",
+      "error": "el catálogo no autoriza crear artist «Grupo Sangre»: REVIEW: no se modifica el canonico"
+    },
+    {
+      "id": 5148,
+      "name": "Miami Philharmonic Orchestra",
+      "error": "el catálogo no autoriza crear artist «Miami Philharmonic Orchestra»: REVIEW: no se modifica el canonico"
+    },
+    {
+      "id": 5221,
+      "name": "Chonto Music",
+      "error": "el catálogo no autoriza crear organization «Chonto Music»: REVIEW: no se modifica el canonico"
+    },
+    {
+      "id": 12150,
+      "name": "Grupo Acuario",
+      "error": "el catálogo no autoriza crear artist «Grupo Acuario»: REVIEW: no se modifica el canonico"
+    },
+    {
+      "id": 12163,
+      "name": "Grupo Nuestro",
+      "error": "el catálogo no autoriza crear artist «Grupo Nuestro»: REVIEW: no se modifica el canonico"
+    },
+    {
+      "id": 12052,
+      "name": "Orquesta Paul Mauriat",
+      "error": "el catálogo no autoriza crear artist «Orquesta Paul Mauriat»: REVIEW: no se modifica el canonico"
+    },
+    {
+      "id": 12055,
+      "name": "Orquesta MGM",
+      "error": "el catálogo no autoriza crear artist «Orquesta MGM»: REVIEW: no se modifica el canonico"
+    },
+    {
+      "id": 12093,
+      "name": "Grupo Volcán",
+      "error": "el catálogo no autoriza crear artist «Grupo Volcán»: REVIEW: no se modifica el canonico"
+    },
+    {
+      "id": 12128,
+      "name": "Grupo Trazos",
+      "error": "el catálogo no autoriza crear artist «Grupo Trazos»: REVIEW: no se modifica el canonico"
+    },
+    {
+      "id": 6120,
+      "name": "La Big Landin Orquesta",
+      "error": "el catálogo no autoriza crear artist «La Big Landin Orquesta»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "id": 7717,
+      "name": "Orquesta Sinfónica de Maracaibo",
+      "error": "el catálogo no autoriza crear artist «Orquesta Sinfónica de Maracaibo»: REVIEW: no se modifica el canonico"
+    },
+    {
+      "id": 7129,
+      "name": "Carmelo Russo Ensamble",
+      "error": "el catálogo no autoriza crear artist «Carmelo Russo Ensamble»: REVIEW: no se modifica el canonico"
+    },
+    {
+      "id": 7851,
+      "name": "Grupo Bonsay",
+      "error": "el catálogo no autoriza crear artist «Grupo Bonsay»: REVIEW: no se modifica el canonico"
+    },
+    {
+      "id": 8615,
+      "name": "Grupo Zaranda",
+      "error": "el catálogo no autoriza crear artist «Grupo Zaranda»: REVIEW: no se modifica el canonico"
+    },
+    {
+      "id": 8750,
+      "name": "La Orquesta De Daniel Grau",
+      "error": "el catálogo no autoriza crear artist «La Orquesta De Daniel Grau»: REVIEW: no se modifica el canonico"
+    },
+    {
+      "id": 9066,
+      "name": "Carmelo Russo's String Ensemble",
+      "error": "el catálogo no autoriza crear artist «Carmelo Russo's String Ensemble»: REVIEW: no se modifica el canonico"
+    },
+    {
+      "id": 11994,
+      "name": "Orquesta Karavana",
+      "error": "el catálogo no autoriza crear artist «Orquesta Karavana»: REVIEW: no se modifica el canonico"
+    },
+    {
+      "id": 32409,
+      "name": "Eliseo Herrera/De La Colina",
+      "error": "ya existe un crédito de este acreditado con la misma función en esta obra (id 57759); retíralo o cambia antes el rol o el tipo"
+    },
+    {
+      "id": 37951,
+      "name": "Sinfónica Juvenil de Chacao",
+      "error": "el catálogo no autoriza crear artist «Sinfónica Juvenil de Chacao»: REVIEW: no se modifica el canonico"
+    }
+  ],
+  "plan": [
+    {
+      "id": 21938,
+      "name": "2A Associés",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 4845,
+      "name": "B6Doce",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 13196,
+      "name": "MC/DC",
+      "rule": "multiple_people",
+      "action": "revisar",
+      "why": "«A/B» con apellidos o palabras sueltas: sin enlace seguro"
+    },
+    {
+      "id": 22164,
+      "name": "3rd Mike Boone",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 22319,
+      "name": "Afina2 C.A.",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 22745,
+      "name": "Dimitri Komedea (271DSGN)",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 12003,
+      "name": "Grupo Sangre",
+      "rule": "organizacion",
+      "action": "convertir",
+      "to": "artist",
+      "why": "agrupación tipada como persona"
+    },
+    {
+      "id": 12176,
+      "name": "UB40",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 12213,
+      "name": "Grupo C.I.M. Compañia de Investigaciones Musicales",
+      "rule": "organizacion",
+      "action": "convertir",
+      "to": "organization",
+      "organizationType": "other",
+      "why": "empresa tipada como persona"
+    },
+    {
+      "id": 12217,
+      "name": "Orchestra Julian",
+      "rule": "organizacion",
+      "action": "convertir",
+      "to": "artist",
+      "why": "agrupación tipada como persona"
+    },
+    {
+      "id": 5148,
+      "name": "Miami Philharmonic Orchestra",
+      "rule": "organizacion",
+      "action": "convertir",
+      "to": "artist",
+      "why": "agrupación tipada como persona"
+    },
+    {
+      "id": 5221,
+      "name": "Chonto Music",
+      "rule": "organizacion",
+      "action": "convertir",
+      "to": "organization",
+      "organizationType": "other",
+      "why": "empresa tipada como persona"
+    },
+    {
+      "id": 5318,
+      "name": "Ei2",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 23050,
+      "name": "Juan Luis Guerra 4.40",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 5493,
+      "name": "Mariachi \"Mexico 88\"",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 23064,
+      "name": "305 MusicLab",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 23127,
+      "name": "440mastering",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 27341,
+      "name": "(Pan Con Queso)",
+      "rule": "rotulo-pegado",
+      "action": "revisar",
+      "why": "regla rotulo-pegado sin acción automática"
+    },
+    {
+      "id": 12150,
+      "name": "Grupo Acuario",
+      "rule": "organizacion",
+      "action": "convertir",
+      "to": "artist",
+      "why": "agrupación tipada como persona"
+    },
+    {
+      "id": 12163,
+      "name": "Grupo Nuestro",
+      "rule": "organizacion",
+      "action": "convertir",
+      "to": "artist",
+      "why": "agrupación tipada como persona"
+    },
+    {
+      "id": 23515,
+      "name": "Festijazz 2003",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 6710,
+      "name": "Simple 7",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 6765,
+      "name": "Grupo Imagex C.A.",
+      "rule": "organizacion",
+      "action": "convertir",
+      "to": "organization",
+      "organizationType": "other",
+      "why": "empresa tipada como persona"
+    },
+    {
+      "id": 6780,
+      "name": "DJ MCK from 4º Poder",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 23616,
+      "name": "Ricard-2",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 1172,
+      "name": "Coro de Niños del Colegio Moncarmelo",
+      "rule": "organizacion",
+      "action": "convertir",
+      "to": "artist",
+      "why": "agrupación tipada como persona"
+    },
+    {
+      "id": 11861,
+      "name": "Conjunto Ingeniería",
+      "rule": "organizacion",
+      "action": "convertir",
+      "to": "artist",
+      "why": "agrupación tipada como persona"
+    },
+    {
+      "id": 11862,
+      "name": "Las 4 Monedas",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 12014,
+      "name": "Banda 50 Años del Rock and Pop",
+      "rule": "organizacion",
+      "action": "convertir",
+      "to": "artist",
+      "why": "agrupación tipada como persona"
+    },
+    {
+      "id": 12043,
+      "name": "Los 3 de Castilla",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 12044,
+      "name": "Las 4 Estaciones",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 12051,
+      "name": "The New Vaudeville Band",
+      "rule": "organizacion",
+      "action": "convertir",
+      "to": "artist",
+      "why": "agrupación tipada como persona"
+    },
+    {
+      "id": 12052,
+      "name": "Orquesta Paul Mauriat",
+      "rule": "organizacion",
+      "action": "convertir",
+      "to": "artist",
+      "why": "agrupación tipada como persona"
+    },
+    {
+      "id": 12055,
+      "name": "Orquesta MGM",
+      "rule": "organizacion",
+      "action": "convertir",
+      "to": "artist",
+      "why": "agrupación tipada como persona"
+    },
+    {
+      "id": 6844,
+      "name": "Guacal 1",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 12092,
+      "name": "Chucho Sanoja y Su Orquesta",
+      "rule": "organizacion",
+      "action": "convertir",
+      "to": "artist",
+      "why": "agrupación tipada como persona"
+    },
+    {
+      "id": 12093,
+      "name": "Grupo Volcán",
+      "rule": "organizacion",
+      "action": "convertir",
+      "to": "artist",
+      "why": "agrupación tipada como persona"
+    },
+    {
+      "id": 12128,
+      "name": "Grupo Trazos",
+      "rule": "organizacion",
+      "action": "convertir",
+      "to": "artist",
+      "why": "agrupación tipada como persona"
+    },
+    {
+      "id": 12223,
+      "name": "Los 5 Latinos",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 12273,
+      "name": "Brazil '66",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 5037,
+      "name": "10-D2",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 12469,
+      "name": "Room 1013",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 5179,
+      "name": "Los Tulipitos #6",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 12516,
+      "name": "Wake5",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 12517,
+      "name": "Wax-0-Matik",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 4204,
+      "name": "Despecho Nº 2",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 12723,
+      "name": "Masserrati 2lts",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 4234,
+      "name": "3er Mundo",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 4315,
+      "name": "Alejandro De Oliveira/nPi",
+      "rule": "multiple_people",
+      "action": "revisar",
+      "why": "«A/B» con apellidos o palabras sueltas: sin enlace seguro"
+    },
+    {
+      "id": 5848,
+      "name": "Grado 33",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 6120,
+      "name": "La Big Landin Orquesta",
+      "rule": "organizacion",
+      "action": "convertir",
+      "to": "artist",
+      "why": "agrupación tipada como persona"
+    },
+    {
+      "id": 7074,
+      "name": "E.I.2 Diseño Gráfico",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 13223,
+      "name": "12\" NinJazz",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 13229,
+      "name": "MX-1",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 7881,
+      "name": "4 OF US",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 7855,
+      "name": "Café Chaos on June 21st",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 1394,
+      "name": "Mixture 151",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 7717,
+      "name": "Orquesta Sinfónica de Maracaibo",
+      "rule": "organizacion",
+      "action": "convertir",
+      "to": "artist",
+      "why": "agrupación tipada como persona"
+    },
+    {
+      "id": 8747,
+      "name": "440 Torker",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 9898,
+      "name": "100% Poindexther",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 7027,
+      "name": "Despecho 2",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 7070,
+      "name": "Banda Casa Blanca",
+      "rule": "organizacion",
+      "action": "convertir",
+      "to": "artist",
+      "why": "agrupación tipada como persona"
+    },
+    {
+      "id": 7078,
+      "name": "D3 Corporation C.A.",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 7129,
+      "name": "Carmelo Russo Ensamble",
+      "rule": "organizacion",
+      "action": "convertir",
+      "to": "artist",
+      "why": "agrupación tipada como persona"
+    },
+    {
+      "id": 7187,
+      "name": "Orquesta De Humberto Suarez",
+      "rule": "organizacion",
+      "action": "convertir",
+      "to": "artist",
+      "why": "agrupación tipada como persona"
+    },
+    {
+      "id": 27426,
+      "name": "Text: Javier Lasarte",
+      "rule": "rotulo-pegado",
+      "action": "reasignar",
+      "target": "Javier Lasarte",
+      "role": {
+        "creditType": "writer",
+        "role": "Letra"
+      },
+      "why": "rótulo «Text» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "rename": true
+      }
+    },
+    {
+      "id": 27427,
+      "name": "Text: Elena Vera",
+      "rule": "rotulo-pegado",
+      "action": "reasignar",
+      "target": "Elena Vera",
+      "role": {
+        "creditType": "writer",
+        "role": "Letra"
+      },
+      "why": "rótulo «Text» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "rename": true
+      }
+    },
+    {
+      "id": 27428,
+      "name": "Text: Miguel Otero Silva",
+      "rule": "rotulo-pegado",
+      "action": "reasignar",
+      "target": "Miguel Otero Silva",
+      "role": {
+        "creditType": "writer",
+        "role": "Letra"
+      },
+      "why": "rótulo «Text» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 32446
+      }
+    },
+    {
+      "id": 27429,
+      "name": "Text: Luis Luksic",
+      "rule": "rotulo-pegado",
+      "action": "reasignar",
+      "target": "Luis Luksic",
+      "role": {
+        "creditType": "writer",
+        "role": "Letra"
+      },
+      "why": "rótulo «Text» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "rename": true
+      }
+    },
+    {
+      "id": 27430,
+      "name": "Text: César Rengifo",
+      "rule": "rotulo-pegado",
+      "action": "reasignar",
+      "target": "César Rengifo",
+      "role": {
+        "creditType": "writer",
+        "role": "Letra"
+      },
+      "why": "rótulo «Text» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "rename": true
+      }
+    },
+    {
+      "id": 7447,
+      "name": "Art 33 Publicaciones",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 27431,
+      "name": "Text: Andrés Eloy Blanco",
+      "rule": "rotulo-pegado",
+      "action": "revisar",
+      "why": "hay 2 personas llamadas «Andrés Eloy Blanco»"
+    },
+    {
+      "id": 27432,
+      "name": "Text: Orlando Pichardo",
+      "rule": "rotulo-pegado",
+      "action": "reasignar",
+      "target": "Orlando Pichardo",
+      "role": {
+        "creditType": "writer",
+        "role": "Letra"
+      },
+      "why": "rótulo «Text» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "rename": true
+      }
+    },
+    {
+      "id": 7650,
+      "name": "18 Whiskys",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 27433,
+      "name": "Text: Eduardo Zambrano Colmenares",
+      "rule": "rotulo-pegado",
+      "action": "reasignar",
+      "target": "Eduardo Zambrano Colmenares",
+      "role": {
+        "creditType": "writer",
+        "role": "Letra"
+      },
+      "why": "rótulo «Text» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "rename": true
+      }
+    },
+    {
+      "id": 27434,
+      "name": "Text: Maritza Jiménez",
+      "rule": "rotulo-pegado",
+      "action": "reasignar",
+      "target": "Maritza Jiménez",
+      "role": {
+        "creditType": "writer",
+        "role": "Letra"
+      },
+      "why": "rótulo «Text» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "rename": true
+      }
+    },
+    {
+      "id": 27435,
+      "name": "Text: Yolanda Pantin",
+      "rule": "rotulo-pegado",
+      "action": "reasignar",
+      "target": "Yolanda Pantin",
+      "role": {
+        "creditType": "writer",
+        "role": "Letra"
+      },
+      "why": "rótulo «Text» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 21636
+      }
+    },
+    {
+      "id": 7851,
+      "name": "Grupo Bonsay",
+      "rule": "organizacion",
+      "action": "convertir",
+      "to": "artist",
+      "why": "agrupación tipada como persona"
+    },
+    {
+      "id": 27436,
+      "name": "Text: Miguel Márquez",
+      "rule": "rotulo-pegado",
+      "action": "revisar",
+      "why": "hay 2 personas llamadas «Miguel Márquez»"
+    },
+    {
+      "id": 24450,
+      "name": "Amana 3B",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 8540,
+      "name": "B&R Gibb/c. Martin",
+      "rule": "multiple_people",
+      "action": "revisar",
+      "why": "«A/B»: alguna parte no enlaza con una única persona existente (B&R Gibb · c. Martin)"
+    },
+    {
+      "id": 8563,
+      "name": "Oswaldo Grillet/cdboxproducciones",
+      "rule": "multiple_people",
+      "action": "revisar",
+      "why": "«A/B» con apellidos o palabras sueltas: sin enlace seguro"
+    },
+    {
+      "id": 8615,
+      "name": "Grupo Zaranda",
+      "rule": "organizacion",
+      "action": "convertir",
+      "to": "artist",
+      "why": "agrupación tipada como persona"
+    },
+    {
+      "id": 8750,
+      "name": "La Orquesta De Daniel Grau",
+      "rule": "organizacion",
+      "action": "convertir",
+      "to": "artist",
+      "why": "agrupación tipada como persona"
+    },
+    {
+      "id": 8814,
+      "name": "Harold Kohon's String Ensemble",
+      "rule": "organizacion",
+      "action": "convertir",
+      "to": "artist",
+      "why": "agrupación tipada como persona"
+    },
+    {
+      "id": 8951,
+      "name": "Tokyo Ska Paradise Orchestra",
+      "rule": "organizacion",
+      "action": "convertir",
+      "to": "artist",
+      "why": "agrupación tipada como persona"
+    },
+    {
+      "id": 8970,
+      "name": "C4 Trío",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 9026,
+      "name": "A. Cazalis/adpt:Felipe Grüber",
+      "rule": "multiple_people",
+      "action": "revisar",
+      "why": "«A/B»: alguna parte no enlaza con una única persona existente (A. Cazalis · adpt:Felipe Grüber)"
+    },
+    {
+      "id": 9066,
+      "name": "Carmelo Russo's String Ensemble",
+      "rule": "organizacion",
+      "action": "convertir",
+      "to": "artist",
+      "why": "agrupación tipada como persona"
+    },
+    {
+      "id": 23212,
+      "name": "(Gary Keller",
+      "rule": "rotulo-pegado",
+      "action": "revisar",
+      "why": "regla rotulo-pegado sin acción automática"
+    },
+    {
+      "id": 24980,
+      "name": ": Orlando Chaparro",
+      "rule": "rotulo-pegado",
+      "action": "reasignar",
+      "target": "Orlando Chaparro",
+      "why": "rótulo «signo sobrante» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "rename": true
+      }
+    },
+    {
+      "id": 25029,
+      "name": "- Alí Rojas",
+      "rule": "rotulo-pegado",
+      "action": "reasignar",
+      "target": "Alí Rojas",
+      "why": "rótulo «signo sobrante» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "rename": true
+      }
+    },
+    {
+      "id": 11971,
+      "name": "Freddy Golden y su Orquesta",
+      "rule": "organizacion",
+      "action": "convertir",
+      "to": "artist",
+      "why": "agrupación tipada como persona"
+    },
+    {
+      "id": 11994,
+      "name": "Orquesta Karavana",
+      "rule": "organizacion",
+      "action": "convertir",
+      "to": "artist",
+      "why": "agrupación tipada como persona"
+    },
+    {
+      "id": 11995,
+      "name": "Emilio y su Conjunto",
+      "rule": "organizacion",
+      "action": "convertir",
+      "to": "artist",
+      "why": "agrupación tipada como persona"
+    },
+    {
+      "id": 2709,
+      "name": "Candy 66",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 3194,
+      "name": "ARK21",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 26433,
+      "name": "E.i.2",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 26733,
+      "name": "Marchisio/Santiago",
+      "rule": "multiple_people",
+      "action": "revisar",
+      "why": "«A/B» con apellidos o palabras sueltas: sin enlace seguro"
+    },
+    {
+      "id": 26791,
+      "name": "Angel Condercuri/Marú",
+      "rule": "multiple_people",
+      "action": "revisar",
+      "why": "«A/B» con apellidos o palabras sueltas: sin enlace seguro"
+    },
+    {
+      "id": 27047,
+      "name": "Vinicio/Rico",
+      "rule": "multiple_people",
+      "action": "revisar",
+      "why": "«A/B» con apellidos o palabras sueltas: sin enlace seguro"
+    },
+    {
+      "id": 18591,
+      "name": "1972–1984); Wladimir Lozano (lead vocals",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 18592,
+      "name": "1974–1978); Argenis Carruyo (miembro",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 18593,
+      "name": "1985–1990); Freddy Sánchez (miembro",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 18595,
+      "name": "1980–1990); Juan Carlos Sabater (electric guitar",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 15449,
+      "name": "Ruso 40",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 28121,
+      "name": "Krearq Proyectos 4x0",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 18859,
+      "name": "GT22",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 18860,
+      "name": "En Directo 2K",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 18894,
+      "name": "John Atkinson Grimshaw (1863-1893)",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 18979,
+      "name": "Masseratti 2lts",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 19013,
+      "name": "Masseratti 2 lts.",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 19045,
+      "name": "Manet23",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 28162,
+      "name": "Adapt: Hugo Blanco",
+      "rule": "rotulo-pegado",
+      "action": "reasignar",
+      "target": "Hugo Blanco",
+      "role": {
+        "creditType": "other",
+        "role": "Adaptación"
+      },
+      "why": "rótulo «Adapt.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 761
+      }
+    },
+    {
+      "id": 19334,
+      "name": "M: Alberto Grau",
+      "rule": "rotulo-pegado",
+      "action": "reasignar",
+      "target": "Alberto Grau",
+      "role": {
+        "creditType": "composer",
+        "role": "composer"
+      },
+      "why": "rótulo «M:» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 19336
+      }
+    },
+    {
+      "id": 3864,
+      "name": "Sono 2000",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 4010,
+      "name": "(Electric Freak Designs)",
+      "rule": "rotulo-pegado",
+      "action": "revisar",
+      "why": "regla rotulo-pegado sin acción automática"
+    },
+    {
+      "id": 4068,
+      "name": "Ricar-2",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 4311,
+      "name": "Daniel Mijares/nPi",
+      "rule": "multiple_people",
+      "action": "revisar",
+      "why": "«A/B» con apellidos o palabras sueltas: sin enlace seguro"
+    },
+    {
+      "id": 20326,
+      "name": "Jan Van Eyck (1432)",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 20428,
+      "name": "Los Cuñaos: Meiver Acuña",
+      "rule": "rotulo-pegado",
+      "action": "revisar",
+      "why": "regla rotulo-pegado sin acción automática"
+    },
+    {
+      "id": 20817,
+      "name": "Ricar2",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 21040,
+      "name": "72 dpi",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 16882,
+      "name": "Sato 5",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 28347,
+      "name": "11 John Design",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 21529,
+      "name": "Liqui2",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 28464,
+      "name": "Vol. 2 (Con Los Panchos)",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 28465,
+      "name": "En Ritmo 2: Fiesta",
+      "rule": "rotulo-pegado",
+      "action": "revisar",
+      "why": "regla rotulo-pegado sin acción automática"
+    },
+    {
+      "id": 29176,
+      "name": "Adapt: I. Capriles",
+      "rule": "rotulo-pegado",
+      "action": "revisar",
+      "why": "«I. Capriles» lleva iniciales: no se crea sin enlace seguro"
+    },
+    {
+      "id": 29364,
+      "name": "Herrero/Armenteros",
+      "rule": "multiple_people",
+      "action": "revisar",
+      "why": "«A/B» con apellidos o palabras sueltas: sin enlace seguro"
+    },
+    {
+      "id": 29427,
+      "name": "Testa/Renis",
+      "rule": "multiple_people",
+      "action": "revisar",
+      "why": "«A/B» con apellidos o palabras sueltas: sin enlace seguro"
+    },
+    {
+      "id": 29546,
+      "name": "Ver: Chuto Navarro",
+      "rule": "rotulo-pegado",
+      "action": "reasignar",
+      "target": "Chuto Navarro",
+      "role": {
+        "creditType": "other",
+        "role": "Versión"
+      },
+      "why": "rótulo «Ver.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 25509
+      }
+    },
+    {
+      "id": 29547,
+      "name": "Ver: Nancy Ramos",
+      "rule": "rotulo-pegado",
+      "action": "reasignar",
+      "target": "Nancy Ramos",
+      "role": {
+        "creditType": "other",
+        "role": "Versión"
+      },
+      "why": "rótulo «Ver.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 11868
+      }
+    },
+    {
+      "id": 29555,
+      "name": "Recompilation: José León Tapia",
+      "rule": "rotulo-pegado",
+      "action": "reasignar",
+      "target": "José León Tapia",
+      "role": {
+        "creditType": "other",
+        "role": "Recopilación"
+      },
+      "why": "rótulo «Recop.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "rename": true
+      }
+    },
+    {
+      "id": 29589,
+      "name": "ABL 57",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 29717,
+      "name": "Zona 7",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 32597,
+      "name": "1parcreativo",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 30293,
+      "name": "(CENDIS)",
+      "rule": "rotulo-pegado",
+      "action": "revisar",
+      "why": "regla rotulo-pegado sin acción automática"
+    },
+    {
+      "id": 30586,
+      "name": "L: Manuel Graterol",
+      "rule": "rotulo-pegado",
+      "action": "reasignar",
+      "target": "Manuel Graterol",
+      "role": {
+        "creditType": "writer",
+        "role": "Letra"
+      },
+      "why": "rótulo «Letra» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 30875
+      }
+    },
+    {
+      "id": 30814,
+      "name": "Piso 1",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 16995,
+      "name": "Pin8.Sr Conflicto",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 16996,
+      "name": "Zaeta 357",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 31443,
+      "name": "Organización Los Cañoneros 2006 C.A.",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 34616,
+      "name": "Plan 9",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 31823,
+      "name": "Venezuela 4",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 31838,
+      "name": "Canciones de Venezuela Vol. 1",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 31839,
+      "name": "Zona P/Mouseñadores",
+      "rule": "multiple_people",
+      "action": "revisar",
+      "why": "«A/B» con apellidos o palabras sueltas: sin enlace seguro"
+    },
+    {
+      "id": 31843,
+      "name": "Canciones de Venezuela Vol. 2",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 31850,
+      "name": "Canciones de Venezuela Vol. 4",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 31866,
+      "name": "Recompilation: Modesta Bor",
+      "rule": "rotulo-pegado",
+      "action": "reasignar",
+      "target": "Modesta Bor",
+      "role": {
+        "creditType": "other",
+        "role": "Recopilación"
+      },
+      "why": "rótulo «Recop.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 19499
+      }
+    },
+    {
+      "id": 31871,
+      "name": "Arrg: Carlos Oviedo",
+      "rule": "rotulo-pegado",
+      "action": "reasignar",
+      "target": "Carlos Oviedo",
+      "role": {
+        "creditType": "other",
+        "role": "Arreglos"
+      },
+      "why": "rótulo «Arr.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 19903
+      }
+    },
+    {
+      "id": 32051,
+      "name": "Rec: Ignacio Figueredo",
+      "rule": "rotulo-pegado",
+      "action": "reasignar",
+      "target": "Ignacio Figueredo",
+      "role": {
+        "creditType": "other",
+        "role": "Recopilación"
+      },
+      "why": "rótulo «Recop.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 19268
+      }
+    },
+    {
+      "id": 32052,
+      "name": "Rec: Angel Guanipa",
+      "rule": "rotulo-pegado",
+      "action": "reasignar",
+      "target": "Angel Guanipa",
+      "role": {
+        "creditType": "other",
+        "role": "Recopilación"
+      },
+      "why": "rótulo «Recop.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 6325
+      }
+    },
+    {
+      "id": 32062,
+      "name": "Rec.: V. E. Sojo",
+      "rule": "rotulo-pegado",
+      "action": "reasignar",
+      "target": "Vicente Emilio Sojo",
+      "role": {
+        "creditType": "other",
+        "role": "Recopilación"
+      },
+      "why": "rótulo «Recop.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 19382
+      }
+    },
+    {
+      "id": 32380,
+      "name": "Juan Pedro López (Caracas 1766)",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 32409,
+      "name": "Eliseo Herrera/De La Colina",
+      "rule": "multiple_people",
+      "action": "partir",
+      "targets": [
+        "Eliseo Herrera",
+        "De La Colina"
+      ],
+      "why": "dos personas en una («A/B»)",
+      "parts": [
+        25680,
+        9604
+      ]
+    },
+    {
+      "id": 34641,
+      "name": "Sinfónica Desenredada",
+      "rule": "organizacion",
+      "action": "convertir",
+      "to": "artist",
+      "why": "agrupación tipada como persona"
+    },
+    {
+      "id": 32699,
+      "name": "A. C. La Fosforera 174",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 32722,
+      "name": "Guitar - Pablo Picasso 1924",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 32963,
+      "name": "Amana3b",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 32995,
+      "name": "Arranger: Aldemaro Romero",
+      "rule": "rotulo-pegado",
+      "action": "reasignar",
+      "target": "Aldemaro Romero",
+      "role": {
+        "creditType": "other",
+        "role": "Arreglos"
+      },
+      "why": "rótulo «Arr.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 30
+      }
+    },
+    {
+      "id": 32996,
+      "name": "Miller/Blakut",
+      "rule": "multiple_people",
+      "action": "revisar",
+      "why": "«A/B» con apellidos o palabras sueltas: sin enlace seguro"
+    },
+    {
+      "id": 33032,
+      "name": "Los 4 Soles",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 33124,
+      "name": "20 Segundos C.A.",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 33202,
+      "name": "R 2007 C.A",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 33238,
+      "name": "Sono2000",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 33297,
+      "name": "44Cien",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 33857,
+      "name": "Henry Martínez. Arr: Klever Camero",
+      "rule": "rotulo-pegado",
+      "action": "revisar",
+      "why": "regla rotulo-pegado sin acción automática"
+    },
+    {
+      "id": 33858,
+      "name": "Dámaso García. Arr: Víctor E. Márquez",
+      "rule": "rotulo-pegado",
+      "action": "revisar",
+      "why": "regla rotulo-pegado sin acción automática"
+    },
+    {
+      "id": 33916,
+      "name": "10 D 2",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 34027,
+      "name": "Banco Mara Concert 1998",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 34050,
+      "name": "OP 23",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 34088,
+      "name": "Carnaval - Adapt: E. Ramírez",
+      "rule": "rotulo-pegado",
+      "action": "revisar",
+      "why": "regla rotulo-pegado sin acción automática"
+    },
+    {
+      "id": 34745,
+      "name": "Veta 21 C.A.",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 34777,
+      "name": "- Pablo Acedo",
+      "rule": "rotulo-pegado",
+      "action": "reasignar",
+      "target": "Pablo Acedo",
+      "why": "rótulo «signo sobrante» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "rename": true
+      }
+    },
+    {
+      "id": 34778,
+      "name": "- Jorge Ramírez Escudero",
+      "rule": "rotulo-pegado",
+      "action": "reasignar",
+      "target": "Jorge Ramírez Escudero",
+      "why": "rótulo «signo sobrante» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "rename": true
+      }
+    },
+    {
+      "id": 34779,
+      "name": "- Roberto \"il Mac\" Maccagno",
+      "rule": "rotulo-pegado",
+      "action": "reasignar",
+      "target": "Roberto \"il Mac\" Maccagno",
+      "why": "rótulo «signo sobrante» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "rename": true
+      }
+    },
+    {
+      "id": 34780,
+      "name": "- Marco Martini",
+      "rule": "rotulo-pegado",
+      "action": "reasignar",
+      "target": "Marco Martini",
+      "why": "rótulo «signo sobrante» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "rename": true
+      }
+    },
+    {
+      "id": 34853,
+      "name": "- Hyde Park",
+      "rule": "rotulo-pegado",
+      "action": "reasignar",
+      "target": "Hyde Park",
+      "why": "rótulo «signo sobrante» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "rename": true
+      }
+    },
+    {
+      "id": 34854,
+      "name": "- Circo Beat",
+      "rule": "rotulo-pegado",
+      "action": "reasignar",
+      "target": "Circo Beat",
+      "why": "rótulo «signo sobrante» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "rename": true
+      }
+    },
+    {
+      "id": 34855,
+      "name": "- Mandarina",
+      "rule": "rotulo-pegado",
+      "action": "reasignar",
+      "target": "Mandarina",
+      "why": "rótulo «signo sobrante» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 32281
+      }
+    },
+    {
+      "id": 34863,
+      "name": "(From Guaco: Gustavo Aguado",
+      "rule": "rotulo-pegado",
+      "action": "revisar",
+      "why": "regla rotulo-pegado sin acción automática"
+    },
+    {
+      "id": 35072,
+      "name": "Foro 2",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 35268,
+      "name": "Hard Rock Café Caracas 2011",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 35282,
+      "name": "4to. Creciente",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 35413,
+      "name": "Matheus 10",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 35488,
+      "name": "Q-80",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 36194,
+      "name": "- Wake Up Collective",
+      "rule": "rotulo-pegado",
+      "action": "reasignar",
+      "target": "Wake Up Collective",
+      "why": "rótulo «signo sobrante» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "rename": true
+      }
+    },
+    {
+      "id": 36261,
+      "name": "Alfredo Matheus 10",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 36293,
+      "name": "Vers: Carlos Moreno",
+      "rule": "rotulo-pegado",
+      "action": "reasignar",
+      "target": "Carlos Moreno",
+      "role": {
+        "creditType": "other",
+        "role": "Versión"
+      },
+      "why": "rótulo «Ver.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 2378
+      }
+    },
+    {
+      "id": 36676,
+      "name": "DJ 13",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 36814,
+      "name": "10 Dedos",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 37120,
+      "name": "RC2",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 37205,
+      "name": "DJ13",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 37214,
+      "name": "Power Age 1980",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 37215,
+      "name": "Massakre 1982",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 37216,
+      "name": "Gillman 1985",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 37217,
+      "name": "Taxi 1987",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 37218,
+      "name": "Gillman 1991",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 37219,
+      "name": "Gillman 1992",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 37734,
+      "name": "Audio Artist 3000",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 37951,
+      "name": "Sinfónica Juvenil de Chacao",
+      "rule": "organizacion",
+      "action": "convertir",
+      "to": "artist",
+      "why": "agrupación tipada como persona"
+    },
+    {
+      "id": 38000,
+      "name": "Loc: Guillermo Zambrano",
+      "rule": "rotulo-pegado",
+      "action": "reasignar",
+      "target": "Guillermo Zambrano",
+      "role": {
+        "creditType": "other",
+        "role": "Locución"
+      },
+      "why": "rótulo «Loc.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "rename": true
+      }
+    },
+    {
+      "id": 36846,
+      "name": "Mkc (4to. Poder)",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 38328,
+      "name": "Ver: María Rivas",
+      "rule": "rotulo-pegado",
+      "action": "reasignar",
+      "target": "María Rivas",
+      "role": {
+        "creditType": "other",
+        "role": "Versión"
+      },
+      "why": "rótulo «Ver.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 850
+      }
+    },
+    {
+      "id": 38247,
+      "name": "Ver: Catako",
+      "rule": "rotulo-pegado",
+      "action": "revisar",
+      "why": "«Catako» es una sola palabra: no se crea sin enlace seguro"
+    },
+    {
+      "id": 38167,
+      "name": "Ver: Andrés Eloy Medina",
+      "rule": "rotulo-pegado",
+      "action": "reasignar",
+      "target": "Andrés Eloy Medina",
+      "role": {
+        "creditType": "other",
+        "role": "Versión"
+      },
+      "why": "rótulo «Ver.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 22017
+      }
+    },
+    {
+      "id": 38168,
+      "name": "Ver: Eddy Marcano",
+      "rule": "rotulo-pegado",
+      "action": "reasignar",
+      "target": "Eddy Marcano",
+      "role": {
+        "creditType": "other",
+        "role": "Versión"
+      },
+      "why": "rótulo «Ver.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 21405
+      }
+    },
+    {
+      "id": 38198,
+      "name": "Diseño 7",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 38668,
+      "name": "Spanish Ver: Bony Cepeda",
+      "rule": "rotulo-pegado",
+      "action": "reasignar",
+      "target": "Bony Cepeda",
+      "role": {
+        "creditType": "other",
+        "role": "Versión"
+      },
+      "why": "rótulo «Ver.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "rename": true
+      }
+    },
+    {
+      "id": 38689,
+      "name": "Vers: César Monge",
+      "rule": "rotulo-pegado",
+      "action": "reasignar",
+      "target": "César Monge",
+      "role": {
+        "creditType": "other",
+        "role": "Versión"
+      },
+      "why": "rótulo «Ver.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 24868
+      }
+    },
+    {
+      "id": 38700,
+      "name": "Spanish Ver: Manuel Moore",
+      "rule": "rotulo-pegado",
+      "action": "reasignar",
+      "target": "Manuel Moore",
+      "role": {
+        "creditType": "other",
+        "role": "Versión"
+      },
+      "why": "rótulo «Ver.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 27905
+      }
+    },
+    {
+      "id": 38746,
+      "name": "Ver: Joé Luis",
+      "rule": "rotulo-pegado",
+      "action": "reasignar",
+      "target": "Joé Luis",
+      "role": {
+        "creditType": "other",
+        "role": "Versión"
+      },
+      "why": "rótulo «Ver.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "rename": true
+      }
+    },
+    {
+      "id": 38750,
+      "name": "Adapt: Luis Gómez Escolar",
+      "rule": "rotulo-pegado",
+      "action": "reasignar",
+      "target": "Luis Gómez Escolar",
+      "role": {
+        "creditType": "other",
+        "role": "Adaptación"
+      },
+      "why": "rótulo «Adapt.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 9444
+      }
+    },
+    {
+      "id": 38849,
+      "name": "Vers: Jhonny Hoyer",
+      "rule": "rotulo-pegado",
+      "action": "reasignar",
+      "target": "Jhonny Hoyer",
+      "role": {
+        "creditType": "other",
+        "role": "Versión"
+      },
+      "why": "rótulo «Ver.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 29241
+      }
+    },
+    {
+      "id": 38856,
+      "name": "Text: Manny Delgado",
+      "rule": "rotulo-pegado",
+      "action": "reasignar",
+      "target": "Manny Delgado",
+      "role": {
+        "creditType": "writer",
+        "role": "Letra"
+      },
+      "why": "rótulo «Text» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 8389
+      }
+    },
+    {
+      "id": 38874,
+      "name": "(M. de Calva",
+      "rule": "rotulo-pegado",
+      "action": "revisar",
+      "why": "regla rotulo-pegado sin acción automática"
+    },
+    {
+      "id": 38881,
+      "name": "Ver: Okamura",
+      "rule": "rotulo-pegado",
+      "action": "revisar",
+      "why": "«Okamura» es una sola palabra: no se crea sin enlace seguro"
+    },
+    {
+      "id": 38886,
+      "name": "Ver: Simone",
+      "rule": "rotulo-pegado",
+      "action": "revisar",
+      "why": "«Simone» es una sola palabra: no se crea sin enlace seguro"
+    },
+    {
+      "id": 38888,
+      "name": "Ver: Daniela Romo",
+      "rule": "rotulo-pegado",
+      "action": "reasignar",
+      "target": "Daniela Romo",
+      "role": {
+        "creditType": "other",
+        "role": "Versión"
+      },
+      "why": "rótulo «Ver.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 38153
+      }
+    },
+    {
+      "id": 38891,
+      "name": "Ver: Raúl Centeno",
+      "rule": "rotulo-pegado",
+      "action": "reasignar",
+      "target": "Raúl Centeno",
+      "role": {
+        "creditType": "other",
+        "role": "Versión"
+      },
+      "why": "rótulo «Ver.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "rename": true
+      }
+    },
+    {
+      "id": 38924,
+      "name": "Recop: Tierra Nuestra",
+      "rule": "rotulo-pegado",
+      "action": "reasignar",
+      "target": "Tierra Nuestra",
+      "role": {
+        "creditType": "other",
+        "role": "Recopilación"
+      },
+      "why": "rótulo «Recop.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "rename": true
+      }
+    },
+    {
+      "id": 38934,
+      "name": "Ver: Isaías Urbina",
+      "rule": "rotulo-pegado",
+      "action": "revisar",
+      "why": "hay 2 personas llamadas «Isaías Urbina»"
+    },
+    {
+      "id": 38950,
+      "name": "Vers: Carmen Hurtado",
+      "rule": "rotulo-pegado",
+      "action": "reasignar",
+      "target": "Carmen Hurtado",
+      "role": {
+        "creditType": "other",
+        "role": "Versión"
+      },
+      "why": "rótulo «Ver.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "rename": true
+      }
+    },
+    {
+      "id": 39021,
+      "name": "Vers: Tunzi-Mendez",
+      "rule": "rotulo-pegado",
+      "action": "revisar",
+      "why": "«Tunzi-Mendez» parece un grupo que no está catalogado como artista"
+    },
+    {
+      "id": 39023,
+      "name": "Vers: Giacomino",
+      "rule": "rotulo-pegado",
+      "action": "reasignar",
+      "target": "Giacomino",
+      "role": {
+        "creditType": "other",
+        "role": "Versión"
+      },
+      "why": "rótulo «Ver.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 9250
+      }
+    },
+    {
+      "id": 39082,
+      "name": "Ver: Carlos Morean",
+      "rule": "rotulo-pegado",
+      "action": "reasignar",
+      "target": "Carlos Morean",
+      "role": {
+        "creditType": "other",
+        "role": "Versión"
+      },
+      "why": "rótulo «Ver.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 1287
+      }
+    },
+    {
+      "id": 39083,
+      "name": "Ver: Vázquez",
+      "rule": "rotulo-pegado",
+      "action": "reasignar",
+      "target": "Vázquez",
+      "role": {
+        "creditType": "other",
+        "role": "Versión"
+      },
+      "why": "rótulo «Ver.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 9605
+      }
+    },
+    {
+      "id": 39087,
+      "name": "Ver: Isaias Urbina",
+      "rule": "rotulo-pegado",
+      "action": "revisar",
+      "why": "hay 2 personas llamadas «Isaias Urbina»"
+    },
+    {
+      "id": 39102,
+      "name": "Ver: Carlos Moreán",
+      "rule": "rotulo-pegado",
+      "action": "reasignar",
+      "target": "Carlos Moreán",
+      "role": {
+        "creditType": "other",
+        "role": "Versión"
+      },
+      "why": "rótulo «Ver.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 1287
+      }
+    },
+    {
+      "id": 39106,
+      "name": "Ver: Trino Mora",
+      "rule": "rotulo-pegado",
+      "action": "reasignar",
+      "target": "Trino Mora",
+      "role": {
+        "creditType": "other",
+        "role": "Versión"
+      },
+      "why": "rótulo «Ver.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 8775
+      }
+    },
+    {
+      "id": 39107,
+      "name": "Ver: Henrique Lazo",
+      "rule": "rotulo-pegado",
+      "action": "reasignar",
+      "target": "Henrique Lazo",
+      "role": {
+        "creditType": "other",
+        "role": "Versión"
+      },
+      "why": "rótulo «Ver.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 9732
+      }
+    },
+    {
+      "id": 39108,
+      "name": "Vers: Carlos Moreán",
+      "rule": "rotulo-pegado",
+      "action": "reasignar",
+      "target": "Carlos Moreán",
+      "role": {
+        "creditType": "other",
+        "role": "Versión"
+      },
+      "why": "rótulo «Ver.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 1287
+      }
+    },
+    {
+      "id": 39111,
+      "name": "Ver: Ivo",
+      "rule": "rotulo-pegado",
+      "action": "reasignar",
+      "target": "Ivo",
+      "role": {
+        "creditType": "other",
+        "role": "Versión"
+      },
+      "why": "rótulo «Ver.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 2869
+      }
+    },
+    {
+      "id": 39112,
+      "name": "Vers: Ivo",
+      "rule": "rotulo-pegado",
+      "action": "reasignar",
+      "target": "Ivo",
+      "role": {
+        "creditType": "other",
+        "role": "Versión"
+      },
+      "why": "rótulo «Ver.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 2869
+      }
+    },
+    {
+      "id": 39130,
+      "name": "Adapt: Delia Dorta",
+      "rule": "rotulo-pegado",
+      "action": "reasignar",
+      "target": "Delia Dorta",
+      "role": {
+        "creditType": "other",
+        "role": "Adaptación"
+      },
+      "why": "rótulo «Adapt.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 369
+      }
+    },
+    {
+      "id": 39131,
+      "name": "Written: Alessi",
+      "rule": "rotulo-pegado",
+      "action": "revisar",
+      "why": "«Alessi» es una sola palabra: no se crea sin enlace seguro"
+    },
+    {
+      "id": 39148,
+      "name": "Vers: Jorge Aguilar",
+      "rule": "rotulo-pegado",
+      "action": "reasignar",
+      "target": "Jorge Aguilar",
+      "role": {
+        "creditType": "other",
+        "role": "Versión"
+      },
+      "why": "rótulo «Ver.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 2108
+      }
+    },
+    {
+      "id": 39159,
+      "name": "Spanish Vers: Ski Walter",
+      "rule": "rotulo-pegado",
+      "action": "reasignar",
+      "target": "Ski Walter",
+      "role": {
+        "creditType": "other",
+        "role": "Versión"
+      },
+      "why": "rótulo «Ver.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "rename": true
+      }
+    },
+    {
+      "id": 39167,
+      "name": "Ver: Peter Daniel",
+      "rule": "rotulo-pegado",
+      "action": "reasignar",
+      "target": "Peter Daniel",
+      "role": {
+        "creditType": "other",
+        "role": "Versión"
+      },
+      "why": "rótulo «Ver.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 41
+      }
+    },
+    {
+      "id": 39183,
+      "name": "Vers: Skywalker",
+      "rule": "rotulo-pegado",
+      "action": "reasignar",
+      "target": "Skywalker",
+      "role": {
+        "creditType": "other",
+        "role": "Versión"
+      },
+      "why": "rótulo «Ver.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 111
+      }
+    },
+    {
+      "id": 39218,
+      "name": "Ver: Skywalker",
+      "rule": "rotulo-pegado",
+      "action": "reasignar",
+      "target": "Skywalker",
+      "role": {
+        "creditType": "other",
+        "role": "Versión"
+      },
+      "why": "rótulo «Ver.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 111
+      }
+    },
+    {
+      "id": 39258,
+      "name": "Ver: Rudy Márquez",
+      "rule": "rotulo-pegado",
+      "action": "reasignar",
+      "target": "Rudy Márquez",
+      "role": {
+        "creditType": "other",
+        "role": "Versión"
+      },
+      "why": "rótulo «Ver.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 978
+      }
+    },
+    {
+      "id": 39404,
+      "name": "Vers: Ramírez",
+      "rule": "rotulo-pegado",
+      "action": "revisar",
+      "why": "«Ramírez» es una sola palabra: no se crea sin enlace seguro"
+    },
+    {
+      "id": 39537,
+      "name": "Rec: Gualberto Ibarreto",
+      "rule": "rotulo-pegado",
+      "action": "revisar",
+      "why": "hay 2 personas llamadas «Gualberto Ibarreto» y un artista homónimo"
+    },
+    {
+      "id": 39633,
+      "name": "Rec: Isabel Aretz",
+      "rule": "rotulo-pegado",
+      "action": "reasignar",
+      "target": "Isabel Aretz",
+      "role": {
+        "creditType": "other",
+        "role": "Recopilación"
+      },
+      "why": "rótulo «Recop.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "rename": true
+      }
+    },
+    {
+      "id": 39652,
+      "name": "Rec: Luís Mariano Rivera",
+      "rule": "rotulo-pegado",
+      "action": "reasignar",
+      "target": "Luís Mariano Rivera",
+      "role": {
+        "creditType": "other",
+        "role": "Recopilación"
+      },
+      "why": "rótulo «Recop.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 7348
+      }
+    },
+    {
+      "id": 39748,
+      "name": "Rec: Francisco Pacheco",
+      "rule": "rotulo-pegado",
+      "action": "reasignar",
+      "target": "Francisco Pacheco",
+      "role": {
+        "creditType": "other",
+        "role": "Recopilación"
+      },
+      "why": "rótulo «Recop.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 1709
+      }
+    },
+    {
+      "id": 39755,
+      "name": "V: Eloisa Pérez",
+      "rule": "rotulo-pegado",
+      "action": "revisar",
+      "why": "regla rotulo-pegado sin acción automática"
+    },
+    {
+      "id": 39788,
+      "name": "Jorge Spiteri L: Eloy Reverón",
+      "rule": "rotulo-pegado",
+      "action": "revisar",
+      "why": "regla rotulo-pegado sin acción automática"
+    },
+    {
+      "id": 20432,
+      "name": "(Director: Maibel Troia)",
+      "rule": "rotulo-pegado",
+      "action": "reasignar",
+      "target": "Maibel Troia",
+      "role": {
+        "creditType": "other",
+        "role": "Dirección"
+      },
+      "why": "rótulo «Director» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 19376
+      }
+    },
+    {
+      "id": 20426,
+      "name": "(Director: José Mena)",
+      "rule": "rotulo-pegado",
+      "action": "reasignar",
+      "target": "José Mena",
+      "role": {
+        "creditType": "other",
+        "role": "Dirección"
+      },
+      "why": "rótulo «Director» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 4
+      }
+    },
+    {
+      "id": 20433,
+      "name": "(Director: Jesús González)",
+      "rule": "rotulo-pegado",
+      "action": "revisar",
+      "why": "hay 2 personas llamadas «Jesús González»"
+    },
+    {
+      "id": 39880,
+      "name": "gL1tChhhvkVmv",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 12488,
+      "name": "Starlet YEG-013",
+      "rule": "numeros",
+      "action": "dejar",
+      "why": "nombre con números legítimo (estudio, DJ, banda)"
+    },
+    {
+      "id": 12244,
+      "name": "\"Identical Twins\"",
+      "rule": "entre-comillas",
+      "action": "dejar",
+      "why": "apodo entre comillas de una persona real"
+    },
+    {
+      "id": 8175,
+      "name": "\"La Pequeña Sofia\"",
+      "rule": "entre-comillas",
+      "action": "dejar",
+      "why": "apodo entre comillas de una persona real"
+    },
+    {
+      "id": 27515,
+      "name": "\"El Chiky\"",
+      "rule": "entre-comillas",
+      "action": "dejar",
+      "why": "apodo entre comillas de una persona real"
+    },
+    {
+      "id": 27516,
+      "name": "\"Tony\"",
+      "rule": "entre-comillas",
+      "action": "dejar",
+      "why": "apodo entre comillas de una persona real"
+    },
+    {
+      "id": 18931,
+      "name": "\"Von Frau\"",
+      "rule": "entre-comillas",
+      "action": "dejar",
+      "why": "apodo entre comillas de una persona real"
+    },
+    {
+      "id": 18939,
+      "name": "\"Olivares\"",
+      "rule": "entre-comillas",
+      "action": "dejar",
+      "why": "apodo entre comillas de una persona real"
+    },
+    {
+      "id": 31939,
+      "name": "\"Ferrusquilla\"",
+      "rule": "entre-comillas",
+      "action": "dejar",
+      "why": "apodo entre comillas de una persona real"
+    },
+    {
+      "id": 36883,
+      "name": "\"El Brayan\"",
+      "rule": "entre-comillas",
+      "action": "dejar",
+      "why": "apodo entre comillas de una persona real"
+    },
+    {
+      "id": 37991,
+      "name": "\"Tricky\"",
+      "rule": "entre-comillas",
+      "action": "dejar",
+      "why": "apodo entre comillas de una persona real"
+    }
+  ]
+}

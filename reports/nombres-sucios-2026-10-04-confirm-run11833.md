@@ -1,0 +1,241 @@
+# Nombres sucios (confirm, run 11833)
+
+Nombres sucios de Curaduría (Brian, 2026-10-04)
+
+casos: 235 · fallidos: 0 · ignorados: 8 · sinPlan: 0
+
+- person:34863 · Gustavo Aguado ← «(From Guaco: Gustavo Aguado» + Guaco
+- person:33642 · Gustavo Aguado ← «Guaco (Gustavo Aguado» + Guaco
+- person:18591 · Wladimir Lozano ← fragmento de Dimensión Latina
+- person:18592 · Argenis Carruyo ← fragmento de Dimensión Latina
+- person:18595 · Juan Carlos Sabater ← fragmento de Fuga
+- person:18593 · Freddy Sánchez (fragmento de Dimensión Latina)
+- person:20696 · Alejandro Calzadilla ← «Factoría Gráfica (Alejandro Calzadilla» + Factoría Gráfica
+- person:20742 · Alejandro Calzadilla ← «Factoria Gráfica (Alejandro Calzadilla» + Factoría Gráfica
+- person:36705 · Kamelot Agüero ← «Fusión IV (Kamelot Aguero» + Fusión IV
+- person:20345 · Pedro Quintero ← «Temática (Pedro Quintero» + Temática
+- person:34211 · Marco Granados ← «Triángulo (Marco Granados» + Triángulo
+- person:38748 · P. Herrero ← «Mecenas (P. Herrero» + Mecenas
+- person:24530 · Valentina Curcó ← «Valentina Curcó)»
+- person:33620 · Simón «Toto» Ruiz + Caibo
+- person:30308 · Musiu + Centro Nacional del Disco
+- person:34190 · Juan José Hernández + ODILA
+- person:33638 · Jairo Hernández + Los Chiquinquireñitos
+- person:23212 · Gary Keller
+- person:38874 · M. de Calva
+- person:38868 · Atanase “Jean Cartier” Mironescu
+- person:34191 · Edinson Adrian
+- person:20743 · Frank Querales
+- person:33637 · Gabriela Marique
+- person:35366 · Jennie Silva
+- person:20346 · Jennifer Huizi
+- person:15528 · Luis “Prosti” Solano
+- person:23214 · Mike Brignola
+- person:16347 · Danny
+- person:16957 · Enrique
+- person:16348 · Teddy
+- person:39885 · Escuela de Vuelo
+- person:31588 · DGenerador (alias DGenerador.com)
+- person:36502 · JC Socorro (alias JC Socorro.com)
+- person:36002 · Modovisual (alias Modovisual.com)
+- person:21491 · JCmixstudio ← JCmixstudio.com
+- person:39141 · Keloide ← Keloide.net
+- person:26136 · «Juan Vicente Torrealba?Ernesto Luís Rodríguez» → dos compositores
+- person:39356 · «Tisuby González?Georgina León» → dos compositoras
+- person:31955 · «hijo» → Juan Vicente Torrealba Jr. (maracas), Mariano Tito Jr. (bajo), nota en José Quintero
+- person:18570 · «lead vocals)» (miembro basura de Wahala) → retirada
+- artist:4465 · Grupo Quitiplas
+- artist:4457 · Grupo de Parrandas
+- artist:4362 · Grupo Mina + Miguel Urbina
+- organization:3857 · Lucky Productions + Mariela Sosa
+- organization:3970 · Villa Estudio Creativo + Jesús Villareal
+- organization:2334 · «House/Downtempo/» (sin vínculos) → retirada
+- organization:1749 · «Uraniun/MP3.com» (sin vínculos) → retirada
+- organization:2574 · Montaner Legacy LLC
+- album:9118 · Alejandro Vargas Cien Años De Canto
+- album:9181 · Algo Más Que Un Aguinaldo
+- album:9406 · Serenata Guayanesa
+- album:9410 · Su Más Firme Aliado
+- album:9412 · Sueños De Fragua y Tiempo
+- album:6528 · Villa Sebucán
+- album:14106 · A Typical and Autoctonal Venezuelan Dance Band (Remastered)
+- album:14386 · Gounod: Ave Maria, G 89a (After J.S. Bach: Prelude in C Major, BWV 846) [Arr. Hazell for Voice & Orchestra]
+- album:9178 · Serenata Guayanesa (1971)
+- album:12741 · «Яitual» + alias «Ritual»
+- track:151523 · Caracas en el 2000 (Remix)
+- track:136839 · ¿Dónde Está Er Futuro?
+- track:71447 · Tres Danzas Cubanas (Los Delirios de Rosita)
+- track:75007 · Recuerdos Nº 16
+- track:151891 · Nos Extraño (Interlude)
+- track:141522 · Lucía de Lammermoor: "Oh, giusto cielo!... Il dolce suono" (Lucia, "Mad Scene")
+- track:152813 · Ave Maria, G 89a (After J.S. Bach: Prelude in C Major, BWV 846) [Arr. Hazell for Voice & Orchestra]
+- track:152846 · Gounod: Ave Maria, G 89a (After J.S. Bach: Prelude in C Major, BWV 846) [Arr. Hazell for Voice & Orchestra]
+- track:149914 · «Яitual» + alias «Ritual»
+- album:5312 · Sobred​ósis de pensamiento f​ú​nebre → Sobredósis de pensamiento fúnebre
+- album:5315 · Confinado En Mi Aflicci​ó​n → Confinado En Mi Aflicción
+- album:5383 · Demostraci​ó​n 2023 → Demostración 2023
+- album:5389 · Ac​ú​stico → Acústico
+- track:43630 · Confinado En Mi Aflicci​ó​n → Confinado En Mi Aflicción
+- track:43940 · ​Surviving in a Corrupted World → Surviving in a Corrupted World
+- album:6647 · Ateneo de Caracas 16​/​03​/​2012 → Ateneo de Caracas 16/03/2012
+- track:51404 · Jamming at The: → Jamming at The
+- track:50025 · Mosaico: → Mosaico
+- track:50225 · Gonzalo's favorite songs medley: → Gonzalo's favorite songs medley
+- track:48924 · Mosaico De Aguinaldos: → Mosaico De Aguinaldos
+- track:48932 · Mosaico De Gaitas: → Mosaico De Gaitas
+- track:54300 · Mosaico: → Mosaico
+- track:72764 · Potpourri: → Potpourri
+- track:54345 · Potpourri: → Potpourri
+- track:54366 · Potpourri: → Potpourri
+- track:73616 · Mosaico Latino Nº 1: → Mosaico Latino Nº 1
+- track:73621 · Combinación Latina Nº 2: → Combinación Latina Nº 2
+- track:73654 · Combinación Latina Nº 3: → Combinación Latina Nº 3
+- track:56031 · Combinación Latina Nº 4: → Combinación Latina Nº 4
+- track:54049 · Medley De Boleros: → Medley De Boleros
+- track:54113 · Popurrí Felipe Pirela: → Popurrí Felipe Pirela
+- track:75334 · Las Concentidas De Los Terrícolas: → Las Concentidas De Los Terrícolas
+- track:53403 · Yo Soy Venezuela: → Yo Soy Venezuela
+- track:72609 · Venezolanisimo: → Venezolanisimo
+- track:59988 · Venezolanisimo: → Venezolanisimo
+- track:60003 · Yo Soy Venezuela: → Yo Soy Venezuela
+- track:53513 · Oye Como Pito: → Oye Como Pito
+- track:60553 · Mosaico Navideño: → Mosaico Navideño
+- track:60670 · Inspiración Nº 1: → Inspiración Nº 1
+- track:72901 · Mosaico A La Billo Nº 7: → Mosaico A La Billo Nº 7
+- track:72912 · Mosaico A La Billo Nº 7: → Mosaico A La Billo Nº 7
+- track:72917 · Mosaico A La Billo Nº 8: → Mosaico A La Billo Nº 8
+- track:73251 · Mosaico Nº 49: → Mosaico Nº 49
+- track:56623 · Medley: → Medley
+- track:74862 · Recuerdos Nº 3: → Recuerdos Nº 3
+- track:74867 · Recuerdos Nº 4: → Recuerdos Nº 4
+- track:74872 · Recuerdos Nº 5: → Recuerdos Nº 5
+- track:74895 · Recuerdos Nº 6: → Recuerdos Nº 6
+- track:74913 · Recuerdos Nº 7: → Recuerdos Nº 7
+- track:74918 · Recuerdos Nº 8: → Recuerdos Nº 8
+- track:74923 · Recuerdos Nº 9: → Recuerdos Nº 9
+- track:74934 · Recuerdos Nº 10: → Recuerdos Nº 10
+- track:74939 · Recuerdos Nº 11: → Recuerdos Nº 11
+- track:74961 · Recuerdos Nº 10: → Recuerdos Nº 10
+- track:58935 · Recuerdos Nº 17: → Recuerdos Nº 17
+- track:58941 · Recuerdos Nº 18: → Recuerdos Nº 18
+- track:58947 · Recuerdos Nº 19: → Recuerdos Nº 19
+- track:75032 · Gaita De Aguinaldos: → Gaita De Aguinaldos
+- track:58958 · Recuerdos Nº 20: → Recuerdos Nº 20
+- track:75060 · Recuerdos Nº 23: → Recuerdos Nº 23
+- track:59931 · Navidad Vol. 2: → Navidad Vol. 2
+- track:59981 · Yo Soy La Navidad: → Yo Soy La Navidad
+- track:75748 · Navidad 2: → Navidad 2
+- track:60020 · Yo Soy Venezuela: → Yo Soy Venezuela
+- track:60024 · Venezolanisimo: → Venezolanisimo
+- track:76894 · Cantos De Trabajo: → Cantos De Trabajo
+- track:63213 · Solo Con Las Estrellas - Muchacha De Ojazos Negros - → Solo Con Las Estrellas - Muchacha De Ojazos Negros
+- track:65742 · Sabor A Navidad: → Sabor A Navidad
+- track:65745 · Mosaico Oriental: → Mosaico Oriental
+- track:77642 · Por La Patria Buena: → Por La Patria Buena
+- track:67827 · La Rumba: → La Rumba
+- track:78280 · Calipsos All Day Today Whisky & Brandy / → Calipsos All Day Today Whisky & Brandy
+- track:67969 · Calipsos All Day Today Whisky & Brandy - → Calipsos All Day Today Whisky & Brandy
+- track:68087 · Tonto Malembe/Un Golpe Muchacho/María Lourdes/Jinca/ → Tonto Malembe/Un Golpe Muchacho/María Lourdes/Jinca
+- track:68122 · Tonada Del Amanecer - Rosa 'e Montaña - → Tonada Del Amanecer - Rosa 'e Montaña
+- track:68129 · La Vela - Caldo 'e Playa - Morenita - Yo Fui Marino - → La Vela - Caldo 'e Playa - Morenita - Yo Fui Marino
+- track:68161 · Embálame La Maleta/María Apolinaria/Pájaro Negro/ → Embálame La Maleta/María Apolinaria/Pájaro Negro
+- track:68163 · San Juan De La Vela 'e Coa/María Andegüiré/Oh, Columbé/ → San Juan De La Vela 'e Coa/María Andegüiré/Oh, Columbé
+- track:65144 · Mosaico Tocuyano: → Mosaico Tocuyano
+- track:65149 · Mosaico Zuliano: → Mosaico Zuliano
+- track:65151 · Mosaico De Tonadas: → Mosaico De Tonadas
+- track:77208 · Románticas Venezolanas: → Románticas Venezolanas
+- track:77209 · Románticas Venezolanas: → Románticas Venezolanas
+- track:65173 · A Lo Antaño: → A Lo Antaño
+- track:65185 · Románticas Llaneras: → Románticas Llaneras
+- track:67912 · Calypsos: → Calypsos
+- track:72053 · Puro Venezuela: → Puro Venezuela
+- track:72055 · Zulianísimo: → Zulianísimo
+- track:72056 · Siempre Es Navidad: → Siempre Es Navidad
+- track:72058 · Navidad A Cuatro Patas: → Navidad A Cuatro Patas
+- track:72068 · Populares y Villancicos: → Populares y Villancicos
+- track:72074 · La Billo’s En Navidad: → La Billo’s En Navidad
+- track:72075 · Guaco Navideño: → Guaco Navideño
+- track:72076 · Navidad Internacional: → Navidad Internacional
+- track:68267 · Fue Simón: → Fue Simón
+- track:71769 · Selección de Tangos: → Selección de Tangos
+- track:72009 · Venezolanísimo: → Venezolanísimo
+- track:78994 · Wilfrido Medley: → Wilfrido Medley
+- track:79046 · Wilfrido Medley: → Wilfrido Medley
+- album:13578 · Ilan Chester ‎– En Vivo! Gira Nacional Del Amor Venezolano → Ilan Chester – En Vivo! Gira Nacional Del Amor Venezolano
+- album:13160 · My Playlist: (Medley) Homenaje a Fransheska / Miami Band / Lisa M (Menealo - Atrevete a Moverlo - Ponte el Sombrero - Dulce Materi → My Playlist: (Medley) Homenaje a Fransheska / Miami Band / Lisa M (Menealo - Atrevete a Moverlo - Ponte el Sombrero - Dulce Materi)
+- album:13299 · NA' GUARÁ DE LINDA → Na' Guará de Linda
+- album:13443 · NI VIVO NI MUERTO → Ni Vivo Ni Muerto
+- album:13655 · CARACAS EN EL 2000 (REMIX) → Caracas en el 2000 (Remix)
+- album:13842 · PRENDO PA' FUMAR → Prendo Pa' Fumar
+- album:13843 · DESPUÉS DE TANTO → Después de Tanto
+- album:13845 · TÓMALO CON CALMA → Tómalo con Calma
+- album:13847 · LA NOCHE ENTERA → La Noche Entera
+- album:13933 · ¡QUE VUELVAN LOS MATINÉ! → ¡Que Vuelvan los Matiné!
+- album:14219 · QUE VAYAN Y LO CUENTEN → Que Vayan y Lo Cuenten
+- album:14570 · QUEDATE UN POQUITO + → Quédate Un Poquito +
+- album:14663 · CARDENAL TE NECESITA → Cardenal Te Necesita
+- album:14941 · GRANDES EXITOS 35 ANIVERSARIO TAMBOR URBANO → Grandes Éxitos 35 Aniversario Tambor Urbano
+- album:14942 · TAMBOR URBANO SINFONICO TEATRO JUNIN (EN VIVO) → Tambor Urbano Sinfónico Teatro Junín (En Vivo)
+- album:15032 · EL CALLAO CALYPSO → El Callao Calypso
+- track:84092 · Potpourri: → Potpourri
+- track:84165 · Yo Soy La Navidad: → Yo Soy La Navidad
+- track:141024 · Cancion Mansa Para Un Pueblo Bravo (Re-Master → Cancion Mansa Para Un Pueblo Bravo (Re-Master)
+- track:150725 · Refresh Mix 1 (Yo No Sé / En Beirut / Sola / Furiosa / Picaro (Medley) → Refresh Mix 1 (Yo No Sé / En Beirut / Sola / Furiosa / Picaro (Medley))
+- track:150734 · My Playlist: Homenaje a Fransheska / Miami Band / Lisa M (Menealo / Atrevete a Moverlo / Ponte El Sombrero / Dulce Material / Ever (Medley) → My Playlist: Homenaje a Fransheska / Miami Band / Lisa M (Menealo / Atrevete a Moverlo / Ponte El Sombrero / Dulce Material / Ever (Medley))
+- track:150764 · My Playlist: Homenaje a Fransheska / Miami Band / Lisa M (Menealo - Atrevete a Moverlo - Ponte el Sombrero - Dulce Material - Ever (Medley) → My Playlist: Homenaje a Fransheska / Miami Band / Lisa M (Menealo - Atrevete a Moverlo - Ponte el Sombrero - Dulce Material - Ever (Medley))
+- track:147483 · Recuerdos No. 32; Advertencia / Yno Fui / El Hombre Marinero (Plena Española → Recuerdos No. 32; Advertencia / Yno Fui / El Hombre Marinero (Plena Española)
+- track:146444 · Recuerdos No. 23 (Tengo Una Novia, Quiérala Comadre, Rogelio, Herejía, Sancocho De Pata, Échale Llave, Al Candado, Ella, Juan Char → Recuerdos No. 23 (Tengo Una Novia, Quiérala Comadre, Rogelio, Herejía, Sancocho De Pata, Échale Llave, Al Candado, Ella, Juan Char)
+- track:146561 · Recuerdos No. 24 (Dime La Verdad, Monteriano, Alejandro, Adios Florecita Blanca, Me Gusta Baila Tambo, Lo Que Se Fue Se Fue, El Ne → Recuerdos No. 24 (Dime La Verdad, Monteriano, Alejandro, Adios Florecita Blanca, Me Gusta Baila Tambo, Lo Que Se Fue Se Fue, El Ne)
+- track:146747 · Mosaico No. 4: No Hay Como Tú / Bruca Manigua / Cuando Ya No Me Quieras / Guarachona / Pare Cochero / Danzonete (Rompiendo la Ruti → Mosaico No. 4: No Hay Como Tú / Bruca Manigua / Cuando Ya No Me Quieras / Guarachona / Pare Cochero / Danzonete (Rompiendo la Ruti)
+- track:147317 · Recuerdos No. 16: El manicero - La paloma - Al carnaval - Se va covadonga - El cigarrillo - La planadora - Tu olvido - El caiman - → Recuerdos No. 16: El manicero - La paloma - Al carnaval - Se va covadonga - El cigarrillo - La planadora - Tu olvido - El caiman
+- track:151055 · NA' GUARÁ DE LINDA → Na' Guará de Linda
+- track:151090 · NA' GUARÁ DE LINDA → Na' Guará de Linda
+- track:151468 · NI VIVO NI MUERTO → Ni Vivo Ni Muerto
+- track:137861 · HASTA LA TUMBA → Hasta la Tumba
+- track:151902 · TÓMALO CON CALMA → Tómalo con Calma
+- track:151910 · NO CAMBIA NADA → No Cambia Nada
+- track:151943 · EL FAVORITO DE MAMI → El Favorito de Mami
+- track:151954 · MEZCALITO EN COPA → Mezcalito en Copa
+- track:151956 · LA NOCHE ENTERA → La Noche Entera
+- track:151957 · LAS COSAS CAMBIARON → Las Cosas Cambiaron
+- track:151992 · PRENDO PA' FUMAR → Prendo Pa' Fumar
+- track:151993 · DESPUÉS DE TANTO → Después de Tanto
+- track:151995 · TÓMALO CON CALMA → Tómalo con Calma
+- track:151997 · LA NOCHE ENTERA → La Noche Entera
+- track:138010 · WIKI WIKI (MAXI SINGLE) → Wiki Wiki (Maxi Single)
+- track:152269 · PEGARLE AL PELUCHE → Pegarle al Peluche
+- track:140451 · QUEDATE UN POQUITO + → Quédate Un Poquito +
+- track:149259 · CARDENAL TE NECESITA → Cardenal Te Necesita
+- track:148934 · TAMBORES (EN VIVO) → Tambores (En Vivo)
+- track:148940 · CUMPLEAÑOS FELIZ (EN VIVO) → Cumpleaños Feliz (En Vivo)
+- track:148941 · LA MORENA (EN VIVO) → La Morena (En Vivo)
+- track:148945 · MI NEGRA (EN VIVO) → Mi Negra (En Vivo)
+- track:148947 · REMIX DE MERENGUE (EN VIVO) → Remix de Merengue (En Vivo)
+- track:148958 · EL MERENGUE (EN VIVO) → El Merengue (En Vivo)
+- track:148967 · LA MORENA (EN VIVO) → La Morena (En Vivo)
+- track:148968 · REMIX DE MERENGUE (EN VIVO) → Remix de Merengue (En Vivo)
+- track:148970 · EL MERENGUE (EN VIVO) → El Merengue (En Vivo)
+- track:148971 · CUEROS (EN VIVO) → Cueros (En Vivo)
+- track:148972 · MI NEGRA (EN VIVO) → Mi Negra (En Vivo)
+- track:148973 · TAMBORES (EN VIVO) → Tambores (En Vivo)
+- track:148974 · REMIX DE EXITOS TAMBOR URBANO (EN VIVO) → Remix de Éxitos Tambor Urbano (En Vivo)
+- track:148975 · CUMPLEAÑOS FELIZ (EN VIVO) → Cumpleaños Feliz (En Vivo)
+- organization:2549 · cusica records → Cusica Records
+- track:155366 · *Bonus Track → Bonus Track
+- track:157066 · - Niño Lindo → Niño Lindo
+- track:157068 · - Niño Jesús Llanero → Niño Jesús Llanero
+- track:157067 · - Aguinaldo Criollo → Aguinaldo Criollo
+- track:156272 · Recuerdos No. 15: → Recuerdos No. 15
+- track:157409 · Popurrí Cumpleañero: → Popurrí Cumpleañero
+- track:156892 · Potpourri: → Potpourri
+- artist:4582 · Merida Swing Boys ‎ → Merida Swing Boys
+- track:157795 · Mosaico Nº 23: → Mosaico Nº 23
+- track:157822 · Mosaico Nº 46: → Mosaico Nº 46
+- track:157829 · Venezolanísimo: → Venezolanísimo
+- track:157830 · Tudo Brasil: → Tudo Brasil
+- track:157831 · Aires Porteños: → Aires Porteños
+- track:157832 · Sabor Colombiano: → Sabor Colombiano
+- organization:4219 · digitalpressure → Digitalpressure
+- track:58085 · Mezcla Blanco No. 1 Mosaico: → Mezcla Blanco No. 1 Mosaico
+- artist:5814 · //DLM → DLM
+- artist:6052 · SARC THE EAST FACE → Sarc The East Face
