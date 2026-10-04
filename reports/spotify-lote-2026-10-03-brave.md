@@ -100,6 +100,11 @@ Tiles FOTO cuyo URL es album-art de Bandcamp (la foto es real, pero va dentro de
 
 ## Comando de aplicación (tras OK)
 
+> **Regla del catálogo (Brian, 2026-10-04):** los conflictos de fotos se resuelven en la
+> sección de imágenes de Curaduría (`/curaduria/imagenes`) — si la ficha ya tiene foto,
+> la candidata NO se pisa: se propone en `ingest.image_candidates` y ahí se decide
+> (aplica también a los tiles «revisión manual» de abajo).
+
 ```
 npm run media:localize -- --candidates tmp-analysis/spotify-lote-2026-10-03/candidatos-web.jsonl --concurrency 2 --delay-ms 300
 ```
