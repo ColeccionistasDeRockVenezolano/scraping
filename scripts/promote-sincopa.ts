@@ -3,6 +3,7 @@
 //   tsx scripts/promote-sincopa.ts --section=jazz                 # ensayo: plan y listas, no escribe
 //   tsx scripts/promote-sincopa.ts --section=jazz --confirm --note="…"
 //   opciones: --kinds=artist,album  --limit=50  --out=reports/…json  --urls-file=…txt (solo esas fichas)
+//             --overrides=…json ({identity_raw: veredicto} decididos a mano)
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname } from "node:path";
 import { closeDb } from "../src/db/client.js";
@@ -24,8 +25,11 @@ async function main(): Promise<void> {
   const limit = flag("limit") === undefined ? undefined : Number(flag("limit"));
   const urlsFile = flag("urls-file");
   const pageUrls = urlsFile === undefined ? undefined : readFileSync(urlsFile, "utf8").split("\n").map((line) => line.trim()).filter(Boolean);
+  const overridesFile = flag("overrides");
+  const overrides = overridesFile === undefined ? undefined : JSON.parse(readFileSync(overridesFile, "utf8")) as Record<string, never>;
   const report = await promoteSection({
     section, note, confirm,
+    ...(overrides === undefined ? {} : { overrides }),
     ...(kinds === undefined ? {} : { kinds }),
     ...(limit === undefined ? {} : { limitPerKind: limit }),
     ...(pageUrls === undefined ? {} : { pageUrls }),

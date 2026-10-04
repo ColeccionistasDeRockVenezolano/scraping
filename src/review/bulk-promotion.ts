@@ -67,6 +67,8 @@ export interface PromotionOptions {
   /** Solo las identidades con claims candidatos en estas fichas (reingestas dirigidas). */
   pageUrls?: readonly string[];
   decidedBy?: string;
+  /** Veredictos decididos a mano por identidad (identity_raw): sustituyen a la regla. */
+  overrides?: Readonly<Record<string, Verdict>>;
 }
 
 export interface HoldItem { kind: PromotionKind; identityRaw: string; rule: string; detail: string; claims: number }
@@ -404,7 +406,7 @@ export async function promoteSection(options: PromotionOptions): Promise<Promoti
         }
         const siblings = parentId === undefined ? [] : index.children(parentId);
         const evidence = parentId === undefined ? {} : await siblingEvidence(entityKind, item, name, parentId, siblings, sourceId);
-        const verdict: Verdict = decideVerdict({
+        const verdict: Verdict = options.overrides?.[item.identityRaw] ?? decideVerdict({
           kind: entityKind, name, decision: decisions.get(item.identityKey),
           sameName: index.sameName(name, parentId),
           ...(parentId === undefined ? {} : { parentId, siblings }),
