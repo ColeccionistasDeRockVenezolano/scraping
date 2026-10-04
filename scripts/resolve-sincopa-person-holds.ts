@@ -160,8 +160,12 @@ type Plan =
 class Names {
   private readonly byFold = { person: new Map<string, number[]>(), organization: new Map<string, number[]>(), artist: new Map<string, number[]>() };
   readonly persons: Array<{ id: number; fold: string }> = [];
+  /** Fichas de persona que son una lista («Testa/Renis», «C. Curet - B. Capó»): nunca son destino de un enlace. */
+  readonly listy = new Set<number>();
   readonly soloArtists = new Set<number>();
   readonly members = new Map<number, number[]>();
+  /** Homónimos ya decididos por proyecto común para la ficha en curso (nombre plegado → persona). */
+  readonly picks = new Map<string, number>();
   static async load(db: Queryable): Promise<Names> {
     const names = new Names();
     for (const [kind, table] of [["person", "persons"], ["organization", "organizations"], ["artist", "artists"]] as const) {
@@ -192,6 +196,7 @@ class Names {
     return undefined;
   }
   add(kind: Target["kind"], id: number, name: string): void {
+    if (kind === "person" && /[/&,]|\s-\s|\S-\s|\s(?:y|and)\s\p{Lu}/u.test(name)) { this.listy.add(id); return; }
     const key = fold(name);
     const list = this.byFold[kind].get(key);
     if (list === undefined) this.byFold[kind].set(key, [id]);
@@ -199,6 +204,24 @@ class Names {
     if (kind === "person") this.persons.push({ id, fold: key });
   }
   same(kind: Target["kind"], name: string): number[] { return this.byFold[kind].get(fold(name)) ?? []; }
+  /**
+   * «J. Vega», «M.A. Caro», «Albinoni»: las personas cuyo nombre encaja (las
+   * iniciales abren el nombre y el apellido aparece después; o solo el apellido,
+   * fuera del primer nombre). Candidatas, no enlace: hace falta proyecto común.
+   */
+  loose(name: string): number[] {
+    const tokens = name.replace(/\./gu, ". ").split(/\s+/u).filter(Boolean);
+    const initials = tokens.filter((token) => /^\p{L}\.$/u.test(token)).map((token) => fold(token));
+    const surname = tokens.filter((token) => !/^\p{L}\.$/u.test(token)).map((token) => fold(token)).filter(Boolean);
+    if (surname.length === 0) return [];
+    return this.persons.filter((row) => {
+      const words = row.fold.split(" ");
+      if (words.length < 2) return false;
+      const at = words.findIndex((word, index) => index > 0 && surname.every((part, offset) => words[index + offset] === part));
+      if (at < 1) return false;
+      return initials.every((letter, index) => index < at && words[index]!.startsWith(letter));
+    }).map((row) => row.id);
+  }
 }
 
 async function personClaims(db: Queryable, sourceId: number, identityRaw: string): Promise<number[]> {
@@ -241,6 +264,27 @@ async function workOf(db: Queryable, credit: Credit): Promise<number | undefined
      WHERE raw_page_id=$1 AND entity_kind='track' AND field='title' AND status='accepted' AND track_id IS NOT NULL`, [credit.pageId]);
   const hits = [...new Set(rows.filter((row) => fold(row.title) === fold(credit.trackTitle!)).map((row) => row.track_id))];
   return hits.length === 1 ? Number(hits[0]) : undefined;
+}
+
+/**
+ * Homónimos: la persona que comparte proyecto con los créditos de la ficha
+ * (crédito en un disco de los mismos artistas o integrante de alguno). Una sola
+ * o ninguna (Brian: fusionar y enlazar solo con proyecto común).
+ */
+async function pickHomonym(db: Queryable, candidates: number[], works: Array<{ kind: Credit["kind"]; id: number }>): Promise<number | undefined> {
+  const albums = works.filter((work) => work.kind === "album_credit").map((work) => work.id);
+  const tracks = works.filter((work) => work.kind === "track_credit").map((work) => work.id);
+  const { rows } = await db.query<{ id: string }>(`
+    WITH albums AS (
+      SELECT unnest($2::bigint[]) AS id UNION SELECT album_id FROM public.tracks WHERE id = ANY($3::bigint[])),
+    artists AS (SELECT DISTINCT artist_id FROM public.albums WHERE id IN (SELECT id FROM albums) AND artist_id IS NOT NULL),
+    scope AS (SELECT id FROM albums UNION SELECT id FROM public.albums WHERE artist_id IN (SELECT artist_id FROM artists))
+    SELECT p::text AS id FROM unnest($1::bigint[]) AS p
+     WHERE EXISTS (SELECT 1 FROM public.album_credits c WHERE c.person_id = p AND c.album_id IN (SELECT id FROM scope))
+        OR EXISTS (SELECT 1 FROM public.track_credits c JOIN public.tracks t ON t.id = c.track_id WHERE c.person_id = p AND t.album_id IN (SELECT id FROM scope))
+        OR EXISTS (SELECT 1 FROM public.artist_members m WHERE m.person_id = p AND m.artist_id IN (SELECT artist_id FROM artists))`,
+    [candidates, albums, tracks]);
+  return rows.length === 1 ? Number(rows[0]!.id) : undefined;
 }
 
 /** «aúl Monsalve» → la única persona cuyo nombre lo completa con una o dos letras al principio. */
@@ -311,7 +355,11 @@ function resolveOne(names: Names, raw: string, why: string[]): Part | undefined 
   const tokens = name.split(/\s+/u).filter(Boolean);
   if (tokens.length > 5 || /\b(?:by|de la pista|track)\b/iu.test(name)) { why.push(`«${name}»: no parece un nombre`); return undefined; }
   // Una sola palabra no entra ni enlazada: el core tiene fichas como «Argentina» (tramos C y D).
-  if (tokens.length < 2) { why.push(`«${name}»: una sola palabra, sin enlace seguro`); return undefined; }
+  if (tokens.length < 2) {
+    const pick = names.picks.get(fold(name));
+    if (pick !== undefined) return { target: { kind: "person", name }, link: pick };
+    why.push(`«${name}»: una sola palabra, sin enlace seguro`); return undefined;
+  }
   if (/^\p{Ll}/u.test(name)) {
     const completed = completeTruncated(names, name);
     if (completed === undefined) { why.push(`«${name}»: empieza en minúscula y no se completa`); return undefined; }
@@ -326,8 +374,16 @@ function resolveOne(names: Names, raw: string, why: string[]): Part | undefined 
   }
   const same = names.same("person", name);
   if (same.length === 1) return { target: { kind: "person", name }, link: same[0]! };
-  if (same.length > 1) { why.push(`«${name}»: ${same.length} personas con ese nombre`); return undefined; }
-  if (needsSafeLink(name)) { why.push(`«${name}»: iniciales, sin enlace seguro`); return undefined; }
+  if (same.length > 1) {
+    const pick = names.picks.get(fold(name));
+    if (pick !== undefined) return { target: { kind: "person", name }, link: pick };
+    why.push(`«${name}»: ${same.length} personas con ese nombre`); return undefined;
+  }
+  if (needsSafeLink(name)) {
+    const pick = names.picks.get(fold(name));
+    if (pick !== undefined) return { target: { kind: "person", name }, link: pick };
+    why.push(`«${name}»: iniciales, sin enlace seguro`); return undefined;
+  }
   if (!looksLikePersonName(name)) { why.push(`«${name}»: no parece un nombre`); return undefined; }
   return { target: { kind: "person", name } };
 }
@@ -465,7 +521,8 @@ async function main(): Promise<void> {
   const holds = new Map<string, Hold>();
   for (const file of files) {
     for (const hold of (JSON.parse(readFileSync(file, "utf8")).holds as Array<{ kind: string; identityRaw: string; rule: string }>)) {
-      if (hold.kind === "person" && hold.rule.startsWith("no-es-una-persona:") && hold.rule !== "no-es-una-persona:entre-comillas") {
+      if (hold.kind === "person" && ((hold.rule.startsWith("no-es-una-persona:") && hold.rule !== "no-es-una-persona:entre-comillas")
+        || hold.rule === "parte-de-credito-multiple:sin-enlace-seguro")) {
         holds.set(hold.identityRaw, { identityRaw: hold.identityRaw, rule: hold.rule });
       }
     }
@@ -487,8 +544,28 @@ async function main(): Promise<void> {
       continue;
     }
     // rótulos, listas y nombres truncados: el crédito se arma a mano.
-    const why: string[] = [];
-    const parts = resolveParts(names, name, why, rule === "rotulo");
+    let why: string[] = [];
+    let parts = resolveParts(names, name, why, rule === "rotulo");
+    const homonyms = why.map((item) => {
+      const homonym = /^«(.+)»: \d+ personas con ese nombre$/u.exec(item)?.[1];
+      if (homonym !== undefined) return { name: homonym, candidates: names.same("person", homonym) };
+      const loose = /^«(.+)»: (?:iniciales|una sola palabra), sin enlace seguro$/u.exec(item)?.[1];
+      return loose === undefined ? undefined : { name: loose, candidates: names.loose(loose) };
+    }).filter((item): item is { name: string; candidates: number[] } => item !== undefined && item.candidates.length > 0);
+    if (homonyms.length > 0) {
+      const works: Array<{ kind: Credit["kind"]; id: number }> = [];
+      for (const credit of await creditsOf(pool, sourceId, name)) {
+        const work = await workOf(pool, credit);
+        if (work !== undefined) works.push({ kind: credit.kind, id: work });
+      }
+      names.picks.clear();
+      for (const homonym of homonyms) {
+        const pick = works.length === 0 ? undefined : await pickHomonym(pool, homonym.candidates, works);
+        if (pick !== undefined) names.picks.set(fold(homonym.name), pick);
+      }
+      if (names.picks.size > 0) { why = []; parts = resolveParts(names, name, why, rule === "rotulo"); }
+      names.picks.clear();
+    }
     // Una lista con una parte que lo mira una persona espera entera: no se acredita a medias.
     if (why.some((item) => /paréntesis o comillas|no se reconoce|no parece un nombre|personas con ese nombre/u.test(item))) {
       plan.push({ op: "esperar", identityRaw: name, why: why.join("; ") });

@@ -325,6 +325,25 @@ describe("adapters funcionales de las fuentes autorizadas", () => {
       .toEqual(["title=Amaranto", "track_number=01", "title=Tulalita", "track_number=02", "title=24 Horas"]);
   });
 
+  it("Sincopa añade el sufijo de identidad a un disco homónimo de otro año (Mango 1975), sin tocar el título", () => {
+    const adapter = adapterFor({ slug: "sincopa", siteType: "database" });
+    if (!adapter?.extractSnapshot) throw new Error("adapter Sincopa faltante");
+    const body = `
+      <table><tr>
+        <td>Artist:<br>Album Title:<br>Company:<br>Genre:<br>Release Year:</td>
+        <td><b>Grupo Mango</b><br>Mango<br>Velvet<br>Latin<br>1975 (LP)</td>
+      </tr></table>
+      <table><tr><td bgcolor="#FFCC00"><b>Tracks</b></td></tr></table>
+      <table><tr><td>01- </font><font color="#FFCC00">Juanita </font><font color="#FFFFFF">(Jesús Maña)</font></td></tr></table>`;
+    const records = (url: string) => adapter.extractSnapshot!({ url, kind: "html", rawPageId: 1, body });
+    const split = records("https://sincopa.com/latin_pop/cdinfo_latin/mango/mango_1975.htm");
+    expect(split.filter((record) => record.entityKind === "album").map((record) => record.identity)).toEqual(["Grupo Mango::Mango (1975)"]);
+    expect(split.filter((record) => record.entityKind === "track").map((record) => record.identity)).toEqual(["Grupo Mango::Mango (1975)::Juanita"]);
+    expect(split.find((record) => record.entityKind === "album")!.fields.find((field) => field.field === "title")?.value).toBe("Mango");
+    expect(records("https://fixture.invalid/latin_pop/cdinfo_latin/mango/otro.htm").filter((record) => record.entityKind === "album")
+      .map((record) => record.identity)).toEqual(["Grupo Mango::Mango"]);
+  });
+
   it("Sincopa da un crédito por autor cuando el paréntesis los separa con «/»", () => {
     const adapter = adapterFor({ slug: "sincopa", siteType: "database" });
     if (!adapter?.extractSnapshot) throw new Error("adapter Sincopa faltante");

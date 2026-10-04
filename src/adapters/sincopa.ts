@@ -2,13 +2,14 @@ import { load, type CheerioAPI } from "cheerio";
 import type { AnyNode } from "domhandler";
 import type { PageRef, RawRecord, SourceAdapter, StoredPage } from "./contracts.js";
 import { absoluteUrl, clean, contentImages, excerpt } from "./shared.js";
+import { SINCOPA_IDENTITY_SUFFIX } from "./sincopa-identity-overrides.js";
 
 // Este adaptador tiene su propia versión porque el HTML FrontPage de Sincopa
 // requiere reglas específicas. 1.1.0 corrige los encabezados multilínea y
 // evita confundir fichas detalladas de sencillos con la tabla de discografía.
 // 1.2.0 abre todas las secciones del sitio (jazz, latin pop, clásica, new age,
 // tradicional, étnica): usan la misma plantilla de ficha que rock/pop.
-const SINCOPA_ADAPTER_VERSION = "1.3.1";
+const SINCOPA_ADAPTER_VERSION = "1.3.2";
 
 // Sincopa es HTML de FrontPage: tablas anidadas, sin clases ni encabezados
 // semánticos. Toda su semántica está codificada en el color de fuente:
@@ -497,6 +498,11 @@ export class SincopaAdapter implements SourceAdapter {
     const evidence = (selector: string, text: string, position?: number) => ({
       url, selector, excerpt: excerpt(text), ...(position === undefined ? {} : { position }),
     });
+    // «Grupo Mango::Mango» de 1975 y de 1976: la identidad lleva un sufijo cuando
+    // otro disco distinto del mismo artista comparte título (1.3.2). Solo cambia
+    // la identidad; el título del disco sigue siendo el de la ficha.
+    const suffix = SINCOPA_IDENTITY_SUFFIX[url];
+    const key = suffix === undefined ? title : `${title} (${suffix})`;
 
     const albumFields: RawRecord["fields"] = [
       { field: "title", value: title, evidence: evidence("td", title) },
@@ -519,7 +525,7 @@ export class SincopaAdapter implements SourceAdapter {
     // corrobora la identidad ya extraída de la ficha.
     const cover = firstImageOfKind(page, url, "cover");
     if (cover) albumFields.push({ field: "cover_url", value: cover.url, evidence: evidence("img", cover.alt || cover.url) });
-    records.push(this.record("album", artist ? `${artist}::${title}` : title, albumFields));
+    records.push(this.record("album", artist ? `${artist}::${key}` : key, albumFields));
 
     // La ficha de disco AFIRMA su artista ("Artist: Fusión IV"), no solo lo
     // menciona: sin reclamarlo como entidad el álbum no puede existir en el
@@ -582,7 +588,7 @@ export class SincopaAdapter implements SourceAdapter {
       if (number) trackFields.push({ field: "track_number", value: number, evidence: where });
       const seconds = durationSeconds(text);
       if (seconds !== undefined) trackFields.push({ field: "duration_seconds", value: String(seconds), evidence: where });
-      records.push(this.record("track", artist ? `${artist}::${title}::${trackTitle}` : `${title}::${trackTitle}`, trackFields));
+      records.push(this.record("track", artist ? `${artist}::${key}::${trackTitle}` : `${key}::${trackTitle}`, trackFields));
 
       // El compositor va entre paréntesis; la duración lo sigue y no forma
       // parte del crédito.
@@ -600,7 +606,7 @@ export class SincopaAdapter implements SourceAdapter {
           { field: "credit_scope", value: "track", evidence: where },
         ];
         if (artist) composerCredit.push({ field: "artist_name", value: artist, evidence: where });
-        records.push(this.record("track_credit", `${title}::${trackTitle}::${credited}`, composerCredit));
+        records.push(this.record("track_credit", `${key}::${trackTitle}::${credited}`, composerCredit));
       }
       });
     });
@@ -624,7 +630,7 @@ export class SincopaAdapter implements SourceAdapter {
         if (credit.tracks) fields.push({ field: "track_numbers", value: credit.tracks, evidence: where });
         records.push(this.record(
           scope === "track" ? "track_credit" : "album_credit",
-          `${title}::${credit.name}::${credit.role}`,
+          `${key}::${credit.name}::${credit.role}`,
           fields,
         ));
       }
