@@ -47,8 +47,9 @@ Runs: 11722, 11726, 11729, 11732, 11741, 11746, 11752.
 ## Qué queda (a propósito)
 
 1. **49 `album_match` abiertos** del lote — adjudicar (saltar / allowSimilar / dejar).
-2. **869 items en revisión** del dossier (solistas, personas, tipos, fríos) + **79 homónimos** —
-   revisión caso a caso de Brian (no eran «altas sugeridas»).
+2. **870 items en revisión** del dossier (solistas, personas, tipos, fríos) + **77 homónimos** (79 menos
+   2 que un bugfix del cruce movió a `ya_artista`) — con paquetes de confirmación listos
+   (`paquetes-revision.md`, `careo-discos` / `careo-homonimos` / `descartes`).
 3. **Discos de los «nuevos»** (5.868 propios listados): se completan cuando termine la fase 2
    de captura (re-ejecutar `dossier-discos.py` entonces y generar lote 2).
 4. Residuo técnico documentado: ~96 claims `candidate` de primeras pasadas del ER (los claims

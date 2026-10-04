@@ -266,14 +266,20 @@ def main():
                     "kind": "artista" if tipo == "artist" else "persona"}
         return None
 
-    def cruzar(n, kind):
-        """exacto compacto → exacto norm → alias → fuzzy → redirects. Devuelve dict o None."""
-        for tabla, via in ((comp[kind], "compacto"), (names[kind], "exacto")):
-            if n and n in tabla:
-                i, nm = tabla[n]
-                return {"id": i, "name": nm, "via": via, "sim": 1.0, "alias": None}
+    def cruzar(n, np_, kind):
+        """exacto compacto → exacto norm → alias (norm/compacto) → fuzzy → redirects."""
+        if np_ and np_ in comp[kind]:
+            i, nm = comp[kind][np_]
+            return {"id": i, "name": nm, "via": "compacto", "sim": 1.0, "alias": None}
+        if n and n in names[kind]:
+            i, nm = names[kind][n]
+            return {"id": i, "name": nm, "via": "exacto", "sim": 1.0, "alias": None}
         if n and n in aliases[kind]:
             i, a = aliases[kind][n]
+            nm = cat[kind].get(i, a)
+            return {"id": i, "name": nm, "via": "alias", "sim": 1.0, "alias": a}
+        if np_ and np_ in aliases[kind]:
+            i, a = aliases[kind][np_]
             nm = cat[kind].get(i, a)
             return {"id": i, "name": nm, "via": "alias", "sim": 1.0, "alias": a}
         f = fuzzy(n, names[kind], idx_artist if kind == "artist" else idx_person, kind)
@@ -290,11 +296,12 @@ def main():
         c = clasif.get(href, {})
         clase = (c.get("clase") or "").strip()
         n = norm(nombre)
+        np_ = nopunct(nombre)
 
         s = señales({**row, "m": c.get("m") or c.get("detalle") or ""}, recs, comp["artist"], aliases, comp["person"], nuevos_keys)
 
-        ca = cruzar(n, "artist")
-        cp = cruzar(n, "person")
+        ca = cruzar(n, np_, "artist")
+        cp = cruzar(n, np_, "person")
         # redirects: si el id cruzado fue fusionado, seguir destino
         for obj, kind in ((ca, "artist"), (cp, "person")):
             if obj and obj["id"] in redirects.get(kind, {}):

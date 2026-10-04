@@ -44,7 +44,7 @@ las llenas tú al revisar), `dossier-nuevos.jsonl` (misma data; la consumirá el
    → Este dossier es una foto viva: **re-correrlo justo antes de aplicar altas**; lo que esa sesión
    haga mientras tanto aparecerá como `ya_*` y no se duplicará (además el ER del motor frena duplicados).
 2. **277 altas sugeridas con evidencia**: 222 bandas + 55 personas-miembro.
-3. **869 para revisión**: 369 solistas potenciales, 354 personas (246 sin evidencia musical),
+3. **870 para revisión**: 369 solistas potenciales, 354 personas (246 sin evidencia musical),
    124 sin tipo, 23 frías. Los no-musicales del barrido de localidades caen aquí.
 4. **79 homónimos** a discriminar antes de tocar alias/altas.
 5. **Evidencia capturada**: 712 con géneros · 437 sin discos · 1.059 con imagen (portada de relleno RYM)… **pero 0 retratos
@@ -65,3 +65,15 @@ las llenas tú al revisar), `dossier-nuevos.jsonl` (misma data; la consumirá el
 
 Cruce de discos (547 del ledger de los 222 + los de la fase 2 de «nuevos», que se completa al
 terminar la extracción — no bloquea) y después el motor de altas en seco.
+
+## Actualización 2026-10-04 (tras aplicar los lotes y corregir un bug del cruce)
+
+- **Bug corregido** (`dossier-nuevos.py`): la comprobación «compacta» usaba la clave con espacios y no
+  veía fichas existentes con espaciado distinto («GypsySka Orquesta» vs «Gypsy Ska Orquesta»). Víctimas
+  reales: **2 filas** (GypsySka Orquesta y North 95 — ahora `ya_artista`/`compacto`); verificado que
+  ninguna fila aplicada en los lotes estaba afectada (el ER del motor era la red).
+- **Conteos al re-ejecutar hoy** (los 276 aplicados ya aparecen cubiertos): ya_artista 264 · ya_persona
+  270 · ya_ambos 96 · ya_artista_alias 2 · ya_persona_alias 11 → **643 cubiertos** (= 365 originales +
+  276 aplicados + 2 del bugfix). **Remanente: 948** (77 homónimos · 369 solistas · 354 personas ·
+  124 sin tipo · 23 fríos · 1 persona-miembro «Gustavo Casas…» en revisión).
+- Paquetes de confirmación para el remanente humano: ver `paquetes-revision.md`.
