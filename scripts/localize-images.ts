@@ -7,6 +7,10 @@
 //
 // Los datos del core se cambian únicamente por updateEntity()/withOperatorRun:
 // cada sustitución deja su claim humano y su fila de auditoría.
+//
+// Con `--candidates <jsonl>`: una candidata cuya ficha YA tiene imagen no se pisa
+// ni se descarta en silencio — se propone en `ingest.image_candidates` y se decide
+// en Curaduría · Imágenes (/curaduria/imagenes). Regla del catálogo (Brian, 2026-10-04).
 import { createHash } from "node:crypto";
 import { mkdir, readFile, rename, stat, unlink, writeFile } from "node:fs/promises";
 import path from "node:path";
@@ -44,6 +48,9 @@ interface ManifestEntry {
 }
 interface Manifest { version: 1; entries: Record<string, ManifestEntry>; }
 
+/** Candidata de `--candidates` que llegó a una ficha que ya tenía imagen: se propone en Curaduría · Imágenes. */
+interface CandidateConflict { kind: "album" | "artist"; id: number; currentUrl: string; candidateUrl: string; }
+
 function arg(name: string): string | undefined {
   const position = process.argv.indexOf(name);
   return position >= 0 ? process.argv[position + 1] : undefined;
@@ -78,7 +85,7 @@ async function writeManifest(manifest: Manifest): Promise<void> {
   await rename(temporary, MANIFEST_PATH);
 }
 
-async function listTargets(pool: pg.Pool, limit: number | undefined): Promise<Target[]> {
+async function listTargets(pool: pg.Pool, limit: number | undefined): Promise<{ targets: Target[]; conflicts: CandidateConflict[] }> {
   const { rows } = await pool.query<{ kind: Kind; id: string; source_url: string; media_link_id: string | null }>(`
     WITH candidates AS (
       SELECT 'artist'::text AS kind, id::text, picture_url AS source_url, NULL::text AS media_link_id, 0 AS priority FROM public.artists
@@ -149,6 +156,7 @@ async function listTargets(pool: pg.Pool, limit: number | undefined): Promise<Ta
     ...(row.media_link_id === null ? {} : { mediaLinkId: Number(row.media_link_id) }),
   }));
   const candidateFile = arg("--candidates");
+  const conflicts: CandidateConflict[] = [];
   if (candidateFile) {
     const supplied = (await readFile(path.resolve(candidateFile), "utf8")).split(/\r?\n/u).filter(Boolean)
       .map((line) => JSON.parse(line) as Target)
@@ -160,12 +168,18 @@ async function listTargets(pool: pg.Pool, limit: number | undefined): Promise<Ta
       const table = candidate.kind === "album" ? "public.albums" : `public.${candidate.kind}s`;
       const field = entityField(candidate.kind);
       const current = await pool.query<{ value: string | null }>(`SELECT ${field} AS value FROM ${table} WHERE id=$1`, [candidate.id]);
-      if (current.rows[0]?.value === null) { targets.push(candidate); native.add(entryKey(candidate)); }
+      const currentUrl = current.rows[0]?.value ?? null;
+      if (current.rows[0] !== undefined && currentUrl === null) { targets.push(candidate); native.add(entryKey(candidate)); }
+      else if (currentUrl !== null && (candidate.kind === "artist" || candidate.kind === "album")) {
+        // La ficha ya tiene imagen: la candidata no se descarta — se propone para
+        // resolver el conflicto en Curaduría · Imágenes (regla del catálogo, 2026-10-04).
+        conflicts.push({ kind: candidate.kind, id: candidate.id, currentUrl, candidateUrl: candidate.sourceUrl });
+      }
     }
   }
   targets.sort((left, right) => left.kind.localeCompare(right.kind) || left.id - right.id
     || (left.mediaLinkId ?? -1) - (right.mediaLinkId ?? -1));
-  return limit === undefined ? targets : targets.slice(0, limit);
+  return { targets: limit === undefined ? targets : targets.slice(0, limit), conflicts };
 }
 
 function extension(contentType: string, bytes: Uint8Array): string | undefined {
@@ -333,7 +347,7 @@ async function main(): Promise<void> {
   const pool = new pg.Pool({ connectionString: process.env["DATABASE_URL"] });
   try {
     const manifest = await readManifest();
-    const targets = await listTargets(pool, limit);
+    const { targets, conflicts } = await listTargets(pool, limit);
     process.stdout.write(`fichas con URL remota: ${targets.length}\n`);
     let downloaded = 0; let cached = 0; let failed = 0;
     if (!associateOnly) {
@@ -358,7 +372,31 @@ async function main(): Promise<void> {
       entry !== undefined && Boolean(entry.localPath) && !entry.failure);
     const associated = await associate(pool, ready, chunkSize);
     await writeManifest(manifest);
-    process.stdout.write(`${JSON.stringify({ targets: targets.length, downloaded, cached, failed, associated, manifest: path.relative(ROOT, MANIFEST_PATH) })}\n`);
+    let conflictCandidates = 0;
+    if (conflicts.length > 0) {
+      const candidateFile = arg("--candidates") ?? "";
+      const outcome = await withOperatorRun({
+        name: "image_candidates_localize", operator: "media-localizer",
+        note: `Candidatas en conflicto (la ficha ya tenía imagen) → Curaduría · Imágenes. Archivo: ${candidateFile}.`,
+        params: { file: candidateFile, count: conflicts.length },
+      }, async (context) => {
+        let inserted = 0;
+        for (const conflict of conflicts) {
+          const column = conflict.kind === "album" ? "album_id" : "artist_id";
+          const result = await context.client.query(
+            `INSERT INTO ingest.image_candidates(entity_kind, ${column}, current_url, candidate_url, source, origin, run_id)
+             VALUES ($1, $2, $3, $4, 'web', $5, $6)
+             ON CONFLICT DO NOTHING`,
+            [conflict.kind, conflict.id, conflict.currentUrl, conflict.candidateUrl, `localize:${path.basename(candidateFile)}`, context.runId],
+          );
+          inserted += result.rowCount ?? 0;
+        }
+        return inserted;
+      });
+      conflictCandidates = outcome.result;
+      process.stdout.write(`candidatas en conflicto → Curaduría · Imágenes: ${conflictCandidates}/${conflicts.length}\n`);
+    }
+    process.stdout.write(`${JSON.stringify({ targets: targets.length, downloaded, cached, failed, associated, conflictCandidates, manifest: path.relative(ROOT, MANIFEST_PATH) })}\n`);
     if (failed > 0) process.exitCode = 2;
   } finally {
     await pool.end();
