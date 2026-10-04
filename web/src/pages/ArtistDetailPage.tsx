@@ -26,7 +26,7 @@ import { EntityTabs, TabEmpty, type TabSpec } from "../components/EntityTabs";
 import { ExpandableText } from "../components/ExpandableText";
 import { albumTypeLabel, artistTypeLabel } from "../lib/labels";
 import { ageText, formatDate } from "../lib/format";
-import { TITULAR_ROLE, type ArtistMember, type ArtistRelation, type RelatedArtist } from "../lib/types";
+import { TITULAR_ROLE, type ArtistMember, type ArtistRelation, type RelatedArtist, type RelatedRule, type SimilarArtist, type SimilarRule } from "../lib/types";
 
 const LINK_PLATFORMS = [
   { key: "youtube", label: "YouTube" },
@@ -49,6 +49,26 @@ function relationLabel(relation: ArtistRelation): string {
   return RELATION_LABELS[relation.type][relation.direction];
 }
 
+/** Encabezado de cada regla de relacionados, en el orden en que llegan de la API. */
+const RELATED_HEADINGS: Record<RelatedRule, string> = {
+  lineage: "Linaje documentado",
+  shared_members: "Integrantes en común",
+  solo_project: "Proyecto solista de un integrante",
+  shared_member: "Un integrante en común",
+  collaboration: "Colaboraciones",
+  guest_member: "Integrantes invitados",
+  composer: "Composiciones cruzadas",
+};
+
+/** La API más antigua no manda la regla: solo había linaje e integrantes en común. */
+function relatedRuleOf(item: RelatedArtist): RelatedRule {
+  return item.rule ?? (item.relations?.length ? "lineage" : "shared_members");
+}
+
+function quoted(titles: Array<string | null>): string {
+  return titles.filter(Boolean).map((title) => `«${title}»`).join(", ");
+}
+
 function relatedSubtitle(item: RelatedArtist): string {
   const relation = item.relations?.[0];
   const parts: string[] = [];
@@ -58,7 +78,51 @@ function relatedSubtitle(item: RelatedArtist): string {
     parts.push([relation.bridgeMembers ? `Vínculo: ${relation.bridgeMembers}` : null, period].filter(Boolean).join(" · "));
   }
   if (item.sharedMembers > 0) parts.push(`${item.sharedMembers} en común: ${item.sharedMemberNames.join(", ")}`);
+  const bridges = item.bridges ?? [];
+  const rule = relatedRuleOf(item);
+  if (rule === "collaboration" && bridges.length) parts.push(`En ${quoted(bridges.map((bridge) => bridge.album))}`);
+  if ((rule === "guest_member" || rule === "composer") && bridges.length) {
+    // Una persona puente con sus discos: «Persona en «A», «B»».
+    const byPerson = new Map<string, Array<string | null>>();
+    for (const bridge of bridges) byPerson.set(bridge.person ?? "", [...byPerson.get(bridge.person ?? "") ?? [], bridge.album]);
+    const verb = rule === "composer" ? "compuso en" : "en";
+    parts.push([...byPerson].map(([person, albums]) => `${person} ${verb} ${quoted(albums)}`).join(" · "));
+  }
   return parts.filter(Boolean).join(" — ");
+}
+
+/** Agrupa una lista ya ordenada por regla, conservando el orden de llegada. */
+function groupByRule<T, R extends string>(items: T[], ruleOf: (item: T) => R): Array<{ rule: R; items: T[] }> {
+  const groups: Array<{ rule: R; items: T[] }> = [];
+  for (const item of items) {
+    const rule = ruleOf(item);
+    const last = groups[groups.length - 1];
+    if (last?.rule === rule) last.items.push(item);
+    else groups.push({ rule, items: [item] });
+  }
+  return groups;
+}
+
+function similarHeading(rule: SimilarRule, genre: string | null, decade: number | null, city: string | null): string {
+  const era = decade === null ? null : `años ${decade}`;
+  switch (rule) {
+    case "same_style": return ["Mismo estilo", genre, era].filter(Boolean).join(" · ");
+    case "same_genre_decade": return [genre, era].filter(Boolean).join(" · ");
+    case "same_compilation": return "En las mismas recopilaciones";
+    case "same_producer": return "Mismo productor";
+    case "same_scene": return ["Escena", city, era].filter(Boolean).join(" · ");
+    case "near_decade": return [genre, "décadas vecinas"].filter(Boolean).join(" · ");
+    case "same_label": return "Mismo sello";
+    case "same_genre": return [genre, decade === null ? null : "otras épocas"].filter(Boolean).join(" · ");
+  }
+}
+
+function similarSubtitle(item: SimilarArtist): string {
+  const evidence = item.evidence ?? [];
+  if (item.rule === "same_compilation" && evidence.length) return `En ${quoted(evidence)}`;
+  if (item.rule === "same_producer" && evidence.length) return `Producción: ${evidence.join(", ")}`;
+  if (item.rule === "same_label" && evidence.length) return `Sello: ${evidence.join(", ")}`;
+  return [item.originCountry, item.startYear].filter(Boolean).join(" · ");
 }
 
 export function ArtistDetailPage() {
@@ -124,7 +188,8 @@ export function ArtistDetailPage() {
   const similar = artist.similar ?? [];
   const links = artist.links ?? [];
   const similarDecade = artist.similarDecade ?? null;
-  const similarHeading = [artist.primaryGenre?.name, similarDecade === null ? null : `años ${similarDecade}`].filter(Boolean).join(" · ");
+  const relatedGroups = groupByRule(related, relatedRuleOf);
+  const similarGroups = groupByRule(similar, (item) => item.rule ?? "same_genre_decade");
   const linksByPlatform = LINK_PLATFORMS
     .map((platform) => ({ ...platform, items: links.filter((link) => link.platform === platform.key) }))
     .filter((group) => group.items.length > 0);
@@ -168,31 +233,45 @@ export function ArtistDetailPage() {
     },
     {
       key: "relacionados", label: "Artistas relacionados", count: related.length,
-      content: related.length === 0 ? <TabEmpty>Sin linajes documentados ni bandas con dos o más integrantes en común.</TabEmpty> : (
-        <div className="grid-cards">
-          {related.map((item) => {
-            const relation = item.relations?.[0];
-            return (
-              <EntityCard key={item.id} to={`/artistas/${item.id}`} title={item.name} imageUrl={item.pictureUrl} placeholder={initialOf(item.name)}
-                subtitle={relatedSubtitle(item)}
-                tag={relation ? relationLabel(relation) : null}
-                tagTitle={relation?.note ?? undefined} />
-            );
-          })}
-        </div>
+      content: related.length === 0 ? <TabEmpty>Sin linajes, integrantes, colaboraciones ni invitados en común con otros artistas.</TabEmpty> : (
+        <>
+          {relatedGroups.map((group) => (
+            <section key={group.rule}>
+              <h3 className="similar-reason">{RELATED_HEADINGS[group.rule]}</h3>
+              <div className="grid-cards">
+                {group.items.map((item) => {
+                  const relation = item.relations?.[0];
+                  return (
+                    <EntityCard key={item.id} to={`/artistas/${item.id}`} title={item.name} imageUrl={item.pictureUrl} placeholder={initialOf(item.name)}
+                      subtitle={relatedSubtitle(item)}
+                      tag={relation ? relationLabel(relation) : null}
+                      tagTitle={relation?.note ?? undefined} />
+                  );
+                })}
+              </div>
+            </section>
+          ))}
+        </>
       ),
     },
     {
       key: "similares", label: "Artistas similares", count: similar.length,
-      content: similar.length === 0 ? <TabEmpty>Aún no hay artistas del mismo género y época.</TabEmpty> : (
+      content: similar.length === 0 ? <TabEmpty>Aún no hay artistas del mismo género, época o escena.</TabEmpty> : (
         <>
-          {similarHeading ? <h3 className="similar-reason">{similarHeading}</h3> : null}
-          <div className="grid-cards">
-            {similar.map((item) => (
-              <EntityCard key={item.id} to={`/artistas/${item.id}`} title={item.name} imageUrl={item.pictureUrl} placeholder={initialOf(item.name)}
-                subtitle={[item.originCountry, item.startYear].filter(Boolean).join(" · ")} />
-            ))}
-          </div>
+          {similarGroups.map((group) => {
+            const heading = similarHeading(group.rule, artist.primaryGenre?.name ?? null, similarDecade, artist.originCity);
+            return (
+              <section key={group.rule}>
+                {heading ? <h3 className="similar-reason">{heading}</h3> : null}
+                <div className="grid-cards">
+                  {group.items.map((item) => (
+                    <EntityCard key={item.id} to={`/artistas/${item.id}`} title={item.name} imageUrl={item.pictureUrl} placeholder={initialOf(item.name)}
+                      subtitle={similarSubtitle(item)} />
+                  ))}
+                </div>
+              </section>
+            );
+          })}
         </>
       ),
     },

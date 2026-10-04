@@ -6,6 +6,7 @@ import {
   idParamSchema, aliasSchema, genreListFilterSchema, genreStatusSchema, paginatedResponseSchema, publicGenreSchema,
 } from "../schemas.js";
 import { getArtistDetail, listArtists } from "../repositories/artists.js";
+import { RELATED_RULES, SIMILAR_RULES } from "../repositories/artist-neighbors.js";
 import { notFoundEntity } from "../repositories/redirects.js";
 import { layaDecidedIds } from "../../genres/public.js";
 import { varyOnCookie } from "./albums.js";
@@ -52,19 +53,24 @@ const artistDetailSchema = artistBaseSchema.extend({
   })).describe("Enlaces públicos de sus discos."),
   related: z.array(z.object({
     id: z.number().int(), name: z.string(), pictureUrl: z.string().nullable(), originCountry: z.string(),
+    rule: z.enum(RELATED_RULES).describe("La regla más alta que cumple; las fichas llegan ordenadas por regla."),
     sharedMembers: z.number().int(), sharedMemberNames: z.array(z.string()),
     relations: z.array(z.object({
       type: z.enum(["successor", "ex_member_project", "temporary_name"]),
       direction: z.enum(["earlier", "later"]).describe("earlier: la otra banda es la de origen; later: la posterior."),
       bridgeMembers: z.string().nullable(), startYear: z.number().int().nullable(), endYear: z.number().int().nullable(),
       note: z.string().nullable(), sources: z.array(z.string()), confidence: z.string(),
-    })).describe("Linaje documentado (ingest.artist_relations); vacío si solo comparten integrantes."),
-  })).describe("Linajes documentados (sucesor, proyecto de exintegrantes, nombre temporal) y bandas con dos o más integrantes en común."),
+    })).describe("Linaje documentado (ingest.artist_relations); vacío si no lo hay."),
+    bridges: z.array(z.object({ person: z.string().nullable(), album: z.string().nullable() }))
+      .describe("Persona puente y disco donde se ve (colaboración, invitado, composición); hasta tres."),
+  })).describe("Por reglas en orden: linaje documentado, 2+ integrantes en común, proyecto solista de un integrante, un integrante en común, colaboración, integrante invitado, composición cruzada."),
   similarDecade: z.number().int().nullable().describe("Década de arranque (formación o primer disco)."),
   similar: z.array(z.object({
     id: z.number().int(), name: z.string(), pictureUrl: z.string().nullable(), originCountry: z.string(),
     startYear: z.number().int().nullable(),
-  })).describe("Mismo género principal y misma década de arranque; sin año, solo el género."),
+    rule: z.enum(SIMILAR_RULES).describe("La regla que lo trajo; las fichas llegan ordenadas por regla."),
+    evidence: z.array(z.string()).describe("Recopilaciones, productores, ciudad o sellos en común; vacío en las reglas de género."),
+  })).describe("Por reglas en orden: mismo estilo y década, mismo género y década, misma recopilación, mismo productor, misma escena, década vecina, mismo sello, mismo género. Sin repetir los relacionados."),
 });
 
 const listQuerySchema = paginationQuerySchema.extend({

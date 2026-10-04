@@ -100,16 +100,28 @@ export interface ArtistRelation {
   sources: string[];
   confidence: string;
 }
-/** Banda de un linaje documentado o con dos o más integrantes en común. */
+/** Reglas de relacionados, en orden de prioridad (artist-neighbors.ts). */
+export type RelatedRule = "lineage" | "shared_members" | "solo_project" | "shared_member" | "collaboration" | "guest_member" | "composer";
+/** Reglas de similares, en orden de prioridad. */
+export type SimilarRule = "same_style" | "same_genre_decade" | "same_compilation" | "same_producer" | "same_scene" | "near_decade" | "same_label" | "same_genre";
+/** Banda vinculada por linaje, integrantes, colaboración, invitados o composición. */
 export interface RelatedArtist {
   id: number; name: string; pictureUrl: string | null; originCountry: string;
+  /** La API más antigua no lo manda: entonces es linaje o integrantes en común. */
+  rule?: RelatedRule;
   sharedMembers: number; sharedMemberNames: string[];
   /** La API más antigua no lo manda. */
   relations?: ArtistRelation[];
+  /** Persona puente y disco donde se ve (colaboración, invitado, composición). */
+  bridges?: Array<{ person: string | null; album: string | null }>;
 }
-/** Mismo género principal y misma década de arranque. */
+/** Parecido de estilo, época o escena. */
 export interface SimilarArtist {
   id: number; name: string; pictureUrl: string | null; originCountry: string; startYear: number | null;
+  /** La API más antigua no lo manda: entonces es género principal y década. */
+  rule?: SimilarRule;
+  /** Recopilaciones, productores, ciudad o sellos en común. */
+  evidence?: string[];
 }
 
 // ---------- albums ----------

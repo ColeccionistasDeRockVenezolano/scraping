@@ -186,7 +186,7 @@ describe("API de lectura (E7A) — caso Caramelos De Cianuro", () => {
 
     const fromLater = (await app.inject({ method: "GET", url: `/artists/${later}` })).json();
     expect(fromLater.related).toEqual([{
-      id: earlier, name: "Radio Clip (prueba)", pictureUrl: null, originCountry: "Venezuela", sharedMembers: 0, sharedMemberNames: [],
+      id: earlier, name: "Radio Clip (prueba)", pictureUrl: null, originCountry: "Venezuela", rule: "lineage", sharedMembers: 0, sharedMemberNames: [], bridges: [],
       relations: [{
         type: "successor", direction: "earlier", bridgeMembers: "Félix Duque, Arturo Torres", startYear: 1999, endYear: null,
         note: "Rompieron conceptualmente con la banda.", sources: ["https://example.org/rc2"], confidence: "high",
