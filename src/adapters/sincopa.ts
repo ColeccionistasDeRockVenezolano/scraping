@@ -9,7 +9,7 @@ import { SINCOPA_IDENTITY_SUFFIX } from "./sincopa-identity-overrides.js";
 // evita confundir fichas detalladas de sencillos con la tabla de discografía.
 // 1.2.0 abre todas las secciones del sitio (jazz, latin pop, clásica, new age,
 // tradicional, étnica): usan la misma plantilla de ficha que rock/pop.
-const SINCOPA_ADAPTER_VERSION = "1.3.2";
+const SINCOPA_ADAPTER_VERSION = "1.3.3";
 
 // Sincopa es HTML de FrontPage: tablas anidadas, sin clases ni encabezados
 // semánticos. Toda su semántica está codificada en el color de fuente:
@@ -598,8 +598,10 @@ export class SincopaAdapter implements SourceAdapter {
       for (const credited of authors) {
         if (!credited || !named(credited)) continue;
         records.push(this.record("person", credited, [{ field: "name", value: credited, evidence: where }]));
+        // Con sufijo de identidad, el disco del crédito es el de la ficha y no
+        // el homónimo del mismo artista: el puente lo busca por «artista::disco».
         const composerCredit: RawRecord["fields"] = [
-          { field: "album_title", value: title, evidence: where },
+          { field: "album_title", value: key, evidence: where },
           { field: "track_title", value: trackTitle, evidence: where },
           { field: "credited_name", value: credited, evidence: where },
           { field: "credit_role", value: "composer", evidence: where },
@@ -621,7 +623,7 @@ export class SincopaAdapter implements SourceAdapter {
         const scope = credit.tracks ? "track" : "album";
         records.push(this.record("person", credit.name, [{ field: "name", value: credit.name, evidence: where }]));
         const fields: RawRecord["fields"] = [
-          { field: "album_title", value: title, evidence: where },
+          { field: "album_title", value: key, evidence: where },
           { field: "credited_name", value: credit.name, evidence: where },
           { field: "credit_role", value: credit.role, evidence: where },
           { field: "credit_scope", value: scope, evidence: where },

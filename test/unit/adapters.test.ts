@@ -340,6 +340,8 @@ describe("adapters funcionales de las fuentes autorizadas", () => {
     expect(split.filter((record) => record.entityKind === "album").map((record) => record.identity)).toEqual(["Grupo Mango::Mango (1975)"]);
     expect(split.filter((record) => record.entityKind === "track").map((record) => record.identity)).toEqual(["Grupo Mango::Mango (1975)::Juanita"]);
     expect(split.find((record) => record.entityKind === "album")!.fields.find((field) => field.field === "title")?.value).toBe("Mango");
+    // El crédito apunta al disco de la ficha, no al homónimo del mismo artista.
+    expect(split.find((record) => record.entityKind === "track_credit")!.fields.find((field) => field.field === "album_title")?.value).toBe("Mango (1975)");
     expect(records("https://fixture.invalid/latin_pop/cdinfo_latin/mango/otro.htm").filter((record) => record.entityKind === "album")
       .map((record) => record.identity)).toEqual(["Grupo Mango::Mango"]);
   });
