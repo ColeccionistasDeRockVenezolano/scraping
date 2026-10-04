@@ -365,6 +365,26 @@ describe("adapters funcionales de las fuentes autorizadas", () => {
     expect(claims.filter((claim) => claim.entityKind === "person").map((claim) => claim.rawValue)).not.toContain("Syriak / Carlos Vilchez");
   });
 
+  it("Sincopa corrige un número repetido cuando falta el siguiente («03, 03, 05»)", () => {
+    const adapter = adapterFor({ slug: "sincopa", siteType: "database" });
+    if (!adapter?.extractSnapshot) throw new Error("adapter Sincopa faltante");
+    const body = `
+      <table><tr>
+        <td>Artist:<br>Album Title:<br>Company:<br>Genre:<br>Release Year:</td>
+        <td><b>Mayra Martí</b><br>Mayra Martí<br>Sonográfica<br>Pop<br>1984 (LP)</td>
+      </tr></table>
+      <table><tr><td bgcolor="#FFCC00"><b>Tracks</b></td></tr></table>
+      <table><tr><td><font color="#FFFFFF">
+        03- </font><font color="#FFCC00">Y Yo Lo Amaba </font><br>
+        <font color="#FFFFFF">03- </font><font color="#FFCC00">Mi Mundo Cambió </font><br>
+        <font color="#FFFFFF">05- </font><font color="#FFCC00">Yo Suponía </font>
+      </td></tr></table>`;
+    const numbers = adapter.extractSnapshot({ url: "https://fixture.invalid/latin_pop/cdinfo_latin/mayramarti.htm", kind: "html", rawPageId: 1, body })
+      .filter((record) => record.entityKind === "track")
+      .map((record) => `${record.fields.find((field) => field.field === "track_number")?.value} ${record.fields.find((field) => field.field === "title")?.value}`);
+    expect(numbers).toEqual(["03 Y Yo Lo Amaba", "04 Mi Mundo Cambió", "05 Yo Suponía"]);
+  });
+
   it("Sincopa no trata una ficha detallada de sencillo como año, álbum y sello", () => {
     const adapter = adapterFor({ slug: "sincopa", siteType: "database" });
     if (!adapter?.extractSnapshot) throw new Error("adapter Sincopa faltante");

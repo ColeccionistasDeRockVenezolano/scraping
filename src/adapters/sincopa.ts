@@ -9,7 +9,7 @@ import { SINCOPA_IDENTITY_SUFFIX } from "./sincopa-identity-overrides.js";
 // evita confundir fichas detalladas de sencillos con la tabla de discografía.
 // 1.2.0 abre todas las secciones del sitio (jazz, latin pop, clásica, new age,
 // tradicional, étnica): usan la misma plantilla de ficha que rock/pop.
-const SINCOPA_ADAPTER_VERSION = "1.3.3";
+const SINCOPA_ADAPTER_VERSION = "1.3.4";
 
 // Sincopa es HTML de FrontPage: tablas anidadas, sin clases ni encabezados
 // semánticos. Toda su semántica está codificada en el color de fuente:
@@ -612,6 +612,21 @@ export class SincopaAdapter implements SourceAdapter {
       }
       });
     });
+    // Errata de la ficha: el mismo número dos veces y ninguno para el siguiente
+    // («03, 03, 05», Mayra Martí 1984): la segunda pista es la siguiente.
+    const numbers = records.filter((record) => record.entityKind === "track")
+      .map((record) => record.fields.find((field) => field.field === "track_number"))
+      .filter((field): field is NonNullable<typeof field> => field !== undefined);
+    const printed = new Set(numbers.map((field) => Number(field.value)));
+    const seen = new Set<number>();
+    for (const field of numbers) {
+      const value = Number(field.value);
+      if (seen.has(value) && !printed.has(value + 1)) {
+        field.value = String(value + 1).padStart(String(field.value).length, "0");
+        printed.add(value + 1);
+      }
+      seen.add(Number(field.value));
+    }
 
     // Créditos del disco. Un crédito acotado con "(tracks NN)" es de pista;
     // el resto es de álbum. Ninguno se convierte jamás en membresía de banda:

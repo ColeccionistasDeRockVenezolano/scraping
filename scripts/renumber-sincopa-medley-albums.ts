@@ -38,10 +38,17 @@ async function main(): Promise<void> {
     if (channel?.hit) { console.error("disco del canal: no se toca", url); continue; }
     const body = adapter.decodeBody(readFileSync(`${DATA_DIR}/${page.stored_path}`));
     const order = new Map<string, number>();
-    for (const record of adapter.extractSnapshot({ body, url } as never)) {
+    const numbered = adapter.extractSnapshot({ body, url } as never).flatMap((record) => {
       const number = record.fields.find((field) => field.field === "track_number")?.value;
       const title = record.fields.find((field) => field.field === "title")?.value;
-      if (record.entityKind === "track" && number != null && title != null && !order.has(fold(String(title)))) order.set(fold(String(title)), Number(number));
+      return record.entityKind === "track" && number != null && title != null ? [{ title: fold(String(title)), number: Number(number) }] : [];
+    });
+    const printed = new Set(numbered.map((item) => item.number));
+    for (const item of numbered) {
+      if (order.has(item.title)) continue;
+      // Errata de la ficha: «03» dos veces y ningún «04» (Mayra Martí 1984): la segunda es la siguiente.
+      const taken = [...order.values()].includes(item.number);
+      order.set(item.title, taken && !printed.has(item.number + 1) ? item.number + 1 : item.number);
     }
     const { rows: tracks } = await pool.query<{ id: string; title: string; track_number: number; others: string | null }>(`
       SELECT t.id::text, t.title, t.track_number,

@@ -54,3 +54,16 @@ Canciones regrabadas o recopiladas: la ficha dueña también las sostiene. No se
 
 - Artista 1798 «La Banda de» (disco 3413 «La Banana Voladora»): nombre truncado; debería ser La Banda de la Banana Voladora (1212).
 - Los Impala (259, disco del canal): sus tres fichas separadas tienen disco propio (2520, 15669, 15670); del disco del canal no se movió nada.
+
+## Resuelto (Brian, 2026-10-03)
+
+1. **Mover al disco nuevo** (run 11767, `scripts/fix-sincopa-split-other-sources.ts`): 33 pistas fusionadas con su gemela
+   (Freytes 12 → 15674, Bota 10 → 15678, Ivo 3 → 15681, Ibarreto 8 → 15403); entradas de Hippito (LP 6276, LP 5012) y
+   MusicBrainz al disco nuevo; 11 claims de Sincopa con año/sello del disco separado superseded; sellos: 4172 Movil,
+   8597 Promus, 15403 Sonográfica. Hippito pg 389 (Ivo, sin año ni catálogo) se queda en 4283.
+2. **Renumerar con Sincopa** (run 11768; adapter 1.3.4 corrige «03, 03, 05»; reingesta + promoción runs 11771–11780):
+   ya no queda ninguna pista sin lugar. Ivo: «Al despertar» a la 11 e «Imaginae» = «Imagíname»; Alirio Díaz: «Canción»
+   pasa a las notas de «Cuatro Piezas» con su crédito de Sojo (run 11785).
+3. **La Banda de la Banana Voladora** (run 11795, `scripts/fix-banana-voladora.ts`): 14 pistas del 3413 a «Tan Solo Una
+   Sonrisa» (2170); 3413 y 2160 fusionados en el debut 3826 «La Banana Voladora» (alias «La Banda de la Banana Voladora»;
+   descripciones unidas, pendientes de reescritura); artista 1798 fusionado en 1212 sin el alias «La Banda de».
