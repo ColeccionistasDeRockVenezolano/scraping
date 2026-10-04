@@ -1,0 +1,42 @@
+{
+  "section": "ethnic",
+  "dryRun": false,
+  "note": "Sincopa ethnic: pistas de popurrí y números con raya que el adapter 1.3.0 no leía (reingesta runs 11688–11697, adapter 1.3.1)",
+  "kinds": {
+    "album": {
+      "identities": 1,
+      "claims": 1,
+      "verdicts": {
+        "approve:auto-match": 1
+      },
+      "applied": 0,
+      "unchanged": 0,
+      "stillCandidate": 1,
+      "dismissed": 0,
+      "failed": 0
+    },
+    "track": {
+      "identities": 34,
+      "claims": 125,
+      "verdicts": {
+        "different:sin-coincidencia": 33,
+        "same:mismo-titulo-mismo-disco": 1
+      },
+      "applied": 6,
+      "unchanged": 18,
+      "stillCandidate": 120,
+      "dismissed": 0,
+      "failed": 1
+    }
+  },
+  "holds": [],
+  "duplicateFlags": [],
+  "errors": [
+    {
+      "kind": "track",
+      "identityRaw": "Grupo Raíces de Venezuela::Grupo Raíces de Venezuela::Visión Cultural",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    }
+  ],
+  "runId": 11703
+}

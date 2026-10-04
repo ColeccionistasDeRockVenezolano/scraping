@@ -1,0 +1,45 @@
+{
+  "section": "rock_pop",
+  "dryRun": false,
+  "note": "Sincopa rock_pop: créditos y membresías tras resolver discos, pistas, artistas y personas retenidas (runs 11602–11667)",
+  "kinds": {
+    "artist_membership": {
+      "identities": 0,
+      "claims": 0,
+      "verdicts": {},
+      "applied": 0,
+      "unchanged": 0,
+      "stillCandidate": 0,
+      "dismissed": 0,
+      "failed": 0
+    },
+    "album_credit": {
+      "identities": 918,
+      "claims": 4838,
+      "verdicts": {
+        "puente": 918
+      },
+      "applied": 441,
+      "unchanged": 2024,
+      "stillCandidate": 2393,
+      "dismissed": 0,
+      "failed": 0
+    },
+    "track_credit": {
+      "identities": 4911,
+      "claims": 30314,
+      "verdicts": {
+        "puente": 4911
+      },
+      "applied": 520,
+      "unchanged": 3014,
+      "stillCandidate": 26540,
+      "dismissed": 0,
+      "failed": 0
+    }
+  },
+  "holds": [],
+  "duplicateFlags": [],
+  "errors": [],
+  "runId": 11717
+}

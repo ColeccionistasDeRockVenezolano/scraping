@@ -1,0 +1,2697 @@
+{
+  "section": "traditional",
+  "dryRun": false,
+  "note": "Sincopa traditional: tercera pasada tras resolver artistas abiertos (run 11650), con evidencia del core (repertorio del disco, posición de la pista, decisión del ER anterior al homónimo)",
+  "kinds": {
+    "album": {
+      "identities": 48,
+      "claims": 407,
+      "verdicts": {
+        "hold:titulo-casi-igual-mismo-padre": 24,
+        "different:titulo-casi-igual-otro-repertorio": 2,
+        "same:titulo-casi-igual-mismo-repertorio": 5,
+        "approve:auto-match": 7,
+        "same:mismo-titulo-mismo-artista:decision-er-anterior": 7,
+        "hold:padre-sin-resolver": 2,
+        "different:sin-coincidencia": 1
+      },
+      "applied": 33,
+      "unchanged": 104,
+      "stillCandidate": 23,
+      "dismissed": 0,
+      "failed": 0
+    },
+    "track": {
+      "identities": 909,
+      "claims": 3505,
+      "verdicts": {
+        "different:sin-coincidencia": 526,
+        "hold:titulo-casi-igual-mismo-padre": 31,
+        "approve:auto-match": 11,
+        "hold:padre-sin-resolver": 233,
+        "different:solo-coincide-bajo-otro-padre": 22,
+        "same:mismo-titulo-mismo-disco": 32,
+        "hold:titulo-igual-con-contradiccion": 14,
+        "same:titulo-casi-igual-misma-posicion": 5,
+        "same:mismo-titulo-mismo-disco:decision-er-anterior": 35
+      },
+      "applied": 135,
+      "unchanged": 503,
+      "stillCandidate": 1582,
+      "dismissed": 0,
+      "failed": 28
+    }
+  },
+  "holds": [
+    {
+      "kind": "album",
+      "identityRaw": "Cecilia Todd::Romanciando",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "5536 «Romanciando (junto a Cali Fernández)»; 9155 «Romanciando / Romances Tradicionales Canarios»",
+      "claims": 6
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Cecilia Todd::Pajarillo Verde (CD Reissue)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "5540 «Pajarillo verde»",
+      "claims": 6
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Simón Díaz::Simón En Gaita - En Salsa",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "14620 «Simon en Salsa... En Gaita...»",
+      "claims": 14
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Simón Díaz::Las Gaitas De Simón",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "15251 «Gaitas y Parrandas con Simón»; 15257 «Las Gaitas De Simón (Culpable?)»; 15256 «Las Gaitas De Simón (Enemigo Público)»",
+      "claims": 41
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Simón Díaz::Tonadas y Llanerias",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "14610 «Tonadas»",
+      "claims": 14
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Simón Díaz::Golpe y Pasaje / Caballo Viejo",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "14608 «Golpe y pasaje»",
+      "claims": 14
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Simón Díaz::Cuenta y Canta Vol. 2",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "15265 «Cuenta y Canta Vol.1»",
+      "claims": 13
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol.2 (La Rondalla Vzlana)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "15266 «Muy Venezolano Vol.1 (La Rondalla Vzlana)»; 15276 «Muy Venezolano Vol. 2»",
+      "claims": 5
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol.3 (La Rondalla Vzlana)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "15266 «Muy Venezolano Vol.1 (La Rondalla Vzlana)»",
+      "claims": 5
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol.4 (La Rondalla Vzlana)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "15266 «Muy Venezolano Vol.1 (La Rondalla Vzlana)»",
+      "claims": 5
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Simón Díaz::Caracha Negro CD",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "15250 «Caracha Negro»",
+      "claims": 5
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol.5 (La Rondalla Vzlana)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "15266 «Muy Venezolano Vol.1 (La Rondalla Vzlana)»",
+      "claims": 5
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol.6 (La Rondalla Vzlana)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "15266 «Muy Venezolano Vol.1 (La Rondalla Vzlana)»",
+      "claims": 5
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Simón Díaz::Mis Tonadas 16 Grandes Exitos (Lo Máximo)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "15275 «16 Grandes Exitos (Lo Máximo)»; 14610 «Tonadas»",
+      "claims": 5
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Cecilia Todd::Ni Na, Ni Na",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "5539 «Nina, ni ná»; 8563 «Ni Na, Ni Na / Vol.2»",
+      "claims": 8
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Grupo::Música Tradicional Venezolana",
+      "rule": "padre-sin-resolver",
+      "detail": "el artista del disco aún no está en el core",
+      "claims": 16
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Grupo::Grupo Taburete",
+      "rule": "padre-sin-resolver",
+      "detail": "el artista del disco aún no está en el core",
+      "claims": 8
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 1",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "15266 «Muy Venezolano Vol.1 (La Rondalla Vzlana)»; 15276 «Muy Venezolano Vol. 2»",
+      "claims": 8
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 4",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "15276 «Muy Venezolano Vol. 2»; 15330 «Muy Venezolano Vol. 3»",
+      "claims": 8
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 5",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "15276 «Muy Venezolano Vol. 2»; 15330 «Muy Venezolano Vol. 3»",
+      "claims": 8
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 6",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "15276 «Muy Venezolano Vol. 2»; 15330 «Muy Venezolano Vol. 3»",
+      "claims": 8
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Simón Díaz::Las Gaitas De Simón Enemigo Publico Nº1",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "15256 «Las Gaitas De Simón (Enemigo Público)»",
+      "claims": 8
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Simón Díaz::Tonada y Pasaje La Yegua Blanca",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "15260 «Tonada y Pasaje»",
+      "claims": 8
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Simón Díaz::32 Grandes Exitos",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "15267 «32 Grandes Exitos (Serie 32)»",
+      "claims": 8
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Simón Díaz::Serie Lo Máximo Simón Díaz 16 Grandes Exitos",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "15275 «16 Grandes Exitos (Lo Máximo)»",
+      "claims": 8
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Simón Díaz::Serie Lo Máximo Simón Díaz-Mis Tonadas 16 Grandes Exitos",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "15275 «16 Grandes Exitos (Lo Máximo)»; 14619 «Las Tonadas de Simon»; 14629 «Simón Díaz Mis Tonadas & 16 Grandes Éxitos»",
+      "claims": 8
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Serenata Guayanesa::Una Amistad de 25 Años::- Serenata",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "156482 «Una Serenata para Serenata»; 156485 «Imitación y Presentación de Serenata Guayanesa»",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Serenata Guayanesa::Una Amistad de 25 Años::MIX No.3",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "62267 «MIX No.1»; 62279 «MIX No.2»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Serenata Guayanesa::Una Amistad de 25 Años::- A la Una",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "156482 «Una Serenata para Serenata»",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Las Gaitas De Simón::Los Chistes De Tio Simón",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Las Gaitas De Simón::La Tambo-Rock",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Las Gaitas De Simón::Muerde Aqui",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Las Gaitas De Simón::Qué Será De La Vida de...",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Las Gaitas De Simón::La Lapa",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Las Gaitas De Simón::Una Gaita pa' Germán",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Anselmo López::Clásicos De Oro::El Gavilán",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "63640 «El Gavilán Tocuyano»",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Anselmo López::El Rey De La Bandola Guacamaya Records &::Pajarillo Nº 3",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "63705 «El Pajarillo»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Cecilia Todd::Ni Na, Ni Na::Ni Na, Ni Na",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Cecilia Todd::Ni Na, Ni Na::Mañana Me Voy",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Cecilia Todd::Ni Na, Ni Na::Me He De Guardar",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Cecilia Todd::Ni Na, Ni Na::Garcita",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Cecilia Todd::Ni Na, Ni Na::Adiós Mujer",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Cecilia Todd::Ni Na, Ni Na::El Frutero",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Cecilia Todd::Ni Na, Ni Na::Valsinha",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Cecilia Todd::Ni Na, Ni Na::Muchacha",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Cecilia Todd::Ni Na, Ni Na::Cuento Para Un Niño",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Cecilia Todd::Ni Na, Ni Na::Llano",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::El Cangrejo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::El Perico",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::Madre Selva",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::El Porteño",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::Rosa De Amor",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::Los Hijos De La Noche",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::La Garragata",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::Los Vitocos",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::El Violinista",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::Mónica Pérez",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::El Vaivén De La Negra",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::Carmela",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Taburete::Celos De Un Parrandero",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Taburete::Gloria",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Taburete::La Gallina",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Taburete::Feliz Navidad",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Taburete::Sancocho E' Guesito",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Taburete::El Cocoye Coya y Mocho Carrillo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Taburete::El Gavilan",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Taburete::Los Viudos",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Taburete::Que Morena",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Taburete::La Tortuga",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::La Mona",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::El Billetero",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::Noches Caraqueñas",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::El Burro Bragaote",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::El Portugues",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::Las Cocineras",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::Las Golondrinas",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::La Chiva",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::Noches En Calma",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::El Chivo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Serenata Guayanesa::40 Años 40 Exitos Vol. 2::Calypso de El Callao Nº 2",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "64690 «Calypso de El Callao»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Serenata Guayanesa::40 Años 40 Exitos Vol. 2::La Zapoara",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "64682 «Pesca De Zapoara»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Serenata Guayanesa::40 Años 40 Exitos Vol. 2::La Paloma",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "64678 «Casta Paloma»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Torrealberos Juan Vicente Torrealba::La Música Más Pura y Bella de Venezuela::Concierto En La Llanura",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "65196 «La Llanura»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "La Sardina De Naiguatá::La Sardina De Naiguatá::La Matica",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "65716 «La Matica, Amarillo Es»",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "La Sardina De Naiguatá::La Sardina De Naiguatá (Edición Especial) Carnaval 84::La Matica",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "65721 «La Matica, Amarillo Es»",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "La Sardina De Naiguatá::Sabor A Pueblo::Patria Buena",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "77642 «Por La Patria Buena:»",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Reynaldo Armas::Luis Silva Serie Platinum::Es Que Te Quiero",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "66214 «La Quiero y Qué?»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 1::Mi Llano Es Un Paraíso",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 1::Lluvia",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 1::Linda Barinas",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 1::Mar De La Virgén Bonita",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 1::Mujer Guayanesa",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 1::Querer Traidor",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 1::Laguna Vieja",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 1::Ansiedad",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 1::Barloventeño",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 1::Junto al Jaguey",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 1::Tierra Negra",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 1::Esteros De Camaguán",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 1::Odio y Amor",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 4::Rosangelina",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 4::Pasillaneando",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 4::Traigo Polvo Del Camino",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 4::Amor Desconocido",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 4::Ramoncito En Cimarrona",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 4::Mi Tierra (Cumaná)",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 4::Ahora",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 4::Amor Enguayabao",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 4::María Laya",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 4::Guitarra Larense",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 4::Ingenuo Amor",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 4::Madrugada Llanera",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 4::El Beso Que Te Dí",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 4::Palmaritales De Arauca",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 4::Testigo De Un Romance",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 4::Luna y Lejanía",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 5::Amanecer Tuyero",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 5::Secretos de Amor",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 5::Dí",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 5::Flor Sabanera",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 5::Sueños De Ayer",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 5::Adios Barrancas de Arauca",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 5::La Noche De Tú Partida",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 5::Lejanía",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 5::Amor En Corozal",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 5::Cuatreros Del Chaparral",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 5::Tarde Gris",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 5::Piraguero",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 5::Muchachita Sabanera",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 5::Chaparralito Llanero",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 5::El Gavilán",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 6::Primaveral",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 6::Rosario",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 6::Morena",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 6::Vives En Mi",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 6::Chinita De Maracaibo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 6::Anhelante",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 6::Juan Solito",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 6::Ojitos Soñadores",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 6::Los Garceros",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 6::Sombra En Los Medanos",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 6::Caraqueñita",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 6::Aguacerito Llanero",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Serenata Guayanesa::Bolívar Canta a Bolívar::Joropo De Bolívar Para Simón",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "84487 «Simón, Simón»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Serenata Guayanesa::Bolívar Canta a Bolívar::Angostura",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "84488 «Fragmento 1 (Del Discurso de Angostura)»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Serenata Guayanesa::Bolívar Canta a Bolívar::Fragmento 2 (Del Discurso de Angostura)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "84488 «Fragmento 1 (Del Discurso de Angostura)»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Serenata Guayanesa::Bolívar Canta a Bolívar::Fragmento 3 (Del Discurso de Angostura)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "84488 «Fragmento 1 (Del Discurso de Angostura)»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Serenata Guayanesa::Bolívar Canta a Bolívar::Bolívar",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "84489 «Gaita a Bolívar»; 84492 «Bolívar, Gran Héroe (Poem)»; 84497 «Un Canto Para Bolívar (Poem)»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Serenata Guayanesa::Bolívar Canta a Bolívar::Fragmento 4 (Del Discurso de Angostura)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "84488 «Fragmento 1 (Del Discurso de Angostura)»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Serenata Guayanesa::Bolívar Canta a Bolívar::Fragmento 5 (Del Discurso de Angostura)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "84488 «Fragmento 1 (Del Discurso de Angostura)»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Serenata Guayanesa::Bolívar Canta a Bolívar::Este Niño Don Simón",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "84487 «Simón, Simón»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Serenata Guayanesa::Bolívar Canta a Bolívar::Fragmento 6 (Del Discurso de Angostura)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "84488 «Fragmento 1 (Del Discurso de Angostura)»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Serenata Guayanesa::Bolívar Canta a Bolívar::Fragmento 7 (Del Discurso de Angostura)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "84488 «Fragmento 1 (Del Discurso de Angostura)»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Serenata Guayanesa::Bolívar Canta a Bolívar::Fragmento 8 (Del Discurso de Angostura)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "84488 «Fragmento 1 (Del Discurso de Angostura)»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Simón En Gaita En Salsa::La Gaita De Las Cuñas Nº 2",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Simón En Gaita En Salsa::Gaita Llanera",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Simón En Gaita En Salsa::Abran La Puerta",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Simón En Gaita En Salsa::Doña Cuatricentenaria",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Simón En Gaita En Salsa::Tilin Tingolin",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Simón En Gaita En Salsa::Matrimonio No",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Simón En Gaita En Salsa::Mister Bugalu",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Simón En Gaita En Salsa::La Palma De Coco",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Simón En Gaita En Salsa::Carro Por Puesto",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Simón En Gaita En Salsa::Simón No Tiene Trabajo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Las Gaitas De Simón Enemigo Publico Nº1::La Gaita De Las Cuñas",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Las Gaitas De Simón Enemigo Publico Nº1::Los Borrachitos",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Las Gaitas De Simón Enemigo Publico Nº1::Los Pescadores",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Las Gaitas De Simón Enemigo Publico Nº1::Gaita De Las Locas Nº 2",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Las Gaitas De Simón Enemigo Publico Nº1::Las Caraotas",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Las Gaitas De Simón::La Gaita De Las Locas Nº 4",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Las Gaitas De Simón::Los Borrachitos Nº 3",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Las Gaitas De Simón::La Gaita De Las Cuñas",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Las Gaitas De Simón::Gaita En La Selva",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Las Gaitas De Simón::Las Negritas",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Las Gaitas De Simón::Gaita De Las Locas Nº 5",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Las Gaitas De Simón::Gaita De Las Cuñas",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Las Gaitas De Simón::Los Italianos",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Las Gaitas De Simón::Jaimito",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Tonadas y Llanerias::Tonada Del Niño",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Tonadas y Llanerias::Mi Querencia",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Tonadas y Llanerias::Tonada De Las Espigas",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Tonadas y Llanerias::Garcita",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Tonadas y Llanerias::Llamarada",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Tonadas y Llanerias::El Alcaravan",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Tonadas y Llanerias::Tonada De Luna Llena",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Tonadas y Llanerias::Voy A Buscar La Palmera",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Golpe y Pasaje Caballo Viejo::El Beso",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Golpe y Pasaje Caballo Viejo::Romance En la Lejania",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Golpe y Pasaje Caballo Viejo::La Negra",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Golpe y Pasaje Caballo Viejo::Angustia",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Golpe y Pasaje Caballo Viejo::El Preso",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Golpe y Pasaje Caballo Viejo::Lección De Canto",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Golpe y Pasaje Caballo Viejo::Caballo Viejo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Golpe y Pasaje Caballo Viejo::El Ermitaño",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Golpe y Pasaje Caballo Viejo::Mercedes",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Golpe y Pasaje Caballo Viejo::La Resbalosa",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Golpe y Pasaje Caballo Viejo::Despedida",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Tonada y Pasaje La Yegua Blanca::La Yegua Blanca",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Tonada y Pasaje La Yegua Blanca::Falconero",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Tonada y Pasaje La Yegua Blanca::Tonada Del Niño Campesino",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Tonada y Pasaje La Yegua Blanca::Un Campeonato En El Cielo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Tonada y Pasaje La Yegua Blanca::La Pena Del Becerrero",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Tonada y Pasaje La Yegua Blanca::Amor En Corozal",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Tonada y Pasaje La Yegua Blanca::Amanecer",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Tonada y Pasaje La Yegua Blanca::Bettsimar",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Tonadas Favoritas::El Loco Juan Carabina",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "84585 «El Loco Juan Carabina»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Amor Enguayabao::Amor Enguayabao",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "153195 «Amor Enguayabao»: el ER vio una contradicción (año, duración…)",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Amor Enguayabao::Presénteme Esa Muchacha",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "153196 «Presénteme Esa Muchacha»: el ER vio una contradicción (año, duración…)",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Amor Enguayabao::Campirana",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "153197 «Campirana»: el ER vio una contradicción (año, duración…)",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Amor Enguayabao::Yo Tengo Mi Turpial",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "153198 «Yo Tengo Mi Turpial»: el ER vio una contradicción (año, duración…)",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Amor Enguayabao::Contrapunteo Original Caballo Viejo",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "153200 «Contrapunteo Original \" Caballo Viejo \"»: el ER vio una contradicción (año, duración…)",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Amor Enguayabao::Bucerrito",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "153201 «Bucerrito»: el ER vio una contradicción (año, duración…)",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Amor Enguayabao::Las Cabañuelas",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "153202 «Las Cabañuelas»: el ER vio una contradicción (año, duración…)",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Amor Enguayabao::Regalo De Dios",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "153203 «Regalo De Dios»: el ER vio una contradicción (año, duración…)",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Cuenta y Canta Vol. 2::Amor Enguayabao",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Cuenta y Canta Vol. 2::Luna De Margarita",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Cuenta y Canta Vol. 2::Corral De Ordeño",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Cuenta y Canta Vol. 2::Presenteme Esa Muchacha",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Cuenta y Canta Vol. 2::Cristal",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Cuenta y Canta Vol. 2::Flor De Mayo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Cuenta y Canta Vol. 2::El Cuatro y El Interés",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Cuenta y Canta Vol. 2::Como Pequeña Gota De Rocio",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Cuenta y Canta Vol. 2::Tonada De Luna Llena",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Cuenta y Canta Vol. 2::La Pena Del Becerrero",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Cuenta y Canta Vol. 2::La Yegua Blanca",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Cuenta y Canta Vol. 2::El Becerrito",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Cuenta y Canta Vol. 2::Regalo De Dios (Canto a La Madre)",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Cuenta y Canta Vol. 2::Mercedes",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::32 Grandes Exitos::Caballo Viejo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::32 Grandes Exitos::El Becerrito",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::32 Grandes Exitos::Tonada De Luna Llena",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::32 Grandes Exitos::El Alcaraván",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::32 Grandes Exitos::Linda Barinas",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::32 Grandes Exitos::Luna De Margarita",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::32 Grandes Exitos::Cristal",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::32 Grandes Exitos::El Loco Juan Carabina",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::32 Grandes Exitos::Mercedes",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::32 Grandes Exitos::Canto A Caracas",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::32 Grandes Exitos::Pasaje Del Olvido",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::32 Grandes Exitos::Todo Este Campo Es Mío",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::32 Grandes Exitos::Pintiparao",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::32 Grandes Exitos::Por Elba",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::32 Grandes Exitos::Tonada Del Tormento",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::32 Grandes Exitos::Presenteme Esa Muchacha",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::32 Grandes Exitos::Tonada Del Cabrestero",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::32 Grandes Exitos::Sabana",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::32 Grandes Exitos::Mi Querencia",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::32 Grandes Exitos::Arbolito Sabanero",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::32 Grandes Exitos::Garcita",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::32 Grandes Exitos::Pasaje Nº 8",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::32 Grandes Exitos::Clavelito Colorado",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::32 Grandes Exitos::Flor De Mayo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::32 Grandes Exitos::El Negro y El Catire",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::32 Grandes Exitos::Tonada De Las Espigas",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::32 Grandes Exitos::Amor Enguayabao",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::32 Grandes Exitos::Mi Llano Es Un Paraiso",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::32 Grandes Exitos::Como Pequeña Gota De Rocio",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::32 Grandes Exitos::El Superbloque",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::32 Grandes Exitos::Qué Vale Más",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::32 Grandes Exitos::El Cantante",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Amorosamente::Palabras De Mujer",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "84716 «Mujer»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Mis Canciones::Pasaje Del Olvido",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "153026 «Pasaje del olvido»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Mis Canciones::Presénteme Esa Muchacha",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "153027 «Presénteme esa muchacha»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Mis Canciones::Aquel",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "153028 «Aquel»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Mis Canciones::Mercedes",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "153033 «Mercedes»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Mis Canciones::Caballo Viejo",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "153034 «Caballo viejo»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Serie Lo Máximo Simón Díaz 16 Grandes Exitos::Fiesta En Elorza",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Serie Lo Máximo Simón Díaz 16 Grandes Exitos::Maracaibo En La Noche",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Serie Lo Máximo Simón Díaz 16 Grandes Exitos::Pasillaneando",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Serie Lo Máximo Simón Díaz 16 Grandes Exitos::Mar De La Virgén Bonita",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Serie Lo Máximo Simón Díaz 16 Grandes Exitos::Ansiedad",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Serie Lo Máximo Simón Díaz 16 Grandes Exitos::La Pena Del Becerrero",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Serie Lo Máximo Simón Díaz 16 Grandes Exitos::Canto A Caracas",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Serie Lo Máximo Simón Díaz 16 Grandes Exitos::Una Casita Bella",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Serie Lo Máximo Simón Díaz 16 Grandes Exitos::Brisas Del Torbes",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Serie Lo Máximo Simón Díaz 16 Grandes Exitos::La Noche De Tu Partida",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Serie Lo Máximo Simón Díaz 16 Grandes Exitos::El Alcarabán",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Serie Lo Máximo Simón Díaz 16 Grandes Exitos::Ramoncito En Cimarrona",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Serie Lo Máximo Simón Díaz 16 Grandes Exitos::Valencia",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Serie Lo Máximo Simón Díaz 16 Grandes Exitos::Barquisimeto",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Serie Lo Máximo Simón Díaz 16 Grandes Exitos::Anhelante",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Serie Lo Máximo Simón Díaz 16 Grandes Exitos::Laguna Vieja",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Serie Lo Máximo Simón Díaz-Mis Tonadas 16 Grandes Exitos::Sabana",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Serie Lo Máximo Simón Díaz-Mis Tonadas 16 Grandes Exitos::Garcita",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Serie Lo Máximo Simón Díaz-Mis Tonadas 16 Grandes Exitos::La Pena Del Becerrero",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Serie Lo Máximo Simón Díaz-Mis Tonadas 16 Grandes Exitos::Tonada De Las Espigas",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Serie Lo Máximo Simón Díaz-Mis Tonadas 16 Grandes Exitos::Corral De Ordeño",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Serie Lo Máximo Simón Díaz-Mis Tonadas 16 Grandes Exitos::Tonada Del Cabrestero",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Serie Lo Máximo Simón Díaz-Mis Tonadas 16 Grandes Exitos::Voy A Buscar La Palmera",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Serie Lo Máximo Simón Díaz-Mis Tonadas 16 Grandes Exitos::Flor De Mayo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Serie Lo Máximo Simón Díaz-Mis Tonadas 16 Grandes Exitos::Así Es Mi Tierra",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Serie Lo Máximo Simón Díaz-Mis Tonadas 16 Grandes Exitos::Guillermina",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Serie Lo Máximo Simón Díaz-Mis Tonadas 16 Grandes Exitos::Tonadas",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Serie Lo Máximo Simón Díaz-Mis Tonadas 16 Grandes Exitos::Canto De Ordeño",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Serie Lo Máximo Simón Díaz-Mis Tonadas 16 Grandes Exitos::La Flor Del Apamate",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Serie Lo Máximo Simón Díaz-Mis Tonadas 16 Grandes Exitos::Tricolor",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Serie Lo Máximo Simón Díaz-Mis Tonadas 16 Grandes Exitos::Cimarrón",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Serie Lo Máximo Simón Díaz-Mis Tonadas 16 Grandes Exitos::Tonada Del Tormento",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::40 Años 40 Exitos::El Cuarto y El Interés",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "153125 «El Cuatro y el Intéres»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::40 Años 40 Exitos::Regalo De Dios (Canto A La Madre)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "153131 «Regalo de Dios»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::40 Años 40 Exitos::Caballo Viejo (Cuenta y Canta)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "153135 «Caballo Viejo»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Grandes Exitos::Tonada Del Cabestrero",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "84639 «Tonada Del Cabrestero»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Un Solo Pueblo::Venezuela Un Solo Pueblo::El Niño",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "78259 «El Niño Se Alumbra»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Quinteto Contrapunto::Música Popular y Folklórica de Venezuela 32 Grandes Exitos::La Bella",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "68221 «Bella Rosa»",
+      "claims": 5
+    }
+  ],
+  "duplicateFlags": [],
+  "errors": [
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Tonadas Favoritas::Tonada Del Cabrestero",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Tonadas Favoritas::Sabana",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Tonadas Favoritas::Mi Querencia",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Tonadas Favoritas::Clavelito Colorado",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::40 Años 40 Exitos::Adiós Barrancas De Arauca",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::40 Años 40 Exitos::Como Pequeña Gota De Rocío",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::40 Años 40 Exitos::El Gavilán",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::40 Años 40 Exitos::Al Niño Jesús Llanero",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::40 Años 40 Exitos::Mujer Guayanesa",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::40 Años 40 Exitos::Secretos De Amor",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::40 Años 40 Exitos::Contrapunteo",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Grandes Exitos::Caballo Viejo",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Grandes Exitos::Mercedes",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Grandes Exitos::El Becerrito",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Grandes Exitos::Mi Querencia",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Grandes Exitos::Sabana",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Grandes Exitos::Tonada De Luna Llena",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Grandes Exitos::Luna De Margarita",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Grandes Exitos::Cristal",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Grandes Exitos::Todo Este Campo Es Mío",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Grandes Exitos::Como Pequeña Gota De Rocío",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Grandes Exitos::Tonada De Las Espigas",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Grandes Exitos::Pasaje Del Olvido",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "María Teresa Chacín::Aguinaldos Que No Se Olvidan::Nace El Niño",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "María Teresa Chacín::Aguinaldos Que No Se Olvidan::Parranda",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Adilia Castillo::Lo Mejor de Adilia Castillo::Lucero De Los Llanos",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Torrealberos Juan Vicente Torrealba::La Música Más Pura y Bella de Venezuela::La Llanura",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rondalla Venezolana con El Mariachi Tapatio::Serenata A Venezuela::Por El Camino",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    }
+  ],
+  "runId": 11656,
+  "evidenceVerdicts": [
+    {
+      "kind": "album",
+      "identityRaw": "Simón Díaz::Tonadas y Canciones Vol. IV",
+      "rule": "titulo-casi-igual-otro-repertorio",
+      "detail": "{\"14610\":{\"shared\":0,\"total\":12,\"core\":10}}"
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Simón Díaz::Tonadas Favoritas",
+      "rule": "titulo-casi-igual-mismo-repertorio",
+      "targetId": 14610,
+      "detail": "Tonadas {\"14610\":{\"shared\":7,\"total\":14,\"core\":10}}"
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Simón Díaz::Amor Enguayabao",
+      "rule": "titulo-casi-igual-mismo-repertorio",
+      "targetId": 14624,
+      "detail": "Amor Enguayabo {\"14624\":{\"shared\":9,\"total\":10,\"core\":10}}"
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Simón Díaz::Mis Canciones",
+      "rule": "titulo-casi-igual-mismo-repertorio",
+      "targetId": 14615,
+      "detail": "Mis canciones: My Songs {\"14615\":{\"shared\":11,\"total\":15,\"core\":15}}"
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Simón Díaz::40 Años 40 Exitos",
+      "rule": "titulo-casi-igual-mismo-repertorio",
+      "targetId": 14621,
+      "detail": "40 Años 40 Exitos de Simon Diaz {\"14621\":{\"shared\":36,\"total\":40,\"core\":40}}"
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Simón Díaz::Grandes Exitos",
+      "rule": "titulo-casi-igual-mismo-repertorio",
+      "targetId": 14613,
+      "detail": "Sus grandes éxitos {\"14613\":{\"shared\":13,\"total\":24,\"core\":18},\"14629\":{\"shared\":6,\"total\":24,\"core\":16},\"15267\":{\"shared\":0,\"total\":24,\"core\":0},\"15275\":{\"shared\":0,\"total\":24,\"core\":0}}"
+    },
+    {
+      "kind": "album",
+      "identityRaw": "P::Que Palo De Arco",
+      "rule": "mismo-titulo-mismo-artista:decision-er-anterior",
+      "targetId": 8468,
+      "detail": "Que Palo De Arco {\"8467\":{\"shared\":0,\"total\":11,\"core\":0}}"
+    },
+    {
+      "kind": "album",
+      "identityRaw": "P::Ay Que Mujer!",
+      "rule": "mismo-titulo-mismo-artista:decision-er-anterior",
+      "targetId": 8469,
+      "detail": "Ay Que Mujer!"
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Grupo P::El Enamorao",
+      "rule": "mismo-titulo-mismo-artista:decision-er-anterior",
+      "targetId": 8464,
+      "detail": "El Enamorao"
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Grupo P::Mi Negra",
+      "rule": "mismo-titulo-mismo-artista:decision-er-anterior",
+      "targetId": 8465,
+      "detail": "Mi Negra"
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Grupo P::Palo De Arco Vol.3",
+      "rule": "mismo-titulo-mismo-artista:decision-er-anterior",
+      "targetId": 8466,
+      "detail": "Palo De Arco Vol.3 {\"8467\":{\"shared\":0,\"total\":10,\"core\":0}}"
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Grupo P::Palo De Arco",
+      "rule": "mismo-titulo-mismo-artista:decision-er-anterior",
+      "targetId": 8467,
+      "detail": "Palo De Arco {\"8466\":{\"shared\":0,\"total\":10,\"core\":0},\"8468\":{\"shared\":0,\"total\":10,\"core\":0}}"
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Grupo P::Hoy y Siempre",
+      "rule": "mismo-titulo-mismo-artista:decision-er-anterior",
+      "targetId": 8470,
+      "detail": "Hoy y Siempre"
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 3",
+      "rule": "titulo-casi-igual-otro-repertorio",
+      "detail": "{\"15276\":{\"shared\":0,\"total\":12,\"core\":12}}"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Amor Enguayabao::Lágrimas En El Caney",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 153199,
+      "detail": "Lágrimas En El l Caney"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Mis Canciones::Amor Enguayabao",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 153021,
+      "detail": "Amor enguayabado"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Mis Canciones::La Pena Del Becerrero",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 153023,
+      "detail": "Pena del becerrero"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Mis Canciones::El Becerrito",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 153025,
+      "detail": "Becerrito"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Mis Canciones::El Alcaraván",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 153031,
+      "detail": "Alcaraván"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::40 Años 40 Exitos::Mi Llano Es Un Paraíso",
+      "rule": "mismo-titulo-mismo-disco:decision-er-anterior",
+      "targetId": 153115,
+      "detail": "Mi Llano Es un Paraíso"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::40 Años 40 Exitos::Amor Enguayabao",
+      "rule": "mismo-titulo-mismo-disco:decision-er-anterior",
+      "targetId": 153116,
+      "detail": "Amor Enguayabao"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::40 Años 40 Exitos::Presénteme Esa Muchacha",
+      "rule": "mismo-titulo-mismo-disco:decision-er-anterior",
+      "targetId": 153120,
+      "detail": "Presénteme Esa Muchacha"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::40 Años 40 Exitos::Amanecer Tuyero",
+      "rule": "mismo-titulo-mismo-disco:decision-er-anterior",
+      "targetId": 153121,
+      "detail": "Amanecer Tuyero"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::40 Años 40 Exitos::Vives En Mí",
+      "rule": "mismo-titulo-mismo-disco:decision-er-anterior",
+      "targetId": 153123,
+      "detail": "Vives en Mi"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::40 Años 40 Exitos::Adiós Barrancas De Arauca",
+      "rule": "mismo-titulo-mismo-disco:decision-er-anterior",
+      "targetId": 153126,
+      "detail": "Adiós Barrancas de Arauca"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::40 Años 40 Exitos::Al Niño Jesús Llanero",
+      "rule": "mismo-titulo-mismo-disco:decision-er-anterior",
+      "targetId": 153129,
+      "detail": "Al Niño Jesús Llanero"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::40 Años 40 Exitos::Mujer Guayanesa",
+      "rule": "mismo-titulo-mismo-disco:decision-er-anterior",
+      "targetId": 153130,
+      "detail": "Mujer Guayanesa"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::40 Años 40 Exitos::Secretos De Amor",
+      "rule": "mismo-titulo-mismo-disco:decision-er-anterior",
+      "targetId": 153132,
+      "detail": "Secretos de Amor"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::40 Años 40 Exitos::Contrapunteo",
+      "rule": "mismo-titulo-mismo-disco:decision-er-anterior",
+      "targetId": 153133,
+      "detail": "Contrapunteo"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::40 Años 40 Exitos::Caballo Viejo",
+      "rule": "mismo-titulo-mismo-disco:decision-er-anterior",
+      "targetId": 153135,
+      "detail": "Caballo Viejo"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::40 Años 40 Exitos::Mi Querencia",
+      "rule": "mismo-titulo-mismo-disco:decision-er-anterior",
+      "targetId": 153136,
+      "detail": "Mi Querencia"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::40 Años 40 Exitos::Romance En La Lejanía",
+      "rule": "mismo-titulo-mismo-disco:decision-er-anterior",
+      "targetId": 153137,
+      "detail": "Romance en la Lejanía"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::40 Años 40 Exitos::Mercedes",
+      "rule": "mismo-titulo-mismo-disco:decision-er-anterior",
+      "targetId": 153139,
+      "detail": "Mercedes"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::40 Años 40 Exitos::Sabana",
+      "rule": "mismo-titulo-mismo-disco:decision-er-anterior",
+      "targetId": 153140,
+      "detail": "Sabana"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::40 Años 40 Exitos::Cristal",
+      "rule": "mismo-titulo-mismo-disco:decision-er-anterior",
+      "targetId": 153141,
+      "detail": "Cristal"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::40 Años 40 Exitos::Tonada De Luna Llena",
+      "rule": "mismo-titulo-mismo-disco:decision-er-anterior",
+      "targetId": 153142,
+      "detail": "Tonada de Luna Llena"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::40 Años 40 Exitos::Flor De Mayo",
+      "rule": "mismo-titulo-mismo-disco:decision-er-anterior",
+      "targetId": 153143,
+      "detail": "Flor de Mayo"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::40 Años 40 Exitos::El Negro y El Catire",
+      "rule": "mismo-titulo-mismo-disco:decision-er-anterior",
+      "targetId": 153144,
+      "detail": "El Negro y el Catire"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::40 Años 40 Exitos::Pasaje Del Olvido",
+      "rule": "mismo-titulo-mismo-disco:decision-er-anterior",
+      "targetId": 153146,
+      "detail": "Pasaje del Olvido"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::40 Años 40 Exitos::Pintiparao",
+      "rule": "mismo-titulo-mismo-disco:decision-er-anterior",
+      "targetId": 153148,
+      "detail": "Pintiparao"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::40 Años 40 Exitos::Clavelito Colorado",
+      "rule": "mismo-titulo-mismo-disco:decision-er-anterior",
+      "targetId": 153150,
+      "detail": "Clavelito Colorado"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::40 Años 40 Exitos::Tonada Del Cabestrero",
+      "rule": "mismo-titulo-mismo-disco:decision-er-anterior",
+      "targetId": 153151,
+      "detail": "Tonada del Cabestrero"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::40 Años 40 Exitos::Arbolito Sabanero",
+      "rule": "mismo-titulo-mismo-disco:decision-er-anterior",
+      "targetId": 153153,
+      "detail": "Arbolito Sabanero"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::40 Años 40 Exitos::Que Vale Más",
+      "rule": "mismo-titulo-mismo-disco:decision-er-anterior",
+      "targetId": 153154,
+      "detail": "Que Vale Mas"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Grandes Exitos::Caballo Viejo",
+      "rule": "mismo-titulo-mismo-disco:decision-er-anterior",
+      "targetId": 84636,
+      "detail": "Caballo Viejo"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Grandes Exitos::Mercedes",
+      "rule": "mismo-titulo-mismo-disco:decision-er-anterior",
+      "targetId": 84642,
+      "detail": "Mercedes"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Grandes Exitos::Sabana",
+      "rule": "mismo-titulo-mismo-disco:decision-er-anterior",
+      "targetId": 84641,
+      "detail": "Sabana"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Grandes Exitos::Tonada De Luna Llena",
+      "rule": "mismo-titulo-mismo-disco:decision-er-anterior",
+      "targetId": 84643,
+      "detail": "Tonada De Luna Llena"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Grandes Exitos::Luna De Margarita",
+      "rule": "mismo-titulo-mismo-disco:decision-er-anterior",
+      "targetId": 84640,
+      "detail": "Luna De Margarita"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Grandes Exitos::Cristal",
+      "rule": "mismo-titulo-mismo-disco:decision-er-anterior",
+      "targetId": 84644,
+      "detail": "Cristal"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Grandes Exitos::Todo Este Campo Es Mío",
+      "rule": "mismo-titulo-mismo-disco:decision-er-anterior",
+      "targetId": 84649,
+      "detail": "Todo Este Campo Es Mio"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Grandes Exitos::Tonada De Las Espigas",
+      "rule": "mismo-titulo-mismo-disco:decision-er-anterior",
+      "targetId": 84645,
+      "detail": "Tonada De Las Espigas"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Grandes Exitos::Pasaje Del Olvido",
+      "rule": "mismo-titulo-mismo-disco:decision-er-anterior",
+      "targetId": 84650,
+      "detail": "Pasaje Del Olvido"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Grandes Exitos::Tonada Del Tormento",
+      "rule": "mismo-titulo-mismo-disco:decision-er-anterior",
+      "targetId": 84648,
+      "detail": "Tonada Del Tormento"
+    }
+  ]
+}

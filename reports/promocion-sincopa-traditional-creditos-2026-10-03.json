@@ -1,0 +1,47 @@
+{
+  "section": "traditional",
+  "dryRun": false,
+  "note": "Sincopa traditional: créditos y membresías tras resolver discos, pistas, artistas y personas retenidas (runs 11602–11667)",
+  "kinds": {
+    "artist_membership": {
+      "identities": 13,
+      "claims": 39,
+      "verdicts": {
+        "puente": 13
+      },
+      "applied": 0,
+      "unchanged": 0,
+      "stillCandidate": 39,
+      "dismissed": 0,
+      "failed": 0
+    },
+    "album_credit": {
+      "identities": 696,
+      "claims": 3590,
+      "verdicts": {
+        "puente": 696
+      },
+      "applied": 510,
+      "unchanged": 2075,
+      "stillCandidate": 1080,
+      "dismissed": 0,
+      "failed": 0
+    },
+    "track_credit": {
+      "identities": 2207,
+      "claims": 13740,
+      "verdicts": {
+        "puente": 2207
+      },
+      "applied": 952,
+      "unchanged": 4922,
+      "stillCandidate": 7890,
+      "dismissed": 0,
+      "failed": 0
+    }
+  },
+  "holds": [],
+  "duplicateFlags": [],
+  "errors": [],
+  "runId": 11714
+}

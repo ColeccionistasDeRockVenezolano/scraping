@@ -1,0 +1,380 @@
+{
+  "section": "new_age",
+  "dryRun": false,
+  "note": "Sincopa new_age: cuarta pasada de discos y pistas (regla «otro número» y pistas madre del adapter 1.3.1)",
+  "kinds": {
+    "album": {
+      "identities": 0,
+      "claims": 0,
+      "verdicts": {},
+      "applied": 0,
+      "unchanged": 0,
+      "stillCandidate": 0,
+      "dismissed": 0,
+      "failed": 0
+    },
+    "track": {
+      "identities": 53,
+      "claims": 212,
+      "verdicts": {
+        "hold:titulo-igual-con-contradiccion": 38,
+        "different:sin-coincidencia": 1,
+        "approve:auto-match": 3,
+        "hold:titulo-casi-igual-mismo-padre": 11
+      },
+      "applied": 0,
+      "unchanged": 0,
+      "stillCandidate": 7,
+      "dismissed": 0,
+      "failed": 0
+    }
+  },
+  "holds": [
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Xen::Now You Know",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "150039 «Now You Know»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Xen::Held Apart",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "150040 «Held Apart»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Xen::Xen",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "150041 «Xen»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Xen::Sad Bitch",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "150042 «Sad Bitch»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Xen::Sisters",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "150043 «Sisters»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Xen::Slit Thru",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "150044 «Slit Thru»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Xen::Failed",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "150045 «Failed»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Xen::Family Violence",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "150046 «Family Violence»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Xen::Thievery",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "150047 «Thievery»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Xen::Lonely Thugg",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "150048 «Lonely Thugg»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Xen::Fish",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "150049 «Fish»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Xen::Wound",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "150050 «Wound»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Xen::Bullet Chained",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "150051 «Bullet Chained»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Xen::Tongue",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "150052 «Tongue»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Mutant::Alive",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "149893 «Alive»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Mutant::Mutant",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "149894 «Mutant»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Mutant::Vanity",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "149895 «Vanity»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Mutant::Sinner",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "149896 «Sinner»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Mutant::Sever",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "149898 «Sever»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Mutant::Beacon",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "149899 «Beacon»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Mutant::Snakes",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "149900 «Snakes»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Mutant::Else",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "149901 «Else»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Mutant::Hymn",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "149903 «Hymn»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Mutant::Front Load",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "149904 «Front Load»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Mutant::Gratitud",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "149905 «Gratitud»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Mutant::Siren Interlude",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "149907 «Siren Interlude»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Mutant::Extent",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "149908 «Extent»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Mutant::Faggot",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "149910 «Faggot»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Mutant::Soichiro",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "149911 «Soichiro»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Mutant::Peonies",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "149912 «Peonies»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Arca::Saunter",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "149805 «Saunter»: el ER vio una contradicción (año, duración…)",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Arca::Urchin",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "149806 «Urchin»: el ER vio una contradicción (año, duración…)",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Arca::Reverie",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "149807 «Reverie»: el ER vio una contradicción (año, duración…)",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Arca::Castration",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "149808 «Castration»: el ER vio una contradicción (año, duración…)",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Arca::Coraje",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "149810 «Coraje»: el ER vio una contradicción (año, duración…)",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Arca::Whip",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "149811 «Whip»: el ER vio una contradicción (año, duración…)",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Arca::Fugaces",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "149813 «Fugaces»: el ER vio una contradicción (año, duración…)",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Arca::Child",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "149815 «Child»: el ER vio una contradicción (año, duración…)",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Solar Concert For Bhagavan::Shangri-La",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "19529 «I ching, Shangri-la»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Continuvm::Continuvm... Y Salió El Sol",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "18045 «Continuvm»; 19530 «Y Salió el Sol»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::2012::Surical Kingdom Rave",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "17655 «Suricat Kingdom Rave»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::2012::Ground Zero Jam Sesion",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "17659 «Ground Zero Jam Session»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Dogon::Redunjusta::23 jhnohm",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "2001 «23 Jhnohm (Jhno Remix)»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Dogon::Redunjusta::Flesh Frogs",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "2006 «Flesh Frogs (Paul Godwin Remix)»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Dogon::Redunjusta::Desarollo V",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "2011 «Desarollo V (Miguel Noya Remix)»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Dogon::Redunjusta::Eulogy",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "2030 «Eulogy (Paul Godwin Remix)»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Dogon::Redunjusta::Increado",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "2042 «Increado (Miguel Noya Remix)»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Dogon::Redunjusta::Reza's Dream",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "2048 «Reza's Dream (Reza Remix)»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Dogon::Redunjusta::The Seer Mix",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "2054 «The Seer Mix (Seer Remix)»",
+      "claims": 4
+    }
+  ],
+  "duplicateFlags": [],
+  "errors": [],
+  "runId": 11709
+}

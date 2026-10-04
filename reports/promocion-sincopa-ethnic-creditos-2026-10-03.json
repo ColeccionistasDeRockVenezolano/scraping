@@ -1,0 +1,47 @@
+{
+  "section": "ethnic",
+  "dryRun": false,
+  "note": "Sincopa ethnic: créditos y membresías tras resolver discos, pistas, artistas y personas retenidas (runs 11602–11667)",
+  "kinds": {
+    "artist_membership": {
+      "identities": 8,
+      "claims": 24,
+      "verdicts": {
+        "puente": 8
+      },
+      "applied": 0,
+      "unchanged": 0,
+      "stillCandidate": 24,
+      "dismissed": 0,
+      "failed": 0
+    },
+    "album_credit": {
+      "identities": 123,
+      "claims": 740,
+      "verdicts": {
+        "puente": 123
+      },
+      "applied": 0,
+      "unchanged": 0,
+      "stillCandidate": 760,
+      "dismissed": 0,
+      "failed": 0
+    },
+    "track_credit": {
+      "identities": 432,
+      "claims": 2958,
+      "verdicts": {
+        "puente": 432
+      },
+      "applied": 0,
+      "unchanged": 0,
+      "stillCandidate": 2976,
+      "dismissed": 0,
+      "failed": 0
+    }
+  },
+  "holds": [],
+  "duplicateFlags": [],
+  "errors": [],
+  "runId": 11716
+}
