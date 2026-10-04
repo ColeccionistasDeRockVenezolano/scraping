@@ -1,0 +1,3171 @@
+{
+  "phase": "consolidar",
+  "confirm": false,
+  "runId": null,
+  "artists": 72,
+  "merged": 179,
+  "reviewsOpened": 22,
+  "pairsLeft": 24,
+  "samePage": [
+    {
+      "artist_id": "1093",
+      "person_id": "5335",
+      "url": "https://sincopa.com/rock_pop/artist_rock/dame_pa_matala.htm",
+      "ids": [
+        "624",
+        "628"
+      ]
+    },
+    {
+      "artist_id": "144",
+      "person_id": "6213",
+      "url": "https://sincopa.com/rock_pop/artist_rock/las_4monedas.htm",
+      "ids": [
+        "1095",
+        "1096",
+        "1097",
+        "1101"
+      ]
+    },
+    {
+      "artist_id": "1805",
+      "person_id": "3816",
+      "url": "https://sincopa.com/rock_pop/artist_rock/mirada_interna.htm",
+      "ids": [
+        "162",
+        "167"
+      ]
+    },
+    {
+      "artist_id": "218",
+      "person_id": "1003",
+      "url": "https://sincopa.com/rock_pop/artist_rock/seguridad_nacional.htm",
+      "ids": [
+        "1197",
+        "1199"
+      ]
+    },
+    {
+      "artist_id": "218",
+      "person_id": "2415",
+      "url": "https://sincopa.com/rock_pop/artist_rock/seguridad_nacional.htm",
+      "ids": [
+        "1192",
+        "1194"
+      ]
+    },
+    {
+      "artist_id": "3483",
+      "person_id": "106",
+      "url": "https://sincopa.com/jazz/artists/trabuco_vzlano.htm",
+      "ids": [
+        "9623",
+        "9624",
+        "9632"
+      ]
+    },
+    {
+      "artist_id": "3483",
+      "person_id": "20787",
+      "url": "https://sincopa.com/jazz/artists/trabuco_vzlano.htm",
+      "ids": [
+        "9634",
+        "9643"
+      ]
+    },
+    {
+      "artist_id": "3483",
+      "person_id": "20788",
+      "url": "https://sincopa.com/jazz/artists/trabuco_vzlano.htm",
+      "ids": [
+        "9636",
+        "9637"
+      ]
+    },
+    {
+      "artist_id": "3483",
+      "person_id": "3617",
+      "url": "https://sincopa.com/jazz/artists/trabuco_vzlano.htm",
+      "ids": [
+        "9630",
+        "9633",
+        "9642"
+      ]
+    },
+    {
+      "artist_id": "3679",
+      "person_id": "20994",
+      "url": "https://sincopa.com/latin_pop/artists_lat/bailatino.htm",
+      "ids": [
+        "9734",
+        "9737"
+      ]
+    },
+    {
+      "artist_id": "3751",
+      "person_id": "25184",
+      "url": "https://sincopa.com/latin_pop/artists_lat/sonero_clasico_del_caribe.htm",
+      "ids": [
+        "10014",
+        "9999"
+      ]
+    },
+    {
+      "artist_id": "3751",
+      "person_id": "25186",
+      "url": "https://sincopa.com/latin_pop/artists_lat/sonero_clasico_del_caribe.htm",
+      "ids": [
+        "10001",
+        "10011"
+      ]
+    },
+    {
+      "artist_id": "702",
+      "person_id": "5580",
+      "url": "https://sincopa.com/rock_pop/artist_rock/equilibrio_vital.htm",
+      "ids": [
+        "762",
+        "769"
+      ]
+    },
+    {
+      "artist_id": "702",
+      "person_id": "5741",
+      "url": "https://sincopa.com/rock_pop/artist_rock/equilibrio_vital.htm",
+      "ids": [
+        "764",
+        "765"
+      ]
+    }
+  ],
+  "groups": [
+    {
+      "artist": "Gaêlica",
+      "person": "Gabriel Figueira",
+      "artistId": 103,
+      "personId": 1176,
+      "keepId": 4960,
+      "dropIds": [
+        10285
+      ],
+      "before": [
+        "gaitas, flauta, whistles, voz, programación, secuencias",
+        "Bagpipe & Flute"
+      ],
+      "role": "gaitas, flauta, whistles, voz, programación, secuencias",
+      "from_year": 2001,
+      "to_year": null
+    },
+    {
+      "artist": "Gaêlica",
+      "person": "Rubén Gutiérrez",
+      "artistId": 103,
+      "personId": 282,
+      "keepId": 4961,
+      "dropIds": [
+        10286
+      ],
+      "before": [
+        "guitarra acústica, guitarra eléctrica, ukelele, cuatro, voz, programación, secuencias",
+        "Guitars, Ukelele & Cuatro"
+      ],
+      "role": "guitarra acústica, guitarra eléctrica, ukelele, cuatro, voz, programación, secuencias",
+      "from_year": 2001,
+      "to_year": null
+    },
+    {
+      "artist": "Gaêlica",
+      "person": "Armando Álvarez",
+      "artistId": 103,
+      "personId": 1179,
+      "keepId": 4959,
+      "dropIds": [
+        10287
+      ],
+      "before": [
+        "percusión étnica, voz, programación, secuencias",
+        "Ethnic Percussion"
+      ],
+      "role": "percusión étnica, voz, programación, secuencias",
+      "from_year": 2001,
+      "to_year": null
+    },
+    {
+      "artist": "Gaêlica",
+      "person": "Daniela Padrón",
+      "artistId": 103,
+      "personId": 7303,
+      "keepId": 4966,
+      "dropIds": [
+        10288
+      ],
+      "before": [
+        "violín, voces",
+        "Violin"
+      ],
+      "role": "violín, voces",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Gaêlica",
+      "person": "Julio Alcolcer",
+      "artistId": 103,
+      "personId": 1178,
+      "keepId": 4958,
+      "dropIds": [
+        10289
+      ],
+      "before": [
+        "percusión latina, cajón flamenco",
+        "Latin Percussion & Cajón"
+      ],
+      "role": "Latin Percussion & Cajón",
+      "from_year": 2001,
+      "to_year": 2006
+    },
+    {
+      "artist": "Gaêlica",
+      "person": "Santos Palazzi",
+      "artistId": 103,
+      "personId": 1182,
+      "keepId": 4962,
+      "dropIds": [
+        10290
+      ],
+      "before": [
+        "guitarra acústica, guitarra eléctrica",
+        "Guitars"
+      ],
+      "role": "guitarra acústica, guitarra eléctrica",
+      "from_year": 2001,
+      "to_year": 2006
+    },
+    {
+      "artist": "Gaêlica",
+      "person": "Roberto Percuoco",
+      "artistId": 103,
+      "personId": 1181,
+      "keepId": 4963,
+      "dropIds": [
+        10291
+      ],
+      "before": [
+        "bajo",
+        "Bass"
+      ],
+      "role": "Bass",
+      "from_year": 2001,
+      "to_year": 2006
+    },
+    {
+      "artist": "Gaêlica",
+      "person": "Boris Paredes",
+      "artistId": 103,
+      "personId": 1180,
+      "keepId": 4964,
+      "dropIds": [
+        10292
+      ],
+      "before": [
+        "violín",
+        "Violin"
+      ],
+      "role": "Violin",
+      "from_year": 2001,
+      "to_year": 2006
+    },
+    {
+      "artist": "Gaêlica",
+      "person": "César Natera",
+      "artistId": 103,
+      "personId": 960,
+      "keepId": 4965,
+      "dropIds": [
+        10293
+      ],
+      "before": [
+        "violín, anglunk, pads",
+        "Violin"
+      ],
+      "role": "violín, anglunk, pads",
+      "from_year": 2007,
+      "to_year": 2010
+    },
+    {
+      "artist": "Grand Bite",
+      "person": "Joseph De Luca",
+      "artistId": 105,
+      "personId": 5855,
+      "keepId": 881,
+      "dropIds": [
+        3569
+      ],
+      "before": [
+        "Lead Vocals",
+        "Vocals"
+      ],
+      "role": "Lead Vocals",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Grand Bite",
+      "person": "Andrés Guzmán",
+      "artistId": 105,
+      "personId": 2638,
+      "keepId": 871,
+      "dropIds": [
+        3570
+      ],
+      "before": [
+        "Guitar",
+        "Guitars, Choirs"
+      ],
+      "role": "Guitars, Choirs",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Grand Bite",
+      "person": "Antonio Medina",
+      "artistId": 105,
+      "personId": 5854,
+      "keepId": 882,
+      "dropIds": [
+        3572
+      ],
+      "before": [
+        "Guitar & Backing Vocals",
+        "Guitars, Choirs"
+      ],
+      "role": "Guitar & Backing Vocals",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Grand Bite",
+      "person": "José Luis Hernández",
+      "artistId": 105,
+      "personId": 2477,
+      "keepId": 887,
+      "dropIds": [
+        3573
+      ],
+      "before": [
+        "Guitar",
+        "Guitars"
+      ],
+      "role": "Guitar",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Grand Bite",
+      "person": "Luis Miguel Pérez",
+      "artistId": 105,
+      "personId": 476,
+      "keepId": 873,
+      "dropIds": [
+        3574
+      ],
+      "before": [
+        "Lead Vocals & Bass",
+        "Bass, Vocals"
+      ],
+      "role": "Lead Vocals & Bass",
+      "from_year": 1980,
+      "to_year": 1987
+    },
+    {
+      "artist": "Grand Bite",
+      "person": "Rubén Dario Perez",
+      "artistId": 105,
+      "personId": 2642,
+      "keepId": 874,
+      "dropIds": [
+        3578
+      ],
+      "before": [
+        "Lead Vocals",
+        "Vocals"
+      ],
+      "role": "Lead Vocals",
+      "from_year": 1996,
+      "to_year": 2000
+    },
+    {
+      "artist": "Fuhrend",
+      "person": "Víctor Santos",
+      "artistId": 1196,
+      "personId": 16215,
+      "keepId": 6259,
+      "dropIds": [
+        6260
+      ],
+      "before": [
+        "bajo y coros",
+        "integrante"
+      ],
+      "role": "bajo y coros",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "La Cándida Virgen",
+      "person": "Joel De Las Salas",
+      "artistId": 130,
+      "personId": 3247,
+      "keepId": 1030,
+      "dropIds": [
+        2755
+      ],
+      "before": [
+        "Guitar & Backing Vocals",
+        "Guitars (rhythm)"
+      ],
+      "role": "Guitar & Backing Vocals",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "La Cándida Virgen",
+      "person": "Jean De Las Salas",
+      "artistId": 130,
+      "personId": 3245,
+      "keepId": 1031,
+      "dropIds": [
+        2753
+      ],
+      "before": [
+        "Bass & Backing Vocals",
+        "Bass"
+      ],
+      "role": "Bass & Backing Vocals",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "La Cándida Virgen",
+      "person": "Jorge de Las Salas",
+      "artistId": 130,
+      "personId": 1253,
+      "keepId": 1034,
+      "dropIds": [
+        2754
+      ],
+      "before": [
+        "Vocals",
+        "Vocals (lead)"
+      ],
+      "role": "Vocals",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Laberinto",
+      "person": "Ronny Tuinman",
+      "artistId": 141,
+      "personId": 6181,
+      "keepId": 1074,
+      "dropIds": [
+        2683
+      ],
+      "before": [
+        "Lead Vocals",
+        "Vocals"
+      ],
+      "role": "Lead Vocals",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Laberinto",
+      "person": "Abel Cañizales",
+      "artistId": 141,
+      "personId": 2046,
+      "keepId": 1075,
+      "dropIds": [
+        2682
+      ],
+      "before": [
+        "Guitar & Backing Vocals",
+        "Guitars, Vocals (backing)"
+      ],
+      "role": "Guitar & Backing Vocals",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Laberinto",
+      "person": "Marco Bernal",
+      "artistId": 141,
+      "personId": 2663,
+      "keepId": 1078,
+      "dropIds": [
+        2680
+      ],
+      "before": [
+        "Drums & Percussion",
+        "Drums, Percussion"
+      ],
+      "role": "Drums & Percussion",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Laberinto",
+      "person": "Pablo Minoli",
+      "artistId": 141,
+      "personId": 1190,
+      "keepId": 1079,
+      "dropIds": [
+        2685
+      ],
+      "before": [
+        "Guitar & Backing Vocals",
+        "Guitars"
+      ],
+      "role": "Guitar & Backing Vocals",
+      "from_year": 1989,
+      "to_year": 2004
+    },
+    {
+      "artist": "Laberinto",
+      "person": "Gregorio Rangel",
+      "artistId": 141,
+      "personId": 1193,
+      "keepId": 1080,
+      "dropIds": [
+        2681
+      ],
+      "before": [
+        "Bass & Backing Vocals",
+        "Bass, Vocals (backing)"
+      ],
+      "role": "Bass & Backing Vocals",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Lapamariposa",
+      "person": "Carlos \"Tato\" Rodríguez",
+      "artistId": 143,
+      "personId": 3032,
+      "keepId": 5078,
+      "dropIds": [
+        9136
+      ],
+      "before": [
+        "batería, voz",
+        "Integrante"
+      ],
+      "role": "batería, voz",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Mantra",
+      "person": "Renzo Calma",
+      "artistId": 165,
+      "personId": 1379,
+      "keepId": 122,
+      "dropIds": [
+        1371,
+        2314
+      ],
+      "before": [
+        "Guitar",
+        "Keyboards & Sequences",
+        "Guitars"
+      ],
+      "role": "Keyboards & Sequences, Guitar",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Mantra",
+      "person": "Rony Borges",
+      "artistId": 165,
+      "personId": 1381,
+      "keepId": 128,
+      "dropIds": [
+        1370
+      ],
+      "before": [
+        "Drums",
+        "Keyboards & Sequences"
+      ],
+      "role": "Keyboards & Sequences, Drums",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Mantra",
+      "person": "Andrés Buitrago",
+      "artistId": 165,
+      "personId": 1380,
+      "keepId": 130,
+      "dropIds": [
+        2313
+      ],
+      "before": [
+        "Guitar",
+        "Guitars"
+      ],
+      "role": "Guitar",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Baquedanu's",
+      "person": "Santiago Baquedano",
+      "artistId": 1656,
+      "personId": 20657,
+      "keepId": 7325,
+      "dropIds": [
+        9617
+      ],
+      "before": [
+        "saxos, flauta, clarinete, trompeta y piano",
+        "Sax"
+      ],
+      "role": "saxos, flauta, clarinete, trompeta y piano, Sax",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Baquedanu's",
+      "person": "Rafael Hernández",
+      "artistId": 1656,
+      "personId": 12625,
+      "keepId": 7331,
+      "dropIds": [
+        9619
+      ],
+      "before": [
+        "guitarra",
+        "Guitar"
+      ],
+      "role": "Guitar",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Baquedanu's",
+      "person": "Honorio Ledezma",
+      "artistId": 1656,
+      "personId": 20659,
+      "keepId": 7332,
+      "dropIds": [
+        9620
+      ],
+      "before": [
+        "bajo",
+        "Bass"
+      ],
+      "role": "Bass",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Baquedanu's",
+      "person": "Alexis Ramos",
+      "artistId": 1656,
+      "personId": 20660,
+      "keepId": 7333,
+      "dropIds": [
+        9621
+      ],
+      "before": [
+        "batería",
+        "Drums"
+      ],
+      "role": "Drums",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Masseratti 2lts",
+      "person": "Armando Gómez",
+      "artistId": 168,
+      "personId": 1096,
+      "keepId": 5124,
+      "dropIds": [
+        9607
+      ],
+      "before": [
+        "programación, teclados, cuatro, acordeón, flauta, guitarra acústica, voces",
+        "Keyboards, Programming, Cuatro, Acoustic Guitar, Accordion, Flute & Vocals"
+      ],
+      "role": "Keyboards, Programming, Cuatro, Acoustic Guitar, Accordion, Flute & Vocals",
+      "from_year": 2002,
+      "to_year": 2011
+    },
+    {
+      "artist": "Masseratti 2lts",
+      "person": "Fernando Gómez",
+      "artistId": 168,
+      "personId": 1099,
+      "keepId": 5125,
+      "dropIds": [
+        9608
+      ],
+      "before": [
+        "percusión, grabación y edición de voces",
+        "Vocals, Percussion & Vocal Digital Editing"
+      ],
+      "role": "Vocals, Percussion & Vocal Digital Editing, grabación, edición de voces",
+      "from_year": 2002,
+      "to_year": 2011
+    },
+    {
+      "artist": "Paul Gillman",
+      "person": "Paul Silvestre Gillman",
+      "artistId": 1951,
+      "personId": 3467,
+      "keepId": 1587,
+      "dropIds": [
+        3757
+      ],
+      "before": [
+        "Titular del proyecto",
+        "Vocals"
+      ],
+      "role": "Titular del proyecto, Vocals",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Intemperia",
+      "person": "Carlos Robles",
+      "artistId": 1968,
+      "personId": 5968,
+      "keepId": 970,
+      "dropIds": [
+        3969
+      ],
+      "before": [
+        "Guitar & Sequences",
+        "Guitars"
+      ],
+      "role": "Guitar & Sequences",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Intemperia",
+      "person": "Juls Sosa",
+      "artistId": 1968,
+      "personId": 5956,
+      "keepId": 972,
+      "dropIds": [
+        3970
+      ],
+      "before": [
+        "Lead Vocals",
+        "Vocals"
+      ],
+      "role": "Lead Vocals",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Intemperia",
+      "person": "Rony Borges",
+      "artistId": 1968,
+      "personId": 1381,
+      "keepId": 971,
+      "dropIds": [
+        3971
+      ],
+      "before": [
+        "Drum & Sequences",
+        "Drums"
+      ],
+      "role": "Drum & Sequences",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Vile Hex",
+      "person": "Paul Quintero",
+      "artistId": 2033,
+      "personId": 13314,
+      "keepId": 1432,
+      "dropIds": [
+        3060
+      ],
+      "before": [
+        "Guitar",
+        "Guitars"
+      ],
+      "role": "Guitar",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Vile Hex",
+      "person": "Javier López",
+      "artistId": 2033,
+      "personId": 6080,
+      "keepId": 1433,
+      "dropIds": [
+        3061
+      ],
+      "before": [
+        "Guitar",
+        "Guitars"
+      ],
+      "role": "Guitar",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Reciclaje",
+      "person": "Romains Rosas",
+      "artistId": 207,
+      "personId": 1396,
+      "keepId": 5186,
+      "dropIds": [
+        9299
+      ],
+      "before": [
+        "voz y guitarra",
+        "Lead Vocals & Guitars"
+      ],
+      "role": "Lead Vocals & Guitars",
+      "from_year": 2008,
+      "to_year": 2008
+    },
+    {
+      "artist": "Resistencia",
+      "person": "Alexis Peña",
+      "artistId": 210,
+      "personId": 921,
+      "keepId": 1161,
+      "dropIds": [
+        1656
+      ],
+      "before": [
+        "Vocals",
+        "Vocals (lead)"
+      ],
+      "role": "Vocals",
+      "from_year": 2003,
+      "to_year": 2010
+    },
+    {
+      "artist": "Serenata Guayanesa",
+      "person": "Miguel Angel Bosch",
+      "artistId": 221,
+      "personId": 21977,
+      "keepId": 5206,
+      "dropIds": [
+        10153
+      ],
+      "before": [
+        "integrante",
+        "Tenor Vocals, First Cuatro & Guitar"
+      ],
+      "role": "Tenor Vocals, First Cuatro & Guitar",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Serenata Guayanesa",
+      "person": "Iván Pérez Rossi",
+      "artistId": 221,
+      "personId": 20644,
+      "keepId": 5204,
+      "dropIds": [
+        10155
+      ],
+      "before": [
+        "cuatro, barítono",
+        "Baritone Vocals & Second Cuatro"
+      ],
+      "role": "Baritone Vocals & Second Cuatro",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Serenata Guayanesa",
+      "person": "César Pérez Rossi",
+      "artistId": 221,
+      "personId": 912,
+      "keepId": 5205,
+      "dropIds": [
+        10156
+      ],
+      "before": [
+        "cuatro, maracas, voz de bajo",
+        "Bass Vocals & Percussion"
+      ],
+      "role": "cuatro, maracas, voz de bajo",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Serenata Guayanesa",
+      "person": "Hernán Gamboa",
+      "artistId": 221,
+      "personId": 913,
+      "keepId": 5203,
+      "dropIds": [
+        10157
+      ],
+      "before": [
+        "cuatro, tenor",
+        "Tenor Vocals & First Cuatro"
+      ],
+      "role": "Tenor Vocals & First Cuatro",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Serenata Guayanesa",
+      "person": "Mauricio Castro Rodríguez",
+      "artistId": 221,
+      "personId": 914,
+      "keepId": 5202,
+      "dropIds": [
+        9300
+      ],
+      "before": [
+        "contratenor, percusión; tenor",
+        "Tenor Vocals & Percussion"
+      ],
+      "role": "contratenor, percusión; tenor",
+      "from_year": 1975,
+      "to_year": 1978
+    },
+    {
+      "artist": "Bacro",
+      "person": "José Romero",
+      "artistId": 2250,
+      "personId": 486,
+      "keepId": 8238,
+      "dropIds": [
+        9225
+      ],
+      "before": [
+        "guitarra líder",
+        "Integrante"
+      ],
+      "role": "guitarra líder",
+      "from_year": 1971,
+      "to_year": 1972
+    },
+    {
+      "artist": "Todosantos",
+      "person": "Alberto Stangarone",
+      "artistId": 248,
+      "personId": 1022,
+      "keepId": 5279,
+      "dropIds": [
+        9149
+      ],
+      "before": [
+        "guitarra, voz, programación",
+        "Integrante"
+      ],
+      "role": "guitarra, voz, programación",
+      "from_year": 2003,
+      "to_year": null
+    },
+    {
+      "artist": "Torre de Marfil",
+      "person": "Marcos Rodríguez",
+      "artistId": 25,
+      "personId": 1659,
+      "keepId": 1312,
+      "dropIds": [
+        1874
+      ],
+      "before": [
+        "Vocals & Guitar",
+        "Vocals, Guitars"
+      ],
+      "role": "Vocals & Guitar",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Torre de Marfil",
+      "person": "Jorge Romero",
+      "artistId": 25,
+      "personId": 2148,
+      "keepId": 1315,
+      "dropIds": [
+        1873
+      ],
+      "before": [
+        "Guitar",
+        "Guitars"
+      ],
+      "role": "Guitar",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Torre de Marfil",
+      "person": "Pablo López",
+      "artistId": 25,
+      "personId": 3181,
+      "keepId": 1316,
+      "dropIds": [
+        1876
+      ],
+      "before": [
+        "Guitar",
+        "Guitars"
+      ],
+      "role": "Guitar",
+      "from_year": 1996,
+      "to_year": 1999
+    },
+    {
+      "artist": "Torre de Marfil",
+      "person": "Miguel Pepe",
+      "artistId": 25,
+      "personId": 2149,
+      "keepId": 1317,
+      "dropIds": [
+        1880
+      ],
+      "before": [
+        "Bass & Acoustic Guitar",
+        "Bass"
+      ],
+      "role": "Bass & Acoustic Guitar",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Dimension Latina",
+      "person": "José Rodríguez",
+      "artistId": 270,
+      "personId": 167,
+      "keepId": 5319,
+      "dropIds": [
+        9758
+      ],
+      "before": [
+        "timbal y bongó",
+        "Timbales"
+      ],
+      "role": "timbal y bongó",
+      "from_year": 1972,
+      "to_year": 1998
+    },
+    {
+      "artist": "Dimension Latina",
+      "person": "Argenis Carruyo",
+      "artistId": 270,
+      "personId": 1044,
+      "keepId": 5323,
+      "dropIds": [
+        9769
+      ],
+      "before": [
+        "integrante",
+        "Vocals"
+      ],
+      "role": "Vocals",
+      "from_year": 1976,
+      "to_year": 1981
+    },
+    {
+      "artist": "Dimension Latina",
+      "person": "Rodrigo Mendoza",
+      "artistId": 270,
+      "personId": 1049,
+      "keepId": 5324,
+      "dropIds": [
+        9770
+      ],
+      "before": [
+        "integrante",
+        "Vocals"
+      ],
+      "role": "Vocals",
+      "from_year": 1977,
+      "to_year": 1978
+    },
+    {
+      "artist": "Dimension Latina",
+      "person": "Andy Montañez",
+      "artistId": 270,
+      "personId": 1038,
+      "keepId": 5325,
+      "dropIds": [
+        9771
+      ],
+      "before": [
+        "integrante",
+        "Vocals"
+      ],
+      "role": "Vocals",
+      "from_year": 1977,
+      "to_year": 1980
+    },
+    {
+      "artist": "Dimension Latina",
+      "person": "Samuel Del Real",
+      "artistId": 270,
+      "personId": 8324,
+      "keepId": 9154,
+      "dropIds": [
+        9763
+      ],
+      "before": [
+        "Integrante",
+        "Piano"
+      ],
+      "role": "Piano",
+      "from_year": 1979,
+      "to_year": 1981
+    },
+    {
+      "artist": "Dimension Latina",
+      "person": "Gustavo Carmona",
+      "artistId": 270,
+      "personId": 1048,
+      "keepId": 9156,
+      "dropIds": [
+        9794
+      ],
+      "before": [
+        "Integrante",
+        "Bass"
+      ],
+      "role": "Bass",
+      "from_year": 1976,
+      "to_year": 1981
+    },
+    {
+      "artist": "Dimension Latina",
+      "person": "Luis Machado",
+      "artistId": 270,
+      "personId": 24894,
+      "keepId": 9158,
+      "dropIds": [
+        9800
+      ],
+      "before": [
+        "Integrante",
+        "Bongos"
+      ],
+      "role": "Bongos",
+      "from_year": 1978,
+      "to_year": 1982
+    },
+    {
+      "artist": "Dimension Latina",
+      "person": "Alejandro Pérez Palma",
+      "artistId": 270,
+      "personId": 21730,
+      "keepId": 9159,
+      "dropIds": [
+        9787
+      ],
+      "before": [
+        "Integrante",
+        "Trombone"
+      ],
+      "role": "Trombone",
+      "from_year": 1989,
+      "to_year": null
+    },
+    {
+      "artist": "Dimension Latina",
+      "person": "Julio Moreno",
+      "artistId": 270,
+      "personId": 24882,
+      "keepId": 9160,
+      "dropIds": [
+        9779
+      ],
+      "before": [
+        "Integrante",
+        "Vocals"
+      ],
+      "role": "Vocals",
+      "from_year": 1991,
+      "to_year": null
+    },
+    {
+      "artist": "Dimension Latina",
+      "person": "Carlos Guerra Jr.",
+      "artistId": 270,
+      "personId": 1047,
+      "keepId": 9163,
+      "dropIds": [
+        9785
+      ],
+      "before": [
+        "Integrante",
+        "Trombone"
+      ],
+      "role": "Trombone",
+      "from_year": 1975,
+      "to_year": 1981
+    },
+    {
+      "artist": "Dimension Latina",
+      "person": "Jesús Torres",
+      "artistId": 270,
+      "personId": 2680,
+      "keepId": 9165,
+      "dropIds": [
+        9798
+      ],
+      "before": [
+        "Integrante",
+        "Bass"
+      ],
+      "role": "Bass",
+      "from_year": 1989,
+      "to_year": null
+    },
+    {
+      "artist": "Dimension Latina",
+      "person": "Freddy Nieto",
+      "artistId": 270,
+      "personId": 22813,
+      "keepId": 9170,
+      "dropIds": [
+        9773
+      ],
+      "before": [
+        "Integrante",
+        "Vocals"
+      ],
+      "role": "Vocals",
+      "from_year": 1982,
+      "to_year": null
+    },
+    {
+      "artist": "Dimension Latina",
+      "person": "Wladimir Lozano",
+      "artistId": 270,
+      "personId": 1042,
+      "keepId": 9173,
+      "dropIds": [
+        9768
+      ],
+      "before": [
+        "Integrante",
+        "Vocals"
+      ],
+      "role": "Vocals",
+      "from_year": 1974,
+      "to_year": 1977
+    },
+    {
+      "artist": "Wrathful",
+      "person": "Jesús Medina",
+      "artistId": 298,
+      "personId": 13316,
+      "keepId": 1436,
+      "dropIds": [
+        3098
+      ],
+      "before": [
+        "Guitar",
+        "Guitars"
+      ],
+      "role": "Guitar",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Wrathful",
+      "person": "Gabriel López",
+      "artistId": 298,
+      "personId": 13317,
+      "keepId": 1437,
+      "dropIds": [
+        3099
+      ],
+      "before": [
+        "Guitar",
+        "Guitars"
+      ],
+      "role": "Guitar",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Anfitrite",
+      "person": "Ysis Vivas",
+      "artistId": 320,
+      "personId": 4752,
+      "keepId": 179,
+      "dropIds": [
+        2760
+      ],
+      "before": [
+        "Vocals",
+        "Vocals (soprano)"
+      ],
+      "role": "Vocals, Vocals (soprano)",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Anfitrite",
+      "person": "Islander Boza",
+      "artistId": 320,
+      "personId": 4220,
+      "keepId": 358,
+      "dropIds": [
+        2756
+      ],
+      "before": [
+        "Guitar & Vocals",
+        "Guitars, Vocals (?-2016), Guitars"
+      ],
+      "role": "Guitar & Vocals",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Anfitrite",
+      "person": "Sting Weiss",
+      "artistId": 320,
+      "personId": 4750,
+      "keepId": 356,
+      "dropIds": [
+        2757
+      ],
+      "before": [
+        "Keyboards, Orchestrations & Harsh Vocals",
+        "Keyboards, Bagpipes, Vocals, Programming"
+      ],
+      "role": "Keyboards, Bagpipes, Vocals, Programming, Orchestrations",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Anfitrite",
+      "person": "TJ Richardson",
+      "artistId": 320,
+      "personId": 4754,
+      "keepId": 360,
+      "dropIds": [
+        2759
+      ],
+      "before": [
+        "Guitar",
+        "Guitars"
+      ],
+      "role": "Guitar",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Landsemk",
+      "person": "Marcial Meléndez",
+      "artistId": 322,
+      "personId": 6193,
+      "keepId": 1081,
+      "dropIds": [
+        2021
+      ],
+      "before": [
+        "Guitar",
+        "Guitars"
+      ],
+      "role": "Guitar",
+      "from_year": 2017,
+      "to_year": null
+    },
+    {
+      "artist": "Landsemk",
+      "person": "José \"Nacho\" Rondón",
+      "artistId": 322,
+      "personId": 6188,
+      "keepId": 1086,
+      "dropIds": [
+        2025
+      ],
+      "before": [
+        "Guitar",
+        "Guitars"
+      ],
+      "role": "Guitar",
+      "from_year": 2004,
+      "to_year": 2012
+    },
+    {
+      "artist": "Landsemk",
+      "person": "Jesús Espinoza",
+      "artistId": 322,
+      "personId": 5677,
+      "keepId": 1087,
+      "dropIds": [
+        2023
+      ],
+      "before": [
+        "Guitar",
+        "Guitars"
+      ],
+      "role": "Guitar",
+      "from_year": 2006,
+      "to_year": 2012
+    },
+    {
+      "artist": "Landsemk",
+      "person": "Francisco Velásquez",
+      "artistId": 322,
+      "personId": 6189,
+      "keepId": 1090,
+      "dropIds": [
+        2026
+      ],
+      "before": [
+        "Guitar",
+        "Guitars"
+      ],
+      "role": "Guitar",
+      "from_year": 2004,
+      "to_year": null
+    },
+    {
+      "artist": "Gastonia",
+      "person": "Endi Paredes",
+      "artistId": 325,
+      "personId": 5821,
+      "keepId": 852,
+      "dropIds": [
+        3802
+      ],
+      "before": [
+        "Lead Vocals",
+        "Vocals"
+      ],
+      "role": "Lead Vocals",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Gastonia",
+      "person": "César Rosales",
+      "artistId": 325,
+      "personId": 5807,
+      "keepId": 857,
+      "dropIds": [
+        3803
+      ],
+      "before": [
+        "Guitar",
+        "Guitars"
+      ],
+      "role": "Guitar",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Gastonia",
+      "person": "Simón Montilla",
+      "artistId": 325,
+      "personId": 5811,
+      "keepId": 859,
+      "dropIds": [
+        3804
+      ],
+      "before": [
+        "Guitar",
+        "Guitars"
+      ],
+      "role": "Guitar",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Gastonia",
+      "person": "Luis Pineda",
+      "artistId": 325,
+      "personId": 5810,
+      "keepId": 860,
+      "dropIds": [
+        3805
+      ],
+      "before": [
+        "Guitar",
+        "Guitars"
+      ],
+      "role": "Guitar",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Kolman",
+      "person": "Javier López",
+      "artistId": 332,
+      "personId": 6080,
+      "keepId": 2999,
+      "dropIds": [
+        3336
+      ],
+      "before": [
+        "Bass",
+        "Bass"
+      ],
+      "role": "Bass",
+      "from_year": 2016,
+      "to_year": 2017
+    },
+    {
+      "artist": "Kolman",
+      "person": "Pablo Pérez",
+      "artistId": 332,
+      "personId": 6091,
+      "keepId": 3000,
+      "dropIds": [
+        3337
+      ],
+      "before": [
+        "Drums",
+        "Drums"
+      ],
+      "role": "Drums",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Kolman",
+      "person": "José Colman",
+      "artistId": 332,
+      "personId": 6083,
+      "keepId": 3001,
+      "dropIds": [
+        3335
+      ],
+      "before": [
+        "Guitars (rhythm)",
+        "Guitars"
+      ],
+      "role": "Guitars (rhythm)",
+      "from_year": 2012,
+      "to_year": 2017
+    },
+    {
+      "artist": "Haz",
+      "person": "Gerardo Valladares",
+      "artistId": 356,
+      "personId": 5896,
+      "keepId": 934,
+      "dropIds": [
+        2824
+      ],
+      "before": [
+        "Bass & Backing Vocals",
+        "Bass"
+      ],
+      "role": "Bass & Backing Vocals",
+      "from_year": 1988,
+      "to_year": null
+    },
+    {
+      "artist": "Haz",
+      "person": "Carlos Santos",
+      "artistId": 356,
+      "personId": 276,
+      "keepId": 936,
+      "dropIds": [
+        2825
+      ],
+      "before": [
+        "Drums & Backing Vocals",
+        "Drums"
+      ],
+      "role": "Drums & Backing Vocals",
+      "from_year": 1988,
+      "to_year": null
+    },
+    {
+      "artist": "Haz",
+      "person": "Edwin Canchica",
+      "artistId": 356,
+      "personId": 3671,
+      "keepId": 933,
+      "dropIds": [
+        2826
+      ],
+      "before": [
+        "Lead Guitar & Backing Vocals",
+        "Guitars"
+      ],
+      "role": "Lead Guitar & Backing Vocals",
+      "from_year": 1988,
+      "to_year": null
+    },
+    {
+      "artist": "Haz",
+      "person": "Frank Fiore",
+      "artistId": 356,
+      "personId": 5898,
+      "keepId": 932,
+      "dropIds": [
+        2827
+      ],
+      "before": [
+        "2nd Guitar, Lead & Backing Vocals",
+        "Guitars (rhythm), Vocals"
+      ],
+      "role": "Guitars (rhythm), Vocals, 2nd Guitar",
+      "from_year": 1983,
+      "to_year": 1988
+    },
+    {
+      "artist": "Haz",
+      "person": "Rafael Fiore",
+      "artistId": 356,
+      "personId": 5414,
+      "keepId": 928,
+      "dropIds": [
+        2828
+      ],
+      "before": [
+        "Keyboards, Lead & Backing Vocals",
+        "Keyboards, Vocals"
+      ],
+      "role": "Keyboards, Lead & Backing Vocals",
+      "from_year": 1983,
+      "to_year": 1988
+    },
+    {
+      "artist": "Haz",
+      "person": "Andrés García",
+      "artistId": 356,
+      "personId": 1351,
+      "keepId": 938,
+      "dropIds": [
+        2829
+      ],
+      "before": [
+        "Bass & Backing Vocals",
+        "Bass"
+      ],
+      "role": "Bass & Backing Vocals",
+      "from_year": 1983,
+      "to_year": null
+    },
+    {
+      "artist": "Haz",
+      "person": "Cosme Fernández",
+      "artistId": 356,
+      "personId": 5902,
+      "keepId": 935,
+      "dropIds": [
+        2830
+      ],
+      "before": [
+        "Lead Guitar & Backing Vocals",
+        "Guitars"
+      ],
+      "role": "Lead Guitar & Backing Vocals",
+      "from_year": 1983,
+      "to_year": null
+    },
+    {
+      "artist": "Epitafio",
+      "person": "Ricardo Vizcarrondo",
+      "artistId": 374,
+      "personId": 1909,
+      "keepId": 741,
+      "dropIds": [
+        2072
+      ],
+      "before": [
+        "Guitar",
+        "Guitars"
+      ],
+      "role": "Guitar",
+      "from_year": 1992,
+      "to_year": null
+    },
+    {
+      "artist": "Epitafio",
+      "person": "Richard Romero",
+      "artistId": 374,
+      "personId": 3719,
+      "keepId": 748,
+      "dropIds": [
+        2075
+      ],
+      "before": [
+        "Guitar",
+        "Guitars"
+      ],
+      "role": "Guitar",
+      "from_year": 2007,
+      "to_year": 2009
+    },
+    {
+      "artist": "Epitafio",
+      "person": "Alejandro Londoño",
+      "artistId": 374,
+      "personId": 2433,
+      "keepId": 747,
+      "dropIds": [
+        2076
+      ],
+      "before": [
+        "Guitar",
+        "Guitars"
+      ],
+      "role": "Guitar",
+      "from_year": 1992,
+      "to_year": 1994
+    },
+    {
+      "artist": "Atlantica",
+      "person": "Henry Luengo",
+      "artistId": 404,
+      "personId": 4823,
+      "keepId": 397,
+      "dropIds": [
+        3960
+      ],
+      "before": [
+        "Vocals",
+        "Vocals (lead)"
+      ],
+      "role": "Vocals",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Atlantica",
+      "person": "Manuel Parra",
+      "artistId": 404,
+      "personId": 4822,
+      "keepId": 398,
+      "dropIds": [
+        3961
+      ],
+      "before": [
+        "Guitar",
+        "Guitars"
+      ],
+      "role": "Guitar",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Diatriba",
+      "person": "Carlos Rodríguez",
+      "artistId": 424,
+      "personId": 993,
+      "keepId": 676,
+      "dropIds": [
+        2805
+      ],
+      "before": [
+        "Bass & Backing Vocals",
+        "Bass, Vocals"
+      ],
+      "role": "Bass & Backing Vocals",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Diatriba",
+      "person": "Hector Osorio",
+      "artistId": 424,
+      "personId": 5412,
+      "keepId": 674,
+      "dropIds": [
+        2806
+      ],
+      "before": [
+        "Drums & Backing Vocals",
+        "Drums, Vocals"
+      ],
+      "role": "Drums & Backing Vocals",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Diatriba",
+      "person": "Nelson Hernandez",
+      "artistId": 424,
+      "personId": 1652,
+      "keepId": 673,
+      "dropIds": [
+        2807
+      ],
+      "before": [
+        "Guitar & Backing Vocals",
+        "Guitars, Vocals"
+      ],
+      "role": "Guitar & Backing Vocals",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Fuga",
+      "person": "Juan Carlos Sabater",
+      "artistId": 428,
+      "personId": 5793,
+      "keepId": 5470,
+      "dropIds": [
+        9178
+      ],
+      "before": [
+        "guitarra, voz",
+        "Integrante"
+      ],
+      "role": "guitarra, voz",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Scythe",
+      "person": "Miguel Gallegos",
+      "artistId": 431,
+      "personId": 6482,
+      "keepId": 1188,
+      "dropIds": [
+        1643
+      ],
+      "before": [
+        "Guitar",
+        "Guitars"
+      ],
+      "role": "Guitar",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Sibelíus",
+      "person": "Jorge Rojas",
+      "artistId": 445,
+      "personId": 5463,
+      "keepId": 1214,
+      "dropIds": [
+        2254
+      ],
+      "before": [
+        "Drums, Keyboards & Bass",
+        "Bass, Drums, Keyboards"
+      ],
+      "role": "Drums, Keyboards & Bass",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Arkangel",
+      "person": "Giancarlo Picozzi",
+      "artistId": 46,
+      "personId": 2026,
+      "keepId": 375,
+      "dropIds": [
+        1902
+      ],
+      "before": [
+        "Guitar",
+        "Guitars"
+      ],
+      "role": "Guitar",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Arkangel",
+      "person": "Nicolás \"Tato\" Barrera",
+      "artistId": 46,
+      "personId": 7923,
+      "keepId": 385,
+      "dropIds": [
+        1903
+      ],
+      "before": [
+        "Guitar",
+        "Guitars"
+      ],
+      "role": "Guitar",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Arkangel",
+      "person": "Breno Díaz",
+      "artistId": 46,
+      "personId": 2030,
+      "keepId": 380,
+      "dropIds": [
+        1905
+      ],
+      "before": [
+        "Bass & Backing Vocals",
+        "Bass"
+      ],
+      "role": "Bass & Backing Vocals",
+      "from_year": 1981,
+      "to_year": 1995
+    },
+    {
+      "artist": "Arkangel",
+      "person": "Freddy Cabezas Álvarez",
+      "artistId": 46,
+      "personId": 3289,
+      "keepId": 384,
+      "dropIds": [
+        1906
+      ],
+      "before": [
+        "Lead Guitar",
+        "Guitars"
+      ],
+      "role": "Lead Guitar",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Arkangel",
+      "person": "Paul Silvestre Gillman",
+      "artistId": 46,
+      "personId": 3467,
+      "keepId": 383,
+      "dropIds": [
+        1907
+      ],
+      "before": [
+        "Lead Vocals",
+        "Vocals"
+      ],
+      "role": "Lead Vocals",
+      "from_year": 1988,
+      "to_year": 1988
+    },
+    {
+      "artist": "Arkangel",
+      "person": "Mickey Tedeschi",
+      "artistId": 46,
+      "personId": 3465,
+      "keepId": 390,
+      "dropIds": [
+        1908
+      ],
+      "before": [
+        "Keyboards & Backing Vocals",
+        "Keyboards (1983-1990), Vocals"
+      ],
+      "role": "Keyboards & Backing Vocals",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Arkangel",
+      "person": "Klaus Kikas",
+      "artistId": 46,
+      "personId": 4796,
+      "keepId": 388,
+      "dropIds": [
+        1909
+      ],
+      "before": [
+        "Keyboards & Backing Vocals",
+        "Keyboards"
+      ],
+      "role": "Keyboards & Backing Vocals",
+      "from_year": 1990,
+      "to_year": 1993
+    },
+    {
+      "artist": "Arkangel",
+      "person": "Sergio Marín",
+      "artistId": 46,
+      "personId": 3534,
+      "keepId": 389,
+      "dropIds": [
+        1910
+      ],
+      "before": [
+        "Lead Vocals",
+        "Vocals"
+      ],
+      "role": "Lead Vocals",
+      "from_year": 1990,
+      "to_year": 1993
+    },
+    {
+      "artist": "Arkangel",
+      "person": "José Gregorio Spíndola",
+      "artistId": 46,
+      "personId": 4789,
+      "keepId": 378,
+      "dropIds": [
+        1911
+      ],
+      "before": [
+        "Lead Vocals",
+        "Vocals"
+      ],
+      "role": "Lead Vocals",
+      "from_year": 1993,
+      "to_year": 1994
+    },
+    {
+      "artist": "Arkangel",
+      "person": "Luis Gonzalez",
+      "artistId": 46,
+      "personId": 2631,
+      "keepId": 387,
+      "dropIds": [
+        1913
+      ],
+      "before": [
+        "Lead Vocals",
+        "Vocals"
+      ],
+      "role": "Lead Vocals",
+      "from_year": 2002,
+      "to_year": 2009
+    },
+    {
+      "artist": "Arkangel",
+      "person": "Carlos Arvelo",
+      "artistId": 46,
+      "personId": 4792,
+      "keepId": 381,
+      "dropIds": [
+        1914
+      ],
+      "before": [
+        "Guitar",
+        "Guitars"
+      ],
+      "role": "Guitar",
+      "from_year": 2003,
+      "to_year": 2012
+    },
+    {
+      "artist": "Arkangel",
+      "person": "Deibys Artigas",
+      "artistId": 46,
+      "personId": 4788,
+      "keepId": 382,
+      "dropIds": [
+        1918
+      ],
+      "before": [
+        "Lead Vocals",
+        "Vocals"
+      ],
+      "role": "Lead Vocals",
+      "from_year": 2017,
+      "to_year": 2021
+    },
+    {
+      "artist": "Sick Feel",
+      "person": "Andrés López",
+      "artistId": 477,
+      "personId": 6541,
+      "keepId": 1215,
+      "dropIds": [
+        2625
+      ],
+      "before": [
+        "Guitar",
+        "Guitars"
+      ],
+      "role": "Guitar",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Sick Feel",
+      "person": "Daniel Nuñez",
+      "artistId": 477,
+      "personId": 6540,
+      "keepId": 1218,
+      "dropIds": [
+        2634
+      ],
+      "before": [
+        "Samplers & Backing Vocals",
+        "Guitars (rhythm), Vocals (backing) (2013-2020), Samples, Vocals (backing)"
+      ],
+      "role": "Guitars (rhythm), Vocals (backing) (2013-2020), Samples, Vocals (backing)",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Sick Feel",
+      "person": "Siro Tagliaferro",
+      "artistId": 477,
+      "personId": 6533,
+      "keepId": 1221,
+      "dropIds": [
+        2624
+      ],
+      "before": [
+        "Lead Guitar",
+        "Guitars (lead)"
+      ],
+      "role": "Lead Guitar",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Alice in Hell",
+      "person": "Bertrand Cape",
+      "artistId": 484,
+      "personId": 3650,
+      "keepId": 322,
+      "dropIds": [
+        2839
+      ],
+      "before": [
+        "Guitar",
+        "Guitars, Vocals (backing)"
+      ],
+      "role": "Guitars, Vocals (backing)",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Alice in Hell",
+      "person": "Ricardo Jardines",
+      "artistId": 484,
+      "personId": 4676,
+      "keepId": 320,
+      "dropIds": [
+        2840
+      ],
+      "before": [
+        "Vocals",
+        "Vocals (lead)"
+      ],
+      "role": "Vocals",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Alice in Hell",
+      "person": "Pedro Sunyer",
+      "artistId": 484,
+      "personId": 4668,
+      "keepId": 53,
+      "dropIds": [
+        2841
+      ],
+      "before": [
+        "Vocals",
+        "Vocals (lead)"
+      ],
+      "role": "Vocals",
+      "from_year": 2005,
+      "to_year": 2006
+    },
+    {
+      "artist": "Alice in Hell",
+      "person": "Rhon Márques",
+      "artistId": 484,
+      "personId": 4683,
+      "keepId": 79,
+      "dropIds": [
+        2842
+      ],
+      "before": [
+        "Vocals",
+        "Vocals (lead)"
+      ],
+      "role": "Vocals",
+      "from_year": 2007,
+      "to_year": 2008
+    },
+    {
+      "artist": "Guerra Santa",
+      "person": "Daniel Coronel",
+      "artistId": 485,
+      "personId": 5885,
+      "keepId": 923,
+      "dropIds": [
+        3847
+      ],
+      "before": [
+        "Guitar",
+        "Guitars"
+      ],
+      "role": "Guitar",
+      "from_year": 2011,
+      "to_year": 2015
+    },
+    {
+      "artist": "Guerra Santa",
+      "person": "Oscar Contramaestre",
+      "artistId": 485,
+      "personId": 5886,
+      "keepId": 922,
+      "dropIds": [
+        3848
+      ],
+      "before": [
+        "Guitar",
+        "Guitars"
+      ],
+      "role": "Guitar",
+      "from_year": 2011,
+      "to_year": 2015
+    },
+    {
+      "artist": "Guerra Santa",
+      "person": "Gerardo Perdigón",
+      "artistId": 485,
+      "personId": 5888,
+      "keepId": 916,
+      "dropIds": [
+        3850
+      ],
+      "before": [
+        "Guitar",
+        "Guitars"
+      ],
+      "role": "Guitar",
+      "from_year": 2015,
+      "to_year": null
+    },
+    {
+      "artist": "Guerra Santa",
+      "person": "Pedro Cerezo",
+      "artistId": 485,
+      "personId": 5895,
+      "keepId": 914,
+      "dropIds": [
+        3852
+      ],
+      "before": [
+        "Lead Guitar",
+        "Guitars"
+      ],
+      "role": "Lead Guitar",
+      "from_year": 2001,
+      "to_year": null
+    },
+    {
+      "artist": "Guerra Santa",
+      "person": "Gregory Delgado",
+      "artistId": 485,
+      "personId": 5890,
+      "keepId": 915,
+      "dropIds": [
+        3853
+      ],
+      "before": [
+        "Guitar",
+        "Guitars"
+      ],
+      "role": "Guitar",
+      "from_year": 1991,
+      "to_year": 2009
+    },
+    {
+      "artist": "Guerra Santa",
+      "person": "Froilan García",
+      "artistId": 485,
+      "personId": 5892,
+      "keepId": 921,
+      "dropIds": [
+        3858
+      ],
+      "before": [
+        "Lead Guitar",
+        "Guitars (lead)"
+      ],
+      "role": "Lead Guitar",
+      "from_year": 1991,
+      "to_year": 1999
+    },
+    {
+      "artist": "Guerra Santa",
+      "person": "Facundo Coral",
+      "artistId": 485,
+      "personId": 2953,
+      "keepId": 920,
+      "dropIds": [
+        3865
+      ],
+      "before": [
+        "Guitar",
+        "Guitars (lead)"
+      ],
+      "role": "Guitar",
+      "from_year": 2017,
+      "to_year": null
+    },
+    {
+      "artist": "Alfredo Herrera",
+      "person": "Alfredo Herrera",
+      "artistId": 486,
+      "personId": 13299,
+      "keepId": 1529,
+      "dropIds": [
+        3278
+      ],
+      "before": [
+        "Miembro",
+        "Guitars"
+      ],
+      "role": "Guitars",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Overhate",
+      "person": "Chapa Lara",
+      "artistId": 527,
+      "personId": 13292,
+      "keepId": 1384,
+      "dropIds": [
+        1660
+      ],
+      "before": [
+        "Guitar",
+        "Guitars (lead), Vocals (backing)"
+      ],
+      "role": "Guitars (lead), Vocals (backing)",
+      "from_year": 2003,
+      "to_year": 2010
+    },
+    {
+      "artist": "Overhate",
+      "person": "Erick Machado",
+      "artistId": 527,
+      "personId": 13293,
+      "keepId": 1385,
+      "dropIds": [
+        1659
+      ],
+      "before": [
+        "Guitar",
+        "Guitars"
+      ],
+      "role": "Guitar",
+      "from_year": 2003,
+      "to_year": 2020
+    },
+    {
+      "artist": "Cabezón Key",
+      "person": "Ezequiel Serrano Valencia",
+      "artistId": 54,
+      "personId": 883,
+      "keepId": 4849,
+      "dropIds": [
+        9246
+      ],
+      "before": [
+        "guitarra, teclados, programación, percusión, bajo, voz",
+        "Soprano Sax & Flute"
+      ],
+      "role": "guitarra, teclados, programación, percusión, bajo, voz, Soprano Sax, Flute",
+      "from_year": 2008,
+      "to_year": 2008
+    },
+    {
+      "artist": "Raped Dolls",
+      "person": "Jesus Nieto",
+      "artistId": 620,
+      "personId": 15736,
+      "keepId": 5631,
+      "dropIds": [
+        5632
+      ],
+      "before": [
+        "batería y coros",
+        "batería"
+      ],
+      "role": "batería y coros",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Bajo Zero",
+      "person": "Honorio Torrealba",
+      "artistId": 623,
+      "personId": 4868,
+      "keepId": 420,
+      "dropIds": [
+        1969
+      ],
+      "before": [
+        "Guitar & Backing Vocals",
+        "Guitars, Vocals (backing)"
+      ],
+      "role": "Guitar & Backing Vocals",
+      "from_year": 1995,
+      "to_year": null
+    },
+    {
+      "artist": "Cuarto Magno",
+      "person": "José Alejandro Maldonado",
+      "artistId": 627,
+      "personId": 8666,
+      "keepId": 1396,
+      "dropIds": [
+        2884
+      ],
+      "before": [
+        "Guitar",
+        "Guitars"
+      ],
+      "role": "Guitar",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Cuarto Magno",
+      "person": "Iván Toledo",
+      "artistId": 627,
+      "personId": 3958,
+      "keepId": 1397,
+      "dropIds": [
+        2883
+      ],
+      "before": [
+        "Guitar",
+        "Guitars"
+      ],
+      "role": "Guitar",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Disaster Prophet",
+      "person": "Francisco Camacho",
+      "artistId": 632,
+      "personId": 5427,
+      "keepId": 686,
+      "dropIds": [
+        2444
+      ],
+      "before": [
+        "Guitar & Backing Vocals",
+        "Guitars"
+      ],
+      "role": "Guitar & Backing Vocals",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Fethuruz",
+      "person": "Miguel Angel Major Rodriguez",
+      "artistId": 644,
+      "personId": 5723,
+      "keepId": 840,
+      "dropIds": [
+        2299
+      ],
+      "before": [
+        "Vocals & All Instruments",
+        "All instruments, Vocals"
+      ],
+      "role": "Vocals & All Instruments",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Dreams of Tears",
+      "person": "Manuel Díaz",
+      "artistId": 678,
+      "personId": 13963,
+      "keepId": 1663,
+      "dropIds": [
+        3518
+      ],
+      "before": [
+        "Drums",
+        "Drums"
+      ],
+      "role": "Drums",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Dreams of Tears",
+      "person": "Iván León",
+      "artistId": 678,
+      "personId": 13962,
+      "keepId": 1664,
+      "dropIds": [
+        3520
+      ],
+      "before": [
+        "Guitars",
+        "Guitars"
+      ],
+      "role": "Guitars",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Dreams of Tears",
+      "person": "Leonardo Martínez",
+      "artistId": 678,
+      "personId": 14589,
+      "keepId": 1665,
+      "dropIds": [
+        3521
+      ],
+      "before": [
+        "Vocals",
+        "Vocals"
+      ],
+      "role": "Vocals",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Cronos",
+      "person": "Facundo Coral",
+      "artistId": 700,
+      "personId": 2953,
+      "keepId": 601,
+      "dropIds": [
+        1882
+      ],
+      "before": [
+        "Guitar",
+        "Guitars (lead)"
+      ],
+      "role": "Guitar",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Cronos",
+      "person": "David Gutierrez",
+      "artistId": 700,
+      "personId": 5257,
+      "keepId": 597,
+      "dropIds": [
+        1883
+      ],
+      "before": [
+        "Bass",
+        "Bass (2019-present), Vocals"
+      ],
+      "role": "Bass (2019-present), Vocals",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Cronos",
+      "person": "David Mondragón",
+      "artistId": 700,
+      "personId": 5250,
+      "keepId": 596,
+      "dropIds": [
+        1884
+      ],
+      "before": [
+        "Lead Vocals",
+        "Vocals"
+      ],
+      "role": "Lead Vocals",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Cronos",
+      "person": "Abel Cañizales",
+      "artistId": 700,
+      "personId": 2046,
+      "keepId": 603,
+      "dropIds": [
+        1891
+      ],
+      "before": [
+        "2nd. Guitar",
+        "Guitars (rhythm)"
+      ],
+      "role": "Guitars (rhythm), 2nd. Guitar",
+      "from_year": 1990,
+      "to_year": 1992
+    },
+    {
+      "artist": "Sectasys",
+      "person": "Lord Alastor",
+      "artistId": 740,
+      "personId": 13931,
+      "keepId": 1690,
+      "dropIds": [
+        1693
+      ],
+      "before": [
+        "Bass, Guitars",
+        "Bass"
+      ],
+      "role": "Bass, Guitars",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Stratuz",
+      "person": "Franklin Berroterán",
+      "artistId": 792,
+      "personId": 6603,
+      "keepId": 1249,
+      "dropIds": [
+        3741
+      ],
+      "before": [
+        "Vocals & Keyboards",
+        "Vocals, Keyboards"
+      ],
+      "role": "Vocals & Keyboards",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Stratuz",
+      "person": "Facundo Coral",
+      "artistId": 792,
+      "personId": 2953,
+      "keepId": 1251,
+      "dropIds": [
+        3745
+      ],
+      "before": [
+        "Lead & Acoustic Guitar",
+        "Guitars"
+      ],
+      "role": "Lead & Acoustic Guitar",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Stratuz",
+      "person": "Gerónimo Egea",
+      "artistId": 792,
+      "personId": 6601,
+      "keepId": 1255,
+      "dropIds": [
+        3740
+      ],
+      "before": [
+        "Guitar",
+        "Guitars"
+      ],
+      "role": "Guitar",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Stratuz",
+      "person": "Rafael Ramírez",
+      "artistId": 792,
+      "personId": 5108,
+      "keepId": 1256,
+      "dropIds": [
+        3744
+      ],
+      "before": [
+        "Drums",
+        "Drums, Percussion"
+      ],
+      "role": "Drums, Percussion",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Stratuz",
+      "person": "Carlos Martini",
+      "artistId": 792,
+      "personId": 3249,
+      "keepId": 1263,
+      "dropIds": [
+        3746
+      ],
+      "before": [
+        "Guitar",
+        "Guitars"
+      ],
+      "role": "Guitar",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Stratuz",
+      "person": "Gregory Carrero",
+      "artistId": 792,
+      "personId": 13311,
+      "keepId": 1425,
+      "dropIds": [
+        3747
+      ],
+      "before": [
+        "Guitar",
+        "Guitars"
+      ],
+      "role": "Guitar",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Dischord",
+      "person": "Tomás Pérez",
+      "artistId": 81,
+      "personId": 521,
+      "keepId": 693,
+      "dropIds": [
+        2351
+      ],
+      "before": [
+        "Bass & Vocals",
+        "Bass"
+      ],
+      "role": "Bass & Vocals",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Dischord",
+      "person": "Luis Villar",
+      "artistId": 81,
+      "personId": 2636,
+      "keepId": 689,
+      "dropIds": [
+        2352
+      ],
+      "before": [
+        "Guitar",
+        "Guitars"
+      ],
+      "role": "Guitar",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Dischord",
+      "person": "Daniel Silva",
+      "artistId": 81,
+      "personId": 2633,
+      "keepId": 692,
+      "dropIds": [
+        2353
+      ],
+      "before": [
+        "Guitar & Vocals",
+        "Guitars, Vocals"
+      ],
+      "role": "Guitar & Vocals",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Distrust",
+      "person": "Felipe Grüber",
+      "artistId": 82,
+      "personId": 2639,
+      "keepId": 705,
+      "dropIds": [
+        3551
+      ],
+      "before": [
+        "Guitars & Backing Vocals",
+        "Guitars, Backing Vocals"
+      ],
+      "role": "Guitars & Backing Vocals",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Brutal Assault",
+      "person": "Héctor Castillo",
+      "artistId": 846,
+      "personId": 457,
+      "keepId": 1390,
+      "dropIds": [
+        2331
+      ],
+      "before": [
+        "Guitar",
+        "Guitars"
+      ],
+      "role": "Guitar",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Brutal Assault",
+      "person": "Asdrúbal Pinto",
+      "artistId": 846,
+      "personId": 3979,
+      "keepId": 1391,
+      "dropIds": [
+        2332
+      ],
+      "before": [
+        "Guitar",
+        "Guitars"
+      ],
+      "role": "Guitar",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Sol Nocturno",
+      "person": "Federico Agreda",
+      "artistId": 870,
+      "personId": 5847,
+      "keepId": 867,
+      "dropIds": [
+        2475
+      ],
+      "before": [
+        "Vocals, Keyboards, Drums Programming, Acoustic Guitar & Cuatro",
+        "All instruments, Vocals"
+      ],
+      "role": "Vocals, Keyboards, Drums Programming, Acoustic Guitar & Cuatro, All instruments",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Subconsciente?",
+      "person": "Eduardo Vargas",
+      "artistId": 889,
+      "personId": 2582,
+      "keepId": 1261,
+      "dropIds": [
+        1967
+      ],
+      "before": [
+        "Guitar & Lead Vocals",
+        "Vocals, Guitars"
+      ],
+      "role": "Guitar & Lead Vocals",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Walking Over Strings",
+      "person": "Efraín Alejandro Méndez",
+      "artistId": 897,
+      "personId": 6900,
+      "keepId": 1348,
+      "dropIds": [
+        2906
+      ],
+      "before": [
+        "All Instruments",
+        "Everything"
+      ],
+      "role": "All Instruments, Everything",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Sangre",
+      "person": "Carlos Montenegro",
+      "artistId": 9,
+      "personId": 5202,
+      "keepId": 4766,
+      "dropIds": [
+        9120
+      ],
+      "before": [
+        "guitarra, voz y percusión",
+        "Integrante"
+      ],
+      "role": "guitarra, voz y percusión",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Rebellion",
+      "person": "Julio Sosa",
+      "artistId": 914,
+      "personId": 6330,
+      "keepId": 1148,
+      "dropIds": [
+        2038
+      ],
+      "before": [
+        "Guitar & Lead Vocals",
+        "Vocals, Guitars"
+      ],
+      "role": "Guitar & Lead Vocals",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Brew Army",
+      "person": "Rafael Pannacci",
+      "artistId": 917,
+      "personId": 3957,
+      "keepId": 460,
+      "dropIds": [
+        2489
+      ],
+      "before": [
+        "Guitar",
+        "Guitars"
+      ],
+      "role": "Guitar",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Evil Reborn",
+      "person": "Jorge Medina",
+      "artistId": 924,
+      "personId": 13298,
+      "keepId": 1404,
+      "dropIds": [
+        2773
+      ],
+      "before": [
+        "Guitar",
+        "Guitars"
+      ],
+      "role": "Guitar",
+      "from_year": 2012,
+      "to_year": 2017
+    },
+    {
+      "artist": "Evil Reborn",
+      "person": "Alfredo Herrera",
+      "artistId": 924,
+      "personId": 13299,
+      "keepId": 1405,
+      "dropIds": [
+        2774
+      ],
+      "before": [
+        "Guitar",
+        "Guitars"
+      ],
+      "role": "Guitar",
+      "from_year": 2016,
+      "to_year": 2017
+    },
+    {
+      "artist": "Kraptor",
+      "person": "Angel Moreno",
+      "artistId": 932,
+      "personId": 5343,
+      "keepId": 1012,
+      "dropIds": [
+        2362
+      ],
+      "before": [
+        "Guitar",
+        "Guitars"
+      ],
+      "role": "Guitar",
+      "from_year": 2008,
+      "to_year": 2017
+    },
+    {
+      "artist": "Kraptor",
+      "person": "Phill Alvarez",
+      "artistId": 932,
+      "personId": 6087,
+      "keepId": 1021,
+      "dropIds": [
+        2354
+      ],
+      "before": [
+        "Vocals & Guitar",
+        "Guitars, Vocals"
+      ],
+      "role": "Vocals & Guitar",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Kraptor",
+      "person": "Andres Calafat",
+      "artistId": 932,
+      "personId": 6084,
+      "keepId": 1022,
+      "dropIds": [
+        2358
+      ],
+      "before": [
+        "Bass & Backing Vocals",
+        "Bass"
+      ],
+      "role": "Bass & Backing Vocals",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Kraptor",
+      "person": "Leonardo Yañez",
+      "artistId": 932,
+      "personId": 6089,
+      "keepId": 1023,
+      "dropIds": [
+        2359
+      ],
+      "before": [
+        "Guitar & Backing Vocals",
+        "Guitars"
+      ],
+      "role": "Guitar & Backing Vocals",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Kraptor",
+      "person": "Jessy Jaimes",
+      "artistId": 932,
+      "personId": 6085,
+      "keepId": 1024,
+      "dropIds": [
+        2360
+      ],
+      "before": [
+        "Drums & Backing Vocals",
+        "Drums"
+      ],
+      "role": "Drums & Backing Vocals",
+      "from_year": 2007,
+      "to_year": 2017
+    },
+    {
+      "artist": "Kraptor",
+      "person": "Giuliano Lossio",
+      "artistId": 932,
+      "personId": 6088,
+      "keepId": 1026,
+      "dropIds": [
+        2361
+      ],
+      "before": [
+        "Bass & Vocals",
+        "Vocals, Bass"
+      ],
+      "role": "Bass & Vocals",
+      "from_year": 2007,
+      "to_year": 2011
+    },
+    {
+      "artist": "Abaddon",
+      "person": "Carlos Campos",
+      "artistId": 963,
+      "personId": 6981,
+      "keepId": 1378,
+      "dropIds": [
+        2611
+      ],
+      "before": [
+        "Guitar",
+        "Guitars"
+      ],
+      "role": "Guitar",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Abaddon",
+      "person": "Luis Loyo",
+      "artistId": 963,
+      "personId": 6980,
+      "keepId": 1379,
+      "dropIds": [
+        2612
+      ],
+      "before": [
+        "Guitar",
+        "Guitars"
+      ],
+      "role": "Guitar",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Abaddon",
+      "person": "José Miguel Ahmad",
+      "artistId": 963,
+      "personId": 6987,
+      "keepId": 1381,
+      "dropIds": [
+        2598
+      ],
+      "before": [
+        "Guitar",
+        "Guitars"
+      ],
+      "role": "Guitar",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Abaddon",
+      "person": "Pedro Colotto",
+      "artistId": 963,
+      "personId": 4367,
+      "keepId": 210,
+      "dropIds": [
+        2607
+      ],
+      "before": [
+        "Lead Vocals",
+        "Bass (1994), Vocals"
+      ],
+      "role": "Bass (1994), Vocals",
+      "from_year": 1999,
+      "to_year": 2017
+    },
+    {
+      "artist": "Ad Intra",
+      "person": "Daniel Luces",
+      "artistId": 965,
+      "personId": 3644,
+      "keepId": 221,
+      "dropIds": [
+        2256
+      ],
+      "before": [
+        "Vocals & Bass",
+        "Vocals, Bass"
+      ],
+      "role": "Vocals & Bass",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "artist": "Ad Intra",
+      "person": "Alex Pernas",
+      "artistId": 965,
+      "personId": 4392,
+      "keepId": 222,
+      "dropIds": [
+        2257
+      ],
+      "before": [
+        "Guitar",
+        "Guitars"
+      ],
+      "role": "Guitar",
+      "from_year": 2010,
+      "to_year": null
+    },
+    {
+      "artist": "Ad Intra",
+      "person": "Yessika Marquez",
+      "artistId": 965,
+      "personId": 4389,
+      "keepId": 224,
+      "dropIds": [
+        2255
+      ],
+      "before": [
+        "Guitar",
+        "Guitars"
+      ],
+      "role": "Guitar",
+      "from_year": null,
+      "to_year": null
+    }
+  ]
+}

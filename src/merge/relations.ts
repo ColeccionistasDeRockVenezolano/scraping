@@ -38,6 +38,7 @@ import { loadResolutionCandidates, persistResolutionDecision } from "../er/repos
 import { resolveEntity, resolutionThresholdsFromEnv } from "../er/resolver.js";
 import type { ResolutionInput } from "../er/types.js";
 import { deriveVenezuelanFor, VENEZUELAN_CREDIT_TYPES } from "./venezuelan.js";
+import { combineRoles, compatiblePeriods, disjointPeriods, sameRole } from "./membership-roles.js";
 
 export const RELATION_KINDS = ["artist_membership", "person_organization", "album_credit", "track_credit", "album_format"] as const;
 export type RelationClaimKind = (typeof RELATION_KINDS)[number];
@@ -413,7 +414,7 @@ function humanField(context: RelationContext, field: string): string | undefined
 }
 
 type RelationResult =
-  | { status: "written"; ids: number[]; created: number; detail: string }
+  | { status: "written"; ids: number[]; created: number; detail: string; /** Fila existente completada. */ updated?: boolean }
   | { status: "pending"; reason: string; payload: Record<string, unknown> };
 
 /**
@@ -458,26 +459,52 @@ async function membership(context: RelationContext): Promise<RelationResult> {
         person: { name: personName, action: person.action, decisionId: person.decisionId } },
     };
   }
-  // Clave de idempotencia (artist_id, person_id, rol normalizado): el rol es
-  // parte de lo que la fila afirma, así que la misma persona con dos
-  // funciones en la misma banda son dos membresías, no una duplicada.
-  const existing = await client.query<{ id: string; from_year: number | null; to_year: number | null }>(
-    `SELECT id::text, from_year, to_year FROM public.artist_members
-      WHERE artist_id=$1 AND person_id=$2 AND lower(role)=lower($3) LIMIT 1`,
-    [artist.id, person.id, role],
-  );
-  const current = existing.rows[0];
-  if (current) {
-    if (periodContradicts({ from, to }, current)) {
-      return { status: "pending", reason: "período contradictorio para una membresía ya registrada",
-        payload: { membershipId: Number(current.id), stored: { from: current.from_year, to: current.to_year }, incoming: { from, to } } };
-    }
-    return { status: "written", ids: [Number(current.id)], created: 0, detail: "membresía ya registrada" };
-  }
+  // Clave de idempotencia (artist_id, person_id, etapa): una persona figura una
+  // vez por etapa en cada banda. Antes el rol literal era parte de la clave y
+  // «Guitar» (Sincopa) y «Guitars» (Metal Archives) quedaban como dos
+  // membresías (caso Abaddon, 2026-10-04). Ahora el rol nuevo se une al
+  // registrado (membership-roles.ts) y solo un período que no se toca con
+  // ninguno de los registrados abre otra fila: es otra etapa.
   // is_current no se infiere: la ausencia de año de salida no es una
   // afirmación de que la persona siga en la banda. Queda en false (default
   // del core) salvo que una persona lo declare.
   const isCurrent = humanField(context, "is_current") === "true";
+  const existing = (await client.query<{ id: string; role: string; from_year: number | null; to_year: number | null; is_current: boolean }>(
+    `SELECT id::text, role, from_year, to_year, is_current FROM public.artist_members
+      WHERE artist_id=$1 AND person_id=$2 ORDER BY id FOR UPDATE`,
+    [artist.id, person.id],
+  )).rows;
+  if (existing.length) {
+    const incoming = { from_year: from, to_year: to };
+    const compatible = existing.filter((row) => compatiblePeriods(row, incoming));
+    const current = compatible.find((row) => sameRole(row.role, role)) ?? compatible[0];
+    if (current) {
+      const changes: Record<string, unknown> = {};
+      const combined = combineRoles([current.role, role]);
+      if (combined !== current.role) changes["role"] = combined;
+      if (current.from_year === null && from !== null) changes["from_year"] = from;
+      if (current.to_year === null && to !== null) changes["to_year"] = to;
+      if (isCurrent && !current.is_current) changes["is_current"] = true;
+      const id = Number(current.id);
+      if (Object.keys(changes).length === 0) return { status: "written", ids: [id], created: 0, detail: "membresía ya registrada" };
+      const columns = Object.keys(changes);
+      await client.query(
+        `UPDATE public.artist_members SET ${columns.map((column, index) => `${column}=$${index + 2}`).join(",")} WHERE id=$1`,
+        [id, ...columns.map((column) => changes[column])],
+      );
+      for (const column of columns) {
+        const before = column === "role" ? current.role : column === "is_current" ? current.is_current : current[column as "from_year" | "to_year"];
+        await auditRelation(client, claim, claimId, context.spec, id, column, before, changes[column], claim.confidence,
+          `membresía ya registrada: se completa con lo que afirma la fuente (rol «${role}»)`);
+      }
+      return { status: "written", ids: [id], created: 0, updated: true, detail: `membresía ya registrada; completada (${columns.join(", ")})` };
+    }
+    if (!existing.every((row) => disjointPeriods(row, incoming))) {
+      const stored = existing.find((row) => sameRole(row.role, role)) ?? existing[0]!;
+      return { status: "pending", reason: "período contradictorio para una membresía ya registrada",
+        payload: { membershipId: Number(stored.id), stored: { from: stored.from_year, to: stored.to_year }, incoming: { from, to } } };
+    }
+  }
   const notes = humanField(context, "notes") ?? null;
   const inserted = await client.query<{ id: string }>(
     `INSERT INTO public.artist_members(artist_id,person_id,role,from_year,to_year,is_current,notes)
@@ -800,7 +827,7 @@ async function mergeRelationWith(client: PoolClient, claim: ClaimToPersist, clai
     [[...new Set([...fields.claimIds, claimId])]],
   );
   return {
-    action: outcome.created > 0 ? "applied" : "unchanged",
+    action: outcome.created > 0 || outcome.updated ? "applied" : "unchanged",
     relationKind: spec.kind, relationIds: outcome.ids, detail: outcome.detail,
   };
 }

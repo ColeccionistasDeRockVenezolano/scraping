@@ -120,13 +120,30 @@ describe("puente de relaciones: membresías y créditos", () => {
     expect(again.every((item) => item.action === "unchanged")).toBe(true);
     expect(await count("public.artist_members")).toBe(1);
 
-    // Otra función de la misma persona en la misma banda es otra membresía,
-    // no un duplicado: el rol es parte de lo que la fila afirma.
+    // Otra función de la misma persona en la misma banda y la misma etapa se
+    // une al rol registrado: una persona figura una vez por etapa (caso
+    // Abaddon, 2026-10-04). El mismo rol escrito de otra forma no cambia nada.
     const secondRole = await applyRecord({
       sourceId, kind: "artist_membership", identity: "Los Kings::Efraín Rodríguez::Vocals",
       fields: [["artist_name", "Los Kings"], ["person_name", "Efraín Rodríguez"], ["role", "Vocals"]],
     });
     expect(secondRole[0]!.action).toBe("applied");
+    expect(await count("public.artist_members")).toBe(1);
+    expect(await count("public.artist_members", "role=$1", ["Guitar, Vocals"])).toBe(1);
+    const plural = await applyRecord({
+      sourceId, kind: "artist_membership", identity: "Los Kings::Efraín Rodríguez::Guitars",
+      fields: [["artist_name", "Los Kings"], ["person_name", "Efraín Rodríguez"], ["role", "Guitars"]],
+    });
+    expect(plural[0]!.action).toBe("unchanged");
+    expect(await count("public.artist_members", "role=$1", ["Guitar, Vocals"])).toBe(1);
+
+    // Una etapa que no se toca con la registrada sí es otra fila.
+    const secondStage = await applyRecord({
+      sourceId, kind: "artist_membership", identity: "Los Kings::Efraín Rodríguez::Guitar::1990",
+      fields: [["artist_name", "Los Kings"], ["person_name", "Efraín Rodríguez"], ["role", "Guitar"],
+        ["from_year", "1990"], ["to_year", "1992"]],
+    });
+    expect(secondStage[0]!.action).toBe("applied");
     expect(await count("public.artist_members")).toBe(2);
 
     // Un año de ingreso contradictorio no se elige ni se sobrescribe: la
@@ -138,6 +155,7 @@ describe("puente de relaciones: membresías y créditos", () => {
     });
     expect(contradicts.every((item) => item.action === "candidate")).toBe(true);
     expect(await count("public.artist_members", "from_year=1970")).toBe(1);
+    expect(await count("public.artist_members")).toBe(2);
     expect(await count("ingest.review_queue",
       "payload->>'reason'='claims contradictorios sobre el mismo hecho' AND payload->'fields' ? 'from_year'")).toBeGreaterThan(0);
   }, 60_000);

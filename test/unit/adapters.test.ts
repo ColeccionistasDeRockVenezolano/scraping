@@ -164,6 +164,37 @@ describe("adapters funcionales de las fuentes autorizadas", () => {
     expect(read("Vocals, Guitar, Percussion & Piano")).toEqual([]);
   });
 
+  it("Sincopa lee varios roles en la misma celda de miembros (1.3.5, Dimensión Latina)", () => {
+    const adapter = adapterFor({ slug: "sincopa", siteType: "database" });
+    if (!adapter?.extractSnapshot) throw new Error("adapter Sincopa faltante");
+    const body = `
+      <table><tr><td bgcolor="#6A152F">Prueba</td></tr></table>
+      <table><tr><td bgcolor="#FFCC00">Members</td></tr></table>
+      <table><tr><td>
+        <font color="#FFFFCC">Original Members</font><font color="#FFFFCC">:</font><br>
+        <font color="#FFFFFF" size="2">Bass &amp; Vocals:</font><font color="#FFCC00" size="2">Oscar D'León</font>
+        <font color="#FFFFFF" size="1">(1972-1976)</font><font color="#FFCC00" size="2"><br></font>
+        <font color="#FFFFFF" size="2">Timbales:</font><font color="#FFCC00" size="2">José Rodríguez</font>
+        <font color="#FFFFFF" size="1">(1972-)</font><font color="#FFCC00" size="2"><br></font>
+        <font color="#FFFFFF" size="2">Trombone:</font><font color="#FFCC00" size="2">César Monge </font>
+        <font color="#FFFFFF" size="1">(1972-1984)</font><font color="#FFCC00" size="2"><br>&nbsp; José Antonio Rojas </font>
+        <font color="#FFFFFF" size="1">(1972-1984)</font><br>
+        <font face="Verdana" size="2" color="#FFFFFF">Lead V</font><font size="2"><font color="#FFFFFF">ocals: </font>
+        <font color="#FFCC00">Chucho</font></font>
+      </td></tr></table>`;
+    const members = adapter.extractSnapshot({
+      url: "https://sincopa.com/latin_pop/artists_lat/prueba.htm", kind: "html", rawPageId: 1, body,
+    }).filter((record) => record.entityKind === "artist_membership")
+      .map((record) => Object.fromEntries(record.fields.map((field) => [field.field, field.value])));
+    expect(members.map((member) => [member["person_name"], member["role"]])).toEqual([
+      ["Oscar D'León", "Bass & Vocals"],
+      ["José Rodríguez", "Timbales"],
+      ["César Monge", "Trombone"],
+      ["José Antonio Rojas", "Trombone"],
+      ["Chucho", "Lead Vocals"],
+    ]);
+  });
+
   it("Sincopa abre todas sus secciones: la misma plantilla de ficha en jazz, latin pop, clásica, new age, tradicional y étnica", () => {
     const adapter = adapterFor({ slug: "sincopa", siteType: "database" });
     if (!adapter?.extractSnapshot || !adapter.isAllowedUrl) throw new Error("adapter Sincopa faltante");

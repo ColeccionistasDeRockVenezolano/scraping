@@ -48,6 +48,7 @@ import { invalidateSearchIndex } from "../api/search-index.js";
 import { transferGenreAssignments } from "../genres/merge.js";
 import { projectAlbumGenre } from "../merge/genre-projection.js";
 import { deriveVenezuelanFor } from "../merge/venezuelan.js";
+import { consolidateMemberships } from "../merge/equivalent-relations.js";
 import { isPreserveKind, openRewrites, preserveDiscarded, type PreserveOptions, type PreserveOutcome } from "../merge/preserve.js";
 
 export type DuplicateKind = "artist" | "album";
@@ -401,6 +402,8 @@ export interface MergeOutcome {
   discardedRows: DiscardedRow[];
   /** Revisiones que careaban las dos fichas, tal como estaban antes. */
   detachedReviews: Array<Record<string, unknown>>;
+  /** Membresías que la fusión dejó repetidas en una banda y se unieron (solo personas y artistas). */
+  memberships: { merged: number; reviewsOpened: number };
   /** Columnas de la ficha que queda donde se conservó lo que el duplicado aportaba (unido o en notas). */
   preserved: string[];
   /** Marcas de «reescribir con IA» abiertas o ampliadas por esta fusión. */
@@ -529,7 +532,13 @@ export async function mergeInto(
   if (kind === "album" && genreRows) await projectAlbumGenre(client, keepId);
   // La que queda hereda bandas y créditos del duplicado: puede ganar evidencia de venezolana.
   if (kind === "person") await deriveVenezuelanFor(client, [keepId], runId);
+  // Las dos fichas podían estar en la misma banda (o tener al mismo integrante):
+  // tras el reapunte la persona figuraría dos veces (Kolman, Dreams of Tears).
+  const memberships = kind === "person" || kind === "artist"
+    ? await consolidateMemberships(client, kind === "person" ? { personId: keepId } : { artistId: keepId }, note, runId)
+    : { merged: 0, reviewsOpened: 0 };
   return {
+    memberships: { merged: memberships.merged, reviewsOpened: memberships.reviewsOpened },
     moved, discarded: discardedRows.length, filled, tracksMerged, auditId, movedRefs, discardedRows, detachedReviews,
     preserved: preserved.changes.map((change) => change.column), rewritesOpened,
   };

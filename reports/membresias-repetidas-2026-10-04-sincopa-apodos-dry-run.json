@@ -1,0 +1,1043 @@
+{
+  "phase": "sincopa",
+  "confirm": false,
+  "runId": null,
+  "fixed": [
+    {
+      "artistId": 270,
+      "artist": "Dimension Latina",
+      "url": "https://sincopa.com/latin_pop/artists_lat/dimension_latina.htm",
+      "membershipId": 9758,
+      "person": "José Rodríguez",
+      "before": "Bass & Vocals",
+      "after": "Timbales"
+    },
+    {
+      "artistId": 3720,
+      "artist": "Los Dementes / Ray Pérez",
+      "url": "https://sincopa.com/latin_pop/artists_lat/los_dementes.htm",
+      "membershipId": 9903,
+      "person": "Carlos Quintero",
+      "before": "Original Members: Piano",
+      "after": "Congas"
+    },
+    {
+      "artistId": 3733,
+      "artist": "Orinoco Banda Show",
+      "url": "https://sincopa.com/latin_pop/artists_lat/orinoco_banda_show.htm",
+      "membershipId": 9930,
+      "person": "Carlos Quintero",
+      "before": "Piano & Keyboards",
+      "after": "Percussion & Congas"
+    }
+  ],
+  "skipped": [
+    {
+      "artistId": 3483,
+      "url": "https://sincopa.com/jazz/artists/trabuco_vzlano.htm",
+      "record": "Alberto Naranjo",
+      "oldRole": "Musical Director, Arranger & Drums",
+      "newRole": "Timbales",
+      "reason": "nombre repetido en la ficha"
+    },
+    {
+      "artistId": 3483,
+      "url": "https://sincopa.com/jazz/artists/trabuco_vzlano.htm",
+      "record": "Alberto Naranjo",
+      "oldRole": "Musical Director, Arranger & Drums",
+      "newRole": "Percussion",
+      "reason": "nombre repetido en la ficha"
+    },
+    {
+      "artistId": 3483,
+      "url": "https://sincopa.com/jazz/artists/trabuco_vzlano.htm",
+      "record": "Carlos \"Nene\" Quintero",
+      "oldRole": "Congas",
+      "newRole": "Percussion",
+      "reason": "nombre repetido en la ficha"
+    },
+    {
+      "artistId": 3483,
+      "url": "https://sincopa.com/jazz/artists/trabuco_vzlano.htm",
+      "record": "Lewis Vargas",
+      "oldRole": "Trumpet",
+      "newRole": "Flugelhorn",
+      "reason": "nombre repetido en la ficha"
+    },
+    {
+      "artistId": 3483,
+      "url": "https://sincopa.com/jazz/artists/trabuco_vzlano.htm",
+      "record": "Carlos \"Nene\" Quintero",
+      "oldRole": "Congas",
+      "newRole": "Background Vocals",
+      "reason": "nombre repetido en la ficha"
+    },
+    {
+      "artistId": 3483,
+      "url": "https://sincopa.com/jazz/artists/trabuco_vzlano.htm",
+      "record": "Felipe Rengifo",
+      "oldRole": "Percussion",
+      "newRole": "Background Vocals",
+      "reason": "nombre repetido en la ficha"
+    },
+    {
+      "artistId": 3679,
+      "url": "https://sincopa.com/latin_pop/artists_lat/bailatino.htm",
+      "record": "José \"Mortadelo\" Soto",
+      "oldRole": "Bass",
+      "newRole": "Backing Vocals",
+      "reason": "nombre repetido en la ficha"
+    },
+    {
+      "artistId": 270,
+      "url": "https://sincopa.com/latin_pop/artists_lat/dimension_latina.htm",
+      "record": "Eddie Frankie",
+      "oldRole": "Bass & Vocals",
+      "newRole": "Piano",
+      "reason": "la fila ya no tiene el rol de Sincopa",
+      "rows": [
+        "9757 Eddie Frankie: Piano"
+      ]
+    },
+    {
+      "artistId": 270,
+      "url": "https://sincopa.com/latin_pop/artists_lat/dimension_latina.htm",
+      "record": "Elio Pacheco",
+      "oldRole": "Bass & Vocals",
+      "newRole": "Congas",
+      "reason": "la fila ya no tiene el rol de Sincopa",
+      "rows": [
+        "5320 Elio Pacheco: tumbadoras",
+        "9759 Elio Pacheco: Congas"
+      ]
+    },
+    {
+      "artistId": 270,
+      "url": "https://sincopa.com/latin_pop/artists_lat/dimension_latina.htm",
+      "record": "César Monge",
+      "oldRole": "Bass & Vocals",
+      "newRole": "Trombone",
+      "reason": "la fila ya no tiene el rol de Sincopa",
+      "rows": [
+        "5317 César Monge: trombón",
+        "9760 César Monge: Trombone"
+      ]
+    },
+    {
+      "artistId": 270,
+      "url": "https://sincopa.com/latin_pop/artists_lat/dimension_latina.htm",
+      "record": "José Antonio Rojas",
+      "oldRole": "Bass & Vocals",
+      "newRole": "Trombone",
+      "reason": "la fila ya no tiene el rol de Sincopa",
+      "rows": [
+        "5318 José Antonio Rojas: trombón",
+        "9761 José Antonio Rojas: Trombone"
+      ]
+    },
+    {
+      "artistId": 270,
+      "url": "https://sincopa.com/latin_pop/artists_lat/dimension_latina.htm",
+      "record": "Jesús Moreno",
+      "oldRole": "Piano",
+      "newRole": "Congas",
+      "reason": "nombre repetido en la ficha"
+    },
+    {
+      "artistId": 3697,
+      "url": "https://sincopa.com/latin_pop/artists_lat/el_nuevo_clan.htm",
+      "record": "Fucho González, Hernán Omero & José Rodríguez",
+      "oldRole": "Güiro, Maracas, Vocals & Backing Vocals",
+      "newRole": "Vocals & Backing Vocals",
+      "reason": "sin fila con ese nombre en la banda",
+      "rows": []
+    },
+    {
+      "artistId": 3697,
+      "url": "https://sincopa.com/latin_pop/artists_lat/el_nuevo_clan.htm",
+      "record": "Rafael Medina",
+      "oldRole": "Güiro, Maracas, Vocals & Backing Vocals",
+      "newRole": "Piano",
+      "reason": "la fila ya no tiene el rol de Sincopa",
+      "rows": [
+        "9809 Rafael Medina: Piano"
+      ]
+    },
+    {
+      "artistId": 3697,
+      "url": "https://sincopa.com/latin_pop/artists_lat/el_nuevo_clan.htm",
+      "record": "Jesús Chuo Motta",
+      "oldRole": "Güiro, Maracas, Vocals & Backing Vocals",
+      "newRole": "Tres & Guitar",
+      "reason": "la fila ya no tiene el rol de Sincopa",
+      "rows": [
+        "9810 Jesús Chuo Motta: Tres & Guitar"
+      ]
+    },
+    {
+      "artistId": 3697,
+      "url": "https://sincopa.com/latin_pop/artists_lat/el_nuevo_clan.htm",
+      "record": "Amado Rodríguez",
+      "oldRole": "Güiro, Maracas, Vocals & Backing Vocals",
+      "newRole": "Bass",
+      "reason": "la fila ya no tiene el rol de Sincopa",
+      "rows": [
+        "9811 Amado Rodríguez: Bass"
+      ]
+    },
+    {
+      "artistId": 3697,
+      "url": "https://sincopa.com/latin_pop/artists_lat/el_nuevo_clan.htm",
+      "record": "Dalmiro Sideregts",
+      "oldRole": "Güiro, Maracas, Vocals & Backing Vocals",
+      "newRole": "Drums & Timbales",
+      "reason": "la fila ya no tiene el rol de Sincopa",
+      "rows": [
+        "9812 Dalmiro Sideregts: Drums & Timbales"
+      ]
+    },
+    {
+      "artistId": 3697,
+      "url": "https://sincopa.com/latin_pop/artists_lat/el_nuevo_clan.htm",
+      "record": "Cheche Moya",
+      "oldRole": "Güiro, Maracas, Vocals & Backing Vocals",
+      "newRole": "Congas",
+      "reason": "la fila ya no tiene el rol de Sincopa",
+      "rows": [
+        "9813 Cheche Moya: Congas"
+      ]
+    },
+    {
+      "artistId": 3697,
+      "url": "https://sincopa.com/latin_pop/artists_lat/el_nuevo_clan.htm",
+      "record": "Miguel Rodríguez",
+      "oldRole": "Güiro, Maracas, Vocals & Backing Vocals",
+      "newRole": "Bongos",
+      "reason": "la fila ya no tiene el rol de Sincopa",
+      "rows": [
+        "9814 Miguel Rodríguez: Bongos"
+      ]
+    },
+    {
+      "artistId": 3697,
+      "url": "https://sincopa.com/latin_pop/artists_lat/el_nuevo_clan.htm",
+      "record": "Angito Sideregts & Beto Sideregts",
+      "oldRole": "Güiro, Maracas, Vocals & Backing Vocals",
+      "newRole": "Trumpet",
+      "reason": "sin fila con ese nombre en la banda",
+      "rows": []
+    },
+    {
+      "artistId": 3697,
+      "url": "https://sincopa.com/latin_pop/artists_lat/el_nuevo_clan.htm",
+      "record": "Ramón Medina",
+      "oldRole": "Güiro, Maracas, Vocals & Backing Vocals",
+      "newRole": "Tenor Sax",
+      "reason": "la fila ya no tiene el rol de Sincopa",
+      "rows": [
+        "9815 Ramón Medina: Tenor Sax"
+      ]
+    },
+    {
+      "artistId": 3697,
+      "url": "https://sincopa.com/latin_pop/artists_lat/el_nuevo_clan.htm",
+      "record": "Luis Robles",
+      "oldRole": "Güiro, Maracas, Vocals & Backing Vocals",
+      "newRole": "Trombone",
+      "reason": "la fila ya no tiene el rol de Sincopa",
+      "rows": [
+        "9816 Luis Robles: Trombone"
+      ]
+    },
+    {
+      "artistId": 3718,
+      "url": "https://sincopa.com/latin_pop/artists_lat/los_amos_del_valle.htm",
+      "record": "Juan Ernesto Velásquez",
+      "oldRole": "Vocals, Backing Vocals, Percussion, Cajón & Hand Claps",
+      "newRole": "Guitar",
+      "reason": "la fila ya no tiene el rol de Sincopa",
+      "rows": [
+        "9877 Juan Ernesto Velásquez: Guitar"
+      ]
+    },
+    {
+      "artistId": 3718,
+      "url": "https://sincopa.com/latin_pop/artists_lat/los_amos_del_valle.htm",
+      "record": "Army Zerpa",
+      "oldRole": "Vocals, Backing Vocals, Percussion, Cajón & Hand Claps",
+      "newRole": "Bass & Backing Vocals",
+      "reason": "la fila ya no tiene el rol de Sincopa",
+      "rows": [
+        "9878 Army Zerpa: Bass & Backing Vocals"
+      ]
+    },
+    {
+      "artistId": 3718,
+      "url": "https://sincopa.com/latin_pop/artists_lat/los_amos_del_valle.htm",
+      "record": "Alexandra Alvarez \"La Cheewe\"",
+      "oldRole": "Vocals, Backing Vocals, Percussion, Cajón & Hand Claps",
+      "newRole": "Cajón, Minor Percussion, Hand Claps & Backing Vocals",
+      "reason": "la fila ya no tiene el rol de Sincopa",
+      "rows": [
+        "9879 Alexandra Alvarez: Cajón, Minor Percussion, Hand Claps & Backing Vocals"
+      ]
+    },
+    {
+      "artistId": 3718,
+      "url": "https://sincopa.com/latin_pop/artists_lat/los_amos_del_valle.htm",
+      "record": "Jesús Bosque",
+      "oldRole": "Vocals, Backing Vocals, Percussion, Cajón & Hand Claps",
+      "newRole": "Rancho Drum, Timbales, Bongos, Percussion & Backing Vocals",
+      "reason": "la fila ya no tiene el rol de Sincopa",
+      "rows": [
+        "9880 Jesús Bosque: Rancho Drum, Timbales, Bongos, Percussion & Backing Vocals"
+      ]
+    },
+    {
+      "artistId": 444,
+      "url": "https://sincopa.com/latin_pop/artists_lat/los_calvos.htm",
+      "record": "Carlos Yánez \"Negrito Calaven\"",
+      "oldRole": "Piano",
+      "newRole": "Vocals",
+      "reason": "la fila ya no tiene el rol de Sincopa",
+      "rows": [
+        "9895 Carlos Yánez: Vocals"
+      ]
+    },
+    {
+      "artistId": 444,
+      "url": "https://sincopa.com/latin_pop/artists_lat/los_calvos.htm",
+      "record": "Miguel Silva",
+      "oldRole": "Piano",
+      "newRole": "Bass",
+      "reason": "la fila ya no tiene el rol de Sincopa",
+      "rows": [
+        "9896 Miguel Silva: Bass"
+      ]
+    },
+    {
+      "artistId": 444,
+      "url": "https://sincopa.com/latin_pop/artists_lat/los_calvos.htm",
+      "record": "El Pavo Frank",
+      "oldRole": "Piano",
+      "newRole": "Drums & Percussion",
+      "reason": "la fila ya no tiene el rol de Sincopa",
+      "rows": [
+        "9897 El Pavo Frank: Drums & Percussion"
+      ]
+    },
+    {
+      "artistId": 444,
+      "url": "https://sincopa.com/latin_pop/artists_lat/los_calvos.htm",
+      "record": "Pedro García",
+      "oldRole": "Piano",
+      "newRole": "Congas",
+      "reason": "la fila ya no tiene el rol de Sincopa",
+      "rows": [
+        "9898 Pedro García: Congas"
+      ]
+    },
+    {
+      "artistId": 444,
+      "url": "https://sincopa.com/latin_pop/artists_lat/los_calvos.htm",
+      "record": "Lewis Vargas",
+      "oldRole": "Piano",
+      "newRole": "Trumpet",
+      "reason": "la fila ya no tiene el rol de Sincopa",
+      "rows": [
+        "9899 Lewis Vargas: Trumpet"
+      ]
+    },
+    {
+      "artistId": 3720,
+      "url": "https://sincopa.com/latin_pop/artists_lat/los_dementes.htm",
+      "record": "Ray Pérez",
+      "oldRole": "Original Members: Piano",
+      "newRole": "Piano",
+      "reason": "la fila ya no tiene el rol de Sincopa",
+      "rows": [
+        "9900 Ray Pérez: Piano"
+      ]
+    },
+    {
+      "artistId": 3720,
+      "url": "https://sincopa.com/latin_pop/artists_lat/los_dementes.htm",
+      "record": "Perucho (Pedro Torcat)",
+      "oldRole": "Original Members: Piano",
+      "newRole": "Vocals",
+      "reason": "la fila ya no tiene el rol de Sincopa",
+      "rows": [
+        "9901 Perucho (Pedro Torcat): Vocals"
+      ]
+    },
+    {
+      "artistId": 3720,
+      "url": "https://sincopa.com/latin_pop/artists_lat/los_dementes.htm",
+      "record": "Alfredo Padilla",
+      "oldRole": "Original Members: Piano",
+      "newRole": "Timbales",
+      "reason": "la fila ya no tiene el rol de Sincopa",
+      "rows": [
+        "9902 Alfredo Padilla: Timbales"
+      ]
+    },
+    {
+      "artistId": 3720,
+      "url": "https://sincopa.com/latin_pop/artists_lat/los_dementes.htm",
+      "record": "Enrique Vásquez",
+      "oldRole": "Original Members: Piano",
+      "newRole": "Bass",
+      "reason": "la fila ya no tiene el rol de Sincopa",
+      "rows": [
+        "9904 Enrique Vásquez: Bass"
+      ]
+    },
+    {
+      "artistId": 3720,
+      "url": "https://sincopa.com/latin_pop/artists_lat/los_dementes.htm",
+      "record": "Juan Díaz & Rufo García",
+      "oldRole": "Original Members: Piano",
+      "newRole": "Trombone",
+      "reason": "sin fila con ese nombre en la banda",
+      "rows": []
+    },
+    {
+      "artistId": 3720,
+      "url": "https://sincopa.com/latin_pop/artists_lat/los_dementes.htm",
+      "record": "Claudio Zerpa, Nano Grant, Teo Hernández, Alex Hernández Olguita Monasterio, Coco Ortega, Nelson Navas, Larry Machado, Don Wicho, Many Bolaños",
+      "oldRole": "Original Members: Piano",
+      "newRole": "Vocals",
+      "reason": "sin fila con ese nombre en la banda",
+      "rows": []
+    },
+    {
+      "artistId": 3720,
+      "url": "https://sincopa.com/latin_pop/artists_lat/los_dementes.htm",
+      "record": "Ignacio Navarro, José \"Cholo\" Ortiz",
+      "oldRole": "Original Members: Piano",
+      "newRole": "Piano",
+      "reason": "sin fila con ese nombre en la banda",
+      "rows": []
+    },
+    {
+      "artistId": 3720,
+      "url": "https://sincopa.com/latin_pop/artists_lat/los_dementes.htm",
+      "record": "Andrés Vegas, Antonio Alcala, Nelson Madrid, Trino Bandre, Jaime Quintero",
+      "oldRole": "Original Members: Piano",
+      "newRole": "Bass",
+      "reason": "sin fila con ese nombre en la banda",
+      "rows": []
+    },
+    {
+      "artistId": 3720,
+      "url": "https://sincopa.com/latin_pop/artists_lat/los_dementes.htm",
+      "record": "Alexis Ramirez, Luis Reyes, Romer Lozano, Carlos Uribe",
+      "oldRole": "Original Members: Piano",
+      "newRole": "Timbales",
+      "reason": "la fila ya no tiene el rol de Sincopa",
+      "rows": [
+        "9906 Carlos Uribe: Timbales"
+      ]
+    },
+    {
+      "artistId": 3720,
+      "url": "https://sincopa.com/latin_pop/artists_lat/los_dementes.htm",
+      "record": "Felipe Blanco, Ramón Navarrete, Carlos Rada, Nico Madera, Nene Pacheco, Gustavo Pimentel,",
+      "oldRole": "Original Members: Piano",
+      "newRole": "Congas",
+      "reason": "sin fila con ese nombre en la banda",
+      "rows": []
+    },
+    {
+      "artistId": 3720,
+      "url": "https://sincopa.com/latin_pop/artists_lat/los_dementes.htm",
+      "record": "Angel Pérez, José \"Caraotica\" Francia, Juan Ramón Castro, Juve Rodríguez, Alfredo Sanoja, Nico Williams, Israel \"Totín\" Rebolledo, Jhoni Monte de Oca, Franklin Monterrey",
+      "oldRole": "Original Members: Piano",
+      "newRole": "Bongos",
+      "reason": "sin fila con ese nombre en la banda",
+      "rows": []
+    },
+    {
+      "artistId": 3720,
+      "url": "https://sincopa.com/latin_pop/artists_lat/los_dementes.htm",
+      "record": "Enrique Yanez",
+      "oldRole": "Original Members: Piano",
+      "newRole": "Guiro & Maracas",
+      "reason": "la fila ya no tiene el rol de Sincopa",
+      "rows": [
+        "9905 Enrique Yanez: Guiro & Maracas"
+      ]
+    },
+    {
+      "artistId": 3720,
+      "url": "https://sincopa.com/latin_pop/artists_lat/los_dementes.htm",
+      "record": "Carlos Uribe",
+      "oldRole": "Original Members: Piano",
+      "newRole": "Drums",
+      "reason": "la fila ya no tiene el rol de Sincopa",
+      "rows": [
+        "9906 Carlos Uribe: Timbales"
+      ]
+    },
+    {
+      "artistId": 3720,
+      "url": "https://sincopa.com/latin_pop/artists_lat/los_dementes.htm",
+      "record": "Rafael Silva, Carlos Guerra Jr., Alfredo Arcas, Teofilo Zampty, Carlos Espinoza, Héctor Hurtado, Israel \"Totín\" Rebolledo, Oscar Mendoza, José Rada",
+      "oldRole": "Original Members: Piano",
+      "newRole": "Trombone",
+      "reason": "sin fila con ese nombre en la banda",
+      "rows": []
+    },
+    {
+      "artistId": 3720,
+      "url": "https://sincopa.com/latin_pop/artists_lat/los_dementes.htm",
+      "record": "José Luis Morea",
+      "oldRole": "Original Members: Piano",
+      "newRole": "Flute",
+      "reason": "la fila ya no tiene el rol de Sincopa",
+      "rows": [
+        "9907 José Luis Morea: Flute"
+      ]
+    },
+    {
+      "artistId": 3720,
+      "url": "https://sincopa.com/latin_pop/artists_lat/los_dementes.htm",
+      "record": "Alfredo Aguilar",
+      "oldRole": "Original Members: Piano",
+      "newRole": "Violin",
+      "reason": "la fila ya no tiene el rol de Sincopa",
+      "rows": [
+        "9908 Alfredo Aguilar: Violin"
+      ]
+    },
+    {
+      "artistId": 3722,
+      "url": "https://sincopa.com/latin_pop/artists_lat/los_kenya.htm",
+      "record": "Miguel Silva",
+      "oldRole": "Piano, Director & Arranger",
+      "newRole": "Bass",
+      "reason": "la fila ya no tiene el rol de Sincopa",
+      "rows": [
+        "9915 Miguel Silva: Bass"
+      ]
+    },
+    {
+      "artistId": 3722,
+      "url": "https://sincopa.com/latin_pop/artists_lat/los_kenya.htm",
+      "record": "Alberto Naranjo",
+      "oldRole": "Piano, Director & Arranger",
+      "newRole": "Drums & Timbales",
+      "reason": "la fila ya no tiene el rol de Sincopa",
+      "rows": [
+        "9916 Alberto Naranjo: Drums & Timbales"
+      ]
+    },
+    {
+      "artistId": 3722,
+      "url": "https://sincopa.com/latin_pop/artists_lat/los_kenya.htm",
+      "record": "Pedro García",
+      "oldRole": "Piano, Director & Arranger",
+      "newRole": "Congas",
+      "reason": "la fila ya no tiene el rol de Sincopa",
+      "rows": [
+        "9917 Pedro García: Congas"
+      ]
+    },
+    {
+      "artistId": 3722,
+      "url": "https://sincopa.com/latin_pop/artists_lat/los_kenya.htm",
+      "record": "Memin",
+      "oldRole": "Piano, Director & Arranger",
+      "newRole": "Bongos",
+      "reason": "la fila ya no tiene el rol de Sincopa",
+      "rows": [
+        "9918 Memin: Bongos"
+      ]
+    },
+    {
+      "artistId": 3722,
+      "url": "https://sincopa.com/latin_pop/artists_lat/los_kenya.htm",
+      "record": "- Alí Rojas",
+      "oldRole": "Piano, Director & Arranger",
+      "newRole": "Bongos",
+      "reason": "la fila ya no tiene el rol de Sincopa",
+      "rows": [
+        "9919 Alí Rojas: Bongos"
+      ]
+    },
+    {
+      "artistId": 3722,
+      "url": "https://sincopa.com/latin_pop/artists_lat/los_kenya.htm",
+      "record": "Luis Arias & Luis Lewis",
+      "oldRole": "Piano, Director & Arranger",
+      "newRole": "Trumpet",
+      "reason": "sin fila con ese nombre en la banda",
+      "rows": []
+    },
+    {
+      "artistId": 3722,
+      "url": "https://sincopa.com/latin_pop/artists_lat/los_kenya.htm",
+      "record": "Carlos Yánez \"Negrito Calaven\", Carlín Rodríguez & Larry Francia",
+      "oldRole": "Piano, Director & Arranger",
+      "newRole": "Vocals",
+      "reason": "sin fila con ese nombre en la banda",
+      "rows": []
+    },
+    {
+      "artistId": 3725,
+      "url": "https://sincopa.com/latin_pop/artists_lat/los_terricolas.htm",
+      "record": "Johnny Hoyer",
+      "oldRole": "Music Director, Organ, Piano & Vocals: Johnny Hoyer",
+      "newRole": "Music Director, Organ, Piano & Vocals",
+      "reason": "la fila ya no tiene el rol de Sincopa",
+      "rows": [
+        "9921 Johnny Hoyer: Music Director, Organ, Piano & Vocals"
+      ]
+    },
+    {
+      "artistId": 3733,
+      "url": "https://sincopa.com/latin_pop/artists_lat/orinoco_banda_show.htm",
+      "record": "Luisito Quintero",
+      "oldRole": "Piano & Keyboards",
+      "newRole": "Bongos, Timbales & Additional Percusión",
+      "reason": "la fila ya no tiene el rol de Sincopa",
+      "rows": [
+        "9931 Luisito Quintero: Bongos, Timbales & Additional Percusión"
+      ]
+    },
+    {
+      "artistId": 3733,
+      "url": "https://sincopa.com/latin_pop/artists_lat/orinoco_banda_show.htm",
+      "record": "Jesús Jiménez, José \"Mortadelo\" Soto",
+      "oldRole": "Piano & Keyboards",
+      "newRole": "Bass",
+      "reason": "sin fila con ese nombre en la banda",
+      "rows": []
+    },
+    {
+      "artistId": 3733,
+      "url": "https://sincopa.com/latin_pop/artists_lat/orinoco_banda_show.htm",
+      "record": "Gustavo Aranguren, Rafael Rey",
+      "oldRole": "Piano & Keyboards",
+      "newRole": "Trumpet & Flugelhorn",
+      "reason": "sin fila con ese nombre en la banda",
+      "rows": []
+    },
+    {
+      "artistId": 3733,
+      "url": "https://sincopa.com/latin_pop/artists_lat/orinoco_banda_show.htm",
+      "record": "Benjamín Brea",
+      "oldRole": "Piano & Keyboards",
+      "newRole": "Sax, Clarinet, Flute & Piccolo",
+      "reason": "la fila ya no tiene el rol de Sincopa",
+      "rows": [
+        "9932 Benjamín Brea: Sax, Clarinet, Flute & Piccolo"
+      ]
+    },
+    {
+      "artistId": 3733,
+      "url": "https://sincopa.com/latin_pop/artists_lat/orinoco_banda_show.htm",
+      "record": "Johan Muñoz,",
+      "oldRole": "Piano & Keyboards",
+      "newRole": "Trombone",
+      "reason": "la fila ya no tiene el rol de Sincopa",
+      "rows": [
+        "9933 Johan Muñoz: Trombone"
+      ]
+    },
+    {
+      "artistId": 3733,
+      "url": "https://sincopa.com/latin_pop/artists_lat/orinoco_banda_show.htm",
+      "record": "Héctor Velásquez",
+      "oldRole": "Piano & Keyboards",
+      "newRole": "Trombone",
+      "reason": "la fila ya no tiene el rol de Sincopa",
+      "rows": [
+        "9934 Héctor Velásquez: Trombone"
+      ]
+    },
+    {
+      "artistId": 3733,
+      "url": "https://sincopa.com/latin_pop/artists_lat/orinoco_banda_show.htm",
+      "record": "Rubén \"Tutti\" Jiménez",
+      "oldRole": "Piano & Keyboards",
+      "newRole": "Drums",
+      "reason": "la fila ya no tiene el rol de Sincopa",
+      "rows": [
+        "9935 Rubén \"Tutti\" Jiménez: Drums"
+      ]
+    },
+    {
+      "artistId": 3733,
+      "url": "https://sincopa.com/latin_pop/artists_lat/orinoco_banda_show.htm",
+      "record": "Carlos Peters, Carlos Hurtado & Edgar Quijada",
+      "oldRole": "Piano & Keyboards",
+      "newRole": "Backing Vocals",
+      "reason": "sin fila con ese nombre en la banda",
+      "rows": []
+    },
+    {
+      "artistId": 3741,
+      "url": "https://sincopa.com/latin_pop/artists_lat/pina_colada.htm",
+      "record": "Vicente Delgado",
+      "oldRole": "Keyboards",
+      "newRole": "Synthesizers & Keyboards",
+      "reason": "la fila ya no tiene el rol de Sincopa",
+      "rows": [
+        "9951 Vicente Delgado: Synthesizers & Keyboards"
+      ]
+    },
+    {
+      "artistId": 3741,
+      "url": "https://sincopa.com/latin_pop/artists_lat/pina_colada.htm",
+      "record": "Ricardo Delgado",
+      "oldRole": "Keyboards",
+      "newRole": "Drums & Percussion",
+      "reason": "la fila ya no tiene el rol de Sincopa",
+      "rows": [
+        "9952 Ricardo Delgado: Drums & Percussion"
+      ]
+    },
+    {
+      "artistId": 3741,
+      "url": "https://sincopa.com/latin_pop/artists_lat/pina_colada.htm",
+      "record": "Miguel Blanco",
+      "oldRole": "Keyboards",
+      "newRole": "Bass & Vocals",
+      "reason": "la fila ya no tiene el rol de Sincopa",
+      "rows": [
+        "9953 Miguel Blanco: Bass & Vocals"
+      ]
+    },
+    {
+      "artistId": 3741,
+      "url": "https://sincopa.com/latin_pop/artists_lat/pina_colada.htm",
+      "record": "Alberto Arroyo",
+      "oldRole": "Keyboards",
+      "newRole": "Guitar",
+      "reason": "la fila ya no tiene el rol de Sincopa",
+      "rows": [
+        "9954 Alberto Arroyo: Guitar"
+      ]
+    },
+    {
+      "artistId": 3741,
+      "url": "https://sincopa.com/latin_pop/artists_lat/pina_colada.htm",
+      "record": "Daniel Berroa",
+      "oldRole": "Keyboards",
+      "newRole": "Congas & Percussion",
+      "reason": "la fila ya no tiene el rol de Sincopa",
+      "rows": [
+        "9955 Daniel Berroa: Congas & Percussion"
+      ]
+    },
+    {
+      "artistId": 3741,
+      "url": "https://sincopa.com/latin_pop/artists_lat/pina_colada.htm",
+      "record": "Danilo Muñoz, Nucho Bellomo & Alberto Arroyo",
+      "oldRole": "Keyboards",
+      "newRole": "Vocals",
+      "reason": "la fila ya no tiene el rol de Sincopa",
+      "rows": [
+        "9954 Alberto Arroyo: Guitar"
+      ]
+    },
+    {
+      "artistId": 3750,
+      "url": "https://sincopa.com/latin_pop/artists_lat/son_collage.htm",
+      "record": "Leonardo Oporto",
+      "oldRole": "Violin & Vocals",
+      "newRole": "Keyboards & Vocals",
+      "reason": "la fila ya no tiene el rol de Sincopa",
+      "rows": [
+        "9986 Leonardo Oporto: Keyboards & Vocals"
+      ]
+    },
+    {
+      "artistId": 3751,
+      "url": "https://sincopa.com/latin_pop/artists_lat/sonero_clasico_del_caribe.htm",
+      "record": "Gustavo Brito",
+      "oldRole": "Vocals",
+      "newRole": "Bass",
+      "reason": "nombre repetido en la ficha"
+    },
+    {
+      "artistId": 3751,
+      "url": "https://sincopa.com/latin_pop/artists_lat/sonero_clasico_del_caribe.htm",
+      "record": "Edgar Pereira",
+      "oldRole": "Vocals",
+      "newRole": "Tres",
+      "reason": "nombre repetido en la ficha"
+    },
+    {
+      "artistId": 1093,
+      "url": "https://sincopa.com/rock_pop/artist_rock/dame_pa_matala.htm",
+      "record": "Harry Ramos",
+      "oldRole": "Drums & Timbales",
+      "newRole": "Timbales",
+      "reason": "nombre repetido en la ficha"
+    },
+    {
+      "artistId": 1523,
+      "url": "https://sincopa.com/rock_pop/artist_rock/electrotribal.htm",
+      "record": "Kamil Zelaa",
+      "oldRole": "Keyboards & Programming",
+      "newRole": "Trumpet",
+      "reason": "la fila ya no tiene el rol de Sincopa",
+      "rows": [
+        "726 Kamil Zelaa: Trumpet"
+      ]
+    },
+    {
+      "artistId": 1523,
+      "url": "https://sincopa.com/rock_pop/artist_rock/electrotribal.htm",
+      "record": "Samy Zelaa",
+      "oldRole": "Keyboards & Programming",
+      "newRole": "Drums & Electronic Percussion",
+      "reason": "la fila ya no tiene el rol de Sincopa",
+      "rows": [
+        "724 Samy Zelaa: Drums & Electronic Percussion"
+      ]
+    },
+    {
+      "artistId": 702,
+      "url": "https://sincopa.com/rock_pop/artist_rock/equilibrio_vital.htm",
+      "record": "Arnoldo Serga",
+      "oldRole": "Bass",
+      "newRole": "Bass & Percussion",
+      "reason": "nombre repetido en la ficha"
+    },
+    {
+      "artistId": 702,
+      "url": "https://sincopa.com/rock_pop/artist_rock/equilibrio_vital.htm",
+      "record": "Guillermo González",
+      "oldRole": "Bass, Guitar & Flute",
+      "newRole": "Guitar, Flute, Sax & Vox",
+      "reason": "nombre repetido en la ficha"
+    },
+    {
+      "artistId": 0,
+      "url": "https://sincopa.com/rock_pop/artist_rock/jah_jah_children.htm",
+      "record": "Lennox Telesford",
+      "oldRole": "Lead Vocals & Percussion",
+      "newRole": "Vocals & Keyboards",
+      "reason": "la ficha no llegó al core"
+    },
+    {
+      "artistId": 0,
+      "url": "https://sincopa.com/rock_pop/artist_rock/jah_jah_children.htm",
+      "record": "Erick Mitchell",
+      "oldRole": "Lead Vocals & Percussion",
+      "newRole": "Vocals & Rhythmic Guitar",
+      "reason": "la ficha no llegó al core"
+    },
+    {
+      "artistId": 0,
+      "url": "https://sincopa.com/rock_pop/artist_rock/jah_jah_children.htm",
+      "record": "Keith Thomas",
+      "oldRole": "Lead Vocals & Percussion",
+      "newRole": "Bass",
+      "reason": "la ficha no llegó al core"
+    },
+    {
+      "artistId": 0,
+      "url": "https://sincopa.com/rock_pop/artist_rock/jah_jah_children.htm",
+      "record": "William Mitchell",
+      "oldRole": "Lead Vocals & Percussion",
+      "newRole": "Guitar, Bass & Backing Vocals",
+      "reason": "la ficha no llegó al core"
+    },
+    {
+      "artistId": 0,
+      "url": "https://sincopa.com/rock_pop/artist_rock/jah_jah_children.htm",
+      "record": "Peter Thomas",
+      "oldRole": "Lead Vocals & Percussion",
+      "newRole": "Drums & Percussion",
+      "reason": "la ficha no llegó al core"
+    },
+    {
+      "artistId": 0,
+      "url": "https://sincopa.com/rock_pop/artist_rock/jah_jah_children.htm",
+      "record": "Frank George",
+      "oldRole": "Vocals & Bass",
+      "newRole": "Lead Guitar",
+      "reason": "la ficha no llegó al core"
+    },
+    {
+      "artistId": 0,
+      "url": "https://sincopa.com/rock_pop/artist_rock/jah_jah_children.htm",
+      "record": "Alban Lett",
+      "oldRole": "Vocals & Bass",
+      "newRole": "Keyboards",
+      "reason": "la ficha no llegó al core"
+    },
+    {
+      "artistId": 144,
+      "url": "https://sincopa.com/rock_pop/artist_rock/las_4monedas.htm",
+      "record": "O'Brien",
+      "oldRole": "Bass & Vocals",
+      "newRole": "Lead Guitar & Vocals",
+      "reason": "nombre repetido en la ficha"
+    },
+    {
+      "artistId": 144,
+      "url": "https://sincopa.com/rock_pop/artist_rock/las_4monedas.htm",
+      "record": "O'Brien",
+      "oldRole": "Bass & Vocals",
+      "newRole": "Vocals",
+      "reason": "nombre repetido en la ficha"
+    },
+    {
+      "artistId": 144,
+      "url": "https://sincopa.com/rock_pop/artist_rock/las_4monedas.htm",
+      "record": "O'Brien",
+      "oldRole": "Bass & Vocals",
+      "newRole": "Drums & Vocals",
+      "reason": "nombre repetido en la ficha"
+    },
+    {
+      "artistId": 1805,
+      "url": "https://sincopa.com/rock_pop/artist_rock/mirada_interna.htm",
+      "record": "Mirelys Dugarte",
+      "oldRole": "Vocals",
+      "newRole": "Ex-Members",
+      "reason": "nombre repetido en la ficha"
+    },
+    {
+      "artistId": 218,
+      "url": "https://sincopa.com/rock_pop/artist_rock/seguridad_nacional.htm",
+      "record": "Juan Bautista López \"Yatú\"",
+      "oldRole": "Bass, Guitar & Vocals",
+      "newRole": "Guitar & Vocals",
+      "reason": "nombre repetido en la ficha"
+    },
+    {
+      "artistId": 218,
+      "url": "https://sincopa.com/rock_pop/artist_rock/seguridad_nacional.htm",
+      "record": "Abraham García",
+      "oldRole": "Drums & Vocals",
+      "newRole": "Drums, Bass & Vocals",
+      "reason": "nombre repetido en la ficha"
+    },
+    {
+      "artistId": 3832,
+      "url": "https://sincopa.com/traditional/artists2/los_canoneros.htm",
+      "record": "Hely Orsini",
+      "oldRole": "Cuatro, Vocals, Director",
+      "newRole": "Lead Vocals",
+      "reason": "la fila ya no tiene el rol de Sincopa",
+      "rows": [
+        "10060 Hely Orsini: Lead Vocals"
+      ]
+    },
+    {
+      "artistId": 3832,
+      "url": "https://sincopa.com/traditional/artists2/los_canoneros.htm",
+      "record": "Arnaldo Sánchez",
+      "oldRole": "Cuatro, Vocals, Director",
+      "newRole": "Drums",
+      "reason": "la fila ya no tiene el rol de Sincopa",
+      "rows": [
+        "10061 Arnaldo Sánchez: Drums"
+      ]
+    },
+    {
+      "artistId": 3832,
+      "url": "https://sincopa.com/traditional/artists2/los_canoneros.htm",
+      "record": "Benjamín Brea",
+      "oldRole": "Cuatro, Vocals, Director",
+      "newRole": "Sax",
+      "reason": "la fila ya no tiene el rol de Sincopa",
+      "rows": [
+        "10062 Benjamín Brea: Sax"
+      ]
+    },
+    {
+      "artistId": 3832,
+      "url": "https://sincopa.com/traditional/artists2/los_canoneros.htm",
+      "record": "Andrés Romero",
+      "oldRole": "Cuatro, Vocals, Director",
+      "newRole": "Trumpet",
+      "reason": "la fila ya no tiene el rol de Sincopa",
+      "rows": [
+        "10063 Andrés Romero: Trumpet"
+      ]
+    },
+    {
+      "artistId": 3832,
+      "url": "https://sincopa.com/traditional/artists2/los_canoneros.htm",
+      "record": "Salvador Sáez",
+      "oldRole": "Cuatro, Vocals, Director",
+      "newRole": "Trombone",
+      "reason": "la fila ya no tiene el rol de Sincopa",
+      "rows": [
+        "10064 Salvador Sáez: Trombone"
+      ]
+    },
+    {
+      "artistId": 3832,
+      "url": "https://sincopa.com/traditional/artists2/los_canoneros.htm",
+      "record": "Eddie Cisneros",
+      "oldRole": "Cuatro, Vocals, Director",
+      "newRole": "Keyboards",
+      "reason": "la fila ya no tiene el rol de Sincopa",
+      "rows": [
+        "10065 Eddie Cisneros: Keyboards"
+      ]
+    },
+    {
+      "artistId": 3832,
+      "url": "https://sincopa.com/traditional/artists2/los_canoneros.htm",
+      "record": "Army Zerpa",
+      "oldRole": "Cuatro, Vocals, Director",
+      "newRole": "Bass",
+      "reason": "la fila ya no tiene el rol de Sincopa",
+      "rows": [
+        "10066 Army Zerpa: Bass"
+      ]
+    },
+    {
+      "artistId": 3819,
+      "url": "https://sincopa.com/traditional/artists2/taburete.htm",
+      "record": "Palmenio José Talavera",
+      "oldRole": "Vocals: Tenor",
+      "newRole": "Tenor",
+      "reason": "la fila ya no tiene el rol de Sincopa",
+      "rows": [
+        "10042 Palmenio José Talavera: Tenor"
+      ]
+    },
+    {
+      "artistId": 3819,
+      "url": "https://sincopa.com/traditional/artists2/taburete.htm",
+      "record": "Glenda Reverón & Frida Gutierrez",
+      "oldRole": "Vocals: Tenor",
+      "newRole": "Sopranos",
+      "reason": "sin fila con ese nombre en la banda",
+      "rows": []
+    },
+    {
+      "artistId": 3819,
+      "url": "https://sincopa.com/traditional/artists2/taburete.htm",
+      "record": "José Rafael Gutierrez",
+      "oldRole": "Vocals: Tenor",
+      "newRole": "Bass",
+      "reason": "la fila ya no tiene el rol de Sincopa",
+      "rows": [
+        "10043 José Rafael Gutierrez: Bass"
+      ]
+    },
+    {
+      "artistId": 3819,
+      "url": "https://sincopa.com/traditional/artists2/taburete.htm",
+      "record": "Rodolfo Rafael Ruiz",
+      "oldRole": "Ex-members: Tenor",
+      "newRole": "Tenor",
+      "reason": "la fila ya no tiene el rol de Sincopa",
+      "rows": [
+        "10044 Rodolfo Rafael Ruiz: Tenor"
+      ]
+    }
+  ],
+  "pages": 22
+}

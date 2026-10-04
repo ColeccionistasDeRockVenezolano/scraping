@@ -9,7 +9,8 @@ import { SINCOPA_IDENTITY_SUFFIX } from "./sincopa-identity-overrides.js";
 // evita confundir fichas detalladas de sencillos con la tabla de discografía.
 // 1.2.0 abre todas las secciones del sitio (jazz, latin pop, clásica, new age,
 // tradicional, étnica): usan la misma plantilla de ficha que rock/pop.
-const SINCOPA_ADAPTER_VERSION = "1.3.4";
+// 1.3.5 lee varios roles en una misma celda de miembros (antes heredaban el primero).
+const SINCOPA_ADAPTER_VERSION = "1.3.5";
 
 // Sincopa es HTML de FrontPage: tablas anidadas, sin clases ni encabezados
 // semánticos. Toda su semántica está codificada en el color de fuente:
@@ -207,6 +208,9 @@ function rowsUnderSection($: CheerioAPI, pattern: RegExp): AnyNode[] {
 
 interface Member { role: string; name: string; from?: string; to?: string; }
 
+/** Encabezados de sección dentro de una celda de miembros: no son roles. */
+const SECTION_LABEL = /^(?:(?:original|other|ex-?|former|founder|founding|current|new)\s*)?members?$|^(?:miembros|integrantes)(?:\s.*)?$/iu;
+
 /** "(1970-76)" -> {from:"1970", to:"1976"}; "(1977)" -> {from:"1977"}. */
 function parsePeriod(raw: string): { from?: string; to?: string } {
   const range = /(\d{4})\s*[-–—]\s*(\d{2,4})/.exec(raw);
@@ -221,39 +225,92 @@ function parsePeriod(raw: string): { from?: string; to?: string } {
 }
 
 /**
- * Una fila de miembros trae el rol una sola vez, seguido de pares
- * (nombre dorado, período en size="1"). Se recorren los <font> en orden de
- * documento y solo se toma el dorado más interno, para no contar dos veces
- * un nombre envuelto en otro font dorado.
+ * Una fila de miembros trae el rol seguido de pares (nombre dorado, período
+ * en size="1"). Se recorren los <font> en orden de documento y solo se toma
+ * el dorado más interno, para no contar dos veces un nombre envuelto en otro
+ * font dorado. Algunas fichas (Dimensión Latina, Los Melódicos, Billo's…)
+ * meten varios roles en la misma celda separados por <br> («Bass & Vocals:
+ * … Timbales: … Trombone: …»): cada etiqueta blanca terminada en «:» abre un
+ * rol nuevo. Antes de 1.3.5 todos heredaban el primero.
  */
 function membersInRow($: CheerioAPI, row: AnyNode): Member[] {
   const cell = $(row).find("td").first();
   const html = cell.html() ?? "";
   const goldAt = html.search(new RegExp(`<font[^>]*color="${GOLD}"`, "i"));
-  const role = goldAt > 0
+  const firstRole = goldAt > 0
     ? clean($(`<div>${html.slice(0, goldAt)}</div>`).text()).replace(/:\s*$/, "").trim()
     : "";
-  if (!role) return [];
+  if (!firstRole) return [];
 
   const members: Member[] = [];
   let pending: Member | null = null;
   const flush = () => { if (pending) { members.push(pending); pending = null; } };
 
-  for (const node of cell.find("font").toArray()) {
+  // Se recorren los nodos de texto en orden de documento: cada uno es nombre
+  // (su <font> con color más cercano es dorado), período (dentro de un
+  // size="1") o etiqueta. El texto de etiqueta entre un nombre y el siguiente
+  // se acumula: algunas vienen partidas en varios <font> («Lead V» + «ocals:»)
+  // o detrás del encabezado de la sección («Original Members: Piano:»). Vale
+  // el primer tramo que no es encabezado de sección («Music Director, Organ,
+  // Piano & Vocals: Johnny Hoyer:» en Los Terrícolas repite el nombre).
+  type Piece = { kind: "name" | "period" | "label"; text: string; owner: AnyNode | null };
+  const pieces: Piece[] = [];
+  const walk = (node: AnyNode, color: AnyNode | null, period: boolean): void => {
+    if (node.type === "text") {
+      const text = $(node).text();
+      const kind = period ? "period" : color && ($(color).attr("color") ?? "").toUpperCase() === GOLD ? "name" : "label";
+      // Solo cuenta el dorado más interno: el texto suelto de un dorado que
+      // envuelve a otro dorado no es un nombre (como antes de 1.3.5).
+      if (kind === "name" && $(color!).find(`font[color="${GOLD}"]`).length) return;
+      const last = pieces[pieces.length - 1];
+      if (last && last.kind === kind && last.owner === color) last.text += text;
+      else pieces.push({ kind, text, owner: color });
+      return;
+    }
+    if (node.type !== "tag") return;
     const element = $(node);
-    const isGold = (element.attr("color") ?? "").toUpperCase() === GOLD;
-    if (isGold && element.find(`font[color="${GOLD}"]`).length === 0) {
-      const name = clean(element.text());
+    const isFont = node.name.toLowerCase() === "font";
+    const nextColor = isFont && element.attr("color") ? node : color;
+    const nextPeriod = period || (isFont && element.attr("size") === "1");
+    // Un <br> separa etiquetas; dentro de un nombre dorado no lo parte (como antes de 1.3.5).
+    if (node.name.toLowerCase() === "br" && pieces.length) {
+      const last = pieces[pieces.length - 1]!;
+      if (last.kind === "name" && last.owner === color) last.text += " ";
+      else pieces.push({ kind: "label", text: " ", owner: null });
+    }
+    for (const child of element.contents().toArray()) walk(child, nextColor, nextPeriod);
+  };
+  for (const child of cell.contents().toArray()) walk(child, null, false);
+
+  let role = firstRole;
+  let label = "";
+  for (const piece of pieces) {
+    if (piece.kind === "name") {
+      label = "";
+      const name = clean(piece.text);
       if (!name || !named(name)) continue;
       flush();
       pending = { role, name };
       continue;
     }
-    if (pending && element.attr("size") === "1") {
-      const { from, to } = parsePeriod(clean(element.text()));
+    if (piece.kind === "period") {
+      label = "";
+      if (!pending || !clean(piece.text)) continue;
+      const { from, to } = parsePeriod(clean(piece.text));
       if (from) pending.from = from;
       if (to) pending.to = to;
       flush();
+      continue;
+    }
+    label += piece.text;
+    const text = clean(label);
+    if (!/:$/u.test(text)) continue;
+    const candidate = text.slice(0, -1).split(":").map((part) => part.trim())
+      .filter((part) => part && !SECTION_LABEL.test(part))[0];
+    label = "";
+    if (candidate && !/\d/u.test(candidate)) {
+      flush();
+      role = candidate;
     }
   }
   flush();

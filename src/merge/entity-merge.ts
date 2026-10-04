@@ -15,7 +15,7 @@ import { createHash } from "node:crypto";
 import type { PoolClient } from "pg";
 import { mergeInto, MERGE_EMPTY_VALUES, MERGE_TABLES } from "../review/duplicates.js";
 import { looksLikeOrganization, nameWithoutNickname, surnameToken } from "../review/person-names.js";
-import { mergeEquivalentCredits, mergeEquivalentMemberships } from "./equivalent-relations.js";
+import { mergeEquivalentCredits } from "./equivalent-relations.js";
 import { OperatorError, updateEntity, type OperatorContext } from "./operator.js";
 import { resolveRedirect } from "./redirects.js";
 import { ENTITY_SPECS } from "./specs.js";
@@ -295,7 +295,7 @@ export interface MergeEntityRowsResult {
   filled: string[];
   creditsMerged: number;
   membershipsMerged: number;
-  /** Membresías con períodos contradictorios que quedaron a revisión humana (solo personas). */
+  /** Membresías con períodos contradictorios que quedaron a revisión humana (personas y artistas). */
   membershipReviewsOpened: number;
   /** Campos de la ficha que queda donde se conservó lo del duplicado. */
   preserved: string[];
@@ -316,9 +316,8 @@ export async function mergeEntityRows(
   // `MergeableKind` solo tiene fichas navegables: la columna destino es una de estas tres.
   const creditsMerged = await mergeEquivalentCredits(
     client, { column: spec.targetColumn as "person_id" | "artist_id" | "organization_id", id: keepId }, note, runId);
-  const memberships = kind === "person"
-    ? await mergeEquivalentMemberships(client, keepId, note, runId)
-    : { merged: 0, reviewsOpened: 0 };
+  // `mergeInto` ya unió las membresías repetidas de personas y artistas.
+  const memberships = outcome.memberships;
   return {
     auditId: outcome.auditId, moved: outcome.moved, discarded: outcome.discarded,
     filled: outcome.filled, creditsMerged, membershipsMerged: memberships.merged,

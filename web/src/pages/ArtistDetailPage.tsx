@@ -144,6 +144,10 @@ export function ArtistDetailPage() {
   if (error || !artist) return <EntityLoadError message={error ?? "Artista no encontrado."} errorValue={errorValue} onRetry={reload} />;
 
   const hasCurrentMember = artist.members.some((member) => member.isCurrent);
+  // Una persona aparece una vez aunque tenga varias etapas en la banda
+  // (Darrell Laclé en Cultura Tres: 2008–2009 y 2017–2020): sus filas van
+  // juntas bajo su nombre (caso Abaddon, 2026-10-04).
+  const memberGroups = groupMembersByPerson(artist.members);
   // Un artista puede ser el proyecto o el nombre artístico de una persona
   // (caso Ashwave, 2026-09-30). Entonces la ficha del proyecto es la de alguien
   // y no tiene por qué mandar a otra página a ver quién: su nombre y sus fechas
@@ -208,7 +212,7 @@ export function ArtistDetailPage() {
       ),
     },
     {
-      key: "miembros", label: "Miembros", count: artist.members.length,
+      key: "miembros", label: "Miembros", count: memberGroups.length,
       content: (
         <>
           {isAdmin ? (
@@ -221,9 +225,10 @@ export function ArtistDetailPage() {
               <table>
                 <thead><tr><th>Persona</th><th>Rol</th><th>Periodo</th><th></th></tr></thead>
                 <tbody>
-                  {artist.members.map((member) => (
-                    <MemberRow key={member.id} member={member} canEdit={isAdmin} onEdit={() => setEditingMember(member)} onChanged={reload} />
-                  ))}
+                  {memberGroups.flatMap((group) => group.map((member, index) => (
+                    <MemberRow key={member.id} member={member} personSpan={index === 0 ? group.length : 0}
+                      canEdit={isAdmin} onEdit={() => setEditingMember(member)} onChanged={reload} />
+                  )))}
                 </tbody>
               </table>
             </div>
@@ -404,13 +409,25 @@ export function ArtistDetailPage() {
   );
 }
 
-function MemberRow({ member, canEdit, onEdit, onChanged }: { canEdit: boolean; onEdit: () => void; onChanged: () => void; member: ArtistMember }) {
+/** Membresías agrupadas por persona, en el orden en que aparece cada una. */
+function groupMembersByPerson(members: ArtistMember[]): ArtistMember[][] {
+  const groups = new Map<number, ArtistMember[]>();
+  for (const member of members) groups.set(member.personId, [...(groups.get(member.personId) ?? []), member]);
+  return [...groups.values()];
+}
+
+/** `personSpan` > 0: primera fila de la persona (ocupa sus etapas); 0: etapa siguiente. */
+function MemberRow({ member, personSpan, canEdit, onEdit, onChanged }: {
+  canEdit: boolean; onEdit: () => void; onChanged: () => void; member: ArtistMember; personSpan: number;
+}) {
   const { notify } = useToast();
   const [removing, setRemoving] = useState(false);
 
   return (
     <tr>
-      <td><Link to={`/personas/${member.personId}`}>{member.personName}</Link><DeceasedMark deceased={member.personIsDeceased} /></td>
+      {personSpan > 0 ? (
+        <td rowSpan={personSpan}><Link to={`/personas/${member.personId}`}>{member.personName}</Link><DeceasedMark deceased={member.personIsDeceased} /></td>
+      ) : null}
       <td>{member.role}</td>
       <td className="mono">{member.fromYear ?? "—"}{member.isCurrent ? "–presente" : member.toYear ? `–${member.toYear}` : ""}</td>
       <td className="row-actions">

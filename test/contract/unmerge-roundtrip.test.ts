@@ -78,7 +78,8 @@ describe("deshacer una fusión (E11.8)", () => {
     await one("INSERT INTO public.album_credits(album_id,person_id,credit_type,role) VALUES($1,$2,'musician','guitar') RETURNING id", [album, drop]);
     await one("INSERT INTO public.track_credits(track_id,person_id,credit_type,role) VALUES($1,$2,'musician','Bajo') RETURNING id", [track, drop]);
     await one("INSERT INTO public.artist_members(artist_id,person_id,role,to_year) VALUES($1,$2,'Batería',1995) RETURNING id", [band, keep]);
-    await one("INSERT INTO public.artist_members(artist_id,person_id,role,from_year) VALUES($1,$2,'batería',1990) RETURNING id", [band, drop]);
+    // Rol escrito de otra forma y con una pieza más: la unión lo cambia y deshacer lo devuelve.
+    await one("INSERT INTO public.artist_members(artist_id,person_id,role,from_year) VALUES($1,$2,'batería, coros',1990) RETURNING id", [band, drop]);
     // Claim gemelo: mismo source/página/campo/hash con destino distinto.
     const rawHash = sha("gemelo-reversion");
     const claim = (personId: number, identity: string) => one(`

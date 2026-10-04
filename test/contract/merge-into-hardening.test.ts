@@ -57,7 +57,7 @@ describe("mergeInto endurecido", () => {
     }
   }
 
-  const merge = (kind: "person", keepId: number, dropId: number, note = "prueba de endurecimiento") =>
+  const merge = (kind: "person" | "artist", keepId: number, dropId: number, note = "prueba de endurecimiento") =>
     inTransaction((client) => mergeInto(client, kind, keepId, dropId, note, runId));
 
   const newPerson = async (name: string, options: { isVenezuelan?: boolean } = {}) =>
@@ -218,28 +218,49 @@ describe("mergeInto endurecido", () => {
     expect(await count("SELECT count(*) n FROM ingest.entity_redirects WHERE entity_kind='person' AND from_id=ANY($1::bigint[]) AND merge_audit_id IS NULL", [[first, second, third]])).toBe(0);
   });
 
+  it("la fusión de dos bandas une a la persona que figuraba en las dos (Kolman)", async () => {
+    const keepBand = await one("INSERT INTO public.artists(name) VALUES('Kolman Prueba') RETURNING id");
+    const dropBand = await one("INSERT INTO public.artists(name) VALUES('Kolman Prueba (2)') RETURNING id");
+    const drummer = await newPerson("Baterista Kolman");
+    const kept = await one("INSERT INTO public.artist_members(artist_id,person_id,role) VALUES($1,$2,'Drums') RETURNING id", [keepBand, drummer]);
+    await one("INSERT INTO public.artist_members(artist_id,person_id,role,from_year) VALUES($1,$2,'Drums',2016) RETURNING id", [dropBand, drummer]);
+
+    const outcome = await merge("artist", keepBand, dropBand, "prueba de bandas");
+    expect(outcome.memberships).toEqual({ merged: 1, reviewsOpened: 0 });
+    const rows = (await getPool().query<{ id: string; role: string; from_year: number | null }>(
+      "SELECT id::text,role,from_year FROM public.artist_members WHERE artist_id=$1", [keepBand])).rows;
+    expect(rows).toEqual([{ id: String(kept), role: "Drums", from_year: 2016 }]);
+  });
+
   it("une membresías compatibles y abre revisión si los periodos se contradicen", async () => {
     const compatibleBand = await one("INSERT INTO public.artists(name) VALUES('Banda Membresias Compatibles') RETURNING id");
     const conflictingBand = await one("INSERT INTO public.artists(name) VALUES('Banda Membresias Contradictorias') RETURNING id");
+    const stagesBand = await one("INSERT INTO public.artists(name) VALUES('Banda Membresias Etapas') RETURNING id");
     const keep = await newPerson("Membresia A");
     const drop = await newPerson("Membresia B");
-    // Mismo rol salvo mayúsculas, períodos que no se contradicen.
+    // El mismo rol escrito distinto, períodos que no se contradicen: una fila.
     const compatibleKeep = await one("INSERT INTO public.artist_members(artist_id,person_id,role,from_year) VALUES($1,$2,'Bass',1990) RETURNING id", [compatibleBand, keep]);
-    const compatibleDrop = await one("INSERT INTO public.artist_members(artist_id,person_id,role,to_year) VALUES($1,$2,'bass',1995) RETURNING id", [compatibleBand, drop]);
-    // Mismo rol y años distintos: decide una persona, no el motor.
+    const compatibleDrop = await one("INSERT INTO public.artist_members(artist_id,person_id,role,to_year) VALUES($1,$2,'bajo, coros',1995) RETURNING id", [compatibleBand, drop]);
+    // Años que se solapan sin coincidir: decide una persona, no el motor.
     const conflictingKeep = await one("INSERT INTO public.artist_members(artist_id,person_id,role,from_year,to_year) VALUES($1,$2,'Drums',1990,1995) RETURNING id", [conflictingBand, keep]);
-    const conflictingDrop = await one("INSERT INTO public.artist_members(artist_id,person_id,role,from_year,to_year) VALUES($1,$2,'Drums',2000,2005) RETURNING id", [conflictingBand, drop]);
+    const conflictingDrop = await one("INSERT INTO public.artist_members(artist_id,person_id,role,from_year,to_year) VALUES($1,$2,'Drums',1992,1998) RETURNING id", [conflictingBand, drop]);
+    // Dos etapas que no se tocan: siguen siendo dos filas, sin revisión.
+    await one("INSERT INTO public.artist_members(artist_id,person_id,role,from_year,to_year) VALUES($1,$2,'Bass',2008,2009) RETURNING id", [stagesBand, keep]);
+    await one("INSERT INTO public.artist_members(artist_id,person_id,role,from_year,to_year) VALUES($1,$2,'Bass',2017,2020) RETURNING id", [stagesBand, drop]);
 
-    await merge("person", keep, drop, "prueba de membresías");
-    const result = await inTransaction((client) => mergeEquivalentMemberships(client, keep, "prueba de membresías", runId));
+    // `mergeInto` ya une las membresías que la fusión deja repetidas.
+    const outcome = await merge("person", keep, drop, "prueba de membresías");
+    expect(outcome.memberships).toEqual({ merged: 1, reviewsOpened: 1 });
+    const again = await inTransaction((client) => mergeEquivalentMemberships(client, keep, "prueba de membresías", runId));
+    expect(again).toEqual({ merged: 0, reviewsOpened: 0 });
 
-    expect(result).toEqual({ merged: 1, reviewsOpened: 1 });
     const memberships = await count("SELECT count(*) n FROM public.artist_members WHERE person_id=$1", [keep]);
-    expect(memberships).toBe(3);
-    // El que queda completa lo que le faltaba del que desaparece.
-    const survivor = (await getPool().query<{ from_year: number | null; to_year: number | null }>(
-      "SELECT from_year,to_year FROM public.artist_members WHERE id=$1", [compatibleKeep])).rows[0]!;
-    expect(survivor).toEqual({ from_year: 1990, to_year: 1995 });
+    expect(memberships).toBe(5);
+    // El que queda completa lo que le faltaba del que desaparece y une el rol.
+    const survivor = (await getPool().query<{ role: string; from_year: number | null; to_year: number | null; notes: string | null }>(
+      "SELECT role,from_year,to_year,notes FROM public.artist_members WHERE id=$1", [compatibleKeep])).rows[0]!;
+    expect(survivor).toMatchObject({ role: "bajo, coros", from_year: 1990, to_year: 1995 });
+    expect(survivor.notes).toContain("«Bass»");
     expect(await count("SELECT count(*) n FROM public.artist_members WHERE id=$1", [compatibleDrop])).toBe(0);
 
     const review = (await getPool().query<{ kind: string; priority: number; status: string; payload: { detector: string; ids: number[] }; ids: string }>(`

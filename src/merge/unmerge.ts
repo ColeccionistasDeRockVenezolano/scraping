@@ -273,6 +273,20 @@ export async function undoMergeRun(context: OperatorContext, mergeRunId: number)
     throw new OperatorError("not_open", `el run ${mergeRunId} no tiene fusiones que deshacer`, { runId: mergeRunId });
   }
 
+  // Lo que la unión de membresías escribió en la fila que quedó (rol unido,
+  // notas, años) vuelve primero a su valor: después se separan las filas.
+  const consolidated = await client.query<{ artist_membership_id: string; old_value: Record<string, unknown> }>(`
+    SELECT artist_membership_id::text, old_value FROM ingest.merge_audit
+     WHERE run_id=$1 AND field='membership_consolidated' AND artist_membership_id IS NOT NULL
+     ORDER BY id DESC`, [mergeRunId]);
+  for (const row of consolidated.rows) {
+    const columns = Object.keys(row.old_value).filter((column) => ["role", "from_year", "to_year", "is_current", "notes"].includes(column));
+    if (!columns.length) continue;
+    await client.query(
+      `UPDATE public.artist_members SET ${columns.map((column, index) => `${column}=$${index + 2}`).join(",")} WHERE id=$1`,
+      [row.artist_membership_id, ...columns.map((column) => row.old_value[column])]);
+  }
+
   const restored: Array<{ kind: string; id: number }> = [];
   for (const audit of rows) restored.push(await undoOneMerge(context, audit));
 
@@ -280,7 +294,7 @@ export async function undoMergeRun(context: OperatorContext, mergeRunId: number)
   // revierten: cambiar el valor otra vez sería afirmar algo que nadie decidió.
   const corrections = (await client.query<{ field: string }>(`
     SELECT DISTINCT field FROM ingest.merge_audit
-     WHERE run_id=$1 AND field NOT IN ('merged_duplicate','unmerged_duplicate')
+     WHERE run_id=$1 AND field NOT IN ('merged_duplicate','unmerged_duplicate','membership_consolidated')
      ORDER BY field`, [mergeRunId])).rows.map((row) => row.field);
   return { mergeRunId, restored, fieldsNotReverted: corrections };
 }
