@@ -1,0 +1,35 @@
+{
+  "section": "latin_pop",
+  "dryRun": false,
+  "note": "Sincopa latin_pop: créditos de las fichas separadas de discos mezclados (adapter 1.3.3: el crédito apunta al disco de la ficha; Brian 2026-10-03)",
+  "kinds": {
+    "album_credit": {
+      "identities": 256,
+      "claims": 1280,
+      "verdicts": {
+        "puente": 256
+      },
+      "applied": 72,
+      "unchanged": 1168,
+      "stillCandidate": 40,
+      "dismissed": 0,
+      "failed": 0
+    },
+    "track_credit": {
+      "identities": 255,
+      "claims": 1530,
+      "verdicts": {
+        "puente": 255
+      },
+      "applied": 177,
+      "unchanged": 1089,
+      "stillCandidate": 264,
+      "dismissed": 0,
+      "failed": 0
+    }
+  },
+  "holds": [],
+  "duplicateFlags": [],
+  "errors": [],
+  "runId": 11754
+}
