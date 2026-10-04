@@ -24,6 +24,7 @@ const CurationOverviewPage = lazy(() => import("./pages/CurationOverviewPage").t
 const CurationFindingsPage = lazy(() => import("./pages/CurationFindingsPage").then((module) => ({ default: module.CurationFindingsPage })));
 const CurationFixesPage = lazy(() => import("./pages/CurationFixesPage").then((module) => ({ default: module.CurationFixesPage })));
 const ChangesHistoryPage = lazy(() => import("./pages/ChangesHistoryPage").then((module) => ({ default: module.ChangesHistoryPage })));
+const CurationImagesPage = lazy(() => import("./pages/CurationImagesPage").then((module) => ({ default: module.CurationImagesPage })));
 const CurationAutofixPage = lazy(() => import("./pages/CurationAutofixPage").then((module) => ({ default: module.CurationAutofixPage })));
 
 /** Enlaces viejos (/revision/:id) siguen llevando a la revisión. */
@@ -56,6 +57,8 @@ export function App() {
             <Route path="revision" element={<Navigate to="/curaduria" replace />} />
             <Route path="revision/:id" element={<ReviewQueueDetailPage />} />
             <Route path="duplicados" element={<PersonDuplicatesPage />} />
+            {/* Portadas y fotos de artista para elegir a ojo (0038). */}
+            <Route path="imagenes" element={<CurationImagesPage />} />
             {/* Historial de lotes de corrección, con su deshacer (PLAN_CURADURIA E8.5). */}
             <Route path="correcciones" element={<CurationFixesPage />} />
             <Route path="correcciones/:batchId" element={<CurationFixesPage />} />

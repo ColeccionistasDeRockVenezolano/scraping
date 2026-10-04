@@ -40,6 +40,7 @@ import { registerChangeRoutes } from "./routes/changes.js";
 import { registerCurationRoutes } from "./routes/curation.js";
 import { registerCurationActionRoutes } from "./routes/curation-actions.js";
 import { registerCurationAutofixRoutes } from "./routes/curation-autofix.js";
+import { registerImageCandidateRoutes } from "./routes/image-candidates.js";
 import { installAutofix } from "../curation/autofix.js";
 
 const log = moduleLogger("api");
@@ -152,6 +153,7 @@ export async function buildApp(): Promise<FastifyInstance> {
   await registerCurationRoutes(app);
   await registerCurationActionRoutes(app);
   await registerCurationAutofixRoutes(app);
+  await registerImageCandidateRoutes(app);
   // La autocorrección se engancha al final de cada análisis completo. Sigue
   // apagada mientras CRV_CURATION_AUTOFIX sea false y no haya reglas encendidas.
   installAutofix();

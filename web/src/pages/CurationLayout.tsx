@@ -12,9 +12,9 @@
 // «No se pudo cargar».
 import { Suspense, useCallback, useEffect, useRef, useState } from "react";
 import { NavLink, Outlet, useLocation, useOutletContext } from "react-router-dom";
-import { CaretDown, ClockCounterClockwise, Copy, LockSimple, Pulse, Robot, SignIn, type Icon } from "@phosphor-icons/react";
+import { CaretDown, ClockCounterClockwise, Copy, Images, LockSimple, Pulse, Robot, SignIn, type Icon } from "@phosphor-icons/react";
 import { useOperator } from "../lib/OperatorContext";
-import { ApiError, curationApi, entityMergeApi } from "../lib/api";
+import { ApiError, curationApi, entityMergeApi, imageCandidatesApi } from "../lib/api";
 import { categoryIcon, formatCount } from "../lib/curation";
 import { LoadingState } from "../components/StateViews";
 import { RowsSkeleton } from "../components/Skeletons";
@@ -112,12 +112,35 @@ function useDuplicateCount(enabled: boolean): number | undefined {
   return count;
 }
 
+/** Fichas con portada o foto por elegir (las dos pestañas juntas). */
+function useImageCount(enabled: boolean): number | undefined {
+  const [count, setCount] = useState<number>();
+
+  useEffect(() => {
+    if (!enabled) return undefined;
+    let current = true;
+    const refresh = () => {
+      imageCandidatesApi.summary()
+        .then((summary) => { if (current) setCount(summary.album + summary.artist); })
+        .catch(() => undefined);
+    };
+    refresh();
+    const timer = window.setInterval(() => {
+      if (document.visibilityState === "visible") refresh();
+    }, REFRESH_MS);
+    return () => { current = false; window.clearInterval(timer); };
+  }, [enabled]);
+
+  return count;
+}
+
 export function CurationLayout() {
   const { user, isAdmin, isChecking } = useOperator();
   const [signingIn, setSigningIn] = useState(false);
   const context = useSummary(isAdmin);
   const { summary } = context;
   const duplicateCount = useDuplicateCount(isAdmin);
+  const imageCount = useImageCount(isAdmin);
 
   return (
     <>
@@ -148,7 +171,7 @@ export function CurationLayout() {
         </div>
       ) : (
         <div className="curation-shell">
-          <CurationNav summary={summary} duplicateCount={duplicateCount} />
+          <CurationNav summary={summary} duplicateCount={duplicateCount} imageCount={imageCount} />
           <div className="curation-shell__main">
             <Suspense fallback={<RowsSkeleton rows={4} label="Cargando la sección…" />}>
               <Outlet context={context} />
@@ -186,7 +209,7 @@ function currentEntry(pathname: string, entries: NavEntry[]): Pick<NavEntry, "la
  * por debajo de 1024 px se pliega en un botón que muestra la sección abierta y
  * despliega la lista completa.
  */
-function CurationNav({ summary, duplicateCount }: { summary: CurationSummary | undefined; duplicateCount: number | undefined }) {
+function CurationNav({ summary, duplicateCount, imageCount }: { summary: CurationSummary | undefined; duplicateCount: number | undefined; imageCount: number | undefined }) {
   const { pathname } = useLocation();
   const [open, setOpen] = useState(false);
 
@@ -211,6 +234,10 @@ function CurationNav({ summary, duplicateCount }: { summary: CurationSummary | u
     {
       to: "/curaduria/duplicados", label: "Posibles duplicados", icon: Copy,
       ...(duplicateCount !== undefined ? { count: duplicateCount } : {}),
+    },
+    {
+      to: "/curaduria/imagenes", label: "Portadas y fotos", icon: Images,
+      ...(imageCount !== undefined ? { count: imageCount } : {}),
     },
     // Sin contador a propósito: el historial de correcciones no es una bandeja
     // pendiente, es lo que ya se hizo (PLAN_CURADURIA E8.5).

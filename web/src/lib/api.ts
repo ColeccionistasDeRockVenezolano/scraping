@@ -477,3 +477,35 @@ export const aliasWrites: Record<EntityPath, ReturnType<typeof aliasWriteApi>> =
   albums: aliasWriteApi("albums"),
   tracks: aliasWriteApi("tracks"),
 };
+
+// ---------- Curaduría: elegir portada o foto de artista a ojo (0038) ----------
+export type ImageCandidateKind = "album" | "artist";
+export interface ImageCandidate {
+  id: number;
+  url: string;
+  source: string;
+  pageUrl: string | null;
+  width: number | null;
+  height: number | null;
+  /** Parecido con la imagen actual (0–1); null cuando no se calculó. */
+  score: number | null;
+}
+export interface ImageCandidateGroup {
+  kind: ImageCandidateKind;
+  entityId: number;
+  name: string;
+  subtitle: string | null;
+  currentUrl: string | null;
+  stale: boolean;
+  candidates: ImageCandidate[];
+}
+
+export const imageCandidatesApi = {
+  summary: () => request<Record<ImageCandidateKind, number>>("/curation/images/summary"),
+  list: (kind: ImageCandidateKind, params: Paged = {}) =>
+    request<Page<ImageCandidateGroup>>("/curation/images", { query: { kind, ...params } }),
+  /** `candidateId` null = dejar la imagen actual y descartar las candidatas. */
+  decide: (kind: ImageCandidateKind, entityId: number, candidateId: number | null) =>
+    request<{ runId: number; kind: ImageCandidateKind; entityId: number; chosenUrl: string | null }>(
+      `/curation/images/${kind}/${entityId}/decide`, { method: "POST", authenticated: true, body: { candidateId } }),
+};

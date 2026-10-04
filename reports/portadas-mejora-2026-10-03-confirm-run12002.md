@@ -1,4 +1,4 @@
-# Mejora de portadas pequeñas (dry-run)
+# Mejora de portadas pequeñas (confirm, run 12002)
 
 Mejora de portadas: miniatura (≤300 px) cambiada por la misma portada en grande, prioridad Spotify > Deezer > MusicBrainz > Discogs (Brian, 2026-10-03)
 
