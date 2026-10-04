@@ -1,0 +1,3409 @@
+{
+ "generado": "2026-10-04T00:20:02.236Z",
+ "plan": "reports/etapa4-altas-2026-10-03/plan-lote1.jsonl",
+ "runs": [
+  11726,
+  11729,
+  11732,
+  11741,
+  11746,
+  11752
+ ],
+ "creadas": [
+  {
+   "clave": "rym-nuevos:artist:aura-spei",
+   "tipo": "artist",
+   "id": 4525,
+   "nombre": "Aura Spei"
+  },
+  {
+   "clave": "rym-nuevos:artist:mon-carrillo-y-su-sexteto",
+   "tipo": "artist",
+   "id": 4526,
+   "nombre": "Mon Carrillo y Su Sexteto"
+  },
+  {
+   "clave": "rym-nuevos:artist:a_l_o_",
+   "tipo": "artist",
+   "id": 4527,
+   "nombre": "A.L.O."
+  },
+  {
+   "clave": "rym-nuevos:artist:priska-1",
+   "tipo": "artist",
+   "id": 4528,
+   "nombre": "Priska"
+  },
+  {
+   "clave": "rym-nuevos:artist:esos-cubos",
+   "tipo": "artist",
+   "id": 4529,
+   "nombre": "Esos... Cubos"
+  },
+  {
+   "clave": "rym-nuevos:artist:los-propios",
+   "tipo": "artist",
+   "id": 4530,
+   "nombre": "Los Propios"
+  },
+  {
+   "clave": "rym-nuevos:artist:caminant",
+   "tipo": "artist",
+   "id": 4531,
+   "nombre": "Caminant"
+  },
+  {
+   "clave": "rym-nuevos:artist:sorority",
+   "tipo": "artist",
+   "id": 4532,
+   "nombre": "Sorority"
+  },
+  {
+   "clave": "rym-nuevos:artist:doctor-no",
+   "tipo": "artist",
+   "id": 4533,
+   "nombre": "Doctor No"
+  },
+  {
+   "clave": "rym-nuevos:artist:accion_directa",
+   "tipo": "artist",
+   "id": 4534,
+   "nombre": "Acción Directa"
+  },
+  {
+   "clave": "rym-nuevos:artist:xtension",
+   "tipo": "artist",
+   "id": 4535,
+   "nombre": "Xtensión"
+  },
+  {
+   "clave": "rym-nuevos:artist:frailes",
+   "tipo": "artist",
+   "id": 4536,
+   "nombre": "Frailes"
+  },
+  {
+   "clave": "rym-nuevos:artist:kurikos-suin",
+   "tipo": "artist",
+   "id": 4537,
+   "nombre": "Kurikos Suin"
+  },
+  {
+   "clave": "rym-nuevos:artist:nino_nuclear_y_los_mutantes_de_saturno",
+   "tipo": "artist",
+   "id": 4538,
+   "nombre": "Niño Nuclear y los Mutantes de Saturno"
+  },
+  {
+   "clave": "rym-nuevos:artist:azzata-clips",
+   "tipo": "artist",
+   "id": 4539,
+   "nombre": "Azzata Clips"
+  },
+  {
+   "clave": "rym-nuevos:artist:canibal-monkeys",
+   "tipo": "artist",
+   "id": 4540,
+   "nombre": "Caníbal Monkeys"
+  },
+  {
+   "clave": "rym-nuevos:artist:los-delorean",
+   "tipo": "artist",
+   "id": 4541,
+   "nombre": "Los Delorean"
+  },
+  {
+   "clave": "rym-nuevos:artist:orquesta-la-recopilacion",
+   "tipo": "artist",
+   "id": 4542,
+   "nombre": "Orquesta La Recopilacion"
+  },
+  {
+   "clave": "rym-nuevos:artist:dragon-blanco",
+   "tipo": "artist",
+   "id": 4543,
+   "nombre": "Dragón Blanco"
+  },
+  {
+   "clave": "rym-nuevos:artist:ababajah",
+   "tipo": "artist",
+   "id": 4544,
+   "nombre": "Ababajah"
+  },
+  {
+   "clave": "rym-nuevos:artist:ymtqdasai",
+   "tipo": "artist",
+   "id": 4545,
+   "nombre": "YMTQDasai"
+  },
+  {
+   "clave": "rym-nuevos:artist:caimanera",
+   "tipo": "artist",
+   "id": 4546,
+   "nombre": "Caimanera"
+  },
+  {
+   "clave": "rym-nuevos:artist:wmf_f1",
+   "tipo": "artist",
+   "id": 4547,
+   "nombre": "WMF"
+  },
+  {
+   "clave": "rym-nuevos:artist:mortus-stella",
+   "tipo": "artist",
+   "id": 4548,
+   "nombre": "Mortus Stella"
+  },
+  {
+   "clave": "rym-nuevos:artist:eustace-1",
+   "tipo": "artist",
+   "id": 4549,
+   "nombre": "Eustace"
+  },
+  {
+   "clave": "rym-nuevos:artist:fakboi",
+   "tipo": "artist",
+   "id": 4550,
+   "nombre": "Fakboi"
+  },
+  {
+   "clave": "rym-nuevos:artist:vision-real",
+   "tipo": "artist",
+   "id": 4551,
+   "nombre": "Vision Real"
+  },
+  {
+   "clave": "rym-nuevos:artist:asuka-en-el-fin-del-mundo",
+   "tipo": "artist",
+   "id": 4552,
+   "nombre": "Asuka en el Fin del Mundo"
+  },
+  {
+   "clave": "rym-nuevos:artist:grupo_imagen",
+   "tipo": "artist",
+   "id": 4553,
+   "nombre": "Grupo Imagen"
+  },
+  {
+   "clave": "rym-nuevos:artist:the_viridian_groove",
+   "tipo": "artist",
+   "id": 4554,
+   "nombre": "The Viridian Groove"
+  },
+  {
+   "clave": "rym-nuevos:artist:los-coveros",
+   "tipo": "artist",
+   "id": 4555,
+   "nombre": "Los Coveros"
+  },
+  {
+   "clave": "rym-nuevos:artist:wannamaker",
+   "tipo": "artist",
+   "id": 4556,
+   "nombre": "Wannamaker"
+  },
+  {
+   "clave": "rym-nuevos:artist:pipo-y-sus-estrellas",
+   "tipo": "artist",
+   "id": 4557,
+   "nombre": "Pipo y sus Estrellas"
+  },
+  {
+   "clave": "rym-nuevos:artist:el-regano",
+   "tipo": "artist",
+   "id": 4558,
+   "nombre": "El Regaño"
+  },
+  {
+   "clave": "rym-nuevos:artist:los-dead",
+   "tipo": "artist",
+   "id": 4559,
+   "nombre": "Los Dead"
+  },
+  {
+   "clave": "rym-nuevos:artist:sr-falla-de-origen",
+   "tipo": "artist",
+   "id": 4560,
+   "nombre": "Sr. Falla de Origen"
+  },
+  {
+   "clave": "rym-nuevos:artist:los-zumo",
+   "tipo": "artist",
+   "id": 4561,
+   "nombre": "Los Zumo"
+  },
+  {
+   "clave": "rym-nuevos:artist:rafa-y-sus-diamantes",
+   "tipo": "artist",
+   "id": 4562,
+   "nombre": "Rafa y Sus Diamantes"
+  },
+  {
+   "clave": "rym-nuevos:artist:virtual-animal",
+   "tipo": "artist",
+   "id": 4563,
+   "nombre": "Virtual Animal"
+  },
+  {
+   "clave": "rym-nuevos:artist:creatica",
+   "tipo": "artist",
+   "id": 4564,
+   "nombre": "Creática"
+  },
+  {
+   "clave": "rym-nuevos:artist:afrochill",
+   "tipo": "artist",
+   "id": 4565,
+   "nombre": "Afrochill"
+  },
+  {
+   "clave": "rym-nuevos:artist:bucle-lunar",
+   "tipo": "artist",
+   "id": 4566,
+   "nombre": "Bucle Lunar"
+  },
+  {
+   "clave": "rym-nuevos:artist:insok",
+   "tipo": "artist",
+   "id": 4567,
+   "nombre": "Insok"
+  },
+  {
+   "clave": "rym-nuevos:artist:holy-hands-1",
+   "tipo": "artist",
+   "id": 4568,
+   "nombre": "Holy Hands"
+  },
+  {
+   "clave": "rym-nuevos:artist:coral-falcon",
+   "tipo": "artist",
+   "id": 4569,
+   "nombre": "Coral Falcón"
+  },
+  {
+   "clave": "rym-nuevos:artist:torrece",
+   "tipo": "artist",
+   "id": 4570,
+   "nombre": "Torrecè"
+  },
+  {
+   "clave": "rym-nuevos:artist:ninos-con-pistolas",
+   "tipo": "artist",
+   "id": 4571,
+   "nombre": "Niños con Pistolas"
+  },
+  {
+   "clave": "rym-nuevos:artist:sentimentals",
+   "tipo": "artist",
+   "id": 4572,
+   "nombre": "sentimentals"
+  },
+  {
+   "clave": "rym-nuevos:artist:polyman",
+   "tipo": "artist",
+   "id": 4573,
+   "nombre": "Pólyman"
+  },
+  {
+   "clave": "rym-nuevos:artist:tripland",
+   "tipo": "artist",
+   "id": 4574,
+   "nombre": "Tripland"
+  },
+  {
+   "clave": "rym-nuevos:artist:musanostra",
+   "tipo": "artist",
+   "id": 4575,
+   "nombre": "Musanostra"
+  },
+  {
+   "clave": "rym-nuevos:artist:the_monroes_f3",
+   "tipo": "artist",
+   "id": 4576,
+   "nombre": "The Monroes"
+  },
+  {
+   "clave": "rym-nuevos:artist:no-light-no-water",
+   "tipo": "artist",
+   "id": 4577,
+   "nombre": "No Light No Water"
+  },
+  {
+   "clave": "rym-nuevos:artist:los_vanders",
+   "tipo": "artist",
+   "id": 4578,
+   "nombre": "Los Vanders"
+  },
+  {
+   "clave": "rym-nuevos:artist:colibri-1",
+   "tipo": "artist",
+   "id": 4579,
+   "nombre": "Colibrí"
+  },
+  {
+   "clave": "rym-nuevos:artist:b612",
+   "tipo": "artist",
+   "id": 4580,
+   "nombre": "B612"
+  },
+  {
+   "clave": "rym-nuevos:artist:pez-volador",
+   "tipo": "artist",
+   "id": 4581,
+   "nombre": "Pez Volador"
+  },
+  {
+   "clave": "rym-nuevos:artist:merida-swing-boys",
+   "tipo": "artist",
+   "id": 4582,
+   "nombre": "Merida Swing Boys ‎"
+  },
+  {
+   "clave": "rym-nuevos:artist:_xprnc",
+   "tipo": "artist",
+   "id": 4583,
+   "nombre": "π XPRNC"
+  },
+  {
+   "clave": "rym-nuevos:artist:bahtawi",
+   "tipo": "artist",
+   "id": 4584,
+   "nombre": "Bahtawi"
+  },
+  {
+   "clave": "rym-nuevos:artist:grupo-v",
+   "tipo": "artist",
+   "id": 4585,
+   "nombre": "Grupo V"
+  },
+  {
+   "clave": "rym-nuevos:artist:joudy",
+   "tipo": "artist",
+   "id": 4586,
+   "nombre": "Joudy"
+  },
+  {
+   "clave": "rym-nuevos:artist:ile-des-phoques",
+   "tipo": "artist",
+   "id": 4587,
+   "nombre": "Ile des Phoques"
+  },
+  {
+   "clave": "rym-nuevos:artist:los-prisioneros",
+   "tipo": "artist",
+   "id": 4588,
+   "nombre": "Los Prisioneros"
+  },
+  {
+   "clave": "rym-nuevos:artist:cats-and-beloved-pets",
+   "tipo": "artist",
+   "id": 4589,
+   "nombre": "cats! and beloved pets"
+  },
+  {
+   "clave": "rym-nuevos:artist:mil-ataris-por-segundo",
+   "tipo": "artist",
+   "id": 4590,
+   "nombre": "mil ataris por segundo"
+  },
+  {
+   "clave": "rym-nuevos:artist:magnifilium",
+   "tipo": "artist",
+   "id": 4591,
+   "nombre": "Magnifilium"
+  },
+  {
+   "clave": "rym-nuevos:artist:sendero-veneco",
+   "tipo": "artist",
+   "id": 4592,
+   "nombre": "Sendero Veneco"
+  },
+  {
+   "clave": "rym-nuevos:artist:la-danta",
+   "tipo": "artist",
+   "id": 4593,
+   "nombre": "La Danta"
+  },
+  {
+   "clave": "rym-nuevos:artist:junko-furuta-1",
+   "tipo": "artist",
+   "id": 4594,
+   "nombre": "Junko Furuta"
+  },
+  {
+   "clave": "rym-nuevos:artist:porfi-jimenez-y-su-orquesta",
+   "tipo": "artist",
+   "id": 4595,
+   "nombre": "Porfi Jiménez y Su Orquesta"
+  },
+  {
+   "clave": "rym-nuevos:artist:arawato",
+   "tipo": "artist",
+   "id": 4596,
+   "nombre": "Arawato"
+  },
+  {
+   "clave": "rym-nuevos:artist:la-sonora-caracas",
+   "tipo": "artist",
+   "id": 4597,
+   "nombre": "La Sonora Caracas"
+  },
+  {
+   "clave": "rym-nuevos:artist:musikautomatika",
+   "tipo": "artist",
+   "id": 4598,
+   "nombre": "Musikautomatika"
+  },
+  {
+   "clave": "rym-nuevos:artist:colerico-espin",
+   "tipo": "artist",
+   "id": 4599,
+   "nombre": "Colérico Espín"
+  },
+  {
+   "clave": "rym-nuevos:artist:la-pequena-revancha",
+   "tipo": "artist",
+   "id": 4600,
+   "nombre": "La Pequeña Revancha"
+  },
+  {
+   "clave": "rym-nuevos:artist:ahimsa-1",
+   "tipo": "artist",
+   "id": 4601,
+   "nombre": "Ahimsa"
+  },
+  {
+   "clave": "rym-nuevos:artist:pakalolo",
+   "tipo": "artist",
+   "id": 4602,
+   "nombre": "Pakalolo"
+  },
+  {
+   "clave": "rym-nuevos:artist:la-maldita-infamia",
+   "tipo": "artist",
+   "id": 4603,
+   "nombre": "La Maldita Infamia"
+  },
+  {
+   "clave": "rym-nuevos:artist:gran-radio-riviera",
+   "tipo": "artist",
+   "id": 4604,
+   "nombre": "Gran Radio Riviera"
+  },
+  {
+   "clave": "rym-nuevos:artist:ray-perez-y-su-orquesta",
+   "tipo": "artist",
+   "id": 4605,
+   "nombre": "Ray Pérez y su Orquesta"
+  },
+  {
+   "clave": "rym-nuevos:artist:la-critica",
+   "tipo": "artist",
+   "id": 4606,
+   "nombre": "La Crítica"
+  },
+  {
+   "clave": "rym-nuevos:artist:nati-y-su-orquesta",
+   "tipo": "artist",
+   "id": 4607,
+   "nombre": "Nati y Su Orquesta"
+  },
+  {
+   "clave": "rym-nuevos:artist:secuaces",
+   "tipo": "artist",
+   "id": 4608,
+   "nombre": "Secuaces"
+  },
+  {
+   "clave": "rym-nuevos:artist:le-cinema",
+   "tipo": "artist",
+   "id": 4609,
+   "nombre": "Le' Cinema"
+  },
+  {
+   "clave": "rym-nuevos:artist:van-der-dijs",
+   "tipo": "artist",
+   "id": 4610,
+   "nombre": "Van Der Dijs"
+  },
+  {
+   "clave": "rym-nuevos:artist:audiospray",
+   "tipo": "artist",
+   "id": 4611,
+   "nombre": "Audiospray"
+  },
+  {
+   "clave": "rym-nuevos:artist:japanese-scarf",
+   "tipo": "artist",
+   "id": 4612,
+   "nombre": "Japanese Scarf"
+  },
+  {
+   "clave": "rym-nuevos:artist:los-cantores-del-tropico",
+   "tipo": "artist",
+   "id": 4613,
+   "nombre": "Los Cantores del Trópico"
+  },
+  {
+   "clave": "rym-nuevos:artist:nzila-afrobeat-project",
+   "tipo": "artist",
+   "id": 4614,
+   "nombre": "Nzila Afrobeat Project"
+  },
+  {
+   "clave": "rym-nuevos:artist:alterkind",
+   "tipo": "artist",
+   "id": 4615,
+   "nombre": "AlterKind"
+  },
+  {
+   "clave": "rym-nuevos:artist:rotival",
+   "tipo": "artist",
+   "id": 4616,
+   "nombre": "Rótival"
+  },
+  {
+   "clave": "rym-nuevos:artist:los-hermanos-naturales",
+   "tipo": "artist",
+   "id": 4617,
+   "nombre": "Los Hermanos Naturales"
+  },
+  {
+   "clave": "rym-nuevos:artist:ensamble-acidito",
+   "tipo": "artist",
+   "id": 4618,
+   "nombre": "Ensamble Acidito"
+  },
+  {
+   "clave": "rym-nuevos:artist:samadhi-1",
+   "tipo": "artist",
+   "id": 4619,
+   "nombre": "Samadhi"
+  },
+  {
+   "clave": "rym-nuevos:artist:senorita-cometa",
+   "tipo": "artist",
+   "id": 4620,
+   "nombre": "Señorita Cometa"
+  },
+  {
+   "clave": "rym-nuevos:artist:stereolux",
+   "tipo": "artist",
+   "id": 4621,
+   "nombre": "Stereolux"
+  },
+  {
+   "clave": "rym-nuevos:artist:guacamayo-terca",
+   "tipo": "artist",
+   "id": 4622,
+   "nombre": "Guacamayo Terca"
+  },
+  {
+   "clave": "rym-nuevos:artist:retrovyzor",
+   "tipo": "artist",
+   "id": 4623,
+   "nombre": "Retrovyzor"
+  },
+  {
+   "clave": "rym-nuevos:artist:kemawan",
+   "tipo": "artist",
+   "id": 4624,
+   "nombre": "Kemawan"
+  },
+  {
+   "clave": "rym-nuevos:artist:escritores-de-salem",
+   "tipo": "artist",
+   "id": 4625,
+   "nombre": "Escritores de Salem"
+  },
+  {
+   "clave": "rym-nuevos:artist:nueve-noventa",
+   "tipo": "artist",
+   "id": 4626,
+   "nombre": "Nueve Noventa"
+  },
+  {
+   "clave": "rym-nuevos:artist:grupo-pepper",
+   "tipo": "artist",
+   "id": 4627,
+   "nombre": "Grupo Pepper"
+  },
+  {
+   "clave": "rym-nuevos:artist:la-gran-banda-de-venezuela",
+   "tipo": "artist",
+   "id": 4628,
+   "nombre": "La Gran Banda de Venezuela"
+  },
+  {
+   "clave": "rym-nuevos:artist:soires-naes",
+   "tipo": "artist",
+   "id": 4629,
+   "nombre": "Soires Naes"
+  },
+  {
+   "clave": "rym-nuevos:artist:todo-bien-todo-mal",
+   "tipo": "artist",
+   "id": 4630,
+   "nombre": "Todo Bien Todo Mal"
+  },
+  {
+   "clave": "rym-nuevos:artist:los-colores-2",
+   "tipo": "artist",
+   "id": 4631,
+   "nombre": "Los Colores"
+  },
+  {
+   "clave": "rym-nuevos:artist:rumberos-del-callejon",
+   "tipo": "artist",
+   "id": 4632,
+   "nombre": "Rumberos del Callejón"
+  },
+  {
+   "clave": "rym-nuevos:artist:uff",
+   "tipo": "artist",
+   "id": 4633,
+   "nombre": "Uff"
+  },
+  {
+   "clave": "rym-nuevos:artist:lobo_de_mar",
+   "tipo": "artist",
+   "id": 4634,
+   "nombre": "Lobo de Mar"
+  },
+  {
+   "clave": "rym-nuevos:artist:los-aventureros",
+   "tipo": "artist",
+   "id": 4635,
+   "nombre": "Los Aventureros"
+  },
+  {
+   "clave": "rym-nuevos:artist:los_juveniles",
+   "tipo": "artist",
+   "id": 4636,
+   "nombre": "Los Juveniles"
+  },
+  {
+   "clave": "rym-nuevos:artist:this-will-be-no-more",
+   "tipo": "artist",
+   "id": 4637,
+   "nombre": "This Will Be No More"
+  },
+  {
+   "clave": "rym-nuevos:artist:i_saw_the_deep",
+   "tipo": "artist",
+   "id": 4638,
+   "nombre": "I Saw the Deep"
+  },
+  {
+   "clave": "rym-nuevos:artist:the-revoir",
+   "tipo": "artist",
+   "id": 4639,
+   "nombre": "The Revoir"
+  },
+  {
+   "clave": "rym-nuevos:artist:laps_around_the_sun",
+   "tipo": "artist",
+   "id": 4640,
+   "nombre": "Laps Around the Sun"
+  },
+  {
+   "clave": "rym-nuevos:artist:homer-and-the-donts",
+   "tipo": "artist",
+   "id": 4641,
+   "nombre": "Homer and The Dont's"
+  },
+  {
+   "clave": "rym-nuevos:artist:raul-monsalve-y-los-forajidos",
+   "tipo": "artist",
+   "id": 4642,
+   "nombre": "Raúl Monsalve y Los Forajidos"
+  },
+  {
+   "clave": "rym-nuevos:artist:the_baby_factory",
+   "tipo": "artist",
+   "id": 4643,
+   "nombre": "The Baby Factory"
+  },
+  {
+   "clave": "rym-nuevos:artist:uklao",
+   "tipo": "artist",
+   "id": 4644,
+   "nombre": "Uklao"
+  },
+  {
+   "clave": "rym-nuevos:artist:zoundcolector",
+   "tipo": "artist",
+   "id": 4645,
+   "nombre": "Zoundcolector"
+  },
+  {
+   "clave": "rym-nuevos:artist:san-tome",
+   "tipo": "artist",
+   "id": 4646,
+   "nombre": "San Tomé"
+  },
+  {
+   "clave": "rym-nuevos:artist:roboto-1",
+   "tipo": "artist",
+   "id": 4647,
+   "nombre": "Roboto"
+  },
+  {
+   "clave": "rym-nuevos:artist:orquesta-sans-souci",
+   "tipo": "artist",
+   "id": 4648,
+   "nombre": "Orquesta Sans Souci"
+  },
+  {
+   "clave": "rym-nuevos:artist:la-super-orquesta-de-venezuela",
+   "tipo": "artist",
+   "id": 4649,
+   "nombre": "La Super Orquesta de Venezuela"
+  },
+  {
+   "clave": "rym-nuevos:artist:franco-y-oscarcito",
+   "tipo": "artist",
+   "id": 4650,
+   "nombre": "Franco y Oscarcito"
+  },
+  {
+   "clave": "rym-nuevos:artist:principe-y-su-sexteto",
+   "tipo": "artist",
+   "id": 4651,
+   "nombre": "Príncipe y Su Sexteto"
+  },
+  {
+   "clave": "rym-nuevos:artist:la-melodia-perfecta",
+   "tipo": "artist",
+   "id": 4652,
+   "nombre": "La Melodía Perfecta"
+  },
+  {
+   "clave": "rym-nuevos:artist:grupo-treo",
+   "tipo": "artist",
+   "id": 4653,
+   "nombre": "Grupo Treo"
+  },
+  {
+   "clave": "rym-nuevos:artist:agrupacion-convenezuela",
+   "tipo": "artist",
+   "id": 4654,
+   "nombre": "Agrupacion Convenezuela"
+  },
+  {
+   "clave": "rym-nuevos:artist:los-cadillacs",
+   "tipo": "artist",
+   "id": 4655,
+   "nombre": "Los Cadillac's"
+  },
+  {
+   "clave": "rym-nuevos:artist:nomaste",
+   "tipo": "artist",
+   "id": 4656,
+   "nombre": "Nomásté"
+  },
+  {
+   "clave": "rym-nuevos:artist:camargo-1",
+   "tipo": "artist",
+   "id": 4657,
+   "nombre": "Camargo"
+  },
+  {
+   "clave": "rym-nuevos:artist:xtremauncion",
+   "tipo": "artist",
+   "id": 4658,
+   "nombre": "Xtremauncion"
+  },
+  {
+   "clave": "rym-nuevos:artist:ravahil",
+   "tipo": "artist",
+   "id": 4659,
+   "nombre": "Ravahil"
+  },
+  {
+   "clave": "rym-nuevos:artist:skys-white-meditation",
+   "tipo": "artist",
+   "id": 4660,
+   "nombre": "Sky's White Meditation"
+  },
+  {
+   "clave": "rym-nuevos:artist:pulpo-1",
+   "tipo": "artist",
+   "id": 4661,
+   "nombre": "Pulpo"
+  },
+  {
+   "clave": "rym-nuevos:artist:tropic-zulia",
+   "tipo": "artist",
+   "id": 4662,
+   "nombre": "Tropic-Zulia"
+  },
+  {
+   "clave": "rym-nuevos:artist:guasinca-zuliana",
+   "tipo": "artist",
+   "id": 4663,
+   "nombre": "Guasinca Zuliana"
+  },
+  {
+   "clave": "rym-nuevos:artist:la-murga-de-caracas",
+   "tipo": "artist",
+   "id": 4664,
+   "nombre": "La Murga de Caracas"
+  },
+  {
+   "clave": "rym-nuevos:artist:koonze-family",
+   "tipo": "artist",
+   "id": 4665,
+   "nombre": "Koonze Family"
+  },
+  {
+   "clave": "rym-nuevos:artist:unos-panas-ahi",
+   "tipo": "artist",
+   "id": 4666,
+   "nombre": "Unos Panas Ahí"
+  },
+  {
+   "clave": "rym-nuevos:artist:milky-bros",
+   "tipo": "artist",
+   "id": 4667,
+   "nombre": "Milky Bros"
+  },
+  {
+   "clave": "rym-nuevos:artist:ignis_haereticum",
+   "tipo": "artist",
+   "id": 4668,
+   "nombre": "Ignis Haereticum"
+  },
+  {
+   "clave": "rym-nuevos:artist:bastard-cruciatu",
+   "tipo": "artist",
+   "id": 4669,
+   "nombre": "Bastard Cruciatu"
+  },
+  {
+   "clave": "rym-nuevos:artist:lord-thanatos",
+   "tipo": "artist",
+   "id": 4670,
+   "nombre": "Lord Thanatos"
+  },
+  {
+   "clave": "rym-nuevos:artist:fire-7",
+   "tipo": "artist",
+   "id": 4671,
+   "nombre": "FIRE"
+  },
+  {
+   "clave": "rym-nuevos:artist:faster-2",
+   "tipo": "artist",
+   "id": 4672,
+   "nombre": "Faster"
+  },
+  {
+   "clave": "rym-nuevos:artist:curse-9",
+   "tipo": "artist",
+   "id": 4673,
+   "nombre": "Curse"
+  },
+  {
+   "clave": "rym-nuevos:artist:inaeternum",
+   "tipo": "artist",
+   "id": 4674,
+   "nombre": "Inaeternum"
+  },
+  {
+   "clave": "rym-nuevos:artist:dark-manthra",
+   "tipo": "artist",
+   "id": 4675,
+   "nombre": "Dark Manthra"
+  },
+  {
+   "clave": "rym-nuevos:artist:ads-1",
+   "tipo": "artist",
+   "id": 4676,
+   "nombre": "ADS"
+  },
+  {
+   "clave": "rym-nuevos:artist:cabuya",
+   "tipo": "artist",
+   "id": 4677,
+   "nombre": "Cabuya"
+  },
+  {
+   "clave": "rym-nuevos:artist:francamente-ya-no-se",
+   "tipo": "artist",
+   "id": 4678,
+   "nombre": "Francamente Ya No Sé"
+  },
+  {
+   "clave": "rym-nuevos:artist:auschwitz-4",
+   "tipo": "artist",
+   "id": 4679,
+   "nombre": "Auschwitz"
+  },
+  {
+   "clave": "rym-nuevos:artist:bonestorm-1",
+   "tipo": "artist",
+   "id": 4680,
+   "nombre": "Bonestorm"
+  },
+  {
+   "clave": "rym-nuevos:artist:rotten-spirit",
+   "tipo": "artist",
+   "id": 4681,
+   "nombre": "Rotten Spirit"
+  },
+  {
+   "clave": "rym-nuevos:artist:i_m_r_i",
+   "tipo": "artist",
+   "id": 4682,
+   "nombre": "I.M.R.I."
+  },
+  {
+   "clave": "rym-nuevos:artist:kathreptis",
+   "tipo": "artist",
+   "id": 4683,
+   "nombre": "Kathreptis"
+  },
+  {
+   "clave": "rym-nuevos:artist:los-embajadores-vallenatos",
+   "tipo": "artist",
+   "id": 4684,
+   "nombre": "Los Embajadores Vallenatos"
+  },
+  {
+   "clave": "rym-nuevos:artist:hex-crow",
+   "tipo": "artist",
+   "id": 4685,
+   "nombre": "Hex Crow"
+  },
+  {
+   "clave": "rym-nuevos:artist:hatred-2",
+   "tipo": "artist",
+   "id": 4686,
+   "nombre": "Hatred"
+  },
+  {
+   "clave": "rym-nuevos:artist:cataleptic-1",
+   "tipo": "artist",
+   "id": 4687,
+   "nombre": "Cataleptic"
+  },
+  {
+   "clave": "rym-nuevos:artist:nuctemeron-1",
+   "tipo": "artist",
+   "id": 4688,
+   "nombre": "Nuctemeron"
+  },
+  {
+   "clave": "rym-nuevos:artist:las-avispas-africanas",
+   "tipo": "artist",
+   "id": 4689,
+   "nombre": "Las Avispas Africanas"
+  },
+  {
+   "clave": "rym-nuevos:artist:ainur_f1",
+   "tipo": "artist",
+   "id": 4690,
+   "nombre": "Ainur"
+  },
+  {
+   "clave": "rym-nuevos:artist:kull-trigger",
+   "tipo": "artist",
+   "id": 4691,
+   "nombre": "Kull Trigger"
+  },
+  {
+   "clave": "rym-nuevos:artist:perpetual_f1",
+   "tipo": "artist",
+   "id": 4692,
+   "nombre": "Perpetual"
+  },
+  {
+   "clave": "rym-nuevos:artist:sinner_serpent",
+   "tipo": "artist",
+   "id": 4693,
+   "nombre": "Sinner Serpent"
+  },
+  {
+   "clave": "rym-nuevos:artist:ztranger",
+   "tipo": "artist",
+   "id": 4694,
+   "nombre": "Ztranger"
+  },
+  {
+   "clave": "rym-nuevos:artist:virgin_killer_f2",
+   "tipo": "artist",
+   "id": 4695,
+   "nombre": "Virgin Killer"
+  },
+  {
+   "clave": "rym-nuevos:artist:supercuates",
+   "tipo": "artist",
+   "id": 4696,
+   "nombre": "Supercuates"
+  },
+  {
+   "clave": "rym-nuevos:artist:kroniker-1",
+   "tipo": "artist",
+   "id": 4697,
+   "nombre": "Kroniker"
+  },
+  {
+   "clave": "rym-nuevos:artist:la_manigua_f1",
+   "tipo": "artist",
+   "id": 4698,
+   "nombre": "La Manigua"
+  },
+  {
+   "clave": "rym-nuevos:artist:banista-lunar",
+   "tipo": "artist",
+   "id": 4699,
+   "nombre": "Bañista Lunar"
+  },
+  {
+   "clave": "rym-nuevos:artist:mothiis-dominium",
+   "tipo": "artist",
+   "id": 4700,
+   "nombre": "Möthiis Dominiüm"
+  },
+  {
+   "clave": "rym-nuevos:artist:borroza",
+   "tipo": "artist",
+   "id": 4701,
+   "nombre": "Borroza"
+  },
+  {
+   "clave": "rym-nuevos:artist:eden-19",
+   "tipo": "artist",
+   "id": 4702,
+   "nombre": "Eden"
+  },
+  {
+   "clave": "rym-nuevos:artist:caos-7",
+   "tipo": "artist",
+   "id": 4703,
+   "nombre": "Caos"
+  },
+  {
+   "clave": "rym-nuevos:artist:hola-amiga-como-estas",
+   "tipo": "artist",
+   "id": 4704,
+   "nombre": "Hola Amiga ¿Cómo Estás?"
+  },
+  {
+   "clave": "rym-nuevos:artist:asteriom",
+   "tipo": "artist",
+   "id": 4705,
+   "nombre": "Asteriom"
+  },
+  {
+   "clave": "rym-nuevos:artist:menos-dias-soleados",
+   "tipo": "artist",
+   "id": 4706,
+   "nombre": "Menos Días Soleados"
+  },
+  {
+   "clave": "rym-nuevos:artist:velandia-y-la-tigra",
+   "tipo": "artist",
+   "id": 4707,
+   "nombre": "Velandia y la Tigra"
+  },
+  {
+   "clave": "rym-nuevos:artist:supremacia_satanica",
+   "tipo": "artist",
+   "id": 4708,
+   "nombre": "Supremacia Satanica"
+  },
+  {
+   "clave": "rym-nuevos:artist:last_tyrant",
+   "tipo": "artist",
+   "id": 4709,
+   "nombre": "Last Tyrant"
+  },
+  {
+   "clave": "rym-nuevos:artist:old_betrayer",
+   "tipo": "artist",
+   "id": 4710,
+   "nombre": "Old Betrayer"
+  },
+  {
+   "clave": "rym-nuevos:artist:nostos-2",
+   "tipo": "artist",
+   "id": 4711,
+   "nombre": "Nostos"
+  },
+  {
+   "clave": "rym-nuevos:artist:apotheose",
+   "tipo": "artist",
+   "id": 4712,
+   "nombre": "Apotheose"
+  },
+  {
+   "clave": "rym-nuevos:artist:morto_kacho",
+   "tipo": "artist",
+   "id": 4713,
+   "nombre": "Morto Kacho"
+  },
+  {
+   "clave": "rym-nuevos:artist:pearl-ash",
+   "tipo": "artist",
+   "id": 4714,
+   "nombre": "Pearl Ash"
+  },
+  {
+   "clave": "rym-nuevos:artist:orquesta_concordia",
+   "tipo": "artist",
+   "id": 4715,
+   "nombre": "Orquesta \"Concordia\""
+  },
+  {
+   "clave": "rym-nuevos:artist:mario-y-sus-diamantes",
+   "tipo": "artist",
+   "id": 4716,
+   "nombre": "Mario y Sus Diamantes"
+  },
+  {
+   "clave": "rym-nuevos:artist:los-satelites",
+   "tipo": "artist",
+   "id": 4717,
+   "nombre": "Los Satélites"
+  },
+  {
+   "clave": "rym-nuevos:artist:los-universales-de-maracaibo",
+   "tipo": "artist",
+   "id": 4718,
+   "nombre": "Los Universales de Maracaibo"
+  },
+  {
+   "clave": "rym-nuevos:artist:la-gallera-social-club",
+   "tipo": "artist",
+   "id": 4719,
+   "nombre": "La Gallera Social Club"
+  },
+  {
+   "clave": "rym-nuevos:artist:tragavenao-orquesta-afrobeat",
+   "tipo": "artist",
+   "id": 4720,
+   "nombre": "Tragavenao Orquesta Afrobeat"
+  },
+  {
+   "clave": "rym-nuevos:artist:orquesta-la-combinacion",
+   "tipo": "artist",
+   "id": 4721,
+   "nombre": "Orquesta la Combinación"
+  },
+  {
+   "clave": "rym-nuevos:artist:paisaje-local",
+   "tipo": "artist",
+   "id": 4722,
+   "nombre": "Paisaje Local"
+  },
+  {
+   "clave": "rym-nuevos:artist:super-combo-los-tropicales",
+   "tipo": "artist",
+   "id": 4723,
+   "nombre": "Super Combo Los Tropicales"
+  },
+  {
+   "clave": "rym-nuevos:artist:clan-coral",
+   "tipo": "artist",
+   "id": 4724,
+   "nombre": "Clan Coral"
+  },
+  {
+   "clave": "rym-nuevos:artist:los-masters",
+   "tipo": "artist",
+   "id": 4725,
+   "nombre": "Los Master's"
+  },
+  {
+   "clave": "rym-nuevos:artist:caibo",
+   "tipo": "artist",
+   "id": 4726,
+   "nombre": "Caibo"
+  },
+  {
+   "clave": "rym-nuevos:artist:los-casinos",
+   "tipo": "artist",
+   "id": 4727,
+   "nombre": "Los Casinos"
+  },
+  {
+   "clave": "rym-nuevos:artist:gaiteros-de-pillopo",
+   "tipo": "artist",
+   "id": 4728,
+   "nombre": "Gaiteros de Pillopo"
+  },
+  {
+   "clave": "rym-nuevos:artist:el-club-de-amigos-los-mejores-del-amor",
+   "tipo": "artist",
+   "id": 4729,
+   "nombre": "El Club de Amigos Los Mejores del Amor"
+  },
+  {
+   "clave": "rym-nuevos:artist:tazajo_tamboo",
+   "tipo": "artist",
+   "id": 4730,
+   "nombre": "Tazajo Tamboo"
+  },
+  {
+   "clave": "rym-nuevos:artist:technicolor-1",
+   "tipo": "artist",
+   "id": 4731,
+   "nombre": "Technicolor"
+  },
+  {
+   "clave": "rym-nuevos:artist:symbiotic_faith",
+   "tipo": "artist",
+   "id": 4732,
+   "nombre": "Symbiotic Faith"
+  },
+  {
+   "clave": "rym-nuevos:artist:bacanos",
+   "tipo": "artist",
+   "id": 4733,
+   "nombre": "Bacanos"
+  },
+  {
+   "clave": "rym-nuevos:artist:vhg",
+   "tipo": "artist",
+   "id": 4734,
+   "nombre": "VHG"
+  },
+  {
+   "clave": "rym-nuevos:artist:montesanto",
+   "tipo": "artist",
+   "id": 4735,
+   "nombre": "Montesanto"
+  },
+  {
+   "clave": "rym-nuevos:artist:grupo-carangano",
+   "tipo": "artist",
+   "id": 4736,
+   "nombre": "Grupo Carangano"
+  },
+  {
+   "clave": "rym-nuevos:artist:digital_decay",
+   "tipo": "artist",
+   "id": 4737,
+   "nombre": "Digital Decay"
+  },
+  {
+   "clave": "rym-nuevos:artist:conjunto-saladillo",
+   "tipo": "artist",
+   "id": 4738,
+   "nombre": "Conjunto Saladillo"
+  },
+  {
+   "clave": "rym-nuevos:artist:chimo-psicodelico",
+   "tipo": "artist",
+   "id": 4739,
+   "nombre": "Chimó Psicodélico"
+  },
+  {
+   "clave": "rym-nuevos:artist:siparia-deltones",
+   "tipo": "artist",
+   "id": 4740,
+   "nombre": "Siparia Deltones"
+  },
+  {
+   "clave": "rym-nuevos:artist:scorched-earth-6",
+   "tipo": "artist",
+   "id": 4741,
+   "nombre": "Scorched Earth"
+  },
+  {
+   "clave": "rym-nuevos:person:kusari-1",
+   "tipo": "person",
+   "id": 39879,
+   "nombre": "kusari"
+  },
+  {
+   "clave": "rym-nuevos:person:gl1tchhhvkvmv",
+   "tipo": "person",
+   "id": 39880,
+   "nombre": "gL1tChhhvkVmv"
+  },
+  {
+   "clave": "rym-nuevos:person:prieto-gang",
+   "tipo": "person",
+   "id": 39881,
+   "nombre": "Prieto Gang"
+  },
+  {
+   "clave": "rym-nuevos:person:el-otro-polo",
+   "tipo": "person",
+   "id": 39882,
+   "nombre": "El Otro Polo"
+  },
+  {
+   "clave": "rym-nuevos:person:rafael-bacallao",
+   "tipo": "person",
+   "id": 39883,
+   "nombre": "Rafael Bacallao"
+  },
+  {
+   "clave": "rym-nuevos:person:bearsbeetsbattlestar",
+   "tipo": "person",
+   "id": 39884,
+   "nombre": "bearsbeetsbattlestar"
+  },
+  {
+   "clave": "rym-nuevos:person:escuela-de-vuelo",
+   "tipo": "person",
+   "id": 39885,
+   "nombre": "escuela de vuelo"
+  },
+  {
+   "clave": "rym-nuevos:person:llanero-electrico",
+   "tipo": "person",
+   "id": 39886,
+   "nombre": "Llanero Eléctrico"
+  },
+  {
+   "clave": "rym-nuevos:person:djalvaro",
+   "tipo": "person",
+   "id": 39887,
+   "nombre": "djALVARO"
+  },
+  {
+   "clave": "rym-nuevos:person:victador",
+   "tipo": "person",
+   "id": 39888,
+   "nombre": "Victador"
+  },
+  {
+   "clave": "rym-nuevos:person:isaac-sasson",
+   "tipo": "person",
+   "id": 39889,
+   "nombre": "Isaac Sasson"
+  },
+  {
+   "clave": "rym-nuevos:person:ebot",
+   "tipo": "person",
+   "id": 39890,
+   "nombre": "Ebot"
+  },
+  {
+   "clave": "rym-nuevos:person:nigu-moka",
+   "tipo": "person",
+   "id": 39891,
+   "nombre": "Nigu Moka"
+  },
+  {
+   "clave": "rym-nuevos:person:sebastian-cova-1",
+   "tipo": "person",
+   "id": 39892,
+   "nombre": "Sebastián Cova"
+  },
+  {
+   "clave": "rym-nuevos:person:paaris",
+   "tipo": "person",
+   "id": 39893,
+   "nombre": "PAARIS"
+  },
+  {
+   "clave": "rym-nuevos:person:solo-soul",
+   "tipo": "person",
+   "id": 39894,
+   "nombre": "Solo Soul"
+  },
+  {
+   "clave": "rym-nuevos:person:yei-1",
+   "tipo": "person",
+   "id": 39895,
+   "nombre": "YEI"
+  },
+  {
+   "clave": "rym-nuevos:person:bolas-criollas",
+   "tipo": "person",
+   "id": 39896,
+   "nombre": "bolas criollas"
+  },
+  {
+   "clave": "rym-nuevos:person:hilandera",
+   "tipo": "person",
+   "id": 39897,
+   "nombre": "Hilandera"
+  },
+  {
+   "clave": "rym-nuevos:person:miguel-el-enano-gonzalez",
+   "tipo": "person",
+   "id": 39898,
+   "nombre": "Miguel \"El Enano\" González"
+  },
+  {
+   "clave": "rym-nuevos:person:federico-jr",
+   "tipo": "person",
+   "id": 39899,
+   "nombre": "Federíco Jr."
+  },
+  {
+   "clave": "rym-nuevos:person:swan-durh",
+   "tipo": "person",
+   "id": 39900,
+   "nombre": "swan durh"
+  },
+  {
+   "clave": "rym-nuevos:person:cloudy-2",
+   "tipo": "person",
+   "id": 39901,
+   "nombre": "cloudy"
+  },
+  {
+   "clave": "rym-nuevos:person:sibilino",
+   "tipo": "person",
+   "id": 39902,
+   "nombre": "Sibilino"
+  },
+  {
+   "clave": "rym-nuevos:person:coyote-dax",
+   "tipo": "person",
+   "id": 39903,
+   "nombre": "Coyote Dax"
+  },
+  {
+   "clave": "rym-nuevos:person:isra",
+   "tipo": "person",
+   "id": 39904,
+   "nombre": "Isra"
+  },
+  {
+   "clave": "rym-nuevos:person:spell-1",
+   "tipo": "person",
+   "id": 39905,
+   "nombre": "Spell"
+  },
+  {
+   "clave": "rym-nuevos:person:recordatorio",
+   "tipo": "person",
+   "id": 39906,
+   "nombre": "Recordatorio"
+  },
+  {
+   "clave": "rym-nuevos:person:iran-2",
+   "tipo": "person",
+   "id": 39907,
+   "nombre": "Irán"
+  },
+  {
+   "clave": "rym-nuevos:person:gabo-xeart",
+   "tipo": "person",
+   "id": 39908,
+   "nombre": "Gabo Xeart"
+  },
+  {
+   "clave": "rym-nuevos:person:alonso-casual",
+   "tipo": "person",
+   "id": 39909,
+   "nombre": "Alonso Casual"
+  },
+  {
+   "clave": "rym-nuevos:person:claudia-lizardo",
+   "tipo": "person",
+   "id": 39910,
+   "nombre": "Claudia Lizardo"
+  },
+  {
+   "clave": "rym-nuevos:person:monno-briceno",
+   "tipo": "person",
+   "id": 39911,
+   "nombre": "Monno Briceno"
+  },
+  {
+   "clave": "rym-nuevos:person:mau-montaner",
+   "tipo": "person",
+   "id": 39912,
+   "nombre": "Mau Montaner"
+  },
+  {
+   "clave": "rym-nuevos:person:ricky-montaner",
+   "tipo": "person",
+   "id": 39913,
+   "nombre": "Ricky Montaner"
+  },
+  {
+   "clave": "rym-nuevos:person:jey-da-polemic",
+   "tipo": "person",
+   "id": 39914,
+   "nombre": "Jey da Polemic"
+  },
+  {
+   "clave": "rym-nuevos:person:maria-pura-imhof",
+   "tipo": "person",
+   "id": 39915,
+   "nombre": "María Pura Imhof"
+  },
+  {
+   "clave": "rym-nuevos:person:coco-arocha",
+   "tipo": "person",
+   "id": 39916,
+   "nombre": "Coco Arocha"
+  },
+  {
+   "clave": "rym-nuevos:person:mon-carrillo",
+   "tipo": "person",
+   "id": 39917,
+   "nombre": "Mon Carrillo"
+  },
+  {
+   "clave": "rym-nuevos:person:eddie-hermida",
+   "tipo": "person",
+   "id": 39918,
+   "nombre": "Eddie Hermida"
+  },
+  {
+   "clave": "rym-nuevos:person:beto-borjas",
+   "tipo": "person",
+   "id": 39919,
+   "nombre": "Beto Borjas"
+  },
+  {
+   "clave": "rym-nuevos:person:edson_velandia",
+   "tipo": "person",
+   "id": 39920,
+   "nombre": "Edson Velandia"
+  },
+  {
+   "clave": "rym-nuevos:person:puertoazul",
+   "tipo": "person",
+   "id": 39921,
+   "nombre": "puertoazul"
+  },
+  {
+   "clave": "rym-nuevos:person:sr-presidente",
+   "tipo": "person",
+   "id": 39922,
+   "nombre": "Sr. Presidente"
+  },
+  {
+   "clave": "rym-nuevos:person:sergio-valentin",
+   "tipo": "person",
+   "id": 39923,
+   "nombre": "Sergio Valentín"
+  },
+  {
+   "clave": "rym-nuevos:person:demarchi",
+   "tipo": "person",
+   "id": 39924,
+   "nombre": "Demarchi"
+  },
+  {
+   "clave": "rym-nuevos:person:enio-la-formula",
+   "tipo": "person",
+   "id": 39925,
+   "nombre": "Enio La Formula"
+  },
+  {
+   "clave": "rym-nuevos:person:beet-acosta",
+   "tipo": "person",
+   "id": 39926,
+   "nombre": "Beet Acosta"
+  },
+  {
+   "clave": "rym-nuevos:person:billy-ocean",
+   "tipo": "person",
+   "id": 39927,
+   "nombre": "Billy Ocean"
+  },
+  {
+   "clave": "rym:222:album:_release_album_al-cruzar-la-calle_al-cruzar-la-calle",
+   "tipo": "album",
+   "id": 15413,
+   "nombre": "…Al cruzar la calle"
+  },
+  {
+   "clave": "rym:222:album:_release_album_100_grados_clima_de_extasis",
+   "tipo": "album",
+   "id": 15414,
+   "nombre": "Clima de Extásis"
+  },
+  {
+   "clave": "rym:222:album:_release_album_100_grados_viendo_ruidos",
+   "tipo": "album",
+   "id": 15415,
+   "nombre": "Viendo Ruidos"
+  },
+  {
+   "clave": "rym:222:album:_release_single_187_ciudad-del-terror",
+   "tipo": "album",
+   "id": 15416,
+   "nombre": "Ciudad del Terror"
+  },
+  {
+   "clave": "rym:222:album:_release_single_187_la-casa-encendida",
+   "tipo": "album",
+   "id": 15417,
+   "nombre": "La Casa Encendida"
+  },
+  {
+   "clave": "rym:222:album:_release_single_187_lirica-plastica",
+   "tipo": "album",
+   "id": 15418,
+   "nombre": "Lírica Plástica"
+  },
+  {
+   "clave": "rym:222:album:_release_single_187_what-cha-doin",
+   "tipo": "album",
+   "id": 15419,
+   "nombre": "What Cha Doin"
+  },
+  {
+   "clave": "rym:222:album:_release_ep_7_balazos_7_balazos",
+   "tipo": "album",
+   "id": 15420,
+   "nombre": "7 Balazos"
+  },
+  {
+   "clave": "rym:222:album:_release_ep_a-raiz-de-nuevas-causas_vol-iv",
+   "tipo": "album",
+   "id": 15421,
+   "nombre": "Vol. IV"
+  },
+  {
+   "clave": "rym:222:album:_release_single_a-raiz-de-nuevas-causas_supongo-que-es-normal",
+   "tipo": "album",
+   "id": 15422,
+   "nombre": "Supongo que es Normal"
+  },
+  {
+   "clave": "rym:222:album:_release_album_impery-oculto-sur-agonia-infernal_trilogia-oscura-la-peste-por-doquier",
+   "tipo": "album",
+   "id": 15423,
+   "nombre": "Trilogía oscura: La peste por doquier"
+  },
+  {
+   "clave": "rym:222:album:_release_ep_alce_de_viaje",
+   "tipo": "album",
+   "id": 15424,
+   "nombre": "De viaje"
+  },
+  {
+   "clave": "rym:222:album:_release_album_apache_f3_original_combination",
+   "tipo": "album",
+   "id": 15425,
+   "nombre": "Original Combination"
+  },
+  {
+   "clave": "rym:222:album:_release_album_apache_ahora-o-nunca",
+   "tipo": "album",
+   "id": 15426,
+   "nombre": "Ahora o nunca"
+  },
+  {
+   "clave": "rym:222:album:_release_album_apache_apache-1",
+   "tipo": "album",
+   "id": 15427,
+   "nombre": "Apache"
+  },
+  {
+   "clave": "rym:222:album:_release_album_apache_ocho",
+   "tipo": "album",
+   "id": 15428,
+   "nombre": "Ocho"
+  },
+  {
+   "clave": "rym:222:album:_release_album_apache_territorio-apache",
+   "tipo": "album",
+   "id": 15429,
+   "nombre": "Territorio Apache"
+  },
+  {
+   "clave": "rym:222:album:_release_album_apache-reke_apuesta-al-negro",
+   "tipo": "album",
+   "id": 15430,
+   "nombre": "Apuesta al negro"
+  },
+  {
+   "clave": "rym:222:album:_release_ep_apache_songo",
+   "tipo": "album",
+   "id": 15431,
+   "nombre": "Songo"
+  },
+  {
+   "clave": "rym:222:album:_release_single_apache-canserbero_stop",
+   "tipo": "album",
+   "id": 15432,
+   "nombre": "Stop"
+  },
+  {
+   "clave": "rym:222:album:_release_single_apache_el-campeon",
+   "tipo": "album",
+   "id": 15433,
+   "nombre": "El campeón"
+  },
+  {
+   "clave": "rym:222:album:_release_single_apache_biografia",
+   "tipo": "album",
+   "id": 15434,
+   "nombre": "Biografía"
+  },
+  {
+   "clave": "rym:222:album:_release_single_apache_quimica-sexual",
+   "tipo": "album",
+   "id": 15435,
+   "nombre": "Química sexual"
+  },
+  {
+   "clave": "rym:222:album:_release_single_vargas-apache_la-energia",
+   "tipo": "album",
+   "id": 15436,
+   "nombre": "La energía"
+  },
+  {
+   "clave": "rym:222:album:_release_single_isra-apache_oveja-negra",
+   "tipo": "album",
+   "id": 15437,
+   "nombre": "Oveja negra"
+  },
+  {
+   "clave": "rym:222:album:_release_single_motherflowers-apache_quien-lo-diria",
+   "tipo": "album",
+   "id": 15438,
+   "nombre": "Quién lo diría?"
+  },
+  {
+   "clave": "rym:222:album:_release_single_willie-deville-apache-ergo-pro_amilcar",
+   "tipo": "album",
+   "id": 15439,
+   "nombre": "Amílcar"
+  },
+  {
+   "clave": "rym:222:album:_release_album_pedro-castillo_algo-personal",
+   "tipo": "album",
+   "id": 15440,
+   "nombre": "Algo Personal"
+  },
+  {
+   "clave": "rym:222:album:_release_album_pedro-castillo_dibujando-historias",
+   "tipo": "album",
+   "id": 15441,
+   "nombre": "Dibujando Historias"
+  },
+  {
+   "clave": "rym:222:album:_release_album_pedro-castillo_volver-al-futuro",
+   "tipo": "album",
+   "id": 15442,
+   "nombre": "Volver al Futuro"
+  },
+  {
+   "clave": "rym:222:album:_release_album_tsee-mud-bacro-lsd_tsee-mud-bacro-lsd",
+   "tipo": "album",
+   "id": 15443,
+   "nombre": "Tsee Mud... Bacro... LSD"
+  },
+  {
+   "clave": "rym:222:album:_release_ep_bioshaft_acoustic-live-sessions",
+   "tipo": "album",
+   "id": 15444,
+   "nombre": "Acoustic Live Sessions"
+  },
+  {
+   "clave": "rym:222:album:_release_single_bioshaft_no-somos-libres-fiesta-animal-maxi-single",
+   "tipo": "album",
+   "id": 15445,
+   "nombre": "No somos libres / Fiesta animal [Maxi Single]"
+  },
+  {
+   "clave": "rym:222:album:_release_single_bioshaft_repeleme-sr-desgracia-maxi-single",
+   "tipo": "album",
+   "id": 15446,
+   "nombre": "Repéleme / Sr. Desgracia [Maxi Single]"
+  },
+  {
+   "clave": "rym:222:album:_release_album_bostas-brain_atleta-del-sonido",
+   "tipo": "album",
+   "id": 15447,
+   "nombre": "Atleta del sonido"
+  },
+  {
+   "clave": "rym:222:album:_release_album_desorden-publico-c4-trio_pa-fuera",
+   "tipo": "album",
+   "id": 15448,
+   "nombre": "Pa' fuera"
+  },
+  {
+   "clave": "rym:222:album:_release_single_luis-enrique-c4-trio_aguacero",
+   "tipo": "album",
+   "id": 15449,
+   "nombre": "Aguacero"
+  },
+  {
+   "clave": "rym:222:album:_release_album_movida-acustica-urbana_en-vivo",
+   "tipo": "album",
+   "id": 15450,
+   "nombre": "En vivo"
+  },
+  {
+   "clave": "rym:222:album:_release_album_captan-obvio_bedroom-covers-and-bathroom-rarities",
+   "tipo": "album",
+   "id": 15451,
+   "nombre": "Bedroom Covers & Bathroom Rarities"
+  },
+  {
+   "clave": "rym:222:album:_release_album_captan-obvio_die-captan-obvio-die",
+   "tipo": "album",
+   "id": 15452,
+   "nombre": "Die Captan, obvio Die!!!"
+  },
+  {
+   "clave": "rym:222:album:_release_album_captan-obvio_la-mala-hierba-nunca-muere",
+   "tipo": "album",
+   "id": 15453,
+   "nombre": "La mala hierba nunca muere"
+  },
+  {
+   "clave": "rym:222:album:_release_ep_rotator-krumble-cardopusher_trash-n-ready-tour-ep",
+   "tipo": "album",
+   "id": 15454,
+   "nombre": "Trash 'n' Ready Tour EP"
+  },
+  {
+   "clave": "rym:222:album:_release_ep_rotator-cardopusher_jump-da-fuck-up-fighters-unite",
+   "tipo": "album",
+   "id": 15455,
+   "nombre": "Jump Da Fuck Up / Fighters Unite"
+  },
+  {
+   "clave": "rym:222:album:_release_ep_cardopusher_zgemi",
+   "tipo": "album",
+   "id": 15456,
+   "nombre": "ZGEMI"
+  },
+  {
+   "clave": "rym:222:album:_release_ep_bloody-mary-cardopusher_conformity-kills-ep",
+   "tipo": "album",
+   "id": 15457,
+   "nombre": "Conformity Kills EP"
+  },
+  {
+   "clave": "rym:222:album:_release_single_cardopusher_bring-da-fire-caffeine-rich-kola-nut",
+   "tipo": "album",
+   "id": 15458,
+   "nombre": "Bring Da Fire / Caffeine Rich Kola Nut"
+  },
+  {
+   "clave": "rym:222:album:_release_single_quarta330-cardopusher_homeless-quarta-330-rmx-sabacco",
+   "tipo": "album",
+   "id": 15459,
+   "nombre": "Homeless (Quarta 330 rmx) / Sabacco"
+  },
+  {
+   "clave": "rym:222:album:_release_djmix_cardopusher_xlr8r-256",
+   "tipo": "album",
+   "id": 15460,
+   "nombre": "XLR8R 256"
+  },
+  {
+   "clave": "rym:222:album:_release_djmix_cardopusher_tsugi-podcast-307",
+   "tipo": "album",
+   "id": 15461,
+   "nombre": "Tsugi Podcast 307"
+  },
+  {
+   "clave": "rym:222:album:_release_djmix_cardopusher_in-session",
+   "tipo": "album",
+   "id": 15462,
+   "nombre": "In Session"
+  },
+  {
+   "clave": "rym:222:album:_release_djmix_cardopusher_lyo-122",
+   "tipo": "album",
+   "id": 15463,
+   "nombre": "LYO #122"
+  },
+  {
+   "clave": "rym:222:album:_release_djmix_cardopusher_dame-music-mix-series-002",
+   "tipo": "album",
+   "id": 15464,
+   "nombre": "Dame-Music Mix Series 002"
+  },
+  {
+   "clave": "rym:222:album:_release_djmix_cardopusher_the-forgotten-ccxi",
+   "tipo": "album",
+   "id": 15465,
+   "nombre": "The Forgotten CCXI"
+  },
+  {
+   "clave": "rym:222:album:_release_djmix_cardopusher_fist-mix-17",
+   "tipo": "album",
+   "id": 15466,
+   "nombre": "FIST MIX 17"
+  },
+  {
+   "clave": "rym:222:album:_release_djmix_cardopusher_intercell_049",
+   "tipo": "album",
+   "id": 15467,
+   "nombre": "Intercell.049"
+  },
+  {
+   "clave": "rym:222:album:_release_djmix_cardopusher-safety-trance_boiler-room-caracas",
+   "tipo": "album",
+   "id": 15468,
+   "nombre": "Boiler Room: Caracas"
+  },
+  {
+   "clave": "rym:222:album:_release_album_carlos-angola_nosotros-celebramos-los-motivos-ya-vendran",
+   "tipo": "album",
+   "id": 15469,
+   "nombre": "Nosotros celebramos, los motivos ya vendrán"
+  },
+  {
+   "clave": "rym:222:album:_release_album_carlos-angola_historias-del-terror-cronologia-acustica-de-un-adios-sin-adem",
+   "tipo": "album",
+   "id": 15470,
+   "nombre": "Historias del terror: Cronología acústica de un adiós sin ademán"
+  },
+  {
+   "clave": "rym:222:album:_release_album_chunktrade_demo",
+   "tipo": "album",
+   "id": 15471,
+   "nombre": "Demo"
+  },
+  {
+   "clave": "rym:222:album:_release_album_cuarto-poder_tamos-bien",
+   "tipo": "album",
+   "id": 15472,
+   "nombre": "'Tamos bien"
+  },
+  {
+   "clave": "rym:222:album:_release_album_cuarto_poder_4x4to",
+   "tipo": "album",
+   "id": 15473,
+   "nombre": "4x4to"
+  },
+  {
+   "clave": "rym:222:album:_release_mixtape_apache_sin-afina-mucho",
+   "tipo": "album",
+   "id": 15474,
+   "nombre": "Sin afina' mucho"
+  },
+  {
+   "clave": "rym:222:album:_release_album_apache_afinando",
+   "tipo": "album",
+   "id": 15475,
+   "nombre": "Afinando"
+  },
+  {
+   "clave": "rym:222:album:_release_single_deras_maria",
+   "tipo": "album",
+   "id": 15476,
+   "nombre": "María"
+  },
+  {
+   "clave": "rym:222:album:_release_album_dandy-leon_todo-es-bello",
+   "tipo": "album",
+   "id": 15477,
+   "nombre": "Todo es bello"
+  },
+  {
+   "clave": "rym:222:album:_release_single_danto_danto",
+   "tipo": "album",
+   "id": 15478,
+   "nombre": "Danto"
+  },
+  {
+   "clave": "rym:222:album:_release_ep_desinformados_playa-nudista",
+   "tipo": "album",
+   "id": 15479,
+   "nombre": "Playa nudista"
+  },
+  {
+   "clave": "rym:222:album:_release_single_desinformados_lago-sobre-el-puente",
+   "tipo": "album",
+   "id": 15480,
+   "nombre": "Lago sobre el puente"
+  },
+  {
+   "clave": "rym:222:album:_release_album_dimension-latina-77_internacional",
+   "tipo": "album",
+   "id": 15481,
+   "nombre": "Internacional"
+  },
+  {
+   "clave": "rym:222:album:_release_album_oscar-de-leon-vs-dimension-latina_confrontacion-de-salsa",
+   "tipo": "album",
+   "id": 15482,
+   "nombre": "Confrontacion de Salsa"
+  },
+  {
+   "clave": "rym:222:album:_release_album_dolli_un_amigo_de_un_amigo_que_no_soy_yo",
+   "tipo": "album",
+   "id": 15483,
+   "nombre": "Un amigo de un amigo que no soy yo"
+  },
+  {
+   "clave": "rym:222:album:_release_album_dolli_coloreado",
+   "tipo": "album",
+   "id": 15484,
+   "nombre": "Coloreado"
+  },
+  {
+   "clave": "rym:222:album:_release_ep_dolli_en_la_selva_de_bambu",
+   "tipo": "album",
+   "id": 15485,
+   "nombre": "En la Selva de Bambú"
+  },
+  {
+   "clave": "rym:222:album:_release_ep_dolli_robandome_el_picnic",
+   "tipo": "album",
+   "id": 15486,
+   "nombre": "Robándome el Picnic"
+  },
+  {
+   "clave": "rym:222:album:_release_ep_dolli_perricola",
+   "tipo": "album",
+   "id": 15487,
+   "nombre": "Perricola"
+  },
+  {
+   "clave": "rym:222:album:_release_album_el-globo-oscuro_entre-el-signo-y-la-calma",
+   "tipo": "album",
+   "id": 15488,
+   "nombre": "Entre el Signo y la Calma"
+  },
+  {
+   "clave": "rym:222:album:_release_album_el-globo-oscuro_villiers-de-lisle-adam",
+   "tipo": "album",
+   "id": 15489,
+   "nombre": "Villiers de l'Isle Adam"
+  },
+  {
+   "clave": "rym:222:album:_release_ep_el-globo-oscuro_non-omnis-moriar-ep",
+   "tipo": "album",
+   "id": 15490,
+   "nombre": "Non Omnis Moriar EP"
+  },
+  {
+   "clave": "rym:222:album:_release_ep_el-globo-oscuro_la-elocuencia-de-los-fantasmas",
+   "tipo": "album",
+   "id": 15491,
+   "nombre": "La elocuencia de los fantasmas"
+  },
+  {
+   "clave": "rym:222:album:_release_single_el-viaje-de-los-antiguos_capitulo-1",
+   "tipo": "album",
+   "id": 15492,
+   "nombre": "Capítulo 1"
+  },
+  {
+   "clave": "rym:222:album:_release_single_el-viaje-de-los-antiguos_cinco-almas",
+   "tipo": "album",
+   "id": 15493,
+   "nombre": "Cinco almas"
+  },
+  {
+   "clave": "rym:222:album:_release_ep_elaine_desnuditos_ep",
+   "tipo": "album",
+   "id": 15494,
+   "nombre": "Desnuditos EP"
+  },
+  {
+   "clave": "rym:222:album:_release_album_adrenalina-caribe-evio-di-marzo_evio-di-marzo-adrenalina-caribe",
+   "tipo": "album",
+   "id": 15495,
+   "nombre": "Evio Di Marzo / Adrenalina Caribe"
+  },
+  {
+   "clave": "rym:222:album:_release_album_frank-moron_manana",
+   "tipo": "album",
+   "id": 15496,
+   "nombre": "Mañana"
+  },
+  {
+   "clave": "rym:222:album:_release_album_furia-de-buzo-ciego__por-que-no-me-escribes",
+   "tipo": "album",
+   "id": 15497,
+   "nombre": "¿Por qué no me escribes?"
+  },
+  {
+   "clave": "rym:222:album:_release_single_rodrigo-solo_tonada-para-simon",
+   "tipo": "album",
+   "id": 15498,
+   "nombre": "Tonada para Simón"
+  },
+  {
+   "clave": "rym:222:album:_release_album_rodrigo-solo_no-estas-solo",
+   "tipo": "album",
+   "id": 15499,
+   "nombre": "No estás solo"
+  },
+  {
+   "clave": "rym:222:album:_release_single_henrique-lazo_latino-americano",
+   "tipo": "album",
+   "id": 15500,
+   "nombre": "Latino americano"
+  },
+  {
+   "clave": "rym:222:album:_release_ep_indigo_indigo",
+   "tipo": "album",
+   "id": 15501,
+   "nombre": "Indigo"
+  },
+  {
+   "clave": "rym:222:album:_release_album_jose-y-el-toro_retrato",
+   "tipo": "album",
+   "id": 15502,
+   "nombre": "Retrato"
+  },
+  {
+   "clave": "rym:222:album:_release_album_jose-y-el-toro_exitos-melodramaticos-vol-1",
+   "tipo": "album",
+   "id": 15503,
+   "nombre": "Éxitos melodramáticos, Vol. 1"
+  },
+  {
+   "clave": "rym:222:album:_release_album_jose-y-el-toro_aunque-esto-se-acabe",
+   "tipo": "album",
+   "id": 15504,
+   "nombre": "Aunque esto se acabe"
+  },
+  {
+   "clave": "rym:222:album:_release_ep_jose-y-el-toro_la-vida-lenta",
+   "tipo": "album",
+   "id": 15505,
+   "nombre": "La vida lenta"
+  },
+  {
+   "clave": "rym:222:album:_release_single_jose-y-el-toro_de-hierro",
+   "tipo": "album",
+   "id": 15506,
+   "nombre": "De hierro"
+  },
+  {
+   "clave": "rym:222:album:_release_single_jose-y-el-toro-el-arcas_reloj-ingrato",
+   "tipo": "album",
+   "id": 15507,
+   "nombre": "Reloj ingrato"
+  },
+  {
+   "clave": "rym:222:album:_release_single_okills-jose-y-el-toro_viejitos",
+   "tipo": "album",
+   "id": 15508,
+   "nombre": "Viejitos"
+  },
+  {
+   "clave": "rym:222:album:_release_single_motherflowers-jose-y-el-toro_infierno-favorito",
+   "tipo": "album",
+   "id": 15509,
+   "nombre": "Infierno favorito"
+  },
+  {
+   "clave": "rym:222:album:_release_album_judy_buendia_y_los_impostores_la_cantante_calza_37_",
+   "tipo": "album",
+   "id": 15510,
+   "nombre": "La Cantante Calza 37½"
+  },
+  {
+   "clave": "rym:222:album:_release_ep_kungfu-club_3001",
+   "tipo": "album",
+   "id": 15511,
+   "nombre": "3001"
+  },
+  {
+   "clave": "rym:222:album:_release_album_la-pagana-trinidad_de-donde-vengo",
+   "tipo": "album",
+   "id": 15512,
+   "nombre": "De donde vengo"
+  },
+  {
+   "clave": "rym:222:album:_release_album_la-puta-electrica_demos-1994-2007",
+   "tipo": "album",
+   "id": 15513,
+   "nombre": "Demos 1994-2007"
+  },
+  {
+   "clave": "rym:222:album:_release_album_la-puta-electrica_veneno",
+   "tipo": "album",
+   "id": 15514,
+   "nombre": "Veneno"
+  },
+  {
+   "clave": "rym:222:album:_release_album_lebronch_la-fogatina-magica",
+   "tipo": "album",
+   "id": 15515,
+   "nombre": "La fogatiña mágica"
+  },
+  {
+   "clave": "rym:222:album:_release_single_lebronch_fire",
+   "tipo": "album",
+   "id": 15516,
+   "nombre": "Fire"
+  },
+  {
+   "clave": "rym:222:album:_release_single_lebronch_crazy-glue",
+   "tipo": "album",
+   "id": 15517,
+   "nombre": "Crazy Glue"
+  },
+  {
+   "clave": "rym:222:album:_release_single_lebronch_music-animal",
+   "tipo": "album",
+   "id": 15518,
+   "nombre": "Music Animal"
+  },
+  {
+   "clave": "rym:222:album:_release_single_legado_bazar",
+   "tipo": "album",
+   "id": 15519,
+   "nombre": "Bazar"
+  },
+  {
+   "clave": "rym:222:album:_release_single_legado_mirame",
+   "tipo": "album",
+   "id": 15520,
+   "nombre": "Mirame"
+  },
+  {
+   "clave": "rym:222:album:_release_single_legado_luces-rojas",
+   "tipo": "album",
+   "id": 15521,
+   "nombre": "Luces Rojas"
+  },
+  {
+   "clave": "rym:222:album:_release_album_lepster_danko-sur-real-acto-i",
+   "tipo": "album",
+   "id": 15522,
+   "nombre": "Danko Sur-Real Acto I"
+  },
+  {
+   "clave": "rym:222:album:_release_album_limpiacabezales_asi-paso-en-estocolmo",
+   "tipo": "album",
+   "id": 15523,
+   "nombre": "Así pasó en Estocolmo"
+  },
+  {
+   "clave": "rym:222:album:_release_single_limpiacabezales_escribe-tu-nombre",
+   "tipo": "album",
+   "id": 15524,
+   "nombre": "Escribe tu nombre"
+  },
+  {
+   "clave": "rym:222:album:_release_single_los_007_soy_un_hombre_feliz___la_flor",
+   "tipo": "album",
+   "id": 15525,
+   "nombre": "Soy un hombre feliz / La flor"
+  },
+  {
+   "clave": "rym:222:album:_release_album_los-confleis_tu-ne-cede-malis",
+   "tipo": "album",
+   "id": 15526,
+   "nombre": "Tu ne cede malis"
+  },
+  {
+   "clave": "rym:222:album:_release_album_los-humanoides_xyzt",
+   "tipo": "album",
+   "id": 15527,
+   "nombre": "XYZT"
+  },
+  {
+   "clave": "rym:222:album:_release_single_los-humanoides_moogafonique",
+   "tipo": "album",
+   "id": 15528,
+   "nombre": "Moogafonique"
+  },
+  {
+   "clave": "rym:222:album:_release_album_los-j_no-nos-j-mas",
+   "tipo": "album",
+   "id": 15529,
+   "nombre": "No nos [ J ] más"
+  },
+  {
+   "clave": "rym:222:album:_release_single_los-j_malandro",
+   "tipo": "album",
+   "id": 15530,
+   "nombre": "Malandro"
+  },
+  {
+   "clave": "rym:222:album:_release_album_impery-somdark-velork-m_c_c-ghrieving_cantus-maleficorum-bestiae",
+   "tipo": "album",
+   "id": 15531,
+   "nombre": "Cantus maleficorum bestiæ"
+  },
+  {
+   "clave": "rym:222:album:_release_album_majarete-sound-machine_afrodisiaco",
+   "tipo": "album",
+   "id": 15532,
+   "nombre": "Afrodisíaco"
+  },
+  {
+   "clave": "rym:222:album:_release_single_majarete-sound-machine_esta-noche",
+   "tipo": "album",
+   "id": 15533,
+   "nombre": "Esta noche"
+  },
+  {
+   "clave": "rym:222:album:_release_single_majarete-sound-machine-diveana_me-falta-todo",
+   "tipo": "album",
+   "id": 15534,
+   "nombre": "Me falta todo"
+  },
+  {
+   "clave": "rym:222:album:_release_ep_makara_makara-1",
+   "tipo": "album",
+   "id": 15535,
+   "nombre": "Makara"
+  },
+  {
+   "clave": "rym:222:album:_release_album_me-vs-murphy__justsaying",
+   "tipo": "album",
+   "id": 15536,
+   "nombre": "#Justsaying"
+  },
+  {
+   "clave": "rym:222:album:_release_single_me-vs-murphy_786",
+   "tipo": "album",
+   "id": 15537,
+   "nombre": "786"
+  },
+  {
+   "clave": "rym:222:album:_release_single_me-vs-murphy_valentines",
+   "tipo": "album",
+   "id": 15538,
+   "nombre": "Valentines"
+  },
+  {
+   "clave": "rym:222:album:_release_ep_mermelada-maker_mermelada-maker",
+   "tipo": "album",
+   "id": 15539,
+   "nombre": "Mermelada Maker"
+  },
+  {
+   "clave": "rym:222:album:_release_single_metrozubdivision_the-butcher",
+   "tipo": "album",
+   "id": 15540,
+   "nombre": "The Butcher"
+  },
+  {
+   "clave": "rym:222:album:_release_single_metrozubdivision_echoes",
+   "tipo": "album",
+   "id": 15541,
+   "nombre": "Echoes"
+  },
+  {
+   "clave": "rym:222:album:_release_album_miguel-angel-noya_angeles-enviados",
+   "tipo": "album",
+   "id": 15542,
+   "nombre": "Angeles enviados"
+  },
+  {
+   "clave": "rym:222:album:_release_album_noya-godwin-jurjendal_samliku",
+   "tipo": "album",
+   "id": 15543,
+   "nombre": "Samliku"
+  },
+  {
+   "clave": "rym:222:album:_release_album_miguel-noya_infinite-halls",
+   "tipo": "album",
+   "id": 15544,
+   "nombre": "Infinite Halls"
+  },
+  {
+   "clave": "rym:222:album:_release_album_miguel-noya_biophony-life-voices",
+   "tipo": "album",
+   "id": 15545,
+   "nombre": "Biophony / Life Voices"
+  },
+  {
+   "clave": "rym:222:album:_release_album_miguel-noya_aiqc",
+   "tipo": "album",
+   "id": 15546,
+   "nombre": "AIQC"
+  },
+  {
+   "clave": "rym:222:album:_release_djmix_miguel-noya_a-week-of-sundays",
+   "tipo": "album",
+   "id": 15547,
+   "nombre": "A Week of Sundays"
+  },
+  {
+   "clave": "rym:222:album:_release_single_motorfunk_escape",
+   "tipo": "album",
+   "id": 15548,
+   "nombre": "Escape"
+  },
+  {
+   "clave": "rym:222:album:_release_album_movida-acustica-urbana_en-vivo",
+   "tipo": "album",
+   "id": 15549,
+   "nombre": "En vivo"
+  },
+  {
+   "clave": "rym:222:album:_release_ep_nomeolvides_nomeolvides",
+   "tipo": "album",
+   "id": 15550,
+   "nombre": "Nomeolvides"
+  },
+  {
+   "clave": "rym:222:album:_release_album_novo-color_novo-color-vivo-en-vivo-centro-cultural-chacao-2015",
+   "tipo": "album",
+   "id": 15551,
+   "nombre": "Novo color vivo (En vivo - centro cultural chacao 2015)"
+  },
+  {
+   "clave": "rym:222:album:_release_ep_novo-color_anos-salvajes",
+   "tipo": "album",
+   "id": 15552,
+   "nombre": "Años salvajes"
+  },
+  {
+   "clave": "rym:222:album:_release_album_orquesta-sinfonica-de-venezuela_musica-venezolana-de-concierto",
+   "tipo": "album",
+   "id": 15553,
+   "nombre": "Musica Venezolana de concierto"
+  },
+  {
+   "clave": "rym:222:album:_release_album_orquesta-sinfonica-de-venezuela-jan-wagner_santa-cruz-de-pacairigua-el-rio-",
+   "tipo": "album",
+   "id": 15554,
+   "nombre": "Santa Cruz de Pacairigua; El rio de las siete estrellas; Avilena Suite"
+  },
+  {
+   "clave": "rym:222:album:_release_album_orquesta-sinfonica-de-venezuela-theodore-kuchar_latin-american-classics",
+   "tipo": "album",
+   "id": 15555,
+   "nombre": "Latin American Classics"
+  },
+  {
+   "clave": "rym:222:album:_release_album_orquesta-sinfonica-de-venezuela-sergiu-celibidache-albert-ferber_piano-conc",
+   "tipo": "album",
+   "id": 15556,
+   "nombre": "Piano Concerto No. 3 / Piano Concerto No. 2"
+  },
+  {
+   "clave": "rym:222:album:_release_comp_wilhelm-furtwangler-wiener-philharmoniker-berliner-philharmoniker-orquesta-s",
+   "tipo": "album",
+   "id": 15557,
+   "nombre": "Symphonies 4-9"
+  },
+  {
+   "clave": "rym:222:album:_release_album_pablo-schneider_pablo-schneider-y-su-mundo-insttrumental",
+   "tipo": "album",
+   "id": 15558,
+   "nombre": "Pablo Schneider y su mundo insttrumental"
+  },
+  {
+   "clave": "rym:222:album:_release_album_pablo-schneider_musica-original-de-la-pelicula-sobre-la-hierba-virgen",
+   "tipo": "album",
+   "id": 15559,
+   "nombre": "Música Original de la Película - Sobre la Hierba Virgen"
+  },
+  {
+   "clave": "rym:222:album:_release_album_para-llevar_lo-que-nos-toco-vivir",
+   "tipo": "album",
+   "id": 15560,
+   "nombre": "Lo que nos tocó vivir"
+  },
+  {
+   "clave": "rym:222:album:_release_album_para-llevar_adorado",
+   "tipo": "album",
+   "id": 15561,
+   "nombre": "Adorado"
+  },
+  {
+   "clave": "rym:222:album:_release_single_para-llevar_al-final",
+   "tipo": "album",
+   "id": 15562,
+   "nombre": "Al final"
+  },
+  {
+   "clave": "rym:222:album:_release_album_pharmacy_the-frozen-colours-of-the-morning-limbo",
+   "tipo": "album",
+   "id": 15563,
+   "nombre": "The Frozen Colours of the Morning Limbo"
+  },
+  {
+   "clave": "rym:222:album:_release_ep_pharmacy_lo-fi-ph-1",
+   "tipo": "album",
+   "id": 15564,
+   "nombre": "Lo-Fi Ph-1"
+  },
+  {
+   "clave": "rym:222:album:_release_album_primera-edicion_1986",
+   "tipo": "album",
+   "id": 15565,
+   "nombre": "1986"
+  },
+  {
+   "clave": "rym:222:album:_release_ep_quincalla_funicular-liminal",
+   "tipo": "album",
+   "id": 15566,
+   "nombre": "Funicular liminal"
+  },
+  {
+   "clave": "rym:222:album:_release_single_regurgitorso_imagina",
+   "tipo": "album",
+   "id": 15567,
+   "nombre": "Imagina"
+  },
+  {
+   "clave": "rym:222:album:_release_album_revolver-suicida_revolver-suicida",
+   "tipo": "album",
+   "id": 15568,
+   "nombre": "Revólver suicida"
+  },
+  {
+   "clave": "rym:222:album:_release_album_rodrigo-solo_ego",
+   "tipo": "album",
+   "id": 15569,
+   "nombre": "Ego"
+  },
+  {
+   "clave": "rym:222:album:_release_single_rodrigo-solo_alma-perpetua",
+   "tipo": "album",
+   "id": 15570,
+   "nombre": "Alma perpetua"
+  },
+  {
+   "clave": "rym:222:album:_release_single_rodrigo-solo_tonada-para-simon",
+   "tipo": "album",
+   "id": 15571,
+   "nombre": "Tonada para Simón"
+  },
+  {
+   "clave": "rym:222:album:_release_single_rodrigo-solo_tal-vez-no-se-hunda-el-barco",
+   "tipo": "album",
+   "id": 15572,
+   "nombre": "Tal vez no se hunda el barco"
+  },
+  {
+   "clave": "rym:222:album:_release_single_rodrigo-solo_no-hay-duda",
+   "tipo": "album",
+   "id": 15573,
+   "nombre": "No hay duda"
+  },
+  {
+   "clave": "rym:222:album:_release_single_rodrigo-solo_roma",
+   "tipo": "album",
+   "id": 15574,
+   "nombre": "Roma"
+  },
+  {
+   "clave": "rym:222:album:_release_single_rodrigo-solo_valle-de-balas-ii",
+   "tipo": "album",
+   "id": 15575,
+   "nombre": "Valle de balas II"
+  },
+  {
+   "clave": "rym:222:album:_release_single_jxv-rodrigo-solo_just-fine",
+   "tipo": "album",
+   "id": 15576,
+   "nombre": "Just Fine"
+  },
+  {
+   "clave": "rym:222:album:_release_single_sangre_conserva-el-sueno-necesito-valor",
+   "tipo": "album",
+   "id": 15577,
+   "nombre": "Conserva el sueño / Necesito valor"
+  },
+  {
+   "clave": "rym:222:album:_release_single_schizophrenic-torture_omniversal-infection-of-assimilated-parasites",
+   "tipo": "album",
+   "id": 15578,
+   "nombre": "Omniversal Infection of Assimilated Parasites"
+  },
+  {
+   "clave": "rym:222:album:_release_ep_sofia-insomnia-miguel-noya_remixes-bizarros",
+   "tipo": "album",
+   "id": 15579,
+   "nombre": "Remixes Bizarros"
+  },
+  {
+   "clave": "rym:222:album:_release_single_sofia-insomnia_arde-ciudad",
+   "tipo": "album",
+   "id": 15580,
+   "nombre": "Arde ciudad"
+  },
+  {
+   "clave": "rym:222:album:_release_album_southaven_belcefuzz",
+   "tipo": "album",
+   "id": 15581,
+   "nombre": "Belcefuzz"
+  },
+  {
+   "clave": "rym:222:album:_release_album_subliminal-code_karma-in-mortem",
+   "tipo": "album",
+   "id": 15582,
+   "nombre": "Karma in mortem"
+  },
+  {
+   "clave": "rym:222:album:_release_album_subliminal-code_the-cancer-of-the-world-is-human-beings",
+   "tipo": "album",
+   "id": 15583,
+   "nombre": "The Cancer of the World Is Human Beings"
+  },
+  {
+   "clave": "rym:222:album:_release_ep_subliminal-code_soldier-of-hell",
+   "tipo": "album",
+   "id": 15584,
+   "nombre": "Soldier of Hell"
+  },
+  {
+   "clave": "rym:222:album:_release_single_subliminal-code_subliminal-remix",
+   "tipo": "album",
+   "id": 15585,
+   "nombre": "Subliminal Remix"
+  },
+  {
+   "clave": "rym:222:album:_release_single_subliminal-code_another-day",
+   "tipo": "album",
+   "id": 15586,
+   "nombre": "Another Day"
+  },
+  {
+   "clave": "rym:222:album:_release_single_subliminal-code_behind-the-mask",
+   "tipo": "album",
+   "id": 15587,
+   "nombre": "Behind the Mask"
+  },
+  {
+   "clave": "rym:222:album:_release_album_tan-frio-el-verano_primavera",
+   "tipo": "album",
+   "id": 15588,
+   "nombre": "Primavera"
+  },
+  {
+   "clave": "rym:222:album:_release_album_tan_frio_el_verano_otono",
+   "tipo": "album",
+   "id": 15589,
+   "nombre": "Otoño"
+  },
+  {
+   "clave": "rym:222:album:_release_album_tarot_grupo-tarot",
+   "tipo": "album",
+   "id": 15590,
+   "nombre": "Grupo Tarot"
+  },
+  {
+   "clave": "rym:222:album:_release_album_the-pelaballs_the-pelaballs",
+   "tipo": "album",
+   "id": 15591,
+   "nombre": "The Pelaballs"
+  },
+  {
+   "clave": "rym:222:album:_release_album_the-pelaballs_m_m_x_v",
+   "tipo": "album",
+   "id": 15592,
+   "nombre": "M.M.X.V"
+  },
+  {
+   "clave": "rym:222:album:_release_ep_tlx_medios-de-transporte",
+   "tipo": "album",
+   "id": 15593,
+   "nombre": "Medios de transporte"
+  },
+  {
+   "clave": "rym:222:album:_release_single_tlx_vicky",
+   "tipo": "album",
+   "id": 15594,
+   "nombre": "Vicky"
+  },
+  {
+   "clave": "rym:222:album:_release_single_tlx_tu-voz",
+   "tipo": "album",
+   "id": 15595,
+   "nombre": "Tu voz"
+  },
+  {
+   "clave": "rym:222:album:_release_single_tlx_cuando-todo-se-apague",
+   "tipo": "album",
+   "id": 15596,
+   "nombre": "Cuando todo se apague"
+  },
+  {
+   "clave": "rym:222:album:_release_single_tlx_casa-serizawa",
+   "tipo": "album",
+   "id": 15597,
+   "nombre": "Casa serizawa"
+  },
+  {
+   "clave": "rym:222:album:_release_single_tlx_platino",
+   "tipo": "album",
+   "id": 15598,
+   "nombre": "Platino"
+  },
+  {
+   "clave": "rym:222:album:_release_album_todos-odiamos-todo_live-in-the-teatro-de-mierda",
+   "tipo": "album",
+   "id": 15599,
+   "nombre": "Live in the Teatro de Mierda"
+  },
+  {
+   "clave": "rym:222:album:_release_single_todosantos_hoy-me-faltas-tu",
+   "tipo": "album",
+   "id": 15600,
+   "nombre": "Hoy me faltas tú"
+  },
+  {
+   "clave": "rym:222:album:_release_single_trampas_arcoiris___comienzo",
+   "tipo": "album",
+   "id": 15601,
+   "nombre": "Arcoiris / Comienzo"
+  },
+  {
+   "clave": "rym:222:album:_release_album_triangular-ascension-and-abiotha_e_l_o_h_i_m",
+   "tipo": "album",
+   "id": 15602,
+   "nombre": "E.L.O.H.I.M."
+  },
+  {
+   "clave": "rym:222:album:_release_album_simulacra-triangular-ascension_ashes-of-the-world-empire",
+   "tipo": "album",
+   "id": 15603,
+   "nombre": "Ashes of the World Empire"
+  },
+  {
+   "clave": "rym:222:album:_release_album_trujillo_daltonic-now",
+   "tipo": "album",
+   "id": 15604,
+   "nombre": "Daltonic Now!"
+  },
+  {
+   "clave": "rym:222:album:_release_djmix_trujillo_mix-of-the-week-198-vacation-day",
+   "tipo": "album",
+   "id": 15605,
+   "nombre": "Mix of the Week #198: Vacation Day"
+  },
+  {
+   "clave": "rym:222:album:_release_djmix_trujillo_trushmix-119",
+   "tipo": "album",
+   "id": 15606,
+   "nombre": "Trushmix 119"
+  },
+  {
+   "clave": "rym:222:album:_release_djmix_charlie-bones-trujillo_the-do-you-breakfast-show",
+   "tipo": "album",
+   "id": 15607,
+   "nombre": "The Do!! You!!! Breakfast Show"
+  },
+  {
+   "clave": "rym:222:album:_release_djmix_trujillo_b_p_t-radio-050",
+   "tipo": "album",
+   "id": 15608,
+   "nombre": "B.P.T. Radio 050"
+  },
+  {
+   "clave": "rym:222:album:_release_djmix_trujillo_lyo-261",
+   "tipo": "album",
+   "id": 15609,
+   "nombre": "LYO #261"
+  },
+  {
+   "clave": "rym:222:album:_release_album_tsee-mud-bacro-lsd_tsee-mud-bacro-lsd",
+   "tipo": "album",
+   "id": 15610,
+   "nombre": "Tsee Mud... Bacro... LSD"
+  },
+  {
+   "clave": "rym:222:album:_release_single_tsee-mud_amandote-esta-dios-mundo",
+   "tipo": "album",
+   "id": 15611,
+   "nombre": "Amandote Esta Dios / Mundo"
+  },
+  {
+   "clave": "rym:222:album:_release_album_tukuca-zakayama_hecatombe",
+   "tipo": "album",
+   "id": 15612,
+   "nombre": "Hecatombe"
+  },
+  {
+   "clave": "rym:222:album:_release_ep_tukuca-zakayama_nacimiento-de-un-grito-frustrado",
+   "tipo": "album",
+   "id": 15613,
+   "nombre": "Nacimiento de un Grito Frustrado"
+  },
+  {
+   "clave": "rym:222:album:_release_single_tukuca-zakayama_masacre-en-barlovento",
+   "tipo": "album",
+   "id": 15614,
+   "nombre": "Masacre en Barlovento"
+  },
+  {
+   "clave": "rym:222:album:_release_album_un-dos-tres-y-fuera_no-hay-que-contar-mucho",
+   "tipo": "album",
+   "id": 15615,
+   "nombre": "No Hay Que Contar Mucho"
+  },
+  {
+   "clave": "rym:222:album:_release_album_un-dos-tres-y-fuera_sencillamente",
+   "tipo": "album",
+   "id": 15616,
+   "nombre": "Sencillamente"
+  },
+  {
+   "clave": "rym:222:album:_release_single_un-dos-tres-y-fuera_nathalie-oh-machu-picchu",
+   "tipo": "album",
+   "id": 15617,
+   "nombre": "Nathalie Oh! / Machu Picchu"
+  },
+  {
+   "clave": "rym:222:album:_release_album_vargas_ciudad-mareada",
+   "tipo": "album",
+   "id": 15618,
+   "nombre": "Ciudad mareada"
+  },
+  {
+   "clave": "rym:222:album:_release_album_vargas_radiocassette",
+   "tipo": "album",
+   "id": 15619,
+   "nombre": "Radiocassette"
+  },
+  {
+   "clave": "rym:222:album:_release_album_vargas_canciones-perdidas-antes-de-volver-a-nacer",
+   "tipo": "album",
+   "id": 15620,
+   "nombre": "Canciones perdidas antes de volver a nacer"
+  },
+  {
+   "clave": "rym:222:album:_release_album_vargas_el-primer-viaje-del-mago",
+   "tipo": "album",
+   "id": 15621,
+   "nombre": "El Primer Viaje del Mago"
+  },
+  {
+   "clave": "rym:222:album:_release_album_vargas_nada-que-perder",
+   "tipo": "album",
+   "id": 15622,
+   "nombre": "Nada que perder"
+  },
+  {
+   "clave": "rym:222:album:_release_single_vargas_honesto",
+   "tipo": "album",
+   "id": 15623,
+   "nombre": "Honesto"
+  },
+  {
+   "clave": "rym:222:album:_release_single_vargas_durazno",
+   "tipo": "album",
+   "id": 15624,
+   "nombre": "Durazno"
+  },
+  {
+   "clave": "rym:222:album:_release_single_vargas__parentesis-sesiones-acusticas-vol-1",
+   "tipo": "album",
+   "id": 15625,
+   "nombre": "(Paréntesis) Sesiones acústicas, Vol. 1"
+  },
+  {
+   "clave": "rym:222:album:_release_single_vargas_sofia",
+   "tipo": "album",
+   "id": 15626,
+   "nombre": "Sofía"
+  },
+  {
+   "clave": "rym:222:album:_release_single_vargas-apache_la-energia",
+   "tipo": "album",
+   "id": 15627,
+   "nombre": "La energía"
+  },
+  {
+   "clave": "rym:222:album:_release_single_vargas_verte-partir",
+   "tipo": "album",
+   "id": 15628,
+   "nombre": "Verte partir"
+  },
+  {
+   "clave": "rym:222:album:_release_single_vargas_rafael-el-morrocoy-perdido",
+   "tipo": "album",
+   "id": 15629,
+   "nombre": "Rafael, el morrocoy perdido"
+  },
+  {
+   "clave": "rym:222:album:_release_single_vargas-mila-farras_nunca-es-suficiente",
+   "tipo": "album",
+   "id": 15630,
+   "nombre": "Nunca es suficiente"
+  },
+  {
+   "clave": "rym:222:album:_release_single_vargas_era-inevitable",
+   "tipo": "album",
+   "id": 15631,
+   "nombre": "Era inevitable"
+  },
+  {
+   "clave": "rym:222:album:_release_single_vargas_te-vi-volar",
+   "tipo": "album",
+   "id": 15632,
+   "nombre": "Te VI volar"
+  },
+  {
+   "clave": "rym:222:album:_release_single_vargas_gorilla-business",
+   "tipo": "album",
+   "id": 15633,
+   "nombre": "Gorilla Business"
+  },
+  {
+   "clave": "rym:222:album:_release_single_vargas_recetas-para-duelos-necesarios",
+   "tipo": "album",
+   "id": 15634,
+   "nombre": "Recetas para duelos necesarios"
+  },
+  {
+   "clave": "rym:222:album:_release_single_vargas_ahora-es-distinto",
+   "tipo": "album",
+   "id": 15635,
+   "nombre": "Ahora es distinto"
+  },
+  {
+   "clave": "rym:222:album:_release_single_vargas_mirada-de-jazmin",
+   "tipo": "album",
+   "id": 15636,
+   "nombre": "Mirada de jazmín"
+  },
+  {
+   "clave": "rym:222:album:_release_album_vel-france_memorias-al-mar",
+   "tipo": "album",
+   "id": 15637,
+   "nombre": "Memorias al mar"
+  },
+  {
+   "clave": "rym:222:album:_release_album_versed_visiones",
+   "tipo": "album",
+   "id": 15638,
+   "nombre": "Visiones"
+  },
+  {
+   "clave": "rym:222:album:_release_single_versed_el-peso-del-tiempo",
+   "tipo": "album",
+   "id": 15639,
+   "nombre": "El peso del tiempo"
+  },
+  {
+   "clave": "rym:222:album:_release_single_versed_prisma",
+   "tipo": "album",
+   "id": 15640,
+   "nombre": "Prisma"
+  },
+  {
+   "clave": "rym:222:album:_release_single_versed_moire",
+   "tipo": "album",
+   "id": 15641,
+   "nombre": "Moirè"
+  },
+  {
+   "clave": "rym:222:album:_release_single_vitriol_ep-2009",
+   "tipo": "album",
+   "id": 15642,
+   "nombre": "EP 2009"
+  },
+  {
+   "clave": "rym:222:album:_release_album_zeta_las-nuevas-tendencias-apendice-a-aurum",
+   "tipo": "album",
+   "id": 15643,
+   "nombre": "Las nuevas tendencias: Apendice A: Aurum"
+  },
+  {
+   "clave": "rym:222:album:_release_album_zeta_en-medio-de-la-tormenta",
+   "tipo": "album",
+   "id": 15644,
+   "nombre": "En medio de la tormenta"
+  },
+  {
+   "clave": "rym:222:album:_release_album_zeta_mochima",
+   "tipo": "album",
+   "id": 15645,
+   "nombre": "Mochima"
+  },
+  {
+   "clave": "rym:222:album:_release_album_zeta-and-the-abajo-cadenas-orchestra_todo-bailarlo",
+   "tipo": "album",
+   "id": 15646,
+   "nombre": "Todo bailarlo"
+  },
+  {
+   "clave": "rym:222:album:_release_album_zeta_vii-magia-infinita-2024",
+   "tipo": "album",
+   "id": 15647,
+   "nombre": "VII Magia infinita (2024)"
+  },
+  {
+   "clave": "rym:222:album:_release_album_zeta_was-it-medicine-to-you",
+   "tipo": "album",
+   "id": 15648,
+   "nombre": "Was It Medicine to You?"
+  },
+  {
+   "clave": "rym:222:album:_release_album_zeta_austin-tx-7_26_23-live-at-parish",
+   "tipo": "album",
+   "id": 15649,
+   "nombre": "Austin TX 7.26.23: Live at Parish"
+  },
+  {
+   "clave": "rym:222:album:_release_album_zeta_live-in-boston-10-years-of-resilience-in-the-u_s",
+   "tipo": "album",
+   "id": 15650,
+   "nombre": "Live in Boston - 10 Years of Resilience in the U.S."
+  },
+  {
+   "clave": "rym:222:album:_release_ep_zeta-no-somos-marineros_voces-del-nuevo-continente",
+   "tipo": "album",
+   "id": 15651,
+   "nombre": "Voces del nuevo continente"
+  },
+  {
+   "clave": "rym:222:album:_release_ep_zeta_lantiteoria-del-todo",
+   "tipo": "album",
+   "id": 15652,
+   "nombre": "L'antiteoria del todo"
+  },
+  {
+   "clave": "rym:222:album:_release_ep_zeta-with-chris-pyrate_slingshot",
+   "tipo": "album",
+   "id": 15653,
+   "nombre": "Slingshot"
+  },
+  {
+   "clave": "rym:222:album:_release_ep_zeta_audiotree-live",
+   "tipo": "album",
+   "id": 15654,
+   "nombre": "Audiotree Live"
+  },
+  {
+   "clave": "rym:222:album:_release_ep_zeta_magia-infinita-",
+   "tipo": "album",
+   "id": 15655,
+   "nombre": "Magia infinita (無限の魔法)"
+  },
+  {
+   "clave": "rym:222:album:_release_single_zeta_yo-el-peor-de-todos-somos-cosmos-xxv",
+   "tipo": "album",
+   "id": 15656,
+   "nombre": "Yo El Peor De Todos (Somos Cosmos) XXV"
+  },
+  {
+   "clave": "rym:222:album:_release_single_zeta-whites_vivimos-por-esto",
+   "tipo": "album",
+   "id": 15657,
+   "nombre": "Vivimos por esto"
+  },
+  {
+   "clave": "rym:222:album:_release_single_zeta_latdt",
+   "tipo": "album",
+   "id": 15658,
+   "nombre": "LATDT"
+  },
+  {
+   "clave": "rym:222:album:_release_single_zeta_sufrir",
+   "tipo": "album",
+   "id": 15659,
+   "nombre": "Sufrir"
+  },
+  {
+   "clave": "rym:222:album:_release_single_zeta_completar",
+   "tipo": "album",
+   "id": 15660,
+   "nombre": "Completar"
+  },
+  {
+   "clave": "rym:222:album:_release_single_zeta_venezziola",
+   "tipo": "album",
+   "id": 15661,
+   "nombre": "Venezziola"
+  },
+  {
+   "clave": "rym:222:album:_release_single_zeta_el-canto-de-la-victoria",
+   "tipo": "album",
+   "id": 15662,
+   "nombre": "El canto de la victoria"
+  },
+  {
+   "clave": "rym:222:album:_release_single_zeta_la-flor-de-la-palabra",
+   "tipo": "album",
+   "id": 15663,
+   "nombre": "La flor de la palabra"
+  },
+  {
+   "clave": "rym:222:album:_release_single_zeta_vi-resignar-2024",
+   "tipo": "album",
+   "id": 15664,
+   "nombre": "VI RESIGNAR 2024"
+  },
+  {
+   "clave": "rym:222:album:_release_single_zeta-pans_tonada-de-luna-llena",
+   "tipo": "album",
+   "id": 15665,
+   "nombre": "Tonada de Luna Llena"
+  },
+  {
+   "clave": "rym:222:album:_release_single_zeta_privilege",
+   "tipo": "album",
+   "id": 15666,
+   "nombre": "Privilege"
+  },
+  {
+   "clave": "rym:222:album:_release_album_zikoticos-armados_dando-la-cara",
+   "tipo": "album",
+   "id": 15667,
+   "nombre": "Dando la Cara"
+  },
+  {
+   "clave": "rym:222:album:_release_single_zion-tpl_missing-you",
+   "tipo": "album",
+   "id": 15668,
+   "nombre": "Missing You"
+  }
+ ],
+ "review": [
+  {
+   "clave": "rym:222:album:_release_album_alban-arthuan_los-peligro-de-jugar-con-una-caja-de-fosforo",
+   "score": 0.85495,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:222:album:_release_album_ananta_night-and-daydream",
+   "score": 0.82,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:222:album:_release_album_apache_territorio-apache-vol_2-champion-sound",
+   "score": 0.79589,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:222:album:_release_mixtape_apache_sin-afina-mucho",
+   "score": 0.85275,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:222:album:_release_mixtape_apache-canserbero_apa-y-can",
+   "score": 0.7397,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:222:album:_release_album_luis-enrique-c4-trio_tiempo-al-tiempo",
+   "score": 0.73685,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:222:album:_release_album_hamilton-de-holanda-c4-trio_tembla",
+   "score": 0.72776,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:222:album:_release_ep_cardopusher_mutant-dubstep-vol-2",
+   "score": 0.84487,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:222:album:_release_ep_cardopusher-nehuen_split-02",
+   "score": 0.831,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:222:album:_release_ep_cardopusher-nehuen_split-03",
+   "score": 0.831,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:222:album:_release_ep_cardopusher_psyops-part-two",
+   "score": 0.77171,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:222:album:_release_album_dimension-latina-76_salsa-brava",
+   "score": 0.74992,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:222:album:_release_single_dimension-latina_paranpanpan-el-mala-suerte",
+   "score": 0.72938,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:222:album:_release_comp_dimension-latina-billos-caracas-boys_dimension-vs-billo",
+   "score": 0.78267,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:222:album:_release_comp_billos-caracas-boys-dimension-latina_billo-vs-dimension",
+   "score": 0.79049,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:222:album:_release_comp_dimension-latina-billos-caracas-boys_billos-vs-dimension-latina",
+   "score": 0.77618,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:222:album:_release_ep_dolli_colorado",
+   "score": 0.84711,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:222:album:_release_album_evio-di-marzo_evio-di-marzo-adrenalina-caribe",
+   "existingId": 15495,
+   "detalle": "ya existe (ER)"
+  },
+  {
+   "clave": "rym:222:album:_release_ep_jovenes-y-sexys_bruno-ep",
+   "score": 0.8165,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:222:album:_release_ep_jovenes-y-sexys_bruno-remixed",
+   "score": 0.78861,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:222:album:_release_album_juan_peyote_juan_peyote",
+   "score": 0.73346,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:222:album:_release_ep_juan_peyote_juan_peyote",
+   "score": 0.73346,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:222:album:_release_single_la-pagana-trinidad_de-donde-vengo",
+   "existingId": 15512,
+   "detalle": "ya existe (ER)"
+  },
+  {
+   "clave": "rym:222:album:_release_album_lado-b_rock-n-roll-show-vol-i",
+   "score": 0.82,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:222:album:_release_album_lepster_danko-sur-real-acto-ii",
+   "score": 0.85473,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:222:album:_release_ep_los_j_no_vas_a_caer",
+   "score": 0.72182,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:222:album:_release_album_majarete-sound-machine_real-organico-y-de-baile",
+   "score": 0.83169,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:222:album:_release_album_metrozubdivision_the_black_album",
+   "score": 0.73111,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:222:album:_release_single_metrozubdivision_another-self",
+   "score": 0.72282,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:222:album:_release_album_miguel-noya-robert-jurjendal_the-power-of-distance",
+   "score": 0.75515,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:222:album:_release_album_miguel-noya_biofonia-ii-voces-de-la-tierra",
+   "score": 0.72931,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:222:album:_release_ep_sofia-insomnia-miguel-noya_remixes-bizarros",
+   "score": 0.74524,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:222:album:_release_ep_misantropia_f1_against_the_world_without_toilet_paper",
+   "score": 0.85695,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:222:album:_release_ep_novo-color_novo-color-vivo-en-vivo",
+   "score": 0.79632,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:222:album:_release_album_retrovertigo_idejala-esta-triste",
+   "score": 0.84983,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:222:album:_release_ep_southaven_la-corte-del-fuzz",
+   "score": 0.72922,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:222:album:_release_ep_subliminal-code_soldier-of-hell-reborn",
+   "score": 0.82309,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:222:album:_release_album_triangular-ascension_the-chronos-anomaly",
+   "score": 0.74048,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:222:album:_release_album_vargas_nada-que-perder-2",
+   "score": 0.84635,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:222:album:_release_single_vargas_el-escape-de-la-torre",
+   "score": 0.73192,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:222:album:_release_single_vargas_parentesis-vol_2-descanso-en-la-torre",
+   "score": 0.76222,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:222:album:_release_single_vargas_el-silencio-del-espejo",
+   "score": 0.7254,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:222:album:_release_single_vargas_el-pacto-de-richie",
+   "score": 0.73446,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:222:album:_release_single_vargas_gorilla-business-en-vivo-desde-recoveco-records",
+   "score": 0.78349,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:222:album:_release_single_vargas_el-ultimo-disaster-en-caracas-en-vivo",
+   "score": 0.73035,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:222:album:_release_single_vargas_nota-negra",
+   "score": 0.74848,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:222:album:_release_single_vargas-boston-rex-willbert-alvarez_nada-que-perder",
+   "existingId": 15622,
+   "detalle": "ya existe (ER)"
+  },
+  {
+   "clave": "rym:222:album:_release_ep_vitriol_f6_dead_by_vitriol",
+   "score": 0.80023,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:222:album:_release_album_zeta_las-nuevas-tendencias-apendice-b-sulphur",
+   "score": 0.83303,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:222:album:_release_ep_zeta_live-session-2021",
+   "score": 0.72793,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:222:album:_release_ep_codefendants-zeta_live-from-red-lion-recording-studio",
+   "score": 0.73547,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:222:album:_release_single_zeta_v-completar-2024",
+   "score": 0.77542,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  }
+ ],
+ "errors": []
+}

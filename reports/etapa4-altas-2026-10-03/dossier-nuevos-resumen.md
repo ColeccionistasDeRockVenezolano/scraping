@@ -43,7 +43,7 @@ las llenas tú al revisar), `dossier-nuevos.jsonl` (misma data; la consumirá el
    el workstream «Nuevo lote» (otra sesión) — sus claims llevan la fuente `lote-investigacion-2026-10-02`.
    → Este dossier es una foto viva: **re-correrlo justo antes de aplicar altas**; lo que esa sesión
    haga mientras tanto aparecerá como `ya_*` y no se duplicará (además el ER del motor frena duplicados).
-2. **279 altas sugeridas con evidencia**: 222 bandas + 55 personas-miembro.
+2. **277 altas sugeridas con evidencia**: 222 bandas + 55 personas-miembro.
 3. **869 para revisión**: 369 solistas potenciales, 354 personas (246 sin evidencia musical),
    124 sin tipo, 23 frías. Los no-musicales del barrido de localidades caen aquí.
 4. **79 homónimos** a discriminar antes de tocar alias/altas.

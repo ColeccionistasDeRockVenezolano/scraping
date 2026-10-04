@@ -1,0 +1,278 @@
+{
+ "generado": "2026-10-03T23:59:05.739Z",
+ "plan": "reports/etapa4-altas-2026-10-03/plan-altas.jsonl",
+ "modo": "dry-run",
+ "items": [
+  {
+   "clave": "rym-nuevos:artist:serenada",
+   "tipo": "artist",
+   "nombre": "Serenada",
+   "values": {
+    "name": "Serenada",
+    "artist_type": "band",
+    "formed_year": 1975
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "crearia",
+    "id": 4515
+   }
+  },
+  {
+   "clave": "rym-nuevos:artist:orquesta-la-tremenda",
+   "tipo": "artist",
+   "nombre": "Orquesta La Tremenda",
+   "values": {
+    "name": "Orquesta La Tremenda",
+    "artist_type": "band"
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "crearia_con_allowSimilar",
+    "detalle": "el catálogo no autoriza crear artist «Orquesta La Tremenda»: REVIEW: no se modifica el canonico",
+    "score": 0.52761,
+    "candidatos": [
+     "Orquesta La Amistad",
+     "Orquesta Fortaleza",
+     "Orquesta Aragón"
+    ],
+    "id": 4516
+   }
+  },
+  {
+   "clave": "rym-nuevos:artist:los-imperials",
+   "tipo": "artist",
+   "nombre": "Los Imperial's",
+   "values": {
+    "name": "Los Imperial's",
+    "artist_type": "band",
+    "formed_year": 1962
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "crearia_con_allowSimilar",
+    "detalle": "el catálogo no autoriza crear artist «Los Imperial's»: REVIEW: no se modifica el canonico",
+    "score": 0.53271,
+    "candidatos": [
+     "Los Impala",
+     "Los Martinis",
+     "Los Clippers"
+    ],
+    "id": 4517
+   }
+  },
+  {
+   "clave": "rym-nuevos:artist:la-danta-mas-cabra",
+   "tipo": "artist",
+   "nombre": "La Danta Más Cabra",
+   "values": {
+    "name": "La Danta Más Cabra",
+    "artist_type": "band",
+    "formed_year": 2024
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "crearia",
+    "id": 4518
+   }
+  },
+  {
+   "clave": "rym-nuevos:artist:anakena",
+   "tipo": "artist",
+   "nombre": "Anakena",
+   "values": {
+    "name": "Anakena",
+    "artist_type": "band",
+    "formed_year": 2016
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "crearia_con_allowSimilar",
+    "detalle": "el catálogo no autoriza crear artist «Anakena»: REVIEW: no se modifica el canonico",
+    "score": 0.51878,
+    "candidatos": [
+     "Ananta",
+     "ANARKIA",
+     "Aneeka"
+    ],
+    "id": 4519
+   }
+  },
+  {
+   "clave": "rym-nuevos:person:marianne-mali",
+   "tipo": "person",
+   "nombre": "Marianne Malí",
+   "values": {
+    "name": "Marianne Malí"
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "crearia_con_allowSimilar",
+    "detalle": "el catálogo no autoriza crear person «Marianne Malí»: REVIEW: no se modifica el canonico",
+    "score": 0.5273,
+    "candidatos": [
+     "Marianna Melendez",
+     "Mariana León",
+     "Maria Maria"
+    ],
+    "id": 39869
+   }
+  },
+  {
+   "clave": "rym-nuevos:person:ava-casas",
+   "tipo": "person",
+   "nombre": "Ava Casas",
+   "values": {
+    "name": "Ava Casas"
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "crearia_con_allowSimilar",
+    "detalle": "el catálogo no autoriza crear person «Ava Casas»: REVIEW: no se modifica el canonico",
+    "score": 0.5365,
+    "candidatos": [
+     "Álvaro Casas",
+     "A. Zacasas",
+     "Javier Casas"
+    ],
+    "id": 39870
+   }
+  },
+  {
+   "clave": "rym-nuevos:person:akilin",
+   "tipo": "person",
+   "nombre": "Akilin",
+   "values": {
+    "name": "Akilin"
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "crearia",
+    "id": 39871
+   }
+  },
+  {
+   "clave": "rym-nuevos:person:jose-rosario",
+   "tipo": "person",
+   "nombre": "José Rosario",
+   "values": {
+    "name": "José Rosario"
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "crearia_con_allowSimilar",
+    "detalle": "el catálogo no autoriza crear person «José Rosario»: REVIEW: no se modifica el canonico",
+    "score": 0.54588,
+    "candidatos": [
+     "José Rosario Soto",
+     "Josué Rosado",
+     "Josué Rosado"
+    ],
+    "id": 39872
+   }
+  },
+  {
+   "clave": "rym-nuevos:person:underaiki",
+   "tipo": "person",
+   "nombre": "Underaiki",
+   "values": {
+    "name": "Underaiki"
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "crearia",
+    "id": 39873
+   }
+  },
+  {
+   "clave": "rym:222:album:_release_album_la-puta-electrica_automatron",
+   "tipo": "album",
+   "nombre": "Automatron",
+   "values": {
+    "title": "Automatron",
+    "release_year": 2024,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "crearia",
+    "id": 15359
+   }
+  },
+  {
+   "clave": "rym:222:album:_release_ep_la-puta-electrica_a-gogo-maldito",
+   "tipo": "album",
+   "nombre": "A gogo maldito",
+   "values": {
+    "title": "A gogo maldito",
+    "release_year": 1995,
+    "album_type": "ep"
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "crearia",
+    "id": 15360
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_los-imperials_ritmo-juvenil-con-los-imperials",
+   "tipo": "album",
+   "nombre": "Ritmo juvenil con Los Imperial's",
+   "values": {
+    "title": "Ritmo juvenil con Los Imperial's",
+    "release_year": 1965,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "crearia",
+    "id": 15361
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_serenada_serenada_volumen",
+   "tipo": "album",
+   "nombre": "Serenada Volumen",
+   "values": {
+    "title": "Serenada Volumen",
+    "release_year": 1979,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "crearia",
+    "id": 15362
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_orquesta-la-tremenda_fieston-79",
+   "tipo": "album",
+   "nombre": "Fiestón '79",
+   "values": {
+    "title": "Fiestón '79",
+    "release_year": 1979,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "crearia",
+    "id": 15363
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_la-danta-mas-cabra_triple-in-tension",
+   "tipo": "album",
+   "nombre": "Triple In-Tensión",
+   "values": {
+    "title": "Triple In-Tensión",
+    "release_year": 2025,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "crearia",
+    "id": 15364
+   }
+  }
+ ]
+}

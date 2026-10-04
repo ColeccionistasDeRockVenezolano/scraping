@@ -153,11 +153,11 @@ def main():
                     if caso.get("artist_id"):
                         parent = {"artist_id": int(caso["artist_id"])}
                     elif en_plan:
-                        parent = {"rym_href": ph}
+                        parent = {"rym_href": ph, "name": d["artista"]}
                     elif dn and dn.get("cat_artist_id"):
                         parent = {"artist_id": int(dn["cat_artist_id"])}
                     elif dn:
-                        parent = {"rym_href": ph}
+                        parent = {"rym_href": ph, "name": d["artista"]}
                     else:
                         raise ValueError(f"padre {ph} ni en el plan ni en el dossier")
                 snap = limpiar(d.get("evidencia"))

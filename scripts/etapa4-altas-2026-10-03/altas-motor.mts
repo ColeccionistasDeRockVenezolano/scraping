@@ -42,7 +42,7 @@ interface PlanItem {
   nombre: string;
   values: Record<string, unknown>;
   evidencia: { url: string; excerpt: string; snapshot: string; captura?: string };
-  parent?: { rym_href?: string; artist_id?: number };
+  parent?: { rym_href?: string; artist_id?: number; name?: string };
   origen: string;
   motivo?: string;
 }
@@ -134,9 +134,15 @@ async function preChequeos(items: PlanItem[]): Promise<Record<string, string[]>>
 async function sondaEr(items: PlanItem[]): Promise<Resultado> {
   const out: Resultado = {};
   const ids = new Map<string, number>();
-  const resolverPadre = (it: PlanItem): number | undefined => {
+  const resolverPadre = async (client: { query: (q: string, p?: unknown[]) => Promise<{ rows: Array<Record<string, unknown>> }> }, it: PlanItem): Promise<number | undefined> => {
     if (it.parent?.artist_id) return it.parent.artist_id;
-    if (it.parent?.rym_href && ids.has(`href:${it.parent.rym_href}`)) return ids.get(`href:${it.parent.rym_href}`);
+    const k = `href:${it.parent?.rym_href}`;
+    if (ids.has(k)) return ids.get(k);
+    if (it.parent?.name) {
+      const r = await client.query("SELECT id::text FROM public.artists WHERE lower(name)=lower($1) ORDER BY id LIMIT 1", [it.parent.name]);
+      const row = r.rows[0];
+      if (row) return Number(row["id"]);
+    }
     return undefined;
   };
   try {
@@ -150,7 +156,7 @@ async function sondaEr(items: PlanItem[]): Promise<Resultado> {
         let conservar = false;
         let opts: Record<string, unknown> = {};
         if (it.tipo === "album") {
-          const pid = resolverPadre(it);
+          const pid = await resolverPadre(context.client, it);
           if (!pid) {
             out[it.clave] = { resultado: "error", detalle: "padre sin resolver (¿artista no creado antes en el plan?)" };
             await context.client.query("ROLLBACK TO SAVEPOINT p");
@@ -245,7 +251,14 @@ async function aplicar(items: PlanItem[]): Promise<void> {
         try {
           let opts: Record<string, unknown> = {};
           if (it.tipo === "album") {
-            const pid = it.parent?.artist_id ?? ids.get(`href:${it.parent?.rym_href ?? ""}`);
+            let pid: number | undefined = it.parent?.artist_id;
+            if (!pid && it.parent?.rym_href) pid = ids.get(`href:${it.parent.rym_href}`);
+            if (!pid && it.parent?.name) {
+              const r = await context.client.query<{ id: string }>(
+                "SELECT id::text FROM public.artists WHERE lower(name)=lower($1) ORDER BY id LIMIT 1", [it.parent.name]);
+              const row = r.rows[0];
+              if (row) pid = Number(row.id);
+            }
             if (!pid) {
               await context.client.query("ROLLBACK TO SAVEPOINT alt");
               await context.client.query("RELEASE SAVEPOINT alt");
@@ -259,12 +272,23 @@ async function aplicar(items: PlanItem[]): Promise<void> {
             id = (await createEntity(context, it.tipo, it.values, opts)).id;
           } catch (error) {
             if (error instanceof OperatorError && error.code === "needs_review") {
+              const rdId = error.details?.["resolutionDecisionId"] as number | undefined;
               const dec = await context.client.query<{ score: string | null }>(
                 "SELECT score::text FROM ingest.entity_resolution_decisions WHERE entity_kind=$1 AND input_name_original=$2 ORDER BY id DESC LIMIT 1",
                 [it.tipo.toUpperCase(), it.values["name"] ?? it.values["title"]]);
               const score = Number(dec.rows[0]?.score ?? 1);
               if (score < 0.66) {
                 id = (await createEntity(context, it.tipo, it.values, { ...opts, allowSimilar: true })).id;
+                // La primera pasada del ER dejó un aviso abierto (ambigüedad); la ficha se creó
+                // como distinta a sabiendas → el aviso se cierra en el mismo run (reversible).
+                if (rdId) {
+                  await context.client.query(
+                    `UPDATE ingest.review_queue
+                       SET status='dismissed', resolved_by='human', resolution_note=$2, resolved_at=now(), updated_at=now()
+                     WHERE status IN ('open','in_progress') AND payload->>'resolutionDecisionId' = $1`,
+                    [String(rdId),
+                     `Alta como ficha distinta con allowSimilar (run ${context.runId}, score ${score.toFixed(3)}); aviso de la primera pasada del ER, sin objeto.`]);
+                }
               } else {
                 review.push({ clave: it.clave, score, detalle: "ER la marca como posible duplicado; queda en cola" });
               }

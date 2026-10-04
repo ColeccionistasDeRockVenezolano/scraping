@@ -1,0 +1,107 @@
+{
+ "generado": "2026-10-03T23:59:45.909Z",
+ "plan": "reports/etapa4-altas-2026-10-03/plan-altas.jsonl",
+ "runs": [
+  11722
+ ],
+ "creadas": [
+  {
+   "clave": "rym-nuevos:artist:serenada",
+   "tipo": "artist",
+   "id": 4520,
+   "nombre": "Serenada"
+  },
+  {
+   "clave": "rym-nuevos:artist:orquesta-la-tremenda",
+   "tipo": "artist",
+   "id": 4521,
+   "nombre": "Orquesta La Tremenda"
+  },
+  {
+   "clave": "rym-nuevos:artist:los-imperials",
+   "tipo": "artist",
+   "id": 4522,
+   "nombre": "Los Imperial's"
+  },
+  {
+   "clave": "rym-nuevos:artist:la-danta-mas-cabra",
+   "tipo": "artist",
+   "id": 4523,
+   "nombre": "La Danta Más Cabra"
+  },
+  {
+   "clave": "rym-nuevos:artist:anakena",
+   "tipo": "artist",
+   "id": 4524,
+   "nombre": "Anakena"
+  },
+  {
+   "clave": "rym-nuevos:person:marianne-mali",
+   "tipo": "person",
+   "id": 39874,
+   "nombre": "Marianne Malí"
+  },
+  {
+   "clave": "rym-nuevos:person:ava-casas",
+   "tipo": "person",
+   "id": 39875,
+   "nombre": "Ava Casas"
+  },
+  {
+   "clave": "rym-nuevos:person:akilin",
+   "tipo": "person",
+   "id": 39876,
+   "nombre": "Akilin"
+  },
+  {
+   "clave": "rym-nuevos:person:jose-rosario",
+   "tipo": "person",
+   "id": 39877,
+   "nombre": "José Rosario"
+  },
+  {
+   "clave": "rym-nuevos:person:underaiki",
+   "tipo": "person",
+   "id": 39878,
+   "nombre": "Underaiki"
+  },
+  {
+   "clave": "rym:222:album:_release_album_la-puta-electrica_automatron",
+   "tipo": "album",
+   "id": 15365,
+   "nombre": "Automatron"
+  },
+  {
+   "clave": "rym:222:album:_release_ep_la-puta-electrica_a-gogo-maldito",
+   "tipo": "album",
+   "id": 15366,
+   "nombre": "A gogo maldito"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_los-imperials_ritmo-juvenil-con-los-imperials",
+   "tipo": "album",
+   "id": 15367,
+   "nombre": "Ritmo juvenil con Los Imperial's"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_serenada_serenada_volumen",
+   "tipo": "album",
+   "id": 15368,
+   "nombre": "Serenada Volumen"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_orquesta-la-tremenda_fieston-79",
+   "tipo": "album",
+   "id": 15369,
+   "nombre": "Fiestón '79"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_la-danta-mas-cabra_triple-in-tension",
+   "tipo": "album",
+   "id": 15370,
+   "nombre": "Triple In-Tensión"
+  }
+ ],
+ "review": [],
+ "errors": []
+}

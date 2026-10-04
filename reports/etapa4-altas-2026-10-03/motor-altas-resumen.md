@@ -1,6 +1,8 @@
 # Motor de altas en seco — resumen (etapa 4 «Altas» — preparación)
 
-Estado: **construido y probado en seco; NADA aplicado a la BD** (cero escrituras verificadas).
+Estado: **construido y aplicado (2026-10-04)**. Muestra de 16 (run 11722) y Lote 1 de 574
+(runs 11726–11752) ejecutados, verificados y reversibles — ver `lote1-aplicado-resumen.md`
+(522+16 fichas creadas; 49 `album_match` quedaron en cola). Este documento describe el motor.
 
 ## Piezas
 

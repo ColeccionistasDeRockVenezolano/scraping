@@ -1,0 +1,3491 @@
+{
+ "nota": "Lote etapa 4 aprobado por Brian (2026-10-03): bandas + personas sugeridas + discos del ledger 222. Generado por solicitud-lote.py.",
+ "casos": [
+  {
+   "tipo": "person",
+   "rym_href": "/artist/kusari-1",
+   "motivo": "persona miembro (Asuka en el Fin del Mundo [nuevo]); dossier#alta_persona_miembro"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/gl1tchhhvkvmv",
+   "motivo": "persona miembro (Weed420 [nuevo]); dossier#alta_persona_miembro"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/prieto-gang",
+   "motivo": "persona miembro (Guerrilla Seca [cat]); dossier#alta_persona_miembro"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/el-otro-polo",
+   "motivo": "persona miembro (Fuego Montevideo [cat]); dossier#alta_persona_miembro"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/rafael-bacallao",
+   "motivo": "persona miembro (Fajardo y Sus Estrellas [fuera]; Orquesta Aragón [cat]); dossier#alta_persona_miembro"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/bearsbeetsbattlestar",
+   "motivo": "persona miembro (cats! and beloved pets [nuevo]; mil ataris por segundo [nuev); dossier#alta_persona_miembro"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/escuela-de-vuelo",
+   "motivo": "persona miembro (Eustace [nuevo]); dossier#alta_persona_miembro"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/llanero-electrico",
+   "motivo": "persona miembro (Los Corotos [fuera]; Toberías [cat]); dossier#alta_persona_miembro"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/djalvaro",
+   "motivo": "persona miembro (Weed420 [nuevo]); dossier#alta_persona_miembro"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/victador",
+   "motivo": "persona miembro (Los Humanoides [cat]); dossier#alta_persona_miembro"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/isaac-sasson",
+   "motivo": "persona miembro (Colérico Espín [nuevo]); dossier#alta_persona_miembro"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/ebot",
+   "motivo": "persona miembro (Elektra [cat]; Metrozubdivision [cat]); dossier#alta_persona_miembro"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/nigu-moka",
+   "motivo": "persona miembro (Pulpo [nuevo]); dossier#alta_persona_miembro"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/sebastian-cova-1",
+   "motivo": "persona miembro (mil ataris por segundo [nuevo]; Ravahil [nuevo]); dossier#alta_persona_miembro"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/paaris",
+   "motivo": "persona miembro (Dankrupt [fuera]; Fauna [cat]; Primera Edición [cat]); dossier#alta_persona_miembro"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/solo-soul",
+   "motivo": "persona miembro (Séptima Raza [cat]); dossier#alta_persona_miembro"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/yei-1",
+   "motivo": "persona miembro (Telegrama [cat]); dossier#alta_persona_miembro"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/bolas-criollas",
+   "motivo": "persona miembro (mil ataris por segundo [nuevo]); dossier#alta_persona_miembro"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/hilandera",
+   "motivo": "persona miembro (Jóvenes y Sexys [cat]); dossier#alta_persona_miembro"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/miguel-el-enano-gonzalez",
+   "motivo": "persona miembro (Caramelos de Cianuro [cat]); dossier#alta_persona_miembro"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/federico-jr",
+   "motivo": "persona miembro (Federico y Su Combo Latino [cat]; Magia Caribeña [fuera]); dossier#alta_persona_miembro"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/swan-durh",
+   "motivo": "persona miembro (UNDYING TRUTH [nuevo]; Weed420 [nuevo]); dossier#alta_persona_miembro"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/cloudy-2",
+   "motivo": "persona miembro (UNDYING TRUTH [nuevo]); dossier#alta_persona_miembro"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/sibilino",
+   "motivo": "persona miembro (3 Dueños [cat]; Vagos y Maleantes [cat]); dossier#alta_persona_miembro"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/coyote-dax",
+   "motivo": "persona miembro (Los Fantasmas del Caribe [cat]); dossier#alta_persona_miembro"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/isra",
+   "motivo": "persona miembro (Me Vs Murphy [cat]); dossier#alta_persona_miembro"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/spell-1",
+   "motivo": "persona miembro (Curse [nuevo]; Fire [nuevo]; Tormentor [fuera]); dossier#alta_persona_miembro"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/recordatorio",
+   "motivo": "persona miembro (Americania [cat]); dossier#alta_persona_miembro"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/iran-2",
+   "motivo": "persona miembro (Los Paranoias [cat]; The Zappe Cats [fuera]); dossier#alta_persona_miembro"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/gabo-xeart",
+   "motivo": "persona miembro (Weed420 [nuevo]); dossier#alta_persona_miembro"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/alonso-casual",
+   "motivo": "persona miembro (Guacamayo Terca [nuevo]); dossier#alta_persona_miembro"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/claudia-lizardo",
+   "motivo": "persona miembro (La Pequeña Revancha [nuevo]); dossier#alta_persona_miembro"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/monno-briceno",
+   "motivo": "persona miembro (Atlas [fuera]; Espíritu Animal [fuera]; Pasticho [fuera]; Sa); dossier#alta_persona_miembro"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/mau-montaner",
+   "motivo": "persona miembro (Mau y Ricky [cat]); dossier#alta_persona_miembro"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/ricky-montaner",
+   "motivo": "persona miembro (Mau y Ricky [cat]); dossier#alta_persona_miembro"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/jey-da-polemic",
+   "motivo": "persona miembro (Secuaces [nuevo]); dossier#alta_persona_miembro"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/maria-pura-imhof",
+   "motivo": "persona miembro (Pasaje Zing [fuera]; Sonica [cat]); dossier#alta_persona_miembro"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/coco-arocha",
+   "motivo": "persona miembro (Ravahil [nuevo]); dossier#alta_persona_miembro"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/mon-carrillo",
+   "motivo": "persona miembro (Mon Carrillo y Su Sexteto [nuevo]; Salsa Suprema [fuera]); dossier#alta_persona_miembro"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/eddie-hermida",
+   "motivo": "persona miembro (All Shall Perish [fuera]; Corvid-19 [fuera]; Gunmetal Grey [); dossier#alta_persona_miembro"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/beto-borjas",
+   "motivo": "persona miembro (Gran Coquivacoa [cat]); dossier#alta_persona_miembro"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/edson_velandia",
+   "motivo": "persona miembro (Cabuya [nuevo]; Velandia y la Tigra [nuevo]); dossier#alta_persona_miembro"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/puertoazul",
+   "motivo": "persona miembro (Paisaje Local [nuevo]); dossier#alta_persona_miembro"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/sr-presidente",
+   "motivo": "persona miembro (tlx [cat]); dossier#alta_persona_miembro"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/sergio-valentin",
+   "motivo": "persona miembro (Hippito y sus Chatarritas [fuera]; Porfi Jiménez y Su Orques); dossier#alta_persona_miembro"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/demarchi",
+   "motivo": "persona miembro (Clan Coral [nuevo]; Technicolor [nuevo]); dossier#alta_persona_miembro"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/enio-la-formula",
+   "motivo": "persona miembro (Tecupae [cat]); dossier#alta_persona_miembro"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/beet-acosta",
+   "motivo": "persona miembro (Caibo [nuevo]); dossier#alta_persona_miembro"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/billy-ocean",
+   "motivo": "persona miembro (Scorched Earth [nuevo]); dossier#alta_persona_miembro"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/aura-spei",
+   "motivo": "banda; formed 2017; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/mon-carrillo-y-su-sexteto",
+   "motivo": "banda; formed 1973; 2 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/a_l_o_",
+   "motivo": "banda; formed ?; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/priska-1",
+   "motivo": "banda; formed ?; 3 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/esos-cubos",
+   "motivo": "banda; formed 2017; 2 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/los-propios",
+   "motivo": "banda; formed 1983; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/caminant",
+   "motivo": "banda; formed ?; 2 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/sorority",
+   "motivo": "banda; formed 2010; 0 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/doctor-no",
+   "motivo": "banda; formed 2005; 0 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/accion_directa",
+   "motivo": "banda; formed 1988; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/xtension",
+   "motivo": "banda; formed ?; 2 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/frailes",
+   "motivo": "banda; formed ?; 2 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/kurikos-suin",
+   "motivo": "banda; formed ?; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/nino_nuclear_y_los_mutantes_de_saturno",
+   "motivo": "banda; formed 2011; 3 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/azzata-clips",
+   "motivo": "banda; formed 2014; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/canibal-monkeys",
+   "motivo": "banda; formed ?; 0 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/los-delorean",
+   "motivo": "banda; formed 2014; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/orquesta-la-recopilacion",
+   "motivo": "banda; formed ?; 4 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/dragon-blanco",
+   "motivo": "banda; formed 2015; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/ababajah",
+   "motivo": "banda; formed ?; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/ymtqdasai",
+   "motivo": "banda; formed 2024; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/caimanera",
+   "motivo": "banda; formed 2024; 2 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/wmf_f1",
+   "motivo": "banda; formed 1988; 3 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/mortus-stella",
+   "motivo": "banda; formed 2018; 4 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/eustace-1",
+   "motivo": "banda; formed ?; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/fakboi",
+   "motivo": "banda; formed 2022; 2 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/vision-real",
+   "motivo": "banda; formed 2010; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/asuka-en-el-fin-del-mundo",
+   "motivo": "banda; formed 2025; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/grupo_imagen",
+   "motivo": "banda; formed 1974; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/the_viridian_groove",
+   "motivo": "banda; formed ?; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/los-coveros",
+   "motivo": "banda; formed ?; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/wannamaker",
+   "motivo": "banda; formed 2007; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/pipo-y-sus-estrellas",
+   "motivo": "banda; formed ?; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/el-regano",
+   "motivo": "banda; formed ?; 2 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/los-dead",
+   "motivo": "banda; formed 2005; 8 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/sr-falla-de-origen",
+   "motivo": "banda; formed 2020; 3 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/los-zumo",
+   "motivo": "banda; formed 2007; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/rafa-y-sus-diamantes",
+   "motivo": "banda; formed ?; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/virtual-animal",
+   "motivo": "banda; formed ?; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/creatica",
+   "motivo": "banda; formed 2000; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/afrochill",
+   "motivo": "banda; formed 2018; 2 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/bucle-lunar",
+   "motivo": "banda; formed 2023; 6 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/insok",
+   "motivo": "banda; formed ?; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/holy-hands-1",
+   "motivo": "banda; formed 2014; 4 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/coral-falcon",
+   "motivo": "banda; formed 1963; 2 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/torrece",
+   "motivo": "banda; formed ?; 3 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/ninos-con-pistolas",
+   "motivo": "banda; formed 2016; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/sentimentals",
+   "motivo": "banda; formed 2023; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/polyman",
+   "motivo": "banda; formed 2014; 2 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/tripland",
+   "motivo": "banda; formed 2008; 2 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/musanostra",
+   "motivo": "banda; formed 2011; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/the_monroes_f3",
+   "motivo": "banda; formed ?; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/no-light-no-water",
+   "motivo": "banda; formed 2009; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/los_vanders",
+   "motivo": "banda; formed 2001; 2 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/colibri-1",
+   "motivo": "banda; formed 2015; 2 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/b612",
+   "motivo": "banda; formed ?; 0 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/pez-volador",
+   "motivo": "banda; formed 2014; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/merida-swing-boys",
+   "motivo": "banda; formed ?; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/π_xprnc",
+   "motivo": "banda; formed 2001; 2 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/bahtawi",
+   "motivo": "banda; formed 2011; 0 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/grupo-v",
+   "motivo": "banda; formed ?; 2 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/joudy",
+   "motivo": "banda; formed 2009; 4 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/ile-des-phoques",
+   "motivo": "banda; formed ?; 3 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/los-prisioneros",
+   "motivo": "banda; formed 1983; 64 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/cats-and-beloved-pets",
+   "motivo": "banda; formed ?; 8 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/mil-ataris-por-segundo",
+   "motivo": "banda; formed ?; 29 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/magnifilium",
+   "motivo": "banda; formed 2014; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/sendero-veneco",
+   "motivo": "banda; formed ?; 17 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/la-danta",
+   "motivo": "banda; formed ?; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/junko-furuta-1",
+   "motivo": "banda; formed ?; 2 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/porfi-jimenez-y-su-orquesta",
+   "motivo": "banda; formed 1963; 26 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/arawato",
+   "motivo": "banda; formed 2014; 6 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/la-sonora-caracas",
+   "motivo": "banda; formed ?; 3 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/musikautomatika",
+   "motivo": "banda; formed 1978; 2 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/colerico-espin",
+   "motivo": "banda; formed ?; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/la-pequena-revancha",
+   "motivo": "banda; formed 2012; 6 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/ahimsa-1",
+   "motivo": "banda; formed ?; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/pakalolo",
+   "motivo": "banda; formed 2015; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/la-maldita-infamia",
+   "motivo": "banda; formed 2000; 5 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/gran-radio-riviera",
+   "motivo": "banda; formed ?; 6 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/ray-perez-y-su-orquesta",
+   "motivo": "banda; formed ?; 7 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/la-critica",
+   "motivo": "banda; formed 1978; 6 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/nati-y-su-orquesta",
+   "motivo": "banda; formed 1981; 3 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/secuaces",
+   "motivo": "banda; formed 1997; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/le-cinema",
+   "motivo": "banda; formed 2016; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/van-der-dijs",
+   "motivo": "banda; formed 2024; 7 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/audiospray",
+   "motivo": "banda; formed 2011; 3 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/japanese-scarf",
+   "motivo": "banda; formed ?; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/los-cantores-del-tropico",
+   "motivo": "banda; formed 1933; 2 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/nzila-afrobeat-project",
+   "motivo": "banda; formed ?; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/alterkind",
+   "motivo": "banda; formed ?; 0 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/rotival",
+   "motivo": "banda; formed 2011; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/los-hermanos-naturales",
+   "motivo": "banda; formed 2004; 0 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/ensamble-acidito",
+   "motivo": "banda; formed 1998; 0 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/samadhi-1",
+   "motivo": "banda; formed ?; 0 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/senorita-cometa",
+   "motivo": "banda; formed ?; 0 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/stereolux",
+   "motivo": "banda; formed 2015; 0 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/guacamayo-terca",
+   "motivo": "banda; formed 2015; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/retrovyzor",
+   "motivo": "banda; formed 2013; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/kemawan",
+   "motivo": "banda; formed 2007; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/escritores-de-salem",
+   "motivo": "banda; formed 2015; 3 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/nueve-noventa",
+   "motivo": "banda; formed 2014; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/grupo-pepper",
+   "motivo": "banda; formed 2008; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/la-gran-banda-de-venezuela",
+   "motivo": "banda; formed 1985; 2 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/soires-naes",
+   "motivo": "banda; formed 2006; 3 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/todo-bien-todo-mal",
+   "motivo": "banda; formed 2022; 10 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/los-colores-2",
+   "motivo": "banda; formed 2011; 9 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/rumberos-del-callejon",
+   "motivo": "banda; formed 2006; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/uff",
+   "motivo": "banda; formed 1998; 6 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/lobo_de_mar",
+   "motivo": "banda; formed 2014; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/los-aventureros",
+   "motivo": "banda; formed 1957; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/los_juveniles",
+   "motivo": "banda; formed 1968; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/this-will-be-no-more",
+   "motivo": "banda; formed ?; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/i_saw_the_deep",
+   "motivo": "banda; formed 2010; 4 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/the-revoir",
+   "motivo": "banda; formed ?; 3 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/laps_around_the_sun",
+   "motivo": "banda; formed ?; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/homer-and-the-donts",
+   "motivo": "banda; formed 1965; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/raul-monsalve-y-los-forajidos",
+   "motivo": "banda; formed ?; 4 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/the_baby_factory",
+   "motivo": "banda; formed ?; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/uklao",
+   "motivo": "banda; formed 2014; 3 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/zoundcolector",
+   "motivo": "banda; formed ?; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/san-tome",
+   "motivo": "banda; formed 2014; 12 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/roboto-1",
+   "motivo": "banda; formed 2009; 2 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/orquesta-sans-souci",
+   "motivo": "banda; formed ?; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/la-super-orquesta-de-venezuela",
+   "motivo": "banda; formed ?; 2 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/franco-y-oscarcito",
+   "motivo": "banda; formed 2002; 3 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/principe-y-su-sexteto",
+   "motivo": "banda; formed 1967; 2 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/la-melodia-perfecta",
+   "motivo": "banda; formed 2013; 3 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/grupo-treo",
+   "motivo": "banda; formed 2009; 6 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/agrupacion-convenezuela",
+   "motivo": "banda; formed 1975; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/los-cadillacs",
+   "motivo": "banda; formed 2008; 9 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/nomaste",
+   "motivo": "banda; formed 2017; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/camargo-1",
+   "motivo": "banda; formed 2014; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/xtremauncion",
+   "motivo": "banda; formed 1994; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/ravahil",
+   "motivo": "banda; formed 2024; 6 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/skys-white-meditation",
+   "motivo": "banda; formed 1968; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/pulpo-1",
+   "motivo": "banda; formed ?; 5 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/tropic-zulia",
+   "motivo": "banda; formed ?; 2 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/guasinca-zuliana",
+   "motivo": "banda; formed 1984; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/la-murga-de-caracas",
+   "motivo": "banda; formed 1983; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/koonze-family",
+   "motivo": "banda; formed ?; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/unos-panas-ahi",
+   "motivo": "banda; formed 2000; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/milky-bros",
+   "motivo": "banda; formed ?; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/ignis_haereticum",
+   "motivo": "banda; formed 2007; 4 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/bastard-cruciatu",
+   "motivo": "banda; formed 2023; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/lord-thanatos",
+   "motivo": "banda; formed ?; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/fire-7",
+   "motivo": "banda; formed 2005; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/faster-2",
+   "motivo": "banda; formed 2024; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/curse-9",
+   "motivo": "banda; formed 2020; 2 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/inaeternum",
+   "motivo": "banda; formed 1992; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/dark-manthra",
+   "motivo": "banda; formed 1997; 4 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/ads-1",
+   "motivo": "banda; formed ?; 2 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/cabuya",
+   "motivo": "banda; formed 2000; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/francamente-ya-no-se",
+   "motivo": "banda; formed ?; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/auschwitz-4",
+   "motivo": "banda; formed 1988; 2 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/bonestorm-1",
+   "motivo": "banda; formed 2006; 5 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/rotten-spirit",
+   "motivo": "banda; formed 2016; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/i_m_r_i",
+   "motivo": "banda; formed 1987; 2 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/kathreptis",
+   "motivo": "banda; formed 2016; 2 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/los-embajadores-vallenatos",
+   "motivo": "banda; formed 1982; 6 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/hex-crow",
+   "motivo": "banda; formed ?; 4 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/hatred-2",
+   "motivo": "banda; formed 2005; 3 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/cataleptic-1",
+   "motivo": "banda; formed 1990; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/nuctemeron-1",
+   "motivo": "banda; formed 1990; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/las-avispas-africanas",
+   "motivo": "banda; formed 2014; 2 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/ainur_f1",
+   "motivo": "banda; formed 2005; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/kull-trigger",
+   "motivo": "banda; formed 2020; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/perpetual_f1",
+   "motivo": "banda; formed 2004; 2 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/sinner_serpent",
+   "motivo": "banda; formed 2005; 2 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/ztranger",
+   "motivo": "banda; formed ?; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/virgin_killer_f2",
+   "motivo": "banda; formed 2006; 2 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/supercuates",
+   "motivo": "banda; formed 2001; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/kroniker-1",
+   "motivo": "banda; formed 2025; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/la_manigua_f1",
+   "motivo": "banda; formed 2000; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/banista-lunar",
+   "motivo": "banda; formed 2017; 5 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/mothiis-dominium",
+   "motivo": "banda; formed ?; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/borroza",
+   "motivo": "banda; formed 2000; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/eden-19",
+   "motivo": "banda; formed ?; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/caos-7",
+   "motivo": "banda; formed 1993; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/hola-amiga-como-estas",
+   "motivo": "banda; formed ?; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/asteriom",
+   "motivo": "banda; formed 2025; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/menos-dias-soleados",
+   "motivo": "banda; formed 2023; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/velandia-y-la-tigra",
+   "motivo": "banda; formed 2007; 7 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/supremacia_satanica",
+   "motivo": "banda; formed 2006; 5 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/last_tyrant",
+   "motivo": "banda; formed 2002; 4 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/old_betrayer",
+   "motivo": "banda; formed 2004; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/nostos-2",
+   "motivo": "banda; formed 2023; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/apotheose",
+   "motivo": "banda; formed ?; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/morto_kacho",
+   "motivo": "banda; formed 2005; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/pearl-ash",
+   "motivo": "banda; formed 1969; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/orquesta_concordia",
+   "motivo": "banda; formed 1927; 4 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/mario-y-sus-diamantes",
+   "motivo": "banda; formed 1961; 7 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/los-satelites",
+   "motivo": "banda; formed 1967; 8 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/los-universales-de-maracaibo",
+   "motivo": "banda; formed ?; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/la-gallera-social-club",
+   "motivo": "banda; formed 2011; 4 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/tragavenao-orquesta-afrobeat",
+   "motivo": "banda; formed 2010; 2 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/orquesta-la-combinacion",
+   "motivo": "banda; formed 1976; 3 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/paisaje-local",
+   "motivo": "banda; formed 2016; 2 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/super-combo-los-tropicales",
+   "motivo": "banda; formed ?; 6 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/clan-coral",
+   "motivo": "banda; formed ?; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/los-masters",
+   "motivo": "banda; formed ?; 23 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/caibo",
+   "motivo": "banda; formed 2005; 2 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/los-casinos",
+   "motivo": "banda; formed 1965; 4 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/gaiteros-de-pillopo",
+   "motivo": "banda; formed ?; 3 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/el-club-de-amigos-los-mejores-del-amor",
+   "motivo": "banda; formed 2019; 5 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/tazajo_tamboo",
+   "motivo": "banda; formed ?; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/technicolor-1",
+   "motivo": "banda; formed 2014; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/symbiotic_faith",
+   "motivo": "banda; formed 2006; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/bacanos",
+   "motivo": "banda; formed 1998; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/vhg",
+   "motivo": "banda; formed 1989; 2 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/montesanto",
+   "motivo": "banda; formed 2015; 3 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/grupo-carangano",
+   "motivo": "banda; formed ?; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/digital_decay",
+   "motivo": "banda; formed 2003; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/conjunto-saladillo",
+   "motivo": "banda; formed 1962; 4 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/chimo-psicodelico",
+   "motivo": "banda; formed 2015; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/siparia-deltones",
+   "motivo": "banda; formed 1964; 1 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "artist",
+   "rym_href": "/artist/scorched-earth-6",
+   "motivo": "banda; formed ?; 2 discos; dossier#alta_artista_banda"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/…al-cruzar-la-calle/…al-cruzar-la-calle",
+   "artist_id": 1525,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2012"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/100_grados/clima_de_extasis",
+   "artist_id": 1553,
+   "motivo": "ledger 222 (fuera de catálogo); Album 1992"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/100_grados/viendo_ruidos",
+   "artist_id": 1553,
+   "motivo": "ledger 222 (fuera de catálogo); Album 1997"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/187/ciudad-del-terror",
+   "artist_id": 2625,
+   "motivo": "ledger 222 (fuera de catálogo); Single "
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/187/la-casa-encendida",
+   "artist_id": 2625,
+   "motivo": "ledger 222 (fuera de catálogo); Single "
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/187/lirica-plastica",
+   "artist_id": 2625,
+   "motivo": "ledger 222 (fuera de catálogo); Single "
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/187/what-cha-doin",
+   "artist_id": 2625,
+   "motivo": "ledger 222 (fuera de catálogo); Single "
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/ep/7_balazos/7_balazos",
+   "artist_id": 1010,
+   "motivo": "ledger 222 (fuera de catálogo); EP 2003"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/ep/a-raiz-de-nuevas-causas/vol-iv",
+   "artist_id": 446,
+   "motivo": "ledger 222 (fuera de catálogo); EP 2023"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/a-raiz-de-nuevas-causas/supongo-que-es-normal",
+   "artist_id": 446,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2024"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/impery-oculto-sur-agonia-infernal/trilogia-oscura-la-peste-por-doquier",
+   "artist_id": 3104,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2015"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/alban-arthuan/los-peligro-de-jugar-con-una-caja-de-fosforo",
+   "artist_id": 38,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2005"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/ep/alce/de_viaje",
+   "artist_id": 1677,
+   "motivo": "ledger 222 (fuera de catálogo); EP 2014"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/ananta/night-and-daydream",
+   "artist_id": 42,
+   "motivo": "ledger 222 (fuera de catálogo); Album 1978"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/apache_f3/original_combination",
+   "artist_id": 1681,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2016"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/apache/ahora-o-nunca",
+   "artist_id": 1681,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2017"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/apache/apache-1",
+   "artist_id": 1681,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2020"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/apache/ocho",
+   "artist_id": 1681,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2021"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/apache/territorio-apache",
+   "artist_id": 1681,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2023"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/apache/territorio-apache-vol_2-champion-sound",
+   "artist_id": 1681,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2024"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/apache-reke/apuesta-al-negro",
+   "artist_id": 1681,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2025"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/mixtape/apache/sin-afina-mucho",
+   "artist_id": 1681,
+   "motivo": "ledger 222 (fuera de catálogo); Mixtape 2009"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/mixtape/apache-canserbero/apa-y-can",
+   "artist_id": 1681,
+   "motivo": "ledger 222 (fuera de catálogo); Mixtape 2013"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/ep/apache/songo",
+   "artist_id": 1681,
+   "motivo": "ledger 222 (fuera de catálogo); EP 2023"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/apache-canserbero/stop",
+   "artist_id": 1681,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2016"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/apache/el-campeon",
+   "artist_id": 1681,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2017"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/apache/biografia",
+   "artist_id": 1681,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2018"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/apache/quimica-sexual",
+   "artist_id": 1681,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2018"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/vargas-apache/la-energia",
+   "artist_id": 1681,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2019"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/isra-apache/oveja-negra",
+   "artist_id": 1681,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2020"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/motherflowers-apache/quien-lo-diria",
+   "artist_id": 1681,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2023"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/willie-deville-apache-ergo-pro/amilcar",
+   "artist_id": 1681,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2024"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/pedro-castillo/algo-personal",
+   "artist_id": 577,
+   "motivo": "ledger 222 (fuera de catálogo); Album 1994"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/pedro-castillo/dibujando-historias",
+   "artist_id": 577,
+   "motivo": "ledger 222 (fuera de catálogo); Album 1995"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/pedro-castillo/volver-al-futuro",
+   "artist_id": 577,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2003"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/tsee-mud-bacro-lsd/tsee-mud-bacro-lsd",
+   "artist_id": 2250,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2012"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/ep/bioshaft/acoustic-live-sessions",
+   "artist_id": 1684,
+   "motivo": "ledger 222 (fuera de catálogo); EP 2013"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/bioshaft/no-somos-libres-fiesta-animal-maxi-single",
+   "artist_id": 1684,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2014"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/bioshaft/repeleme-sr-desgracia-maxi-single",
+   "artist_id": 1684,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2014"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/bostas-brain/atleta-del-sonido",
+   "artist_id": 1683,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2016"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/desorden-publico-c4-trio/pa-fuera",
+   "artist_id": 53,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2016"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/luis-enrique-c4-trio/tiempo-al-tiempo",
+   "artist_id": 53,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2019"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/hamilton-de-holanda-c4-trio/tembla",
+   "artist_id": 53,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2024"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/luis-enrique-c4-trio/aguacero",
+   "artist_id": 53,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2024"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/movida-acustica-urbana/en-vivo",
+   "artist_id": 53,
+   "motivo": "ledger 222 (fuera de catálogo); Live Album 2009"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/captan-obvio/bedroom-covers-and-bathroom-rarities",
+   "artist_id": 1096,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2008"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/captan-obvio/die-captan-obvio-die",
+   "artist_id": 1096,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2009"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/captan-obvio/la-mala-hierba-nunca-muere",
+   "artist_id": 1096,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2012"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/ep/rotator-krumble-cardopusher/trash-n-ready-tour-ep",
+   "artist_id": 2733,
+   "motivo": "ledger 222 (fuera de catálogo); EP 2006"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/ep/rotator-cardopusher/jump-da-fuck-up-fighters-unite",
+   "artist_id": 2733,
+   "motivo": "ledger 222 (fuera de catálogo); EP 2008"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/ep/cardopusher/mutant-dubstep-vol-2",
+   "artist_id": 2733,
+   "motivo": "ledger 222 (fuera de catálogo); EP 2008"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/ep/cardopusher-nehuen/split-02",
+   "artist_id": 2733,
+   "motivo": "ledger 222 (fuera de catálogo); EP 2014"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/ep/cardopusher-nehuen/split-03",
+   "artist_id": 2733,
+   "motivo": "ledger 222 (fuera de catálogo); EP 2015"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/ep/cardopusher/zgemi",
+   "artist_id": 2733,
+   "motivo": "ledger 222 (fuera de catálogo); EP 2016"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/ep/bloody-mary-cardopusher/conformity-kills-ep",
+   "artist_id": 2733,
+   "motivo": "ledger 222 (fuera de catálogo); EP 2020"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/ep/cardopusher/psyops-part-two",
+   "artist_id": 2733,
+   "motivo": "ledger 222 (fuera de catálogo); EP 2020"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/cardopusher/bring-da-fire-caffeine-rich-kola-nut",
+   "artist_id": 2733,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2005"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/quarta330-cardopusher/homeless-quarta-330-rmx-sabacco",
+   "artist_id": 2733,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2008"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/djmix/cardopusher/xlr8r-256",
+   "artist_id": 2733,
+   "motivo": "ledger 222 (fuera de catálogo); DJ Mix 2012"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/djmix/cardopusher/tsugi-podcast-307",
+   "artist_id": 2733,
+   "motivo": "ledger 222 (fuera de catálogo); DJ Mix 2013"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/djmix/cardopusher/in-session",
+   "artist_id": 2733,
+   "motivo": "ledger 222 (fuera de catálogo); DJ Mix 2015"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/djmix/cardopusher/lyo-122",
+   "artist_id": 2733,
+   "motivo": "ledger 222 (fuera de catálogo); DJ Mix 2019"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/djmix/cardopusher/dame-music-mix-series-002",
+   "artist_id": 2733,
+   "motivo": "ledger 222 (fuera de catálogo); DJ Mix 2020"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/djmix/cardopusher/the-forgotten-ccxi",
+   "artist_id": 2733,
+   "motivo": "ledger 222 (fuera de catálogo); DJ Mix 2020"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/djmix/cardopusher/fist-mix-17",
+   "artist_id": 2733,
+   "motivo": "ledger 222 (fuera de catálogo); DJ Mix 2021"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/djmix/cardopusher/intercell_049",
+   "artist_id": 2733,
+   "motivo": "ledger 222 (fuera de catálogo); DJ Mix 2022"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/djmix/cardopusher-safety-trance/boiler-room-caracas",
+   "artist_id": 2733,
+   "motivo": "ledger 222 (fuera de catálogo); DJ Mix 2024"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/carlos-angola/nosotros-celebramos-los-motivos-ya-vendran",
+   "artist_id": 1628,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2017"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/carlos-angola/historias-del-terror-cronologia-acustica-de-un-adios-sin-ademan",
+   "artist_id": 1628,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2019"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/chunktrade/demo",
+   "artist_id": 2900,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2003"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/cuarto-poder/tamos-bien",
+   "artist_id": 1905,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2005"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/cuarto_poder/4x4to",
+   "artist_id": 1905,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2013"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/mixtape/apache/sin-afina-mucho",
+   "artist_id": 1905,
+   "motivo": "ledger 222 (fuera de catálogo); Mixtape 2009"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/apache/afinando",
+   "artist_id": 1905,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2010"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/deras/maria",
+   "artist_id": 2057,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2015"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/dandy-leon/todo-es-bello",
+   "artist_id": 2055,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2016"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/danto/danto",
+   "artist_id": 2140,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2003"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/ep/desinformados/playa-nudista",
+   "artist_id": 2059,
+   "motivo": "ledger 222 (fuera de catálogo); EP 2012"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/desinformados/lago-sobre-el-puente",
+   "artist_id": 2059,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2015"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/dimension-latina-76/salsa-brava",
+   "artist_id": 270,
+   "motivo": "ledger 222 (fuera de catálogo); Album 1975"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/dimension-latina-77/internacional",
+   "artist_id": 270,
+   "motivo": "ledger 222 (fuera de catálogo); Album 1976"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/oscar-de-leon-vs-dimension-latina/confrontacion-de-salsa",
+   "artist_id": 270,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2007"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/dimension-latina/paranpanpan-el-mala-suerte",
+   "artist_id": 270,
+   "motivo": "ledger 222 (fuera de catálogo); Single 1976"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/comp/dimension-latina-billos-caracas-boys/dimension-vs-billo",
+   "artist_id": 270,
+   "motivo": "ledger 222 (fuera de catálogo); Compilation 1975"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/comp/billos-caracas-boys-dimension-latina/billo-vs-dimension",
+   "artist_id": 270,
+   "motivo": "ledger 222 (fuera de catálogo); Compilation 1976"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/comp/dimension-latina-billos-caracas-boys/billos-vs-dimension-latina",
+   "artist_id": 270,
+   "motivo": "ledger 222 (fuera de catálogo); Compilation 1977"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/dolli/un_amigo_de_un_amigo_que_no_soy_yo",
+   "artist_id": 1437,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2012"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/dolli/coloreado",
+   "artist_id": 1437,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2016"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/ep/dolli/en_la_selva_de_bambu",
+   "artist_id": 1437,
+   "motivo": "ledger 222 (fuera de catálogo); EP 2011"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/ep/dolli/robandome_el_picnic",
+   "artist_id": 1437,
+   "motivo": "ledger 222 (fuera de catálogo); EP 2011"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/ep/dolli/colorado",
+   "artist_id": 1437,
+   "motivo": "ledger 222 (fuera de catálogo); EP 2014"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/ep/dolli/perricola",
+   "artist_id": 1437,
+   "motivo": "ledger 222 (fuera de catálogo); EP 2019"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/el-globo-oscuro/entre-el-signo-y-la-calma",
+   "artist_id": 911,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2021"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/el-globo-oscuro/villiers-de-lisle-adam",
+   "artist_id": 911,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2022"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/ep/el-globo-oscuro/non-omnis-moriar-ep",
+   "artist_id": 911,
+   "motivo": "ledger 222 (fuera de catálogo); EP 2016"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/ep/el-globo-oscuro/la-elocuencia-de-los-fantasmas",
+   "artist_id": 911,
+   "motivo": "ledger 222 (fuera de catálogo); EP 2020"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/el-viaje-de-los-antiguos/capitulo-1",
+   "artist_id": 551,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2018"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/el-viaje-de-los-antiguos/cinco-almas",
+   "artist_id": 551,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2021"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/ep/elaine/desnuditos_ep",
+   "artist_id": 1482,
+   "motivo": "ledger 222 (fuera de catálogo); EP 2009"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/adrenalina-caribe-evio-di-marzo/evio-di-marzo-adrenalina-caribe",
+   "artist_id": 2677,
+   "motivo": "ledger 222 (fuera de catálogo); Album 1987"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/evio-di-marzo/evio-di-marzo-adrenalina-caribe",
+   "artist_id": 2677,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2025"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/frank-moron/manana",
+   "artist_id": 1947,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2020"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/furia-de-buzo-ciego/_por-que-no-me-escribes",
+   "artist_id": 1080,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2004"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/rodrigo-solo/tonada-para-simon",
+   "artist_id": 109,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2015"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/rodrigo-solo/no-estas-solo",
+   "artist_id": 109,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2015"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/henrique-lazo/latino-americano",
+   "artist_id": 111,
+   "motivo": "ledger 222 (fuera de catálogo); Single 1973"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/ep/indigo/indigo",
+   "artist_id": 1320,
+   "motivo": "ledger 222 (fuera de catálogo); EP 2017"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/jose-y-el-toro/retrato",
+   "artist_id": 2061,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2015"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/jose-y-el-toro/exitos-melodramaticos-vol-1",
+   "artist_id": 2061,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2021"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/jose-y-el-toro/aunque-esto-se-acabe",
+   "artist_id": 2061,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2026"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/ep/jose-y-el-toro/la-vida-lenta",
+   "artist_id": 2061,
+   "motivo": "ledger 222 (fuera de catálogo); EP 2024"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/jose-y-el-toro/de-hierro",
+   "artist_id": 2061,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2019"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/jose-y-el-toro-el-arcas/reloj-ingrato",
+   "artist_id": 2061,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2022"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/okills-jose-y-el-toro/viejitos",
+   "artist_id": 2061,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2024"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/motherflowers-jose-y-el-toro/infierno-favorito",
+   "artist_id": 2061,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2025"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/ep/jovenes-y-sexys/bruno-ep",
+   "artist_id": 1467,
+   "motivo": "ledger 222 (fuera de catálogo); EP 2008"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/ep/jovenes-y-sexys/bruno-remixed",
+   "artist_id": 1467,
+   "motivo": "ledger 222 (fuera de catálogo); EP 2010"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/juan_peyote/juan_peyote",
+   "artist_id": 1174,
+   "motivo": "ledger 222 (fuera de catálogo); Album 1997"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/ep/juan_peyote/juan_peyote",
+   "artist_id": 1174,
+   "motivo": "ledger 222 (fuera de catálogo); EP 1995"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/judy_buendia_y_los_impostores/la_cantante_calza_37_",
+   "artist_id": 1014,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2011"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/ep/kungfu-club/3001",
+   "artist_id": 2052,
+   "motivo": "ledger 222 (fuera de catálogo); EP 2016"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/la-pagana-trinidad/de-donde-vengo",
+   "artist_id": 2058,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2020"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/la-pagana-trinidad/de-donde-vengo",
+   "artist_id": 2058,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2016"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/la-puta-electrica/demos-1994-2007",
+   "artist_id": 138,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2007"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/la-puta-electrica/veneno",
+   "artist_id": 138,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2026"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/lado-b/rock-n-roll-show-vol-i",
+   "artist_id": 1025,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2009"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/lebronch/la-fogatina-magica",
+   "artist_id": 147,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2018"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/lebronch/fire",
+   "artist_id": 147,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2015"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/lebronch/crazy-glue",
+   "artist_id": 147,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2017"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/lebronch/music-animal",
+   "artist_id": 147,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2024"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/legado/bazar",
+   "artist_id": 1041,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2022"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/legado/mirame",
+   "artist_id": 1041,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2023"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/legado/luces-rojas",
+   "artist_id": 1041,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2023"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/lepster/danko-sur-real-acto-i",
+   "artist_id": 698,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2019"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/lepster/danko-sur-real-acto-ii",
+   "artist_id": 698,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2020"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/limpiacabezales/asi-paso-en-estocolmo",
+   "artist_id": 1748,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2014"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/limpiacabezales/escribe-tu-nombre",
+   "artist_id": 1748,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2019"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/los_007/soy_un_hombre_feliz___la_flor",
+   "artist_id": 1479,
+   "motivo": "ledger 222 (fuera de catálogo); Single 1970"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/los-confleis/tu-ne-cede-malis",
+   "artist_id": 1579,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2017"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/los-humanoides/xyzt",
+   "artist_id": 534,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2020"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/los-humanoides/moogafonique",
+   "artist_id": 534,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2008"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/los-j/no-nos-j-mas",
+   "artist_id": 2135,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2015"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/ep/los_j/no_vas_a_caer",
+   "artist_id": 2135,
+   "motivo": "ledger 222 (fuera de catálogo); EP 2014"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/los-j/malandro",
+   "artist_id": 2135,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2015"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/impery-somdark-velork-m_c_c-ghrieving/cantus-maleficorum-bestiae",
+   "artist_id": 3112,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2020"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/majarete-sound-machine/afrodisiaco",
+   "artist_id": 163,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2010"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/majarete-sound-machine/real-organico-y-de-baile",
+   "artist_id": 163,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2015"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/majarete-sound-machine/esta-noche",
+   "artist_id": 163,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2020"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/majarete-sound-machine-diveana/me-falta-todo",
+   "artist_id": 163,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2020"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/ep/makara/makara-1",
+   "artist_id": 708,
+   "motivo": "ledger 222 (fuera de catálogo); EP 2011"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/me-vs-murphy/_justsaying",
+   "artist_id": 1480,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2012"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/me-vs-murphy/786",
+   "artist_id": 1480,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2026"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/me-vs-murphy/valentines",
+   "artist_id": 1480,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2026"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/ep/mermelada-maker/mermelada-maker",
+   "artist_id": 1124,
+   "motivo": "ledger 222 (fuera de catálogo); EP 2025"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/metrozubdivision/the_black_album",
+   "artist_id": 174,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2000"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/metrozubdivision/another-self",
+   "artist_id": 174,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2023"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/metrozubdivision/the-butcher",
+   "artist_id": 174,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2023"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/metrozubdivision/echoes",
+   "artist_id": 174,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2023"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/miguel-angel-noya/angeles-enviados",
+   "artist_id": 2794,
+   "motivo": "ledger 222 (fuera de catálogo); Album 1990"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/noya-godwin-jurjendal/samliku",
+   "artist_id": 2794,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2019"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/miguel-noya-robert-jurjendal/the-power-of-distance",
+   "artist_id": 2794,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2019"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/miguel-noya/infinite-halls",
+   "artist_id": 2794,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2023"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/miguel-noya/biophony-life-voices",
+   "artist_id": 2794,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2023"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/miguel-noya/aiqc",
+   "artist_id": 2794,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2024"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/miguel-noya/biofonía-ii-voces-de-la-tierra",
+   "artist_id": 2794,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2025"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/ep/sofia-insomnia-miguel-noya/remixes-bizarros",
+   "artist_id": 2794,
+   "motivo": "ledger 222 (fuera de catálogo); EP 2014"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/djmix/miguel-noya/a-week-of-sundays",
+   "artist_id": 2794,
+   "motivo": "ledger 222 (fuera de catálogo); DJ Mix 2020"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/ep/misantropia_f1/against_the_world_without_toilet_paper",
+   "artist_id": 1763,
+   "motivo": "ledger 222 (fuera de catálogo); EP 2008"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/motorfunk/escape",
+   "artist_id": 426,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2024"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/movida-acustica-urbana/en-vivo",
+   "artist_id": 176,
+   "motivo": "ledger 222 (fuera de catálogo); Live Album 2009"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/ep/nomeolvides/nomeolvides",
+   "artist_id": 1506,
+   "motivo": "ledger 222 (fuera de catálogo); EP 2007"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/novo-color/novo-color-vivo-en-vivo-centro-cultural-chacao-2015",
+   "artist_id": 2054,
+   "motivo": "ledger 222 (fuera de catálogo); Live Album 2015"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/ep/novo-color/novo-color-vivo-en-vivo",
+   "artist_id": 2054,
+   "motivo": "ledger 222 (fuera de catálogo); EP 2015"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/ep/novo-color/anos-salvajes",
+   "artist_id": 2054,
+   "motivo": "ledger 222 (fuera de catálogo); EP 2016"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/orquesta-sinfonica-de-venezuela/musica-venezolana-de-concierto",
+   "artist_id": 2944,
+   "motivo": "ledger 222 (fuera de catálogo); Album 1978"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/orquesta-sinfonica-de-venezuela-jan-wagner/santa-cruz-de-pacairigua-el-rio-de-las-siete-estrellas-avilena-suite",
+   "artist_id": 2944,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2012"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/orquesta-sinfonica-de-venezuela-theodore-kuchar/latin-american-classics",
+   "artist_id": 2944,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2012"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/orquesta-sinfonica-de-venezuela-sergiu-celibidache-albert-ferber/piano-concerto-no-3-piano-concerto-no-2",
+   "artist_id": 2944,
+   "motivo": "ledger 222 (fuera de catálogo); Live Album 2014"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/comp/wilhelm-furtwangler-wiener-philharmoniker-berliner-philharmoniker-orquesta-sinfonica-de-venezuela-orquesta-estable-del-teatro-colon/symphonies-4-9",
+   "artist_id": 2944,
+   "motivo": "ledger 222 (fuera de catálogo); Compilation 2014"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/pablo-schneider/pablo-schneider-y-su-mundo-insttrumental",
+   "artist_id": 2243,
+   "motivo": "ledger 222 (fuera de catálogo); Album 1975"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/pablo-schneider/musica-original-de-la-pelicula-sobre-la-hierba-virgen",
+   "artist_id": 2243,
+   "motivo": "ledger 222 (fuera de catálogo); Album 1976"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/para-llevar/lo-que-nos-toco-vivir",
+   "artist_id": 1351,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2014"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/para-llevar/adorado",
+   "artist_id": 1351,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2023"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/para-llevar/al-final",
+   "artist_id": 1351,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2020"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/pharmacy/the-frozen-colours-of-the-morning-limbo",
+   "artist_id": 196,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2013"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/ep/pharmacy/lo-fi-ph-1",
+   "artist_id": 196,
+   "motivo": "ledger 222 (fuera de catálogo); EP 2016"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/primera-edicion/1986",
+   "artist_id": 1172,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2011"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/ep/quincalla/funicular-liminal",
+   "artist_id": 2056,
+   "motivo": "ledger 222 (fuera de catálogo); EP 2015"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/regurgitorso/imagina",
+   "artist_id": 3072,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2022"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/retrovertigo/idejala-esta-triste",
+   "artist_id": 1704,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2003"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/revolver-suicida/revolver-suicida",
+   "artist_id": 1608,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2016"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/rodrigo-solo/ego",
+   "artist_id": 214,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2024"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/rodrigo-solo/alma-perpetua",
+   "artist_id": 214,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2014"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/rodrigo-solo/tonada-para-simon",
+   "artist_id": 214,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2015"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/rodrigo-solo/tal-vez-no-se-hunda-el-barco",
+   "artist_id": 214,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2015"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/rodrigo-solo/no-hay-duda",
+   "artist_id": 214,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2016"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/rodrigo-solo/roma",
+   "artist_id": 214,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2018"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/rodrigo-solo/valle-de-balas-ii",
+   "artist_id": 214,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2019"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/jxv-rodrigo-solo/just-fine",
+   "artist_id": 214,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2019"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/sangre/conserva-el-sueno-necesito-valor",
+   "artist_id": 9,
+   "motivo": "ledger 222 (fuera de catálogo); Single 1971"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/schizophrenic-torture/omniversal-infection-of-assimilated-parasites",
+   "artist_id": 362,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2018"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/ep/sofia-insomnia-miguel-noya/remixes-bizarros",
+   "artist_id": 227,
+   "motivo": "ledger 222 (fuera de catálogo); EP 2014"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/sofia-insomnia/arde-ciudad",
+   "artist_id": 227,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2020"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/southaven/belcefuzz",
+   "artist_id": 616,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2018"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/ep/southaven/la-corte-del-fuzz",
+   "artist_id": 616,
+   "motivo": "ledger 222 (fuera de catálogo); EP 2017"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/subliminal-code/karma-in-mortem",
+   "artist_id": 668,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2014"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/subliminal-code/the-cancer-of-the-world-is-human-beings",
+   "artist_id": 668,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2021"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/ep/subliminal-code/soldier-of-hell",
+   "artist_id": 668,
+   "motivo": "ledger 222 (fuera de catálogo); EP 2011"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/ep/subliminal-code/soldier-of-hell-reborn",
+   "artist_id": 668,
+   "motivo": "ledger 222 (fuera de catálogo); EP 2016"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/subliminal-code/subliminal-remix",
+   "artist_id": 668,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2011"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/subliminal-code/another-day",
+   "artist_id": 668,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2014"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/subliminal-code/behind-the-mask",
+   "artist_id": 668,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2026"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/tan-frio-el-verano/primavera",
+   "artist_id": 1770,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2012"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/tan_frio_el_verano/otono",
+   "artist_id": 1770,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2015"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/tarot/grupo-tarot",
+   "artist_id": 239,
+   "motivo": "ledger 222 (fuera de catálogo); Album 1984"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/the-pelaballs/the-pelaballs",
+   "artist_id": 1710,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2010"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/the-pelaballs/m_m_x_v",
+   "artist_id": 1710,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2017"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/ep/tlx/medios-de-transporte",
+   "artist_id": 238,
+   "motivo": "ledger 222 (fuera de catálogo); EP 2012"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/tlx/vicky",
+   "artist_id": 238,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2013"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/tlx/tu-voz",
+   "artist_id": 238,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2014"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/tlx/cuando-todo-se-apague",
+   "artist_id": 238,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2023"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/tlx/casa-serizawa",
+   "artist_id": 238,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2023"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/tlx/platino",
+   "artist_id": 238,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2024"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/todos-odiamos-todo/live-in-the-teatro-de-mierda",
+   "artist_id": 1641,
+   "motivo": "ledger 222 (fuera de catálogo); Live Album 2016"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/todosantos/hoy-me-faltas-tu",
+   "artist_id": 248,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2021"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/trampas/arcoiris___comienzo",
+   "artist_id": 1356,
+   "motivo": "ledger 222 (fuera de catálogo); Single 1974"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/triangular-ascension-and-abiotha/e_l_o_h_i_m",
+   "artist_id": 795,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2012"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/triangular-ascension/the-chronos-anomaly",
+   "artist_id": 795,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2013"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/simulacra-triangular-ascension/ashes-of-the-world-empire",
+   "artist_id": 795,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2021"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/trujillo/daltonic-now",
+   "artist_id": 2726,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2012"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/djmix/trujillo/mix-of-the-week-198-vacation-day",
+   "artist_id": 2726,
+   "motivo": "ledger 222 (fuera de catálogo); DJ Mix 2017"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/djmix/trujillo/trushmix-119",
+   "artist_id": 2726,
+   "motivo": "ledger 222 (fuera de catálogo); DJ Mix 2018"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/djmix/charlie-bones-trujillo/the-do-you-breakfast-show",
+   "artist_id": 2726,
+   "motivo": "ledger 222 (fuera de catálogo); DJ Mix 2019"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/djmix/trujillo/b_p_t-radio-050",
+   "artist_id": 2726,
+   "motivo": "ledger 222 (fuera de catálogo); DJ Mix 2022"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/djmix/trujillo/lyo-261",
+   "artist_id": 2726,
+   "motivo": "ledger 222 (fuera de catálogo); DJ Mix 2025"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/tsee-mud-bacro-lsd/tsee-mud-bacro-lsd",
+   "artist_id": 2249,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2012"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/tsee-mud/amandote-esta-dios-mundo",
+   "artist_id": 2249,
+   "motivo": "ledger 222 (fuera de catálogo); Single 1972"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/tukuca-zakayama/hecatombe",
+   "artist_id": 492,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2023"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/ep/tukuca-zakayama/nacimiento-de-un-grito-frustrado",
+   "artist_id": 492,
+   "motivo": "ledger 222 (fuera de catálogo); EP 2016"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/tukuca-zakayama/masacre-en-barlovento",
+   "artist_id": 492,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2022"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/un-dos-tres-y-fuera/no-hay-que-contar-mucho",
+   "artist_id": 2244,
+   "motivo": "ledger 222 (fuera de catálogo); Album 1975"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/un-dos-tres-y-fuera/sencillamente",
+   "artist_id": 2244,
+   "motivo": "ledger 222 (fuera de catálogo); Album 1978"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/un-dos-tres-y-fuera/nathalie-oh-machu-picchu",
+   "artist_id": 2244,
+   "motivo": "ledger 222 (fuera de catálogo); Single 1976"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/vargas/ciudad-mareada",
+   "artist_id": 1715,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2014"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/vargas/radiocassette",
+   "artist_id": 1715,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2016"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/vargas/canciones-perdidas-antes-de-volver-a-nacer",
+   "artist_id": 1715,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2020"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/vargas/el-primer-viaje-del-mago",
+   "artist_id": 1715,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2022"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/vargas/nada-que-perder",
+   "artist_id": 1715,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2024"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/vargas/nada-que-perder-2",
+   "artist_id": 1715,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2025"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/vargas/honesto",
+   "artist_id": 1715,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2015"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/vargas/durazno",
+   "artist_id": 1715,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2018"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/vargas/_parentesis-sesiones-acusticas-vol-1",
+   "artist_id": 1715,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2019"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/vargas/sofia",
+   "artist_id": 1715,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2019"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/vargas-apache/la-energia",
+   "artist_id": 1715,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2019"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/vargas/el-escape-de-la-torre",
+   "artist_id": 1715,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2019"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/vargas/verte-partir",
+   "artist_id": 1715,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2019"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/vargas/parentesis-vol_2-descanso-en-la-torre",
+   "artist_id": 1715,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2020"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/vargas/rafael-el-morrocoy-perdido",
+   "artist_id": 1715,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2021"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/vargas/el-silencio-del-espejo",
+   "artist_id": 1715,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2023"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/vargas/el-pacto-de-richie",
+   "artist_id": 1715,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2023"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/vargas-mila-farras/nunca-es-suficiente",
+   "artist_id": 1715,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2023"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/vargas/era-inevitable",
+   "artist_id": 1715,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2024"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/vargas/te-vi-volar",
+   "artist_id": 1715,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2024"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/vargas/gorilla-business",
+   "artist_id": 1715,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2024"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/vargas/gorilla-business-en-vivo-desde-recoveco-records",
+   "artist_id": 1715,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2024"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/vargas/el-ultimo-disaster-en-caracas-en-vivo",
+   "artist_id": 1715,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2025"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/vargas/recetas-para-duelos-necesarios",
+   "artist_id": 1715,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2025"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/vargas/nota-negra",
+   "artist_id": 1715,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2025"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/vargas-boston-rex-willbert-alvarez/nada-que-perder",
+   "artist_id": 1715,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2025"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/vargas/ahora-es-distinto",
+   "artist_id": 1715,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2026"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/vargas/mirada-de-jazmin",
+   "artist_id": 1715,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2026"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/vel-france/memorias-al-mar",
+   "artist_id": 1318,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2017"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/versed/visiones",
+   "artist_id": 2053,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2015"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/versed/el-peso-del-tiempo",
+   "artist_id": 2053,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2014"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/versed/prisma",
+   "artist_id": 2053,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2016"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/versed/moire",
+   "artist_id": 2053,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2018"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/ep/vitriol_f6/dead_by_vitriol",
+   "artist_id": 973,
+   "motivo": "ledger 222 (fuera de catálogo); EP 2008"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/vitriol/ep-2009",
+   "artist_id": 973,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2009"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/zeta/las-nuevas-tendencias-apendice-a-aurum",
+   "artist_id": 459,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2012"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/zeta/las-nuevas-tendencias-apendice-b-sulphur",
+   "artist_id": 459,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2012"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/zeta/en-medio-de-la-tormenta",
+   "artist_id": 459,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2014"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/zeta/mochima",
+   "artist_id": 459,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2019"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/zeta-and-the-abajo-cadenas-orchestra/todo-bailarlo",
+   "artist_id": 459,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2022"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/zeta/vii-magia-infinita-2024",
+   "artist_id": 459,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2024"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/zeta/was-it-medicine-to-you",
+   "artist_id": 459,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2025"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/zeta/austin-tx-7_26_23-live-at-parish",
+   "artist_id": 459,
+   "motivo": "ledger 222 (fuera de catálogo); Live Album 2024"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/zeta/live-in-boston-10-years-of-resilience-in-the-u_s",
+   "artist_id": 459,
+   "motivo": "ledger 222 (fuera de catálogo); Live Album 2026"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/ep/zeta-no-somos-marineros/voces-del-nuevo-continente",
+   "artist_id": 459,
+   "motivo": "ledger 222 (fuera de catálogo); EP 2014"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/ep/zeta/lantiteoria-del-todo",
+   "artist_id": 459,
+   "motivo": "ledger 222 (fuera de catálogo); EP 2016"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/ep/zeta-with-chris-pyrate/slingshot",
+   "artist_id": 459,
+   "motivo": "ledger 222 (fuera de catálogo); EP 2017"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/ep/zeta/audiotree-live",
+   "artist_id": 459,
+   "motivo": "ledger 222 (fuera de catálogo); EP 2017"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/ep/zeta/magia-infinita-無限の魔法",
+   "artist_id": 459,
+   "motivo": "ledger 222 (fuera de catálogo); EP 2018"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/ep/zeta/live-session-2021",
+   "artist_id": 459,
+   "motivo": "ledger 222 (fuera de catálogo); EP 2022"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/ep/codefendants-zeta/live-from-red-lion-recording-studio",
+   "artist_id": 459,
+   "motivo": "ledger 222 (fuera de catálogo); EP 2025"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/zeta/yo-el-peor-de-todos-somos-cosmos-xxv",
+   "artist_id": 459,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2013"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/zeta-whites/vivimos-por-esto",
+   "artist_id": 459,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2015"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/zeta/latdt",
+   "artist_id": 459,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2016"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/zeta/sufrir",
+   "artist_id": 459,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2017"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/zeta/completar",
+   "artist_id": 459,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2018"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/zeta/venezziola",
+   "artist_id": 459,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2019"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/zeta/el-canto-de-la-victoria",
+   "artist_id": 459,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2021"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/zeta/la-flor-de-la-palabra",
+   "artist_id": 459,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2021"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/zeta/v-completar-2024",
+   "artist_id": 459,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2023"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/zeta/vi-resignar-2024",
+   "artist_id": 459,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2023"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/zeta-pans/tonada-de-luna-llena",
+   "artist_id": 459,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2024"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/zeta/privilege",
+   "artist_id": 459,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2024"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/album/zikoticos-armados/dando-la-cara",
+   "artist_id": 1615,
+   "motivo": "ledger 222 (fuera de catálogo); Album 2012"
+  },
+  {
+   "tipo": "album",
+   "origen": "ledger",
+   "rym_href": "/release/single/zion-tpl/missing-you",
+   "artist_id": 1529,
+   "motivo": "ledger 222 (fuera de catálogo); Single 2020"
+  }
+ ]
+}

@@ -1,0 +1,6752 @@
+{
+ "generado": "2026-10-04T00:04:32.399Z",
+ "plan": "reports/etapa4-altas-2026-10-03/plan-lote1.jsonl",
+ "modo": "dry-run",
+ "items": [
+  {
+   "clave": "rym-nuevos:artist:aura-spei",
+   "tipo": "artist",
+   "nombre": "Aura Spei",
+   "values": {
+    "name": "Aura Spei",
+    "artist_type": "band",
+    "formed_year": 2017
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:mon-carrillo-y-su-sexteto",
+   "tipo": "artist",
+   "nombre": "Mon Carrillo y Su Sexteto",
+   "values": {
+    "name": "Mon Carrillo y Su Sexteto",
+    "artist_type": "band",
+    "formed_year": 1973
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:a_l_o_",
+   "tipo": "artist",
+   "nombre": "A.L.O.",
+   "values": {
+    "name": "A.L.O.",
+    "artist_type": "band"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:priska-1",
+   "tipo": "artist",
+   "nombre": "Priska",
+   "values": {
+    "name": "Priska",
+    "artist_type": "band"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:esos-cubos",
+   "tipo": "artist",
+   "nombre": "Esos... Cubos",
+   "values": {
+    "name": "Esos... Cubos",
+    "artist_type": "band",
+    "formed_year": 2017
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:los-propios",
+   "tipo": "artist",
+   "nombre": "Los Propios",
+   "values": {
+    "name": "Los Propios",
+    "artist_type": "band",
+    "formed_year": 1983
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:caminant",
+   "tipo": "artist",
+   "nombre": "Caminant",
+   "values": {
+    "name": "Caminant",
+    "artist_type": "band"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:sorority",
+   "tipo": "artist",
+   "nombre": "Sorority",
+   "values": {
+    "name": "Sorority",
+    "artist_type": "band",
+    "formed_year": 2010
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:doctor-no",
+   "tipo": "artist",
+   "nombre": "Doctor No",
+   "values": {
+    "name": "Doctor No",
+    "artist_type": "band",
+    "formed_year": 2005
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:accion_directa",
+   "tipo": "artist",
+   "nombre": "Acción Directa",
+   "values": {
+    "name": "Acción Directa",
+    "artist_type": "band",
+    "formed_year": 1988
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:xtension",
+   "tipo": "artist",
+   "nombre": "Xtensión",
+   "values": {
+    "name": "Xtensión",
+    "artist_type": "band"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:frailes",
+   "tipo": "artist",
+   "nombre": "Frailes",
+   "values": {
+    "name": "Frailes",
+    "artist_type": "band"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:kurikos-suin",
+   "tipo": "artist",
+   "nombre": "Kurikos Suin",
+   "values": {
+    "name": "Kurikos Suin",
+    "artist_type": "band"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:nino_nuclear_y_los_mutantes_de_saturno",
+   "tipo": "artist",
+   "nombre": "Niño Nuclear y los Mutantes de Saturno",
+   "values": {
+    "name": "Niño Nuclear y los Mutantes de Saturno",
+    "artist_type": "band",
+    "formed_year": 2011
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:azzata-clips",
+   "tipo": "artist",
+   "nombre": "Azzata Clips",
+   "values": {
+    "name": "Azzata Clips",
+    "artist_type": "band",
+    "formed_year": 2014
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:canibal-monkeys",
+   "tipo": "artist",
+   "nombre": "Caníbal Monkeys",
+   "values": {
+    "name": "Caníbal Monkeys",
+    "artist_type": "band"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:los-delorean",
+   "tipo": "artist",
+   "nombre": "Los Delorean",
+   "values": {
+    "name": "Los Delorean",
+    "artist_type": "band",
+    "formed_year": 2014
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:orquesta-la-recopilacion",
+   "tipo": "artist",
+   "nombre": "Orquesta La Recopilacion",
+   "values": {
+    "name": "Orquesta La Recopilacion",
+    "artist_type": "band"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:dragon-blanco",
+   "tipo": "artist",
+   "nombre": "Dragón Blanco",
+   "values": {
+    "name": "Dragón Blanco",
+    "artist_type": "band",
+    "formed_year": 2015
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:ababajah",
+   "tipo": "artist",
+   "nombre": "Ababajah",
+   "values": {
+    "name": "Ababajah",
+    "artist_type": "band"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:ymtqdasai",
+   "tipo": "artist",
+   "nombre": "YMTQDasai",
+   "values": {
+    "name": "YMTQDasai",
+    "artist_type": "band",
+    "formed_year": 2024
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:caimanera",
+   "tipo": "artist",
+   "nombre": "Caimanera",
+   "values": {
+    "name": "Caimanera",
+    "artist_type": "band",
+    "formed_year": 2024
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:wmf_f1",
+   "tipo": "artist",
+   "nombre": "WMF",
+   "values": {
+    "name": "WMF",
+    "artist_type": "band",
+    "formed_year": 1988
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:mortus-stella",
+   "tipo": "artist",
+   "nombre": "Mortus Stella",
+   "values": {
+    "name": "Mortus Stella",
+    "artist_type": "band",
+    "formed_year": 2018
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:eustace-1",
+   "tipo": "artist",
+   "nombre": "Eustace",
+   "values": {
+    "name": "Eustace",
+    "artist_type": "band"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:fakboi",
+   "tipo": "artist",
+   "nombre": "Fakboi",
+   "values": {
+    "name": "Fakboi",
+    "artist_type": "band",
+    "formed_year": 2022
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:vision-real",
+   "tipo": "artist",
+   "nombre": "Vision Real",
+   "values": {
+    "name": "Vision Real",
+    "artist_type": "band",
+    "formed_year": 2010
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:asuka-en-el-fin-del-mundo",
+   "tipo": "artist",
+   "nombre": "Asuka en el Fin del Mundo",
+   "values": {
+    "name": "Asuka en el Fin del Mundo",
+    "artist_type": "band",
+    "formed_year": 2025
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:grupo_imagen",
+   "tipo": "artist",
+   "nombre": "Grupo Imagen",
+   "values": {
+    "name": "Grupo Imagen",
+    "artist_type": "band",
+    "formed_year": 1974
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:the_viridian_groove",
+   "tipo": "artist",
+   "nombre": "The Viridian Groove",
+   "values": {
+    "name": "The Viridian Groove",
+    "artist_type": "band"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:los-coveros",
+   "tipo": "artist",
+   "nombre": "Los Coveros",
+   "values": {
+    "name": "Los Coveros",
+    "artist_type": "band"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:wannamaker",
+   "tipo": "artist",
+   "nombre": "Wannamaker",
+   "values": {
+    "name": "Wannamaker",
+    "artist_type": "band",
+    "formed_year": 2007
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:pipo-y-sus-estrellas",
+   "tipo": "artist",
+   "nombre": "Pipo y sus Estrellas",
+   "values": {
+    "name": "Pipo y sus Estrellas",
+    "artist_type": "band"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:el-regano",
+   "tipo": "artist",
+   "nombre": "El Regaño",
+   "values": {
+    "name": "El Regaño",
+    "artist_type": "band"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:los-dead",
+   "tipo": "artist",
+   "nombre": "Los Dead",
+   "values": {
+    "name": "Los Dead",
+    "artist_type": "band",
+    "formed_year": 2005
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:sr-falla-de-origen",
+   "tipo": "artist",
+   "nombre": "Sr. Falla de Origen",
+   "values": {
+    "name": "Sr. Falla de Origen",
+    "artist_type": "band",
+    "formed_year": 2020
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:los-zumo",
+   "tipo": "artist",
+   "nombre": "Los Zumo",
+   "values": {
+    "name": "Los Zumo",
+    "artist_type": "band",
+    "formed_year": 2007
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:rafa-y-sus-diamantes",
+   "tipo": "artist",
+   "nombre": "Rafa y Sus Diamantes",
+   "values": {
+    "name": "Rafa y Sus Diamantes",
+    "artist_type": "band"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:virtual-animal",
+   "tipo": "artist",
+   "nombre": "Virtual Animal",
+   "values": {
+    "name": "Virtual Animal",
+    "artist_type": "band"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:creatica",
+   "tipo": "artist",
+   "nombre": "Creática",
+   "values": {
+    "name": "Creática",
+    "artist_type": "band",
+    "formed_year": 2000
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:afrochill",
+   "tipo": "artist",
+   "nombre": "Afrochill",
+   "values": {
+    "name": "Afrochill",
+    "artist_type": "band",
+    "formed_year": 2018
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:bucle-lunar",
+   "tipo": "artist",
+   "nombre": "Bucle Lunar",
+   "values": {
+    "name": "Bucle Lunar",
+    "artist_type": "band",
+    "formed_year": 2023
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:insok",
+   "tipo": "artist",
+   "nombre": "Insok",
+   "values": {
+    "name": "Insok",
+    "artist_type": "band"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:holy-hands-1",
+   "tipo": "artist",
+   "nombre": "Holy Hands",
+   "values": {
+    "name": "Holy Hands",
+    "artist_type": "band",
+    "formed_year": 2014
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:coral-falcon",
+   "tipo": "artist",
+   "nombre": "Coral Falcón",
+   "values": {
+    "name": "Coral Falcón",
+    "artist_type": "band",
+    "formed_year": 1963
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:torrece",
+   "tipo": "artist",
+   "nombre": "Torrecè",
+   "values": {
+    "name": "Torrecè",
+    "artist_type": "band"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:ninos-con-pistolas",
+   "tipo": "artist",
+   "nombre": "Niños con Pistolas",
+   "values": {
+    "name": "Niños con Pistolas",
+    "artist_type": "band",
+    "formed_year": 2016
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:sentimentals",
+   "tipo": "artist",
+   "nombre": "sentimentals",
+   "values": {
+    "name": "sentimentals",
+    "artist_type": "band",
+    "formed_year": 2023
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:polyman",
+   "tipo": "artist",
+   "nombre": "Pólyman",
+   "values": {
+    "name": "Pólyman",
+    "artist_type": "band",
+    "formed_year": 2014
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:tripland",
+   "tipo": "artist",
+   "nombre": "Tripland",
+   "values": {
+    "name": "Tripland",
+    "artist_type": "band",
+    "formed_year": 2008
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:musanostra",
+   "tipo": "artist",
+   "nombre": "Musanostra",
+   "values": {
+    "name": "Musanostra",
+    "artist_type": "band",
+    "formed_year": 2011
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:the_monroes_f3",
+   "tipo": "artist",
+   "nombre": "The Monroes",
+   "values": {
+    "name": "The Monroes",
+    "artist_type": "band"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:no-light-no-water",
+   "tipo": "artist",
+   "nombre": "No Light No Water",
+   "values": {
+    "name": "No Light No Water",
+    "artist_type": "band",
+    "formed_year": 2009
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:los_vanders",
+   "tipo": "artist",
+   "nombre": "Los Vanders",
+   "values": {
+    "name": "Los Vanders",
+    "artist_type": "band",
+    "formed_year": 2001
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:colibri-1",
+   "tipo": "artist",
+   "nombre": "Colibrí",
+   "values": {
+    "name": "Colibrí",
+    "artist_type": "band",
+    "formed_year": 2015
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:b612",
+   "tipo": "artist",
+   "nombre": "B612",
+   "values": {
+    "name": "B612",
+    "artist_type": "band"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:pez-volador",
+   "tipo": "artist",
+   "nombre": "Pez Volador",
+   "values": {
+    "name": "Pez Volador",
+    "artist_type": "band",
+    "formed_year": 2014
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:merida-swing-boys",
+   "tipo": "artist",
+   "nombre": "Merida Swing Boys ‎",
+   "values": {
+    "name": "Merida Swing Boys ‎",
+    "artist_type": "band"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:_xprnc",
+   "tipo": "artist",
+   "nombre": "π XPRNC",
+   "values": {
+    "name": "π XPRNC",
+    "artist_type": "band",
+    "formed_year": 2001
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:bahtawi",
+   "tipo": "artist",
+   "nombre": "Bahtawi",
+   "values": {
+    "name": "Bahtawi",
+    "artist_type": "band",
+    "formed_year": 2011
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:grupo-v",
+   "tipo": "artist",
+   "nombre": "Grupo V",
+   "values": {
+    "name": "Grupo V",
+    "artist_type": "band"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:joudy",
+   "tipo": "artist",
+   "nombre": "Joudy",
+   "values": {
+    "name": "Joudy",
+    "artist_type": "band",
+    "formed_year": 2009
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:ile-des-phoques",
+   "tipo": "artist",
+   "nombre": "Ile des Phoques",
+   "values": {
+    "name": "Ile des Phoques",
+    "artist_type": "band"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:los-prisioneros",
+   "tipo": "artist",
+   "nombre": "Los Prisioneros",
+   "values": {
+    "name": "Los Prisioneros",
+    "artist_type": "band",
+    "formed_year": 1983
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:cats-and-beloved-pets",
+   "tipo": "artist",
+   "nombre": "cats! and beloved pets",
+   "values": {
+    "name": "cats! and beloved pets",
+    "artist_type": "band"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:mil-ataris-por-segundo",
+   "tipo": "artist",
+   "nombre": "mil ataris por segundo",
+   "values": {
+    "name": "mil ataris por segundo",
+    "artist_type": "band"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:magnifilium",
+   "tipo": "artist",
+   "nombre": "Magnifilium",
+   "values": {
+    "name": "Magnifilium",
+    "artist_type": "band",
+    "formed_year": 2014
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:sendero-veneco",
+   "tipo": "artist",
+   "nombre": "Sendero Veneco",
+   "values": {
+    "name": "Sendero Veneco",
+    "artist_type": "band"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:la-danta",
+   "tipo": "artist",
+   "nombre": "La Danta",
+   "values": {
+    "name": "La Danta",
+    "artist_type": "band"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:junko-furuta-1",
+   "tipo": "artist",
+   "nombre": "Junko Furuta",
+   "values": {
+    "name": "Junko Furuta",
+    "artist_type": "band"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:porfi-jimenez-y-su-orquesta",
+   "tipo": "artist",
+   "nombre": "Porfi Jiménez y Su Orquesta",
+   "values": {
+    "name": "Porfi Jiménez y Su Orquesta",
+    "artist_type": "band",
+    "formed_year": 1963
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:arawato",
+   "tipo": "artist",
+   "nombre": "Arawato",
+   "values": {
+    "name": "Arawato",
+    "artist_type": "band",
+    "formed_year": 2014
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:la-sonora-caracas",
+   "tipo": "artist",
+   "nombre": "La Sonora Caracas",
+   "values": {
+    "name": "La Sonora Caracas",
+    "artist_type": "band"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:musikautomatika",
+   "tipo": "artist",
+   "nombre": "Musikautomatika",
+   "values": {
+    "name": "Musikautomatika",
+    "artist_type": "band",
+    "formed_year": 1978
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:colerico-espin",
+   "tipo": "artist",
+   "nombre": "Colérico Espín",
+   "values": {
+    "name": "Colérico Espín",
+    "artist_type": "band"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:la-pequena-revancha",
+   "tipo": "artist",
+   "nombre": "La Pequeña Revancha",
+   "values": {
+    "name": "La Pequeña Revancha",
+    "artist_type": "band",
+    "formed_year": 2012
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:ahimsa-1",
+   "tipo": "artist",
+   "nombre": "Ahimsa",
+   "values": {
+    "name": "Ahimsa",
+    "artist_type": "band"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:pakalolo",
+   "tipo": "artist",
+   "nombre": "Pakalolo",
+   "values": {
+    "name": "Pakalolo",
+    "artist_type": "band",
+    "formed_year": 2015
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:la-maldita-infamia",
+   "tipo": "artist",
+   "nombre": "La Maldita Infamia",
+   "values": {
+    "name": "La Maldita Infamia",
+    "artist_type": "band",
+    "formed_year": 2000
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:gran-radio-riviera",
+   "tipo": "artist",
+   "nombre": "Gran Radio Riviera",
+   "values": {
+    "name": "Gran Radio Riviera",
+    "artist_type": "band"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:ray-perez-y-su-orquesta",
+   "tipo": "artist",
+   "nombre": "Ray Pérez y su Orquesta",
+   "values": {
+    "name": "Ray Pérez y su Orquesta",
+    "artist_type": "band"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:la-critica",
+   "tipo": "artist",
+   "nombre": "La Crítica",
+   "values": {
+    "name": "La Crítica",
+    "artist_type": "band",
+    "formed_year": 1978
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:nati-y-su-orquesta",
+   "tipo": "artist",
+   "nombre": "Nati y Su Orquesta",
+   "values": {
+    "name": "Nati y Su Orquesta",
+    "artist_type": "band",
+    "formed_year": 1981
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:secuaces",
+   "tipo": "artist",
+   "nombre": "Secuaces",
+   "values": {
+    "name": "Secuaces",
+    "artist_type": "band",
+    "formed_year": 1997
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:le-cinema",
+   "tipo": "artist",
+   "nombre": "Le' Cinema",
+   "values": {
+    "name": "Le' Cinema",
+    "artist_type": "band",
+    "formed_year": 2016
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:van-der-dijs",
+   "tipo": "artist",
+   "nombre": "Van Der Dijs",
+   "values": {
+    "name": "Van Der Dijs",
+    "artist_type": "band",
+    "formed_year": 2024
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:audiospray",
+   "tipo": "artist",
+   "nombre": "Audiospray",
+   "values": {
+    "name": "Audiospray",
+    "artist_type": "band",
+    "formed_year": 2011
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:japanese-scarf",
+   "tipo": "artist",
+   "nombre": "Japanese Scarf",
+   "values": {
+    "name": "Japanese Scarf",
+    "artist_type": "band"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:los-cantores-del-tropico",
+   "tipo": "artist",
+   "nombre": "Los Cantores del Trópico",
+   "values": {
+    "name": "Los Cantores del Trópico",
+    "artist_type": "band",
+    "formed_year": 1933
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:nzila-afrobeat-project",
+   "tipo": "artist",
+   "nombre": "Nzila Afrobeat Project",
+   "values": {
+    "name": "Nzila Afrobeat Project",
+    "artist_type": "band"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:alterkind",
+   "tipo": "artist",
+   "nombre": "AlterKind",
+   "values": {
+    "name": "AlterKind",
+    "artist_type": "band"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:rotival",
+   "tipo": "artist",
+   "nombre": "Rótival",
+   "values": {
+    "name": "Rótival",
+    "artist_type": "band",
+    "formed_year": 2011
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:los-hermanos-naturales",
+   "tipo": "artist",
+   "nombre": "Los Hermanos Naturales",
+   "values": {
+    "name": "Los Hermanos Naturales",
+    "artist_type": "band",
+    "formed_year": 2004
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:ensamble-acidito",
+   "tipo": "artist",
+   "nombre": "Ensamble Acidito",
+   "values": {
+    "name": "Ensamble Acidito",
+    "artist_type": "band",
+    "formed_year": 1998
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:samadhi-1",
+   "tipo": "artist",
+   "nombre": "Samadhi",
+   "values": {
+    "name": "Samadhi",
+    "artist_type": "band"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:senorita-cometa",
+   "tipo": "artist",
+   "nombre": "Señorita Cometa",
+   "values": {
+    "name": "Señorita Cometa",
+    "artist_type": "band"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:stereolux",
+   "tipo": "artist",
+   "nombre": "Stereolux",
+   "values": {
+    "name": "Stereolux",
+    "artist_type": "band",
+    "formed_year": 2015
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:guacamayo-terca",
+   "tipo": "artist",
+   "nombre": "Guacamayo Terca",
+   "values": {
+    "name": "Guacamayo Terca",
+    "artist_type": "band",
+    "formed_year": 2015
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:retrovyzor",
+   "tipo": "artist",
+   "nombre": "Retrovyzor",
+   "values": {
+    "name": "Retrovyzor",
+    "artist_type": "band",
+    "formed_year": 2013
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:kemawan",
+   "tipo": "artist",
+   "nombre": "Kemawan",
+   "values": {
+    "name": "Kemawan",
+    "artist_type": "band",
+    "formed_year": 2007
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:escritores-de-salem",
+   "tipo": "artist",
+   "nombre": "Escritores de Salem",
+   "values": {
+    "name": "Escritores de Salem",
+    "artist_type": "band",
+    "formed_year": 2015
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:nueve-noventa",
+   "tipo": "artist",
+   "nombre": "Nueve Noventa",
+   "values": {
+    "name": "Nueve Noventa",
+    "artist_type": "band",
+    "formed_year": 2014
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:grupo-pepper",
+   "tipo": "artist",
+   "nombre": "Grupo Pepper",
+   "values": {
+    "name": "Grupo Pepper",
+    "artist_type": "band",
+    "formed_year": 2008
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:la-gran-banda-de-venezuela",
+   "tipo": "artist",
+   "nombre": "La Gran Banda de Venezuela",
+   "values": {
+    "name": "La Gran Banda de Venezuela",
+    "artist_type": "band",
+    "formed_year": 1985
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:soires-naes",
+   "tipo": "artist",
+   "nombre": "Soires Naes",
+   "values": {
+    "name": "Soires Naes",
+    "artist_type": "band",
+    "formed_year": 2006
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:todo-bien-todo-mal",
+   "tipo": "artist",
+   "nombre": "Todo Bien Todo Mal",
+   "values": {
+    "name": "Todo Bien Todo Mal",
+    "artist_type": "band",
+    "formed_year": 2022
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:los-colores-2",
+   "tipo": "artist",
+   "nombre": "Los Colores",
+   "values": {
+    "name": "Los Colores",
+    "artist_type": "band",
+    "formed_year": 2011
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:rumberos-del-callejon",
+   "tipo": "artist",
+   "nombre": "Rumberos del Callejón",
+   "values": {
+    "name": "Rumberos del Callejón",
+    "artist_type": "band",
+    "formed_year": 2006
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:uff",
+   "tipo": "artist",
+   "nombre": "Uff",
+   "values": {
+    "name": "Uff",
+    "artist_type": "band",
+    "formed_year": 1998
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:lobo_de_mar",
+   "tipo": "artist",
+   "nombre": "Lobo de Mar",
+   "values": {
+    "name": "Lobo de Mar",
+    "artist_type": "band",
+    "formed_year": 2014
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:los-aventureros",
+   "tipo": "artist",
+   "nombre": "Los Aventureros",
+   "values": {
+    "name": "Los Aventureros",
+    "artist_type": "band",
+    "formed_year": 1957
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:los_juveniles",
+   "tipo": "artist",
+   "nombre": "Los Juveniles",
+   "values": {
+    "name": "Los Juveniles",
+    "artist_type": "band",
+    "formed_year": 1968
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:this-will-be-no-more",
+   "tipo": "artist",
+   "nombre": "This Will Be No More",
+   "values": {
+    "name": "This Will Be No More",
+    "artist_type": "band"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:i_saw_the_deep",
+   "tipo": "artist",
+   "nombre": "I Saw the Deep",
+   "values": {
+    "name": "I Saw the Deep",
+    "artist_type": "band",
+    "formed_year": 2010
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:the-revoir",
+   "tipo": "artist",
+   "nombre": "The Revoir",
+   "values": {
+    "name": "The Revoir",
+    "artist_type": "band"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:laps_around_the_sun",
+   "tipo": "artist",
+   "nombre": "Laps Around the Sun",
+   "values": {
+    "name": "Laps Around the Sun",
+    "artist_type": "band"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:homer-and-the-donts",
+   "tipo": "artist",
+   "nombre": "Homer and The Dont's",
+   "values": {
+    "name": "Homer and The Dont's",
+    "artist_type": "band",
+    "formed_year": 1965
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:raul-monsalve-y-los-forajidos",
+   "tipo": "artist",
+   "nombre": "Raúl Monsalve y Los Forajidos",
+   "values": {
+    "name": "Raúl Monsalve y Los Forajidos",
+    "artist_type": "band"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:the_baby_factory",
+   "tipo": "artist",
+   "nombre": "The Baby Factory",
+   "values": {
+    "name": "The Baby Factory",
+    "artist_type": "band"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:uklao",
+   "tipo": "artist",
+   "nombre": "Uklao",
+   "values": {
+    "name": "Uklao",
+    "artist_type": "band",
+    "formed_year": 2014
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:zoundcolector",
+   "tipo": "artist",
+   "nombre": "Zoundcolector",
+   "values": {
+    "name": "Zoundcolector",
+    "artist_type": "band"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:san-tome",
+   "tipo": "artist",
+   "nombre": "San Tomé",
+   "values": {
+    "name": "San Tomé",
+    "artist_type": "band",
+    "formed_year": 2014
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:roboto-1",
+   "tipo": "artist",
+   "nombre": "Roboto",
+   "values": {
+    "name": "Roboto",
+    "artist_type": "band",
+    "formed_year": 2009
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:orquesta-sans-souci",
+   "tipo": "artist",
+   "nombre": "Orquesta Sans Souci",
+   "values": {
+    "name": "Orquesta Sans Souci",
+    "artist_type": "band"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:la-super-orquesta-de-venezuela",
+   "tipo": "artist",
+   "nombre": "La Super Orquesta de Venezuela",
+   "values": {
+    "name": "La Super Orquesta de Venezuela",
+    "artist_type": "band"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:franco-y-oscarcito",
+   "tipo": "artist",
+   "nombre": "Franco y Oscarcito",
+   "values": {
+    "name": "Franco y Oscarcito",
+    "artist_type": "band",
+    "formed_year": 2002
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:principe-y-su-sexteto",
+   "tipo": "artist",
+   "nombre": "Príncipe y Su Sexteto",
+   "values": {
+    "name": "Príncipe y Su Sexteto",
+    "artist_type": "band",
+    "formed_year": 1967
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:la-melodia-perfecta",
+   "tipo": "artist",
+   "nombre": "La Melodía Perfecta",
+   "values": {
+    "name": "La Melodía Perfecta",
+    "artist_type": "band",
+    "formed_year": 2013
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:grupo-treo",
+   "tipo": "artist",
+   "nombre": "Grupo Treo",
+   "values": {
+    "name": "Grupo Treo",
+    "artist_type": "band",
+    "formed_year": 2009
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:agrupacion-convenezuela",
+   "tipo": "artist",
+   "nombre": "Agrupacion Convenezuela",
+   "values": {
+    "name": "Agrupacion Convenezuela",
+    "artist_type": "band",
+    "formed_year": 1975
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:los-cadillacs",
+   "tipo": "artist",
+   "nombre": "Los Cadillac's",
+   "values": {
+    "name": "Los Cadillac's",
+    "artist_type": "band",
+    "formed_year": 2008
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:nomaste",
+   "tipo": "artist",
+   "nombre": "Nomásté",
+   "values": {
+    "name": "Nomásté",
+    "artist_type": "band",
+    "formed_year": 2017
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:camargo-1",
+   "tipo": "artist",
+   "nombre": "Camargo",
+   "values": {
+    "name": "Camargo",
+    "artist_type": "band",
+    "formed_year": 2014
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:xtremauncion",
+   "tipo": "artist",
+   "nombre": "Xtremauncion",
+   "values": {
+    "name": "Xtremauncion",
+    "artist_type": "band",
+    "formed_year": 1994
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:ravahil",
+   "tipo": "artist",
+   "nombre": "Ravahil",
+   "values": {
+    "name": "Ravahil",
+    "artist_type": "band",
+    "formed_year": 2024
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:skys-white-meditation",
+   "tipo": "artist",
+   "nombre": "Sky's White Meditation",
+   "values": {
+    "name": "Sky's White Meditation",
+    "artist_type": "band",
+    "formed_year": 1968
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:pulpo-1",
+   "tipo": "artist",
+   "nombre": "Pulpo",
+   "values": {
+    "name": "Pulpo",
+    "artist_type": "band"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:tropic-zulia",
+   "tipo": "artist",
+   "nombre": "Tropic-Zulia",
+   "values": {
+    "name": "Tropic-Zulia",
+    "artist_type": "band"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:guasinca-zuliana",
+   "tipo": "artist",
+   "nombre": "Guasinca Zuliana",
+   "values": {
+    "name": "Guasinca Zuliana",
+    "artist_type": "band",
+    "formed_year": 1984
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:la-murga-de-caracas",
+   "tipo": "artist",
+   "nombre": "La Murga de Caracas",
+   "values": {
+    "name": "La Murga de Caracas",
+    "artist_type": "band",
+    "formed_year": 1983
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:koonze-family",
+   "tipo": "artist",
+   "nombre": "Koonze Family",
+   "values": {
+    "name": "Koonze Family",
+    "artist_type": "band"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:unos-panas-ahi",
+   "tipo": "artist",
+   "nombre": "Unos Panas Ahí",
+   "values": {
+    "name": "Unos Panas Ahí",
+    "artist_type": "band",
+    "formed_year": 2000
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:milky-bros",
+   "tipo": "artist",
+   "nombre": "Milky Bros",
+   "values": {
+    "name": "Milky Bros",
+    "artist_type": "band"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:ignis_haereticum",
+   "tipo": "artist",
+   "nombre": "Ignis Haereticum",
+   "values": {
+    "name": "Ignis Haereticum",
+    "artist_type": "band",
+    "formed_year": 2007
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:bastard-cruciatu",
+   "tipo": "artist",
+   "nombre": "Bastard Cruciatu",
+   "values": {
+    "name": "Bastard Cruciatu",
+    "artist_type": "band",
+    "formed_year": 2023
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:lord-thanatos",
+   "tipo": "artist",
+   "nombre": "Lord Thanatos",
+   "values": {
+    "name": "Lord Thanatos",
+    "artist_type": "band"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:fire-7",
+   "tipo": "artist",
+   "nombre": "FIRE",
+   "values": {
+    "name": "FIRE",
+    "artist_type": "band",
+    "formed_year": 2005
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:faster-2",
+   "tipo": "artist",
+   "nombre": "Faster",
+   "values": {
+    "name": "Faster",
+    "artist_type": "band",
+    "formed_year": 2024
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:curse-9",
+   "tipo": "artist",
+   "nombre": "Curse",
+   "values": {
+    "name": "Curse",
+    "artist_type": "band",
+    "formed_year": 2020
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:inaeternum",
+   "tipo": "artist",
+   "nombre": "Inaeternum",
+   "values": {
+    "name": "Inaeternum",
+    "artist_type": "band",
+    "formed_year": 1992
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:dark-manthra",
+   "tipo": "artist",
+   "nombre": "Dark Manthra",
+   "values": {
+    "name": "Dark Manthra",
+    "artist_type": "band",
+    "formed_year": 1997
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:ads-1",
+   "tipo": "artist",
+   "nombre": "ADS",
+   "values": {
+    "name": "ADS",
+    "artist_type": "band"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:cabuya",
+   "tipo": "artist",
+   "nombre": "Cabuya",
+   "values": {
+    "name": "Cabuya",
+    "artist_type": "band",
+    "formed_year": 2000
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:francamente-ya-no-se",
+   "tipo": "artist",
+   "nombre": "Francamente Ya No Sé",
+   "values": {
+    "name": "Francamente Ya No Sé",
+    "artist_type": "band"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:auschwitz-4",
+   "tipo": "artist",
+   "nombre": "Auschwitz",
+   "values": {
+    "name": "Auschwitz",
+    "artist_type": "band",
+    "formed_year": 1988
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:bonestorm-1",
+   "tipo": "artist",
+   "nombre": "Bonestorm",
+   "values": {
+    "name": "Bonestorm",
+    "artist_type": "band",
+    "formed_year": 2006
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:rotten-spirit",
+   "tipo": "artist",
+   "nombre": "Rotten Spirit",
+   "values": {
+    "name": "Rotten Spirit",
+    "artist_type": "band",
+    "formed_year": 2016
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:i_m_r_i",
+   "tipo": "artist",
+   "nombre": "I.M.R.I.",
+   "values": {
+    "name": "I.M.R.I.",
+    "artist_type": "band",
+    "formed_year": 1987
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:kathreptis",
+   "tipo": "artist",
+   "nombre": "Kathreptis",
+   "values": {
+    "name": "Kathreptis",
+    "artist_type": "band",
+    "formed_year": 2016
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:los-embajadores-vallenatos",
+   "tipo": "artist",
+   "nombre": "Los Embajadores Vallenatos",
+   "values": {
+    "name": "Los Embajadores Vallenatos",
+    "artist_type": "band",
+    "formed_year": 1982
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:hex-crow",
+   "tipo": "artist",
+   "nombre": "Hex Crow",
+   "values": {
+    "name": "Hex Crow",
+    "artist_type": "band"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:hatred-2",
+   "tipo": "artist",
+   "nombre": "Hatred",
+   "values": {
+    "name": "Hatred",
+    "artist_type": "band",
+    "formed_year": 2005
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:cataleptic-1",
+   "tipo": "artist",
+   "nombre": "Cataleptic",
+   "values": {
+    "name": "Cataleptic",
+    "artist_type": "band",
+    "formed_year": 1990
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:nuctemeron-1",
+   "tipo": "artist",
+   "nombre": "Nuctemeron",
+   "values": {
+    "name": "Nuctemeron",
+    "artist_type": "band",
+    "formed_year": 1990
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:las-avispas-africanas",
+   "tipo": "artist",
+   "nombre": "Las Avispas Africanas",
+   "values": {
+    "name": "Las Avispas Africanas",
+    "artist_type": "band",
+    "formed_year": 2014
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:ainur_f1",
+   "tipo": "artist",
+   "nombre": "Ainur",
+   "values": {
+    "name": "Ainur",
+    "artist_type": "band",
+    "formed_year": 2005
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:kull-trigger",
+   "tipo": "artist",
+   "nombre": "Kull Trigger",
+   "values": {
+    "name": "Kull Trigger",
+    "artist_type": "band",
+    "formed_year": 2020
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:perpetual_f1",
+   "tipo": "artist",
+   "nombre": "Perpetual",
+   "values": {
+    "name": "Perpetual",
+    "artist_type": "band",
+    "formed_year": 2004
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:sinner_serpent",
+   "tipo": "artist",
+   "nombre": "Sinner Serpent",
+   "values": {
+    "name": "Sinner Serpent",
+    "artist_type": "band",
+    "formed_year": 2005
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:ztranger",
+   "tipo": "artist",
+   "nombre": "Ztranger",
+   "values": {
+    "name": "Ztranger",
+    "artist_type": "band"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:virgin_killer_f2",
+   "tipo": "artist",
+   "nombre": "Virgin Killer",
+   "values": {
+    "name": "Virgin Killer",
+    "artist_type": "band",
+    "formed_year": 2006
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:supercuates",
+   "tipo": "artist",
+   "nombre": "Supercuates",
+   "values": {
+    "name": "Supercuates",
+    "artist_type": "band",
+    "formed_year": 2001
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:kroniker-1",
+   "tipo": "artist",
+   "nombre": "Kroniker",
+   "values": {
+    "name": "Kroniker",
+    "artist_type": "band",
+    "formed_year": 2025
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:la_manigua_f1",
+   "tipo": "artist",
+   "nombre": "La Manigua",
+   "values": {
+    "name": "La Manigua",
+    "artist_type": "band",
+    "formed_year": 2000
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:banista-lunar",
+   "tipo": "artist",
+   "nombre": "Bañista Lunar",
+   "values": {
+    "name": "Bañista Lunar",
+    "artist_type": "band",
+    "formed_year": 2017
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:mothiis-dominium",
+   "tipo": "artist",
+   "nombre": "Möthiis Dominiüm",
+   "values": {
+    "name": "Möthiis Dominiüm",
+    "artist_type": "band"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:borroza",
+   "tipo": "artist",
+   "nombre": "Borroza",
+   "values": {
+    "name": "Borroza",
+    "artist_type": "band",
+    "formed_year": 2000
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:eden-19",
+   "tipo": "artist",
+   "nombre": "Eden",
+   "values": {
+    "name": "Eden",
+    "artist_type": "band"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:caos-7",
+   "tipo": "artist",
+   "nombre": "Caos",
+   "values": {
+    "name": "Caos",
+    "artist_type": "band",
+    "formed_year": 1993
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:hola-amiga-como-estas",
+   "tipo": "artist",
+   "nombre": "Hola Amiga ¿Cómo Estás?",
+   "values": {
+    "name": "Hola Amiga ¿Cómo Estás?",
+    "artist_type": "band"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:asteriom",
+   "tipo": "artist",
+   "nombre": "Asteriom",
+   "values": {
+    "name": "Asteriom",
+    "artist_type": "band",
+    "formed_year": 2025
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:menos-dias-soleados",
+   "tipo": "artist",
+   "nombre": "Menos Días Soleados",
+   "values": {
+    "name": "Menos Días Soleados",
+    "artist_type": "band",
+    "formed_year": 2023
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:velandia-y-la-tigra",
+   "tipo": "artist",
+   "nombre": "Velandia y la Tigra",
+   "values": {
+    "name": "Velandia y la Tigra",
+    "artist_type": "band",
+    "formed_year": 2007
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:supremacia_satanica",
+   "tipo": "artist",
+   "nombre": "Supremacia Satanica",
+   "values": {
+    "name": "Supremacia Satanica",
+    "artist_type": "band",
+    "formed_year": 2006
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:last_tyrant",
+   "tipo": "artist",
+   "nombre": "Last Tyrant",
+   "values": {
+    "name": "Last Tyrant",
+    "artist_type": "band",
+    "formed_year": 2002
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:old_betrayer",
+   "tipo": "artist",
+   "nombre": "Old Betrayer",
+   "values": {
+    "name": "Old Betrayer",
+    "artist_type": "band",
+    "formed_year": 2004
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:nostos-2",
+   "tipo": "artist",
+   "nombre": "Nostos",
+   "values": {
+    "name": "Nostos",
+    "artist_type": "band",
+    "formed_year": 2023
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:apotheose",
+   "tipo": "artist",
+   "nombre": "Apotheose",
+   "values": {
+    "name": "Apotheose",
+    "artist_type": "band"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:morto_kacho",
+   "tipo": "artist",
+   "nombre": "Morto Kacho",
+   "values": {
+    "name": "Morto Kacho",
+    "artist_type": "band",
+    "formed_year": 2005
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:pearl-ash",
+   "tipo": "artist",
+   "nombre": "Pearl Ash",
+   "values": {
+    "name": "Pearl Ash",
+    "artist_type": "band",
+    "formed_year": 1969
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:orquesta_concordia",
+   "tipo": "artist",
+   "nombre": "Orquesta \"Concordia\"",
+   "values": {
+    "name": "Orquesta \"Concordia\"",
+    "artist_type": "band",
+    "formed_year": 1927
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:mario-y-sus-diamantes",
+   "tipo": "artist",
+   "nombre": "Mario y Sus Diamantes",
+   "values": {
+    "name": "Mario y Sus Diamantes",
+    "artist_type": "band",
+    "formed_year": 1961
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:los-satelites",
+   "tipo": "artist",
+   "nombre": "Los Satélites",
+   "values": {
+    "name": "Los Satélites",
+    "artist_type": "band",
+    "formed_year": 1967
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:los-universales-de-maracaibo",
+   "tipo": "artist",
+   "nombre": "Los Universales de Maracaibo",
+   "values": {
+    "name": "Los Universales de Maracaibo",
+    "artist_type": "band"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:la-gallera-social-club",
+   "tipo": "artist",
+   "nombre": "La Gallera Social Club",
+   "values": {
+    "name": "La Gallera Social Club",
+    "artist_type": "band",
+    "formed_year": 2011
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:tragavenao-orquesta-afrobeat",
+   "tipo": "artist",
+   "nombre": "Tragavenao Orquesta Afrobeat",
+   "values": {
+    "name": "Tragavenao Orquesta Afrobeat",
+    "artist_type": "band",
+    "formed_year": 2010
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:orquesta-la-combinacion",
+   "tipo": "artist",
+   "nombre": "Orquesta la Combinación",
+   "values": {
+    "name": "Orquesta la Combinación",
+    "artist_type": "band",
+    "formed_year": 1976
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:paisaje-local",
+   "tipo": "artist",
+   "nombre": "Paisaje Local",
+   "values": {
+    "name": "Paisaje Local",
+    "artist_type": "band",
+    "formed_year": 2016
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:super-combo-los-tropicales",
+   "tipo": "artist",
+   "nombre": "Super Combo Los Tropicales",
+   "values": {
+    "name": "Super Combo Los Tropicales",
+    "artist_type": "band"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:clan-coral",
+   "tipo": "artist",
+   "nombre": "Clan Coral",
+   "values": {
+    "name": "Clan Coral",
+    "artist_type": "band"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:los-masters",
+   "tipo": "artist",
+   "nombre": "Los Master's",
+   "values": {
+    "name": "Los Master's",
+    "artist_type": "band"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:caibo",
+   "tipo": "artist",
+   "nombre": "Caibo",
+   "values": {
+    "name": "Caibo",
+    "artist_type": "band",
+    "formed_year": 2005
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:los-casinos",
+   "tipo": "artist",
+   "nombre": "Los Casinos",
+   "values": {
+    "name": "Los Casinos",
+    "artist_type": "band",
+    "formed_year": 1965
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:gaiteros-de-pillopo",
+   "tipo": "artist",
+   "nombre": "Gaiteros de Pillopo",
+   "values": {
+    "name": "Gaiteros de Pillopo",
+    "artist_type": "band"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:el-club-de-amigos-los-mejores-del-amor",
+   "tipo": "artist",
+   "nombre": "El Club de Amigos Los Mejores del Amor",
+   "values": {
+    "name": "El Club de Amigos Los Mejores del Amor",
+    "artist_type": "band",
+    "formed_year": 2019
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:tazajo_tamboo",
+   "tipo": "artist",
+   "nombre": "Tazajo Tamboo",
+   "values": {
+    "name": "Tazajo Tamboo",
+    "artist_type": "band"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:technicolor-1",
+   "tipo": "artist",
+   "nombre": "Technicolor",
+   "values": {
+    "name": "Technicolor",
+    "artist_type": "band",
+    "formed_year": 2014
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:symbiotic_faith",
+   "tipo": "artist",
+   "nombre": "Symbiotic Faith",
+   "values": {
+    "name": "Symbiotic Faith",
+    "artist_type": "band",
+    "formed_year": 2006
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:bacanos",
+   "tipo": "artist",
+   "nombre": "Bacanos",
+   "values": {
+    "name": "Bacanos",
+    "artist_type": "band",
+    "formed_year": 1998
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:vhg",
+   "tipo": "artist",
+   "nombre": "VHG",
+   "values": {
+    "name": "VHG",
+    "artist_type": "band",
+    "formed_year": 1989
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:montesanto",
+   "tipo": "artist",
+   "nombre": "Montesanto",
+   "values": {
+    "name": "Montesanto",
+    "artist_type": "band",
+    "formed_year": 2015
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:grupo-carangano",
+   "tipo": "artist",
+   "nombre": "Grupo Carangano",
+   "values": {
+    "name": "Grupo Carangano",
+    "artist_type": "band"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:digital_decay",
+   "tipo": "artist",
+   "nombre": "Digital Decay",
+   "values": {
+    "name": "Digital Decay",
+    "artist_type": "band",
+    "formed_year": 2003
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:conjunto-saladillo",
+   "tipo": "artist",
+   "nombre": "Conjunto Saladillo",
+   "values": {
+    "name": "Conjunto Saladillo",
+    "artist_type": "band",
+    "formed_year": 1962
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:chimo-psicodelico",
+   "tipo": "artist",
+   "nombre": "Chimó Psicodélico",
+   "values": {
+    "name": "Chimó Psicodélico",
+    "artist_type": "band",
+    "formed_year": 2015
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:siparia-deltones",
+   "tipo": "artist",
+   "nombre": "Siparia Deltones",
+   "values": {
+    "name": "Siparia Deltones",
+    "artist_type": "band",
+    "formed_year": 1964
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:artist:scorched-earth-6",
+   "tipo": "artist",
+   "nombre": "Scorched Earth",
+   "values": {
+    "name": "Scorched Earth",
+    "artist_type": "band"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:person:kusari-1",
+   "tipo": "person",
+   "nombre": "kusari",
+   "values": {
+    "name": "kusari"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:person:gl1tchhhvkvmv",
+   "tipo": "person",
+   "nombre": "gL1tChhhvkVmv",
+   "values": {
+    "name": "gL1tChhhvkVmv"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:person:prieto-gang",
+   "tipo": "person",
+   "nombre": "Prieto Gang",
+   "values": {
+    "name": "Prieto Gang"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:person:el-otro-polo",
+   "tipo": "person",
+   "nombre": "El Otro Polo",
+   "values": {
+    "name": "El Otro Polo"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:person:rafael-bacallao",
+   "tipo": "person",
+   "nombre": "Rafael Bacallao",
+   "values": {
+    "name": "Rafael Bacallao"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:person:bearsbeetsbattlestar",
+   "tipo": "person",
+   "nombre": "bearsbeetsbattlestar",
+   "values": {
+    "name": "bearsbeetsbattlestar"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:person:escuela-de-vuelo",
+   "tipo": "person",
+   "nombre": "escuela de vuelo",
+   "values": {
+    "name": "escuela de vuelo"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:person:llanero-electrico",
+   "tipo": "person",
+   "nombre": "Llanero Eléctrico",
+   "values": {
+    "name": "Llanero Eléctrico"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:person:djalvaro",
+   "tipo": "person",
+   "nombre": "djALVARO",
+   "values": {
+    "name": "djALVARO"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:person:victador",
+   "tipo": "person",
+   "nombre": "Victador",
+   "values": {
+    "name": "Victador"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:person:isaac-sasson",
+   "tipo": "person",
+   "nombre": "Isaac Sasson",
+   "values": {
+    "name": "Isaac Sasson"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:person:ebot",
+   "tipo": "person",
+   "nombre": "Ebot",
+   "values": {
+    "name": "Ebot"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:person:nigu-moka",
+   "tipo": "person",
+   "nombre": "Nigu Moka",
+   "values": {
+    "name": "Nigu Moka"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:person:sebastian-cova-1",
+   "tipo": "person",
+   "nombre": "Sebastián Cova",
+   "values": {
+    "name": "Sebastián Cova"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:person:paaris",
+   "tipo": "person",
+   "nombre": "PAARIS",
+   "values": {
+    "name": "PAARIS"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:person:solo-soul",
+   "tipo": "person",
+   "nombre": "Solo Soul",
+   "values": {
+    "name": "Solo Soul"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:person:yei-1",
+   "tipo": "person",
+   "nombre": "YEI",
+   "values": {
+    "name": "YEI"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:person:bolas-criollas",
+   "tipo": "person",
+   "nombre": "bolas criollas",
+   "values": {
+    "name": "bolas criollas"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:person:gustavo-casas-y-los-que-buscan",
+   "tipo": "person",
+   "nombre": "Gustavo Casas y los Que Buscan",
+   "values": {
+    "name": "Gustavo Casas y los Que Buscan"
+   },
+   "avisos": [
+    "nombre sospechoso (multiple_people): parece una lista de varias personas"
+   ],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:person:hilandera",
+   "tipo": "person",
+   "nombre": "Hilandera",
+   "values": {
+    "name": "Hilandera"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:person:miguel-el-enano-gonzalez",
+   "tipo": "person",
+   "nombre": "Miguel \"El Enano\" González",
+   "values": {
+    "name": "Miguel \"El Enano\" González"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:person:federico-jr",
+   "tipo": "person",
+   "nombre": "Federíco Jr.",
+   "values": {
+    "name": "Federíco Jr."
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:person:swan-durh",
+   "tipo": "person",
+   "nombre": "swan durh",
+   "values": {
+    "name": "swan durh"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:person:cloudy-2",
+   "tipo": "person",
+   "nombre": "cloudy",
+   "values": {
+    "name": "cloudy"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:person:sibilino",
+   "tipo": "person",
+   "nombre": "Sibilino",
+   "values": {
+    "name": "Sibilino"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:person:coyote-dax",
+   "tipo": "person",
+   "nombre": "Coyote Dax",
+   "values": {
+    "name": "Coyote Dax"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:person:isra",
+   "tipo": "person",
+   "nombre": "Isra",
+   "values": {
+    "name": "Isra"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:person:spell-1",
+   "tipo": "person",
+   "nombre": "Spell",
+   "values": {
+    "name": "Spell"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:person:recordatorio",
+   "tipo": "person",
+   "nombre": "Recordatorio",
+   "values": {
+    "name": "Recordatorio"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:person:iran-2",
+   "tipo": "person",
+   "nombre": "Irán",
+   "values": {
+    "name": "Irán"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:person:gabo-xeart",
+   "tipo": "person",
+   "nombre": "Gabo Xeart",
+   "values": {
+    "name": "Gabo Xeart"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:person:alonso-casual",
+   "tipo": "person",
+   "nombre": "Alonso Casual",
+   "values": {
+    "name": "Alonso Casual"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:person:claudia-lizardo",
+   "tipo": "person",
+   "nombre": "Claudia Lizardo",
+   "values": {
+    "name": "Claudia Lizardo"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:person:monno-briceno",
+   "tipo": "person",
+   "nombre": "Monno Briceno",
+   "values": {
+    "name": "Monno Briceno"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:person:mau-montaner",
+   "tipo": "person",
+   "nombre": "Mau Montaner",
+   "values": {
+    "name": "Mau Montaner"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:person:ricky-montaner",
+   "tipo": "person",
+   "nombre": "Ricky Montaner",
+   "values": {
+    "name": "Ricky Montaner"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:person:jey-da-polemic",
+   "tipo": "person",
+   "nombre": "Jey da Polemic",
+   "values": {
+    "name": "Jey da Polemic"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:person:maria-pura-imhof",
+   "tipo": "person",
+   "nombre": "María Pura Imhof",
+   "values": {
+    "name": "María Pura Imhof"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:person:coco-arocha",
+   "tipo": "person",
+   "nombre": "Coco Arocha",
+   "values": {
+    "name": "Coco Arocha"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:person:mon-carrillo",
+   "tipo": "person",
+   "nombre": "Mon Carrillo",
+   "values": {
+    "name": "Mon Carrillo"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:person:eddie-hermida",
+   "tipo": "person",
+   "nombre": "Eddie Hermida",
+   "values": {
+    "name": "Eddie Hermida"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:person:beto-borjas",
+   "tipo": "person",
+   "nombre": "Beto Borjas",
+   "values": {
+    "name": "Beto Borjas"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:person:edson_velandia",
+   "tipo": "person",
+   "nombre": "Edson Velandia",
+   "values": {
+    "name": "Edson Velandia"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:person:puertoazul",
+   "tipo": "person",
+   "nombre": "puertoazul",
+   "values": {
+    "name": "puertoazul"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:person:sr-presidente",
+   "tipo": "person",
+   "nombre": "Sr. Presidente",
+   "values": {
+    "name": "Sr. Presidente"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:person:sergio-valentin",
+   "tipo": "person",
+   "nombre": "Sergio Valentín",
+   "values": {
+    "name": "Sergio Valentín"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:person:demarchi",
+   "tipo": "person",
+   "nombre": "Demarchi",
+   "values": {
+    "name": "Demarchi"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:person:enio-la-formula",
+   "tipo": "person",
+   "nombre": "Enio La Formula",
+   "values": {
+    "name": "Enio La Formula"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:person:beet-acosta",
+   "tipo": "person",
+   "nombre": "Beet Acosta",
+   "values": {
+    "name": "Beet Acosta"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym-nuevos:person:billy-ocean",
+   "tipo": "person",
+   "nombre": "Billy Ocean",
+   "values": {
+    "name": "Billy Ocean"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_al-cruzar-la-calle_al-cruzar-la-calle",
+   "tipo": "album",
+   "nombre": "…Al cruzar la calle",
+   "values": {
+    "title": "…Al cruzar la calle",
+    "release_year": 2012,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_100_grados_clima_de_extasis",
+   "tipo": "album",
+   "nombre": "Clima de Extásis",
+   "values": {
+    "title": "Clima de Extásis",
+    "release_year": 1992,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_100_grados_viendo_ruidos",
+   "tipo": "album",
+   "nombre": "Viendo Ruidos",
+   "values": {
+    "title": "Viendo Ruidos",
+    "release_year": 1997,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_187_ciudad-del-terror",
+   "tipo": "album",
+   "nombre": "Ciudad del Terror",
+   "values": {
+    "title": "Ciudad del Terror",
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_187_la-casa-encendida",
+   "tipo": "album",
+   "nombre": "La Casa Encendida",
+   "values": {
+    "title": "La Casa Encendida",
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_187_lirica-plastica",
+   "tipo": "album",
+   "nombre": "Lírica Plástica",
+   "values": {
+    "title": "Lírica Plástica",
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_187_what-cha-doin",
+   "tipo": "album",
+   "nombre": "What Cha Doin",
+   "values": {
+    "title": "What Cha Doin",
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_ep_7_balazos_7_balazos",
+   "tipo": "album",
+   "nombre": "7 Balazos",
+   "values": {
+    "title": "7 Balazos",
+    "release_year": 2003,
+    "album_type": "ep"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_ep_a-raiz-de-nuevas-causas_vol-iv",
+   "tipo": "album",
+   "nombre": "Vol. IV",
+   "values": {
+    "title": "Vol. IV",
+    "release_year": 2023,
+    "album_type": "ep"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_a-raiz-de-nuevas-causas_supongo-que-es-normal",
+   "tipo": "album",
+   "nombre": "Supongo que es Normal",
+   "values": {
+    "title": "Supongo que es Normal",
+    "release_year": 2024,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_impery-oculto-sur-agonia-infernal_trilogia-oscura-la-peste-por-doquier",
+   "tipo": "album",
+   "nombre": "Trilogía oscura: La peste por doquier",
+   "values": {
+    "title": "Trilogía oscura: La peste por doquier",
+    "release_year": 2015,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_alban-arthuan_los-peligro-de-jugar-con-una-caja-de-fosforo",
+   "tipo": "album",
+   "nombre": "Los Peligro de Jugar con una Caja de Fósforo",
+   "values": {
+    "title": "Los Peligro de Jugar con una Caja de Fósforo",
+    "release_year": 2005,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_ep_alce_de_viaje",
+   "tipo": "album",
+   "nombre": "De viaje",
+   "values": {
+    "title": "De viaje",
+    "release_year": 2014,
+    "album_type": "ep"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_ananta_night-and-daydream",
+   "tipo": "album",
+   "nombre": "Night and Daydream",
+   "values": {
+    "title": "Night and Daydream",
+    "release_year": 1978,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_apache_f3_original_combination",
+   "tipo": "album",
+   "nombre": "Original Combination",
+   "values": {
+    "title": "Original Combination",
+    "release_year": 2016,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_apache_ahora-o-nunca",
+   "tipo": "album",
+   "nombre": "Ahora o nunca",
+   "values": {
+    "title": "Ahora o nunca",
+    "release_year": 2017,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_apache_apache-1",
+   "tipo": "album",
+   "nombre": "Apache",
+   "values": {
+    "title": "Apache",
+    "release_year": 2020,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_apache_ocho",
+   "tipo": "album",
+   "nombre": "Ocho",
+   "values": {
+    "title": "Ocho",
+    "release_year": 2021,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_apache_territorio-apache",
+   "tipo": "album",
+   "nombre": "Territorio Apache",
+   "values": {
+    "title": "Territorio Apache",
+    "release_year": 2023,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_apache_territorio-apache-vol_2-champion-sound",
+   "tipo": "album",
+   "nombre": "Territorio: Apache Vol.2 - Champion Sound",
+   "values": {
+    "title": "Territorio: Apache Vol.2 - Champion Sound",
+    "release_year": 2024,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_apache-reke_apuesta-al-negro",
+   "tipo": "album",
+   "nombre": "Apuesta al negro",
+   "values": {
+    "title": "Apuesta al negro",
+    "release_year": 2025,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_mixtape_apache_sin-afina-mucho",
+   "tipo": "album",
+   "nombre": "Sin afina' mucho",
+   "values": {
+    "title": "Sin afina' mucho",
+    "release_year": 2009,
+    "album_type": "other"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_mixtape_apache-canserbero_apa-y-can",
+   "tipo": "album",
+   "nombre": "Apa y Can",
+   "values": {
+    "title": "Apa y Can",
+    "release_year": 2013,
+    "album_type": "other"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_ep_apache_songo",
+   "tipo": "album",
+   "nombre": "Songo",
+   "values": {
+    "title": "Songo",
+    "release_year": 2023,
+    "album_type": "ep"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_apache-canserbero_stop",
+   "tipo": "album",
+   "nombre": "Stop",
+   "values": {
+    "title": "Stop",
+    "release_year": 2016,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_apache_el-campeon",
+   "tipo": "album",
+   "nombre": "El campeón",
+   "values": {
+    "title": "El campeón",
+    "release_year": 2017,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_apache_biografia",
+   "tipo": "album",
+   "nombre": "Biografía",
+   "values": {
+    "title": "Biografía",
+    "release_year": 2018,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_apache_quimica-sexual",
+   "tipo": "album",
+   "nombre": "Química sexual",
+   "values": {
+    "title": "Química sexual",
+    "release_year": 2018,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_vargas-apache_la-energia",
+   "tipo": "album",
+   "nombre": "La energía",
+   "values": {
+    "title": "La energía",
+    "release_year": 2019,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_isra-apache_oveja-negra",
+   "tipo": "album",
+   "nombre": "Oveja negra",
+   "values": {
+    "title": "Oveja negra",
+    "release_year": 2020,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_motherflowers-apache_quien-lo-diria",
+   "tipo": "album",
+   "nombre": "Quién lo diría?",
+   "values": {
+    "title": "Quién lo diría?",
+    "release_year": 2023,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_willie-deville-apache-ergo-pro_amilcar",
+   "tipo": "album",
+   "nombre": "Amílcar",
+   "values": {
+    "title": "Amílcar",
+    "release_year": 2024,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_pedro-castillo_algo-personal",
+   "tipo": "album",
+   "nombre": "Algo Personal",
+   "values": {
+    "title": "Algo Personal",
+    "release_year": 1994,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_pedro-castillo_dibujando-historias",
+   "tipo": "album",
+   "nombre": "Dibujando Historias",
+   "values": {
+    "title": "Dibujando Historias",
+    "release_year": 1995,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_pedro-castillo_volver-al-futuro",
+   "tipo": "album",
+   "nombre": "Volver al Futuro",
+   "values": {
+    "title": "Volver al Futuro",
+    "release_year": 2003,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_tsee-mud-bacro-lsd_tsee-mud-bacro-lsd",
+   "tipo": "album",
+   "nombre": "Tsee Mud... Bacro... LSD",
+   "values": {
+    "title": "Tsee Mud... Bacro... LSD",
+    "release_year": 2012,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_ep_bioshaft_acoustic-live-sessions",
+   "tipo": "album",
+   "nombre": "Acoustic Live Sessions",
+   "values": {
+    "title": "Acoustic Live Sessions",
+    "release_year": 2013,
+    "album_type": "ep"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_bioshaft_no-somos-libres-fiesta-animal-maxi-single",
+   "tipo": "album",
+   "nombre": "No somos libres / Fiesta animal [Maxi Single]",
+   "values": {
+    "title": "No somos libres / Fiesta animal [Maxi Single]",
+    "release_year": 2014,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_bioshaft_repeleme-sr-desgracia-maxi-single",
+   "tipo": "album",
+   "nombre": "Repéleme / Sr. Desgracia [Maxi Single]",
+   "values": {
+    "title": "Repéleme / Sr. Desgracia [Maxi Single]",
+    "release_year": 2014,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_bostas-brain_atleta-del-sonido",
+   "tipo": "album",
+   "nombre": "Atleta del sonido",
+   "values": {
+    "title": "Atleta del sonido",
+    "release_year": 2016,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_desorden-publico-c4-trio_pa-fuera",
+   "tipo": "album",
+   "nombre": "Pa' fuera",
+   "values": {
+    "title": "Pa' fuera",
+    "release_year": 2016,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_luis-enrique-c4-trio_tiempo-al-tiempo",
+   "tipo": "album",
+   "nombre": "Tiempo al tiempo",
+   "values": {
+    "title": "Tiempo al tiempo",
+    "release_year": 2019,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_hamilton-de-holanda-c4-trio_tembla",
+   "tipo": "album",
+   "nombre": "Tembla",
+   "values": {
+    "title": "Tembla",
+    "release_year": 2024,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_luis-enrique-c4-trio_aguacero",
+   "tipo": "album",
+   "nombre": "Aguacero",
+   "values": {
+    "title": "Aguacero",
+    "release_year": 2024,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_movida-acustica-urbana_en-vivo",
+   "tipo": "album",
+   "nombre": "En vivo",
+   "values": {
+    "title": "En vivo",
+    "release_year": 2009,
+    "album_type": "live_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_captan-obvio_bedroom-covers-and-bathroom-rarities",
+   "tipo": "album",
+   "nombre": "Bedroom Covers & Bathroom Rarities",
+   "values": {
+    "title": "Bedroom Covers & Bathroom Rarities",
+    "release_year": 2008,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_captan-obvio_die-captan-obvio-die",
+   "tipo": "album",
+   "nombre": "Die Captan, obvio Die!!!",
+   "values": {
+    "title": "Die Captan, obvio Die!!!",
+    "release_year": 2009,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_captan-obvio_la-mala-hierba-nunca-muere",
+   "tipo": "album",
+   "nombre": "La mala hierba nunca muere",
+   "values": {
+    "title": "La mala hierba nunca muere",
+    "release_year": 2012,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_ep_rotator-krumble-cardopusher_trash-n-ready-tour-ep",
+   "tipo": "album",
+   "nombre": "Trash 'n' Ready Tour EP",
+   "values": {
+    "title": "Trash 'n' Ready Tour EP",
+    "release_year": 2006,
+    "album_type": "ep"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_ep_rotator-cardopusher_jump-da-fuck-up-fighters-unite",
+   "tipo": "album",
+   "nombre": "Jump Da Fuck Up / Fighters Unite",
+   "values": {
+    "title": "Jump Da Fuck Up / Fighters Unite",
+    "release_year": 2008,
+    "album_type": "ep"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_ep_cardopusher_mutant-dubstep-vol-2",
+   "tipo": "album",
+   "nombre": "Mutant Dubstep Vol. 2",
+   "values": {
+    "title": "Mutant Dubstep Vol. 2",
+    "release_year": 2008,
+    "album_type": "ep"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_ep_cardopusher-nehuen_split-02",
+   "tipo": "album",
+   "nombre": "Split 02",
+   "values": {
+    "title": "Split 02",
+    "release_year": 2014,
+    "album_type": "ep"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_ep_cardopusher-nehuen_split-03",
+   "tipo": "album",
+   "nombre": "Split 03",
+   "values": {
+    "title": "Split 03",
+    "release_year": 2015,
+    "album_type": "ep"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_ep_cardopusher_zgemi",
+   "tipo": "album",
+   "nombre": "ZGEMI",
+   "values": {
+    "title": "ZGEMI",
+    "release_year": 2016,
+    "album_type": "ep"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_ep_bloody-mary-cardopusher_conformity-kills-ep",
+   "tipo": "album",
+   "nombre": "Conformity Kills EP",
+   "values": {
+    "title": "Conformity Kills EP",
+    "release_year": 2020,
+    "album_type": "ep"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_ep_cardopusher_psyops-part-two",
+   "tipo": "album",
+   "nombre": "Psyops Part Two",
+   "values": {
+    "title": "Psyops Part Two",
+    "release_year": 2020,
+    "album_type": "ep"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_cardopusher_bring-da-fire-caffeine-rich-kola-nut",
+   "tipo": "album",
+   "nombre": "Bring Da Fire / Caffeine Rich Kola Nut",
+   "values": {
+    "title": "Bring Da Fire / Caffeine Rich Kola Nut",
+    "release_year": 2005,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_quarta330-cardopusher_homeless-quarta-330-rmx-sabacco",
+   "tipo": "album",
+   "nombre": "Homeless (Quarta 330 rmx) / Sabacco",
+   "values": {
+    "title": "Homeless (Quarta 330 rmx) / Sabacco",
+    "release_year": 2008,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_djmix_cardopusher_xlr8r-256",
+   "tipo": "album",
+   "nombre": "XLR8R 256",
+   "values": {
+    "title": "XLR8R 256",
+    "release_year": 2012,
+    "album_type": "other"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_djmix_cardopusher_tsugi-podcast-307",
+   "tipo": "album",
+   "nombre": "Tsugi Podcast 307",
+   "values": {
+    "title": "Tsugi Podcast 307",
+    "release_year": 2013,
+    "album_type": "other"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_djmix_cardopusher_in-session",
+   "tipo": "album",
+   "nombre": "In Session",
+   "values": {
+    "title": "In Session",
+    "release_year": 2015,
+    "album_type": "other"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_djmix_cardopusher_lyo-122",
+   "tipo": "album",
+   "nombre": "LYO #122",
+   "values": {
+    "title": "LYO #122",
+    "release_year": 2019,
+    "album_type": "other"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_djmix_cardopusher_dame-music-mix-series-002",
+   "tipo": "album",
+   "nombre": "Dame-Music Mix Series 002",
+   "values": {
+    "title": "Dame-Music Mix Series 002",
+    "release_year": 2020,
+    "album_type": "other"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_djmix_cardopusher_the-forgotten-ccxi",
+   "tipo": "album",
+   "nombre": "The Forgotten CCXI",
+   "values": {
+    "title": "The Forgotten CCXI",
+    "release_year": 2020,
+    "album_type": "other"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_djmix_cardopusher_fist-mix-17",
+   "tipo": "album",
+   "nombre": "FIST MIX 17",
+   "values": {
+    "title": "FIST MIX 17",
+    "release_year": 2021,
+    "album_type": "other"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_djmix_cardopusher_intercell_049",
+   "tipo": "album",
+   "nombre": "Intercell.049",
+   "values": {
+    "title": "Intercell.049",
+    "release_year": 2022,
+    "album_type": "other"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_djmix_cardopusher-safety-trance_boiler-room-caracas",
+   "tipo": "album",
+   "nombre": "Boiler Room: Caracas",
+   "values": {
+    "title": "Boiler Room: Caracas",
+    "release_year": 2024,
+    "album_type": "other"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_carlos-angola_nosotros-celebramos-los-motivos-ya-vendran",
+   "tipo": "album",
+   "nombre": "Nosotros celebramos, los motivos ya vendrán",
+   "values": {
+    "title": "Nosotros celebramos, los motivos ya vendrán",
+    "release_year": 2017,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_carlos-angola_historias-del-terror-cronologia-acustica-de-un-adios-sin-adem",
+   "tipo": "album",
+   "nombre": "Historias del terror: Cronología acústica de un adiós sin ademán",
+   "values": {
+    "title": "Historias del terror: Cronología acústica de un adiós sin ademán",
+    "release_year": 2019,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_chunktrade_demo",
+   "tipo": "album",
+   "nombre": "Demo",
+   "values": {
+    "title": "Demo",
+    "release_year": 2003,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_cuarto-poder_tamos-bien",
+   "tipo": "album",
+   "nombre": "'Tamos bien",
+   "values": {
+    "title": "'Tamos bien",
+    "release_year": 2005,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_cuarto_poder_4x4to",
+   "tipo": "album",
+   "nombre": "4x4to",
+   "values": {
+    "title": "4x4to",
+    "release_year": 2013,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_mixtape_apache_sin-afina-mucho",
+   "tipo": "album",
+   "nombre": "Sin afina' mucho",
+   "values": {
+    "title": "Sin afina' mucho",
+    "release_year": 2009,
+    "album_type": "other"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_apache_afinando",
+   "tipo": "album",
+   "nombre": "Afinando",
+   "values": {
+    "title": "Afinando",
+    "release_year": 2010,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_deras_maria",
+   "tipo": "album",
+   "nombre": "María",
+   "values": {
+    "title": "María",
+    "release_year": 2015,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_dandy-leon_todo-es-bello",
+   "tipo": "album",
+   "nombre": "Todo es bello",
+   "values": {
+    "title": "Todo es bello",
+    "release_year": 2016,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_danto_danto",
+   "tipo": "album",
+   "nombre": "Danto",
+   "values": {
+    "title": "Danto",
+    "release_year": 2003,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_ep_desinformados_playa-nudista",
+   "tipo": "album",
+   "nombre": "Playa nudista",
+   "values": {
+    "title": "Playa nudista",
+    "release_year": 2012,
+    "album_type": "ep"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_desinformados_lago-sobre-el-puente",
+   "tipo": "album",
+   "nombre": "Lago sobre el puente",
+   "values": {
+    "title": "Lago sobre el puente",
+    "release_year": 2015,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_el-clan-de-victor-dimension-latina_el-clan-de-victor-and-dimension-latina",
+   "tipo": "album",
+   "nombre": "El Clan de Victor & Dimension Latina",
+   "values": {
+    "title": "El Clan de Victor & Dimension Latina",
+    "release_year": 1972,
+    "album_type": "studio_album"
+   },
+   "avisos": [
+    "el artista 270 ya tiene un disco con ese título (clave compacta)"
+   ],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_dimension-latina-76_salsa-brava",
+   "tipo": "album",
+   "nombre": "Salsa Brava",
+   "values": {
+    "title": "Salsa Brava",
+    "release_year": 1975,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_dimension-latina-77_internacional",
+   "tipo": "album",
+   "nombre": "Internacional",
+   "values": {
+    "title": "Internacional",
+    "release_year": 1976,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_oscar-de-leon-vs-dimension-latina_confrontacion-de-salsa",
+   "tipo": "album",
+   "nombre": "Confrontacion de Salsa",
+   "values": {
+    "title": "Confrontacion de Salsa",
+    "release_year": 2007,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_dimension-latina_paranpanpan-el-mala-suerte",
+   "tipo": "album",
+   "nombre": "Paranpanpan / El mala suerte",
+   "values": {
+    "title": "Paranpanpan / El mala suerte",
+    "release_year": 1976,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_comp_dimension-latina-billos-caracas-boys_dimension-vs-billo",
+   "tipo": "album",
+   "nombre": "Dimension vs Billo",
+   "values": {
+    "title": "Dimension vs Billo",
+    "release_year": 1975,
+    "album_type": "compilation"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_comp_billos-caracas-boys-dimension-latina_billo-vs-dimension",
+   "tipo": "album",
+   "nombre": "Billo vs. Dimension",
+   "values": {
+    "title": "Billo vs. Dimension",
+    "release_year": 1976,
+    "album_type": "compilation"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_comp_dimension-latina-billos-caracas-boys_billos-vs-dimension-latina",
+   "tipo": "album",
+   "nombre": "Billo's vs. Dimension Latina",
+   "values": {
+    "title": "Billo's vs. Dimension Latina",
+    "release_year": 1977,
+    "album_type": "compilation"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_dolli_un_amigo_de_un_amigo_que_no_soy_yo",
+   "tipo": "album",
+   "nombre": "Un amigo de un amigo que no soy yo",
+   "values": {
+    "title": "Un amigo de un amigo que no soy yo",
+    "release_year": 2012,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_dolli_coloreado",
+   "tipo": "album",
+   "nombre": "Coloreado",
+   "values": {
+    "title": "Coloreado",
+    "release_year": 2016,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_ep_dolli_en_la_selva_de_bambu",
+   "tipo": "album",
+   "nombre": "En la Selva de Bambú",
+   "values": {
+    "title": "En la Selva de Bambú",
+    "release_year": 2011,
+    "album_type": "ep"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_ep_dolli_robandome_el_picnic",
+   "tipo": "album",
+   "nombre": "Robándome el Picnic",
+   "values": {
+    "title": "Robándome el Picnic",
+    "release_year": 2011,
+    "album_type": "ep"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_ep_dolli_colorado",
+   "tipo": "album",
+   "nombre": "Colorado",
+   "values": {
+    "title": "Colorado",
+    "release_year": 2014,
+    "album_type": "ep"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_ep_dolli_perricola",
+   "tipo": "album",
+   "nombre": "Perricola",
+   "values": {
+    "title": "Perricola",
+    "release_year": 2019,
+    "album_type": "ep"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_el-globo-oscuro_entre-el-signo-y-la-calma",
+   "tipo": "album",
+   "nombre": "Entre el Signo y la Calma",
+   "values": {
+    "title": "Entre el Signo y la Calma",
+    "release_year": 2021,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_el-globo-oscuro_villiers-de-lisle-adam",
+   "tipo": "album",
+   "nombre": "Villiers de l'Isle Adam",
+   "values": {
+    "title": "Villiers de l'Isle Adam",
+    "release_year": 2022,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_ep_el-globo-oscuro_non-omnis-moriar-ep",
+   "tipo": "album",
+   "nombre": "Non Omnis Moriar EP",
+   "values": {
+    "title": "Non Omnis Moriar EP",
+    "release_year": 2016,
+    "album_type": "ep"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_ep_el-globo-oscuro_la-elocuencia-de-los-fantasmas",
+   "tipo": "album",
+   "nombre": "La elocuencia de los fantasmas",
+   "values": {
+    "title": "La elocuencia de los fantasmas",
+    "release_year": 2020,
+    "album_type": "ep"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_el-viaje-de-los-antiguos_capitulo-1",
+   "tipo": "album",
+   "nombre": "Capítulo 1",
+   "values": {
+    "title": "Capítulo 1",
+    "release_year": 2018,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_el-viaje-de-los-antiguos_cinco-almas",
+   "tipo": "album",
+   "nombre": "Cinco almas",
+   "values": {
+    "title": "Cinco almas",
+    "release_year": 2021,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_ep_elaine_desnuditos_ep",
+   "tipo": "album",
+   "nombre": "Desnuditos EP",
+   "values": {
+    "title": "Desnuditos EP",
+    "release_year": 2009,
+    "album_type": "ep"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_adrenalina-caribe-evio-di-marzo_evio-di-marzo-adrenalina-caribe",
+   "tipo": "album",
+   "nombre": "Evio Di Marzo / Adrenalina Caribe",
+   "values": {
+    "title": "Evio Di Marzo / Adrenalina Caribe",
+    "release_year": 1987,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_evio-di-marzo_evio-di-marzo-adrenalina-caribe",
+   "tipo": "album",
+   "nombre": "Evio Di Marzo - Adrenalina Caribe",
+   "values": {
+    "title": "Evio Di Marzo - Adrenalina Caribe",
+    "release_year": 2025,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_frank-moron_manana",
+   "tipo": "album",
+   "nombre": "Mañana",
+   "values": {
+    "title": "Mañana",
+    "release_year": 2020,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_furia-de-buzo-ciego__por-que-no-me-escribes",
+   "tipo": "album",
+   "nombre": "¿Por qué no me escribes?",
+   "values": {
+    "title": "¿Por qué no me escribes?",
+    "release_year": 2004,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_rodrigo-solo_tonada-para-simon",
+   "tipo": "album",
+   "nombre": "Tonada para Simón",
+   "values": {
+    "title": "Tonada para Simón",
+    "release_year": 2015,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_rodrigo-solo_no-estas-solo",
+   "tipo": "album",
+   "nombre": "No estás solo",
+   "values": {
+    "title": "No estás solo",
+    "release_year": 2015,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_henrique-lazo_latino-americano",
+   "tipo": "album",
+   "nombre": "Latino americano",
+   "values": {
+    "title": "Latino americano",
+    "release_year": 1973,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_ep_indigo_indigo",
+   "tipo": "album",
+   "nombre": "Indigo",
+   "values": {
+    "title": "Indigo",
+    "release_year": 2017,
+    "album_type": "ep"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_jose-y-el-toro_retrato",
+   "tipo": "album",
+   "nombre": "Retrato",
+   "values": {
+    "title": "Retrato",
+    "release_year": 2015,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_jose-y-el-toro_exitos-melodramaticos-vol-1",
+   "tipo": "album",
+   "nombre": "Éxitos melodramáticos, Vol. 1",
+   "values": {
+    "title": "Éxitos melodramáticos, Vol. 1",
+    "release_year": 2021,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_jose-y-el-toro_aunque-esto-se-acabe",
+   "tipo": "album",
+   "nombre": "Aunque esto se acabe",
+   "values": {
+    "title": "Aunque esto se acabe",
+    "release_year": 2026,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_ep_jose-y-el-toro_la-vida-lenta",
+   "tipo": "album",
+   "nombre": "La vida lenta",
+   "values": {
+    "title": "La vida lenta",
+    "release_year": 2024,
+    "album_type": "ep"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_jose-y-el-toro_de-hierro",
+   "tipo": "album",
+   "nombre": "De hierro",
+   "values": {
+    "title": "De hierro",
+    "release_year": 2019,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_jose-y-el-toro-el-arcas_reloj-ingrato",
+   "tipo": "album",
+   "nombre": "Reloj ingrato",
+   "values": {
+    "title": "Reloj ingrato",
+    "release_year": 2022,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_okills-jose-y-el-toro_viejitos",
+   "tipo": "album",
+   "nombre": "Viejitos",
+   "values": {
+    "title": "Viejitos",
+    "release_year": 2024,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_motherflowers-jose-y-el-toro_infierno-favorito",
+   "tipo": "album",
+   "nombre": "Infierno favorito",
+   "values": {
+    "title": "Infierno favorito",
+    "release_year": 2025,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_ep_jovenes-y-sexys_bruno-ep",
+   "tipo": "album",
+   "nombre": "Bruno EP",
+   "values": {
+    "title": "Bruno EP",
+    "release_year": 2008,
+    "album_type": "ep"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_ep_jovenes-y-sexys_bruno-remixed",
+   "tipo": "album",
+   "nombre": "Bruno Remixed",
+   "values": {
+    "title": "Bruno Remixed",
+    "release_year": 2010,
+    "album_type": "ep"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_juan_peyote_juan_peyote",
+   "tipo": "album",
+   "nombre": "Juan Peyote",
+   "values": {
+    "title": "Juan Peyote",
+    "release_year": 1997,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_ep_juan_peyote_juan_peyote",
+   "tipo": "album",
+   "nombre": "Juan Peyote",
+   "values": {
+    "title": "Juan Peyote",
+    "release_year": 1995,
+    "album_type": "ep"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_judy_buendia_y_los_impostores_la_cantante_calza_37_",
+   "tipo": "album",
+   "nombre": "La Cantante Calza 37½",
+   "values": {
+    "title": "La Cantante Calza 37½",
+    "release_year": 2011,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_ep_kungfu-club_3001",
+   "tipo": "album",
+   "nombre": "3001",
+   "values": {
+    "title": "3001",
+    "release_year": 2016,
+    "album_type": "ep"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_la-pagana-trinidad_de-donde-vengo",
+   "tipo": "album",
+   "nombre": "De donde vengo",
+   "values": {
+    "title": "De donde vengo",
+    "release_year": 2020,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_la-pagana-trinidad_de-donde-vengo",
+   "tipo": "album",
+   "nombre": "De donde vengo",
+   "values": {
+    "title": "De donde vengo",
+    "release_year": 2016,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_la-puta-electrica_demos-1994-2007",
+   "tipo": "album",
+   "nombre": "Demos 1994-2007",
+   "values": {
+    "title": "Demos 1994-2007",
+    "release_year": 2007,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_la-puta-electrica_veneno",
+   "tipo": "album",
+   "nombre": "Veneno",
+   "values": {
+    "title": "Veneno",
+    "release_year": 2026,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_lado-b_rock-n-roll-show-vol-i",
+   "tipo": "album",
+   "nombre": "Rock n' Roll Show, Vol. I",
+   "values": {
+    "title": "Rock n' Roll Show, Vol. I",
+    "release_year": 2009,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_lebronch_la-fogatina-magica",
+   "tipo": "album",
+   "nombre": "La fogatiña mágica",
+   "values": {
+    "title": "La fogatiña mágica",
+    "release_year": 2018,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_lebronch_fire",
+   "tipo": "album",
+   "nombre": "Fire",
+   "values": {
+    "title": "Fire",
+    "release_year": 2015,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_lebronch_crazy-glue",
+   "tipo": "album",
+   "nombre": "Crazy Glue",
+   "values": {
+    "title": "Crazy Glue",
+    "release_year": 2017,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_lebronch_music-animal",
+   "tipo": "album",
+   "nombre": "Music Animal",
+   "values": {
+    "title": "Music Animal",
+    "release_year": 2024,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_legado_bazar",
+   "tipo": "album",
+   "nombre": "Bazar",
+   "values": {
+    "title": "Bazar",
+    "release_year": 2022,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_legado_mirame",
+   "tipo": "album",
+   "nombre": "Mirame",
+   "values": {
+    "title": "Mirame",
+    "release_year": 2023,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_legado_luces-rojas",
+   "tipo": "album",
+   "nombre": "Luces Rojas",
+   "values": {
+    "title": "Luces Rojas",
+    "release_year": 2023,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_lepster_danko-sur-real-acto-i",
+   "tipo": "album",
+   "nombre": "Danko Sur-Real Acto I",
+   "values": {
+    "title": "Danko Sur-Real Acto I",
+    "release_year": 2019,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_lepster_danko-sur-real-acto-ii",
+   "tipo": "album",
+   "nombre": "Danko Sur-Real, Acto II",
+   "values": {
+    "title": "Danko Sur-Real, Acto II",
+    "release_year": 2020,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_limpiacabezales_asi-paso-en-estocolmo",
+   "tipo": "album",
+   "nombre": "Así pasó en Estocolmo",
+   "values": {
+    "title": "Así pasó en Estocolmo",
+    "release_year": 2014,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_limpiacabezales_escribe-tu-nombre",
+   "tipo": "album",
+   "nombre": "Escribe tu nombre",
+   "values": {
+    "title": "Escribe tu nombre",
+    "release_year": 2019,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_los_007_soy_un_hombre_feliz___la_flor",
+   "tipo": "album",
+   "nombre": "Soy un hombre feliz / La flor",
+   "values": {
+    "title": "Soy un hombre feliz / La flor",
+    "release_year": 1970,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_los-confleis_tu-ne-cede-malis",
+   "tipo": "album",
+   "nombre": "Tu ne cede malis",
+   "values": {
+    "title": "Tu ne cede malis",
+    "release_year": 2017,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_los-humanoides_xyzt",
+   "tipo": "album",
+   "nombre": "XYZT",
+   "values": {
+    "title": "XYZT",
+    "release_year": 2020,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_los-humanoides_moogafonique",
+   "tipo": "album",
+   "nombre": "Moogafonique",
+   "values": {
+    "title": "Moogafonique",
+    "release_year": 2008,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_los-j_no-nos-j-mas",
+   "tipo": "album",
+   "nombre": "No nos [ J ] más",
+   "values": {
+    "title": "No nos [ J ] más",
+    "release_year": 2015,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_ep_los_j_no_vas_a_caer",
+   "tipo": "album",
+   "nombre": "No vas a caer",
+   "values": {
+    "title": "No vas a caer",
+    "release_year": 2014,
+    "album_type": "ep"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_los-j_malandro",
+   "tipo": "album",
+   "nombre": "Malandro",
+   "values": {
+    "title": "Malandro",
+    "release_year": 2015,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_impery-somdark-velork-m_c_c-ghrieving_cantus-maleficorum-bestiae",
+   "tipo": "album",
+   "nombre": "Cantus maleficorum bestiæ",
+   "values": {
+    "title": "Cantus maleficorum bestiæ",
+    "release_year": 2020,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_majarete-sound-machine_afrodisiaco",
+   "tipo": "album",
+   "nombre": "Afrodisíaco",
+   "values": {
+    "title": "Afrodisíaco",
+    "release_year": 2010,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_majarete-sound-machine_real-organico-y-de-baile",
+   "tipo": "album",
+   "nombre": "Real, orgánico y de baile",
+   "values": {
+    "title": "Real, orgánico y de baile",
+    "release_year": 2015,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_majarete-sound-machine_esta-noche",
+   "tipo": "album",
+   "nombre": "Esta noche",
+   "values": {
+    "title": "Esta noche",
+    "release_year": 2020,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_majarete-sound-machine-diveana_me-falta-todo",
+   "tipo": "album",
+   "nombre": "Me falta todo",
+   "values": {
+    "title": "Me falta todo",
+    "release_year": 2020,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_ep_makara_makara-1",
+   "tipo": "album",
+   "nombre": "Makara",
+   "values": {
+    "title": "Makara",
+    "release_year": 2011,
+    "album_type": "ep"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_me-vs-murphy__justsaying",
+   "tipo": "album",
+   "nombre": "#Justsaying",
+   "values": {
+    "title": "#Justsaying",
+    "release_year": 2012,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_me-vs-murphy_786",
+   "tipo": "album",
+   "nombre": "786",
+   "values": {
+    "title": "786",
+    "release_year": 2026,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_me-vs-murphy_valentines",
+   "tipo": "album",
+   "nombre": "Valentines",
+   "values": {
+    "title": "Valentines",
+    "release_year": 2026,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_ep_mermelada-maker_mermelada-maker",
+   "tipo": "album",
+   "nombre": "Mermelada Maker",
+   "values": {
+    "title": "Mermelada Maker",
+    "release_year": 2025,
+    "album_type": "ep"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_metrozubdivision_the_black_album",
+   "tipo": "album",
+   "nombre": "The Black Album",
+   "values": {
+    "title": "The Black Album",
+    "release_year": 2000,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_metrozubdivision_another-self",
+   "tipo": "album",
+   "nombre": "Another Self",
+   "values": {
+    "title": "Another Self",
+    "release_year": 2023,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_metrozubdivision_the-butcher",
+   "tipo": "album",
+   "nombre": "The Butcher",
+   "values": {
+    "title": "The Butcher",
+    "release_year": 2023,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_metrozubdivision_echoes",
+   "tipo": "album",
+   "nombre": "Echoes",
+   "values": {
+    "title": "Echoes",
+    "release_year": 2023,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_miguel-angel-noya_angeles-enviados",
+   "tipo": "album",
+   "nombre": "Angeles enviados",
+   "values": {
+    "title": "Angeles enviados",
+    "release_year": 1990,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_noya-godwin-jurjendal_samliku",
+   "tipo": "album",
+   "nombre": "Samliku",
+   "values": {
+    "title": "Samliku",
+    "release_year": 2019,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_miguel-noya-robert-jurjendal_the-power-of-distance",
+   "tipo": "album",
+   "nombre": "The Power of Distance",
+   "values": {
+    "title": "The Power of Distance",
+    "release_year": 2019,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_miguel-noya_infinite-halls",
+   "tipo": "album",
+   "nombre": "Infinite Halls",
+   "values": {
+    "title": "Infinite Halls",
+    "release_year": 2023,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_miguel-noya_biophony-life-voices",
+   "tipo": "album",
+   "nombre": "Biophony / Life Voices",
+   "values": {
+    "title": "Biophony / Life Voices",
+    "release_year": 2023,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_miguel-noya_aiqc",
+   "tipo": "album",
+   "nombre": "AIQC",
+   "values": {
+    "title": "AIQC",
+    "release_year": 2024,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_miguel-noya_biofonia-ii-voces-de-la-tierra",
+   "tipo": "album",
+   "nombre": "Biofonía II: Voces de la Tierra",
+   "values": {
+    "title": "Biofonía II: Voces de la Tierra",
+    "release_year": 2025,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_ep_sofia-insomnia-miguel-noya_remixes-bizarros",
+   "tipo": "album",
+   "nombre": "Remixes Bizarros",
+   "values": {
+    "title": "Remixes Bizarros",
+    "release_year": 2014,
+    "album_type": "ep"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_djmix_miguel-noya_a-week-of-sundays",
+   "tipo": "album",
+   "nombre": "A Week of Sundays",
+   "values": {
+    "title": "A Week of Sundays",
+    "release_year": 2020,
+    "album_type": "other"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_ep_misantropia_f1_against_the_world_without_toilet_paper",
+   "tipo": "album",
+   "nombre": "Against The World Without Toilet Paper",
+   "values": {
+    "title": "Against The World Without Toilet Paper",
+    "release_year": 2008,
+    "album_type": "ep"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_motorfunk_escape",
+   "tipo": "album",
+   "nombre": "Escape",
+   "values": {
+    "title": "Escape",
+    "release_year": 2024,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_movida-acustica-urbana_en-vivo",
+   "tipo": "album",
+   "nombre": "En vivo",
+   "values": {
+    "title": "En vivo",
+    "release_year": 2009,
+    "album_type": "live_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_ep_nomeolvides_nomeolvides",
+   "tipo": "album",
+   "nombre": "Nomeolvides",
+   "values": {
+    "title": "Nomeolvides",
+    "release_year": 2007,
+    "album_type": "ep"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_novo-color_novo-color-vivo-en-vivo-centro-cultural-chacao-2015",
+   "tipo": "album",
+   "nombre": "Novo color vivo (En vivo - centro cultural chacao 2015)",
+   "values": {
+    "title": "Novo color vivo (En vivo - centro cultural chacao 2015)",
+    "release_year": 2015,
+    "album_type": "live_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_ep_novo-color_novo-color-vivo-en-vivo",
+   "tipo": "album",
+   "nombre": "Novo color vivo (En vivo)",
+   "values": {
+    "title": "Novo color vivo (En vivo)",
+    "release_year": 2015,
+    "album_type": "ep"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_ep_novo-color_anos-salvajes",
+   "tipo": "album",
+   "nombre": "Años salvajes",
+   "values": {
+    "title": "Años salvajes",
+    "release_year": 2016,
+    "album_type": "ep"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_orquesta-sinfonica-de-venezuela_musica-venezolana-de-concierto",
+   "tipo": "album",
+   "nombre": "Musica Venezolana de concierto",
+   "values": {
+    "title": "Musica Venezolana de concierto",
+    "release_year": 1978,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_orquesta-sinfonica-de-venezuela-jan-wagner_santa-cruz-de-pacairigua-el-rio-",
+   "tipo": "album",
+   "nombre": "Santa Cruz de Pacairigua; El rio de las siete estrellas; Avilena Suite",
+   "values": {
+    "title": "Santa Cruz de Pacairigua; El rio de las siete estrellas; Avilena Suite",
+    "release_year": 2012,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_orquesta-sinfonica-de-venezuela-theodore-kuchar_latin-american-classics",
+   "tipo": "album",
+   "nombre": "Latin American Classics",
+   "values": {
+    "title": "Latin American Classics",
+    "release_year": 2012,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_orquesta-sinfonica-de-venezuela-sergiu-celibidache-albert-ferber_piano-conc",
+   "tipo": "album",
+   "nombre": "Piano Concerto No. 3 / Piano Concerto No. 2",
+   "values": {
+    "title": "Piano Concerto No. 3 / Piano Concerto No. 2",
+    "release_year": 2014,
+    "album_type": "live_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_comp_wilhelm-furtwangler-wiener-philharmoniker-berliner-philharmoniker-orquesta-s",
+   "tipo": "album",
+   "nombre": "Symphonies 4-9",
+   "values": {
+    "title": "Symphonies 4-9",
+    "release_year": 2014,
+    "album_type": "compilation"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_pablo-schneider_pablo-schneider-y-su-mundo-insttrumental",
+   "tipo": "album",
+   "nombre": "Pablo Schneider y su mundo insttrumental",
+   "values": {
+    "title": "Pablo Schneider y su mundo insttrumental",
+    "release_year": 1975,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_pablo-schneider_musica-original-de-la-pelicula-sobre-la-hierba-virgen",
+   "tipo": "album",
+   "nombre": "Música Original de la Película - Sobre la Hierba Virgen",
+   "values": {
+    "title": "Música Original de la Película - Sobre la Hierba Virgen",
+    "release_year": 1976,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_para-llevar_lo-que-nos-toco-vivir",
+   "tipo": "album",
+   "nombre": "Lo que nos tocó vivir",
+   "values": {
+    "title": "Lo que nos tocó vivir",
+    "release_year": 2014,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_para-llevar_adorado",
+   "tipo": "album",
+   "nombre": "Adorado",
+   "values": {
+    "title": "Adorado",
+    "release_year": 2023,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_para-llevar_al-final",
+   "tipo": "album",
+   "nombre": "Al final",
+   "values": {
+    "title": "Al final",
+    "release_year": 2020,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_pharmacy_the-frozen-colours-of-the-morning-limbo",
+   "tipo": "album",
+   "nombre": "The Frozen Colours of the Morning Limbo",
+   "values": {
+    "title": "The Frozen Colours of the Morning Limbo",
+    "release_year": 2013,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_ep_pharmacy_lo-fi-ph-1",
+   "tipo": "album",
+   "nombre": "Lo-Fi Ph-1",
+   "values": {
+    "title": "Lo-Fi Ph-1",
+    "release_year": 2016,
+    "album_type": "ep"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_primera-edicion_1986",
+   "tipo": "album",
+   "nombre": "1986",
+   "values": {
+    "title": "1986",
+    "release_year": 2011,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_ep_quincalla_funicular-liminal",
+   "tipo": "album",
+   "nombre": "Funicular liminal",
+   "values": {
+    "title": "Funicular liminal",
+    "release_year": 2015,
+    "album_type": "ep"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_regurgitorso_imagina",
+   "tipo": "album",
+   "nombre": "Imagina",
+   "values": {
+    "title": "Imagina",
+    "release_year": 2022,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_retrovertigo_idejala-esta-triste",
+   "tipo": "album",
+   "nombre": "Idéjala! ...està triste",
+   "values": {
+    "title": "Idéjala! ...està triste",
+    "release_year": 2003,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_revolver-suicida_revolver-suicida",
+   "tipo": "album",
+   "nombre": "Revólver suicida",
+   "values": {
+    "title": "Revólver suicida",
+    "release_year": 2016,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_rodrigo-solo_ego",
+   "tipo": "album",
+   "nombre": "Ego",
+   "values": {
+    "title": "Ego",
+    "release_year": 2024,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_rodrigo-solo_alma-perpetua",
+   "tipo": "album",
+   "nombre": "Alma perpetua",
+   "values": {
+    "title": "Alma perpetua",
+    "release_year": 2014,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_rodrigo-solo_tonada-para-simon",
+   "tipo": "album",
+   "nombre": "Tonada para Simón",
+   "values": {
+    "title": "Tonada para Simón",
+    "release_year": 2015,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_rodrigo-solo_tal-vez-no-se-hunda-el-barco",
+   "tipo": "album",
+   "nombre": "Tal vez no se hunda el barco",
+   "values": {
+    "title": "Tal vez no se hunda el barco",
+    "release_year": 2015,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_rodrigo-solo_no-hay-duda",
+   "tipo": "album",
+   "nombre": "No hay duda",
+   "values": {
+    "title": "No hay duda",
+    "release_year": 2016,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_rodrigo-solo_roma",
+   "tipo": "album",
+   "nombre": "Roma",
+   "values": {
+    "title": "Roma",
+    "release_year": 2018,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_rodrigo-solo_valle-de-balas-ii",
+   "tipo": "album",
+   "nombre": "Valle de balas II",
+   "values": {
+    "title": "Valle de balas II",
+    "release_year": 2019,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_jxv-rodrigo-solo_just-fine",
+   "tipo": "album",
+   "nombre": "Just Fine",
+   "values": {
+    "title": "Just Fine",
+    "release_year": 2019,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_sangre_conserva-el-sueno-necesito-valor",
+   "tipo": "album",
+   "nombre": "Conserva el sueño / Necesito valor",
+   "values": {
+    "title": "Conserva el sueño / Necesito valor",
+    "release_year": 1971,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_schizophrenic-torture_omniversal-infection-of-assimilated-parasites",
+   "tipo": "album",
+   "nombre": "Omniversal Infection of Assimilated Parasites",
+   "values": {
+    "title": "Omniversal Infection of Assimilated Parasites",
+    "release_year": 2018,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_ep_sofia-insomnia-miguel-noya_remixes-bizarros",
+   "tipo": "album",
+   "nombre": "Remixes Bizarros",
+   "values": {
+    "title": "Remixes Bizarros",
+    "release_year": 2014,
+    "album_type": "ep"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_sofia-insomnia_arde-ciudad",
+   "tipo": "album",
+   "nombre": "Arde ciudad",
+   "values": {
+    "title": "Arde ciudad",
+    "release_year": 2020,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_southaven_belcefuzz",
+   "tipo": "album",
+   "nombre": "Belcefuzz",
+   "values": {
+    "title": "Belcefuzz",
+    "release_year": 2018,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_ep_southaven_la-corte-del-fuzz",
+   "tipo": "album",
+   "nombre": "La Corte Del Fuzz",
+   "values": {
+    "title": "La Corte Del Fuzz",
+    "release_year": 2017,
+    "album_type": "ep"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_subliminal-code_karma-in-mortem",
+   "tipo": "album",
+   "nombre": "Karma in mortem",
+   "values": {
+    "title": "Karma in mortem",
+    "release_year": 2014,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_subliminal-code_the-cancer-of-the-world-is-human-beings",
+   "tipo": "album",
+   "nombre": "The Cancer of the World Is Human Beings",
+   "values": {
+    "title": "The Cancer of the World Is Human Beings",
+    "release_year": 2021,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_ep_subliminal-code_soldier-of-hell",
+   "tipo": "album",
+   "nombre": "Soldier of Hell",
+   "values": {
+    "title": "Soldier of Hell",
+    "release_year": 2011,
+    "album_type": "ep"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_ep_subliminal-code_soldier-of-hell-reborn",
+   "tipo": "album",
+   "nombre": "Soldier of Hell Reborn",
+   "values": {
+    "title": "Soldier of Hell Reborn",
+    "release_year": 2016,
+    "album_type": "ep"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_subliminal-code_subliminal-remix",
+   "tipo": "album",
+   "nombre": "Subliminal Remix",
+   "values": {
+    "title": "Subliminal Remix",
+    "release_year": 2011,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_subliminal-code_another-day",
+   "tipo": "album",
+   "nombre": "Another Day",
+   "values": {
+    "title": "Another Day",
+    "release_year": 2014,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_subliminal-code_behind-the-mask",
+   "tipo": "album",
+   "nombre": "Behind the Mask",
+   "values": {
+    "title": "Behind the Mask",
+    "release_year": 2026,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_tan-frio-el-verano_primavera",
+   "tipo": "album",
+   "nombre": "Primavera",
+   "values": {
+    "title": "Primavera",
+    "release_year": 2012,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_tan_frio_el_verano_otono",
+   "tipo": "album",
+   "nombre": "Otoño",
+   "values": {
+    "title": "Otoño",
+    "release_year": 2015,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_tarot_grupo-tarot",
+   "tipo": "album",
+   "nombre": "Grupo Tarot",
+   "values": {
+    "title": "Grupo Tarot",
+    "release_year": 1984,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_the-pelaballs_the-pelaballs",
+   "tipo": "album",
+   "nombre": "The Pelaballs",
+   "values": {
+    "title": "The Pelaballs",
+    "release_year": 2010,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_the-pelaballs_m_m_x_v",
+   "tipo": "album",
+   "nombre": "M.M.X.V",
+   "values": {
+    "title": "M.M.X.V",
+    "release_year": 2017,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_ep_tlx_medios-de-transporte",
+   "tipo": "album",
+   "nombre": "Medios de transporte",
+   "values": {
+    "title": "Medios de transporte",
+    "release_year": 2012,
+    "album_type": "ep"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_tlx_vicky",
+   "tipo": "album",
+   "nombre": "Vicky",
+   "values": {
+    "title": "Vicky",
+    "release_year": 2013,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_tlx_tu-voz",
+   "tipo": "album",
+   "nombre": "Tu voz",
+   "values": {
+    "title": "Tu voz",
+    "release_year": 2014,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_tlx_cuando-todo-se-apague",
+   "tipo": "album",
+   "nombre": "Cuando todo se apague",
+   "values": {
+    "title": "Cuando todo se apague",
+    "release_year": 2023,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_tlx_casa-serizawa",
+   "tipo": "album",
+   "nombre": "Casa serizawa",
+   "values": {
+    "title": "Casa serizawa",
+    "release_year": 2023,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_tlx_platino",
+   "tipo": "album",
+   "nombre": "Platino",
+   "values": {
+    "title": "Platino",
+    "release_year": 2024,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_todos-odiamos-todo_live-in-the-teatro-de-mierda",
+   "tipo": "album",
+   "nombre": "Live in the Teatro de Mierda",
+   "values": {
+    "title": "Live in the Teatro de Mierda",
+    "release_year": 2016,
+    "album_type": "live_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_todosantos_hoy-me-faltas-tu",
+   "tipo": "album",
+   "nombre": "Hoy me faltas tú",
+   "values": {
+    "title": "Hoy me faltas tú",
+    "release_year": 2021,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_trampas_arcoiris___comienzo",
+   "tipo": "album",
+   "nombre": "Arcoiris / Comienzo",
+   "values": {
+    "title": "Arcoiris / Comienzo",
+    "release_year": 1974,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_triangular-ascension-and-abiotha_e_l_o_h_i_m",
+   "tipo": "album",
+   "nombre": "E.L.O.H.I.M.",
+   "values": {
+    "title": "E.L.O.H.I.M.",
+    "release_year": 2012,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_triangular-ascension_the-chronos-anomaly",
+   "tipo": "album",
+   "nombre": "The Chronos Anomaly",
+   "values": {
+    "title": "The Chronos Anomaly",
+    "release_year": 2013,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_simulacra-triangular-ascension_ashes-of-the-world-empire",
+   "tipo": "album",
+   "nombre": "Ashes of the World Empire",
+   "values": {
+    "title": "Ashes of the World Empire",
+    "release_year": 2021,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_trujillo_daltonic-now",
+   "tipo": "album",
+   "nombre": "Daltonic Now!",
+   "values": {
+    "title": "Daltonic Now!",
+    "release_year": 2012,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_djmix_trujillo_mix-of-the-week-198-vacation-day",
+   "tipo": "album",
+   "nombre": "Mix of the Week #198: Vacation Day",
+   "values": {
+    "title": "Mix of the Week #198: Vacation Day",
+    "release_year": 2017,
+    "album_type": "other"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_djmix_trujillo_trushmix-119",
+   "tipo": "album",
+   "nombre": "Trushmix 119",
+   "values": {
+    "title": "Trushmix 119",
+    "release_year": 2018,
+    "album_type": "other"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_djmix_charlie-bones-trujillo_the-do-you-breakfast-show",
+   "tipo": "album",
+   "nombre": "The Do!! You!!! Breakfast Show",
+   "values": {
+    "title": "The Do!! You!!! Breakfast Show",
+    "release_year": 2019,
+    "album_type": "other"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_djmix_trujillo_b_p_t-radio-050",
+   "tipo": "album",
+   "nombre": "B.P.T. Radio 050",
+   "values": {
+    "title": "B.P.T. Radio 050",
+    "release_year": 2022,
+    "album_type": "other"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_djmix_trujillo_lyo-261",
+   "tipo": "album",
+   "nombre": "LYO #261",
+   "values": {
+    "title": "LYO #261",
+    "release_year": 2025,
+    "album_type": "other"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_tsee-mud-bacro-lsd_tsee-mud-bacro-lsd",
+   "tipo": "album",
+   "nombre": "Tsee Mud... Bacro... LSD",
+   "values": {
+    "title": "Tsee Mud... Bacro... LSD",
+    "release_year": 2012,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_tsee-mud_amandote-esta-dios-mundo",
+   "tipo": "album",
+   "nombre": "Amandote Esta Dios / Mundo",
+   "values": {
+    "title": "Amandote Esta Dios / Mundo",
+    "release_year": 1972,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_tukuca-zakayama_hecatombe",
+   "tipo": "album",
+   "nombre": "Hecatombe",
+   "values": {
+    "title": "Hecatombe",
+    "release_year": 2023,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_ep_tukuca-zakayama_nacimiento-de-un-grito-frustrado",
+   "tipo": "album",
+   "nombre": "Nacimiento de un Grito Frustrado",
+   "values": {
+    "title": "Nacimiento de un Grito Frustrado",
+    "release_year": 2016,
+    "album_type": "ep"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_tukuca-zakayama_masacre-en-barlovento",
+   "tipo": "album",
+   "nombre": "Masacre en Barlovento",
+   "values": {
+    "title": "Masacre en Barlovento",
+    "release_year": 2022,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_un-dos-tres-y-fuera_no-hay-que-contar-mucho",
+   "tipo": "album",
+   "nombre": "No Hay Que Contar Mucho",
+   "values": {
+    "title": "No Hay Que Contar Mucho",
+    "release_year": 1975,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_un-dos-tres-y-fuera_sencillamente",
+   "tipo": "album",
+   "nombre": "Sencillamente",
+   "values": {
+    "title": "Sencillamente",
+    "release_year": 1978,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_un-dos-tres-y-fuera_nathalie-oh-machu-picchu",
+   "tipo": "album",
+   "nombre": "Nathalie Oh! / Machu Picchu",
+   "values": {
+    "title": "Nathalie Oh! / Machu Picchu",
+    "release_year": 1976,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_vargas_ciudad-mareada",
+   "tipo": "album",
+   "nombre": "Ciudad mareada",
+   "values": {
+    "title": "Ciudad mareada",
+    "release_year": 2014,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_vargas_radiocassette",
+   "tipo": "album",
+   "nombre": "Radiocassette",
+   "values": {
+    "title": "Radiocassette",
+    "release_year": 2016,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_vargas_canciones-perdidas-antes-de-volver-a-nacer",
+   "tipo": "album",
+   "nombre": "Canciones perdidas antes de volver a nacer",
+   "values": {
+    "title": "Canciones perdidas antes de volver a nacer",
+    "release_year": 2020,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_vargas_el-primer-viaje-del-mago",
+   "tipo": "album",
+   "nombre": "El Primer Viaje del Mago",
+   "values": {
+    "title": "El Primer Viaje del Mago",
+    "release_year": 2022,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_vargas_nada-que-perder",
+   "tipo": "album",
+   "nombre": "Nada que perder",
+   "values": {
+    "title": "Nada que perder",
+    "release_year": 2024,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_vargas_nada-que-perder-2",
+   "tipo": "album",
+   "nombre": "Nada que perder 2",
+   "values": {
+    "title": "Nada que perder 2",
+    "release_year": 2025,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_vargas_honesto",
+   "tipo": "album",
+   "nombre": "Honesto",
+   "values": {
+    "title": "Honesto",
+    "release_year": 2015,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_vargas_durazno",
+   "tipo": "album",
+   "nombre": "Durazno",
+   "values": {
+    "title": "Durazno",
+    "release_year": 2018,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_vargas__parentesis-sesiones-acusticas-vol-1",
+   "tipo": "album",
+   "nombre": "(Paréntesis) Sesiones acústicas, Vol. 1",
+   "values": {
+    "title": "(Paréntesis) Sesiones acústicas, Vol. 1",
+    "release_year": 2019,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_vargas_sofia",
+   "tipo": "album",
+   "nombre": "Sofía",
+   "values": {
+    "title": "Sofía",
+    "release_year": 2019,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_vargas-apache_la-energia",
+   "tipo": "album",
+   "nombre": "La energía",
+   "values": {
+    "title": "La energía",
+    "release_year": 2019,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_vargas_el-escape-de-la-torre",
+   "tipo": "album",
+   "nombre": "El escape de la torre",
+   "values": {
+    "title": "El escape de la torre",
+    "release_year": 2019,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_vargas_verte-partir",
+   "tipo": "album",
+   "nombre": "Verte partir",
+   "values": {
+    "title": "Verte partir",
+    "release_year": 2019,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_vargas_parentesis-vol_2-descanso-en-la-torre",
+   "tipo": "album",
+   "nombre": "Paréntesis Vol.2 Descanso en la torre",
+   "values": {
+    "title": "Paréntesis Vol.2 Descanso en la torre",
+    "release_year": 2020,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_vargas_rafael-el-morrocoy-perdido",
+   "tipo": "album",
+   "nombre": "Rafael, el morrocoy perdido",
+   "values": {
+    "title": "Rafael, el morrocoy perdido",
+    "release_year": 2021,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_vargas_el-silencio-del-espejo",
+   "tipo": "album",
+   "nombre": "El silencio del espejo",
+   "values": {
+    "title": "El silencio del espejo",
+    "release_year": 2023,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_vargas_el-pacto-de-richie",
+   "tipo": "album",
+   "nombre": "El pacto de Richie",
+   "values": {
+    "title": "El pacto de Richie",
+    "release_year": 2023,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_vargas-mila-farras_nunca-es-suficiente",
+   "tipo": "album",
+   "nombre": "Nunca es suficiente",
+   "values": {
+    "title": "Nunca es suficiente",
+    "release_year": 2023,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_vargas_era-inevitable",
+   "tipo": "album",
+   "nombre": "Era inevitable",
+   "values": {
+    "title": "Era inevitable",
+    "release_year": 2024,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_vargas_te-vi-volar",
+   "tipo": "album",
+   "nombre": "Te VI volar",
+   "values": {
+    "title": "Te VI volar",
+    "release_year": 2024,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_vargas_gorilla-business",
+   "tipo": "album",
+   "nombre": "Gorilla Business",
+   "values": {
+    "title": "Gorilla Business",
+    "release_year": 2024,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_vargas_gorilla-business-en-vivo-desde-recoveco-records",
+   "tipo": "album",
+   "nombre": "Gorilla Business (En vivo, desde Recoveco Records)",
+   "values": {
+    "title": "Gorilla Business (En vivo, desde Recoveco Records)",
+    "release_year": 2024,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_vargas_el-ultimo-disaster-en-caracas-en-vivo",
+   "tipo": "album",
+   "nombre": "El ultimo Disaster en Caracas (En vivo)",
+   "values": {
+    "title": "El ultimo Disaster en Caracas (En vivo)",
+    "release_year": 2025,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_vargas_recetas-para-duelos-necesarios",
+   "tipo": "album",
+   "nombre": "Recetas para duelos necesarios",
+   "values": {
+    "title": "Recetas para duelos necesarios",
+    "release_year": 2025,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_vargas_nota-negra",
+   "tipo": "album",
+   "nombre": "Nota negra",
+   "values": {
+    "title": "Nota negra",
+    "release_year": 2025,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_vargas-boston-rex-willbert-alvarez_nada-que-perder",
+   "tipo": "album",
+   "nombre": "Nada que perder",
+   "values": {
+    "title": "Nada que perder",
+    "release_year": 2025,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_vargas_ahora-es-distinto",
+   "tipo": "album",
+   "nombre": "Ahora es distinto",
+   "values": {
+    "title": "Ahora es distinto",
+    "release_year": 2026,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_vargas_mirada-de-jazmin",
+   "tipo": "album",
+   "nombre": "Mirada de jazmín",
+   "values": {
+    "title": "Mirada de jazmín",
+    "release_year": 2026,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_vel-france_memorias-al-mar",
+   "tipo": "album",
+   "nombre": "Memorias al mar",
+   "values": {
+    "title": "Memorias al mar",
+    "release_year": 2017,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_versed_visiones",
+   "tipo": "album",
+   "nombre": "Visiones",
+   "values": {
+    "title": "Visiones",
+    "release_year": 2015,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_versed_el-peso-del-tiempo",
+   "tipo": "album",
+   "nombre": "El peso del tiempo",
+   "values": {
+    "title": "El peso del tiempo",
+    "release_year": 2014,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_versed_prisma",
+   "tipo": "album",
+   "nombre": "Prisma",
+   "values": {
+    "title": "Prisma",
+    "release_year": 2016,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_versed_moire",
+   "tipo": "album",
+   "nombre": "Moirè",
+   "values": {
+    "title": "Moirè",
+    "release_year": 2018,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_ep_vitriol_f6_dead_by_vitriol",
+   "tipo": "album",
+   "nombre": "Dead by Vitriol",
+   "values": {
+    "title": "Dead by Vitriol",
+    "release_year": 2008,
+    "album_type": "ep"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_vitriol_ep-2009",
+   "tipo": "album",
+   "nombre": "EP 2009",
+   "values": {
+    "title": "EP 2009",
+    "release_year": 2009,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_zeta_las-nuevas-tendencias-apendice-a-aurum",
+   "tipo": "album",
+   "nombre": "Las nuevas tendencias: Apendice A: Aurum",
+   "values": {
+    "title": "Las nuevas tendencias: Apendice A: Aurum",
+    "release_year": 2012,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_zeta_las-nuevas-tendencias-apendice-b-sulphur",
+   "tipo": "album",
+   "nombre": "Las nuevas tendencias: Apendice B: Sulphur",
+   "values": {
+    "title": "Las nuevas tendencias: Apendice B: Sulphur",
+    "release_year": 2012,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_zeta_en-medio-de-la-tormenta",
+   "tipo": "album",
+   "nombre": "En medio de la tormenta",
+   "values": {
+    "title": "En medio de la tormenta",
+    "release_year": 2014,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_zeta_mochima",
+   "tipo": "album",
+   "nombre": "Mochima",
+   "values": {
+    "title": "Mochima",
+    "release_year": 2019,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_zeta-and-the-abajo-cadenas-orchestra_todo-bailarlo",
+   "tipo": "album",
+   "nombre": "Todo bailarlo",
+   "values": {
+    "title": "Todo bailarlo",
+    "release_year": 2022,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_zeta_vii-magia-infinita-2024",
+   "tipo": "album",
+   "nombre": "VII Magia infinita (2024)",
+   "values": {
+    "title": "VII Magia infinita (2024)",
+    "release_year": 2024,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_zeta_was-it-medicine-to-you",
+   "tipo": "album",
+   "nombre": "Was It Medicine to You?",
+   "values": {
+    "title": "Was It Medicine to You?",
+    "release_year": 2025,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_zeta_austin-tx-7_26_23-live-at-parish",
+   "tipo": "album",
+   "nombre": "Austin TX 7.26.23: Live at Parish",
+   "values": {
+    "title": "Austin TX 7.26.23: Live at Parish",
+    "release_year": 2024,
+    "album_type": "live_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_zeta_live-in-boston-10-years-of-resilience-in-the-u_s",
+   "tipo": "album",
+   "nombre": "Live in Boston - 10 Years of Resilience in the U.S.",
+   "values": {
+    "title": "Live in Boston - 10 Years of Resilience in the U.S.",
+    "release_year": 2026,
+    "album_type": "live_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_ep_zeta-no-somos-marineros_voces-del-nuevo-continente",
+   "tipo": "album",
+   "nombre": "Voces del nuevo continente",
+   "values": {
+    "title": "Voces del nuevo continente",
+    "release_year": 2014,
+    "album_type": "ep"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_ep_zeta_lantiteoria-del-todo",
+   "tipo": "album",
+   "nombre": "L'antiteoria del todo",
+   "values": {
+    "title": "L'antiteoria del todo",
+    "release_year": 2016,
+    "album_type": "ep"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_ep_zeta-with-chris-pyrate_slingshot",
+   "tipo": "album",
+   "nombre": "Slingshot",
+   "values": {
+    "title": "Slingshot",
+    "release_year": 2017,
+    "album_type": "ep"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_ep_zeta_audiotree-live",
+   "tipo": "album",
+   "nombre": "Audiotree Live",
+   "values": {
+    "title": "Audiotree Live",
+    "release_year": 2017,
+    "album_type": "ep"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_ep_zeta_magia-infinita-",
+   "tipo": "album",
+   "nombre": "Magia infinita (無限の魔法)",
+   "values": {
+    "title": "Magia infinita (無限の魔法)",
+    "release_year": 2018,
+    "album_type": "ep"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_ep_zeta_live-session-2021",
+   "tipo": "album",
+   "nombre": "Live Session 2021",
+   "values": {
+    "title": "Live Session 2021",
+    "release_year": 2022,
+    "album_type": "ep"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_ep_codefendants-zeta_live-from-red-lion-recording-studio",
+   "tipo": "album",
+   "nombre": "Live From Red Lion Recording Studio",
+   "values": {
+    "title": "Live From Red Lion Recording Studio",
+    "release_year": 2025,
+    "album_type": "ep"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_zeta_yo-el-peor-de-todos-somos-cosmos-xxv",
+   "tipo": "album",
+   "nombre": "Yo El Peor De Todos (Somos Cosmos) XXV",
+   "values": {
+    "title": "Yo El Peor De Todos (Somos Cosmos) XXV",
+    "release_year": 2013,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_zeta-whites_vivimos-por-esto",
+   "tipo": "album",
+   "nombre": "Vivimos por esto",
+   "values": {
+    "title": "Vivimos por esto",
+    "release_year": 2015,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_zeta_latdt",
+   "tipo": "album",
+   "nombre": "LATDT",
+   "values": {
+    "title": "LATDT",
+    "release_year": 2016,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_zeta_sufrir",
+   "tipo": "album",
+   "nombre": "Sufrir",
+   "values": {
+    "title": "Sufrir",
+    "release_year": 2017,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_zeta_completar",
+   "tipo": "album",
+   "nombre": "Completar",
+   "values": {
+    "title": "Completar",
+    "release_year": 2018,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_zeta_venezziola",
+   "tipo": "album",
+   "nombre": "Venezziola",
+   "values": {
+    "title": "Venezziola",
+    "release_year": 2019,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_zeta_el-canto-de-la-victoria",
+   "tipo": "album",
+   "nombre": "El canto de la victoria",
+   "values": {
+    "title": "El canto de la victoria",
+    "release_year": 2021,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_zeta_la-flor-de-la-palabra",
+   "tipo": "album",
+   "nombre": "La flor de la palabra",
+   "values": {
+    "title": "La flor de la palabra",
+    "release_year": 2021,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_zeta_v-completar-2024",
+   "tipo": "album",
+   "nombre": "V Completar 2024",
+   "values": {
+    "title": "V Completar 2024",
+    "release_year": 2023,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_zeta_vi-resignar-2024",
+   "tipo": "album",
+   "nombre": "VI RESIGNAR 2024",
+   "values": {
+    "title": "VI RESIGNAR 2024",
+    "release_year": 2023,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_zeta-pans_tonada-de-luna-llena",
+   "tipo": "album",
+   "nombre": "Tonada de Luna Llena",
+   "values": {
+    "title": "Tonada de Luna Llena",
+    "release_year": 2024,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_zeta_privilege",
+   "tipo": "album",
+   "nombre": "Privilege",
+   "values": {
+    "title": "Privilege",
+    "release_year": 2024,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_album_zikoticos-armados_dando-la-cara",
+   "tipo": "album",
+   "nombre": "Dando la Cara",
+   "values": {
+    "title": "Dando la Cara",
+    "release_year": 2012,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": null
+  },
+  {
+   "clave": "rym:222:album:_release_single_zion-tpl_missing-you",
+   "tipo": "album",
+   "nombre": "Missing You",
+   "values": {
+    "title": "Missing You",
+    "release_year": 2020,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": null
+  }
+ ]
+}
