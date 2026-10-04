@@ -416,9 +416,33 @@ def main():
         })
         stats[accion] = stats.get(accion, 0) + 1
 
+    # Overlay de decisiones confirmadas (paquete de confirmación 2026-10-04):
+    # fija la acción de las filas ya resueltas para que no reaparezcan pendientes.
+    ov_path = f"{OUTDIR}/decisiones-2026-10-04.jsonl"
+    if os.path.exists(ov_path):
+        ov = {}
+        with open(ov_path, encoding="utf-8") as fh:
+            for linea in fh:
+                d = json.loads(linea)
+                if d.get("vista") == "dossier" and d.get("rym_href"):
+                    ov[d["rym_href"]] = d
+        aplicadas = 0
+        for f in filas:
+            d = ov.get(f.get("rym_href", ""))
+            if d:
+                f["accion_sugerida"] = d["accion"]
+                f["decision"] = d.get("nota") or "confirmada 2026-10-04 (OK de Brian)"
+                aplicadas += 1
+        if aplicadas:
+            stats = {}
+            for f in filas:
+                stats[f["accion_sugerida"]] = stats.get(f["accion_sugerida"], 0) + 1
+            print(f"overlay decisiones-2026-10-04: {aplicadas} filas fijadas")
+
     orden = ["ya_ambos", "ya_artista", "ya_artista_alias", "ya_persona", "ya_persona_alias",
              "revisar_homonimo", "alta_persona_miembro", "alta_artista_banda",
-             "revisar_persona_solista", "revisar_persona", "revisar_tipo", "cola_fria"]
+             "revisar_persona_solista", "revisar_persona", "revisar_tipo", "cola_fria",
+             "alias_confirmado", "sin_accion_confirmado", "descartado"]
     filas.sort(key=lambda f: (orden.index(f["accion_sugerida"]) if f["accion_sugerida"] in orden else 99, -f["nlocs"]))
 
     cols = list(filas[0].keys())

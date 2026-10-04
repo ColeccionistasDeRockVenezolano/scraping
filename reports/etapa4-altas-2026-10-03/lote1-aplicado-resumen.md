@@ -54,3 +54,17 @@ Runs: 11722, 11726, 11729, 11732, 11741, 11746, 11752.
    de captura (re-ejecutar `dossier-discos.py` entonces y generar lote 2).
 4. Residuo técnico documentado: ~96 claims `candidate` de primeras pasadas del ER (los claims
    no se borran nunca por diseño); sin efecto.
+
+## Cerrado esa misma noche (2026-10-04)
+
+- **Careo de discos: 40/40 aplicadas** (11 «misma» / 29 «otra» — runs **11766** + **11778**);
+  9 filas parqueadas para el ojo de Brian. Las 29 «otra» crearon álbum nuevo; las 11 «misma»
+  adjuntaron el claim al álbum existente.
+- **9 alias aplicados** del careo de homónimos (typos y variantes; runs **11786–11794**).
+- **269 descartes + 59 «sin acción» anotados** en `decisiones-2026-10-04.jsonl` (overlay que el
+  dossier respeta al regenerarse — ya no reaparecen como pendientes).
+- **7 fichas del lote reparadas** (creadas bajo artista equivocado desde filas `Appears On` +
+  2 duplicados de doble firma): fusiones en runs **11777** y **11784**, 7 redirects, verificación
+  en cero → ver `hallazgos-lote1-appears-on.md`.
+- **Pendiente humano real**: 611 items de revisión sugerida del dossier (369 solistas · 108 personas ·
+  124 sin tipo · 9 homónimos) + 18 filas finas parqueadas (9+9) + los discos de «nuevos» (fase 2).

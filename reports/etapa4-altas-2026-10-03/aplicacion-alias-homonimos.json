@@ -1,0 +1,86 @@
+{
+  "fecha": "2026-10-04T02:24:14.782Z",
+  "resultados": [
+    {
+      "alias": "Rafael Mussett",
+      "kind": "person",
+      "entityId": 32223,
+      "aliasType": "misspelling",
+      "estado": "aplicado",
+      "runId": 11786,
+      "aliasId": 47575
+    },
+    {
+      "alias": "Carlos Huertas",
+      "kind": "person",
+      "entityId": 27138,
+      "aliasType": "misspelling",
+      "estado": "aplicado",
+      "runId": 11787,
+      "aliasId": 47576
+    },
+    {
+      "alias": "Fredy Reyna",
+      "kind": "person",
+      "entityId": 2343,
+      "aliasType": "misspelling",
+      "estado": "aplicado",
+      "runId": 11788,
+      "aliasId": 47577
+    },
+    {
+      "alias": "Francisco Tejera",
+      "kind": "person",
+      "entityId": 20054,
+      "aliasType": "name_variant",
+      "estado": "aplicado",
+      "runId": 11789,
+      "aliasId": 47578
+    },
+    {
+      "alias": "Neblinna",
+      "kind": "artist",
+      "entityId": 1831,
+      "aliasType": "misspelling",
+      "estado": "aplicado",
+      "runId": 11790,
+      "aliasId": 5922
+    },
+    {
+      "alias": "Acero Plastiko",
+      "kind": "artist",
+      "entityId": 1620,
+      "aliasType": "misspelling",
+      "estado": "aplicado",
+      "runId": 11791,
+      "aliasId": 5923
+    },
+    {
+      "alias": "Miguel A. Ferrer",
+      "kind": "person",
+      "entityId": 3348,
+      "aliasType": "name_variant",
+      "estado": "aplicado",
+      "runId": 11792,
+      "aliasId": 47579
+    },
+    {
+      "alias": "La Banda Casablanca",
+      "kind": "artist",
+      "entityId": 1404,
+      "aliasType": "name_variant",
+      "estado": "aplicado",
+      "runId": 11793,
+      "aliasId": 5924
+    },
+    {
+      "alias": "Aloisio",
+      "kind": "person",
+      "entityId": 12252,
+      "aliasType": "misspelling",
+      "estado": "aplicado",
+      "runId": 11794,
+      "aliasId": 47580
+    }
+  ]
+}

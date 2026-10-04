@@ -77,3 +77,15 @@ terminar la extracción — no bloquea) y después el motor de altas en seco.
   276 aplicados + 2 del bugfix). **Remanente: 948** (77 homónimos · 369 solistas · 354 personas ·
   124 sin tipo · 23 fríos · 1 persona-miembro «Gustavo Casas…» en revisión).
 - Paquetes de confirmación para el remanente humano: ver `paquetes-revision.md`.
+
+## Actualización 2026-10-04 (paquete de confirmación aplicado)
+
+- Con el «OK todo» de Brian se aplicó la propuesta de las 385 filas y el overlay
+  `decisiones-2026-10-04.jsonl` fija desde ahora sus acciones al regenerar este dossier:
+  **269 `descartado`** (246 personas sin evidencia + 23 fríos; nunca existieron en la BD —
+  es anotación), **59 `sin_accion_confirmado`** (homónimos verificados distintos) y
+  **9 `alias_confirmado`** (nombres RYM añadidos como alias a fichas vivas del catálogo).
+- **Pendiente humano real tras la aplicación: 611** sugeridas (369 solistas · 108 personas ·
+  124 sin tipo · 9 homónimos restantes) **+ 18 filas finas parqueadas** (9 de discos + 9 identidades
+  del careo — ver `paquetes-revision.md`).
+- Recuento de hoy: 643 cubiertos (`ya_*`) · 337 resueltos por el paquete · 611 pendientes = 1.591.

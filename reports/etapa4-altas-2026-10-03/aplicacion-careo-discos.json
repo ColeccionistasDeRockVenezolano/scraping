@@ -1,0 +1,66 @@
+{
+  "fecha": "2026-10-04T02:22:32.796Z",
+  "runId": 11778,
+  "aplicadas": [
+    {
+      "reviewId": 1819375,
+      "verdict": "same",
+      "disco": "Sin afina' mucho",
+      "catalogo": "Sin Afinar Mucho",
+      "nota": ""
+    }
+  ],
+  "parqueadas": [
+    {
+      "reviewId": 1819624,
+      "disco": "Colorado",
+      "pregunta": "¿typo de «Coloreado» (2016) o EP distinto (Dolli)?"
+    },
+    {
+      "reviewId": 1820442,
+      "disco": "Soldier of Hell Reborn",
+      "pregunta": "¿reedición ampliada de «Soldier of Hell» (2011) o secuela?"
+    },
+    {
+      "reviewId": 1819327,
+      "disco": "Night and Daydream",
+      "pregunta": "el catálogo trae el doble «Wheels Of Time / Night And Daydream»"
+    },
+    {
+      "reviewId": 1820524,
+      "disco": "Gorilla Business (En vivo, desde Recoveco Records)",
+      "pregunta": "¿sesión en vivo distinta del single «Gorilla Business» 2024?"
+    },
+    {
+      "reviewId": 1819632,
+      "disco": "Juan Peyote",
+      "pregunta": "¿«J.P» (1997) es este mismo disco homónimo? (2 filas en cola)"
+    },
+    {
+      "reviewId": 1819633,
+      "disco": "Juan Peyote",
+      "pregunta": "¿«J.P» (1997) es este mismo disco homónimo? (2 filas en cola)"
+    },
+    {
+      "reviewId": 1819643,
+      "disco": "The Black Album",
+      "pregunta": "¿mismo que «Black» 1999 (Metrozubdivision)?"
+    },
+    {
+      "reviewId": 1820134,
+      "disco": "Biofonía II: Voces de la Tierra",
+      "pregunta": "¿secuela o reedición de «Biophony / Life Voices» 2023?"
+    },
+    {
+      "reviewId": 1819606,
+      "disco": "Tembla",
+      "pregunta": "¿typo de «Tiembla» o álbum distinto (2015 vs 2024)? (C4 Trío)"
+    }
+  ],
+  "resultado": {
+    "appliedReviews": 1,
+    "failed": 0,
+    "total": 1,
+    "errors": []
+  }
+}

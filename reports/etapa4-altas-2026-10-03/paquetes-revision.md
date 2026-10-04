@@ -4,8 +4,11 @@ Construidos el 2026-10-04 con `scripts/etapa4-altas-2026-10-03/paquetes-revision
 re-ejecutable). Refinados (v2): cada fila lleva **`propuesta`** (veredicto con nota propia) además del
 `sugerido` automático; la columna `decision` queda libre para que corrijas lo que quieras.
 
-**Nada aplicado a la BD.** Resumen: de 395 filas, **385 tienen propuesta** y **18 filas piden tu ojo**
-(8 dudas de discos + 9 identidades + Juan Peyote duplicado en cola = 18 filas / 17 decisiones).
+**Estado: CONFIRMADO y APLICADO (2026-10-04, «OK todo» de Brian).** Se aplicó la columna `propuesta`
+de las 385 filas: 40 discos (11 «misma» / 29 «otra»; runs 11766 + 11778) · 9 alias (runs 11786–11794)
+· 269 descartes y 59 «sin acción» anotados en `decisiones-2026-10-04.jsonl` (overlay del dossier).
+Las **18 filas en `revisar` quedaron parqueadas** (9 de discos + 9 identidades) — sin bloquear.
+(Detalle: `lote1-aplicado-resumen.md` y `hallazgos-lote1-appears-on.md`.)
 
 ## Paquete 1 · `careo-discos.tsv|.jsonl` — los 49 discos en cola (album_match)
 
@@ -70,10 +73,8 @@ Raquel González vs [7943] Rael González · Carlitos Flores vs [25703] Carlos F
 - **Cierre**: con tu OK se marcan «descartado (sin alta)» en el dossier; no hay nada que escribir en la
   BD (nunca se crearon).
 
-## Cómo confirmar
+## Si quieres cambiar algo
 
-1. **Rápido**: «OK paquete 1/2/3» (o «OK todo») → aplico la columna `propuesta` tal cual; las filas en
-   `revisar` quedan parqueadas hasta que las mires (no bloquean nada).
-2. **Con lupa**: edita `decision` en el TSV y me avisas; aplico solo lo confirmado.
-
-Todo cierre va por runs reversibles; nada se escribe en la BD sin tu OK.
+Todo cierre va por runs reversibles (`npm run cli -- runs undo <runId> --confirm`). Para corregir una
+fila ya aplicada, edita `decision` en el TSV y me avisas; para las 18 parqueadas, dame el veredicto
+y las aplico igual.

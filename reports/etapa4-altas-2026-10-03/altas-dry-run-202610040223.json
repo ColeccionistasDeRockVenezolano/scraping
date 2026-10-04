@@ -1,0 +1,43 @@
+{
+ "generado": "2026-10-04T02:23:09.449Z",
+ "plan": "/tmp/plan-fix-appears-2.jsonl",
+ "modo": "dry-run",
+ "items": [
+  {
+   "clave": "rym:222:album:_release_album_apache_afinando",
+   "tipo": "album",
+   "nombre": "Afinando",
+   "values": {
+    "title": "Afinando",
+    "release_year": 2010,
+    "album_type": "studio_album"
+   },
+   "avisos": [
+    "el artista 1681 ya tiene un disco con ese título (clave compacta)"
+   ],
+   "sondaER": {
+    "resultado": "ya_existe",
+    "detalle": "album ya existe en el catálogo (id 2753)",
+    "existingId": 2753
+   }
+  },
+  {
+   "clave": "rym:222:album:_release_album_rodrigo-solo_no-estas-solo",
+   "tipo": "album",
+   "nombre": "No estás solo",
+   "values": {
+    "title": "No estás solo",
+    "release_year": 2015,
+    "album_type": "studio_album"
+   },
+   "avisos": [
+    "el artista 214 ya tiene un disco con ese título (clave compacta)"
+   ],
+   "sondaER": {
+    "resultado": "ya_existe",
+    "detalle": "album ya existe en el catálogo (id 316)",
+    "existingId": 316
+   }
+  }
+ ]
+}

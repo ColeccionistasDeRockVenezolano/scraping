@@ -1,0 +1,26 @@
+{
+  "fecha": "2026-10-04T02:23:54.556Z",
+  "runId": 11784,
+  "resultados": [
+    {
+      "keep": 2753,
+      "drop": 15475,
+      "caso": "«Afinando» (Cuarto Poder ← fila Appears On) → «Afinando» (Apache, ya en catálogo desde el 2026-09-13)",
+      "estado": "fusionado",
+      "moved": 11,
+      "discarded": 0,
+      "filled": [],
+      "tracksMerged": 0
+    },
+    {
+      "keep": 316,
+      "drop": 15499,
+      "caso": "«No estás solo» (Hana Kobayashi ← fila Appears On) → «No Estás Solo» (Rodrigo Solo, ya en catálogo desde el 2026-09-11)",
+      "estado": "fusionado",
+      "moved": 11,
+      "discarded": 0,
+      "filled": [],
+      "tracksMerged": 0
+    }
+  ]
+}
