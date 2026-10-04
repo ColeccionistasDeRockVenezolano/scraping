@@ -24,26 +24,9 @@
   "lote_id": "arca",
   "nombre": "Arca",
   "tipo_lote": "solo",
-  "estado": "existe",
-  "metodo": "manual",
-  "artistas": [
-   {
-    "id": 1250,
-    "nombre": "Nuuro",
-    "tipo": "band",
-    "bio": 643,
-    "foto": true,
-    "ciudad": null,
-    "anio": null,
-    "discos": 5,
-    "miembros": [
-     {
-      "persona": 2528,
-      "rol": "Miembro"
-     }
-    ]
-   }
-  ],
+  "estado": "nuevo",
+  "metodo": "nuevo",
+  "artistas": [],
   "personas_candidatas": [
    {
     "id": 2528,

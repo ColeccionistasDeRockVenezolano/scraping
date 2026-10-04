@@ -1,0 +1,113 @@
+# Etapa 2 — correcciones (confirm, run 11487)
+
+Pasos: 103. Avisos: 1.
+
+## Avisos
+
+- alias «Gorepriest» no se añade al artista 795: ya es de Sol Nocturno (870)
+
+## Pasos
+
+- op=fusionar_artista · status=applied · keep={"id":3756,"name":"José Luis Rodríguez"} · drop={"id":3712,"name":"José Luis Rodríguez \"El Puma\""} · moved=92 · filled=["picture_url"] · preserved=[] · conflicts=[] · aliasesMoved=[] · aliasesAdded=["El Puma"] · warnings=[]
+- op=fusionar_disco · status=applied · keep=8131 · drop=7218 · title=José Luis Favorito! · tracksMoved=0 · fieldsCorrected=[]
+- op=fusionar_disco · status=applied · keep=8132 · drop=7219 · title=Ayúdame · tracksMoved=0 · fieldsCorrected=[]
+- op=fusionar_disco · status=applied · keep=8133 · drop=7220 · title=Lo Romántico de José Luis · tracksMoved=0 · fieldsCorrected=[]
+- op=fusionar_disco · status=applied · keep=8134 · drop=7221 · title=Grito Al Mundo · tracksMoved=0 · fieldsCorrected=[]
+- op=fusionar_disco · status=applied · keep=8135 · drop=7222 · title=El Hombre En La Cima · tracksMoved=0 · fieldsCorrected=[]
+- op=fusionar_disco · status=applied · keep=8136 · drop=7223 · title=De Venezuela · tracksMoved=0 · fieldsCorrected=[]
+- op=fusionar_disco · status=applied · keep=8137 · drop=7224 · title=De América · tracksMoved=0 · fieldsCorrected=[]
+- op=fusionar_disco · status=applied · keep=8138 · drop=7225 · title=En Sus Pasos · tracksMoved=0 · fieldsCorrected=[]
+- op=fusionar_disco · status=applied · keep=8139 · drop=7226 · title=Los Temas De Mis Telenovelas · tracksMoved=0 · fieldsCorrected=[]
+- op=fusionar_disco · status=applied · keep=8140 · drop=7227 · title=Una Canción De España · tracksMoved=0 · fieldsCorrected=[]
+- op=fusionar_disco · status=applied · keep=8141 · drop=7228 · title=Boleros De Siempre · tracksMoved=0 · fieldsCorrected=[]
+- op=fusionar_disco · status=applied · keep=8142 · drop=7229 · title=Por Si Volvieras · tracksMoved=0 · fieldsCorrected=[]
+- op=fusionar_disco · status=applied · keep=8143 · drop=7230 · title=Atrevete · tracksMoved=0 · fieldsCorrected=[]
+- op=fusionar_disco · status=applied · keep=8147 · drop=7234 · title=Dueño De Nada · tracksMoved=0 · fieldsCorrected=[]
+- op=fusionar_disco · status=applied · keep=8148 · drop=7235 · title=Ven · tracksMoved=0 · fieldsCorrected=[]
+- op=fusionar_disco · status=applied · keep=8149 · drop=7236 · title=Voy A Conquistarte · tracksMoved=0 · fieldsCorrected=[]
+- op=fusionar_disco · status=applied · keep=8150 · drop=7237 · title=El Ultimo Beso · tracksMoved=0 · fieldsCorrected=[]
+- op=fusionar_disco · status=applied · keep=8151 · drop=7238 · title=Señor Corazón · tracksMoved=0 · fieldsCorrected=[]
+- op=fusionar_disco · status=applied · keep=7897 · drop=7239 · title=Tengo Derecho A Ser Feliz · tracksMoved=0 · fieldsCorrected=[]
+- op=fusionar_disco · status=applied · keep=8152 · drop=7240 · title=Señora Bonita · tracksMoved=0 · fieldsCorrected=[]
+- op=fusionar_disco · status=applied · keep=8153 · drop=7241 · title=Esta Vez · tracksMoved=0 · fieldsCorrected=[]
+- op=fusionar_disco · status=applied · keep=7898 · drop=7242 · title=El Puma en Ritmo · tracksMoved=0 · fieldsCorrected=[]
+- op=fusionar_disco · status=applied · keep=8154 · drop=7243 · title=Piel De Hombre · tracksMoved=0 · fieldsCorrected=[]
+- op=fusionar_disco · status=applied · keep=7899 · drop=7244 · title=Razones Para Una Sonrisa · tracksMoved=0 · fieldsCorrected=[]
+- op=fusionar_disco · status=applied · keep=7900 · drop=7245 · title=La Llamada Del Amor · tracksMoved=0 · fieldsCorrected=[]
+- op=fusionar_disco · status=applied · keep=7901 · drop=7248 · title=El Puma en Ritmo II: Fiesta · tracksMoved=0 · fieldsCorrected=[]
+- op=fusionar_disco · status=applied · keep=7902 · drop=7250 · title=Champagne · tracksMoved=0 · fieldsCorrected=[]
+- op=fusionar_disco · status=applied · keep=8159 · drop=7252 · title=Distancia · tracksMoved=0 · fieldsCorrected=[]
+- op=fusionar_disco · status=applied · keep=8160 · drop=7253 · title=Homenaje a José Alfredo Jiménez · tracksMoved=0 · fieldsCorrected=[]
+- op=fusionar_disco · status=applied · keep=8161 · drop=7254 · title=Trópico · tracksMoved=0 · fieldsCorrected=[]
+- op=fusionar_disco · status=applied · keep=8162 · drop=7255 · title=Mi Amigo El Puma · tracksMoved=0 · fieldsCorrected=[]
+- op=fusionar_disco · status=applied · keep=8163 · drop=7256 · title=Directo Al Espíritu · tracksMoved=0 · fieldsCorrected=[]
+- op=fusionar_disco · status=applied · keep=7894 · drop=7257 · title=Inmenso · tracksMoved=0 · fieldsCorrected=[]
+- op=fusionar_disco · status=applied · keep=8164 · drop=7258 · title=Agradecido · tracksMoved=0 · fieldsCorrected=[]
+- op=fusionar_disco · status=applied · keep=8165 · drop=7260 · title=El Triunfador · tracksMoved=0 · fieldsCorrected=[]
+- op=fusionar_disco · status=applied · keep=8166 · drop=7261 · title=Lo Mejor De José Luis Rodríguez · tracksMoved=0 · fieldsCorrected=[]
+- op=fusionar_disco · status=applied · keep=8167 · drop=7262 · title=Cantando Exitos De Siempre · tracksMoved=0 · fieldsCorrected=[]
+- op=fusionar_disco · status=applied · keep=8168 · drop=7264 · title=La Historia Del Idolo · tracksMoved=0 · fieldsCorrected=[]
+- op=fusionar_disco · status=applied · keep=8169 · drop=7265 · title=14 Auténticos Exitos · tracksMoved=0 · fieldsCorrected=[]
+- op=fusionar_disco · status=applied · keep=8170 · drop=7266 · title=Ayer, Hoy y Siempre · tracksMoved=0 · fieldsCorrected=[]
+- op=fusionar_disco · status=applied · keep=8171 · drop=7267 · title=12 Grandes Exitos Vol. 2 · tracksMoved=0 · fieldsCorrected=[]
+- op=fusionar_disco · status=applied · keep=8172 · drop=7268 · title=Siempre · tracksMoved=0 · fieldsCorrected=[]
+- op=fusionar_disco · status=applied · keep=8173 · drop=7269 · title=20 Grandes Exitos · tracksMoved=0 · fieldsCorrected=[]
+- op=fusionar_disco · status=applied · keep=8174 · drop=7270 · title=Joyas Musicales · tracksMoved=0 · fieldsCorrected=[]
+- op=fusionar_disco · status=applied · keep=8178 · drop=7274 · title=Mis 30 Mejores Canciones · tracksMoved=0 · fieldsCorrected=[]
+- op=fusionar_disco · status=applied · keep=8179 · drop=7275 · title=Canciones De Amor · tracksMoved=0 · fieldsCorrected=[]
+- op=fusionar_disco · status=applied · keep=8180 · drop=7276 · title=Mis Favoritas · tracksMoved=0 · fieldsCorrected=[]
+- op=fusionar_disco · status=applied · keep=8181 · drop=7277 · title=La Historia Del Puma · tracksMoved=0 · fieldsCorrected=[]
+- op=fusionar_disco · status=applied · keep=8182 · drop=7278 · title=Sólo Para Mujeres · tracksMoved=0 · fieldsCorrected=[]
+- op=fusionar_disco · status=applied · keep=8176 · drop=7272 · title=20 Exitos de José Luis - Colección 20/20 · tracksMoved=0 · fieldsCorrected=[]
+- op=fusionar_disco · status=applied · keep=8177 · drop=7273 · title=Boleros con Billo's - Serie Millenium · tracksMoved=0 · fieldsCorrected=[]
+- op=fusionar_disco · status=applied · keep=8175 · drop=7271 · title=Mis Primeros Boleros con Billo - Serie 32 · tracksMoved=0 · fieldsCorrected=[]
+- op=fusionar_disco · status=applied · keep=8155 · drop=7246 · title=Inolvidable (Con Los Panchos) · tracksMoved=0 · fieldsCorrected=[]
+- op=fusionar_disco · status=applied · keep=8156 · drop=7247 · title=Inolvidable II (Con Los Panchos) · tracksMoved=0 · fieldsCorrected=[]
+- op=fusionar_disco · status=applied · keep=8157 · drop=7249 · title=Inolvidable III (Con Los Panchos) · tracksMoved=0 · fieldsCorrected=[]
+- op=el_puma_discos · albumsOf3712=82 · merged=55 · movedAsIs=27
+- op=fusionar_artista · status=applied · keep={"id":795,"name":"Zardonic"} · drop={"id":835,"name":"Triangular Ascension"} · moved=50 · filled=[] · preserved=["biography","notes"] · conflicts=[{"field":"biography","keepValue":"Zardonic es el proyecto y alias artístico de Federico Augusto Ágreda Álvarez, DJ, productor, compositor, sintetista y remezclador nacido en Barquisimeto, estado Lara, Venezuela. Es reconocido como pionero del Metal & Bass, una fusión de heavy metal y drum and bass que desarrolla desde 2004, y su música abarca también el industrial, el black metal, el dark ambient y el minimal techno. Comenzó a componer a los 16 años con su proyecto solista de black metal Gorepriest, sin guitarras y enfocado en sintetizadores, y luego evolucionó hacia varios proyectos de música industrial, electrónica y experimental bajo distintos nombres. Radicado en Alemania, ha sido miembro de la Asociación de Ingenieros de Sonido Alemanes.\n\nSu discografía incluye los álbumes Metal Up Your Bass (2007), su reedición revAMPED (2011), Vulgar Display of Bass (2012) y Become (2018), además de los EP Chaotic Serenity (2008) y Those Who Know The Truth (2009), y el recopilatorio de remezclas Subcultonegro (2008). En Become participaron artistas como American Grim, The Qemists y Celldweller.\n\nComo remezclador ha trabajado con artistas como Nine Inch Nails, The Berzerker, Gorgoroth, Dark Funeral y Anaal Nathrakh, y su música ha sonado en los sets de figuras de la música electrónica como Pendulum, Andy C, DJ Hype y Dieselboy. Ha encabezado eventos en España, Bulgaria, Austria, Rumanía, Estados Unidos, México, Colombia, Ecuador, Argentina y Venezuela.\n\nEntre sus logros, su trabajo ha sido tema oficial del evento Revolution de All Elite Wrestling y tema principal del World Series of Fighting, y ha contribuido a bandas sonoras de videojuegos como Superhot: Mind Control Delete y Sonic Racing: CrossWorlds. Cuenta con el YouTube Silver Creator Award por superar los 100 000 suscriptores, y sus lanzamientos han encabezado listas en Beatport, iTunes y las Deutsche Alternative Charts.","dropValue":"Proyecto paralelo de dark ambient originado en Barquisimeto, estado Lara, Venezuela, liderado por Federico Ágreda Álvarez, conocido internacionalmente por su proyecto de drum and bass oscuro Zardonic. Ágreda ha estado vinculado a la música y el sonido desde temprana edad, con especial interés en la ingeniería de sonido y la composición, principalmente en música electrónica y metal, aunque también en música abstracta y bandas sonoras. Bajo el nombre de Zardonic realizó remixes para artistas como Nine Inch Nails, The Berzerker, Dark Funeral y Gorgoroth, y ofreció conciertos en España, Bulgaria, Austria, Rumania, México, Ecuador, Colombia, Argentina y Estados Unidos.\n\nLa propuesta de Triangular Ascension se centra en la abstracción del dark ambient, con drones introspectivos y pasajes atmosféricos que buscan una expresión pura del sonido.\n\nSu discografía incluye los EP Microcosmogenesis (2009), Nibirusalem (2010) y Sexta Repvblica (2011), así como el álbum de estudio Leviathan Device (2011)."},{"field":"origin_city","keepValue":"Barquisimeto- Lara","dropValue":"Lara"}] · aliasesMoved=["Triangular Ascension","Triangular Ascensión"] · aliasesAdded=[] · warnings=[]
+- op=solista · status=applied · id=3739 · name=Oscar D'León · loteClaimsAccepted=1
+- op=solista · status=applied · id=3785 · name=Felipe Pirela · loteClaimsAccepted=1
+- op=solista · status=applied · id=3676 · name=Alfredo Sadel · loteClaimsAccepted=1
+- op=solista · status=applied · id=3703 · name=Floria Márquez · loteClaimsAccepted=1
+- op=solista · status=applied · id=3897 · name=Aldemaro Romero · loteClaimsAccepted=1
+- op=solista · status=applied · id=3500 · name=Gerry Weil · loteClaimsAccepted=1
+- op=solista · status=applied · id=3480 · name=Edward Simon · loteClaimsAccepted=1
+- op=solista · status=applied · id=3558 · name=Otmaro Ruiz · loteClaimsAccepted=1
+- op=solista · status=applied · id=2861 · name=María Rivas · loteClaimsAccepted=1
+- op=solista · status=applied · id=3529 · name=Linda Briceño · loteClaimsAccepted=1
+- op=solista · status=applied · id=3745 · name=Roberto Antonio · loteClaimsAccepted=1
+- op=solista · status=applied · id=1830 · name=Ricardo Montaner · loteClaimsAccepted=1
+- op=solista · status=applied · id=264 · name=Yordano · loteClaimsAccepted=1
+- op=solista · status=applied · id=1980 · name=Karina · loteClaimsAccepted=1
+- op=solista · status=applied · id=57 · name=Canserbero · loteClaimsAccepted=1
+- op=solista · status=applied · id=1951 · name=Gillman · loteClaimsAccepted=1
+- op=solista · status=applied · id=3400 · name=Evencio Castellanos · loteClaimsAccepted=1
+- op=solista · status=applied · id=3993 · name=Paul Desenne · loteClaimsAccepted=1
+- op=solista · status=applied · id=1801 · name=Carlos Baute · loteClaimsAccepted=1
+- op=solista · status=applied · id=3732 · name=Natusha · loteClaimsAccepted=1
+- op=solista · status=applied · id=3756 · name=José Luis Rodríguez “El Puma” · loteClaimsAccepted=1
+- op=solista · status=applied · id=3796 · name=Mirla Castellanos · loteClaimsAccepted=1
+- op=solista · status=applied · id=2003 · name=Rudy La Scala · loteClaimsAccepted=1
+- op=solista · status=applied · id=3740 · name=Pecos Kanvas · loteClaimsAccepted=1
+- op=solista · status=applied · id=3684 · name=Canelita Medina · loteClaimsAccepted=1
+- op=solista · status=applied · id=2794 · name=Miguel Noya · loteClaimsAccepted=1
+- op=solista · status=applied · id=3829 · name=Juan Vicente Torrealba · loteClaimsAccepted=1
+- op=solista · status=applied · id=3889 · name=Reynaldo Armas · loteClaimsAccepted=1
+- op=solista · status=applied · id=3870 · name=Reyna Lucero · loteClaimsAccepted=1
+- op=solista · status=applied · id=3833 · name=Luis Silva · loteClaimsAccepted=1
+- op=solista · status=applied · id=3710 · name=Hugo Blanco · loteClaimsAccepted=1
+- op=solista · status=applied · id=4003 · name=Saúl Vera · loteClaimsAccepted=1
+- op=solista · status=applied · id=3677 · name=Alí Primera · loteClaimsAccepted=1
+- op=solista · status=applied · id=3749 · name=Soledad Bravo · loteClaimsAccepted=1
+- op=solista · status=applied · id=3831 · name=Lilia Vera · loteClaimsAccepted=1
+- op=solista · status=applied · id=3821 · name=Gualberto Ibarreto · loteClaimsAccepted=1
+- op=solista · status=applied · id=3797 · name=María Teresa Chacín · loteClaimsAccepted=1
+- op=solista · status=applied · id=3449 · name=Aquiles Báez · loteClaimsAccepted=1
+- op=solista · status=applied · id=3743 · name=Rafael “Pollo” Brito · loteClaimsAccepted=1
+- op=solista · status=applied · id=3816 · name=Francisco Pacheco · loteClaimsAccepted=1
+- op=solista · status=applied · id=3823 · name=Hernán Marín · loteClaimsAccepted=1
+- op=solista · status=applied · id=3689 · name=Chelique Sarabia · loteClaimsAccepted=1
+- op=solista · status=applied · id=3890 · name=Magdalena Sánchez · loteClaimsAccepted=1
+- op=solistas · listed=43 · retyped=43
+- op=quitar_alias · artist=1022 · alias=Simón Díaz · status=applied

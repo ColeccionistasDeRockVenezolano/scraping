@@ -1,0 +1,132 @@
+{
+ "mode": "confirm",
+ "runId": 11589,
+ "operator": "hermes (encargo dirigido de Brian, 2026-10-03)",
+ "artist": {
+  "id": 4234,
+  "spotifyId": "0Fq1y15UalIwXWqrZl59Qy",
+  "photo": "https://i.scdn.co/image/ab6761610000e5eb903a42e48b7ee9e48ee11a0e"
+ },
+ "created": [
+  {
+   "albumId": 10178,
+   "title": "Ostinato",
+   "year": 2023,
+   "type": "studio_album",
+   "date": "2023-05-10",
+   "tracks": 14,
+   "cover": "https://i.scdn.co/image/ab67616d0000b273de39a8edfb1fd8b285c30ecf"
+  },
+  {
+   "albumId": 10179,
+   "title": "Alba (Slowed Down Version)",
+   "year": 2024,
+   "type": "single",
+   "date": "2024-07-16",
+   "tracks": 1,
+   "cover": "https://i.scdn.co/image/ab67616d0000b273c1da888a76d12060106654cd"
+  },
+  {
+   "albumId": 10180,
+   "title": "Entropy",
+   "year": 2025,
+   "type": "single",
+   "date": "2025-01-09",
+   "tracks": 1,
+   "cover": "https://i.scdn.co/image/ab67616d0000b2734738f939fa0910373cfd0e0a"
+  },
+  {
+   "albumId": 10181,
+   "title": "All fine",
+   "year": 2025,
+   "type": "single",
+   "date": "2025-03-05",
+   "tracks": 1,
+   "cover": "https://i.scdn.co/image/ab67616d0000b273c3bdfd22aa900ac0e307a6a6"
+  }
+ ],
+ "skipped": [],
+ "fields": [
+  {
+   "albumId": 10178,
+   "field": "release_year",
+   "value": "2023"
+  },
+  {
+   "albumId": 10178,
+   "field": "album_type",
+   "value": "studio_album"
+  },
+  {
+   "albumId": 10178,
+   "field": "release_date_text",
+   "value": "2023-05-10"
+  },
+  {
+   "albumId": 10178,
+   "field": "cover_url",
+   "value": "https://i.scdn.co/image/ab67616d0000b273de39a8edfb1fd8b285c30ecf"
+  },
+  {
+   "albumId": 10179,
+   "field": "release_year",
+   "value": "2024"
+  },
+  {
+   "albumId": 10179,
+   "field": "album_type",
+   "value": "single"
+  },
+  {
+   "albumId": 10179,
+   "field": "release_date_text",
+   "value": "2024-07-16"
+  },
+  {
+   "albumId": 10179,
+   "field": "cover_url",
+   "value": "https://i.scdn.co/image/ab67616d0000b273c1da888a76d12060106654cd"
+  },
+  {
+   "albumId": 10180,
+   "field": "release_year",
+   "value": "2025"
+  },
+  {
+   "albumId": 10180,
+   "field": "album_type",
+   "value": "single"
+  },
+  {
+   "albumId": 10180,
+   "field": "release_date_text",
+   "value": "2025-01-09"
+  },
+  {
+   "albumId": 10180,
+   "field": "cover_url",
+   "value": "https://i.scdn.co/image/ab67616d0000b2734738f939fa0910373cfd0e0a"
+  },
+  {
+   "albumId": 10181,
+   "field": "release_year",
+   "value": "2025"
+  },
+  {
+   "albumId": 10181,
+   "field": "album_type",
+   "value": "single"
+  },
+  {
+   "albumId": 10181,
+   "field": "release_date_text",
+   "value": "2025-03-05"
+  },
+  {
+   "albumId": 10181,
+   "field": "cover_url",
+   "value": "https://i.scdn.co/image/ab67616d0000b273c3bdfd22aa900ac0e307a6a6"
+  }
+ ],
+ "errors": []
+}

@@ -1,0 +1,258 @@
+# Etapa 4 — sellos (dry-run, run 11604)
+
+Cosecha: `reports/nuevo-lote-2026-10-02/etapa4-cosecha.json`. Plan: ~/Desktop/PLAN_NUEVO_LOTE_2026-10-02.md §3.
+
+## Totales
+
+- sellos: a revisión: 55
+- sellos: musicbrainz: 141
+- sellos: organizaciones creadas: 29
+
+## Muestra de 40 (de 141 aplicados)
+
+- Candy66 — «A+» (131) · musicbrainz · «Latin World» → organización 134 (existente) · applied · https://musicbrainz.org/release/351a780f-7337-4993-9d3d-87d65a5a3211
+- Canserbero — «Corre» (13701) · musicbrainz · «InnerCat Music Group» → organización 2352 (creado) · applied · https://musicbrainz.org/release/d0ee11d9-2c73-4372-9cba-fbed9ea06b6b
+- Caramelos De Cianuro — «Acústico Retrovisor» (5530) · musicbrainz · «CDCROCK, LLC» → organización 2353 (creado) · applied · https://musicbrainz.org/release/e0231c0d-161f-4a0a-9fa7-64a83173b66d
+- Desorden Público — «Desorden Público» (166) · musicbrainz · «Sony Music» → organización 396 (existente) · applied · https://musicbrainz.org/release/2d7cad6f-4307-42dd-8083-fb1122cdb009
+- Desorden Público — «Canto Popular, 25 años» (5601) · musicbrainz · «Orden Privado» → organización 2354 (existente) · applied · https://musicbrainz.org/release/146ff2c1-13fb-4778-9b30-56959cb1812c
+- Franco De Vita — «Extranjero» (507) · musicbrainz · «CBS» → organización 483 (existente) · applied · https://musicbrainz.org/release/eb6107f3-6481-460d-83f9-63a730b7d468
+- Franco De Vita — «Sus Mejores Exitos» (4077) · musicbrainz · «Sony Discos» → organización 2040 (existente) · applied · https://musicbrainz.org/release/fa2d6063-7df5-4a94-84f3-4e10cf18fc6d
+- Franco De Vita — «Diez Años Vol. 1» (4083) · musicbrainz · «Mercury Records» → organización 2356 (creado) · applied · https://musicbrainz.org/release/821e0d69-e62f-46b5-9097-9019bb7f9e52
+- Franco De Vita — «Grandes éxitos, volumen 2» (13465) · musicbrainz · «Musart» → organización 978 (existente) · applied · https://musicbrainz.org/release/06b158a6-b289-4250-bfda-bcaea21fff53
+- Franco De Vita — «Personalidad» (13477) · musicbrainz · «Sony Music» → organización 396 (existente) · applied · https://musicbrainz.org/release/795b8918-da8c-4bc0-bfd2-d1740cbf0e78
+- Ilan Chester — «Tesoros de la música venezolana, Volumen 3: Llanos» (13561) · musicbrainz · «Últimas Noticias» → organización 2359 (creado) · applied · https://musicbrainz.org/release/ad3cee4a-003c-4b18-8937-ee94cb8f0eef
+- Ilan Chester — «Tesoros de la música venezolana, Volumen 2: Costas» (13565) · musicbrainz · «Últimas Noticias» → organización 2359 (existente) · applied · https://musicbrainz.org/release/9eb6b414-7c17-491b-b6db-b48d7cd537ff
+- La Vida Bohème — «Nuestra» (228) · musicbrainz · «All of the Above» → organización 2360 (creado) · applied · https://musicbrainz.org/release/e72a8a7e-a02d-4d7f-9b04-ae0b452f6da5
+- La Vida Bohème — «Radio Capital» (14032) · musicbrainz · «Nacional Records» → organización 2331 (existente) · applied · https://musicbrainz.org/release/783edf82-04c3-44e0-a5b6-529bdc974382
+- Lil Supa' — «NEØN» (13759) · musicbrainz · «Lil Supa» → organización 2362 (existente) · applied · https://musicbrainz.org/release/d2d90a78-9e61-45af-a0ee-8c27906f089c
+- Lil Supa' — «METAL II» (13763) · musicbrainz · «LIL SUPA'» → organización 2362 (existente) · applied · https://musicbrainz.org/release/6f0162b9-2d00-457d-be93-93f1e60f5de6
+- Los Amigos Invisibles — «Not So Commercial» (76) · musicbrainz · «Gozadera Records» → organización 18 (existente) · applied · https://musicbrainz.org/release/c7026153-cd5f-4ae1-b05a-1d699df96746
+- Los Amigos Invisibles — «Superpop Venezuela» (249) · musicbrainz · «Gozadera Records» → organización 18 (existente) · applied · https://musicbrainz.org/release/9344e9fd-1172-4680-a019-095f413289bf
+- Los Amigos Invisibles — «Repeat After Me» (3800) · musicbrainz · «Nacional Records» → organización 2331 (existente) · applied · https://musicbrainz.org/release/7a719c55-3336-42ff-9916-201f0e873035
+- Los Amigos Invisibles — «Something» (14098) · musicbrainz · «Gozadera Records» → organización 18 (existente) · applied · https://musicbrainz.org/release/8bb890c4-77c1-482b-a802-fd98ab103b7d
+- Los Amigos Invisibles — «Me Espera» (14102) · musicbrainz · «Gozadera Records» → organización 18 (existente) · applied · https://musicbrainz.org/release/78d9c00a-c5d1-4af3-8d6c-72d6e4b91121
+- Rawayana — «Cuando los Acéfalos Predominan» (3391) · musicbrainz · «Brocoli Records» → organización 2272 (existente) · applied · https://musicbrainz.org/release/3237a259-3fc9-4e35-91de-03c075c5eac5
+- Rawayana — «Music Sounds Better With You» (13926) · musicbrainz · «Brocoli Records» → organización 2272 (existente) · applied · https://musicbrainz.org/release/62431868-0aa4-458d-9600-1088e07793eb
+- Rawayana — «Sin ti» (13930) · musicbrainz · «Brocoli Records» → organización 2272 (existente) · applied · https://musicbrainz.org/release/317d1788-10b2-4d40-aca9-3369d4f4a405
+- Rawayana — «¡QUE VUELVAN LOS MATINÉ!» (13933) · musicbrainz · «St. Indie» → organización 2369 (existente) · applied · https://musicbrainz.org/release/d0089ce6-5c3d-4687-87a5-b69249002d03
+- Rawayana — «Feriado» (13937) · musicbrainz · «St. Indie» → organización 2369 (existente) · applied · https://musicbrainz.org/release/010054cd-3a52-49e3-ae23-4740da822910
+- Sentimiento Muerto — «Fin Del Cuento 1981-1993» (325) · musicbrainz · «Rodven Records» → organización 2277 (existente) · applied · https://musicbrainz.org/release/49b0a43d-a7e6-4962-8841-dcba6909765f
+- Serenata Guayanesa — «Cantemos Con Los Niños» (9043) · musicbrainz · «Serenata Guayanesa» → organización 2372 (creado) · applied · https://musicbrainz.org/release/3318d84f-6737-4bfe-8fab-15c1a7756db9
+- Viniloversus — «La huella» (14048) · musicbrainz · «Altamira Artists» → organización 2298 (existente) · applied · https://musicbrainz.org/release/e960099e-b5db-44ef-aebe-465fca09443e
+- Vytas Brenner — «Ofrenda» (495) · musicbrainz · «DISCOMODA» → organización 218 (existente) · applied · https://musicbrainz.org/release/4e4f81ea-0b39-42bd-b322-388a97e20a5f
+- Vytas Brenner — «Estoy Como Quiero» (2398) · musicbrainz · «DISCOMODA» → organización 218 (existente) · applied · https://musicbrainz.org/release/856b2a34-c170-415a-870d-5728acbcacdc
+- Yordano — «Yordano» (499) · musicbrainz · «Polydor» → organización 3 (existente) · applied · https://musicbrainz.org/release/27b1c320-3eec-47dc-834c-5f769d48d4d7
+- Yordano — «Jugando Conmigo» (4597) · musicbrainz · «Sonográfica» → organización 148 (existente) · applied · https://musicbrainz.org/release/97245e5c-bb5d-47fc-b292-1f737fe52090
+- Dimension Latina — «Una Dimension De Éxitos» (522) · musicbrainz · «Top Hits» → organización 388 (existente) · applied · https://musicbrainz.org/release/684c4da5-c7f6-44d6-bfab-2173552c659d
+- Dimension Latina — «En La Dimensión Latina» (6936) · musicbrainz · «Top Hits» → organización 388 (existente) · applied · https://musicbrainz.org/release/75a9f74c-4201-4171-a05d-9e515a0dc149
+- Dimension Latina — «Los Generales De La Salsa» (6941) · musicbrainz · «Top Hits» → organización 388 (existente) · applied · https://musicbrainz.org/release/2be95e8c-8db4-4e49-8e8e-2584537d0f47
+- Dimension Latina — «Tremenda Dimensión» (6945) · musicbrainz · «Velvet» → organización 6 (existente) · applied · https://musicbrainz.org/release/5be387f7-7e9e-4690-9839-168eec884d6b
+- Dimension Latina — «Canto Para Ti» (6955) · musicbrainz · «Distribuidora Sonográfica C.A.» → organización 1458 (existente) · applied · https://musicbrainz.org/release/3e8319ab-c5b7-4257-92bf-0f322ddbf591
+- Dimension Latina — «Dimensión Latina vs Billo's Caracas Boys» (12932) · musicbrainz · «Top Hits» → organización 388 (existente) · applied · https://musicbrainz.org/release/663323f7-cbd6-4ee5-bce7-223eca7f2c7d
+- Dimension Latina — «Dimensión Latina en Nueva York» (12939) · musicbrainz · «Top Hits» → organización 388 (existente) · applied · https://musicbrainz.org/release/db15b7e2-94d5-4eb3-b203-90685d444856
+
+## Con avisos
+
+
+## No aplicados
+
+- Canserbero — «Siempre» (13691) · musicbrainz · «Fundacion El Canserbero»: el motor no lo reconoce ni lo crea (candidate: REVIEW: no se modifica el canonico) · https://musicbrainz.org/release/b1bf4361-06c2-4174-b5c9-38559557858f
+- Canserbero — «All You Need Is Hate Live» (13693) · musicbrainz · «Fundacion El Canserbero»: el motor no lo reconoce ni lo crea (candidate: REVIEW: no se modifica el canonico) · https://musicbrainz.org/release/040ecf01-efe1-453f-82fc-aa8b37e94be0
+- Canserbero — «Sigo Siendo el Rey» (13694) · musicbrainz · «Fundacion El Canserbero»: el motor no lo reconoce ni lo crea (candidate: REVIEW: no se modifica el canonico) · https://musicbrainz.org/release/ac7a566a-d311-4bb5-8070-0a33c0b39a8f
+- Canserbero — «Mi Pobre Gente Pobre» (13696) · musicbrainz · «Fundacion El Canserbero»: el motor no lo reconoce ni lo crea (candidate: REVIEW: no se modifica el canonico) · https://musicbrainz.org/release/128c3593-c8b0-420a-a9aa-aaa1b3ce174c
+- Canserbero — «Querer Querernos» (13697) · musicbrainz · «Fundacion El Canserbero»: el motor no lo reconoce ni lo crea (candidate: REVIEW: no se modifica el canonico) · https://musicbrainz.org/release/fbfccb49-57bb-4301-971c-3e5a836a1b8c
+- Canserbero — «Las Ánimas» (13700) · musicbrainz · «Fundacion El Canserbero»: el motor no lo reconoce ni lo crea (candidate: REVIEW: no se modifica el canonico) · https://musicbrainz.org/release/393fbafe-3ed6-4f32-80f9-c2b5f92507b1
+- Canserbero — «Hipocritas» (13702) · musicbrainz · «Fundacion El Canserbero»: el motor no lo reconoce ni lo crea (candidate: REVIEW: no se modifica el canonico) · https://musicbrainz.org/release/5bac78ce-012d-49c0-b14a-dc5f03954416
+- Canserbero — «Tripolar» (13703) · musicbrainz · «Fundacion El Canserbero»: el motor no lo reconoce ni lo crea (candidate: REVIEW: no se modifica el canonico) · https://musicbrainz.org/release/44323797-fde7-484d-9e9a-4bf8040daa10
+- Canserbero — «Quisiera» (13705) · musicbrainz · «Fundacion El Canserbero»: el motor no lo reconoce ni lo crea (candidate: REVIEW: no se modifica el canonico) · https://musicbrainz.org/release/0e5126ac-0885-4c75-8292-a8faa9748c27
+- Canserbero — «Na» (13707) · musicbrainz · «Fundacion El Canserbero»: el motor no lo reconoce ni lo crea (candidate: REVIEW: no se modifica el canonico) · https://musicbrainz.org/release/24902e21-466b-4e4d-a120-24675fbded14
+- Canserbero — «Can Vive» (13708) · musicbrainz · «Fundacion El Canserbero»: el motor no lo reconoce ni lo crea (candidate: REVIEW: no se modifica el canonico) · https://musicbrainz.org/release/633a2332-45a3-4d5f-84e6-128c24318c64
+- Canserbero — «En Directo Desde la Cabina» (13709) · musicbrainz · «Universal Content Gansta Inc.»: el motor no lo reconoce ni lo crea (candidate: REVIEW: no se modifica el canonico) · https://musicbrainz.org/release/65ec52d2-8fdf-4530-ac44-223916da9ad7
+- Canserbero — «Jamming Sin Fronteras» (13710) · musicbrainz · «Fundacion El Canserbero»: el motor no lo reconoce ni lo crea (candidate: REVIEW: no se modifica el canonico) · https://musicbrainz.org/release/e7393ad6-fd9d-4fa7-8ef3-3deb18515c5b
+- Caramelos De Cianuro — «Cuentos Para Adultos» (138) · musicbrainz · «CNR Discos Venezuela»: el motor no lo reconoce ni lo crea (candidate: REVIEW: no se modifica el canonico) · https://musicbrainz.org/release/c9046652-9093-4257-8052-cb0947842f58
+- Desorden Público — «The Ska Album» (2154) · musicbrainz · «Übersee records»: el motor no lo reconoce ni lo crea (candidate: REVIEW: no se modifica el canonico) · https://musicbrainz.org/release/c4809cc7-4ec0-49f3-8f5e-e55aa2172fc8
+- Desorden Público — «FUNEBRE» (13970) · musicbrainz · «Bambam Records»: el motor no lo reconoce ni lo crea (candidate: REVIEW: no se modifica el canonico) · https://musicbrainz.org/release/3e1efa8a-48c5-486d-b108-d2de34d390a1
+- Franco De Vita — «Fuera De Este Mundo» (445) · musicbrainz · «Columbia»: el motor no lo reconoce ni lo crea (candidate: REVIEW: no se modifica el canonico) · https://musicbrainz.org/release/2bf72a75-d1f0-4db1-9be9-be77ca3f3534
+- Franco De Vita — «Nada Es Igual» (446) · musicbrainz · «Columbia»: el motor no lo reconoce ni lo crea (candidate: REVIEW: no se modifica el canonico) · https://musicbrainz.org/release/e2f5924a-1d88-476a-bcba-54ecbe41f58c
+- Franco De Vita — «Voces A Mi Alrededor» (448) · musicbrainz · «Columbia»: el motor no lo reconoce ni lo crea (candidate: REVIEW: no se modifica el canonico) · https://musicbrainz.org/release/a7980273-6f9c-414e-808c-df264256503b
+- Franco De Vita — «Al Norte Del Sur» (506) · musicbrainz · «Sony Music México»: el motor no lo reconoce ni lo crea (candidate: REVIEW: no se modifica el canonico) · https://musicbrainz.org/release/3428c0b8-01b0-4e00-b3fb-d21dc4f1f308
+- Franco De Vita — «Libre» (4072) · musicbrainz · «Sony Music | Latin»: el motor no lo reconoce ni lo crea (candidate: REVIEW: no se modifica el canonico) · https://musicbrainz.org/release/3362b01f-1de4-4bbe-8f38-23d267855f25
+- Franco De Vita — «Segundas Partes También Son Buenas» (4087) · musicbrainz · «Universal Latino»: el motor no lo reconoce ni lo crea (candidate: REVIEW: no se modifica el canonico) · https://musicbrainz.org/release/4595f121-efe7-4049-ba1d-6c366fbb0653
+- Franco De Vita — «Mis 30 Mejores Canciones» (4091) · musicbrainz · «Sony Latin»: el motor no lo reconoce ni lo crea (candidate: REVIEW: no se modifica el canonico) · https://musicbrainz.org/release/bec0c971-91a0-45e7-90af-36eb0b4a2f15
+- Franco De Vita — «Dónde está la vida» (13461) · musicbrainz · «Sony Music | Latin»: el motor no lo reconoce ni lo crea (candidate: REVIEW: no se modifica el canonico) · https://musicbrainz.org/release/c2b84833-6733-42ed-83f2-ee7bb47fa81c
+- Franco De Vita — «Tan sólo tú» (13462) · musicbrainz · «Sony Music | Latin»: el motor no lo reconoce ni lo crea (candidate: REVIEW: no se modifica el canonico) · https://musicbrainz.org/release/74286b39-954b-4280-a9d1-e486f04da594
+- Franco De Vita — «Acceso VIP» (13463) · musicbrainz · «SG Music»: el motor no lo reconoce ni lo crea (candidate: REVIEW: no se modifica el canonico) · https://musicbrainz.org/release/951bd9f6-f26d-4f15-9c96-e1d70d9c83f0
+- Franco De Vita — «No sé nada de ti» (13474) · musicbrainz · «Sony Music | Latin»: el motor no lo reconoce ni lo crea (candidate: REVIEW: no se modifica el canonico) · https://musicbrainz.org/release/320911f5-91d5-4c66-aef2-990728daec14
+- Franco De Vita — «Mi sueño» (13475) · musicbrainz · «Sony Music | Latin»: el motor no lo reconoce ni lo crea (candidate: REVIEW: no se modifica el canonico) · https://musicbrainz.org/release/1df7b2c9-8348-4673-8fcf-8d2c5ae5d46e
+- Franco De Vita — «Si tú no estás» (13476) · musicbrainz · «Sony Music | Latin»: el motor no lo reconoce ni lo crea (candidate: REVIEW: no se modifica el canonico) · https://musicbrainz.org/release/902d4317-60c4-49eb-a188-9bab7ffefc9f
+- Franco De Vita — «Serie Top 10» (13478) · musicbrainz · «Universal Music Latino»: el motor no lo reconoce ni lo crea (candidate: REVIEW: no se modifica el canonico) · https://musicbrainz.org/release/d2e19900-dfd4-49c9-bb29-22286def0a8a
+- Franco De Vita — «Te pienso sin querer» (13480) · musicbrainz · «Sony Music | Latin»: el motor no lo reconoce ni lo crea (candidate: REVIEW: no se modifica el canonico) · https://musicbrainz.org/release/54d71717-9818-46b5-b6dd-25cbe4274c20
+- Franco De Vita — «Dónde está la vida (Víctor Porfidio remix)» (13483) · musicbrainz · «Sony Music | Latin»: el motor no lo reconoce ni lo crea (candidate: REVIEW: no se modifica el canonico) · https://musicbrainz.org/release/3e013537-6dbf-40c3-b177-998de4bb1e86
+- Franco De Vita — «Dónde está la vida (remix 2.0)» (13484) · musicbrainz · «Sony Music | Latin»: el motor no lo reconoce ni lo crea (candidate: REVIEW: no se modifica el canonico) · https://musicbrainz.org/release/6ca145b0-5297-4df9-a53a-9a3af17ffb3d
+- Ilan Chester — «Terciopelo» (4236) · musicbrainz · «Columbia»: el motor no lo reconoce ni lo crea (candidate: REVIEW: no se modifica el canonico) · https://musicbrainz.org/release/aa6519e4-75ad-4bfb-be4d-bb6a6526be9c
+- Ilan Chester — «Ofrenda Para Un Niño» (4248) · musicbrainz · «Recordland»: el motor no lo reconoce ni lo crea (candidate: REVIEW: no se modifica el canonico) · https://musicbrainz.org/release/7037a546-eaf7-400b-b924-ef4a3f3b1b31
+- La Vida Bohème — «Diáspora Live Vol.1» (14031) · musicbrainz · «Independiente»: el motor no lo reconoce ni lo crea (candidate: REVIEW: no se modifica el canonico) · https://musicbrainz.org/release/5b444c53-e5b2-4af2-8112-fc07fa28fbb7
+- Los Amigos Invisibles — «Bruja» (75) · musicbrainz · «MAW Records»: el motor no lo reconoce ni lo crea (candidate: REVIEW: no se modifica el canonico) · https://musicbrainz.org/release/6fba77de-2696-4101-ace5-0440b16436ad
+- Los Amigos Invisibles — «Cool Love» (5526) · musicbrainz · «LOV/RECS»: el motor no lo reconoce ni lo crea (candidate: REVIEW: no se modifica el canonico) · https://musicbrainz.org/release/a3450af9-3c77-4c09-a45f-fc1aa2d068dd
+- Los Mesoneros — «Solo» (14066) · musicbrainz · «Los Mesoneros»: el motor no lo reconoce ni lo crea (candidate: REVIEW: no se modifica el canonico) · https://musicbrainz.org/release/ac39e723-7ca5-4ecf-810a-1300938edb6b
+- Rawayana — «Licencia Para Ser Libre» (312) · musicbrainz · «digitalpressure»: el motor no lo reconoce ni lo crea (candidate: REVIEW: no se modifica el canonico) · https://musicbrainz.org/release/fabfde9a-bb43-47a5-ba6d-adc51998ffaf
+- Rawayana — «Últimos días» (13940) · musicbrainz · «Universal Music México»: el motor no lo reconoce ni lo crea (candidate: REVIEW: no se modifica el canonico) · https://musicbrainz.org/release/c5abcaab-daf6-4ba7-b3e5-0d3fcbc1417c
+- Viniloversus — «En Vivo» (3722) · musicbrainz · «SNAFU Records»: el motor no lo reconoce ni lo crea (candidate: REVIEW: no se modifica el canonico) · https://musicbrainz.org/release/1317f338-3789-468a-8e6f-4ce5c218208c
+- Viniloversus — «Mi Mejor Enemigo» (4576) · musicbrainz · «SNAFU Records»: el motor no lo reconoce ni lo crea (candidate: REVIEW: no se modifica el canonico) · https://musicbrainz.org/release/34f71be1-e438-4378-a6f6-db90b129750e
+- Yordano — «El Tren de los Regresos» (4700) · musicbrainz · «Sony Music | Latin»: el motor no lo reconoce ni lo crea (candidate: REVIEW: no se modifica el canonico) · https://musicbrainz.org/release/c76d9998-97cb-4e3a-8d2a-7419ccf8dbf7
+- Yordano — «El último tren (Downtown Train)» (13546) · musicbrainz · «Sony Music | Latin»: el motor no lo reconoce ni lo crea (candidate: REVIEW: no se modifica el canonico) · https://musicbrainz.org/release/6388e6cc-a9e3-453e-9868-f3154364a244
+- Yordano — «Días de junio» (13547) · musicbrainz · «Sony Music | Latin»: el motor no lo reconoce ni lo crea (candidate: REVIEW: no se modifica el canonico) · https://musicbrainz.org/release/babc5e8e-367b-4936-8d91-4578a160660c
+- Yordano — «Ida y vuelta» (13548) · musicbrainz · «Sony Music | Latin»: el motor no lo reconoce ni lo crea (candidate: REVIEW: no se modifica el canonico) · https://musicbrainz.org/release/07b31f7b-61be-4522-962e-ce0acb9eb2d9
+- Yordano — «Otra cara bonita» (13549) · musicbrainz · «Sony Music | Latin»: el motor no lo reconoce ni lo crea (candidate: REVIEW: no se modifica el canonico) · https://musicbrainz.org/release/de93b38e-6c2c-452b-b867-f8bd8d003470
+- Yordano — «Manantial de corazón» (13550) · musicbrainz · «Sony Music | Latin»: el motor no lo reconoce ni lo crea (candidate: REVIEW: no se modifica el canonico) · https://musicbrainz.org/release/465c538c-12d3-4abc-927c-1e8cdc337925
+- Yordano — «Besos en la lluvia» (13551) · musicbrainz · «Sony Music | Latin»: el motor no lo reconoce ni lo crea (candidate: REVIEW: no se modifica el canonico) · https://musicbrainz.org/release/36651a70-427d-4536-a433-4c47073931a5
+- Yordano — «Enamorarnos otra vez» (13557) · musicbrainz · «Sony Music | Latin»: el motor no lo reconoce ni lo crea (candidate: REVIEW: no se modifica el canonico) · https://musicbrainz.org/release/603af36b-d3a1-484c-af44-83a7897dde4a
+- Zapato 3 — «ZAPATO3 2023» (13999) · musicbrainz · «Zapato3»: el motor no lo reconoce ni lo crea (candidate: REVIEW: no se modifica el canonico) · https://musicbrainz.org/release/b9667ce5-bcaf-42d7-8ef4-ace66b8d098f
+- Dimension Latina — «Cuerda Para Rato» (6952) · musicbrainz · «LAD Records»: el motor no lo reconoce ni lo crea (candidate: REVIEW: no se modifica el canonico) · https://musicbrainz.org/release/64719f09-7b55-4db0-81f7-6782e714942b
+- Dimension Latina — «10 Años Repartiendo Salsa» (6953) · musicbrainz · «LAD Records»: el motor no lo reconoce ni lo crea (candidate: REVIEW: no se modifica el canonico) · https://musicbrainz.org/release/d1249481-140f-4cbd-85dd-a3b4dc17c651
+- Dimension Latina — «Dimensión Latina 98» (6959) · musicbrainz · «Columbia»: el motor no lo reconoce ni lo crea (candidate: REVIEW: no se modifica el canonico) · https://musicbrainz.org/release/a75f5e2f-cdff-4d26-bd74-0410b6ebaf29
+
+## Todos los aplicados
+
+- Candy66 — «A+» (131) · musicbrainz · «Latin World» → organización 134 (existente) · applied · https://musicbrainz.org/release/351a780f-7337-4993-9d3d-87d65a5a3211
+- Candy66 — «5 Mundos» (425) · musicbrainz · «Latin World» → organización 134 (existente) · applied · https://musicbrainz.org/release/2698dd5d-50fa-48c3-82ab-6268f1269acd
+- Candy66 — «P.O.P.» (427) · musicbrainz · «LatinWMG» → organización 2351 (creado) · applied · https://musicbrainz.org/release/fcde47ab-58c9-4203-be6a-9efca702ca85
+- Canserbero — «Corre» (13701) · musicbrainz · «InnerCat Music Group» → organización 2352 (creado) · applied · https://musicbrainz.org/release/d0ee11d9-2c73-4372-9cba-fbed9ea06b6b
+- Caramelos De Cianuro — «Frisbee» (141) · musicbrainz · «Universal» → organización 322 (existente) · applied · https://musicbrainz.org/release/fe07a880-9fe6-4aad-8183-33ab08d9f90f
+- Caramelos De Cianuro — «Miss Mujerzuela» (144) · musicbrainz · «Latin World» → organización 134 (existente) · applied · https://musicbrainz.org/release/f65c181f-7593-4a4d-8a5c-4444492bb2f0
+- Caramelos De Cianuro — «Control» (3858) · musicbrainz · «InnerCat Music Group» → organización 2352 (existente) · applied · https://musicbrainz.org/release/348d593c-3ac8-49c2-94cc-f3871466813f
+- Caramelos De Cianuro — «Acústico Retrovisor» (5530) · musicbrainz · «CDCROCK, LLC» → organización 2353 (creado) · applied · https://musicbrainz.org/release/e0231c0d-161f-4a0a-9fa7-64a83173b66d
+- Caramelos De Cianuro — «Que El Desayuno Espere 2.0» (14023) · musicbrainz · «CDCROCK, LLC» → organización 2353 (existente) · applied · https://musicbrainz.org/release/68286d76-7b60-4956-be82-1ded82dc3855
+- Caramelos De Cianuro — «Live From Paris - Lado B (En Vivo)» (14024) · musicbrainz · «CDCROCK, LLC» → organización 2353 (existente) · applied · https://musicbrainz.org/release/5b39bf5c-071b-46de-befc-bb432444f487
+- Desorden Público — «Desorden Público» (166) · musicbrainz · «Sony Music» → organización 396 (existente) · applied · https://musicbrainz.org/release/2d7cad6f-4307-42dd-8083-fb1122cdb009
+- Desorden Público — «Los Contrarios» (436) · musicbrainz · «Orden Privado» → organización 2354 (creado) · applied · https://musicbrainz.org/release/229ef57b-c077-4727-af1a-74eb4736c12e
+- Desorden Público — «Bailando Sobre Las Ruinas» (3976) · musicbrainz · «Orden Privado» → organización 2354 (existente) · applied · https://musicbrainz.org/release/612c5454-4233-41ec-9041-4ae1b9d5b903
+- Desorden Público — «Pa' Fuera» (3978) · musicbrainz · «Orden Privado» → organización 2354 (existente) · applied · https://musicbrainz.org/release/0cfbff41-9f8a-406e-bee4-1e9fd246e052
+- Desorden Público — «Canto Popular, 25 años» (5601) · musicbrainz · «Orden Privado» → organización 2354 (existente) · applied · https://musicbrainz.org/release/146ff2c1-13fb-4778-9b30-56959cb1812c
+- Desorden Público — «Desorden Forajido» (13971) · musicbrainz · «Orden Privado» → organización 2354 (existente) · applied · https://musicbrainz.org/release/13395128-941d-40c3-8ed6-9b91454e9bff
+- Franco De Vita — «Stop» (447) · musicbrainz · «Epic» → organización 1856 (existente) · applied · https://musicbrainz.org/release/59b1330d-1453-471e-8c49-843c4c0e62b9
+- Franco De Vita — «Extranjero» (507) · musicbrainz · «CBS» → organización 483 (existente) · applied · https://musicbrainz.org/release/eb6107f3-6481-460d-83f9-63a730b7d468
+- Franco De Vita — «Gold» (3405) · musicbrainz · «Distribuidora Sonográfica C.A.» → organización 1458 (existente) · applied · https://musicbrainz.org/release/790b4173-562d-40f7-ae3c-a7d26d99faf0
+- Franco De Vita — «En Vivo (Marzo 16)» (4073) · musicbrainz · «Sony Discos» → organización 2040 (existente) · applied · https://musicbrainz.org/release/9ad5552f-fece-47ae-b758-374b6a788f66
+- Franco De Vita — «Simplemente La Verdad» (4074) · musicbrainz · «Norte» → organización 2355 (creado) · applied · https://musicbrainz.org/release/329c8a46-bbe9-4a17-bb55-9071489d7a4f
+- Franco De Vita — «Sus Mejores Exitos» (4077) · musicbrainz · «Sony Discos» → organización 2040 (existente) · applied · https://musicbrainz.org/release/fa2d6063-7df5-4a94-84f3-4e10cf18fc6d
+- Franco De Vita — «Mil y Una Historias En Vivo» (4078) · musicbrainz · «Norte» → organización 2355 (existente) · applied · https://musicbrainz.org/release/5a39be26-70e5-4c20-b784-c1e8536ab372
+- Franco De Vita — «Vuelve En Primera Fila» (4082) · musicbrainz · «Sony Music» → organización 396 (existente) · applied · https://musicbrainz.org/release/09fa946e-cdd9-404d-aa6a-cd423d3edda9
+- Franco De Vita — «Diez Años Vol. 1» (4083) · musicbrainz · «Mercury Records» → organización 2356 (creado) · applied · https://musicbrainz.org/release/821e0d69-e62f-46b5-9097-9019bb7f9e52
+- Franco De Vita — «14 Super Exitos» (4089) · musicbrainz · «Sonotone» → organización 1976 (existente) · applied · https://musicbrainz.org/release/95fc84f0-2578-4d7b-af95-0a6bddbece7e
+- Franco De Vita — «Exitos Eternos» (4092) · musicbrainz · «Universal Music México, S.A. de C.V.» → organización 2357 (creado) · applied · https://musicbrainz.org/release/123ad9d3-3d3e-4c28-95be-c57304946449
+- Franco De Vita — «Hits» (4094) · musicbrainz · «EMI Latin» → organización 2358 (creado) · applied · https://musicbrainz.org/release/1ad69ca1-8c7f-4484-a4d0-e3ab0038fc12
+- Franco De Vita — «Grandes éxitos, volumen 2» (13465) · musicbrainz · «Musart» → organización 978 (existente) · applied · https://musicbrainz.org/release/06b158a6-b289-4250-bfda-bcaea21fff53
+- Franco De Vita — «Un Buen Perdedor» (13468) · musicbrainz · «Sonotone» → organización 1976 (existente) · applied · https://musicbrainz.org/release/a3941fe4-d167-4633-83b9-97d6b7ae0a5d
+- Franco De Vita — «32 grandes éxitos» (13472) · musicbrainz · «Universal Music» → organización 322 (existente) · applied · https://musicbrainz.org/release/74f652fd-7a75-420b-a959-3de363fe40d9
+- Franco De Vita — «Personalidad» (13477) · musicbrainz · «Sony Music» → organización 396 (existente) · applied · https://musicbrainz.org/release/795b8918-da8c-4bc0-bfd2-d1740cbf0e78
+- Ilan Chester — «Ilan En Vivo» (4246) · musicbrainz · «Sonográfica» → organización 148 (existente) · applied · https://musicbrainz.org/release/a97775d0-5fef-4e56-ac49-61a80f8b7af6
+- Ilan Chester — «Solo Exitos» (4255) · musicbrainz · «Distribuidora Sonográfica C.A.» → organización 1458 (existente) · applied · https://musicbrainz.org/release/e2ac3249-bea0-4170-b057-60c3c4c38eec
+- Ilan Chester — «Al Pie De La Letra» (4257) · musicbrainz · «Sonográfica» → organización 148 (existente) · applied · https://musicbrainz.org/release/f4c414ba-bde1-4d37-8780-ff2ec3cb585d
+- Ilan Chester — «Tesoros de la música venezolana, Volumen 3: Llanos» (13561) · musicbrainz · «Últimas Noticias» → organización 2359 (creado) · applied · https://musicbrainz.org/release/ad3cee4a-003c-4b18-8937-ee94cb8f0eef
+- Ilan Chester — «Tesoros de la música venezolana, Volumen 6: Caracas» (13562) · musicbrainz · «Últimas Noticias» → organización 2359 (existente) · applied · https://musicbrainz.org/release/be4be1d3-8f64-4731-ae99-0da654246d80
+- Ilan Chester — «Ilan Chester – Opus #10» (13563) · musicbrainz · «Sonográfica» → organización 148 (existente) · applied · https://musicbrainz.org/release/efbaa7c4-efe5-4a85-8f87-256b08608813
+- Ilan Chester — «Tesoros de la música venezolana, Volumen 2: Costas» (13565) · musicbrainz · «Últimas Noticias» → organización 2359 (existente) · applied · https://musicbrainz.org/release/9eb6b414-7c17-491b-b6db-b48d7cd537ff
+- Ilan Chester — «Tesoros de la música venezolana, Volumen 1: Zulia» (13566) · musicbrainz · «Últimas Noticias» → organización 2359 (existente) · applied · https://musicbrainz.org/release/da2d5e88-eb4a-4780-ae92-fefe16425b50
+- Ilan Chester — «Tesoros de la música venezolana, Volumen 4: Lara» (13567) · musicbrainz · «Últimas Noticias» → organización 2359 (existente) · applied · https://musicbrainz.org/release/c46bb64b-d7d7-4eab-b4a4-0d81afaa3ac6
+- Ilan Chester — «Tesoros de la música venezolana, Volumen 5: Andes» (13569) · musicbrainz · «Últimas Noticias» → organización 2359 (existente) · applied · https://musicbrainz.org/release/abc02f7d-68cf-4e24-8d9a-f75886ea7343
+- La Vida Bohème — «Nuestra» (228) · musicbrainz · «All of the Above» → organización 2360 (creado) · applied · https://musicbrainz.org/release/e72a8a7e-a02d-4d7f-9b04-ae0b452f6da5
+- La Vida Bohème — «Sera» (2290) · musicbrainz · «Nacional Records» → organización 2331 (existente) · applied · https://musicbrainz.org/release/c0e67f99-3104-4494-8376-9c3b6b6f2ebf
+- La Vida Bohème — «El Nombre De Esta Banda Es La Vida Bohéme» (4368) · musicbrainz · «Ventilador Music» → organización 2296 (existente) · applied · https://musicbrainz.org/release/195d3674-0daf-4bb5-a1e6-864f3e60ef1c
+- La Vida Bohème — «Radio Capital» (14032) · musicbrainz · «Nacional Records» → organización 2331 (existente) · applied · https://musicbrainz.org/release/783edf82-04c3-44e0-a5b6-529bdc974382
+- Lil Supa' — «Serio» (461) · musicbrainz · «InnerCat Music Group» → organización 2352 (existente) · applied · https://musicbrainz.org/release/1b89f58a-6623-4b5b-98ac-6d41711e4cc5
+- Lil Supa' — «Ritual The Mixtape» (13756) · musicbrainz · «yoyoDOJO» → organización 2361 (creado) · applied · https://musicbrainz.org/release/87f160dc-7156-4175-96fe-d973ae84aa50
+- Lil Supa' — «En Vivo Madrid 2017» (13757) · musicbrainz · «Lil Supa» → organización 2362 (creado) · applied · https://musicbrainz.org/release/91265426-ec32-4c0d-af77-e3c0bbc06bcc
+- Lil Supa' — «NEØN» (13759) · musicbrainz · «Lil Supa» → organización 2362 (existente) · applied · https://musicbrainz.org/release/d2d90a78-9e61-45af-a0ee-8c27906f089c
+- Lil Supa' — «Supremacy» (13760) · musicbrainz · «Lil Supa» → organización 2362 (existente) · applied · https://musicbrainz.org/release/3923c6e1-5b62-4c6b-9c56-5ceccf8fd251
+- Lil Supa' — «ANIMAL» (13762) · musicbrainz · «Lil Supa» → organización 2362 (existente) · applied · https://musicbrainz.org/release/f3400db6-0ef7-4b11-a85a-15b43228f28a
+- Lil Supa' — «METAL II» (13763) · musicbrainz · «LIL SUPA'» → organización 2362 (existente) · applied · https://musicbrainz.org/release/6f0162b9-2d00-457d-be93-93f1e60f5de6
+- Lil Supa' — «Codes» (13764) · musicbrainz · «Vinyl Digital» → organización 2363 (creado) · applied · https://musicbrainz.org/release/df4537d2-6a2d-4496-9030-e2b45b8307df
+- Lil Supa' — «MAYONBISNE» (13765) · musicbrainz · «LIL SUPA'» → organización 2362 (existente) · applied · https://musicbrainz.org/release/b9822a2e-6989-4c5f-9fed-a149ab7d9b52
+- Lil Supa' — «INSTINTO» (13767) · musicbrainz · «Lil Supa» → organización 2362 (existente) · applied · https://musicbrainz.org/release/c481b307-17dc-4467-8a1d-f3a5b74b2755
+- Los Amigos Invisibles — «Not So Commercial» (76) · musicbrainz · «Gozadera Records» → organización 18 (existente) · applied · https://musicbrainz.org/release/c7026153-cd5f-4ae1-b05a-1d699df96746
+- Los Amigos Invisibles — «A Typical & Autoctonal Venezuelan Dance Band» (246) · musicbrainz · «Gozadera Records» → organización 18 (existente) · applied · https://musicbrainz.org/release/e77b8219-38b6-4094-8529-a64a64cb6fdc
+- Los Amigos Invisibles — «Arepa 3000: A Venezuelan Journey Into Space» (247) · musicbrainz · «Luaka Bop» → organización 491 (existente) · applied · https://musicbrainz.org/release/4bed45b2-1768-4b49-9b4d-e23264661a59
+- Los Amigos Invisibles — «Superpop Venezuela» (249) · musicbrainz · «Gozadera Records» → organización 18 (existente) · applied · https://musicbrainz.org/release/9344e9fd-1172-4680-a019-095f413289bf
+- Los Amigos Invisibles — «The New Sound of The Venezuelan Gozadera» (250) · musicbrainz · «Luaka Bop» → organización 491 (existente) · applied · https://musicbrainz.org/release/3bbfefbd-d693-419d-99a3-b2548972222d
+- Los Amigos Invisibles — «Commercial» (557) · musicbrainz · «Nacional Records» → organización 2331 (existente) · applied · https://musicbrainz.org/release/eecc4e0f-48bf-4b4f-9786-b22080cd128b
+- Los Amigos Invisibles — «El Paradise» (3798) · musicbrainz · «140dB» → organización 2364 (creado) · applied · https://musicbrainz.org/release/52218ea8-d549-4aeb-937f-d97eab4f0d2b
+- Los Amigos Invisibles — «Repeat After Me» (3800) · musicbrainz · «Nacional Records» → organización 2331 (existente) · applied · https://musicbrainz.org/release/7a719c55-3336-42ff-9916-201f0e873035
+- Los Amigos Invisibles — «Sugga Mami» (14096) · musicbrainz · «Gozadera Records» → organización 18 (existente) · applied · https://musicbrainz.org/release/b9f2eb83-fa1f-4d39-8a74-dbb994a3fa38
+- Los Amigos Invisibles — «The Venezuelan Zinga Son, Volume 1» (14097) · musicbrainz · «Long Lost Brother Records» → organización 2365 (creado) · applied · https://musicbrainz.org/release/786e55ca-2e61-4fd4-84d0-1114ef0e6c31
+- Los Amigos Invisibles — «Something» (14098) · musicbrainz · «Gozadera Records» → organización 18 (existente) · applied · https://musicbrainz.org/release/8bb890c4-77c1-482b-a802-fd98ab103b7d
+- Los Amigos Invisibles — «Glad to Know You» (14099) · musicbrainz · «Gomma» → organización 2366 (creado) · applied · https://musicbrainz.org/release/cdb373a6-66cf-4638-92ec-50a0ff05464c
+- Los Amigos Invisibles — «Sugga Daddy» (14100) · musicbrainz · «Gozadera Records» → organización 18 (existente) · applied · https://musicbrainz.org/release/e2a91238-1729-49f0-8105-15f34d72609a
+- Los Amigos Invisibles — «Amor» (14101) · musicbrainz · «Luaka Bop» → organización 491 (existente) · applied · https://musicbrainz.org/release/8f739e54-9559-4987-bc70-a5bb18bd5793
+- Los Amigos Invisibles — «Me Espera» (14102) · musicbrainz · «Gozadera Records» → organización 18 (existente) · applied · https://musicbrainz.org/release/78d9c00a-c5d1-4af3-8d6c-72d6e4b91121
+- Los Amigos Invisibles — «Tócamela» (14103) · musicbrainz · «Gozadera Records» → organización 18 (existente) · applied · https://musicbrainz.org/release/4f1c8512-111e-42ba-8bed-f7ebba91f914
+- Los Mesoneros — «Indeleble» (262) · musicbrainz · «Traffic Records» → organización 2367 (creado) · applied · https://musicbrainz.org/release/56712c59-d3ec-4e1c-ad16-8026e45e2caf
+- Rawayana — «RawayanaLand» (313) · musicbrainz · «Brocoli Records» → organización 2272 (existente) · applied · https://musicbrainz.org/release/e8ecd83d-9a6c-45c1-ab8e-ce16a2e4d71a
+- Rawayana — «Cuando los Acéfalos Predominan» (3391) · musicbrainz · «Brocoli Records» → organización 2272 (existente) · applied · https://musicbrainz.org/release/3237a259-3fc9-4e35-91de-03c075c5eac5
+- Rawayana — «Trippy Caribbean» (4407) · musicbrainz · «Brocoli Records» → organización 2272 (existente) · applied · https://musicbrainz.org/release/087ac86e-1300-4b5d-81e3-3612a6931d6f
+- Rawayana — «¿Dónde es el after?» (5585) · musicbrainz · «Rimas» → organización 2368 (creado) · applied · https://musicbrainz.org/release/c48e1f9f-a556-4e46-b47e-7c116ae019cc
+- Rawayana — «Music Sounds Better With You» (13926) · musicbrainz · «Brocoli Records» → organización 2272 (existente) · applied · https://musicbrainz.org/release/62431868-0aa4-458d-9600-1088e07793eb
+- Rawayana — «Veneka» (13927) · musicbrainz · «St. Indie» → organización 2369 (creado) · applied · https://musicbrainz.org/release/dbd1558f-52a6-4b78-a4df-41cc26d07489
+- Rawayana — «Binikini» (13928) · musicbrainz · «St. Indie» → organización 2369 (existente) · applied · https://musicbrainz.org/release/2dfc336a-683b-4cbf-8c68-11116807b3bc
+- Rawayana — «#Sádico (Remix EP)» (13929) · musicbrainz · «Brocoli Records» → organización 2272 (existente) · applied · https://musicbrainz.org/release/b711b48d-da3d-4651-8bcb-ee39d1e47406
+- Rawayana — «Sin ti» (13930) · musicbrainz · «Brocoli Records» → organización 2272 (existente) · applied · https://musicbrainz.org/release/317d1788-10b2-4d40-aca9-3369d4f4a405
+- Rawayana — «Incomprendido» (13931) · musicbrainz · «St. Indie» → organización 2369 (existente) · applied · https://musicbrainz.org/release/4c06d3a9-c17c-4649-bd80-3dd39a5b4aca
+- Rawayana — «La Tormenta» (13932) · musicbrainz · «St. Indie» → organización 2369 (existente) · applied · https://musicbrainz.org/release/710be2e5-2edb-4cad-abe0-1059bc39a2ba
+- Rawayana — «¡QUE VUELVAN LOS MATINÉ!» (13933) · musicbrainz · «St. Indie» → organización 2369 (existente) · applied · https://musicbrainz.org/release/d0089ce6-5c3d-4687-87a5-b69249002d03
+- Rawayana — «La Noche Que No Había Uber» (13934) · musicbrainz · «Rimas Entertainment LLC» → organización 2370 (creado) · applied · https://musicbrainz.org/release/fbf6e87a-f57b-4d03-82e8-95e4c1c86e47
+- Rawayana — «Double Cheese & Bacon» (13935) · musicbrainz · «Brocoli Records» → organización 2272 (existente) · applied · https://musicbrainz.org/release/c97f212c-73b5-44d6-9a52-d8fed03d7854
+- Rawayana — «Caney» (13936) · musicbrainz · «St. Indie» → organización 2369 (existente) · applied · https://musicbrainz.org/release/16c6c3a6-13d9-4e73-a288-8e3a879cad3c
+- Rawayana — «Feriado» (13937) · musicbrainz · «St. Indie» → organización 2369 (existente) · applied · https://musicbrainz.org/release/010054cd-3a52-49e3-ae23-4740da822910
+- Rawayana — «Jugando Chapita (Campeones Del Mundo 🇻🇪)» (13938) · musicbrainz · «Rimas Entertainment LLC» → organización 2370 (existente) · applied · https://musicbrainz.org/release/7cf8b472-aef6-4629-b6b8-b9b3d3a3f7d9
+- Rawayana — «Rawayana Live at Cercle Odyssey» (13941) · musicbrainz · «Cercle Records» → organización 2371 (creado) · applied · https://musicbrainz.org/release/926bfb63-61e8-4fe8-afcb-dad899a4dcad
+- Sentimiento Muerto — «Fin Del Cuento 1981-1993» (325) · musicbrainz · «Rodven Records» → organización 2277 (existente) · applied · https://musicbrainz.org/release/49b0a43d-a7e6-4962-8841-dcba6909765f
+- Sentimiento Muerto — «Infecto De Afecto» (327) · musicbrainz · «Rodven Records» → organización 2277 (existente) · applied · https://musicbrainz.org/release/b03f1bde-0155-46ad-8f54-7671cb8ea206
+- Sentimiento Muerto — «Sin Sombra No Hay Luz» (570) · musicbrainz · «Rodven Records» → organización 2277 (existente) · applied · https://musicbrainz.org/release/8bde9ecc-5249-4052-813b-9aab6c75eb2f
+- Serenata Guayanesa — «La Pulga y El Piojo» (9031) · musicbrainz · «Ic Record» → organización 2124 (existente) · applied · https://musicbrainz.org/release/4001d22d-eb93-4792-b102-004232b41b3c
+- Serenata Guayanesa — «Cantemos Con Los Niños» (9043) · musicbrainz · «Serenata Guayanesa» → organización 2372 (creado) · applied · https://musicbrainz.org/release/3318d84f-6737-4bfe-8fab-15c1a7756db9
+- Viniloversus — «Days Of Exile» (1878) · musicbrainz · «Altamira Artists» → organización 2298 (existente) · applied · https://musicbrainz.org/release/d44d190a-c159-44c3-b985-abb30e5acc1e
+- Viniloversus — «La Frontera» (5596) · musicbrainz · «cusica records» → organización 2373 (creado) · applied · https://musicbrainz.org/release/a9094cad-a298-43d7-a2aa-e76430a78f5e
+- Viniloversus — «La huella» (14048) · musicbrainz · «Altamira Artists» → organización 2298 (existente) · applied · https://musicbrainz.org/release/e960099e-b5db-44ef-aebe-465fca09443e
+- Viniloversus — «El Avión» (14049) · musicbrainz · «cusica records» → organización 2373 (existente) · applied · https://musicbrainz.org/release/bc9d82a3-3efd-4387-9100-91a03e3c6bc8
+- Viniloversus — «Vértigo» (14050) · musicbrainz · «cusica records» → organización 2373 (existente) · applied · https://musicbrainz.org/release/f4c8806a-07ad-47c1-823e-08305aced011
+- Vytas Brenner — «Hermanos» (491) · musicbrainz · «Anes Records» → organización 1962 (existente) · applied · https://musicbrainz.org/release/1a56d433-ad06-4923-b5d6-bf3b81b2bf7a
+- Vytas Brenner — «Ofrenda» (495) · musicbrainz · «DISCOMODA» → organización 218 (existente) · applied · https://musicbrainz.org/release/4e4f81ea-0b39-42bd-b322-388a97e20a5f
+- Vytas Brenner — «Vytas» (496) · musicbrainz · «AS International» → organización 2019 (existente) · applied · https://musicbrainz.org/release/fc2b04ed-00e1-4aba-b0a1-ef3fb5446c47
+- Vytas Brenner — «El Vals del Mar» (2395) · musicbrainz · «Mucer Internacional» → organización 374 (existente) · applied · https://musicbrainz.org/release/609f13e9-4162-40e4-a172-948d68b566a9
+- Vytas Brenner — «Estoy Como Quiero» (2398) · musicbrainz · «DISCOMODA» → organización 218 (existente) · applied · https://musicbrainz.org/release/856b2a34-c170-415a-870d-5728acbcacdc
+- Vytas Brenner — «I Belong» (2399) · musicbrainz · «Polydor» → organización 3 (existente) · applied · https://musicbrainz.org/release/fe820d95-9f43-4fc4-b7fb-c5507673a02a
+- Vytas Brenner — «La Ofrenda de Vytas» (2402) · musicbrainz · «Yare» → organización 2020 (existente) · applied · https://musicbrainz.org/release/d8214a29-b227-4ecf-9ae9-15265961f0fc
+- Yordano — «De Sol A Sol» (498) · musicbrainz · «Sonográfica» → organización 148 (existente) · applied · https://musicbrainz.org/release/872eff5b-98d0-414a-a18b-20b92f3bce70
+- Yordano — «Yordano» (499) · musicbrainz · «Polydor» → organización 3 (existente) · applied · https://musicbrainz.org/release/27b1c320-3eec-47dc-834c-5f769d48d4d7
+- Yordano — «Lunas» (3428) · musicbrainz · «Sonográfica» → organización 148 (existente) · applied · https://musicbrainz.org/release/541f5abe-f14f-40f4-af4a-5a89d155d45e
+- Yordano — «Sabor De Cayena» (3429) · musicbrainz · «Sony Music» → organización 396 (existente) · applied · https://musicbrainz.org/release/b76d7ba6-9ac1-4304-b4ba-e3ad4345e4ed
+- Yordano — «Jugando Conmigo» (4597) · musicbrainz · «Sonográfica» → organización 148 (existente) · applied · https://musicbrainz.org/release/97245e5c-bb5d-47fc-b292-1f737fe52090
+- Yordano — «Finales De Siglo» (4607) · musicbrainz · «Sonográfica» → organización 148 (existente) · applied · https://musicbrainz.org/release/c3dbb07a-7506-4b91-bde5-631d9c3f3fe6
+- Yordano — «La Historia» (13553) · musicbrainz · «Mundo Digital USA» → organización 2374 (creado) · applied · https://musicbrainz.org/release/3af13808-3571-4aca-9645-158fa9ba729b
+- Zapato 3 — «La Última Cruzada» (414) · musicbrainz · «Zapato 3» → organización 2375 (creado) · applied · https://musicbrainz.org/release/d0ed2494-d0c0-48f2-a110-599166c3f2a7
+- Dimension Latina — «Una Dimension De Éxitos» (522) · musicbrainz · «Top Hits» → organización 388 (existente) · applied · https://musicbrainz.org/release/684c4da5-c7f6-44d6-bfab-2173552c659d
+- Dimension Latina — «Dimensión Latina» (6934) · musicbrainz · «Top Hits» → organización 388 (existente) · applied · https://musicbrainz.org/release/f9b4fca3-1aa2-49e4-9c18-a69bba824899
+- Dimension Latina — «Triunfadores» (6935) · musicbrainz · «Top Hits» → organización 388 (existente) · applied · https://musicbrainz.org/release/53f79a45-e50d-439d-9fa5-48c8d1a36525
+- Dimension Latina — «En La Dimensión Latina» (6936) · musicbrainz · «Top Hits» → organización 388 (existente) · applied · https://musicbrainz.org/release/75a9f74c-4201-4171-a05d-9e515a0dc149
+- Dimension Latina — «Dimensión Latina 75» (6937) · musicbrainz · «Top Hits» → organización 388 (existente) · applied · https://musicbrainz.org/release/7cbfb29e-49e3-4fd9-9da9-15727d90a875
+- Dimension Latina — «Dimensión Latina 76 Salsa Brava» (6938) · musicbrainz · «Top Hits» → organización 388 (existente) · applied · https://musicbrainz.org/release/b7f0a49d-cb5a-44cd-850a-6a0cc8f1fc5a
+- Dimension Latina — «Dimensión Latina 77 Internacional» (6940) · musicbrainz · «Top Hits» → organización 388 (existente) · applied · https://musicbrainz.org/release/e0f15a11-567c-4db1-90e8-354ea6e01672
+- Dimension Latina — «Los Generales De La Salsa» (6941) · musicbrainz · «Top Hits» → organización 388 (existente) · applied · https://musicbrainz.org/release/2be95e8c-8db4-4e49-8e8e-2584537d0f47
+- Dimension Latina — «Inconquistable» (6943) · musicbrainz · «Top Hits» → organización 388 (existente) · applied · https://musicbrainz.org/release/2ed29405-29ef-480a-9372-010669c7c888
+- Dimension Latina — «Dimensión Latina 79» (6944) · musicbrainz · «Color» → organización 7 (existente) · applied · https://musicbrainz.org/release/1089275b-0c28-43ab-9e00-562cc5aa45ef
+- Dimension Latina — «Tremenda Dimensión» (6945) · musicbrainz · «Velvet» → organización 6 (existente) · applied · https://musicbrainz.org/release/5be387f7-7e9e-4690-9839-168eec884d6b
+- Dimension Latina — «Combinación Latina Nº 4» (6946) · musicbrainz · «ECO» → organización 2376 (creado) · applied · https://musicbrainz.org/release/50ac0845-07c2-4fba-a1f5-06cdbfd43b45
+- Dimension Latina — «Para Siempre!» (6951) · musicbrainz · «Velvet» → organización 6 (existente) · applied · https://musicbrainz.org/release/ac196f20-5d8f-4f40-be5a-27364e7ece1e
+- Dimension Latina — «Producto De Exportación» (6954) · musicbrainz · «Guantanamera Record's» → organización 2069 (existente) · applied · https://musicbrainz.org/release/cbc06b26-272a-4269-af9a-c805a3b6224b
+- Dimension Latina — «Canto Para Ti» (6955) · musicbrainz · «Distribuidora Sonográfica C.A.» → organización 1458 (existente) · applied · https://musicbrainz.org/release/3e8319ab-c5b7-4257-92bf-0f322ddbf591
+- Dimension Latina — «Los Dueños Del Caribe» (6956) · musicbrainz · «ECO» → organización 2376 (existente) · applied · https://musicbrainz.org/release/6ba3afa9-425f-4e1d-a8d8-46dcd84e45ef
+- Dimension Latina — «Dimensión Latina 78 780 Kilos De Salsa» (8077) · musicbrainz · «TH-RODVEN Records» → organización 2047 (existente) · applied · https://musicbrainz.org/release/47c9a674-c70a-404a-a26c-a26261e6f380
+- Dimension Latina — «Dimensión Latina vs Billo's Caracas Boys» (12932) · musicbrainz · «Top Hits» → organización 388 (existente) · applied · https://musicbrainz.org/release/663323f7-cbd6-4ee5-bce7-223eca7f2c7d
+- Dimension Latina — «Me falta el tiempo» (12934) · musicbrainz · «Puntilla Music LLC.» → organización 2377 (creado) · applied · https://musicbrainz.org/release/edaef839-4958-4d0b-9ce1-e52a64e4aec7
+- Dimension Latina — «Éxitos de oro» (12936) · musicbrainz · «YOYO USA Digital» → organización 2378 (creado) · applied · https://musicbrainz.org/release/6b5ce57d-3ab0-433f-ad58-8cad75bc1e64
+- Dimension Latina — «El frutero» (12937) · musicbrainz · «TOV Productions» → organización 2379 (creado) · applied · https://musicbrainz.org/release/f3c8a6aa-6bea-48b9-8644-a4d86f530f10
+- Dimension Latina — «Dimensión Latina en Nueva York» (12939) · musicbrainz · «Top Hits» → organización 388 (existente) · applied · https://musicbrainz.org/release/db15b7e2-94d5-4eb3-b203-90685d444856
+- Dimension Latina — «Oro salsero» (12943) · musicbrainz · «TH-RODVEN Records» → organización 2047 (existente) · applied · https://musicbrainz.org/release/968b2b20-b4ff-4b12-b407-48b41983dae4
+- Dimension Latina — «La comprita / Guaguancó a Puerto Rico» (12944) · musicbrainz · «Top Hits» → organización 388 (existente) · applied · https://musicbrainz.org/release/3ad50cc3-ac63-4caf-a2a3-dbabe1712938
+- Dimension Latina — «La Dimensión de siempre "La Original"» (12945) · musicbrainz · «Balboa Records» → organización 24 (existente) · applied · https://musicbrainz.org/release/0b22708b-ab2a-4e6a-96d5-27b9a7006402
+

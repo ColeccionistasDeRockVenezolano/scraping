@@ -1,0 +1,22 @@
+# Etapa 2 — personas (confirm, run 11499)
+
+Pasos: 16. Avisos: 0.
+
+## Pasos
+
+- op=fusionar_persona · status=skipped · pair={"a":15801,"b":15808,"why":"Federico Ágreda: titular de Zardonic y de Triangular Ascension (fusionados)","keepA":true} · detail=ya son la misma ficha
+- op=fusionar_persona · status=a_la_mesa · a=15801 · nameA=Federico Augusto Ágreda Álvarez · b=5847 · nameB=Federico Agreda · why=Federico Agreda de Sol Nocturno (ex Gorepriest), el mismo autor de Zardonic
+- op=fusionar_persona · status=skipped · pair={"a":1022,"b":18567,"why":"Alberto Stangarone / Sunsplash (plan §2.9)"} · detail=ya son la misma ficha
+- op=fusionar_persona · status=a_la_mesa · a=1022 · nameA=Alberto Stangarone · b=19777 · nameB=Alberto Stangarone · why=Alberto Stangarone duplicado (plan §2.9)
+- op=fusionar_persona · status=skipped · pair={"a":19777,"b":19776,"why":"Alberto Stangarone / Sunsplash"} · detail=ya son la misma ficha
+- op=fusionar_persona · status=skipped · pair={"a":2398,"b":18955,"why":"Pablo Gil duplicado (plan §2.9)"} · detail=ya son la misma ficha
+- op=fusionar_persona · status=skipped · pair={"a":19720,"b":19503,"why":"Antonio Estévez duplicado (plan §2.9)"} · detail=ya son la misma ficha
+- op=fusionar_persona · status=skipped · pair={"a":3235,"b":22595,"why":"Simón Díaz duplicado"} · detail=ya son la misma ficha
+- op=fusionar_persona · status=skipped · pair={"a":3235,"b":36363,"why":"Simón Díaz duplicado"} · detail=ya son la misma ficha
+- op=fusionar_persona · status=a_la_mesa · a=7352 · nameA=Eneas Perdomo · b=32324 · nameB=Enéas Perdomo · why=Eneas Perdomo duplicado
+- op=fusionar_persona · status=skipped · pair={"a":21722,"b":31290,"why":"Ignacio «Indio» Figueredo duplicado"} · detail=ya son la misma ficha
+- op=fusionar_persona · status=skipped · pair={"a":7389,"b":21395,"why":"Otilio Galíndez duplicado"} · detail=ya son la misma ficha
+- op=fusionar_persona · status=skipped · pair={"a":7389,"b":33744,"why":"Otilio Galíndez duplicado"} · detail=ya son la misma ficha
+- op=fusionar_persona · status=skipped · pair={"a":7348,"b":32029,"why":"Luis Mariano Rivera duplicado"} · detail=ya son la misma ficha
+- op=fusionar_persona · status=a_la_mesa · a=11856 · nameA=Diony López · b=29308 · nameB=Diony López · why=Diony López (Popy) duplicado
+- op=mesa · runId=11500 · opened=3 · skipped=1

@@ -1,0 +1,201 @@
+{
+ "mode": "dry-run",
+ "runId": 11587,
+ "operator": "hermes (encargo dirigido de Brian, 2026-10-03)",
+ "artist": {
+  "id": 4234,
+  "spotifyId": "0Fq1y15UalIwXWqrZl59Qy",
+  "photo": "https://i.scdn.co/image/ab6761610000e5eb903a42e48b7ee9e48ee11a0e"
+ },
+ "created": [
+  {
+   "albumId": 10170,
+   "title": "Ostinato",
+   "year": 2023,
+   "type": "studio_album",
+   "date": "2023-05-10",
+   "tracks": 0,
+   "cover": "https://i.scdn.co/image/ab67616d0000b273de39a8edfb1fd8b285c30ecf"
+  },
+  {
+   "albumId": 10171,
+   "title": "Alba (Slowed Down Version)",
+   "year": 2024,
+   "type": "single",
+   "date": "2024-07-16",
+   "tracks": 0,
+   "cover": "https://i.scdn.co/image/ab67616d0000b273c1da888a76d12060106654cd"
+  },
+  {
+   "albumId": 10172,
+   "title": "Entropy",
+   "year": 2025,
+   "type": "single",
+   "date": "2025-01-09",
+   "tracks": 0,
+   "cover": "https://i.scdn.co/image/ab67616d0000b2734738f939fa0910373cfd0e0a"
+  },
+  {
+   "albumId": 10173,
+   "title": "All fine",
+   "year": 2025,
+   "type": "single",
+   "date": "2025-03-05",
+   "tracks": 0,
+   "cover": "https://i.scdn.co/image/ab67616d0000b273c3bdfd22aa900ac0e307a6a6"
+  }
+ ],
+ "skipped": [],
+ "fields": [
+  {
+   "albumId": 10170,
+   "field": "release_year",
+   "value": "2023"
+  },
+  {
+   "albumId": 10170,
+   "field": "album_type",
+   "value": "studio_album"
+  },
+  {
+   "albumId": 10170,
+   "field": "release_date_text",
+   "value": "2023-05-10"
+  },
+  {
+   "albumId": 10170,
+   "field": "cover_url",
+   "value": "https://i.scdn.co/image/ab67616d0000b273de39a8edfb1fd8b285c30ecf"
+  },
+  {
+   "albumId": 10171,
+   "field": "release_year",
+   "value": "2024"
+  },
+  {
+   "albumId": 10171,
+   "field": "album_type",
+   "value": "single"
+  },
+  {
+   "albumId": 10171,
+   "field": "release_date_text",
+   "value": "2024-07-16"
+  },
+  {
+   "albumId": 10171,
+   "field": "cover_url",
+   "value": "https://i.scdn.co/image/ab67616d0000b273c1da888a76d12060106654cd"
+  },
+  {
+   "albumId": 10172,
+   "field": "release_year",
+   "value": "2025"
+  },
+  {
+   "albumId": 10172,
+   "field": "album_type",
+   "value": "single"
+  },
+  {
+   "albumId": 10172,
+   "field": "release_date_text",
+   "value": "2025-01-09"
+  },
+  {
+   "albumId": 10172,
+   "field": "cover_url",
+   "value": "https://i.scdn.co/image/ab67616d0000b2734738f939fa0910373cfd0e0a"
+  },
+  {
+   "albumId": 10173,
+   "field": "release_year",
+   "value": "2025"
+  },
+  {
+   "albumId": 10173,
+   "field": "album_type",
+   "value": "single"
+  },
+  {
+   "albumId": 10173,
+   "field": "release_date_text",
+   "value": "2025-03-05"
+  },
+  {
+   "albumId": 10173,
+   "field": "cover_url",
+   "value": "https://i.scdn.co/image/ab67616d0000b273c3bdfd22aa900ac0e307a6a6"
+  }
+ ],
+ "errors": [
+  {
+   "title": "Ostinato / Alba",
+   "error": "duration_seconds debe ser entero"
+  },
+  {
+   "title": "Ostinato / Mi amor",
+   "error": "duration_seconds debe ser entero"
+  },
+  {
+   "title": "Ostinato / Sonrie",
+   "error": "duration_seconds debe ser entero"
+  },
+  {
+   "title": "Ostinato / Maravilloso desorden",
+   "error": "duration_seconds debe ser entero"
+  },
+  {
+   "title": "Ostinato / Insomnio torturante",
+   "error": "duration_seconds debe ser entero"
+  },
+  {
+   "title": "Ostinato / Doloroso arrepentimiento",
+   "error": "duration_seconds debe ser entero"
+  },
+  {
+   "title": "Ostinato / Leve rencor",
+   "error": "duration_seconds debe ser entero"
+  },
+  {
+   "title": "Ostinato / Ocaso",
+   "error": "duration_seconds debe ser entero"
+  },
+  {
+   "title": "Ostinato / Mañana es otro dia",
+   "error": "duration_seconds debe ser entero"
+  },
+  {
+   "title": "Ostinato / Comienza el viaje",
+   "error": "duration_seconds debe ser entero"
+  },
+  {
+   "title": "Ostinato / Placeres",
+   "error": "duration_seconds debe ser entero"
+  },
+  {
+   "title": "Ostinato / Larga Noche",
+   "error": "duration_seconds debe ser entero"
+  },
+  {
+   "title": "Ostinato / Doloroso arrepentimiento (Base)",
+   "error": "duration_seconds debe ser entero"
+  },
+  {
+   "title": "Ostinato / Solo",
+   "error": "duration_seconds debe ser entero"
+  },
+  {
+   "title": "Alba (Slowed Down Version) / Alba - Slowed Down Version",
+   "error": "duration_seconds debe ser entero"
+  },
+  {
+   "title": "Entropy / Entropy",
+   "error": "duration_seconds debe ser entero"
+  },
+  {
+   "title": "All fine / All fine",
+   "error": "duration_seconds debe ser entero"
+  }
+ ]
+}

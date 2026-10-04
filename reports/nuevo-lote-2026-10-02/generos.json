@@ -866,8 +866,8 @@
  {
   "termino": "freestyle",
   "usos": 1,
-  "estado": "nuevo",
-  "slug": null
+  "estado": "exacto",
+  "slug": "hip-hop"
  },
  {
   "termino": "gaita fusion",
@@ -884,8 +884,8 @@
  {
   "termino": "ghost-wave",
   "usos": 1,
-  "estado": "nuevo",
-  "slug": null
+  "estado": "exacto",
+  "slug": "darkwave"
  },
  {
   "termino": "grunge",
@@ -1148,7 +1148,7 @@
  {
   "termino": "retrofuturismopsicotropical",
   "usos": 1,
-  "estado": "nuevo",
+  "estado": "no_genero",
   "slug": null
  },
  {

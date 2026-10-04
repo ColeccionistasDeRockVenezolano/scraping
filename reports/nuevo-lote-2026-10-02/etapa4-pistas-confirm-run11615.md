@@ -1,0 +1,3094 @@
+# Etapa 4 — pistas (confirm, run 11615)
+
+Cosecha: `reports/nuevo-lote-2026-10-02/etapa4-cosecha.json`. Plan: ~/Desktop/PLAN_NUEVO_LOTE_2026-10-02.md §3.
+
+## Totales
+
+- discos: duraciones: 339
+- discos: lista creada: 2573
+- discos: lista de deezer: 1654
+- discos: lista de discogs: 12
+- discos: lista de itunes: 4
+- discos: lista de itunes-busqueda: 5
+- discos: lista de musicbrainz: 898
+- duraciones: rellenadas: 3252
+- duraciones: sin coincidencia: 102
+- errores: 1
+- pistas: con duración: 17942
+- pistas: creadas: 18879
+- pistas: descartado: 1
+- pistas: sencillo con lista larga: 5
+
+## Muestra de 40 (de 2912 aplicados)
+
+- Arkangel — «La Respuesta» (5565) · deezer · 2 pistas (discografía Deezer de la ficha: título igual) · https://www.deezer.com/album/11355914
+- Culto Oculto — «En el Calabozo de Tu Amor» (14009) · deezer · 4 pistas (creado en la etapa 3) · https://www.deezer.com/album/567815801
+- Franco De Vita — «Colección suprema» (13481) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/c0284c1e-1c7e-46ff-9309-c964e78d93ca
+- Lil Supa' — «C.R.A.C.K» (13769) · deezer · 5 pistas (creado en la etapa 3) · https://www.deezer.com/album/184396982
+- PapaShanty Saund System — «Himno Shanty - Rock al Aire - Session Studio» (14469) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/666128901
+- Serenata Guayanesa — «Se Ha Perdido el Niño» (14963) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/662783361
+- Dimension Latina — «La Dimensión Siglo XXl» (12950) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/227687672
+- Lasso — «Odio que no te odio» (13593) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/a5d77dbb-8ef5-42ab-a445-d693986de5b7
+- 3 Dueños — «Mide Bien» (13919) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/943269151
+- Ricardo Montaner — «Se desesperaba (El carrito azul) (remixes)» (13501) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/56745db5-96d7-4ea7-a1b5-ce9d61cbc16d
+- Kiara — «La Historia» (13585) · deezer · 14 pistas (creado en la etapa 3) · https://www.deezer.com/album/86534362
+- Cecilia Todd — «Canto de ordeño (Remaster 2024 - 50 Aniversario)» (14816) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/678486521
+- Gerry Weil — «The Message» (6271) · deezer · 6 duraciones (6 pistas en común) · https://www.deezer.com/album/178390272
+- Guaco — «Esta Gaita Si Esta En Algo» (7097) · deezer · 9 duraciones (9 pistas en común) · https://www.deezer.com/album/947175131
+- Hugo Blanco — «Chapoteando» (14783) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/31959a68-bb06-481f-991d-fd390ad552f4
+- Oscar D' León — «Oscar D'León presenta La Crítica con Wladimir y Teo» (12873) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/5a38e1ed-7aca-480d-9fdb-e9eecdd8bf89
+- Rafael "Pollo" Brito — «Pa' Tío Simón» (7738) · deezer · 14 duraciones (14 pistas en común) · https://www.deezer.com/album/847543932
+- José Luis Rodríguez — «Sólo Para Mujeres» (8182) · deezer · 2 duraciones (17 pistas en común) · https://www.deezer.com/album/8197694
+- Billo's Caracas Boys — «El Pajarillo» (7979) · deezer · 9 duraciones (9 pistas en común) · https://www.deezer.com/album/245109572
+- Billo's Caracas Boys — «Lo Brillante de Billo's Caracas Boys, Vol. 1» (15135) · deezer · 20 pistas (creado en la etapa 3) · https://www.deezer.com/album/133133832
+- Billo's Caracas Boys — «Famosos Tangos En Ritmo De Bolero» (15208) · deezer · 6 pistas (creado en la etapa 3) · https://www.deezer.com/album/610601042
+- Los Melódicos — «Al Que Le Pique!» (13228) · deezer · 11 pistas (creado en la etapa 3) · https://www.deezer.com/album/660110661
+- Carota, Ñema y Tajá — «Como Sol De Invierno» (8554) · deezer · 10 duraciones (10 pistas en común) · https://www.deezer.com/album/643965251
+- Juan Vicente Torrealba — «Música Caribeña» (9252) · deezer · 11 duraciones (11 pistas en común) · https://www.deezer.com/album/522677612
+- Tambor Urbano — «TAMBOR URBANO SINFONICO TEATRO JUNIN (EN VIVO)» (14942) · deezer · 11 pistas (creado en la etapa 3) · https://www.deezer.com/album/365443777
+- Reynaldo Armas — «La Tristeza de mi Copla» (14664) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/514711822
+- Arca — «Mutant» (12740) · musicbrainz · 21 pistas (creado en la etapa 3) · https://musicbrainz.org/release/166391d5-5298-4688-9674-5181aac2d6f3
+- Adolescent's Orquesta — «V.I.P. Edition» (12985) · musicbrainz · 17 pistas (creado en la etapa 3) · https://musicbrainz.org/release/de6a811e-7af7-427a-b65b-0bc08537eaaa
+- Miguel Moly — «Techno-Merengue Style» (13169) · musicbrainz · 9 pistas (creado en la etapa 3) · https://musicbrainz.org/release/904747a7-2d60-44ea-a722-8b0120561118
+- Chino & Nacho — «MALETA» (13295) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/952573351
+- Danny Ocean — «Istanbul» (13368) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/290856942
+- Micro TDH — «EL LOBBY» (13440) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/268326982
+- Akapellah — «Funky Fresco» (13715) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/c475715c-9a30-4039-be39-0b3588e8508e
+- Neutro Shorty — «Hasta Que Salga el Sol» (13823) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/185840752
+- Gabylonia — «Las Cosas Cambian» (13896) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/193219242
+- Motherflowers — «El Amor Se Fue de Repente» (14235) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/495351181
+- LAGOS — «Relevo (Demo)» (14357) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/1e8994d1-99af-4d8c-a26c-4dfbae4c4ee2
+- Simón Díaz — «Tonadas» (14610) · deezer · 9 duraciones (9 pistas en común) · https://www.deezer.com/album/716165
+- Jorge Guerrero — «Añoranzas» (14753) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/794d21bb-6179-4450-84dc-bb3ad21fb62d
+- Gran Coquivacoa — «La Máquina Del Sabor '93» (15015) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/128744192
+
+## Con avisos
+
+
+## No aplicados
+
+- Arkangel — «No más Apariencias» (1264) ·  · duraciones: menos de 2 pistas en común
+- Culto Oculto — «BarAlt000mix» (3412) ·  · duraciones: menos de 2 pistas en común
+- Desorden Público — «Bailando Sobre Las Ruinas» (3976) ·  · duraciones: menos de 2 pistas en común
+- Desorden Público — «En Vivo Teatro Teresa Carreño» (3979) ·  · duraciones: menos de 2 pistas en común
+- Franco De Vita — «Gold» (3405) ·  · duraciones: menos de 2 pistas en común
+- Franco De Vita — «Simplemente La Verdad» (4074) ·  · duraciones: menos de 2 pistas en común
+- Vytas Brenner — «El Vals del Mar» (2395) ·  · duraciones: menos de 2 pistas en común
+- Yordano — «Negocios Son Negocios» (4600) ·  · duraciones: menos de 2 pistas en común
+- Yordano — «El Tren de los Regresos» (4700) ·  · duraciones: menos de 2 pistas en común
+- Dimension Latina — «Dimensión Latina» (6934) ·  · duraciones: menos de 2 pistas en común
+- Dimension Latina — «Triunfadores» (6935) ·  · duraciones: menos de 2 pistas en común
+- Dimension Latina — «En La Dimensión Latina» (6936) ·  · duraciones: menos de 2 pistas en común
+- Dimension Latina — «Dimensión Latina 77 Internacional» (6940) ·  · duraciones: menos de 2 pistas en común
+- Dimension Latina — «Combinación Latina Nº 4» (6946) ·  · duraciones: menos de 2 pistas en común
+- Dimension Latina — «Los Dueños Del Caribe» (6956) ·  · duraciones: menos de 2 pistas en común
+- Dimension Latina — «Dimensión Latina 78 780 Kilos De Salsa» (8077) ·  · duraciones: menos de 2 pistas en común
+- Rada — «Upadesa» (2945) ·  · duraciones: menos de 2 pistas en común
+- Rada — «Continuvm» (3187) ·  · duraciones: menos de 2 pistas en común
+- 3 Dueños — «Lujos Y Detalles» (3263) ·  · duraciones: menos de 2 pistas en común
+- Tecupae — «3 Semanas 4 Días» (3583) ·  · duraciones: menos de 2 pistas en común
+- Ricardo Montaner — «Todo y Nada» (4421) ·  · duraciones: menos de 2 pistas en común
+- Paul Gillman — «Escalofrío» (450) ·  · duraciones: menos de 2 pistas en común
+- Paul Gillman — «15 años» (2135) ·  · duraciones: menos de 2 pistas en común
+- Paul Gillman — «El Guerrero» (2150) ·  · duraciones: menos de 2 pistas en común
+- Guillermo Dávila — «Un Poco De Amor» (4192) ·  · duraciones: menos de 2 pistas en común
+- Guillermo Dávila — «Tuyo» (4194) ·  · duraciones: menos de 2 pistas en común
+- Guillermo Dávila — «Serie 32 Grandes Exitos» (4197) ·  · duraciones: menos de 2 pistas en común
+- Guillermo Dávila — «Cantaré Para Tí» (4207) ·  · duraciones: menos de 2 pistas en común
+- Guillermo Dávila — «Definitivamente» (4210) ·  · duraciones: menos de 2 pistas en común
+- Guillermo Dávila — «Déjate Amar» (14482) · deezer · sencillo con 12 pistas en deezer: ¿otro disco del mismo título? · https://www.deezer.com/album/637814661
+- Karina — «Karina» (4319) ·  · duraciones: menos de 2 pistas en común
+- Kiara — «Como Un Huracán» (4335) ·  · duraciones: menos de 2 pistas en común
+- Kiara — «Corazón De Contrabando» (4336) ·  · duraciones: menos de 2 pistas en común
+- Kiara — «20 Exitos Originales» (4339) ·  · duraciones: menos de 2 pistas en común
+- Rudy La Scala — «Vete Al Infierno» (4445) ·  · duraciones: menos de 2 pistas en común
+- Rudy La Scala — «Woman» (14575) ·  · listas vacías o con títulos vacíos
+- Rudy Márquez — «Mi Razón» (3697) ·  · duraciones: menos de 2 pistas en común
+- Rudy Márquez — «Dancing & Dancing» (3710) ·  · duraciones: menos de 2 pistas en común
+- Rudy Márquez — «Gracias Amor, Gracias» (3714) ·  · duraciones: menos de 2 pistas en común
+- Rudy Márquez — «Confesiones» (3715) ·  · duraciones: menos de 2 pistas en común
+- Rudy Márquez — «Háblame Suavemente» (4461) ·  · duraciones: menos de 2 pistas en común
+- Rudy Márquez — «Mágico» (4466) ·  · duraciones: menos de 2 pistas en común
+- Rudy Márquez — «Lo Mejor de Rudy Márquez» (4469) ·  · duraciones: menos de 2 pistas en común
+- Rudy Márquez — «Rudy Márquez» (4809) ·  · duraciones: menos de 2 pistas en común
+- Rudy Márquez — «Cariñosamente... de Rudy Márquez» (4889) ·  · duraciones: menos de 2 pistas en común
+- Servando y Florentino — «Grandes Exitos» (4498) ·  · duraciones: menos de 2 pistas en común
+- Miguel Noya — «Gran Sabana» (5680) ·  · duraciones: menos de 2 pistas en común
+- Aquiles Báez — «Aquiles Báez y Su Música» (6097) ·  · duraciones: menos de 2 pistas en común
+- Canelita Medina — «Canelita» (6853) ·  · duraciones: menos de 2 pistas en común
+- Federico y Su Combo Latino — «Llegó La Salsa» (6999) ·  · duraciones: menos de 2 pistas en común
+- Federico y Su Combo Latino — «Salsa y Sabor» (7000) ·  · duraciones: menos de 2 pistas en común
+- Federico y Su Combo Latino — «Psicodélico Con Salsa» (7004) ·  · duraciones: menos de 2 pistas en común
+- Federico y Su Combo Latino — «Vibración y Ritmo» (7006) ·  · duraciones: menos de 2 pistas en común
+- Federico y Su Combo Latino — «Ayer y Hoy» (7012) ·  · duraciones: menos de 2 pistas en común
+- Federico y Su Combo Latino — «Mis Exitos y Más» (7014) ·  · duraciones: menos de 2 pistas en común
+- Guaco — «Guaco Es Guaco» (8120) ·  · duraciones: menos de 2 pistas en común
+- Hugo Blanco — «Arpa Brava» (7175) ·  · duraciones: menos de 2 pistas en común
+- Oscar D' León — «Al Frente De Todos» (7666) ·  · duraciones: menos de 2 pistas en común
+- Oscar D' León — «Con Dulzura» (7670) ·  · duraciones: menos de 2 pistas en común
+- Oscar D' León — «Toitico Tuyo» (7682) ·  · duraciones: menos de 2 pistas en común
+- Soledad Bravo — «Soledad Bravo Canta» (7796) ·  · duraciones: menos de 2 pistas en común
+- Soledad Bravo — «Canciones De La Nueva Trova Cubana» (7800) ·  · duraciones: menos de 2 pistas en común
+- Soledad Bravo — «Soledad Bravo En Vivo» (7801) ·  · duraciones: menos de 2 pistas en común
+- Soledad Bravo — «Canto La Poesía de Mis Compañeros» (7803) ·  · duraciones: menos de 2 pistas en común
+- Soledad Bravo — «En Vivo» (7813) ·  · duraciones: menos de 2 pistas en común
+- Soledad Bravo — «Arrastrando La Cobija» (7815) ·  · duraciones: menos de 2 pistas en común
+- Soledad Bravo — «Con Amor...Boleros» (7816) ·  · duraciones: menos de 2 pistas en común
+- Soledad Bravo — «Vol. 3» (8415) ·  · duraciones: menos de 2 pistas en común
+- José Luis Rodríguez — «Una Canción De España» (8140) ·  · duraciones: menos de 2 pistas en común
+- José Luis Rodríguez — «Boleros de Siempre» (8141) ·  · duraciones: menos de 2 pistas en común
+- José Luis Rodríguez — «Voy A Perder La Cabeza Por Tu Amor» (8146) ·  · duraciones: menos de 2 pistas en común
+- José Luis Rodríguez — «Lo Mejor De José Luis Rodríguez» (8166) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «Paula» (7927) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «Mosaico Diez» (7943) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «Billo 72 ½» (7987) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «Billo 74 ½» (7993) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «Billo 75 ½» (7995) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «Billo 76 ½» (7999) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «Billo 77 ½» (8001) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «Nuevo Circo» (8024) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «Sigan Bailando» (8026) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «Grandes Exitos» (8052) ·  · duraciones: menos de 2 pistas en común
+- Los Melódicos — «Compre La Orquesta» (8277) ·  · duraciones: menos de 2 pistas en común
+- Los Melódicos — «El Ultimo Tango» (8306) ·  · duraciones: menos de 2 pistas en común
+- Los Melódicos — «Distintos!» (8338) ·  · duraciones: menos de 2 pistas en común
+- Los Melódicos — «La Orquesta Que Impone El Ritmo En America» (8340) ·  · duraciones: menos de 2 pistas en común
+- Mirla Castellanos — «Así Es Mirla» (8355) ·  · duraciones: menos de 2 pistas en común
+- Mirla Castellanos — «Mirla» (8358) ·  · duraciones: menos de 2 pistas en común
+- Mirla Castellanos — «La Nueva Mirla» (8360) ·  · duraciones: menos de 2 pistas en común
+- Mirla Castellanos — «Mirla Castellanos» (8370) ·  · duraciones: menos de 2 pistas en común
+- María Teresa Chacín — «Canta Para Ti» (8420) ·  · duraciones: menos de 2 pistas en común
+- María Teresa Chacín — «Canciones Nuestras» (8427) ·  · duraciones: menos de 2 pistas en común
+- María Teresa Chacín — «Aguinaldos Que No Se Olvidan» (8430) ·  · duraciones: menos de 2 pistas en común
+- María Teresa Chacín — «Algo Contigo» (8437) ·  · duraciones: menos de 2 pistas en común
+- Juan Vicente Torrealba — «Llanero Soy» (9253) ·  · duraciones: menos de 2 pistas en común
+- Juan Vicente Torrealba — «Mensaje De España» (9265) ·  · duraciones: menos de 2 pistas en común
+- Los Cañoneros — «Los Cañoneros» (8799) ·  · duraciones: menos de 2 pistas en común
+- Luis Silva — «Cómo No Voy a Decirlo» (14712) · deezer · sencillo con 10 pistas en deezer: ¿otro disco del mismo título? · https://www.deezer.com/album/150221222
+- Un Solo Pueblo — «20 Años» (9091) ·  · duraciones: menos de 2 pistas en común
+- Reynaldo Armas — «32 Super Exitos» (9373) ·  · duraciones: menos de 2 pistas en común
+- Aldemaro Romero — «El Garrasi» (9441) ·  · duraciones: menos de 2 pistas en común
+- Aldemaro Romero — «Presenta La Onda Nueva» (9452) ·  · duraciones: menos de 2 pistas en común
+- El Cuarteto — «El Cuarteto» (9640) ·  · duraciones: menos de 2 pistas en común
+- Ensamble Gurrufío — «Ensamble Gurrufío con la Orquesta Sinfónica Gran Mariscal de Ayacucho» (9821) ·  · duraciones: menos de 2 pistas en común
+- Simón Díaz — «Tonadas, vol. 2» (14611) ·  · duraciones: menos de 2 pistas en común
+- Los Antaños del Stadium — Lo Que Más Bailaron Mis Abuelos (15035) ·  · ERROR value too long for type character varying(250)
+- Payasitas Nifu Nifa — «Ki Ki Kí - Co Co Có (French Version)» (15054) · deezer · sencillo con 11 pistas en deezer: ¿otro disco del mismo título? · https://www.deezer.com/album/357022247
+- Payasitas Nifu Nifa — «No Controles» (15059) · deezer · sencillo con 11 pistas en deezer: ¿otro disco del mismo título? · https://www.deezer.com/album/279634122
+- Daniel Calveti — «Mi Refugio» (15215) · deezer · sencillo con 13 pistas en deezer: ¿otro disco del mismo título? · https://www.deezer.com/album/6376960
+
+## Todos los aplicados
+
+- Arkangel — «La Respuesta» (5565) · deezer · 2 pistas (discografía Deezer de la ficha: título igual) · https://www.deezer.com/album/11355914
+- Arkangel — «Desempleado» (14121) · deezer · 8 pistas (creado en la etapa 3) · https://www.deezer.com/album/128762722
+- Arkangel — «Libertad (El Blues de la Libertad)» (14122) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/188896102
+- C4 Trío — «Los 10 de C4» (14864) · musicbrainz · 18 pistas (creado en la etapa 3) · https://musicbrainz.org/release/842e5adf-e7ef-4d50-bb81-ad0d9db2be2f
+- C4 Trío — «De repente» (14865) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/ad25ddc4-5a45-4581-a8b2-0606d2b79802
+- C4 Trío — «Anthology» (14866) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/201861812
+- C4 Trío — «Cantares de Navidad» (14867) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/722391881
+- C4 Trío — «El Burrito Sabanero» (14868) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/722392021
+- C4 Trío — «Navidad es vida» (14869) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/722391631
+- C4 Trío — «El Año Viejo» (14870) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/722387991
+- C4 Trío — «Faltan 5 pa’ las 12» (14871) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/721440181
+- C4 Trío — «Ella fue» (14872) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/721175891
+- C4 Trío — «Deja (En directo)» (14873) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/721062571
+- C4 Trío — «Coroticos» (14874) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/301565847
+- C4 Trío — «JGCUT» (14875) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/300572457
+- C4 Trío — «Juan No Celebró Su Día» (14876) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/717254511
+- C4 Trío — «Vértigo (Acústico) (En Vivo)» (14877) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/717207341
+- C4 Trío — «Ahora No (En Vivo)» (14878) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/198007862
+- C4 Trío — «Tiembla / Allá Cayó (En Vivo)» (14879) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/205832522
+- C4 Trío — «Te Regalo la Luna-Ah Ah Oh No (Los 10 de C4) (Acoustic Sessions)» (14880) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/717106971
+- C4 Trío — «Déjala Bailar (Los 10 de C4) (Acoustic Sessions)» (14881) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/717187361
+- C4 Trío — «Parampampam (Los 10 de C4) (Acoustic Sessions)» (14882) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/717476831
+- Candy66 — «Estelar» (5567) · deezer · 1 pistas (discografía Deezer de la ficha: título igual) · https://www.deezer.com/album/88493892
+- Candy66 — «A+ Rarezas» (5568) · musicbrainz · 10 pistas (discografía MB de la ficha: título igual) · https://musicbrainz.org/release/6e4fe036-a428-4779-b180-601c43fed3c2
+- Candy66 — «P.O.P / Rarezas» (14084) · musicbrainz · 14 pistas (creado en la etapa 3) · https://musicbrainz.org/release/44d47d5d-23fb-4427-90db-ebe7a646a2ab
+- Candy66 — «La Cruz» (14085) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/6716f236-1ae4-4065-a403-0859a2b13067
+- Candy66 — «P.O.P. (Original)» (14086) · deezer · 13 pistas (creado en la etapa 3) · https://www.deezer.com/album/181420562
+- Candy66 — «Lo Mejor de Candy66» (14087) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/563687342
+- Candy66 — «Bitsessions» (14088) · deezer · 8 pistas (creado en la etapa 3) · https://www.deezer.com/album/54415092
+- Candy66 — «Mi Peor Victoria» (14089) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/984670511
+- Candy66 — «S.O.S.» (14090) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/601815762
+- Candy66 — «Losers» (14091) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/494746761
+- Candy66 — «A Tu Nombre» (14092) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/451486075
+- Candy66 — «Canción Sin Nombre» (14093) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/272461732
+- Candy66 — «Sin Ti (Versión Acústica)» (14094) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/209194732
+- Candy66 — «Invisible» (14095) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/188962372
+- Canserbero — «Siempre» (13691) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/b1bf4361-06c2-4174-b5c9-38559557858f
+- Canserbero — «Apa y Can» (13692) · musicbrainz · 13 pistas (creado en la etapa 3) · https://musicbrainz.org/release/a19ba85c-bc52-4278-af73-c350f1e9283e
+- Canserbero — «All You Need Is Hate Live» (13693) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/040ecf01-efe1-453f-82fc-aa8b37e94be0
+- Canserbero — «Sigo Siendo el Rey» (13694) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/ac7a566a-d311-4bb5-8070-0a33c0b39a8f
+- Canserbero — «Resurrección» (13695) · musicbrainz · 40 pistas (creado en la etapa 3) · https://musicbrainz.org/release/be725c57-adf6-45c8-8050-cddb761024ba
+- Canserbero — «Mi Pobre Gente Pobre» (13696) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/128c3593-c8b0-420a-a9aa-aaa1b3ce174c
+- Canserbero — «Querer Querernos» (13697) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/fbfccb49-57bb-4301-971c-3e5a836a1b8c
+- Canserbero — «El Mundito del Rap» (13698) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/9f859ddb-97f7-45c1-8bfb-0d869b4771c3
+- Canserbero — «De la Vida Como Pelicula, Tragedia, Comedia y Ficcion» (13699) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/e0a87959-cd1b-43a1-af29-06f9d22103f4
+- Canserbero — «Las Ánimas» (13700) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/393fbafe-3ed6-4f32-80f9-c2b5f92507b1
+- Canserbero — «Corre» (13701) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/d0ee11d9-2c73-4372-9cba-fbed9ea06b6b
+- Canserbero — «Hipocritas» (13702) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/5bac78ce-012d-49c0-b14a-dc5f03954416
+- Canserbero — «Tripolar» (13703) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/44323797-fde7-484d-9e9a-4bf8040daa10
+- Canserbero — «Give Me 5» (13704) · musicbrainz · 8 pistas (creado en la etapa 3) · https://musicbrainz.org/release/f48e44ce-6619-45b0-bc87-902367289c05
+- Canserbero — «Quisiera» (13705) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/0e5126ac-0885-4c75-8292-a8faa9748c27
+- Canserbero — «Can + Zoo Índigo» (13706) · musicbrainz · 13 pistas (creado en la etapa 3) · https://musicbrainz.org/release/8f8840b7-1a7f-4bb3-b5f3-52f022ead979
+- Canserbero — «Na» (13707) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/24902e21-466b-4e4d-a120-24675fbded14
+- Canserbero — «Can Vive» (13708) · musicbrainz · 17 pistas (creado en la etapa 3) · https://musicbrainz.org/release/633a2332-45a3-4d5f-84e6-128c24318c64
+- Canserbero — «En Directo Desde la Cabina» (13709) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/65ec52d2-8fdf-4530-ac44-223916da9ad7
+- Canserbero — «Jamming Sin Fronteras» (13710) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/e7393ad6-fd9d-4fa7-8ef3-3deb18515c5b
+- Canserbero — «Give Me Five» (13711) · deezer · 7 pistas (creado en la etapa 3) · https://www.deezer.com/album/9794460
+- Canserbero — «El Purgatorio» (13712) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/638633681
+- Canserbero — «Canción de Rap (Original)» (13713) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/1046185722
+- Caramelos De Cianuro — «El Ultimo polvo» (2132) · deezer · 1 pistas (discografía Deezer de la ficha: título igual) · https://www.deezer.com/album/116103402
+- Caramelos De Cianuro — «Acústico Retrovisor» (5530) · musicbrainz · 13 pistas (discografía MB de la ficha: título igual) · https://musicbrainz.org/release/e0231c0d-161f-4a0a-9fa7-64a83173b66d
+- Caramelos De Cianuro — «Caramelos de Cianuro Promoción Wendy's» (14022) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/ef2ae95e-360f-4d7c-a1ee-d05d518c67c3
+- Caramelos De Cianuro — «Que El Desayuno Espere 2.0» (14023) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/68286d76-7b60-4956-be82-1ded82dc3855
+- Caramelos De Cianuro — «Live From Paris - Lado B (En Vivo)» (14024) · musicbrainz · 15 pistas (creado en la etapa 3) · https://musicbrainz.org/release/5b39bf5c-071b-46de-befc-bb432444f487
+- Caramelos De Cianuro — «Pepsi» (14025) · musicbrainz · 17 pistas (creado en la etapa 3) · https://musicbrainz.org/release/85c2927c-1133-4ef4-9105-7a7a7228bc73
+- Caramelos De Cianuro — «2LadosB» (14026) · musicbrainz · 2 pistas (creado en la etapa 3) · https://musicbrainz.org/release/5677a627-d87a-45b7-b66c-f897f350a6f5
+- Caramelos De Cianuro — «En Vivo 2008» (14027) · musicbrainz · 17 pistas (creado en la etapa 3) · https://musicbrainz.org/release/e957e921-e2cb-45e8-9921-f8e05233d140
+- Caramelos De Cianuro — «La Casa» (14028) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/116055072
+- Caramelos De Cianuro — «El Instante Pasó» (14029) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/109953332
+- Culto Oculto — «Bulcitup» (14006) · deezer · 17 pistas (creado en la etapa 3) · https://www.deezer.com/album/922819131
+- Culto Oculto — «Te Voy a Olvidar» (14007) · deezer · 5 pistas (creado en la etapa 3) · https://www.deezer.com/album/746147081
+- Culto Oculto — «Vinimos a Reventarnos» (14008) · deezer · 4 pistas (creado en la etapa 3) · https://www.deezer.com/album/661583811
+- Culto Oculto — «En el Calabozo de Tu Amor» (14009) · deezer · 4 pistas (creado en la etapa 3) · https://www.deezer.com/album/567815801
+- Culto Oculto — «Puertas Adentro» (14010) · deezer · 2 pistas (creado en la etapa 3) · https://www.deezer.com/album/801860591
+- Culto Oculto — «Contigo» (14011) · deezer · 2 pistas (creado en la etapa 3) · https://www.deezer.com/album/545014372
+- Culto Oculto — «Pinche Canción» (14012) · deezer · 2 pistas (creado en la etapa 3) · https://www.deezer.com/album/517633022
+- Culto Oculto — «Io Me Lo Mangio Tutto» (14013) · deezer · 2 pistas (creado en la etapa 3) · https://www.deezer.com/album/493662211
+- Culto Oculto — «Loop (Remix) [Radio Edit]» (14014) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/472680615
+- Culto Oculto — «Escupe Hielo» (14015) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/436546217
+- Culto Oculto — «Bestia» (14016) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/418088107
+- Culto Oculto — «El Mono y el Lobito» (14017) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/221970572
+- Culto Oculto — «Mientras Tanto» (14018) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/189022552
+- Culto Oculto — «El Mono y la Lagartija» (14019) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/178885512
+- Culto Oculto — «Güeitin» (14020) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/142469962
+- Culto Oculto — «Boa Común (Constrictor, Constrictor)» (14021) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/57500342
+- Desorden Público — «The Ska Album» (2154) · musicbrainz · 14 duraciones (14 pistas en común) · https://musicbrainz.org/release/fb627b07-cb99-4940-ac41-a682aacf0148
+- Desorden Público — «Pa' Fuera» (3978) · musicbrainz · 12 pistas (discografía MB de la ficha: título igual) · https://musicbrainz.org/release/0cfbff41-9f8a-406e-bee4-1e9fd246e052
+- Desorden Público — «Canto Popular, 25 años» (5601) · musicbrainz · 13 pistas (discografía MB de la ficha: título igual) · https://musicbrainz.org/release/146ff2c1-13fb-4778-9b30-56959cb1812c
+- Desorden Público — «Amparito» (13966) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/c0cebb72-1b90-4bd5-b913-f7dfe93cc39c
+- Desorden Público — «Todo esta muy Normal» (13967) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/d1ced714-8cc6-48e8-9fe5-fb28e7e571f6
+- Desorden Público — «Guarachando en Navidad, Volumen 1» (13968) · musicbrainz · 8 pistas (creado en la etapa 3) · https://musicbrainz.org/release/2bc126c7-de09-43e8-9cb8-543d4a0a78da
+- Desorden Público — «Lo nuevo y lo mejor 2004» (13969) · musicbrainz · 15 pistas (creado en la etapa 3) · https://musicbrainz.org/release/36a915ad-2ca3-47d2-978c-b35bb0a99a86
+- Desorden Público — «FUNEBRE» (13970) · musicbrainz · 11 pistas (creado en la etapa 3) · https://musicbrainz.org/release/3e1efa8a-48c5-486d-b108-d2de34d390a1
+- Desorden Público — «Desorden Forajido» (13971) · musicbrainz · 19 pistas (creado en la etapa 3) · https://musicbrainz.org/release/13395128-941d-40c3-8ed6-9b91454e9bff
+- Desorden Público — «DP18» (13972) · musicbrainz · 32 pistas (creado en la etapa 3) · https://musicbrainz.org/release/7588da9f-bd0c-481b-8138-cd95a37ff631
+- Desorden Público — «Vive Latino 2007» (13973) · musicbrainz · 9 pistas (creado en la etapa 3) · https://musicbrainz.org/release/27025701-b9ad-43af-9da9-f700088ccf1e
+- Desorden Público — «Desorden en Petare (Concierto en la Platabanda)» (13974) · deezer · 20 pistas (creado en la etapa 3) · https://www.deezer.com/album/235686402
+- Desorden Público — «Desorden Pre-Pandemic (Remixes)» (13975) · deezer · 11 pistas (creado en la etapa 3) · https://www.deezer.com/album/202038212
+- Desorden Público — «Desorden Mundial (En Vivo)» (13976) · deezer · 17 pistas (creado en la etapa 3) · https://www.deezer.com/album/213318552
+- Desorden Público — «Estrellas del Caos (Ska Sound From Venezuela)» (13977) · deezer · 17 pistas (creado en la etapa 3) · https://www.deezer.com/album/214151842
+- Desorden Público — «En Vivo en el Teatro Teresa Carreño, Vol. 1» (13978) · deezer · 17 pistas (creado en la etapa 3) · https://www.deezer.com/album/212038632
+- Desorden Público — «En Vivo en el Teatro Teresa Carreño, Vol. 2» (13979) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/212066622
+- Desorden Público — «Salsa All Ska» (13980) · deezer · 6 pistas (creado en la etapa 3) · https://www.deezer.com/album/912477831
+- Desorden Público — «Ron con Sugar (Cinco Estrellas ElFiveStar)» (13981) · deezer · 2 pistas (creado en la etapa 3) · https://www.deezer.com/album/362218547
+- Desorden Público — «Desorden Público rinde Homenaje al Indio Pastor López (Medley al Pastor)» (13982) · deezer · 2 pistas (creado en la etapa 3) · https://www.deezer.com/album/301416967
+- Desorden Público — «Traicionera / El Reo Ausente (Desorden Público rinde Homenaje al Indio Pastor López)» (13983) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/269932162
+- Desorden Público — «Golpe Con Golpe (Homenaje al Indio Pastor López)» (13984) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/259668872
+- Desorden Público — «Sorbito de Champán - Bonita y Mentirosa (Desorden Público rinde Homenaje al Indio Pastor López ft Billo's & Chicha Libre)» (13985) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/248203682
+- Desorden Público — «Sinónimo» (13986) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/153046002
+- Desorden Público — «Tetero de Petróleo (Versión 25 Años)» (13987) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/148718552
+- Desorden Público — «Canto Popular de la Vida y Muerte (Versión 25 Años)» (13988) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/121498502
+- Desorden Público — «Tiembla (Versión 25 Años)» (13989) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/120109032
+- Desorden Público — «La Danza de los Esqueletos (Versión 25 Años)» (13990) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/116025042
+- Desorden Público — «Hay Cosquillas Que No Dan Risa (Versión 25 Años)» (13991) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/112336332
+- Desorden Público — «Rosas Azules (Versión 25 Años)» (13992) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/104266522
+- Desorden Público — «Cachos de Vaca (Versión 25 Años)» (13993) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/100719222
+- Desorden Público — «A Ti Te Cantamos (Preciosa María)» (13994) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/78727792
+- Desorden Público — «Ska Mundo Ska» (13995) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/73384282
+- Franco De Vita — «Libre» (4072) · musicbrainz · 5 duraciones (5 pistas en común) · https://musicbrainz.org/release/3362b01f-1de4-4bbe-8f38-23d267855f25
+- Franco De Vita — «Vuelve En Primera Fila» (4082) · musicbrainz · 11 duraciones (11 pistas en común) · https://musicbrainz.org/release/09fa946e-cdd9-404d-aa6a-cd423d3edda9
+- Franco De Vita — «Diez Años Vol. 1» (4083) · musicbrainz · 9 duraciones (9 pistas en común) · https://musicbrainz.org/release/220cab33-5b3b-4287-a32f-147c8ee03317
+- Franco De Vita — «En Primera Fila» (4088) · musicbrainz · 18 duraciones (18 pistas en común) · https://musicbrainz.org/release/478c872b-e817-4448-95a3-0013b684fae5
+- Franco De Vita — «14 Super Exitos» (4089) · musicbrainz · 13 duraciones (13 pistas en común) · https://musicbrainz.org/release/95fc84f0-2578-4d7b-af95-0a6bddbece7e
+- Franco De Vita — «Exitos Eternos» (4092) · musicbrainz · 13 duraciones (13 pistas en común) · https://musicbrainz.org/release/123ad9d3-3d3e-4c28-95be-c57304946449
+- Franco De Vita — «Hits» (4094) · musicbrainz · 19 duraciones (19 pistas en común) · https://musicbrainz.org/release/1ad69ca1-8c7f-4484-a4d0-e3ab0038fc12
+- Franco De Vita — «Dónde está la vida» (13461) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/c2b84833-6733-42ed-83f2-ee7bb47fa81c
+- Franco De Vita — «Tan sólo tú» (13462) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/74286b39-954b-4280-a9d1-e486f04da594
+- Franco De Vita — «Acceso VIP» (13463) · musicbrainz · 7 pistas (creado en la etapa 3) · https://musicbrainz.org/release/951bd9f6-f26d-4f15-9c96-e1d70d9c83f0
+- Franco De Vita — «Mano a mano» (13464) · musicbrainz · 18 pistas (creado en la etapa 3) · https://musicbrainz.org/release/8436dbfc-4e1d-4508-8e32-6fad29915509
+- Franco De Vita — «Grandes éxitos, volumen 2» (13465) · musicbrainz · 13 pistas (creado en la etapa 3) · https://musicbrainz.org/release/06b158a6-b289-4250-bfda-bcaea21fff53
+- Franco De Vita — «20 éxitos» (13466) · musicbrainz · 20 pistas (creado en la etapa 3) · https://musicbrainz.org/release/3559c9e2-5038-4ed4-9d00-a9d076e7aaaa
+- Franco De Vita — «Éxitos serie 32 II» (13467) · musicbrainz · 16 pistas (creado en la etapa 3) · https://musicbrainz.org/release/b12fe30a-0c5f-47dc-b0e0-244353deb784
+- Franco De Vita — «Un Buen Perdedor» (13468) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/a3941fe4-d167-4633-83b9-97d6b7ae0a5d
+- Franco De Vita — «Colección de oro» (13469) · musicbrainz · 30 pistas (creado en la etapa 3) · https://musicbrainz.org/release/94afe42b-4e5a-481a-9286-cfdb695fcdae
+- Franco De Vita — «Mil y una historias de amor» (13470) · musicbrainz · 14 pistas (creado en la etapa 3) · https://musicbrainz.org/release/11588cb6-5004-4585-aba2-1793c92606af
+- Franco De Vita — «Grandes éxitos, volumen 1» (13471) · musicbrainz · 13 pistas (creado en la etapa 3) · https://musicbrainz.org/release/7019bc9c-cf38-4a70-a8fb-8aee21aee1f6
+- Franco De Vita — «32 grandes éxitos» (13472) · musicbrainz · 32 pistas (creado en la etapa 3) · https://musicbrainz.org/release/74f652fd-7a75-420b-a959-3de363fe40d9
+- Franco De Vita — «Cuando tus ojos me miran» (13473) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/23d1803e-da6c-47a2-8534-d2b90e5e5fea
+- Franco De Vita — «No sé nada de ti» (13474) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/320911f5-91d5-4c66-aef2-990728daec14
+- Franco De Vita — «Mi sueño» (13475) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/1df7b2c9-8348-4673-8fcf-8d2c5ae5d46e
+- Franco De Vita — «Si tú no estás» (13476) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/902d4317-60c4-49eb-a188-9bab7ffefc9f
+- Franco De Vita — «Personalidad» (13477) · musicbrainz · 32 pistas (creado en la etapa 3) · https://musicbrainz.org/release/795b8918-da8c-4bc0-bfd2-d1740cbf0e78
+- Franco De Vita — «Serie Top 10» (13478) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/d2e19900-dfd4-49c9-bb29-22286def0a8a
+- Franco De Vita — «Mis favoritas» (13479) · musicbrainz · 17 pistas (creado en la etapa 3) · https://musicbrainz.org/release/b4db200b-7fee-4d26-ad23-a66ce1021d10
+- Franco De Vita — «Te pienso sin querer» (13480) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/54d71717-9818-46b5-b6dd-25cbe4274c20
+- Franco De Vita — «Colección suprema» (13481) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/c0284c1e-1c7e-46ff-9309-c964e78d93ca
+- Franco De Vita — «Serie cinco estrellas» (13482) · musicbrainz · 9 pistas (creado en la etapa 3) · https://musicbrainz.org/release/f0724fb2-00bb-4687-b154-7fb9985cb0ad
+- Franco De Vita — «Dónde está la vida (Víctor Porfidio remix)» (13483) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/3e013537-6dbf-40c3-b177-998de4bb1e86
+- Franco De Vita — «Dónde está la vida (remix 2.0)» (13484) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/6ca145b0-5297-4df9-a53a-9a3af17ffb3d
+- Franco De Vita — «Franco de Vita & Ilan Chester En Concierto (En Vivo)» (13485) · deezer · 15 pistas (creado en la etapa 3) · https://www.deezer.com/album/425798557
+- Franco De Vita — «20th Anniversary» (13486) · deezer · 15 pistas (creado en la etapa 3) · https://www.deezer.com/album/265218962
+- Franco De Vita — «10 Años, Vol. 1» (13487) · deezer · 11 pistas (creado en la etapa 3) · https://www.deezer.com/album/276247682
+- Franco De Vita — «VinoTinto» (13488) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/614197112
+- Franco De Vita — «Frágiles» (13489) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/151241642
+- Franco De Vita — «Aquí No Se Pide Nada» (13490) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/129698422
+- Franco De Vita — «Si Quieres Decir Adiós (feat. Debi Nova)» (13491) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/8303680
+- Franco De Vita — «Tan Sólo Tú (feat. Alejandra Guzmán) (Franco De Vita en Primera Fila)» (13492) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/936836
+- Franco De Vita — «Cuando Tus Ojos Me Miran (Acoustic Edit)» (13493) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/292208
+- Ilan Chester — «Hits» (4262) · musicbrainz · 18 duraciones (18 pistas en común) · https://musicbrainz.org/release/421aac87-9e77-4109-9d43-dc0c6740c0f6
+- Ilan Chester — «Tesoros de la música venezolana, Volumen 3: Llanos» (13561) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/ad3cee4a-003c-4b18-8937-ee94cb8f0eef
+- Ilan Chester — «Tesoros de la música venezolana, Volumen 6: Caracas» (13562) · musicbrainz · 12 pistas (creado en la etapa 3) · https://musicbrainz.org/release/be4be1d3-8f64-4731-ae99-0da654246d80
+- Ilan Chester — «Ilan Chester – Opus #10» (13563) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/efbaa7c4-efe5-4a85-8f87-256b08608813
+- Ilan Chester — «CD Manía El Nacional» (13564) · musicbrainz · 24 pistas (creado en la etapa 3) · https://musicbrainz.org/release/357ca464-0bdf-4de8-a9c2-c1031ab836b4
+- Ilan Chester — «Tesoros de la música venezolana, Volumen 2: Costas» (13565) · musicbrainz · 11 pistas (creado en la etapa 3) · https://musicbrainz.org/release/9eb6b414-7c17-491b-b6db-b48d7cd537ff
+- Ilan Chester — «Tesoros de la música venezolana, Volumen 1: Zulia» (13566) · musicbrainz · 12 pistas (creado en la etapa 3) · https://musicbrainz.org/release/da2d5e88-eb4a-4780-ae92-fefe16425b50
+- Ilan Chester — «Tesoros de la música venezolana, Volumen 4: Lara» (13567) · musicbrainz · 11 pistas (creado en la etapa 3) · https://musicbrainz.org/release/c46bb64b-d7d7-4eab-b4a4-0d81afaa3ac6
+- Ilan Chester — «Cancionero del amor venezolano, volumen 3» (13568) · musicbrainz · 11 pistas (creado en la etapa 3) · https://musicbrainz.org/release/2f673641-eb27-46cf-a1bc-f3669b16a707
+- Ilan Chester — «Tesoros de la música venezolana, Volumen 5: Andes» (13569) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/abc02f7d-68cf-4e24-8d9a-f75886ea7343
+- Ilan Chester — «Cancionero II» (13570) · musicbrainz · 11 pistas (creado en la etapa 3) · https://musicbrainz.org/release/d1431c16-b23c-4c8f-bb46-fd615f2381af
+- Ilan Chester — «30 grandes éxitos de oro» (13571) · musicbrainz · 15 pistas (creado en la etapa 3) · https://musicbrainz.org/release/e85b72b1-4810-4e20-9bb8-24c7379ea3dd
+- Ilan Chester — «Cancionero del amor venezolano, volumen 2» (13572) · musicbrainz · 11 pistas (creado en la etapa 3) · https://musicbrainz.org/release/3e4d0e0a-ffe1-401a-bcc3-d0cf0d8998e1
+- Ilan Chester — «Poco a Poco» (13573) · deezer · 8 pistas (creado en la etapa 3) · https://www.deezer.com/album/87211782
+- Ilan Chester — «El Concierto» (13574) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/88218662
+- Ilan Chester — «A Pasarla Bien» (13575) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/90514322
+- Ilan Chester — «Las Historias del Músico» (13576) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/86458662
+- Ilan Chester — «La Esencia Musical» (13577) · deezer · 9 pistas (creado en la etapa 3) · https://www.deezer.com/album/168373042
+- Ilan Chester — «Ilan Chester ‎– En Vivo! Gira Nacional Del Amor Venezolano» (13578) · deezer · 24 pistas (creado en la etapa 3) · https://www.deezer.com/album/144319262
+- Ilan Chester — «Cd Coleccion Ilan Chester» (13579) · deezer · 24 pistas (creado en la etapa 3) · https://www.deezer.com/album/13152972
+- Ilan Chester — «Solo Faltas Tu» (13580) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/12851606
+- Ilan Chester — «Melao: Como Ayer» (13581) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/169578262
+- La Vida Bohème — «Sera» (2290) · musicbrainz · 15 duraciones (15 pistas en común) · https://musicbrainz.org/release/c0e67f99-3104-4494-8376-9c3b6b6f2ebf
+- La Vida Bohème — «El Nombre De Esta Banda Es La Vida Bohéme» (4368) · musicbrainz · 14 duraciones (14 pistas en común) · https://musicbrainz.org/release/195d3674-0daf-4bb5-a1e6-864f3e60ef1c
+- La Vida Bohème — «Tierra de Nadie» (5547) · musicbrainz · 11 pistas (discografía MB de la ficha: título igual) · https://musicbrainz.org/release/157ac465-b0b0-4331-8b23-115fbcaa0cfe
+- La Vida Bohème — «Tiempo Comparti2» (5549) · itunes-busqueda · 5 pistas (búsqueda iTunes: artista y título idénticos, año ±1) · https://music.apple.com/ve/album/tiempo-comparti2-feat-chris-cuzme-christian-coleman/1643887078?uo=4
+- La Vida Bohème — «FREESSR» (5577) · deezer · 5 pistas (discografía Deezer de la ficha: título igual) · https://www.deezer.com/album/188535262
+- La Vida Bohème — «TITULARES» (5578) · deezer · 4 pistas (discografía Deezer de la ficha: título igual) · https://www.deezer.com/album/306375037
+- La Vida Bohème — «La Sombra del Amanecer» (14030) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/93365c91-3974-44b3-9afa-a3cc1e7078e8
+- La Vida Bohème — «Diáspora Live Vol.1» (14031) · musicbrainz · 17 pistas (creado en la etapa 3) · https://musicbrainz.org/release/5b444c53-e5b2-4af2-8112-fc07fa28fbb7
+- La Vida Bohème — «Radio Capital» (14032) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/783edf82-04c3-44e0-a5b6-529bdc974382
+- La Vida Bohème — «Tiempo Compartido (LIVE SESSION)» (14033) · deezer · 7 pistas (creado en la etapa 3) · https://www.deezer.com/album/196272032
+- La Vida Bohème — «Cementerio Del Este (En Vivo)» (14034) · deezer · 5 pistas (creado en la etapa 3) · https://www.deezer.com/album/558964992
+- La Vida Bohème — «¡Coño!» (14035) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/811237431
+- La Vida Bohème — «Entretenimiento» (14036) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/784583971
+- La Vida Bohème — «¡Al Coro De Las Masas!» (14037) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/693800551
+- La Vida Bohème — «Calle En El Cielo» (14038) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/651974341
+- La Vida Bohème — «Manos Arriba (En Vivo)» (14039) · deezer · 2 pistas (creado en la etapa 3) · https://www.deezer.com/album/547276302
+- La Vida Bohème — «Calle Barcelona (En Vivo)» (14040) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/538390202
+- La Vida Bohème — «Carrusel / Suzie Kamikaze» (14041) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/317489627
+- La Vida Bohème — «Men vs Men» (14042) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/280389002
+- La Vida Bohème — «El Paraíso Perdido» (14043) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/229945492
+- La Vida Bohème — «Miami S&M» (14044) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/168237252
+- La Vida Bohème — «¡Plis, plis, plis!» (14045) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/169906292
+- La Vida Bohème — «Acción (O: Decreto de Guerra a Muerte a los Traidores del Rock Latinoamericano)» (14046) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/154166312
+- La Vida Bohème — «Último Round» (14047) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/146903912
+- Lil Supa' — «Yeyo» (13755) · musicbrainz · 20 pistas (creado en la etapa 3) · https://musicbrainz.org/release/8fe918d8-54e5-4746-9eed-2e3d1d47bb73
+- Lil Supa' — «Ritual The Mixtape» (13756) · musicbrainz · 12 pistas (creado en la etapa 3) · https://musicbrainz.org/release/87f160dc-7156-4175-96fe-d973ae84aa50
+- Lil Supa' — «En Vivo Madrid 2017» (13757) · musicbrainz · 12 pistas (creado en la etapa 3) · https://musicbrainz.org/release/91265426-ec32-4c0d-af77-e3c0bbc06bcc
+- Lil Supa' — «REC a LIL» (13758) · musicbrainz · 4 pistas (creado en la etapa 3) · https://musicbrainz.org/release/2ed3bed3-b55b-4681-8602-66604eadf70e
+- Lil Supa' — «NEØN» (13759) · musicbrainz · 7 pistas (creado en la etapa 3) · https://musicbrainz.org/release/d2d90a78-9e61-45af-a0ee-8c27906f089c
+- Lil Supa' — «Supremacy» (13760) · musicbrainz · 16 pistas (creado en la etapa 3) · https://musicbrainz.org/release/3923c6e1-5b62-4c6b-9c56-5ceccf8fd251
+- Lil Supa' — «CLARO» (13761) · musicbrainz · 6 pistas (creado en la etapa 3) · https://musicbrainz.org/release/80af7b6e-7446-488a-8d3b-a1ba5c49dff2
+- Lil Supa' — «ANIMAL» (13762) · musicbrainz · 15 pistas (creado en la etapa 3) · https://musicbrainz.org/release/f3400db6-0ef7-4b11-a85a-15b43228f28a
+- Lil Supa' — «METAL II» (13763) · musicbrainz · 15 pistas (creado en la etapa 3) · https://musicbrainz.org/release/6f0162b9-2d00-457d-be93-93f1e60f5de6
+- Lil Supa' — «Codes» (13764) · musicbrainz · 8 pistas (creado en la etapa 3) · https://musicbrainz.org/release/df4537d2-6a2d-4496-9030-e2b45b8307df
+- Lil Supa' — «MAYONBISNE» (13765) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/b9822a2e-6989-4c5f-9fed-a149ab7d9b52
+- Lil Supa' — «METAL» (13766) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/810a0ea7-da71-4eb7-81b5-b8350ce75461
+- Lil Supa' — «INSTINTO» (13767) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/c481b307-17dc-4467-8a1d-f3a5b74b2755
+- Lil Supa' — «ÍCONOS» (13768) · musicbrainz · 13 pistas (creado en la etapa 3) · https://musicbrainz.org/release/ee80261d-060d-4ba4-89e0-8e66747980f6
+- Lil Supa' — «C.R.A.C.K» (13769) · deezer · 5 pistas (creado en la etapa 3) · https://www.deezer.com/album/184396982
+- Lil Supa' — «AMVISION» (13770) · deezer · 5 pistas (creado en la etapa 3) · https://www.deezer.com/album/177066902
+- Lil Supa' — «ERA» (13771) · deezer · 4 pistas (creado en la etapa 3) · https://www.deezer.com/album/177067222
+- Lil Supa' — «Madzilla: Uanteik “Como en los 90’S”, Vol. 2» (13772) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/177066682
+- Lil Supa' — «Madzilla: Uanteik (Mixtape)» (13773) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/177066482
+- Lil Supa' — «PODER» (13774) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/852432622
+- Lil Supa' — «OLFATO» (13775) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/827739261
+- Lil Supa' — «Veneno» (13776) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/784168021
+- Lil Supa' — «ÑAPA» (13777) · deezer · 3 pistas (creado en la etapa 3) · https://www.deezer.com/album/385924527
+- Lil Supa' — «CADÁVER» (13778) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/287518282
+- Lil Supa' — «Asco» (13779) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/281982762
+- Lil Supa' — «Cyclops» (13780) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/177066462
+- Lil Supa' — «NIGHT VISION» (13781) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/177066692
+- Lil Supa' — «JET LAG» (13782) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/177066652
+- Lil Supa' — «SOBEK» (13783) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/177067082
+- Lil Supa' — «Señores» (13784) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/177066702
+- Lil Supa' — «STILL HUNGRY» (13785) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/177066432
+- Lil Supa' — «RUN» (13786) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/177067342
+- Lil Supa' — «COSMOS» (13787) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/177066472
+- Lil Supa' — «Caimanes | Caballos» (13788) · deezer · 2 pistas (creado en la etapa 3) · https://www.deezer.com/album/177066932
+- Lil Supa' — «HECATOMBE (Fresco & Dark)» (13789) · deezer · 3 pistas (creado en la etapa 3) · https://www.deezer.com/album/177066832
+- Los Amigos Invisibles — «Acústico» (3797) · musicbrainz · 9 duraciones (9 pistas en común) · https://musicbrainz.org/release/ff27dab8-9783-42c6-8069-654e4c14b86f
+- Los Amigos Invisibles — «Cool Love» (5526) · musicbrainz · 17 pistas (discografía MB de la ficha: título igual) · https://musicbrainz.org/release/a3450af9-3c77-4c09-a45f-fc1aa2d068dd
+- Los Amigos Invisibles — «Los Amigos Invisibles, Acústico» (5527) · deezer · 10 pistas (discografía Deezer de la ficha: título igual) · https://www.deezer.com/album/10607600
+- Los Amigos Invisibles — «Superpop Venezuela Remixes» (5603) · itunes-busqueda · 11 pistas (búsqueda iTunes: artista y título idénticos, año ±1) · https://music.apple.com/ve/album/superpop-venezuela-remixes/284432380?uo=4
+- Los Amigos Invisibles — «Sugga Mami» (14096) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/b9f2eb83-fa1f-4d39-8a74-dbb994a3fa38
+- Los Amigos Invisibles — «The Venezuelan Zinga Son, Volume 1» (14097) · musicbrainz · 17 pistas (creado en la etapa 3) · https://musicbrainz.org/release/786e55ca-2e61-4fd4-84d0-1114ef0e6c31
+- Los Amigos Invisibles — «Something» (14098) · musicbrainz · 4 pistas (creado en la etapa 3) · https://musicbrainz.org/release/8bb890c4-77c1-482b-a802-fd98ab103b7d
+- Los Amigos Invisibles — «Glad to Know You» (14099) · musicbrainz · 3 pistas (creado en la etapa 3) · https://musicbrainz.org/release/cdb373a6-66cf-4638-92ec-50a0ff05464c
+- Los Amigos Invisibles — «Sugga Daddy» (14100) · musicbrainz · 2 pistas (creado en la etapa 3) · https://musicbrainz.org/release/e2a91238-1729-49f0-8105-15f34d72609a
+- Los Amigos Invisibles — «Amor» (14101) · musicbrainz · 4 pistas (creado en la etapa 3) · https://musicbrainz.org/release/8f739e54-9559-4987-bc70-a5bb18bd5793
+- Los Amigos Invisibles — «Me Espera» (14102) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/78d9c00a-c5d1-4af3-8d6c-72d6e4b91121
+- Los Amigos Invisibles — «Tócamela» (14103) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/4f1c8512-111e-42ba-8bed-f7ebba91f914
+- Los Amigos Invisibles — «Canción Ecológica EP» (14104) · deezer · 8 pistas (creado en la etapa 3) · https://www.deezer.com/album/604109212
+- Los Amigos Invisibles — «Arepa 3000» (14105) · deezer · 19 pistas (creado en la etapa 3) · https://www.deezer.com/album/1162998
+- Los Amigos Invisibles — «A TYPICAL AND AUTOCTONAL VENEZUELAN DANCE BAND REMASTERED» (14106) · deezer · 25 pistas (creado en la etapa 3) · https://www.deezer.com/album/189428592
+- Los Amigos Invisibles — «Wiki Wiki MAXI SINGLE» (14107) · deezer · 2 pistas (creado en la etapa 3) · https://www.deezer.com/album/792185781
+- Los Amigos Invisibles — «Wiki Wiki EP» (14108) · deezer · 6 pistas (creado en la etapa 3) · https://www.deezer.com/album/765274071
+- Los Amigos Invisibles — «No se me Olvidó EP» (14109) · deezer · 3 pistas (creado en la etapa 3) · https://www.deezer.com/album/581756932
+- Los Amigos Invisibles — «Antes de Dormir EP (feat. Betsayda Machado)» (14110) · deezer · 4 pistas (creado en la etapa 3) · https://www.deezer.com/album/507365641
+- Los Amigos Invisibles — «Tuyonama EP» (14111) · deezer · 4 pistas (creado en la etapa 3) · https://www.deezer.com/album/451699035
+- Los Amigos Invisibles — «Dame el Mambo E.P. 1» (14112) · deezer · 5 pistas (creado en la etapa 3) · https://www.deezer.com/album/325295517
+- Los Amigos Invisibles — «Dame el Mambo E.P. 2» (14113) · deezer · 4 pistas (creado en la etapa 3) · https://www.deezer.com/album/325299917
+- Los Amigos Invisibles — «Ease Your Mind» (14114) · deezer · 2 pistas (creado en la etapa 3) · https://www.deezer.com/album/217617382
+- Los Amigos Invisibles — «Me Espera (La Salsa del Nonno)» (14115) · deezer · 2 pistas (creado en la etapa 3) · https://www.deezer.com/album/1102463262
+- Los Amigos Invisibles — «Mal Pensada (Loooong Version)» (14116) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/389524167
+- Los Amigos Invisibles — «Eh Eh Oh Oh» (14117) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/216871232
+- Los Amigos Invisibles — «Viajero Frecuente del Amor» (14118) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/325291687
+- Los Mesoneros — «Dime Como Tú Quieras» (14065) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/cf82a599-5ba7-4aac-a0c6-7b7bcb113b7f
+- Los Mesoneros — «Solo» (14066) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/ac39e723-7ca5-4ecf-810a-1300938edb6b
+- Los Mesoneros — «ESO Que Nos Trajo a Abbey Road» (14067) · musicbrainz · 17 pistas (creado en la etapa 3) · https://musicbrainz.org/release/3656e4b3-f420-452f-8914-de058c4f92df
+- Los Mesoneros — «Te Lo Advertí (Desde Abbey Road)» (14068) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/2802ceb3-f06a-4c88-a0bf-892f47961637
+- Los Mesoneros — «Los Mesoneros» (14069) · musicbrainz · 5 pistas (creado en la etapa 3) · https://musicbrainz.org/release/11b4ea88-815d-4639-aa13-e7a85d1d97c0
+- Los Mesoneros — «Corolla Del 96» (14070) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/1074766792
+- Los Mesoneros — «Tonada De Luna Llena (Desde Abbey Road)» (14071) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/923890731
+- Los Mesoneros — «Ingenuo» (14072) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/1024462381
+- Los Mesoneros — «Diciembre» (14073) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/1024462401
+- Los Mesoneros — «¿Qué Hora Es Allá?» (14074) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/1024467461
+- Los Mesoneros — «Su Lado De La Cama» (14075) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/1024467511
+- Los Mesoneros — «Tu Canción» (14076) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/1024466781
+- Los Mesoneros — «El Puesto Es Mío» (14077) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/1024466951
+- Los Mesoneros — «Más Tuyo» (14078) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/1024484761
+- Los Mesoneros — «Despídete Bien» (14079) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/1024484591
+- Los Mesoneros — «No Terminamos de Terminar» (14080) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/1033876212
+- Los Mesoneros — «Dos» (14081) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/1024484631
+- Los Mesoneros — «Últimas Palabras (Acustico)» (14082) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/1008106051
+- Los Mesoneros — «El Paraíso» (14083) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/1029712512
+- PapaShanty Saund System — «Vene Chile» (14463) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/223391852
+- PapaShanty Saund System — «Abre los Ojos - Rock al Aire - Session Studio» (14464) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/666128771
+- PapaShanty Saund System — «Musica de Paz - Rock al Aire - Session Studio» (14465) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/666128831
+- PapaShanty Saund System — «Wo No Noo - Rock al Aire - Session Studio» (14466) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/666128841
+- PapaShanty Saund System — «Feel the Flow - Rock al Aire - Session Studio» (14467) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/666128871
+- PapaShanty Saund System — «Roots - Rock al Aire - Session Studio» (14468) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/666128891
+- PapaShanty Saund System — «Himno Shanty - Rock al Aire - Session Studio» (14469) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/666128901
+- PapaShanty Saund System — «Nuevo Ciclo - Rock al Aire - Session Studio» (14470) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/666128921
+- PapaShanty Saund System — «Por la Raza - Rock al Aire - Session Studio» (14471) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/666130871
+- PapaShanty Saund System — «Caminando - Rock al Aire - Session Studio (Live)» (14472) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/666131051
+- PapaShanty Saund System — «All Right - Rock al Aire - Session Studio (Live)» (14473) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/666131061
+- PapaShanty Saund System — «Musica de Paz» (14474) · deezer · 2 pistas (creado en la etapa 3) · https://www.deezer.com/album/384452557
+- PapaShanty Saund System — «Roots (Dub Version)» (14475) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/386308237
+- PapaShanty Saund System — «Por la Raza (Dub Version)» (14476) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/386308597
+- Rawayana — «¿Dónde es el after?» (5585) · musicbrainz · 23 pistas (discografía MB de la ficha: título igual) · https://musicbrainz.org/release/c48e1f9f-a556-4e46-b47e-7c116ae019cc
+- Rawayana — «Music Sounds Better With You» (13926) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/62431868-0aa4-458d-9600-1088e07793eb
+- Rawayana — «Veneka» (13927) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/dbd1558f-52a6-4b78-a4df-41cc26d07489
+- Rawayana — «Binikini» (13928) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/2dfc336a-683b-4cbf-8c68-11116807b3bc
+- Rawayana — «#Sádico (Remix EP)» (13929) · musicbrainz · 7 pistas (creado en la etapa 3) · https://musicbrainz.org/release/b711b48d-da3d-4651-8bcb-ee39d1e47406
+- Rawayana — «Sin ti» (13930) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/317d1788-10b2-4d40-aca9-3369d4f4a405
+- Rawayana — «Incomprendido» (13931) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/4c06d3a9-c17c-4649-bd80-3dd39a5b4aca
+- Rawayana — «La Tormenta» (13932) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/710be2e5-2edb-4cad-abe0-1059bc39a2ba
+- Rawayana — «¡QUE VUELVAN LOS MATINÉ!» (13933) · musicbrainz · 4 pistas (creado en la etapa 3) · https://musicbrainz.org/release/d0089ce6-5c3d-4687-87a5-b69249002d03
+- Rawayana — «La Noche Que No Había Uber» (13934) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/fbf6e87a-f57b-4d03-82e8-95e4c1c86e47
+- Rawayana — «Double Cheese & Bacon» (13935) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/c97f212c-73b5-44d6-9a52-d8fed03d7854
+- Rawayana — «Caney» (13936) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/16c6c3a6-13d9-4e73-a288-8e3a879cad3c
+- Rawayana — «Feriado» (13937) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/010054cd-3a52-49e3-ae23-4740da822910
+- Rawayana — «Jugando Chapita (Campeones Del Mundo 🇻🇪)» (13938) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/7cf8b472-aef6-4629-b6b8-b9b3d3a3f7d9
+- Rawayana — «Dame Un Break» (13939) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/3a019b30-88d0-45ad-be9a-0f4ecbe07f71
+- Rawayana — «Últimos días» (13940) · musicbrainz · 2 pistas (creado en la etapa 3) · https://musicbrainz.org/release/c5abcaab-daf6-4ba7-b3e5-0d3fcbc1417c
+- Rawayana — «Rawayana Live at Cercle Odyssey» (13941) · musicbrainz · 19 pistas (creado en la etapa 3) · https://musicbrainz.org/release/926bfb63-61e8-4fe8-afcb-dad899a4dcad
+- Rawayana — «Live From La Sabana» (13942) · deezer · 4 pistas (creado en la etapa 3) · https://www.deezer.com/album/211808492
+- Rawayana — «Si Te Pica Es Porque Eres Tú» (13943) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/883133222
+- Rawayana — «Home Alone» (13944) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/611142322
+- Rawayana — «Game Over» (13945) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/556982952
+- Rawayana — «Hora Loca» (13946) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/468681155
+- Rawayana — «Brindo» (13947) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/481940095
+- Rawayana — «Besos Ricos» (13948) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/477261135
+- Rawayana — «Bebé» (13949) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/445800545
+- Rawayana — «Soy Tu Papá (feat. Fernando Palomo)» (13950) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/381886497
+- Rawayana — «Laberinto (Bosq Remix)» (13951) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/294806772
+- Rawayana — «En Tu Mar» (13952) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/267514672
+- Rawayana — «Music Sounds Better With You - Recuerdos de Infancia» (13953) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/263593682
+- Rawayana — «Into You» (13954) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/254895642
+- Rawayana — «Váyanse Todos A Mamá» (13955) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/248066772
+- Rawayana — «Menguante» (13956) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/244110272
+- Rawayana — «Welcome To El Sur» (13957) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/210270542
+- Rawayana — «Camarones y Viniles» (13958) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/204608642
+- Rawayana — «2020» (13959) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/196234372
+- Rawayana — «Mi Amigo Luis» (13960) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/192862482
+- Rawayana — «Palmera Del Desierto» (13961) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/211803832
+- Rawayana — «Funky Fiesta» (13962) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/211797952
+- Rawayana — «Tucacas» (13963) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/213316702
+- Rawayana — «Véngase II» (13964) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/212145502
+- Rawayana — «Véngase I» (13965) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/212448482
+- Sentimiento Muerto — «SM en vivo NYC 1990 (Live)» (13996) · deezer · 9 pistas (creado en la etapa 3) · https://www.deezer.com/album/808632561
+- Sentimiento Muerto — «Aunque Usted No Lo Quiera, Vol. 2» (13997) · deezer · 14 pistas (creado en la etapa 3) · https://www.deezer.com/album/7886351
+- Sentimiento Muerto — «Aunque Usted No Lo Quiera, Vol. 1» (13998) · deezer · 13 pistas (creado en la etapa 3) · https://www.deezer.com/album/7886347
+- Serenata Guayanesa — «Serenata Para Las Madres (CD Reissue)» (9041) · deezer · 14 pistas (discografía Deezer de la ficha: título igual) · https://www.deezer.com/album/509293471
+- Serenata Guayanesa — «El Ferrocarril» (9045) · deezer · 15 duraciones (15 pistas en común) · https://www.deezer.com/album/508389421
+- Serenata Guayanesa — «Bolivar Todo Tropical» (9046) · deezer · 14 duraciones (14 pistas en común) · https://www.deezer.com/album/502953951
+- Serenata Guayanesa — «30 Años De Exitos» (9049) · deezer · 10 duraciones (10 pistas en común) · https://www.deezer.com/album/6531773
+- Serenata Guayanesa — «Grandes Exitos» (9053) · deezer · 19 duraciones (19 pistas en común) · https://www.deezer.com/album/14025896
+- Serenata Guayanesa — «Sentir De Nuestra Tierra» (9415) · musicbrainz · 16 pistas (discografía MB de la ficha: título igual) · https://musicbrainz.org/release/cb035178-d9c5-43cc-9cc4-4262f7a9021b
+- Serenata Guayanesa — «Música del Zulia y de Venezuela» (9416) · deezer · 13 duraciones (13 pistas en común) · https://www.deezer.com/album/509293491
+- Serenata Guayanesa — «20 años de éxitos» (14949) · musicbrainz · 14 pistas (creado en la etapa 3) · https://musicbrainz.org/release/e5a8c06a-649f-429a-ae8a-468580a7e0d5
+- Serenata Guayanesa — «Serenata Guayanesa 40 Años» (14950) · deezer · 16 pistas (creado en la etapa 3) · https://www.deezer.com/album/509287221
+- Serenata Guayanesa — «Música Con Futuro» (14951) · deezer · 14 pistas (creado en la etapa 3) · https://www.deezer.com/album/509293481
+- Serenata Guayanesa — «La Estrella de Navidad» (14952) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/505664601
+- Serenata Guayanesa — «Venezuela en Cuatro Voces» (14953) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/505664641
+- Serenata Guayanesa — «Canto y Baile» (14954) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/509293541
+- Serenata Guayanesa — «Nubes de Colores» (14955) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/509293571
+- Serenata Guayanesa — «Serenata Sinfónica en Navidad» (14956) · deezer · 14 pistas (creado en la etapa 3) · https://www.deezer.com/album/508042111
+- Serenata Guayanesa — «Caribe Abajo» (14957) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/502494621
+- Serenata Guayanesa — «45 Años Leyenda Viva» (14958) · deezer · 14 pistas (creado en la etapa 3) · https://www.deezer.com/album/502953581
+- Serenata Guayanesa — «Hecho en Venezuela, Contiene Musica» (14959) · deezer · 16 pistas (creado en la etapa 3) · https://www.deezer.com/album/6730245
+- Serenata Guayanesa — «40 Años 40 Exitos de Serenata Guayanesa» (14960) · deezer · 40 pistas (creado en la etapa 3) · https://www.deezer.com/album/6245800
+- Serenata Guayanesa — «Música Folklórica y Popular de Venezuela» (14961) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/928140
+- Serenata Guayanesa — «Aguinaldos Populares Venezolanos & S. Guayanesa Vol. 5» (14962) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/928139
+- Serenata Guayanesa — «Se Ha Perdido el Niño» (14963) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/662783361
+- Viniloversus — «La Frontera» (5596) · musicbrainz · 10 pistas (discografía MB de la ficha: título igual) · https://musicbrainz.org/release/a9094cad-a298-43d7-a2aa-e76430a78f5e
+- Viniloversus — «La huella» (14048) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/e960099e-b5db-44ef-aebe-465fca09443e
+- Viniloversus — «El Avión» (14049) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/bc9d82a3-3efd-4387-9100-91a03e3c6bc8
+- Viniloversus — «Vértigo» (14050) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/f4c8806a-07ad-47c1-823e-08305aced011
+- Viniloversus — «Destruirse» (14051) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/961578091
+- Viniloversus — «Animal Temporal» (14052) · deezer · 3 pistas (creado en la etapa 3) · https://www.deezer.com/album/1007830351
+- Viniloversus — «No Más» (14053) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/1007009361
+- Viniloversus — «Canción De Amor» (14054) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/1006174271
+- Viniloversus — «Kali: En Vivo Desde Buenos Aires» (14055) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/1013452051
+- Viniloversus — «Shiva» (14056) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/95673212
+- Viniloversus — «Carpe Diem» (14057) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/90526532
+- Viniloversus — «Ultraviolenta» (14058) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/86961022
+- Viniloversus — «Are You Moving On?» (14059) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/1007009191
+- Viniloversus — «Laberinto Eterno» (14060) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/1007009061
+- Viniloversus — «So Many Stars (Remixes)» (14061) · deezer · 3 pistas (creado en la etapa 3) · https://www.deezer.com/album/1015348611
+- Viniloversus — «Sangre Fría» (14062) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/1007009271
+- Viniloversus — «Tu Ambición/ Del Suelo Al Cielo (B-Sides)» (14063) · deezer · 2 pistas (creado en la etapa 3) · https://www.deezer.com/album/1007009021
+- Viniloversus — «Soñaré Hasta Que Llegue / Cadenas (B-Sides)» (14064) · deezer · 2 pistas (creado en la etapa 3) · https://www.deezer.com/album/1007009121
+- Vytas Brenner — «I Belong» (2399) · musicbrainz · 5 duraciones (5 pistas en común) · https://musicbrainz.org/release/fe820d95-9f43-4fc4-b7fb-c5507673a02a
+- Vytas Brenner — «La Ofrenda de Vytas» (2402) · musicbrainz · 7 duraciones (7 pistas en común) · https://musicbrainz.org/release/d8214a29-b227-4ecf-9ae9-15265961f0fc
+- Vytas Brenner — «Inolvidables de Oro» (14119) · deezer · 16 pistas (creado en la etapa 3) · https://www.deezer.com/album/10272972
+- Vytas Brenner — «Acuesta (Instrumental)» (14120) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/902158162
+- Yordano — «Secretos De La Noche» (4601) · musicbrainz · 12 duraciones (12 pistas en común) · https://musicbrainz.org/release/1ec9734c-1802-4bf0-bd10-2b6ad6c1c0f5
+- Yordano — «Yordano Hoy... En Vivo» (4701) · musicbrainz · 1 duraciones (28 pistas en común) · https://musicbrainz.org/release/fdda1fbd-2d4e-4f8b-869b-be9f41927c82
+- Yordano — «El último tren (Downtown Train)» (13546) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/6388e6cc-a9e3-453e-9868-f3154364a244
+- Yordano — «Días de junio» (13547) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/babc5e8e-367b-4936-8d91-4578a160660c
+- Yordano — «Ida y vuelta» (13548) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/07b31f7b-61be-4522-962e-ce0acb9eb2d9
+- Yordano — «Otra cara bonita» (13549) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/de93b38e-6c2c-452b-b867-f8bd8d003470
+- Yordano — «Manantial de corazón» (13550) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/465c538c-12d3-4abc-927c-1e8cdc337925
+- Yordano — «Besos en la lluvia» (13551) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/36651a70-427d-4536-a433-4c47073931a5
+- Yordano — «Manifiesto» (13552) · musicbrainz · 3 pistas (creado en la etapa 3) · https://musicbrainz.org/release/eec4cdd6-5c25-4ed6-8f79-4a7c8ac0a717
+- Yordano — «La Historia» (13553) · musicbrainz · 12 pistas (creado en la etapa 3) · https://musicbrainz.org/release/3af13808-3571-4aca-9645-158fa9ba729b
+- Yordano — «80 canciones de los 80» (13554) · musicbrainz · 14 pistas (creado en la etapa 3) · https://musicbrainz.org/release/f5d7d5be-0754-4f63-8d20-c864d5c72c66
+- Yordano — «32 grandes éxitos» (13555) · musicbrainz · 32 pistas (creado en la etapa 3) · https://musicbrainz.org/release/fd1a5f16-d8b3-4556-a9c7-76ae07ff3620
+- Yordano — «De colección, volumen 2» (13556) · musicbrainz · 12 pistas (creado en la etapa 3) · https://musicbrainz.org/release/8c2fec0f-25e9-47ef-812f-8d613c87e797
+- Yordano — «Enamorarnos otra vez» (13557) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/603af36b-d3a1-484c-af44-83a7897dde4a
+- Yordano — «Después de Todo» (13558) · deezer · 13 pistas (creado en la etapa 3) · https://www.deezer.com/album/149261722
+- Yordano — «El Tren de los Regresos (Parada Especial)» (13559) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/52060672
+- Yordano — «Sólo Exitos» (13560) · deezer · 20 pistas (creado en la etapa 3) · https://www.deezer.com/album/276253462
+- Zapato 3 — «18 Éxitos De Zapato 3» (2287) · musicbrainz · 18 pistas (discografía MB de la ficha: título igual) · https://musicbrainz.org/release/51fccc55-c8d1-4fe6-86ba-e94eadc3b7ff
+- Zapato 3 — «ZAPATO3 2023» (13999) · musicbrainz · 19 pistas (creado en la etapa 3) · https://musicbrainz.org/release/b9667ce5-bcaf-42d7-8ef4-ace66b8d098f
+- Zapato 3 — «Lo mejor de...» (14000) · musicbrainz · 15 pistas (creado en la etapa 3) · https://musicbrainz.org/release/f7dc101e-eee5-4639-876a-9aeb8d7bf585
+- Zapato 3 — «Amaranto (Live Version)» (14001) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/48164432
+- Zapato 3 — «Que Mente 20-20» (14002) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/177223162
+- Zapato 3 — «Elefantes Marinos» (14003) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/61911342
+- Zapato 3 — «Amaranto (KINZOisHERE Remix)» (14004) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/80913092
+- Zapato 3 — «Te Prendo Como Mirra» (14005) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/49339722
+- Dimension Latina — «Dimensión Latina 75» (6937) · deezer · 10 duraciones (10 pistas en común) · https://www.deezer.com/album/685687341
+- Dimension Latina — «Dimensión Latina 76 Salsa Brava» (6938) · deezer · 10 duraciones (10 pistas en común) · https://www.deezer.com/album/128735032
+- Dimension Latina — «Inconquistable» (6943) · deezer · 6 duraciones (6 pistas en común) · https://www.deezer.com/album/245065862
+- Dimension Latina — «Producto De Exportación» (6954) · deezer · 8 duraciones (8 pistas en común) · https://www.deezer.com/album/47968132
+- Dimension Latina — «Canto Para Ti» (6955) · deezer · 8 duraciones (8 pistas en común) · https://www.deezer.com/album/85358332
+- Dimension Latina — «Inolvidable» (6969) · musicbrainz · 18 duraciones (18 pistas en común) · https://musicbrainz.org/release/3ca11252-64fc-4f2c-acb3-bc6ababa37ce
+- Dimension Latina — «Dimensión Latina vs Billo's Caracas Boys» (12932) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/663323f7-cbd6-4ee5-bce7-223eca7f2c7d
+- Dimension Latina — «20 Exitos de la Dimensión Latina, Volume 2» (12933) · musicbrainz · 20 pistas (creado en la etapa 3) · https://musicbrainz.org/release/52df4210-c313-4770-8196-51244e18b4a2
+- Dimension Latina — «Me falta el tiempo» (12934) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/edaef839-4958-4d0b-9ce1-e52a64e4aec7
+- Dimension Latina — «Llorarás» (12935) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/9a8b59fd-0fba-4dc8-ba3e-5ac25f7aa790
+- Dimension Latina — «Éxitos de oro» (12936) · musicbrainz · 15 pistas (creado en la etapa 3) · https://musicbrainz.org/release/6b5ce57d-3ab0-433f-ad58-8cad75bc1e64
+- Dimension Latina — «El frutero» (12937) · musicbrainz · 9 pistas (creado en la etapa 3) · https://musicbrainz.org/release/f3c8a6aa-6bea-48b9-8644-a4d86f530f10
+- Dimension Latina — «Sus grandes éxitos, vol. 1» (12938) · musicbrainz · 12 pistas (creado en la etapa 3) · https://musicbrainz.org/release/20f3678e-caaa-4b5d-abe2-2d588fcd4c92
+- Dimension Latina — «Dimensión Latina en Nueva York» (12939) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/db15b7e2-94d5-4eb3-b203-90685d444856
+- Dimension Latina — «Sus grandes éxitos, vol. 2» (12940) · musicbrainz · 12 pistas (creado en la etapa 3) · https://musicbrainz.org/release/d7b857d7-4b12-4c25-9c6a-3efb5a90feb2
+- Dimension Latina — «¡Quieren salsa!» (12941) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/cd1bfc86-ff55-42ba-8bec-26072de6fc11
+- Dimension Latina — «El eco de un tambó» (12942) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/741ade36-44aa-4ec3-bef1-17f2c7369fee
+- Dimension Latina — «Oro salsero» (12943) · musicbrainz · 20 pistas (creado en la etapa 3) · https://musicbrainz.org/release/968b2b20-b4ff-4b12-b407-48b41983dae4
+- Dimension Latina — «La comprita / Guaguancó a Puerto Rico» (12944) · musicbrainz · 2 pistas (creado en la etapa 3) · https://musicbrainz.org/release/3ad50cc3-ac63-4caf-a2a3-dbabe1712938
+- Dimension Latina — «La Dimensión de siempre "La Original"» (12945) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/0b22708b-ab2a-4e6a-96d5-27b9a7006402
+- Dimension Latina — «Sigue tu camino» (12946) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/1a4dcae1-e566-4156-b6c2-2b1f9fa75213
+- Dimension Latina — «Colección 20-20» (12947) · musicbrainz · 20 pistas (creado en la etapa 3) · https://musicbrainz.org/release/8fbe927d-4650-4380-9307-c31cc0fb320a
+- Dimension Latina — «Sus grandes éxitos, vol. 3» (12948) · musicbrainz · 12 pistas (creado en la etapa 3) · https://musicbrainz.org/release/913ca6c6-c306-4d06-a824-5da0bb628ab8
+- Dimension Latina — «La Dimensión Latina Vive» (12949) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/227687642
+- Dimension Latina — «La Dimensión Siglo XXl» (12950) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/227687672
+- Dimension Latina — «5 Estrellas Con Dimension Latinas» (12951) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/89675642
+- Dimension Latina — «Colección De Oro: A Bailar La Salsa Con Dimensión Latina, Vol. 3» (12952) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/128724432
+- Dimension Latina — «Colección De Oro: A Bailar La Salsa Con Dimensión Latina, Vol. 2» (12953) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/128736302
+- Dimension Latina — «Colección De Oro: A Bailar La Salsa Con Dimensión Latina, Vol. 1» (12954) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/128745342
+- Dimension Latina — «Cinco Estrellas Con La Dimensión Latina, Vol. 2» (12955) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/128723122
+- Dimension Latina — «Cinco Estrellas Con La Dimensión Latina» (12956) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/128733302
+- Dimension Latina — «15 Éxitos» (12957) · deezer · 15 pistas (creado en la etapa 3) · https://www.deezer.com/album/128733882
+- Dimension Latina — «'98» (12958) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/99346642
+- Dimension Latina — «Las Estrellas De Dimensión Latina En New York» (12959) · deezer · 15 pistas (creado en la etapa 3) · https://www.deezer.com/album/128745802
+- Dimension Latina — «Una Dimensión De Éxitos 2» (12960) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/128715732
+- Dimension Latina — «Éxitos De La Dimensión Latina» (12961) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/128729112
+- Dimension Latina — «Frente A Frente En Las Vegas» (12962) · deezer · 14 pistas (creado en la etapa 3) · https://www.deezer.com/album/128737152
+- Dimension Latina — «Clasicos Musicales» (12963) · deezer · 13 pistas (creado en la etapa 3) · https://www.deezer.com/album/103341312
+- Dimension Latina — «En Vivo» (12964) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/245065752
+- Dimension Latina — «Mi China» (12965) · deezer · 8 pistas (creado en la etapa 3) · https://www.deezer.com/album/245109662
+- Dimension Latina — «Sabor a Salsa» (12966) · deezer · 9 pistas (creado en la etapa 3) · https://www.deezer.com/album/245083022
+- Dimension Latina — «El Son del Bohío» (12967) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/114413032
+- Dimension Latina — «Presentando a Andy Montañez» (12968) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/90513812
+- Dimension Latina — «Cuerda para Rato, Vol. 2» (12969) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/99346832
+- Dimension Latina — «Éxitos Candela» (12970) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/88221552
+- Zardonic — «Chaotic Serenity» (1444) · musicbrainz · 6 duraciones (6 pistas en común) · https://musicbrainz.org/release/8b27aa89-7f1a-43b3-bbf3-99c0f05d13e0
+- Zardonic — «Metal Up Your Bass» (1564) · musicbrainz · 6 duraciones (6 pistas en común) · https://musicbrainz.org/release/a75c20a6-93a3-449d-a2b8-7065d3d6263d
+- Zardonic — «Metal Up Your Bass (revAMPED Edition)» (1589) · musicbrainz · 14 duraciones (14 pistas en común) · https://musicbrainz.org/release/a75c20a6-93a3-449d-a2b8-7065d3d6263d
+- Zardonic — «Vulgar Display Of Bass» (2835) · musicbrainz · 12 duraciones (12 pistas en común) · https://musicbrainz.org/release/818661a9-d474-4577-92f7-cf715124000c
+- Zardonic — «Those Who Know The Truth» (2837) · musicbrainz · 8 duraciones (8 pistas en común) · https://musicbrainz.org/release/2ed8c63d-9927-4c3f-8a56-aa669b05cbda
+- Zardonic — «Inherit / Jason» (14394) · musicbrainz · 2 pistas (creado en la etapa 3) · https://musicbrainz.org/release/bfc1ad10-0121-4f2e-99b6-090aab4de771
+- Zardonic — «Shred Beliefs / The Six» (14395) · musicbrainz · 2 pistas (creado en la etapa 3) · https://musicbrainz.org/release/52e91521-8137-4a07-afb5-f4dcdc5e86b5
+- Zardonic — «The End of Days EP» (14396) · musicbrainz · 2 pistas (creado en la etapa 3) · https://musicbrainz.org/release/9999650b-613d-4580-96e7-34472b50af99
+- Zardonic — «Bitter» (14397) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/fe8953ca-2305-4c8d-a48d-abe456565a66
+- Zardonic — «Fearless» (14398) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/8ad0bc3f-5af5-4879-8192-8790ae7df05d
+- Zardonic — «Western / Tuggy Tuggy» (14399) · musicbrainz · 2 pistas (creado en la etapa 3) · https://musicbrainz.org/release/237e4305-efc9-4c1d-b98a-184993e02033
+- Zardonic — «Bloodforged EP» (14400) · musicbrainz · 6 pistas (creado en la etapa 3) · https://musicbrainz.org/release/c05c885f-ec9b-4e51-affc-cdba2d799456
+- Zardonic — «Superstars» (14401) · musicbrainz · 12 pistas (creado en la etapa 3) · https://musicbrainz.org/release/0aae7648-56fc-4392-bda3-37253819ce4c
+- Zardonic — «10th Anniversary Mix» (14402) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/d98f0110-c6a5-43a7-bc1d-696bb399676d
+- Zardonic — «Biohazard / Scream» (14403) · musicbrainz · 2 pistas (creado en la etapa 3) · https://musicbrainz.org/release/d0878bd5-0734-408c-ae92-53f8560ab4a3
+- Zardonic — «Recyclation I» (14404) · musicbrainz · 6 pistas (creado en la etapa 3) · https://musicbrainz.org/release/ae36de45-5b76-49d9-850b-d2867965c557
+- Zardonic — «The Last Invocation / Reptile» (14405) · musicbrainz · 2 pistas (creado en la etapa 3) · https://musicbrainz.org/release/415a0276-5943-4888-941c-79ea8d4c1eba
+- Zardonic — «South of Human EP» (14406) · musicbrainz · 2 pistas (creado en la etapa 3) · https://musicbrainz.org/release/390e86ad-f4d3-4919-bd50-8d6d49d8e290
+- Zardonic — «Bring It On» (14407) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/ccc9d4f9-fe98-495a-b912-10f43c35097a
+- Zardonic — «Smells Like Teen Spirit (Zardonic Remix)» (14408) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/9f2fe617-4d54-4c62-9db1-b9cdb2466043
+- Zardonic — «Superhot: Mind Control Delete Soundtrack» (14409) · musicbrainz · 20 pistas (creado en la etapa 3) · https://musicbrainz.org/release/82547576-a09b-4bd7-9026-ba03682a04b1
+- Zardonic — «Lovecraft Machine» (14410) · musicbrainz · 2 pistas (creado en la etapa 3) · https://musicbrainz.org/release/8a57c820-76d0-4d8b-9285-028213a38cb3
+- Zardonic — «Industrial House (2015 Studio Mix)» (14411) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/6cc24602-1eab-4864-9554-76fdda7b25e6
+- Zardonic — «Halfbeaten / Nightcrawler» (14412) · musicbrainz · 2 pistas (creado en la etapa 3) · https://musicbrainz.org/release/c550dbb6-7eef-464d-9801-8e448f2916d4
+- Zardonic — «The Become (remix album)» (14413) · musicbrainz · 14 pistas (creado en la etapa 3) · https://musicbrainz.org/release/05a904bf-f903-4208-b439-9c2db4571a36
+- Zardonic — «Zardonic Collection» (14414) · musicbrainz · 4 pistas (creado en la etapa 3) · https://musicbrainz.org/release/dbbc5564-513b-42d2-b6cc-63170beb49ae
+- Zardonic — «Frozen Pathways VIP / My Prey» (14415) · musicbrainz · 2 pistas (creado en la etapa 3) · https://musicbrainz.org/release/b5a46004-8aab-463b-bd36-09e0b8992794
+- Zardonic — «Restless Remixes» (14416) · musicbrainz · 6 pistas (creado en la etapa 3) · https://musicbrainz.org/release/7a2d7c8d-ef17-4b3a-8339-ab934370e82e
+- Zardonic — «Antihero» (14417) · musicbrainz · 26 pistas (creado en la etapa 3) · https://musicbrainz.org/release/10180e9f-9dfa-49d7-8538-d598d749337b
+- Zardonic — «Braindrainer / Reliquia / Acid Industries» (14418) · musicbrainz · 3 pistas (creado en la etapa 3) · https://musicbrainz.org/release/26f602b7-7721-4498-acaa-549b0fc14af0
+- Zardonic — «Tunes From The Vault!» (14419) · musicbrainz · 39 pistas (creado en la etapa 3) · https://musicbrainz.org/release/305e9257-80b1-45a2-88cf-7e174bcfeee2
+- Zardonic — «Far Beyond Bass: The Vulgar Remixes» (14420) · musicbrainz · 12 pistas (creado en la etapa 3) · https://musicbrainz.org/release/845dcc35-7d58-4a3d-b0bb-bd54b05bce1d
+- Zardonic — «Death By The Bassline» (14421) · deezer · 4 pistas (creado en la etapa 3) · https://www.deezer.com/album/436172057
+- Zardonic — «For Justice» (14422) · deezer · 4 pistas (creado en la etapa 3) · https://www.deezer.com/album/9087649
+- Zardonic — «Rave Until The Apocalypse» (14423) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/447651115
+- Zardonic — «Follow Me» (14424) · deezer · 3 pistas (creado en la etapa 3) · https://www.deezer.com/album/424451657
+- Zardonic — «Bring The Rukus» (14425) · deezer · 2 pistas (creado en la etapa 3) · https://www.deezer.com/album/408922437
+- Zardonic — «Children Of Tomorrow (Pythius Remix) (Instrumental)» (14426) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/141175842
+- Zardonic — «Takeover (Zardonic & Fickle6 VIP Remix) (Instrumental)» (14427) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/136723862
+- Zardonic — «Takeover (VIP Mix)» (14428) · deezer · 2 pistas (creado en la etapa 3) · https://www.deezer.com/album/141972952
+- Zardonic — «Revelation» (14429) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/71321052
+- Zardonic — «Before The Dawn (feat. Celldweller)» (14430) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/70078992
+- Zardonic — «Subsonic Stigmata» (14431) · discogs · 12 pistas (creado en la etapa 3) · https://www.discogs.com/release/27434061
+- Zardonic — «Quandam» (14432) · discogs · 10 pistas (creado en la etapa 3) · https://www.discogs.com/release/10632392
+- Zardonic — «El Sistema» (14433) · discogs · 2 pistas (creado en la etapa 3) · https://www.discogs.com/release/3411354
+- Pastel de Gente — «El blues del plan unión» (14126) · deezer · 8 pistas (creado en la etapa 3) · https://www.deezer.com/album/431640187
+- Negus Nagast — «Rastafari Fi Salvation» (2191) · musicbrainz · 9 duraciones (9 pistas en común) · https://musicbrainz.org/release/a66cb09b-ecbc-4453-b613-4245e6d6a756
+- Onechot — «Social» (13925) · musicbrainz · 20 pistas (creado en la etapa 3) · https://musicbrainz.org/release/281a0b0a-38b4-4e36-a57f-d3737f402e76
+- Lasso — «Fetiche» (13589) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/958392cc-14b6-4fb0-ad5c-8a4a18e48554
+- Lasso — «De Mí, De Mí, De Mí» (13590) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/770516ef-6509-4096-839b-70f1e9c60a66
+- Lasso — «p0rn0grafía» (13591) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/391302de-a918-4516-8ecd-5495af6a0919
+- Lasso — «Tu lunar» (13592) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/7edf088b-8147-4ae9-b3e4-4213d9b72a18
+- Lasso — «Odio que no te odio» (13593) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/a5d77dbb-8ef5-42ab-a445-d693986de5b7
+- Lasso — «No Me Trates De Olvidar» (13594) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/a6c6c005-f66d-4206-8447-fa8874369512
+- Lasso — «Cinco minutos más» (13595) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/b9d03af0-5cdc-4e66-9b77-945667b5470a
+- Lasso — «Ojos marrones» (13596) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/5286b16a-2588-458d-b22e-122ae3fb0f86
+- Lasso — «¡¡¡FELIZ ANIVERSARIO!!!» (13597) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/11fab8aa-0f9b-4df6-a61d-d64ed709262e
+- Lasso — «Souvenir» (13598) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/e3fbb082-1f0f-4cd1-b9e9-33037ee54936
+- Lasso — «Malcriado» (13599) · musicbrainz · 13 pistas (creado en la etapa 3) · https://musicbrainz.org/release/a435f5b1-931e-4e49-8baa-f922c7b064cf
+- Lasso — «Un Millón Como Tú» (13600) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/e018b946-6356-41ec-a7fd-7ef2723487d6
+- Lasso — «Cuatro estaciones» (13601) · musicbrainz · 21 pistas (creado en la etapa 3) · https://musicbrainz.org/release/c2e3577b-d664-4e79-a25f-95a61b9c257a
+- Lasso — «Eva» (13602) · musicbrainz · 12 pistas (creado en la etapa 3) · https://musicbrainz.org/release/8d8fb1a8-d20a-43a8-b65d-6e430354640e
+- Lasso — «En Vivo Desde El Teatro Caupolicán, Santiago de Chile» (13603) · deezer · 8 pistas (creado en la etapa 3) · https://www.deezer.com/album/461852115
+- Lasso — «superpoder» (13604) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/1080294682
+- Lasso — «Cuando Te Dejan De Querer» (13605) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/716367791
+- Lasso — «¿vienes o voy?» (13606) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/676890061
+- Lasso — «Ese Final Ya Me Lo Sé» (13607) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/636151091
+- Lasso — «Siempre Llegas Tarde» (13608) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/614341262
+- Lasso — «No Escuches Esta Canción» (13609) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/597916882
+- Lasso — «Bilingües» (13610) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/578347031
+- Lasso — «Todo Regresa» (13611) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/517156222
+- Lasso — «Feliz Por Ti» (13612) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/502501061
+- Lasso — «El Primero» (13613) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/456567625
+- Lasso — «Los Hombres Son Todos Iguales» (13614) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/403552687
+- Lasso — «Plástico» (13615) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/393747827
+- Lasso — «Oma» (13616) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/387847847
+- Lasso — «Corriendo Con Tijeras» (13617) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/368462817
+- Lasso — «Yo-yo» (13618) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/359509917
+- Lasso — «Ojos Marrones (Con Sebastián Yatra)» (13619) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/348204237
+- Lasso — «Algodón» (13620) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/338305157
+- Lasso — «DIOS» (13621) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/298489312
+- Lasso — «Mi Imaginación» (13622) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/238362152
+- Lasso — «Ladrones» (13623) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/228524402
+- Lasso — «Me Arruinaste Netflix» (13624) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/221188452
+- Lasso — «Tenemos que Hablar» (13625) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/207138162
+- Lasso — «La Lotería» (13626) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/194516312
+- Lasso — «Los Amigos no se Besan en la Boca» (13627) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/187669862
+- Lasso — «Quiero Que Me Quieras» (13628) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/181418182
+- Lasso — «Hasta Ese Día» (13629) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/172658902
+- Lasso — «Mmm» (13630) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/165991332
+- Lasso — «Ibuprofeno» (13631) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/158785232
+- Lasso — «Vamos A Mi Ritmo» (13632) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/143179062
+- Lasso — «Kamikaze» (13633) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/137556202
+- Lasso — «Subtítulos» (13634) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/112142822
+- Lasso — «Cambio De Luces» (13635) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/68851741
+- Lasso — «Diferente» (13636) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/12753630
+- Lasso — «Hoy Te Dejo De Amar» (13637) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/10867626
+- Lasso — «Libertad» (13638) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/10311850
+- Lasso — «Te Veo» (13639) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/10170762
+- Rada — «Solar Concert for Bhagavan» (3189) · musicbrainz · 3 duraciones (3 pistas en común) · https://musicbrainz.org/release/8345c340-67eb-47a5-af70-19179dc4e3ae
+- Rada — «Armagedon & The Third Wave Revolution» (5604) · musicbrainz · 9 duraciones (9 pistas en común) · https://musicbrainz.org/release/c576707c-b7de-4398-a6eb-cfae918afae6
+- Rada — «Solaris» (5607) · musicbrainz · 1 duraciones (8 pistas en común) · https://musicbrainz.org/release/dbc05ba4-39ce-4d3a-bc88-61d9bdcae809
+- Rada — «Orbits» (5625) · deezer · 9 duraciones (9 pistas en común) · https://www.deezer.com/album/7151066
+- Rada — «Tropical Cosmic Sounds From Space» (5630) · musicbrainz · 14 duraciones (14 pistas en común) · https://musicbrainz.org/release/2282b079-a6da-4482-9cca-30495e10f569
+- Rada — «Intimo» (5633) · itunes-busqueda · 8 pistas (búsqueda iTunes: artista y título idénticos, año ±1) · https://music.apple.com/ve/album/intimo/1686061288?uo=4
+- Rada — «Luminous Void» (14591) · deezer · 8 pistas (creado en la etapa 3) · https://www.deezer.com/album/827686661
+- Rada — «The Geometry of Silence» (14592) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/759847961
+- Rada — «The Siege» (14593) · deezer · 9 pistas (creado en la etapa 3) · https://www.deezer.com/album/741183561
+- Rada — «Airwaves» (14594) · deezer · 8 pistas (creado en la etapa 3) · https://www.deezer.com/album/1028150142
+- Rada — «Pulsos en el Horizonte» (14595) · deezer · 7 pistas (creado en la etapa 3) · https://www.deezer.com/album/725053001
+- Rada — «Fallout Shelter» (14596) · deezer · 9 pistas (creado en la etapa 3) · https://www.deezer.com/album/698034471
+- Rada — «Roller Coaster» (14597) · deezer · 17 pistas (creado en la etapa 3) · https://www.deezer.com/album/616487741
+- Rada — «Venezuela Etnosonica» (14598) · deezer · 21 pistas (creado en la etapa 3) · https://www.deezer.com/album/603007122
+- Rada — «Tropical Cosmic Sounds from Space (Compiled by El Palmas)» (14599) · deezer · 22 pistas (creado en la etapa 3) · https://www.deezer.com/album/143141912
+- Rada — «Aeroblues» (14600) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/103192852
+- Rada — «Alien Bazar» (14601) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/143132682
+- Rada — «Caravanas» (14602) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/143139742
+- 3 Dueños — «Volverte a Ver» (13911) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/12c82545-ddf9-4442-a53d-11c0ec96d476
+- 3 Dueños — «Grandes Léxicos - 20 Aniversario» (13912) · musicbrainz · 5 pistas (creado en la etapa 3) · https://musicbrainz.org/release/f6d96a2b-ab56-4881-b4fa-438f0cd25fbc
+- 3 Dueños — «Internacionales» (13913) · musicbrainz · 14 pistas (creado en la etapa 3) · https://musicbrainz.org/release/4a232bda-293b-4854-8a46-8ce513f86957
+- 3 Dueños — «Originales» (13914) · musicbrainz · 18 pistas (creado en la etapa 3) · https://musicbrainz.org/release/9f8e6487-f441-455a-a09d-52f92b2c6fd3
+- 3 Dueños — «Se Baila Así» (13915) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/943277501
+- 3 Dueños — «Salí Bebe» (13916) · deezer · 2 pistas (creado en la etapa 3) · https://www.deezer.com/album/943269321
+- 3 Dueños — «Soy Yo» (13917) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/943262381
+- 3 Dueños — «Pidan Bendición (Remix)» (13918) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/943269271
+- 3 Dueños — «Mide Bien» (13919) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/943269151
+- 3 Dueños — «Burda 'E Malandro» (13920) · deezer · 2 pistas (creado en la etapa 3) · https://www.deezer.com/album/943277511
+- 3 Dueños — «No Pueden Competir Aquí» (13921) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/943268821
+- 3 Dueños — «La Ley (Remix)» (13922) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/943268911
+- 3 Dueños — «Con Cancha» (13923) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/943268771
+- 3 Dueños — «Descansa» (13924) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/943269101
+- Carlos Baute — «Orígenes» (3646) · musicbrainz · 6 duraciones (6 pistas en común) · https://musicbrainz.org/release/a4b3dbe3-ca57-4813-b9e3-6ffc39d2d829
+- Carlos Baute — «De Mi Puño y Letra» (3666) · musicbrainz · 1 duraciones (10 pistas en común) · https://musicbrainz.org/release/925d2a41-43f9-4ab5-b966-86a73598ca8d
+- Carlos Baute — «Yo Nací Para Querer...» (3849) · musicbrainz · 7 duraciones (7 pistas en común) · https://musicbrainz.org/release/a4359044-cbd1-4aa0-8543-a011721381d6
+- Carlos Baute — «Ando buscando» (14140) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/ba96378c-6b00-44d8-ab65-58b607e7f92f
+- Carlos Baute — «Colgando en tus manos (remixes)» (14141) · musicbrainz · 5 pistas (creado en la etapa 3) · https://musicbrainz.org/release/ce039cb2-409c-4dce-af7a-f034656920af
+- Carlos Baute — «¿Quién es ese?» (14142) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/230e70c3-200d-4e7b-94fd-b9d34dfa6362
+- Carlos Baute — «Lo mejor de lo mejor» (14143) · musicbrainz · 18 pistas (creado en la etapa 3) · https://musicbrainz.org/release/ce9894c0-4d40-4777-8012-898577bca014
+- Carlos Baute — «Vamo’ a la calle (remix)» (14144) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/5bccdba4-c64c-4b58-9a80-f0813376d6b8
+- Carlos Baute — «Cómo estar sin ti» (14145) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/53c3b3c2-ec65-4a3a-91cd-aa80a1efd23f
+- Carlos Baute — «De Mi Puño y Letra, 30 Años Tour (En Vivo)» (14146) · deezer · 16 pistas (creado en la etapa 3) · https://www.deezer.com/album/728848311
+- Carlos Baute — «Del Caribe Soy» (14147) · deezer · 7 pistas (creado en la etapa 3) · https://www.deezer.com/album/663297661
+- Carlos Baute — «De mi puño y letra - Edicion Coleccionista» (14148) · deezer · 16 pistas (creado en la etapa 3) · https://www.deezer.com/album/618068
+- Carlos Baute — «Carlos Baute "Grandes Exitos"» (14149) · deezer · 18 pistas (creado en la etapa 3) · https://www.deezer.com/album/90815
+- Carlos Baute — «Carlos Baute "Grandes Exitos" (DMD Premium + Digital Booklet)» (14150) · deezer · 21 pistas (creado en la etapa 3) · https://www.deezer.com/album/361247
+- Carlos Baute — «Imprescindibles» (14151) · deezer · 5 pistas (creado en la etapa 3) · https://www.deezer.com/album/294017662
+- Carlos Baute — «Tu cuerpo bailando en mi cuerpo EP» (14152) · deezer · 5 pistas (creado en la etapa 3) · https://www.deezer.com/album/1263324
+- Carlos Baute — «Quien te quiere como yo. EP» (14153) · deezer · 4 pistas (creado en la etapa 3) · https://www.deezer.com/album/897095
+- Carlos Baute — «Volveremos a Venezuela» (14154) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/968294841
+- Carlos Baute — «¿Quién Mejor Que Tú?» (14155) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/830964881
+- Carlos Baute — «Colgando en Tus Manos (En Vivo)» (14156) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/704608221
+- Carlos Baute — «Mi Medicina (En Vivo)» (14157) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/698009121
+- Carlos Baute — «Ladrón» (14158) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/679577281
+- Carlos Baute — «Angelito (En Vivo)» (14159) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/683678101
+- Carlos Baute — «Perdimos el Control (En Vivo)» (14160) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/678200751
+- Carlos Baute — «Nada Se Compara a Ti (En Vivo)» (14161) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/673660521
+- Carlos Baute — «Quien Te Quiere Como Yo (En Vivo)» (14162) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/672250771
+- Carlos Baute — «Te Regalo (En Vivo)» (14163) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/664222871
+- Carlos Baute — «Te Quise Olvidar (En Vivo)» (14164) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/661490001
+- Carlos Baute — «Me Pones Tierno (En Vivo)» (14165) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/658425871
+- Carlos Baute — «El Chisme (En Vivo)» (14166) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/655031931
+- Carlos Baute — «Muy Loco (En Vivo)» (14167) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/651842061
+- Carlos Baute — «Esta Canción (En Vivo)» (14168) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/649561901
+- Carlos Baute — «Coco» (14169) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/496654891
+- Carlos Baute — «Tranqui» (14170) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/469496655
+- Carlos Baute — «Al Niño Dios» (14171) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/375535607
+- Carlos Baute — «Ni la Mitad» (14172) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/363149837
+- Carlos Baute — «Y te pido perdón» (14173) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/223363652
+- Carlos Baute — «Como un atleta» (14174) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/170231172
+- Carlos Baute — «¿Y ahora qué?» (14175) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/155004762
+- Carlos Baute — «No es para tanto (feat. Ana Mena & Yera)» (14176) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/133418992
+- Carlos Baute — «Vive con ilusión» (14177) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/109721122
+- Carlos Baute — «Yo me quedo en Venezuela (Versión 2019)» (14178) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/105547272
+- Carlos Baute — «Perdido» (14179) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/95269972
+- Carlos Baute — «Compro minutos (feat. Farina)» (14180) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/84423552
+- Carlos Baute — «Te sigo pensando» (14181) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/77880522
+- Carlos Baute — «Perdimos el control (Urban Remix)» (14182) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/12191334
+- Carlos Baute — «Et Regalo» (14183) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/601615422
+- Carlos Baute — «Yo Quisiera Amar Como Los Sabios (Baby Noel Remix)» (14184) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/8906955
+- Carlos Baute — «Como decir que no (feat. María José)» (14185) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/7485383
+- Carlos Baute — «Tu no sabes que tanto» (14186) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/364143
+- Carlos Baute — «Estas hecha para mi» (14187) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/366292
+- Carlos Baute — «Lo que tú quieres yo quiero (Remixes)» (14188) · deezer · 3 pistas (creado en la etapa 3) · https://www.deezer.com/album/683576941
+- Tecupae — «Tiempo» (4524) · musicbrainz · 12 duraciones (12 pistas en común) · https://musicbrainz.org/release/b27f959f-0ce0-4bf6-ade6-8709fd45d58c
+- Tecupae — «En vivo» (13259) · musicbrainz · 14 pistas (creado en la etapa 3) · https://musicbrainz.org/release/5fe5e79b-b9d4-47d0-aead-31a035153631
+- Tecupae — «Suerte» (13260) · musicbrainz · 14 pistas (creado en la etapa 3) · https://musicbrainz.org/release/d4380f7d-818b-4b4a-bee9-5620812d51f4
+- Tecupae — «Chao Amor» (13261) · deezer · 2 pistas (creado en la etapa 3) · https://www.deezer.com/album/254424902
+- Ricardo Montaner — «Cada Día» (3589) · musicbrainz · 8 duraciones (8 pistas en común) · https://musicbrainz.org/release/b624707d-b44b-42e6-9ccf-b428bbe19a00
+- Ricardo Montaner — «Las Mejores Canciones Del Mundo II» (4425) · musicbrainz · 1 duraciones (12 pistas en común) · https://musicbrainz.org/release/24d322a2-a536-4fbc-b849-e712328e1578
+- Ricardo Montaner — «Las Cosas Son Como Son» (4427) · musicbrainz · 12 pistas (discografía MB de la ficha: título igual) · https://musicbrainz.org/release/ccca3a65-488e-43bc-ad65-43b8e072751b
+- Ricardo Montaner — «Exitos y...Algo Más» (4428) · musicbrainz · 14 duraciones (14 pistas en común) · https://musicbrainz.org/release/7630dc9d-70b5-4d39-8c41-67179ba6b218
+- Ricardo Montaner — «Soy tuyo» (13494) · musicbrainz · 14 pistas (creado en la etapa 3) · https://musicbrainz.org/release/7ab1d60e-fb98-4b53-b2f5-c1ff2f5480f4
+- Ricardo Montaner — «A María» (13495) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/26a8078d-f89e-417f-a08b-0b0e00f9a32a
+- Ricardo Montaner — «El Último Regreso» (13496) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/70467dcc-6844-40e6-947c-3fa770cc784c
+- Ricardo Montaner — «El Poder De Tu Amor (Version Ranchera) / Mucura» (13497) · musicbrainz · 2 pistas (creado en la etapa 3) · https://musicbrainz.org/release/fddab2fb-e32a-477e-bf9d-08a98c991097
+- Ricardo Montaner — «El llanto de la luna» (13498) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/e7037cab-db99-49f6-abb1-484b213b08fd
+- Ricardo Montaner — «Llanto agradecido» (13499) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/21469fcc-aa45-476d-9b44-afee8fd617a6
+- Ricardo Montaner — «Para un poco (versión salsa)» (13500) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/c096d2d3-181e-4e51-8196-bd5735d5c030
+- Ricardo Montaner — «Se desesperaba (El carrito azul) (remixes)» (13501) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/56745db5-96d7-4ea7-a1b5-ce9d61cbc16d
+- Ricardo Montaner — «Déjame soñar» (13502) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/efd2794c-57e6-4e67-8855-a450a648bd54
+- Ricardo Montaner — «Voy a vivir la vida» (13503) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/6c934510-ab8e-4104-8b14-0650c076b28e
+- Ricardo Montaner — «La Pequeña Venecia» (13504) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/05d426db-9c22-40be-a6fe-892de4f18c2c
+- Ricardo Montaner — «Los románticos» (13505) · musicbrainz · 12 pistas (creado en la etapa 3) · https://musicbrainz.org/release/b4c9332e-c01b-4da5-9f3d-3d42c427b0c4
+- Ricardo Montaner — «Lo Mejor... con la London Metropolitan Orchestra» (13506) · musicbrainz · 14 pistas (creado en la etapa 3) · https://musicbrainz.org/release/1b38162e-cad9-485f-bdc7-1a5d8bdad471
+- Ricardo Montaner — «Time (bachata remix)» (13507) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/1c40cd76-ec31-4f45-8777-47584689a1aa
+- Ricardo Montaner — «Las N° 1» (13508) · musicbrainz · 15 pistas (creado en la etapa 3) · https://musicbrainz.org/release/845dfc4f-17cf-4aa0-af95-b8e7baed0293
+- Ricardo Montaner — «Amén» (13509) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/79d5baf2-0b1d-4847-b075-4ee162bde598
+- Ricardo Montaner — «Fe» (13510) · musicbrainz · 11 pistas (creado en la etapa 3) · https://musicbrainz.org/release/b4f3990b-44d7-4a80-a79b-b190e3925e52
+- Ricardo Montaner — «Aunque ahora estés con él» (13511) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/1826d164-76ed-4b3c-ba1c-7f953e9694c3
+- Ricardo Montaner — «Soy feliz» (13512) · musicbrainz · 11 pistas (creado en la etapa 3) · https://musicbrainz.org/release/26d554e6-5bc6-4e2e-aa9e-52b245feccad
+- Ricardo Montaner — «Ida y vuelta» (13513) · musicbrainz · 19 pistas (creado en la etapa 3) · https://musicbrainz.org/release/632a1f67-d9f8-4cb4-b87b-58895c60324e
+- Ricardo Montaner — «No te vayas» (13514) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/e93becdb-b285-4252-b6ac-ebea1c6a01a9
+- Ricardo Montaner — «Para Que Seas Feliz (Desde Mexico)» (13515) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/3f269321-182a-4388-91d4-e2659c1fbbbe
+- Ricardo Montaner — «Para que seas feliz» (13516) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/b98081ee-6d2b-48fb-8656-29c1c0fa1a14
+- Ricardo Montaner — «Si tuviera que elegir» (13517) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/db910745-bc10-404f-8c23-b3e8025af9de
+- Ricardo Montaner — «Las mejores canciones de Ricardo Montaner» (13518) · musicbrainz · 15 pistas (creado en la etapa 3) · https://musicbrainz.org/release/3d5cad28-97e1-4c5d-85b0-92de5141024e
+- Ricardo Montaner — «Dios así lo quiso» (13519) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/9f86e4ce-4a26-4a99-a464-b7d273dbc029
+- Ricardo Montaner — «Tengo verano» (13520) · musicbrainz · 11 pistas (creado en la etapa 3) · https://musicbrainz.org/release/3e516a1c-23f7-41b0-8046-e7e8d1515442
+- Ricardo Montaner — «La gloria de Dios» (13521) · musicbrainz · 2 pistas (creado en la etapa 3) · https://musicbrainz.org/release/68d74f83-dccd-4eb8-b754-6b126a2c926f
+- Ricardo Montaner — «No me hagas daño» (13522) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/acffb70f-8705-49f1-9f62-130a90c5e723
+- Ricardo Montaner — «La canción que necesito (bachata remix)» (13523) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/149c97ce-0c19-45f3-9406-3526c8b27422
+- Ricardo Montaner — «Convénceme (bachata remix)» (13524) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/4d9551bb-d86a-497a-ab40-a66b2d405b65
+- Ricardo Montaner — «La Mas Completa Coleccion» (13525) · musicbrainz · 32 pistas (creado en la etapa 3) · https://musicbrainz.org/release/420efa7d-a82d-4f50-9ecb-1c730bed9a58
+- Ricardo Montaner — «Lo Mejor De...» (13526) · musicbrainz · 20 pistas (creado en la etapa 3) · https://musicbrainz.org/release/bc4e552d-19fb-4755-a4d0-c30e62e1adb2
+- Ricardo Montaner — «¿Qué vas a hacer?» (13527) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/ddaff636-5704-4def-9df3-a22cf0fe4726
+- Ricardo Montaner — «Tango» (13528) · musicbrainz · 11 pistas (creado en la etapa 3) · https://musicbrainz.org/release/0ce4a5ee-124a-47c1-ae56-b82c34cf49fc
+- Ricardo Montaner — «Quién diría» (13529) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/fc7102b2-26ed-465a-a366-6fe18767a425
+- Ricardo Montaner — «Viajero frecuente» (13530) · musicbrainz · 14 pistas (creado en la etapa 3) · https://musicbrainz.org/release/82ae23e0-20f8-46c8-a4f1-bccba4ffdf1e
+- Ricardo Montaner — «Viajero Frecuente - Destino México» (13531) · deezer · 15 pistas (creado en la etapa 3) · https://www.deezer.com/album/7135150
+- Ricardo Montaner — «Un Camino De Exitos» (13532) · deezer · 14 pistas (creado en la etapa 3) · https://www.deezer.com/album/314245
+- Ricardo Montaner — «Los Romanticos- Ricardo Montaner» (13533) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/314255
+- Ricardo Montaner — «Las #1 De Ricardo Montaner» (13534) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/2122421
+- Ricardo Montaner — «Celebrando La Voz De Ricardo Montaner» (13535) · deezer · 15 pistas (creado en la etapa 3) · https://www.deezer.com/album/5129801
+- Ricardo Montaner — «Con la Metropolitan Orchestra - Vol. II» (13536) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/363009
+- Ricardo Montaner — «Ricardo Montaner Con La London Metropolitan Orchestra» (13537) · deezer · 11 pistas (creado en la etapa 3) · https://www.deezer.com/album/360776
+- Ricardo Montaner — «Tango (Live Session)» (13538) · deezer · 6 pistas (creado en la etapa 3) · https://www.deezer.com/album/354845037
+- Ricardo Montaner — «Nada» (13539) · deezer · 4 pistas (creado en la etapa 3) · https://www.deezer.com/album/1343222
+- Ricardo Montaner — «Te Echo de Menos» (13540) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/290537312
+- Ricardo Montaner — «Aunque No Lo Puedas Ver (Bonus Track)» (13541) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/354217587
+- Ricardo Montaner — «El Día Que Me Quieras» (13542) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/301155037
+- Ricardo Montaner — «Amén (with Kirk Franklin)» (13543) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/261683062
+- Ricardo Montaner — «Amén (Acústico)» (13544) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/206585682
+- Ricardo Montaner — «Besame» (13545) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/763230381
+- Paul Gillman — «Vivo y en Vivo» (2020) · musicbrainz · 15 duraciones (15 pistas en común) · https://musicbrainz.org/release/2e44c951-dba1-4c1d-86c4-913615409f7e
+- Paul Gillman — «Cuauhtemoc» (2125) · musicbrainz · 1 duraciones (14 pistas en común) · https://musicbrainz.org/release/00590e92-d1ea-4c55-ab32-28e7595b2f79
+- Paul Gillman — «Inevitable» (2139) · musicbrainz · 1 duraciones (10 pistas en común) · https://musicbrainz.org/release/55b70c29-5755-4720-acec-1c6e735897ed
+- Paul Gillman — «Levantate y Pelea» (2152) · musicbrainz · 1 duraciones (6 pistas en común) · https://musicbrainz.org/release/44ae755d-4362-4d78-a5f8-7a8a41a49864
+- Paul Gillman — «El Regreso del Guerrero» (2157) · musicbrainz · 3 duraciones (10 pistas en común) · https://musicbrainz.org/release/339ff1f2-8136-4552-b447-789ef9f0b658
+- Paul Gillman — «Más Vivo & En Vivo» (4153) · deezer · 5 duraciones (5 pistas en común) · https://www.deezer.com/album/91202552
+- Paul Gillman — «Escalofrío II - La Conclusión» (14123) · musicbrainz · 25 pistas (creado en la etapa 3) · https://musicbrainz.org/release/647e96e6-c3d8-4097-a876-b1caeba8b928
+- Paul Gillman — «El Reloj de Güigüe» (14124) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/542054972
+- Paul Gillman — «Vendi Mi Alma al Rock & Roll» (14125) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/275502622
+- Guillermo Dávila — «Acceso VIP» (14477) · musicbrainz · 11 pistas (creado en la etapa 3) · https://musicbrainz.org/release/f9e71860-aabf-425b-8da6-2689bf280b8b
+- Guillermo Dávila — «80 canciones de los 80» (14478) · musicbrainz · 16 pistas (creado en la etapa 3) · https://musicbrainz.org/release/6f05e474-7e27-40bf-8b0e-0b7e12bbde7c
+- Guillermo Dávila — «Guillermo Davila V» (14479) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/2e0b7edb-18b9-47d7-81d8-5f11ab6c27ef
+- Guillermo Dávila — «Paseando en Bicicleta» (14480) · deezer · 9 pistas (creado en la etapa 3) · https://www.deezer.com/album/637846691
+- Guillermo Dávila — «Mis Canciones Favoritas» (14481) · deezer · 8 pistas (creado en la etapa 3) · https://www.deezer.com/album/636191871
+- Guillermo Dávila — «Que Tal Te Va» (14483) · deezer · 15 pistas (creado en la etapa 3) · https://www.deezer.com/album/81368362
+- Guillermo Dávila — «Toda la Luz» (14484) · deezer · 14 pistas (creado en la etapa 3) · https://www.deezer.com/album/85358152
+- Guillermo Dávila — «La Historia de un Ídolo» (14485) · deezer · 13 pistas (creado en la etapa 3) · https://www.deezer.com/album/88221942
+- Guillermo Dávila — «Mi Vida» (14486) · deezer · 9 pistas (creado en la etapa 3) · https://www.deezer.com/album/9246893
+- Guillermo Dávila — «Prisionero de la Noche» (14487) · deezer · 11 pistas (creado en la etapa 3) · https://www.deezer.com/album/82666462
+- Guillermo Dávila — «Cuando Cambiaré» (14488) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/87874452
+- Karina — «Sé cómo duele» (13587) · musicbrainz · 11 pistas (creado en la etapa 3) · https://musicbrainz.org/release/4996adb0-3fb4-40db-9c4f-1829772ff8f3
+- Karina — «Sola otra vez: GranDiosas año X» (13588) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/9d79d0c4-3cc5-4510-ac2e-079953b82fe7
+- Kiara — «Luna de Plata» (3419) · musicbrainz · 4 duraciones (11 pistas en común) · https://musicbrainz.org/release/87eaec99-6528-4012-bf57-b64d6cc672fc
+- Kiara — «Como La Primera Vez» (4342) · musicbrainz · 11 duraciones (11 pistas en común) · https://musicbrainz.org/release/38286091-a679-4b81-bd2a-c93d9ec79520
+- Kiara — «Exitos» (4344) · musicbrainz · 18 duraciones (18 pistas en común) · https://musicbrainz.org/release/8a75de17-3d33-4b2e-bce6-888c0fb9adb7
+- Kiara — «Descarado» (13582) · deezer · 9 pistas (creado en la etapa 3) · https://www.deezer.com/album/80983642
+- Kiara — «Mi Vida en Canciones» (13583) · deezer · 11 pistas (creado en la etapa 3) · https://www.deezer.com/album/90514502
+- Kiara — «Perdóname» (13584) · deezer · 15 pistas (creado en la etapa 3) · https://www.deezer.com/album/88221682
+- Kiara — «La Historia» (13585) · deezer · 14 pistas (creado en la etapa 3) · https://www.deezer.com/album/86534362
+- Kiara — «Acceso VIP» (13586) · deezer · 11 pistas (creado en la etapa 3) · https://www.deezer.com/album/93266292
+- Rudy La Scala — «Serie 32» (4452) · musicbrainz · 14 duraciones (14 pistas en común) · https://musicbrainz.org/release/766d8751-390d-4eb9-8504-05ea92db42a2
+- Rudy La Scala — «Vinto» (14565) · musicbrainz · 12 pistas (creado en la etapa 3) · https://musicbrainz.org/release/146bec02-eaee-49b8-a737-da6e36f27fec
+- Rudy La Scala — «Mi Vida Eres Tú» (14566) · musicbrainz · 14 pistas (creado en la etapa 3) · https://musicbrainz.org/release/ff847ea0-602a-4c24-9d96-a0301989c1ab
+- Rudy La Scala — «De Coleccion» (14567) · musicbrainz · 12 pistas (creado en la etapa 3) · https://musicbrainz.org/release/47fc4bcf-19d1-43a6-adc5-9b65763bf21d
+- Rudy La Scala — «Yo Soy Rudy la Scala» (14568) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/210872012
+- Rudy La Scala — «Por Amor a Venezuela» (14569) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/14513066
+- Rudy La Scala — «QUEDATE UN POQUITO +» (14570) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/635682141
+- Rudy La Scala — «Cuando Uno Sobra» (14571) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/247937382
+- Rudy La Scala — «Yo Triunfaré (No Hay Vuelta Atrás)» (14572) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/226462282
+- Rudy La Scala — «Give Me Your Soul» (14573) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/155648522
+- Rudy La Scala — «De Mi Corazon a Tu Corazon» (14574) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/145582932
+- Rudy Márquez — «Boleros y Danzones» (3716) · musicbrainz · 18 duraciones (18 pistas en común) · https://musicbrainz.org/release/a6214736-70cb-4a9c-b1a5-a018f7cfc97a
+- Rudy Márquez — «Songs Of Love» (4468) · deezer · 1 duraciones (11 pistas en común) · https://www.deezer.com/album/40163741
+- Rudy Márquez — «20 Grandes Exitos» (14553) · musicbrainz · 20 pistas (creado en la etapa 3) · https://musicbrainz.org/release/d93e1f4d-0d21-42d9-aae5-ea942b863c25
+- Rudy Márquez — «El Eterno Romantico» (14554) · deezer · 17 pistas (creado en la etapa 3) · https://www.deezer.com/album/41318371
+- Rudy Márquez — «Maria» (14555) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/105065982
+- Rudy Márquez — «Lo Mejor de» (14556) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/86534422
+- Rudy Márquez — «La Historia» (14557) · deezer · 15 pistas (creado en la etapa 3) · https://www.deezer.com/album/168434882
+- Rudy Márquez — «Si Te Habla De Mí» (14558) · deezer · 7 pistas (creado en la etapa 3) · https://www.deezer.com/album/128718022
+- Rudy Márquez — «Mi Primera Noche Sin Ti» (14559) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/128751282
+- Rudy Márquez — «Ahora» (14560) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/128743352
+- Rudy Márquez — «Enamorado De Ti» (14561) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/128746472
+- Rudy Márquez — «Joven Corazón» (14562) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/128728932
+- Rudy Márquez — «Amante Amiga» (14563) · deezer · 9 pistas (creado en la etapa 3) · https://www.deezer.com/album/84431892
+- Rudy Márquez — «Amar y Querer» (14564) · deezer · 11 pistas (creado en la etapa 3) · https://www.deezer.com/album/117976182
+- Servando y Florentino — «Paso A Paso» (4501) · musicbrainz · 1 duraciones (10 pistas en común) · https://musicbrainz.org/release/0c5c64e8-f482-4263-936e-de11acbd850a
+- Servando y Florentino — «De primera a primera» (14266) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/be23085c-3d9a-4ec8-bf39-f1be9fb6ef48
+- Servando y Florentino — «Amor de motel» (14267) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/ff93a823-04ff-4d5f-95e6-3ecf7aaa41d3
+- Servando y Florentino — «Se Buscan: Vivos o Inmortales (LADO A)» (14268) · musicbrainz · 8 pistas (creado en la etapa 3) · https://musicbrainz.org/release/386613a0-25ee-4ded-9564-191c3f329b7d
+- Servando y Florentino — «Contigo» (14269) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/ae5f1857-26ca-4448-9f87-00aadb4e1940
+- Servando y Florentino — «Se acabó» (14270) · musicbrainz · 11 pistas (creado en la etapa 3) · https://musicbrainz.org/release/7291343f-9b74-4256-9376-5b70664be4bb
+- Servando y Florentino — «No te vayas» (14271) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/537c3f52-2149-4999-a013-b80057899cd9
+- Servando y Florentino — «En Tu Cuarto (en Vivo)» (14272) · deezer · 13 pistas (creado en la etapa 3) · https://www.deezer.com/album/812595691
+- Servando y Florentino — «La Historia: Los 11 Grandes Exitos de los Hermanos Primera (1996-2001)» (14273) · deezer · 11 pistas (creado en la etapa 3) · https://www.deezer.com/album/566499421
+- Servando y Florentino — «Salserin (En Vivo)» (14274) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/541845982
+- Servando y Florentino — «Lunares (Remix)» (14275) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/811070421
+- Servando y Florentino — «Eres Tú» (14276) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/763113321
+- Servando y Florentino — «Lo De Los Dos» (14277) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/703250871
+- Servando y Florentino — «Me Duele Quererte (En Vivo)» (14278) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/541845972
+- Servando y Florentino — «Rumba en Mi Corazón (Live)» (14279) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/537422482
+- Servando y Florentino — «Una Fan Enamorada (Live)» (14280) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/537433552
+- Servando y Florentino — «Por Haberte Querido (Live)» (14281) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/537425642
+- Servando y Florentino — «Medley: Muchacho Solitario, Yo No Me Quería Enamorar, Te Regalo la Luna (Live)» (14282) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/537428152
+- Servando y Florentino — «Una Canción Que Te Enamore (Live)» (14283) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/537431282
+- Servando y Florentino — «Estas Hecha para Mi (Live)» (14284) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/537431322
+- Servando y Florentino — «Estás Hecha para Mi (En Vivo)» (14285) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/541860842
+- Servando y Florentino — «No Importa, un Amor Como el Nuestro, Yo Sin Ti, de Sol a Sol (Live)» (14286) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/537437322
+- Servando y Florentino — «Me Enamoré (Live)» (14287) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/537437192
+- Servando y Florentino — «Con Ella No (En vivo)» (14288) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/537445372
+- Servando y Florentino — «Aliviame (Live)» (14289) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/539917312
+- Servando y Florentino — «Tengo un Corazón (Live)» (14290) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/541862892
+- Servando y Florentino — «Los Hermanos Primera (Live)» (14291) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/540381452
+- Servando y Florentino — «Te Encontré (Live)» (14292) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/539890662
+- Servando y Florentino — «Yo Quería / Si Yo Fuera Tu (Live)» (14293) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/539890582
+- Servando y Florentino — «Primer Amor (Live)» (14294) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/539890502
+- Servando y Florentino — «Medley: Cada Minuto, Frenando el Corazón, Vete» (14295) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/537463922
+- Servando y Florentino — «Primera Cita» (14296) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/392481037
+- Servando y Florentino — «Dímelo (En Vivo)» (14297) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/541881302
+- Servando y Florentino — «Si Yo Fuera Tu (En Vivo)» (14298) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/541881292
+- Servando y Florentino — «Me Vas a Recordar (En Vivo)» (14299) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/539280542
+- Servando y Florentino — «Bendita Madre (En Vivo)» (14300) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/539280452
+- Servando y Florentino — «Robando Azules (En Vivo)» (14301) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/539280482
+- Servando y Florentino — «Una Fan Enamorada (En Vivo)» (14302) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/539280402
+- Servando y Florentino — «Te Encontré (En Vivo)» (14303) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/539276742
+- Cecilia Todd — «Niño Jesús de Merey» (5532) · deezer · 13 duraciones (13 pistas en común) · https://www.deezer.com/album/585006712
+- Cecilia Todd — «La Embarazada Del Viento» (9154) · deezer · 12 duraciones (12 pistas en común) · https://www.deezer.com/album/577288271
+- Cecilia Todd — «Casi de Puro Soñarte» (14812) · deezer · 8 pistas (creado en la etapa 3) · https://www.deezer.com/album/865707122
+- Cecilia Todd — «En Vivo En Argentina» (14813) · deezer · 16 duraciones (16 pistas en común) · https://www.deezer.com/album/465221
+- Cecilia Todd — «Cecilia Todd» (14814) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/181221302
+- Cecilia Todd — «Acidito» (14815) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/930783751
+- Cecilia Todd — «Canto de ordeño (Remaster 2024 - 50 Aniversario)» (14816) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/678486521
+- Cardopusher — «A Convenient Excuse Pt.2» (12778) · musicbrainz · 5 pistas (creado en la etapa 3) · https://musicbrainz.org/release/82ccc5be-c470-4595-a6fd-f905b29693c5
+- Cardopusher — «Coppertoned Punch EP» (12779) · musicbrainz · 5 pistas (creado en la etapa 3) · https://musicbrainz.org/release/8f05ce5f-16d1-4e71-86c0-a54b59728585
+- Cardopusher — «Faults» (12780) · musicbrainz · 3 pistas (creado en la etapa 3) · https://musicbrainz.org/release/392b8e5c-5fce-475f-b29d-9e87dcb91b5f
+- Cardopusher — «Schematic Blocks» (12781) · musicbrainz · 3 pistas (creado en la etapa 3) · https://musicbrainz.org/release/baba57cf-ce3e-4b17-9192-2078cdec243c
+- Cardopusher — «Unity Means Power» (12782) · musicbrainz · 17 pistas (creado en la etapa 3) · https://musicbrainz.org/release/943baed1-b07d-43c7-93cb-92d779dfe6e4
+- Cardopusher — «Psyops II EP» (12783) · musicbrainz · 4 pistas (creado en la etapa 3) · https://musicbrainz.org/release/3c928fcc-07e7-41c3-b9c7-51940da83460
+- Cardopusher — «Flesh Impact» (12784) · musicbrainz · 5 pistas (creado en la etapa 3) · https://musicbrainz.org/release/a3ce459d-0ece-448c-8423-b1a9db891393
+- Cardopusher — «Fed With Lies» (12785) · musicbrainz · 4 pistas (creado en la etapa 3) · https://musicbrainz.org/release/ee995bf7-e855-4d1d-a5a2-f4f4aa71d43b
+- Cardopusher — «Bad Face / Lonesome Town» (12786) · musicbrainz · 2 pistas (creado en la etapa 3) · https://musicbrainz.org/release/5e886305-ab3b-4f3e-a467-90ce74303dd7
+- Cardopusher — «I Need Someone I Can Imitate» (12787) · musicbrainz · 6 pistas (creado en la etapa 3) · https://musicbrainz.org/release/5a29f424-9352-414f-b9c7-b629d11b62f5
+- Cardopusher — «Mental Jobs EP» (12788) · musicbrainz · 5 pistas (creado en la etapa 3) · https://musicbrainz.org/release/43aaed9b-267c-4eb5-ba08-90ff84f05f0f
+- Cardopusher — «Gibold» (12789) · musicbrainz · 2 pistas (creado en la etapa 3) · https://musicbrainz.org/release/609cf056-f24d-4598-939b-221d41c92f0e
+- Cardopusher — «Police Are Coming EP» (12790) · musicbrainz · 5 pistas (creado en la etapa 3) · https://musicbrainz.org/release/6e3df39d-29d1-46ec-b6c6-f0268cdbb64e
+- Cardopusher — «Split 01» (12791) · musicbrainz · 6 pistas (creado en la etapa 3) · https://musicbrainz.org/release/1a5ff1f9-c0a9-4643-a27f-8c7de7d17f24
+- Cardopusher — «Goldo State» (12792) · musicbrainz · 3 pistas (creado en la etapa 3) · https://musicbrainz.org/release/b014100d-b881-46cd-9392-deedb9748184
+- Cardopusher — «Milk Thistle» (12793) · musicbrainz · 3 pistas (creado en la etapa 3) · https://musicbrainz.org/release/76ad1775-c61e-4aff-af08-84e21da7050a
+- Cardopusher — «RA.867» (12794) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/556f2157-fd7c-47af-a696-704c1b668b5b
+- Cardopusher — «Fire Kola Nut» (12795) · musicbrainz · 2 pistas (creado en la etapa 3) · https://musicbrainz.org/release/4b9a2b1d-dec8-4b4c-8a01-bebae5ae3083
+- Cardopusher — «Unsatisfied Customer Jams» (12796) · musicbrainz · 4 pistas (creado en la etapa 3) · https://musicbrainz.org/release/1ad5ed84-0b3f-4f69-a673-461b8f7b4184
+- Cardopusher — «Down to the Wire» (12797) · musicbrainz · 6 pistas (creado en la etapa 3) · https://musicbrainz.org/release/79df5410-f6c3-4d44-9cfc-63d9cc3e7fc8
+- Cardopusher — «ILA009» (12798) · musicbrainz · 4 pistas (creado en la etapa 3) · https://musicbrainz.org/release/303d3301-2c0f-4104-a755-b76d7a0419b5
+- Cardopusher — «Instant Loving» (12799) · musicbrainz · 4 pistas (creado en la etapa 3) · https://musicbrainz.org/release/296feacb-32af-4e1d-9688-f4a2fe97af19
+- Cardopusher — «Nothing Left to Believe In» (12800) · musicbrainz · 5 pistas (creado en la etapa 3) · https://musicbrainz.org/release/ab93e0e5-3da0-45ba-8ec8-e3c390e10b34
+- Cardopusher — «Mutant Dubstep, Volume 2» (12801) · musicbrainz · 5 pistas (creado en la etapa 3) · https://musicbrainz.org/release/fade74e6-e7f8-41d9-acc9-836397c119b3
+- Cardopusher — «Mindwarp» (12802) · musicbrainz · 3 pistas (creado en la etapa 3) · https://musicbrainz.org/release/41780a51-5f87-407b-b17f-583f2af81cce
+- Cardopusher — «I Love Acid 009» (12803) · musicbrainz · 4 pistas (creado en la etapa 3) · https://musicbrainz.org/release/e73d75b0-d433-4a44-8fdc-76cb60b78fb7
+- Cardopusher — «A Convenient Excuse Pt.1» (12804) · musicbrainz · 5 pistas (creado en la etapa 3) · https://musicbrainz.org/release/b9dc5407-d268-4b05-a87e-39a051a74e46
+- Cardopusher — «Acid Avengers 012» (12805) · musicbrainz · 6 pistas (creado en la etapa 3) · https://musicbrainz.org/release/59b75b4f-ed69-4eb7-8824-6335c733599f
+- Cardopusher — «Control Your Body» (12806) · musicbrainz · 2 pistas (creado en la etapa 3) · https://musicbrainz.org/release/8431b5e7-8c96-47a3-b88c-459d652207a3
+- Cardopusher — «New Cult Fear» (12807) · musicbrainz · 12 pistas (creado en la etapa 3) · https://musicbrainz.org/release/33db3e8f-1031-47b2-ade2-22eee6a0aa96
+- Cardopusher — «Yr Fifteen Minutes Are Up» (12808) · musicbrainz · 13 pistas (creado en la etapa 3) · https://musicbrainz.org/release/353c403c-48a7-4b8c-a043-2446048c5197
+- Cardopusher — «So What U Want Me To Do EP» (12809) · musicbrainz · 5 pistas (creado en la etapa 3) · https://musicbrainz.org/release/c72adefb-ee22-409f-b634-9827fc587ed2
+- Cardopusher — «Hippie Killers Don't Mind Jah Conversations» (12810) · musicbrainz · 18 pistas (creado en la etapa 3) · https://musicbrainz.org/release/8a917b4d-34d8-4df9-8d4d-192b130d5cc8
+- Cardopusher — «Muscle Memory» (12811) · musicbrainz · 6 pistas (creado en la etapa 3) · https://musicbrainz.org/release/ee91de61-be03-4b35-9009-330f44a06042
+- Cardopusher — «Face the Machine» (12812) · musicbrainz · 4 pistas (creado en la etapa 3) · https://musicbrainz.org/release/9c31c522-a7d4-40c5-8bd2-d8f9176fb4d1
+- Cardopusher — «Red Red Blood» (12813) · musicbrainz · 3 pistas (creado en la etapa 3) · https://musicbrainz.org/release/06de53c4-581f-4447-ad13-fc5f4cc2d11e
+- Cardopusher — «Manipulator» (12814) · musicbrainz · 11 pistas (creado en la etapa 3) · https://musicbrainz.org/release/95dd91f3-d8a8-4e7e-8c73-9a9214753584
+- Cardopusher — «ThisTroy» (12815) · musicbrainz · 7 pistas (creado en la etapa 3) · https://musicbrainz.org/release/5428a664-c58a-4de0-9f36-b17c4b160317
+- Cardopusher — «Immaculate Poison» (12816) · musicbrainz · 8 pistas (creado en la etapa 3) · https://musicbrainz.org/release/7721e90f-3861-4923-b357-441f8ccf6425
+- Cardopusher — «We Want Ca$h EP» (12817) · deezer · 8 pistas (creado en la etapa 3) · https://www.deezer.com/album/1264823
+- Miguel Noya — «Esferas Vivientes» (5683) · musicbrainz · 9 pistas (discografía MB de la ficha: título igual) · https://musicbrainz.org/release/87a81001-b136-4bef-93d5-ae8a3e69ba9c
+- Miguel Noya — «Canciónes Intactas» (5684) · musicbrainz · 9 duraciones (9 pistas en común) · https://musicbrainz.org/release/94104a7d-203f-46c7-9dc7-89c148cce894
+- Miguel Noya — «Interspecies Communication» (5685) · musicbrainz · 6 duraciones (6 pistas en común) · https://musicbrainz.org/release/b5b461dd-a24c-4662-a930-144a53c2b23c
+- Miguel Noya — «Inner Bodies» (5686) · musicbrainz · 5 duraciones (5 pistas en común) · https://musicbrainz.org/release/913b8064-fb25-408d-a002-551429cbcba1
+- Miguel Noya — «Remix de la Obra Electronica Gran Sabana» (14582) · deezer · 13 pistas (creado en la etapa 3) · https://www.deezer.com/album/10924274
+- Miguel Noya — «Gran Sabana RMX (Decomposicion)» (14583) · deezer · 13 pistas (creado en la etapa 3) · https://www.deezer.com/album/7428871
+- Miguel Noya — «Psycho - Music (Dance, Love / Sex, Mind Music)» (14584) · deezer · 13 pistas (creado en la etapa 3) · https://www.deezer.com/album/44873821
+- Miguel Noya — «Caballo Viejo» (14585) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/12387510
+- Miguel Noya — «Psycho-Music» (14586) · discogs · 6 pistas (creado en la etapa 3) · https://www.discogs.com/release/12770083
+- María Rivas — «Live Lunch Break» (5553) · deezer · 6 duraciones (6 pistas en común) · https://www.deezer.com/album/79321772
+- María Rivas — «Aquador» (5554) · musicbrainz · 14 duraciones (14 pistas en común) · https://musicbrainz.org/release/1606344c-1793-4d7b-b7d9-e7b316fe60e2
+- María Rivas — «En Concierto» (5557) · deezer · 16 pistas (discografía Deezer de la ficha: título igual) · https://www.deezer.com/album/913430321
+- María Rivas — «Café Negrito» (5558) · musicbrainz · 1 duraciones (10 pistas en común) · https://musicbrainz.org/release/3675830d-b93c-4e0b-b7c0-0eb29267855e
+- María Rivas — «Pepiada Queen (con Aldemaro en el alma)» (13119) · musicbrainz · 14 pistas (creado en la etapa 3) · https://musicbrainz.org/release/cf15de24-b488-4360-b741-09c9d8468fac
+- María Rivas — «Maria Rivas' 18 Greatest Hits (18 Grandes Éxitos)» (13120) · deezer · 18 pistas (creado en la etapa 3) · https://www.deezer.com/album/79463962
+- Cantoría Alberto Grau — «Canto Gregoriano» (5799) · musicbrainz · 23 pistas (discografía MB de la ficha: título igual) · https://musicbrainz.org/release/eebe8a87-d968-4346-8004-1f2b810281aa
+- Cantoría Alberto Grau — «Aguinaldos Tradicionales» (15230) · deezer · 14 pistas (creado en la etapa 3) · https://www.deezer.com/album/80042002
+- Aquiles Báez — «El Piache» (6098) · musicbrainz · 10 pistas (discografía MB de la ficha: título igual) · https://musicbrainz.org/release/943c1ac5-3ffc-4966-8cfb-ca6ed3b2ae85
+- Aquiles Báez — «A Mis Hermanos» (6105) · musicbrainz · 11 pistas (discografía MB de la ficha: título igual) · https://musicbrainz.org/release/a1347561-7c4b-4747-82b9-ec858fdf1383
+- Aquiles Báez — «San Miguel» (6106) · musicbrainz · 11 pistas (discografía MB de la ficha: título igual) · https://musicbrainz.org/release/621cc057-9f77-4061-9d90-b6a639a02bf5
+- Aquiles Báez — «El Curruchá» (14883) · musicbrainz · 13 pistas (creado en la etapa 3) · https://musicbrainz.org/release/0c4502f8-c94b-43e7-9889-a650d59d9e0d
+- Aquiles Báez — «Cielo de Diciembre» (14884) · musicbrainz · 11 pistas (creado en la etapa 3) · https://musicbrainz.org/release/921191b4-7f2f-411e-9213-161863588437
+- Aquiles Báez — «EnCantado» (14885) · musicbrainz · 20 pistas (creado en la etapa 3) · https://musicbrainz.org/release/67e5648b-b5fc-4a01-8608-fff7f8f54849
+- Edward Simon — «La Bikina» (6184) · deezer · 2 duraciones (9 pistas en común) · https://www.deezer.com/album/887855
+- Edward Simon — «Unicity» (6187) · deezer · 8 duraciones (8 pistas en común) · https://www.deezer.com/album/278038052
+- Edward Simon — «Poesía» (6188) · deezer · 9 pistas (discografía Deezer de la ficha: título igual) · https://www.deezer.com/album/278033222
+- Edward Simon — «Solo Live» (6194) · deezer · 4 duraciones (4 pistas en común) · https://www.deezer.com/album/264811622
+- Edward Simon — «Fiestas De Agosto» (6198) · musicbrainz · 13 pistas (discografía MB de la ficha: título igual) · https://musicbrainz.org/release/3ce086f7-8e53-45b7-8aab-969bd595c30a
+- Edward Simon — «A Master's Diary» (6201) · deezer · 10 pistas (discografía Deezer de la ficha: título igual) · https://www.deezer.com/album/279576822
+- Edward Simon — «Steel House» (6202) · musicbrainz · 8 pistas (discografía MB de la ficha: título igual) · https://musicbrainz.org/release/e0fd5f20-8178-4dc9-acf9-fb2809cb8b7a
+- Edward Simon — «Presagio» (13117) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/915035711
+- Edward Simon — «La Flor De La Canela» (13118) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/560973782
+- Gerry Weil — «The Message» (6271) · deezer · 6 duraciones (6 pistas en común) · https://www.deezer.com/album/178390272
+- Gerry Weil — «Free Play & Love Songs (Live Vol.1)» (6276) · deezer · 1 duraciones (9 pistas en común) · https://www.deezer.com/album/2011501
+- Gerry Weil — «Empatía» (6277) · musicbrainz · 14 pistas (discografía MB de la ficha: título igual) · https://musicbrainz.org/release/1ef37f5c-5cb2-44d3-9a39-9870bb44daa2
+- Gerry Weil — «Navijazz» (6278) · deezer · 13 duraciones (13 pistas en común) · https://www.deezer.com/album/7172207
+- Gerry Weil — «I'm Beginning To See The Light» (6280) · deezer · 15 duraciones (15 pistas en común) · https://www.deezer.com/album/50137382
+- Gerry Weil — «Kosmic Flow (80 Years Young)» (6282) · deezer · 12 pistas (discografía Deezer de la ficha: título igual) · https://www.deezer.com/album/147686962
+- Gerry Weil — «Sabana Grande» (6283) · deezer · 8 pistas (discografía Deezer de la ficha: título igual) · https://www.deezer.com/album/190345932
+- Gerry Weil — «Sabana Grande Clásico» (6284) · itunes-busqueda · 6 pistas (búsqueda iTunes: artista y título idénticos, año ±1) · https://music.apple.com/ve/album/sabana-grande-cl%C3%A1sico-ep/1542955006?uo=4
+- Gerry Weil — «Gerry Weil & Big Band Jazz Simon Bolivar» (13112) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/133004372
+- Gerry Weil — «Achanta el Pure E' Pana» (13113) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/132168442
+- Gerry Weil — «El Mensaje» (13114) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/114131422
+- Gerry Weil — «Alma (feat. Nene Quintero)» (13115) · itunes · 9 pistas (creado en la etapa 3) · https://music.apple.com/ve/album/alma-feat-nene-quintero/1689510124?uo=4
+- Gerry Weil — «Gerry Plays Bach» (13116) · itunes · 20 pistas (creado en la etapa 3) · https://music.apple.com/ve/album/gerry-plays-bach/1691321002?uo=4
+- Otmaro Ruiz — «Elemental» (6433) · musicbrainz · 10 pistas (discografía MB de la ficha: título igual) · https://musicbrainz.org/release/4d7a57f5-fe8d-4653-9e1f-e5804c4666b4
+- Otmaro Ruiz — «Essencia» (6434) · deezer · 10 pistas (discografía Deezer de la ficha: título igual) · https://www.deezer.com/album/129299512
+- Alfredo Sadel — «Boleros Del Recuerdo» (6671) · deezer · 10 pistas (discografía Deezer de la ficha: título igual) · https://www.deezer.com/album/716047
+- Alfredo Sadel — «Alma Llanera» (6672) · deezer · 12 duraciones (12 pistas en común) · https://www.deezer.com/album/6012238
+- Alfredo Sadel — «Cantando Voy» (6673) · deezer · 1 duraciones (11 pistas en común) · https://www.deezer.com/album/522672862
+- Alfredo Sadel — «En Feria» (7909) · deezer · 15 duraciones (15 pistas en común) · https://www.deezer.com/album/6266848
+- Alfredo Sadel — «De Toda Venezuela» (7912) · deezer · 17 duraciones (17 pistas en común) · https://www.deezer.com/album/15046949
+- Alfredo Sadel — «Lo Mejor Alfredo Sadel» (13067) · deezer · 8 pistas (creado en la etapa 3) · https://www.deezer.com/album/980686941
+- Alfredo Sadel — «Invita a Guarapo y Otros Exitos» (13068) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/866167492
+- Alfredo Sadel — «El Inolvidable» (13069) · deezer · 16 pistas (creado en la etapa 3) · https://www.deezer.com/album/142279282
+- Alfredo Sadel — «Joyas Musicales, Vol. 2» (13070) · deezer · 14 pistas (creado en la etapa 3) · https://www.deezer.com/album/15021837
+- Alfredo Sadel — «Mi Canción» (13071) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/15021845
+- Alfredo Sadel — «El Inolvidable - 16 Grandes Exitos» (13072) · deezer · 16 pistas (creado en la etapa 3) · https://www.deezer.com/album/15046507
+- Alfredo Sadel — «Grandes Exitos» (13073) · deezer · 17 pistas (creado en la etapa 3) · https://www.deezer.com/album/15048139
+- Alfredo Sadel — «Joyas Musicales, Vol. 1» (13074) · deezer · 15 pistas (creado en la etapa 3) · https://www.deezer.com/album/15107169
+- Alfredo Sadel — «Sadel en la Opera» (13075) · deezer · 11 pistas (creado en la etapa 3) · https://www.deezer.com/album/524390732
+- Alfredo Sadel — «El Tenor Favorito de Venezuela» (13076) · deezer · 48 pistas (creado en la etapa 3) · https://www.deezer.com/album/10509514
+- Alfredo Sadel — «Album de Oro, 16 Grandes Exitos» (13077) · deezer · 16 pistas (creado en la etapa 3) · https://www.deezer.com/album/7137262
+- Alfredo Sadel — «Canta a los Panchos, Vol. 3» (13078) · deezer · 20 pistas (creado en la etapa 3) · https://www.deezer.com/album/6342271
+- Alfredo Sadel — «In Memoriam» (13079) · deezer · 22 pistas (creado en la etapa 3) · https://www.deezer.com/album/6322952
+- Alfredo Sadel — «El Tango Es Asi» (13080) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/6153614
+- Alfredo Sadel — «Ritmo Tropical» (13081) · deezer · 14 pistas (creado en la etapa 3) · https://www.deezer.com/album/6026277
+- Alfredo Sadel — «Ahora y Siempre» (13082) · deezer · 11 pistas (creado en la etapa 3) · https://www.deezer.com/album/6373377
+- Alfredo Sadel — «Merengues» (13083) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/6153615
+- Alfredo Sadel — «Pasodobles» (13084) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/6163186
+- Alfredo Sadel — «Sadel Canta a los Panchos, Vol. 2» (13085) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/6157164
+- Alfredo Sadel — «Alfredo Sadel Canta a los Panchos» (13086) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/6011876
+- Alfredo Sadel — «Los Años Dorados» (13087) · deezer · 16 pistas (creado en la etapa 3) · https://www.deezer.com/album/6372691
+- Alfredo Sadel — «Clasicas de Amor» (13088) · deezer · 16 pistas (creado en la etapa 3) · https://www.deezer.com/album/6046992
+- Alfredo Sadel — «Para Encontrarte» (13089) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/524550762
+- Alfredo Sadel — «Sadel 25 Años» (13090) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/931611301
+- Alfredo Sadel — «Alfredo Sadel Canta a Agustin Lara» (13091) · deezer · 11 pistas (creado en la etapa 3) · https://www.deezer.com/album/524280842
+- Alfredo Sadel — «Fuego En El Alma» (13092) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/716048
+- Alfredo Sadel — «Homenaje A Los Panchos» (13093) · discogs · 10 pistas (creado en la etapa 3) · https://www.discogs.com/release/4354170
+- Alí Primera — «El Despertar De La Historia» (6695) · musicbrainz · 10 duraciones (10 pistas en común) · https://musicbrainz.org/release/d0fc3828-dfa1-49ee-8ca1-2051df336908
+- Alí Primera — «Un Canto a La Revolución» (14799) · musicbrainz · 18 pistas (creado en la etapa 3) · https://musicbrainz.org/release/32b27a03-ecd1-4bb9-90c0-e58c03eb6caa
+- Alí Primera — «Alí Primera y Los Guaraguao» (14800) · musicbrainz · 20 pistas (creado en la etapa 3) · https://musicbrainz.org/release/cf1a2df7-f9ae-4bf1-87c4-6f693c2612d1
+- Alí Primera — «118 Temas 1/7» (14801) · musicbrainz · 23 pistas (creado en la etapa 3) · https://musicbrainz.org/release/1566ee65-1942-4488-bfe7-70b860277b26
+- Alí Primera — «118 Temas 5/7» (14802) · musicbrainz · 18 pistas (creado en la etapa 3) · https://musicbrainz.org/release/f69d5ae7-2d9d-4c7e-a653-6c33bacf6b56
+- Alí Primera — «Grandes Exitos» (14803) · musicbrainz · 17 pistas (creado en la etapa 3) · https://musicbrainz.org/release/150f78c9-3331-4223-80f9-436ede5bbf74
+- Alí Primera — «118 Temas 4/7» (14804) · musicbrainz · 17 pistas (creado en la etapa 3) · https://musicbrainz.org/release/4ee7a74d-bfef-42cc-a9d1-74481f78e0c4
+- Alí Primera — «118 Temas 3/7» (14805) · musicbrainz · 15 pistas (creado en la etapa 3) · https://musicbrainz.org/release/5328cd81-f36f-468c-9adc-53ee9f9537b7
+- Alí Primera — «Viva La Revolución» (14806) · musicbrainz · 16 pistas (creado en la etapa 3) · https://musicbrainz.org/release/bb6b45de-ad38-44e6-ad0d-bb22205c3ad7
+- Alí Primera — «118 Temas 2/7» (14807) · musicbrainz · 17 pistas (creado en la etapa 3) · https://musicbrainz.org/release/4780f776-2b39-412b-a81f-574880b8f2ab
+- Alí Primera — «118 Temas 7/7» (14808) · musicbrainz · 8 pistas (creado en la etapa 3) · https://musicbrainz.org/release/82ea88d7-9f4b-4aac-b65b-3ab0ba345459
+- Alí Primera — «Te Canta Los 40» (14809) · deezer · 16 pistas (creado en la etapa 3) · https://www.deezer.com/album/958053391
+- Alí Primera — «Techos De Cartón» (14810) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/913386501
+- Alí Primera — «Sombrero Azul» (14811) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/913386491
+- Canelita Medina — «Remembrances of Cuba 2» (6862) · deezer · 20 pistas (discografía Deezer de la ficha: título igual) · https://www.deezer.com/album/74863942
+- Canelita Medina — «Remembrances of Cuba» (6863) · deezer · 14 pistas (discografía Deezer de la ficha: título igual) · https://www.deezer.com/album/76089062
+- Canelita Medina — «Remembrances of Cuba 3» (6864) · deezer · 10 pistas (discografía Deezer de la ficha: título igual) · https://www.deezer.com/album/325187537
+- Canelita Medina — «Sonero Clásico del Caribe y Canelita» (14581) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/74864692
+- Chelique Sarabia — «Chelique en Blanco y Negro» (6899) · itunes-busqueda · 21 pistas (búsqueda iTunes: artista y título idénticos, año ±1) · https://music.apple.com/ve/album/chelique-en-blanco-y-negro/398845512?uo=4
+- Federico y Su Combo Latino — «Mejor Que Nunca» (7005) · deezer · 9 duraciones (9 pistas en común) · https://www.deezer.com/album/524318682
+- Federico y Su Combo Latino — «Derrape De Salsa» (7010) · deezer · 10 duraciones (10 pistas en común) · https://www.deezer.com/album/853832872
+- Federico y Su Combo Latino — «Siguelo Ahí.... a Lo Cortico» (7011) · deezer · 10 duraciones (10 pistas en común) · https://www.deezer.com/album/855301862
+- Federico y Su Combo Latino — «No Le Digan» (7019) · deezer · 9 pistas (discografía Deezer de la ficha: título igual) · https://www.deezer.com/album/996654041
+- Federico y Su Combo Latino — «Dos sets con Federico y Su Combo» (14313) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/2e96944d-e40e-4d7e-aaee-ed7ce802e4c5
+- Federico y Su Combo Latino — «Durísimo» (14314) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/e92e46d0-c1eb-4485-843b-08a2b3e53e21
+- Floria Márquez — «Exitos De Floria Márquez» (7081) · musicbrainz · 11 duraciones (11 pistas en común) · https://musicbrainz.org/release/6d396000-9c9b-49b6-817c-da98eeb94317
+- Guaco — «Esta Gaita Si Esta En Algo» (7097) · deezer · 9 duraciones (9 pistas en común) · https://www.deezer.com/album/947175131
+- Guaco — «Gaita A Todo Color Con Los Guaco» (7098) · deezer · 9 duraciones (9 pistas en común) · https://www.deezer.com/album/1065766511
+- Guaco — «Guaco 75» (7101) · deezer · 12 pistas (discografía Deezer de la ficha: título igual) · https://www.deezer.com/album/247630532
+- Guaco — «Guaco 76» (7102) · deezer · 9 duraciones (9 pistas en común) · https://www.deezer.com/album/209700122
+- Guaco — «Guaco 77» (7103) · musicbrainz · 8 duraciones (8 pistas en común) · https://musicbrainz.org/release/7b3108e9-a66b-4ee1-886a-d50363c3d53a
+- Guaco — «Guaco 79» (7105) · musicbrainz · 11 duraciones (11 pistas en común) · https://musicbrainz.org/release/a24e222a-8335-4cce-a1a6-c8b9370943cb
+- Guaco — «Guaco 80» (7106) · musicbrainz · 10 duraciones (10 pistas en común) · https://musicbrainz.org/release/ca8265b8-7072-4c6d-b25f-0689fc0a717d
+- Guaco — «Guaco 81» (7107) · musicbrainz · 10 duraciones (10 pistas en común) · https://musicbrainz.org/release/a94bbda2-409e-4ff8-9264-e7716b7de25a
+- Guaco — «Guaco 82» (7108) · musicbrainz · 8 duraciones (8 pistas en común) · https://musicbrainz.org/release/7da6c196-995d-4fae-83c7-7f6e282ba51f
+- Guaco — «Tercera Etapa» (7114) · musicbrainz · 10 duraciones (10 pistas en común) · https://musicbrainz.org/release/b45bde9d-32cc-4e7b-aaad-cbc008321207
+- Guaco — «Maduro...» (7115) · musicbrainz · 10 duraciones (10 pistas en común) · https://musicbrainz.org/release/eb3f00b5-a25a-4fbe-a723-13b505434579
+- Guaco — «Dejando Huella» (7116) · deezer · 10 duraciones (10 pistas en común) · https://www.deezer.com/album/12925398
+- Guaco — «Betania» (7117) · deezer · 7 duraciones (7 pistas en común) · https://www.deezer.com/album/12925510
+- Guaco — «Guaco 91» (7120) · deezer · 10 pistas (discografía Deezer de la ficha: título igual) · https://www.deezer.com/album/650296521
+- Guaco — «Guaco Clásico» (7121) · deezer · 17 duraciones (17 pistas en común) · https://www.deezer.com/album/987684051
+- Guaco — «Guaco Clásico II» (7122) · deezer · 13 duraciones (13 pistas en común) · https://www.deezer.com/album/1029841952
+- Guaco — «Guaco Clásico III» (7124) · deezer · 10 pistas (discografía Deezer de la ficha: título igual) · https://www.deezer.com/album/190231872
+- Guaco — «El Sonido De Venezuela» (7130) · deezer · 9 duraciones (9 pistas en común) · https://www.deezer.com/album/486138885
+- Guaco — «Equus» (7131) · musicbrainz · 12 duraciones (12 pistas en común) · https://musicbrainz.org/release/70bda35b-cfe0-49fc-b88c-6fb3f3720ed6
+- Guaco — «Guajiro» (7132) · musicbrainz · 15 duraciones (15 pistas en común) · https://musicbrainz.org/release/23076feb-cd6e-4c1b-9622-26d7859aaf73
+- Guaco — «Escultura» (7133) · musicbrainz · 12 duraciones (12 pistas en común) · https://musicbrainz.org/release/018be43c-c6b6-41d7-88fa-cc7fe69f3c9b
+- Guaco — «Guacomania» (7141) · deezer · 6 pistas (discografía Deezer de la ficha: título igual) · https://www.deezer.com/album/522670972
+- Guaco — «No Diga Que No Los Ha Escuchado Ni Los Ha Visto» (8118) · deezer · 9 duraciones (9 pistas en común) · https://www.deezer.com/album/945439321
+- Guaco — «Julio Rivera: Guaco 50» (13023) · musicbrainz · 23 pistas (creado en la etapa 3) · https://musicbrainz.org/release/3bcd3891-847a-4ee1-a9ab-1e3bc2149d48
+- Guaco — «Oye Vecino» (13024) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/16241a24-92ae-425d-afb5-0f6c0e3cdb9f
+- Guaco — «Histórico (Bonus Track)» (13025) · musicbrainz · 8 pistas (creado en la etapa 3) · https://musicbrainz.org/release/c5dca168-d4cf-4bd5-826e-49d1b5554ac2
+- Guaco — «Magic Guaco y sus éxitos» (13026) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/a35b1de2-4a03-453e-aa45-02874b4270ce
+- Guaco — «Ahí es donde yo la gozo» (13027) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/4eb63bed-0abc-4ef2-a7d7-37d35aecfad8
+- Guaco — «32 grandes éxitos» (13028) · musicbrainz · 32 pistas (creado en la etapa 3) · https://musicbrainz.org/release/a037c308-f4c0-4a54-8938-97edb533e7d5
+- Guaco — «Sinfónico (En Vivo)» (13029) · musicbrainz · 11 pistas (creado en la etapa 3) · https://musicbrainz.org/release/d258ab57-5290-422d-b4fd-1e0caa9cf56b
+- Guaco — «Guaco Historico 2» (13030) · musicbrainz · 13 pistas (creado en la etapa 3) · https://musicbrainz.org/release/f213ac62-5b20-48fd-b7f8-084aef3d72df
+- Guaco — «Lágrimas No Más» (13031) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/52e29116-ec7f-4199-8354-ca56f38d33fa
+- Guaco — «Guaco Mix» (13032) · musicbrainz · 16 pistas (creado en la etapa 3) · https://musicbrainz.org/release/41b8d2ce-7066-4593-b041-35f94fcfedd6
+- Guaco — «De vuelta a tu corazón» (13033) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/0755bef2-4a81-4f82-b2a5-45956415ae13
+- Guaco — «Guaco Histórico (En Vivo)» (13034) · musicbrainz · 16 pistas (creado en la etapa 3) · https://musicbrainz.org/release/8c04a171-600a-49fe-8349-a57d2e0ecd61
+- Guaco — «El sonido de siempre, las voces de hoy» (13035) · musicbrainz · 17 pistas (creado en la etapa 3) · https://musicbrainz.org/release/25cfeff7-6c7a-4225-a555-64174a4f15d0
+- Guaco — «El Sonido De Siempre, Las Voces De Hoy II» (13036) · musicbrainz · 13 pistas (creado en la etapa 3) · https://musicbrainz.org/release/b2af4f3b-754f-4861-ab81-57938aa8906f
+- Guaco — «Bidimensional» (13037) · musicbrainz · 14 pistas (creado en la etapa 3) · https://musicbrainz.org/release/162c3b32-78b8-4e21-bab5-3a004e9b57bd
+- Guaco — «Presente continuo» (13038) · musicbrainz · 12 pistas (creado en la etapa 3) · https://musicbrainz.org/release/67bae089-ce3c-4e62-8345-32ea1a52a160
+- Guaco — «Guaco 4» (13039) · musicbrainz · 8 pistas (creado en la etapa 3) · https://musicbrainz.org/release/ae87a0a8-f0dd-40c0-8365-0ab18a38195b
+- Guaco — «¿Qué Pasa Contigo?» (13040) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/35563d21-097a-413a-89f5-871f7ac73d2d
+- Guaco — «Japón (En Vivo)» (13041) · deezer · 19 pistas (creado en la etapa 3) · https://www.deezer.com/album/234608972
+- Guaco — «Sin Peligro de Extinción» (13042) · deezer · 9 pistas (creado en la etapa 3) · https://www.deezer.com/album/650296771
+- Guaco — «Historico 2014» (13043) · deezer · 15 pistas (creado en la etapa 3) · https://www.deezer.com/album/8977049
+- Guaco — «Desde La Basílica (En Vivo)» (13044) · deezer · 14 pistas (creado en la etapa 3) · https://www.deezer.com/album/118219092
+- Guaco — «Desde Maracay (En Vivo)» (13045) · deezer · 11 pistas (creado en la etapa 3) · https://www.deezer.com/album/118219272
+- Guaco — «En Vivo Santa Rita» (13046) · deezer · 13 pistas (creado en la etapa 3) · https://www.deezer.com/album/9332198
+- Guaco — «Navidad Zuliana Conjunto Gaitero Los Guacos Del Zulia» (13047) · deezer · 9 pistas (creado en la etapa 3) · https://www.deezer.com/album/1102246952
+- Guaco — «Esto Es Guaco 16 Grandes Exitos» (13048) · deezer · 16 pistas (creado en la etapa 3) · https://www.deezer.com/album/399762567
+- Guaco — «Guaco 1975» (13049) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/1028095212
+- Guaco — «Los Guacos» (13050) · deezer · 11 pistas (creado en la etapa 3) · https://www.deezer.com/album/209172722
+- Guaco — «Los Guacos 1970» (13051) · deezer · 11 pistas (creado en la etapa 3) · https://www.deezer.com/album/946271531
+- Guaco — «El Obrero» (13052) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/209644892
+- Guaco — «Festival Gaitero» (13053) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/209168282
+- Guaco — «Huracán» (13054) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/666587761
+- Guaco — «Cinco Rosas» (13055) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/661380961
+- Guaco — «Me Siento Bien» (13056) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/508705541
+- Guaco — «En Frío» (13057) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/493666971
+- Guaco — «Roce» (13058) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/382642247
+- Guaco — «Déjame Tu Adios» (13059) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/333920707
+- Guaco — «Te Llevo Conmigo» (13060) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/274188472
+- Guaco — «Zig Zag» (13061) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/401798487
+- Guaco — «Boom Boom» (13062) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/1065766921
+- Guaco — «Dame un Beso (Remix) [Feat. Juan Miguel]» (13063) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/61105372
+- Hugo Blanco — «Balada Del Bombardino» (7154) · deezer · 9 duraciones (9 pistas en común) · https://www.deezer.com/album/360634887
+- Hugo Blanco — «Más Ritmo Con Hugo Blanco» (7157) · deezer · 12 pistas (discografía Deezer de la ficha: título igual) · https://www.deezer.com/album/373807807
+- Hugo Blanco — «El Sabor De Hugo Blanco» (7176) · deezer · 14 duraciones (14 pistas en común) · https://www.deezer.com/album/89018352
+- Hugo Blanco — «Colección De Exitos Vol.1» (7179) · deezer · 3 duraciones (3 pistas en común) · https://www.deezer.com/album/531777572
+- Hugo Blanco — «Colección De Exitos Vol.5» (7183) · musicbrainz · 12 duraciones (12 pistas en común) · https://musicbrainz.org/release/57ae0ac0-7d1f-4dce-af87-8f39db6556a2
+- Hugo Blanco — «Moliendo café» (14779) · musicbrainz · 12 pistas (creado en la etapa 3) · https://musicbrainz.org/release/08b55e84-cdf2-498d-ba2f-5368798966e9
+- Hugo Blanco — «Mister Boogaloo» (14780) · musicbrainz · 4 pistas (creado en la etapa 3) · https://musicbrainz.org/release/c227e805-b247-4a4e-8a62-abedc0c33261
+- Hugo Blanco — «Bailables № 5» (14781) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/dc44737d-282b-4aa4-9eee-4f54d84e4f48
+- Hugo Blanco — «Cumbia del serrote / Cumbia de las cariñosas» (14782) · musicbrainz · 2 pistas (creado en la etapa 3) · https://musicbrainz.org/release/e6fb02d8-ee4b-4e14-92fd-7b71dac8415b
+- Hugo Blanco — «Chapoteando» (14783) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/31959a68-bb06-481f-991d-fd390ad552f4
+- Hugo Blanco — «La Harpa Indienne» (14784) · musicbrainz · 16 pistas (creado en la etapa 3) · https://musicbrainz.org/release/79380c8a-786d-4845-b23c-62dd26314402
+- Hugo Blanco — «Muñeco de cuerda» (14785) · musicbrainz · 4 pistas (creado en la etapa 3) · https://musicbrainz.org/release/00db20c3-2c6e-44c8-a398-0dd806d04f91
+- Hugo Blanco — «Hugo Blanco y su Arpa Viajera» (14786) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/51457278-00d4-4085-b968-201ef23655a3
+- Hugo Blanco — «Bailables #10» (14787) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/1b2edb10-d9ab-4f07-8c72-204f860e4168
+- Hugo Blanco — «La chispita» (14788) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/6d67d3eb-6d5c-4988-8222-b660295a8bd7
+- Hugo Blanco — «16 éxitos de Hugo Blanco» (14789) · musicbrainz · 16 pistas (creado en la etapa 3) · https://musicbrainz.org/release/16c10e4d-6971-4d1c-aec8-0853bcb6844a
+- Hugo Blanco — «Superbailables No. 7» (14790) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/363197877
+- Hugo Blanco — «Infinito (Remastered)» (14791) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/209780582
+- Hugo Blanco — «Lo Mejor de Lo Mejor» (14792) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/136035172
+- Hugo Blanco — «El Rapidito» (14793) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/6360530
+- Hugo Blanco — «Abril (Remastered)» (14794) · deezer · 4 pistas (creado en la etapa 3) · https://www.deezer.com/album/407335577
+- Hugo Blanco — «El Botellero (Remastered)» (14795) · deezer · 4 pistas (creado en la etapa 3) · https://www.deezer.com/album/408680897
+- Hugo Blanco — «El Cigarrón (Remastered)» (14796) · deezer · 4 pistas (creado en la etapa 3) · https://www.deezer.com/album/409587457
+- Hugo Blanco — «40 Años 40 Exitos de Hugo Blanco» (14797) · deezer · 40 pistas (creado en la etapa 3) · https://www.deezer.com/album/6373471
+- Hugo Blanco — «Navidad Criolla» (14798) · discogs · 12 pistas (creado en la etapa 3) · https://www.discogs.com/release/5728468
+- Natusha — «Natusha & Kondor Band» (7639) · musicbrainz · 10 duraciones (10 pistas en común) · https://musicbrainz.org/release/b9645cae-8ef6-44ce-a7a4-8041c1b06e56
+- Natusha — «Natusha» (7642) · musicbrainz · 12 duraciones (12 pistas en común) · https://musicbrainz.org/release/470bc104-5e68-45e9-83eb-a228b862b250
+- Natusha — «Sol y Luna» (7644) · musicbrainz · 11 duraciones (11 pistas en común) · https://musicbrainz.org/release/d2e54ff0-7b30-43f7-8b22-c18015a1e0fc
+- Natusha — «Grandes Exitos» (7647) · musicbrainz · 7 duraciones (7 pistas en común) · https://musicbrainz.org/release/236acf34-2d92-4030-8326-16e205ffa562
+- Natusha — «Re-Mix» (7907) · deezer · 2 duraciones (2 pistas en común) · https://www.deezer.com/album/81149222
+- Natusha — «Las super bailables de... Natusha» (14338) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/e178f055-6610-43fb-8293-a7e73060b0ab
+- Natusha — «Él la engañó» (14339) · musicbrainz · 9 pistas (creado en la etapa 3) · https://musicbrainz.org/release/58f86382-b65d-4a33-b9ff-01f395383104
+- Natusha — «Sexo, pa' gozar y bailar» (14340) · musicbrainz · 14 pistas (creado en la etapa 3) · https://musicbrainz.org/release/f5cf6ce0-cac8-4235-95df-7581720340d3
+- Natusha — «Tú la Tienes Que Pagar» (14341) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/81149522
+- Natusha — «Intimo (En Vivo)» (14342) · deezer · 13 pistas (creado en la etapa 3) · https://www.deezer.com/album/94720572
+- Natusha — «Lento» (14343) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/93266392
+- Natusha — «Cóseme los Pantalones» (14344) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/86879112
+- Natusha — «Con Sabor a Luna» (14345) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/84432382
+- Natusha — «Remix 2» (14346) · deezer · 6 pistas (creado en la etapa 3) · https://www.deezer.com/album/93266502
+- Natusha — «La Historia Musical» (14347) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/84513442
+- Oscar D' León — «Con Bajo y Todo» (7660) · musicbrainz · 10 pistas (discografía MB de la ficha: título igual) · https://musicbrainz.org/release/74a37568-22f0-4f0a-a824-2e73674c6279
+- Oscar D' León — «El Oscar De La Salsa» (7662) · musicbrainz · 8 pistas (discografía MB de la ficha: título igual) · https://musicbrainz.org/release/fd6e21ca-2b22-4b2e-9957-dcf06af8147b
+- Oscar D' León — «El Más Grande» (7664) · musicbrainz · 5 duraciones (5 pistas en común) · https://musicbrainz.org/release/2a3348e3-adac-44b7-a5cf-07f8a91a3558
+- Oscar D' León — «Yo Soy» (7672) · musicbrainz · 2 duraciones (2 pistas en común) · https://musicbrainz.org/release/13c844f6-5e9c-4f1a-aca2-a4c065f40080
+- Oscar D' León — «Riquiti..!» (7674) · musicbrainz · 4 duraciones (4 pistas en común) · https://musicbrainz.org/release/118dc6f3-7ad3-4f2b-b811-95266c809b9c
+- Oscar D' León — «Auténtico» (7679) · musicbrainz · 5 duraciones (5 pistas en común) · https://musicbrainz.org/release/004af5bc-0bba-465d-9a1c-825b07d8f538
+- Oscar D' León — «Infinito» (7687) · musicbrainz · 1 duraciones (6 pistas en común) · https://musicbrainz.org/release/12909a94-3f45-426f-96e3-740ffb3d1924
+- Oscar D' León — «Asi Soy...» (7688) · musicbrainz · 11 duraciones (11 pistas en común) · https://musicbrainz.org/release/310aac91-76bc-4fe2-a31e-782b4ee936f2
+- Oscar D' León — «Live» (7691) · deezer · 2 duraciones (2 pistas en común) · https://www.deezer.com/album/128745442
+- Oscar D' León — «Live in Caracas» (12840) · musicbrainz · 11 pistas (creado en la etapa 3) · https://musicbrainz.org/release/9cc37c02-a441-4a23-9431-c22c604ed463
+- Oscar D' León — «¡En vivo!» (12841) · musicbrainz · 24 pistas (creado en la etapa 3) · https://musicbrainz.org/release/de057d8d-b93d-4194-9d4c-4b3c90aac249
+- Oscar D' León — «The Greatest Salsa Ever» (12842) · musicbrainz · 20 pistas (creado en la etapa 3) · https://musicbrainz.org/release/03856fab-6859-46b0-88f4-b16f810f2d04
+- Oscar D' León — «The Best Of» (12843) · musicbrainz · 12 pistas (creado en la etapa 3) · https://musicbrainz.org/release/aa913213-4564-4f1e-908d-fe8bbc0c6780
+- Oscar D' León — «Oro salsero» (12844) · musicbrainz · 20 pistas (creado en la etapa 3) · https://musicbrainz.org/release/ad570e0f-bcee-4bb5-808e-5eead25535e1
+- Oscar D' León — «De ayer a hoy» (12845) · musicbrainz · 16 pistas (creado en la etapa 3) · https://musicbrainz.org/release/1dbf4bb4-be2c-459f-a6f3-aa254144241f
+- Oscar D' León — «Esenciales» (12846) · musicbrainz · 16 pistas (creado en la etapa 3) · https://musicbrainz.org/release/86791516-587b-4087-800e-a0718f4e7fd9
+- Oscar D' León — «¡La leyenda viva!» (12847) · musicbrainz · 14 pistas (creado en la etapa 3) · https://musicbrainz.org/release/79917f10-39e8-4617-93c3-f786c7ba8264
+- Oscar D' León — «Salsa soca» (12848) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/464b30ea-adb5-4ab4-9638-8e7bf33c99ba
+- Oscar D' León — «15 éxitos de» (12849) · musicbrainz · 15 pistas (creado en la etapa 3) · https://musicbrainz.org/release/033d558c-6e21-4ef1-ac18-b77eee531381
+- Oscar D' León — «La colora» (12850) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/93c7f2a1-3f3e-47fd-9a73-e3e25612ef5c
+- Oscar D' León — «Al 100» (12851) · musicbrainz · 15 pistas (creado en la etapa 3) · https://musicbrainz.org/release/e5fba64e-b635-409f-a2ec-2996a9a66e2d
+- Oscar D' León — «Oscar D'León en México» (12852) · musicbrainz · 15 pistas (creado en la etapa 3) · https://musicbrainz.org/release/f55ff797-b623-4fcc-b652-92f79bfce1e7
+- Oscar D' León — «Acceso VIP» (12853) · musicbrainz · 12 pistas (creado en la etapa 3) · https://musicbrainz.org/release/c9c6299e-34ea-48a5-9e66-8298ce0a4552
+- Oscar D' León — «Éxitos, volumen 2» (12854) · musicbrainz · 14 pistas (creado en la etapa 3) · https://musicbrainz.org/release/4beb4599-5334-47d4-9f3d-6e56685506dc
+- Oscar D' León — «Poco a Poco» (12855) · musicbrainz · 9 pistas (creado en la etapa 3) · https://musicbrainz.org/release/d0856431-5faf-47a4-b212-5a92436995c0
+- Oscar D' León — «Con un amor se borra otro amor / El panquelero» (12856) · musicbrainz · 2 pistas (creado en la etapa 3) · https://musicbrainz.org/release/849cb9b9-9257-413f-8228-63ef3ac71013
+- Oscar D' León — «Llego La Salsa» (12857) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/b0517a94-7ec2-4527-85ee-cd79a94d17a3
+- Oscar D' León — «Canta la música cubana, vol. 2» (12858) · musicbrainz · 12 pistas (creado en la etapa 3) · https://musicbrainz.org/release/d867f52e-bfeb-46fc-b226-8af7fc75ff8d
+- Oscar D' León — «De aquí pa'lla» (12859) · musicbrainz · 8 pistas (creado en la etapa 3) · https://musicbrainz.org/release/e4e1c725-dfc1-472e-9e19-94bf199ab46d
+- Oscar D' León — «La Música de Iberoamérica» (12860) · musicbrainz · 8 pistas (creado en la etapa 3) · https://musicbrainz.org/release/7c830500-a21d-443c-9755-4506ae9c00c6
+- Oscar D' León — «Universo latino 12» (12861) · musicbrainz · 12 pistas (creado en la etapa 3) · https://musicbrainz.org/release/79ae2ff0-4e2f-4102-8d43-73c64c86fcd0
+- Oscar D' León — «Canta sus éxitos» (12862) · musicbrainz · 15 pistas (creado en la etapa 3) · https://musicbrainz.org/release/986d57bf-bc0b-4b53-948d-9352753ab8c8
+- Oscar D' León — «Echando Pa'lante» (12863) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/92cb018c-f0d4-4ad7-8372-f335c97bda1f
+- Oscar D' León — «Éxitos, volumen 1» (12864) · musicbrainz · 14 pistas (creado en la etapa 3) · https://musicbrainz.org/release/0f3a7968-fcf1-4dca-887c-6c0a5b911d12
+- Oscar D' León — «Tu Son» (12865) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/39bf7a61-3729-48c7-b31c-f95dc0d7366b
+- Oscar D' León — «Aqui Esta La Salsa» (12866) · musicbrainz · 12 pistas (creado en la etapa 3) · https://musicbrainz.org/release/c490b54a-2b18-4ae8-8a6a-0b8bab363a74
+- Oscar D' León — «Lo mejor' 99» (12867) · musicbrainz · 15 pistas (creado en la etapa 3) · https://musicbrainz.org/release/62992ee3-96a3-4c19-bf1f-2c306c86b07c
+- Oscar D' León — «La salsa soy yo» (12868) · musicbrainz · 8 pistas (creado en la etapa 3) · https://musicbrainz.org/release/2deee501-1d40-4947-8a50-cf899ad94d2a
+- Oscar D' León — «Doble Play» (12869) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/18708599-77b8-495d-b6c8-6c7676a74bc7
+- Oscar D' León — «El verdadero león» (12870) · musicbrainz · 15 pistas (creado en la etapa 3) · https://musicbrainz.org/release/398bb035-3483-4c1e-8c86-e152bdd0db79
+- Oscar D' León — «Hechizo» (12871) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/e1ad98e2-1b63-4342-b9cc-17280d09b6ce
+- Oscar D' León — «Latino Latino» (12872) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/6ac7eeeb-2ca3-41fa-8753-f979d7e9c7b6
+- Oscar D' León — «Oscar D'León presenta La Crítica con Wladimir y Teo» (12873) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/5a38e1ed-7aca-480d-9fdb-e9eecdd8bf89
+- Oscar D' León — «La leyenda viva, vol. 2» (12874) · musicbrainz · 15 pistas (creado en la etapa 3) · https://musicbrainz.org/release/54a3febf-8847-4be0-9a2a-c6aa5489eaf3
+- Oscar D' León — «Canta la música cubana» (12875) · musicbrainz · 15 pistas (creado en la etapa 3) · https://musicbrainz.org/release/e021e3a0-90d7-40b2-a851-dbcdbbb0b3d1
+- Oscar D' León — «Serie 32» (12876) · musicbrainz · 32 pistas (creado en la etapa 3) · https://musicbrainz.org/release/cc9cd04c-195b-47e8-b566-41ddd2221109
+- Oscar D' León — «Oscar D'León presenta... La Crítica» (12877) · musicbrainz · 8 pistas (creado en la etapa 3) · https://musicbrainz.org/release/a002387c-8a82-4d62-8ab4-a28ec8658bbe
+- Oscar D' León — «12 éxitos» (12878) · musicbrainz · 12 pistas (creado en la etapa 3) · https://musicbrainz.org/release/fd69c24f-42a6-4d96-a284-b965ac4d828a
+- Oscar D' León — «Éxitos y álgo más» (12879) · musicbrainz · 12 pistas (creado en la etapa 3) · https://musicbrainz.org/release/aca8119c-6dc3-40d5-859a-4e8e642d1660
+- Oscar D' León — «Enamorado» (12880) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/6b3a8058-55a7-4443-94ed-cd741eb9871c
+- Oscar D' León — «Con la salsa de... Oscar d' Leon» (12881) · musicbrainz · 8 pistas (creado en la etapa 3) · https://musicbrainz.org/release/abbb34db-6637-435b-b1d5-fcf84171c8ab
+- Oscar D' León — «Los gigantes de la salsa, vol. 2» (12882) · musicbrainz · 12 pistas (creado en la etapa 3) · https://musicbrainz.org/release/6956af81-46d0-49ee-a6bf-f0ad4bb4ce86
+- Oscar D' León — «Detalles» (12883) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/faf4af2c-764d-4586-8afa-d0b7350b3a40
+- Oscar D' León — «Los Oscares de Oscar» (12884) · musicbrainz · 12 pistas (creado en la etapa 3) · https://musicbrainz.org/release/68cf3851-5748-45d1-aaa6-f3c83ec94342
+- Oscar D' León — «Clásicos de Big Band» (12885) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/5b1c10ee-9706-4b36-8a0d-1193db6e6320
+- Oscar D' León — «Los mejores Oscares» (12886) · musicbrainz · 15 pistas (creado en la etapa 3) · https://musicbrainz.org/release/32f00852-e718-4e56-b2e6-e2f409a2b144
+- Oscar D' León — «El Malo» (12887) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/4e9bd440-6c54-47cd-acec-752126e84b76
+- Oscar D' León — «El Diablo de la Salsa: Muchos Más» (12888) · musicbrainz · 9 pistas (creado en la etapa 3) · https://musicbrainz.org/release/93eb0448-92c8-4a88-8b05-b9a355300e40
+- Oscar D' León — «Traicionera: Baile total» (12889) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/040bf753-b81a-4404-bc5e-75876f81aa61
+- Oscar D' León — «Clasicas musicales» (12890) · musicbrainz · 15 pistas (creado en la etapa 3) · https://musicbrainz.org/release/c51098ad-695d-4969-bf72-a9eb45fb9170
+- Oscar D' León — «Colección de oro» (12891) · musicbrainz · 33 pistas (creado en la etapa 3) · https://musicbrainz.org/release/123b511b-dce1-4418-ab05-a7bbdbb23078
+- Oscar D' León — «La Salsa en las Venas» (12892) · musicbrainz · 9 pistas (creado en la etapa 3) · https://musicbrainz.org/release/261ac3bb-5e49-471e-9943-105ec3cd1a0a
+- Oscar D' León — «Mi anhelo» (12893) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/25cd8070-ae89-461a-899f-41aa72dfa56c
+- Oscar D' León — «La reunión 1» (12894) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/66ec9fc3-689c-4226-961d-ec1ad8f88daf
+- Oscar D' León — «2En1» (12895) · deezer · 16 pistas (creado en la etapa 3) · https://www.deezer.com/album/15444524
+- Oscar D' León — «Oscar D'Leon Con Los Blanco» (12896) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/89675762
+- Oscar D' León — «Tributo a la Sonora Matancera» (12897) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/86534062
+- Oscar D' León — «Frente A Frente» (12898) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/128718262
+- Oscar D' León — «Colección De Oro, Vol. 3» (12899) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/128716542
+- Oscar D' León — «Colección De Oro, Vol. 1» (12900) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/128722312
+- Oscar D' León — «Joyas Musicales: El León de la Salsa, Vol. 3» (12901) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/128750032
+- Oscar D' León — «Joyas Musicales: El León de la Salsa, Vol. 2» (12902) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/128751902
+- Oscar D' León — «Joyas Musicales: El León de la Salsa, Vol. 1» (12903) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/128756312
+- Oscar D' León — «Joyas Musicales, Vol. 3» (12904) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/128725312
+- Oscar D' León — «Joyas Musicales, Vol. 1» (12905) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/128746742
+- Oscar D' León — «Mis Hijos» (12906) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/128717192
+- Oscar D' León — «Ta Ta Li Baba» (12907) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/128726392
+- Oscar D' León — «Papachango» (12908) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/128729512
+- Oscar D' León — «Taboga» (12909) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/128734052
+- Oscar D' León — «Mi Delito» (12910) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/128738292
+- Oscar D' León — «Como Un Volcán» (12911) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/128747842
+- Oscar D' León — «Comuniquémonos» (12912) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/128750102
+- Oscar D' León — «Se Necesita Rumbero» (12913) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/128739382
+- Oscar D' León — «El Mejor Salsero» (12914) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/128751292
+- Oscar D' León — «El Único» (12915) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/128754622
+- Oscar D' León — «Oscar D'León En New York» (12916) · deezer · 15 pistas (creado en la etapa 3) · https://www.deezer.com/album/128731582
+- Oscar D' León — «Colección De Oro, Vol. 2» (12917) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/128716442
+- Oscar D' León — «El Panquelero» (12918) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/128723562
+- Oscar D' León — «Llorarás» (12919) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/128726102
+- Oscar D' León — «El Cachumbambe» (12920) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/128727372
+- Oscar D' León — «Joyas Musicales, Vol. 2» (12921) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/128728562
+- Oscar D' León — «Juntos Pa' Goza» (12922) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/128718142
+- Oscar D' León — «Solo Boleros» (12923) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/128729862
+- Oscar D' León — «Éxitos De Oscar D'León Con La Crítica» (12924) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/128723042
+- Oscar D' León — «Los 15 Éxitos De Oscar D'León (El Salsero Mayor)» (12925) · deezer · 15 pistas (creado en la etapa 3) · https://www.deezer.com/album/128720332
+- Oscar D' León — «Éxitos, Vol. 2» (12926) · deezer · 14 pistas (creado en la etapa 3) · https://www.deezer.com/album/128727862
+- Oscar D' León — «Ayer, Hoy y Siempre» (12927) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/128736752
+- Oscar D' León — «Éxitos, Vol. 1» (12928) · deezer · 14 pistas (creado en la etapa 3) · https://www.deezer.com/album/128762172
+- Oscar D' León — «Ayer, Hoy Y Siempre, Vol. 2» (12929) · deezer · 13 pistas (creado en la etapa 3) · https://www.deezer.com/album/128726882
+- Oscar D' León — «Caracas Tembló... En Vivo!» (12930) · deezer · 19 pistas (creado en la etapa 3) · https://www.deezer.com/album/89657652
+- Oscar D' León — «Boleros Con: Oscar D'León» (12931) · deezer · 7 pistas (creado en la etapa 3) · https://www.deezer.com/album/85036462
+- Pecos Kanvas — «Pecos Kanvas» (7703) · deezer · 2 duraciones (2 pistas en común) · https://www.deezer.com/album/1036849382
+- Pecos Kanvas — «Después De La Noche» (7713) · deezer · 10 pistas (discografía Deezer de la ficha: título igual) · https://www.deezer.com/album/923969701
+- Pecos Kanvas — «Mar y Luna» (7714) · musicbrainz · 10 pistas (discografía MB de la ficha: título igual) · https://musicbrainz.org/release/2b11e8d1-ef65-4e9f-a4fc-b0c4c2f7b1f7
+- Pecos Kanvas — «Lo Mejor De Mi Vida» (7720) · deezer · 16 pistas (discografía Deezer de la ficha: título igual) · https://www.deezer.com/album/6313238
+- Pecos Kanvas — «Mis Mejores Baladas» (14576) · deezer · 16 pistas (creado en la etapa 3) · https://www.deezer.com/album/52654842
+- Pecos Kanvas — «De Tanta Piel» (14577) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/82666292
+- Pecos Kanvas — «Amores de Luna Llena» (14578) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/93266652
+- Pecos Kanvas — «Cuando Seas Mía» (14579) · deezer · 19 pistas (creado en la etapa 3) · https://www.deezer.com/album/103350992
+- Pecos Kanvas — «Márchate» (14580) · deezer · 11 pistas (creado en la etapa 3) · https://www.deezer.com/album/89657912
+- Rafael "Pollo" Brito — «Una Casita Bella Para Ti» (7733) · musicbrainz · 7 duraciones (7 pistas en común) · https://musicbrainz.org/release/b2447900-ff9e-499c-ace8-1403ab2b8f2e
+- Rafael "Pollo" Brito — «Se Canta Venezolano» (7734) · musicbrainz · 15 duraciones (15 pistas en común) · https://musicbrainz.org/release/0a837d06-1f2f-417f-b384-2d8b21b7c852
+- Rafael "Pollo" Brito — «Boleros "En Vivo"» (7735) · deezer · 14 duraciones (14 pistas en común) · https://www.deezer.com/album/851818042
+- Rafael "Pollo" Brito — «Homenaje A Tito Rodríguez» (7737) · deezer · 9 duraciones (9 pistas en común) · https://www.deezer.com/album/847542982
+- Rafael "Pollo" Brito — «Pa' Tío Simón» (7738) · deezer · 14 duraciones (14 pistas en común) · https://www.deezer.com/album/847543932
+- Rafael "Pollo" Brito — «Manzanero» (7739) · deezer · 21 duraciones (21 pistas en común) · https://www.deezer.com/album/847543092
+- Rafael "Pollo" Brito — «Gaiteros de la Virgen Chiquinquirá» (14886) · deezer · 8 pistas (creado en la etapa 3) · https://www.deezer.com/album/881282132
+- Rafael "Pollo" Brito — «Esto es pa' Los Blanco» (14887) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/847545642
+- Rafael "Pollo" Brito — «Querido Dios» (14888) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/1041585442
+- Rafael "Pollo" Brito — «Feliz Cumpleaños» (14889) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/1036888602
+- Rafael "Pollo" Brito — «Yo Soy Un Pensamiento de Dios» (14890) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/1040939922
+- Rafael "Pollo" Brito — «Criollísima» (14891) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/963514851
+- Rafael "Pollo" Brito — «Quiero Cantar» (14892) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/928904001
+- Rafael "Pollo" Brito — «Amor de Hotel» (14893) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/910849841
+- Rafael "Pollo" Brito — «Navidad de Mis Sueños» (14894) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/903930462
+- Rafael "Pollo" Brito — «Chamo Candela» (14895) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/903978572
+- Rafael "Pollo" Brito — «Pureza Entre las Flores» (14896) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/897642352
+- Rafael "Pollo" Brito — «El Abuelo (Gaita Zuliana)» (14897) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/864907562
+- Rafael "Pollo" Brito — «Usted Si Es Bonita» (14898) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/847548172
+- Rafael "Pollo" Brito — «La Loca» (14899) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/847548542
+- Rafael "Pollo" Brito — «El Rey del Timbal» (14900) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/847547952
+- Rafael "Pollo" Brito — «La Verdugo» (14901) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/847545202
+- Rafael "Pollo" Brito — «Volando» (14902) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/847544542
+- Rafael "Pollo" Brito — «Merecumbé a lo Blanco» (14903) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/847548242
+- Rafael "Pollo" Brito — «De La Boca pa' Fuera» (14904) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/847545132
+- Rafael "Pollo" Brito — «¡Qué Sabrosa es la Vida!» (14905) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/847547722
+- Roberto Antonio — «Roberto Antonio II» (7748) · musicbrainz · 9 duraciones (9 pistas en común) · https://musicbrainz.org/release/84892b00-e629-4aaa-90bf-6446b974480b
+- Roberto Antonio — «A Punto Caramelo» (7754) · musicbrainz · 11 duraciones (11 pistas en común) · https://musicbrainz.org/release/47e7e8dd-2b16-4e17-927b-c97ff9649df0
+- Roberto Antonio — «Clásicos Latinos» (7755) · musicbrainz · 8 duraciones (8 pistas en común) · https://musicbrainz.org/release/fc829b28-685a-4ba4-ab5e-f59eb14e8776
+- Roberto Antonio — «A Vibrar» (7756) · deezer · 9 duraciones (9 pistas en común) · https://www.deezer.com/album/841764122
+- Roberto Antonio — «Ahora» (7758) · musicbrainz · 10 duraciones (10 pistas en común) · https://musicbrainz.org/release/91670d31-8312-4f6e-8489-59d2d6208466
+- Roberto Antonio — «25 Años» (7759) · musicbrainz · 10 duraciones (10 pistas en común) · https://musicbrainz.org/release/92ecddf8-10ea-45a8-88f1-8a781f3ada5e
+- Roberto Antonio — «Una noche de fantasía en concierto» (13121) · musicbrainz · 11 pistas (creado en la etapa 3) · https://musicbrainz.org/release/fc8338c6-b6e4-4449-8e75-7424a178728a
+- Roberto Antonio — «El Rey del Tecnomerengue» (13122) · musicbrainz · 12 pistas (creado en la etapa 3) · https://musicbrainz.org/release/b2dd01d7-0a8a-42a5-a52a-48293581afce
+- Roberto Antonio — «Homenaje a Leo Dan» (13123) · musicbrainz · 11 pistas (creado en la etapa 3) · https://musicbrainz.org/release/3881193d-d7c0-4b25-850a-8115fa21a11e
+- Roberto Antonio — «Mentirosa» (13124) · musicbrainz · 14 pistas (creado en la etapa 3) · https://musicbrainz.org/release/6dacb201-82ad-439c-af2e-f42bfacfea72
+- Roberto Antonio — «Estar Contigo (Versión Merengue)» (13125) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/18f4132c-6980-4a53-bd61-ee05526e8389
+- Roberto Antonio — «La vida es una (versión salsa)» (13126) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/12155b21-cb20-41b4-b911-8415acf563cd
+- Roberto Antonio — «TUS BESOS» (13127) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/cd80c9a9-a436-4cc1-884e-9626ed36143e
+- Roberto Antonio — «Salsa» (13128) · musicbrainz · 14 pistas (creado en la etapa 3) · https://musicbrainz.org/release/3878cdc0-e90a-4087-98e2-6010847a80e1
+- Roberto Antonio — «Noches de Fantasía (Salsa)» (13129) · deezer · 4 pistas (creado en la etapa 3) · https://www.deezer.com/album/901545432
+- Roberto Antonio — «Me Enamore» (13130) · deezer · 6 pistas (creado en la etapa 3) · https://www.deezer.com/album/820368121
+- Roberto Antonio — «Esa Pared» (13131) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/339398717
+- Roberto Antonio — «Un Día Interminable» (13132) · deezer · 2 pistas (creado en la etapa 3) · https://www.deezer.com/album/819188731
+- Roberto Antonio — «Dame la Vida (Bachata)» (13133) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/820368161
+- Soledad Bravo — «Soledad» (7797) · deezer · 6 duraciones (6 pistas en común) · https://www.deezer.com/album/364920187
+- Soledad Bravo — «Cantos de Venezuela» (7802) · musicbrainz · 9 duraciones (9 pistas en común) · https://musicbrainz.org/release/28a7e2ec-fc76-4826-b791-b3a0e9028d47
+- Soledad Bravo — «Boleros» (7808) · deezer · 7 duraciones (7 pistas en común) · https://www.deezer.com/album/128744262
+- Soledad Bravo — «Corazón De Madera» (7812) · deezer · 8 duraciones (8 pistas en común) · https://www.deezer.com/album/128760122
+- Soledad Bravo — «Cuando Hay Amor» (7818) · deezer · 13 duraciones (13 pistas en común) · https://www.deezer.com/album/583904522
+- Soledad Bravo — «Volando Voy» (14817) · musicbrainz · 9 pistas (creado en la etapa 3) · https://musicbrainz.org/release/4bc202a1-a738-439b-a91a-83c1f360b9ac
+- Soledad Bravo — «Flor del cacao» (14818) · musicbrainz · 11 pistas (creado en la etapa 3) · https://musicbrainz.org/release/79eade92-5b65-4ac4-ac82-6551b06bbab6
+- Soledad Bravo — «Volumen 4» (14819) · musicbrainz · 11 pistas (creado en la etapa 3) · https://musicbrainz.org/release/f68a2e50-fbc8-4102-b9e8-91c77631fa9b
+- Soledad Bravo — «Chants du Vénézuela» (14820) · musicbrainz · 23 pistas (creado en la etapa 3) · https://musicbrainz.org/release/1e37a9ac-0049-4eef-b401-800a6e520501
+- Soledad Bravo — «Temas folklóricos» (14821) · musicbrainz · 23 pistas (creado en la etapa 3) · https://musicbrainz.org/release/1a67fe99-6bfd-4309-ad00-6efbe3b0ef44
+- Soledad Bravo — «Cantos de amor y de lucha 1967-1975» (14822) · musicbrainz · 32 pistas (creado en la etapa 3) · https://musicbrainz.org/release/63a8f96a-0d82-4424-8e44-0f98a84ca4b4
+- Soledad Bravo — «Lo mejor : The Best of Soledad Bravo» (14823) · musicbrainz · 35 pistas (creado en la etapa 3) · https://musicbrainz.org/release/d2320492-10e7-4fcc-bfbb-ef830dad301d
+- Soledad Bravo — «Cantos revolucionarios de América Latina» (14824) · musicbrainz · 21 pistas (creado en la etapa 3) · https://musicbrainz.org/release/dc62a7fd-a13f-4b56-aa28-9aeb998a1b0d
+- Soledad Bravo — «La Voz de Venezuela (En Vivo)» (14825) · deezer · 8 pistas (creado en la etapa 3) · https://www.deezer.com/album/93266352
+- Soledad Bravo — «Palabras» (14826) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/87211752
+- Soledad Bravo — «Vivir» (14827) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/93010002
+- Soledad Bravo — «La Historia Musical y Algo Más...» (14828) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/89675112
+- Soledad Bravo — «Trova de amor - Canta a Pablo Milanes» (14829) · deezer · 16 pistas (creado en la etapa 3) · https://www.deezer.com/album/335839
+- Soledad Bravo — «La Tirana» (14830) · deezer · 16 pistas (creado en la etapa 3) · https://www.deezer.com/album/88995892
+- Soledad Bravo — «Mariposas» (14831) · deezer · 7 pistas (creado en la etapa 3) · https://www.deezer.com/album/115381852
+- Soledad Bravo — «Arvolicos d'Almendra» (14832) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/88344962
+- José Luis Rodríguez — «Mujer (US Edition)» (7232) · musicbrainz · 9 pistas (discografía MB de la ficha: título igual) · https://musicbrainz.org/release/b021ec0f-bd00-4be0-a27d-5ae8cd13ddf8
+- José Luis Rodríguez — «Grandes Exitos» (7279) · deezer · 12 pistas (discografía Deezer de la ficha: título igual) · https://www.deezer.com/album/93264622
+- José Luis Rodríguez — «Inmenso» (7894) · musicbrainz · 2 duraciones (11 pistas en común) · https://musicbrainz.org/release/c06a3577-76e4-4630-8013-fadc8e52da0a
+- José Luis Rodríguez — «Grito Al Mundo» (8134) · deezer · 3 duraciones (3 pistas en común) · https://www.deezer.com/album/598527652
+- José Luis Rodríguez — «Mujer» (8145) · musicbrainz · 7 duraciones (7 pistas en común) · https://musicbrainz.org/release/b021ec0f-bd00-4be0-a27d-5ae8cd13ddf8
+- José Luis Rodríguez — «Dueño De Nada» (8147) · musicbrainz · 10 duraciones (10 pistas en común) · https://musicbrainz.org/release/a06395fd-03f5-471a-a71b-67965aa84717
+- José Luis Rodríguez — «Agradecido» (8164) · musicbrainz · 10 duraciones (10 pistas en común) · https://musicbrainz.org/release/3008c71a-a450-4f8f-b238-e73eb0bdc02a
+- José Luis Rodríguez — «Mis 30 Mejores Canciones» (8178) · musicbrainz · 2 duraciones (15 pistas en común) · https://musicbrainz.org/release/879de34d-6d82-4a74-8855-ebe8c778cd84
+- José Luis Rodríguez — «Canciones De Amor» (8179) · musicbrainz · 2 duraciones (14 pistas en común) · https://musicbrainz.org/release/31133f9b-a76c-4ee0-b9e6-e3c8fe0ac087
+- José Luis Rodríguez — «Mis Favoritas» (8180) · deezer · 14 duraciones (14 pistas en común) · https://www.deezer.com/album/1316537
+- José Luis Rodríguez — «La Historia Del Puma» (8181) · musicbrainz · 14 duraciones (14 pistas en común) · https://musicbrainz.org/release/1c345581-2c14-4034-8e0e-e49874bfae33
+- José Luis Rodríguez — «Sólo Para Mujeres» (8182) · deezer · 2 duraciones (17 pistas en común) · https://www.deezer.com/album/8197694
+- José Luis Rodríguez — «Pavo real» (14489) · musicbrainz · 2 pistas (creado en la etapa 3) · https://musicbrainz.org/release/a2d61020-4b18-462d-81bd-eb367207b540
+- José Luis Rodríguez — «Las 15 grandes del Puma» (14490) · musicbrainz · 15 pistas (creado en la etapa 3) · https://musicbrainz.org/release/fd900a4d-c7f4-4e2c-87b7-6c5e5fe503dd
+- José Luis Rodríguez — «Inolvidable III: Algo contigo» (14491) · musicbrainz · 12 pistas (creado en la etapa 3) · https://musicbrainz.org/release/444657c2-340a-4bec-a1f3-706a75731b6c
+- José Luis Rodríguez — «El tamborillero / Caracas de ayer» (14492) · musicbrainz · 2 pistas (creado en la etapa 3) · https://musicbrainz.org/release/4d1304c0-3593-4a76-9d13-286c4134d9fc
+- José Luis Rodríguez — «Mis 30 mejores canciones con Los Panchos» (14493) · musicbrainz · 30 pistas (creado en la etapa 3) · https://musicbrainz.org/release/63bcd31f-5ded-40c6-b017-6bba330f2e81
+- José Luis Rodríguez — «20 éxitos de José Luis Rodríguez» (14494) · musicbrainz · 20 pistas (creado en la etapa 3) · https://musicbrainz.org/release/cb0cebbd-e9df-43fb-bdd1-6367b84e8724
+- José Luis Rodríguez — «The Best Of Jose Luis Rodriguez» (14495) · musicbrainz · 20 pistas (creado en la etapa 3) · https://musicbrainz.org/release/bf1d0deb-858e-47ee-b0cc-f473877bc0bb
+- José Luis Rodríguez — «José Luis Rodríguez con el Mariachi Vargas de Tecalitlán» (14496) · musicbrainz · 11 pistas (creado en la etapa 3) · https://musicbrainz.org/release/b20acb9d-b70a-47ab-b1bd-a85e284c3d61
+- José Luis Rodríguez — «Sabor a México» (14497) · musicbrainz · 11 pistas (creado en la etapa 3) · https://musicbrainz.org/release/062f0ca3-62f3-43d1-b708-dcf93f8162bb
+- José Luis Rodríguez — «Inolvidable» (14498) · musicbrainz · 15 pistas (creado en la etapa 3) · https://musicbrainz.org/release/7d52b6d9-0af6-4453-8197-8da0dd872343
+- José Luis Rodríguez — «Inolvidable II: Enamorado de ti» (14499) · musicbrainz · 12 pistas (creado en la etapa 3) · https://musicbrainz.org/release/5d82c525-1cac-40db-8267-bdeb8c1a6002
+- José Luis Rodríguez — «Culpable soy yo» (14500) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/f090fc28-94d0-4272-b025-42d011644905
+- José Luis Rodríguez — «El niño del tambor / Caminando» (14501) · musicbrainz · 2 pistas (creado en la etapa 3) · https://musicbrainz.org/release/207a23f5-a4eb-4798-bc36-3fcfd8566c40
+- José Luis Rodríguez — «Sera Que Estoy Enamorado» (14502) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/81368072
+- José Luis Rodríguez — «Silencio» (14503) · deezer · 11 pistas (creado en la etapa 3) · https://www.deezer.com/album/89498402
+- José Luis Rodríguez — «Estefania» (14504) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/89104882
+- José Luis Rodríguez — «Una Nueva Cancion» (14505) · deezer · 13 pistas (creado en la etapa 3) · https://www.deezer.com/album/89675712
+- José Luis Rodríguez — «José Luís Canta Boleros y Baladas» (14506) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/89675382
+- José Luis Rodríguez — «Mira Mis Ojos» (14507) · deezer · 14 pistas (creado en la etapa 3) · https://www.deezer.com/album/90514122
+- José Luis Rodríguez — «Solo Espero Que Me Perdones» (14508) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/88218892
+- José Luis Rodríguez — «Siempre Acabo por Llorar» (14509) · deezer · 8 pistas (creado en la etapa 3) · https://www.deezer.com/album/103350702
+- José Luis Rodríguez — «Amar Es Algo Más» (14510) · deezer · 8 pistas (creado en la etapa 3) · https://www.deezer.com/album/112853782
+- José Luis Rodríguez — «La Bikina» (14511) · deezer · 8 pistas (creado en la etapa 3) · https://www.deezer.com/album/105057782
+- José Luis Rodríguez — «Alma Llanera» (14512) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/108454692
+- José Luis Rodríguez — «Se Busca» (14513) · deezer · 8 pistas (creado en la etapa 3) · https://www.deezer.com/album/117607322
+- José Luis Rodríguez — «Angelica» (14514) · deezer · 9 pistas (creado en la etapa 3) · https://www.deezer.com/album/168169402
+- José Luis Rodríguez — «La Historia de un Idolo» (14515) · deezer · 11 pistas (creado en la etapa 3) · https://www.deezer.com/album/89675662
+- José Luis Rodríguez — «Jose Luis: Mis Telenovelas» (14516) · deezer · 18 pistas (creado en la etapa 3) · https://www.deezer.com/album/90513842
+- José Luis Rodríguez — «El Romántico Jose Luis» (14517) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/168432302
+- José Luis Rodríguez — «Exitos De Los 60's» (14518) · deezer · 16 pistas (creado en la etapa 3) · https://www.deezer.com/album/206524152
+- José Luis Rodríguez — «Vou Perder A Cabaza Por Tu Amar» (14519) · deezer · 11 pistas (creado en la etapa 3) · https://www.deezer.com/album/206524242
+- José Luis Rodríguez — «The Best Of - Ultimate Collection» (14520) · deezer · 20 pistas (creado en la etapa 3) · https://www.deezer.com/album/1215976
+- José Luis Rodríguez — «Ti Propongo» (14521) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/206524352
+- José Luis Rodríguez — «Serie de Autores Vol. III - Herrero y Armenteros» (14522) · deezer · 9 pistas (creado en la etapa 3) · https://www.deezer.com/album/1216032
+- José Luis Rodríguez — «Serie de Autores Vol. IV - Chema Purón» (14523) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/1216033
+- José Luis Rodríguez — «Serie de Autores - Vol. V, Chema Purón» (14524) · deezer · 11 pistas (creado en la etapa 3) · https://www.deezer.com/album/1384797
+- José Luis Rodríguez — «Con El Mariachi Vargas De Tecalitlan» (14525) · deezer · 11 pistas (creado en la etapa 3) · https://www.deezer.com/album/1216026
+- José Luis Rodríguez — «Serie de Autores - Vol. I, Manuel Alejandro» (14526) · deezer · 8 pistas (creado en la etapa 3) · https://www.deezer.com/album/1216028
+- José Luis Rodríguez — «Serie de Autores - Vol. II, Manuel Alejandro» (14527) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/1216029
+- José Luis Rodríguez — «Jose Luis Rodriguez con Los Panchos - Inolvidable (with Los Panchos)» (14528) · deezer · 15 pistas (creado en la etapa 3) · https://www.deezer.com/album/1214270
+- José Luis Rodríguez — «Ser Feliz» (14529) · deezer · 11 pistas (creado en la etapa 3) · https://www.deezer.com/album/86534832
+- José Luis Rodríguez — «Todo Cambió» (14530) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/89673222
+- José Luis Rodríguez — «Mis Primeros Boleros» (14531) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/245104862
+- José Luis Rodríguez — «Dos Clásicos» (14532) · deezer · 20 pistas (creado en la etapa 3) · https://www.deezer.com/album/484131
+- José Luis Rodríguez — «El Rugido del Puma: El Concierto» (14533) · deezer · 13 pistas (creado en la etapa 3) · https://www.deezer.com/album/90295612
+- José Luis Rodríguez — «Perdon Papa» (14534) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/81367972
+- José Luis Rodríguez — «Una Voz - Un Idolo» (14535) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/88954522
+- José Luis Rodríguez — «Mi Dulce Niña» (14536) · deezer · 13 pistas (creado en la etapa 3) · https://www.deezer.com/album/245097602
+- José Luis Rodríguez — «Me Vas a Echar de Menos» (14537) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/168394862
+- Billo's Caracas Boys — «Recordando Al Roof Garden» (7917) · deezer · 10 duraciones (10 pistas en común) · https://www.deezer.com/album/853814312
+- Billo's Caracas Boys — «Evocación» (7918) · musicbrainz · 4 duraciones (4 pistas en común) · https://musicbrainz.org/release/49cc8cfa-ad44-45ab-b70e-ac26d3e4fb9d
+- Billo's Caracas Boys — «Tres Viejos Amigos» (7920) · deezer · 2 duraciones (2 pistas en común) · https://www.deezer.com/album/524561262
+- Billo's Caracas Boys — «Baile De Carnaval» (7921) · deezer · 12 duraciones (12 pistas en común) · https://www.deezer.com/album/941133091
+- Billo's Caracas Boys — «Billo presenta: Candita Vazquez» (7924) · deezer · 11 duraciones (11 pistas en común) · https://www.deezer.com/album/942053451
+- Billo's Caracas Boys — «Canciones De Ayer y Hoy» (7932) · deezer · 10 duraciones (10 pistas en común) · https://www.deezer.com/album/903149262
+- Billo's Caracas Boys — «Esta Noche» (7937) · deezer · 10 duraciones (10 pistas en común) · https://www.deezer.com/album/903127992
+- Billo's Caracas Boys — «Cantares De Navidad» (7948) · deezer · 12 duraciones (12 pistas en común) · https://www.deezer.com/album/547097482
+- Billo's Caracas Boys — «Billo En Puerto Rico» (7949) · deezer · 10 duraciones (10 pistas en común) · https://www.deezer.com/album/606872932
+- Billo's Caracas Boys — «El Yo-Yo» (7950) · deezer · 7 duraciones (7 pistas en común) · https://www.deezer.com/album/546018002
+- Billo's Caracas Boys — «Billo y Su Música» (7951) · deezer · 8 duraciones (8 pistas en común) · https://www.deezer.com/album/606874972
+- Billo's Caracas Boys — «Felipe Pirela Con Billo's Caracas Boys» (7958) · deezer · 8 duraciones (8 pistas en común) · https://www.deezer.com/album/715804631
+- Billo's Caracas Boys — «Desde 1937 a 1966 Bailando Con Billo» (7959) · deezer · 9 duraciones (9 pistas en común) · https://www.deezer.com/album/709639391
+- Billo's Caracas Boys — «Mosaicos A La Billo Del 13 al 18» (7960) · deezer · 6 pistas (discografía Deezer de la ficha: título igual) · https://www.deezer.com/album/606867702
+- Billo's Caracas Boys — «Resumen De Exitos Vol.I» (7961) · deezer · 10 duraciones (10 pistas en común) · https://www.deezer.com/album/606871352
+- Billo's Caracas Boys — «La Renga» (7962) · deezer · 9 duraciones (9 pistas en común) · https://www.deezer.com/album/606871252
+- Billo's Caracas Boys — «Felices Fiestas» (7966) · deezer · 10 duraciones (10 pistas en común) · https://www.deezer.com/album/606878842
+- Billo's Caracas Boys — «Se Necesitan Dos» (7967) · deezer · 10 duraciones (10 pistas en común) · https://www.deezer.com/album/606871222
+- Billo's Caracas Boys — «Billo y Su Ritmo» (7968) · deezer · 7 duraciones (7 pistas en común) · https://www.deezer.com/album/245058302
+- Billo's Caracas Boys — «La Rubia y La Trigueña» (7971) · deezer · 9 duraciones (9 pistas en común) · https://www.deezer.com/album/522677092
+- Billo's Caracas Boys — «Billo 69» (7974) · deezer · 10 duraciones (10 pistas en común) · https://www.deezer.com/album/10234496
+- Billo's Caracas Boys — «La Más Popular De Venezuela» (7976) · deezer · 8 duraciones (8 pistas en común) · https://www.deezer.com/album/10232756
+- Billo's Caracas Boys — «Billo 70» (7978) · deezer · 9 duraciones (9 pistas en común) · https://www.deezer.com/album/10234494
+- Billo's Caracas Boys — «El Pajarillo» (7979) · deezer · 9 duraciones (9 pistas en común) · https://www.deezer.com/album/245109572
+- Billo's Caracas Boys — «Billo 72» (7983) · deezer · 7 duraciones (7 pistas en común) · https://www.deezer.com/album/10234488
+- Billo's Caracas Boys — «Billo 74» (7992) · deezer · 10 duraciones (10 pistas en común) · https://www.deezer.com/album/10234072
+- Billo's Caracas Boys — «Billo 76» (7996) · deezer · 9 duraciones (9 pistas en común) · https://www.deezer.com/album/10234064
+- Billo's Caracas Boys — «Billo 77» (8000) · deezer · 9 duraciones (9 pistas en común) · https://www.deezer.com/album/245049682
+- Billo's Caracas Boys — «Ayer, Hoy y Siempre» (8008) · deezer · 8 duraciones (8 pistas en común) · https://www.deezer.com/album/245050492
+- Billo's Caracas Boys — «Billo es Billo's» (8015) · deezer · 7 duraciones (7 pistas en común) · https://www.deezer.com/album/10233798
+- Billo's Caracas Boys — «La Verdad... Billo es Billo's» (8017) · deezer · 8 duraciones (8 pistas en común) · https://www.deezer.com/album/10232320
+- Billo's Caracas Boys — «La Gata Borracha» (8019) · deezer · 10 duraciones (10 pistas en común) · https://www.deezer.com/album/10232758
+- Billo's Caracas Boys — «Billo En Meridiano» (8022) · deezer · 10 duraciones (10 pistas en común) · https://www.deezer.com/album/10233812
+- Billo's Caracas Boys — «La Medallita» (8030) · musicbrainz · 6 duraciones (6 pistas en común) · https://musicbrainz.org/release/902423fa-9441-45cc-9640-fc7ac08a7f1c
+- Billo's Caracas Boys — «Sin Fronteras» (8031) · deezer · 8 duraciones (8 pistas en común) · https://www.deezer.com/album/245049992
+- Billo's Caracas Boys — «2 Grandes Orquestas Con Victor Piñero - 16 Grandes Éxitos» (15074) · musicbrainz · 16 pistas (creado en la etapa 3) · https://musicbrainz.org/release/84e50b02-b699-4fd3-bacc-71720ef259eb
+- Billo's Caracas Boys — «Ariel / Una noche» (15075) · musicbrainz · 2 pistas (creado en la etapa 3) · https://musicbrainz.org/release/46377279-8d7c-40c7-a299-b9fe01ff4919
+- Billo's Caracas Boys — «Billo's Caracas Boys vs Dimensión Latina» (15076) · musicbrainz · 12 pistas (creado en la etapa 3) · https://musicbrainz.org/release/0987694b-b6f0-4181-aaea-beb523e4f30e
+- Billo's Caracas Boys — «Grandes leyendas de la música» (15077) · musicbrainz · 17 pistas (creado en la etapa 3) · https://musicbrainz.org/release/c17edc00-aeff-4d48-960a-9d4e4fc7d5b8
+- Billo's Caracas Boys — «Los gustos de Victor Perez / Adiós» (15078) · musicbrainz · 2 pistas (creado en la etapa 3) · https://musicbrainz.org/release/59c892e5-11a5-439a-b42e-604174af4719
+- Billo's Caracas Boys — «Lo mejor de Billo's Caracas Boys» (15079) · musicbrainz · 12 pistas (creado en la etapa 3) · https://musicbrainz.org/release/6edaaea3-3165-47f8-8aff-eb2d185e54f3
+- Billo's Caracas Boys — «Tanto trabajar» (15080) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/c9d3f1de-50f0-47b9-b04b-2d07d4922fc0
+- Billo's Caracas Boys — «Billo 77 1/2» (15081) · musicbrainz · 11 pistas (creado en la etapa 3) · https://musicbrainz.org/release/f097def2-f78f-4db9-8b08-c205b36a5e0b
+- Billo's Caracas Boys — «Sigan bailando con Billo's, Vol. 1» (15082) · musicbrainz · 24 pistas (creado en la etapa 3) · https://musicbrainz.org/release/6840062e-09ff-4de1-981b-c0bda89d1029
+- Billo's Caracas Boys — «Tres perlas» (15083) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/8207d654-e98c-4057-8600-b7d355b34357
+- Billo's Caracas Boys — «Guarachando» (15084) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/85817d79-ff25-4658-81af-007f1990dd42
+- Billo's Caracas Boys — «Tu amor para Navidad (remix)» (15085) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/747fe1cc-940f-4968-8370-c9a6f3c4f6da
+- Billo's Caracas Boys — «Billo 72 1/2» (15086) · musicbrainz · 11 pistas (creado en la etapa 3) · https://musicbrainz.org/release/7820e803-83f2-4d48-b5d3-17427a19bc2c
+- Billo's Caracas Boys — «4 Colosos de Billo II» (15087) · musicbrainz · 18 pistas (creado en la etapa 3) · https://musicbrainz.org/release/67e3d511-93a8-4a31-a9c4-283d424f3f35
+- Billo's Caracas Boys — «Somos» (15088) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/3fb3d55b-0426-4cda-b7ca-ee64c0f02afe
+- Billo's Caracas Boys — «Fiesta Inolvidable» (15089) · musicbrainz · 19 pistas (creado en la etapa 3) · https://musicbrainz.org/release/627b0369-9ebd-4c2f-9547-51aed13285ac
+- Billo's Caracas Boys — «A la orilla del rio / Brisa, mar y arena» (15090) · musicbrainz · 2 pistas (creado en la etapa 3) · https://musicbrainz.org/release/bd140e7f-f6f1-49fd-adb0-8211c6c1b3ae
+- Billo's Caracas Boys — «Voces de los grandes éxitos de la Billo´s» (15091) · musicbrainz · 50 pistas (creado en la etapa 3) · https://musicbrainz.org/release/a25ab5cb-8861-47b0-87b4-cbf031418dae
+- Billo's Caracas Boys — «Por las buenas» (15092) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/ab686c7a-9687-42f6-a5ef-7d6808f6a905
+- Billo's Caracas Boys — «Billo» (15093) · musicbrainz · 11 pistas (creado en la etapa 3) · https://musicbrainz.org/release/296826b2-19f7-4ddd-9451-7a92aa5f602a
+- Billo's Caracas Boys — «Anoche no dormí» (15094) · musicbrainz · 12 pistas (creado en la etapa 3) · https://musicbrainz.org/release/afdcbfd5-eb32-4ba6-96e6-6948bc5b48c0
+- Billo's Caracas Boys — «Billo 74 1/2» (15095) · musicbrainz · 11 pistas (creado en la etapa 3) · https://musicbrainz.org/release/2b3debad-4856-4ac9-ac6b-4be24a9282e2
+- Billo's Caracas Boys — «Exitos De Billo's Caracas Boys» (15096) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/e27e44d4-da87-493f-9eaa-a1f6256b9485
+- Billo's Caracas Boys — «Bailando con Billo's» (15097) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/5d62ba83-7424-4e31-82d3-eef90b990972
+- Billo's Caracas Boys — «4 Colosos de Billo I» (15098) · musicbrainz · 18 pistas (creado en la etapa 3) · https://musicbrainz.org/release/e073faa8-e10c-43b9-be13-503899686636
+- Billo's Caracas Boys — «40 años con Billo» (15099) · musicbrainz · 121 pistas (creado en la etapa 3) · https://musicbrainz.org/release/95d1a527-008c-4d0f-979c-96a601e7907a
+- Billo's Caracas Boys — «Clásicos de oro de La Billo's Caracas Boy's» (15100) · musicbrainz · 18 pistas (creado en la etapa 3) · https://musicbrainz.org/release/2ede86ad-12ae-4e99-b02d-a5f97291c73e
+- Billo's Caracas Boys — «Tren de seis, vol. 2» (15101) · musicbrainz · 18 pistas (creado en la etapa 3) · https://musicbrainz.org/release/d8fce1c7-a36f-4469-9a6f-c153e42c2822
+- Billo's Caracas Boys — «Colección De Oro: Lo Brillante De Billo’s Caracas Boys, Vol. 3» (15102) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/b7f28640-58bf-429a-8e0d-a89c2c3b1239
+- Billo's Caracas Boys — «Así así» (15103) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/cbc29bed-37c9-4275-a4a2-d2f1b200b963
+- Billo's Caracas Boys — «Casate Y Veras» (15104) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/98b58b28-9535-477b-b4f5-b3a3bc4202b6
+- Billo's Caracas Boys — «Legendarios» (15105) · musicbrainz · 12 pistas (creado en la etapa 3) · https://musicbrainz.org/release/58627189-e3de-44d0-88e9-676dbb71e17e
+- Billo's Caracas Boys — «Billo 75 1/2» (15106) · musicbrainz · 11 pistas (creado en la etapa 3) · https://musicbrainz.org/release/e26914b8-cfb0-4485-affb-5400eecf6976
+- Billo's Caracas Boys — «Pasito tún tún / Mango del monte» (15107) · musicbrainz · 2 pistas (creado en la etapa 3) · https://musicbrainz.org/release/ae850fbb-7be7-4881-9fd2-6e0086d471f9
+- Billo's Caracas Boys — «Billo'76» (15108) · musicbrainz · 11 pistas (creado en la etapa 3) · https://musicbrainz.org/release/feed6d95-939d-4684-a3e5-4fff08318278
+- Billo's Caracas Boys — «El brujo» (15109) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/18b705ec-b685-4faf-9408-2365941da730
+- Billo's Caracas Boys — «Billo 78 1/2» (15110) · musicbrainz · 11 pistas (creado en la etapa 3) · https://musicbrainz.org/release/f37901f5-5191-4a78-bd37-35fc6569dbc2
+- Billo's Caracas Boys — «Caminito de Guarenas» (15111) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/4022c744-aaa2-4939-9a45-910de41219ed
+- Billo's Caracas Boys — «Billo 79 1/2 En Discoteca» (15112) · musicbrainz · 28 pistas (creado en la etapa 3) · https://musicbrainz.org/release/2ed07be7-2047-482b-9f1c-f5b60b7afca7
+- Billo's Caracas Boys — «Legendarios Vol. 2» (15113) · deezer · 11 pistas (creado en la etapa 3) · https://www.deezer.com/album/993438881
+- Billo's Caracas Boys — «La Lisa de Maracaibo» (15114) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/937855801
+- Billo's Caracas Boys — «Epoca De Oro De Billo's (Vol. 2)» (15115) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/866173682
+- Billo's Caracas Boys — «La Epoca De Oro De Billo (Vol. 3)» (15116) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/996649361
+- Billo's Caracas Boys — «Billo's Happy Boys» (15117) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/853814302
+- Billo's Caracas Boys — «La Epoca De Oro De Billo (Vol 1)» (15118) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/855301792
+- Billo's Caracas Boys — «Viva Memo y Olé» (15119) · deezer · 8 pistas (creado en la etapa 3) · https://www.deezer.com/album/606873482
+- Billo's Caracas Boys — «Éxitos De Billo Vol. II» (15120) · deezer · 7 pistas (creado en la etapa 3) · https://www.deezer.com/album/610604522
+- Billo's Caracas Boys — «Voces De Billo Vol. 3» (15121) · deezer · 9 pistas (creado en la etapa 3) · https://www.deezer.com/album/616473561
+- Billo's Caracas Boys — «La Niña Isabel» (15122) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/606867592
+- Billo's Caracas Boys — «Voces De Billo: Jose Luis Vol. I» (15123) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/606867922
+- Billo's Caracas Boys — «Nuestro Balance» (15124) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/606868642
+- Billo's Caracas Boys — «Billo's Caracas Boys: la Mejor Salsa. Disco 1» (15125) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/237373392
+- Billo's Caracas Boys — «Tren de Seis» (15126) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/128717372
+- Billo's Caracas Boys — «Esta Noche... Billo, Vol. 3» (15127) · deezer · 23 pistas (creado en la etapa 3) · https://www.deezer.com/album/135910882
+- Billo's Caracas Boys — «Tren de Seis, Vol. 3» (15128) · deezer · 19 pistas (creado en la etapa 3) · https://www.deezer.com/album/135912132
+- Billo's Caracas Boys — «Esta Noche...Billo, Vol. 2» (15129) · deezer · 23 pistas (creado en la etapa 3) · https://www.deezer.com/album/133568122
+- Billo's Caracas Boys — «Sigan Bailando Con Billo's, Vol. 2» (15130) · deezer · 25 pistas (creado en la etapa 3) · https://www.deezer.com/album/134426122
+- Billo's Caracas Boys — «Esta Noche... Billo, Vol. 1» (15131) · deezer · 21 pistas (creado en la etapa 3) · https://www.deezer.com/album/135909892
+- Billo's Caracas Boys — «Lo Brillante de Billo's Caracas Boys, Vol. 2» (15132) · deezer · 22 pistas (creado en la etapa 3) · https://www.deezer.com/album/133135092
+- Billo's Caracas Boys — «Lo Brillante de Billo's Caracas Boys, Vol. 3» (15133) · deezer · 24 pistas (creado en la etapa 3) · https://www.deezer.com/album/133294512
+- Billo's Caracas Boys — «Mis Canciones Favoritas, Vol. 2» (15134) · deezer · 23 pistas (creado en la etapa 3) · https://www.deezer.com/album/132972912
+- Billo's Caracas Boys — «Lo Brillante de Billo's Caracas Boys, Vol. 1» (15135) · deezer · 20 pistas (creado en la etapa 3) · https://www.deezer.com/album/133133832
+- Billo's Caracas Boys — «Mis Canciones Favoritas, Vol. 1» (15136) · deezer · 25 pistas (creado en la etapa 3) · https://www.deezer.com/album/132886752
+- Billo's Caracas Boys — «¡Oye... A Billos!, Vol. 2» (15137) · deezer · 24 pistas (creado en la etapa 3) · https://www.deezer.com/album/132790712
+- Billo's Caracas Boys — «¡Oye... A Billo's!, Vol. 3» (15138) · deezer · 25 pistas (creado en la etapa 3) · https://www.deezer.com/album/132792102
+- Billo's Caracas Boys — «Viva la Billos, Vol. 2» (15139) · deezer · 25 pistas (creado en la etapa 3) · https://www.deezer.com/album/131910982
+- Billo's Caracas Boys — «Billo Ayer Hoy y Siempre, Vol. 2» (15140) · deezer · 25 pistas (creado en la etapa 3) · https://www.deezer.com/album/131979652
+- Billo's Caracas Boys — «¡Oye... a Billo's!, Vol. 1» (15141) · deezer · 25 pistas (creado en la etapa 3) · https://www.deezer.com/album/132787902
+- Billo's Caracas Boys — «La Gran Colección de la Más Popular de Venezuela, Vol. 1» (15142) · deezer · 22 pistas (creado en la etapa 3) · https://www.deezer.com/album/132939102
+- Billo's Caracas Boys — «La Gran Colección de la Más Popular de Venezuela, Vol. 2» (15143) · deezer · 16 pistas (creado en la etapa 3) · https://www.deezer.com/album/132945762
+- Billo's Caracas Boys — «Billo Ayer Hoy y Siempre, Vol. 3» (15144) · deezer · 23 pistas (creado en la etapa 3) · https://www.deezer.com/album/132945932
+- Billo's Caracas Boys — «La Gran Colección de la Más Popular de Venezuela, Vol. 3» (15145) · deezer · 20 pistas (creado en la etapa 3) · https://www.deezer.com/album/132951212
+- Billo's Caracas Boys — «Viva la Billo's, Vol. 1» (15146) · deezer · 20 pistas (creado en la etapa 3) · https://www.deezer.com/album/134422912
+- Billo's Caracas Boys — «Billo Ayer, Hoy y Siempre, Vol. 1» (15147) · deezer · 24 pistas (creado en la etapa 3) · https://www.deezer.com/album/524592312
+- Billo's Caracas Boys — «Impactos de Billo, Vol. 1» (15148) · deezer · 25 pistas (creado en la etapa 3) · https://www.deezer.com/album/131800362
+- Billo's Caracas Boys — «Impactos de Billo, Vol. 3» (15149) · deezer · 25 pistas (creado en la etapa 3) · https://www.deezer.com/album/131810542
+- Billo's Caracas Boys — «Grandes Éxitos, Vol. 2» (15150) · deezer · 24 pistas (creado en la etapa 3) · https://www.deezer.com/album/131975302
+- Billo's Caracas Boys — «Grandes Éxitos, Vol. 1» (15151) · deezer · 23 pistas (creado en la etapa 3) · https://www.deezer.com/album/131975312
+- Billo's Caracas Boys — «Impactos de Billo, Vol. 2» (15152) · deezer · 22 pistas (creado en la etapa 3) · https://www.deezer.com/album/131990712
+- Billo's Caracas Boys — «Grandes Éxitos, Vol. 3» (15153) · deezer · 21 pistas (creado en la etapa 3) · https://www.deezer.com/album/132937942
+- Billo's Caracas Boys — «La Gran Colección, Vol. 3» (15154) · deezer · 23 pistas (creado en la etapa 3) · https://www.deezer.com/album/131907482
+- Billo's Caracas Boys — «La Gran Colección, Vol. 1» (15155) · deezer · 19 pistas (creado en la etapa 3) · https://www.deezer.com/album/140543462
+- Billo's Caracas Boys — «La Gran Colección, Vol. 2» (15156) · deezer · 17 pistas (creado en la etapa 3) · https://www.deezer.com/album/131906632
+- Billo's Caracas Boys — «Tropical y Refrescante» (15157) · deezer · 11 pistas (creado en la etapa 3) · https://www.deezer.com/album/14601616
+- Billo's Caracas Boys — «Esta Es Mi Historia» (15158) · deezer · 13 pistas (creado en la etapa 3) · https://www.deezer.com/album/14620554
+- Billo's Caracas Boys — «Lo Mejor de la Epoca de Oro de Billo» (15159) · deezer · 15 pistas (creado en la etapa 3) · https://www.deezer.com/album/14620636
+- Billo's Caracas Boys — «Los Primeros Seis Mosaicos De Billo'S Caracas Boys» (15160) · deezer · 6 pistas (creado en la etapa 3) · https://www.deezer.com/album/898908402
+- Billo's Caracas Boys — «75 Años» (15161) · deezer · 11 pistas (creado en la etapa 3) · https://www.deezer.com/album/14084914
+- Billo's Caracas Boys — «Billo Frometa» (15162) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/103449782
+- Billo's Caracas Boys — «El Legado» (15163) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/114412932
+- Billo's Caracas Boys — «Al Son del Ritmo» (15164) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/245050122
+- Billo's Caracas Boys — «Juntos los Grandes del Baile» (15165) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/10232762
+- Billo's Caracas Boys — «Voces de Billo - Ely Mendez» (15166) · deezer · 22 pistas (creado en la etapa 3) · https://www.deezer.com/album/10233088
+- Billo's Caracas Boys — «Boleros De Ely Mendez» (15167) · deezer · 25 pistas (creado en la etapa 3) · https://www.deezer.com/album/10233354
+- Billo's Caracas Boys — «Billo's Para Todos» (15168) · deezer · 9 pistas (creado en la etapa 3) · https://www.deezer.com/album/10233358
+- Billo's Caracas Boys — «Billo 81 1/2» (15169) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/10233822
+- Billo's Caracas Boys — «Entre Recuerdos y Mosaicos» (15170) · deezer · 8 pistas (creado en la etapa 3) · https://www.deezer.com/album/898914142
+- Billo's Caracas Boys — «La Billo'S & Los Melódicos de Colección, Vol. 1» (15171) · deezer · 19 pistas (creado en la etapa 3) · https://www.deezer.com/album/898908602
+- Billo's Caracas Boys — «Cumbiando Con Cheo» (15172) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/523578132
+- Billo's Caracas Boys — «Colección De Oro: Lo Brillante De Billo's Caracas Boys, Vol. 2» (15173) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/128755902
+- Billo's Caracas Boys — «Colección De Oro: Lo Brillante De Billo's Caracas Boys, Vol. 1» (15174) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/128756552
+- Billo's Caracas Boys — «Internacionalización de Billo's Caracas Boys: la Orquesta Más Popular de Venezuela» (15175) · deezer · 15 pistas (creado en la etapa 3) · https://www.deezer.com/album/546021152
+- Billo's Caracas Boys — «Carmen de Bolivar» (15176) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/128740882
+- Billo's Caracas Boys — «Billo 76 1/2» (15177) · deezer · 11 pistas (creado en la etapa 3) · https://www.deezer.com/album/10234062
+- Billo's Caracas Boys — «Piano Bonito» (15178) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/128737672
+- Billo's Caracas Boys — «Billo 78 1/2 Su Majestad La Música» (15179) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/128740142
+- Billo's Caracas Boys — «16 Exitos de Billos Caracas Boys» (15180) · deezer · 16 pistas (creado en la etapa 3) · https://www.deezer.com/album/546020102
+- Billo's Caracas Boys — «Billo's Caracas Boys Los Melodicos de coleccion, Vol. 2» (15181) · deezer · 17 pistas (creado en la etapa 3) · https://www.deezer.com/album/898913412
+- Billo's Caracas Boys — «Las 2 Grandes Orquestas De Venezuela» (15182) · deezer · 18 pistas (creado en la etapa 3) · https://www.deezer.com/album/898909012
+- Billo's Caracas Boys — «Recordando A… La Billo, Vol. 1» (15183) · deezer · 16 pistas (creado en la etapa 3) · https://www.deezer.com/album/898903672
+- Billo's Caracas Boys — «Recordando A... La Billo, Vol. 2» (15184) · deezer · 16 pistas (creado en la etapa 3) · https://www.deezer.com/album/1109539
+- Billo's Caracas Boys — «Voces de la Billo, Vol. 2» (15185) · deezer · 14 pistas (creado en la etapa 3) · https://www.deezer.com/album/546018042
+- Billo's Caracas Boys — «Voces de Billos, Vol. 2» (15186) · deezer · 14 pistas (creado en la etapa 3) · https://www.deezer.com/album/546020542
+- Billo's Caracas Boys — «Clásicos De Oro De Billo´s Caracas Boy's, Vol II» (15187) · deezer · 15 pistas (creado en la etapa 3) · https://www.deezer.com/album/1008876701
+- Billo's Caracas Boys — «2 HISTORIAS Billos y Juan Vicente Torrealba» (15188) · deezer · 16 pistas (creado en la etapa 3) · https://www.deezer.com/album/523579462
+- Billo's Caracas Boys — «En Homenaje a Caracas» (15189) · deezer · 9 pistas (creado en la etapa 3) · https://www.deezer.com/album/546018062
+- Billo's Caracas Boys — «Mosaicos a La Billos Vol 2» (15190) · deezer · 8 pistas (creado en la etapa 3) · https://www.deezer.com/album/546021422
+- Billo's Caracas Boys — «3 Colosos» (15191) · deezer · 8 pistas (creado en la etapa 3) · https://www.deezer.com/album/610604742
+- Billo's Caracas Boys — «4 Colosos de Billo's, Vol. 2» (15192) · deezer · 18 pistas (creado en la etapa 3) · https://www.deezer.com/album/523578782
+- Billo's Caracas Boys — «4 Colosos de Billo's, Vol. I» (15193) · deezer · 18 pistas (creado en la etapa 3) · https://www.deezer.com/album/546025142
+- Billo's Caracas Boys — «Recordando A... Los Grandes Mosaicos a La Billo» (15194) · deezer · 8 pistas (creado en la etapa 3) · https://www.deezer.com/album/1109674
+- Billo's Caracas Boys — «Sabor Venezolano Con (feat. Cheo Garcia)» (15195) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/135853712
+- Billo's Caracas Boys — «Dimension Latina vs. Billo's Caracas Boys» (15196) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/84513932
+- Billo's Caracas Boys — «Gitana» (15197) · deezer · 11 pistas (creado en la etapa 3) · https://www.deezer.com/album/245105002
+- Billo's Caracas Boys — «Concierto Venezolano» (15198) · deezer · 9 pistas (creado en la etapa 3) · https://www.deezer.com/album/245013812
+- Billo's Caracas Boys — «Billo 73 1/2» (15199) · deezer · 11 pistas (creado en la etapa 3) · https://www.deezer.com/album/10234478
+- Billo's Caracas Boys — «Canto a Caracas» (15200) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/108451552
+- Billo's Caracas Boys — «Voces De Billo Vol. II» (15201) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/601197692
+- Billo's Caracas Boys — «Chocolate» (15202) · deezer · 11 pistas (creado en la etapa 3) · https://www.deezer.com/album/245104802
+- Billo's Caracas Boys — «Siempre Billo» (15203) · deezer · 11 pistas (creado en la etapa 3) · https://www.deezer.com/album/716340831
+- Billo's Caracas Boys — «The Best Of Billo's Caracas Boys Mosaicos» (15204) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/245112322
+- Billo's Caracas Boys — «Mosaicos a La Billo Vol. 3» (15205) · deezer · 5 pistas (creado en la etapa 3) · https://www.deezer.com/album/606866652
+- Billo's Caracas Boys — «Inolvidables De Billo» (15206) · deezer · 6 pistas (creado en la etapa 3) · https://www.deezer.com/album/606872972
+- Billo's Caracas Boys — «Mosaico 10» (15207) · deezer · 5 pistas (creado en la etapa 3) · https://www.deezer.com/album/606861522
+- Billo's Caracas Boys — «Famosos Tangos En Ritmo De Bolero» (15208) · deezer · 6 pistas (creado en la etapa 3) · https://www.deezer.com/album/610601042
+- Billo's Caracas Boys — «De Los Besos Que Te Di» (15209) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/548475222
+- Billo's Caracas Boys — «Mosaico a la Billo, Vol. 1» (15210) · deezer · 2 pistas (creado en la etapa 3) · https://www.deezer.com/album/10232310
+- Felipe Pirela — «Unicamente Tú» (8089) · deezer · 10 duraciones (10 pistas en común) · https://www.deezer.com/album/81368592
+- Felipe Pirela — «Sombras Nada Más» (8092) · deezer · 11 duraciones (11 pistas en común) · https://www.deezer.com/album/85358482
+- Felipe Pirela — «Felipe...Sigue de Frente!» (8094) · deezer · 9 duraciones (9 pistas en común) · https://www.deezer.com/album/89656572
+- Felipe Pirela — «Cuando Vivas Conmigo» (8096) · deezer · 11 duraciones (11 pistas en común) · https://www.deezer.com/album/103340762
+- Felipe Pirela — «Dios Sabe Lo Que Hace» (8100) · musicbrainz · 9 duraciones (9 pistas en común) · https://musicbrainz.org/release/bbced6f1-9ecd-4fa8-9f6f-256b70b045ac
+- Felipe Pirela — «Lo Que Es La Vida!» (8104) · musicbrainz · 11 duraciones (11 pistas en común) · https://musicbrainz.org/release/3670a938-dc7a-4ca2-a9b4-2da37c5db976
+- Felipe Pirela — «El Adiós Del Inmortal» (8111) · musicbrainz · 8 duraciones (8 pistas en común) · https://musicbrainz.org/release/cd58c7c4-7ecc-4c3e-8c94-2499e05eb12f
+- Felipe Pirela — «Mis Mejores Canciones - 16 Exitos» (13064) · musicbrainz · 16 pistas (creado en la etapa 3) · https://musicbrainz.org/release/ba4670a4-1d04-4c43-9f80-aa3af4d20d3f
+- Felipe Pirela — «40 años, 40 éxitos Vol. 2 Disco 2/2» (13065) · musicbrainz · 20 pistas (creado en la etapa 3) · https://musicbrainz.org/release/8f16fbbe-fed9-4ab5-a63d-54aa9bc6151a
+- Felipe Pirela — «El Legado Musical» (13066) · deezer · 16 pistas (creado en la etapa 3) · https://www.deezer.com/album/87874612
+- Los Melódicos — «Exitos De Los Melódicos» (8261) · deezer · 9 duraciones (9 pistas en común) · https://www.deezer.com/album/361360977
+- Los Melódicos — «Navidad Para Todo El Año» (8262) · deezer · 11 duraciones (11 pistas en común) · https://www.deezer.com/album/335715467
+- Los Melódicos — «Bailando Con Los Melódicos» (8263) · deezer · 9 duraciones (9 pistas en común) · https://www.deezer.com/album/245109462
+- Los Melódicos — «Viajando Con Los Melódicos» (8265) · deezer · 10 duraciones (10 pistas en común) · https://www.deezer.com/album/361663457
+- Los Melódicos — «En Carnaval» (8266) · deezer · 10 duraciones (10 pistas en común) · https://www.deezer.com/album/502797651
+- Los Melódicos — «La Vida Es Chiquita» (8271) · deezer · 9 duraciones (9 pistas en común) · https://www.deezer.com/album/361842347
+- Los Melódicos — «El Veneno De Los Hombres» (8273) · deezer · 6 duraciones (6 pistas en común) · https://www.deezer.com/album/361957517
+- Los Melódicos — «Bailables Fabulosos» (8274) · deezer · 12 duraciones (12 pistas en común) · https://www.deezer.com/album/517261802
+- Los Melódicos — «Aqui Está» (8279) · deezer · 10 duraciones (10 pistas en común) · https://www.deezer.com/album/706197081
+- Los Melódicos — «Gran Reserva Musical» (8280) · deezer · 8 duraciones (8 pistas en común) · https://www.deezer.com/album/361857037
+- Los Melódicos — «Gran Baile!» (8281) · deezer · 8 duraciones (8 pistas en común) · https://www.deezer.com/album/361798857
+- Los Melódicos — «Imponiendo El Ritmo» (8284) · deezer · 7 duraciones (7 pistas en común) · https://www.deezer.com/album/821904971
+- Los Melódicos — «El Más Completo Elenco» (8287) · deezer · 8 duraciones (8 pistas en común) · https://www.deezer.com/album/346163627
+- Los Melódicos — «La Bala» (8289) · deezer · 9 duraciones (9 pistas en común) · https://www.deezer.com/album/682188771
+- Los Melódicos — «En Todos Los Ritmos» (8291) · deezer · 11 duraciones (11 pistas en común) · https://www.deezer.com/album/1075772292
+- Los Melódicos — «Tan Bella y Tan Presumida» (8294) · deezer · 12 duraciones (12 pistas en común) · https://www.deezer.com/album/898136392
+- Los Melódicos — «Cójanle La Cola» (8300) · deezer · 12 duraciones (12 pistas en común) · https://www.deezer.com/album/640981601
+- Los Melódicos — «Recuerdos 17 / La Murga y Los Nuevos Exitos» (8301) · deezer · 9 duraciones (9 pistas en común) · https://www.deezer.com/album/524135492
+- Los Melódicos — «Felicidades» (8304) · deezer · 8 duraciones (8 pistas en común) · https://www.deezer.com/album/902915082
+- Los Melódicos — «Recuerdos Nº 20» (8305) · deezer · 9 duraciones (9 pistas en común) · https://www.deezer.com/album/524141292
+- Los Melódicos — «La Cachimba De San Juan» (8307) · deezer · 11 duraciones (11 pistas en común) · https://www.deezer.com/album/660109661
+- Los Melódicos — «El Emblema Musical De Venezuela» (8325) · deezer · 10 duraciones (10 pistas en común) · https://www.deezer.com/album/898908952
+- Los Melódicos — «En Vallenatos» (8326) · deezer · 9 duraciones (9 pistas en común) · https://www.deezer.com/album/662963511
+- Los Melódicos — «Bienvenido» (8327) · deezer · 9 duraciones (9 pistas en común) · https://www.deezer.com/album/898908502
+- Los Melódicos — «Dismelodicos 1-85» (8333) · deezer · 8 duraciones (8 pistas en común) · https://www.deezer.com/album/348937647
+- Los Melódicos — «Lideres!» (8339) · musicbrainz · 10 duraciones (10 pistas en común) · https://musicbrainz.org/release/1ce2b9b8-4176-418d-af88-6de41b1cdd72
+- Los Melódicos — «Entrega Inmediata» (8341) · deezer · 9 duraciones (9 pistas en común) · https://www.deezer.com/album/117373322
+- Los Melódicos — «Que Bueno Esta El Baile» (8349) · musicbrainz · 13 duraciones (13 pistas en común) · https://musicbrainz.org/release/1084707e-5356-400a-8e5d-0b3888645fa8
+- Los Melódicos — «Álbum homenaje a Víctor Piñero: 30 años» (13197) · musicbrainz · 12 pistas (creado en la etapa 3) · https://musicbrainz.org/release/dae01d4a-9db9-47fc-b3c8-225085a2520b
+- Los Melódicos — «En acción con Los Melódicos» (13198) · musicbrainz · 11 pistas (creado en la etapa 3) · https://musicbrainz.org/release/efb6cf03-9b19-46e0-9db1-636e406dfef4
+- Los Melódicos — «Recuerdos con Los Melódicos» (13199) · musicbrainz · 30 pistas (creado en la etapa 3) · https://musicbrainz.org/release/fd7bff30-99b1-4c85-a83c-032e3038d861
+- Los Melódicos — «Sus éxitos y sus cantantes» (13200) · musicbrainz · 16 pistas (creado en la etapa 3) · https://musicbrainz.org/release/61795ef2-7d81-422d-b4ba-ccad073ee411
+- Los Melódicos — «15 éxitos con Los Melodicos, Volumen I» (13201) · musicbrainz · 15 pistas (creado en la etapa 3) · https://musicbrainz.org/release/a5d98bbd-5e44-492c-8b73-f7c9caf340b6
+- Los Melódicos — «40 Años, 40 Exitos» (13202) · musicbrainz · 40 pistas (creado en la etapa 3) · https://musicbrainz.org/release/4d5efa7b-4241-4552-b286-a815c98156f8
+- Los Melódicos — «Papachongo Re-mix» (13203) · musicbrainz · 5 pistas (creado en la etapa 3) · https://musicbrainz.org/release/4d06b2aa-42b5-48d2-bb4c-97a660cc4d61
+- Los Melódicos — «Historia De Una Orquesta 4» (13204) · musicbrainz · 21 pistas (creado en la etapa 3) · https://musicbrainz.org/release/2c03723c-ae22-462b-8354-eb62667a8be0
+- Los Melódicos — «Melódicos Club Mix» (13205) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/245058462
+- Los Melódicos — «Mis Canciones Favoritas» (13206) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/89675772
+- Los Melódicos — «Historia Musical de los Melódicos y la Billos Caracas Boys: Dos Grandes Orquestas de Baile» (13207) · deezer · 40 pistas (creado en la etapa 3) · https://www.deezer.com/album/714029851
+- Los Melódicos — «Época De Oro, Vol. 6» (13208) · deezer · 20 pistas (creado en la etapa 3) · https://www.deezer.com/album/898903432
+- Los Melódicos — «Época De Oro, Vol. 5» (13209) · deezer · 20 pistas (creado en la etapa 3) · https://www.deezer.com/album/898903792
+- Los Melódicos — «Época De Oro, Vol. 4» (13210) · deezer · 20 pistas (creado en la etapa 3) · https://www.deezer.com/album/898908412
+- Los Melódicos — «Época De Oro Vol. 1» (13211) · deezer · 20 pistas (creado en la etapa 3) · https://www.deezer.com/album/898908772
+- Los Melódicos — «Época De Oro Vol. 2» (13212) · deezer · 20 pistas (creado en la etapa 3) · https://www.deezer.com/album/898913602
+- Los Melódicos — «Época De Oro, Vol. 3» (13213) · deezer · 20 pistas (creado en la etapa 3) · https://www.deezer.com/album/902037902
+- Los Melódicos — «Recordando A Los Melódicos, Vol. 2» (13214) · deezer · 20 pistas (creado en la etapa 3) · https://www.deezer.com/album/6249986
+- Los Melódicos — «Los Nenes Con Las Nenas» (13215) · deezer · 15 pistas (creado en la etapa 3) · https://www.deezer.com/album/978853
+- Los Melódicos — «Recordando a Los Melódicos, Vol. 1» (13216) · deezer · 21 pistas (creado en la etapa 3) · https://www.deezer.com/album/6283784
+- Los Melódicos — «Recordando A Víctor Piñero» (13217) · deezer · 16 pistas (creado en la etapa 3) · https://www.deezer.com/album/898903862
+- Los Melódicos — «Historia De Una Orquesta 2» (13218) · deezer · 20 pistas (creado en la etapa 3) · https://www.deezer.com/album/898908572
+- Los Melódicos — «Historia De Una Orquesta 1» (13219) · deezer · 21 pistas (creado en la etapa 3) · https://www.deezer.com/album/898908682
+- Los Melódicos — «Historia De Una Orquesta 3» (13220) · deezer · 20 pistas (creado en la etapa 3) · https://www.deezer.com/album/898913772
+- Los Melódicos — «Lo Mejor De Los Melódicos Vol. 1» (13221) · deezer · 20 pistas (creado en la etapa 3) · https://www.deezer.com/album/898913672
+- Los Melódicos — «A Los 30 Años De Victor Piñero» (13222) · deezer · 18 pistas (creado en la etapa 3) · https://www.deezer.com/album/898914012
+- Los Melódicos — «Estos Son: El Maestro Billo Y Los Melódicos» (13223) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/1108766102
+- Los Melódicos — «Con Sabor….Y Buen Provecho» (13224) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/662969001
+- Los Melódicos — «Sensacional» (13225) · deezer · 11 pistas (creado en la etapa 3) · https://www.deezer.com/album/662965651
+- Los Melódicos — «Recuerdos Nº 18» (13226) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/593972272
+- Los Melódicos — «Noche de Fiesta» (13227) · deezer · 8 pistas (creado en la etapa 3) · https://www.deezer.com/album/837738802
+- Los Melódicos — «Al Que Le Pique!» (13228) · deezer · 11 pistas (creado en la etapa 3) · https://www.deezer.com/album/660110661
+- Los Melódicos — «Heavy» (13229) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/898903832
+- Los Melódicos — «Con Todos los Hierros!» (13230) · deezer · 11 pistas (creado en la etapa 3) · https://www.deezer.com/album/103340542
+- Los Melódicos — «Al Ritmo» (13231) · deezer · 9 pistas (creado en la etapa 3) · https://www.deezer.com/album/114616522
+- Los Melódicos — «Y Tu Como Estás?» (13232) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/245104872
+- Los Melódicos — «12 Hits!!» (13233) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/911812231
+- Los Melódicos — «Fin De Semana! Con Los Melódicos» (13234) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/1103812672
+- Los Melódicos — «Víctor !» (13235) · deezer · 11 pistas (creado en la etapa 3) · https://www.deezer.com/album/524138252
+- Los Melódicos — «Bailando (Remastered)» (13236) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/680107461
+- Los Melódicos — «Navidad para Todo el Año Con los Melódicos» (13237) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/361305957
+- Los Melódicos — «El Cigarrón Colorao» (13238) · deezer · 4 pistas (creado en la etapa 3) · https://www.deezer.com/album/820061941
+- Los Melódicos — «Karacatis Ki» (13239) · deezer · 4 pistas (creado en la etapa 3) · https://www.deezer.com/album/1076421652
+- Los Melódicos — «La Adivinanza» (13240) · deezer · 4 pistas (creado en la etapa 3) · https://www.deezer.com/album/1076421582
+- Los Melódicos — «La Danza de la Chiva» (13241) · deezer · 2 pistas (creado en la etapa 3) · https://www.deezer.com/album/587686442
+- Los Melódicos — «Pow Wow» (13242) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/820061671
+- Los Melódicos — «Les Cornichons» (13243) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/821583541
+- Los Melódicos — «Arturo García» (13244) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/823078911
+- Los Melódicos — «Watusi de Trompeta» (13245) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/823086331
+- Los Melódicos — «Tina» (13246) · deezer · 2 pistas (creado en la etapa 3) · https://www.deezer.com/album/584302582
+- Mirla Castellanos — «Dominique» (8357) · deezer · 4 duraciones (4 pistas en común) · https://www.deezer.com/album/168406762
+- Mirla Castellanos — «Así Es La Vida» (8373) · deezer · 10 duraciones (10 pistas en común) · https://www.deezer.com/album/47345222
+- Mirla Castellanos — «Amo Este Amor» (8374) · deezer · 10 duraciones (10 pistas en común) · https://www.deezer.com/album/245058162
+- Mirla Castellanos — «Venezuela» (8376) · deezer · 2 duraciones (2 pistas en común) · https://www.deezer.com/album/103450112
+- Mirla Castellanos — «Grandes Exitos De Mirla» (8378) · deezer · 2 duraciones (2 pistas en común) · https://www.deezer.com/album/114613632
+- Mirla Castellanos — «Mirla Castellanos '78» (14538) · musicbrainz · 12 pistas (creado en la etapa 3) · https://musicbrainz.org/release/1e3eafe2-4a8a-4a67-8b64-faa45a831035
+- Mirla Castellanos — «Dan, Dan Dan» (14539) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/245058612
+- Mirla Castellanos — «Mirla el Abuelo» (14540) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/168104092
+- Mirla Castellanos — «Mirla 20 Años» (14541) · deezer · 7 pistas (creado en la etapa 3) · https://www.deezer.com/album/168406652
+- Mirla Castellanos — «Vuelve Al Hogar» (14542) · deezer · 7 pistas (creado en la etapa 3) · https://www.deezer.com/album/128727422
+- Mirla Castellanos — «Algo De Mí» (14543) · deezer · 8 pistas (creado en la etapa 3) · https://www.deezer.com/album/128733342
+- Mirla Castellanos — «Sr. Juez» (14544) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/58166922
+- Mirla Castellanos — «Maldito amor» (14545) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/48254922
+- Mirla Castellanos — «Porque el Amor Se Va» (14546) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/113586462
+- Mirla Castellanos — «Requiem para el Amor» (14547) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/245058602
+- Mirla Castellanos — «Bate Palmas» (14548) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/245062272
+- Mirla Castellanos — «Si Tuviera un Martillo» (14549) · deezer · 9 pistas (creado en la etapa 3) · https://www.deezer.com/album/245062362
+- Mirla Castellanos — «Me Aburro» (14550) · deezer · 9 pistas (creado en la etapa 3) · https://www.deezer.com/album/245022972
+- Mirla Castellanos — «Y Esta Es Mirla» (14551) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/245062442
+- Mirla Castellanos — «Mirla En Vivo» (14552) · discogs · 15 pistas (creado en la etapa 3) · https://www.discogs.com/release/4845091
+- María Teresa Chacín — «Todo Me Es Igual» (8421) · deezer · 9 duraciones (9 pistas en común) · https://www.deezer.com/album/168374022
+- María Teresa Chacín — «La Paraulata» (8425) · deezer · 9 duraciones (9 pistas en común) · https://www.deezer.com/album/6533564
+- María Teresa Chacín — «Romance» (8428) · deezer · 10 duraciones (10 pistas en común) · https://www.deezer.com/album/7187415
+- María Teresa Chacín — «Mi Querencia» (8429) · deezer · 10 duraciones (10 pistas en común) · https://www.deezer.com/album/7185619
+- María Teresa Chacín — «En Este País» (8438) · deezer · 9 duraciones (9 pistas en común) · https://www.deezer.com/album/7185871
+- María Teresa Chacín — «Tú Eres La Música» (8439) · deezer · 10 duraciones (10 pistas en común) · https://www.deezer.com/album/13735510
+- María Teresa Chacín — «Yo Soy Venezolana» (8445) · deezer · 1 duraciones (9 pistas en común) · https://www.deezer.com/album/8753475
+- María Teresa Chacín — «Para Simón De María Teresa» (8447) · deezer · 11 duraciones (11 pistas en común) · https://www.deezer.com/album/11028964
+- María Teresa Chacín — «Exitos Ye-Ye (CD Reissue)» (8454) · deezer · 22 pistas (discografía Deezer de la ficha: título igual) · https://www.deezer.com/album/716152
+- María Teresa Chacín — «Me Voy A Regalar» (8455) · deezer · 1 duraciones (12 pistas en común) · https://www.deezer.com/album/563687612
+- María Teresa Chacín — «Algo Contigo (CD Reissue)» (8457) · deezer · 12 pistas (discografía Deezer de la ficha: título igual y año ±1) · https://www.deezer.com/album/716149
+- María Teresa Chacín — «De Conde A Principal (45 Años)» (8459) · deezer · 11 duraciones (11 pistas en común) · https://www.deezer.com/album/8756149
+- María Teresa Chacín — «Canta Cuentos» (8461) · deezer · 9 duraciones (9 pistas en común) · https://www.deezer.com/album/8547719
+- María Teresa Chacín — «Exitos Ye-Ye» (9138) · deezer · 20 duraciones (20 pistas en común) · https://www.deezer.com/album/716152
+- María Teresa Chacín — «Maria Teresa En Azul, Amarillo Y Rojo» (14855) · musicbrainz · 14 pistas (creado en la etapa 3) · https://musicbrainz.org/release/31dafed5-77a4-448c-901e-e1270353d631
+- María Teresa Chacín — «Lo Mejor De» (14856) · deezer · 7 pistas (creado en la etapa 3) · https://www.deezer.com/album/168372992
+- María Teresa Chacín — «40 Años 40 Exitos de Maria Teresa Chacin» (14857) · deezer · 40 pistas (creado en la etapa 3) · https://www.deezer.com/album/6267048
+- María Teresa Chacín — «Cancion para Aldemaro» (14858) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/8477307
+- María Teresa Chacín — «Canta a México, Brasil, Argentina, Uruguay, Paraguay, Colombia, Cuba, Chile, Perú, Venezuela» (14859) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/716150
+- María Teresa Chacín — «Ahora María Teresa Interpreta a Armando Manzanero» (14860) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/716148
+- María Teresa Chacín — «Perdido en la Nostalgia» (14861) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/414135537
+- María Teresa Chacín — «Sin Fronteras» (14862) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/241900522
+- María Teresa Chacín — «María Teresa Chacín y sus Grandes Éxitos» (14863) · deezer · 20 pistas (creado en la etapa 3) · https://www.deezer.com/album/716151
+- Los Cuñaos — «Los Cuñaos Vol.5» (8500) · deezer · 8 duraciones (8 pistas en común) · https://www.deezer.com/album/87919592
+- Los Cuñaos — «Sabor Venezolano» (8810) · deezer · 9 duraciones (9 pistas en común) · https://www.deezer.com/album/67193712
+- Los Cuñaos — «Los Cuñaos Vol.6» (9285) · deezer · 6 duraciones (6 pistas en común) · https://www.deezer.com/album/82364032
+- Los Cuñaos — «Los Cuñaos Vol. 2» (14931) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/89653482
+- Los Cuñaos — «Los Cuñaos Vol. 4» (14932) · deezer · 11 pistas (creado en la etapa 3) · https://www.deezer.com/album/89020922
+- Los Cuñaos — «Los Cuñaos Vol. 3» (14933) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/73205332
+- Los Cuñaos — «Mas Musica» (14934) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/117608652
+- Los Cuñaos — «El Raspao» (14935) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/114410312
+- Carota, Ñema y Tajá — «Puro Pueblo... Na' Guara» (8550) · deezer · 12 duraciones (12 pistas en común) · https://www.deezer.com/album/643958881
+- Carota, Ñema y Tajá — «Sembrando Un Canto» (8551) · deezer · 10 duraciones (10 pistas en común) · https://www.deezer.com/album/643958021
+- Carota, Ñema y Tajá — «La Nueva Canción Venezolana» (8553) · deezer · 9 duraciones (9 pistas en común) · https://www.deezer.com/album/641790711
+- Carota, Ñema y Tajá — «Como Sol De Invierno» (8554) · deezer · 10 duraciones (10 pistas en común) · https://www.deezer.com/album/643965251
+- Carota, Ñema y Tajá — «Vivencias» (8555) · deezer · 10 duraciones (10 pistas en común) · https://www.deezer.com/album/643958101
+- Carota, Ñema y Tajá — «10 Años A Cielo Abierto» (8557) · deezer · 12 duraciones (12 pistas en común) · https://www.deezer.com/album/642278371
+- Carota, Ñema y Tajá — «El Tamunangue (Sones De Negro)» (14916) · deezer · 9 pistas (creado en la etapa 3) · https://www.deezer.com/album/643992121
+- Carota, Ñema y Tajá — «Con Sazón Navideño» (14917) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/643076731
+- Carota, Ñema y Tajá — «En El Nombre Del Pueblo» (14918) · deezer · 11 pistas (creado en la etapa 3) · https://www.deezer.com/album/641802801
+- Carota, Ñema y Tajá — «Mix Venezuela Es Una Sola (En Vivo)» (14919) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/767342511
+- Carota, Ñema y Tajá — «Mix Homenaje a Compositores (En Vivo)» (14920) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/767342621
+- Carota, Ñema y Tajá — «Navidad Infantil» (14921) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/686498791
+- Carota, Ñema y Tajá — «Mi Terruño Adorado» (14922) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/643992781
+- Carota, Ñema y Tajá — «El Amor Es Tan Sabroso» (14923) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/643610521
+- Carota, Ñema y Tajá — «De Donde Sale El Cocuy» (14924) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/643992001
+- Carota, Ñema y Tajá — «Mi Gente Cubireña» (14925) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/643992041
+- Gualberto Ibarreto — «Gualberto Ibarreto» (8597) · musicbrainz · 8 duraciones (8 pistas en común) · https://musicbrainz.org/release/7c00757c-36d5-477a-aa10-a91f8ac8970e
+- Gualberto Ibarreto — «Romántico» (8607) · musicbrainz · 10 duraciones (10 pistas en común) · https://musicbrainz.org/release/6e888727-94a1-4f69-a7fa-f8100615fe92
+- Gualberto Ibarreto — «Este Es El Amor Amor» (8608) · musicbrainz · 10 duraciones (10 pistas en común) · https://musicbrainz.org/release/8c64f2d2-16d2-4bbd-8545-1bc24975ca37
+- Gualberto Ibarreto — «Gualberto + C4» (8618) · deezer · 10 pistas (discografía Deezer de la ficha: título igual) · https://www.deezer.com/album/713826711
+- Gualberto Ibarreto — «Gualberto Ibarreto el Mismo de Ayer» (14837) · musicbrainz · 16 pistas (creado en la etapa 3) · https://musicbrainz.org/release/f7026936-5d28-4d7e-9944-51c60814fa8a
+- Gualberto Ibarreto — «A Cuerpo Cobarde» (14838) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/ba17e9a5-e954-4d12-8da6-b66b139b2db4
+- Gualberto Ibarreto — «Exitos Romanticos» (14839) · musicbrainz · 16 pistas (creado en la etapa 3) · https://musicbrainz.org/release/b440dabf-6495-42de-b548-71069fb297d7
+- Gualberto Ibarreto — «Gualberto Ibarreto, Vol. 3» (14840) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/694c0d75-5b95-4d10-97e8-666e9600c51d
+- Gualberto Ibarreto — «Gualberto Ibarreto Hay Uno Solo» (14841) · musicbrainz · 19 pistas (creado en la etapa 3) · https://musicbrainz.org/release/7f84877a-736a-446b-bda4-40d446ab98d4
+- Gualberto Ibarreto — «Gualberto Ibarreto Vol. 1» (14842) · musicbrainz · 11 pistas (creado en la etapa 3) · https://musicbrainz.org/release/e16a94e3-4d12-40c0-98bf-f12ab2ac6c26
+- Gualberto Ibarreto — «Gualberto Vol. 6» (14843) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/f83a00e0-1356-4a3a-be29-678e27f3b6e7
+- Gualberto Ibarreto — «Gualberto Ibarreto, Vol. 4» (14844) · musicbrainz · 9 pistas (creado en la etapa 3) · https://musicbrainz.org/release/9cd7ec90-e031-46e7-b1f4-d8ef24ae0c99
+- Gualberto Ibarreto — «Grandes Éxitos, Vol. III» (14845) · deezer · 16 pistas (creado en la etapa 3) · https://www.deezer.com/album/724064541
+- Gualberto Ibarreto — «Grandes Éxitos Volumen II» (14846) · deezer · 16 pistas (creado en la etapa 3) · https://www.deezer.com/album/725921011
+- Gualberto Ibarreto — «Grandes Éxitos, Vol. 1» (14847) · deezer · 16 pistas (creado en la etapa 3) · https://www.deezer.com/album/720411991
+- Gualberto Ibarreto — «Mi Vida» (14848) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/103449892
+- Gualberto Ibarreto — «El Ladrón de Tu Amor» (14849) · deezer · 13 pistas (creado en la etapa 3) · https://www.deezer.com/album/85523252
+- Gualberto Ibarreto — «Gualberto Ibarreto Hoy He Vuelto a Ser El» (14850) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/403446927
+- Gualberto Ibarreto — «Viene la Parranda» (14851) · deezer · 11 pistas (creado en la etapa 3) · https://www.deezer.com/album/85036092
+- Gualberto Ibarreto — «Rio de la Vida» (14852) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/759975941
+- Gualberto Ibarreto — «María Antonia (En Vivo)» (14853) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/737406751
+- Gualberto Ibarreto — «EL VIGÍA» (14854) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/556318202
+- Hernán Marín — «Hernán Marín» (8677) · deezer · 10 duraciones (10 pistas en común) · https://www.deezer.com/album/769230211
+- Hernán Marín — «Dos Generaciones En Un Canto» (8678) · deezer · 12 pistas (discografía Deezer de la ficha: título igual) · https://www.deezer.com/album/522775352
+- Hernán Marín — «Oriente En Un Cantor Vol.1» (8679) · deezer · 16 duraciones (16 pistas en común) · https://www.deezer.com/album/509602631
+- Hernán Marín — «Oriente En Un Cantor Vol.2» (8680) · deezer · 16 duraciones (16 pistas en común) · https://www.deezer.com/album/425367727
+- Hernán Marín — «Oriente En Un Cantor Vol.3» (8681) · deezer · 16 duraciones (16 pistas en común) · https://www.deezer.com/album/427652097
+- Hernán Marín — «Oriente En Un Cantor Vol.4» (8682) · deezer · 16 duraciones (16 pistas en común) · https://www.deezer.com/album/427668017
+- Hernán Marín — «Serenata de Nuevos Boleros» (14964) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/428890967
+- Hernán Marín — «Amores» (14965) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/429202977
+- Hernán Marín — «Empalizada De Amor» (14966) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/813976361
+- Hernán Marín — «Luz De Cumaná (feat. Manuel Alejandro Sánchez)» (14967) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/773139431
+- Juan Vicente Torrealba — «Dos Criollísimos» (8745) · deezer · 10 pistas (discografía Deezer de la ficha: título igual) · https://www.deezer.com/album/898226112
+- Juan Vicente Torrealba — «Motivos Llaneros» (8748) · deezer · 12 pistas (discografía Deezer de la ficha: título igual) · https://www.deezer.com/album/983014691
+- Juan Vicente Torrealba — «Al Son De Juan Vicente Vol. 3» (8749) · deezer · 12 pistas (discografía Deezer de la ficha: título igual) · https://www.deezer.com/album/616053142
+- Juan Vicente Torrealba — «Famosas Torrealberas» (8750) · deezer · 10 duraciones (10 pistas en común) · https://www.deezer.com/album/616364351
+- Juan Vicente Torrealba — «Italia In Ritmo Tropicale» (8751) · deezer · 8 duraciones (8 pistas en común) · https://www.deezer.com/album/522675622
+- Juan Vicente Torrealba — «Valses Venezolanos Vol. 2» (8753) · deezer · 9 duraciones (9 pistas en común) · https://www.deezer.com/album/578311011
+- Juan Vicente Torrealba — «Merengues Venezolanos» (8754) · deezer · 9 duraciones (9 pistas en común) · https://www.deezer.com/album/616368761
+- Juan Vicente Torrealba — «Llanero Soy Vol.3» (8757) · deezer · 10 duraciones (10 pistas en común) · https://www.deezer.com/album/616364081
+- Juan Vicente Torrealba — «Llanero Soy Vol.1 (CD Reissue)» (8766) · deezer · 16 pistas (discografía Deezer de la ficha: título igual) · https://www.deezer.com/album/522660772
+- Juan Vicente Torrealba — «Conticinio (CD Reissue)» (8767) · deezer · 12 pistas (discografía Deezer de la ficha: título igual) · https://www.deezer.com/album/522684192
+- Juan Vicente Torrealba — «Aragua y Llano (CD Reissue)» (8768) · deezer · 12 pistas (discografía Deezer de la ficha: título igual y año ±1) · https://www.deezer.com/album/522683532
+- Juan Vicente Torrealba — «Música Caribeña (CD Reissue)» (8769) · deezer · 12 pistas (discografía Deezer de la ficha: título igual) · https://www.deezer.com/album/522677612
+- Juan Vicente Torrealba — «Valses Venezolanos (CD Reissue)» (8770) · deezer · 20 pistas (discografía Deezer de la ficha: título igual) · https://www.deezer.com/album/522662362
+- Juan Vicente Torrealba — «40 Años 40 Exitos» (8774) · musicbrainz · 20 duraciones (20 pistas en común) · https://musicbrainz.org/release/50ba8fbd-6003-4b11-ba0c-eabcc3e9dc08
+- Juan Vicente Torrealba — «Palmera De Cristal» (9224) · deezer · 9 duraciones (9 pistas en común) · https://www.deezer.com/album/987578901
+- Juan Vicente Torrealba — «Rapsodia Llanera» (9227) · deezer · 9 duraciones (9 pistas en común) · https://www.deezer.com/album/987650371
+- Juan Vicente Torrealba — «Estampida Electrónica» (9232) · deezer · 12 duraciones (12 pistas en común) · https://www.deezer.com/album/616360861
+- Juan Vicente Torrealba — «Cuento de Hadas» (9233) · deezer · 10 duraciones (10 pistas en común) · https://www.deezer.com/album/616365891
+- Juan Vicente Torrealba — «Quisiera» (9234) · deezer · 12 duraciones (12 pistas en común) · https://www.deezer.com/album/616055802
+- Juan Vicente Torrealba — «Sueños Del Llano» (9236) · deezer · 12 duraciones (12 pistas en común) · https://www.deezer.com/album/578312991
+- Juan Vicente Torrealba — «Verano Llanero» (9238) · deezer · 12 duraciones (12 pistas en común) · https://www.deezer.com/album/616055912
+- Juan Vicente Torrealba — «María Teresa» (9239) · deezer · 10 duraciones (10 pistas en común) · https://www.deezer.com/album/616054352
+- Juan Vicente Torrealba — «Rosario» (9240) · deezer · 10 duraciones (10 pistas en común) · https://www.deezer.com/album/616055192
+- Juan Vicente Torrealba — «Suite Torrealbera» (9242) · deezer · 7 duraciones (7 pistas en común) · https://www.deezer.com/album/617556711
+- Juan Vicente Torrealba — «Conticinio» (9243) · deezer · 11 duraciones (11 pistas en común) · https://www.deezer.com/album/522684192
+- Juan Vicente Torrealba — «Aragua y Llano» (9248) · deezer · 12 duraciones (12 pistas en común) · https://www.deezer.com/album/522683532
+- Juan Vicente Torrealba — «Pasajes Inmortales» (9249) · deezer · 11 duraciones (11 pistas en común) · https://www.deezer.com/album/616361271
+- Juan Vicente Torrealba — «Clásicos Torrealberos» (9251) · deezer · 12 duraciones (12 pistas en común) · https://www.deezer.com/album/616365001
+- Juan Vicente Torrealba — «Música Caribeña» (9252) · deezer · 11 duraciones (11 pistas en común) · https://www.deezer.com/album/522677612
+- Juan Vicente Torrealba — «Nikary» (9256) · deezer · 10 duraciones (10 pistas en común) · https://www.deezer.com/album/616361921
+- Juan Vicente Torrealba — «Juan Vicente y Su Ritmo Super 80» (9258) · deezer · 12 duraciones (12 pistas en común) · https://www.deezer.com/album/616360141
+- Juan Vicente Torrealba — «Riberas De Cunaviche» (9260) · deezer · 9 duraciones (9 pistas en común) · https://www.deezer.com/album/616375151
+- Juan Vicente Torrealba — «Llanero Soy Vol.1» (9273) · deezer · 16 duraciones (16 pistas en común) · https://www.deezer.com/album/522660772
+- Juan Vicente Torrealba — «La potra zaina» (14630) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/811f243f-2df7-4508-87bf-c8a2be2410e8
+- Juan Vicente Torrealba — «Solito con las estrellas» (14631) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/75b280e0-8c7a-4141-921c-ef60cf7cd5fc
+- Juan Vicente Torrealba — «Fiesta De Joropos» (14632) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/1035507042
+- Juan Vicente Torrealba — «Grandes Maestros Del Arpa» (14633) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/983009431
+- Juan Vicente Torrealba — «Lo Mejor De Juan Vicente» (14634) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/616362651
+- Juan Vicente Torrealba — «Al Son De Juan Vicente Vol. 2» (14635) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/616055932
+- Juan Vicente Torrealba — «Concierto en la Llanura» (14636) · deezer · 11 pistas (creado en la etapa 3) · https://www.deezer.com/album/651096881
+- Juan Vicente Torrealba — «Concierto en la Llanura, Vol. 6» (14637) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/987564371
+- Juan Vicente Torrealba — «Concierto en la Llanura, Vol. 1» (14638) · deezer · 11 pistas (creado en la etapa 3) · https://www.deezer.com/album/927497801
+- Juan Vicente Torrealba — «Concierto en la Llanura, Vol. 4» (14639) · deezer · 24 pistas (creado en la etapa 3) · https://www.deezer.com/album/1047267532
+- Juan Vicente Torrealba — «Cuerdas de Oro: Rapsodia Llanera» (14640) · deezer · 9 pistas (creado en la etapa 3) · https://www.deezer.com/album/117207532
+- Juan Vicente Torrealba — «Alma Venezolana» (14641) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/168375452
+- Juan Vicente Torrealba — «Típico» (14642) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/94717112
+- Juan Vicente Torrealba — «Concierto Romántico: Solos de Arpa» (14643) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/168377462
+- Juan Vicente Torrealba — «Arpa Magica» (14644) · deezer · 8 pistas (creado en la etapa 3) · https://www.deezer.com/album/559972062
+- Juan Vicente Torrealba — «Lo Mejor De Juan Vicente (Vol. 2)» (14645) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/1009720071
+- Juan Vicente Torrealba — «Concierto en la Llanura, Vol. 2» (14646) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/987555531
+- Juan Vicente Torrealba — «Concierto en la Llanura, Vol. 5» (14647) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/987650421
+- Juan Vicente Torrealba — «Festival Torrealbero, Vol. 1» (14648) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/987569831
+- Juan Vicente Torrealba — «Festival Torrealbero, Vol. 2» (14649) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/987575071
+- Juan Vicente Torrealba — «Concierto en la Llanura, Vol. 3» (14650) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/987559671
+- Lilia Vera — «Lilia Vera Volumen 5» (8791) · deezer · 10 pistas (discografía Deezer de la ficha: título igual) · https://www.deezer.com/album/367999357
+- Lilia Vera — «De Colección Vol. 2» (8795) · musicbrainz · 16 pistas (discografía MB de la ficha: título igual) · https://musicbrainz.org/release/c1ea0220-4705-4c3e-ad31-465c37148f16
+- Lilia Vera — «Serie 32: Lilia Vera» (14833) · musicbrainz · 32 pistas (creado en la etapa 3) · https://musicbrainz.org/release/1c4d5366-6740-460c-a591-d932e033fbd1
+- Lilia Vera — «Lilia Vera, vol. 3» (14834) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/8a7ac860-8999-4dfd-a835-18dbfcee486e
+- Lilia Vera — «Vol. 2» (14835) · deezer · 16 pistas (creado en la etapa 3) · https://www.deezer.com/album/181221202
+- Lilia Vera — «Vol. 3» (14836) · deezer · 16 pistas (creado en la etapa 3) · https://www.deezer.com/album/191230002
+- Los Cañoneros — «Esta Es Caracas» (8802) · deezer · 14 duraciones (14 pistas en común) · https://www.deezer.com/album/10235992
+- Luis Silva — «Sangre Azul» (8817) · deezer · 10 duraciones (10 pistas en común) · https://www.deezer.com/album/246180132
+- Luis Silva — «Sencillo» (8819) · deezer · 8 duraciones (8 pistas en común) · https://www.deezer.com/album/238066712
+- Luis Silva — «Enamorado De Ti» (8820) · musicbrainz · 9 duraciones (9 pistas en común) · https://musicbrainz.org/release/ab0706ed-17bb-471e-97ba-818b70a65d07
+- Luis Silva — «Recuerdos» (8827) · deezer · 12 duraciones (12 pistas en común) · https://www.deezer.com/album/717473801
+- Luis Silva — «Soy Venezuela» (8828) · deezer · 12 duraciones (12 pistas en común) · https://www.deezer.com/album/717375291
+- Luis Silva — «Mis Canciones» (8829) · musicbrainz · 13 duraciones (13 pistas en común) · https://musicbrainz.org/release/816ff4e0-e3f9-45e7-b3b1-b60460038ec4
+- Luis Silva — «16 Grandes Exitos» (8832) · musicbrainz · 16 pistas (discografía MB de la ficha: título igual) · https://musicbrainz.org/release/042157fd-adbe-4b08-9f7c-aa3a6795be07
+- Luis Silva — «Serie 32» (14706) · musicbrainz · 32 pistas (creado en la etapa 3) · https://musicbrainz.org/release/04dc5cb1-cd05-4f3b-91b5-d7a72a0c09e4
+- Luis Silva — «Éxitos» (14707) · musicbrainz · 17 pistas (creado en la etapa 3) · https://musicbrainz.org/release/ee932145-c426-4163-b2d8-daba74a691cb
+- Luis Silva — «Luis Silva – Sólo Éxitos» (14708) · musicbrainz · 18 pistas (creado en la etapa 3) · https://musicbrainz.org/release/e84d38ee-0670-42cd-b093-fb33a6ed70df
+- Luis Silva — «Romance Quinceañero» (14709) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/6681beeb-e133-43e4-b1de-8d325f7450ad
+- Luis Silva — «De par en par pa'l mundo» (14710) · musicbrainz · 15 pistas (creado en la etapa 3) · https://musicbrainz.org/release/c9091a55-58c7-4bc1-8c70-36be6a1c1163
+- Luis Silva — «Ella o Él» (14711) · musicbrainz · 8 pistas (creado en la etapa 3) · https://musicbrainz.org/release/5e813fc8-26e8-42fb-a698-469c73f2dc2a
+- Luis Silva — «Piel Canela» (14713) · deezer · 9 pistas (creado en la etapa 3) · https://www.deezer.com/album/148370382
+- Luis Silva — «Instrumentales» (14714) · deezer · 14 pistas (creado en la etapa 3) · https://www.deezer.com/album/13152976
+- Luis Silva — «Antología Musical» (14715) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/1012924861
+- Luis Silva — «Ama-me, Beija-me» (14716) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/823478891
+- Luis Silva — «Vou dar-te o meu amor» (14717) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/826713981
+- Luis Silva — «COMETA» (14718) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/679702831
+- Luis Silva — «Limites» (14719) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/649171961
+- Luis Silva — «misturinha» (14720) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/531218122
+- Luis Silva — «Nøkler» (14721) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/426813737
+- Luis Silva — «Vodoo in You» (14722) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/55578822
+- Luis Silva — «Love Me, Kiss Me» (14723) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/15267441
+- Luis Silva — «Sunshine on You» (14724) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/15141495
+- Luis Silva — «Écoutez-moi» (14725) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/43187101
+- Luis Silva — «A Dança das Meninas» (14726) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/13916968
+- Luis Silva — «I Want to Give My Love» (14727) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/12873246
+- Quinteto Contrapunto — «Quinteto Contrapunto» (8865) · deezer · 12 pistas (discografía Deezer de la ficha: título igual) · https://www.deezer.com/album/12838410
+- Quinteto Contrapunto — «Quinteto Contrapunto, Vol 5» (8870) · deezer · 11 pistas (discografía Deezer de la ficha: título igual) · https://www.deezer.com/album/384106507
+- Quinteto Contrapunto — «De Coleccion Quinteto» (14915) · deezer · 24 pistas (creado en la etapa 3) · https://www.deezer.com/album/13174778
+- Tambor Urbano — «Tambor Urbano» (9057) · musicbrainz · 10 duraciones (10 pistas en común) · https://musicbrainz.org/release/52ab6d24-2508-4da9-8ddc-9e7f7c39ff30
+- Tambor Urbano — «Que No Se Pare la Rumba» (9059) · musicbrainz · 3 duraciones (3 pistas en común) · https://musicbrainz.org/release/5890c41b-b5a3-4b89-a515-def3d86b19e1
+- Tambor Urbano — «Fulía, Golpe y Parranda» (9060) · deezer · 4 duraciones (4 pistas en común) · https://www.deezer.com/album/94885972
+- Tambor Urbano — «Grandes Exitos» (9061) · musicbrainz · 16 pistas (discografía MB de la ficha: título igual) · https://musicbrainz.org/release/01ffc4d7-898c-43b1-8366-f2f922f028bf
+- Tambor Urbano — «La Rumba Continúa...» (9062) · deezer · 7 duraciones (7 pistas en común) · https://www.deezer.com/album/94764032
+- Tambor Urbano — «Sólo Exitos» (9063) · deezer · 16 pistas (discografía Deezer de la ficha: título igual) · https://www.deezer.com/album/76097432
+- Tambor Urbano — «Fashion» (9064) · deezer · 10 pistas (discografía Deezer de la ficha: título igual) · https://www.deezer.com/album/94076762
+- Tambor Urbano — «La Rumba Para Bailar y Gozar» (9065) · deezer · 11 pistas (discografía Deezer de la ficha: título igual) · https://www.deezer.com/album/94609312
+- Tambor Urbano — «GRANDES EXITOS 35 ANIVERSARIO TAMBOR URBANO» (14941) · deezer · 35 pistas (creado en la etapa 3) · https://www.deezer.com/album/418702967
+- Tambor Urbano — «TAMBOR URBANO SINFONICO TEATRO JUNIN (EN VIVO)» (14942) · deezer · 11 pistas (creado en la etapa 3) · https://www.deezer.com/album/365443777
+- Tambor Urbano — «Mi Corazón en Venezuela (En Vivo)» (14943) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/339424797
+- Tambor Urbano — «EL MANDUCO 2.0» (14944) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/903558942
+- Tambor Urbano — «ANDARA 2.0» (14945) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/814082321
+- Tambor Urbano — «A LAS MUJERES SE LES DÁ (Remix)» (14946) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/767497121
+- Tambor Urbano — «LA LENGUA - QUE SE PARE EL TAMBOR» (14947) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/662906781
+- Tambor Urbano — «La Morena» (14948) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/189062032
+- Un Solo Pueblo — «La Música Navideña de Un Solo Pueblo» (9072) · deezer · 9 duraciones (9 pistas en común) · https://www.deezer.com/album/183273842
+- Un Solo Pueblo — «La Música de Un Solo Pueblo Vol. 2» (9073) · deezer · 7 duraciones (7 pistas en común) · https://www.deezer.com/album/187377992
+- Un Solo Pueblo — «La Música de Un Solo Pueblo Vol. 3» (9074) · deezer · 10 duraciones (10 pistas en común) · https://www.deezer.com/album/184882352
+- Un Solo Pueblo — «La Música de Un Solo Pueblo Vol. 4» (9076) · deezer · 3 duraciones (3 pistas en común) · https://www.deezer.com/album/184882202
+- Un Solo Pueblo — «La Música de Un Solo Pueblo Vol. 5» (9077) · deezer · 8 duraciones (8 pistas en común) · https://www.deezer.com/album/183273812
+- Un Solo Pueblo — «Música Navideña de Un Solo Pueblo Vol. 2» (9078) · deezer · 10 duraciones (10 pistas en común) · https://www.deezer.com/album/355242247
+- Un Solo Pueblo — «La Música de Un Solo Pueblo Vol. 6» (9079) · deezer · 7 duraciones (7 pistas en común) · https://www.deezer.com/album/13317247
+- Un Solo Pueblo — «Alúmbrame El Zaguán» (9081) · deezer · 9 duraciones (9 pistas en común) · https://www.deezer.com/album/12972680
+- Un Solo Pueblo — «La Fiesta» (9082) · deezer · 10 duraciones (10 pistas en común) · https://www.deezer.com/album/12972756
+- Un Solo Pueblo — «Con Su Música A Otra Parte» (9083) · deezer · 8 duraciones (8 pistas en común) · https://www.deezer.com/album/12972760
+- Un Solo Pueblo — «La música de Venezuela» (14936) · musicbrainz · 9 pistas (creado en la etapa 3) · https://musicbrainz.org/release/725f0f81-b649-4b31-8c8f-9fae6cb697e7
+- Un Solo Pueblo — «Caracas Caracas» (14937) · deezer · 9 pistas (creado en la etapa 3) · https://www.deezer.com/album/13174824
+- Un Solo Pueblo — «Un Solo Pueblo 12 + 1» (14938) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/13213760
+- Un Solo Pueblo — «ORIGINAL» (14939) · deezer · 4 pistas (creado en la etapa 3) · https://www.deezer.com/album/514010272
+- Un Solo Pueblo — «La Música de un Solo Pueblo» (14940) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/184504882
+- Reyna Lucero — «Sigo Siendo Reyna» (9131) · deezer · 10 duraciones (10 pistas en común) · https://www.deezer.com/album/13461965
+- Reyna Lucero — «La Impactante» (9308) · deezer · 10 duraciones (10 pistas en común) · https://www.deezer.com/album/1041575002
+- Reyna Lucero — «Dueña y Señora» (9315) · deezer · 11 duraciones (11 pistas en común) · https://www.deezer.com/album/13514941
+- Reyna Lucero — «Triángulo De Amor» (9316) · deezer · 11 duraciones (11 pistas en común) · https://www.deezer.com/album/13470313
+- Reyna Lucero — «Cancionera» (9321) · deezer · 12 duraciones (12 pistas en común) · https://www.deezer.com/album/248569682
+- Reyna Lucero — «Lunita Llanera» (9325) · deezer · 8 duraciones (8 pistas en común) · https://www.deezer.com/album/237208162
+- Reyna Lucero — «Sus Exitos» (9326) · deezer · 19 duraciones (19 pistas en común) · https://www.deezer.com/album/73099702
+- Reyna Lucero — «La Consentida» (14701) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/1063839911
+- Reyna Lucero — «16 Grandes Éxitos» (14702) · deezer · 16 pistas (creado en la etapa 3) · https://www.deezer.com/album/88725502
+- Reyna Lucero — «Segundo Impacto De Reyna Lucero» (14703) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/83900222
+- Reyna Lucero — «Aires De Mi Tierra» (14704) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/1045997862
+- Reyna Lucero — «100 X 100 Criollo» (14705) · deezer · 14 pistas (creado en la etapa 3) · https://www.deezer.com/album/13061446
+- Reynaldo Armas — «La Inspiración Del Poeta» (9329) · deezer · 12 duraciones (12 pistas en común) · https://www.deezer.com/album/72329642
+- Reynaldo Armas — «Cantor, Poeta y Pintor» (9330) · musicbrainz · 11 duraciones (11 pistas en común) · https://musicbrainz.org/release/54741493-e6ed-4681-ad44-add6990c7b17
+- Reynaldo Armas — «La Flor De La Amistad» (9331) · musicbrainz · 9 duraciones (9 pistas en común) · https://musicbrainz.org/release/f723c447-e21b-48ef-a6f0-3a54f12776da
+- Reynaldo Armas — «Todo Un Señor» (9333) · musicbrainz · 9 duraciones (9 pistas en común) · https://musicbrainz.org/release/8ec6b041-12e8-47ac-b326-a5be978b9967
+- Reynaldo Armas — «A Quién Pueda Interesar» (9338) · deezer · 12 duraciones (12 pistas en común) · https://www.deezer.com/album/12925498
+- Reynaldo Armas — «Mi Credo» (9339) · musicbrainz · 11 duraciones (11 pistas en común) · https://musicbrainz.org/release/8cf3c57c-d191-4e5f-9d5a-01247420751d
+- Reynaldo Armas — «Romance Campesino» (9340) · deezer · 12 duraciones (12 pistas en común) · https://www.deezer.com/album/12925604
+- Reynaldo Armas — «Con Mucho Sentimiento» (9341) · deezer · 10 duraciones (10 pistas en común) · https://www.deezer.com/album/12925392
+- Reynaldo Armas — «Pa’ Que Te Acuerdes De Mí» (9342) · deezer · 11 duraciones (11 pistas en común) · https://www.deezer.com/album/11960998
+- Reynaldo Armas — «El Amor y La Envidia» (9344) · deezer · 11 duraciones (11 pistas en común) · https://www.deezer.com/album/340797187
+- Reynaldo Armas — «No Hay Mal Que Dure Cien Años» (9345) · musicbrainz · 9 duraciones (9 pistas en común) · https://musicbrainz.org/release/85e422cd-dceb-4f59-866c-cc6283efeffa
+- Reynaldo Armas — «Colosal» (9346) · deezer · 12 duraciones (12 pistas en común) · https://www.deezer.com/album/340797287
+- Reynaldo Armas — «Aquí Está El Cardenalito» (9347) · deezer · 9 duraciones (9 pistas en común) · https://www.deezer.com/album/340797227
+- Reynaldo Armas — «Génesis» (9348) · deezer · 10 duraciones (10 pistas en común) · https://www.deezer.com/album/340797357
+- Reynaldo Armas — «La Manzana» (9349) · deezer · 10 duraciones (10 pistas en común) · https://www.deezer.com/album/340723397
+- Reynaldo Armas — «Látigo En Mano» (9350) · deezer · 10 duraciones (10 pistas en común) · https://www.deezer.com/album/340797107
+- Reynaldo Armas — «Reflexiones del Año 2000» (9351) · deezer · 11 duraciones (11 pistas en común) · https://www.deezer.com/album/339311437
+- Reynaldo Armas — «Reynalderías» (9352) · musicbrainz · 12 duraciones (12 pistas en común) · https://musicbrainz.org/release/ef28683c-66d2-4bb1-8b60-76586ccbd2de
+- Reynaldo Armas — «Tu Cantante Favorito» (9354) · musicbrainz · 15 duraciones (15 pistas en común) · https://musicbrainz.org/release/d80f5dd3-720f-45ca-bbf3-15eb840e7cca
+- Reynaldo Armas — «Entre Muchachas y Guacharacas» (9355) · deezer · 6 duraciones (6 pistas en común) · https://www.deezer.com/album/332021927
+- Reynaldo Armas — «El Campeón» (9356) · musicbrainz · 12 duraciones (12 pistas en común) · https://musicbrainz.org/release/8197d566-f602-4c41-9d65-090ea059a8bb
+- Reynaldo Armas — «La Muerte del Rucio Moro» (9358) · musicbrainz · 8 duraciones (8 pistas en común) · https://musicbrainz.org/release/ac67e13e-6e19-4780-848c-4ce5a39b1dc3
+- Reynaldo Armas — «Repasando Distancias» (9359) · deezer · 11 duraciones (11 pistas en común) · https://www.deezer.com/album/128380522
+- Reynaldo Armas — «Los 40 Super Exitos» (9363) · musicbrainz · 37 duraciones (37 pistas en común) · https://musicbrainz.org/release/c6c629bc-f23b-4183-922f-a59432832ebd
+- Reynaldo Armas — «Un Eterno Enamorado» (9365) · deezer · 16 duraciones (16 pistas en común) · https://www.deezer.com/album/522680112
+- Reynaldo Armas — «18 Excepcionales Exitos» (9367) · musicbrainz · 16 duraciones (16 pistas en común) · https://musicbrainz.org/release/691fca28-3797-49e8-9967-c7943a83ef9e
+- Reynaldo Armas — «Colección los número uno» (14651) · musicbrainz · 16 pistas (creado en la etapa 3) · https://musicbrainz.org/release/65747ef6-f402-4fc5-bf53-8faf94bb314c
+- Reynaldo Armas — «Recios Reynalderos» (14652) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/7c2d15e8-9619-47cd-b751-f63f948df909
+- Reynaldo Armas — «21 excepcionales éxitos» (14653) · musicbrainz · 21 pistas (creado en la etapa 3) · https://musicbrainz.org/release/777789a8-4e3a-4c17-b2ab-286a09232a7e
+- Reynaldo Armas — «Copla, verso y canto» (14654) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/d9f36a6f-772c-4db9-979e-db04110386cb
+- Reynaldo Armas — «El Indio» (14655) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/f7f3891c-28af-46f7-97f9-91f0ecdb293d
+- Reynaldo Armas — «El Caballo De Oro (Latin Grammy 2012 2013)» (14656) · deezer · 13 pistas (creado en la etapa 3) · https://www.deezer.com/album/289156602
+- Reynaldo Armas — «Reynaldo Armas en Cuarentena» (14657) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/227017742
+- Reynaldo Armas — «Frente A Frente» (14658) · deezer · 16 pistas (creado en la etapa 3) · https://www.deezer.com/album/522677522
+- Reynaldo Armas — «Con Sentimiento» (14659) · deezer · 16 pistas (creado en la etapa 3) · https://www.deezer.com/album/522670212
+- Reynaldo Armas — «Triunfadores De Siempre» (14660) · deezer · 16 pistas (creado en la etapa 3) · https://www.deezer.com/album/522673952
+- Reynaldo Armas — «Reynaldo Armas Instrumentales (Instrumental)» (14661) · deezer · 16 pistas (creado en la etapa 3) · https://www.deezer.com/album/344880177
+- Reynaldo Armas — «El Tesoro Más Grande» (14662) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/864667362
+- Reynaldo Armas — «CARDENAL TE NECESITA» (14663) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/778302081
+- Reynaldo Armas — «La Tristeza de mi Copla» (14664) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/514711822
+- Reynaldo Armas — «Amor De Peluche» (14665) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/468696655
+- Reynaldo Armas — «Mamándole Gallo al Tiempo» (14666) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/498227031
+- Reynaldo Armas — «Tiempo que se va no Vuelve» (14667) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/735172991
+- Reynaldo Armas — «A Usted» (14668) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/735208231
+- Aldemaro Romero — «Dinner In Caracas» (9434) · musicbrainz · 2 duraciones (8 pistas en común) · https://musicbrainz.org/release/8ab9c4ba-706f-4077-ae2b-f6659a905225
+- Aldemaro Romero — «Flight To Romance» (9436) · deezer · 11 duraciones (11 pistas en común) · https://www.deezer.com/album/63028732
+- Aldemaro Romero — «Aldemaro Romero And His Onda Nueva» (9455) · deezer · 11 duraciones (11 pistas en común) · https://www.deezer.com/album/304704357
+- Aldemaro Romero — «Una Por Una» (9460) · deezer · 11 duraciones (11 pistas en común) · https://www.deezer.com/album/716046
+- Aldemaro Romero — «Lo Mejor De Lo Mejor» (9473) · musicbrainz · 12 duraciones (12 pistas en común) · https://musicbrainz.org/release/1938e046-a8fe-4735-a751-38af5c95b96d
+- Aldemaro Romero — «Lo mejor de lo mejor 2» (13094) · musicbrainz · 12 pistas (creado en la etapa 3) · https://musicbrainz.org/release/c3eb0744-cdcb-4ca9-a1b0-541878f3902d
+- Aldemaro Romero — «Aldemaro desde Jazz / Jazz desde Aldemaro» (13095) · musicbrainz · 33 pistas (creado en la etapa 3) · https://musicbrainz.org/release/e3ec230a-c5f9-4591-9856-8a78125c6fb7
+- Aldemaro Romero — «Aldemaro Romero» (13096) · musicbrainz · 12 pistas (creado en la etapa 3) · https://musicbrainz.org/release/d1cc0e6e-c082-4855-b7f9-6cb4d62c3886
+- Aldemaro Romero — «Fuga con Pajarillo - Aldemaro Romero Suites (English Chamber Orchestra)» (13097) · musicbrainz · 12 pistas (creado en la etapa 3) · https://musicbrainz.org/release/f4d9bb16-6b64-4354-819c-081ff0211dca
+- Aldemaro Romero — «Venezuela De Mis Recuerdos» (13098) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/681870451
+- Aldemaro Romero — «En el Malibu» (13099) · deezer · 9 pistas (creado en la etapa 3) · https://www.deezer.com/album/112853362
+- Aldemaro Romero — «La Onda Brava y Su Nueva Onda» (13100) · deezer · 9 pistas (creado en la etapa 3) · https://www.deezer.com/album/103351032
+- Aldemaro Romero — «Colombia de Gala» (13101) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/524350642
+- Aldemaro Romero — «La Turpialita» (13102) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/524379692
+- Aldemaro Romero — «Cantares de Mi Tierra» (13103) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/524503102
+- Aldemaro Romero — «Arriba el Joropo» (13104) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/524593082
+- Aldemaro Romero — «Onda Nueva: 16 Éxitos de Aldemaro Romero» (13105) · deezer · 16 pistas (creado en la etapa 3) · https://www.deezer.com/album/522661292
+- Aldemaro Romero — «Aldemaro Romero y Su Onda Nueva La Onda Maxima» (13106) · deezer · 14 pistas (creado en la etapa 3) · https://www.deezer.com/album/522673132
+- Aldemaro Romero — «Dinner In Caracas, Vol 2. (Cena en Caracas)» (13107) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/524008712
+- Aldemaro Romero — «Trópico» (13108) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/524551752
+- Aldemaro Romero — «Venezuela De Mis Recuerdos Vol. 3» (13109) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/1029045052
+- Aldemaro Romero — «Musica del Recuerdo para Ti» (13110) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/89848652
+- Aldemaro Romero — «And His Onda Nueva» (13111) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/106772122
+- El Cuarteto — «El Cuarteto Vol. IV» (9643) · deezer · 10 pistas (discografía Deezer de la ficha: título igual) · https://www.deezer.com/album/13464537
+- El Cuarteto — «El Cuarteto en Nochebuena» (9648) · deezer · 12 pistas (discografía Deezer de la ficha: título igual) · https://www.deezer.com/album/123332972
+- El Cuarteto — «De Pascuas con El Cuarteto» (9652) · deezer · 13 duraciones (13 pistas en común) · https://www.deezer.com/album/123334942
+- El Cuarteto — «Volumen 5» (14926) · musicbrainz · 12 pistas (creado en la etapa 3) · https://musicbrainz.org/release/89f1ea5d-e3e5-428e-bf28-3a14926fe8fe
+- El Cuarteto — «El Cuarteto con Clara Rodríguez» (14927) · musicbrainz · 15 pistas (creado en la etapa 3) · https://musicbrainz.org/release/e16c6b35-11ca-47f1-885b-9c227a166dbd
+- El Cuarteto — «La colección» (14928) · musicbrainz · 14 pistas (creado en la etapa 3) · https://musicbrainz.org/release/114b9850-10ae-494b-8e39-d2f08c778699
+- El Cuarteto — «20 éxitos» (14929) · musicbrainz · 20 pistas (creado en la etapa 3) · https://musicbrainz.org/release/a4092896-7b8f-48f4-a786-33789f719978
+- El Cuarteto — «20 Grandes Exitos: El Cuarteto y Quinteto Contrapunto» (14930) · deezer · 20 pistas (creado en la etapa 3) · https://www.deezer.com/album/268949012
+- Ensamble Gurrufío — «El Cruzao» (9659) · musicbrainz · 14 pistas (discografía MB de la ficha: título igual) · https://musicbrainz.org/release/a8688ea7-eb1b-4d12-b83f-5b9454622e4b
+- Ensamble Gurrufío — «Sesiones con Moises Torrealba» (9664) · musicbrainz · 1 duraciones (12 pistas en común) · https://musicbrainz.org/release/d095ed3c-121a-49db-a5c8-60f9d227db90
+- Ensamble Gurrufío — «Camerata Criolla» (14906) · musicbrainz · 9 pistas (creado en la etapa 3) · https://musicbrainz.org/release/588fdbee-c52b-462e-a7a8-f3ba9e89f462
+- Ensamble Gurrufío — «Santa Fe Chamber Music Festival» (14907) · musicbrainz · 12 pistas (creado en la etapa 3) · https://musicbrainz.org/release/f4807cf2-bd14-433d-ab37-809935928b64
+- Ensamble Gurrufío — «Ensamble y Serenata» (14908) · musicbrainz · 15 pistas (creado en la etapa 3) · https://musicbrainz.org/release/99f648e1-478e-48dc-9dfd-39d5719c7ddf
+- Ensamble Gurrufío — «Gran Mariscal de Ayacucho» (14909) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/f8b9e24d-7957-4617-951e-2f6ce61c217f
+- Ensamble Gurrufío — «Sessões com Hamilton de Holanda» (14910) · musicbrainz · 11 pistas (creado en la etapa 3) · https://musicbrainz.org/release/e41e0061-86f5-45a8-bee0-5de7c1b29b6f
+- Ensamble Gurrufío — «Cancionero Infantil Venezolano» (14911) · deezer · 20 pistas (creado en la etapa 3) · https://www.deezer.com/album/337869927
+- Ensamble Gurrufío — «Gurrufío en Vivo 15 Años» (14912) · deezer · 13 pistas (creado en la etapa 3) · https://www.deezer.com/album/261722822
+- Ensamble Gurrufío — «Isla: 500 Years of the Discovery» (14913) · deezer · 13 pistas (creado en la etapa 3) · https://www.deezer.com/album/9946060
+- Ensamble Gurrufío — «Serenata Guayanesa Con Ensamble Gurrufío» (14914) · deezer · 15 pistas (creado en la etapa 3) · https://www.deezer.com/album/261698332
+- Saúl Vera — «Bandola de Reyes» (9793) · deezer · 14 pistas (discografía Deezer de la ficha: título igual) · https://www.deezer.com/album/795995
+- Saúl Vera — «Selva y Lujuria» (9794) · deezer · 13 pistas (discografía Deezer de la ficha: título igual) · https://www.deezer.com/album/795994
+- Saúl Vera — «Tierra Cálida» (9795) · deezer · 12 pistas (discografía Deezer de la ficha: título igual) · https://www.deezer.com/album/795993
+- Arca — «「bad i am」» (12718) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/a0f6a441-c7c3-40c6-a177-da29bab7cd71
+- Arca — «Kick» (12719) · musicbrainz · 26 pistas (creado en la etapa 3) · https://musicbrainz.org/release/554a15b3-875d-4287-82a6-9f31479b23cb
+- Arca — «Love You in Chains» (12720) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/6b0bd76c-46da-43e3-b8c2-ff6eda3533ce
+- Arca — «Stretch 2» (12721) · musicbrainz · 9 pistas (creado en la etapa 3) · https://musicbrainz.org/release/4287fe13-8539-44e1-ad79-af1a55ef58aa
+- Arca — «Arca» (12722) · musicbrainz · 14 pistas (creado en la etapa 3) · https://musicbrainz.org/release/0167753b-ef33-4889-88f1-7a3a729e9c52
+- Arca — «Cayó» (12723) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/88295726-8daf-49de-9c2c-205cc9114b88
+- Arca — «Baron Foyel» (12724) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/76d0835a-f7ab-44fa-94cf-5476ea2a2190
+- Arca — «Open Letter» (12725) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/ae51e387-b327-4624-8907-864cef74d6d6
+- Arca — «Time» (12726) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/8cf845ae-3328-4b47-b342-e4f6c609a881
+- Arca — «KiCk: ThE cOmPlEtE cYcLe» (12727) · musicbrainz · 59 pistas (creado en la etapa 3) · https://musicbrainz.org/release/407abfb4-7d24-40b3-b238-64c759747638
+- Arca — «Washed Clean» (12728) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/7ee160ee-3d6a-471c-918d-980b30bc9f7d
+- Arca — «「prayer」» (12729) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/71b36b86-683c-41d9-bcb6-25dd60652b01
+- Arca — «「AALIYAH」x あいのうた» (12730) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/da11dc22-82b9-4018-b427-5f60e09c1891
+- Arca — «Electra Rex» (12731) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/5aed6af1-ef54-41e5-9e74-2b89d79aafcd
+- Arca — «Queer» (12732) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/81f9143d-f817-41da-9f72-804d32a72afb
+- Arca — «Born Yesterday» (12733) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/d88d3871-7aac-4847-a1d0-2a676efcfa4f
+- Arca — «Gender Wayang Arca Ember» (12734) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/951e9f50-7d6b-4ccb-832e-9cf4a8e6e3fa
+- Arca — «Chama» (12735) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/5e9e90d3-df0e-4abe-84c2-64996a7b4825
+- Arca — «On My Body Grind Edit» (12736) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/187b3631-5bff-4a55-8c9c-9706ab8c019d
+- Arca — «Anoche» (12737) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/e277a0c5-e4a0-4624-9326-9b05bfe88338
+- Arca — «Prada / Rakata» (12738) · musicbrainz · 2 pistas (creado en la etapa 3) · https://musicbrainz.org/release/47ddbaf7-8f29-4dee-b94e-fe7ba3be3578
+- Arca — «Lana Monument 116 BPM» (12739) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/cba16935-c530-4ca7-a5a1-27b1b81890e9
+- Arca — «Mutant» (12740) · musicbrainz · 21 pistas (creado en la etapa 3) · https://musicbrainz.org/release/166391d5-5298-4688-9674-5181aac2d6f3
+- Arca — «Яitual» (12741) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/262431d6-01ca-4cda-ab01-8384317c5916
+- Arca — «「my sword is like wo」» (12742) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/2d568559-dcc3-4d86-962a-9442745e1c94
+- Arca — «Barón libre» (12743) · musicbrainz · 4 pistas (creado en la etapa 3) · https://musicbrainz.org/release/6f731dc7-a51b-4fab-b30c-6b77eda71134
+- Arca — «Vanity» (12744) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/1775cfae-291b-42d1-a146-88ce9737a0b6
+- Arca — «Incendio» (12745) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/e0fedbc2-adc8-4801-9fe1-e6de27595241
+- Arca — «Puta / Sola» (12746) · musicbrainz · 2 pistas (creado en la etapa 3) · https://musicbrainz.org/release/06431f2a-2e9a-4b17-8b61-1c427ac30b47
+- Arca — «Piel» (12747) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/0c785b76-61d4-4f26-bed4-d7a3ae1c7a64
+- Arca — «FADER/MoMA PS1 Warm Up Mix» (12748) · musicbrainz · 16 pistas (creado en la etapa 3) · https://musicbrainz.org/release/bcccb9fc-acf1-4a1c-9ec0-f3e2c700c0cc
+- Arca — «KICK ii» (12749) · musicbrainz · 12 pistas (creado en la etapa 3) · https://musicbrainz.org/release/578bfd01-0a26-45f1-b7fb-c2e051410185
+- Arca — «KLK - Single» (12750) · musicbrainz · 2 pistas (creado en la etapa 3) · https://musicbrainz.org/release/4e1c4300-d12d-4bf8-84a0-c796a043fb57
+- Arca — «KiCk StReAm: Raw and Dirty Compilation of Unreleased Arca Songs» (12751) · musicbrainz · 13 pistas (creado en la etapa 3) · https://musicbrainz.org/release/3d9efe6c-b8df-4d47-b111-06509fcc782c
+- Arca — «Airdoll» (12752) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/13fbf7ce-989f-477d-88e6-67aebac14ba4
+- Arca — «Hips Don’t Lie» (12753) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/45a87e14-d080-41bc-b80d-aaddf799dd10
+- Arca — «Sheep» (12754) · musicbrainz · 11 pistas (creado en la etapa 3) · https://musicbrainz.org/release/9b1c6788-f3ac-416a-9cb0-f1878693f5bf
+- Arca — «&&&&&» (12755) · musicbrainz · 14 pistas (creado en la etapa 3) · https://musicbrainz.org/release/435ddd5d-607a-42e7-9e65-80db13ccb78a
+- Arca — «kick iiii» (12756) · musicbrainz · 11 pistas (creado en la etapa 3) · https://musicbrainz.org/release/3f798b36-de99-4ae2-b1bb-369a50ca317c
+- Arca — «KiCk i» (12757) · musicbrainz · 12 pistas (creado en la etapa 3) · https://musicbrainz.org/release/319d6c5a-cdda-42c8-809a-3128bc30aec3
+- Arca — «Entrañas» (12758) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/24e0f262-8696-46ce-9212-bc5091c59a52
+- Arca — «Nonbinary» (12759) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/9ee4e86c-821f-4590-8c73-2fb117bd9e2f
+- Arca — «Stretch 1» (12760) · musicbrainz · 6 pistas (creado en la etapa 3) · https://musicbrainz.org/release/03b4ad91-a71e-4bf2-a4be-7887bc15d285
+- Arca — «Wound / Sad Bitch» (12761) · musicbrainz · 2 pistas (creado en la etapa 3) · https://musicbrainz.org/release/a5b8bd1d-ab5f-4d41-b331-4ae5903d5b7b
+- Arca — «Fetiche» (12762) · musicbrainz · 4 pistas (creado en la etapa 3) · https://musicbrainz.org/release/381afbe3-d479-432d-a7b4-6a6f74e9c8de
+- Arca — «Issued by Bottega» (12763) · musicbrainz · 7 pistas (creado en la etapa 3) · https://musicbrainz.org/release/62f52c71-1357-4672-b70b-04feaeb55614
+- Arca — «Xen» (12764) · musicbrainz · 15 pistas (creado en la etapa 3) · https://musicbrainz.org/release/b4e4e7bb-310e-4c17-a811-1a673c5185e6
+- Arca — «KicK iii» (12765) · musicbrainz · 12 pistas (creado en la etapa 3) · https://musicbrainz.org/release/be1bc549-a80c-4910-a14b-d8dd06f7bcfd
+- Arca — «Mequetrefe» (12767) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/0bb142ac-6d73-403f-8e47-b0ffb46f2e94
+- Arca — «XXXXX» (12768) · musicbrainz · 16 pistas (creado en la etapa 3) · https://musicbrainz.org/release/1fb04753-e4d1-47f7-a3ec-5bbdd16ddb6c
+- Arca — «Thievery» (12769) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/a25e4fe6-f4a8-4219-ac73-ea567fce0732
+- Arca — «Madre» (12770) · musicbrainz · 4 pistas (creado en la etapa 3) · https://musicbrainz.org/release/50c09172-7c42-42fd-9b6a-983fc91b36c8
+- Arca — «Monstruosidad» (12771) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/7ab64694-c01d-4bb6-9781-12f11665a1f9
+- Arca — «kiCK iiiii» (12772) · musicbrainz · 12 pistas (creado en la etapa 3) · https://musicbrainz.org/release/48c82b3e-683c-4b00-bd88-d292d680b637
+- Arca — «Riquiquí;Bronze-Instances(1-100)» (12773) · musicbrainz · 100 pistas (creado en la etapa 3) · https://musicbrainz.org/release/41d31fe0-fc58-4219-88cd-754424f14ef5
+- Arca — «Balamb Garden» (12774) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/dc39bcaf-8a60-44ff-98ca-3e96f3940079
+- Arca — «Knot» (12775) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/fa7857f8-72b9-4db7-9acb-e2db1e9a432b
+- Arca — «Live @ Boiler Room, Caracas, Venezuela 2024.03.16» (12776) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/14b1dc1d-8b55-470e-97ed-1a698863cabd
+- Arca — «Reverie» (12777) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/b23cc16f-31ea-4358-82fa-f5110e0f97c0
+- Aérea Negrot — «Right Body Wrong Time» (12818) · musicbrainz · 4 pistas (creado en la etapa 3) · https://musicbrainz.org/release/b9121316-9622-420f-a1d7-a16ad9dfc495
+- Aérea Negrot — «It's Lover, Love Remixes» (12819) · musicbrainz · 7 pistas (creado en la etapa 3) · https://musicbrainz.org/release/e407d5f5-ebba-4f46-bba3-2ad7bb195211
+- Aérea Negrot — «All I Wanna Do» (12820) · musicbrainz · 4 pistas (creado en la etapa 3) · https://musicbrainz.org/release/43c7c273-5047-4853-8d23-6e0b49fd7bf0
+- Aérea Negrot — «Arabxilla» (12821) · musicbrainz · 14 pistas (creado en la etapa 3) · https://musicbrainz.org/release/3ecda37f-230e-4890-b91c-24682207d98c
+- Aérea Negrot — «Macuto» (12822) · deezer · 7 pistas (creado en la etapa 3) · https://www.deezer.com/album/62682592
+- Sunsplash — «13» (12823) · musicbrainz · 5 pistas (creado en la etapa 3) · https://musicbrainz.org/release/ac5392f0-60be-489a-810a-5605392b9cd7
+- Sunsplash — «Sub Rosa» (12824) · deezer · 4 pistas (creado en la etapa 3) · https://www.deezer.com/album/747224221
+- Sunsplash — «Jaguar» (12825) · deezer · 2 pistas (creado en la etapa 3) · https://www.deezer.com/album/745686541
+- Sunsplash — «Otro Reggaeton Depre» (12826) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/745685551
+- Sunsplash — «Útera» (12827) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/754524871
+- Sunsplash — «Stalin Rivas» (12828) · deezer · 2 pistas (creado en la etapa 3) · https://www.deezer.com/album/745366881
+- Sunsplash — «Besos Infinitos» (12829) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/745366951
+- Sunsplash — «1988» (12830) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/745364541
+- Sunsplash — «Humedad» (12831) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/745359281
+- Sunsplash — «POSTALES TROPICALES» (12832) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/746148671
+- Sunsplash — «Lluvia» (12833) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/745363121
+- Sunsplash — «Fluyendo» (12834) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/745359271
+- Sunsplash — «Humo» (12835) · deezer · 2 pistas (creado en la etapa 3) · https://www.deezer.com/album/745087571
+- Sunsplash — «Fierita» (12836) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/745089591
+- Sunsplash — «Morey Bugui» (12837) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/745089581
+- Sunsplash — «Dale Guaya» (12838) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/745077131
+- Sunsplash — «Bombacha» (12839) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/752862681
+- Adolescent's Orquesta — «La historia... Los éxitos» (12971) · musicbrainz · 18 pistas (creado en la etapa 3) · https://musicbrainz.org/release/6b840b59-00ef-4fc2-93a7-df84bf038aa1
+- Adolescent's Orquesta — «Indestructible» (12972) · musicbrainz · 13 pistas (creado en la etapa 3) · https://musicbrainz.org/release/de8f089c-03df-452b-b005-1148c33ee523
+- Adolescent's Orquesta — «Persona ideal» (12973) · musicbrainz · 7 pistas (creado en la etapa 3) · https://musicbrainz.org/release/91f15e30-b510-46c2-a52a-16fd48e01853
+- Adolescent's Orquesta — «Adolescent's Orquesta (Mixed by Alex)» (12974) · musicbrainz · 19 pistas (creado en la etapa 3) · https://musicbrainz.org/release/23205ad6-6f0a-4cd2-9749-fcd91a526cd9
+- Adolescent's Orquesta — «Ahora más que nunca» (12975) · musicbrainz · 17 pistas (creado en la etapa 3) · https://musicbrainz.org/release/55fda86f-424b-4337-992d-c304725647e3
+- Adolescent's Orquesta — «Super éxitos» (12976) · musicbrainz · 17 pistas (creado en la etapa 3) · https://musicbrainz.org/release/a0e37d71-a39d-4de5-8609-e7a4a6d406db
+- Adolescent's Orquesta — «Millenium Hits» (12977) · musicbrainz · 14 pistas (creado en la etapa 3) · https://musicbrainz.org/release/affd62d9-5488-4647-997a-c2ab89c924dc
+- Adolescent's Orquesta — «La misma pluma» (12978) · musicbrainz · 12 pistas (creado en la etapa 3) · https://musicbrainz.org/release/a2e7df19-89f5-4db0-8dc2-a027d57b69dc
+- Adolescent's Orquesta — «Grandes éxitos» (12979) · musicbrainz · 12 pistas (creado en la etapa 3) · https://musicbrainz.org/release/064e80ac-a61d-490a-8a5c-8dd58e73bf41
+- Adolescent's Orquesta — «Lo nuevo y lo mejor» (12980) · musicbrainz · 12 pistas (creado en la etapa 3) · https://musicbrainz.org/release/40201e79-93ad-4d0e-951c-c698111ce4d2
+- Adolescent's Orquesta — «Sellos de mi ADN» (12981) · musicbrainz · 11 pistas (creado en la etapa 3) · https://musicbrainz.org/release/25305800-6b0f-48f5-a67d-4cd64f841eb4
+- Adolescent's Orquesta — «Reclamando nuestro espacio» (12982) · musicbrainz · 8 pistas (creado en la etapa 3) · https://musicbrainz.org/release/8b71b532-2434-4c28-a835-87985e645b6f
+- Adolescent's Orquesta — «Tengo un amor» (12983) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/a01d2137-296d-42ea-98a2-bc2185e4384c
+- Adolescent's Orquesta — «Clásicos en vivo» (12984) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/5f0d2a1d-f70d-4c6d-beb3-4f577a05380c
+- Adolescent's Orquesta — «V.I.P. Edition» (12985) · musicbrainz · 17 pistas (creado en la etapa 3) · https://musicbrainz.org/release/de6a811e-7af7-427a-b65b-0bc08537eaaa
+- Adolescent's Orquesta — «Play Ball» (12986) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/98a0a001-0adf-4827-8201-32cdc7709067
+- Adolescent's Orquesta — «Búscame» (12987) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/df09ea33-0288-461a-925d-de1b4f9e523e
+- Adolescent's Orquesta — «Siénteme» (12988) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/cb2cbccc-3fcd-4ea6-a6de-559b4b1e5ed4
+- Adolescent's Orquesta — «Nada Más» (12989) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/709619901
+- Adolescent's Orquesta — «Mi Confesión» (12990) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/462514105
+- Adolescent's Orquesta — «Soy Latino» (12991) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/294441802
+- Adolescent's Orquesta — «Resistiré (Salsa)» (12992) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/232690702
+- Adolescent's Orquesta — «Tengo un Amor (Salsa Internacional)» (12993) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/233325322
+- Porfi Baloa — «Porfi Baloa» (12994) · musicbrainz · 5 pistas (creado en la etapa 3) · https://musicbrainz.org/release/25420f96-6089-4b9f-9c63-dff9f58118f1
+- Porfi Baloa — «Bésame» (12995) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/90c4e963-9660-4d9e-9fec-26fb982725a3
+- Porfi Baloa — «Tu mirada» (12996) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/6796402c-cc97-4483-b144-35bfb14bda9b
+- Porfi Baloa — «Live in Miami (En Vivo 2025)» (12997) · musicbrainz · 8 pistas (creado en la etapa 3) · https://musicbrainz.org/release/5e8090ef-40dc-448a-8dd4-8f6de1841f58
+- Porfi Baloa — «Alma llanera» (12998) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/5e36c618-efb8-4e0d-b640-1001e3845916
+- Porfi Baloa — «Punto y seguimos» (12999) · musicbrainz · 13 pistas (creado en la etapa 3) · https://musicbrainz.org/release/6b33079d-e550-4810-ad24-a47b60a50d9f
+- Porfi Baloa — «Amiga mía» (13000) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/59adc926-34ed-4994-a6d3-fe62beb7f751
+- Porfi Baloa — «No se puede» (13001) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/f02ecf37-5916-4835-a80f-3fedc2087cae
+- Porfi Baloa — «20 años: La historia en vivo» (13002) · musicbrainz · 28 pistas (creado en la etapa 3) · https://musicbrainz.org/release/d51ef10d-39f9-46ce-a3c6-096cbb2e3d82
+- Porfi Baloa — «Lado B (En Vivo)» (13003) · deezer · 8 pistas (creado en la etapa 3) · https://www.deezer.com/album/378029927
+- Porfi Baloa — «Déjame Dormir» (13004) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/766770061
+- Porfi Baloa — «A Zumbear Con Porfi #1» (13005) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/914706851
+- Porfi Baloa — «Medley Viva Los Blanco» (13006) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/871468012
+- Porfi Baloa — «No Te Quedes Sin Bailar» (13007) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/547552212
+- Porfi Baloa — «Serie del Caribe» (13008) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/401981937
+- Porfi Baloa — «Aún Te Amo» (13009) · deezer · 2 pistas (creado en la etapa 3) · https://www.deezer.com/album/356402727
+- Porfi Baloa — «Frente a mi Ventana (En Vivo)» (13010) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/332180147
+- Porfi Baloa — «No Te Burles (En Vivo)» (13011) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/292105642
+- Porfi Baloa — «Tú Serás (En Vivo)» (13012) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/287005832
+- Porfi Baloa — «La Hierba y la Flor» (13013) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/277047062
+- Porfi Baloa — «La Última Canción» (13014) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/242394932
+- Porfi Baloa — «El Guateque (En Vivo)» (13015) · deezer · 2 pistas (creado en la etapa 3) · https://www.deezer.com/album/245126742
+- Porfi Baloa — «Mi Niña Hermosa» (13016) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/223920682
+- Porfi Baloa — «Un Poquitico de Amor» (13017) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/187009992
+- Porfi Baloa — «Aquel Lugar (En Vivo)» (13018) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/141086322
+- Porfi Baloa — «Cambia» (13019) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/144454942
+- Porfi Baloa — «Virgen (En Vivo)» (13020) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/140121662
+- Porfi Baloa — «Mi Tierra (Triple Ft)» (13021) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/130864652
+- Porfi Baloa — «Errores» (13022) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/113691042
+- Diveana — «Noches de Media Luna» (13134) · musicbrainz · 8 pistas (creado en la etapa 3) · https://musicbrainz.org/release/2b6aa66e-f6eb-442d-997c-58f02add2041
+- Diveana — «Vuelve a Brillar la Luz» (13135) · musicbrainz · 11 pistas (creado en la etapa 3) · https://musicbrainz.org/release/24dd09c2-8cc2-4ea8-864d-565e1db70220
+- Diveana — «Dame Que Te Doy» (13136) · musicbrainz · 8 pistas (creado en la etapa 3) · https://musicbrainz.org/release/c2af7d93-0f78-4693-83f9-240188bcd1b5
+- Diveana — «La Historia Musical» (13137) · musicbrainz · 16 pistas (creado en la etapa 3) · https://musicbrainz.org/release/2d1d01bc-57eb-47e3-9e10-5710120da8aa
+- Diveana — «Exitos Exitos Exitos» (13138) · musicbrainz · 14 pistas (creado en la etapa 3) · https://musicbrainz.org/release/00c07ea6-f429-430c-9299-93c9f1b65cc7
+- Diveana — «The Best Of Latin Merengue» (13139) · musicbrainz · 16 pistas (creado en la etapa 3) · https://musicbrainz.org/release/27823a1e-0807-4eb3-89cf-03c515ca31d4
+- Diveana — «Tu Reina» (13140) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/d9c44d3f-3a17-446b-bab9-d353ed8560cf
+- Diveana — «Te Reto» (13141) · musicbrainz · 12 pistas (creado en la etapa 3) · https://musicbrainz.org/release/400076a4-49a2-49c5-afbd-2649e871f241
+- Diveana — «Que Rico Papachongo» (13142) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/26a87dc4-f3d7-4128-baa4-dc8ae8deb4e4
+- Diveana — «Me Falta Todo» (13143) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/c7ba683a-04c3-4e55-a681-420b64cf0f97
+- Diveana — «Amigos No Por Favor» (13144) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/02111207-b1e8-41d4-a91b-4fcf1edaa13a
+- Diveana — «40 años, 40 éxitos» (13145) · musicbrainz · 40 pistas (creado en la etapa 3) · https://musicbrainz.org/release/937ec86f-cf1a-4168-bb4e-2d9f6392472f
+- Diveana — «Diveana» (13146) · musicbrainz · 8 pistas (creado en la etapa 3) · https://musicbrainz.org/release/812492fe-f3af-495c-b591-f29fd1eda838
+- Diveana — «Refresh Mix» (13147) · deezer · 7 pistas (creado en la etapa 3) · https://www.deezer.com/album/978655381
+- Diveana — «Que Viva El Merengue» (13148) · deezer · 7 pistas (creado en la etapa 3) · https://www.deezer.com/album/584911592
+- Diveana — «Refresh Live Show» (13149) · deezer · 15 pistas (creado en la etapa 3) · https://www.deezer.com/album/296866102
+- Diveana — «My Playlist: Homenaje A Rubby Perez» (13150) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/807443311
+- Diveana — «Disgustada» (13151) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/907973982
+- Diveana — «Tus Ojos (Deluxe)» (13152) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/816906001
+- Diveana — «My Playlist: Homenaje a Natusha» (13153) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/642548271
+- Diveana — «Llevo» (13154) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/641390551
+- Diveana — «Fuiste Tu» (13155) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/486149515
+- Diveana — «Mix Selena (My Playlist: Homenaje A Selena Quintanilla) (Medley En Vivo)» (13156) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/421440637
+- Diveana — «Provenza (Merengue)» (13157) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/417151877
+- Diveana — «Shakira - BZRP Music Sessions Vol. 53 (Merengue)» (13158) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/415015497
+- Diveana — «Voy a Gritar Tu Nombre» (13159) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/399797777
+- Diveana — «My Playlist: (Medley) Homenaje a Fransheska / Miami Band / Lisa M (Menealo - Atrevete a Moverlo - Ponte el Sombrero - Dulce Materi» (13160) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/381615357
+- Diveana — «My Playlist: Homenaje a Wilfrido Vargas» (13161) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/335208617
+- Diveana — «My Playlist: Homenaje a las Chicas del Can (Celoso / Ta' Pillao / Las Pequeñas Cosas / Pegando Fuego / Fiebre)» (13162) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/307236567
+- Diveana — «Ladies Night» (13163) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/280791371
+- Diveana — «La Mejor Version de Mi (Merengue)» (13164) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/222579472
+- Diveana — «Lo Que Son Las Cosas . (feat. Dayana Pereira)» (13165) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/85993172
+- Diveana — «Poco a Poco» (13166) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/82221242
+- Miguel Moly — «SIempre Siempre» (13167) · musicbrainz · 8 pistas (creado en la etapa 3) · https://musicbrainz.org/release/8bf23b17-09bd-47d3-a396-e98bf83f7890
+- Miguel Moly — «20 Grandes Éxitos, Vol. 1» (13168) · musicbrainz · 20 pistas (creado en la etapa 3) · https://musicbrainz.org/release/1f807498-7dd4-40d9-a280-ddd34012c99c
+- Miguel Moly — «Techno-Merengue Style» (13169) · musicbrainz · 9 pistas (creado en la etapa 3) · https://musicbrainz.org/release/904747a7-2d60-44ea-a722-8b0120561118
+- Miguel Moly — «¿Y Cómo Se Mata El Gusano?» (13170) · musicbrainz · 14 pistas (creado en la etapa 3) · https://musicbrainz.org/release/8b01788f-f91a-4824-9deb-6063456c6190
+- Miguel Moly — «Te Ví Con Él» (13171) · musicbrainz · 8 pistas (creado en la etapa 3) · https://musicbrainz.org/release/730a48ec-ec71-433c-9d1f-d56c02232613
+- Miguel Moly — «20 Grandes Éxitos, Vol. 2» (13172) · musicbrainz · 20 pistas (creado en la etapa 3) · https://musicbrainz.org/release/e585dd7f-ef4a-4dab-a1a1-a52b13f75090
+- Miguel Moly — «Como Tú Lo Querías» (13173) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/82553009-c846-4977-b266-7c33cf82469d
+- Miguel Moly — «La Morena» (13174) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/1a67d585-0233-4edb-b8ff-fd33a2706e2a
+- Miguel Moly — «El Tecnomerengue» (13175) · deezer · 8 pistas (creado en la etapa 3) · https://www.deezer.com/album/542291672
+- Miguel Moly — «Que Critiquen y Que Hablen de Mi» (13176) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/1081085292
+- Miguel Moly — «No Te Vayas» (13177) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/863200552
+- Miguel Moly — «Eres Tu» (13178) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/754579461
+- Miguel Moly — «Mix: Junto a Tu Corazón/Siempre Siempre/Dulcemente Bella/Ya Lo Había Vivido/Mamita Mía /Quiéreme/Yo por Ti/La Morena/Te Lloré/En A» (13179) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/662973241
+- Miguel Moly — «Alma Llanera (Sinfónico)» (13180) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/634623571
+- Miguel Moly — «Tendría Que Llorar por Ti (Sinfónico)» (13181) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/629512531
+- Miguel Moly — «Sangre en Mi Cuerpo (Sinfónico)» (13182) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/620067291
+- Miguel Moly — «Lloré (Sinfonico)» (13183) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/597422512
+- Miguel Moly — «Pepas Sinfónico» (13184) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/580401631
+- Miguel Moly — «Sangre en Mi Cuerpo (En Vivo)» (13185) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/588631912
+- Miguel Moly — «Quiéreme Sinfónico» (13186) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/572375671
+- Miguel Moly — «La Faldita» (13187) · deezer · 2 pistas (creado en la etapa 3) · https://www.deezer.com/album/588929422
+- Miguel Moly — «Yo por Ti (Sinfonico)» (13188) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/562310721
+- Miguel Moly — «Junto a Tu Corazón (Sinfónico)» (13189) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/564319022
+- Miguel Moly — «Dulcemente Bella (Sinfonico )» (13190) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/554347412
+- Miguel Moly — «Mosaico: Merecumbe / Cayetano Baila Bembe / Dolores / La Rigola / Apagame la Vela» (13191) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/540273272
+- Miguel Moly — «En Algún Rincón de Mi Alma (En Vivo)» (13192) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/537368762
+- Miguel Moly — «Siempre Siempre (Sinfónico En Vivo)» (13193) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/485432665
+- Miguel Moly — «Mamita (En Vivo Sinfónico)» (13194) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/479686945
+- Miguel Moly — «La Piernona (En Vivo Sinfónico)» (13195) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/479760845
+- Miguel Moly — «Mi Angelito Luka» (13196) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/397494377
+- Joseph Palacios — «Mis Favoritas» (13247) · deezer · 5 pistas (creado en la etapa 3) · https://www.deezer.com/album/1103600232
+- Joseph Palacios — «Mi Buen Amor (Versión Bachata)» (13248) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/1078336782
+- Joseph Palacios — «Simplemente Amigos» (13249) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/933234161
+- Joseph Palacios — «Mía» (13250) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/1074574852
+- Joseph Palacios — «Tanto (feat. Diveana)» (13251) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/1074553802
+- Joseph Palacios — «Yo Quería (Salsa)» (13252) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/1075609282
+- Joseph Palacios — «Tan Enamorados (feat. Homero Gallardo)» (13253) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/1074553842
+- Joseph Palacios — «Mix Bachata Vallenato Vol1» (13254) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/513521592
+- Joseph Palacios — «Mix Bachata Vallenato : Olvídala / Me Ilusioné / Busca un Confidente» (13255) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/1075604512
+- Joseph Palacios — «Me Enamoré de Ti» (13256) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/1078851522
+- Joseph Palacios — «Mix Juan Gabriel #Bachata» (13257) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/383885957
+- Joseph Palacios — «Y ¿Si Fuera Ella?» (13258) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/1074553862
+- Chino & Nacho — «Supremo» (13262) · musicbrainz · 12 pistas (creado en la etapa 3) · https://musicbrainz.org/release/244aac14-05fa-4f3c-9376-cc59c98563b3
+- Chino & Nacho — «Los reyes del romantiqueo» (13263) · musicbrainz · 13 pistas (creado en la etapa 3) · https://musicbrainz.org/release/6c707c6a-23d0-4df9-ada5-46b7d809f0ff
+- Chino & Nacho — «Chino & Nacho Is Back» (13264) · musicbrainz · 12 pistas (creado en la etapa 3) · https://musicbrainz.org/release/b2482f6e-f468-408b-8b84-ce7e91558a9b
+- Chino & Nacho — «Bebé bonita (Brass Knuckles)» (13265) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/66fe0f5b-7d8f-41b7-94e1-7bbd37b5be63
+- Chino & Nacho — «Mi niña bonita» (13266) · musicbrainz · 15 pistas (creado en la etapa 3) · https://musicbrainz.org/release/f99e33b9-cdc5-45ba-8fde-0a22b692230e
+- Chino & Nacho — «Se apagó la llama» (13267) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/c70ed35d-5b32-44d7-a873-9cac1beb590d
+- Chino & Nacho — «Sin ti» (13268) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/288dc427-4b5c-4b7a-aba7-0685e5c247e5
+- Chino & Nacho — «El poeta» (13269) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/64503600-84aa-405c-9781-55df4fc1213c
+- Chino & Nacho — «Época de reyes» (13270) · musicbrainz · 21 pistas (creado en la etapa 3) · https://musicbrainz.org/release/a048e647-83a2-4276-b072-bd173ac0989f
+- Chino & Nacho — «Lo que no sabes tú» (13271) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/c80a273c-c4fc-421c-a773-b90b8c60ddf3
+- Chino & Nacho — «Tú me quemas» (13272) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/02982a93-1db1-40ec-888e-ae3bc29182c5
+- Chino & Nacho — «Tu angelito» (13273) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/301d8302-0053-4009-b401-9502075506ed
+- Chino & Nacho — «NIÑA BONITA 2» (13274) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/5f845439-845c-48ed-a109-90d7c15e3d6c
+- Chino & Nacho — «Radio universo» (13275) · musicbrainz · 18 pistas (creado en la etapa 3) · https://musicbrainz.org/release/224d551c-01f1-410b-89bb-f60bfbb9847f
+- Chino & Nacho — «Regálame un muack (remix)» (13276) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/7cbda8df-5dd9-4c89-8a97-d0526bc3a786
+- Chino & Nacho — «Romántico… pero le metemos brutal» (13277) · musicbrainz · 6 pistas (creado en la etapa 3) · https://musicbrainz.org/release/2d173bce-2c71-4031-9878-4af8f5239072
+- Chino & Nacho — «Andas en mi cabeza (remix)» (13278) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/fe9cecb7-c601-4fc5-abd9-907ab1cfdd89
+- Chino & Nacho — «For Babies» (13279) · musicbrainz · 12 pistas (creado en la etapa 3) · https://musicbrainz.org/release/644e10af-5974-46d6-91ff-e550f33da54c
+- Chino & Nacho — «Live: Desde el anfiteatro El Hatillo | Caracas, Venezuela» (13280) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/1fe31cae-d4ec-4a72-85ee-40e9bda88b8f
+- Chino & Nacho — «Chica ideal» (13281) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/3e274659-8072-422e-9a86-8164da4789f1
+- Chino & Nacho — «Esta noche seremos más» (13282) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/01926af5-853a-40ba-b26a-494cefb78b72
+- Chino & Nacho — «Me voy enamorando (remix)» (13283) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/6178c3d3-e857-4845-8874-7250919586ad
+- Chino & Nacho — «Niña bonita (urban remix)» (13284) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/04bd1168-6d9a-4e6f-bf00-1baecf24c099
+- Chino & Nacho — «Tú me quemas (AtellaGali dance remix)» (13285) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/e05bb709-1a33-48c4-aa59-7c9ad115e47c
+- Chino & Nacho — «RADIO VENEZUELA» (13286) · musicbrainz · 19 pistas (creado en la etapa 3) · https://musicbrainz.org/release/60e79688-1953-4607-a3a2-b686c0ba3691
+- Chino & Nacho — «Raro (live at Home)» (13287) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/eca7e71c-1154-4d94-8f51-b6d1c0def354
+- Chino & Nacho — «Chino & Nacho Live (En Vivo Desde El Anfiteatro El Hatillo, Caracas-Venezuela/2014)» (13288) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/8665991
+- Chino & Nacho — «MOSCA» (13289) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/1110922272
+- Chino & Nacho — «D' LEJITOS» (13290) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/1047248102
+- Chino & Nacho — «CARLITOS» (13291) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/952573091
+- Chino & Nacho — «ENTRÉGAME» (13292) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/952573201
+- Chino & Nacho — «TE EXTRAÑO» (13293) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/952573281
+- Chino & Nacho — «D' PUEBLO (feat. Luis Silva)» (13294) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/952573341
+- Chino & Nacho — «MALETA» (13295) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/952573351
+- Chino & Nacho — «MAR-A-CAIBO (feat. Huascar Barradas & Rafael "El Pollo" Brito)» (13296) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/952573401
+- Chino & Nacho — «DÓNDE ESTÁS» (13297) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/952574361
+- Chino & Nacho — «MOMENTOS» (13298) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/952574401
+- Chino & Nacho — «NA' GUARÁ DE LINDA» (13299) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/952574461
+- Mau y Ricky — «aiaiaiaiai» (13300) · musicbrainz · 3 pistas (creado en la etapa 3) · https://musicbrainz.org/release/326277d0-871c-41c9-8448-ff87fc8151f1
+- Mau y Ricky — «La boca (remix)» (13301) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/01f8404a-8963-4596-9ddf-023251f43f2f
+- Mau y Ricky — «3 de la mañana» (13302) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/403fe5bc-e922-4dab-9dbb-3002cb950959
+- Mau y Ricky — «Arte» (13303) · musicbrainz · 6 pistas (creado en la etapa 3) · https://musicbrainz.org/release/b443b37d-2b22-40b6-b75b-45c16bbe1c23
+- Mau y Ricky — «Mi mala» (13304) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/08f47cf1-bf4c-41fd-8628-807c4e5ca90a
+- Mau y Ricky — «Preguntas» (13305) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/e4aaeb20-7bf0-420b-b684-6c13a43887ad
+- Mau y Ricky — «Para aventuras y curiosidades» (13306) · musicbrainz · 12 pistas (creado en la etapa 3) · https://musicbrainz.org/release/16dcedf6-898c-4096-b8ed-988ad5459b2b
+- Mau y Ricky — «Voy que quemo» (13307) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/850e0e97-34f1-42bb-9331-600ebf86a84f
+- Mau y Ricky — «Iré tras de ti» (13308) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/6673b503-1e1c-4240-bcfd-f212faf4a92a
+- Mau y Ricky — «Ricky y Mau» (13309) · musicbrainz · 12 pistas (creado en la etapa 3) · https://musicbrainz.org/release/1451ebf3-5238-4b99-bf82-36f871a7afcd
+- Mau y Ricky — «Bota fuego (remix)» (13310) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/a2a8a295-0b92-4218-a94d-8a320ba0c99d
+- Mau y Ricky — «Las flores» (13311) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/3511dfa3-2518-4592-9646-1a50f06b1e2e
+- Mau y Ricky — «Noche de Luna» (13312) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/68f83b62-a81b-4e13-9440-23dafc612155
+- Mau y Ricky — «Rifresh» (13313) · musicbrainz · 11 pistas (creado en la etapa 3) · https://musicbrainz.org/release/efff8859-008c-4c7f-8b40-fcfcdd2ae9c3
+- Mau y Ricky — «LA LLAVE» (13314) · musicbrainz · 8 pistas (creado en la etapa 3) · https://musicbrainz.org/release/d8dc5feb-d8f6-409d-b486-e1710fc91be3
+- Mau y Ricky — «Hotel Caracas» (13315) · musicbrainz · 15 pistas (creado en la etapa 3) · https://musicbrainz.org/release/e6140bf7-8deb-4e1f-85a6-db3d85d26b89
+- Mau y Ricky — «Para olvidarte» (13316) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/f9ff63d9-177b-4e1e-996c-697f25bb3ceb
+- Mau y Ricky — «Mal de la cabeza» (13317) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/c7583102-be32-49aa-af7f-585dd52f076f
+- Mau y Ricky — «Llorar y llorar» (13318) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/a46d85e8-7cb2-41d3-8834-c8d58877fa2e
+- Mau y Ricky — «Tocando madera» (13319) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/ca5b306d-dd7e-4e01-b233-03ee71f4e0e0
+- Mau y Ricky — «Cosas Ricas» (13320) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/6a38541b-6cc0-4627-a37b-79d816d7dce0
+- Mau y Ricky — «MR» (13321) · musicbrainz · 12 pistas (creado en la etapa 3) · https://musicbrainz.org/release/31f0b12b-a0be-4a58-89d5-0f5b72d31f4a
+- Mau y Ricky — «Te quiero» (13322) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/2b9c72c6-0538-4c65-9e6e-9692064089ad
+- Mau y Ricky — «Manos frías» (13323) · musicbrainz · 2 pistas (creado en la etapa 3) · https://musicbrainz.org/release/75e2ec21-b698-4164-8612-2784e95fff46
+- Mau y Ricky — «voltaje» (13324) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/b331aad8-91e8-4e01-9d8b-6343c3de8626
+- Mau y Ricky — «22» (13325) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/518efcae-4cca-4270-85fe-9a4919eaf630
+- Mau y Ricky — «Mal acostumbrao» (13326) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/63cbdc6c-991c-4697-b602-8ba8d17df688
+- Mau y Ricky — «DESGENERADOS MIXTAPE» (13327) · musicbrainz · 17 pistas (creado en la etapa 3) · https://musicbrainz.org/release/03bae96a-2f73-462f-84bd-265eb83fb165
+- Mau y Ricky — «Hoy» (13328) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/818390ef-d268-455b-ba17-cd0c177389f2
+- Mau y Ricky — «Desconocidos» (13329) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/f030b6af-ef49-4d7c-95d6-c5ee2f415e0c
+- Mau y Ricky — «Llorar y Llorar (con Carin Leon)» (13330) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/319711507
+- Mau y Ricky — «No Puede Ser (con Eladio Carrion)» (13331) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/284954282
+- Mau y Ricky — «Mal Acostumbrao (con Maria Becerra)» (13332) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/253702282
+- Mau y Ricky — «Doctor (Versión Acústica)» (13333) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/239293762
+- Mau y Ricky — «OUCH» (13334) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/185593412
+- Mau y Ricky — «La Grosera» (13335) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/176583102
+- Mau y Ricky — «PAPÁS» (13336) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/164425222
+- Mau y Ricky — «Me Enamora» (13337) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/135919522
+- Mau y Ricky — «Qué Dirías?» (13338) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/112022372
+- Mau y Ricky — «Bota Fuego (con Nicky Jam)» (13339) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/113648882
+- Danny Ocean — «venequia.» (13340) · musicbrainz · 7 pistas (creado en la etapa 3) · https://musicbrainz.org/release/ad0f11ea-dff3-4fe8-8136-88fcfe5854f9
+- Danny Ocean — «VITAMINA» (13341) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/aae6c184-906e-4e9a-bcba-6fd2045002d6
+- Danny Ocean — «Epa Wei» (13342) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/aabbc930-d843-4dae-bb99-07bc9f442750
+- Danny Ocean — «Corazón» (13343) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/1a408cac-f0d3-4179-9630-5d787d7ddbc5
+- Danny Ocean — «@dannocean» (13344) · musicbrainz · 16 pistas (creado en la etapa 3) · https://musicbrainz.org/release/d8e12176-4c78-4fd8-86af-bec13b27daee
+- Danny Ocean — «Anoche» (13345) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/24ef6ac5-f8eb-4601-ac90-4a4b846c328d
+- Danny Ocean — «Babylon Club» (13346) · musicbrainz · 14 pistas (creado en la etapa 3) · https://musicbrainz.org/release/ce168a40-4917-4eac-a880-25ba6df2a950
+- Danny Ocean — «Alma Llanera / Venezuela (Live from Nobel Peace Prize 2025)» (13347) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/6325131a-c34f-46cf-97d0-01faf3235174
+- Danny Ocean — «Baby I Won’t» (13348) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/594566b4-63d3-46cc-bdcc-9e9caa7f7b68
+- Danny Ocean — «Imagínate» (13349) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/5d6646f3-bcb4-4986-8660-1ee786857b0a
+- Danny Ocean — «Priti» (13350) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/c6092e85-638e-41cf-85c3-fba6ef3d1fbe
+- Danny Ocean — «Dembow» (13351) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/a5cedc15-b1fb-4444-af6a-ff079a2a2695
+- Danny Ocean — «Me rehúso» (13352) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/2b6e9d9f-b36c-42f4-9b9a-fd04dd9031e2
+- Danny Ocean — «54+1» (13353) · musicbrainz · 13 pistas (creado en la etapa 3) · https://musicbrainz.org/release/e332b18c-1fa2-4ad3-97ea-2a2efef9cf7d
+- Danny Ocean — «Vuelve» (13354) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/e3e83a5f-89a5-40e8-b929-cb54c82253ae
+- Danny Ocean — «babylona blue» (13355) · musicbrainz · 8 pistas (creado en la etapa 3) · https://musicbrainz.org/release/848438bb-d2b0-409b-8c8c-3cac090c196f
+- Danny Ocean — «Dime tú» (13356) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/ce0b7067-3641-46da-a875-a7e98b01000a
+- Danny Ocean — «REFLEXA» (13357) · musicbrainz · 12 pistas (creado en la etapa 3) · https://musicbrainz.org/release/02f8a59e-f9fe-43d3-a93e-418edd81d6df
+- Danny Ocean — «Desahógate» (13358) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/959185421
+- Danny Ocean — «AyMami» (13359) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/768156171
+- Danny Ocean — «Ley universal» (13360) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/574686751
+- Danny Ocean — «Cero condiciones» (13361) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/554313682
+- Danny Ocean — «AMOR» (13362) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/544608152
+- Danny Ocean — «Medio Friends» (13363) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/540314462
+- Danny Ocean — «No te enamores de él» (13364) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/507760851
+- Danny Ocean — «amor tonight» (13365) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/387105327
+- Danny Ocean — «BEBE» (13366) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/355992007
+- Danny Ocean — «Volare» (13367) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/328496987
+- Danny Ocean — «Istanbul» (13368) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/290856942
+- Danny Ocean — «Rubia sol morena luna v2» (13369) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/273190082
+- Danny Ocean — «Dorito & Coca-Cola» (13370) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/263548092
+- Danny Ocean — «Tú no me conoces» (13371) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/260715672
+- Danny Ocean — «Apartamento» (13372) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/244495312
+- Danny Ocean — «Besarnos de cero» (13373) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/227721382
+- Danny Ocean — «Cuántas veces» (13374) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/212073362
+- Danny Ocean — «Pronto» (13375) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/191753372
+- Danny Ocean — «que lo que» (13376) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/127134452
+- Jerry Di — «Shorty» (13377) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/263b8879-4082-44ba-9c80-fb836ef881fe
+- Jerry Di — «DI LETRA» (13378) · musicbrainz · 9 pistas (creado en la etapa 3) · https://musicbrainz.org/release/2743b8cf-6871-4eec-b31a-650de7060e8a
+- Jerry Di — «Wapa» (13379) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/736a69e1-1f02-439b-b68a-fb654acaccc8
+- Jerry Di — «Ponme En Tu Boca» (13380) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/607a09ba-8ce1-45cb-993f-3cc279da965a
+- Jerry Di — «11:11pm» (13381) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/806899e1-12ac-4e84-b320-94940f3249ef
+- Jerry Di — «Todo Está Bien» (13382) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/1064842471
+- Jerry Di — «Ojalay» (13383) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/963263661
+- Jerry Di — «Wapa (Remix)» (13384) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/847583712
+- Jerry Di — «White Wine» (13385) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/803739261
+- Jerry Di — «Wapa (Cobuz & Bustta Remix)» (13386) · deezer · 2 pistas (creado en la etapa 3) · https://www.deezer.com/album/772334861
+- Jerry Di — «ASILO COLLECTIONS: VOL V - Aceptación» (13387) · deezer · 3 pistas (creado en la etapa 3) · https://www.deezer.com/album/651738211
+- Jerry Di — «ASILO COLLECTIONS: VOL IV - Depresión» (13388) · deezer · 3 pistas (creado en la etapa 3) · https://www.deezer.com/album/645686461
+- Jerry Di — «Obra De Arte» (13389) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/636151051
+- Jerry Di — «Si Supieras» (13390) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/611118732
+- Jerry Di — «ASILO COLLECTIONS: VOL III - Negociación» (13391) · deezer · 3 pistas (creado en la etapa 3) · https://www.deezer.com/album/604607522
+- Jerry Di — «ASILO COLLECTIONS: VOL II - Ira» (13392) · deezer · 3 pistas (creado en la etapa 3) · https://www.deezer.com/album/594740682
+- Jerry Di — «Llorarás» (13393) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/577909521
+- Jerry Di — «Katana» (13394) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/569374221
+- Jerry Di — «ASILO COLLECTIONS: VOL I - Negación» (13395) · deezer · 3 pistas (creado en la etapa 3) · https://www.deezer.com/album/560398542
+- Jerry Di — «Ke onda mami» (13396) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/539719782
+- Jerry Di — «Sé que tú quieres verme llorar» (13397) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/518539272
+- Jerry Di — «Vaticano» (13398) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/253054222
+- Jerry Di — «Adicto A Tus Sábanas» (13399) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/241441832
+- Jerry Di — «Mi Cuarto 2» (13400) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/236032082
+- Jerry Di — «El Diablo» (13401) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/226816312
+- Jerry Di — «BAD DECISIONS» (13402) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/156004292
+- Jerry Di — «Cuando» (13403) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/122161762
+- Jerry Di — «Verano En París (Remix)» (13404) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/115643362
+- Jerry Di — «Confuzio» (13405) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/111244492
+- Jerry Di — «Papi Cachondo» (13406) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/107876542
+- Jerry Di — «Culito Nuevo» (13407) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/61408872
+- Micro TDH — «Dime cuantas veces (remix)» (13408) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/e8ccf6a1-bb16-4d39-9e41-9f53b98c3d83
+- Micro TDH — «Las olas» (13409) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/f515243b-0223-429c-ab70-8b37911f4f48
+- Micro TDH — «Frío» (13410) · musicbrainz · 3 pistas (creado en la etapa 3) · https://musicbrainz.org/release/ed2965f9-e2fd-4c92-b710-ae0184584a36
+- Micro TDH — «Nueve» (13411) · musicbrainz · 14 pistas (creado en la etapa 3) · https://musicbrainz.org/release/cce33ba1-b3b1-479b-9081-29b5ec401c21
+- Micro TDH — «La chama» (13412) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/544e02a5-242c-4895-a61e-2a06d839bf5e
+- Micro TDH — «Ponte» (13413) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/6920e744-2fa5-4b72-9ce9-9092a94aa3f1
+- Micro TDH — «Cómo no» (13414) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/c8e31fe5-6cfb-4c8b-9ac7-086eaff51c64
+- Micro TDH — «Inefable» (13415) · musicbrainz · 14 pistas (creado en la etapa 3) · https://musicbrainz.org/release/98931819-bd33-4de9-8c2b-3e51d5963580
+- Micro TDH — «Tu turno» (13416) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/e6df887b-e858-40ee-9afb-d632b523d7a3
+- Micro TDH — «Sin coro» (13417) · musicbrainz · 11 pistas (creado en la etapa 3) · https://musicbrainz.org/release/912131d6-88ca-4a5e-823a-b38c55d96b7e
+- Micro TDH — «Bésame sin sentir» (13418) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/f719f3a4-8cf8-4496-964b-2969f66d7885
+- Micro TDH — «The Classics, Vol.2» (13419) · deezer · 14 pistas (creado en la etapa 3) · https://www.deezer.com/album/579682661
+- Micro TDH — «The Classics, Vol. 1» (13420) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/316427397
+- Micro TDH — «QUÉ TÚ CRÉ?» (13421) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/722135251
+- Micro TDH — «Guao Guao» (13422) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/701064861
+- Micro TDH — «Girasol» (13423) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/696606031
+- Micro TDH — «Loba» (13424) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/679192161
+- Micro TDH — «Perdóname» (13425) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/663251661
+- Micro TDH — «Sweet Baby Girl 2017» (13426) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/569726661
+- Micro TDH — «999» (13427) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/568163321
+- Micro TDH — «Musiquita Triste» (13428) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/561808772
+- Micro TDH — «Abuela» (13429) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/551242952
+- Micro TDH — «Makin Noi» (13430) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/523427022
+- Micro TDH — «Ukiyo» (13431) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/513452581
+- Micro TDH — «Ser Feliz» (13432) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/498940521
+- Micro TDH — «Sin Ti» (13433) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/373469007
+- Micro TDH — «PELIGROSA» (13434) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/342988527
+- Micro TDH — «Quiero (TDH's Version)» (13435) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/314201767
+- Micro TDH — «EN SOLEDAD (feat. ADSO, Akapellah)» (13436) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/314980067
+- Micro TDH — «El Vuelo (TDH's Version)» (13437) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/276061212
+- Micro TDH — «Ponte [+ A Message From Micro TDH] (TDH’s Version)» (13438) · deezer · 2 pistas (creado en la etapa 3) · https://www.deezer.com/album/277075282
+- Micro TDH — «NUEVE (Intro)» (13439) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/269922632
+- Micro TDH — «EL LOBBY» (13440) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/268326982
+- Micro TDH — «EL INCA» (13441) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/263561732
+- Micro TDH — «EL TREN» (13442) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/224392632
+- Micro TDH — «NI VIVO NI MUERTO» (13443) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/205702342
+- Micro TDH — «Volver» (13444) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/198840162
+- Micro TDH — «Ámate» (13445) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/180220912
+- Micro TDH — «Desamor» (13446) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/168813042
+- Micro TDH — «Amor de red social» (13447) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/141773202
+- Micro TDH — «Demasiado Tarde» (13448) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/118556572
+- Micro TDH — «Cumpliendo el Objetivo» (13449) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/242426722
+- Micro TDH — «En El Hood» (13450) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/242499392
+- Micro TDH — «Aqui Estoy» (13451) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/242499402
+- Micro TDH — «No Te Dejé Sola» (13452) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/242494492
+- Micro TDH — «Vuelve a Mi» (13453) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/242494482
+- Micro TDH — «Querer Volar» (13454) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/242494442
+- Micro TDH — «Honey» (13455) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/242494472
+- Micro TDH — «Your Lover» (13456) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/242440262
+- Micro TDH — «No Creo En Mujeres» (13457) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/242488722
+- Micro TDH — «No Te Merezco» (13458) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/242429202
+- Micro TDH — «Don't Get Out» (13459) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/242426742
+- Micro TDH — «Contactos (TDH´s Version)» (13460) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/268687222
+- Elena Rose — «La Ducha» (13640) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/f7ccbfda-9ca6-4fa5-bb36-6d76aa5ea9e9
+- Elena Rose — «No Voy A Cambiar» (13641) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/ebf987d2-a0a4-4569-930a-b0ff484cf309
+- Elena Rose — «Fenomenal» (13642) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/4a9b1a1f-87ba-42d3-b6bd-c01b6f39471b
+- Elena Rose — «Trago Al Pecho» (13643) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/42191777-5963-42ca-8122-2a233db4f8d7
+- Elena Rose — «Bendito verano» (13644) · musicbrainz · 12 pistas (creado en la etapa 3) · https://musicbrainz.org/release/fb7d0e90-dea0-495e-80ca-708073df9af0
+- Elena Rose — «SINTIGO» (13645) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/709e3c31-d97b-4588-9622-6fed69f29e6f
+- Elena Rose — «No Quiero Que Se Acabe Este Bendito Verano» (13646) · musicbrainz · 5 pistas (creado en la etapa 3) · https://musicbrainz.org/release/b333a248-5771-4629-b606-e2f38286215e
+- Elena Rose — «Pa’ Qué Volviste?» (13647) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/bb86f0d1-f39e-4ed5-bfc0-9ce9bf79f07a
+- Elena Rose — «Bayamón» (13648) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/b7fbbded-be8c-4e29-9925-3a65b43deff7
+- Elena Rose — «Carteras chinas» (13649) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/d03b17a8-bcd1-4fd5-bc52-c87aecc51f6d
+- Elena Rose — «Vogue» (13650) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/692cc0e0-be10-4e5a-8432-69a98f9f9c48
+- Elena Rose — «Limonadita Fresca» (13651) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/dcc85544-1c67-4b85-b3b6-731b1fcc2228
+- Elena Rose — «En Las Nubes - Con Mis Panas» (13652) · musicbrainz · 8 pistas (creado en la etapa 3) · https://musicbrainz.org/release/29eb21c7-ad06-4f35-8868-850a08ca9f48
+- Elena Rose — «TUTUTU» (13653) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/8fcc6955-b2a3-423e-b9c6-b51b444bc3d1
+- Elena Rose — «Me lo merezco» (13654) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/791447be-c848-4a4a-abe3-b10f0180299b
+- Elena Rose — «CARACAS EN EL 2000 (REMIX)» (13655) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/d6807c49-367d-448f-b3ea-9c51baef4687
+- Elena Rose — «El Hombre» (13656) · musicbrainz · 2 pistas (creado en la etapa 3) · https://musicbrainz.org/release/98d13585-d067-4194-91a4-ae89fe824f64
+- Elena Rose — «Un beso menos» (13657) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/848e777f-3a30-43f2-8e0f-70ede047af78
+- Elena Rose — «COSITA LINDA» (13658) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/3a60aa2d-4580-40de-9886-ce1ac2d2002e
+- Elena Rose — «HAPPY ?» (13659) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/997180611
+- Elena Rose — «Luna de Miel» (13660) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/908940612
+- Elena Rose — «Otro Huevón» (13661) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/658303341
+- Elena Rose — «Catira» (13662) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/648222991
+- Elena Rose — «Me Lo Merezco - Versión Acústica (En Las Nubes)» (13663) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/634670191
+- Elena Rose — «Linda Natural» (13664) · deezer · 2 pistas (creado en la etapa 3) · https://www.deezer.com/album/481484065
+- Elena Rose — «Disculpa Amiga» (13665) · deezer · 3 pistas (creado en la etapa 3) · https://www.deezer.com/album/434340627
+- Elena Rose — «La Ducha Remix (con Becky G, Tini)» (13666) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/363333777
+- Joaquina — «los 41» (13667) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/4c44e7ab-8a81-4d32-8ad0-9475d3ee4b3f
+- Joaquina — «Si nos dijimos adiós» (13668) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/2b4241ed-7ad0-48d9-90ab-95ae9a89486d
+- Joaquina — «todo y nada» (13669) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/a2f4650b-5397-4452-a92c-021b87bbae20
+- Joaquina — «pelinegra» (13670) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/56d038ba-35c0-462b-b6e7-209c37af382f
+- Joaquina — «los mejores años - EP» (13671) · musicbrainz · 5 pistas (creado en la etapa 3) · https://musicbrainz.org/release/85787c8a-3624-41e3-9b03-d053cd342d90
+- Joaquina — «los mejores años (notas de diario)» (13672) · musicbrainz · 14 pistas (creado en la etapa 3) · https://musicbrainz.org/release/7de866ac-2774-44bf-adbf-9b01a2d8d55c
+- Joaquina — «ya no estoy» (13673) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/4724561c-310e-4dc4-88ec-0ee5ad58a186
+- Joaquina — «verano en la ciudad» (13674) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/5f914060-161e-4c14-9109-1b7cf835b527
+- Joaquina — «al romper la burbuja 2» (13675) · musicbrainz · 19 pistas (creado en la etapa 3) · https://musicbrainz.org/release/1a9ece1c-5a91-4a86-8b1b-e28b1bc7dde8
+- Joaquina — «no llames lo mío nuestro» (13676) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/309f7e58-107a-4daf-8124-edea9ec8cd4b
+- Joaquina — «amarillo» (13677) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/90d4f3df-1261-4385-b3f1-fe58bb17d2dc
+- Joaquina — «al romper la burbuja» (13678) · musicbrainz · 15 pistas (creado en la etapa 3) · https://musicbrainz.org/release/46029f58-2d21-4a02-9be1-79a799848a7c
+- Joaquina — «desahogo» (13679) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/698883351
+- Joaquina — «aeropuerto» (13680) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/676888311
+- Joaquina — «el Alquimista (versión piano)» (13681) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/629971661
+- Joaquina — «pesimista» (13682) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/594742132
+- Joaquina — «escapar de mí» (13683) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/557426202
+- Joaquina — «quise quererte» (13684) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/502499411
+- Joaquina — «Los Mejores Años (live desde londres)» (13685) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/469038225
+- Joaquina — «Rabia (live desde el baño)» (13686) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/391525257
+- Joaquina — «Niñas de Instagram» (13687) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/372546907
+- Joaquina — «Freno» (13688) · deezer · 2 pistas (creado en la etapa 3) · https://www.deezer.com/album/359437517
+- Joaquina — «Rabia» (13689) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/358535537
+- Aneeka — «Ni Antes... Ni Después» (13690) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/94091932
+- Akapellah — «Como Mario» (13714) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/94f6d0a1-a14b-4c76-bec5-25564b85467b
+- Akapellah — «Funky Fresco» (13715) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/c475715c-9a30-4039-be39-0b3588e8508e
+- Akapellah — «Goldo Funky» (13716) · musicbrainz · 11 pistas (creado en la etapa 3) · https://musicbrainz.org/release/cdb56e68-b0f0-4416-b1c1-8549b84cafea
+- Akapellah — «Respira (Deluxe)» (13717) · musicbrainz · 15 pistas (creado en la etapa 3) · https://musicbrainz.org/release/38cf497b-5ad0-4604-b761-866f026d751e
+- Akapellah — «Pneuma» (13718) · musicbrainz · 12 pistas (creado en la etapa 3) · https://musicbrainz.org/release/8e8ee971-f21c-48fd-98cf-3c38c6c54e0a
+- Akapellah — «Como Nunca» (13719) · musicbrainz · 9 pistas (creado en la etapa 3) · https://musicbrainz.org/release/112b91e3-e176-426e-bc95-214b740b0ffa
+- Akapellah — «Pedro Elías» (13720) · musicbrainz · 13 pistas (creado en la etapa 3) · https://musicbrainz.org/release/37ff667d-834f-4eb1-a162-0f1cdbca1557
+- Akapellah — «Como Antes» (13721) · musicbrainz · 13 pistas (creado en la etapa 3) · https://musicbrainz.org/release/72878ff7-4b08-4882-adbf-4c39c7a4bf25
+- Akapellah — «Xtassy» (13722) · musicbrainz · 12 pistas (creado en la etapa 3) · https://musicbrainz.org/release/23fd38d3-9575-44c6-989d-66478e7d94a0
+- Akapellah — «Como Siempre» (13723) · musicbrainz · 11 pistas (creado en la etapa 3) · https://musicbrainz.org/release/df3f073c-315f-4775-888f-e89b2ce99079
+- Akapellah — «Pedro Cash» (13724) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/1104107732
+- Akapellah — «La Plaga» (13725) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/1050982152
+- Akapellah — «Hijos de la Tierra» (13726) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/982130341
+- Akapellah — «El Pana Deiby» (13727) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/966646641
+- Akapellah — «Te Mande 10K» (13728) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/861389982
+- Akapellah — «Parriba (feat. Trueno)» (13729) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/746844181
+- Akapellah — «Dá Professor» (13730) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/705085471
+- Akapellah — «Pertenezco Aquí» (13731) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/553389632
+- Akapellah — «Ni Con Money» (13732) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/521135552
+- Akapellah — «SUCIO» (13733) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/496226641
+- Akapellah — «Pa' ganá» (13734) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/421126717
+- Akapellah — «Velocidad» (13735) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/311147877
+- Akapellah — «Choppa» (13736) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/292933032
+- Akapellah — «No Me Quiero Levantar» (13737) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/281288001
+- Akapellah — «Am0R» (13738) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/267326422
+- Akapellah — «Nostoy» (13739) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/180912652
+- Akapellah — «Mestrello» (13740) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/165864532
+- Akapellah — «Condenados» (13741) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/153166672
+- Akapellah — «Crema» (13742) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/144507072
+- Akapellah — «¿Que Nalgas Son Esas?» (13743) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/137582452
+- Akapellah — «Brinca» (13744) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/134247032
+- Akapellah — «Scape» (13745) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/121175072
+- Akapellah — «Ímpetu» (13746) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/120312332
+- Akapellah — «Cielo Gris» (13747) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/116603752
+- Akapellah — «Gracias» (13748) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/113030832
+- Akapellah — «Double Cup (feat. Trainer & Big Soto)» (13749) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/15255443
+- Akapellah — «Achantadera Y Panzón» (13750) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/15076491
+- Akapellah — «Bomb» (13751) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/14233318
+- Akapellah — «Donde Están? (feat. Lito Kirino)» (13752) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/13930724
+- Akapellah — «Milki» (13753) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/13882090
+- Akapellah — «Fiesta (Boombox Remix) [feat. Lil Supa]» (13754) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/12802216
+- Neutro Shorty — «PRÉNDELO PINGÜINO» (13790) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/c83764c3-b1ed-4348-8c20-b2ff50c18a66
+- Neutro Shorty — «Mente Loca» (13791) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/ea713478-048d-43c6-8993-8f17716aa4a4
+- Neutro Shorty — «Caligulas» (13792) · musicbrainz · 14 pistas (creado en la etapa 3) · https://musicbrainz.org/release/3c57bcb9-a576-4fad-b8c4-2d5e6565edb4
+- Neutro Shorty — «Ya no creo» (13793) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/3883a8c7-22b6-4c2d-ab00-19e99e807c4f
+- Neutro Shorty — «El Disco de Salsa» (13794) · musicbrainz · 12 pistas (creado en la etapa 3) · https://musicbrainz.org/release/384c8951-a5a4-408d-bdd0-f10982bd082f
+- Neutro Shorty — «Humble Boyz» (13795) · musicbrainz · 15 pistas (creado en la etapa 3) · https://musicbrainz.org/release/4e1b466d-231e-4adb-aff8-52ea42ad81b9
+- Neutro Shorty — «Apokalypsis» (13796) · musicbrainz · 8 pistas (creado en la etapa 3) · https://musicbrainz.org/release/7abec917-2793-44f4-b52b-c1395413d766
+- Neutro Shorty — «Cartel del Caribe» (13797) · deezer · 8 pistas (creado en la etapa 3) · https://www.deezer.com/album/440614397
+- Neutro Shorty — «The World Is Mine» (13798) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/185840632
+- Neutro Shorty — «Hay Vida en Venus» (13799) · deezer · 7 pistas (creado en la etapa 3) · https://www.deezer.com/album/186117572
+- Neutro Shorty — «5 Historias (The Mixtape)» (13800) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/773791571
+- Neutro Shorty — «Buena Mierda» (13801) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/773799441
+- Neutro Shorty — «Yo Soy» (13802) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/982187881
+- Neutro Shorty — «YZ» (13803) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/820622971
+- Neutro Shorty — «LA MAYBACH» (13804) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/670243111
+- Neutro Shorty — «Diamantes Bailando» (13805) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/508716101
+- Neutro Shorty — «Billetes de 100» (13806) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/460792635
+- Neutro Shorty — «Mamá» (13807) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/433689767
+- Neutro Shorty — «My Name» (13808) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/421186357
+- Neutro Shorty — «Trap Life» (13809) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/396366947
+- Neutro Shorty — «Envidia» (13810) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/375312007
+- Neutro Shorty — «Laguna» (13811) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/338167407
+- Neutro Shorty — «Contacto» (13812) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/333318417
+- Neutro Shorty — «Ave María» (13813) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/244724222
+- Neutro Shorty — «Si Mañana Muero» (13814) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/231748292
+- Neutro Shorty — «Plata» (13815) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/227901992
+- Neutro Shorty — «Costoso» (13816) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/224097292
+- Neutro Shorty — «Lastima» (13817) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/215681652
+- Neutro Shorty — «Siempre Aqui» (13818) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/185815112
+- Neutro Shorty — «Susurros» (13819) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/185815302
+- Neutro Shorty — «Fuck Love» (13820) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/185811402
+- Neutro Shorty — «La Original» (13821) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/186117472
+- Neutro Shorty — «Pecador» (13822) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/185840722
+- Neutro Shorty — «Hasta Que Salga el Sol» (13823) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/185840752
+- Neutro Shorty — «Pa los Míos» (13824) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/184719712
+- Neutro Shorty — «Gang Shit» (13825) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/184719902
+- Neutro Shorty — «Speedy» (13826) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/185840692
+- Neutro Shorty — «Sacala» (13827) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/185840682
+- Neutro Shorty — «Traicioneros» (13828) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/185840712
+- Big Soto — «High» (13829) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/a653c9ec-7a53-47a6-9cca-4ab4ce367a89
+- Big Soto — «Vacile» (13830) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/9028be1e-3e07-4c0a-b0bf-65d2d616e255
+- Big Soto — «Todo Es Mental» (13831) · musicbrainz · 19 pistas (creado en la etapa 3) · https://musicbrainz.org/release/e4c0dadd-8357-4dd1-9c4d-323a58ea4e07
+- Big Soto — «CANAIMA» (13832) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/1f95b410-9222-4f72-99a6-fa3539363bda
+- Big Soto — «NOSTALGIA CITY» (13833) · musicbrainz · 20 pistas (creado en la etapa 3) · https://musicbrainz.org/release/ea762ddd-240f-4f66-92d9-cd92f046a9cd
+- Big Soto — «Grosero (remix)» (13834) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/c9d56ae7-f693-4ae7-bec6-41421a214115
+- Big Soto — «The Good Trip» (13835) · musicbrainz · 19 pistas (creado en la etapa 3) · https://musicbrainz.org/release/f221c8a8-8223-49f2-946b-21c711965b42
+- Big Soto — «SOTORIUS» (13836) · deezer · 23 pistas (creado en la etapa 3) · https://www.deezer.com/album/645268791
+- Big Soto — «Apokalypsis 2» (13837) · deezer · 18 pistas (creado en la etapa 3) · https://www.deezer.com/album/275616582
+- Big Soto — «Young Cream» (13838) · deezer · 7 pistas (creado en la etapa 3) · https://www.deezer.com/album/15466192
+- Big Soto — «LoSIENTES?» (13839) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/945945351
+- Big Soto — «ATORRANTE» (13840) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/932847791
+- Big Soto — «TUNAY» (13841) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/834793472
+- Big Soto — «PRENDO PA' FUMAR» (13842) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/811094651
+- Big Soto — «DESPUÉS DE TANTO» (13843) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/803915161
+- Big Soto — «PARTICULAR» (13844) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/765149311
+- Big Soto — «TÓMALO CON CALMA» (13845) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/736879531
+- Big Soto — «CÓMO VAS?» (13846) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/705566841
+- Big Soto — «LA NOCHE ENTERA» (13847) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/612735542
+- Big Soto — «Mezcalito en copa» (13848) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/595248242
+- Big Soto — «ODIOSOTORIUS» (13849) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/545579552
+- Big Soto — «Malibu» (13850) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/515342812
+- Big Soto — «933» (13851) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/501071891
+- Big Soto — «Drogdilla» (13852) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/453558055
+- Big Soto — «Jalapeño» (13853) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/445761825
+- Big Soto — «CALI KUSH» (13854) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/440766787
+- Big Soto — «ALERTA BB» (13855) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/407291697
+- Big Soto — «Chimbo» (13856) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/356604377
+- Big Soto — «Tas Clara» (13857) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/347138257
+- Big Soto — «Eme» (13858) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/343414307
+- Big Soto — «Serotonina» (13859) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/336373857
+- Big Soto — «Prendía» (13860) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/329114007
+- Big Soto — «Rosa» (13861) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/307163187
+- Big Soto — «Me Dejé Llevar» (13862) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/286810222
+- Big Soto — «Obsesión» (13863) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/275613692
+- Big Soto — «Milloneta» (13864) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/275614262
+- Big Soto — «Todo por Billetes» (13865) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/275614252
+- Big Soto — «Joseando» (13866) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/258080742
+- Big Soto — «Celebrando» (13867) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/237708912
+- Big Soto — «Lloro :'(» (13868) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/215378652
+- Big Soto — «Keke» (13869) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/215413372
+- Big Soto — «Estrés» (13870) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/206817352
+- Big Soto — «Traductor» (13871) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/203600732
+- Big Soto — «Final Feliz» (13872) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/193309262
+- Big Soto — «Cuatro Paredes» (13873) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/180600482
+- Big Soto — «A Poca Luz» (13874) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/198243282
+- Big Soto — «Bandolero» (13875) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/187233172
+- Big Soto — «Quien Sera» (13876) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/120512552
+- Big Soto — «Bailando» (13877) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/187235312
+- Big Soto — «Primer Episodio (Intro)» (13878) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/201845552
+- Big Soto — «Grosero Rmx» (13879) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/187235252
+- Big Soto — «Como Lo Haces» (13880) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/186117512
+- Big Soto — «Aquella Noche» (13881) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/198243272
+- Big Soto — «Intensa (feat. David Rone)» (13882) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/40709411
+- Big Soto — «Funny» (13883) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/39502251
+- Big Soto — «Ufo» (13884) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/15756944
+- Gabylonia — «Hip hop inteligente en frasco pequeño» (13885) · musicbrainz · 12 pistas (creado en la etapa 3) · https://musicbrainz.org/release/f00c8469-9058-42db-9210-b5f6de523f51
+- Gabylonia — «Abuso de poder» (13886) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/59b97012-799f-47f2-982e-e3335053e37f
+- Gabylonia — «Lavoe» (13887) · musicbrainz · 12 pistas (creado en la etapa 3) · https://musicbrainz.org/release/4eae69ac-2691-4a4c-8aac-f8c06d3e66e6
+- Gabylonia — «Boom Bap» (13888) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/7fe9a5dd-fae7-4f3c-95d0-a0982db079c8
+- Gabylonia — «Esencia» (13889) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/800051441
+- Gabylonia — «La Calle» (13890) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/764584741
+- Gabylonia — «Madre» (13891) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/756726351
+- Gabylonia — «Rap Fat» (13892) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/699246471
+- Gabylonia — «Tu F**Kin' Canción» (13893) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/434697237
+- Gabylonia — «Carpe Diem» (13894) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/347792607
+- Gabylonia — «Cobarde No Hace Historia» (13895) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/207662632
+- Gabylonia — «Las Cosas Cambian» (13896) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/193219242
+- Gabylonia — «Tú y Yo Nunca» (13897) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/190763042
+- Gabylonia — «Decimos Plomo» (13898) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/131710052
+- Gabylonia — «Me Querías» (13899) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/124073492
+- Gabylonia — «Ángeles» (13900) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/124073862
+- Gabylonia — «Zombie» (13901) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/124114452
+- Gabylonia — «Yo Soy» (13902) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/124114652
+- Gabylonia — «Game Over» (13903) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/123146362
+- Gabylonia — «Sin Mirar Atrás» (13904) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/123146452
+- Gabylonia — «Mi Amigo Está en Casa» (13905) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/123146822
+- Gabylonia — «Tirano» (13906) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/123146262
+- Gabylonia — «Claro en lo Claro» (13907) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/123146892
+- Gabylonia — «I Love Rap» (13908) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/124732152
+- Gabylonia — «Canto» (13909) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/124132932
+- Gabylonia — «Siempre Soñé» (13910) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/123146182
+- BigBro Blues Band — «Irreverente» (14127) · deezer · 7 pistas (creado en la etapa 3) · https://www.deezer.com/album/105208072
+- BigBro Blues Band — «Sobrenatural» (14128) · deezer · 9 pistas (creado en la etapa 3) · https://www.deezer.com/album/105208482
+- Gustavo Dudamel — «Beethoven: Symphony No. 5 (live)» (14129) · musicbrainz · 4 pistas (creado en la etapa 3) · https://musicbrainz.org/release/aef2d5d5-7273-43b3-b100-037ad690bb7e
+- Gustavo Dudamel — «Odyssey» (14130) · musicbrainz · 3 pistas (creado en la etapa 3) · https://musicbrainz.org/release/8d2c7b58-890b-4014-bf9d-506569ca90ad
+- Gustavo Dudamel — «Beethoven: Symphony No. 7» (14131) · musicbrainz · 4 pistas (creado en la etapa 3) · https://musicbrainz.org/release/1247b9de-1b4b-4730-8b71-e3a1d56f6095
+- Gustavo Dudamel — «Alma y Fuego» (14132) · musicbrainz · 19 pistas (creado en la etapa 3) · https://musicbrainz.org/release/90239ac0-4d2b-4229-bd93-991ed7a82867
+- Gustavo Dudamel — «Discoveries» (14133) · musicbrainz · 8 pistas (creado en la etapa 3) · https://musicbrainz.org/release/794119a3-41fb-41b8-a952-c0d9381f30b1
+- Gustavo Dudamel — «The Liberator (Libertador)» (14134) · musicbrainz · 17 pistas (creado en la etapa 3) · https://musicbrainz.org/release/0bbc668b-f615-43da-9232-78beed4ab098
+- Gustavo Dudamel — «Fiesta» (14136) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/6450626
+- Gustavo Dudamel — «Beethoven: Symphonies Nos. 5 & 7; Shostakovich: Festive Overture» (14137) · deezer · 9 pistas (creado en la etapa 3) · https://www.deezer.com/album/6405021
+- Gustavo Dudamel — «Ravel: Boléro, M. 81» (14138) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/723860411
+- Gustavo Dudamel — «Danzon No. 9» (14139) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/793439591
+- Irepelusa — «Un koala en una palmera» (14189) · musicbrainz · 15 pistas (creado en la etapa 3) · https://musicbrainz.org/release/ed905bbb-0aab-4722-9944-908a8064c894
+- Irepelusa — «IRENE ALEJANDRA» (14190) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/584990952
+- Irepelusa — «Rayos, Besos, Fallos» (14191) · deezer · 4 pistas (creado en la etapa 3) · https://www.deezer.com/album/485837705
+- Irepelusa — «CARIÑO» (14192) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/670306181
+- Irepelusa — «Te Amé Temprano» (14193) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/588241582
+- Irepelusa — «Losken Roland» (14194) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/570998221
+- Irepelusa — «REPAVE (Cumbión Loco)» (14195) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/565884461
+- Irepelusa — «Los Domingos La Paso Solita» (14196) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/536110192
+- Irepelusa — «XQ TAN DIFERENTE? (≠)» (14197) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/514888672
+- Irepelusa — «Nervios de Acero» (14198) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/508716791
+- Irepelusa — «Girasoles» (14199) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/382262977
+- Irepelusa — «Todo Se Mantiene en Su Lugar» (14200) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/486047405
+- Irepelusa — «Curarte» (14201) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/485840325
+- Irepelusa — «Se metieron en mi casa» (14202) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/486109375
+- Irepelusa — «Un Día a la Vez» (14203) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/486101785
+- Irepelusa — «Parapente» (14204) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/485835965
+- Irepelusa — «Fango» (14205) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/485833485
+- Irepelusa — «BUBBLE» (14206) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/486063955
+- Irepelusa — «Negro» (14207) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/486082195
+- Irepelusa — «Tan Poco» (14208) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/486013495
+- Irepelusa — «Semilla» (14209) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/485837295
+- Irepelusa — «La Fuga» (14210) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/485832625
+- Irepelusa — «Aguacero» (14211) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/485837585
+- Irepelusa — «Dentro (Hometape)» (14212) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/485840355
+- Irepelusa — «Spaceman» (14213) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/486103445
+- Irepelusa — «Carledos (Remix)» (14214) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/486047665
+- Irepelusa — «Pasitos» (14215) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/485863145
+- Irepelusa — «Pan Con Miel» (14216) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/485835745
+- Motherflowers — «Retrofuturismopsicotropical» (14217) · musicbrainz · 17 pistas (creado en la etapa 3) · https://musicbrainz.org/release/b7c17f13-9e00-405b-821b-1d5a87dda072
+- Motherflowers — «Mamá Flor» (14218) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/98f92072-312b-405d-b41a-68588a0ed5c1
+- Motherflowers — «QUE VAYAN Y LO CUENTEN» (14219) · musicbrainz · 16 pistas (creado en la etapa 3) · https://musicbrainz.org/release/275045cf-22e2-4df3-a505-ea2346ffd0b5
+- Motherflowers — «Quién Lo Diría?» (14220) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/31e99350-622f-4bb6-a08a-95deba47f1af
+- Motherflowers — «Flor de Mayo» (14221) · deezer · 5 pistas (creado en la etapa 3) · https://www.deezer.com/album/587774032
+- Motherflowers — «EP-rimento #1: Boleritos de la Mar» (14222) · deezer · 3 pistas (creado en la etapa 3) · https://www.deezer.com/album/486129515
+- Motherflowers — «Motherflowers» (14223) · deezer · 6 pistas (creado en la etapa 3) · https://www.deezer.com/album/819361801
+- Motherflowers — «Sin querer queriendo» (14224) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/977163001
+- Motherflowers — «Amor de Toninas» (14225) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/951945281
+- Motherflowers — «FALTA POQUiTO» (14226) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/910252971
+- Motherflowers — «AWAkina» (14227) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/906458952
+- Motherflowers — «Turromantik» (14228) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/863404262
+- Motherflowers — «Infierno Favorito» (14229) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/837472372
+- Motherflowers — «TANRiCO» (14230) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/816994211
+- Motherflowers — «YMW» (14231) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/596991162
+- Motherflowers — «El Amor Se Fue de Repente (Flor de Mayo Sessions)» (14232) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/587797002
+- Motherflowers — «Flor de Mayo Sessions - Motherflowers» (14233) · deezer · 2 pistas (creado en la etapa 3) · https://www.deezer.com/album/581210091
+- Motherflowers — «Flor de Mayo Sessions - Apache» (14234) · deezer · 2 pistas (creado en la etapa 3) · https://www.deezer.com/album/577348841
+- Motherflowers — «El Amor Se Fue de Repente» (14235) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/495351181
+- Motherflowers — «Totona» (14236) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/487144175
+- Motherflowers — «BEiBi» (14237) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/484799665
+- Motherflowers — «NINA» (14238) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/485837525
+- Motherflowers — «Porrito y a Dormir» (14239) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/486078635
+- Motherflowers — «Como Blanco» (14240) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/485833605
+- Motherflowers — «Qué Quieres Tu de Mi?» (14241) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/819374731
+- Motherflowers — «Rock I (Rojo Sangre)» (14242) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/819374541
+- Motherflowers — «33 de Mayo» (14243) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/819385191
+- Motherflowers — «Xampú» (14244) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/819337981
+- Motherflowers — «Carey» (14245) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/819340821
+- Motherflowers — «Clamato» (14246) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/819362141
+- Motherflowers — «Flixi Flaxi» (14247) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/819338121
+- Motherflowers — «Rock III (NO KIERO SALIR)» (14248) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/819361021
+- Motherflowers — «Macundales» (14249) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/819430341
+- Motherflowers — «Awakate» (14250) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/819338071
+- Motherflowers — «Rock II (Murallas)» (14251) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/819360951
+- Motherflowers — «La Sala» (14252) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/819374681
+- Motherflowers — «Xinchorro» (14253) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/819385211
+- Motherflowers — «Thalia, La Maldita» (14254) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/819338221
+- Motherflowers — «Jamming» (14255) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/819338021
+- Motherflowers — «Xulitos (En Vivo)» (14256) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/819385161
+- Motherflowers — «Bájale» (14257) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/819338261
+- Motherflowers — «Xocolate (feat. Ferraz)» (14258) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/819338161
+- Motherflowers — «Cautiverio» (14259) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/819374521
+- Motherflowers — «Super Taxi» (14260) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/819374911
+- Motherflowers — «Veracruz» (14261) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/819374881
+- Motherflowers — «5 AM» (14262) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/819361031
+- Motherflowers — «Pásame a Busca» (14263) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/819374641
+- Motherflowers — «Full Day» (14264) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/510491991
+- Motherflowers — «Morrogaita» (14265) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/819385261
+- Salserín — «Salsa» (14304) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/11145732
+- Salserín — «Con Mucho Swing» (14305) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/152490312
+- Salserín — «Impregnado de Ti» (14306) · deezer · 14 pistas (creado en la etapa 3) · https://www.deezer.com/album/102934912
+- Salserín — «Salserín (En Vivo)» (14307) · deezer · 9 pistas (creado en la etapa 3) · https://www.deezer.com/album/80984082
+- Salserín — «Robando Corazones» (14308) · deezer · 14 pistas (creado en la etapa 3) · https://www.deezer.com/album/6263061
+- Salserín — «10 de Coleccion» (14309) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/6252566
+- Salserín — «Dum Dum» (14310) · deezer · 15 pistas (creado en la etapa 3) · https://www.deezer.com/album/6258842
+- Salserín — «Con Nuevo Swing» (14311) · deezer · 15 pistas (creado en la etapa 3) · https://www.deezer.com/album/58861512
+- Salserín — «Entre Tu Y Yo» (14312) · deezer · 14 pistas (creado en la etapa 3) · https://www.deezer.com/album/58893422
+- Omar Enrique — «Cómo has podido olvidar» (14315) · musicbrainz · 2 pistas (creado en la etapa 3) · https://musicbrainz.org/release/c70c7a45-3451-4674-9348-1ce58b8bf7a6
+- Omar Enrique — «Déjame acompañarte» (14316) · musicbrainz · 15 pistas (creado en la etapa 3) · https://musicbrainz.org/release/08987de2-0505-44ca-a805-63012a1e5f86
+- Omar Enrique — «Solo» (14317) · musicbrainz · 14 pistas (creado en la etapa 3) · https://musicbrainz.org/release/b58ad6f0-822d-4d39-9c3b-d1dc0299678d
+- Omar Enrique — «Princesa» (14318) · musicbrainz · 13 pistas (creado en la etapa 3) · https://musicbrainz.org/release/cfe57a2f-815a-4756-b4ad-cab74869d0bd
+- Omar Enrique — «Kilómetros de amor» (14319) · musicbrainz · 12 pistas (creado en la etapa 3) · https://musicbrainz.org/release/ad097b7f-1775-4933-b636-e287c2b77158
+- Omar Enrique — «Bachata rosa y otros éxitos: Tributo a Juan Luis Guerra» (14320) · musicbrainz · 13 pistas (creado en la etapa 3) · https://musicbrainz.org/release/0d120eb3-9226-4c80-9f86-66eae22cf73e
+- Omar Enrique — «En la orilla de la playa» (14321) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/4363455a-8832-4eee-bc9f-3ab9e80b46be
+- Omar Enrique — «Omar Enrique y los Dan House» (14322) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/8f3e7863-3afa-49d6-a23c-2bc116a1a6bc
+- Omar Enrique — «Que te vaya bien» (14323) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/7eb43142-d736-43ce-ab4b-b1fba1752ef2
+- Omar Enrique — «Recargado» (14324) · musicbrainz · 9 pistas (creado en la etapa 3) · https://musicbrainz.org/release/0e52035f-41d2-40d5-b25d-dfdd61df0e25
+- Omar Enrique — «Necesito de ti» (14325) · musicbrainz · 15 pistas (creado en la etapa 3) · https://musicbrainz.org/release/553298c6-4282-4513-818e-7319b13aeb73
+- Omar Enrique — «Ay amor» (14326) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/3ee0988f-bb5a-4267-99da-258873f05ea2
+- Omar Enrique — «Con las canciones que crecí» (14327) · musicbrainz · 15 pistas (creado en la etapa 3) · https://musicbrainz.org/release/56b2f871-0134-4f6a-81d2-3f3b3ffe6edf
+- Omar Enrique — «Gozando en carnaval» (14328) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/24fcf08e-826d-430e-8293-c24c0b1548bb
+- Omar Enrique — «¿Quién como tú?» (14329) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/e50423d8-48b2-4033-a98e-c7258234db59
+- Omar Enrique — «Si no creyera en fantasía» (14330) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/99c05429-f4c8-4a41-9727-653c55db91d4
+- Omar Enrique — «Antología de caricias» (14331) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/8e00f245-1284-4b4f-80d1-a7918011603b
+- Omar Enrique — «Antologías» (14332) · musicbrainz · 15 pistas (creado en la etapa 3) · https://musicbrainz.org/release/4868a8b9-c477-4962-81cd-d5b061e70cb5
+- Omar Enrique — «Quédate conmigo» (14333) · musicbrainz · 12 pistas (creado en la etapa 3) · https://musicbrainz.org/release/4c134dab-4461-49a3-b4de-321e562efefc
+- Omar Enrique — «30 Aniversario - En Vivo Desde El Poliedro de Caracas» (14334) · deezer · 33 pistas (creado en la etapa 3) · https://www.deezer.com/album/774906591
+- Omar Enrique — «Con Las Canciones Que Crecí Vol. 1» (14335) · deezer · 15 pistas (creado en la etapa 3) · https://www.deezer.com/album/767490771
+- Omar Enrique — «Bachata Rosa Y Otros Éxitos» (14336) · deezer · 13 pistas (creado en la etapa 3) · https://www.deezer.com/album/912151411
+- Omar Enrique — «Omar Enrique» (14337) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/12935470
+- Los Fantasmas del Caribe — «Caramelo» (14348) · musicbrainz · 8 pistas (creado en la etapa 3) · https://musicbrainz.org/release/e58e7d55-8954-4c53-9112-ce22cc1ba78e
+- Los Fantasmas del Caribe — «Imagina» (14349) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/3a47eb06-5c64-40ed-b9d4-8fb74d75aae8
+- Los Fantasmas del Caribe — «Más y Más» (14350) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/159347ba-7a72-45b7-86d5-ded0a69d101d
+- Los Fantasmas del Caribe — «Lo Mejor de Los Fantasmas del caribe» (14351) · musicbrainz · 20 pistas (creado en la etapa 3) · https://musicbrainz.org/release/a7a30890-da4e-4842-bfd4-ab2512a102ff
+- Los Fantasmas del Caribe — «Marea Azul» (14352) · musicbrainz · 12 pistas (creado en la etapa 3) · https://musicbrainz.org/release/bc7cbdf2-3f5a-4536-aadd-f52e43def0b2
+- Los Fantasmas del Caribe — «Una historia contigo» (14353) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/edf65480-2b8e-496b-ab09-afa9881608ed
+- Los Fantasmas del Caribe — «Nuestra Historia» (14354) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/759126861
+- LAGOS — «Blanco Y Negro» (14355) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/89c40587-87f0-406c-8bb1-53ff3ff91dba
+- LAGOS — «Quién lo diría» (14356) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/09bf99bc-068f-43f4-af0c-1ab796ad43f2
+- LAGOS — «Relevo (Demo)» (14357) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/1e8994d1-99af-4d8c-a26c-4dfbae4c4ee2
+- LAGOS — «Las Cosas Que Solo Se Hacen En La Noche» (14358) · musicbrainz · 11 pistas (creado en la etapa 3) · https://musicbrainz.org/release/b69c1e15-9b7d-453e-b090-b433496d6244
+- LAGOS — «Alta Fidelidad» (14359) · musicbrainz · 12 pistas (creado en la etapa 3) · https://musicbrainz.org/release/fb084636-25cc-4a74-90ef-fa4be5104ed3
+- LAGOS — «En Línea» (14360) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/239975ba-ab12-458f-9a76-403e22158306
+- LAGOS — «Tal Vez Mañana» (14361) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/18703da4-7dbb-42af-8155-246a38b8406b
+- LAGOS — «Julia» (14362) · musicbrainz · 2 pistas (creado en la etapa 3) · https://musicbrainz.org/release/040eb2a0-9c77-409a-a010-fe1c1ca383c8
+- LAGOS — «Himno Nacional» (14363) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/8b5acf7d-a383-465b-8a41-bad7d9bad203
+- LAGOS — «No se acaba hasta que acabe» (14364) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/eeca8142-940f-4bfa-acad-6a39c94ace7d
+- LAGOS — «Televisor» (14365) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/dcae84e5-27ef-4a50-baf2-90c0acb4ad12
+- LAGOS — «Clásicos» (14366) · musicbrainz · 12 pistas (creado en la etapa 3) · https://musicbrainz.org/release/5f1cc447-4a1f-40cd-a189-c34bbf5ac5d2
+- LAGOS — «PRIMAVOLTA» (14367) · deezer · 5 pistas (creado en la etapa 3) · https://www.deezer.com/album/149279342
+- LAGOS — «Solo Fumo Cuando Bebo» (14368) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/1064282261
+- LAGOS — «WhyWhyWhy» (14369) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/1003130621
+- LAGOS — «Ni Feliz Ni Triste» (14370) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/772202501
+- LAGOS — «Dime Quién (Live)» (14371) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/772211271
+- LAGOS — «Tarde, Lejos (Acústica)» (14372) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/772228241
+- LAGOS — «Tengamos Pasado (Remix)» (14373) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/772228431
+- LAGOS — «Tuvimos Futuro (Remix)» (14374) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/772228491
+- LAGOS — «Agus' Song II (Soltando A Pedazos)» (14375) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/456979025
+- LAGOS — «Permanente» (14376) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/353838967
+- LAGOS — «Agus' Song (Mejor Dejarte Ir) (En Vivo Desde Caracas)» (14377) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/295911152
+- LAGOS — «Mónaco» (14378) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/234731502
+- LAGOS — «Si El Mundo Se Acabara» (14379) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/164977712
+- LAGOS — «Cuerno» (14380) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/139143262
+- LAGOS — «Reset» (14381) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/103839712
+- LAGOS — «Guerra Fría» (14382) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/103841632
+- Samuel Mariño — «Lumina» (14383) · musicbrainz · 13 pistas (creado en la etapa 3) · https://musicbrainz.org/release/5f60790f-7a3c-48ab-b3ea-2b053c4a7dff
+- Samuel Mariño — «Sopranista» (14384) · musicbrainz · 13 pistas (creado en la etapa 3) · https://musicbrainz.org/release/6577d301-7164-4203-89be-d79f82bbd94e
+- Samuel Mariño — «Care pupille» (14385) · deezer · 13 pistas (creado en la etapa 3) · https://www.deezer.com/album/586311862
+- Samuel Mariño — «Gounod: Ave Maria, G 89a (After J.S. Bach: Prelude in C Major, BWV 846) [Arr. Hazell for Voice & Orchestra)» (14386) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/779036111
+- Samuel Mariño — «Dvořák: Rusalka, Op. 114, B. 203, Act I: Song to the Moon» (14387) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/768244271
+- Samuel Mariño — «Handel: Rinaldo, HWV 7: Lascia ch'io pianga» (14388) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/754110491
+- Samuel Mariño — «Yánez: Viajera del río (Arr. Assad for Voice and Guitar)» (14389) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/513615952
+- Samuel Mariño — «Mozart: Le nozze di Figaro, K. 492 / Act 2: Voi che sapete» (14390) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/316444557
+- Samuel Mariño — «Saint-Georges: L'Amant anonyme / Act 1: Son amour, sa constance extrême» (14391) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/312823857
+- Samuel Mariño — «Mozart: La clemenza di Tito, K. 621 / Act 2: Deh per questo istante solo» (14392) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/307560697
+- Samuel Mariño — «Gluck: Le feste d'Apollo / Orfeo: Che farò senza Euridice?» (14393) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/304072197
+- Fur Coat — «U Turn» (14434) · musicbrainz · 4 pistas (creado en la etapa 3) · https://musicbrainz.org/release/e1de0c5b-e13a-4b79-9c91-c7d8e6fa4b3e
+- Fur Coat — «Balance Presents Fur Coat» (14435) · musicbrainz · 17 pistas (creado en la etapa 3) · https://musicbrainz.org/release/d32e6b95-ee94-42a9-adb1-905df3820ede
+- Fur Coat — «Katarsis EP» (14436) · musicbrainz · 4 pistas (creado en la etapa 3) · https://musicbrainz.org/release/49c74b38-b242-47d8-a41f-38f01a89188e
+- Fur Coat — «Fall's Away» (14437) · musicbrainz · 4 pistas (creado en la etapa 3) · https://musicbrainz.org/release/70c536c6-7c1f-4ab7-8382-72ddb3ab4839
+- Fur Coat — «Number's EP» (14438) · musicbrainz · 3 pistas (creado en la etapa 3) · https://musicbrainz.org/release/05791d39-ce87-4815-9085-da012775ea36
+- Fur Coat — «2015-08-22: BBC Radio 1 Essential Mix» (14439) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/bacc57b8-d606-4a1b-a852-53badc2851a0
+- Fur Coat — «Mind Over Matter» (14440) · musicbrainz · 13 pistas (creado en la etapa 3) · https://musicbrainz.org/release/c7d851e0-bb0f-4d26-9253-14d934cf4610
+- Fur Coat — «The Wall in the Mirror» (14441) · musicbrainz · 2 pistas (creado en la etapa 3) · https://musicbrainz.org/release/5cb8289c-af09-4761-913c-de477db34d19
+- Fur Coat — «Repeat EP» (14442) · musicbrainz · 4 pistas (creado en la etapa 3) · https://musicbrainz.org/release/a5903c46-ed49-46b2-8b60-5e04b583fd97
+- Fur Coat — «There's No Time» (14443) · musicbrainz · 3 pistas (creado en la etapa 3) · https://musicbrainz.org/release/6fdd1927-ec6f-4955-8b08-f4e1664165c8
+- Fur Coat — «Own the Night» (14444) · musicbrainz · 2 pistas (creado en la etapa 3) · https://musicbrainz.org/release/b835f74b-68d6-4462-a204-7f6a1845793f
+- Fur Coat — «Immersion EP» (14445) · musicbrainz · 2 pistas (creado en la etapa 3) · https://musicbrainz.org/release/2a38e007-684c-48f0-95fe-2af7a7c2e45c
+- Fur Coat — «Berlin Chronicles EP» (14446) · musicbrainz · 3 pistas (creado en la etapa 3) · https://musicbrainz.org/release/5befabbb-2f02-4627-821c-44ca6ae3b823
+- Fur Coat — «You and I» (14447) · musicbrainz · 2 pistas (creado en la etapa 3) · https://musicbrainz.org/release/7024c26f-30b5-41ef-8b59-b9d9c3badadf
+- Fur Coat — «The Sequel EP» (14448) · musicbrainz · 5 pistas (creado en la etapa 3) · https://musicbrainz.org/release/461d5259-1bc2-49b3-80eb-8fd917cb680f
+- Fur Coat — «Hold Me Close» (14449) · musicbrainz · 5 pistas (creado en la etapa 3) · https://musicbrainz.org/release/7e42aed1-648a-4ae3-9d5c-aee934f48fe0
+- Fur Coat — «Tomb Raider» (14450) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/d4b84ab8-e85c-4365-93f7-3a350e6d324f
+- Fur Coat — «Time Traveler EP» (14451) · musicbrainz · 4 pistas (creado en la etapa 3) · https://musicbrainz.org/release/8e6f723c-dd33-4668-bbeb-d2a76c67e058
+- Fur Coat — «Timeless Motion» (14452) · musicbrainz · 1 pistas (creado en la etapa 3) · https://musicbrainz.org/release/2d53c364-1d3c-4fa9-b906-36484a74b2e1
+- Fur Coat — «Polyphony» (14453) · musicbrainz · 12 pistas (creado en la etapa 3) · https://musicbrainz.org/release/b01b48c9-4e04-491e-9e7a-37a188da6bf5
+- Fur Coat — «The Storm EP» (14454) · deezer · 5 pistas (creado en la etapa 3) · https://www.deezer.com/album/775140411
+- Fur Coat — «In Our Town - EP» (14455) · deezer · 4 pistas (creado en la etapa 3) · https://www.deezer.com/album/280852321
+- Fur Coat — «Hurricane» (14456) · deezer · 4 pistas (creado en la etapa 3) · https://www.deezer.com/album/775140261
+- Fur Coat — «Interstellar EP» (14457) · deezer · 3 pistas (creado en la etapa 3) · https://www.deezer.com/album/13938532
+- Fur Coat — «Gone» (14458) · deezer · 2 pistas (creado en la etapa 3) · https://www.deezer.com/album/684801391
+- Fur Coat — «Wait for Silence» (14459) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/679354241
+- Fur Coat — «Dystopia» (14460) · deezer · 3 pistas (creado en la etapa 3) · https://www.deezer.com/album/775140771
+- Fur Coat — «Shades» (14461) · deezer · 2 pistas (creado en la etapa 3) · https://www.deezer.com/album/775140331
+- Fur Coat — «Space Ballad» (14462) · deezer · 3 pistas (creado en la etapa 3) · https://www.deezer.com/album/418621497
+- Oksana Linde — «Aquatic And Other Worlds» (14587) · musicbrainz · 12 pistas (creado en la etapa 3) · https://musicbrainz.org/release/ac94f2de-3bf6-4ba9-af7f-6d47a8dcbed3
+- Oksana Linde — «Travesías» (14588) · musicbrainz · 8 pistas (creado en la etapa 3) · https://musicbrainz.org/release/2ac9f3cb-4ed8-4b0a-9051-3876f7cc1795
+- Oksana Linde — «Mundos Flotantes» (14589) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/728265101
+- Oksana Linde — «Intromersión» (14590) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/724644161
+- Simón Díaz — «Cuenta y Canta Volumen 1» (14607) · musicbrainz · 15 pistas (creado en la etapa 3) · https://musicbrainz.org/release/45224719-3280-49b3-a019-eb8f0d70a1e7
+- Simón Díaz — «Golpe y pasaje» (14608) · musicbrainz · 11 pistas (creado en la etapa 3) · https://musicbrainz.org/release/4fae7ea1-3d65-4f0a-8d82-dc1762180629
+- Simón Díaz — «Recuerda y canta» (14609) · musicbrainz · 18 duraciones (18 pistas en común) · https://musicbrainz.org/release/39d25d89-02ed-4b6d-b9be-02c48359e3e2
+- Simón Díaz — «Tonadas» (14610) · deezer · 9 duraciones (9 pistas en común) · https://www.deezer.com/album/716165
+- Simón Díaz — «Mis canciones: My Songs» (14615) · musicbrainz · 15 pistas (creado en la etapa 3) · https://musicbrainz.org/release/6e2c78bd-5580-4166-9096-d938931e4947
+- Simón Díaz — «Caballo Viejo: The Best of Simón Díaz» (14616) · musicbrainz · 20 pistas (creado en la etapa 3) · https://musicbrainz.org/release/1a3d67f5-ce0c-4f83-9df6-9d54871633b3
+- Simón Díaz — «Cuenta y Canta Volumen 2» (14617) · musicbrainz · 14 pistas (creado en la etapa 3) · https://musicbrainz.org/release/4e0e05af-478d-4183-a268-e7f5e006a653
+- Simón Díaz — «Asi Comenzo Todo» (14618) · deezer · 16 pistas (creado en la etapa 3) · https://www.deezer.com/album/7052626
+- Simón Díaz — «Las Tonadas de Simon» (14619) · deezer · 19 pistas (creado en la etapa 3) · https://www.deezer.com/album/7052628
+- Simón Díaz — «Simon en Salsa... En Gaita...» (14620) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/6742722
+- Simón Díaz — «40 Años 40 Exitos de Simon Diaz» (14621) · deezer · 40 pistas (creado en la etapa 3) · https://www.deezer.com/album/6283042
+- Simón Díaz — «Simón en Clave de Humor» (14622) · deezer · 40 pistas (creado en la etapa 3) · https://www.deezer.com/album/6478635
+- Simón Díaz — «Frente a Frente» (14623) · deezer · 17 duraciones (17 pistas en común) · https://www.deezer.com/album/928145
+- Simón Díaz — «Amor Enguayabo» (14624) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/928142
+- Simón Díaz — «Tonadas 2» (14625) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/784162601
+- Simón Díaz — «Mi Burrito Sabanero» (14626) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/391383047
+- Simón Díaz — «A Venezuela (Inedito)» (14627) · deezer · 17 pistas (creado en la etapa 3) · https://www.deezer.com/album/7051920
+- Simón Díaz — «De Parranda Con Simon» (14628) · deezer · 12 duraciones (12 pistas en común) · https://www.deezer.com/album/6303515
+- Simón Díaz — «Simón Díaz Mis Tonadas & 16 Grandes Éxitos» (14629) · deezer · 16 pistas (creado en la etapa 3) · https://www.deezer.com/album/716163
+- Eneas Perdomo — «Apure Siempre Es Apure» (14669) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/1030123932
+- Eneas Perdomo — «Adios A Mi Tierra» (14670) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/1031025452
+- Eneas Perdomo — «El Cabrestero de la Copla» (14671) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/1041369742
+- Eneas Perdomo — «Cantor De Cielo y Sabana» (14672) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/1052626192
+- Eneas Perdomo — «Un Señor Cantante» (14673) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/1040340382
+- Eneas Perdomo — «A Eneas de Mi Tierra Cantora» (14674) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/131029342
+- Eneas Perdomo — «Romance De La Niña India» (14675) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/1048018032
+- Eneas Perdomo — «Romance En Camaguán» (14676) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/1031017092
+- Eneas Perdomo — «Al Estilo De Eneas Perdomo» (14677) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/1035839772
+- Eneas Perdomo — «A Lo Criollo» (14678) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/931065651
+- Eneas Perdomo — «Bajo El Cielo Llanero» (14679) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/937829731
+- Ángel Custodio Loyola — «El disco de oro de Angel C. Loyola» (14680) · musicbrainz · 12 pistas (creado en la etapa 3) · https://musicbrainz.org/release/9fe425a6-1df6-499d-bc70-34287f453783
+- Ángel Custodio Loyola — «Paisaje Contramarcado» (14681) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/982973571
+- Ángel Custodio Loyola — «¿Qué Te Pasa Venezuela?» (14682) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/983024261
+- Ángel Custodio Loyola — «Lamento Del Canoero» (14683) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/983036711
+- Ángel Custodio Loyola — «El Tigre De Masaguarito» (14684) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/987051401
+- Ángel Custodio Loyola — «El Tigre Del '67» (14685) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/1026197942
+- Ángel Custodio Loyola — «Travesías de Mata Larga» (14686) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/982973511
+- Ángel Custodio Loyola — «Corrío Apureño» (14687) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/983034571
+- Ángel Custodio Loyola — «Buenos Aires Llaneros» (14688) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/987047891
+- Ángel Custodio Loyola — «Con los Torrealberos» (14689) · deezer · 9 pistas (creado en la etapa 3) · https://www.deezer.com/album/983035531
+- Ángel Custodio Loyola — «Sentimiento Llanero» (14690) · discogs · 12 pistas (creado en la etapa 3) · https://www.discogs.com/release/12426431
+- Francisco Montoya — «El Moderno Florentino» (14691) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/1030180892
+- Francisco Montoya — «Sentimiento Apureño» (14692) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/1030140162
+- Francisco Montoya — «El Caimán De Boca Brava» (14693) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/1030140222
+- Francisco Montoya — «Pajarillo De Mi Tierra» (14694) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/1030140232
+- Francisco Montoya — «Apure Soy Tu Hijo» (14695) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/72621892
+- Francisco Montoya — «Amor Y Llano» (14696) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/1030140122
+- Francisco Montoya — «Apure Yo Soy Tu Hijo» (14697) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/1030140202
+- Francisco Montoya — «Puros Pasajes» (14698) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/225890352
+- Francisco Montoya — «El Espanto Del Troncón» (14699) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/1030140152
+- Francisco Montoya — «El Coplero Araucano» (14700) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/1030140242
+- Rummy Olivo — «Lo Sabroso de un Guayabo» (14728) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/313976727
+- Rummy Olivo — «Agradecimiento» (14729) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/219442012
+- Rummy Olivo — «El Sabor de la Pasión» (14730) · deezer · 15 pistas (creado en la etapa 3) · https://www.deezer.com/album/196738782
+- Rummy Olivo — «17 Grandes éxitos» (14731) · deezer · 17 pistas (creado en la etapa 3) · https://www.deezer.com/album/211339652
+- Rummy Olivo — «Pa' que te voy a querer» (14732) · deezer · 8 pistas (creado en la etapa 3) · https://www.deezer.com/album/199474972
+- Rummy Olivo — «Mis Mejores Canciones» (14733) · deezer · 32 pistas (creado en la etapa 3) · https://www.deezer.com/album/198399342
+- Rummy Olivo — «Un Orgullo Ser Mujer» (14734) · deezer · 14 pistas (creado en la etapa 3) · https://www.deezer.com/album/197209132
+- Rummy Olivo — «Homenaje a Simón Díaz "Dejame que te cante Venezuela"» (14735) · deezer · 15 pistas (creado en la etapa 3) · https://www.deezer.com/album/197209142
+- Rummy Olivo — «Rummy Olivo Interpreta a Juan Vicente Torrealba» (14736) · deezer · 19 pistas (creado en la etapa 3) · https://www.deezer.com/album/197204012
+- Rummy Olivo — «Imaginaciones» (14737) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/196736452
+- Rummy Olivo — «Sigo Siendo Rummy Olivo» (14738) · deezer · 13 pistas (creado en la etapa 3) · https://www.deezer.com/album/111700382
+- Rummy Olivo — «Mujer de Palabra Cierta» (14739) · deezer · 14 pistas (creado en la etapa 3) · https://www.deezer.com/album/933674931
+- Rummy Olivo — «La Del Cariño Musical» (14740) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/65594242
+- Rummy Olivo — «Un Canto Para El Coleo (Hermanos Olivo)» (14741) · deezer · 14 pistas (creado en la etapa 3) · https://www.deezer.com/album/941201711
+- Rummy Olivo — «Colmada de Bendiciones» (14742) · deezer · 15 pistas (creado en la etapa 3) · https://www.deezer.com/album/931757421
+- Rummy Olivo — «La Flor de Zaraza» (14743) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/130749182
+- Rummy Olivo — «Ojos Color de los Pozos» (14744) · deezer · 14 pistas (creado en la etapa 3) · https://www.deezer.com/album/130748032
+- Rummy Olivo — «Siempre Vivas: Carrao Carrao/Son Mentiras/Tu Partida/Mi Llano, el Amor y Tú/Te Olvidaré Poco a Poco/Yo Soy la Reina/No Me Dejan qu (Tributo a Reyna Lucero)» (14745) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/864822692
+- Teo Galíndez — «El Secreto» (14746) · deezer · 11 pistas (creado en la etapa 3) · https://www.deezer.com/album/401398317
+- Teo Galíndez — «Serie Yo Soy Venezuela» (14747) · deezer · 20 pistas (creado en la etapa 3) · https://www.deezer.com/album/534438782
+- Teo Galíndez — «El Ladrón Enamorado» (14748) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/534439112
+- Teo Galíndez — «Entre Amores» (14749) · deezer · 14 pistas (creado en la etapa 3) · https://www.deezer.com/album/534433582
+- Teo Galíndez — «De Una Manera Especial» (14750) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/534431372
+- Teo Galíndez — «La Magia De Teo Galindez» (14751) · deezer · 18 pistas (creado en la etapa 3) · https://www.deezer.com/album/536661622
+- Teo Galíndez — «Romance De Luna Llena» (14752) · deezer · 13 pistas (creado en la etapa 3) · https://www.deezer.com/album/534433562
+- Jorge Guerrero — «Añoranzas» (14753) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/794d21bb-6179-4450-84dc-bb3ad21fb62d
+- Jorge Guerrero — «Entreveradas del Guerrero» (14754) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/702150271
+- Jorge Guerrero — «Los Hachazos del Guerrero» (14755) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/702360721
+- Jorge Guerrero — «La Última Foto» (14756) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/696878791
+- Jorge Guerrero — «Con Sentimiento Guerrero» (14757) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/695934111
+- Jorge Guerrero — «Aquí hay Guerrero pa' rato» (14758) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/695933991
+- Jorge Guerrero — «De Nuevo en el Arpa» (14759) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/695934141
+- Jorge Guerrero — «Remembranzas del Guerrero» (14760) · deezer · 14 pistas (creado en la etapa 3) · https://www.deezer.com/album/694159941
+- Jorge Guerrero — «El Caballo del Guerrero» (14761) · deezer · 14 pistas (creado en la etapa 3) · https://www.deezer.com/album/686695201
+- Jorge Guerrero — «El Nuevo Grito Guerrero» (14762) · deezer · 13 pistas (creado en la etapa 3) · https://www.deezer.com/album/686619551
+- Jorge Guerrero — «Viejo Laurel Sabanero» (14763) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/686633701
+- Jorge Guerrero — «Mi Propio Grito Guerrero (A Cielo Abierto)» (14764) · deezer · 2 pistas (creado en la etapa 3) · https://www.deezer.com/album/702990631
+- Jorge Guerrero — «Cielo Azul, Palma y Camino» (14765) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/702143251
+- Jorge Guerrero — «Mi Llano, Tú y Yo» (14766) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/930888171
+- Jorge Guerrero — «Dios te Guarde» (14767) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/819513341
+- Jorge Guerrero — «Cometa Errante» (14768) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/760026901
+- Jorge Guerrero — «Arbolito Sombrío» (14769) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/702144501
+- Jorge Guerrero — «Mi Testamento» (14770) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/702360861
+- Jorge Guerrero — «El Pañuelito de Petra» (14771) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/702360901
+- Jorge Guerrero — «Palabrerio del Guerrero» (14772) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/702988931
+- Jorge Guerrero — «Aguacero del Recuerdo» (14773) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/702989141
+- Jorge Guerrero — «Novilla Reventadora» (14774) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/702989441
+- Jorge Guerrero — «A Otro Nivel» (14775) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/702990171
+- Jorge Guerrero — «Enguayabao y pal Pueblo» (14776) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/702994591
+- Jorge Guerrero — «Los Días Amargos» (14777) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/702994661
+- Armando Martínez — «En Vivo» (14778) · musicbrainz · 14 pistas (creado en la etapa 3) · https://musicbrainz.org/release/83d18308-d379-43a4-ae31-45c9a0111c8f
+- Cardenales del Éxito — «60 Años (1962-2022)» (14968) · deezer · 9 pistas (creado en la etapa 3) · https://www.deezer.com/album/386340937
+- Cardenales del Éxito — «Navideñisimo!» (14969) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/675454161
+- Cardenales del Éxito — «50 Años de Glorias» (14970) · deezer · 15 pistas (creado en la etapa 3) · https://www.deezer.com/album/588274732
+- Cardenales del Éxito — «La Magia del Parroquiano» (14971) · deezer · 20 pistas (creado en la etapa 3) · https://www.deezer.com/album/548474312
+- Cardenales del Éxito — «Así Es Que Se Enamoran!» (14972) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/715864181
+- Cardenales del Éxito — «La Nueva Era Triunfal!» (14973) · deezer · 13 pistas (creado en la etapa 3) · https://www.deezer.com/album/527049772
+- Cardenales del Éxito — «La Maquinaría Roja 44 Años de Gaita» (14974) · deezer · 11 pistas (creado en la etapa 3) · https://www.deezer.com/album/638026661
+- Cardenales del Éxito — «40 Años Gaiteando» (14975) · deezer · 13 pistas (creado en la etapa 3) · https://www.deezer.com/album/512589891
+- Cardenales del Éxito — «Se Armó la Fiesta» (14976) · deezer · 13 pistas (creado en la etapa 3) · https://www.deezer.com/album/496200511
+- Cardenales del Éxito — «La Puturrita» (14977) · deezer · 13 pistas (creado en la etapa 3) · https://www.deezer.com/album/619457491
+- Cardenales del Éxito — «35 Años (1962-1997)» (14978) · deezer · 16 pistas (creado en la etapa 3) · https://www.deezer.com/album/737092151
+- Cardenales del Éxito — «Por Todo lo Alto de Yapacana (31 Años de Tradición "Lo Máximo")» (14979) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/661962671
+- Cardenales del Éxito — «30 Aniversario Volando Alto» (14980) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/775477981
+- Cardenales del Éxito — «Negrita Cumba Cumba» (14981) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/494568541
+- Cardenales del Éxito — «74» (14982) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/660115651
+- Cardenales del Éxito — «El Negrito Fullero» (14983) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/672084251
+- Cardenales del Éxito — «La Boda del Cachicamo» (14984) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/569999231
+- Cardenales del Éxito — «A Venezuela» (14985) · deezer · 7 pistas (creado en la etapa 3) · https://www.deezer.com/album/673427051
+- Cardenales del Éxito — «Conjunto Gaitero» (14986) · deezer · 8 pistas (creado en la etapa 3) · https://www.deezer.com/album/680125881
+- Cardenales del Éxito — «La Parranda de Cardenales» (14987) · deezer · 5 pistas (creado en la etapa 3) · https://www.deezer.com/album/1047237592
+- Cardenales del Éxito — «Maracaibo Es Otra Cosa» (14988) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/977745931
+- Cardenales del Éxito — «Los Cardenales Protestan» (14989) · discogs · 12 pistas (creado en la etapa 3) · https://www.discogs.com/master/1456300
+- Gran Coquivacoa — «La Maquina del Sabor '90» (14990) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/44568811
+- Gran Coquivacoa — «La Maquina del Sabor '91» (14991) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/44568821
+- Gran Coquivacoa — «La Alianza» (14992) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/44568831
+- Gran Coquivacoa — «Completo» (14993) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/44568841
+- Gran Coquivacoa — «La Maquina del Sabor '88» (14994) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/44568851
+- Gran Coquivacoa — «La Maquina del Sabor '87» (14995) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/44568861
+- Gran Coquivacoa — «28 Años de Gaitas» (14996) · deezer · 20 pistas (creado en la etapa 3) · https://www.deezer.com/album/12340632
+- Gran Coquivacoa — «30 Aniversario» (14997) · deezer · 16 pistas (creado en la etapa 3) · https://www.deezer.com/album/12340640
+- Gran Coquivacoa — «Alegrando Corazones» (14998) · deezer · 11 pistas (creado en la etapa 3) · https://www.deezer.com/album/12340700
+- Gran Coquivacoa — «Alquimia» (14999) · deezer · 14 pistas (creado en la etapa 3) · https://www.deezer.com/album/12340704
+- Gran Coquivacoa — «El Binomio de Oro y Gran Coquivacoa» (15000) · deezer · 11 pistas (creado en la etapa 3) · https://www.deezer.com/album/12340746
+- Gran Coquivacoa — «Despierta el Sabor en Esta Navidad» (15001) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/12340748
+- Gran Coquivacoa — «La Máquina del Sabor 92» (15002) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/12340750
+- Gran Coquivacoa — «Desenchufa'o (Unplugged)» (15003) · deezer · 8 pistas (creado en la etapa 3) · https://www.deezer.com/album/12340752
+- Gran Coquivacoa — «Todos Sus Exitos» (15004) · deezer · 20 pistas (creado en la etapa 3) · https://www.deezer.com/album/12340802
+- Gran Coquivacoa — «Por Siempre Gaitas» (15005) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/12340804
+- Gran Coquivacoa — «Pa' Bailalo» (15006) · deezer · 7 pistas (creado en la etapa 3) · https://www.deezer.com/album/12340806
+- Gran Coquivacoa — «Todo el Sabor del Gran Coquivacoa» (15007) · deezer · 18 pistas (creado en la etapa 3) · https://www.deezer.com/album/12340836
+- Gran Coquivacoa — «Vamos de Parranda» (15008) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/12341054
+- Gran Coquivacoa — «Los Reyes De La Tamborera» (15009) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/70181572
+- Gran Coquivacoa — «Clásicos 2» (15010) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/11526462
+- Gran Coquivacoa — «Clásicos 3» (15011) · deezer · 9 pistas (creado en la etapa 3) · https://www.deezer.com/album/11526566
+- Gran Coquivacoa — «Clásicos 1» (15012) · deezer · 15 pistas (creado en la etapa 3) · https://www.deezer.com/album/11526460
+- Gran Coquivacoa — «Gaitón No. 5» (15013) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/128728322
+- Gran Coquivacoa — «Tamborera No. 8» (15014) · deezer · 11 pistas (creado en la etapa 3) · https://www.deezer.com/album/128735362
+- Gran Coquivacoa — «La Máquina Del Sabor '93» (15015) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/128744192
+- Gran Coquivacoa — «Tamborera No. 9» (15016) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/129484702
+- Gran Coquivacoa — «Candela Y Candela» (15017) · deezer · 11 pistas (creado en la etapa 3) · https://www.deezer.com/album/128719492
+- Gran Coquivacoa — «Soy Zuliano» (15018) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/128722342
+- Gran Coquivacoa — «Tamborera No. 10» (15019) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/128734962
+- Maracaibo 15 — «En el milenium» (15020) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/6f03e4ee-3d0f-4e93-aec3-edaea2a3f0c7
+- Maracaibo 15 — «15 aniversario» (15021) · musicbrainz · 10 pistas (creado en la etapa 3) · https://musicbrainz.org/release/0f35a084-c531-490e-b047-3ebeb77eaa51
+- Maracaibo 15 — «Super Éxitos Maracaibo 15» (15022) · musicbrainz · 16 pistas (creado en la etapa 3) · https://musicbrainz.org/release/999fb0ca-dccc-42c9-91b3-53f16f521f8c
+- Maracaibo 15 — «Del Lp a Digital, Vol. 3» (15023) · deezer · 11 pistas (creado en la etapa 3) · https://www.deezer.com/album/1048579752
+- Maracaibo 15 — «Del Lp a Digital, Vol. 2» (15024) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/820042921
+- Maracaibo 15 — «El Gaitazo: Los Éxitos de Maracaibo 15 Vol. 2» (15025) · deezer · 14 pistas (creado en la etapa 3) · https://www.deezer.com/album/74774552
+- Rincón Morales — «Gaiteros de nueva ola» (15026) · musicbrainz · 6 pistas (creado en la etapa 3) · https://musicbrainz.org/release/1c2937a4-bfdd-4b3d-aba4-eeee4b44e882
+- Barrio Obrero de Cabimas — «50 Aniversario, Vol. 2» (15028) · deezer · 15 pistas (creado en la etapa 3) · https://www.deezer.com/album/9081995
+- Barrio Obrero de Cabimas — «50 Aniversario, Vol. 1» (15029) · deezer · 19 pistas (creado en la etapa 3) · https://www.deezer.com/album/9082083
+- Barrio Obrero de Cabimas — «60th Aniversario» (15030) · itunes · 16 pistas (creado en la etapa 3) · https://music.apple.com/ve/album/60th-aniversario/1148264817?uo=4
+- The Same People — «SEXY MARIA» (15031) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/944154211
+- The Same People — «EL CALLAO CALYPSO» (15032) · deezer · 8 pistas (creado en la etapa 3) · https://www.deezer.com/album/944154341
+- The Same People — «El Callao de Fiesta» (15033) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/15084855
+- The Same People — «The Same People» (15034) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/15260573
+- Los Antaños del Stadium — «Homenaje A Pedro Elias Gutierrez En Su Centenario» (15036) · musicbrainz · 8 pistas (creado en la etapa 3) · https://musicbrainz.org/release/af08c57e-e7bf-43c8-82a2-e154a4303ef2
+- Los Tucusitos — «Parrandas y Aguinaldos» (15037) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/813914921
+- Popy — «Serie Lo Máximo 21 Éxitos de Popy» (15038) · deezer · 21 pistas (creado en la etapa 3) · https://www.deezer.com/album/13063624
+- Popy — «El Idolo de Todos los Niños» (15039) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/13063618
+- Popy — «Dí Papá» (15040) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/13154484
+- Popy — «Popy» (15041) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/13695252
+- Popy — «Aguinaldos Tradicionales Venezolanos» (15042) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/14732150
+- Popy — «A Cepillarse» (15043) · deezer · 11 pistas (creado en la etapa 3) · https://www.deezer.com/album/14463124
+- Popy — «Popy Solo» (15044) · discogs · 11 pistas (creado en la etapa 3) · https://www.discogs.com/release/13272238
+- Popy — «Un Circo Para Popy» (15045) · discogs · 10 pistas (creado en la etapa 3) · https://www.discogs.com/master/1994773
+- Popy — «A Estudiar...» (15046) · discogs · 9 pistas (creado en la etapa 3) · https://www.discogs.com/master/1994761
+- Payasitas Nifu Nifa — «¡EMOCIONA2!» (15047) · deezer · 8 pistas (creado en la etapa 3) · https://www.deezer.com/album/987509191
+- Payasitas Nifu Nifa — «Dun Dun Dara» (15048) · deezer · 9 pistas (creado en la etapa 3) · https://www.deezer.com/album/584892482
+- Payasitas Nifu Nifa — «Payasitas Nifu Nifa y Sus Amigos» (15049) · deezer · 8 pistas (creado en la etapa 3) · https://www.deezer.com/album/227848522
+- Payasitas Nifu Nifa — «Serie 32: Payasitas Nifu Nifa» (15050) · deezer · 32 pistas (creado en la etapa 3) · https://www.deezer.com/album/389515287
+- Payasitas Nifu Nifa — «Entre Ayer y Hoy» (15051) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/486154055
+- Payasitas Nifu Nifa — «Por Ti y Para Ti» (15052) · deezer · 11 pistas (creado en la etapa 3) · https://www.deezer.com/album/194246182
+- Payasitas Nifu Nifa — «Sólo Éxitos» (15053) · deezer · 16 pistas (creado en la etapa 3) · https://www.deezer.com/album/413884967
+- Payasitas Nifu Nifa — «Serie 32: Payasitas Nifu Nifa, Vol. 2» (15055) · deezer · 32 pistas (creado en la etapa 3) · https://www.deezer.com/album/443022765
+- Payasitas Nifu Nifa — «Ilarié» (15056) · deezer · 11 pistas (creado en la etapa 3) · https://www.deezer.com/album/282508142
+- Payasitas Nifu Nifa — «Constelación de Éxitos» (15057) · deezer · 16 pistas (creado en la etapa 3) · https://www.deezer.com/album/356969197
+- Payasitas Nifu Nifa — «Papatitinando» (15058) · deezer · 12 pistas (creado en la etapa 3) · https://www.deezer.com/album/280093362
+- Payasitas Nifu Nifa — «Grandes Éxitos» (15060) · deezer · 14 pistas (creado en la etapa 3) · https://www.deezer.com/album/294758472
+- Payasitas Nifu Nifa — «Alibombo» (15061) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/188743322
+- Payasitas Nifu Nifa — «La Música Infantil es Universal: Alibombo» (15062) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/684832801
+- Payasitas Nifu Nifa — «Hula-Fá» (15063) · deezer · 11 pistas (creado en la etapa 3) · https://www.deezer.com/album/278958222
+- Payasitas Nifu Nifa — «En Navidad» (15064) · deezer · 8 pistas (creado en la etapa 3) · https://www.deezer.com/album/278958502
+- Payasitas Nifu Nifa — «Bim Bom Bam!» (15065) · deezer · 5 pistas (creado en la etapa 3) · https://www.deezer.com/album/188746062
+- Payasitas Nifu Nifa — «Sana, Sana, Colita de Rana (Remix)» (15066) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/393995867
+- Payasitas Nifu Nifa — «Hoy Es Nuestro Día» (15067) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/356962547
+- Payasitas Nifu Nifa — «Todos Somos Igualitos» (15068) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/220888362
+- Payasitas Nifu Nifa — «Tuchi» (15069) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/201512442
+- Payasitas Nifu Nifa — «Llegó la Navidad» (15070) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/486135965
+- Payasitas Nifu Nifa — «Superpalabras» (15071) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/172653602
+- Payasitas Nifu Nifa — «El Baile de la Ensalada» (15072) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/188743442
+- Payasitas Nifu Nifa — «Maquillaje» (15073) · deezer · 3 pistas (creado en la etapa 3) · https://www.deezer.com/album/739107641
+- Daniel Calveti — «Mi mundo necesita de ti» (15211) · musicbrainz · 11 pistas (creado en la etapa 3) · https://musicbrainz.org/release/460343e4-71b3-463c-b2e4-09aa9afb0720
+- Daniel Calveti — «Habla sobre mí» (15212) · musicbrainz · 8 pistas (creado en la etapa 3) · https://musicbrainz.org/release/74c458d1-26db-49e4-acdf-24ccd023efa4
+- Daniel Calveti — «Vivo para Ti (En Vivo)» (15213) · musicbrainz · 11 pistas (creado en la etapa 3) · https://musicbrainz.org/release/d3ae6e06-1efa-4303-a379-bb94107d5f29
+- Daniel Calveti — «Anclado a Tus Promesas Intimo» (15214) · deezer · 11 pistas (creado en la etapa 3) · https://www.deezer.com/album/161875772
+- Daniel Calveti — «En paz» (15216) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/5939779
+- Daniel Calveti — «Un Dia Mas» (15217) · deezer · 10 pistas (creado en la etapa 3) · https://www.deezer.com/album/6492553
+- Daniel Calveti — «Sólo Tu Gracia» (15218) · deezer · 13 pistas (creado en la etapa 3) · https://www.deezer.com/album/54033242
+- Daniel Calveti — «Respiro Tu Paz» (15219) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/271711682
+- Daniel Calveti — «Seguro Estoy En Ti» (15220) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/149311052
+- Daniel Calveti — «Tú Estás Aquí» (15221) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/117243822
+- Daniel Calveti — «Que No Se Hunde Na'a» (15222) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/89546472
+- Daniel Calveti — «Mi Historia De Amor» (15223) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/722760711
+- Daniel Calveti — «Enamora'o» (15224) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/53840812
+- Daniel Calveti — «Jesús, Has Mi Carácter» (15225) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/722761101
+- Daniel Calveti — «Tú Tienes Lo Mejor para Mi» (15226) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/10233892
+- Daniel Calveti — «La Ultima Palabra» (15227) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/722760771
+- Daniel Calveti — «Te Amo Jesús» (15228) · deezer · 1 pistas (creado en la etapa 3) · https://www.deezer.com/album/722760821
+- Daniel Calveti — «LA MESA» (15229) · itunes · 13 pistas (creado en la etapa 3) · https://music.apple.com/ve/album/la-mesa/6800992007?uo=4
+

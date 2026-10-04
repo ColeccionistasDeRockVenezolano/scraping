@@ -1,0 +1,1877 @@
+{
+ "mode": "dry-run",
+ "runId": 11584,
+ "artists": [
+  {
+   "loteId": "jose-coraspe",
+   "artistId": 4234,
+   "artist": "José Coraspe",
+   "musicbrainz": "no_encontrado",
+   "deezer": "ok",
+   "catalogo": 0,
+   "creado": 4,
+   "creado:other": 1,
+   "creado:single": 3,
+   "lote": {
+    "confirmado": 4
+   }
+  },
+  {
+   "loteId": "arca",
+   "artistId": 4235,
+   "artist": "Arca",
+   "musicbrainz": "ok",
+   "deezer": "ok",
+   "catalogo": 0,
+   "creado": 60,
+   "creado:single": 34,
+   "creado:compilation": 9,
+   "creado:ep": 5,
+   "creado:studio_album": 10,
+   "creado:other": 1,
+   "creado:remix": 1,
+   "lote": {
+    "confirmado": 9
+   }
+  },
+  {
+   "loteId": "juan-vicente-torrealba",
+   "artistId": 3829,
+   "artist": "Juan Vicente Torrealba",
+   "musicbrainz": "ok",
+   "deezer": "ok",
+   "catalogo": 79,
+   "creado": 21,
+   "creado:single": 2,
+   "ya en catálogo": 36,
+   "deezer sin ancla": 11,
+   "creado:other": 19,
+   "variante probable": 3,
+   "lote": {
+    "sin confirmar": 1,
+    "ya en catálogo": 1
+   }
+  },
+  {
+   "loteId": "popy",
+   "artistId": 4320,
+   "artist": "Popy",
+   "musicbrainz": "sin_verificar",
+   "deezer": "ok",
+   "catalogo": 0,
+   "deezer sin ancla": 42,
+   "creado": 9,
+   "creado:other": 9,
+   "lote": {
+    "año distinto": 1,
+    "confirmado": 4,
+    "sin confirmar": 1
+   }
+  }
+ ],
+ "created": [
+  {
+   "artistId": 4234,
+   "artist": "José Coraspe",
+   "albumId": 10076,
+   "title": "Ostinato",
+   "year": 2023,
+   "type": "studio_album",
+   "sources": [
+    "deezer"
+   ],
+   "lote": "{\"title\":\"accepted\",\"release_year\":\"accepted\",\"album_type\":\"rellenado\"}"
+  },
+  {
+   "artistId": 4234,
+   "artist": "José Coraspe",
+   "albumId": 10077,
+   "title": "All fine",
+   "year": 2025,
+   "type": "single",
+   "sources": [
+    "deezer"
+   ],
+   "lote": "{\"title\":\"accepted\",\"release_year\":\"accepted\",\"album_type\":\"accepted\"}"
+  },
+  {
+   "artistId": 4234,
+   "artist": "José Coraspe",
+   "albumId": 10078,
+   "title": "Entropy",
+   "year": 2025,
+   "type": "single",
+   "sources": [
+    "deezer"
+   ],
+   "lote": "{\"title\":\"accepted\",\"release_year\":\"accepted\",\"album_type\":\"accepted\"}"
+  },
+  {
+   "artistId": 4234,
+   "artist": "José Coraspe",
+   "albumId": 10079,
+   "title": "Alba (Slowed Down Version)",
+   "year": 2024,
+   "type": "single",
+   "sources": [
+    "deezer"
+   ],
+   "lote": "{\"title\":\"accepted\",\"release_year\":\"accepted\",\"album_type\":\"accepted\"}"
+  },
+  {
+   "artistId": 4235,
+   "artist": "Arca",
+   "albumId": 10080,
+   "title": "「bad i am」",
+   "year": 2011,
+   "type": "single",
+   "sources": [
+    "musicbrainz"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 4235,
+   "artist": "Arca",
+   "albumId": 10081,
+   "title": "Kick",
+   "year": 2022,
+   "type": "compilation",
+   "sources": [
+    "musicbrainz",
+    "deezer"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 4235,
+   "artist": "Arca",
+   "albumId": 10082,
+   "title": "Love You in Chains",
+   "year": 2011,
+   "type": "single",
+   "sources": [
+    "musicbrainz"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 4235,
+   "artist": "Arca",
+   "albumId": 10083,
+   "title": "Stretch 2",
+   "year": 2012,
+   "type": "ep",
+   "sources": [
+    "musicbrainz",
+    "deezer"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 4235,
+   "artist": "Arca",
+   "albumId": 10084,
+   "title": "Arca",
+   "year": 2017,
+   "type": "studio_album",
+   "sources": [
+    "musicbrainz",
+    "deezer"
+   ],
+   "lote": "{\"title\":\"accepted\",\"release_year\":\"accepted\",\"album_type\":\"accepted\"}"
+  },
+  {
+   "artistId": 4235,
+   "artist": "Arca",
+   "albumId": 10085,
+   "title": "Cayó",
+   "year": 2022,
+   "type": "single",
+   "sources": [
+    "musicbrainz",
+    "deezer"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 4235,
+   "artist": "Arca",
+   "albumId": 10086,
+   "title": "Baron Foyel",
+   "year": 2011,
+   "type": "compilation",
+   "sources": [
+    "musicbrainz"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 4235,
+   "artist": "Arca",
+   "albumId": 10087,
+   "title": "Open Letter",
+   "year": 2011,
+   "type": "single",
+   "sources": [
+    "musicbrainz"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 4235,
+   "artist": "Arca",
+   "albumId": 10088,
+   "title": "Time",
+   "year": 2020,
+   "type": "single",
+   "sources": [
+    "musicbrainz",
+    "deezer"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 4235,
+   "artist": "Arca",
+   "albumId": 10089,
+   "title": "KiCk: ThE cOmPlEtE cYcLe",
+   "year": 2022,
+   "type": "compilation",
+   "sources": [
+    "musicbrainz"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 4235,
+   "artist": "Arca",
+   "albumId": 10090,
+   "title": "Washed Clean",
+   "year": 2015,
+   "type": "single",
+   "sources": [
+    "musicbrainz"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 4235,
+   "artist": "Arca",
+   "albumId": 10091,
+   "title": "「prayer」",
+   "year": 2011,
+   "type": "single",
+   "sources": [
+    "musicbrainz"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 4235,
+   "artist": "Arca",
+   "albumId": 10092,
+   "title": "「AALIYAH」x あいのうた",
+   "year": 2011,
+   "type": "single",
+   "sources": [
+    "musicbrainz"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 4235,
+   "artist": "Arca",
+   "albumId": 10093,
+   "title": "Electra Rex",
+   "year": 2021,
+   "type": "single",
+   "sources": [
+    "musicbrainz",
+    "deezer"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 4235,
+   "artist": "Arca",
+   "albumId": 10094,
+   "title": "Queer",
+   "year": 2021,
+   "type": "single",
+   "sources": [
+    "musicbrainz",
+    "deezer"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 4235,
+   "artist": "Arca",
+   "albumId": 10095,
+   "title": "Born Yesterday",
+   "year": 2021,
+   "type": "single",
+   "sources": [
+    "musicbrainz",
+    "deezer"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 4235,
+   "artist": "Arca",
+   "albumId": 10096,
+   "title": "Gender Wayang Arca Ember",
+   "year": 2019,
+   "type": "single",
+   "sources": [
+    "musicbrainz"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 4235,
+   "artist": "Arca",
+   "albumId": 10097,
+   "title": "Chama",
+   "year": 2024,
+   "type": "single",
+   "sources": [
+    "musicbrainz",
+    "deezer"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 4235,
+   "artist": "Arca",
+   "albumId": 10098,
+   "title": "On My Body Grind Edit",
+   "year": 2011,
+   "type": "single",
+   "sources": [
+    "musicbrainz"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 4235,
+   "artist": "Arca",
+   "albumId": 10099,
+   "title": "Anoche",
+   "year": 2017,
+   "type": "single",
+   "sources": [
+    "musicbrainz"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 4235,
+   "artist": "Arca",
+   "albumId": 10100,
+   "title": "Prada / Rakata",
+   "year": 2021,
+   "type": "single",
+   "sources": [
+    "musicbrainz",
+    "deezer"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 4235,
+   "artist": "Arca",
+   "albumId": 10101,
+   "title": "Lana Monument 116 BPM",
+   "year": 2015,
+   "type": "single",
+   "sources": [
+    "musicbrainz"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 4235,
+   "artist": "Arca",
+   "albumId": 10102,
+   "title": "Mutant",
+   "year": 2015,
+   "type": "studio_album",
+   "sources": [
+    "musicbrainz",
+    "deezer"
+   ],
+   "lote": "{\"album_type\":\"accepted\",\"title\":\"accepted\",\"release_year\":\"accepted\"}"
+  },
+  {
+   "artistId": 4235,
+   "artist": "Arca",
+   "albumId": 10103,
+   "title": "Яitual",
+   "year": 2023,
+   "type": "single",
+   "sources": [
+    "musicbrainz",
+    "deezer"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 4235,
+   "artist": "Arca",
+   "albumId": 10104,
+   "title": "「my sword is like wo」",
+   "year": 2011,
+   "type": "single",
+   "sources": [
+    "musicbrainz"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 4235,
+   "artist": "Arca",
+   "albumId": 10105,
+   "title": "Barón libre",
+   "year": 2012,
+   "type": "ep",
+   "sources": [
+    "musicbrainz"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 4235,
+   "artist": "Arca",
+   "albumId": 10106,
+   "title": "Vanity",
+   "year": 2015,
+   "type": "single",
+   "sources": [
+    "musicbrainz"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 4235,
+   "artist": "Arca",
+   "albumId": 10107,
+   "title": "Incendio",
+   "year": 2021,
+   "type": "single",
+   "sources": [
+    "musicbrainz",
+    "deezer"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 4235,
+   "artist": "Arca",
+   "albumId": 10108,
+   "title": "Puta / Sola",
+   "year": 2025,
+   "type": "single",
+   "sources": [
+    "musicbrainz",
+    "deezer"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 4235,
+   "artist": "Arca",
+   "albumId": 10109,
+   "title": "Piel",
+   "year": 2017,
+   "type": "single",
+   "sources": [
+    "musicbrainz"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 4235,
+   "artist": "Arca",
+   "albumId": 10110,
+   "title": "FADER/MoMA PS1 Warm Up Mix",
+   "year": 2012,
+   "type": "compilation",
+   "sources": [
+    "musicbrainz"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 4235,
+   "artist": "Arca",
+   "albumId": 10111,
+   "title": "KICK ii",
+   "year": 2021,
+   "type": "studio_album",
+   "sources": [
+    "musicbrainz",
+    "deezer"
+   ],
+   "lote": "{\"title\":\"accepted\",\"release_year\":\"accepted\",\"album_type\":\"accepted\"}"
+  },
+  {
+   "artistId": 4235,
+   "artist": "Arca",
+   "albumId": 10112,
+   "title": "KLK - Single",
+   "year": 2020,
+   "type": "single",
+   "sources": [
+    "musicbrainz",
+    "deezer"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 4235,
+   "artist": "Arca",
+   "albumId": 10113,
+   "title": "KiCk StReAm: Raw and Dirty Compilation of Unreleased Arca Songs",
+   "year": 2022,
+   "type": "studio_album",
+   "sources": [
+    "musicbrainz"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 4235,
+   "artist": "Arca",
+   "albumId": 10114,
+   "title": "Airdoll",
+   "year": 2026,
+   "type": "compilation",
+   "sources": [
+    "musicbrainz"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 4235,
+   "artist": "Arca",
+   "albumId": 10115,
+   "title": "Hips Don’t Lie",
+   "year": 2014,
+   "type": "single",
+   "sources": [
+    "musicbrainz"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 4235,
+   "artist": "Arca",
+   "albumId": 10116,
+   "title": "Sheep",
+   "year": 2015,
+   "type": "compilation",
+   "sources": [
+    "musicbrainz"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 4235,
+   "artist": "Arca",
+   "albumId": 10117,
+   "title": "&&&&&",
+   "year": 2013,
+   "type": "compilation",
+   "sources": [
+    "musicbrainz",
+    "deezer"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 4235,
+   "artist": "Arca",
+   "albumId": 10118,
+   "title": "kick iiii",
+   "year": 2021,
+   "type": "studio_album",
+   "sources": [
+    "musicbrainz",
+    "deezer"
+   ],
+   "lote": "{\"title\":\"accepted\",\"release_year\":\"accepted\",\"album_type\":\"accepted\"}"
+  },
+  {
+   "artistId": 4235,
+   "artist": "Arca",
+   "albumId": 10119,
+   "title": "KiCk i",
+   "year": 2020,
+   "type": "studio_album",
+   "sources": [
+    "musicbrainz",
+    "deezer"
+   ],
+   "lote": "{\"title\":\"accepted\",\"release_year\":\"accepted\",\"album_type\":\"accepted\"}"
+  },
+  {
+   "artistId": 4235,
+   "artist": "Arca",
+   "albumId": 10120,
+   "title": "Entrañas",
+   "year": 2016,
+   "type": "compilation",
+   "sources": [
+    "musicbrainz"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 4235,
+   "artist": "Arca",
+   "albumId": 10121,
+   "title": "Nonbinary",
+   "year": 2020,
+   "type": "single",
+   "sources": [
+    "musicbrainz",
+    "deezer"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 4235,
+   "artist": "Arca",
+   "albumId": 10122,
+   "title": "Stretch 1",
+   "year": 2012,
+   "type": "ep",
+   "sources": [
+    "musicbrainz",
+    "deezer"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 4235,
+   "artist": "Arca",
+   "albumId": 10123,
+   "title": "Wound / Sad Bitch",
+   "year": 2015,
+   "type": "single",
+   "sources": [
+    "musicbrainz"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 4235,
+   "artist": "Arca",
+   "albumId": 10124,
+   "title": "Fetiche",
+   "year": 2018,
+   "type": "single",
+   "sources": [
+    "musicbrainz"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 4235,
+   "artist": "Arca",
+   "albumId": 10125,
+   "title": "Issued by Bottega",
+   "year": 2021,
+   "type": "ep",
+   "sources": [
+    "musicbrainz"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 4235,
+   "artist": "Arca",
+   "albumId": 10126,
+   "title": "Xen",
+   "year": 2014,
+   "type": "studio_album",
+   "sources": [
+    "musicbrainz",
+    "deezer"
+   ],
+   "lote": "{\"title\":\"accepted\",\"release_year\":\"accepted\",\"album_type\":\"accepted\"}"
+  },
+  {
+   "artistId": 4235,
+   "artist": "Arca",
+   "albumId": 10127,
+   "title": "KicK iii",
+   "year": 2021,
+   "type": "studio_album",
+   "sources": [
+    "musicbrainz",
+    "deezer"
+   ],
+   "lote": "{\"title\":\"accepted\",\"release_year\":\"accepted\",\"album_type\":\"accepted\"}"
+  },
+  {
+   "artistId": 4235,
+   "artist": "Arca",
+   "albumId": 10128,
+   "title": "\"Thievery\" Music Video / \"Held Apart\" Trailer Video",
+   "year": 2014,
+   "type": "other",
+   "sources": [
+    "musicbrainz"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 4235,
+   "artist": "Arca",
+   "albumId": 10129,
+   "title": "Mequetrefe",
+   "year": 2020,
+   "type": "single",
+   "sources": [
+    "musicbrainz",
+    "deezer"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 4235,
+   "artist": "Arca",
+   "albumId": 10130,
+   "title": "XXXXX",
+   "year": 2026,
+   "type": "studio_album",
+   "sources": [
+    "musicbrainz",
+    "deezer"
+   ],
+   "lote": "{\"title\":\"accepted\",\"release_year\":\"accepted\",\"album_type\":\"accepted\"}"
+  },
+  {
+   "artistId": 4235,
+   "artist": "Arca",
+   "albumId": 10131,
+   "title": "Thievery",
+   "year": 2014,
+   "type": "single",
+   "sources": [
+    "musicbrainz",
+    "deezer"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 4235,
+   "artist": "Arca",
+   "albumId": 10132,
+   "title": "Madre",
+   "year": 2021,
+   "type": "ep",
+   "sources": [
+    "musicbrainz",
+    "deezer"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 4235,
+   "artist": "Arca",
+   "albumId": 10133,
+   "title": "Monstruosidad",
+   "year": 2015,
+   "type": "single",
+   "sources": [
+    "musicbrainz"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 4235,
+   "artist": "Arca",
+   "albumId": 10134,
+   "title": "kiCK iiiii",
+   "year": 2021,
+   "type": "studio_album",
+   "sources": [
+    "musicbrainz",
+    "deezer"
+   ],
+   "lote": "{\"title\":\"accepted\",\"release_year\":\"accepted\",\"album_type\":\"accepted\"}"
+  },
+  {
+   "artistId": 4235,
+   "artist": "Arca",
+   "albumId": 10135,
+   "title": "Riquiquí;Bronze-Instances(1-100)",
+   "year": 2020,
+   "type": "remix",
+   "sources": [
+    "musicbrainz",
+    "deezer"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 4235,
+   "artist": "Arca",
+   "albumId": 10136,
+   "title": "Balamb Garden",
+   "year": 2011,
+   "type": "single",
+   "sources": [
+    "musicbrainz"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 4235,
+   "artist": "Arca",
+   "albumId": 10137,
+   "title": "Knot",
+   "year": 2020,
+   "type": "single",
+   "sources": [
+    "musicbrainz"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 4235,
+   "artist": "Arca",
+   "albumId": 10138,
+   "title": "Live @ Boiler Room, Caracas, Venezuela 2024.03.16",
+   "year": 2024,
+   "type": "compilation",
+   "sources": [
+    "musicbrainz"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 4235,
+   "artist": "Arca",
+   "albumId": 10139,
+   "title": "Reverie",
+   "year": 2017,
+   "type": "single",
+   "sources": [
+    "musicbrainz"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 3829,
+   "artist": "Juan Vicente Torrealba",
+   "albumId": 10140,
+   "title": "La potra zaina",
+   "year": 2019,
+   "type": "single",
+   "sources": [
+    "musicbrainz"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 3829,
+   "artist": "Juan Vicente Torrealba",
+   "albumId": 10141,
+   "title": "Solito con las estrellas",
+   "year": 2019,
+   "type": "single",
+   "sources": [
+    "musicbrainz"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 3829,
+   "artist": "Juan Vicente Torrealba",
+   "albumId": 10142,
+   "title": "Fiesta De Joropos",
+   "year": 1979,
+   "type": "other",
+   "sources": [
+    "deezer"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 3829,
+   "artist": "Juan Vicente Torrealba",
+   "albumId": 10143,
+   "title": "Grandes Maestros Del Arpa",
+   "year": null,
+   "type": "other",
+   "sources": [
+    "deezer"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 3829,
+   "artist": "Juan Vicente Torrealba",
+   "albumId": 10144,
+   "title": "Lo Mejor De Juan Vicente",
+   "year": null,
+   "type": "other",
+   "sources": [
+    "deezer"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 3829,
+   "artist": "Juan Vicente Torrealba",
+   "albumId": 10145,
+   "title": "Al Son De Juan Vicente Vol. 2",
+   "year": null,
+   "type": "other",
+   "sources": [
+    "deezer"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 3829,
+   "artist": "Juan Vicente Torrealba",
+   "albumId": 10146,
+   "title": "Concierto en la Llanura",
+   "year": 2006,
+   "type": "other",
+   "sources": [
+    "deezer"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 3829,
+   "artist": "Juan Vicente Torrealba",
+   "albumId": 10147,
+   "title": "Concierto en la Llanura, Vol. 6",
+   "year": 2019,
+   "type": "other",
+   "sources": [
+    "deezer"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 3829,
+   "artist": "Juan Vicente Torrealba",
+   "albumId": 10148,
+   "title": "Concierto en la Llanura, Vol. 1",
+   "year": 2017,
+   "type": "other",
+   "sources": [
+    "deezer"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 3829,
+   "artist": "Juan Vicente Torrealba",
+   "albumId": 10149,
+   "title": "Concierto en la Llanura, Vol. 4",
+   "year": 2017,
+   "type": "other",
+   "sources": [
+    "deezer"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 3829,
+   "artist": "Juan Vicente Torrealba",
+   "albumId": 10150,
+   "title": "Cuerdas de Oro: Rapsodia Llanera",
+   "year": 2016,
+   "type": "other",
+   "sources": [
+    "deezer"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 3829,
+   "artist": "Juan Vicente Torrealba",
+   "albumId": 10151,
+   "title": "Alma Venezolana",
+   "year": 2016,
+   "type": "other",
+   "sources": [
+    "deezer"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 3829,
+   "artist": "Juan Vicente Torrealba",
+   "albumId": 10152,
+   "title": "Típico",
+   "year": 2016,
+   "type": "other",
+   "sources": [
+    "deezer"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 3829,
+   "artist": "Juan Vicente Torrealba",
+   "albumId": 10153,
+   "title": "Concierto Romántico: Solos de Arpa",
+   "year": 1972,
+   "type": "other",
+   "sources": [
+    "deezer"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 3829,
+   "artist": "Juan Vicente Torrealba",
+   "albumId": 10154,
+   "title": "Arpa Magica",
+   "year": 2005,
+   "type": "other",
+   "sources": [
+    "deezer"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 3829,
+   "artist": "Juan Vicente Torrealba",
+   "albumId": 10155,
+   "title": "Lo Mejor De Juan Vicente (Vol. 2)",
+   "year": 1979,
+   "type": "other",
+   "sources": [
+    "deezer"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 3829,
+   "artist": "Juan Vicente Torrealba",
+   "albumId": 10156,
+   "title": "Concierto en la Llanura, Vol. 2",
+   "year": 1972,
+   "type": "other",
+   "sources": [
+    "deezer"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 3829,
+   "artist": "Juan Vicente Torrealba",
+   "albumId": 10157,
+   "title": "Concierto en la Llanura, Vol. 5",
+   "year": 1972,
+   "type": "other",
+   "sources": [
+    "deezer"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 3829,
+   "artist": "Juan Vicente Torrealba",
+   "albumId": 10158,
+   "title": "Festival Torrealbero, Vol. 1",
+   "year": 1970,
+   "type": "other",
+   "sources": [
+    "deezer"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 3829,
+   "artist": "Juan Vicente Torrealba",
+   "albumId": 10159,
+   "title": "Festival Torrealbero, Vol. 2",
+   "year": 1970,
+   "type": "other",
+   "sources": [
+    "deezer"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 3829,
+   "artist": "Juan Vicente Torrealba",
+   "albumId": 10160,
+   "title": "Concierto en la Llanura, Vol. 3",
+   "year": 1967,
+   "type": "other",
+   "sources": [
+    "deezer"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 4320,
+   "artist": "Popy",
+   "albumId": 10161,
+   "title": "Serie Lo Máximo 21 Éxitos de Popy",
+   "year": 2005,
+   "type": "other",
+   "sources": [
+    "deezer"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 4320,
+   "artist": "Popy",
+   "albumId": 10162,
+   "title": "El Idolo de Todos los Niños",
+   "year": 1997,
+   "type": "other",
+   "sources": [
+    "deezer"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 4320,
+   "artist": "Popy",
+   "albumId": 10163,
+   "title": "Dí Papá",
+   "year": 1987,
+   "type": "other",
+   "sources": [
+    "deezer"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 4320,
+   "artist": "Popy",
+   "albumId": 10164,
+   "title": "Popy",
+   "year": 1985,
+   "type": "other",
+   "sources": [
+    "deezer"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 4320,
+   "artist": "Popy",
+   "albumId": 10165,
+   "title": "Aguinaldos Tradicionales Venezolanos",
+   "year": 1982,
+   "type": "studio_album",
+   "sources": [
+    "deezer"
+   ],
+   "lote": "{\"title\":\"accepted\",\"release_year\":\"accepted\",\"album_type\":\"rellenado\"}"
+  },
+  {
+   "artistId": 4320,
+   "artist": "Popy",
+   "albumId": 10166,
+   "title": "A Cepillarse",
+   "year": 1982,
+   "type": "other",
+   "sources": [
+    "deezer"
+   ],
+   "lote": null
+  },
+  {
+   "artistId": 4320,
+   "artist": "Popy",
+   "albumId": 10167,
+   "title": "Popy Solo",
+   "year": 1977,
+   "type": "studio_album",
+   "sources": [
+    "discogs"
+   ],
+   "lote": "{\"title\":\"accepted\",\"release_year\":\"accepted\",\"album_type\":\"rellenado\"}"
+  },
+  {
+   "artistId": 4320,
+   "artist": "Popy",
+   "albumId": 10168,
+   "title": "Un Circo Para Popy",
+   "year": 1981,
+   "type": "studio_album",
+   "sources": [
+    "discogs"
+   ],
+   "lote": "{\"title\":\"accepted\",\"release_year\":\"accepted\",\"album_type\":\"rellenado\"}"
+  },
+  {
+   "artistId": 4320,
+   "artist": "Popy",
+   "albumId": 10169,
+   "title": "A Estudiar...",
+   "year": 1984,
+   "type": "studio_album",
+   "sources": [
+    "discogs"
+   ],
+   "lote": "{\"title\":\"accepted\",\"release_year\":\"accepted\",\"album_type\":\"rellenado\"}"
+  }
+ ],
+ "variants": [
+  {
+   "artistId": 3829,
+   "artist": "Juan Vicente Torrealba",
+   "external": "Rapsodia Llanera y Más",
+   "core": "Rapsodia Llanera",
+   "coreId": 9227,
+   "source": "https://www.deezer.com/album/168383872"
+  },
+  {
+   "artistId": 3829,
+   "artist": "Juan Vicente Torrealba",
+   "external": "La Navidad De Juan Vicente Torrealba",
+   "core": "La Navidad De Juan Vicente",
+   "coreId": 9237,
+   "source": "https://www.deezer.com/album/578310941"
+  },
+  {
+   "artistId": 3829,
+   "artist": "Juan Vicente Torrealba",
+   "external": "Al Son de Juan Vicente: México",
+   "core": "Al Son De Juan Vicente",
+   "coreId": 9241,
+   "source": "https://www.deezer.com/album/522659932"
+  }
+ ],
+ "loteUnconfirmed": [
+  {
+   "loteId": "juan-vicente-torrealba",
+   "artistId": 3829,
+   "artist": "Juan Vicente Torrealba",
+   "title": "La música más pura y bella de Venezuela",
+   "year": 1953,
+   "why": "sin segunda fuente"
+  },
+  {
+   "loteId": "popy",
+   "artistId": 4320,
+   "artist": "Popy",
+   "title": "A comer",
+   "year": 1986,
+   "why": "sin segunda fuente"
+  }
+ ],
+ "loteYearMismatch": [
+  {
+   "loteId": "popy",
+   "artistId": 4320,
+   "artist": "Popy",
+   "title": "Popy",
+   "year": 1972,
+   "why": "título encontrado con otro año",
+   "seenIn": "deezer 1985"
+  }
+ ],
+ "deezerUnanchored": [
+  {
+   "artistId": 3829,
+   "artist": "Juan Vicente Torrealba",
+   "title": "Ritmo Torrealbero",
+   "year": 2026,
+   "type": "album",
+   "label": "Congo Records",
+   "url": "https://www.deezer.com/album/1106371522"
+  },
+  {
+   "artistId": 3829,
+   "artist": "Juan Vicente Torrealba",
+   "title": "Concierto para Arpa Venezolana",
+   "year": 2021,
+   "type": "album",
+   "label": "Music Club",
+   "url": "https://www.deezer.com/album/265946592"
+  },
+  {
+   "artistId": 3829,
+   "artist": "Juan Vicente Torrealba",
+   "title": "Estero de Camaguán",
+   "year": 2018,
+   "type": "album",
+   "label": "Musica Tropical",
+   "url": "https://www.deezer.com/album/63582012"
+  },
+  {
+   "artistId": 3829,
+   "artist": "Juan Vicente Torrealba",
+   "title": "Serenata",
+   "year": 2017,
+   "type": "album",
+   "label": "Star Music",
+   "url": "https://www.deezer.com/album/708865801"
+  },
+  {
+   "artistId": 3829,
+   "artist": "Juan Vicente Torrealba",
+   "title": "Concierto en la Llanura (Instrumental)",
+   "year": 2016,
+   "type": "album",
+   "label": "SG Music",
+   "url": "https://www.deezer.com/album/93266492"
+  },
+  {
+   "artistId": 3829,
+   "artist": "Juan Vicente Torrealba",
+   "title": "Concierto En La Llanura Volume 1",
+   "year": 2011,
+   "type": "album",
+   "label": "YOYO USA Digital",
+   "url": "https://www.deezer.com/album/1229995"
+  },
+  {
+   "artistId": 3829,
+   "artist": "Juan Vicente Torrealba",
+   "title": "Concierto En La Llanura Volume 2",
+   "year": 2011,
+   "type": "album",
+   "label": "YOYO USA Digital",
+   "url": "https://www.deezer.com/album/1229996"
+  },
+  {
+   "artistId": 3829,
+   "artist": "Juan Vicente Torrealba",
+   "title": "Fiesta Colombiana",
+   "year": 1984,
+   "type": "album",
+   "label": "FM ENTRETENIMIENTO",
+   "url": "https://www.deezer.com/album/554299952"
+  },
+  {
+   "artistId": 3829,
+   "artist": "Juan Vicente Torrealba",
+   "title": "Mensaje de España (feat. Los Torrealberos)",
+   "year": 1966,
+   "type": "album",
+   "label": "Mundo Digital",
+   "url": "https://www.deezer.com/album/245070112"
+  },
+  {
+   "artistId": 3829,
+   "artist": "Juan Vicente Torrealba",
+   "title": "Las Joyas Perdidas de Juan Vicente",
+   "year": 2021,
+   "type": "ep",
+   "label": "Discos Rio Aguaro",
+   "url": "https://www.deezer.com/album/268587082"
+  },
+  {
+   "artistId": 3829,
+   "artist": "Juan Vicente Torrealba",
+   "title": "Pasajes de Germán Fleitas Beroes",
+   "year": 2011,
+   "type": "compile",
+   "label": "Vintage Music",
+   "url": "https://www.deezer.com/album/1290261"
+  },
+  {
+   "artistId": 4320,
+   "artist": "Popy",
+   "title": "ENTRE Popy y Marta",
+   "year": 2026,
+   "type": "album",
+   "label": "POPY",
+   "url": "https://www.deezer.com/album/936929371"
+  },
+  {
+   "artistId": 4320,
+   "artist": "Popy",
+   "title": "卒業アルバム (Instrumental)",
+   "year": 2026,
+   "type": "album",
+   "label": "Popy",
+   "url": "https://www.deezer.com/album/913191461"
+  },
+  {
+   "artistId": 4320,
+   "artist": "Popy",
+   "title": "SOHO TONIGHT",
+   "year": 2026,
+   "type": "album",
+   "label": "Neofeelmusic",
+   "url": "https://www.deezer.com/album/915681761"
+  },
+  {
+   "artistId": 4320,
+   "artist": "Popy",
+   "title": "Cherry Pop",
+   "year": 2025,
+   "type": "album",
+   "label": "Neofeelmusic",
+   "url": "https://www.deezer.com/album/885766382"
+  },
+  {
+   "artistId": 4320,
+   "artist": "Popy",
+   "title": "Cepillarse los Dientes",
+   "year": 2016,
+   "type": "album",
+   "label": "TOV Productions",
+   "url": "https://www.deezer.com/album/90514462"
+  },
+  {
+   "artistId": 4320,
+   "artist": "Popy",
+   "title": "El Mundo De",
+   "year": 2016,
+   "type": "album",
+   "label": "TOV Productions",
+   "url": "https://www.deezer.com/album/168432212"
+  },
+  {
+   "artistId": 4320,
+   "artist": "Popy",
+   "title": "Ische Kore",
+   "year": 2011,
+   "type": "album",
+   "label": "Laser Vision",
+   "url": "https://www.deezer.com/album/484762835"
+  },
+  {
+   "artistId": 4320,
+   "artist": "Popy",
+   "title": "El Mundo de Popy",
+   "year": 1980,
+   "type": "album",
+   "label": "TH TOP HITS DE VENEZUELA,C.A.",
+   "url": "https://www.deezer.com/album/85731722"
+  },
+  {
+   "artistId": 4320,
+   "artist": "Popy",
+   "title": "Si Yo Fuera Rico",
+   "year": 1972,
+   "type": "album",
+   "label": "Mundo Digital",
+   "url": "https://www.deezer.com/album/245022932"
+  },
+  {
+   "artistId": 4320,
+   "artist": "Popy",
+   "title": "Hridoy Khan Choice",
+   "year": 2012,
+   "type": "ep",
+   "label": "Sangeeta Complex",
+   "url": "https://www.deezer.com/album/6010684"
+  },
+  {
+   "artistId": 4320,
+   "artist": "Popy",
+   "title": "No Contact",
+   "year": 2026,
+   "type": "single",
+   "label": "Popy Records",
+   "url": "https://www.deezer.com/album/940656691"
+  },
+  {
+   "artistId": 4320,
+   "artist": "Popy",
+   "title": "GUITARRA DE AMOR",
+   "year": 2026,
+   "type": "single",
+   "label": "POPY",
+   "url": "https://www.deezer.com/album/944871501"
+  },
+  {
+   "artistId": 4320,
+   "artist": "Popy",
+   "title": "Hechizo",
+   "year": 2026,
+   "type": "single",
+   "label": "POPY",
+   "url": "https://www.deezer.com/album/944459371"
+  },
+  {
+   "artistId": 4320,
+   "artist": "Popy",
+   "title": "Pencile Ekechilam Bole Ki",
+   "year": 2026,
+   "type": "single",
+   "label": "Sangeeta",
+   "url": "https://www.deezer.com/album/926972511"
+  },
+  {
+   "artistId": 4320,
+   "artist": "Popy",
+   "title": "Finjo Demencia",
+   "year": 2026,
+   "type": "single",
+   "label": "POPY",
+   "url": "https://www.deezer.com/album/896195392"
+  },
+  {
+   "artistId": 4320,
+   "artist": "Popy",
+   "title": "Finjo Demencia",
+   "year": 2026,
+   "type": "single",
+   "label": "Popy",
+   "url": "https://www.deezer.com/album/906954252"
+  },
+  {
+   "artistId": 4320,
+   "artist": "Popy",
+   "title": "Mentiroso",
+   "year": 2025,
+   "type": "single",
+   "label": "POPY",
+   "url": "https://www.deezer.com/album/839159602"
+  },
+  {
+   "artistId": 4320,
+   "artist": "Popy",
+   "title": "VESSEL",
+   "year": 2025,
+   "type": "single",
+   "label": "POPY",
+   "url": "https://www.deezer.com/album/821881351"
+  },
+  {
+   "artistId": 4320,
+   "artist": "Popy",
+   "title": "Pencile Aka Chobi",
+   "year": 2025,
+   "type": "single",
+   "label": "E-music",
+   "url": "https://www.deezer.com/album/823458991"
+  },
+  {
+   "artistId": 4320,
+   "artist": "Popy",
+   "title": "Neel Akash",
+   "year": 2025,
+   "type": "single",
+   "label": "Sangeeta",
+   "url": "https://www.deezer.com/album/818742901"
+  },
+  {
+   "artistId": 4320,
+   "artist": "Popy",
+   "title": "Nunca Fuimos (feat. Ivan Coniglio)",
+   "year": 2025,
+   "type": "single",
+   "label": "POPY",
+   "url": "https://www.deezer.com/album/808127421"
+  },
+  {
+   "artistId": 4320,
+   "artist": "Popy",
+   "title": "Llorarte no me salva",
+   "year": 2025,
+   "type": "single",
+   "label": "POPY",
+   "url": "https://www.deezer.com/album/796649931"
+  },
+  {
+   "artistId": 4320,
+   "artist": "Popy",
+   "title": "ASE (Afecto sin efecto)",
+   "year": 2025,
+   "type": "single",
+   "label": "POPY",
+   "url": "https://www.deezer.com/album/784831811"
+  },
+  {
+   "artistId": 4320,
+   "artist": "Popy",
+   "title": "Firey Chaichi",
+   "year": 2025,
+   "type": "single",
+   "label": "E-music",
+   "url": "https://www.deezer.com/album/774188091"
+  },
+  {
+   "artistId": 4320,
+   "artist": "Popy",
+   "title": "Kobe Ami Bahir Holem",
+   "year": 2025,
+   "type": "single",
+   "label": "E-music",
+   "url": "https://www.deezer.com/album/774188941"
+  },
+  {
+   "artistId": 4320,
+   "artist": "Popy",
+   "title": "Irónico",
+   "year": 2025,
+   "type": "single",
+   "label": "7444928 Records DK2",
+   "url": "https://www.deezer.com/album/714485021"
+  },
+  {
+   "artistId": 4320,
+   "artist": "Popy",
+   "title": "FAKE LOVE (feat. Sok.)",
+   "year": 2024,
+   "type": "single",
+   "label": "7444928 Records DK2",
+   "url": "https://www.deezer.com/album/679699121"
+  },
+  {
+   "artistId": 4320,
+   "artist": "Popy",
+   "title": "Stay Friends",
+   "year": 2024,
+   "type": "single",
+   "label": "Popy Records",
+   "url": "https://www.deezer.com/album/636029371"
+  },
+  {
+   "artistId": 4320,
+   "artist": "Popy",
+   "title": "LQTC",
+   "year": 2024,
+   "type": "single",
+   "label": "7444928 Records DK2",
+   "url": "https://www.deezer.com/album/621463951"
+  },
+  {
+   "artistId": 4320,
+   "artist": "Popy",
+   "title": "LQTC",
+   "year": 2024,
+   "type": "single",
+   "label": "Popy",
+   "url": "https://www.deezer.com/album/1066590431"
+  },
+  {
+   "artistId": 4320,
+   "artist": "Popy",
+   "title": "Diva (Cover)",
+   "year": 2024,
+   "type": "single",
+   "label": "POPY",
+   "url": "https://www.deezer.com/album/615863142"
+  },
+  {
+   "artistId": 4320,
+   "artist": "Popy",
+   "title": "Acércate (Cover)",
+   "year": 2024,
+   "type": "single",
+   "label": "POPY",
+   "url": "https://www.deezer.com/album/615864312"
+  },
+  {
+   "artistId": 4320,
+   "artist": "Popy",
+   "title": "Malefica (Cover)",
+   "year": 2024,
+   "type": "single",
+   "label": "POPY",
+   "url": "https://www.deezer.com/album/616268262"
+  },
+  {
+   "artistId": 4320,
+   "artist": "Popy",
+   "title": "Acaramelao (Cover)",
+   "year": 2024,
+   "type": "single",
+   "label": "POPY",
+   "url": "https://www.deezer.com/album/635551941"
+  },
+  {
+   "artistId": 4320,
+   "artist": "Popy",
+   "title": "Acaramelao (Cover)",
+   "year": 2023,
+   "type": "single",
+   "label": "Popy",
+   "url": "https://www.deezer.com/album/1066703421"
+  },
+  {
+   "artistId": 4320,
+   "artist": "Popy",
+   "title": "Historia Diferente",
+   "year": 2024,
+   "type": "single",
+   "label": "Popy",
+   "url": "https://www.deezer.com/album/1066719131"
+  },
+  {
+   "artistId": 4320,
+   "artist": "Popy",
+   "title": "Historia Diferente",
+   "year": 2023,
+   "type": "single",
+   "label": "POPY",
+   "url": "https://www.deezer.com/album/504201991"
+  },
+  {
+   "artistId": 4320,
+   "artist": "Popy",
+   "title": "Nijere Tui Na Chinile",
+   "year": 2023,
+   "type": "single",
+   "label": "Rinku & Samporka",
+   "url": "https://www.deezer.com/album/497359161"
+  },
+  {
+   "artistId": 4320,
+   "artist": "Popy",
+   "title": "Mitlo Na Re",
+   "year": 2023,
+   "type": "single",
+   "label": "Rinku & Samporka",
+   "url": "https://www.deezer.com/album/497516221"
+  },
+  {
+   "artistId": 4320,
+   "artist": "Popy",
+   "title": "Bristi",
+   "year": 2021,
+   "type": "single",
+   "label": "E-music",
+   "url": "https://www.deezer.com/album/529861322"
+  },
+  {
+   "artistId": 4320,
+   "artist": "Popy",
+   "title": "Jochonar Alo",
+   "year": 2021,
+   "type": "single",
+   "label": "E-music",
+   "url": "https://www.deezer.com/album/529861512"
+  },
+  {
+   "artistId": 4320,
+   "artist": "Popy",
+   "title": "Estamos Pegao",
+   "year": 2019,
+   "type": "single",
+   "label": "Galaxy Musik",
+   "url": "https://www.deezer.com/album/118166352"
+  },
+  {
+   "artistId": 4320,
+   "artist": "Popy",
+   "title": "Tus Negritos",
+   "year": 2019,
+   "type": "single",
+   "label": "Galaxy Musik",
+   "url": "https://www.deezer.com/album/118662172"
+  },
+  {
+   "artistId": 4320,
+   "artist": "Popy",
+   "title": "Pauta 4",
+   "year": 2019,
+   "type": "single",
+   "label": "Celula Music",
+   "url": "https://www.deezer.com/album/98516832"
+  },
+  {
+   "artistId": 4320,
+   "artist": "Popy",
+   "title": "A Lo Que Vinimos (feat. Harryson)",
+   "year": 2019,
+   "type": "single",
+   "label": "Fenix Music Group Inc.",
+   "url": "https://www.deezer.com/album/94904492"
+  },
+  {
+   "artistId": 4320,
+   "artist": "Popy",
+   "title": "El Ingenuo (feat. Dalan la Fama)",
+   "year": 2019,
+   "type": "single",
+   "label": "Fenix Music Group Inc.",
+   "url": "https://www.deezer.com/album/92986802"
+  }
+ ],
+ "skipped": [],
+ "noIdentity": [],
+ "fieldMismatches": [
+  {
+   "albumId": 10076,
+   "title": "Ostinato",
+   "planned": {
+    "year": 2023,
+    "type": "other"
+   },
+   "stored": {
+    "year": 2023,
+    "type": "studio_album"
+   }
+  },
+  {
+   "albumId": 10165,
+   "title": "Aguinaldos Tradicionales Venezolanos",
+   "planned": {
+    "year": 1982,
+    "type": "other"
+   },
+   "stored": {
+    "year": 1982,
+    "type": "studio_album"
+   }
+  },
+  {
+   "albumId": 10167,
+   "title": "Popy Solo",
+   "planned": {
+    "year": 1977,
+    "type": "other"
+   },
+   "stored": {
+    "year": 1977,
+    "type": "studio_album"
+   }
+  },
+  {
+   "albumId": 10168,
+   "title": "Un Circo Para Popy",
+   "planned": {
+    "year": 1981,
+    "type": "other"
+   },
+   "stored": {
+    "year": 1981,
+    "type": "studio_album"
+   }
+  },
+  {
+   "albumId": 10169,
+   "title": "A Estudiar...",
+   "planned": {
+    "year": 1984,
+    "type": "other"
+   },
+   "stored": {
+    "year": 1984,
+    "type": "studio_album"
+   }
+  }
+ ],
+ "totals": {
+  "creado": 94,
+  "creado:other": 30,
+  "creado:single": 39,
+  "creado:compilation": 9,
+  "creado:ep": 5,
+  "creado:studio_album": 10,
+  "creado:remix": 1,
+  "ya en catálogo": 36,
+  "deezer sin ancla": 53,
+  "variante probable": 3
+ }
+}

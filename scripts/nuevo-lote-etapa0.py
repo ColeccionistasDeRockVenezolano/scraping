@@ -31,7 +31,7 @@ OUT = Path(sys.argv[2]) if len(sys.argv) > 2 else ROOT / "reports/nuevo-lote-202
 
 # Identidades decididas a mano al cruzar (2026-10-02). None = nuevo.
 IDENTIDAD_MANUAL: dict[str, list[int] | None] = {
-    "arca": [1250],  # Nuuro → Arca (renombre, alias Nuuro); El Arca 1414 es otra banda
+    "arca": None,  # nuevo: Nuuro (1250) es otro proyecto de la misma persona (P2528), no Arca (Brian 2026-10-02); El Arca 1414 es otra banda
     "zardonic": [795],  # Triangular Ascension 835 se fusiona aquí (alias)
     "servando-y-florentino": [2014],
     "jose-luis-rodriguez-el-puma": [3756],  # 3712 se fusiona aquí
@@ -41,7 +41,6 @@ IDENTIDAD_MANUAL: dict[str, list[int] | None] = {
 # Correcciones acordadas (plan §2.9). Se aplican en la etapa 2.
 CORRECCIONES = [
     {"op": "fusionar_artista", "de": 3712, "en": 3756, "nota": "José Luis Rodríguez «El Puma» duplicado; nombre artístico como alias"},
-    {"op": "renombrar_artista", "id": 1250, "nombre": "Arca", "alias": ["Nuuro"], "nota": "Arca publicó primero como Nuuro"},
     {"op": "fusionar_artista", "de": 835, "en": 795, "nota": "Triangular Ascension es alias de Zardonic; Gorepriest también", "alias": ["Triangular Ascension", "Gorepriest"]},
     {"op": "fusionar_persona", "ids": [1022, 19777], "nota": "Alberto Stangarone (solo si comparten proyecto)"},
     {"op": "fusionar_persona", "ids": [18567, 19776], "nota": "Sunsplash como persona (solo si comparten proyecto)"},

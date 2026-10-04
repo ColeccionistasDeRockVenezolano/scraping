@@ -1,0 +1,657 @@
+{
+  "runId": 11491,
+  "decidedAt": "2026-10-02",
+  "identities": {
+    "pablo-gil": {
+      "lote": "lote1",
+      "artistId": 288,
+      "artistName": "Pablo Gil",
+      "personId": 2398,
+      "created": false
+    },
+    "schola-cantorum-venezuela": {
+      "lote": "lote2",
+      "artistId": 3420,
+      "artistName": "Schola Cantorum de Caracas",
+      "personId": null,
+      "created": false
+    },
+    "jose-coraspe": {
+      "lote": "lote1",
+      "artistId": 4234,
+      "artistName": "José Coraspe",
+      "personId": 38094,
+      "created": true
+    },
+    "arca": {
+      "lote": "lote1",
+      "artistId": 4235,
+      "artistName": "Arca",
+      "personId": 2528,
+      "created": true
+    },
+    "aerea-negrot": {
+      "lote": "lote1",
+      "artistId": 4236,
+      "artistName": "Aérea Negrot",
+      "personId": 38095,
+      "created": true
+    },
+    "dj-babatr": {
+      "lote": "lote1",
+      "artistId": 4237,
+      "artistName": "DJ Babatr",
+      "personId": 38096,
+      "created": true
+    },
+    "sunsplash": {
+      "lote": "lote1",
+      "artistId": 4238,
+      "artistName": "Sunsplash",
+      "personId": 1022,
+      "created": true
+    },
+    "adolescents-orquesta": {
+      "lote": "lote1",
+      "artistId": 4239,
+      "artistName": "Adolescent's Orquesta",
+      "personId": null,
+      "created": true
+    },
+    "porfi-baloa": {
+      "lote": "lote1",
+      "artistId": 4240,
+      "artistName": "Porfi Baloa",
+      "personId": 38097,
+      "created": true
+    },
+    "fedora-aleman": {
+      "lote": "lote1",
+      "artistId": 4241,
+      "artistName": "Fedora Alemán",
+      "personId": 38098,
+      "created": true
+    },
+    "aquiles-machado": {
+      "lote": "lote1",
+      "artistId": 4242,
+      "artistName": "Aquiles Machado",
+      "personId": 30404,
+      "created": true
+    },
+    "edgar-bastidas": {
+      "lote": "lote1",
+      "artistId": 4243,
+      "artistName": "Edgar Bastidas",
+      "personId": 38099,
+      "created": true
+    },
+    "diveana": {
+      "lote": "lote1",
+      "artistId": 4244,
+      "artistName": "Diveana",
+      "personId": 27228,
+      "created": true
+    },
+    "miguel-moly": {
+      "lote": "lote1",
+      "artistId": 4245,
+      "artistName": "Miguel Moly",
+      "personId": 38100,
+      "created": true
+    },
+    "joseph-palacios": {
+      "lote": "lote1",
+      "artistId": 4246,
+      "artistName": "Joseph Palacios",
+      "personId": 38101,
+      "created": true
+    },
+    "chino-nacho": {
+      "lote": "lote1",
+      "artistId": 4247,
+      "artistName": "Chino & Nacho",
+      "personId": null,
+      "created": true
+    },
+    "mau-y-ricky": {
+      "lote": "lote1",
+      "artistId": 4248,
+      "artistName": "Mau y Ricky",
+      "personId": null,
+      "created": true
+    },
+    "danny-ocean": {
+      "lote": "lote1",
+      "artistId": 4249,
+      "artistName": "Danny Ocean",
+      "personId": 38102,
+      "created": true
+    },
+    "jerry-di": {
+      "lote": "lote1",
+      "artistId": 4250,
+      "artistName": "Jerry Di",
+      "personId": 38103,
+      "created": true
+    },
+    "micro-tdh": {
+      "lote": "lote1",
+      "artistId": 4251,
+      "artistName": "Micro TDH",
+      "personId": 38104,
+      "created": true
+    },
+    "elena-rose": {
+      "lote": "lote1",
+      "artistId": 4252,
+      "artistName": "Elena Rose",
+      "personId": 38105,
+      "created": true
+    },
+    "joaquina": {
+      "lote": "lote1",
+      "artistId": 4253,
+      "artistName": "Joaquina",
+      "personId": 38106,
+      "created": true
+    },
+    "aneeka": {
+      "lote": "lote1",
+      "artistId": 4254,
+      "artistName": "Aneeka",
+      "personId": 38107,
+      "created": true
+    },
+    "akapellah": {
+      "lote": "lote1",
+      "artistId": 4255,
+      "artistName": "Akapellah",
+      "personId": 38108,
+      "created": true
+    },
+    "neutro-shorty": {
+      "lote": "lote1",
+      "artistId": 4256,
+      "artistName": "Neutro Shorty",
+      "personId": 38109,
+      "created": true
+    },
+    "big-soto": {
+      "lote": "lote1",
+      "artistId": 4257,
+      "artistName": "Big Soto",
+      "personId": 38110,
+      "created": true
+    },
+    "gabylonia": {
+      "lote": "lote1",
+      "artistId": 4258,
+      "artistName": "Gabylonia",
+      "personId": 38111,
+      "created": true
+    },
+    "bigbro-blues-band": {
+      "lote": "lote1",
+      "artistId": 4259,
+      "artistName": "BigBro Blues Band",
+      "personId": null,
+      "created": true
+    },
+    "nascuy-linares": {
+      "lote": "lote1",
+      "artistId": 4260,
+      "artistName": "Nascuy Linares",
+      "personId": 8997,
+      "created": true
+    },
+    "diego-ayala-raffalli": {
+      "lote": "lote1",
+      "artistId": 4261,
+      "artistName": "Diego Ayala Raffalli",
+      "personId": 38112,
+      "created": true
+    },
+    "teresa-carreno": {
+      "lote": "lote1",
+      "artistId": 4262,
+      "artistName": "Teresa Carreño",
+      "personId": 19257,
+      "created": true
+    },
+    "antonio-lauro": {
+      "lote": "lote1",
+      "artistId": 4263,
+      "artistName": "Antonio Lauro",
+      "personId": 19071,
+      "created": true
+    },
+    "vicente-emilio-sojo": {
+      "lote": "lote1",
+      "artistId": 4264,
+      "artistName": "Vicente Emilio Sojo",
+      "personId": 19382,
+      "created": true
+    },
+    "modesta-bor": {
+      "lote": "lote1",
+      "artistId": 4265,
+      "artistName": "Modesta Bor",
+      "personId": 19499,
+      "created": true
+    },
+    "antonio-estevez": {
+      "lote": "lote1",
+      "artistId": 4266,
+      "artistName": "Antonio Estévez",
+      "personId": 19720,
+      "created": true
+    },
+    "inocente-carreno": {
+      "lote": "lote1",
+      "artistId": 4267,
+      "artistName": "Inocente Carreño",
+      "personId": 3562,
+      "created": true
+    },
+    "juan-bautista-plaza": {
+      "lote": "lote1",
+      "artistId": 4268,
+      "artistName": "Juan Bautista Plaza",
+      "personId": 19213,
+      "created": true
+    },
+    "adina-izarra": {
+      "lote": "lote1",
+      "artistId": 4269,
+      "artistName": "Adina Izarra",
+      "personId": 33221,
+      "created": true
+    },
+    "alfredo-rugeles": {
+      "lote": "lote1",
+      "artistId": 4270,
+      "artistName": "Alfredo Rugeles",
+      "personId": 2645,
+      "created": true
+    },
+    "gustavo-dudamel": {
+      "lote": "lote1",
+      "artistId": 4271,
+      "artistName": "Gustavo Dudamel",
+      "personId": 38113,
+      "created": true
+    },
+    "guillermo-castillo-bustamante": {
+      "lote": "lote1",
+      "artistId": 4272,
+      "artistName": "Guillermo Castillo Bustamante",
+      "personId": 25598,
+      "created": true
+    },
+    "irepelusa": {
+      "lote": "lote1",
+      "artistId": 4273,
+      "artistName": "Irepelusa",
+      "personId": 38114,
+      "created": true
+    },
+    "motherflowers": {
+      "lote": "lote1",
+      "artistId": 4274,
+      "artistName": "Motherflowers",
+      "personId": null,
+      "created": true
+    },
+    "salserin": {
+      "lote": "lote1",
+      "artistId": 4275,
+      "artistName": "Salserín",
+      "personId": null,
+      "created": true
+    },
+    "nelson-arrieta": {
+      "lote": "lote1",
+      "artistId": 4276,
+      "artistName": "Nelson Arrieta",
+      "personId": 3622,
+      "created": true
+    },
+    "omar-enrique": {
+      "lote": "lote1",
+      "artistId": 4277,
+      "artistName": "Omar Enrique",
+      "personId": 38115,
+      "created": true
+    },
+    "karolina-con-k": {
+      "lote": "lote1",
+      "artistId": 4278,
+      "artistName": "Karolina con K",
+      "personId": 38116,
+      "created": true
+    },
+    "los-fantasmas-del-caribe": {
+      "lote": "lote1",
+      "artistId": 4279,
+      "artistName": "Los Fantasmas del Caribe",
+      "personId": null,
+      "created": true
+    },
+    "lagos": {
+      "lote": "lote1",
+      "artistId": 4280,
+      "artistName": "LAGOS",
+      "personId": null,
+      "created": true
+    },
+    "samuel-marino": {
+      "lote": "lote1",
+      "artistId": 4281,
+      "artistName": "Samuel Mariño",
+      "personId": 38117,
+      "created": true
+    },
+    "fur-coat": {
+      "lote": "lote1",
+      "artistId": 4282,
+      "artistName": "Fur Coat",
+      "personId": null,
+      "created": true
+    },
+    "oksana-linde": {
+      "lote": "lote1",
+      "artistId": 4283,
+      "artistName": "Oksana Linde",
+      "personId": 38118,
+      "created": true
+    },
+    "alfredo-del-monaco": {
+      "lote": "lote1",
+      "artistId": 4284,
+      "artistName": "Alfredo del Mónaco",
+      "personId": 33209,
+      "created": true
+    },
+    "simon-diaz": {
+      "lote": "lote2",
+      "artistId": 4285,
+      "artistName": "Simón Díaz",
+      "personId": 3235,
+      "created": true
+    },
+    "eneas-perdomo": {
+      "lote": "lote2",
+      "artistId": 4286,
+      "artistName": "Eneas Perdomo",
+      "personId": 7352,
+      "created": true
+    },
+    "angel-custodio-loyola": {
+      "lote": "lote2",
+      "artistId": 4287,
+      "artistName": "Ángel Custodio Loyola",
+      "personId": 31703,
+      "created": true
+    },
+    "francisco-montoya": {
+      "lote": "lote2",
+      "artistId": 4288,
+      "artistName": "Francisco Montoya",
+      "personId": 31223,
+      "created": true
+    },
+    "rummy-olivo": {
+      "lote": "lote2",
+      "artistId": 4289,
+      "artistName": "Rummy Olivo",
+      "personId": 35890,
+      "created": true
+    },
+    "teo-galindez": {
+      "lote": "lote2",
+      "artistId": 4290,
+      "artistName": "Teo Galíndez",
+      "personId": 35891,
+      "created": true
+    },
+    "jorge-guerrero": {
+      "lote": "lote2",
+      "artistId": 4291,
+      "artistName": "Jorge Guerrero",
+      "personId": 32267,
+      "created": true
+    },
+    "armando-martinez-llanero": {
+      "lote": "lote2",
+      "artistId": 4292,
+      "artistName": "Armando Martínez",
+      "personId": 38119,
+      "created": true
+    },
+    "ivan-jose": {
+      "lote": "lote2",
+      "artistId": 4293,
+      "artistName": "Iván José",
+      "personId": 32167,
+      "created": true
+    },
+    "iris-gavidia": {
+      "lote": "lote2",
+      "artistId": 4294,
+      "artistName": "Iris Gavidia",
+      "personId": 31169,
+      "created": true
+    },
+    "ignacio-figueredo": {
+      "lote": "lote2",
+      "artistId": 4295,
+      "artistName": "Ignacio “Indio” Figueredo",
+      "personId": 21722,
+      "created": true
+    },
+    "otilio-galindez": {
+      "lote": "lote2",
+      "artistId": 4296,
+      "artistName": "Otilio Galíndez",
+      "personId": 7389,
+      "created": true
+    },
+    "grupo-madera": {
+      "lote": "lote2",
+      "artistId": 4297,
+      "artistName": "Grupo Madera",
+      "personId": null,
+      "created": true
+    },
+    "betsayda-machado-parranda-el-clavo": {
+      "lote": "lote2",
+      "artistId": 4298,
+      "artistName": "Betsayda Machado y La Parranda El Clavo",
+      "personId": null,
+      "created": true
+    },
+    "francisco-mata": {
+      "lote": "lote2",
+      "artistId": 4299,
+      "artistName": "Francisco Mata",
+      "personId": 29466,
+      "created": true
+    },
+    "luis-mariano-rivera": {
+      "lote": "lote2",
+      "artistId": 4300,
+      "artistName": "Luis Mariano Rivera",
+      "personId": 7348,
+      "created": true
+    },
+    "cruz-quinal": {
+      "lote": "lote2",
+      "artistId": 4301,
+      "artistName": "Cruz Quinal",
+      "personId": 31641,
+      "created": true
+    },
+    "marco-antonio-rivera-useche": {
+      "lote": "lote2",
+      "artistId": 4302,
+      "artistName": "Marco Antonio Rivera Useche",
+      "personId": 33837,
+      "created": true
+    },
+    "luis-felipe-ramon-rivera": {
+      "lote": "lote2",
+      "artistId": 4303,
+      "artistName": "Luis Felipe Ramón y Rivera",
+      "personId": 11811,
+      "created": true
+    },
+    "chucho-corrales": {
+      "lote": "lote2",
+      "artistId": 4304,
+      "artistName": "Chucho Corrales",
+      "personId": 32304,
+      "created": true
+    },
+    "yhony-leon-pueblos-sur": {
+      "lote": "lote2",
+      "artistId": 4305,
+      "artistName": "Yhony León y los Pueblos del Sur",
+      "personId": null,
+      "created": true
+    },
+    "los-montaneros-andes": {
+      "lote": "lote2",
+      "artistId": 4306,
+      "artistName": "Los Montañeros",
+      "personId": null,
+      "created": true
+    },
+    "ricardo-aguirre": {
+      "lote": "lote2",
+      "artistId": 4307,
+      "artistName": "Ricardo Aguirre",
+      "personId": 20547,
+      "created": true
+    },
+    "cardenales-del-exito": {
+      "lote": "lote2",
+      "artistId": 4308,
+      "artistName": "Cardenales del Éxito",
+      "personId": null,
+      "created": true
+    },
+    "gran-coquivacoa": {
+      "lote": "lote2",
+      "artistId": 4309,
+      "artistName": "Gran Coquivacoa",
+      "personId": null,
+      "created": true
+    },
+    "maracaibo-15": {
+      "lote": "lote2",
+      "artistId": 4310,
+      "artistName": "Maracaibo 15",
+      "personId": null,
+      "created": true
+    },
+    "betulio-medina": {
+      "lote": "lote2",
+      "artistId": 4311,
+      "artistName": "Betulio Medina",
+      "personId": 7820,
+      "created": true
+    },
+    "rincon-morales": {
+      "lote": "lote2",
+      "artistId": 4312,
+      "artistName": "Rincón Morales",
+      "personId": null,
+      "created": true
+    },
+    "barrio-obrero-cabimas": {
+      "lote": "lote2",
+      "artistId": 4313,
+      "artistName": "Barrio Obrero de Cabimas",
+      "personId": null,
+      "created": true
+    },
+    "ricardo-cepeda": {
+      "lote": "lote2",
+      "artistId": 4314,
+      "artistName": "Ricardo Cepeda",
+      "personId": 7819,
+      "created": true
+    },
+    "astolfo-romero": {
+      "lote": "lote2",
+      "artistId": 4315,
+      "artistName": "Astolfo Romero",
+      "personId": 27158,
+      "created": true
+    },
+    "the-same-people": {
+      "lote": "lote2",
+      "artistId": 4316,
+      "artistName": "The Same People",
+      "personId": null,
+      "created": true
+    },
+    "family-ground": {
+      "lote": "lote2",
+      "artistId": 4317,
+      "artistName": "Family Ground",
+      "personId": null,
+      "created": true
+    },
+    "los-antanos-stadium": {
+      "lote": "lote2",
+      "artistId": 4318,
+      "artistName": "Los Antaños del Stadium",
+      "personId": null,
+      "created": true
+    },
+    "los-tucusitos": {
+      "lote": "lote2",
+      "artistId": 4319,
+      "artistName": "Los Tucusitos",
+      "personId": null,
+      "created": true
+    },
+    "popy": {
+      "lote": "lote2",
+      "artistId": 4320,
+      "artistName": "Popy",
+      "personId": 11856,
+      "created": true
+    },
+    "nifu-nifa": {
+      "lote": "lote2",
+      "artistId": 4321,
+      "artistName": "Payasitas Nifu Nifa",
+      "personId": null,
+      "created": true
+    },
+    "la-rondallita": {
+      "lote": "lote2",
+      "artistId": 4322,
+      "artistName": "La Rondallita",
+      "personId": null,
+      "created": true
+    },
+    "daniel-calveti": {
+      "lote": "lote2",
+      "artistId": 4323,
+      "artistName": "Daniel Calveti",
+      "personId": 38120,
+      "created": true
+    },
+    "orfeon-universitario-ucv": {
+      "lote": "lote2",
+      "artistId": 4324,
+      "artistName": "Orfeón Universitario de la UCV",
+      "personId": null,
+      "created": true
+    }
+  }
+}

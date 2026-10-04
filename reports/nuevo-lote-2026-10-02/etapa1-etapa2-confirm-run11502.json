@@ -1,0 +1,3350 @@
+{
+  "mode": "etapa2-confirm",
+  "runId": 11502,
+  "files": [
+    {
+      "lote": "lote1",
+      "file": "/home/brian/Desktop/Nuevo lote/catalogo_artistas_venezolanos_generos_2026-10-02.json",
+      "sha256": "0133dea9fadad72213d7943913731ad7df297288f8c5427105c00b5eba59c79f",
+      "artists": 118
+    },
+    {
+      "lote": "lote2",
+      "file": "/home/brian/Desktop/Nuevo lote 2/catalogo_artistas_venezolanos_generos_faltantes_2026-10-02.json",
+      "sha256": "2baeee2e2779cfcf67c148d400bb33baf18e7b472b00c534c22aa74c3b605778",
+      "artists": 70
+    }
+  ],
+  "artists": {
+    "existing": 188,
+    "new": 0,
+    "withTitularPerson": 93,
+    "overridden": [],
+    "appearedSinceStage0": []
+  },
+  "claims": {
+    "inserted": 29,
+    "reused": 4962,
+    "adopted": 1743,
+    "byStatus": {
+      "accepted": 1529,
+      "candidate": 5155,
+      "conflict": 50
+    },
+    "byField": {
+      "artist.name": 188,
+      "artist.artist_type": 188,
+      "artist.biography": 188,
+      "artist.genre": 1108,
+      "artist.spotify_url": 9,
+      "artist.picture_source_page": 188,
+      "artist.roles": 188,
+      "artist.verification_note": 39,
+      "artist.nationality": 188,
+      "album.title": 658,
+      "album.release_year": 620,
+      "album.album_type": 646,
+      "album.total_duration": 13,
+      "album.tracklist_status": 658,
+      "track.title": 180,
+      "track.track_number": 180,
+      "track.duration_seconds": 169,
+      "artist.alias": 54,
+      "artist.origin_city": 144,
+      "artist.years_active": 38,
+      "artist.official_url": 31,
+      "person.real_name": 99,
+      "person.birth_date": 95,
+      "person.birth_city": 107,
+      "person.is_venezuelan": 122,
+      "track.featured_artist": 53,
+      "album.label": 29,
+      "artist.years_active_text": 15,
+      "person.birth_year": 6,
+      "person.death_date": 43,
+      "person.death_place": 41,
+      "person.is_deceased": 44,
+      "artist.origin_text": 34,
+      "artist.member_of": 26,
+      "artist.instruments": 37,
+      "artist.formed_year": 34,
+      "artist.member": 62,
+      "album.album_type_text": 12,
+      "artist.disbanded_year": 2,
+      "artist.notable_work": 168,
+      "artist.notes": 29,
+      "person.death_year": 1
+    }
+  },
+  "applied": {
+    "artist.origin_city": 77,
+    "artist.years_active": 15,
+    "person.birth_date": 44,
+    "person.birth_city": 52,
+    "person.death_date": 21,
+    "person.is_deceased": 22,
+    "person.real_name": 19,
+    "artist.formed_year": 13,
+    "artist.notes": 29
+  },
+  "appliedRows": [
+    {
+      "target": "artist",
+      "entityId": 4235,
+      "name": "Arca",
+      "field": "origin_city",
+      "value": "Caracas"
+    },
+    {
+      "target": "artist",
+      "entityId": 4235,
+      "name": "Arca",
+      "field": "years_active",
+      "value": "2003-present"
+    },
+    {
+      "target": "artist",
+      "entityId": 4236,
+      "name": "Aérea Negrot",
+      "field": "origin_city",
+      "value": "Caracas"
+    },
+    {
+      "target": "person",
+      "entityId": 38095,
+      "name": "Aérea Negrot",
+      "field": "birth_date",
+      "value": "1980-10-09"
+    },
+    {
+      "target": "person",
+      "entityId": 38095,
+      "name": "Aérea Negrot",
+      "field": "birth_city",
+      "value": "Caracas"
+    },
+    {
+      "target": "person",
+      "entityId": 38095,
+      "name": "Aérea Negrot",
+      "field": "death_date",
+      "value": "2023-10-11"
+    },
+    {
+      "target": "person",
+      "entityId": 38095,
+      "name": "Aérea Negrot",
+      "field": "is_deceased",
+      "value": true
+    },
+    {
+      "target": "artist",
+      "entityId": 4237,
+      "name": "DJ Babatr",
+      "field": "origin_city",
+      "value": "Caracas"
+    },
+    {
+      "target": "artist",
+      "entityId": 4241,
+      "name": "Fedora Alemán",
+      "field": "origin_city",
+      "value": "Caracas"
+    },
+    {
+      "target": "person",
+      "entityId": 38098,
+      "name": "Fedora Alemán",
+      "field": "birth_date",
+      "value": "1912-10-11"
+    },
+    {
+      "target": "person",
+      "entityId": 38098,
+      "name": "Fedora Alemán",
+      "field": "birth_city",
+      "value": "Caracas"
+    },
+    {
+      "target": "person",
+      "entityId": 38098,
+      "name": "Fedora Alemán",
+      "field": "death_date",
+      "value": "2018-02-06"
+    },
+    {
+      "target": "person",
+      "entityId": 38098,
+      "name": "Fedora Alemán",
+      "field": "is_deceased",
+      "value": true
+    },
+    {
+      "target": "artist",
+      "entityId": 4242,
+      "name": "Aquiles Machado",
+      "field": "origin_city",
+      "value": "Barquisimeto"
+    },
+    {
+      "target": "person",
+      "entityId": 30404,
+      "name": "Aquiles Machado",
+      "field": "birth_city",
+      "value": "Barquisimeto"
+    },
+    {
+      "target": "artist",
+      "entityId": 4244,
+      "name": "Diveana",
+      "field": "origin_city",
+      "value": "Maracaibo"
+    },
+    {
+      "target": "person",
+      "entityId": 27228,
+      "name": "Diveana",
+      "field": "real_name",
+      "value": "Dive Anna Pereira Sánchez"
+    },
+    {
+      "target": "person",
+      "entityId": 27228,
+      "name": "Diveana",
+      "field": "birth_date",
+      "value": "1971-05-20"
+    },
+    {
+      "target": "person",
+      "entityId": 27228,
+      "name": "Diveana",
+      "field": "birth_city",
+      "value": "Maracaibo"
+    },
+    {
+      "target": "artist",
+      "entityId": 4245,
+      "name": "Miguel Moly",
+      "field": "origin_city",
+      "value": "Caracas"
+    },
+    {
+      "target": "person",
+      "entityId": 38100,
+      "name": "Miguel Moly",
+      "field": "birth_date",
+      "value": "1964-09-29"
+    },
+    {
+      "target": "person",
+      "entityId": 38100,
+      "name": "Miguel Moly",
+      "field": "birth_city",
+      "value": "Caracas"
+    },
+    {
+      "target": "artist",
+      "entityId": 4246,
+      "name": "Joseph Palacios",
+      "field": "origin_city",
+      "value": "Puerto La Cruz"
+    },
+    {
+      "target": "person",
+      "entityId": 38101,
+      "name": "Joseph Palacios",
+      "field": "birth_date",
+      "value": "1984-07-30"
+    },
+    {
+      "target": "person",
+      "entityId": 38101,
+      "name": "Joseph Palacios",
+      "field": "birth_city",
+      "value": "Puerto La Cruz"
+    },
+    {
+      "target": "artist",
+      "entityId": 4247,
+      "name": "Chino & Nacho",
+      "field": "origin_city",
+      "value": "Caracas"
+    },
+    {
+      "target": "artist",
+      "entityId": 4248,
+      "name": "Mau y Ricky",
+      "field": "origin_city",
+      "value": "Caracas"
+    },
+    {
+      "target": "artist",
+      "entityId": 4248,
+      "name": "Mau y Ricky",
+      "field": "years_active",
+      "value": "2011-present"
+    },
+    {
+      "target": "artist",
+      "entityId": 4248,
+      "name": "Mau y Ricky",
+      "field": "formed_year",
+      "value": 2011
+    },
+    {
+      "target": "artist",
+      "entityId": 4249,
+      "name": "Danny Ocean",
+      "field": "origin_city",
+      "value": "Caracas"
+    },
+    {
+      "target": "person",
+      "entityId": 38102,
+      "name": "Danny Ocean",
+      "field": "birth_date",
+      "value": "1992-05-05"
+    },
+    {
+      "target": "person",
+      "entityId": 38102,
+      "name": "Danny Ocean",
+      "field": "birth_city",
+      "value": "Caracas"
+    },
+    {
+      "target": "artist",
+      "entityId": 4250,
+      "name": "Jerry Di",
+      "field": "origin_city",
+      "value": "Caracas"
+    },
+    {
+      "target": "person",
+      "entityId": 38103,
+      "name": "Jerry Di",
+      "field": "birth_date",
+      "value": "1992-11-26"
+    },
+    {
+      "target": "person",
+      "entityId": 38103,
+      "name": "Jerry Di",
+      "field": "birth_city",
+      "value": "Caracas"
+    },
+    {
+      "target": "person",
+      "entityId": 38104,
+      "name": "Micro TDH",
+      "field": "birth_date",
+      "value": "1999-04-14"
+    },
+    {
+      "target": "person",
+      "entityId": 38104,
+      "name": "Micro TDH",
+      "field": "birth_city",
+      "value": "Caracas"
+    },
+    {
+      "target": "artist",
+      "entityId": 4252,
+      "name": "Elena Rose",
+      "field": "origin_city",
+      "value": "Caracas"
+    },
+    {
+      "target": "person",
+      "entityId": 38105,
+      "name": "Elena Rose",
+      "field": "birth_city",
+      "value": "Caracas"
+    },
+    {
+      "target": "artist",
+      "entityId": 4253,
+      "name": "Joaquina",
+      "field": "origin_city",
+      "value": "Caracas"
+    },
+    {
+      "target": "person",
+      "entityId": 38106,
+      "name": "Joaquina",
+      "field": "birth_city",
+      "value": "Caracas"
+    },
+    {
+      "target": "artist",
+      "entityId": 4254,
+      "name": "Aneeka",
+      "field": "origin_city",
+      "value": "San Cristóbal"
+    },
+    {
+      "target": "person",
+      "entityId": 38107,
+      "name": "Aneeka",
+      "field": "birth_date",
+      "value": "1985-08-18"
+    },
+    {
+      "target": "person",
+      "entityId": 38107,
+      "name": "Aneeka",
+      "field": "birth_city",
+      "value": "San Cristóbal"
+    },
+    {
+      "target": "artist",
+      "entityId": 4255,
+      "name": "Akapellah",
+      "field": "origin_city",
+      "value": "Maracay"
+    },
+    {
+      "target": "person",
+      "entityId": 38108,
+      "name": "Akapellah",
+      "field": "birth_date",
+      "value": "1991-11-16"
+    },
+    {
+      "target": "person",
+      "entityId": 38108,
+      "name": "Akapellah",
+      "field": "birth_city",
+      "value": "Maracay"
+    },
+    {
+      "target": "artist",
+      "entityId": 4256,
+      "name": "Neutro Shorty",
+      "field": "origin_city",
+      "value": "Caracas"
+    },
+    {
+      "target": "person",
+      "entityId": 38109,
+      "name": "Neutro Shorty",
+      "field": "birth_date",
+      "value": "1994-06-19"
+    },
+    {
+      "target": "person",
+      "entityId": 38109,
+      "name": "Neutro Shorty",
+      "field": "birth_city",
+      "value": "Caracas"
+    },
+    {
+      "target": "artist",
+      "entityId": 4257,
+      "name": "Big Soto",
+      "field": "origin_city",
+      "value": "Cumaná"
+    },
+    {
+      "target": "person",
+      "entityId": 38110,
+      "name": "Big Soto",
+      "field": "birth_date",
+      "value": "1996-10-19"
+    },
+    {
+      "target": "person",
+      "entityId": 38110,
+      "name": "Big Soto",
+      "field": "birth_city",
+      "value": "Cumaná"
+    },
+    {
+      "target": "artist",
+      "entityId": 4258,
+      "name": "Gabylonia",
+      "field": "origin_city",
+      "value": "Caracas"
+    },
+    {
+      "target": "person",
+      "entityId": 38111,
+      "name": "Gabylonia",
+      "field": "birth_date",
+      "value": "1987-04-03"
+    },
+    {
+      "target": "person",
+      "entityId": 38111,
+      "name": "Gabylonia",
+      "field": "birth_city",
+      "value": "Caracas"
+    },
+    {
+      "target": "artist",
+      "entityId": 4260,
+      "name": "Nascuy Linares",
+      "field": "origin_city",
+      "value": "Mérida"
+    },
+    {
+      "target": "person",
+      "entityId": 8997,
+      "name": "Nascuy Linares",
+      "field": "birth_city",
+      "value": "Mérida"
+    },
+    {
+      "target": "artist",
+      "entityId": 4260,
+      "name": "Nascuy Linares",
+      "field": "notes",
+      "value": "Obras destacadas según el lote de investigación 2026-10-02: Embrace of the Serpent (2015); Free Color (2020); Maroa; Los Silencios; Luxor; Once Upon a Time in Venezuela."
+    },
+    {
+      "target": "artist",
+      "entityId": 4261,
+      "name": "Diego Ayala Raffalli",
+      "field": "notes",
+      "value": "Obras destacadas según el lote de investigación 2026-10-02: Don’t Cry, Butterfly (2024); Como si la tierra...; My Wonderful Life; On the Edge."
+    },
+    {
+      "target": "artist",
+      "entityId": 4262,
+      "name": "Teresa Carreño",
+      "field": "origin_city",
+      "value": "Caracas"
+    },
+    {
+      "target": "person",
+      "entityId": 19257,
+      "name": "Teresa Carreño",
+      "field": "real_name",
+      "value": "María Teresa Carreño García de Sena"
+    },
+    {
+      "target": "person",
+      "entityId": 19257,
+      "name": "Teresa Carreño",
+      "field": "birth_date",
+      "value": "1853-12-22"
+    },
+    {
+      "target": "person",
+      "entityId": 19257,
+      "name": "Teresa Carreño",
+      "field": "birth_city",
+      "value": "Caracas"
+    },
+    {
+      "target": "person",
+      "entityId": 19257,
+      "name": "Teresa Carreño",
+      "field": "death_date",
+      "value": "1917-06-12"
+    },
+    {
+      "target": "person",
+      "entityId": 19257,
+      "name": "Teresa Carreño",
+      "field": "is_deceased",
+      "value": true
+    },
+    {
+      "target": "artist",
+      "entityId": 4262,
+      "name": "Teresa Carreño",
+      "field": "notes",
+      "value": "Obras destacadas según el lote de investigación 2026-10-02: Selected piano works; String Quartet in B minor; Serenade for String Orchestra."
+    },
+    {
+      "target": "artist",
+      "entityId": 4263,
+      "name": "Antonio Lauro",
+      "field": "origin_city",
+      "value": "Ciudad Bolívar"
+    },
+    {
+      "target": "person",
+      "entityId": 19071,
+      "name": "Antonio Lauro",
+      "field": "birth_date",
+      "value": "1917-08-03"
+    },
+    {
+      "target": "person",
+      "entityId": 19071,
+      "name": "Antonio Lauro",
+      "field": "birth_city",
+      "value": "Ciudad Bolívar"
+    },
+    {
+      "target": "person",
+      "entityId": 19071,
+      "name": "Antonio Lauro",
+      "field": "death_date",
+      "value": "1986-04-18"
+    },
+    {
+      "target": "person",
+      "entityId": 19071,
+      "name": "Antonio Lauro",
+      "field": "is_deceased",
+      "value": true
+    },
+    {
+      "target": "artist",
+      "entityId": 4263,
+      "name": "Antonio Lauro",
+      "field": "notes",
+      "value": "Obras destacadas según el lote de investigación 2026-10-02: Seis por derecho: Joropo; María Carolina; Ana Cristina; El Marabino; Natalia; Suite Venezolana; Angostura; Maria Luisa; Nelly; 4 Valses venezolanos; Mañanita Caraqueña; El Negrito; Tríptico."
+    },
+    {
+      "target": "artist",
+      "entityId": 4264,
+      "name": "Vicente Emilio Sojo",
+      "field": "origin_city",
+      "value": "Guatire"
+    },
+    {
+      "target": "person",
+      "entityId": 19382,
+      "name": "Vicente Emilio Sojo",
+      "field": "birth_date",
+      "value": "1887-12-08"
+    },
+    {
+      "target": "person",
+      "entityId": 19382,
+      "name": "Vicente Emilio Sojo",
+      "field": "birth_city",
+      "value": "Guatire"
+    },
+    {
+      "target": "person",
+      "entityId": 19382,
+      "name": "Vicente Emilio Sojo",
+      "field": "death_date",
+      "value": "1974-08-11"
+    },
+    {
+      "target": "person",
+      "entityId": 19382,
+      "name": "Vicente Emilio Sojo",
+      "field": "is_deceased",
+      "value": true
+    },
+    {
+      "target": "artist",
+      "entityId": 4264,
+      "name": "Vicente Emilio Sojo",
+      "field": "notes",
+      "value": "Obras destacadas según el lote de investigación 2026-10-02: Misa Cromática; Hodie Super Nos Fulgebit Lux; Cuarteto en Re; Obertura Treno; Misa Coral; Requiem Inmemoriam Patris Patriae."
+    },
+    {
+      "target": "artist",
+      "entityId": 4265,
+      "name": "Modesta Bor",
+      "field": "origin_city",
+      "value": "Juan Griego"
+    },
+    {
+      "target": "person",
+      "entityId": 19499,
+      "name": "Modesta Bor",
+      "field": "birth_date",
+      "value": "1926-06-15"
+    },
+    {
+      "target": "person",
+      "entityId": 19499,
+      "name": "Modesta Bor",
+      "field": "birth_city",
+      "value": "Juan Griego"
+    },
+    {
+      "target": "person",
+      "entityId": 19499,
+      "name": "Modesta Bor",
+      "field": "death_date",
+      "value": "1998-04-07"
+    },
+    {
+      "target": "person",
+      "entityId": 19499,
+      "name": "Modesta Bor",
+      "field": "is_deceased",
+      "value": true
+    },
+    {
+      "target": "artist",
+      "entityId": 4265,
+      "name": "Modesta Bor",
+      "field": "notes",
+      "value": "Obras destacadas según el lote de investigación 2026-10-02: Suite for cello and piano (1961); Sonata for viola and piano (1960); Tríptico sobre poesía cubana; Coplas venezolanas."
+    },
+    {
+      "target": "artist",
+      "entityId": 4266,
+      "name": "Antonio Estévez",
+      "field": "origin_city",
+      "value": "Calabozo"
+    },
+    {
+      "target": "person",
+      "entityId": 19720,
+      "name": "Antonio Estévez",
+      "field": "real_name",
+      "value": "Antonio José Estévez Aponte"
+    },
+    {
+      "target": "person",
+      "entityId": 19720,
+      "name": "Antonio Estévez",
+      "field": "birth_date",
+      "value": "1916-01-03"
+    },
+    {
+      "target": "person",
+      "entityId": 19720,
+      "name": "Antonio Estévez",
+      "field": "birth_city",
+      "value": "Calabozo"
+    },
+    {
+      "target": "person",
+      "entityId": 19720,
+      "name": "Antonio Estévez",
+      "field": "death_date",
+      "value": "1988-11-26"
+    },
+    {
+      "target": "person",
+      "entityId": 19720,
+      "name": "Antonio Estévez",
+      "field": "is_deceased",
+      "value": true
+    },
+    {
+      "target": "artist",
+      "entityId": 4266,
+      "name": "Antonio Estévez",
+      "field": "notes",
+      "value": "Obras destacadas según el lote de investigación 2026-10-02: Cantata Criolla; Mediodía en el Llano; Concierto para orquesta; Cromovibrafonía."
+    },
+    {
+      "target": "artist",
+      "entityId": 4267,
+      "name": "Inocente Carreño",
+      "field": "origin_city",
+      "value": "Porlamar"
+    },
+    {
+      "target": "artist",
+      "entityId": 4267,
+      "name": "Inocente Carreño",
+      "field": "notes",
+      "value": "Obras destacadas según el lote de investigación 2026-10-02: Margariteña; Suite Sinfónica No. 1; Obertura No. 1; Obertura Sinfónica No. 2; Suite breve para orquesta de cuerdas; El convidado del Niño Jesús (opera)."
+    },
+    {
+      "target": "artist",
+      "entityId": 4268,
+      "name": "Juan Bautista Plaza",
+      "field": "origin_city",
+      "value": "Caracas"
+    },
+    {
+      "target": "person",
+      "entityId": 19213,
+      "name": "Juan Bautista Plaza",
+      "field": "real_name",
+      "value": "Juan Bautista Plaza Alfonso"
+    },
+    {
+      "target": "person",
+      "entityId": 19213,
+      "name": "Juan Bautista Plaza",
+      "field": "birth_date",
+      "value": "1898-07-19"
+    },
+    {
+      "target": "person",
+      "entityId": 19213,
+      "name": "Juan Bautista Plaza",
+      "field": "birth_city",
+      "value": "Caracas"
+    },
+    {
+      "target": "person",
+      "entityId": 19213,
+      "name": "Juan Bautista Plaza",
+      "field": "death_date",
+      "value": "1965-01-01"
+    },
+    {
+      "target": "person",
+      "entityId": 19213,
+      "name": "Juan Bautista Plaza",
+      "field": "is_deceased",
+      "value": true
+    },
+    {
+      "target": "artist",
+      "entityId": 4268,
+      "name": "Juan Bautista Plaza",
+      "field": "notes",
+      "value": "Obras destacadas según el lote de investigación 2026-10-02: El picacho abrupto; Cantata de Navidad; Las campanas de Pascua; Vigilia; Fuga criolla; Fuga romántica; Sonatina venezolana; Cuatro ritmos de danza."
+    },
+    {
+      "target": "artist",
+      "entityId": 4269,
+      "name": "Adina Izarra",
+      "field": "origin_city",
+      "value": "Caracas"
+    },
+    {
+      "target": "person",
+      "entityId": 33221,
+      "name": "Adina Izarra",
+      "field": "birth_city",
+      "value": "Caracas"
+    },
+    {
+      "target": "artist",
+      "entityId": 4269,
+      "name": "Adina Izarra",
+      "field": "notes",
+      "value": "Obras destacadas según el lote de investigación 2026-10-02: Pitangus Sulphuratus; Oshunmare; 10°29′N (acousmatic); Guinguiringongo; Cardinal Songs; Tres miradas a Marisol (2023); BOW (2023)."
+    },
+    {
+      "target": "person",
+      "entityId": 2645,
+      "name": "Alfredo Rugeles",
+      "field": "real_name",
+      "value": "Alfredo Rugeles Asuaje"
+    },
+    {
+      "target": "person",
+      "entityId": 2645,
+      "name": "Alfredo Rugeles",
+      "field": "birth_date",
+      "value": "1949-12-13"
+    },
+    {
+      "target": "person",
+      "entityId": 2645,
+      "name": "Alfredo Rugeles",
+      "field": "birth_city",
+      "value": "Washington"
+    },
+    {
+      "target": "artist",
+      "entityId": 4270,
+      "name": "Alfredo Rugeles",
+      "field": "notes",
+      "value": "Obras destacadas según el lote de investigación 2026-10-02: Pequeña Suite; Mutaciones; Polución; Thingsphonia; Somosnueve; Camino entre lo sutil e inerrante; Sinfonola; Lady Aoi (incidental electronic music); Hiroshima."
+    },
+    {
+      "target": "artist",
+      "entityId": 4271,
+      "name": "Gustavo Dudamel",
+      "field": "origin_city",
+      "value": "Barquisimeto"
+    },
+    {
+      "target": "person",
+      "entityId": 38113,
+      "name": "Gustavo Dudamel",
+      "field": "birth_date",
+      "value": "1981-01-26"
+    },
+    {
+      "target": "person",
+      "entityId": 38113,
+      "name": "Gustavo Dudamel",
+      "field": "birth_city",
+      "value": "Barquisimeto"
+    },
+    {
+      "target": "artist",
+      "entityId": 4272,
+      "name": "Guillermo Castillo Bustamante",
+      "field": "origin_city",
+      "value": "Caracas"
+    },
+    {
+      "target": "person",
+      "entityId": 25598,
+      "name": "Guillermo Castillo Bustamante",
+      "field": "birth_date",
+      "value": "1910-06-25"
+    },
+    {
+      "target": "person",
+      "entityId": 25598,
+      "name": "Guillermo Castillo Bustamante",
+      "field": "birth_city",
+      "value": "Caracas"
+    },
+    {
+      "target": "person",
+      "entityId": 25598,
+      "name": "Guillermo Castillo Bustamante",
+      "field": "death_date",
+      "value": "1974-10-06"
+    },
+    {
+      "target": "person",
+      "entityId": 25598,
+      "name": "Guillermo Castillo Bustamante",
+      "field": "is_deceased",
+      "value": true
+    },
+    {
+      "target": "artist",
+      "entityId": 4273,
+      "name": "Irepelusa",
+      "field": "origin_city",
+      "value": "Puerto La Cruz"
+    },
+    {
+      "target": "person",
+      "entityId": 38114,
+      "name": "Irepelusa",
+      "field": "real_name",
+      "value": "Irene Alejandra"
+    },
+    {
+      "target": "person",
+      "entityId": 38114,
+      "name": "Irepelusa",
+      "field": "birth_city",
+      "value": "Puerto La Cruz"
+    },
+    {
+      "target": "artist",
+      "entityId": 4274,
+      "name": "Motherflowers",
+      "field": "origin_city",
+      "value": "Puerto La Cruz"
+    },
+    {
+      "target": "artist",
+      "entityId": 4274,
+      "name": "Motherflowers",
+      "field": "years_active",
+      "value": "2018-present"
+    },
+    {
+      "target": "artist",
+      "entityId": 4274,
+      "name": "Motherflowers",
+      "field": "formed_year",
+      "value": 2018
+    },
+    {
+      "target": "artist",
+      "entityId": 4275,
+      "name": "Salserín",
+      "field": "origin_city",
+      "value": "Caracas"
+    },
+    {
+      "target": "artist",
+      "entityId": 4275,
+      "name": "Salserín",
+      "field": "years_active",
+      "value": "1993-present"
+    },
+    {
+      "target": "artist",
+      "entityId": 4275,
+      "name": "Salserín",
+      "field": "formed_year",
+      "value": 1993
+    },
+    {
+      "target": "artist",
+      "entityId": 4276,
+      "name": "Nelson Arrieta",
+      "field": "origin_city",
+      "value": "Maracaibo"
+    },
+    {
+      "target": "artist",
+      "entityId": 4276,
+      "name": "Nelson Arrieta",
+      "field": "notes",
+      "value": "Obras destacadas según el lote de investigación 2026-10-02: Besas Tan Bien; Sólo Por Ti; Baila Pegado Conmigo; Dime Cómo Hago; Hasta Cuándo Tú."
+    },
+    {
+      "target": "artist",
+      "entityId": 4277,
+      "name": "Omar Enrique",
+      "field": "origin_city",
+      "value": "Maracaibo"
+    },
+    {
+      "target": "person",
+      "entityId": 38115,
+      "name": "Omar Enrique",
+      "field": "birth_city",
+      "value": "Maracaibo"
+    },
+    {
+      "target": "artist",
+      "entityId": 4278,
+      "name": "Karolina con K",
+      "field": "origin_city",
+      "value": "Maracaibo"
+    },
+    {
+      "target": "person",
+      "entityId": 38116,
+      "name": "Karolina con K",
+      "field": "birth_date",
+      "value": "1967-05-14"
+    },
+    {
+      "target": "person",
+      "entityId": 38116,
+      "name": "Karolina con K",
+      "field": "birth_city",
+      "value": "Maracaibo"
+    },
+    {
+      "target": "artist",
+      "entityId": 4279,
+      "name": "Los Fantasmas del Caribe",
+      "field": "origin_city",
+      "value": "Caracas"
+    },
+    {
+      "target": "artist",
+      "entityId": 4280,
+      "name": "LAGOS",
+      "field": "years_active",
+      "value": "2019-present"
+    },
+    {
+      "target": "artist",
+      "entityId": 4280,
+      "name": "LAGOS",
+      "field": "formed_year",
+      "value": 2019
+    },
+    {
+      "target": "artist",
+      "entityId": 4281,
+      "name": "Samuel Mariño",
+      "field": "origin_city",
+      "value": "Caracas"
+    },
+    {
+      "target": "person",
+      "entityId": 38117,
+      "name": "Samuel Mariño",
+      "field": "birth_date",
+      "value": "1993-11-26"
+    },
+    {
+      "target": "person",
+      "entityId": 38117,
+      "name": "Samuel Mariño",
+      "field": "birth_city",
+      "value": "Caracas"
+    },
+    {
+      "target": "artist",
+      "entityId": 4283,
+      "name": "Oksana Linde",
+      "field": "origin_city",
+      "value": "Caracas"
+    },
+    {
+      "target": "person",
+      "entityId": 38118,
+      "name": "Oksana Linde",
+      "field": "birth_city",
+      "value": "Caracas"
+    },
+    {
+      "target": "artist",
+      "entityId": 4284,
+      "name": "Alfredo del Mónaco",
+      "field": "origin_city",
+      "value": "Caracas"
+    },
+    {
+      "target": "person",
+      "entityId": 33209,
+      "name": "Alfredo del Mónaco",
+      "field": "birth_date",
+      "value": "1938-04-29"
+    },
+    {
+      "target": "person",
+      "entityId": 33209,
+      "name": "Alfredo del Mónaco",
+      "field": "birth_city",
+      "value": "Caracas"
+    },
+    {
+      "target": "person",
+      "entityId": 33209,
+      "name": "Alfredo del Mónaco",
+      "field": "death_date",
+      "value": "2015-06-27"
+    },
+    {
+      "target": "person",
+      "entityId": 33209,
+      "name": "Alfredo del Mónaco",
+      "field": "is_deceased",
+      "value": true
+    },
+    {
+      "target": "artist",
+      "entityId": 4284,
+      "name": "Alfredo del Mónaco",
+      "field": "notes",
+      "value": "Obras destacadas según el lote de investigación 2026-10-02: Cromofonías I; Estudio electrónico I; Metagrama; Estudio electrónico II; Alternancias; Dualismos; Syntagma; Trópicos; Estudio electrónico III; Lyrika; Tupac-Amaru; Memorial."
+    },
+    {
+      "target": "artist",
+      "entityId": 4285,
+      "name": "Simón Díaz",
+      "field": "origin_city",
+      "value": "Barbacoas"
+    },
+    {
+      "target": "person",
+      "entityId": 3235,
+      "name": "Simón Díaz",
+      "field": "real_name",
+      "value": "Simón Narciso Díaz Márquez"
+    },
+    {
+      "target": "person",
+      "entityId": 3235,
+      "name": "Simón Díaz",
+      "field": "birth_date",
+      "value": "1928-08-08"
+    },
+    {
+      "target": "person",
+      "entityId": 3235,
+      "name": "Simón Díaz",
+      "field": "birth_city",
+      "value": "Barbacoas"
+    },
+    {
+      "target": "person",
+      "entityId": 3235,
+      "name": "Simón Díaz",
+      "field": "death_date",
+      "value": "2014-02-19"
+    },
+    {
+      "target": "person",
+      "entityId": 3235,
+      "name": "Simón Díaz",
+      "field": "is_deceased",
+      "value": true
+    },
+    {
+      "target": "artist",
+      "entityId": 4285,
+      "name": "Simón Díaz",
+      "field": "notes",
+      "value": "Obras destacadas según el lote de investigación 2026-10-02: Caballo Viejo; Tonada del Cabrestero; Mi Querencia; Sabana; El Becerrito."
+    },
+    {
+      "target": "artist",
+      "entityId": 4286,
+      "name": "Eneas Perdomo",
+      "field": "origin_city",
+      "value": "El Yagual"
+    },
+    {
+      "target": "person",
+      "entityId": 7352,
+      "name": "Eneas Perdomo",
+      "field": "real_name",
+      "value": "Eneas Perdomo Carrillo"
+    },
+    {
+      "target": "artist",
+      "entityId": 4286,
+      "name": "Eneas Perdomo",
+      "field": "notes",
+      "value": "Obras destacadas según el lote de investigación 2026-10-02: Fiesta en Elorza; Semana Santa en Achaguas."
+    },
+    {
+      "target": "artist",
+      "entityId": 4287,
+      "name": "Ángel Custodio Loyola",
+      "field": "origin_city",
+      "value": "Mata Arzolera"
+    },
+    {
+      "target": "person",
+      "entityId": 31703,
+      "name": "Ángel Custodio Loyola",
+      "field": "birth_date",
+      "value": "1926-09-04"
+    },
+    {
+      "target": "person",
+      "entityId": 31703,
+      "name": "Ángel Custodio Loyola",
+      "field": "birth_city",
+      "value": "Mata Arzolera"
+    },
+    {
+      "target": "person",
+      "entityId": 31703,
+      "name": "Ángel Custodio Loyola",
+      "field": "death_date",
+      "value": "1985-09-24"
+    },
+    {
+      "target": "person",
+      "entityId": 31703,
+      "name": "Ángel Custodio Loyola",
+      "field": "is_deceased",
+      "value": true
+    },
+    {
+      "target": "artist",
+      "entityId": 4288,
+      "name": "Francisco Montoya",
+      "field": "origin_city",
+      "value": "San Juan de Payara"
+    },
+    {
+      "target": "person",
+      "entityId": 31223,
+      "name": "Francisco Montoya",
+      "field": "birth_date",
+      "value": "1943-07-20"
+    },
+    {
+      "target": "person",
+      "entityId": 31223,
+      "name": "Francisco Montoya",
+      "field": "birth_city",
+      "value": "San Juan de Payara"
+    },
+    {
+      "target": "person",
+      "entityId": 31223,
+      "name": "Francisco Montoya",
+      "field": "death_date",
+      "value": "2026-05-06"
+    },
+    {
+      "target": "person",
+      "entityId": 31223,
+      "name": "Francisco Montoya",
+      "field": "is_deceased",
+      "value": true
+    },
+    {
+      "target": "artist",
+      "entityId": 4289,
+      "name": "Rummy Olivo",
+      "field": "origin_city",
+      "value": "Las Placitas"
+    },
+    {
+      "target": "person",
+      "entityId": 35890,
+      "name": "Rummy Olivo",
+      "field": "birth_date",
+      "value": "1964-01-22"
+    },
+    {
+      "target": "person",
+      "entityId": 35890,
+      "name": "Rummy Olivo",
+      "field": "birth_city",
+      "value": "Las Placitas"
+    },
+    {
+      "target": "artist",
+      "entityId": 4289,
+      "name": "Rummy Olivo",
+      "field": "notes",
+      "value": "Obras destacadas según el lote de investigación 2026-10-02: Llegó el Joropo."
+    },
+    {
+      "target": "artist",
+      "entityId": 4290,
+      "name": "Teo Galíndez",
+      "field": "origin_city",
+      "value": "Tinaquillo"
+    },
+    {
+      "target": "person",
+      "entityId": 35891,
+      "name": "Teo Galíndez",
+      "field": "real_name",
+      "value": "Teófilo Antonio Galíndez Cordero"
+    },
+    {
+      "target": "person",
+      "entityId": 35891,
+      "name": "Teo Galíndez",
+      "field": "birth_date",
+      "value": "1958-10-12"
+    },
+    {
+      "target": "person",
+      "entityId": 35891,
+      "name": "Teo Galíndez",
+      "field": "birth_city",
+      "value": "Tinaquillo"
+    },
+    {
+      "target": "artist",
+      "entityId": 4290,
+      "name": "Teo Galíndez",
+      "field": "notes",
+      "value": "Obras destacadas según el lote de investigación 2026-10-02: Dos Mujeres en mi Vida; Una Parranda en el Cielo; Ladrón Enamorado."
+    },
+    {
+      "target": "artist",
+      "entityId": 4291,
+      "name": "Jorge Guerrero",
+      "field": "origin_city",
+      "value": "Elorza"
+    },
+    {
+      "target": "person",
+      "entityId": 32267,
+      "name": "Jorge Guerrero",
+      "field": "real_name",
+      "value": "Jorge Fernando Guerrero Sánchez"
+    },
+    {
+      "target": "person",
+      "entityId": 32267,
+      "name": "Jorge Guerrero",
+      "field": "birth_date",
+      "value": "1965-02-14"
+    },
+    {
+      "target": "person",
+      "entityId": 32267,
+      "name": "Jorge Guerrero",
+      "field": "birth_city",
+      "value": "Elorza"
+    },
+    {
+      "target": "artist",
+      "entityId": 4292,
+      "name": "Armando Martínez",
+      "field": "origin_city",
+      "value": "Valle de la Pascua"
+    },
+    {
+      "target": "person",
+      "entityId": 38119,
+      "name": "Armando Martínez",
+      "field": "birth_date",
+      "value": "1957-12-31"
+    },
+    {
+      "target": "person",
+      "entityId": 38119,
+      "name": "Armando Martínez",
+      "field": "birth_city",
+      "value": "Valle de la Pascua"
+    },
+    {
+      "target": "artist",
+      "entityId": 4293,
+      "name": "Iván José",
+      "field": "notes",
+      "value": "Obras destacadas según el lote de investigación 2026-10-02: Blanco y Negro."
+    },
+    {
+      "target": "artist",
+      "entityId": 4294,
+      "name": "Iris Gavidia",
+      "field": "notes",
+      "value": "Obras destacadas según el lote de investigación 2026-10-02: Amor de Potra; Atardecer."
+    },
+    {
+      "target": "artist",
+      "entityId": 4295,
+      "name": "Ignacio “Indio” Figueredo",
+      "field": "origin_city",
+      "value": "Algarrobito"
+    },
+    {
+      "target": "person",
+      "entityId": 21722,
+      "name": "Ignacio “Indio” Figueredo",
+      "field": "real_name",
+      "value": "Ignacio Ventura Figueredo"
+    },
+    {
+      "target": "person",
+      "entityId": 21722,
+      "name": "Ignacio “Indio” Figueredo",
+      "field": "birth_date",
+      "value": "1900-07-31"
+    },
+    {
+      "target": "person",
+      "entityId": 21722,
+      "name": "Ignacio “Indio” Figueredo",
+      "field": "birth_city",
+      "value": "Algarrobito"
+    },
+    {
+      "target": "person",
+      "entityId": 21722,
+      "name": "Ignacio “Indio” Figueredo",
+      "field": "death_date",
+      "value": "1995-09-03"
+    },
+    {
+      "target": "person",
+      "entityId": 21722,
+      "name": "Ignacio “Indio” Figueredo",
+      "field": "is_deceased",
+      "value": true
+    },
+    {
+      "target": "artist",
+      "entityId": 4295,
+      "name": "Ignacio “Indio” Figueredo",
+      "field": "notes",
+      "value": "Obras destacadas según el lote de investigación 2026-10-02: El gabán; Las 3 damas; Guayabo negro; El verdún; El guachamarón; La periquera."
+    },
+    {
+      "target": "artist",
+      "entityId": 4296,
+      "name": "Otilio Galíndez",
+      "field": "origin_city",
+      "value": "Yaritagua"
+    },
+    {
+      "target": "artist",
+      "entityId": 4296,
+      "name": "Otilio Galíndez",
+      "field": "notes",
+      "value": "Obras destacadas según el lote de investigación 2026-10-02: Ahora; Flor de Mayo; Pueblo triste; Duerme mi tripón."
+    },
+    {
+      "target": "artist",
+      "entityId": 4297,
+      "name": "Grupo Madera",
+      "field": "origin_city",
+      "value": "San Agustín del Sur"
+    },
+    {
+      "target": "artist",
+      "entityId": 4298,
+      "name": "Betsayda Machado y La Parranda El Clavo",
+      "field": "origin_city",
+      "value": "El Clavo"
+    },
+    {
+      "target": "artist",
+      "entityId": 4299,
+      "name": "Francisco Mata",
+      "field": "origin_city",
+      "value": "Juan Griego"
+    },
+    {
+      "target": "person",
+      "entityId": 29466,
+      "name": "Francisco Mata",
+      "field": "real_name",
+      "value": "Francisco Antonio Mata"
+    },
+    {
+      "target": "person",
+      "entityId": 29466,
+      "name": "Francisco Mata",
+      "field": "birth_date",
+      "value": "1932-07-24"
+    },
+    {
+      "target": "person",
+      "entityId": 29466,
+      "name": "Francisco Mata",
+      "field": "birth_city",
+      "value": "Juan Griego"
+    },
+    {
+      "target": "person",
+      "entityId": 29466,
+      "name": "Francisco Mata",
+      "field": "death_date",
+      "value": "2011-01-24"
+    },
+    {
+      "target": "person",
+      "entityId": 29466,
+      "name": "Francisco Mata",
+      "field": "is_deceased",
+      "value": true
+    },
+    {
+      "target": "artist",
+      "entityId": 4300,
+      "name": "Luis Mariano Rivera",
+      "field": "origin_city",
+      "value": "Canchunchú"
+    },
+    {
+      "target": "person",
+      "entityId": 7348,
+      "name": "Luis Mariano Rivera",
+      "field": "real_name",
+      "value": "Luis Mariano Rivera Font"
+    },
+    {
+      "target": "artist",
+      "entityId": 4300,
+      "name": "Luis Mariano Rivera",
+      "field": "notes",
+      "value": "Obras destacadas según el lote de investigación 2026-10-02: Canchunchú Florido; La Guácara; La Matica."
+    },
+    {
+      "target": "artist",
+      "entityId": 4301,
+      "name": "Cruz Quinal",
+      "field": "origin_city",
+      "value": "Botucal"
+    },
+    {
+      "target": "person",
+      "entityId": 31641,
+      "name": "Cruz Quinal",
+      "field": "birth_date",
+      "value": "1934-05-03"
+    },
+    {
+      "target": "person",
+      "entityId": 31641,
+      "name": "Cruz Quinal",
+      "field": "birth_city",
+      "value": "Botucal"
+    },
+    {
+      "target": "person",
+      "entityId": 31641,
+      "name": "Cruz Quinal",
+      "field": "death_date",
+      "value": "1987-07-17"
+    },
+    {
+      "target": "person",
+      "entityId": 31641,
+      "name": "Cruz Quinal",
+      "field": "is_deceased",
+      "value": true
+    },
+    {
+      "target": "artist",
+      "entityId": 4302,
+      "name": "Marco Antonio Rivera Useche",
+      "field": "origin_city",
+      "value": "San Cristóbal"
+    },
+    {
+      "target": "person",
+      "entityId": 33837,
+      "name": "Marco Antonio Rivera Useche",
+      "field": "birth_date",
+      "value": "1895-06-19"
+    },
+    {
+      "target": "person",
+      "entityId": 33837,
+      "name": "Marco Antonio Rivera Useche",
+      "field": "birth_city",
+      "value": "San Cristóbal"
+    },
+    {
+      "target": "person",
+      "entityId": 33837,
+      "name": "Marco Antonio Rivera Useche",
+      "field": "death_date",
+      "value": "1990-07-15"
+    },
+    {
+      "target": "person",
+      "entityId": 33837,
+      "name": "Marco Antonio Rivera Useche",
+      "field": "is_deceased",
+      "value": true
+    },
+    {
+      "target": "artist",
+      "entityId": 4302,
+      "name": "Marco Antonio Rivera Useche",
+      "field": "notes",
+      "value": "Obras destacadas según el lote de investigación 2026-10-02: Salud San Cristóbal."
+    },
+    {
+      "target": "artist",
+      "entityId": 4303,
+      "name": "Luis Felipe Ramón y Rivera",
+      "field": "origin_city",
+      "value": "San Cristóbal"
+    },
+    {
+      "target": "person",
+      "entityId": 11811,
+      "name": "Luis Felipe Ramón y Rivera",
+      "field": "birth_date",
+      "value": "1913-08-23"
+    },
+    {
+      "target": "person",
+      "entityId": 11811,
+      "name": "Luis Felipe Ramón y Rivera",
+      "field": "birth_city",
+      "value": "San Cristóbal"
+    },
+    {
+      "target": "person",
+      "entityId": 11811,
+      "name": "Luis Felipe Ramón y Rivera",
+      "field": "death_date",
+      "value": "1993-10-22"
+    },
+    {
+      "target": "person",
+      "entityId": 11811,
+      "name": "Luis Felipe Ramón y Rivera",
+      "field": "is_deceased",
+      "value": true
+    },
+    {
+      "target": "artist",
+      "entityId": 4303,
+      "name": "Luis Felipe Ramón y Rivera",
+      "field": "notes",
+      "value": "Obras destacadas según el lote de investigación 2026-10-02: Brisas del Torbes."
+    },
+    {
+      "target": "artist",
+      "entityId": 4304,
+      "name": "Chucho Corrales",
+      "field": "origin_city",
+      "value": "San Cristóbal"
+    },
+    {
+      "target": "person",
+      "entityId": 32304,
+      "name": "Chucho Corrales",
+      "field": "real_name",
+      "value": "Jesús Manuel Corrales Sánchez"
+    },
+    {
+      "target": "person",
+      "entityId": 32304,
+      "name": "Chucho Corrales",
+      "field": "birth_date",
+      "value": "1926-12-28"
+    },
+    {
+      "target": "person",
+      "entityId": 32304,
+      "name": "Chucho Corrales",
+      "field": "birth_city",
+      "value": "San Cristóbal"
+    },
+    {
+      "target": "person",
+      "entityId": 32304,
+      "name": "Chucho Corrales",
+      "field": "is_deceased",
+      "value": true
+    },
+    {
+      "target": "artist",
+      "entityId": 4305,
+      "name": "Yhony León y los Pueblos del Sur",
+      "field": "origin_city",
+      "value": "Mérida"
+    },
+    {
+      "target": "artist",
+      "entityId": 4307,
+      "name": "Ricardo Aguirre",
+      "field": "origin_city",
+      "value": "Maracaibo"
+    },
+    {
+      "target": "person",
+      "entityId": 20547,
+      "name": "Ricardo Aguirre",
+      "field": "real_name",
+      "value": "Ricardo José Aguirre González"
+    },
+    {
+      "target": "person",
+      "entityId": 20547,
+      "name": "Ricardo Aguirre",
+      "field": "birth_date",
+      "value": "1939-05-09"
+    },
+    {
+      "target": "person",
+      "entityId": 20547,
+      "name": "Ricardo Aguirre",
+      "field": "birth_city",
+      "value": "Maracaibo"
+    },
+    {
+      "target": "person",
+      "entityId": 20547,
+      "name": "Ricardo Aguirre",
+      "field": "death_date",
+      "value": "1969-11-08"
+    },
+    {
+      "target": "person",
+      "entityId": 20547,
+      "name": "Ricardo Aguirre",
+      "field": "is_deceased",
+      "value": true
+    },
+    {
+      "target": "artist",
+      "entityId": 4307,
+      "name": "Ricardo Aguirre",
+      "field": "notes",
+      "value": "Obras destacadas según el lote de investigación 2026-10-02: La Grey Zuliana."
+    },
+    {
+      "target": "artist",
+      "entityId": 4308,
+      "name": "Cardenales del Éxito",
+      "field": "origin_city",
+      "value": "Maracaibo"
+    },
+    {
+      "target": "artist",
+      "entityId": 4309,
+      "name": "Gran Coquivacoa",
+      "field": "origin_city",
+      "value": "Cabimas"
+    },
+    {
+      "target": "artist",
+      "entityId": 4309,
+      "name": "Gran Coquivacoa",
+      "field": "years_active",
+      "value": "1968-present"
+    },
+    {
+      "target": "artist",
+      "entityId": 4309,
+      "name": "Gran Coquivacoa",
+      "field": "formed_year",
+      "value": 1968
+    },
+    {
+      "target": "artist",
+      "entityId": 4309,
+      "name": "Gran Coquivacoa",
+      "field": "notes",
+      "value": "Obras destacadas según el lote de investigación 2026-10-02: Sin Rencor; Gaita Onomatopéyica; Punta Icotea; Tamborera Nº 9."
+    },
+    {
+      "target": "artist",
+      "entityId": 4310,
+      "name": "Maracaibo 15",
+      "field": "origin_city",
+      "value": "Caracas"
+    },
+    {
+      "target": "artist",
+      "entityId": 4310,
+      "name": "Maracaibo 15",
+      "field": "years_active",
+      "value": "1974-present"
+    },
+    {
+      "target": "artist",
+      "entityId": 4310,
+      "name": "Maracaibo 15",
+      "field": "formed_year",
+      "value": 1974
+    },
+    {
+      "target": "artist",
+      "entityId": 4310,
+      "name": "Maracaibo 15",
+      "field": "notes",
+      "value": "Obras destacadas según el lote de investigación 2026-10-02: Amigo; Viejo Año; 18 de noviembre; Canaima."
+    },
+    {
+      "target": "artist",
+      "entityId": 4311,
+      "name": "Betulio Medina",
+      "field": "origin_city",
+      "value": "San Rafael de El Moján"
+    },
+    {
+      "target": "person",
+      "entityId": 7820,
+      "name": "Betulio Medina",
+      "field": "real_name",
+      "value": "Betulio Enrique Medina Paz"
+    },
+    {
+      "target": "person",
+      "entityId": 7820,
+      "name": "Betulio Medina",
+      "field": "birth_date",
+      "value": "1949-07-05"
+    },
+    {
+      "target": "person",
+      "entityId": 7820,
+      "name": "Betulio Medina",
+      "field": "birth_city",
+      "value": "San Rafael de El Moján"
+    },
+    {
+      "target": "artist",
+      "entityId": 4312,
+      "name": "Rincón Morales",
+      "field": "origin_city",
+      "value": "Zulia"
+    },
+    {
+      "target": "artist",
+      "entityId": 4313,
+      "name": "Barrio Obrero de Cabimas",
+      "field": "origin_city",
+      "value": "Cabimas"
+    },
+    {
+      "target": "artist",
+      "entityId": 4313,
+      "name": "Barrio Obrero de Cabimas",
+      "field": "years_active",
+      "value": "1955-present"
+    },
+    {
+      "target": "artist",
+      "entityId": 4313,
+      "name": "Barrio Obrero de Cabimas",
+      "field": "formed_year",
+      "value": 1955
+    },
+    {
+      "target": "artist",
+      "entityId": 4314,
+      "name": "Ricardo Cepeda",
+      "field": "origin_city",
+      "value": "Maracaibo"
+    },
+    {
+      "target": "person",
+      "entityId": 7819,
+      "name": "Ricardo Cepeda",
+      "field": "real_name",
+      "value": "Ricardo José Cepeda Olivares"
+    },
+    {
+      "target": "person",
+      "entityId": 7819,
+      "name": "Ricardo Cepeda",
+      "field": "birth_date",
+      "value": "1952-11-08"
+    },
+    {
+      "target": "person",
+      "entityId": 7819,
+      "name": "Ricardo Cepeda",
+      "field": "birth_city",
+      "value": "Maracaibo"
+    },
+    {
+      "target": "artist",
+      "entityId": 4315,
+      "name": "Astolfo Romero",
+      "field": "origin_city",
+      "value": "Maracaibo"
+    },
+    {
+      "target": "person",
+      "entityId": 27158,
+      "name": "Astolfo Romero",
+      "field": "real_name",
+      "value": "Astolfo José Romero Chacín"
+    },
+    {
+      "target": "person",
+      "entityId": 27158,
+      "name": "Astolfo Romero",
+      "field": "birth_date",
+      "value": "1950-02-08"
+    },
+    {
+      "target": "person",
+      "entityId": 27158,
+      "name": "Astolfo Romero",
+      "field": "birth_city",
+      "value": "Maracaibo"
+    },
+    {
+      "target": "person",
+      "entityId": 27158,
+      "name": "Astolfo Romero",
+      "field": "death_date",
+      "value": "2000-05-20"
+    },
+    {
+      "target": "person",
+      "entityId": 27158,
+      "name": "Astolfo Romero",
+      "field": "is_deceased",
+      "value": true
+    },
+    {
+      "target": "artist",
+      "entityId": 4316,
+      "name": "The Same People",
+      "field": "origin_city",
+      "value": "El Callao"
+    },
+    {
+      "target": "artist",
+      "entityId": 4316,
+      "name": "The Same People",
+      "field": "years_active",
+      "value": "1985-present"
+    },
+    {
+      "target": "artist",
+      "entityId": 4316,
+      "name": "The Same People",
+      "field": "formed_year",
+      "value": 1985
+    },
+    {
+      "target": "artist",
+      "entityId": 4317,
+      "name": "Family Ground",
+      "field": "origin_city",
+      "value": "El Callao"
+    },
+    {
+      "target": "artist",
+      "entityId": 4318,
+      "name": "Los Antaños del Stadium",
+      "field": "origin_city",
+      "value": "Caracas"
+    },
+    {
+      "target": "artist",
+      "entityId": 4318,
+      "name": "Los Antaños del Stadium",
+      "field": "years_active",
+      "value": "1946-present"
+    },
+    {
+      "target": "artist",
+      "entityId": 4318,
+      "name": "Los Antaños del Stadium",
+      "field": "formed_year",
+      "value": 1946
+    },
+    {
+      "target": "artist",
+      "entityId": 4319,
+      "name": "Los Tucusitos",
+      "field": "origin_city",
+      "value": "Caracas"
+    },
+    {
+      "target": "artist",
+      "entityId": 4319,
+      "name": "Los Tucusitos",
+      "field": "years_active",
+      "value": "1959-present"
+    },
+    {
+      "target": "artist",
+      "entityId": 4319,
+      "name": "Los Tucusitos",
+      "field": "formed_year",
+      "value": 1959
+    },
+    {
+      "target": "artist",
+      "entityId": 4320,
+      "name": "Popy",
+      "field": "origin_city",
+      "value": "Caracas"
+    },
+    {
+      "target": "person",
+      "entityId": 11856,
+      "name": "Popy",
+      "field": "real_name",
+      "value": "Dionisio Rafael López Ramos"
+    },
+    {
+      "target": "person",
+      "entityId": 11856,
+      "name": "Popy",
+      "field": "birth_date",
+      "value": "1946-03-03"
+    },
+    {
+      "target": "person",
+      "entityId": 11856,
+      "name": "Popy",
+      "field": "birth_city",
+      "value": "Caracas"
+    },
+    {
+      "target": "person",
+      "entityId": 11856,
+      "name": "Popy",
+      "field": "death_date",
+      "value": "2010-08-27"
+    },
+    {
+      "target": "person",
+      "entityId": 11856,
+      "name": "Popy",
+      "field": "is_deceased",
+      "value": true
+    },
+    {
+      "target": "artist",
+      "entityId": 4320,
+      "name": "Popy",
+      "field": "notes",
+      "value": "Obras destacadas según el lote de investigación 2026-10-02: Caro-Caro-Carolina; El telefonito; A cepillarse; Mi maestra."
+    },
+    {
+      "target": "artist",
+      "entityId": 4321,
+      "name": "Payasitas Nifu Nifa",
+      "field": "origin_city",
+      "value": "Caracas"
+    },
+    {
+      "target": "artist",
+      "entityId": 4321,
+      "name": "Payasitas Nifu Nifa",
+      "field": "years_active",
+      "value": "1984-present"
+    },
+    {
+      "target": "artist",
+      "entityId": 4321,
+      "name": "Payasitas Nifu Nifa",
+      "field": "formed_year",
+      "value": 1984
+    },
+    {
+      "target": "artist",
+      "entityId": 4322,
+      "name": "La Rondallita",
+      "field": "notes",
+      "value": "Obras destacadas según el lote de investigación 2026-10-02: El Burrito Sabanero."
+    },
+    {
+      "target": "artist",
+      "entityId": 4323,
+      "name": "Daniel Calveti",
+      "field": "origin_city",
+      "value": "Caracas"
+    },
+    {
+      "target": "artist",
+      "entityId": 4323,
+      "name": "Daniel Calveti",
+      "field": "years_active",
+      "value": "1994-present"
+    },
+    {
+      "target": "person",
+      "entityId": 38120,
+      "name": "Daniel Calveti",
+      "field": "birth_date",
+      "value": "1977-11-29"
+    },
+    {
+      "target": "person",
+      "entityId": 38120,
+      "name": "Daniel Calveti",
+      "field": "birth_city",
+      "value": "Caracas"
+    },
+    {
+      "target": "artist",
+      "entityId": 3420,
+      "name": "Schola Cantorum de Venezuela",
+      "field": "origin_city",
+      "value": "Caracas"
+    },
+    {
+      "target": "artist",
+      "entityId": 3420,
+      "name": "Schola Cantorum de Venezuela",
+      "field": "years_active",
+      "value": "1967-present"
+    },
+    {
+      "target": "artist",
+      "entityId": 3420,
+      "name": "Schola Cantorum de Venezuela",
+      "field": "formed_year",
+      "value": 1967
+    },
+    {
+      "target": "artist",
+      "entityId": 4324,
+      "name": "Orfeón Universitario de la UCV",
+      "field": "origin_city",
+      "value": "Caracas"
+    },
+    {
+      "target": "artist",
+      "entityId": 4324,
+      "name": "Orfeón Universitario de la UCV",
+      "field": "years_active",
+      "value": "1943-present"
+    },
+    {
+      "target": "artist",
+      "entityId": 4324,
+      "name": "Orfeón Universitario de la UCV",
+      "field": "formed_year",
+      "value": 1943
+    }
+  ],
+  "confirmed": {
+    "artist.name": 187,
+    "artist.artist_type": 188,
+    "person.real_name": 53,
+    "person.birth_date": 23,
+    "person.birth_city": 24,
+    "person.is_venezuelan": 88,
+    "artist.origin_city": 66,
+    "album.title": 297,
+    "album.release_year": 241,
+    "artist.years_active": 23,
+    "artist.formed_year": 19,
+    "album.album_type": 13,
+    "person.is_deceased": 7,
+    "artist.disbanded_year": 2,
+    "person.death_date": 6
+  },
+  "conflicts": [
+    {
+      "lote": "lote1",
+      "loteId": "cardopusher-safety-trance",
+      "artist": "Cardopusher / Safety Trance",
+      "target": "artist",
+      "entityId": 2733,
+      "field": "name",
+      "lote_value": "Cardopusher / Safety Trance",
+      "lote_raw": null,
+      "core_value": "Cardopusher",
+      "evidence": "https://www.allmusic.com/artist/cardopusher-mn0002016376"
+    },
+    {
+      "lote": "lote1",
+      "loteId": "dimension-latina",
+      "artist": "Dimensión Latina",
+      "target": "album",
+      "entityId": 6934,
+      "field": "release_year",
+      "lote_value": 1990,
+      "lote_raw": null,
+      "core_value": "1972",
+      "evidence": "https://www.allmusic.com/album/dimension-latina-mw0000909457"
+    },
+    {
+      "lote": "lote1",
+      "loteId": "dimension-latina",
+      "artist": "Dimensión Latina",
+      "target": "album",
+      "entityId": 6945,
+      "field": "release_year",
+      "lote_value": 1995,
+      "lote_raw": null,
+      "core_value": "1978",
+      "evidence": "https://www.allmusic.com/artist/dimensi%C3%B3n-latina-mn0000259818"
+    },
+    {
+      "lote": "lote1",
+      "loteId": "dimension-latina",
+      "artist": "Dimensión Latina",
+      "target": "album",
+      "entityId": 6963,
+      "field": "release_year",
+      "lote_value": 2005,
+      "lote_raw": null,
+      "core_value": "2003",
+      "evidence": "https://www.allmusic.com/artist/dimensi%C3%B3n-latina-mn0000259818"
+    },
+    {
+      "lote": "lote1",
+      "loteId": "guaco",
+      "artist": "Guaco",
+      "target": "album",
+      "entityId": 7145,
+      "field": "release_year",
+      "lote_value": 2004,
+      "lote_raw": null,
+      "core_value": "2002",
+      "evidence": "https://www.allmusic.com/artist/guaco-mn0000651848"
+    },
+    {
+      "lote": "lote1",
+      "loteId": "alfredo-sadel",
+      "artist": "Alfredo Sadel",
+      "target": "album",
+      "entityId": 6671,
+      "field": "release_year",
+      "lote_value": 1973,
+      "lote_raw": null,
+      "core_value": "1979",
+      "evidence": "https://www.musicavenezuela.com/artistas/alfredo-sadel"
+    },
+    {
+      "lote": "lote1",
+      "loteId": "aldemaro-romero",
+      "artist": "Aldemaro Romero",
+      "target": "album",
+      "entityId": 9434,
+      "field": "release_year",
+      "lote_value": 1950,
+      "lote_raw": null,
+      "core_value": "1955",
+      "evidence": "https://www.aldemaroromero.com/biography/"
+    },
+    {
+      "lote": "lote1",
+      "loteId": "aldemaro-romero",
+      "artist": "Aldemaro Romero",
+      "target": "album",
+      "entityId": 9455,
+      "field": "release_year",
+      "lote_value": 1975,
+      "lote_raw": null,
+      "core_value": "1974",
+      "evidence": "https://www.aldemaroromero.com/biography/"
+    },
+    {
+      "lote": "lote1",
+      "loteId": "ricardo-montaner",
+      "artist": "Ricardo Montaner",
+      "target": "album",
+      "entityId": 3593,
+      "field": "release_year",
+      "lote_value": 1987,
+      "lote_raw": null,
+      "core_value": "1986",
+      "evidence": "https://www.allmusic.com/artist/ricardo-montaner-mn0000468632"
+    },
+    {
+      "lote": "lote1",
+      "loteId": "yordano",
+      "artist": "Yordano",
+      "target": "album",
+      "entityId": 3429,
+      "field": "release_year",
+      "lote_value": 1995,
+      "lote_raw": null,
+      "core_value": "1994",
+      "evidence": "https://es.wikipedia.org/wiki/Yordano"
+    },
+    {
+      "lote": "lote1",
+      "loteId": "yordano",
+      "artist": "Yordano",
+      "target": "album",
+      "entityId": 4599,
+      "field": "release_year",
+      "lote_value": 1997,
+      "lote_raw": null,
+      "core_value": "1996",
+      "evidence": "https://es.wikipedia.org/wiki/Yordano"
+    },
+    {
+      "lote": "lote1",
+      "loteId": "yordano",
+      "artist": "Yordano",
+      "target": "album",
+      "entityId": 4608,
+      "field": "release_year",
+      "lote_value": 2007,
+      "lote_raw": null,
+      "core_value": "2008",
+      "evidence": "https://es.wikipedia.org/wiki/Yordano"
+    },
+    {
+      "lote": "lote1",
+      "loteId": "yordano",
+      "artist": "Yordano",
+      "target": "album",
+      "entityId": 4604,
+      "field": "release_year",
+      "lote_value": 2013,
+      "lote_raw": null,
+      "core_value": "2012",
+      "evidence": "https://es.wikipedia.org/wiki/Yordano"
+    },
+    {
+      "lote": "lote1",
+      "loteId": "kiara",
+      "artist": "Kiara",
+      "target": "album",
+      "entityId": 4334,
+      "field": "release_year",
+      "lote_value": 1987,
+      "lote_raw": null,
+      "core_value": "1988",
+      "evidence": "https://en.wikipedia.org/wiki/List_of_Venezuelan_singers"
+    },
+    {
+      "lote": "lote1",
+      "loteId": "canserbero",
+      "artist": "Canserbero",
+      "target": "person",
+      "entityId": 411,
+      "field": "death_date",
+      "lote_value": "2015-01-19",
+      "lote_raw": null,
+      "core_value": "2015-01-20",
+      "evidence": "https://www.allmusic.com/artist/canserbero-mn0003125347"
+    },
+    {
+      "lote": "lote1",
+      "loteId": "tres-duenos",
+      "artist": "3 Dueños",
+      "target": "album",
+      "entityId": 3265,
+      "field": "release_year",
+      "lote_value": 2005,
+      "lote_raw": null,
+      "core_value": "2006",
+      "evidence": "https://en.wikipedia.org/wiki/List_of_Venezuelans"
+    },
+    {
+      "lote": "lote1",
+      "loteId": "rawayana",
+      "artist": "Rawayana",
+      "target": "artist",
+      "entityId": 206,
+      "field": "formed_year",
+      "lote_value": 2007,
+      "lote_raw": null,
+      "core_value": "2009",
+      "evidence": "https://en.wikipedia.org/wiki/Rawayana"
+    },
+    {
+      "lote": "lote1",
+      "loteId": "sentimiento-muerto",
+      "artist": "Sentimiento Muerto",
+      "target": "artist",
+      "entityId": 220,
+      "field": "formed_year",
+      "lote_value": 1981,
+      "lote_raw": null,
+      "core_value": "1983",
+      "evidence": "https://www.lobotoradio.com/bandas/sentimiento-muerto/"
+    },
+    {
+      "lote": "lote1",
+      "loteId": "sofia-insomnia",
+      "artist": "Sofía Insomnia",
+      "target": "album",
+      "entityId": 333,
+      "field": "release_year",
+      "lote_value": 2013,
+      "lote_raw": null,
+      "core_value": "2012",
+      "evidence": "https://sofiainsomnia.bandcamp.com/album/breve-casi-eterno"
+    },
+    {
+      "lote": "lote1",
+      "loteId": "caramelos-de-cianuro",
+      "artist": "Caramelos de Cianuro",
+      "target": "album",
+      "entityId": 57,
+      "field": "release_year",
+      "lote_value": 1993,
+      "lote_raw": null,
+      "core_value": "1992",
+      "evidence": "https://www.allmusic.com/artist/caramelos-de-cianuro-mn0000103279"
+    },
+    {
+      "lote": "lote1",
+      "loteId": "candy66",
+      "artist": "Candy66",
+      "target": "album",
+      "entityId": 427,
+      "field": "release_year",
+      "lote_value": 2000,
+      "lote_raw": null,
+      "core_value": "2001",
+      "evidence": "https://candy66.com/"
+    },
+    {
+      "lote": "lote1",
+      "loteId": "candy66",
+      "artist": "Candy66",
+      "target": "album",
+      "entityId": 425,
+      "field": "release_year",
+      "lote_value": 2004,
+      "lote_raw": null,
+      "core_value": "2005",
+      "evidence": "https://candy66.com/"
+    },
+    {
+      "lote": "lote1",
+      "loteId": "gillman",
+      "artist": "Gillman",
+      "target": "person",
+      "entityId": 3467,
+      "field": "real_name",
+      "lote_value": "Paul Gillman",
+      "lote_raw": null,
+      "core_value": "Paul Silvestre Gillman",
+      "evidence": "https://es.wikipedia.org/wiki/Rock_de_Venezuela"
+    },
+    {
+      "lote": "lote1",
+      "loteId": "carlos-baute",
+      "artist": "Carlos Baute",
+      "target": "album",
+      "entityId": 3848,
+      "field": "release_year",
+      "lote_value": 2006,
+      "lote_raw": null,
+      "core_value": "2005",
+      "evidence": "https://www.allmusic.com/artist/carlos-baute-mn0000795360"
+    },
+    {
+      "lote": "lote1",
+      "loteId": "carlos-baute",
+      "artist": "Carlos Baute",
+      "target": "album",
+      "entityId": 3666,
+      "field": "release_year",
+      "lote_value": 2009,
+      "lote_raw": null,
+      "core_value": "2008",
+      "evidence": "https://www.allmusic.com/artist/carlos-baute-mn0000795360"
+    },
+    {
+      "lote": "lote1",
+      "loteId": "servando-y-florentino",
+      "artist": "Servando & Florentino",
+      "target": "album",
+      "entityId": 4499,
+      "field": "release_year",
+      "lote_value": 1999,
+      "lote_raw": null,
+      "core_value": "1998",
+      "evidence": "https://www.allmusic.com/artist/servando-y-florentino-mn0000005703"
+    },
+    {
+      "lote": "lote1",
+      "loteId": "federico-y-su-combo-latino",
+      "artist": "Federico y su Combo Latino",
+      "target": "album",
+      "entityId": 7005,
+      "field": "release_year",
+      "lote_value": 1970,
+      "lote_raw": null,
+      "core_value": "1969",
+      "evidence": "https://musicbrainz.org/artist/b2478402-71c5-4a9a-aff8-da6befdbab00"
+    },
+    {
+      "lote": "lote1",
+      "loteId": "natusha",
+      "artist": "Natusha",
+      "target": "album",
+      "entityId": 7642,
+      "field": "release_year",
+      "lote_value": 1990,
+      "lote_raw": null,
+      "core_value": "1993",
+      "evidence": "https://es.wikipedia.org/wiki/Natusha"
+    },
+    {
+      "lote": "lote1",
+      "loteId": "jose-luis-rodriguez-el-puma",
+      "artist": "José Luis Rodríguez “El Puma”",
+      "target": "album",
+      "entityId": 8145,
+      "field": "release_year",
+      "lote_value": 2002,
+      "lote_raw": null,
+      "core_value": "1981",
+      "evidence": "https://www.allmusic.com/artist/p119691/charts-awards/billboard-singles"
+    },
+    {
+      "lote": "lote1",
+      "loteId": "mirla-castellanos",
+      "artist": "Mirla Castellanos",
+      "target": "album",
+      "entityId": 8373,
+      "field": "release_year",
+      "lote_value": 1985,
+      "lote_raw": null,
+      "core_value": "1986",
+      "evidence": "https://www.allmusic.com/artist/mirla-castellanos-mn0000498935"
+    },
+    {
+      "lote": "lote1",
+      "loteId": "rudy-la-scala",
+      "artist": "Rudy La Scala",
+      "target": "album",
+      "entityId": 3648,
+      "field": "release_year",
+      "lote_value": 1975,
+      "lote_raw": null,
+      "core_value": "1977",
+      "evidence": "https://es.wikipedia.org/wiki/Rudy_la_Scala"
+    },
+    {
+      "lote": "lote1",
+      "loteId": "rudy-la-scala",
+      "artist": "Rudy La Scala",
+      "target": "album",
+      "entityId": 4447,
+      "field": "release_year",
+      "lote_value": 1996,
+      "lote_raw": null,
+      "core_value": "1995",
+      "evidence": "https://es.wikipedia.org/wiki/Rudy_la_Scala"
+    },
+    {
+      "lote": "lote1",
+      "loteId": "miguel-noya",
+      "artist": "Miguel Noya",
+      "target": "album",
+      "entityId": 5683,
+      "field": "release_year",
+      "lote_value": 1986,
+      "lote_raw": null,
+      "core_value": "2013",
+      "evidence": "https://miguelnoya.com/"
+    },
+    {
+      "lote": "lote1",
+      "loteId": "angel-rada",
+      "artist": "Ángel Rada",
+      "target": "album",
+      "entityId": 3187,
+      "field": "release_year",
+      "lote_value": 1986,
+      "lote_raw": null,
+      "core_value": "1988",
+      "evidence": "https://sincopa.com/new_age/artist_newage/angel_rada.htm"
+    },
+    {
+      "lote": "lote2",
+      "loteId": "saul-vera",
+      "artist": "Saúl Vera",
+      "target": "album",
+      "entityId": 9792,
+      "field": "release_year",
+      "lote_value": 1994,
+      "lote_raw": null,
+      "core_value": "1993",
+      "evidence": "https://saulvera.com/discography/"
+    },
+    {
+      "lote": "lote2",
+      "loteId": "ali-primera",
+      "artist": "Alí Primera",
+      "target": "album",
+      "entityId": 6677,
+      "field": "release_year",
+      "lote_value": 1968,
+      "lote_raw": null,
+      "core_value": "1969",
+      "evidence": "https://aliprimera.com/vida-de-al%C3%AD-primera"
+    },
+    {
+      "lote": "lote2",
+      "loteId": "ali-primera",
+      "artist": "Alí Primera",
+      "target": "album",
+      "entityId": 6679,
+      "field": "release_year",
+      "lote_value": 1974,
+      "lote_raw": null,
+      "core_value": "1973",
+      "evidence": "https://aliprimera.com/vida-de-al%C3%AD-primera"
+    },
+    {
+      "lote": "lote2",
+      "loteId": "ali-primera",
+      "artist": "Alí Primera",
+      "target": "album",
+      "entityId": 6684,
+      "field": "release_year",
+      "lote_value": 1976,
+      "lote_raw": null,
+      "core_value": "1978",
+      "evidence": "https://aliprimera.com/vida-de-al%C3%AD-primera"
+    },
+    {
+      "lote": "lote2",
+      "loteId": "soledad-bravo",
+      "artist": "Soledad Bravo",
+      "target": "album",
+      "entityId": 7796,
+      "field": "release_year",
+      "lote_value": 1967,
+      "lote_raw": null,
+      "core_value": "1968",
+      "evidence": "https://es.wikipedia.org/wiki/Soledad_Bravo"
+    },
+    {
+      "lote": "lote2",
+      "loteId": "soledad-bravo",
+      "artist": "Soledad Bravo",
+      "target": "album",
+      "entityId": 7802,
+      "field": "release_year",
+      "lote_value": 1973,
+      "lote_raw": null,
+      "core_value": "1974",
+      "evidence": "https://es.wikipedia.org/wiki/Soledad_Bravo"
+    },
+    {
+      "lote": "lote2",
+      "loteId": "soledad-bravo",
+      "artist": "Soledad Bravo",
+      "target": "album",
+      "entityId": 7807,
+      "field": "release_year",
+      "lote_value": 1979,
+      "lote_raw": null,
+      "core_value": "1980",
+      "evidence": "https://es.wikipedia.org/wiki/Soledad_Bravo"
+    },
+    {
+      "lote": "lote2",
+      "loteId": "lilia-vera",
+      "artist": "Lilia Vera",
+      "target": "album",
+      "entityId": 8783,
+      "field": "release_year",
+      "lote_value": 1974,
+      "lote_raw": null,
+      "core_value": "1973",
+      "evidence": "https://es.wikipedia.org/wiki/Lilia_Vera"
+    },
+    {
+      "lote": "lote2",
+      "loteId": "maria-teresa-chacin",
+      "artist": "María Teresa Chacín",
+      "target": "album",
+      "entityId": 8444,
+      "field": "release_year",
+      "lote_value": 1974,
+      "lote_raw": null,
+      "core_value": "1992",
+      "evidence": "https://es.wikipedia.org/wiki/Mar%C3%ADa_Teresa_Chac%C3%ADn"
+    },
+    {
+      "lote": "lote2",
+      "loteId": "ensamble-gurrufio",
+      "artist": "Ensamble Gurrufío",
+      "target": "album",
+      "entityId": 9660,
+      "field": "release_year",
+      "lote_value": 1996,
+      "lote_raw": null,
+      "core_value": "1997",
+      "evidence": "https://www.musicavenezuela.com/proces/publica_arts.php?artista=ensamble_gurrufio"
+    },
+    {
+      "lote": "lote2",
+      "loteId": "quinteto-contrapunto",
+      "artist": "Quinteto Contrapunto",
+      "target": "album",
+      "entityId": 8866,
+      "field": "release_year",
+      "lote_value": 1964,
+      "lote_raw": null,
+      "core_value": "1963",
+      "evidence": "https://es.wikipedia.org/wiki/Quinteto_Contrapunto"
+    },
+    {
+      "lote": "lote2",
+      "loteId": "quinteto-contrapunto",
+      "artist": "Quinteto Contrapunto",
+      "target": "album",
+      "entityId": 8868,
+      "field": "release_year",
+      "lote_value": 1964,
+      "lote_raw": null,
+      "core_value": "1965",
+      "evidence": "https://es.wikipedia.org/wiki/Quinteto_Contrapunto"
+    },
+    {
+      "lote": "lote2",
+      "loteId": "quinteto-contrapunto",
+      "artist": "Quinteto Contrapunto",
+      "target": "album",
+      "entityId": 8869,
+      "field": "release_year",
+      "lote_value": 1965,
+      "lote_raw": null,
+      "core_value": "1966",
+      "evidence": "https://es.wikipedia.org/wiki/Quinteto_Contrapunto"
+    },
+    {
+      "lote": "lote2",
+      "loteId": "carota-nema-taja",
+      "artist": "Carota, Ñema y Tajá",
+      "target": "artist",
+      "entityId": 3811,
+      "field": "origin_city",
+      "lote_value": "Lara",
+      "lote_raw": "Lara, Venezuela",
+      "core_value": "Barquisimeto",
+      "evidence": "https://www.musicavenezuela.com/artistas/carota-nema-taja"
+    },
+    {
+      "lote": "lote2",
+      "loteId": "luis-mariano-rivera",
+      "artist": "Luis Mariano Rivera",
+      "target": "person",
+      "entityId": 7348,
+      "field": "birth_city",
+      "lote_value": "Canchunchú",
+      "lote_raw": "Canchunchú, Sucre, Venezuela",
+      "core_value": "Carúpano",
+      "evidence": "https://www.mincultura.gob.ve/un-dia-como-hoy-nacio-luis-mariano-rivera/"
+    },
+    {
+      "lote": "lote2",
+      "loteId": "chelique-sarabia",
+      "artist": "Chelique Sarabia",
+      "target": "album",
+      "entityId": 6891,
+      "field": "release_year",
+      "lote_value": 1973,
+      "lote_raw": null,
+      "core_value": "1974",
+      "evidence": "https://es.wikipedia.org/wiki/Chelique_Sarabia"
+    }
+  ],
+  "albums": {
+    "attached": 297,
+    "variants": 43,
+    "pending": 318,
+    "missingInCore": 0
+  },
+  "genres": {
+    "claims": 1108,
+    "gothicContextual": [
+      {
+        "loteId": "sentimiento-muerto",
+        "raw": "Gothic",
+        "as": "Gothic Rock"
+      },
+      {
+        "loteId": "seguridad-nacional",
+        "raw": "Gothic",
+        "as": "Gothic Rock"
+      },
+      {
+        "loteId": "zapato-3",
+        "raw": "Gothic",
+        "as": "Gothic Rock"
+      },
+      {
+        "loteId": "culto-oculto",
+        "raw": "Gothic",
+        "as": "Gothic Rock"
+      },
+      {
+        "loteId": "sofia-insomnia",
+        "raw": "Gothic",
+        "as": "Gothic Rock"
+      }
+    ],
+    "unresolved": {
+      "instrumental electronic": 1,
+      "cinematic electronic": 1,
+      "experimental electronic": 3,
+      "experimental club": 1,
+      "breakcore": 1,
+      "acid house": 1,
+      "garage": 1,
+      "hard techno": 1,
+      "tribal house": 1,
+      "tropical bass": 1,
+      "cumbia-electronica": 1,
+      "lo-fi": 1,
+      "Afro-Caribbean electronic": 1,
+      "salsa dura": 1,
+      "salsa brava": 1,
+      "gaita fusion": 1,
+      "romantic song": 2,
+      "popular song": 1,
+      "Clasica": 25,
+      "operatic soprano": 1,
+      "art song": 2,
+      "lyric tenor": 2,
+      "Venezuelan jazz": 1,
+      "electronic jazz": 1,
+      "modern jazz": 1,
+      "chamber jazz": 1,
+      "jazz-pop": 1,
+      "contemporary jazz": 2,
+      "tropical dance orchestra": 1,
+      "tropical fusion": 1,
+      "tropical pop": 2,
+      "EDM pop": 1,
+      "Latin dance": 1,
+      "Latin rap": 4,
+      "Latin R&B": 2,
+      "romantic ballad": 13,
+      "romantic pop": 1,
+      "Venezuelan traditions": 1,
+      "R&B-influenced pop": 2,
+      "contemporary singer-songwriter": 1,
+      "folk-pop": 1,
+      "conscious rap": 3,
+      "political rap": 1,
+      "underground hip-hop": 3,
+      "underground rap": 2,
+      "Venezuelan hip-hop": 1,
+      "dark wave": 2,
+      "alternative pop": 2,
+      "ghost-wave": 1,
+      "dance-punk": 1,
+      "dance-rock": 1,
+      "Venezuelan folk fusion": 1,
+      "contemporary composition": 1,
+      "contemporary classical": 5,
+      "Romantic piano": 1,
+      "classical guitar": 1,
+      "modern classical": 1,
+      "atonal": 1,
+      "serial": 1,
+      "orchestral": 6,
+      "popular Venezuelan forms": 1,
+      "chamber": 1,
+      "acousmatic": 1,
+      "live electronics": 1,
+      "audio-reactive art": 1,
+      "orchestral conducting": 1,
+      "opera conducting": 1,
+      "symphonic repertory": 1,
+      "songwriting": 1,
+      "traditional popular music": 1,
+      "neo-soul": 2,
+      "alternative R&B": 1,
+      "Caribbean hip-hop": 1,
+      "retrofuturismopsicotropical": 1,
+      "alternative hip-hop": 1,
+      "house fusion": 1,
+      "tropical dance": 3,
+      "baroque": 1,
+      "male soprano": 1,
+      "classical vocal": 1,
+      "industrial drum and bass": 1,
+      "jungle": 1,
+      "metalstep": 1,
+      "melodic techno": 1,
+      "electronic dance music": 1,
+      "hip-hop fusion": 1,
+      "rastafari reggae": 1,
+      "telenovela theme music": 1,
+      "television song": 1,
+      "son cubano": 1,
+      "guajira": 1,
+      "progressive ambient": 1,
+      "computer music": 1,
+      "synthesizer music": 1,
+      "Berlin School": 1,
+      "krautrock": 1,
+      "progressive electronic": 1,
+      "ethnosonics": 1,
+      "ritmo orquídea": 2,
+      "gabán": 1,
+      "jota": 3,
+      "fusión afro-pop": 1,
+      "fusión urbana": 1,
+      "salsa fusión": 1,
+      "Motivo Guaiquerí": 1,
+      "Música académica regional": 1,
+      "fusión con salsa": 1,
+      "fusión con merengue": 1,
+      "fusión con vallenato": 1,
+      "calipso tradicional callaoense": 1,
+      "música latinoamericana": 1
+    },
+    "proposed": {
+      "instrumental electronic": {
+        "estado": "propuesta",
+        "slug": "electronica"
+      },
+      "cinematic electronic": {
+        "estado": "propuesta",
+        "slug": "electronica"
+      },
+      "experimental electronic": {
+        "estado": "propuesta",
+        "slug": "electronica"
+      },
+      "experimental club": {
+        "estado": "propuesta",
+        "slug": "electronica"
+      },
+      "breakcore": {
+        "estado": "propuesta",
+        "slug": "drum-and-bass"
+      },
+      "acid house": {
+        "estado": "propuesta",
+        "slug": "house"
+      },
+      "garage": {
+        "estado": "propuesta",
+        "slug": "garage-rock"
+      },
+      "hard techno": {
+        "estado": "propuesta",
+        "slug": "techno"
+      },
+      "tribal house": {
+        "estado": "propuesta",
+        "slug": "house"
+      },
+      "tropical bass": {
+        "estado": "propuesta",
+        "slug": "latin-electronic-fusion"
+      },
+      "cumbia-electronica": {
+        "estado": "propuesta",
+        "slug": "latin-electronic-fusion"
+      },
+      "lo-fi": {
+        "estado": "propuesta",
+        "slug": "electronica"
+      },
+      "Afro-Caribbean electronic": {
+        "estado": "propuesta",
+        "slug": "latin-electronic-fusion"
+      },
+      "salsa dura": {
+        "estado": "propuesta",
+        "slug": "salsa"
+      },
+      "salsa brava": {
+        "estado": "propuesta",
+        "slug": "salsa"
+      },
+      "gaita fusion": {
+        "estado": "propuesta",
+        "slug": "gaita"
+      },
+      "romantic song": {
+        "estado": "propuesta",
+        "slug": "balada"
+      },
+      "popular song": {
+        "estado": "no_genero",
+        "slug": null
+      },
+      "Clasica": {
+        "estado": "propuesta",
+        "slug": "musica-clasica"
+      },
+      "operatic soprano": {
+        "estado": "no_genero",
+        "slug": null
+      },
+      "art song": {
+        "estado": "no_genero",
+        "slug": null
+      },
+      "lyric tenor": {
+        "estado": "no_genero",
+        "slug": null
+      },
+      "Venezuelan jazz": {
+        "estado": "propuesta",
+        "slug": "jazz-latino"
+      },
+      "electronic jazz": {
+        "estado": "propuesta",
+        "slug": "nu-jazz"
+      },
+      "modern jazz": {
+        "estado": "propuesta",
+        "slug": "jazz"
+      },
+      "chamber jazz": {
+        "estado": "propuesta",
+        "slug": "jazz"
+      },
+      "jazz-pop": {
+        "estado": "propuesta",
+        "slug": "jazz"
+      },
+      "contemporary jazz": {
+        "estado": "propuesta",
+        "slug": "jazz"
+      },
+      "tropical dance orchestra": {
+        "estado": "propuesta",
+        "slug": "musica-tropical"
+      },
+      "tropical fusion": {
+        "estado": "propuesta",
+        "slug": "musica-tropical"
+      },
+      "tropical pop": {
+        "estado": "propuesta",
+        "slug": "musica-tropical"
+      },
+      "EDM pop": {
+        "estado": "propuesta",
+        "slug": "dance"
+      },
+      "Latin dance": {
+        "estado": "propuesta",
+        "slug": "dance"
+      },
+      "Latin rap": {
+        "estado": "propuesta",
+        "slug": "hip-hop"
+      },
+      "Latin R&B": {
+        "estado": "propuesta",
+        "slug": "r-and-b"
+      },
+      "romantic ballad": {
+        "estado": "propuesta",
+        "slug": "balada"
+      },
+      "romantic pop": {
+        "estado": "propuesta",
+        "slug": "pop-latino"
+      },
+      "Venezuelan traditions": {
+        "estado": "propuesta",
+        "slug": "musica-tradicional"
+      },
+      "R&B-influenced pop": {
+        "estado": "propuesta",
+        "slug": "pop"
+      },
+      "contemporary singer-songwriter": {
+        "estado": "propuesta",
+        "slug": "cantautor"
+      },
+      "folk-pop": {
+        "estado": "propuesta",
+        "slug": "folk"
+      },
+      "conscious rap": {
+        "estado": "propuesta",
+        "slug": "hip-hop"
+      },
+      "political rap": {
+        "estado": "propuesta",
+        "slug": "hip-hop"
+      },
+      "underground hip-hop": {
+        "estado": "propuesta",
+        "slug": "hip-hop"
+      },
+      "underground rap": {
+        "estado": "propuesta",
+        "slug": "hip-hop"
+      },
+      "Venezuelan hip-hop": {
+        "estado": "propuesta",
+        "slug": "hip-hop"
+      },
+      "dark wave": {
+        "estado": "propuesta",
+        "slug": "darkwave"
+      },
+      "alternative pop": {
+        "estado": "propuesta",
+        "slug": "pop"
+      },
+      "ghost-wave": {
+        "estado": "nuevo",
+        "slug": null
+      },
+      "dance-punk": {
+        "estado": "propuesta",
+        "slug": "post-punk"
+      },
+      "dance-rock": {
+        "estado": "propuesta",
+        "slug": "rock-alternativo"
+      },
+      "Venezuelan folk fusion": {
+        "estado": "propuesta",
+        "slug": "joropo-fusion"
+      },
+      "contemporary composition": {
+        "estado": "propuesta",
+        "slug": "musica-clasica"
+      },
+      "contemporary classical": {
+        "estado": "propuesta",
+        "slug": "musica-clasica"
+      },
+      "Romantic piano": {
+        "estado": "no_genero",
+        "slug": null
+      },
+      "classical guitar": {
+        "estado": "no_genero",
+        "slug": null
+      },
+      "modern classical": {
+        "estado": "propuesta",
+        "slug": "neoclasica"
+      },
+      "atonal": {
+        "estado": "no_genero",
+        "slug": null
+      },
+      "serial": {
+        "estado": "no_genero",
+        "slug": null
+      },
+      "orchestral": {
+        "estado": "propuesta",
+        "slug": "musica-clasica"
+      },
+      "popular Venezuelan forms": {
+        "estado": "propuesta",
+        "slug": "musica-tradicional"
+      },
+      "chamber": {
+        "estado": "propuesta",
+        "slug": "musica-de-camara"
+      },
+      "acousmatic": {
+        "estado": "propuesta",
+        "slug": "electroacustica"
+      },
+      "live electronics": {
+        "estado": "propuesta",
+        "slug": "electroacustica"
+      },
+      "audio-reactive art": {
+        "estado": "no_genero",
+        "slug": null
+      },
+      "orchestral conducting": {
+        "estado": "no_genero",
+        "slug": null
+      },
+      "opera conducting": {
+        "estado": "no_genero",
+        "slug": null
+      },
+      "symphonic repertory": {
+        "estado": "propuesta",
+        "slug": "musica-clasica"
+      },
+      "songwriting": {
+        "estado": "no_genero",
+        "slug": null
+      },
+      "traditional popular music": {
+        "estado": "propuesta",
+        "slug": "musica-tradicional"
+      },
+      "neo-soul": {
+        "estado": "propuesta",
+        "slug": "soul"
+      },
+      "alternative R&B": {
+        "estado": "propuesta",
+        "slug": "r-and-b"
+      },
+      "Caribbean hip-hop": {
+        "estado": "propuesta",
+        "slug": "hip-hop"
+      },
+      "retrofuturismopsicotropical": {
+        "estado": "nuevo",
+        "slug": null
+      },
+      "alternative hip-hop": {
+        "estado": "propuesta",
+        "slug": "rap-experimental"
+      },
+      "house fusion": {
+        "estado": "propuesta",
+        "slug": "house"
+      },
+      "tropical dance": {
+        "estado": "propuesta",
+        "slug": "musica-tropical"
+      },
+      "baroque": {
+        "estado": "propuesta",
+        "slug": "musica-antigua"
+      },
+      "male soprano": {
+        "estado": "no_genero",
+        "slug": null
+      },
+      "classical vocal": {
+        "estado": "no_genero",
+        "slug": null
+      },
+      "industrial drum and bass": {
+        "estado": "propuesta",
+        "slug": "drum-and-bass"
+      },
+      "jungle": {
+        "estado": "propuesta",
+        "slug": "drum-and-bass"
+      },
+      "metalstep": {
+        "estado": "propuesta",
+        "slug": "dubstep"
+      },
+      "melodic techno": {
+        "estado": "propuesta",
+        "slug": "techno"
+      },
+      "electronic dance music": {
+        "estado": "propuesta",
+        "slug": "dance"
+      },
+      "hip-hop fusion": {
+        "estado": "propuesta",
+        "slug": "hip-hop"
+      },
+      "rastafari reggae": {
+        "estado": "propuesta",
+        "slug": "roots-reggae"
+      },
+      "telenovela theme music": {
+        "estado": "no_genero",
+        "slug": null
+      },
+      "television song": {
+        "estado": "no_genero",
+        "slug": null
+      },
+      "son cubano": {
+        "estado": "propuesta",
+        "slug": "son"
+      },
+      "guajira": {
+        "estado": "propuesta",
+        "slug": "son"
+      },
+      "progressive ambient": {
+        "estado": "propuesta",
+        "slug": "ambient"
+      },
+      "computer music": {
+        "estado": "propuesta",
+        "slug": "electroacustica"
+      },
+      "synthesizer music": {
+        "estado": "propuesta",
+        "slug": "electronica"
+      },
+      "Berlin School": {
+        "estado": "propuesta",
+        "slug": "electronica"
+      },
+      "krautrock": {
+        "estado": "propuesta",
+        "slug": "rock-experimental"
+      },
+      "progressive electronic": {
+        "estado": "propuesta",
+        "slug": "electronica"
+      },
+      "ethnosonics": {
+        "estado": "no_genero",
+        "slug": null
+      },
+      "ritmo orquídea": {
+        "estado": "nuevo",
+        "slug": null
+      },
+      "gabán": {
+        "estado": "nuevo",
+        "slug": null
+      },
+      "jota": {
+        "estado": "nuevo",
+        "slug": null
+      },
+      "fusión afro-pop": {
+        "estado": "nuevo",
+        "slug": null
+      },
+      "fusión urbana": {
+        "estado": "nuevo",
+        "slug": null
+      },
+      "salsa fusión": {
+        "estado": "nuevo",
+        "slug": null
+      },
+      "Motivo Guaiquerí": {
+        "estado": "nuevo",
+        "slug": null
+      },
+      "Música académica regional": {
+        "estado": "nuevo",
+        "slug": null
+      },
+      "fusión con salsa": {
+        "estado": "nuevo",
+        "slug": null
+      },
+      "fusión con merengue": {
+        "estado": "nuevo",
+        "slug": null
+      },
+      "fusión con vallenato": {
+        "estado": "nuevo",
+        "slug": null
+      },
+      "calipso tradicional callaoense": {
+        "estado": "nuevo",
+        "slug": null
+      },
+      "música latinoamericana": {
+        "estado": "nuevo",
+        "slug": null
+      }
+    }
+  }
+}

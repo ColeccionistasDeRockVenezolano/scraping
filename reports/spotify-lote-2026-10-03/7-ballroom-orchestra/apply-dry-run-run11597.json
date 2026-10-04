@@ -1,0 +1,366 @@
+{
+ "mode": "dry-run",
+ "runId": 11597,
+ "operator": "hermes (encargo dirigido de Brian)",
+ "capture": "data/raw/spotify-lote-2026-10-03/7-ballroom-orchestra",
+ "artist": {
+  "id": 7,
+  "name": "Ballroom Orchestra",
+  "spotifyId": "1AQfzDTdLkVZS5fAau0o3j",
+  "photo": "https://i.scdn.co/image/ab67616d0000b2739bd1cb29e72de4cd0c837ae8"
+ },
+ "created": [
+  {
+   "albumId": 15231,
+   "title": "Ballroom Orchestra, Vol. 1",
+   "year": 1982,
+   "type": "studio_album",
+   "date": "1982-01-01",
+   "tracks": 11,
+   "cover": "https://i.scdn.co/image/ab67616d0000b2739bd1cb29e72de4cd0c837ae8"
+  },
+  {
+   "albumId": 15232,
+   "title": "Fernand Gignac & Ballroom Orchestra",
+   "year": 1982,
+   "type": "studio_album",
+   "date": "1982-01-01",
+   "tracks": 10,
+   "cover": "https://i.scdn.co/image/ab67616d0000b2731f99e457b8961d18310c06ce"
+  },
+  {
+   "albumId": 15233,
+   "title": "Big Band Live",
+   "year": 1983,
+   "type": "studio_album",
+   "date": "1983-01-01",
+   "tracks": 12,
+   "cover": "https://i.scdn.co/image/ab67616d0000b27366a897b555a4a77dc4b55c97"
+  },
+  {
+   "albumId": 15234,
+   "title": "Volume 2",
+   "year": 1984,
+   "type": "studio_album",
+   "date": "1984-01-01",
+   "tracks": 10,
+   "cover": "https://i.scdn.co/image/ab67616d0000b273a9f9aa64ac3a8c262c53e584"
+  },
+  {
+   "albumId": 15235,
+   "title": "Tanzpalast Vol. 1",
+   "year": 1995,
+   "type": "studio_album",
+   "date": "1995-01-06",
+   "tracks": 11,
+   "cover": "https://i.scdn.co/image/ab67616d0000b2730092c1ce73fa5131a1055334"
+  },
+  {
+   "albumId": 15236,
+   "title": "Tanzpalast Vol. 2",
+   "year": 1995,
+   "type": "studio_album",
+   "date": "1995-01-06",
+   "tracks": 16,
+   "cover": "https://i.scdn.co/image/ab67616d0000b273568ea29ff51ea64eebaa8deb"
+  },
+  {
+   "albumId": 15237,
+   "title": "Tanzpalast Vol. 4",
+   "year": 1995,
+   "type": "studio_album",
+   "date": "1995-01-06",
+   "tracks": 12,
+   "cover": "https://i.scdn.co/image/ab67616d0000b273f95bb3288c4d4362171c7297"
+  },
+  {
+   "albumId": 15238,
+   "title": "Tanzpalast Vol. 3",
+   "year": 2008,
+   "type": "studio_album",
+   "date": "2008-01-01",
+   "tracks": 12,
+   "cover": "https://i.scdn.co/image/ab67616d0000b2739cd2a004f03443b1c936d0df"
+  },
+  {
+   "albumId": 15239,
+   "title": "Classic for You: Bunde Operetten- und Walzerklänge Vol. 2",
+   "year": 2013,
+   "type": "studio_album",
+   "date": "2013-06-01",
+   "tracks": 11,
+   "cover": "https://i.scdn.co/image/ab67616d0000b27372beb515ecf19fa8d9119032"
+  },
+  {
+   "albumId": 15240,
+   "title": "Classic for You: Bunte Operetten- und Walzerklänge Vol. 1",
+   "year": 2013,
+   "type": "studio_album",
+   "date": "2013-06-01",
+   "tracks": 14,
+   "cover": "https://i.scdn.co/image/ab67616d0000b273fa2f245b165178f14cb042ef"
+  },
+  {
+   "albumId": 15241,
+   "title": "Classic for You: Operettenquerschnitte Vol. 2 (instrumental)",
+   "year": 2013,
+   "type": "studio_album",
+   "date": "2013-06-01",
+   "tracks": 9,
+   "cover": "https://i.scdn.co/image/ab67616d0000b2734b5eab05cf9271c8c8f46e7b"
+  },
+  {
+   "albumId": 15242,
+   "title": "Classic for You: Operettenquerschnitte Vol. 1 (instrumental)",
+   "year": 2013,
+   "type": "studio_album",
+   "date": "2013-06-01",
+   "tracks": 7,
+   "cover": "https://i.scdn.co/image/ab67616d0000b273732cfa4e99436a5c13903e84"
+  }
+ ],
+ "skipped": [],
+ "fields": [
+  {
+   "albumId": 15231,
+   "field": "release_year",
+   "value": "1982"
+  },
+  {
+   "albumId": 15231,
+   "field": "album_type",
+   "value": "studio_album"
+  },
+  {
+   "albumId": 15231,
+   "field": "release_date_text",
+   "value": "1982-01-01"
+  },
+  {
+   "albumId": 15231,
+   "field": "cover_url",
+   "value": "https://i.scdn.co/image/ab67616d0000b2739bd1cb29e72de4cd0c837ae8"
+  },
+  {
+   "albumId": 15232,
+   "field": "release_year",
+   "value": "1982"
+  },
+  {
+   "albumId": 15232,
+   "field": "album_type",
+   "value": "studio_album"
+  },
+  {
+   "albumId": 15232,
+   "field": "release_date_text",
+   "value": "1982-01-01"
+  },
+  {
+   "albumId": 15232,
+   "field": "cover_url",
+   "value": "https://i.scdn.co/image/ab67616d0000b2731f99e457b8961d18310c06ce"
+  },
+  {
+   "albumId": 15233,
+   "field": "release_year",
+   "value": "1983"
+  },
+  {
+   "albumId": 15233,
+   "field": "album_type",
+   "value": "studio_album"
+  },
+  {
+   "albumId": 15233,
+   "field": "release_date_text",
+   "value": "1983-01-01"
+  },
+  {
+   "albumId": 15233,
+   "field": "cover_url",
+   "value": "https://i.scdn.co/image/ab67616d0000b27366a897b555a4a77dc4b55c97"
+  },
+  {
+   "albumId": 15234,
+   "field": "release_year",
+   "value": "1984"
+  },
+  {
+   "albumId": 15234,
+   "field": "album_type",
+   "value": "studio_album"
+  },
+  {
+   "albumId": 15234,
+   "field": "release_date_text",
+   "value": "1984-01-01"
+  },
+  {
+   "albumId": 15234,
+   "field": "cover_url",
+   "value": "https://i.scdn.co/image/ab67616d0000b273a9f9aa64ac3a8c262c53e584"
+  },
+  {
+   "albumId": 15235,
+   "field": "release_year",
+   "value": "1995"
+  },
+  {
+   "albumId": 15235,
+   "field": "album_type",
+   "value": "studio_album"
+  },
+  {
+   "albumId": 15235,
+   "field": "release_date_text",
+   "value": "1995-01-06"
+  },
+  {
+   "albumId": 15235,
+   "field": "cover_url",
+   "value": "https://i.scdn.co/image/ab67616d0000b2730092c1ce73fa5131a1055334"
+  },
+  {
+   "albumId": 15236,
+   "field": "release_year",
+   "value": "1995"
+  },
+  {
+   "albumId": 15236,
+   "field": "album_type",
+   "value": "studio_album"
+  },
+  {
+   "albumId": 15236,
+   "field": "release_date_text",
+   "value": "1995-01-06"
+  },
+  {
+   "albumId": 15236,
+   "field": "cover_url",
+   "value": "https://i.scdn.co/image/ab67616d0000b273568ea29ff51ea64eebaa8deb"
+  },
+  {
+   "albumId": 15237,
+   "field": "release_year",
+   "value": "1995"
+  },
+  {
+   "albumId": 15237,
+   "field": "album_type",
+   "value": "studio_album"
+  },
+  {
+   "albumId": 15237,
+   "field": "release_date_text",
+   "value": "1995-01-06"
+  },
+  {
+   "albumId": 15237,
+   "field": "cover_url",
+   "value": "https://i.scdn.co/image/ab67616d0000b273f95bb3288c4d4362171c7297"
+  },
+  {
+   "albumId": 15238,
+   "field": "release_year",
+   "value": "2008"
+  },
+  {
+   "albumId": 15238,
+   "field": "album_type",
+   "value": "studio_album"
+  },
+  {
+   "albumId": 15238,
+   "field": "release_date_text",
+   "value": "2008-01-01"
+  },
+  {
+   "albumId": 15238,
+   "field": "cover_url",
+   "value": "https://i.scdn.co/image/ab67616d0000b2739cd2a004f03443b1c936d0df"
+  },
+  {
+   "albumId": 15239,
+   "field": "release_year",
+   "value": "2013"
+  },
+  {
+   "albumId": 15239,
+   "field": "album_type",
+   "value": "studio_album"
+  },
+  {
+   "albumId": 15239,
+   "field": "release_date_text",
+   "value": "2013-06-01"
+  },
+  {
+   "albumId": 15239,
+   "field": "cover_url",
+   "value": "https://i.scdn.co/image/ab67616d0000b27372beb515ecf19fa8d9119032"
+  },
+  {
+   "albumId": 15240,
+   "field": "release_year",
+   "value": "2013"
+  },
+  {
+   "albumId": 15240,
+   "field": "album_type",
+   "value": "studio_album"
+  },
+  {
+   "albumId": 15240,
+   "field": "release_date_text",
+   "value": "2013-06-01"
+  },
+  {
+   "albumId": 15240,
+   "field": "cover_url",
+   "value": "https://i.scdn.co/image/ab67616d0000b273fa2f245b165178f14cb042ef"
+  },
+  {
+   "albumId": 15241,
+   "field": "release_year",
+   "value": "2013"
+  },
+  {
+   "albumId": 15241,
+   "field": "album_type",
+   "value": "studio_album"
+  },
+  {
+   "albumId": 15241,
+   "field": "release_date_text",
+   "value": "2013-06-01"
+  },
+  {
+   "albumId": 15241,
+   "field": "cover_url",
+   "value": "https://i.scdn.co/image/ab67616d0000b2734b5eab05cf9271c8c8f46e7b"
+  },
+  {
+   "albumId": 15242,
+   "field": "release_year",
+   "value": "2013"
+  },
+  {
+   "albumId": 15242,
+   "field": "album_type",
+   "value": "studio_album"
+  },
+  {
+   "albumId": 15242,
+   "field": "release_date_text",
+   "value": "2013-06-01"
+  },
+  {
+   "albumId": 15242,
+   "field": "cover_url",
+   "value": "https://i.scdn.co/image/ab67616d0000b273732cfa4e99436a5c13903e84"
+  }
+ ],
+ "errors": []
+}

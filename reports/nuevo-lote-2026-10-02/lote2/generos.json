@@ -188,8 +188,8 @@
  {
   "termino": "jota",
   "usos": 3,
-  "estado": "nuevo",
-  "slug": null
+  "estado": "exacto",
+  "slug": "jota-oriental"
  },
  {
   "termino": "malagueña",
@@ -212,8 +212,8 @@
  {
   "termino": "música de cámara popular",
   "usos": 3,
-  "estado": "nuevo",
-  "slug": null
+  "estado": "exacto",
+  "slug": "musica-de-camara-popular"
  },
  {
   "termino": "música sacra",
@@ -308,7 +308,7 @@
  {
   "termino": "cuatro venezolano",
   "usos": 2,
-  "estado": "nuevo",
+  "estado": "no_genero",
   "slug": null
  },
  {
@@ -392,8 +392,8 @@
  {
   "termino": "ritmo orquídea",
   "usos": 2,
-  "estado": "nuevo",
-  "slug": null
+  "estado": "exacto",
+  "slug": "ritmo-orquidea"
  },
  {
   "termino": "sangueo",
@@ -440,13 +440,13 @@
  {
   "termino": "armonía vocal",
   "usos": 1,
-  "estado": "nuevo",
+  "estado": "no_genero",
   "slug": null
  },
  {
   "termino": "arpa llanera",
   "usos": 1,
-  "estado": "nuevo",
+  "estado": "no_genero",
   "slug": null
  },
  {
@@ -458,7 +458,7 @@
  {
   "termino": "arpa y orquesta",
   "usos": 1,
-  "estado": "nuevo",
+  "estado": "no_genero",
   "slug": null
  },
  {
@@ -470,7 +470,7 @@
  {
   "termino": "bandola llanera",
   "usos": 1,
-  "estado": "nuevo",
+  "estado": "no_genero",
   "slug": null
  },
  {
@@ -488,8 +488,8 @@
  {
   "termino": "calipso tradicional callaoense",
   "usos": 1,
-  "estado": "nuevo",
-  "slug": null
+  "estado": "exacto",
+  "slug": "calipso"
  },
  {
   "termino": "canción campesina",
@@ -596,7 +596,7 @@
  {
   "termino": "etnomusicología aplicada",
   "usos": 1,
-  "estado": "nuevo",
+  "estado": "no_genero",
   "slug": null
  },
  {
@@ -632,20 +632,20 @@
  {
   "termino": "fusión con merengue",
   "usos": 1,
-  "estado": "nuevo",
-  "slug": null
+  "estado": "exacto",
+  "slug": "merengue-venezolano"
  },
  {
   "termino": "fusión con salsa",
   "usos": 1,
-  "estado": "nuevo",
-  "slug": null
+  "estado": "exacto",
+  "slug": "salsa"
  },
  {
   "termino": "fusión con vallenato",
   "usos": 1,
-  "estado": "nuevo",
-  "slug": null
+  "estado": "exacto",
+  "slug": "vallenato"
  },
  {
   "termino": "fusión instrumental",
@@ -656,14 +656,14 @@
  {
   "termino": "fusión urbana",
   "usos": 1,
-  "estado": "nuevo",
+  "estado": "no_genero",
   "slug": null
  },
  {
   "termino": "gabán",
   "usos": 1,
-  "estado": "nuevo",
-  "slug": null
+  "estado": "exacto",
+  "slug": "gaban"
  },
  {
   "termino": "gaita humorística",
@@ -704,13 +704,13 @@
  {
   "termino": "guitarra venezolana",
   "usos": 1,
-  "estado": "nuevo",
+  "estado": "no_genero",
   "slug": null
  },
  {
   "termino": "improvisación",
   "usos": 1,
-  "estado": "nuevo",
+  "estado": "no_genero",
   "slug": null
  },
  {
@@ -800,8 +800,8 @@
  {
   "termino": "Motivo Guaiquerí",
   "usos": 1,
-  "estado": "nuevo",
-  "slug": null
+  "estado": "exacto",
+  "slug": "motivo-guaiqueri"
  },
  {
   "termino": "música académica coral",
@@ -812,8 +812,8 @@
  {
   "termino": "Música académica regional",
   "usos": 1,
-  "estado": "nuevo",
-  "slug": null
+  "estado": "exacto",
+  "slug": "musica-clasica"
  },
  {
   "termino": "música cañonera",
@@ -866,7 +866,7 @@
  {
   "termino": "música latinoamericana",
   "usos": 1,
-  "estado": "nuevo",
+  "estado": "no_genero",
   "slug": null
  },
  {
@@ -890,8 +890,8 @@
  {
   "termino": "música profana",
   "usos": 1,
-  "estado": "nuevo",
-  "slug": null
+  "estado": "exacto",
+  "slug": "musica-coral"
  },
  {
   "termino": "música sinfónico-coral",
@@ -1022,8 +1022,8 @@
  {
   "termino": "salsa fusión",
   "usos": 1,
-  "estado": "nuevo",
-  "slug": null
+  "estado": "exacto",
+  "slug": "salsa"
  },
  {
   "termino": "soca",
