@@ -1,0 +1,112 @@
+{
+  "phase": "periodos",
+  "confirm": true,
+  "runId": 12643,
+  "merged": 8,
+  "done": [
+    {
+      "review": 1831962,
+      "keep": 422,
+      "drop": 1974,
+      "from": 2008,
+      "to": 2015,
+      "why": "2008–2013 Sincopa (fila 422), 2008–2015 Metal Archives (fila 1974); manda Metal Archives",
+      "before": [
+        "422: Vocals 2008–2013",
+        "1974: Vocals (lead) 2008–2015"
+      ],
+      "role": "Vocals"
+    },
+    {
+      "review": 1831961,
+      "keep": 4848,
+      "drop": 10211,
+      "from": 2010,
+      "to": 2015,
+      "why": "2009– biografía (fila 4848), 2010–2015 Sincopa (fila 10211); manda Sincopa",
+      "before": [
+        "4848: bajo 2009–",
+        "10211: Bass 2010–2015"
+      ],
+      "role": "Bass"
+    },
+    {
+      "review": 1831963,
+      "keep": 2905,
+      "drop": 3083,
+      "from": 2016,
+      "to": 2023,
+      "why": "2016–2018 (fila 2905) y 2018–2023 (fila 3083), las dos de Metal Archives; período más amplio",
+      "before": [
+        "2905: Guitars, Drums, Bass 2016–2018",
+        "3083: Guitars, Bass, Drums (2018-2023), Everything 2018–2023"
+      ],
+      "role": "Guitars, Bass, Drums (2018-2023), Everything"
+    },
+    {
+      "review": 1831957,
+      "keep": 5317,
+      "drop": 9760,
+      "from": 1972,
+      "to": 1984,
+      "why": "1972–1986 biografía (fila 5317), 1972–1984 Sincopa (fila 9760); manda Sincopa",
+      "before": [
+        "5317: trombón 1972–1986",
+        "9760: Trombone 1972–1984"
+      ],
+      "role": "Trombone"
+    },
+    {
+      "review": 1831959,
+      "keep": 5320,
+      "drop": 9759,
+      "from": 1972,
+      "to": 1977,
+      "why": "1972–1985 biografía (fila 5320), 1972–1977 Sincopa (fila 9759); manda Sincopa",
+      "before": [
+        "5320: tumbadoras 1972–1985",
+        "9759: Congas 1972–1977"
+      ],
+      "role": "Congas"
+    },
+    {
+      "review": 1831960,
+      "keep": 9171,
+      "drop": 9786,
+      "from": 1982,
+      "to": 1984,
+      "why": "1981–1990 biografía (fila 9171), 1982–1984 Sincopa (fila 9786); manda Sincopa",
+      "before": [
+        "9171: Integrante 1981–1990",
+        "9786: Trombone 1982–1984"
+      ],
+      "role": "Trombone"
+    },
+    {
+      "review": 1831958,
+      "keep": 5318,
+      "drop": 9761,
+      "from": 1972,
+      "to": 1984,
+      "why": "1972–1986 biografía (fila 5318), 1972–1984 Sincopa (fila 9761); manda Sincopa",
+      "before": [
+        "5318: trombón 1972–1986",
+        "9761: Trombone 1972–1984"
+      ],
+      "role": "Trombone"
+    },
+    {
+      "review": 1831956,
+      "keep": 5232,
+      "drop": 9318,
+      "from": 1999,
+      "to": null,
+      "why": "1999– biografía (fila 5232), 2001 año del disco acreditado (fila 9318), que no es un período",
+      "before": [
+        "5232: batería, coros, programación 1999–",
+        "9318: Drums, Programming & Backing Vocals 2001–2001"
+      ],
+      "role": "Drums, Programming & Backing Vocals"
+    }
+  ]
+}

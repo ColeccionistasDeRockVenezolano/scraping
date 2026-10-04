@@ -1,0 +1,212 @@
+{
+  "phase": "misma-ficha",
+  "confirm": false,
+  "runId": null,
+  "merged": 11,
+  "done": [
+    {
+      "review": 1831951,
+      "ids": [
+        9734,
+        9737
+      ],
+      "why": "Bailatino: la ficha lo nombra en Bass y en Backing Vocals",
+      "keep": 9734,
+      "before": [
+        "9734: Bass ?–",
+        "9737: Backing Vocals ?–"
+      ],
+      "role": "Bass, Backing Vocals",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "review": 1831942,
+      "ids": [
+        624,
+        628
+      ],
+      "why": "Dame pa Matala: la ficha lo nombra en Timbales y en Drums & Timbales",
+      "keep": 624,
+      "before": [
+        "624: Timbales ?–",
+        "628: Drums & Timbales ?–"
+      ],
+      "role": "Drums & Timbales",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "review": 1831947,
+      "ids": [
+        9623,
+        9624,
+        9632
+      ],
+      "why": "El Trabuco Venezolano: la ficha ordena por instrumento (dirección, timbales, percusión)",
+      "keep": 9623,
+      "before": [
+        "9623: Musical Director, Arranger & Drums ?–",
+        "9624: Timbales ?–",
+        "9632: Percussion ?–"
+      ],
+      "role": "Musical Director, Arranger & Drums, Timbales, Percussion",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "review": 1831950,
+      "ids": [
+        9630,
+        9633,
+        9642
+      ],
+      "why": "El Trabuco Venezolano: la ficha ordena por instrumento (congas, percusión, coros)",
+      "keep": 9630,
+      "before": [
+        "9630: Congas ?–",
+        "9633: Percussion ?–",
+        "9642: Background Vocals ?–"
+      ],
+      "role": "Congas, Percussion, Background Vocals",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "review": 1831948,
+      "ids": [
+        9634,
+        9643
+      ],
+      "why": "El Trabuco Venezolano: la ficha ordena por instrumento (percusión, coros)",
+      "keep": 9634,
+      "before": [
+        "9634: Percussion ?–",
+        "9643: Background Vocals ?–"
+      ],
+      "role": "Percussion, Background Vocals",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "review": 1831949,
+      "ids": [
+        9636,
+        9637
+      ],
+      "why": "El Trabuco Venezolano: la ficha ordena por instrumento (trompeta, fliscorno)",
+      "keep": 9636,
+      "before": [
+        "9636: Trumpet ?–",
+        "9637: Flugelhorn ?–"
+      ],
+      "role": "Trumpet, Flugelhorn",
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "review": 1831954,
+      "ids": [
+        762,
+        769
+      ],
+      "from": 1980,
+      "to": null,
+      "isCurrent": true,
+      "why": "Equilibrio Vital: miembro original «(1980-)» y en la formación actual",
+      "keep": 762,
+      "before": [
+        "762: Bass, Guitar & Flute 1980–",
+        "769: Guitar, Flute, Sax & Vox ?–"
+      ],
+      "role": "Guitar, Flute, Sax & Vox, Bass",
+      "from_year": 1980,
+      "to_year": null
+    },
+    {
+      "review": 1831955,
+      "ids": [
+        764,
+        765
+      ],
+      "from": 1980,
+      "to": null,
+      "isCurrent": true,
+      "why": "Equilibrio Vital: miembro original «(1980-)» y en la formación actual",
+      "keep": 764,
+      "before": [
+        "764: Bass & Percussion 1980–",
+        "765: Bass ?–"
+      ],
+      "role": "Bass & Percussion",
+      "from_year": 1980,
+      "to_year": null
+    },
+    {
+      "review": 1831944,
+      "ids": [
+        162,
+        167
+      ],
+      "role": "Vocals",
+      "why": "Mirada Interna: la ficha la nombra en Vocals y bajo «Ex-Members», que es una sección, no un rol",
+      "keep": 162,
+      "before": [
+        "162: Vocals ?–",
+        "167: Ex-Members ?–"
+      ],
+      "from_year": null,
+      "to_year": null
+    },
+    {
+      "review": 1831952,
+      "ids": [
+        9999,
+        10014
+      ],
+      "from": 1991,
+      "to": 1997,
+      "why": "Sonero Clásico del Caribe: exintegrante en Vocals (1991-1997) y Tres (1991), años de la ficha",
+      "keep": 9999,
+      "before": [
+        "9999: Vocals ?–",
+        "10014: Tres ?–"
+      ],
+      "role": "Vocals, Tres",
+      "from_year": 1991,
+      "to_year": 1997
+    },
+    {
+      "review": 1831953,
+      "ids": [
+        10001,
+        10011
+      ],
+      "from": 1991,
+      "to": 1991,
+      "why": "Sonero Clásico del Caribe: exintegrante en Vocals (1991) y Bass (1991), años de la ficha",
+      "keep": 10001,
+      "before": [
+        "10001: Vocals ?–",
+        "10011: Bass ?–"
+      ],
+      "role": "Vocals, Bass",
+      "from_year": 1991,
+      "to_year": 1991
+    }
+  ],
+  "stages": [
+    {
+      "review": 1831946,
+      "original": 1194,
+      "reunion": 1192,
+      "why": "Abraham García"
+    },
+    {
+      "review": 1831945,
+      "original": 1197,
+      "reunion": 1199,
+      "why": "Juan Bautista López «Yatú»"
+    }
+  ]
+}

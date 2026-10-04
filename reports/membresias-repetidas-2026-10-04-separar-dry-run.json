@@ -1,0 +1,1915 @@
+{
+  "phase": "separar",
+  "confirm": false,
+  "runId": null,
+  "obrien": {
+    "memberships": [
+      {
+        "membership": 1095,
+        "personId": 759
+      },
+      {
+        "membership": 1096,
+        "personId": 760
+      },
+      {
+        "membership": 1097,
+        "personId": 758
+      },
+      {
+        "membership": 1101,
+        "personId": 756
+      }
+    ],
+    "credits": [
+      {
+        "kind": "album_credit",
+        "id": "52659",
+        "role": "Lead Guitar & Vocals",
+        "artist": "Las Cuatro Monedas",
+        "year": 1973,
+        "title": "Presentan A Gregory",
+        "names": "O'Brien",
+        "personId": 758,
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "52661",
+        "role": "Second Guitar & Vocals",
+        "artist": "Las Cuatro Monedas",
+        "year": 1973,
+        "title": "Presentan A Gregory",
+        "names": "O'Brien",
+        "personId": 756,
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "52663",
+        "role": "Bass & Vocals",
+        "artist": "Las Cuatro Monedas",
+        "year": 1973,
+        "title": "Presentan A Gregory",
+        "names": "O'Brien",
+        "personId": 759,
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "52665",
+        "role": "Drums & Vocals",
+        "artist": "Las Cuatro Monedas",
+        "year": 1973,
+        "title": "Presentan A Gregory",
+        "names": "O'Brien",
+        "personId": 760,
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "52667",
+        "role": "Vocals",
+        "artist": "Las Cuatro Monedas",
+        "year": 1973,
+        "title": "Presentan A Gregory",
+        "names": "O'Brien",
+        "personId": 2624,
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "55015",
+        "role": "Lead Guitar & Vocals",
+        "artist": "Las Cuatro Monedas",
+        "year": 1977,
+        "title": "Eternos Triunfadores",
+        "names": "O'Brien",
+        "personId": 758,
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "55017",
+        "role": "Second Guitar & Vocals",
+        "artist": "Las Cuatro Monedas",
+        "year": 1977,
+        "title": "Eternos Triunfadores",
+        "names": "O'Brien",
+        "personId": 756,
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "55019",
+        "role": "Bass & Vocals",
+        "artist": "Las Cuatro Monedas",
+        "year": 1977,
+        "title": "Eternos Triunfadores",
+        "names": "O'Brien",
+        "personId": 759,
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "55021",
+        "role": "Drums & Vocals",
+        "artist": "Las Cuatro Monedas",
+        "year": 1977,
+        "title": "Eternos Triunfadores",
+        "names": "O'Brien",
+        "personId": 760,
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "56562",
+        "role": "Lead Guitar & Vocals",
+        "artist": "Las Cuatro Monedas",
+        "year": 2011,
+        "title": "40 Años 40 Exitos",
+        "names": "O'Brien",
+        "personId": 758,
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "56564",
+        "role": "Second Guitar & Vocals",
+        "artist": "Las Cuatro Monedas",
+        "year": 2011,
+        "title": "40 Años 40 Exitos",
+        "names": "O'Brien",
+        "personId": 756,
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "56566",
+        "role": "Bass & Vocals",
+        "artist": "Las Cuatro Monedas",
+        "year": 2011,
+        "title": "40 Años 40 Exitos",
+        "names": "O'Brien",
+        "personId": 759,
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "56568",
+        "role": "Drums & Vocals",
+        "artist": "Las Cuatro Monedas",
+        "year": 2011,
+        "title": "40 Años 40 Exitos",
+        "names": "O'Brien",
+        "personId": 760,
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "60288",
+        "role": "Lead Guitar & Vocals",
+        "artist": "Las Cuatro Monedas",
+        "year": 1969,
+        "title": "Las 4 Monedas Vol. 2",
+        "names": "O'Brien",
+        "personId": 758,
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "60290",
+        "role": "Second Guitar & Vocals",
+        "artist": "Las Cuatro Monedas",
+        "year": 1969,
+        "title": "Las 4 Monedas Vol. 2",
+        "names": "O'Brien",
+        "personId": 756,
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "60292",
+        "role": "Bass & Vocals",
+        "artist": "Las Cuatro Monedas",
+        "year": 1969,
+        "title": "Las 4 Monedas Vol. 2",
+        "names": "O'Brien",
+        "personId": 759,
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "60294",
+        "role": "Drums & Vocals",
+        "artist": "Las Cuatro Monedas",
+        "year": 1969,
+        "title": "Las 4 Monedas Vol. 2",
+        "names": "O'Brien",
+        "personId": 760,
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "60738",
+        "role": "Lead Guitar & Vocals",
+        "artist": "Las Cuatro Monedas",
+        "year": 1970,
+        "title": "Las 4 Monedas Vol. 3",
+        "names": "O'Brien",
+        "personId": 758,
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "60740",
+        "role": "Second Guitar & Vocals",
+        "artist": "Las Cuatro Monedas",
+        "year": 1970,
+        "title": "Las 4 Monedas Vol. 3",
+        "names": "O'Brien",
+        "personId": 756,
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "60742",
+        "role": "Bass & Vocals",
+        "artist": "Las Cuatro Monedas",
+        "year": 1970,
+        "title": "Las 4 Monedas Vol. 3",
+        "names": "O'Brien",
+        "personId": 759,
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "60744",
+        "role": "Drums & Vocals",
+        "artist": "Las Cuatro Monedas",
+        "year": 1970,
+        "title": "Las 4 Monedas Vol. 3",
+        "names": "O'Brien",
+        "personId": 760,
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "62491",
+        "role": "Lead Guitar & Vocals",
+        "artist": "Las Cuatro Monedas",
+        "year": 1968,
+        "title": "Las Cuatro Monedas A Go-Go",
+        "names": "O'Brien",
+        "personId": 758,
+        "action": "merged"
+      },
+      {
+        "kind": "album_credit",
+        "id": "62493",
+        "role": "Second Guitar & Vocals",
+        "artist": "Las Cuatro Monedas",
+        "year": 1968,
+        "title": "Las Cuatro Monedas A Go-Go",
+        "names": "O'Brien",
+        "personId": 756,
+        "action": "merged"
+      },
+      {
+        "kind": "album_credit",
+        "id": "62495",
+        "role": "Bass & Vocals",
+        "artist": "Las Cuatro Monedas",
+        "year": 1968,
+        "title": "Las Cuatro Monedas A Go-Go",
+        "names": "O'Brien",
+        "personId": 759,
+        "action": "merged"
+      },
+      {
+        "kind": "album_credit",
+        "id": "62497",
+        "role": "Drums & Vocals",
+        "artist": "Las Cuatro Monedas",
+        "year": 1968,
+        "title": "Las Cuatro Monedas A Go-Go",
+        "names": "O'Brien",
+        "personId": 760,
+        "action": "merged"
+      },
+      {
+        "kind": "album_credit",
+        "id": "69426",
+        "role": "Lead Guitar & Vocals",
+        "artist": "Las Cuatro Monedas",
+        "year": 1992,
+        "title": "Los Grandes Éxitos",
+        "names": "O'Brien",
+        "personId": 758,
+        "action": "merged"
+      },
+      {
+        "kind": "album_credit",
+        "id": "69428",
+        "role": "Second Guitar & Vocals",
+        "artist": "Las Cuatro Monedas",
+        "year": 1992,
+        "title": "Los Grandes Éxitos",
+        "names": "O'Brien",
+        "personId": 756,
+        "action": "merged"
+      },
+      {
+        "kind": "album_credit",
+        "id": "69430",
+        "role": "Bass & Vocals",
+        "artist": "Las Cuatro Monedas",
+        "year": 1992,
+        "title": "Los Grandes Éxitos",
+        "names": "O'Brien",
+        "personId": 759,
+        "action": "merged"
+      },
+      {
+        "kind": "album_credit",
+        "id": "69432",
+        "role": "Drums & Vocals",
+        "artist": "Las Cuatro Monedas",
+        "year": 1992,
+        "title": "Los Grandes Éxitos",
+        "names": "O'Brien",
+        "personId": 760,
+        "action": "merged"
+      }
+    ],
+    "left": [
+      {
+        "kind": "track_credit",
+        "id": "12626",
+        "role": "Versión",
+        "artist": "Las Cuatro Monedas",
+        "year": 1970,
+        "title": "La Araña (Spider)",
+        "names": "O'Brien"
+      },
+      {
+        "kind": "track_credit",
+        "id": "12627",
+        "role": "Versión",
+        "artist": "Las Cuatro Monedas",
+        "year": 1970,
+        "title": "Mundo Maravilloso, Gente Bella (Wonderful World, Beautiful People)",
+        "names": "O'Brien"
+      },
+      {
+        "kind": "track_credit",
+        "id": "15055",
+        "role": "lyrics",
+        "artist": "Las Cuatro Monedas",
+        "year": 1992,
+        "title": "La Fiesta Del Ju",
+        "names": null
+      },
+      {
+        "kind": "track_credit",
+        "id": "15056",
+        "role": "lyrics",
+        "artist": "Las Cuatro Monedas",
+        "year": 1992,
+        "title": "Nena",
+        "names": null
+      },
+      {
+        "kind": "track_credit",
+        "id": "68818",
+        "role": "composer",
+        "artist": "Las Cuatro Monedas",
+        "year": 1992,
+        "title": "La Fiesta Del Ju",
+        "names": "O'Brien"
+      },
+      {
+        "kind": "track_credit",
+        "id": "68820",
+        "role": "composer",
+        "artist": "Las Cuatro Monedas",
+        "year": 1992,
+        "title": "Nena",
+        "names": "O'Brien"
+      }
+    ]
+  },
+  "ezequiel": {
+    "father": [
+      {
+        "kind": "album_credit",
+        "id": "11450",
+        "role": "Keyboards & Programming",
+        "artist": "Quince y Ultimo",
+        "year": 1989,
+        "title": "15 y Ultimo",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "11452",
+        "role": "Sax",
+        "artist": "Quince y Ultimo",
+        "year": 1989,
+        "title": "15 y Ultimo",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "11453",
+        "role": "Produced by",
+        "artist": "Quince y Ultimo",
+        "year": 1989,
+        "title": "15 y Ultimo",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "11459",
+        "role": "Mixed by",
+        "artist": "Quince y Ultimo",
+        "year": 1989,
+        "title": "15 y Ultimo",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "12623",
+        "role": "Brass Section",
+        "artist": "Aditus",
+        "year": 1985,
+        "title": "Juegos de Azar",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "12669",
+        "role": "Soprano Sax",
+        "artist": "Aditus",
+        "year": 1990,
+        "title": "Otro Mundo",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "12693",
+        "role": "Brass Section",
+        "artist": "Aditus",
+        "year": 1991,
+        "title": "Lo Mejor de Aditus",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "14355",
+        "role": "Sax Solos",
+        "artist": "Ankla",
+        "year": 1989,
+        "title": "De Frente",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "15348",
+        "role": "Soprano Sax",
+        "artist": "El Medio Evo",
+        "year": 2000,
+        "title": "A Petición Del Público Medio Evo Se Despide Tambien",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "15461",
+        "role": "Sax Solo",
+        "artist": "Carlos Moreno",
+        "year": 1989,
+        "title": "Aquí Estoy Otra Vez",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "16064",
+        "role": "Sax",
+        "artist": "Luz Marina",
+        "year": 1986,
+        "title": "A Flor De Piel",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "16078",
+        "role": "Produced by",
+        "artist": "Luz Marina",
+        "year": 1986,
+        "title": "A Flor De Piel",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "16088",
+        "role": "Mixed by",
+        "artist": "Luz Marina",
+        "year": 1986,
+        "title": "A Flor De Piel",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "16535",
+        "role": "Sax & Flute",
+        "artist": "Pablo Manavello",
+        "year": 1979,
+        "title": "Cosas Sencillas",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "17187",
+        "role": "Sax & Flute",
+        "artist": "Edgar Alexander",
+        "year": 1983,
+        "title": "Edgar",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "17454",
+        "role": "all brass arrangements",
+        "artist": "Cabezón Key",
+        "year": 2008,
+        "title": "Cabezón Key",
+        "names": "Ezequiel Serrano C",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "2019",
+        "role": "Sax",
+        "artist": "Willie Croes",
+        "year": 2010,
+        "title": "La + De Las Partes",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "2093",
+        "role": "mixed",
+        "artist": "Yordano",
+        "year": 1984,
+        "title": "Yordano",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "22708",
+        "role": "Sax & Backing Vocals",
+        "artist": "Cuarteto Rítmico de Caracas",
+        "year": 2009,
+        "title": "Encuentro",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "23392",
+        "role": "Percussion",
+        "artist": "El Trabuco Venezolano",
+        "year": 1979,
+        "title": "El Trabuco Venezolano 2",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "24992",
+        "role": "Flute",
+        "artist": "Martes 8:30",
+        "year": 2008,
+        "title": "Sincretismo",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "24993",
+        "role": "Soprano Sax",
+        "artist": "Martes 8:30",
+        "year": 2008,
+        "title": "Sincretismo",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "25942",
+        "role": "Sax",
+        "artist": "Hugo Fuguet",
+        "year": 2009,
+        "title": "Nueve Días",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "25944",
+        "role": "Alto Sax",
+        "artist": "Hugo Fuguet",
+        "year": 2009,
+        "title": "Nueve Días",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "27738",
+        "role": "Soprano Sax",
+        "artist": "Antonio Mazzei",
+        "year": 2009,
+        "title": "Contrastes",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "32749",
+        "role": "Sax",
+        "artist": "Guaco",
+        "year": 1987,
+        "title": "Maduro...",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "32910",
+        "role": "Soprano Sax",
+        "artist": "Esperanza Márquez",
+        "year": 2009,
+        "title": "Música Venezolana",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "33184",
+        "role": "Sax",
+        "artist": "Natusha",
+        "year": 1993,
+        "title": "Natusha",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "33221",
+        "role": "Alto Sax, Keyboards & Caja Vallenata",
+        "artist": "Barranco",
+        "year": 1994,
+        "title": "Barranco Pop",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "33242",
+        "role": "Produced by",
+        "artist": "Barranco",
+        "year": 1994,
+        "title": "Barranco Pop",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "33244",
+        "role": "Arranged by",
+        "artist": "Barranco",
+        "year": 1994,
+        "title": "Barranco Pop",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "33391",
+        "role": "Tenor & Alto Sax, Flute",
+        "artist": "Adrenalina Caribe",
+        "year": 1982,
+        "title": "Pico y Pala",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "33544",
+        "role": "Produced by",
+        "artist": "Natusha",
+        "year": 1992,
+        "title": "Re-Mix",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "33566",
+        "role": "Backing Vocals",
+        "artist": "Nancy Ramos",
+        "year": 1988,
+        "title": "Yo Soy La Luna",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "3357",
+        "role": "Percussion & Keyboards",
+        "artist": "Various Artists",
+        "year": 1987,
+        "title": "En Un Sótano De La Florida",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "33587",
+        "role": "Soprano Sax",
+        "artist": "Daiquirí",
+        "year": 1989,
+        "title": "Daiquirí 5",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "33874",
+        "role": "Keyboards & Programming",
+        "artist": "Barranco",
+        "year": 1992,
+        "title": "Barranco Mix",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "33876",
+        "role": "Produced & Arranged by",
+        "artist": "Barranco",
+        "year": 1992,
+        "title": "Barranco Mix",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "33884",
+        "role": "Alto Sax, Piano, Keyboards & Caja Vallenata",
+        "artist": "Barranco",
+        "year": 1996,
+        "title": "Amor y Malicía",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "33901",
+        "role": "Produced & Arranged by",
+        "artist": "Barranco",
+        "year": 1996,
+        "title": "Amor y Malicía",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "33912",
+        "role": "Mixed by",
+        "artist": "Barranco",
+        "year": 1996,
+        "title": "Amor y Malicía",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "3489",
+        "role": "Sax",
+        "artist": "Bacalao Men",
+        "year": 2011,
+        "title": "Sabaneando",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "350",
+        "role": "Backing Vocals",
+        "artist": "Malanga",
+        "year": 2009,
+        "title": "Aunque Mueran Las Flores",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "38798",
+        "role": "Flute",
+        "artist": "Mirtha Pérez",
+        "year": 1982,
+        "title": "Se Busca Un Amante",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "38965",
+        "role": "Keyboards & Programming",
+        "artist": "Natusha",
+        "year": 1991,
+        "title": "Enamorada",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "38979",
+        "role": "Backing Vocals",
+        "artist": "Natusha",
+        "year": 1991,
+        "title": "Enamorada",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "38980",
+        "role": "Produced by",
+        "artist": "Natusha",
+        "year": 1991,
+        "title": "Enamorada",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "40435",
+        "role": "Alto Sax",
+        "artist": "Soledad Bravo",
+        "year": 1986,
+        "title": "Corazón De Madera",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "40751",
+        "role": "Alto Sax",
+        "artist": "Soledad Bravo",
+        "year": 1990,
+        "title": "Bailables Del Caribe",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "40806",
+        "role": "Alto Sax",
+        "artist": "Soledad Bravo",
+        "year": 1990,
+        "title": "21 Temas Románticos",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "4381",
+        "role": "Sax, Flute, Percussion & Backing Vocals",
+        "artist": "Yordano",
+        "year": 1984,
+        "title": "Yordano",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "4685",
+        "role": "produced",
+        "artist": "Yordano",
+        "year": 1984,
+        "title": "Yordano",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "5003",
+        "role": "Backing Vocals (track 07)",
+        "artist": "Various Artists",
+        "year": 1987,
+        "title": "En Un Sótano De La Florida",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "52253",
+        "role": "Alto Sax",
+        "artist": "Elisa Rego",
+        "year": 1988,
+        "title": "Elisa Rego",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "52300",
+        "role": "Sax & Flute",
+        "artist": "Jorge Aguilar",
+        "year": 1985,
+        "title": "Siempre Juntos",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "52388",
+        "role": "Alto & Soprano Sax, Electronic Percussion & Synthesized Accordeon",
+        "artist": "Sergio Pérez",
+        "year": 1992,
+        "title": "Hay Que Vivir",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "52401",
+        "role": "Backing Vocals",
+        "artist": "Sergio Pérez",
+        "year": 1992,
+        "title": "Hay Que Vivir",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "52404",
+        "role": "Produced by",
+        "artist": "Sergio Pérez",
+        "year": 1992,
+        "title": "Hay Que Vivir",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "52417",
+        "role": "Mixed by",
+        "artist": "Sergio Pérez",
+        "year": 1992,
+        "title": "Hay Que Vivir",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "53065",
+        "role": "Keyboards, Programming, Bass, Drums & Percussion",
+        "artist": "Fernando y Juan Carlos",
+        "year": 1990,
+        "title": "Como Abriendo El Sol",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "53067",
+        "role": "Produced by",
+        "artist": "Fernando y Juan Carlos",
+        "year": 1990,
+        "title": "Como Abriendo El Sol",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "53075",
+        "role": "Mixed by",
+        "artist": "Fernando y Juan Carlos",
+        "year": 1990,
+        "title": "Como Abriendo El Sol",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "53276",
+        "role": "Produced by",
+        "artist": "Fernando y Juan Carlos",
+        "year": 1991,
+        "title": "De Una",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "53420",
+        "role": "Sax, Flute & Percussion",
+        "artist": "Yordano",
+        "year": 1986,
+        "title": "Jugando Conmigo",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "53435",
+        "role": "Produced by",
+        "artist": "Yordano",
+        "year": 1986,
+        "title": "Jugando Conmigo",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "53440",
+        "role": "Mixed by",
+        "artist": "Yordano",
+        "year": 1986,
+        "title": "Jugando Conmigo",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "53443",
+        "role": "Cover Concept",
+        "artist": "Yordano",
+        "year": 1986,
+        "title": "Jugando Conmigo",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "5346",
+        "role": "Soprano Sax & Flute",
+        "artist": "Cabezón Key",
+        "year": 2008,
+        "title": "Cabezón Key",
+        "names": "Ezequiel Serrano C.",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "54115",
+        "role": "Produced by",
+        "artist": "Yordano",
+        "year": 1988,
+        "title": "De Colección",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "54692",
+        "role": "Alto Sax",
+        "artist": "Elisa Rego",
+        "year": 1991,
+        "title": "Vale La Pena",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "54947",
+        "role": "Sax",
+        "artist": "Sergio Pérez",
+        "year": 1991,
+        "title": "Sergio En Uno (Grandes Exitos)",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "55427",
+        "role": "Sax",
+        "artist": "Feedback",
+        "year": 1990,
+        "title": "Cristales Rotos",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "56884",
+        "role": "Flute",
+        "artist": "Yordano",
+        "year": 1994,
+        "title": "Sabor De Cayena",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "57324",
+        "role": "Sax",
+        "artist": "Ilan Chester",
+        "year": 1985,
+        "title": "Ilan Chester (Sólo Faltas Tú)",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "57472",
+        "role": "Sax & Percussion",
+        "artist": "Propaganda",
+        "year": 1994,
+        "title": "Propaganda",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "57481",
+        "role": "Background Vocals",
+        "artist": "Propaganda",
+        "year": 1994,
+        "title": "Propaganda",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "57482",
+        "role": "Produced by",
+        "artist": "Propaganda",
+        "year": 1994,
+        "title": "Propaganda",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "58731",
+        "role": "Sax, Flute & Percussion",
+        "artist": "Yordano",
+        "year": 1988,
+        "title": "Lunas",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "58737",
+        "role": "Produced by",
+        "artist": "Yordano",
+        "year": 1988,
+        "title": "Lunas",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "59275",
+        "role": "Backing Vocals",
+        "artist": "Malanga",
+        "year": 2009,
+        "title": "Aunque Mueran Las Flores",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "59658",
+        "role": "Sax & Flute",
+        "artist": "Franco De Vita",
+        "year": 1988,
+        "title": "Al Norte Del Sur",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "59784",
+        "role": "Sax, Flute & Percussion",
+        "artist": "Yordano",
+        "year": 1984,
+        "title": "Yordano",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "59800",
+        "role": "Background Vocals",
+        "artist": "Yordano",
+        "year": 1984,
+        "title": "Yordano",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "60243",
+        "role": "Sax",
+        "artist": "Guillermo Carrasco",
+        "year": 1988,
+        "title": "Visual",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "60654",
+        "role": "Tenor & Alto Sax",
+        "artist": "Ilan Chester",
+        "year": 1983,
+        "title": "Canciones De Todos Los Días",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "60978",
+        "role": "Alto & Soprano Sax",
+        "artist": "Esperanto",
+        "year": 1980,
+        "title": "Esperanto",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "61056",
+        "role": "Sax",
+        "artist": "Frank Quintero & Los Balzehaguaos",
+        "year": 1978,
+        "title": "Hechizo",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "61217",
+        "role": "Sax",
+        "artist": "Sergio Pérez",
+        "year": 1987,
+        "title": "Sergio Pérez",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "61331",
+        "role": "Sax & Backing Vocals",
+        "artist": "Robert Valerio",
+        "year": 1983,
+        "title": "Dulce Sentimiento",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "62150",
+        "role": "Sax",
+        "artist": "Pablo Manavello",
+        "year": 1985,
+        "title": "Gota de Fuego",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "63160",
+        "role": "Brass Section",
+        "artist": "Aditus",
+        "year": 2000,
+        "title": "Lo Mejor de Aditus (Milenio)",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "album_credit",
+        "id": "8843",
+        "role": "Sax, Flute & Vocals",
+        "artist": "Melao",
+        "year": 1981,
+        "title": "Nuestra Magia",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "track_credit",
+        "id": "1416",
+        "role": "Sax",
+        "artist": "Los Buitres",
+        "year": 1991,
+        "title": "Corazón Vacío",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "track_credit",
+        "id": "196",
+        "role": "Sax",
+        "artist": "20/20",
+        "year": 1988,
+        "title": "Conversando En Una Mesa",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "track_credit",
+        "id": "20981",
+        "role": "Vocals",
+        "artist": "Cuarteto Rítmico de Caracas",
+        "year": 2009,
+        "title": "Vendo Mi Vida",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "track_credit",
+        "id": "2291",
+        "role": "Alto & Tenor Sax",
+        "artist": "Tribop",
+        "year": 2006,
+        "title": "Noduraz",
+        "names": "Ezequiel Serrano / Ezequiel Serrano C.",
+        "action": "moved"
+      },
+      {
+        "kind": "track_credit",
+        "id": "2293",
+        "role": "Alto & Tenor Sax",
+        "artist": "Tribop",
+        "year": 2006,
+        "title": "2 Es 3",
+        "names": null,
+        "action": "moved"
+      },
+      {
+        "kind": "track_credit",
+        "id": "2294",
+        "role": "Alto & Tenor Sax",
+        "artist": "Tribop",
+        "year": 2006,
+        "title": "Dado Que",
+        "names": null,
+        "action": "moved"
+      },
+      {
+        "kind": "track_credit",
+        "id": "2295",
+        "role": "Alto & Tenor Sax",
+        "artist": "Tribop",
+        "year": 2006,
+        "title": "Viceversa",
+        "names": null,
+        "action": "moved"
+      },
+      {
+        "kind": "track_credit",
+        "id": "2296",
+        "role": "Flute",
+        "artist": "Tribop",
+        "year": 2006,
+        "title": "Viceversa",
+        "names": "Ezequiel Serrano / Ezequiel Serrano C.",
+        "action": "moved"
+      },
+      {
+        "kind": "track_credit",
+        "id": "26964",
+        "role": "Sax Solo",
+        "artist": "Daisy",
+        "year": 1992,
+        "title": "El Brujo",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "track_credit",
+        "id": "28577",
+        "role": "Solo Soprano Sax",
+        "artist": "Nancy Ramos",
+        "year": 1988,
+        "title": "Cuando La Noche Llega",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "track_credit",
+        "id": "28743",
+        "role": "composer",
+        "artist": "Barranco",
+        "year": 1996,
+        "title": "Que Bonita Mañana",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "track_credit",
+        "id": "28744",
+        "role": "composer",
+        "artist": "Barranco",
+        "year": 1996,
+        "title": "Todos",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "track_credit",
+        "id": "37118",
+        "role": "Alto Sax",
+        "artist": "Zeneida Rodríguez",
+        "year": 2013,
+        "title": "Cuerpo y Alma",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "track_credit",
+        "id": "37119",
+        "role": "Alto Sax",
+        "artist": "Zeneida Rodríguez",
+        "year": 2013,
+        "title": "Body And Soul",
+        "names": null,
+        "action": "moved"
+      },
+      {
+        "kind": "track_credit",
+        "id": "43055",
+        "role": "Soprano Sax & Flute",
+        "artist": "Vytas Brenner",
+        "year": 1982,
+        "title": "Dorado I",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "track_credit",
+        "id": "43056",
+        "role": "Soprano Sax & Flute",
+        "artist": "Vytas Brenner",
+        "year": 1982,
+        "title": "Ponte a valer",
+        "names": null,
+        "action": "moved"
+      },
+      {
+        "kind": "track_credit",
+        "id": "43057",
+        "role": "Soprano Sax & Flute",
+        "artist": "Vytas Brenner",
+        "year": 1982,
+        "title": "15 partes por millón",
+        "names": null,
+        "action": "moved"
+      },
+      {
+        "kind": "track_credit",
+        "id": "50130",
+        "role": "Alto Sax",
+        "artist": "Fernando y Juan Carlos",
+        "year": 1990,
+        "title": "Infinitamente Cerca",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "track_credit",
+        "id": "50131",
+        "role": "Alto Sax",
+        "artist": "Fernando y Juan Carlos",
+        "year": 1990,
+        "title": "Rasga El Cielo",
+        "names": null,
+        "action": "moved"
+      },
+      {
+        "kind": "track_credit",
+        "id": "50132",
+        "role": "Alto Sax",
+        "artist": "Fernando y Juan Carlos",
+        "year": 1990,
+        "title": "Dejen Al Héroe",
+        "names": null,
+        "action": "moved"
+      },
+      {
+        "kind": "track_credit",
+        "id": "50134",
+        "role": "Soprano Sax",
+        "artist": "Fernando y Juan Carlos",
+        "year": 1990,
+        "title": "Tan Sólo Una Vez",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "track_credit",
+        "id": "50135",
+        "role": "Flute",
+        "artist": "Fernando y Juan Carlos",
+        "year": 1990,
+        "title": "Será",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "track_credit",
+        "id": "51805",
+        "role": "Sax",
+        "artist": "Elisa Rego",
+        "year": 2009,
+        "title": "De Quererte Asi",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "track_credit",
+        "id": "51806",
+        "role": "Sax",
+        "artist": "Elisa Rego",
+        "year": 2009,
+        "title": "Cóncavo y Convexo",
+        "names": null,
+        "action": "moved"
+      },
+      {
+        "kind": "track_credit",
+        "id": "52365",
+        "role": "Sax",
+        "artist": "Jorge Aguilar",
+        "year": 1987,
+        "title": "Mentiras",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "track_credit",
+        "id": "5344",
+        "role": "Sax",
+        "artist": "Bulevar",
+        "year": 2009,
+        "title": "Funky Business",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "track_credit",
+        "id": "54901",
+        "role": "Sax",
+        "artist": "Jah Jah Children",
+        "year": 1984,
+        "title": "Vamos A Bailar",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "track_credit",
+        "id": "54902",
+        "role": "Sax",
+        "artist": "Jah Jah Children",
+        "year": 1984,
+        "title": "Reggae Music",
+        "names": null,
+        "action": "moved"
+      },
+      {
+        "kind": "track_credit",
+        "id": "54903",
+        "role": "Sax",
+        "artist": "Jah Jah Children",
+        "year": 1984,
+        "title": "Got To Get Up",
+        "names": null,
+        "action": "moved"
+      },
+      {
+        "kind": "track_credit",
+        "id": "56027",
+        "role": "composer",
+        "artist": "Cuarteto Rítmico de Caracas",
+        "year": 2009,
+        "title": "Me Voy Con Mi Plancha",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "track_credit",
+        "id": "657",
+        "role": "Sax",
+        "artist": "Cunaguaro Soul",
+        "year": 2007,
+        "title": "Vuelo De Las Seis",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "track_credit",
+        "id": "6819",
+        "role": "Backing Vocals",
+        "artist": "Quince y Ultimo",
+        "year": 1989,
+        "title": "Cuando Te Vi",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "track_credit",
+        "id": "6820",
+        "role": "Backing Vocals",
+        "artist": "Quince y Ultimo",
+        "year": 1989,
+        "title": "Martillando",
+        "names": null,
+        "action": "moved"
+      },
+      {
+        "kind": "track_credit",
+        "id": "6821",
+        "role": "Backing Vocals",
+        "artist": "Quince y Ultimo",
+        "year": 1989,
+        "title": "Día De Pago",
+        "names": null,
+        "action": "moved"
+      },
+      {
+        "kind": "track_credit",
+        "id": "70422",
+        "role": "Sax",
+        "artist": "Jorge Aguilar",
+        "year": 1983,
+        "title": "Extranjero",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "track_credit",
+        "id": "8869",
+        "role": "Sax",
+        "artist": "Colina",
+        "year": 1993,
+        "title": "Cuando Me Vaya A La Luna",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "track_credit",
+        "id": "8872",
+        "role": "Sax",
+        "artist": "Colina",
+        "year": 1993,
+        "title": "Imposible Vivir Sin Tí",
+        "names": null,
+        "action": "moved"
+      },
+      {
+        "kind": "track_credit",
+        "id": "940",
+        "role": "Sax & Flute",
+        "artist": "Franco De Vita",
+        "year": 1988,
+        "title": "Al Norte Del Sur",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "track_credit",
+        "id": "9941",
+        "role": "Flute",
+        "artist": "El Medio Evo",
+        "year": 1984,
+        "title": "La Emperatriz Cimitarra",
+        "names": "Ezequiel Serrano",
+        "action": "moved"
+      },
+      {
+        "kind": "track_credit",
+        "id": "9942",
+        "role": "Flute",
+        "artist": "El Medio Evo",
+        "year": 1984,
+        "title": "La Galupia",
+        "names": null,
+        "action": "moved"
+      },
+      {
+        "membership": 6700,
+        "artist": "Melao"
+      },
+      {
+        "membership": 9726,
+        "artist": "Adrenalina Caribe"
+      },
+      {
+        "membership": 10624,
+        "artist": "Cabezón Key",
+        "role": "Soprano Sax & Flute"
+      }
+    ],
+    "son": [
+      {
+        "kind": "album_credit",
+        "id": "10081",
+        "role": "Guitars, Keyboards, Programming, Percussion, Bass & Vocals",
+        "artist": "Cabezón Key",
+        "year": 2008,
+        "title": "Cabezón Key",
+        "names": "Ezequiel Serrano Valencia"
+      },
+      {
+        "kind": "album_credit",
+        "id": "10084",
+        "role": "Produced by",
+        "artist": "Cabezón Key",
+        "year": 2008,
+        "title": "Cabezón Key",
+        "names": "Ezequiel S. Valencia / Ezequiel Serrano Valencia"
+      },
+      {
+        "kind": "album_credit",
+        "id": "12131",
+        "role": "Guitar & Vocals",
+        "artist": "Tribop",
+        "year": 2006,
+        "title": "Vol. 1",
+        "names": "Ezequiel Valencia"
+      },
+      {
+        "kind": "album_credit",
+        "id": "15342",
+        "role": "Acoustic Guitar",
+        "artist": "El Medio Evo",
+        "year": 2000,
+        "title": "A Petición Del Público Medio Evo Se Despide Tambien",
+        "names": "Ezequiel Valencia"
+      },
+      {
+        "kind": "album_credit",
+        "id": "17453",
+        "role": "art concept",
+        "artist": "Cabezón Key",
+        "year": 2008,
+        "title": "Cabezón Key",
+        "names": "Ezequiel S. Valencia"
+      },
+      {
+        "kind": "album_credit",
+        "id": "17455",
+        "role": "composed",
+        "artist": "Cabezón Key",
+        "year": 2008,
+        "title": "Cabezón Key",
+        "names": "Ezequiel Serrano Valencia"
+      },
+      {
+        "kind": "album_credit",
+        "id": "3708",
+        "role": "Guitars",
+        "artist": "Joystick",
+        "year": 2007,
+        "title": "Lonchera",
+        "names": "Ezequiel Serrano Valencia"
+      },
+      {
+        "kind": "album_credit",
+        "id": "4384",
+        "role": "Lead Vocals & Guitars",
+        "artist": "Tribop",
+        "year": 2006,
+        "title": "Vol. 1",
+        "names": "Ezequiel S. Valencia"
+      },
+      {
+        "kind": "album_credit",
+        "id": "59949",
+        "role": "Vocals",
+        "artist": "Malanga",
+        "year": 2015,
+        "title": "Acústico",
+        "names": "Ezequiel Serrano Valencia"
+      },
+      {
+        "kind": "track_credit",
+        "id": "1582",
+        "role": "Lead Vocals",
+        "artist": "Malanga",
+        "year": 2015,
+        "title": "Mai Lof",
+        "names": "Ezequiel Serrano Valencia"
+      },
+      {
+        "kind": "track_credit",
+        "id": "16101",
+        "role": "composed",
+        "artist": "Nana Cadavieco",
+        "year": 2009,
+        "title": "No Hay",
+        "names": null
+      },
+      {
+        "kind": "track_credit",
+        "id": "16102",
+        "role": "composed",
+        "artist": "Nana Cadavieco",
+        "year": 2009,
+        "title": "Canción De Cuna",
+        "names": null
+      },
+      {
+        "kind": "track_credit",
+        "id": "16103",
+        "role": "composed",
+        "artist": "Nana Cadavieco",
+        "year": 2009,
+        "title": "Let Me Go",
+        "names": null
+      },
+      {
+        "kind": "track_credit",
+        "id": "16104",
+        "role": "composed",
+        "artist": "Nana Cadavieco",
+        "year": 2009,
+        "title": "Shanti",
+        "names": null
+      },
+      {
+        "kind": "track_credit",
+        "id": "16105",
+        "role": "composed",
+        "artist": "Nana Cadavieco",
+        "year": 2009,
+        "title": "Drive Alone (Part II)",
+        "names": null
+      },
+      {
+        "kind": "track_credit",
+        "id": "16106",
+        "role": "composed",
+        "artist": "Nana Cadavieco",
+        "year": 2009,
+        "title": "Aquí & Ahora",
+        "names": null
+      },
+      {
+        "kind": "track_credit",
+        "id": "2605",
+        "role": "Lead Vocals",
+        "artist": "Willie Croes",
+        "year": 2010,
+        "title": "El Ciego",
+        "names": "Ezequiel Serrano Valencia"
+      },
+      {
+        "kind": "track_credit",
+        "id": "6070",
+        "role": "Co-Producers",
+        "artist": "Cabezón Key",
+        "year": 2008,
+        "title": "Chocolabios",
+        "names": "Ezequiel Serrano Valencia"
+      }
+    ],
+    "doubtful": [
+      {
+        "kind": "album_credit",
+        "id": "56402",
+        "role": "Bass",
+        "artist": "Luz Verde",
+        "year": 2014,
+        "title": "Nada Es Imposible El Final Del Mundo Vol. II",
+        "names": "Ezequiel Serrano"
+      }
+    ]
+  },
+  "aliasesMoved": 3
+}
