@@ -19,12 +19,15 @@
 //   personas      duplicados de las titulares y los pares del plan: se funden
 //                 SOLO con proyecto común (regla de Brian, 2026-09-28); el
 //                 resto va a la mesa como `person_duplicate`.
+//   titulares     (etapa 5, 2026-10-04) persona titular de los solistas del
+//                 lote que ya existían, «miembro de» hacia grupos del catálogo
+//                 y sus fichas dobles (misma regla que `personas`).
 //
 // Después, `lote-investigacion-2026-10-02.ts` vuelve a correr con
 // `etapa2-identidades.json` y engancha a las fichas nuevas los claims
 // `candidate` del lote, rellenando solo vacíos.
 //
-//   ./scripts/with-node22.sh npx tsx scripts/lote-investigacion-etapa2.ts --block=correcciones|nuevos|personas [--confirm]
+//   ./scripts/with-node22.sh npx tsx scripts/lote-investigacion-etapa2.ts --block=correcciones|nuevos|personas|titulares [--confirm]
 import { readFileSync, writeFileSync, existsSync } from "node:fs";
 import os from "node:os";
 import path from "node:path";
@@ -214,6 +217,74 @@ const PERSON_PAIRS: Array<{ a: number; b: number; why: string; keepA?: boolean }
   { a: 7389, b: 33744, why: "Otilio Galíndez duplicado" },
   { a: 7348, b: 32029, why: "Luis Mariano Rivera duplicado" },
   { a: 11856, b: 29308, why: "Diony López (Popy) duplicado" },
+];
+
+/**
+ * Etapa 5 (2026-10-04): solistas del lote que YA existían y no tenían persona
+ * titular (el bloque «nuevos» solo la dio a las fichas creadas). Se eligió la
+ * persona con créditos en los discos de la propia ficha; Oscar D'León: 21846
+ * (56 créditos propios y Dimensión Latina) sobre 1039 (40), que se le funde.
+ * Sin persona: se crea con el nombre del lote.
+ */
+const TITULAR_EXISTENTES: Record<string, { artist: { id: number; name: string }; person: { id: number; name: string } | null }> = {
+  "aldemaro-romero": { artist: { id: 3897, name: "Aldemaro Romero" }, person: { id: 30, name: "Aldemaro Romero" } },
+  "alfredo-sadel": { artist: { id: 3676, name: "Alfredo Sadel" }, person: { id: 21399, name: "Alfredo Sadel" } },
+  "ali-primera": { artist: { id: 3677, name: "Alí Primera" }, person: { id: 22238, name: "Alí Primera" } },
+  "aquiles-baez": { artist: { id: 3449, name: "Aquiles Báez" }, person: { id: 935, name: "Aquiles Báez" } },
+  "canelita-medina": { artist: { id: 3684, name: "Canelita Medina" }, person: { id: 22438, name: "Canelita Medina" } },
+  "chelique-sarabia": { artist: { id: 3689, name: "Chelique Sarabia" }, person: { id: 57, name: "Chelique Sarabia" } },
+  "edward-simon": { artist: { id: 3480, name: "Edward Simon" }, person: { id: 22148, name: "Edward Simon" } },
+  "evencio-castellanos": { artist: { id: 3400, name: "Evencio Castellanos" }, person: { id: 19477, name: "Evencio Castellanos" } },
+  "felipe-pirela": { artist: { id: 3785, name: "Felipe Pirela" }, person: { id: 24366, name: "Felipe Pirela" } },
+  "floria-marquez": { artist: { id: 3703, name: "Floria Márquez" }, person: null },
+  // Canta y toca en Un Solo Pueblo y en Francisco Pacheco y Su Pueblo (sin créditos en esta ficha).
+  "francisco-pacheco": { artist: { id: 3816, name: "Francisco Pacheco" }, person: { id: 1709, name: "Francisco Pacheco" } },
+  "gerry-weil": { artist: { id: 3500, name: "Gerry Weil" }, person: { id: 670, name: "Gerry Weil" } },
+  "gualberto-ibarreto": { artist: { id: 3821, name: "Gualberto Ibarreto" }, person: { id: 21200, name: "Gualberto Ibarreto" } },
+  "hernan-marin": { artist: { id: 3823, name: "Hernán Marín" }, person: { id: 24616, name: "Hernán Marín" } },
+  "hugo-blanco": { artist: { id: 3710, name: "Hugo Blanco" }, person: { id: 761, name: "Hugo Blanco" } },
+  "jose-luis-rodriguez-el-puma": { artist: { id: 3756, name: "José Luis Rodríguez" }, person: { id: 7180, name: "José Luis Rodríguez" } },
+  "juan-vicente-torrealba": { artist: { id: 3829, name: "Juan Vicente Torrealba" }, person: { id: 4456, name: "Juan Vicente Torrealba" } },
+  "lilia-vera": { artist: { id: 3831, name: "Lilia Vera" }, person: { id: 31135, name: "Lilia Vera" } },
+  "linda-briceno": { artist: { id: 3529, name: "Linda Briceño" }, person: { id: 847, name: "Linda Briceño" } },
+  "luis-silva": { artist: { id: 3833, name: "Luis Silva" }, person: { id: 3197, name: "Luis Silva" } },
+  "magdalena-sanchez": { artist: { id: 3890, name: "Magdalena Sánchez" }, person: { id: 31057, name: "Magdalena Sánchez" } },
+  "maria-teresa-chacin": { artist: { id: 3797, name: "María Teresa Chacín" }, person: { id: 3972, name: "María Teresa Chacín" } },
+  "mirla-castellanos": { artist: { id: 3796, name: "Mirla Castellanos" }, person: { id: 29343, name: "Mirla Castellanos" } },
+  natusha: { artist: { id: 3732, name: "Natusha" }, person: { id: 29573, name: "Natusha" } },
+  "oscar-dleon": { artist: { id: 3739, name: "Oscar D' León" }, person: { id: 21846, name: "Oscar D’León" } },
+  "otmaro-ruiz": { artist: { id: 3558, name: "Otmaro Ruiz" }, person: { id: 1639, name: "Otmaro Ruiz" } },
+  "paul-desenne": { artist: { id: 3993, name: "Paul Desenne" }, person: { id: 20614, name: "Paul Desenne" } },
+  "pecos-kanvas": { artist: { id: 3740, name: "Pecos Kanvas" }, person: { id: 29792, name: "Pecos Kanvas" } },
+  "pollo-brito": { artist: { id: 3743, name: "Rafael \"Pollo\" Brito" }, person: { id: 934, name: "Rafael \"Pollo\" Brito" } },
+  "reyna-lucero": { artist: { id: 3870, name: "Reyna Lucero" }, person: { id: 31056, name: "Reyna Lucero" } },
+  "reynaldo-armas": { artist: { id: 3889, name: "Reynaldo Armas" }, person: { id: 20590, name: "Reynaldo Armas" } },
+  "roberto-antonio": { artist: { id: 3745, name: "Roberto Antonio" }, person: { id: 25692, name: "Roberto Antonio" } },
+  "soledad-bravo": { artist: { id: 3749, name: "Soledad Bravo" }, person: { id: 25256, name: "Soledad Bravo" } },
+};
+
+/** «Miembro de» del lote para esas titulares (y la directora de la Cantoría), solo hacia grupos del catálogo. */
+const MEMBER_OF_EXISTENTES: Array<{ titularOf?: string; person?: { id: number; name: string }; artist: { id: number; name: string }; role: string; notes?: string }> = [
+  { titularOf: "oscar-dleon", artist: { id: 270, name: "Dimension Latina" }, role: "voz y bajo", notes: "fundador" },
+  { titularOf: "canelita-medina", artist: { id: 3700, name: "Federico y Su Combo Latino" }, role: "voz" },
+  { titularOf: "francisco-pacheco", artist: { id: 3857, name: "Un Solo Pueblo" }, role: "voz y percusión" },
+  { titularOf: "francisco-pacheco", artist: { id: 3865, name: "Francisco Pacheco y Su Pueblo" }, role: "director y voz" },
+  { titularOf: "juan-vicente-torrealba", artist: { id: 3884, name: "Juan Vicente Torrealba y sus Torrealberos" }, role: "director y arpa" },
+  { titularOf: "juan-vicente-torrealba", artist: { id: 3883, name: "Los Torrealberos Juan Vicente Torrealba" }, role: "director y arpa" },
+  { person: { id: 19335, name: "María Guinand" }, artist: { id: 3387, name: "Cantoría Alberto Grau" }, role: "directora", notes: "directora histórica (lote)" },
+  // Sin ficha en el catálogo: Sonero Clásico del Caribe (Canelita Medina), Grupo Oriente (Hernán Marín).
+];
+
+/** Fichas dobles de esas titulares: se funden solo con proyecto común; si no, a la mesa. */
+const TITULAR_PAIRS: Array<{ a: number; b: number; why: string }> = [
+  { a: 21846, b: 1039, why: "Oscar D'León duplicado (titular de 3739)" },
+  { a: 21846, b: 21396, why: "Oscar D'León duplicado (titular de 3739)" },
+  { a: 22238, b: 12890, why: "Alí Primera duplicado (titular de 3677)" },
+  { a: 57, b: 31206, why: "«Chelique», compositor en discos de Chelique Sarabia (titular de 3689)" },
+  { a: 24366, b: 12032, why: "Felipe Pirela duplicado (titular de 3785)" },
+  { a: 21200, b: 619, why: "Gualberto Ibarreto duplicado (titular de 3821)" },
+  { a: 29343, b: 12006, why: "Mirla Castellanos duplicado (titular de 3796)" },
+  { a: 29792, b: 12090, why: "Pecos Kanvas duplicado (titular de 3740)" },
 ];
 
 // --- Infraestructura -----------------------------------------------------------
@@ -643,13 +714,13 @@ const SHARED_SQL = `
 
 const queued: Array<{ a: { id: number; name: string }; b: { id: number; name: string }; why: string }> = [];
 
-async function blockPersonas(context: OperatorContext): Promise<void> {
+async function blockPersonas(context: OperatorContext, pairs: Array<{ a: number; b: number; why: string; keepA?: boolean }> = PERSON_PAIRS): Promise<void> {
   const { client } = context;
   const linked = async (id: number) => Number((await client.query<{ n: string }>(
     "SELECT (count(*) FILTER (WHERE role='Titular del proyecto') * 10 + count(*))::text AS n FROM public.artist_members WHERE person_id=$1", [id])).rows[0]?.n ?? 0);
   const refs = async (id: number) => Number((await client.query<{ n: string }>(`
     SELECT ((SELECT count(*) FROM public.album_credits WHERE person_id=$1) + (SELECT count(*) FROM public.track_credits WHERE person_id=$1))::text AS n`, [id])).rows[0]!.n);
-  for (const pair of PERSON_PAIRS) {
+  for (const pair of pairs) {
     const a = await liveId(client, "person", pair.a);
     const b = await liveId(client, "person", pair.b);
     if (a === null || b === null || a === b) { step({ op: "fusionar_persona", status: "skipped", pair, detail: a === b ? "ya son la misma ficha" : "una no existe" }); continue; }
@@ -674,6 +745,99 @@ async function blockPersonas(context: OperatorContext): Promise<void> {
       moved: merged.moved, conflicts: preview.fieldConflicts.map((row) => row.field), preserved: merged.preserved,
     });
   }
+}
+
+// --- Bloque: titulares (etapa 5) -----------------------------------------------
+
+async function blockTitulares(context: OperatorContext): Promise<void> {
+  const { client } = context;
+  const byLote = new Map(loadLote().map((row) => [row.artist.id, row]));
+  const titularOf = new Map<string, number>();
+  const touchedPersons = new Set<number>();
+
+  // 1. Persona titular de los solistas que ya existían.
+  for (const [loteId, decision] of Object.entries(TITULAR_EXISTENTES)) {
+    const row = byLote.get(loteId);
+    if (!row) throw new Error(`${loteId} no está en el lote`);
+    const artistId = await liveId(client, "artist", decision.artist.id);
+    if (artistId === null) throw new Error(`artista ${decision.artist.id} («${decision.artist.name}») inexistente`);
+    if (artistId === decision.artist.id) await expectRow(client, "artists", decision.artist);
+    const current = await client.query<{ person_id: string }>("SELECT person_id::text FROM public.artist_members WHERE artist_id=$1", [artistId]);
+    if (current.rowCount) {
+      warn(`${loteId}: el artista ${artistId} ya tiene personas enlazadas; no se toca`);
+      continue;
+    }
+    let personId: number;
+    let personName: string;
+    let origin: string;
+    if (decision.person) {
+      const live = await liveId(client, "person", decision.person.id);
+      if (live === null) throw new Error(`persona ${decision.person.id} («${decision.person.name}») inexistente`);
+      if (live === decision.person.id) await expectRow(client, "persons", decision.person);
+      personId = live;
+      personName = (await rowName(client, "persons", live))!;
+      origin = "existente";
+    } else {
+      personName = newTitularName(row.artist);
+      const created = await createArtistOrPerson(context, "person", { name: personName });
+      personId = created.id;
+      origin = created.similar ? "nueva (hay homónimos o parecidas)" : "nueva";
+    }
+    const link = await linkMember(context, artistId, personId, { role: TITULAR_ROLE });
+    const aliases: string[] = [];
+    for (const alias of titularAliases(row.artist, personName)) if (await addAlias(context, "person", personId, alias, "stage_name")) aliases.push(alias);
+    titularOf.set(loteId, personId);
+    touchedPersons.add(personId);
+    step({ op: "titular", loteId, artist: artistId, person: personId, personName, origin, link, aliases });
+  }
+
+  // 2. «Miembro de» hacia grupos del catálogo.
+  for (const row of MEMBER_OF_EXISTENTES) {
+    let personId: number | null = null;
+    if (row.titularOf) personId = titularOf.get(row.titularOf) ?? null;
+    else if (row.person) {
+      personId = await liveId(client, "person", row.person.id);
+      if (personId === row.person.id) await expectRow(client, "persons", row.person);
+    }
+    if (personId === null) { warn(`miembro de: ${row.titularOf ?? row.person?.name} → ${row.artist.name} sin persona`); continue; }
+    await expectRow(client, "artists", row.artist);
+    const link = await linkMember(context, row.artist.id, personId, row);
+    touchedPersons.add(personId);
+    step({ op: "miembro_de", titularOf: row.titularOf, person: personId, artist: row.artist.id, artistName: row.artist.name, role: row.role, link });
+  }
+
+  // 3. Fichas dobles de las titulares (solo con proyecto común; el resto, a la mesa).
+  await blockPersonas(context, TITULAR_PAIRS);
+
+  // 4. Venezolano en las personas tocadas (se deriva de sus membresías).
+  const live = (await Promise.all([...touchedPersons].map((id) => liveId(client, "person", id)))).filter((id): id is number => id !== null);
+  const marked = await deriveVenezuelanFor(client, [...new Set(live)], context.runId);
+  step({ op: "venezolano_derivado", persons: live.length, marked });
+}
+
+/** Pares sin proyecto común → mesa (`person_duplicate`), con ids vivos y sin repetir. */
+async function openQueuedPairs(): Promise<void> {
+  const pool = await getPool().connect();
+  const live: typeof queued = [];
+  try {
+    for (const row of queued) {
+      const a = await liveId(pool, "person", row.a.id);
+      const b = await liveId(pool, "person", row.b.id);
+      if (a === null || b === null || a === b) continue;
+      if (live.some((item) => Math.min(item.a.id, item.b.id) === Math.min(a, b) && Math.max(item.a.id, item.b.id) === Math.max(a, b))) continue;
+      live.push({ a: { id: a, name: (await rowName(pool, "persons", a))! }, b: { id: b, name: (await rowName(pool, "persons", b))! }, why: row.why });
+    }
+  } finally {
+    pool.release();
+  }
+  queued.splice(0, queued.length, ...live);
+  if (CONFIRM && queued.length) {
+    writeReport();
+    const opened = await openPersonCandidateReviews(queued.map((row) => ({
+      a: row.a, b: row.b, score: 0.5, features: [{ key: "lote_2026_10_02_same_person", value: 1, evidence: row.why }], priority: 6 as const,
+    })), `${PLAN_NOTE}: posibles fichas de la misma persona sin proyecto común`, OPERATOR);
+    step({ op: "mesa", ...opened });
+  } else if (queued.length) step({ op: "mesa", proposed: queued.length });
 }
 
 // --- Principal -----------------------------------------------------------------
@@ -705,31 +869,16 @@ async function main(): Promise<void> {
   } else if (BLOCK === "personas") {
     await operatorRun("lote-2026-10-02:etapa2:personas",
       `${PLAN_NOTE}: personas duplicadas de las titulares; se funden solo con proyecto común (regla de Brian, 2026-09-28).`,
-      blockPersonas);
+      (context) => blockPersonas(context));
     // Las fusiones del propio bloque pueden haber movido una ficha de la mesa: ids vivos y sin repetir.
-    const pool = await getPool().connect();
-    const live: typeof queued = [];
-    try {
-      for (const row of queued) {
-        const a = await liveId(pool, "person", row.a.id);
-        const b = await liveId(pool, "person", row.b.id);
-        if (a === null || b === null || a === b) continue;
-        if (live.some((item) => Math.min(item.a.id, item.b.id) === Math.min(a, b) && Math.max(item.a.id, item.b.id) === Math.max(a, b))) continue;
-        live.push({ a: { id: a, name: (await rowName(pool, "persons", a))! }, b: { id: b, name: (await rowName(pool, "persons", b))! }, why: row.why });
-      }
-    } finally {
-      pool.release();
-    }
-    queued.splice(0, queued.length, ...live);
-    if (CONFIRM && queued.length) {
-      writeReport();
-      const opened = await openPersonCandidateReviews(queued.map((row) => ({
-        a: row.a, b: row.b, score: 0.5, features: [{ key: "lote_2026_10_02_same_person", value: 1, evidence: row.why }], priority: 6 as const,
-      })), `${PLAN_NOTE}: posibles fichas de la misma persona sin proyecto común`, OPERATOR);
-      step({ op: "mesa", ...opened });
-    } else if (queued.length) step({ op: "mesa", proposed: queued.length });
+    await openQueuedPairs();
+  } else if (BLOCK === "titulares") {
+    await operatorRun("lote-2026-10-02:etapa5:titulares",
+      `${PLAN_NOTE}: persona titular de los solistas del lote que ya existían (plan §2.8), «miembro de» hacia grupos del catálogo y fusión de sus fichas dobles con proyecto común.`,
+      blockTitulares);
+    await openQueuedPairs();
   } else {
-    throw new Error("--block=correcciones|nuevos|personas");
+    throw new Error("--block=correcciones|nuevos|personas|titulares");
   }
   writeReport();
   await closeDb();

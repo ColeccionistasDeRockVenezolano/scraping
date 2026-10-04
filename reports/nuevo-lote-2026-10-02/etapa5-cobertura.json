@@ -1,0 +1,3783 @@
+{
+  "generatedAt": "2026-10-04T18:42:41.775Z",
+  "totals": {
+    "fichas": 188,
+    "creadas": 91,
+    "existentes": 97,
+    "sinBio": 0,
+    "sinFoto": 43,
+    "sinPrincipal": 0,
+    "sinPersonas": 18,
+    "sinDiscos": 40,
+    "discos": 4834,
+    "discosSinPistas": 431,
+    "pistas": 41969,
+    "pistasSinDuracion": 12793,
+    "discosSinPortada": 619,
+    "discosSinSello": 3850,
+    "discosSinGenero": 3009
+  },
+  "missing": [],
+  "fichas": [
+    {
+      "id": 1765,
+      "name": "3 Dueños",
+      "artist_type": "band",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Hip hop",
+      "members": 3,
+      "albums": 17,
+      "no_tracks": 0,
+      "tracks": 101,
+      "no_duration": 10,
+      "no_cover": 0,
+      "no_label": 16,
+      "no_genre": 14,
+      "lote": [
+        "lote1"
+      ],
+      "created": false
+    },
+    {
+      "id": 4269,
+      "name": "Adina Izarra",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": false,
+      "primary_genre": "Música clásica",
+      "members": 1,
+      "albums": 0,
+      "no_tracks": 0,
+      "tracks": 0,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 0,
+      "no_genre": 0,
+      "lote": [
+        "lote1"
+      ],
+      "created": true
+    },
+    {
+      "id": 4239,
+      "name": "Adolescent's Orquesta",
+      "artist_type": "band",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Salsa romántica",
+      "members": 2,
+      "albums": 23,
+      "no_tracks": 0,
+      "tracks": 205,
+      "no_duration": 27,
+      "no_cover": 4,
+      "no_label": 8,
+      "no_genre": 23,
+      "lote": [
+        "lote1"
+      ],
+      "created": true
+    },
+    {
+      "id": 4255,
+      "name": "Akapellah",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Boom bap",
+      "members": 1,
+      "albums": 41,
+      "no_tracks": 0,
+      "tracks": 138,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 32,
+      "no_genre": 41,
+      "lote": [
+        "lote1"
+      ],
+      "created": true
+    },
+    {
+      "id": 3897,
+      "name": "Aldemaro Romero",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "World ethnic",
+      "members": 1,
+      "albums": 69,
+      "no_tracks": 7,
+      "tracks": 808,
+      "no_duration": 338,
+      "no_cover": 10,
+      "no_label": 64,
+      "no_genre": 25,
+      "lote": [
+        "lote1"
+      ],
+      "created": false
+    },
+    {
+      "id": 4270,
+      "name": "Alfredo Rugeles",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": false,
+      "primary_genre": "Música clásica",
+      "members": 1,
+      "albums": 0,
+      "no_tracks": 0,
+      "tracks": 0,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 0,
+      "no_genre": 0,
+      "lote": [
+        "lote1"
+      ],
+      "created": true
+    },
+    {
+      "id": 3676,
+      "name": "Alfredo Sadel",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Música clásica",
+      "members": 1,
+      "albums": 39,
+      "no_tracks": 2,
+      "tracks": 543,
+      "no_duration": 77,
+      "no_cover": 2,
+      "no_label": 38,
+      "no_genre": 30,
+      "lote": [
+        "lote1"
+      ],
+      "created": false
+    },
+    {
+      "id": 4284,
+      "name": "Alfredo del Mónaco",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": false,
+      "primary_genre": "Música de cámara",
+      "members": 1,
+      "albums": 0,
+      "no_tracks": 0,
+      "tracks": 0,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 0,
+      "no_genre": 0,
+      "lote": [
+        "lote1"
+      ],
+      "created": true
+    },
+    {
+      "id": 3677,
+      "name": "Alí Primera",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Folk",
+      "members": 1,
+      "albums": 42,
+      "no_tracks": 3,
+      "tracks": 540,
+      "no_duration": 225,
+      "no_cover": 12,
+      "no_label": 36,
+      "no_genre": 16,
+      "lote": [
+        "lote2"
+      ],
+      "created": false
+    },
+    {
+      "id": 4254,
+      "name": "Aneeka",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Pop latino",
+      "members": 1,
+      "albums": 1,
+      "no_tracks": 0,
+      "tracks": 12,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 0,
+      "no_genre": 1,
+      "lote": [
+        "lote1"
+      ],
+      "created": true
+    },
+    {
+      "id": 4266,
+      "name": "Antonio Estévez",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": false,
+      "primary_genre": "Nacionalismo musical",
+      "members": 1,
+      "albums": 0,
+      "no_tracks": 0,
+      "tracks": 0,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 0,
+      "no_genre": 0,
+      "lote": [
+        "lote1"
+      ],
+      "created": true
+    },
+    {
+      "id": 4263,
+      "name": "Antonio Lauro",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": false,
+      "primary_genre": "Nacionalismo musical",
+      "members": 1,
+      "albums": 0,
+      "no_tracks": 0,
+      "tracks": 0,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 0,
+      "no_genre": 0,
+      "lote": [
+        "lote1"
+      ],
+      "created": true
+    },
+    {
+      "id": 3449,
+      "name": "Aquiles Báez",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Jazz",
+      "members": 1,
+      "albums": 14,
+      "no_tracks": 0,
+      "tracks": 173,
+      "no_duration": 21,
+      "no_cover": 0,
+      "no_label": 7,
+      "no_genre": 6,
+      "lote": [
+        "lote2"
+      ],
+      "created": false
+    },
+    {
+      "id": 4242,
+      "name": "Aquiles Machado",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Ópera",
+      "members": 1,
+      "albums": 0,
+      "no_tracks": 0,
+      "tracks": 0,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 0,
+      "no_genre": 0,
+      "lote": [
+        "lote1"
+      ],
+      "created": true
+    },
+    {
+      "id": 4235,
+      "name": "Arca",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "IDM",
+      "members": 1,
+      "albums": 60,
+      "no_tracks": 1,
+      "tracks": 440,
+      "no_duration": 36,
+      "no_cover": 18,
+      "no_label": 19,
+      "no_genre": 57,
+      "lote": [
+        "lote1"
+      ],
+      "created": true
+    },
+    {
+      "id": 46,
+      "name": "Arkangel",
+      "artist_type": "band",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Heavy metal",
+      "members": 23,
+      "albums": 20,
+      "no_tracks": 1,
+      "tracks": 198,
+      "no_duration": 62,
+      "no_cover": 2,
+      "no_label": 13,
+      "no_genre": 5,
+      "lote": [
+        "lote1"
+      ],
+      "created": false
+    },
+    {
+      "id": 4292,
+      "name": "Armando Martínez",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Golpe llanero",
+      "members": 1,
+      "albums": 1,
+      "no_tracks": 0,
+      "tracks": 14,
+      "no_duration": 0,
+      "no_cover": 1,
+      "no_label": 1,
+      "no_genre": 1,
+      "lote": [
+        "lote2"
+      ],
+      "created": true
+    },
+    {
+      "id": 4315,
+      "name": "Astolfo Romero",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": false,
+      "primary_genre": "Gaita de furro",
+      "members": 1,
+      "albums": 0,
+      "no_tracks": 0,
+      "tracks": 0,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 0,
+      "no_genre": 0,
+      "lote": [
+        "lote2"
+      ],
+      "created": true
+    },
+    {
+      "id": 4236,
+      "name": "Aérea Negrot",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "House",
+      "members": 1,
+      "albums": 5,
+      "no_tracks": 0,
+      "tracks": 36,
+      "no_duration": 4,
+      "no_cover": 0,
+      "no_label": 2,
+      "no_genre": 5,
+      "lote": [
+        "lote1"
+      ],
+      "created": true
+    },
+    {
+      "id": 4313,
+      "name": "Barrio Obrero de Cabimas",
+      "artist_type": "band",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Gaita de furro",
+      "members": 0,
+      "albums": 3,
+      "no_tracks": 0,
+      "tracks": 50,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 3,
+      "no_genre": 3,
+      "lote": [
+        "lote2"
+      ],
+      "created": true
+    },
+    {
+      "id": 4298,
+      "name": "Betsayda Machado y La Parranda El Clavo",
+      "artist_type": "band",
+      "bio": true,
+      "photo": false,
+      "primary_genre": "Tambor afrovenezolano",
+      "members": 0,
+      "albums": 0,
+      "no_tracks": 0,
+      "tracks": 0,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 0,
+      "no_genre": 0,
+      "lote": [
+        "lote2"
+      ],
+      "created": true
+    },
+    {
+      "id": 4311,
+      "name": "Betulio Medina",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": false,
+      "primary_genre": "Gaita",
+      "members": 1,
+      "albums": 0,
+      "no_tracks": 0,
+      "tracks": 0,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 0,
+      "no_genre": 0,
+      "lote": [
+        "lote2"
+      ],
+      "created": true
+    },
+    {
+      "id": 4257,
+      "name": "Big Soto",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Hip hop",
+      "members": 1,
+      "albums": 56,
+      "no_tracks": 0,
+      "tracks": 156,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 49,
+      "no_genre": 56,
+      "lote": [
+        "lote1"
+      ],
+      "created": true
+    },
+    {
+      "id": 4259,
+      "name": "BigBro Blues Band",
+      "artist_type": "band",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Blues",
+      "members": 0,
+      "albums": 2,
+      "no_tracks": 0,
+      "tracks": 16,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 2,
+      "no_genre": 2,
+      "lote": [
+        "lote1"
+      ],
+      "created": true
+    },
+    {
+      "id": 3764,
+      "name": "Billo's Caracas Boys",
+      "artist_type": "band",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Música tropical",
+      "members": 0,
+      "albums": 305,
+      "no_tracks": 41,
+      "tracks": 3622,
+      "no_duration": 1467,
+      "no_cover": 51,
+      "no_label": 259,
+      "no_genre": 178,
+      "lote": [
+        "lote2"
+      ],
+      "created": false
+    },
+    {
+      "id": 53,
+      "name": "C4 Trío",
+      "artist_type": "band",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "World ethnic",
+      "members": 5,
+      "albums": 29,
+      "no_tracks": 4,
+      "tracks": 118,
+      "no_duration": 23,
+      "no_cover": 4,
+      "no_label": 29,
+      "no_genre": 22,
+      "lote": [
+        "lote2"
+      ],
+      "created": false
+    },
+    {
+      "id": 55,
+      "name": "Candy66",
+      "artist_type": "band",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Hard rock",
+      "members": 10,
+      "albums": 33,
+      "no_tracks": 4,
+      "tracks": 192,
+      "no_duration": 49,
+      "no_cover": 2,
+      "no_label": 30,
+      "no_genre": 18,
+      "lote": [
+        "lote1"
+      ],
+      "created": false
+    },
+    {
+      "id": 3684,
+      "name": "Canelita Medina",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Salsa",
+      "members": 1,
+      "albums": 19,
+      "no_tracks": 2,
+      "tracks": 193,
+      "no_duration": 104,
+      "no_cover": 2,
+      "no_label": 17,
+      "no_genre": 6,
+      "lote": [
+        "lote1"
+      ],
+      "created": false
+    },
+    {
+      "id": 57,
+      "name": "Canserbero",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Hip hop",
+      "members": 1,
+      "albums": 26,
+      "no_tracks": 0,
+      "tracks": 162,
+      "no_duration": 3,
+      "no_cover": 1,
+      "no_label": 12,
+      "no_genre": 23,
+      "lote": [
+        "lote1"
+      ],
+      "created": false
+    },
+    {
+      "id": 3387,
+      "name": "Cantoría Alberto Grau",
+      "artist_type": "band",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Música clásica",
+      "members": 1,
+      "albums": 10,
+      "no_tracks": 3,
+      "tracks": 127,
+      "no_duration": 3,
+      "no_cover": 3,
+      "no_label": 10,
+      "no_genre": 5,
+      "lote": [
+        "lote2"
+      ],
+      "created": false
+    },
+    {
+      "id": 58,
+      "name": "Caramelos De Cianuro",
+      "artist_type": "band",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Rock",
+      "members": 7,
+      "albums": 35,
+      "no_tracks": 1,
+      "tracks": 315,
+      "no_duration": 63,
+      "no_cover": 9,
+      "no_label": 28,
+      "no_genre": 10,
+      "lote": [
+        "lote1"
+      ],
+      "created": false
+    },
+    {
+      "id": 4308,
+      "name": "Cardenales del Éxito",
+      "artist_type": "band",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Gaita de furro",
+      "members": 3,
+      "albums": 22,
+      "no_tracks": 0,
+      "tracks": 250,
+      "no_duration": 12,
+      "no_cover": 0,
+      "no_label": 21,
+      "no_genre": 22,
+      "lote": [
+        "lote2"
+      ],
+      "created": true
+    },
+    {
+      "id": 2733,
+      "name": "Cardopusher",
+      "artist_type": "project",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Electrónica",
+      "members": 1,
+      "albums": 57,
+      "no_tracks": 17,
+      "tracks": 224,
+      "no_duration": 4,
+      "no_cover": 24,
+      "no_label": 20,
+      "no_genre": 57,
+      "lote": [
+        "lote1"
+      ],
+      "created": false
+    },
+    {
+      "id": 1801,
+      "name": "Carlos Baute",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Pop latino",
+      "members": 1,
+      "albums": 68,
+      "no_tracks": 0,
+      "tracks": 391,
+      "no_duration": 74,
+      "no_cover": 1,
+      "no_label": 60,
+      "no_genre": 49,
+      "lote": [
+        "lote1"
+      ],
+      "created": false
+    },
+    {
+      "id": 3811,
+      "name": "Carota, Ñema y Tajá",
+      "artist_type": "band",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Música tradicional",
+      "members": 0,
+      "albums": 23,
+      "no_tracks": 2,
+      "tracks": 171,
+      "no_duration": 38,
+      "no_cover": 2,
+      "no_label": 23,
+      "no_genre": 12,
+      "lote": [
+        "lote2"
+      ],
+      "created": false
+    },
+    {
+      "id": 2679,
+      "name": "Cecilia Todd",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Fusión latina",
+      "members": 1,
+      "albums": 24,
+      "no_tracks": 7,
+      "tracks": 182,
+      "no_duration": 54,
+      "no_cover": 7,
+      "no_label": 23,
+      "no_genre": 11,
+      "lote": [
+        "lote2"
+      ],
+      "created": false
+    },
+    {
+      "id": 3689,
+      "name": "Chelique Sarabia",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Fusión latina",
+      "members": 1,
+      "albums": 27,
+      "no_tracks": 14,
+      "tracks": 159,
+      "no_duration": 138,
+      "no_cover": 14,
+      "no_label": 27,
+      "no_genre": 15,
+      "lote": [
+        "lote2"
+      ],
+      "created": false
+    },
+    {
+      "id": 4247,
+      "name": "Chino & Nacho",
+      "artist_type": "duo",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Reggaetón",
+      "members": 2,
+      "albums": 38,
+      "no_tracks": 0,
+      "tracks": 175,
+      "no_duration": 13,
+      "no_cover": 1,
+      "no_label": 15,
+      "no_genre": 38,
+      "lote": [
+        "lote1"
+      ],
+      "created": true
+    },
+    {
+      "id": 4304,
+      "name": "Chucho Corrales",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": false,
+      "primary_genre": "Bambuco",
+      "members": 1,
+      "albums": 0,
+      "no_tracks": 0,
+      "tracks": 0,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 0,
+      "no_genre": 0,
+      "lote": [
+        "lote2"
+      ],
+      "created": true
+    },
+    {
+      "id": 4301,
+      "name": "Cruz Quinal",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": false,
+      "primary_genre": "Merengue oriental",
+      "members": 1,
+      "albums": 0,
+      "no_tracks": 0,
+      "tracks": 0,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 0,
+      "no_genre": 0,
+      "lote": [
+        "lote2"
+      ],
+      "created": true
+    },
+    {
+      "id": 70,
+      "name": "Culto Oculto",
+      "artist_type": "band",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Rock alternativo",
+      "members": 7,
+      "albums": 23,
+      "no_tracks": 0,
+      "tracks": 103,
+      "no_duration": 9,
+      "no_cover": 1,
+      "no_label": 23,
+      "no_genre": 16,
+      "lote": [
+        "lote1"
+      ],
+      "created": false
+    },
+    {
+      "id": 4237,
+      "name": "DJ Babatr",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": false,
+      "primary_genre": "Techno",
+      "members": 1,
+      "albums": 0,
+      "no_tracks": 0,
+      "tracks": 0,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 0,
+      "no_genre": 0,
+      "lote": [
+        "lote1"
+      ],
+      "created": true
+    },
+    {
+      "id": 4323,
+      "name": "Daniel Calveti",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Música cristiana contemporánea",
+      "members": 1,
+      "albums": 19,
+      "no_tracks": 1,
+      "tracks": 97,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 18,
+      "no_genre": 19,
+      "lote": [
+        "lote2"
+      ],
+      "created": true
+    },
+    {
+      "id": 4249,
+      "name": "Danny Ocean",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Pop latino",
+      "members": 1,
+      "albums": 37,
+      "no_tracks": 0,
+      "tracks": 101,
+      "no_duration": 0,
+      "no_cover": 1,
+      "no_label": 25,
+      "no_genre": 37,
+      "lote": [
+        "lote1"
+      ],
+      "created": true
+    },
+    {
+      "id": 76,
+      "name": "Dermis Tatú",
+      "artist_type": "band",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Rock alternativo",
+      "members": 4,
+      "albums": 8,
+      "no_tracks": 0,
+      "tracks": 63,
+      "no_duration": 10,
+      "no_cover": 4,
+      "no_label": 8,
+      "no_genre": 3,
+      "lote": [
+        "lote1"
+      ],
+      "created": false
+    },
+    {
+      "id": 78,
+      "name": "Desorden Público",
+      "artist_type": "band",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Ska",
+      "members": 20,
+      "albums": 66,
+      "no_tracks": 8,
+      "tracks": 604,
+      "no_duration": 130,
+      "no_cover": 6,
+      "no_label": 58,
+      "no_genre": 37,
+      "lote": [
+        "lote1"
+      ],
+      "created": false
+    },
+    {
+      "id": 4261,
+      "name": "Diego Ayala Raffalli",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": false,
+      "primary_genre": "Banda sonora",
+      "members": 1,
+      "albums": 0,
+      "no_tracks": 0,
+      "tracks": 0,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 0,
+      "no_genre": 0,
+      "lote": [
+        "lote1"
+      ],
+      "created": true
+    },
+    {
+      "id": 270,
+      "name": "Dimension Latina",
+      "artist_type": "band",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Salsa",
+      "members": 65,
+      "albums": 93,
+      "no_tracks": 11,
+      "tracks": 900,
+      "no_duration": 284,
+      "no_cover": 12,
+      "no_label": 65,
+      "no_genre": 50,
+      "lote": [
+        "lote1"
+      ],
+      "created": false
+    },
+    {
+      "id": 4244,
+      "name": "Diveana",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Tecnomerengue",
+      "members": 1,
+      "albums": 33,
+      "no_tracks": 0,
+      "tracks": 210,
+      "no_duration": 8,
+      "no_cover": 2,
+      "no_label": 26,
+      "no_genre": 33,
+      "lote": [
+        "lote1"
+      ],
+      "created": true
+    },
+    {
+      "id": 4243,
+      "name": "Edgar Bastidas",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": false,
+      "primary_genre": "Ópera",
+      "members": 1,
+      "albums": 0,
+      "no_tracks": 0,
+      "tracks": 0,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 0,
+      "no_genre": 0,
+      "lote": [
+        "lote1"
+      ],
+      "created": true
+    },
+    {
+      "id": 3480,
+      "name": "Edward Simon",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Jazz",
+      "members": 1,
+      "albums": 25,
+      "no_tracks": 6,
+      "tracks": 159,
+      "no_duration": 19,
+      "no_cover": 6,
+      "no_label": 20,
+      "no_genre": 12,
+      "lote": [
+        "lote1"
+      ],
+      "created": false
+    },
+    {
+      "id": 3944,
+      "name": "El Cuarteto",
+      "artist_type": "band",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "World ethnic",
+      "members": 4,
+      "albums": 24,
+      "no_tracks": 4,
+      "tracks": 279,
+      "no_duration": 44,
+      "no_cover": 8,
+      "no_label": 21,
+      "no_genre": 11,
+      "lote": [
+        "lote2"
+      ],
+      "created": false
+    },
+    {
+      "id": 1426,
+      "name": "El Cuarto del Blues",
+      "artist_type": "band",
+      "bio": true,
+      "photo": false,
+      "primary_genre": "Pop rock",
+      "members": 14,
+      "albums": 1,
+      "no_tracks": 0,
+      "tracks": 7,
+      "no_duration": 7,
+      "no_cover": 0,
+      "no_label": 1,
+      "no_genre": 0,
+      "lote": [
+        "lote1"
+      ],
+      "created": false
+    },
+    {
+      "id": 4252,
+      "name": "Elena Rose",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Pop latino",
+      "members": 1,
+      "albums": 27,
+      "no_tracks": 0,
+      "tracks": 53,
+      "no_duration": 0,
+      "no_cover": 4,
+      "no_label": 10,
+      "no_genre": 27,
+      "lote": [
+        "lote1"
+      ],
+      "created": true
+    },
+    {
+      "id": 4286,
+      "name": "Eneas Perdomo",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Pasaje",
+      "members": 1,
+      "albums": 11,
+      "no_tracks": 0,
+      "tracks": 130,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 10,
+      "no_genre": 11,
+      "lote": [
+        "lote2"
+      ],
+      "created": true
+    },
+    {
+      "id": 3950,
+      "name": "Ensamble Gurrufío",
+      "artist_type": "band",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "World ethnic",
+      "members": 6,
+      "albums": 23,
+      "no_tracks": 3,
+      "tracks": 264,
+      "no_duration": 23,
+      "no_cover": 7,
+      "no_label": 22,
+      "no_genre": 13,
+      "lote": [
+        "lote2"
+      ],
+      "created": false
+    },
+    {
+      "id": 3400,
+      "name": "Evencio Castellanos",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Música clásica",
+      "members": 1,
+      "albums": 4,
+      "no_tracks": 2,
+      "tracks": 38,
+      "no_duration": 0,
+      "no_cover": 2,
+      "no_label": 4,
+      "no_genre": 2,
+      "lote": [
+        "lote1"
+      ],
+      "created": false
+    },
+    {
+      "id": 4317,
+      "name": "Family Ground",
+      "artist_type": "band",
+      "bio": true,
+      "photo": false,
+      "primary_genre": "Calipso",
+      "members": 0,
+      "albums": 0,
+      "no_tracks": 0,
+      "tracks": 0,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 0,
+      "no_genre": 0,
+      "lote": [
+        "lote2"
+      ],
+      "created": true
+    },
+    {
+      "id": 3700,
+      "name": "Federico y Su Combo Latino",
+      "artist_type": "band",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Salsa",
+      "members": 8,
+      "albums": 31,
+      "no_tracks": 10,
+      "tracks": 208,
+      "no_duration": 170,
+      "no_cover": 12,
+      "no_label": 24,
+      "no_genre": 13,
+      "lote": [
+        "lote1"
+      ],
+      "created": false
+    },
+    {
+      "id": 4241,
+      "name": "Fedora Alemán",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": false,
+      "primary_genre": "Ópera",
+      "members": 1,
+      "albums": 0,
+      "no_tracks": 0,
+      "tracks": 0,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 0,
+      "no_genre": 0,
+      "lote": [
+        "lote1"
+      ],
+      "created": true
+    },
+    {
+      "id": 3785,
+      "name": "Felipe Pirela",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Bolero",
+      "members": 1,
+      "albums": 51,
+      "no_tracks": 21,
+      "tracks": 383,
+      "no_duration": 262,
+      "no_cover": 23,
+      "no_label": 48,
+      "no_genre": 24,
+      "lote": [
+        "lote1"
+      ],
+      "created": false
+    },
+    {
+      "id": 3703,
+      "name": "Floria Márquez",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Bolero",
+      "members": 1,
+      "albums": 11,
+      "no_tracks": 1,
+      "tracks": 132,
+      "no_duration": 63,
+      "no_cover": 1,
+      "no_label": 10,
+      "no_genre": 1,
+      "lote": [
+        "lote1"
+      ],
+      "created": false
+    },
+    {
+      "id": 4299,
+      "name": "Francisco Mata",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": false,
+      "primary_genre": "Polo oriental",
+      "members": 1,
+      "albums": 0,
+      "no_tracks": 0,
+      "tracks": 0,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 0,
+      "no_genre": 0,
+      "lote": [
+        "lote2"
+      ],
+      "created": true
+    },
+    {
+      "id": 4288,
+      "name": "Francisco Montoya",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Golpe llanero",
+      "members": 1,
+      "albums": 10,
+      "no_tracks": 0,
+      "tracks": 118,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 10,
+      "no_genre": 10,
+      "lote": [
+        "lote2"
+      ],
+      "created": true
+    },
+    {
+      "id": 3816,
+      "name": "Francisco Pacheco",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Música tradicional",
+      "members": 1,
+      "albums": 4,
+      "no_tracks": 4,
+      "tracks": 0,
+      "no_duration": 0,
+      "no_cover": 4,
+      "no_label": 4,
+      "no_genre": 4,
+      "lote": [
+        "lote2"
+      ],
+      "created": false
+    },
+    {
+      "id": 99,
+      "name": "Franco De Vita",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Pop",
+      "members": 1,
+      "albums": 77,
+      "no_tracks": 2,
+      "tracks": 941,
+      "no_duration": 379,
+      "no_cover": 15,
+      "no_label": 44,
+      "no_genre": 34,
+      "lote": [
+        "lote1"
+      ],
+      "created": false
+    },
+    {
+      "id": 4282,
+      "name": "Fur Coat",
+      "artist_type": "band",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Techno",
+      "members": 1,
+      "albums": 29,
+      "no_tracks": 0,
+      "tracks": 119,
+      "no_duration": 0,
+      "no_cover": 3,
+      "no_label": 12,
+      "no_genre": 29,
+      "lote": [
+        "lote1"
+      ],
+      "created": true
+    },
+    {
+      "id": 4258,
+      "name": "Gabylonia",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Hip hop",
+      "members": 1,
+      "albums": 26,
+      "no_tracks": 0,
+      "tracks": 48,
+      "no_duration": 0,
+      "no_cover": 1,
+      "no_label": 25,
+      "no_genre": 26,
+      "lote": [
+        "lote1"
+      ],
+      "created": true
+    },
+    {
+      "id": 3500,
+      "name": "Gerry Weil",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Jazz",
+      "members": 1,
+      "albums": 20,
+      "no_tracks": 0,
+      "tracks": 211,
+      "no_duration": 10,
+      "no_cover": 0,
+      "no_label": 19,
+      "no_genre": 9,
+      "lote": [
+        "lote1"
+      ],
+      "created": false
+    },
+    {
+      "id": 4309,
+      "name": "Gran Coquivacoa",
+      "artist_type": "band",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Gaita de furro",
+      "members": 0,
+      "albums": 30,
+      "no_tracks": 0,
+      "tracks": 355,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 27,
+      "no_genre": 30,
+      "lote": [
+        "lote2"
+      ],
+      "created": true
+    },
+    {
+      "id": 4297,
+      "name": "Grupo Madera",
+      "artist_type": "band",
+      "bio": true,
+      "photo": false,
+      "primary_genre": "Tambor afrovenezolano",
+      "members": 0,
+      "albums": 0,
+      "no_tracks": 0,
+      "tracks": 0,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 0,
+      "no_genre": 0,
+      "lote": [
+        "lote2"
+      ],
+      "created": true
+    },
+    {
+      "id": 3709,
+      "name": "Guaco",
+      "artist_type": "band",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Gaita",
+      "members": 14,
+      "albums": 103,
+      "no_tracks": 5,
+      "tracks": 1109,
+      "no_duration": 328,
+      "no_cover": 9,
+      "no_label": 72,
+      "no_genre": 49,
+      "lote": [
+        "lote1"
+      ],
+      "created": false
+    },
+    {
+      "id": 3821,
+      "name": "Gualberto Ibarreto",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Música tradicional",
+      "members": 1,
+      "albums": 48,
+      "no_tracks": 7,
+      "tracks": 543,
+      "no_duration": 239,
+      "no_cover": 7,
+      "no_label": 37,
+      "no_genre": 26,
+      "lote": [
+        "lote2"
+      ],
+      "created": false
+    },
+    {
+      "id": 4272,
+      "name": "Guillermo Castillo Bustamante",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": false,
+      "primary_genre": "Bolero",
+      "members": 1,
+      "albums": 0,
+      "no_tracks": 0,
+      "tracks": 0,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 0,
+      "no_genre": 0,
+      "lote": [
+        "lote1"
+      ],
+      "created": true
+    },
+    {
+      "id": 1960,
+      "name": "Guillermo Dávila",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Pop",
+      "members": 1,
+      "albums": 31,
+      "no_tracks": 1,
+      "tracks": 386,
+      "no_duration": 122,
+      "no_cover": 2,
+      "no_label": 26,
+      "no_genre": 12,
+      "lote": [
+        "lote1"
+      ],
+      "created": false
+    },
+    {
+      "id": 4271,
+      "name": "Gustavo Dudamel",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Ópera",
+      "members": 1,
+      "albums": 11,
+      "no_tracks": 1,
+      "tracks": 78,
+      "no_duration": 4,
+      "no_cover": 1,
+      "no_label": 4,
+      "no_genre": 11,
+      "lote": [
+        "lote1"
+      ],
+      "created": true
+    },
+    {
+      "id": 3823,
+      "name": "Hernán Marín",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Música tradicional",
+      "members": 1,
+      "albums": 13,
+      "no_tracks": 1,
+      "tracks": 134,
+      "no_duration": 22,
+      "no_cover": 1,
+      "no_label": 13,
+      "no_genre": 6,
+      "lote": [
+        "lote2"
+      ],
+      "created": false
+    },
+    {
+      "id": 3710,
+      "name": "Hugo Blanco",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Música tropical",
+      "members": 1,
+      "albums": 70,
+      "no_tracks": 4,
+      "tracks": 801,
+      "no_duration": 600,
+      "no_cover": 4,
+      "no_label": 57,
+      "no_genre": 25,
+      "lote": [
+        "lote2"
+      ],
+      "created": false
+    },
+    {
+      "id": 4295,
+      "name": "Ignacio “Indio” Figueredo",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": false,
+      "primary_genre": "Pasaje",
+      "members": 1,
+      "albums": 0,
+      "no_tracks": 0,
+      "tracks": 0,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 0,
+      "no_genre": 0,
+      "lote": [
+        "lote2"
+      ],
+      "created": true
+    },
+    {
+      "id": 116,
+      "name": "Ilan Chester",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Pop",
+      "members": 1,
+      "albums": 66,
+      "no_tracks": 6,
+      "tracks": 758,
+      "no_duration": 220,
+      "no_cover": 23,
+      "no_label": 54,
+      "no_genre": 23,
+      "lote": [
+        "lote1"
+      ],
+      "created": false
+    },
+    {
+      "id": 4267,
+      "name": "Inocente Carreño",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": false,
+      "primary_genre": "Nacionalismo musical",
+      "members": 1,
+      "albums": 0,
+      "no_tracks": 0,
+      "tracks": 0,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 0,
+      "no_genre": 0,
+      "lote": [
+        "lote1"
+      ],
+      "created": true
+    },
+    {
+      "id": 4273,
+      "name": "Irepelusa",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "R&B",
+      "members": 1,
+      "albums": 28,
+      "no_tracks": 0,
+      "tracks": 54,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 28,
+      "no_genre": 28,
+      "lote": [
+        "lote1"
+      ],
+      "created": true
+    },
+    {
+      "id": 4294,
+      "name": "Iris Gavidia",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": false,
+      "primary_genre": "Pasaje",
+      "members": 1,
+      "albums": 0,
+      "no_tracks": 0,
+      "tracks": 0,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 0,
+      "no_genre": 0,
+      "lote": [
+        "lote2"
+      ],
+      "created": true
+    },
+    {
+      "id": 4293,
+      "name": "Iván José",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": false,
+      "primary_genre": "Pasaje",
+      "members": 1,
+      "albums": 0,
+      "no_tracks": 0,
+      "tracks": 0,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 0,
+      "no_genre": 0,
+      "lote": [
+        "lote2"
+      ],
+      "created": true
+    },
+    {
+      "id": 4250,
+      "name": "Jerry Di",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Reggaetón",
+      "members": 1,
+      "albums": 31,
+      "no_tracks": 0,
+      "tracks": 50,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 26,
+      "no_genre": 31,
+      "lote": [
+        "lote1"
+      ],
+      "created": true
+    },
+    {
+      "id": 4253,
+      "name": "Joaquina",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Pop latino",
+      "members": 1,
+      "albums": 23,
+      "no_tracks": 0,
+      "tracks": 73,
+      "no_duration": 0,
+      "no_cover": 1,
+      "no_label": 13,
+      "no_genre": 23,
+      "lote": [
+        "lote1"
+      ],
+      "created": true
+    },
+    {
+      "id": 4291,
+      "name": "Jorge Guerrero",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Pasaje",
+      "members": 1,
+      "albums": 25,
+      "no_tracks": 0,
+      "tracks": 148,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 24,
+      "no_genre": 25,
+      "lote": [
+        "lote2"
+      ],
+      "created": true
+    },
+    {
+      "id": 4246,
+      "name": "Joseph Palacios",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Bachata",
+      "members": 1,
+      "albums": 12,
+      "no_tracks": 0,
+      "tracks": 16,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 12,
+      "no_genre": 12,
+      "lote": [
+        "lote1"
+      ],
+      "created": true
+    },
+    {
+      "id": 4234,
+      "name": "José Coraspe",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Ambient",
+      "members": 1,
+      "albums": 4,
+      "no_tracks": 0,
+      "tracks": 17,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 4,
+      "no_genre": 4,
+      "lote": [
+        "lote1"
+      ],
+      "created": true
+    },
+    {
+      "id": 3756,
+      "name": "José Luis Rodríguez",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Pop latino",
+      "members": 1,
+      "albums": 137,
+      "no_tracks": 24,
+      "tracks": 1346,
+      "no_duration": 335,
+      "no_cover": 29,
+      "no_label": 115,
+      "no_genre": 76,
+      "lote": [
+        "lote1"
+      ],
+      "created": false
+    },
+    {
+      "id": 4268,
+      "name": "Juan Bautista Plaza",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": false,
+      "primary_genre": "Música sacra",
+      "members": 1,
+      "albums": 0,
+      "no_tracks": 0,
+      "tracks": 0,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 0,
+      "no_genre": 0,
+      "lote": [
+        "lote1"
+      ],
+      "created": true
+    },
+    {
+      "id": 3829,
+      "name": "Juan Vicente Torrealba",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Música tradicional",
+      "members": 1,
+      "albums": 100,
+      "no_tracks": 12,
+      "tracks": 1092,
+      "no_duration": 431,
+      "no_cover": 12,
+      "no_label": 99,
+      "no_genre": 41,
+      "lote": [
+        "lote2"
+      ],
+      "created": false
+    },
+    {
+      "id": 1980,
+      "name": "Karina",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Pop",
+      "members": 1,
+      "albums": 20,
+      "no_tracks": 0,
+      "tracks": 262,
+      "no_duration": 133,
+      "no_cover": 3,
+      "no_label": 15,
+      "no_genre": 2,
+      "lote": [
+        "lote1"
+      ],
+      "created": false
+    },
+    {
+      "id": 4278,
+      "name": "Karolina con K",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": false,
+      "primary_genre": "Tecnomerengue",
+      "members": 1,
+      "albums": 0,
+      "no_tracks": 0,
+      "tracks": 0,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 0,
+      "no_genre": 0,
+      "lote": [
+        "lote1"
+      ],
+      "created": true
+    },
+    {
+      "id": 1981,
+      "name": "Kiara",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Pop latino",
+      "members": 1,
+      "albums": 20,
+      "no_tracks": 1,
+      "tracks": 268,
+      "no_duration": 100,
+      "no_cover": 1,
+      "no_label": 17,
+      "no_genre": 5,
+      "lote": [
+        "lote1"
+      ],
+      "created": false
+    },
+    {
+      "id": 4280,
+      "name": "LAGOS",
+      "artist_type": "band",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Pop latino",
+      "members": 2,
+      "albums": 28,
+      "no_tracks": 0,
+      "tracks": 65,
+      "no_duration": 0,
+      "no_cover": 1,
+      "no_label": 23,
+      "no_genre": 28,
+      "lote": [
+        "lote1"
+      ],
+      "created": true
+    },
+    {
+      "id": 4322,
+      "name": "La Rondallita",
+      "artist_type": "band",
+      "bio": true,
+      "photo": false,
+      "primary_genre": "Música navideña",
+      "members": 0,
+      "albums": 0,
+      "no_tracks": 0,
+      "tracks": 0,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 0,
+      "no_genre": 0,
+      "lote": [
+        "lote2"
+      ],
+      "created": true
+    },
+    {
+      "id": 139,
+      "name": "La Vida Bohème",
+      "artist_type": "band",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Rock alternativo",
+      "members": 7,
+      "albums": 37,
+      "no_tracks": 3,
+      "tracks": 177,
+      "no_duration": 18,
+      "no_cover": 9,
+      "no_label": 33,
+      "no_genre": 26,
+      "lote": [
+        "lote1"
+      ],
+      "created": false
+    },
+    {
+      "id": 1496,
+      "name": "Lasso",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Pop",
+      "members": 1,
+      "albums": 53,
+      "no_tracks": 0,
+      "tracks": 127,
+      "no_duration": 0,
+      "no_cover": 1,
+      "no_label": 38,
+      "no_genre": 51,
+      "lote": [
+        "lote1"
+      ],
+      "created": false
+    },
+    {
+      "id": 149,
+      "name": "Lil Supa'",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Spoken word",
+      "members": 1,
+      "albums": 36,
+      "no_tracks": 0,
+      "tracks": 190,
+      "no_duration": 8,
+      "no_cover": 0,
+      "no_label": 26,
+      "no_genre": 35,
+      "lote": [
+        "lote1"
+      ],
+      "created": false
+    },
+    {
+      "id": 3831,
+      "name": "Lilia Vera",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Música tradicional",
+      "members": 1,
+      "albums": 24,
+      "no_tracks": 8,
+      "tracks": 226,
+      "no_duration": 114,
+      "no_cover": 8,
+      "no_label": 21,
+      "no_genre": 14,
+      "lote": [
+        "lote2"
+      ],
+      "created": false
+    },
+    {
+      "id": 3529,
+      "name": "Linda Briceño",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Jazz latino",
+      "members": 1,
+      "albums": 1,
+      "no_tracks": 0,
+      "tracks": 12,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 1,
+      "no_genre": 0,
+      "lote": [
+        "lote1"
+      ],
+      "created": false
+    },
+    {
+      "id": 152,
+      "name": "Los Amigos Invisibles",
+      "artist_type": "band",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Funk",
+      "members": 6,
+      "albums": 47,
+      "no_tracks": 1,
+      "tracks": 454,
+      "no_duration": 83,
+      "no_cover": 3,
+      "no_label": 29,
+      "no_genre": 29,
+      "lote": [
+        "lote1"
+      ],
+      "created": false
+    },
+    {
+      "id": 4318,
+      "name": "Los Antaños del Stadium",
+      "artist_type": "band",
+      "bio": true,
+      "photo": false,
+      "primary_genre": "Merengue venezolano",
+      "members": 0,
+      "albums": 2,
+      "no_tracks": 1,
+      "tracks": 8,
+      "no_duration": 8,
+      "no_cover": 2,
+      "no_label": 0,
+      "no_genre": 2,
+      "lote": [
+        "lote2"
+      ],
+      "created": true
+    },
+    {
+      "id": 3832,
+      "name": "Los Cañoneros",
+      "artist_type": "band",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Música tradicional",
+      "members": 10,
+      "albums": 6,
+      "no_tracks": 0,
+      "tracks": 76,
+      "no_duration": 62,
+      "no_cover": 0,
+      "no_label": 6,
+      "no_genre": 0,
+      "lote": [
+        "lote1"
+      ],
+      "created": false
+    },
+    {
+      "id": 3801,
+      "name": "Los Cuñaos",
+      "artist_type": "band",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Música tradicional",
+      "members": 22,
+      "albums": 20,
+      "no_tracks": 4,
+      "tracks": 188,
+      "no_duration": 104,
+      "no_cover": 4,
+      "no_label": 20,
+      "no_genre": 9,
+      "lote": [
+        "lote2"
+      ],
+      "created": false
+    },
+    {
+      "id": 4279,
+      "name": "Los Fantasmas del Caribe",
+      "artist_type": "band",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Tecnomerengue",
+      "members": 0,
+      "albums": 7,
+      "no_tracks": 0,
+      "tracks": 73,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 5,
+      "no_genre": 7,
+      "lote": [
+        "lote1"
+      ],
+      "created": true
+    },
+    {
+      "id": 3794,
+      "name": "Los Melódicos",
+      "artist_type": "band",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Música tropical",
+      "members": 1,
+      "albums": 141,
+      "no_tracks": 0,
+      "tracks": 1701,
+      "no_duration": 846,
+      "no_cover": 1,
+      "no_label": 129,
+      "no_genre": 50,
+      "lote": [
+        "lote1"
+      ],
+      "created": false
+    },
+    {
+      "id": 159,
+      "name": "Los Mesoneros",
+      "artist_type": "band",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Rock alternativo",
+      "members": 5,
+      "albums": 30,
+      "no_tracks": 0,
+      "tracks": 127,
+      "no_duration": 8,
+      "no_cover": 4,
+      "no_label": 28,
+      "no_genre": 20,
+      "lote": [
+        "lote1"
+      ],
+      "created": false
+    },
+    {
+      "id": 4306,
+      "name": "Los Montañeros",
+      "artist_type": "band",
+      "bio": true,
+      "photo": false,
+      "primary_genre": "Bambuco",
+      "members": 0,
+      "albums": 0,
+      "no_tracks": 0,
+      "tracks": 0,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 0,
+      "no_genre": 0,
+      "lote": [
+        "lote2"
+      ],
+      "created": true
+    },
+    {
+      "id": 4319,
+      "name": "Los Tucusitos",
+      "artist_type": "band",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Aguinaldo",
+      "members": 0,
+      "albums": 1,
+      "no_tracks": 0,
+      "tracks": 12,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 1,
+      "no_genre": 1,
+      "lote": [
+        "lote2"
+      ],
+      "created": true
+    },
+    {
+      "id": 4303,
+      "name": "Luis Felipe Ramón y Rivera",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": false,
+      "primary_genre": "Bambuco",
+      "members": 1,
+      "albums": 0,
+      "no_tracks": 0,
+      "tracks": 0,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 0,
+      "no_genre": 0,
+      "lote": [
+        "lote2"
+      ],
+      "created": true
+    },
+    {
+      "id": 4300,
+      "name": "Luis Mariano Rivera",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": false,
+      "primary_genre": "Polo oriental",
+      "members": 1,
+      "albums": 0,
+      "no_tracks": 0,
+      "tracks": 0,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 0,
+      "no_genre": 0,
+      "lote": [
+        "lote2"
+      ],
+      "created": true
+    },
+    {
+      "id": 3833,
+      "name": "Luis Silva",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Música tradicional",
+      "members": 1,
+      "albums": 55,
+      "no_tracks": 7,
+      "tracks": 522,
+      "no_duration": 231,
+      "no_cover": 9,
+      "no_label": 50,
+      "no_genre": 29,
+      "lote": [
+        "lote2"
+      ],
+      "created": false
+    },
+    {
+      "id": 3890,
+      "name": "Magdalena Sánchez",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": false,
+      "primary_genre": "Música tradicional",
+      "members": 1,
+      "albums": 2,
+      "no_tracks": 0,
+      "tracks": 24,
+      "no_duration": 24,
+      "no_cover": 0,
+      "no_label": 2,
+      "no_genre": 0,
+      "lote": [
+        "lote2"
+      ],
+      "created": false
+    },
+    {
+      "id": 4310,
+      "name": "Maracaibo 15",
+      "artist_type": "band",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Gaita",
+      "members": 1,
+      "albums": 6,
+      "no_tracks": 0,
+      "tracks": 73,
+      "no_duration": 10,
+      "no_cover": 1,
+      "no_label": 4,
+      "no_genre": 6,
+      "lote": [
+        "lote2"
+      ],
+      "created": true
+    },
+    {
+      "id": 4302,
+      "name": "Marco Antonio Rivera Useche",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": false,
+      "primary_genre": "Bambuco",
+      "members": 1,
+      "albums": 0,
+      "no_tracks": 0,
+      "tracks": 0,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 0,
+      "no_genre": 0,
+      "lote": [
+        "lote2"
+      ],
+      "created": true
+    },
+    {
+      "id": 2861,
+      "name": "María Rivas",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Jazz",
+      "members": 1,
+      "albums": 14,
+      "no_tracks": 1,
+      "tracks": 171,
+      "no_duration": 31,
+      "no_cover": 2,
+      "no_label": 12,
+      "no_genre": 5,
+      "lote": [
+        "lote1"
+      ],
+      "created": false
+    },
+    {
+      "id": 3797,
+      "name": "María Teresa Chacín",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Música tradicional",
+      "members": 1,
+      "albums": 59,
+      "no_tracks": 8,
+      "tracks": 667,
+      "no_duration": 235,
+      "no_cover": 9,
+      "no_label": 56,
+      "no_genre": 19,
+      "lote": [
+        "lote2"
+      ],
+      "created": false
+    },
+    {
+      "id": 4248,
+      "name": "Mau y Ricky",
+      "artist_type": "duo",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Pop latino",
+      "members": 2,
+      "albums": 40,
+      "no_tracks": 0,
+      "tracks": 128,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 10,
+      "no_genre": 40,
+      "lote": [
+        "lote1"
+      ],
+      "created": true
+    },
+    {
+      "id": 4251,
+      "name": "Micro TDH",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Trap",
+      "members": 1,
+      "albums": 53,
+      "no_tracks": 0,
+      "tracks": 116,
+      "no_duration": 0,
+      "no_cover": 1,
+      "no_label": 47,
+      "no_genre": 53,
+      "lote": [
+        "lote1"
+      ],
+      "created": true
+    },
+    {
+      "id": 4245,
+      "name": "Miguel Moly",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Tecnomerengue",
+      "members": 1,
+      "albums": 30,
+      "no_tracks": 0,
+      "tracks": 129,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 29,
+      "no_genre": 30,
+      "lote": [
+        "lote1"
+      ],
+      "created": true
+    },
+    {
+      "id": 2794,
+      "name": "Miguel Noya",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "New age",
+      "members": 1,
+      "albums": 24,
+      "no_tracks": 12,
+      "tracks": 112,
+      "no_duration": 40,
+      "no_cover": 11,
+      "no_label": 21,
+      "no_genre": 18,
+      "lote": [
+        "lote1"
+      ],
+      "created": false
+    },
+    {
+      "id": 3796,
+      "name": "Mirla Castellanos",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Pop latino",
+      "members": 1,
+      "albums": 45,
+      "no_tracks": 0,
+      "tracks": 526,
+      "no_duration": 311,
+      "no_cover": 0,
+      "no_label": 42,
+      "no_genre": 15,
+      "lote": [
+        "lote1"
+      ],
+      "created": false
+    },
+    {
+      "id": 4265,
+      "name": "Modesta Bor",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": false,
+      "primary_genre": "Música coral",
+      "members": 1,
+      "albums": 0,
+      "no_tracks": 0,
+      "tracks": 0,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 0,
+      "no_genre": 0,
+      "lote": [
+        "lote1"
+      ],
+      "created": true
+    },
+    {
+      "id": 4274,
+      "name": "Motherflowers",
+      "artist_type": "band",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Rap experimental",
+      "members": 3,
+      "albums": 49,
+      "no_tracks": 0,
+      "tracks": 102,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 48,
+      "no_genre": 49,
+      "lote": [
+        "lote1"
+      ],
+      "created": true
+    },
+    {
+      "id": 4260,
+      "name": "Nascuy Linares",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": false,
+      "primary_genre": "Banda sonora",
+      "members": 1,
+      "albums": 0,
+      "no_tracks": 0,
+      "tracks": 0,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 0,
+      "no_genre": 0,
+      "lote": [
+        "lote1"
+      ],
+      "created": true
+    },
+    {
+      "id": 3732,
+      "name": "Natusha",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Tecnomerengue",
+      "members": 1,
+      "albums": 21,
+      "no_tracks": 1,
+      "tracks": 219,
+      "no_duration": 57,
+      "no_cover": 1,
+      "no_label": 20,
+      "no_genre": 11,
+      "lote": [
+        "lote1"
+      ],
+      "created": false
+    },
+    {
+      "id": 1132,
+      "name": "Negus Nagast",
+      "artist_type": "band",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Pop rock",
+      "members": 6,
+      "albums": 2,
+      "no_tracks": 0,
+      "tracks": 28,
+      "no_duration": 19,
+      "no_cover": 0,
+      "no_label": 2,
+      "no_genre": 0,
+      "lote": [
+        "lote1"
+      ],
+      "created": false
+    },
+    {
+      "id": 4276,
+      "name": "Nelson Arrieta",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": false,
+      "primary_genre": "Salsa romántica",
+      "members": 1,
+      "albums": 0,
+      "no_tracks": 0,
+      "tracks": 0,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 0,
+      "no_genre": 0,
+      "lote": [
+        "lote1"
+      ],
+      "created": true
+    },
+    {
+      "id": 4256,
+      "name": "Neutro Shorty",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Drill",
+      "members": 1,
+      "albums": 39,
+      "no_tracks": 0,
+      "tracks": 117,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 32,
+      "no_genre": 39,
+      "lote": [
+        "lote1"
+      ],
+      "created": true
+    },
+    {
+      "id": 4283,
+      "name": "Oksana Linde",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Ambient",
+      "members": 1,
+      "albums": 4,
+      "no_tracks": 0,
+      "tracks": 22,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 2,
+      "no_genre": 4,
+      "lote": [
+        "lote1"
+      ],
+      "created": true
+    },
+    {
+      "id": 4277,
+      "name": "Omar Enrique",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Merengue",
+      "members": 1,
+      "albums": 23,
+      "no_tracks": 0,
+      "tracks": 223,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 4,
+      "no_genre": 23,
+      "lote": [
+        "lote1"
+      ],
+      "created": true
+    },
+    {
+      "id": 1238,
+      "name": "Onechot",
+      "artist_type": "project",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Reggae",
+      "members": 1,
+      "albums": 3,
+      "no_tracks": 0,
+      "tracks": 61,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 2,
+      "no_genre": 1,
+      "lote": [
+        "lote1"
+      ],
+      "created": false
+    },
+    {
+      "id": 4324,
+      "name": "Orfeón Universitario de la UCV",
+      "artist_type": "band",
+      "bio": true,
+      "photo": false,
+      "primary_genre": "Música coral",
+      "members": 1,
+      "albums": 0,
+      "no_tracks": 0,
+      "tracks": 0,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 0,
+      "no_genre": 0,
+      "lote": [
+        "lote2"
+      ],
+      "created": true
+    },
+    {
+      "id": 3739,
+      "name": "Oscar D' León",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Salsa",
+      "members": 1,
+      "albums": 136,
+      "no_tracks": 11,
+      "tracks": 1385,
+      "no_duration": 141,
+      "no_cover": 27,
+      "no_label": 82,
+      "no_genre": 105,
+      "lote": [
+        "lote1"
+      ],
+      "created": false
+    },
+    {
+      "id": 4296,
+      "name": "Otilio Galíndez",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Música tradicional",
+      "members": 1,
+      "albums": 0,
+      "no_tracks": 0,
+      "tracks": 0,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 0,
+      "no_genre": 0,
+      "lote": [
+        "lote2"
+      ],
+      "created": true
+    },
+    {
+      "id": 3558,
+      "name": "Otmaro Ruiz",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Jazz",
+      "members": 1,
+      "albums": 7,
+      "no_tracks": 1,
+      "tracks": 62,
+      "no_duration": 10,
+      "no_cover": 1,
+      "no_label": 5,
+      "no_genre": 3,
+      "lote": [
+        "lote1"
+      ],
+      "created": false
+    },
+    {
+      "id": 288,
+      "name": "Pablo Gil",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Jazz latino",
+      "members": 1,
+      "albums": 8,
+      "no_tracks": 2,
+      "tracks": 62,
+      "no_duration": 11,
+      "no_cover": 2,
+      "no_label": 6,
+      "no_genre": 2,
+      "lote": [
+        "lote1"
+      ],
+      "created": false
+    },
+    {
+      "id": 192,
+      "name": "PapaShanty Saund System",
+      "artist_type": "band",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Hip hop",
+      "members": 13,
+      "albums": 20,
+      "no_tracks": 1,
+      "tracks": 75,
+      "no_duration": 47,
+      "no_cover": 0,
+      "no_label": 20,
+      "no_genre": 15,
+      "lote": [
+        "lote1"
+      ],
+      "created": false
+    },
+    {
+      "id": 908,
+      "name": "Pastel de Gente",
+      "artist_type": "band",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Rock and roll",
+      "members": 4,
+      "albums": 4,
+      "no_tracks": 0,
+      "tracks": 34,
+      "no_duration": 8,
+      "no_cover": 0,
+      "no_label": 4,
+      "no_genre": 1,
+      "lote": [
+        "lote1"
+      ],
+      "created": false
+    },
+    {
+      "id": 3993,
+      "name": "Paul Desenne",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "World ethnic",
+      "members": 1,
+      "albums": 1,
+      "no_tracks": 0,
+      "tracks": 12,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 1,
+      "no_genre": 0,
+      "lote": [
+        "lote1"
+      ],
+      "created": false
+    },
+    {
+      "id": 1951,
+      "name": "Paul Gillman",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Hard rock",
+      "members": 27,
+      "albums": 31,
+      "no_tracks": 2,
+      "tracks": 432,
+      "no_duration": 156,
+      "no_cover": 2,
+      "no_label": 20,
+      "no_genre": 6,
+      "lote": [
+        "lote1"
+      ],
+      "created": false
+    },
+    {
+      "id": 4321,
+      "name": "Payasitas Nifu Nifa",
+      "artist_type": "band",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Música infantil",
+      "members": 0,
+      "albums": 27,
+      "no_tracks": 2,
+      "tracks": 226,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 27,
+      "no_genre": 27,
+      "lote": [
+        "lote2"
+      ],
+      "created": true
+    },
+    {
+      "id": 3740,
+      "name": "Pecos Kanvas",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Balada",
+      "members": 1,
+      "albums": 23,
+      "no_tracks": 2,
+      "tracks": 240,
+      "no_duration": 66,
+      "no_cover": 2,
+      "no_label": 21,
+      "no_genre": 10,
+      "lote": [
+        "lote1"
+      ],
+      "created": false
+    },
+    {
+      "id": 4320,
+      "name": "Popy",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Música infantil",
+      "members": 1,
+      "albums": 9,
+      "no_tracks": 0,
+      "tracks": 106,
+      "no_duration": 30,
+      "no_cover": 0,
+      "no_label": 6,
+      "no_genre": 9,
+      "lote": [
+        "lote2"
+      ],
+      "created": true
+    },
+    {
+      "id": 4240,
+      "name": "Porfi Baloa",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Salsa romántica",
+      "members": 1,
+      "albums": 29,
+      "no_tracks": 0,
+      "tracks": 88,
+      "no_duration": 1,
+      "no_cover": 0,
+      "no_label": 21,
+      "no_genre": 29,
+      "lote": [
+        "lote1"
+      ],
+      "created": true
+    },
+    {
+      "id": 3843,
+      "name": "Quinteto Contrapunto",
+      "artist_type": "band",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Música tradicional",
+      "members": 6,
+      "albums": 18,
+      "no_tracks": 6,
+      "tracks": 208,
+      "no_duration": 99,
+      "no_cover": 6,
+      "no_label": 18,
+      "no_genre": 9,
+      "lote": [
+        "lote2"
+      ],
+      "created": false
+    },
+    {
+      "id": 1738,
+      "name": "Rada",
+      "artist_type": "project",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "New age",
+      "members": 1,
+      "albums": 65,
+      "no_tracks": 11,
+      "tracks": 562,
+      "no_duration": 239,
+      "no_cover": 11,
+      "no_label": 57,
+      "no_genre": 31,
+      "lote": [
+        "lote1"
+      ],
+      "created": false
+    },
+    {
+      "id": 3743,
+      "name": "Rafael \"Pollo\" Brito",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Fusión latina",
+      "members": 1,
+      "albums": 27,
+      "no_tracks": 1,
+      "tracks": 145,
+      "no_duration": 27,
+      "no_cover": 1,
+      "no_label": 26,
+      "no_genre": 21,
+      "lote": [
+        "lote2"
+      ],
+      "created": false
+    },
+    {
+      "id": 206,
+      "name": "Rawayana",
+      "artist_type": "band",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Pop rock",
+      "members": 5,
+      "albums": 47,
+      "no_tracks": 1,
+      "tracks": 166,
+      "no_duration": 0,
+      "no_cover": 1,
+      "no_label": 27,
+      "no_genre": 42,
+      "lote": [
+        "lote1"
+      ],
+      "created": false
+    },
+    {
+      "id": 3870,
+      "name": "Reyna Lucero",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Música tradicional",
+      "members": 1,
+      "albums": 31,
+      "no_tracks": 6,
+      "tracks": 308,
+      "no_duration": 118,
+      "no_cover": 6,
+      "no_label": 31,
+      "no_genre": 11,
+      "lote": [
+        "lote2"
+      ],
+      "created": false
+    },
+    {
+      "id": 3889,
+      "name": "Reynaldo Armas",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Música tradicional",
+      "members": 1,
+      "albums": 70,
+      "no_tracks": 0,
+      "tracks": 944,
+      "no_duration": 469,
+      "no_cover": 4,
+      "no_label": 62,
+      "no_genre": 18,
+      "lote": [
+        "lote2"
+      ],
+      "created": false
+    },
+    {
+      "id": 4307,
+      "name": "Ricardo Aguirre",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Gaita de furro",
+      "members": 1,
+      "albums": 0,
+      "no_tracks": 0,
+      "tracks": 0,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 0,
+      "no_genre": 0,
+      "lote": [
+        "lote2"
+      ],
+      "created": true
+    },
+    {
+      "id": 4314,
+      "name": "Ricardo Cepeda",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": false,
+      "primary_genre": "Gaita de furro",
+      "members": 1,
+      "albums": 0,
+      "no_tracks": 0,
+      "tracks": 0,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 0,
+      "no_genre": 0,
+      "lote": [
+        "lote2"
+      ],
+      "created": true
+    },
+    {
+      "id": 1830,
+      "name": "Ricardo Montaner",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Pop latino",
+      "members": 1,
+      "albums": 79,
+      "no_tracks": 1,
+      "tracks": 627,
+      "no_duration": 70,
+      "no_cover": 9,
+      "no_label": 33,
+      "no_genre": 52,
+      "lote": [
+        "lote1"
+      ],
+      "created": false
+    },
+    {
+      "id": 4312,
+      "name": "Rincón Morales",
+      "artist_type": "band",
+      "bio": true,
+      "photo": false,
+      "primary_genre": "Gaita de furro",
+      "members": 0,
+      "albums": 2,
+      "no_tracks": 1,
+      "tracks": 6,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 1,
+      "no_genre": 2,
+      "lote": [
+        "lote2"
+      ],
+      "created": true
+    },
+    {
+      "id": 3745,
+      "name": "Roberto Antonio",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Pop latino",
+      "members": 1,
+      "albums": 41,
+      "no_tracks": 9,
+      "tracks": 327,
+      "no_duration": 171,
+      "no_cover": 9,
+      "no_label": 35,
+      "no_genre": 24,
+      "lote": [
+        "lote1"
+      ],
+      "created": false
+    },
+    {
+      "id": 2003,
+      "name": "Rudy La Scala",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Pop",
+      "members": 1,
+      "albums": 28,
+      "no_tracks": 1,
+      "tracks": 295,
+      "no_duration": 126,
+      "no_cover": 1,
+      "no_label": 19,
+      "no_genre": 11,
+      "lote": [
+        "lote1"
+      ],
+      "created": false
+    },
+    {
+      "id": 2004,
+      "name": "Rudy Márquez",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Rock",
+      "members": 1,
+      "albums": 53,
+      "no_tracks": 5,
+      "tracks": 539,
+      "no_duration": 285,
+      "no_cover": 3,
+      "no_label": 50,
+      "no_genre": 22,
+      "lote": [
+        "lote1"
+      ],
+      "created": false
+    },
+    {
+      "id": 4289,
+      "name": "Rummy Olivo",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Golpe llanero",
+      "members": 1,
+      "albums": 18,
+      "no_tracks": 0,
+      "tracks": 245,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 18,
+      "no_genre": 18,
+      "lote": [
+        "lote2"
+      ],
+      "created": true
+    },
+    {
+      "id": 4275,
+      "name": "Salserín",
+      "artist_type": "band",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Salsa romántica",
+      "members": 0,
+      "albums": 9,
+      "no_tracks": 0,
+      "tracks": 113,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 7,
+      "no_genre": 9,
+      "lote": [
+        "lote1"
+      ],
+      "created": true
+    },
+    {
+      "id": 4281,
+      "name": "Samuel Mariño",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Ópera",
+      "members": 1,
+      "albums": 11,
+      "no_tracks": 0,
+      "tracks": 47,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 9,
+      "no_genre": 11,
+      "lote": [
+        "lote1"
+      ],
+      "created": true
+    },
+    {
+      "id": 4003,
+      "name": "Saúl Vera",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "World ethnic",
+      "members": 9,
+      "albums": 13,
+      "no_tracks": 5,
+      "tracks": 108,
+      "no_duration": 0,
+      "no_cover": 5,
+      "no_label": 13,
+      "no_genre": 8,
+      "lote": [
+        "lote2"
+      ],
+      "created": false
+    },
+    {
+      "id": 3420,
+      "name": "Schola Cantorum de Caracas",
+      "artist_type": "band",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Música clásica",
+      "members": 3,
+      "albums": 20,
+      "no_tracks": 16,
+      "tracks": 68,
+      "no_duration": 2,
+      "no_cover": 16,
+      "no_label": 20,
+      "no_genre": 16,
+      "lote": [
+        "lote2"
+      ],
+      "created": false
+    },
+    {
+      "id": 218,
+      "name": "Seguridad Nacional",
+      "artist_type": "band",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Punk",
+      "members": 9,
+      "albums": 4,
+      "no_tracks": 1,
+      "tracks": 41,
+      "no_duration": 17,
+      "no_cover": 2,
+      "no_label": 4,
+      "no_genre": 1,
+      "lote": [
+        "lote1"
+      ],
+      "created": false
+    },
+    {
+      "id": 220,
+      "name": "Sentimiento Muerto",
+      "artist_type": "band",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Rock",
+      "members": 8,
+      "albums": 21,
+      "no_tracks": 5,
+      "tracks": 165,
+      "no_duration": 0,
+      "no_cover": 6,
+      "no_label": 17,
+      "no_genre": 10,
+      "lote": [
+        "lote1"
+      ],
+      "created": false
+    },
+    {
+      "id": 221,
+      "name": "Serenata Guayanesa",
+      "artist_type": "band",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "World ethnic",
+      "members": 6,
+      "albums": 100,
+      "no_tracks": 21,
+      "tracks": 1203,
+      "no_duration": 478,
+      "no_cover": 20,
+      "no_label": 98,
+      "no_genre": 34,
+      "lote": [
+        "lote2"
+      ],
+      "created": false
+    },
+    {
+      "id": 2014,
+      "name": "Servando y Florentino",
+      "artist_type": "band",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Pop rock",
+      "members": 2,
+      "albums": 48,
+      "no_tracks": 0,
+      "tracks": 200,
+      "no_duration": 25,
+      "no_cover": 0,
+      "no_label": 39,
+      "no_genre": 38,
+      "lote": [
+        "lote1"
+      ],
+      "created": false
+    },
+    {
+      "id": 4285,
+      "name": "Simón Díaz",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Pasaje",
+      "members": 1,
+      "albums": 61,
+      "no_tracks": 5,
+      "tracks": 803,
+      "no_duration": 283,
+      "no_cover": 5,
+      "no_label": 52,
+      "no_genre": 15,
+      "lote": [
+        "lote2"
+      ],
+      "created": true
+    },
+    {
+      "id": 227,
+      "name": "Sofía Insomnia",
+      "artist_type": "band",
+      "bio": true,
+      "photo": false,
+      "primary_genre": "Rock alternativo",
+      "members": 4,
+      "albums": 3,
+      "no_tracks": 2,
+      "tracks": 10,
+      "no_duration": 0,
+      "no_cover": 2,
+      "no_label": 3,
+      "no_genre": 2,
+      "lote": [
+        "lote1"
+      ],
+      "created": false
+    },
+    {
+      "id": 3749,
+      "name": "Soledad Bravo",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Nueva canción",
+      "members": 1,
+      "albums": 59,
+      "no_tracks": 6,
+      "tracks": 789,
+      "no_duration": 325,
+      "no_cover": 10,
+      "no_label": 32,
+      "no_genre": 22,
+      "lote": [
+        "lote2"
+      ],
+      "created": false
+    },
+    {
+      "id": 1743,
+      "name": "Soto Blues Band",
+      "artist_type": "band",
+      "bio": true,
+      "photo": false,
+      "primary_genre": "Pop rock",
+      "members": 10,
+      "albums": 1,
+      "no_tracks": 0,
+      "tracks": 14,
+      "no_duration": 14,
+      "no_cover": 0,
+      "no_label": 1,
+      "no_genre": 0,
+      "lote": [
+        "lote1"
+      ],
+      "created": false
+    },
+    {
+      "id": 4238,
+      "name": "Sunsplash",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Latin electronic fusion",
+      "members": 1,
+      "albums": 17,
+      "no_tracks": 0,
+      "tracks": 27,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 17,
+      "no_genre": 17,
+      "lote": [
+        "lote1"
+      ],
+      "created": true
+    },
+    {
+      "id": 3854,
+      "name": "Tambor Urbano",
+      "artist_type": "band",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Música tradicional",
+      "members": 13,
+      "albums": 19,
+      "no_tracks": 2,
+      "tracks": 165,
+      "no_duration": 26,
+      "no_cover": 3,
+      "no_label": 19,
+      "no_genre": 14,
+      "lote": [
+        "lote2"
+      ],
+      "created": false
+    },
+    {
+      "id": 1829,
+      "name": "Tecupae",
+      "artist_type": "band",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Pop latino",
+      "members": 10,
+      "albums": 8,
+      "no_tracks": 0,
+      "tracks": 84,
+      "no_duration": 30,
+      "no_cover": 1,
+      "no_label": 6,
+      "no_genre": 3,
+      "lote": [
+        "lote1"
+      ],
+      "created": false
+    },
+    {
+      "id": 4290,
+      "name": "Teo Galíndez",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Pasaje",
+      "members": 1,
+      "albums": 7,
+      "no_tracks": 0,
+      "tracks": 96,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 7,
+      "no_genre": 7,
+      "lote": [
+        "lote2"
+      ],
+      "created": true
+    },
+    {
+      "id": 4262,
+      "name": "Teresa Carreño",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": false,
+      "primary_genre": "Ópera",
+      "members": 1,
+      "albums": 0,
+      "no_tracks": 0,
+      "tracks": 0,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 0,
+      "no_genre": 0,
+      "lote": [
+        "lote1"
+      ],
+      "created": true
+    },
+    {
+      "id": 4316,
+      "name": "The Same People",
+      "artist_type": "band",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Calipso",
+      "members": 0,
+      "albums": 4,
+      "no_tracks": 0,
+      "tracks": 40,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 4,
+      "no_genre": 4,
+      "lote": [
+        "lote2"
+      ],
+      "created": true
+    },
+    {
+      "id": 3857,
+      "name": "Un Solo Pueblo",
+      "artist_type": "band",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Música tradicional",
+      "members": 1,
+      "albums": 37,
+      "no_tracks": 4,
+      "tracks": 441,
+      "no_duration": 282,
+      "no_cover": 4,
+      "no_label": 35,
+      "no_genre": 9,
+      "lote": [
+        "lote2"
+      ],
+      "created": false
+    },
+    {
+      "id": 4264,
+      "name": "Vicente Emilio Sojo",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": false,
+      "primary_genre": "Nacionalismo musical",
+      "members": 1,
+      "albums": 0,
+      "no_tracks": 0,
+      "tracks": 0,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 0,
+      "no_genre": 0,
+      "lote": [
+        "lote1"
+      ],
+      "created": true
+    },
+    {
+      "id": 259,
+      "name": "Viniloversus",
+      "artist_type": "band",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Rock",
+      "members": 6,
+      "albums": 31,
+      "no_tracks": 1,
+      "tracks": 144,
+      "no_duration": 22,
+      "no_cover": 3,
+      "no_label": 24,
+      "no_genre": 19,
+      "lote": [
+        "lote1"
+      ],
+      "created": false
+    },
+    {
+      "id": 261,
+      "name": "Vytas Brenner",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Rock progresivo",
+      "members": 1,
+      "albums": 21,
+      "no_tracks": 0,
+      "tracks": 173,
+      "no_duration": 57,
+      "no_cover": 0,
+      "no_label": 14,
+      "no_genre": 3,
+      "lote": [
+        "lote1"
+      ],
+      "created": false
+    },
+    {
+      "id": 4305,
+      "name": "Yhony León y los Pueblos del Sur",
+      "artist_type": "band",
+      "bio": true,
+      "photo": false,
+      "primary_genre": "Vals andino",
+      "members": 0,
+      "albums": 0,
+      "no_tracks": 0,
+      "tracks": 0,
+      "no_duration": 0,
+      "no_cover": 0,
+      "no_label": 0,
+      "no_genre": 0,
+      "lote": [
+        "lote2"
+      ],
+      "created": true
+    },
+    {
+      "id": 264,
+      "name": "Yordano",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Balada",
+      "members": 1,
+      "albums": 35,
+      "no_tracks": 0,
+      "tracks": 429,
+      "no_duration": 65,
+      "no_cover": 3,
+      "no_label": 20,
+      "no_genre": 15,
+      "lote": [
+        "lote1"
+      ],
+      "created": false
+    },
+    {
+      "id": 266,
+      "name": "Zapato 3",
+      "artist_type": "band",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Rock",
+      "members": 7,
+      "albums": 30,
+      "no_tracks": 7,
+      "tracks": 227,
+      "no_duration": 39,
+      "no_cover": 5,
+      "no_label": 28,
+      "no_genre": 15,
+      "lote": [
+        "lote1"
+      ],
+      "created": false
+    },
+    {
+      "id": 795,
+      "name": "Zardonic",
+      "artist_type": "project",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Industrial",
+      "members": 1,
+      "albums": 54,
+      "no_tracks": 3,
+      "tracks": 318,
+      "no_duration": 36,
+      "no_cover": 7,
+      "no_label": 25,
+      "no_genre": 43,
+      "lote": [
+        "lote1"
+      ],
+      "created": false
+    },
+    {
+      "id": 4287,
+      "name": "Ángel Custodio Loyola",
+      "artist_type": "solo_artist",
+      "bio": true,
+      "photo": true,
+      "primary_genre": "Contrapunteo",
+      "members": 1,
+      "albums": 11,
+      "no_tracks": 0,
+      "tracks": 125,
+      "no_duration": 12,
+      "no_cover": 0,
+      "no_label": 9,
+      "no_genre": 11,
+      "lote": [
+        "lote2"
+      ],
+      "created": true
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+# Etapa 2 — titulares (confirm, run 13218)
+
+Pasos: 50. Avisos: 0.
+
+## Pasos
+
+- op=titular · loteId=aldemaro-romero · artist=3897 · person=30 · personName=Aldemaro Romero · origin=existente · link=enlazado · aliases=[]
+- op=titular · loteId=alfredo-sadel · artist=3676 · person=21399 · personName=Alfredo Sadel · origin=existente · link=enlazado · aliases=[]
+- op=titular · loteId=ali-primera · artist=3677 · person=22238 · personName=Alí Primera · origin=existente · link=enlazado · aliases=["El Cantor del Pueblo"]
+- op=titular · loteId=aquiles-baez · artist=3449 · person=935 · personName=Aquiles Báez · origin=existente · link=enlazado · aliases=[]
+- op=titular · loteId=canelita-medina · artist=3684 · person=22438 · personName=Canelita Medina · origin=existente · link=enlazado · aliases=["La Sonera del Caribe","La Sonera de Venezuela"]
+- op=titular · loteId=chelique-sarabia · artist=3689 · person=57 · personName=Chelique Sarabia · origin=existente · link=enlazado · aliases=["Chelique"]
+- op=titular · loteId=edward-simon · artist=3480 · person=22148 · personName=Edward Simon · origin=existente · link=enlazado · aliases=[]
+- op=titular · loteId=evencio-castellanos · artist=3400 · person=19477 · personName=Evencio Castellanos · origin=existente · link=enlazado · aliases=[]
+- op=titular · loteId=felipe-pirela · artist=3785 · person=24366 · personName=Felipe Pirela · origin=existente · link=enlazado · aliases=["El Bolerista de América"]
+- op=titular · loteId=floria-marquez · artist=3703 · person=40218 · personName=Floria Márquez · origin=nueva (hay homónimos o parecidas) · link=enlazado · aliases=[]
+- op=titular · loteId=francisco-pacheco · artist=3816 · person=1709 · personName=Francisco Pacheco · origin=existente · link=enlazado · aliases=[]
+- op=titular · loteId=gerry-weil · artist=3500 · person=670 · personName=Gerry Weil · origin=existente · link=enlazado · aliases=[]
+- op=titular · loteId=gualberto-ibarreto · artist=3821 · person=21200 · personName=Gualberto Ibarreto · origin=existente · link=enlazado · aliases=[]
+- op=titular · loteId=hernan-marin · artist=3823 · person=24616 · personName=Hernán Marín · origin=existente · link=enlazado · aliases=["Rey del Cotorreo","La voz y el alma de Oriente"]
+- op=titular · loteId=hugo-blanco · artist=3710 · person=761 · personName=Hugo Blanco · origin=existente · link=enlazado · aliases=[]
+- op=titular · loteId=jose-luis-rodriguez-el-puma · artist=3756 · person=7180 · personName=José Luis Rodríguez · origin=existente · link=enlazado · aliases=["José Luis Rodríguez “El Puma”","El Puma"]
+- op=titular · loteId=juan-vicente-torrealba · artist=3829 · person=4456 · personName=Juan Vicente Torrealba · origin=existente · link=enlazado · aliases=[]
+- op=titular · loteId=lilia-vera · artist=3831 · person=31135 · personName=Lilia Vera · origin=existente · link=enlazado · aliases=[]
+- op=titular · loteId=linda-briceno · artist=3529 · person=847 · personName=Linda Briceño · origin=existente · link=enlazado · aliases=[]
+- op=titular · loteId=luis-silva · artist=3833 · person=3197 · personName=Luis Silva · origin=existente · link=enlazado · aliases=["El Barinés de Oro"]
+- op=titular · loteId=magdalena-sanchez · artist=3890 · person=31057 · personName=Magdalena Sánchez · origin=existente · link=enlazado · aliases=[]
+- op=titular · loteId=maria-teresa-chacin · artist=3797 · person=3972 · personName=María Teresa Chacín · origin=existente · link=enlazado · aliases=[]
+- op=titular · loteId=mirla-castellanos · artist=3796 · person=29343 · personName=Mirla Castellanos · origin=existente · link=enlazado · aliases=["La Primerísima"]
+- op=titular · loteId=natusha · artist=3732 · person=29573 · personName=Natusha · origin=existente · link=enlazado · aliases=[]
+- op=titular · loteId=oscar-dleon · artist=3739 · person=21846 · personName=Oscar D’León · origin=existente · link=enlazado · aliases=["El Sonero del Mundo","El León de la Salsa"]
+- op=titular · loteId=otmaro-ruiz · artist=3558 · person=1639 · personName=Otmaro Ruiz · origin=existente · link=enlazado · aliases=[]
+- op=titular · loteId=paul-desenne · artist=3993 · person=20614 · personName=Paul Desenne · origin=existente · link=enlazado · aliases=[]
+- op=titular · loteId=pecos-kanvas · artist=3740 · person=29792 · personName=Pecos Kanvas · origin=existente · link=enlazado · aliases=[]
+- op=titular · loteId=pollo-brito · artist=3743 · person=934 · personName=Rafael "Pollo" Brito · origin=existente · link=enlazado · aliases=["El Pollo Brito"]
+- op=titular · loteId=reyna-lucero · artist=3870 · person=31056 · personName=Reyna Lucero · origin=existente · link=enlazado · aliases=["La Reina de la Canción Criolla"]
+- op=titular · loteId=reynaldo-armas · artist=3889 · person=20590 · personName=Reynaldo Armas · origin=existente · link=enlazado · aliases=["El Cardenal Sabanero"]
+- op=titular · loteId=roberto-antonio · artist=3745 · person=25692 · personName=Roberto Antonio · origin=existente · link=enlazado · aliases=[]
+- op=titular · loteId=soledad-bravo · artist=3749 · person=25256 · personName=Soledad Bravo · origin=existente · link=enlazado · aliases=[]
+- op=miembro_de · titularOf=oscar-dleon · person=21846 · artist=270 · artistName=Dimension Latina · role=voz y bajo · link=ya era miembro
+- op=miembro_de · titularOf=canelita-medina · person=22438 · artist=3700 · artistName=Federico y Su Combo Latino · role=voz · link=enlazado
+- op=miembro_de · titularOf=francisco-pacheco · person=1709 · artist=3857 · artistName=Un Solo Pueblo · role=voz y percusión · link=enlazado
+- op=miembro_de · titularOf=francisco-pacheco · person=1709 · artist=3865 · artistName=Francisco Pacheco y Su Pueblo · role=director y voz · link=enlazado
+- op=miembro_de · titularOf=juan-vicente-torrealba · person=4456 · artist=3884 · artistName=Juan Vicente Torrealba y sus Torrealberos · role=director y arpa · link=enlazado
+- op=miembro_de · titularOf=juan-vicente-torrealba · person=4456 · artist=3883 · artistName=Los Torrealberos Juan Vicente Torrealba · role=director y arpa · link=enlazado
+- op=miembro_de · titularOf=undefined · person=19335 · artist=3387 · artistName=Cantoría Alberto Grau · role=directora · link=enlazado
+- op=fusionar_persona · status=applied · keep=21846 · keepName=Oscar D’León · drop=1039 · dropName=Oscar D' León · why=Oscar D'León duplicado (titular de 3739); proyecto común: album:3156, album:7664, album:7665, album:7666 · moved=375 · conflicts=[] · preserved=[]
+- op=fusionar_persona · status=applied · keep=21846 · keepName=Oscar D’León · drop=21396 · dropName=Oscar D´León · why=Oscar D'León duplicado (titular de 3739); 40 colegas en común · moved=6 · conflicts=[] · preserved=[]
+- op=fusionar_persona · status=applied · keep=22238 · keepName=Alí Primera · drop=12890 · dropName=Alí Primera · why=Alí Primera duplicado (titular de 3677); 10 colegas en común · moved=164 · conflicts=[] · preserved=[]
+- op=fusionar_persona · status=applied · keep=57 · keepName=Chelique Sarabia · drop=31206 · dropName=Chelique · why=«Chelique», compositor en discos de Chelique Sarabia (titular de 3689); proyecto común: album:6883, album:8065, artist:3689, artist:3799 · moved=35 · conflicts=[] · preserved=[]
+- op=fusionar_persona · status=a_la_mesa · a=24366 · nameA=Felipe Pirela · b=12032 · nameB=Felipe Pirela · why=Felipe Pirela duplicado (titular de 3785)
+- op=fusionar_persona · status=applied · keep=21200 · keepName=Gualberto Ibarreto · drop=619 · dropName=Gualberto Ibarreto · why=Gualberto Ibarreto duplicado (titular de 3821); 2 colegas en común · moved=72 · conflicts=[] · preserved=[]
+- op=fusionar_persona · status=a_la_mesa · a=29343 · nameA=Mirla Castellanos · b=12006 · nameB=Mirla Castellanos · why=Mirla Castellanos duplicado (titular de 3796)
+- op=fusionar_persona · status=a_la_mesa · a=29792 · nameA=Pecos Kanvas · b=12090 · nameB=Pecos Kanvas · why=Pecos Kanvas duplicado (titular de 3740)
+- op=venezolano_derivado · persons=34 · marked=0
+- op=mesa · runId=13224 · opened=3 · skipped=0
