@@ -206,7 +206,8 @@ export function analyzeCatalog(snapshot: CatalogSnapshot, options: AnalyzeOption
   const raw: Finding[] = [];
   for (const detector of detectors) {
     try {
-      raw.push(...detector.run(context));
+      // Sin spread: una cola de revisión de 150k casos desborda la pila.
+      for (const finding of detector.run(context)) raw.push(finding);
       completed.push(detector.key);
     } catch (error) {
       // Un detector roto no apaga a los demás: el fallo queda en el análisis.
@@ -225,7 +226,7 @@ export function analyzeCatalog(snapshot: CatalogSnapshot, options: AnalyzeOption
   } else {
     try {
       const explained = new Set(raw.filter((finding) => TEXT_FORM_CATEGORIES.has(finding.category)).map((finding) => refKey(finding.entity)));
-      raw.push(...detectAnomalies(catalogAnomalies, context, explained));
+      for (const finding of detectAnomalies(catalogAnomalies, context, explained)) raw.push(finding);
       completed.push(catalogAnomalies.key);
     } catch (error) {
       failures.push({ detector: catalogAnomalies.key, error: errorMessage(error) });
