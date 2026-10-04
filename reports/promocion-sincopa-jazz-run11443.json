@@ -1,0 +1,1869 @@
+{
+  "section": "jazz",
+  "dryRun": false,
+  "note": "Sincopa jazz: comprobación de que el reintento ya no duplica revisiones (2026-10-02)",
+  "kinds": {
+    "track": {
+      "identities": 476,
+      "claims": 2030,
+      "verdicts": {
+        "different:sin-coincidencia": 213,
+        "hold:titulo-casi-igual-mismo-padre": 9,
+        "hold:padre-sin-resolver": 244,
+        "hold:sin-decision-er": 7,
+        "hold:titulo-igual-con-contradiccion": 3
+      },
+      "applied": 0,
+      "unchanged": 0,
+      "stillCandidate": 800,
+      "dismissed": 0,
+      "failed": 0
+    }
+  },
+  "holds": [
+    {
+      "kind": "track",
+      "identityRaw": "El Arca::Buen Viaje::My Boy Lollipop",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "15451 «My Boy Lollipop (Live)»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Impromptu Trio::Spontaneus::Capricho Brasilero",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Impromptu Trio::Spontaneus::Get It While You Can",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Impromptu Trio::Spontaneus::Capricho Asincopado",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Impromptu Trio::Spontaneus::Caribbean Island",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Impromptu Trio::Spontaneus::Danza De Medianoche",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Impromptu Trio::Spontaneus::Cuando Las Almas Lloran",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Impromptu Trio::Spontaneus::Hecho El Willy",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Impromptu Trio::Spontaneus::Venceré",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Jazz Desde Aldemaro::El Negro José",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Jazz Desde Aldemaro::Catuche",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Jazz Desde Aldemaro::Tema de Amor",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Jazz Desde Aldemaro::Calor",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Jazz Desde Aldemaro::Poco a Poco",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Jazz Desde Aldemaro::Quinta Anauco",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Jazz Desde Aldemaro::Cimarrón",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Jazz Desde Aldemaro::Mi Niño No Me Quiere",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Jazz Desde Aldemaro::El Catire",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Jazz Desde Aldemaro::De Conde a Principal",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Jazz Desde Aldemaro::Toma Lo Que Te Ofreci",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Jazz Desde Aldemaro::Señora Chabuca Granda",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Jazz Desde Aldemaro::Carretera",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 15
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Jazz Desde Aldemaro::No Necesito de Ti",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Jazz Desde Aldemaro::Doña Mentira",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Jazz Desde Aldemaro::De Repente",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Jazz Desde Aldemaro::Dos Golondrinas",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Jazz Desde Aldemaro::Mambo Timbal",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Jazz Desde Aldemaro::*Bonus Track",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "La Banda Municipal::En Vivo::El Manguito",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "La Banda Municipal::En Vivo::Guasa 1",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "La Banda Municipal::En Vivo::Plaza de El Hatillo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "La Banda Municipal::En Vivo::Emtsa Nº 3",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "La Banda Municipal::En Vivo::Tumbao En 11",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "La Banda Municipal::En Vivo::Mandinga y San Gabriel",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "La Banda Municipal::En Vivo::El Valle De San Javier",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "La Banda Municipal::En Vivo::Banda Municipal",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Taremurú::Sincretismo Sonoro De Una Raza::Es-embó",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "15946 «Es-embó (Dar A Luz)»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Taremurú::Sincretismo Sonoro De Una Raza::Wadaka Piapó",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "18053 «Wadaka Piapó (Árbol De La Vida)»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "María Rivas & Aldemaro Romero::En Concierto::De Polo a Polo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "María Rivas & Aldemaro Romero::En Concierto::Quinta Anauco (vocal version)",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "María Rivas & Aldemaro Romero::En Concierto::Lo Que Pasa Contigo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "María Rivas & Aldemaro Romero::En Concierto::Doña Cuatricentenaria",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "María Rivas & Aldemaro Romero::En Concierto::Así Eres Tú",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "María Rivas & Aldemaro Romero::En Concierto::No Tengo a Nadie",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "María Rivas & Aldemaro Romero::En Concierto::Caminante",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "María Rivas & Aldemaro Romero::En Concierto::Como Lo Haces Tú",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "María Rivas & Aldemaro Romero::En Concierto::De Repente (piano solo)",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "María Rivas & Aldemaro Romero::En Concierto::Quien",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "María Rivas & Aldemaro Romero::En Concierto::Carretera",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "María Rivas & Aldemaro Romero::En Concierto::Oye Viejo Tonto",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "María Rivas & Aldemaro Romero::En Concierto::Hablaré Catalán",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "María Rivas & Aldemaro Romero::En Concierto::Me Queda El Consuelo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "María Rivas & Aldemaro Romero::En Concierto::De Repente (vocal version)",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "María Rivas & Aldemaro Romero::En Concierto::Quinta Anauco (piano solo)",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Maroa::Sólo Cacao::Formas y Figuras",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Maroa::Sólo Cacao::Palendrum",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Maroa::Sólo Cacao::Entre Telas",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Maroa::Sólo Cacao::Cacao",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Maroa::Sólo Cacao::Panorama",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Maroa::Sólo Cacao::Karate Do (en Re)",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Maroa::Sólo Cacao::Santa Fé",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Maroa::Sólo Cacao::Bandeja de Plata",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Maroa::Sólo Cacao::La Soledad",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Maroa::Sólo Cacao::La Fuersha",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Maroa::Sólo Cacao::El Bojotico",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Víctor Cuica & Roberto Jirón::Internacionales::Blue Monk",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Víctor Cuica & Roberto Jirón::Internacionales::Hello Dolly",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Víctor Cuica & Roberto Jirón::Internacionales::Petite Fleur",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Víctor Cuica & Roberto Jirón::Internacionales::La Vie En Rose",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Víctor Cuica & Roberto Jirón::Internacionales::Mack The Knife",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Víctor Cuica & Roberto Jirón::Internacionales::New York, New York",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Víctor Cuica & Roberto Jirón::Internacionales::Begin The Beguine",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Víctor Cuica & Roberto Jirón::Internacionales::Manha De Carnaval",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Víctor Cuica & Roberto Jirón::Internacionales::Samba De Orfeu",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Víctor Cuica & Roberto Jirón::Internacionales::Si Nos Dejan",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Víctor Cuica & Roberto Jirón::Internacionales::El Día Que Me Quieras",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Víctor Cuica & Roberto Jirón::Internacionales::As Time Goes By",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Víctor Cuica & Roberto Jirón::Internacionales::Contigo En la Distancia",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Víctor Cuica & Roberto Jirón::Internacionales::Ojos Verdes",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Víctor Cuica & Roberto Jirón::Internacionales::Moliendo Café",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::Símbolos::Intranquilidad",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::Símbolos::Mi Socio",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::Símbolos::Dark Horse",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::Símbolos::A Mis Hermanos",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::Símbolos::Tambor p'Alfredo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::Símbolos::Profundo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::Símbolos::Long Time Waiting",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::Símbolos::Africa Latina",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::Símbolos::Breakdown",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::Símbolos::Pinceladas",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::Símbolos::Símbolos",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::Símbolos::Aurora Borealis",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::Major Delights::Proyecto XY",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::Major Delights::Major Delights",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::Major Delights::Palabras de Sombra",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::Major Delights::Desiguales",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::Major Delights::Valse Gitane",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::Major Delights::Sabana Grande",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::Major Delights::Virtualmente",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::Major Delights::Otro Cimarrón",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::Major Delights::Señor Jou",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::Major Delights::El Examen",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::Major Delights::Así No",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::Suka - Jazz En Directo::Wishing Well",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::Suka - Jazz En Directo::Yesterdays",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::Suka - Jazz En Directo::Wing And A Prayer",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::Suka - Jazz En Directo::Major Delights",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::Suka - Jazz En Directo::Slow Change",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::Suka - Jazz En Directo::Sukkah",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::Suka - Jazz En Directo::A La Espera",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::Suka - Jazz En Directo::CCS Hip",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::Suka - Jazz En Directo::Tukeke",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::Suka - Jazz En Directo::Pablo De Caracas",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::Suka - Jazz En Directo::Solar",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::Suka - Jazz En Directo::Otra Vez",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::Baladas::The Peacocks",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::Baladas::Blame It On My Youth",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::Baladas::La Muerte Del Angel",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::Baladas::Serenata",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::Baladas::Impresiones Intimas I",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::Baladas::Retrato Em Branco e Preto",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::Baladas::7/4 Ballad",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::Baladas::Esther",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::CCS-NYC Jazz Connection::Infinite One",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::CCS-NYC Jazz Connection::I Should Care",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::CCS-NYC Jazz Connection::Trans",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::CCS-NYC Jazz Connection::The Process",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::CCS-NYC Jazz Connection::You're My Everything",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::CCS-NYC Jazz Connection::Snow",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::CCS-NYC Jazz Connection::Ask Me Now",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::CCS-NYC Jazz Connection::No Me Sigas Hablando De Eso",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::Encuentros::Blame It On My Youth",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::Encuentros::The Shadow of Your Smile",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::Encuentros::Desesperanza",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::Encuentros::Our Love Is Here To Stay",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::Encuentros::Pajarillo Verde",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::Encuentros::Midnight Sun",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::Encuentros::Corral De Ordeño",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::Encuentros::Old Devil Moon",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::Encuentros::What Is This Thing Called Love",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::Encuentros::B Radley",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::Encuentros::New Tune",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Oscar::Cuidao Con Los Escalones::Cuidao Con Los Escalones",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Oscar::Cuidao Con Los Escalones::Ojos De Una Noche",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Oscar::Cuidao Con Los Escalones::En Noviembre",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Oscar::Cuidao Con Los Escalones::Caracas Alto Barranco",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Oscar::Cuidao Con Los Escalones::Flaicito Al Cuadro",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Oscar::Cuidao Con Los Escalones::Flaquitud",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Oscar::Cuidao Con Los Escalones::Take Five",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Oscar::Cuidao Con Los Escalones::Lluvia En La Tarde",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Oscar::Cuidao Con Los Escalones::Para Elisa",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Oscar::Cuidao Con Los Escalones::L.D.L.M.",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Oscar::Cuidao Con Los Escalones::Refractions",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Oscar::Cuidao Con Los Escalones::The 60's Never Die",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Coral Lombana::Jazz Rojo Coral::Good Morning Heartache",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Coral Lombana::Jazz Rojo Coral::I Cried For You",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Coral Lombana::Jazz Rojo Coral::You Don't Know Me",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Coral Lombana::Jazz Rojo Coral::Drume Negrita",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Coral Lombana::Jazz Rojo Coral::Te Amaré Toda La Vida",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Coral Lombana::Jazz Rojo Coral::Todo Amor Que Houver Nessa Vida",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Coral Lombana::Jazz Rojo Coral::Par Impar",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Coral Lombana::Jazz Rojo Coral::Verde",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Coral Lombana::Jazz Rojo Coral::Para El Verano",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Coral Lombana::Jazz Rojo Coral::Ven A Mí",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Coral Lombana::Jazz Rojo Coral Vol.2::Moliendo Café",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Coral Lombana::Jazz Rojo Coral Vol.2::Mi Tripón con Danzon Nº2",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Coral Lombana::Jazz Rojo Coral Vol.2::Es Verdad",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Coral Lombana::Jazz Rojo Coral Vol.2::La Dama De La Ciudad",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Coral Lombana::Jazz Rojo Coral Vol.2::Maracaibo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Coral Lombana::Jazz Rojo Coral Vol.2::Vivir Ahora y Siempre",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Coral Lombana::Jazz Rojo Coral Vol.2::Por Alguien Como Tú",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Coral Lombana::Jazz Rojo Coral Vol.2::Hojarasca Gris",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Coral Lombana::Jazz Rojo Coral Vol.2::Tonada Del Tormento",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Coral Lombana::Jazz Rojo Coral Vol.2::Alma Con Alma",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ed Calle::Mamblue::Rice & Beans (Arroz y Frijoles)",
+      "rule": "sin-decision-er",
+      "detail": "la identidad no tiene decisión de ER registrada",
+      "claims": 2
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Victor Cuica::Noctámbulo::Mama Mia",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "17997 «Mamma Mia»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Victor Cuica::AfroCaribe Jazz Los Locos de Caracas::Los Locos de Caracas",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Victor Cuica::AfroCaribe Jazz Los Locos de Caracas::Yembé",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Victor Cuica::AfroCaribe Jazz Los Locos de Caracas::Tequila",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Victor Cuica::AfroCaribe Jazz Los Locos de Caracas::Gracioso",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Victor Cuica::AfroCaribe Jazz Los Locos de Caracas::Tema de Amor",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Victor Cuica::AfroCaribe Jazz Los Locos de Caracas::Oye Como Va",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Victor Cuica::AfroCaribe Jazz Los Locos de Caracas::Caribe-Vals",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Victor Cuica::AfroCaribe Jazz Los Locos de Caracas::Choroni",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Victor Cuica::AfroCaribe Jazz Los Locos de Caracas::Afroblues",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Victor Cuica::AfroCaribe Jazz Los Locos de Caracas::Pa' Viejo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Oscar Fanega::Solo Bass::Improvisación N° 1",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "2384 «Improvisación Nº1»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Bartók's Room::Artilugio (Florilégio Artefáctico)",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Bartók's Room::I",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Bartók's Room::El Ojo-Dido",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Bartók's Room::Song For Bartók",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Bartók's Room::Inside",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Bartók's Room::Twiggy Pig",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Bartók's Room::The Last Dodo Bird",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Bartók's Room::Street Jam (Jam-eo En La Calle)",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Bartók's Room::Uranus",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Bartók's Room::Final Chat: Colubre",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Mitxelena III: Nauthiz::Touch",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Mitxelena III: Nauthiz::Excesivamente Normal",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Mitxelena III: Nauthiz::Nauthiz",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Mitxelena III: Nauthiz::Pyro",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Mitxelena III: Nauthiz::Supermarket's Limp Fugue",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Mitxelena III: Nauthiz::Interludio",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Mitxelena III: Nauthiz::Beware Of The Black Hole",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Mitxelena III: Nauthiz::DDT",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Música De Película::Meet Mr. Alex",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Música De Película::Dumpin' Banana",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Música De Película::Riddin' With Angelica",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Música De Película::Barry Juais",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Música De Película::Pa'l Malecón",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Música De Película::Struggle",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Música De Película::Pelsígnate",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Música De Película::Melbourne-Choroní",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Música De Película::Floyd's Theme",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Música De Película::Poca Mantequilla",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Música De Película::Spider's Theme",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Música De Película::Floyd & Fiona",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Música De Película::The Date",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Música De Película::Groovy Bacon",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Música De Película::Dead At Last",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Mitxelena II: Atlantique::The Extra Mile",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Mitxelena II: Atlantique::Atlantique",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Mitxelena II: Atlantique::Endless Quest",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Mitxelena II: Atlantique::1208",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Mitxelena II: Atlantique::Happy Valiumtimes",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Mitxelena II: Atlantique::Mundo Paralelo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Mitxelena II: Atlantique::Lullaby",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Mitxelena II: Atlantique::Bilbo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Volumen 1 Junta Parroquial::Comamos Juntos (Come Together)",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Volumen 1 Junta Parroquial::K-OS",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Volumen 1 Junta Parroquial::Cangrejo Volador",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Volumen 1 Junta Parroquial::Come Como Eres (Come As You Are)",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Volumen 1 Junta Parroquial::Cangrejo Reprise",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Volumen 1 Junta Parroquial::Zamuro",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Volumen 1 Junta Parroquial::Nadie Como Tú",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Volumen 1 Junta Parroquial::El Ojo-di 2.0",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Volumen 1 Junta Parroquial::Gilbert Belt",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Victor Cuica::Victor Cuica & Alberto Lazo::Que se ama cuando se ama?",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "17950 «Qué Se Ama Cuando Se Ama»: el ER vio una contradicción (año, duración…)",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Victor Cuica::Victor Cuica & Alberto Lazo::Monalisa",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "17957 «Mona Lisa»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Victor Cuica::Victor Cuica & Alberto Lazo::Donde estas Corazón",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "17966 «Dónde Estás Corazón»: el ER vio una contradicción (año, duración…)",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Victor Cuica::Victor Cuica & Alberto Lazo::Bajate de esa nube",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "17977 «Bájate De Esa Nube»: el ER vio una contradicción (año, duración…)",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Victor Cuica::Victor Cuica & Alberto Lazo::As Time Goes By",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "17976 «As Times Goes By»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Victor Cuica::Victor Cuica & Alberto Lazo::Don't Stop The Carnival",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "17992 «Don´t Stop The Carnival»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Victor Cuica::Victor Cuica & Alberto Lazo::R.I.P. MA/Requiem in Paz",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "17981 «R.I.P. Ma/Requiem En Paz»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Virgilio Araque Reyes::Jamin in Venez::Jamin In Venez",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Virgilio Araque Reyes::Jamin in Venez::Dreaming Mountain",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Virgilio Araque Reyes::Jamin in Venez::Colours Of The Sun",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Virgilio Araque Reyes::Jamin in Venez::Smilin To The World",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Virgilio Araque Reyes::Jamin in Venez::El Torte",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Virgilio Araque Reyes::Virgilio en Concierto::Obertura",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Virgilio Araque Reyes::Virgilio en Concierto::Luz Del Mañana",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Virgilio Araque Reyes::Virgilio en Concierto::Dedicada A La Juventud",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Virgilio Araque Reyes::Virgilio en Concierto::Camino A Casa",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Virgilio Araque Reyes::Virgilio en Concierto::Virgilio",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Virgilio Araque Reyes::Virgilio en Concierto::Suite",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Virgilio Araque Reyes::Virgilio en Concierto::Sueños De Montaña",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Virgilio Araque Reyes::Virgilio en Concierto::La Llegada",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Baquedanu's::Toma 5::Inmensidad",
+      "rule": "sin-decision-er",
+      "detail": "la identidad no tiene decisión de ER registrada",
+      "claims": 1
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Baquedanu's::Toma 5::Impressions",
+      "rule": "sin-decision-er",
+      "detail": "la identidad no tiene decisión de ER registrada",
+      "claims": 1
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Baquedanu's::Toma 5::Europa",
+      "rule": "sin-decision-er",
+      "detail": "la identidad no tiene decisión de ER registrada",
+      "claims": 1
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Victor Cuica::Que Sea Para Siempre::Samirio",
+      "rule": "sin-decision-er",
+      "detail": "la identidad no tiene decisión de ER registrada",
+      "claims": 1
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Victor Cuica::Que Sea Para Siempre::Triste",
+      "rule": "sin-decision-er",
+      "detail": "la identidad no tiene decisión de ER registrada",
+      "claims": 1
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Victor Cuica::Que Sea Para Siempre::Afro Blue",
+      "rule": "sin-decision-er",
+      "detail": "la identidad no tiene decisión de ER registrada",
+      "claims": 1
+    }
+  ],
+  "duplicateFlags": [],
+  "errors": [],
+  "runId": 11443
+}

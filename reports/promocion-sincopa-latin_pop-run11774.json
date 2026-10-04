@@ -1,0 +1,33 @@
+{
+  "section": "latin_pop",
+  "dryRun": false,
+  "note": "Sincopa latin_pop: pistas de la ficha dueña que no tenían lugar, tras mover el repertorio del disco separado y renumerar (Brian 2026-10-03)",
+  "kinds": {
+    "album_credit": {
+      "identities": 0,
+      "claims": 0,
+      "verdicts": {},
+      "applied": 0,
+      "unchanged": 0,
+      "stillCandidate": 0,
+      "dismissed": 0,
+      "failed": 0
+    },
+    "track_credit": {
+      "identities": 9,
+      "claims": 54,
+      "verdicts": {
+        "puente": 9
+      },
+      "applied": 8,
+      "unchanged": 40,
+      "stillCandidate": 6,
+      "dismissed": 0,
+      "failed": 0
+    }
+  },
+  "holds": [],
+  "duplicateFlags": [],
+  "errors": [],
+  "runId": 11774
+}

@@ -1,0 +1,1850 @@
+{
+  "section": "ethnic",
+  "dryRun": false,
+  "note": "Sincopa ethnic: pistas, tercera pasada tras renumerar las caras B ya aceptadas (pedido de Brian 2026-10-02)",
+  "kinds": {
+    "track": {
+      "identities": 544,
+      "claims": 2110,
+      "verdicts": {
+        "different:sin-coincidencia": 280,
+        "hold:padre-sin-resolver": 211,
+        "hold:titulo-igual-con-contradiccion": 3,
+        "hold:titulo-casi-igual-mismo-padre": 6,
+        "hold:sin-decision-er": 39,
+        "approve:auto-match": 4,
+        "hold:varios-con-el-mismo-titulo": 1
+      },
+      "applied": 3,
+      "unchanged": 9,
+      "stillCandidate": 1007,
+      "dismissed": 0,
+      "failed": 0
+    }
+  },
+  "holds": [
+    {
+      "kind": "track",
+      "identityRaw": "A Trio::Canta y Toca::A Ultima Hora",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "A Trio::Canta y Toca::Evocación",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "A Trio::Canta y Toca::Sueños De Profeta",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "A Trio::Canta y Toca::Inquieta Pasión",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "A Trio::Canta y Toca::Mi Complemento",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "A Trio::Canta y Toca::Canta y Toca",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "A Trio::Canta y Toca::Daliamor",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "A Trio::Canta y Toca::La Travesía",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "A Trio::Canta y Toca::Quiero Adorarte",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "A Trio::Canta y Toca::Por Una Mazorca e' Mayz",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Al & El::Al Norte Del Amazonas::Amanecer Sobre Un Tepuy",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Al & El::Al Norte Del Amazonas::Carnaval En La Costa",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Al & El::Al Norte Del Amazonas::Acércate Al Sol De Mara",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Al & El::Al Norte Del Amazonas::Cruzando Los Médanos",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Al & El::Al Norte Del Amazonas::Ritual Del Amazonas",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Al & El::Al Norte Del Amazonas::Cantos De La Selva Virgen",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Al & El::Al Norte Del Amazonas::Niños En El bajo Orinoco",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Al & El::Al Norte Del Amazonas::Lluvia Del Sur",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Al & El::Al Norte Del Amazonas::Llanto Del Cerro Avila",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Al & El::Al Norte Del Amazonas::Pidiendo Cola En Los Andes",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Al & El::Al Norte Del Amazonas::Nos Vemos En Maragarita",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Al & El::Al Norte Del Amazonas::Rompe La Rutina",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Al & El::Al Norte Del Amazonas::La Bandola Se Va",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Al & El::Al Norte Del Amazonas::Feliz Año En Caracas",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Eduardo Betancourt::Ad Libitum::Buscando Onda",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Eduardo Betancourt::Ad Libitum::Efecto Mariposa",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Eduardo Betancourt::Ad Libitum::Mi Danza Única",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Eduardo Betancourt::Ad Libitum::Caramba",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Eduardo Betancourt::Ad Libitum::Acqua Song",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Eduardo Betancourt::Ad Libitum::Merengue De Abril",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Eduardo Betancourt::Ad Libitum::Joropo Loop",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Eduardo Betancourt::Ad Libitum::Kalimbharp",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Eduardo Betancourt::Ad Libitum::Talla Doble E",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Eduardo Betancourt::Ad Libitum::Las Malas Lenguas",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Eduardo Betancourt::Ad Libitum::Camac Dance",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ensamble 4::Dulce y Sala'o::Las Muchachas",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ensamble 4::Dulce y Sala'o::Vals de Abril",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ensamble 4::Dulce y Sala'o::Aguallanero",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ensamble 4::Dulce y Sala'o::Idilio",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ensamble 4::Dulce y Sala'o::Vals del Dulce Beso",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ensamble 4::Dulce y Sala'o::La Bonchona",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ensamble 4::Dulce y Sala'o::Dulce y Sala'o",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ensamble 4::Dulce y Sala'o::Nostalgia",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ensamble 4::Dulce y Sala'o::Seis Guayanés",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ensamble 4::Dulce y Sala'o::El Balancín",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ensamble 4::Dulce y Sala'o::La Guacuquera",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ensamble 4::Dulce y Sala'o::Como un Angel",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ensamble 4::Dulce y Sala'o::Ilusión",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ensamble 4::Dulce y Sala'o::El Melitón",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ensamble 4::Dulce y Sala'o::Un Segundo de Lucero",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ensamble 4::Dulce y Sala'o::Mi Niña",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Aldemaro Romero::Dinner In Caracas::Sombra En Los Médanos",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "71345 «Sombra En Los Medanos»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gaélica::Paz: Una Navidad Celta En Venezuela::Adeste Fideles",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gaélica::Paz: Una Navidad Celta En Venezuela::Jigs:",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gaélica::Paz: Una Navidad Celta En Venezuela::Noche De Paz (Silent Knight)",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gaélica::Paz: Una Navidad Celta En Venezuela::Niño Jesús Llanero",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gaélica::Paz: Una Navidad Celta En Venezuela::Reels:",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gaélica::Paz: Una Navidad Celta En Venezuela::El Tamborilero (The Little Drummer Boy)",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gaélica::Paz: Una Navidad Celta En Venezuela::Parranda Celta:",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gaélica::Paz: Una Navidad Celta En Venezuela::Reels II:",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gaélica::Paz: Una Navidad Celta En Venezuela::Niño Lindo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gaélica::Paz: Una Navidad Celta En Venezuela::Una Gaita Con Gaita",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gaélica::Luz: Una Navidad Celta En Venezuela V.2::Aguinaldo Indígena / The First Noel",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gaélica::Luz: Una Navidad Celta En Venezuela V.2::Angels We Have Heard On High",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gaélica::Luz: Una Navidad Celta En Venezuela V.2::Cantemos, Cantemos",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gaélica::Luz: Una Navidad Celta En Venezuela V.2::White Christmas",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gaélica::Luz: Una Navidad Celta En Venezuela V.2::Deck The Halls",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gaélica::Luz: Una Navidad Celta En Venezuela V.2::O Holy Night",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gaélica::Luz: Una Navidad Celta En Venezuela V.2::God Rest Ye Merry Gentlemen / Luna Decembrina",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gaélica::Luz: Una Navidad Celta En Venezuela V.2::Joy To The World / Mi Burrito Sabanero",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gaélica::Luz: Una Navidad Celta En Venezuela V.2::Aguinaldo Gallego",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gaélica::Luz: Una Navidad Celta En Venezuela V.2::What Child Is This",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ensamble Gurrufío::Sesiones con Moisés Torrealba::San Rafael Quitapesares",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ensamble Gurrufío::Sesiones con Moisés Torrealba::El Saltarín",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ensamble Gurrufío::Sesiones con Moisés Torrealba::Carnaval De Este Año",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ensamble Gurrufío::Sesiones con Moisés Torrealba::Bambuquísimo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ensamble Gurrufío::Sesiones con Moisés Torrealba::Romance En La Lejanía",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ensamble Gurrufío::Sesiones con Moisés Torrealba::Lagunillas",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ensamble Gurrufío::Sesiones con Moisés Torrealba::Pajarillo Moro",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ensamble Gurrufío::Sesiones con Moisés Torrealba::La Negra Cachumba",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ensamble Gurrufío::Sesiones con Moisés Torrealba::Tonada Del Romance",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ensamble Gurrufío::Sesiones con Moisés Torrealba::Los Doce",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ensamble Gurrufío::Sesiones con Moisés Torrealba::Mi Camaguán",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ensamble Gurrufío::Sesiones con Moisés Torrealba::Saludo A Barinas",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gaélica::I/O::Haraam Bocaroja",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "15681 «Haraam Boca Roja»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "C4 Trío::C4 Trío::Preludio Creo-yo",
+      "rule": "sin-decision-er",
+      "detail": "la identidad no tiene decisión de ER registrada",
+      "claims": 2
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Vytas Brenner::Amazonia::Techos Rojos 1er Movimiento",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "6588 «Techos Rojos (1° Movimiento)»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Vytas Brenner::Amazonia::Techos Rojos 2do Movimiento",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "6592 «Techos Rojos (2° Movimiento)»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Vytas Brenner::Amazonia::Amazonia (Tierra Yanomami)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "6630 «Amazonia»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Vytas Brenner::Vytas::Cristo Fue",
+      "rule": "sin-decision-er",
+      "detail": "la identidad no tiene decisión de ER registrada",
+      "claims": 2
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Vytas Brenner::Vytas::Adicora",
+      "rule": "sin-decision-er",
+      "detail": "la identidad no tiene decisión de ER registrada",
+      "claims": 2
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Vytas Brenner::Vytas::Hasta Cuando",
+      "rule": "sin-decision-er",
+      "detail": "la identidad no tiene decisión de ER registrada",
+      "claims": 2
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Vytas Brenner::Vytas::Amuay",
+      "rule": "sin-decision-er",
+      "detail": "la identidad no tiene decisión de ER registrada",
+      "claims": 2
+    },
+    {
+      "kind": "track",
+      "identityRaw": "C4 Trío::C4 Trío y Rafael \"Pollo\" Brito - De Repente::Yo Sin Ti No Valgo Nada",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "C4 Trío::C4 Trío y Rafael \"Pollo\" Brito - De Repente::De Repente",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "C4 Trío::C4 Trío y Rafael \"Pollo\" Brito - De Repente::Y Deja",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "C4 Trío::C4 Trío y Rafael \"Pollo\" Brito - De Repente::Isn't She Lovely",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "C4 Trío::C4 Trío y Rafael \"Pollo\" Brito - De Repente::El Tresillo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "C4 Trío::C4 Trío y Rafael \"Pollo\" Brito - De Repente::Océano",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "C4 Trío::C4 Trío y Rafael \"Pollo\" Brito - De Repente::Déjala Bailar - Seis Por Derecho",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "C4 Trío::C4 Trío y Rafael \"Pollo\" Brito - De Repente::Norwegian Wood",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "C4 Trío::C4 Trío y Rafael \"Pollo\" Brito - De Repente::Hasta Que Vuelvas",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "C4 Trío::C4 Trío y Rafael \"Pollo\" Brito - De Repente::Lucerito - El Acertijo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Sinverguenzas::20.20 (Veinte Años 2000-2020)::Los Molicasa",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Sinverguenzas::20.20 (Veinte Años 2000-2020)::Quedas Tú",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Sinverguenzas::20.20 (Veinte Años 2000-2020)::Tranquilamente, Un Tipo Leal",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Sinverguenzas::20.20 (Veinte Años 2000-2020)::Las Malas Lenguas",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Sinverguenzas::20.20 (Veinte Años 2000-2020)::Mi Princesa Del Bosque",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Sinverguenzas::20.20 (Veinte Años 2000-2020)::Carretera",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Sinverguenzas::20.20 (Veinte Años 2000-2020)::Sueño De Un Sinvergüenza",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Sinverguenzas::20.20 (Veinte Años 2000-2020)::Con Un Ramito De Mejorana",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Sinverguenzas::20.20 (Veinte Años 2000-2020)::La Cartilla",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Sinverguenzas::20.20 (Veinte Años 2000-2020)::Cantaban Todos Los Gallos",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Sinverguenzas::20.20 (Veinte Años 2000-2020)::Retrato De Una Dama",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Sinverguenzas::20.20 (Veinte Años 2000-2020)::La Fiesta Joropera",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Vytas Brenner::Estoy Como Quiero::Acuesta",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "14837 «Acuesta (grabado en vivo, Maracaibo)»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Vytas Brenner::Estoy Como Quiero::Canchunchu Florido",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "14838 «Canchunchu florido (grabado en vivo, Maracaibo)»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Vytas Brenner::La Ofrenda de Vytas Brenner::Ofrenda De Miguel",
+      "rule": "sin-decision-er",
+      "detail": "la identidad no tiene decisión de ER registrada",
+      "claims": 2
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Vytas Brenner::La Ofrenda de Vytas Brenner::Tormenta De Barlovento",
+      "rule": "sin-decision-er",
+      "detail": "la identidad no tiene decisión de ER registrada",
+      "claims": 2
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Vytas Brenner::La Ofrenda de Vytas Brenner::Frailejón",
+      "rule": "sin-decision-er",
+      "detail": "la identidad no tiene decisión de ER registrada",
+      "claims": 2
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Vytas Brenner::La Ofrenda de Vytas Brenner::La Sabana",
+      "rule": "sin-decision-er",
+      "detail": "la identidad no tiene decisión de ER registrada",
+      "claims": 2
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Vytas Brenner::La Ofrenda de Vytas Brenner::Tragavenado",
+      "rule": "sin-decision-er",
+      "detail": "la identidad no tiene decisión de ER registrada",
+      "claims": 2
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Vytas Brenner::La Ofrenda de Vytas Brenner::Araguaney",
+      "rule": "sin-decision-er",
+      "detail": "la identidad no tiene decisión de ER registrada",
+      "claims": 2
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Vytas Brenner::En Vivo! Ofrenda::Interludio",
+      "rule": "varios-con-el-mismo-titulo",
+      "detail": "ya hay 2 con ese título bajo el mismo padre: 6831, 4504",
+      "claims": 6
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Vytas Brenner::Lo Máximo de Vytas::Canchunchu Florido",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Vytas Brenner::Lo Máximo de Vytas::La Restinga/Playa de Agua (En Vivo)",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Vytas Brenner::Lo Máximo de Vytas::Catatumbo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Vytas Brenner::Lo Máximo de Vytas::Caracas Para Locos/Cerro del Avila",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Vytas Brenner::Lo Máximo de Vytas::San Agustín",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Vytas Brenner::Lo Máximo de Vytas::Mandingo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Vytas Brenner::Lo Máximo de Vytas::Princesa",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Vytas Brenner::Lo Máximo de Vytas::Morrocoy (En Vivo)",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Vytas Brenner::Lo Máximo de Vytas::Frailejon-Interludio (En Vivo)",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces de Venezuela::Recordando Al Poeta",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces de Venezuela::El Alacrán",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces de Venezuela::Toto",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces de Venezuela::Apure En Un Viaje",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces de Venezuela::Mis Anhelos",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces de Venezuela::Cara E' Tiple",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces de Venezuela::Saltarin",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces de Venezuela::Los Potes De San Andres",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces de Venezuela::Las Lomas Del Viento",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces de Venezuela::Pico Del Aguila",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces de Venezuela::Mañanitas Navideñas",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces de Venezuela::Mesa Bolivar",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces::Raices",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces::Pico Del Aguila",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces::Mi Llavecita",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces::Séptimo Amigo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces::La Negra Cachumba",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces::Pueblo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces::Don Luis",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces::Chuao",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces::Laberinto",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces::El Chingo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Raices::Pajarillo y Chipola",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Raices::Cuando Duerme Caracas",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Raices::Señor Jou",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Raices::Tonada Al Atardecer",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Raices::Guayana",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Raices::El Parrillero",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Raices::Saludo A Barinas",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Raices::Dialogo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Raices::Patatín Patatán",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Raices::Llanerita",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Raices::Pasaje Indio",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Raices::Linda Zuliana",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces De Venezuela::La Totuviola",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces De Venezuela::El Tristón",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces De Venezuela::Surcando El Paso",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces De Venezuela::Onda Romántica",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces De Venezuela::Mi Estrella",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces De Venezuela::Pequeña Venecia",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces De Venezuela::La Negra Sereta",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces De Venezuela::Retazos Criollos",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces De Venezuela::Raices Llaneras II",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces De Venezuela::Salud! Amigo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces De Venezuela::Panal De Arena",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces De Venezuela::El Profe",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces De Venezuela::Pasaje De La Esperanza",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces De Venezuela::En El Ocaso",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo Raíces de Venezuela::Grupo Raíces de Venezuela::El Negro Eliezer",
+      "rule": "sin-decision-er",
+      "detail": "la identidad no tiene decisión de ER registrada",
+      "claims": 1
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Alexis Cárdenas::Ensamble Gurrufio Presenta Alexis Cárdenas::Fou Rire",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Alexis Cárdenas::Ensamble Gurrufio Presenta Alexis Cárdenas::O Voo da Mosca",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Alexis Cárdenas::Ensamble Gurrufio Presenta Alexis Cárdenas::Creo Que Te Quiero",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Alexis Cárdenas::Ensamble Gurrufio Presenta Alexis Cárdenas::El Saltarín",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Alexis Cárdenas::Ensamble Gurrufio Presenta Alexis Cárdenas::Patas D'Hilo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Alexis Cárdenas::Ensamble Gurrufio Presenta Alexis Cárdenas::San José",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Alexis Cárdenas::Ensamble Gurrufio Presenta Alexis Cárdenas::Como Pa' Desenguayabar",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Alexis Cárdenas::Ensamble Gurrufio Presenta Alexis Cárdenas::Suplicante",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Alexis Cárdenas::Ensamble Gurrufio Presenta Alexis Cárdenas::Los Tiestos De Moca",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Alexis Cárdenas::Ensamble Gurrufio Presenta Alexis Cárdenas::Lucerito",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Alexis Cárdenas::Ensamble Gurrufio Presenta Alexis Cárdenas::Vals Para Sonny y Ceresta",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Alexis Cárdenas::Ensamble Gurrufio Presenta Alexis Cárdenas::Tonada En Maracaibo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Alexis Cárdenas::Ensamble Gurrufio Presenta Alexis Cárdenas::Pajarillo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Sinverguenzas::Bichoneando::Bichonear",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Sinverguenzas::Bichoneando::Misintá",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Sinverguenzas::Bichoneando::Recuerdo Centenario",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Sinverguenzas::Bichoneando::Miel De Amor",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Sinverguenzas::Bichoneando::Mi Negra",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Sinverguenzas::Bichoneando::Seis Entrevera'o",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Sinverguenzas::Bichoneando::La Casa Azul",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Sinverguenzas::Bichoneando::El Malmanda'o",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Sinverguenzas::Bichoneando::Sin Embargo Joropo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Sinverguenzas::Bichoneando::Pasaje Del Olvido",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Sinverguenzas::Desde Otro Lugar::El Inquieto",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Sinverguenzas::Desde Otro Lugar::Mariajosé",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Sinverguenzas::Desde Otro Lugar::Amalgamados",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Sinverguenzas::Desde Otro Lugar::Lágrimas De Bebé",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Sinverguenzas::Desde Otro Lugar::Buscando Un Rumor",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Sinverguenzas::Desde Otro Lugar::Desde Otro Lugar",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Sinverguenzas::Desde Otro Lugar::Sin Embargo Joropo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Sinverguenzas::Desde Otro Lugar::María",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Sinverguenzas::Desde Otro Lugar::Niña De Hilos Rojos",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Sinverguenzas::Desde Otro Lugar::Satisfacción",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Sinverguenzas::Desde Otro Lugar::Mi Flor De Mayo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Sinverguenzas::Desde Otro Lugar::Seis Entrevera'o",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Aldemaro Romero::Onda Nueva Vocal::Pasillaneando",
+      "rule": "sin-decision-er",
+      "detail": "la identidad no tiene decisión de ER registrada",
+      "claims": 2
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Aldemaro Romero::Onda Nueva Vocal::Pais Tropical",
+      "rule": "sin-decision-er",
+      "detail": "la identidad no tiene decisión de ER registrada",
+      "claims": 2
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Aldemaro Romero::Dinner in Caracas::Fulgida Luna",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "68785 «Fúlgida Luna»: el ER vio una contradicción (año, duración…)",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Aldemaro Romero::Dinner In Caracas::Serenata",
+      "rule": "sin-decision-er",
+      "detail": "la identidad no tiene decisión de ER registrada",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Aldemaro Romero::Dinner in Caracas::Adios A Ocumare",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "68782 «Adiós A Ocumare»: el ER vio una contradicción (año, duración…)",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Aldemaro Romero::La Onda Máxima::Folie Douce",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Aldemaro Romero::La Onda Máxima::Y Llueve Todavía",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Aldemaro Romero::La Onda Máxima::Esperaré",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Aldemaro Romero::La Onda Máxima::Vals # 3",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Aldemaro Romero::La Onda Máxima::Y Llegó El Amor",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Aldemaro Romero::La Onda Máxima::Pasillaneando",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Aldemaro Romero::La Onda Máxima::Fango",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Aldemaro Romero::La Onda Máxima::Fiesta en Elorza",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Aldemaro Romero::La Onda Máxima::País Tropical",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Aldemaro Romero::La Onda Máxima::Marisela",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Aldemaro Romero::La Onda Máxima::Limón Limonero",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Aldemaro Romero::La Onda Máxima::Carretera",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Aldemaro Romero::La Onda Máxima::Si Voce Pensa",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Aldemaro Romero::La Onda Máxima::Tema de La Onda",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Aldemaro Romero::Dinner In Caracas::Dama Antañona",
+      "rule": "sin-decision-er",
+      "detail": "la identidad no tiene decisión de ER registrada",
+      "claims": 1
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Aldemaro Romero::Dinner In Caracas::Fúlgida Luna",
+      "rule": "sin-decision-er",
+      "detail": "la identidad no tiene decisión de ER registrada",
+      "claims": 1
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Aldemaro Romero::Dinner In Caracas::Barlovento",
+      "rule": "sin-decision-er",
+      "detail": "la identidad no tiene decisión de ER registrada",
+      "claims": 1
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Vytas Brenner::Jayeche::Canchunchú Florido",
+      "rule": "sin-decision-er",
+      "detail": "la identidad no tiene decisión de ER registrada",
+      "claims": 1
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Vytas Brenner::Jayeche::6 Por Electrón",
+      "rule": "sin-decision-er",
+      "detail": "la identidad no tiene decisión de ER registrada",
+      "claims": 1
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Vytas Brenner::Jayeche::Jayeche",
+      "rule": "sin-decision-er",
+      "detail": "la identidad no tiene decisión de ER registrada",
+      "claims": 1
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Vytas Brenner::Jayeche::Catatumbo",
+      "rule": "sin-decision-er",
+      "detail": "la identidad no tiene decisión de ER registrada",
+      "claims": 1
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Vytas Brenner::Jayeche::Caracas Para Locos",
+      "rule": "sin-decision-er",
+      "detail": "la identidad no tiene decisión de ER registrada",
+      "claims": 1
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Vytas Brenner::Estoy Como Quiero::Dorado II",
+      "rule": "sin-decision-er",
+      "detail": "la identidad no tiene decisión de ER registrada",
+      "claims": 1
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Vytas Brenner::En Vivo! Ofrenda::La Restinga",
+      "rule": "sin-decision-er",
+      "detail": "la identidad no tiene decisión de ER registrada",
+      "claims": 1
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Vytas Brenner::En Vivo! Ofrenda::Playa De Agua",
+      "rule": "sin-decision-er",
+      "detail": "la identidad no tiene decisión de ER registrada",
+      "claims": 1
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Vytas Brenner::En Vivo! Ofrenda::Ganado",
+      "rule": "sin-decision-er",
+      "detail": "la identidad no tiene decisión de ER registrada",
+      "claims": 1
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Vytas Brenner::En Vivo! Ofrenda::Cariaco",
+      "rule": "sin-decision-er",
+      "detail": "la identidad no tiene decisión de ER registrada",
+      "claims": 1
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Vytas Brenner::En Vivo! Ofrenda::Frailejón",
+      "rule": "sin-decision-er",
+      "detail": "la identidad no tiene decisión de ER registrada",
+      "claims": 1
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Vytas Brenner::Ofrenda::Acuesta",
+      "rule": "sin-decision-er",
+      "detail": "la identidad no tiene decisión de ER registrada",
+      "claims": 1
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Vytas Brenner::Ofrenda::Princesa",
+      "rule": "sin-decision-er",
+      "detail": "la identidad no tiene decisión de ER registrada",
+      "claims": 1
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Vytas Brenner::Ofrenda::Aguacero",
+      "rule": "sin-decision-er",
+      "detail": "la identidad no tiene decisión de ER registrada",
+      "claims": 1
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Vytas Brenner::El Vals Del Mar::Una Rosa Roja",
+      "rule": "sin-decision-er",
+      "detail": "la identidad no tiene decisión de ER registrada",
+      "claims": 1
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Vytas Brenner::El Vals Del Mar::Dos Viajeros",
+      "rule": "sin-decision-er",
+      "detail": "la identidad no tiene decisión de ER registrada",
+      "claims": 1
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Vytas Brenner::El Vals Del Mar::Escalas y Armonias",
+      "rule": "sin-decision-er",
+      "detail": "la identidad no tiene decisión de ER registrada",
+      "claims": 1
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Vytas Brenner::El Vals Del Mar::Estoy Como Quiero",
+      "rule": "sin-decision-er",
+      "detail": "la identidad no tiene decisión de ER registrada",
+      "claims": 1
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo Raíces de Venezuela::Grupo Raíces de Venezuela::Raíces Llaneras",
+      "rule": "sin-decision-er",
+      "detail": "la identidad no tiene decisión de ER registrada",
+      "claims": 1
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo Raíces de Venezuela::Grupo Raíces de Venezuela::Visión Cultural",
+      "rule": "sin-decision-er",
+      "detail": "la identidad no tiene decisión de ER registrada",
+      "claims": 1
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo Raíces de Venezuela::Grupo Raíces de Venezuela::Choro",
+      "rule": "sin-decision-er",
+      "detail": "la identidad no tiene decisión de ER registrada",
+      "claims": 1
+    }
+  ],
+  "duplicateFlags": [],
+  "errors": [],
+  "runId": 11439
+}

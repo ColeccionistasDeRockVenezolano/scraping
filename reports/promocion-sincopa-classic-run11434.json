@@ -1,0 +1,2663 @@
+{
+  "section": "classic",
+  "dryRun": false,
+  "note": "Sincopa classic: tercera pasada de pistas y créditos tras renumerar las caras B ya aceptadas (pedido de Brian 2026-10-02)",
+  "kinds": {
+    "track": {
+      "identities": 638,
+      "claims": 2440,
+      "verdicts": {
+        "different:sin-coincidencia": 263,
+        "hold:padre-sin-resolver": 372,
+        "hold:sin-decision-er": 3
+      },
+      "applied": 15,
+      "unchanged": 45,
+      "stillCandidate": 902,
+      "dismissed": 0,
+      "failed": 0
+    },
+    "track_credit": {
+      "identities": 598,
+      "claims": 3648,
+      "verdicts": {
+        "puente": 598
+      },
+      "applied": 11,
+      "unchanged": 55,
+      "stillCandidate": 3588,
+      "dismissed": 0,
+      "failed": 0
+    }
+  },
+  "holds": [
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Danzón - Música de Latinoamerica::Danzón Nº 2",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Danzón - Música de Latinoamerica::Danzón Nº 3 for Flute, Guitar & Orchestra",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Danzón - Música de Latinoamerica::La Muerte Del Angel",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Danzón - Música de Latinoamerica::Danzón Nº 4",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Danzón - Música de Latinoamerica::Melodia en La",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Danzón - Música de Latinoamerica::Ten Presente El Presente",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Danzón - Música de Latinoamerica::Suite Onda Nueva",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Alirio Díaz::Recital::Guasa",
+      "rule": "sin-decision-er",
+      "detail": "la identidad no tiene decisión de ER registrada",
+      "claims": 2
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela CENTRO::Toy' Contento",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela CENTRO::Analicia",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela CENTRO::Desilusión",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela CENTRO::Caballo Viejo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela CENTRO::Dama Antañona",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela CENTRO::Ansiedad",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela CENTRO::Carmen La Que Contaba 16 Años",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela CENTRO::Moliendo Café",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela CENTRO::La Pelota De Carey",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela CENTRO::La Burra",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela ORIENTE::Polo Margariteño",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela ORIENTE::Luna De Margarita",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela ORIENTE::María Antonia",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela ORIENTE::Presagio",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela ORIENTE::Mare Mare",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela ORIENTE::El Carite",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela ORIENTE::La Burriquita",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela ORIENTE::Zumba Que Zumba",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela ORIENTE::Venezuela",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela ORIENTE::Alma Llanera",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela OCCIDENTE::Mujer Merideña",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela OCCIDENTE::Conticinio",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela OCCIDENTE::Brisas Del Torbes",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela OCCIDENTE::Sierra Nevada",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela OCCIDENTE::Mucuchies",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela OCCIDENTE::Pluma y Lira",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela OCCIDENTE::Sin Rencor",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela OCCIDENTE::Maracaibera",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela OCCIDENTE::Endrina",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela OCCIDENTE::Sombra En Los Medanos",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela OCCIDENTE::Crepúsculo Coriano",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela SUR::La Sapoara",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela SUR::Woman Del Callao",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela SUR::El Callao Tunai",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela SUR::Guayana Es",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela SUR::Yo Me Quedo En venezuela",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela SUR::Matilda",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela SUR::Bandido",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela SUR::El Sapo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela SUR::Mujer Guayanesa",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela SUR::Viajera Del Rio",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela LLANOS::Fiesta En Elorza",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela LLANOS::Neudys - Pajarillo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela LLANOS::Chaparralito Llanero",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela LLANOS::El Gavilán",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela LLANOS::Carrao, Carrao",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela LLANOS::Linda Barinas",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela LLANOS::El Becerrito",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela LLANOS::Vestida De Garza Blanca",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela LLANOS::Viejo Soguero",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela LLANOS::Enfurecida",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela VALSES::Las Bellas Noches De Maiquetía",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela VALSES::Adiós A Ocumare",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela VALSES::Conticinio",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela VALSES::Dama Antañona",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela VALSES::Luna De Margarita",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela VALSES::Mujer Merideña",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela VALSES::Sombra En Los Medanos",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela VALSES::Ansiedad",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela VALSES::Pluma y Lira",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Mi Querida Venezuela VALSES::Crepúsculo Coriano",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Crepúsculo Coriano",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Polo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Sombra En Los Médanos",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::La Zapoara",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Calipso Del Callao",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Woman Del Callao",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Moliendo Café",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Maravillosa",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Ansiedad",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Venezuela",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Margarita Carreño",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Tobogán De La Selva",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Luisa",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Caracas Vieja",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Desesperanza",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Algo Sublime",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Tío Amaury",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Merideña",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Voraz",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Viajera Del Río",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Romance",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Ausencia",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Siete Estrellas",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Paisaje Apureño",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Romance En La Lejanía",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Linda Barinas",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Canto De Guaraña",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::Río Orinoco",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::La Burra",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite De Las Siete Estrellas::El Cocuy Que Alumbra",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orfeón Lamas & Orquesta Sinfónica Venezuela::Concierto Sacro::Stabat Mater",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orfeón Lamas & Orquesta Sinfónica Venezuela::Concierto Sacro::Llorad Mortales. Pésame a La Virgen",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orfeón Lamas & Orquesta Sinfónica Venezuela::Concierto Sacro::Es María Norte y Guía",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orfeón Lamas & Orquesta Sinfónica Venezuela::Concierto Sacro::Salve Regina",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orfeón Lamas & Orquesta Sinfónica Venezuela::Concierto Sacro::Popule Meus",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Beethoven::Beethoven Sinfonía # 9",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Venezuela Sinfónica::Antelación e Imitación Fugaz",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Venezuela Sinfónica::Camino Entre lo Sutil e Inerrante",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Tchaikosvky Espectacular::Obertura Fantasía \"Romeo y Julieta\"",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Tchaikosvky Espectacular::Marcha Eslava Op. 31",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Tchaikosvky Espectacular::Obertura Solemne 1812 Op. 49",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Navidad Sinfónica::Navidad Venezolana",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Navidad Sinfónica::- Niño Lindo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 8
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Navidad Sinfónica::- Aguinaldo Criollo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 8
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Navidad Sinfónica::- Niño Jesús Llanero",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 8
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Navidad Sinfónica::- Luna Decembrina",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Navidad Sinfónica::- Fuego Al Cañon",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Navidad Sinfónica::Sentir Zuliano",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Navidad Sinfónica::Noche De Paz",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Navidad Sinfónica::Aguinaldos",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Navidad Sinfónica::- Esplendida Noche",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Navidad Sinfónica::- De Contento",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Navidad Sinfónica::- La Virgen Del Valle",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Navidad Sinfónica::- Nació El Redentor",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Navidad Sinfónica::- Niño Venturoso",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Navidad Sinfónica::- La Capilla Esta Abierta",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Navidad Sinfónica::El Niño Del Avila",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Navidad Sinfónica::Haremos Promesas",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Navidad Sinfónica::Esta Bella Noche",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Navidad Sinfónica::Sin Rencor",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Navidad Sinfónica::Gaita A La Orquesta",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Navidad Sinfónica::Canto A La Vida",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Bolívar Symphony Orchestra of Venezuela::Revueltas, Orbón & Ginastera::The Fishermen",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Bolívar Symphony Orchestra of Venezuela::Revueltas, Orbón & Ginastera::The Child's Funeral",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Bolívar Symphony Orchestra of Venezuela::Revueltas, Orbón & Ginastera::Setting Out to Fish",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Bolívar Symphony Orchestra of Venezuela::Revueltas, Orbón & Ginastera::The Fight",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Bolívar Symphony Orchestra of Venezuela::Revueltas, Orbón & Ginastera::The Return of The Fishermen with Their Dead Friend",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Bolívar Symphony Orchestra of Venezuela::Revueltas, Orbón & Ginastera::Moderato",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Bolívar Symphony Orchestra of Venezuela::Revueltas, Orbón & Ginastera::Lento",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Bolívar Symphony Orchestra of Venezuela::Revueltas, Orbón & Ginastera::Allegro",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Bolívar Symphony Orchestra of Venezuela::Revueltas, Orbón & Ginastera::Sensemaya",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Bolívar Symphony Orchestra of Venezuela::Revueltas, Orbón & Ginastera::Adagio contemplativo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Bolívar Symphony Orchestra of Venezuela::Revueltas, Orbón & Ginastera::Impetuosamente",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Bolívar Symphony Orchestra of Venezuela::Revueltas, Orbón & Ginastera::Largo con poetica",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Zuliana::Pregones Zulianos",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Zuliana::Maracaibo En La Noche",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Zuliana::Horizonte",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Zuliana::Amanecer Zuliano",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Zuliana::El Diablo Suelto",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Zuliana::La Reina",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Zuliana::Juliana",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Zuliana::Lluvia",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Zuliana::Desvelo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Zuliana::Brisas Del Zulia",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Zuliana::Soberana",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Zuliana::Chinita De Maracaibo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Zuliana::La Cabra Mocha",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Zuliana::Luna De Maracaibo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Zuliana::Luisa",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Zuliana::Inquietud",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Zuliana::La Guitarra De Mi Lago",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Zuliana::Tu Boca",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Zuliana::La Novia Del Lago",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Zuliana::Virgen De Chiquinquira",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Zuliana::Mi Lago Azul",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Zuliana::El Cocotero",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Zuliana::La Restinga",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Zuliana::La Grey Zuliana",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Zuliana::Gaita Mundial",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Andina::Conticinio",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Andina::Pluma y Lira",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Andina::Flor De Loto",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Andina::Nostalgia Andina",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Andina::Brisas del Torbes",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Andina::Cuando Me Quieras",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Andina::Andino",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Andina::El Ultimo Ruego",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Andina::Tierra Andina",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Andina::Lejanía",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Andina::Trujillo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Andina::Cantos De Mi Tierra",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Andina::Capricho Andino",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Andina::Preciosa",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Andina::Desesperanza",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Andina::Canción Del Adiós",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Andina::Elevación",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Andina::Si Tú Me Das Amor",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Andina::Bésame",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Andina::Rosa De Tentación",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Andina::Si Sonríe",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Andina::Yo Sin Tí No Puedo Estar",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Andina::Igual Que Tú",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Central::Dama Antañona",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Central::Morir Es Nacer",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Central::Valencia",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Central::Mañanita Caraqueña",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Central::El Cumaco De San Juan",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Central::Barlovento",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Central::Canto a Caracas",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Central::Besos En Mis Sueños",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Central::Tu Partida",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Central::Amalia",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Central::Totumo De Guarenas",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Central::Marisela",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Central::Las Bellas De Maiquetia",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Central::Adios a Ocumare",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Central::Natalia - Vals Nº3",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Central::Criollisima",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Central::El Muñeco De La Ciudad",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Central::Fulgida Luna",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Central::Puerto Cabello",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Central::Esta Noche Serena",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Central::Quinta Anauco",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Central::Alma Llanera",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Central::Jarro Mocho",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Central::Tristeza",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Central::Lamento Borincano",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Central::Tristeza Moruna",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Central::Lady Love",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Central::No Puedo Olvidarte",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Oriental::Margarita",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Oriental::Polo Margariteño",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Oriental::Golpe y Estribillo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Oriental::La Bandola de Cesáreo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Oriental::Alma Cumanesa",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Oriental::Joropo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Oriental::Rio Manzanares",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Oriental::El Carite",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Oriental::Costas De Oriente",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Oriental::Mar De La Virgen Bonita",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Oriental::Canchunchu Florido",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Oriental::La Lagrima",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Oriental::Luna De Margarita",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Oriental::Galeron Margariteño",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Oriental::Gaita Oriental",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Oriental::Capricho Oriental",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Larense::Noches Larenses",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Larense::Chaparralito",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Larense::Pablera",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Larense::El Gavilan Tocuyano",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Larense::La Negra",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Larense::Golpe Tocuyano",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Larense::La Bella Del Tamunangue",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Larense::Como Llora Una Estrella",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Larense::Barquisimeto",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Larense::Hendrina",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Larense::María Elena",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Larense::Guitarra Larense",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Larense::Ramoncito En Cimarrona",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Larense::Capricho Larense",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Larense::La Veragacha",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Larense::Carora",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Larense::Amalia Rosa",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Larense::La Casona - Pablera",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Larense::Capricho Caraqueño",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Larense::La Guayaba",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Larense::Lisboa Antigua",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Larense::Alma Llanera",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Larense::Abril En Portugal",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Larense::Volare",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Concierto En La Llanura",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Madrugada Llanera",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Pesadilla Entre Las Flores",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Mi Querencia",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Caballo Viejo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Sentimiento Apureño",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Vestida de Garza Blanca",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::El Gavilán",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Fiesta En Elorza",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Pasillaneando",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::El Burrito",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Adiós",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Pajarillo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Fantasía Llanera",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Quirpa",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Zumba que Zumba",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Preludio",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Periquera",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Seis Numerao",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::San Rafael",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Quitapesares",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::El Carnaval",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Tonada",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Seis por Derecho",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::El Gabán",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Venezuela Habla Cantando",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Joropo Final",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Semana Santa en Achaguas",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::La Chipola",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Dime Luna",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Estrella India",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Palma Sola",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Mi Merengue",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Corre Lucero",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Un Heladero Con Clase",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Llanera::Dulce Locura",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite::Conticinio",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite::Mi Querencia",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite::Caballo Viejo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite::Sentimiento Apureño",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite::Vestida de Garza Blanca",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite::Margarita",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite::La Cabra Mocha",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite::Pablera",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite::El Gavilán Tocuyano",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite::La Negra",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite::Golpe Tocuyano",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite::La Bella del Tamunangue",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite::Amalia",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite::El Totumo de Guarenas",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite::Marisela",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite::Polo Margariteño",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite::Golpe y Estribillo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite::La Bandola de Cesareo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite::Cantos De Mi Tierra",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite::Quinta Anauco",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite::Criollísima",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite::El Jarro Mocho",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite::Alma Llanera",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Mar De La Virgen Bonita",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Canchunchu Florido",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Noches Larenses",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Chaparralito",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Desvelo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Brisas Del Zulia",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Soberana",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Andino",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Fulgida Luna",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Puerto Cabello",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Esta Noche Serena",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Concierto En La Llanura",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Carora",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Hendrina",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::María Elena",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Guitarra Larense",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::La Veragacha",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Lluvia",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Moliendo Café",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Juliana",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Desesperanza",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Caracas Vieja",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Algo Sublime",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Juan Francisco Sans & Luis Gómez Imbert::Con Corda::De La Liberación de Las Formas",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Juan Francisco Sans & Luis Gómez Imbert::Con Corda::Hispania",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Juan Francisco Sans & Luis Gómez Imbert::Con Corda::Joropo Cibernético",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Juan Francisco Sans & Luis Gómez Imbert::Con Corda::Tonada",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Juan Francisco Sans & Luis Gómez Imbert::Con Corda::Gaita",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Juan Francisco Sans & Luis Gómez Imbert::Con Corda::Lied de Bolsillo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Juan Francisco Sans & Luis Gómez Imbert::Con Corda::Andante Evangélico",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Juan Francisco Sans & Luis Gómez Imbert::Con Corda::Tocatta",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Juan Francisco Sans & Luis Gómez Imbert::Con Corda::I",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Juan Francisco Sans & Luis Gómez Imbert::Con Corda::II",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Juan Francisco Sans & Luis Gómez Imbert::Con Corda::Con Corda",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Juan Francisco Sans & Luis Gómez Imbert::Con Corda::Matinal",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Juan Francisco Sans & Luis Gómez Imbert::Con Corda::Nocturnal",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Juan Francisco Sans & Luis Gómez Imbert::Con Corda::Elegía",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Juan Francisco Sans & Luis Gómez Imbert::Con Corda::Danza",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Juan Francisco Sans & Luis Gómez Imbert::Con Corda::Omaggio",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Juan Francisco Sans & Luis Gómez Imbert::Con Corda::Rohanda",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Juan Francisco Sans & Luis Gómez Imbert::Con Corda::Cruces de Intención",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Juan Francisco Sans & Luis Gómez Imbert::Con Corda::La Gran Puerta",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Juan Francisco Sans & Luis Gómez Imbert::Con Corda::Retratos: Luis Gómez Imbert",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Leopoldo Betancourt::Con El Corazón En Las Manos::Tan Enamorados",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Leopoldo Betancourt::Con El Corazón En Las Manos::Noche De Mar - Motivos",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Leopoldo Betancourt::Con El Corazón En Las Manos::Es Verdad",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Leopoldo Betancourt::Con El Corazón En Las Manos::Desesperanza",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Leopoldo Betancourt::Con El Corazón En Las Manos::De Conde A Principal",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Leopoldo Betancourt::Con El Corazón En Las Manos::Viajera Del Rio",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Leopoldo Betancourt::Con El Corazón En Las Manos::Bésame",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Leopoldo Betancourt::Con El Corazón En Las Manos::Besos En Mis Sueños",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Leopoldo Betancourt::Con El Corazón En Las Manos::Mi Querencia",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Leopoldo Betancourt::Con El Corazón En Las Manos::Si La Ves",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Leopoldo Betancourt::Con El Corazón En Las Manos::En Aquel Lugar Secreto",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Leopoldo Betancourt::Con El Corazón En Las Manos::Serenata",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Alirio Díaz::Recital::Homenaje",
+      "rule": "sin-decision-er",
+      "detail": "la identidad no tiene decisión de ER registrada",
+      "claims": 1
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Alirio Díaz::Recital::Cinco Piezas Infantiles",
+      "rule": "sin-decision-er",
+      "detail": "la identidad no tiene decisión de ER registrada",
+      "claims": 1
+    }
+  ],
+  "duplicateFlags": [],
+  "errors": [],
+  "runId": 11434
+}

@@ -1,0 +1,34 @@
+{
+  "section": "traditional",
+  "dryRun": false,
+  "note": "Sincopa traditional: pistas de la ficha dueña que no tenían lugar, tras mover el repertorio del disco separado y renumerar (Brian 2026-10-03)",
+  "kinds": {
+    "album": {
+      "identities": 0,
+      "claims": 0,
+      "verdicts": {},
+      "applied": 0,
+      "unchanged": 0,
+      "stillCandidate": 0,
+      "dismissed": 0,
+      "failed": 0
+    },
+    "track": {
+      "identities": 11,
+      "claims": 41,
+      "verdicts": {
+        "different:sin-coincidencia": 10,
+        "same:mismo-titulo-mismo-disco": 1
+      },
+      "applied": 10,
+      "unchanged": 31,
+      "stillCandidate": 0,
+      "dismissed": 0,
+      "failed": 0
+    }
+  },
+  "holds": [],
+  "duplicateFlags": [],
+  "errors": [],
+  "runId": 11775
+}
