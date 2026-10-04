@@ -1,0 +1,505 @@
+# Etapa 4 — pistas (confirm, run 13385)
+
+Cosecha: `reports/nuevo-lote-2026-10-02/etapa4-cosecha.json`. Plan: ~/Desktop/PLAN_NUEVO_LOTE_2026-10-02.md §3.
+
+## Totales
+
+- discos: duraciones: 32
+- discos: lista creada: 8
+- discos: lista de deezer: 6
+- discos: lista de musicbrainz: 2
+- duraciones: rellenadas: 193
+- duraciones: sin coincidencia: 390
+- pistas: con duración: 109
+- pistas: creadas: 109
+- pistas: descartado: 1
+- pistas: sencillo con lista larga: 5
+
+## Muestra de 40 (de 40 aplicados)
+
+- Franco De Vita — «Vuelve En Primera Fila» (4082) · musicbrainz · 9 duraciones (20 pistas en común) · https://musicbrainz.org/release/09fa946e-cdd9-404d-aa6a-cd423d3edda9
+- Franco De Vita — «Mis 30 Mejores Canciones» (4091) · musicbrainz · 15 duraciones (30 pistas en común) · https://musicbrainz.org/release/bec0c971-91a0-45e7-90af-36eb0b4a2f15
+- Yordano — «Secretos De La Noche» (4601) · deezer · 1 duraciones (12 pistas en común) · https://www.deezer.com/album/181375772
+- Pablo Gil — «Encuentros» (15245) · deezer · 11 duraciones (11 pistas en común) · https://www.deezer.com/album/706430581
+- Rada — «Armagedon & The Third Wave Revolution» (5604) · deezer · 1 duraciones (10 pistas en común) · https://www.deezer.com/album/179246632
+- Ricardo Montaner — «Todo y Nada» (4421) · musicbrainz · 1 duraciones (9 pistas en común) · https://musicbrainz.org/release/49559a36-890f-465e-afd8-9054e7d62b7b
+- Paul Gillman — «25 años» (2133) · musicbrainz · 15 duraciones (28 pistas en común) · https://musicbrainz.org/release/331b2a7d-ec88-44fc-a973-a7ba0798f076
+- Paul Gillman — «Inevitable» (2139) · deezer · 2 duraciones (13 pistas en común) · https://www.deezer.com/album/89912292
+- Paul Gillman — «Tributo A Los Desconocidos» (4148) · deezer · 1 duraciones (12 pistas en común) · https://www.deezer.com/album/90953512
+- Paul Gillman — «Más Vivo & En Vivo» (4153) · deezer · 10 duraciones (15 pistas en común) · https://www.deezer.com/album/91202552
+- Rudy Márquez — «Gracias Amor, Gracias» (3714) · deezer · 1 duraciones (8 pistas en común) · https://www.deezer.com/album/103341282
+- Miguel Noya — «Infinite Halls» (15544) · deezer · 6 pistas (discografía Deezer de la ficha: título igual) · https://www.deezer.com/album/482468355
+- Miguel Noya — «Biophony / Life Voices» (15545) · deezer · 10 pistas (discografía Deezer de la ficha: título igual) · https://www.deezer.com/album/527409332
+- Miguel Noya — «AIQC» (15546) · deezer · 10 pistas (discografía Deezer de la ficha: título igual) · https://www.deezer.com/album/711396171
+- Miguel Noya — «Biofonía II: Voces de la Tierra» (15715) · deezer · 25 pistas (discografía Deezer de la ficha: título igual) · https://www.deezer.com/album/742257961
+- Edward Simon — «25 Years» (6193) · deezer · 8 duraciones (17 pistas en común) · https://www.deezer.com/album/168581832
+- Guaco — «Guaco 82» (7108) · deezer · 1 duraciones (9 pistas en común) · https://www.deezer.com/album/522679402
+- Oscar D' León — «Riquiti..!» (7674) · deezer · 2 duraciones (6 pistas en común) · https://www.deezer.com/album/128736192
+- Rafael "Pollo" Brito — «Boleros "En Vivo"» (7735) · deezer · 14 duraciones (28 pistas en común) · https://www.deezer.com/album/851818042
+- Rafael "Pollo" Brito — «Homenaje A Tito Rodríguez» (7737) · deezer · 10 duraciones (19 pistas en común) · https://www.deezer.com/album/847542982
+- Roberto Antonio — «A Punto Caramelo» (7754) · deezer · 1 duraciones (11 pistas en común) · https://www.deezer.com/album/841764072
+- Roberto Antonio — «25 Años» (7759) · musicbrainz · 8 duraciones (18 pistas en común) · https://musicbrainz.org/release/92ecddf8-10ea-45a8-88f1-8a781f3ada5e
+- Soledad Bravo — «Cantos de Venezuela» (7802) · musicbrainz · 1 duraciones (10 pistas en común) · https://musicbrainz.org/release/28a7e2ec-fc76-4826-b791-b3a0e9028d47
+- Soledad Bravo — «Soledad Bravo» (7811) · musicbrainz · 1 duraciones (7 pistas en común) · https://musicbrainz.org/release/8f303930-3c13-4f71-981c-6051d8f2023b
+- José Luis Rodríguez — «Mis 30 Mejores Canciones» (8178) · musicbrainz · 15 duraciones (30 pistas en común) · https://musicbrainz.org/release/879de34d-6d82-4a74-8855-ebe8c778cd84
+- Billo's Caracas Boys — «Billo 79 ½» (6804) · musicbrainz · 11 pistas (discografía MB de la ficha: título igual) · https://musicbrainz.org/release/6535caf5-6f03-4c78-b7ee-dd89f82e73a0
+- Billo's Caracas Boys — «24 Exitos De Billo» (6837) · musicbrainz · 24 pistas (discografía MB de la ficha: título igual) · https://musicbrainz.org/release/d247f095-643a-42ac-9649-044055155c59
+- Billo's Caracas Boys — «Billo 72 ½» (7987) · deezer · 2 duraciones (9 pistas en común) · https://www.deezer.com/album/10234484
+- Billo's Caracas Boys — «Sin Fronteras» (8031) · deezer · 1 duraciones (9 pistas en común) · https://www.deezer.com/album/245049992
+- Felipe Pirela — «Canciones De Ayer y Hoy» (7057) · deezer · 11 pistas (discografía Deezer de la ficha: título igual) · https://www.deezer.com/album/593969632
+- Los Cuñaos — «Los Cuñaos Vol.5» (8500) · deezer · 1 duraciones (9 pistas en común) · https://www.deezer.com/album/87919592
+- Gualberto Ibarreto — «Gualberto Ibarreto» (15403) · musicbrainz · 1 duraciones (9 pistas en común) · https://musicbrainz.org/release/7c00757c-36d5-477a-aa10-a91f8ac8970e
+- Juan Vicente Torrealba — «40 Años 40 Exitos» (8774) · musicbrainz · 20 duraciones (40 pistas en común) · https://musicbrainz.org/release/50ba8fbd-6003-4b11-ba0c-eabcc3e9dc08
+- Reyna Lucero — «Segundo Impacto De Reina Lucero» (9305) · deezer · 12 duraciones (12 pistas en común) · https://www.deezer.com/album/1058301822
+- Reyna Lucero — «Reina Siempre Reina» (9312) · deezer · 9 duraciones (9 pistas en común) · https://www.deezer.com/album/534429662
+- Reynaldo Armas — «El Campeón» (9356) · deezer · 1 duraciones (12 pistas en común) · https://www.deezer.com/album/331850257
+- Reynaldo Armas — «Los 40 Super Exitos» (9363) · deezer · 2 duraciones (38 pistas en común) · https://www.deezer.com/album/803763311
+- Reynaldo Armas — «32 Super Exitos» (9373) · musicbrainz · 15 duraciones (15 pistas en común) · https://musicbrainz.org/release/f07e5750-de2b-43c5-91a2-11bfcdf86408
+- Aldemaro Romero — «Onda Nueva Vocal» (9464) · musicbrainz · 1 duraciones (13 pistas en común) · https://musicbrainz.org/release/ec7c8c99-8de0-4ad8-9705-2ddaad8b8389
+- Simón Díaz — «Cuando Las Ganas Se Juntan» (15274) · deezer · 12 pistas (discografía Deezer de la ficha: título igual) · https://www.deezer.com/album/142742392
+
+## Con avisos
+
+
+## No aplicados
+
+- Arkangel — «No más Apariencias» (1264) ·  · duraciones: menos de 2 pistas en común
+- Canserbero — «Can + Zoo Índigo» (13706) ·  · duraciones: menos de 2 pistas en común
+- Caramelos De Cianuro — «Flor De Fuego» (140) ·  · duraciones: menos de 2 pistas en común
+- Culto Oculto — «BarAlt000mix» (3412) ·  · duraciones: menos de 2 pistas en común
+- Desorden Público — «¿Dónde Está El Futuro?» (172) ·  · duraciones: menos de 2 pistas en común
+- Desorden Público — «The Ska Album» (2154) ·  · duraciones: menos de 2 pistas en común
+- Desorden Público — «Bailando Sobre Las Ruinas» (3976) ·  · duraciones: menos de 2 pistas en común
+- Desorden Público — «DP18» (13972) ·  · duraciones: menos de 2 pistas en común
+- Franco De Vita — «Gold» (3405) ·  · duraciones: menos de 2 pistas en común
+- Franco De Vita — «Libre» (4072) ·  · duraciones: menos de 2 pistas en común
+- Franco De Vita — «Simplemente La Verdad» (4074) ·  · duraciones: menos de 2 pistas en común
+- Franco De Vita — «14 Super Exitos» (4089) ·  · duraciones: menos de 2 pistas en común
+- Franco De Vita — «Un Buen Perdedor» (13468) ·  · duraciones: menos de 2 pistas en común
+- Franco De Vita — «Personalidad» (13477) ·  · duraciones: menos de 2 pistas en común
+- Ilan Chester — «Ilan Chester – Opus #10» (13563) ·  · duraciones: menos de 2 pistas en común
+- Ilan Chester — «Ilan Chester – En Vivo! Gira Nacional Del Amor Venezolano» (13578) ·  · duraciones: menos de 2 pistas en común
+- Lil Supa' — «Codes» (13764) ·  · duraciones: menos de 2 pistas en común
+- Los Amigos Invisibles — «Acústico» (3797) ·  · duraciones: menos de 2 pistas en común
+- Serenata Guayanesa — «El Ferrocarril» (9045) ·  · duraciones: menos de 2 pistas en común
+- Serenata Guayanesa — «Bolivar Todo Tropical» (9046) ·  · duraciones: menos de 2 pistas en común
+- Serenata Guayanesa — «30 Años De Exitos» (9049) ·  · duraciones: menos de 2 pistas en común
+- Serenata Guayanesa — «Grandes Exitos» (9053) ·  · duraciones: menos de 2 pistas en común
+- Serenata Guayanesa — «Música del Zulia y de Venezuela» (9416) ·  · duraciones: menos de 2 pistas en común
+- Vytas Brenner — «El Vals del Mar» (2395) ·  · duraciones: menos de 2 pistas en común
+- Vytas Brenner — «I Belong» (2399) ·  · duraciones: menos de 2 pistas en común
+- Vytas Brenner — «La Ofrenda de Vytas» (2402) ·  · duraciones: menos de 2 pistas en común
+- Yordano — «Negocios Son Negocios» (4600) ·  · duraciones: menos de 2 pistas en común
+- Yordano — «El Tren de los Regresos» (4700) ·  · duraciones: menos de 2 pistas en común
+- Yordano — «Yordano Hoy... En Vivo» (4701) ·  · duraciones: menos de 2 pistas en común
+- Dimension Latina — «Dimensión Latina» (6934) ·  · duraciones: menos de 2 pistas en común
+- Dimension Latina — «Triunfadores» (6935) ·  · duraciones: menos de 2 pistas en común
+- Dimension Latina — «En La Dimensión Latina» (6936) ·  · duraciones: menos de 2 pistas en común
+- Dimension Latina — «Dimensión Latina 77 Internacional» (6940) ·  · duraciones: menos de 2 pistas en común
+- Dimension Latina — «Inconquistable» (6943) ·  · duraciones: menos de 2 pistas en común
+- Dimension Latina — «Combinación Latina Nº 4» (6946) ·  · duraciones: menos de 2 pistas en común
+- Dimension Latina — «Los Dueños Del Caribe» (6956) ·  · duraciones: menos de 2 pistas en común
+- Dimension Latina — «Dimensión Latina 78 780 Kilos De Salsa» (8077) ·  · duraciones: menos de 2 pistas en común
+- Dimension Latina — «Dimensión Latina vs Billo's Caracas Boys» (12932) ·  · duraciones: menos de 2 pistas en común
+- Dimension Latina — «Dimensión Latina en Nueva York» (12939) ·  · duraciones: menos de 2 pistas en común
+- Dimension Latina — «La comprita / Guaguancó a Puerto Rico» (12944) ·  · duraciones: menos de 2 pistas en común
+- Dimension Latina — «La Dimensión de siempre "La Original"» (12945) ·  · duraciones: menos de 2 pistas en común
+- Dimension Latina — «Dimensión Latina» (15380) ·  · duraciones: menos de 2 pistas en común
+- Zardonic — «Chaotic Serenity» (1444) ·  · duraciones: menos de 2 pistas en común
+- Zardonic — «Metal Up Your Bass» (1564) ·  · duraciones: menos de 2 pistas en común
+- Zardonic — «Zardonic Collection» (14414) ·  · duraciones: menos de 2 pistas en común
+- Negus Nagast — «Rastafari Fi Salvation» (2191) ·  · duraciones: menos de 2 pistas en común
+- Rada — «Upadesa» (2945) ·  · duraciones: menos de 2 pistas en común
+- Rada — «Continuvm» (3187) ·  · duraciones: menos de 2 pistas en común
+- Rada — «Solar Concert for Bhagavan» (3189) ·  · duraciones: menos de 2 pistas en común
+- Rada — «Orbits» (5625) ·  · duraciones: menos de 2 pistas en común
+- Rada — «Tropical Cosmic Sounds From Space» (5630) ·  · duraciones: menos de 2 pistas en común
+- 3 Dueños — «Lujos Y Detalles» (3263) ·  · duraciones: menos de 2 pistas en común
+- Carlos Baute — «Yo Nací Para Querer...» (3849) ·  · duraciones: menos de 2 pistas en común
+- Tecupae — «3 Semanas 4 Días» (3583) ·  · duraciones: menos de 2 pistas en común
+- Tecupae — «En vivo» (13259) ·  · duraciones: menos de 2 pistas en común
+- Ricardo Montaner — «El Poder De Tu Amor (Version Ranchera) / Mucura» (13497) ·  · duraciones: menos de 2 pistas en común
+- Ricardo Montaner — «Tengo verano» (13520) ·  · duraciones: menos de 2 pistas en común
+- Ricardo Montaner — «Lo Mejor De...» (13526) ·  · duraciones: menos de 2 pistas en común
+- Paul Gillman — «Escalofrío» (450) ·  · duraciones: menos de 2 pistas en común
+- Paul Gillman — «15 años» (2135) ·  · duraciones: menos de 2 pistas en común
+- Paul Gillman — «El Guerrero» (2150) ·  · duraciones: menos de 2 pistas en común
+- Paul Gillman — «Levantate y Pelea» (2152) ·  · duraciones: menos de 2 pistas en común
+- Paul Gillman — «Tesoros» (4141) ·  · duraciones: menos de 2 pistas en común
+- Paul Gillman — «Presente» (4143) ·  · duraciones: menos de 2 pistas en común
+- Paul Gillman — «Escalofrío II - La Conclusión» (14123) ·  · duraciones: menos de 2 pistas en común
+- Guillermo Dávila — «Un Poco De Amor» (4192) ·  · duraciones: menos de 2 pistas en común
+- Guillermo Dávila — «Tuyo» (4194) ·  · duraciones: menos de 2 pistas en común
+- Guillermo Dávila — «Serie 32 Grandes Exitos» (4197) ·  · duraciones: menos de 2 pistas en común
+- Guillermo Dávila — «Cantaré Para Tí» (4207) ·  · duraciones: menos de 2 pistas en común
+- Guillermo Dávila — «Definitivamente» (4210) ·  · duraciones: menos de 2 pistas en común
+- Guillermo Dávila — «Déjate Amar» (14482) · deezer · sencillo con 12 pistas en deezer: ¿otro disco del mismo título? · https://www.deezer.com/album/637814661
+- Karina — «Karina» (4319) ·  · duraciones: menos de 2 pistas en común
+- Kiara — «Como Un Huracán» (4335) ·  · duraciones: menos de 2 pistas en común
+- Kiara — «Corazón De Contrabando» (4336) ·  · duraciones: menos de 2 pistas en común
+- Kiara — «20 Exitos Originales» (4339) ·  · duraciones: menos de 2 pistas en común
+- Rudy La Scala — «Vete Al Infierno» (4445) ·  · duraciones: menos de 2 pistas en común
+- Rudy La Scala — «Serie 32» (4452) ·  · duraciones: menos de 2 pistas en común
+- Rudy La Scala — «Woman» (14575) ·  · listas vacías o con títulos vacíos
+- Rudy Márquez — «Mi Razón» (3697) ·  · duraciones: menos de 2 pistas en común
+- Rudy Márquez — «Dancing & Dancing» (3710) ·  · duraciones: menos de 2 pistas en común
+- Rudy Márquez — «Confesiones» (3715) ·  · duraciones: menos de 2 pistas en común
+- Rudy Márquez — «Háblame Suavemente» (4461) ·  · duraciones: menos de 2 pistas en común
+- Rudy Márquez — «Mágico» (4466) ·  · duraciones: menos de 2 pistas en común
+- Rudy Márquez — «Songs Of Love» (4468) ·  · duraciones: menos de 2 pistas en común
+- Rudy Márquez — «Lo Mejor de Rudy Márquez» (4469) ·  · duraciones: menos de 2 pistas en común
+- Rudy Márquez — «Rudy Márquez» (4809) ·  · duraciones: menos de 2 pistas en común
+- Rudy Márquez — «Cariñosamente... de Rudy Márquez» (4889) ·  · duraciones: menos de 2 pistas en común
+- Servando y Florentino — «Grandes Exitos» (4498) ·  · duraciones: menos de 2 pistas en común
+- Servando y Florentino — «De primera a primera» (14266) ·  · duraciones: menos de 2 pistas en común
+- Cecilia Todd — «Niño Jesús de Merey» (5532) ·  · duraciones: menos de 2 pistas en común
+- Cardopusher — «I Love Acid 009» (12803) ·  · duraciones: menos de 2 pistas en común
+- Miguel Noya — «Gran Sabana» (5680) ·  · duraciones: menos de 2 pistas en común
+- Miguel Noya — «Esferas Vivientes» (5683) ·  · duraciones: menos de 2 pistas en común
+- Miguel Noya — «Psycho-Music» (14586) ·  · duraciones: menos de 2 pistas en común
+- María Rivas — «Live Lunch Break» (5553) ·  · duraciones: menos de 2 pistas en común
+- Aquiles Báez — «Aquiles Báez y Su Música» (6097) ·  · duraciones: menos de 2 pistas en común
+- Aquiles Báez — «El Piache» (6098) ·  · duraciones: menos de 2 pistas en común
+- Edward Simon — «Unicity» (6187) ·  · duraciones: menos de 2 pistas en común
+- Edward Simon — «Solo Live» (6194) ·  · duraciones: menos de 2 pistas en común
+- Gerry Weil — «Navijazz» (6278) ·  · duraciones: menos de 2 pistas en común
+- Alfredo Sadel — «En Feria» (7909) ·  · duraciones: menos de 2 pistas en común
+- Alfredo Sadel — «De Toda Venezuela» (7912) ·  · duraciones: menos de 2 pistas en común
+- Alfredo Sadel — «Homenaje A Los Panchos» (13093) ·  · duraciones: menos de 2 pistas en común
+- Canelita Medina — «Canelita» (6853) ·  · duraciones: menos de 2 pistas en común
+- Canelita Medina — «Canelita» (15379) ·  · duraciones: menos de 2 pistas en común
+- Federico y Su Combo Latino — «Llegó La Salsa» (6999) ·  · duraciones: menos de 2 pistas en común
+- Federico y Su Combo Latino — «Salsa y Sabor» (7000) ·  · duraciones: menos de 2 pistas en común
+- Federico y Su Combo Latino — «Psicodélico Con Salsa» (7004) ·  · duraciones: menos de 2 pistas en común
+- Federico y Su Combo Latino — «Mejor Que Nunca» (7005) ·  · duraciones: menos de 2 pistas en común
+- Federico y Su Combo Latino — «Vibración y Ritmo» (7006) ·  · duraciones: menos de 2 pistas en común
+- Federico y Su Combo Latino — «Ayer y Hoy» (7012) ·  · duraciones: menos de 2 pistas en común
+- Federico y Su Combo Latino — «Mis Exitos y Más» (7014) ·  · duraciones: menos de 2 pistas en común
+- Federico y Su Combo Latino — «Dos sets con Federico y Su Combo» (14313) ·  · duraciones: menos de 2 pistas en común
+- Federico y Su Combo Latino — «Durísimo» (14314) ·  · duraciones: menos de 2 pistas en común
+- Floria Márquez — «Exitos De Floria Márquez» (7081) ·  · duraciones: menos de 2 pistas en común
+- Guaco — «Esta Gaita Si Esta En Algo» (7097) ·  · duraciones: menos de 2 pistas en común
+- Guaco — «Gaita A Todo Color Con Los Guaco» (7098) ·  · duraciones: menos de 2 pistas en común
+- Guaco — «Guaco 76» (7102) ·  · duraciones: menos de 2 pistas en común
+- Guaco — «Guaco 77» (7103) ·  · duraciones: menos de 2 pistas en común
+- Guaco — «Guaco 81» (7107) ·  · duraciones: menos de 2 pistas en común
+- Guaco — «Betania» (7117) ·  · duraciones: menos de 2 pistas en común
+- Guaco — «Guaco Clásico II» (7122) ·  · duraciones: menos de 2 pistas en común
+- Guaco — «No Diga Que No Los Ha Escuchado Ni Los Ha Visto» (8118) ·  · duraciones: menos de 2 pistas en común
+- Guaco — «Guaco Es Guaco» (8120) ·  · duraciones: menos de 2 pistas en común
+- Guaco — «Magic Guaco y sus éxitos» (13026) ·  · duraciones: menos de 2 pistas en común
+- Guaco — «Guaco 4» (13039) ·  · duraciones: menos de 2 pistas en común
+- Hugo Blanco — «Balada Del Bombardino» (7154) ·  · duraciones: menos de 2 pistas en común
+- Hugo Blanco — «Bailables Nº 5» (7163) ·  · duraciones: menos de 2 pistas en común
+- Hugo Blanco — «Arpa Brava» (7175) ·  · duraciones: menos de 2 pistas en común
+- Hugo Blanco — «El Sabor De Hugo Blanco» (7176) ·  · duraciones: menos de 2 pistas en común
+- Hugo Blanco — «Colección De Exitos Vol.1» (7179) ·  · duraciones: menos de 2 pistas en común
+- Hugo Blanco — «Moliendo café» (14779) ·  · duraciones: menos de 2 pistas en común
+- Hugo Blanco — «Mister Boogaloo» (14780) ·  · duraciones: menos de 2 pistas en común
+- Hugo Blanco — «Cumbia del serrote / Cumbia de las cariñosas» (14782) ·  · duraciones: menos de 2 pistas en común
+- Hugo Blanco — «Chapoteando» (14783) ·  · duraciones: menos de 2 pistas en común
+- Hugo Blanco — «Muñeco de cuerda» (14785) ·  · duraciones: menos de 2 pistas en común
+- Hugo Blanco — «Hugo Blanco y su Arpa Viajera» (14786) ·  · duraciones: menos de 2 pistas en común
+- Hugo Blanco — «Bailables #10» (14787) ·  · duraciones: menos de 2 pistas en común
+- Hugo Blanco — «La chispita» (14788) ·  · duraciones: menos de 2 pistas en común
+- Hugo Blanco — «16 éxitos de Hugo Blanco» (14789) ·  · duraciones: menos de 2 pistas en común
+- Hugo Blanco — «Navidad Criolla» (14798) ·  · duraciones: menos de 2 pistas en común
+- Natusha — «Natusha & Kondor Band» (7639) ·  · duraciones: menos de 2 pistas en común
+- Natusha — «Grandes Exitos» (7647) ·  · duraciones: menos de 2 pistas en común
+- Natusha — «Re-Mix» (7907) ·  · duraciones: menos de 2 pistas en común
+- Oscar D' León — «El Más Grande» (7664) ·  · duraciones: menos de 2 pistas en común
+- Oscar D' León — «Al Frente De Todos» (7666) ·  · duraciones: menos de 2 pistas en común
+- Oscar D' León — «Con Dulzura» (7670) ·  · duraciones: menos de 2 pistas en común
+- Oscar D' León — «Yo Soy» (7672) ·  · duraciones: menos de 2 pistas en común
+- Oscar D' León — «Auténtico» (7679) ·  · duraciones: menos de 2 pistas en común
+- Oscar D' León — «Toitico Tuyo» (7682) ·  · duraciones: menos de 2 pistas en común
+- Oscar D' León — «Asi Soy...» (7688) ·  · duraciones: menos de 2 pistas en común
+- Oscar D' León — «Live» (7691) ·  · duraciones: menos de 2 pistas en común
+- Oscar D' León — «Con un amor se borra otro amor / El panquelero» (12856) ·  · duraciones: menos de 2 pistas en común
+- Oscar D' León — «Oscar D'León presenta... La Crítica» (12877) ·  · duraciones: menos de 2 pistas en común
+- Pecos Kanvas — «Pecos Kanvas» (7703) ·  · duraciones: menos de 2 pistas en común
+- Rafael "Pollo" Brito — «Una Casita Bella Para Ti» (7733) ·  · duraciones: menos de 2 pistas en común
+- Roberto Antonio — «Roberto Antonio II» (7748) ·  · duraciones: menos de 2 pistas en común
+- Roberto Antonio — «Clásicos Latinos» (7755) ·  · duraciones: menos de 2 pistas en común
+- Roberto Antonio — «A Vibrar» (7756) ·  · duraciones: menos de 2 pistas en común
+- Roberto Antonio — «Ahora» (7758) ·  · duraciones: menos de 2 pistas en común
+- Soledad Bravo — «Soledad Bravo Canta» (7796) ·  · duraciones: menos de 2 pistas en común
+- Soledad Bravo — «Soledad» (7797) ·  · duraciones: menos de 2 pistas en común
+- Soledad Bravo — «Canciones De La Nueva Trova Cubana» (7800) ·  · duraciones: menos de 2 pistas en común
+- Soledad Bravo — «Soledad Bravo En Vivo» (7801) ·  · duraciones: menos de 2 pistas en común
+- Soledad Bravo — «Canto La Poesía de Mis Compañeros» (7803) ·  · duraciones: menos de 2 pistas en común
+- Soledad Bravo — «Boleros» (7808) ·  · duraciones: menos de 2 pistas en común
+- Soledad Bravo — «En Vivo» (7813) ·  · duraciones: menos de 2 pistas en común
+- Soledad Bravo — «Arrastrando La Cobija» (7815) ·  · duraciones: menos de 2 pistas en común
+- Soledad Bravo — «Con Amor...Boleros» (7816) ·  · duraciones: menos de 2 pistas en común
+- Soledad Bravo — «Vol. 3» (8415) ·  · duraciones: menos de 2 pistas en común
+- Soledad Bravo — «Vol. 4» (8416) ·  · duraciones: menos de 2 pistas en común
+- Soledad Bravo — «Cantos de amor y de lucha 1967-1975» (14822) ·  · duraciones: menos de 2 pistas en común
+- José Luis Rodríguez — «Grito Al Mundo» (8134) ·  · duraciones: menos de 2 pistas en común
+- José Luis Rodríguez — «Una Canción De España» (8140) ·  · duraciones: menos de 2 pistas en común
+- José Luis Rodríguez — «Boleros de Siempre» (8141) ·  · duraciones: menos de 2 pistas en común
+- José Luis Rodríguez — «Mujer» (8145) ·  · duraciones: menos de 2 pistas en común
+- José Luis Rodríguez — «Voy A Perder La Cabeza Por Tu Amor» (8146) ·  · duraciones: menos de 2 pistas en común
+- José Luis Rodríguez — «Lo Mejor De José Luis Rodríguez» (8166) ·  · duraciones: menos de 2 pistas en común
+- José Luis Rodríguez — «Lo Mejor De José Luis Rodríguez» (15398) ·  · duraciones: menos de 2 pistas en común
+- José Luis Rodríguez — «Lo Mejor de José Luis Rodríguez» (15399) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «Recordando Al Roof Garden» (7917) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «Evocación» (7918) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «Tres Viejos Amigos» (7920) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «Billo presenta: Candita Vazquez» (7924) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «Paula» (7927) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «Canciones De Ayer y Hoy» (7932) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «Esta Noche» (7937) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «Mosaico Diez» (7943) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «Billo En Puerto Rico» (7949) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «El Yo-Yo» (7950) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «Billo y Su Música» (7951) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «Felipe Pirela Con Billo's Caracas Boys» (7958) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «Desde 1937 a 1966 Bailando Con Billo» (7959) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «Mosaicos A La Billo Del 13 al 18» (7960) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «Resumen De Exitos Vol.I» (7961) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «La Renga» (7962) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «Felices Fiestas» (7966) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «Se Necesitan Dos» (7967) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «Billo y Su Ritmo» (7968) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «La Rubia y La Trigueña» (7971) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «Billo 69» (7974) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «La Más Popular De Venezuela» (7976) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «Billo 70» (7978) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «El Pajarillo» (7979) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «Billo 72» (7983) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «Billo 74» (7992) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «Billo 76» (7996) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «Billo 76 ½» (7999) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «Billo 77» (8000) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «Billo 77 ½» (8001) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «Ayer, Hoy y Siempre» (8008) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «Billo es Billo's» (8015) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «La Verdad... Billo es Billo's» (8017) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «Nuevo Circo» (8024) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «Sigan Bailando» (8026) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «La Medallita» (8030) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «Grandes Exitos» (8052) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «2 Grandes Orquestas Con Victor Piñero - 16 Grandes Éxitos» (15074) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «Ariel / Una noche» (15075) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «Los gustos de Victor Perez / Adiós» (15078) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «Lo mejor de Billo's Caracas Boys» (15079) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «A la orilla del rio / Brisa, mar y arena» (15090) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «Billo» (15093) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «Anoche no dormí» (15094) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «Pasito tún tún / Mango del monte» (15107) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «Billo'76» (15108) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «Billo 78 1/2» (15110) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «Billo 79 1/2 En Discoteca» (15112) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «Esta Noche... Billo, Vol. 3» (15127) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «Tren de Seis, Vol. 3» (15128) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «Esta Noche...Billo, Vol. 2» (15129) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «Sigan Bailando Con Billo's, Vol. 2» (15130) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «Esta Noche... Billo, Vol. 1» (15131) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «Mis Canciones Favoritas, Vol. 2» (15134) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «¡Oye... A Billos!, Vol. 2» (15137) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «Billo Ayer Hoy y Siempre, Vol. 2» (15140) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «¡Oye... a Billo's!, Vol. 1» (15141) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «La Gran Colección de la Más Popular de Venezuela, Vol. 1» (15142) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «La Gran Colección de la Más Popular de Venezuela, Vol. 2» (15143) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «Billo Ayer Hoy y Siempre, Vol. 3» (15144) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «La Gran Colección de la Más Popular de Venezuela, Vol. 3» (15145) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «Billo Ayer, Hoy y Siempre, Vol. 1» (15147) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «Impactos de Billo, Vol. 1» (15148) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «Impactos de Billo, Vol. 3» (15149) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «Grandes Éxitos, Vol. 2» (15150) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «Grandes Éxitos, Vol. 1» (15151) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «Impactos de Billo, Vol. 2» (15152) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «Grandes Éxitos, Vol. 3» (15153) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «La Gran Colección, Vol. 3» (15154) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «La Gran Colección, Vol. 1» (15155) ·  · duraciones: menos de 2 pistas en común
+- Billo's Caracas Boys — «La Gran Colección, Vol. 2» (15156) ·  · duraciones: menos de 2 pistas en común
+- Felipe Pirela — «Unicamente Tú» (8089) ·  · duraciones: menos de 2 pistas en común
+- Felipe Pirela — «Sombras Nada Más» (8092) ·  · duraciones: menos de 2 pistas en común
+- Felipe Pirela — «Felipe...Sigue de Frente!» (8094) ·  · duraciones: menos de 2 pistas en común
+- Felipe Pirela — «Cuando Vivas Conmigo» (8096) ·  · duraciones: menos de 2 pistas en común
+- Felipe Pirela — «Dios Sabe Lo Que Hace» (8100) ·  · duraciones: menos de 2 pistas en común
+- Felipe Pirela — «Lo Que Es La Vida!» (8104) ·  · duraciones: menos de 2 pistas en común
+- Felipe Pirela — «El Adiós Del Inmortal» (8111) ·  · duraciones: menos de 2 pistas en común
+- Los Melódicos — «Exitos De Los Melódicos» (8261) ·  · duraciones: menos de 2 pistas en común
+- Los Melódicos — «Navidad Para Todo El Año» (8262) ·  · duraciones: menos de 2 pistas en común
+- Los Melódicos — «Bailando Con Los Melódicos» (8263) ·  · duraciones: menos de 2 pistas en común
+- Los Melódicos — «Viajando Con Los Melódicos» (8265) ·  · duraciones: menos de 2 pistas en común
+- Los Melódicos — «En Carnaval» (8266) ·  · duraciones: menos de 2 pistas en común
+- Los Melódicos — «La Vida Es Chiquita» (8271) ·  · duraciones: menos de 2 pistas en común
+- Los Melódicos — «El Veneno De Los Hombres» (8273) ·  · duraciones: menos de 2 pistas en común
+- Los Melódicos — «Compre La Orquesta» (8277) ·  · duraciones: menos de 2 pistas en común
+- Los Melódicos — «Aqui Está» (8279) ·  · duraciones: menos de 2 pistas en común
+- Los Melódicos — «Gran Reserva Musical» (8280) ·  · duraciones: menos de 2 pistas en común
+- Los Melódicos — «Gran Baile!» (8281) ·  · duraciones: menos de 2 pistas en común
+- Los Melódicos — «Imponiendo El Ritmo» (8284) ·  · duraciones: menos de 2 pistas en común
+- Los Melódicos — «El Más Completo Elenco» (8287) ·  · duraciones: menos de 2 pistas en común
+- Los Melódicos — «La Bala» (8289) ·  · duraciones: menos de 2 pistas en común
+- Los Melódicos — «En Todos Los Ritmos» (8291) ·  · duraciones: menos de 2 pistas en común
+- Los Melódicos — «Recuerdos 17 / La Murga y Los Nuevos Exitos» (8301) ·  · duraciones: menos de 2 pistas en común
+- Los Melódicos — «Felicidades» (8304) ·  · duraciones: menos de 2 pistas en común
+- Los Melódicos — «Recuerdos Nº 20» (8305) ·  · duraciones: menos de 2 pistas en común
+- Los Melódicos — «El Ultimo Tango» (8306) ·  · duraciones: menos de 2 pistas en común
+- Los Melódicos — «La Cachimba De San Juan» (8307) ·  · duraciones: menos de 2 pistas en común
+- Los Melódicos — «En Vallenatos» (8326) ·  · duraciones: menos de 2 pistas en común
+- Los Melódicos — «Bienvenido» (8327) ·  · duraciones: menos de 2 pistas en común
+- Los Melódicos — «Dismelodicos 1-85» (8333) ·  · duraciones: menos de 2 pistas en común
+- Los Melódicos — «Distintos!» (8338) ·  · duraciones: menos de 2 pistas en común
+- Los Melódicos — «La Orquesta Que Impone El Ritmo En America» (8340) ·  · duraciones: menos de 2 pistas en común
+- Los Melódicos — «Entrega Inmediata» (8341) ·  · duraciones: menos de 2 pistas en común
+- Los Melódicos — «En acción con Los Melódicos» (13198) ·  · duraciones: menos de 2 pistas en común
+- Los Melódicos — «Recuerdos con Los Melódicos» (13199) ·  · duraciones: menos de 2 pistas en común
+- Los Melódicos — «15 éxitos con Los Melodicos, Volumen I» (13201) ·  · duraciones: menos de 2 pistas en común
+- Los Melódicos — «40 Años, 40 Exitos» (13202) ·  · duraciones: menos de 2 pistas en común
+- Mirla Castellanos — «Así Es Mirla» (8355) ·  · duraciones: menos de 2 pistas en común
+- Mirla Castellanos — «Dominique» (8357) ·  · duraciones: menos de 2 pistas en común
+- Mirla Castellanos — «Mirla» (8358) ·  · duraciones: menos de 2 pistas en común
+- Mirla Castellanos — «La Nueva Mirla» (8360) ·  · duraciones: menos de 2 pistas en común
+- Mirla Castellanos — «Mirla Castellanos» (8370) ·  · duraciones: menos de 2 pistas en común
+- Mirla Castellanos — «Así Es La Vida» (8373) ·  · duraciones: menos de 2 pistas en común
+- Mirla Castellanos — «Venezuela» (8376) ·  · duraciones: menos de 2 pistas en común
+- Mirla Castellanos — «Grandes Exitos De Mirla» (8378) ·  · duraciones: menos de 2 pistas en común
+- Mirla Castellanos — «Mirla En Vivo» (14552) ·  · duraciones: menos de 2 pistas en común
+- María Teresa Chacín — «Canta Para Ti» (8420) ·  · duraciones: menos de 2 pistas en común
+- María Teresa Chacín — «Todo Me Es Igual» (8421) ·  · duraciones: menos de 2 pistas en común
+- María Teresa Chacín — «La Paraulata» (8425) ·  · duraciones: menos de 2 pistas en común
+- María Teresa Chacín — «Canciones Nuestras» (8427) ·  · duraciones: menos de 2 pistas en común
+- María Teresa Chacín — «Mi Querencia» (8429) ·  · duraciones: menos de 2 pistas en común
+- María Teresa Chacín — «Aguinaldos Que No Se Olvidan» (8430) ·  · duraciones: menos de 2 pistas en común
+- María Teresa Chacín — «En Este País» (8438) ·  · duraciones: menos de 2 pistas en común
+- María Teresa Chacín — «Canta Cuentos» (8461) ·  · duraciones: menos de 2 pistas en común
+- María Teresa Chacín — «Exitos Ye-Ye» (9138) ·  · duraciones: menos de 2 pistas en común
+- María Teresa Chacín — «Maria Teresa En Azul, Amarillo Y Rojo» (14855) ·  · duraciones: menos de 2 pistas en común
+- Los Cuñaos — «Sabor Venezolano» (8810) ·  · duraciones: menos de 2 pistas en común
+- Los Cuñaos — «Los Cuñaos Vol.6» (9285) ·  · duraciones: menos de 2 pistas en común
+- Carota, Ñema y Tajá — «La Nueva Canción Venezolana» (8553) ·  · duraciones: menos de 2 pistas en común
+- Gualberto Ibarreto — «Gualberto Ibarreto» (8597) ·  · duraciones: menos de 2 pistas en común
+- Gualberto Ibarreto — «32 Grandes Exitos» (9167) ·  · duraciones: menos de 2 pistas en común
+- Juan Vicente Torrealba — «Italia In Ritmo Tropicale» (8751) ·  · duraciones: menos de 2 pistas en común
+- Juan Vicente Torrealba — «Valses Venezolanos Vol. 2» (8753) ·  · duraciones: menos de 2 pistas en común
+- Juan Vicente Torrealba — «Palmera De Cristal» (9224) ·  · duraciones: menos de 2 pistas en común
+- Juan Vicente Torrealba — «Rapsodia Llanera» (9227) ·  · duraciones: menos de 2 pistas en común
+- Juan Vicente Torrealba — «Cuento de Hadas» (9233) ·  · duraciones: menos de 2 pistas en común
+- Juan Vicente Torrealba — «Suite Torrealbera» (9242) ·  · duraciones: menos de 2 pistas en común
+- Juan Vicente Torrealba — «Conticinio» (9243) ·  · duraciones: menos de 2 pistas en común
+- Juan Vicente Torrealba — «Pasajes Inmortales» (9249) ·  · duraciones: menos de 2 pistas en común
+- Juan Vicente Torrealba — «Música Caribeña» (9252) ·  · duraciones: menos de 2 pistas en común
+- Juan Vicente Torrealba — «Llanero Soy» (9253) ·  · duraciones: menos de 2 pistas en común
+- Juan Vicente Torrealba — «Riberas De Cunaviche» (9260) ·  · duraciones: menos de 2 pistas en común
+- Juan Vicente Torrealba — «Mensaje De España» (9265) ·  · duraciones: menos de 2 pistas en común
+- Los Cañoneros — «Los Cañoneros» (8799) ·  · duraciones: menos de 2 pistas en común
+- Luis Silva — «Sencillo» (8819) ·  · duraciones: menos de 2 pistas en común
+- Luis Silva — «Recuerdos» (8827) ·  · duraciones: menos de 2 pistas en común
+- Luis Silva — «Soy Venezuela» (8828) ·  · duraciones: menos de 2 pistas en común
+- Luis Silva — «Mis Canciones» (8829) ·  · duraciones: menos de 2 pistas en común
+- Luis Silva — «Cómo No Voy a Decirlo» (14712) · deezer · sencillo con 10 pistas en deezer: ¿otro disco del mismo título? · https://www.deezer.com/album/150221222
+- Tambor Urbano — «Que No Se Pare la Rumba» (9059) ·  · duraciones: menos de 2 pistas en común
+- Tambor Urbano — «Fulía, Golpe y Parranda» (9060) ·  · duraciones: menos de 2 pistas en común
+- Tambor Urbano — «La Rumba Continúa...» (9062) ·  · duraciones: menos de 2 pistas en común
+- Tambor Urbano — «A LAS MUJERES SE LES DÁ (Remix)» (14946) ·  · duraciones: menos de 2 pistas en común
+- Un Solo Pueblo — «La Música Navideña de Un Solo Pueblo» (9072) ·  · duraciones: menos de 2 pistas en común
+- Un Solo Pueblo — «La Música de Un Solo Pueblo Vol. 2» (9073) ·  · duraciones: menos de 2 pistas en común
+- Un Solo Pueblo — «La Música de Un Solo Pueblo Vol. 4» (9076) ·  · duraciones: menos de 2 pistas en común
+- Un Solo Pueblo — «La Música de Un Solo Pueblo Vol. 5» (9077) ·  · duraciones: menos de 2 pistas en común
+- Un Solo Pueblo — «La Música de Un Solo Pueblo Vol. 6» (9079) ·  · duraciones: menos de 2 pistas en común
+- Un Solo Pueblo — «Alúmbrame El Zaguán» (9081) ·  · duraciones: menos de 2 pistas en común
+- Un Solo Pueblo — «20 Años» (9091) ·  · duraciones: menos de 2 pistas en común
+- Un Solo Pueblo — «La música de Venezuela» (14936) ·  · duraciones: menos de 2 pistas en común
+- Reyna Lucero — «Dueña y Señora» (9315) ·  · duraciones: menos de 2 pistas en común
+- Reyna Lucero — «Triángulo De Amor» (9316) ·  · duraciones: menos de 2 pistas en común
+- Reyna Lucero — «Cancionera» (9321) ·  · duraciones: menos de 2 pistas en común
+- Reynaldo Armas — «Cantor, Poeta y Pintor» (9330) ·  · duraciones: menos de 2 pistas en común
+- Reynaldo Armas — «La Flor De La Amistad» (9331) ·  · duraciones: menos de 2 pistas en común
+- Reynaldo Armas — «Todo Un Señor» (9333) ·  · duraciones: menos de 2 pistas en común
+- Reynaldo Armas — «Mi Credo» (9339) ·  · duraciones: menos de 2 pistas en común
+- Reynaldo Armas — «No Hay Mal Que Dure Cien Años» (9345) ·  · duraciones: menos de 2 pistas en común
+- Reynaldo Armas — «Aquí Está El Cardenalito» (9347) ·  · duraciones: menos de 2 pistas en común
+- Reynaldo Armas — «La Manzana» (9349) ·  · duraciones: menos de 2 pistas en común
+- Reynaldo Armas — «Látigo En Mano» (9350) ·  · duraciones: menos de 2 pistas en común
+- Reynaldo Armas — «Entre Muchachas y Guacharacas» (9355) ·  · duraciones: menos de 2 pistas en común
+- Reynaldo Armas — «La Muerte del Rucio Moro» (9358) ·  · duraciones: menos de 2 pistas en común
+- Reynaldo Armas — «Repasando Distancias» (9359) ·  · duraciones: menos de 2 pistas en común
+- Reynaldo Armas — «18 Excepcionales Exitos» (9367) ·  · duraciones: menos de 2 pistas en común
+- Reynaldo Armas — «Copla, verso y canto» (14654) ·  · duraciones: menos de 2 pistas en común
+- Aldemaro Romero — «Dinner In Caracas» (9434) ·  · duraciones: menos de 2 pistas en común
+- Aldemaro Romero — «Flight To Romance» (9436) ·  · duraciones: menos de 2 pistas en común
+- Aldemaro Romero — «El Garrasi» (9441) ·  · duraciones: menos de 2 pistas en común
+- Aldemaro Romero — «Presenta La Onda Nueva» (9452) ·  · duraciones: menos de 2 pistas en común
+- Aldemaro Romero — «Lo Mejor De Lo Mejor» (9473) ·  · duraciones: menos de 2 pistas en común
+- Aldemaro Romero — «Colombia de Gala» (13101) ·  · duraciones: menos de 2 pistas en común
+- Aldemaro Romero — «La Turpialita» (13102) ·  · duraciones: menos de 2 pistas en común
+- Aldemaro Romero — «Cantares de Mi Tierra» (13103) ·  · duraciones: menos de 2 pistas en común
+- Aldemaro Romero — «Arriba el Joropo» (13104) ·  · duraciones: menos de 2 pistas en común
+- Aldemaro Romero — «Trópico» (13108) ·  · duraciones: menos de 2 pistas en común
+- El Cuarteto — «El Cuarteto» (9640) ·  · duraciones: menos de 2 pistas en común
+- Ensamble Gurrufío — «Ensamble Gurrufío con la Orquesta Sinfónica Gran Mariscal de Ayacucho» (9821) ·  · duraciones: menos de 2 pistas en común
+- Arca — «Mutant» (12740) ·  · duraciones: menos de 2 pistas en común
+- Arca — «FADER/MoMA PS1 Warm Up Mix» (12748) ·  · duraciones: menos de 2 pistas en común
+- Arca — «KiCk StReAm: Raw and Dirty Compilation of Unreleased Arca Songs» (12751) ·  · duraciones: menos de 2 pistas en común
+- Arca — «Sheep» (12754) ·  · duraciones: menos de 2 pistas en común
+- Aérea Negrot — «All I Wanna Do» (12820) ·  · duraciones: menos de 2 pistas en común
+- Adolescent's Orquesta — «Clásicos en vivo» (12984) ·  · duraciones: menos de 2 pistas en común
+- Adolescent's Orquesta — «V.I.P. Edition» (12985) ·  · duraciones: menos de 2 pistas en común
+- Porfi Baloa — «20 años: La historia en vivo» (13002) ·  · duraciones: menos de 2 pistas en común
+- Diveana — «Diveana» (13146) ·  · duraciones: menos de 2 pistas en común
+- Chino & Nacho — «Los reyes del romantiqueo» (13263) ·  · duraciones: menos de 2 pistas en común
+- Gustavo Dudamel — «Beethoven: Symphony No. 7» (14131) ·  · duraciones: menos de 2 pistas en común
+- Simón Díaz — «Recuerda y canta» (14609) ·  · duraciones: menos de 2 pistas en común
+- Simón Díaz — «Tonadas» (14610) ·  · duraciones: menos de 2 pistas en común
+- Simón Díaz — «Tonadas, vol. 2» (14611) ·  · duraciones: menos de 2 pistas en común
+- Simón Díaz — «Sus grandes éxitos» (14613) ·  · duraciones: menos de 2 pistas en común
+- Simón Díaz — «40 Años 40 Exitos de Simon Diaz» (14621) ·  · duraciones: menos de 2 pistas en común
+- Ángel Custodio Loyola — «Sentimiento Llanero» (14690) ·  · duraciones: menos de 2 pistas en común
+- Cardenales del Éxito — «Los Cardenales Protestan» (14989) ·  · duraciones: menos de 2 pistas en común
+- Maracaibo 15 — «15 aniversario» (15021) ·  · duraciones: menos de 2 pistas en común
+- Los Antaños del Stadium — «Homenaje A Pedro Elias Gutierrez En Su Centenario» (15036) ·  · duraciones: menos de 2 pistas en común
+- Popy — «Popy Solo» (15044) ·  · duraciones: menos de 2 pistas en común
+- Popy — «Un Circo Para Popy» (15045) ·  · duraciones: menos de 2 pistas en común
+- Popy — «A Estudiar...» (15046) ·  · duraciones: menos de 2 pistas en común
+- Payasitas Nifu Nifa — «Ki Ki Kí - Co Co Có (French Version)» (15054) · deezer · sencillo con 11 pistas en deezer: ¿otro disco del mismo título? · https://www.deezer.com/album/357022247
+- Payasitas Nifu Nifa — «No Controles» (15059) · deezer · sencillo con 11 pistas en deezer: ¿otro disco del mismo título? · https://www.deezer.com/album/279634122
+- Daniel Calveti — «Mi Refugio» (15215) · deezer · sencillo con 13 pistas en deezer: ¿otro disco del mismo título? · https://www.deezer.com/album/6376960
+
+## Todos los aplicados
+
+- Franco De Vita — «Vuelve En Primera Fila» (4082) · musicbrainz · 9 duraciones (20 pistas en común) · https://musicbrainz.org/release/09fa946e-cdd9-404d-aa6a-cd423d3edda9
+- Franco De Vita — «Mis 30 Mejores Canciones» (4091) · musicbrainz · 15 duraciones (30 pistas en común) · https://musicbrainz.org/release/bec0c971-91a0-45e7-90af-36eb0b4a2f15
+- Yordano — «Secretos De La Noche» (4601) · deezer · 1 duraciones (12 pistas en común) · https://www.deezer.com/album/181375772
+- Pablo Gil — «Encuentros» (15245) · deezer · 11 duraciones (11 pistas en común) · https://www.deezer.com/album/706430581
+- Rada — «Armagedon & The Third Wave Revolution» (5604) · deezer · 1 duraciones (10 pistas en común) · https://www.deezer.com/album/179246632
+- Ricardo Montaner — «Todo y Nada» (4421) · musicbrainz · 1 duraciones (9 pistas en común) · https://musicbrainz.org/release/49559a36-890f-465e-afd8-9054e7d62b7b
+- Paul Gillman — «25 años» (2133) · musicbrainz · 15 duraciones (28 pistas en común) · https://musicbrainz.org/release/331b2a7d-ec88-44fc-a973-a7ba0798f076
+- Paul Gillman — «Inevitable» (2139) · deezer · 2 duraciones (13 pistas en común) · https://www.deezer.com/album/89912292
+- Paul Gillman — «Tributo A Los Desconocidos» (4148) · deezer · 1 duraciones (12 pistas en común) · https://www.deezer.com/album/90953512
+- Paul Gillman — «Más Vivo & En Vivo» (4153) · deezer · 10 duraciones (15 pistas en común) · https://www.deezer.com/album/91202552
+- Rudy Márquez — «Gracias Amor, Gracias» (3714) · deezer · 1 duraciones (8 pistas en común) · https://www.deezer.com/album/103341282
+- Miguel Noya — «Infinite Halls» (15544) · deezer · 6 pistas (discografía Deezer de la ficha: título igual) · https://www.deezer.com/album/482468355
+- Miguel Noya — «Biophony / Life Voices» (15545) · deezer · 10 pistas (discografía Deezer de la ficha: título igual) · https://www.deezer.com/album/527409332
+- Miguel Noya — «AIQC» (15546) · deezer · 10 pistas (discografía Deezer de la ficha: título igual) · https://www.deezer.com/album/711396171
+- Miguel Noya — «Biofonía II: Voces de la Tierra» (15715) · deezer · 25 pistas (discografía Deezer de la ficha: título igual) · https://www.deezer.com/album/742257961
+- Edward Simon — «25 Years» (6193) · deezer · 8 duraciones (17 pistas en común) · https://www.deezer.com/album/168581832
+- Guaco — «Guaco 82» (7108) · deezer · 1 duraciones (9 pistas en común) · https://www.deezer.com/album/522679402
+- Oscar D' León — «Riquiti..!» (7674) · deezer · 2 duraciones (6 pistas en común) · https://www.deezer.com/album/128736192
+- Rafael "Pollo" Brito — «Boleros "En Vivo"» (7735) · deezer · 14 duraciones (28 pistas en común) · https://www.deezer.com/album/851818042
+- Rafael "Pollo" Brito — «Homenaje A Tito Rodríguez» (7737) · deezer · 10 duraciones (19 pistas en común) · https://www.deezer.com/album/847542982
+- Roberto Antonio — «A Punto Caramelo» (7754) · deezer · 1 duraciones (11 pistas en común) · https://www.deezer.com/album/841764072
+- Roberto Antonio — «25 Años» (7759) · musicbrainz · 8 duraciones (18 pistas en común) · https://musicbrainz.org/release/92ecddf8-10ea-45a8-88f1-8a781f3ada5e
+- Soledad Bravo — «Cantos de Venezuela» (7802) · musicbrainz · 1 duraciones (10 pistas en común) · https://musicbrainz.org/release/28a7e2ec-fc76-4826-b791-b3a0e9028d47
+- Soledad Bravo — «Soledad Bravo» (7811) · musicbrainz · 1 duraciones (7 pistas en común) · https://musicbrainz.org/release/8f303930-3c13-4f71-981c-6051d8f2023b
+- José Luis Rodríguez — «Mis 30 Mejores Canciones» (8178) · musicbrainz · 15 duraciones (30 pistas en común) · https://musicbrainz.org/release/879de34d-6d82-4a74-8855-ebe8c778cd84
+- Billo's Caracas Boys — «Billo 79 ½» (6804) · musicbrainz · 11 pistas (discografía MB de la ficha: título igual) · https://musicbrainz.org/release/6535caf5-6f03-4c78-b7ee-dd89f82e73a0
+- Billo's Caracas Boys — «24 Exitos De Billo» (6837) · musicbrainz · 24 pistas (discografía MB de la ficha: título igual) · https://musicbrainz.org/release/d247f095-643a-42ac-9649-044055155c59
+- Billo's Caracas Boys — «Billo 72 ½» (7987) · deezer · 2 duraciones (9 pistas en común) · https://www.deezer.com/album/10234484
+- Billo's Caracas Boys — «Sin Fronteras» (8031) · deezer · 1 duraciones (9 pistas en común) · https://www.deezer.com/album/245049992
+- Felipe Pirela — «Canciones De Ayer y Hoy» (7057) · deezer · 11 pistas (discografía Deezer de la ficha: título igual) · https://www.deezer.com/album/593969632
+- Los Cuñaos — «Los Cuñaos Vol.5» (8500) · deezer · 1 duraciones (9 pistas en común) · https://www.deezer.com/album/87919592
+- Gualberto Ibarreto — «Gualberto Ibarreto» (15403) · musicbrainz · 1 duraciones (9 pistas en común) · https://musicbrainz.org/release/7c00757c-36d5-477a-aa10-a91f8ac8970e
+- Juan Vicente Torrealba — «40 Años 40 Exitos» (8774) · musicbrainz · 20 duraciones (40 pistas en común) · https://musicbrainz.org/release/50ba8fbd-6003-4b11-ba0c-eabcc3e9dc08
+- Reyna Lucero — «Segundo Impacto De Reina Lucero» (9305) · deezer · 12 duraciones (12 pistas en común) · https://www.deezer.com/album/1058301822
+- Reyna Lucero — «Reina Siempre Reina» (9312) · deezer · 9 duraciones (9 pistas en común) · https://www.deezer.com/album/534429662
+- Reynaldo Armas — «El Campeón» (9356) · deezer · 1 duraciones (12 pistas en común) · https://www.deezer.com/album/331850257
+- Reynaldo Armas — «Los 40 Super Exitos» (9363) · deezer · 2 duraciones (38 pistas en común) · https://www.deezer.com/album/803763311
+- Reynaldo Armas — «32 Super Exitos» (9373) · musicbrainz · 15 duraciones (15 pistas en común) · https://musicbrainz.org/release/f07e5750-de2b-43c5-91a2-11bfcdf86408
+- Aldemaro Romero — «Onda Nueva Vocal» (9464) · musicbrainz · 1 duraciones (13 pistas en común) · https://musicbrainz.org/release/ec7c8c99-8de0-4ad8-9705-2ddaad8b8389
+- Simón Díaz — «Cuando Las Ganas Se Juntan» (15274) · deezer · 12 pistas (discografía Deezer de la ficha: título igual) · https://www.deezer.com/album/142742392
+
